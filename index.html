@@ -424,7 +424,7 @@ a.gtab{text-decoration:none}
 <header class="top"><div class="top-in">
   <a class="logo" href="#/"><span class="logo-badge">🧭</span><span>Little Language Explorers</span></a>
   <span class="sp"></span>
-  <button class="iconbtn" id="muteBtn" aria-label="Bật/tắt âm thanh">🔊</button>
+  <button class="iconbtn" id="muteBtn" aria-label="Bật/tắt tiếng hiệu ứng (giọng đọc vẫn phát)" title="Tiếng hiệu ứng (giọng đọc vẫn phát)">🔔</button>
   <span class="star-count" id="starCount">⭐ 0</span>
 </div></header>
 <main id="app"></main>
@@ -932,7 +932,8 @@ const SENT_ART = [
 function sentArt(x){ if(x.img) return x.img; const t=x.en.toLowerCase(); for(const [re,e] of SENT_ART) if(re.test(t)) return e; return '💬'; }
 
 /* ---------- âm thanh ---------- */
-let MUTE = lsGet('lle-mute', false);
+/* MUTE chỉ tắt tiếng hiệu ứng (ting, pop…); giọng đọc bài học luôn phát */
+let MUTE = lsGet('lle-sfx-off', false);
 let actx=null;
 function tone(seq){
   if(MUTE) return;
@@ -954,7 +955,47 @@ const sfx = {
   win: ()=>tone([[523,.12],[659,.12],[784,.12],[1047,.35]]),
   coin:()=>tone([[988,.08,'square'],[1319,.18,'square']])
 };
-function toggleMute(){ MUTE=!MUTE; lsSet('lle-mute',MUTE); document.getElementById('muteBtn').textContent=MUTE?'🔇':'🔊'; }
+function toggleMute(){ MUTE=!MUTE; lsSet('lle-sfx-off',MUTE); document.getElementById('muteBtn').textContent=MUTE?'🔕':'🔔'; toast(MUTE?'Đã tắt tiếng hiệu ứng (giọng đọc vẫn phát)':'Đã bật tiếng hiệu ứng'); }
+
+/* ---------- một "loa" dùng chung cho mọi giọng thu sẵn ----------
+   Safari, iPhone, iPad (và đôi khi Chrome) chỉ cho phát âm thanh khi bé vừa chạm màn hình.
+   Ta mở khoá MỘT thẻ audio ở lần chạm đầu tiên rồi dùng lại thẻ đó cho mọi câu. */
+const VOICE_SIL='data:audio/mpeg;base64,//NwwAAAAAAAAAAAAEluZm8AAAAPAAAACAAAA/oAR0dHR0dHR0dHR0dHYmJiYmJiYmJiYmJifHx8fHx8fHx8fHx8fJaWlpaWlpaWlpaWlrGxsbGxsbGxsbGxsbHLy8vLy8vLy8vLy8vl5eXl5eXl5eXl5eXl////////////////AAAAAExhdmM2MC4zMQAAAAAAAAAAAAAAACQC1AAAAAAAAAP6yysejgAAAAAAAAAAAAAAAAD/80DEAAAAA0gAAAAATEFNRTMuMTAwVVVVVVVVVVVVVUxBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQsRbAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVUxBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQMSkAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVTEFNRTMuMTAwVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//NCxKMAAANIAAAAAFVVVVVVVVVVVVVVVVVVVVVVVVVVTEFNRTMuMTAwVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//NAxKQAAANIAAAAAFVVVVVVVVVVVVVVVVVVVVVVVVVMQU1FMy4xMDBVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVX/80LEowAAA0gAAAAAVVVVVVVVVVVVVVVVVVVVVVVVVVVMQU1FMy4xMDBVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVX/80DEpAAAA0gAAAAAVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQsSjAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVQ==';
+const VOICE=new Audio(); VOICE.preload='auto'; try{ VOICE.setAttribute('playsinline',''); }catch(e){}
+let voiceOK=false, voiceTok=0, voiceGateFn=null, voiceIdle=true;
+function voiceUnlock(){
+  try{ actx = actx || new (window.AudioContext||window.webkitAudioContext)(); if(actx.state==='suspended') actx.resume(); }catch(e){}
+  if(voiceGateFn){ const f=voiceGateFn; voiceGateHide(); f(); return; }  /* đang chờ chạm: chạm chỗ nào cũng phát tiếp */
+  if(voiceOK || !voiceIdle) return;
+  try{ VOICE.onended=null; VOICE.onerror=null; VOICE.src=VOICE_SIL; const p=VOICE.play(); if(p) p.then(()=>{ voiceOK=true; }).catch(()=>{}); }catch(e){}
+}
+['pointerdown','touchend','keydown','click'].forEach(ev=>document.addEventListener(ev, voiceUnlock, {capture:true, passive:true}));
+function voiceGate(fn){
+  voiceGateFn=fn; let g=document.getElementById('voiceGate');
+  if(!g){ g=document.createElement('button'); g.id='voiceGate'; g.type='button';
+    g.innerHTML='<span class="vg-ico">🔊</span><b>Chạm vào đây để nghe nhé!</b>';
+    g.onclick=()=>{ const f=voiceGateFn; voiceGateHide(); f&&f(); };
+    document.body.appendChild(g); }
+  g.hidden=false;
+}
+function voiceGateHide(){ voiceGateFn=null; const g=document.getElementById('voiceGate'); if(g) g.hidden=true; }
+/* phát file src; o.onend khi hết, o.onerr khi file hỏng; bị chặn thì hiện nút "chạm để nghe" */
+function voicePlay(src, o){
+  o=o||{}; const tok=++voiceTok;
+  try{ VOICE.onended=null; VOICE.onerror=null; VOICE.pause(); }catch(e){}
+  voiceGateHide(); voiceIdle=false;
+  VOICE.src=src; VOICE.defaultPlaybackRate=VOICE.playbackRate=o.rate||1;
+  VOICE.onended=()=>{ if(tok===voiceTok){ voiceIdle=true; o.onend&&o.onend(); } };
+  VOICE.onerror=()=>{ if(tok===voiceTok){ voiceTok++; voiceIdle=true; o.onerr&&o.onerr(); } };
+  const go=()=>{ let p; try{ p=VOICE.play(); }catch(e){ p=Promise.reject(e); }
+    if(p&&p.then) p.then(()=>{ if(tok===voiceTok) voiceOK=true; }).catch(err=>{
+      if(tok!==voiceTok) return;
+      if(err&&err.name==='NotAllowedError') voiceGate(()=>{ if(tok===voiceTok) go(); });
+      else if(!err||err.name!=='AbortError'){ voiceTok++; voiceIdle=true; o.onerr&&o.onerr(); }
+    }); };
+  go(); return tok;
+}
+function voiceStop(){ voiceTok++; voiceIdle=true; voiceGateHide(); try{ VOICE.onended=null; VOICE.onerror=null; VOICE.pause(); }catch(e){} }
 
 /* ---------- giọng đọc ---------- */
 let voices=[];
@@ -962,7 +1003,7 @@ function loadVoices(){ try{ voices = speechSynthesis.getVoices(); }catch(e){} }
 if ('speechSynthesis' in window){ loadVoices(); speechSynthesis.onvoiceschanged = loadVoices; }
 let warnedZh=false;
 function speak(text, lang, file){
-  if (file){ try{ speechSynthesis.cancel(); }catch(e){} if(curAudio){ try{curAudio.pause();}catch(e){} } const a=new Audio(file); curAudio=a; a.play().catch(()=>speak(text,lang)); return; }
+  if (file){ try{ speechSynthesis.cancel(); }catch(e){} if(curAudio){ try{curAudio.pause();}catch(e){} } voicePlay(file,{onerr:()=>speak(text,lang)}); return; }
   if (!('speechSynthesis' in window)){ toast('Máy này chưa hỗ trợ đọc to 😢'); return; }
   text = String(text||'').replace(/_+|…|\.\.\./g,' ').replace(/\s+/g,' ').trim();
   if(!text) return;
@@ -1484,7 +1525,7 @@ function viewZoom(g,i){
 
 /* ---------- điều hướng ---------- */
 function route(){
-  try{ speechSynthesis.cancel(); }catch(e){}
+  try{ speechSynthesis.cancel(); }catch(e){} voiceStop();
   if(typeof cxStop==='function'){ cxStop(); if(window.cxStopListen) window.cxStopListen(); }
   if(typeof lsEnd==='function') lsEnd();
   const p=location.hash.replace(/^#\/?/,'').split('/').filter(Boolean);
@@ -1496,7 +1537,7 @@ function route(){
   artWatch();
 }
 window.addEventListener('hashchange', route);
-document.getElementById('muteBtn').textContent=MUTE?'🔇':'🔊';
+document.getElementById('muteBtn').textContent=MUTE?'🔕':'🔔';
 document.getElementById('muteBtn').onclick=toggleMute;
 updateStars(); route();
 
