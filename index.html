@@ -402,6 +402,17 @@ a.gtab{text-decoration:none}
 #mascot .art.mface{border-radius:50%;border:3px solid #fff;box-shadow:0 4px 0 rgba(0,0,0,.12);object-fit:cover}
 .mportrait{width:110px;height:110px;border-radius:50%;object-fit:cover;border:4px solid var(--yellow);margin:0 auto}
 @media (max-width:560px){.hero{padding-bottom:64px}}
+
+/* ===== ảnh minh hoạ thật (img/) to hơn emoji ===== */
+.art[src^="img/"]{object-fit:cover;border-radius:16px;max-height:none!important}
+.fc .pic{height:auto;min-height:84px}
+.fc .art.card[src^="img/"]{width:100%;max-width:170px;height:auto;aspect-ratio:1}
+.opt .art.opta[src^="img/"]{width:100%;max-width:170px;height:auto;aspect-ratio:1}
+.opt:has(.art[src^="img/"]){padding:8px}
+.sart:has(.art[src^="img/"]){width:96px;height:96px;background:none}
+.sart .art.sa[src^="img/"]{width:96px;height:96px}
+.hzpic .art.opta[src^="img/"]{width:110px;height:110px}
+.mi .art.mia[src^="img/"]{width:40px;height:40px;border-radius:10px}
 </style>
 </head>
 <body>
@@ -436,8 +447,8 @@ a.gtab{text-decoration:none}
    ===================================================================== */
 const ZALO_LINK = "https://zalo.me/g/atdjpv272";
 const ZOOM_LINK = "";   // dán link Zoom vào đây; để trống thì web nhắc xem link trong nhóm Zalo
-const SCORE_API = "";
-const IMG_DIR = "img/";   // thư mục ảnh minh hoạ tự tạo; tên file theo trang "Câu lệnh tạo ảnh". Để "" nếu chưa có ảnh.   // dán link Web App của Apps Script (bảng điểm) vào đây để bật Bảng vàng Top 10
+const SCORE_API = "";   // dán link Web App của Apps Script (bảng điểm) vào đây để bật Bảng vàng Top 10
+const IMG_DIR = "img/";   // thư mục ảnh minh hoạ (.jpg, tên theo từ tiếng Anh). Để "" nếu chưa có ảnh.
 
 const W=(img,en,zh,py,vi)=>({img,en,zh,py,vi});
 const S=(en,zh,py)=>({en,zh,py});
@@ -1038,7 +1049,7 @@ function art(img, cls, key){
   img = img || '💬';
   if(/[./]/.test(img)) return `<img class="art ${cls||''}" src="${esc(img)}" alt="">`;
   const s=artSrcs(img);
-  if(key && IMG_DIR) s.unshift(IMG_DIR+imgSlug(key)+'.png');
+  if(key && IMG_DIR) s.unshift(IMG_DIR+imgSlug(key)+'.jpg');
   return `<img class="art ${cls||''}" src="${s[0]}" data-s="${s.join('|')}" data-k="0" data-e="${esc(img)}" alt="${esc(img)}" onerror="artFb(this)">`;
 }
 /* nếu mạng chậm, sau 4 giây chuyển sang hình dự phòng */
