@@ -434,6 +434,7 @@ a.gtab{text-decoration:none}
 <script src="canopy-data.js"></script>
 <script src="ls-data.js"></script>
 <script src="ls.js"></script>
+<script src="xem-them.js"></script>
 <script src="canopy.js"></script>
 <script src="canopy-games.js"></script>
 <script src="canopy-speak.js"></script>
@@ -1159,6 +1160,7 @@ function viewGroup(g){
         }).join('')}
       </div>
       <a class="gold ${rdone?'on':''}" href="#/g/${g}/vang/${r+1}">🏆 Bảng vàng ${R.vi}</a>
+      <a class="xt-link" href="#/g/${g}/them/${r+1}">🧭 Góc khám phá thêm của vòng này</a>
     </div>`;}).join('');
   app.innerHTML = `<div class="wrap">
     <div class="ghead">
@@ -1487,6 +1489,7 @@ function route(){
   if(typeof lsEnd==='function') lsEnd();
   const p=location.hash.replace(/^#\/?/,'').split('/').filter(Boolean);
   if(p[0]==='g' && p[1] && p[2]==='vang') viewGold(p[1], +(p[3]||0));
+  else if(p[0]==='g' && p[1] && p[2]==='them') viewXemThem(p[1], +(p[3]||1));
   else if(p[0]==='g' && p[1] && p[2]) viewDay(p[1], +p[2]-1, p[3]);
   else if(p[0]==='g' && p[1]) viewGroup(p[1]);
   else viewHome();

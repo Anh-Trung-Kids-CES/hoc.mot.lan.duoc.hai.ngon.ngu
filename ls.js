@@ -146,12 +146,13 @@ function viewSeedDay(g,i,sub){
 function lsDayDone(g,i,panel){
   const s=lsState(g,i);
   const total=Object.values(s.ls).reduce((a,b)=>a+b,0);
-  if(s.done){ showDone(panel.appendChild(document.createElement('div')),false); return; }
+  const more=`<div class="row"><a class="btn y" href="#/g/${g}/them/${Math.floor(i/7)+1}">🧭 Con muốn xem thêm, chơi thêm</a></div>`;
+  if(s.done){ const d=document.createElement('div'); d.className='panel'; panel.appendChild(d); showDone(d,false); panel.insertAdjacentHTML('beforeend',more); return; }
   panel.innerHTML=`<div class="panel ls-praise"><img src="${esc(window.LS.page.ls_man_khen)}" alt="" class="ls-praise-img">
     <h3>Tuyệt vời! Con đã học xong hôm nay rồi!</h3><p>Con được <b>${total} sao</b>. Ba mẹ khen con một câu thật to nhé!</p>
     <div class="row"><button class="btn g" id="lsFin">⭐ Nhận sao và mở ngày mai</button></div></div>`;
   lsHD('Tuyệt vời! Con đã học xong hôm nay rồi!');
-  panel.querySelector('#lsFin').onclick=e=>{ const before=dayPoints(g,i); s.done=true; addPoints(g,i,before,e.currentTarget); panel.innerHTML='<div class="panel" id="lsdp"></div>'; showDone(document.getElementById('lsdp'),true); lsHD('Hẹn gặp con ngày mai nhé!'); };
+  panel.querySelector('#lsFin').onclick=e=>{ const before=dayPoints(g,i); s.done=true; addPoints(g,i,before,e.currentTarget); panel.innerHTML='<div class="panel" id="lsdp"></div>'+more; showDone(document.getElementById('lsdp'),true); lsHD('Hẹn gặp con ngày mai nhé!'); };
 }
 
 /* ---------- chơi một bước ---------- */
@@ -397,4 +398,35 @@ function lsNC(step, body){
     });
   };
   (async()=>{ await lsHD('Con nghe chữ rồi tìm tranh đúng nhé!'); if(lsAlive(my)) ask(); })();
+}
+
+/* ---------- GÓC KHÁM PHÁ THÊM (xem thêm, chơi cùng ba mẹ) – không mở ngày mới, không cộng điểm ---------- */
+function viewXemThem(g, r){
+  const X=window.XEM_THEM, G=GROUPS[g]; if(!X||!G||!X[g]||!X[g][r-1]) return viewGroup(g);
+  const R=X[g][r-1];
+  // ngày đã mở: Little Seed theo ngày chung, Canopy theo ngày trong vòng
+  let reach=0; for(let i=0;i<21;i++) if(isUnlocked(g,i)) reach=i+1;
+  const ok=it=> TEACHER || (g==='seed' ? it[2]<=reach : (r-1)*7+it[2]<=reach);
+  const vids=R.v.filter(ok), games=R.g.filter(ok);
+  const src=c=>c.startsWith('y:')?'https://www.youtube-nocookie.com/embed/'+c.slice(2)+'?rel=0&modestbranding=1':'https://drive.google.com/file/d/'+c.slice(2)+'/preview';
+  const thumb=c=>c.startsWith('y:')?`https://i.ytimg.com/vi/${c.slice(2)}/mqdefault.jpg`:'';
+  app.innerHTML=`<div class="wrap ls-wrap">
+    <div class="ls-banner" style="background-image:url('${esc(G.banners[r-1])}')"><div class="ls-bt">
+      <span class="ls-kick">${esc(G.name)} · ${esc(ROUNDS[r-1].vi)}</span><h2>Góc khám phá thêm</h2>
+      <p class="xt-note">Con nào hứng thú thì khám phá thêm, không cần làm hết. Góc này không mở ngày mới và không tính điểm.</p></div></div>
+    <h3 class="xt-h">▶ Xem thêm <small>${vids.length} video · viền xanh là tiếng Anh, viền đỏ là tiếng Trung</small></h3>
+    <div class="xt-grid">${vids.map((it,n)=>`<button class="xt-v ${it[0]}" data-n="${n}">${thumb(it[3])?`<img src="${thumb(it[3])}" alt="" loading="lazy" onerror="this.outerHTML='<span class=xt-ph>▶</span>'">`:`<span class="xt-ph">▶</span>`}<b>${esc(it[1])}</b><small>${it[0]==='zh'?'Tiếng Trung':'Tiếng Anh'}</small></button>`).join('')||'<p>Con học thêm vài ngày để mở video mới nhé!</p>'}</div>
+    <div id="xtPlay"></div>
+    ${games.length?`<h3 class="xt-h">🎮 Chơi cùng ba mẹ <small>mở trang mới · ba mẹ ngồi cạnh con nhé</small></h3>
+    <div class="xt-games">${games.map(it=>`<a class="xt-g ${it[0]}" href="${esc(it[3])}" target="_blank" rel="noopener"><b>${esc(it[1])}</b><small>${it[0]==='zh'?'Tiếng Trung':'Tiếng Anh'} ↗</small></a>`).join('')}</div>`:''}
+    <div class="row"><a class="btn y" href="#/g/${g}">← Về bản đồ</a></div></div>`;
+  app.querySelectorAll('.xt-v').forEach(b=>b.onclick=()=>{
+    const it=vids[+b.dataset.n], box=document.getElementById('xtPlay');
+    box.innerHTML=`<div class="ls-xem ${it[0]}"><div class="ls-xh"><span class="ls-tag ${it[0]}">${it[0]==='zh'?'Tiếng Trung':'Tiếng Anh'}</span><span>${esc(it[1])}</span></div>
+      <div class="ls-vid"><iframe src="${esc(src(it[3]))}" allow="autoplay; fullscreen" allowfullscreen title="${esc(it[1])}"></iframe></div>
+      <div class="row"><button class="btn y" id="xtClose">Đóng video</button></div></div>`;
+    box.querySelector('#xtClose').onclick=()=>{ box.innerHTML=''; };
+    box.scrollIntoView({behavior:'smooth', block:'center'});
+  });
+  window.scrollTo({top:0});
 }

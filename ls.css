@@ -197,3 +197,25 @@
 .ls-done span{font-size:18px;color:#6B5D50}
 .ls-bigstar svg{width:140px;height:140px;animation:bob 1.6s ease-in-out infinite}
 @media (prefers-reduced-motion: reduce){.ls-gift,.ls-bigstar svg,.home-crew img{animation:none}}
+@media (max-width:700px){
+  #mascot{display:none}
+  .ls-ncards{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .ls-ncard{min-height:170px}
+  .ls-chu.zh,.ls-chu.big.zh{font-size:84px}.ls-chu.en{font-size:44px}
+  .ls-stage{padding:10px}.ls-top b{font-size:22px}
+  .ls-bub b{font-size:20px}
+  .ls-opts{gap:8px}
+}
+/* Góc khám phá thêm */
+.xt-note{margin:6px 0 0;font-weight:600;font-size:15px;background:rgba(255,255,255,.85);border-radius:14px;padding:6px 10px}
+.xt-h{margin:20px 0 8px;font-size:22px}.xt-h small{font-size:14px;color:var(--muted);font-weight:600;margin-left:6px}
+.xt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
+.xt-v{border:4px solid;border-radius:18px;background:#fff;padding:0 0 8px;text-align:left;overflow:hidden;display:flex;flex-direction:column;gap:2px;color:var(--ink)}
+.xt-v.en{border-color:var(--ls-en)}.xt-v.zh{border-color:var(--ls-zh)}
+.xt-v img,.xt-ph{width:100%;aspect-ratio:16/9;object-fit:cover;background:#2E2620;display:grid;place-items:center;color:#fff;font-size:34px}
+.xt-v b{padding:4px 10px 0;font-size:15px;line-height:1.2}.xt-v small{padding:0 10px;color:var(--muted);font-size:13px}
+#xtPlay{margin-top:14px}
+.xt-games{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.xt-g{display:flex;flex-direction:column;border-radius:16px;padding:12px 14px;text-decoration:none;color:#fff}
+.xt-g.en{background:var(--ls-en)}.xt-g.zh{background:var(--ls-zh)}.xt-g small{opacity:.9}
+.xt-link{display:block;text-align:center;margin-top:8px;font-weight:800;color:var(--red-dark)}
