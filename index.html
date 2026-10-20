@@ -389,6 +389,19 @@ a.gtab{text-decoration:none}
 .gtab.gdone{border-color:var(--green);background:#E6F7EE}
 .gtab.glock{opacity:.55}
 .gtab.gdone.on{background:var(--yellow);border-color:var(--yellow)}
+
+/* ===== nhân vật ảnh thật ===== */
+.crew{position:relative;z-index:1;display:flex;justify-content:center;align-items:flex-end;gap:clamp(10px,3vw,30px);margin:18px auto 0}
+.mate{margin:0;display:flex;flex-direction:column;align-items:center;gap:6px;animation:rise .6s var(--d,0s) both}
+.mate img{width:clamp(78px,19vw,124px);aspect-ratio:1;object-fit:cover;border-radius:50%;border:4px solid #fff;box-shadow:0 6px 0 rgba(0,0,0,.15);background:#fff;animation:bob 4s ease-in-out infinite;animation-delay:var(--d,0s)}
+.mate.main img{width:clamp(100px,25vw,156px);border-color:var(--yellow)}
+.mate figcaption{display:flex;flex-direction:column;align-items:center;line-height:1.1}
+.mate figcaption b{font-size:16px}
+.mate figcaption span{background:#fff;color:var(--ink);border-radius:999px;padding:2px 10px;font-weight:800;font-size:14px;margin-top:3px}
+.art[src*="characters/"]{object-fit:cover;border-radius:18px}
+#mascot .art.mface{border-radius:50%;border:3px solid #fff;box-shadow:0 4px 0 rgba(0,0,0,.12);object-fit:cover}
+.mportrait{width:110px;height:110px;border-radius:50%;object-fit:cover;border:4px solid var(--yellow);margin:0 auto}
+@media (max-width:560px){.hero{padding-bottom:64px}}
 </style>
 </head>
 <body>
@@ -453,7 +466,7 @@ const SEED_DAYS = [
          L("video","Unit 1 Lesson 1 – Bunny & Xiaobao (tiếng Trung)",DRV("1s0rfRKcJjKchrpCyPZ3fjqELMXnkeGeK")),
          L("game","Game ghép từ với hình","https://wordwall.net/play/104660/945/612")]},
 /* 2 */ {t:"Người và con vật thân quen",
-  w:[W("🧑‍🏫","teacher","老师","lǎoshī","giáo viên"), W("🧒","friend","朋友","péngyou","bạn bè"),
+  w:[W("🧑‍🏫","teacher","老师","lǎoshī","giáo viên"), W("img/characters/friends.jpg","friend","朋友","péngyou","bạn bè"),
      W("🐶","puppy","小狗","xiǎogǒu","chó con"), W("🐱","kitten","小猫","xiǎomāo","mèo con")],
   steps:["Xem lại video Unit 1 Lesson 1.",
          "Trò \"Ai đây?\": ba mẹ giơ hình (hoặc chỉ vào người, thú bông), bé nói tên bằng tiếng Anh rồi tiếng Trung.",
@@ -493,7 +506,7 @@ const SEED_DAYS = [
          L("video","Unit 1 Story",DRV("1lmfAWBHqDAiKposZfMDQT2uozAIXXkkL"))]},
 /* 6 */ {t:"Truyện \"小猫，再见！\" – Một ngày của bé",
   s:[S("Goodbye, mommy!","妈妈，再见！","māma, zàijiàn!"), S("Hello, teacher!","老师好！","lǎoshī hǎo!"), S("Hello, everyone!","大家好！","dàjiā hǎo!"),
-     S("Hello, friend!","朋友，你好！","péngyou, nǐ hǎo!"), S("Goodbye, teacher!","老师，再见！","lǎoshī, zàijiàn!"),
+     Object.assign(S("Hello, friend!","朋友，你好！","péngyou, nǐ hǎo!"),{img:"img/characters/friends.jpg"}), S("Goodbye, teacher!","老师，再见！","lǎoshī, zàijiàn!"),
      S("Hello, puppy!","小狗，你好！","xiǎogǒu, nǐ hǎo!"), S("Hello, daddy and mommy!","爸爸，妈妈，你们好！","bàba, māma, nǐmen hǎo!")],
   steps:["Đọc truyện \"小猫，再见！\" cùng bé.",
          "Nghe đoạn \"Một ngày của bé\" ở bước Học từ: sáng chào mẹ, đến lớp chào cô và các bạn, chiều về chào cún và cả nhà.",
@@ -523,7 +536,7 @@ const SEED_DAYS = [
   goal:"Bé đếm xen kẽ được tới 6 trở lên.",
   links:[L("card","Flashcard 6–10",DRV("1w2B8kOE9qJZ0HgJryQ_lCW1QsFdv8S6d"))]},
 /* 10 */ {t:"Con tên là gì? What is your name?",
-  w:[W("❓","What is your name?","你叫什么名字？","nǐ jiào shénme míngzi?","bạn tên là gì?"), W("🧒","My name is…","我叫…","wǒ jiào…","tôi tên là…")],
+  w:[W("❓","What is your name?","你叫什么名字？","nǐ jiào shénme míngzi?","bạn tên là gì?"), W("img/characters/bong.jpg","My name is…","我叫…","wǒ jiào…","tôi tên là…")],
   s:[S("What is your name?","你叫什么名字？","nǐ jiào shénme míngzi?"), S("My name is…","我叫…","wǒ jiào…")],
   steps:["Xem video \"What's your name\" và Unit 2 Lesson 1.",
          "Hoạt động \"Tên tiếng Trung của bạn là gì?\": ba mẹ cùng bé chọn một tên tiếng Trung (vd 小明, 安娜, 乐乐).",
@@ -551,7 +564,7 @@ const SEED_DAYS = [
   goal:"Bé nói được \"很高兴认识你\" hoặc \"Nice to meet you\".",
   links:[L("story","Truyện 2-2 我叫家明 (PDF)",DRV("15oMbUg0vBg7IteNYaoFdQbGrrsGYdzuJ"))]},
 /* 13 */ {t:"Truyện \"你几岁了\" – Bé tự giới thiệu 🎥", clip:true,
-  s:[S("Hello!","你好！","nǐ hǎo!"), S("My name is Anna.","我叫安娜。","wǒ jiào Ānnà."), S("I'm eight years old.","我八岁。","wǒ bā suì."),
+  s:[S("Hello!","你好！","nǐ hǎo!"), Object.assign(S("My name is Anna.","我叫安娜。","wǒ jiào Ānnà."),{img:"img/characters/anna.jpg"}), S("I'm eight years old.","我八岁。","wǒ bā suì."),
      S("Nice to meet you!","很高兴认识你！","hěn gāoxìng rènshi nǐ!")],
   steps:["Đọc truyện \"你几岁了\" và xem video Unit 2 Story.",
          "Nghe đoạn giới thiệu của Anna ở bước Học từ. Câu hỏi hiểu: Anna mấy tuổi? (trả lời bằng thứ tiếng còn lại).",
@@ -612,7 +625,7 @@ const SEED_DAYS = [
   links:[L("story","Truyện 2-1 你是谁？(PDF)",DRV("1ObbG6dRP633cxuhhcovtfHKoHvwponRk")),
          L("video","Unit 3 Lesson 4 – Story",DRV("1t_oB7dX0vJmwyZ9ld1Hd8c1MysnlYpxv"))]},
 /* 20 */ {t:"Truyện \"我爱我家\" – Gia đình Anna",
-  s:[S("Hello! My name is Anna.","你好！我叫安娜。","nǐ hǎo! wǒ jiào Ānnà."), S("I'm eight years old.","我八岁。","wǒ bā suì."),
+  s:[Object.assign(S("Hello! My name is Anna.","你好！我叫安娜。","nǐ hǎo! wǒ jiào Ānnà."),{img:"img/characters/anna.jpg"}), S("I'm eight years old.","我八岁。","wǒ bā suì."),
      S("He is my dad. His name is David.","他是我爸爸，他叫大卫。","tā shì wǒ bàba, tā jiào Dàwèi."), S("He is forty years old.","他四十岁。","tā sìshí suì."),
      S("She is my mom. Her name is Lily.","她是我妈妈，她叫丽丽。","tā shì wǒ māma, tā jiào Lìlì."), S("She is thirty-eight years old.","她三十八岁。","tā sānshíbā suì."),
      S("He is my younger brother. His name is Tom.","他是我弟弟，他叫汤姆。","tā shì wǒ dìdi, tā jiào Tāngmǔ."), S("He is five years old.","他五岁。","tā wǔ suì."),
@@ -955,10 +968,12 @@ const CANOPY_DAYS = [
 ];
 
 const GROUPS = {
-  seed:     {name:"Little Seed", icon:"🌱", color:"#3BB273", age:"5–6 tuổi", level:"Bé chưa học tiếng Trung", days:SEED_DAYS},
-  seedling: {name:"Seedling",    icon:"🌿", color:"#1FA5A0", age:"5–6 tuổi", level:"Pre-A1 / YCT 1",          days:SEEDLING_DAYS},
-  canopy:   {name:"Canopy",      icon:"🌳", color:"#E3262E", age:"6–7 tuổi", level:"Học viên CES / A1 / YCT 2", days:CANOPY_DAYS}
+  seed:   {name:"Little Seed", icon:"🌱", color:"#3BB273", age:"Mới bắt đầu",   level:"Bé chưa biết tiếng Anh, tiếng Trung, hoặc cả hai", days:SEED_DAYS},
+  canopy: {name:"Canopy",      icon:"🌳", color:"#E3262E", age:"Đã có nền tảng", level:"Bé khá tiếng Anh, đã biết chút tiếng Trung",       days:CANOPY_DAYS}
 };
+/* Seedling đang tạm ẩn. Muốn hiện lại, thêm dòng này vào GROUPS ở trên:
+  seedling: {name:"Seedling", icon:"🌿", color:"#1FA5A0", age:"5–6 tuổi", level:"Pre-A1 / YCT 1", days:SEEDLING_DAYS},
+*/
 /* ======================= HẾT PHẦN DỮ LIỆU ========================== */
 
 const app = document.getElementById('app');
@@ -1188,7 +1203,7 @@ function gamePool(g,i){
 function askProfile(g, then){
   const ov=document.createElement('div'); ov.className='overlay';
   ov.innerHTML=`<form class="modal" id="pf">
-    <div class="mart">${art('🧭','big')}</div>
+    <div class="mart"><img class="mportrait" src="img/characters/bong.jpg" alt=""></div>
     <h3>Nhà thám hiểm tên là gì?</h3>
     <p class="hint">Tên này hiện trên Bảng vàng khi con lọt Top 10. Bố mẹ có thể dùng tên ở nhà của con.</p>
     <label for="kname">Tên của con</label>
@@ -1214,14 +1229,15 @@ function viewHome(){
   app.innerHTML = `
   <section class="hero">
     <div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div>
-    <span class="float f1">${art('🗺️','fl')}</span>
-    <span class="float f2">${art('🎒','fl')}</span>
-    <span class="float f3">${art('🔭','fl')}</span>
-    <span class="float f4">${art('💎','fl')}</span>
     <div class="kicker">Thử thách 21 ngày Bật phản xạ Anh – Trung</div>
     <h1>Những nhà thám hiểm<br>ngôn ngữ nhí</h1>
     <span class="tag">Giỏi tiếng Anh – Siêu tiếng Trung</span>
     <p>Chọn nhóm của con để bắt đầu hành trình 21 ngày: 3 vòng, mỗi vòng 6 ngày tự học và 1 buổi Zoom cùng giáo viên. Tích điểm mỗi ngày để vào Bảng vàng Top 10!</p>
+    <div class="crew" aria-label="Các bạn đồng hành">
+      <figure class="mate" style="--d:.15s"><img src="img/characters/leo.jpg" alt="Leo"><figcaption><b>Leo</b><span>Hello!</span></figcaption></figure>
+      <figure class="mate main" style="--d:0s"><img src="img/characters/bong.jpg" alt="Bông"><figcaption><b>Bông</b><span>Xin chào!</span></figcaption></figure>
+      <figure class="mate" style="--d:.3s"><img src="img/characters/xiaomei.jpg" alt="Xiaomei"><figcaption><b>Xiaomei</b><span class="zh">你好！</span></figcaption></figure>
+    </div>
     <svg class="wave" viewBox="0 0 1200 50" preserveAspectRatio="none"><path d="M0,30 C200,0 400,50 600,25 C800,0 1000,45 1200,20 L1200,50 L0,50 Z" fill="#FFFBF0"/></svg>
   </section>
   <div class="wrap">
@@ -1606,7 +1622,7 @@ document.getElementById('muteBtn').textContent=MUTE?'🔇':'🔊';
 document.getElementById('muteBtn').onclick=toggleMute;
 updateStars(); route();
 
-document.querySelector('#mascot .mimg').innerHTML=art('🦊');
+document.querySelector('#mascot .mimg').innerHTML='<img class="art mface" src="img/characters/bong-face.jpg" alt="">';
 </script>
 </body>
 </html>

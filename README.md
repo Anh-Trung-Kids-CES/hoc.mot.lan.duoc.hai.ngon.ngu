@@ -1,7 +1,7 @@
 # Little Language Explorers – Web học tập 21 ngày
 
 Web tự học cho Thử thách 21 ngày Bật phản xạ Anh – Trung (CES Vietnam).
-3 nhóm: Little Seed · Seedling · Canopy. Mỗi nhóm 3 vòng, mỗi vòng 6 ngày tự học + 1 buổi Zoom.
+2 khoá: Little Seed (bé mới bắt đầu) · Canopy (bé khá tiếng Anh, biết chút tiếng Trung). Seedling đang tạm ẩn. Mỗi nhóm 3 vòng, mỗi vòng 6 ngày tự học + 1 buổi Zoom.
 
 ## Cấu trúc
 - `index.html` – toàn bộ web (nội dung, trò chơi, điểm, Bảng vàng)
@@ -10,7 +10,7 @@ Web tự học cho Thử thách 21 ngày Bật phản xạ Anh – Trung (CES Vi
 
 ## Sửa nội dung
 Mở `index.html`, tìm phần `PHẦN DỮ LIỆU`:
-- `SEED_DAYS`, `SEEDLING_DAYS`, `CANOPY_DAYS` – nội dung 21 ngày của từng nhóm
+- `SEED_DAYS`, `CANOPY_DAYS` – nội dung 21 ngày của từng khoá (`SEEDLING_DAYS` giữ lại nhưng không hiện)
 - `ZALO_LINK` – nhóm Zalo nộp clip
 - `ZOOM_LINK` – link phòng Zoom (để trống thì web nhắc xem trên Zalo)
 - `SCORE_API` – link Web App Apps Script để bật Bảng vàng Top 10
