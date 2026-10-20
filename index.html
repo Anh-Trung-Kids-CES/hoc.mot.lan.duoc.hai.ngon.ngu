@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Little Language Explorers</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="canopy.css">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{color-scheme:light;
@@ -425,6 +426,10 @@ a.gtab{text-decoration:none}
 <main id="app"></main>
 <div id="mascot" aria-hidden="true"><span class="mimg"></span><div class="bubble"></div></div>
 <div class="toast" id="toast"></div>
+<script src="canopy-data.js"></script>
+<script src="canopy.js"></script>
+<script src="canopy-games.js"></script>
+<script src="canopy-speak.js"></script>
 <script>
 /* =====================================================================
    PHẦN DỮ LIỆU — SỬA NỘI DUNG Ở ĐÂY
@@ -448,6 +453,7 @@ a.gtab{text-decoration:none}
 const ZALO_LINK = "https://zalo.me/g/atdjpv272";
 const ZOOM_LINK = "";   // dán link Zoom vào đây; để trống thì web nhắc xem link trong nhóm Zalo
 const SCORE_API = "";   // dán link Web App của Apps Script (bảng điểm) vào đây để bật Bảng vàng Top 10
+const AUDIO_DIR = "audio/";   // thư mục file phát âm (audio/en, audio/zh). Thiếu file thì web dùng giọng đọc của máy.
 const IMG_DIR = "img/";   // thư mục ảnh minh hoạ (.jpg, tên theo từ tiếng Anh). Để "" nếu chưa có ảnh.
 
 const W=(img,en,zh,py,vi)=>({img,en,zh,py,vi});
@@ -819,164 +825,8 @@ const SEEDLING_DAYS = [
 ];
 
 /* =============================== CANOPY ============================== */
-const H = { // từ sở thích dùng chung
-  read: W("📚","reading books","读书","dúshū","đọc sách"),
-  tv:   W("📺","watching TV","看电视","kàn diànshì","xem TV"),
-  game: W("🎮","playing games","玩游戏","wán yóuxì","chơi game"),
-  cook: W("🍳","cooking","做饭","zuòfàn","nấu ăn"),
-  dance:W("💃","dancing","跳舞","tiàowǔ","nhảy múa"),
-  sing: W("🎤","singing","唱歌","chànggē","hát"),
-  music:W("🎧","listening to music","听音乐","tīng yīnyuè","nghe nhạc")
-};
-const ALL_HOBBIES = Object.values(H);
-const CANOPY_DAYS = [
-/* 1 */ {t:"HELLO, HOBBY!",
-  w:[H.read,H.tv,H.game,H.cook],
-  steps:["Làm bài test đầu vào (chỉ để ban tổ chức ghi nhận, không tính điểm).",
-         "Bài 1: Xem video từ vựng \"Sở thích của chúng mình\".",
-         "Bài 2: Đọc theo từng từ (Anh → Trung), mỗi từ 3 lần. Mẹ đồng hành và quay lại quá trình con làm bài."],
-  goal:"Nhận diện và nói được 4 từ bằng Anh + Trung.", clip:true,
-  links:[L("game","Test đầu vào","https://wordwall.net/resource/121125879?wwmethod=link"),
-         L("video","Sở thích của chúng mình","https://drive.google.com/file/d/1fiKSTFzXKGsJAjMybkK9gMeUft8gW75T/view?usp=sharing")]},
-/* 2 */ {t:"HOBBY INTO SENTENCE",
-  s:[S("My name is ___.","我叫 ___。","wǒ jiào ___"),S("I like cooking.","我喜欢做饭。","wǒ xǐhuan zuòfàn"),S("My name is Lan. I like cooking.","我叫Lan。我喜欢做饭。","wǒ jiào Lan. wǒ xǐhuan zuòfàn")],
-  steps:["Bài 1: Xem video và làm bài tập trên Wordwall.",
-         "Bài 2: Đọc theo mẫu câu, mỗi câu 3 lần.",
-         "Bài 3: Nói câu giới thiệu tên và một hobby của con bằng tiếng Anh, sau đó bằng tiếng Trung."],
-  goal:"Nói được câu hoàn chỉnh ở 2 ngôn ngữ.", clip:true,
-  links:[L("video","Video ngày 2","https://drive.google.com/file/d/1YfhkYAxqumIKS0Hr9xaO4jh1Fk9uE9r3/view?usp=sharing"),
-         L("game","Quiz Hobbies","https://wordwall.net/resource/119091149/u4l2-quiz-hobbies-1")]},
-/* 3 */ {t:"MORE HOBBIES",
-  w:[H.dance,H.sing,H.music],
-  s:[S("My name is ___. I like dancing.","我叫 ___。我喜欢跳舞。","wǒ jiào ___. wǒ xǐhuan tiàowǔ")],
-  steps:["Bài 1: Xem video và đọc theo từng từ (Anh → Trung), mỗi từ 3 lần. Mẹ quay lại quá trình con làm bài.",
-         "Bài 2: Đặt câu My name is… I like… / 我叫…我喜欢… với từng hobby mới."],
-  goal:"Mở rộng đủ các hobby.", clip:true,
-  links:[L("video","Video ngày 3","https://drive.google.com/file/d/1WnQ_lq9kE7SYmyiOB0CYlUIq7rTJqmgA/view?usp=sharing")]},
-/* 4 */ {t:"MIX & MATCH",
-  w:ALL_HOBBIES,
-  s:[S("I like reading books.","我喜欢读书。","wǒ xǐhuan dúshū")],
-  steps:["Bài 1: Xem video.",
-         "Bài 2: Mở link bài tập, nghe audio rồi quay video nói lại bằng ngôn ngữ còn lại. Ví dụ audio nói \"I like reading books\" → con nói \"我喜欢读书\".",
-         "Chơi trò ghép cặp Anh – Trung trên web."],
-  goal:"Nhớ từ không phụ thuộc thứ tự học.", clip:true,
-  links:[L("video","Video ngày 4","https://drive.google.com/file/d/11y8szAI4k8UBHJ3czk5Q4Nzw58RHPUTC/view?usp=sharing"),
-         L("game","Bài tập Mix & Match","https://wordwall.net/resource/120851694/copy-of-unit-4-lesson-21")]},
-/* 5 */ {t:"ASK ME!",
-  s:[S("Do you like dancing?","你喜欢跳舞吗？","nǐ xǐhuan tiàowǔ ma?"),S("Do you like singing?","你喜欢唱歌吗？","nǐ xǐhuan chànggē ma?"),
-     S("Do you like playing games?","你喜欢玩游戏吗？","nǐ xǐhuan wán yóuxì ma?"),S("Do you like listening to music?","你喜欢听音乐吗？","nǐ xǐhuan tīng yīnyuè ma?"),
-     S("Do you like reading books?","你喜欢读书吗？","nǐ xǐhuan dúshū ma?"),S("Do you like watching TV?","你喜欢看电视吗？","nǐ xǐhuan kàn diànshì ma?"),
-     S("Do you like cooking?","你喜欢做饭吗？","nǐ xǐhuan zuòfàn ma?"),
-     S("Yes, I do.","我喜欢。","wǒ xǐhuan"),S("No, I don't.","我不喜欢。","wǒ bù xǐhuan")],
-  steps:["Bài 1: Xem video và hát theo.",
-         "Bài 2: Quay video đọc theo mẫu hỏi – đáp.",
-         "Bài 3: Luyện tập trên link bài tập."],
-  goal:"Bắt đầu tương tác 2 chiều.", clip:true,
-  links:[L("video","Video ngày 5","https://drive.google.com/file/d/1NyW-hi7IiQn80ILgCVP244RnD0PaC1IV/view?usp=sharing"),
-         L("game","Bài tập Ask me","https://wordwall.net/resource/120857733?wwmethod=link")]},
-/* 6 */ {t:"WEEK 1 REVIEW",
-  w:ALL_HOBBIES,
-  steps:["Bài 1: Xem video và ôn theo 4 bước cho từng hình hobby: Picture (nhìn hình) → Word (nói từ Anh + Trung) → Sentence (I like… / 我喜欢…) → Translation (dịch sang ngôn ngữ còn lại).",
-         "Bài 2: Làm bài tập ôn luyện."],
-  goal:"Củng cố toàn bộ kiến thức tuần 1.",
-  links:[L("video","Video ôn tập tuần 1","https://drive.google.com/file/d/1Dpoc0dIdhR2I4ChyyjjhUQf_KMZx1Vca/view?usp=sharing"),
-         L("game","Bài tập ôn luyện","https://wordwall.net/resource/119182162?wwmethod=link")]},
-/* 7 */ {zoom:true, t:"🏆 Vòng 1 – Kiểm tra cùng giáo viên",
-  about:"Review + Test cùng giáo viên: (1) Look & Say – nhìn hình, nói từ Anh + Trung; (2) Complete the Sentence – I like ___. / 我喜欢___。; (3) Bài kiểm tra chuyển ngữ từ vựng, ngữ pháp Anh ↔ Trung.",
-  prep:["8 hobby bằng tiếng Anh và tiếng Trung","My name is… I like… / 我叫…我喜欢…","Do you like…? / 你喜欢…吗？"]},
-/* 8 */ {t:"LISTEN & POINT – FAST RESPONSE",
-  w:ALL_HOBBIES,
-  s:[S("What do you like?","你喜欢什么？","nǐ xǐhuan shénme?"),S("I like dancing.","我喜欢跳舞。","wǒ xǐhuan tiàowǔ")],
-  steps:["Bài 1: Làm bài tập nghe – chọn hình nhanh.",
-         "Bài 2: Trả lời câu hỏi What do you like? / 你喜欢什么？ bằng sở thích của con, cả tiếng Anh và tiếng Trung."],
-  goal:"Nghe hiểu từ/cụm từ, phản xạ nhanh, trả lời đúng câu hỏi về sở thích.", clip:true,
-  links:[L("game","Bài tập Listen & Point","https://wordwall.net/resource/120864213?wwmethod=link")]},
-/* 9 */ {t:"INTRODUCE OTHERS' HOBBIES",
-  w:[W("👩","mother","妈妈","māma","mẹ"),W("👨","father","爸爸","bàba","bố"),W("👧","older sister","姐姐","jiějie","chị gái"),
-     W("👶","younger sister","妹妹","mèimei","em gái"),W("👦","older brother","哥哥","gēge","anh trai"),W("🧒","younger brother","弟弟","dìdi","em trai")],
-  s:[S("Hello, everyone!","大家好！","dàjiā hǎo!"),S("My mother likes cooking.","我妈妈喜欢做饭。","wǒ māma xǐhuan zuòfàn"),S("My father likes watching TV.","我爸爸喜欢看电视。","wǒ bàba xǐhuan kàn diànshì")],
-  steps:["Bài 1: Xem video.",
-         "Bài 2: Quay video đọc các từ chỉ người thân.",
-         "Bài 3: Dùng từ chỉ người thân để đặt câu theo mẫu My … likes … / 我…喜欢… và quay video."],
-  tip:"Với một người (mother, father, sister, brother), tiếng Anh dùng likes (có -s).",
-  goal:"Mở rộng lời giới thiệu sang người thân.", clip:true,
-  links:[L("video","Video ngày 9","https://drive.google.com/file/d/1d58-dCXHpFFx34ppnDNPP6b1I6iKz69-/view?usp=sharing")]},
-/* 10 */ {t:"QUESTION & ANSWER",
-  s:[S("What do you like?","你喜欢什么？","nǐ xǐhuan shénme?"),S("Do you like reading books?","你喜欢读书吗？","nǐ xǐhuan dúshū ma?"),
-     S("What does your mother like?","你妈妈喜欢什么？","nǐ māma xǐhuan shénme?"),S("What does your father like?","你爸爸喜欢什么？","nǐ bàba xǐhuan shénme?"),
-     S("What does your brother like?","你哥哥喜欢什么？","nǐ gēge xǐhuan shénme?"),S("What does your sister like?","你姐姐喜欢什么？","nǐ jiějie xǐhuan shénme?")],
-  steps:["Bài 1: Xem video.",
-         "Bài 2: Ghép từ và quay video đọc các câu hỏi. Làm theo cặp: một bạn (hoặc ba mẹ) hỏi, một bạn trả lời."],
-  goal:"Trả lời đúng câu hỏi.", clip:true,
-  links:[L("video","Video ngày 10","https://drive.google.com/file/d/1-qJUmrKuAyWKRKb0HNrgxWWBUTgOEQk8/view?usp=sharing")]},
-/* 11 */ {t:"SURPRISE LANGUAGE",
-  s:[S("Do you like watching TV?","你喜欢看电视吗？","nǐ xǐhuan kàn diànshì ma?"),S("I like ___.","我喜欢 ___。","wǒ xǐhuan ___")],
-  steps:["Bài 1: Làm bài tập phản xạ.",
-         "Bài 2: Trả lời câu hỏi: câu hỏi tiếng Anh → trả lời tiếng Anh, câu hỏi tiếng Trung → trả lời tiếng Trung. Mẫu: I like… / 我喜欢…",
-         "Chơi trò \"Ghép chữ – pinyin\" trên web để nhớ mặt chữ."],
-  goal:"Không học thuộc một chiều.", clip:true,
-  links:[L("game","Bài tập phản xạ","https://wordwall.net/resource/120959363?wwmethod=link")]},
-/* 12 */ {t:"LISTEN & SWITCH",
-  w:ALL_HOBBIES,
-  steps:["Bài 1: Phiên dịch viên nhí — quay video chuyển từ/câu sang ngôn ngữ còn lại (tiếng Anh → đọc tiếng Trung, và ngược lại).",
-         "Bài 2: Quay video trả lời bằng ngôn ngữ còn lại: câu hỏi tiếng Anh → trả lời tiếng Trung, và ngược lại."],
-  goal:"Hình thành phản xạ chuyển ngữ.", clip:true,
-  links:[L("game","Bài tập Listen & Switch","https://wordwall.net/resource/120960330?wwmethod=link")]},
-/* 13 */ {t:"MINI CONVERSATION",
-  s:[S("Hello! My name is Lupy. What's your name?","你好！我叫Lupy。你叫什么名字？","nǐ hǎo! wǒ jiào Lupy. nǐ jiào shénme míngzi?"),
-     S("Hello! My name is Nana.","你好！我叫Nana。","nǐ hǎo! wǒ jiào Nana"),
-     S("I like listening to music. What do you like?","我喜欢听音乐。你喜欢什么？","wǒ xǐhuan tīng yīnyuè. nǐ xǐhuan shénme?"),
-     S("I like singing.","我喜欢唱歌。","wǒ xǐhuan chànggē"),
-     S("Do you like dancing?","你喜欢跳舞吗？","nǐ xǐhuan tiàowǔ ma?"),
-     S("Yes, I do.","是的，我喜欢。","shì de, wǒ xǐhuan"),
-     S("What does your mother like?","你妈妈喜欢什么？","nǐ māma xǐhuan shénme?"),
-     S("My mother likes cooking!","我妈妈喜欢做饭！","wǒ māma xǐhuan zuòfàn!")],
-  steps:["Bài 1: Đọc theo hội thoại mẫu Lupy – Nana (cả Anh và Trung).",
-         "Bài 2: Quay video trả lời câu hỏi trong link bằng TIẾNG ANH VÀ TIẾNG TRUNG."],
-  goal:"Duy trì tương tác ngắn.", clip:true,
-  links:[L("game","Bài tập Mini conversation","https://wordwall.net/resource/120961501?wwmethod=link")]},
-/* 14 */ {zoom:true, t:"🏆 Vòng 2 – Kiểm tra cùng giáo viên",
-  about:"Review + test bằng Quizizz / cùng giáo viên nước ngoài. Đánh giá nghe, nói, tốc độ và sự tự tin.",
-  prep:["Nghe từ/câu và chỉ đúng hình","Giới thiệu sở thích của con và người thân","What do you like? / What does your … like? / Do you like…?","Chuyển ngữ EN ↔ 中文"]},
-/* 15 */ {t:"MY HOBBY",
-  s:[S("Hello! My name is ___. I like ___.","大家好！我叫 ___。我喜欢 ___。","dàjiā hǎo! wǒ jiào ___. wǒ xǐhuan ___"),
-     S("My mom likes ___. My dad likes ___.","我妈妈喜欢 ___。我爸爸喜欢 ___。","wǒ māma xǐhuan ___. wǒ bàba xǐhuan ___"),
-     S("My brother likes ___. What do you like?","我哥哥喜欢 ___。你喜欢什么？","wǒ gēge xǐhuan ___. nǐ xǐhuan shénme?")],
-  steps:["Bài 1: Xem video.",
-         "Bài 2: Chọn 1 hobby con yêu thích nhất, nói theo khung câu (Anh rồi Trung) và quay video."],
-  goal:"Tạo câu trả lời có tính cá nhân.", clip:true,
-  links:[L("video","Video ngày 15","https://drive.google.com/file/d/1YfhkYAxqumIKS0Hr9xaO4jh1Fk9uE9r3/view?usp=sharing")]},
-/* 16 */ {t:"MY FRIEND'S HOBBY",
-  s:[S("What do you like?","你喜欢什么？","nǐ xǐhuan shénme?"),S("What does your mother like?","你妈妈喜欢什么？","nǐ māma xǐhuan shénme?")],
-  steps:["Bài 1: Xem video.",
-         "Bài 2: Luyện tập trên link bài tập. Hỏi bạn (hoặc người trong gia đình) và nói lại sở thích của họ."],
-  goal:"Vận dụng thông tin trong hội thoại.",
-  links:[L("video","Video ngày 16","https://drive.google.com/file/d/1FaI86fpzCArSq-kGYlZN3VVmZSpUDAyk/view?usp=sharing"),
-         L("game","Bài tập ngày 16","https://wordwall.net/resource/120963136?wwmethod=link")]},
-/* 17 */ {t:"REVIEW 1",
-  w:ALL_HOBBIES,
-  s:[S("My name is ___. I like ___.","我叫 ___。我喜欢 ___。","wǒ jiào ___. wǒ xǐhuan ___")],
-  steps:["Bài 1: Quay video đọc lại toàn bộ từ vựng hobby và người thân.",
-         "Bài 2: Điền vào chỗ trống các mẫu câu My name is… / I like…"],
-  goal:"Nhắc nhớ tất cả.", clip:true},
-/* 18 */ {t:"REVIEW 2 – Chuyển ngữ nâng cao",
-  steps:["Bài 1: Làm bài tập chuyển ngữ.","Chơi trò ghép cặp, \"Ghép chữ – pinyin\" và \"Chọn chữ Hán\" trên web để ôn."],
-  goal:"Ứng biến thay vì học thuộc.",
-  links:[L("game","Bài tập chuyển ngữ","https://wordwall.net/resource/120966233?wwmethod=link")]},
-/* 19 */ {t:"FINAL PRACTICE",
-  steps:["Bài 1: Làm bài tập từ vựng.","Bài 2: Làm bài tập hỏi – đáp.","Bài 3: Làm bài tập hoàn thiện hội thoại."],
-  goal:"Hoàn thiện hội thoại.",
-  links:[L("game","Bài 1 – Từ vựng","https://wordwall.net/resource/120864213/hobby-2"),
-         L("game","Bài 2 – Hỏi đáp","https://wordwall.net/resource/120961501/game1"),
-         L("game","Bài 3 – Hội thoại","https://wordwall.net/resource/120963136/game2")]},
-/* 20 */ {t:"FINAL BATTLE REHEARSAL",
-  steps:["Bài 1: Làm bài tập bốc thẻ: Hobby (nói hobby trên thẻ, Anh + Trung) · Question (trả lời câu hỏi trên thẻ) · Switch (chuyển sang ngôn ngữ còn lại).",
-         "Bài 2: Bốc thẻ liên tục và trả lời có bấm giờ, như trong buổi thi. Làm theo cặp hoặc cùng giáo viên."],
-  goal:"Ổn định phản xạ và sự tự tin."},
-/* 21 */ {zoom:true, t:"🏆 Vòng 3 – Test tổng hợp",
-  about:"Test tổng hợp (đọc, nghe, nói) để chọn ứng viên vào vòng Chung kết.",
-  prep:["Từ vựng hobby và người thân","Mẫu câu My name is… / I like… / My … likes…","Hỏi – đáp: What do you like? / Do you like…? / What does your … like?","Chuyển ngữ Anh ↔ Trung"]}
-];
+/* Canopy dùng bộ bài tập dựng trên web: dữ liệu ở canopy-data.js, trò chơi ở canopy.js, canopy-games.js, canopy-speak.js */
+const CANOPY_DAYS = canopyDays();
 
 const GROUPS = {
   seed:   {name:"Little Seed", icon:"🌱", color:"#3BB273", age:"Mới bắt đầu",   level:"Bé chưa biết tiếng Anh, tiếng Trung, hoặc cả hai", days:SEED_DAYS},
@@ -1016,6 +866,7 @@ function isUnlocked(g,i){ return TEACHER || i===0 || isDone(g,i-1); }
 function dayPoints(g,i){
   const s=P[g+'-'+i], d=GROUPS[g].days[i]; if(!s) return 0;
   if(d.zoom) return s.done?PTS.zoom:0;
+  if(d.cx) return cxDayPoints(s,d);
   return (s.learn?PTS.learn:0)+(s.parent?PTS.parent:0)+gamePts(s)+(s.done?PTS.done:0)+(s.done&&d.clip?PTS.clip:0);
 }
 function roundPoints(g,r){ let n=0; for(let i=r*PER;i<r*PER+PER;i++) n+=dayPoints(g,i); return n; }
@@ -1100,7 +951,7 @@ function loadVoices(){ try{ voices = speechSynthesis.getVoices(); }catch(e){} }
 if ('speechSynthesis' in window){ loadVoices(); speechSynthesis.onvoiceschanged = loadVoices; }
 let warnedZh=false;
 function speak(text, lang, file){
-  if (file){ const a=new Audio(file); a.play().catch(()=>speak(text,lang)); return; }
+  if (file){ try{ speechSynthesis.cancel(); }catch(e){} if(curAudio){ try{curAudio.pause();}catch(e){} } const a=new Audio(file); curAudio=a; a.play().catch(()=>speak(text,lang)); return; }
   if (!('speechSynthesis' in window)){ toast('Máy này chưa hỗ trợ đọc to 😢'); return; }
   text = String(text||'').replace(/_+|…|\.\.\./g,' ').replace(/\s+/g,' ').trim();
   if(!text) return;
@@ -1115,7 +966,12 @@ function speak(text, lang, file){
   u.rate = 0.8;
   speechSynthesis.speak(u);
 }
-function say(item, lang){ lang==='zh' ? speak(item.zh,'zh',item.audioZh) : speak(item.en,'en',item.audioEn); }
+let curAudio=null;
+function zhKey(t){ let h=5381; for(const ch of String(t).trim()) h=((h*33)^ch.codePointAt(0))>>>0; return h.toString(36); }
+function say(item, lang){
+  if(lang==='zh') speak(item.zh,'zh', item.audioZh || (AUDIO_DIR ? AUDIO_DIR+'zh/'+zhKey(item.zh)+'.mp3' : ''));
+  else speak(item.en,'en', item.audioEn || (AUDIO_DIR ? AUDIO_DIR+'en/'+imgSlug(item.en)+'.mp3' : ''));
+}
 
 /* ---------- tiện ích và hiệu ứng ---------- */
 function esc(s){ return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
@@ -1287,7 +1143,7 @@ function viewGroup(g){
   const rounds = ROUNDS.map((R,r)=>{
     const rdone = isDone(g,r*PER+PER-1);
     return `<div class="round ${rdone?'rdone':''}">
-      <div class="rhead"><span class="rbadge">Tuần ${r+1}</span><h3>${R.icon} ${R.en}</h3><span class="vi">${R.vi}</span>
+      <div class="rhead"><span class="rbadge">Tuần ${r+1}</span><h3>${R.icon} ${R.en}</h3><span class="vi">${R.vi}${G.days[r*PER].round?' · '+esc(G.days[r*PER].round.name)+' – '+esc(G.days[r*PER].round.vi):''}</span>
         <span class="rpts">${roundPoints(g,r)} điểm</span></div>
       <div class="trail">
         ${[0,1,2,3,4,5,6].map(d=>{
@@ -1374,6 +1230,7 @@ function viewDay(g,i,step){
   if(!isUnlocked(g,i)){ toast('Ngày này chưa mở khóa 🔒'); location.hash='#/g/'+g; return; }
   cur={g,i,day};
   if(day.zoom) return viewZoom(g,i);
+  if(day.cx) return viewCanopyDay(g,i,step);
   const s=st(g,i);
   const hasLearn = (day.w&&day.w.length)||(day.s&&day.s.length);
   const steps=[];
@@ -1621,9 +1478,10 @@ function viewZoom(g,i){
 /* ---------- điều hướng ---------- */
 function route(){
   try{ speechSynthesis.cancel(); }catch(e){}
+  if(typeof cxStop==='function'){ cxStop(); if(window.cxStopListen) window.cxStopListen(); }
   const p=location.hash.replace(/^#\/?/,'').split('/').filter(Boolean);
   if(p[0]==='g' && p[1] && p[2]==='vang') viewGold(p[1], +(p[3]||0));
-  else if(p[0]==='g' && p[1] && p[2]) viewDay(p[1], +p[2]-1);
+  else if(p[0]==='g' && p[1] && p[2]) viewDay(p[1], +p[2]-1, p[3]);
   else if(p[0]==='g' && p[1]) viewGroup(p[1]);
   else viewHome();
   artWatch();
