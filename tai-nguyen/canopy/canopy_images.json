@@ -1,0 +1,2132 @@
+[
+ {
+  "id": "v1_d1_w_home",
+  "vong": 1,
+  "ngay": 1,
+  "loai": "tu",
+  "en": "home",
+  "zh": "家",
+  "nhan_vat": [],
+  "canh": "A cosy little house with a red roof, a front door and two windows, as a single place icon on a plain white background.",
+  "dung_o": [
+   "V1 D1 Flip tiles + Quiz (picture -> EN + ZH)",
+   "V1 D1 Quiz (picture -> EN + ZH)",
+   "V1 D1 speaking page NL2 item 2",
+   "V1-N4-NOI item 1 (v1n4-01.png)"
+  ]
+ },
+ {
+  "id": "v1_d1_w_school",
+  "vong": 1,
+  "ngay": 1,
+  "loai": "tu",
+  "en": "school",
+  "zh": "学校",
+  "nhan_vat": [],
+  "canh": "A small school building with a flag on top and a clock above the entrance, as a single place icon on a plain white background.",
+  "dung_o": [
+   "V1 D1 Flip tiles + Quiz (picture -> EN + ZH)",
+   "V1 D1 Quiz (picture -> EN + ZH)",
+   "V1 D1 speaking page NL2 item 1",
+   "V1-N4-NOI item 2 (v1n4-02.png)",
+   "V2 D2 Flip tiles + Quiz (review word)",
+   "V3 D2 Group sort picture card 去学校"
+  ]
+ },
+ {
+  "id": "v1_d1_w_shop",
+  "vong": 1,
+  "ngay": 1,
+  "loai": "tu",
+  "en": "shop",
+  "zh": "商店",
+  "nhan_vat": [],
+  "canh": "A small shop front with a striped awning and fruit and toys in the window, as a single place icon on a plain white background.",
+  "dung_o": [
+   "V1 D1 Flip tiles + Quiz (picture -> EN + ZH)",
+   "V1 D1 Quiz (picture -> EN + ZH)",
+   "V1 D1 speaking page NL2 item 3",
+   "V1-N4-NOI item 3 (v1n4-03.png)",
+   "V2 D2 Flip tiles + Quiz (review word)",
+   "V3 D3 Flip tiles + Quiz (review word)",
+   "V3 D2 Group sort picture card 去商店"
+  ]
+ },
+ {
+  "id": "v1_d1_w_park",
+  "vong": 1,
+  "ngay": 1,
+  "loai": "tu",
+  "en": "park",
+  "zh": "公园",
+  "nhan_vat": [],
+  "canh": "A green park with two trees, a bench, a slide and a path, as a single place icon on a plain white background.",
+  "dung_o": [
+   "V1 D1 Flip tiles + Quiz (picture -> EN + ZH)",
+   "V1 D1 Quiz (picture -> EN + ZH)",
+   "V1 D1 speaking page NL2 item 4",
+   "V1-N4-NOI item 4 (v1n4-04.png)",
+   "V3 D3 Flip tiles + Quiz (review word)",
+   "V3 D2 Group sort picture card 去公园"
+  ]
+ },
+ {
+  "id": "v1_d1_w_restaurant",
+  "vong": 1,
+  "ngay": 1,
+  "loai": "tu",
+  "en": "restaurant",
+  "zh": "饭店",
+  "nhan_vat": [],
+  "canh": "A restaurant front with a bowl-and-chopsticks sign and set tables seen through the window, as a single place icon on a plain white background.",
+  "dung_o": [
+   "V1 D1 Flip tiles + Quiz (picture -> EN + ZH)",
+   "V1 D1 Quiz (picture -> EN + ZH)",
+   "V1 D1 speaking page NL2 item 5",
+   "V1-N4-NOI item 5 (v1n4-05.png)",
+   "V2 D2 Flip tiles + Quiz (review word)"
+  ]
+ },
+ {
+  "id": "v1_d1_w_zoo",
+  "vong": 1,
+  "ngay": 1,
+  "loai": "tu",
+  "en": "zoo",
+  "zh": "动物园",
+  "nhan_vat": [],
+  "canh": "A zoo gate with an elephant and a giraffe peeking over the fence, as a single place icon on a plain white background.",
+  "dung_o": [
+   "V1 D1 Flip tiles + Quiz (picture -> EN + ZH)",
+   "V1 D1 Quiz (picture -> EN + ZH)",
+   "V1 D1 speaking page NL2 item 6",
+   "V1-N4-NOI item 6 (v1n4-06.png)"
+  ]
+ },
+ {
+  "id": "v1_d2_w_study",
+  "vong": 1,
+  "ngay": 2,
+  "loai": "tu",
+  "en": "study",
+  "zh": "学习",
+  "nhan_vat": [
+   "Leo"
+  ],
+  "canh": "Leo sitting at a small desk reading a book and writing in a notebook, on a plain white background.",
+  "dung_o": [
+   "V1 D2 Flip tiles + Quiz",
+   "V1 D2 Quiz"
+  ]
+ },
+ {
+  "id": "v1_d2_w_play",
+  "vong": 1,
+  "ngay": 2,
+  "loai": "tu",
+  "en": "play",
+  "zh": "玩",
+  "nhan_vat": [
+   "Leo"
+  ],
+  "canh": "Leo laughing and kicking a ball, on a plain white background.",
+  "dung_o": [
+   "V1 D2 Flip tiles + Quiz",
+   "V1 D2 Quiz"
+  ]
+ },
+ {
+  "id": "v1_d2_w_buy",
+  "vong": 1,
+  "ngay": 2,
+  "loai": "tu",
+  "en": "buy",
+  "zh": "买",
+  "nhan_vat": [
+   "Leo"
+  ],
+  "canh": "Leo handing a coin to a shopkeeper across a counter and taking a small bag, on a plain white background.",
+  "dung_o": [
+   "V1 D2 Flip tiles + Quiz",
+   "V1 D2 Quiz"
+  ]
+ },
+ {
+  "id": "v1_d2_w_eat",
+  "vong": 1,
+  "ngay": 2,
+  "loai": "tu",
+  "en": "eat",
+  "zh": "吃",
+  "nhan_vat": [
+   "Leo"
+  ],
+  "canh": "Leo eating a bowl of rice with chopsticks, on a plain white background.",
+  "dung_o": [
+   "V1 D2 Flip tiles + Quiz",
+   "V1 D2 Quiz"
+  ]
+ },
+ {
+  "id": "v1_d2_w_see",
+  "vong": 1,
+  "ngay": 2,
+  "loai": "tu",
+  "en": "see",
+  "zh": "看",
+  "nhan_vat": [
+   "Leo"
+  ],
+  "canh": "Leo looking at something with wide, curious eyes and a hand shading his eyes, on a plain white background.",
+  "dung_o": [
+   "V1 D2 Flip tiles + Quiz",
+   "V1 D2 Quiz"
+  ]
+ },
+ {
+  "id": "v1_d2_w_take_a_walk",
+  "vong": 1,
+  "ngay": 2,
+  "loai": "tu",
+  "en": "take a walk",
+  "zh": "散步",
+  "nhan_vat": [
+   "Leo"
+  ],
+  "canh": "Leo strolling slowly along a short path with his hands behind his back, on a plain white background.",
+  "dung_o": [
+   "V1 D2 Flip tiles + Quiz",
+   "V1 D2 Quiz"
+  ]
+ },
+ {
+  "id": "v1_d3_w_morning_zaoshang",
+  "vong": 1,
+  "ngay": 3,
+  "loai": "tu",
+  "en": "morning",
+  "zh": "早上",
+  "nhan_vat": [],
+  "canh": "An early sunrise over rooftops with a crowing rooster and a clock showing 6:30, on a plain white background (must look clearly different from the 上午 card).",
+  "dung_o": [
+   "V1 D3 Flip tiles + Quiz",
+   "V1 D3 Quiz"
+  ]
+ },
+ {
+  "id": "v1_d3_w_morning_shangwu",
+  "vong": 1,
+  "ngay": 3,
+  "loai": "tu",
+  "en": "morning",
+  "zh": "上午",
+  "nhan_vat": [],
+  "canh": "A bright sun high in a blue sky with a clock showing 10:00, on a plain white background (must look clearly different from the 早上 card).",
+  "dung_o": [
+   "V1 D3 Flip tiles + Quiz",
+   "V1 D3 Quiz"
+  ]
+ },
+ {
+  "id": "v1_d3_w_afternoon",
+  "vong": 1,
+  "ngay": 3,
+  "loai": "tu",
+  "en": "afternoon",
+  "zh": "下午",
+  "nhan_vat": [],
+  "canh": "An afternoon sun lower in the sky with long shadows and a clock showing 3:00, on a plain white background.",
+  "dung_o": [
+   "V1 D3 Flip tiles + Quiz",
+   "V1 D3 Quiz"
+  ]
+ },
+ {
+  "id": "v1_d3_w_evening",
+  "vong": 1,
+  "ngay": 3,
+  "loai": "tu",
+  "en": "evening",
+  "zh": "晚上",
+  "nhan_vat": [],
+  "canh": "A dark blue evening sky with a moon, stars and lit windows and a clock showing 7:00, on a plain white background.",
+  "dung_o": [
+   "V1 D3 Flip tiles + Quiz",
+   "V1 D3 Quiz"
+  ]
+ },
+ {
+  "id": "v1_d3_w_week",
+  "vong": 1,
+  "ngay": 3,
+  "loai": "tu",
+  "en": "week",
+  "zh": "星期",
+  "nhan_vat": [],
+  "canh": "A row of seven calendar squares for one week, the seventh square red for Sunday, with no words, on a plain white background.",
+  "dung_o": [
+   "V1 D3 Flip tiles + Quiz",
+   "V1 D3 Quiz"
+  ]
+ },
+ {
+  "id": "v1_d3_w_family",
+  "vong": 1,
+  "ngay": 3,
+  "loai": "tu",
+  "en": "family",
+  "zh": "家人",
+  "nhan_vat": [
+   "Leo",
+   "Leo's dad",
+   "Leo's mom",
+   "Leo's older sister"
+  ],
+  "canh": "Leo standing arm in arm with his dad, his mom and his older sister, all smiling, on a plain white background.",
+  "dung_o": [
+   "V1 D3 Flip tiles + Quiz",
+   "V1 D3 Quiz"
+  ]
+ },
+ {
+  "id": "v1_d1_p_go_home",
+  "vong": 1,
+  "ngay": 1,
+  "loai": "cum",
+  "en": "go home",
+  "zh": "回家",
+  "nhan_vat": [
+   "Anna"
+  ],
+  "canh": "Anna with her school bag walking up the path to her front door in the late afternoon, waving.",
+  "dung_o": [
+   "V1 D1 Flip tiles (phrase card)",
+   "V1-N4-NOI item 7 (v1n4-07.png)"
+  ]
+ },
+ {
+  "id": "v1_d1_p_go_to_school",
+  "vong": 1,
+  "ngay": 1,
+  "loai": "cum",
+  "en": "go to school",
+  "zh": "去学校",
+  "nhan_vat": [
+   "Anna"
+  ],
+  "canh": "Anna with her backpack walking towards the school gate in the morning.",
+  "dung_o": [
+   "V1 D1 Flip tiles (phrase card)",
+   "V1-N4-NOI item 8 (v1n4-08.png)"
+  ]
+ },
+ {
+  "id": "v1_d1_p_go_to_the_park",
+  "vong": 1,
+  "ngay": 1,
+  "loai": "cum",
+  "en": "go to the park",
+  "zh": "去公园",
+  "nhan_vat": [
+   "Anna"
+  ],
+  "canh": "Anna skipping along a path into a green park with trees and a slide.",
+  "dung_o": [
+   "V1 D1 Flip tiles (phrase card)",
+   "V1-N4-NOI item 9 (v1n4-09.png)"
+  ]
+ },
+ {
+  "id": "v1_d1_p_go_to_the_zoo",
+  "vong": 1,
+  "ngay": 1,
+  "loai": "cum",
+  "en": "go to the zoo",
+  "zh": "去动物园",
+  "nhan_vat": [
+   "Anna"
+  ],
+  "canh": "Anna walking through the zoo gate and pointing at a giraffe behind the fence.",
+  "dung_o": [
+   "V1 D1 Flip tiles (phrase card)",
+   "V1-N4-NOI item 10 (v1n4-10.png)"
+  ]
+ },
+ {
+  "id": "v1_d2_p_buy_things",
+  "vong": 1,
+  "ngay": 2,
+  "loai": "cum",
+  "en": "buy things",
+  "zh": "买东西",
+  "nhan_vat": [
+   "Leo"
+  ],
+  "canh": "Leo at a shop counter putting fruit and a toy car into a basket and holding out coins to the shopkeeper.",
+  "dung_o": [
+   "V1 D2 Flip tiles (phrase card)",
+   "V1 D2 sentence 1 我去商店买东西。 (Flip tiles, Missing word)",
+   "V1 D5 story 'My week' line 3 (Tuesday afternoon)",
+   "V1 D6 story 'My busy week' line 3"
+  ]
+ },
+ {
+  "id": "v1_d2_p_eat_dinner",
+  "vong": 1,
+  "ngay": 2,
+  "loai": "cum",
+  "en": "eat dinner",
+  "zh": "吃晚饭",
+  "nhan_vat": [
+   "Leo",
+   "Leo's dad",
+   "Leo's mom",
+   "Leo's older sister"
+  ],
+  "canh": "Leo eating dinner at the table at home with his dad, his mom and his older sister in the evening, the window dark outside.",
+  "dung_o": [
+   "V1 D2 Flip tiles (phrase card)",
+   "V1 D5 story 'My week' line 5 (every evening)"
+  ]
+ },
+ {
+  "id": "v1_d2_p_see_animals",
+  "vong": 1,
+  "ngay": 2,
+  "loai": "cum",
+  "en": "see animals",
+  "zh": "看动物",
+  "nhan_vat": [
+   "Leo"
+  ],
+  "canh": "Leo at the zoo pointing excitedly at an elephant and a monkey.",
+  "dung_o": [
+   "V1 D2 Flip tiles (phrase card)",
+   "V1 D2 sentence 2 我去动物园看动物。 (Flip tiles, Missing word)",
+   "V1 D6 story 'My busy week' line 5 (Saturday morning zoo)"
+  ]
+ },
+ {
+  "id": "v1_d2_p_play_with_friends",
+  "vong": 1,
+  "ngay": 2,
+  "loai": "cum",
+  "en": "play with friends",
+  "zh": "和朋友玩",
+  "nhan_vat": [
+   "Leo",
+   "Xiaomei",
+   "Bông"
+  ],
+  "canh": "Leo playing tag with his friends Xiaomei and Bông in a sunny park in the afternoon.",
+  "dung_o": [
+   "V1 D2 Flip tiles (phrase card)",
+   "V1 D3 sentence 3 星期天下午，我去公园和朋友玩。 (Flip tiles, Unjumble)",
+   "V1 D5 story 'My week' line 4 (Wednesday afternoon)",
+   "V1 D6 story 'My busy week' line 4",
+   "V1 D6 speaking page NL6 strip picture 3 (Sunday afternoon, park; ZH flag)"
+  ]
+ },
+ {
+  "id": "v1_d3_p_on_monday_morning",
+  "vong": 1,
+  "ngay": 3,
+  "loai": "cum",
+  "en": "on Monday morning",
+  "zh": "星期一早上",
+  "nhan_vat": [],
+  "canh": "The seven-square week strip with the first square (Monday) highlighted and the 早上 sunrise symbol beside it, with no words.",
+  "dung_o": [
+   "V1 D3 Flip tiles (phrase card)"
+  ]
+ },
+ {
+  "id": "v1_d3_p_on_saturday_evening",
+  "vong": 1,
+  "ngay": 3,
+  "loai": "cum",
+  "en": "on Saturday evening",
+  "zh": "星期六晚上",
+  "nhan_vat": [],
+  "canh": "The seven-square week strip with the sixth square (Saturday) highlighted and the 晚上 moon symbol beside it, with no words.",
+  "dung_o": [
+   "V1 D3 Flip tiles (phrase card)"
+  ]
+ },
+ {
+  "id": "v1_d3_p_on_sunday_morning",
+  "vong": 1,
+  "ngay": 3,
+  "loai": "cum",
+  "en": "on Sunday morning",
+  "zh": "星期天上午",
+  "nhan_vat": [],
+  "canh": "The seven-square week strip with the red seventh square (Sunday) highlighted and the 上午 high-sun symbol beside it, with no words.",
+  "dung_o": [
+   "V1 D3 Flip tiles (phrase card)"
+  ]
+ },
+ {
+  "id": "v1_d1_s1",
+  "vong": 1,
+  "ngay": 1,
+  "loai": "cau",
+  "en": "Where are you going?",
+  "zh": "你去哪儿？",
+  "nhan_vat": [
+   "Xiaomei",
+   "Leo"
+  ],
+  "canh": "Xiaomei meeting Leo on the street and asking him something, with a question-mark bubble holding tiny icons of a house, a school and a park.",
+  "dung_o": [
+   "V1 D1 Flip tiles (sentence 1)"
+  ]
+ },
+ {
+  "id": "v1_d1_s2",
+  "vong": 1,
+  "ngay": 1,
+  "loai": "cau",
+  "en": "I go to the park.",
+  "zh": "我去公园。",
+  "nhan_vat": [
+   "Leo"
+  ],
+  "canh": "Leo happily running through the gate into a green park with a slide and trees in the morning.",
+  "dung_o": [
+   "V1 D1 Flip tiles (sentence 2) + Missing word",
+   "V1 D6 story 'My busy week' line 7 (Sunday morning park)"
+  ]
+ },
+ {
+  "id": "v1_d3_s1",
+  "vong": 1,
+  "ngay": 3,
+  "loai": "cau",
+  "en": "On Monday morning, I go to school to study.",
+  "zh": "星期一早上，我去学校学习。",
+  "nhan_vat": [
+   "Leo"
+  ],
+  "canh": "Leo at his classroom desk on a Monday morning, reading a book with the early sun shining through the window.",
+  "dung_o": [
+   "V1 D3 Flip tiles (sentence 1) + Unjumble",
+   "V1 D5 story 'My week' line 2",
+   "V1 D6 story 'My busy week' line 2",
+   "V1 D6 speaking page NL6 strip picture 1 (Monday morning, school; ZH flag)"
+  ]
+ },
+ {
+  "id": "v1_d3_s2",
+  "vong": 1,
+  "ngay": 3,
+  "loai": "cau",
+  "en": "On Saturday evening, my family goes to the restaurant to eat dinner.",
+  "zh": "星期六晚上，我的家人去饭店吃晚饭。",
+  "nhan_vat": [
+   "Leo",
+   "Leo's dad",
+   "Leo's mom",
+   "Leo's older sister"
+  ],
+  "canh": "Leo, his dad, his mom and his older sister eating dinner together at a restaurant table in the evening.",
+  "dung_o": [
+   "V1 D3 Flip tiles (sentence 2) + Unjumble",
+   "V1 D6 story 'My busy week' line 6 (Saturday evening restaurant)",
+   "V1 D6 speaking page NL6 strip picture 2 (Saturday evening, restaurant; EN flag)"
+  ]
+ },
+ {
+  "id": "v1_d3_ps_v1_1",
+  "vong": 1,
+  "ngay": 3,
+  "loai": "ps",
+  "en": "Leo doesn't go to school or home. He goes to the park.",
+  "zh": "Leo不去学校，也不回家。他去公园。",
+  "nhan_vat": [
+   "Leo"
+  ],
+  "canh": "Leo standing at a signpost whose three arrows point to a school, a house and a park, thinking, without showing which way he goes.",
+  "dung_o": [
+   "V1-1 PS-1 picture"
+  ]
+ },
+ {
+  "id": "v1_d3_ps_v1_2",
+  "vong": 1,
+  "ngay": 3,
+  "loai": "ps",
+  "en": "On Saturday morning Anna goes to the zoo. On Saturday evening she goes home.",
+  "zh": "星期六早上，Anna去动物园。星期六晚上，她回家。",
+  "nhan_vat": [
+   "Anna"
+  ],
+  "canh": "Anna beside a Saturday calendar square split into a sunny half and a moonlit half, with a zoo icon and a house icon floating above but not linked to either half.",
+  "dung_o": [
+   "V1-2 PS-1 picture"
+  ]
+ },
+ {
+  "id": "v1_d3_ps_v1_3",
+  "vong": 1,
+  "ngay": 3,
+  "loai": "ps",
+  "en": "I go to the shop, not to buy things but to play with my friends.",
+  "zh": "我去商店，不是买东西，是和朋友玩。",
+  "nhan_vat": [
+   "unnamed child (the 我 of the passage)"
+  ],
+  "canh": "A child seen from behind standing at a shop entrance, so the picture does not show what the child does there.",
+  "dung_o": [
+   "V1-3 PS-1 picture"
+  ]
+ },
+ {
+  "id": "v1_d5_story_r1",
+  "vong": 1,
+  "ngay": 5,
+  "loai": "truyen",
+  "en": "My name is Leo.",
+  "zh": "我叫Leo。",
+  "nhan_vat": [
+   "Leo"
+  ],
+  "canh": "Leo waving hello to the reader with a big smile in front of his house.",
+  "dung_o": [
+   "V1 D5 story 'My week' line 1",
+   "V1 D6 story 'My busy week' line 1"
+  ]
+ },
+ {
+  "id": "v1_d6_story_r8",
+  "vong": 1,
+  "ngay": 6,
+  "loai": "truyen",
+  "en": "Every day is a good day!",
+  "zh": "每天都是好日子！",
+  "nhan_vat": [
+   "Leo"
+  ],
+  "canh": "Leo grinning and holding up a week calendar covered in star stickers.",
+  "dung_o": [
+   "V1 D6 story 'My busy week' line 8"
+  ]
+ },
+ {
+  "id": "char_leo",
+  "vong": 1,
+  "ngay": 5,
+  "loai": "ps",
+  "en": "Leo",
+  "zh": "Leo",
+  "nhan_vat": [
+   "Leo"
+  ],
+  "canh": "Head-and-shoulders portrait card of Leo smiling, with a name tag reading Leo, in plain clothes with no job, place or transport clues.",
+  "dung_o": [
+   "V1-4 PS-2 character card",
+   "V1-7 / V1-8 PS-3 grid row header",
+   "V2-4 PS-2 character card",
+   "V2-7 / V2-8 PS-3 grid row header",
+   "V3-4 PS-2 character card",
+   "V3-10 PS-2 character card",
+   "V3-7 / V3-8 PS-3 grid row header"
+  ]
+ },
+ {
+  "id": "char_anna",
+  "vong": 1,
+  "ngay": 5,
+  "loai": "ps",
+  "en": "Anna",
+  "zh": "Anna",
+  "nhan_vat": [
+   "Anna"
+  ],
+  "canh": "Head-and-shoulders portrait card of Anna smiling, with a name tag reading Anna, in plain clothes with no job, place or transport clues.",
+  "dung_o": [
+   "V1-4 PS-2 character card",
+   "V1-9 PS-3 character card",
+   "V1-7 / V1-8 PS-3 grid row header",
+   "V2-9 PS-3 character card",
+   "V3-6 PS-2 character card",
+   "V3-7 / V3-8 PS-3 grid row header"
+  ]
+ },
+ {
+  "id": "char_bong",
+  "vong": 1,
+  "ngay": 5,
+  "loai": "ps",
+  "en": "Bông",
+  "zh": "Bông",
+  "nhan_vat": [
+   "Bông"
+  ],
+  "canh": "Head-and-shoulders portrait card of Bông smiling, with a name tag reading Bông, in plain clothes with no job, place or transport clues.",
+  "dung_o": [
+   "V1-6 PS-2 character card",
+   "V1-7 / V1-8 PS-3 grid row header",
+   "V2-5 PS-2 character card",
+   "V2-7 / V2-8 PS-3 grid row header",
+   "V3-7 / V3-8 PS-3 grid row header"
+  ]
+ },
+ {
+  "id": "ps_v1_5_family",
+  "vong": 1,
+  "ngay": 5,
+  "loai": "ps",
+  "en": "my family",
+  "zh": "我的家人",
+  "nhan_vat": [
+   "unnamed narrator's family (dad, mom, two children)"
+  ],
+  "canh": "A family portrait card of a dad, a mom and two children standing together at home, with no name tags.",
+  "dung_o": [
+   "V1-5 PS-2 picture"
+  ]
+ },
+ {
+  "id": "v1_d6_ps3_grid",
+  "vong": 1,
+  "ngay": 6,
+  "loai": "ps",
+  "en": "Leo, Anna, Bông × park / zoo / shop",
+  "zh": "Leo、Anna和Bông × 公园 / 动物园 / 商店",
+  "nhan_vat": [
+   "Leo",
+   "Anna",
+   "Bông"
+  ],
+  "canh": "A 3 × 3 puzzle grid with the Leo, Anna and Bông portrait cards as row headers and small park, zoo and shop icons as column headers, all nine cells empty for ticks and crosses.",
+  "dung_o": [
+   "V1-7 / V1-8 PS-3 picture + grid"
+  ]
+ },
+ {
+  "id": "v2_d1_w_teacher",
+  "vong": 2,
+  "ngay": 1,
+  "loai": "tu",
+  "en": "teacher",
+  "zh": "老师",
+  "nhan_vat": [
+   "a woman teacher (generic)"
+  ],
+  "canh": "A smiling woman teacher pointing at a blackboard, on a plain white background.",
+  "dung_o": [
+   "V2 D1 Flip tiles + Quiz",
+   "V2 D1 phrase card 是老师 (Flip tiles, Match up)",
+   "V2 D1 question bank Bai 1 (the person Leo and Xiaomei look at)",
+   "V2 D1 speaking page NL2 item 1",
+   "V2 D4 speaking page NL2 item 1",
+   "V2 D4 speaking page NL2 item 7"
+  ]
+ },
+ {
+  "id": "v2_d1_w_student",
+  "vong": 2,
+  "ngay": 1,
+  "loai": "tu",
+  "en": "student",
+  "zh": "学生",
+  "nhan_vat": [
+   "Leo"
+  ],
+  "canh": "Leo in a school uniform with a backpack and a book under his arm, on a plain white background.",
+  "dung_o": [
+   "V2 D1 Flip tiles + Quiz",
+   "V2 D1 question bank Bai 2 (the person Leo and Xiaomei look at)",
+   "V2 D1 speaking page NL2 item 2",
+   "V2 D4 speaking page NL2 item 3"
+  ]
+ },
+ {
+  "id": "v2_d1_w_doctor",
+  "vong": 2,
+  "ngay": 1,
+  "loai": "tu",
+  "en": "doctor",
+  "zh": "医生",
+  "nhan_vat": [
+   "a man doctor (generic)"
+  ],
+  "canh": "A man doctor in a white coat with a stethoscope, on a plain white background.",
+  "dung_o": [
+   "V2 D1 Flip tiles + Quiz",
+   "V2 D1 phrase card 是医生 (Flip tiles, Match up)",
+   "V2 D1 question bank Bai 3 (the person Leo and Xiaomei look at)",
+   "V2 D1 speaking page NL2 item 3",
+   "V2 D4 speaking page NL2 item 5",
+   "V2 D4 speaking page NL2 item 8"
+  ]
+ },
+ {
+  "id": "v2_d1_w_chef",
+  "vong": 2,
+  "ngay": 1,
+  "loai": "tu",
+  "en": "chef",
+  "zh": "厨师",
+  "nhan_vat": [
+   "a man chef (generic)"
+  ],
+  "canh": "A man chef in a tall white hat holding a ladle and a pot, on a plain white background.",
+  "dung_o": [
+   "V2 D1 Flip tiles + Quiz",
+   "V2 D1 phrase card 是厨师 (Flip tiles, Match up)",
+   "V2 D1 question bank Bai 4 (the person Leo and Xiaomei look at)",
+   "V2 D1 speaking page NL2 item 4",
+   "V2 D4 speaking page NL2 item 4",
+   "V2 D4 speaking page NL2 item 9"
+  ]
+ },
+ {
+  "id": "v2_d1_w_dentist",
+  "vong": 2,
+  "ngay": 1,
+  "loai": "tu",
+  "en": "dentist",
+  "zh": "牙医",
+  "nhan_vat": [
+   "a woman dentist (generic)"
+  ],
+  "canh": "A woman dentist in a mask holding a toothbrush next to a big smiling tooth, on a plain white background.",
+  "dung_o": [
+   "V2 D1 Flip tiles + Quiz",
+   "V2 D1 question bank Bai 5 (the person Leo and Xiaomei look at)",
+   "V2 D1 speaking page NL2 item 5",
+   "V2 D4 speaking page NL2 item 2"
+  ]
+ },
+ {
+  "id": "v2_d1_w_driver",
+  "vong": 2,
+  "ngay": 1,
+  "loai": "tu",
+  "en": "driver",
+  "zh": "司机",
+  "nhan_vat": [
+   "a man driver (generic)"
+  ],
+  "canh": "A man driver in a cap sitting at the steering wheel of a car, seen through the side window, on a plain white background.",
+  "dung_o": [
+   "V2 D1 Flip tiles + Quiz",
+   "V2 D1 phrase card 是司机 (Flip tiles, Match up)",
+   "V2 D1 question bank Bai 6 (the person Leo and Xiaomei look at)",
+   "V2 D1 speaking page NL2 item 6",
+   "V2 D4 speaking page NL2 item 6",
+   "V2 D4 speaking page NL2 item 10",
+   "V3 D3 Flip tiles + Quiz (review word)"
+  ]
+ },
+ {
+  "id": "v2_d2_w_employee",
+  "vong": 2,
+  "ngay": 2,
+  "loai": "tu",
+  "en": "employee",
+  "zh": "员工",
+  "nhan_vat": [
+   "a woman shop employee (generic)"
+  ],
+  "canh": "A shop employee in an apron with a name badge standing behind a counter, on a plain white background.",
+  "dung_o": [
+   "V2 D2 Flip tiles + Quiz"
+  ]
+ },
+ {
+  "id": "v2_d2_w_work",
+  "vong": 2,
+  "ngay": 2,
+  "loai": "tu",
+  "en": "work",
+  "zh": "工作",
+  "nhan_vat": [
+   "a grown-up (generic)"
+  ],
+  "canh": "A grown-up busy at a work desk with a computer, papers and a coffee cup, on a plain white background.",
+  "dung_o": [
+   "V2 D2 Flip tiles + Quiz"
+  ]
+ },
+ {
+  "id": "v2_d2_w_hospital",
+  "vong": 2,
+  "ngay": 2,
+  "loai": "tu",
+  "en": "hospital",
+  "zh": "医院",
+  "nhan_vat": [],
+  "canh": "A hospital building with a big red cross sign and an ambulance at the door, as a single place icon on a plain white background.",
+  "dung_o": [
+   "V2 D2 Flip tiles + Quiz"
+  ]
+ },
+ {
+  "id": "v2_d3_w_dad",
+  "vong": 2,
+  "ngay": 3,
+  "loai": "tu",
+  "en": "dad",
+  "zh": "爸爸",
+  "nhan_vat": [
+   "a dad (generic)"
+  ],
+  "canh": "A smiling young dad holding a small child's hand, with an arrow pointing at the dad, on a plain white background.",
+  "dung_o": [
+   "V2 D3 Flip tiles + Quiz"
+  ]
+ },
+ {
+  "id": "v2_d3_w_mom",
+  "vong": 2,
+  "ngay": 3,
+  "loai": "tu",
+  "en": "mom",
+  "zh": "妈妈",
+  "nhan_vat": [
+   "a mom (generic)"
+  ],
+  "canh": "A smiling young mom holding a small child's hand, with an arrow pointing at the mom, on a plain white background.",
+  "dung_o": [
+   "V2 D3 Flip tiles + Quiz"
+  ]
+ },
+ {
+  "id": "v2_d3_w_older_brother",
+  "vong": 2,
+  "ngay": 3,
+  "loai": "tu",
+  "en": "older brother",
+  "zh": "哥哥",
+  "nhan_vat": [
+   "an older brother (generic)"
+  ],
+  "canh": "A boy of about ten patting the head of a smaller child, with an arrow pointing at the older boy, on a plain white background.",
+  "dung_o": [
+   "V2 D3 Flip tiles + Quiz",
+   "V2 D6 speaking page NL6 part 1 q6 picture (older brother)"
+  ]
+ },
+ {
+  "id": "v2_d3_w_older_sister",
+  "vong": 2,
+  "ngay": 3,
+  "loai": "tu",
+  "en": "older sister",
+  "zh": "姐姐",
+  "nhan_vat": [
+   "an older sister (generic)"
+  ],
+  "canh": "A girl of about ten holding the hand of a smaller child, with an arrow pointing at the older girl, on a plain white background.",
+  "dung_o": [
+   "V2 D3 Flip tiles + Quiz",
+   "V2 D6 speaking page NL6 part 1 q5 picture (older sister)"
+  ]
+ },
+ {
+  "id": "v2_d3_w_he",
+  "vong": 2,
+  "ngay": 3,
+  "loai": "tu",
+  "en": "he",
+  "zh": "他",
+  "nhan_vat": [
+   "a boy (generic)"
+  ],
+  "canh": "A single boy with a big arrow pointing at him, on a plain white background.",
+  "dung_o": [
+   "V2 D3 Flip tiles + Quiz"
+  ]
+ },
+ {
+  "id": "v2_d3_w_she",
+  "vong": 2,
+  "ngay": 3,
+  "loai": "tu",
+  "en": "she",
+  "zh": "她",
+  "nhan_vat": [
+   "a girl (generic)"
+  ],
+  "canh": "A single girl with a big arrow pointing at her, on a plain white background.",
+  "dung_o": [
+   "V2 D3 Flip tiles + Quiz"
+  ]
+ },
+ {
+  "id": "v2_d1_s1",
+  "vong": 2,
+  "ngay": 1,
+  "loai": "cau",
+  "en": "What does he do?",
+  "zh": "他做什么工作？",
+  "nhan_vat": [
+   "Leo",
+   "Xiaomei"
+  ],
+  "canh": "Leo and Xiaomei looking at a photo of a man and Leo asking a question, with a question-mark bubble.",
+  "dung_o": [
+   "V2 D1 Flip tiles (sentence 1)"
+  ]
+ },
+ {
+  "id": "v2_d1_s2",
+  "vong": 2,
+  "ngay": 1,
+  "loai": "cau",
+  "en": "He is a teacher.",
+  "zh": "他是老师。",
+  "nhan_vat": [
+   "a man teacher (generic)"
+  ],
+  "canh": "A man teacher teaching a class at the blackboard in a school classroom.",
+  "dung_o": [
+   "V2 D1 Flip tiles (sentence 2) + Missing word",
+   "V2 D2 phrase card 在学校工作 (Flip tiles, Match up)",
+   "V2 D2 sentence 1 他在学校工作。 (Flip tiles, Missing word)"
+  ]
+ },
+ {
+  "id": "v2_d2_p_work_at_a_hospital",
+  "vong": 2,
+  "ngay": 2,
+  "loai": "cum",
+  "en": "work at a hospital",
+  "zh": "在医院工作",
+  "nhan_vat": [
+   "Anna's dad"
+  ],
+  "canh": "Anna's dad, a doctor in a white coat with a stethoscope, standing at the entrance of a hospital with a red cross.",
+  "dung_o": [
+   "V2 D2 phrase card (Flip tiles, Match up)",
+   "V2 D5 story 'My family' line 3",
+   "V2 D6 story 'Our family' line 2 (Monday morning)"
+  ]
+ },
+ {
+  "id": "v2_d2_p_work_at_a_restaurant",
+  "vong": 2,
+  "ngay": 2,
+  "loai": "cum",
+  "en": "work at a restaurant",
+  "zh": "在饭店工作",
+  "nhan_vat": [
+   "Anna's older sister"
+  ],
+  "canh": "Anna's older sister, a chef in a white hat, cooking noodles in a restaurant kitchen.",
+  "dung_o": [
+   "V2 D2 phrase card (Flip tiles, Match up)",
+   "V2 D6 story 'Our family' line 4",
+   "V2 D6 speaking page NL6 strip picture 3 (older sister, chef; ZH flag)"
+  ]
+ },
+ {
+  "id": "v2_d2_p_work_at_a_shop",
+  "vong": 2,
+  "ngay": 2,
+  "loai": "cum",
+  "en": "work at a shop",
+  "zh": "在商店工作",
+  "nhan_vat": [
+   "a woman shop employee (generic)"
+  ],
+  "canh": "A woman shop employee in an apron with a name badge arranging goods on the shelves of a shop.",
+  "dung_o": [
+   "V2 D2 phrase card (Flip tiles, Match up)",
+   "V2 D2 sentence 2 她是员工，她在商店工作。 (Flip tiles, Missing word)"
+  ]
+ },
+ {
+  "id": "v2_d3_p_my_dad",
+  "vong": 2,
+  "ngay": 3,
+  "loai": "cum",
+  "en": "my dad",
+  "zh": "我爸爸",
+  "nhan_vat": [
+   "Anna",
+   "Anna's dad"
+  ],
+  "canh": "Anna hugging her dad and pointing at him proudly.",
+  "dung_o": [
+   "V2 D3 Flip tiles (phrase card) + Match up"
+  ]
+ },
+ {
+  "id": "v2_d3_p_my_mom",
+  "vong": 2,
+  "ngay": 3,
+  "loai": "cum",
+  "en": "my mom",
+  "zh": "我妈妈",
+  "nhan_vat": [
+   "Anna",
+   "Anna's mom"
+  ],
+  "canh": "Anna holding her mom's hand and pointing at her proudly.",
+  "dung_o": [
+   "V2 D3 Flip tiles (phrase card) + Match up"
+  ]
+ },
+ {
+  "id": "v2_d3_p_my_older_sister",
+  "vong": 2,
+  "ngay": 3,
+  "loai": "cum",
+  "en": "my older sister",
+  "zh": "我姐姐",
+  "nhan_vat": [
+   "Anna",
+   "Anna's older sister"
+  ],
+  "canh": "Anna standing next to her taller older sister and pointing at her proudly.",
+  "dung_o": [
+   "V2 D3 Flip tiles (phrase card) + Match up"
+  ]
+ },
+ {
+  "id": "v2_d3_p_what_job",
+  "vong": 2,
+  "ngay": 3,
+  "loai": "cum",
+  "en": "what job",
+  "zh": "做什么工作",
+  "nhan_vat": [
+   "a grown-up (generic)"
+  ],
+  "canh": "A grown-up with a big question mark above the head and a stethoscope, a chef hat and a steering wheel floating around.",
+  "dung_o": [
+   "V2 D3 Flip tiles (phrase card) + Match up"
+  ]
+ },
+ {
+  "id": "v2_d3_s1",
+  "vong": 2,
+  "ngay": 3,
+  "loai": "cau",
+  "en": "What does your mom do?",
+  "zh": "你妈妈做什么工作？",
+  "nhan_vat": [
+   "Xiaomei",
+   "Leo"
+  ],
+  "canh": "Xiaomei asking Leo a question, with a question-mark bubble showing the outline of a woman.",
+  "dung_o": [
+   "V2 D3 Flip tiles (sentence 1) + Unjumble"
+  ]
+ },
+ {
+  "id": "v2_d3_s2",
+  "vong": 2,
+  "ngay": 3,
+  "loai": "cau",
+  "en": "My mom is a doctor.",
+  "zh": "我妈妈是医生。",
+  "nhan_vat": [
+   "Leo",
+   "Leo's mom"
+  ],
+  "canh": "Leo standing proudly next to his mom, a doctor in a white coat with a stethoscope.",
+  "dung_o": [
+   "V2 D3 Flip tiles (sentence 2) + Unjumble"
+  ]
+ },
+ {
+  "id": "v2_d3_s3",
+  "vong": 2,
+  "ngay": 3,
+  "loai": "cau",
+  "en": "My dad is a chef. He works at a restaurant.",
+  "zh": "我爸爸是厨师，他在饭店工作。",
+  "nhan_vat": [
+   "Xiaomei",
+   "Xiaomei's dad"
+  ],
+  "canh": "Xiaomei visiting her dad, a chef in a white hat, at work in a busy restaurant kitchen.",
+  "dung_o": [
+   "V2 D3 Flip tiles (sentence 3) + Unjumble"
+  ]
+ },
+ {
+  "id": "v2_d3_ps_v2_1",
+  "vong": 2,
+  "ngay": 3,
+  "loai": "ps",
+  "en": "My dad is not a doctor, he is a dentist.",
+  "zh": "我爸爸不是医生，他是牙医。",
+  "nhan_vat": [
+   "unnamed child (the 我 of the passage)",
+   "the child's dad"
+  ],
+  "canh": "A child holding the hand of their dad, who wears plain clothes with no job clues.",
+  "dung_o": [
+   "V2-1 PS-1 picture"
+  ]
+ },
+ {
+  "id": "v2_d3_ps_v2_2",
+  "vong": 2,
+  "ngay": 3,
+  "loai": "ps",
+  "en": "She is my older sister. She is not a student, she works at a restaurant.",
+  "zh": "她是我姐姐。她不是学生，她在饭店工作。",
+  "nhan_vat": [
+   "the narrator's older sister"
+  ],
+  "canh": "A smiling young woman in plain clothes standing in front of a restaurant, with no chef hat or apron.",
+  "dung_o": [
+   "V2-2 PS-1 picture"
+  ]
+ },
+ {
+  "id": "v2_d3_ps_v2_3",
+  "vong": 2,
+  "ngay": 3,
+  "loai": "ps",
+  "en": "Anna's mom works at a school. She is not a student.",
+  "zh": "Anna的妈妈在学校工作。她不是学生。",
+  "nhan_vat": [
+   "Anna's mom"
+  ],
+  "canh": "Anna's mom in plain clothes standing at a school gate, with no books, board or pointer.",
+  "dung_o": [
+   "V2-3 PS-1 picture"
+  ]
+ },
+ {
+  "id": "v2_d5_story_r1",
+  "vong": 2,
+  "ngay": 5,
+  "loai": "truyen",
+  "en": "My name is Anna. I am a student.",
+  "zh": "我叫Anna。我是学生。",
+  "nhan_vat": [
+   "Anna"
+  ],
+  "canh": "Anna in her school uniform with a backpack, waving hello.",
+  "dung_o": [
+   "V2 D5 story 'My family' line 1",
+   "V2 D6 story 'Our family' line 1"
+  ]
+ },
+ {
+  "id": "v2_d5_story_r2",
+  "vong": 2,
+  "ngay": 5,
+  "loai": "truyen",
+  "en": "My dad is a doctor.",
+  "zh": "我爸爸是医生。",
+  "nhan_vat": [
+   "Anna",
+   "Anna's dad"
+  ],
+  "canh": "Anna standing proudly next to her dad, who wears a white doctor's coat and a stethoscope.",
+  "dung_o": [
+   "V2 D5 story 'My family' line 2",
+   "V2 D6 speaking page NL6 strip picture 1 (dad, doctor; ZH flag)"
+  ]
+ },
+ {
+  "id": "v2_d5_story_r4",
+  "vong": 2,
+  "ngay": 5,
+  "loai": "truyen",
+  "en": "My mom is a teacher.",
+  "zh": "我妈妈是老师。",
+  "nhan_vat": [
+   "Anna",
+   "Anna's mom"
+  ],
+  "canh": "Anna standing proudly next to her mom, who holds books and a pointer like a teacher.",
+  "dung_o": [
+   "V2 D5 story 'My family' line 4",
+   "V2 D6 speaking page NL6 strip picture 2 (mom, teacher; EN flag)"
+  ]
+ },
+ {
+  "id": "v2_d5_story_r5",
+  "vong": 2,
+  "ngay": 5,
+  "loai": "truyen",
+  "en": "She works at a school.",
+  "zh": "她在学校工作。",
+  "nhan_vat": [
+   "Anna's mom"
+  ],
+  "canh": "Anna's mom teaching a class of young children at the blackboard in a school classroom.",
+  "dung_o": [
+   "V2 D5 story 'My family' line 5",
+   "V2 D6 story 'Our family' line 3"
+  ]
+ },
+ {
+  "id": "v2_d6_story_r6",
+  "vong": 2,
+  "ngay": 6,
+  "loai": "truyen",
+  "en": "On Saturday evening, we go to the restaurant to eat dinner.",
+  "zh": "星期六晚上，我们去饭店吃晚饭。",
+  "nhan_vat": [
+   "Anna",
+   "Anna's dad",
+   "Anna's mom",
+   "Anna's older sister",
+   "Anna's older sister"
+  ],
+  "canh": "Anna, her dad, her mom, her older sister eating dinner together at a restaurant table in the evening.",
+  "dung_o": [
+   "V2 D6 story 'Our family' line 6"
+  ]
+ },
+ {
+  "id": "v2_d6_story_r7",
+  "vong": 2,
+  "ngay": 6,
+  "loai": "truyen",
+  "en": "I love my family!",
+  "zh": "我爱我家！",
+  "nhan_vat": [
+   "Anna",
+   "Anna's dad",
+   "Anna's mom",
+   "Anna's older sister",
+   "Anna's older sister"
+  ],
+  "canh": "Anna in a big family hug with her dad, her mom, her older sister, with little hearts around them.",
+  "dung_o": [
+   "V2 D6 story 'Our family' line 7"
+  ]
+ },
+ {
+  "id": "char_leo_mom",
+  "vong": 2,
+  "ngay": 5,
+  "loai": "ps",
+  "en": "Leo's mom",
+  "zh": "Leo的妈妈",
+  "nhan_vat": [
+   "Leo's mom"
+  ],
+  "canh": "Head-and-shoulders portrait card of Leo's mom, in plain clothes with no job, place or transport clues.",
+  "dung_o": [
+   "V2-4 PS-2 character card",
+   "V3-10 PS-2 character card"
+  ]
+ },
+ {
+  "id": "char_leo_dad",
+  "vong": 2,
+  "ngay": 5,
+  "loai": "ps",
+  "en": "Leo's dad",
+  "zh": "Leo的爸爸",
+  "nhan_vat": [
+   "Leo's dad"
+  ],
+  "canh": "Head-and-shoulders portrait card of Leo's dad, in plain clothes with no job, place or transport clues.",
+  "dung_o": [
+   "V2-4 PS-2 character card"
+  ]
+ },
+ {
+  "id": "char_bong_older_brother",
+  "vong": 2,
+  "ngay": 5,
+  "loai": "ps",
+  "en": "Bông's older brother",
+  "zh": "Bông的哥哥",
+  "nhan_vat": [
+   "Bông's older brother"
+  ],
+  "canh": "Head-and-shoulders portrait card of Bông's older brother, a young man, in plain clothes with no job, place or transport clues.",
+  "dung_o": [
+   "V2-5 PS-2 character card"
+  ]
+ },
+ {
+  "id": "char_narrator_mom",
+  "vong": 2,
+  "ngay": 5,
+  "loai": "ps",
+  "en": "Mom",
+  "zh": "妈妈",
+  "nhan_vat": [
+   "the narrator's mom (unnamed)"
+  ],
+  "canh": "Head-and-shoulders portrait card of a mom, in plain clothes with no job, place or transport clues.",
+  "dung_o": [
+   "V2-6 PS-2 character card"
+  ]
+ },
+ {
+  "id": "char_narrator_older_sister",
+  "vong": 2,
+  "ngay": 5,
+  "loai": "ps",
+  "en": "older sister",
+  "zh": "姐姐",
+  "nhan_vat": [
+   "the narrator's older sister (unnamed)"
+  ],
+  "canh": "Head-and-shoulders portrait card of a school-age older sister, in plain clothes with no job, place or transport clues.",
+  "dung_o": [
+   "V2-6 PS-2 character card"
+  ]
+ },
+ {
+  "id": "char_david",
+  "vong": 2,
+  "ngay": 6,
+  "loai": "ps",
+  "en": "David",
+  "zh": "David",
+  "nhan_vat": [
+   "David"
+  ],
+  "canh": "Head-and-shoulders portrait card of David, a grown-up man, in plain clothes with no job, place or transport clues.",
+  "dung_o": [
+   "V2-7 / V2-8 PS-3 grid row header"
+  ]
+ },
+ {
+  "id": "v2_d6_ps3_grid",
+  "vong": 2,
+  "ngay": 6,
+  "loai": "ps",
+  "en": "David, Bông, Leo × doctor / teacher / chef",
+  "zh": "David、Bông和Leo × 医生 / 老师 / 厨师",
+  "nhan_vat": [
+   "David",
+   "Bông",
+   "Leo"
+  ],
+  "canh": "A 3 × 3 puzzle grid with the David, Bông and Leo portrait cards as row headers and small stethoscope, blackboard and chef-hat icons as column headers, all nine cells empty.",
+  "dung_o": [
+   "V2-7 / V2-8 PS-3 picture + grid"
+  ]
+ },
+ {
+  "id": "char_anna_older_brother",
+  "vong": 2,
+  "ngay": 6,
+  "loai": "ps",
+  "en": "Anna's older brother",
+  "zh": "Anna的哥哥",
+  "nhan_vat": [
+   "Anna's older sister"
+  ],
+  "canh": "Head-and-shoulders portrait card of Anna's older sister, a young man, in plain clothes with no job, place or transport clues.",
+  "dung_o": [
+   "V2-9 PS-3 character card"
+  ]
+ },
+ {
+  "id": "v3_d1_w_car",
+  "vong": 3,
+  "ngay": 1,
+  "loai": "tu",
+  "en": "car",
+  "zh": "汽车",
+  "nhan_vat": [],
+  "canh": "A small family car seen from the side, as a single object icon on a plain white background.",
+  "dung_o": [
+   "V3 D1 Flip tiles + Quiz",
+   "V3 D1 speaking page NL2 item 1",
+   "V3 D4 speaking page NL2 item 5"
+  ]
+ },
+ {
+  "id": "v3_d1_w_bus",
+  "vong": 3,
+  "ngay": 1,
+  "loai": "tu",
+  "en": "bus",
+  "zh": "公共汽车",
+  "nhan_vat": [],
+  "canh": "A city bus with many windows and a bus-stop sign, as a single object icon on a plain white background.",
+  "dung_o": [
+   "V3 D1 Flip tiles + Quiz",
+   "V3 D1 speaking page NL2 item 2",
+   "V3 D4 speaking page NL2 item 2"
+  ]
+ },
+ {
+  "id": "v3_d1_w_bicycle",
+  "vong": 3,
+  "ngay": 1,
+  "loai": "tu",
+  "en": "bicycle",
+  "zh": "自行车",
+  "nhan_vat": [],
+  "canh": "A bicycle with a bell and a basket, as a single object icon on a plain white background.",
+  "dung_o": [
+   "V3 D1 Flip tiles + Quiz",
+   "V3 D1 speaking page NL2 item 3",
+   "V3 D4 speaking page NL2 item 3"
+  ]
+ },
+ {
+  "id": "v3_d1_w_motorbike",
+  "vong": 3,
+  "ngay": 1,
+  "loai": "tu",
+  "en": "motorbike",
+  "zh": "摩托车",
+  "nhan_vat": [],
+  "canh": "A motorbike with a helmet resting on the seat, as a single object icon on a plain white background.",
+  "dung_o": [
+   "V3 D1 Flip tiles + Quiz",
+   "V3 D1 speaking page NL2 item 4",
+   "V3 D4 speaking page NL2 item 6"
+  ]
+ },
+ {
+  "id": "v3_d1_w_train",
+  "vong": 3,
+  "ngay": 1,
+  "loai": "tu",
+  "en": "train",
+  "zh": "火车",
+  "nhan_vat": [],
+  "canh": "A long train with carriages on a track, as a single object icon on a plain white background.",
+  "dung_o": [
+   "V3 D1 Flip tiles + Quiz",
+   "V3 D1 speaking page NL2 item 5",
+   "V3 D4 speaking page NL2 item 1"
+  ]
+ },
+ {
+  "id": "v3_d1_w_plane",
+  "vong": 3,
+  "ngay": 1,
+  "loai": "tu",
+  "en": "plane",
+  "zh": "飞机",
+  "nhan_vat": [],
+  "canh": "A passenger plane flying among small clouds, as a single object icon on a plain white background.",
+  "dung_o": [
+   "V3 D1 Flip tiles + Quiz",
+   "V3 D1 speaking page NL2 item 6",
+   "V3 D4 speaking page NL2 item 4"
+  ]
+ },
+ {
+  "id": "v3_d2_w_take_zuo",
+  "vong": 3,
+  "ngay": 2,
+  "loai": "tu",
+  "en": "sit / take",
+  "zh": "坐",
+  "nhan_vat": [
+   "Leo"
+  ],
+  "canh": "Leo sitting on a bus seat by the window, on a plain white background.",
+  "dung_o": [
+   "V3 D2 Flip tiles + Quiz"
+  ]
+ },
+ {
+  "id": "v3_d2_w_ride",
+  "vong": 3,
+  "ngay": 2,
+  "loai": "tu",
+  "en": "ride",
+  "zh": "骑",
+  "nhan_vat": [
+   "Leo"
+  ],
+  "canh": "Leo sitting astride a bicycle and pedalling, on a plain white background.",
+  "dung_o": [
+   "V3 D2 Flip tiles + Quiz"
+  ]
+ },
+ {
+  "id": "v3_d2_w_drive",
+  "vong": 3,
+  "ngay": 2,
+  "loai": "tu",
+  "en": "drive",
+  "zh": "开",
+  "nhan_vat": [
+   "a grown-up (generic)"
+  ],
+  "canh": "A grown-up's hands on a car steering wheel, driving, on a plain white background.",
+  "dung_o": [
+   "V3 D2 Flip tiles + Quiz"
+  ]
+ },
+ {
+  "id": "v3_d2_w_walk",
+  "vong": 3,
+  "ngay": 2,
+  "loai": "tu",
+  "en": "walk",
+  "zh": "走路",
+  "nhan_vat": [
+   "Leo"
+  ],
+  "canh": "Leo walking with big steps and swinging arms, on a plain white background.",
+  "dung_o": [
+   "V3 D2 Flip tiles + Quiz"
+  ]
+ },
+ {
+  "id": "v3_d2_w_go_to_school_shangxue",
+  "vong": 3,
+  "ngay": 2,
+  "loai": "tu",
+  "en": "go to school",
+  "zh": "上学",
+  "nhan_vat": [
+   "Xiaomei"
+  ],
+  "canh": "Xiaomei with her backpack stepping into a classroom and sitting down to study, on a plain white background.",
+  "dung_o": [
+   "V3 D2 Flip tiles + Quiz",
+   "V3 D2 Group sort picture card 去上学"
+  ]
+ },
+ {
+  "id": "v3_d2_w_go_to_work_shangban",
+  "vong": 3,
+  "ngay": 2,
+  "loai": "tu",
+  "en": "go to work",
+  "zh": "上班",
+  "nhan_vat": [
+   "a grown-up with a briefcase (generic)"
+  ],
+  "canh": "A grown-up with a briefcase walking into an office building to work, on a plain white background.",
+  "dung_o": [
+   "V3 D2 Flip tiles + Quiz",
+   "V3 D2 phrase card 去上班 (Flip tiles, Match up)",
+   "V3 D2 Group sort picture card 去上班"
+  ]
+ },
+ {
+  "id": "v3_d3_w_beijing",
+  "vong": 3,
+  "ngay": 3,
+  "loai": "tu",
+  "en": "Beijing",
+  "zh": "北京",
+  "nhan_vat": [],
+  "canh": "A simple map of China with Beijing marked by a star and a small Temple of Heaven icon, on a plain white background.",
+  "dung_o": [
+   "V3 D3 Flip tiles + Quiz",
+   "V3 D1 question bank Bai 5 (map picture)"
+  ]
+ },
+ {
+  "id": "v3_d3_w_shanghai",
+  "vong": 3,
+  "ngay": 3,
+  "loai": "tu",
+  "en": "Shanghai",
+  "zh": "上海",
+  "nhan_vat": [],
+  "canh": "A simple map of China with Shanghai marked by a star on the east coast and a small Oriental Pearl Tower icon, on a plain white background.",
+  "dung_o": [
+   "V3 D3 Flip tiles + Quiz",
+   "V3 D1 question bank Bai 6 (map picture)"
+  ]
+ },
+ {
+  "id": "v3_d3_w_how",
+  "vong": 3,
+  "ngay": 3,
+  "loai": "tu",
+  "en": "how",
+  "zh": "怎么",
+  "nhan_vat": [],
+  "canh": "A big question mark surrounded by a small bus, a bike, a car and a line of footprints, on a plain white background.",
+  "dung_o": [
+   "V3 D3 Flip tiles + Quiz"
+  ]
+ },
+ {
+  "id": "v3_d1_p_take_a_bus",
+  "vong": 3,
+  "ngay": 1,
+  "loai": "cum",
+  "en": "take a bus",
+  "zh": "坐公共汽车",
+  "nhan_vat": [
+   "Xiaomei"
+  ],
+  "canh": "Xiaomei with her backpack climbing the steps onto a city bus in the morning.",
+  "dung_o": [
+   "V3 D1 phrase card (Flip tiles, Match up)",
+   "V3 D1 sentence 2 我坐公共汽车去上学。 (Flip tiles, Missing word)",
+   "V3 D4 speaking page NL2 item 7"
+  ]
+ },
+ {
+  "id": "v3_d1_p_ride_a_bike",
+  "vong": 3,
+  "ngay": 1,
+  "loai": "cum",
+  "en": "ride a bike",
+  "zh": "骑自行车",
+  "nhan_vat": [
+   "Leo"
+  ],
+  "canh": "Leo in a helmet riding his bicycle with his backpack towards the school building.",
+  "dung_o": [
+   "V3 D1 phrase card (Flip tiles, Match up)",
+   "V3 D2 sentence 1 我骑自行车去上学。 (Flip tiles, Missing word)",
+   "V3 D4 speaking page NL2 item 8"
+  ]
+ },
+ {
+  "id": "v3_d1_p_drive_a_car",
+  "vong": 3,
+  "ngay": 1,
+  "loai": "cum",
+  "en": "drive a car",
+  "zh": "开车",
+  "nhan_vat": [
+   "Leo's dad"
+  ],
+  "canh": "Leo's dad driving his car with both hands on the wheel towards an office building.",
+  "dung_o": [
+   "V3 D1 phrase card (Flip tiles, Match up)",
+   "V3 D2 sentence 2 我开车去上班。 (Flip tiles, Missing word)",
+   "V3 D4 speaking page NL2 item 9"
+  ]
+ },
+ {
+  "id": "v3_d1_p_take_a_plane",
+  "vong": 3,
+  "ngay": 1,
+  "loai": "cum",
+  "en": "take a plane",
+  "zh": "坐飞机",
+  "nhan_vat": [
+   "Leo"
+  ],
+  "canh": "Leo with a small suitcase walking up the steps to board a plane.",
+  "dung_o": [
+   "V3 D1 phrase card (Flip tiles, Match up)",
+   "V3 D4 speaking page NL2 item 10"
+  ]
+ },
+ {
+  "id": "v3_d1_s1",
+  "vong": 3,
+  "ngay": 1,
+  "loai": "cau",
+  "en": "How do you go to school?",
+  "zh": "你怎么去上学？",
+  "nhan_vat": [
+   "Leo",
+   "Xiaomei"
+  ],
+  "canh": "Leo asking Xiaomei a question at the school gate, with a question-mark bubble showing a bus, a bike and a car.",
+  "dung_o": [
+   "V3 D1 Flip tiles (sentence 1)"
+  ]
+ },
+ {
+  "id": "v3_d2_p_ride_a_motorbike",
+  "vong": 3,
+  "ngay": 2,
+  "loai": "cum",
+  "en": "ride a motorbike",
+  "zh": "骑摩托车",
+  "nhan_vat": [
+   "Xiaomei's mom"
+  ],
+  "canh": "Xiaomei's mom in a helmet riding a motorbike along a city street.",
+  "dung_o": [
+   "V3 D2 phrase card (Flip tiles, Match up)"
+  ]
+ },
+ {
+  "id": "v3_d2_p_take_a_train",
+  "vong": 3,
+  "ngay": 2,
+  "loai": "cum",
+  "en": "take a train",
+  "zh": "坐火车",
+  "nhan_vat": [
+   "Xiaomei's mom"
+  ],
+  "canh": "Xiaomei's mom with a handbag stepping onto a train at a station platform.",
+  "dung_o": [
+   "V3 D2 phrase card (Flip tiles, Match up)"
+  ]
+ },
+ {
+  "id": "v3_d2_p_walk_to_the_park",
+  "vong": 3,
+  "ngay": 2,
+  "loai": "cum",
+  "en": "walk to the park",
+  "zh": "走路去公园",
+  "nhan_vat": [
+   "Leo"
+  ],
+  "canh": "Leo walking along the pavement towards the park gate.",
+  "dung_o": [
+   "V3 D2 phrase card (Flip tiles, Match up)"
+  ]
+ },
+ {
+  "id": "v3_d3_p_take_a_train_to_beijing",
+  "vong": 3,
+  "ngay": 3,
+  "loai": "cum",
+  "en": "take a train to Beijing",
+  "zh": "坐火车去北京",
+  "nhan_vat": [
+   "Leo"
+  ],
+  "canh": "Leo looking out of a train window, with a thought bubble showing the map of China with Beijing starred.",
+  "dung_o": [
+   "V3 D3 phrase card (Flip tiles, Match up)",
+   "V3 D3 sentence 3 我坐火车去北京。 (Flip tiles, Unjumble)"
+  ]
+ },
+ {
+  "id": "v3_d3_p_take_a_plane_to_shanghai",
+  "vong": 3,
+  "ngay": 3,
+  "loai": "cum",
+  "en": "take a plane to Shanghai",
+  "zh": "坐飞机去上海",
+  "nhan_vat": [
+   "Xiaomei's mom"
+  ],
+  "canh": "Xiaomei's mom boarding a plane, with a thought bubble showing the map of China with Shanghai starred.",
+  "dung_o": [
+   "V3 D3 phrase card (Flip tiles, Match up)"
+  ]
+ },
+ {
+  "id": "v3_d3_p_how_to_go",
+  "vong": 3,
+  "ngay": 3,
+  "loai": "cum",
+  "en": "how to go",
+  "zh": "怎么去",
+  "nhan_vat": [
+   "Leo"
+  ],
+  "canh": "Leo standing at a crossroads scratching his head, with a question mark and small bus, bike and car icons above him.",
+  "dung_o": [
+   "V3 D3 phrase card (Flip tiles, Match up)"
+  ]
+ },
+ {
+  "id": "v3_d3_s1",
+  "vong": 3,
+  "ngay": 3,
+  "loai": "cau",
+  "en": "How does he go to work?",
+  "zh": "他怎么去上班？",
+  "nhan_vat": [
+   "Xiaomei",
+   "Leo",
+   "a man with a briefcase (generic)"
+  ],
+  "canh": "Xiaomei and Leo looking at a man with a briefcase, Xiaomei asking a question with a question-mark bubble.",
+  "dung_o": [
+   "V3 D3 Flip tiles (sentence 1) + Unjumble"
+  ]
+ },
+ {
+  "id": "v3_d3_s2",
+  "vong": 3,
+  "ngay": 3,
+  "loai": "cau",
+  "en": "He takes a bus to work.",
+  "zh": "他坐公共汽车去上班。",
+  "nhan_vat": [
+   "a man with a briefcase (generic)"
+  ],
+  "canh": "The same man with a briefcase getting on a city bus to go to work.",
+  "dung_o": [
+   "V3 D3 Flip tiles (sentence 2) + Unjumble"
+  ]
+ },
+ {
+  "id": "v3_d3_ps_v3_1",
+  "vong": 3,
+  "ngay": 3,
+  "loai": "ps",
+  "en": "I don't take a bus to school, I ride a bike to school.",
+  "zh": "我不坐公共汽车去上学，我骑自行车去上学。",
+  "nhan_vat": [
+   "unnamed child (the 我 of the passage)"
+  ],
+  "canh": "A child with a backpack standing between a bus stop and a parked bicycle, without showing which one the child uses.",
+  "dung_o": [
+   "V3-1 PS-1 picture"
+  ]
+ },
+ {
+  "id": "v3_d3_ps_v3_2",
+  "vong": 3,
+  "ngay": 3,
+  "loai": "ps",
+  "en": "Dad drives to work. Mom doesn't drive, she walks to work.",
+  "zh": "爸爸开车去上班。妈妈不开车，她走路去上班。",
+  "nhan_vat": [
+   "a dad (generic)",
+   "a mom (generic)"
+  ],
+  "canh": "A dad standing next to his car and a mom standing beside him, both dressed for work, with no clue how the mom travels.",
+  "dung_o": [
+   "V3-2 PS-1 picture"
+  ]
+ },
+ {
+  "id": "v3_d3_ps_v3_3",
+  "vong": 3,
+  "ngay": 3,
+  "loai": "ps",
+  "en": "We take a train to Beijing, not a plane.",
+  "zh": "我们坐火车去北京，不坐飞机。",
+  "nhan_vat": [
+   "an unnamed family"
+  ],
+  "canh": "A family looking at a map of China with Beijing starred, with a train icon and a plane icon both drawn beside the map.",
+  "dung_o": [
+   "V3-3 PS-1 picture"
+  ]
+ },
+ {
+  "id": "v3_d5_story_r1",
+  "vong": 3,
+  "ngay": 5,
+  "loai": "truyen",
+  "en": "My dad is a driver. He drives to work.",
+  "zh": "我爸爸是司机。他开车去上班。",
+  "nhan_vat": [
+   "Bông's dad"
+  ],
+  "canh": "Bông's dad, a driver in a cap, driving a car to work in the morning.",
+  "dung_o": [
+   "V3 D5 story 'How does my family go?' line 1",
+   "V3 D6 speaking page NL6 strip picture 1 (dad drives to work; ZH flag)"
+  ]
+ },
+ {
+  "id": "v3_d5_story_r2",
+  "vong": 3,
+  "ngay": 5,
+  "loai": "truyen",
+  "en": "My mom is a teacher. She rides a motorbike to school.",
+  "zh": "我妈妈是老师。她骑摩托车去学校。",
+  "nhan_vat": [
+   "Bông's mom"
+  ],
+  "canh": "Bông's mom, a teacher with books in her basket, riding a motorbike towards a school building.",
+  "dung_o": [
+   "V3 D5 story 'How does my family go?' line 2",
+   "V3 D6 speaking page NL6 strip picture 2 (mom, motorbike, school; EN flag)"
+  ]
+ },
+ {
+  "id": "v3_d5_story_r3",
+  "vong": 3,
+  "ngay": 5,
+  "loai": "truyen",
+  "en": "I take a bus to school.",
+  "zh": "我坐公共汽车去上学。",
+  "nhan_vat": [
+   "Bông"
+  ],
+  "canh": "Bông with her backpack getting on a bus to go to school.",
+  "dung_o": [
+   "V3 D5 story 'How does my family go?' line 3",
+   "V3 D6 speaking page NL6 strip picture 3 (child takes the bus to school; ZH flag)"
+  ]
+ },
+ {
+  "id": "v3_d5_story_r4",
+  "vong": 3,
+  "ngay": 5,
+  "loai": "truyen",
+  "en": "My older brother walks to the park.",
+  "zh": "我哥哥走路去公园。",
+  "nhan_vat": [
+   "Bông's older brother"
+  ],
+  "canh": "Bông's older brother walking along the pavement to the park.",
+  "dung_o": [
+   "V3 D5 story 'How does my family go?' line 4"
+  ]
+ },
+ {
+  "id": "v3_d6_story_r1",
+  "vong": 3,
+  "ngay": 6,
+  "loai": "truyen",
+  "en": "On Saturday morning, we take a train to Beijing.",
+  "zh": "星期六早上，我们坐火车去北京。",
+  "nhan_vat": [
+   "Bông",
+   "Bông's dad",
+   "Bông's mom",
+   "Bông's older brother"
+  ],
+  "canh": "Bông, her dad, her mom and her older brother getting on a train to Beijing on a sunny Saturday morning.",
+  "dung_o": [
+   "V3 D6 story 'Our weekend trip' line 1"
+  ]
+ },
+ {
+  "id": "v3_d6_story_r2",
+  "vong": 3,
+  "ngay": 6,
+  "loai": "truyen",
+  "en": "We go to the zoo to see animals.",
+  "zh": "我们去动物园看动物。",
+  "nhan_vat": [
+   "Bông",
+   "Bông's dad",
+   "Bông's mom",
+   "Bông's older brother"
+  ],
+  "canh": "Bông's family at the zoo in Beijing, pointing at a panda and a giraffe.",
+  "dung_o": [
+   "V3 D6 story 'Our weekend trip' line 2"
+  ]
+ },
+ {
+  "id": "v3_d6_story_r3",
+  "vong": 3,
+  "ngay": 6,
+  "loai": "truyen",
+  "en": "In the afternoon, we ride bikes to the park to play.",
+  "zh": "下午，我们骑自行车去公园玩。",
+  "nhan_vat": [
+   "Bông",
+   "Bông's dad",
+   "Bông's mom",
+   "Bông's older brother"
+  ],
+  "canh": "Bông's family riding bicycles along a path into a park in the afternoon.",
+  "dung_o": [
+   "V3 D6 story 'Our weekend trip' line 3"
+  ]
+ },
+ {
+  "id": "v3_d6_story_r4",
+  "vong": 3,
+  "ngay": 6,
+  "loai": "truyen",
+  "en": "In the evening, we take a bus to the restaurant to eat dinner.",
+  "zh": "晚上，我们坐公共汽车去饭店吃晚饭。",
+  "nhan_vat": [
+   "Bông",
+   "Bông's dad",
+   "Bông's mom",
+   "Bông's older brother"
+  ],
+  "canh": "Bông's family getting off a bus in front of a lit-up restaurant in the evening.",
+  "dung_o": [
+   "V3 D6 story 'Our weekend trip' line 4"
+  ]
+ },
+ {
+  "id": "v3_d6_story_r5",
+  "vong": 3,
+  "ngay": 6,
+  "loai": "truyen",
+  "en": "On Sunday, Dad takes a plane to Shanghai to work.",
+  "zh": "星期天，爸爸坐飞机去上海工作。",
+  "nhan_vat": [
+   "Bông's dad"
+  ],
+  "canh": "Bông's dad with a briefcase boarding a plane to Shanghai on Sunday and waving goodbye.",
+  "dung_o": [
+   "V3 D6 story 'Our weekend trip' line 5"
+  ]
+ },
+ {
+  "id": "v3_d6_story_r6",
+  "vong": 3,
+  "ngay": 6,
+  "loai": "truyen",
+  "en": "We take a train home.",
+  "zh": "我们坐火车回家。",
+  "nhan_vat": [
+   "Bông",
+   "Bông's mom",
+   "Bông's older brother"
+  ],
+  "canh": "Bông, her mom and her older brother sitting on a train going home, looking out of the window.",
+  "dung_o": [
+   "V3 D6 story 'Our weekend trip' line 6"
+  ]
+ },
+ {
+  "id": "char_bong_dad",
+  "vong": 3,
+  "ngay": 5,
+  "loai": "ps",
+  "en": "Bông's dad",
+  "zh": "Bông的爸爸",
+  "nhan_vat": [
+   "Bông's dad"
+  ],
+  "canh": "Head-and-shoulders portrait card of Bông's dad, in plain clothes with no job, place or transport clues.",
+  "dung_o": [
+   "V3-5 PS-2 character card"
+  ]
+ },
+ {
+  "id": "char_anna_mom",
+  "vong": 3,
+  "ngay": 5,
+  "loai": "ps",
+  "en": "Anna's mom",
+  "zh": "Anna的妈妈",
+  "nhan_vat": [
+   "Anna's mom"
+  ],
+  "canh": "Head-and-shoulders portrait card of Anna's mom, in plain clothes with no job, place or transport clues.",
+  "dung_o": [
+   "V3-6 PS-2 character card"
+  ]
+ },
+ {
+  "id": "v3_d6_ps3_grid",
+  "vong": 3,
+  "ngay": 6,
+  "loai": "ps",
+  "en": "Leo, Anna, Bông × walk / bike / bus",
+  "zh": "Leo、Anna和Bông × 走路 / 骑自行车 / 坐公共汽车",
+  "nhan_vat": [
+   "Leo",
+   "Anna",
+   "Bông"
+  ],
+  "canh": "A 3 × 3 puzzle grid with the Leo, Anna and Bông portrait cards as row headers and small footprints, bicycle and bus icons as column headers, all nine cells empty.",
+  "dung_o": [
+   "V3-7 / V3-8 PS-3 picture + grid"
+  ]
+ },
+ {
+  "id": "ps_v3_9_family",
+  "vong": 3,
+  "ngay": 6,
+  "loai": "ps",
+  "en": "Dad and our family",
+  "zh": "爸爸和我们家",
+  "nhan_vat": [
+   "the narrator's dad (unnamed)",
+   "the narrator's family (unnamed)"
+  ],
+  "canh": "A dad in a bus-driver's uniform standing with his family (a mom and two children), with a name tag reading Dad over the dad only.",
+  "dung_o": [
+   "V3-9 PS-3 picture"
+  ]
+ }
+]

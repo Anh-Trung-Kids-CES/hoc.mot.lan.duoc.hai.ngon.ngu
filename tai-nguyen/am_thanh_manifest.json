@@ -3524,7 +3524,8 @@
    "V1 D4 Group sort card",
    "V1 D3 tone quiz (listen, pick the right tone)",
    "V1-6 option A",
-   "V1-9 option C"
+   "V1-9 option C",
+   "V1 D5 Quiz truyện 1 nửa đầu câu 1 đáp án B (bổ sung)"
   ]
  },
  "cn_v1_d1_w_shop_en": {
@@ -3559,7 +3560,8 @@
    "V1 D4 NL1 answer card (speaker)",
    "V1 D4 Group sort card",
    "V1 D4 NL4 true/false item 6 (ZH side)",
-   "V2-5 option A"
+   "V2-5 option A",
+   "V1 D5 Quiz truyện 1 nửa đầu câu 1 đáp án A (bổ sung)"
   ]
  },
  "cn_v1_d1_w_park_en": {
@@ -3591,7 +3593,8 @@
    "V1 D4 Group sort card",
    "V1 D3 tone quiz (listen, pick the right tone)",
    "V1-5 option C",
-   "V1-6 option C"
+   "V1-6 option C",
+   "V1 D5 Quiz truyện 1 nửa đầu câu 1 đáp án C (bổ sung)"
   ]
  },
  "cn_v1_d1_w_restaurant_en": {
@@ -3674,7 +3677,8 @@
   "loi": "学习",
   "dung_o": [
    "V1 D2 words (Flip tiles, Quiz)",
-   "V1 D5 words review (Flip tiles, Quiz, speaker on every card)"
+   "V1 D5 words review (Flip tiles, Quiz, speaker on every card)",
+   "V1 D5 Quiz truyện 1 nửa đầu câu 2 đáp án B (bổ sung)"
   ]
  },
  "cn_v1_d2_w_play_en": {
@@ -3696,7 +3700,8 @@
   "loi": "玩",
   "dung_o": [
    "V1 D2 words (Flip tiles, Quiz)",
-   "V1 D5 words review (Flip tiles, Quiz, speaker on every card)"
+   "V1 D5 words review (Flip tiles, Quiz, speaker on every card)",
+   "V1 D5 Quiz truyện 1 nửa đầu câu 2 đáp án A (bổ sung)"
   ]
  },
  "cn_v1_d2_w_buy_en": {
@@ -3932,7 +3937,9 @@
    "V2 D1 NL1 q6 listening stimulus",
    "V2 D4 NL1 answer card (speaker)",
    "V2 D4 Group sort card",
-   "V2-4 option C"
+   "V2-4 option C",
+   "V2 D5 Quiz truyện 1 nửa đầu câu 1 đáp án A (bổ sung)",
+   "V3 D5 Quiz truyện 1 nửa đầu câu 2 đáp án A (bổ sung)"
   ]
  },
  "cn_v2_d1_w_student_en": {
@@ -3986,7 +3993,9 @@
    "V2 D4 Group sort card",
    "V2 D3 tone quiz (listen, pick the right tone)",
    "V2-4 option A",
-   "V2-9 option A"
+   "V2-9 option A",
+   "V2 D5 Quiz truyện 1 nửa đầu câu 1 đáp án B (bổ sung)",
+   "V3 D5 Quiz truyện 1 nửa đầu câu 2 đáp án C (bổ sung)"
   ]
  },
  "cn_v2_d1_w_chef_en": {
@@ -4012,7 +4021,8 @@
    "V2 D4 words review (Flip tiles, Quiz, speaker on every card)",
    "V2 D4 NL1 answer card (speaker)",
    "V2 D4 Group sort card",
-   "V2 D4 NL4 true/false item 6 (ZH side)"
+   "V2 D4 NL4 true/false item 6 (ZH side)",
+   "V2 D5 Quiz truyện 1 nửa đầu câu 1 đáp án C (bổ sung)"
   ]
  },
  "cn_v2_d1_w_dentist_en": {
@@ -4070,7 +4080,8 @@
    "V3 D3 words (Flip tiles, Quiz)",
    "V3 D6 words review (Flip tiles, Quiz, speaker on every card)",
    "V2 D4 NL1 answer card (speaker)",
-   "V2 D4 Group sort card"
+   "V2 D4 Group sort card",
+   "V3 D5 Quiz truyện 1 nửa đầu câu 2 đáp án B (bổ sung)"
   ]
  },
  "cn_v2_d2_w_employee_en": {
@@ -4517,7 +4528,9 @@
    "V3 D2 words (Flip tiles, Quiz)",
    "V3 D5 words review (Flip tiles, Quiz, speaker on every card)",
    "V3-4 option B",
-   "V3-6 option C"
+   "V3-6 option C",
+   "V3 D5 Quiz truyện 1 nửa đầu câu 1 đáp án C (bổ sung)",
+   "V3 D5 Quiz truyện 1 nửa đầu câu 3 đáp án C (bổ sung)"
   ]
  },
  "cn_v3_d2_w_go_to_school_en": {
@@ -4712,7 +4725,8 @@
   "tieng": "zh",
   "loi": "一个人",
   "dung_o": [
-   "V1 D3 PS-1 intro cards (function words)"
+   "V1 D3 PS-1 intro cards (function words)",
+   "V1 D5 Quiz truyện 1 nửa đầu câu 3 đáp án A (bổ sung)"
   ]
  },
  "cn_v1_d1_p_go_home_en": {
@@ -4819,7 +4833,8 @@
   "dung_o": [
    "V1 D2 phrases (Flip tiles, Match up)",
    "V1 D5 phrases review (Flip tiles, Match up / Missing word)",
-   "V1 D2 NL1 q1 listening stimulus"
+   "V1 D2 NL1 q1 listening stimulus",
+   "V1 D5 Quiz truyện 1 nửa đầu câu 2 đáp án C (bổ sung)"
   ]
  },
  "cn_v1_d2_p_eat_dinner_en": {
@@ -5370,7 +5385,9 @@
    "V3 D1 phrases (Flip tiles, Match up)",
    "V3 D4 phrases review (Flip tiles, Match up / Missing word)",
    "V3 D4 NL4 true/false item 4 (ZH side)",
-   "V3-4 option C"
+   "V3-4 option C",
+   "V3 D5 Quiz truyện 1 nửa đầu câu 1 đáp án B (bổ sung)",
+   "V3 D5 Quiz truyện 1 nửa đầu câu 3 đáp án B (bổ sung)"
   ]
  },
  "cn_v3_d1_p_ride_a_bike_en": {
@@ -5421,7 +5438,8 @@
    "V3 D4 phrases review (Flip tiles, Match up / Missing word)",
    "V3 D2 NL1 q3 listening stimulus",
    "V3 D4 NL4 true/false item 3 (ZH side)",
-   "V3-5 option C"
+   "V3-5 option C",
+   "V3 D5 Quiz truyện 1 nửa đầu câu 3 đáp án A (bổ sung)"
   ]
  },
  "cn_v3_d1_p_take_a_plane_en": {
@@ -5471,7 +5489,8 @@
    "V3 D5 phrases review (Flip tiles, Match up / Missing word)",
    "V3 D2 NL1 q5 listening stimulus",
    "V3 D4 NL4 true/false item 5 (ZH side)",
-   "V3-6 option B"
+   "V3-6 option B",
+   "V3 D5 Quiz truyện 1 nửa đầu câu 1 đáp án A (bổ sung)"
   ]
  },
  "cn_v3_d2_p_take_a_train_en": {
@@ -5835,7 +5854,8 @@
   "loi": "星期天，我去动物园。",
   "dung_o": [
    "V1 D4 core sentence 1 (Flip tiles; T/F, Quiz)",
-   "V1 D4 sentence true/false (listen ZH)"
+   "V1 D4 sentence true/false (listen ZH)",
+   "V1 D4 Đúng/Sai câu (bổ sung)"
   ]
  },
  "cn_v1_d4_s1_en": {
@@ -5856,7 +5876,8 @@
   "loi": "你去哪儿？我回家。",
   "dung_o": [
    "V1 D4 core sentence 2 (Flip tiles; T/F, Quiz)",
-   "V1 D4 sentence true/false (listen ZH)"
+   "V1 D4 sentence true/false (listen ZH)",
+   "V1 D4 Đúng/Sai câu (bổ sung)"
   ]
  },
  "cn_v1_d4_s2_en": {
@@ -6110,7 +6131,8 @@
   "loi": "她做什么工作？她是牙医。",
   "dung_o": [
    "V2 D4 core sentence 1 (Flip tiles; T/F, Quiz)",
-   "V2 D4 sentence true/false (listen ZH)"
+   "V2 D4 sentence true/false (listen ZH)",
+   "V2 D4 Đúng/Sai câu (bổ sung)"
   ]
  },
  "cn_v2_d4_s1_en": {
@@ -6131,7 +6153,8 @@
   "loi": "他是学生。",
   "dung_o": [
    "V2 D4 core sentence 2 (Flip tiles; T/F, Quiz)",
-   "V2 D4 sentence true/false (listen ZH)"
+   "V2 D4 sentence true/false (listen ZH)",
+   "V2 D4 Đúng/Sai câu (bổ sung)"
   ]
  },
  "cn_v2_d4_s2_en": {
@@ -6382,7 +6405,8 @@
   "loi": "我坐飞机去上海。",
   "dung_o": [
    "V3 D4 core sentence 1 (Flip tiles; T/F, Quiz)",
-   "V3 D4 sentence true/false (listen ZH)"
+   "V3 D4 sentence true/false (listen ZH)",
+   "V3 D4 Đúng/Sai câu (bổ sung)"
   ]
  },
  "cn_v3_d4_s1_en": {
@@ -6403,7 +6427,8 @@
   "loi": "我骑摩托车去商店。",
   "dung_o": [
    "V3 D4 core sentence 2 (Flip tiles; T/F, Quiz)",
-   "V3 D4 sentence true/false (listen ZH)"
+   "V3 D4 sentence true/false (listen ZH)",
+   "V3 D4 Đúng/Sai câu (bổ sung)"
   ]
  },
  "cn_v3_d4_s2_en": {
@@ -6803,7 +6828,8 @@
   "loi": "星期二下午，Leo去哪儿？",
   "dung_o": [
    "V1 D3 question bank Bai 2 (下午) question",
-   "V1 D5 story quiz first half (EN story -> ZH question), example question"
+   "V1 D5 story quiz first half (EN story -> ZH question), example question",
+   "V1 D5 Quiz truyện 1 nửa đầu câu 1 (bổ sung)"
   ]
  },
  "cn_v1_d3_qb3_l1_en": {
@@ -7182,7 +7208,8 @@
   "tieng": "en",
   "loi": "Where does Leo go on Sunday morning?",
   "dung_o": [
-   "V1 D6 question bank Bai 2 (上午) question"
+   "V1 D6 question bank Bai 2 (上午) question",
+   "V1 D6 Quiz truyện 2 câu 3 (bổ sung)"
   ]
  },
  "cn_v1_d6_qb3_l1_zh": {
@@ -7302,7 +7329,8 @@
   "tieng": "en",
   "loi": "Who goes to the restaurant on Saturday evening?",
   "dung_o": [
-   "V1 D6 question bank Bai 6 (家人) question"
+   "V1 D6 question bank Bai 6 (家人) question",
+   "V1 D6 Quiz truyện 2 câu 2 (bổ sung)"
   ]
  },
  "cn_v2_d1_qb1_l1_en": {
@@ -9494,7 +9522,8 @@
   "tieng": "zh",
   "loi": "Anna的妈妈做什么工作？",
   "dung_o": [
-   "V2 D5 story quiz first half (EN story -> ZH question), example question"
+   "V2 D5 story quiz first half (EN story -> ZH question), example question",
+   "V2 D5 Quiz truyện 1 nửa đầu câu 1 (bổ sung)"
   ]
  },
  "cn_v2_d5_nl5_q1_en": {
@@ -9533,7 +9562,7 @@
   "nhan_vat": "co_huou",
   "giong": "Sulafat",
   "tieng": "en",
-  "loi": "What do Anna's sister and brother do?",
+  "loi": "What does Anna's family do?",
   "dung_o": [
    "V2 D6 NL7 last question of story 2 quiz"
   ]
@@ -9545,7 +9574,8 @@
   "tieng": "zh",
   "loi": "妈妈怎么去学校？",
   "dung_o": [
-   "V3 D5 story quiz first half (EN story -> ZH question), example question"
+   "V3 D5 story quiz first half (EN story -> ZH question), example question",
+   "V3 D5 Quiz truyện 1 nửa đầu câu 1 (bổ sung)"
   ]
  },
  "cn_v3_d5_nl5_q1_en": {
@@ -10483,7 +10513,8 @@
   "tieng": "zh",
   "loi": "Anna",
   "dung_o": [
-   "V1-4 option B"
+   "V1-4 option B",
+   "V2 D5 Quiz truyện 1 nửa đầu câu 3 đáp án B (bổ sung)"
   ]
  },
  "cn_v1_d5_ps_v1_4_opt_c_zh": {
@@ -10684,7 +10715,8 @@
   "tieng": "zh",
   "loi": "谁在学校工作？",
   "dung_o": [
-   "V2-6 question"
+   "V2-6 question",
+   "V2 D5 Quiz truyện 1 nửa đầu câu 3 (bổ sung)"
   ]
  },
  "cn_v2_d5_ps_v2_6_opt_c_zh": {
@@ -11852,6 +11884,226 @@
   "loi": "我坐公共汽车去上学。",
   "dung_o": [
    "V3 D6 speaking page NL6 part 2 picture 3 model answer"
+  ]
+ },
+ "cn_v1_d5_s1q2_zh": {
+  "file": "canopy/audio/cn_v1_d5_s1q2_zh.mp3",
+  "nhan_vat": "co_huou",
+  "giong": "Sulafat",
+  "tieng": "zh",
+  "loi": "星期一早上，Leo去学校做什么？",
+  "dung_o": [
+   "V1 D5 Quiz truyện 1 nửa đầu câu 2 (bổ sung)"
+  ]
+ },
+ "cn_v1_d5_s1q3_zh": {
+  "file": "canopy/audio/cn_v1_d5_s1q3_zh.mp3",
+  "nhan_vat": "co_huou",
+  "giong": "Sulafat",
+  "tieng": "zh",
+  "loi": "星期三下午，Leo去公园和谁玩？",
+  "dung_o": [
+   "V1 D5 Quiz truyện 1 nửa đầu câu 3 (bổ sung)"
+  ]
+ },
+ "cn_v1_d5_s1q3_b_zh": {
+  "file": "canopy/audio/cn_v1_d5_s1q3_b_zh.mp3",
+  "nhan_vat": "co_huou",
+  "giong": "Sulafat",
+  "tieng": "zh",
+  "loi": "和家人",
+  "dung_o": [
+   "V1 D5 Quiz truyện 1 nửa đầu câu 3 đáp án B (bổ sung)"
+  ]
+ },
+ "cn_v1_d5_s1q3_c_zh": {
+  "file": "canopy/audio/cn_v1_d5_s1q3_c_zh.mp3",
+  "nhan_vat": "co_huou",
+  "giong": "Sulafat",
+  "tieng": "zh",
+  "loi": "和朋友",
+  "dung_o": [
+   "V1 D5 Quiz truyện 1 nửa đầu câu 3 đáp án C (bổ sung)"
+  ]
+ },
+ "cn_v1_d6_s2q1_en": {
+  "file": "canopy/audio/cn_v1_d6_s2q1_en.mp3",
+  "nhan_vat": "co_huou",
+  "giong": "Sulafat",
+  "tieng": "en",
+  "loi": "What does Leo do on Saturday morning?",
+  "dung_o": [
+   "V1 D6 Quiz truyện 2 câu 1 (bổ sung)"
+  ]
+ },
+ "cn_v1_d6_s2q4_en": {
+  "file": "canopy/audio/cn_v1_d6_s2q4_en.mp3",
+  "nhan_vat": "co_huou",
+  "giong": "Sulafat",
+  "tieng": "en",
+  "loi": "Which happens first in Leo's week?",
+  "dung_o": [
+   "V1 D6 Quiz truyện 2 câu 4 (bổ sung)"
+  ]
+ },
+ "cn_v2_d5_s1q2_zh": {
+  "file": "canopy/audio/cn_v2_d5_s1q2_zh.mp3",
+  "nhan_vat": "co_huou",
+  "giong": "Sulafat",
+  "tieng": "zh",
+  "loi": "Anna的爸爸在哪儿工作？",
+  "dung_o": [
+   "V2 D5 Quiz truyện 1 nửa đầu câu 2 (bổ sung)"
+  ]
+ },
+ "cn_v2_d5_s1q2_a_zh": {
+  "file": "canopy/audio/cn_v2_d5_s1q2_a_zh.mp3",
+  "nhan_vat": "co_huou",
+  "giong": "Sulafat",
+  "tieng": "zh",
+  "loi": "在学校",
+  "dung_o": [
+   "V2 D5 Quiz truyện 1 nửa đầu câu 2 đáp án A (bổ sung)"
+  ]
+ },
+ "cn_v2_d5_s1q2_b_zh": {
+  "file": "canopy/audio/cn_v2_d5_s1q2_b_zh.mp3",
+  "nhan_vat": "co_huou",
+  "giong": "Sulafat",
+  "tieng": "zh",
+  "loi": "在医院",
+  "dung_o": [
+   "V2 D5 Quiz truyện 1 nửa đầu câu 2 đáp án B (bổ sung)"
+  ]
+ },
+ "cn_v2_d5_s1q2_c_zh": {
+  "file": "canopy/audio/cn_v2_d5_s1q2_c_zh.mp3",
+  "nhan_vat": "co_huou",
+  "giong": "Sulafat",
+  "tieng": "zh",
+  "loi": "在饭店",
+  "dung_o": [
+   "V2 D5 Quiz truyện 1 nửa đầu câu 2 đáp án C (bổ sung)"
+  ]
+ },
+ "cn_v2_d5_s1q3_a_zh": {
+  "file": "canopy/audio/cn_v2_d5_s1q3_a_zh.mp3",
+  "nhan_vat": "co_huou",
+  "giong": "Sulafat",
+  "tieng": "zh",
+  "loi": "Anna的爸爸",
+  "dung_o": [
+   "V2 D5 Quiz truyện 1 nửa đầu câu 3 đáp án A (bổ sung)"
+  ]
+ },
+ "cn_v2_d5_s1q3_c_zh": {
+  "file": "canopy/audio/cn_v2_d5_s1q3_c_zh.mp3",
+  "nhan_vat": "co_huou",
+  "giong": "Sulafat",
+  "tieng": "zh",
+  "loi": "Anna的妈妈",
+  "dung_o": [
+   "V2 D5 Quiz truyện 1 nửa đầu câu 3 đáp án C (bổ sung)"
+  ]
+ },
+ "cn_v2_d6_s2q1_en": {
+  "file": "canopy/audio/cn_v2_d6_s2q1_en.mp3",
+  "nhan_vat": "co_huou",
+  "giong": "Sulafat",
+  "tieng": "en",
+  "loi": "What does Anna's dad do?",
+  "dung_o": [
+   "V2 D6 Quiz truyện 2 câu 1 (bổ sung)"
+  ]
+ },
+ "cn_v2_d6_s2q2_en": {
+  "file": "canopy/audio/cn_v2_d6_s2q2_en.mp3",
+  "nhan_vat": "co_huou",
+  "giong": "Sulafat",
+  "tieng": "en",
+  "loi": "Where does Anna's older sister work?",
+  "dung_o": [
+   "V2 D6 Quiz truyện 2 câu 2 (bổ sung)"
+  ]
+ },
+ "cn_v2_d6_s2q3_en": {
+  "file": "canopy/audio/cn_v2_d6_s2q3_en.mp3",
+  "nhan_vat": "co_huou",
+  "giong": "Sulafat",
+  "tieng": "en",
+  "loi": "When does Anna's family go to the restaurant?",
+  "dung_o": [
+   "V2 D6 Quiz truyện 2 câu 3 (bổ sung)"
+  ]
+ },
+ "cn_v2_d6_s2q4_en": {
+  "file": "canopy/audio/cn_v2_d6_s2q4_en.mp3",
+  "nhan_vat": "co_huou",
+  "giong": "Sulafat",
+  "tieng": "en",
+  "loi": "Which happens first in the story?",
+  "dung_o": [
+   "V2 D6 Quiz truyện 2 câu 4 (bổ sung)"
+  ]
+ },
+ "cn_v3_d5_s1q2_zh": {
+  "file": "canopy/audio/cn_v3_d5_s1q2_zh.mp3",
+  "nhan_vat": "co_huou",
+  "giong": "Sulafat",
+  "tieng": "zh",
+  "loi": "爸爸做什么工作？",
+  "dung_o": [
+   "V3 D5 Quiz truyện 1 nửa đầu câu 2 (bổ sung)"
+  ]
+ },
+ "cn_v3_d5_s1q3_zh": {
+  "file": "canopy/audio/cn_v3_d5_s1q3_zh.mp3",
+  "nhan_vat": "co_huou",
+  "giong": "Sulafat",
+  "tieng": "zh",
+  "loi": "哥哥怎么去公园？",
+  "dung_o": [
+   "V3 D5 Quiz truyện 1 nửa đầu câu 3 (bổ sung)"
+  ]
+ },
+ "cn_v3_d6_s2q1_en": {
+  "file": "canopy/audio/cn_v3_d6_s2q1_en.mp3",
+  "nhan_vat": "co_huou",
+  "giong": "Sulafat",
+  "tieng": "en",
+  "loi": "How does the family go to Beijing?",
+  "dung_o": [
+   "V3 D6 Quiz truyện 2 câu 1 (bổ sung)"
+  ]
+ },
+ "cn_v3_d6_s2q2_en": {
+  "file": "canopy/audio/cn_v3_d6_s2q2_en.mp3",
+  "nhan_vat": "co_huou",
+  "giong": "Sulafat",
+  "tieng": "en",
+  "loi": "What do they do in the afternoon?",
+  "dung_o": [
+   "V3 D6 Quiz truyện 2 câu 2 (bổ sung)"
+  ]
+ },
+ "cn_v3_d6_s2q3_en": {
+  "file": "canopy/audio/cn_v3_d6_s2q3_en.mp3",
+  "nhan_vat": "co_huou",
+  "giong": "Sulafat",
+  "tieng": "en",
+  "loi": "How does Dad go to Shanghai?",
+  "dung_o": [
+   "V3 D6 Quiz truyện 2 câu 3 (bổ sung)"
+  ]
+ },
+ "cn_v3_d6_s2q4_en": {
+  "file": "canopy/audio/cn_v3_d6_s2q4_en.mp3",
+  "nhan_vat": "co_huou",
+  "giong": "Sulafat",
+  "tieng": "en",
+  "loi": "What do they do first in Beijing?",
+  "dung_o": [
+   "V3 D6 Quiz truyện 2 câu 4 (bổ sung)"
   ]
  }
 }
