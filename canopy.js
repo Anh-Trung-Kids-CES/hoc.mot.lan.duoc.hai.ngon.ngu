@@ -11,8 +11,8 @@ const CX_TYPES = {
   story:   ['📖', 'Truyện'],       puzzle: ['🕵️', 'Giải đố'],      speak:   ['🎤', 'Luyện nói'],
   anagram: ['🔤', 'Ghép chữ']
 };
-const CX_WHO = {leo:'Leo', anna:'Anna', xiaomei:'Xiaomei', bong:'Bông'};
-const CX_FACE = {leo:'tai-nguyen/nhan-vat/kids_leo_a.webp', anna:'tai-nguyen/nhan-vat/kids_anna_a.webp', xiaomei:'tai-nguyen/nhan-vat/kids_xiaomei_a.webp', bong:'tai-nguyen/nhan-vat/kids_bong_a.webp'};
+const CX_WHO = {leo:'Leo', anna:'Anna', xiaomei:'Xiaomei', bong:'Bông', co_huou:'Cô Hươu'};
+const CX_FACE = {leo:'tai-nguyen/nhan-vat/kids_leo_a.webp', anna:'tai-nguyen/nhan-vat/kids_anna_a.webp', xiaomei:'tai-nguyen/nhan-vat/kids_xiaomei_a.webp', bong:'tai-nguyen/nhan-vat/kids_bong_a.webp', co_huou:'tai-nguyen/nhan-vat/huou_huou1_a.webp'};
 const CX_PITCH = {leo:1.25, anna:1.45, xiaomei:1.5, bong:1.35};   // giọng máy dự phòng: trẻ em giọng cao
 let CX_RATE = (()=>{ try{ return +localStorage.getItem('lle-rate')||1; }catch(e){ return 1; } })();
 
