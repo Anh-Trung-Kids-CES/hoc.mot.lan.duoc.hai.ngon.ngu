@@ -219,3 +219,12 @@
 .xt-g{display:flex;flex-direction:column;border-radius:16px;padding:12px 14px;text-decoration:none;color:#fff}
 .xt-g.en{background:var(--ls-en)}.xt-g.zh{background:var(--ls-zh)}.xt-g small{opacity:.9}
 .xt-link{display:block;text-align:center;margin-top:8px;font-weight:800;color:var(--red-dark)}
+
+/* nút "chạm để nghe" khi trình duyệt chặn tự phát âm thanh */
+#voiceGate{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:9999;display:flex;align-items:center;gap:12px;
+  padding:16px 26px;border:0;border-radius:999px;background:#ff7a3d;color:#fff;font:700 20px/1.2 'Be Vietnam Pro',system-ui,sans-serif;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);cursor:pointer;animation:vgPulse 1.4s ease-in-out infinite}
+#voiceGate[hidden]{display:none}
+#voiceGate .vg-ico{font-size:30px}
+@keyframes vgPulse{0%,100%{transform:translateX(-50%) scale(1)}50%{transform:translateX(-50%) scale(1.07)}}
+@media (prefers-reduced-motion:reduce){#voiceGate{animation:none}}

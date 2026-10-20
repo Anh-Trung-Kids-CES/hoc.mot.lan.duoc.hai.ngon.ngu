@@ -62,7 +62,7 @@ function cxSpeakTTS(text, lang, who, onend){
   if(onend){ u.onend=onend; u.onerror=onend; }
   speechSynthesis.speak(u);
 }
-function cxStop(){ try{ speechSynthesis.cancel(); }catch(e){} if(curAudio){ try{ curAudio.onended=null; curAudio.pause(); }catch(e){} } }
+function cxStop(){ try{ speechSynthesis.cancel(); }catch(e){} voiceStop(); if(curAudio){ try{ curAudio.onended=null; curAudio.pause(); }catch(e){} } }
 /* phát 1 câu: ưu tiên file mp3 (giọng nhân vật), không có thì giọng máy */
 function cxSay(t, l, who, onend){
   if(t && typeof t==='object'){ onend=l; who=undefined; l=t.l; t=t.t; }
@@ -71,10 +71,8 @@ function cxSay(t, l, who, onend){
   const f=cxFile(t,l,who);
   const tts=()=>cxSpeakTTS(t,l,who,onend);
   if(!f) return tts();
-  const a=new Audio(f); curAudio=a; a.playbackRate=CX_RATE;
   let fell=false; const fb=()=>{ if(fell) return; fell=true; tts(); };
-  a.onended=()=>onend&&onend(); a.onerror=fb;
-  a.play().catch(fb);
+  voicePlay(f,{ rate:CX_RATE, onend:()=>onend&&onend(), onerr:fb });
 }
 /* hội thoại 2 giọng */
 function cxDialog(dlg, onend){

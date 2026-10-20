@@ -39,9 +39,9 @@ function lsDayPoints(s,d){ if(!s) return 0; const m=s.ls||{}; return d.ls.steps.
 function lsOpen(g,i,k){ if(TEACHER) return true; const s=lsState(g,i); for(let j=0;j<k;j++) if(!(j in s.ls)) return false; return true; }
 
 /* ---------- âm thanh ---------- */
-let lsRun=0, lsSid=0, lsAudio=null, lsPend=null;
+let lsRun=0, lsSid=0, lsPend=null;
 function lsRelease(){ if(lsPend){ const p=lsPend; lsPend=null; p(); } }
-function lsStop(){ lsRun++; try{ speechSynthesis.cancel(); }catch(e){} if(lsAudio){ try{ lsAudio.onended=null; lsAudio.onerror=null; lsAudio.pause(); }catch(e){} lsAudio=null; } lsRelease(); }
+function lsStop(){ lsRun++; try{ speechSynthesis.cancel(); }catch(e){} voiceStop(); lsRelease(); }
 function lsEnd(){ lsStop(); lsSid++; }
 function lsTTS(text, lang){
   return new Promise(res=>{
@@ -61,21 +61,16 @@ function lsTTS(text, lang){
 function lsPlay(u){
   if(!u) return Promise.resolve();
   if(window.LS_FAST){ (window.LS_LOG=window.LS_LOG||[]).push(u); return new Promise(r=>setTimeout(r,5)); }
-  if(MUTE) return new Promise(r=>setTimeout(r,500));
   lsRelease();
-  const my=lsSid;
+  const my=lsRun;
   return new Promise(res0=>{
     let settled=false; const res=()=>{ if(settled) return; settled=true; if(lsPend===res) lsPend=null; res0(); };
     lsPend=res;
     const tts=()=>{ if(my!==lsRun) return res(); lsTTS(u.t,u.l).then(res); };
     if(!u.a) return tts();
     try{ speechSynthesis.cancel(); }catch(e){}
-    if(lsAudio){ try{ lsAudio.onended=null; lsAudio.onerror=null; lsAudio.pause(); }catch(e){} }
-    const a=new Audio(u.a); lsAudio=a; let fell=false;
-    const fb=()=>{ if(fell) return; fell=true; tts(); };
-    a.onended=()=>{ if(!fell){ fell=true; res(); } }; a.onerror=fb;
-    a.play().catch(fb);
-    setTimeout(()=>{ if(!fell && a.paused && a.currentTime===0) fb(); }, 6000);
+    let fell=false; const fb=()=>{ if(fell) return; fell=true; tts(); };
+    voicePlay(u.a,{ onend:()=>{ if(!fell){ fell=true; res(); } }, onerr:fb });
   });
 }
 async function lsSeq(list, gap, onstep){ const my=lsRun; for(let k=0;k<list.length;k++){ if(my!==lsRun) return; onstep&&onstep(k); await lsPlay(list[k]); await lsWait(gap||350); } }
