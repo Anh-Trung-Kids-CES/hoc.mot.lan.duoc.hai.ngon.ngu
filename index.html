@@ -6,7 +6,8 @@
 <title>Little Language Explorers</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="canopy.css">
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="ls.css">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+SC:wght@500;700&display=swap" rel="stylesheet">
 <style>
 :root{color-scheme:light;
   --red:#E3262E; --red-dark:#B8141C; --yellow:#FFC72C; --yellow-soft:#FFF4CC;
@@ -402,6 +403,7 @@ a.gtab{text-decoration:none}
 .art[src*="characters/"]{object-fit:cover;border-radius:18px}
 #mascot .art.mface{border-radius:50%;border:3px solid #fff;box-shadow:0 4px 0 rgba(0,0,0,.12);object-fit:cover}
 .mportrait{width:110px;height:110px;border-radius:50%;object-fit:cover;border:4px solid var(--yellow);margin:0 auto}
+.mportrait.cut{object-fit:contain;border-radius:0;border:0;height:140px;width:auto}
 @media (max-width:560px){.hero{padding-bottom:64px}}
 
 /* ===== ảnh minh hoạ thật (img/) to hơn emoji ===== */
@@ -414,6 +416,8 @@ a.gtab{text-decoration:none}
 .sart .art.sa[src^="img/"]{width:96px;height:96px}
 .hzpic .art.opta[src^="img/"]{width:110px;height:110px}
 .mi .art.mia[src^="img/"]{width:40px;height:40px;border-radius:10px}
+.kidface{width:40px;height:40px;object-fit:contain}
+#mascot .art.mcut{object-fit:contain;width:72px;height:96px}
 </style>
 </head>
 <body>
@@ -426,7 +430,10 @@ a.gtab{text-decoration:none}
 <main id="app"></main>
 <div id="mascot" aria-hidden="true"><span class="mimg"></span><div class="bubble"></div></div>
 <div class="toast" id="toast"></div>
+<script src="tai-nguyen/canopy-audio-map.js"></script>
 <script src="canopy-data.js"></script>
+<script src="ls-data.js"></script>
+<script src="ls.js"></script>
 <script src="canopy.js"></script>
 <script src="canopy-games.js"></script>
 <script src="canopy-speak.js"></script>
@@ -829,8 +836,10 @@ const SEEDLING_DAYS = [
 const CANOPY_DAYS = canopyDays();
 
 const GROUPS = {
-  seed:   {name:"Little Seed", icon:"🌱", color:"#3BB273", age:"Mới bắt đầu",   level:"Bé chưa biết tiếng Anh, tiếng Trung, hoặc cả hai", days:SEED_DAYS},
-  canopy: {name:"Canopy",      icon:"🌳", color:"#E3262E", age:"Đã có nền tảng", level:"Bé khá tiếng Anh, đã biết chút tiếng Trung",       days:CANOPY_DAYS}
+  seed:   {name:"Little Seed", icon:"🌱", color:"#3BB273", age:"Bé 5–10 tuổi mới bắt đầu",   level:"Bé chưa biết tiếng Anh, tiếng Trung, hoặc cả hai", days:lsDays([SEED_DAYS[6],SEED_DAYS[13],SEED_DAYS[20]]),
+          img:"tai-nguyen/trang/ls_o_truyen_v1.webp", banners:["tai-nguyen/trang/ls_banner_v1.webp","tai-nguyen/trang/ls_banner_v2.webp","tai-nguyen/trang/ls_banner_v3.webp"]},
+  canopy: {name:"Canopy",      icon:"🌳", color:"#E3262E", age:"Bé đã có nền tảng", level:"Bé có tiếng Anh A1 và tiếng Trung YCT 1",       days:CANOPY_DAYS,
+          img:"tai-nguyen/trang/canopy_ban_do.webp", banners:["tai-nguyen/trang/cn_banner_v1.webp","tai-nguyen/trang/cn_banner_v2.webp","tai-nguyen/trang/cn_banner_v3.webp"]}
 };
 /* Seedling đang tạm ẩn. Muốn hiện lại, thêm dòng này vào GROUPS ở trên:
   seedling: {name:"Seedling", icon:"🌿", color:"#1FA5A0", age:"5–6 tuổi", level:"Pre-A1 / YCT 1", days:SEEDLING_DAYS},
@@ -867,6 +876,7 @@ function dayPoints(g,i){
   const s=P[g+'-'+i], d=GROUPS[g].days[i]; if(!s) return 0;
   if(d.zoom) return s.done?PTS.zoom:0;
   if(d.cx) return cxDayPoints(s,d);
+  if(d.ls) return lsDayPoints(s,d);
   return (s.learn?PTS.learn:0)+(s.parent?PTS.parent:0)+gamePts(s)+(s.done?PTS.done:0)+(s.done&&d.clip?PTS.clip:0);
 }
 function roundPoints(g,r){ let n=0; for(let i=r*PER;i<r*PER+PER;i++) n+=dayPoints(g,i); return n; }
@@ -1068,9 +1078,10 @@ function gamePool(g,i){
 
 /* ---------- hồ sơ: hỏi tên bé ---------- */
 function askProfile(g, then){
+  if(TEACHER && !KID){ KID={name:'Giáo viên', code:'0000', group:g, temp:true}; updateStars(); then&&then(); return; }   // chế độ giáo viên: xem không cần nhập tên
   const ov=document.createElement('div'); ov.className='overlay';
   ov.innerHTML=`<form class="modal" id="pf">
-    <div class="mart"><img class="mportrait" src="img/characters/bong.jpg" alt=""></div>
+    <div class="mart"><img class="mportrait cut" src="tai-nguyen/nhan-vat/kids_bong_a.webp" alt=""></div>
     <h3>Nhà thám hiểm tên là gì?</h3>
     <p class="hint">Tên này hiện trên Bảng vàng khi con lọt Top 10. Bố mẹ có thể dùng tên ở nhà của con.</p>
     <label for="kname">Tên của con</label>
@@ -1093,41 +1104,34 @@ function askProfile(g, then){
 
 /* ---------- MÀN HÌNH 1: chọn nhóm ---------- */
 function viewHome(){
+    const tiles=[['ls_o_xem','Xem và làm theo','Xem video, truyện, làm động tác'],['ls_o_cham_hinh','Chạm đúng hình','Nghe rồi chạm tranh'],['ls_o_noi_theo','Nói theo','Nói theo bạn trong tranh'],
+    ['ls_o_anh_trung','Anh hay Trung?','Nhận ra hai thứ tiếng'],['ls_o_do_con','Đố con','Nghe một tiếng, nói tiếng kia'],['ls_o_nhin_chu','Nhìn chữ','Làm quen mặt chữ']];
   app.innerHTML = `
-  <section class="hero">
-    <div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div>
-    <div class="kicker">Thử thách 21 ngày Bật phản xạ Anh – Trung</div>
+  <section class="home-hero"><div class="hin">
+    <span class="kicker">Thử thách 21 ngày Bật phản xạ Anh – Trung</span>
     <h1>Những nhà thám hiểm<br>ngôn ngữ nhí</h1>
-    <span class="tag">Giỏi tiếng Anh – Siêu tiếng Trung</span>
-    <p>Chọn nhóm của con để bắt đầu hành trình 21 ngày: 3 vòng, mỗi vòng 6 ngày tự học và 1 buổi Zoom cùng giáo viên. Tích điểm mỗi ngày để vào Bảng vàng Top 10!</p>
-    <div class="crew" aria-label="Các bạn đồng hành">
-      <figure class="mate" style="--d:.15s"><img src="img/characters/leo.jpg" alt="Leo"><figcaption><b>Leo</b><span>Hello!</span></figcaption></figure>
-      <figure class="mate main" style="--d:0s"><img src="img/characters/bong.jpg" alt="Bông"><figcaption><b>Bông</b><span>Xin chào!</span></figcaption></figure>
-      <figure class="mate" style="--d:.3s"><img src="img/characters/xiaomei.jpg" alt="Xiaomei"><figcaption><b>Xiaomei</b><span class="zh">你好！</span></figcaption></figure>
-    </div>
-    <svg class="wave" viewBox="0 0 1200 50" preserveAspectRatio="none"><path d="M0,30 C200,0 400,50 600,25 C800,0 1000,45 1200,20 L1200,50 L0,50 Z" fill="#FFFBF0"/></svg>
-  </section>
+    <span class="tag">Giỏi tiếng Anh – Siêu tiếng Trung</span></div></section>
   <div class="wrap">
-    ${KID?`<div class="kidbar">${art('🧒','sm')} <span>Xin chào <b>${esc(KID.name)}</b>! Con đang có <b>${myPoints()} điểm</b>.</span> <button class="linkish" id="editKid">Đổi tên</button></div>`:''}
-    <div class="groups">
-      ${Object.entries(GROUPS).map(([k,g],n)=>`
-        <a class="gcard" href="#/g/${k}" style="--d:${n*.12}s">
-          <div class="ico" style="background:${g.color}22">${art(g.icon,'gi')}</div>
-          <h3>${esc(g.name)}</h3>
+    ${KID?`<div class="kidbar"><img class="kidface" src="tai-nguyen/nhan-vat/kids_bong_a.webp" alt=""> <span>Xin chào <b>${esc(KID.name)}</b>! Con đang có <b>${myPoints()} điểm</b>.</span> <button class="linkish" id="editKid">Đổi tên</button></div>`:''}
+    <div class="lv-cards">
+      ${Object.entries(GROUPS).map(([k,g])=>`
+        <a class="lv" href="#/g/${k}" style="--c:${g.color}">
+          <span class="lvimg" style="background-image:url('${g.img}')"></span>
+          <span class="lvt"><h3>${esc(g.name)}</h3>
           <div class="age">${esc(g.age)}</div>
           <div class="lvl">${esc(g.level)}</div>
           <div class="ptext" style="margin-top:6px">Đã đi: ${doneCount(k)}/21 ngày · ${groupPoints(k)} điểm</div>
-          <span class="go" style="background:${g.color}">Lên đường →</span>
+          <span class="go">Lên đường →</span></span>
         </a>`).join('')}
     </div>
+    <section class="today"><h2>Mỗi ngày con học gì?</h2>
+      <div class="tgrid">${tiles.map(([f,t,d])=>`<div class="tg"><img src="tai-nguyen/trang/${f}.webp" alt="" loading="lazy">${t}<small>${d}</small></div>`).join('')}</div></section>
     <div class="note">
-      <b>Gửi bố mẹ:</b> mỗi ngày con học khoảng 10–15 phút cùng bố mẹ: nghe từ và mẫu câu → làm hoạt động → chơi trò chơi → hoàn thành.
-      Ngày 7, 14, 21 là <b>buổi Zoom cùng giáo viên</b>. Mỗi bước hoàn thành được cộng điểm; cuối mỗi vòng, Top 10 mỗi nhóm được vinh danh trên Bảng vàng.
+      <b>Gửi ba mẹ:</b> mỗi ngày con tự học khoảng 12–15 phút. Mọi hướng dẫn đều có giọng đọc, ba mẹ không cần biết tiếng Anh hay tiếng Trung.
+      Ba mẹ chỉ cần <b>bật bài cho con đúng giờ</b>, <b>khen con khi con đang làm bài</b> và <b>khen con khi con hoàn thành</b>.
+      Ngày 7, 14, 21 là <b>buổi Zoom cùng giáo viên</b>. Cuối mỗi vòng, Top 10 mỗi nhóm được vinh danh trên Bảng vàng.
       <br><br>Nhớ nguyên tắc <b>3 KHÔNG</b>: không ép nói · không sửa lỗi · không so sánh. 💛
     </div>
-    <div class="ptable"><b>Cách tính điểm mỗi ngày:</b>
-      <span>🃏 Học từ +${PTS.learn}</span><span>👨‍👩‍👧 Cùng ba mẹ +${PTS.parent}</span><span>🎮 4 trò chơi, mỗi trò tối đa +${PTS.perGame}</span>
-      <span>🏁 Hoàn thành +${PTS.done}</span><span>🎥 Ngày quay clip +${PTS.clip}</span><span>💻 Buổi Zoom +${PTS.zoom}</span></div>
     <div class="foot">CES Vietnam · Little Language Explorers<br><button class="tbtn" id="tbtn">${TEACHER?'🔓 Tắt chế độ giáo viên':'🔑 Chế độ giáo viên (mở tất cả các ngày)'}</button></div>
   </div>`;
   document.getElementById('tbtn').onclick=toggleTeacher;
@@ -1138,12 +1142,12 @@ function viewHome(){
 function viewGroup(g){
   const G = GROUPS[g]; if(!G) return viewHome();
   if(!KID){ app.innerHTML=''; return askProfile(g, ()=>viewGroup(g)); }
-  if(KID.group!==g){ KID.group=g; lsSet('lle-kid',KID); updateStars(); }
+  if(KID.group!==g){ KID.group=g; if(!KID.temp) lsSet('lle-kid',KID); updateStars(); }
   const n = doneCount(g);
   const rounds = ROUNDS.map((R,r)=>{
     const rdone = isDone(g,r*PER+PER-1);
     return `<div class="round ${rdone?'rdone':''}">
-      <div class="rhead"><span class="rbadge">Tuần ${r+1}</span><h3>${R.icon} ${R.en}</h3><span class="vi">${R.vi}${G.days[r*PER].round?' · '+esc(G.days[r*PER].round.name)+' – '+esc(G.days[r*PER].round.vi):''}</span>
+      ${G.banners?`<div class="rbanner" style="background-image:url('${G.banners[r]}')"></div>`:''}<div class="rhead"><span class="rbadge">Tuần ${r+1}</span><h3>${R.icon} ${R.en}</h3><span class="vi">${R.vi}${G.days[r*PER].round?' · '+esc(G.days[r*PER].round.name)+' – '+esc(G.days[r*PER].round.vi):''}</span>
         <span class="rpts">${roundPoints(g,r)} điểm</span></div>
       <div class="trail">
         ${[0,1,2,3,4,5,6].map(d=>{
@@ -1231,6 +1235,7 @@ function viewDay(g,i,step){
   cur={g,i,day};
   if(day.zoom) return viewZoom(g,i);
   if(day.cx) return viewCanopyDay(g,i,step);
+  if(day.ls) return viewSeedDay(g,i,step);
   const s=st(g,i);
   const hasLearn = (day.w&&day.w.length)||(day.s&&day.s.length);
   const steps=[];
@@ -1479,6 +1484,7 @@ function viewZoom(g,i){
 function route(){
   try{ speechSynthesis.cancel(); }catch(e){}
   if(typeof cxStop==='function'){ cxStop(); if(window.cxStopListen) window.cxStopListen(); }
+  if(typeof lsEnd==='function') lsEnd();
   const p=location.hash.replace(/^#\/?/,'').split('/').filter(Boolean);
   if(p[0]==='g' && p[1] && p[2]==='vang') viewGold(p[1], +(p[3]||0));
   else if(p[0]==='g' && p[1] && p[2]) viewDay(p[1], +p[2]-1, p[3]);
@@ -1491,7 +1497,7 @@ document.getElementById('muteBtn').textContent=MUTE?'🔇':'🔊';
 document.getElementById('muteBtn').onclick=toggleMute;
 updateStars(); route();
 
-document.querySelector('#mascot .mimg').innerHTML='<img class="art mface" src="img/characters/bong-face.jpg" alt="">';
+document.querySelector('#mascot .mimg').innerHTML='<img class="art mcut" src="tai-nguyen/nhan-vat/kids_bong_a.webp" alt="">';
 </script>
 </body>
 </html>

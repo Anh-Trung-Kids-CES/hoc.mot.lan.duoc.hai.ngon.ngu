@@ -12,7 +12,7 @@ const CX_TYPES = {
   anagram: ['🔤', 'Ghép chữ']
 };
 const CX_WHO = {leo:'Leo', anna:'Anna', xiaomei:'Xiaomei', bong:'Bông'};
-const CX_FACE = {leo:'img/characters/leo.jpg', anna:'img/characters/anna.jpg', xiaomei:'img/characters/xiaomei.jpg', bong:'img/characters/bong.jpg'};
+const CX_FACE = {leo:'tai-nguyen/nhan-vat/kids_leo_a.webp', anna:'tai-nguyen/nhan-vat/kids_anna_a.webp', xiaomei:'tai-nguyen/nhan-vat/kids_xiaomei_a.webp', bong:'tai-nguyen/nhan-vat/kids_bong_a.webp'};
 const CX_PITCH = {leo:1.25, anna:1.45, xiaomei:1.5, bong:1.35};   // giọng máy dự phòng: trẻ em giọng cao
 let CX_RATE = (()=>{ try{ return +localStorage.getItem('lle-rate')||1; }catch(e){ return 1; } })();
 
@@ -42,7 +42,16 @@ function cxOpenIdx(g,i,k){
 
 /* ---------- âm thanh ---------- */
 function enKey(t){ const s=imgSlug(t); return (s.length<50 && s.length>0) ? s : 'h'+zhKey(t); }
-function cxFile(t,l){ return AUDIO_DIR ? AUDIO_DIR+(l==='zh'?'zh/'+zhKey(t):'en/'+enKey(t))+'.mp3' : ''; }
+/* chuẩn hoá lời để tra file giọng (khớp với bộ sinh bản đồ) */
+const CX_NAMES=[['里奥','Leo'],['安娜','Anna'],['小美','Xiaomei'],["Lǐ'ào",'Leo'],['Ānnà','Anna'],['Xiǎoměi','Xiaomei']];
+function cxNorm(t){ let s=String(t||''); CX_NAMES.forEach(([a,b])=>{ s=s.split(a).join(b); }); return s.replace(/’/g,"'").replace(/[\s，。！？、,.!?：:;；“”"…()（）\-–—]/g,'').toLowerCase(); }
+/* tìm file giọng: đúng nhân vật nếu có, không thì giọng cô Hươu */
+function cxFile(t,l,who){
+  const M=window.CN_AUDIO; if(!M) return '';
+  const c=M[l+'|'+cxNorm(t)]; if(!c||!c.length) return '';
+  const f=(w)=>{ const x=c.find(e=>e[0]===w); return x&&x[1]; };
+  return (who&&f(who)) || f('co_huou') || c[0][1];
+}
 let cxTTSPitch=1;
 function cxSpeakTTS(text, lang, who, onend){
   if(!('speechSynthesis' in window)){ onend&&onend(); return; }
@@ -59,7 +68,7 @@ function cxSay(t, l, who, onend){
   if(t && typeof t==='object'){ onend=l; who=undefined; l=t.l; t=t.t; }
   if(!t || l==='img' || l==='py') { onend&&onend(); return; }
   cxStop();
-  const f=cxFile(t,l);
+  const f=cxFile(t,l,who);
   const tts=()=>cxSpeakTTS(t,l,who,onend);
   if(!f) return tts();
   const a=new Audio(f); curAudio=a; a.playbackRate=CX_RATE;
@@ -70,11 +79,9 @@ function cxSay(t, l, who, onend){
 /* hội thoại 2 giọng */
 function cxDialog(dlg, onend){
   cxStop();
-  const a=new Audio(AUDIO_DIR+'dlg/'+dlg.id+'.mp3'); curAudio=a; a.playbackRate=CX_RATE;
-  let fell=false;
-  const seq=()=>{ if(fell) return; fell=true; let k=0; (function nx(){ if(k>=dlg.lines.length){ onend&&onend(); return; }
-    const [w,x]=dlg.lines[k++]; cxHi(k-1); cxSpeakTTS(x.t,x.l,w,()=>setTimeout(nx,250)); })(); };
-  a.onended=()=>onend&&onend(); a.onerror=seq; a.play().catch(seq);
+  let k=0; const tok=(cxDialog.tok=(cxDialog.tok||0)+1);
+  (function nx(){ if(tok!==cxDialog.tok) return; if(k>=dlg.lines.length){ cxHi(-1); onend&&onend(); return; }
+    const [w,x]=dlg.lines[k++]; cxHi(k-1); cxSay(x.t,x.l,w,()=>setTimeout(nx,300)); })();
 }
 function cxHi(k){ document.querySelectorAll('.cx-bub').forEach((b,j)=>b.classList.toggle('talk',j===k)); }
 function cxSeq(list, onend, onstep){ let k=0; (function nx(){ if(k>=list.length){ onend&&onend(); return; } const x=list[k]; onstep&&onstep(k); k++; cxSay(x.t,x.l,x.who,()=>setTimeout(nx,350)); })(); }
