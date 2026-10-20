@@ -44,11 +44,11 @@ function cxOpenIdx(g,i,k){
 function enKey(t){ const s=imgSlug(t); return (s.length<50 && s.length>0) ? s : 'h'+zhKey(t); }
 /* chuẩn hoá lời để tra file giọng (khớp với bộ sinh bản đồ) */
 const CX_NAMES=[['里奥','Leo'],['安娜','Anna'],['小美','Xiaomei'],["Lǐ'ào",'Leo'],['Ānnà','Anna'],['Xiǎoměi','Xiaomei']];
-function cxNorm(t){ let s=String(t||''); CX_NAMES.forEach(([a,b])=>{ s=s.split(a).join(b); }); return s.replace(/’/g,"'").replace(/[\s，。！？、,.!?：:;；“”"…()（）\-–—]/g,'').toLowerCase(); }
+function cxAKey(t){ let s=String(t||''); CX_NAMES.forEach(([a,b])=>{ s=s.split(a).join(b); }); return s.replace(/’/g,"'").replace(/[\s，。！？、,.!?：:;；“”"…()（）\-–—]/g,'').toLowerCase(); }
 /* tìm file giọng: đúng nhân vật nếu có, không thì giọng cô Hươu */
 function cxFile(t,l,who){
   const M=window.CN_AUDIO; if(!M) return '';
-  const c=M[l+'|'+cxNorm(t)]; if(!c||!c.length) return '';
+  const c=M[l+'|'+cxAKey(t)]; if(!c||!c.length) return '';
   const f=(w)=>{ const x=c.find(e=>e[0]===w); return x&&x[1]; };
   return (who&&f(who)) || f('co_huou') || c[0][1];
 }

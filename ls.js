@@ -293,7 +293,7 @@ function lsNoi(step, body){
     await lsSeq(t.say, 400, k=>body.querySelectorAll('.ls-says .ls-bub').forEach((b,j)=>b.classList.toggle('talk',j===k)));
     if(!lsAlive(my)) return;
     if(t.mic){
-      if(step.role){ await lsHD('Đến lượt con!'); if(!lsAlive(my)) return; }
+      if(step.role){ await lsHD('Đến lượt con!'); if(!lsAlive(my)) return; if(t.ask){ await lsPlay(t.ask); if(!lsAlive(my)) return; } }
       mic.classList.remove('idle'); mic.classList.add('on'); sfx.pop();
       const ok=await micCount(mic); if(!ok) return;
       mic.classList.remove('on'); mic.classList.add('ok'); mic.querySelector('b').textContent='✓'; sfx.ok(); lsStar();
