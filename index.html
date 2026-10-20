@@ -448,6 +448,7 @@ a.gtab{text-decoration:none}
 const ZALO_LINK = "https://zalo.me/g/atdjpv272";
 const ZOOM_LINK = "";   // dán link Zoom vào đây; để trống thì web nhắc xem link trong nhóm Zalo
 const SCORE_API = "";   // dán link Web App của Apps Script (bảng điểm) vào đây để bật Bảng vàng Top 10
+const AUDIO_DIR = "audio/";   // thư mục file phát âm (audio/en, audio/zh). Thiếu file thì web dùng giọng đọc của máy.
 const IMG_DIR = "img/";   // thư mục ảnh minh hoạ (.jpg, tên theo từ tiếng Anh). Để "" nếu chưa có ảnh.
 
 const W=(img,en,zh,py,vi)=>({img,en,zh,py,vi});
@@ -1100,7 +1101,7 @@ function loadVoices(){ try{ voices = speechSynthesis.getVoices(); }catch(e){} }
 if ('speechSynthesis' in window){ loadVoices(); speechSynthesis.onvoiceschanged = loadVoices; }
 let warnedZh=false;
 function speak(text, lang, file){
-  if (file){ const a=new Audio(file); a.play().catch(()=>speak(text,lang)); return; }
+  if (file){ try{ speechSynthesis.cancel(); }catch(e){} if(curAudio){ try{curAudio.pause();}catch(e){} } const a=new Audio(file); curAudio=a; a.play().catch(()=>speak(text,lang)); return; }
   if (!('speechSynthesis' in window)){ toast('Máy này chưa hỗ trợ đọc to 😢'); return; }
   text = String(text||'').replace(/_+|…|\.\.\./g,' ').replace(/\s+/g,' ').trim();
   if(!text) return;
@@ -1115,7 +1116,12 @@ function speak(text, lang, file){
   u.rate = 0.8;
   speechSynthesis.speak(u);
 }
-function say(item, lang){ lang==='zh' ? speak(item.zh,'zh',item.audioZh) : speak(item.en,'en',item.audioEn); }
+let curAudio=null;
+function zhKey(t){ let h=5381; for(const ch of String(t).trim()) h=((h*33)^ch.codePointAt(0))>>>0; return h.toString(36); }
+function say(item, lang){
+  if(lang==='zh') speak(item.zh,'zh', item.audioZh || (AUDIO_DIR ? AUDIO_DIR+'zh/'+zhKey(item.zh)+'.mp3' : ''));
+  else speak(item.en,'en', item.audioEn || (AUDIO_DIR ? AUDIO_DIR+'en/'+imgSlug(item.en)+'.mp3' : ''));
+}
 
 /* ---------- tiện ích và hiệu ứng ---------- */
 function esc(s){ return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
