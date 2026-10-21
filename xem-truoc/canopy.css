@@ -267,3 +267,6 @@
   .cx-gapline{font-size:26px}
   .cx-rowbar{flex-wrap:wrap}
 }
+
+/* pinyin: phông Baloo 2 vẽ dấu thanh (ā, ǎ…) tách rời khỏi chữ, nên dùng Be Vietnam Pro cho dòng pinyin */
+.cx-py,.pyo{font-family:'Be Vietnam Pro','Noto Sans',system-ui,sans-serif}
