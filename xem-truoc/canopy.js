@@ -152,7 +152,7 @@ function viewCanopyDay(g,i,sub){
   document.getElementById('cxParentSay').onclick=()=>hdSay(PL);
   if(STARTED && !s.done){ const tv=cxTitleVi(day), lines=['Hôm nay con học bài: '+tv+(/[?!.]$/.test(tv)?' ':'. ')+'Bạn đồng hành hôm nay là '+CX_WHO[comp]+'.',
       day.d<=3?'Con làm lần lượt các bài từ trên xuống nhé.':'Con làm bài khởi động trước, sau đó tự chọn bài con thích.'];
-    if(!lsGet('lle-parent-heard-'+g+i,false)){ lsSet('lle-parent-heard-'+g+i,true); lines.push(PL); }
+    lines.push(PL);
     lines.push('Con chạm nút xanh để '+(doneN?'làm tiếp':'bắt đầu')+' nhé!');
     hdSay(lines); }
   window.scrollTo({top:0});
@@ -199,7 +199,7 @@ function cxRulesCard(ex, box, run){
     <div class="cx-bot"><button class="cx-pill" id="rsay">🔊 Nghe lại luật</button><button class="cx-go" id="rgo">▶ Bắt đầu</button></div>`;
   box.querySelector('#rgo').onclick=()=>{ sfx.pop(); start(); };
   box.querySelector('#rsay').onclick=()=>hdSay(lines);
-  hdSay(seen<2?lines:[lines[0]]).then(()=>cxT(start, 700));
+  hdSay(lines).then(()=>cxT(start, 700));
 }
 function cxDots(i,n,marks){
   const el=document.getElementById('dots'); if(!el) return;

@@ -179,7 +179,7 @@ function viewSeedDay(g,i,sub){
   const go=document.getElementById('lsGo'); if(go) go.onclick=()=>{ sfx.pop(); location.hash=`#/g/${g}/${i+1}/b${D.steps.findIndex((_,j)=>!(j in s.ls))+1}`; };
   /* vừa mở buổi học: cô Hươu tự đọc "Hôm nay con học gì", lời nhắn cho ba mẹ, rồi mời con bắt đầu */
   if(STARTED && doneN<5){ const my=lsSid; (async()=>{ await lsWait(300); if(my!==lsSid) return; await sayGoal(); if(my!==lsSid) return;
-      if(!lsGet('lle-parent-heard-'+i,false)){ lsSet('lle-parent-heard-'+i,true); await lsWait(300); if(my!==lsSid) return; await lsHD(parentLine); if(my!==lsSid) return; }
+      await lsWait(300); if(my!==lsSid) return; await lsHD(parentLine); if(my!==lsSid) return;
       await lsWait(300); if(my!==lsSid) return; lsHD(doneN?'Con chạm nút xanh để học tiếp nhé!':'Con chạm nút xanh để bắt đầu nhé!'); })(); }
   app.querySelectorAll('.ls-tile').forEach(b=>b.onclick=()=>{
     if(b.classList.contains('lock')){ sfx.no(); toast('Con làm xong bước trước để mở bước này nhé! 🔒'); return; }
@@ -248,7 +248,7 @@ function lsRulesCard(body, step, run){
   lsCap('Con nghe luật chơi nhé');
   if(window.LS_FAST) return start();
   (async()=>{ await lsWait(250); if(my!==lsSid) return;
-    if(full){ await say(); } else { await lsSeq([{t:R.lines[0],l:'vi',a:hdFile(R.lines[0])}],0); }
+    await say();   // luôn đọc đủ luật chơi; con bấm "Bắt đầu" để vào ngay
     if(my!==lsSid || started) return; await lsWait(600); start(); })();
 }
 function lsFinish(){
