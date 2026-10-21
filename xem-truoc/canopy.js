@@ -150,7 +150,7 @@ function viewCanopyDay(g,i,sub){
   const go=document.getElementById('cxGo'); if(go) go.onclick=()=>{ sfx.pop(); location.hash=`#/g/${g}/${i+1}/b${(firstOpen<0?0:firstOpen)+1}`; };
   const PL='Ba mẹ đồng hành cùng con nhé: bật bài cho con đúng giờ, khen con khi con đang làm bài, và khen con khi con xong bài, nhận sao. Không ép nói, không sửa lỗi, không so sánh.';
   document.getElementById('cxParentSay').onclick=()=>hdSay(PL);
-  if(STARTED && !s.done){ const lines=['Hôm nay con học bài: '+cxTitleVi(day)+'. Bạn đồng hành hôm nay là '+CX_WHO[comp]+'.',
+  if(STARTED && !s.done){ const tv=cxTitleVi(day), lines=['Hôm nay con học bài: '+tv+(/[?!.]$/.test(tv)?' ':'. ')+'Bạn đồng hành hôm nay là '+CX_WHO[comp]+'.',
       day.d<=3?'Con làm lần lượt các bài từ trên xuống nhé.':'Con làm bài khởi động trước, sau đó tự chọn bài con thích.'];
     if(!lsGet('lle-parent-heard-'+g+i,false)){ lsSet('lle-parent-heard-'+g+i,true); lines.push(PL); }
     lines.push('Con chạm nút xanh để '+(doneN?'làm tiếp':'bắt đầu')+' nhé!');
@@ -158,7 +158,11 @@ function viewCanopyDay(g,i,sub){
   window.scrollTo({top:0});
 }
 
-function cxTitleVi(day){ return String(day.t||'').toLowerCase().replace(/^story:\s*/,'truyện ').replace(/^review:\s*/,'ôn tập '); }
+function cxTitleVi(day){
+  const cap=x=>{ x=x.trim().toLowerCase().replace(/\bbeijing\b/,'Beijing').replace(/\bshanghai\b/,'Shanghai'); return x.charAt(0).toUpperCase()+x.slice(1); };
+  const t=String(day.t||''), m=/^(story|review):\s*(.*)$/i.exec(t);
+  return m ? (m[1].toLowerCase()==='story'?'truyện ':'ôn tập ')+cap(m[2]) : cap(t);
+}
 
 /* ---------- khung chơi 1 bài ---------- */
 let CX={};   // trạng thái bài đang chơi

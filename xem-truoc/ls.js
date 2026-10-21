@@ -89,7 +89,7 @@ function lsPlay(u){
   });
 }
 async function lsSeq(list, gap, onstep){ const my=lsRun; for(let k=0;k<list.length;k++){ if(my!==lsRun) return; onstep&&onstep(k); await lsPlay(list[k]); await lsWait(gap||350); } }
-function lsHD(text){ const L=window.LS; return lsPlay({t:text, l:'vi', a:(L.hd&&L.hd[text])||''}); }
+function lsHD(text){ return lsPlay({t:text, l:'vi', a:hdFile(text)}); }
 /* chờ ms; khi đang ⏸ Dừng thì đồng hồ đứng lại */
 function lsWait(ms){ ms=window.LS_FAST?5:REDUCED?Math.min(ms,300):ms;
   return new Promise(r=>{ let left=ms, last=Date.now(); const t=setInterval(()=>{ const now=Date.now(); if(!LS_PAUSED) left-=now-last; last=now; if(left<=0){ clearInterval(t); r(); } }, 50); }); }
