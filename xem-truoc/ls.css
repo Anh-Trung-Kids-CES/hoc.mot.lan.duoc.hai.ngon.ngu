@@ -228,3 +228,50 @@
 #voiceGate .vg-ico{font-size:30px}
 @keyframes vgPulse{0%,100%{transform:translateX(-50%) scale(1)}50%{transform:translateX(-50%) scale(1.07)}}
 @media (prefers-reduced-motion:reduce){#voiceGate{animation:none}}
+
+/* ===== Tối ưu trải nghiệm cho bé 5–6 tuổi (Phương án 1, 21/10/2026) ===== */
+/* tiêu đề: giữ cụm tiếng Trung trên một dòng */
+.nw{word-break:keep-all;overflow-wrap:break-word}
+/* màn chúc mừng cuối ngày, phủ cả màn hình */
+.ls-cele{position:fixed;inset:0;z-index:9000;background:rgba(46,38,32,.55);display:grid;place-items:center;padding:16px;animation:lsfade .3s ease-out}
+.ls-cele-box{background:#FFF8E7;border:4px solid #FFC93C;border-radius:32px;padding:18px 20px 22px;width:min(440px,100%);max-height:calc(100vh - 32px);overflow:auto;text-align:center;box-shadow:0 14px 40px rgba(0,0,0,.25);color:var(--ls-ink);animation:lspopin .45s cubic-bezier(.2,1.4,.4,1)}
+.ls-cele-img{width:min(260px,70%);border-radius:24px;display:block;margin:0 auto}
+.ls-cele-stars{display:flex;justify-content:center;gap:10px;margin:10px 0 2px}
+.ls-cele-stars svg{width:52px;height:52px;animation:lsstar .6s both}
+.ls-cele-stars svg:nth-child(2){animation-delay:.15s}.ls-cele-stars svg:nth-child(3){animation-delay:.3s}
+.ls-cele-box h3{font-family:'Baloo 2',sans-serif;font-size:30px;line-height:1.1;margin:6px 0}
+.ls-cele-box p{margin:0 0 14px;font-size:16px;color:#6B5D50}
+.ls-cele-go{display:inline-flex;flex-direction:column;align-items:center;gap:2px;text-decoration:none;background:var(--ls-ok);color:#fff;border-radius:28px;padding:12px 30px;box-shadow:0 6px 0 rgba(0,0,0,.15);animation:lsnudge 1.6s ease-in-out 1.2s infinite}
+.ls-cele-go span{font-size:54px;line-height:1}.ls-cele-go b{font-size:18px}
+@keyframes lsfade{from{opacity:0}to{opacity:1}}
+@keyframes lspopin{from{transform:scale(.7);opacity:0}to{transform:none;opacity:1}}
+@keyframes lsstar{from{transform:scale(0) rotate(-90deg)}to{transform:none}}
+@keyframes lsnudge{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+/* nút "xem xong" chờ hết thời lượng video */
+.ls-wait{position:relative;overflow:hidden}
+.btn.ls-wait[disabled]{opacity:1;filter:grayscale(.6);cursor:default}
+.ls-waitbar{position:absolute;left:0;top:0;bottom:0;width:var(--w,0%);background:rgba(255,255,255,.35);transition:width .25s linear}
+#lsNx span{position:relative}
+/* che nút "mở cửa sổ mới" của Google Drive */
+.ls-vid{position:relative}
+.ls-vidcover{position:absolute;top:0;right:0;width:76px;height:76px;z-index:2;background:transparent}
+/* micro chờ bé chạm */
+.ls-mic.ready{background:var(--ls-zh);cursor:pointer;animation:lsmicready 1.2s ease-in-out infinite}
+@keyframes lsmicready{0%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(224,79,95,.45)}50%{transform:scale(1.08);box-shadow:0 0 0 16px rgba(224,79,95,0)}}
+/* đang làm bài: ẩn bạn nhỏ góc trái để không che nút loa */
+@media (max-width:1100px){body.in-step #mascot{display:none}}
+/* thanh nút loa ghim sát đáy màn hình */
+.ls-bot{position:sticky;bottom:0;z-index:6;background:var(--ls-cream);padding:8px 0 calc(8px + env(safe-area-inset-bottom,0px));border-radius:0 0 20px 20px}
+/* điện thoại: thu gọn tiêu đề, bớt khoảng trắng, tranh lựa chọn to hơn */
+@media (max-width:560px){
+  body.in-step .dayhead{margin:8px 0 6px}
+  body.in-step .dayhead .crumb{display:none}
+  body.in-step .dayhead h2{font-size:20px}
+  .ls-body{min-height:min(46vh,420px)}
+  .ls-top b{font-size:20px}
+}
+@media (max-width:480px){
+  .ls-opts{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .ls-opts .ls-opt:nth-child(3):last-child{grid-column:1/-1;justify-self:center;width:calc(50% - 5px)}
+}
+@media (prefers-reduced-motion:reduce){.ls-cele,.ls-cele-box,.ls-cele-stars svg,.ls-cele-go,.ls-mic.ready{animation:none}}

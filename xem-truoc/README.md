@@ -18,3 +18,4 @@ Web tự học cho Thử thách 21 ngày Bật phản xạ Anh – Trung (CES Vi
 
 ## Chế độ giáo viên
 Thêm `?gv=1` vào cuối link, hoặc bấm "Chế độ giáo viên" ở cuối trang chủ, để mở tất cả các ngày mà không cần nhập tên.
+Tiến độ ở chế độ giáo viên lưu riêng (`lle-progress-gv`), không cộng vào điểm và ngày của bé trên cùng máy, và không gửi lên Bảng vàng.

@@ -120,7 +120,7 @@ function viewSeedDay(g,i,sub){
   app.innerHTML=`<div class="wrap ls-wrap">
     <div class="ls-banner" style="background-image:url('${esc(R.banner)}')"><div class="ls-bt">
       <span class="ls-kick">${esc(ROUNDS[D.r-1].vi)} · ${esc(R.topic)} · Ngày ${i+1}</span>
-      <h2>${esc(D.t)}</h2>
+      <h2>${titleHTML(D.t)}</h2>
       <button class="ls-goal" id="lsGoal">${LS_SVG.spk}<span><small>Sau hôm nay con có thể</small>${esc(D.goal)}</span></button></div></div>
     <div class="ls-prog"><i style="width:${doneN/5*100}%"></i></div>
     <div class="ls-tiles">${D.steps.map((st_,j)=>{ const open=lsOpen(g,i,j), done=j in s.ls;
@@ -140,14 +140,29 @@ function viewSeedDay(g,i,sub){
 }
 function lsDayDone(g,i,panel){
   const s=lsState(g,i);
+  if(!s.done) lsCompleteDay(g,i);   // đủ 5 bước mà chưa ghi nhận (dữ liệu cũ): tự ghi nhận luôn
+  const d=document.createElement('div'); d.className='panel'; panel.appendChild(d); showDone(d,false);
+  panel.insertAdjacentHTML('beforeend',`<div class="row"><a class="btn y" href="#/g/${g}/them/${Math.floor(i/7)+1}">🧭 Con muốn xem thêm, chơi thêm</a></div>`);
+}
+/* Xong bước cuối: tự cộng sao, tự hoàn thành ngày, mở màn chúc mừng phủ cả màn hình.
+   Bé không cần cuộn hay bấm thêm nút nào; chỉ có một nút có hình để về bản đồ. */
+function lsCompleteDay(g,i){
+  const s=lsState(g,i);
+  if(!s.done){ const before=dayPoints(g,i); s.done=true; addPoints(g,i,before,null); }
   const total=Object.values(s.ls).reduce((a,b)=>a+b,0);
-  const more=`<div class="row"><a class="btn y" href="#/g/${g}/them/${Math.floor(i/7)+1}">🧭 Con muốn xem thêm, chơi thêm</a></div>`;
-  if(s.done){ const d=document.createElement('div'); d.className='panel'; panel.appendChild(d); showDone(d,false); panel.insertAdjacentHTML('beforeend',more); return; }
-  panel.innerHTML=`<div class="panel ls-praise"><img src="${esc(window.LS.page.ls_man_khen)}" alt="" class="ls-praise-img">
-    <h3>Tuyệt vời! Con đã học xong hôm nay rồi!</h3><p>Con được <b>${total} sao</b>. Ba mẹ khen con một câu thật to nhé!</p>
-    <div class="row"><button class="btn g" id="lsFin">⭐ Nhận sao và mở ngày mai</button></div></div>`;
-  lsHD('Tuyệt vời! Con đã học xong hôm nay rồi!');
-  panel.querySelector('#lsFin').onclick=e=>{ const before=dayPoints(g,i); s.done=true; addPoints(g,i,before,e.currentTarget); panel.innerHTML='<div class="panel" id="lsdp"></div>'+more; showDone(document.getElementById('lsdp'),true); lsHD('Hẹn gặp con ngày mai nhé!'); };
+  lsStop();
+  document.querySelectorAll('.ls-cele').forEach(e=>e.remove());
+  const ov=document.createElement('div'); ov.className='ls-cele';
+  ov.innerHTML=`<div class="ls-cele-box" role="dialog" aria-label="Hoàn thành ngày ${i+1}">
+    <img class="ls-cele-img" src="${esc(window.LS.page.ls_man_khen)}" alt="">
+    <div class="ls-cele-stars">${LS_SVG.star}${LS_SVG.star}${LS_SVG.star}</div>
+    <h3>Con học xong ngày ${i+1} rồi!</h3>
+    <p>Con được <b>${total} sao</b>. Ba mẹ khen con một câu thật to nhé!</p>
+    <a class="ls-cele-go" href="#/g/${g}"><span aria-hidden="true">🗺️</span><b>Về bản đồ</b></a></div>`;
+  document.body.appendChild(ov);
+  confetti(44); sfx.win();
+  (async()=>{ await lsHD('Tuyệt vời! Con đã học xong hôm nay rồi!'); if(!document.body.contains(ov)) return;
+    await lsWait(300); if(document.body.contains(ov)) lsHD('Hẹn gặp con ngày mai nhé!'); })();
 }
 
 /* ---------- chơi một bước ---------- */
@@ -169,6 +184,7 @@ function lsFinish(){
   const before=dayPoints(g,i), stars=Math.max(1,LSX.stars);
   s.ls[k]=Math.max(s.ls[k]||0, stars); addPoints(g,i,before,document.getElementById('lsStars'));
   const body=document.getElementById('lsBody'), nx=k+1<D.steps.length;
+  if(!s.done && D.steps.every((_,j)=>j in s.ls)){ LSX.replay=null; lsCap(''); return lsCompleteDay(g,i); }
   lsCap('');
   body.innerHTML=`<div class="ls-done"><div class="ls-bigstar">${LS_SVG.star}</div><b>Giỏi quá!</b><span>Con được ${stars} sao.</span>
     <div class="row">${nx?`<a class="btn g" href="#/g/${g}/${i+1}/b${k+2}">Bước ${k+2}: ${esc(LS_TYPE_NAME[D.steps[k+1].type])} →</a>`:`<a class="btn g" href="#/g/${g}/${i+1}">⭐ Xong cả 5 bước!</a>`}
@@ -191,10 +207,19 @@ function lsXem(step, body){
     if(P.kind==='video'){
       const src=P.url.replace(/\/view.*$/,'/preview');
       body.innerHTML=`<div class="ls-xem ${P.l}"><div class="ls-xh"><span class="ls-tag ${P.l}">${ord[p]} · ${lang}</span><span>${esc(P.label)}</span></div>
-        <div class="ls-vid"><iframe src="${esc(src)}" allow="autoplay; fullscreen" allowfullscreen title="Video ${esc(P.label)}"></iframe></div>
+        <div class="ls-vid">${lsVidFrame(src, 'Video '+P.label)}</div>
         <p class="ls-hint">Con xem và làm theo bạn nhé: vẫy tay, chỉ, giơ ngón tay giống bạn trong video.</p>
-        <div class="row"><button class="btn g" id="lsNx">${p===0?'Con xem xong rồi → Xem lần 2':'Con xem xong rồi ⭐'}</button></div>${extra}</div>`;
-      body.querySelector('#lsNx').onclick=()=>{ sfx.ok(); p++; show(); };
+        <div class="row"><button class="btn g ls-wait" id="lsNx" disabled><i class="ls-waitbar"></i><span>${p===0?'Con xem xong rồi → Xem lần 2':'Con xem xong rồi ⭐'}</span></button></div>${extra}</div>`;
+      const nxb=body.querySelector('#lsNx');
+      nxb.onclick=()=>{ if(nxb.disabled) return; sfx.ok(); p++; show(); };
+      /* nút "xem xong" chỉ bấm được sau khoảng thời lượng video, để bé không bỏ qua video bằng hai lần chạm */
+      const wait=TEACHER?0:LS_VID_WAIT, t0=Date.now();
+      nxb.style.setProperty('--w', wait?'0%':'100%');
+      const tick=setInterval(()=>{
+        if(!lsAlive(my) || !document.body.contains(nxb)){ clearInterval(tick); return; }
+        const f=wait?Math.min(1,(Date.now()-t0)/wait):1; nxb.style.setProperty('--w',(f*100)+'%');
+        if(f>=1){ clearInterval(tick); nxb.disabled=false; nxb.classList.remove('ls-wait'); lsPop(nxb); }
+      }, 250);
       LSX.replay=()=>lsHD('Con xem và làm theo bạn nhé!');
       lsHD('Con xem và làm theo bạn nhé!');
     } else storyShow(P);
@@ -223,9 +248,35 @@ function lsXem(step, body){
   show();
 }
 
+const LS_VID_WAIT = 20000;   // ms: video ngắn khoảng 24 giây
+/* khung video Google Drive: thêm lớp che nút "mở cửa sổ mới" ở góc trên bên phải, để bé không bị đưa ra khỏi web */
+function lsVidFrame(src, title){
+  const drive=/drive\.google\.com/.test(src);
+  return `<iframe src="${esc(src)}" allow="autoplay; fullscreen" allowfullscreen title="${esc(title)}"></iframe>${drive?'<span class="ls-vidcover" aria-hidden="true"></span>':''}`;
+}
+
 /* ---------- 2. CHẠM ĐÚNG HÌNH ---------- */
+/* Bước "Câu": tranh đúng là tranh câu (vuông, nét mới), còn tranh sai lại lấy từ tranh truyện (ngang, khác nét),
+   nên bé chọn được "tranh khác kiểu" mà không cần nghe. Đổi tranh sai thành tranh câu của ngày khác trong cùng vòng,
+   cùng khung, cùng nét. Cặp câu gần nghĩa (tên – tên, anh chị – anh chị) không làm tranh sai cho nhau. */
+const LS_CAU = {
+  v1_n1:'goodbye_mommy', v1_n2:'hello_daddy', v1_n3:'hello_teacher', v1_n4:'hello_friend',
+  v2_n8:'hello_my_name_is_anna', v2_n9:'what_s_your_name', v2_n10:'one_two_three_four_five_six', v2_n11:'how_old_are_you',
+  v3_n15:'who_is_he', v3_n16:'he_is_my_big_brother', v3_n17:'she_is_my_big_sister', v3_n18:'who_is_she'
+};
+const LS_CAU_ALT = {
+  v1_n1:['v1_n2','v1_n3'], v1_n2:['v1_n1','v1_n4'], v1_n3:['v1_n4','v1_n1'], v1_n4:['v1_n3','v1_n2'],
+  v2_n8:['v2_n10','v2_n11'], v2_n9:['v2_n11','v2_n10'], v2_n10:['v2_n8','v2_n9'], v2_n11:['v2_n9','v2_n8'],
+  v3_n15:['v3_n16','v3_n17'], v3_n16:['v3_n15','v3_n18'], v3_n17:['v3_n18','v3_n15'], v3_n18:['v3_n17','v3_n16']
+};
+function lsFixCau(q){
+  const a=q.opts[q.ans], m=/^(.*\/)(v\d_n\d+)_cau_.+_(l\d)\.webp$/.exec(a||'');
+  if(!m || !LS_CAU_ALT[m[2]] || !q.opts.some((o,n)=>n!==q.ans && /\/tr\d_c\d+\.webp$/.test(o))) return q;
+  const alt=LS_CAU_ALT[m[2]].map(k=>`${m[1]}${k}_cau_${LS_CAU[k]}_${m[3]}.webp`); let j=0;
+  return Object.assign({}, q, {opts:q.opts.map((o,n)=>n===q.ans?o:(alt[j++]||o))});
+}
 function lsCham(step, body){
-  const my=lsSid; const qs=step.qs; let qi=0, busy=false;
+  const my=lsSid; const qs=step.qs.map(lsFixCau); let qi=0, busy=false;
   async function demo(){
     for(let d=0; d<step.demo.length; d++){
       if(!lsAlive(my)) return;
@@ -264,6 +315,20 @@ function lsCham(step, body){
 }
 
 /* ---------- 3. NÓI THEO (cả đóng vai) ---------- */
+function lsMicWait(mic, nx, my){
+  return new Promise(res=>{
+    let done=false, t1, t2; const old=nx.onclick;
+    const fin=v=>{ if(done) return; done=true; clearTimeout(t1); clearTimeout(t2); mic.onclick=null; nx.onclick=old; nx.hidden=true; mic.classList.remove('ready'); res(v); };
+    mic.classList.remove('idle'); mic.classList.add('ready');
+    mic.setAttribute('role','button'); mic.setAttribute('aria-label','Chạm vào micro rồi nói'); mic.tabIndex=0;
+    lsCap('Con chạm vào micro rồi nói nhé');
+    mic.onclick=()=>fin('go');
+    mic.onkeydown=e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); fin('go'); } };
+    nx.onclick=()=>{ lsStop(); fin('skip'); };
+    t1=setTimeout(()=>{ if(!done && lsAlive(my)) lsHD('Đến lượt con!'); }, 10000);
+    t2=setTimeout(()=>{ if(!done && lsAlive(my)) nx.hidden=false; }, 14000);
+  });
+}
 function lsNoi(step, body){
   const my=lsSid, T=step.turns; let ti=0;
   async function micCount(el){
@@ -288,8 +353,12 @@ function lsNoi(step, body){
     await lsSeq(t.say, 400, k=>body.querySelectorAll('.ls-says .ls-bub').forEach((b,j)=>b.classList.toggle('talk',j===k)));
     if(!lsAlive(my)) return;
     if(t.mic){
-      if(step.role){ await lsHD('Đến lượt con!'); if(!lsAlive(my)) return; if(t.ask){ await lsPlay(t.ask); if(!lsAlive(my)) return; } }
-      mic.classList.remove('idle'); mic.classList.add('on'); sfx.pop();
+      await lsHD('Đến lượt con!'); if(!lsAlive(my)) return;
+      if(step.role && t.ask){ await lsPlay(t.ask); if(!lsAlive(my)) return; }
+      /* micro chờ bé chạm mới bắt đầu lượt nói; không chạm thì cô nhắc một lần, rồi hiện nút "Tiếp" để bé đi tiếp mà không bị ép */
+      const go=await lsMicWait(mic, nx, my); if(!lsAlive(my)) return;
+      if(go==='skip'){ ti++; return turn(); }
+      mic.classList.remove('idle','ready'); mic.classList.add('on'); sfx.pop();
       const ok=await micCount(mic); if(!ok) return;
       mic.classList.remove('on'); mic.classList.add('ok'); mic.querySelector('b').textContent='✓'; sfx.ok(); lsStar();
       await lsHD('Giỏi quá!'); if(!lsAlive(my)) return;
@@ -418,7 +487,7 @@ function viewXemThem(g, r){
   app.querySelectorAll('.xt-v').forEach(b=>b.onclick=()=>{
     const it=vids[+b.dataset.n], box=document.getElementById('xtPlay');
     box.innerHTML=`<div class="ls-xem ${it[0]}"><div class="ls-xh"><span class="ls-tag ${it[0]}">${it[0]==='zh'?'Tiếng Trung':'Tiếng Anh'}</span><span>${esc(it[1])}</span></div>
-      <div class="ls-vid"><iframe src="${esc(src(it[3]))}" allow="autoplay; fullscreen" allowfullscreen title="${esc(it[1])}"></iframe></div>
+      <div class="ls-vid">${lsVidFrame(src(it[3]), it[1])}</div>
       <div class="row"><button class="btn y" id="xtClose">Đóng video</button></div></div>`;
     box.querySelector('#xtClose').onclick=()=>{ box.innerHTML=''; };
     box.scrollIntoView({behavior:'smooth', block:'center'});
