@@ -85,7 +85,7 @@ button.tg:active{transform:scale(.97)}
 @keyframes nodepulse{50%{transform:scale(1.08)}}
 @keyframes nodering{from{transform:scale(.8);opacity:.7}to{transform:scale(1.25);opacity:0}}
 .node.lock .ndot{background:#F6F0E2;border-color:#D9CDB5;box-shadow:0 0 0 4px rgba(255,255,255,.8),0 6px 0 4px rgba(58,42,26,.12)}
-.nlb{position:absolute;left:calc(50% + 46px);top:50%;transform:translateY(-50%);background:#fff;border:3px solid #F0E2C0;border-radius:16px;padding:5px 12px;text-align:left;white-space:nowrap;max-width:min(40vw,230px);box-shadow:0 4px 0 rgba(58,42,26,.12)}
+.nlb{position:absolute;left:calc(50% + 46px);top:50%;transform:translateY(-50%);background:#fff;border:3px solid #F0E2C0;border-radius:16px;padding:5px 12px;text-align:left;white-space:nowrap;width:max-content;max-width:min(40vw,230px);box-shadow:0 4px 0 rgba(58,42,26,.12)}
 .nlb.l{left:auto;right:calc(50% + 46px);text-align:right}
 .nlb b{display:block;font-size:16px;line-height:1.1;color:var(--ink)}
 .nlb small{display:block;font-size:14px;color:var(--muted);font-weight:700;overflow:hidden;text-overflow:ellipsis}
@@ -112,7 +112,7 @@ button.tg:active{transform:scale(.97)}
 .sjoin.on span{border-color:var(--yellow);color:var(--ink)}
 @media (max-width:560px){
   .ndot{width:58px;height:58px;border-width:5px}.ndot b{font-size:26px}.ndot svg{width:26px;height:26px}
-  .nlb{left:calc(50% + 36px);max-width:38vw;padding:4px 9px}.nlb.l{right:calc(50% + 36px)}
+  .nlb{left:calc(50% + 36px);max-width:36vw;padding:4px 9px;white-space:normal}.nlb.l{right:calc(50% + 36px)}
   .nlb b{font-size:14px}.nlb small{font-size:12px;white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
   .nme{right:calc(50% + 34px)}.nme.r{left:calc(50% + 34px)}.nme img{width:36px;height:58px}
   .shead h3{font-size:22px}
