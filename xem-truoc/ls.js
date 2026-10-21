@@ -158,34 +158,41 @@ function viewSeedDay(g,i,sub){
     return lsPlayStep(g,i,k);
   }
   const R=window.LS.rounds[D.r-1], doneN=D.steps.filter((_,j)=>j in s.ls).length;
-  app.innerHTML=`<div class="wrap ls-wrap">
-    <div class="ls-banner" style="background-image:url('${esc(R.banner)}')"><div class="ls-bt">
-      <span class="ls-kick">Chặng ${D.r}: ${esc(ROUNDS[D.r-1].vi)} · ${esc(R.topic)} · Buổi ${lessonNo(i)}</span>
-      <h2>${titleHTML(D.t)}</h2>
-      <button class="ls-goal" id="lsGoal">${LS_SVG.spk}<span><small>Sau hôm nay con có thể</small>${esc(D.goal)}</span></button></div></div>
-    <div class="ls-prog"><i style="width:${doneN/5*100}%"></i></div>
-    <div class="ls-tiles">${D.steps.map((st_,j)=>{ const open=lsOpen(g,i,j), done=j in s.ls;
-      return `<button class="ls-tile ${done?'done':''} ${open?'':'lock'}" data-j="${j}" style="--d:${j*.05}s">
-        <span class="ls-tim"><img src="${esc(window.LS.page[LS_STEP_ICON[st_.type]])}" alt="" loading="lazy">${done?'<em>✓</em>':open?'':'<em class="lk">🔒</em>'}</span>
-        <span class="ls-ttx"><small>Bước ${j+1} · ${esc(st_.step)}</small><b>${esc(LS_TYPE_NAME[st_.type])}</b>${done?`<span class="ls-got">${LS_SVG.star} ${s.ls[j]} sao</span>`:''}</span></button>`; }).join('')}</div>
-    ${doneN<5?`<div class="row"><button class="btn g ls-gonext" id="lsGo">▶ ${doneN?'Học tiếp':'Bắt đầu'} · Bước ${D.steps.findIndex((_,j)=>!(j in s.ls))+1}: ${esc(LS_TYPE_NAME[D.steps[D.steps.findIndex((_,j)=>!(j in s.ls))].type])}</button></div>`:''}
-    <div class="ls-parent"><button class="ls-b sm" id="lsParentSay" aria-label="Nghe lời nhắn cho ba mẹ">${LS_SVG.spk}</button><div><b>Ba mẹ đồng hành:</b> bật bài cho con đúng giờ · khen con khi con đang làm bài · khen con khi con xong bài và nhận sao. Không ép nói, không sửa lỗi, không so sánh.</div></div>
-    <div id="lsDone"></div>
-    <div class="row"><a class="btn y" href="#/g/${g}">← Về bản đồ</a></div></div>`;
+  const nextJ=D.steps.findIndex((_,j)=>!(j in s.ls)), ni=nextLearn(i);
+  document.body.classList.add('hub');
+  app.innerHTML=`<div class="screen dayscr">
+    <section class="dy-card">
+      <div class="dy-img" style="background-image:url('${esc(R.banner)}')"></div>
+      <div class="dy-in">
+        <span class="ls-kick">Chặng ${D.r} · ${esc(R.topic)} · Buổi ${lessonNo(i)}</span>
+        <h2>${titleHTML(D.t)}</h2>
+        <button class="ls-goal" id="lsGoal">${LS_SVG.spk}<span><small>Sau hôm nay con có thể</small>${esc(D.goal)}</span></button>
+        <div class="ls-prog"><i style="width:${doneN/5*100}%"></i></div>
+        ${doneN<5?`<button class="btn g ls-gonext" id="lsGo">▶ ${doneN?'Học tiếp':'Bắt đầu'}: Bước ${nextJ+1}</button>`
+          :`<div class="dy-done">🎉 Con đã học xong buổi này!</div><div class="dy-row">${ni>=0?`<a class="btn g" href="#/g/${g}/${ni+1}">Buổi tiếp theo →</a>`:''}<a class="btn y" href="#/g/${g}">🗺️ Bản đồ</a></div>`}
+        <div class="dy-parent"><button class="ls-b sm" id="lsParentSay" aria-label="Nghe lời nhắn cho ba mẹ">${LS_SVG.spk}</button><span><b>Ba mẹ đồng hành:</b> bật bài đúng giờ · khen con khi làm bài và khi xong bài. 3 KHÔNG: không ép nói, không sửa lỗi, không so sánh.</span></div>
+      </div>
+    </section>
+    <section class="dy-tiles">${D.steps.map((st_,j)=>{ const open=lsOpen(g,i,j), done=j in s.ls, now=j===nextJ;
+      return hubStep({j, img:window.LS.page[LS_STEP_ICON[st_.type]], t:LS_TYPE_NAME[st_.type], sub:`Bước ${j+1} · ${st_.step}`, done, open, now, stars:s.ls[j]}); }).join('')}
+      ${hubStep({j:'x', img:'tai-nguyen/trang/ls_man_khen.webp', t:'Nhiệm vụ & khám phá', sub:s.clipSent?'Đã gửi clip ✓':'Quay clip gửi Zalo · xem thêm', open:true, extra:true})}
+    </section>
+  </div>`;
+  const xb=app.querySelector('.ht[data-j="x"]'); if(xb) xb.onclick=()=>{ sfx.pop(); extrasPanel(g,i); };
   const sayGoal=()=>lsPlay({t:'Hôm nay con học: '+D.goal, l:'vi', a:D.goal_a});
   const parentLine=LS_PARENT_HD;
   document.getElementById('lsGoal').onclick=()=>{ lsStop(); sayGoal(); };
   document.getElementById('lsParentSay').onclick=()=>{ lsStop(); lsHD(parentLine); };
-  const go=document.getElementById('lsGo'); if(go) go.onclick=()=>{ sfx.pop(); location.hash=`#/g/${g}/${i+1}/b${D.steps.findIndex((_,j)=>!(j in s.ls))+1}`; };
+  const go=document.getElementById('lsGo'); if(go) go.onclick=()=>{ sfx.pop(); location.hash=`#/g/${g}/${i+1}/b${nextJ+1}`; };
   /* vừa mở buổi học: cô Hươu tự đọc "Hôm nay con học gì", lời nhắn cho ba mẹ, rồi mời con bắt đầu */
   if(STARTED && doneN<5){ const my=lsSid; (async()=>{ await lsWait(300); if(my!==lsSid) return; await sayGoal(); if(my!==lsSid) return;
       await lsWait(300); if(my!==lsSid) return; await lsHD(parentLine); if(my!==lsSid) return;
       await lsWait(300); if(my!==lsSid) return; lsHD(doneN?'Con chạm nút xanh để học tiếp nhé!':'Con chạm nút xanh để bắt đầu nhé!'); })(); }
-  app.querySelectorAll('.ls-tile').forEach(b=>b.onclick=()=>{
+  app.querySelectorAll('.ht.step').forEach(b=>b.onclick=()=>{
     if(b.classList.contains('lock')){ sfx.no(); toast('Con làm xong bước trước để mở bước này nhé! 🔒'); return; }
     sfx.pop(); location.hash=`#/g/${g}/${i+1}/b${+b.dataset.j+1}`;
   });
-  if(doneN===5) lsDayDone(g,i,document.getElementById('lsDone'));
+  if(doneN===5 && !s.done) lsCompleteDay(g,i);   // đủ 5 bước mà chưa ghi nhận (dữ liệu cũ): tự ghi nhận
   window.scrollTo({top:0});
 }
 function lsDayDone(g,i,panel){

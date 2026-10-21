@@ -125,28 +125,35 @@ function viewCanopyDay(g,i,sub){
     return cxPlay(g,i,k);
   }
   const doneN=req.filter(e=>e.id in s.ex).length;
-  const comp=day.cx.comp;
-  app.innerHTML=`<div class="wrap">${head(g,i)}
-    <div class="cx-daybar">${cxFace(comp,'big')}<div><b>Bạn đồng hành hôm nay: ${CX_WHO[comp]}</b>
-      <small>${day.d<=3?'Làm lần lượt từ trên xuống.':'Làm bài khởi động trước, sau đó con tự chọn thứ tự.'} Đã xong ${doneN}/${req.length} bài.</small></div></div>
-    <div class="cx-prog"><i style="width:${doneN/req.length*100}%"></i></div>
-    <div class="cx-list">${exs.map((e,n)=>{
-      const open=cxOpenIdx(g,i,n), done=e.id in s.ex, [ic,tn]=CX_TYPES[e.type]||['•',''];
-      const sc=s.ex[e.id];
-      return `<button class="cx-item ${done?'done':''} ${open?'':'lock'}" data-n="${n}" style="--d:${n*.04}s">
-        <span class="cx-ic">${done?'✅':open?ic:'🔒'}</span>
-        <span class="cx-tt"><b>${n+1}. ${esc(e.title)}</b><small>${tn}${e.nl?' · '+e.nl:''}${e.optional?' · tùy chọn':''}${e.timed?' · ⏱ có thử thách':''}</small></span>
-        <span class="cx-sc">${done&&!e.optional?'⭐ '+sc+'/'+CX_PTS:''}</span></button>`; }).join('')}</div>
-    ${!s.done?`<div class="row"><button class="btn g" id="cxGo">▶ ${doneN?'Làm tiếp':'Bắt đầu'}</button></div>`:''}
-    <div class="ls-parent"><button class="ls-b sm" id="cxParentSay" aria-label="Nghe lời nhắn cho ba mẹ">🔊</button><div><b>Ba mẹ đồng hành:</b> bật bài cho con đúng giờ · khen con khi con đang làm bài · khen con khi con xong bài và nhận sao. Không ép nói, không sửa lỗi, không so sánh.</div></div>
-    ${s.done?`<div class="panel" id="cxdone"></div>`:''}
-    <div class="row"><a class="btn y" href="#/g/${g}">← Về bản đồ</a></div></div>`;
-  app.querySelectorAll('.cx-item').forEach(b=>b.onclick=()=>{
-    if(b.classList.contains('lock')){ sfx.no(); toast('Làm xong bài trước để mở bài này nhé! 🔒'); return; }
-    sfx.pop(); location.hash=`#/g/${g}/${i+1}/b${+b.dataset.n+1}`;
-  });
-  if(s.done){ cur={g,i,day}; showDone(document.getElementById('cxdone'), false); }
+  const comp=day.cx.comp, r=Math.floor(i/PER), ni=nextLearn(i);
   const firstOpen=exs.findIndex((e,n)=>cxOpenIdx(g,i,n) && !(e.id in s.ex) && !e.optional);
+  const TBG={video:'#FFE4E4',cards:'#E4F0FF',quiz:'#FFF1CC',match3:'#E6F7EE',matchup:'#E6F7EE',missing:'#F3ECFF',unjumble:'#F3ECFF',tf:'#FFE9D6',sort:'#E0F5F4',story:'#FDE8F1',puzzle:'#EDE7DC',speak:'#FFE4E4',anagram:'#E4F0FF'};
+  const TIMG={video:'video',cards:'cards',quiz:'quiz',match3:'match',matchup:'match',missing:'words',unjumble:'words',anagram:'words',tf:'tf',sort:'sort',story:'story',puzzle:'puzzle',speak:'speak'};
+  document.body.classList.add('hub');
+  app.innerHTML=`<div class="screen dayscr cx">
+    <section class="dy-card">
+      <div class="dy-img" style="background-image:url('${G_BANNER(g,r)}')"></div>
+      <div class="dy-in">
+        <span class="ls-kick">Chặng ${r+1} · ${esc(day.round?day.round.name+' – '+day.round.vi:'')} · Buổi ${lessonNo(i)}</span>
+        <h2>${esc(lessonTitle(day))}</h2>
+        <div class="dy-comp">${cxFace(comp,'big')}<span><small>Bạn đồng hành hôm nay</small><b>${CX_WHO[comp]}</b></span></div>
+        <div class="ls-prog"><i style="width:${doneN/req.length*100}%"></i></div>
+        ${!s.done?`<button class="btn g ls-gonext" id="cxGo">▶ ${doneN?'Làm tiếp':'Bắt đầu'}</button>`
+          :`<div class="dy-done">🎉 Con đã làm xong buổi này!</div><div class="dy-row">${ni>=0?`<a class="btn g" href="#/g/${g}/${ni+1}">Buổi tiếp theo →</a>`:''}<a class="btn y" href="#/g/${g}">🗺️ Bản đồ</a></div>`}
+        <div class="dy-parent"><button class="ls-b sm" id="cxParentSay" aria-label="Nghe lời nhắn cho ba mẹ">🔊</button><span><b>Ba mẹ đồng hành:</b> bật bài đúng giờ · khen con khi làm bài và khi xong bài. 3 KHÔNG: không ép nói, không sửa lỗi, không so sánh.</span></div>
+      </div>
+    </section>
+    <section class="dy-tiles n8">${exs.map((e,n)=>{
+      const open=cxOpenIdx(g,i,n), done=e.id in s.ex, [ic,tn]=CX_TYPES[e.type]||['•',''];
+      return hubStep({j:n, ic, bg:TBG[e.type], img:TIMG[e.type]?`tai-nguyen/trang/cx_o_${TIMG[e.type]}.webp`:'', t:e.title.replace(/\s*\(.*\)$/,''), sub:`${n+1} · ${tn}${e.optional?' · tùy chọn':''}`, done, open, now:n===firstOpen && !s.done, stars:done&&!e.optional?s.ex[e.id]:0}); }).join('')}
+      ${hubStep({j:'x', img:'tai-nguyen/trang/ls_man_khen.webp', t:'Nhiệm vụ & khám phá', sub:s.clipSent?'Đã gửi clip ✓':'Quay clip gửi Zalo · xem thêm', open:true, extra:true})}
+    </section>
+  </div>`;
+  app.querySelectorAll('.ht.step').forEach(b=>b.onclick=()=>{
+    if(b.classList.contains('lock')){ sfx.no(); toast('Làm xong bài trước để mở bài này nhé! 🔒'); return; }
+    sfx.pop(); location.hash=`#/g/${g}/${i+1}/b${+b.dataset.j+1}`;
+  });
+  const xb=app.querySelector('.ht[data-j="x"]'); if(xb) xb.onclick=()=>{ sfx.pop(); extrasPanel(g,i); };
   const go=document.getElementById('cxGo'); if(go) go.onclick=()=>{ sfx.pop(); location.hash=`#/g/${g}/${i+1}/b${(firstOpen<0?0:firstOpen)+1}`; };
   const PL='Ba mẹ đồng hành cùng con nhé: bật bài cho con đúng giờ, khen con khi con đang làm bài, và khen con khi con xong bài, nhận sao. Không ép nói, không sửa lỗi, không so sánh.';
   document.getElementById('cxParentSay').onclick=()=>hdSay(PL);
@@ -158,6 +165,7 @@ function viewCanopyDay(g,i,sub){
   window.scrollTo({top:0});
 }
 
+function G_BANNER(g,r){ const G=GROUPS[g]; return G&&G.banners?G.banners[r]:''; }
 function cxTitleVi(day){
   const cap=x=>{ x=x.trim().toLowerCase().replace(/\bbeijing\b/,'Beijing').replace(/\bshanghai\b/,'Shanghai'); return x.charAt(0).toUpperCase()+x.slice(1); };
   const t=String(day.t||''), m=/^(story|review):\s*(.*)$/i.exec(t);
