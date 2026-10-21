@@ -70,7 +70,11 @@ function cxSpeak(ex, box){
         <div class="sp-mid"><button class="sp-mic" id="mic">${CX_SVG.mic}</button><div class="sp-cap" id="cap">${attempt?'Nói lại · lần 2/2':'Bấm để nói'}</div></div>
         <div class="sp-r">${attempt?`<button class="cx-pill" id="skip">Bỏ qua →</button>`:`<button class="cx-pill" id="ana">🔤 Chưa muốn nói? Ghép chữ</button>`}</div></div>
       ${!CX_SR?`<div class="sp-warn">Máy này chưa nghe được giọng nói. Bố mẹ mở trang bằng <b>Chrome</b> (máy tính hoặc Android) để máy chấm. Con vẫn nói và bố mẹ bấm xác nhận nhé.</div>`:''}`;
-    const sq=box.querySelector('#sq'); if(sq){ sq.onclick=()=>cxSay(t.q); if(!attempt) cxT(()=>cxSay(t.q),350); }
+    const sq=box.querySelector('#sq'); if(sq) sq.onclick=()=>cxSay(t.q);
+    /* tự động: đọc đề → tự bật micro (không cần bấm) */
+    const autoGo=()=>cxT(()=>{ const m=box.querySelector('#mic'); if(CX.ex===ex && i===k && m && !m.classList.contains('on')) listen(k, attempt); }, 450);
+    if(!attempt){ const pr = t.kind==='qa' ? t.q : t.kind==='word' ? t.frm : null;
+      if(pr) cxT(()=>cxSay(pr, ()=>autoGo()), 350); else cxT(autoGo, 600); }
     const sf=box.querySelector('#sf'); if(sf) sf.onclick=()=>cxSay(t.frm);
     const md=box.querySelector('#model'); if(md) md.onclick=()=>cxSay(t.to);
     const mi=box.querySelector('#mine'); if(mi) mi.onclick=()=>{ cxStop(); const a=new Audio(voiceUrl[k]); curAudio=a; a.play().catch(()=>{}); };
@@ -85,7 +89,7 @@ function cxSpeak(ex, box){
     if(mic.classList.contains('on')){ window.cxStopListen&&window.cxStopListen(); return; }
     cxStop(); mic.classList.add('on'); mic.innerHTML='<i class="sp-sq"></i>';
     const ansEl=box.querySelector('#ans'); if(ansEl){ ansEl.innerHTML='<span class="sp-dots"><i></i><i></i><i></i></span>'; ansEl.classList.add('wait'); }
-    box.querySelector('#cap').innerHTML=`<span class="sp-wave l"><i></i><i></i><i></i><i></i><i></i></span><div class="sp-bar"><i></i></div><span class="sp-wave r"><i></i><i></i><i></i><i></i><i></i></span>`;
+    box.querySelector('#cap').innerHTML=`<span class="sp-wave l"><i></i><i></i><i></i><i></i><i></i></span><div class="sp-bar"><i></i></div><span class="sp-wave r"><i></i><i></i><i></i><i></i><i></i></span><div class="sp-rec">🔴 Đang thu… con nói đi!</div>`;
     const r=await cxListen(t.to.l, t.kind==='word'?5000:8000);
     if(!document.body.contains(box) || CX.ex!==ex) return;   // con đã rời trang
     if(r.blob) voiceUrl[k]=URL.createObjectURL(r.blob);
@@ -110,21 +114,29 @@ function cxSpeak(ex, box){
     box.querySelector('.sp-right').innerHTML=rightSide(k,true);
     box.querySelector('#sm').onclick=()=>cxSay(t.to);
     box.querySelector('.sp-bot').innerHTML=`<div class="sp-l"></div><div class="sp-mid sp-row">${voiceUrl[k]?`<button class="cx-pill" id="mine">🎧 Nghe giọng con</button>`:''}<button class="cx-pill" id="model">🔊 Nghe mẫu</button><button class="cx-go g" id="nx">Tiếp →</button></div><div class="sp-r"></div>`;
-    wire(k); cxT(()=>cxSay(t.to),400);
+    wire(k); playBackThenNext(k, true);
   }
   function retry(k){
     const t=turns[k]; sfx.pop();
     show(k, 1);
     box.querySelector('.sp-right').innerHTML=rightSide(k,false);
     box.querySelector('#sm').onclick=()=>cxSay(t.to);
-    cxT(()=>cxSay(t.to),300);
+    cxT(()=>cxSay(t.to, ()=>cxT(()=>{ const m=box.querySelector('#mic'); if(CX.ex===ex && i===k && m && !m.classList.contains('on')) listen(k,1); }, 450)),300);
   }
   function tried(k){
     const t=turns[k];
     box.querySelector('.sp-right').innerHTML=`<div class="sp-head warm">${CX_SVG.star0}<b>Con đã cố gắng rồi, tem này của con!</b></div>`+answerCard(t,'warm');
     box.querySelector('#sm').onclick=()=>cxSay(t.to);
     box.querySelector('.sp-bot').innerHTML=`<div class="sp-l"></div><div class="sp-mid sp-row">${voiceUrl[k]?`<button class="cx-pill" id="mine">🎧 Nghe giọng con</button>`:''}<button class="cx-go g" id="nx">Tiếp →</button></div><div class="sp-r"></div>`;
-    wire(k);
+    wire(k); playBackThenNext(k, false);
+  }
+  /* thu xong: phát lại giọng con → (nghe mẫu) → tự sang câu tiếp */
+  function playBackThenNext(k, model){
+    const t=turns[k];
+    const go=()=>cxT(()=>{ if(CX.ex===ex && i===k && document.body.contains(box)) next(); }, 1600);
+    const mdl=()=>model ? cxSay(t.to, go) : go();
+    cxT(()=>{ if(voiceUrl[k]){ const m=box.querySelector('#mine'); if(m) m.classList.add('playing');
+        voicePlay(voiceUrl[k],{onend:()=>{ if(m) m.classList.remove('playing'); mdl(); }, onerr:mdl}); } else mdl(); }, 400);
   }
   function selfCheck(k, r){
     const t=turns[k];
@@ -136,9 +148,9 @@ function cxSpeak(ex, box){
     box.querySelector('#no').onclick=()=>{ res[k]='try'; next(); };
   }
   function wire(k){
-    const mi=box.querySelector('#mine'); if(mi) mi.onclick=()=>{ cxStop(); const a=new Audio(voiceUrl[k]); curAudio=a; a.play().catch(()=>{}); };
+    const mi=box.querySelector('#mine'); if(mi) mi.onclick=()=>{ cxStop(); voicePlay(voiceUrl[k]); };
     const md=box.querySelector('#model'); if(md) md.onclick=()=>cxSay(turns[k].to);
-    const nx=box.querySelector('#nx'); if(nx) nx.onclick=next;
+    const nx=box.querySelector('#nx'); if(nx) nx.onclick=()=>{ i=-1; next0(k); };
   }
   function anagram(k){
     const t=turns[k], z=t.to.l==='zh';
@@ -146,9 +158,10 @@ function cxSpeak(ex, box){
                   : {en:t.to.t.replace(/[.,!?]/g,''), zh:t.kind==='word'?t.frm.t:'', py:t.kind==='word'?t.frm.py:'', img:t.img} ];
     cxAnagram(CX.ex, box, its, ()=>{ res[k]='ana'; cxStarAdd(0); next(); });
   }
-  function next(){
+  function next(){ next0(i); }
+  function next0(cur){
     cxStop();
-    const pos=queue.indexOf(i);
+    const pos=queue.indexOf(cur);
     if(pos<queue.length-1) return show(queue[pos+1], 0);
     summary();
   }

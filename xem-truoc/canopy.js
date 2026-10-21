@@ -11,6 +11,22 @@ const CX_TYPES = {
   story:   ['📖', 'Truyện'],       puzzle: ['🕵️', 'Giải đố'],      speak:   ['🎤', 'Luyện nói'],
   anagram: ['🔤', 'Ghép chữ']
 };
+/* luật chơi từng dạng bài (hiện thành thẻ + giọng đọc trước khi bắt đầu) */
+const CX_RULES = {
+  video:   ['Con bấm vào tên video để xem.','Xem xong, con bấm "Con đã xem xong".'],
+  cards:   ['Con nhìn tranh và nghe cô đọc tiếng Trung.','Chạm vào thẻ để lật, nghe tiếng Anh. Chạm nút loa để nghe lại.','Bấm "Thẻ tiếp" để xem thẻ sau.'],
+  quiz:    ['Con nghe hoặc đọc câu hỏi.','Chạm vào đáp án đúng A, B hoặc C. Nút loa nằm trong ô để con nghe từng đáp án trước khi chọn.'],
+  match3:  ['Chạm vào tranh để nghe từ.','Chọn một thẻ chữ ở dưới, rồi chạm vào ô trống đúng hàng của tranh đó.'],
+  matchup: ['Chạm vào cụm tiếng Trung để nghe.','Chọn thẻ tiếng Anh cùng nghĩa ở dưới, rồi chạm vào ô dấu hỏi cùng hàng.'],
+  missing: ['Con nghe câu tiếng Anh.','Chọn chữ Hán còn thiếu để điền vào chỗ trống trong câu tiếng Trung.'],
+  unjumble:['Con nghe câu tiếng Anh.','Chạm các thẻ chữ Hán theo đúng thứ tự để xếp thành câu, rồi bấm "Kiểm tra".'],
+  tf:      ['Con nhìn và nghe hai bên.','Nếu hai bên cùng nghĩa, chọn Đúng. Nếu khác nghĩa, chọn Sai.'],
+  sort:    ['Chạm một thẻ để nghe.','Rồi chạm vào nhóm đúng của thẻ đó. Xếp hết thẻ là xong.'],
+  story:   ['Con nghe truyện, truyện tự lật trang.','Con có thể đổi sang thứ tiếng kia, hiện hoặc ẩn pinyin.','Nghe xong, bấm "Làm câu hỏi".'],
+  puzzle:  ['Con đọc hoặc nghe đoạn gợi ý.','Dùng bảng nháp để đánh dấu, rồi chọn đáp án đúng.'],
+  speak:   ['Con nhìn tranh, nghe từ, rồi nói bằng thứ tiếng còn lại.','Micro tự bật khi đến lượt con: vòng đỏ nhấp nháy là đang thu. Con nói xong, máy phát lại giọng con.'],
+  anagram: ['Con nghe từ.','Chạm các chữ cái, hoặc chữ Hán, theo đúng thứ tự để ghép thành từ.']
+};
 const CX_WHO = {leo:'Leo', anna:'Anna', xiaomei:'Xiaomei', bong:'Bông', co_huou:'Cô Hươu', david:'David'};
 const CX_FACE = {leo:'tai-nguyen/nhan-vat/kids_leo_a.webp', anna:'tai-nguyen/nhan-vat/kids_anna_a.webp', xiaomei:'tai-nguyen/nhan-vat/kids_xiaomei_a.webp', bong:'tai-nguyen/nhan-vat/kids_bong_a.webp', co_huou:'tai-nguyen/nhan-vat/huou_huou1_a.webp', david:'tai-nguyen/nhan-vat/fam_anna_bo_a.webp'};
 const CX_PITCH = {leo:1.25, anna:1.45, xiaomei:1.5, bong:1.35};   // giọng máy dự phòng: trẻ em giọng cao
@@ -90,7 +106,8 @@ function cxImg(im, cls){
   return `<span class="cx-im ${cls||''}"><img src="${esc(im.src)}" alt="" onerror="this.parentNode.classList.add('emo');this.remove()"><b>${esc(im.e||'🖼️')}</b></span>`;
 }
 function cxFace(w, cls){ return `<img class="cx-face ${cls||''}" src="${CX_FACE[w]||CX_FACE.bong}" alt="${esc(CX_WHO[w]||'')}">`; }
-function spk(cls, extra){ return `<button class="cx-spk ${cls||''}" ${extra||''} aria-label="Nghe">${CX_SVG.spk}</button>`; }
+/* nút loa là <span role=button>: đặt được BÊN TRONG ô đáp án / ô từ (nút lồng trong nút làm trình duyệt đẩy loa ra ngoài ô) */
+function spk(cls, extra){ return `<span role="button" tabindex="0" class="cx-spk ${cls||''}" ${extra||''} aria-label="Nghe">${CX_SVG.spk}</span>`; }
 const CX_SVG = {
   spk:'<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>',
   mic:'<svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></svg>',
@@ -120,6 +137,8 @@ function viewCanopyDay(g,i,sub){
         <span class="cx-ic">${done?'✅':open?ic:'🔒'}</span>
         <span class="cx-tt"><b>${n+1}. ${esc(e.title)}</b><small>${tn}${e.nl?' · '+e.nl:''}${e.optional?' · tùy chọn':''}${e.timed?' · ⏱ có thử thách':''}</small></span>
         <span class="cx-sc">${done&&!e.optional?'⭐ '+sc+'/'+CX_PTS:''}</span></button>`; }).join('')}</div>
+    ${!s.done?`<div class="row"><button class="btn g" id="cxGo">▶ ${doneN?'Làm tiếp':'Bắt đầu'}</button></div>`:''}
+    <div class="ls-parent"><button class="ls-b sm" id="cxParentSay" aria-label="Nghe lời nhắn cho ba mẹ">🔊</button><div><b>Ba mẹ đồng hành:</b> bật bài cho con đúng giờ · khen con khi con đang làm bài · khen con khi con xong bài và nhận sao. Không ép nói, không sửa lỗi, không so sánh.</div></div>
     ${s.done?`<div class="panel" id="cxdone"></div>`:''}
     <div class="row"><a class="btn y" href="#/g/${g}">← Về bản đồ</a></div></div>`;
   app.querySelectorAll('.cx-item').forEach(b=>b.onclick=()=>{
@@ -127,8 +146,19 @@ function viewCanopyDay(g,i,sub){
     sfx.pop(); location.hash=`#/g/${g}/${i+1}/b${+b.dataset.n+1}`;
   });
   if(s.done){ cur={g,i,day}; showDone(document.getElementById('cxdone'), false); }
+  const firstOpen=exs.findIndex((e,n)=>cxOpenIdx(g,i,n) && !(e.id in s.ex) && !e.optional);
+  const go=document.getElementById('cxGo'); if(go) go.onclick=()=>{ sfx.pop(); location.hash=`#/g/${g}/${i+1}/b${(firstOpen<0?0:firstOpen)+1}`; };
+  const PL='Ba mẹ đồng hành cùng con nhé: bật bài cho con đúng giờ, khen con khi con đang làm bài, và khen con khi con xong bài, nhận sao. Không ép nói, không sửa lỗi, không so sánh.';
+  document.getElementById('cxParentSay').onclick=()=>hdSay(PL);
+  if(STARTED && !s.done){ const lines=['Hôm nay con học bài: '+cxTitleVi(day)+'. Bạn đồng hành hôm nay là '+CX_WHO[comp]+'.',
+      day.d<=3?'Con làm lần lượt các bài từ trên xuống nhé.':'Con làm bài khởi động trước, sau đó tự chọn bài con thích.'];
+    if(!lsGet('lle-parent-heard-'+g+i,false)){ lsSet('lle-parent-heard-'+g+i,true); lines.push(PL); }
+    lines.push('Con chạm nút xanh để '+(doneN?'làm tiếp':'bắt đầu')+' nhé!');
+    hdSay(lines); }
   window.scrollTo({top:0});
 }
+
+function cxTitleVi(day){ return String(day.t||'').toLowerCase().replace(/^story:\s*/,'truyện ').replace(/^review:\s*/,'ôn tập '); }
 
 /* ---------- khung chơi 1 bài ---------- */
 let CX={};   // trạng thái bài đang chơi
@@ -151,8 +181,21 @@ function cxPlay(g,i,k){
   const box=document.getElementById('cxbox'); CX.box=box;
   const R={video:cxVideo,cards:cxCards,quiz:cxQuiz,match3:cxMatch3,matchup:cxMatchup,missing:cxMissing,unjumble:cxUnjumble,
            tf:cxTF,sort:cxSort,story:cxStory,puzzle:cxPuzzle,speak:cxSpeak,anagram:cxAnagram}[ex.type];
-  R(ex, box);
+  cxRulesCard(ex, box, ()=>R(ex, box));
   window.scrollTo({top:0});
+}
+/* thẻ luật chơi: lần đầu gặp dạng bài đọc đủ luật, những lần sau đọc câu ngắn rồi tự bắt đầu */
+function cxRulesCard(ex, box, run){
+  const lines=CX_RULES[ex.type]; if(!lines || window.CX_FAST) return run();
+  const key='lle-crule-'+ex.type, seen=lsGet(key,0), [ic,tn]=CX_TYPES[ex.type]||['•',''];
+  let started=false; const tok=(cxRulesCard.tok=(cxRulesCard.tok||0)+1);
+  const start=()=>{ if(started || tok!==cxRulesCard.tok || CX.box!==box) return; started=true; lsSet(key,seen+1); hdStop(); cxStop(); run(); };
+  box.innerHTML=`<div class="cx-card cx-rule"><div class="cx-rule-ic">${ic}</div><span class="ls-lab">Luật chơi · ${esc(tn)}</span><h3>${esc(ex.title)}</h3>
+      <ol>${lines.map(l=>`<li>${esc(l)}</li>`).join('')}</ol></div>
+    <div class="cx-bot"><button class="cx-pill" id="rsay">🔊 Nghe lại luật</button><button class="cx-go" id="rgo">▶ Bắt đầu</button></div>`;
+  box.querySelector('#rgo').onclick=()=>{ sfx.pop(); start(); };
+  box.querySelector('#rsay').onclick=()=>hdSay(lines);
+  hdSay(seen<2?lines:[lines[0]]).then(()=>cxT(start, 700));
 }
 function cxDots(i,n,marks){
   const el=document.getElementById('dots'); if(!el) return;
@@ -176,12 +219,13 @@ function cxFinish(frac, html, opt){
       <div class="cx-endstars">${[0,1,2].map(n=>n<stars?CX_SVG.star:CX_SVG.star0).join('')}</div>
       ${html||`<h3>Xong bài rồi! <span class="zh">太棒了！</span> <span class="cx-en">Well done!</span></h3>`}
       ${s.rec[ex.id]?`<div class="cx-rec">🏅 Kỷ lục của em: ${s.rec[ex.id].sc} câu đúng · ${s.rec[ex.id].t} giây</div>`:''}
-      ${fresh?`<div class="cx-alldone">🎉 Con đã làm xong tất cả bài của ngày ${i+1}!</div>`:''}
+      ${fresh?`<div class="cx-alldone">🎉 Con đã làm xong tất cả bài của buổi ${lessonNo(i)}!</div>`:''}
     </div>
+    ${fresh?missionHTML(g,i)+xtTeaser(g,Math.floor(i/PER),'🧭 Con muốn xem thêm? Góc khám phá'):''}
     <div class="cx-bot">${opt.again?`<button class="cx-pill" id="again">↻ Chơi lại</button>`:''}
       ${opt.challenge?`<button class="cx-pill warm" id="chal">⏱ Thử thách lần 2</button>`:''}
       ${next>=0&&!fresh?`<button class="cx-go" id="nx">Bài tiếp →</button>`:`<button class="cx-go" id="list">${fresh?'Nhận huy hiệu →':'Về danh sách bài'}</button>`}</div>`;
-  addPoints(g,i,before,box.querySelector('.cx-end'));
+  addPoints(g,i,before,box.querySelector('.cx-end')); missionWire(box,g,i);
   sfx.win(); confetti(fresh?44:18); if(typeof mascot==='function') mascot(fresh?'done':'ok');
   const a=box.querySelector('#again'); if(a) a.onclick=()=>{ sfx.pop(); opt.again(); };
   const c=box.querySelector('#chal'); if(c) c.onclick=()=>{ sfx.pop(); opt.challenge(); };

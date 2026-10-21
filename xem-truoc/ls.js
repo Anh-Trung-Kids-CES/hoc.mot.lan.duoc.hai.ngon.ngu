@@ -12,6 +12,19 @@ const LS_FACE = {
   tho_con:'tai-nguyen/nhan-vat/huou_tho_a.webp', gau_con:'tai-nguyen/nhan-vat/huou_gau_a.webp',
   me:'tai-nguyen/nhan-vat/fam_bong_me_a.webp', bo:'tai-nguyen/nhan-vat/fam_bong_bo_a.webp'
 };
+const LS_PARENT_HD = 'Ba mẹ đồng hành cùng con nhé: bật bài cho con đúng giờ, khen con khi con đang làm bài, và khen con khi con xong bài, nhận sao. Không ép nói, không sửa lỗi, không so sánh.';
+/* Luật chơi từng dạng bài: hiện thành thẻ có hình + giọng đọc trước khi bắt đầu mỗi bước */
+const LS_RULES = {
+  xem:{h:'Xem và làm theo', lines:['Con xem video 2 lần: một lần bằng tiếng Anh, một lần bằng tiếng Trung.','Con vừa xem vừa làm động tác giống bạn trong video: vẫy tay, chỉ tay, giơ ngón tay.','Xem xong, con chạm nút xanh để xem bằng thứ tiếng còn lại.']},
+  xems:{h:'Nghe truyện', lines:['Con nghe truyện 2 lần: một lần bằng tiếng Anh, một lần bằng tiếng Trung.','Truyện tự sang trang. Con chạm nút Dừng để nghỉ, nút mũi tên để xem lại trang trước.']},
+  cham:{h:'Chạm đúng hình', lines:['Đầu tiên con xem bạn làm mẫu.','Sau đó con nghe cô đọc một từ hoặc một câu, rồi chạm vào tranh đúng.','Chạm đúng được 1 sao. Chưa đúng thì con nghe lại và chọn lại nhé.']},
+  noi:{h:'Nói theo', lines:['Con nghe bạn trong tranh nói trước.','Khi cô nói "Đến lượt con", micro đỏ nhấp nháy là máy đang thu giọng con. Con nói to nhé!','Con nói xong, máy phát lại giọng con cho con nghe, rồi tự sang câu tiếp.']},
+  at:{h:'Anh hay Trung?', lines:['Con nghe một câu.','Nếu là tiếng Anh, con chạm ô xanh ABC. Nếu là tiếng Trung, con chạm ô đỏ 中文.']},
+  do:{h:'Đố con', lines:['Con chọn một hộp quà và nghe một câu bằng một thứ tiếng.','Con thử nói câu đó bằng thứ tiếng kia. Đếm 3 giây thì cô đọc đáp án.','Sau đó micro đỏ bật, con nói theo đáp án nhé.']},
+  nc:{h:'Nhìn chữ', lines:['Con chạm vào chữ để nghe cô đọc.','Chạm thêm lần nữa, chữ biến thành tranh. Con chạm hết các chữ là xong.']},
+  nct:{h:'Nhìn chữ', lines:['Con nghe cô đọc chữ, nhìn chữ thật kỹ.','Rồi con chạm vào tranh đúng với chữ đó.']}
+};
+function lsRuleKey(step){ if(step.type==='xem') return step.parts&&step.parts[0]&&step.parts[0].kind==='story'?'xems':'xem'; if(step.type==='nc') return step.mode==='lq'?'nc':'nct'; return step.type; }
 const LS_WHO = {co_huou:'Cô Hươu', bong:'Bông', anna:'Anna', tho_con:'Thỏ con', gau_con:'Gấu con', me:'Mẹ', bo:'Bố'};
 
 /* ---------- 3 buổi học trực tuyến (ngày 7, 14, 21) ---------- */
@@ -41,7 +54,7 @@ function lsOpen(g,i,k){ if(TEACHER) return true; const s=lsState(g,i); for(let j
 /* ---------- âm thanh ---------- */
 let lsRun=0, lsSid=0, lsPend=null;
 function lsRelease(){ if(lsPend){ const p=lsPend; lsPend=null; p(); } }
-function lsStop(){ lsRun++; try{ speechSynthesis.cancel(); }catch(e){} voiceStop(); lsRelease(); }
+function lsStop(){ lsRun++; try{ speechSynthesis.cancel(); }catch(e){} voiceStop(); recAbort(); lsRelease(); }
 function lsEnd(){ lsStop(); lsSid++; }
 function lsTTS(text, lang){
   return new Promise(res=>{
@@ -63,6 +76,7 @@ function lsPlay(u){
   if(window.LS_FAST){ (window.LS_LOG=window.LS_LOG||[]).push(u); return new Promise(r=>setTimeout(r,5)); }
   lsRelease();
   const my=lsRun;
+  if(LS_PAUSED) return lsUntilResume().then(()=> my===lsRun ? lsPlay(u) : undefined);
   return new Promise(res0=>{
     let settled=false; const res=()=>{ if(settled) return; settled=true; if(lsPend===res) lsPend=null; res0(); };
     lsPend=res;
@@ -75,7 +89,11 @@ function lsPlay(u){
 }
 async function lsSeq(list, gap, onstep){ const my=lsRun; for(let k=0;k<list.length;k++){ if(my!==lsRun) return; onstep&&onstep(k); await lsPlay(list[k]); await lsWait(gap||350); } }
 function lsHD(text){ const L=window.LS; return lsPlay({t:text, l:'vi', a:(L.hd&&L.hd[text])||''}); }
-function lsWait(ms){ return new Promise(r=>setTimeout(r, window.LS_FAST?5:REDUCED?Math.min(ms,300):ms)); }
+/* chờ ms; khi đang ⏸ Dừng thì đồng hồ đứng lại */
+function lsWait(ms){ ms=window.LS_FAST?5:REDUCED?Math.min(ms,300):ms;
+  return new Promise(r=>{ let left=ms, last=Date.now(); const t=setInterval(()=>{ const now=Date.now(); if(!LS_PAUSED) left-=now-last; last=now; if(left<=0){ clearInterval(t); r(); } }, 50); }); }
+let LS_PAUSED=false;
+function lsUntilResume(){ return new Promise(r=>{ if(!LS_PAUSED) return r(); const t=setInterval(()=>{ if(!LS_PAUSED){ clearInterval(t); r(); } },80); }); }
 function lsAlive(my){ return my===lsSid && !!document.getElementById('lsBox'); }
 
 /* ---------- khung giao diện một bước ---------- */
@@ -87,6 +105,9 @@ const LS_SVG = {
   redo:'<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>',
   mic:'<svg viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></svg>',
   star:'<svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17l-5.9 3.3 1.3-6.5L2.5 9.3l6.6-.8z" fill="#FFC93C" stroke="#E0A400" stroke-width="1.2" stroke-linejoin="round"/></svg>',
+  pause:'<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><rect x="6" y="4.5" width="4" height="15" rx="1.4"/><rect x="14" y="4.5" width="4" height="15" rx="1.4"/></svg>',
+  play:'<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M7 4.8v14.4a1 1 0 0 0 1.5.86l11.5-7.2a1 1 0 0 0 0-1.72L8.5 3.94A1 1 0 0 0 7 4.8z"/></svg>',
+  back:'<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><rect x="4" y="5" width="3" height="14" rx="1.2"/><path d="M20 5.6v12.8a1 1 0 0 1-1.55.83L9.2 12.83a1 1 0 0 1 0-1.66l9.25-6.4A1 1 0 0 1 20 5.6z"/></svg>',
   gift:'<svg viewBox="0 0 64 64" width="78" height="78" aria-hidden="true"><rect x="8" y="26" width="48" height="32" rx="5" fill="rgba(255,255,255,.3)"/><rect x="4" y="16" width="56" height="12" rx="4" fill="rgba(255,255,255,.45)"/><rect x="28" y="16" width="8" height="42" fill="rgba(255,255,255,.8)"/><path d="M32 16 C24 4 14 8 20 14 C23 17 32 16 32 16 Z M32 16 C40 4 50 8 44 14 C41 17 32 16 32 16 Z" fill="rgba(255,255,255,.9)"/></svg>'
 };
 let LSX = null;   // bước đang chơi: {g,i,k,step,stars,replay}
@@ -95,13 +116,32 @@ function lsFrame(box, step, total){
     <div class="ls-top"><div><b>${esc(LS_TYPE_NAME[step.type])}</b><small>${esc(step.step)}</small></div>
       <div class="ls-dots" id="lsDots"></div><div class="ls-stars">${LS_SVG.star}<span id="lsStars">0</span></div></div>
     <div class="ls-body" id="lsBody"></div>
-    <div class="ls-bot"><button class="ls-b dark" id="lsReplay">${LS_SVG.spk}<span>Nghe lại</span></button>
+    <div class="ls-bot"><div class="ls-ctl">
+        <button class="ls-b dark" id="lsReplay" title="Nghe lại">${LS_SVG.spk}<span>Nghe lại</span></button>
+        <button class="ls-b" id="lsBack" title="Câu trước" hidden>${LS_SVG.back}<span>Câu trước</span></button>
+        <button class="ls-b" id="lsPause" title="Dừng">${LS_SVG.pause}<span>Dừng</span></button></div>
       <div class="ls-cap" id="lsCap"></div>
-      <button class="ls-b" id="lsRedo">${LS_SVG.redo}<span>Làm lại</span></button></div></div>`;
-  box.querySelector('#lsReplay').onclick=()=>{ sfx.pop(); LSX.replay&&LSX.replay(); };
-  box.querySelector('#lsRedo').onclick=()=>{ sfx.pop(); lsStartStep(); };
+      <button class="ls-b" id="lsRedo">${LS_SVG.redo}<span>Làm lại</span></button></div>
+    <div class="ls-paused" id="lsPausedBox" hidden><button class="ls-resume" id="lsResume">${LS_SVG.play}<b>Đang tạm dừng</b><small>Chạm để học tiếp</small></button></div></div>`;
+  box.querySelector('#lsReplay').onclick=()=>{ sfx.pop(); lsSetPause(false); LSX.replay&&LSX.replay(); };
+  box.querySelector('#lsRedo').onclick=()=>{ sfx.pop(); lsSetPause(false); lsStartStep(true); };
+  box.querySelector('#lsBack').onclick=()=>{ sfx.pop(); lsSetPause(false); LSX.back&&LSX.back(); };
+  box.querySelector('#lsPause').onclick=()=>{ sfx.pop(); lsSetPause(!LS_PAUSED); };
+  box.querySelector('#lsResume').onclick=()=>{ sfx.pop(); lsSetPause(false); };
   return box.querySelector('#lsBody');
 }
+/* ⏸ Dừng: giọng đọc đứng lại đúng chỗ, bài không tự chạy tiếp; ▶ Tiếp: đọc tiếp từ chỗ dừng.
+   Đang thu giọng mà bấm Dừng thì bỏ lượt thu đó, bấm Tiếp sẽ làm lại lượt đó. */
+function lsSetPause(on){
+  if(on===LS_PAUSED) return;
+  LS_PAUSED=on;
+  const b=document.getElementById('lsPause'), box=document.getElementById('lsPausedBox');
+  if(b) b.innerHTML=on?`${LS_SVG.play}<span>Tiếp</span>`:`${LS_SVG.pause}<span>Dừng</span>`;
+  if(box) box.hidden=!on;
+  if(on){ voicePause(); if(recCur){ recAbort(); LSX&&(LSX.redoOnResume=true); } }
+  else { voiceResume(); if(LSX && LSX.redoOnResume){ LSX.redoOnResume=false; LSX.redo&&LSX.redo(); } }
+}
+function lsSetBack(fn){ LSX.back=fn; const b=document.getElementById('lsBack'); if(b) b.hidden=!fn; }
 function lsDots(i,n){ const el=document.getElementById('lsDots'); if(!el) return; el.innerHTML=Array.from({length:n},(_,k)=>`<span class="${k<i?'ok':k===i?'now':''}"></span>`).join(''); }
 function lsStar(n){ LSX.stars+=n||1; const el=document.getElementById('lsStars'); if(el){ el.textContent=LSX.stars; el.parentNode.classList.remove('bump'); void el.offsetWidth; el.parentNode.classList.add('bump'); } }
 function lsCap(t){ const el=document.getElementById('lsCap'); if(el) el.textContent=t||''; }
@@ -119,7 +159,7 @@ function viewSeedDay(g,i,sub){
   const R=window.LS.rounds[D.r-1], doneN=D.steps.filter((_,j)=>j in s.ls).length;
   app.innerHTML=`<div class="wrap ls-wrap">
     <div class="ls-banner" style="background-image:url('${esc(R.banner)}')"><div class="ls-bt">
-      <span class="ls-kick">${esc(ROUNDS[D.r-1].vi)} · ${esc(R.topic)} · Ngày ${i+1}</span>
+      <span class="ls-kick">Chặng ${D.r}: ${esc(ROUNDS[D.r-1].vi)} · ${esc(R.topic)} · Buổi ${lessonNo(i)}</span>
       <h2>${titleHTML(D.t)}</h2>
       <button class="ls-goal" id="lsGoal">${LS_SVG.spk}<span><small>Sau hôm nay con có thể</small>${esc(D.goal)}</span></button></div></div>
     <div class="ls-prog"><i style="width:${doneN/5*100}%"></i></div>
@@ -127,10 +167,19 @@ function viewSeedDay(g,i,sub){
       return `<button class="ls-tile ${done?'done':''} ${open?'':'lock'}" data-j="${j}" style="--d:${j*.05}s">
         <span class="ls-tim"><img src="${esc(window.LS.page[LS_STEP_ICON[st_.type]])}" alt="" loading="lazy">${done?'<em>✓</em>':open?'':'<em class="lk">🔒</em>'}</span>
         <span class="ls-ttx"><small>Bước ${j+1} · ${esc(st_.step)}</small><b>${esc(LS_TYPE_NAME[st_.type])}</b>${done?`<span class="ls-got">${LS_SVG.star} ${s.ls[j]} sao</span>`:''}</span></button>`; }).join('')}</div>
-    <div class="ls-parent"><b>Ba mẹ đồng hành:</b> bật bài cho con đúng giờ · khen con khi con đang làm bài · khen con khi con xong bài và nhận sao. Không ép nói, không sửa lỗi, không so sánh.</div>
+    ${doneN<5?`<div class="row"><button class="btn g ls-gonext" id="lsGo">▶ ${doneN?'Học tiếp':'Bắt đầu'} · Bước ${D.steps.findIndex((_,j)=>!(j in s.ls))+1}: ${esc(LS_TYPE_NAME[D.steps[D.steps.findIndex((_,j)=>!(j in s.ls))].type])}</button></div>`:''}
+    <div class="ls-parent"><button class="ls-b sm" id="lsParentSay" aria-label="Nghe lời nhắn cho ba mẹ">${LS_SVG.spk}</button><div><b>Ba mẹ đồng hành:</b> bật bài cho con đúng giờ · khen con khi con đang làm bài · khen con khi con xong bài và nhận sao. Không ép nói, không sửa lỗi, không so sánh.</div></div>
     <div id="lsDone"></div>
     <div class="row"><a class="btn y" href="#/g/${g}">← Về bản đồ</a></div></div>`;
-  document.getElementById('lsGoal').onclick=()=>{ lsStop(); lsPlay({t:'Hôm nay con học: '+D.goal, l:'vi', a:D.goal_a}); };
+  const sayGoal=()=>lsPlay({t:'Hôm nay con học: '+D.goal, l:'vi', a:D.goal_a});
+  const parentLine=LS_PARENT_HD;
+  document.getElementById('lsGoal').onclick=()=>{ lsStop(); sayGoal(); };
+  document.getElementById('lsParentSay').onclick=()=>{ lsStop(); lsHD(parentLine); };
+  const go=document.getElementById('lsGo'); if(go) go.onclick=()=>{ sfx.pop(); location.hash=`#/g/${g}/${i+1}/b${D.steps.findIndex((_,j)=>!(j in s.ls))+1}`; };
+  /* vừa mở buổi học: cô Hươu tự đọc "Hôm nay con học gì", lời nhắn cho ba mẹ, rồi mời con bắt đầu */
+  if(STARTED && doneN<5){ const my=lsSid; (async()=>{ await lsWait(300); if(my!==lsSid) return; await sayGoal(); if(my!==lsSid) return;
+      if(!lsGet('lle-parent-heard-'+i,false)){ lsSet('lle-parent-heard-'+i,true); await lsWait(300); if(my!==lsSid) return; await lsHD(parentLine); if(my!==lsSid) return; }
+      await lsWait(300); if(my!==lsSid) return; lsHD(doneN?'Con chạm nút xanh để học tiếp nhé!':'Con chạm nút xanh để bắt đầu nhé!'); })(); }
   app.querySelectorAll('.ls-tile').forEach(b=>b.onclick=()=>{
     if(b.classList.contains('lock')){ sfx.no(); toast('Con làm xong bước trước để mở bước này nhé! 🔒'); return; }
     sfx.pop(); location.hash=`#/g/${g}/${i+1}/b${+b.dataset.j+1}`;
@@ -142,7 +191,6 @@ function lsDayDone(g,i,panel){
   const s=lsState(g,i);
   if(!s.done) lsCompleteDay(g,i);   // đủ 5 bước mà chưa ghi nhận (dữ liệu cũ): tự ghi nhận luôn
   const d=document.createElement('div'); d.className='panel'; panel.appendChild(d); showDone(d,false);
-  panel.insertAdjacentHTML('beforeend',`<div class="row"><a class="btn y" href="#/g/${g}/them/${Math.floor(i/7)+1}">🧭 Con muốn xem thêm, chơi thêm</a></div>`);
 }
 /* Xong bước cuối: tự cộng sao, tự hoàn thành ngày, mở màn chúc mừng phủ cả màn hình.
    Bé không cần cuộn hay bấm thêm nút nào; chỉ có một nút có hình để về bản đồ. */
@@ -156,10 +204,12 @@ function lsCompleteDay(g,i){
   ov.innerHTML=`<div class="ls-cele-box" role="dialog" aria-label="Hoàn thành ngày ${i+1}">
     <img class="ls-cele-img" src="${esc(window.LS.page.ls_man_khen)}" alt="">
     <div class="ls-cele-stars">${LS_SVG.star}${LS_SVG.star}${LS_SVG.star}</div>
-    <h3>Con học xong ngày ${i+1} rồi!</h3>
+    <h3>Con học xong buổi ${lessonNo(i)} rồi!</h3>
     <p>Con được <b>${total} sao</b>. Ba mẹ khen con một câu thật to nhé!</p>
-    <a class="ls-cele-go" href="#/g/${g}"><span aria-hidden="true">🗺️</span><b>Về bản đồ</b></a></div>`;
-  document.body.appendChild(ov);
+    <a class="ls-cele-go" href="#/g/${g}"><span aria-hidden="true">🗺️</span><b>Về bản đồ</b></a>
+    <div class="ls-cele-more">${missionHTML(g,i)}${xtTeaser(g,Math.floor(i/PER),'🧭 Con muốn xem thêm? Góc khám phá')}</div></div>`;
+  document.body.appendChild(ov); missionWire(ov,g,i);
+  ov.querySelectorAll('.xt-tc, .xt-th a').forEach(a=>a.addEventListener('click',()=>ov.remove()));
   confetti(44); sfx.win();
   (async()=>{ await lsHD('Tuyệt vời! Con đã học xong hôm nay rồi!'); if(!document.body.contains(ov)) return;
     await lsWait(300); if(document.body.contains(ov)) lsHD('Hẹn gặp con ngày mai nhé!'); })();
@@ -169,15 +219,36 @@ function lsCompleteDay(g,i){
 function lsPlayStep(g,i,k){
   const D=GROUPS[g].days[i].ls, step=D.steps[k];
   app.innerHTML=`<div class="wrap ls-wrap">${head(g,i)}<div id="lsBox"></div>
-    <div class="row"><a class="btn y" href="#/g/${g}/${i+1}">← Các bước của ngày ${i+1}</a></div></div>`;
+    <div class="row"><a class="btn y" href="#/g/${g}/${i+1}">← Các bước của buổi ${lessonNo(i)}</a></div></div>`;
   LSX={g,i,k,step,stars:0,replay:null};
   lsStartStep();
   window.scrollTo({top:0});
 }
-function lsStartStep(){
-  lsStop(); lsSid++; LSX.stars=0;
+function lsStartStep(skipRules){
+  lsStop(); lsSid++; LSX.stars=0; LSX.back=null; LSX.redo=null; LSX.redoOnResume=false; LS_PAUSED=false;
   const box=document.getElementById('lsBox'), body=lsFrame(box, LSX.step);
-  ({xem:lsXem, cham:lsCham, noi:lsNoi, at:lsAT, do:lsDo, nc:lsNC})[LSX.step.type](LSX.step, body);
+  const run=()=>{ ({xem:lsXem, cham:lsCham, noi:lsNoi, at:lsAT, do:lsDo, nc:lsNC})[LSX.step.type](LSX.step, body); };
+  if(skipRules) return run();
+  lsRulesCard(body, LSX.step, run);
+}
+/* thẻ luật chơi: lần đầu gặp dạng bài thì đọc đủ, những lần sau đọc 1 câu ngắn; con chạm "Bắt đầu" hoặc chờ đọc xong */
+function lsRulesCard(body, step, run){
+  const key=lsRuleKey(step), R=LS_RULES[key]; if(!R) return run();
+  const seen=lsGet('lle-rule-'+key,0), full=seen<2, my=lsSid; let started=false;
+  const start=()=>{ if(started||my!==lsSid) return; started=true; lsSet('lle-rule-'+key, seen+1); lsStop(); lsCap(''); run(); };
+  body.innerHTML=`<div class="ls-rule"><img src="${esc(window.LS.page[LS_STEP_ICON[step.type]])}" alt="">
+    <div class="ls-rtx"><span class="ls-lab">Luật chơi · ${esc(step.step)}</span><h3>${esc(R.h)}</h3>
+      <ol>${R.lines.map(l=>`<li>${esc(l)}</li>`).join('')}</ol>
+      <div class="row ls-rrow"><button class="btn g" id="lsStart">▶ Bắt đầu</button><button class="ls-b" id="lsRuleSay">${LS_SVG.spk}<span>Nghe lại luật</span></button></div></div></div>`;
+  const say=()=>{ lsStop(); return lsSeq(R.lines.map(t=>({t,l:'vi',a:hdFile(t)})), 250); };
+  body.querySelector('#lsStart').onclick=()=>{ sfx.pop(); start(); };
+  body.querySelector('#lsRuleSay').onclick=say;
+  LSX.replay=say;
+  lsCap('Con nghe luật chơi nhé');
+  if(window.LS_FAST) return start();
+  (async()=>{ await lsWait(250); if(my!==lsSid) return;
+    if(full){ await say(); } else { await lsSeq([{t:R.lines[0],l:'vi',a:hdFile(R.lines[0])}],0); }
+    if(my!==lsSid || started) return; await lsWait(600); start(); })();
 }
 function lsFinish(){
   const {g,i,k}=LSX, s=lsState(g,i), D=GROUPS[g].days[i].ls;
@@ -186,10 +257,12 @@ function lsFinish(){
   const body=document.getElementById('lsBody'), nx=k+1<D.steps.length;
   if(!s.done && D.steps.every((_,j)=>j in s.ls)){ LSX.replay=null; lsCap(''); return lsCompleteDay(g,i); }
   lsCap('');
+  const NR=nx?LS_RULES[lsRuleKey(D.steps[k+1])]:null;
   body.innerHTML=`<div class="ls-done"><div class="ls-bigstar">${LS_SVG.star}</div><b>Giỏi quá!</b><span>Con được ${stars} sao.</span>
+    ${NR?`<div class="ls-next"><img src="${esc(window.LS.page[LS_STEP_ICON[D.steps[k+1].type]])}" alt=""><div><small>Bước tiếp theo</small><b>Bước ${k+2}: ${esc(LS_TYPE_NAME[D.steps[k+1].type])}</b><span>${esc(NR.lines.join(' '))}</span></div></div>`:''}
     <div class="row">${nx?`<a class="btn g" href="#/g/${g}/${i+1}/b${k+2}">Bước ${k+2}: ${esc(LS_TYPE_NAME[D.steps[k+1].type])} →</a>`:`<a class="btn g" href="#/g/${g}/${i+1}">⭐ Xong cả 5 bước!</a>`}
     <button class="btn y" id="lsAgain">Chơi lại</button></div></div>`;
-  body.querySelector('#lsAgain').onclick=()=>lsStartStep();
+  body.querySelector('#lsAgain').onclick=()=>lsStartStep(true); lsSetBack(null);
   LSX.replay=null; sfx.win(); confetti(18);
   lsHD('Con được thêm một ngôi sao!');
 }
@@ -197,21 +270,28 @@ function lsFinish(){
 /* ---------- 1. XEM VÀ LÀM THEO ---------- */
 function lsXem(step, body){
   const parts=step.parts; let p=0; const my=lsSid;
-  const ord=['Xem lần 1','Xem lần 2'];
+  const ord=['Lần 1','Lần 2'], LANG=l=>l==='zh'?'tiếng Trung':'tiếng Anh';
   const extra=step.extra&&step.extra.length?`<div class="ls-extra"><b>Xem thêm (không bắt buộc):</b>${step.extra.map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">▶ ${esc(x.label)}</a>`).join('')}</div>`:'';
   function show(){
     if(!lsAlive(my)) return;
     lsDots(p,parts.length);
     if(p>=parts.length){ lsStar(); return lsFinish(); }
-    const P=parts[p], lang=P.l==='zh'?'tiếng Trung':'tiếng Anh';
+    const P=parts[p], lang=LANG(P.l), nxt=parts[p+1];
+    lsSetBack(p>0?()=>{ lsStop(); p--; show(); }:null);
     if(P.kind==='video'){
-      const src=P.url.replace(/\/view.*$/,'/preview');
-      body.innerHTML=`<div class="ls-xem ${P.l}"><div class="ls-xh"><span class="ls-tag ${P.l}">${ord[p]} · ${lang}</span><span>${esc(P.label)}</span></div>
-        <div class="ls-vid">${lsVidFrame(src, 'Video '+P.label)}</div>
+      const src=P.url.replace(/\/view.*$/,'/preview'), local=lsLocalVideo(P.url);
+      body.innerHTML=`<div class="ls-xem ${P.l}"><div class="ls-xh"><span class="ls-tag ${P.l}">Xem bằng ${lang}</span><span>${ord[p]} · ${esc(P.label)}</span></div>
+        <div class="ls-vid">${local?`<video id="lsV" src="${esc(local)}" controls playsinline preload="auto"></video>`:lsVidFrame(src, 'Video '+P.label)}</div>
         <p class="ls-hint">Con xem và làm theo bạn nhé: vẫy tay, chỉ, giơ ngón tay giống bạn trong video.</p>
-        <div class="row"><button class="btn g ls-wait" id="lsNx" disabled><i class="ls-waitbar"></i><span>${p===0?'Con xem xong rồi → Xem lần 2':'Con xem xong rồi ⭐'}</span></button></div>${extra}</div>`;
+        <div class="row"><button class="btn g ls-wait" id="lsNx" disabled><i class="ls-waitbar"></i><span>${nxt?'Con xem xong rồi → Xem bằng '+LANG(nxt.l):'Con xem xong rồi ⭐'}</span></button></div>
+        ${local?'':`<p class="ls-vhelp">Video không chạy? <a href="${esc(P.url)}" target="_blank" rel="noopener">Bấm vào đây để mở video</a> rồi quay lại trang này.</p>`}${extra}</div>`;
+      const V=body.querySelector('#lsV');
+      if(V){ /* video lưu trên web: tự phát, nét, có nút dừng; xem hết thì tự mở nút "xem xong" */
+        V.addEventListener('ended',()=>{ if(nxb && nxb.disabled){ nxb.disabled=false; nxb.classList.remove('ls-wait'); nxb.style.setProperty('--w','100%'); lsPop(nxb); } });
+        LSX.redo=()=>{ try{ V.play(); }catch(e){} };
+      }
       const nxb=body.querySelector('#lsNx');
-      nxb.onclick=()=>{ if(nxb.disabled) return; sfx.ok(); p++; show(); };
+      nxb.onclick=()=>{ if(nxb.disabled) return; sfx.ok(); if(V) try{ V.pause(); }catch(e){} p++; show(); };
       /* nút "xem xong" chỉ bấm được sau khoảng thời lượng video, để bé không bỏ qua video bằng hai lần chạm */
       const wait=TEACHER?0:LS_VID_WAIT, t0=Date.now();
       nxb.style.setProperty('--w', wait?'0%':'100%');
@@ -221,21 +301,21 @@ function lsXem(step, body){
         if(f>=1){ clearInterval(tick); nxb.disabled=false; nxb.classList.remove('ls-wait'); lsPop(nxb); }
       }, 250);
       LSX.replay=()=>lsHD('Con xem và làm theo bạn nhé!');
-      lsHD('Con xem và làm theo bạn nhé!');
+      lsHD('Con xem và làm theo bạn nhé!').then(()=>{ if(V && lsAlive(my) && !LS_PAUSED){ const pr=V.play(); if(pr&&pr.catch) pr.catch(()=>{}); } });
     } else storyShow(P);
   }
   function storyShow(P){
     const S=window.LS.stories[P.r], lang=P.l==='zh'?'tiếng Trung':'tiếng Anh'; let c=0, playing=true;
     const draw=()=>{
       const sc=S.scenes[c], u=sc[P.l];
-      body.innerHTML=`<div class="ls-xem ${P.l}"><div class="ls-xh"><span class="ls-tag ${P.l}">${ord[p]} · ${lang}</span><span>Truyện “${esc(S.title)}” · cảnh ${c+1}/8</span></div>
+      body.innerHTML=`<div class="ls-xem ${P.l}"><div class="ls-xh"><span class="ls-tag ${P.l}">Nghe bằng ${lang}</span><span>${ord[p]} · Truyện “${esc(S.title)}” · cảnh ${c+1}/8</span></div>
         <div class="ls-story">${lsPic(sc.img,'ls-scene')}<div class="ls-sline">${lsBub(u)}</div></div>
         <div class="row ls-snav"><button class="ls-b" id="sPrev" ${c===0?'disabled':''}>◀</button><button class="ls-b dark" id="sPlay">${playing?'⏸ Dừng':'▶ Nghe tiếp'}</button><button class="ls-b" id="sNext">${c===7?'Xong ✓':'▶▶'}</button></div>${extra}</div>`;
       body.querySelector('#sPrev').onclick=()=>{ if(c>0){ lsStop(); c--; playing=false; draw(); lsPlay(S.scenes[c][P.l]); } };
       body.querySelector('#sNext').onclick=()=>{ lsStop(); if(c<7){ c++; playing=false; draw(); lsPlay(S.scenes[c][P.l]); } else end(); };
       body.querySelector('#sPlay').onclick=()=>{ playing=!playing; if(playing) auto(); else lsStop(); draw(); };
     };
-    const end=()=>{ lsStop(); body.innerHTML=`<div class="ls-done"><b>Hết truyện!</b><span>${p===0?'Mình xem lần 2 bằng '+(P.l==='en'?'tiếng Trung':'tiếng Anh')+' nhé.':'Con xem đủ 2 lần rồi!'}</span><div class="row"><button class="btn g" id="lsNx">${p===0?'Xem lần 2 →':'Xong ⭐'}</button></div></div>`;
+    const end=()=>{ lsStop(); body.innerHTML=`<div class="ls-done"><b>Hết truyện!</b><span>${p===0?'Mình nghe lại bằng '+LANG(P.l==='en'?'zh':'en')+' nhé.':'Con nghe đủ 2 lần rồi!'}</span><div class="row"><button class="btn g" id="lsNx">${p===0?'Nghe bằng '+LANG(P.l==='en'?'zh':'en')+' →':'Xong ⭐'}</button></div></div>`;
       body.querySelector('#lsNx').onclick=()=>{ sfx.ok(); p++; show(); }; };
     async function auto(){
       const me=++lsRun;
@@ -249,6 +329,10 @@ function lsXem(step, body){
 }
 
 const LS_VID_WAIT = 20000;   // ms: video ngắn khoảng 24 giây
+/* Video tải lên web (tai-nguyen/video/<mã Drive>.mp4): nét hơn, tự phát, không phụ thuộc Google Drive.
+   Thêm mã vào LS_VIDEO_LOCAL khi đã có file; chưa có thì dùng khung Google Drive như cũ. */
+const LS_VIDEO_LOCAL = window.LS_VIDEO_LOCAL || {};
+function lsLocalVideo(url){ const m=/\/d\/([\w-]+)/.exec(url||''); return m && LS_VIDEO_LOCAL[m[1]] ? 'tai-nguyen/video/'+LS_VIDEO_LOCAL[m[1]] : ''; }
 /* khung video Google Drive: thêm lớp che nút "mở cửa sổ mới" ở góc trên bên phải, để bé không bị đưa ra khỏi web */
 function lsVidFrame(src, title){
   const drive=/drive\.google\.com/.test(src);
@@ -296,7 +380,8 @@ function lsCham(step, body){
   async function ask0(){ const me=lsSid; await lsHD('Con nghe và chạm vào tranh đúng nhé!'); if(me===lsSid) ask(); }
   function ask(){
     lsDots(qi,qs.length);
-    if(qi>=qs.length) return lsFinish();
+    if(qi>=qs.length){ lsSetBack(null); return lsFinish(); }
+    lsSetBack(qi>0?()=>{ lsStop(); busy=false; qi--; ask(); }:null);
     const q=qs[qi];
     body.innerHTML=`<div class="ls-ask"><span class="ls-lab">Câu ${qi+1}/${qs.length} · nghe ${q.say[0].l==='zh'?'tiếng Trung':'tiếng Anh'}</span>
       <div class="ls-opts">${q.opts.map((o,n)=>`<button class="ls-opt" data-n="${n}" aria-label="Tranh ${n+1}">${lsPic(o,'')}</button>`).join('')}</div></div>`;
@@ -314,60 +399,62 @@ function lsCham(step, body){
   if(step.demo.length) demo(); else ask0();
 }
 
-/* ---------- 3. NÓI THEO (cả đóng vai) ---------- */
-function lsMicWait(mic, nx, my){
-  return new Promise(res=>{
-    let done=false, t1, t2; const old=nx.onclick;
-    const fin=v=>{ if(done) return; done=true; clearTimeout(t1); clearTimeout(t2); mic.onclick=null; nx.onclick=old; nx.hidden=true; mic.classList.remove('ready'); res(v); };
-    mic.classList.remove('idle'); mic.classList.add('ready');
-    mic.setAttribute('role','button'); mic.setAttribute('aria-label','Chạm vào micro rồi nói'); mic.tabIndex=0;
-    lsCap('Con chạm vào micro rồi nói nhé');
-    mic.onclick=()=>fin('go');
-    mic.onkeydown=e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); fin('go'); } };
-    nx.onclick=()=>{ lsStop(); fin('skip'); };
-    t1=setTimeout(()=>{ if(!done && lsAlive(my)) lsHD('Đến lượt con!'); }, 10000);
-    t2=setTimeout(()=>{ if(!done && lsAlive(my)) nx.hidden=false; }, 14000);
-  });
+/* ---------- 3. NÓI THEO (cả đóng vai) ----------
+   Đến lượt con: micro TỰ BẬT, chấm đỏ + sóng âm cho biết đang thu; con nói xong (im lặng ~1 giây) thì tự dừng,
+   máy phát lại giọng con, rồi tự sang câu tiếp. Máy không có micro / không cho phép thì đếm 3-2-1 như cũ. */
+function lsRecUI(mic, on){ mic.classList.remove('idle','ready','on','ok','rec','off'); if(on) mic.classList.add(on); }
+async function lsRecTurn(mic, my, opt){
+  opt=opt||{}; const lbl=mic.querySelector('b'), lv=mic.querySelector('.ls-lv');
+  lsRecUI(mic,'rec'); lsCap('🔴 Đang thu… con nói đi!'); if(lbl) lbl.textContent='';
+  const r=await recTake({maxMs:opt.maxMs||5500, onLevel:v=>{ if(lv) lv.style.setProperty('--lv', (0.25+v*0.9).toFixed(2)); }});
+  if(!lsAlive(my)) return 'gone';
+  if(r===null && recCur===null && LSX.redoOnResume) return 'paused';
+  if(!r){ /* không thu được: đếm 3-2-1 để con vẫn nói */
+    lsRecUI(mic,'on'); lsCap('Con nói theo nhé!');
+    for(let s=3;s>=1;s--){ if(!lsAlive(my)) return 'gone'; if(lbl) lbl.textContent=s; await lsWait(1000); }
+    return 'count';
+  }
+  lsRecUI(mic,'ok'); if(lbl) lbl.textContent='✓'; sfx.ok();
+  lsCap('🎧 Con nghe lại giọng của con nhé'); await lsWait(250); if(!lsAlive(my)) return 'gone';
+  await recPlay(r.url); if(!lsAlive(my)) return 'gone';
+  LSX.mine=r.url;
+  return 'rec';
 }
 function lsNoi(step, body){
   const my=lsSid, T=step.turns; let ti=0;
-  async function micCount(el){
-    for(let s=3;s>=1;s--){ if(!lsAlive(my)) return false; el.querySelector('b').textContent=s; await lsWait(1000); }
-    return lsAlive(my);
-  }
   async function turn(){
     if(!lsAlive(my)) return;
     lsDots(ti,T.length);
-    if(ti>=T.length) return lsFinish();
-    const t=T[ti], who=t.who||(t.say[0]&&t.say[0].who);
+    if(ti>=T.length){ lsSetBack(null); return lsFinish(); }
+    lsSetBack(ti>0?()=>{ lsStop(); ti--; turn(); }:null);
+    LSX.redo=()=>{ lsStop(); turn(); };
+    const t=T[ti], tok=++lsNoi.tok;
+    const alive=()=>lsAlive(my) && tok===lsNoi.tok;
     body.innerHTML=`<div class="ls-noi"><div class="ls-npic">${lsPic(t.pic,'')}</div>
       <div class="ls-nside">${t.note?`<span class="ls-lab">${esc(t.note)}</span>`:''}${step.role?'<span class="ls-lab">Đóng vai · nghe mẫu trước</span>':''}
         <div class="ls-says">${t.say.map(u=>lsBub(u)).join('')}</div>
-        <div class="ls-mic idle" id="mic">${LS_SVG.mic}<b></b></div>
+        <div class="ls-mic idle" id="mic"><span class="ls-lv"></span>${LS_SVG.mic}<b></b></div>
         <div class="ls-mytxt" id="myt">${t.mic?`Con nói: ${lsBub(t.mic,'sm')}`:'<span class="ls-lab">Con nghe nhé (chưa cần nói)</span>'}</div>
-        <button class="ls-b" id="nx" hidden>Tiếp ▶</button></div></div>`;
-    const mic=body.querySelector('#mic'), nx=body.querySelector('#nx');
+        <div class="row ls-nrow"><button class="ls-b" id="mine" hidden>🎧 Nghe lại giọng con</button><button class="ls-b" id="nx">Bỏ qua ▶</button></div></div></div>`;
+    const mic=body.querySelector('#mic'), nx=body.querySelector('#nx'), mine=body.querySelector('#mine');
     nx.onclick=()=>{ lsStop(); ti++; turn(); };
     LSX.replay=()=>{ lsStop(); lsSeq(t.say); };
     lsCap(t.say.map(u=>u.t).join(' · '));
     await lsSeq(t.say, 400, k=>body.querySelectorAll('.ls-says .ls-bub').forEach((b,j)=>b.classList.toggle('talk',j===k)));
-    if(!lsAlive(my)) return;
+    if(!alive()) return;
     if(t.mic){
-      await lsHD('Đến lượt con!'); if(!lsAlive(my)) return;
-      if(step.role && t.ask){ await lsPlay(t.ask); if(!lsAlive(my)) return; }
-      /* micro chờ bé chạm mới bắt đầu lượt nói; không chạm thì cô nhắc một lần, rồi hiện nút "Tiếp" để bé đi tiếp mà không bị ép */
-      const go=await lsMicWait(mic, nx, my); if(!lsAlive(my)) return;
-      if(go==='skip'){ ti++; return turn(); }
-      mic.classList.remove('idle','ready'); mic.classList.add('on'); sfx.pop();
-      const ok=await micCount(mic); if(!ok) return;
-      mic.classList.remove('on'); mic.classList.add('ok'); mic.querySelector('b').textContent='✓'; sfx.ok(); lsStar();
-      await lsHD('Giỏi quá!'); if(!lsAlive(my)) return;
-      if(t.after&&t.after.length){ await lsSeq(t.after); if(!lsAlive(my)) return; }
-    } else { mic.classList.add('off'); lsStar(); }
-    nx.hidden=false; await lsWait(1200); if(lsAlive(my)){ ti++; turn(); }
+      await lsHD('Đến lượt con!'); if(!alive()) return;
+      if(step.role && t.ask){ await lsPlay(t.ask); if(!alive()) return; }
+      const how=await lsRecTurn(mic, my); if(!alive() || how==='gone' || how==='paused') return;
+      if(how==='rec'){ mine.hidden=false; const url=LSX.mine; mine.onclick=()=>{ lsStop(); recPlay(url); }; }
+      lsStar(); await lsHD('Giỏi quá!'); if(!alive()) return;
+      if(t.after&&t.after.length){ await lsSeq(t.after); if(!alive()) return; }
+    } else { lsRecUI(mic,'off'); lsStar(); }
+    nx.textContent='Tiếp ▶'; await lsWait(1200); if(alive()){ ti++; turn(); }
   }
   (async()=>{ await lsHD('Con nghe rồi nói theo bạn nhé!'); if(lsAlive(my)) turn(); })();
 }
+lsNoi.tok=0;
 
 /* ---------- 4. ANH HAY TRUNG? ---------- */
 function lsAT(step, body){
@@ -375,7 +462,8 @@ function lsAT(step, body){
   body.innerHTML=`<div class="ls-at"><button class="ls-box en" data-l="en"><b>ABC</b><span>Tiếng Anh</span><div class="ls-pile" id="pen"></div></button>
     <img class="ls-deer" src="${LS_FACE.co_huou}" alt="Cô Hươu">
     <button class="ls-box zh" data-l="zh"><b class="zh">中文</b><span>Tiếng Trung</span><div class="ls-pile" id="pzh"></div></button></div>`;
-  const ask=()=>{ lsDots(qi,Q.length); if(qi>=Q.length) return lsFinish(); lsStop(); lsCap('Con nghe nhé…'); lsPlay(Q[qi]); };
+  const ask=()=>{ lsDots(qi,Q.length); if(qi>=Q.length){ lsSetBack(null); return lsFinish(); }
+    lsSetBack(qi>0?()=>{ lsStop(); busy=false; qi--; ask(); }:null); lsStop(); lsCap('Con nghe nhé…'); lsPlay(Q[qi]); };
   LSX.replay=ask;
   body.querySelectorAll('.ls-box').forEach(b=>b.onclick=async()=>{
     if(busy||qi>=Q.length) return; const q=Q[qi];
@@ -402,7 +490,7 @@ function lsDo(step, body){
     body.querySelectorAll('.ls-gift').forEach(b=>b.onclick=()=>{ sfx.ok(); open(+b.dataset.n); });
   }
   async function open(n){
-    lsStop(); const me=lsSid, c=C[n], to=c.a.l;
+    lsStop(); const me=lsSid, c=C[n], to=c.a.l; LSX.redo=()=>open(n); lsSetBack(null);
     body.innerHTML=`<div class="ls-dop"><div class="ls-npic pop">${lsPic(c.pic,'')}</div>
       <div class="ls-nside"><div class="ls-says">${lsBub(c.q)}</div>
       <div class="ls-timer" id="tm"><b>?</b></div><div class="ls-says" id="ans"></div><div class="ls-lab" id="hint">Con nghe nhé…</div></div></div>`;
@@ -415,9 +503,11 @@ function lsDo(step, body){
     body.querySelector('#ans').innerHTML=lsBub(c.a); hint.textContent='Đáp án là…'; tm.className='ls-timer'; tm.querySelector('b').textContent='!';
     LSX.replay=()=>{ lsStop(); lsPlay(c.a); };
     await lsPlay(c.a); if(me!==lsSid) return;
-    hint.textContent='Con nói theo nhé!'; tm.className='ls-timer rep'; sfx.pop();
-    for(let s=3;s>=1;s--){ tm.querySelector('b').textContent=s; await lsWait(1000); if(me!==lsSid) return; }
-    tm.className='ls-timer ok'; tm.querySelector('b').textContent='✓'; hint.textContent='Giỏi quá!'; sfx.ok(); lsStar(); opened.add(n);
+    hint.textContent='Con nói theo nhé!'; sfx.pop();
+    body.querySelector('.ls-nside').insertAdjacentHTML('beforeend','<div class="ls-mic idle" id="mic"><span class="ls-lv"></span>'+LS_SVG.mic+'<b></b></div>');
+    tm.hidden=true;
+    const how=await lsRecTurn(body.querySelector('#mic'), my, {maxMs:5000}); if(me!==lsSid || how==='gone' || how==='paused') return;
+    hint.textContent='Giỏi quá!'; lsStar(); opened.add(n);
     await lsHD('Giỏi quá!'); if(me!==lsSid) return; await lsWait(400); boxes();
   }
   (async()=>{ await lsHD('Con nghe rồi thử nói bằng tiếng kia nhé!'); })();
@@ -465,18 +555,18 @@ function lsNC(step, body){
 }
 
 /* ---------- GÓC KHÁM PHÁ THÊM (xem thêm, chơi cùng ba mẹ) – không mở ngày mới, không cộng điểm ---------- */
-function viewXemThem(g, r){
+function viewXemThem(g, r, autoN){
   const X=window.XEM_THEM, G=GROUPS[g]; if(!X||!G||!X[g]||!X[g][r-1]) return viewGroup(g);
   const R=X[g][r-1];
   // ngày đã mở: Little Seed theo ngày chung, Canopy theo ngày trong vòng
   let reach=0; for(let i=0;i<21;i++) if(isUnlocked(g,i)) reach=i+1;
   const ok=it=> TEACHER || (g==='seed' ? it[2]<=reach : (r-1)*7+it[2]<=reach);
   const vids=R.v.filter(ok), games=R.g.filter(ok);
-  const src=c=>c.startsWith('y:')?'https://www.youtube-nocookie.com/embed/'+c.slice(2)+'?rel=0&modestbranding=1':'https://drive.google.com/file/d/'+c.slice(2)+'/preview';
+  const src=(c,auto)=>c.startsWith('y:')?'https://www.youtube-nocookie.com/embed/'+c.slice(2)+'?rel=0&modestbranding=1'+(auto?'&autoplay=1':''):'https://drive.google.com/file/d/'+c.slice(2)+'/preview';
   const thumb=c=>c.startsWith('y:')?`https://i.ytimg.com/vi/${c.slice(2)}/mqdefault.jpg`:'';
   app.innerHTML=`<div class="wrap ls-wrap">
     <div class="ls-banner" style="background-image:url('${esc(G.banners[r-1])}')"><div class="ls-bt">
-      <span class="ls-kick">${esc(G.name)} · ${esc(ROUNDS[r-1].vi)}</span><h2>Góc khám phá thêm</h2>
+      <span class="ls-kick">${esc(G.name)} · Chặng ${r}: ${esc(ROUNDS[r-1].vi)}</span><h2>🧭 Góc khám phá</h2>
       <p class="xt-note">Con nào hứng thú thì khám phá thêm, không cần làm hết. Góc này không mở ngày mới và không tính điểm.</p></div></div>
     <h3 class="xt-h">▶ Xem thêm <small>${vids.length} video · viền xanh là tiếng Anh, viền đỏ là tiếng Trung</small></h3>
     <div class="xt-grid">${vids.map((it,n)=>`<button class="xt-v ${it[0]}" data-n="${n}">${thumb(it[3])?`<img src="${thumb(it[3])}" alt="" loading="lazy" onerror="this.outerHTML='<span class=xt-ph>▶</span>'">`:`<span class="xt-ph">▶</span>`}<b>${esc(it[1])}</b><small>${it[0]==='zh'?'Tiếng Trung':'Tiếng Anh'}</small></button>`).join('')||'<p>Con học thêm vài ngày để mở video mới nhé!</p>'}</div>
@@ -484,13 +574,16 @@ function viewXemThem(g, r){
     ${games.length?`<h3 class="xt-h">🎮 Chơi cùng ba mẹ <small>mở trang mới · ba mẹ ngồi cạnh con nhé</small></h3>
     <div class="xt-games">${games.map(it=>`<a class="xt-g ${it[0]}" href="${esc(it[3])}" target="_blank" rel="noopener"><b>${esc(it[1])}</b><small>${it[0]==='zh'?'Tiếng Trung':'Tiếng Anh'} ↗</small></a>`).join('')}</div>`:''}
     <div class="row"><a class="btn y" href="#/g/${g}">← Về bản đồ</a></div></div>`;
-  app.querySelectorAll('.xt-v').forEach(b=>b.onclick=()=>{
-    const it=vids[+b.dataset.n], box=document.getElementById('xtPlay');
+  const open=(it, b)=>{
+    const box=document.getElementById('xtPlay');
+    app.querySelectorAll('.xt-v.on').forEach(x=>x.classList.remove('on')); if(b) b.classList.add('on');
     box.innerHTML=`<div class="ls-xem ${it[0]}"><div class="ls-xh"><span class="ls-tag ${it[0]}">${it[0]==='zh'?'Tiếng Trung':'Tiếng Anh'}</span><span>${esc(it[1])}</span></div>
-      <div class="ls-vid">${lsVidFrame(src(it[3]), it[1])}</div>
+      <div class="ls-vid">${lsVidFrame(src(it[3], true), it[1])}</div>
       <div class="row"><button class="btn y" id="xtClose">Đóng video</button></div></div>`;
     box.querySelector('#xtClose').onclick=()=>{ box.innerHTML=''; };
     box.scrollIntoView({behavior:'smooth', block:'center'});
-  });
+  };
+  app.querySelectorAll('.xt-v').forEach(b=>b.onclick=()=>{ sfx.pop(); open(vids[+b.dataset.n], b); });
+  if(autoN>=0){ const it=R.v[autoN]; if(it && ok(it)){ const k=vids.indexOf(it); setTimeout(()=>open(it, app.querySelector(`.xt-v[data-n="${k}"]`)), 50); return; } }
   window.scrollTo({top:0});
 }

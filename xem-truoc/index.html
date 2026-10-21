@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="canopy.css">
 <link rel="stylesheet" href="ls.css">
+<link rel="stylesheet" href="bo-sung.css">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+SC:wght@500;700&display=swap" rel="stylesheet">
 <style>
 :root{color-scheme:light;
@@ -431,6 +432,7 @@ a.gtab{text-decoration:none}
 <div id="mascot" aria-hidden="true"><span class="mimg"></span><div class="bubble"></div></div>
 <div class="toast" id="toast"></div>
 <script src="tai-nguyen/canopy-audio-map.js"></script>
+<script src="tai-nguyen/canopy-story-times.js"></script>
 <script src="canopy-data.js"></script>
 <script src="ls-data.js"></script>
 <script src="ls.js"></script>
@@ -862,19 +864,60 @@ let TEACHER = /[?&]gv=1/.test(location.search) || lsGet('lle-teacher',false)===t
 function toggleTeacher(){ TEACHER=!TEACHER; lsSet('lle-teacher',TEACHER); P=lsGet(progKey(),{})||{}; updateStars(); toast(TEACHER?'Đã bật chế độ giáo viên: mở tất cả các ngày':'Đã tắt chế độ giáo viên'); route(); }
 
 /* ---------- hồ sơ bé ---------- */
-let KID = lsGet('lle-kid', null);   // {name, code, group}
-function kidId(){ return KID ? (KID.name.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/đ/g,'d').replace(/[^a-z0-9]+/g,'-')+'-'+KID.code) : ''; }
+let KID = lsGet('lle-kid', null);   // {name, acct (SĐT/Gmail đã che), id, group}
+function slugName(s){ return String(s||'').trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/đ/g,'d').replace(/[^a-z0-9]+/g,'-'); }
+function kidId(){ return KID ? (KID.id || (slugName(KID.name)+'-'+KID.code)) : ''; }
+/* SĐT hoặc Gmail của bố mẹ → mã tài khoản (băm, không gửi số thật đi đâu) */
+function normAcct(s){ s=String(s||'').trim().toLowerCase(); if(s.includes('@')) return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(s)?s:'';
+  let d=s.replace(/\D/g,''); if(d.startsWith('84')) d='0'+d.slice(2); if(d.length===9) d='0'+d; return /^0\d{9,10}$/.test(d)?d:''; }
+function maskAcct(a){ return a.includes('@') ? a.slice(0,2)+'***@'+a.split('@')[1] : '***'+a.slice(-4); }
+async function hashStr(s){
+  try{ const b=await crypto.subtle.digest('SHA-256', new TextEncoder().encode('lle|'+s)); return [...new Uint8Array(b)].slice(0,8).map(x=>x.toString(16).padStart(2,'0')).join(''); }
+  catch(e){ let h=5381; for(const c of s) h=((h*33)^c.codePointAt(0))>>>0; return 'h'+h.toString(16); }
+}
+
+/* ---------- lưu tiến độ lên máy chủ (Apps Script) để học tiếp trên máy khác ---------- */
+let syncT=null;
+function syncSoon(){ if(!SCORE_API || !KID || KID.temp || TEACHER || !KID.id) return; clearTimeout(syncT); syncT=setTimeout(syncPush, 1500); }
+function syncPush(){
+  if(!SCORE_API || !KID || !KID.id || TEACHER) return;
+  const body=JSON.stringify({action:'save', id:KID.id, name:KID.name.trim(), acct:KID.acct||'', group:KID.group, prog:P, at:Date.now()});
+  try{ fetch(SCORE_API,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body}).catch(()=>{}); }catch(e){}
+}
+async function syncPull(id){
+  if(!SCORE_API) return null;
+  try{ const r=await fetch(`${SCORE_API}?action=load&id=${encodeURIComponent(id)}`); const j=await r.json(); return j&&j.prog?j:null; }catch(e){ return null; }
+}
+/* gộp tiến độ: giữ bản nhiều điểm hơn của từng buổi */
+function mergeProg(a,b){
+  const out=Object.assign({},a||{});
+  for(const k in (b||{})){ const x=out[k], y=b[k];
+    if(!x){ out[k]=y; continue; }
+    const sc=s=>(s.done?1000:0)+Object.keys(s.ls||{}).length*10+Object.keys(s.ex||{}).length*10+(s.clipSent?5:0);
+    if(sc(y)>sc(x)) out[k]=y; }
+  return out;
+}
 
 /* ---------- tiến độ và điểm ---------- */
 /* chế độ giáo viên lưu tiến độ riêng, để cô bấm thử không làm thay đổi điểm và ngày của bé trên cùng máy */
 function progKey(){ return TEACHER ? 'lle-progress-gv' : 'lle-progress-v2'; }
 let P = lsGet(progKey(), {}) || {};
-function save(){ lsSet(progKey(),P); updateStars(); }
+function save(){ lsSet(progKey(),P); updateStars(); syncSoon(); }
 function st(g,i){ return (P[g+'-'+i] ||= {learn:false, parent:false, game:false, gameBest:0, done:false}); }
 function isDone(g,i){ const s=P[g+'-'+i]; return !!(s && s.done); }
-function doneCount(g){ let n=0; for(let i=0;i<TOTAL;i++) if(isDone(g,i)) n++; return n; }
-function isUnlocked(g,i){ return TEACHER || i===0 || isDone(g,i-1); }
-function dayPoints(g,i){
+/* Bản đồ: mỗi chặng 6 buổi tự học. Buổi Zoom (ngày 7, 14, 21) không chặn đường đi,
+   chỉ hiện ở cuối chặng. */
+const LEARN_TOTAL = 18;
+function isZoomIdx(i){ return i%PER===PER-1; }
+function doneCount(g){ let n=0; for(let i=0;i<TOTAL;i++) if(!isZoomIdx(i) && isDone(g,i)) n++; return n; }
+function prevLearn(i){ let k=i-1; while(k>=0 && isZoomIdx(k)) k--; return k; }
+function isUnlocked(g,i){ if(TEACHER) return true; const k=prevLearn(i); return k<0 || isDone(g,k); }
+function nextLearn(i){ let k=i+1; while(k<TOTAL && isZoomIdx(k)) k++; return k<TOTAL?k:-1; }
+function stageNo(i){ return Math.floor(i/PER)+1; }
+function lessonNo(i){ return i%PER+1; }
+function dayName(i){ return isZoomIdx(i) ? `buổi Zoom chặng ${stageNo(i)}` : `buổi ${lessonNo(i)} – chặng ${stageNo(i)}`; }
+function dayPoints(g,i){ const s=P[g+'-'+i]; return dayPoints0(g,i) + (s && s.clipSent && !GROUPS[g].days[i].zoom ? PTS.clip : 0); }
+function dayPoints0(g,i){
   const s=P[g+'-'+i], d=GROUPS[g].days[i]; if(!s) return 0;
   if(d.zoom) return s.done?PTS.zoom:0;
   if(d.cx) return cxDayPoints(s,d);
@@ -889,8 +932,8 @@ function bumpStars(){ const el=document.getElementById('starCount'); el.classLis
 
 /* gửi điểm lên Google Sheet (nếu cô đã kết nối) */
 function pushScore(g,i){
-  if(!SCORE_API || !KID || TEACHER) return;
-  const body=JSON.stringify({kid:kidId(), name:KID.name.trim(), group:g, day:i+1, round:Math.floor(i/PER)+1, points:dayPoints(g,i)});
+  if(!SCORE_API || !KID || TEACHER || KID.temp) return;
+  const body=JSON.stringify({action:'score', kid:kidId(), name:KID.name.trim(), group:g, day:i+1, round:Math.floor(i/PER)+1, points:dayPoints(g,i)});
   try{ fetch(SCORE_API,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body}).catch(()=>{}); }catch(e){}
 }
 function addPoints(g,i,before,el){
@@ -981,13 +1024,25 @@ function voiceGate(fn){
 }
 function voiceGateHide(){ voiceGateFn=null; const g=document.getElementById('voiceGate'); if(g) g.hidden=true; }
 /* phát file src; o.onend khi hết, o.onerr khi file hỏng; bị chặn thì hiện nút "chạm để nghe" */
+/* o.start / o.end (giây): chỉ phát một đoạn của file (dùng cho truyện đọc liền một mạch) */
+let voiceSegTimer=null;
 function voicePlay(src, o){
   o=o||{}; const tok=++voiceTok;
   try{ VOICE.onended=null; VOICE.onerror=null; VOICE.pause(); }catch(e){}
+  clearInterval(voiceSegTimer); VOICE_PAUSED=false;
   voiceGateHide(); voiceIdle=false;
-  VOICE.src=src; VOICE.defaultPlaybackRate=VOICE.playbackRate=o.rate||1;
-  VOICE.onended=()=>{ if(tok===voiceTok){ voiceIdle=true; o.onend&&o.onend(); } };
-  VOICE.onerror=()=>{ if(tok===voiceTok){ voiceTok++; voiceIdle=true; o.onerr&&o.onerr(); } };
+  const same=VOICE.src && VOICE.src.endsWith(src);
+  if(!same) VOICE.src=src;
+  VOICE.defaultPlaybackRate=VOICE.playbackRate=o.rate||1;
+  const fin=()=>{ if(tok===voiceTok){ clearInterval(voiceSegTimer); voiceIdle=true; o.onend&&o.onend(); } };
+  VOICE.onended=fin;
+  VOICE.onerror=()=>{ if(tok===voiceTok){ clearInterval(voiceSegTimer); voiceTok++; voiceIdle=true; o.onerr&&o.onerr(); } };
+  if(o.start!=null){
+    const seek=()=>{ try{ VOICE.currentTime=o.start; }catch(e){} };
+    if(VOICE.readyState>=1) seek(); else VOICE.addEventListener('loadedmetadata', seek, {once:true});
+  } else if(same){ try{ VOICE.currentTime=0; }catch(e){} }
+  if(o.end!=null) voiceSegTimer=setInterval(()=>{ if(tok!==voiceTok){ clearInterval(voiceSegTimer); return; }
+    if(!VOICE.paused && VOICE.currentTime>=o.end){ try{ VOICE.pause(); }catch(e){} fin(); } }, 40);
   const go=()=>{ let p; try{ p=VOICE.play(); }catch(e){ p=Promise.reject(e); }
     if(p&&p.then) p.then(()=>{ if(tok===voiceTok) voiceOK=true; }).catch(err=>{
       if(tok!==voiceTok) return;
@@ -996,7 +1051,40 @@ function voicePlay(src, o){
     }); };
   go(); return tok;
 }
-function voiceStop(){ voiceTok++; voiceIdle=true; voiceGateHide(); try{ VOICE.onended=null; VOICE.onerror=null; VOICE.pause(); }catch(e){} }
+function voiceStop(){ voiceTok++; voiceIdle=true; VOICE_PAUSED=false; clearInterval(voiceSegTimer); voiceGateHide(); try{ VOICE.onended=null; VOICE.onerror=null; VOICE.pause(); }catch(e){} }
+/* tạm dừng / phát tiếp đúng chỗ đang đọc (nút ⏸ trong bài) */
+let VOICE_PAUSED=false;
+function voicePause(){ VOICE_PAUSED=true; try{ if(!voiceIdle) VOICE.pause(); }catch(e){} try{ speechSynthesis.pause(); }catch(e){} }
+function voiceResume(){ VOICE_PAUSED=false; try{ if(!voiceIdle) VOICE.play().catch(()=>{}); }catch(e){} try{ speechSynthesis.resume(); }catch(e){} }
+
+/* ---------- lời hướng dẫn tiếng Việt ----------
+   Câu đã thu giọng cô Hươu: tra trong LS.hd (Little Seed) và HD_FILES (huong-dan.js).
+   Câu chưa có file: đọc bằng giọng tiếng Việt của máy. */
+function hdFile(text){ const L=window.LS; return (L&&L.hd&&L.hd[text]) || (window.HD_FILES&&window.HD_FILES[text]) || ''; }
+function hdTTS(text, done){
+  let fin=false; const end=()=>{ if(!fin){ fin=true; done&&done(); } };
+  try{
+    if(!('speechSynthesis' in window)) return setTimeout(end, 300);
+    const v=voices.find(v=>/^vi/i.test(v.lang)); if(!v) return setTimeout(end, 300);
+    const u=new SpeechSynthesisUtterance(text); u.voice=v; u.lang='vi-VN'; u.rate=1;
+    u.onend=end; u.onerror=end; speechSynthesis.cancel(); speechSynthesis.speak(u);
+    setTimeout(end, 2500+text.length*110);
+  }catch(e){ setTimeout(end, 300); }
+}
+/* đọc một chuỗi câu hướng dẫn; trả về Promise; dừng khi có lời khác chen vào */
+let hdTok=0;
+function hdSay(lines){
+  lines=[].concat(lines||[]).filter(Boolean); const tok=++hdTok;
+  return new Promise(res=>{
+    let k=0;
+    const nx=()=>{ if(tok!==hdTok) return res(); if(k>=lines.length) return res();
+      const t=lines[k++], f=hdFile(t);
+      const after=()=>setTimeout(nx, 250);
+      if(f) voicePlay(f,{onend:after, onerr:()=>hdTTS(t, after)}); else hdTTS(t, after); };
+    nx();
+  });
+}
+function hdStop(){ hdTok++; }
 
 /* ---------- giọng đọc ---------- */
 let voices=[];
@@ -1122,27 +1210,44 @@ function gamePool(g,i){
 /* ---------- hồ sơ: hỏi tên bé ---------- */
 function askProfile(g, then){
   if(TEACHER && !KID){ KID={name:'Giáo viên', code:'0000', group:g, temp:true}; updateStars(); then&&then(); return; }   // chế độ giáo viên: xem không cần nhập tên
-  const ov=document.createElement('div'); ov.className='overlay';
-  ov.innerHTML=`<form class="modal" id="pf">
+  document.querySelectorAll('.overlay.pf').forEach(x=>x.remove());
+  const ov=document.createElement('div'); ov.className='overlay pf';
+  ov.innerHTML=`<form class="modal" id="pf" novalidate>
     <div class="mart"><img class="mportrait cut" src="tai-nguyen/nhan-vat/kids_bong_a.webp" alt=""></div>
-    <h3>Nhà thám hiểm tên là gì?</h3>
-    <p class="hint">Tên này hiện trên Bảng vàng khi con lọt Top 10. Bố mẹ có thể dùng tên ở nhà của con.</p>
+    <h3>Đăng nhập nhà thám hiểm</h3>
+    <p class="hint">Không cần mật khẩu. Lần sau, kể cả trên máy khác, bố mẹ nhập lại đúng tên con và số điện thoại (hoặc Gmail) này là con học tiếp, không mất sao và lộ trình.</p>
     <label for="kname">Tên của con</label>
-    <input id="kname" required maxlength="24" placeholder="Ví dụ: Bông, Minh An" value="${esc(KID&&KID.name||'')}">
-    <label for="kcode">4 số cuối điện thoại bố/mẹ</label>
-    <input id="kcode" required inputmode="numeric" pattern="[0-9]{4}" maxlength="4" placeholder="Ví dụ: 6789" value="${esc(KID&&KID.code||'')}">
-    <p class="hint small">Dùng để phân biệt các bé trùng tên, không hiển thị công khai.</p>
-    <div class="row"><button class="btn" type="submit">Lên đường! 🚀</button></div>
+    <input id="kname" required maxlength="24" autocomplete="off" placeholder="Ví dụ: Bông, Minh An" value="${esc(KID&&!KID.temp&&KID.name||'')}">
+    <label for="kacct">Số điện thoại hoặc Gmail của bố/mẹ</label>
+    <input id="kacct" required autocomplete="tel email" inputmode="email" placeholder="Ví dụ: 0912 345 678 hoặc me.bong@gmail.com" value="">
+    <p class="hint small">Chỉ dùng để giữ tiến độ học của con, không hiển thị công khai. Tên con hiện trên Bảng vàng khi con lọt Top 10.</p>
+    <p class="pf-err" id="pferr" hidden></p>
+    <div class="row"><button class="btn" type="submit" id="pfgo">Lên đường! 🚀</button></div>
   </form>`;
   document.body.appendChild(ov);
   ov.querySelector('#kname').focus();
-  ov.querySelector('#pf').addEventListener('submit',e=>{
+  ov.querySelector('#pf').addEventListener('submit',async e=>{
     e.preventDefault();
-    KID={name:ov.querySelector('#kname').value.trim(), code:ov.querySelector('#kcode').value.trim(), group:g};
-    lsSet('lle-kid',KID); ov.remove(); sfx.win(); updateStars();
+    const name=ov.querySelector('#kname').value.trim(), acct=normAcct(ov.querySelector('#kacct').value), err=ov.querySelector('#pferr');
+    if(!name){ err.hidden=false; err.textContent='Bố mẹ nhập tên của con nhé.'; return; }
+    if(!acct){ err.hidden=false; err.textContent='Số điện thoại (10 số) hoặc Gmail chưa đúng, bố mẹ kiểm tra lại nhé.'; return; }
+    const btn=ov.querySelector('#pfgo'); btn.disabled=true; btn.textContent='Đang mở hồ sơ…';
+    const id=await hashStr(acct+'|'+slugName(name));
+    if(KID && KID.id && KID.id!==id){ lsSet('lle-prog-'+KID.id, P); P={}; }   // máy dùng chung: cất tiến độ của bé trước
+    P=mergeProg(P, lsGet('lle-prog-'+id, {}));
+    KID={name, acct:maskAcct(acct), id, group:g};
+    lsSet('lle-kid',KID); lsSet(progKey(),P);
+    const got=await syncPull(id);
+    if(got && got.prog){ P=mergeProg(P, got.prog); lsSet(progKey(),P); if(got.group && GROUPS[got.group] && !g) KID.group=got.group; toast('Đã mở lại tiến độ học của '+name+' 🎉'); }
+    ov.remove(); sfx.win(); updateStars(); syncPush();
     for(let i=0;i<TOTAL;i++) if(P[g+'-'+i]) pushScore(g,i);
     then&&then();
   });
+}
+function logout(){
+  if(KID && KID.id){ lsSet('lle-prog-'+KID.id, P); syncPush(); }
+  KID=null; try{ localStorage.removeItem('lle-kid'); }catch(e){} P={}; lsSet(progKey(),P); updateStars();
+  toast('Đã đăng xuất. Lần sau nhập lại tên con và SĐT/Gmail là học tiếp.'); location.hash='#/'; route();
 }
 
 /* ---------- MÀN HÌNH 1: chọn nhóm ---------- */
@@ -1155,7 +1260,21 @@ function viewHome(){
     <h1>Những nhà thám hiểm<br>ngôn ngữ nhí</h1>
     <span class="tag">Giỏi tiếng Anh – Siêu tiếng Trung</span></div></section>
   <div class="wrap">
-    ${KID?`<div class="kidbar"><img class="kidface" src="tai-nguyen/nhan-vat/kids_bong_a.webp" alt=""> <span>Xin chào <b>${esc(KID.name)}</b>! Con đang có <b>${myPoints()} điểm</b>.</span> <button class="linkish" id="editKid">Đổi tên</button></div>`:''}
+    ${KID&&!KID.temp?`<div class="kidbar"><img class="kidface" src="tai-nguyen/nhan-vat/kids_bong_a.webp" alt=""> <span>Xin chào <b>${esc(KID.name)}</b>! Con đang có <b>${myPoints()} điểm</b>.${KID.acct?` <small class="acct">Tài khoản: ${esc(KID.acct)}</small>`:''}</span>
+      ${KID.id?`<button class="linkish" id="logoutKid">Đổi bé / Đăng xuất</button>`:`<button class="btn sm" id="editKid">🔐 Đăng nhập để giữ tiến độ</button>`}</div>`
+      :`<div class="kidbar login"><img class="kidface" src="tai-nguyen/nhan-vat/kids_bong_a.webp" alt=""><span><b>Con đã học ở máy khác?</b> Đăng nhập bằng tên con và SĐT/Gmail của bố mẹ để học tiếp.</span><button class="btn sm" id="loginKid">🔐 Đăng nhập</button></div>`}
+    <section class="intro">
+      <div class="intro-h"><img src="tai-nguyen/nhan-vat/huou_huou1_a.webp" alt="Cô Hươu"><div><h2>Chương trình có gì?</h2>
+        <p>21 ngày cùng cô Hươu và các bạn Bông, Anna, Leo, Xiaomei học tiếng Anh và tiếng Trung qua video, truyện, trò chơi và nói theo.</p></div>
+        <button class="btn y sm" id="tourBtn">▶ Xem hướng dẫn</button></div>
+      <ol class="intro-steps">
+        <li><b>3 chặng · mỗi chặng 6 buổi</b><span>Vòng khám phá → Vòng bứt phá → Vòng chinh phục. Mỗi buổi 12–15 phút, học xong buổi này thì mở buổi sau.</span></li>
+        <li><b>Zoom cuối mỗi chặng</b><span>Con gặp cô giáo trực tuyến, ôn lại cả chặng và nói cùng các bạn.</span></li>
+        <li><b>Sao và Bảng vàng</b><span>Mỗi bước làm xong được sao. Cuối chặng, Top 10 mỗi khoá lên Bảng vàng.</span></li>
+        <li><b>Chung kết tỏa sáng</b><span>Học đủ 18 buổi để sẵn sàng thi Chung kết livestream.</span></li>
+      </ol>
+    </section>
+    <h2 class="sec-h">Chọn khoá học của con</h2>
     <div class="lv-cards">
       ${Object.entries(GROUPS).map(([k,g])=>`
         <a class="lv" href="#/g/${k}" style="--c:${g.color}">
@@ -1163,77 +1282,180 @@ function viewHome(){
           <span class="lvt"><h3>${esc(g.name)}</h3>
           <div class="age">${esc(g.age)}</div>
           <div class="lvl">${esc(g.level)}</div>
-          <div class="ptext" style="margin-top:6px">Đã đi: ${doneCount(k)}/21 ngày · ${groupPoints(k)} điểm</div>
+          <div class="ptext" style="margin-top:6px">Đã đi: ${doneCount(k)}/${LEARN_TOTAL} buổi · ${groupPoints(k)} điểm</div>
           <span class="go">Lên đường →</span></span>
         </a>`).join('')}
     </div>
-    <section class="today"><h2>Mỗi ngày con học gì?</h2>
-      <div class="tgrid">${tiles.map(([f,t,d])=>`<div class="tg"><img src="tai-nguyen/trang/${f}.webp" alt="" loading="lazy">${t}<small>${d}</small></div>`).join('')}</div></section>
+    <section class="today"><h2>Mỗi buổi con học gì?</h2>
+      <p class="sec-sub">Little Seed có 6 dạng bài dưới đây (chạm vào ô để nghe giới thiệu). Canopy có thêm thẻ học, quiz, nối từ, xếp câu, truyện song ngữ, giải đố và luyện nói.</p>
+      <div class="tgrid">${tiles.map(([f,t,d],n)=>`<button class="tg" data-n="${n}"><img src="tai-nguyen/trang/${f}.webp" alt="" loading="lazy">${t}<small>${d}</small></button>`).join('')}</div></section>
     <div class="note">
-      <b>Gửi ba mẹ:</b> mỗi ngày con tự học khoảng 12–15 phút. Mọi hướng dẫn đều có giọng đọc, ba mẹ không cần biết tiếng Anh hay tiếng Trung.
+      <b>Gửi ba mẹ:</b> mỗi buổi con tự học khoảng 12–15 phút. Mọi hướng dẫn đều có giọng đọc, ba mẹ không cần biết tiếng Anh hay tiếng Trung.
       Ba mẹ chỉ cần <b>bật bài cho con đúng giờ</b>, <b>khen con khi con đang làm bài</b> và <b>khen con khi con hoàn thành</b>.
-      Ngày 7, 14, 21 là <b>buổi Zoom cùng giáo viên</b>. Cuối mỗi vòng, Top 10 mỗi nhóm được vinh danh trên Bảng vàng.
+      Học xong mỗi buổi, ba mẹ có thể <b>quay một clip ngắn con nói câu hôm nay và gửi vào <a href="${ZALO_LINK}" target="_blank" rel="noopener">nhóm Zalo</a></b> (+${PTS.clip} điểm).
       <br><br>Nhớ nguyên tắc <b>3 KHÔNG</b>: không ép nói · không sửa lỗi · không so sánh. 💛
     </div>
-    <div class="foot">CES Vietnam · Little Language Explorers<br><button class="tbtn" id="tbtn">${TEACHER?'🔓 Tắt chế độ giáo viên':'🔑 Chế độ giáo viên (mở tất cả các ngày)'}</button></div>
+    <div class="foot">CES Vietnam · Little Language Explorers<br><button class="tbtn" id="tbtn">${TEACHER?'🔓 Tắt chế độ giáo viên':'🔑 Chế độ giáo viên (mở tất cả các buổi)'}</button></div>
   </div>`;
   document.getElementById('tbtn').onclick=toggleTeacher;
   const ek=document.getElementById('editKid'); if(ek) ek.onclick=()=>askProfile(KID.group, viewHome);
+  const li=document.getElementById('loginKid'); if(li) li.onclick=()=>askProfile('', viewHome);
+  const lo=document.getElementById('logoutKid'); if(lo) lo.onclick=logout;
+  document.getElementById('tourBtn').onclick=()=>startTour(true);
+  app.querySelectorAll('.tg').forEach(b=>b.onclick=()=>{ sfx.pop(); const [,t,d]=tiles[+b.dataset.n]; hdSay(TILE_HD[+b.dataset.n]||(t+'. '+d)); });
+  if(!lsGet('lle-tour-seen',false) && !TEACHER && STARTED) setTimeout(()=>startTour(false), 400);
+}
+const TILE_HD = [
+  'Xem và làm theo: con xem video hai lần, bằng tiếng Anh và tiếng Trung, rồi làm động tác giống bạn.',
+  'Chạm đúng hình: con nghe cô đọc rồi chạm vào tranh đúng.',
+  'Nói theo: con nghe bạn nói, rồi đến lượt con nói theo. Máy thu giọng con để con nghe lại.',
+  'Anh hay Trung: con nghe một câu rồi đoán đó là tiếng Anh hay tiếng Trung.',
+  'Đố con: con nghe một thứ tiếng, rồi thử nói bằng thứ tiếng kia.',
+  'Nhìn chữ: con làm quen mặt chữ, chạm chữ để nghe đọc.'
+];
+
+/* ---------- hướng dẫn lần đầu (có giọng đọc) ---------- */
+const TOUR = [
+  {img:'tai-nguyen/nhan-vat/huou_huou1_a.webp', h:'Chào mừng nhà thám hiểm nhí!', t:'Cô là cô Hươu. Mỗi ngày con học khoảng 15 phút cùng cô và các bạn Bông, Anna, Leo, Xiaomei. Con nghe, xem, chạm và nói bằng tiếng Anh và tiếng Trung.'},
+  {img:'tai-nguyen/trang/ls_o_truyen_v1.webp', h:'Chọn khoá học', t:'Little Seed dành cho bé mới bắt đầu. Canopy dành cho bé đã biết một chút tiếng Anh và tiếng Trung. Lần đầu, bố mẹ đăng nhập bằng tên con và số điện thoại hoặc Gmail, không cần mật khẩu.'},
+  {img:'tai-nguyen/trang/canopy_ban_do.webp', h:'Bản đồ khám phá', t:'Bản đồ có 3 chặng, mỗi chặng 6 buổi. Buổi có màu đỏ đang nhấp nháy là buổi hôm nay. Học xong một buổi thì buổi sau mở khoá. Cuối mỗi chặng có buổi Zoom với cô giáo.'},
+  {img:'tai-nguyen/trang/ls_o_noi_theo.webp', h:'Trong mỗi buổi học', t:'Mỗi bước đều có cô đọc hướng dẫn. Ở cuối màn hình: nút Nghe lại, nút Dừng để tạm nghỉ, nút Câu trước để nghe lại câu vừa rồi. Khi micro đỏ nhấp nháy là máy đang thu giọng con.'},
+  {img:'tai-nguyen/trang/ls_stickers.webp', h:'Sao, Bảng vàng và Góc khám phá', t:'Mỗi bước làm xong con được sao. Cuối chặng, Top 10 lên Bảng vàng. Góc khám phá có thêm video và trò chơi cho con thích thì xem thêm.'},
+  {img:'tai-nguyen/trang/ls_man_khen.webp', h:'Gửi ba mẹ', t:'Ba mẹ bật bài cho con đúng giờ, khen con khi con đang làm bài và khi con xong bài. Không ép nói, không sửa lỗi, không so sánh. Xong mỗi buổi, ba mẹ quay một clip ngắn gửi vào nhóm Zalo để nhận thêm điểm.'}
+];
+function startTour(force){
+  if(document.querySelector('.tour')) return;
+  let k=0; const ov=document.createElement('div'); ov.className='overlay tour';
+  const close=()=>{ hdStop(); voiceStop(); try{ speechSynthesis.cancel(); }catch(e){} lsSet('lle-tour-seen',true); ov.remove(); };
+  const draw=()=>{ const s=TOUR[k];
+    ov.innerHTML=`<div class="modal tour-box" role="dialog" aria-label="Hướng dẫn">
+      <div class="tour-dots">${TOUR.map((_,j)=>`<i class="${j===k?'on':''}"></i>`).join('')}</div>
+      <img class="tour-img" src="${s.img}" alt="">
+      <h3>${esc(s.h)}</h3><p>${esc(s.t)}</p>
+      <div class="row tour-nav"><button class="btn y sm" id="tPrev" ${k?'':'disabled'}>← Trước</button>
+        <button class="btn sm" id="tSay">🔊 Nghe</button>
+        <button class="btn g sm" id="tNext">${k<TOUR.length-1?'Tiếp →':'Bắt đầu học! 🚀'}</button></div>
+      <button class="linkish tour-skip" id="tSkip">Bỏ qua hướng dẫn</button></div>`;
+    ov.querySelector('#tPrev').onclick=()=>{ if(k){ k--; draw(); } };
+    ov.querySelector('#tNext').onclick=()=>{ sfx.pop(); if(k<TOUR.length-1){ k++; draw(); } else close(); };
+    ov.querySelector('#tSkip').onclick=close;
+    ov.querySelector('#tSay').onclick=()=>hdSay(s.t);
+    hdSay(s.t);
+  };
+  document.body.appendChild(ov); draw();
 }
 
-/* ---------- MÀN HÌNH 2: bản đồ hành trình ---------- */
+/* ---------- MÀN HÌNH 2: bản đồ hành trình ----------
+   3 chặng nối liền nhau, mỗi chặng 6 buổi đi theo đường uốn lượn (kiểu SuperChinese).
+   Buổi Zoom không nằm trên đường đi: hiện ở cuối chặng, không chặn buổi sau. */
+const STAGE_INFO = {
+  seed: [
+    {topic:'Chào hỏi', desc:'Con chào ba mẹ, thầy cô, bạn bè và tạm biệt bằng tiếng Anh và tiếng Trung.'},
+    {topic:'Giới thiệu bản thân', desc:'Con nói tên mình, hỏi tên bạn, đếm từ 1 đến 6 và nói tuổi của mình.'},
+    {topic:'Gia đình', desc:'Con gọi ông bà, anh chị em và giới thiệu người thân trong nhà.'}],
+  canopy: [
+    {topic:'Places · Khám phá thành phố', desc:'Con nói mình đi đâu, đi để làm gì và đi vào lúc nào.'},
+    {topic:'Jobs · Ghé thăm nơi làm việc', desc:'Con nói về nghề của người thân và nơi họ làm việc.'},
+    {topic:'Transports · Lên đường!', desc:'Con nói mình đi bằng gì: xe đạp, xe buýt, tàu hỏa, máy bay…'}]
+};
+const PATH_X = [50, 76, 58, 26, 42, 72];   // vị trí ngang (%) của 6 buổi trên đường đi
+function lessonTitle(day){ const t=String(day.t||''); return t.replace(/^Truyện:\s*/,'📖 ').split(' – ')[0]; }
 function viewGroup(g){
   const G = GROUPS[g]; if(!G) return viewHome();
   if(!KID){ app.innerHTML=''; return askProfile(g, ()=>viewGroup(g)); }
   if(KID.group!==g){ KID.group=g; if(!KID.temp) lsSet('lle-kid',KID); updateStars(); }
-  const n = doneCount(g);
-  const rounds = ROUNDS.map((R,r)=>{
-    const rdone = isDone(g,r*PER+PER-1);
-    return `<div class="round ${rdone?'rdone':''}">
-      ${G.banners?`<div class="rbanner" style="background-image:url('${G.banners[r]}')"></div>`:''}<div class="rhead"><span class="rbadge">Tuần ${r+1}</span><h3>${R.icon} ${R.en}</h3><span class="vi">${R.vi}${G.days[r*PER].round?' · '+esc(G.days[r*PER].round.name)+' – '+esc(G.days[r*PER].round.vi):''}</span>
-        <span class="rpts">${roundPoints(g,r)} điểm</span></div>
-      <div class="trail">
-        ${[0,1,2,3,4,5,6].map(d=>{
-          const i=r*PER+d, day=G.days[i];
-          const done=isDone(g,i), open=isUnlocked(g,i);
-          const cls=(done?'done':(open?'now':'lock'))+(day.zoom?' zoom':'');
-          const icon = done?'⭐':(!open?'🔒':(day.zoom?'🎥':i+1));
-          return `<button class="stop ${cls}" data-i="${i}" style="--d:${d*.05}s"><span class="dot">${icon}</span><span class="lb">${day.zoom?'Zoom':'Ngày '+(i+1)}</span></button>`;
+  const n = doneCount(g), info=STAGE_INFO[g]||[];
+  const H=104;   // chiều cao mỗi buổi trên bản đồ (px)
+  const stages = ROUNDS.map((R,r)=>{
+    const zi=r*PER+PER-1, zday=G.days[zi], zdone=isDone(g,zi), zopen=isUnlocked(g,zi);
+    const learnDone=[0,1,2,3,4,5].every(d=>isDone(g,r*PER+d));
+    const I=info[r]||{};
+    const pts=PATH_X.map((x,d)=>[x, d*H+H/2]);
+    const path=pts.map((p,k)=>k?`C ${pts[k-1][0]} ${pts[k-1][1]+H*.55}, ${p[0]} ${p[1]-H*.55}, ${p[0]} ${p[1]}`:`M ${p[0]} ${p[1]}`).join(' ');
+    const doneUpTo=[0,1,2,3,4,5].filter(d=>isDone(g,r*PER+d)).length;
+    return `<section class="stage ${learnDone?'sdone':''}" style="--sc:${['#E3262E','#F28C00','#2F8F5B'][r]}">
+      <div class="shead" ${G.banners?`style="background-image:linear-gradient(90deg,rgba(255,255,255,.96) 40%,rgba(255,255,255,.2)),url('${G.banners[r]}')"`:''}>
+        <span class="sbadge">Chặng ${r+1}</span>
+        <h3>${R.icon} ${R.vi} <small>${R.en}</small></h3>
+        <div class="stopic">Chủ đề: <b>${esc(I.topic||'')}</b></div>
+        <p class="sdesc">${esc(I.desc||'')}</p>
+        <div class="smeta"><span>${doneUpTo}/6 buổi</span><span>${roundPoints(g,r)} điểm</span></div>
+      </div>
+      <div class="spath" style="height:${H*6}px">
+        <svg class="sline" viewBox="0 0 100 ${H*6}" preserveAspectRatio="none" aria-hidden="true">
+          <path d="${path}" class="bg" vector-effect="non-scaling-stroke"/>
+          <path d="${path}" class="fg" vector-effect="non-scaling-stroke" pathLength="100" style="stroke-dasharray:${Math.max(0,(doneUpTo-0.5)/5*100)} 200"/></svg>
+        ${[0,1,2,3,4,5].map(d=>{
+          const i=r*PER+d, day=G.days[i], done=isDone(g,i), open=isUnlocked(g,i), now=open&&!done;
+          const cls=done?'done':(now?'now':'lock');
+          return `<button class="node ${cls}" data-i="${i}" style="left:${PATH_X[d]}%;top:${d*H+H/2}px;--d:${d*.05}s" aria-label="Buổi ${d+1}: ${esc(lessonTitle(day))}">
+            <span class="ndot">${done?'⭐':(!open?'🔒':d+1)}</span>
+            <span class="nlb ${PATH_X[d]>60?'l':''}"><b>Buổi ${d+1}</b><small>${esc(lessonTitle(day))}</small></span>
+            ${now&&!TEACHER?`<span class="nme"><img src="tai-nguyen/nhan-vat/kids_bong_a.webp" alt=""><i>Học ngay!</i></span>`:''}</button>`;
         }).join('')}
       </div>
-      <a class="gold ${rdone?'on':''}" href="#/g/${g}/vang/${r+1}">🏆 Bảng vàng ${R.vi}</a>
-      <a class="xt-link" href="#/g/${g}/them/${r+1}">🧭 Góc khám phá thêm của vòng này</a>
-    </div>`;}).join('');
-  app.innerHTML = `<div class="wrap">
+      <div class="send">
+        <a class="zcard ${zdone?'done':''} ${zopen?'':'lock'}" href="#/g/${g}/${zi+1}">🎥 <span><b>Buổi Zoom cùng cô giáo</b><small>${zdone?'Con đã tham gia ✓':esc(zday.about||'Ôn lại cả chặng cùng cô và các bạn')}</small></span></a>
+        <a class="gold ${learnDone?'on':''}" href="#/g/${g}/vang/${r+1}">🏆 Bảng vàng ${R.vi}</a>
+        ${xtTeaser(g,r)}
+      </div>
+    </section>${r<2?`<div class="sjoin ${learnDone?'on':''}"><span>🚩 Sang chặng ${r+2}</span></div>`:''}`;}).join('');
+  app.innerHTML = `<div class="wrap map">
     <div class="ghead">
       <div class="ico" style="background:${G.color}22">${art(G.icon,'gi')}</div>
-      <div><h2>${esc(G.name)}</h2><small>${esc(G.age)} · ${esc(G.level)}</small></div>
+      <div><h2>Bản đồ khám phá · ${esc(G.name)}</h2><small>${esc(G.age)} · ${esc(G.level)}</small></div>
       <div class="me">${art('🧒','sm')}<div><b>${esc(KID.name)}</b><small>${groupPoints(g)} điểm</small></div></div>
     </div>
-    <div class="progress"><i style="width:${n/TOTAL*100}%"></i><span class="walker" style="left:${n/TOTAL*100}%">${art('🧭','tiny')}</span></div>
-    <div class="ptext">Đã hoàn thành ${n}/21 ngày ${TEACHER?'· <b style="color:var(--red)">Chế độ giáo viên: mở tất cả</b>':''}</div>
-    ${rounds}
-    <div class="final ${n<TOTAL?'lock':''}">
+    <div class="progress"><i style="width:${n/LEARN_TOTAL*100}%"></i><span class="walker" style="left:${n/LEARN_TOTAL*100}%">${art('🧭','tiny')}</span></div>
+    <div class="ptext">Đã hoàn thành ${n}/${LEARN_TOTAL} buổi ${TEACHER?'· <b style="color:var(--red)">Chế độ giáo viên: mở tất cả</b>':''}
+      <button class="linkish" id="mapHelp">🔊 Hướng dẫn</button></div>
+    ${stages}
+    <div class="final ${n<LEARN_TOTAL?'lock':''}">
       <div class="trophy">${art('🏆','big')}</div>
       <h3>The Grand Finale – Chung kết tỏa sáng</h3>
-      <div>${n<TOTAL ? 'Hoàn thành đủ 21 ngày để sẵn sàng cho Chung kết livestream!' : 'Con đã sẵn sàng cho Chung kết! Theo dõi lịch thi trên nhóm Zalo nhé.'}</div>
+      <div>${n<LEARN_TOTAL ? 'Học đủ 18 buổi để sẵn sàng cho Chung kết livestream!' : 'Con đã sẵn sàng cho Chung kết! Theo dõi lịch thi trên nhóm Zalo nhé.'}</div>
       <a class="btn y" href="#/g/${g}/vang/0" style="margin-top:12px">🏆 Bảng vàng tổng 21 ngày</a>
     </div>
-    <div class="row"><a class="btn y" href="#/">← Đổi nhóm</a></div>
+    <div class="row"><a class="btn y" href="#/">← Đổi khoá học</a></div>
   </div>`;
-  app.querySelectorAll('.stop').forEach(b=>b.onclick=()=>{
-    if(b.classList.contains('lock')){ sfx.no(); toast('Hoàn thành ngày trước để mở khóa nhé! 🔒'); return; }
+  app.querySelectorAll('.node').forEach(b=>b.onclick=()=>{
+    if(b.classList.contains('lock')){ sfx.no(); toast('Con học xong buổi trước để mở buổi này nhé! 🔒'); hdSay('Con học xong buổi trước để mở buổi này nhé!'); return; }
     sfx.pop(); location.hash = `#/g/${g}/${+b.dataset.i+1}`;
   });
+  app.querySelectorAll('.zcard.lock').forEach(a=>a.onclick=e=>{ e.preventDefault(); sfx.no(); toast('Buổi Zoom mở khi con học xong buổi 6 của chặng này 🔒'); });
+  xtWire();
   mascot('hi');
-  /* mở bản đồ thì cuộn tới ngày đang học (tuần 1 thì để ở đầu trang) */
-  const now=app.querySelector('.stop.now');
-  const rIdx=now?Math.floor(+now.dataset.i/PER):0;
-  if(now && rIdx>0) now.scrollIntoView({block:'center'}); else window.scrollTo({top:0});
-  /* lời chào của cô Hươu: một lần mỗi lần mở web */
-  if(!GREETED && typeof lsHD==='function' && window.LS && window.LS.hd){ GREETED=true; lsHD('Chào con! Cô là cô Hươu.'); }
+  /* mở bản đồ thì cuộn tới buổi đang học */
+  const now=app.querySelector('.node.now');
+  if(now && +now.dataset.i>2) now.scrollIntoView({block:'center'}); else window.scrollTo({top:0});
+  const help=()=>{ const nx=app.querySelector('.node.now');
+    hdSay(nx?['Đây là bản đồ khám phá của con.','Con chạm vào buổi học màu đỏ đang nhấp nháy để bắt đầu nhé!']
+             :['Con đã đi hết bản đồ rồi! Giỏi quá!']); };
+  document.getElementById('mapHelp').onclick=help;
+  if(STARTED && !mapSpoke[g]){ mapSpoke[g]=true; help(); }
 }
-let GREETED=false;
+const mapSpoke={};
+/* Góc khám phá thêm: 2 video gợi ý ngay trên bản đồ / sau khi học xong */
+function xtPick(g,r,n){
+  const X=window.XEM_THEM; if(!X||!X[g]||!X[g][r]) return [];
+  let reach=0; for(let i=0;i<21;i++) if(isUnlocked(g,i)) reach=i+1;
+  const ok=it=> TEACHER || (g==='seed' ? it[2]<=reach : r*7+it[2]<=reach);
+  const vids=X[g][r].v.map((it,k)=>({it,k})).filter(o=>ok(o.it));
+  const yt=vids.filter(o=>o.it[3].startsWith('y:'));
+  const pick=[], en=yt.filter(o=>o.it[0]==='en'), zh=yt.filter(o=>o.it[0]==='zh');
+  const seed=(new Date()).getDate();
+  if(en.length) pick.push(en[seed%en.length]); if(zh.length) pick.push(zh[seed%zh.length]);
+  for(const o of vids){ if(pick.length>=n) break; if(!pick.includes(o)) pick.push(o); }
+  return pick.slice(0,n);
+}
+function xtTeaser(g,r,title){
+  const pick=xtPick(g,r,2); if(!pick.length) return `<a class="xt-link" href="#/g/${g}/them/${r+1}">🧭 Góc khám phá thêm của chặng này</a>`;
+  return `<div class="xt-teaser"><div class="xt-th"><b>${title||'🧭 Góc khám phá'}</b><a href="#/g/${g}/them/${r+1}">Xem tất cả →</a></div>
+    <div class="xt-tv">${pick.map(({it,k})=>{ const c=it[3]; const th=c.startsWith('y:')?`https://i.ytimg.com/vi/${c.slice(2)}/mqdefault.jpg`:'';
+      return `<a class="xt-tc ${it[0]}" href="#/g/${g}/them/${r+1}/v${k}">${th?`<img src="${th}" alt="" loading="lazy">`:'<span class="xt-ph">▶</span>'}<span class="xt-play">▶</span><b>${esc(it[1])}</b><small>${it[0]==='zh'?'Tiếng Trung':'Tiếng Anh'}</small></a>`; }).join('')}</div></div>`;
+}
+function xtWire(){ /* liên kết thường, không cần gắn thêm */ }
+
 
 /* ---------- Bảng vàng ---------- */
 function viewGold(g, r){
@@ -1275,7 +1497,7 @@ let cur = {};
 function head(g,i){
   const G=GROUPS[g], R=ROUNDS[Math.floor(i/PER)], day=G.days[i];
   return `<div class="dayhead">
-    <div class="crumb">${G.icon} ${esc(G.name)} · ${R.icon} ${R.vi} · Ngày ${i+1}/21 · <b>${dayPoints(g,i)} điểm</b></div>
+    <div class="crumb">${G.icon} ${esc(G.name)} · Chặng ${stageNo(i)}: ${R.vi} · ${day.zoom?'Buổi Zoom':'Buổi '+lessonNo(i)+'/6'} · <b>${dayPoints(g,i)} điểm</b></div>
     <h2>${titleHTML(day.t)}</h2></div>`;
 }
 /* tiêu đề "Anh – Trung": giữ cụm tiếng Trung trên một dòng, không để "好！" rơi xuống dòng riêng */
@@ -1284,7 +1506,7 @@ function viewDay(g,i,step){
   const G=GROUPS[g]; const day=G && G.days[i];
   if(!day) return viewHome();
   if(!KID){ app.innerHTML=''; return askProfile(g, ()=>viewDay(g,i,step)); }
-  if(!isUnlocked(g,i)){ toast('Ngày này chưa mở khóa 🔒'); location.hash='#/g/'+g; return; }
+  if(!isUnlocked(g,i)){ toast('Buổi này chưa mở khóa 🔒'); location.hash='#/g/'+g; return; }
   cur={g,i,day};
   if(day.zoom) return viewZoom(g,i);
   if(day.cx) return viewCanopyDay(g,i,step);
@@ -1498,18 +1720,87 @@ function stepFinish(){
   panel.querySelector('#ok').onclick=e=>{ const before=dayPoints(g,i); s.done=true; addPoints(g,i,before,e.currentTarget); showDone(panel,true); };
 }
 function showDone(panel, fresh){
-  const {g,i}=cur, day=GROUPS[g].days[i], nx=GROUPS[g].days[i+1], r=Math.floor(i/PER);
+  const {g,i}=cur, day=GROUPS[g].days[i], r=Math.floor(i/PER), ni=nextLearn(i), nx=ni>=0?GROUPS[g].days[ni]:null;
   const pts=dayPoints(g,i);
   panel.innerHTML=`<div class="finish">
-    <div class="badge ${fresh?'fresh':''}">${art(day.zoom?'🏆':'🏅','big')}</div><h3>Hoàn thành ngày ${i+1}!</h3>
+    <div class="badge ${fresh?'fresh':''}">${art(day.zoom?'🏆':'🏅','big')}</div><h3>Hoàn thành ${dayName(i)}!</h3>
     <div class="stars"><span>⭐</span><span>⭐</span><span>⭐</span></div>
-    <div class="ptsum">Hôm nay con được <b>${pts} điểm</b> · Vòng này: <b>${roundPoints(g,r)} điểm</b></div>
-    <p>Nhà thám hiểm nhí giỏi quá! ${nx?`Ngày ${i+2}${nx.zoom?' (buổi Zoom cùng giáo viên)':''} đã được mở khóa.`:'Con đã đi hết 21 ngày — sẵn sàng cho Chung kết!'}</p>
-    <div class="row">${nx?`<a class="btn" href="#/g/${g}/${i+2}">Ngày ${i+2} →</a>`:''}
+    <div class="ptsum">Buổi này con được <b>${pts} điểm</b> · Chặng này: <b>${roundPoints(g,r)} điểm</b></div>
+    <p>Nhà thám hiểm nhí giỏi quá! ${nx?`Buổi ${lessonNo(ni)} – chặng ${stageNo(ni)} đã được mở khóa.`:'Con đã đi hết bản đồ — sẵn sàng cho Chung kết!'}</p>
+    <div class="row">${nx?`<a class="btn" href="#/g/${g}/${ni+1}">Buổi tiếp theo →</a>`:''}
     ${day.zoom?`<a class="btn" href="#/g/${g}/vang/${r+1}">🏆 Xem Bảng vàng ${esc(ROUNDS[r].vi)}</a>`:''}
-    <a class="btn y" href="#/g/${g}">🗺️ Xem bản đồ</a></div></div>`;
+    <a class="btn y" href="#/g/${g}">🗺️ Xem bản đồ</a></div></div>
+    ${day.zoom?'':missionHTML(g,i)}${day.zoom?'':xtTeaser(g,r,'🧭 Con muốn xem thêm? Góc khám phá')}`;
+  missionWire(panel,g,i);
   if(fresh){ confetti(44); sfx.win(); mascot('done'); }
 }
+
+/* ---------- nhiệm vụ chia sẻ lên cộng đồng (nhóm Zalo) ---------- */
+function missionHTML(g,i){
+  if(TEACHER && !KID) return '';
+  const s=st(g,i), sent=!!s.clipSent;
+  return `<div class="mission ${sent?'sent':''}">
+    <div class="mi-h"><span class="mi-ic">🎥</span><div><b>Nhiệm vụ chia sẻ (+${PTS.clip} điểm)</b>
+      <small>Ba mẹ quay một clip ngắn (15–30 giây) con nói câu hôm nay bằng tiếng Anh và tiếng Trung, rồi gửi vào nhóm Zalo của thử thách.</small></div></div>
+    <div class="row mi-row"><a class="btn g sm" href="${ZALO_LINK}" target="_blank" rel="noopener">📤 Mở nhóm Zalo</a>
+      ${sent?`<span class="mi-ok">✓ Đã gửi clip · +${PTS.clip} điểm</span>`:`<button class="btn y sm mi-done">Ba mẹ đã gửi clip ✓</button>`}</div></div>`;
+}
+function missionWire(root,g,i){
+  root.querySelectorAll('.mi-done').forEach(b=>b.onclick=()=>{
+    const s=st(g,i), before=dayPoints(g,i); s.clipSent=true; addPoints(g,i,before,b);
+    const box=b.closest('.mission'); box.classList.add('sent'); b.outerHTML=`<span class="mi-ok">✓ Đã gửi clip · +${PTS.clip} điểm</span>`;
+    sfx.win(); confetti(18); toast('Cảm ơn ba mẹ! Con được thêm '+PTS.clip+' điểm 🎉');
+  });
+}
+
+/* ---------- thu giọng con (dùng chung Little Seed và Canopy) ----------
+   Tự bật khi đến lượt con, hiện chấm đỏ "Đang thu", tự dừng khi con nói xong (hoặc hết giờ),
+   rồi phát lại giọng con. Máy không cho dùng micro thì trả về null để bài chạy kiểu đếm 3-2-1. */
+let recStream=null, recCur=null;
+async function recMic(){
+  if(recStream && recStream.getTracks().some(t=>t.readyState==='live')) return recStream;
+  try{ recStream=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:true,noiseSuppression:true}}); }catch(e){ recStream=null; }
+  return recStream;
+}
+function recAbort(){ if(recCur){ const c=recCur; recCur=null; c.abort(); } }
+/* o: {maxMs, onLevel(0..1), onStart} → Promise<{url, blob, spoke} | null> */
+function recTake(o){
+  o=o||{};
+  return new Promise(async res=>{
+    const stream=await recMic();
+    if(!stream || !window.MediaRecorder){ return res(null); }
+    let rec; try{ rec=new MediaRecorder(stream); }catch(e){ return res(null); }
+    const chunks=[]; let done=false, spoke=false, quietSince=0, raf=0, an=null, src=null;
+    try{ actx=actx||new (window.AudioContext||window.webkitAudioContext)(); if(actx.state==='suspended') actx.resume();
+      an=actx.createAnalyser(); an.fftSize=512; src=actx.createMediaStreamSource(stream); src.connect(an); }catch(e){ an=null; }
+    const buf=an?new Uint8Array(an.fftSize):null, t0=Date.now(), maxMs=o.maxMs||5000;
+    const stop=(abort)=>{ if(done) return; done=true; cancelAnimationFrame(raf); clearTimeout(hard); try{ src&&src.disconnect(); }catch(e){}
+      if(abort){ rec.onstop=()=>res(null); } try{ rec.state!=='inactive' ? rec.stop() : rec.onstop&&rec.onstop(); }catch(e){ res(null); } if(recCur===ctl) recCur=null; };
+    const ctl={abort:()=>stop(true), finish:()=>stop(false)}; recCur=ctl;
+    rec.ondataavailable=e=>{ if(e.data && e.data.size) chunks.push(e.data); };
+    rec.onstop=()=>{ const blob=chunks.length?new Blob(chunks,{type:rec.mimeType||'audio/webm'}):null; res(blob?{blob,url:URL.createObjectURL(blob),spoke}:null); };
+    const hard=setTimeout(()=>stop(false), maxMs);
+    const tick=()=>{ if(done) return;
+      if(an){ an.getByteTimeDomainData(buf); let m=0; for(const v of buf) m=Math.max(m,Math.abs(v-128)); const lv=Math.min(1,m/60);
+        o.onLevel&&o.onLevel(lv); const now=Date.now();
+        if(lv>0.18){ spoke=true; quietSince=0; } else if(spoke){ quietSince=quietSince||now; if(now-quietSince>1100 && now-t0>1200) return stop(false); } }
+      raf=requestAnimationFrame(tick); };
+    try{ rec.start(); }catch(e){ return res(null); }
+    o.onStart&&o.onStart(); tick();
+  });
+}
+/* phát lại giọng con; trả Promise khi phát xong */
+function recPlay(url){ return new Promise(res=>{ if(!url) return res(); voicePlay(url,{onend:res, onerr:res}); }); }
+
+/* ---------- màn "Chạm để bắt đầu": mở khoá âm thanh để cô Hươu tự đọc hướng dẫn ---------- */
+let STARTED=false;
+function showSplash(){
+  const sp=document.createElement('div'); sp.className='splash';
+  sp.innerHTML=`<button class="splash-in" type="button"><img src="tai-nguyen/nhan-vat/huou_huou1_a.webp" alt=""><b>Chạm để bắt đầu</b><small>Bật loa để nghe cô Hươu hướng dẫn nhé 🔊</small></button>`;
+  document.body.appendChild(sp);
+  sp.querySelector('button').onclick=()=>{ voiceUnlock(); STARTED=true; sp.remove(); route(); };
+}
+document.addEventListener('keydown',e=>{ const t=e.target; if((e.key==='Enter'||e.key===' ') && t && t.getAttribute && t.getAttribute('role')==='button' && t.tagName!=='BUTTON'){ e.preventDefault(); t.click(); } });
 
 /* ---------- ngày Zoom ---------- */
 function viewZoom(g,i){
@@ -1517,7 +1808,7 @@ function viewZoom(g,i){
   app.innerHTML=`<div class="wrap">${head(g,i)}
     <div class="panel zoompanel pin">
       <div class="zhead">${art('💻','zart')}<div><div class="zbadge">🎥 Buổi Zoom cùng giáo viên · ${ROUNDS[r].vi}</div>
-      <div class="hint">Tham gia buổi Zoom được +${PTS.zoom} điểm. Kết thúc vòng này, Top 10 được vinh danh trên Bảng vàng!</div></div></div>
+      <div class="hint">Tham gia buổi Zoom được +${PTS.zoom} điểm. Buổi Zoom không bắt buộc để mở chặng sau. Kết thúc chặng, Top 10 được vinh danh trên Bảng vàng!</div></div></div>
       <p class="about">${esc(day.about)}</p>
       ${day.prep&&day.prep.length?`<h3>📝 Con ôn lại trước buổi Zoom</h3><ul class="prep">${day.prep.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}
       <div class="row">${ZOOM_LINK?`<a class="btn" href="${esc(ZOOM_LINK)}" target="_blank" rel="noopener">🎥 Vào phòng Zoom</a>`:''}
@@ -1535,14 +1826,15 @@ function viewZoom(g,i){
 
 /* ---------- điều hướng ---------- */
 function route(){
-  try{ speechSynthesis.cancel(); }catch(e){} voiceStop();
+  try{ speechSynthesis.cancel(); }catch(e){} voiceStop(); hdStop(); recAbort();
+  document.querySelectorAll('.overlay:not(.pf):not(.tour)').forEach(x=>x.remove());
   if(typeof cxStop==='function'){ cxStop(); if(window.cxStopListen) window.cxStopListen(); }
   if(typeof lsEnd==='function') lsEnd();
   const p=location.hash.replace(/^#\/?/,'').split('/').filter(Boolean);
   document.querySelectorAll('.ls-cele').forEach(e=>e.remove());
   document.body.classList.toggle('in-step', p[0]==='g' && p.length>=4 && /^b\d+$/.test(p[3]||''));
   if(p[0]==='g' && p[1] && p[2]==='vang') viewGold(p[1], +(p[3]||0));
-  else if(p[0]==='g' && p[1] && p[2]==='them') viewXemThem(p[1], +(p[3]||1));
+  else if(p[0]==='g' && p[1] && p[2]==='them') viewXemThem(p[1], +(p[3]||1), p[4]&&/^v\d+$/.test(p[4])?+p[4].slice(1):-1);
   else if(p[0]==='g' && p[1] && p[2]) viewDay(p[1], +p[2]-1, p[3]);
   else if(p[0]==='g' && p[1]) viewGroup(p[1]);
   else viewHome();
@@ -1551,7 +1843,7 @@ function route(){
 window.addEventListener('hashchange', route);
 document.getElementById('muteBtn').textContent=MUTE?'🔇':'🔊';
 document.getElementById('muteBtn').onclick=toggleMute;
-updateStars(); route();
+updateStars(); route(); showSplash();
 
 document.querySelector('#mascot .mimg').innerHTML='<img class="art mcut" src="tai-nguyen/nhan-vat/kids_bong_a.webp" alt="">';
 </script>

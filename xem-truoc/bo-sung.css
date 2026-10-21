@@ -1,0 +1,194 @@
+/* =====================================================================
+   BỔ SUNG theo góp ý tester (21/10/2026)
+   Trang chủ giới thiệu + đăng nhập · hướng dẫn lần đầu · bản đồ chặng · góc khám phá
+   · nhiệm vụ Zalo · luật chơi · dừng / câu trước · thu giọng con
+   ===================================================================== */
+
+/* ---------- nút nhỏ dùng chung ---------- */
+.btn.sm{padding:8px 16px;font-size:16px;box-shadow:0 4px 0 var(--red-dark)}
+.btn.y.sm{box-shadow:0 4px 0 #D9A200}.btn.g.sm{box-shadow:0 4px 0 #2A8A57}
+.btn[disabled]{opacity:.5;cursor:default}
+.ls-b.sm{min-height:40px;padding:6px 10px}
+
+/* ---------- màn "Chạm để bắt đầu" ---------- */
+.splash{position:fixed;inset:0;z-index:9500;background:rgba(58,42,26,.6);display:grid;place-items:center;padding:16px;animation:fadein .25s}
+.splash-in{border:0;background:#FFF8E7;border:5px solid var(--yellow);border-radius:36px;padding:22px 28px 26px;display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--ink);box-shadow:0 14px 40px rgba(0,0,0,.3);width:min(360px,100%);animation:pop-in .4s both}
+.splash-in img{width:150px;height:150px;object-fit:contain;animation:bob 2.4s ease-in-out infinite}
+.splash-in b{font-size:30px;line-height:1.1;background:var(--red);color:#fff;border-radius:999px;padding:10px 26px;box-shadow:0 6px 0 var(--red-dark);margin-top:6px;animation:splashpulse 1.6s ease-in-out infinite}
+.splash-in small{font-size:15px;color:var(--muted);font-weight:700}
+@keyframes splashpulse{50%{transform:scale(1.06)}}
+
+/* ---------- trang chủ ---------- */
+.kidbar .acct{display:block;color:var(--muted);font-weight:600;font-size:13px}
+.kidbar .btn.sm{margin-left:auto}
+.kidbar.login{border-color:var(--yellow);background:var(--yellow-soft)}
+.kidbar.login span{flex:1;min-width:200px;font-size:16px}
+.intro{background:#fff;border:3px solid var(--line);border-radius:26px;padding:16px;box-shadow:var(--shadow);margin-top:-22px;position:relative;z-index:3}
+.kidbar + .intro{margin-top:0}
+.intro-h{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.intro-h img{width:74px;height:74px;object-fit:contain;flex:none}
+.intro-h div{flex:1;min-width:220px}
+.intro-h h2{margin:0;font-size:24px;color:var(--red-dark)}
+.intro-h p{margin:2px 0 0;font-size:16px}
+.intro-steps{list-style:none;counter-reset:st;padding:0;margin:14px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px}
+.intro-steps li{counter-increment:st;background:var(--cream);border-radius:18px;padding:10px 12px 10px 48px;position:relative;font-size:15px;line-height:1.35}
+.intro-steps li:before{content:counter(st);position:absolute;left:10px;top:10px;width:28px;height:28px;border-radius:50%;background:var(--red);color:#fff;font-weight:800;display:grid;place-items:center}
+.intro-steps b{display:block;font-size:17px}
+.intro-steps span{color:var(--muted);font-weight:600}
+.sec-h{margin:26px 0 0;font-size:24px}
+.sec-sub{margin:4px 0 12px;color:var(--muted);font-weight:600;font-size:15px}
+button.tg{border:0;font-family:inherit;color:var(--ink);cursor:pointer;transition:transform .15s}
+button.tg:active{transform:scale(.97)}
+.pf-err{margin:4px 0 0;color:var(--red-dark);font-weight:700;font-size:14px;text-align:left}
+
+/* ---------- hướng dẫn lần đầu ---------- */
+.tour-box{max-width:440px;gap:8px}
+.tour-img{width:100%;max-height:200px;object-fit:contain;border-radius:20px;background:var(--cream)}
+.tour-box h3{color:var(--red-dark)}
+.tour-box p{margin:0;font-size:17px;line-height:1.45;text-align:left}
+.tour-dots{display:flex;justify-content:center;gap:6px}
+.tour-dots i{width:10px;height:10px;border-radius:50%;background:#E8D6A8}.tour-dots i.on{background:var(--red);width:26px;border-radius:999px}
+.tour-nav{display:flex;gap:8px;justify-content:space-between;flex-wrap:wrap;margin-top:6px}
+.tour-skip{align-self:center;font-size:14px;margin-top:4px}
+
+/* ---------- bản đồ chặng ---------- */
+.map .stage{background:#fff;border:3px solid var(--line);border-radius:28px;margin-top:18px;box-shadow:var(--shadow);overflow:hidden}
+.map .stage.sdone{border-color:var(--yellow)}
+.shead{padding:16px 18px 14px;background-size:cover;background-position:center right;border-bottom:3px solid var(--line)}
+.sbadge{display:inline-block;background:var(--sc);color:#fff;border-radius:12px;padding:3px 12px;font-weight:800;font-size:15px}
+.shead h3{margin:6px 0 0;font-size:26px;line-height:1.1}
+.shead h3 small{font-size:15px;color:var(--muted);font-weight:700}
+.stopic{margin-top:6px;font-size:16px}.stopic b{color:var(--sc)}
+.sdesc{margin:2px 0 0;font-size:15px;max-width:440px;color:var(--ink)}
+.smeta{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.smeta span{background:#fff;border:2px solid var(--line);border-radius:999px;padding:2px 10px;font-weight:800;font-size:14px}
+.spath{position:relative;margin:44px auto 0;max-width:560px}
+.sline{position:absolute;inset:0;width:100%;height:100%}
+.sline path{fill:none;stroke-linecap:round}
+.sline .bg{stroke:#EADCB8;stroke-width:12;stroke-dasharray:2 18}
+.sline .fg{stroke:var(--sc);stroke-width:10;opacity:.9}
+.node{position:absolute;transform:translate(-50%,-50%);border:0;background:none;padding:0;display:flex;align-items:center;color:var(--ink);animation:nodein .45s var(--d,0s) both}
+@keyframes nodein{from{opacity:0;transform:translate(-50%,-50%) scale(.6)}}
+.ndot{width:72px;height:72px;border-radius:50%;display:grid;place-items:center;font-size:28px;font-weight:800;background:#fff;border:5px solid var(--sc);box-shadow:0 6px 0 rgba(0,0,0,.12);position:relative;z-index:2;transition:transform .15s}
+.node:hover .ndot{transform:scale(1.06)}
+.node.done .ndot{background:var(--yellow);border-color:#F2A900}
+.node.now .ndot{background:var(--sc);color:#fff;border-color:#fff;box-shadow:0 0 0 5px var(--sc),0 8px 0 rgba(0,0,0,.15);animation:nodepulse 1.6s ease-in-out infinite}
+@keyframes nodepulse{50%{transform:scale(1.08)}}
+.node.lock .ndot{background:#F3EEE2;border-color:#E2D8C2;color:#BDB09A;font-size:24px}
+.nlb{position:absolute;left:84px;top:50%;transform:translateY(-50%);background:#fff;border:2px solid var(--line);border-radius:14px;padding:4px 10px;text-align:left;white-space:nowrap;max-width:min(46vw,220px);box-shadow:0 3px 0 rgba(0,0,0,.05)}
+.nlb.l{left:auto;right:84px;text-align:right}
+.nlb b{display:block;font-size:15px;line-height:1.1}
+.nlb small{display:block;font-size:13px;color:var(--muted);font-weight:700;overflow:hidden;text-overflow:ellipsis}
+.node.lock .nlb{opacity:.65}
+.node.now .nlb{border-color:var(--sc)}
+.nme{position:absolute;bottom:58px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;pointer-events:none;z-index:3;animation:bob 1.8s ease-in-out infinite}
+.nme img{width:44px;height:56px;object-fit:contain}
+.nme i{font-style:normal;background:var(--sc);color:#fff;border-radius:999px;padding:1px 10px;font-weight:800;font-size:13px;white-space:nowrap}
+.send{padding:4px 16px 16px;display:flex;flex-direction:column;gap:10px}
+.zcard{display:flex;gap:10px;align-items:center;text-decoration:none;color:var(--ink);background:#F3EEFF;border:3px dashed #B9A4EE;border-radius:18px;padding:10px 14px;font-size:24px}
+.zcard span{display:flex;flex-direction:column;font-size:15px;line-height:1.25}
+.zcard b{font-size:17px;color:#5A3FB0}
+.zcard small{color:var(--muted);font-weight:600}
+.zcard.done{border-style:solid;border-color:#7B5CD6;background:#ECE5FF}
+.zcard.lock{opacity:.6}
+.send .gold{margin-top:0}
+.sjoin{display:flex;justify-content:center;position:relative;height:54px}
+.sjoin:before{content:"";position:absolute;top:0;bottom:0;left:50%;border-left:6px dotted #E2CF9C}
+.sjoin span{position:relative;align-self:center;background:var(--cream);border:2px solid var(--line);border-radius:999px;padding:2px 12px;font-weight:800;font-size:14px;color:var(--muted)}
+.sjoin.on:before{border-color:var(--yellow)}.sjoin.on span{border-color:var(--yellow);color:var(--ink)}
+@media (max-width:560px){
+  .ndot{width:60px;height:60px;font-size:24px}
+  .nlb{left:70px;max-width:44vw}.nlb.l{right:70px}
+  .nlb small{white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+  .shead h3{font-size:22px}
+}
+
+/* ---------- góc khám phá: 2 video gợi ý ---------- */
+.xt-teaser{background:linear-gradient(135deg,#FFF4CC,#FFE9D6);border-radius:20px;padding:10px 12px 12px;text-align:left}
+.xt-th{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px}
+.xt-th b{font-size:17px}.xt-th a{font-weight:800;color:var(--red-dark);font-size:14px;white-space:nowrap}
+.xt-tv{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.xt-tc{position:relative;display:flex;flex-direction:column;background:#fff;border:3px solid;border-radius:16px;overflow:hidden;text-decoration:none;color:var(--ink);transition:transform .15s}
+.xt-tc:hover{transform:translateY(-3px)}
+.xt-tc.en{border-color:var(--ls-en)}.xt-tc.zh{border-color:var(--ls-zh)}
+.xt-tc img,.xt-tc .xt-ph{width:100%;aspect-ratio:16/9;object-fit:cover;background:#2E2620;display:grid;place-items:center;color:#fff;font-size:30px}
+.xt-play{position:absolute;left:50%;top:0;margin-top:calc((100% * 9 / 16) / 2 - 22px);transform:translateX(-50%);width:44px;height:44px;border-radius:50%;background:rgba(227,38,46,.92);color:#fff;display:grid;place-items:center;font-size:18px;box-shadow:0 3px 0 rgba(0,0,0,.2);animation:nodepulse 1.8s ease-in-out infinite}
+.xt-tc b{font-size:14px;line-height:1.2;padding:6px 8px 0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.xt-tc small{font-size:12px;color:var(--muted);padding:0 8px 6px;font-weight:700}
+.finish .xt-teaser,.cx-stage .xt-teaser,.ls-cele-more .xt-teaser{margin-top:12px}
+.xt-v.on{box-shadow:0 0 0 4px var(--yellow)}
+
+/* ---------- nhiệm vụ chia sẻ Zalo ---------- */
+.mission{background:#E9F7EF;border:3px dashed #7CC79B;border-radius:20px;padding:12px 14px;margin-top:14px;text-align:left}
+.mission.sent{border-style:solid;border-color:var(--green)}
+.mi-h{display:flex;gap:10px;align-items:flex-start}
+.mi-ic{font-size:30px;line-height:1}
+.mi-h b{display:block;font-size:17px;color:#1E7A4B}
+.mi-h small{display:block;font-size:14px;color:#4F6B5B;font-weight:600}
+.mi-row{justify-content:flex-start;gap:8px;margin-top:8px;flex-wrap:wrap}
+.mi-ok{font-weight:800;color:#1E7A4B;align-self:center}
+.ls-cele-more{margin-top:12px}
+.ls-cele-more .mission{margin-top:0}
+
+/* ---------- Little Seed: mở buổi học ---------- */
+.ls-gonext{font-size:20px;padding:14px 26px;animation:nodepulse 1.8s ease-in-out infinite}
+.ls-parent{display:flex;gap:10px;align-items:flex-start}
+.ls-parent .ls-b{flex:none}
+
+/* ---------- Little Seed: luật chơi ---------- */
+.ls-rule{display:flex;gap:16px;align-items:center;background:#fff;border-radius:22px;padding:16px;animation:rise .35s both}
+.ls-rule img{width:min(34%,200px);aspect-ratio:1;object-fit:cover;border-radius:20px;flex:none}
+.ls-rtx{flex:1;min-width:0}
+.ls-rtx .ls-lab{text-align:left;font-size:15px}
+.ls-rtx h3{margin:2px 0 6px;font-family:'Baloo 2',sans-serif;font-size:28px;line-height:1.1}
+.ls-rtx ol{margin:0;padding-left:22px;font-size:17px;line-height:1.45}
+.ls-rtx li{margin-bottom:4px}
+.ls-rrow{justify-content:flex-start;gap:10px;margin-top:10px;flex-wrap:wrap}
+@media (max-width:560px){.ls-rule{flex-direction:column;text-align:left}.ls-rule img{width:60%}}
+.ls-next{display:flex;gap:10px;align-items:center;background:#fff;border-radius:18px;padding:10px 12px;text-align:left;max-width:520px}
+.ls-next img{width:64px;height:64px;border-radius:14px;object-fit:cover;flex:none}
+.ls-next small{display:block;color:#6B5D50;font-weight:700;font-size:13px}
+.ls-next b{display:block;font-size:17px}
+.ls-next span{display:block;font-size:14px;color:#6B5D50;line-height:1.35}
+
+/* ---------- Little Seed: Dừng / Câu trước ---------- */
+.ls-bot{flex-wrap:wrap}
+.ls-ctl{display:flex;gap:8px;flex-wrap:wrap}
+.ls-stage{position:relative}
+.ls-paused{position:absolute;inset:0;z-index:5;background:rgba(255,247,234,.82);border-radius:28px;display:grid;place-items:center}
+.ls-paused[hidden]{display:none}
+.ls-resume{border:0;background:var(--ls-ok);color:#fff;border-radius:28px;padding:18px 30px;display:flex;flex-direction:column;align-items:center;gap:4px;box-shadow:0 7px 0 rgba(0,0,0,.18);font-family:inherit}
+.ls-resume svg{width:56px;height:56px}
+.ls-resume b{font-size:22px}.ls-resume small{font-size:15px;opacity:.9}
+@media (max-width:560px){.ls-ctl .ls-b{padding:9px 12px}}
+
+/* ---------- thu giọng con ---------- */
+.ls-mic{overflow:visible}
+.ls-mic .ls-lv{position:absolute;inset:0;border-radius:50%;background:rgba(217,58,58,.25);transform:scale(var(--lv,0));transition:transform .08s;pointer-events:none}
+.ls-mic.rec{background:#E02424;animation:recglow 1.1s ease-in-out infinite}
+.ls-mic.rec:after{content:"● Đang thu";position:absolute;bottom:-30px;left:50%;transform:translateX(-50%);white-space:nowrap;color:#E02424;font-weight:800;font-size:15px;animation:recblink 1s steps(2) infinite}
+@keyframes recglow{0%,100%{box-shadow:0 0 0 0 rgba(224,36,36,.5)}50%{box-shadow:0 0 0 16px rgba(224,36,36,0)}}
+@keyframes recblink{50%{opacity:.35}}
+.ls-nside .ls-mic.rec{margin-bottom:22px}
+.ls-nrow{gap:8px;flex-wrap:wrap}
+.sp-rec{color:#E02424;font-weight:800;font-size:15px;animation:recblink 1s steps(2) infinite;text-align:center;width:100%}
+.cx-pill.playing{box-shadow:0 0 0 4px var(--yellow)}
+
+/* ---------- video ---------- */
+.ls-vid video{width:100%;height:100%;display:block;background:#000}
+.ls-vhelp{margin:0;text-align:center;font-size:14px;color:#6B5D50}
+.ls-vhelp a{color:var(--ls-zh);font-weight:800}
+
+/* ---------- Canopy: luật chơi, loa trong ô ---------- */
+.cx-rule{text-align:left;animation:rise .35s both}
+.cx-rule-ic{font-size:46px;line-height:1}
+.cx-rule .ls-lab{text-align:left;font-size:15px}
+.cx-rule h3{margin:2px 0 8px;font-size:24px}
+.cx-rule ol{margin:0;padding-left:22px;font-size:18px;line-height:1.5}
+.cx-spk{cursor:pointer;user-select:none;-webkit-user-select:none}
+.cx-spk:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+.cx-opt.hasspk{padding-right:52px}
+.cx-opt .cx-spk.in{position:absolute;right:8px;top:50%;margin-top:-20px;width:40px;height:40px;z-index:2}
+.cx-opt .cx-spk.in svg{width:20px;height:20px}
+.cx-spk.ring{animation:spkring .5s}
+@keyframes spkring{30%{transform:scale(1.2)}60%{transform:scale(.95)}}

@@ -76,7 +76,7 @@ function cxQuiz(ex, box, qsIn, onDone){
       const Q=qs[i], order=Q.o.map((_,k)=>k);
       const long=(Q.p.t||'').length>20||Q.dlg||Q.passage; const lim=Q.passage&&Q.grid?90:long?45:30;
       box.innerHTML=`<div class="cx-card cx-qcard">${mode?`<div class="cx-timer"><i id="tbar"></i></div>`:''}${cxPrompt(Q, stage2)}</div>
-        <div class="cx-opts n${Q.o.length}">${order.map((k,n)=>`<button class="cx-opt cxc${n}" data-k="${k}"><span class="cx-abc">${'ABCD'[n]}</span>${cxOptHTML(Q.o[k], stage2)}${Q.o[k].l==='zh'&&stage2?spk('zh mini','data-s="'+k+'"'):''}</button>`).join('')}</div>
+        <div class="cx-opts n${Q.o.length}">${order.map((k,n)=>`<button class="cx-opt cxc${n} ${Q.o[k].l==='zh'&&stage2?'hasspk':''}" data-k="${k}"><span class="cx-abc">${'ABCD'[n]}</span>${cxOptHTML(Q.o[k], stage2)}${Q.o[k].l==='zh'&&stage2?spk('zh mini in','data-s="'+k+'"'):''}</button>`).join('')}</div>
         <div class="cx-bot">${mode&&fifty&&Q.o.length>2?`<button class="cx-pill" id="ff">50:50</button>`:''}<span class="cx-mode">${mode?'⏱ Thử thách':''}</span></div>`;
       const pq=box.querySelector('#pq'), pd=box.querySelector('#pdlg'), pp=box.querySelector('#ppass');
       const playQ=()=>cxSay(Q.p.t,Q.p.l);
@@ -84,7 +84,7 @@ function cxQuiz(ex, box, qsIn, onDone){
       if(pd) pd.onclick=()=>cxDialog(Q.dlg, ()=>{ cxHi(-1); if(Q.p.audio) cxT(playQ,400); });
       if(pp) pp.onclick=()=>cxSay(Q.passage.t, Q.passage.l);
       box.querySelectorAll('.cx-grid td').forEach(td=>td.onclick=()=>{ td.textContent=td.textContent==='✓'?'✗':td.textContent==='✗'?'':'✓'; sfx.pop(); });
-      box.querySelectorAll('.cx-spk.mini').forEach(b=>b.onclick=e=>{ e.stopPropagation(); cxSay(Q.o[+b.dataset.s]); });
+      box.querySelectorAll('.cx-spk.mini').forEach(b=>b.onclick=e=>{ e.stopPropagation(); e.preventDefault(); sfx.pop(); b.classList.remove('ring'); void b.offsetWidth; b.classList.add('ring'); cxSay(Q.o[+b.dataset.s]); });
       // tự phát lần đầu
       cxT(()=>{ if(Q.dlg) pd.click(); else if(Q.passage && Q.passage.hide) pp.click(); else if(Q.p.audio||Q.p.hide) playQ(); }, 350);
       let locked=false;
@@ -97,7 +97,7 @@ function cxQuiz(ex, box, qsIn, onDone){
         const said=Q.o[Q.a]; cxT(()=>cxSay(said), 250);
         cxT(()=>{ i++; q(); }, ok?1300:2300);
       };
-      box.querySelectorAll('.cx-opt').forEach(b=>b.onclick=()=>answer(b,+b.dataset.k));
+      box.querySelectorAll('.cx-opt').forEach(b=>b.onclick=e=>{ if(e.target.closest('.cx-spk')) return; answer(b,+b.dataset.k); });
       const ff=box.querySelector('#ff'); if(ff) ff.onclick=()=>{ fifty=false; ff.remove();
         const wrong=shuffle(order.filter(k=>k!==Q.a)).slice(0,Q.o.length-2); wrong.forEach(k=>box.querySelector(`.cx-opt[data-k="${k}"]`).classList.add('gone')); };
       if(mode){ const bar=box.querySelector('#tbar'), start=Date.now();
@@ -246,14 +246,24 @@ function cxStory(ex, box){
         <button class="cx-pill" id="py">${showPy?'Ẩn':'Hiện'} pinyin</button>
         <button class="cx-pill" id="nx">${i<S.length-1?'→':'✓'}</button>
         <button class="cx-go" id="qz">Làm câu hỏi →</button></div>`;
-    const sayPage=(cb)=>cxSay(lang==='zh'?x.zh:x.en, lang, ex.narrator, cb);
-    box.querySelector('#sz').onclick=()=>cxSay(x.zh,'zh',ex.narrator);
-    box.querySelector('#se').onclick=()=>cxSay(x.en,'en',ex.narrator);
+    const sayPage=(cb)=>cxStorySay(ex, i, lang, cb);
+    box.querySelector('#sz').onclick=()=>cxStorySay(ex, i, 'zh');
+    box.querySelector('#se').onclick=()=>cxStorySay(ex, i, 'en');
     box.querySelector('#pv').onclick=()=>{ auto=false; if(i){ i--; page(); sayPage(); } };
     box.querySelector('#nx').onclick=()=>{ auto=false; if(i<S.length-1){ i++; page(); sayPage(); } };
     box.querySelector('#lg').onclick=()=>{ lang=lang==='zh'?'en':'zh'; auto=false; page(); sayPage(); };
     box.querySelector('#py').onclick=()=>{ showPy=!showPy; page(); };
-    box.querySelector('#all').onclick=()=>{ if(auto){ auto=false; cxStop(); page(); return; } auto=true; i=0; const step=()=>{ page(); sayPage(()=>{ if(!auto) return; if(i<S.length-1){ i++; cxT(step,500); } else { auto=false; page(); } }); }; step(); };
+    box.querySelector('#all').onclick=()=>{ if(auto){ auto=false; cxStop(); page(); return; } auto=true;
+      const T=CX_STORY_T(ex, lang);
+      if(T){ /* cả truyện một bản thu: lật trang theo thời gian, giọng đều từ đầu đến cuối */
+        const from=i; let shown=i; page();
+        voicePlay(T.f,{rate:CX_RATE, start:T.s[from][0], onend:()=>{ clearInterval(cxStory.flip); if(!auto) return; auto=false; page(); }, onerr:()=>{ clearInterval(cxStory.flip); auto=false; page(); }});
+        clearInterval(cxStory.flip);
+        cxStory.flip=setInterval(()=>{ if(!auto || !document.body.contains(box)){ clearInterval(cxStory.flip); return; }
+          const t=VOICE.currentTime; let k=T.s.findIndex(([a,b])=>t>=a-0.05 && t<b); if(k<0) return;
+          if(k!==shown){ shown=k; i=k; page(); } }, 120);
+        return; }
+      i=0; const step=()=>{ page(); sayPage(()=>{ if(!auto) return; if(i<S.length-1){ i++; cxT(step,500); } else { auto=false; page(); } }); }; step(); };
     box.querySelector('#qz').onclick=()=>{ auto=false; cxStop(); quiz(); };
   };
   const quiz=()=>{
@@ -262,11 +272,22 @@ function cxStory(ex, box){
     const listenBtn=()=>{ const st=document.getElementById('cxbox'); const bar=document.createElement('div'); bar.className='cx-relisten';
       bar.innerHTML=`<button class="cx-pill" data-l="${ex.first}">🎧 Nghe lại truyện (${ex.first==='zh'?'中文':'English'})</button>${part2>=0?`<button class="cx-pill" data-l="zh">🎧 Nghe truyện (中文)</button>`:''}`;
       st.parentNode.insertBefore(bar, st);
-      bar.querySelectorAll('button').forEach(b=>b.onclick=()=>{ const l=b.dataset.l; cxSeq(S.map(x=>({t:l==='zh'?x.zh:x.en,l,who:ex.narrator}))); }); };
+      bar.querySelectorAll('button').forEach(b=>b.onclick=()=>{ const l=b.dataset.l, T=CX_STORY_T(ex,l);
+        if(T){ cxStop(); voicePlay(T.f,{rate:CX_RATE, start:T.s[0][0]}); return; }
+        cxSeq(S.map(x=>({t:l==='zh'?x.zh:x.en,l,who:ex.narrator}))); }); };
     listenBtn();
     cxQuiz(ex, box, ex.questions);
   };
   page(); cxT(()=>box.querySelector('#all').click(), 400);
+}
+
+/* đọc 1 trang truyện: lấy đúng đoạn trong bản thu liền cả truyện (giọng đều), không có thì đọc câu lẻ */
+function CX_STORY_T(ex, l){ const M=window.CX_STORY; const T=M&&M[ex.id+'|'+l]; return T&&T.s&&T.s.length===ex.sents.length?T:null; }
+function cxStorySay(ex, i, l, cb){
+  const T=CX_STORY_T(ex,l), x=ex.sents[i];
+  cxStop();
+  if(T) return voicePlay(T.f,{rate:CX_RATE, start:T.s[i][0], end:T.s[i][1], onend:()=>cb&&cb(), onerr:()=>cxSay(l==='zh'?x.zh:x.en, l, ex.narrator, cb)});
+  cxSay(l==='zh'?x.zh:x.en, l, ex.narrator, cb);
 }
 
 /* ---------- K. GIẢI ĐỐ NL8 ---------- */
