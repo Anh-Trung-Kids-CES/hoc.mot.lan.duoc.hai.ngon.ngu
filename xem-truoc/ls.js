@@ -62,6 +62,7 @@ function lsTTS(text, lang){
     try{
       if(!('speechSynthesis' in window)){ setTimeout(fin,700); return; }
       const t=String(text||'').replace(/…+|_+/g,' ').trim(); if(!t){ fin(); return; }
+      if(lang==='vi' && !VI_MACHINE_VOICE){ setTimeout(fin,300); return; }   // tiếng Việt chỉ phát file giọng cô Hươu
       const L={en:'en-US',zh:'zh-CN',vi:'vi-VN'}[lang]||'en-US';
       const u=new SpeechSynthesisUtterance(t); u.lang=L; u.rate=lang==='vi'?1:.8;
       const v=voices.find(v=>v.lang.replace('_','-').toLowerCase()===L.toLowerCase())||voices.find(v=>v.lang.toLowerCase().startsWith(L.slice(0,2)));

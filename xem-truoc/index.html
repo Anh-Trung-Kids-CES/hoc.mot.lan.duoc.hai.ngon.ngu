@@ -1061,8 +1061,11 @@ function voiceResume(){ VOICE_PAUSED=false; try{ if(!voiceIdle) VOICE.play().cat
    Câu đã thu giọng cô Hươu: tra trong LS.hd (Little Seed) và HD_FILES (huong-dan.js).
    Câu chưa có file: đọc bằng giọng tiếng Việt của máy. */
 function hdFile(text){ const L=window.LS; return (L&&L.hd&&L.hd[text]) || (window.HD_FILES&&window.HD_FILES[text]) || ''; }
+const VI_MACHINE_VOICE = false;
 function hdTTS(text, done){
   let fin=false; const end=()=>{ if(!fin){ fin=true; done&&done(); } };
+  /* Không đọc tiếng Việt bằng giọng máy (nghe không hay, không phải giọng cô Hươu): câu chưa có file thu thì chỉ hiện chữ */
+  if(!VI_MACHINE_VOICE) return setTimeout(end, 300);
   try{
     if(!('speechSynthesis' in window)) return setTimeout(end, 300);
     const v=voices.find(v=>/^vi/i.test(v.lang)); if(!v) return setTimeout(end, 300);
