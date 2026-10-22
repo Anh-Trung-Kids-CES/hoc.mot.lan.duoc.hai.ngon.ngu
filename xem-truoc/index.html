@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="ls.css">
 <link rel="stylesheet" href="bo-sung.css">
 <link rel="stylesheet" href="bo-cuc.css">
+<link rel="stylesheet" href="qua.css">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+SC:wght@500;700&display=swap" rel="stylesheet">
 <style>
 :root{color-scheme:light;
@@ -428,6 +429,7 @@ a.gtab{text-decoration:none}
   <button class="sd-kid" id="sdKid" type="button"><img src="tai-nguyen/nhan-vat/kids_bong_a.webp" alt=""><b id="sdName">Đăng nhập</b><span class="star-count" id="starCount">⭐ 0</span></button>
   <a class="sd-btn c1" href="#/"><span class="sd-ic">🏠</span><span>Trang chủ</span></a>
   <a class="sd-btn c2" id="sdMap" href="#/"><span class="sd-ic">🗺️</span><span>Bản đồ</span></a>
+  <a class="sd-btn c6" id="sdQua" href="#/qua"><span class="sd-ic">🎁</span><span>Đổi quà</span></a>
   <button class="sd-btn c3" id="sdBack" type="button"><span class="sd-ic">↩️</span><span>Quay lại</span></button>
   <button class="sd-btn c4" id="sdHelp" type="button"><span class="sd-ic">❓</span><span>Hướng dẫn</span></button>
   <button class="sd-btn c5" id="muteBtn" type="button" aria-label="Bật/tắt tiếng hiệu ứng (giọng đọc vẫn phát)"><span class="sd-ic" id="muteIc">🔊</span><span>Tiếng</span></button>
@@ -446,6 +448,7 @@ a.gtab{text-decoration:none}
 <script src="canopy.js"></script>
 <script src="canopy-games.js"></script>
 <script src="canopy-speak.js"></script>
+<script src="qua.js"></script>
 <script>
 /* =====================================================================
    PHẦN DỮ LIỆU — SỬA NỘI DUNG Ở ĐÂY
@@ -899,6 +902,7 @@ function mergeProg(a,b){
   const out=Object.assign({},a||{});
   for(const k in (b||{})){ const x=out[k], y=b[k];
     if(!x){ out[k]=y; continue; }
+    if(k==='_shop'){ out[k]=((y&&y.t)||0)>((x&&x.t)||0)?y:x; continue; }
     const sc=s=>(s.done?1000:0)+Object.keys(s.ls||{}).length*10+Object.keys(s.ex||{}).length*10+(s.clipSent?5:0);
     if(sc(y)>sc(x)) out[k]=y; }
   return out;
@@ -933,7 +937,8 @@ function dayPoints0(g,i){
 function roundPoints(g,r){ let n=0; for(let i=r*PER;i<r*PER+PER;i++) n+=dayPoints(g,i); return n; }
 function groupPoints(g){ return [0,1,2].reduce((a,r)=>a+roundPoints(g,r),0); }
 function myPoints(){ if(KID && GROUPS[KID.group]) return groupPoints(KID.group); return Object.keys(GROUPS).reduce((a,g)=>a+groupPoints(g),0); }
-function updateStars(){ const el=document.getElementById('starCount'); el.textContent='⭐ '+myPoints();
+function updateStars(){ const el=document.getElementById('starCount'); el.textContent='⭐ '+(typeof qWallet==='function'?qWallet():myPoints());
+  if(typeof qSide==='function') qSide();
   const nm=document.getElementById('sdName'); if(nm) nm.textContent=KID&&!KID.temp?KID.name:(TEACHER?'Giáo viên':'Đăng nhập');
   const mp=document.getElementById('sdMap'); if(mp) mp.href=KID&&KID.group?'#/g/'+KID.group:'#/'; }
 function bumpStars(){ const el=document.getElementById('starCount'); el.classList.remove('bump'); void el.offsetWidth; el.classList.add('bump'); }
@@ -1283,6 +1288,7 @@ function viewHome(){
       ${hubTile({id:'tParent', img:'tai-nguyen/trang/ls_man_khen.webp', c:'#F28C00', t:'Ba mẹ đồng hành', sub:'Chương trình · cách học'})}
       ${hubTile({id:'tTour', img:'tai-nguyen/nhan-vat/huou_huou1_a.webp', size:'auto 92%', pos:'50% 100%', bg:'#DDEBFF', c:'#2F6FD6', t:'Hướng dẫn', sub:'Cô Hươu chỉ cách học'})}
       ${hubTile({href:`#/g/${g}/vang/0`, img:'tai-nguyen/trang/cn_stamps.webp', pos:'100% 100%', size:'200% auto', bg:'#FFF8E1', c:'#C9A227', t:'Bảng vàng', sub:'Top 10 nhà thám hiểm'})}
+      ${hubTile({href:'#/qua', img:'tai-nguyen/qua/gift_rubik.webp', size:'auto 62%', pos:'50% 55%', bg:'#FFE4EC', c:'#E3487A', t:'Phòng đổi quà', sub:'Đổi sao lấy quà', badge:'⭐ '+qWallet()})}
       ${hubTile({href:`#/g/${g}/them/${Math.min(3,Math.max(1,Math.ceil((doneCount(g)+1)/6)))}`, img:'tai-nguyen/trang/ls_o_xem.webp', c:'#7B5CD6', t:'Góc khám phá', sub:'Video, trò chơi thêm'})}
     </div>
     <button class="tbtn h2-gv" id="tbtn">${TEACHER?'🔓 Tắt chế độ giáo viên':'🔑 Chế độ giáo viên'}</button>
@@ -1421,7 +1427,7 @@ function viewGroup(g){
         <path d="${road}" class="edge"/><path d="${road}" class="sand"/>${prog?`<path d="${prog}" class="gold"/>`:''}<path d="${road}" class="dash"/></svg>
       ${boards}${zooms}${signs}
       <a class="wfinal ${n>=LEARN_TOTAL?'on':''}" href="#/g/${g}/vang/0" style="left:${Wd.end[0]}%;top:${Wd.end[1]}%"><span>🏆</span><small>Chung kết</small></a>
-      ${nowPos?`<div class="wme" style="left:${nowPos[0]}%;top:${nowPos[1]}%"><img src="tai-nguyen/nhan-vat/kids_bong_a.webp" alt=""></div>`:''}
+      ${nowPos?`<div class="wme" style="left:${nowPos[0]}%;top:${nowPos[1]}%"><img src="${avaSrc()}" alt=""></div>`:''}
       <div class="whud">
         <span class="wh-name" style="--c:${G.color}">${esc(G.icon)} ${esc(G.name)}</span>
         <span class="wh-prog"><i style="width:${n/LEARN_TOTAL*100}%"></i><b>${n}/${LEARN_TOTAL} buổi</b></span>
@@ -1869,6 +1875,7 @@ function route(){
   else if(p[0]==='g' && p[1] && p[2]==='them') viewXemThem(p[1], +(p[3]||1), p[4]&&/^v\d+$/.test(p[4])?+p[4].slice(1):-1);
   else if(p[0]==='g' && p[1] && p[2]) viewDay(p[1], +p[2]-1, p[3]);
   else if(p[0]==='g' && p[1]) viewGroup(p[1]);
+  else if(p[0]==='qua') viewQua(p[1]);
   else viewHome();
   artWatch();
 }
@@ -1878,6 +1885,7 @@ document.getElementById('muteBtn').onclick=toggleMute;
 updateStars(); route(); showSplash();
 /* thanh bên trái */
 document.getElementById('sdBack').onclick=()=>{ sfx.pop(); const p=location.hash.replace(/^#\/?/,'').split('/').filter(Boolean);
+  if(p[0]==='qua'){ location.hash=p[1]?'#/qua':'#/'; return; }
   if(p.length>=4) location.hash='#/g/'+p[1]+'/'+p[2]; else if(p.length>=3) location.hash='#/g/'+p[1]; else location.hash='#/'; };
 document.getElementById('sdHelp').onclick=()=>{ sfx.pop(); startTour(true); };
 document.getElementById('sdKid').onclick=()=>{ sfx.pop(); if(KID&&!KID.temp) parentPanel(); else askProfile(KID&&KID.group||'', route); };

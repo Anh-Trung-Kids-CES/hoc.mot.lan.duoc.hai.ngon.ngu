@@ -12,9 +12,15 @@
  *   4. Bấm Triển khai, cho phép quyền truy cập, chép "URL ứng dụng web" (đuôi /exec).
  *   5. Dán URL đó vào  xem-truoc/index.html  ở dòng  const SCORE_API = "…";
  *
- * Sheet tự tạo 2 trang:
+ * Sheet tự tạo 3 trang:
  *   TienDo : mã bé | tên | tài khoản (đã che) | khoá | cập nhật | tiến độ (JSON)
  *   Diem   : mã bé | tên | khoá | buổi | chặng | điểm | cập nhật
+ *   DoiQua : phiếu đổi quà thật / học bổng từ Phòng đổi quà. Cô đổi cột "status" thành
+ *            duyet (đã duyệt) · da_trao (đã trao) · tu_choi (không duyệt – web tự hoàn sao cho bé),
+ *            ghi lý do ở cột "note" nếu cần. Web của bé tự cập nhật trạng thái.
+ *
+ * CẬP NHẬT CODE (khi có bản mới): dán đè toàn bộ file này → Lưu → Triển khai → Quản lý các bản triển khai
+ *   → bấm biểu tượng bút chì → Phiên bản: "Phiên bản mới" → Triển khai. Link /exec giữ nguyên.
  * Web chỉ gửi mã băm của SĐT/Gmail, không gửi số điện thoại thật.
  */
 
@@ -24,6 +30,7 @@ function sheet_(name, head) {
   if (!sh) { sh = ss.insertSheet(name); sh.appendRow(head); sh.setFrozenRows(1); }
   return sh;
 }
+const QUA_HEAD = ['code', 'time', 'kid', 'name', 'acct', 'group', 'kind', 'item', 'itemName', 'cost', 'earned', 'spent', 'lessons', 'zooms', 'status', 'note'];
 function json_(o) {
   return ContentService.createTextOutput(JSON.stringify(o)).setMimeType(ContentService.MimeType.JSON);
 }
@@ -38,6 +45,16 @@ function doPost(e) {
   const lock = LockService.getScriptLock(); lock.waitLock(10000);
   try {
     const d = JSON.parse(e.postData.contents || '{}');
+    if (d.action === 'redeem') {
+      if (!d.id || !d.code) return json_({ ok: false });
+      const sh = sheet_('DoiQua', QUA_HEAD);
+      if (findRow_(sh, d.code) > 0) return json_({ ok: true, dup: true });
+      sh.appendRow([d.code, new Date(), d.id, d.name || '', d.acct || '', d.group || '', d.kind === 'hb' ? 'Học bổng' : 'Quà thật',
+        d.item || '', d.itemName || '', +d.cost || 0, +d.earned || 0, +d.spent || 0, +d.lessons || 0, +d.zooms || 0, 'cho', '']);
+      const r = sh.getLastRow();
+      sh.getRange(r, 15).setDataValidation(SpreadsheetApp.newDataValidation().requireValueInList(['cho', 'duyet', 'da_trao', 'tu_choi'], true).build());
+      return json_({ ok: true });
+    }
     if (d.action === 'save') {
       if (!d.id) return json_({ ok: false });
       const sh = sheet_('TienDo', ['id', 'name', 'acct', 'group', 'updated', 'prog']);
@@ -66,6 +83,11 @@ function doPost(e) {
 
 function doGet(e) {
   const p = e.parameter || {};
+  if (p.action === 'orders') {
+    const sh = sheet_('DoiQua', QUA_HEAD), n = sh.getLastRow(), id = String(p.id || ''), out = [];
+    if (n > 1) sh.getRange(2, 1, n - 1, 16).getValues().forEach(r => { if (String(r[2]) === id) out.push({ code: r[0], status: String(r[14] || 'cho'), note: String(r[15] || '') }); });
+    return json_({ orders: out });
+  }
   if (p.action === 'load') {
     const sh = sheet_('TienDo', ['id', 'name', 'acct', 'group', 'updated', 'prog']);
     const r = findRow_(sh, String(p.id || ''));
