@@ -4,6 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Little Language Explorers</title>
+<meta name="description" content="Tiết kiệm thời gian · Học tập vui vẻ · Xây dựng năng lực chuyển ngữ · Học tập thông minh. Thử thách 21 ngày Bật phản xạ Anh – Trung cho bé 5–10 tuổi (CES Vietnam).">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Anh-Trung-Kids">
+<meta property="og:title" content="Anh-Trung-Kids – Học một lần, được hai ngôn ngữ">
+<meta property="og:description" content="Tiết kiệm thời gian · Học tập vui vẻ · Xây dựng năng lực chuyển ngữ · Học tập thông minh. Thử thách 21 ngày Bật phản xạ Anh – Trung cho bé 5–10 tuổi (CES Vietnam).">
+<meta property="og:url" content="https://anh-trung-kids-ces.github.io/hoc.mot.lan.duoc.hai.ngon.ngu/xem-truoc/">
+<meta property="og:image" content="https://anh-trung-kids-ces.github.io/hoc.mot.lan.duoc.hai.ngon.ngu/xem-truoc/tai-nguyen/trang/chia_se.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Anh-Trung-Kids: Học một lần, được hai ngôn ngữ">
+<meta property="og:locale" content="vi_VN">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="canopy.css">
 <link rel="stylesheet" href="ls.css">
@@ -1309,8 +1321,8 @@ function viewHome(){
     <div class="h2-top"><span class="h2-kick">Thử thách 21 ngày Bật phản xạ Anh – Trung</span>
       <h1>Những nhà thám hiểm ngôn ngữ nhí</h1></div>
     <div class="h2-grid">
-      ${hubTile({cls:'big', href:'#/g/seed', img:'tai-nguyen/trang/the_gioi_seed.webp', c:'#3BB273', t:'🌱 Little Seed', sub:DEMO?`Bé mới bắt đầu · học thử ${demoDone('seed')}/${DEMO_N} buổi`:`Bé mới bắt đầu · đã đi ${doneCount('seed')}/${LEARN_TOTAL} buổi`})}
-      ${hubTile({cls:'big', href:'#/g/canopy', img:'tai-nguyen/trang/the_gioi_canopy.webp', c:'#E3262E', t:'🌳 Canopy', sub:DEMO?`Bé có A1 + YCT 1 · học thử ${demoDone('canopy')}/${DEMO_N} buổi`:`Bé có A1 + YCT 1 · đã đi ${doneCount('canopy')}/${LEARN_TOTAL} buổi`})}
+      ${hubTile({cls:'big', href:'#/g/seed', img:'tai-nguyen/trang/the_gioi_seed.webp', c:'#3BB273', t:'🌱 Little Seed', sub:DEMO?`Bé mới bắt đầu · đã học ${demoDone('seed')}/${DEMO_N} buổi`:`Bé mới bắt đầu · đã đi ${doneCount('seed')}/${LEARN_TOTAL} buổi`})}
+      ${hubTile({cls:'big', href:'#/g/canopy', img:'tai-nguyen/trang/the_gioi_canopy.webp', c:'#E3262E', t:'🌳 Canopy', sub:DEMO?`Bé có A1 + YCT 1 · đã học ${demoDone('canopy')}/${DEMO_N} buổi`:`Bé có A1 + YCT 1 · đã đi ${doneCount('canopy')}/${LEARN_TOTAL} buổi`})}
       ${hubTile({id:'tParent', img:'tai-nguyen/trang/ls_man_khen.webp', c:'#F28C00', t:'Ba mẹ đồng hành', sub:'Chương trình · cách học'})}
       ${hubTile({id:'tTour', img:'tai-nguyen/nhan-vat/huou_huou1_a.webp', size:'auto 92%', pos:'50% 100%', bg:'#DDEBFF', c:'#2F6FD6', t:'Hướng dẫn', sub:'Cô Hươu chỉ cách học'})}
       ${hubTile({href:'#/hanh-trinh', img:'tai-nguyen/trang/ls_stickers.webp', pos:'50% 50%', size:'auto 92%', bg:'#FFF8E1', c:'#C9A227', t:'Hành trình của con', sub:'Huy hiệu · ngày học · lần nói'})}
@@ -1901,12 +1913,12 @@ function demoProfile(g, then){
   const ov=document.createElement('div'); ov.className='overlay pf';
   ov.innerHTML=`<form class="modal" id="pf" novalidate>
     <div class="mart"><img class="mportrait cut" src="tai-nguyen/nhan-vat/kids_bong_a.webp" alt=""></div>
-    <h3>Học thử miễn phí</h3>
-    <p class="hint">Con được học thử ${DEMO_N} buổi đầu của mỗi khoá. Ba mẹ chỉ cần nhập tên con, không cần số điện thoại.</p>
+    <h3>Chào mừng con đến <span style="white-space:nowrap">Anh-Trung-Kids!</span></h3>
+    <p class="hint"><b>Học một lần, được hai ngôn ngữ.</b> Con được học miễn phí ${DEMO_N} buổi đầu của mỗi khoá. Ba mẹ chỉ cần nhập tên con, không cần số điện thoại.</p>
     <label for="kname">Tên của con</label>
     <input id="kname" required maxlength="24" autocomplete="off" placeholder="Ví dụ: Bông, Minh An" value="${esc(KID&&KID.name||'')}">
     <p class="pf-err" id="pferr" hidden></p>
-    <div class="row"><button class="btn" type="submit">Học thử ngay! 🚀</button></div>
+    <div class="row"><button class="btn" type="submit">Bắt đầu học! 🚀</button></div>
   </form>`;
   document.body.appendChild(ov);
   ov.querySelector('#kname').focus();
@@ -1928,7 +1940,7 @@ function demoCheckDone(){
 function demoGate(why){
   if(!DEMO || document.querySelector('.overlay.demo')) return;
   const G=KID&&GROUPS[KID.group], nm=KID&&KID.name?esc(KID.name):'Con';
-  const h = why==='xong' ? `${nm} đã học xong ${DEMO_N} buổi học thử! 🎉`
+  const h = why==='xong' ? `${nm} đã học xong ${DEMO_N} buổi đầu tiên! 🎉`
           : why==='vang' ? 'Bảng vàng dành cho nhà thám hiểm đã đăng ký 🏆'
           : why==='qua'  ? 'Đổi quà thật dành cho nhà thám hiểm đã đăng ký 🎁'
           : 'Phần này dành cho nhà thám hiểm đã đăng ký 🔒';
@@ -1937,7 +1949,7 @@ function demoGate(why){
     <button class="pp-x" aria-label="Đóng">✕</button>
     <img class="dm-img" src="tai-nguyen/trang/ls_man_khen.webp" alt="">
     <h3>${h}</h3>
-    <p>Bản học thử mở <b>${DEMO_N} buổi đầu</b> của mỗi khoá. Đăng ký <b>Thử thách 21 ngày Bật phản xạ Anh – Trung</b> để con đi tiếp cả hành trình:</p>
+    <p><b>Anh-Trung-Kids</b>: học một lần, được hai ngôn ngữ. Con đã học miễn phí <b>${DEMO_N} buổi đầu</b> của mỗi khoá. Đăng ký <b>Thử thách 21 ngày Bật phản xạ Anh – Trung</b> để con đi tiếp cả hành trình:</p>
     <ul class="dm-list">
       <li>🗺️ Đủ <b>18 buổi tự học</b> qua 3 chặng: Vòng khám phá → Vòng bứt phá → Vòng chinh phục</li>
       <li>🎥 <b>3 buổi Zoom</b> cùng cô giáo, cuối mỗi chặng</li>
@@ -1957,8 +1969,9 @@ function demoGate(why){
 }
 if(DEMO){
   document.body.classList.add('is-demo');
+  document.title='Anh-Trung-Kids – Học một lần, được hai ngôn ngữ';
   const rb=document.createElement('a'); rb.className='demo-rb'; rb.href='#'; rb.setAttribute('role','button');
-  rb.innerHTML='<b>Bản học thử</b><span>· '+DEMO_N+' buổi mỗi khoá ·</span><i>Đăng ký học đủ 21 ngày →</i>';
+  rb.innerHTML='<b>Anh-Trung-Kids</b><span>· Học một lần, được hai ngôn ngữ ·</span><i>Đăng ký học đủ 21 ngày →</i>';
   rb.onclick=e=>{ e.preventDefault(); sfx.pop(); demoGate(); };
   document.body.appendChild(rb);
   demoTrack('mo');
