@@ -874,7 +874,14 @@ function lsSet(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){
    Tiến độ học thử lưu riêng trên máy, không gửi lên Bảng vàng, không lẫn với tài khoản học thật. */
 const DEMO = /[?&]demo=1/.test(location.search);
 const DEMO_N = 3;
-const DANG_KY_LINK = "https://forms.gle/incohqzJzMtHYLXD8";   // trang đăng ký dự án (đổi sang link trang ưu đãi nếu muốn)
+const DANG_KY_LINK = "https://ceseducation.github.io/little-language-explorers/";   // trang ưu đãi + đăng ký dự án
+/* Link CTV: /demo/?ref=CTV01 … CTV10. Web nhớ mã của link CTV gần nhất rồi chuyển kèm ?ref= sang trang đăng ký,
+   để đăng ký được ghi đúng mã CTV ở cột P tab "Đăng ký Web" (Sheet DATA Dự án). */
+(function(){ try{ let r=new URLSearchParams(location.search).get('ref'); if(!r) return;
+  r=r.trim().toUpperCase().replace(/[^A-Z0-9]/g,''); const m=r.match(/^CTV(\d)$/); if(m) r='CTV0'+m[1];
+  if(r) localStorage.setItem('lle-ref', JSON.stringify({code:r, t:Date.now()})); }catch(e){} })();
+function demoRef(){ try{ const d=JSON.parse(localStorage.getItem('lle-ref')||'null'); if(d && Date.now()-d.t<30*864e5) return d.code; }catch(e){} return ''; }
+function dangKyLink(){ const r=demoRef(); return DANG_KY_LINK+(r?(DANG_KY_LINK.includes('?')?'&':'?')+'ref='+encodeURIComponent(r):''); }
 const DEMO_FEE = "79.000đ", DEMO_HAN = "hết ngày 25/10/2026", DEMO_KHAI_MAC = "thứ Hai 26/10/2026";
 const KID_KEY = DEMO ? 'lle-kid-demo' : 'lle-kid';
 let TEACHER = !DEMO && (/[?&]gv=1/.test(location.search) || lsGet('lle-teacher',false)===true);
@@ -1923,7 +1930,7 @@ function demoGate(why){
       <li>🌟 <b>Chung kết tỏa sáng</b> livestream: cúp, cờ và giấy chứng nhận cho Top 3 mỗi khoá</li>
     </ul>
     <p class="dm-info">Phí <b>${DEMO_FEE}</b> cho sự kiện và học liệu 21 ngày · Hạn đăng ký: <b>${DEMO_HAN}</b> · Khai mạc: <b>${DEMO_KHAI_MAC}</b></p>
-    <div class="row"><a class="btn g" href="${DANG_KY_LINK}" target="_blank" rel="noopener">📝 Đăng ký cho con</a>
+    <div class="row"><a class="btn g" href="${dangKyLink()}" target="_blank" rel="noopener">📝 Đăng ký cho con</a>
       <button class="btn y" id="dmLater" type="button">${why==='xong'?'Xem lại bài đã học':'Để sau'}</button></div>
   </div>`;
   document.body.appendChild(ov);
