@@ -162,7 +162,7 @@ function viewSeedDay(g,i,sub){
   document.body.classList.add('hub');
   app.innerHTML=`<div class="screen dayscr">
     <section class="dy-card">
-      <div class="dy-img" style="background-image:url('${esc(R.banner)}')"></div>
+      <div class="dy-img" style="background-image:url('${esc(String(R.banner).replace(/\.webp$/,'_the.webp'))}')"></div>
       <div class="dy-in">
         <span class="ls-kick">Chặng ${D.r} · ${esc(R.topic)} · Buổi ${lessonNo(i)}</span>
         <h2>${titleHTML(D.t)}</h2>
