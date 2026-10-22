@@ -83,6 +83,7 @@ function doPost(e) {
 
 function doGet(e) {
   const p = e.parameter || {};
+  if (p.action === 'visit') return visit_(p);
   if (p.action === 'orders') {
     const sh = sheet_('DoiQua', QUA_HEAD), n = sh.getLastRow(), id = String(p.id || ''), out = [];
     if (n > 1) sh.getRange(2, 1, n - 1, 16).getValues().forEach(r => { if (String(r[2]) === id) out.push({ code: r[0], status: String(r[14] || 'cho'), note: String(r[15] || '') }); });
@@ -105,4 +106,25 @@ function doGet(e) {
   const all = Object.values(tot).sort((a, b) => b.points - a.points);
   const me = all.findIndex(x => x.kid === p.kid);
   return json_({ top: all.slice(0, 10).map(x => ({ name: x.name, points: x.points })), me: me >= 0 ? { rank: me + 1, points: all[me].points } : null });
+}
+
+/* ---------- Truy cập bản học thử theo mã CTV ----------
+ * Link CTV: …/demo/?ref=CTV01 … CTV10. Web gửi 4 loại sự kiện:
+ *   mo = mở trang học thử · hoc = bé nhập tên, bắt đầu học thử · xong3 = học xong 3 buổi · bam_dk = bấm "Đăng ký cho con"
+ * Mỗi sự kiện ghi 1 dòng vào tab "Truy cập học thử" của Sheet "DATA Dự án";
+ * tab "Thống kê CTV" (cột H–L) tự đếm theo mã, cạnh số đăng ký và số đã đóng phí.
+ * Tài khoản triển khai Apps Script này cần có quyền sửa Sheet DATA Dự án. */
+const DATA_DU_AN_ID = '1antBQ-MDz2a4U-w-B2y6XTnF1Pzln7QwwUxxJm5TanI';
+function visit_(p) {
+  const lock = LockService.getScriptLock(); lock.waitLock(10000);
+  try {
+    const ref = String(p.ref || 'TU_NHIEN').toUpperCase().replace(/[^A-Z0-9_]/g, '').slice(0, 20) || 'TU_NHIEN';
+    const ev = ['mo', 'hoc', 'xong3', 'bam_dk'].indexOf(p.ev) >= 0 ? p.ev : 'mo';
+    const ss = SpreadsheetApp.openById(DATA_DU_AN_ID);
+    let sh = ss.getSheetByName('Truy cập học thử');
+    if (!sh) { sh = ss.insertSheet('Truy cập học thử'); sh.appendRow(['Thời gian', 'Mã CTV', 'Mã người xem', 'Sự kiện', 'Khoá']); sh.setFrozenRows(1); }
+    sh.appendRow([new Date(), ref, String(p.vid || '').slice(0, 24), ev, String(p.g || '').slice(0, 10)]);
+    return json_({ ok: true });
+  } catch (err) { return json_({ ok: false }); }
+  finally { lock.releaseLock(); }
 }

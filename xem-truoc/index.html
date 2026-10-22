@@ -881,6 +881,14 @@ const DANG_KY_LINK = "https://ceseducation.github.io/little-language-explorers/"
   r=r.trim().toUpperCase().replace(/[^A-Z0-9]/g,''); const m=r.match(/^CTV(\d)$/); if(m) r='CTV0'+m[1];
   if(r) localStorage.setItem('lle-ref', JSON.stringify({code:r, t:Date.now()})); }catch(e){} })();
 function demoRef(){ try{ const d=JSON.parse(localStorage.getItem('lle-ref')||'null'); if(d && Date.now()-d.t<30*864e5) return d.code; }catch(e){} return ''; }
+/* Đếm truy cập bản học thử theo mã CTV: gửi một "tín hiệu" GET tới Apps Script (sheet TruyCapHocThu).
+   Dùng GET để bản Apps Script cũ (chưa có action=visit) chỉ trả Bảng vàng, không ghi nhầm dữ liệu. */
+function demoVid(){ let v=lsGet('lle-vid',''); if(!v){ v=Date.now().toString(36)+Math.random().toString(36).slice(2,8); lsSet('lle-vid',v); } return v; }
+function demoTrack(ev, g){
+  if(!DEMO || !SCORE_API) return;
+  try{ const q=new URLSearchParams({action:'visit', ref:demoRef()||'TU_NHIEN', vid:demoVid(), ev, g:g||(KID&&KID.group)||'', t:Date.now()});
+    new Image().src=SCORE_API+'?'+q.toString(); }catch(e){}
+}
 function dangKyLink(){ const r=demoRef(); return DANG_KY_LINK+(r?(DANG_KY_LINK.includes('?')?'&':'?')+'ref='+encodeURIComponent(r):''); }
 const DEMO_FEE = "79.000đ", DEMO_HAN = "hết ngày 25/10/2026", DEMO_KHAI_MAC = "thứ Hai 26/10/2026";
 const KID_KEY = DEMO ? 'lle-kid-demo' : 'lle-kid';
@@ -1900,14 +1908,14 @@ function demoProfile(g, then){
     const name=ov.querySelector('#kname').value.trim(), err=ov.querySelector('#pferr');
     if(!name){ err.hidden=false; err.textContent='Ba mẹ nhập tên của con nhé.'; return; }
     KID={name, id:'demo-'+slugName(name), group:g, demo:true};
-    lsSet(KID_KEY,KID); ov.remove(); sfx.win(); updateStars(); then&&then();
+    lsSet(KID_KEY,KID); demoTrack('hoc', g); ov.remove(); sfx.win(); updateStars(); then&&then();
   });
 }
 const demoShown={};
 function demoCheckDone(){
   if(!DEMO || !KID || !GROUPS[KID.group]) return; const g=KID.group;
   if(demoShown[g] || demoDone(g)<DEMO_N || lsGet('lle-demo-xong-'+g,false)) return;
-  demoShown[g]=true; lsSet('lle-demo-xong-'+g,true);
+  demoShown[g]=true; lsSet('lle-demo-xong-'+g,true); demoTrack('xong3', g);
   setTimeout(()=>demoGate('xong'), 2200);
 }
 function demoGate(why){
@@ -1936,6 +1944,7 @@ function demoGate(why){
   document.body.appendChild(ov);
   const close=()=>ov.remove();
   ov.querySelector('.pp-x').onclick=close; ov.querySelector('#dmLater').onclick=close;
+  ov.querySelector('a.btn.g').addEventListener('click',()=>demoTrack('bam_dk'));
   ov.addEventListener('click',e=>{ if(e.target===ov) close(); });
   if(why==='xong'){ confetti(40); sfx.win(); }
 }
@@ -1945,6 +1954,7 @@ if(DEMO){
   rb.innerHTML='<b>Bản học thử</b><span>· '+DEMO_N+' buổi mỗi khoá ·</span><i>Đăng ký học đủ 21 ngày →</i>';
   rb.onclick=e=>{ e.preventDefault(); sfx.pop(); demoGate(); };
   document.body.appendChild(rb);
+  demoTrack('mo');
 }
 
 function route(){
