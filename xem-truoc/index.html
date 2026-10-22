@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="bo-cuc.css">
 <link rel="stylesheet" href="qua.css">
 <link rel="stylesheet" href="khen.css">
+<link rel="stylesheet" href="dien-thoai.css">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+SC:wght@500;700&display=swap" rel="stylesheet">
 <style>
 :root{color-scheme:light;
@@ -435,7 +436,6 @@ a.gtab{text-decoration:none}
   <button class="sd-btn c4" id="sdHelp" type="button"><span class="sd-ic">❓</span><span>Hướng dẫn</span></button>
   <button class="sd-btn c5" id="muteBtn" type="button" aria-label="Bật/tắt tiếng hiệu ứng (giọng đọc vẫn phát)"><span class="sd-ic" id="muteIc">🔊</span><span>Tiếng</span></button>
 </aside>
-<div class="rotate" aria-hidden="true"><div><span class="rot-ph">📱</span><b>Con xoay ngang điện thoại nhé!</b><small>Web học đẹp nhất khi để màn hình nằm ngang.</small></div></div>
 <main id="app"></main>
 <div id="mascot" aria-hidden="true"><span class="mimg"></span><div class="bubble"></div></div>
 <div class="toast" id="toast"></div>
@@ -1449,11 +1449,13 @@ function viewGroup(g){
   const curStage=nk>=0?Math.floor(nk/6):(n?2:0);
   app.innerHTML=`<div class="screen worldscr">
     <div class="world" style="--wbg:url('tai-nguyen/trang/the_gioi_${g}.webp')">
+      <div class="wcanvas">
       <svg class="wroad" viewBox="0 0 160 90" preserveAspectRatio="none" aria-hidden="true">
         <path d="${road}" class="edge"/><path d="${road}" class="sand"/>${prog?`<path d="${prog}" class="gold"/>`:''}<path d="${road}" class="dash"/></svg>
       ${boards}${zooms}${signs}
       <a class="wfinal ${n>=LEARN_TOTAL?'on':''}" href="#/g/${g}/vang/0" style="left:${Wd.end[0]}%;top:${Wd.end[1]}%"><span>🏆</span><small>Chung kết</small></a>
       ${nowPos?`<div class="wme" style="left:${nowPos[0]}%;top:${nowPos[1]}%"><img src="${avaSrc()}" alt=""></div>`:''}
+      </div>
       <div class="whud">
         <span class="wh-name" style="--c:${G.color}">${esc(G.icon)} ${esc(G.name)}</span>
         <span class="wh-prog"><i style="width:${n/LEARN_TOTAL*100}%"></i><b>${n}/${LEARN_TOTAL} buổi</b></span>
@@ -1476,6 +1478,9 @@ function viewGroup(g){
   app.querySelectorAll('.wzoom.lock').forEach(a=>a.onclick=e=>{ e.preventDefault(); sfx.no(); if(DEMO) return demoGate(); toast('Buổi Zoom mở khi con học xong buổi 6 của chặng này 🔒'); });
   const lines=nk>=0?['Đây là bản đồ khám phá của con.','Con chạm vào buổi học màu đỏ đang nhấp nháy để bắt đầu nhé!']:['Con đã đi hết bản đồ rồi! Giỏi quá!'];
   document.getElementById('mapHelp').onclick=()=>hdSay(lines);
+  /* điện thoại dọc: bản đồ cuộn ngang, tự cuộn tới buổi con đang học */
+  requestAnimationFrame(()=>{ const W=app.querySelector('.world'), t=app.querySelector('.sign.now')||[...app.querySelectorAll('.sign.done')].pop();
+    if(W && t && W.scrollWidth>W.clientWidth+4) W.scrollLeft=Math.max(0, t.offsetLeft-W.clientWidth/2); });
   mascot('hi');
   if(STARTED){ const first=!mapSpoke.hi; mapSpoke.hi=true; mapSpoke.home=true; hdSay([first?'Chào con! Cô là cô Hươu.':'', ...lines]); }
 }

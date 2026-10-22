@@ -9,6 +9,7 @@ Web tự học cho Thử thách 21 ngày Bật phản xạ Anh – Trung (CES Vi
 - `canopy-data.js`, `canopy.js`, `canopy-games.js`, `canopy-speak.js`, `canopy.css` – Canopy: 18 ngày, 13 dạng bài
 - `xem-them.js` – Góc khám phá thêm (video, game chơi cùng ba mẹ) của từng vòng
 - `tai-nguyen/` – hình (nét 2D) và giọng đọc của từng nhân vật; `tai-nguyen/canopy-audio-map.js` nối lời với file giọng Canopy
+- `dien-thoai.css` – bố cục điện thoại (cầm dọc: thanh nút dưới đáy, bản đồ kéo ngang; nằm ngang: bài học gọn một màn)
 - `.nojekyll` – giúp GitHub Pages phục vụ file nguyên trạng
 
 ## Sửa nội dung
@@ -34,3 +35,9 @@ Tiến độ ở chế độ giáo viên lưu riêng (`lle-progress-gv`), không
 - **Canopy**: nút loa nằm trong ô đáp án (trước đây trình duyệt đẩy loa ra ngoài ô).
 - **Video Little Seed**: nhãn "Xem bằng tiếng Anh / tiếng Trung"; có link dự phòng khi video Drive không chạy. Muốn video nét và tự phát: nén video thành `.mp4`, đặt vào `tai-nguyen/video/` và khai báo trong `window.LS_VIDEO_LOCAL` (mã Drive → tên file).
 - Lời hướng dẫn mới chưa có file thu giọng cô Hươu thì đọc bằng giọng tiếng Việt của máy. Khi thu xong, khai báo trong `window.HD_FILES` ("câu" → "đường dẫn file mp3").
+
+## Cập nhật 22/10/2026 (tối ưu điện thoại)
+- **Điện thoại cầm dọc dùng được ngay**, bỏ màn bắt xoay ngang. Thanh nút bên trái chuyển xuống đáy màn hình; trang chủ, buổi học, phòng đổi quà, hành trình xếp dọc và cuộn được.
+- **Bản đồ trên điện thoại dọc**: tranh giữ đúng tỉ lệ, con kéo ngang để xem; web tự cuộn tới buổi đang học.
+- **Điện thoại nằm ngang**: ẩn tiêu đề buổi khi đang làm bài, thu gọn khung và nút; video, tranh, quiz, thẻ lật, luyện nói xếp hai cột để vừa một màn hình.
+- Bản học thử: dải "Đăng ký" nằm ngay trên thanh nút, không che bài.
