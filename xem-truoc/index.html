@@ -869,11 +869,19 @@ function gamesDone(s){ return GAMES.filter(([k])=>s && s.gp && k in s.gp).length
 function lsGet(k,d){ try{ const v=localStorage.getItem(k); return v==null?d:JSON.parse(v); }catch(e){ return d; } }
 function lsSet(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
 
-let TEACHER = /[?&]gv=1/.test(location.search) || lsGet('lle-teacher',false)===true;
+/* ---------- BẢN HỌC THỬ cho phụ huynh (link có ?demo=1, hoặc thư mục /demo/) ----------
+   Mở DEMO_N buổi đầu của mỗi khoá; buổi sau, buổi Zoom, Bảng vàng và đổi quà thật mời ba mẹ đăng ký.
+   Tiến độ học thử lưu riêng trên máy, không gửi lên Bảng vàng, không lẫn với tài khoản học thật. */
+const DEMO = /[?&]demo=1/.test(location.search);
+const DEMO_N = 3;
+const DANG_KY_LINK = "https://forms.gle/incohqzJzMtHYLXD8";   // trang đăng ký dự án (đổi sang link trang ưu đãi nếu muốn)
+const DEMO_FEE = "79.000đ", DEMO_HAN = "hết ngày 25/10/2026", DEMO_KHAI_MAC = "thứ Hai 26/10/2026";
+const KID_KEY = DEMO ? 'lle-kid-demo' : 'lle-kid';
+let TEACHER = !DEMO && (/[?&]gv=1/.test(location.search) || lsGet('lle-teacher',false)===true);
 function toggleTeacher(){ TEACHER=!TEACHER; lsSet('lle-teacher',TEACHER); P=lsGet(progKey(),{})||{}; updateStars(); toast(TEACHER?'Đã bật chế độ giáo viên: mở tất cả các ngày':'Đã tắt chế độ giáo viên'); route(); }
 
 /* ---------- hồ sơ bé ---------- */
-let KID = lsGet('lle-kid', null);   // {name, acct (SĐT/Gmail đã che), id, group}
+let KID = lsGet(KID_KEY, null);   // {name, acct (SĐT/Gmail đã che), id, group}
 function slugName(s){ return String(s||'').trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/đ/g,'d').replace(/[^a-z0-9]+/g,'-'); }
 function kidId(){ return KID ? (KID.id || (slugName(KID.name)+'-'+KID.code)) : ''; }
 /* SĐT hoặc Gmail của bố mẹ → mã tài khoản (băm, không gửi số thật đi đâu) */
@@ -887,14 +895,14 @@ async function hashStr(s){
 
 /* ---------- lưu tiến độ lên máy chủ (Apps Script) để học tiếp trên máy khác ---------- */
 let syncT=null;
-function syncSoon(){ if(!SCORE_API || !KID || KID.temp || TEACHER || !KID.id) return; clearTimeout(syncT); syncT=setTimeout(syncPush, 1500); }
+function syncSoon(){ if(DEMO || !SCORE_API || !KID || KID.temp || TEACHER || !KID.id) return; clearTimeout(syncT); syncT=setTimeout(syncPush, 1500); }
 function syncPush(){
-  if(!SCORE_API || !KID || !KID.id || TEACHER) return;
+  if(DEMO || !SCORE_API || !KID || !KID.id || TEACHER) return;
   const body=JSON.stringify({action:'save', id:KID.id, name:KID.name.trim(), acct:KID.acct||'', group:KID.group, prog:P, at:Date.now()});
   try{ fetch(SCORE_API,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body}).catch(()=>{}); }catch(e){}
 }
 async function syncPull(id){
-  if(!SCORE_API) return null;
+  if(DEMO || !SCORE_API) return null;
   try{ const r=await fetch(`${SCORE_API}?action=load&id=${encodeURIComponent(id)}`); const j=await r.json(); return j&&j.prog?j:null; }catch(e){ return null; }
 }
 /* gộp tiến độ: giữ bản nhiều điểm hơn của từng buổi */
@@ -910,9 +918,9 @@ function mergeProg(a,b){
 
 /* ---------- tiến độ và điểm ---------- */
 /* chế độ giáo viên lưu tiến độ riêng, để cô bấm thử không làm thay đổi điểm và ngày của bé trên cùng máy */
-function progKey(){ return TEACHER ? 'lle-progress-gv' : 'lle-progress-v2'; }
+function progKey(){ return DEMO ? 'lle-progress-demo' : TEACHER ? 'lle-progress-gv' : 'lle-progress-v2'; }
 let P = lsGet(progKey(), {}) || {};
-function save(){ lsSet(progKey(),P); updateStars(); syncSoon(); }
+function save(){ lsSet(progKey(),P); updateStars(); syncSoon(); demoCheckDone(); }
 function st(g,i){ return (P[g+'-'+i] ||= {learn:false, parent:false, game:false, gameBest:0, done:false}); }
 function isDone(g,i){ const s=P[g+'-'+i]; return !!(s && s.done); }
 /* Bản đồ: mỗi chặng 6 buổi tự học. Buổi Zoom (ngày 7, 14, 21) không chặn đường đi,
@@ -921,7 +929,7 @@ const LEARN_TOTAL = 18;
 function isZoomIdx(i){ return i%PER===PER-1; }
 function doneCount(g){ let n=0; for(let i=0;i<TOTAL;i++) if(!isZoomIdx(i) && isDone(g,i)) n++; return n; }
 function prevLearn(i){ let k=i-1; while(k>=0 && isZoomIdx(k)) k--; return k; }
-function isUnlocked(g,i){ if(TEACHER) return true; const k=prevLearn(i); return k<0 || isDone(g,k); }
+function isUnlocked(g,i){ if(DEMO) return i<DEMO_N; if(TEACHER) return true; const k=prevLearn(i); return k<0 || isDone(g,k); }
 function nextLearn(i){ let k=i+1; while(k<TOTAL && isZoomIdx(k)) k++; return k<TOTAL?k:-1; }
 function stageNo(i){ return Math.floor(i/PER)+1; }
 function lessonNo(i){ return i%PER+1; }
@@ -945,7 +953,7 @@ function bumpStars(){ const el=document.getElementById('starCount'); el.classLis
 
 /* gửi điểm lên Google Sheet (nếu cô đã kết nối) */
 function pushScore(g,i){
-  if(!SCORE_API || !KID || TEACHER || KID.temp) return;
+  if(DEMO || !SCORE_API || !KID || TEACHER || KID.temp) return;
   const body=JSON.stringify({action:'score', kid:kidId(), name:KID.name.trim(), group:g, day:i+1, round:Math.floor(i/PER)+1, points:dayPoints(g,i)});
   try{ fetch(SCORE_API,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body}).catch(()=>{}); }catch(e){}
 }
@@ -1227,6 +1235,7 @@ function gamePool(g,i){
 function askProfile(g, then){
   if(TEACHER && !KID){ KID={name:'Giáo viên', code:'0000', group:g, temp:true}; updateStars(); then&&then(); return; }   // chế độ giáo viên: xem không cần nhập tên
   document.querySelectorAll('.overlay.pf').forEach(x=>x.remove());
+  if(DEMO) return demoProfile(g, then);
   const ov=document.createElement('div'); ov.className='overlay pf';
   ov.innerHTML=`<form class="modal" id="pf" novalidate>
     <div class="mart"><img class="mportrait cut" src="tai-nguyen/nhan-vat/kids_bong_a.webp" alt=""></div>
@@ -1252,7 +1261,7 @@ function askProfile(g, then){
     if(KID && KID.id && KID.id!==id){ lsSet('lle-prog-'+KID.id, P); P={}; }   // máy dùng chung: cất tiến độ của bé trước
     P=mergeProg(P, lsGet('lle-prog-'+id, {}));
     KID={name, acct:maskAcct(acct), id, group:g};
-    lsSet('lle-kid',KID); lsSet(progKey(),P);
+    lsSet(KID_KEY,KID); lsSet(progKey(),P);
     const got=await syncPull(id);
     if(got && got.prog){ P=mergeProg(P, got.prog); lsSet(progKey(),P); if(got.group && GROUPS[got.group] && !g) KID.group=got.group; toast('Đã mở lại tiến độ học của '+name+' 🎉'); }
     ov.remove(); sfx.win(); updateStars(); syncPush();
@@ -1262,7 +1271,7 @@ function askProfile(g, then){
 }
 function logout(){
   if(KID && KID.id){ lsSet('lle-prog-'+KID.id, P); syncPush(); }
-  KID=null; try{ localStorage.removeItem('lle-kid'); }catch(e){} P={}; lsSet(progKey(),P); updateStars();
+  KID=null; try{ localStorage.removeItem(KID_KEY); }catch(e){} P={}; lsSet(progKey(),P); updateStars();
   toast('Đã đăng xuất. Lần sau nhập lại tên con và SĐT/Gmail là học tiếp.'); location.hash='#/'; route();
 }
 
@@ -1283,17 +1292,17 @@ function viewHome(){
     <div class="h2-top"><span class="h2-kick">Thử thách 21 ngày Bật phản xạ Anh – Trung</span>
       <h1>Những nhà thám hiểm ngôn ngữ nhí</h1></div>
     <div class="h2-grid">
-      ${hubTile({cls:'big', href:'#/g/seed', img:'tai-nguyen/trang/the_gioi_seed.webp', c:'#3BB273', t:'🌱 Little Seed', sub:`Bé mới bắt đầu · đã đi ${doneCount('seed')}/${LEARN_TOTAL} buổi`})}
-      ${hubTile({cls:'big', href:'#/g/canopy', img:'tai-nguyen/trang/the_gioi_canopy.webp', c:'#E3262E', t:'🌳 Canopy', sub:`Bé có A1 + YCT 1 · đã đi ${doneCount('canopy')}/${LEARN_TOTAL} buổi`})}
+      ${hubTile({cls:'big', href:'#/g/seed', img:'tai-nguyen/trang/the_gioi_seed.webp', c:'#3BB273', t:'🌱 Little Seed', sub:DEMO?`Bé mới bắt đầu · học thử ${demoDone('seed')}/${DEMO_N} buổi`:`Bé mới bắt đầu · đã đi ${doneCount('seed')}/${LEARN_TOTAL} buổi`})}
+      ${hubTile({cls:'big', href:'#/g/canopy', img:'tai-nguyen/trang/the_gioi_canopy.webp', c:'#E3262E', t:'🌳 Canopy', sub:DEMO?`Bé có A1 + YCT 1 · học thử ${demoDone('canopy')}/${DEMO_N} buổi`:`Bé có A1 + YCT 1 · đã đi ${doneCount('canopy')}/${LEARN_TOTAL} buổi`})}
       ${hubTile({id:'tParent', img:'tai-nguyen/trang/ls_man_khen.webp', c:'#F28C00', t:'Ba mẹ đồng hành', sub:'Chương trình · cách học'})}
       ${hubTile({id:'tTour', img:'tai-nguyen/nhan-vat/huou_huou1_a.webp', size:'auto 92%', pos:'50% 100%', bg:'#DDEBFF', c:'#2F6FD6', t:'Hướng dẫn', sub:'Cô Hươu chỉ cách học'})}
       ${hubTile({href:`#/g/${g}/vang/0`, img:'tai-nguyen/trang/cn_stamps.webp', pos:'100% 100%', size:'200% auto', bg:'#FFF8E1', c:'#C9A227', t:'Bảng vàng', sub:'Top 10 nhà thám hiểm'})}
       ${hubTile({href:'#/qua', img:'tai-nguyen/qua/gift_rubik.webp', size:'auto 62%', pos:'50% 55%', bg:'#FFE4EC', c:'#E3487A', t:'Phòng đổi quà', sub:'Đổi sao lấy quà', badge:'⭐ '+qWallet()})}
       ${hubTile({href:`#/g/${g}/them/${Math.min(3,Math.max(1,Math.ceil((doneCount(g)+1)/6)))}`, img:'tai-nguyen/trang/ls_o_xem.webp', c:'#7B5CD6', t:'Góc khám phá', sub:'Video, trò chơi thêm'})}
     </div>
-    <button class="tbtn h2-gv" id="tbtn">${TEACHER?'🔓 Tắt chế độ giáo viên':'🔑 Chế độ giáo viên'}</button>
+    ${DEMO?'':`<button class="tbtn h2-gv" id="tbtn">${TEACHER?'🔓 Tắt chế độ giáo viên':'🔑 Chế độ giáo viên'}</button>`}
   </div>`;
-  document.getElementById('tbtn').onclick=toggleTeacher;
+  const tb=document.getElementById('tbtn'); if(tb) tb.onclick=toggleTeacher;
   document.getElementById('tParent').onclick=()=>{ sfx.pop(); parentPanel(); };
   document.getElementById('tTour').onclick=()=>{ sfx.pop(); startTour(true); };
   if(!lsGet('lle-tour-seen',false) && STARTED) setTimeout(()=>startTour(false), 400);
@@ -1396,7 +1405,7 @@ function lessonTitle(day){
 function viewGroup(g){
   const G = GROUPS[g]; if(!G) return viewHome();
   if(!KID){ app.innerHTML=''; return askProfile(g, ()=>viewGroup(g)); }
-  if(KID.group!==g){ KID.group=g; if(!KID.temp) lsSet('lle-kid',KID); updateStars(); }
+  if(KID.group!==g){ KID.group=g; if(!KID.temp) lsSet(KID_KEY,KID); updateStars(); }
   document.body.classList.add('hub');
   const Wd=WORLD[g]||WORLD.seed, info=STAGE_INFO[g]||[], n=doneCount(g);
   const U=([x,y])=>[x*1.6,y*0.9];                       // % → toạ độ khung 160×90
@@ -1442,11 +1451,12 @@ function viewGroup(g){
     </div>
   </div>`;
   app.querySelectorAll('.sign').forEach(b=>b.onclick=()=>{
+    if(b.classList.contains('lock') && DEMO){ sfx.no(); demoGate(); return; }
     if(b.classList.contains('lock')){ sfx.no(); toast('Con học xong buổi trước để mở buổi này nhé! 🔒'); hdSay('Con học xong buổi trước để mở buổi này nhé!'); return; }
     sfx.pop(); location.hash=`#/g/${g}/${+b.dataset.i+1}`;
   });
   app.querySelectorAll('.wboard').forEach(b=>b.onclick=()=>{ sfx.pop(); const I=info[+b.dataset.r]||{}; toast(`Chặng ${+b.dataset.r+1}: ${I.topic} – ${I.desc}`); });
-  app.querySelectorAll('.wzoom.lock').forEach(a=>a.onclick=e=>{ e.preventDefault(); sfx.no(); toast('Buổi Zoom mở khi con học xong buổi 6 của chặng này 🔒'); });
+  app.querySelectorAll('.wzoom.lock').forEach(a=>a.onclick=e=>{ e.preventDefault(); sfx.no(); if(DEMO) return demoGate(); toast('Buổi Zoom mở khi con học xong buổi 6 của chặng này 🔒'); });
   const lines=nk>=0?['Đây là bản đồ khám phá của con.','Con chạm vào buổi học màu đỏ đang nhấp nháy để bắt đầu nhé!']:['Con đã đi hết bản đồ rồi! Giỏi quá!'];
   document.getElementById('mapHelp').onclick=()=>hdSay(lines);
   mascot('hi');
@@ -1478,6 +1488,7 @@ function xtWire(){ /* liên kết thường, không cần gắn thêm */ }
 /* ---------- Bảng vàng ---------- */
 function viewGold(g, r){
   const G=GROUPS[g]; if(!G) return viewHome();
+  if(DEMO){ location.replace('#/g/'+g); setTimeout(()=>demoGate('vang'),200); return; }
   const tabs=[[1,ROUNDS[0].vi],[2,ROUNDS[1].vi],[3,ROUNDS[2].vi],[0,'Tổng 21 ngày']];
   const mine = r? roundPoints(g,r-1) : groupPoints(g);
   app.innerHTML=`<div class="wrap">
@@ -1524,7 +1535,7 @@ function viewDay(g,i,step){
   const G=GROUPS[g]; const day=G && G.days[i];
   if(!day) return viewHome();
   if(!KID){ app.innerHTML=''; return askProfile(g, ()=>viewDay(g,i,step)); }
-  if(!isUnlocked(g,i)){ toast('Buổi này chưa mở khóa 🔒'); location.hash='#/g/'+g; return; }
+  if(!isUnlocked(g,i)){ if(DEMO) setTimeout(()=>demoGate(),200); else toast('Buổi này chưa mở khóa 🔒'); location.hash='#/g/'+g; return; }
   cur={g,i,day};
   if(day.zoom) return viewZoom(g,i);
   if(day.cx) return viewCanopyDay(g,i,step);
@@ -1862,6 +1873,73 @@ function viewZoom(g,i){
 }
 
 /* ---------- điều hướng ---------- */
+/* ---------- BẢN HỌC THỬ: hồ sơ chỉ cần tên con, ruy băng và bảng mời đăng ký ---------- */
+function demoDone(g){ let n=0; for(let i=0;i<DEMO_N;i++) if(isDone(g,i)) n++; return n; }
+function demoProfile(g, then){
+  const ov=document.createElement('div'); ov.className='overlay pf';
+  ov.innerHTML=`<form class="modal" id="pf" novalidate>
+    <div class="mart"><img class="mportrait cut" src="tai-nguyen/nhan-vat/kids_bong_a.webp" alt=""></div>
+    <h3>Học thử miễn phí</h3>
+    <p class="hint">Con được học thử ${DEMO_N} buổi đầu của mỗi khoá. Ba mẹ chỉ cần nhập tên con, không cần số điện thoại.</p>
+    <label for="kname">Tên của con</label>
+    <input id="kname" required maxlength="24" autocomplete="off" placeholder="Ví dụ: Bông, Minh An" value="${esc(KID&&KID.name||'')}">
+    <p class="pf-err" id="pferr" hidden></p>
+    <div class="row"><button class="btn" type="submit">Học thử ngay! 🚀</button></div>
+  </form>`;
+  document.body.appendChild(ov);
+  ov.querySelector('#kname').focus();
+  ov.querySelector('#pf').addEventListener('submit',e=>{
+    e.preventDefault();
+    const name=ov.querySelector('#kname').value.trim(), err=ov.querySelector('#pferr');
+    if(!name){ err.hidden=false; err.textContent='Ba mẹ nhập tên của con nhé.'; return; }
+    KID={name, id:'demo-'+slugName(name), group:g, demo:true};
+    lsSet(KID_KEY,KID); ov.remove(); sfx.win(); updateStars(); then&&then();
+  });
+}
+const demoShown={};
+function demoCheckDone(){
+  if(!DEMO || !KID || !GROUPS[KID.group]) return; const g=KID.group;
+  if(demoShown[g] || demoDone(g)<DEMO_N || lsGet('lle-demo-xong-'+g,false)) return;
+  demoShown[g]=true; lsSet('lle-demo-xong-'+g,true);
+  setTimeout(()=>demoGate('xong'), 2200);
+}
+function demoGate(why){
+  if(!DEMO || document.querySelector('.overlay.demo')) return;
+  const G=KID&&GROUPS[KID.group], nm=KID&&KID.name?esc(KID.name):'Con';
+  const h = why==='xong' ? `${nm} đã học xong ${DEMO_N} buổi học thử! 🎉`
+          : why==='vang' ? 'Bảng vàng dành cho nhà thám hiểm đã đăng ký 🏆'
+          : why==='qua'  ? 'Đổi quà thật dành cho nhà thám hiểm đã đăng ký 🎁'
+          : 'Phần này dành cho nhà thám hiểm đã đăng ký 🔒';
+  const ov=document.createElement('div'); ov.className='overlay pp demo';
+  ov.innerHTML=`<div class="modal pp-box dm-box" role="dialog" aria-label="Đăng ký tham gia">
+    <button class="pp-x" aria-label="Đóng">✕</button>
+    <img class="dm-img" src="tai-nguyen/trang/ls_man_khen.webp" alt="">
+    <h3>${h}</h3>
+    <p>Bản học thử mở <b>${DEMO_N} buổi đầu</b> của mỗi khoá. Đăng ký <b>Thử thách 21 ngày Bật phản xạ Anh – Trung</b> để con đi tiếp cả hành trình:</p>
+    <ul class="dm-list">
+      <li>🗺️ Đủ <b>18 buổi tự học</b> qua 3 chặng: Vòng khám phá → Vòng bứt phá → Vòng chinh phục</li>
+      <li>🎥 <b>3 buổi Zoom</b> cùng cô giáo, cuối mỗi chặng</li>
+      <li>🏆 <b>Bảng vàng Top 10</b> mỗi chặng và <b>Phòng đổi quà</b> bằng sao</li>
+      <li>🌟 <b>Chung kết tỏa sáng</b> livestream: cúp, cờ và giấy chứng nhận cho Top 3 mỗi khoá</li>
+    </ul>
+    <p class="dm-info">Phí <b>${DEMO_FEE}</b> cho sự kiện và học liệu 21 ngày · Hạn đăng ký: <b>${DEMO_HAN}</b> · Khai mạc: <b>${DEMO_KHAI_MAC}</b></p>
+    <div class="row"><a class="btn g" href="${DANG_KY_LINK}" target="_blank" rel="noopener">📝 Đăng ký cho con</a>
+      <button class="btn y" id="dmLater" type="button">${why==='xong'?'Xem lại bài đã học':'Để sau'}</button></div>
+  </div>`;
+  document.body.appendChild(ov);
+  const close=()=>ov.remove();
+  ov.querySelector('.pp-x').onclick=close; ov.querySelector('#dmLater').onclick=close;
+  ov.addEventListener('click',e=>{ if(e.target===ov) close(); });
+  if(why==='xong'){ confetti(40); sfx.win(); }
+}
+if(DEMO){
+  document.body.classList.add('is-demo');
+  const rb=document.createElement('a'); rb.className='demo-rb'; rb.href='#'; rb.setAttribute('role','button');
+  rb.innerHTML='<b>Bản học thử</b><span>· '+DEMO_N+' buổi mỗi khoá ·</span><i>Đăng ký học đủ 21 ngày →</i>';
+  rb.onclick=e=>{ e.preventDefault(); sfx.pop(); demoGate(); };
+  document.body.appendChild(rb);
+}
+
 function route(){
   try{ speechSynthesis.cancel(); }catch(e){} voiceStop(); hdStop(); recAbort();
   document.body.classList.remove('hub'); document.querySelectorAll('.overlay.pp').forEach(x=>x.remove());

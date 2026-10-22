@@ -207,3 +207,24 @@ button.tg:active{transform:scale(.97)}
 .cx-opt .cx-spk.in svg{width:20px;height:20px}
 .cx-spk.ring{animation:spkring .5s}
 @keyframes spkring{30%{transform:scale(1.2)}60%{transform:scale(.95)}}
+
+/* ---------- BẢN HỌC THỬ (?demo=1) ---------- */
+.demo-rb{position:fixed;left:50%;bottom:max(10px,env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:70;
+  display:flex;align-items:center;gap:6px;white-space:nowrap;text-decoration:none;
+  background:#FFC72C;color:#3A2A1A;border:3px solid #fff;border-radius:999px;padding:6px 16px;
+  font:700 15px/1.2 'Baloo 2',system-ui,sans-serif;box-shadow:0 4px 0 rgba(58,42,26,.18),0 8px 18px rgba(58,42,26,.18);animation:dm-pulse 2.6s ease-in-out infinite}
+.demo-rb b{background:#E3262E;color:#fff;border-radius:999px;padding:1px 10px}
+.demo-rb span{color:#7A6A58;font-weight:600}
+.demo-rb i{font-style:normal;color:#B8141C;font-weight:800}
+@keyframes dm-pulse{0%,100%{transform:translateX(-50%) scale(1)}50%{transform:translateX(-50%) scale(1.04)}}
+@media (prefers-reduced-motion:reduce){.demo-rb{animation:none}}
+@media (max-width:520px){.demo-rb{font-size:13px;padding:5px 12px}.demo-rb span{display:none}}
+body.is-demo.in-step .demo-rb{display:none}
+.dm-box{max-width:460px;text-align:left;max-height:92vh;overflow:auto}
+.dm-box h3{text-align:center;margin:4px 0 2px;color:#B8141C;line-height:1.2}
+.dm-box p{margin:4px 0}
+.dm-img{width:120px;height:120px;object-fit:contain;margin:0 auto;display:block}
+.dm-list{list-style:none;padding:0;margin:6px 0;display:grid;gap:6px}
+.dm-list li{background:#FFF4CC;border-radius:14px;padding:8px 12px;line-height:1.35}
+.dm-info{background:#FFFBF0;border:2px dashed #F0E2C0;border-radius:14px;padding:8px 12px;font-size:15px}
+.dm-box .row{justify-content:center;flex-wrap:wrap;gap:10px;margin-top:6px}

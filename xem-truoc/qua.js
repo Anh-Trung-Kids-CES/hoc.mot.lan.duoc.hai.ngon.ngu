@@ -87,6 +87,7 @@ function parentGate(title, detail, ok){
   setTimeout(()=>inp.focus(), 50);
 }
 function qCanReal(){
+  if(DEMO){ demoGate('qua'); return false; }
   if(TEACHER){ toast('Chế độ giáo viên chỉ xem thử, không đổi quà thật và học bổng.'); return false; }
   if(!KID || KID.temp){ toast('Ba mẹ đăng nhập bằng tên con và SĐT/Gmail để đổi quà thật nhé.'); askProfile(KID&&KID.group||'', route); return false; }
   return true;
@@ -114,7 +115,7 @@ function qOrder(kind, item){
 /* hỏi máy chủ trạng thái phiếu; phiếu bị từ chối thì hoàn sao */
 let qChecked=0;
 async function qSyncOrders(force){
-  if(!SCORE_API || !KID || !KID.id || KID.temp || TEACHER) return;
+  if(DEMO || !SCORE_API || !KID || !KID.id || KID.temp || TEACHER) return;
   const s=shop(); if(!s.orders.some(o=>o.st==='cho'||o.st==='duyet')) return;
   if(!force && Date.now()-qChecked<60000) return; qChecked=Date.now();
   try{
