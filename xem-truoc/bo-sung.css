@@ -220,6 +220,8 @@ button.tg:active{transform:scale(.97)}
 @media (prefers-reduced-motion:reduce){.demo-rb{animation:none}}
 @media (max-width:520px){.demo-rb{font-size:13px;padding:5px 12px}.demo-rb span{display:none}}
 body.is-demo.in-step .demo-rb{display:none}
+/* thông báo đen nằm trên dải Anh-Trung-Kids, không bị dải che */
+body.is-demo:not(.in-step) .toast{bottom:calc(max(10px,env(safe-area-inset-bottom,0px)) + 50px);z-index:80}
 .dm-box{max-width:460px;text-align:left;max-height:92vh;overflow:auto}
 .dm-box h3{text-align:center;margin:4px 0 2px;color:#B8141C;line-height:1.2}
 .dm-box p{margin:4px 0}
