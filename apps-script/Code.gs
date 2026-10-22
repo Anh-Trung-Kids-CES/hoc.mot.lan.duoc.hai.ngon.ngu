@@ -84,6 +84,12 @@ function doPost(e) {
 function doGet(e) {
   const p = e.parameter || {};
   if (p.action === 'visit') return visit_(p);
+  if (p.action === 'team') {   // mục tiêu chung: cả đội một khoá đã cùng học bao nhiêu buổi (không lộ tên, không xếp hạng)
+    const sh = sheet_('Diem', ['kid', 'name', 'group', 'day', 'round', 'points', 'updated']), n = sh.getLastRow(), kids = {};
+    let lessons = 0;
+    if (n > 1) sh.getRange(2, 1, n - 1, 6).getValues().forEach(r => { if (r[2] === p.group && +r[5] > 0) { lessons++; kids[r[0]] = 1; } });
+    return json_({ lessons: lessons, kids: Object.keys(kids).length });
+  }
   if (p.action === 'orders') {
     const sh = sheet_('DoiQua', QUA_HEAD), n = sh.getLastRow(), id = String(p.id || ''), out = [];
     if (n > 1) sh.getRange(2, 1, n - 1, 16).getValues().forEach(r => { if (String(r[2]) === id) out.push({ code: r[0], status: String(r[14] || 'cho'), note: String(r[15] || '') }); });

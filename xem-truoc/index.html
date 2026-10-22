@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="bo-sung.css">
 <link rel="stylesheet" href="bo-cuc.css">
 <link rel="stylesheet" href="qua.css">
+<link rel="stylesheet" href="khen.css">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+SC:wght@500;700&display=swap" rel="stylesheet">
 <style>
 :root{color-scheme:light;
@@ -449,6 +450,7 @@ a.gtab{text-decoration:none}
 <script src="canopy-games.js"></script>
 <script src="canopy-speak.js"></script>
 <script src="qua.js"></script>
+<script src="khen.js"></script>
 <script>
 /* =====================================================================
    PHẦN DỮ LIỆU — SỬA NỘI DUNG Ở ĐÂY
@@ -925,7 +927,7 @@ function mergeProg(a,b){
   const out=Object.assign({},a||{});
   for(const k in (b||{})){ const x=out[k], y=b[k];
     if(!x){ out[k]=y; continue; }
-    if(k==='_shop'){ out[k]=((y&&y.t)||0)>((x&&x.t)||0)?y:x; continue; }
+    if(k==='_shop'||k==='_j'){ out[k]=((y&&y.t)||0)>((x&&x.t)||0)?y:x; continue; }
     const sc=s=>(s.done?1000:0)+Object.keys(s.ls||{}).length*10+Object.keys(s.ex||{}).length*10+(s.clipSent?5:0);
     if(sc(y)>sc(x)) out[k]=y; }
   return out;
@@ -935,7 +937,7 @@ function mergeProg(a,b){
 /* chế độ giáo viên lưu tiến độ riêng, để cô bấm thử không làm thay đổi điểm và ngày của bé trên cùng máy */
 function progKey(){ return DEMO ? 'lle-progress-demo' : TEACHER ? 'lle-progress-gv' : 'lle-progress-v2'; }
 let P = lsGet(progKey(), {}) || {};
-function save(){ lsSet(progKey(),P); updateStars(); syncSoon(); demoCheckDone(); }
+function save(){ if(typeof jMark==='function') jMark(); lsSet(progKey(),P); updateStars(); syncSoon(); demoCheckDone(); }
 function st(g,i){ return (P[g+'-'+i] ||= {learn:false, parent:false, game:false, gameBest:0, done:false}); }
 function isDone(g,i){ const s=P[g+'-'+i]; return !!(s && s.done); }
 /* Bản đồ: mỗi chặng 6 buổi tự học. Buổi Zoom (ngày 7, 14, 21) không chặn đường đi,
@@ -1177,9 +1179,9 @@ function floatPts(el,n){
   document.body.appendChild(f); setTimeout(()=>f.remove(),1300);
 }
 const MASCOT_LINES = {
-  ok:['Giỏi quá! 🎉','Đúng rồi! ⭐','Tuyệt vời!','Wow, siêu ghê!','你真棒！','Great job!'],
+  ok:['Đúng rồi! ⭐','Con nghe kỹ lắm!','Con làm được rồi!','对了！','You got it!'],
   no:['Thử lại nhé! 💪','Gần đúng rồi!','Nghe lại lần nữa nào!'],
-  done:['Xong một chặng rồi! 🏅','Nhà thám hiểm giỏi quá!','Mai mình đi tiếp nhé!'],
+  done:['Xong một buổi rồi! 🏅','Con đã đi thêm một bước!','Mai mình đi tiếp nhé!'],
   hi:['Chào nhà thám hiểm nhí! 👋','Hôm nay mình học gì nào?','Let\'s go! 出发！']
 };
 let mt; function mascot(kind){
@@ -1311,7 +1313,7 @@ function viewHome(){
       ${hubTile({cls:'big', href:'#/g/canopy', img:'tai-nguyen/trang/the_gioi_canopy.webp', c:'#E3262E', t:'🌳 Canopy', sub:DEMO?`Bé có A1 + YCT 1 · học thử ${demoDone('canopy')}/${DEMO_N} buổi`:`Bé có A1 + YCT 1 · đã đi ${doneCount('canopy')}/${LEARN_TOTAL} buổi`})}
       ${hubTile({id:'tParent', img:'tai-nguyen/trang/ls_man_khen.webp', c:'#F28C00', t:'Ba mẹ đồng hành', sub:'Chương trình · cách học'})}
       ${hubTile({id:'tTour', img:'tai-nguyen/nhan-vat/huou_huou1_a.webp', size:'auto 92%', pos:'50% 100%', bg:'#DDEBFF', c:'#2F6FD6', t:'Hướng dẫn', sub:'Cô Hươu chỉ cách học'})}
-      ${hubTile({href:`#/g/${g}/vang/0`, img:'tai-nguyen/trang/cn_stamps.webp', pos:'100% 100%', size:'200% auto', bg:'#FFF8E1', c:'#C9A227', t:'Bảng vàng', sub:'Top 10 nhà thám hiểm'})}
+      ${hubTile({href:'#/hanh-trinh', img:'tai-nguyen/trang/ls_stickers.webp', pos:'50% 50%', size:'auto 92%', bg:'#FFF8E1', c:'#C9A227', t:'Hành trình của con', sub:'Huy hiệu · ngày học · lần nói'})}
       ${hubTile({href:'#/qua', img:'tai-nguyen/qua/gift_rubik.webp', size:'auto 62%', pos:'50% 55%', bg:'#FFE4EC', c:'#E3487A', t:'Phòng đổi quà', sub:'Đổi sao lấy quà', badge:'⭐ '+qWallet()})}
       ${hubTile({href:`#/g/${g}/them/${Math.min(3,Math.max(1,Math.ceil((doneCount(g)+1)/6)))}`, img:'tai-nguyen/trang/ls_o_xem.webp', c:'#7B5CD6', t:'Góc khám phá', sub:'Video, trò chơi thêm'})}
     </div>
@@ -1332,13 +1334,13 @@ function parentPanel(){
     <ol class="intro-steps">
       <li><b>3 chặng · mỗi chặng 6 buổi</b><span>Vòng khám phá → Vòng bứt phá → Vòng chinh phục. Mỗi buổi 12–15 phút, học xong buổi này thì mở buổi sau.</span></li>
       <li><b>Zoom cuối mỗi chặng</b><span>Con gặp cô giáo trực tuyến, ôn lại cả chặng và nói cùng các bạn.</span></li>
-      <li><b>Sao và Bảng vàng</b><span>Mỗi bước làm xong được sao. Cuối chặng, Top 10 mỗi khoá lên Bảng vàng.</span></li>
+      <li><b>Sao và Bảng vàng</b><span>Mỗi bước làm xong được sao. Cuối chặng, Top 10 mỗi khoá lên Bảng vàng. Bảng vàng dành cho ba mẹ xem, màn hình của con chỉ hiện hành trình của chính con. <a href="#/g/${KID&&GROUPS[KID.group]?KID.group:'seed'}/vang/0">🏆 Xem Bảng vàng →</a></span></li>
       <li><b>Chung kết tỏa sáng</b><span>Học đủ 18 buổi để sẵn sàng thi Chung kết livestream.</span></li>
     </ol>
     <h4>Mỗi buổi con học gì? <small>(chạm ô để nghe)</small></h4>
     <div class="tgrid pp-tiles">${LS_TILES.map(([f,t,d],n)=>`<button class="tg" data-n="${n}"><img src="tai-nguyen/trang/${f}.webp" alt="" loading="lazy">${t}<small>${d}</small></button>`).join('')}</div>
     <p class="sec-sub">Canopy có thêm thẻ học, quiz, nối từ, xếp câu, truyện song ngữ, giải đố và luyện nói.</p>
-    <div class="note"><b>Gửi ba mẹ:</b> ba mẹ chỉ cần <b>bật bài cho con đúng giờ</b>, <b>khen con khi con đang làm bài</b> và <b>khen con khi con hoàn thành</b>.
+    <div class="note"><b>Gửi ba mẹ:</b> ba mẹ chỉ cần <b>bật bài cho con đúng giờ</b>, <b>khen đúng việc con vừa làm</b> (“Con nghe kỹ lắm!”, “Con tự nói được câu này rồi!”), tránh khen chung “con giỏi quá”.
       Học xong mỗi buổi, ba mẹ quay một clip ngắn con nói câu hôm nay, gửi vào <a href="${ZALO_LINK}" target="_blank" rel="noopener">nhóm Zalo</a> (+${PTS.clip} điểm).
       <br>Nhớ <b>3 KHÔNG</b>: không ép nói · không sửa lỗi · không so sánh. 💛</div>
     ${KID&&!KID.temp?`<p class="pp-acct">Đang học: <b>${esc(KID.name)}</b>${KID.acct?` · ${esc(KID.acct)}`:''} · <button class="linkish" id="ppOut">Đổi bé / Đăng xuất</button></p>`:''}
@@ -1459,7 +1461,7 @@ function viewGroup(g){
         ${TEACHER?'<span class="wh-gv">Chế độ giáo viên</span>':''}
       </div>
       <div class="wbtns">
-        <a class="wmbtn" href="#/g/${g}/vang/${curStage+1}">🏆<span>Bảng vàng</span></a>
+        <a class="wmbtn" href="#/hanh-trinh">🧭<span>Hành trình</span></a>
         <a class="wmbtn" href="#/g/${g}/them/${curStage+1}">🎮<span>Game - video</span></a>
         <button class="wmbtn" id="mapHelp" type="button">🔊<span>Nghe hướng dẫn</span></button>
       </div>
@@ -1669,7 +1671,7 @@ function gameListen(box,words){
   const qs = shuffle(words.flatMap(w=>[{w,l:'en'},{w,l:'zh'}])).slice(0, Math.min(8, words.length*2));
   let i=0, score=0;
   (function q(){
-    if(i>=qs.length) return gameWin(box,score,qs.length,`Giỏi quá! Đúng ${score}/${qs.length} câu`,()=>gameListen(box,words));
+    if(i>=qs.length) return gameWin(box,score,qs.length,`Con đã làm xong! Đúng ${score}/${qs.length} câu`,()=>gameListen(box,words));
     const {w,l}=qs[i];
     const opts = shuffle([w, ...shuffle(words.filter(x=>x!==w)).slice(0,3)]);
     let tried=false;
@@ -1728,7 +1730,7 @@ function gameHanzi(box,words){
   const qs=shuffle(words).slice(0,8);
   let i=0, score=0;
   (function q(){
-    if(i>=qs.length) return gameWin(box,score,qs.length,`Giỏi quá! Con nhận đúng ${score}/${qs.length} chữ`,()=>gameHanzi(box,words));
+    if(i>=qs.length) return gameWin(box,score,qs.length,`Con đã làm xong! Con nhận đúng ${score}/${qs.length} chữ`,()=>gameHanzi(box,words));
     const w=qs[i];
     const opts=shuffle([w, ...shuffle(words.filter(x=>x!==w)).slice(0,Math.min(3,words.length-1))]);
     let tried=false;
@@ -1770,7 +1772,7 @@ function showDone(panel, fresh){
     <div class="badge ${fresh?'fresh':''}">${art(day.zoom?'🏆':'🏅','big')}</div><h3>Hoàn thành ${dayName(i)}!</h3>
     <div class="stars"><span>⭐</span><span>⭐</span><span>⭐</span></div>
     <div class="ptsum">Buổi này con được <b>${pts} điểm</b> · Chặng này: <b>${roundPoints(g,r)} điểm</b></div>
-    <p>Nhà thám hiểm nhí giỏi quá! ${nx?`Buổi ${lessonNo(ni)} – chặng ${stageNo(ni)} đã được mở khóa.`:'Con đã đi hết bản đồ — sẵn sàng cho Chung kết!'}</p>
+    <p>Con đã học xong buổi này! ${nx?`Buổi ${lessonNo(ni)} – chặng ${stageNo(ni)} đã được mở khóa.`:'Con đã đi hết bản đồ — sẵn sàng cho Chung kết!'}</p>
     <div class="row">${nx?`<a class="btn" href="#/g/${g}/${ni+1}">Buổi tiếp theo →</a>`:''}
     ${day.zoom?`<a class="btn" href="#/g/${g}/vang/${r+1}">🏆 Xem Bảng vàng ${esc(ROUNDS[r].vi)}</a>`:''}
     <a class="btn y" href="#/g/${g}">🗺️ Xem bản đồ</a></div></div>
@@ -1841,7 +1843,7 @@ function recTake(o){
       if(abort){ rec.onstop=()=>res(null); } try{ rec.state!=='inactive' ? rec.stop() : rec.onstop&&rec.onstop(); }catch(e){ res(null); } if(recCur===ctl) recCur=null; };
     const ctl={abort:()=>stop(true), finish:()=>stop(false)}; recCur=ctl;
     rec.ondataavailable=e=>{ if(e.data && e.data.size) chunks.push(e.data); };
-    rec.onstop=()=>{ const blob=chunks.length?new Blob(chunks,{type:rec.mimeType||'audio/webm'}):null; res(blob?{blob,url:URL.createObjectURL(blob),spoke}:null); };
+    rec.onstop=()=>{ const blob=chunks.length?new Blob(chunks,{type:rec.mimeType||'audio/webm'}):null; if(blob && spoke && typeof jRec==='function') jRec(); res(blob?{blob,url:URL.createObjectURL(blob),spoke}:null); };
     const hard=setTimeout(()=>stop(false), maxMs);
     const tick=()=>{ if(done) return;
       if(an){ an.getByteTimeDomainData(buf); let m=0; for(const v of buf) m=Math.max(m,Math.abs(v-128)); const lv=Math.min(1,m/60);
@@ -1971,6 +1973,7 @@ function route(){
   else if(p[0]==='g' && p[1] && p[2]) viewDay(p[1], +p[2]-1, p[3]);
   else if(p[0]==='g' && p[1]) viewGroup(p[1]);
   else if(p[0]==='qua') viewQua(p[1]);
+  else if(p[0]==='hanh-trinh') viewJourney();
   else viewHome();
   artWatch();
 }

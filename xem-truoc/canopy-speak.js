@@ -48,7 +48,7 @@ function cxSpeak(ex, box){
   let i=0, queue=turns.map((_,k)=>k);
 
   const lab = l => l==='zh'?'中文':'English';
-  const praise = l => l==='zh'?'真棒！':'Great job!';
+  const praise = l => l==='zh'?'说得好！':'You said it!';
   const again = l => l==='zh'?'再说一次！':'Try again!';
 
   function show(k, attempt){

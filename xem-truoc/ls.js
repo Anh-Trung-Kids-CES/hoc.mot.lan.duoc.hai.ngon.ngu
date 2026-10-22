@@ -204,7 +204,8 @@ function lsDayDone(g,i,panel){
    Bé không cần cuộn hay bấm thêm nút nào; chỉ có một nút có hình để về bản đồ. */
 function lsCompleteDay(g,i){
   const s=lsState(g,i);
-  if(!s.done){ const before=dayPoints(g,i); s.done=true; addPoints(g,i,before,null); }
+  let fresh=false; if(!s.done){ const before=dayPoints(g,i); s.done=true; fresh=true; addPoints(g,i,before,null); }
+  const RW=fresh?rewardExtras(g,i):{html:'',lines:[]};
   const total=Object.values(s.ls).reduce((a,b)=>a+b,0);
   lsStop();
   document.querySelectorAll('.ls-cele').forEach(e=>e.remove());
@@ -213,13 +214,14 @@ function lsCompleteDay(g,i){
     <img class="ls-cele-img" src="${esc(window.LS.page.ls_man_khen)}" alt="">
     <div class="ls-cele-stars">${LS_SVG.star}${LS_SVG.star}${LS_SVG.star}</div>
     <h3>Con học xong buổi ${lessonNo(i)} rồi!</h3>
-    <p>Con được <b>${total} sao</b>. Ba mẹ khen con một câu thật to nhé!</p>
+    <p>Con được <b>${total} sao</b>.</p>${RW.html}${khenParent(g,i)}
     <a class="ls-cele-go" href="#/g/${g}"><span aria-hidden="true">🗺️</span><b>Về bản đồ</b></a>
     <div class="ls-cele-more">${missionHTML(g,i)}${xtTeaser(g,Math.floor(i/PER),'🧭 Con muốn xem thêm? Góc khám phá')}</div></div>`;
   document.body.appendChild(ov); missionWire(ov,g,i);
   ov.querySelectorAll('.xt-tc, .xt-th a').forEach(a=>a.addEventListener('click',()=>ov.remove()));
   confetti(44); sfx.win();
   (async()=>{ await lsHD('Tuyệt vời! Con đã học xong hôm nay rồi!'); if(!document.body.contains(ov)) return;
+    for(const t of RW.lines){ await lsWait(250); if(!document.body.contains(ov)) return; await khenLS(t); }
     await lsWait(300); if(document.body.contains(ov)) lsHD('Hẹn gặp con ngày mai nhé!'); })();
 }
 
@@ -266,13 +268,13 @@ function lsFinish(){
   if(!s.done && D.steps.every((_,j)=>j in s.ls)){ LSX.replay=null; lsCap(''); return lsCompleteDay(g,i); }
   lsCap('');
   const NR=nx?LS_RULES[lsRuleKey(D.steps[k+1])]:null;
-  body.innerHTML=`<div class="ls-done"><div class="ls-bigstar">${LS_SVG.star}</div><b>Giỏi quá!</b><span>Con được ${stars} sao.</span>
+  body.innerHTML=`<div class="ls-done"><div class="ls-bigstar">${LS_SVG.star}</div><b>${esc(KHEN.step[LSX.step.type]||'Con đã làm xong bước này!')}</b><span>Con được ${stars} sao.</span>
     ${NR?`<div class="ls-next"><img src="${esc(window.LS.page[LS_STEP_ICON[D.steps[k+1].type]])}" alt=""><div><small>Bước tiếp theo</small><b>Bước ${k+2}: ${esc(LS_TYPE_NAME[D.steps[k+1].type])}</b><span>${esc(NR.lines.join(' '))}</span></div></div>`:''}
     <div class="row">${nx?`<a class="btn g" href="#/g/${g}/${i+1}/b${k+2}">Bước ${k+2}: ${esc(LS_TYPE_NAME[D.steps[k+1].type])} →</a>`:`<a class="btn g" href="#/g/${g}/${i+1}">⭐ Xong cả 5 bước!</a>`}
     <button class="btn y" id="lsAgain">Chơi lại</button></div></div>`;
   body.querySelector('#lsAgain').onclick=()=>lsStartStep(true); lsSetBack(null);
   LSX.replay=null; sfx.win(); confetti(18);
-  lsHD('Con được thêm một ngôi sao!');
+  khenLS(KHEN.step[LSX.step.type]||'Con được thêm một ngôi sao!', KHEN_FB.step);
 }
 
 /* ---------- 1. XEM VÀ LÀM THEO ---------- */
@@ -394,14 +396,17 @@ function lsCham(step, body){
     body.innerHTML=`<div class="ls-ask"><span class="ls-lab">Câu ${qi+1}/${qs.length} · nghe ${q.say[0].l==='zh'?'tiếng Trung':'tiếng Anh'}</span>
       <div class="ls-opts">${q.opts.map((o,n)=>`<button class="ls-opt" data-n="${n}" aria-label="Tranh ${n+1}">${lsPic(o,'')}</button>`).join('')}</div></div>`;
     const say=()=>{ lsStop(); lsCap('Con nghe nhé…'); return lsSeq(q.say,250); };
-    LSX.replay=say; say();
+    LSX.replay=say; say(); let wq=0;
     body.querySelectorAll('.ls-opt').forEach(b=>b.onclick=async()=>{
       if(busy) return; const n=+b.dataset.n;
       if(n===q.ans){
-        busy=true; lsStop(); sfx.ok(); b.classList.add('right'); lsPop(b); lsStar();
+        busy=true; lsStop(); sfx.ok(); b.classList.remove('hint'); b.classList.add('right'); lsPop(b); lsStar();
+        await khenLS(khenOk(wq>0)); if(!lsAlive(my)) return;
         if(q.then){ lsCap((q.then.l==='zh'?'Tiếng Trung: ':'Tiếng Anh: ')+q.then.t); await lsWait(300); await lsPlay(q.then); }
         await lsWait(600); busy=false; qi++; ask();
-      } else { sfx.no(); lsShake(b); const me=lsSid; await lsHD('Con nghe lại nhé.'); if(me===lsSid) say(); }
+      } else { sfx.pop(); lsShake(b); wq++; const me=lsSid;
+        if(wq>=2){ const r=body.querySelectorAll('.ls-opt')[q.ans]; r.classList.add('hint'); await khenLS(KHEN.sai2, KHEN_FB.sai2); if(me===lsSid) say(); }
+        else { await lsHD(KHEN.sai1); if(me===lsSid) say(); } }
     });
   }
   if(step.demo.length) demo(); else ask0();
@@ -455,7 +460,7 @@ function lsNoi(step, body){
       if(step.role && t.ask){ await lsPlay(t.ask); if(!alive()) return; }
       const how=await lsRecTurn(mic, my); if(!alive() || how==='gone' || how==='paused') return;
       if(how==='rec'){ mine.hidden=false; const url=LSX.mine; mine.onclick=()=>{ lsStop(); recPlay(url); }; }
-      lsStar(); await lsHD('Giỏi quá!'); if(!alive()) return;
+      lsStar(); await khenLS(how==='rec'?khenSpeak():'Con đã nói theo rồi!', KHEN_FB.speak); if(!alive()) return;
       if(t.after&&t.after.length){ await lsSeq(t.after); if(!alive()) return; }
     } else { lsRecUI(mic,'off'); lsStar(); }
     nx.textContent='Tiếp ▶'; await lsWait(1200); if(alive()){ ti++; turn(); }
@@ -471,7 +476,8 @@ function lsAT(step, body){
     <img class="ls-deer" src="${LS_FACE.co_huou}" alt="Cô Hươu">
     <button class="ls-box zh" data-l="zh"><b class="zh">中文</b><span>Tiếng Trung</span><div class="ls-pile" id="pzh"></div></button></div>`;
   const ask=()=>{ lsDots(qi,Q.length); if(qi>=Q.length){ lsSetBack(null); return lsFinish(); }
-    lsSetBack(qi>0?()=>{ lsStop(); busy=false; qi--; ask(); }:null); lsStop(); lsCap('Con nghe nhé…'); lsPlay(Q[qi]); };
+    lsSetBack(qi>0?()=>{ lsStop(); busy=false; qi--; ask(); }:null); lsStop(); wq=0; body.querySelectorAll('.ls-box').forEach(x=>x.classList.remove('hint')); lsCap('Con nghe nhé…'); lsPlay(Q[qi]); };
+  let wq=0;
   LSX.replay=ask;
   body.querySelectorAll('.ls-box').forEach(b=>b.onclick=async()=>{
     if(busy||qi>=Q.length) return; const q=Q[qi];
@@ -479,8 +485,12 @@ function lsAT(step, body){
       busy=true; sfx.ok(); lsPop(b); lsStar();
       const card=document.createElement('span'); card.className='ls-card '+q.l; card.textContent=q.t; b.querySelector('.ls-pile').appendChild(card);
       lsCap((q.l==='zh'?'Đúng rồi, tiếng Trung: ':'Đúng rồi, tiếng Anh: ')+q.t);
-      await lsWait(900); busy=false; qi++; ask();
-    } else { sfx.no(); lsShake(b); const me=lsSid; await lsHD('Con nghe lại nhé.'); if(me===lsSid) lsPlay(q); }
+      if(wq>0) await khenLS(KHEN.retry); else await lsWait(900);
+      busy=false; qi++; ask();
+    } else { sfx.pop(); lsShake(b); wq++; const me=lsSid;
+      if(wq>=2){ const r=body.querySelector(`.ls-box[data-l="${q.l}"]`); if(r) r.classList.add('hint'); await khenLS(KHEN.sai2, KHEN_FB.sai2); }
+      else await lsHD(KHEN.sai1);
+      if(me===lsSid) lsPlay(q); }
   });
   (async()=>{ await lsHD('Tiếng Anh hay tiếng Trung? Con chạm ô xanh nếu là tiếng Anh, ô đỏ nếu là tiếng Trung nhé!'); if(lsAlive(my)) ask(); })();
 }
@@ -515,8 +525,8 @@ function lsDo(step, body){
     body.querySelector('.ls-nside').insertAdjacentHTML('beforeend','<div class="ls-mic idle" id="mic"><span class="ls-lv"></span>'+LS_SVG.mic+'<b></b></div>');
     tm.hidden=true;
     const how=await lsRecTurn(body.querySelector('#mic'), my, {maxMs:5000}); if(me!==lsSid || how==='gone' || how==='paused') return;
-    hint.textContent='Giỏi quá!'; lsStar(); opened.add(n);
-    await lsHD('Giỏi quá!'); if(me!==lsSid) return; await lsWait(400); boxes();
+    const kt=how==='rec'?khenSpeak():'Con đã thử nói rồi!'; hint.textContent=kt; lsStar(); opened.add(n);
+    await khenLS(kt, KHEN_FB.speak); if(me!==lsSid) return; await lsWait(400); boxes();
   }
   (async()=>{ await lsHD('Con nghe rồi thử nói bằng tiếng kia nhé!'); })();
   boxes();

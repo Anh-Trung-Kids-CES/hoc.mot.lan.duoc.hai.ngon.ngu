@@ -219,25 +219,29 @@ function cxStarAdd(n){ CX.stars+=n; const el=document.getElementById('cstar'); i
 function cxFinish(frac, html, opt){
   opt=opt||{};
   const {g,i,k,day,ex}=CX, s=cxState(g,i), before=dayPoints(g,i);
-  const pts=ex.optional?0:Math.max(1,Math.round(Math.max(0,Math.min(1,frac))*CX_PTS));
+  const pts=ex.optional?0:CX_PTS;   // sao theo việc làm xong bài, không theo số câu đúng (độ chính xác chỉ để phản hồi)
   if(!(ex.id in s.ex) || s.ex[ex.id]<pts) s.ex[ex.id]=pts;
   if(opt.rec){ const r=s.rec[ex.id]; if(!r || opt.rec.sc>r.sc || (opt.rec.sc===r.sc && opt.rec.t<r.t)) s.rec[ex.id]=opt.rec; }
   const req=cxRequired(day), allDone=req.every(e=>e.id in s.ex);
   let fresh=false; if(allDone && !s.done){ s.done=true; fresh=true; }
+  const RW=fresh?{lines:[]}:null;
   const box=document.getElementById('cxbox');
   const next=day.cx.ex.findIndex((e,n)=>n>k && !(e.id in s.ex) && e.type!=='video');
-  const stars=Math.max(1,Math.round(frac*3));
+  const kh=ex.optional?'Con đã xem xong rồi!':khenEnd(frac);
   box.innerHTML=`<div class="cx-card cx-end">
-      <div class="cx-endstars">${[0,1,2].map(n=>n<stars?CX_SVG.star:CX_SVG.star0).join('')}</div>
-      ${html||`<h3>Xong bài rồi! <span class="zh">太棒了！</span> <span class="cx-en">Well done!</span></h3>`}
+      <div class="cx-endstars">${CX_SVG.star}${ex.optional?'':`<b class="cx-endpts">+${pts}</b>`}</div>
+      <div class="cx-khen">${esc(kh)}</div>
+      ${html||`<h3>Xong bài rồi! <span class="zh">做完了！</span> <span class="cx-en">You did it!</span></h3>`}
       ${s.rec[ex.id]?`<div class="cx-rec">🏅 Kỷ lục của em: ${s.rec[ex.id].sc} câu đúng · ${s.rec[ex.id].t} giây</div>`:''}
       ${fresh?`<div class="cx-alldone">🎉 Con đã làm xong tất cả bài của buổi ${lessonNo(i)}!</div>`:''}
     </div>
-    ${fresh?missionHTML(g,i)+xtTeaser(g,Math.floor(i/PER),'🧭 Con muốn xem thêm? Góc khám phá'):''}
+    <div id="cxRw"></div>${fresh?khenParent(g,i)+missionHTML(g,i)+xtTeaser(g,Math.floor(i/PER),'🧭 Con muốn xem thêm? Game – video'):''}
     <div class="cx-bot">${opt.again?`<button class="cx-pill" id="again">↻ Chơi lại</button>`:''}
       ${opt.challenge?`<button class="cx-pill warm" id="chal">⏱ Thử thách lần 2</button>`:''}
       ${next>=0&&!fresh?`<button class="cx-go" id="nx">Bài tiếp →</button>`:`<button class="cx-go" id="list">${fresh?'Nhận huy hiệu →':'Về danh sách bài'}</button>`}</div>`;
   addPoints(g,i,before,box.querySelector('.cx-end')); missionWire(box,g,i);
+  if(fresh){ const rw=rewardExtras(g,i); const el=box.querySelector('#cxRw'); if(el) el.innerHTML=rw.html; RW.lines=rw.lines; }
+  (async()=>{ const b0=box; await hdSay([kh, ...(RW?RW.lines:[])].filter(t=>hdFile(t))); })();
   sfx.win(); confetti(fresh?44:18); if(typeof mascot==='function') mascot(fresh?'done':'ok');
   const a=box.querySelector('#again'); if(a) a.onclick=()=>{ sfx.pop(); opt.again(); };
   const c=box.querySelector('#chal'); if(c) c.onclick=()=>{ sfx.pop(); opt.challenge(); };
@@ -248,7 +252,7 @@ function cxFinish(frac, html, opt){
 function cxT(fn, ms){ const b=CX.box; return setTimeout(()=>{ if(CX.box===b && b && document.body.contains(b)) fn(); }, ms); }
 /* thông báo nhỏ đúng / chưa đúng */
 function cxFlash(el, ok){ if(!el) return; el.classList.remove('ok','no','shake'); void el.offsetWidth; el.classList.add(ok?'ok':'no'); if(!ok) el.classList.add('shake'); }
-function cxPraise(lang){ const zh=['真棒！','太好了！','你真厉害！'], en=['Great job!','Super!','Well done!']; const a=lang==='zh'?zh:en; return a[Math.floor(Math.random()*a.length)]; }
+function cxPraise(lang){ const zh=['对了！','说得好！','听得真仔细！'], en=['You got it!','Nice listening!','You said it!']; const a=lang==='zh'?zh:en; return a[Math.floor(Math.random()*a.length)]; }
 /* chữ Trung kèm pinyin */
 function zhHTML(x, showPy){ return `<span class="cx-hz zh">${esc(x.t||x.zh)}</span>${showPy&&(x.py)?`<span class="cx-py">${esc(x.py)}</span>`:''}`; }
 function txtHTML(x, showPy){ return x.l==='zh' ? zhHTML(x, showPy) : `<span class="cx-tx">${esc(x.t)}</span>`; }
