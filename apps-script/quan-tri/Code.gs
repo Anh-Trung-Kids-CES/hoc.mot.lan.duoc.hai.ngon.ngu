@@ -3,11 +3,11 @@
  *
  * Đây là một dự án Apps Script RIÊNG, khác với máy chủ của web học (apps-script/Code.gs).
  * Trang chạy bằng chính tài khoản Google của người mở, nên:
- *   – ai không có quyền mở Sheet Tiến độ & Bảng vàng thì không xem được gì;
+ *   – ai không có quyền mở Sheet Anh-Trung-Kids – Dữ liệu dự án thì không xem được gì;
  *   – ai có quyền nhưng chưa có tên trong tab "Đội" thì trang báo "chưa có quyền".
  * Không có dữ liệu nào của bé nằm trên GitHub Pages.
  *
- * Mọi dữ liệu nằm trong Sheet "Little Language Explorer – Tiến độ & Bảng vàng" (cùng Sheet với máy chủ web học).
+ * Mọi dữ liệu nằm trong Sheet "Anh-Trung-Kids – Dữ liệu dự án" của anhtrung.home@gmail.com (cùng Sheet với máy chủ web học).
  * Sheet DATA Dự án cũ không còn dùng. Tab dùng:
  *   Gia đình          – mỗi gia đình một dòng, một trạng thái (web học tạo khi ba mẹ để lại Zalo;
  *                       trang này tự thêm gia đình từ "Đăng ký Web" – đơn của trang ưu đãi)
@@ -23,7 +23,7 @@
  * CÁCH BẬT: xem apps-script/quan-tri/HUONG-DAN.md
  */
 
-const DATA_ID = '1pF1FA_LR5LUou3N50g4FJa0SNFYTQX3P08MrBIF3ffk';    // Sheet "Little Language Explorer – Tiến độ & Bảng vàng"
+const DATA_ID = '1QQnbTRwpbu6wGmrtnbwAW0VVyyk1AA7xlHQb_GwFOic';    // Sheet "Anh-Trung-Kids – Dữ liệu dự án" (Drive anhtrung.home@gmail.com)
 const TIEN_DO_ID = DATA_ID;                                          // phiếu đổi quà (tab DoiQua) cũng nằm ở đây
 
 const GD_HEAD = ['Mã gia đình', 'Tạo lúc', 'Nguồn', 'Mã người xem', 'Mã CTV', 'Tên ba/mẹ', 'Số Zalo', 'Tên con', 'Tuổi', 'Khoá',
@@ -91,7 +91,7 @@ function toi_(ss) {
   const team = rows.filter(r => r[0] || r[1]).map(r => ({ email: String(r[0]).trim().toLowerCase(), ten: String(r[1]).trim(),
     vaiTro: String(r[2]).trim(), nhan: r[3] === true || String(r[3]).toUpperCase() === 'TRUE' }));
   const me = team.find(t => t.email === email);
-  if (!me) throw new Error('Email ' + email + ' chưa có trong tab "Đội" của Sheet Tiến độ & Bảng vàng. Nhờ cô thêm email, tên và vai trò rồi tải lại trang.');
+  if (!me) throw new Error('Email ' + email + ' chưa có trong tab "Đội" của Sheet Anh-Trung-Kids – Dữ liệu dự án. Nhờ cô thêm email, tên và vai trò rồi tải lại trang.');
   if (['Quản lý', 'Vận hành'].indexOf(me.vaiTro) < 0) throw new Error('Vai trò "' + me.vaiTro + '" chưa có màn hình ở bản này. Trang hiện dành cho Quản lý và Vận hành.');
   return { me: me, team: team };
 }

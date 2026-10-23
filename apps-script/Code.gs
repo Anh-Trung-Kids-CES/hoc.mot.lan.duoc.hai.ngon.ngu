@@ -1,7 +1,7 @@
 /**
  * Little Language Explorers – máy chủ nhỏ trên Google Apps Script
  * Một link Web App dùng cho mọi việc của dự án, ghi tất cả vào CHÍNH Sheet chứa script này
- * ("Little Language Explorer – Tiến độ & Bảng vàng"). Sheet DATA Dự án cũ không còn dùng.
+ * ("Anh-Trung-Kids – Dữ liệu dự án", Drive anhtrung.home@gmail.com). Các Sheet cũ không còn dùng.
  *   1) Lưu / mở lại tiến độ học của từng bé (đăng nhập bằng tên con + SĐT/Gmail, không mật khẩu)
  *   2) Bảng vàng Top 10 theo khoá và chặng
  *   3) Sự kiện học thử theo mã CTV (tab "Truy cập học thử")
@@ -9,8 +9,8 @@
  *   5) Đơn đăng ký từ trang ưu đãi (tab "Đăng ký Web")
  *
  * CÁCH BẬT (làm 1 lần, khoảng 5 phút):
- *   1. Tạo một Google Sheet mới, đặt tên ví dụ "LLE – Tiến độ & Bảng vàng".
- *   2. Trong Sheet: Tiện ích mở rộng → Apps Script. Xoá code mẫu, dán toàn bộ file này, bấm Lưu.
+ *   1. Đăng nhập anhtrung.home@gmail.com, mở script.google.com → Dự án mới (mã Sheet dữ liệu ở DATA_ID bên dưới).
+ *   2. Xoá code mẫu, dán toàn bộ file này, bấm Lưu.
  *   3. Bấm Triển khai → Tùy chọn triển khai mới → loại "Ứng dụng web".
  *        Thực thi với tư cách: Tôi        Ai có quyền truy cập: Bất kỳ ai
  *   4. Bấm Triển khai, cho phép quyền truy cập, chép "URL ứng dụng web" (đuôi /exec).
@@ -30,8 +30,11 @@
  * Vì vậy Sheet này chỉ chia sẻ cho đội, không để "bất kỳ ai có đường liên kết".
  */
 
+/* Sheet dữ liệu của dự án (Drive anhtrung.home@gmail.com). Script này là dự án riêng, không gắn vào Sheet. */
+const DATA_ID = '1QQnbTRwpbu6wGmrtnbwAW0VVyyk1AA7xlHQb_GwFOic';
+function ss_() { return SpreadsheetApp.openById(DATA_ID); }
 function sheet_(name, head) {
-  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const ss = ss_();
   let sh = ss.getSheetByName(name);
   if (!sh) { sh = ss.insertSheet(name); sh.appendRow(head); sh.setFrozenRows(1); }
   return sh;
@@ -144,7 +147,7 @@ function visit_(p) {
   const lock = LockService.getScriptLock(); lock.waitLock(10000);
   try {
     const ev = EVENTS.indexOf(p.ev) >= 0 ? p.ev : 'mo';
-    logEvent_(SpreadsheetApp.getActiveSpreadsheet(), p.ref, p.vid, ev, p.g, p.x);
+    logEvent_(ss_(), p.ref, p.vid, ev, p.g, p.x);
     return json_({ ok: true });
   } catch (err) { return json_({ ok: false }); }
   finally { lock.releaseLock(); }
@@ -188,7 +191,7 @@ function family_(d) {
   const phone = normPhone_(d.phone), parent = String(d.parent || '').trim().slice(0, 40);
   const kid = String(d.kid || '').trim().slice(0, 40), vid = String(d.vid || '').slice(0, 24);
   if (!phone || !parent || !kid) return { ok: false, err: 'thieu' };
-  const ss = SpreadsheetApp.getActiveSpreadsheet(), sh = giaDinhSheet_(ss);
+  const ss = ss_(), sh = giaDinhSheet_(ss);
   const n = sh.getLastRow(), rows = n > 1 ? sh.getRange(2, 1, n - 1, GD_HEAD.length).getValues() : [];
   const yes = v => v === true || v === 'true' || v === 1 || v === '1';
   let at = -1;
@@ -230,7 +233,7 @@ function dangKy_(p) {
   if (!t('ho_ten_phu_huynh') || !phone || !t('ten_be') || !t('tuoi_be')) return { ok: false, error: 'Thiếu thông tin bắt buộc' };
   const lock = LockService.getScriptLock(); lock.waitLock(10000);
   try {
-    const ss = SpreadsheetApp.getActiveSpreadsheet();
+    const ss = ss_();
     let sh = ss.getSheetByName('Đăng ký Web');
     if (!sh) {
       sh = ss.insertSheet('Đăng ký Web'); sh.appendRow(DK_HEAD); sh.setFrozenRows(1);
