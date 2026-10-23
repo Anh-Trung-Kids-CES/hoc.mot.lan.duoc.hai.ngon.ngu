@@ -24,6 +24,7 @@
 <link rel="stylesheet" href="qua.css">
 <link rel="stylesheet" href="khen.css">
 <link rel="stylesheet" href="dien-thoai.css">
+<link rel="stylesheet" href="cong-zalo.css">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+SC:wght@500;700&display=swap" rel="stylesheet">
 <style>
 :root{color-scheme:light;
@@ -898,12 +899,18 @@ function demoRef(){ try{ const d=JSON.parse(localStorage.getItem('lle-ref')||'nu
 /* Đếm truy cập bản học thử theo mã CTV: gửi một "tín hiệu" GET tới Apps Script (sheet TruyCapHocThu).
    Dùng GET để bản Apps Script cũ (chưa có action=visit) chỉ trả Bảng vàng, không ghi nhầm dữ liệu. */
 function demoVid(){ let v=lsGet('lle-vid',''); if(!v){ v=Date.now().toString(36)+Math.random().toString(36).slice(2,8); lsSet('lle-vid',v); } return v; }
-function demoTrack(ev, g){
+function demoTrack(ev, g, x){
   if(!DEMO || !SCORE_API) return;
-  try{ const q=new URLSearchParams({action:'visit', ref:demoRef()||'TU_NHIEN', vid:demoVid(), ev, g:g||(KID&&KID.group)||'', t:Date.now()});
+  try{ const q=new URLSearchParams({action:'visit', ref:demoRef()||'TU_NHIEN', vid:demoVid(), ev, g:g||(KID&&KID.group)||'', x:x==null?'':String(x), t:Date.now()});
     new Image().src=SCORE_API+'?'+q.toString(); }catch(e){}
 }
-function dangKyLink(){ const r=demoRef(); return DANG_KY_LINK+(r?(DANG_KY_LINK.includes('?')?'&':'?')+'ref='+encodeURIComponent(r):''); }
+/* Sang trang ưu đãi mang theo mã CTV và mã gia đình (nếu ba mẹ đã để lại Zalo), tên con và khoá,
+   để đơn 79.000đ khớp đúng với bé đã học thử. */
+function dangKyLink(){ const q=new URLSearchParams(), r=demoRef(), f=demoFam();
+  if(r) q.set('ref',r); if(f&&f.code) q.set('fam',f.code);
+  if(KID&&KID.name) q.set('ten',KID.name); if(KID&&KID.group) q.set('khoa',KID.group);
+  const qs=q.toString(); return DANG_KY_LINK+(qs?(DANG_KY_LINK.includes('?')?'&':'?')+qs:''); }
+function demoFam(){ return lsGet('lle-fam',null); }
 const DEMO_FEE = "79.000đ", DEMO_HAN = "hết ngày 25/10/2026", DEMO_KHAI_MAC = "thứ Hai 26/10/2026";
 const KID_KEY = DEMO ? 'lle-kid-demo' : 'lle-kid';
 let TEACHER = !DEMO && (/[?&]gv=1/.test(location.search) || lsGet('lle-teacher',false)===true);
@@ -1917,28 +1924,37 @@ function demoProfile(g, then){
     <p class="hint"><b>Học một lần, được hai ngôn ngữ.</b> Con được học miễn phí ${DEMO_N} buổi đầu của mỗi khoá. Ba mẹ chỉ cần nhập tên con, không cần số điện thoại.</p>
     <label for="kname">Tên của con</label>
     <input id="kname" required maxlength="24" autocomplete="off" placeholder="Ví dụ: Bông, Minh An" value="${esc(KID&&KID.name||'')}">
+    <label id="kageL">Con mấy tuổi?</label>
+    <div class="age-pick" role="radiogroup" aria-labelledby="kageL">${DEMO_AGES.map(a=>`<button type="button" role="radio" aria-checked="${KID&&KID.age===a}" class="${KID&&KID.age===a?'on':''}" data-a="${a}">${a}</button>`).join('')}</div>
     <p class="pf-err" id="pferr" hidden></p>
     <div class="row"><button class="btn" type="submit">Bắt đầu học! 🚀</button></div>
   </form>`;
   document.body.appendChild(ov);
   ov.querySelector('#kname').focus();
+  let age=KID&&KID.age||'';
+  ov.querySelectorAll('.age-pick button').forEach(b=>b.onclick=()=>{ age=b.dataset.a; sfx.pop&&sfx.pop();
+    ov.querySelectorAll('.age-pick button').forEach(x=>{ const on=x===b; x.classList.toggle('on',on); x.setAttribute('aria-checked',on); }); });
   ov.querySelector('#pf').addEventListener('submit',e=>{
     e.preventDefault();
     const name=ov.querySelector('#kname').value.trim(), err=ov.querySelector('#pferr');
     if(!name){ err.hidden=false; err.textContent='Ba mẹ nhập tên của con nhé.'; return; }
-    KID={name, id:'demo-'+slugName(name), group:g, demo:true};
-    lsSet(KID_KEY,KID); demoTrack('hoc', g); ov.remove(); sfx.win(); updateStars(); then&&then();
+    if(!age){ err.hidden=false; err.textContent='Ba mẹ chạm vào số tuổi của con nhé.'; return; }
+    KID={name, id:'demo-'+slugName(name), group:g, demo:true, age};
+    lsSet(KID_KEY,KID); lsSet('lle-vao-ngay',jToday()); demoTrack('hoc', g, age); ov.remove(); sfx.win(); updateStars(); then&&then();
   });
 }
 const demoShown={};
 function demoCheckDone(){
-  if(!DEMO || !KID || !GROUPS[KID.group]) return; const g=KID.group;
-  if(demoShown[g] || demoDone(g)<DEMO_N || lsGet('lle-demo-xong-'+g,false)) return;
+  if(!DEMO || !KID || !GROUPS[KID.group]) return; const g=KID.group, n=demoDone(g);
+  if(n>lsGet('lle-demo-n-'+g,0)){ lsSet('lle-demo-n-'+g,n); if(n<DEMO_N) demoTrack('xong'+n, g); }
+  if(n>=1 && ZALO_OK && !demoFam() && !lsGet('lle-zalo-hoi',false)){ lsSet('lle-zalo-hoi',true); setTimeout(()=>zaloGate(), 2200); }
+  if(demoShown[g] || n<DEMO_N || lsGet('lle-demo-xong-'+g,false)) return;
   demoShown[g]=true; lsSet('lle-demo-xong-'+g,true); demoTrack('xong3', g);
   setTimeout(()=>demoGate('xong'), 2200);
 }
 function demoGate(why){
   if(!DEMO || document.querySelector('.overlay.demo')) return;
+  if(why!=='xong') demoTrack('khoa', '', why||'buoi');
   const G=KID&&GROUPS[KID.group], nm=KID&&KID.name?esc(KID.name):'Con';
   const h = why==='xong' ? `${nm} đã học xong ${DEMO_N} buổi đầu tiên! 🎉`
           : why==='vang' ? 'Bảng vàng dành cho nhà thám hiểm đã đăng ký 🏆'
@@ -1959,14 +1975,80 @@ function demoGate(why){
     <p class="dm-info">Phí <b>${DEMO_FEE}</b> cho sự kiện và học liệu 21 ngày · Hạn đăng ký: <b>${DEMO_HAN}</b> · Khai mạc: <b>${DEMO_KHAI_MAC}</b></p>
     <div class="row"><a class="btn g" href="${dangKyLink()}" target="_blank" rel="noopener">📝 Đăng ký cho con</a>
       <button class="btn y" id="dmLater" type="button">${why==='xong'?'Xem lại bài đã học':'Để sau'}</button></div>
+    ${demoFam()||!KID||!ZALO_OK?'':'<button class="dm-zalo" id="dmZalo" type="button">📩 Nhận nhận xét của cô qua Zalo</button>'}
   </div>`;
   document.body.appendChild(ov);
   const close=()=>ov.remove();
   ov.querySelector('.pp-x').onclick=close; ov.querySelector('#dmLater').onclick=close;
   ov.querySelector('a.btn.g').addEventListener('click',()=>demoTrack('bam_dk'));
+  const dz=ov.querySelector('#dmZalo'); if(dz) dz.onclick=()=>{ close(); zaloGate(); };
   ov.addEventListener('click',e=>{ if(e.target===ov) close(); });
   if(why==='xong'){ confetti(40); sfx.win(); }
 }
+/* ---------- CỔNG ZALO sau buổi 1 (bản cho phụ huynh) ----------
+   Ba mẹ vừa nghe con nói xong buổi đầu, nên đây là lúc xin số Zalo để cô gửi nhận xét và lộ trình 21 ngày.
+   Ô đồng ý tách theo mục đích, không tích sẵn; bỏ qua vẫn học tiếp. Web không tải giọng nói của con lên máy chủ.
+   Gửi về Apps Script (action=family) → tab "Gia đình" của Sheet DATA Dự án, trạng thái "Đang dùng thử". */
+const DEMO_AGES = ['3','4','5','6','7','8','9','10','Trên 10'];
+/* Chỉ mở cổng khi máy chủ Apps Script đã là bản có Bảng Gia đình (trả v>=2 ở action=ping),
+   để số Zalo của ba mẹ không bị gửi vào bản cũ rồi mất. */
+let ZALO_OK=false;
+function zaloPing(){ if(!DEMO || !SCORE_API) return;
+  fetch(SCORE_API+'?action=ping&t='+Date.now()).then(r=>r.json()).then(j=>{ ZALO_OK=!!(j && j.v>=2); if(ZALO_OK && lsGet('lle-fam-gui',null)) zaloSend(); }).catch(()=>{}); }
+function zaloGate(){
+  if(!DEMO || !KID || !ZALO_OK || demoFam() || document.querySelector('.overlay.zg')) return;
+  const nm=esc(KID.name||'Con');
+  const ov=document.createElement('div'); ov.className='overlay pf zg';
+  ov.innerHTML=`<form class="modal" id="zgf" novalidate aria-labelledby="zgh">
+    <div class="mart"><img class="mportrait cut" src="tai-nguyen/nhan-vat/huou_huou1_a.webp" alt=""></div>
+    <h3 id="zgh">${nm} vừa học xong buổi 1! 🎉</h3>
+    <p class="zg-lead">Ba mẹ để lại Zalo để nhận <b>nhận xét buổi đầu của cô</b> và <b>lộ trình 21 ngày</b> hợp với con, kèm một trò ôn bài 5 phút ở nhà.</p>
+    <label for="zgp">Tên ba hoặc mẹ</label>
+    <input id="zgp" maxlength="40" autocomplete="name" placeholder="Ví dụ: Chị Lan">
+    <label for="zgz">Số Zalo</label>
+    <input id="zgz" type="tel" inputmode="tel" maxlength="16" autocomplete="tel" placeholder="Ví dụ: 0912 345 678">
+    <input class="zg-trap" id="zgweb" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <label class="zg-ok"><input type="checkbox" id="zc1"><span>Cô dùng tiến độ học của con để gửi nhận xét và báo cáo <small>Cần chọn để cô gửi nhận xét</small></span></label>
+    <label class="zg-ok"><input type="checkbox" id="zc2"><span>Đội CES nhắn Zalo hoặc gọi để tư vấn khoá phù hợp với con</span></label>
+    <label class="zg-ok"><input type="checkbox" id="zc3"><span>Nhận tin đợt mới và ưu đãi</span></label>
+    <p class="pf-err" id="zgerr" hidden></p>
+    <div class="row"><button class="btn g" type="submit">Gửi cho cô 📩</button><button class="btn y" type="button" id="zgskip">Để sau, con học tiếp</button></div>
+    <p class="zg-note">Web không tải giọng nói của con lên. Nếu muốn cô nghe con nói, ba mẹ gửi clip qua Zalo khi cô nhắn. Ba mẹ có thể nhắn để rút đồng ý bất cứ lúc nào.</p>
+  </form>`;
+  document.body.appendChild(ov);
+  const $=q=>ov.querySelector(q), err=$('#zgerr');
+  $('#zgskip').onclick=()=>{ lsSet('lle-zalo-bo-qua',Date.now()); ov.remove(); };
+  $('#zgf').addEventListener('submit',e=>{
+    e.preventDefault();
+    const parent=$('#zgp').value.trim(), raw=$('#zgz').value, phone=normAcct(raw);
+    const say=t=>{ err.hidden=false; err.textContent=t; };
+    if(!parent) return say('Ba mẹ nhập tên để cô biết cách xưng hô nhé.');
+    if(!phone || phone.includes('@')) return say('Số Zalo chưa đúng. Ba mẹ kiểm tra lại giúp cô nhé (10 số, bắt đầu bằng 0).');
+    if(!$('#zc1').checked) return say('Ba mẹ chọn ô đầu tiên để cô gửi được nhận xét cho con nhé.');
+    const fam={code:'GD'+Math.random().toString(36).slice(2,8).toUpperCase().replace(/[^A-Z0-9]/g,'X').padEnd(6,'X'), t:Date.now(), sent:false};
+    lsSet('lle-fam',fam);
+    lsSet('lle-fam-gui',{action:'family', code:fam.code, vid:demoVid(), ref:demoRef()||'TU_NHIEN', kid:KID.name, age:KID.age||'', group:KID.group||'',
+      parent, phone, cHoc:true, cTuVan:$('#zc2').checked, cUuDai:$('#zc3').checked, web:$('#zgweb').value});
+    zaloSend();
+    ov.querySelector('.modal').innerHTML=`<div class="zg-done"><div class="mart"><img class="mportrait cut" src="tai-nguyen/nhan-vat/huou_huou1_a.webp" alt=""></div>
+      <h3>Cảm ơn ba mẹ!</h3><p>Cô sẽ nhắn Zalo cho ba mẹ trong giờ làm việc, kèm nhận xét buổi đầu của <b>${nm}</b>.</p>
+      <div class="row"><button class="btn" type="button" id="zgok">Con học tiếp nhé 🚀</button></div></div>`;
+    sfx.win(); ov.querySelector('#zgok').onclick=()=>ov.remove();
+  });
+  setTimeout(()=>{ try{ $('#zgp').focus(); }catch(e){} },300);
+}
+/* Gửi thông tin gia đình; chưa chắc đã tới máy chủ thì lần mở web sau gửi lại (máy chủ gộp theo mã người xem). */
+async function zaloSend(){
+  const body=lsGet('lle-fam-gui',null); if(!body || !SCORE_API) return;
+  const done=()=>{ const f=demoFam(); if(f){ f.sent=true; lsSet('lle-fam',f); } try{ localStorage.removeItem('lle-fam-gui'); }catch(e){} };
+  try{
+    const r=await fetch(SCORE_API,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(body)});
+    const j=await r.json(); if(j && j.ok){ if(j.code){ const f=demoFam(); if(f){ f.code=j.code; lsSet('lle-fam',f); } } done(); }
+  }catch(e){ try{ fetch(SCORE_API,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(body)}).catch(()=>{}); }catch(_){} }
+}
+/* Con nói thành tiếng lần thứ 1, 5, 10, 20 (gọi từ jRec trong khen.js) */
+function demoNoi(n){ if(DEMO && [1,5,10,20].includes(n)) demoTrack('noi', '', n); }
+
 if(DEMO){
   document.body.classList.add('is-demo');
   document.title='Anh-Trung-Kids – Học một lần, được hai ngôn ngữ';
@@ -1975,6 +2057,8 @@ if(DEMO){
   rb.onclick=e=>{ e.preventDefault(); sfx.pop(); demoGate(); };
   document.body.appendChild(rb);
   demoTrack('mo');
+  if(KID && GROUPS[KID.group] && lsGet('lle-vao-ngay','')!==jToday()){ lsSet('lle-vao-ngay',jToday()); demoTrack('vao', KID.group); }
+  zaloPing();
 }
 
 function route(){

@@ -41,3 +41,10 @@ Tiến độ ở chế độ giáo viên lưu riêng (`lle-progress-gv`), không
 - **Bản đồ trên điện thoại dọc**: tranh giữ đúng tỉ lệ, con kéo ngang để xem; web tự cuộn tới buổi đang học.
 - **Điện thoại nằm ngang**: ẩn tiêu đề buổi khi đang làm bài, thu gọn khung và nút; video, tranh, quiz, thẻ lật, luyện nói xếp hai cột để vừa một màn hình.
 - Bản học thử: dải "Đăng ký" nằm ngay trên thanh nút, không che bài.
+
+## Cập nhật 23/10/2026 (cổng Zalo và trang quản trị)
+- **Màn nhập tên** (bản cho phụ huynh): thêm một chạm chọn tuổi của con (3–10, trên 10).
+- **Cổng Zalo sau buổi 1**: ba mẹ để lại tên và số Zalo để nhận nhận xét buổi đầu của cô; 3 ô đồng ý tách theo mục đích, không tích sẵn; bỏ qua vẫn học tiếp; chỉ hỏi một lần. Có lối vào lại ở bảng mời đăng ký. Cổng chỉ hiện khi máy chủ Apps Script đã là bản mới (`?action=ping` trả `v:2`). Kiểu chữ ở `cong-zalo.css`.
+- **Sự kiện học gửi về tab "Truy cập học thử"**: thêm `vao` (quay lại học, 1 lần/ngày), `xong1`, `xong2`, `noi` (lần nói thứ 1, 5, 10, 20), `khoa` (bấm phần bị khóa), `zalo`; `hoc` kèm tuổi.
+- **Nút "Đăng ký cho con"** mang theo `fam` (mã gia đình), `ten`, `khoa` sang trang ưu đãi.
+- **Trang quản trị** (Việc hôm nay · Gia đình · Số liệu) là dự án Apps Script riêng trong `apps-script/quan-tri/`, đăng nhập Google. Cách bật: `apps-script/quan-tri/HUONG-DAN.md`.

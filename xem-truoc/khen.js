@@ -46,7 +46,7 @@ function khenEnd(frac){
 function jGet(){ const j=(P._j && typeof P._j==='object') ? P._j : (P._j={}); j.days=j.days||{}; j.rec=+j.rec||0; j.badges=j.badges||{}; j.gifts=j.gifts||{}; return j; }
 function jToday(){ const d=new Date(); return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); }
 function jMark(){ if(!KID || TEACHER) return; const j=jGet(); if(!j.days[jToday()]){ j.days[jToday()]=1; j.t=Date.now(); } }
-function jRec(){ if(!KID || TEACHER) return; const j=jGet(); j.rec++; j.t=Date.now(); }
+function jRec(){ if(!KID || TEACHER) return; const j=jGet(); j.rec++; j.t=Date.now(); if(typeof demoNoi==='function') demoNoi(j.rec); }
 function jGroup(){ return KID && GROUPS[KID.group] ? KID.group : 'seed'; }
 function jMetrics(g){
   g=g||jGroup(); const j=jGet();

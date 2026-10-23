@@ -21,7 +21,9 @@
  *
  * CẬP NHẬT CODE (khi có bản mới): dán đè toàn bộ file này → Lưu → Triển khai → Quản lý các bản triển khai
  *   → bấm biểu tượng bút chì → Phiên bản: "Phiên bản mới" → Triển khai. Link /exec giữ nguyên.
- * Web chỉ gửi mã băm của SĐT/Gmail, không gửi số điện thoại thật.
+ * Đăng nhập học chính chỉ gửi mã băm của SĐT/Gmail, không gửi số điện thoại thật.
+ * Riêng cổng Zalo sau buổi 1 của bản cho phụ huynh gửi tên ba/mẹ và số Zalo (khi ba mẹ tự điền và đồng ý),
+ * ghi thẳng vào tab "Gia đình" của Sheet DATA Dự án, không ghi vào Sheet này.
  */
 
 function sheet_(name, head) {
@@ -45,6 +47,7 @@ function doPost(e) {
   const lock = LockService.getScriptLock(); lock.waitLock(10000);
   try {
     const d = JSON.parse(e.postData.contents || '{}');
+    if (d.action === 'family') return json_(family_(d));
     if (d.action === 'redeem') {
       if (!d.id || !d.code) return json_({ ok: false });
       const sh = sheet_('DoiQua', QUA_HEAD);
@@ -83,6 +86,7 @@ function doPost(e) {
 
 function doGet(e) {
   const p = e.parameter || {};
+  if (p.action === 'ping') return json_({ ok: true, v: 2 });          // web hỏi: máy chủ đã có Bảng Gia đình chưa
   if (p.action === 'visit') return visit_(p);
   if (p.action === 'team') {   // mục tiêu chung: cả đội một khoá đã cùng học bao nhiêu buổi (không lộ tên, không xếp hạng)
     const sh = sheet_('Diem', ['kid', 'name', 'group', 'day', 'round', 'points', 'updated']), n = sh.getLastRow(), kids = {};
@@ -115,22 +119,94 @@ function doGet(e) {
 }
 
 /* ---------- Truy cập bản học thử theo mã CTV ----------
- * Link CTV: …/demo/?ref=CTV01 … CTV10. Web gửi 4 loại sự kiện:
- *   mo = mở trang học thử · hoc = bé nhập tên, bắt đầu học thử · xong3 = học xong 3 buổi · bam_dk = bấm "Đăng ký cho con"
+ * Link CTV: …/demo/?ref=CTV01 … CTV10. Web gửi các sự kiện (GET action=visit):
+ *   mo = mở trang · vao = bé quay lại học (1 lần/ngày) · hoc = bé nhập tên, bắt đầu học (chi tiết: tuổi)
+ *   xong1 / xong2 / xong3 = học xong 1 / 2 / 3 buổi · noi = con nói thành tiếng (chi tiết: tổng số lần 1, 5, 10, 20)
+ *   khoa = bấm vào phần bị khóa (chi tiết: phần nào) · bam_dk = bấm "Đăng ký cho con" · zalo = ba mẹ để lại Zalo
  * Mỗi sự kiện ghi 1 dòng vào tab "Truy cập học thử" của Sheet "DATA Dự án";
- * tab "Thống kê CTV" (cột H–L) tự đếm theo mã, cạnh số đăng ký và số đã đóng phí.
+ * trang quản trị đọc tab này để chấm điểm gia đình và vẽ phễu theo mã CTV.
  * Tài khoản triển khai Apps Script này cần có quyền sửa Sheet DATA Dự án. */
 const DATA_DU_AN_ID = '1antBQ-MDz2a4U-w-B2y6XTnF1Pzln7QwwUxxJm5TanI';
+const EVENTS = ['mo', 'vao', 'hoc', 'xong1', 'xong2', 'xong3', 'noi', 'khoa', 'bam_dk', 'zalo', 'dong_hanh'];
+const TC_HEAD = ['Thời gian', 'Mã CTV', 'Mã người xem', 'Sự kiện', 'Khoá', 'Chi tiết'];
+function cleanRef_(r) { return String(r || 'TU_NHIEN').toUpperCase().replace(/[^A-Z0-9_]/g, '').slice(0, 20) || 'TU_NHIEN'; }
+function logEvent_(ss, ref, vid, ev, g, x) {
+  let sh = ss.getSheetByName('Truy cập học thử');
+  if (!sh) { sh = ss.insertSheet('Truy cập học thử'); sh.appendRow(TC_HEAD); sh.setFrozenRows(1); }
+  else if (!sh.getRange(1, 6).getValue()) sh.getRange(1, 6).setValue('Chi tiết');
+  sh.appendRow([new Date(), cleanRef_(ref), String(vid || '').slice(0, 24), ev, String(g || '').slice(0, 10), String(x == null ? '' : x).slice(0, 40)]);
+}
 function visit_(p) {
   const lock = LockService.getScriptLock(); lock.waitLock(10000);
   try {
-    const ref = String(p.ref || 'TU_NHIEN').toUpperCase().replace(/[^A-Z0-9_]/g, '').slice(0, 20) || 'TU_NHIEN';
-    const ev = ['mo', 'hoc', 'xong3', 'bam_dk'].indexOf(p.ev) >= 0 ? p.ev : 'mo';
-    const ss = SpreadsheetApp.openById(DATA_DU_AN_ID);
-    let sh = ss.getSheetByName('Truy cập học thử');
-    if (!sh) { sh = ss.insertSheet('Truy cập học thử'); sh.appendRow(['Thời gian', 'Mã CTV', 'Mã người xem', 'Sự kiện', 'Khoá']); sh.setFrozenRows(1); }
-    sh.appendRow([new Date(), ref, String(p.vid || '').slice(0, 24), ev, String(p.g || '').slice(0, 10)]);
+    const ev = EVENTS.indexOf(p.ev) >= 0 ? p.ev : 'mo';
+    logEvent_(SpreadsheetApp.openById(DATA_DU_AN_ID), p.ref, p.vid, ev, p.g, p.x);
     return json_({ ok: true });
   } catch (err) { return json_({ ok: false }); }
   finally { lock.releaseLock(); }
+}
+
+/* ---------- Bảng Gia đình: ba mẹ để lại Zalo ở cổng sau buổi 1 ----------
+ * Ghi 1 dòng vào tab "Gia đình" của Sheet DATA Dự án (tự tạo nếu chưa có), trạng thái "Đang dùng thử",
+ * rồi giao cho 1 bạn vận hành theo lượt: bạn đang nhận ít gia đình nhất trong tab "Đội"
+ * (cột Vai trò = Vận hành, cột "Nhận gia đình mới" = TRUE). Trang quản trị đọc và cập nhật tab này.
+ * Một gia đình (cùng mã người xem hoặc cùng số Zalo) gửi lại thì chỉ cập nhật, không tạo dòng mới. */
+const GD_HEAD = ['Mã gia đình', 'Tạo lúc', 'Nguồn', 'Mã người xem', 'Mã CTV', 'Tên ba/mẹ', 'Số Zalo', 'Tên con', 'Tuổi', 'Khoá',
+  'ĐY học tập', 'ĐY tư vấn', 'ĐY tin ưu đãi', 'Trạng thái', 'Đổi trạng thái lúc', 'Người hỗ trợ', 'Liên hệ đầu', 'Liên hệ gần nhất',
+  'Hẹn gọi lại', 'Lý do dừng', 'Ghi chú', 'Điểm', 'Làn'];
+const DONG_HO_SO = ['Dừng', 'Nuôi dưỡng', 'Học viên khóa dài'];
+function normPhone_(s) {
+  s = String(s || '').trim().toLowerCase();
+  if (s.indexOf('@') > 0) return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(s) ? s : '';
+  let d = s.replace(/\D/g, ''); if (d.indexOf('84') === 0 && d.length >= 11) d = '0' + d.slice(2); if (d.length === 9) d = '0' + d;
+  return /^0\d{9,10}$/.test(d) ? d : '';
+}
+function giaDinhSheet_(ss) {
+  let sh = ss.getSheetByName('Gia đình');
+  if (!sh) {
+    sh = ss.insertSheet('Gia đình'); sh.appendRow(GD_HEAD); sh.setFrozenRows(1);
+    sh.getRange(1, 1, 1, GD_HEAD.length).setFontWeight('bold').setBackground('#FFF3C4');
+  }
+  return sh;
+}
+function chonNguoiHoTro_(ss, rows) {
+  const team = ss.getSheetByName('Đội'); if (!team || team.getLastRow() < 2) return '';
+  const ppl = team.getRange(2, 1, team.getLastRow() - 1, 4).getValues()
+    .filter(r => r[1] && String(r[2]).trim() === 'Vận hành' && (r[3] === true || String(r[3]).toUpperCase() === 'TRUE'))
+    .map(r => String(r[1]).trim());
+  if (!ppl.length) return '';
+  const load = {}; ppl.forEach(n => load[n] = 0);
+  rows.forEach(r => { const n = String(r[15]).trim(); if (n in load && DONG_HO_SO.indexOf(String(r[13])) < 0) load[n]++; });
+  return ppl.sort((a, b) => load[a] - load[b])[0];
+}
+function family_(d) {
+  if (d.web) return { ok: true };                                   // ô bẫy chống spam
+  const phone = normPhone_(d.phone), parent = String(d.parent || '').trim().slice(0, 40);
+  const kid = String(d.kid || '').trim().slice(0, 40), vid = String(d.vid || '').slice(0, 24);
+  if (!phone || !parent || !kid) return { ok: false, err: 'thieu' };
+  const ss = SpreadsheetApp.openById(DATA_DU_AN_ID), sh = giaDinhSheet_(ss);
+  const n = sh.getLastRow(), rows = n > 1 ? sh.getRange(2, 1, n - 1, GD_HEAD.length).getValues() : [];
+  const yes = v => v === true || v === 'true' || v === 1 || v === '1';
+  let at = -1;
+  for (let i = 0; i < rows.length; i++) {
+    if ((vid && String(rows[i][3]) === vid) || normPhone_(rows[i][6]) === phone) { at = i; break; }
+  }
+  const age = String(d.age || '').slice(0, 6), group = String(d.group || '').slice(0, 10);
+  if (at >= 0) {                                                     // gửi lại: cập nhật thông tin, giữ trạng thái và người hỗ trợ
+    const r = rows[at];
+    r[3] = r[3] || vid; r[5] = parent; r[6] = phone; r[8] = age || r[8]; r[9] = r[9] || group;
+    if (String(r[7]).toLowerCase().indexOf(kid.toLowerCase()) < 0) r[7] = r[7] ? r[7] + ', ' + kid : kid;
+    r[10] = yes(d.cHoc); r[11] = yes(d.cTuVan); r[12] = yes(d.cUuDai);
+    sh.getRange(at + 2, 7).setNumberFormat('@');
+    sh.getRange(at + 2, 1, 1, GD_HEAD.length).setValues([r]);
+    logEvent_(ss, d.ref, vid, 'zalo', group, 'cap-nhat');
+    return { ok: true, code: r[0] };
+  }
+  const code = /^GD[A-Z0-9]{4,8}$/.test(String(d.code || '')) ? String(d.code) : 'GD' + Utilities.getUuid().replace(/-/g, '').slice(0, 6).toUpperCase();
+  const now = new Date();
+  sh.appendRow([code, now, 'Web học thử', vid, cleanRef_(d.ref), parent, '', kid, age, group,
+    yes(d.cHoc), yes(d.cTuVan), yes(d.cUuDai), 'Đang dùng thử', now, chonNguoiHoTro_(ss, rows), '', '', '', '', '', '', '']);
+  sh.getRange(sh.getLastRow(), 7).setNumberFormat('@').setValue(phone);       // giữ số 0 đầu
+  logEvent_(ss, d.ref, vid, 'zalo', group, code);
+  return { ok: true, code: code };
 }

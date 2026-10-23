@@ -1,0 +1,31 @@
+/* Bản cho phụ huynh: chọn tuổi một chạm (màn nhập tên) và cổng Zalo sau buổi 1 */
+.age-pick{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-start}
+.age-pick button{font:inherit;font-weight:800;font-size:17px;min-width:44px;min-height:44px;padding:4px 10px;border-radius:14px;
+  border:3px solid var(--line);background:#fff;color:var(--ink)}
+.age-pick button.on{background:var(--yellow);border-color:#D9A200}
+.age-pick button:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+
+.overlay.zg .modal{max-width:420px;max-height:calc(100dvh - 32px);overflow:auto;text-align:left}
+.overlay.zg .modal h3{text-align:center}
+.zg-lead{margin:0;font-size:16px;line-height:1.45}
+.zg-lead b{color:var(--red-dark)}
+.zg-ok{display:flex;gap:10px;align-items:flex-start;font-weight:600 !important;font-size:15px !important;margin:2px 0 0 !important;line-height:1.35;cursor:pointer}
+.zg-ok input{flex:none;width:22px;height:22px;margin:1px 0 0;accent-color:var(--red);padding:0}
+.zg-ok small{display:block;color:var(--muted);font-weight:500;font-size:13px}
+.zg-note{margin:4px 0 0;font-size:13px;color:var(--muted);line-height:1.4}
+.zg-trap{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.overlay.zg .row{justify-content:center;flex-wrap:wrap;gap:10px;margin-top:8px}
+.zg-done{text-align:center}
+.zg-done p{margin:6px 0}
+.dm-zalo{display:block;margin:10px auto 0;border:0;background:none;color:var(--red-dark);font:inherit;font-weight:800;font-size:16px;text-decoration:underline}
+
+/* Khung nhập tên và cổng Zalo không bao giờ cao quá màn hình (điện thoại xoay ngang) */
+.overlay.pf .modal{max-height:calc(100dvh - 32px);overflow:auto;overscroll-behavior:contain}
+@media (max-height:520px){
+  .overlay.pf .mart{display:none}
+  .overlay.pf .modal{padding:14px 18px;gap:4px}
+  .overlay.pf .modal h3{font-size:20px}
+  .age-pick button{min-height:40px;font-size:16px}
+  .overlay.zg .modal{max-width:560px}
+  .overlay.zg .zg-lead,.overlay.zg .zg-note{font-size:14px}
+}
