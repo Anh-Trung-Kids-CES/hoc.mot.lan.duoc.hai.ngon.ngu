@@ -42,6 +42,8 @@ ATK.lesson=async function(cid,u){
   return ATK.lessons[k];
 };
 const course=id=>ATK.data.courses.find(c=>c.id===id);
+const CT={};
+ATK.detail=async function(id){ if(!CT[id]){ const r=await fetch('data/chi-tiet/'+id+'.json'); CT[id]=await r.json(); } return CT[id]; };
 const WEBNAME=['','Bài 1','Bài 2','Bài 3','Bài 4','Bài 5','Bài 6'];
 const WEBIC={the:'🃏',chon:'👂',noi:'🎤',anh_trung:'🔵🔴',ghep:'🧩',cau:'💬',truyen:'📖',truyen_hoi:'📖',on_nhanh:'🔁',hop_on:'🧠',nhin_chu:'字',xem:'📺',chon_chu:'🔤'};
 
@@ -90,12 +92,15 @@ function pageCourse(cid){
     <div class="fact card"><small>Tiếng Trung cuối khóa</small><b>${esc(c.zh)}</b></div>
     <div class="fact card"><small>Chuyển ngữ</small><b>${esc(c.bridge)}</b></div>
   </div>
+  <h2>Chương trình chi tiết</h2>
+  <div class="detail card" id="ov"><p class="note">Đang tải…</p></div>
   ${c.units.length?`<h2>Các unit</h2>
-  <p class="note">Unit có viền xanh đã có 6 bài tự học trên web. Các unit khác hiện đã có danh sách từ, bài web đang soạn.</p>
+  <p class="note">Bấm một unit để xem chương trình chi tiết của unit. Unit có viền xanh đã có 6 bài tự học trên web.</p>
   <div class="units">${c.units.map(u=>`<a class="unit card ${u.web?'has':''}" href="#/u/${c.id}/${u.u}">
     <span class="un">UNIT ${u.u}</span><h3>${esc(u.name)}</h3>
-    <span class="cnt"><span class="chip en">${u.en.length} từ Anh</span><span class="chip zh">${u.zh.length} từ Trung</span>${u.web?'<span class="chip web">6 bài web</span>':''}</span></a>`).join('')}</div>`
-  :`<p class="lead">Khung từ vựng của ${esc(c.name)} đang được soạn.</p>`}`;
+    <span class="cnt">${u.review?`<span class="chip">${u.en.length+u.zh.length} từ ôn</span>`:`<span class="chip en">${u.en.length} từ Anh</span>${u.zh.length?`<span class="chip zh">${u.zh.length} từ Trung</span>`:''}`}${u.web?'<span class="chip web">6 bài web</span>':''}</span></a>`).join('')}</div>`
+  :''}`;
+  ATK.detail(c.id).then(d=>{ const el=$('#ov'); if(!el) return; el.innerHTML=(d.draft?'<p class="chip">Bản đề xuất, chờ duyệt</p>':'')+d.overview; });
 }
 const TLAB={'Từ lõi':'lõi','Cụm từ, câu mẫu':'cụm','Từ mở rộng':'mở rộng','Từ chức năng (theo mẫu câu)':'chức năng'};
 function wlist(ws,cls){
@@ -109,13 +114,18 @@ function pageUnit(cid,u){
   <p class="crumb"><a href="#/">Lộ trình</a> › <a href="#/k/${c.id}">${esc(c.name)}</a> › Unit ${U.u}</p>
   <h1>Unit ${U.u} · ${esc(U.name)}</h1>
   ${U.web?`<p class="lead">6 bài tự học, mỗi bài ${esc(c.web_min)} phút. Bài 1–3 học từ mới, bài 4–6 ôn, nghe truyện và chuyển ngữ. Bài nào cũng mở đầu bằng phần Ôn nhanh từ cũ (từ unit thứ hai trở đi).</p>
-  <div class="lessons" id="lessons"></div>`:`<p class="lead">Bài web của unit này đang soạn. Dưới đây là các từ con sẽ học.</p>`}
-  <h2>Từ của unit</h2>
+  <div class="lessons" id="lessons"></div>`:`<p class="lead">Bài tự học trên web của unit này đang soạn.</p>`}
+  <h2>Chương trình chi tiết của unit</h2>
+  <div class="detail card" id="ud"><p class="note">Đang tải…</p></div>
+  <div id="wl"><h2>Từ của unit theo bảng phân bổ</h2>
   <div class="words">
     <div class="wl card en"><h3>Tiếng Anh · ${U.en.length}</h3>${wlist(U.en,'')}</div>
     <div class="wl card zh"><h3>Tiếng Trung · ${U.zh.length}</h3>${wlist(U.zh,'')}</div>
   </div>
-  <p class="note">Nhãn nhỏ: lõi (con nói được, có trong bài kiểm tra) · cụm (cụm từ, câu mẫu) · mở rộng (con nghe hiểu, gặp trong câu và truyện) · chức năng (đi theo mẫu câu).</p>`;
+  <p class="note">Nhãn nhỏ: lõi (con nói được, có trong bài kiểm tra) · cụm (cụm từ, câu mẫu) · mở rộng (con nghe hiểu, gặp trong câu và truyện) · chức năng (đi theo mẫu câu).</p></div>`;
+  ATK.detail(c.id).then(d=>{ const x=d.units[String(U.u)]; const el=$('#ud'); if(!el) return;
+    el.innerHTML=x?(d.draft?'<p class="chip">Bản đề xuất, chờ duyệt</p>':'')+(x.title&&x.title!==('Unit '+U.u+' · '+U.name)?`<p class="note">${esc(x.title)}</p>`:'')+x.html:'<p class="note">Chưa có.</p>';
+    if(d.source==='gen'){ const w=$('#wl'); if(w) w.remove(); } });
   if(U.web){
     ATK.lesson(c.id,U.u).then(L=>{
       $('#lessons').innerHTML=L.webs.map(w=>{
@@ -125,6 +135,15 @@ function pageUnit(cid,u){
           <span class="st" aria-label="${st} sao">${'★'.repeat(st)}${'☆'.repeat(3-st)}</span></a>`;}).join('');
     });
   }
+}
+async function pageKhung(){
+  setNav('khung');
+  view.innerHTML='<h1>Khung chương trình</h1><p class="note">Đang tải…</p>';
+  const d=await ATK.detail('khung');
+  view.innerHTML=`<h1>Khung chương trình</h1><div class="detail lead2">${d.lead}</div>
+  <nav class="toc card" aria-label="Mục lục"><b>Mục lục</b><ol>${d.sections.map((x,i)=>`<li><a href="#/khung" data-go="s${i}">${esc(x.t)}</a></li>`).join('')}</ol></nav>
+  ${d.sections.map((x,i)=>`<section class="detail" id="s${i}"><h2>${esc(x.t)}</h2>${x.h}</section>`).join('')}`;
+  view.querySelectorAll('[data-go]').forEach(a=>a.onclick=e=>{ e.preventDefault(); document.getElementById(a.dataset.go).scrollIntoView({behavior:'smooth'}); });
 }
 function pageHop(){
   setNav('hop');
@@ -176,6 +195,7 @@ async function route(){
   else if(h[0]==='b'){ pageUnit(h[1],+h[2]); window.ATKplayer&&ATKplayer.open(h[1],+h[2],+h[3]); return; }
   else if(h[0]==='hop-on') pageHop();
   else if(h[0]==='ba-me') pageGuide();
+  else if(h[0]==='khung') pageKhung();
   else pageHome();
   window.scrollTo(0,0); view.focus({preventScroll:true});
 }

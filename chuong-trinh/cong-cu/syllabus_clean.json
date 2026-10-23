@@ -1,0 +1,2485 @@
+[
+  {
+    "course": "Larva",
+    "unit": 1,
+    "title_en": "Hello, It's Me!",
+    "title_zh": "你好，我的新朋友！",
+    "title_py": "Nǐ hǎo, wǒ de xīn péngyou!",
+    "objectives_vi": [
+      "Con giới thiệu được tên, tuổi và quốc tịch của mình.",
+      "Con hỏi được bạn những thông tin cơ bản: tên, tuổi, đến từ nước nào.",
+      "Con nhận biết được tên và quốc kỳ của 4–5 quốc gia.",
+      "Con hiểu và trả lời được các câu hỏi đơn giản về bản thân."
+    ],
+    "patterns": [
+      {
+        "en": "Hello!",
+        "zh": "你好！",
+        "py": "Nǐ hǎo!"
+      },
+      {
+        "en": "What's your name?",
+        "zh": "你叫什么名字？",
+        "py": "Nǐ jiào shénme míngzi?"
+      },
+      {
+        "en": "My name is ___.",
+        "zh": "我叫___。",
+        "py": "Wǒ jiào ___."
+      },
+      {
+        "en": "How old are you?",
+        "zh": "你几岁？",
+        "py": "Nǐ jǐ suì?"
+      },
+      {
+        "en": "I'm ___ years old.",
+        "zh": "我___岁。",
+        "py": "Wǒ ___ suì."
+      },
+      {
+        "en": "Where are you from?",
+        "zh": "你是哪国人？",
+        "py": "Nǐ shì nǎ guó rén?"
+      },
+      {
+        "en": "I'm from Vietnam.",
+        "zh": "我是越南人。",
+        "py": "Wǒ shì Yuènán rén."
+      }
+    ],
+    "grammar_vi": [
+      "Hỏi quốc tịch: 你是哪国人？ – 我是 + tên nước + 人 (Where are you from? – I'm from …)"
+    ]
+  },
+  {
+    "course": "Larva",
+    "unit": 2,
+    "title_en": "My Day",
+    "title_zh": "我的一天",
+    "title_py": "Wǒ de yī tiān",
+    "objectives_vi": [
+      "Con hỏi và nói được về 4–5 hoạt động hằng ngày.",
+      "Con phân biệt được các buổi trong ngày: sáng, chiều, tối.",
+      "Con hỏi và nói được giờ: giờ đúng, giờ hơn, giờ rưỡi.",
+      "Con nói được mình học bài trong bao lâu mỗi ngày."
+    ],
+    "patterns": [
+      {
+        "en": "What time is it?",
+        "zh": "现在几点？",
+        "py": "Xiànzài jǐ diǎn?"
+      },
+      {
+        "en": "It's ten past five.",
+        "zh": "现在五点十分。",
+        "py": "Xiànzài wǔ diǎn shí fēn."
+      },
+      {
+        "en": "It's half past seven.",
+        "zh": "现在七点半。",
+        "py": "Xiànzài qī diǎn bàn."
+      },
+      {
+        "en": "What do you do in the morning?",
+        "zh": "你早上做什么？",
+        "py": "Nǐ zǎoshang zuò shénme?"
+      },
+      {
+        "en": "I get up at ___.",
+        "zh": "我___起床。",
+        "py": "Wǒ ___ qǐchuáng."
+      },
+      {
+        "en": "How long do you study every day?",
+        "zh": "你每天学习多久？",
+        "py": "Nǐ měi tiān xuéxí duō jiǔ?"
+      },
+      {
+        "en": "I study for thirty minutes.",
+        "zh": "我学习三十分钟。",
+        "py": "Wǒ xuéxí sānshí fēnzhōng."
+      }
+    ],
+    "grammar_vi": [
+      "Nói giờ: ___点___分 / ___点半 (ten past five / half past seven)",
+      "Từ chỉ thời gian đứng trước động từ: 我七点起床。"
+    ]
+  },
+  {
+    "course": "Larva",
+    "unit": 3,
+    "title_en": "When I Grow Up",
+    "title_zh": "我长大以后",
+    "title_py": "Wǒ zhǎngdà yǐhòu",
+    "objectives_vi": [
+      "Con gọi tên được các nghề nghiệp quen thuộc.",
+      "Con hỏi và trả lời được về ước mơ nghề nghiệp của mình.",
+      "Con hỏi và nói được về nghề nghiệp của người thân.",
+      "Con mô tả được đơn giản công việc của một số nghề."
+    ],
+    "patterns": [
+      {
+        "en": "What do you want to be?",
+        "zh": "你想当什么？",
+        "py": "Nǐ xiǎng dāng shénme?"
+      },
+      {
+        "en": "I want to be a scientist.",
+        "zh": "我想当科学家。",
+        "py": "Wǒ xiǎng dāng kēxuéjiā."
+      },
+      {
+        "en": "I want to be a police officer when I grow up.",
+        "zh": "我长大以后想当警察。",
+        "py": "Wǒ zhǎngdà yǐhòu xiǎng dāng jǐngchá."
+      },
+      {
+        "en": "What does your father do?",
+        "zh": "你爸爸是做什么的？",
+        "py": "Nǐ bàba shì zuò shénme de?"
+      },
+      {
+        "en": "He is a teacher.",
+        "zh": "他是老师。",
+        "py": "Tā shì lǎoshī."
+      },
+      {
+        "en": "Doctors help sick people.",
+        "zh": "医生帮助病人。",
+        "py": "Yīshēng bāngzhù bìngrén."
+      }
+    ],
+    "grammar_vi": [
+      "Nói về ước mơ: want to be + nghề nghiệp / 想当 + nghề nghiệp"
+    ]
+  },
+  {
+    "course": "Larva",
+    "unit": 4,
+    "title_en": "My Favourite Colour",
+    "title_zh": "我最喜欢的颜色",
+    "title_py": "Wǒ zuì xǐhuan de yánsè",
+    "objectives_vi": [
+      "Con gọi tên được các màu sắc và một số đồ quần áo.",
+      "Con mô tả được màu sắc, quần áo bằng tính từ.",
+      "Con nói được màu mình thích và màu mình thích nhất.",
+      "Con dùng được tính từ làm vị ngữ trong câu (这个书包很新)."
+    ],
+    "patterns": [
+      {
+        "en": "What's your favourite colour?",
+        "zh": "你最喜欢什么颜色？",
+        "py": "Nǐ zuì xǐhuan shénme yánsè?"
+      },
+      {
+        "en": "I like white best.",
+        "zh": "我最喜欢白色。",
+        "py": "Wǒ zuì xǐhuan báisè."
+      },
+      {
+        "en": "I really like blue.",
+        "zh": "我很喜欢蓝色。",
+        "py": "Wǒ hěn xǐhuan lánsè."
+      },
+      {
+        "en": "What colour is your hat?",
+        "zh": "你的帽子是什么颜色的？",
+        "py": "Nǐ de màozi shì shénme yánsè de?"
+      },
+      {
+        "en": "My clothes are red.",
+        "zh": "我的衣服是红色的。",
+        "py": "Wǒ de yīfu shì hóngsè de."
+      },
+      {
+        "en": "This schoolbag is very new.",
+        "zh": "这个书包很新。",
+        "py": "Zhège shūbāo hěn xīn."
+      },
+      {
+        "en": "This skirt is very pretty.",
+        "zh": "这条裙子很漂亮。",
+        "py": "Zhè tiáo qúnzi hěn piàoliang."
+      }
+    ],
+    "grammar_vi": [
+      "Tính từ làm vị ngữ: chủ ngữ + 很 + tính từ (这个书包很新)",
+      "Diễn đạt sở thích: like … best / 最喜欢"
+    ]
+  },
+  {
+    "course": "Larva",
+    "unit": 5,
+    "title_en": "Animal Friends",
+    "title_zh": "动物朋友们",
+    "title_py": "Dòngwù péngyoumen",
+    "objectives_vi": [
+      "Con gọi tên được một số con vật trong sở thú.",
+      "Con mô tả được con vật bằng 2–3 tính từ (to, nhỏ, nhanh, đáng yêu…).",
+      "Con so sánh được đơn giản hai con vật."
+    ],
+    "patterns": [
+      {
+        "en": "It's big.",
+        "zh": "它很大。",
+        "py": "Tā hěn dà."
+      },
+      {
+        "en": "It's small.",
+        "zh": "它很小。",
+        "py": "Tā hěn xiǎo."
+      },
+      {
+        "en": "It's fast.",
+        "zh": "它很快。",
+        "py": "Tā hěn kuài."
+      },
+      {
+        "en": "The panda is cute.",
+        "zh": "熊猫很可爱。",
+        "py": "Xióngmāo hěn kě'ài."
+      },
+      {
+        "en": "The tiger is scary.",
+        "zh": "老虎很可怕。",
+        "py": "Lǎohǔ hěn kěpà."
+      },
+      {
+        "en": "The elephant is bigger than the cat.",
+        "zh": "大象比猫大。",
+        "py": "Dàxiàng bǐ māo dà."
+      },
+      {
+        "en": "The mouse is smaller than the lion.",
+        "zh": "老鼠比狮子小。",
+        "py": "Lǎoshǔ bǐ shīzi xiǎo."
+      }
+    ],
+    "grammar_vi": [
+      "So sánh hơn: A is bigger than B / A 比 B + tính từ"
+    ]
+  },
+  {
+    "course": "Larva",
+    "unit": 6,
+    "title_en": "I Like Sports!",
+    "title_zh": "我喜欢运动！",
+    "title_py": "Wǒ xǐhuan yùndòng!",
+    "objectives_vi": [
+      "Con gọi tên được ít nhất 5 môn thể thao.",
+      "Con nói được môn thể thao mình thích và không thích.",
+      "Con hỏi và trả lời được bạn về môn thể thao yêu thích và khả năng chơi.",
+      "Con kết bạn được với những bạn có cùng sở thích."
+    ],
+    "patterns": [
+      {
+        "en": "What sport do you like?",
+        "zh": "你喜欢什么运动？",
+        "py": "Nǐ xǐhuan shénme yùndòng?"
+      },
+      {
+        "en": "I like football.",
+        "zh": "我喜欢足球。",
+        "py": "Wǒ xǐhuan zúqiú."
+      },
+      {
+        "en": "I don't like basketball.",
+        "zh": "我不喜欢篮球。",
+        "py": "Wǒ bù xǐhuan lánqiú."
+      },
+      {
+        "en": "Do you like swimming?",
+        "zh": "你喜欢游泳吗？",
+        "py": "Nǐ xǐhuan yóuyǒng ma?"
+      },
+      {
+        "en": "Can you play badminton?",
+        "zh": "你会打羽毛球吗？",
+        "py": "Nǐ huì dǎ yǔmáoqiú ma?"
+      },
+      {
+        "en": "Yes, I can. / No, I can't.",
+        "zh": "会。/ 不会。",
+        "py": "Huì. / Bù huì."
+      },
+      {
+        "en": "Let's play table tennis together!",
+        "zh": "我们一起打乒乓球吧！",
+        "py": "Wǒmen yīqǐ dǎ pīngpāngqiú ba!"
+      }
+    ],
+    "grammar_vi": [
+      "Câu hỏi có/không với 吗: Do you like …? / 你喜欢……吗？",
+      "Can + động từ / 会 + động từ (biết chơi môn gì)"
+    ]
+  },
+  {
+    "course": "Larva",
+    "unit": 7,
+    "title_en": "Yummy Food!",
+    "title_zh": "好吃的点心！",
+    "title_py": "Hǎochī de diǎnxin!",
+    "objectives_vi": [
+      "Con gọi tên được 8–10 món ăn, món tráng miệng.",
+      "Con hỏi và trả lời được câu hỏi đơn giản về ăn uống.",
+      "Con nhận xét được hương vị món ăn (ngọt, mặn, chua, cay, đắng).",
+      "Con tự tạo được thực đơn của riêng mình."
+    ],
+    "patterns": [
+      {
+        "en": "I want to eat rice.",
+        "zh": "我想吃米饭。",
+        "py": "Wǒ xiǎng chī mǐfàn."
+      },
+      {
+        "en": "What would you like to drink?",
+        "zh": "你想喝什么？",
+        "py": "Nǐ xiǎng hē shénme?"
+      },
+      {
+        "en": "What's your favourite dessert?",
+        "zh": "你最喜欢的点心是什么？",
+        "py": "Nǐ zuì xǐhuan de diǎnxin shì shénme?"
+      },
+      {
+        "en": "My favourite dessert is ice cream.",
+        "zh": "我最喜欢的点心是冰淇淋。",
+        "py": "Wǒ zuì xǐhuan de diǎnxin shì bīngqílín."
+      },
+      {
+        "en": "Do you like apples or bananas?",
+        "zh": "你喜欢苹果还是香蕉？",
+        "py": "Nǐ xǐhuan píngguǒ háishi xiāngjiāo?"
+      },
+      {
+        "en": "This cake is very sweet.",
+        "zh": "这个蛋糕很甜。",
+        "py": "Zhège dàngāo hěn tián."
+      }
+    ],
+    "grammar_vi": [
+      "Câu hỏi lựa chọn: … or …? / A 还是 B？"
+    ]
+  },
+  {
+    "course": "Larva",
+    "unit": 8,
+    "title_en": "How's the Weather Today?",
+    "title_zh": "今天天气怎么样？",
+    "title_py": "Jīntiān tiānqì zěnmeyàng?",
+    "objectives_vi": [
+      "Con hỏi và trả lời được về thời tiết hôm nay.",
+      "Con gọi tên được bốn mùa và hỏi được bây giờ là mùa gì.",
+      "Con hỏi thăm và nói được tình trạng sức khỏe của mình.",
+      "Con kết hợp được ba chủ đề thời tiết, mùa, sức khỏe trong đoạn hội thoại ngắn."
+    ],
+    "patterns": [
+      {
+        "en": "How's the weather today?",
+        "zh": "今天天气怎么样？",
+        "py": "Jīntiān tiānqì zěnmeyàng?"
+      },
+      {
+        "en": "It's sunny today.",
+        "zh": "今天是晴天。",
+        "py": "Jīntiān shì qíngtiān."
+      },
+      {
+        "en": "What season is it now?",
+        "zh": "现在是什么季节？",
+        "py": "Xiànzài shì shénme jìjié?"
+      },
+      {
+        "en": "It's summer.",
+        "zh": "现在是夏天。",
+        "py": "Xiànzài shì xiàtiān."
+      },
+      {
+        "en": "Are you well?",
+        "zh": "你身体好吗？",
+        "py": "Nǐ shēntǐ hǎo ma?"
+      },
+      {
+        "en": "I've got a cold.",
+        "zh": "我感冒了。",
+        "py": "Wǒ gǎnmào le."
+      },
+      {
+        "en": "I've got a sore throat.",
+        "zh": "我嗓子疼。",
+        "py": "Wǒ sǎngzi téng."
+      }
+    ],
+    "grammar_vi": [
+      "了 chỉ sự thay đổi trạng thái: 我感冒了 (I've got a cold)"
+    ]
+  },
+  {
+    "course": "Larva",
+    "unit": 9,
+    "title_en": "At School",
+    "title_zh": "我的学校",
+    "title_py": "Wǒ de xuéxiào",
+    "objectives_vi": [
+      "Con nhận biết được 6–8 địa điểm trong trường.",
+      "Con hỏi và chỉ được vị trí bằng các giới từ (trước, sau, bên cạnh, ở giữa, trái, phải).",
+      "Con mô tả ngắn gọn được ngôi trường của mình với “有…” và “和”."
+    ],
+    "patterns": [
+      {
+        "en": "My school has a big library and a playground.",
+        "zh": "我的学校有一个大图书馆和一个操场。",
+        "py": "Wǒ de xuéxiào yǒu yī gè dà túshūguǎn hé yī gè cāochǎng."
+      },
+      {
+        "en": "Where is the library?",
+        "zh": "图书馆在哪儿？",
+        "py": "Túshūguǎn zài nǎr?"
+      },
+      {
+        "en": "The library is on the left.",
+        "zh": "图书馆在左边。",
+        "py": "Túshūguǎn zài zuǒbiān."
+      },
+      {
+        "en": "The canteen is between the library and the office.",
+        "zh": "食堂在图书馆和办公室中间。",
+        "py": "Shítáng zài túshūguǎn hé bàngōngshì zhōngjiān."
+      },
+      {
+        "en": "The garden is in front of the classroom.",
+        "zh": "花园在教室前面。",
+        "py": "Huāyuán zài jiàoshì qiánmiàn."
+      },
+      {
+        "en": "The office is next to the gate.",
+        "zh": "办公室在大门旁边。",
+        "py": "Bàngōngshì zài dàmén pángbiān."
+      }
+    ],
+    "grammar_vi": [
+      "Chỉ vị trí: 在 + nơi chốn + 前面/后面/旁边/中间 (in front of / behind / next to / between)",
+      "Mô tả với 有…和…: My school has … and …"
+    ]
+  },
+  {
+    "course": "Larva",
+    "unit": 10,
+    "title_en": "Let's Go Shopping!",
+    "title_zh": "我们去超市吧！",
+    "title_py": "Wǒmen qù chāoshì ba!",
+    "objectives_vi": [
+      "Con dùng được từ vựng về mua sắm và tiền.",
+      "Con hỏi được giá của một món đồ.",
+      "Con nói được mình muốn mua gì.",
+      "Con nhận xét được về giá (đắt, rẻ)."
+    ],
+    "patterns": [
+      {
+        "en": "Let's go to the supermarket!",
+        "zh": "我们去超市吧！",
+        "py": "Wǒmen qù chāoshì ba!"
+      },
+      {
+        "en": "How much is this?",
+        "zh": "这个多少钱？",
+        "py": "Zhège duōshao qián?"
+      },
+      {
+        "en": "It's ten yuan.",
+        "zh": "十块钱。",
+        "py": "Shí kuài qián."
+      },
+      {
+        "en": "I want to buy a toy.",
+        "zh": "我要买一个玩具。",
+        "py": "Wǒ yào mǎi yī gè wánjù."
+      },
+      {
+        "en": "Have you got any apples?",
+        "zh": "你们有苹果吗？",
+        "py": "Nǐmen yǒu píngguǒ ma?"
+      },
+      {
+        "en": "This hat is too expensive.",
+        "zh": "这个帽子太贵了。",
+        "py": "Zhège màozi tài guì le."
+      },
+      {
+        "en": "This one is cheap.",
+        "zh": "这个很便宜。",
+        "py": "Zhège hěn piányi."
+      }
+    ],
+    "grammar_vi": [
+      "太 + tính từ + 了: quá … (too expensive)",
+      "Rủ rê với 吧: Let's … / 我们……吧"
+    ]
+  },
+  {
+    "course": "Larva",
+    "unit": 11,
+    "title_en": "My Dream Holiday",
+    "title_zh": "我理想的假期",
+    "title_py": "Wǒ lǐxiǎng de jiàqī",
+    "objectives_vi": [
+      "Con nói được nơi mình muốn đến và phương tiện đi lại.",
+      "Con bày tỏ được mong muốn đi thăm một nơi.",
+      "Con hỏi được bạn về kế hoạch du lịch.",
+      "Con lập được một kế hoạch du lịch đơn giản."
+    ],
+    "patterns": [
+      {
+        "en": "Where do you want to go?",
+        "zh": "你想去哪儿？",
+        "py": "Nǐ xiǎng qù nǎr?"
+      },
+      {
+        "en": "I'm going to go to London.",
+        "zh": "我要去伦敦。",
+        "py": "Wǒ yào qù Lúndūn."
+      },
+      {
+        "en": "How do you get to Beijing?",
+        "zh": "你怎么去北京？",
+        "py": "Nǐ zěnme qù Běijīng?"
+      },
+      {
+        "en": "I go to Beijing by plane.",
+        "zh": "我坐飞机去北京。",
+        "py": "Wǒ zuò fēijī qù Běijīng."
+      },
+      {
+        "en": "I want to go to the zoo to see the pandas.",
+        "zh": "我想去动物园看熊猫。",
+        "py": "Wǒ xiǎng qù dòngwùyuán kàn xióngmāo."
+      },
+      {
+        "en": "I want to take photos on the beach.",
+        "zh": "我想在海滩上拍照。",
+        "py": "Wǒ xiǎng zài hǎitān shang pāizhào."
+      }
+    ],
+    "grammar_vi": [
+      "坐 + phương tiện + 去 + nơi chốn: đi … bằng … (by plane / by car)",
+      "想 / 要 + động từ: muốn / sẽ làm gì"
+    ]
+  },
+  {
+    "course": "Larva",
+    "unit": 12,
+    "title_en": "Let's Celebrate!",
+    "title_zh": "我们一起庆祝吧！",
+    "title_py": "Wǒmen yīqǐ qìngzhù ba!",
+    "objectives_vi": [
+      "Con gọi tên được 1–2 lễ hội lớn (Tết, Trung thu).",
+      "Con nhận biết được các đồ vật và hoạt động văn hóa trong lễ hội.",
+      "Con nói được cảm xúc của mình và các hoạt động của gia đình trong dịp lễ.",
+      "Con tự làm được một đồ vật văn hóa (đèn lồng, bao lì xì…)."
+    ],
+    "patterns": [
+      {
+        "en": "This is the Mid-Autumn Festival.",
+        "zh": "这是中秋节。",
+        "py": "Zhè shì Zhōngqiū Jié."
+      },
+      {
+        "en": "We eat mooncakes and watch the lion dance.",
+        "zh": "我们吃月饼，看舞狮。",
+        "py": "Wǒmen chī yuèbǐng, kàn wǔshī."
+      },
+      {
+        "en": "What do you do at New Year?",
+        "zh": "新年你们做什么？",
+        "py": "Xīnnián nǐmen zuò shénme?"
+      },
+      {
+        "en": "We get lucky money.",
+        "zh": "我们拿红包。",
+        "py": "Wǒmen ná hóngbāo."
+      },
+      {
+        "en": "What's your favourite festival?",
+        "zh": "你最喜欢什么节日？",
+        "py": "Nǐ zuì xǐhuan shénme jiérì?"
+      },
+      {
+        "en": "I'm very happy at New Year.",
+        "zh": "新年我很开心。",
+        "py": "Xīnnián wǒ hěn kāixīn."
+      }
+    ],
+    "grammar_vi": []
+  },
+  {
+    "course": "Pupa",
+    "unit": 1,
+    "title_en": "Family",
+    "title_zh": "家庭",
+    "title_py": "Jiātíng",
+    "objectives_vi": [
+      "Con gọi tên được các thành viên trong gia đình và họ hàng.",
+      "Con giới thiệu được người thân bằng sở hữu cách (Nhan's uncle / Nhan的叔叔).",
+      "Con xác nhận được thông tin bằng câu hỏi đuôi trong tiếng Anh và 是不是？ trong tiếng Trung.",
+      "Con trả lời được câu hỏi xác nhận (Yes, he is. / 是。)."
+    ],
+    "patterns": [
+      {
+        "en": "Who is he?",
+        "zh": "他是谁？",
+        "py": "Tā shì shéi?"
+      },
+      {
+        "en": "Who is she?",
+        "zh": "她是谁？",
+        "py": "Tā shì shéi?"
+      },
+      {
+        "en": "He is Nhan's uncle.",
+        "zh": "他是Nhan的叔叔。",
+        "py": "Tā shì Nhan de shūshu."
+      },
+      {
+        "en": "He is your grandfather, isn't he?",
+        "zh": "他是你的外公，是不是？",
+        "py": "Tā shì nǐ de wàigōng, shì bu shì?"
+      },
+      {
+        "en": "Your uncle is a teacher, isn't he?",
+        "zh": "你叔叔是老师，是不是？",
+        "py": "Nǐ shūshu shì lǎoshī, shì bu shì?"
+      },
+      {
+        "en": "Your uncle works in a school, doesn't he?",
+        "zh": "你叔叔在学校工作，是不是？",
+        "py": "Nǐ shūshu zài xuéxiào gōngzuò, shì bu shì?"
+      },
+      {
+        "en": "She is your ___, isn't she?",
+        "zh": "她是你的___，是不是？",
+        "py": "Tā shì nǐ de ___, shì bu shì?"
+      },
+      {
+        "en": "Yes, she is. / No, she isn't.",
+        "zh": "是。/ 不是。",
+        "py": "Shì. / Bù shì."
+      }
+    ],
+    "grammar_vi": [
+      "Sở hữu cách: Nhan's uncle / Nhan的叔叔",
+      "Câu hỏi đuôi: …, isn't he? / …, doesn't he? (câu khẳng định đi với đuôi phủ định)",
+      "Câu xác nhận 是不是？ đặt cuối câu"
+    ]
+  },
+  {
+    "course": "Pupa",
+    "unit": 2,
+    "title_en": "School",
+    "title_zh": "学校",
+    "title_py": "Xuéxiào",
+    "objectives_vi": [
+      "Con gọi tên được các địa điểm, đồ dùng học tập và các cấp học.",
+      "Con hiểu và làm theo được các câu mệnh lệnh trong lớp học.",
+      "Con đưa ra được lời rủ rê, đề nghị với bạn (Let's… / 我们一起……吧)."
+    ],
+    "patterns": [
+      {
+        "en": "Open your textbooks, please.",
+        "zh": "请打开你们的课本。",
+        "py": "Qǐng dǎkāi nǐmen de kèběn."
+      },
+      {
+        "en": "Use your dictionary.",
+        "zh": "请用你的词典。",
+        "py": "Qǐng yòng nǐ de cídiǎn."
+      },
+      {
+        "en": "Check your timetable.",
+        "zh": "看看你的课程表。",
+        "py": "Kànkan nǐ de kèchéngbiǎo."
+      },
+      {
+        "en": "Put on your school uniform.",
+        "zh": "穿上你的校服。",
+        "py": "Chuānshang nǐ de xiàofú."
+      },
+      {
+        "en": "Don't forget your workbook.",
+        "zh": "别忘了你的练习册。",
+        "py": "Bié wàngle nǐ de liànxícè."
+      },
+      {
+        "en": "Let's go to the playground together.",
+        "zh": "我们一起去操场吧。",
+        "py": "Wǒmen yīqǐ qù cāochǎng ba."
+      },
+      {
+        "en": "Let's read books in the library.",
+        "zh": "我们一起去图书馆看书吧。",
+        "py": "Wǒmen yīqǐ qù túshūguǎn kàn shū ba."
+      }
+    ],
+    "grammar_vi": [
+      "Câu mệnh lệnh: Open … / Don't … ; 请 + động từ, 别 + động từ",
+      "Câu đề nghị: Let's … / 我们一起 + động từ + 吧"
+    ]
+  },
+  {
+    "course": "Pupa",
+    "unit": 3,
+    "title_en": "The Countryside",
+    "title_zh": "农村生活",
+    "title_py": "Nóngcūn shēnghuó",
+    "objectives_vi": [
+      "Con gọi tên được cảnh vật, con vật và con người ở nông thôn.",
+      "Con mô tả được quang cảnh nơi mình sống với There is / There are.",
+      "Con nói được vị trí của sự vật bằng giới từ chỉ nơi chốn và 上/下/里/外 + 有.",
+      "Con nói được về hàng xóm và mối quan hệ thân thiện ở làng quê."
+    ],
+    "patterns": [
+      {
+        "en": "What is there in your village?",
+        "zh": "你们村子里有什么？",
+        "py": "Nǐmen cūnzi li yǒu shénme?"
+      },
+      {
+        "en": "There is a forest near my village.",
+        "zh": "我的村子附近有一片森林。",
+        "py": "Wǒ de cūnzi fùjìn yǒu yī piàn sēnlín."
+      },
+      {
+        "en": "There are many fields around my house.",
+        "zh": "我家周围有很多田地。",
+        "py": "Wǒ jiā zhōuwéi yǒu hěn duō tiándì."
+      },
+      {
+        "en": "There are a lot of people in the village.",
+        "zh": "村子里有很多人。",
+        "py": "Cūnzi li yǒu hěn duō rén."
+      },
+      {
+        "en": "There are some cows on the hill.",
+        "zh": "山上有一些牛。",
+        "py": "Shān shang yǒu yīxiē niú."
+      },
+      {
+        "en": "The air in the countryside is fresh.",
+        "zh": "农村的空气很新鲜。",
+        "py": "Nóngcūn de kōngqì hěn xīnxiān."
+      },
+      {
+        "en": "My neighbours are very friendly.",
+        "zh": "我的邻居很友好。",
+        "py": "Wǒ de línjū hěn yǒuhǎo."
+      }
+    ],
+    "grammar_vi": [
+      "There is / There are + danh từ + giới từ chỉ nơi chốn",
+      "Nơi chốn + 上/下/里/外 + 有 + danh từ (山上有一些牛)"
+    ]
+  },
+  {
+    "course": "Pupa",
+    "unit": 4,
+    "title_en": "City Life",
+    "title_zh": "城市生活",
+    "title_py": "Chéngshì shēnghuó",
+    "objectives_vi": [
+      "Con gọi tên được các địa điểm trong thành phố.",
+      "Con mô tả được đặc điểm cuộc sống thành phố (náo nhiệt, đông đúc…).",
+      "Con so sánh được thành phố và nông thôn bằng so sánh hơn và so sánh bằng."
+    ],
+    "patterns": [
+      {
+        "en": "What's city life like?",
+        "zh": "城市生活怎么样？",
+        "py": "Chéngshì shēnghuó zěnmeyàng?"
+      },
+      {
+        "en": "The city is lively but crowded.",
+        "zh": "城市很热闹，但是很拥挤。",
+        "py": "Chéngshì hěn rènao, dànshì hěn yōngjǐ."
+      },
+      {
+        "en": "The air in the countryside is fresher than in the city.",
+        "zh": "农村的空气比城市新鲜。",
+        "py": "Nóngcūn de kōngqì bǐ chéngshì xīnxiān."
+      },
+      {
+        "en": "The countryside is not as crowded as the city.",
+        "zh": "农村没有城市那么拥挤。",
+        "py": "Nóngcūn méiyǒu chéngshì nàme yōngjǐ."
+      },
+      {
+        "en": "A is as ___ as B.",
+        "zh": "A和B一样___。",
+        "py": "A hé B yīyàng ___."
+      },
+      {
+        "en": "This museum is as big as that hotel.",
+        "zh": "这个博物馆和那个酒店一样大。",
+        "py": "Zhège bówùguǎn hé nàge jiǔdiàn yīyàng dà."
+      },
+      {
+        "en": "A is more beautiful than B.",
+        "zh": "A比B漂亮。",
+        "py": "A bǐ B piàoliang."
+      }
+    ],
+    "grammar_vi": [
+      "So sánh hơn: … -er than / more … than; A 比 B + tính từ",
+      "So sánh bằng: as … as; A 和 B 一样 + tính từ",
+      "Phủ định so sánh: not as … as; A 没有 B 那么 + tính từ"
+    ]
+  },
+  {
+    "course": "Pupa",
+    "unit": 5,
+    "title_en": "Materials",
+    "title_zh": "材料",
+    "title_py": "Cáiliào",
+    "objectives_vi": [
+      "Con gọi tên được các loại vật liệu thông dụng (gỗ, giấy, nhựa, thủy tinh, kim loại…).",
+      "Con hỏi và trả lời được đồ vật làm bằng gì.",
+      "Con phân biệt được made of và made from.",
+      "Con dùng được cấu trúc 是用……做的 để nói về chất liệu của đồ vật."
+    ],
+    "patterns": [
+      {
+        "en": "What is it made of?",
+        "zh": "这是用什么做的？",
+        "py": "Zhè shì yòng shénme zuò de?"
+      },
+      {
+        "en": "What is this cup made of?",
+        "zh": "这个杯子是用什么做的？",
+        "py": "Zhège bēizi shì yòng shénme zuò de?"
+      },
+      {
+        "en": "This cup is made of glass.",
+        "zh": "这个杯子是用玻璃做的。",
+        "py": "Zhège bēizi shì yòng bōli zuò de."
+      },
+      {
+        "en": "This vase is made of glass.",
+        "zh": "这个花瓶是用玻璃做的。",
+        "py": "Zhège huāpíng shì yòng bōli zuò de."
+      },
+      {
+        "en": "Paper is made from wood.",
+        "zh": "纸是用木头做的。",
+        "py": "Zhǐ shì yòng mùtou zuò de."
+      },
+      {
+        "en": "My shoes are made of leather.",
+        "zh": "我的鞋子是用皮革做的。",
+        "py": "Wǒ de xiézi shì yòng pígé zuò de."
+      },
+      {
+        "en": "This ring is made of gold.",
+        "zh": "这个戒指是用黄金做的。",
+        "py": "Zhège jièzhi shì yòng huángjīn zuò de."
+      }
+    ],
+    "grammar_vi": [
+      "Bị động: be made of (vẫn thấy chất liệu) / be made from (chất liệu đã biến đổi)",
+      "Cấu trúc 是用 + chất liệu + 做的"
+    ]
+  },
+  {
+    "course": "Pupa",
+    "unit": 6,
+    "title_en": "Space",
+    "title_zh": "太空",
+    "title_py": "Tàikōng",
+    "objectives_vi": [
+      "Con gọi tên được các sự vật trong vũ trụ và công việc của phi hành gia.",
+      "Con nói được về khả năng có thể xảy ra trong tương lai (could / 能).",
+      "Con thảo luận và dự đoán được đơn giản về khoa học vũ trụ."
+    ],
+    "patterns": [
+      {
+        "en": "What could people do in space?",
+        "zh": "将来人们在太空能做什么？",
+        "py": "Jiānglái rénmen zài tàikōng néng zuò shénme?"
+      },
+      {
+        "en": "In the future, people could ___.",
+        "zh": "将来，人们能___。",
+        "py": "Jiānglái, rénmen néng ___."
+      },
+      {
+        "en": "People could travel to Mars by rocket one day.",
+        "zh": "将来人们能坐火箭去火星。",
+        "py": "Jiānglái rénmen néng zuò huǒjiàn qù Huǒxīng."
+      },
+      {
+        "en": "In the future, astronauts could land on other planets.",
+        "zh": "将来，宇航员能在别的行星上着陆。",
+        "py": "Jiānglái, yǔhángyuán néng zài bié de xíngxīng shang zhuólù."
+      },
+      {
+        "en": "We could see comets with a telescope.",
+        "zh": "我们能用望远镜看彗星。",
+        "py": "Wǒmen néng yòng wàngyuǎnjìng kàn huìxīng."
+      }
+    ],
+    "grammar_vi": [
+      "could + động từ: khả năng có thể xảy ra trong tương lai",
+      "将来 + 能 + động từ"
+    ]
+  },
+  {
+    "course": "Pupa",
+    "unit": 7,
+    "title_en": "Transport",
+    "title_zh": "交通工具",
+    "title_py": "Jiāotōng gōngjù",
+    "objectives_vi": [
+      "Con gọi tên được các phương tiện và biển báo, đèn giao thông.",
+      "Con hỏi và nói được cách đi lại (How …? / 坐 + phương tiện).",
+      "Con hỏi và chỉ được đường đơn giản.",
+      "Con dự đoán được về phương tiện đi lại trong tương lai với will / 会."
+    ],
+    "patterns": [
+      {
+        "en": "How will people travel in the future?",
+        "zh": "将来人们会怎么去旅游？",
+        "py": "Jiānglái rénmen huì zěnme qù lǚyóu?"
+      },
+      {
+        "en": "People will travel by plane.",
+        "zh": "人们会坐飞机去旅游。",
+        "py": "Rénmen huì zuò fēijī qù lǚyóu."
+      },
+      {
+        "en": "Everyone will drive an electric car.",
+        "zh": "大家都会开电动汽车。",
+        "py": "Dàjiā dōu huì kāi diàndòng qìchē."
+      },
+      {
+        "en": "Will buses replace motorbikes?",
+        "zh": "公共汽车会代替摩托车吗？",
+        "py": "Gōnggòng qìchē huì dàitì mótuōchē ma?"
+      },
+      {
+        "en": "How do you go to school?",
+        "zh": "你怎么去学校？",
+        "py": "Nǐ zěnme qù xuéxiào?"
+      },
+      {
+        "en": "I go to school by underground.",
+        "zh": "我坐地铁去学校。",
+        "py": "Wǒ zuò dìtiě qù xuéxiào."
+      },
+      {
+        "en": "Turn left at the crossroads.",
+        "zh": "在十字路口往左拐。",
+        "py": "Zài shízì lùkǒu wǎng zuǒ guǎi."
+      },
+      {
+        "en": "Cross the road at the zebra crossing.",
+        "zh": "请走斑马线过马路。",
+        "py": "Qǐng zǒu bānmǎxiàn guò mǎlù."
+      }
+    ],
+    "grammar_vi": [
+      "Tương lai đơn: will + động từ / 会 + động từ",
+      "Hỏi cách đi lại: How …? / 怎么 + động từ; 坐 + phương tiện + 去 + nơi chốn"
+    ]
+  },
+  {
+    "course": "Pupa",
+    "unit": 8,
+    "title_en": "Weather",
+    "title_zh": "天气",
+    "title_py": "Tiānqì",
+    "objectives_vi": [
+      "Con gọi tên được các hiện tượng thời tiết, nhiệt độ và cảnh quan tự nhiên.",
+      "Con nói được việc mình sẽ làm tùy theo thời tiết bằng câu điều kiện loại 1.",
+      "Con dùng được cấu trúc 如果……，就/会…… để lập kế hoạch."
+    ],
+    "patterns": [
+      {
+        "en": "What will you do if it is cool?",
+        "zh": "如果天气凉快，你会做什么？",
+        "py": "Rúguǒ tiānqì liángkuai, nǐ huì zuò shénme?"
+      },
+      {
+        "en": "If the weather is cool, we will go camping.",
+        "zh": "如果天气凉快，我们就去露营。",
+        "py": "Rúguǒ tiānqì liángkuai, wǒmen jiù qù lùyíng."
+      },
+      {
+        "en": "If it is windy, we won't go outside.",
+        "zh": "如果刮风，我们就不出去。",
+        "py": "Rúguǒ guāfēng, wǒmen jiù bù chūqu."
+      },
+      {
+        "en": "If it snows today, will you go to Beijing?",
+        "zh": "如果今天下雪，你会去北京吗？",
+        "py": "Rúguǒ jīntiān xiàxuě, nǐ huì qù Běijīng ma?"
+      },
+      {
+        "en": "What's the temperature today?",
+        "zh": "今天多少度？",
+        "py": "Jīntiān duōshao dù?"
+      },
+      {
+        "en": "It's very dry in the desert.",
+        "zh": "沙漠里很干燥。",
+        "py": "Shāmò li hěn gānzào."
+      }
+    ],
+    "grammar_vi": [
+      "Câu điều kiện loại 1: If + hiện tại đơn, … will + động từ",
+      "如果……，就/会……: nếu … thì …"
+    ]
+  },
+  {
+    "course": "Pupa",
+    "unit": 9,
+    "title_en": "Health",
+    "title_zh": "健康的身体",
+    "title_py": "Jiànkāng de shēntǐ",
+    "objectives_vi": [
+      "Con gọi tên được các thói quen tốt cho sức khỏe và một số bệnh thường gặp.",
+      "Con nói được nguyên nhân – kết quả về sức khỏe (because / so; 因为……所以……).",
+      "Con diễn đạt được sự tương phản (but / although; 虽然……但是……)."
+    ],
+    "patterns": [
+      {
+        "en": "I feel tired because I didn't sleep well.",
+        "zh": "我觉得很累，因为我没睡好。",
+        "py": "Wǒ juéde hěn lèi, yīnwèi wǒ méi shuì hǎo."
+      },
+      {
+        "en": "I have a sore throat, but I still go to school.",
+        "zh": "我喉咙疼，但是我还是去上学。",
+        "py": "Wǒ hóulóng téng, dànshì wǒ háishi qù shàngxué."
+      },
+      {
+        "en": "Although I'm tired, I still go jogging every morning.",
+        "zh": "虽然我很累，但是我每天早上还是去慢跑。",
+        "py": "Suīrán wǒ hěn lèi, dànshì wǒ měi tiān zǎoshang háishi qù mànpǎo."
+      },
+      {
+        "en": "I have a fever, so I'm going to see a doctor.",
+        "zh": "我发烧了，所以我要去看医生。",
+        "py": "Wǒ fāshāo le, suǒyǐ wǒ yào qù kàn yīshēng."
+      },
+      {
+        "en": "I do exercise every day, so I am fit.",
+        "zh": "因为我每天锻炼身体，所以我很健康。",
+        "py": "Yīnwèi wǒ měi tiān duànliàn shēntǐ, suǒyǐ wǒ hěn jiànkāng."
+      },
+      {
+        "en": "Eating too many sweets is unhealthy.",
+        "zh": "吃太多糖不健康。",
+        "py": "Chī tài duō táng bù jiànkāng."
+      }
+    ],
+    "grammar_vi": [
+      "Nguyên nhân – kết quả: because / so; 因为……所以……",
+      "Tương phản: but / although (tiếng Anh không dùng although và but trong cùng một câu); 虽然……但是……"
+    ]
+  },
+  {
+    "course": "Pupa",
+    "unit": 10,
+    "title_en": "Natural Disasters",
+    "title_zh": "自然灾害",
+    "title_py": "Zìrán zāihài",
+    "objectives_vi": [
+      "Con gọi tên được các loại thiên tai (động đất, bão, lũ lụt, hạn hán…).",
+      "Con nói được những việc nên làm trước và sau thiên tai.",
+      "Con dùng được before / after và cấu trúc động từ/danh từ + 前 / 后."
+    ],
+    "patterns": [
+      {
+        "en": "What should people do before and after a natural disaster?",
+        "zh": "自然灾害前后，人们应该做什么？",
+        "py": "Zìrán zāihài qián hòu, rénmen yīnggāi zuò shénme?"
+      },
+      {
+        "en": "Before the storm came, I closed all the windows.",
+        "zh": "暴风雨来之前，我关上了所有的窗户。",
+        "py": "Bàofēngyǔ lái zhīqián, wǒ guānshang le suǒyǒu de chuānghu."
+      },
+      {
+        "en": "After the storm, I cleaned my house.",
+        "zh": "暴风雨过后，我打扫了房子。",
+        "py": "Bàofēngyǔ guòhòu, wǒ dǎsǎo le fángzi."
+      },
+      {
+        "en": "Before you go out, check the weather.",
+        "zh": "出门前，看看天气。",
+        "py": "Chūmén qián, kànkan tiānqì."
+      },
+      {
+        "en": "After the earthquake, we went to a safe place.",
+        "zh": "地震后，我们去了安全的地方。",
+        "py": "Dìzhèn hòu, wǒmen qù le ānquán de dìfang."
+      }
+    ],
+    "grammar_vi": [
+      "Before / After + danh từ hoặc mệnh đề (chú ý hòa hợp thì: Before the storm came, I closed …)",
+      "Động từ/danh từ + 前 / 后 (之前 / 以后): 出门前, 地震后"
+    ]
+  },
+  {
+    "course": "Pupa",
+    "unit": 11,
+    "title_en": "Food",
+    "title_zh": "饮食",
+    "title_py": "Yǐnshí",
+    "objectives_vi": [
+      "Con gọi tên được các món ăn, dụng cụ ăn uống và hương vị.",
+      "Con kể lại được những gì mình đã ăn bằng thì quá khứ đơn.",
+      "Con hỏi và trả lời được với Did…? và 了 / 没.",
+      "Con mô tả được hương vị món ăn."
+    ],
+    "patterns": [
+      {
+        "en": "What did you eat last night?",
+        "zh": "你昨天晚上吃了什么？",
+        "py": "Nǐ zuótiān wǎnshang chī le shénme?"
+      },
+      {
+        "en": "I ate pizza.",
+        "zh": "我吃了披萨。",
+        "py": "Wǒ chī le pīsà."
+      },
+      {
+        "en": "Did you eat rice yesterday?",
+        "zh": "你昨天吃米饭了吗？",
+        "py": "Nǐ zuótiān chī mǐfàn le ma?"
+      },
+      {
+        "en": "Yes, I did. / No, I didn't.",
+        "zh": "吃了。/ 没吃。",
+        "py": "Chī le. / Méi chī."
+      },
+      {
+        "en": "I ate noodles with chopsticks.",
+        "zh": "我用筷子吃了面条。",
+        "py": "Wǒ yòng kuàizi chī le miàntiáo."
+      },
+      {
+        "en": "The dumplings were delicious.",
+        "zh": "饺子很好吃。",
+        "py": "Jiǎozi hěn hǎochī."
+      },
+      {
+        "en": "The soup was too salty.",
+        "zh": "汤太咸了。",
+        "py": "Tāng tài xián le."
+      }
+    ],
+    "grammar_vi": [
+      "Quá khứ đơn: động từ quá khứ (ate), câu hỏi Did … ? – Yes, I did. / No, I didn't.",
+      "了 chỉ hành động đã hoàn thành; phủ định dùng 没 + động từ"
+    ]
+  },
+  {
+    "course": "Pupa",
+    "unit": 12,
+    "title_en": "Holiday Activities",
+    "title_zh": "假期活动",
+    "title_py": "Jiàqī huódòng",
+    "objectives_vi": [
+      "Con gọi tên được các hoạt động trong kỳ nghỉ.",
+      "Con đưa ra được lời đề nghị với Let's … / How about …?",
+      "Con dùng được trợ từ cuối câu 吧 và 呢.",
+      "Con cùng bạn lên kế hoạch được cho một hoạt động vui chơi."
+    ],
+    "patterns": [
+      {
+        "en": "Let's go to the beach.",
+        "zh": "我们去海滩吧。",
+        "py": "Wǒmen qù hǎitān ba."
+      },
+      {
+        "en": "How about having a picnic?",
+        "zh": "我们去野餐，怎么样？",
+        "py": "Wǒmen qù yěcān, zěnmeyàng?"
+      },
+      {
+        "en": "How about baking a cake?",
+        "zh": "我们烤蛋糕，怎么样？",
+        "py": "Wǒmen kǎo dàngāo, zěnmeyàng?"
+      },
+      {
+        "en": "Let's go together.",
+        "zh": "我们一起去吧。",
+        "py": "Wǒmen yīqǐ qù ba."
+      },
+      {
+        "en": "Let's go sightseeing on the island.",
+        "zh": "我们去岛上观光吧。",
+        "py": "Wǒmen qù dǎo shang guānguāng ba."
+      },
+      {
+        "en": "I want to go camping. What about you?",
+        "zh": "我想去露营，你呢？",
+        "py": "Wǒ xiǎng qù lùyíng, nǐ ne?"
+      }
+    ],
+    "grammar_vi": [
+      "Đề nghị: Let's + động từ / How about + V-ing?",
+      "Trợ từ cuối câu: 吧 (rủ rê, đề nghị), 呢 (hỏi lại: còn bạn thì sao?)"
+    ]
+  },
+  {
+    "course": "Cocoon",
+    "unit": 1,
+    "title_en": "Home",
+    "title_zh": "我的家",
+    "title_py": "Wǒ de jiā",
+    "objectives_vi": [
+      "Con hiểu và dùng được từ vựng về nhà ở để mô tả các phòng và đồ dùng trong nhà.",
+      "Con nói được về những gì mình có với have got / has got.",
+      "Con mô tả được vị trí đồ vật trong nhà (卧室里有一张桌子)."
+    ],
+    "patterns": [
+      {
+        "en": "I've got a table in my bedroom.",
+        "zh": "我的卧室里有一张桌子。",
+        "py": "Wǒ de wòshì li yǒu yī zhāng zhuōzi."
+      },
+      {
+        "en": "Have you got an air conditioner in your room?",
+        "zh": "你的房间里有空调吗？",
+        "py": "Nǐ de fángjiān li yǒu kōngtiáo ma?"
+      },
+      {
+        "en": "Yes, I have. / No, I haven't.",
+        "zh": "有。/ 没有。",
+        "py": "Yǒu. / Méiyǒu."
+      },
+      {
+        "en": "There is a bathtub in the bathroom.",
+        "zh": "浴室里有一个浴缸。",
+        "py": "Yùshì li yǒu yī gè yùgāng."
+      },
+      {
+        "en": "Our flat is on the tenth floor.",
+        "zh": "我们的公寓在十楼。",
+        "py": "Wǒmen de gōngyù zài shí lóu."
+      },
+      {
+        "en": "Our building has got a lift.",
+        "zh": "我们的楼有电梯。",
+        "py": "Wǒmen de lóu yǒu diàntī."
+      },
+      {
+        "en": "The kitchen is next to the living room.",
+        "zh": "厨房在客厅旁边。",
+        "py": "Chúfáng zài kètīng pángbiān."
+      }
+    ],
+    "grammar_vi": [
+      "have got / has got: diễn tả sự sở hữu",
+      "Nơi chốn + 里 + 有 + số từ + lượng từ + danh từ (卧室里有一张桌子)"
+    ]
+  },
+  {
+    "course": "Cocoon",
+    "unit": 2,
+    "title_en": "Clothes",
+    "title_zh": "衣服",
+    "title_py": "Yīfu",
+    "objectives_vi": [
+      "Con dùng được từ vựng về quần áo để mô tả trang phục và sở thích.",
+      "Con hỏi và trả lời được về giá cả khi mua sắm.",
+      "Con so sánh được đơn giản hai món đồ (A 比 B 更…)."
+    ],
+    "patterns": [
+      {
+        "en": "How much does this shirt cost?",
+        "zh": "这件衬衫多少钱？",
+        "py": "Zhè jiàn chènshān duōshao qián?"
+      },
+      {
+        "en": "It's ___ yuan.",
+        "zh": "___块钱。",
+        "py": "___ kuài qián."
+      },
+      {
+        "en": "This jacket is more expensive than that one.",
+        "zh": "这件夹克衫比那件更贵。",
+        "py": "Zhè jiàn jiákèshān bǐ nà jiàn gèng guì."
+      },
+      {
+        "en": "These jeans are on sale.",
+        "zh": "这条牛仔裤打折。",
+        "py": "Zhè tiáo niúzǎikù dǎzhé."
+      },
+      {
+        "en": "I prefer the red scarf.",
+        "zh": "我更喜欢红色的围巾。",
+        "py": "Wǒ gèng xǐhuan hóngsè de wéijīn."
+      },
+      {
+        "en": "Online shopping is cheaper than shopping in a shop.",
+        "zh": "网购比在商店买更便宜。",
+        "py": "Wǎnggòu bǐ zài shāngdiàn mǎi gèng piányi."
+      },
+      {
+        "en": "I'm wearing a shirt and a tie.",
+        "zh": "我穿着衬衫，打着领带。",
+        "py": "Wǒ chuānzhe chènshān, dǎzhe lǐngdài."
+      }
+    ],
+    "grammar_vi": [
+      "Hỏi giá: How much does it cost? / ……多少钱？",
+      "So sánh hơn: A 比 B 更 + tính từ (-er than / more … than)"
+    ]
+  },
+  {
+    "course": "Cocoon",
+    "unit": 3,
+    "title_en": "Weather",
+    "title_zh": "天气",
+    "title_py": "Tiānqì",
+    "objectives_vi": [
+      "Con dùng tự tin được từ vựng về thời tiết để mô tả thời tiết hằng ngày.",
+      "Con hỏi và trả lời được về thời tiết hôm nay.",
+      "Con nói được về mùa mình thích nhất và giải thích lý do."
+    ],
+    "patterns": [
+      {
+        "en": "What's the weather like today?",
+        "zh": "今天天气怎么样？",
+        "py": "Jīntiān tiānqì zěnmeyàng?"
+      },
+      {
+        "en": "It's warm and sunny today.",
+        "zh": "今天很暖和，阳光很好。",
+        "py": "Jīntiān hěn nuǎnhuo, yángguāng hěn hǎo."
+      },
+      {
+        "en": "What's your favourite season?",
+        "zh": "你最喜欢的季节是什么？",
+        "py": "Nǐ zuì xǐhuan de jìjié shì shénme?"
+      },
+      {
+        "en": "My favourite season is autumn because it's cool.",
+        "zh": "我最喜欢秋天，因为秋天很凉快。",
+        "py": "Wǒ zuì xǐhuan qiūtiān, yīnwèi qiūtiān hěn liángkuai."
+      },
+      {
+        "en": "Spring is warm and comfortable.",
+        "zh": "春天很暖和，很舒服。",
+        "py": "Chūntiān hěn nuǎnhuo, hěn shūfu."
+      },
+      {
+        "en": "It's freezing in winter.",
+        "zh": "冬天冷极了。",
+        "py": "Dōngtiān lěng jí le."
+      },
+      {
+        "en": "Look! There's a rainbow!",
+        "zh": "看！有彩虹！",
+        "py": "Kàn! Yǒu cǎihóng!"
+      }
+    ],
+    "grammar_vi": [
+      "Hỏi về thời tiết: What's the weather like? / ……怎么样？"
+    ]
+  },
+  {
+    "course": "Cocoon",
+    "unit": 4,
+    "title_en": "School",
+    "title_zh": "学校",
+    "title_py": "Xuéxiào",
+    "objectives_vi": [
+      "Con hiểu và dùng được tên các môn học và hoạt động ở trường.",
+      "Con hỏi và trả lời được về giờ học của từng môn.",
+      "Con hỏi và trả lời được về số tiết học trong tuần.",
+      "Con nói được môn học yêu thích và lý do."
+    ],
+    "patterns": [
+      {
+        "en": "What time is the Maths lesson?",
+        "zh": "数学课是几点？",
+        "py": "Shùxué kè shì jǐ diǎn?"
+      },
+      {
+        "en": "It starts at nine o'clock.",
+        "zh": "九点开始。",
+        "py": "Jiǔ diǎn kāishǐ."
+      },
+      {
+        "en": "How many English lessons are there each week?",
+        "zh": "每周有几节英语课？",
+        "py": "Měi zhōu yǒu jǐ jié Yīngyǔ kè?"
+      },
+      {
+        "en": "There are four English lessons each week.",
+        "zh": "每周有四节英语课。",
+        "py": "Měi zhōu yǒu sì jié Yīngyǔ kè."
+      },
+      {
+        "en": "We have Music on Monday.",
+        "zh": "我们星期一有音乐课。",
+        "py": "Wǒmen xīngqīyī yǒu yīnyuè kè."
+      },
+      {
+        "en": "What's your favourite subject?",
+        "zh": "你最喜欢什么课？",
+        "py": "Nǐ zuì xǐhuan shénme kè?"
+      },
+      {
+        "en": "I like Science best because it's interesting.",
+        "zh": "我最喜欢科学课，因为很有意思。",
+        "py": "Wǒ zuì xǐhuan kēxué kè, yīnwèi hěn yǒu yìsi."
+      }
+    ],
+    "grammar_vi": [
+      "Hỏi giờ: What time is …? / ……是几点？",
+      "Hỏi số lượng: How many … are there? / 有几 + 节 + 课？ (lượng từ 节 cho tiết học)"
+    ]
+  },
+  {
+    "course": "Cocoon",
+    "unit": 5,
+    "title_en": "Television",
+    "title_zh": "电视节目",
+    "title_py": "Diànshì jiémù",
+    "objectives_vi": [
+      "Con dùng được từ vựng về tivi và các thể loại chương trình trong giao tiếp đơn giản.",
+      "Con nói được về thói quen xem tivi bằng thì hiện tại đơn.",
+      "Con nói được việc đang làm bằng thì hiện tại tiếp diễn và 正在.",
+      "Con phân biệt và dùng đúng được thì hiện tại đơn và hiện tại tiếp diễn."
+    ],
+    "patterns": [
+      {
+        "en": "What are you doing?",
+        "zh": "你正在做什么？",
+        "py": "Nǐ zhèngzài zuò shénme?"
+      },
+      {
+        "en": "I'm watching TV.",
+        "zh": "我正在看电视。",
+        "py": "Wǒ zhèngzài kàn diànshì."
+      },
+      {
+        "en": "I watch cartoons every Sunday.",
+        "zh": "我每个星期天看卡通片。",
+        "py": "Wǒ měi gè xīngqītiān kàn kǎtōngpiàn."
+      },
+      {
+        "en": "My dad watches the news every evening.",
+        "zh": "我爸爸每天晚上看新闻。",
+        "py": "Wǒ bàba měi tiān wǎnshang kàn xīnwén."
+      },
+      {
+        "en": "Please turn on the TV.",
+        "zh": "请打开电视。",
+        "py": "Qǐng dǎkāi diànshì."
+      },
+      {
+        "en": "Please turn off the TV.",
+        "zh": "请关掉电视。",
+        "py": "Qǐng guāndiào diànshì."
+      },
+      {
+        "en": "This comedy is very funny.",
+        "zh": "这部搞笑片很有趣。",
+        "py": "Zhè bù gǎoxiàopiàn hěn yǒuqù."
+      }
+    ],
+    "grammar_vi": [
+      "Hiện tại đơn (thói quen: every day …) và hiện tại tiếp diễn (đang diễn ra: now)",
+      "Chủ ngữ + 正在 + động từ: đang làm gì"
+    ]
+  },
+  {
+    "course": "Cocoon",
+    "unit": 6,
+    "title_en": "Music and Cinema",
+    "title_zh": "音乐和电影",
+    "title_py": "Yīnyuè hé diànyǐng",
+    "objectives_vi": [
+      "Con dùng được từ vựng về âm nhạc, nhạc cụ và điện ảnh để nói về sở thích.",
+      "Con mô tả được mức độ thực hiện hành động bằng trạng từ (well, beautifully).",
+      "Con dùng được bổ ngữ trạng thái 得 (弹得很好)."
+    ],
+    "patterns": [
+      {
+        "en": "I can play the piano well.",
+        "zh": "我钢琴弹得很好。",
+        "py": "Wǒ gāngqín tán de hěn hǎo."
+      },
+      {
+        "en": "She plays the violin beautifully.",
+        "zh": "她小提琴拉得很好听。",
+        "py": "Tā xiǎotíqín lā de hěn hǎotīng."
+      },
+      {
+        "en": "How well does he sing?",
+        "zh": "他唱歌唱得怎么样？",
+        "py": "Tā chànggē chàng de zěnmeyàng?"
+      },
+      {
+        "en": "He sings very well.",
+        "zh": "他唱得非常好。",
+        "py": "Tā chàng de fēicháng hǎo."
+      },
+      {
+        "en": "The actors performed very well.",
+        "zh": "演员们演得很精彩。",
+        "py": "Yǎnyuánmen yǎn de hěn jīngcǎi."
+      },
+      {
+        "en": "Do you like Beijing Opera?",
+        "zh": "你喜欢京剧吗？",
+        "py": "Nǐ xǐhuan jīngjù ma?"
+      },
+      {
+        "en": "I've got two tickets for tonight's show.",
+        "zh": "我有两张今晚演出的票。",
+        "py": "Wǒ yǒu liǎng zhāng jīnwǎn yǎnchū de piào."
+      }
+    ],
+    "grammar_vi": [
+      "Động từ + trạng từ chỉ cách thức: play well, sing beautifully",
+      "Bổ ngữ trạng thái: (tân ngữ) + động từ + 得 + 很/非常 + tính từ (钢琴弹得很好)"
+    ]
+  },
+  {
+    "course": "Cocoon",
+    "unit": 7,
+    "title_en": "Sports",
+    "title_zh": "体育运动",
+    "title_py": "Tǐyù yùndòng",
+    "objectives_vi": [
+      "Con dùng được từ vựng về thể thao để nói về sở thích và khả năng.",
+      "Con hỏi và giải thích được lý do thích một môn thể thao (Why…? – Because…).",
+      "Con diễn đạt được khả năng với can và phân biệt 会 / 能 / 可以."
+    ],
+    "patterns": [
+      {
+        "en": "Why do you like swimming?",
+        "zh": "你为什么喜欢游泳？",
+        "py": "Nǐ wèi shénme xǐhuan yóuyǒng?"
+      },
+      {
+        "en": "Because swimming is good for my health.",
+        "zh": "因为游泳对身体很好。",
+        "py": "Yīnwèi yóuyǒng duì shēntǐ hěn hǎo."
+      },
+      {
+        "en": "Can you play football?",
+        "zh": "你会踢足球吗？",
+        "py": "Nǐ huì tī zúqiú ma?"
+      },
+      {
+        "en": "I can play badminton, but I can't play tennis.",
+        "zh": "我会打羽毛球，但是不会打网球。",
+        "py": "Wǒ huì dǎ yǔmáoqiú, dànshì bù huì dǎ wǎngqiú."
+      },
+      {
+        "en": "I go running every morning.",
+        "zh": "我每天早上跑步。",
+        "py": "Wǒ měi tiān zǎoshang pǎobù."
+      },
+      {
+        "en": "Gymnastics can be dangerous.",
+        "zh": "体操有时候很危险。",
+        "py": "Tǐcāo yǒu shíhou hěn wēixiǎn."
+      },
+      {
+        "en": "You can't swim here. It's dangerous.",
+        "zh": "这里不可以游泳，很危险。",
+        "py": "Zhèli bù kěyǐ yóuyǒng, hěn wēixiǎn."
+      }
+    ],
+    "grammar_vi": [
+      "Hỏi lý do: Why …? – Because … / 为什么……？——因为……",
+      "can + động từ: 会 (kỹ năng học được), 能 (khả năng), 可以 (được phép)"
+    ]
+  },
+  {
+    "course": "Cocoon",
+    "unit": 8,
+    "title_en": "Illness",
+    "title_zh": "生病",
+    "title_py": "Shēngbìng",
+    "objectives_vi": [
+      "Con dùng được từ vựng về bệnh tật và tình trạng sức khỏe.",
+      "Con hỏi thăm được người khác bị làm sao (What's the matter? / 你怎么了？).",
+      "Con đưa ra được lời khuyên với should / shouldn't và 应该 / 不应该."
+    ],
+    "patterns": [
+      {
+        "en": "What's the matter with you?",
+        "zh": "你怎么了？",
+        "py": "Nǐ zěnme le?"
+      },
+      {
+        "en": "I've got a headache.",
+        "zh": "我头疼。",
+        "py": "Wǒ tóuténg."
+      },
+      {
+        "en": "I've got a cough and a fever.",
+        "zh": "我咳嗽，还发烧。",
+        "py": "Wǒ késou, hái fāshāo."
+      },
+      {
+        "en": "You should take some medicine.",
+        "zh": "你应该吃药。",
+        "py": "Nǐ yīnggāi chī yào."
+      },
+      {
+        "en": "You should see a doctor.",
+        "zh": "你应该去看医生。",
+        "py": "Nǐ yīnggāi qù kàn yīshēng."
+      },
+      {
+        "en": "You shouldn't eat ice cream.",
+        "zh": "你不应该吃冰淇淋。",
+        "py": "Nǐ bù yīnggāi chī bīngqílín."
+      },
+      {
+        "en": "He got hurt when he was playing football.",
+        "zh": "他踢足球的时候受伤了。",
+        "py": "Tā tī zúqiú de shíhou shòushāng le."
+      }
+    ],
+    "grammar_vi": [
+      "Hỏi thăm: What's the matter (with you)? / 你怎么了？",
+      "Khuyên bảo: should / shouldn't + động từ; 应该 / 不应该 + động từ"
+    ]
+  },
+  {
+    "course": "Cocoon",
+    "unit": 9,
+    "title_en": "Directions",
+    "title_zh": "问路",
+    "title_py": "Wèn lù",
+    "objectives_vi": [
+      "Con dùng được từ vựng về đường phố và giao thông để hỏi và chỉ đường.",
+      "Con chỉ đường được bằng câu mệnh lệnh (Go along… / Turn left…).",
+      "Con mô tả được vị trí địa điểm và cách đi lại."
+    ],
+    "patterns": [
+      {
+        "en": "Where is the station?",
+        "zh": "车站在哪里？",
+        "py": "Chēzhàn zài nǎli?"
+      },
+      {
+        "en": "Go along this road and turn left at the crossroads.",
+        "zh": "沿着这条路走，在十字路口左转。",
+        "py": "Yánzhe zhè tiáo lù zǒu, zài shízì lùkǒu zuǒ zhuǎn."
+      },
+      {
+        "en": "Go straight on and turn right at the T-junction.",
+        "zh": "一直走，在丁字路口右转。",
+        "py": "Yīzhí zǒu, zài dīngzì lùkǒu yòu zhuǎn."
+      },
+      {
+        "en": "Cross the road at the zebra crossing.",
+        "zh": "在斑马线过马路。",
+        "py": "Zài bānmǎxiàn guò mǎlù."
+      },
+      {
+        "en": "This is a one-way street.",
+        "zh": "这是单行道。",
+        "py": "Zhè shì dānxíngdào."
+      },
+      {
+        "en": "How do you get to school?",
+        "zh": "你怎么去学校？",
+        "py": "Nǐ zěnme qù xuéxiào?"
+      },
+      {
+        "en": "I go to school by bus.",
+        "zh": "我坐公共汽车去学校。",
+        "py": "Wǒ zuò gōnggòng qìchē qù xuéxiào."
+      }
+    ],
+    "grammar_vi": [
+      "Chỉ đường bằng câu mệnh lệnh: Go along … / Turn left / right …; 沿着……走，左转 / 右转",
+      "Hỏi cách đi: How do you get to …? / 怎么去……？"
+    ]
+  },
+  {
+    "course": "Cocoon",
+    "unit": 10,
+    "title_en": "Nationalities",
+    "title_zh": "国籍",
+    "title_py": "Guójí",
+    "objectives_vi": [
+      "Con dùng được từ vựng về quốc gia, quốc tịch và châu lục.",
+      "Con giới thiệu được quốc tịch của mình và người khác.",
+      "Con hỏi và nói được một quốc gia thuộc châu lục nào (belong to / 属于)."
+    ],
+    "patterns": [
+      {
+        "en": "Which continent is Singapore in?",
+        "zh": "新加坡属于哪个洲？",
+        "py": "Xīnjiāpō shǔyú nǎ gè zhōu?"
+      },
+      {
+        "en": "Singapore is in Asia.",
+        "zh": "新加坡属于亚洲。",
+        "py": "Xīnjiāpō shǔyú Yàzhōu."
+      },
+      {
+        "en": "Where are you from?",
+        "zh": "你是哪国人？",
+        "py": "Nǐ shì nǎ guó rén?"
+      },
+      {
+        "en": "I'm from Vietnam. I'm Vietnamese.",
+        "zh": "我是越南人。",
+        "py": "Wǒ shì Yuènán rén."
+      },
+      {
+        "en": "He's from India. He's Indian.",
+        "zh": "他是印度人。",
+        "py": "Tā shì Yìndù rén."
+      },
+      {
+        "en": "Russia is in Europe and Asia.",
+        "zh": "俄罗斯在欧洲和亚洲。",
+        "py": "Éluósī zài Ōuzhōu hé Yàzhōu."
+      },
+      {
+        "en": "Hong Kong is a city in China.",
+        "zh": "香港是中国的一个城市。",
+        "py": "Xiānggǎng shì Zhōngguó de yī gè chéngshì."
+      }
+    ],
+    "grammar_vi": [
+      "Nói về sự thuộc về: belong to / be in; A 属于 B",
+      "Quốc tịch: tên nước + 人 (越南人); tiếng Anh: from Vietnam → Vietnamese"
+    ]
+  },
+  {
+    "course": "Cocoon",
+    "unit": 11,
+    "title_en": "Cooking",
+    "title_zh": "做饭",
+    "title_py": "Zuò fàn",
+    "objectives_vi": [
+      "Con hiểu và dùng được từ vựng về cách nấu và dụng cụ nhà bếp.",
+      "Con nói được mình dùng dụng cụ gì để nấu món gì.",
+      "Con dùng được cấu trúc 用 + dụng cụ + động từ và use … to … để diễn đạt phương tiện làm việc."
+    ],
+    "patterns": [
+      {
+        "en": "We use a pressure cooker to stew meat.",
+        "zh": "我们用高压锅炖肉。",
+        "py": "Wǒmen yòng gāoyāguō dùn ròu."
+      },
+      {
+        "en": "What do you use to boil water?",
+        "zh": "你用什么烧水？",
+        "py": "Nǐ yòng shénme shāo shuǐ?"
+      },
+      {
+        "en": "I use an electric kettle to boil water.",
+        "zh": "我用电水壶烧水。",
+        "py": "Wǒ yòng diànshuǐhú shāo shuǐ."
+      },
+      {
+        "en": "My mum uses a microwave to heat milk.",
+        "zh": "妈妈用微波炉热牛奶。",
+        "py": "Māma yòng wēibōlú rè niúnǎi."
+      },
+      {
+        "en": "Grandma bakes bread in the oven.",
+        "zh": "奶奶用烤箱烤面包。",
+        "py": "Nǎinai yòng kǎoxiāng kǎo miànbāo."
+      },
+      {
+        "en": "We steam fish and stir-fry vegetables.",
+        "zh": "我们蒸鱼，炒青菜。",
+        "py": "Wǒmen zhēng yú, chǎo qīngcài."
+      }
+    ],
+    "grammar_vi": [
+      "Chủ ngữ + 用 + dụng cụ + động từ + tân ngữ: dùng … để …",
+      "use + đồ vật + to + động từ"
+    ]
+  },
+  {
+    "course": "Cocoon",
+    "unit": 12,
+    "title_en": "Workplace / Future plans",
+    "title_zh": "工作 / 未来计划",
+    "title_py": "Gōngzuò / Wèilái jìhuà",
+    "objectives_vi": [
+      "Con hiểu và dùng được từ vựng về công việc văn phòng.",
+      "Con nói được về dự định với be going to + động từ.",
+      "Con dùng được cấu trúc 要……了 để diễn đạt việc sắp xảy ra."
+    ],
+    "patterns": [
+      {
+        "en": "I'm going to have a team meeting tomorrow.",
+        "zh": "我明天要和同事开会。",
+        "py": "Wǒ míngtiān yào hé tóngshì kāihuì."
+      },
+      {
+        "en": "What are you going to do next week?",
+        "zh": "你下个星期打算做什么？",
+        "py": "Nǐ xià gè xīngqī dǎsuàn zuò shénme?"
+      },
+      {
+        "en": "My dad is going to work overtime tonight.",
+        "zh": "爸爸今天晚上要加班。",
+        "py": "Bàba jīntiān wǎnshang yào jiābān."
+      },
+      {
+        "en": "She is going to ask for a day off.",
+        "zh": "她要请一天假。",
+        "py": "Tā yào qǐng yī tiān jià."
+      },
+      {
+        "en": "My mum is going to sign up for an English course.",
+        "zh": "妈妈要报名参加英语课。",
+        "py": "Māma yào bàomíng cānjiā Yīngyǔ kè."
+      },
+      {
+        "en": "The meeting is about to start.",
+        "zh": "会议要开始了。",
+        "py": "Huìyì yào kāishǐ le."
+      },
+      {
+        "en": "It's nine o'clock. I'm about to go to work.",
+        "zh": "九点了，我要上班了。",
+        "py": "Jiǔ diǎn le, wǒ yào shàngbān le."
+      }
+    ],
+    "grammar_vi": [
+      "be going to + động từ: dự định trong tương lai",
+      "要……了: sắp … rồi (việc sắp xảy ra)"
+    ]
+  },
+  {
+    "course": "Seedling",
+    "unit": 1,
+    "title_en": "Greetings",
+    "title_zh": "问好",
+    "title_py": "Wènhǎo",
+    "objectives_vi": [
+      "Con chào được bạn bè và thầy cô bằng tiếng Anh và tiếng Trung.",
+      "Con phân biệt được lời chào 你好 với 您好 (lễ phép, dùng với người lớn) và 你们好 (chào nhiều người).",
+      "Con nói được lời tạm biệt và hẹn gặp lại (Goodbye / 再见, See you tomorrow / 明天见)."
+    ],
+    "patterns": [
+      {
+        "en": "Hello!",
+        "zh": "你好！",
+        "py": "Nǐ hǎo!"
+      },
+      {
+        "en": "Hello! (to an adult)",
+        "zh": "您好！",
+        "py": "Nín hǎo!"
+      },
+      {
+        "en": "Hello, everyone!",
+        "zh": "你们好！",
+        "py": "Nǐmen hǎo!"
+      },
+      {
+        "en": "Hello, teacher!",
+        "zh": "老师好！",
+        "py": "Lǎoshī hǎo!"
+      },
+      {
+        "en": "Goodbye, teacher!",
+        "zh": "老师再见！",
+        "py": "Lǎoshī zàijiàn!"
+      },
+      {
+        "en": "Goodbye!",
+        "zh": "再见！",
+        "py": "Zàijiàn!"
+      },
+      {
+        "en": "See you tomorrow!",
+        "zh": "明天见！",
+        "py": "Míngtiān jiàn!"
+      }
+    ],
+    "grammar_vi": [
+      "Chào theo danh xưng: danh xưng + 好 (老师好) / danh xưng + 再见 (老师再见)"
+    ]
+  },
+  {
+    "course": "Seedling",
+    "unit": 2,
+    "title_en": "Name and Age",
+    "title_zh": "名字和年龄",
+    "title_py": "Míngzi hé niánlíng",
+    "objectives_vi": [
+      "Con hỏi và nói được tên của mình.",
+      "Con hỏi và nói được tuổi của mình.",
+      "Con đếm được các số từ 1 đến 10 bằng tiếng Anh và tiếng Trung."
+    ],
+    "patterns": [
+      {
+        "en": "Hello, I'm Leo.",
+        "zh": "你好，我是Leo。",
+        "py": "Nǐ hǎo, wǒ shì Leo."
+      },
+      {
+        "en": "What's your name?",
+        "zh": "你叫什么名字？",
+        "py": "Nǐ jiào shénme míngzi?"
+      },
+      {
+        "en": "My name is Anna.",
+        "zh": "我叫Anna。",
+        "py": "Wǒ jiào Anna."
+      },
+      {
+        "en": "How old are you?",
+        "zh": "你几岁？",
+        "py": "Nǐ jǐ suì?"
+      },
+      {
+        "en": "I'm five years old.",
+        "zh": "我五岁。",
+        "py": "Wǒ wǔ suì."
+      },
+      {
+        "en": "I'm ___ years old.",
+        "zh": "我___岁。",
+        "py": "Wǒ ___ suì."
+      }
+    ],
+    "grammar_vi": []
+  },
+  {
+    "course": "Seedling",
+    "unit": 3,
+    "title_en": "My Family",
+    "title_zh": "我的家人",
+    "title_py": "Wǒ de jiārén",
+    "objectives_vi": [
+      "Con gọi tên được các thành viên trong gia đình (bố, mẹ, anh, chị, em, em bé).",
+      "Con hỏi được “Ai đây?” (Who is he/she? / 他/她是谁？).",
+      "Con giới thiệu được người thân của mình."
+    ],
+    "patterns": [
+      {
+        "en": "Who is she?",
+        "zh": "她是谁？",
+        "py": "Tā shì shéi?"
+      },
+      {
+        "en": "She is my mummy.",
+        "zh": "她是我妈妈。",
+        "py": "Tā shì wǒ māma."
+      },
+      {
+        "en": "Who is he?",
+        "zh": "他是谁？",
+        "py": "Tā shì shéi?"
+      },
+      {
+        "en": "He is my daddy.",
+        "zh": "他是我爸爸。",
+        "py": "Tā shì wǒ bàba."
+      },
+      {
+        "en": "This is my older brother.",
+        "zh": "这是我哥哥。",
+        "py": "Zhè shì wǒ gēge."
+      },
+      {
+        "en": "This is my younger sister.",
+        "zh": "这是我妹妹。",
+        "py": "Zhè shì wǒ mèimei."
+      },
+      {
+        "en": "I love my family.",
+        "zh": "我爱我的家人。",
+        "py": "Wǒ ài wǒ de jiārén."
+      }
+    ],
+    "grammar_vi": [
+      "he / she – 他 / 她 (hai chữ khác nhau nhưng cùng đọc là tā)"
+    ]
+  },
+  {
+    "course": "Seedling",
+    "unit": 4,
+    "title_en": "My Body",
+    "title_zh": "身体",
+    "title_py": "Shēntǐ",
+    "objectives_vi": [
+      "Con gọi tên được các bộ phận trên cơ thể (đầu, tay, chân, mắt, tai, mũi, miệng).",
+      "Con chỉ và nói được bộ phận cơ thể theo yêu cầu của cô.",
+      "Con mô tả được bộ phận cơ thể với to / nhỏ (big / small – 大 / 小)."
+    ],
+    "patterns": [
+      {
+        "en": "This is my nose.",
+        "zh": "这是我的鼻子。",
+        "py": "Zhè shì wǒ de bízi."
+      },
+      {
+        "en": "I've got two eyes.",
+        "zh": "我有两只眼睛。",
+        "py": "Wǒ yǒu liǎng zhī yǎnjing."
+      },
+      {
+        "en": "I have a big head.",
+        "zh": "我的头很大。",
+        "py": "Wǒ de tóu hěn dà."
+      },
+      {
+        "en": "I have a small nose.",
+        "zh": "我的鼻子很小。",
+        "py": "Wǒ de bízi hěn xiǎo."
+      },
+      {
+        "en": "Touch your ears!",
+        "zh": "摸摸你的耳朵！",
+        "py": "Mōmo nǐ de ěrduo!"
+      },
+      {
+        "en": "Clap your hands!",
+        "zh": "拍拍手！",
+        "py": "Pāipai shǒu!"
+      }
+    ],
+    "grammar_vi": [
+      "Tính từ làm vị ngữ: 我的 + bộ phận cơ thể + 很大 / 很小"
+    ]
+  },
+  {
+    "course": "Seedling",
+    "unit": 5,
+    "title_en": "Feelings",
+    "title_zh": "心情",
+    "title_py": "Xīnqíng",
+    "objectives_vi": [
+      "Con gọi tên được các cảm xúc cơ bản (vui, buồn, giận, mệt, buồn ngủ, sợ).",
+      "Con hỏi được bạn cảm thấy thế nào.",
+      "Con nói được cảm xúc của mình (I'm happy. / 我很开心。)."
+    ],
+    "patterns": [
+      {
+        "en": "How do you feel?",
+        "zh": "你感觉怎么样？",
+        "py": "Nǐ gǎnjué zěnmeyàng?"
+      },
+      {
+        "en": "I'm happy.",
+        "zh": "我很开心。",
+        "py": "Wǒ hěn kāixīn."
+      },
+      {
+        "en": "I'm sad.",
+        "zh": "我很难过。",
+        "py": "Wǒ hěn nánguò."
+      },
+      {
+        "en": "I'm scared.",
+        "zh": "我很害怕。",
+        "py": "Wǒ hěn hàipà."
+      },
+      {
+        "en": "Are you tired?",
+        "zh": "你累吗？",
+        "py": "Nǐ lèi ma?"
+      },
+      {
+        "en": "I'm sleepy.",
+        "zh": "我困了。",
+        "py": "Wǒ kùn le."
+      },
+      {
+        "en": "Are you angry?",
+        "zh": "你生气了吗？",
+        "py": "Nǐ shēngqì le ma?"
+      }
+    ],
+    "grammar_vi": [
+      "我很 + tính từ chỉ cảm xúc (I'm + feeling)"
+    ]
+  },
+  {
+    "course": "Seedling",
+    "unit": 6,
+    "title_en": "My School Things",
+    "title_zh": "学习用品",
+    "title_py": "Xuéxí yòngpǐn",
+    "objectives_vi": [
+      "Con gọi tên được các đồ dùng học tập (sách, bút, cặp, tẩy, thước…).",
+      "Con hỏi được “Đây/Kia là gì?” và trả lời được.",
+      "Con phân biệt được this / that – 这 / 那 và these / those – 这些 / 那些."
+    ],
+    "patterns": [
+      {
+        "en": "What is this?",
+        "zh": "这是什么？",
+        "py": "Zhè shì shénme?"
+      },
+      {
+        "en": "This is a book.",
+        "zh": "这是书。",
+        "py": "Zhè shì shū."
+      },
+      {
+        "en": "What is that?",
+        "zh": "那是什么？",
+        "py": "Nà shì shénme?"
+      },
+      {
+        "en": "That is a schoolbag.",
+        "zh": "那是书包。",
+        "py": "Nà shì shūbāo."
+      },
+      {
+        "en": "What are these?",
+        "zh": "这些是什么？",
+        "py": "Zhèxiē shì shénme?"
+      },
+      {
+        "en": "These are pens.",
+        "zh": "这些是笔。",
+        "py": "Zhèxiē shì bǐ."
+      },
+      {
+        "en": "What are those?",
+        "zh": "那些是什么？",
+        "py": "Nàxiē shì shénme?"
+      }
+    ],
+    "grammar_vi": [
+      "this / that – 这 / 那; these / those – 这些 / 那些"
+    ]
+  },
+  {
+    "course": "Seedling",
+    "unit": 7,
+    "title_en": "My House",
+    "title_zh": "我的家",
+    "title_py": "Wǒ de jiā",
+    "objectives_vi": [
+      "Con gọi tên được một số đồ vật trong nhà (bàn, ghế, giường, ghế sofa).",
+      "Con hỏi được đồ vật ở đâu (Where is …? / ……在哪儿？).",
+      "Con nói được vị trí đồ vật với on / under – 上 / 下面."
+    ],
+    "patterns": [
+      {
+        "en": "Where is the book?",
+        "zh": "书在哪儿？",
+        "py": "Shū zài nǎr?"
+      },
+      {
+        "en": "The book is on the table.",
+        "zh": "书在桌子上。",
+        "py": "Shū zài zhuōzi shang."
+      },
+      {
+        "en": "The book is under the table.",
+        "zh": "书在桌子下面。",
+        "py": "Shū zài zhuōzi xiàmiàn."
+      },
+      {
+        "en": "Where is the cat?",
+        "zh": "猫在哪儿？",
+        "py": "Māo zài nǎr?"
+      },
+      {
+        "en": "The cat is on the sofa.",
+        "zh": "猫在沙发上。",
+        "py": "Māo zài shāfā shang."
+      },
+      {
+        "en": "The ball is under the bed.",
+        "zh": "球在床下面。",
+        "py": "Qiú zài chuáng xiàmiàn."
+      },
+      {
+        "en": "This is my chair.",
+        "zh": "这是我的椅子。",
+        "py": "Zhè shì wǒ de yǐzi."
+      }
+    ],
+    "grammar_vi": [
+      "Hỏi vị trí: Where is …? / ……在哪儿？",
+      "on / under đứng trước danh từ; 上 / 下面 đứng sau danh từ (在桌子上)"
+    ]
+  },
+  {
+    "course": "Seedling",
+    "unit": 8,
+    "title_en": "Animals",
+    "title_zh": "动物",
+    "title_py": "Dòngwù",
+    "objectives_vi": [
+      "Con gọi tên được một số con vật quen thuộc (chó, mèo, chim, cá, thỏ, chuột).",
+      "Con gọi tên được các hoạt động chạy, bay, bơi, nhảy.",
+      "Con nói được con vật làm được và không làm được gì (can / can't – 能 / 不能)."
+    ],
+    "patterns": [
+      {
+        "en": "Dogs can run.",
+        "zh": "狗能跑。",
+        "py": "Gǒu néng pǎo."
+      },
+      {
+        "en": "Birds can fly.",
+        "zh": "鸟能飞。",
+        "py": "Niǎo néng fēi."
+      },
+      {
+        "en": "Fish can swim.",
+        "zh": "鱼能游泳。",
+        "py": "Yú néng yóuyǒng."
+      },
+      {
+        "en": "Rabbits can jump.",
+        "zh": "兔子能跳。",
+        "py": "Tùzi néng tiào."
+      },
+      {
+        "en": "Dogs can't fly.",
+        "zh": "狗不能飞。",
+        "py": "Gǒu bù néng fēi."
+      },
+      {
+        "en": "Fish can't run.",
+        "zh": "鱼不能跑。",
+        "py": "Yú bù néng pǎo."
+      },
+      {
+        "en": "Can a cat fly?",
+        "zh": "猫能飞吗？",
+        "py": "Māo néng fēi ma?"
+      }
+    ],
+    "grammar_vi": [
+      "can / can't + động từ – 能 / 不能 + động từ"
+    ]
+  },
+  {
+    "course": "Seedling",
+    "unit": 9,
+    "title_en": "Food",
+    "title_zh": "食物",
+    "title_py": "Shíwù",
+    "objectives_vi": [
+      "Con gọi tên được một số đồ ăn, đồ uống quen thuộc.",
+      "Con phân biệt được ăn và uống (eat / drink – 吃 / 喝).",
+      "Con nói được mình thích và không thích ăn gì."
+    ],
+    "patterns": [
+      {
+        "en": "I like eating apples.",
+        "zh": "我喜欢吃苹果。",
+        "py": "Wǒ xǐhuan chī píngguǒ."
+      },
+      {
+        "en": "I don't like eating bananas.",
+        "zh": "我不喜欢吃香蕉。",
+        "py": "Wǒ bù xǐhuan chī xiāngjiāo."
+      },
+      {
+        "en": "I like eating pizza.",
+        "zh": "我喜欢吃披萨。",
+        "py": "Wǒ xǐhuan chī pīsà."
+      },
+      {
+        "en": "I want to eat rice.",
+        "zh": "我想吃米饭。",
+        "py": "Wǒ xiǎng chī mǐfàn."
+      },
+      {
+        "en": "Do you like drinking milk?",
+        "zh": "你喜欢喝牛奶吗？",
+        "py": "Nǐ xǐhuan hē niúnǎi ma?"
+      },
+      {
+        "en": "I want to drink water.",
+        "zh": "我想喝水。",
+        "py": "Wǒ xiǎng hē shuǐ."
+      }
+    ],
+    "grammar_vi": [
+      "like / don't like + V-ing – 喜欢 / 不喜欢 + 吃 / 喝 + món ăn"
+    ]
+  },
+  {
+    "course": "Seedling",
+    "unit": 10,
+    "title_en": "Weather",
+    "title_zh": "天气",
+    "title_py": "Tiānqì",
+    "objectives_vi": [
+      "Con gọi tên được các kiểu thời tiết (nắng, mưa, nhiều mây, tuyết, gió).",
+      "Con hỏi được thời tiết hôm nay thế nào.",
+      "Con nói được thời tiết và cảm giác nóng, lạnh."
+    ],
+    "patterns": [
+      {
+        "en": "How's the weather today?",
+        "zh": "今天天气怎么样？",
+        "py": "Jīntiān tiānqì zěnmeyàng?"
+      },
+      {
+        "en": "It's sunny.",
+        "zh": "今天是晴天。",
+        "py": "Jīntiān shì qíngtiān."
+      },
+      {
+        "en": "It's cloudy.",
+        "zh": "今天多云。",
+        "py": "Jīntiān duōyún."
+      },
+      {
+        "en": "It's raining.",
+        "zh": "今天下雨。",
+        "py": "Jīntiān xiàyǔ."
+      },
+      {
+        "en": "It's snowing.",
+        "zh": "今天下雪。",
+        "py": "Jīntiān xiàxuě."
+      },
+      {
+        "en": "It's windy.",
+        "zh": "今天刮风。",
+        "py": "Jīntiān guāfēng."
+      },
+      {
+        "en": "It's hot.",
+        "zh": "今天很热。",
+        "py": "Jīntiān hěn rè."
+      },
+      {
+        "en": "It's cold.",
+        "zh": "今天很冷。",
+        "py": "Jīntiān hěn lěng."
+      }
+    ],
+    "grammar_vi": []
+  },
+  {
+    "course": "Seedling",
+    "unit": 11,
+    "title_en": "Colours",
+    "title_zh": "颜色",
+    "title_py": "Yánsè",
+    "objectives_vi": [
+      "Con gọi tên được 10 màu sắc cơ bản.",
+      "Con hỏi và trả lời được đồ vật có màu gì.",
+      "Con ghép được màu sắc với danh từ (a red apple / 红色的苹果)."
+    ],
+    "patterns": [
+      {
+        "en": "What colour is it?",
+        "zh": "这是什么颜色？",
+        "py": "Zhè shì shénme yánsè?"
+      },
+      {
+        "en": "What colour is the apple?",
+        "zh": "苹果是什么颜色的？",
+        "py": "Píngguǒ shì shénme yánsè de?"
+      },
+      {
+        "en": "It's red.",
+        "zh": "苹果是红色的。",
+        "py": "Píngguǒ shì hóngsè de."
+      },
+      {
+        "en": "a red apple",
+        "zh": "红色的苹果",
+        "py": "hóngsè de píngguǒ"
+      },
+      {
+        "en": "a yellow banana",
+        "zh": "黄色的香蕉",
+        "py": "huángsè de xiāngjiāo"
+      },
+      {
+        "en": "What colour do you like?",
+        "zh": "你喜欢什么颜色？",
+        "py": "Nǐ xǐhuan shénme yánsè?"
+      },
+      {
+        "en": "I like blue.",
+        "zh": "我喜欢蓝色。",
+        "py": "Wǒ xǐhuan lánsè."
+      }
+    ],
+    "grammar_vi": [
+      "Màu sắc + 的 + danh từ: 红色的苹果 (a red apple)"
+    ]
+  },
+  {
+    "course": "Seedling",
+    "unit": 12,
+    "title_en": "Numbers, Time and Dates",
+    "title_zh": "数字、时间和日期",
+    "title_py": "Shùzì, shíjiān hé rìqī",
+    "objectives_vi": [
+      "Con đếm được đồ vật, con vật và dùng đúng số ít – số nhiều (an apple / two apples).",
+      "Con dùng được 两 và lượng từ 个, 只 khi đếm (两个苹果, 两只狗).",
+      "Con hỏi và nói được giờ đúng (现在几点？ – 现在八点。).",
+      "Con hỏi và nói được ngày, tháng và thứ trong tuần (今天几月几号？ / 今天星期几？)."
+    ],
+    "patterns": [
+      {
+        "en": "How many apples are there?",
+        "zh": "有几个苹果？",
+        "py": "Yǒu jǐ gè píngguǒ?"
+      },
+      {
+        "en": "There are two apples.",
+        "zh": "有两个苹果。",
+        "py": "Yǒu liǎng gè píngguǒ."
+      },
+      {
+        "en": "I've got two dogs.",
+        "zh": "我有两只狗。",
+        "py": "Wǒ yǒu liǎng zhī gǒu."
+      },
+      {
+        "en": "What time is it?",
+        "zh": "现在几点？",
+        "py": "Xiànzài jǐ diǎn?"
+      },
+      {
+        "en": "It's eight o'clock.",
+        "zh": "现在八点。",
+        "py": "Xiànzài bā diǎn."
+      },
+      {
+        "en": "What's the date today?",
+        "zh": "今天几月几号？",
+        "py": "Jīntiān jǐ yuè jǐ hào?"
+      },
+      {
+        "en": "It's the first of June.",
+        "zh": "今天六月一号。",
+        "py": "Jīntiān liù yuè yī hào."
+      },
+      {
+        "en": "What day is it today?",
+        "zh": "今天星期几？",
+        "py": "Jīntiān xīngqī jǐ?"
+      }
+    ],
+    "grammar_vi": [
+      "Số ít – số nhiều: an apple / two apples (thêm -s)",
+      "Lượng từ khi đếm: 个 (đồ vật, người), 只 (con vật); dùng 两 thay cho 二 (两个, 两只)",
+      "Hỏi giờ và ngày với 几: 几点？/ 几月几号？/ 星期几？"
+    ]
+  }
+]

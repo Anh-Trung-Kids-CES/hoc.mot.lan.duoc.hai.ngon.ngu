@@ -12,6 +12,14 @@ Trang riêng cho chương trình song ngữ Anh – Trung 9 khóa của CES Vi�
   - Màn bài học không có chữ tiếng Việt: chỉ hình, biểu tượng, giọng tiếng Anh và tiếng Trung. Little Seed không hiện chữ.
 - Thêm `?thu=1` vào link để tranh đúng nhấp nháy gần như ngay (thầy cô chạy thử nhanh).
 
+## Chương trình chi tiết
+- **Khung chương trình** (`#/khung`): tab Giới thiệu của tài liệu chương trình.
+- **Little Seed, Canopy**: nguyên các tab của tài liệu chương trình (tổng quan khóa và 12 unit).
+- **Seedling, Larva, Pupa, Cocoon**: ghép từ bảng phân bổ từ vựng, khung Syllabus đã hiệu đính (mục tiêu, mẫu câu, ngữ pháp), lịch 2 tuần và lịch ôn của từng unit.
+- **Larva Plus, Butterfly**: 6 unit ôn, mỗi unit gộp các unit cặp, danh sách từ ôn theo kỳ thi.
+- **PreB**: bản đề xuất 12 chủ đề, khoảng 100 từ tiếng Anh nghe hiểu, chờ duyệt.
+- Dữ liệu ở `data/chi-tiet/<khóa>.json`; script `cong-cu/chi_tiet.py`.
+
 ## Cấu trúc
 - `index.html`, `app.css`, `app.js` (trang lộ trình, khóa, unit, Hộp ôn, hướng dẫn), `bai.js` (trình phát bài).
 - `data/chuong-trinh.json`: khóa, unit, từ của unit, kho tranh/giọng dùng trong bài, truyện.

@@ -190,3 +190,30 @@ table.t th{font-size:12px;text-transform:uppercase;letter-spacing:.03em;color:va
   .pbar{padding:6px 10px} .pbtn{width:40px;height:40px}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+
+/* ---------- chương trình chi tiết ---------- */
+.detail{padding:4px 0}
+.detail.card{padding:16px 20px}
+.detail h3{font-size:20px;margin:22px 0 8px}
+.detail h3.sec{font-size:22px}
+.detail p,.detail li{max-width:80ch}
+.detail blockquote{margin:10px 0;padding:10px 16px;border-left:4px solid var(--star);background:#fffaf0;border-radius:0 12px 12px 0}
+.detail .tbox{margin:10px 0;border:1px solid var(--line);border-radius:12px;background:#fff;padding:0}
+.detail table.t td,.detail table.t th{font-size:14px}
+.detail table.t th{background:#faf5ec}
+.detail .zh{font-family:var(--fz)}
+.detail a{color:var(--en)}
+.wchips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:5px}
+.wchips li{padding:2px 8px;border-radius:8px;font-size:13px;background:#f7f1e6;margin:0}
+.wchips.en li{background:var(--en-soft)} .wchips.zh li{background:var(--zh-soft);font-family:var(--fz)}
+.wchips li i{font-style:normal;font-size:10px;color:var(--muted);margin-left:4px}
+.toc{padding:14px 18px;margin:18px 0}
+.toc ol{margin:8px 0 0;padding-left:22px;columns:2;column-gap:28px}
+.toc a{color:var(--ink)}
+.lead2 p{font-size:17px;color:var(--muted)}
+@media (max-width:760px){.toc ol{columns:1}.detail.card{padding:12px 12px}}
+@media (max-width:560px){
+  .bt{display:none}
+  .nav{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;scrollbar-width:none}
+  .nav a{white-space:nowrap}
+}
