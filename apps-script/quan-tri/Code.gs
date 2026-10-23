@@ -3,26 +3,28 @@
  *
  * Đây là một dự án Apps Script RIÊNG, khác với máy chủ của web học (apps-script/Code.gs).
  * Trang chạy bằng chính tài khoản Google của người mở, nên:
- *   – ai không có quyền mở Sheet DATA Dự án thì không xem được gì;
+ *   – ai không có quyền mở Sheet Tiến độ & Bảng vàng thì không xem được gì;
  *   – ai có quyền nhưng chưa có tên trong tab "Đội" thì trang báo "chưa có quyền".
  * Không có dữ liệu nào của bé nằm trên GitHub Pages.
  *
- * Tab dùng trong Sheet DATA Dự án:
+ * Mọi dữ liệu nằm trong Sheet "Little Language Explorer – Tiến độ & Bảng vàng" (cùng Sheet với máy chủ web học).
+ * Sheet DATA Dự án cũ không còn dùng. Tab dùng:
  *   Gia đình          – mỗi gia đình một dòng, một trạng thái (web học tạo khi ba mẹ để lại Zalo;
- *                       trang này tự thêm gia đình từ "Đăng ký Web", "Google Form", "Danh sách đóng tiền")
+ *                       trang này tự thêm gia đình từ "Đăng ký Web" – đơn của trang ưu đãi)
  *   Truy cập học thử  – sự kiện học thử theo mã người xem (để chấm điểm và vẽ phễu)
- *   Nhật ký cuộc gọi  – mỗi lần liên hệ một dòng (thêm cột P "Mã gia đình", Q "Kết quả")
+ *   Nhật ký cuộc gọi  – mỗi lần liên hệ một dòng (cột P "Mã gia đình", Q "Kết quả")
  *   Đội               – Email | Tên | Vai trò (Quản lý / Vận hành) | Nhận gia đình mới (TRUE/FALSE)
  *   Tin mẫu Zalo      – tin nhắn mẫu cho từng loại việc, sửa thoải mái ngay trên Sheet
  *   Cài đặt quản trị  – hạn đăng ký, ngày khai mạc, link trang ưu đãi, ngưỡng điểm
  *   Nhật ký mở hồ sơ  – ai mở hồ sơ gia đình nào, lúc nào
  * Các tab Đội, Tin mẫu Zalo, Cài đặt quản trị, Nhật ký mở hồ sơ tự tạo ở lần mở đầu tiên.
+ * Ai không có quyền mở Sheet này thì không mở được trang.
  *
  * CÁCH BẬT: xem apps-script/quan-tri/HUONG-DAN.md
  */
 
-const DATA_ID = '1antBQ-MDz2a4U-w-B2y6XTnF1Pzln7QwwUxxJm5TanI';
-const TIEN_DO_ID = '1pF1FA_LR5LUou3N50g4FJa0SNFYTQX3P08MrBIF3ffk';   // Sheet Tiến độ & Bảng vàng (phiếu đổi quà); không mở được thì bỏ qua
+const DATA_ID = '1pF1FA_LR5LUou3N50g4FJa0SNFYTQX3P08MrBIF3ffk';    // Sheet "Little Language Explorer – Tiến độ & Bảng vàng"
+const TIEN_DO_ID = DATA_ID;                                          // phiếu đổi quà (tab DoiQua) cũng nằm ở đây
 
 const GD_HEAD = ['Mã gia đình', 'Tạo lúc', 'Nguồn', 'Mã người xem', 'Mã CTV', 'Tên ba/mẹ', 'Số Zalo', 'Tên con', 'Tuổi', 'Khoá',
   'ĐY học tập', 'ĐY tư vấn', 'ĐY tin ưu đãi', 'Trạng thái', 'Đổi trạng thái lúc', 'Người hỗ trợ', 'Liên hệ đầu', 'Liên hệ gần nhất',
@@ -89,7 +91,7 @@ function toi_(ss) {
   const team = rows.filter(r => r[0] || r[1]).map(r => ({ email: String(r[0]).trim().toLowerCase(), ten: String(r[1]).trim(),
     vaiTro: String(r[2]).trim(), nhan: r[3] === true || String(r[3]).toUpperCase() === 'TRUE' }));
   const me = team.find(t => t.email === email);
-  if (!me) throw new Error('Email ' + email + ' chưa có trong tab "Đội" của Sheet DATA Dự án. Nhờ cô thêm email, tên và vai trò rồi tải lại trang.');
+  if (!me) throw new Error('Email ' + email + ' chưa có trong tab "Đội" của Sheet Tiến độ & Bảng vàng. Nhờ cô thêm email, tên và vai trò rồi tải lại trang.');
   if (['Quản lý', 'Vận hành'].indexOf(me.vaiTro) < 0) throw new Error('Vai trò "' + me.vaiTro + '" chưa có màn hình ở bản này. Trang hiện dành cho Quản lý và Vận hành.');
   return { me: me, team: team };
 }
@@ -132,19 +134,22 @@ function nguonDangKy_(ss) {
       out.push({ nguon: name.trim(), t: ms_(r[map.t]), parent: String(r[map.parent] || '').trim(), phone: phone,
         kid: String(r[map.kid] || '').trim(), age: map.age != null ? String(r[map.age] || '') : '', khoa: map.khoa != null ? khoaTen_(r[map.khoa]) : '',
         ho: map.ho != null ? String(r[map.ho] || '').trim() : '', paid: map.paid != null && yes_(r[map.paid]), ref: map.ref != null ? String(r[map.ref] || '').trim().toUpperCase() : '',
-        anh: map.anh != null ? String(r[map.anh] || '') : '' });
+        anh: map.anh != null ? String(r[map.anh] || '') : '', fam: map.fam != null ? String(r[map.fam] || '').trim() : '' });
     });
   };
-  read('Đăng ký Web', { t: 0, parent: 1, phone: 2, kid: 4, age: 5, anh: 9, khoa: 10, ho: 12, paid: 14, ref: 15 });
+  read('Đăng ký Web', { t: 0, parent: 1, phone: 2, kid: 4, age: 5, anh: 9, khoa: 10, ho: 12, paid: 14, ref: 15, fam: 16 });
+  // hai tab dưới chỉ có ở Sheet cũ; Sheet mới không có thì bỏ qua
   read('Google Form', { t: 0, parent: 1, phone: 2, kid: 4, age: 5, anh: 9, ho: 10, paid: 12 });
   read('Danh sách đóng tiền ', { t: null, parent: 1, kid: 2, age: 3, phone: 4, paid: 6 });
   return out;
 }
 function dongBo_(ss, rows) {
-  const byPhone = {}; rows.forEach((r, i) => { const p = normPhone_(r[C['Số Zalo']]); if (p) byPhone[p] = i; });
+  const byPhone = {}, byCode = {};
+  rows.forEach((r, i) => { const p = normPhone_(r[C['Số Zalo']]); if (p) byPhone[p] = i; byCode[String(r[C['Mã gia đình']])] = i; });
   let changed = false; const now = Date.now(), moi = {};    // moi: dòng vừa thêm trong lần đồng bộ này
   nguonDangKy_(ss).forEach(d => {
-    let i = byPhone[d.phone];
+    // khớp theo mã gia đình (đơn đi từ web học) trước, rồi theo số điện thoại
+    let i = d.fam && byCode[d.fam] != null ? byCode[d.fam] : byPhone[d.phone];
     if (i == null) {
       const r = GD_HEAD.map(() => '');
       r[C['Mã gia đình']] = 'GD' + Utilities.getUuid().replace(/-/g, '').slice(0, 6).toUpperCase();

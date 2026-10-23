@@ -891,7 +891,7 @@ const DEMO = /[?&]demo=1/.test(location.search);
 const DEMO_N = 3;
 const DANG_KY_LINK = "https://ceseducation.github.io/little-language-explorers/";   // trang ưu đãi + đăng ký dự án
 /* Link CTV: /demo/?ref=CTV01 … CTV10. Web nhớ mã của link CTV gần nhất rồi chuyển kèm ?ref= sang trang đăng ký,
-   để đăng ký được ghi đúng mã CTV ở cột P tab "Đăng ký Web" (Sheet DATA Dự án). */
+   để đăng ký được ghi đúng mã CTV ở cột P tab "Đăng ký Web" (Sheet Tiến độ & Bảng vàng). */
 (function(){ try{ let r=new URLSearchParams(location.search).get('ref'); if(!r) return;
   r=r.trim().toUpperCase().replace(/[^A-Z0-9]/g,''); const m=r.match(/^CTV(\d)$/); if(m) r='CTV0'+m[1];
   if(r) localStorage.setItem('lle-ref', JSON.stringify({code:r, t:Date.now()})); }catch(e){} })();
@@ -1988,7 +1988,7 @@ function demoGate(why){
 /* ---------- CỔNG ZALO sau buổi 1 (bản cho phụ huynh) ----------
    Ba mẹ vừa nghe con nói xong buổi đầu, nên đây là lúc xin số Zalo để cô gửi nhận xét và lộ trình 21 ngày.
    Ô đồng ý tách theo mục đích, không tích sẵn; bỏ qua vẫn học tiếp. Web không tải giọng nói của con lên máy chủ.
-   Gửi về Apps Script (action=family) → tab "Gia đình" của Sheet DATA Dự án, trạng thái "Đang dùng thử". */
+   Gửi về Apps Script (action=family) → tab "Gia đình" của Sheet Tiến độ & Bảng vàng, trạng thái "Đang dùng thử". */
 const DEMO_AGES = ['3','4','5','6','7','8','9','10','Trên 10'];
 /* Chỉ mở cổng khi máy chủ Apps Script đã là bản có Bảng Gia đình (trả v>=2 ở action=ping),
    để số Zalo của ba mẹ không bị gửi vào bản cũ rồi mất. */

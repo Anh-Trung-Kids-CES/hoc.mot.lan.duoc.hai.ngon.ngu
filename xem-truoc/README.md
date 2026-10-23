@@ -48,3 +48,8 @@ Tiến độ ở chế độ giáo viên lưu riêng (`lle-progress-gv`), không
 - **Sự kiện học gửi về tab "Truy cập học thử"**: thêm `vao` (quay lại học, 1 lần/ngày), `xong1`, `xong2`, `noi` (lần nói thứ 1, 5, 10, 20), `khoa` (bấm phần bị khóa), `zalo`; `hoc` kèm tuổi.
 - **Nút "Đăng ký cho con"** mang theo `fam` (mã gia đình), `ten`, `khoa` sang trang ưu đãi.
 - **Trang quản trị** (Việc hôm nay · Gia đình · Số liệu) là dự án Apps Script riêng trong `apps-script/quan-tri/`, đăng nhập Google. Cách bật: `apps-script/quan-tri/HUONG-DAN.md`.
+
+## Cập nhật 23/10/2026 (gộp về một Sheet)
+- Mọi dữ liệu (tiến độ, Bảng vàng, đổi quà, sự kiện học thử, Gia đình, đơn đăng ký trang ưu đãi, trang quản trị) nay nằm trong Sheet "Little Language Explorer – Tiến độ & Bảng vàng". Sheet DATA Dự án không còn nhận dữ liệu mới; Sheet mới bắt đầu trống.
+- Máy chủ `apps-script/Code.gs` nhận thêm form trang ưu đãi (tab "Đăng ký Web", cùng thứ tự cột như cũ, thêm cột Q "Mã gia đình"); `?action=ping` trả `v:3`.
+- Trang ưu đãi (kho Ceseducation) cần đổi `SHEET_ENDPOINT` sang link /exec của máy chủ này; xem `apps-script/quan-tri/HUONG-DAN.md`, bước 3.

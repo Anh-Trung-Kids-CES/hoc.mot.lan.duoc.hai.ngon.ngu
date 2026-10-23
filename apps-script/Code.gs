@@ -1,8 +1,12 @@
 /**
  * Little Language Explorers – máy chủ nhỏ trên Google Apps Script
- * Một link Web App dùng cho 2 việc:
+ * Một link Web App dùng cho mọi việc của dự án, ghi tất cả vào CHÍNH Sheet chứa script này
+ * ("Little Language Explorer – Tiến độ & Bảng vàng"). Sheet DATA Dự án cũ không còn dùng.
  *   1) Lưu / mở lại tiến độ học của từng bé (đăng nhập bằng tên con + SĐT/Gmail, không mật khẩu)
  *   2) Bảng vàng Top 10 theo khoá và chặng
+ *   3) Sự kiện học thử theo mã CTV (tab "Truy cập học thử")
+ *   4) Cổng Zalo sau buổi 1 (tab "Gia đình")
+ *   5) Đơn đăng ký từ trang ưu đãi (tab "Đăng ký Web")
  *
  * CÁCH BẬT (làm 1 lần, khoảng 5 phút):
  *   1. Tạo một Google Sheet mới, đặt tên ví dụ "LLE – Tiến độ & Bảng vàng".
@@ -22,8 +26,8 @@
  * CẬP NHẬT CODE (khi có bản mới): dán đè toàn bộ file này → Lưu → Triển khai → Quản lý các bản triển khai
  *   → bấm biểu tượng bút chì → Phiên bản: "Phiên bản mới" → Triển khai. Link /exec giữ nguyên.
  * Đăng nhập học chính chỉ gửi mã băm của SĐT/Gmail, không gửi số điện thoại thật.
- * Riêng cổng Zalo sau buổi 1 của bản cho phụ huynh gửi tên ba/mẹ và số Zalo (khi ba mẹ tự điền và đồng ý),
- * ghi thẳng vào tab "Gia đình" của Sheet DATA Dự án, không ghi vào Sheet này.
+ * Riêng cổng Zalo sau buổi 1 và form trang ưu đãi gửi tên ba/mẹ và số Zalo (khi ba mẹ tự điền và đồng ý).
+ * Vì vậy Sheet này chỉ chia sẻ cho đội, không để "bất kỳ ai có đường liên kết".
  */
 
 function sheet_(name, head) {
@@ -44,6 +48,8 @@ function findRow_(sh, key) {
 }
 
 function doPost(e) {
+  // form trang ưu đãi gửi dạng form (không phải JSON)
+  if (e && e.parameter && e.parameter.ho_ten_phu_huynh !== undefined) return json_(dangKy_(e.parameter));
   const lock = LockService.getScriptLock(); lock.waitLock(10000);
   try {
     const d = JSON.parse(e.postData.contents || '{}');
@@ -86,7 +92,7 @@ function doPost(e) {
 
 function doGet(e) {
   const p = e.parameter || {};
-  if (p.action === 'ping') return json_({ ok: true, v: 2 });          // web hỏi: máy chủ đã có Bảng Gia đình chưa
+  if (p.action === 'ping') return json_({ ok: true, v: 3 });          // web hỏi: máy chủ đã có Bảng Gia đình chưa
   if (p.action === 'visit') return visit_(p);
   if (p.action === 'team') {   // mục tiêu chung: cả đội một khoá đã cùng học bao nhiêu buổi (không lộ tên, không xếp hạng)
     const sh = sheet_('Diem', ['kid', 'name', 'group', 'day', 'round', 'points', 'updated']), n = sh.getLastRow(), kids = {};
@@ -123,10 +129,8 @@ function doGet(e) {
  *   mo = mở trang · vao = bé quay lại học (1 lần/ngày) · hoc = bé nhập tên, bắt đầu học (chi tiết: tuổi)
  *   xong1 / xong2 / xong3 = học xong 1 / 2 / 3 buổi · noi = con nói thành tiếng (chi tiết: tổng số lần 1, 5, 10, 20)
  *   khoa = bấm vào phần bị khóa (chi tiết: phần nào) · bam_dk = bấm "Đăng ký cho con" · zalo = ba mẹ để lại Zalo
- * Mỗi sự kiện ghi 1 dòng vào tab "Truy cập học thử" của Sheet "DATA Dự án";
- * trang quản trị đọc tab này để chấm điểm gia đình và vẽ phễu theo mã CTV.
- * Tài khoản triển khai Apps Script này cần có quyền sửa Sheet DATA Dự án. */
-const DATA_DU_AN_ID = '1antBQ-MDz2a4U-w-B2y6XTnF1Pzln7QwwUxxJm5TanI';
+ * Mỗi sự kiện ghi 1 dòng vào tab "Truy cập học thử" của Sheet này;
+ * trang quản trị đọc tab này để chấm điểm gia đình và vẽ phễu theo mã CTV. */
 const EVENTS = ['mo', 'vao', 'hoc', 'xong1', 'xong2', 'xong3', 'noi', 'khoa', 'bam_dk', 'zalo', 'dong_hanh'];
 const TC_HEAD = ['Thời gian', 'Mã CTV', 'Mã người xem', 'Sự kiện', 'Khoá', 'Chi tiết'];
 function cleanRef_(r) { return String(r || 'TU_NHIEN').toUpperCase().replace(/[^A-Z0-9_]/g, '').slice(0, 20) || 'TU_NHIEN'; }
@@ -140,14 +144,14 @@ function visit_(p) {
   const lock = LockService.getScriptLock(); lock.waitLock(10000);
   try {
     const ev = EVENTS.indexOf(p.ev) >= 0 ? p.ev : 'mo';
-    logEvent_(SpreadsheetApp.openById(DATA_DU_AN_ID), p.ref, p.vid, ev, p.g, p.x);
+    logEvent_(SpreadsheetApp.getActiveSpreadsheet(), p.ref, p.vid, ev, p.g, p.x);
     return json_({ ok: true });
   } catch (err) { return json_({ ok: false }); }
   finally { lock.releaseLock(); }
 }
 
 /* ---------- Bảng Gia đình: ba mẹ để lại Zalo ở cổng sau buổi 1 ----------
- * Ghi 1 dòng vào tab "Gia đình" của Sheet DATA Dự án (tự tạo nếu chưa có), trạng thái "Đang dùng thử",
+ * Ghi 1 dòng vào tab "Gia đình" của Sheet này (tự tạo nếu chưa có), trạng thái "Đang dùng thử",
  * rồi giao cho 1 bạn vận hành theo lượt: bạn đang nhận ít gia đình nhất trong tab "Đội"
  * (cột Vai trò = Vận hành, cột "Nhận gia đình mới" = TRUE). Trang quản trị đọc và cập nhật tab này.
  * Một gia đình (cùng mã người xem hoặc cùng số Zalo) gửi lại thì chỉ cập nhật, không tạo dòng mới. */
@@ -184,7 +188,7 @@ function family_(d) {
   const phone = normPhone_(d.phone), parent = String(d.parent || '').trim().slice(0, 40);
   const kid = String(d.kid || '').trim().slice(0, 40), vid = String(d.vid || '').slice(0, 24);
   if (!phone || !parent || !kid) return { ok: false, err: 'thieu' };
-  const ss = SpreadsheetApp.openById(DATA_DU_AN_ID), sh = giaDinhSheet_(ss);
+  const ss = SpreadsheetApp.getActiveSpreadsheet(), sh = giaDinhSheet_(ss);
   const n = sh.getLastRow(), rows = n > 1 ? sh.getRange(2, 1, n - 1, GD_HEAD.length).getValues() : [];
   const yes = v => v === true || v === 'true' || v === 1 || v === '1';
   let at = -1;
@@ -209,4 +213,37 @@ function family_(d) {
   sh.getRange(sh.getLastRow(), 7).setNumberFormat('@').setValue(phone);       // giữ số 0 đầu
   logEvent_(ss, d.ref, vid, 'zalo', group, code);
   return { ok: true, code: code };
+}
+
+/* ---------- Đơn đăng ký từ trang ưu đãi (Ceseducation/little-language-explorers) ----------
+ * Form gửi các ô: ho_ten_phu_huynh, so_zalo, quan_he, ten_be, tuoi_be, doi, da_hoc, hoc_o_dau, biet_qua, hinh_anh, cam_ket,
+ * ref (mã CTV), fam (mã gia đình nếu đi từ web học), website (ô bẫy chống spam).
+ * Ghi 1 dòng vào tab "Đăng ký Web" của Sheet này, cùng thứ tự cột với Sheet DATA cũ.
+ * Đội tick cột "Đã đóng phí" khi tiền về; trang quản trị tự gộp đơn vào tab "Gia đình" theo số điện thoại. */
+const DK_HEAD = ['Thời gian', 'Họ và tên phụ huynh', 'SĐT / Zalo', 'Mối quan hệ với bé', 'Họ và tên bé', 'Tuổi của bé',
+  'Đã từng học Anh / Trung', 'Học ở đâu', 'Biết qua đâu', 'Đồng ý chia sẻ hình ảnh', 'Đội ba mẹ chọn', 'Cam kết 21 ngày + phí 79k',
+  'Người hỗ trợ', 'Note thông tin sau khai thác', 'Đã đóng phí', 'Mã CTV', 'Mã gia đình'];
+function dangKy_(p) {
+  if (p.website) return { ok: true };                                // ô bẫy chống spam
+  const t = (k, n) => String(p[k] || '').trim().slice(0, n || 120);
+  const phone = normPhone_(p.so_zalo);
+  if (!t('ho_ten_phu_huynh') || !phone || !t('ten_be') || !t('tuoi_be')) return { ok: false, error: 'Thiếu thông tin bắt buộc' };
+  const lock = LockService.getScriptLock(); lock.waitLock(10000);
+  try {
+    const ss = SpreadsheetApp.getActiveSpreadsheet();
+    let sh = ss.getSheetByName('Đăng ký Web');
+    if (!sh) {
+      sh = ss.insertSheet('Đăng ký Web'); sh.appendRow(DK_HEAD); sh.setFrozenRows(1);
+      sh.getRange(1, 1, 1, DK_HEAD.length).setFontWeight('bold').setBackground('#FFF3C4');
+      sh.getRange(1, 3, sh.getMaxRows(), 1).setNumberFormat('@');
+    }
+    const fam = /^GD[A-Z0-9]{4,8}$/.test(t('fam', 12)) ? t('fam', 12) : '';
+    sh.appendRow([new Date(), t('ho_ten_phu_huynh', 60), '', t('quan_he', 30), t('ten_be', 60), t('tuoi_be', 10), t('da_hoc', 30),
+      t('hoc_o_dau'), t('biet_qua', 40), t('hinh_anh', 20), t('doi', 30), t('cam_ket', 10), '', '', false, cleanRef_(p.ref), fam]);
+    const r = sh.getLastRow();
+    sh.getRange(r, 3).setNumberFormat('@').setValue(phone);           // giữ số 0 đầu
+    sh.getRange(r, 15).insertCheckboxes();
+    return { ok: true };
+  } catch (err) { return { ok: false, error: 'Lỗi máy chủ' }; }
+  finally { lock.releaseLock(); }
 }
