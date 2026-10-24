@@ -4,14 +4,15 @@ Mọi dữ liệu của dự án nay nằm trong **một Sheet** thuộc Drive c
 "Anh-Trung-Kids – Dữ liệu dự án" (mã `1QQnbTRwpbu6wGmrtnbwAW0VVyyk1AA7xlHQb_GwFOic`).
 Sheet mới bắt đầu trống và đang ở chế độ **Bị hạn chế** (chỉ người được thêm mới mở được). Các Sheet cũ (DATA Dự án, Tiến độ & Bảng vàng của Duyên) không còn nhận dữ liệu mới sau khi làm xong bước 2.
 
-## Trạng thái ngày 23/10/2026, 18:20
+## Trạng thái
 
 | Việc | Trạng thái |
 | --- | --- |
 | Tạo Sheet "Anh-Trung-Kids – Dữ liệu dự án" trong Drive anhtrung.home | Xong |
 | Tạo dự án Apps Script "Anh-Trung-Kids – Máy chủ web học" (anhtrung.home), dán `apps-script/Code.gs` bản mới, lưu | Xong |
-| Triển khai máy chủ thành ứng dụng web, lấy link /exec | **Chưa** (máy tắt giữa chừng) |
-| Đổi link máy chủ trong web học và trang cuộc thi | Chưa, Claude làm ngay khi có link /exec |
+| Triển khai máy chủ thành ứng dụng web (`…AKfycbwsLupV…/exec`, ping trả `v:3`) | Xong 23/10 |
+| Đổi link máy chủ trong web học | Xong |
+| Đổi link máy chủ trong tệp trang cuộc thi | Xong trong tệp, chờ tải lên kho Ceseducation |
 | Tạo trang quản trị | Chưa |
 | Tải trang cuộc thi mới lên kho Ceseducation | Chưa |
 
