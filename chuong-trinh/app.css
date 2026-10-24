@@ -217,3 +217,36 @@ table.t th{font-size:12px;text-transform:uppercase;letter-spacing:.03em;color:va
   .nav{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;scrollbar-width:none}
   .nav a{white-space:nowrap}
 }
+
+/* ---------- bảng phân bổ theo buổi ---------- */
+.btn-bang{display:inline-block;margin:14px 0 0;padding:9px 16px;border-radius:999px;background:var(--ink);color:#fff;text-decoration:none;font-weight:700;font-size:15px}
+.bchips{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 4px}
+.bchips .chip{border:0;cursor:pointer}
+.bchips .chip.on{background:var(--ink);color:#fff}
+.bwrap{overflow:auto;max-height:78vh;padding:0}
+table.bang{border-collapse:separate;border-spacing:0;font-size:13px;line-height:1.45;min-width:3400px}
+table.bang th,table.bang td{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left;width:180px}
+table.bang thead th{position:sticky;background:#faf5ec;font-family:var(--fb);font-weight:700;z-index:2;text-align:center}
+table.bang thead tr:nth-child(1) th{top:0}
+table.bang thead tr:nth-child(2) th{top:34px}
+table.bang thead tr:nth-child(3) th{top:68px}
+table.bang thead th.en{color:var(--en)} table.bang thead th.zh{color:var(--zh)}
+table.bang th.sc{position:sticky;left:0;z-index:1;background:#fff;width:140px;min-width:140px}
+table.bang thead th.sc{z-index:3;background:#faf5ec}
+table.bang th.sb{background:#fff8e8;width:150px}
+table.bang td.lop{background:#fffdf8}
+table.bang tr.w1 td,table.bang tr.w1 th{border-top:2px solid #d9c9ad}
+table.bang td.zh{font-family:var(--fz),var(--fb)}
+table.bang .gp,.bcard .gp{display:inline-block;background:var(--ok-soft);color:var(--ok);border-radius:6px;padding:0 5px;font-size:12px;font-weight:600}
+table.bang .dash,.bcard .dash{color:#c2b6a4}
+table.bang a,.bcard a{color:var(--en)}
+.bcards{display:none}
+.bcard{padding:12px 14px;margin:0 0 12px}
+.bcard h3{font-size:17px;margin:0 0 6px}
+.bcard summary{cursor:pointer;font-weight:700;padding:6px 0}
+.bcard .bl{margin:4px 0 10px;padding:8px 10px;border-radius:12px;background:var(--en-soft)}
+.bcard .bl.zh{background:var(--zh-soft);font-family:var(--fz),var(--fb)}
+.bcard dl{margin:4px 0 0}.bcard dt{font-size:12px;font-weight:700;color:var(--muted);margin-top:6px}.bcard dd{margin:0;font-size:14px;overflow-wrap:anywhere}
+@media (max-width:760px){.bwrap{display:none}.bcards{display:block}}
+table.bang thead th.grp{text-align:left}
+table.bang thead th.grp span{position:sticky;left:156px;padding:0 4px}

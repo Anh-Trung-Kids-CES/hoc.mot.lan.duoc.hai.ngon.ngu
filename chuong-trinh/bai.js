@@ -284,7 +284,7 @@ function finish(){
   const total=S.acts.reduce((n,a)=>n+((a.qs||a.items||[]).length||1),0);
   const ratio=S.stars/Math.max(1,total); const st=ratio>=.8?3:ratio>=.5?2:1;
   ATK.prog.set(S.key,st);
-  const nextN=S.n<6?S.n+1:null;
+  const nextN=S.n<((S.L&&S.L.webs&&S.L.webs.length)||8)?S.n+1:null;
   stage(`<div class="endscr"><div class="bigstar">${'⭐'.repeat(st)}</div>
     <div class="row"><button class="pbtn" id="again" aria-label="again">🔁</button>
     <button class="pbtn" id="home" aria-label="unit">🏠</button>

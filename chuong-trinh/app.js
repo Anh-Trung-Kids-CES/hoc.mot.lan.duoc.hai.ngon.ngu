@@ -44,7 +44,7 @@ ATK.lesson=async function(cid,u){
 const course=id=>ATK.data.courses.find(c=>c.id===id);
 const CT={};
 ATK.detail=async function(id){ if(!CT[id]){ const r=await fetch('data/chi-tiet/'+id+'.json'); CT[id]=await r.json(); } return CT[id]; };
-const WEBNAME=['','Bài 1','Bài 2','Bài 3','Bài 4','Bài 5','Bài 6'];
+const WEBNAME=['','Ngày 1','Ngày 2','Ngày 3','Ngày 4','Ngày 5','Ngày 6','Ngày 7','Ngày 8'];
 const WEBIC={the:'🃏',chon:'👂',noi:'🎤',anh_trung:'🔵🔴',ghep:'🧩',cau:'💬',truyen:'📖',truyen_hoi:'📖',on_nhanh:'🔁',hop_on:'🧠',nhin_chu:'字',xem:'📺',chon_chu:'🔤'};
 
 /* ---------- trang ---------- */
@@ -57,7 +57,7 @@ function pageHome(){
   <section class="hero">
     <div>
       <h1>Học một lần,<br>được hai ngôn ngữ</h1>
-      <p class="lead">Lộ trình 9 khóa song ngữ Anh – Trung cho trẻ 4–10 tuổi, đi từ chưa biết ngoại ngữ đến Cambridge Flyers và YCT4. Mỗi unit học 2 tuần: 4 buổi trên lớp và 6 bài tự học trên web.</p>
+      <p class="lead">Lộ trình 9 khóa song ngữ Anh – Trung cho trẻ 4–10 tuổi, đi từ chưa biết ngoại ngữ đến Cambridge Flyers và YCT4. Mỗi unit học 2 tuần: 4 buổi trên lớp và 8 ngày tự học trên web, cứ 2 ngày web đi với 1 buổi.</p>
       <form class="who" id="who"><label class="sr" for="ten">Tên của con</label>
         <input id="ten" placeholder="Tên của con (lưu trên máy này)" value="${esc(name)}" autocomplete="off">
         <button>Lưu</button></form>
@@ -92,13 +92,14 @@ function pageCourse(cid){
     <div class="fact card"><small>Tiếng Trung cuối khóa</small><b>${esc(c.zh)}</b></div>
     <div class="fact card"><small>Chuyển ngữ</small><b>${esc(c.bridge)}</b></div>
   </div>
+  <p><a class="btn-bang" href="#/bang/${c.id}">Bảng phân bổ theo buổi: ${c.id==='preb'||c.id==='larva-plus'||c.id==='butterfly'?'30 buổi, 60 ngày web':'60 buổi, 120 ngày web'}</a></p>
   <h2>Chương trình chi tiết</h2>
   <div class="detail card" id="ov"><p class="note">Đang tải…</p></div>
   ${c.units.length?`<h2>Các unit</h2>
-  <p class="note">Bấm một unit để xem chương trình chi tiết của unit. Unit có viền xanh đã có 6 bài tự học trên web.</p>
+  <p class="note">Bấm một unit để xem chương trình chi tiết của unit. Unit có viền xanh đã có 8 ngày tự học trên web.</p>
   <div class="units">${c.units.map(u=>`<a class="unit card ${u.web?'has':''}" href="#/u/${c.id}/${u.u}">
     <span class="un">UNIT ${u.u}</span><h3>${esc(u.name)}</h3>
-    <span class="cnt">${u.review?`<span class="chip">${u.en.length+u.zh.length} từ ôn</span>`:`<span class="chip en">${u.en.length} từ Anh</span>${u.zh.length?`<span class="chip zh">${u.zh.length} từ Trung</span>`:''}`}${u.web?'<span class="chip web">6 bài web</span>':''}</span></a>`).join('')}</div>`
+    <span class="cnt">${u.review?`<span class="chip">${u.en.length+u.zh.length} từ ôn</span>`:`<span class="chip en">${u.en.length} từ Anh</span>${u.zh.length?`<span class="chip zh">${u.zh.length} từ Trung</span>`:''}`}${u.web?'<span class="chip web">8 ngày web</span>':''}</span></a>`).join('')}</div>`
   :''}`;
   ATK.detail(c.id).then(d=>{ const el=$('#ov'); if(!el) return; el.innerHTML=(d.draft?'<p class="chip">Bản đề xuất, chờ duyệt</p>':'')+d.overview; });
 }
@@ -113,7 +114,8 @@ function pageUnit(cid,u){
   view.innerHTML=`
   <p class="crumb"><a href="#/">Lộ trình</a> › <a href="#/k/${c.id}">${esc(c.name)}</a> › Unit ${U.u}</p>
   <h1>Unit ${U.u} · ${esc(U.name)}</h1>
-  ${U.web?`<p class="lead">6 bài tự học, mỗi bài ${esc(c.web_min)} phút. Bài 1–3 học từ mới, bài 4–6 ôn, nghe truyện và chuyển ngữ. Bài nào cũng mở đầu bằng phần Ôn nhanh từ cũ (từ unit thứ hai trở đi).</p>
+  <p><a class="btn-bang" href="#/bang/${c.id}/${U.u}">Xem bảng phân bổ theo buổi của unit này</a></p>
+  ${U.web?`<p class="lead">8 ngày tự học, mỗi ngày ${esc(c.web_min)} phút; 2 ngày web chuẩn bị cho 1 buổi trên lớp. Ngày 1–5 học từ mới xen ngày củng cố, ngày 6–8 ôn không tranh, nghe truyện và chuyển ngữ. Ngày nào cũng mở đầu bằng phần Ôn nhanh từ cũ (từ unit thứ hai trở đi).</p>
   <div class="lessons" id="lessons"></div>`:`<p class="lead">Bài tự học trên web của unit này đang soạn.</p>`}
   <h2>Chương trình chi tiết của unit</h2>
   <div class="detail card" id="ud"><p class="note">Đang tải…</p></div>
@@ -163,9 +165,10 @@ function pageGuide(){
   <p class="lead">Trang này là bản đồ của chương trình Anh – Trung – Kids và nơi con làm bài tự học. Trang chạy riêng, không liên quan đến web Thử thách 21 ngày.</p>
   <h2>Mỗi unit con học thế nào</h2>
   <ul>
-    <li>Một unit kéo dài 2 tuần: 4 buổi trên lớp và 6 bài web, xen nhau (Bài 1 → Buổi 1 → Bài 2 → Buổi 2 → Bài 3 → Bài 4 → Buổi 3 → Bài 5 → Buổi 4 → Bài 6).</li>
+    <li>Một unit kéo dài 2 tuần: 4 buổi trên lớp và 8 ngày web. Cứ 2 ngày web đi trước 1 buổi: Ngày 1, Ngày 2 → Buổi 1 → Ngày 3, Ngày 4 → Buổi 2 → Ngày 5, Ngày 6 → Buổi 3 → Ngày 7, Ngày 8 → Buổi 4. Mỗi tuần: 2 buổi trên lớp và 4 ngày web.</li>
     <li>Mỗi bài web không quá 30 phút: Little Seed, Seedling 10–15 phút; Canopy, Larva 15–20 phút.</li>
-    <li>Bài 1–3 giới thiệu từ mới; bài 4–6 ôn không có hình mẫu, nghe truyện, chuyển ngữ và Hộp ôn.</li>
+    <li>Ngày 1–5 giới thiệu từ mới theo nhóm (xen ngày củng cố); ngày 6–8 ôn không có hình mẫu, nghe truyện, chuyển ngữ và Hộp ôn.</li>
+    <li>Nội dung từng ngày web và từng buổi (từ, cụm từ, câu, truyện, video; flashcard, slide bài tập, truyện, bài hát trên lớp) nằm ở <b>Bảng phân bổ theo buổi</b> của mỗi khóa.</li>
   </ul>
   <h2>Vì sao từ cũ cứ quay lại</h2>
   <ul>
@@ -179,10 +182,54 @@ function pageGuide(){
   <h2>Hiện có gì trên trang</h2>
   <ul>
     <li>Bản đồ 9 khóa, danh sách từ tiếng Anh và tiếng Trung của từng unit theo bảng phân bổ từ vựng.</li>
-    <li>Bài tự học: Little Seed Unit 1–3 và Canopy Unit 5–7, dùng tranh và giọng đọc đã thu. Các unit khác đang soạn.</li>
+    <li>Bài tự học: Little Seed Unit 1–3 và Canopy Unit 5–7 (8 ngày mỗi unit), dùng tranh và giọng đọc đã thu. Các unit khác đang soạn.</li>
+    <li>Bảng phân bổ theo buổi của cả 9 khóa: mỗi ngày web và mỗi buổi trên lớp ghi rõ nội dung học.</li>
     <li>Tiến độ và Hộp ôn lưu trên máy con đang dùng.</li>
   </ul>
   <p class="note">Thầy cô có thể mở mọi bài để xem trước; không có bài nào bị khóa.</p></div>`;
+}
+
+/* ---------- bảng phân bổ theo buổi (cùng bố cục với Google Sheet "Khung chương trình mỗi khoá") ---------- */
+const BWEB=[['tu','Từ'],['cum','Cụm từ'],['cau','Câu (cài ngữ pháp)'],['truyen','Truyện'],['video','Video']];
+const BLOP=[['flash','Flash card'],['slide','Slide có bài tập tương tác'],['truyen','Truyện'],['baihat','Bài hát']];
+function bcell(t){
+  t=String(t==null?'':t);
+  if(t==='–'||t==='') return '<span class="dash">–</span>';
+  let h=esc(t).replace(/(https?:\/\/[^\s,;)<]+)/g,'<a href="$1" target="_blank" rel="noopener">link</a>')
+    .replace(/(Mới|Ôn|Tìm YouTube|Nghe thêm):/g,'<b>$1:</b>').replace(/\[(Ngữ pháp[^\]]*)\]/g,'<span class="gp">$1</span>')
+    .replace(/ \| /g,'<br>').replace(/ \/ /g,'<br>').replace(/\n/g,'<br>');
+  return h;
+}
+function blockName(b){ return b.kind==='unit'?'Unit '+b.unit:({mo:'Mở khóa',on:'Ôn chặng',cuoi:'Cuối khóa',le:'Lễ hội',thi:'Thi thử'}[b.kind]||b.kind); }
+async function pageBang(cid,sel){
+  setNav('home');
+  const c=course(cid); if(!c) return pageHome();
+  view.innerHTML=`<p class="crumb"><a href="#/">Lộ trình</a> › <a href="#/k/${c.id}">${esc(c.name)}</a> › Bảng phân bổ</p><h1>Bảng phân bổ theo buổi · ${esc(c.name)}</h1><p class="note">Đang tải…</p>`;
+  let d; try{ const r=await fetch('data/bang/'+cid+'.json'); if(!r.ok) throw 0; d=await r.json(); }catch(e){ view.querySelector('.note').textContent='Bảng của khóa này đang soạn.'; return; }
+  const B=d.blocks; let i=B.findIndex(b=>sel?(String(b.unit)===String(sel)||b.key===sel):true); if(i<0) i=0;
+  const nb=B.reduce((n,b)=>n+b.rows.length,0);
+  view.innerHTML=`<p class="crumb"><a href="#/">Lộ trình</a> › <a href="#/k/${c.id}">${esc(c.name)}</a> › Bảng phân bổ</p>
+  <h1>Bảng phân bổ theo buổi · ${esc(c.name)}</h1>
+  <p class="lead">${nb} buổi trên lớp, ${nb*2} ngày web. Cứ 2 ngày nội dung trên web đi trước 1 buổi học trên lớp. Hàng ngang là từng ngày web và từng buổi; cột là nội dung: trên web có Từ, Cụm từ, Câu, Truyện, Video; trên lớp có Flash card, Slide bài tập tương tác, Truyện, Bài hát.</p>
+  <p><a class="chip" href="data/bang/${cid}.csv" download>Tải bảng (CSV, mở được bằng Excel, Google Sheets)</a></p>
+  <div class="bchips" role="tablist">${B.map((b,k)=>`<button role="tab" class="chip ${k===i?'on':''}" data-k="${k}" aria-selected="${k===i}">${esc(blockName(b))}</button>`).join('')}</div>
+  <div id="bb"></div>`;
+  const show=k=>{
+    const b=B[k]; view.querySelectorAll('.bchips .chip').forEach(x=>{const on=+x.dataset.k===k; x.classList.toggle('on',on); x.setAttribute('aria-selected',on);});
+    const head=`<thead><tr><th rowspan="3" class="sc">Ngày web</th><th colspan="10" class="grp"><span>Nội dung đẩy lên web</span></th><th rowspan="3" class="sb">Buổi dạy</th><th colspan="8" class="grp"><span>Nội dung dạy trên lớp</span></th></tr>
+      <tr><th colspan="5" class="en">Tiếng Anh</th><th colspan="5" class="zh">Tiếng Trung</th><th colspan="4" class="en">Tiếng Anh</th><th colspan="4" class="zh">Tiếng Trung</th></tr>
+      <tr>${BWEB.map(x=>`<th>${x[1]}</th>`).join('')}${BWEB.map(x=>`<th>${x[1]}</th>`).join('')}${BLOP.map(x=>`<th>${x[1]}</th>`).join('')}${BLOP.map(x=>`<th>${x[1]}</th>`).join('')}</tr></thead>`;
+    const body=b.rows.map(r=>r.web.map((w,j)=>`<tr class="${j?'w2':'w1'}"><th class="sc">${esc(w.label)}</th>
+      ${BWEB.map(x=>`<td>${bcell(w.en[x[0]])}</td>`).join('')}${BWEB.map(x=>`<td class="zh">${bcell(w.zh[x[0]])}</td>`).join('')}
+      ${j===0?`<th rowspan="${r.web.length}" class="sb">${esc(r.label_buoi)}</th>${BLOP.map(x=>`<td rowspan="${r.web.length}" class="lop">${bcell(r.lop.en[x[0]])}</td>`).join('')}${BLOP.map(x=>`<td rowspan="${r.web.length}" class="lop zh">${bcell(r.lop.zh[x[0]])}</td>`).join('')}`:''}</tr>`).join('')).join('');
+    const cards=b.rows.map(r=>`<article class="bcard card"><h3>${esc(r.label_buoi)}</h3>
+      ${r.web.map(w=>`<details><summary>${esc(w.label)}</summary>${['en','zh'].map(L=>`<div class="bl ${L}"><b>${L==='en'?'Tiếng Anh':'Tiếng Trung'}</b><dl>${BWEB.map(x=>`<dt>${x[1]}</dt><dd>${bcell(w[L][x[0]])}</dd>`).join('')}</dl></div>`).join('')}</details>`).join('')}
+      <details><summary>Trên lớp</summary>${['en','zh'].map(L=>`<div class="bl ${L}"><b>${L==='en'?'Tiếng Anh':'Tiếng Trung'}</b><dl>${BLOP.map(x=>`<dt>${x[1]}</dt><dd>${bcell(r.lop[L][x[0]])}</dd>`).join('')}</dl></div>`).join('')}</details></article>`).join('');
+    $('#bb').innerHTML=`<h2>${esc(b.title||blockName(b))}</h2><div class="bwrap card"><table class="bang">${head}<tbody>${body}</tbody></table></div><div class="bcards">${cards}</div>`;
+    history.replaceState(null,'','#/bang/'+cid+'/'+(b.kind==='unit'?b.unit:b.key));
+  };
+  view.querySelectorAll('.bchips .chip').forEach(x=>x.onclick=()=>show(+x.dataset.k));
+  show(i);
 }
 
 /* ---------- định tuyến ---------- */
@@ -196,6 +243,7 @@ async function route(){
   else if(h[0]==='hop-on') pageHop();
   else if(h[0]==='ba-me') pageGuide();
   else if(h[0]==='khung') pageKhung();
+  else if(h[0]==='bang') pageBang(h[1],h[2]);
   else pageHome();
   window.scrollTo(0,0); view.focus({preventScroll:true});
 }
