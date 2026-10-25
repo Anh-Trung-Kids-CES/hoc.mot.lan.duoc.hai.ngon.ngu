@@ -12,6 +12,12 @@ Trang riêng cho chương trình song ngữ Anh – Trung 9 khóa của CES Vi�
   - Màn bài học không có chữ tiếng Việt: chỉ hình, biểu tượng, giọng tiếng Anh và tiếng Trung. Little Seed không hiện chữ.
 - Thêm `?thu=1` vào link để tranh đúng nhấp nháy gần như ngay (thầy cô chạy thử nhanh).
 
+## Chế độ con trội tiếng Anh (bản xem thử, chỉ Canopy Unit 5)
+- Bật/tắt ở trang Hướng dẫn (`#/ba-me`, mục "Dành cho thầy cô"); lưu localStorage `atk-en-manh`. Tắt thì mọi unit chạy như cũ.
+- Khi bật: sau Ôn nhanh có kiểm tra nhanh 4 câu (`kt_en`, nghe tiếng Anh chọn tranh, sinh từ mục của chính ngày). Đúng 4/4 → `chon`/`noi` giữ 1 lượt tiếng Anh mỗi từ, đủ tiếng Trung, truyện giữ nguyên, cuối ngày thêm bước Thêm tiếng Trung (`zh_mo` + `noi` zh + `chon` zh). Lịch sử: `atk-kt-en`; trượt 3 ngày liền thì trang Hướng dẫn nhắc cô.
+- Góc "Thử thách của Leo" trên trang unit và nút 🦁/🎧 ở màn khen cuối ngày, mở sau khi xong ngày đó, không cộng sao: `#/tt/canopy/5/<n>` (dữ liệu `thu_thach_en`, cấp Movers) và `#/pd/canopy/5/<2|4|6|8>` (dữ liệu `phien_dich_nc`, lấy từ dòng [Bản nâng cao] buổi 21–24). Giọng máy của trình duyệt.
+- Bản ghi Phiên dịch nhí nâng cao (MediaRecorder, tối đa 60 giây) lưu IndexedDB `atk-gui-co` (không mở được thì giữ trong phiên); nghe ở `#/gui-co`.
+
 ## Chương trình chi tiết
 - **Khung chương trình** (`#/khung`): tab Giới thiệu của tài liệu chương trình.
 - **Little Seed, Canopy**: nguyên các tab của tài liệu chương trình (tổng quan khóa và 12 unit).

@@ -31,6 +31,38 @@ ATK.prog={
   set(k,stars){ const p=store.get(KEY.prog,{}); p[k]=Math.max(p[k]||0,stars); store.set(KEY.prog,p); }
 };
 
+/* ---------- Chế độ con trội tiếng Anh (bản xem thử: công tắc trên máy, chỉ Canopy Unit 5) ---------- */
+KEY.em='atk-en-manh'; KEY.emLog='atk-kt-en';
+ATK.enManh={
+  on(){ return store.get(KEY.em,false)===true; },
+  set(v){ store.set(KEY.em,!!v); },
+  has(cid,u){ return cid==='canopy' && +u===5; },          // unit đã có dữ liệu Thử thách, Phiên dịch nhí nâng cao
+  active(cid,u){ return this.on() && this.has(cid,u); },
+  log(key,ok){ const h=store.get(KEY.emLog,[]); h.push({key,ok:!!ok,t:Date.now()}); store.set(KEY.emLog,h.slice(-60)); },
+  history(){ return store.get(KEY.emLog,[]); },
+  failStreak(){ // số ngày web liền nhau (lần làm gần nhất của mỗi ngày) con trượt kiểm tra nhanh
+    const last=new Map(); this.history().forEach(x=>{ last.delete(x.key); last.set(x.key,x); });
+    const xs=[...last.values()].reverse(); let n=0; for(const x of xs){ if(x.ok) break; n++; } return n; }
+};
+/* Hộp "Gửi cô": bản ghi Phiên dịch nhí nâng cao, lưu IndexedDB trên máy; không mở được thì giữ trong bộ nhớ phiên */
+ATK.guiCo=(function(){
+  const mem=[]; let dbp=null;
+  const db=()=>{ if(dbp) return dbp; dbp=new Promise(res=>{ try{
+      const r=indexedDB.open('atk-gui-co',1);
+      r.onupgradeneeded=()=>{ try{ r.result.createObjectStore('rec',{keyPath:'id'}); }catch(e){} };
+      r.onsuccess=()=>res(r.result); r.onerror=()=>res(null); r.onblocked=()=>res(null);
+    }catch(e){ res(null); } }); return dbp; };
+  const tx=async(mode,fn)=>{ const d=await db(); if(!d) return null; return new Promise(res=>{ try{
+      const t=d.transaction('rec',mode), s=t.objectStore('rec'); const out=fn(s);
+      t.oncomplete=()=>res(out&&out.result!==undefined?out.result:true); t.onerror=()=>res(null); t.onabort=()=>res(null);
+    }catch(e){ res(null); } }); };
+  return {
+    async add(rec){ rec.id=rec.id||('r'+Date.now()+Math.random().toString(36).slice(2,6)); const ok=await tx('readwrite',s=>s.put(rec)); if(!ok) mem.push(rec); return rec.id; },
+    async del(id){ const i=mem.findIndex(x=>x.id===id); if(i>=0) mem.splice(i,1); await tx('readwrite',s=>s.delete(id)); },
+    async list(){ const xs=(await tx('readonly',s=>s.getAll()))||[]; return [...(Array.isArray(xs)?xs:[]),...mem].sort((a,b)=>b.t-a.t); }
+  };
+})();
+
 /* ---------- dữ liệu ---------- */
 async function load(){
   if(ATK.data) return ATK.data;
@@ -116,7 +148,7 @@ function pageUnit(cid,u){
   <h1>Unit ${U.u} · ${esc(U.name)}</h1>
   <p><a class="btn-bang" href="#/bang/${c.id}/${U.u}">Xem bảng phân bổ theo buổi của unit này</a></p>
   ${U.web?`<p class="lead">8 ngày tự học, mỗi ngày ${esc(c.web_min)} phút; 2 ngày web chuẩn bị cho 1 buổi trên lớp. Ngày 1–5 học từ mới xen ngày củng cố, ngày 6–8 ôn không tranh, nghe truyện và chuyển ngữ. Ngày nào cũng mở đầu bằng phần Ôn nhanh từ cũ (từ unit thứ hai trở đi).</p>
-  <div class="lessons" id="lessons"></div>`:`<p class="lead">Bài tự học trên web của unit này đang soạn.</p>`}
+  <div class="lessons" id="lessons"></div>${ATK.enManh.active(c.id,U.u)?'<section class="leo card" id="leo"></section>':''}`:`<p class="lead">Bài tự học trên web của unit này đang soạn.</p>`}
   <h2>Chương trình chi tiết của unit</h2>
   <div class="detail card" id="ud"><p class="note">Đang tải…</p></div>
   <div id="wl"><h2>Từ của unit theo bảng phân bổ</h2>
@@ -135,8 +167,41 @@ function pageUnit(cid,u){
         const ics=[...new Set(w.acts.map(a=>WEBIC[a.t]).filter(Boolean))].slice(0,5).map(x=>`<span>${x}</span>`).join('');
         return `<a class="lesson ${st?'done':''}" href="#/b/${k}"><span class="ic" aria-hidden="true">${ics}</span><b>${WEBNAME[w.n]}</b>
           <span class="st" aria-label="${st} sao">${'★'.repeat(st)}${'☆'.repeat(3-st)}</span></a>`;}).join('');
+      const leo=$('#leo'); if(leo) leoCorner(leo,c,U,L);
     });
   }
+}
+/* Góc "Thử thách của Leo": mở sau khi con xong ngày đó; không cộng sao, không mở ngày mới */
+function leoCorner(el,c,U,L){
+  const leoPic=ATK.data.people.leo;
+  el.innerHTML=`<div class="leo-h">${leoPic?`<img src="${esc(leoPic[1])}" alt="">`:''}<div><h2>Thử thách của Leo</h2>
+    <p class="note">Các bé nếu hứng thú thì khám phá thêm, không cần làm hết.</p></div></div>
+    <div class="leo-grid">${L.webs.map(w=>{
+      const k=c.id+'/'+U.u+'/'+w.n, done=ATK.prog.get(k)>0;
+      const tt=w.thu_thach_en, pd=w.phien_dich_nc;
+      if(!tt&&!pd) return '';
+      return `<div class="leo-day ${done?'':'lock'}"><b>${WEBNAME[w.n]}</b>
+        ${done?`${tt?`<a class="lb en" href="#/tt/${k}"><span aria-hidden="true">🦁</span> Thử thách tiếng Anh <small>${esc(tt.cap)}</small></a>`:''}
+        ${pd?`<a class="lb zh" href="#/pd/${k}"><span aria-hidden="true">🎧→中</span> Phiên dịch nhí nâng cao</a>`:''}`
+        :`<span class="lk"><span aria-hidden="true">🔒</span> Mở sau khi con xong ${WEBNAME[w.n]}</span>`}</div>`;}).join('')}</div>
+    <p class="leo-f"><a href="#/gui-co">🎙️ Gửi cô</a> <span class="note" id="gcn"></span></p>`;
+  ATK.guiCo.list().then(xs=>{ const n=xs.filter(x=>x.cid===c.id&&+x.u===+U.u).length; const g=$('#gcn'); if(g) g.textContent=n?`${n} bản ghi`:'chưa có bản ghi'; });
+}
+async function pageGuiCo(){
+  setNav('bame');
+  view.innerHTML=`<p class="crumb"><a href="#/ba-me">Hướng dẫn</a> › Gửi cô</p><h1>Gửi cô</h1>
+  <p class="lead">Bản ghi con nói lại bằng tiếng Trung trong Phiên dịch nhí nâng cao. Cô nghe trên lớp; web không chấm tự động.</p>
+  <div id="gc"><p class="note">Đang tải…</p></div>
+  <p class="note">Bản xem thử: bản ghi lưu trên máy này (trình duyệt), không gửi đi đâu. Web thật sẽ gửi bản ghi về trang quản lý lớp.</p>`;
+  const xs=await ATK.guiCo.list(); const el=$('#gc'); if(!el) return;
+  if(!xs.length){ el.innerHTML='<p class="card" style="padding:16px">Chưa có bản ghi nào.</p>'; return; }
+  const urls=[];
+  el.innerHTML=`<div class="gc-list">${xs.map(x=>{ let u=''; try{ u=URL.createObjectURL(x.blob); urls.push(u); }catch(e){}
+    const d=new Date(x.t); const tm=d.toLocaleDateString('vi-VN')+' '+d.toLocaleTimeString('vi-VN',{hour:'2-digit',minute:'2-digit'});
+    return `<div class="gc card"><div><b>${esc(x.title||'')}</b><small>${esc(tm)} · ${Math.round((x.dur||0)/1000)} giây</small>
+      <p class="zh gc-m">${esc(x.mau||'')}</p></div>${u?`<audio controls preload="none" src="${esc(u)}"></audio>`:''}
+      <button class="gc-x" data-id="${esc(x.id)}">Xóa</button></div>`; }).join('')}</div>`;
+  el.querySelectorAll('.gc-x').forEach(b=>b.onclick=async()=>{ await ATK.guiCo.del(b.dataset.id); pageGuiCo(); });
 }
 async function pageKhung(){
   setNav('khung');
@@ -186,7 +251,27 @@ function pageGuide(){
     <li>Bảng phân bổ theo buổi của cả 9 khóa: mỗi ngày web và mỗi buổi trên lớp ghi rõ nội dung học.</li>
     <li>Tiến độ và Hộp ôn lưu trên máy con đang dùng.</li>
   </ul>
-  <p class="note">Thầy cô có thể mở mọi bài để xem trước; không có bài nào bị khóa.</p></div>`;
+  <p class="note">Thầy cô có thể mở mọi bài để xem trước; không có bài nào bị khóa.</p>
+  <h2 id="en-manh">Dành cho thầy cô: chế độ con trội tiếng Anh</h2>
+  <div class="em card">
+    <label class="sw"><input type="checkbox" id="emsw" ${ATK.enManh.on()?'checked':''}><span class="sw-t" aria-hidden="true"></span>
+      <b>Chế độ con trội tiếng Anh</b></label>
+    <p class="note"><b>Hiện chỉ có ở Canopy Unit 5</b> (Places in town · 地方). Bản xem thử: công tắc lưu trên máy này; web thật do cô bật trong hồ sơ của từng con, ba mẹ không tự bật. Màn của con không hiện nhãn nào, con chỉ thấy thêm nội dung.</p>
+    <ul>
+      <li>Sau Ôn nhanh có <b>kiểm tra nhanh 4 câu</b>: nghe tiếng Anh, chọn tranh (từ, cụm của chính ngày đó). Đúng 4/4: phần nghe – chọn, nói chỉ giữ 1 lượt tiếng Anh mỗi từ, giữ đủ phần tiếng Trung, truyện ngày 7–8 giữ nguyên, cuối ngày thêm bước <b>Thêm tiếng Trung</b> (nói lại tiếng Trung, nghe tiếng Trung – chọn tranh). Sai từ 1 câu: con học đúng bài chính, từ sai vào Hộp ôn như thường.</li>
+      <li><b>Thử thách của Leo</b> trên trang unit và ở màn khen cuối ngày (🦁), mở sau khi con xong ngày đó: Thử thách tiếng Anh cấp Movers (8 ngày) và Phiên dịch nhí nâng cao (ngày 2, 4, 6, 8, ứng với buổi 21–24). Không cộng sao, không mở ngày mới.</li>
+      <li>Bản ghi Phiên dịch nhí nâng cao vào mục <a href="#/gui-co">Gửi cô</a>.</li>
+    </ul>
+    <p id="emst" class="note"></p>
+    <p><a class="btn-bang" href="#/u/canopy/5">Mở Canopy Unit 5</a></p>
+  </div></div>`;
+  const sw=$('#emsw'), stt=$('#emst');
+  const show=()=>{ const h=ATK.enManh.history(), n=ATK.enManh.failStreak();
+    stt.innerHTML=!sw.checked?'Đang tắt: mọi unit chạy như bài chính.':
+      (h.length?`Kiểm tra nhanh đã làm ${h.length} lần, đúng 4/4: ${h.filter(x=>x.ok).length} lần.`:'Đang bật. Chưa có lần kiểm tra nhanh nào.')+
+      (n>=3?` <b class="warn">Con trượt kiểm tra nhanh ${n} ngày liền: cô cân nhắc tắt chế độ.</b>`:''); };
+  sw.onchange=()=>{ ATK.enManh.set(sw.checked); show(); };
+  show();
 }
 
 /* ---------- bảng phân bổ theo buổi (cùng bố cục với Google Sheet "Khung chương trình mỗi khoá") ---------- */
@@ -240,6 +325,10 @@ async function route(){
   if(h[0]==='k') pageCourse(h[1]);
   else if(h[0]==='u') pageUnit(h[1],+h[2]);
   else if(h[0]==='b'){ pageUnit(h[1],+h[2]); window.ATKplayer&&ATKplayer.open(h[1],+h[2],+h[3]); return; }
+  else if(h[0]==='tt'||h[0]==='pd'){ pageUnit(h[1],+h[2]);
+    if(ATK.enManh.active(h[1],+h[2]) && ATK.prog.get(h[1]+'/'+h[2]+'/'+h[3])>0) window.ATKplayer&&ATKplayer.extra(h[0],h[1],+h[2],+h[3]);
+    return; }
+  else if(h[0]==='gui-co') pageGuiCo();
   else if(h[0]==='hop-on') pageHop();
   else if(h[0]==='ba-me') pageGuide();
   else if(h[0]==='khung') pageKhung();
