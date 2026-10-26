@@ -53,3 +53,9 @@ Tiến độ ở chế độ giáo viên lưu riêng (`lle-progress-gv`), không
 - Mọi dữ liệu (tiến độ, Bảng vàng, đổi quà, sự kiện học thử, Gia đình, đơn đăng ký trang ưu đãi, trang quản trị) nay nằm trong Sheet "Little Language Explorer – Tiến độ & Bảng vàng". Sheet DATA Dự án không còn nhận dữ liệu mới; Sheet mới bắt đầu trống.
 - Máy chủ `apps-script/Code.gs` nhận thêm form trang ưu đãi (tab "Đăng ký Web", cùng thứ tự cột như cũ, thêm cột Q "Mã gia đình"); `?action=ping` trả `v:3`.
 - Trang ưu đãi (kho Ceseducation) cần đổi `SHEET_ENDPOINT` sang link /exec của máy chủ này; xem `apps-script/quan-tri/HUONG-DAN.md`, bước 3.
+
+## Cập nhật 26/10/2026 (một link, mở khóa 21 ngày)
+- **Một link cho ba mẹ**: link gốc `…/hoc.mot.lan.duoc.hai.ngon.ngu/` (và /demo/ cũ) dẫn vào web học. Chế độ học thử (3 buổi) hay đủ 21 ngày không còn tùy link mà tùy kết quả mở khóa của gia đình (`lle-mo-khoa`, hỏi máy chủ `?action=access` mỗi lần mở web).
+- Màn nhập tên và bảng mời có lối "Ba mẹ đã đóng phí? Đăng nhập bằng số điện thoại". Gia đình đã để lại Zalo được tự mở khi đội tick, tiến độ học thử được mang sang.
+- Máy đã học bản đầy đủ trước khi có một link vẫn học tiếp (máy chủ nhận mã bé có trong tab TienDo). `?gv=1` vẫn là chế độ giáo viên.
+- Trang cũ ở gốc chuyển sang `cu/index.html`.

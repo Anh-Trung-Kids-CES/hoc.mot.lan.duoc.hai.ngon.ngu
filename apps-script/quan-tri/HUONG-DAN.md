@@ -57,6 +57,16 @@ Làm sau khi Claude đã đổi link máy chủ trong tệp `index.html` (sau b�
 - Cách nhanh nhất: cho ứng dụng Claude trên GitHub quyền ghi vào kho này, Claude tự đẩy lên.
 - Hoặc tự làm: vào kho → **Add file → Upload files** → kéo tệp `index.html` Claude gửi → **Commit changes**. Đợi 1–2 phút, gửi thử một đơn "TEST", đơn hiện ở tab **Đăng ký Web** của Sheet mới.
 
+## Một link cho ba mẹ và ô "Mở khóa 21 ngày"
+
+Ba mẹ chỉ dùng **một link** từ đầu đến cuối: https://anh-trung-kids-ces.github.io/hoc.mot.lan.duoc.hai.ngon.ngu/ (link CTV thêm `?ref=CTV05`; link /demo/ cũ vẫn chạy và dẫn về cùng chỗ).
+
+- Chưa mở khóa: bé học 3 buổi đầu (bản học thử), có cổng Zalo sau buổi 1.
+- Đội tick **Mở khóa 21 ngày** (trên trang quản trị, hoặc thẳng ở cột X tab Gia đình): lần sau ba mẹ mở link, web tự chúc mừng và mở đủ 21 ngày, giữ nguyên các buổi đã học. Gia đình không để lại Zalo thì bấm "Ba mẹ đã đóng phí? Đăng nhập", nhập tên con và số đã đăng ký.
+- Bỏ tick: lần mở sau, máy đó quay về bản học thử (cột "Mở khóa lúc" ghi "Khóa …" để không tự mở lại).
+- Gia đình đã tick "Đã đóng phí" ở tab Đăng ký Web (Sheet mới) hoặc Sheet DATA cũ được mở sẵn, không cần tick thêm; trang quản trị nhập họ vào tab Gia đình với ô đã tick.
+- Kết quả mở/khóa có hiệu lực sau tối đa khoảng 1 phút.
+
 ## Trang quản trị làm gì, chưa làm gì
 
 **Đã có**

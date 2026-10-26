@@ -28,7 +28,8 @@ const TIEN_DO_ID = DATA_ID;                                          // phiếu 
 
 const GD_HEAD = ['Mã gia đình', 'Tạo lúc', 'Nguồn', 'Mã người xem', 'Mã CTV', 'Tên ba/mẹ', 'Số Zalo', 'Tên con', 'Tuổi', 'Khoá',
   'ĐY học tập', 'ĐY tư vấn', 'ĐY tin ưu đãi', 'Trạng thái', 'Đổi trạng thái lúc', 'Người hỗ trợ', 'Liên hệ đầu', 'Liên hệ gần nhất',
-  'Hẹn gọi lại', 'Lý do dừng', 'Ghi chú', 'Điểm', 'Làn'];
+  'Hẹn gọi lại', 'Lý do dừng', 'Ghi chú', 'Điểm', 'Làn', 'Mở khóa 21 ngày', 'Mở khóa lúc'];
+const OLD_DATA_ID = '1antBQ-MDz2a4U-w-B2y6XTnF1Pzln7QwwUxxJm5TanI';  // Sheet DATA Dự án cũ: chỉ lấy gia đình ĐÃ ĐÓNG PHÍ
 const C = {};  GD_HEAD.forEach((h, i) => C[h] = i);
 
 const TRANG_THAI = ['Đang dùng thử', 'Mời đăng ký', 'Chờ đóng phí', 'Đang học 21 ngày', 'Chờ tư vấn khóa dài', 'Đã tư vấn',
@@ -42,6 +43,7 @@ const CAI_DAT_MAC_DINH = [
   ['Khai mạc', 'thứ Hai 26/10/2026', 'Ghi đúng như muốn hiện trong tin nhắn'],
   ['Link trang ưu đãi', 'https://ceseducation.github.io/little-language-explorers/', ''],
   ['Phí', '79.000đ', ''],
+  ['Link học', 'https://anh-trung-kids-ces.github.io/hoc.mot.lan.duoc.hai.ngon.ngu/', 'Một link cho ba mẹ từ đầu đến cuối'],
   ['Ngưỡng nóng', '60', 'Từ điểm này: gọi trong 1 giờ'],
   ['Ngưỡng ấm', '35', 'Từ điểm này: nhắn Zalo mẫu kèm link đăng ký'],
   ['Giờ làm việc', '8-21', 'Ngoài giờ này, việc "gọi trong 1 giờ" dời sang 9:00 sáng hôm sau'],
@@ -57,7 +59,7 @@ const TIN_MAU_MAC_DINH = [
   ['nhac_phi', 'Nhắc đóng phí',
     'Dạ em chào {phu_huynh} ạ. Chỗ của bé {ten_con} trong nhóm {khoa} em đang giữ đến {han}. Ba mẹ chuyển khoản {phi} (nội dung: LLE – {ten_con} – {khoa} – {so_zalo}) giúp em để con kịp vào nhóm trước khai mạc {khai_mac} nhé ạ. Ba mẹ còn băn khoăn gì em hỗ trợ ngay ạ.'],
   ['link_hoc', 'Đã đóng phí: gửi link học chính',
-    'Dạ em đã nhận được phí của bé {ten_con} rồi ạ, em cảm ơn {phu_huynh}! Em gửi ba mẹ link học chính, lịch Zoom và nhóm Zalo của khoá {khoa}. Con học từ {khai_mac}, mỗi ngày một buổi ngắn. Chúc con có một hành trình thám hiểm thật vui ạ!'],
+    'Dạ em đã nhận được phí và mở hành trình 21 ngày cho bé {ten_con} rồi ạ, em cảm ơn {phu_huynh}! Con học tiếp ngay trên link cũ: {link_hoc} . Nếu web chưa tự mở đủ 21 ngày, ba mẹ bấm "Ba mẹ đã đóng phí? Đăng nhập", nhập tên con và số {so_zalo}. Mỗi ngày con học một buổi khoảng 15 phút; lịch Zoom và nhóm Zalo của khoá {khoa} em gửi ngay sau đây ạ.'],
   ['goi_lai', 'Gọi lại theo hẹn',
     'Dạ em chào {phu_huynh}, em là {nguoi_ho_tro} ở Anh-Trung-Kids (CES) ạ. Em gọi lại như đã hẹn về hành trình 21 ngày của bé {ten_con} ạ.'],
   ['nuoi_duong', 'Chưa đăng ký: mời vào nhóm học liệu',
@@ -115,7 +117,7 @@ function caiDat_(ss) {
   CAI_DAT_MAC_DINH.forEach(r => { if (o[r[0]] === undefined || o[r[0]] === '') o[r[0]] = r[1]; });
   const gio = String(o['Giờ làm việc']).split('-');
   return { han: ms_(o['Hạn đăng ký']), hanText: Utilities.formatDate(new Date(ms_(o['Hạn đăng ký'])), 'Asia/Ho_Chi_Minh', "HH:mm 'ngày' dd/MM"),
-    khaiMac: String(o['Khai mạc']), link: String(o['Link trang ưu đãi']), phi: String(o['Phí']),
+    khaiMac: String(o['Khai mạc']), link: String(o['Link trang ưu đãi']), phi: String(o['Phí']), linkHoc: String(o['Link học']),
     nong: +o['Ngưỡng nóng'] || 60, am: +o['Ngưỡng ấm'] || 35, gioMo: +gio[0] || 8, gioDong: +gio[1] || 21 };
 }
 function tinMau_(ss) {
@@ -127,20 +129,25 @@ function tinMau_(ss) {
 /* ===================== đồng bộ đăng ký vào Bảng Gia đình ===================== */
 function nguonDangKy_(ss) {
   const out = [];
-  const read = (name, map) => {
-    const sh = ss.getSheetByName(name); if (!sh || sh.getLastRow() < 2) return;
+  const read = (name, map, book, chiDaDong) => {
+    const sh = (book || ss).getSheetByName(name); if (!sh || sh.getLastRow() < 2) return;
     sh.getRange(2, 1, sh.getLastRow() - 1, sh.getLastColumn()).getValues().forEach(r => {
       const phone = normPhone_(r[map.phone]); if (!phone) return;
-      out.push({ nguon: name.trim(), t: ms_(r[map.t]), parent: String(r[map.parent] || '').trim(), phone: phone,
+      if (chiDaDong && !(map.paid != null && yes_(r[map.paid]))) return;
+      out.push({ nguon: (book ? 'Sheet cũ · ' : '') + name.trim(), t: ms_(r[map.t]), parent: String(r[map.parent] || '').trim(), phone: phone,
         kid: String(r[map.kid] || '').trim(), age: map.age != null ? String(r[map.age] || '') : '', khoa: map.khoa != null ? khoaTen_(r[map.khoa]) : '',
         ho: map.ho != null ? String(r[map.ho] || '').trim() : '', paid: map.paid != null && yes_(r[map.paid]), ref: map.ref != null ? String(r[map.ref] || '').trim().toUpperCase() : '',
         anh: map.anh != null ? String(r[map.anh] || '') : '', fam: map.fam != null ? String(r[map.fam] || '').trim() : '' });
     });
   };
   read('Đăng ký Web', { t: 0, parent: 1, phone: 2, kid: 4, age: 5, anh: 9, khoa: 10, ho: 12, paid: 14, ref: 15, fam: 16 });
-  // hai tab dưới chỉ có ở Sheet cũ; Sheet mới không có thì bỏ qua
-  read('Google Form', { t: 0, parent: 1, phone: 2, kid: 4, age: 5, anh: 9, ho: 10, paid: 12 });
-  read('Danh sách đóng tiền ', { t: null, parent: 1, kid: 2, age: 3, phone: 4, paid: 6 });
+  // gia đình đã đóng phí trước khi chuyển sang Sheet mới (Sheet DATA Dự án cũ)
+  try {
+    const old = SpreadsheetApp.openById(OLD_DATA_ID);
+    read('Đăng ký Web', { t: 0, parent: 1, phone: 2, kid: 4, age: 5, anh: 9, khoa: 10, ho: 12, paid: 14, ref: 15 }, old, true);
+    read('Google Form', { t: 0, parent: 1, phone: 2, kid: 4, age: 5, anh: 9, ho: 10, paid: 12 }, old, true);
+    read('Danh sách đóng tiền ', { t: null, parent: 1, kid: 2, age: 3, phone: 4, paid: 6 }, old, true);
+  } catch (e) { }
   return out;
 }
 function dongBo_(ss, rows) {
@@ -160,6 +167,7 @@ function dongBo_(ss, rows) {
       r[C['Người hỗ trợ']] = d.ho; r[C['Ghi chú']] = d.anh ? 'Hình ảnh: ' + d.anh : '';
       // gia đình đăng ký trực tiếp: lấy lúc đăng ký làm mốc liên hệ, để việc "nhắc đóng phí" tính từ đó
       r[C['Liên hệ gần nhất']] = new Date(d.t || now);
+      if (d.paid) { r[C['Mở khóa 21 ngày']] = true; r[C['Mở khóa lúc']] = new Date(); } else r[C['Mở khóa 21 ngày']] = false;
       rows.push(r); byPhone[d.phone] = rows.length - 1; moi[rows.length - 1] = 1; changed = true; return;
     }
     const r = rows[i];
@@ -174,6 +182,9 @@ function dongBo_(ss, rows) {
       r[C['Trạng thái']] = want; changed = true;
       // gia đình đã có trong bảng từ trước: đây là bước tiến thật, tính từ bây giờ (bật việc tương ứng)
       if (!moi[i]) r[C['Đổi trạng thái lúc']] = new Date();
+    }
+    if (d.paid && !yes_(r[C['Mở khóa 21 ngày']]) && !/^khóa/i.test(String(r[C['Mở khóa lúc']] || ''))) {
+      r[C['Mở khóa 21 ngày']] = true; r[C['Mở khóa lúc']] = new Date(); changed = true;
     }
   });
   return changed;
@@ -253,6 +264,8 @@ function viec_(f, cd, now) {
     if (now - lh > 24 * 3600e3 || (sat && lh < cd.han - 24 * 3600e3))
       v.push({ loai: 'phi', uuTien: 3, ten: 'Nhắc đóng phí' + (cd.han > now ? ' – còn ' + Math.max(0, Math.round((cd.han - now) / 3600e3)) + ' giờ tới hạn' : ''), han: Math.max(lh + 24 * 3600e3, now), tin: 'nhac_phi' });
   }
+  if (st === 'Đang học 21 ngày' && !f.moKhoa)
+    v.push({ loai: 'mo', uuTien: 1, ten: 'Mở khóa 21 ngày (đã đóng phí, chưa mở)', han: sa + 2 * 3600e3, tin: 'link_hoc' });
   if (st === 'Đang học 21 ngày' && lh < sa)
     v.push({ loai: 'link', uuTien: 3, ten: 'Đã đóng phí: gửi link học chính, lịch Zoom, nhóm Zalo', han: sa + 12 * 3600e3, tin: 'link_hoc' });
   return v;
@@ -265,6 +278,7 @@ function taiDuLieu() {
   let rows, sh, sk, calls;
   try {
     sh = tab_(ss, 'Gia đình', GD_HEAD); cotZalo_(sh);
+    if (!sh.getRange(1, C['Mở khóa 21 ngày'] + 1).getValue()) sh.getRange(1, C['Mở khóa 21 ngày'] + 1, 1, 2).setValues([['Mở khóa 21 ngày', 'Mở khóa lúc']]);
     const n = sh.getLastRow();
     rows = n > 1 ? sh.getRange(2, 1, n - 1, GD_HEAD.length).getValues() : [];
     rows.forEach(r => { r[C['Số Zalo']] = normPhone_(r[C['Số Zalo']]) || String(r[C['Số Zalo']]).replace(/^'/, ''); });
@@ -283,6 +297,8 @@ function taiDuLieu() {
     if (changed) {
       if (nOld) sh.getRange(2, 1, nOld, GD_HEAD.length).setValues(rows.slice(0, nOld));
       if (rows.length > nOld) sh.getRange(nOld + 2, 1, rows.length - nOld, GD_HEAD.length).setValues(rows.slice(nOld));
+      // ô tick: dùng kiểu dữ liệu hộp kiểm (insertCheckboxes sẽ xóa các ô đã tick)
+      if (rows.length) sh.getRange(2, C['Mở khóa 21 ngày'] + 1, rows.length, 1).setDataValidation(SpreadsheetApp.newDataValidation().requireCheckbox().build());
     }
   } finally { lock.releaseLock(); }
   const sk2 = sk, calls2 = calls;
@@ -298,6 +314,7 @@ function taiDuLieu() {
       trangThai: String(r[C['Trạng thái']] || 'Đang dùng thử'), doiTrangThaiLuc: ms_(r[C['Đổi trạng thái lúc']]),
       nguoiHoTro: String(r[C['Người hỗ trợ']] || ''), lienHeDau: ms_(r[C['Liên hệ đầu']]), lienHeGanNhat: ms_(r[C['Liên hệ gần nhất']]),
       henGoiLai: ms_(r[C['Hẹn gọi lại']]), lyDo: String(r[C['Lý do dừng']] || ''), ghiChu: String(r[C['Ghi chú']] || ''),
+      moKhoa: yes_(r[C['Mở khóa 21 ngày']]), moKhoaLuc: r[C['Mở khóa lúc']] instanceof Date ? r[C['Mở khóa lúc']].getTime() : String(r[C['Mở khóa lúc']] || ''),
       diem: sc.diem, chiTietDiem: sc.chiTiet, lan: sc.diem >= cd.nong ? 'nóng' : sc.diem >= cd.am ? 'ấm' : 'lạnh',
       hoc: e ? { soBuoi: e.ev.xong3 ? 3 : e.ev.xong2 ? 2 : e.ev.xong1 ? 1 : 0, noi: e.noi, ngay: Object.keys(e.days).length, khoa: e.khoa,
         bamDk: !!e.ev.bam_dk, cuoi: e.last, log: e.log } : null,
@@ -380,6 +397,32 @@ function ghiLienHe(p) {
         r[C['Mã gia đình']], p.ketQua || (p.trangThai ? 'Đổi trạng thái' : 'Ghi chú nội bộ')]);
       nk.getRange(nk.getLastRow(), 4).setNumberFormat('@').setValue(normPhone_(r[C['Số Zalo']]) || '');
     }
+  } finally { lock.releaseLock(); }
+  return taiDuLieu();
+}
+
+/* ===================== mở khóa 21 ngày ===================== */
+/* Tick: mở đủ 21 ngày trên link học (web hỏi máy chủ, sau tối đa khoảng 1 phút là thấy).
+   Bỏ tick: khóa lại, ghi "Khóa …" ở cột "Mở khóa lúc" để đồng bộ không tự mở lại dù đã đóng phí. */
+function moKhoa(code, on) {
+  const ss = ss_(), quyen = toi_(ss), me = quyen.me, laQL = me.vaiTro === 'Quản lý';
+  const lock = LockService.getScriptLock(); lock.waitLock(20000);
+  try {
+    const sh = tab_(ss, 'Gia đình', GD_HEAD), n = sh.getLastRow();
+    const codes = n > 1 ? sh.getRange(2, 1, n - 1, 1).getValues().map(r => String(r[0])) : [];
+    const i = codes.indexOf(String(code)); if (i < 0) throw new Error('Không tìm thấy gia đình ' + code + '.');
+    const rg = sh.getRange(i + 2, 1, 1, GD_HEAD.length), r = rg.getValues()[0];
+    if (!laQL && String(r[C['Người hỗ trợ']]) !== me.ten) throw new Error('Gia đình này đang giao cho ' + (r[C['Người hỗ trợ']] || 'người khác') + '.');
+    const now = new Date();
+    r[C['Mở khóa 21 ngày']] = !!on;
+    r[C['Mở khóa lúc']] = on ? now : 'Khóa ' + Utilities.formatDate(now, 'Asia/Ho_Chi_Minh', 'dd/MM HH:mm') + ' · ' + me.ten;
+    if (on && buoc_(String(r[C['Trạng thái']])) < buoc_('Đang học 21 ngày')) { r[C['Trạng thái']] = 'Đang học 21 ngày'; r[C['Đổi trạng thái lúc']] = now; }
+    r[C['Số Zalo']] = normPhone_(r[C['Số Zalo']]) || String(r[C['Số Zalo']]);
+    cotZalo_(sh); rg.setValues([r]); sh.getRange(i + 2, C['Mở khóa 21 ngày'] + 1).setDataValidation(SpreadsheetApp.newDataValidation().requireCheckbox().build()).setValue(!!on);
+    const nk = ss.getSheetByName('Nhật ký cuộc gọi') || tab_(ss, 'Nhật ký cuộc gọi', ['Ngày gọi', 'Người gọi', 'Tên phụ huynh', 'SĐT / Zalo', 'Tên con', 'Tuổi', 'Phần B đúng (/5)', 'Phần C đúng (/4)', 'Điểm mạnh của con', 'Nhóm xếp', 'Trạng thái', 'Hạn giữ chỗ / giờ gọi lại', 'Mong muốn của phụ huynh', 'Thắc mắc chưa trả lời', 'Ghi chú']);
+    if (!nk.getRange(1, 16).getValue()) nk.getRange(1, 16, 1, 2).setValues([['Mã gia đình', 'Kết quả']]);
+    nk.appendRow([now, me.ten, r[C['Tên ba/mẹ']], '', r[C['Tên con']], r[C['Tuổi']], '', '', '', r[C['Khoá']], r[C['Trạng thái']], '', '', '',
+      on ? 'Mở khóa 21 ngày' : 'Khóa 21 ngày', r[C['Mã gia đình']], 'Ghi chú nội bộ']);
   } finally { lock.releaseLock(); }
   return taiDuLieu();
 }

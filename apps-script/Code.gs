@@ -95,7 +95,8 @@ function doPost(e) {
 
 function doGet(e) {
   const p = e.parameter || {};
-  if (p.action === 'ping') return json_({ ok: true, v: 3 });          // web hỏi: máy chủ đã có Bảng Gia đình chưa
+  if (p.action === 'ping') return json_({ ok: true, v: 4 });          // v3: Bảng Gia đình · v4: mở khóa 21 ngày
+  if (p.action === 'access') return json_(access_(p));
   if (p.action === 'visit') return visit_(p);
   if (p.action === 'team') {   // mục tiêu chung: cả đội một khoá đã cùng học bao nhiêu buổi (không lộ tên, không xếp hạng)
     const sh = sheet_('Diem', ['kid', 'name', 'group', 'day', 'round', 'points', 'updated']), n = sh.getLastRow(), kids = {};
@@ -160,7 +161,8 @@ function visit_(p) {
  * Một gia đình (cùng mã người xem hoặc cùng số Zalo) gửi lại thì chỉ cập nhật, không tạo dòng mới. */
 const GD_HEAD = ['Mã gia đình', 'Tạo lúc', 'Nguồn', 'Mã người xem', 'Mã CTV', 'Tên ba/mẹ', 'Số Zalo', 'Tên con', 'Tuổi', 'Khoá',
   'ĐY học tập', 'ĐY tư vấn', 'ĐY tin ưu đãi', 'Trạng thái', 'Đổi trạng thái lúc', 'Người hỗ trợ', 'Liên hệ đầu', 'Liên hệ gần nhất',
-  'Hẹn gọi lại', 'Lý do dừng', 'Ghi chú', 'Điểm', 'Làn'];
+  'Hẹn gọi lại', 'Lý do dừng', 'Ghi chú', 'Điểm', 'Làn', 'Mở khóa 21 ngày', 'Mở khóa lúc'];
+const COT_MO_KHOA = 24;                                               // cột X (đếm từ 1)
 const DONG_HO_SO = ['Dừng', 'Nuôi dưỡng', 'Học viên khóa dài'];
 function normPhone_(s) {
   s = String(s || '').trim().toLowerCase();
@@ -192,6 +194,7 @@ function family_(d) {
   const kid = String(d.kid || '').trim().slice(0, 40), vid = String(d.vid || '').slice(0, 24);
   if (!phone || !parent || !kid) return { ok: false, err: 'thieu' };
   const ss = ss_(), sh = giaDinhSheet_(ss);
+  if (!sh.getRange(1, COT_MO_KHOA).getValue()) sh.getRange(1, COT_MO_KHOA, 1, 2).setValues([['Mở khóa 21 ngày', 'Mở khóa lúc']]);
   const n = sh.getLastRow(), rows = n > 1 ? sh.getRange(2, 1, n - 1, GD_HEAD.length).getValues() : [];
   const yes = v => v === true || v === 'true' || v === 1 || v === '1';
   let at = -1;
@@ -212,8 +215,9 @@ function family_(d) {
   const code = /^GD[A-Z0-9]{4,8}$/.test(String(d.code || '')) ? String(d.code) : 'GD' + Utilities.getUuid().replace(/-/g, '').slice(0, 6).toUpperCase();
   const now = new Date();
   sh.appendRow([code, now, 'Web học thử', vid, cleanRef_(d.ref), parent, '', kid, age, group,
-    yes(d.cHoc), yes(d.cTuVan), yes(d.cUuDai), 'Đang dùng thử', now, chonNguoiHoTro_(ss, rows), '', '', '', '', '', '', '']);
+    yes(d.cHoc), yes(d.cTuVan), yes(d.cUuDai), 'Đang dùng thử', now, chonNguoiHoTro_(ss, rows), '', '', '', '', '', '', '', false, '']);
   sh.getRange(sh.getLastRow(), 7).setNumberFormat('@').setValue(phone);       // giữ số 0 đầu
+  sh.getRange(sh.getLastRow(), COT_MO_KHOA).insertCheckboxes();
   logEvent_(ss, d.ref, vid, 'zalo', group, code);
   return { ok: true, code: code };
 }
@@ -249,4 +253,66 @@ function dangKy_(p) {
     return { ok: true };
   } catch (err) { return { ok: false, error: 'Lỗi máy chủ' }; }
   finally { lock.releaseLock(); }
+}
+
+/* ---------- Mở khóa 21 ngày (một link cho ba mẹ từ đầu đến cuối) ----------
+ * Web học gửi  ?action=access&p=<mã băm số điện thoại/Gmail>&id=<mã bé>  và nhận về {ok:true/false}.
+ * Không gửi số điện thoại thật; mã băm = 16 ký tự đầu SHA-256 của "lle|" + số đã chuẩn hóa (giống hashStr ở web).
+ * Thứ tự xét:
+ *   1. Ô "Mở khóa 21 ngày" trong tab "Gia đình" được tick (đội tick trên trang quản trị hoặc thẳng trên Sheet) → mở.
+ *   2. Số nằm trong danh sách ĐÃ ĐÓNG PHÍ (tab Đăng ký Web của Sheet này, và các tab Đăng ký Web, Google Form,
+ *      Danh sách đóng tiền của Sheet DATA Dự án cũ) → mở, trừ khi đội đã chủ động khóa
+ *      (bỏ tick trên trang quản trị, cột "Mở khóa lúc" ghi "Khóa …").
+ *   3. Bé đã có tiến độ trong tab TienDo (đã học bản đầy đủ trước khi có một link) vẫn học tiếp.
+ *      Từ khi có một link, chỉ máy đã được mở khóa mới ghi được vào TienDo.
+ * Kết quả giữ trong bộ nhớ đệm 60 giây để web chạy nhanh khi nhiều bé vào cùng lúc. */
+const OLD_DATA_ID = '1antBQ-MDz2a4U-w-B2y6XTnF1Pzln7QwwUxxJm5TanI';
+function hashAcct_(a) {
+  const b = Utilities.computeDigest(Utilities.DigestAlgorithm.SHA_256, 'lle|' + a, Utilities.Charset.UTF_8);
+  return b.slice(0, 8).map(x => ((x + 256) % 256).toString(16).padStart(2, '0')).join('');
+}
+function yes_(v) { return v === true || String(v).toUpperCase() === 'TRUE'; }
+function bangMoKhoa_() {
+  const cache = CacheService.getScriptCache(), hit = cache.get('mo-khoa-v1');
+  if (hit) return JSON.parse(hit);
+  const gd = {}, paid = {}, ss = ss_();
+  const sh = ss.getSheetByName('Gia đình');
+  if (sh && sh.getLastRow() > 1) {
+    const w = Math.max(COT_MO_KHOA, sh.getLastColumn());
+    sh.getRange(2, 1, sh.getLastRow() - 1, w).getValues().forEach(r => {
+      const a = normPhone_(r[6]); if (!a) return;
+      const k = hashAcct_(a), g = gd[k] || { on: false, khoa: false };
+      g.on = g.on || yes_(r[COT_MO_KHOA - 1]); g.khoa = g.khoa || /^khóa/i.test(String(r[COT_MO_KHOA] || ''));
+      gd[k] = g;
+    });
+  }
+  const read = (book, name, phoneCol, paidCol) => {
+    try {
+      const t = book.getSheetByName(name); if (!t || t.getLastRow() < 2) return;
+      t.getRange(2, 1, t.getLastRow() - 1, Math.max(phoneCol, paidCol) + 1).getValues().forEach(r => {
+        const a = normPhone_(r[phoneCol]); if (a && yes_(r[paidCol])) paid[hashAcct_(a)] = 1;
+      });
+    } catch (e) { }
+  };
+  read(ss, 'Đăng ký Web', 2, 14);
+  try {
+    const old = SpreadsheetApp.openById(OLD_DATA_ID);
+    read(old, 'Đăng ký Web', 2, 14); read(old, 'Google Form', 2, 12); read(old, 'Danh sách đóng tiền ', 4, 6);
+  } catch (e) { }
+  const cu = {}, td = ss.getSheetByName('TienDo');
+  if (td && td.getLastRow() > 1) td.getRange(2, 1, td.getLastRow() - 1, 1).getValues().forEach(r => { if (r[0]) cu[String(r[0])] = 1; });
+  const out = { gd: gd, paid: paid, cu: cu };
+  try { cache.put('mo-khoa-v1', JSON.stringify(out), 60); } catch (e) { }
+  return out;
+}
+function access_(p) {
+  const h = String(p.p || '').toLowerCase().replace(/[^0-9a-f]/g, '').slice(0, 16), id = String(p.id || '').slice(0, 40);
+  if (!h && !id) return { ok: false };
+  const b = bangMoKhoa_();
+  const g = h && b.gd[h];
+  if (g && g.on) return { ok: true, via: 'gia-dinh' };
+  if (g && g.khoa) return { ok: false, via: 'da-khoa' };
+  if (h && b.paid[h]) return { ok: true, via: 'da-dong-phi' };
+  if (id && b.cu[id]) return { ok: true, via: 'dang-hoc' };
+  return { ok: false, known: false };
 }

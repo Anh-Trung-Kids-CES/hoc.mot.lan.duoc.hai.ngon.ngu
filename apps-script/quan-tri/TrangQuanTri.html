@@ -69,6 +69,17 @@ select.sm{border:1px solid var(--line);background:var(--card);border-radius:999p
 .fam{display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;text-align:left;width:100%}
 .fam .nm{font-weight:700}
 .fam .sub{grid-column:1/-1;font-size:13px;color:var(--muted)}
+.famrow{display:grid;grid-template-columns:1fr auto;gap:0;align-items:stretch;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.famrow .fam{border:0;border-radius:0;background:none}
+.mk{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-width:92px;padding:8px 10px;border-left:1px solid var(--line);font-size:12px;font-weight:700;color:var(--muted);cursor:pointer;text-align:center;line-height:1.2}
+.mk input{width:24px;height:24px;margin:0;accent-color:var(--green);cursor:pointer}
+.mk.on{background:var(--green-soft);color:var(--green)}
+.mk.busy{opacity:.5;pointer-events:none}
+.mk-big{display:flex;align-items:center;gap:12px;padding:12px 14px;border:2px solid var(--line);border-radius:var(--r);background:var(--card);font-weight:700;cursor:pointer;margin-top:12px}
+.mk-big input{width:26px;height:26px;margin:0;accent-color:var(--green);flex:none}
+.mk-big.on{border-color:var(--green);background:var(--green-soft)}
+.mk-big small{display:block;font-weight:500;color:var(--muted);font-size:13px}
+.act.ok{background:var(--green);border-color:var(--green);color:#fff}
 .empty{background:var(--card);border:1px dashed var(--line);border-radius:var(--r);padding:28px 16px;text-align:center;color:var(--muted)}
 .empty b{display:block;color:var(--ink);font-size:16px;margin-bottom:4px}
 
@@ -215,7 +226,7 @@ function rViec(){
         <div class="t-top"><span class="t-name">${esc(v.ten)}</span>${lanBadge(f)}<span class="t-when ${u.late?'late':''}">${v.dem?'để lại số '+ago(v.dem)+' · ':''}${u.s}</span></div>
         <p class="t-fam"><button type="button" data-open="${esc(f.code)}">${famLine(f)}</button></p>
         <div class="t-meta">${f.hoc?`Học thử ${f.hoc.soBuoi}/3 buổi · nói ${f.hoc.noi} lần · `:''}${esc(f.trangThai)}${D.laQL?` · ${esc(f.nguoiHoTro||'chưa giao')}`:''}${f.lienHeGanNhat?` · liên hệ ${ago(f.lienHeGanNhat)}`:''}</div>
-        <div class="acts">${callBtns(f, v.tin)}</div></article>`; }).join('')
+        <div class="acts">${v.loai==='mo'?`<button class="act ok" type="button" data-mkgo="${esc(f.code)}">✓ Mở khóa 21 ngày</button>`:''}${callBtns(f, v.tin)}</div></article>`; }).join('')
       :`<div class="empty"><b>Không còn việc nào 🎉</b>Gia đình mới để lại Zalo sẽ hiện ở đây. Trang tự tải lại mỗi 2 phút.</div>`}</div>`;
   bindAi(); bindActs($('#main'));
 }
@@ -223,18 +234,22 @@ function rViec(){
 function rGd(){
   const counts={}; D.gd.forEach(f=>counts[f.trangThai]=(counts[f.trangThai]||0)+1);
   const q=FILTER.q.trim().toLowerCase();
-  const L=D.gd.filter(f=>(!FILTER.tt||f.trangThai===FILTER.tt) && (!FILTER.ai || (FILTER.ai==='(chưa giao)'?!f.nguoiHoTro:f.nguoiHoTro===FILTER.ai))
+  const chuaMo=f=>['Chờ đóng phí','Đang học 21 ngày'].includes(f.trangThai)&&!f.moKhoa;
+  const L=D.gd.filter(f=>(!FILTER.tt||(FILTER.tt==='__mk'?chuaMo(f):FILTER.tt==='__mo'?f.moKhoa:f.trangThai===FILTER.tt)) && (!FILTER.ai || (FILTER.ai==='(chưa giao)'?!f.nguoiHoTro:f.nguoiHoTro===FILTER.ai))
       && (!q || [f.phuHuynh,f.tenCon,f.zalo,f.code,f.ref].join(' ').toLowerCase().includes(q)))
     .sort((a,b)=>b.diem-a.diem || (b.taoLuc-a.taoLuc));
   $('#main').innerHTML=`
     <div class="bar"><input class="search" id="q" type="search" placeholder="Tìm tên ba mẹ, tên con, số Zalo, mã" value="${esc(FILTER.q)}" aria-label="Tìm gia đình">${aiPicker()}</div>
     <div class="bar" role="group" aria-label="Lọc theo trạng thái">
       <button class="chip ${!FILTER.tt?'on':''}" data-tt="" type="button">Tất cả<span class="c">${D.gd.length}</span></button>
+      <button class="chip ${FILTER.tt==='__mo'?'on':''}" data-tt="__mo" type="button">✓ Đã mở khóa<span class="c">${D.gd.filter(f=>f.moKhoa).length}</span></button>
+      <button class="chip ${FILTER.tt==='__mk'?'on':''}" data-tt="__mk" type="button">Chưa mở khóa<span class="c">${D.gd.filter(chuaMo).length}</span></button>
       ${D.trangThai.filter(t=>counts[t]).map(t=>`<button class="chip ${FILTER.tt===t?'on':''}" data-tt="${esc(t)}" type="button">${esc(t)}<span class="c">${counts[t]}</span></button>`).join('')}
     </div>
-    <div class="list">${L.length?L.map(f=>`<button class="fam" type="button" data-open="${esc(f.code)}">
+    <div class="list">${L.length?L.map(f=>`<div class="famrow"><button class="fam" type="button" data-open="${esc(f.code)}">
         <span class="nm">${famLine(f)}</span>${lanBadge(f)}
-        <span class="sub"><span class="badge st">${esc(f.trangThai)}</span> · ${esc(f.ref)} · ${esc(f.nguon)}${D.laQL?` · ${esc(f.nguoiHoTro||'chưa giao')}`:''}${f.viec.length?` · <b>${f.viec.length} việc</b>`:''}</span></button>`).join('')
+        <span class="sub"><span class="badge st">${esc(f.trangThai)}</span> · ${esc(f.ref)} · ${esc(f.nguon)}${D.laQL?` · ${esc(f.nguoiHoTro||'chưa giao')}`:''}${f.viec.length?` · <b>${f.viec.length} việc</b>`:''}</span></button>
+        ${mkBox(f)}</div>`).join('')
       :`<div class="empty"><b>Chưa có gia đình nào ở đây</b>${D.laQL?'':'Gia đình được giao cho bạn sẽ hiện ở đây.'}</div>`}</div>`;
   const qi=$('#q'); qi.oninput=()=>{ FILTER.q=qi.value; const pos=qi.selectionStart; rGd(); const n=$('#q'); n.focus(); n.setSelectionRange(pos,pos); };
   document.querySelectorAll('[data-tt]').forEach(b=>b.onclick=()=>{ FILTER.tt=b.dataset.tt; rGd(); });
@@ -267,7 +282,17 @@ function rSo(){
     <section class="box"><h3>Theo trạng thái</h3><div class="tbl-wrap"><table><tbody>${tt}</tbody></table></div></section>`;
 }
 
+/* Ô tick Mở khóa 21 ngày */
+function mkBox(f){ return `<label class="mk ${f.moKhoa?'on':''}" title="Mở đủ 21 ngày trên link học"><input type="checkbox" data-mk="${esc(f.code)}" ${f.moKhoa?'checked':''}><span>${f.moKhoa?'Đã mở 21 ngày':'Mở khóa 21 ngày'}</span></label>`; }
+function moKhoaTick(code, on, el){
+  const f=fam(code); if(!f) return;
+  const box=el&&el.closest('.mk,.mk-big'); if(box) box.classList.add('busy');
+  google.script.run.withSuccessHandler(d=>{ D=d; toast(on?'Đã mở 21 ngày cho bé '+(f.tenCon||'')+'. Ba mẹ tải lại web là thấy.':'Đã khóa lại 21 ngày'); if(OPEN) openFam(OPEN,true); render(); })
+    .withFailureHandler(e=>{ if(box) box.classList.remove('busy'); if(el) el.checked=!on; toast(e&&e.message||String(e)); }).moKhoa(code, on);
+}
 function bindActs(root){
+  root.querySelectorAll('[data-mk]').forEach(c=>c.onchange=()=>moKhoaTick(c.dataset.mk, c.checked, c));
+  root.querySelectorAll('[data-mkgo]').forEach(b=>b.onclick=()=>moKhoaTick(b.dataset.mkgo, true, b));
   root.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>openFam(b.dataset.open));
   root.querySelectorAll('[data-tin]').forEach(b=>b.onclick=()=>showTpl(fam(b.dataset.code), b.dataset.tin));
 }
@@ -281,7 +306,7 @@ function fillTpl(key,f){
   const t=(D.tinMau[key]||{}).noiDung||''; const h=f.hoc||{};
   const map={phu_huynh:xung(f), ten_con:(f.tenCon||'con').split(',')[0].trim(), khoa:f.khoa||'phù hợp', nguoi_ho_tro:D.me.ten,
     so_buoi:h.soBuoi||0, so_lan_noi:h.noi||0, hoc_them:h.noi?` và đã nói thành tiếng ${h.noi} lần`:'', link_dang_ky:linkDk(f),
-    han:D.caiDat.hanText, khai_mac:D.caiDat.khaiMac, phi:D.caiDat.phi, so_zalo:f.zalo||''};
+    han:D.caiDat.hanText, khai_mac:D.caiDat.khaiMac, phi:D.caiDat.phi, so_zalo:f.zalo||'', link_hoc:D.caiDat.linkHoc||'https://anh-trung-kids-ces.github.io/hoc.mot.lan.duoc.hai.ngon.ngu/'};
   return String(t).replace(/\{(\w+)\}/g,(m,k)=>k in map?map[k]:m); }
 function showTpl(f,key){
   if(!f) return; const txt=fillTpl(key,f), title=(D.tinMau[key]||{}).ten||'Tin mẫu';
@@ -306,6 +331,7 @@ function openFam(code, keep){
     <div class="p-hd"><h2 id="pTitle">${esc(f.phuHuynh||'(chưa có tên)')} – bé ${esc(f.tenCon)}<small>${esc(f.code)} · ${esc(f.trangThai)} · ${lanBadge(f)}</small></h2><button class="x" type="button" aria-label="Đóng">✕</button></div>
     <div class="acts">${callBtns(f, f.viec[0]&&f.viec[0].tin)}</div>
     ${f.viec.length?`<div class="box"><h3>Việc đang chờ</h3>${f.viec.map(v=>`<div>• ${esc(v.ten)} <span class="hint">(${until(v.han).s})</span></div>`).join('')}</div>`:''}
+    <label class="mk-big ${f.moKhoa?'on':''}"><input type="checkbox" data-mk="${esc(f.code)}" ${f.moKhoa?'checked':''}><span>Mở khóa 21 ngày<small>${f.moKhoa?'Đã mở'+(typeof f.moKhoaLuc==='number'?' lúc '+fmt(f.moKhoaLuc):'')+'. Bỏ tick để khóa lại.':(String(f.moKhoaLuc).startsWith('Khóa')?esc(f.moKhoaLuc)+'. ':'')+'Tick khi đã nhận phí: bé học đủ 21 ngày trên chính link cũ.'}</small></span></label>
     <div class="box"><h3>Gia đình</h3><dl class="kv">
       <dt>Số Zalo</dt><dd>${esc(f.zalo||'—')}</dd>
       <dt>Bé</dt><dd>${esc(f.tenCon)}${f.tuoi?`, ${esc(f.tuoi)} tuổi`:''} · ${esc(f.khoa||'chưa xếp khoá')}</dd>

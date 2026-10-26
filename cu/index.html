@@ -1,0 +1,1639 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Little Language Explorers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;
+  --red:#E3262E; --red-dark:#B8141C; --yellow:#FFC72C; --yellow-soft:#FFF4CC;
+  --cream:#FFFBF0; --ink:#3A2A1A; --muted:#7A6A58; --white:#fff;
+  --green:#3BB273; --teal:#1FA5A0; --sky:#4AA3E8; --line:#F0E2C0;
+  --seed:#3BB273; --seedling:#1FA5A0; --canopy:#E3262E;
+  --shadow:0 6px 0 rgba(58,42,26,.12);
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:'Baloo 2','Noto Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif;background:var(--cream);color:var(--ink);font-size:18px;line-height:1.4;-webkit-tap-highlight-color:transparent}
+.zh{font-family:'Noto Sans SC','PingFang SC','Microsoft YaHei','Heiti SC',sans-serif}
+button{font-family:inherit;cursor:pointer}
+a{color:inherit}
+.wrap{max-width:900px;margin:0 auto;padding:0 16px 48px}
+
+/* header */
+.top{background:var(--red);color:var(--white);padding:10px 16px;position:sticky;top:env(safe-area-inset-top,0px);z-index:20;box-shadow:0 3px 0 var(--red-dark)}
+.top-in{max-width:900px;margin:0 auto;display:flex;align-items:center;gap:10px}
+.logo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:19px;text-decoration:none;color:#fff}
+.logo-badge{width:36px;height:36px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;font-size:20px}
+.top .sp{flex:1}
+.back{background:rgba(255,255,255,.18);border:0;color:#fff;border-radius:999px;padding:6px 14px;font-weight:700;font-size:16px}
+.star-count{white-space:nowrap;flex:none;background:var(--yellow);color:var(--ink);border-radius:999px;padding:4px 12px;font-weight:800;font-size:16px}
+
+/* hero */
+.hero{background:linear-gradient(180deg,var(--red) 0%,#F04A3F 100%);color:#fff;text-align:center;padding:28px 16px 70px;position:relative;overflow:hidden}
+.hero h1{margin:6px 0 2px;font-size:clamp(28px,6vw,44px);line-height:1.05}
+.hero .tag{display:inline-block;background:var(--yellow);color:var(--ink);font-weight:800;border-radius:999px;padding:4px 16px;margin-top:8px}
+.hero p{margin:10px auto 0;max-width:560px;opacity:.95}
+.hero .float{position:absolute;font-size:34px;animation:bob 4s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@media (max-width:560px){.hero{padding-top:44px}.hero .float{font-size:22px;opacity:.55}.hero .float:nth-of-type(3),.hero .float:nth-of-type(4){display:none}}
+.wave{position:absolute;bottom:-1px;left:0;width:100%;height:50px}
+
+/* group choice */
+.groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:-40px;position:relative;z-index:2}
+.gcard{background:#fff;border-radius:24px;padding:20px;box-shadow:var(--shadow);border:3px solid var(--line);text-align:left;color:var(--ink);transition:transform .15s}
+.gcard:hover{transform:translateY(-4px)}
+.gcard .ico{width:64px;height:64px;border-radius:20px;display:grid;place-items:center;font-size:36px;margin-bottom:8px}
+.gcard h3{margin:0;font-size:24px}
+.gcard .age{font-weight:700;color:var(--muted);font-size:15px}
+.gcard .lvl{margin-top:6px;font-size:15px}
+.gcard .go{margin-top:12px;display:inline-block;color:#fff;border-radius:999px;padding:6px 18px;font-weight:800}
+.note{background:var(--yellow-soft);border:2px dashed var(--yellow);border-radius:18px;padding:14px 16px;margin-top:22px;font-size:16px}
+.note b{color:var(--red-dark)}
+
+/* map */
+.ghead{display:flex;align-items:center;gap:14px;margin:20px 0 6px}
+.ghead .ico{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;font-size:32px;flex:none}
+.ghead h2{margin:0;font-size:28px;line-height:1}
+.ghead small{color:var(--muted);font-weight:600}
+.progress{height:16px;background:#F2E6C9;border-radius:999px;overflow:hidden;margin:10px 0 4px}
+.progress i{display:block;height:100%;background:linear-gradient(90deg,var(--yellow),#FF9F1C);border-radius:999px;transition:width .5s}
+.ptext{font-size:15px;color:var(--muted);font-weight:600}
+.round{background:#fff;border-radius:26px;padding:16px 16px 20px;margin-top:18px;box-shadow:var(--shadow);border:3px solid var(--line)}
+.rhead{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.rbadge{background:var(--red);color:#fff;border-radius:14px;padding:4px 12px;font-weight:800;font-size:15px}
+.rhead h3{margin:0;font-size:22px}
+.rhead .vi{color:var(--muted);font-weight:600;font-size:16px}
+.trail{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:16px;position:relative}
+.trail:before{content:"";position:absolute;left:8%;right:8%;top:34px;border-top:4px dashed #E8D6A8;z-index:0}
+.stop{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:4px;background:none;border:0;padding:0;color:var(--ink)}
+.dot{width:68px;height:68px;border-radius:50%;display:grid;place-items:center;font-size:26px;font-weight:800;background:#fff;border:4px solid var(--yellow);box-shadow:0 4px 0 rgba(0,0,0,.08);transition:transform .15s}
+.stop:hover .dot{transform:scale(1.06)}
+.stop .lb{font-size:13px;font-weight:700;text-align:center;line-height:1.1;max-width:90px}
+.stop.done .dot{background:var(--yellow);border-color:#F2A900}
+.stop.now .dot{background:var(--red);color:#fff;border-color:var(--red-dark);animation:pulse 1.6s infinite}
+.stop.lock{cursor:not-allowed}
+.stop.lock .dot{background:#F3EEE2;border-color:#E2D8C2;color:#BDB09A}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(227,38,46,.45)}50%{box-shadow:0 0 0 10px rgba(227,38,46,0)}}
+@media (max-width:560px){
+  .trail{grid-template-columns:repeat(3,1fr);row-gap:16px}
+  .trail:before{display:none}
+  .dot{width:60px;height:60px}
+}
+.final{background:linear-gradient(135deg,var(--yellow),#FFAA2C);border-radius:26px;padding:20px;margin-top:18px;text-align:center;box-shadow:var(--shadow)}
+.final h3{margin:4px 0;font-size:26px}
+.final.lock{filter:grayscale(.6);opacity:.75}
+
+/* day */
+.dayhead{margin:18px 0 10px}
+.dayhead .crumb{color:var(--muted);font-weight:700;font-size:15px}
+.dayhead h2{margin:2px 0;font-size:30px;line-height:1.1}
+.steps{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 10px;scrollbar-width:none}
+.steps::-webkit-scrollbar{display:none}
+.stepbtn{flex:none;border:3px solid var(--line);background:#fff;border-radius:999px;padding:8px 16px;font-weight:800;font-size:16px;color:var(--ink);display:flex;gap:6px;align-items:center}
+.stepbtn.on{background:var(--red);border-color:var(--red-dark);color:#fff}
+.stepbtn .ck{color:var(--green)}
+.stepbtn.on .ck{color:var(--yellow)}
+.panel{background:#fff;border-radius:26px;padding:18px;box-shadow:var(--shadow);border:3px solid var(--line)}
+.panel h3{margin:0 0 4px;font-size:22px}
+.panel .hint{color:var(--muted);font-size:15px;margin:0 0 12px}
+
+/* flashcards */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+@media (max-width:400px){.fc .pic{font-size:52px;height:70px}.fc .en{font-size:20px}.fc .hz{font-size:26px}.sbtn{padding:6px 10px}.logo{font-size:16px}}
+.fc{border:3px solid var(--line);border-radius:22px;padding:14px;text-align:center;background:var(--cream)}
+.fc.heard{border-color:var(--yellow);background:var(--yellow-soft)}
+.fc .pic{font-size:64px;line-height:1.1;height:84px;display:grid;place-items:center}
+.fc .pic img{max-height:84px;max-width:100%;border-radius:12px}
+.fc .en{font-size:24px;font-weight:800}
+.fc .hz{font-size:30px;font-weight:700;color:var(--red-dark)}
+.fc .py{font-size:16px;color:var(--muted)}
+.fc .vi{font-size:14px;color:var(--muted)}
+.say{display:flex;gap:8px;justify-content:center;margin-top:8px}
+.sbtn{border:0;border-radius:999px;padding:6px 14px;font-weight:800;font-size:15px;color:#fff;display:flex;align-items:center;gap:4px}
+.sbtn.en{background:var(--sky)}
+.sbtn.zh{background:var(--red)}
+.sbtn:active{transform:scale(.95)}
+
+/* games */
+.gtabs{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.gtab{border:3px solid var(--line);background:var(--cream);border-radius:16px;padding:6px 14px;font-weight:800;font-size:15px;color:var(--ink)}
+.gtab.on{border-color:var(--yellow);background:var(--yellow)}
+.listen-big{display:flex;justify-content:center;margin:6px 0 14px}
+.listen-big button{width:96px;height:96px;border-radius:50%;border:0;background:var(--red);color:#fff;font-size:44px;box-shadow:0 6px 0 var(--red-dark)}
+.listen-big button:active{transform:translateY(3px);box-shadow:0 3px 0 var(--red-dark)}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px}
+.opt{border:4px solid var(--line);background:#fff;border-radius:22px;padding:12px;font-size:56px;min-height:110px;display:grid;place-items:center}
+.opt img{max-height:80px;max-width:100%}
+.opt.ok{border-color:var(--green);background:#E6F7EE;animation:pop .4s}
+.opt.no{border-color:var(--red);animation:shake .4s}
+@keyframes pop{50%{transform:scale(1.08)}}
+@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.gstat{text-align:center;font-weight:800;color:var(--muted);margin-top:10px}
+.match{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.mcol{display:flex;flex-direction:column;gap:10px}
+.mi{border:4px solid var(--line);background:#fff;border-radius:18px;padding:10px;font-weight:800;font-size:20px;min-height:62px;color:var(--ink)}
+.mi.zhi{font-size:24px}
+.mi.sel{border-color:var(--sky);background:#EAF4FD}
+.mi.matched{border-color:var(--green);background:#E6F7EE;opacity:.6;pointer-events:none}
+.mi.no{border-color:var(--red);animation:shake .4s}
+.win{text-align:center;padding:16px;font-size:22px;font-weight:800;color:var(--green)}
+
+/* video task */
+.sent{background:var(--yellow-soft);border-radius:20px;padding:16px;text-align:center;margin-bottom:12px}
+.sent .en{font-size:24px;font-weight:800}
+.sent .hz{font-size:28px;color:var(--red-dark);font-weight:700}
+.sent .py{color:var(--muted)}
+.task{border-left:6px solid var(--red);background:var(--cream);border-radius:12px;padding:12px 14px;margin:12px 0}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:10px 0}
+.three div{background:#fff;border:2px solid var(--line);border-radius:14px;padding:8px;text-align:center;font-size:14px;font-weight:700}
+.three div b{display:block;color:var(--red);font-size:16px}
+@media (max-width:480px){.three{grid-template-columns:1fr}}
+
+.btn{border:0;border-radius:999px;padding:12px 22px;font-weight:800;font-size:18px;color:#fff;background:var(--red);box-shadow:0 5px 0 var(--red-dark)}
+.btn:active{transform:translateY(3px);box-shadow:0 2px 0 var(--red-dark)}
+.btn.y{background:var(--yellow);color:var(--ink);box-shadow:0 5px 0 #D9A200}
+.btn.g{background:var(--green);box-shadow:0 5px 0 #2A8A57}
+.btn[disabled]{opacity:.45;pointer-events:none}
+.row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:16px}
+.donebar{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:16px;font-weight:800}
+.empty{text-align:center;padding:30px 10px;color:var(--muted)}
+.empty .big{font-size:60px}
+
+/* finish */
+.finish{text-align:center}
+.finish .big{font-size:84px;animation:bob 2s infinite}
+.stars{font-size:40px;letter-spacing:6px}
+.checklist{list-style:none;padding:0;margin:14px auto;max-width:360px;text-align:left}
+.checklist li{padding:8px 12px;border-radius:12px;background:var(--cream);margin-bottom:6px;font-weight:700}
+
+.toast{opacity:0;visibility:hidden;position:fixed;left:50%;bottom:20px;transform:translateX(-50%) translateY(120px);background:var(--ink);color:#fff;border-radius:16px;padding:10px 18px;font-size:16px;font-weight:700;transition:transform .3s;z-index:50;max-width:90vw;text-align:center}
+.toast.show{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.confetti{position:fixed;inset:0;pointer-events:none;z-index:40;overflow:hidden}
+.confetti span{position:absolute;top:-30px;font-size:28px;animation:fall 1.8s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(540deg)}}
+.tbtn{margin-top:10px;border:1px dashed var(--muted);background:transparent;color:var(--muted);border-radius:999px;padding:4px 12px;font-size:13px}
+.foot{text-align:center;color:var(--muted);font-size:14px;margin-top:30px}
+
+a.btn,a.gcard,a.lnk{text-decoration:none}
+.trail{grid-template-columns:repeat(7,1fr)}
+@media (max-width:640px){.trail{grid-template-columns:repeat(4,1fr);row-gap:16px}.trail:before{display:none}.dot{width:58px;height:58px;font-size:22px}}
+.stop.zoom .dot{border-style:dashed;border-color:#7B5CD6}
+.stop.zoom.now .dot{background:#7B5CD6;border-color:#5A3FB0;border-style:solid}
+.stop.zoom .lb{color:#5A3FB0}
+.sents{display:grid;gap:10px}
+.sents .sent{margin:0;padding:12px}
+.sents .sent .en{font-size:20px}.sents .sent .hz{font-size:24px}
+.plist{margin:6px 0 4px;padding-left:22px}
+.plist li{margin-bottom:10px;padding-left:4px}
+.plist li::marker{color:var(--red);font-weight:800}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.lnk{border-radius:14px;padding:8px 14px;font-weight:700;font-size:15px;border:2px solid var(--line);background:var(--cream);color:var(--ink)}
+.lnk.video{background:#FFECEC;border-color:#F7B9BC}
+.lnk.card{background:#EAF4FD;border-color:#B9D8F3}
+.lnk.game{background:var(--yellow-soft);border-color:var(--yellow)}
+.lnk.story{background:#F3ECFF;border-color:#CDB8F5}
+.tip{background:var(--yellow-soft);border-radius:14px;padding:10px 14px;margin-top:12px;font-size:16px}
+.goal{background:#E6F7EE;border:2px solid #A9DFC1;border-radius:14px;padding:10px 14px;margin:12px auto;max-width:520px;text-align:left}
+.which{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:420px;margin:0 auto}
+.wbtn{border:4px solid var(--line);border-radius:24px;padding:16px;font-size:46px;font-weight:800;background:#fff;color:var(--ink);display:flex;flex-direction:column;align-items:center}
+.wbtn small{font-size:15px;color:var(--muted)}
+.wbtn.en{color:var(--sky)}.wbtn.zh{color:var(--red);font-family:'Noto Sans SC','PingFang SC',sans-serif}
+.wbtn.ok{border-color:var(--green);background:#E6F7EE;animation:pop .4s}
+.wbtn.no{border-color:var(--red);animation:shake .4s}
+.reveal{text-align:center;font-size:24px;font-weight:800;min-height:36px;margin-top:10px}
+.reveal small{font-size:15px;color:var(--muted)}
+.zoompanel .zbadge{display:inline-block;background:#7B5CD6;color:#fff;border-radius:999px;padding:4px 14px;font-weight:800;font-size:15px}
+.zoompanel .about{font-size:18px}
+.prep{padding-left:22px}.prep li{margin-bottom:6px}
+.finish .task{text-align:left;max-width:520px;margin:12px auto}
+
+.links{flex-direction:column;align-items:stretch}
+.media{display:flex;flex-direction:column;gap:8px}
+.mrow{display:flex;gap:8px;align-items:center}
+.mrow .lnk{flex:1;text-align:left;font-family:inherit;cursor:pointer}
+.lnk.open{outline:3px solid var(--red)}
+.ext{flex:none;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;border:2px solid var(--line);background:#fff;color:var(--muted);text-decoration:none;font-weight:800}
+.player{border-radius:16px;overflow:hidden;background:#000;border:3px solid var(--line)}
+.player[hidden]{display:none}
+.player iframe{display:block;width:100%;border:0}
+.pvideo iframe{aspect-ratio:16/9}
+.pgame{background:#fff}.pgame iframe{height:min(75vh,560px)}
+.pfolder{background:#fff}.pfolder iframe{height:320px}
+.player .hint{margin:6px 10px;background:#fff}
+
+/* ===== hình hoạt hình ===== */
+.art{display:inline-block;width:1em;height:1em;object-fit:contain;vertical-align:middle}
+.artx{font-size:inherit;line-height:1}
+.art.card{width:84px;height:84px}
+.art.big{width:72px;height:72px;font-size:60px}
+.art.sm{width:30px;height:30px;font-size:26px}
+.art.tiny{width:24px;height:24px;font-size:20px}
+.art.gi{width:44px;height:44px;font-size:38px}
+.art.fl{width:46px;height:46px;font-size:40px}
+.art.sa{width:58px;height:58px;font-size:48px}
+.art.opta{width:76px;height:76px;font-size:60px}
+.art.mia{width:30px;height:30px;font-size:24px;flex:none}
+.art.rva{width:34px;height:34px;font-size:28px}
+.art.zart{width:60px;height:60px;font-size:50px;flex:none}
+.art.pmed{width:52px;height:52px;font-size:44px}
+.art.spin{animation:spin 1.6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ===== header ===== */
+.iconbtn{background:rgba(255,255,255,.2);border:0;border-radius:999px;width:36px;height:36px;font-size:18px;flex:none}
+.star-count.bump{animation:bump .5s}
+@keyframes bump{40%{transform:scale(1.35) rotate(-6deg)}}
+
+/* ===== hero động ===== */
+.hero .kicker{font-size:15px;font-weight:700;opacity:.9}
+.hero h1{animation:rise .6s both}
+.hero .tag{animation:rise .6s .15s both}
+.hero p{animation:rise .6s .3s both}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}}
+.hero .float{font-size:inherit}
+.f1{left:5%;top:22px}.f2{right:6%;top:36px;animation-delay:1s!important}.f3{left:12%;bottom:58px;animation-delay:2s!important}.f4{right:14%;bottom:62px;animation-delay:.5s!important}
+.cloud{position:absolute;background:rgba(255,255,255,.18);border-radius:999px;height:28px;animation:drift 26s linear infinite}
+.cloud:before,.cloud:after{content:"";position:absolute;background:inherit;border-radius:50%}
+.cloud:before{width:40px;height:40px;left:14px;top:-18px}.cloud:after{width:30px;height:30px;left:44px;top:-12px}
+.c1{width:110px;top:30px;left:-120px}.c2{width:90px;top:110px;left:-120px;animation-duration:34s;animation-delay:-12s}.c3{width:130px;top:70px;left:-140px;animation-duration:40s;animation-delay:-24s}
+@keyframes drift{to{transform:translateX(calc(100vw + 260px))}}
+.gcard{animation:pop-in .5s var(--d,0s) both}
+.gcard .ico{animation:bob 3s ease-in-out infinite}
+@keyframes pop-in{from{opacity:0;transform:scale(.85) translateY(10px)}}
+
+.kidbar,.mycard{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:#fff;border:3px solid var(--line);border-radius:18px;padding:10px 14px;margin:14px 0 0;position:relative;z-index:3}
+.kidbar{margin-top:-30px;margin-bottom:46px}
+.linkish{border:0;background:none;color:var(--red);font-weight:800;text-decoration:underline;padding:0}
+.ptable{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;font-size:15px;align-items:center}
+.ptable span{background:#fff;border:2px solid var(--line);border-radius:999px;padding:3px 10px;font-weight:700}
+
+/* ===== bản đồ ===== */
+.ghead{flex-wrap:wrap}
+.ghead .me{margin-left:auto;display:flex;align-items:center;gap:8px;background:#fff;border:2px solid var(--line);border-radius:16px;padding:6px 12px}
+.ghead .me small{display:block;color:var(--red);font-weight:800}
+.progress{position:relative;overflow:visible}
+.progress i{border-radius:999px}
+.walker{position:absolute;top:-6px;transform:translateX(-50%);transition:left .6s}
+.stop{animation:pop-in .4s var(--d,0s) both}
+.stop.now:not(.zoom) .dot{animation:pulse 1.6s infinite, hop 1.6s ease-in-out infinite}
+@keyframes hop{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.stop.done .dot{animation:shine 3s ease-in-out infinite}
+@keyframes shine{0%,100%{filter:brightness(1)}50%{filter:brightness(1.12)}}
+.rpts{margin-left:auto;background:var(--yellow-soft);border:2px solid var(--yellow);border-radius:999px;padding:2px 10px;font-weight:800;font-size:15px}
+.gold{display:block;text-align:center;margin-top:14px;padding:8px;border-radius:14px;border:2px dashed #E8D6A8;color:var(--muted);font-weight:800;text-decoration:none}
+.gold.on{background:linear-gradient(90deg,#FFE27A,#FFC72C,#FFE27A);background-size:200% 100%;border:2px solid #F2A900;color:var(--ink);animation:sheen 2.5s linear infinite}
+@keyframes sheen{to{background-position:-200% 0}}
+.rdone{border-color:var(--yellow)}
+.final .trophy{animation:bob 2.4s ease-in-out infinite}
+
+/* ===== bài học ===== */
+.dayhead .crumb b{color:var(--red)}
+.pin{animation:rise .35s both}
+.fc{animation:pop-in .45s var(--d,0s) both;position:relative}
+.fc .pic{border:0;background:none;padding:0;width:100%;cursor:pointer}
+.fc .pic.boing .art{animation:boing .6s}
+@keyframes boing{30%{transform:scale(1.25,.8)}55%{transform:scale(.9,1.15)}80%{transform:scale(1.05,.95)}}
+.fc.heard:after{content:"✔";position:absolute;top:8px;right:10px;background:var(--green);color:#fff;border-radius:50%;width:26px;height:26px;display:grid;place-items:center;font-size:15px;animation:pop .4s}
+.wig{animation:wig .4s}
+@keyframes wig{25%{transform:rotate(-2deg)}75%{transform:rotate(2deg)}}
+.sents .sent{display:flex;gap:12px;align-items:center;text-align:left;animation:pop-in .45s var(--d,0s) both}
+.sents .sent .say{justify-content:flex-start}
+.sart{flex:none;width:70px;height:70px;border-radius:18px;background:#fff;display:grid;place-items:center}
+.stxt{min-width:0}
+.plist li{animation:rise .4s var(--d,0s) both}
+
+/* ===== trò chơi ===== */
+a.gtab{text-decoration:none}
+.opt{animation:pop-in .35s var(--d,0s) both}
+.opt:hover .art{transform:scale(1.08)}
+.opt .art{transition:transform .2s}
+.mi{display:flex;align-items:center;gap:8px;justify-content:center;animation:pop-in .35s var(--d,0s) both}
+.mi.matched{animation:pop .4s}
+.listen-big button.ring{animation:ring .6s}
+@keyframes ring{20%{transform:rotate(-12deg) scale(1.08)}40%{transform:rotate(10deg)}60%{transform:rotate(-6deg)}}
+.gbar{height:8px;background:#F2E6C9;border-radius:999px;overflow:hidden;max-width:300px;margin:0 auto 6px}
+.gbar i{display:block;height:100%;background:var(--green);transition:width .4s}
+.win{display:flex;flex-direction:column;align-items:center;gap:6px}
+.win .art{animation:boing .8s}
+.stars3{font-size:34px;letter-spacing:4px}
+.reveal{display:flex;align-items:center;justify-content:center;gap:8px}
+.combo{position:fixed;left:50%;top:38%;transform:translate(-50%,-50%);z-index:60;background:linear-gradient(135deg,#FF9F1C,var(--red));color:#fff;font-weight:800;font-size:34px;padding:10px 26px;border-radius:999px;box-shadow:0 8px 0 rgba(0,0,0,.15);animation:comboin 1.4s both;pointer-events:none}
+@keyframes comboin{0%{transform:translate(-50%,-50%) scale(.3);opacity:0}20%{transform:translate(-50%,-50%) scale(1.15);opacity:1}35%{transform:translate(-50%,-50%) scale(1)}80%{opacity:1}100%{transform:translate(-50%,-90%);opacity:0}}
+.fpts{position:fixed;z-index:70;font-weight:800;font-size:24px;color:#F28C00;text-shadow:0 2px 0 #fff;pointer-events:none;transform:translate(-50%,0);animation:fly 1.2s ease-in forwards}
+@keyframes fly{0%{transform:translate(-50%,0) scale(.6);opacity:0}20%{transform:translate(-50%,-30px) scale(1.2);opacity:1}100%{transform:translate(calc(-50% + var(--dx)),var(--dy)) scale(.5);opacity:.2}}
+
+/* ===== hoàn thành ===== */
+.badge.fresh .art{animation:badge 1s both}
+@keyframes badge{0%{transform:scale(0) rotate(-200deg)}70%{transform:scale(1.3) rotate(10deg)}100%{transform:scale(1)}}
+.stars span{display:inline-block;animation:pop-in .4s both}
+.stars span:nth-child(2){animation-delay:.2s}.stars span:nth-child(3){animation-delay:.4s}
+.ptsum{background:var(--yellow-soft);border-radius:14px;padding:8px 14px;display:inline-block;margin-top:6px}
+.zhead{display:flex;gap:12px;align-items:center}
+
+/* ===== linh vật ===== */
+#mascot{position:fixed;left:12px;bottom:12px;z-index:45;display:flex;align-items:flex-end;gap:6px;pointer-events:none}
+#mascot .art{width:64px;height:64px;font-size:54px;filter:drop-shadow(0 4px 0 rgba(0,0,0,.12))}
+#mascot.jump .art{animation:boing .7s}
+#mascot .bubble{background:#fff;border:3px solid var(--yellow);border-radius:18px 18px 18px 4px;padding:6px 12px;font-weight:800;font-size:16px;max-width:220px;opacity:0;transform:translateY(8px) scale(.9);transition:.25s;margin-bottom:40px}
+#mascot.talk .bubble{opacity:1;transform:none}
+@media (max-width:560px){#mascot .art{width:48px;height:48px}#mascot .bubble{font-size:14px;margin-bottom:30px}}
+
+/* ===== hồ sơ ===== */
+.overlay{position:fixed;inset:0;background:rgba(58,42,26,.55);z-index:80;display:grid;place-items:center;padding:16px;animation:fadein .25s}
+@keyframes fadein{from{opacity:0}}
+.modal{background:#fff;border-radius:26px;padding:20px;max-width:380px;width:100%;display:flex;flex-direction:column;gap:6px;animation:pop-in .35s both;text-align:center}
+.modal h3{margin:4px 0 0;font-size:24px}
+.modal label{text-align:left;font-weight:800;font-size:15px;margin-top:6px}
+.modal input{font:inherit;font-size:18px;border:3px solid var(--line);border-radius:14px;padding:8px 12px}
+.modal input:focus{outline:none;border-color:var(--yellow)}
+.modal .small{font-size:13px;text-align:left;margin:0}
+.mart .art{animation:spin 6s linear infinite}
+
+/* ===== bảng vàng ===== */
+.goldhead{display:flex;gap:12px;align-items:center;margin:18px 0 10px}
+.goldhead h2{margin:0;font-size:28px}.goldhead small{color:var(--muted);font-weight:700}
+.goldhead .art{animation:bob 2.4s infinite}
+.podium{display:flex;justify-content:center;align-items:flex-end;gap:10px;margin:10px 0 18px}
+.pod{flex:1;max-width:150px;text-align:center;animation:rise .6s var(--d,0s) both}
+.pn{font-weight:800;font-size:17px;line-height:1.1;margin-top:4px;word-break:break-word}
+.pp{color:var(--muted);font-weight:700;font-size:14px}
+.pb{margin-top:6px;border-radius:14px 14px 0 0;color:#fff;font-weight:800;font-size:28px;display:grid;place-items:center}
+.p1 .pb{height:110px;background:linear-gradient(#FFD34D,#F2A900)}
+.p2 .pb{height:80px;background:linear-gradient(#D9DEE5,#A8B1BD)}
+.p3 .pb{height:60px;background:linear-gradient(#F0B98A,#C9814A)}
+.p1 .pm .art{animation:bob 2s infinite}
+.ranks{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+.ranks li{display:flex;align-items:center;gap:10px;background:var(--cream);border-radius:14px;padding:8px 12px;animation:rise .4s var(--d,0s) both}
+.rn{width:30px;height:30px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;font-weight:800;flex:none}
+.nm{flex:1;font-weight:800;min-width:0;overflow-wrap:anywhere}.pt{font-weight:800;color:var(--red);font-variant-numeric:tabular-nums}
+.loading{text-align:center;color:var(--muted)}
+
+.newtab{opacity:.6}
+@media (prefers-reduced-motion: reduce){
+  *,*:before,*:after{animation:none!important;transition:none!important}
+}
+.fc .sbtn{white-space:nowrap;padding:6px 10px;font-size:14px}
+.fc .say{flex-wrap:wrap}
+
+.mi.hzt{font-size:28px;font-family:'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif}
+.mi.pyt{font-size:19px;color:var(--red-dark)}
+.hzq{display:flex;align-items:center;justify-content:center;gap:18px;margin-bottom:8px}
+.hzpic{width:110px;height:110px;border-radius:26px;background:var(--yellow-soft);display:grid;place-items:center}
+.hzq .listen-big{margin:0}
+.hzo{font-size:clamp(26px,7vw,40px);font-weight:700;color:var(--ink);min-height:90px}
+.hzopts{grid-template-columns:repeat(2,1fr)}
+.art[src^="img/"]{border-radius:14px}
+.gtab.gdone{border-color:var(--green);background:#E6F7EE}
+.gtab.glock{opacity:.55}
+.gtab.gdone.on{background:var(--yellow);border-color:var(--yellow)}
+
+/* ===== nhân vật ảnh thật ===== */
+.crew{position:relative;z-index:1;display:flex;justify-content:center;align-items:flex-end;gap:clamp(10px,3vw,30px);margin:18px auto 0}
+.mate{margin:0;display:flex;flex-direction:column;align-items:center;gap:6px;animation:rise .6s var(--d,0s) both}
+.mate img{width:clamp(78px,19vw,124px);aspect-ratio:1;object-fit:cover;border-radius:50%;border:4px solid #fff;box-shadow:0 6px 0 rgba(0,0,0,.15);background:#fff;animation:bob 4s ease-in-out infinite;animation-delay:var(--d,0s)}
+.mate.main img{width:clamp(100px,25vw,156px);border-color:var(--yellow)}
+.mate figcaption{display:flex;flex-direction:column;align-items:center;line-height:1.1}
+.mate figcaption b{font-size:16px}
+.mate figcaption span{background:#fff;color:var(--ink);border-radius:999px;padding:2px 10px;font-weight:800;font-size:14px;margin-top:3px}
+.art[src*="characters/"]{object-fit:cover;border-radius:18px}
+#mascot .art.mface{border-radius:50%;border:3px solid #fff;box-shadow:0 4px 0 rgba(0,0,0,.12);object-fit:cover}
+.mportrait{width:110px;height:110px;border-radius:50%;object-fit:cover;border:4px solid var(--yellow);margin:0 auto}
+@media (max-width:560px){.hero{padding-bottom:64px}}
+
+/* ===== ảnh minh hoạ thật (img/) to hơn emoji ===== */
+.art[src^="img/"]{object-fit:cover;border-radius:16px;max-height:none!important}
+.fc .pic{height:auto;min-height:84px}
+.fc .art.card[src^="img/"]{width:100%;max-width:170px;height:auto;aspect-ratio:1}
+.opt .art.opta[src^="img/"]{width:100%;max-width:170px;height:auto;aspect-ratio:1}
+.opt:has(.art[src^="img/"]){padding:8px}
+.sart:has(.art[src^="img/"]){width:96px;height:96px;background:none}
+.sart .art.sa[src^="img/"]{width:96px;height:96px}
+.hzpic .art.opta[src^="img/"]{width:110px;height:110px}
+.mi .art.mia[src^="img/"]{width:40px;height:40px;border-radius:10px}
+</style>
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a class="logo" href="#/"><span class="logo-badge">🧭</span><span>Little Language Explorers</span></a>
+  <span class="sp"></span>
+  <button class="iconbtn" id="muteBtn" aria-label="Bật/tắt âm thanh">🔊</button>
+  <span class="star-count" id="starCount">⭐ 0</span>
+</div></header>
+<main id="app"></main>
+<div id="mascot" aria-hidden="true"><span class="mimg"></span><div class="bubble"></div></div>
+<div class="toast" id="toast"></div>
+<script>
+/* =====================================================================
+   PHẦN DỮ LIỆU — SỬA NỘI DUNG Ở ĐÂY
+   ---------------------------------------------------------------------
+   Mỗi nhóm có 21 ngày, chia 3 vòng × 7 ngày. Ngày 7, 14, 21 là buổi Zoom.
+   Mỗi ngày học:
+     t     : tên bài
+     w     : thẻ từ  W(hình, tiếng Anh, chữ Hán, pinyin, nghĩa Việt)
+             hình = emoji hoặc đường dẫn ảnh (vd "img/apple.png")
+     s     : mẫu câu S(tiếng Anh, chữ Hán, pinyin)
+     steps : các bước "Ba mẹ làm cùng bé"
+     tip   : mẹo         goal : "Hoàn thành khi…"
+     links : L(loại, tên, đường link) — loại: video | card | game
+     clip  : true nếu hôm nay có quay clip gửi nhóm Zalo
+     Video YouTube, file/thư mục Google Drive và game wordwall.net/play/… tự hiện ngay trên trang.
+     Game dạng wordwall.net/resource/… cần thêm link nhúng: L("game","tên","link","link nhúng")
+     (lấy ở nút Embed / Nhúng của Wordwall, chép phần src="…").
+     Mẫu câu tự có hình minh hoạ theo từ khoá; muốn chọn hình khác: S("…","…","…") rồi thêm .img
+   Ngày Zoom: zoom:true, t, about (nội dung buổi), prep (cần ôn), links
+   ===================================================================== */
+const ZALO_LINK = "https://zalo.me/g/atdjpv272";
+const ZOOM_LINK = "";   // dán link Zoom vào đây; để trống thì web nhắc xem link trong nhóm Zalo
+const SCORE_API = "";   // dán link Web App của Apps Script (bảng điểm) vào đây để bật Bảng vàng Top 10
+const IMG_DIR = "img/";   // thư mục ảnh minh hoạ (.jpg, tên theo từ tiếng Anh). Để "" nếu chưa có ảnh.
+
+const W=(img,en,zh,py,vi)=>({img,en,zh,py,vi});
+const S=(en,zh,py)=>({en,zh,py});
+const L=(kind,label,url,embed)=>({kind,label,url,embed});
+
+const ROUNDS = [
+  {en:"Discovery Round",    vi:"Vòng khám phá",   icon:"🔍"},
+  {en:"Challenge Round",    vi:"Vòng bứt phá",    icon:"🚀"},
+  {en:"Championship Round", vi:"Vòng chinh phục", icon:"🏔️"}
+];
+
+/* ============================ LITTLE SEED ============================ */
+const DRV = id => "https://drive.google.com/file/d/"+id+"/view";
+const SEED_DAYS = [
+/* ---------- W1 GREETINGS – Vòng khám phá ---------- */
+/* 1 */ {t:"Xin chào! Hello! 你好!",
+  w:[W("👋","hello","你好","nǐ hǎo","xin chào"), W("🙋","goodbye","再见","zàijiàn","tạm biệt"),
+     W("👨","daddy","爸爸","bàba","bố"), W("👩","mommy","妈妈","māma","mẹ")],
+  steps:["Xem video Unit 1 Lesson 1: bản tiếng Anh (Leo & Buffy) rồi bản tiếng Trung (Bunny & Xiaobao). Vừa xem vừa vẫy tay khi nghe hello / 你好.",
+         "Ba mẹ vẫy tay chào \"Hello!\", bé chào lại bằng tiếng Trung \"你好!\". Đổi lại: ba mẹ nói \"再见!\", bé đáp \"Goodbye!\".",
+         "Bé chỉ vào ba và mẹ, nói daddy / 爸爸, mommy / 妈妈.",
+         "Chơi game ghép từ với hình."],
+  tip:"Cho bé chào gấu bông bằng một thứ tiếng, rồi để gấu \"chào lại\" bằng thứ tiếng kia.",
+  goal:"Bé nói được ít nhất 2 từ, bằng tiếng Anh hoặc tiếng Trung.",
+  links:[L("video","Unit 1 Lesson 1 – Leo & Buffy (tiếng Anh)",DRV("18y8qmhgrXc5cOE0GIrMx1BhLey-olQdG")),
+         L("video","Unit 1 Lesson 1 – Bunny & Xiaobao (tiếng Trung)",DRV("1s0rfRKcJjKchrpCyPZ3fjqELMXnkeGeK")),
+         L("game","Game ghép từ với hình","https://wordwall.net/play/104660/945/612")]},
+/* 2 */ {t:"Người và con vật thân quen",
+  w:[W("🧑‍🏫","teacher","老师","lǎoshī","giáo viên"), W("img/characters/friends.jpg","friend","朋友","péngyou","bạn bè"),
+     W("🐶","puppy","小狗","xiǎogǒu","chó con"), W("🐱","kitten","小猫","xiǎomāo","mèo con")],
+  steps:["Xem lại video Unit 1 Lesson 1.",
+         "Trò \"Ai đây?\": ba mẹ giơ hình (hoặc chỉ vào người, thú bông), bé nói tên bằng tiếng Anh rồi tiếng Trung.",
+         "Ba mẹ nói từ tiếng Anh, bé nói lại bằng tiếng Trung; rồi đổi ngược lại."],
+  tip:"Bé thích con vật nào thì bắt đầu từ con vật đó.",
+  goal:"Bé gọi đúng tên ít nhất 3 hình bằng một thứ tiếng.",
+  links:[L("video","Unit 1 Lesson 1 – Leo & Buffy (tiếng Anh)",DRV("18y8qmhgrXc5cOE0GIrMx1BhLey-olQdG")),
+         L("video","Unit 1 Lesson 1 – Bunny & Xiaobao (tiếng Trung)",DRV("1s0rfRKcJjKchrpCyPZ3fjqELMXnkeGeK"))]},
+/* 3 */ {t:"Chào đúng người",
+  w:[W("🙇","Hello (polite)","您好","nín hǎo","con chào (người lớn)"), W("🙋‍♀️","Hello, teacher","老师好","lǎoshī hǎo","em chào cô"),
+     W("🙌","Hello, everyone","大家好","dàjiā hǎo","chào mọi người"), W("👨‍👩‍👧","Hello, you all","你们好","nǐmen hǎo","chào các bạn / cả nhà")],
+  steps:["Xem video Unit 1 Lesson 2 (tiếng Anh, rồi tiếng Trung).",
+         "Ba mẹ giải thích: 你好 chào bạn; 您好 chào người lớn; 老师好 chào thầy cô; 你们好 chào nhiều người trước mặt; 大家好 chào cả lớp, cả nhà.",
+         "Trò \"Chào đúng người\": ba mẹ đóng vai ông bà, cô giáo, cả nhà. Bé chọn câu chào phù hợp và nói bằng tiếng Trung, rồi tiếng Anh."],
+  tip:"Ba mẹ cố tình chào sai (nói 你好 với ông) để bé sửa lại thành 您好.",
+  goal:"Bé chào đúng ít nhất 2 vai.",
+  links:[L("video","Unit 1 Lesson 2 – Leo & Buffy (tiếng Anh)",DRV("1ymngr-FQVh3Rf01pyJo3DdR-owX_8idV")),
+         L("video","Unit 1 Lesson 2 – Bunny & Xiaobao (tiếng Trung)",DRV("1M3L43gCdg-GOsTkU1kOsI8adW3biPPmW"))]},
+/* 4 */ {t:"Chào bạn cún, tạm biệt bạn mèo",
+  w:[W("🐶","Hello, puppy!","小狗，你好！","xiǎogǒu, nǐ hǎo!","chào cún con"), W("🐱","Goodbye, kitten!","小猫，再见！","xiǎomāo, zàijiàn!","tạm biệt mèo con"),
+     W("🤱","Goodbye, mommy!","妈妈，再见！","māma, zàijiàn!","tạm biệt mẹ"), W("🏫","Goodbye, teacher!","老师，再见！","lǎoshī, zàijiàn!","tạm biệt cô")],
+  steps:["Xem lại video Unit 1 Lesson 2.",
+         "Ba mẹ nói cụm tiếng Trung, bé nói cụm tiếng Anh cùng nghĩa (và ngược lại).",
+         "Diễn tình huống: sáng đi học chào mẹ, đến lớp chào cô, về nhà chào cún."],
+  tip:"Mỗi lần bé nói đúng, cho bé \"đập tay\" với thú bông.",
+  goal:"Bé nói được ít nhất 2 cụm bằng một thứ tiếng.",
+  links:[L("video","Unit 1 Lesson 2 – Leo & Buffy (tiếng Anh)",DRV("1ymngr-FQVh3Rf01pyJo3DdR-owX_8idV")),
+         L("video","Unit 1 Lesson 2 – Bunny & Xiaobao (tiếng Trung)",DRV("1M3L43gCdg-GOsTkU1kOsI8adW3biPPmW"))]},
+/* 5 */ {t:"Truyện \"你好！\"",
+  s:[S("Hello!","你好！","nǐ hǎo!"), S("Hello, teacher!","老师好！","lǎoshī hǎo!"), S("Hello, you all!","你们好！","nǐmen hǎo!"),
+     S("Hello, everyone!","大家好！","dàjiā hǎo!"), S("Goodbye!","再见！","zàijiàn!")],
+  steps:["Đọc truyện \"你好！\" cùng bé (mở PDF ngay trên trang), xem thêm video Unit 1 Story.",
+         "Nghe từng câu ở bước Học từ: bấm 🇨🇳 nghe tiếng Trung, rồi 🇬🇧 nghe tiếng Anh.",
+         "Câu hỏi hiểu: ba mẹ đọc một câu tiếng Trung, bé chỉ vào nhân vật đang nói và nói câu đó bằng tiếng Anh."],
+  goal:"Bé nói lại được ít nhất 2 câu chào trong truyện.",
+  links:[L("story","Truyện 1.1 你好！(PDF)",DRV("1Of_ZxNfoqeNcI40npoUG4X27egNnLaIW")),
+         L("video","Unit 1 Story",DRV("1lmfAWBHqDAiKposZfMDQT2uozAIXXkkL"))]},
+/* 6 */ {t:"Truyện \"小猫，再见！\" – Một ngày của bé",
+  s:[S("Goodbye, mommy!","妈妈，再见！","māma, zàijiàn!"), S("Hello, teacher!","老师好！","lǎoshī hǎo!"), S("Hello, everyone!","大家好！","dàjiā hǎo!"),
+     Object.assign(S("Hello, friend!","朋友，你好！","péngyou, nǐ hǎo!"),{img:"img/characters/friends.jpg"}), S("Goodbye, teacher!","老师，再见！","lǎoshī, zàijiàn!"),
+     S("Hello, puppy!","小狗，你好！","xiǎogǒu, nǐ hǎo!"), S("Hello, daddy and mommy!","爸爸，妈妈，你们好！","bàba, māma, nǐmen hǎo!")],
+  steps:["Đọc truyện \"小猫，再见！\" cùng bé.",
+         "Nghe đoạn \"Một ngày của bé\" ở bước Học từ: sáng chào mẹ, đến lớp chào cô và các bạn, chiều về chào cún và cả nhà.",
+         "Câu hỏi hiểu: ba mẹ đọc câu tiếng Trung (vd 老师好), bé trả lời bằng tiếng Anh: bé đang chào ai?"],
+  tip:"Diễn lại cả ngày bằng thú bông, bé làm \"người dẫn chuyện\".",
+  goal:"Bé trả lời đúng ít nhất 2 câu hỏi \"bé đang chào ai?\".",
+  links:[L("story","Truyện 1.2 小猫，再见！(PDF)",DRV("1OfsoKK23sb0qfTbo-h-8nrC_OJUvNI6v"))]},
+/* 7 */ {zoom:true, t:"Zoom: Chào đúng người",
+  about:"Bé mang worksheet \"Ai đến chơi nhà em?\" đã tô màu (thầy cô, bạn, bố mẹ, ông bà, cún, mèo). Giáo viên giơ từng hình, bé chào bằng tiếng Anh rồi tiếng Trung. Cuối buổi làm quiz chuyển ngữ vòng 1.",
+  prep:["hello / goodbye – 你好 / 再见","teacher, friend, puppy, kitten – 老师, 朋友, 小狗, 小猫","您好 · 老师好 · 大家好 · 你们好: chào ai thì dùng câu nào"]},
+
+/* ---------- W2 INTRODUCTION – Vòng bứt phá ---------- */
+/* 8 */ {t:"Đếm 1–5 / 一二三四五",
+  w:[W("1️⃣","one","一","yī","một"),W("2️⃣","two","二","èr","hai"),W("3️⃣","three","三","sān","ba"),W("4️⃣","four","四","sì","bốn"),W("5️⃣","five","五","wǔ","năm")],
+  steps:["Xem video bài hát số, vừa hát vừa giơ ngón tay.",
+         "Đếm 5 đồ vật trong nhà: lần 1 bằng tiếng Anh, lần 2 bằng tiếng Trung.",
+         "Ba mẹ giơ số ngón tay, bé nói số bằng thứ tiếng ba mẹ chỉ định."],
+  tip:"一 二 三 là 1, 2, 3 nét ngang. Ba mẹ chỉ cho bé xem cho vui, không cần viết.",
+  goal:"Bé đếm được tới 3 trở lên bằng mỗi thứ tiếng.",
+  links:[L("video","Video bài hát số",'https://drive.google.com/drive/folders/18U-wTSXsS_lto1QoV2ZZUCtdlZiwfKas'),
+         L("card","Flashcard 1–5",DRV("1_dgU6Lt_GDaY7nxJxzskbN-N86Q0IhX1"))]},
+/* 9 */ {t:"Đếm 6–10 / 六七八九十",
+  w:[W("6️⃣","six","六","liù","sáu"),W("7️⃣","seven","七","qī","bảy"),W("8️⃣","eight","八","bā","tám"),W("9️⃣","nine","九","jiǔ","chín"),W("🔟","ten","十","shí","mười")],
+  steps:["Hát lại bài số, nghe tiếp tới 10.",
+         "Đếm xen kẽ: ba mẹ nói \"one\", bé nói \"二\", ba mẹ nói \"three\", bé nói \"四\"… đến 10.",
+         "Ôn bằng flashcard."],
+  goal:"Bé đếm xen kẽ được tới 6 trở lên.",
+  links:[L("card","Flashcard 6–10",DRV("1w2B8kOE9qJZ0HgJryQ_lCW1QsFdv8S6d"))]},
+/* 10 */ {t:"Con tên là gì? What is your name?",
+  w:[W("❓","What is your name?","你叫什么名字？","nǐ jiào shénme míngzi?","bạn tên là gì?"), W("img/characters/bong.jpg","My name is…","我叫…","wǒ jiào…","tôi tên là…")],
+  s:[S("What is your name?","你叫什么名字？","nǐ jiào shénme míngzi?"), S("My name is…","我叫…","wǒ jiào…")],
+  steps:["Xem video \"What's your name\" và Unit 2 Lesson 1.",
+         "Hoạt động \"Tên tiếng Trung của bạn là gì?\": ba mẹ cùng bé chọn một tên tiếng Trung (vd 小明, 安娜, 乐乐).",
+         "Ba mẹ hỏi \"What is your name?\", bé trả lời \"我叫…\" bằng tên tiếng Trung; rồi đổi ngược lại."],
+  tip:"Viết tên tiếng Trung của bé lên giấy, dán ở góc học tập.",
+  goal:"Bé trả lời được câu hỏi tên bằng ít nhất một thứ tiếng.",
+  links:[L("video","Unit 2 – What's your name",DRV("117SnUTjjbIaiqkiOE4Z0ojHOk-9-UOG-")),
+         L("video","Unit 2 Lesson 1 – Bunny & Xiaobao",DRV("1vJQ8Pks6pLGbAszmeoXjN2m3e9EnGZJ9")),
+         L("video","你叫什么名字？– Little Fox","https://www.youtube.com/watch?v=uhmjwL3Xpt0")]},
+/* 11 */ {t:"Con mấy tuổi? How old are you?",
+  w:[W("🤔","How old are you?","你几岁？","nǐ jǐ suì?","bạn mấy tuổi?"), W("🖐️","I'm five","我五岁","wǒ wǔ suì","con 5 tuổi"), W("🎂","I'm six","我六岁","wǒ liù suì","con 6 tuổi")],
+  steps:["Xem video Unit 2 Lesson 2 và bài hát \"你几岁？\".",
+         "Ba mẹ hỏi bằng tiếng Anh, bé giơ ngón tay và trả lời bằng tiếng Trung; rồi đổi ngược lại.",
+         "Bé hỏi tuổi thú bông, ba mẹ trả lời thay."],
+  goal:"Bé nói được tuổi mình bằng cả hai thứ tiếng.",
+  links:[L("video","Unit 2 Lesson 2 – Leo & Buffy",DRV("1BIJzkcUMvNUJ3uG-Y7zejOqvSiAprEMc")),
+         L("video","Unit 2 Lesson 2 – Bunny & Xiaobao",DRV("1CIQizBC3goXsaEP7nKQRFEq4W3W2hLrm")),
+         L("video","How Old Are You? (你几岁？) – Little Fox","https://www.youtube.com/watch?v=ngOM7skqjjo")]},
+/* 12 */ {t:"Truyện \"我叫家明\"",
+  w:[W("🤝","Nice to meet you","很高兴认识你","hěn gāoxìng rènshi nǐ","rất vui được gặp bạn")],
+  s:[S("Hello!","你好！","nǐ hǎo!"), S("My name is Jiaming.","我叫家明。","wǒ jiào Jiāmíng."), S("Nice to meet you!","很高兴认识你！","hěn gāoxìng rènshi nǐ!")],
+  steps:["Đọc truyện \"我叫家明\" cùng bé.",
+         "Nghe từng câu ở bước Học từ và nói theo.",
+         "Câu hỏi hiểu: \"Bạn trong truyện tên là gì?\" – bé trả lời bằng tiếng Anh."],
+  goal:"Bé nói được \"很高兴认识你\" hoặc \"Nice to meet you\".",
+  links:[L("story","Truyện 2-2 我叫家明 (PDF)",DRV("15oMbUg0vBg7IteNYaoFdQbGrrsGYdzuJ"))]},
+/* 13 */ {t:"Truyện \"你几岁了\" – Bé tự giới thiệu 🎥", clip:true,
+  s:[S("Hello!","你好！","nǐ hǎo!"), Object.assign(S("My name is Anna.","我叫安娜。","wǒ jiào Ānnà."),{img:"img/characters/anna.jpg"}), S("I'm eight years old.","我八岁。","wǒ bā suì."),
+     S("Nice to meet you!","很高兴认识你！","hěn gāoxìng rènshi nǐ!")],
+  steps:["Đọc truyện \"你几岁了\" và xem video Unit 2 Story.",
+         "Nghe đoạn giới thiệu của Anna ở bước Học từ. Câu hỏi hiểu: Anna mấy tuổi? (trả lời bằng thứ tiếng còn lại).",
+         "Bé thay tên và tuổi của mình vào đoạn mẫu, tập 2 lần rồi quay clip gửi nhóm Zalo."],
+  tip:"Bé có thể nói tiếng Anh một câu, tiếng Trung một câu.",
+  goal:"Có clip, bé nói được tên và tuổi.",
+  links:[L("story","Truyện 2-4 你几岁了 (PDF)",DRV("1O_nBP8rF0c52IAEQ5ilDvxDZVz1l6vcW")),
+         L("video","Unit 2 Story – How old are you",DRV("1KPP1mR8rwCrTFyZJUCgNlX_VkDmJ8XZO"))]},
+/* 14 */ {zoom:true, t:"Zoom: Tự giới thiệu",
+  about:"Bé mang thẻ tên tự làm (tên tiếng Việt, tên tiếng Trung, vẽ số tuổi). Giáo viên hỏi 你叫什么名字？你几岁？ và câu tiếng Anh tương ứng; bé trả lời rồi chào \"很高兴认识你！\". Cuối buổi làm quiz chuyển ngữ vòng 2.",
+  prep:["Số 1–10 bằng hai thứ tiếng","你叫什么名字？– 我叫… / What is your name? – My name is…","你几岁？– 我…岁 / How old are you? – I'm…","很高兴认识你 / Nice to meet you"]},
+
+/* ---------- W3 FAMILY – Vòng chinh phục ---------- */
+/* 15 */ {t:"Gia đình – các bạn nam",
+  w:[W("👨","daddy","爸爸","bàba","bố"), W("👦","older brother","哥哥","gēge","anh trai"), W("🧒","younger brother","弟弟","dìdi","em trai"), W("👴","grandpa","爷爷","yéye","ông nội")],
+  steps:["Xem video Unit 3 Lesson 1 (Leo bản tiếng Anh, Xiaobao bản tiếng Trung).",
+         "Bé chỉ vào ảnh gia đình, gọi tên từng người bằng tiếng Anh rồi tiếng Trung.",
+         "Ba mẹ nói tên tiếng Trung, bé chỉ đúng người trong ảnh."],
+  goal:"Bé gọi đúng ít nhất 3 người bằng một thứ tiếng.",
+  links:[L("video","Unit 3 Lesson 1 – Leo (tiếng Anh)",DRV("1vqqYtqrFtVh5mW1sm8eQPfNDZ_qygOzD")),
+         L("video","Unit 3 Lesson 1 – Xiaobao (tiếng Trung)",DRV("1SPcmdeM8RmZK--_nDifdM1VCTFT5Huh7"))]},
+/* 16 */ {t:"Gia đình – các bạn nữ",
+  w:[W("👩","mommy","妈妈","māma","mẹ"), W("👱‍♀️","older sister","姐姐","jiějie","chị gái"), W("👧","younger sister","妹妹","mèimei","em gái"), W("👵","grandma","奶奶","nǎinai","bà nội")],
+  steps:["Xem lại video Unit 3 Lesson 1.",
+         "Trò \"Hai ngôi nhà\": vẽ một nhà nam, một nhà nữ. Bé xếp hình người thân vào đúng nhà và gọi tên bằng hai thứ tiếng.",
+         "Ôn bằng flashcard gia đình."],
+  goal:"Bé xếp đúng nhà ít nhất 6/8 người.",
+  links:[L("video","Unit 3 Lesson 1 – Xiaobao (tiếng Trung)",DRV("1SPcmdeM8RmZK--_nDifdM1VCTFT5Huh7")),
+         L("card","Flashcard gia đình",DRV("1OgmLbaakzsuUDxcrII1J_Xga1Y2qPze9"))]},
+/* 17 */ {t:"Đây là ai? Who is he? Who is she?",
+  w:[W("👨","my daddy","我爸爸","wǒ bàba","bố của con"), W("👩","my mommy","我妈妈","wǒ māma","mẹ của con"),
+     W("👦","my older brother","我哥哥","wǒ gēge","anh trai của con"), W("👱‍♀️","my older sister","我姐姐","wǒ jiějie","chị gái của con")],
+  s:[S("Who is he?","他是谁？","tā shì shéi?"), S("He is my daddy.","他是我爸爸。","tā shì wǒ bàba."),
+     S("Who is she?","她是谁？","tā shì shéi?"), S("She is my mommy.","她是我妈妈。","tā shì wǒ māma.")],
+  steps:["Xem video Unit 3 Lesson 2.",
+         "Ba mẹ chỉ vào ảnh và hỏi \"他是谁？\" / \"Who is he?\". Bé trả lời một từ trước, rồi cả câu.",
+         "他 và 她 đọc giống nhau (tā). Bé phân biệt bằng hình và bằng tiếng Anh he / she."],
+  goal:"Bé trả lời đúng ít nhất 2 câu \"Who is he/she?\".",
+  links:[L("video","Unit 3 Lesson 2 – Leo & Buffy",DRV("1v4QtLQ_w0am_XNPdHFNlsKY1juGa-_cc")),
+         L("video","Unit 3 Lesson 2 – Bunny & Xiaobao",DRV("1oypFWDS1h3AioDUubncQDdY604EiCfa1"))]},
+/* 18 */ {t:"Tên và tuổi người thân",
+  w:[W("👴","Grandpa is sixty","爷爷六十岁","yéye liùshí suì","ông 60 tuổi"), W("👨","Daddy is forty","爸爸四十岁","bàba sìshí suì","bố 40 tuổi"),
+     W("👩","Mommy is thirty-eight","妈妈三十八岁","māma sānshíbā suì","mẹ 38 tuổi"), W("👦","Brother is ten","哥哥十岁","gēge shí suì","anh 10 tuổi")],
+  s:[S("His name is…","他叫…","tā jiào…"), S("Her name is…","她叫…","tā jiào…"), S("He is … years old.","他…岁。","tā … suì."),
+     S("twenty","二十","èrshí"), S("thirty","三十","sānshí"), S("forty","四十","sìshí"), S("fifty","五十","wǔshí"), S("sixty","六十","liùshí")],
+  steps:["Xem lại video Unit 3 Lesson 2.",
+         "Làm quen số tròn chục 二十, 三十, 四十… qua tuổi người thân (không cần nhớ hết).",
+         "Bé hỏi tuổi ba mẹ, rồi nói lại bằng thứ tiếng còn lại: \"爸爸四十岁\" → \"Daddy is forty\"."],
+  goal:"Bé nói được tên hoặc tuổi của 1 người thân.",
+  links:[L("video","Unit 3 Lesson 2 – Bunny & Xiaobao",DRV("1oypFWDS1h3AioDUubncQDdY604EiCfa1"))]},
+/* 19 */ {t:"Truyện \"你是谁？\"",
+  s:[S("Who are you?","你是谁？","nǐ shì shéi?"), S("Who is he?","他是谁？","tā shì shéi?"), S("He is my daddy.","他是我爸爸。","tā shì wǒ bàba."),
+     S("Who is she?","她是谁？","tā shì shéi?"), S("She is my older sister.","她是我姐姐。","tā shì wǒ jiějie.")],
+  steps:["Đọc truyện \"你是谁？\" và xem video Unit 3 Story.",
+         "Nghe từng câu ở bước Học từ và nói theo.",
+         "Câu hỏi hiểu: ba mẹ đọc câu tiếng Trung, bé chỉ đúng người trong tranh và nói câu tiếng Anh."],
+  goal:"Bé trả lời đúng ít nhất 2 câu hỏi \"Who…?\".",
+  links:[L("story","Truyện 2-1 你是谁？(PDF)",DRV("1ObbG6dRP633cxuhhcovtfHKoHvwponRk")),
+         L("video","Unit 3 Lesson 4 – Story",DRV("1t_oB7dX0vJmwyZ9ld1Hd8c1MysnlYpxv"))]},
+/* 20 */ {t:"Truyện \"我爱我家\" – Gia đình Anna",
+  s:[Object.assign(S("Hello! My name is Anna.","你好！我叫安娜。","nǐ hǎo! wǒ jiào Ānnà."),{img:"img/characters/anna.jpg"}), S("I'm eight years old.","我八岁。","wǒ bā suì."),
+     S("He is my dad. His name is David.","他是我爸爸，他叫大卫。","tā shì wǒ bàba, tā jiào Dàwèi."), S("He is forty years old.","他四十岁。","tā sìshí suì."),
+     S("She is my mom. Her name is Lily.","她是我妈妈，她叫丽丽。","tā shì wǒ māma, tā jiào Lìlì."), S("She is thirty-eight years old.","她三十八岁。","tā sānshíbā suì."),
+     S("He is my younger brother. His name is Tom.","他是我弟弟，他叫汤姆。","tā shì wǒ dìdi, tā jiào Tāngmǔ."), S("He is five years old.","他五岁。","tā wǔ suì."),
+     S("Nice to meet you!","很高兴认识你！","hěn gāoxìng rènshi nǐ!")],
+  steps:["Đọc truyện \"我爱我家\" cùng bé.",
+         "Nghe đoạn giới thiệu gia đình Anna ở bước Học từ, từng câu.",
+         "Câu hỏi hiểu bằng thứ tiếng còn lại: Who is David? How old is Tom? 丽丽是谁？",
+         "Bé vẽ gia đình mình để mang tới buổi Zoom."],
+  goal:"Bé trả lời đúng ít nhất 2 câu hỏi về gia đình Anna.",
+  links:[L("story","Truyện 2-8 我爱我家 (PDF)",DRV("1ObFrPHo9LCqQrWgdXcsgGJwZuZb8ppWb"))]},
+/* 21 */ {zoom:true, t:"Zoom: Giới thiệu gia đình em",
+  about:"Bé mang tranh vẽ hoặc ảnh gia đình. Giáo viên chỉ từng người và hỏi 他是谁？她是谁？他叫什么名字？他几岁？ (và câu tiếng Anh). Cuối buổi làm quiz chuyển ngữ tổng hợp vòng 3 để chọn ứng viên vào Chung kết.",
+  prep:["Chào hỏi: 你好, 您好, 老师好, 大家好, 再见","Tự giới thiệu: tên, tuổi, 很高兴认识你","Gia đình: 爸爸 妈妈 哥哥 姐姐 弟弟 妹妹 爷爷 奶奶","他是谁？– 他是我… / 她是谁？– 她是我…"]}
+];
+
+/* ============================== SEEDLING ============================= */
+const SEEDLING_DAYS = [
+/* 1 */ {t:"Nhân vật của bé",
+  s:[S("Hello!","你好！","nǐ hǎo!"),S("I'm ___.","我叫 ___。","wǒ jiào ___")],
+  steps:["Cho bé vẽ hoặc chọn một nhân vật (động vật, robot, công chúa…). Vẽ đủ đầu, mắt, tai, mũi, miệng, tay, chân để các ngày sau còn chỉ vào.",
+         "Cùng bé đặt tên cho nhân vật.",
+         "Bé cầm hình và giới thiệu nhân vật: \"Hello! I'm ___.\" rồi \"你好！我叫 ___。\""],
+  tip:"Bé chưa nói được cả câu thì chỉ cần nói \"Hello!\" và tên nhân vật.",
+  goal:"Có nhân vật và bé nói được tên nhân vật kèm \"Hello\" hoặc \"你好\"."},
+/* 2 */ {t:"Đầu, mắt, tai",
+  w:[W("🙆","head","头","tóu","đầu"),W("👀","eyes","眼睛","yǎnjing","mắt"),W("👂","ears","耳朵","ěrduo","tai")],
+  steps:["Ôn nhanh: bé giới thiệu nhân vật (30 giây).",
+         "Ba mẹ chỉ vào đầu, mắt, tai trên nhân vật, đọc từ tiếng Anh rồi tiếng Trung, bé nói theo.",
+         "Chỉ và nói: ba mẹ nói từ, bé chỉ vào nhân vật và nói lại. Sau đó đổi vai.",
+         "Ôn bằng flashcard."],
+  tip:"Cho bé chỉ trên nhân vật rồi chỉ luôn trên mặt mình cho vui.",
+  goal:"Bé chỉ đúng ít nhất 2/3 bộ phận khi nghe từ.",
+  links:[L("card","Flashcard","https://drive.google.com/file/d/1Ahqjs8Yn_q-s_Knz-nA_gSPLSk7I0CKC/view?usp=drive_link")]},
+/* 3 */ {t:"Mũi, miệng",
+  w:[W("👃","nose","鼻子","bízi","mũi"),W("👄","mouth","嘴","zuǐ","miệng")],
+  s:[S("Where's the nose?","鼻子在哪里？","bízi zài nǎlǐ?")],
+  steps:["Xem video về khuôn mặt, vừa xem vừa chạm vào mặt mình.",
+         "Hát lại, bé chỉ vào nhân vật theo từng từ (head, eyes, ears, nose, mouth).",
+         "Ba mẹ hỏi \"Where's the nose? / 鼻子在哪里？\", bé chỉ và nói.",
+         "Ôn bằng flashcard."],
+  tip:"Hát chậm lần đầu, nhanh dần ở các lần sau.",
+  goal:"Bé chỉ đúng ít nhất 4/5 bộ phận mặt.",
+  links:[L("video","Nose Ears Eyes Mouth","https://drive.google.com/file/d/1RCa_7EF_BfVeC-p1yulFIgDuKILHBrnC/view?usp=drive_link"),
+         L("card","Flashcard","https://drive.google.com/file/d/1AHadISDMSDeDQ_RkV03mmK8M9fP-mMQ0/view?usp=drive_link")]},
+/* 4 */ {t:"Tay, chân – Head and Shoulders",
+  w:[W("✋","hands","手","shǒu","tay"),W("🦶","feet","脚","jiǎo","chân")],
+  steps:["Xem và hát theo \"Head and Shoulders / 头和肩膀\", bé làm động tác theo.",
+         "Bé chơi game."],
+  tip:"Bài hát có thêm shoulders, knees, toes (肩膀, 膝盖, 脚趾). Bé chỉ cần làm động tác, không cần nhớ các từ này.",
+  goal:"Bé làm được động tác theo ít nhất 1 vòng bài hát, và chỉ đúng tay, chân.",
+  links:[L("video","头和肩膀 (Head and Shoulders) – Little Fox","https://youtu.be/5-PCV5rVv8o?si=cRDFBfdbz1YE1iV7"),
+         L("game","Game ngày 4","https://wordwall.net/play/106601/653/286")]},
+/* 5 */ {t:"To và nhỏ – big / small",
+  w:[W("🐘","big","大","dà","to"),W("🐭","small","小","xiǎo","nhỏ")],
+  s:[S("big eyes","大眼睛","dà yǎnjing"),S("small nose","小鼻子","xiǎo bízi")],
+  steps:["Ba mẹ cho bé xem 2 đồ vật một to một nhỏ, nói \"big\" / \"大\" và \"small\" / \"小\", bé nói theo.",
+         "Cho bé vẽ thêm vào nhân vật: \"big eyes, small nose\". Bé tự chọn bộ phận nào to, bộ phận nào nhỏ.",
+         "Xem video Big vs Small 大 vs 小."],
+  tip:"Cho bé thử nhiều kiểu: tai to, miệng nhỏ, tay to… càng \"kỳ lạ\" bé càng thích.",
+  goal:"Bé nói được \"big\" và \"small\" (hoặc 大, 小) khi chỉ vào nhân vật.",
+  links:[L("video","Big vs Small 大 vs 小","https://youtu.be/PWhrP4nyNgQ?si=C0CyuuduNIKwK0Em")]},
+/* 6 */ {t:"This is my ___",
+  s:[S("This is my ___.","这是我的 ___。","zhè shì wǒ de ___"),S("This is my head.","这是我的头。","zhè shì wǒ de tóu"),S("This is my nose.","这是我的鼻子。","zhè shì wǒ de bízi")],
+  steps:["Xem video mẫu \"这是我的身体 (This Is My Body)\".",
+         "Bé chỉ vào nhân vật và nói: \"This is my head / eyes / nose…\"",
+         "Lặp lại bằng tiếng Trung: \"这是我的头 / 眼睛 / 鼻子…\"",
+         "Ôn bằng flashcard."],
+  tip:"Ba mẹ nói cụm đầu \"This is my…\", bé nói tiếp từ bộ phận. Bé nói gần đúng là được.",
+  goal:"Bé nói được ít nhất 1 câu đầy đủ, hoặc nói tiếp đúng từ bộ phận sau \"This is my\".",
+  links:[L("video","这是我的身体 (This Is My Body) – Little Fox","https://youtu.be/Jb8h1o6HzD0?si=PIZa4a3wBJvxSYar"),
+         L("card","Flashcard","https://drive.google.com/file/d/1Sc8P6hY8SR-ANVyFfUkBy5tOfVNpwZ6y/view?usp=drive_link")]},
+/* 7 */ {zoom:true, t:"Quiz 1 – Cơ thể",
+  about:"Hôm nay không học bài mới! Bé làm Quiz 1 khoảng 8–10 câu: nghe rồi chọn hình, và 1–2 câu đọc từ để chọn hình. Nhớ nhập tên bé, ba mẹ không giúp bé chọn — đúng khoảng 70% là rất tốt rồi! Sau đó cho bé chỉ vào nhân vật và nói \"This is my…\" để ăn mừng.",
+  prep:["head, eyes, ears, nose, mouth, hands, feet","big / small","This is my ___ / 这是我的 ___"]},
+/* 8 */ {t:"Cặp và sách",
+  w:[W("🎒","schoolbag","书包","shūbāo","cặp sách"),W("📖","book","书","shū","quyển sách")],
+  s:[S("This is a schoolbag.","这是书包。","zhè shì shūbāo"),S("I have a schoolbag.","我有书包。","wǒ yǒu shūbāo")],
+  steps:["Đưa cặp và sách thật cho bé xem, đọc từ tiếng Anh rồi tiếng Trung, bé nói theo.",
+         "Cầm cặp gần bé và nói \"This is a schoolbag. / 这是书包。\" Bé nhại lại, vừa nói vừa chạm vào cặp.",
+         "Ôn bằng flashcard và xem video \"What's This? (这是什么？)\"."],
+  tip:"Đặt hình nhân vật cạnh cặp, để bé \"giới thiệu đồ của nhân vật đi học\".",
+  goal:"Bé nói được ít nhất 1 câu This is a… (Anh hoặc Trung), hoặc nói tiếp đúng từ đồ vật.",
+  links:[L("card","Flashcard","https://drive.google.com/file/d/18ycD4aU-Ji3WUPeLh5dm2_tJPyZ7qPjr/view?usp=drive_link"),
+         L("video","What's This? (这是什么？) – Little Fox","https://youtu.be/TyYQmyXLAgc?si=rgbHAwwhop3dkPXc")]},
+/* 9 */ {t:"Bút, thước, tẩy",
+  w:[W("🖊️","pen","笔","bǐ","bút"),W("📏","ruler","尺子","chǐzi","thước"),W("🧽","eraser","橡皮","xiàngpí","tẩy")],
+  s:[S("That is a pen.","那是笔。","nà shì bǐ")],
+  steps:["Bé xem video và nói theo.",
+         "Bỏ đồ vào cặp cho nhân vật: bé nói tên từng món khi bỏ vào.",
+         "Ôn bằng flashcard và chơi game."],
+  goal:"Bé nói được tên ít nhất 2 đồ dùng.",
+  links:[L("video","schoolbag.mp4","https://drive.google.com/file/d/1IZepakkBjTwWO7uVGXrClB5467El5n-H/view?usp=drive_link"),
+         L("video","What's That (那是什么？) – Little Fox","https://youtu.be/3wxfxBTQGKk?si=0wFB6BZ7d_qMq6NX"),
+         L("card","Flashcard","https://drive.google.com/file/d/1iH1XixMUnZiV2c2qfitxEuvmOZPVgFVh/view?usp=drive_link"),
+         L("game","Game ngày 9","https://wordwall.net/play/107560/720/496")]},
+/* 10 */ {t:"Simon says – Cơ thể",
+  s:[S("Touch your ___!","摸摸你的 ___！","mōmo nǐ de ___")],
+  steps:["Hôm nay không có từ mới! Ôn nhanh các bộ phận cơ thể trên nhân vật (1 phút).",
+         "Ba mẹ làm \"Simon\": \"Touch your head / eyes / ears / nose / mouth / hands / feet!\" Bé chạm vào mình thật nhanh. Bắt đầu chậm, rồi nhanh dần.",
+         "Bé chơi game Body part."],
+  tip:"Bé làm đúng 3 lệnh liên tiếp thì cho một cái ôm hoặc sticker. Bé chỉ cần nghe hiểu và làm.",
+  goal:"Bé làm đúng ít nhất 4 lệnh liên tiếp.",
+  links:[L("game","Game Body part","https://wordwall.net/play/106596/835/830")]},
+/* 11 */ {t:"Show me – Đồ dùng",
+  s:[S("Show me your ___!","给我你的 ___！","gěi wǒ nǐ de ___")],
+  steps:["Hôm nay không có từ mới! Đặt 4 món (schoolbag, book, pen, ruler) trước mặt bé.",
+         "Ba mẹ nói \"Show me your ___!\", bé giơ đúng món lên.",
+         "Đổi vai: bé ra lệnh, ba mẹ giơ đồ (ba mẹ giơ nhầm để bé sửa)."],
+  tip:"Bé chỉ cần nghe hiểu và giơ đúng đồ, không bắt nói.",
+  goal:"Bé giơ đúng ít nhất 3/4 món khi nghe lệnh."},
+/* 12 */ {t:"Simon says bằng tiếng Trung",
+  s:[S("Touch your ___.","摸摸你的 ___。","mōmo nǐ de ___"),S("Show me your ___.","给我你的 ___。","gěi wǒ nǐ de ___")],
+  steps:["Ôn nhanh 2 mẫu lệnh ngày 10 và 11 bằng tiếng Anh (1 phút).",
+         "Chơi Simon says bằng tiếng Trung, xen kẽ lệnh cơ thể (摸摸你的头) và lệnh đồ dùng (给我你的笔). Mỗi lượt 8 lệnh, nói chậm và rõ.",
+         "Bé chưa kịp thì ba mẹ nói lại bằng tiếng Anh, bé làm rồi nghe lại bản tiếng Trung.",
+         "Muốn nói thì bé chỉ cần nói từ chính (头, 笔) khi làm."],
+  tip:"Ba mẹ không đọc chuẩn thanh điệu cũng không sao — bấm nút 🇨🇳 trên web để bé nghe mẫu.",
+  goal:"Bé làm đúng ít nhất 3 lệnh tiếng Trung liên tiếp."},
+/* 13 */ {t:"Nói theo This is… / That is…",
+  s:[S("What's this?","这是什么？","zhè shì shénme?"),S("What's that?","那是什么？","nà shì shénme?"),S("This is a book.","这是书。","zhè shì shū"),S("That is a pen.","那是笔。","nà shì bǐ")],
+  steps:["Hôm nay không có từ mới! Xem video lần đầu để nghe.",
+         "Xem lần 2, ba mẹ tạm dừng sau mỗi câu, hỏi bé \"这是什么？\" / \"那是什么？\", bé trả lời và nhại lại."],
+  tip:"Nhại cả giọng điệu của video (to, nhỏ, nhanh, chậm). Bé chưa nói tròn câu thì chỉ cần nói từ đồ vật.",
+  goal:"Bé nhại lại được ít nhất 2 câu.",
+  links:[L("video","Mrs. Kelly's Class 3: What's This? – Little Fox","https://youtu.be/_NSQyG66Osg")]},
+/* 14 */ {zoom:true, t:"Quiz 2 – Cơ thể + Đồ dùng",
+  about:"Hôm nay không học bài mới! Bé làm Quiz 2 (10 câu: 5 nghe, 5 đọc): nghe làm theo, đọc rồi chọn hình. Đạt khoảng 70% là rất tốt rồi!",
+  prep:["schoolbag, book, pen, ruler, eraser","I have… / This is… / That is…","Touch your ___ / Show me your ___","Các từ cơ thể đã học"]},
+/* 15 */ {t:"Chữ Hán giống hình – Anh hay Trung?",
+  w:[W("👄","mouth","口","kǒu","miệng"),W("👁️","eye","目","mù","mắt"),W("👂","ear","耳","ěr","tai"),W("✋","hand","手","shǒu","tay")],
+  steps:["Cho bé xem chữ 口 目 耳 手 và đoán chữ nào là bộ phận nào (chữ trông giống hình!).",
+         "Làm 2 tấm thẻ: viết lớn EN trên một tờ, 中 trên tờ còn lại, bé trang trí.",
+         "Chơi \"Anh hay Trung?\": ba mẹ nói một từ (\"nose\", \"笔\", \"head\", \"手\"). Bé giơ thẻ EN hoặc 中, rồi chỉ vào nhân vật hoặc giơ đồ vật tương ứng. Chơi 8–10 từ.",
+         "Đổi vai: bé nói từ, ba mẹ giơ thẻ (ba mẹ giơ sai để bé sửa)."],
+  tip:"Bé giơ thẻ chưa chắc cũng không sao, miễn bé chỉ đúng bộ phận hoặc giơ đúng đồ là đã hiểu nghĩa rồi.",
+  goal:"Bé giơ đúng thẻ ít nhất 5/8 lần."},
+/* 16 */ {t:"So sánh âm Anh – Trung",
+  w:[W("👂","ear","耳朵","ěrduo","tai"),W("👄","mouth","嘴","zuǐ","miệng"),W("✋","hand","手","shǒu","tay"),W("👃","nose","鼻子","bízi","mũi")],
+  steps:["Ba mẹ nói: \"Nghe này, ear và ěr — nghe có giống nhau không nhỉ?\" Bé nói thử cả hai.",
+         "Trò \"Nghe và chỉ\": ba mẹ nói 1 từ (Anh hoặc Trung), bé chỉ vào nhân vật hoặc mặt mình. Chơi 8 lượt, xen kẽ hai ngôn ngữ.",
+         "Đổi vai: bé nói từ, ba mẹ chỉ (ba mẹ chỉ nhầm để bé sửa)."],
+  tip:"Chỉ cần bé chỉ đúng khi nghe, không cần giải thích gì về âm.",
+  goal:"Bé chỉ đúng ít nhất 5/8 lượt."},
+/* 17 */ {t:"Vui và buồn",
+  w:[W("😄","happy","开心","kāixīn","vui"),W("😢","sad","伤心","shāngxīn","buồn")],
+  s:[S("I'm happy!","我很开心！","wǒ hěn kāixīn"),S("I'm sad!","我很伤心！","wǒ hěn shāngxīn")],
+  steps:["Ba mẹ làm mặt vui, nói \"happy / 开心\"; mặt buồn, nói \"sad / 伤心\". Bé làm mặt theo và nói theo.",
+         "Bé vẽ hoặc dán thêm mặt vui, mặt buồn lên nhân vật, rồi nói \"I'm happy! / 我很开心！\" hoặc \"I'm sad! / 我很伤心！\" thay cho nhân vật.",
+         "Chơi game và xem video Feeling (心情)."],
+  tip:"Bé nói được 1 từ (happy hoặc 开心) là đủ.",
+  goal:"Bé nói được happy/开心 hoặc sad/伤心 khi làm mặt hoặc chỉ hình.",
+  links:[L("game","Game ngày 17","https://wordwall.net/play/106607/612/395"),
+         L("video","Feeling (心情) – Pinkfong","https://youtu.be/ePUlJDpTQws?si=xcL7wWp2ipE5oa22")]},
+/* 18 */ {t:"Chơi lại – Vui hay buồn?",
+  steps:["Hôm nay không có từ mới! Chọn 2 trong 3 hoạt động:",
+         "🎮 Game đoán: ba mẹ làm mặt vui hoặc buồn, bé nói happy / sad (hoặc 开心 / 伤心).",
+         "🎨 Vẽ thêm cho nhân vật: vẽ mặt vui, rồi mặt buồn, bé nói từ tương ứng.",
+         "🏃 Simon says kết hợp: \"Touch your nose!\", \"Be happy!\", \"Be sad!\"… bé làm theo."],
+  tip:"Bé đóng vai nhân vật vui rồi buồn cho ba mẹ đoán.",
+  goal:"Bé chơi xong ít nhất 2 hoạt động."},
+/* 19 */ {t:"Ghép đoạn nói ngắn",
+  s:[S("I'm happy. This is a pen.","我很开心。这是笔。","wǒ hěn kāixīn. zhè shì bǐ"),S("I'm sad. This is a book.","我很伤心。这是书。","wǒ hěn shāngxīn. zhè shì shū")],
+  steps:["Ba mẹ nói 2 đoạn mẫu bằng tiếng Anh, rồi bằng tiếng Trung. Bé nghe.",
+         "Ba mẹ đọc từng cụm, bé nhại lại. Bé chọn 1 ngôn ngữ cho cả đoạn.",
+         "Bé tự đổi: chọn 1 cảm xúc và 1 món đồ khác (vd I'm happy. This is a ruler.), rồi nói cho nhân vật."],
+  tip:"Bé nói được 1 câu trong đoạn cũng được. Nói được cả đoạn thì cho thêm sticker.",
+  goal:"Bé nói được cả đoạn bằng 1 ngôn ngữ, hoặc nhại lại ít nhất 2 câu."},
+/* 20 */ {t:"Quay video giới thiệu nhân vật 🎥", clip:true,
+  s:[S("Hello!","你好！","nǐ hǎo!"),S("I'm ___.","我叫 ___。","wǒ jiào ___"),S("This is my ___.","这是我的 ___。","zhè shì wǒ de ___"),
+     S("This is a ___.","这是 ___。","zhè shì ___"),S("That is a ___.","那是 ___。","nà shì ___"),S("I'm ___.","我很 ___。","wǒ hěn ___"),S("Goodbye!","再见！","zàijiàn!")],
+  steps:["Ba mẹ điền tên nhân vật, bộ phận, đồ vật, cảm xúc vào kịch bản 8 dòng (Hello → I'm… → This is my… ×2 → This is a… → That is a… → I'm… → Goodbye). Ví dụ: Hello! / I'm Bông. / This is my nose. / This is my hands. / This is a pen. / That is a ruler. / I'm happy. / Goodbye!",
+         "Ba mẹ đọc cả đoạn 1–2 lần, rồi đọc từng dòng cho bé nhại. Bé chọn tiếng Anh hoặc tiếng Trung cho từng dòng.",
+         "Vừa nói vừa làm động tác: vẫy tay, chỉ nhân vật, chạm bộ phận, cầm đồ gần, chỉ đồ xa, làm mặt vui/buồn.",
+         "Tập 1 lần trọn vẹn rồi quay, gửi vào nhóm Zalo."],
+  tip:"Có thể quay thành 2 đoạn (dòng 1–4 và 5–8). Bé muốn nói thêm: \"Big eyes, small nose. / 大眼睛，小鼻子。\"",
+  goal:"Có video và bé nói được ít nhất 4 dòng."},
+/* 21 */ {zoom:true, t:"Quiz 3 – Tổng kết",
+  about:"Bé làm Quiz 3 tổng kết (10 câu: 5 nghe, 5 đọc, đạt 70%): cảm xúc và nhắc lại toàn bộ cơ thể, đồ dùng đã học.",
+  prep:["Cơ thể: head, eyes, ears, nose, mouth, hands, feet","Đồ dùng: schoolbag, book, pen, ruler, eraser","Cảm xúc: happy, sad","This is my… / This is a… / That is a… / I'm…"]}
+];
+
+/* =============================== CANOPY ============================== */
+const H = { // từ sở thích dùng chung
+  read: W("📚","reading books","读书","dúshū","đọc sách"),
+  tv:   W("📺","watching TV","看电视","kàn diànshì","xem TV"),
+  game: W("🎮","playing games","玩游戏","wán yóuxì","chơi game"),
+  cook: W("🍳","cooking","做饭","zuòfàn","nấu ăn"),
+  dance:W("💃","dancing","跳舞","tiàowǔ","nhảy múa"),
+  sing: W("🎤","singing","唱歌","chànggē","hát"),
+  music:W("🎧","listening to music","听音乐","tīng yīnyuè","nghe nhạc")
+};
+const ALL_HOBBIES = Object.values(H);
+const CANOPY_DAYS = [
+/* 1 */ {t:"HELLO, HOBBY!",
+  w:[H.read,H.tv,H.game,H.cook],
+  steps:["Làm bài test đầu vào (chỉ để ban tổ chức ghi nhận, không tính điểm).",
+         "Bài 1: Xem video từ vựng \"Sở thích của chúng mình\".",
+         "Bài 2: Đọc theo từng từ (Anh → Trung), mỗi từ 3 lần. Mẹ đồng hành và quay lại quá trình con làm bài."],
+  goal:"Nhận diện và nói được 4 từ bằng Anh + Trung.", clip:true,
+  links:[L("game","Test đầu vào","https://wordwall.net/resource/121125879?wwmethod=link"),
+         L("video","Sở thích của chúng mình","https://drive.google.com/file/d/1fiKSTFzXKGsJAjMybkK9gMeUft8gW75T/view?usp=sharing")]},
+/* 2 */ {t:"HOBBY INTO SENTENCE",
+  s:[S("My name is ___.","我叫 ___。","wǒ jiào ___"),S("I like cooking.","我喜欢做饭。","wǒ xǐhuan zuòfàn"),S("My name is Lan. I like cooking.","我叫Lan。我喜欢做饭。","wǒ jiào Lan. wǒ xǐhuan zuòfàn")],
+  steps:["Bài 1: Xem video và làm bài tập trên Wordwall.",
+         "Bài 2: Đọc theo mẫu câu, mỗi câu 3 lần.",
+         "Bài 3: Nói câu giới thiệu tên và một hobby của con bằng tiếng Anh, sau đó bằng tiếng Trung."],
+  goal:"Nói được câu hoàn chỉnh ở 2 ngôn ngữ.", clip:true,
+  links:[L("video","Video ngày 2","https://drive.google.com/file/d/1YfhkYAxqumIKS0Hr9xaO4jh1Fk9uE9r3/view?usp=sharing"),
+         L("game","Quiz Hobbies","https://wordwall.net/resource/119091149/u4l2-quiz-hobbies-1")]},
+/* 3 */ {t:"MORE HOBBIES",
+  w:[H.dance,H.sing,H.music],
+  s:[S("My name is ___. I like dancing.","我叫 ___。我喜欢跳舞。","wǒ jiào ___. wǒ xǐhuan tiàowǔ")],
+  steps:["Bài 1: Xem video và đọc theo từng từ (Anh → Trung), mỗi từ 3 lần. Mẹ quay lại quá trình con làm bài.",
+         "Bài 2: Đặt câu My name is… I like… / 我叫…我喜欢… với từng hobby mới."],
+  goal:"Mở rộng đủ các hobby.", clip:true,
+  links:[L("video","Video ngày 3","https://drive.google.com/file/d/1WnQ_lq9kE7SYmyiOB0CYlUIq7rTJqmgA/view?usp=sharing")]},
+/* 4 */ {t:"MIX & MATCH",
+  w:ALL_HOBBIES,
+  s:[S("I like reading books.","我喜欢读书。","wǒ xǐhuan dúshū")],
+  steps:["Bài 1: Xem video.",
+         "Bài 2: Mở link bài tập, nghe audio rồi quay video nói lại bằng ngôn ngữ còn lại. Ví dụ audio nói \"I like reading books\" → con nói \"我喜欢读书\".",
+         "Chơi trò ghép cặp Anh – Trung trên web."],
+  goal:"Nhớ từ không phụ thuộc thứ tự học.", clip:true,
+  links:[L("video","Video ngày 4","https://drive.google.com/file/d/11y8szAI4k8UBHJ3czk5Q4Nzw58RHPUTC/view?usp=sharing"),
+         L("game","Bài tập Mix & Match","https://wordwall.net/resource/120851694/copy-of-unit-4-lesson-21")]},
+/* 5 */ {t:"ASK ME!",
+  s:[S("Do you like dancing?","你喜欢跳舞吗？","nǐ xǐhuan tiàowǔ ma?"),S("Do you like singing?","你喜欢唱歌吗？","nǐ xǐhuan chànggē ma?"),
+     S("Do you like playing games?","你喜欢玩游戏吗？","nǐ xǐhuan wán yóuxì ma?"),S("Do you like listening to music?","你喜欢听音乐吗？","nǐ xǐhuan tīng yīnyuè ma?"),
+     S("Do you like reading books?","你喜欢读书吗？","nǐ xǐhuan dúshū ma?"),S("Do you like watching TV?","你喜欢看电视吗？","nǐ xǐhuan kàn diànshì ma?"),
+     S("Do you like cooking?","你喜欢做饭吗？","nǐ xǐhuan zuòfàn ma?"),
+     S("Yes, I do.","我喜欢。","wǒ xǐhuan"),S("No, I don't.","我不喜欢。","wǒ bù xǐhuan")],
+  steps:["Bài 1: Xem video và hát theo.",
+         "Bài 2: Quay video đọc theo mẫu hỏi – đáp.",
+         "Bài 3: Luyện tập trên link bài tập."],
+  goal:"Bắt đầu tương tác 2 chiều.", clip:true,
+  links:[L("video","Video ngày 5","https://drive.google.com/file/d/1NyW-hi7IiQn80ILgCVP244RnD0PaC1IV/view?usp=sharing"),
+         L("game","Bài tập Ask me","https://wordwall.net/resource/120857733?wwmethod=link")]},
+/* 6 */ {t:"WEEK 1 REVIEW",
+  w:ALL_HOBBIES,
+  steps:["Bài 1: Xem video và ôn theo 4 bước cho từng hình hobby: Picture (nhìn hình) → Word (nói từ Anh + Trung) → Sentence (I like… / 我喜欢…) → Translation (dịch sang ngôn ngữ còn lại).",
+         "Bài 2: Làm bài tập ôn luyện."],
+  goal:"Củng cố toàn bộ kiến thức tuần 1.",
+  links:[L("video","Video ôn tập tuần 1","https://drive.google.com/file/d/1Dpoc0dIdhR2I4ChyyjjhUQf_KMZx1Vca/view?usp=sharing"),
+         L("game","Bài tập ôn luyện","https://wordwall.net/resource/119182162?wwmethod=link")]},
+/* 7 */ {zoom:true, t:"🏆 Vòng 1 – Kiểm tra cùng giáo viên",
+  about:"Review + Test cùng giáo viên: (1) Look & Say – nhìn hình, nói từ Anh + Trung; (2) Complete the Sentence – I like ___. / 我喜欢___。; (3) Bài kiểm tra chuyển ngữ từ vựng, ngữ pháp Anh ↔ Trung.",
+  prep:["8 hobby bằng tiếng Anh và tiếng Trung","My name is… I like… / 我叫…我喜欢…","Do you like…? / 你喜欢…吗？"]},
+/* 8 */ {t:"LISTEN & POINT – FAST RESPONSE",
+  w:ALL_HOBBIES,
+  s:[S("What do you like?","你喜欢什么？","nǐ xǐhuan shénme?"),S("I like dancing.","我喜欢跳舞。","wǒ xǐhuan tiàowǔ")],
+  steps:["Bài 1: Làm bài tập nghe – chọn hình nhanh.",
+         "Bài 2: Trả lời câu hỏi What do you like? / 你喜欢什么？ bằng sở thích của con, cả tiếng Anh và tiếng Trung."],
+  goal:"Nghe hiểu từ/cụm từ, phản xạ nhanh, trả lời đúng câu hỏi về sở thích.", clip:true,
+  links:[L("game","Bài tập Listen & Point","https://wordwall.net/resource/120864213?wwmethod=link")]},
+/* 9 */ {t:"INTRODUCE OTHERS' HOBBIES",
+  w:[W("👩","mother","妈妈","māma","mẹ"),W("👨","father","爸爸","bàba","bố"),W("👧","older sister","姐姐","jiějie","chị gái"),
+     W("👶","younger sister","妹妹","mèimei","em gái"),W("👦","older brother","哥哥","gēge","anh trai"),W("🧒","younger brother","弟弟","dìdi","em trai")],
+  s:[S("Hello, everyone!","大家好！","dàjiā hǎo!"),S("My mother likes cooking.","我妈妈喜欢做饭。","wǒ māma xǐhuan zuòfàn"),S("My father likes watching TV.","我爸爸喜欢看电视。","wǒ bàba xǐhuan kàn diànshì")],
+  steps:["Bài 1: Xem video.",
+         "Bài 2: Quay video đọc các từ chỉ người thân.",
+         "Bài 3: Dùng từ chỉ người thân để đặt câu theo mẫu My … likes … / 我…喜欢… và quay video."],
+  tip:"Với một người (mother, father, sister, brother), tiếng Anh dùng likes (có -s).",
+  goal:"Mở rộng lời giới thiệu sang người thân.", clip:true,
+  links:[L("video","Video ngày 9","https://drive.google.com/file/d/1d58-dCXHpFFx34ppnDNPP6b1I6iKz69-/view?usp=sharing")]},
+/* 10 */ {t:"QUESTION & ANSWER",
+  s:[S("What do you like?","你喜欢什么？","nǐ xǐhuan shénme?"),S("Do you like reading books?","你喜欢读书吗？","nǐ xǐhuan dúshū ma?"),
+     S("What does your mother like?","你妈妈喜欢什么？","nǐ māma xǐhuan shénme?"),S("What does your father like?","你爸爸喜欢什么？","nǐ bàba xǐhuan shénme?"),
+     S("What does your brother like?","你哥哥喜欢什么？","nǐ gēge xǐhuan shénme?"),S("What does your sister like?","你姐姐喜欢什么？","nǐ jiějie xǐhuan shénme?")],
+  steps:["Bài 1: Xem video.",
+         "Bài 2: Ghép từ và quay video đọc các câu hỏi. Làm theo cặp: một bạn (hoặc ba mẹ) hỏi, một bạn trả lời."],
+  goal:"Trả lời đúng câu hỏi.", clip:true,
+  links:[L("video","Video ngày 10","https://drive.google.com/file/d/1-qJUmrKuAyWKRKb0HNrgxWWBUTgOEQk8/view?usp=sharing")]},
+/* 11 */ {t:"SURPRISE LANGUAGE",
+  s:[S("Do you like watching TV?","你喜欢看电视吗？","nǐ xǐhuan kàn diànshì ma?"),S("I like ___.","我喜欢 ___。","wǒ xǐhuan ___")],
+  steps:["Bài 1: Làm bài tập phản xạ.",
+         "Bài 2: Trả lời câu hỏi: câu hỏi tiếng Anh → trả lời tiếng Anh, câu hỏi tiếng Trung → trả lời tiếng Trung. Mẫu: I like… / 我喜欢…",
+         "Chơi trò \"Ghép chữ – pinyin\" trên web để nhớ mặt chữ."],
+  goal:"Không học thuộc một chiều.", clip:true,
+  links:[L("game","Bài tập phản xạ","https://wordwall.net/resource/120959363?wwmethod=link")]},
+/* 12 */ {t:"LISTEN & SWITCH",
+  w:ALL_HOBBIES,
+  steps:["Bài 1: Phiên dịch viên nhí — quay video chuyển từ/câu sang ngôn ngữ còn lại (tiếng Anh → đọc tiếng Trung, và ngược lại).",
+         "Bài 2: Quay video trả lời bằng ngôn ngữ còn lại: câu hỏi tiếng Anh → trả lời tiếng Trung, và ngược lại."],
+  goal:"Hình thành phản xạ chuyển ngữ.", clip:true,
+  links:[L("game","Bài tập Listen & Switch","https://wordwall.net/resource/120960330?wwmethod=link")]},
+/* 13 */ {t:"MINI CONVERSATION",
+  s:[S("Hello! My name is Lupy. What's your name?","你好！我叫Lupy。你叫什么名字？","nǐ hǎo! wǒ jiào Lupy. nǐ jiào shénme míngzi?"),
+     S("Hello! My name is Nana.","你好！我叫Nana。","nǐ hǎo! wǒ jiào Nana"),
+     S("I like listening to music. What do you like?","我喜欢听音乐。你喜欢什么？","wǒ xǐhuan tīng yīnyuè. nǐ xǐhuan shénme?"),
+     S("I like singing.","我喜欢唱歌。","wǒ xǐhuan chànggē"),
+     S("Do you like dancing?","你喜欢跳舞吗？","nǐ xǐhuan tiàowǔ ma?"),
+     S("Yes, I do.","是的，我喜欢。","shì de, wǒ xǐhuan"),
+     S("What does your mother like?","你妈妈喜欢什么？","nǐ māma xǐhuan shénme?"),
+     S("My mother likes cooking!","我妈妈喜欢做饭！","wǒ māma xǐhuan zuòfàn!")],
+  steps:["Bài 1: Đọc theo hội thoại mẫu Lupy – Nana (cả Anh và Trung).",
+         "Bài 2: Quay video trả lời câu hỏi trong link bằng TIẾNG ANH VÀ TIẾNG TRUNG."],
+  goal:"Duy trì tương tác ngắn.", clip:true,
+  links:[L("game","Bài tập Mini conversation","https://wordwall.net/resource/120961501?wwmethod=link")]},
+/* 14 */ {zoom:true, t:"🏆 Vòng 2 – Kiểm tra cùng giáo viên",
+  about:"Review + test bằng Quizizz / cùng giáo viên nước ngoài. Đánh giá nghe, nói, tốc độ và sự tự tin.",
+  prep:["Nghe từ/câu và chỉ đúng hình","Giới thiệu sở thích của con và người thân","What do you like? / What does your … like? / Do you like…?","Chuyển ngữ EN ↔ 中文"]},
+/* 15 */ {t:"MY HOBBY",
+  s:[S("Hello! My name is ___. I like ___.","大家好！我叫 ___。我喜欢 ___。","dàjiā hǎo! wǒ jiào ___. wǒ xǐhuan ___"),
+     S("My mom likes ___. My dad likes ___.","我妈妈喜欢 ___。我爸爸喜欢 ___。","wǒ māma xǐhuan ___. wǒ bàba xǐhuan ___"),
+     S("My brother likes ___. What do you like?","我哥哥喜欢 ___。你喜欢什么？","wǒ gēge xǐhuan ___. nǐ xǐhuan shénme?")],
+  steps:["Bài 1: Xem video.",
+         "Bài 2: Chọn 1 hobby con yêu thích nhất, nói theo khung câu (Anh rồi Trung) và quay video."],
+  goal:"Tạo câu trả lời có tính cá nhân.", clip:true,
+  links:[L("video","Video ngày 15","https://drive.google.com/file/d/1YfhkYAxqumIKS0Hr9xaO4jh1Fk9uE9r3/view?usp=sharing")]},
+/* 16 */ {t:"MY FRIEND'S HOBBY",
+  s:[S("What do you like?","你喜欢什么？","nǐ xǐhuan shénme?"),S("What does your mother like?","你妈妈喜欢什么？","nǐ māma xǐhuan shénme?")],
+  steps:["Bài 1: Xem video.",
+         "Bài 2: Luyện tập trên link bài tập. Hỏi bạn (hoặc người trong gia đình) và nói lại sở thích của họ."],
+  goal:"Vận dụng thông tin trong hội thoại.",
+  links:[L("video","Video ngày 16","https://drive.google.com/file/d/1FaI86fpzCArSq-kGYlZN3VVmZSpUDAyk/view?usp=sharing"),
+         L("game","Bài tập ngày 16","https://wordwall.net/resource/120963136?wwmethod=link")]},
+/* 17 */ {t:"REVIEW 1",
+  w:ALL_HOBBIES,
+  s:[S("My name is ___. I like ___.","我叫 ___。我喜欢 ___。","wǒ jiào ___. wǒ xǐhuan ___")],
+  steps:["Bài 1: Quay video đọc lại toàn bộ từ vựng hobby và người thân.",
+         "Bài 2: Điền vào chỗ trống các mẫu câu My name is… / I like…"],
+  goal:"Nhắc nhớ tất cả.", clip:true},
+/* 18 */ {t:"REVIEW 2 – Chuyển ngữ nâng cao",
+  steps:["Bài 1: Làm bài tập chuyển ngữ.","Chơi trò ghép cặp, \"Ghép chữ – pinyin\" và \"Chọn chữ Hán\" trên web để ôn."],
+  goal:"Ứng biến thay vì học thuộc.",
+  links:[L("game","Bài tập chuyển ngữ","https://wordwall.net/resource/120966233?wwmethod=link")]},
+/* 19 */ {t:"FINAL PRACTICE",
+  steps:["Bài 1: Làm bài tập từ vựng.","Bài 2: Làm bài tập hỏi – đáp.","Bài 3: Làm bài tập hoàn thiện hội thoại."],
+  goal:"Hoàn thiện hội thoại.",
+  links:[L("game","Bài 1 – Từ vựng","https://wordwall.net/resource/120864213/hobby-2"),
+         L("game","Bài 2 – Hỏi đáp","https://wordwall.net/resource/120961501/game1"),
+         L("game","Bài 3 – Hội thoại","https://wordwall.net/resource/120963136/game2")]},
+/* 20 */ {t:"FINAL BATTLE REHEARSAL",
+  steps:["Bài 1: Làm bài tập bốc thẻ: Hobby (nói hobby trên thẻ, Anh + Trung) · Question (trả lời câu hỏi trên thẻ) · Switch (chuyển sang ngôn ngữ còn lại).",
+         "Bài 2: Bốc thẻ liên tục và trả lời có bấm giờ, như trong buổi thi. Làm theo cặp hoặc cùng giáo viên."],
+  goal:"Ổn định phản xạ và sự tự tin."},
+/* 21 */ {zoom:true, t:"🏆 Vòng 3 – Test tổng hợp",
+  about:"Test tổng hợp (đọc, nghe, nói) để chọn ứng viên vào vòng Chung kết.",
+  prep:["Từ vựng hobby và người thân","Mẫu câu My name is… / I like… / My … likes…","Hỏi – đáp: What do you like? / Do you like…? / What does your … like?","Chuyển ngữ Anh ↔ Trung"]}
+];
+
+const GROUPS = {
+  seed:   {name:"Little Seed", icon:"🌱", color:"#3BB273", age:"Mới bắt đầu",   level:"Bé chưa biết tiếng Anh, tiếng Trung, hoặc cả hai", days:SEED_DAYS},
+  canopy: {name:"Canopy",      icon:"🌳", color:"#E3262E", age:"Đã có nền tảng", level:"Bé khá tiếng Anh, đã biết chút tiếng Trung",       days:CANOPY_DAYS}
+};
+/* Seedling đang tạm ẩn. Muốn hiện lại, thêm dòng này vào GROUPS ở trên:
+  seedling: {name:"Seedling", icon:"🌿", color:"#1FA5A0", age:"5–6 tuổi", level:"Pre-A1 / YCT 1", days:SEEDLING_DAYS},
+*/
+/* ======================= HẾT PHẦN DỮ LIỆU ========================== */
+
+const app = document.getElementById('app');
+const TOTAL = 21, PER = 7;
+const PTS = {learn:5, parent:5, perGame:4, gameMax:16, done:10, clip:10, zoom:20};
+const GAMES = [['listen','👂 Nghe & chọn hình'],['match','🔗 Ghép cặp Anh – Trung'],['pinyin','🀄 Ghép chữ – pinyin'],['hanzi','✍️ Chọn chữ Hán']];
+function gamePts(s){ return Math.min(PTS.gameMax, Object.values((s&&s.gp)||{}).reduce((a,b)=>a+b,0)); }
+function gamesDone(s){ return GAMES.filter(([k])=>s && s.gp && k in s.gp).length; }
+
+/* ---------- lưu trữ an toàn ---------- */
+function lsGet(k,d){ try{ const v=localStorage.getItem(k); return v==null?d:JSON.parse(v); }catch(e){ return d; } }
+function lsSet(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+
+let TEACHER = /[?&]gv=1/.test(location.search) || lsGet('lle-teacher',false)===true;
+function toggleTeacher(){ TEACHER=!TEACHER; lsSet('lle-teacher',TEACHER); toast(TEACHER?'Đã bật chế độ giáo viên: mở tất cả các ngày':'Đã tắt chế độ giáo viên'); route(); }
+
+/* ---------- hồ sơ bé ---------- */
+let KID = lsGet('lle-kid', null);   // {name, code, group}
+function kidId(){ return KID ? (KID.name.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/đ/g,'d').replace(/[^a-z0-9]+/g,'-')+'-'+KID.code) : ''; }
+
+/* ---------- tiến độ và điểm ---------- */
+const KEY = 'lle-progress-v2';
+let P = lsGet(KEY, {}) || {};
+function save(){ lsSet(KEY,P); updateStars(); }
+function st(g,i){ return (P[g+'-'+i] ||= {learn:false, parent:false, game:false, gameBest:0, done:false}); }
+function isDone(g,i){ const s=P[g+'-'+i]; return !!(s && s.done); }
+function doneCount(g){ let n=0; for(let i=0;i<TOTAL;i++) if(isDone(g,i)) n++; return n; }
+function isUnlocked(g,i){ return TEACHER || i===0 || isDone(g,i-1); }
+function dayPoints(g,i){
+  const s=P[g+'-'+i], d=GROUPS[g].days[i]; if(!s) return 0;
+  if(d.zoom) return s.done?PTS.zoom:0;
+  return (s.learn?PTS.learn:0)+(s.parent?PTS.parent:0)+gamePts(s)+(s.done?PTS.done:0)+(s.done&&d.clip?PTS.clip:0);
+}
+function roundPoints(g,r){ let n=0; for(let i=r*PER;i<r*PER+PER;i++) n+=dayPoints(g,i); return n; }
+function groupPoints(g){ return [0,1,2].reduce((a,r)=>a+roundPoints(g,r),0); }
+function myPoints(){ if(KID && GROUPS[KID.group]) return groupPoints(KID.group); return Object.keys(GROUPS).reduce((a,g)=>a+groupPoints(g),0); }
+function updateStars(){ const el=document.getElementById('starCount'); el.textContent='⭐ '+myPoints(); }
+function bumpStars(){ const el=document.getElementById('starCount'); el.classList.remove('bump'); void el.offsetWidth; el.classList.add('bump'); }
+
+/* gửi điểm lên Google Sheet (nếu cô đã kết nối) */
+function pushScore(g,i){
+  if(!SCORE_API || !KID) return;
+  const body=JSON.stringify({kid:kidId(), name:KID.name.trim(), group:g, day:i+1, round:Math.floor(i/PER)+1, points:dayPoints(g,i)});
+  try{ fetch(SCORE_API,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body}).catch(()=>{}); }catch(e){}
+}
+function addPoints(g,i,before,el){
+  const gain=dayPoints(g,i)-before;
+  save(); pushScore(g,i);
+  if(gain>0) floatPts(el,gain);
+}
+
+/* ---------- hình hoạt hình ---------- */
+function cps(e){ return [...e].map(c=>c.codePointAt(0).toString(16)).filter(h=>h!=='fe0f'); }
+function artSrcs(e){
+  const c=cps(e);
+  return [`https://fonts.gstatic.com/s/e/notoemoji/latest/${c.join('_')}/512.webp`,
+          `https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@main/png/512/emoji_u${c.map(h=>h.padStart(4,'0')).join('_')}.png`,
+          `https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/${c.join('-')}.svg`];
+}
+function imgSlug(e){ return String(e||'').toLowerCase().replace(/_+/g,'x').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,50); }
+function art(img, cls, key){
+  img = img || '💬';
+  if(/[./]/.test(img)) return `<img class="art ${cls||''}" src="${esc(img)}" alt="">`;
+  const s=artSrcs(img);
+  if(key && IMG_DIR) s.unshift(IMG_DIR+imgSlug(key)+'.jpg');
+  return `<img class="art ${cls||''}" src="${s[0]}" data-s="${s.join('|')}" data-k="0" data-e="${esc(img)}" alt="${esc(img)}" onerror="artFb(this)">`;
+}
+/* nếu mạng chậm, sau 4 giây chuyển sang hình dự phòng */
+function artWatch(){ setTimeout(()=>document.querySelectorAll('img.art[data-s]').forEach(im=>{ if(!(im.complete&&im.naturalWidth)) artFb(im); }),4000); }
+function artFb(im){
+  const list=(im.dataset.s||'').split('|'), k=+im.dataset.k+1;
+  if(k<list.length){ im.dataset.k=k; im.src=list[k]; }
+  else { const sp=document.createElement('span'); sp.className=im.className+' artx'; sp.textContent=im.dataset.e||''; im.replaceWith(sp); }
+}
+const SENT_ART = [
+  [/how are you/,'😊'],[/happy/,'😄'],[/sad/,'😢'],[/how old|i'm 5/,'🎂'],[/what's your name|name is|i'm ___|i'm [a-z]/,'🧒'],
+  [/everyone/,'👨‍👩‍👧'],[/grandma/,'👵'],[/grandpa/,'👴'],[/mom|mother/,'👩'],[/dad|father/,'👨'],[/brother/,'👦'],[/sister/,'👧'],
+  [/who is/,'🤔'],[/reading/,'📚'],[/watching/,'📺'],[/playing games/,'🎮'],[/cooking/,'🍳'],[/dancing/,'💃'],[/singing/,'🎤'],[/music/,'🎧'],
+  [/schoolbag/,'🎒'],[/book/,'📖'],[/pen/,'🖊️'],[/ruler/,'📏'],[/what's this|what's that/,'❓'],[/touch/,'👆'],[/show me/,'✋'],
+  [/head/,'🙆'],[/nose/,'👃'],[/big/,'🐘'],[/small/,'🐭'],[/yes/,'👍'],[/no, i/,'👎'],[/what do you like|what does|do you like/,'💭'],
+  [/hello/,'👋'],[/goodbye/,'🙋'],[/this is my/,'👉']
+];
+function sentArt(x){ if(x.img) return x.img; const t=x.en.toLowerCase(); for(const [re,e] of SENT_ART) if(re.test(t)) return e; return '💬'; }
+
+/* ---------- âm thanh ---------- */
+let MUTE = lsGet('lle-mute', false);
+let actx=null;
+function tone(seq){
+  if(MUTE) return;
+  try{
+    actx = actx || new (window.AudioContext||window.webkitAudioContext)();
+    let t=actx.currentTime;
+    seq.forEach(([f,d,type])=>{
+      const o=actx.createOscillator(), g=actx.createGain();
+      o.type=type||'triangle'; o.frequency.value=f; o.connect(g); g.connect(actx.destination);
+      g.gain.setValueAtTime(.0001,t); g.gain.exponentialRampToValueAtTime(.25,t+.02); g.gain.exponentialRampToValueAtTime(.0001,t+d);
+      o.start(t); o.stop(t+d+.02); t+=d*.8;
+    });
+  }catch(e){}
+}
+const sfx = {
+  ok:  ()=>tone([[784,.12],[1175,.22]]),
+  no:  ()=>tone([[330,.18,'sine'],[262,.25,'sine']]),
+  pop: ()=>tone([[660,.07,'sine']]),
+  win: ()=>tone([[523,.12],[659,.12],[784,.12],[1047,.35]]),
+  coin:()=>tone([[988,.08,'square'],[1319,.18,'square']])
+};
+function toggleMute(){ MUTE=!MUTE; lsSet('lle-mute',MUTE); document.getElementById('muteBtn').textContent=MUTE?'🔇':'🔊'; }
+
+/* ---------- giọng đọc ---------- */
+let voices=[];
+function loadVoices(){ try{ voices = speechSynthesis.getVoices(); }catch(e){} }
+if ('speechSynthesis' in window){ loadVoices(); speechSynthesis.onvoiceschanged = loadVoices; }
+let warnedZh=false;
+function speak(text, lang, file){
+  if (file){ const a=new Audio(file); a.play().catch(()=>speak(text,lang)); return; }
+  if (!('speechSynthesis' in window)){ toast('Máy này chưa hỗ trợ đọc to 😢'); return; }
+  text = String(text||'').replace(/_+|…|\.\.\./g,' ').replace(/\s+/g,' ').trim();
+  if(!text) return;
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  const zh = lang==='zh';
+  const v = voices.find(v=>v.lang.toLowerCase().replace('_','-').startsWith(zh?'zh-cn':'en-us'))
+         || voices.find(v=>v.lang.toLowerCase().startsWith(zh?'zh':'en'));
+  if (v) u.voice = v;
+  else if (zh && voices.length && !warnedZh){ warnedZh=true; toast('Máy chưa có giọng đọc tiếng Trung — bố mẹ có thể cài thêm trong cài đặt giọng nói'); }
+  u.lang = zh ? 'zh-CN' : 'en-US';
+  u.rate = 0.8;
+  speechSynthesis.speak(u);
+}
+function say(item, lang){ lang==='zh' ? speak(item.zh,'zh',item.audioZh) : speak(item.en,'en',item.audioEn); }
+
+/* ---------- tiện ích và hiệu ứng ---------- */
+function esc(s){ return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function shuffle(a){ a=a.slice(); for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; }
+let tt; function toast(m){ const t=document.getElementById('toast'); t.textContent=m; t.classList.add('show'); clearTimeout(tt); tt=setTimeout(()=>t.classList.remove('show'),2800); }
+const REDUCED = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+function confetti(n){
+  if(REDUCED) return;
+  const c=document.createElement('div'); c.className='confetti';
+  const em=['⭐','🎉','🌟','🧭','🎈','✨','💎'];
+  for(let i=0;i<(n||32);i++){ const s=document.createElement('span'); s.textContent=em[i%em.length];
+    s.style.left=Math.random()*100+'%'; s.style.animationDelay=(Math.random()*.7)+'s'; s.style.fontSize=(20+Math.random()*18)+'px'; c.appendChild(s); }
+  document.body.appendChild(c); setTimeout(()=>c.remove(),2800);
+}
+function floatPts(el,n){
+  bumpStars(); sfx.coin();
+  if(REDUCED) return;
+  const r=(el&&el.getBoundingClientRect)?el.getBoundingClientRect():{left:innerWidth/2,top:innerHeight/2,width:0};
+  const t=document.getElementById('starCount').getBoundingClientRect();
+  const f=document.createElement('div'); f.className='fpts'; f.textContent='+'+n+' ⭐';
+  f.style.left=(r.left+r.width/2)+'px'; f.style.top=r.top+'px';
+  f.style.setProperty('--dx',(t.left+t.width/2-(r.left+r.width/2))+'px'); f.style.setProperty('--dy',(t.top-r.top)+'px');
+  document.body.appendChild(f); setTimeout(()=>f.remove(),1300);
+}
+const MASCOT_LINES = {
+  ok:['Giỏi quá! 🎉','Đúng rồi! ⭐','Tuyệt vời!','Wow, siêu ghê!','你真棒！','Great job!'],
+  no:['Thử lại nhé! 💪','Gần đúng rồi!','Nghe lại lần nữa nào!'],
+  done:['Xong một chặng rồi! 🏅','Nhà thám hiểm giỏi quá!','Mai mình đi tiếp nhé!'],
+  hi:['Chào nhà thám hiểm nhí! 👋','Hôm nay mình học gì nào?','Let\'s go! 出发！']
+};
+let mt; function mascot(kind){
+  const m=document.getElementById('mascot'); if(!m) return;
+  const arr=MASCOT_LINES[kind]||[kind];
+  m.querySelector('.bubble').textContent=arr[Math.floor(Math.random()*arr.length)];
+  m.classList.remove('talk','jump'); void m.offsetWidth; m.classList.add('talk', kind==='ok'||kind==='done'?'jump':'x');
+  clearTimeout(mt); mt=setTimeout(()=>m.classList.remove('talk'),2600);
+}
+let streak=0;
+function combo(ok,el){
+  if(!ok){ streak=0; return; }
+  streak++;
+  if(streak>=3 && streak%2===1){
+    const b=document.createElement('div'); b.className='combo'; b.textContent='Combo x'+streak+' 🔥';
+    document.body.appendChild(b); setTimeout(()=>b.remove(),1400); sfx.win();
+  }
+}
+
+/* ---------- link video / game nhúng ---------- */
+const LINK_ICON = {video:'▶️', card:'🃏', game:'🎮', story:'📖'};
+function embedUrl(u){
+  let m;
+  if(m=u.match(/youtu\.be\/([\w-]{6,})/)) return 'https://www.youtube.com/embed/'+m[1]+'?rel=0';
+  if(m=u.match(/youtube\.com\/watch\?[^#]*v=([\w-]{6,})/)) return 'https://www.youtube.com/embed/'+m[1]+'?rel=0';
+  if(m=u.match(/drive\.google\.com\/file\/d\/([\w-]+)/)) return 'https://drive.google.com/file/d/'+m[1]+'/preview';
+  if(m=u.match(/drive\.google\.com\/drive\/folders\/([\w-]+)/)) return 'https://drive.google.com/embeddedfolderview?id='+m[1]+'#grid';
+  if(m=u.match(/wordwall\.net\/play\/(\d+\/\d+\/\d+)/)) return 'https://wordwall.net/embed/play/'+m[1];
+  return '';
+}
+let embedSeq=0;
+function linkBtns(links){
+  if(!links || !links.length) return '';
+  return `<div class="links">${links.map(l=>{
+    const e=l.embed||embedUrl(l.url), id='emb'+(++embedSeq), folder=/embeddedfolderview/.test(e);
+    return `<div class="media"><div class="mrow">
+        ${e?`<button class="lnk ${l.kind} play" data-e="${esc(e)}" data-t="${id}" data-folder="${folder?1:''}">${LINK_ICON[l.kind]||'🔗'} ${esc(l.label)}</button>`
+           :`<a class="lnk ${l.kind}" href="${esc(l.url)}" target="_blank" rel="noopener">${LINK_ICON[l.kind]||'🔗'} ${esc(l.label)} <span class="newtab">↗</span></a>`}
+        ${e?`<a class="ext" href="${esc(l.url)}" target="_blank" rel="noopener" title="Mở trong tab mới">↗</a>`:''}
+      </div><div class="player" id="${id}" hidden></div></div>`;}).join('')}</div>`;
+}
+document.addEventListener('click',ev=>{
+  const b=ev.target.closest('.lnk.play'); if(!b) return;
+  const box=document.getElementById(b.dataset.t);
+  if(!box.hidden){ box.hidden=true; box.innerHTML=''; b.classList.remove('open'); return; }
+  try{ speechSynthesis.cancel(); }catch(e){}
+  sfx.pop();
+  const game=b.classList.contains('game')||b.classList.contains('story'), folder=b.dataset.folder;
+  box.className='player '+(game?'pgame':folder?'pfolder':'pvideo');
+  box.innerHTML=`<iframe src="${b.dataset.e}" allow="autoplay; fullscreen; encrypted-media" allowfullscreen loading="lazy"></iframe>
+    ${folder?'<p class="hint">Bấm vào video trong thư mục để xem.</p>':''}`;
+  box.hidden=false; b.classList.add('open');
+  box.scrollIntoView({behavior:REDUCED?'auto':'smooth',block:'nearest'});
+});
+function sayBtns(i,kind){ return `<div class="say"><button class="sbtn en" data-k="${kind}" data-i="${i}" data-l="en">🇬🇧 Nghe</button><button class="sbtn zh" data-k="${kind}" data-i="${i}" data-l="zh">🇨🇳 听</button></div>`; }
+
+/* Từ dùng cho trò chơi: từ của hôm nay; nếu ít thì lấy thêm từ các ngày trước để ôn */
+function gamePool(g,i){
+  const days=GROUPS[g].days, seen=new Set(), pool=[];
+  const imgs=new Set(); const add=w=>{ if(!w || !w.en || !w.zh || seen.has(w.en) || pool.length>=6) return; const it=w.img?w:Object.assign({},w,{img:sentArt(w)}); if(imgs.has(it.img)) return; seen.add(w.en); imgs.add(it.img); pool.push(it); };
+  (days[i].w||[]).forEach(add);
+  for(let k=i-1;k>=0 && pool.length<6;k--) (days[k].w||[]).forEach(add);
+  if(pool.length<4){ (days[i].s||[]).forEach(add); for(let k=i-1;k>=0 && pool.length<4;k--) (days[k].s||[]).forEach(add); }
+  return pool;
+}
+
+/* ---------- hồ sơ: hỏi tên bé ---------- */
+function askProfile(g, then){
+  const ov=document.createElement('div'); ov.className='overlay';
+  ov.innerHTML=`<form class="modal" id="pf">
+    <div class="mart"><img class="mportrait" src="img/characters/bong.jpg" alt=""></div>
+    <h3>Nhà thám hiểm tên là gì?</h3>
+    <p class="hint">Tên này hiện trên Bảng vàng khi con lọt Top 10. Bố mẹ có thể dùng tên ở nhà của con.</p>
+    <label for="kname">Tên của con</label>
+    <input id="kname" required maxlength="24" placeholder="Ví dụ: Bông, Minh An" value="${esc(KID&&KID.name||'')}">
+    <label for="kcode">4 số cuối điện thoại bố/mẹ</label>
+    <input id="kcode" required inputmode="numeric" pattern="[0-9]{4}" maxlength="4" placeholder="Ví dụ: 6789" value="${esc(KID&&KID.code||'')}">
+    <p class="hint small">Dùng để phân biệt các bé trùng tên, không hiển thị công khai.</p>
+    <div class="row"><button class="btn" type="submit">Lên đường! 🚀</button></div>
+  </form>`;
+  document.body.appendChild(ov);
+  ov.querySelector('#kname').focus();
+  ov.querySelector('#pf').addEventListener('submit',e=>{
+    e.preventDefault();
+    KID={name:ov.querySelector('#kname').value.trim(), code:ov.querySelector('#kcode').value.trim(), group:g};
+    lsSet('lle-kid',KID); ov.remove(); sfx.win(); updateStars();
+    for(let i=0;i<TOTAL;i++) if(P[g+'-'+i]) pushScore(g,i);
+    then&&then();
+  });
+}
+
+/* ---------- MÀN HÌNH 1: chọn nhóm ---------- */
+function viewHome(){
+  app.innerHTML = `
+  <section class="hero">
+    <div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div>
+    <div class="kicker">Thử thách 21 ngày Bật phản xạ Anh – Trung</div>
+    <h1>Những nhà thám hiểm<br>ngôn ngữ nhí</h1>
+    <span class="tag">Giỏi tiếng Anh – Siêu tiếng Trung</span>
+    <p>Chọn nhóm của con để bắt đầu hành trình 21 ngày: 3 vòng, mỗi vòng 6 ngày tự học và 1 buổi Zoom cùng giáo viên. Tích điểm mỗi ngày để vào Bảng vàng Top 10!</p>
+    <div class="crew" aria-label="Các bạn đồng hành">
+      <figure class="mate" style="--d:.15s"><img src="img/characters/leo.jpg" alt="Leo"><figcaption><b>Leo</b><span>Hello!</span></figcaption></figure>
+      <figure class="mate main" style="--d:0s"><img src="img/characters/bong.jpg" alt="Bông"><figcaption><b>Bông</b><span>Xin chào!</span></figcaption></figure>
+      <figure class="mate" style="--d:.3s"><img src="img/characters/xiaomei.jpg" alt="Xiaomei"><figcaption><b>Xiaomei</b><span class="zh">你好！</span></figcaption></figure>
+    </div>
+    <svg class="wave" viewBox="0 0 1200 50" preserveAspectRatio="none"><path d="M0,30 C200,0 400,50 600,25 C800,0 1000,45 1200,20 L1200,50 L0,50 Z" fill="#FFFBF0"/></svg>
+  </section>
+  <div class="wrap">
+    ${KID?`<div class="kidbar">${art('🧒','sm')} <span>Xin chào <b>${esc(KID.name)}</b>! Con đang có <b>${myPoints()} điểm</b>.</span> <button class="linkish" id="editKid">Đổi tên</button></div>`:''}
+    <div class="groups">
+      ${Object.entries(GROUPS).map(([k,g],n)=>`
+        <a class="gcard" href="#/g/${k}" style="--d:${n*.12}s">
+          <div class="ico" style="background:${g.color}22">${art(g.icon,'gi')}</div>
+          <h3>${esc(g.name)}</h3>
+          <div class="age">${esc(g.age)}</div>
+          <div class="lvl">${esc(g.level)}</div>
+          <div class="ptext" style="margin-top:6px">Đã đi: ${doneCount(k)}/21 ngày · ${groupPoints(k)} điểm</div>
+          <span class="go" style="background:${g.color}">Lên đường →</span>
+        </a>`).join('')}
+    </div>
+    <div class="note">
+      <b>Gửi bố mẹ:</b> mỗi ngày con học khoảng 10–15 phút cùng bố mẹ: nghe từ và mẫu câu → làm hoạt động → chơi trò chơi → hoàn thành.
+      Ngày 7, 14, 21 là <b>buổi Zoom cùng giáo viên</b>. Mỗi bước hoàn thành được cộng điểm; cuối mỗi vòng, Top 10 mỗi nhóm được vinh danh trên Bảng vàng.
+      <br><br>Nhớ nguyên tắc <b>3 KHÔNG</b>: không ép nói · không sửa lỗi · không so sánh. 💛
+    </div>
+    <div class="ptable"><b>Cách tính điểm mỗi ngày:</b>
+      <span>🃏 Học từ +${PTS.learn}</span><span>👨‍👩‍👧 Cùng ba mẹ +${PTS.parent}</span><span>🎮 4 trò chơi, mỗi trò tối đa +${PTS.perGame}</span>
+      <span>🏁 Hoàn thành +${PTS.done}</span><span>🎥 Ngày quay clip +${PTS.clip}</span><span>💻 Buổi Zoom +${PTS.zoom}</span></div>
+    <div class="foot">CES Vietnam · Little Language Explorers<br><button class="tbtn" id="tbtn">${TEACHER?'🔓 Tắt chế độ giáo viên':'🔑 Chế độ giáo viên (mở tất cả các ngày)'}</button></div>
+  </div>`;
+  document.getElementById('tbtn').onclick=toggleTeacher;
+  const ek=document.getElementById('editKid'); if(ek) ek.onclick=()=>askProfile(KID.group, viewHome);
+}
+
+/* ---------- MÀN HÌNH 2: bản đồ hành trình ---------- */
+function viewGroup(g){
+  const G = GROUPS[g]; if(!G) return viewHome();
+  if(!KID){ app.innerHTML=''; return askProfile(g, ()=>viewGroup(g)); }
+  if(KID.group!==g){ KID.group=g; lsSet('lle-kid',KID); updateStars(); }
+  const n = doneCount(g);
+  const rounds = ROUNDS.map((R,r)=>{
+    const rdone = isDone(g,r*PER+PER-1);
+    return `<div class="round ${rdone?'rdone':''}">
+      <div class="rhead"><span class="rbadge">Tuần ${r+1}</span><h3>${R.icon} ${R.en}</h3><span class="vi">${R.vi}</span>
+        <span class="rpts">${roundPoints(g,r)} điểm</span></div>
+      <div class="trail">
+        ${[0,1,2,3,4,5,6].map(d=>{
+          const i=r*PER+d, day=G.days[i];
+          const done=isDone(g,i), open=isUnlocked(g,i);
+          const cls=(done?'done':(open?'now':'lock'))+(day.zoom?' zoom':'');
+          const icon = done?'⭐':(!open?'🔒':(day.zoom?'🎥':i+1));
+          return `<button class="stop ${cls}" data-i="${i}" style="--d:${d*.05}s"><span class="dot">${icon}</span><span class="lb">${day.zoom?'Zoom':'Ngày '+(i+1)}</span></button>`;
+        }).join('')}
+      </div>
+      <a class="gold ${rdone?'on':''}" href="#/g/${g}/vang/${r+1}">🏆 Bảng vàng ${R.vi}</a>
+    </div>`;}).join('');
+  app.innerHTML = `<div class="wrap">
+    <div class="ghead">
+      <div class="ico" style="background:${G.color}22">${art(G.icon,'gi')}</div>
+      <div><h2>${esc(G.name)}</h2><small>${esc(G.age)} · ${esc(G.level)}</small></div>
+      <div class="me">${art('🧒','sm')}<div><b>${esc(KID.name)}</b><small>${groupPoints(g)} điểm</small></div></div>
+    </div>
+    <div class="progress"><i style="width:${n/TOTAL*100}%"></i><span class="walker" style="left:${n/TOTAL*100}%">${art('🧭','tiny')}</span></div>
+    <div class="ptext">Đã hoàn thành ${n}/21 ngày ${TEACHER?'· <b style="color:var(--red)">Chế độ giáo viên: mở tất cả</b>':''}</div>
+    ${rounds}
+    <div class="final ${n<TOTAL?'lock':''}">
+      <div class="trophy">${art('🏆','big')}</div>
+      <h3>The Grand Finale – Chung kết tỏa sáng</h3>
+      <div>${n<TOTAL ? 'Hoàn thành đủ 21 ngày để sẵn sàng cho Chung kết livestream!' : 'Con đã sẵn sàng cho Chung kết! Theo dõi lịch thi trên nhóm Zalo nhé.'}</div>
+      <a class="btn y" href="#/g/${g}/vang/0" style="margin-top:12px">🏆 Bảng vàng tổng 21 ngày</a>
+    </div>
+    <div class="row"><a class="btn y" href="#/">← Đổi nhóm</a></div>
+  </div>`;
+  app.querySelectorAll('.stop').forEach(b=>b.onclick=()=>{
+    if(b.classList.contains('lock')){ sfx.no(); toast('Hoàn thành ngày trước để mở khóa nhé! 🔒'); return; }
+    sfx.pop(); location.hash = `#/g/${g}/${+b.dataset.i+1}`;
+  });
+  mascot('hi');
+}
+
+/* ---------- Bảng vàng ---------- */
+function viewGold(g, r){
+  const G=GROUPS[g]; if(!G) return viewHome();
+  const tabs=[[1,ROUNDS[0].vi],[2,ROUNDS[1].vi],[3,ROUNDS[2].vi],[0,'Tổng 21 ngày']];
+  const mine = r? roundPoints(g,r-1) : groupPoints(g);
+  app.innerHTML=`<div class="wrap">
+    <div class="goldhead">${art('🏆','big')}<div><h2>Bảng vàng ${esc(G.name)}</h2><small>Top 10 nhà thám hiểm nhiều điểm nhất</small></div></div>
+    <div class="gtabs">${tabs.map(([k,t])=>`<a class="gtab ${k===r?'on':''}" href="#/g/${g}/vang/${k}">${t}</a>`).join('')}</div>
+    <div class="panel" id="board"><div class="loading">${art('🧭','big spin')}<p>Đang tải Bảng vàng…</p></div></div>
+    ${KID?`<div class="mycard">${art('🧒','sm')}<span><b>${esc(KID.name)}</b> có <b>${mine} điểm</b> ${r?'trong '+esc(ROUNDS[r-1].vi):'sau 21 ngày'}</span><span id="myrank"></span></div>`:''}
+    <div class="row"><a class="btn y" href="#/g/${g}">← Về bản đồ</a></div></div>`;
+  const board=document.getElementById('board');
+  if(!SCORE_API){
+    board.innerHTML=`<div class="empty">${art('🏗️','big')}<h3>Bảng vàng đang được chuẩn bị</h3><p>Khi cô giáo kết nối bảng điểm, Top 10 của nhóm ${esc(G.name)} sẽ hiện ở đây.</p></div>`;
+    return;
+  }
+  fetch(`${SCORE_API}?group=${encodeURIComponent(g)}&round=${r}&kid=${encodeURIComponent(kidId())}`)
+    .then(res=>res.json()).then(data=>{
+      const top=(data&&data.top)||[];
+      if(!top.length){ board.innerHTML=`<div class="empty">${art('🌱','big')}<h3>Chưa có ai trên Bảng vàng</h3><p>Hoàn thành bài học để là người đầu tiên!</p></div>`; return; }
+      const medal=['🥇','🥈','🥉'];
+      const pod=top.slice(0,3), rest=top.slice(3,10);
+      const order=[1,0,2].filter(k=>pod[k]);
+      board.innerHTML=`<div class="podium">${order.map(k=>`
+          <div class="pod p${k+1}" style="--d:${(2-k)*.25}s"><div class="pm">${art(medal[k].replace(/./u,m=>m),'pmed')}</div>
+          <div class="pn">${esc(pod[k].name)}</div><div class="pp">${pod[k].points} điểm</div><div class="pb">${k+1}</div></div>`).join('')}</div>
+        ${rest.length?`<ol class="ranks" start="4">${rest.map((x,k)=>`<li style="--d:${.8+k*.08}s"><span class="rn">${k+4}</span><span class="nm">${esc(x.name)}</span><span class="pt">${x.points} điểm</span></li>`).join('')}</ol>`:''}`;
+      const mr=document.getElementById('myrank');
+      if(mr && data.me && data.me.rank) mr.innerHTML=` · Hạng <b>${data.me.rank}</b>${data.me.rank<=10?' 🎉':''}`;
+      sfx.win(); confetti(24);
+    }).catch(()=>{
+      board.innerHTML=`<div class="empty">${art('📡','big')}<h3>Chưa tải được Bảng vàng</h3><p>Kiểm tra kết nối mạng rồi thử lại nhé.</p><button class="btn y" onclick="route()">Thử lại</button></div>`;
+    });
+}
+
+/* ---------- MÀN HÌNH 3: một ngày ---------- */
+let cur = {};
+function head(g,i){
+  const G=GROUPS[g], R=ROUNDS[Math.floor(i/PER)], day=G.days[i];
+  return `<div class="dayhead">
+    <div class="crumb">${G.icon} ${esc(G.name)} · ${R.icon} ${R.vi} · Ngày ${i+1}/21 · <b>${dayPoints(g,i)} điểm</b></div>
+    <h2>${esc(day.t)}</h2></div>`;
+}
+function viewDay(g,i,step){
+  const G=GROUPS[g]; const day=G && G.days[i];
+  if(!day) return viewHome();
+  if(!KID){ app.innerHTML=''; return askProfile(g, ()=>viewDay(g,i,step)); }
+  if(!isUnlocked(g,i)){ toast('Ngày này chưa mở khóa 🔒'); location.hash='#/g/'+g; return; }
+  cur={g,i,day};
+  if(day.zoom) return viewZoom(g,i);
+  const s=st(g,i);
+  const hasLearn = (day.w&&day.w.length)||(day.s&&day.s.length);
+  const steps=[];
+  if(hasLearn) steps.push(['learn','🃏','Học từ']);
+  steps.push(['parent','👨‍👩‍👧','Cùng ba mẹ'],['game','🎮','Trò chơi'],['finish','🏁','Hoàn thành']);
+  if(!steps.some(x=>x[0]===step)) step=steps[0][0];
+  cur.steps=steps.map(x=>x[0]);
+  app.innerHTML = `<div class="wrap">${head(g,i)}
+    <div class="steps">${steps.map(([k,ic,t])=>`<button class="stepbtn ${k===step?'on':''}" data-s="${k}">${ic} ${t} ${s[k]||(k==='finish'&&s.done)?'<span class="ck">✔</span>':''}</button>`).join('')}</div>
+    <div class="panel pin" id="panel"></div>
+    <div class="row"><a class="btn y" href="#/g/${g}">← Về bản đồ</a></div></div>`;
+  app.querySelectorAll('.stepbtn').forEach(b=>b.onclick=()=>{ sfx.pop(); viewDay(g,i,b.dataset.s); });
+  ({learn:stepLearn, parent:stepParent, game:stepGame, finish:stepFinish})[step]();
+  window.scrollTo({top:0});
+}
+function nextStep(k){ const a=cur.steps; return a[a.indexOf(k)+1]; }
+function mark(k, go, el){
+  const s=st(cur.g,cur.i), before=dayPoints(cur.g,cur.i);
+  if(!s[k]){ s[k]=true; addPoints(cur.g,cur.i,before,el); }
+  if(go) setTimeout(()=>viewDay(cur.g,cur.i,nextStep(k)), s._fast?0:REDUCED?0:450);
+}
+function nextLabel(k){ return ({parent:'Cùng ba mẹ',game:'Trò chơi',finish:'Hoàn thành'})[nextStep(k)]; }
+
+/* Bước: học từ + mẫu câu */
+function stepLearn(){
+  const {day}=cur, panel=document.getElementById('panel');
+  const W=day.w||[], Sx=day.s||[];
+  panel.innerHTML = `
+    ${W.length?`<h3>🃏 Từ mới hôm nay</h3><p class="hint">Chạm vào hình để nghe cả hai thứ tiếng, hoặc bấm 🇬🇧 / 🇨🇳. Con nói to theo nhé!</p>
+    <div class="cards">${W.map((w,i)=>`
+      <div class="fc" id="fc${i}" style="--d:${i*.08}s">
+        <button class="pic" data-i="${i}" aria-label="Nghe ${esc(w.en)}">${art(w.img,'card',w.en)}</button>
+        <div class="en">${esc(w.en)}</div>
+        <div class="hz zh">${esc(w.zh)}</div>
+        <div class="py">${esc(w.py)}</div>
+        ${w.vi?`<div class="vi">${esc(w.vi)}</div>`:''}
+        ${sayBtns(i,'w')}
+      </div>`).join('')}</div>`:''}
+    ${Sx.length?`<h3 style="margin-top:${W.length?18:0}px">💬 Mẫu câu</h3><p class="hint">Nghe từng câu và nói theo.</p>
+    <div class="sents">${Sx.map((x,i)=>`
+      <div class="sent" style="--d:${(W.length+i)*.07}s">
+        <div class="sart">${art(sentArt(x),'sa',x.en)}</div>
+        <div class="stxt"><div class="en">${esc(x.en)}</div>
+        <div class="hz zh">${esc(x.zh)}</div>
+        <div class="py">${esc(x.py)}</div>
+        ${sayBtns(i,'s')}</div>
+      </div>`).join('')}</div>`:''}
+    <div class="row"><button class="btn" id="nx">Tiếp: ${nextLabel('learn')} →</button></div>`;
+  const heard=(i,l)=>{ const c=document.getElementById('fc'+i); if(!c) return; c.dataset[l]=1; if(c.dataset.en&&c.dataset.zh&&!c.classList.contains('heard')){ c.classList.add('heard'); sfx.ok(); } };
+  panel.querySelectorAll('.sbtn').forEach(b=>b.onclick=()=>{
+    const arr=b.dataset.k==='w'?W:Sx; say(arr[+b.dataset.i], b.dataset.l);
+    const card=b.closest('.fc,.sent'); card.classList.remove('wig'); void card.offsetWidth; card.classList.add('wig');
+    if(b.dataset.k==='w') heard(b.dataset.i,b.dataset.l);
+  });
+  panel.querySelectorAll('.pic').forEach(p=>p.onclick=()=>{
+    const i=+p.dataset.i, w=W[i]; p.classList.remove('boing'); void p.offsetWidth; p.classList.add('boing');
+    say(w,'en'); setTimeout(()=>say(w,'zh'), 1300); heard(i,'en'); heard(i,'zh');
+  });
+  panel.querySelector('#nx').onclick=e=>mark('learn',true,e.currentTarget);
+}
+
+/* Bước: ba mẹ làm cùng bé */
+function stepParent(){
+  const {day}=cur, panel=document.getElementById('panel');
+  panel.innerHTML = `<h3>👨‍👩‍👧 Ba mẹ làm cùng bé</h3>
+    <ol class="plist">${(day.steps||[]).map((x,k)=>`<li style="--d:${k*.07}s">${esc(x)}</li>`).join('')}</ol>
+    ${linkBtns(day.links)}
+    ${day.tip?`<div class="tip">💡 <b>Mẹo:</b> ${esc(day.tip)}</div>`:''}
+    <div class="row"><button class="btn" id="nx">Tiếp: ${nextLabel('parent')} →</button></div>`;
+  panel.querySelector('#nx').onclick=e=>mark('parent',true,e.currentTarget);
+}
+
+/* Bước: trò chơi */
+function stepGame(mode){
+  const pool=gamePool(cur.g,cur.i);
+  const s=st(cur.g,cur.i);
+  const panel=document.getElementById('panel');
+  if(pool.length<2){ panel.innerHTML='<div class="empty">Hôm nay chưa có từ để chơi.</div>'; return; }
+  const isOpen=k=>TEACHER || k===0 || (s.gp && GAMES[k-1][0] in s.gp);
+  let idx=GAMES.findIndex(g=>g[0]===mode);
+  if(idx<0 || !isOpen(idx)){ idx=GAMES.findIndex(([k])=>!(s.gp && k in s.gp)); if(idx<0) idx=0; }
+  mode=GAMES[idx][0]; cur.gameMode=mode;
+  const gl=(cur.day.links||[]).filter(l=>l.kind==='game');
+  panel.innerHTML = `<h3>🎮 Trò chơi luyện tập · Trò ${idx+1}/4</h3>
+    <p class="hint">Con chơi lần lượt 4 trò, xong trò này sẽ mở trò tiếp theo. Mỗi trò được tối đa ${PTS.perGame} điểm. Đã xong <b>${gamesDone(s)}/4</b> trò · <b>${gamePts(s)}</b> điểm.</p>
+    <div class="gtabs gseq">${GAMES.map(([k,t],n)=>{ const done=s.gp&&k in s.gp, open=isOpen(n);
+      return `<button class="gtab ${k===mode?'on':''} ${done?'gdone':''} ${open?'':'glock'}" data-n="${n}">${done?'✅':open?'':'🔒'} ${n+1}. ${t.replace(/^\S+\s/,'')}</button>`; }).join('')}</div>
+    <div id="gbox"></div>
+    ${gl.length?`<p class="hint" style="margin-top:16px">Game của cô trên Wordwall:</p>${linkBtns(gl)}`:''}`;
+  panel.querySelectorAll('.gtab').forEach(b=>b.onclick=()=>{ const n=+b.dataset.n;
+    if(!isOpen(n)){ sfx.no(); toast('Chơi xong trò '+n+' để mở trò này nhé! 🔒'); return; }
+    sfx.pop(); stepGame(GAMES[n][0]); });
+  const box=document.getElementById('gbox'); streak=0;
+  ({listen:()=>gameListen(box,pool), match:()=>gameMatch(box,pool), pinyin:()=>gamePinyin(box,pool), hanzi:()=>gameHanzi(box,pool)})[mode]();
+}
+function gameWin(box,score,total,msg,again){
+  const s=st(cur.g,cur.i), before=dayPoints(cur.g,cur.i), mode=cur.gameMode;
+  s.gp=s.gp||{}; s.gp[mode]=Math.max(s.gp[mode]||0, Math.round(Math.max(0,score)/Math.max(1,total)*PTS.perGame));
+  const n=GAMES.findIndex(g=>g[0]===mode), next=GAMES[n+1];
+  if(gamesDone(s)===GAMES.length) s.game=true;
+  confetti(); sfx.win(); mascot('ok');
+  box.innerHTML=`<div class="win">${art('🎉','big')}<div>${msg}</div><div class="stars3">${'⭐'.repeat(Math.max(1,Math.round(Math.max(0,score)/total*3)))}</div>
+      <div class="hint">Xong trò ${n+1}/4${next?'. Trò tiếp theo: '+next[1]:'. Con đã chơi hết 4 trò!'}</div></div>
+    <div class="row"><button class="btn y" id="again">Chơi lại</button><button class="btn" id="nx">${next?'Tiếp: Trò '+(n+2)+' →':'Tiếp: Hoàn thành →'}</button></div>`;
+  addPoints(cur.g,cur.i,before,box.querySelector('.win'));
+  box.querySelector('#again').onclick=again;
+  box.querySelector('#nx').onclick=()=> next ? stepGame(next[0]) : viewDay(cur.g,cur.i,'finish');
+  const t=document.querySelector('.stepbtn[data-s=game]'); if(t && s.game && !t.querySelector('.ck')) t.insertAdjacentHTML('beforeend',' <span class="ck">✔</span>');
+}
+function gstat(i,n,score){ return `<div class="gstat"><div class="gbar"><i style="width:${i/n*100}%"></i></div>Câu ${i+1}/${n} · ✅ ${score}</div>`; }
+function gameListen(box,words){
+  const qs = shuffle(words.flatMap(w=>[{w,l:'en'},{w,l:'zh'}])).slice(0, Math.min(8, words.length*2));
+  let i=0, score=0;
+  (function q(){
+    if(i>=qs.length) return gameWin(box,score,qs.length,`Giỏi quá! Đúng ${score}/${qs.length} câu`,()=>gameListen(box,words));
+    const {w,l}=qs[i];
+    const opts = shuffle([w, ...shuffle(words.filter(x=>x!==w)).slice(0,3)]);
+    let tried=false;
+    box.innerHTML=`<p class="hint" style="text-align:center">Bấm loa để nghe ${l==='zh'?'tiếng Trung 🇨🇳':'tiếng Anh 🇬🇧'}, rồi chọn hình đúng</p>
+      <div class="listen-big"><button id="play" aria-label="Nghe">🔊</button></div>
+      <div class="opts">${opts.map((o,k)=>`<button class="opt" data-k="${k}" style="--d:${k*.06}s">${art(o.img,'opta',o.en)}</button>`).join('')}</div>
+      ${gstat(i,qs.length,score)}`;
+    const play=()=>{ const p=box.querySelector('#play'); p.classList.remove('ring'); void p.offsetWidth; p.classList.add('ring'); say(w,l); };
+    box.querySelector('#play').onclick=play; setTimeout(play,350);
+    box.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{
+      if(opts[+b.dataset.k]===w){ b.classList.add('ok'); if(!tried) score++; sfx.ok(); combo(!tried,b); mascot('ok');
+        setTimeout(()=>say(w, l==='en'?'zh':'en'),300);
+        box.querySelectorAll('.opt').forEach(x=>x.onclick=null); setTimeout(()=>{i++;q();},1500); }
+      else { tried=true; sfx.no(); combo(false); mascot('no'); b.classList.remove('no'); void b.offsetWidth; b.classList.add('no'); }
+    });
+  })();
+}
+function gameMatch(box,words){
+  words=words.slice(0,6);
+  const L=shuffle(words.map((w,i)=>({i,t:w.en}))), R=shuffle(words.map((w,i)=>({i,t:w.zh})));
+  let sel=null, left=words.length, score=words.length;
+  box.innerHTML=`<p class="hint" style="text-align:center">Chọn 1 từ tiếng Anh, rồi chọn chữ tiếng Trung cùng nghĩa</p>
+    <div class="match"><div class="mcol">${L.map((x,k)=>`<button class="mi" data-side="L" data-i="${x.i}" style="--d:${k*.05}s">${art(words[x.i].img,'mia',words[x.i].en)}<span>${esc(x.t)}</span></button>`).join('')}</div>
+    <div class="mcol">${R.map((x,k)=>`<button class="mi zhi zh" data-side="R" data-i="${x.i}" style="--d:${k*.05+.1}s">${esc(x.t)}</button>`).join('')}</div></div>`;
+  box.querySelectorAll('.mi').forEach(b=>b.onclick=()=>{
+    const side=b.dataset.side, i=+b.dataset.i;
+    say(words[i], side==='L'?'en':'zh');
+    if(!sel || sel.dataset.side===side){ box.querySelectorAll('.mi.sel').forEach(x=>x.classList.remove('sel')); sel=b; b.classList.add('sel'); sfx.pop(); return; }
+    if(+sel.dataset.i===i){ sel.classList.replace('sel','matched'); b.classList.add('matched'); sel=null; sfx.ok(); combo(true,b);
+      if(!--left){ setTimeout(()=>gameWin(box,Math.max(0,score),words.length,'Ghép đúng hết rồi!',()=>gameMatch(box,words)),500); }
+    } else { score--; sfx.no(); combo(false); mascot('no'); b.classList.remove('no'); void b.offsetWidth; b.classList.add('no'); sel.classList.remove('sel'); sel=null; }
+  });
+}
+/* Ghép chữ Hán với pinyin */
+function gamePinyin(box,words){
+  words=words.slice(0,6);
+  const L=shuffle(words.map((w,i)=>i)), R=shuffle(words.map((w,i)=>i));
+  let sel=null, left=words.length, score=words.length;
+  box.innerHTML=`<p class="hint" style="text-align:center">Chọn 1 chữ Hán, rồi chọn pinyin đọc đúng chữ đó. Bấm vào ô là nghe được cách đọc!</p>
+    <div class="match"><div class="mcol">${L.map((i,k)=>`<button class="mi hzt zh" data-side="L" data-i="${i}" style="--d:${k*.05}s">${esc(words[i].zh)}</button>`).join('')}</div>
+    <div class="mcol">${R.map((i,k)=>`<button class="mi pyt" data-side="R" data-i="${i}" style="--d:${k*.05+.1}s">${esc(words[i].py)}</button>`).join('')}</div></div>`;
+  box.querySelectorAll('.mi').forEach(b=>b.onclick=()=>{
+    const side=b.dataset.side, i=+b.dataset.i;
+    say(words[i],'zh');
+    if(!sel || sel.dataset.side===side){ box.querySelectorAll('.mi.sel').forEach(x=>x.classList.remove('sel')); sel=b; b.classList.add('sel'); sfx.pop(); return; }
+    if(+sel.dataset.i===i){
+      const hz = side==='L'?b:sel;
+      hz.innerHTML=`${art(words[i].img,'mia',words[i].en)}<span>${esc(words[i].zh)}</span>`;
+      sel.classList.replace('sel','matched'); b.classList.add('matched'); sel=null; sfx.ok(); combo(true,b);
+      if(!--left){ setTimeout(()=>gameWin(box,Math.max(0,score),words.length,'Con ghép đúng hết chữ và pinyin rồi!',()=>gamePinyin(box,words)),600); }
+    } else { score--; sfx.no(); combo(false); mascot('no'); b.classList.remove('no'); void b.offsetWidth; b.classList.add('no'); sel.classList.remove('sel'); sel=null; }
+  });
+}
+/* Nhìn hình, nghe tiếng Trung, chọn đúng chữ Hán */
+function gameHanzi(box,words){
+  const qs=shuffle(words).slice(0,8);
+  let i=0, score=0;
+  (function q(){
+    if(i>=qs.length) return gameWin(box,score,qs.length,`Giỏi quá! Con nhận đúng ${score}/${qs.length} chữ`,()=>gameHanzi(box,words));
+    const w=qs[i];
+    const opts=shuffle([w, ...shuffle(words.filter(x=>x!==w)).slice(0,Math.min(3,words.length-1))]);
+    let tried=false;
+    box.innerHTML=`<p class="hint" style="text-align:center">Nhìn hình, nghe cô đọc, rồi chọn đúng chữ Hán</p>
+      <div class="hzq"><div class="hzpic">${art(w.img,'opta',w.en)}</div><div class="listen-big"><button id="play" aria-label="Nghe">🔊</button></div></div>
+      <div class="opts hzopts">${opts.map((o,k)=>`<button class="opt hzo zh" data-k="${k}" style="--d:${k*.06}s">${esc(o.zh)}</button>`).join('')}</div>
+      <div class="reveal" id="rv"></div>
+      ${gstat(i,qs.length,score)}`;
+    const play=()=>{ const p=box.querySelector('#play'); p.classList.remove('ring'); void p.offsetWidth; p.classList.add('ring'); say(w,'zh'); };
+    box.querySelector('#play').onclick=play; setTimeout(play,350);
+    box.querySelectorAll('.hzo').forEach(b=>b.onclick=()=>{
+      if(opts[+b.dataset.k]===w){ b.classList.add('ok'); if(!tried) score++; sfx.ok(); combo(!tried,b); mascot('ok');
+        box.querySelector('#rv').innerHTML=`<span class="zh">${esc(w.zh)}</span> <small>${esc(w.py||'')}</small> · ${esc(w.en)}`;
+        box.querySelectorAll('.hzo').forEach(x=>x.onclick=null); setTimeout(()=>{i++;q();},1700); }
+      else { tried=true; sfx.no(); combo(false); mascot('no'); say(opts[+b.dataset.k],'zh'); b.classList.remove('no'); void b.offsetWidth; b.classList.add('no'); }
+    });
+  })();
+}
+
+/* Bước: hoàn thành */
+function stepFinish(){
+  const {g,i,day}=cur, s=st(g,i), panel=document.getElementById('panel');
+  if(s.done) return showDone(panel,false);
+  panel.innerHTML = `<div class="finish">
+      <div class="big">${art('🧭','big')}</div><h3>Sắp xong ngày ${i+1} rồi!</h3>
+      ${day.goal?`<div class="goal">⭐ <b>Hoàn thành khi:</b> ${esc(day.goal)}</div>`:''}
+      ${gamesDone(s)<4?`<div class="task">🎮 Con mới chơi ${gamesDone(s)}/4 trò. <a href="#" id="backGame">Chơi nốt để được thêm điểm →</a></div>`:''}
+      ${day.clip?`<div class="task"><b>🎥 Hôm nay có nhiệm vụ quay clip (+${PTS.clip} điểm).</b> Bố mẹ quay con làm bài và gửi vào nhóm Zalo của thử thách nhé.</div>
+      <div class="row"><a class="btn y" href="${ZALO_LINK}" target="_blank" rel="noopener">📤 Mở nhóm Zalo</a></div>`:''}
+      <div class="three"><div><b>Không ép nói</b>Con chưa muốn thì chờ lúc khác</div><div><b>Không sửa lỗi</b>Khen con đã dám nói</div><div><b>Không so sánh</b>Mỗi bé một tốc độ</div></div>
+      <div class="row"><button class="btn g" id="ok">✅ Con đã hoàn thành!</button></div></div>`;
+  const bg=panel.querySelector('#backGame'); if(bg) bg.onclick=e=>{ e.preventDefault(); viewDay(g,i,'game'); };
+  panel.querySelector('#ok').onclick=e=>{ const before=dayPoints(g,i); s.done=true; addPoints(g,i,before,e.currentTarget); showDone(panel,true); };
+}
+function showDone(panel, fresh){
+  const {g,i}=cur, day=GROUPS[g].days[i], nx=GROUPS[g].days[i+1], r=Math.floor(i/PER);
+  const pts=dayPoints(g,i);
+  panel.innerHTML=`<div class="finish">
+    <div class="badge ${fresh?'fresh':''}">${art(day.zoom?'🏆':'🏅','big')}</div><h3>Hoàn thành ngày ${i+1}!</h3>
+    <div class="stars"><span>⭐</span><span>⭐</span><span>⭐</span></div>
+    <div class="ptsum">Hôm nay con được <b>${pts} điểm</b> · Vòng này: <b>${roundPoints(g,r)} điểm</b></div>
+    <p>Nhà thám hiểm nhí giỏi quá! ${nx?`Ngày ${i+2}${nx.zoom?' (buổi Zoom cùng giáo viên)':''} đã được mở khóa.`:'Con đã đi hết 21 ngày — sẵn sàng cho Chung kết!'}</p>
+    <div class="row">${nx?`<a class="btn" href="#/g/${g}/${i+2}">Ngày ${i+2} →</a>`:''}
+    ${day.zoom?`<a class="btn" href="#/g/${g}/vang/${r+1}">🏆 Xem Bảng vàng ${esc(ROUNDS[r].vi)}</a>`:''}
+    <a class="btn y" href="#/g/${g}">🗺️ Xem bản đồ</a></div></div>`;
+  if(fresh){ confetti(44); sfx.win(); mascot('done'); }
+}
+
+/* ---------- ngày Zoom ---------- */
+function viewZoom(g,i){
+  const day=cur.day, s=st(g,i), r=Math.floor(i/PER);
+  app.innerHTML=`<div class="wrap">${head(g,i)}
+    <div class="panel zoompanel pin">
+      <div class="zhead">${art('💻','zart')}<div><div class="zbadge">🎥 Buổi Zoom cùng giáo viên · ${ROUNDS[r].vi}</div>
+      <div class="hint">Tham gia buổi Zoom được +${PTS.zoom} điểm. Kết thúc vòng này, Top 10 được vinh danh trên Bảng vàng!</div></div></div>
+      <p class="about">${esc(day.about)}</p>
+      ${day.prep&&day.prep.length?`<h3>📝 Con ôn lại trước buổi Zoom</h3><ul class="prep">${day.prep.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}
+      <div class="row">${ZOOM_LINK?`<a class="btn" href="${esc(ZOOM_LINK)}" target="_blank" rel="noopener">🎥 Vào phòng Zoom</a>`:''}
+        <a class="btn y" href="${ZALO_LINK}" target="_blank" rel="noopener">💬 ${ZOOM_LINK?'Nhóm Zalo':'Xem link Zoom trên nhóm Zalo'}</a></div>
+      ${linkBtns(day.links)}
+      <div id="zdone"></div>
+    </div>
+    <div class="row"><a class="btn y" href="#/g/${g}">← Về bản đồ</a></div></div>`;
+  const zd=document.getElementById('zdone');
+  if(s.done){ showDone(zd,false); }
+  else { zd.innerHTML=`<div class="row"><button class="btn g" id="ok">✅ Con đã tham gia buổi Zoom</button></div>`;
+    zd.querySelector('#ok').onclick=e=>{ const before=dayPoints(g,i); s.done=true; addPoints(g,i,before,e.currentTarget); showDone(zd,true); }; }
+  window.scrollTo({top:0});
+}
+
+/* ---------- điều hướng ---------- */
+function route(){
+  try{ speechSynthesis.cancel(); }catch(e){}
+  const p=location.hash.replace(/^#\/?/,'').split('/').filter(Boolean);
+  if(p[0]==='g' && p[1] && p[2]==='vang') viewGold(p[1], +(p[3]||0));
+  else if(p[0]==='g' && p[1] && p[2]) viewDay(p[1], +p[2]-1);
+  else if(p[0]==='g' && p[1]) viewGroup(p[1]);
+  else viewHome();
+  artWatch();
+}
+window.addEventListener('hashchange', route);
+document.getElementById('muteBtn').textContent=MUTE?'🔇':'🔊';
+document.getElementById('muteBtn').onclick=toggleMute;
+updateStars(); route();
+
+document.querySelector('#mascot .mimg').innerHTML='<img class="art mface" src="img/characters/bong-face.jpg" alt="">';
+</script>
+</body>
+</html>

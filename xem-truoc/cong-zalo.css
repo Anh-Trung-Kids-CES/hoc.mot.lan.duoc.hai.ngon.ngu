@@ -29,3 +29,8 @@
   .overlay.zg .modal{max-width:560px}
   .overlay.zg .zg-lead,.overlay.zg .zg-note{font-size:14px}
 }
+
+/* Lối đăng nhập cho ba mẹ đã đóng phí (một link từ đầu đến cuối) */
+.mk-link{display:block;margin:10px auto 0;border:0;background:none;color:var(--ink);font:inherit;font-size:15px;text-align:center;text-decoration:underline;text-underline-offset:3px;min-height:40px}
+.mk-link b{color:var(--red-dark)}
+.overlay.pf .pf-err a{color:var(--red-dark);font-weight:800}
