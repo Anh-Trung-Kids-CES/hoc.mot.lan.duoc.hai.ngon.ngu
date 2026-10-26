@@ -230,3 +230,21 @@ body.is-demo:not(.in-step) .toast{bottom:calc(max(10px,env(safe-area-inset-botto
 .dm-list li{background:#FFF4CC;border-radius:14px;padding:8px 12px;line-height:1.35}
 .dm-info{background:#FFFBF0;border:2px dashed #F0E2C0;border-radius:14px;padding:8px 12px;font-size:15px}
 .dm-box .row{justify-content:center;flex-wrap:wrap;gap:10px;margin-top:6px}
+
+/* Màn vào web: Đăng nhập / Đăng ký (máy chưa đăng nhập dự án) */
+.splash.entry{background:rgba(58,42,26,.62);overflow:auto}
+.en-box{background:#FFF8E7;border:5px solid var(--yellow);border-radius:32px;padding:18px 18px 16px;width:min(400px,100%);display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;box-shadow:0 14px 40px rgba(0,0,0,.3);animation:pop-in .35s both}
+.en-art{width:118px;height:118px;object-fit:contain;animation:bob 2.4s ease-in-out infinite}
+.en-kick{background:var(--red);color:#fff;font-weight:800;font-size:13px;border-radius:999px;padding:3px 12px}
+.en-box h2{margin:2px 0 0;font-size:25px;line-height:1.15;color:var(--red-dark)}
+.en-sub{margin:0 0 4px;font-weight:700;color:var(--muted);font-size:16px}
+.en-opt{width:100%;display:flex;align-items:center;gap:12px;text-align:left;border:0;border-radius:22px;padding:12px 14px;font-family:inherit;text-decoration:none;color:var(--ink);cursor:pointer;transition:transform .12s}
+.en-opt:active{transform:translateY(3px)}
+.en-opt i{font-style:normal;font-size:32px;line-height:1;flex:none;width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.85);display:grid;place-items:center}
+.en-opt b{display:block;font-size:22px;line-height:1.15}
+.en-opt small{display:block;font-size:14px;font-weight:700;line-height:1.3;opacity:.92}
+.en-opt.in{background:var(--green);color:#fff;box-shadow:0 6px 0 #2A8A57}
+.en-opt.reg{background:var(--yellow);box-shadow:0 6px 0 #D9A200}
+.en-try{margin-top:6px;border:0;background:none;font-family:inherit;font-weight:800;font-size:15px;color:#1F6FB5;text-decoration:underline;cursor:pointer;padding:4px}
+.en-snd{font-size:13px;color:var(--muted);font-weight:700}
+@media (max-height:640px){ .en-art{width:84px;height:84px} .en-box h2{font-size:22px} }

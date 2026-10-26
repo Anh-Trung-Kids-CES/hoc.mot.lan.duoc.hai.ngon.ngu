@@ -1356,7 +1356,8 @@ function viewHome(){
   const tb=document.getElementById('tbtn'); if(tb) tb.onclick=toggleTeacher;
   document.getElementById('tParent').onclick=()=>{ sfx.pop(); parentPanel(); };
   document.getElementById('tTour').onclick=()=>{ sfx.pop(); startTour(true); };
-  if(!lsGet('lle-tour-seen',false) && STARTED) setTimeout(()=>startTour(false), 400);
+  if(ENTRY_LOGIN){ ENTRY_LOGIN=false; }   // vừa bấm Đăng nhập ở màn vào web: để bảng đăng nhập đứng một mình
+  else if(!lsGet('lle-tour-seen',false) && STARTED) setTimeout(()=>startTour(false), 400);
   else if(STARTED && !mapSpoke.home){ mapSpoke.home=true; hdSay(['Chào con! Cô là cô Hươu.']); }
 }
 /* "Ba mẹ đồng hành": thông tin chương trình, các dạng bài, lời nhắn – mở thành bảng nổi */
@@ -1991,10 +1992,32 @@ function recPlay(url){ return new Promise(res=>{ if(!url) return res(); voicePla
 /* ---------- màn "Chạm để bắt đầu": mở khoá âm thanh để cô Hươu tự đọc hướng dẫn ---------- */
 let STARTED=false;
 function showSplash(){
+  if(DEMO) return showEntry();
   const sp=document.createElement('div'); sp.className='splash';
   sp.innerHTML=`<button class="splash-in" type="button"><img src="tai-nguyen/nhan-vat/huou_huou1_a.webp" alt=""><b>Chạm để bắt đầu</b><small>Bật loa để nghe cô Hươu hướng dẫn nhé 🔊</small></button>`;
   document.body.appendChild(sp);
   sp.querySelector('button').onclick=()=>{ voiceUnlock(); STARTED=true; sp.remove(); route(); };
+}
+/* Màn vào web khi máy chưa đăng nhập dự án: 2 lựa chọn Đăng nhập / Đăng ký (và lối học thử nhỏ bên dưới) */
+let ENTRY_LOGIN=false;
+function showEntry(){
+  const sp=document.createElement('div'); sp.className='splash entry';
+  const thu=KID&&KID.name ? `Con ${esc(KID.name)} học tiếp bản học thử →` : `Chưa đăng ký? Cho con học thử ${DEMO_N} buổi đầu →`;
+  sp.innerHTML=`<div class="en-box" role="dialog" aria-label="Đăng nhập hoặc đăng ký">
+    <img class="en-art" src="tai-nguyen/nhan-vat/huou_huou1_a.webp" alt="">
+    <span class="en-kick">Thử thách 21 ngày Bật phản xạ Anh – Trung</span>
+    <h2>Chào mừng nhà thám hiểm nhí!</h2>
+    <p class="en-sub">Học một lần, được hai ngôn ngữ 🇬🇧 🇨🇳</p>
+    <button class="en-opt in" type="button" id="enIn"><i>🔑</i><span><b>Đăng nhập</b><small>Ba mẹ đã đăng ký: nhập tên con và số điện thoại (hoặc Gmail) đã đăng ký</small></span></button>
+    <a class="en-opt reg" id="enReg" href="${esc(dangKyLink())}" target="_blank" rel="noopener"><i>📝</i><span><b>Đăng ký cho con</b><small>Ba mẹ chưa đăng ký: xem quyền lợi và đăng ký tham gia dự án</small></span></a>
+    <button class="en-try" type="button" id="enTry">${thu}</button>
+    <small class="en-snd">🔊 Bật loa để nghe cô Hươu hướng dẫn nhé</small>
+  </div>`;
+  document.body.appendChild(sp);
+  const go=()=>{ voiceUnlock(); STARTED=true; sp.remove(); route(); };
+  sp.querySelector('#enIn').onclick=()=>{ sfx.pop&&sfx.pop(); demoTrack('bam_dn'); ENTRY_LOGIN=true; go(); moKhoaDangNhap(KID&&KID.group||'seed'); };
+  sp.querySelector('#enReg').addEventListener('click',()=>{ demoTrack('bam_dk'); sp.querySelector('#enReg').href=dangKyLink(); });
+  sp.querySelector('#enTry').onclick=()=>{ sfx.pop&&sfx.pop(); go(); };
 }
 document.addEventListener('keydown',e=>{ const t=e.target; if((e.key==='Enter'||e.key===' ') && t && t.getAttribute && t.getAttribute('role')==='button' && t.tagName!=='BUTTON'){ e.preventDefault(); t.click(); } });
 
@@ -2201,7 +2224,7 @@ function moKhoaDangNhap(g, then){
   const ov=document.createElement('div'); ov.className='overlay pf';
   ov.innerHTML=`<form class="modal" id="mkf" novalidate>
     <div class="mart"><img class="mportrait cut" src="tai-nguyen/nhan-vat/kids_bong_a.webp" alt=""></div>
-    <h3>Mở hành trình 21 ngày</h3>
+    <h3>Đăng nhập · Mở hành trình 21 ngày</h3>
     <p class="hint">Ba mẹ nhập tên con và <b>số điện thoại (hoặc Gmail) đã đăng ký</b>. Lần sau, kể cả trên máy khác, nhập lại đúng tên và số này là con học tiếp.</p>
     <label for="mkName">Tên của con</label>
     <input id="mkName" maxlength="24" autocomplete="off" placeholder="Ví dụ: Bông, Minh An" value="${esc(KID&&!KID.temp&&KID.name||'')}">
