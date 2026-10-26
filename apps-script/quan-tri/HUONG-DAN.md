@@ -1,3 +1,33 @@
+# Trang quản trị Anh-Trung-Kids (bản có tài khoản, từ 26/10/2026)
+
+**Link trang quản trị:** https://anh-trung-kids-ces.github.io/hoc.mot.lan.duoc.hai.ngon.ngu/quan-tri/
+
+- Đăng nhập bằng **tên đăng nhập + mật khẩu**, không cần tài khoản Google, không còn bước "cấp quyền".
+- Trang nói chuyện với **chính máy chủ web học** (dự án Apps Script "Anh-Trung-Kids – Máy chủ web học", link `…AKfycbwsLupV…/exec`). Phần quản trị nằm ở tệp `apps-script/QuanTri.gs` trong cùng dự án đó.
+- Dữ liệu vẫn chỉ nằm trong Sheet "Anh-Trung-Kids – Dữ liệu dự án". Trang GitHub không chứa dữ liệu nào; phải đăng nhập mới tải được.
+- Dự án Apps Script riêng "Anh-Trung-Kids – Quản trị" (các tệp trong thư mục này: Code.gs, TrangQuanTri.html) **không dùng nữa**. Có thể xóa bản triển khai `AKfycbzmjn…` của nó.
+
+## Cập nhật máy chủ (mỗi khi có bản mới)
+1. `https://script.google.com/u/2/home` (tài khoản anhtrung.home) → dự án **Anh-Trung-Kids – Máy chủ web học**.
+2. Tệp `Code.gs`: dán đè `apps-script/Code.gs`. Tệp **QuanTri.gs** (＋ → Tập lệnh, tên `QuanTri`): dán đè `apps-script/QuanTri.gs`. **Lưu**.
+3. **Triển khai → Quản lý các bản triển khai** → bút chì → Phiên bản: **Phiên bản mới** → **Triển khai**. Link /exec giữ nguyên.
+4. Kiểm tra: mở link /exec thêm `?action=ping`, thấy `"v":5` là đúng.
+
+## Tài khoản
+- **Tài khoản đầu tiên:** mở trang, nhập **Mã thiết lập** lấy ở Sheet → tab **Cài đặt quản trị** → dòng **Mã thiết lập tài khoản**, rồi chọn tên đăng nhập và mật khẩu. Tài khoản này là **Quản lý**. Mã tự đổi sau mỗi lần dùng.
+- **Thêm bạn trong đội:** Quản lý vào tab **Tài khoản** → **Tạo tài khoản** → trang cấp một mật khẩu tạm, chép tin nhắn gửi riêng cho bạn đó. Lần đầu đăng nhập, bạn ấy phải đặt mật khẩu riêng.
+- **Quên mật khẩu:** Quản lý bấm **Cấp mật khẩu tạm**. Quản lý tự quên mật khẩu: dùng lại Mã thiết lập trong Sheet ("Lần đầu dùng hoặc quên mật khẩu?").
+- Tài khoản lưu ở tab **Đội** (cột A–D như cũ: Tên đăng nhập, Tên, Vai trò, Nhận gia đình mới; thêm E–I). Mật khẩu chỉ lưu dạng đã mã hóa.
+- Bạn Vận hành **không cần quyền mở Sheet** nữa. Chỉ Quản lý giữ quyền Sheet, vì ai mở Sheet cũng đọc được Mã thiết lập.
+- Nhập sai mật khẩu 6 lần: tài khoản tạm chặn 15 phút. Phiên đăng nhập hết sau 6 giờ không dùng.
+
+## Báo cáo (chỉ Quản lý)
+Số đóng phí và doanh thu, đăng ký, bé học hôm nay, bé nghỉ từ 2 ngày; tuyển sinh theo ngày; số bé học mỗi ngày; phễu chuyển đổi; hiệu quả theo mã CTV; tiến độ 21 ngày theo nhóm; phân bố số buổi đã học; danh sách bé cần nhắc; đăng ký theo nhóm, kênh biết đến, tuổi; gia đình theo trạng thái; đội vận hành. Lọc 7 ngày / 14 ngày / cả đợt, mỗi biểu đồ có "Xem dạng bảng", các bảng chính tải được CSV.
+
+---
+
+# Ghi chép cũ (bản đăng nhập Google, đã thay)
+
 # Bật máy chủ mới, trang quản trị và trang cuộc thi (tài khoản anhtrung.home@gmail.com)
 
 Mọi dữ liệu của dự án nay nằm trong **một Sheet** thuộc Drive của **anhtrung.home@gmail.com**:

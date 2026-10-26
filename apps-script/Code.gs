@@ -7,6 +7,7 @@
  *   3) Sự kiện học thử theo mã CTV (tab "Truy cập học thử")
  *   4) Cổng Zalo sau buổi 1 (tab "Gia đình")
  *   5) Đơn đăng ký từ trang ưu đãi (tab "Đăng ký Web")
+ *   6) Trang quản trị (tệp QuanTri.gs trong CÙNG dự án này): đăng nhập tên + mật khẩu, việc hôm nay, báo cáo
  *
  * CÁCH BẬT (làm 1 lần, khoảng 5 phút):
  *   1. Đăng nhập anhtrung.home@gmail.com, mở script.google.com → Dự án mới (mã Sheet dữ liệu ở DATA_ID bên dưới).
@@ -53,9 +54,11 @@ function findRow_(sh, key) {
 function doPost(e) {
   // form trang ưu đãi gửi dạng form (không phải JSON)
   if (e && e.parameter && e.parameter.ho_ten_phu_huynh !== undefined) return json_(dangKy_(e.parameter));
+  let d0 = {}; try { d0 = JSON.parse(e.postData.contents || '{}'); } catch (err) { return json_({ ok: false }); }
+  if (d0.action === 'qt') return json_(quanTri_(d0));             // trang quản trị (tệp QuanTri.gs), tự khóa khi cần
   const lock = LockService.getScriptLock(); lock.waitLock(10000);
   try {
-    const d = JSON.parse(e.postData.contents || '{}');
+    const d = d0;
     if (d.action === 'family') return json_(family_(d));
     if (d.action === 'redeem') {
       if (!d.id || !d.code) return json_({ ok: false });
@@ -95,7 +98,7 @@ function doPost(e) {
 
 function doGet(e) {
   const p = e.parameter || {};
-  if (p.action === 'ping') return json_({ ok: true, v: 4 });          // v3: Bảng Gia đình · v4: mở khóa 21 ngày
+  if (p.action === 'ping') return json_({ ok: true, v: 5 });          // v3: Bảng Gia đình · v4: mở khóa 21 ngày · v5: trang quản trị có tài khoản
   if (p.action === 'access') return json_(access_(p));
   if (p.action === 'visit') return visit_(p);
   if (p.action === 'team') {   // mục tiêu chung: cả đội một khoá đã cùng học bao nhiêu buổi (không lộ tên, không xếp hạng)
@@ -180,8 +183,9 @@ function giaDinhSheet_(ss) {
 }
 function chonNguoiHoTro_(ss, rows) {
   const team = ss.getSheetByName('Đội'); if (!team || team.getLastRow() < 2) return '';
-  const ppl = team.getRange(2, 1, team.getLastRow() - 1, 4).getValues()
-    .filter(r => r[1] && String(r[2]).trim() === 'Vận hành' && (r[3] === true || String(r[3]).toUpperCase() === 'TRUE'))
+  const ppl = team.getRange(2, 1, team.getLastRow() - 1, 5).getValues()
+    .filter(r => r[1] && String(r[2]).trim() === 'Vận hành' && (r[3] === true || String(r[3]).toUpperCase() === 'TRUE')
+      && !(r[4] === false || String(r[4]).toUpperCase() === 'FALSE'))           // cột E: Đang hoạt động
     .map(r => String(r[1]).trim());
   if (!ppl.length) return '';
   const load = {}; ppl.forEach(n => load[n] = 0);
