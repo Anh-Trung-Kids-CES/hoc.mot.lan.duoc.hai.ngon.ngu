@@ -375,8 +375,9 @@ function lanBadge(f){ if(!['Đang dùng thử','Mời đăng ký'].includes(f.tr
   return `<span class="badge lan-${f.lan}" title="Điểm gia đình">${f.lan} · ${f.diem}</span>`; }
 function famLine(f){ return `${esc(f.phuHuynh||'(chưa có tên)')} – bé ${esc(f.tenCon||'?')}${f.tuoi?`, ${esc(f.tuoi)} tuổi`:''}${f.khoa?` · ${esc(f.khoa)}`:''}`; }
 function callBtns(f, tin){
-  const p=f.zalo&&/^0\d{9,10}$/.test(f.zalo)?f.zalo:'';
+  const p=f.zalo&&/^0\d{9,10}$/.test(f.zalo)?f.zalo:'', so=String(f.zalo||'').replace(/[^\d+]/g,'');
   return `${p?`<a class="act pri" href="tel:${p}">📞 Gọi</a><a class="act" href="https://zalo.me/${p}" target="_blank" rel="noopener">💬 Zalo</a>`:''}
+    ${so?`<button class="act" type="button" data-sdt="${esc(so)}" title="Chép số ${esc(so)}" aria-label="Chép số điện thoại ${esc(so)}">📄 Chép SĐT</button>`:''}
     ${tin?`<button class="act" type="button" data-tin="${tin}" data-code="${esc(f.code)}">📋 Tin mẫu</button>`:''}
     <button class="act" type="button" data-open="${esc(f.code)}">✍️ Ghi kết quả</button>`; }
 
@@ -626,6 +627,7 @@ function bindActs(root){
   root.querySelectorAll('[data-mkgo]').forEach(b=>b.onclick=()=>moKhoaTick(b.dataset.mkgo, true, b));
   root.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>openFam(b.dataset.open));
   root.querySelectorAll('[data-tin]').forEach(b=>b.onclick=()=>showTpl(fam(b.dataset.code), b.dataset.tin));
+  root.querySelectorAll('[data-sdt]').forEach(b=>b.onclick=()=>copyText(b.dataset.sdt, 'Đã chép số '+b.dataset.sdt));
 }
 function xung(f){ const n=String(f.phuHuynh||'').trim(); if(!n) return 'anh/chị';
   if(/^(anh|chị|chi|cô|bố|mẹ|ba|ông|bà)\b/i.test(n)) return n; const w=n.split(/\s+/); return 'anh/chị '+w[w.length-1]; }
@@ -647,6 +649,10 @@ function showTpl(f,key){
   const close=()=>host.innerHTML=''; $('.x',host).onclick=close; $('.sheet',host).onclick=e=>{ if(e.target.classList.contains('sheet')) close(); };
   $('#cp',host).onclick=()=>copy($('#tplTxt',host)); bindActs(host);
 }
+async function copyText(txt, msg){ try{ await navigator.clipboard.writeText(txt); toast(msg); }
+  catch(e){ const t=document.createElement('textarea'); t.value=txt; t.setAttribute('readonly',''); t.style.cssText='position:fixed;top:0;left:0;opacity:0';
+    document.body.appendChild(t); t.select(); t.setSelectionRange(0,txt.length);
+    try{ document.execCommand('copy'); toast(msg); }catch(_){ toast('Số: '+txt); } t.remove(); } }
 async function copy(ta){ try{ await navigator.clipboard.writeText(ta.value); toast('Đã chép'); }
   catch(e){ ta.focus(); ta.select(); try{ document.execCommand('copy'); toast('Đã chép'); }catch(_){ toast('Hãy giữ và chọn Sao chép'); } } }
 
