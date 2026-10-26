@@ -25,6 +25,7 @@
 <link rel="stylesheet" href="khen.css">
 <link rel="stylesheet" href="dien-thoai.css">
 <link rel="stylesheet" href="cong-zalo.css">
+<link rel="stylesheet" href="huong-dan-clip.css">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+SC:wght@500;700&display=swap" rel="stylesheet">
 <style>
 :root{color-scheme:light;
@@ -464,6 +465,7 @@ a.gtab{text-decoration:none}
 <script src="canopy-speak.js"></script>
 <script src="qua.js"></script>
 <script src="khen.js"></script>
+<script src="huong-dan-clip.js"></script>
 <script>
 /* =====================================================================
    PHẦN DỮ LIỆU — SỬA NỘI DUNG Ở ĐÂY
@@ -1838,21 +1840,113 @@ function extrasPanel(g,i){
 }
 
 /* ---------- nhiệm vụ chia sẻ lên cộng đồng (nhóm Zalo) ---------- */
+function clipGuide(g,i){ const G=window.CLIP_GUIDE; return G && G[g] && G[g][i]; }
+const MI_OK=()=>`<span class="mi-ok">✓ Đã gửi clip · +${PTS.clip} điểm</span>`;
 function missionHTML(g,i){
   if(TEACHER && !KID) return '';
-  const s=st(g,i), sent=!!s.clipSent;
+  const s=st(g,i), sent=!!s.clipSent, cg=clipGuide(g,i);
+  const say=cg&&cg.say&&cg.say[0];
   return `<div class="mission ${sent?'sent':''}">
     <div class="mi-h"><span class="mi-ic">🎥</span><div><b>Nhiệm vụ chia sẻ (+${PTS.clip} điểm)</b>
-      <small>Ba mẹ quay một clip ngắn (15–30 giây) con nói câu hôm nay bằng tiếng Anh và tiếng Trung, rồi gửi vào nhóm Zalo của thử thách.</small></div></div>
+      <small>Ba mẹ quay một clip ngắn (15–30 giây) con nói câu hôm nay bằng tiếng Anh và tiếng Trung, rồi gửi vào nhóm Zalo của thử thách.${cg?' Đã có sẵn 2 cách quay và lời thoại cho ba mẹ.':''}</small></div></div>
+    ${say?`<div class="mi-say"><span>🇬🇧 ${esc(say[0])}</span><span class="zh">🇨🇳 ${esc(say[1])}</span></div>`:''}
+    ${cg?`<button class="btn sm mi-guide" type="button">🎬 Hướng dẫn quay clip <small>· 2 cách</small></button>`:''}
     <div class="row mi-row"><a class="btn g sm" href="${ZALO_LINK}" target="_blank" rel="noopener">📤 Mở nhóm Zalo</a>
-      ${sent?`<span class="mi-ok">✓ Đã gửi clip · +${PTS.clip} điểm</span>`:`<button class="btn y sm mi-done">Ba mẹ đã gửi clip ✓</button>`}</div></div>`;
+      ${sent?MI_OK():`<button class="btn y sm mi-done">Ba mẹ đã gửi clip ✓</button>`}</div></div>`;
+}
+function clipMarkSent(g,i,b){
+  const s=st(g,i); if(s.clipSent) return;
+  const before=dayPoints(g,i); s.clipSent=true; addPoints(g,i,before,b);
+  document.querySelectorAll('.mi-done').forEach(x=>{ const box=x.closest('.mission'); if(box) box.classList.add('sent'); x.outerHTML=MI_OK(); });
+  sfx.win(); confetti(18); toast('Cảm ơn ba mẹ! Con được thêm '+PTS.clip+' điểm 🎉');
 }
 function missionWire(root,g,i){
-  root.querySelectorAll('.mi-done').forEach(b=>b.onclick=()=>{
-    const s=st(g,i), before=dayPoints(g,i); s.clipSent=true; addPoints(g,i,before,b);
-    const box=b.closest('.mission'); box.classList.add('sent'); b.outerHTML=`<span class="mi-ok">✓ Đã gửi clip · +${PTS.clip} điểm</span>`;
-    sfx.win(); confetti(18); toast('Cảm ơn ba mẹ! Con được thêm '+PTS.clip+' điểm 🎉');
+  root.querySelectorAll('.mi-done').forEach(b=>b.onclick=()=>clipMarkSent(g,i,b));
+  root.querySelectorAll('.mi-guide').forEach(b=>b.onclick=()=>{ sfx.pop&&sfx.pop(); clipGuideOpen(g,i); });
+}
+
+/* ---------- hướng dẫn quay clip: ba mẹ chọn 1 trong 2 cách (nội dung trong huong-dan-clip.js) ---------- */
+let CG_LS_AUDIO=null;
+function cgLsAudio(){
+  if(CG_LS_AUDIO) return CG_LS_AUDIO; CG_LS_AUDIO={};
+  const walk=o=>{ if(!o||typeof o!=='object') return; if(Array.isArray(o)) return o.forEach(walk);
+    if(typeof o.t==='string' && o.a && (o.l==='en'||o.l==='zh')){ const k=o.l+'|'+cxAKey(o.t); if(!CG_LS_AUDIO[k]) CG_LS_AUDIO[k]=o.a; }
+    for(const k in o) walk(o[k]); };
+  walk(window.LS); return CG_LS_AUDIO;
+}
+/* file giọng đã thu sẵn cho câu này (giọng nhân vật); không có thì không hiện nút nghe */
+function cgAudio(t,l){
+  if(!t || /…/.test(t)) return '';
+  const k=l+'|'+cxAKey(t);
+  return cgLsAudio()[k] || (typeof cxFile==='function' ? cxFile(t,l) : '') || '';
+}
+function cgLine(t,l,py){
+  if(!t) return '';
+  const f=cgAudio(t,l);
+  return `<div class="cg-ln ${l}"><span class="fl">${l==='en'?'🇬🇧':'🇨🇳'}</span>
+    <span class="tx ${l==='zh'?'zh':''}">${esc(t)}${l==='zh'&&py?`<span class="py">${esc(py)}</span>`:''}</span>
+    ${f?`<button class="cg-snd" type="button" data-a="${esc(f)}" aria-label="Nghe mẫu">🔊</button>`:''}</div>`;
+}
+function cgStep(x){
+  if(x.w==='do') return `<li class="cg-step do"><span class="who"><i>🎬</i></span><div class="cg-bub">${esc(x.vi)}</div></li>`;
+  if(x.w==='bm') return `<li class="cg-step bm"><span class="who"><i>👩</i>Ba mẹ</span><div class="cg-bub">${esc(x.vi)}</div></li>`;
+  if(x.w==='bmf') return `<li class="cg-step bmf"><span class="who"><i>👩</i>Ba mẹ</span><div class="cg-bub">${cgLine(x.en,'en')}${cgLine(x.zh,'zh',x.py)}
+    ${x.vi?`<span class="cg-alt">${x.en||x.zh?'Hoặc nói tiếng Việt: ':''}${esc(x.vi)}</span>`:''}</div></li>`;
+  return `<li class="cg-step con"><span class="who"><i>🧒</i>Con</span><div class="cg-bub">${cgLine(x.en,'en')}${cgLine(x.zh,'zh',x.py)}
+    ${x.act?`<span class="cg-act">👉 ${esc(x.act)}</span>`:''}</div></li>`;
+}
+function cgPlan(o){
+  return `<div class="cg-sec"><h4>🧺 Chuẩn bị</h4><ul class="cg-prep">${o.prep.map(p=>`<li>${esc(p)}</li>`).join('')}</ul></div>
+    <div class="cg-sec"><h4>🎬 Kịch bản quay</h4><ol class="cg-script">${o.s.map(cgStep).join('')}</ol>
+      ${o.tip?`<div class="cg-tip"><b>💡</b><span>${esc(o.tip)}</span></div>`:''}</div>`;
+}
+function clipGuideOpen(g,i){
+  const cg=clipGuide(g,i); if(!cg) return;
+  document.querySelectorAll('.overlay.cg').forEach(x=>x.remove());
+  const prefKey='lle-clip-cach', pref=lsGet(prefKey,{})||{}, id=g+'-'+i;
+  let pick=pref[id]||'a';
+  const grp=GROUPS[g], sent=!!st(g,i).clipSent;
+  const capOf=()=>`Bé ${KID&&KID.name&&!KID.temp?KID.name:'…'} · ${grp.name} · Chặng ${stageNo(i)} – Buổi ${lessonNo(i)} · Cách ${pick==='a'?1:2}`;
+  const opt=(k,ic,sub)=>`<button class="cg-opt ${pick===k?'on':''}" type="button" data-k="${k}"><i>${ic}</i><small>Cách ${k==='a'?1:2}</small><b>${esc(cg[k].t)}</b><em>${sub}</em></button>`;
+  const ov=document.createElement('div'); ov.className='overlay pp cg';
+  ov.innerHTML=`<div class="modal pp-box" role="dialog" aria-label="Hướng dẫn quay clip"><button class="pp-x" aria-label="Đóng">✕</button>
+    <span class="cg-chip">🎥 Hướng dẫn quay clip · Chặng ${stageNo(i)} – Buổi ${lessonNo(i)}</span>
+    <h3>${esc(cg.topic)}</h3>
+    <p class="cg-lead">Ba mẹ chọn 1 trong 2 cách quay bên dưới. Lời thoại đã soạn sẵn, bấm 🔊 để nghe mẫu.</p>
+    <div class="cg-sec"><h4>🗣️ Câu con sẽ nói</h4><div class="cg-say">${cg.say.map(p=>`<div class="cg-pair">${cgLine(p[0],'en')}${cgLine(p[1],'zh',p[2])}</div>`).join('')}</div>
+      ${cg.own?`<p class="cg-own">✏️ ${esc(cg.own)}</p>`:''}</div>
+    <div class="cg-sec"><h4>👇 Chọn cách quay</h4><div class="cg-pick">${opt('a','💬','Dễ nhất · 15–20 giây')}${opt('b','🎭','Vui hơn · 20–30 giây')}</div></div>
+    <div class="cg-plan">${cgPlan(cg[pick])}</div>
+    <details class="cg-sec cg-check"><summary>📋 Trước khi bấm quay</summary><ul>
+      <li>📱 Quay dọc, chỗ đủ sáng, để máy gần con (khoảng một cánh tay).</li>
+      <li>🔇 Tắt tivi, nhạc nền để nghe rõ giọng con.</li>
+      <li>⏱️ 15–30 giây là đủ. Quay tối đa 2 lần, đừng để con mệt.</li>
+      <li>🎉 Con nói 1 từ, nói một thứ tiếng, hay chỉ làm động tác cũng là hoàn thành.</li>
+      <li>🔒 Không để lộ tên trường, đồng phục, địa chỉ nhà. Chỉ gửi vào nhóm Zalo của thử thách.</li></ul>
+      <div class="cg-three"><div><b>Không ép nói</b>Con chưa muốn thì chờ lúc khác</div><div><b>Không sửa lỗi</b>Khen con đã dám nói</div><div><b>Không so sánh</b>Mỗi bé một tốc độ</div></div></details>
+    <div class="cg-sec"><h4>📤 Khi gửi vào nhóm Zalo</h4><div style="font-size:15px;font-weight:600">Ba mẹ ghi kèm dòng này để cô ghi điểm cho con:</div>
+      <div class="cg-cap"><span id="cgCap">${esc(capOf())}</span><button class="btn y sm" type="button" id="cgCopy">Chép</button></div>
+      <div class="cg-act-row"><a class="btn g" href="${ZALO_LINK}" target="_blank" rel="noopener">📤 Mở nhóm Zalo</a>
+        ${sent?MI_OK():`<button class="btn y cg-done" type="button">Ba mẹ đã gửi clip ✓</button>`}</div></div>
+  </div>`;
+  document.body.appendChild(ov);
+  const close=()=>{ voiceStop(); ov.remove(); };
+  ov.querySelector('.pp-x').onclick=close; ov.addEventListener('click',e=>{ if(e.target===ov) close(); });
+  const wireSnd=root=>root.querySelectorAll('.cg-snd').forEach(b=>b.onclick=e=>{ e.stopPropagation();
+    ov.querySelectorAll('.cg-snd.on').forEach(x=>x.classList.remove('on')); b.classList.add('on');
+    voicePlay(b.dataset.a,{onend:()=>b.classList.remove('on'), onerr:()=>{ b.classList.remove('on'); toast('Chưa phát được âm thanh, ba mẹ thử lại nhé'); }}); });
+  wireSnd(ov);
+  ov.querySelectorAll('.cg-opt').forEach(b=>b.onclick=()=>{
+    pick=b.dataset.k; pref[id]=pick; lsSet(prefKey,pref); voiceStop();
+    ov.querySelectorAll('.cg-opt').forEach(x=>x.classList.toggle('on',x===b));
+    const plan=ov.querySelector('.cg-plan'); plan.innerHTML=cgPlan(cg[pick]); wireSnd(plan);
+    ov.querySelector('#cgCap').textContent=capOf();
+    sfx.pop&&sfx.pop(); plan.scrollIntoView({behavior:'smooth',block:'start'});
   });
+  ov.querySelector('#cgCopy').onclick=e=>{ const t=capOf(), btn=e.currentTarget;
+    const ok=()=>{ btn.textContent='Đã chép ✓'; setTimeout(()=>btn.textContent='Chép',1800); };
+    try{ navigator.clipboard.writeText(t).then(ok,()=>toast('Ba mẹ bấm giữ dòng chữ để chép nhé')); }catch(err){ toast('Ba mẹ bấm giữ dòng chữ để chép nhé'); } };
+  const d=ov.querySelector('.cg-done'); if(d) d.onclick=()=>{ clipMarkSent(g,i,d); d.outerHTML=MI_OK(); };
 }
 
 /* ---------- thu giọng con (dùng chung Little Seed và Canopy) ----------
