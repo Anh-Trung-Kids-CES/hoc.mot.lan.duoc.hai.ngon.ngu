@@ -84,6 +84,10 @@ nav .n{display:inline-block;min-width:20px;padding:0 6px;border-radius:999px;bac
 .chip.dup.on{background:var(--amber);border-color:var(--amber);color:#fff}
 .newbtn{border:0;background:var(--red);color:#fff;border-radius:999px;padding:8px 16px;font-weight:700;min-height:42px;white-space:nowrap}
 .trung{background:var(--amber-soft);color:var(--amber)}
+.h3row{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:0 0 6px}
+.h3row h3{margin:0}
+.sm-act{min-height:34px;padding:5px 12px;font-size:13px}
+form.sua{margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
 .dupbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;background:var(--amber-soft);border:1px solid var(--amber);border-radius:var(--r);padding:10px 14px;margin:0 0 10px;font-size:14px}
 .dupbar p{margin:0;flex:1 1 260px}
 .act.del{border-color:var(--red);color:var(--red);background:var(--card)}
@@ -706,6 +710,25 @@ async function gopHet(btn, n, nhom){
   try{ const d=await api('gopTrung'); D=d; FILTER.tt=''; toast('Đã gộp và xoá '+(d.soXoa||0)+' dòng trùng'); render(); }
   catch(e){ btn.disabled=false; btn.textContent='Gộp tất cả '+n+' dòng trùng'; if(!e.silent) toast(e.message); }
 }
+/* ---------- Sửa thông tin gia đình ---------- */
+function bindSua(f, host){
+  const fm=$('#suaF',host), bt=$('#suaBtn',host), kv=$('#gdBox .kv',host); if(!fm||!bt) return;
+  const mo=on=>{ fm.hidden=!on; kv.hidden=on; bt.hidden=on; if(on) $('#sPh',host).focus(); };
+  bt.onclick=()=>mo(true); $('#sHuy',host).onclick=()=>mo(false);
+  fm.onsubmit=async e=>{ e.preventDefault();
+    const err=$('#sErr',host), say=t=>{ err.hidden=false; err.innerHTML=t; };
+    const p={phuHuynh:$('#sPh',host).value.trim(), zalo:$('#sSo',host).value.trim(), tenCon:$('#sCon',host).value.trim(),
+      tuoi:$('#sTuoi',host).value, khoa:$('#sKh',host).value, ref:$('#sRef',host).value.trim()};
+    if(!p.tenCon) return say('Tên con không được để trống.');
+    if(!keySo(p.zalo)) return say('Số điện thoại chưa đúng.');
+    const k=keySo(p.zalo), c=D.gd.find(x=>x.code!==f.code&&keySo(x.zalo)===k);
+    if(c) return say(`Số này đang là của <b>${famLine(c)}</b>. Nếu là cùng một gia đình, hãy mở dòng đó và dùng Xoá dòng trùng để gộp.`);
+    if(keySo(p.zalo)!==keySo(f.zalo) && !confirm(`Đổi số đăng nhập từ ${f.zalo||'(trống)'} sang ${p.zalo}?\nBa mẹ sẽ đăng nhập bằng số mới.`)) return;
+    const b=$('#sOk',host); b.disabled=true; b.textContent='Đang lưu…';
+    try{ const d=await api('suaGd',{code:f.code,p}); D=d; toast(d.soSua?'Đã lưu '+d.soSua+' thay đổi. Giá trị cũ ở tab Lịch sử sửa.':'Không có gì thay đổi'); openFam(f.code,true); render(); }
+    catch(x){ b.disabled=false; b.textContent='Lưu thay đổi'; if(x.silent) return;
+      say(/Không rõ yêu cầu/.test(x.message)?'Máy chủ chưa được cập nhật bản có Sửa thông tin. Báo Quản lý cập nhật Apps Script.':esc(x.message)); } };
+}
 /* ---------- Tạo tài khoản ---------- */
 function formTao(){
   OPEN=null; const host=$('#sheetHost');
@@ -793,7 +816,8 @@ function openFam(code, keep){
       <div class="acts"><button class="act pri" type="button" id="tkCp">📋 Chép hướng dẫn đăng nhập</button>${tkSo(f).startsWith('0')?`<a class="act" href="https://zalo.me/${esc(tkSo(f))}" target="_blank" rel="noopener">💬 Mở Zalo</a>`:''}</div>
       <p class="hint">${f.moKhoa?'Bé đã được mở khóa: gửi tin này là ba mẹ vào học được ngay.':'<b>Bé chưa được mở khóa.</b> Tick ô Mở khóa 21 ngày ở trên trước khi gửi, nếu không ba mẹ sẽ báo "Số này chưa được mở khóa".'} Sửa tên con trong ô trên nếu ba mẹ gõ tên khác; ba mẹ phải nhập đúng tên này mỗi lần đăng nhập.</p></div>`
       :`<div class="box"><h3>Tài khoản đăng nhập</h3><p class="hint">Gia đình chưa có số điện thoại hợp lệ nên chưa tạo được tài khoản. Ghi đúng số Zalo vào tab Gia đình của Sheet rồi bấm Tải lại.</p></div>`}
-    <div class="box"><h3>Gia đình</h3><dl class="kv">
+    <div class="box" id="gdBox"><div class="h3row"><h3>Gia đình</h3><button class="act sm-act" type="button" id="suaBtn">✏️ Sửa thông tin</button></div><dl class="kv">
+      <dt>Tên ba/mẹ</dt><dd>${esc(f.phuHuynh||'—')}</dd>
       <dt>Số Zalo</dt><dd>${esc(f.zalo||'—')}</dd>
       <dt>Bé</dt><dd>${esc(f.tenCon)}${f.tuoi?`, ${esc(f.tuoi)} tuổi`:''} · ${esc(f.khoa||'chưa xếp khoá')}</dd>
       <dt>Nguồn</dt><dd>${esc(f.nguon)} · ${esc(f.ref)}</dd>
@@ -803,7 +827,18 @@ function openFam(code, keep){
       ${f.henGoiLai?`<dt>Hẹn gọi lại</dt><dd>${fmt(f.henGoiLai)}</dd>`:''}
       ${f.lyDo?`<dt>Lý do dừng</dt><dd>${esc(f.lyDo)}</dd>`:''}
       ${f.ghiChu?`<dt>Ghi chú</dt><dd>${esc(f.ghiChu)}</dd>`:''}
-    </dl>${f.dyTuVan?'':'<p class="err" style="margin-top:8px">Ba mẹ chưa đồng ý được tư vấn: chỉ gửi nhận xét học tập, không mời đăng ký.</p>'}</div>
+    </dl>${f.dyTuVan?'':'<p class="err" style="margin-top:8px">Ba mẹ chưa đồng ý được tư vấn: chỉ gửi nhận xét học tập, không mời đăng ký.</p>'}
+    <form class="log sua" id="suaF" novalidate hidden>
+      <div class="two"><label>Tên ba/mẹ<input id="sPh" maxlength="60" value="${esc(f.phuHuynh||'')}"></label>
+        <label>Số điện thoại (đăng nhập)<input id="sSo" maxlength="40" inputmode="tel" value="${esc(f.zalo||'')}"></label></div>
+      <div class="two"><label>Tên con<input id="sCon" maxlength="80" value="${esc(f.tenCon||'')}"></label>
+        <label>Tuổi<select id="sTuoi"><option value="">Chưa rõ</option>${['3','4','5','6','7','8','9','10','Trên 10'].concat(f.tuoi&&!['3','4','5','6','7','8','9','10','Trên 10'].includes(f.tuoi)?[f.tuoi]:[]).map(a=>`<option ${a===f.tuoi?'selected':''}>${esc(a)}</option>`).join('')}</select></label></div>
+      <div class="two"><label>Khoá<select id="sKh"><option value="">Chưa xếp</option>${['Little Seed','Canopy'].map(k=>`<option ${k===f.khoa?'selected':''}>${k}</option>`).join('')}</select></label>
+        <label>Mã CTV<input id="sRef" maxlength="20" value="${esc(f.ref||'')}"></label></div>
+      <p class="err" id="sErr" hidden></p>
+      <div class="acts"><button class="save" type="submit" id="sOk">Lưu thay đổi</button><button class="act" type="button" id="sHuy">Huỷ</button></div>
+      <p class="hint">Giá trị cũ được giữ trên Sheet (tab "Lịch sử sửa") để đối chiếu; các tab đơn đăng ký gốc không bị đổi. Đổi số điện thoại thì ba mẹ đăng nhập bằng số mới.</p>
+    </form></div>
     <div class="box"><h3>Ghi kết quả liên hệ</h3><form class="log" id="logF" novalidate>
       <label>Kết quả<select id="kq"><option value="">(chỉ đổi trạng thái / ghi chú)</option>${D.ketQua.map(k=>`<option>${esc(k)}</option>`).join('')}</select></label>
       <label>Ghi chú<textarea id="gc" maxlength="500" placeholder="Con thích phần nào, ba mẹ băn khoăn gì, đã gửi tin gì…"></textarea></label>
@@ -829,6 +864,7 @@ function openFam(code, keep){
   const tt=$('#tt',host), lb=$('#lyDoBox',host); const sync=()=>lb.hidden=!['Dừng','Nuôi dưỡng'].includes(tt.value); tt.onchange=sync; sync();
   $('#kq',host).onchange=e=>{ if(e.target.value==='Hẹn gọi lại') $('#hen',host).focus(); };
   const xb=$('#xoaDong',host); if(xb) xb.onclick=()=>xoaDong(f, xb);
+  bindSua(f, host);
   const tkB=$('#tkCp',host); if(tkB) tkB.onclick=()=>copyText($('#tkTxt',host).value, f.moKhoa?'Đã chép hướng dẫn đăng nhập. Dán vào Zalo gửi ba mẹ.':'Đã chép. Nhớ tick Mở khóa 21 ngày trước khi gửi.');
   $('#logF',host).onsubmit=e=>{ e.preventDefault(); save(f); };
   if(!keep) setTimeout(()=>$('.x',host).focus(),50);

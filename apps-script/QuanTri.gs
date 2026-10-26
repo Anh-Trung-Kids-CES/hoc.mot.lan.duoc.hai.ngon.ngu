@@ -80,6 +80,7 @@ function quanTri_(d) {
     if (fn === 'taoGd') return qtTaoGd_(s, d.p || {});
     if (fn === 'xoaTrung') return qtXoaTrung_(s, d.code);
     if (fn === 'gopTrung') return qtGopTrung_(s);
+    if (fn === 'suaGd') return qtSuaGd_(s, d.code, d.p || {});
     return { ok: false, err: 'Không rõ yêu cầu.' };
   } catch (e) {
     const m = String(e && e.message || e);
@@ -311,12 +312,15 @@ function qtKeySo_(v) {
   let d = t.replace(/\D/g, ''); if (/^84\d{9,10}$/.test(d)) d = d.slice(2);
   d = d.replace(/^0+/, ''); return d.length >= 8 ? d : '';
 }
-function qtDongBo_(rows, dk) {
+function qtDongBo_(rows, dk, ls) {
+  ls = ls || { soCu: {}, tenCon: {} };
   const byPhone = {}, byCode = {};
   rows.forEach((r, i) => { const k = qtKeySo_(r[QT_C['Số Zalo']]); if (k && byPhone[k] == null) byPhone[k] = i; byCode[String(r[QT_C['Mã gia đình']])] = i; });
   let changed = false; const now = Date.now(), moi = {};
   dk.forEach(d => {
-    let i = d.fam && byCode[d.fam] != null ? byCode[d.fam] : byPhone[qtKeySo_(d.phone)];
+    const kd = qtKeySo_(d.phone);
+    let i = d.fam && byCode[d.fam] != null ? byCode[d.fam] : byPhone[kd];
+    if (i == null && ls.soCu[kd] && byCode[ls.soCu[kd]] != null) i = byCode[ls.soCu[kd]];   // số đã được sửa trên trang quản trị
     if (i == null) {
       const r = GD_HEAD.map(() => '');
       r[QT_C['Mã gia đình']] = 'GD' + Utilities.getUuid().replace(/-/g, '').slice(0, 6).toUpperCase();
@@ -330,7 +334,7 @@ function qtDongBo_(rows, dk) {
       rows.push(r); byPhone[qtKeySo_(d.phone)] = rows.length - 1; moi[rows.length - 1] = 1; changed = true; return;
     }
     const r = rows[i];
-    if (d.kid && String(r[QT_C['Tên con']]).toLowerCase().indexOf(d.kid.toLowerCase()) < 0 &&
+    if (d.kid && !ls.tenCon[String(r[QT_C['Mã gia đình']])] && String(r[QT_C['Tên con']]).toLowerCase().indexOf(d.kid.toLowerCase()) < 0 &&
         d.kid.toLowerCase().indexOf(String(r[QT_C['Tên con']]).toLowerCase()) < 0) { r[QT_C['Tên con']] = r[QT_C['Tên con']] ? r[QT_C['Tên con']] + ', ' + d.kid : d.kid; changed = true; }
     if (!r[QT_C['Khoá']] && d.khoa) { r[QT_C['Khoá']] = d.khoa; changed = true; }
     if (!r[QT_C['Người hỗ trợ']] && d.ho) { r[QT_C['Người hỗ trợ']] = d.ho; changed = true; }
@@ -449,7 +453,7 @@ function qtTaiDuLieu_(s) {
     let thieuMa = false;
     rows.forEach(r => { if (!String(r[QT_C['Mã gia đình']]).trim()) { r[QT_C['Mã gia đình']] = qtMaMoi_(); thieuMa = true; } });
     const nOld = rows.length;
-    let changed = qtDongBo_(rows, dk) || thieuMa;
+    let changed = qtDongBo_(rows, dk, qtLichSuSua_(ss)) || thieuMa;
     sk = qtSuKien_(ss); nk = qtNhatKy_(ss);
     rows.forEach(r => {
       const e = sk.byVid[String(r[QT_C['Mã người xem']])], c = nk.byFam[String(r[QT_C['Mã gia đình']])] || [];
@@ -787,4 +791,60 @@ function qtGopTrung_(s) {
     if (soXoa) qtXoaDong_(s, g.sh, rows, xoa, giu);
   } finally { lock.releaseLock(); }
   return Object.assign(qtTaiDuLieu_(s), { soXoa: soXoa });
+}
+
+/* ===================== sửa thông tin gia đình trên trang quản trị =====================
+ * Dữ liệu gốc vẫn nằm trên Sheet để đối chiếu: các tab đơn đăng ký giữ nguyên; mỗi lần sửa ghi một dòng
+ * (giá trị cũ → mới) vào tab "Lịch sử sửa". Đồng bộ đơn đăng ký đọc tab này để không tạo lại dòng theo số cũ
+ * và không ghép lại tên con cũ vào tên đã sửa. */
+const QT_SUA_HEAD = ['Lúc', 'Người sửa', 'Mã gia đình', 'Thông tin', 'Giá trị cũ', 'Giá trị mới'];
+const QT_SUA_COT = { phuHuynh: 'Tên ba/mẹ', zalo: 'Số Zalo', tenCon: 'Tên con', tuoi: 'Tuổi', khoa: 'Khoá', ref: 'Mã CTV' };
+function qtLichSuSua_(ss) {
+  const out = { soCu: {}, tenCon: {} }, sh = ss.getSheetByName('Lịch sử sửa');
+  if (!sh || sh.getLastRow() < 2) return out;
+  sh.getRange(2, 1, sh.getLastRow() - 1, 6).getValues().forEach(r => {
+    const code = String(r[2]);
+    if (r[3] === 'Số Zalo') { const k = qtKeySo_(r[4]); if (k) out.soCu[k] = code; }
+    if (r[3] === 'Tên con') out.tenCon[code] = 1;
+  });
+  return out;
+}
+function qtSuaGd_(s, code, p) {
+  const moi = {};
+  if (p.phuHuynh != null) moi.phuHuynh = String(p.phuHuynh).trim().slice(0, 60);
+  if (p.tenCon != null) { moi.tenCon = String(p.tenCon).trim().slice(0, 80); if (!moi.tenCon) throw new Error('Tên con không được để trống.'); }
+  if (p.tuoi != null) moi.tuoi = String(p.tuoi).trim().slice(0, 8);
+  if (p.khoa != null) moi.khoa = p.khoa === 'Canopy' ? 'Canopy' : p.khoa === 'Little Seed' ? 'Little Seed' : '';
+  if (p.ref != null) moi.ref = String(p.ref).trim().toUpperCase().replace(/[^A-Z0-9_]/g, '').slice(0, 20) || 'TU_NHIEN';
+  if (p.zalo != null) { moi.zalo = normPhone_(p.zalo); if (!moi.zalo) throw new Error('Số điện thoại (10 số) hoặc Gmail chưa đúng.'); }
+  const lock = LockService.getScriptLock(); lock.waitLock(20000);
+  let soSua = 0;
+  try {
+    const g = qtTimGd_(s, code), r = g.r, now = new Date(), log = [];
+    if (moi.zalo) {
+      const k = qtKeySo_(moi.zalo), n = g.sh.getLastRow();
+      const ds = g.sh.getRange(2, 1, n - 1, GD_HEAD.length).getValues();
+      const khac = ds.find((x, j) => j !== g.i && qtKeySo_(x[QT_C['Số Zalo']]) === k);
+      if (khac) return { ok: false, err: 'Số ' + moi.zalo + ' đang là của ' + (khac[QT_C['Tên ba/mẹ']] || '') + ' – bé ' + (khac[QT_C['Tên con']] || '') + '. Nếu là cùng một gia đình, hãy dùng Xoá dòng trùng để gộp.', code: String(khac[QT_C['Mã gia đình']]) };
+    }
+    Object.keys(moi).forEach(f => {
+      const col = QT_SUA_COT[f], cu = String(r[QT_C[col]] == null ? '' : r[QT_C[col]]).replace(/^'/, '');
+      const cuSo = f === 'zalo' ? (normPhone_(cu) || cu) : cu;
+      if (cuSo === moi[f]) return;
+      log.push([now, s.me.ten, String(code), col, cu, moi[f]]); r[QT_C[col]] = moi[f];
+    });
+    soSua = log.length;
+    if (log.length) {
+    r[QT_C['Số Zalo']] = normPhone_(r[QT_C['Số Zalo']]) || String(r[QT_C['Số Zalo']]);
+    g.sh.getRange(g.i + 2, QT_C['Số Zalo'] + 1).setNumberFormat('@');
+    g.rg.setValues([r]);
+    const ls = qtTab_(s.ss, 'Lịch sử sửa', QT_SUA_HEAD), at = ls.getLastRow() + 1;
+    ls.getRange(at, 5, log.length, 2).setNumberFormat('@');
+    ls.getRange(at, 1, log.length, 6).setValues(log);
+    qtNhatKySheet_(s.ss).appendRow([now, s.me.ten, r[QT_C['Tên ba/mẹ']], '', r[QT_C['Tên con']], r[QT_C['Tuổi']], '', '', '', r[QT_C['Khoá']], r[QT_C['Trạng thái']], '', '', '',
+      'Sửa thông tin: ' + log.map(x => x[3] + ' "' + x[4] + '" → "' + x[5] + '"').join('; '), String(code), 'Ghi chú nội bộ']);
+    CacheService.getScriptCache().remove('mo-khoa-v1');
+    }
+  } finally { lock.releaseLock(); }
+  return Object.assign(qtTaiDuLieu_(s), { soSua: soSua });
 }
