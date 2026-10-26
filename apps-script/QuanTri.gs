@@ -77,6 +77,9 @@ function quanTri_(d) {
     if (fn === 'ghiMoHoSo') { qtGhiMoHoSo_(s, d.code); return { ok: true }; }
     if (fn === 'taiKhoan') return qtTaiKhoan_(s);
     if (fn === 'luuTaiKhoan') return qtLuuTaiKhoan_(s, d.tk || {});
+    if (fn === 'taoGd') return qtTaoGd_(s, d.p || {});
+    if (fn === 'xoaTrung') return qtXoaTrung_(s, d.code);
+    if (fn === 'gopTrung') return qtGopTrung_(s);
     return { ok: false, err: 'Không rõ yêu cầu.' };
   } catch (e) {
     const m = String(e && e.message || e);
@@ -301,12 +304,19 @@ function qtNguonDangKy_(ss) {
   } catch (e) { }
   return out;
 }
+/* Khóa so khớp số điện thoại: bỏ +84/84 và các số 0 đầu (Sheet hay làm mất số 0 đầu). Gmail giữ nguyên chữ thường. */
+function qtKeySo_(v) {
+  const t = String(v == null ? '' : v).trim().toLowerCase().replace(/^'/, '');
+  if (t.indexOf('@') > 0) return t;
+  let d = t.replace(/\D/g, ''); if (/^84\d{9,10}$/.test(d)) d = d.slice(2);
+  d = d.replace(/^0+/, ''); return d.length >= 8 ? d : '';
+}
 function qtDongBo_(rows, dk) {
   const byPhone = {}, byCode = {};
-  rows.forEach((r, i) => { const p = normPhone_(r[QT_C['Số Zalo']]); if (p) byPhone[p] = i; byCode[String(r[QT_C['Mã gia đình']])] = i; });
+  rows.forEach((r, i) => { const k = qtKeySo_(r[QT_C['Số Zalo']]); if (k && byPhone[k] == null) byPhone[k] = i; byCode[String(r[QT_C['Mã gia đình']])] = i; });
   let changed = false; const now = Date.now(), moi = {};
   dk.forEach(d => {
-    let i = d.fam && byCode[d.fam] != null ? byCode[d.fam] : byPhone[d.phone];
+    let i = d.fam && byCode[d.fam] != null ? byCode[d.fam] : byPhone[qtKeySo_(d.phone)];
     if (i == null) {
       const r = GD_HEAD.map(() => '');
       r[QT_C['Mã gia đình']] = 'GD' + Utilities.getUuid().replace(/-/g, '').slice(0, 6).toUpperCase();
@@ -317,7 +327,7 @@ function qtDongBo_(rows, dk) {
       r[QT_C['Người hỗ trợ']] = d.ho; r[QT_C['Ghi chú']] = d.anh ? 'Hình ảnh: ' + d.anh : '';
       r[QT_C['Liên hệ gần nhất']] = new Date(d.t || now);
       if (d.paid) { r[QT_C['Mở khóa 21 ngày']] = true; r[QT_C['Mở khóa lúc']] = new Date(); } else r[QT_C['Mở khóa 21 ngày']] = false;
-      rows.push(r); byPhone[d.phone] = rows.length - 1; moi[rows.length - 1] = 1; changed = true; return;
+      rows.push(r); byPhone[qtKeySo_(d.phone)] = rows.length - 1; moi[rows.length - 1] = 1; changed = true; return;
     }
     const r = rows[i];
     if (d.kid && String(r[QT_C['Tên con']]).toLowerCase().indexOf(d.kid.toLowerCase()) < 0 &&
@@ -436,8 +446,10 @@ function qtTaiDuLieu_(s) {
     const n = sh.getLastRow();
     rows = n > 1 ? sh.getRange(2, 1, n - 1, GD_HEAD.length).getValues() : [];
     rows.forEach(r => { r[QT_C['Số Zalo']] = normPhone_(r[QT_C['Số Zalo']]) || String(r[QT_C['Số Zalo']]).replace(/^'/, ''); });
+    let thieuMa = false;
+    rows.forEach(r => { if (!String(r[QT_C['Mã gia đình']]).trim()) { r[QT_C['Mã gia đình']] = qtMaMoi_(); thieuMa = true; } });
     const nOld = rows.length;
-    let changed = qtDongBo_(rows, dk);
+    let changed = qtDongBo_(rows, dk) || thieuMa;
     sk = qtSuKien_(ss); nk = qtNhatKy_(ss);
     rows.forEach(r => {
       const e = sk.byVid[String(r[QT_C['Mã người xem']])], c = nk.byFam[String(r[QT_C['Mã gia đình']])] || [];
@@ -450,7 +462,15 @@ function qtTaiDuLieu_(s) {
     });
     if (changed) {
       if (nOld) sh.getRange(2, 1, nOld, GD_HEAD.length).setValues(rows.slice(0, nOld));
-      if (rows.length > nOld) sh.getRange(nOld + 2, 1, rows.length - nOld, GD_HEAD.length).setValues(rows.slice(nOld));
+      if (rows.length > nOld) {
+        /* Trang khác (máy chủ web học, trang quản trị cũ) có thể vừa thêm dòng: đọc lại số đang có, chỉ thêm số chưa có, thêm vào cuối */
+        const last = sh.getLastRow(), co = {};
+        if (last > 1) sh.getRange(2, QT_C['Số Zalo'] + 1, last - 1, 1).getValues().forEach(v => { const k = qtKeySo_(v[0]); if (k) co[k] = 1; });
+        const them = rows.slice(nOld).filter(r => { const k = qtKeySo_(r[QT_C['Số Zalo']]); if (!k || co[k]) return false; co[k] = 1; return true; });
+        if (them.length) sh.getRange(last + 1, 1, them.length, GD_HEAD.length).setValues(them);
+        rows = rows.slice(0, nOld).concat(them);
+      }
+      if (rows.length) sh.getRange(2, QT_C['Điểm'] + 1, rows.length, 1).setNumberFormat('0');
       if (rows.length) sh.getRange(2, COT_MO_KHOA, rows.length, 1).setDataValidation(SpreadsheetApp.newDataValidation().requireCheckbox().build());
       CacheService.getScriptCache().remove('mo-khoa-v1');
     }
@@ -635,4 +655,136 @@ function qtMoKhoa_(s, code, on) {
 }
 function qtGhiMoHoSo_(s, code) {
   try { qtTab_(s.ss, 'Nhật ký mở hồ sơ', ['Lúc', 'Ai', 'Tên đăng nhập', 'Mã gia đình']).appendRow([new Date(), s.me.ten, s.me.user, String(code).slice(0, 12)]); } catch (e) { }
+}
+
+/* ===================== tạo tài khoản · gộp/xoá dòng trùng ===================== */
+function qtMaMoi_() { return 'GD' + Utilities.getUuid().replace(/-/g, '').slice(0, 6).toUpperCase(); }
+function qtGdRows_(ss) {
+  const sh = qtTab_(ss, 'Gia đình', GD_HEAD), n = sh.getLastRow();
+  return { sh: sh, rows: n > 1 ? sh.getRange(2, 1, n - 1, GD_HEAD.length).getValues() : [] };
+}
+/* Tạo tài khoản cho gia đình đăng ký ngoài web (gọi điện, chuyển khoản thẳng…). Tài khoản = tên con + số điện thoại. */
+function qtTaoGd_(s, p) {
+  const laQL = s.me.vaiTro === 'Quản lý';
+  const phone = normPhone_(p.zalo), parent = String(p.phuHuynh || '').trim().slice(0, 60), kid = String(p.tenCon || '').trim().slice(0, 60);
+  if (!kid) throw new Error('Nhập tên con.');
+  if (!phone) throw new Error('Số điện thoại (10 số) hoặc Gmail chưa đúng.');
+  const lock = LockService.getScriptLock(); lock.waitLock(20000);
+  let code;
+  try {
+    const g = qtGdRows_(s.ss), k = qtKeySo_(phone);
+    const trung = g.rows.find(r => qtKeySo_(r[QT_C['Số Zalo']]) === k);
+    if (trung) return { ok: false, err: 'Số ' + phone + ' đã có tài khoản: ' + (trung[QT_C['Tên ba/mẹ']] || '') + ' – bé ' + (trung[QT_C['Tên con']] || '') + '.', code: String(trung[QT_C['Mã gia đình']]) };
+    const now = new Date(), mo = !!p.moKhoa, r = GD_HEAD.map(() => '');
+    code = qtMaMoi_();
+    r[QT_C['Mã gia đình']] = code; r[QT_C['Tạo lúc']] = now; r[QT_C['Nguồn']] = 'Tạo trên trang quản trị';
+    r[QT_C['Mã CTV']] = String(p.ref || '').trim().toUpperCase().replace(/[^A-Z0-9_]/g, '').slice(0, 20) || 'TU_NHIEN';
+    r[QT_C['Tên ba/mẹ']] = parent; r[QT_C['Số Zalo']] = phone; r[QT_C['Tên con']] = kid;
+    r[QT_C['Tuổi']] = String(p.tuoi || '').slice(0, 8); r[QT_C['Khoá']] = p.khoa === 'Canopy' ? 'Canopy' : p.khoa === 'Little Seed' ? 'Little Seed' : '';
+    r[QT_C['ĐY học tập']] = true; r[QT_C['ĐY tư vấn']] = true; r[QT_C['ĐY tin ưu đãi']] = false;
+    r[QT_C['Trạng thái']] = mo ? 'Đang học 21 ngày' : 'Chờ đóng phí'; r[QT_C['Đổi trạng thái lúc']] = now;
+    r[QT_C['Người hỗ trợ']] = laQL ? String(p.nguoiHoTro == null ? s.me.ten : p.nguoiHoTro).slice(0, 40) : s.me.ten;
+    r[QT_C['Liên hệ gần nhất']] = now; r[QT_C['Ghi chú']] = 'Tạo tài khoản bởi ' + s.me.ten;
+    r[QT_C['Mở khóa 21 ngày']] = mo; r[QT_C['Mở khóa lúc']] = mo ? now : '';
+    const row = g.sh.getLastRow() + 1;
+    g.sh.getRange(row, QT_C['Số Zalo'] + 1).setNumberFormat('@');
+    g.sh.getRange(row, 1, 1, GD_HEAD.length).setValues([r]);
+    g.sh.getRange(row, COT_MO_KHOA).setDataValidation(SpreadsheetApp.newDataValidation().requireCheckbox().build()).setValue(mo);
+    qtNhatKySheet_(s.ss).appendRow([now, s.me.ten, parent, '', kid, r[QT_C['Tuổi']], '', '', '', r[QT_C['Khoá']], r[QT_C['Trạng thái']], '', '', '',
+      'Tạo tài khoản' + (mo ? ' (mở khóa 21 ngày)' : ''), code, 'Ghi chú nội bộ']);
+    qtNhatKySheet_(s.ss).getRange(qtNhatKySheet_(s.ss).getLastRow(), 4).setNumberFormat('@').setValue(phone);
+    CacheService.getScriptCache().remove('mo-khoa-v1');
+  } finally { lock.releaseLock(); }
+  return Object.assign(qtTaiDuLieu_(s), { moi: code });
+}
+/* Dòng nên giữ trong một nhóm trùng: đã mở khóa > trạng thái xa nhất > có tiến độ học thử > số hợp lệ > tạo sớm nhất */
+function qtDiemGiu_(r) {
+  const b = qtBuoc_(String(r[QT_C['Trạng thái']]));
+  return (yes_(r[QT_C['Mở khóa 21 ngày']]) ? 1e6 : 0) + (b < 0 ? 0 : b) * 1e4 + (r[QT_C['Mã người xem']] ? 1e3 : 0)
+    + (normPhone_(r[QT_C['Số Zalo']]) ? 100 : 0) + (r[QT_C['Người hỗ trợ']] ? 10 : 0);
+}
+function qtChonGiu_(rows) {
+  return rows.slice().sort((a, b) => qtDiemGiu_(b) - qtDiemGiu_(a) || qtMs_(a[QT_C['Tạo lúc']]) - qtMs_(b[QT_C['Tạo lúc']]))[0];
+}
+/* Gộp dòng x vào dòng giữ g: không mất mở khóa, trạng thái, tên các con, ghi chú, lịch liên hệ */
+function qtGop_(g, x) {
+  const C = QT_C, empty = v => v === '' || v == null;
+  GD_HEAD.forEach((h, j) => { if (empty(g[j]) && !empty(x[j])) g[j] = x[j]; });
+  if (!normPhone_(g[C['Số Zalo']]) && normPhone_(x[C['Số Zalo']])) g[C['Số Zalo']] = normPhone_(x[C['Số Zalo']]);
+  g[C['Số Zalo']] = normPhone_(g[C['Số Zalo']]) || String(g[C['Số Zalo']]);
+  const ten = String(g[C['Tên con']] || '').split(',').map(t => t.trim()).filter(Boolean);
+  String(x[C['Tên con']] || '').split(',').map(t => t.trim()).filter(Boolean)
+    .forEach(t => { if (!ten.some(u => u.toLowerCase() === t.toLowerCase())) ten.push(t); });
+  g[C['Tên con']] = ten.join(', ');
+  if (yes_(x[C['Mở khóa 21 ngày']]) && !yes_(g[C['Mở khóa 21 ngày']])) { g[C['Mở khóa 21 ngày']] = true; g[C['Mở khóa lúc']] = x[C['Mở khóa lúc']] || new Date(); }
+  const bg = qtBuoc_(String(g[C['Trạng thái']])), bx = qtBuoc_(String(x[C['Trạng thái']]));
+  if (bx > bg && bg >= 0) { g[C['Trạng thái']] = x[C['Trạng thái']]; g[C['Đổi trạng thái lúc']] = x[C['Đổi trạng thái lúc']]; }
+  const ms = j => qtMs_(x[j]), mg = j => qtMs_(g[j]);
+  if (ms(C['Tạo lúc']) && (!mg(C['Tạo lúc']) || ms(C['Tạo lúc']) < mg(C['Tạo lúc']))) g[C['Tạo lúc']] = x[C['Tạo lúc']];
+  if (ms(C['Liên hệ đầu']) && (!mg(C['Liên hệ đầu']) || ms(C['Liên hệ đầu']) < mg(C['Liên hệ đầu']))) g[C['Liên hệ đầu']] = x[C['Liên hệ đầu']];
+  if (ms(C['Liên hệ gần nhất']) > mg(C['Liên hệ gần nhất'])) g[C['Liên hệ gần nhất']] = x[C['Liên hệ gần nhất']];
+  const gc = String(g[C['Ghi chú']] || ''), xc = String(x[C['Ghi chú']] || '');
+  if (xc && gc.indexOf(xc) < 0) g[C['Ghi chú']] = (gc ? gc + ' | ' : '') + xc;
+  return g;
+}
+/* Xóa các dòng (đã gộp) khỏi tab Gia đình: lưu bản sao vào "Gia đình đã xoá", chuyển nhật ký cuộc gọi sang mã giữ lại */
+function qtXoaDong_(s, sh, rows, xoa, giu) {
+  const now = new Date(), arch = qtTab_(s.ss, 'Gia đình đã xoá', GD_HEAD.concat(['Xoá lúc', 'Người xoá', 'Gộp vào']));
+  const ds = Object.keys(xoa).map(Number).sort((a, b) => b - a);
+  arch.getRange(arch.getLastRow() + 1, 1, ds.length, GD_HEAD.length + 3)
+    .setValues(ds.map(i => rows[i].concat([now, s.me.ten, xoa[i]])));
+  Object.keys(giu).forEach(i => {
+    sh.getRange(+i + 2, QT_C['Số Zalo'] + 1).setNumberFormat('@');
+    sh.getRange(+i + 2, 1, 1, GD_HEAD.length).setValues([giu[i]]);
+    sh.getRange(+i + 2, COT_MO_KHOA).setDataValidation(SpreadsheetApp.newDataValidation().requireCheckbox().build());
+  });
+  ds.forEach(i => sh.deleteRow(i + 2));
+  const map = {}; ds.forEach(i => map[String(rows[i][QT_C['Mã gia đình']])] = xoa[i]);
+  const nk = qtNhatKySheet_(s.ss), n = nk.getLastRow();
+  if (n > 1) {
+    const rg = nk.getRange(2, 16, n - 1, 1), v = rg.getValues(); let doi = false;
+    v.forEach(r => { if (map[String(r[0])]) { r[0] = map[String(r[0])]; doi = true; } });
+    if (doi) rg.setValues(v);
+  }
+  CacheService.getScriptCache().remove('mo-khoa-v1');
+}
+function qtChiQL_(s) { if (s.me.vaiTro !== 'Quản lý') throw new Error('Chỉ Quản lý được xoá hoặc gộp dòng trùng.'); }
+/* Xoá một dòng trùng: gộp vào dòng tốt nhất còn lại cùng số điện thoại */
+function qtXoaTrung_(s, code) {
+  qtChiQL_(s);
+  const lock = LockService.getScriptLock(); lock.waitLock(20000);
+  try {
+    const g = qtGdRows_(s.ss), rows = g.rows;
+    const i = rows.findIndex(r => String(r[QT_C['Mã gia đình']]) === String(code));
+    if (i < 0) throw new Error('Không tìm thấy gia đình ' + code + '. Bấm Tải lại.');
+    const k = qtKeySo_(rows[i][QT_C['Số Zalo']]);
+    const khac = k ? rows.map((r, j) => j).filter(j => j !== i && qtKeySo_(rows[j][QT_C['Số Zalo']]) === k) : [];
+    if (!khac.length) throw new Error('Gia đình này không còn dòng nào trùng số, nên không xoá.');
+    const giuRow = qtChonGiu_(khac.map(j => rows[j])), gi = rows.indexOf(giuRow);
+    qtGop_(giuRow, rows[i]);
+    const xoa = {}; xoa[i] = String(giuRow[QT_C['Mã gia đình']]);
+    const giu = {}; giu[gi] = giuRow;
+    qtXoaDong_(s, g.sh, rows, xoa, giu);
+  } finally { lock.releaseLock(); }
+  return qtTaiDuLieu_(s);
+}
+/* Gộp tất cả nhóm trùng số: mỗi nhóm giữ một dòng */
+function qtGopTrung_(s) {
+  qtChiQL_(s);
+  const lock = LockService.getScriptLock(); lock.waitLock(20000);
+  let soXoa = 0;
+  try {
+    const g = qtGdRows_(s.ss), rows = g.rows, nhom = {};
+    rows.forEach((r, i) => { const k = qtKeySo_(r[QT_C['Số Zalo']]); if (k) (nhom[k] = nhom[k] || []).push(i); });
+    const xoa = {}, giu = {};
+    Object.keys(nhom).forEach(k => {
+      const ids = nhom[k]; if (ids.length < 2) return;
+      const giuRow = qtChonGiu_(ids.map(j => rows[j])), gi = rows.indexOf(giuRow);
+      ids.forEach(j => { if (j !== gi) { qtGop_(giuRow, rows[j]); xoa[j] = String(giuRow[QT_C['Mã gia đình']]); } });
+      giu[gi] = giuRow;
+    });
+    soXoa = Object.keys(xoa).length;
+    if (soXoa) qtXoaDong_(s, g.sh, rows, xoa, giu);
+  } finally { lock.releaseLock(); }
+  return Object.assign(qtTaiDuLieu_(s), { soXoa: soXoa });
 }

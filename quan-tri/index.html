@@ -79,6 +79,18 @@ nav .n{display:inline-block;min-width:20px;padding:0 6px;border-radius:999px;bac
 .chip{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:6px 12px;font-size:13px;font-weight:600;min-height:38px}
 .chip.on{background:var(--ink);border-color:var(--ink);color:var(--bg)}
 .chip .c{opacity:.7;margin-left:4px}
+.sdt{flex:0 1 220px}
+.chip.dup{border-color:var(--amber);color:var(--amber);background:var(--amber-soft)}
+.chip.dup.on{background:var(--amber);border-color:var(--amber);color:#fff}
+.newbtn{border:0;background:var(--red);color:#fff;border-radius:999px;padding:8px 16px;font-weight:700;min-height:42px;white-space:nowrap}
+.trung{background:var(--amber-soft);color:var(--amber)}
+.dupbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;background:var(--amber-soft);border:1px solid var(--amber);border-radius:var(--r);padding:10px 14px;margin:0 0 10px;font-size:14px}
+.dupbar p{margin:0;flex:1 1 260px}
+.act.del{border-color:var(--red);color:var(--red);background:var(--card)}
+.dup-ls{display:grid;gap:6px;margin:0 0 10px}
+.dup-ls button{text-align:left;border:1px solid var(--line);background:var(--bg);border-radius:10px;padding:8px 10px;font-size:13px}
+.ck{display:flex!important;grid-template-columns:none!important;align-items:center;gap:10px;font-weight:700!important}
+.ck input{width:22px!important;height:22px;min-height:0!important;accent-color:var(--green)}
 .search{flex:1 1 200px;min-width:0;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:8px 14px;min-height:42px}
 select.sm{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:7px 10px;min-height:38px;font-size:13px;font-weight:600}
 
@@ -244,7 +256,7 @@ td.l,th.l{text-align:left}
 /* Máy chủ: chính link /exec của máy chủ web học (dự án Apps Script có tệp QuanTri.gs) */
 const API = "https://script.google.com/macros/s/AKfycbwsLupVsEa0jqsJ5UDtU1KciL7AiniAhYQk_YZ5N05HESfL6pmSQjcImzZ8nyH9sQ9Lsg/exec";
 
-let D=null, ME=null, TAB='viec', FILTER={tt:'', q:'', ai:''}, OPEN=null, busy=false, RANGE='all', TK=null, CH={};
+let D=null, ME=null, TAB='viec', FILTER={tt:'', q:'', ai:'', sdt:''}, OPEN=null, busy=false, RANGE='all', TK=null, CH={};
 const $=(q,el=document)=>el.querySelector(q);
 const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmt=t=>{ if(!t) return '—'; const d=new Date(t); return d.toLocaleString('vi-VN',{hour:'2-digit',minute:'2-digit',day:'2-digit',month:'2-digit'}); };
@@ -270,7 +282,7 @@ async function api(fn, body){
   let j; try{ j=await r.json(); }catch(e){ throw new Error('Máy chủ chưa trả lời đúng. Có thể máy chủ chưa được cập nhật bản có trang quản trị.'); }
   if(j && j.het){ store.clear(); showLogin(j.err); throw Object.assign(new Error(j.err),{silent:true}); }
   if(j && j.doiMk){ showDoiMk(true); throw Object.assign(new Error(j.err),{silent:true}); }
-  if(!j || j.ok===false) throw new Error((j&&j.err)||'Có lỗi, thử lại sau.');
+  if(!j || j.ok===false) throw Object.assign(new Error((j&&j.err)||'Có lỗi, thử lại sau.'),{data:j||{}});
   return j;
 }
 
@@ -412,27 +424,48 @@ function rViec(){
 }
 
 /* ---------- Gia đình ---------- */
+/* Khóa số điện thoại giống máy chủ: bỏ +84/84 và số 0 đầu, để "83644365" và "0083644365" là một */
+function keySo(v){ const t=String(v==null?'':v).trim().toLowerCase(); if(t.includes('@')) return t;
+  let d=t.replace(/\D/g,''); if(/^84\d{9,10}$/.test(d)) d=d.slice(2); d=d.replace(/^0+/,''); return d.length>=8?d:''; }
+function nhomTrung(){ const m={}; D.gd.forEach(f=>{ const k=keySo(f.zalo); if(k) (m[k]=m[k]||[]).push(f); });
+  const out={}; Object.keys(m).forEach(k=>{ if(m[k].length>1) out[k]=m[k]; }); return out; }
+function khopSdt(f,q){ const t=String(q||'').trim().toLowerCase(); if(!t) return true;
+  if(/[a-z@]/.test(t)) return String(f.zalo||'').toLowerCase().includes(t);
+  let d=t.replace(/\D/g,''); if(/^84\d{8,}/.test(d)) d=d.slice(2); d=d.replace(/^0+/,''); if(!d) return true;
+  return String(f.zalo||'').replace(/\D/g,'').replace(/^0+/,'').includes(d); }
 function rGd(){
   const counts={}; D.gd.forEach(f=>counts[f.trangThai]=(counts[f.trangThai]||0)+1);
   const q=FILTER.q.trim().toLowerCase();
   const chuaMo=f=>['Chờ đóng phí','Đang học 21 ngày'].includes(f.trangThai)&&!f.moKhoa;
-  const L=D.gd.filter(f=>(!FILTER.tt||(FILTER.tt==='__mk'?chuaMo(f):FILTER.tt==='__mo'?f.moKhoa:f.trangThai===FILTER.tt)) && (!FILTER.ai || (FILTER.ai==='(chưa giao)'?!f.nguoiHoTro:f.nguoiHoTro===FILTER.ai))
-      && (!q || [f.phuHuynh,f.tenCon,f.zalo,f.code,f.ref].join(' ').toLowerCase().includes(q)))
-    .sort((a,b)=>b.diem-a.diem || (b.taoLuc-a.taoLuc));
+  const NT=nhomTrung(), laTrung=f=>!!NT[keySo(f.zalo)], soTrung=Object.values(NT).reduce((n,g)=>n+g.length,0);
+  if(FILTER.tt==='__trung' && !soTrung) FILTER.tt='';
+  const L=D.gd.filter(f=>(!FILTER.tt||(FILTER.tt==='__mk'?chuaMo(f):FILTER.tt==='__mo'?f.moKhoa:FILTER.tt==='__trung'?laTrung(f):f.trangThai===FILTER.tt)) && (!FILTER.ai || (FILTER.ai==='(chưa giao)'?!f.nguoiHoTro:f.nguoiHoTro===FILTER.ai))
+      && khopSdt(f,FILTER.sdt) && (!q || [f.phuHuynh,f.tenCon,f.zalo,f.code,f.ref].join(' ').toLowerCase().includes(q)))
+    .sort(FILTER.tt==='__trung' ? (a,b)=>keySo(a.zalo).localeCompare(keySo(b.zalo)) || (b.moKhoa-a.moKhoa) || (a.taoLuc-b.taoLuc)
+      : (a,b)=>b.diem-a.diem || (b.taoLuc-a.taoLuc));
+  const soNhom=Object.keys(NT).length;
   $('#main').innerHTML=`
-    <div class="bar"><input class="search" id="q" type="search" placeholder="Tìm tên ba mẹ, tên con, số Zalo, mã" value="${esc(FILTER.q)}" aria-label="Tìm gia đình">${aiPicker()}</div>
+    <div class="bar"><input class="search" id="q" type="search" placeholder="Tìm tên ba mẹ, tên con, mã" value="${esc(FILTER.q)}" aria-label="Tìm gia đình">
+      <input class="search sdt" id="qs" type="search" inputmode="tel" placeholder="Lọc theo SĐT" value="${esc(FILTER.sdt)}" aria-label="Lọc theo số điện thoại">${aiPicker()}
+      <button class="newbtn" type="button" id="taoTk">＋ Tạo tài khoản</button></div>
     <div class="bar" role="group" aria-label="Lọc theo trạng thái">
       <button class="chip ${!FILTER.tt?'on':''}" data-tt="" type="button">Tất cả<span class="c">${D.gd.length}</span></button>
       <button class="chip ${FILTER.tt==='__mo'?'on':''}" data-tt="__mo" type="button">✓ Đã mở khóa<span class="c">${D.gd.filter(f=>f.moKhoa).length}</span></button>
       <button class="chip ${FILTER.tt==='__mk'?'on':''}" data-tt="__mk" type="button">Chưa mở khóa<span class="c">${D.gd.filter(chuaMo).length}</span></button>
+      ${soTrung?`<button class="chip dup ${FILTER.tt==='__trung'?'on':''}" data-tt="__trung" type="button">⚠ Trùng SĐT<span class="c">${soTrung}</span></button>`:''}
       ${D.trangThai.filter(t=>counts[t]).map(t=>`<button class="chip ${FILTER.tt===t?'on':''}" data-tt="${esc(t)}" type="button">${esc(t)}<span class="c">${counts[t]}</span></button>`).join('')}
     </div>
+    ${FILTER.tt==='__trung'&&soNhom?`<div class="dupbar"><p><b>${soNhom} số điện thoại đang có nhiều dòng.</b> Các dòng cùng số được xếp cạnh nhau. Mở hồ sơ để xoá từng dòng${D.laQL?', hoặc gộp tất cả: mỗi số giữ một dòng (ưu tiên dòng đã mở khóa, trạng thái xa nhất), các dòng còn lại gộp vào rồi xoá':''}.</p>
+      ${D.laQL?`<button class="act pri" type="button" id="gopHet">Gộp tất cả ${soTrung-soNhom} dòng trùng</button>`:''}</div>`:''}
     <div class="list">${L.length?L.map(f=>`<div class="famrow"><button class="fam" type="button" data-open="${esc(f.code)}">
         <span class="nm">${famLine(f)}</span>${lanBadge(f)}
-        <span class="sub"><span class="badge st">${esc(f.trangThai)}</span> · ${esc(f.ref)} · ${esc(f.nguon)}${D.laQL?` · ${esc(f.nguoiHoTro||'chưa giao')}`:''}${f.viec.length?` · <b>${f.viec.length} việc</b>`:''}</span></button>
+        <span class="sub">${laTrung(f)?'<span class="badge trung">Trùng số</span> ':''}<span class="badge st">${esc(f.trangThai)}</span> · ${esc(f.zalo||'chưa có số')} · ${esc(f.ref)} · ${esc(f.nguon)}${D.laQL?` · ${esc(f.nguoiHoTro||'chưa giao')}`:''}${f.viec.length?` · <b>${f.viec.length} việc</b>`:''}</span></button>
         ${mkBox(f)}${cpkBtn(f)}</div>`).join('')
       :`<div class="empty"><b>Chưa có gia đình nào ở đây</b>${D.laQL?'':'Gia đình được giao cho bạn sẽ hiện ở đây.'}</div>`}</div>`;
   const qi=$('#q'); qi.oninput=()=>{ FILTER.q=qi.value; const pos=qi.selectionStart; rGd(); const n=$('#q'); n.focus(); n.setSelectionRange(pos,pos); };
+  const qs=$('#qs'); qs.oninput=()=>{ FILTER.sdt=qs.value; const pos=qs.selectionStart; rGd(); const n=$('#qs'); n.focus(); try{ n.setSelectionRange(pos,pos); }catch(e){} };
+  $('#taoTk').onclick=()=>formTao();
+  const gh=$('#gopHet'); if(gh) gh.onclick=()=>gopHet(gh, soTrung-soNhom, soNhom);
   document.querySelectorAll('[data-tt]').forEach(b=>b.onclick=()=>{ FILTER.tt=b.dataset.tt; rGd(); });
   bindAi(); bindActs($('#main'));
 }
@@ -652,6 +685,64 @@ function cpkBtn(f){ const ok=!!tkSo(f);
   return `<button class="cpk ${f.moKhoa?'':'warn'}" type="button" data-tk="${esc(f.code)}" ${ok?'':'disabled'} title="${ok?'Chép link học, tên con, số đăng nhập và cách đăng nhập để gửi Zalo cho ba mẹ':'Gia đình chưa có số điện thoại hợp lệ'}" aria-label="Chép hướng dẫn đăng nhập cho bé ${esc(tkTen(f))}"><span class="ic" aria-hidden="true">📋</span><span>${ok?'Chép tài khoản':'Chưa có số'}</span></button>`; }
 function chepTk(code){ const f=fam(code); if(!f||!tkSo(f)) return;
   copyText(tkText(f), f.moKhoa?'Đã chép tài khoản của bé '+tkTen(f)+'. Dán vào Zalo gửi ba mẹ.':'Đã chép. Lưu ý: bé '+tkTen(f)+' CHƯA được mở khóa, hãy tick Mở khóa 21 ngày trước khi gửi.'); }
+/* ---------- Dòng trùng số: xem, xoá (gộp vào dòng còn lại) ---------- */
+function dupBox(f){ const k=keySo(f.zalo), g=k?(nhomTrung()[k]||[]):[]; if(g.length<2) return '';
+  const khac=g.filter(x=>x.code!==f.code);
+  return `<div class="box"><h3>⚠ Số này có ${g.length} dòng</h3>
+    <div class="dup-ls">${khac.map(x=>`<button type="button" data-open="${esc(x.code)}">${famLine(x)}<br><span class="hint">${esc(x.code)} · ${esc(x.trangThai)} · ${x.moKhoa?'✓ đã mở khóa':'chưa mở khóa'} · ${esc(x.nguon)} · tạo ${fmt(x.taoLuc)}</span></button>`).join('')}</div>
+    ${D.laQL?`<div class="acts"><button class="act del" type="button" id="xoaDong">🗑 Xoá dòng này</button></div>
+    <p class="hint">Xoá dòng này thì thông tin của nó được gộp vào dòng còn lại cùng số: giữ mở khóa, trạng thái xa hơn, tên các con, ghi chú và nhật ký cuộc gọi. Bản sao lưu ở tab "Gia đình đã xoá" của Sheet.</p>`
+    :'<p class="hint">Báo Quản lý để xoá dòng trùng.</p>'}</div>`; }
+async function xoaDong(f, btn){
+  if(!confirm(`Xoá dòng ${f.code} (${f.phuHuynh||''} – bé ${f.tenCon||''})?\nThông tin được gộp vào dòng còn lại cùng số ${f.zalo}.`)) return;
+  btn.disabled=true; btn.textContent='Đang xoá…';
+  try{ const d=await api('xoaTrung',{code:f.code}); D=d; const k=keySo(f.zalo), con=D.gd.find(x=>keySo(x.zalo)===k);
+    toast('Đã xoá dòng trùng của bé '+(f.tenCon||'')); if(con) openFam(con.code,true); else closeFam(); render(); }
+  catch(e){ btn.disabled=false; btn.textContent='🗑 Xoá dòng này'; if(!e.silent) toast(e.message); }
+}
+async function gopHet(btn, n, nhom){
+  if(!confirm(`Gộp ${n} dòng trùng của ${nhom} số điện thoại?\nMỗi số giữ một dòng; bản sao các dòng bị xoá nằm ở tab "Gia đình đã xoá".`)) return;
+  btn.disabled=true; btn.textContent='Đang gộp…';
+  try{ const d=await api('gopTrung'); D=d; FILTER.tt=''; toast('Đã gộp và xoá '+(d.soXoa||0)+' dòng trùng'); render(); }
+  catch(e){ btn.disabled=false; btn.textContent='Gộp tất cả '+n+' dòng trùng'; if(!e.silent) toast(e.message); }
+}
+/* ---------- Tạo tài khoản ---------- */
+function formTao(){
+  OPEN=null; const host=$('#sheetHost');
+  host.innerHTML=`<div class="sheet" role="dialog" aria-modal="true" aria-labelledby="tTitle"><div class="panel">
+    <div class="p-hd"><h2 id="tTitle">Tạo tài khoản<small>Cho gia đình đăng ký ngoài web: gọi điện, chuyển khoản thẳng…</small></h2><button class="x" type="button" aria-label="Đóng">✕</button></div>
+    <div class="box"><form class="log" id="taoF" novalidate>
+      <div class="two"><label>Tên ba/mẹ<input id="tPh" maxlength="60" autocomplete="off" placeholder="Ví dụ: Chị Lan"></label>
+        <label>Số điện thoại (đăng nhập)<input id="tSo" maxlength="40" inputmode="tel" autocomplete="off" placeholder="0912 345 678"></label></div>
+      <p class="hint" id="tTrung" hidden></p>
+      <div class="two"><label>Tên con<input id="tCon" maxlength="60" autocomplete="off" placeholder="Ba mẹ nhập đúng tên này khi đăng nhập"></label>
+        <label>Tuổi<select id="tTuoi"><option value="">Chọn</option>${['3','4','5','6','7','8','9','10','Trên 10'].map(a=>`<option>${a}</option>`).join('')}</select></label></div>
+      <div class="two"><label>Khoá<select id="tKh"><option value="">Chưa xếp</option><option>Little Seed</option><option>Canopy</option></select></label>
+        <label>Mã CTV (nếu có)<input id="tRef" maxlength="20" autocomplete="off" placeholder="CTV05"></label></div>
+      ${D.laQL?`<label>Người hỗ trợ<select id="tHo"><option value="">(chưa giao)</option>${D.team.map(t=>`<option ${t.ten===D.me.ten?'selected':''}>${esc(t.ten)}</option>`).join('')}</select></label>`:''}
+      <label class="ck"><input type="checkbox" id="tMo" checked> Mở khóa 21 ngày ngay (đã nhận phí)</label>
+      <p class="err" id="tErr" hidden></p>
+      <button class="save" type="submit" id="tOk">Tạo tài khoản</button>
+      <p class="hint">Tài khoản của bé là <b>tên con + số điện thoại</b>. Tạo xong, trang mở hồ sơ để chép tin hướng dẫn đăng nhập gửi ba mẹ.</p>
+    </form></div></div></div>`;
+  const close=()=>host.innerHTML=''; $('.x',host).onclick=close; $('.sheet',host).onclick=e=>{ if(e.target.classList.contains('sheet')) close(); };
+  const so=$('#tSo',host), tr=$('#tTrung',host);
+  so.oninput=()=>{ const k=keySo(so.value), c=k&&D.gd.find(x=>keySo(x.zalo)===k);
+    tr.hidden=!c; if(c){ tr.innerHTML=`⚠ Số này đã có: <b>${famLine(c)}</b>. <button class="act" type="button" data-open="${esc(c.code)}">Mở hồ sơ</button>`; bindActs(tr); } };
+  $('#tPh',host).focus();
+  $('#taoF',host).onsubmit=async e=>{ e.preventDefault();
+    const err=$('#tErr',host), say=t=>{ err.hidden=false; err.textContent=t; };
+    const p={phuHuynh:$('#tPh',host).value.trim(), zalo:so.value.trim(), tenCon:$('#tCon',host).value.trim(), tuoi:$('#tTuoi',host).value,
+      khoa:$('#tKh',host).value, ref:$('#tRef',host).value.trim(), moKhoa:$('#tMo',host).checked};
+    if(D.laQL) p.nguoiHoTro=$('#tHo',host).value;
+    if(!p.tenCon) return say('Nhập tên con.');
+    if(!keySo(p.zalo)) return say('Số điện thoại chưa đúng.');
+    const b=$('#tOk',host); b.disabled=true; b.textContent='Đang tạo…';
+    try{ const d=await api('taoGd',{p}); D=d; render(); toast('Đã tạo tài khoản cho bé '+p.tenCon); if(d.moi) openFam(d.moi,true); else close(); }
+    catch(x){ b.disabled=false; b.textContent='Tạo tài khoản'; if(x.silent) return;
+      if(x.data&&x.data.code){ say(x.message); tr.hidden=false; tr.innerHTML=`<button class="act" type="button" data-open="${esc(x.data.code)}">Mở hồ sơ gia đình này</button>`; bindActs(tr); }
+      else say(/Không rõ yêu cầu/.test(x.message)?'Máy chủ chưa được cập nhật bản có Tạo tài khoản. Báo Quản lý cập nhật Apps Script.':x.message); } };
+}
 function bindActs(root){
   root.querySelectorAll('[data-tk]').forEach(b=>b.onclick=()=>chepTk(b.dataset.tk));
   root.querySelectorAll('[data-mk]').forEach(c=>c.onchange=()=>moKhoaTick(c.dataset.mk, c.checked, c));
@@ -696,6 +787,7 @@ function openFam(code, keep){
     <div class="acts">${callBtns(f, f.viec[0]&&f.viec[0].tin)}</div>
     ${f.viec.length?`<div class="box"><h3>Việc đang chờ</h3>${f.viec.map(v=>`<div>• ${esc(v.ten)} <span class="hint">(${until(v.han).s})</span></div>`).join('')}</div>`:''}
     <label class="mk-big ${f.moKhoa?'on':''}"><input type="checkbox" data-mk="${esc(f.code)}" ${f.moKhoa?'checked':''}><span>Mở khóa 21 ngày<small>${f.moKhoa?'Đã mở'+(typeof f.moKhoaLuc==='number'?' lúc '+fmt(f.moKhoaLuc):'')+'. Bỏ tick để khóa lại.':(String(f.moKhoaLuc).startsWith('Khóa')?esc(f.moKhoaLuc)+'. ':'')+'Tick khi đã nhận phí: bé học đủ 21 ngày trên chính link cũ.'}</small></span></label>
+    ${dupBox(f)}
     ${tkSo(f)?`<div class="box tpl tk-box"><h3>Tài khoản đăng nhập</h3>
       <textarea id="tkTxt" aria-label="Hướng dẫn đăng nhập gửi ba mẹ">${esc(tkText(f))}</textarea>
       <div class="acts"><button class="act pri" type="button" id="tkCp">📋 Chép hướng dẫn đăng nhập</button>${tkSo(f).startsWith('0')?`<a class="act" href="https://zalo.me/${esc(tkSo(f))}" target="_blank" rel="noopener">💬 Mở Zalo</a>`:''}</div>
@@ -736,6 +828,7 @@ function openFam(code, keep){
   bindActs(host); host.querySelectorAll('.box [data-open], .acts [data-open]').forEach(b=>b.onclick=()=>$('#kq',host).focus());
   const tt=$('#tt',host), lb=$('#lyDoBox',host); const sync=()=>lb.hidden=!['Dừng','Nuôi dưỡng'].includes(tt.value); tt.onchange=sync; sync();
   $('#kq',host).onchange=e=>{ if(e.target.value==='Hẹn gọi lại') $('#hen',host).focus(); };
+  const xb=$('#xoaDong',host); if(xb) xb.onclick=()=>xoaDong(f, xb);
   const tkB=$('#tkCp',host); if(tkB) tkB.onclick=()=>copyText($('#tkTxt',host).value, f.moKhoa?'Đã chép hướng dẫn đăng nhập. Dán vào Zalo gửi ba mẹ.':'Đã chép. Nhớ tick Mở khóa 21 ngày trước khi gửi.');
   $('#logF',host).onsubmit=e=>{ e.preventDefault(); save(f); };
   if(!keep) setTimeout(()=>$('.x',host).focus(),50);

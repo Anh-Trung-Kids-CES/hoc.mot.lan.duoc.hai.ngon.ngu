@@ -118,3 +118,11 @@ Ba mẹ chỉ dùng **một link** từ đầu đến cuối: https://anh-trung-
 - Bé chưa được mở khóa thì vẫn chép được, nhưng trang nhắc tick Mở khóa 21 ngày trước khi gửi.
 - Mở hồ sơ gia đình có ô **Tài khoản đăng nhập**: xem trước và sửa tin (ví dụ ba mẹ gõ tên con khác) rồi bấm Chép.
 - Gia đình chưa có số hợp lệ thì nút hiện "Chưa có số".
+
+## Lọc SĐT, tạo tài khoản, xoá dòng trùng (26/10/2026)
+- Tab **Gia đình** có ô **Lọc theo SĐT**: gõ vài số là lọc (bỏ qua dấu cách, +84, số 0 đầu).
+- Chip **⚠ Trùng SĐT** hiện khi một số có nhiều dòng; các dòng cùng số xếp cạnh nhau. Quản lý bấm **Gộp tất cả** (mỗi số giữ một dòng) hoặc mở hồ sơ → **🗑 Xoá dòng này**.
+  Dòng bị xoá được gộp vào dòng còn lại (giữ mở khóa, trạng thái xa hơn, tên các con, ghi chú, nhật ký cuộc gọi); bản sao lưu ở tab **Gia đình đã xoá**.
+- Nút **＋ Tạo tài khoản**: tạo gia đình đăng ký ngoài web, tick sẵn Mở khóa 21 ngày; tạo xong mở hồ sơ để chép tin đăng nhập. Số đã có thì trang báo và mở hồ sơ cũ.
+- Nguyên nhân dòng trùng cũ: trang quản trị cũ (đăng nhập Google, `apps-script/quan-tri/`) và trang mới cùng đồng bộ đơn đăng ký; số mất số 0 đầu không khớp. Đã sửa ở máy chủ mới; nên **ngừng triển khai trang quản trị cũ**.
+- Cần dán `apps-script/QuanTri.gs` mới vào dự án Apps Script máy chủ và triển khai phiên bản mới thì Tạo tài khoản và Xoá dòng trùng mới chạy.
