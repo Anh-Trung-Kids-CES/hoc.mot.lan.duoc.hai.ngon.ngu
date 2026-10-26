@@ -111,3 +111,10 @@ Ba mẹ chỉ dùng **một link** từ đầu đến cuối: https://anh-trung-
 - Màn hình giáo viên Zoom và CTV.
 - Việc "bé nghỉ 3 ngày", "đã đóng phí nhưng chưa vào học": cần nối tài khoản học chính với mã gia đình.
 - Khớp chuyển khoản tự động: vẫn tick tay ô "Đã đóng phí".
+
+## Chép tài khoản cho ba mẹ (26/10/2026)
+- Tab **Gia đình**: mỗi dòng có nút **📋 Chép tài khoản** bên cạnh ô Mở khóa 21 ngày. Bấm một lần là chép sẵn tin gồm link học, tên con, số đăng nhập và 3 bước đăng nhập; dán vào Zalo gửi ba mẹ.
+- Tài khoản của bé = **tên con + số điện thoại đã đăng ký**. Ba mẹ phải nhập đúng tên con như trong tin mỗi lần đăng nhập.
+- Bé chưa được mở khóa thì vẫn chép được, nhưng trang nhắc tick Mở khóa 21 ngày trước khi gửi.
+- Mở hồ sơ gia đình có ô **Tài khoản đăng nhập**: xem trước và sửa tin (ví dụ ba mẹ gõ tên con khác) rồi bấm Chép.
+- Gia đình chưa có số hợp lệ thì nút hiện "Chưa có số".

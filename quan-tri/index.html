@@ -115,12 +115,19 @@ select.sm{border:1px solid var(--line);background:var(--card);border-radius:999p
 .fam{display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;text-align:left;width:100%}
 .fam .nm{font-weight:700}
 .fam .sub{grid-column:1/-1;font-size:13px;color:var(--muted)}
-.famrow{display:grid;grid-template-columns:1fr auto;align-items:stretch;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.famrow{display:grid;grid-template-columns:1fr 108px 96px;align-items:stretch;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
 .famrow .fam{border:0;border-radius:0;background:none}
 .mk{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-width:92px;padding:8px 10px;border-left:1px solid var(--line);font-size:12px;font-weight:700;color:var(--muted);cursor:pointer;text-align:center;line-height:1.2}
 .mk input{width:24px;height:24px;margin:0;accent-color:var(--green);cursor:pointer}
 .mk.on{background:var(--green-soft);color:var(--green)}
 .mk.busy{opacity:.5;pointer-events:none}
+.cpk{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-width:84px;padding:8px 10px;border:0;border-left:1px solid var(--line);background:none;font:inherit;font-size:12px;font-weight:700;color:var(--ink);cursor:pointer;text-align:center;line-height:1.2}
+.cpk .ic{font-size:20px;line-height:1}
+.cpk:hover,.cpk:focus-visible{background:var(--soft)}
+.cpk:disabled{color:var(--muted);cursor:default;background:none}
+.cpk.warn{color:var(--muted)}
+.tpl.tk-box textarea{min-height:260px}
+@media (max-width:560px){ .famrow{grid-template-columns:1fr 78px 72px} .cpk,.mk{min-width:0;padding:8px 4px} }
 .mk-big{display:flex;align-items:center;gap:12px;padding:12px 14px;border:2px solid var(--line);border-radius:var(--r);background:var(--card);font-weight:700;cursor:pointer;margin-top:12px}
 .mk-big input{width:26px;height:26px;margin:0;accent-color:var(--green);flex:none}
 .mk-big.on{border-color:var(--green);background:var(--green-soft)}
@@ -423,7 +430,7 @@ function rGd(){
     <div class="list">${L.length?L.map(f=>`<div class="famrow"><button class="fam" type="button" data-open="${esc(f.code)}">
         <span class="nm">${famLine(f)}</span>${lanBadge(f)}
         <span class="sub"><span class="badge st">${esc(f.trangThai)}</span> · ${esc(f.ref)} · ${esc(f.nguon)}${D.laQL?` · ${esc(f.nguoiHoTro||'chưa giao')}`:''}${f.viec.length?` · <b>${f.viec.length} việc</b>`:''}</span></button>
-        ${mkBox(f)}</div>`).join('')
+        ${mkBox(f)}${cpkBtn(f)}</div>`).join('')
       :`<div class="empty"><b>Chưa có gia đình nào ở đây</b>${D.laQL?'':'Gia đình được giao cho bạn sẽ hiện ở đây.'}</div>`}</div>`;
   const qi=$('#q'); qi.oninput=()=>{ FILTER.q=qi.value; const pos=qi.selectionStart; rGd(); const n=$('#q'); n.focus(); n.setSelectionRange(pos,pos); };
   document.querySelectorAll('[data-tt]').forEach(b=>b.onclick=()=>{ FILTER.tt=b.dataset.tt; rGd(); });
@@ -622,7 +629,31 @@ async function moKhoaTick(code, on, el){
   try{ D=await api('moKhoa',{code,on}); toast(on?'Đã mở 21 ngày cho bé '+(f.tenCon||'')+'. Ba mẹ tải lại web là thấy.':'Đã khóa lại 21 ngày'); if(OPEN) openFam(OPEN,true); render(); }
   catch(e){ if(box) box.classList.remove('busy'); if(el&&el.type==='checkbox') el.checked=!on; if(!e.silent) toast(e.message); }
 }
+/* Hướng dẫn đăng nhập + tài khoản cho từng gia đình (tài khoản = tên con + số điện thoại đã đăng ký) */
+const LINK_HOC_MAC_DINH='https://anh-trung-kids-ces.github.io/hoc.mot.lan.duoc.hai.ngon.ngu/';
+function tkSo(f){ const d=String(f.zalo||'').replace(/\D/g,'').replace(/^84/,'0'); return /^0\d{9,10}$/.test(d)?d:(/@/.test(f.zalo||'')?String(f.zalo).trim():''); }
+function tkTen(f){ return String(f.tenCon||'').split(',')[0].trim(); }
+function tkText(f){
+  const ten=tkTen(f)||'(tên con)', so=tkSo(f)||'(số điện thoại đã đăng ký)', link=(D.caiDat&&D.caiDat.linkHoc)||LINK_HOC_MAC_DINH;
+  return `Chào ${xung(f)}, CES gửi tài khoản học Anh-Trung-Kids 21 ngày của bé ${ten} ạ:
+
+🔗 Link học: ${link}
+👦 Tên con: ${ten}
+📱 Số đăng nhập: ${so}
+
+Cách vào học:
+1. Mở link trên bằng Chrome hoặc Safari. Ba mẹ lưu link lại để mở mỗi ngày.
+2. Bấm dòng "Ba mẹ đã đóng phí 21 ngày? Đăng nhập bằng số điện thoại".
+   (Nếu con đã học thử trên máy này: bấm vào một buổi có ổ khóa 🔒, rồi chọn "Ba mẹ đã đóng phí? Đăng nhập để mở đủ 21 ngày".)
+3. Nhập đúng Tên con và Số đăng nhập như trên, bấm "Mở 21 ngày 🚀".
+
+Lần sau, kể cả trên máy khác, ba mẹ nhập lại đúng tên và số này là con học tiếp, giữ nguyên sao và bài đã học. Cần hỗ trợ, ba mẹ nhắn ${D.me&&D.me.ten?D.me.ten:'CES'} nhé!`; }
+function cpkBtn(f){ const ok=!!tkSo(f);
+  return `<button class="cpk ${f.moKhoa?'':'warn'}" type="button" data-tk="${esc(f.code)}" ${ok?'':'disabled'} title="${ok?'Chép link học, tên con, số đăng nhập và cách đăng nhập để gửi Zalo cho ba mẹ':'Gia đình chưa có số điện thoại hợp lệ'}" aria-label="Chép hướng dẫn đăng nhập cho bé ${esc(tkTen(f))}"><span class="ic" aria-hidden="true">📋</span><span>${ok?'Chép tài khoản':'Chưa có số'}</span></button>`; }
+function chepTk(code){ const f=fam(code); if(!f||!tkSo(f)) return;
+  copyText(tkText(f), f.moKhoa?'Đã chép tài khoản của bé '+tkTen(f)+'. Dán vào Zalo gửi ba mẹ.':'Đã chép. Lưu ý: bé '+tkTen(f)+' CHƯA được mở khóa, hãy tick Mở khóa 21 ngày trước khi gửi.'); }
 function bindActs(root){
+  root.querySelectorAll('[data-tk]').forEach(b=>b.onclick=()=>chepTk(b.dataset.tk));
   root.querySelectorAll('[data-mk]').forEach(c=>c.onchange=()=>moKhoaTick(c.dataset.mk, c.checked, c));
   root.querySelectorAll('[data-mkgo]').forEach(b=>b.onclick=()=>moKhoaTick(b.dataset.mkgo, true, b));
   root.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>openFam(b.dataset.open));
@@ -665,6 +696,11 @@ function openFam(code, keep){
     <div class="acts">${callBtns(f, f.viec[0]&&f.viec[0].tin)}</div>
     ${f.viec.length?`<div class="box"><h3>Việc đang chờ</h3>${f.viec.map(v=>`<div>• ${esc(v.ten)} <span class="hint">(${until(v.han).s})</span></div>`).join('')}</div>`:''}
     <label class="mk-big ${f.moKhoa?'on':''}"><input type="checkbox" data-mk="${esc(f.code)}" ${f.moKhoa?'checked':''}><span>Mở khóa 21 ngày<small>${f.moKhoa?'Đã mở'+(typeof f.moKhoaLuc==='number'?' lúc '+fmt(f.moKhoaLuc):'')+'. Bỏ tick để khóa lại.':(String(f.moKhoaLuc).startsWith('Khóa')?esc(f.moKhoaLuc)+'. ':'')+'Tick khi đã nhận phí: bé học đủ 21 ngày trên chính link cũ.'}</small></span></label>
+    ${tkSo(f)?`<div class="box tpl tk-box"><h3>Tài khoản đăng nhập</h3>
+      <textarea id="tkTxt" aria-label="Hướng dẫn đăng nhập gửi ba mẹ">${esc(tkText(f))}</textarea>
+      <div class="acts"><button class="act pri" type="button" id="tkCp">📋 Chép hướng dẫn đăng nhập</button>${tkSo(f).startsWith('0')?`<a class="act" href="https://zalo.me/${esc(tkSo(f))}" target="_blank" rel="noopener">💬 Mở Zalo</a>`:''}</div>
+      <p class="hint">${f.moKhoa?'Bé đã được mở khóa: gửi tin này là ba mẹ vào học được ngay.':'<b>Bé chưa được mở khóa.</b> Tick ô Mở khóa 21 ngày ở trên trước khi gửi, nếu không ba mẹ sẽ báo "Số này chưa được mở khóa".'} Sửa tên con trong ô trên nếu ba mẹ gõ tên khác; ba mẹ phải nhập đúng tên này mỗi lần đăng nhập.</p></div>`
+      :`<div class="box"><h3>Tài khoản đăng nhập</h3><p class="hint">Gia đình chưa có số điện thoại hợp lệ nên chưa tạo được tài khoản. Ghi đúng số Zalo vào tab Gia đình của Sheet rồi bấm Tải lại.</p></div>`}
     <div class="box"><h3>Gia đình</h3><dl class="kv">
       <dt>Số Zalo</dt><dd>${esc(f.zalo||'—')}</dd>
       <dt>Bé</dt><dd>${esc(f.tenCon)}${f.tuoi?`, ${esc(f.tuoi)} tuổi`:''} · ${esc(f.khoa||'chưa xếp khoá')}</dd>
@@ -700,6 +736,7 @@ function openFam(code, keep){
   bindActs(host); host.querySelectorAll('.box [data-open], .acts [data-open]').forEach(b=>b.onclick=()=>$('#kq',host).focus());
   const tt=$('#tt',host), lb=$('#lyDoBox',host); const sync=()=>lb.hidden=!['Dừng','Nuôi dưỡng'].includes(tt.value); tt.onchange=sync; sync();
   $('#kq',host).onchange=e=>{ if(e.target.value==='Hẹn gọi lại') $('#hen',host).focus(); };
+  const tkB=$('#tkCp',host); if(tkB) tkB.onclick=()=>copyText($('#tkTxt',host).value, f.moKhoa?'Đã chép hướng dẫn đăng nhập. Dán vào Zalo gửi ba mẹ.':'Đã chép. Nhớ tick Mở khóa 21 ngày trước khi gửi.');
   $('#logF',host).onsubmit=e=>{ e.preventDefault(); save(f); };
   if(!keep) setTimeout(()=>$('.x',host).focus(),50);
 }
