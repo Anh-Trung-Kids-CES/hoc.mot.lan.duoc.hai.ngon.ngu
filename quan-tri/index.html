@@ -140,6 +140,17 @@ nav .n.ht{background:#B8141C}
 .badge.nh{background:var(--soft);color:var(--ink);border:1px solid var(--line)}
 .badge.qh{background:var(--red);color:#fff}
 .bd-frame{display:block;width:100%;height:calc(100vh - 200px);min-height:560px;border:1px solid var(--line);border-radius:var(--r);background:#fff}
+.phan{margin-top:22px}
+.phan-h{display:flex;align-items:center;gap:8px;font-size:17px;margin:0 0 4px}
+.phan-n{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--red);color:#fff;font-size:14px;flex:none}
+.phan .box:first-of-type{margin-top:8px}
+.cp-row{display:grid;grid-template-columns:minmax(110px,auto) 1fr auto;gap:6px 12px;align-items:center;padding:7px 0;border-bottom:1px dashed var(--line)}
+.cp-row:last-child{border-bottom:0}
+.cp-l{font-size:13px;color:var(--muted)}
+.cp-v{overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+.cp-a{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.of-sum{margin:0;line-height:1.8}
+@media (max-width:480px){.cp-row{grid-template-columns:1fr auto}.cp-l{grid-column:1/-1}}
 .vai-chips{display:inline-flex;flex-wrap:wrap;gap:6px;padding-left:10px;border-left:1px solid var(--line)}
 .act.xong{background:var(--green-soft);border-color:var(--green-soft);color:var(--green)}
 .act.chuyen{background:var(--amber-soft);border-color:var(--amber-soft);color:var(--amber)}
@@ -971,6 +982,7 @@ function bindActs(root){
   root.querySelectorAll('[data-xong]').forEach(b=>b.onclick=()=>daGui(b.dataset.xong, b.dataset.viec, b));
   root.querySelectorAll('[data-chuyen]').forEach(b=>b.onclick=()=>openFam(b.dataset.chuyen, false, {viec:b.dataset.viec||'', kq:'Chuyển sale'}));
   root.querySelectorAll('[data-sdt]').forEach(b=>b.onclick=()=>copyText(b.dataset.sdt, 'Đã chép số '+b.dataset.sdt));
+  root.querySelectorAll('[data-cp]').forEach(b=>b.onclick=()=>copyText(b.dataset.cp, 'Đã chép '+b.dataset.cp));
 }
 function xung(f){ const n=String(f.phuHuynh||'').trim(); if(!n) return 'anh/chị';
   if(/^(anh|chị|chi|cô|bố|mẹ|ba|ông|bà)\b/i.test(n)) return n; const w=n.split(/\s+/); return 'anh/chị '+w[w.length-1]; }
@@ -1035,6 +1047,77 @@ function bindThe(f, host){
     try{ const d=await api('luuThe',{code:f.code, the}); D=d; toast(d.soSua?'Đã lưu thẻ':'Không có gì thay đổi'); openFam(f.code,true); render(); }
     catch(x){ b.disabled=false; b.textContent='Lưu thẻ'; if(!x.silent){ er.hidden=false; er.textContent=x.message; } } };
 }
+/* ---------- Hồ sơ gia đình chia 4 phần: 1 liên hệ và tài khoản · 2 thông tin đã khai thác · 3 offer · 4 lịch sử học và hành vi ---------- */
+function phan(n, ten, sub, html){ return `<section class="phan" aria-labelledby="ph${n}"><h3 class="phan-h" id="ph${n}"><span class="phan-n">${n}</span>${esc(ten)}</h3>${sub?`<p class="hint" style="margin:0 0 4px">${esc(sub)}</p>`:''}${html}</section>`; }
+function cpRow(nhan, giaTri, them){ const v=String(giaTri||'');
+  return `<div class="cp-row"><span class="cp-l">${esc(nhan)}</span><b class="cp-v">${v?esc(v):'—'}</b><span class="cp-a">${v?`<button class="act sm-act" type="button" data-cp="${esc(v)}" aria-label="Chép ${esc(nhan)}">📄 Chép</button>`:''}${them||''}</span></div>`; }
+/* Offer: bảng giá theo tài liệu "Thông tin khóa học CES Anh – Trung" (online / tại trung tâm) */
+const LO_TRINH=['Lộ trình 1 · Little Seed, Seedling · Starters + YCT 1 · khoảng 10 tháng','Lộ trình 2 · Canopy, Larva · Movers + YCT 2 · khoảng 12 tháng','Lộ trình 3 · Pupa, Cocoon · Flyers + YCT 3 · khoảng 14 tháng','Tự học trên web'];
+const HINH_THUC=['Lớp online','Lớp tại trung tâm','Tự học trên web'];
+const GOI={'Mua lộ trình':[20999000,22999000],'Nhóm 6 bạn':[17999000,18999000],'Gia đình được giới thiệu':[19999000,21999000],'Mua 2 khóa lẻ':[27999000,30999000],'2 lộ trình liên tiếp':[35998000,37998000],'Học phí gốc':[30000000,36000000]};
+const TINH_TRANG=['Chưa trao đổi','Đã gửi đề xuất','Đang cân nhắc','Đã giữ chỗ','Đã đóng đợt 1','Chưa phù hợp lúc này'];
+function giaOffer(t){ const g=GOI[t.oGoi], i=t.oHinhThuc==='Lớp online'?0:t.oHinhThuc==='Lớp tại trung tâm'?1:-1;
+  if(!g||i<0) return ''; return g[i].toLocaleString('vi-VN')+'đ cho '+(t.oGoi==='2 lộ trình liên tiếp'?'240':'120')+' buổi'; }
+function goiYLoTrinh(f){ return f.khoa==='Canopy'?LO_TRINH[1]:f.khoa==='Little Seed'?LO_TRINH[0]:''; }
+const OFFER_VIEC=/^(phieu_nhu_cau|vet_\d|chuyen|tra_loi|khao_sat)$/, OFFER_KQ=['Chuyển sale','Xin ý kiến cố vấn','Cố vấn trả lời'];
+function offerBox(f){
+  const t=f.the||{}, cap=CAP(), coTay=cap!=='ctv'&&D.cap, gia=giaOffer(t);
+  const tom=[t.oTinhTrang&&`<span class="badge st">${esc(t.oTinhTrang)}</span>`, t.oLoTrinh&&esc(t.oLoTrinh), t.oHinhThuc&&esc(t.oHinhThuc), t.oGoi&&esc(t.oGoi), gia&&`<b>${gia}</b>`, t.oGio&&('Khung giờ: '+esc(t.oGio))].filter(Boolean);
+  const lq=f.lienHe.filter(c=>OFFER_VIEC.test(c.viec||'')||OFFER_KQ.includes(c.kq));
+  const sel=(id,ds,v,rong)=>`<select id="${id}"><option value="">${rong}</option>${ds.map(x=>`<option ${x===v?'selected':''}>${esc(x)}</option>`).join('')}${v&&!ds.includes(v)?`<option selected>${esc(v)}</option>`:''}</select>`;
+  return `<div class="box">
+    ${tom.length?`<p class="of-sum">${tom.join(' · ')}</p>`:`<p class="hint" style="margin:0">Chưa ghi offer nào.${goiYLoTrinh(f)?' Gợi ý theo khoá đang học: '+esc(goiYLoTrinh(f))+'.':''}</p>`}
+    ${t.oGhiChu?`<p style="margin:6px 0 0">${esc(t.oGhiChu)}</p>`:''}
+    ${t.oLuc?`<p class="hint">Cập nhật ${fmt(t.oLuc)}</p>`:''}
+    ${coTay?`<details ${tom.length?'':'open'}><summary style="cursor:pointer;margin-top:8px;font-weight:600">${tom.length?'Sửa offer':'Ghi offer'}</summary>
+      <form class="log" id="ofF" novalidate>
+        <div class="two"><label>Tình trạng${sel('oTT',TINH_TRANG,t.oTinhTrang,'Chọn tình trạng')}</label>
+          <label>Lộ trình đề xuất${sel('oLT',LO_TRINH,t.oLoTrinh||'', goiYLoTrinh(f)?'Gợi ý: '+goiYLoTrinh(f).split(' · ')[0]:'Chọn lộ trình')}</label></div>
+        <div class="two"><label>Hình thức${sel('oHT',HINH_THUC,t.oHinhThuc,'Chọn hình thức')}</label>
+          <label>Gói học phí${sel('oGoi',Object.keys(GOI),t.oGoi,'Chọn gói')}</label></div>
+        <p class="hint" id="oGia" style="margin:0">${gia?'Học phí: '+gia+'. Chia được 2 đợt, giữ giá đến hết lộ trình, kèm bộ quà 8.696.000đ.':'Chọn hình thức và gói để xem học phí.'}</p>
+        <label>Khung giờ ba mẹ chọn<input id="oGio" maxlength="80" value="${esc(t.oGio||'')}" placeholder="Ví dụ: tối thứ 3, thứ 5 lúc 19:30"></label>
+        <label>Ghi chú offer<textarea id="oGC" maxlength="600" placeholder="Điều ba mẹ còn lo, điều đã hứa, ý kiến cố vấn…">${esc(t.oGhiChu||'')}</textarea></label>
+        <p class="err" id="oErr" hidden></p>
+        <div class="acts"><button class="save" type="submit" id="oOk">Lưu offer</button><button class="act" type="button" id="dxBtn">📋 Đề xuất lộ trình 1 trang</button></div>
+      </form></details>
+      <div class="box tpl" id="dxBox" hidden><textarea id="dxTxt" aria-label="Đề xuất lộ trình gửi ba mẹ"></textarea>
+        <div class="acts"><button class="act pri" type="button" id="dxCp">📋 Chép đề xuất</button></div>
+        <p class="hint">Bản nháp ghép từ thẻ 6 ô và offer. Sửa lời cho tự nhiên, điền chỗ trong ngoặc vuông trước khi gửi.</p></div>`
+      :`<p class="hint">Offer do sale trao đổi với ba mẹ. Ba mẹ hỏi giá hoặc lịch học: bấm "Chuyển sale".</p>`}
+    ${lq.length?`<h3 style="margin-top:12px">Trao đổi liên quan</h3><ul class="tl">${lq.map(c=>`<li><time>${fmt(c.t)}</time><span><b>${esc(c.kq||'—')}</b> · ${esc(c.ai)}${c.ghiChu?` – ${esc(c.ghiChu)}`:''}</span></li>`).join('')}</ul>`:''}
+  </div>`;
+}
+function deXuatText(f){
+  const t=f.the||{}, ten=tkTen(f)||'con', ph=xung(f), h=f.h21, ht=f.hoc, gia=giaOffer(t), L=[];
+  L.push(`Đề xuất lộ trình cho bé ${ten}`,'',`1. Điều ${ph} mong cho bé`);
+  if(t.o1) L.push('• '+t.o1);
+  if(t.khi||t.muon||t.de) L.push(`• ${t.khi?'Khi '+t.khi+', ':''}${t.muon?'ba mẹ muốn '+t.muon:''}${t.de?', để '+t.de:''}.`);
+  if(t.o5) L.push('• Ba mẹ sẽ thấy đáng khi: '+t.o5); if(t.o6) L.push('• Mốc sắp tới của bé: '+t.o6);
+  L.push('','2. Bé đã làm được');
+  if(h) L.push(`• Trong hành trình 21 ngày, bé đã học ${h.buoi} buổi và nhận ${h.diem} sao.`); else if(ht) L.push(`• Bé đã học ${ht.soBuoi}/3 buổi học thử và nói thành tiếng ${ht.noi} lần.`);
+  L.push('• [Ngày đầu bé… → bây giờ bé…]');
+  L.push(`• Lộ trình đề xuất: ${t.oLoTrinh||goiYLoTrinh(f)||'[lộ trình]'}. Bé học với giáo viên được đào tạo riêng cho lớp tam ngữ, lớp tối đa 6 bạn.`);
+  L.push('','3. Đầu tư cho bé');
+  L.push(`• ${t.oHinhThuc||'[hình thức]'}${t.oGoi?' · '+t.oGoi:''}${gia?': '+gia:''}. Chia được 2 đợt, giữ giá đến hết lộ trình. Đã gồm bộ quà 8.696.000đ (phần mềm học tập và CLB 24 tháng, bộ học liệu).`);
+  L.push('• Thời gian: khoảng 2–3 giờ mỗi tuần. Bố mẹ chỉ cần giữ giờ học, hỏi và khen con, không cần biết tiếng Anh hay tiếng Trung.');
+  if(t.o4) L.push(`• Về điều ba mẹ còn lo (${t.o4}): [chính sách tương ứng: hoàn phí trong 3 buổi đầu / cam kết học lại / lớp online…]`);
+  L.push('','4. Bắt đầu thế nào',`• Chọn hình thức và khung giờ${t.oGio?' ('+t.oGio+')':''} → xác nhận lộ trình → đóng đợt 1 trước ngày khai giảng.`,'• Ba mẹ trả lời "1" để cô gọi tư vấn 10 phút ạ.');
+  return L.join('\n');
+}
+function bindOffer(f, host){
+  const fm=$('#ofF',host); if(!fm) return;
+  const capNhatGia=()=>{ const g=giaOffer({oGoi:$('#oGoi',fm).value,oHinhThuc:$('#oHT',fm).value}); $('#oGia',fm).textContent=g?'Học phí: '+g+'. Chia được 2 đợt, giữ giá đến hết lộ trình, kèm bộ quà 8.696.000đ.':'Chọn hình thức và gói để xem học phí.'; };
+  $('#oGoi',fm).onchange=capNhatGia; $('#oHT',fm).onchange=capNhatGia;
+  fm.onsubmit=async e=>{ e.preventDefault();
+    const the={oTinhTrang:$('#oTT',fm).value,oLoTrinh:$('#oLT',fm).value,oHinhThuc:$('#oHT',fm).value,oGoi:$('#oGoi',fm).value,oGio:$('#oGio',fm).value,oGhiChu:$('#oGC',fm).value};
+    const b=$('#oOk',fm), er=$('#oErr',fm); b.disabled=true; b.textContent='Đang lưu…';
+    try{ const d=await api('luuThe',{code:f.code, the}); D=d; toast(d.soSua?'Đã lưu offer':'Không có gì thay đổi'); openFam(f.code,true); render(); }
+    catch(x){ b.disabled=false; b.textContent='Lưu offer'; if(!x.silent){ er.hidden=false; er.textContent=x.message; } } };
+  const dx=$('#dxBtn',host), box=$('#dxBox',host);
+  if(dx) dx.onclick=()=>{ const fx=fam(f.code)||f; $('#dxTxt',host).value=deXuatText(Object.assign({},fx,{the:Object.assign({},fx.the||{},{oTinhTrang:$('#oTT',fm).value,oLoTrinh:$('#oLT',fm).value,oHinhThuc:$('#oHT',fm).value,oGoi:$('#oGoi',fm).value,oGio:$('#oGio',fm).value})})); box.hidden=false; if(box.scrollIntoView) box.scrollIntoView({block:'nearest'}); };
+  const cp=$('#dxCp',host); if(cp) cp.onclick=()=>copy($('#dxTxt',host));
+}
 let CUR={viec:'', kq:''};
 function openFam(code, keep, opt){
   locViec(); const f=fam(code); if(!f) return; if(!keep||opt) CUR={viec:(opt&&opt.viec)||'', kq:(opt&&opt.kq)||''};
@@ -1044,14 +1127,17 @@ function openFam(code, keep, opt){
     <div class="p-hd"><h2 id="pTitle">${esc(f.phuHuynh||'(chưa có tên)')} – bé ${esc(f.tenCon)}<small>${esc(f.code)} · ${esc(f.trangThai)} ${nhomBadge(f)} ${lanBadge(f)}</small></h2><button class="x" type="button" aria-label="Đóng">✕</button></div>
     <div class="acts">${callBtns(f, f.viec[0]&&f.viec[0].tin)}</div>
     ${f.viec.length?`<div class="box"><h3>Việc đang chờ</h3>${f.viec.map(v=>`<div>• ${esc(v.ten)} ${aiBadge(v)} <span class="hint">(${until(v.han).s})</span></div>`).join('')}</div>`:''}
-    ${f.h21?`<div class="box"><h3>Học 21 ngày</h3><p style="margin:0">${f.h21.buoi} buổi đã học · ${f.h21.diem} sao · lần cuối ${ago(f.h21.cuoi)}</p></div>`:''}
-    <label class="mk-big ${f.moKhoa?'on':''}"><input type="checkbox" data-mk="${esc(f.code)}" ${f.moKhoa?'checked':''}><span>Mở khóa 21 ngày<small>${f.moKhoa?'Đã mở'+(typeof f.moKhoaLuc==='number'?' lúc '+fmt(f.moKhoaLuc):'')+'. Bỏ tick để khóa lại.':(String(f.moKhoaLuc).startsWith('Khóa')?esc(f.moKhoaLuc)+'. ':'')+'Tick khi đã nhận phí: bé học đủ 21 ngày trên chính link cũ.'}</small></span></label>
+    ${phan(1,'Liên hệ và tài khoản','Bấm Chép rồi dán vào Zalo; tick kích hoạt khi đã nhận phí.',`
+    <div class="box cp-box">${cpRow('Số Zalo / SĐT', f.zalo, f.zalo&&/^0\d{9,10}$/.test(f.zalo)?`<a class="act sm-act" href="https://zalo.me/${esc(f.zalo)}" target="_blank" rel="noopener">💬 Zalo</a>`:'')}${cpRow('Tên con đăng nhập', tkTen(f))}${cpRow('Mã gia đình', f.code)}</div>
+    <label class="mk-big ${f.moKhoa?'on':''}"><input type="checkbox" data-mk="${esc(f.code)}" ${f.moKhoa?'checked':''}><span>Kích hoạt: mở khóa 21 ngày<small>${f.moKhoa?'Đã mở'+(typeof f.moKhoaLuc==='number'?' lúc '+fmt(f.moKhoaLuc):'')+'. Bỏ tick để khóa lại.':(String(f.moKhoaLuc).startsWith('Khóa')?esc(f.moKhoaLuc)+'. ':'')+'Tick khi đã nhận phí: bé học đủ 21 ngày trên chính link cũ.'}</small></span></label>
     ${dupBox(f)}
     ${tkSo(f)?`<div class="box tpl tk-box"><h3>Tài khoản đăng nhập</h3>
       <textarea id="tkTxt" aria-label="Hướng dẫn đăng nhập gửi ba mẹ">${esc(tkText(f))}</textarea>
       <div class="acts"><button class="act pri" type="button" id="tkCp">📋 Chép hướng dẫn đăng nhập</button>${tkSo(f).startsWith('0')?`<a class="act" href="https://zalo.me/${esc(tkSo(f))}" target="_blank" rel="noopener">💬 Mở Zalo</a>`:''}</div>
       <p class="hint">${f.moKhoa?'Bé đã được mở khóa: gửi tin này là ba mẹ vào học được ngay.':'<b>Bé chưa được mở khóa.</b> Tick ô Mở khóa 21 ngày ở trên trước khi gửi, nếu không ba mẹ sẽ báo "Số này chưa được mở khóa".'} Sửa tên con trong ô trên nếu ba mẹ gõ tên khác; ba mẹ phải nhập đúng tên này mỗi lần đăng nhập.</p></div>`
       :`<div class="box"><h3>Tài khoản đăng nhập</h3><p class="hint">Gia đình chưa có số điện thoại hợp lệ nên chưa tạo được tài khoản. Ghi đúng số Zalo vào tab Gia đình của Sheet rồi bấm Tải lại.</p></div>`}
+    `)}
+    ${phan(2,'Thông tin đã khai thác','Thông tin gia đình, thẻ 6 ô với câu JTBD, và ghi kết quả mỗi lần liên hệ.',`
     <div class="box" id="gdBox"><div class="h3row"><h3>Gia đình</h3><button class="act sm-act" type="button" id="suaBtn">✏️ Sửa thông tin</button></div><dl class="kv">
       <dt>Tên ba/mẹ</dt><dd>${esc(f.phuHuynh||'—')}</dd>
       <dt>Số Zalo</dt><dd>${esc(f.zalo||'—')}</dd>
@@ -1092,19 +1178,24 @@ function openFam(code, keep, opt){
       <button class="save" type="submit" id="sv">Lưu</button>
       <p class="hint">Mỗi lần lưu ghi một dòng vào tab "Nhật ký cuộc gọi". Mời chứ không ép, không nói con làm sai, không so con với bạn khác.${cap==='ctv'?' CTV không báo giá, không hứa ưu đãi: ba mẹ hỏi thì chọn "Chuyển sale" và ghi rõ ba mẹ nói gì.':''}</p>
     </form></div>
+    `)}
+    ${phan(3,'Offer đã trao đổi','Lộ trình, hình thức, gói học phí đã đề xuất và tình trạng chốt.', offerBox(f))}
+    ${phan(4,'Lịch sử học trên web và hành vi','',`
+    ${f.h21?`<div class="box"><h3>Học 21 ngày</h3><p style="margin:0">${f.h21.buoi} buổi đã học · ${f.h21.diem} sao · lần cuối ${ago(f.h21.cuoi)}</p></div>`:''}
     <div class="box"><h3>Điểm gia đình: ${f.diem}/100</h3><div class="score">${f.chiTietDiem.map(p=>`<div><span class="${p.ok?'ok':'no'}">${p.ok?'✓':'·'}</span>${esc(p.ten)}<em>${p.ok?'+'+p.diem:'0/'+p.diem} · ${esc(p.nhom)}</em></div>`).join('')}</div>
       <p class="hint">Điểm đo độ phù hợp và độ chăm, không đo con giỏi hay kém. Ba mẹ và bé không bao giờ thấy điểm này.</p></div>
     <div class="box"><h3>Học thử trên web</h3>${h?`<p style="margin:0 0 6px">${h.soBuoi}/3 buổi · nói thành tiếng ${h.noi} lần · ${h.ngay} ngày có học · bấm phần khóa ${h.khoa} lần · lần cuối ${ago(h.cuoi)}</p>
       <ul class="tl">${h.log.slice().reverse().slice(0,15).map(l=>`<li><time>${fmt(l[0])}</time><span>${esc(EVN[l[1]]||l[1])}${l[2]&&l[1]!=='zalo'?` <span class="hint">(${esc(l[2])})</span>`:''}</span></li>`).join('')}</ul>`
       :'<p class="hint" style="margin:0">Gia đình đăng ký trực tiếp, chưa có dữ liệu học thử.</p>'}</div>
     <div class="box"><h3>Lịch sử liên hệ</h3>${f.lienHe.length?`<ul class="tl">${f.lienHe.map(c=>`<li><time>${fmt(c.t)}</time><span><b>${esc(c.kq||'—')}</b> · ${esc(c.ai)}${c.ghiChu?` – ${esc(c.ghiChu)}`:''}</span></li>`).join('')}</ul>`:'<p class="hint" style="margin:0">Chưa có lần liên hệ nào được ghi.</p>'}</div>
+    `)}
   </div></div>`;
   $('.x',host).onclick=closeFam; $('.sheet',host).onclick=e=>{ if(e.target.classList.contains('sheet')) closeFam(); };
   bindActs(host); host.querySelectorAll('.box [data-open], .acts [data-open]').forEach(b=>b.onclick=()=>$('#kq',host).focus());
   const tt=$('#tt',host), lb=$('#lyDoBox',host); const sync=()=>lb.hidden=!['Dừng','Nuôi dưỡng'].includes(tt.value); tt.onchange=sync; sync();
   $('#kq',host).onchange=e=>{ if(e.target.value==='Hẹn gọi lại') $('#hen',host).focus(); };
   host.querySelectorAll('[data-kq]').forEach(b=>b.onclick=()=>{ $('#kq',host).value=b.dataset.kq; const g=$('#gc',host); g.placeholder=b.dataset.kq==='Chuyển sale'?'Ba mẹ nói gì? (hỏi giá, muốn học tiếp, phàn nàn…)':b.dataset.kq==='Xin ý kiến cố vấn'?'Cần cố vấn quyết điều gì?':'Cố vấn quyết thế nào?'; g.focus(); });
-  bindThe(f, host);
+  bindThe(f, host); bindOffer(f, host);
   if(CUR.kq) setTimeout(()=>{ const g=$('#gc',host); if(g) g.focus(); },60);
   const xb=$('#xoaDong',host); if(xb) xb.onclick=()=>xoaDong(f, xb);
   bindSua(f, host);

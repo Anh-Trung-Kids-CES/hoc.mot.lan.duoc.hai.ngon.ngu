@@ -441,15 +441,25 @@ function qtDiem_(ss) {
   });
   return out;
 }
-/* Thẻ gia đình (tab "Thẻ gia đình"): mã gia đình → thẻ 6 ô */
-function qtTheSheet_(ss) { return qtTab_(ss, 'Thẻ gia đình', QT_THE_HEAD); }
+/* Thẻ gia đình (tab "Thẻ gia đình"): mã gia đình → thẻ 6 ô (cột A–P) + offer đã trao đổi (cột Q–W) */
+const QT_OFFER_HEAD = ['Offer: lộ trình đề xuất', 'Offer: hình thức', 'Offer: gói học phí', 'Offer: khung giờ', 'Offer: tình trạng', 'Offer: ghi chú', 'Offer cập nhật lúc'];
+const QT_OFFER_KEY = ['oLoTrinh', 'oHinhThuc', 'oGoi', 'oGio', 'oTinhTrang', 'oGhiChu'];
+const QT_THE_W = QT_THE_HEAD.length + QT_OFFER_HEAD.length;
+function qtTheSheet_(ss) {
+  const sh = qtTab_(ss, 'Thẻ gia đình', QT_THE_HEAD.concat(QT_OFFER_HEAD));
+  if (sh.getRange(1, QT_THE_HEAD.length + 1).getValue() !== QT_OFFER_HEAD[0])
+    sh.getRange(1, QT_THE_HEAD.length + 1, 1, QT_OFFER_HEAD.length).setValues([QT_OFFER_HEAD]).setFontWeight('bold').setBackground('#FFF3C4');
+  return sh;
+}
 function qtThe_(ss) {
   const sh = ss.getSheetByName('Thẻ gia đình'), out = {};
   if (!sh || sh.getLastRow() < 2) return out;
-  sh.getRange(2, 1, sh.getLastRow() - 1, QT_THE_HEAD.length).getValues().forEach((r, i) => {
+  sh.getRange(2, 1, sh.getLastRow() - 1, QT_THE_W).getValues().forEach((r, i) => {
     const code = String(r[0] || '').trim(); if (!code) return;
     const t = { row: i + 2 }; QT_THE_KEY.forEach((k, j) => t[k] = String(r[j] == null ? '' : r[j]));
-    t.luc = qtMs_(r[14]); t.ai = String(r[15] || ''); out[code] = t;
+    t.luc = qtMs_(r[14]); t.ai = String(r[15] || '');
+    QT_OFFER_KEY.forEach((k, j) => t[k] = String(r[16 + j] == null ? '' : r[16 + j]));
+    t.oLuc = qtMs_(r[16 + QT_OFFER_KEY.length]); out[code] = t;
   });
   return out;
 }
@@ -479,24 +489,28 @@ function qtHoc21Gd_(f, h21) {
   return out;
 }
 function qtLuuThe_(s, code, the) {
-  const cap = qtCap_(s.me.vaiTro), keys = cap === 'ctv' ? QT_THE_CTV : QT_THE_KEY.slice(1);
+  const cap = qtCap_(s.me.vaiTro), keys = cap === 'ctv' ? QT_THE_CTV : QT_THE_KEY.slice(1).concat(QT_OFFER_KEY);
   const lock = LockService.getScriptLock(); lock.waitLock(20000);
   let doi = 0;
   try {
     qtTimGd_(s, code);                                  // kiểm tra quyền với gia đình này
-    const sh = qtTheSheet_(s.ss), cu = qtThe_(s.ss)[String(code)];
-    const row = QT_THE_KEY.map(k => k === 'code' ? String(code) : cu ? cu[k] : '');
+    const sh = qtTheSheet_(s.ss), cu = qtThe_(s.ss)[String(code)], tat = QT_THE_KEY.concat(QT_OFFER_KEY);
+    const v = {}; tat.forEach(k => v[k] = k === 'code' ? String(code) : cu ? cu[k] : '');
+    let doiThe = 0, doiOffer = 0;
     keys.forEach(k => {
       if (the[k] == null) return;
       let val = String(the[k]).trim().slice(0, k === 'nhom' ? 1 : 600);
       if (k === 'nhom' && val && !/^[A-E]$/.test(val)) val = '';
       if (/^[=+@]/.test(val)) val = "'" + val;          // không để ô bị hiểu là công thức
-      const j = QT_THE_KEY.indexOf(k); if (row[j] !== val) { row[j] = val; doi++; }
+      if (v[k] !== val) { v[k] = val; if (QT_OFFER_KEY.indexOf(k) >= 0) doiOffer++; else doiThe++; }
     });
+    doi = doiThe + doiOffer;
     if (doi) {
-      const vals = [row.concat([new Date(), s.me.ten])];
-      if (cu) sh.getRange(cu.row, 1, 1, QT_THE_HEAD.length).setValues(vals);
-      else { const at = sh.getLastRow() + 1; sh.getRange(at, 1, 1, QT_THE_HEAD.length).setValues(vals); }
+      const now = new Date();
+      const row = QT_THE_KEY.map(k => v[k]).concat([doiThe ? now : (cu && cu.luc ? new Date(cu.luc) : ''), doiThe ? s.me.ten : (cu ? cu.ai : '')])
+        .concat(QT_OFFER_KEY.map(k => v[k])).concat([doiOffer ? now : (cu && cu.oLuc ? new Date(cu.oLuc) : '')]);
+      const at = cu ? cu.row : sh.getLastRow() + 1;
+      sh.getRange(at, 1, 1, QT_THE_W).setValues([row]);
     }
   } finally { lock.releaseLock(); }
   return Object.assign(qtTaiDuLieu_(s), { soSua: doi });
@@ -760,7 +774,7 @@ function qtTaiDuLieu_(s) {
     const tHt = ht.byCode[code] || ht.bySo[qtKeySo_(r[QT_C['Số Zalo']])];
     f.hocThu = tHt ? { t: tHt } : null;
     const th = theAll[code];
-    f.the = th ? QT_THE_KEY.slice(1).reduce((o, k) => (o[k] = th[k], o), { luc: th.luc, ai: th.ai }) : null;
+    f.the = th ? QT_THE_KEY.slice(1).concat(QT_OFFER_KEY).reduce((o, k) => (o[k] = th[k], o), { luc: th.luc, ai: th.ai, oLuc: th.oLuc }) : null;
     f.theDu = qtTheDu_(f.the);
     f.h21 = f.moKhoa ? qtHoc21Gd_(f, h21) : null;
     f._cd = cd; f.nhom = qtNhom_(f, c, now); delete f._cd;
