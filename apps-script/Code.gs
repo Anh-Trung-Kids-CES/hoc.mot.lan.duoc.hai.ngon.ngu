@@ -3,7 +3,7 @@
  * Một link Web App dùng cho mọi việc của dự án, ghi tất cả vào CHÍNH Sheet chứa script này
  * ("Anh-Trung-Kids – Dữ liệu dự án", Drive anhtrung.home@gmail.com). Các Sheet cũ không còn dùng.
  *   1) Lưu / mở lại tiến độ học của từng bé (đăng nhập bằng tên con + SĐT/Gmail, không mật khẩu)
- *   2) Bảng vàng Top 10 theo khoá và chặng
+ *   2) Bảng vàng Top 10 theo khoá và chặng; Xếp hạng mỗi tuần (?action=xephang) cả bảng kèm avatar
  *   3) Sự kiện học thử theo mã CTV (tab "Truy cập học thử")
  *   4) Cổng Zalo sau buổi 1 (tab "Gia đình")
  *   5) Đơn đăng ký từ trang ưu đãi (tab "Đăng ký Web")
@@ -98,7 +98,8 @@ function doPost(e) {
 
 function doGet(e) {
   const p = e.parameter || {};
-  if (p.action === 'ping') return json_({ ok: true, v: 6 });          // v3: Bảng Gia đình · v4: mở khóa 21 ngày · v5: trang quản trị có tài khoản
+  if (p.action === 'ping') return json_({ ok: true, v: 7 });          // v3: Bảng Gia đình · v4: mở khóa 21 ngày · v5: trang quản trị có tài khoản · v7: Xếp hạng
+  if (p.action === 'xephang') return json_(xepHang_(p));
   if (p.action === 'access') return json_(access_(p));
   if (p.action === 'visit') return visit_(p);
   if (p.action === 'team') {   // mục tiêu chung: cả đội một khoá đã cùng học bao nhiêu buổi (không lộ tên, không xếp hạng)
@@ -129,6 +130,35 @@ function doGet(e) {
   const all = Object.values(tot).sort((a, b) => b.points - a.points);
   const me = all.findIndex(x => x.kid === p.kid);
   return json_({ top: all.slice(0, 10).map(x => ({ name: x.name, points: x.points })), me: me >= 0 ? { rank: me + 1, points: all[me].points } : null });
+}
+
+/* ---------- Xếp hạng (mỗi chặng = một tuần giải đấu) ----------
+ * ?action=xephang&group=seed&round=1 (0 = tổng 21 ngày)&kid=<mã bé>
+ * Trả tối đa 50 bạn có sao (tên, sao, avatar bé tự chọn ở Phòng đổi quà) và đánh dấu dòng của bé đang xem.
+ * Không trả mã bé của các bạn khác. Bảng được giữ trong bộ nhớ đệm 45 giây cho đỡ tải Sheet. */
+function xepHang_(p) {
+  const g = String(p.group || '').slice(0, 20), round = Math.max(0, Math.min(3, +p.round || 0)), kid = String(p.kid || '');
+  const cache = CacheService.getScriptCache(), key = 'xh1-' + g + '-' + round;
+  let all = null;
+  try { const hit = cache.get(key); if (hit) all = JSON.parse(hit); } catch (e) { }
+  if (!all) {
+    const sh = sheet_('Diem', ['kid', 'name', 'group', 'day', 'round', 'points', 'updated']), n = sh.getLastRow(), tot = {};
+    if (n > 1) sh.getRange(2, 1, n - 1, 6).getValues().forEach(r => {
+      if (String(r[2]) !== g || (round && +r[4] !== round)) return;
+      const k = String(r[0]); tot[k] = tot[k] || { k: k, n: '', p: 0 }; tot[k].p += +r[5] || 0; tot[k].n = String(r[1] || '');
+    });
+    const td = ss_().getSheetByName('TienDo');
+    if (td && td.getLastRow() > 1) td.getRange(2, 1, td.getLastRow() - 1, 6).getValues().forEach(r => {
+      const x = tot[String(r[0])]; if (!x) return;
+      try { const a = (JSON.parse(r[5] || '{}')._shop || {}).ava; if (a && a.c) x.a = [a.c, a.o || '', a.bg || 'studio', a.fr || 'none']; } catch (e) { }
+    });
+    all = Object.keys(tot).map(k => tot[k]).filter(x => x.p > 0).sort((a, b) => b.p - a.p || a.n.localeCompare(b.n));
+    try { cache.put(key, JSON.stringify(all), 45); } catch (e) { }
+  }
+  const mi = all.findIndex(x => x.k === kid);
+  const list = all.slice(0, 50).map(x => ({ n: x.n, p: x.p, a: x.a || null, me: x.k === kid }));
+  if (mi >= 50) list.push({ n: all[mi].n, p: all[mi].p, a: all[mi].a || null, me: true });
+  return { v: 7, list: list, total: all.length };
 }
 
 /* ---------- Truy cập bản học thử theo mã CTV ----------
