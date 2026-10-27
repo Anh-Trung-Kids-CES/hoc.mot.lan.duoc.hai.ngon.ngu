@@ -1354,6 +1354,7 @@ function viewHome(){
       ${hubTile({id:'tParent', img:'tai-nguyen/trang/ls_man_khen.webp', c:'#F28C00', t:'Ba mẹ đồng hành', sub:'Chương trình · cách học'})}
       ${hubTile({id:'tTour', img:'tai-nguyen/nhan-vat/huou_huou1_a.webp', size:'auto 92%', pos:'50% 100%', bg:'#DDEBFF', c:'#2F6FD6', t:'Hướng dẫn', sub:'Cô Hươu chỉ cách học'})}
       ${hubTile({href:'#/hanh-trinh', img:'tai-nguyen/trang/ls_stickers.webp', pos:'50% 50%', size:'auto 92%', bg:'#FFF8E1', c:'#C9A227', t:'Hành trình của con', sub:'Huy hiệu · ngày học · lần nói'})}
+      ${hubTile({id:'tRank', href:'#/xep-hang', img:typeof avaSrc==='function'?avaSrc():'tai-nguyen/nhan-vat/kids_bong_a.webp', size:'auto 92%', pos:'50% 100%', bg:'#DDF4F6', c:'#1597A8', t:'Xếp hạng tuần', sub:xhHomeSub(), badge:'🏆'})}
       ${hubTile({href:'#/qua', img:'tai-nguyen/qua/gift_rubik.webp', size:'auto 62%', pos:'50% 55%', bg:'#FFE4EC', c:'#E3487A', t:'Phòng đổi quà', sub:'Đổi sao lấy quà', badge:'⭐ '+qWallet()})}
       ${hubTile({href:`#/g/${g}/them/${Math.min(3,Math.max(1,Math.ceil((doneCount(g)+1)/6)))}`, img:'tai-nguyen/trang/ls_o_xem.webp', c:'#7B5CD6', t:'Góc khám phá', sub:'Video, trò chơi thêm'})}
     </div>
@@ -1362,6 +1363,7 @@ function viewHome(){
   const tb=document.getElementById('tbtn'); if(tb) tb.onclick=toggleTeacher;
   document.getElementById('tParent').onclick=()=>{ sfx.pop(); parentPanel(); };
   document.getElementById('tTour').onclick=()=>{ sfx.pop(); startTour(true); };
+  xhHomeBadge(g);
   if(ENTRY_LOGIN){ ENTRY_LOGIN=false; }   // vừa bấm Đăng nhập ở màn vào web: để bảng đăng nhập đứng một mình
   else if(!lsGet('lle-tour-seen',false) && STARTED) setTimeout(()=>startTour(false), 400);
   else if(STARTED && !mapSpoke.home){ mapSpoke.home=true; hdSay(['Chào con! Cô là cô Hươu.']); }

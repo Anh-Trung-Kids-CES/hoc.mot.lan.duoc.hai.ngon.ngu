@@ -76,3 +76,19 @@
 }
 @media (orientation:portrait) and (max-width:820px){ #sdHelp span:not(.sd-ic){font-size:8px;letter-spacing:-.4px} }
 @media (max-width:520px){ .xh-ht h2{font-size:24px} .xh-ht{max-width:60%} }
+/* trang chủ có thêm ô Xếp hạng tuần: 2 ô lớn + 6 ô nhỏ */
+.h2-grid{grid-template-columns:repeat(12,1fr)}
+.h2-grid .big{grid-column:span 6}
+.h2-grid .ht:not(.big){grid-column:span 2}
+@media (orientation:portrait) and (max-width:820px){
+  .h2-grid{grid-template-columns:1fr 1fr}
+  .h2-grid .big,.h2-grid .ht:not(.big){grid-column:auto}
+  .h2-grid .ht:not(.big):last-child:nth-child(odd){grid-column:1/-1}
+  .h2-grid .ht:not(.big):last-child:nth-child(even){grid-column:auto}
+}
+/* 6 ô nhỏ trên máy tính: chữ nhỏ lại một chút để không bị cắt */
+@media not ((orientation:portrait) and (max-width:820px)){
+  .h2-grid .ht:not(.big) .ht-lb{padding-left:8px;padding-right:6px}
+  .h2-grid .ht:not(.big) .ht-lb b{font-size:clamp(14px,min(2.4vh,1.3vw),21px)}
+  .h2-grid .ht:not(.big) .ht-lb small{font-size:clamp(10px,min(1.6vh,1vw),13px)}
+}
