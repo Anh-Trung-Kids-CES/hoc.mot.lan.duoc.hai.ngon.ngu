@@ -98,7 +98,7 @@ function doPost(e) {
 
 function doGet(e) {
   const p = e.parameter || {};
-  if (p.action === 'ping') return json_({ ok: true, v: 5 });          // v3: Bảng Gia đình · v4: mở khóa 21 ngày · v5: trang quản trị có tài khoản
+  if (p.action === 'ping') return json_({ ok: true, v: 6 });          // v3: Bảng Gia đình · v4: mở khóa 21 ngày · v5: trang quản trị có tài khoản
   if (p.action === 'access') return json_(access_(p));
   if (p.action === 'visit') return visit_(p);
   if (p.action === 'team') {   // mục tiêu chung: cả đội một khoá đã cùng học bao nhiêu buổi (không lộ tên, không xếp hạng)
@@ -138,7 +138,7 @@ function doGet(e) {
  *   khoa = bấm vào phần bị khóa (chi tiết: phần nào) · bam_dk = bấm "Đăng ký cho con" · zalo = ba mẹ để lại Zalo
  * Mỗi sự kiện ghi 1 dòng vào tab "Truy cập học thử" của Sheet này;
  * trang quản trị đọc tab này để chấm điểm gia đình và vẽ phễu theo mã CTV. */
-const EVENTS = ['mo', 'vao', 'hoc', 'xong1', 'xong2', 'xong3', 'noi', 'khoa', 'bam_dk', 'zalo', 'dong_hanh'];
+const EVENTS = ['mo', 'vao', 'hoc', 'xong1', 'xong2', 'xong3', 'noi', 'khoa', 'bam_dk', 'zalo', 'dong_hanh', 'kich_hoat'];   // kich_hoat = bấm "Nhắn Zalo đội hỗ trợ" ở bảng Kích hoạt 21 ngày
 const TC_HEAD = ['Thời gian', 'Mã CTV', 'Mã người xem', 'Sự kiện', 'Khoá', 'Chi tiết'];
 function cleanRef_(r) { return String(r || 'TU_NHIEN').toUpperCase().replace(/[^A-Z0-9_]/g, '').slice(0, 20) || 'TU_NHIEN'; }
 function logEvent_(ss, ref, vid, ev, g, x) {
@@ -192,8 +192,26 @@ function chonNguoiHoTro_(ss, rows) {
   rows.forEach(r => { const n = String(r[15]).trim(); if (n in load && DONG_HO_SO.indexOf(String(r[13])) < 0) load[n]++; });
   return ppl.sort((a, b) => load[a] - load[b])[0];
 }
+/* Danh sách riêng: mỗi lần ba mẹ đăng ký ở ô "Học thử miễn phí" (web gửi nguon=hocthu) ghi thêm 1 dòng vào tab "Đăng ký học thử".
+ * Gia đình vẫn nằm ở tab "Gia đình" như mọi gia đình khác; trang quản trị đọc tab này để dựng màn Học thử và việc hằng ngày riêng. */
+const HT_HEAD = ['Thời gian', 'Mã gia đình', 'Tên con', 'Tuổi', 'SĐT / Zalo', 'ĐY tư vấn', 'Mã CTV', 'Mã người xem'];
+function ghiHocThu_(ss, code, d, phone) {
+  let sh = ss.getSheetByName('Đăng ký học thử');
+  if (!sh) {
+    sh = ss.insertSheet('Đăng ký học thử'); sh.appendRow(HT_HEAD); sh.setFrozenRows(1);
+    sh.getRange(1, 1, 1, HT_HEAD.length).setFontWeight('bold').setBackground('#FFE3E0');
+  }
+  sh.appendRow([new Date(), code, String(d.kid || '').trim().slice(0, 40), String(d.age || '').slice(0, 6), '',
+    d.cTuVan === true || d.cTuVan === 'true', cleanRef_(d.ref), String(d.vid || '').slice(0, 24)]);
+  sh.getRange(sh.getLastRow(), 5).setNumberFormat('@').setValue(phone);
+}
 function family_(d) {
   if (d.web) return { ok: true };                                   // ô bẫy chống spam
+  const kq = family0_(d);
+  if (kq.ok && kq.code && d.nguon === 'hocthu') { try { ghiHocThu_(ss_(), kq.code, d, normPhone_(d.phone)); } catch (e) {} }
+  return kq;
+}
+function family0_(d) {
   const phone = normPhone_(d.phone), parent = String(d.parent || '').trim().slice(0, 40);
   const kid = String(d.kid || '').trim().slice(0, 40), vid = String(d.vid || '').slice(0, 24);
   if (!phone || !parent || !kid) return { ok: false, err: 'thieu' };

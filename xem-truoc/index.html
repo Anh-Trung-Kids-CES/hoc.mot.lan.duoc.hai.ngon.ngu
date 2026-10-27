@@ -2101,7 +2101,7 @@ function trialForm(g, then, opt){
     const old=demoFam(), fam={code:old&&old.code||'GD'+Math.random().toString(36).slice(2,8).toUpperCase().replace(/[^A-Z0-9]/g,'X').padEnd(6,'X'), t:Date.now(), sent:false, acct:phone};
     lsSet('lle-fam',fam);
     lsSet('lle-fam-gui',{action:'family', code:fam.code, vid:demoVid(), ref:demoRef()||'TU_NHIEN', kid:name, age, group:KID.group||'',
-      parent:'Ba mẹ bé '+name, phone, cHoc:true, cTuVan:$('#tc2').checked, cUuDai:false, web:$('#tfweb').value});
+      parent:'Ba mẹ bé '+name, phone, cHoc:true, cTuVan:$('#tc2').checked, cUuDai:false, nguon:'hocthu', web:$('#tfweb').value});
     zaloSend(); demoTrack('hoc', KID.group, age);
     ov.remove(); sfx.win(); updateStars(); then&&then();
   });
@@ -2240,7 +2240,7 @@ function kichHoat(tuDong){
   ov.querySelector('.pp-x').onclick=close; ov.querySelector('#khLater').onclick=close;
   ov.addEventListener('click',e=>{ if(e.target===ov) close(); });
   ov.querySelector('#khNd').onclick=e=>{ chep(nd).then(ok=>{ e.target.textContent=ok?'Đã chép ✓':'Chép'; }); };
-  ov.querySelector('#khZalo').addEventListener('click',()=>{ demoTrack('bam_dk'); chep(tin).then(ok=>{ if(ok) toast('Đã chép tin nhắn. Ba mẹ dán vào Zalo rồi gửi kèm ảnh chuyển khoản nhé.'); }); });
+  ov.querySelector('#khZalo').addEventListener('click',()=>{ demoTrack('kich_hoat'); demoTrack('bam_dk'); chep(tin).then(ok=>{ if(ok) toast('Đã chép tin nhắn. Ba mẹ dán vào Zalo rồi gửi kèm ảnh chuyển khoản nhé.'); }); });
   ov.querySelector('#khMk').onclick=()=>{ close(); moKhoaDangNhap(KID&&KID.group); };
   if(tuDong){ confetti&&confetti(30); sfx.win&&sfx.win(); }
 }

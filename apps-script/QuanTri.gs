@@ -56,6 +56,12 @@ const QT_TIN_MAU_MAC_DINH = [
     'Dạ em chào {phu_huynh}, em là {nguoi_ho_tro} ở Anh-Trung-Kids (CES) ạ. Em gọi lại như đã hẹn về hành trình 21 ngày của bé {ten_con} ạ.'],
   ['nuoi_duong', 'Chưa đăng ký: mời vào nhóm học liệu',
     'Dạ em cảm ơn {phu_huynh} đã cho bé {ten_con} học thử ạ. Em gửi ba mẹ nhóm chia sẻ học liệu miễn phí theo tuổi của con; khi mở đợt mới em sẽ báo ba mẹ đầu tiên nhé ạ. Nhóm Facebook: https://www.facebook.com/groups/1057551126772261'],
+  ['chao_thu', 'Học thử: gọi chào (vừa đăng ký học thử)',
+    'Dạ em chào {phu_huynh}, em là {nguoi_ho_tro} ở Anh-Trung-Kids (CES) ạ. Em cảm ơn ba mẹ đã đăng ký cho bé {ten_con} học thử miễn phí. Con học ngay tại link này: {link_hoc} . Mỗi buổi khoảng 15 phút, ba mẹ chỉ cần mở bài đúng giờ và khen con khi con nói thành tiếng. Con học xong buổi 2 sẽ thấy nút Kích hoạt 21 ngày thử thách. Con vướng chỗ nào ba mẹ nhắn em nhé ạ.'],
+  ['nhac_thu', 'Học thử: đăng ký 1 ngày mà bé chưa vào học',
+    'Dạ em chào {phu_huynh} ạ. Hôm qua ba mẹ đã đăng ký cho bé {ten_con} học thử, em chưa thấy con vào buổi đầu ạ. Tối nay ba mẹ mở cho con khoảng 15 phút nhé: {link_hoc} . Ba mẹ nhập đúng tên con đã đăng ký là con học tiếp được ạ.'],
+  ['moi_kich_hoat', 'Học thử: bé xong buổi 2, mời kích hoạt 21 ngày',
+    'Dạ em chào {phu_huynh} ạ. Bé {ten_con} đã học xong 2 buổi học thử{hoc_them} rồi ạ. Để con đi tiếp cả hành trình, ba mẹ đóng giúp em {phi} phí học liệu nhé ạ: con sẽ tham gia 21 ngày gồm 3 buổi học với giáo viên và các buổi làm bài tập trên web. Ba mẹ bấm nút "Kích hoạt 21 ngày thử thách" trên web để quét mã chuyển khoản, rồi gửi em ảnh chuyển khoản là em mở cho con ngay ạ.'],
   ['nhac_hoc', 'Bé nghỉ học vài ngày: nhắc nhẹ',
     'Dạ em chào {phu_huynh} ạ. Mấy hôm nay em chưa thấy bé {ten_con} vào bài mới. Hôm nay ba mẹ mở cho con học lại một buổi ngắn khoảng 15 phút nhé ạ, con học tiếp đúng chỗ đang dừng: {link_hoc} . Ba mẹ nhớ khen con khi con nói thành tiếng ạ. Con vướng chỗ nào ba mẹ nhắn em hỗ trợ nhé.'],
 ];
@@ -357,8 +363,9 @@ function qtSuKien_(ss) {
   if (!sh || sh.getLastRow() < 2) return { byVid: byVid, all: all };
   sh.getRange(2, 1, sh.getLastRow() - 1, 6).getValues().forEach(r => {
     const vid = String(r[2] || ''), ev = String(r[3] || ''), t = qtMs_(r[0]); if (!vid || !ev) return;
-    const e = byVid[vid] || (byVid[vid] = { ev: {}, days: {}, noi: 0, khoa: 0, ref: String(r[1] || ''), g: '', age: '', first: t, last: t, log: [] });
+    const e = byVid[vid] || (byVid[vid] = { ev: {}, tEv: {}, days: {}, noi: 0, khoa: 0, ref: String(r[1] || ''), g: '', age: '', first: t, last: t, log: [] });
     e.ev[ev] = (e.ev[ev] || 0) + 1; e.last = Math.max(e.last, t); e.first = Math.min(e.first, t);
+    if (!e.tEv[ev] || t < e.tEv[ev]) e.tEv[ev] = t;
     if (r[4]) e.g = String(r[4]);
     if (['vao', 'hoc', 'xong1', 'xong2', 'xong3', 'noi'].indexOf(ev) >= 0) e.days[qtNgay_(t)] = 1;
     if (ev === 'noi') e.noi = Math.max(e.noi, +r[5] || 0);
@@ -400,7 +407,7 @@ function qtCham_(r, e, calls) {
   add('Dùng thử', 'Xong cả 3 buổi', 10, ev.xong3);
   add('Dùng thử', 'Học vào từ 2 ngày khác nhau', 10, e && Object.keys(e.days).length >= 2);
   add('Dùng thử', 'Con nói thành tiếng từ 5 lần', 10, e && e.noi >= 5);
-  add('Ý định', 'Bấm "Đăng ký cho con"', 10, ev.bam_dk);
+  add('Ý định', 'Bấm "Đăng ký cho con" hoặc "Kích hoạt 21 ngày"', 10, ev.bam_dk || ev.kich_hoat);
   add('Ý định', 'Ba mẹ nhắn lại hoặc hỏi thêm', 10, kq.indexOf('Ba mẹ nhắn lại / hỏi thêm') >= 0);
   add('Ý định', 'Mở mục Ba mẹ đồng hành', 5, ev.dong_hanh);
   add('Ý định', 'Bấm vào phần bị khóa từ 2 lần', 5, e && e.khoa >= 2);
@@ -419,6 +426,7 @@ function qtViec_(f, cd, now) {
   if (f.moKhoa) return v;   // đã đóng phí và đã mở khóa 21 ngày → không còn ở Việc hôm nay
   if (f.henGoiLai && f.henGoiLai <= now + 2 * 3600e3 && f.henGoiLai > lh)
     v.push({ loai: 'goi_lai', uuTien: 0, ten: 'Gọi lại theo hẹn', han: f.henGoiLai, tin: 'goi_lai' });
+  if (f.hocThu) return qtViecHocThu_(f, cd, now, v);
   if (st === 'Đang dùng thử' && !lh)
     v.push({ loai: 'chao', uuTien: 1, ten: lan === 'nóng' ? 'Gọi chào ngay (gia đình nóng)' : 'Gọi chào – vừa để lại Zalo', han: qtHanGoi_(f.taoLuc, cd), dem: f.taoLuc, tin: 'chao' });
   if (f.dyTuVan && (st === 'Mời đăng ký' || (st === 'Đang dùng thử' && lan === 'nóng' && lh)) && lh < sa) {
@@ -436,6 +444,39 @@ function qtViec_(f, cd, now) {
   if (st === 'Đang học 21 ngày')
     v.push({ loai: 'mo', uuTien: 1, ten: 'Mở khóa 21 ngày (đã đóng phí, chưa mở)', han: sa + 2 * 3600e3, tin: 'link_hoc' });
   return v;
+}
+
+/* Việc hằng ngày cho gia đình đăng ký ở ô "Học thử miễn phí" (danh sách riêng, tab "Đăng ký học thử").
+ * Thay cho các việc chào/mời chung: chào ngay sau đăng ký → nhắc nếu 24 giờ chưa vào học → mời kích hoạt khi bé xong buổi 2
+ * → ba mẹ bấm Kích hoạt thì kiểm tra chuyển khoản và mở khóa. */
+function qtViecHocThu_(f, cd, now, v) {
+  const st = f.trangThai, lh = f.lienHeGanNhat, t0 = f.hocThu.t || f.taoLuc, h = f.hoc || {};
+  if (['Dừng', 'Nuôi dưỡng', 'Học viên khóa dài'].indexOf(st) >= 0) return v;
+  const daBam = !!h.tKichHoat, xong2 = h.tXong2 || (h.soBuoi >= 2 ? h.cuoi : 0);
+  if (daBam && st !== 'Đang học 21 ngày')
+    v.push({ loai: 'mo', uuTien: 0, ten: 'Ba mẹ bấm Kích hoạt: kiểm tra chuyển khoản rồi mở khóa 21 ngày', han: h.tKichHoat + 2 * 3600e3, dem: h.tKichHoat, demTen: 'bấm kích hoạt', tin: 'link_hoc' });
+  if (st === 'Đang học 21 ngày')
+    v.push({ loai: 'mo', uuTien: 1, ten: 'Mở khóa 21 ngày (đã đóng phí, chưa mở)', han: f.doiTrangThaiLuc + 2 * 3600e3, tin: 'link_hoc' });
+  if (!lh && !daBam && st !== 'Đang học 21 ngày')
+    v.push({ loai: 'chao', uuTien: 1, ten: 'Gọi chào – vừa đăng ký học thử', han: qtHanGoi_(t0, cd), dem: t0, demTen: 'đăng ký', tin: 'chao_thu' });
+  else if (!daBam && !h.soBuoi && now - t0 > 24 * 3600e3 && lh < t0 + 24 * 3600e3)
+    v.push({ loai: 'nhac', uuTien: 5, ten: 'Đăng ký học thử 1 ngày, bé chưa vào học: nhắc nhẹ', han: t0 + 48 * 3600e3, dem: t0, demTen: 'đăng ký', tin: 'nhac_thu' });
+  if (!daBam && xong2 && f.dyTuVan && lh < xong2 && ['Đang dùng thử', 'Mời đăng ký'].indexOf(st) >= 0)
+    v.push({ loai: 'moi', uuTien: 2, ten: 'Bé xong buổi 2: mời kích hoạt 21 ngày', han: qtHanGoi_(xong2, cd), dem: xong2, demTen: 'xong buổi 2', tin: 'moi_kich_hoat' });
+  if (f.henGoiLai && f.henGoiLai <= now + 2 * 3600e3 && f.henGoiLai > lh && !v.some(x => x.loai === 'goi_lai'))
+    v.push({ loai: 'goi_lai', uuTien: 0, ten: 'Gọi lại theo hẹn', han: f.henGoiLai, tin: 'goi_lai' });
+  return v;
+}
+/* Tab "Đăng ký học thử": mã gia đình và số điện thoại → lúc đăng ký đầu tiên */
+function qtHocThu_(ss) {
+  const sh = ss.getSheetByName('Đăng ký học thử'), byCode = {}, bySo = {};
+  if (!sh || sh.getLastRow() < 2) return { byCode: byCode, bySo: bySo };
+  sh.getRange(2, 1, sh.getLastRow() - 1, 5).getValues().forEach(r => {
+    const t = qtMs_(r[0]), code = String(r[1] || '').trim(), k = qtKeySo_(r[4]);
+    if (code && (!byCode[code] || t < byCode[code])) byCode[code] = t;
+    if (k && (!bySo[k] || t < bySo[k])) bySo[k] = t;
+  });
+  return { byCode: byCode, bySo: bySo };
 }
 
 /* ===================== dữ liệu cho trang ===================== */
@@ -460,7 +501,7 @@ function qtTaiDuLieu_(s) {
       const sc = qtCham_(r, e, c), lan = sc.diem >= cd.nong ? 'nóng' : sc.diem >= cd.am ? 'ấm' : 'lạnh';
       if (r[QT_C['Điểm']] !== sc.diem || r[QT_C['Làn']] !== lan) { r[QT_C['Điểm']] = sc.diem; r[QT_C['Làn']] = lan; changed = true; }
       const ev = (e && e.ev) || {};
-      if (r[QT_C['Trạng thái']] === 'Đang dùng thử' && (ev.xong3 || ev.bam_dk || sc.diem >= cd.nong)) {
+      if (r[QT_C['Trạng thái']] === 'Đang dùng thử' && (ev.xong3 || ev.bam_dk || ev.kich_hoat || sc.diem >= cd.nong)) {
         r[QT_C['Trạng thái']] = 'Mời đăng ký'; r[QT_C['Đổi trạng thái lúc']] = new Date(); changed = true;
       }
     });
@@ -480,7 +521,7 @@ function qtTaiDuLieu_(s) {
     }
   } finally { lock.releaseLock(); }
 
-  const me = s.me, laQL = me.vaiTro === 'Quản lý';
+  const me = s.me, laQL = me.vaiTro === 'Quản lý', ht = qtHocThu_(ss);
   const all = rows.map(r => {
     const e = sk.byVid[String(r[QT_C['Mã người xem']])], code = String(r[QT_C['Mã gia đình']]), c = nk.byFam[code] || [];
     const sc = qtCham_(r, e, c);
@@ -494,8 +535,10 @@ function qtTaiDuLieu_(s) {
       moKhoa: yes_(r[QT_C['Mở khóa 21 ngày']]), moKhoaLuc: r[QT_C['Mở khóa lúc']] instanceof Date ? r[QT_C['Mở khóa lúc']].getTime() : String(r[QT_C['Mở khóa lúc']] || ''),
       diem: sc.diem, chiTietDiem: sc.chiTiet, lan: sc.diem >= cd.nong ? 'nóng' : sc.diem >= cd.am ? 'ấm' : 'lạnh',
       hoc: e ? { soBuoi: e.ev.xong3 ? 3 : e.ev.xong2 ? 2 : e.ev.xong1 ? 1 : 0, noi: e.noi, ngay: Object.keys(e.days).length, khoa: e.khoa,
-        bamDk: !!e.ev.bam_dk, cuoi: e.last, log: e.log } : null,
+        bamDk: !!e.ev.bam_dk, cuoi: e.last, log: e.log, tXong2: e.tEv.xong2 || e.tEv.xong3 || 0, tKichHoat: e.tEv.kich_hoat || 0 } : null,
       lienHe: c.slice().sort((a, b) => b.t - a.t).slice(0, 20) };
+    const tHt = ht.byCode[code] || ht.bySo[qtKeySo_(r[QT_C['Số Zalo']])];
+    f.hocThu = tHt ? { t: tHt } : null;
     f.viec = qtViec_(f, cd, now);
     return f;
   });

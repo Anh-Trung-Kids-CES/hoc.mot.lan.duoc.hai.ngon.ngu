@@ -73,3 +73,9 @@ Tiến độ ở chế độ giáo viên lưu riêng (`lle-progress-gv`), không
 - Bấm nút Zalo được ghi là `bam_dk` (tính điểm Ý định, gia đình lên làn nóng trên trang quản trị).
 - Đội nhận ảnh chuyển khoản → tick **Mở khóa 21 ngày** trên trang quản trị → lần mở web sau, máy tự mở đủ 21 ngày theo số điện thoại đã để lại.
 - Bỏ dòng hạn đăng ký 25/10 và nút sang trang ưu đãi trong bảng mời của bản học thử.
+
+## Cập nhật 27/10/2026 (danh sách học thử riêng trên trang quản trị)
+- Web gửi `nguon:'hocthu'` khi ba mẹ đăng ký ở ô Học thử; máy chủ (`?action=ping` trả `v:6`) ghi thêm 1 dòng vào tab mới **"Đăng ký học thử"** (Thời gian, Mã gia đình, Tên con, Tuổi, SĐT, ĐY tư vấn, Mã CTV, Mã người xem). Gia đình vẫn ở tab Gia đình như cũ.
+- Sự kiện mới `kich_hoat` = bấm "Nhắn Zalo đội hỗ trợ" ở bảng Kích hoạt 21 ngày (tính điểm như `bam_dk`).
+- Trang quản trị có màn **Học thử**: số liệu (đăng ký, đã vào học, xong buổi 2, bấm kích hoạt, đã mở khóa), lọc theo tiến độ, tải CSV. *Việc hôm nay* có nút lọc "Chỉ học thử" và nhãn Học thử.
+- Việc hằng ngày riêng cho gia đình học thử: Gọi chào (trong 1 giờ) → nhắc nếu sau 24 giờ bé chưa vào học → Bé xong buổi 2: mời kích hoạt (chỉ khi ba mẹ đồng ý tư vấn) → Ba mẹ bấm Kích hoạt: kiểm tra chuyển khoản rồi mở khóa. Tin mẫu mới: `chao_thu`, `nhac_thu`, `moi_kich_hoat` (tự thêm vào tab Tin mẫu Zalo).
