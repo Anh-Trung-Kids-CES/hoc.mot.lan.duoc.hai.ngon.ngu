@@ -1,0 +1,1032 @@
+{
+ "course": "Little Seed",
+ "part": "b",
+ "rows": [
+  {
+   "buoi": 21,
+   "unit": 5,
+   "label_buoi": "Buổi dạy 21. Unit 5 · Feelings – Hiểu: gọi tên vui, buồn, buồn ngủ, sợ trên gương mặt mình",
+   "web": [
+    {
+     "ngay": 41,
+     "label": "Ngày 41. Unit 5 · Feelings – Vui, buồn",
+     "en": {
+      "tu": "Mới: happy, sad | Ôn: head, eyes, hands",
+      "cum": "Mới: I am happy. / I am sad.",
+      "cau": "[Ngữ pháp: I am + cảm xúc] Bông: I am happy! / Bông: I am sad. / Hello, Mommy! I am happy. / [Lời web] Vào bài: \"Mình cùng học nhé! Let's learn!\" · Khen: \"Giỏi quá! Great! 真棒！\" · Sang tiếng Trung: \"Giờ nói tiếng Trung nhé! Now, Chinese! 说中文！\"",
+      "truyen": "Bông's Big Day (cảnh 2–3) — Bông: Hello, friend! Bông: I am happy! Oh no, my ball! Bông: I am sad.",
+      "video": "Xem ngữ cảnh: How Do You Feel Today? – Very Young Learners – https://www.youtube.com/watch?v=a5W3sno2D0M · Góc Xem thêm: How Do You Feel? – Kids Vocab (kho Anh – Trung – Kids) – https://drive.google.com/file/d/1BSmCzjPYT75HyR3E0a9qvQKoX8FQ_CBM/view"
+     },
+     "zh": {
+      "tu": "Mới: 开心 kāixīn (= happy), 难过 nánguò (= sad) | Ôn: 头 tóu, 眼睛 yǎnjing, 手 shǒu",
+      "cum": "Mới: 我很开心 wǒ hěn kāixīn / 我很难过 wǒ hěn nánguò",
+      "cau": "[Cầu nối] [Cùng tranh, hai tiếng] I am happy. ↔ 我很开心。 [giống: I ↔ 我 đứng đầu câu · khác: tiếng Trung không có \"am\", thêm 很] / [Ngữ pháp: 很 + tính từ] Bông：我很开心！(Bông: Wǒ hěn kāixīn!) / Bông：我很难过。(Bông: Wǒ hěn nánguò.) / 妈妈，你好！我很开心。(Māma, nǐ hǎo! Wǒ hěn kāixīn.)",
+      "truyen": "Bông的大日子 (Bông de dà rìzi) (cảnh 2–3) — Bông：朋友，你好！Bông：我很开心！哎呀，我的球！Bông：我很难过。(Bông: Péngyou, nǐ hǎo! Bông: Wǒ hěn kāixīn! Āiyā, wǒ de qiú! Bông: Wǒ hěn nánguò.)",
+      "video": "Xem ngữ cảnh: My Feelings and Emotions 情绪歌 – 小不點中文 A Little Chinese – https://www.youtube.com/watch?v=LLwDCgvY0Mw"
+     }
+    },
+    {
+     "ngay": 42,
+     "label": "Ngày 42. Unit 5 · Feelings – Buồn ngủ, sợ",
+     "en": {
+      "tu": "Mới: sleepy, scared | Ôn: happy, sad, mouth",
+      "cum": "Mới: I am sleepy. / I am scared! | Ôn: I am happy. / I am sad.",
+      "cau": "[Ngữ pháp: I am + cảm xúc] Bông: I am sleepy. / Bông: I am scared! / A big dog! I am scared!",
+      "truyen": "Bông's Big Day (cảnh 1–4) — Bông: I am sleepy. Bông: I am happy! Oh no! Bông: I am sad. A big dog! Bông: I am scared!",
+      "video": "Xem ngữ cảnh (xem lại): How Do You Feel Today? – Very Young Learners – https://www.youtube.com/watch?v=a5W3sno2D0M · Góc Xem thêm: 如果开心你就跟我拍拍手 (kho Anh – Trung – Kids) – https://drive.google.com/file/d/1RJZ3k6g0qPwoAMzugzlKGBjdDdpb_5bY/view"
+     },
+     "zh": {
+      "tu": "Mới: 困 kùn (= sleepy), 害怕 hàipà (= scared) | Ôn: 开心 kāixīn, 难过 nánguò, 嘴巴 zuǐba",
+      "cum": "Mới: 我很困 wǒ hěn kùn / 我很害怕 wǒ hěn hàipà | Ôn: 我很开心 wǒ hěn kāixīn / 我很难过 wǒ hěn nánguò",
+      "cau": "[Cầu nối] [Cùng tranh, hai tiếng] I am scared! ↔ 我很害怕！ [giống: I ↔ 我, cùng tranh che mặt · khác: tiếng Anh có am, tiếng Trung không có am mà thêm 很 trước cảm xúc (我很害怕)] / [Ngữ pháp: 很 + tính từ] Bông：我很困。(Bông: Wǒ hěn kùn.) / Bông：我很害怕！(Bông: Wǒ hěn hàipà!) / 大狗！我很害怕！(Dà gǒu! Wǒ hěn hàipà!) / [Chuyển ngữ] [Leo nói 1 từ tiếng Anh, con chạm nút loa tiếng Trung đúng để nói lại cho Xiaomei; 2 lượt, 3 nút loa] happy → 开心 / scared → 害怕",
+      "truyen": "Bông的大日子 (Bông de dà rìzi) (cảnh 1–4) — Bông：我很困。Bông：我很开心！哎呀！Bông：我很难过。大狗！Bông：我很害怕！(Bông: Wǒ hěn kùn. Bông: Wǒ hěn kāixīn! Āiyā! Bông: Wǒ hěn nánguò. Dà gǒu! Bông: Wǒ hěn hàipà!)",
+      "video": "Xem ngữ cảnh (xem lại): My Feelings and Emotions 情绪歌 – 小不點中文 A Little Chinese – https://www.youtube.com/watch?v=LLwDCgvY0Mw · Góc Xem thêm: 如果开心你就跟我拍拍手 (kho Anh – Trung – Kids) – https://drive.google.com/file/d/1RJZ3k6g0qPwoAMzugzlKGBjdDdpb_5bY/view"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: happy, sad, sleepy, scared | Ôn: head, eyes, mouth, hands",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" (đã quen, bỏ tiếng Việt) · Chuyển ý: \"Giờ mình nói tiếng Trung nhé! Now, Chinese! 我们说中文！\" · Khen: \"Giỏi lắm! Well done! 真棒！\" · Câu mới buổi này: \"Nghe nào! Listen! 听！(Tīng!)\" 1) Gương mặt cảm xúc – nghe và làm mặt trước gương (4 lượt): happy / sad / sleepy / scared. 2) Nghe câu, chạm gương mặt đúng trên slide (4 câu): I am happy. / I am sad. / I am sleepy. / I am scared! 3) Bạn cần gì? – nghe câu, chạm tranh: I am sleepy. → tranh cái giường; I am sad. → tranh cái ôm.",
+     "truyen": "Bông's Big Day (cảnh 1–4) — Bông: I am sleepy. Bông: Hello, friend! I am happy! Oh no, my ball! Bông: I am sad. A big dog! Bông: I am scared! (cô kể từng tranh, cả lớp làm mặt của Bông)",
+     "baihat": "How Do You Feel? (Anh – Trung – Kids), giai điệu Twinkle, Twinkle, Little Star – đoạn Vui: Tell me, how do you feel now? / I am happy, happy, wow! / Clap your hands and jump up high, / Wave your hands up to the sky. / Tell me, how do you feel now? / I am happy, happy, wow! · Vè dòng 1–2: Happy, happy, jump up high! Sad, sad, wipe your eye."
+    },
+    "zh": {
+     "flash": "Mới: 开心 kāixīn, 难过 nánguò, 困 kùn, 害怕 hàipà | Ôn: 头 tóu, 眼睛 yǎnjing, 嘴巴 zuǐba, 手 shǒu",
+     "slide": "[Cầu nối Anh – Trung] cùng thẻ mặt cười: rối Leo nói I am happy., rối Xiaomei nói 我很开心。; con tìm điểm giống (I ↔ 我 đứng đầu) và khác (tiếng Anh có am, tiếng Trung không có am mà thêm 很 trước cảm xúc: 我很开心). 1) Gương mặt cảm xúc – nghe và làm mặt trước gương (4 lượt): 开心 / 难过 / 困 / 害怕. 2) Nghe câu, chạm gương mặt đúng trên slide (4 câu): 我很开心。/ 我很难过。/ 我很困。/ 我很害怕！; rối Leo nói tiếng Anh, rối Xiaomei nói tiếng Trung, con nói lại đúng tiếng với rối (NL6). 3) Bạn cần gì? – nghe câu, chạm tranh: 我很困。(Wǒ hěn kùn.) → tranh cái giường; 我很难过。(Wǒ hěn nánguò.) → tranh cái ôm. 4) [Chuyển ngữ] (NL1) Rối Leo nói 1 từ tiếng Anh, con nói lại 1 từ tiếng Trung cho rối Xiaomei (mỗi con 1 lượt): happy → 开心 / sad → 难过 / sleepy → 困 / scared → 害怕. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo nói: \"I'm scared of big dogs.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: Leo很害怕大狗。 (Leo hěn hàipà dà gǒu.)",
+     "truyen": "Bông的大日子 (Bông de dà rìzi) (cảnh 1–4) — Bông：我很困。Bông：朋友，你好！我很开心！哎呀，我的球！Bông：我很难过。大狗！Bông：我很害怕！(Bông: Wǒ hěn kùn. Bông: Péngyou, nǐ hǎo! Wǒ hěn kāixīn! Āiyā, wǒ de qiú! Bông: Wǒ hěn nánguò. Dà gǒu! Bông: Wǒ hěn hàipà!)",
+     "baihat": "你今天心情怎样？(Anh – Trung – Kids), giai điệu Twinkle, Twinkle, Little Star – đoạn Vui: 你今天心情怎样？/ 我很开心哈哈哈！/ 拍拍小手跳一跳，/ 挥挥小手向天空。/ 你今天心情怎样？/ 我很开心哈哈哈！(Nǐ jīntiān xīnqíng zěnyàng? / Wǒ hěn kāixīn hā hā hā! / Pāipai xiǎo shǒu tiào yi tiào, / huīhui xiǎo shǒu xiàng tiānkōng. / Nǐ jīntiān xīnqíng zěnyàng? / Wǒ hěn kāixīn hā hā hā!) · Vè dòng 1–2: 开心开心，跳一跳；难过难过，擦擦泪。(Kāixīn kāixīn, tiào yi tiào; nánguò nánguò, cāca lèi.)"
+    }
+   }
+  },
+  {
+   "buoi": 22,
+   "unit": 5,
+   "label_buoi": "Buổi dạy 22. Unit 5 · Feelings – Làm quen: hỏi – đáp cảm xúc; giận thì hít thở; mệt khác buồn ngủ",
+   "web": [
+    {
+     "ngay": 43,
+     "label": "Ngày 43. Unit 5 · Feelings – Ôn tuần · Giận, mệt",
+     "en": {
+      "tu": "Mới: angry, tired | Ôn: feet, nose, sleepy",
+      "cum": "Mới: I am angry. / Are you tired? | Ôn: I am sleepy.",
+      "cau": "[Ngữ pháp: câu hỏi Are you …?] Are you tired? – Yes! My feet are tired. / I am angry! Touch your nose and breathe in. / I am tired, not sleepy.",
+      "truyen": "Bông's Big Day (cảnh 4–6) — A big dog! Bông: I am scared! The dog: Woof, woof! My ball! Bông: Ha ha! I am happy!",
+      "video": "Xem ngữ cảnh: Feelings and Emotions Vocabulary Chant – Fun Kids English – https://www.youtube.com/watch?v=j1bIdWfeutI · Ôn tuần: Ôn lại cùng cô Hươu (mở lại bước bất kỳ của ngày 41–42)"
+     },
+     "zh": {
+      "tu": "Mới: 生气 shēngqì (= angry), 累 lèi (= tired) | Ôn: 脚 jiǎo, 鼻子 bízi, 困 kùn",
+      "cum": "Mới: 我很生气 wǒ hěn shēngqì / 你累吗 nǐ lèi ma | Ôn: 我很困 wǒ hěn kùn",
+      "cau": "[Cầu nối] [Cùng tranh, hai tiếng] Are you tired? ↔ 你累吗？ [giống: you ↔ 你 · khác: tiếng Anh đưa Are lên đầu, tiếng Trung giữ trật tự và thêm 吗 cuối câu] / [Ngữ pháp: câu hỏi …吗？] 你累吗？(Nǐ lèi ma?) — 我很累，我的脚很累。(Wǒ hěn lèi, wǒ de jiǎo hěn lèi.) / 我很生气！摸摸鼻子，吸口气。(Wǒ hěn shēngqì! Mōmo bízi, xī kǒu qì.) / 我很累，我不困。(Wǒ hěn lèi, wǒ bú kùn.)",
+      "truyen": "Bông的大日子 (Bông de dà rìzi) (cảnh 4–6) — 大狗！Bông：我很害怕！大狗：汪汪！我的球！Bông：哈哈，我很开心！(Dà gǒu! Bông: Wǒ hěn hàipà! Dà gǒu: Wāng wāng! Wǒ de qiú! Bông: Hāhā, wǒ hěn kāixīn!)",
+      "video": "Xem ngữ cảnh: Learn Feelings in Chinese for Kids 中文情绪词 – Read with Mommy – https://www.youtube.com/watch?v=bX0Wtd5vgK8 · Góc Luyện thêm: Bắt bóng bay mặt cười (4 cảm xúc)"
+     }
+    },
+    {
+     "ngay": 44,
+     "label": "Ngày 44. Unit 5 · Feelings – Hỏi bạn thấy thế nào",
+     "en": {
+      "tu": "Mới: how, do, feel | Ôn: angry, tired, sleepy, ears",
+      "cum": "Mới: How do you feel? | Ôn: I am happy. / Are you tired?",
+      "cau": "[Ngữ pháp: câu hỏi How do you feel?] Mommy: How do you feel? – Bông: I am happy! / How do you feel, Leo? – I am tired. My hands are tired. / Are you sleepy? – Yes. I am sleepy.",
+      "truyen": "Bông's Big Day (cảnh 4–6) — A big dog! Bông: I am scared! Mommy: How do you feel? Bông: I am sad. The dog: Woof! My ball! Bông: I am happy!",
+      "video": "Xem ngữ cảnh (xem lại): Feelings and Emotions Vocabulary Chant – Fun Kids English – https://www.youtube.com/watch?v=j1bIdWfeutI · Góc Luyện thêm: Lật thẻ tìm đôi (6 cảm xúc)"
+     },
+     "zh": {
+      "tu": "Mới: 心情 xīnqíng (= mood, tâm trạng; 你心情怎么样？≈ How do you feel?), 怎么样 zěnmeyàng (= how) | Ôn: 生气 shēngqì, 累 lèi, 困 kùn, 耳朵 ěrduo | Nghe làm quen: 感觉 gǎnjué (= feel – hỏi về cơ thể; 你感觉怎么样？)",
+      "cum": "Mới: 你心情怎么样 nǐ xīnqíng zěnmeyàng | Ôn: 你累吗 nǐ lèi ma / 我很开心 wǒ hěn kāixīn",
+      "cau": "[Cầu nối] [Cùng tranh, hai tiếng] How do you feel? ↔ 你心情怎么样？ [giống: cùng hỏi cảm xúc, đáp I am … ↔ 我很… · khác: How đứng đầu, 怎么样 đứng cuối] / [Ngữ pháp: câu hỏi 怎么样？] 妈妈：你心情怎么样？(Māma: Nǐ xīnqíng zěnmeyàng?) — Bông：我很开心！(Bông: Wǒ hěn kāixīn!) / Xiaomei，你感觉怎么样？— 我很累，我的手很累。(Xiaomei, nǐ gǎnjué zěnmeyàng? — Wǒ hěn lèi, wǒ de shǒu hěn lèi.) [Nghe làm quen: 感觉 gǎnjué – hỏi về cơ thể: mệt, buồn ngủ] / 你困吗？— 我很困。(Nǐ kùn ma? — Wǒ hěn kùn.) / [Chuyển ngữ] [Leo nói 1 từ tiếng Anh, con chạm nút loa tiếng Trung đúng để nói lại cho Xiaomei; 2 lượt, 3 nút loa] angry → 生气 / tired → 累",
+      "truyen": "Bông的大日子 (Bông de dà rìzi) (cảnh 4–6) — 大狗！Bông：我很害怕！妈妈：你心情怎么样？Bông：我很难过。大狗：汪汪！我的球！Bông：哈哈，我很开心！(Dà gǒu! Bông: Wǒ hěn hàipà! Māma: Nǐ xīnqíng zěnmeyàng? Bông: Wǒ hěn nánguò. Dà gǒu: Wāng wāng! Wǒ de qiú! Bông: Hāhā, wǒ hěn kāixīn!)",
+      "video": "Góc Xem thêm: How do you feel 你感觉怎么样 (kho Anh – Trung – Kids) – https://drive.google.com/file/d/1SyWoQetHTPUIqoFrNskfHfWi7wQSrPcL/view"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: angry, tired, How do you feel? | Ôn: happy, sad, sleepy, scared, feet, nose",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" (đã quen, bỏ tiếng Việt) · Chuyển ý: \"Giờ mình nói tiếng Trung nhé! Now, Chinese! 我们说中文！\" · Khen: \"Giỏi lắm! Well done! 真棒！\" · \"Listen! 听！\" (bỏ tiếng Việt) · Câu mới: \"Đến lượt con! Your turn! 该你了！(Gāi nǐ le!)\" 1) Nghe từ, chạm gương mặt trên slide (6 câu): happy / sad / sleepy / scared / angry / tired. 2) Mệt hay buồn ngủ? – nghe câu, chạm tranh: I am tired. (bạn vừa chạy, vai rũ) / I am sleepy. (bạn ngáp, dụi mắt). 3) Hỏi thăm bạn – vòng tròn: con hỏi How do you feel?, bạn giơ thẻ mặt và đáp I am … ; rối Leo hỏi Are you tired? → I am tired.; khi giận: I am angry! – cả lớp hít một hơi thật sâu.",
+     "truyen": "Bông's Big Day (đủ 6 tranh) — Bông: I am sleepy. Bông: I am happy! Bông: I am sad. Bông: I am scared! Mommy: How do you feel? Bông: I am happy! (Diễn cảm xúc: cô kể từng tranh, cả lớp làm mặt của Bông)",
+     "baihat": "How Do You Feel? – đoạn Buồn: Tell me, how do you feel now? / I am sad, I'm sad right now. / Give a hug and wipe your eye, / Hug, hug, hug, and don't you cry. / Tell me, how do you feel now? / I am happy now – and how! · Vè dòng 3–4: Sleepy, sleepy, close your eyes. Angry? Angry? Breathe in – sigh!"
+    },
+    "zh": {
+     "flash": "Mới: 生气 shēngqì, 累 lèi, 你心情怎么样？nǐ xīnqíng zěnmeyàng | Ôn: 开心 kāixīn, 难过 nánguò, 困 kùn, 害怕 hàipà, 脚 jiǎo, 鼻子 bízi",
+     "slide": "[Cầu nối Anh – Trung] cùng thẻ bạn mệt và bạn ngáp: tired ≠ sleepy cũng như 累 ≠ 困; Leo hỏi Are you tired?, Xiaomei hỏi 你累吗？– con chỉ chữ 吗 ở cuối (tiếng Anh đưa Are lên đầu). 1) Nghe từ, chạm gương mặt trên slide rồi làm động tác (6 lượt): 开心 / 难过 / 困 / 害怕 / 生气 / 累. 2) 累 hay 困? – nghe câu, chạm tranh: 我很累。(Wǒ hěn lèi.) / 我很困。(Wǒ hěn kùn.); thanh điệu: 累 lèi, 困 kùn (thanh 4, tay chặt xuống). 3) Hỏi thăm bạn – vòng tròn: con hỏi 你心情怎么样？, bạn giơ thẻ mặt và đáp 我很……; rối Xiaomei hỏi 你累吗？→ 我很累。; khi giận: 我很生气！– cả lớp 吸口气 (hít một hơi thật sâu). 4) [Chuyển ngữ] (NL1) Rối Leo nói 1 từ tiếng Anh, con nói lại 1 từ tiếng Trung cho rối Xiaomei (mỗi con 1 lượt): angry → 生气 / tired → 累 / sleepy → 困. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo nói: \"I'm tired, not sleepy.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: Leo很累，不困。 (Leo hěn lèi, bú kùn.)",
+     "truyen": "Bông的大日子 (Bông de dà rìzi) (đủ 6 tranh) — Bông：我很困。Bông：我很开心！Bông：我很难过。Bông：我很害怕！妈妈：你心情怎么样？Bông：我很开心！(Bông: Wǒ hěn kùn. Bông: Wǒ hěn kāixīn! Bông: Wǒ hěn nánguò. Bông: Wǒ hěn hàipà! Māma: Nǐ xīnqíng zěnmeyàng? Bông: Wǒ hěn kāixīn!)",
+     "baihat": "你今天心情怎样？– đoạn Buồn: 你今天心情怎样？/ 我很难过呜呜呜。/ 抱一抱呀擦擦泪，/ 抱抱抱呀不要哭。/ 你今天心情怎样？/ 我很开心哈哈哈！(Nǐ jīntiān xīnqíng zěnyàng? / Wǒ hěn nánguò wū wū wū. / Bào yi bào ya cāca lèi, / bào bào bào ya bú yào kū. / Nǐ jīntiān xīnqíng zěnyàng? / Wǒ hěn kāixīn hā hā hā!) · Vè dòng 3–4: 困了困了，闭闭眼；生气生气，吸口气——呼！(Kùn le kùn le, bìbi yǎn; shēngqì shēngqì, xī kǒu qì — hū!)"
+    }
+   }
+  },
+  {
+   "buoi": 23,
+   "unit": 5,
+   "label_buoi": "Buổi dạy 23. Unit 5 · Feelings – Vận dụng: cả truyện Bông's Big Day; chữ 心; nói theo vần",
+   "web": [
+    {
+     "ngay": 45,
+     "label": "Ngày 45. Unit 5 · Feelings – Hiểu cả truyện; làm quen chữ 心",
+     "en": {
+      "tu": "Mới: tyre | Ôn: happy, sad, sleepy, scared, angry, tired",
+      "cum": "Mới: a tyre swing | Ôn: I am sleepy. / I am sad. / I am scared! / How do you feel?",
+      "cau": "Bông: A tyre swing! I am happy! / [Ngữ pháp: How do you feel?] Mommy: How do you feel? – Bông: I am happy! / Are you tired? – No. I am sleepy.",
+      "truyen": "Bông's Big Day — Bông: I am sleepy. Bông: Hello, friend! I am happy! Oh no, my ball! Bông: I am sad. A big dog! Bông: I am scared! Mommy: How do you feel? The dog: Woof! My ball! Bông: I am happy!",
+      "video": "Xem ngữ cảnh: truyện Bông's Big Day bản EN (rồi bản ZH) · Góc Xem thêm: How Do You Feel Today? – Very Young Learners – https://www.youtube.com/watch?v=a5W3sno2D0M"
+     },
+     "zh": {
+      "tu": "Mới (chữ nhìn): 心 xīn (= tranh trái tim đỏ biến thành chữ; 心 trong 开心 kāixīn) | Ôn: 开心 kāixīn, 难过 nánguò, 困 kùn, 害怕 hàipà, 生气 shēngqì, 累 lèi | Nghe làm quen: 秋千 qiūqiān (= swing; tranh xích đu lốp xe – tyre swing)",
+      "cum": "Nghe làm quen: 秋千 qiūqiān | Ôn: 我很困 wǒ hěn kùn / 我很难过 wǒ hěn nánguò / 我很害怕 wǒ hěn hàipà / 你心情怎么样 nǐ xīnqíng zěnmeyàng",
+      "cau": "[Cầu nối] [Cùng tranh, hai tiếng] I am sleepy. ↔ 我很困。/ I am tired. ↔ 我很累。 [giống: sleepy khác tired, 困 cũng khác 累 · khác: tiếng Anh có am, tiếng Trung không có am mà thêm 很 trước cảm xúc (我很困)] / Bông：秋千！我很开心！(Bông: Qiūqiān! Wǒ hěn kāixīn!) / 妈妈：你心情怎么样？— Bông：我很开心！(Māma: Nǐ xīnqíng zěnmeyàng? — Bông: Wǒ hěn kāixīn!) / 你累吗？— 不，我很困。(Nǐ lèi ma? — Bù, wǒ hěn kùn.)",
+      "truyen": "Bông的大日子 (Bông de dà rìzi) — Bông：我很困。Bông：朋友，你好！我很开心！哎呀，我的球！Bông：我很难过。大狗！Bông：我很害怕！妈妈：你心情怎么样？大狗：汪汪！我的球！Bông：哈哈，我很开心！(Bông: Wǒ hěn kùn. Bông: Péngyou, nǐ hǎo! Wǒ hěn kāixīn! Āiyā, wǒ de qiú! Bông: Wǒ hěn nánguò. Dà gǒu! Bông: Wǒ hěn hàipà! Māma: Nǐ xīnqíng zěnmeyàng? Dà gǒu: Wāng wāng! Wǒ de qiú! Bông: Hāhā, wǒ hěn kāixīn!)",
+      "video": "Xem ngữ cảnh: truyện Bông的大日子 bản ZH · Góc Xem thêm: Emotions and Feelings in Mandarin (kho Anh – Trung – Kids) – https://drive.google.com/file/d/1wvX8jlcx8IAN6bbKaULGCYk2ivVCK9GT/view"
+     }
+    },
+    {
+     "ngay": 46,
+     "label": "Ngày 46. Unit 5 · Feelings – Ôn unit · Truyện ZH → EN, đóng vai",
+     "en": {
+      "tu": "Ôn: happy, sad, sleepy, scared, angry, tired, how, feel | Ôn nhanh: name, birthday, old",
+      "cum": "Ôn: I am sleepy. / I am sad. / Are you tired? / How do you feel?",
+      "cau": "Đóng vai (con nói lời Bông): I am sleepy. / I am sad. / Mommy: How do you feel? – Bông: I am happy! / My name is Bông. I am six. I am happy!",
+      "truyen": "Bông's Big Day — Bông: I am sleepy. Bông: Hello, friend! I am happy! Oh no, my ball! Bông: I am sad. A big dog! Bông: I am scared! Mommy: How do you feel? The dog: Woof! My ball! Bông: I am happy!",
+      "video": "Xem ngữ cảnh: truyện bản ZH rồi bản EN · Góc Xem thêm: How Do You Feel? – Kids Vocab (kho Anh – Trung – Kids) – https://drive.google.com/file/d/1BSmCzjPYT75HyR3E0a9qvQKoX8FQ_CBM/view"
+     },
+     "zh": {
+      "tu": "Ôn: 开心 kāixīn, 难过 nánguò, 困 kùn, 害怕 hàipà, 生气 shēngqì, 累 lèi, 心情 xīnqíng, 怎么样 zěnmeyàng | Ôn nhanh: 叫 jiào, 生日 shēngrì, 岁 suì | Nhìn chữ: 心 (trong 开心)",
+      "cum": "Ôn: 我很困 wǒ hěn kùn / 我很难过 wǒ hěn nánguò / 你累吗 nǐ lèi ma / 你心情怎么样 nǐ xīnqíng zěnmeyàng",
+      "cau": "[Cầu nối] [Cùng tranh, hai tiếng] My name is Bông. I am six. ↔ 我叫Bông，我六岁。 [giống: tên Bông giữ nguyên · khác: I am six ↔ 我六岁 (không có \"am\", thêm 岁)] / Đóng vai: Bông：我很困。(Bông: Wǒ hěn kùn.) / Bông：我很难过。(Bông: Wǒ hěn nánguò.) / 妈妈：你心情怎么样？— Bông：我很开心！(Māma: Nǐ xīnqíng zěnmeyàng? — Bông: Wǒ hěn kāixīn!) / 我叫Bông，我六岁。我很开心！(Wǒ jiào Bông, wǒ liù suì. Wǒ hěn kāixīn!) / [Chuyển ngữ] [Leo nói 1 từ tiếng Anh, con chạm nút loa tiếng Trung đúng để nói lại cho Xiaomei; 2 lượt, 3 nút loa] sleepy → 困 / sad → 难过",
+      "truyen": "Bông的大日子 (Bông de dà rìzi) — Bông：我很困。Bông：朋友，你好！我很开心！哎呀，我的球！Bông：我很难过。大狗！Bông：我很害怕！妈妈：你心情怎么样？大狗：汪汪！我的球！Bông：哈哈，我很开心！(Bông: Wǒ hěn kùn. Bông: Péngyou, nǐ hǎo! Wǒ hěn kāixīn! Āiyā, wǒ de qiú! Bông: Wǒ hěn nánguò. Dà gǒu! Bông: Wǒ hěn hàipà! Māma: Nǐ xīnqíng zěnmeyàng? Dà gǒu: Wāng wāng! Wǒ de qiú! Bông: Hāhā, wǒ hěn kāixīn!)",
+      "video": "Xem ngữ cảnh: truyện bản ZH rồi bản EN · Góc Xem thêm: My Feelings and Emotions 情绪歌 – 小不點中文 A Little Chinese – https://www.youtube.com/watch?v=LLwDCgvY0Mw · Nhìn chữ – Tìm tranh cho chữ: 心, 开心"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn: happy, sad, sleepy, scared, angry, tired, tyre, How do you feel? | Ôn: name, birthday",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" (đã quen, bỏ tiếng Việt) · Chuyển ý: \"Giờ mình nói tiếng Trung nhé! Now, Chinese! 我们说中文！\" · Khen: \"Giỏi lắm! Well done! 真棒！\" · \"Your turn! 该你了！\" · Câu mới: \"Lại đây nào! Come here, please. 请过来。(Qǐng guòlái.)\" 1) Xếp tranh truyện – cô chiếu 6 tranh lộn xộn, con chạm tranh theo câu cô đọc: I am sleepy. → I am happy! → I am sad. → I am scared! → How do you feel? → I am happy! 2) Có hay không? – cô nói câu kèm tranh, con giơ ✓ / ✗: (tranh ngáp) I am sleepy. ✓ / (tranh khóc) I am happy. ✗ / (tranh chó to) I am scared! ✓. 3) Đọc theo vần limerick, vỗ tay theo nhịp: When I am tired, I go to bed, / When I am happy, I sing instead!",
+     "truyen": "Bông's Big Day — Bông: I am sleepy. Bông: Hello, friend! A tyre swing! I am happy! Oh no, my ball! Bông: I am sad. A big dog! Bông: I am scared! Mommy: How do you feel, Bông? Bông: I am sad. The dog: Woof! My ball! Bông: Ha ha! I am happy!",
+     "baihat": "How Do You Feel? – cả bài (đoạn Vui + đoạn Buồn): Tell me, how do you feel now? / I am happy, happy, wow! / Clap your hands and jump up high, / Wave your hands up to the sky. / Tell me, how do you feel now? / I am happy, happy, wow! / Tell me, how do you feel now? / I am sad, I'm sad right now. / Give a hug and wipe your eye, / Hug, hug, hug, and don't you cry. / Tell me, how do you feel now? / I am happy now – and how! · Limerick: When I am tired, I go to bed, / When I am happy, I sing instead! (bed – instead)"
+    },
+    "zh": {
+     "flash": "Ôn: 开心 kāixīn, 难过 nánguò, 困 kùn, 害怕 hàipà, 生气 shēngqì, 累 lèi | Ôn: 叫 jiào, 生日 shēngrì | Nghe làm quen: 秋千 qiūqiān | Thẻ chữ (không phải thẻ tranh song song): 心",
+     "slide": "[Cầu nối Anh – Trung] cùng 6 tranh Bông's Big Day: cô lật từng tranh, Leo đọc câu tiếng Anh, Xiaomei đọc câu tiếng Trung; con vỗ tay mỗi khi nghe 很 (tiếng Anh có am, tiếng Trung không có am mà thêm 很 trước cảm xúc). 1) Xếp tranh truyện – cô chiếu 6 tranh lộn xộn, rối Xiaomei kể, con chạm tranh theo câu (6 câu): 我很困。→ 我很开心！→ 我很难过。→ 我很害怕！→ 你心情怎么样？→ 我很开心！ 2) Có hay không? – cô nói câu kèm tranh, con giơ ✓ / ✗: (tranh ngáp) 我很困。✓ / (tranh khóc) 我很开心。✗ / (tranh chó to) 我很害怕！✓ 3) Chữ 心: con vẽ trái tim, cô đặt ba chấm và nét cong thành 心; chạm 心 trong thẻ 开心 (Hình biến thành chữ). 4) Đọc theo vần, vỗ tay theo nhịp: 我很累，要睡觉；我很开心，唱歌谣！(Wǒ hěn lèi, yào shuìjiào; wǒ hěn kāixīn, chàng gēyáo!) (jiào – yáo) 5) [Chuyển ngữ] (NL1) Rối Leo nói 1 từ tiếng Anh, con nói lại 1 từ tiếng Trung cho rối Xiaomei (mỗi con 1 lượt): sad → 难过 / scared → 害怕 / happy → 开心. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo nói: \"I'm tired – time for bed!\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: Leo很累，要睡觉。 (Leo hěn lèi, yào shuìjiào.)",
+     "truyen": "Bông的大日子 (Bông de dà rìzi) — Bông：我很困。Bông：朋友，你好！秋千！我很开心！哎呀，我的球！Bông：我很难过。大狗！Bông：我很害怕！妈妈：Bông，你心情怎么样？Bông：我很难过。大狗：汪汪！我的球！Bông：哈哈，我很开心！(Bông: Wǒ hěn kùn. Bông: Péngyou, nǐ hǎo! Qiūqiān! Wǒ hěn kāixīn! Āiyā, wǒ de qiú! Bông: Wǒ hěn nánguò. Dà gǒu! Bông: Wǒ hěn hàipà! Māma: Bông, nǐ xīnqíng zěnmeyàng? Bông: Wǒ hěn nánguò. Dà gǒu: Wāng wāng! Wǒ de qiú! Bông: Hāhā, wǒ hěn kāixīn!)",
+     "baihat": "你今天心情怎样？– cả bài: 你今天心情怎样？/ 我很开心哈哈哈！/ 拍拍小手跳一跳，/ 挥挥小手向天空。/ 你今天心情怎样？/ 我很开心哈哈哈！(Nǐ jīntiān xīnqíng zěnyàng? / Wǒ hěn kāixīn hā hā hā! / Pāipai xiǎo shǒu tiào yi tiào, / huīhui xiǎo shǒu xiàng tiānkōng. / Nǐ jīntiān xīnqíng zěnyàng? / Wǒ hěn kāixīn hā hā hā!) / 你今天心情怎样？/ 我很难过呜呜呜。/ 抱一抱呀擦擦泪，/ 抱抱抱呀不要哭。/ 你今天心情怎样？/ 我很开心哈哈哈！(Nǐ jīntiān xīnqíng zěnyàng? / Wǒ hěn nánguò wū wū wū. / Bào yi bào ya cāca lèi, / bào bào bào ya bú yào kū. / Nǐ jīntiān xīnqíng zěnyàng? / Wǒ hěn kāixīn hā hā hā!) · Limerick: 我很累，要睡觉，/ 我很开心，唱歌谣！(Wǒ hěn lèi, yào shuìjiào, / wǒ hěn kāixīn, chàng gēyáo!) (jiào – yáo)"
+    }
+   }
+  },
+  {
+   "buoi": 24,
+   "unit": 5,
+   "label_buoi": "Buổi dạy 24. Unit 5 · Feelings – Vận dụng: kể cảm xúc trong ngày; chọn tiếng theo người hỏi",
+   "web": [
+    {
+     "ngay": 47,
+     "label": "Ngày 47. Unit 5 · Feelings – Ôn không tranh · Anh hay Trung?",
+     "en": {
+      "tu": "Ôn (nghe, không có tranh mẫu): angry, tired, scared, sleepy | Ôn nhanh: eyes, hands, feet",
+      "cum": "Ôn: I am angry. / I am tired. / Are you tired? / How do you feel?",
+      "cau": "[Anh hay Trung? 6 câu, con chạm ô xanh hoặc ô đỏ] I am tired. / Are you tired? / How do you feel? / I am angry. [và 3 câu ZH bên cạnh] / How old are you? – I'm six. I am happy!",
+      "truyen": "Bông's Birthday Feelings — Anna: Hello, Bông! How old are you? Bông: I'm six! Anna: How do you feel? Bông: I am happy! The puppy: Woof! Bông: Ha ha!",
+      "video": "Xem ngữ cảnh: Feelings and Emotions Vocabulary Chant – Fun Kids English – https://www.youtube.com/watch?v=j1bIdWfeutI"
+     },
+     "zh": {
+      "tu": "Ôn (nghe, không có tranh mẫu): 生气 shēngqì, 累 lèi, 害怕 hàipà, 困 kùn | Ôn nhanh: 眼睛 yǎnjing, 手 shǒu, 脚 jiǎo",
+      "cum": "Ôn: 我很生气 wǒ hěn shēngqì / 我很累 wǒ hěn lèi / 你累吗 nǐ lèi ma / 你心情怎么样 nǐ xīnqíng zěnmeyàng",
+      "cau": "[Cầu nối] [Cùng tranh, hai tiếng] How old are you? – I'm six. ↔ 你几岁？— 我六岁。 [giống: six ↔ 六 · khác: How old đứng đầu, 几岁 đứng cuối] / Anh hay Trung?: 我很累。(Wǒ hěn lèi.) / 你心情怎么样？(Nǐ xīnqíng zěnmeyàng?) / 我很生气。(Wǒ hěn shēngqì.) / 你几岁？— 我六岁。我很开心！(Nǐ jǐ suì? — Wǒ liù suì. Wǒ hěn kāixīn!)",
+      "truyen": "Bông的生日心情 (Bông de shēngrì xīnqíng) — Anna：Bông，你好！你几岁？Bông：我六岁！Anna：你心情怎么样？Bông：我很开心！小狗：汪汪！Bông：哈哈！(Anna: Bông, nǐ hǎo! Nǐ jǐ suì? Bông: Wǒ liù suì! Anna: Nǐ xīnqíng zěnmeyàng? Bông: Wǒ hěn kāixīn! Xiǎogǒu: Wāng wāng! Bông: Hāhā!)",
+      "video": "Góc Xem thêm: 如果开心你就跟我拍拍手 (kho Anh – Trung – Kids) – https://drive.google.com/file/d/1RJZ3k6g0qPwoAMzugzlKGBjdDdpb_5bY/view"
+     }
+    },
+    {
+     "ngay": 48,
+     "label": "Ngày 48. Unit 5 · Feelings – Phiên dịch nhí · Nói cảm xúc của mình",
+     "en": {
+      "tu": "Ôn: happy, sad, sleepy, scared, angry, tired, how, do, feel | Ôn nhanh: name, what, birthday",
+      "cum": "Ôn: I am sleepy. / I am happy! / I am scared! / How do you feel?",
+      "cau": "Phiên dịch nhí (EN → ZH, con chạm nút loa đúng): I am sleepy. → 我很困。/ I am happy! → 我很开心！/ I am scared! → 我很害怕！ / What's your name? – My name is Bông. How do you feel? – I am happy!",
+      "truyen": "Bông's Big Day — Bông: I am sleepy. Bông: Hello, friend! I am happy! Oh no, my ball! Bông: I am sad. A big dog! Bông: I am scared! Mommy: How do you feel? The dog: Woof! My ball! Bông: I am happy!",
+      "video": "Góc Xem thêm: How Do You Feel? – Kids Vocab (kho Anh – Trung – Kids) – https://drive.google.com/file/d/1BSmCzjPYT75HyR3E0a9qvQKoX8FQ_CBM/view"
+     },
+     "zh": {
+      "tu": "Ôn: 开心 kāixīn, 难过 nánguò, 困 kùn, 害怕 hàipà, 生气 shēngqì, 累 lèi, 心情 xīnqíng | Ôn nhanh: 名字 míngzi, 什么 shénme, 生日 shēngrì",
+      "cum": "Ôn: 我很困 wǒ hěn kùn / 我很开心 wǒ hěn kāixīn / 我很害怕 wǒ hěn hàipà / 你心情怎么样 nǐ xīnqíng zěnmeyàng",
+      "cau": "[Cầu nối] [Cùng tranh, hai tiếng] I am sad. ↔ 我很难过。 [giống: Ai – cảm xúc · khác: tiếng Anh có am, tiếng Trung không có am mà thêm 很 trước cảm xúc (我很难过); Phiên dịch nhí nói lại đúng ý, không dịch từng chữ] / Phiên dịch nhí (ZH → EN): 我很难过。(Wǒ hěn nánguò.) → I am sad. / 你心情怎么样？(Nǐ xīnqíng zěnmeyàng?) → How do you feel? / 我很累。(Wǒ hěn lèi.) → I am tired. / 你叫什么？— 我叫Bông。(Nǐ jiào shénme? — Wǒ jiào Bông.)",
+      "truyen": "Bông的大日子 (Bông de dà rìzi) — Bông：我很困。Bông：朋友，你好！我很开心！哎呀，我的球！Bông：我很难过。大狗！Bông：我很害怕！妈妈：你心情怎么样？大狗：汪汪！我的球！Bông：哈哈，我很开心！(Bông: Wǒ hěn kùn. Bông: Péngyou, nǐ hǎo! Wǒ hěn kāixīn! Āiyā, wǒ de qiú! Bông: Wǒ hěn nánguò. Dà gǒu! Bông: Wǒ hěn hàipà! Māma: Nǐ xīnqíng zěnmeyàng? Dà gǒu: Wāng wāng! Wǒ de qiú! Bông: Hāhā, wǒ hěn kāixīn!)",
+      "video": "Góc Xem thêm: Emotions and Feelings in Mandarin (kho Anh – Trung – Kids) – https://drive.google.com/file/d/1wvX8jlcx8IAN6bbKaULGCYk2ivVCK9GT/view"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn: happy, sad, sleepy, scared, angry, tired, How do you feel?, Are you tired? | Ôn: name, how old",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" (đã quen, bỏ tiếng Việt) · Chuyển ý: \"Giờ mình nói tiếng Trung nhé! Now, Chinese! 我们说中文！\" · Khen: \"Giỏi lắm! Well done! 真棒！\" · \"Come here, please. 请过来。\" · ôn các câu đã học, chưa thêm câu mới 1) NL6 với rối: Leo hỏi How do you feel?, con đáp bằng tiếng Anh I am …; con chạm thẻ mặt của mình trên bảng cảm xúc. 2) Có hay không? (6 câu, con giơ ✓ / ✗ rồi nói câu đúng): (tranh ngáp) I am happy. ✗ → I am sleepy. / (tranh giận) I am angry. ✓ / (tranh mệt) Are you tired? – Yes. 3) Vòng tròn hai tiếng: mỗi con nói My name is … I am … (happy / sleepy / tired).",
+     "truyen": "Bông's Big Day (diễn: Bông, mẹ, bạn, chó to) — Bông: I am sleepy. Friend: Hello, Bông! Bông: I am happy! Oh no, my ball! Bông: I am sad. A big dog! Bông: I am scared! Mommy: How do you feel, Bông? Bông: I am sad. The dog: Woof! My ball! Bông: Ha ha! I am happy!",
+     "baihat": "How Do You Feel? – cả bài, biểu diễn có động tác: Tell me, how do you feel now? / I am happy, happy, wow! / Clap your hands and jump up high, / Wave your hands up to the sky. / Tell me, how do you feel now? / I am happy, happy, wow! · Vè đủ (biểu diễn): Happy, happy, jump up high! Sad, sad, wipe your eye. Sleepy, sleepy, close your eyes. Angry? Angry? Breathe in – sigh!"
+    },
+    "zh": {
+     "flash": "Ôn: 开心 kāixīn, 难过 nánguò, 困 kùn, 害怕 hàipà, 生气 shēngqì, 累 lèi, 你心情怎么样？nǐ xīnqíng zěnmeyàng | Ôn: 叫 jiào, 几岁 jǐ suì",
+     "slide": "[Cầu nối Anh – Trung] How do you feel? ↔ 你心情怎么样？: con đứng ở đầu hàng khi nghe How, ở cuối hàng khi nghe 怎么样 (từ hỏi đứng khác chỗ); câu đáp giống nhau: I am … ↔ 我很…. 1) NL6: Xiaomei hỏi 你心情怎么样？, con đáp bằng tiếng Trung 我很……; Leo hỏi How do you feel?, con đáp bằng tiếng Anh. 2) Có hay không? (con giơ ✓ / ✗ rồi nói câu đúng): (tranh ngáp) 我很开心。✗ → 我很困。/ (tranh giận) 我很生气。✓ / (tranh mệt) 你累吗？— 我很累。✓ 3) Vòng tròn: mỗi con nói 我叫……，我很…… (Wǒ jiào …, wǒ hěn …). 4) [Chuyển ngữ] (NL1) Rối Leo nói 1 từ tiếng Anh, con nói lại 1 từ tiếng Trung cho rối Xiaomei (mỗi con 1 lượt): tired → 累 / angry → 生气 / happy → 开心. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo nói: \"Xiaomei, how do you feel?\" (Leo nhờ con hỏi giúp) → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: Xiaomei，你心情怎么样？ (Xiaomei, nǐ xīnqíng zěnmeyàng?)",
+     "truyen": "Bông的大日子 (Bông de dà rìzi) (diễn) — Bông：我很困。朋友：Bông，你好！Bông：我很开心！哎呀，我的球！Bông：我很难过。大狗！Bông：我很害怕！妈妈：Bông，你心情怎么样？Bông：我很难过。大狗：汪汪！我的球！Bông：哈哈，我很开心！(Bông: Wǒ hěn kùn. Péngyou: Bông, nǐ hǎo! Bông: Wǒ hěn kāixīn! Āiyā, wǒ de qiú! Bông: Wǒ hěn nánguò. Dà gǒu! Bông: Wǒ hěn hàipà! Māma: Bông, nǐ xīnqíng zěnmeyàng? Bông: Wǒ hěn nánguò. Dà gǒu: Wāng wāng! Wǒ de qiú! Bông: Hāhā, wǒ hěn kāixīn!)",
+     "baihat": "你今天心情怎样？– cả bài, biểu diễn: 你今天心情怎样？/ 我很开心哈哈哈！/ 拍拍小手跳一跳，/ 挥挥小手向天空。/ 你今天心情怎样？/ 我很开心哈哈哈！(Nǐ jīntiān xīnqíng zěnyàng? / Wǒ hěn kāixīn hā hā hā! / Pāipai xiǎo shǒu tiào yi tiào, / huīhui xiǎo shǒu xiàng tiānkōng. / Nǐ jīntiān xīnqíng zěnyàng? / Wǒ hěn kāixīn hā hā hā!) · Vè đủ (biểu diễn): 开心开心，跳一跳；难过难过，擦擦泪；困了困了，闭闭眼；生气生气，吸口气——呼！(Kāixīn kāixīn, tiào yi tiào; nánguò nánguò, cāca lèi; kùn le kùn le, bìbi yǎn; shēngqì shēngqì, xī kǒu qì — hū!)"
+    }
+   }
+  },
+  {
+   "buoi": 25,
+   "unit": 6,
+   "label_buoi": "Buổi dạy 25. Unit 6 · School – Hiểu: gọi tên đồ dùng thật trong cặp; hỏi Đây là gì?",
+   "web": [
+    {
+     "ngay": 49,
+     "label": "Ngày 49. Unit 6 · School – Sách, bút",
+     "en": {
+      "tu": "Mới: book, pen | Ôn nhanh: hello, friend, daddy",
+      "cum": "Mới: my book / my pen",
+      "cau": "[Ngữ pháp: my + đồ vật] This is my book. / This is my pen. / Hello, friend! This is my book. / [Lời web] Vào bài: \"Let's learn! 我们一起学！\" (bỏ tiếng Việt) · Khen: \"Giỏi quá! Great! 真棒！\" · Sang tiếng Trung: \"Now, Chinese! 说中文！\"",
+      "truyen": "Leo's New Schoolbag (cảnh 6) — Leo: Hello, friend! Leo: This is my pen. Leo: And this is a book. I like books!",
+      "video": "Xem ngữ cảnh: What's this? – It's a pencil. Eraser. (Stationery) – English Singsing – https://www.youtube.com/watch?v=mTisVqSrfF0 · Góc Xem thêm: School Supplies in Chinese 文具歌 – AliMiMi – https://www.youtube.com/watch?v=wtF5hMyBkjA"
+     },
+     "zh": {
+      "tu": "Mới: 书 shū (= book), 笔 bǐ (= pen) | Ôn nhanh: 你好 nǐ hǎo, 朋友 péngyou, 爸爸 bàba",
+      "cum": "Mới: 我的书 wǒ de shū / 我的笔 wǒ de bǐ",
+      "cau": "[Cầu nối] [Cùng tranh, hai tiếng] This is my book. ↔ 这是我的书。 [giống: This is ↔ 这是, cùng trật tự · khác: my ↔ 我的 · truyện song song: Leo: This is my pen. ↔ Xiaomei: 这是我的笔。· cùng câu, hai bạn] / [Ngữ pháp: 我的 + đồ vật] 这是我的书。(Zhè shì wǒ de shū.) / 这是我的笔。(Zhè shì wǒ de bǐ.) / 朋友，你好！这是我的书。(Péngyou, nǐ hǎo! Zhè shì wǒ de shū.)",
+      "truyen": "Xiaomei的新书包 (cảnh 6) — Xiaomei：朋友，你好！Xiaomei：这是我的笔。Xiaomei：这是书。我喜欢书！(Xiaomei: Péngyou, nǐ hǎo! Xiaomei: Zhè shì wǒ de bǐ. Xiaomei: Zhè shì shū. Wǒ xǐhuan shū!)",
+      "video": "Xem ngữ cảnh: 这是什么？ What is this? – EduChinese – https://www.youtube.com/watch?v=2p_Fxu2rWQU"
+     }
+    },
+    {
+     "ngay": 50,
+     "label": "Ngày 50. Unit 6 · School – Cặp sách mới; hỏi Đây là gì?",
+     "en": {
+      "tu": "Mới: schoolbag, new, look | Ôn: book, pen | Ôn nhanh: birthday, puppy, all",
+      "cum": "Mới: Look! / my new schoolbag / What is this? | Ôn: my book",
+      "cau": "[Ngữ pháp: câu hỏi What is this?] Leo: Look! This is my new schoolbag. / Bông: What is this? – Leo: This is my book. / Look, puppy! My new schoolbag!",
+      "truyen": "Leo's New Schoolbag (cảnh 1–2) — Leo: Look! This is my new schoolbag. Bông: What is this? Leo: This is my book.",
+      "video": "Xem ngữ cảnh (xem lại): What's this? – It's a pencil. Eraser. (Stationery) – English Singsing – https://www.youtube.com/watch?v=mTisVqSrfF0 · Góc Xem thêm: School Supplies in Chinese 文具歌 – AliMiMi – https://www.youtube.com/watch?v=wtF5hMyBkjA"
+     },
+     "zh": {
+      "tu": "Mới: 书包 shūbāo (= schoolbag), 新 xīn (= new) | Ôn: 书 shū, 笔 bǐ, 这 zhè | Ôn nhanh: 生日 shēngrì, 小狗 xiǎogǒu, 大家 dàjiā",
+      "cum": "Mới: 看 kàn / 我的新书包 wǒ de xīn shūbāo / 这是什么 zhè shì shénme | Ôn: 我的书 wǒ de shū",
+      "cau": "[Cầu nối] [Cùng tranh, hai tiếng] What is this? ↔ 这是什么？ [giống: this ↔ 这 · khác: What đứng đầu; 什么 đứng đúng chỗ của câu trả lời (这是书) · truyện song song: Leo: This is my new schoolbag. ↔ Xiaomei: 这是我的新书包。· cùng câu, hai bạn] / [Ngữ pháp: câu hỏi 这是什么？] Xiaomei：看！这是我的新书包。(Xiaomei: Kàn! Zhè shì wǒ de xīn shūbāo.) / Bông：这是什么？— Xiaomei：这是我的书。(Bông: Zhè shì shénme? — Xiaomei: Zhè shì wǒ de shū.) / 小狗，看！我的新书包！(Xiǎogǒu, kàn! Wǒ de xīn shūbāo!) / [Chuyển ngữ] [Leo nói 1 từ tiếng Anh, con chạm nút loa tiếng Trung đúng để nói lại cho Xiaomei; 2 lượt, 3 nút loa] book → 书 / schoolbag → 书包",
+      "truyen": "Xiaomei的新书包 (cảnh 1–2) — Xiaomei：看！这是我的新书包。Bông：这是什么？Xiaomei：这是我的书。(Xiaomei: Kàn! Zhè shì wǒ de xīn shūbāo. Bông: Zhè shì shénme? Xiaomei: Zhè shì wǒ de shū.)",
+      "video": "Xem ngữ cảnh (xem lại): 这是什么？ What is this? – EduChinese – https://www.youtube.com/watch?v=2p_Fxu2rWQU · Góc Xem thêm: School Supplies in Chinese 文具歌 – AliMiMi – https://www.youtube.com/watch?v=wtF5hMyBkjA"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: book, pen, schoolbag, new, look | Ôn: hello, friend, birthday, puppy",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" · Chuyển ý: \"Now, Chinese! 我们说中文！\" (bỏ tiếng Việt) · Khen: \"Well done! 真棒！\" · Câu mới buổi này: \"Trật tự nào! Quiet, please. 请安静。(Qǐng ānjìng.)\" 1) Túi bí mật – con sờ đồ trong túi vải, cô chiếu tranh, con chạm đúng tranh (4 lượt): book / pen / schoolbag / book. 2) Nghe câu, chạm tranh đúng (3 câu): This is my book. / This is my pen. / Look! This is my new schoolbag. 3) Hỏi – đáp chuyền tay: bạn trước giơ đồ hỏi What is this?, bạn sau đáp This is my book / my pen.",
+     "truyen": "Leo's New Schoolbag (cảnh 1–2 và 6) — Leo: Hello, friend! Look! This is my new schoolbag. Bông: What is this? Leo: This is my book. And this is my pen. I like books! (cô mở cặp thật, lấy từng món)",
+     "baihat": "What Is This? · 这是什么？(Anh – Trung – Kids), giai điệu Skip to My Lou – đoạn Book, Pen: What is this? It is a book, / What is this? It is a book, / What is this? It is a book, / Look, look, look at my book! / What is this? It is a pen, / What is this? It is a pen, / What is this? It is a pen, / Write, write, write with my pen! · Vè dòng 1: Book and pen, pen and book"
+    },
+    "zh": {
+     "flash": "Mới: 书 shū, 笔 bǐ, 书包 shūbāo, 新 xīn, 看 kàn | Ôn: 你好 nǐ hǎo, 朋友 péngyou, 生日 shēngrì, 小狗 xiǎogǒu",
+     "slide": "[Cầu nối Anh – Trung] cùng cặp sách thật: Leo nói This is my book., Xiaomei nói 这是我的书。; con thấy cùng trật tự This is ↔ 这是, my ↔ 我的. 1) Túi bí mật – con sờ đồ trong túi vải, cô chiếu tranh, con chạm đúng tranh và nói (4 lượt): 书 / 笔 / 书包 / 书. 2) Nghe câu, chạm tranh đúng (3 câu): 这是我的书。/ 这是我的笔。/ 看！这是我的新书包。 3) Hỏi – đáp chuyền tay: bạn trước giơ đồ hỏi 这是什么？, bạn sau đáp 这是我的书。/ 这是我的笔。; rối Leo hỏi What is this? thì con đáp tiếng Anh (NL6). 4) [Chuyển ngữ] (NL1) Rối Leo nói 1 từ tiếng Anh, con nói lại 1 từ tiếng Trung cho rối Xiaomei (mỗi con 1 lượt): book → 书 / pen → 笔 / schoolbag → 书包. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo nói: \"This is my new schoolbag.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 这是Leo的新书包。 (Zhè shì Leo de xīn shūbāo.)",
+     "truyen": "Xiaomei的新书包 (cảnh 1–2 và 6) — Xiaomei：朋友，你好！看！这是我的新书包。Bông：这是什么？Xiaomei：这是我的书。这是我的笔。我喜欢书！(Xiaomei: Péngyou, nǐ hǎo! Kàn! Zhè shì wǒ de xīn shūbāo. Bông: Zhè shì shénme? Xiaomei: Zhè shì wǒ de shū. Zhè shì wǒ de bǐ. Wǒ xǐhuan shū!)",
+     "baihat": "What Is This? · 这是什么？(Anh – Trung – Kids), giai điệu Skip to My Lou – đoạn Book, Pen: 这是什么？这是书，/ 这是什么？这是书，/ 这是什么？这是书，/ 看看看，这是书！(Zhè shì shénme? Zhè shì shū, ×3 / Kàn kàn kàn, zhè shì shū!) / 这是什么？这是笔，/ 这是什么？这是笔，/ 这是什么？这是笔，/ 写写写，这是笔！(Zhè shì shénme? Zhè shì bǐ, ×3 / Xiě xiě xiě, zhè shì bǐ!) · Vè dòng 1: 书和笔，笔和书 (Shū hé bǐ, bǐ hé shū)"
+    }
+   }
+  },
+  {
+   "buoi": 26,
+   "unit": 6,
+   "label_buoi": "Buổi dạy 26. Unit 6 · School – Làm quen: gần – xa (this, that · 这, 那); tẩy, thước, cặp",
+   "web": [
+    {
+     "ngay": 51,
+     "label": "Ngày 51. Unit 6 · School – Ôn tuần · Tẩy, thước",
+     "en": {
+      "tu": "Mới: eraser (rubber), ruler | Ôn: book, pen, schoolbag | Ôn nối: happy, sad",
+      "cum": "Mới: This is a pen. / my rubber / my eraser | Ôn: What is this?",
+      "cau": "[Ngữ pháp: This is a …] Bông: What is this? – Leo: This is a pen. / This is my new rubber. I am happy! / Oh no! My ruler! I am sad.",
+      "truyen": "Leo's New Schoolbag (cảnh 1–3) — Leo: Look! This is my new schoolbag. Bông: What is this? Leo: This is a pen. And this is my new rubber. Bông: I am happy!",
+      "video": "Xem ngữ cảnh (xem lại): What's this? – It's a pencil. Eraser. (Stationery) – English Singsing – https://www.youtube.com/watch?v=mTisVqSrfF0 · Tìm YouTube: \"what is that classroom objects song for kids\" · Ôn tuần: Ôn lại cùng cô Hươu (mở lại bước bất kỳ của ngày 49–50)"
+     },
+     "zh": {
+      "tu": "Mới: 橡皮 xiàngpí (= eraser, rubber), 尺子 chǐzi (= ruler) | Ôn: 书 shū, 笔 bǐ, 书包 shūbāo | Ôn nối: 开心 kāixīn, 难过 nánguò",
+      "cum": "Mới: 这是笔 zhè shì bǐ / 我的橡皮 wǒ de xiàngpí | Ôn: 这是什么 zhè shì shénme",
+      "cau": "[Cầu nối] [Cùng tranh, hai tiếng] This is a pen. ↔ 这是笔。 [giống: This is ↔ 这是 · khác: tiếng Anh cần \"a\", tiếng Trung không cần · truyện song song: Leo: This is my new schoolbag. ↔ Xiaomei: 这是我的新书包。· cùng câu, hai bạn] / [Ngữ pháp: 这是 + đồ vật (không có a)] Bông：这是什么？— Xiaomei：这是笔。(Bông: Zhè shì shénme? — Xiaomei: Zhè shì bǐ.) / 这是我的新橡皮，我很开心！(Zhè shì wǒ de xīn xiàngpí, wǒ hěn kāixīn!) / 哎呀，我的尺子！我很难过。(Āiyā, wǒ de chǐzi! Wǒ hěn nánguò.)",
+      "truyen": "Xiaomei的新书包 (cảnh 1–3) — Xiaomei：看！这是我的新书包。Bông：这是什么？Xiaomei：这是笔。这是我的新橡皮。Bông：我很开心！(Xiaomei: Kàn! Zhè shì wǒ de xīn shūbāo. Bông: Zhè shì shénme? Xiaomei: Zhè shì bǐ. Zhè shì wǒ de xīn xiàngpí. Bông: Wǒ hěn kāixīn!)",
+      "video": "Xem ngữ cảnh: School Supplies in Chinese 文具歌 – AliMiMi – https://www.youtube.com/watch?v=wtF5hMyBkjA · Góc Luyện thêm: Bắt bóng bay (5 đồ dùng)"
+     }
+    },
+    {
+     "ngay": 52,
+     "label": "Ngày 52. Unit 6 · School – Hỏi Kia là gì? với đồ ở xa",
+     "en": {
+      "tu": "Mới: that, bag | Ôn: eraser, ruler | Ôn nối: sleepy, scared, How do you feel?",
+      "cum": "Mới: What is that? / That is a ruler. / That is a bag. | Ôn: This is a pen.",
+      "cau": "[Ngữ pháp: this (gần) – that (xa)] Bông: What is that? – Leo: That is a ruler. / What is that? – That is a bag. / How do you feel, Leo? – I am happy. That is my new schoolbag!",
+      "truyen": "Leo's New Schoolbag (cảnh 1–5) — Leo: Look! This is my new schoolbag. Bông: What is this? Leo: This is a pen. Bông: What is that? Leo: That is a ruler.",
+      "video": "Xem ngữ cảnh (xem lại): What's this? – It's a pencil. Eraser. (Stationery) – English Singsing – https://www.youtube.com/watch?v=mTisVqSrfF0 · Góc Luyện thêm: Lật thẻ tìm đôi Anh – Trung (5 đồ dùng)"
+     },
+     "zh": {
+      "tu": "Mới: 那 nà (= that), 包 bāo (= bag) | Ôn: 橡皮 xiàngpí, 尺子 chǐzi | Ôn nối: 困 kùn, 害怕 hàipà, 你心情怎么样 nǐ xīnqíng zěnmeyàng",
+      "cum": "Mới: 那是什么 nà shì shénme / 那是尺子 nà shì chǐzi / 那是包 nà shì bāo | Ôn: 这是笔 zhè shì bǐ",
+      "cau": "[Cầu nối] [Cùng tranh, hai tiếng] What is that? – That is a bag. ↔ 那是什么？— 那是包。 [giống: this – that ↔ 这 – 那 (gần – xa) · khác: không có \"a\" · truyện song song: Leo: This is my new schoolbag. ↔ Xiaomei: 这是我的新书包。· cùng câu, hai bạn] / [Ngữ pháp: 这 (gần) – 那 (xa); câu hỏi giữ trật tự câu trả lời] Bông：那是什么？— Xiaomei：那是尺子。(Bông: Nà shì shénme? — Xiaomei: Nà shì chǐzi.) / 那是什么？— 那是包。(Nà shì shénme? — Nà shì bāo.) / Xiaomei，你心情怎么样？— 我很开心！那是我的新书包！(Xiaomei, nǐ xīnqíng zěnmeyàng? — Wǒ hěn kāixīn! Nà shì wǒ de xīn shūbāo!) / [Chuyển ngữ] [Leo nói 1 từ tiếng Anh, con chạm nút loa tiếng Trung đúng để nói lại cho Xiaomei; 2 lượt, 3 nút loa] ruler → 尺子 / bag → 包",
+      "truyen": "Xiaomei的新书包 (cảnh 1–5) — Xiaomei：看！这是我的新书包。Bông：这是什么？Xiaomei：这是笔。Bông：那是什么？Xiaomei：那是尺子。(Xiaomei: Kàn! Zhè shì wǒ de xīn shūbāo. Bông: Zhè shì shénme? Xiaomei: Zhè shì bǐ. Bông: Nà shì shénme? Xiaomei: Nà shì chǐzi.)",
+      "video": "Xem ngữ cảnh (xem lại): School Supplies in Chinese 文具歌 – AliMiMi – https://www.youtube.com/watch?v=wtF5hMyBkjA · Góc Xem thêm: 这是什么？ What is this? – EduChinese – https://www.youtube.com/watch?v=2p_Fxu2rWQU"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: eraser (rubber), ruler, that, bag | Ôn: book, pen, schoolbag, happy, sad",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" · Chuyển ý: \"Now, Chinese! 我们说中文！\" (bỏ tiếng Việt) · Khen: \"Well done! 真棒！\" · \"Quiet, please. 请安静。\" · ôn, chưa thêm câu mới 1) Gần hay xa? – đồ đặt gần và xa, cô nói câu, con chạy đến đúng món (4 câu): This is a pen. / That is a ruler. / This is my rubber. / That is a bag. 2) Nghe câu, chạm món đúng trong tranh lớp học (4 câu): What is that? – That is a bag. / What is this? – This is a ruler. 3) Có hay không? – cô giơ cây thước nói This is a pen., con giơ ✗ rồi nói This is a ruler.",
+     "truyen": "Leo's New Schoolbag (cảnh 1–5) — Leo: Look! This is my new schoolbag. Bông: What is this? Leo: This is a pen. This is my rubber. Bông: What is that? Leo: That is a ruler. Bông: I am happy!",
+     "baihat": "What Is This? · 这是什么？(Anh – Trung – Kids), giai điệu Skip to My Lou – đoạn Pen, Ruler (ở xa): What is this? It is a pen, / What is this? It is a pen, / What is this? It is a pen, / Write, write, write with my pen! / What is that? That is a ruler, / What is that? That is a ruler, / What is that? That is a ruler, / Draw a line with my ruler! · Vè đủ: Book and pen, pen and book, / Open my schoolbag – look, look, look!"
+    },
+    "zh": {
+     "flash": "Mới: 橡皮 xiàngpí, 尺子 chǐzi, 那 nà, 包 bāo | Ôn: 书 shū, 笔 bǐ, 书包 shūbāo, 开心 kāixīn, 难过 nánguò",
+     "slide": "[Cầu nối Anh – Trung] cùng cây bút: This is a pen. ↔ 这是笔。(tiếng Trung không có \"a\"); this / that ↔ 这 / 那 cùng chỉ gần / xa – con chỉ tay giống nhau ở cả hai tiếng. 1) Gần hay xa? – đồ đặt gần và xa, cô nói câu, con chạy đến đúng món (4 câu): 这是笔。/ 那是尺子。/ 这是我的橡皮。/ 那是包。 2) Nghe câu, chạm món đúng trong tranh lớp học (4 câu): 那是什么？— 那是包。/ 这是什么？— 这是尺子。; cô chỉ cho con: câu hỏi tiếng Trung giữ trật tự câu trả lời (那是什么 → 那是包); 那 nà thanh 4, tay chặt xuống. 3) Có hay không? – cô giơ cây thước nói 这是笔。, con giơ ✗ rồi nói 这是尺子。 4) [Chuyển ngữ] (NL1) Rối Leo nói 1 từ tiếng Anh, con nói lại 1 từ tiếng Trung cho rối Xiaomei (mỗi con 1 lượt): eraser → 橡皮 / ruler → 尺子 / bag → 包. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo nói: \"That is my rubber.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 那是Leo的橡皮。 (Nà shì Leo de xiàngpí.)",
+     "truyen": "Xiaomei的新书包 (cảnh 1–5) — Xiaomei：看！这是我的新书包。Bông：这是什么？Xiaomei：这是笔。这是我的橡皮。Bông：那是什么？Xiaomei：那是尺子。Bông：我很开心！(Xiaomei: Kàn! Zhè shì wǒ de xīn shūbāo. Bông: Zhè shì shénme? Xiaomei: Zhè shì bǐ. Zhè shì wǒ de xiàngpí. Bông: Nà shì shénme? Xiaomei: Nà shì chǐzi. Bông: Wǒ hěn kāixīn!)",
+     "baihat": "What Is This? · 这是什么？(Anh – Trung – Kids), giai điệu Skip to My Lou – đoạn Pen, Ruler (ở xa): 这是什么？这是笔，/ 这是什么？这是笔，/ 这是什么？这是笔，/ 写写写，这是笔！(Zhè shì shénme? Zhè shì bǐ, ×3 / Xiě xiě xiě, zhè shì bǐ!) / 那是什么？那是尺子，/ 那是什么？那是尺子，/ 那是什么？那是尺子，/ 画一画，那是尺子！(Nà shì shénme? Nà shì chǐzi, ×3 / Huà yi huà, nà shì chǐzi!) · Vè đủ: 书和笔，笔和书，/ 打开书包看看看！(Shū hé bǐ, bǐ hé shū, / dǎkāi shūbāo kàn kàn kàn!)"
+    }
+   }
+  },
+  {
+   "buoi": 27,
+   "unit": 6,
+   "label_buoi": "Buổi dạy 27. Unit 6 · School – Vận dụng: mở cặp của Leo; chữ 子; nói theo vần",
+   "web": [
+    {
+     "ngay": 53,
+     "label": "Ngày 53. Unit 6 · School – Hiểu cả truyện; làm quen chữ 子",
+     "en": {
+      "tu": "Mới: pencil case, notebook | Ôn: book, pen, schoolbag, ruler, eraser | Ôn nhanh: see you",
+      "cum": "Mới: my pencil case / a new notebook / these books | Ôn: What is this? / What is that?",
+      "cau": "What is this? – This is my pencil case. / What is that? – That is a notebook. / Look! This is my new notebook. See you, Leo! / Look! These books!",
+      "truyen": "Leo's New Schoolbag — Leo: Look! This is my new schoolbag. Bông: What is this? Leo: This is a pen. Bông: What is that? Leo: That is a ruler. Leo: And this is a book. I like books!",
+      "video": "Xem ngữ cảnh: truyện Leo's New Schoolbag bản EN (rồi bản ZH) · Góc Xem thêm: What's this? – It's a pencil. Eraser. (Stationery) – English Singsing – https://www.youtube.com/watch?v=mTisVqSrfF0"
+     },
+     "zh": {
+      "tu": "Mới: 本子 běnzi (= notebook), 笔袋 bǐdài (= pencil case), 这些 zhèxiē (= these; 这些书 zhèxiē shū = these books) · chữ nhìn 子 zǐ (= tranh em bé dang tay; 子 trong 尺子 chǐzi và 本子 běnzi) | Ôn: 书 shū, 笔 bǐ, 书包 shūbāo, 尺子 chǐzi, 橡皮 xiàngpí | Ôn nhanh: 再见 zàijiàn",
+      "cum": "Mới: 我的笔袋 wǒ de bǐdài / 我的本子 wǒ de běnzi / 新本子 xīn běnzi / 这些书 zhèxiē shū | Ôn: 这是什么 zhè shì shénme / 那是什么 nà shì shénme",
+      "cau": "[Cầu nối] [Cùng tranh, hai tiếng] This is my notebook. ↔ 这是我的本子。 [giống: This is my … ↔ 这是我的…, cùng trật tự · khác: notebook, ruler không giống nhau, còn 本子, 尺子 cùng có chữ 子 · truyện song song: Leo: This is my new schoolbag. ↔ Xiaomei: 这是我的新书包。· cùng câu, hai bạn] / 这是什么？— 这是我的笔袋。(Zhè shì shénme? — Zhè shì wǒ de bǐdài.) / 那是什么？— 那是本子。(Nà shì shénme? — Nà shì běnzi.) / 看！这是我的新本子。Xiaomei，再见！(Kàn! Zhè shì wǒ de xīn běnzi. Xiaomei, zàijiàn!) / 看！这些书！(Kàn! Zhèxiē shū!)",
+      "truyen": "Xiaomei的新书包 — Xiaomei：看！这是我的新书包。Bông：这是什么？Xiaomei：这是笔。Bông：那是什么？Xiaomei：那是尺子。Xiaomei：这是书。我喜欢书！(Xiaomei: Kàn! Zhè shì wǒ de xīn shūbāo. Bông: Zhè shì shénme? Xiaomei: Zhè shì bǐ. Bông: Nà shì shénme? Xiaomei: Nà shì chǐzi. Xiaomei: Zhè shì shū. Wǒ xǐhuan shū!)",
+      "video": "Xem ngữ cảnh: truyện 新书包 bản ZH · Góc Xem thêm: School Supplies in Chinese 文具歌 – AliMiMi – https://www.youtube.com/watch?v=wtF5hMyBkjA"
+     }
+    },
+    {
+     "ngay": 54,
+     "label": "Ngày 54. Unit 6 · School – Ôn unit · Truyện ZH → EN, đóng vai",
+     "en": {
+      "tu": "Ôn: book, pen, schoolbag, ruler, eraser, bag, pencil case, notebook, look, new | Ôn nhanh: hello, friend, daddy",
+      "cum": "Ôn: What is this? / This is a pen. / What is that? / That is a ruler.",
+      "cau": "Đóng vai (con nói lời Bông): What is this? – This is a pen. / What is that? – That is a ruler. / Hello, Daddy! Look! This is my new schoolbag.",
+      "truyen": "Leo's New Schoolbag — Leo: Look! This is my new schoolbag. Bông: What is this? Leo: This is a pen. Bông: What is that? Leo: That is a ruler. Leo: And this is a book. I like books!",
+      "video": "Xem ngữ cảnh: truyện bản ZH rồi bản EN · Góc Xem thêm: What's this? – It's a pencil. Eraser. (Stationery) – English Singsing – https://www.youtube.com/watch?v=mTisVqSrfF0"
+     },
+     "zh": {
+      "tu": "Ôn: 书 shū, 笔 bǐ, 书包 shūbāo, 尺子 chǐzi, 橡皮 xiàngpí, 包 bāo, 笔袋 bǐdài, 本子 běnzi, 看 kàn, 新 xīn | Ôn nhanh: 你好 nǐ hǎo, 朋友 péngyou, 爸爸 bàba | Nhìn chữ: 子 (trong 尺子, 本子)",
+      "cum": "Ôn: 这是什么 zhè shì shénme / 这是笔 zhè shì bǐ / 那是什么 nà shì shénme / 那是尺子 nà shì chǐzi",
+      "cau": "[Cầu nối] [Cùng tranh, hai tiếng] What is that? – That is a ruler. ↔ 那是什么？— 那是尺子。 [giống: hỏi và đáp cùng mẫu · khác: 什么 đứng đúng chỗ 尺子 trong câu đáp · truyện song song: Leo: This is my new schoolbag. ↔ Xiaomei: 这是我的新书包。· cùng câu, hai bạn] / Đóng vai: Bông：这是什么？— Xiaomei：这是笔。(Bông: Zhè shì shénme? — Xiaomei: Zhè shì bǐ.) / Bông：那是什么？— Xiaomei：那是尺子。(Bông: Nà shì shénme? — Xiaomei: Nà shì chǐzi.) / 爸爸，你好！看！这是我的新书包。(Bàba, nǐ hǎo! Kàn! Zhè shì wǒ de xīn shūbāo.) / [Chuyển ngữ] [Leo nói 1 từ tiếng Anh, con chạm nút loa tiếng Trung đúng để nói lại cho Xiaomei; 2 lượt, 3 nút loa] notebook → 本子 / eraser → 橡皮",
+      "truyen": "Xiaomei的新书包 — Xiaomei：看！这是我的新书包。Bông：这是什么？Xiaomei：这是笔。Bông：那是什么？Xiaomei：那是尺子。Xiaomei：这是书。我喜欢书！(Xiaomei: Kàn! Zhè shì wǒ de xīn shūbāo. Bông: Zhè shì shénme? Xiaomei: Zhè shì bǐ. Bông: Nà shì shénme? Xiaomei: Nà shì chǐzi. Xiaomei: Zhè shì shū. Wǒ xǐhuan shū!)",
+      "video": "Xem ngữ cảnh: truyện bản ZH rồi bản EN · Góc Xem thêm: 这是什么？ What is this? – EduChinese – https://www.youtube.com/watch?v=2p_Fxu2rWQU · Nhìn chữ – Tìm tranh cho chữ: 子, 尺子"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn: book, pen, schoolbag, ruler, eraser (rubber), bag, pencil case, notebook, these | Ôn: see you, friend",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" · Chuyển ý: \"Now, Chinese! 我们说中文！\" (bỏ tiếng Việt) · Khen: \"Well done! 真棒！\" · Câu mới buổi này: \"Xếp hàng nào! Line up, please. 排好队。(Pái hǎo duì.)\" 1) Mở cặp của Leo – cô lấy từng món trong cặp thật, con chạm tranh đúng và nói câu truyện (6 câu): Look! This is my new schoolbag. / What is this? / This is a pen. / What is that? / That is a ruler. / And this is a book. 2) Xếp tranh – con chạm 3 tranh theo thứ tự món được lấy ra: pen → ruler → book. 3) Đọc theo vần limerick, giơ ngón tay đếm: What is this? It is a pen. Count my pens: one, two… ten!",
+     "truyen": "Leo's New Schoolbag — Leo: Hello, friend! Look! This is my new schoolbag. Bông: What is this? Leo: This is a pen. And this is my notebook. Bông: What is that? Leo: That is a ruler. Leo: Look! These books! And this is a book. I like books! Bông: I am happy! See you, Leo!",
+     "baihat": "What Is This? · 这是什么？(Anh – Trung – Kids), giai điệu Skip to My Lou – cả bài: What is this? It is a book, / What is this? It is a book, / What is this? It is a book, / Look, look, look at my book! / What is this? It is a pen, / What is this? It is a pen, / What is this? It is a pen, / Write, write, write with my pen! / What is that? That is a ruler, / What is that? That is a ruler, / What is that? That is a ruler, / Draw a line with my ruler! · Limerick: What is this? It is a pen. / Count my pens: one, two… ten! (pen – ten)"
+    },
+    "zh": {
+     "flash": "Ôn: 书 shū, 笔 bǐ, 书包 shūbāo, 尺子 chǐzi, 橡皮 xiàngpí, 包 bāo, 笔袋 bǐdài, 本子 běnzi, 这些 zhèxiē | Ôn: 再见 zàijiàn, 朋友 péngyou | Thẻ chữ (không phải thẻ tranh song song): 子",
+     "slide": "[Cầu nối Anh – Trung] cùng truyện Leo's New Schoolbag: Leo kể tiếng Anh, Xiaomei kể tiếng Trung từng tranh; con tìm chữ 子 trong thẻ 尺子 và 本子 (ruler, notebook). 1) Mở cặp của Xiaomei – cô lấy từng món trong cặp thật, con chạm tranh đúng và nói câu truyện (6 câu): 看！这是我的新书包。/ 这是什么？/ 这是笔。/ 那是什么？/ 那是尺子。/ 这是书。 2) Xếp tranh – con chạm 3 tranh theo thứ tự món được lấy ra: 笔 → 尺子 → 书. 3) Chữ 子 – con dang hai tay làm em bé 子; Hình biến thành chữ: em bé dang tay → 子 → 子 trong 尺子, 本子. 4) Đọc theo vần, giơ ngón tay đếm: 这是什么？这是笔，数数笔：一、二……十！(bǐ – shí) 5) [Chuyển ngữ] (NL1) Rối Leo nói 1 từ tiếng Anh, con nói lại 1 từ tiếng Trung cho rối Xiaomei (mỗi con 1 lượt): notebook → 本子 / pen → 笔 / book → 书. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo nói: \"These are my new books.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 这些是Leo的新书。 (Zhèxiē shì Leo de xīn shū.)",
+     "truyen": "Xiaomei的新书包 — Xiaomei：朋友，你好！看！这是我的新书包。Bông：这是什么？Xiaomei：这是笔。这是我的本子。Bông：那是什么？Xiaomei：那是尺子。Xiaomei：看！这些书！这是书。我喜欢书！Bông：我很开心！Xiaomei，再见！(Xiaomei: Péngyou, nǐ hǎo! Kàn! Zhè shì wǒ de xīn shūbāo. Bông: Zhè shì shénme? Xiaomei: Zhè shì bǐ. Zhè shì wǒ de běnzi. Bông: Nà shì shénme? Xiaomei: Nà shì chǐzi. Xiaomei: Kàn! Zhèxiē shū! Zhè shì shū. Wǒ xǐhuan shū! Bông: Wǒ hěn kāixīn! Xiaomei, zàijiàn!)",
+     "baihat": "What Is This? · 这是什么？(Anh – Trung – Kids), giai điệu Skip to My Lou – cả bài: 这是什么？这是书，/ 这是什么？这是书，/ 这是什么？这是书，/ 看看看，这是书！(Zhè shì shénme? Zhè shì shū, ×3 / Kàn kàn kàn, zhè shì shū!) / 这是什么？这是笔，/ 这是什么？这是笔，/ 这是什么？这是笔，/ 写写写，这是笔！(Zhè shì shénme? Zhè shì bǐ, ×3 / Xiě xiě xiě, zhè shì bǐ!) / 那是什么？那是尺子，/ 那是什么？那是尺子，/ 那是什么？那是尺子，/ 画一画，那是尺子！(Nà shì shénme? Nà shì chǐzi, ×3 / Huà yi huà, nà shì chǐzi!) · Limerick: 这是什么？这是笔，/ 数数笔：一、二……十！(Zhè shì shénme? Zhè shì bǐ, / shǔshu bǐ: yī, èr … shí!) (bǐ – shí)"
+    }
+   }
+  },
+  {
+   "buoi": 28,
+   "unit": 6,
+   "label_buoi": "Buổi dạy 28. Unit 6 · School – Vận dụng: giới thiệu cặp của mình; chọn tiếng theo người hỏi; giữ gìn đồ dùng",
+   "web": [
+    {
+     "ngay": 55,
+     "label": "Ngày 55. Unit 6 · School – Ôn không tranh · Anh hay Trung?",
+     "en": {
+      "tu": "Ôn (nghe, không có tranh mẫu): ruler, eraser, schoolbag, notebook | Ôn nhanh: birthday, puppy, all",
+      "cum": "Ôn: What is that? / That is a bag. / my new schoolbag",
+      "cau": "[Anh hay Trung? 6 câu, con chạm ô xanh hoặc ô đỏ] What is that? / That is a bag. / This is my new schoolbag. [và 3 câu ZH] / Grandpa: Look! This is a new schoolbag. – Bông: I am happy!",
+      "truyen": "Grandpa's New Schoolbag — Grandpa: Look, Bông! This is a new schoolbag. Bông: I am happy! Bông: What is this? Grandma: This is a ruler. Bông: And what is that? Little brother: That is my book!",
+      "video": "Xem ngữ cảnh: What's this? – It's a pencil. Eraser. (Stationery) – English Singsing – https://www.youtube.com/watch?v=mTisVqSrfF0 · Tìm YouTube: \"what is that classroom objects song for kids\""
+     },
+     "zh": {
+      "tu": "Ôn (nghe, không có tranh mẫu): 尺子 chǐzi, 橡皮 xiàngpí, 书包 shūbāo, 本子 běnzi | Ôn nhanh: 生日 shēngrì, 小狗 xiǎogǒu, 大家 dàjiā",
+      "cum": "Ôn: 那是什么 nà shì shénme / 那是包 nà shì bāo / 我的新书包 wǒ de xīn shūbāo",
+      "cau": "[Cầu nối] [Cùng tranh, hai tiếng] Look! This is a new schoolbag. ↔ 看！这是新书包。 [giống: new ↔ 新 đứng trước đồ vật · khác: a new schoolbag ↔ 新书包 (không có \"a\")] / Anh hay Trung?: 那是什么？(Nà shì shénme?) / 那是包。(Nà shì bāo.) / 这是我的新书包。(Zhè shì wǒ de xīn shūbāo.) / 爷爷：看！这是新书包。— Bông：我很开心！(Yéye: Kàn! Zhè shì xīn shūbāo. — Bông: Wǒ hěn kāixīn!)",
+      "truyen": "爷爷的新书包 — 爷爷：Bông，看！这是新书包。Bông：我很开心！Bông：这是什么？奶奶：这是尺子。Bông：那是什么？弟弟：那是我的书！(Yéye: Bông, kàn! Zhè shì xīn shūbāo. Bông: Wǒ hěn kāixīn! Bông: Zhè shì shénme? Nǎinai: Zhè shì chǐzi. Bông: Nà shì shénme? Dìdi: Nà shì wǒ de shū!)",
+      "video": "Xem ngữ cảnh: School Supplies in Chinese 文具歌 – AliMiMi – https://www.youtube.com/watch?v=wtF5hMyBkjA"
+     }
+    },
+    {
+     "ngay": 56,
+     "label": "Ngày 56. Unit 6 · School – Phiên dịch nhí · Hỏi – đáp về đồ dùng",
+     "en": {
+      "tu": "Ôn: book, pen, schoolbag, ruler, eraser, bag, look, new | Ôn nhanh: friend, hello, see you",
+      "cum": "Ôn: What is this? / This is a pen. / That is a ruler.",
+      "cau": "Phiên dịch nhí (EN → ZH, con chạm nút loa đúng): What is this? → 这是什么？/ This is a pen. → 这是笔。/ That is a ruler. → 那是尺子。 / This is my big sister's schoolbag.",
+      "truyen": "Leo's New Schoolbag — Leo: Look! This is my new schoolbag. Bông: What is this? Leo: This is a pen. Bông: What is that? Leo: That is a ruler. Leo: And this is a book. I like books!",
+      "video": "Góc Xem thêm: What's this? – It's a pencil. Eraser. (Stationery) – English Singsing – https://www.youtube.com/watch?v=mTisVqSrfF0"
+     },
+     "zh": {
+      "tu": "Ôn: 书 shū, 笔 bǐ, 书包 shūbāo, 尺子 chǐzi, 橡皮 xiàngpí, 那 nà, 看 kàn | Ôn nhanh: 朋友 péngyou, 你好 nǐ hǎo, 再见 zàijiàn",
+      "cum": "Ôn: 看！这是我的书包 kàn! zhè shì wǒ de shūbāo / 那是什么 nà shì shénme / 这是书 zhè shì shū",
+      "cau": "[Cầu nối] [Cùng tranh, hai tiếng] This is my big sister's schoolbag. ↔ 这是我姐姐的书包。 [giống: người – đồ vật cùng thứ tự · khác: 's ↔ 的 · truyện song song: Leo: This is my new schoolbag. ↔ Xiaomei: 这是我的新书包。· cùng câu, hai bạn] / Phiên dịch nhí (ZH → EN): 看！这是我的书包。(Kàn! Zhè shì wǒ de shūbāo.) → Look! This is my schoolbag. / 那是什么？(Nà shì shénme?) → What is that? / 这是书。(Zhè shì shū.) → This is a book. / 这是我姐姐的书包。(Zhè shì wǒ jiějie de shūbāo.)",
+      "truyen": "Xiaomei的新书包 — Xiaomei：看！这是我的新书包。Bông：这是什么？Xiaomei：这是笔。Bông：那是什么？Xiaomei：那是尺子。Xiaomei：这是书。我喜欢书！(Xiaomei: Kàn! Zhè shì wǒ de xīn shūbāo. Bông: Zhè shì shénme? Xiaomei: Zhè shì bǐ. Bông: Nà shì shénme? Xiaomei: Nà shì chǐzi. Xiaomei: Zhè shì shū. Wǒ xǐhuan shū!)",
+      "video": "Góc Xem thêm: 这是什么？ What is this? – EduChinese – https://www.youtube.com/watch?v=2p_Fxu2rWQU"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn: book, pen, schoolbag, ruler, eraser (rubber), bag, pencil case, notebook | Ôn: grandpa, grandma, big sister",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" · Chuyển ý: \"Now, Chinese! 我们说中文！\" (bỏ tiếng Việt) · Khen: \"Well done! 真棒！\" · Câu mới buổi này: \"Cất gọn đồ nào! Tidy up! 收拾好！(Shōushi hǎo!)\" 1) NL6 – Leo hỏi What is that?, con chỉ món ở xa và đáp bằng tiếng Anh That is a …; Leo hỏi What is this?, con đáp This is a …. 2) Có hay không? (4 câu, con giơ ✓ / ✗ rồi nói câu đúng): (cây bút) This is a ruler. ✗ → This is a pen. / (cặp ở xa) That is a bag. ✓ / (quyển vở) This is a notebook. ✓ 3) Mỗi con mở cặp mình, giới thiệu 2 món: Look! This is my pencil case. This is my book. – rồi tự xếp cặp gọn.",
+     "truyen": "Leo's New Schoolbag (diễn với cặp thật) — Leo: Look! This is my new schoolbag. Bông: What is this? Leo: This is a pen. Bông: What is that? Leo: That is a ruler. Leo: And this is a book. I like books! Bông: Look, Leo! This is my schoolbag. This is my pencil case.",
+     "baihat": "What Is This? · 这是什么？(Anh – Trung – Kids), giai điệu Skip to My Lou – cả bài, biểu diễn, mỗi đoạn cô giơ một đồ vật thật: What is this? It is a book, / What is this? It is a book, / What is this? It is a book, / Look, look, look at my book! / What is this? It is a pen, / What is this? It is a pen, / What is this? It is a pen, / Write, write, write with my pen! / What is that? That is a ruler, / What is that? That is a ruler, / What is that? That is a ruler, / Draw a line with my ruler! · Vè (biểu diễn): Book and pen, pen and book, / Open my schoolbag – look, look, look!"
+    },
+    "zh": {
+     "flash": "Ôn: 书 shū, 笔 bǐ, 书包 shūbāo, 尺子 chǐzi, 橡皮 xiàngpí, 包 bāo, 笔袋 bǐdài, 本子 běnzi | Ôn: 爷爷 yéye, 奶奶 nǎinai, 姐姐 jiějie",
+     "slide": "[Cầu nối Anh – Trung] What is that? ↔ 那是什么？: tiếng Trung giữ trật tự câu đáp (那是包。), tiếng Anh đưa What lên đầu; con đặt thẻ đồ vật vào chỗ của 什么. 1) NL6 – Xiaomei hỏi 那是什么？, con chỉ món ở xa và đáp bằng tiếng Trung 那是……; Xiaomei hỏi 这是什么？, con đáp 这是……; Leo hỏi bằng tiếng Anh, con đáp tiếng Anh. 2) Có hay không? (con giơ ✓ / ✗ rồi nói câu đúng): (cây bút) 这是尺子。✗ → 这是笔。/ (cặp ở xa) 那是包。✓ / (quyển vở) 这是本子。✓ 3) Mỗi con mở cặp mình, giới thiệu 2 món bằng tiếng Trung: 看！这是我的笔袋。这是我的书。– rồi tự xếp cặp gọn (收拾好！). 4) [Chuyển ngữ] (NL1) Rối Leo nói 1 từ tiếng Anh, con nói lại 1 từ tiếng Trung cho rối Xiaomei (mỗi con 1 lượt): that → 那 / ruler → 尺子 / schoolbag → 书包. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo nói: \"Look at my pencil case!\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 看Leo的笔袋！ (Kàn Leo de bǐdài!)",
+     "truyen": "Xiaomei的新书包 (diễn với cặp thật) — Xiaomei：看！这是我的新书包。Bông：这是什么？Xiaomei：这是笔。Bông：那是什么？Xiaomei：那是尺子。Xiaomei：这是书。我喜欢书！Bông：Xiaomei，看！这是我的书包。这是我的笔袋。(Xiaomei: Kàn! Zhè shì wǒ de xīn shūbāo. Bông: Zhè shì shénme? Xiaomei: Zhè shì bǐ. Bông: Nà shì shénme? Xiaomei: Nà shì chǐzi. Xiaomei: Zhè shì shū. Wǒ xǐhuan shū! Bông: Xiaomei, kàn! Zhè shì wǒ de shūbāo. Zhè shì wǒ de bǐdài.)",
+     "baihat": "What Is This? · 这是什么？(Anh – Trung – Kids), giai điệu Skip to My Lou – cả bài, biểu diễn: 这是什么？这是书，/ 这是什么？这是书，/ 这是什么？这是书，/ 看看看，这是书！(Zhè shì shénme? Zhè shì shū, ×3 / Kàn kàn kàn, zhè shì shū!) / 这是什么？这是笔，/ 这是什么？这是笔，/ 这是什么？这是笔，/ 写写写，这是笔！(Zhè shì shénme? Zhè shì bǐ, ×3 / Xiě xiě xiě, zhè shì bǐ!) / 那是什么？那是尺子，/ 那是什么？那是尺子，/ 那是什么？那是尺子，/ 画一画，那是尺子！(Nà shì shénme? Nà shì chǐzi, ×3 / Huà yi huà, nà shì chǐzi!) · Vè (biểu diễn): 书和笔，笔和书，/ 打开书包看看看！(Shū hé bǐ, bǐ hé shū, / dǎkāi shūbāo kàn kàn kàn!)"
+    }
+   }
+  },
+  {
+   "buoi": 29,
+   "unit": 7,
+   "label_buoi": "Buổi dạy 29. Unit 7 · House – Hiểu: gọi tên đồ trong nhà búp bê; hỏi Ở đâu? và cảm ơn",
+   "web": [
+    {
+     "ngay": 57,
+     "label": "Ngày 57. Unit 7 · House – Giường, sô-pha; hỏi sách ở đâu",
+     "en": {
+      "tu": "Mới: bed, sofa, where | Ôn: book | Ôn nhanh: teacher, mommy, goodbye",
+      "cum": "Mới: Where is my book?",
+      "cau": "[Ngữ pháp: câu hỏi Where is …?] Bông: Where is my book? / Mommy, where is my book? / Where is my teacher? / [Lời web] Vào bài: \"Let's learn! 我们一起学！\" · Khen: \"Great! 真棒！\" (bỏ tiếng Việt) · Sang tiếng Trung: \"Now, Chinese! 说中文！\" · Câu mới: \"Try again! 再试一次！\"",
+      "truyen": "Where Is My Book? (cảnh 1) — Bông: Oh no! Where is my book? Mommy! Where is my book?",
+      "video": "Xem ngữ cảnh: Where is it? (In, On, Under) – Maple Leaf Learning – https://www.youtube.com/watch?v=8F0NYBBKczM · Góc Xem thêm: Home and Furniture 家具 – Kangaroo Friends – https://www.youtube.com/watch?v=ktFPfIu6Fv4"
+     },
+     "zh": {
+      "tu": "Mới: 床 chuáng (= bed), 沙发 shāfā (= sofa), 哪儿 nǎr (= where) | Ôn: 书 shū | Ôn nhanh: 老师 lǎoshī, 妈妈 māma, 再见 zàijiàn",
+      "cum": "Mới: 我的书在哪儿 wǒ de shū zài nǎr",
+      "cau": "[Cầu nối] [Cùng tranh, hai tiếng] Where is my book? ↔ 我的书在哪儿？ [giống: my book ↔ 我的书 · khác: Where đứng đầu, 哪儿 đứng cuối] / [Ngữ pháp: câu hỏi ……在哪儿？] Bông：我的书在哪儿？(Bông: Wǒ de shū zài nǎr?) / 妈妈，我的书在哪儿？(Māma, wǒ de shū zài nǎr?) / 老师在哪儿？(Lǎoshī zài nǎr?)",
+      "truyen": "我的书在哪儿？(cảnh 1) — Bông：哎呀！我的书在哪儿？妈妈！我的书在哪儿？(Bông: Āiyā! Wǒ de shū zài nǎr? Māma! Wǒ de shū zài nǎr?)",
+      "video": "Xem ngữ cảnh: Home and Furniture 家具 – Kangaroo Friends – https://www.youtube.com/watch?v=ktFPfIu6Fv4 · Tìm YouTube: \"在哪儿 儿歌 幼儿 找东西\""
+     }
+    },
+    {
+     "ngay": 58,
+     "label": "Ngày 58. Unit 7 · House – Bàn, ghế; cảm ơn bạn",
+     "en": {
+      "tu": "Mới: table, chair, thank (you) | Ôn: bed, sofa | Ôn nhanh: kitten, see, tomorrow",
+      "cum": "Mới: Where is the book? / Thank you! | Ôn: Where is my book?",
+      "cau": "[Ngữ pháp: câu hỏi Where is the …?] Where is the book? / Bông: Thank you, Leo! / Thank you! See you tomorrow!",
+      "truyen": "Where Is My Book? (cảnh 1 và 5) — Bông: Where is my book? … Leo: Look! Bông: Thank you, Leo! See you tomorrow!",
+      "video": "Xem ngữ cảnh (xem lại): Where is it? (In, On, Under) – Maple Leaf Learning – https://www.youtube.com/watch?v=8F0NYBBKczM · Góc Xem thêm: In On Under Song – English Vitamin Bubbles – https://www.youtube.com/watch?v=dupaTS-c8Xc"
+     },
+     "zh": {
+      "tu": "Mới: 桌子 zhuōzi (= table), 椅子 yǐzi (= chair), 谢谢 xièxie (= thank you) | Ôn: 床 chuáng, 沙发 shāfā | Ôn nhanh: 小猫 xiǎomāo, 明天 míngtiān",
+      "cum": "Mới: 书在哪儿 shū zài nǎr / 谢谢你 xièxie nǐ | Ôn: 我的书在哪儿 wǒ de shū zài nǎr",
+      "cau": "[Cầu nối] [Cùng tranh, hai tiếng] Thank you! ↔ 谢谢你！ [giống: thank ↔ 谢谢, you ↔ 你, cùng trật tự · khác: 谢谢 là hai chữ giống nhau lặp lại] / [Ngữ pháp: câu hỏi ……在哪儿？] 书在哪儿？(Shū zài nǎr?) / Bông：谢谢你，Xiaomei！(Bông: Xièxie nǐ, Xiaomei!) / 谢谢你！明天见！(Xièxie nǐ! Míngtiān jiàn!) / [Chuyển ngữ] [Leo nói 1 từ tiếng Anh, con chạm nút loa tiếng Trung đúng để nói lại cho Xiaomei; 2 lượt, 3 nút loa] sofa → 沙发 / chair → 椅子",
+      "truyen": "我的书在哪儿？(cảnh 1 và 5) — Bông：我的书在哪儿？……Xiaomei：看！Bông：谢谢你，Xiaomei！明天见！(Bông: Wǒ de shū zài nǎr? … Xiaomei: Kàn! Bông: Xièxie nǐ, Xiaomei! Míngtiān jiàn!)",
+      "video": "Xem ngữ cảnh (xem lại): Home and Furniture 家具 – Kangaroo Friends – https://www.youtube.com/watch?v=ktFPfIu6Fv4"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: bed, sofa, table, chair, where, thank you | Ôn: book, mommy, teacher, tomorrow",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" · Chuyển ý: \"Now, Chinese! 我们说中文！\" (bỏ tiếng Việt) · Khen: \"Well done! 真棒！\" · \"Line up, please. 排好队。\" (bỏ tiếng Việt) · Câu mới: \"Thử lại nhé! Try again! 再试一次！(Zài shì yí cì!)\" 1) Nhà búp bê – cô gọi tên, con chạm đúng món trong tranh nhà búp bê (4 lượt): bed / sofa / table / chair. 2) Giấu đồ – cô giấu sách, cả lớp hỏi Where is my book? / Where is the book?, một bạn tìm thấy và cả lớp nói Thank you! 3) Nghe câu, chạm tranh (3 câu): Where is my book? (Bông tìm quanh phòng) / Thank you, Leo! (Bông ôm sách) / See you tomorrow!",
+     "truyen": "Where Is My Book? (cảnh 1 và 5) — Bông: Oh no! Where is my book? Mommy! Where is the book? Leo: Look! Bông: Thank you, Leo! See you tomorrow!",
+     "baihat": "Where Is My Book? · 我的书呀在哪儿？(Anh – Trung – Kids), giai điệu Oh Where, Oh Where Has My Little Dog Gone? – nghe, tay che mắt tìm: Oh where, oh where is my book today? / Is it on the bed or the chair? / It's not on the bed, it's under the chair, / My book is right over there! · Vè dòng 1 (nghe, làm động tác tay): On the table, under the chair"
+    },
+    "zh": {
+     "flash": "Mới: 床 chuáng, 沙发 shāfā, 桌子 zhuōzi, 椅子 yǐzi, 哪儿 nǎr, 谢谢 xièxie | Ôn: 书 shū, 妈妈 māma, 老师 lǎoshī, 明天 míngtiān",
+     "slide": "[Cầu nối Anh – Trung] cùng tranh nhà búp bê: sofa ↔ 沙发 nghe gần giống – con đoán nghĩa; Where is …? ↔ ……在哪儿？(Where đứng đầu, 哪儿 đứng cuối). 1) Nhà búp bê – cô gọi tên, con chạm đúng món trong tranh nhà búp bê rồi làm động tác (4 lượt): 床 / 沙发 / 桌子 / 椅子. 2) Giấu đồ – cô giấu sách, cả lớp hỏi 我的书在哪儿？/ 书在哪儿？, một bạn tìm thấy và cả lớp nói 谢谢你！với Xiaomei (với Leo thì nói Thank you!). 3) Nghe câu, chạm tranh (3 câu): 我的书在哪儿？(Bông tìm quanh phòng) / 谢谢你，Xiaomei！(Bông ôm sách) / 明天见！ 4) [Chuyển ngữ] (NL1) Rối Leo nói 1 từ tiếng Anh, con nói lại 1 từ tiếng Trung cho rối Xiaomei (mỗi con 1 lượt): bed → 床 / sofa → 沙发 / table → 桌子 / chair → 椅子. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo nói: \"Where is my book?\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: Leo的书在哪儿？ (Leo de shū zài nǎr?)",
+     "truyen": "我的书在哪儿？(cảnh 1 và 5) — Bông：哎呀！我的书在哪儿？妈妈！书在哪儿？Xiaomei：看！Bông：谢谢你，Xiaomei！明天见！(Bông: Āiyā! Wǒ de shū zài nǎr? Māma! Shū zài nǎr? Xiaomei: Kàn! Bông: Xièxie nǐ, Xiaomei! Míngtiān jiàn!)",
+     "baihat": "Where Is My Book? · 我的书呀在哪儿？(Anh – Trung – Kids), giai điệu Oh Where, Oh Where Has My Little Dog Gone? – nghe, hát cùng phần hỏi: 我的书呀今天在哪儿？/ 在床上还是椅子上？/ 不在床上，在椅子下，/ 我的书就在那儿！(Wǒ de shū ya jīntiān zài nǎr? / Zài chuáng shang háishi yǐzi shang? / Bú zài chuáng shang, zài yǐzi xià, / wǒ de shū jiù zài nàr!) · Vè dòng 1 (nghe, làm động tác tay): 在桌子上，在椅子下 (Zài zhuōzi shang, zài yǐzi xià)"
+    }
+   }
+  },
+  {
+   "buoi": 30,
+   "unit": 7,
+   "label_buoi": "Buổi dạy 30. Unit 7 · House – Làm quen: trên – dưới (on, under · 上, 下); tìm sách cùng Bông",
+   "web": [
+    {
+     "ngay": 59,
+     "label": "Ngày 59. Unit 7 · House – Ôn tuần · Trên",
+     "en": {
+      "tu": "Mới: on, not | Ôn: bed, sofa, table, chair | Ôn nối: pen, ruler, schoolbag",
+      "cum": "Mới: on the bed / on the sofa / Not on the bed. | Ôn: Where is the book?",
+      "cau": "[Ngữ pháp: on + the + đồ vật] Leo: Look! The book is on the sofa! / My pen is on the table. / Where is my schoolbag? – Not on the bed.",
+      "truyen": "Where Is My Book? (cảnh 1, 2, 4) — Bông: Where is my book? Not on the bed. Leo: Look! The book is on the sofa!",
+      "video": "Xem ngữ cảnh: In On Under Song – English Vitamin Bubbles – https://www.youtube.com/watch?v=dupaTS-c8Xc · Ôn tuần: Ôn lại cùng cô Hươu (mở lại bước bất kỳ của ngày 57–58)"
+     },
+     "zh": {
+      "tu": "Mới: 上 shàng (= on) | Ôn: 床 chuáng, 沙发 shāfā, 桌子 zhuōzi, 椅子 yǐzi | Ôn nối: 笔 bǐ, 尺子 chǐzi, 书包 shūbāo",
+      "cum": "Mới: 在床上 zài chuáng shang / 在沙发上 zài shāfā shang / 不在床上 bú zài chuáng shang | Ôn: 书在哪儿 shū zài nǎr",
+      "cau": "[Cầu nối] [Cùng tranh, hai tiếng] The book is on the sofa! ↔ 书在沙发上！ [giống: sofa ↔ 沙发 · khác: on đứng trước đồ vật, 上 đứng sau (沙发上)] / [Ngữ pháp: 在 + đồ vật + 上 (上 đứng sau)] Xiaomei：看！书在沙发上！(Xiaomei: Kàn! Shū zài shāfā shang!) / 我的笔在桌子上。(Wǒ de bǐ zài zhuōzi shang.) / 我的书包在哪儿？— 不在床上。(Wǒ de shūbāo zài nǎr? — Bú zài chuáng shang.)",
+      "truyen": "我的书在哪儿？(cảnh 1, 2, 4) — Bông：我的书在哪儿？不在床上。Xiaomei：看！书在沙发上！(Bông: Wǒ de shū zài nǎr? Bú zài chuáng shang. Xiaomei: Kàn! Shū zài shāfā shang!)",
+      "video": "Xem ngữ cảnh: Tìm YouTube: \"上下 方位 儿歌 幼儿\" (chưa có video ZH cho 上, 下; cùng chủ đề trên – dưới với In On Under Song) · Góc Xem thêm: Home and Furniture 家具 – Kangaroo Friends – https://www.youtube.com/watch?v=ktFPfIu6Fv4 · Góc Luyện thêm: Bắt bóng bay (5 đồ vật)"
+     }
+    },
+    {
+     "ngay": 60,
+     "label": "Ngày 60. Unit 7 · House – Dưới",
+     "en": {
+      "tu": "Mới: under | Ôn: on, chair, table | Ôn nối: ruler, eraser, notebook",
+      "cum": "Mới: under the chair / under the table / Not under the chair. | Ôn: on the bed",
+      "cau": "[Ngữ pháp: under + the + đồ vật] My ruler is under the chair. / Where is my rubber? – Under the table. / Not under the chair. Not on the bed.",
+      "truyen": "Where Is My Book? (cảnh 1–4) — Bông: Where is my book? Not on the bed. Not under the chair. Leo: Look! The book is on the sofa!",
+      "video": "Xem ngữ cảnh (xem lại): In On Under Song – English Vitamin Bubbles – https://www.youtube.com/watch?v=dupaTS-c8Xc · Góc Luyện thêm: Lật thẻ tìm đôi (6 từ)"
+     },
+     "zh": {
+      "tu": "Mới: 下 xià (= under) | Ôn: 上 shàng, 椅子 yǐzi, 桌子 zhuōzi | Ôn nối: 尺子 chǐzi, 橡皮 xiàngpí, 本子 běnzi",
+      "cum": "Mới: 在椅子下 zài yǐzi xià / 在桌子下 zài zhuōzi xià / 不在椅子下 bú zài yǐzi xià | Ôn: 在床上 zài chuáng shang",
+      "cau": "[Cầu nối] [Cùng tranh, hai tiếng] My ruler is under the chair. ↔ 我的尺子在椅子下。 [giống: My ruler ↔ 我的尺子 · khác: under đứng trước, 下 đứng sau (椅子下)] / [Ngữ pháp: 在 + đồ vật + 下] 我的尺子在椅子下。(Wǒ de chǐzi zài yǐzi xià.) / 我的橡皮在哪儿？— 在桌子下。(Wǒ de xiàngpí zài nǎr? — Zài zhuōzi xià.) / 不在椅子下，不在床上。(Bú zài yǐzi xià, bú zài chuáng shang.) / [Chuyển ngữ] [Leo nói 1 từ tiếng Anh, con chạm nút loa tiếng Trung đúng để nói lại cho Xiaomei; 2 lượt, 3 nút loa] on → 上 / under → 下",
+      "truyen": "我的书在哪儿？(cảnh 1–4) — Bông：我的书在哪儿？不在床上。不在椅子下。Xiaomei：看！书在沙发上！(Bông: Wǒ de shū zài nǎr? Bú zài chuáng shang. Bú zài yǐzi xià. Xiaomei: Kàn! Shū zài shāfā shang!)",
+      "video": "Xem ngữ cảnh: Tìm YouTube: \"上下 方位 儿歌 幼儿\" (chưa có video ZH cho 上, 下; cùng chủ đề trên – dưới với In On Under Song) · Góc Xem thêm: Home and Furniture 家具 – Kangaroo Friends – https://www.youtube.com/watch?v=ktFPfIu6Fv4"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: on, under, not | Ôn: bed, sofa, table, chair, pen, ruler, eraser",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" · Chuyển ý: \"Now, Chinese! 我们说中文！\" (bỏ tiếng Việt) · Khen: \"Well done! 真棒！\" · \"Try again! 再试一次！\" · ôn, chưa thêm câu mới 1) Trên hay dưới? – cô nói câu, con đặt gấu bông trên hoặc dưới ghế rồi chạm tranh đúng (4 câu): on the chair / under the chair / on the table / under the table. 2) Tìm đồ trong phòng – nghe câu, chạm đúng chỗ đồ vật (4 câu): My pen is on the table. / My ruler is under the chair. / The book is on the sofa. / Not on the bed. 3) Tay trên, tay dưới – con làm động tác khi nghe on / under.",
+     "truyen": "Where Is My Book? (đủ 5 tranh) — Bông: Where is my book? Not on the bed. Not under the chair. Leo: Look! The book is on the sofa! Bông: Thank you, Leo! (cô đặt sách thật quanh lớp theo từng tranh, cả lớp đi tìm cùng Bông)",
+     "baihat": "Where Is My Book? · 我的书呀在哪儿？(Anh – Trung – Kids), giai điệu Oh Where, Oh Where Has My Little Dog Gone? – cả bài, chỉ lên, chỉ xuống: Oh where, oh where is my book today? / Is it on the bed or the chair? / It's not on the bed, it's under the chair, / My book is right over there! · Vè đủ: On the table, under the chair, / Where is my book? It's over there!"
+    },
+    "zh": {
+     "flash": "Mới: 上 shàng, 下 xià | Ôn: 不 bù, 床 chuáng, 沙发 shāfā, 桌子 zhuōzi, 椅子 yǐzi, 笔 bǐ, 尺子 chǐzi, 橡皮 xiàngpí",
+     "slide": "[Cầu nối Anh – Trung] cùng con gấu và cái ghế: on the chair ↔ 椅子上 – on đứng trước đồ vật, 上 đứng sau; con làm tay trên – tay dưới cho cả hai tiếng. 1) Trên hay dưới? – cô nói câu, con đặt gấu bông trên hoặc dưới ghế rồi chạm tranh đúng (4 câu): 在椅子上 / 在椅子下 / 在桌子上 / 在桌子下 (上, 下 đứng sau đồ vật). 2) Tìm đồ trong phòng – nghe câu, chạm đúng chỗ đồ vật (4 câu): 我的笔在桌子上。/ 我的尺子在椅子下。/ 书在沙发上。/ 不在床上。 3) Tay trên, tay dưới – con làm động tác khi nghe 上 / 下 (thanh 4, tay chặt xuống). 4) [Chuyển ngữ] (NL1) Rối Leo nói 1 từ tiếng Anh, con nói lại 1 từ tiếng Trung cho rối Xiaomei (mỗi con 1 lượt): on → 上 / under → 下 / chair → 椅子. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo nói: \"My pen's under the table.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: Leo的笔在桌子下。 (Leo de bǐ zài zhuōzi xià.)",
+     "truyen": "我的书在哪儿？(đủ 5 tranh) — Bông：我的书在哪儿？不在床上。不在椅子下。Xiaomei：看！书在沙发上！Bông：谢谢你，Xiaomei！(Bông: Wǒ de shū zài nǎr? Bú zài chuáng shang. Bú zài yǐzi xià. Xiaomei: Kàn! Shū zài shāfā shang! Bông: Xièxie nǐ, Xiaomei!)",
+     "baihat": "Where Is My Book? · 我的书呀在哪儿？(Anh – Trung – Kids), giai điệu Oh Where, Oh Where Has My Little Dog Gone? – cả bài: 我的书呀今天在哪儿？/ 在床上还是椅子上？/ 不在床上，在椅子下，/ 我的书就在那儿！(Wǒ de shū ya jīntiān zài nǎr? / Zài chuáng shang háishi yǐzi shang? / Bú zài chuáng shang, zài yǐzi xià, / wǒ de shū jiù zài nàr!) · Vè đủ: 在桌子上，在椅子下，/ 我的书在哪儿？就在那儿！(Zài zhuōzi shang, zài yǐzi xià, / wǒ de shū zài nǎr? Jiù zài nàr!)"
+    }
+   }
+  },
+  {
+   "buoi": 31,
+   "unit": 7,
+   "label_buoi": "Buổi dạy 31. Unit 7 · House – Vận dụng: tìm sách cùng Bông; chữ 上, 下; nói theo vần",
+   "web": [
+    {
+     "ngay": 61,
+     "label": "Ngày 61. Unit 7 · House – Hiểu cả truyện; làm quen chữ 上, 下",
+     "en": {
+      "tu": "Thẻ chữ EN kèm hình: on, bed | Ôn: bed, sofa, table, chair, on, under, not",
+      "cum": "Mới: The book is on the table. / The book is under the table. | Ôn: Where is my book? / Thank you!",
+      "cau": "[Ngữ pháp: The … is on / under the …] The book is on the table. / The book is under the table. / Where is my book? – Not under the chair.",
+      "truyen": "Where Is My Book? — Bông: Where is my book? Not on the bed. Not under the chair. Leo: Look! The book is on the sofa! Bông: Thank you, Leo!",
+      "video": "Xem ngữ cảnh: truyện Where Is My Book? bản EN (rồi bản ZH) · Góc Xem thêm: Where is it? (In, On, Under) – Maple Leaf Learning – https://www.youtube.com/watch?v=8F0NYBBKczM"
+     },
+     "zh": {
+      "tu": "Mới (chữ nhìn): 上 shàng (= on; tranh quả bóng trên mặt bàn), 下 xià (= under; tranh quả bóng lăn xuống dưới) | Ôn: 床 chuáng, 沙发 shāfā, 桌子 zhuōzi, 椅子 yǐzi, 哪儿 nǎr, 谢谢 xièxie",
+      "cum": "Mới: 书在桌子上 shū zài zhuōzi shang / 书在桌子下 shū zài zhuōzi xià | Ôn: 我的书在哪儿 wǒ de shū zài nǎr / 谢谢你 xièxie nǐ",
+      "cau": "[Cầu nối] [Cùng tranh, hai tiếng] The book is on / under the table. ↔ 书在桌子上 / 下。 [giống: tay trên – tay dưới cho on ↔ 上, under ↔ 下 · khác: trước đồ vật ↔ sau đồ vật] / [Ngữ pháp: ……在……上 / 下] 书在桌子上。(Shū zài zhuōzi shang.) / 书在桌子下。(Shū zài zhuōzi xià.) / 我的书在哪儿？— 不在椅子下。(Wǒ de shū zài nǎr? — Bú zài yǐzi xià.)",
+      "truyen": "我的书在哪儿？ — Bông：我的书在哪儿？不在床上。不在椅子下。Xiaomei：看！书在沙发上！Bông：谢谢你，Xiaomei！(Bông: Wǒ de shū zài nǎr? Bú zài chuáng shang. Bú zài yǐzi xià. Xiaomei: Kàn! Shū zài shāfā shang! Bông: Xièxie nǐ, Xiaomei!)",
+      "video": "Xem ngữ cảnh: truyện bản ZH · Góc Xem thêm: Tìm YouTube: \"上下 方位 儿歌 幼儿\" (cùng chủ đề trên – dưới, ở đâu với Where is it?) · Home and Furniture 家具 – Kangaroo Friends – https://www.youtube.com/watch?v=ktFPfIu6Fv4"
+     }
+    },
+    {
+     "ngay": 62,
+     "label": "Ngày 62. Unit 7 · House – Ôn unit · Truyện ZH → EN, đóng vai",
+     "en": {
+      "tu": "Ôn: bed, sofa, table, chair, on, under, where, thank you | Ôn nhanh: day, goodbye, mommy",
+      "cum": "Ôn: Where is my book? / Not on the bed. / Not under the chair. / Thank you!",
+      "cau": "Đóng vai (con nói lời Bông tìm sách): Where is my book? / Not on the bed. / Not under the chair. / Thank you, Leo! Goodbye!",
+      "truyen": "Where Is My Book? — Bông: Where is my book? Not on the bed. Not under the chair. Leo: Look! The book is on the sofa! Bông: Thank you, Leo!",
+      "video": "Xem ngữ cảnh: truyện bản ZH rồi bản EN · Góc Xem thêm: In On Under Song – English Vitamin Bubbles – https://www.youtube.com/watch?v=dupaTS-c8Xc"
+     },
+     "zh": {
+      "tu": "Ôn: 床 chuáng, 沙发 shāfā, 桌子 zhuōzi, 椅子 yǐzi, 上 shàng, 下 xià, 哪儿 nǎr, 谢谢 xièxie | Ôn nhanh: 妈妈 māma, 再见 zàijiàn",
+      "cum": "Ôn: 我的书在哪儿 wǒ de shū zài nǎr / 不在床上 bú zài chuáng shang / 不在椅子下 bú zài yǐzi xià / 谢谢你 xièxie nǐ",
+      "cau": "[Cầu nối] [Cùng tranh, hai tiếng] Not on the bed. ↔ 不在床上。 [giống: not ↔ 不 đều đứng đầu · khác: on the bed ↔ 床上] / Đóng vai (con nói lời Bông tìm sách): Bông：我的书在哪儿？(Bông: Wǒ de shū zài nǎr?) / 不在床上。(Bú zài chuáng shang.) / 不在椅子下。(Bú zài yǐzi xià.) / Xiaomei：看！书在沙发上！(Xiaomei: Kàn! Shū zài shāfā shang!) / Bông：谢谢你，Xiaomei！再见！(Bông: Xièxie nǐ, Xiaomei! Zàijiàn!) / [Chuyển ngữ] [Leo nói 1 từ tiếng Anh, con chạm nút loa tiếng Trung đúng để nói lại cho Xiaomei; 2 lượt, 3 nút loa] bed → 床 / table → 桌子",
+      "truyen": "我的书在哪儿？ — Bông：我的书在哪儿？不在床上。不在椅子下。Xiaomei：看！书在沙发上！Bông：谢谢你，Xiaomei！(Bông: Wǒ de shū zài nǎr? Bú zài chuáng shang. Bú zài yǐzi xià. Xiaomei: Kàn! Shū zài shāfā shang! Bông: Xièxie nǐ, Xiaomei!)",
+      "video": "Xem ngữ cảnh: truyện bản ZH rồi bản EN · Góc Xem thêm: Tìm YouTube: \"上下 方位 儿歌 幼儿\" (cùng chủ đề trên – dưới với In On Under Song) · Home and Furniture 家具 – Kangaroo Friends – https://www.youtube.com/watch?v=ktFPfIu6Fv4 · Nhìn chữ – Tìm tranh cho chữ: 上, 下"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn: bed, sofa, table, chair, on, under, The book is on / under the table. | Ôn: mommy, goodbye, thank you",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" · Chuyển ý: \"Now, Chinese! 我们说中文！\" (bỏ tiếng Việt) · Khen: \"Well done! 真棒！\" · Câu mới buổi này: \"Đứng lên nào! Stand up! 站起来！(Zhàn qǐlái!)\" 1) Chạm nơi Bông tìm – cô kể truyện, con chạm lần lượt giường, ghế, sô-pha theo câu (5 câu): Where is my book? / Not on the bed. / Not under the chair. / The book is on the sofa! / Thank you, Leo! 2) Có hay không? – cô chiếu tranh và nói câu, con giơ ✓ / ✗ (4 câu): (sách trên bàn) The book is under the table. ✗ / (sách dưới ghế) The book is under the chair. ✓ 3) Limerick vui – con chỉ đầu khi nói head: The book is on the bed, bed, bed, / The pen is under my head, head, head!",
+     "truyen": "Where Is My Book? — Bông: Oh no! Where is my book? Mommy! Not on the bed. Not under the chair. Not on the table. Leo: Look! The book is on the sofa! Bông: Thank you, Leo!",
+     "baihat": "Where Is My Book? · 我的书呀在哪儿？(Anh – Trung – Kids), giai điệu Oh Where, Oh Where Has My Little Dog Gone? – cả bài: Oh where, oh where is my book today? / Is it on the bed or the chair? / It's not on the bed, it's under the chair, / My book is right over there! · Limerick: The book is on the bed, bed, bed, / The pen is under my head, head, head! (bed – head)"
+    },
+    "zh": {
+     "flash": "Ôn: 床 chuáng, 沙发 shāfā, 桌子 zhuōzi, 椅子 yǐzi, 上 shàng, 下 xià, 谢谢 xièxie, 书在桌子上 / 下 shū zài zhuōzi shang / xià | Ôn: 妈妈 māma, 再见 zàijiàn",
+     "slide": "[Cầu nối Anh – Trung] cùng 5 tranh Where Is My Book?: Not on the bed. ↔ 不在床上。– not ↔ 不 đều đứng đầu; con chạm tranh khi nghe câu ở cả hai tiếng. 1) Chạm nơi Bông tìm – cô kể truyện, con chạm lần lượt giường, ghế, sô-pha theo câu (5 câu): 我的书在哪儿？/ 不在床上。/ 不在椅子下。/ 书在沙发上！/ 谢谢你，Xiaomei！ 2) Có hay không? – cô chiếu tranh và nói câu, con giơ ✓ / ✗: (sách trên bàn) 书在桌子下。✗ / (sách dưới ghế) 书在椅子下。✓ 3) Chữ 上, 下 – một tay làm mặt bàn, tay kia chỉ lên là 上, chỉ xuống là 下; Hình biến thành chữ: quả bóng trên / dưới mặt bàn → 上 / 下. 4) Đọc theo vần vui – con chỉ đầu khi nói 头: 书在床上，上上上，/ 笔在我头下面，下下下！ 5) [Chuyển ngữ] (NL1) Rối Leo nói 1 từ tiếng Anh, con nói lại 1 từ tiếng Trung cho rối Xiaomei (mỗi con 1 lượt): bed → 床 / sofa → 沙发 / table → 桌子. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo nói: \"My book's on the sofa!\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: Leo的书在沙发上！ (Leo de shū zài shāfā shang!)",
+     "truyen": "我的书在哪儿？— Bông：哎呀！我的书在哪儿？妈妈！不在床上。不在椅子下。不在桌子上。Xiaomei：看！书在沙发上！Bông：谢谢你，Xiaomei！(Bông: Āiyā! Wǒ de shū zài nǎr? Māma! Bú zài chuáng shang. Bú zài yǐzi xià. Bú zài zhuōzi shang. Xiaomei: Kàn! Shū zài shāfā shang! Bông: Xièxie nǐ, Xiaomei!)",
+     "baihat": "Where Is My Book? · 我的书呀在哪儿？(Anh – Trung – Kids), giai điệu Oh Where, Oh Where Has My Little Dog Gone? – cả bài: 我的书呀今天在哪儿？/ 在床上还是椅子上？/ 不在床上，在椅子下，/ 我的书就在那儿！(Wǒ de shū ya jīntiān zài nǎr? / Zài chuáng shang háishi yǐzi shang? / Bú zài chuáng shang, zài yǐzi xià, / wǒ de shū jiù zài nàr!) · Limerick (vui như bản tiếng Anh): 书在床上，上上上，/ 笔在我头下面，下下下！(Shū zài chuáng shang, shàng shàng shàng, / bǐ zài wǒ tóu xiàmiàn, xià xià xià!)"
+    }
+   }
+  },
+  {
+   "buoi": 32,
+   "unit": 7,
+   "label_buoi": "Buổi dạy 32. Unit 7 · House – Vận dụng: giấu – tìm đồ trong lớp; chọn tiếng theo người hỏi; gọn gàng",
+   "web": [
+    {
+     "ngay": 63,
+     "label": "Ngày 63. Unit 7 · House – Ôn không tranh · Anh hay Trung?",
+     "en": {
+      "tu": "Ôn (nghe, không có tranh mẫu): sofa, chair, on, under | Ôn nhanh: head, nose, see you tomorrow",
+      "cum": "Ôn: Where is the book? / on the sofa / under the bed",
+      "cau": "[Anh hay Trung? 6 câu, con chạm ô xanh hoặc ô đỏ] Where is Robo? / Robo is under the bed. / I have a big head. [và 3 câu ZH] / Touch your nose! Thank you!",
+      "truyen": "Where Is Robo? — Bông: Where is Robo? Not on the sofa. Leo: Look! Robo is under the bed! Robo: Hello! I have a big head and a small nose. Bông: Thank you, Leo!",
+      "video": "Xem ngữ cảnh: Where is it? (In, On, Under) – Maple Leaf Learning – https://www.youtube.com/watch?v=8F0NYBBKczM"
+     },
+     "zh": {
+      "tu": "Ôn (nghe, không có tranh mẫu): 沙发 shāfā, 椅子 yǐzi, 上 shàng, 下 xià | Ôn nhanh: 头 tóu, 鼻子 bízi, 明天见 míngtiān jiàn",
+      "cum": "Ôn: ……在哪儿 … zài nǎr / 在床下 zài chuáng xià / 在沙发上 zài shāfā shang",
+      "cau": "[Cầu nối] [Cùng tranh, hai tiếng] Robo is under the bed. ↔ Robo在床下。 [giống: tên Robo giữ nguyên, đứng đầu câu · khác: under the bed ↔ 床下 (下 đứng sau)] / Anh hay Trung?: Robo在哪儿？(Robo zài nǎr?) / Robo在床下。(Robo zài chuáng xià.) / 我有大大的头。(Wǒ yǒu dàdà de tóu.) / 摸摸鼻子！谢谢！(Mōmo bízi! Xièxie!)",
+      "truyen": "Robo在哪儿？— Bông：Robo在哪儿？不在沙发上。Xiaomei：看！Robo在床下！Robo：你好！我有大大的头，小小的鼻子。Bông：谢谢你，Xiaomei！(Bông: Robo zài nǎr? Bú zài shāfā shang. Xiaomei: Kàn! Robo zài chuáng xià! Robo: Nǐ hǎo! Wǒ yǒu dàdà de tóu, xiǎoxiǎo de bízi. Bông: Xièxie nǐ, Xiaomei!)",
+      "video": "Xem ngữ cảnh: Tìm YouTube: \"上下 方位 儿歌 幼儿\" (chưa có video ZH cho 上, 下; cùng chủ đề trên – dưới, ở đâu với Where is it?) · Góc Xem thêm: Home and Furniture 家具 – Kangaroo Friends – https://www.youtube.com/watch?v=ktFPfIu6Fv4"
+     }
+    },
+    {
+     "ngay": 64,
+     "label": "Ngày 64. Unit 7 · House – Phiên dịch nhí · Nói đồ vật ở đâu",
+     "en": {
+      "tu": "Ôn: bed, sofa, table, chair, on, under, not, where, thank you | Ôn nhanh: teacher, kitten, tomorrow",
+      "cum": "Ôn: Where is my book? / Not on the bed. / The book is on the sofa!",
+      "cau": "Phiên dịch nhí (EN → ZH, con chạm nút loa đúng): Where is my book? → 我的书在哪儿？/ Not on the bed. → 不在床上。/ The book is on the sofa! → 书在沙发上！ / Where is the kitten? – Under the table!",
+      "truyen": "Where Is My Book? — Bông: Where is my book? Not on the bed. Not under the chair. Leo: Look! The book is on the sofa! Bông: Thank you, Leo!",
+      "video": "Góc Xem thêm: In On Under Song – English Vitamin Bubbles – https://www.youtube.com/watch?v=dupaTS-c8Xc"
+     },
+     "zh": {
+      "tu": "Ôn: 床 chuáng, 沙发 shāfā, 桌子 zhuōzi, 椅子 yǐzi, 上 shàng, 下 xià, 哪儿 nǎr, 谢谢 xièxie | Ôn nhanh: 老师 lǎoshī, 小猫 xiǎomāo, 明天 míngtiān",
+      "cum": "Ôn: 我的书在哪儿 wǒ de shū zài nǎr / 不在床上 bú zài chuáng shang / 书在沙发上 shū zài shāfā shang",
+      "cau": "[Cầu nối] [Cùng tranh, hai tiếng] Where is the kitten? – Under the table! ↔ 小猫在哪儿？— 在桌子下！ [giống: đều đáp ngắn được · khác: under the table ↔ 桌子下] / Phiên dịch nhí (ZH → EN): 不在椅子下。(Bú zài yǐzi xià.) → Not under the chair. / 谢谢你！(Xièxie nǐ!) → Thank you! / 小猫在哪儿？— 在桌子下！(Xiǎomāo zài nǎr? — Zài zhuōzi xià!)",
+      "truyen": "我的书在哪儿？ — Bông：我的书在哪儿？不在床上。不在椅子下。Xiaomei：看！书在沙发上！Bông：谢谢你，Xiaomei！(Bông: Wǒ de shū zài nǎr? Bú zài chuáng shang. Bú zài yǐzi xià. Xiaomei: Kàn! Shū zài shāfā shang! Bông: Xièxie nǐ, Xiaomei!)",
+      "video": "Góc Xem thêm: Tìm YouTube: \"上下 方位 儿歌 幼儿\" (cùng chủ đề trên – dưới với In On Under Song) · Home and Furniture 家具 – Kangaroo Friends – https://www.youtube.com/watch?v=ktFPfIu6Fv4"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn: bed, sofa, table, chair, on, under, Where is …?, Thank you! | Ôn: head, nose, kitten",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" · Chuyển ý: \"Now, Chinese! 我们说中文！\" (bỏ tiếng Việt) · Khen: \"Well done! 真棒！\" · \"Tidy up! 收拾好！\" (bỏ tiếng Việt, hợp hoạt động xếp đồ gọn) · Câu mới: \"Ngồi xuống nào! Sit down, please. 请坐。(Qǐng zuò.)\" 1) NL6 – Leo hỏi Where is the pen?, con chỉ chỗ và đáp bằng tiếng Anh: On the table. / Under the chair. 2) Có hay không? (4 câu, con giơ ✓ / ✗ rồi nói câu đúng): (mèo dưới bàn) The kitten is on the table. ✗ → Under the table. / (Robo trên sô-pha) Robo is on the sofa. ✓ 3) Thi xếp đồ – mỗi con đặt đồ đúng chỗ và nói vị trí: My book is on the table. My bag is under the chair.",
+     "truyen": "Where Is My Book? (diễn) — Bông: Where is my book? Mommy: Not on the bed. Bông: Not under the chair. Leo: Look! The book is on the sofa! Bông: Thank you, Leo! My book is on the table now.",
+     "baihat": "Where Is My Book? · 我的书呀在哪儿？(Anh – Trung – Kids), giai điệu Oh Where, Oh Where Has My Little Dog Gone? – cả bài, biểu diễn: Oh where, oh where is my book today? / Is it on the bed or the chair? / It's not on the bed, it's under the chair, / My book is right over there! · Vè (biểu diễn): On the table, under the chair, / Where is my book? It's over there!"
+    },
+    "zh": {
+     "flash": "Ôn: 床 chuáng, 沙发 shāfā, 桌子 zhuōzi, 椅子 yǐzi, 上 shàng, 下 xià, 哪儿 nǎr, 谢谢 xièxie | Ôn: 头 tóu, 鼻子 bízi, 小猫 xiǎomāo",
+     "slide": "[Cầu nối Anh – Trung] cùng món đồ được giấu: Leo hỏi Where is the pen?, Xiaomei hỏi 笔在哪儿？; Thank you! ↔ 谢谢你！– con nói cảm ơn đúng tiếng của rối. 1) NL6 – Xiaomei hỏi 笔在哪儿？(Bǐ zài nǎr?), con chỉ chỗ và đáp bằng tiếng Trung: 在桌子上。/ 在椅子下。 2) Có hay không? (con giơ ✓ / ✗ rồi nói câu đúng): (mèo dưới bàn) 小猫在桌子上。✗ → 在桌子下。/ (Robo trên sô-pha) Robo在沙发上。✓ 3) Thi xếp đồ – mỗi con đặt đồ đúng chỗ và nói vị trí bằng tiếng Trung: 我的书在桌子上。我的包在椅子下。 4) [Chuyển ngữ] (NL1) Rối Leo nói 1 từ tiếng Anh, con nói lại 1 từ tiếng Trung cho rối Xiaomei (mỗi con 1 lượt): thank you → 谢谢 / under → 下 / on → 上. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo nói: \"The kitten's under the table.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 小猫在桌子下。 (Xiǎomāo zài zhuōzi xià.)",
+     "truyen": "我的书在哪儿？(diễn) — Bông：我的书在哪儿？妈妈：不在床上。Bông：不在椅子下。Xiaomei：看！书在沙发上！Bông：谢谢你，Xiaomei！我的书在桌子上了。(Bông: Wǒ de shū zài nǎr? Māma: Bú zài chuáng shang. Bông: Bú zài yǐzi xià. Xiaomei: Kàn! Shū zài shāfā shang! Bông: Xièxie nǐ, Xiaomei! Wǒ de shū zài zhuōzi shang le.)",
+     "baihat": "Where Is My Book? · 我的书呀在哪儿？(Anh – Trung – Kids), giai điệu Oh Where, Oh Where Has My Little Dog Gone? – cả bài, biểu diễn: 我的书呀今天在哪儿？/ 在床上还是椅子上？/ 不在床上，在椅子下，/ 我的书就在那儿！(Wǒ de shū ya jīntiān zài nǎr? / Zài chuáng shang háishi yǐzi shang? / Bú zài chuáng shang, zài yǐzi xià, / wǒ de shū jiù zài nàr!) · Vè (biểu diễn): 在桌子上，在椅子下，/ 我的书在哪儿？就在那儿！(Zài zhuōzi shang, zài yǐzi xià, / wǒ de shū zài nǎr? Jiù zài nàr!)"
+    }
+   }
+  },
+  {
+   "buoi": 33,
+   "unit": 8,
+   "label_buoi": "Buổi dạy 33. Unit 8 · Animals – Hiểu: con vật và việc nó làm được (chó chạy, chim bay)",
+   "web": [
+    {
+     "ngay": 65,
+     "label": "Ngày 65. Unit 8 · Animals – Chó chạy",
+     "en": {
+      "tu": "Mới: dog, run, can | Ôn: puppy | Ôn nhanh: name, what",
+      "cum": "Mới: Dogs can run.",
+      "cau": "[Ngữ pháp: can + động từ; nói chung về loài thêm -s: dogs] Dogs can run. / The dog can run. / My puppy can run! What's your name, puppy? / [Lời web] Vào bài: \"Let's learn! 我们一起学！\" · Khen: \"Great! 真棒！\" · Nhắc: \"Try again! 再试一次！\" · Câu mới: \"Good job! 做得好！\" (chỉ tiếng Anh, tiếng Trung)",
+      "truyen": "The Animal Games (cảnh 1) — Hello, dog! The dog can run. Run, dog, run!",
+      "video": "Xem ngữ cảnh: Animal Movements Song – Run Jump Fly Swim – KidsNest Channel – https://www.youtube.com/watch?v=EyslpSBZ990 · Góc Xem thêm: I Can Jump 我会跳 – Little Fox (kho Anh – Trung – Kids) – https://drive.google.com/file/d/17eQUQrjvoLmh0nj8rRdw3gZyGRYbcbR4/view"
+     },
+     "zh": {
+      "tu": "Mới: 跑 pǎo (= run) | Ôn: 狗 gǒu | Ôn nhanh: 名字 míngzi, 什么 shénme",
+      "cum": "Mới: 狗能跑 gǒu néng pǎo",
+      "cau": "[Cầu nối] [Cùng tranh, hai tiếng] Dogs can run. ↔ 狗能跑。 [giống: con vật – can ↔ 能 – việc làm, cùng trật tự · khác: dogs có -s, 狗 không đổi] / [Ngữ pháp: 能 + động từ; 狗 không đổi khi nói chung] 狗能跑。(Gǒu néng pǎo.) / 我的小狗能跑！(Wǒ de xiǎogǒu néng pǎo!) / 小狗，你叫什么名字？(Xiǎogǒu, nǐ jiào shénme míngzi?)",
+      "truyen": "动物运动会 (cảnh 1) — 小狗，你好！狗能跑。跑跑跑！(Xiǎogǒu, nǐ hǎo! Gǒu néng pǎo. Pǎo pǎo pǎo!)",
+      "video": "Xem ngữ cảnh: The Big Green Forest 1: I Can Hop 我会跳 – Little Fox Chinese – https://www.youtube.com/watch?v=RFizy8IKgKs (video nói 会, con chỉ cần nghe hiểu) · Tìm YouTube: \"小狗跑 儿歌 幼儿\" · Góc Xem thêm: 10 个动物宠物的中文 – AliMiMi – https://www.youtube.com/watch?v=wKLVEPt3yGM"
+     }
+    },
+    {
+     "ngay": 66,
+     "label": "Ngày 66. Unit 8 · Animals – Chim bay",
+     "en": {
+      "tu": "Mới: bird, fly | Ôn: dog, run | Ôn nhanh: how old, old",
+      "cum": "Mới: Birds can fly. | Ôn: Dogs can run.",
+      "cau": "[Ngữ pháp: can + động từ; birds có -s] Birds can fly. / The bird can fly. / Dogs can run. Birds can fly.",
+      "truyen": "The Animal Games (cảnh 1–2) — The dog can run. The bird can fly. Fly, bird, fly!",
+      "video": "Xem ngữ cảnh (xem lại): Animal Movements Song – Run Jump Fly Swim – KidsNest Channel – https://www.youtube.com/watch?v=EyslpSBZ990 · Góc Xem thêm: Can You Jump? – Maple Leaf Learning – https://www.youtube.com/watch?v=Q3x4ns95WiE"
+     },
+     "zh": {
+      "tu": "Mới: 鸟 niǎo (= bird), 飞 fēi (= fly) | Ôn: 狗 gǒu, 跑 pǎo | Ôn nhanh: 几岁 jǐ suì, 岁 suì",
+      "cum": "Mới: 鸟能飞 niǎo néng fēi | Ôn: 狗能跑 gǒu néng pǎo",
+      "cau": "[Cầu nối] [Cùng tranh, hai tiếng] Birds can fly. ↔ 鸟能飞。 [giống: can ↔ 能 đứng trước việc làm · khác: birds có -s, 鸟 không đổi] / [Ngữ pháp: 能 + động từ] 鸟能飞。(Niǎo néng fēi.) / 小鸟能飞！(Xiǎoniǎo néng fēi!) / 狗能跑，鸟能飞。(Gǒu néng pǎo, niǎo néng fēi.) / [Chuyển ngữ] [Leo nói 1 từ tiếng Anh, con chạm nút loa tiếng Trung đúng để nói lại cho Xiaomei; 2 lượt, 3 nút loa] run → 跑 / fly → 飞",
+      "truyen": "动物运动会 (cảnh 1–2) — 狗能跑。鸟能飞。飞飞飞！(Gǒu néng pǎo. Niǎo néng fēi. Fēi fēi fēi!)",
+      "video": "Xem ngữ cảnh (xem lại): The Big Green Forest 1: I Can Hop 我会跳 – Little Fox Chinese – https://www.youtube.com/watch?v=RFizy8IKgKs (video nói 会, con chỉ cần nghe hiểu) · Tìm YouTube: \"小鸟飞 儿歌 幼儿\" · Góc Xem thêm: 10 个动物宠物的中文 – AliMiMi – https://www.youtube.com/watch?v=wKLVEPt3yGM"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: dog, run, can, bird, fly | Ôn: puppy, kitten, name, old",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" · Chuyển ý: \"Now, Chinese! 我们说中文！\" · Khen: \"Well done! 真棒！\" · Tiếng Việt chỉ để nhắc nề nếp · \"Stand up! 站起来！ / Sit down, please. 请坐。\" (đã quen, bỏ tiếng Việt) · Câu mới: \"Làm như cô nhé! Do it like me! 跟我做！(Gēn wǒ zuò!)\" 1) Làm như con vật – cô nói, cả lớp làm động tác rồi chạm tranh đúng (4 lượt): dog (sủa) / run (chạy tại chỗ) / bird (vỗ cánh) / fly (dang tay bay). 2) Đưa về nhà – nghe câu, chạm bầu trời hay mặt đất cho con vật (2 câu): Birds can fly. → bầu trời / Dogs can run. → mặt đất. 3) Con vật kêu gì? – nghe tiếng kêu, giơ thẻ và nói: dog / bird; khác biệt: dogs, birds (có -s).",
+     "truyen": "The Animal Games (cảnh 1–2) — It's the Animal Games! Hello, dog! The dog can run. Run, dog, run! Hello, bird! The bird can fly. Fly, bird, fly!",
+     "baihat": "Dogs Can Run · 小狗能跑 (Anh – Trung – Kids), giai điệu Row, Row, Row Your Boat – đoạn Dog, Bird: Run, run, run, my dog, / dogs can run all day, / running, running, running, running, / dogs can run and play! / Fly, fly, fly, my bird, / birds can fly up high, / flying, flying, flying, flying, / birds can fly, fly, fly! · Vè dòng 1–2: Run, dog, run! Fly, bird, fly!"
+    },
+    "zh": {
+     "flash": "Mới: 跑 pǎo, 鸟 niǎo, 飞 fēi, 能 néng | Ôn: 狗 gǒu, 小狗 xiǎogǒu, 小猫 xiǎomāo, 叫 jiào, 岁 suì",
+     "slide": "[Cầu nối Anh – Trung] cùng thẻ chó, chim: Dogs can run. ↔ 狗能跑。cùng trật tự (con vật – can/能 – việc làm); dogs có -s, 狗 không đổi. 1) Làm như con vật – cô nói, cả lớp làm động tác rồi chạm tranh đúng (4 lượt): 狗 (sủa gâu gâu) / 跑 (chạy tại chỗ) / 鸟 (vỗ cánh) / 飞 (dang tay bay). 2) Đưa về nhà – nghe câu, chạm bầu trời hay mặt đất cho con vật (2 câu): 鸟能飞。→ bầu trời / 狗能跑。→ mặt đất; rối Leo nói tiếng Anh, rối Xiaomei nói tiếng Trung, con nói lại đúng tiếng với rối (NL6). 3) Con vật kêu gì? – nghe tiếng kêu, giơ thẻ và nói: 汪汪 → 狗 / 叽叽 → 鸟; dogs, birds có -s, còn 狗, 鸟 không đổi. 4) [Chuyển ngữ] (NL1) Rối Leo nói 1 từ tiếng Anh, con nói lại 1 từ tiếng Trung cho rối Xiaomei (mỗi con 1 lượt): dog → 狗 / run → 跑 / bird → 鸟 / fly → 飞. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo nói: \"My dog can run.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: Leo的狗能跑。 (Leo de gǒu néng pǎo.)",
+     "truyen": "动物运动会 (cảnh 1–2) — 动物运动会！小狗，你好！狗能跑。跑跑跑！小鸟，你好！鸟能飞。飞飞飞！(Dòngwù yùndònghuì! Xiǎogǒu, nǐ hǎo! Gǒu néng pǎo. Pǎo pǎo pǎo! Xiǎoniǎo, nǐ hǎo! Niǎo néng fēi. Fēi fēi fēi!)",
+     "baihat": "Dogs Can Run · 小狗能跑 (Anh – Trung – Kids), giai điệu Row, Row, Row Your Boat – đoạn Dog, Bird: 跑跑跑，小狗跑，/ 能跑一整天，/ 跑呀跑呀，跑呀跑呀，/ 又跑又玩耍！(Pǎo pǎo pǎo, xiǎogǒu pǎo, / néng pǎo yì zhěng tiān, / pǎo ya pǎo ya, pǎo ya pǎo ya, / yòu pǎo yòu wánshuǎ!) / 飞飞飞，小鸟飞，/ 鸟能飞得高，/ 飞呀飞呀，飞呀飞呀，/ 小鸟真能飞！(Fēi fēi fēi, xiǎoniǎo fēi, / niǎo néng fēi de gāo, / fēi ya fēi ya, fēi ya fēi ya, / xiǎoniǎo zhēn néng fēi!) · Vè dòng 1–2: 小狗跑跑跑，小鸟飞飞飞 (Xiǎogǒu pǎo pǎo pǎo, xiǎoniǎo fēi fēi fēi)"
+    }
+   }
+  },
+  {
+   "buoi": 34,
+   "unit": 8,
+   "label_buoi": "Buổi dạy 34. Unit 8 · Animals – Làm quen: làm được – không làm được (can / can't · 能 / 不能)",
+   "web": [
+    {
+     "ngay": 67,
+     "label": "Ngày 67. Unit 8 · Animals – Ôn tuần · Cá bơi; cá không chạy được",
+     "en": {
+      "tu": "Mới: fish, swim | Ôn: bird, fly, dog, run | Ôn nối: on, under, table, chair",
+      "cum": "Mới: Fish can swim. / Fish can't run. / one fish, two fish | Ôn: Birds can fly.",
+      "cau": "[Ngữ pháp: can't = không làm được; fish số nhiều không thêm -s] Fish can swim. / Fish can't run. / The bird is on the table. The dog is under the chair.",
+      "truyen": "The Animal Games (cảnh 1–3, 5) — The dog can run. The bird can fly. The fish can swim. Oh no! The fish can't run!",
+      "video": "Xem ngữ cảnh: Can You Jump? – Maple Leaf Learning – https://www.youtube.com/watch?v=Q3x4ns95WiE · Ôn tuần: Ôn lại cùng cô Hươu (mở lại bước bất kỳ của ngày 65–66)"
+     },
+     "zh": {
+      "tu": "Mới: 鱼 yú (= fish), 游泳 yóuyǒng (= swim) | Ôn: 鸟 niǎo, 飞 fēi, 狗 gǒu, 跑 pǎo | Ôn nối: 上 shàng, 下 xià, 桌子 zhuōzi, 椅子 yǐzi",
+      "cum": "Mới: 鱼能游泳 yú néng yóuyǒng / 鱼不能跑 yú bù néng pǎo / 一条鱼，两条鱼 yì tiáo yú, liǎng tiáo yú (nghe) | Ôn: 鸟能飞 niǎo néng fēi",
+      "cau": "[Cầu nối] [Cùng tranh, hai tiếng] Fish can't run. ↔ 鱼不能跑。 [giống: can't ↔ 不能; one fish, two fish không thêm -s, giống 鱼 không đổi] / [Ngữ pháp: 不能 = không làm được] 鱼能游泳。(Yú néng yóuyǒng.) / 鱼不能跑。(Yú bù néng pǎo.) / 鸟在桌子上，狗在椅子下。(Niǎo zài zhuōzi shang, gǒu zài yǐzi xià.)",
+      "truyen": "动物运动会 (cảnh 1–3, 5) — 狗能跑。鸟能飞。鱼能游泳。哎呀！鱼不能跑！(Gǒu néng pǎo. Niǎo néng fēi. Yú néng yóuyǒng. Āiyā! Yú bù néng pǎo!)",
+      "video": "Xem ngữ cảnh: The Big Green Forest 1: I Can Hop 我会跳 – Little Fox Chinese – https://www.youtube.com/watch?v=RFizy8IKgKs (video nói 会, con chỉ cần nghe hiểu) · Góc Luyện thêm: Bắt bóng bay (4 từ của ngày 65–66)"
+     }
+    },
+    {
+     "ngay": 68,
+     "label": "Ngày 68. Unit 8 · Animals – Thỏ nhảy, mèo",
+     "en": {
+      "tu": "Mới: rabbit, jump, cat | Ôn: fish, swim | Ôn nối: sofa, bed, where",
+      "cum": "Mới: Rabbits can jump. / Dogs can't fly. | Ôn: Fish can't run.",
+      "cau": "[Ngữ pháp: can / can't] Rabbits can jump. / Dogs can't fly. / Where is the cat? – The cat is on the sofa. / The rabbit is under the bed.",
+      "truyen": "The Animal Games (cảnh 1–5) — The dog can run. The bird can fly. The fish can swim. The rabbit can jump. The fish can't run!",
+      "video": "Xem ngữ cảnh (xem lại): Can You Jump? – Maple Leaf Learning – https://www.youtube.com/watch?v=Q3x4ns95WiE · Góc Luyện thêm: Lật thẻ tìm đôi (9 từ)"
+     },
+     "zh": {
+      "tu": "Mới: 兔子 tùzi (= rabbit), 跳 tiào (= jump) | Ôn: 猫 māo, 鱼 yú, 游泳 yóuyǒng | Ôn nối: 沙发 shāfā, 床 chuáng, 哪儿 nǎr",
+      "cum": "Mới: 兔子能跳 tùzi néng tiào / 狗不能飞 gǒu bù néng fēi | Ôn: 鱼不能跑 yú bù néng pǎo",
+      "cau": "[Cầu nối] [Cùng tranh, hai tiếng] Rabbits can jump. ↔ 兔子能跳。 [giống: can ↔ 能 · khác: rabbits có -s, 兔子 không đổi; Dogs can't fly. ↔ 狗不能飞。] / [Ngữ pháp: 能 / 不能] 兔子能跳。(Tùzi néng tiào.) / 狗不能飞。(Gǒu bù néng fēi.) / 猫在哪儿？— 猫在沙发上。(Māo zài nǎr? — Māo zài shāfā shang.) / 兔子在床下。(Tùzi zài chuáng xià.) / [Chuyển ngữ] [Leo nói 1 từ tiếng Anh, con chạm nút loa tiếng Trung đúng để nói lại cho Xiaomei; 2 lượt, 3 nút loa] fish → 鱼 / jump → 跳",
+      "truyen": "动物运动会 (cảnh 1–5) — 狗能跑。鸟能飞。鱼能游泳。兔子能跳。鱼不能跑！(Gǒu néng pǎo. Niǎo néng fēi. Yú néng yóuyǒng. Tùzi néng tiào. Yú bù néng pǎo!)",
+      "video": "Xem ngữ cảnh (xem lại): The Big Green Forest 1: I Can Hop 我会跳 – Little Fox Chinese – https://www.youtube.com/watch?v=RFizy8IKgKs (video nói 会, con chỉ cần nghe hiểu) · Góc Xem thêm: I Can Jump 我会跳 – Little Fox (kho Anh – Trung – Kids) – https://drive.google.com/file/d/17eQUQrjvoLmh0nj8rRdw3gZyGRYbcbR4/view"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: fish, swim, rabbit, jump, cat, can't | Ôn: dog, run, bird, fly, on, under, sofa",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" · Chuyển ý: \"Now, Chinese! 我们说中文！\" · Khen: \"Well done! 真棒！\" · Tiếng Việt chỉ để nhắc nề nếp · \"Do it like me! 跟我做！\" · ôn, chưa thêm câu mới 1) Có hay không? – cô nói câu kèm tranh, con giơ ✓ / ✗ rồi nói câu đúng (4 câu): Fish can fly. ✗ → Fish can swim. / Rabbits can jump. ✓ / Dogs can't fly. ✓ / Birds can't fly. ✗ → Birds can fly. 2) Đưa về nhà – nghe câu, chạm bầu trời, dòng sông hay mặt đất (3 câu): Fish can swim. / Rabbits can jump. / Birds can fly. 3) Con vật ở đâu? – nghe câu, chạm tranh: The cat is on the sofa. / The rabbit is under the bed.",
+     "truyen": "The Animal Games (cảnh 1–5) — The dog can run. The bird can fly. The fish can swim. The rabbit can jump. Oh no! The fish can't run! (Hội thể thao: mỗi nhóm đóng một con vật và khoe việc mình làm được)",
+     "baihat": "Dogs Can Run · 小狗能跑 (Anh – Trung – Kids), giai điệu Row, Row, Row Your Boat – đoạn Fish (cuối câu lắc đầu): Swim, swim, swim, my fish, / fish can swim all day, / swimming, swimming, swimming, swimming, / fish can't run away! · Vè đủ: Run, dog, run! Fly, bird, fly! Swim, fish, swim! Jump, rabbit, high!"
+    },
+    "zh": {
+     "flash": "Mới: 鱼 yú, 游泳 yóuyǒng, 兔子 tùzi, 跳 tiào, 不能 bù néng | Ôn: 狗 gǒu, 跑 pǎo, 鸟 niǎo, 飞 fēi, 猫 māo, 上 shàng, 下 xià, 沙发 shāfā",
+     "slide": "[Cầu nối Anh – Trung] can't ↔ 不能: con lắc đầu ở cả hai tiếng; one fish, two fish – fish không thêm -s, cũng như 鱼 không đổi. 1) Có hay không? – cô nói câu kèm tranh, con giơ ✓ / ✗ rồi nói câu đúng (4 câu): 鱼能飞。✗ → 鱼能游泳。/ 兔子能跳。✓ / 狗不能飞。✓ / 鸟不能飞。✗ → 鸟能飞。 2) Đưa về nhà – nghe câu, chạm bầu trời, dòng sông hay mặt đất (3 câu): 鱼能游泳。/ 兔子能跳。/ 鸟能飞。 3) Con vật ở đâu? – nghe câu, chạm tranh: 猫在沙发上。(Māo zài shāfā shang.) / 兔子在床下。(Tùzi zài chuáng xià.) 4) [Chuyển ngữ] (NL1) Rối Leo nói 1 từ tiếng Anh, con nói lại 1 từ tiếng Trung cho rối Xiaomei (mỗi con 1 lượt): fish → 鱼 / swim → 游泳 / rabbit → 兔子 / jump → 跳. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo nói: \"My rabbit can't fly.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: Leo的兔子不能飞。 (Leo de tùzi bù néng fēi.)",
+     "truyen": "动物运动会 (cảnh 1–5) — 狗能跑。鸟能飞。鱼能游泳。兔子能跳。哎呀！鱼不能跑！(Gǒu néng pǎo. Niǎo néng fēi. Yú néng yóuyǒng. Tùzi néng tiào. Āiyā! Yú bù néng pǎo!)",
+     "baihat": "Dogs Can Run · 小狗能跑 (Anh – Trung – Kids), giai điệu Row, Row, Row Your Boat – đoạn Fish: 游游游，小鱼游，/ 能游一整天，/ 游呀游呀，游呀游呀，/ 鱼不能跑哟！(Yóu yóu yóu, xiǎoyú yóu, / néng yóu yì zhěng tiān, / yóu ya yóu ya, yóu ya yóu ya, / yú bù néng pǎo yo!) · Vè đủ: 小狗跑跑跑，小鸟飞飞飞，小鱼游游游，小兔跳跳跳！(Xiǎogǒu pǎo pǎo pǎo, xiǎoniǎo fēi fēi fēi, xiǎoyú yóu yóu yóu, xiǎotù tiào tiào tiào!)"
+    }
+   }
+  },
+  {
+   "buoi": 35,
+   "unit": 8,
+   "label_buoi": "Buổi dạy 35. Unit 8 · Animals – Vận dụng: hội thể thao của các con vật; chữ 鱼, 鸟, 狗; nói theo vần",
+   "web": [
+    {
+     "ngay": 69,
+     "label": "Ngày 69. Unit 8 · Animals – Hiểu cả truyện; làm quen chữ 鱼, 鸟, 狗",
+     "en": {
+      "tu": "Mới: animal, game, mouse/mice | Ôn: dog, cat, bird, fish, rabbit, run, fly, swim, jump | Ôn nhanh: what",
+      "cum": "Mới: the Animal Games / a little mouse / one mouse, two mice | Ôn: one fish, two fish / Fish can't run.",
+      "cau": "It's the Animal Games! / Look! A mouse! The mouse can run. / Look! A mouse! – No, it's a computer mouse! Ha ha!",
+      "truyen": "The Animal Games — The dog can run. The bird can fly. The fish can swim. The rabbit can jump. The fish can't run! Ha ha! Swim, fish, swim!",
+      "video": "Xem ngữ cảnh: truyện The Animal Games bản EN (rồi bản ZH) · Góc Xem thêm: I Can Jump 我会跳 – Little Fox (kho Anh – Trung – Kids) – https://drive.google.com/file/d/17eQUQrjvoLmh0nj8rRdw3gZyGRYbcbR4/view · Tìm YouTube: \"Hickory Dickory Dock nursery rhyme\" (vè chuột, cùng bài với vè 滴答滴答钟 bên tiếng Trung)"
+     },
+     "zh": {
+      "tu": "Mới: 老鼠 lǎoshǔ (= mouse), 运动会 yùndònghuì (= games, sports day; 动物运动会 dòngwù yùndònghuì = the Animal Games) · chữ nhìn: 鱼 yú (= fish), 鸟 niǎo (= bird), 狗 gǒu (= dog) | Ôn: 猫 māo, 兔子 tùzi, 跑 pǎo, 飞 fēi, 游泳 yóuyǒng, 跳 tiào | Ôn nhanh: 什么 shénme | Nghe làm quen: 鼠标 shǔbiāo (= computer mouse, tranh)",
+      "cum": "Mới: 动物运动会 dòngwù yùndònghuì / 小老鼠 xiǎo lǎoshǔ | Ôn: 一条鱼，两条鱼 yì tiáo yú, liǎng tiáo yú / 鱼不能跑 yú bù néng pǎo",
+      "cau": "[Cầu nối] [Cùng tranh, hai tiếng] The mouse can run. ↔ 小老鼠能跑。 [giống: con vật – can ↔ 能 – việc làm · khác: The mouse ↔ 小老鼠 (không có \"the\"; tiếng Trung hay gọi thân mật là 小老鼠)] / 动物运动会！(Dòngwù yùndònghuì!) / 看！小老鼠！小老鼠能跑。(Kàn! Xiǎo lǎoshǔ! Xiǎo lǎoshǔ néng pǎo.) / 鱼能游泳，鱼不能跑。(Yú néng yóuyǒng, yú bù néng pǎo.) / 看！老鼠！— 不，这是鼠标！哈哈！(Kàn! Lǎoshǔ! — Bù, zhè shì shǔbiāo! Hāhā!)",
+      "truyen": "动物运动会 — 狗能跑。鸟能飞。鱼能游泳。兔子能跳。鱼不能跑！哈哈！小鱼，游吧！(Gǒu néng pǎo. Niǎo néng fēi. Yú néng yóuyǒng. Tùzi néng tiào. Yú bù néng pǎo! Hāhā! Xiǎoyú, yóu ba!)",
+      "video": "Xem ngữ cảnh: truyện 动物运动会 bản ZH · Góc Luyện thêm: vè 滴答滴答钟 (Dīdā dīdā zhōng – bản tiếng Trung của Hickory, dickory, dock) · Tìm YouTube: \"Hickory Dickory Dock 中文版 儿歌\" (chưa có video ZH đủ 猫, 鸟, 老鼠)"
+     }
+    },
+    {
+     "ngay": 70,
+     "label": "Ngày 70. Unit 8 · Animals – Ôn unit · Truyện ZH → EN, làm người dẫn hội thể thao",
+     "en": {
+      "tu": "Ôn: dog, bird, fish, rabbit, cat, mouse, run, fly, swim, jump, can | Ôn nhanh: name, how old",
+      "cum": "Ôn: Dogs can run. / Birds can fly. / Fish can swim. / Rabbits can jump.",
+      "cau": "Đóng vai người dẫn (cảnh 1–3 bằng EN): The dog can run. / The bird can fly. / The fish can swim. / Hello! My name is Bông. It's the Animal Games!",
+      "truyen": "The Animal Games — The dog can run. The bird can fly. The fish can swim. The rabbit can jump. The fish can't run! Ha ha! Swim, fish, swim!",
+      "video": "Xem ngữ cảnh: truyện bản ZH rồi bản EN · Góc Xem thêm: Animal Movements Song – Run Jump Fly Swim – KidsNest Channel – https://www.youtube.com/watch?v=EyslpSBZ990"
+     },
+     "zh": {
+      "tu": "Ôn: 狗 gǒu, 鸟 niǎo, 鱼 yú, 兔子 tùzi, 猫 māo, 老鼠 lǎoshǔ, 跑 pǎo, 飞 fēi, 游泳 yóuyǒng, 跳 tiào, 能 néng | Ôn nhanh: 名字 míngzi, 岁 suì",
+      "cum": "Ôn: 狗能跑 gǒu néng pǎo / 鸟能飞 niǎo néng fēi / 鱼能游泳 yú néng yóuyǒng / 兔子能跳 tùzi néng tiào",
+      "cau": "[Cầu nối] [Cùng tranh, hai tiếng] The fish can swim. ↔ 鱼能游泳。 [giống: mỗi con vật một câu, hai tiếng cùng ý · khác: The fish ↔ 鱼 (không có \"the\")] / Đóng vai người dẫn (cảnh 4–5 bằng ZH): 兔子能跳。(Tùzi néng tiào.) / 鱼不能跑！(Yú bù néng pǎo!) / 你好！我叫Bông。动物运动会！(Nǐ hǎo! Wǒ jiào Bông. Dòngwù yùndònghuì!) / [Chuyển ngữ] [Leo nói 1 từ tiếng Anh, con chạm nút loa tiếng Trung đúng để nói lại cho Xiaomei; 2 lượt, 3 nút loa] mouse → 老鼠 / rabbit → 兔子",
+      "truyen": "动物运动会 — 狗能跑。鸟能飞。鱼能游泳。兔子能跳。鱼不能跑！哈哈！小鱼，游吧！(Gǒu néng pǎo. Niǎo néng fēi. Yú néng yóuyǒng. Tùzi néng tiào. Yú bù néng pǎo! Hāhā! Xiǎoyú, yóu ba!)",
+      "video": "Xem ngữ cảnh: truyện bản ZH rồi bản EN · Góc Xem thêm: The Big Green Forest 1: I Can Hop 我会跳 – Little Fox Chinese – https://www.youtube.com/watch?v=RFizy8IKgKs (video nói 会, con chỉ cần nghe hiểu) · 10 个动物宠物的中文 – AliMiMi – https://www.youtube.com/watch?v=wKLVEPt3yGM · Nhìn chữ – Tìm tranh cho chữ: 鱼, 鸟, 狗"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn: animal, game, dog, cat, bird, fish, rabbit, mouse, run, fly, swim, jump | Ôn: name, what",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" · Chuyển ý: \"Now, Chinese! 我们说中文！\" · Khen: \"Well done! 真棒！\" · Tiếng Việt chỉ để nhắc nề nếp · Câu mới buổi này: \"Cả lớp giỏi quá! Good job, everyone! 大家都很棒！(Dàjiā dōu hěn bàng!)\" 1) Ai làm gì? – nghe câu truyện, con chạm nối con vật với động tác (5 câu): The dog can run. / The bird can fly. / The fish can swim. / The rabbit can jump. / The fish can't run! 2) Đếm cá – cô chiếu tranh, con đếm và nói: one fish, two fish, three fish (fish không thêm -s). 3) Đọc theo vần limerick, làm động tác bay và bơi: The bird can fly up in the tree, / The fish can swim – but not like me!",
+     "truyen": "The Animal Games — It's the Animal Games! The dog can run. The bird can fly. The fish can swim. The rabbit can jump. Look! A little mouse! The mouse can run. Oh no! The fish can't run! Ha ha! Swim, fish, swim!",
+     "baihat": "Dogs Can Run · 小狗能跑 (Anh – Trung – Kids), giai điệu Row, Row, Row Your Boat – cả bài (Dog, Bird, Fish): Run, run, run, my dog, / dogs can run all day, / running, running, running, running, / dogs can run and play! / Fly, fly, fly, my bird, / birds can fly up high, / flying, flying, flying, flying, / birds can fly, fly, fly! / Swim, swim, swim, my fish, / fish can swim all day, / swimming, swimming, swimming, swimming, / fish can't run away! · Limerick: The bird can fly up in the tree, / The fish can swim – but not like me! (tree – me) · Vè dân gian (nghe, vỗ tay, không yêu cầu thuộc): Hickory, dickory, dock, / The mouse ran up the clock. / The clock struck one, / The mouse ran down, / Hickory, dickory, dock."
+    },
+    "zh": {
+     "flash": "Ôn: 动物运动会 dòngwù yùndònghuì, 狗 gǒu, 猫 māo, 鸟 niǎo, 鱼 yú, 兔子 tùzi, 老鼠 lǎoshǔ, 跑 pǎo, 飞 fēi, 游泳 yóuyǒng, 跳 tiào | Ôn: 叫 jiào",
+     "slide": "[Cầu nối Anh – Trung] cùng 6 tranh The Animal Games: Leo đọc câu tiếng Anh, Xiaomei đọc câu tiếng Trung; con giơ tay khi nghe can hoặc 能, lắc đầu khi nghe can't hoặc 不能. 1) Ai làm gì? – nghe câu truyện, con chạm nối con vật với động tác (5 câu): 狗能跑。/ 鸟能飞。/ 鱼能游泳。/ 兔子能跳。/ 鱼不能跑！ 2) Đếm cá – cô chiếu tranh, con đếm và nói: 一条鱼，两条鱼，三条鱼 (鱼 không đổi, giống fish không thêm -s). 3) Chữ 鱼, 鸟, 狗 – Hình biến thành chữ: con cá → 鱼, con chim → 鸟, con chó → 狗. 4) Đọc theo vần, làm động tác bay và bơi: 小鸟飞上树，小鱼水里游——和我不一样！(Xiǎoniǎo fēi shàng shù, xiǎoyú shuǐ lǐ yóu — hé wǒ bù yíyàng!) 5) [Chuyển ngữ] (NL1) Rối Leo nói 1 từ tiếng Anh, con nói lại 1 từ tiếng Trung cho rối Xiaomei (mỗi con 1 lượt): mouse → 老鼠 / cat → 猫 / fish → 鱼. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo nói: \"The little mouse can run.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 小老鼠能跑。 (Xiǎo lǎoshǔ néng pǎo.)",
+     "truyen": "动物运动会 — 动物运动会！狗能跑。鸟能飞。鱼能游泳。兔子能跳。看！小老鼠！小老鼠能跑。哎呀！鱼不能跑！哈哈！小鱼，游吧！(Dòngwù yùndònghuì! Gǒu néng pǎo. Niǎo néng fēi. Yú néng yóuyǒng. Tùzi néng tiào. Kàn! Xiǎo lǎoshǔ! Xiǎo lǎoshǔ néng pǎo. Āiyā! Yú bù néng pǎo! Hāhā! Xiǎoyú, yóu ba!)",
+     "baihat": "Dogs Can Run · 小狗能跑 (Anh – Trung – Kids), giai điệu Row, Row, Row Your Boat – cả bài: 跑跑跑，小狗跑，/ 能跑一整天，/ 跑呀跑呀，跑呀跑呀，/ 又跑又玩耍！(Pǎo pǎo pǎo, xiǎogǒu pǎo, / néng pǎo yì zhěng tiān, / pǎo ya pǎo ya, pǎo ya pǎo ya, / yòu pǎo yòu wánshuǎ!) / 飞飞飞，小鸟飞，/ 鸟能飞得高，/ 飞呀飞呀，飞呀飞呀，/ 小鸟真能飞！(Fēi fēi fēi, xiǎoniǎo fēi, / niǎo néng fēi de gāo, / fēi ya fēi ya, fēi ya fēi ya, / xiǎoniǎo zhēn néng fēi!) / 游游游，小鱼游，/ 能游一整天，/ 游呀游呀，游呀游呀，/ 鱼不能跑哟！(Yóu yóu yóu, xiǎoyú yóu, / néng yóu yì zhěng tiān, / yóu ya yóu ya, yóu ya yóu ya, / yú bù néng pǎo yo!) · Limerick: 小鸟飞上树，/ 小鱼水里游——和我不一样！(Xiǎoniǎo fēi shàng shù, / xiǎoyú shuǐ lǐ yóu — hé wǒ bù yíyàng!) · Vè (bản tiếng Trung của Hickory, dickory, dock; nghe, vỗ tay, không yêu cầu thuộc): 滴答滴答钟，小老鼠爬上钟，钟敲一下，小老鼠跑下来，滴答滴答钟。(Dīdā dīdā zhōng, xiǎo lǎoshǔ pá shàng zhōng, zhōng qiāo yí xià, xiǎo lǎoshǔ pǎo xiàlai, dīdā dīdā zhōng.)"
+    }
+   }
+  },
+  {
+   "buoi": 36,
+   "unit": 8,
+   "label_buoi": "Buổi dạy 36. Unit 8 · Animals – Vận dụng: mỗi con vật một tài; chọn tiếng theo người hỏi; khoa học nhí",
+   "web": [
+    {
+     "ngay": 71,
+     "label": "Ngày 71. Unit 8 · Animals – Ôn không tranh · Anh hay Trung?",
+     "en": {
+      "tu": "Ôn (nghe, không có tranh mẫu): rabbit, fish, swim, jump | Ôn nhanh: name, old, what",
+      "cum": "Ôn: Fish can't run. / Fish can swim. / Rabbits can jump.",
+      "cau": "[Anh hay Trung? 6 câu, con chạm ô xanh hoặc ô đỏ] Fish can't run. / How do you feel, fish? / I am sad. [và 3 câu ZH] / The fish can swim. I am happy!",
+      "truyen": "The Sad Fish — The fish: I can't run! I am sad. Rabbit: How do you feel, fish? The fish: I am sad. Bird: Fish can swim! The fish: Swim, swim! I am happy!",
+      "video": "Xem ngữ cảnh: Can You Jump? – Maple Leaf Learning – https://www.youtube.com/watch?v=Q3x4ns95WiE"
+     },
+     "zh": {
+      "tu": "Ôn (nghe, không có tranh mẫu): 兔子 tùzi, 鱼 yú, 游泳 yóuyǒng, 跳 tiào | Ôn nhanh: 名字 míngzi, 岁 suì, 什么 shénme",
+      "cum": "Ôn: 鱼不能跑 yú bù néng pǎo / 鱼能游泳 yú néng yóuyǒng / 兔子能跳 tùzi néng tiào",
+      "cau": "[Cầu nối] [Cùng tranh, hai tiếng] How do you feel, fish? – I am sad. ↔ 小鱼，你心情怎么样？— 我很难过。 [giống: câu cảm xúc Unit 5 dùng cho con vật Unit 8 · khác: tiếng Anh có am, tiếng Trung không có am mà thêm 很 trước cảm xúc (我很难过)] / Anh hay Trung?: 鱼不能跑。(Yú bù néng pǎo.) / 小鱼，你心情怎么样？(Xiǎoyú, nǐ xīnqíng zěnmeyàng?) / 我很难过。(Wǒ hěn nánguò.) / 鱼能游泳。我很开心！(Yú néng yóuyǒng. Wǒ hěn kāixīn!)",
+      "truyen": "难过的小鱼 — 小鱼：我不能跑！我很难过。兔子：小鱼，你心情怎么样？小鱼：我很难过。小鸟：鱼能游泳！小鱼：游吧！我很开心！(Xiǎoyú: Wǒ bù néng pǎo! Wǒ hěn nánguò. Tùzi: Xiǎoyú, nǐ xīnqíng zěnmeyàng? Xiǎoyú: Wǒ hěn nánguò. Xiǎoniǎo: Yú néng yóuyǒng! Xiǎoyú: Yóu ba! Wǒ hěn kāixīn!)",
+      "video": "Xem ngữ cảnh: The Big Green Forest 1: I Can Hop 我会跳 – Little Fox Chinese – https://www.youtube.com/watch?v=RFizy8IKgKs (video nói 会, con chỉ cần nghe hiểu)"
+     }
+    },
+    {
+     "ngay": 72,
+     "label": "Ngày 72. Unit 8 · Animals – Phiên dịch nhí · Nói con vật làm được gì",
+     "en": {
+      "tu": "Ôn: dog, cat, bird, fish, rabbit, mouse, run, fly, swim, jump, can, animal | Ôn nhanh: how old, name",
+      "cum": "Ôn: Birds can fly. / Rabbits can jump. / Fish can't run. / Dogs can't fly.",
+      "cau": "Phiên dịch nhí (EN → ZH, con chạm nút loa đúng): The bird can fly. → 鸟能飞。/ The rabbit can jump. → 兔子能跳。/ The fish can't run! → 鱼不能跑！ / My cat can jump. My cat can't fly!",
+      "truyen": "The Animal Games — The dog can run. The bird can fly. The fish can swim. The rabbit can jump. The fish can't run! Ha ha! Swim, fish, swim!",
+      "video": "Góc Xem thêm: Animal Movements Song – Run Jump Fly Swim – KidsNest Channel – https://www.youtube.com/watch?v=EyslpSBZ990"
+     },
+     "zh": {
+      "tu": "Ôn: 狗 gǒu, 猫 māo, 鸟 niǎo, 鱼 yú, 兔子 tùzi, 老鼠 lǎoshǔ, 跑 pǎo, 飞 fēi, 游泳 yóuyǒng, 跳 tiào, 能 néng, 动物 dòngwù | Ôn nhanh: 叫 jiào, 岁 suì",
+      "cum": "Ôn: 鸟能飞 niǎo néng fēi / 兔子能跳 tùzi néng tiào / 鱼不能跑 yú bù néng pǎo / 狗不能飞 gǒu bù néng fēi",
+      "cau": "[Cầu nối] [Cùng tranh, hai tiếng] My cat can jump. ↔ 我的猫能跳。 [giống: My cat ↔ 我的猫, can ↔ 能 · khác: can't fly ↔ 不能飞] / Phiên dịch nhí (ZH → EN): 狗能跑。(Gǒu néng pǎo.) → The dog can run. / 鱼能游泳。(Yú néng yóuyǒng.) → The fish can swim. / 狗不能飞。(Gǒu bù néng fēi.) → Dogs can't fly. / 我的猫能跳。我的猫不能飞！(Wǒ de māo néng tiào. Wǒ de māo bù néng fēi!)",
+      "truyen": "动物运动会 — 狗能跑。鸟能飞。鱼能游泳。兔子能跳。鱼不能跑！哈哈！小鱼，游吧！(Gǒu néng pǎo. Niǎo néng fēi. Yú néng yóuyǒng. Tùzi néng tiào. Yú bù néng pǎo! Hāhā! Xiǎoyú, yóu ba!)",
+      "video": "Góc Xem thêm: The Big Green Forest 1: I Can Hop 我会跳 – Little Fox Chinese – https://www.youtube.com/watch?v=RFizy8IKgKs (video nói 会, con chỉ cần nghe hiểu) · 10 个动物宠物的中文 – AliMiMi – https://www.youtube.com/watch?v=wKLVEPt3yGM"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn: dog, cat, bird, fish, rabbit, mouse, run, fly, swim, jump, can, can't | Ôn: sad, happy, How do you feel?",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" · Chuyển ý: \"Now, Chinese! 我们说中文！\" · Khen: \"Well done! 真棒！\" · Tiếng Việt chỉ để nhắc nề nếp · \"Good job, everyone! 大家都很棒！\" · ôn các câu Unit 5–8 1) NL6 – Leo hỏi Can birds fly?, Can a fish run?; con đáp bằng tiếng Anh: Birds can fly. / Fish can't run. 2) Khoa học nhí – nghe câu, chạm nơi con vật sống (dưới nước, trên trời, trên mặt đất) (4 câu): Fish can swim. / Birds can fly. / Dogs can run. / Rabbits can jump. 3) Mỗi con nói về con vật mình thích: My cat can jump. My cat can't fly. (Nghe hiểu thêm: Can you jump? – Yes!)",
+     "truyen": "The Animal Games (diễn, mỗi nhóm một con vật) — Dog: I can run! Bird: I can fly! Fish: I can swim! Rabbit: I can jump! Fish: Oh no! I can't run! I am sad. All: Ha ha! Swim, fish, swim! Fish: I am happy!",
+     "baihat": "Dogs Can Run · 小狗能跑 (Anh – Trung – Kids), giai điệu Row, Row, Row Your Boat – cả bài, biểu diễn có động tác: Run, run, run, my dog, / dogs can run all day, / running, running, running, running, / dogs can run and play! / Fly, fly, fly, my bird, / birds can fly up high, / flying, flying, flying, flying, / birds can fly, fly, fly! / Swim, swim, swim, my fish, / fish can swim all day, / swimming, swimming, swimming, swimming, / fish can't run away! · Vè (biểu diễn): Run, dog, run! Fly, bird, fly! Swim, fish, swim! Jump, rabbit, high!"
+    },
+    "zh": {
+     "flash": "Ôn: 狗 gǒu, 猫 māo, 鸟 niǎo, 鱼 yú, 兔子 tùzi, 老鼠 lǎoshǔ, 跑 pǎo, 飞 fēi, 游泳 yóuyǒng, 跳 tiào, 能 néng, 不能 bù néng | Ôn: 难过 nánguò, 开心 kāixīn, 你心情怎么样？nǐ xīnqíng zěnmeyàng",
+     "slide": "[Cầu nối Anh – Trung] khoa học nhí – cùng một hiểu biết (cá sống dưới nước, chim bay trên trời) nói bằng hai tiếng: Fish can swim. ↔ 鱼能游泳。/ Birds can fly. ↔ 鸟能飞。 1) NL6 – Xiaomei hỏi 鸟能飞吗？/ 鱼能跑吗？, con đáp bằng tiếng Trung: 鸟能飞。/ 鱼不能跑。; Leo hỏi tiếng Anh thì con đáp tiếng Anh. 2) Khoa học nhí – nghe câu, chạm nơi con vật sống (dưới nước, trên trời, trên mặt đất) (4 câu): 鱼能游泳。/ 鸟能飞。/ 狗能跑。/ 兔子能跳。 3) Mỗi con nói về con vật mình thích: 我的猫能跳。我的猫不能飞。(Nghe hiểu thêm: 你能跳吗？— 能！) 4) [Chuyển ngữ] (NL1) Rối Leo nói 1 từ tiếng Anh, con nói lại 1 từ tiếng Trung cho rối Xiaomei (mỗi con 1 lượt): swim → 游泳 / fly → 飞 / jump → 跳. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo nói: \"Can your cat jump?\" (Leo nhờ con hỏi giúp) → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 你的猫能跳吗？ (Nǐ de māo néng tiào ma?)",
+     "truyen": "动物运动会 (diễn) — 狗：我能跑！鸟：我能飞！鱼：我能游泳！兔子：我能跳！鱼：哎呀！我不能跑！我很难过。大家：哈哈！小鱼，游吧！鱼：我很开心！(Gǒu: Wǒ néng pǎo! Niǎo: Wǒ néng fēi! Yú: Wǒ néng yóuyǒng! Tùzi: Wǒ néng tiào! Yú: Āiyā! Wǒ bù néng pǎo! Wǒ hěn nánguò. Dàjiā: Hāhā! Xiǎoyú, yóu ba! Yú: Wǒ hěn kāixīn!)",
+     "baihat": "Dogs Can Run · 小狗能跑 (Anh – Trung – Kids), giai điệu Row, Row, Row Your Boat – cả bài, biểu diễn: 跑跑跑，小狗跑，/ 能跑一整天，/ 跑呀跑呀，跑呀跑呀，/ 又跑又玩耍！(Pǎo pǎo pǎo, xiǎogǒu pǎo, / néng pǎo yì zhěng tiān, / pǎo ya pǎo ya, pǎo ya pǎo ya, / yòu pǎo yòu wánshuǎ!) / 飞飞飞，小鸟飞，/ 鸟能飞得高，/ 飞呀飞呀，飞呀飞呀，/ 小鸟真能飞！(Fēi fēi fēi, xiǎoniǎo fēi, / niǎo néng fēi de gāo, / fēi ya fēi ya, fēi ya fēi ya, / xiǎoniǎo zhēn néng fēi!) / 游游游，小鱼游，/ 能游一整天，/ 游呀游呀，游呀游呀，/ 鱼不能跑哟！(Yóu yóu yóu, xiǎoyú yóu, / néng yóu yì zhěng tiān, / yóu ya yóu ya, yóu ya yóu ya, / yú bù néng pǎo yo!) · Vè (biểu diễn): 小狗跑跑跑，小鸟飞飞飞，小鱼游游游，小兔跳跳跳！(Xiǎogǒu pǎo pǎo pǎo, xiǎoniǎo fēi fēi fēi, xiǎoyú yóu yóu yóu, xiǎotù tiào tiào tiào!)"
+    }
+   }
+  },
+  {
+   "buoi": 37,
+   "unit": "",
+   "label_buoi": "Buổi dạy 37. Tuần 19 · Ôn và kiểm tra chặng 2 (Unit 5–8) – Trò chơi quét lại Unit 1–8",
+   "web": [
+    {
+     "ngay": 73,
+     "label": "Ngày 73. Ôn chặng 2 · Quét Unit 1, 2, 5 – chào hỏi, tên tuổi, cảm xúc",
+     "en": {
+      "tu": "Ôn: hello, goodbye, teacher, friend, mommy, daddy, see you, tomorrow, name, birthday, how old | Ôn U5: happy, sad, sleepy, scared, angry, tired",
+      "cum": "Ôn: Hello, teacher! / See you tomorrow! / What's your name? / How old are you? / How do you feel? / I am happy.",
+      "cau": "Hello, teacher! I am happy. / My name is Bông. I'm six. / How do you feel? – I am sleepy. / Goodbye, Mommy! See you tomorrow!",
+      "truyen": "Bông's Happy Morning — Bông: I am sleepy. Mommy: How do you feel, Bông? Bông: I am happy! It's my birthday! Bông: Goodbye, Mommy! Bông: Hello, teacher! Hello, friend! My name is Bông. I'm six!",
+      "video": "Xem lại: Hello Song for Kids – Greeting Song – https://www.youtube.com/watch?v=gghDRJVxFxU · What is your name? – LucyMax English for Kids – https://www.youtube.com/watch?v=78GhhuwR7M4 · How Do You Feel Today? – Very Young Learners – https://www.youtube.com/watch?v=a5W3sno2D0M"
+     },
+     "zh": {
+      "tu": "Ôn: 你好 nǐ hǎo, 再见 zàijiàn, 老师 lǎoshī, 朋友 péngyou, 妈妈 māma, 爸爸 bàba, 明天 míngtiān, 叫 jiào, 名字 míngzi, 生日 shēngrì, 岁 suì | Ôn U5: 开心 kāixīn, 难过 nánguò, 困 kùn, 害怕 hàipà, 生气 shēngqì, 累 lèi",
+      "cum": "Ôn: 老师好 lǎoshī hǎo / 明天见 míngtiān jiàn / 你叫什么 nǐ jiào shénme / 你几岁 nǐ jǐ suì / 你心情怎么样 nǐ xīnqíng zěnmeyàng / 我很开心 wǒ hěn kāixīn",
+      "cau": "[Cầu nối] [Cùng tranh, hai tiếng] Goodbye, Mommy! See you tomorrow! ↔ 妈妈，再见！明天见！ [giống: cùng lời chào · khác: tiếng Trung gọi tên trước (妈妈，再见)] / 老师好！我很开心。(Lǎoshī hǎo! Wǒ hěn kāixīn.) / 我叫Bông，我六岁。(Wǒ jiào Bông, wǒ liù suì.) / 你感觉怎么样？— 我很困。(Nǐ gǎnjué zěnmeyàng? — Wǒ hěn kùn.) / 妈妈，再见！明天见！(Māma, zàijiàn! Míngtiān jiàn!)",
+      "truyen": "Bông开心的早上 (Bông kāixīn de zǎoshang) — Bông：我很困。妈妈：Bông，你心情怎么样？Bông：我很开心！今天是我的生日！Bông：妈妈，再见！Bông：老师好！朋友，你好！我叫Bông，我六岁！(Bông: Wǒ hěn kùn. Māma: Bông, nǐ xīnqíng zěnmeyàng? Bông: Wǒ hěn kāixīn! Jīntiān shì wǒ de shēngrì! Bông: Māma, zàijiàn! Bông: Lǎoshī hǎo! Péngyou, nǐ hǎo! Wǒ jiào Bông, wǒ liù suì!)",
+      "video": "Xem lại: Hello Song 你好歌 – Little Fox Chinese – https://www.youtube.com/watch?v=m_rDIzj6DRE · What's Your Name? 你叫什么名字？– Little Fox Chinese – https://www.youtube.com/watch?v=7ZMc8JJYA94 · My Feelings and Emotions 情绪歌 – 小不點中文 A Little Chinese – https://www.youtube.com/watch?v=LLwDCgvY0Mw"
+     }
+    },
+    {
+     "ngay": 74,
+     "label": "Ngày 74. Ôn chặng 2 · Quét Unit 3, 4, 6 – gia đình, cơ thể, đồ dùng học tập",
+     "en": {
+      "tu": "Ôn: family, grandpa, grandma, big brother, little sister, who, head, eyes, ears, nose, mouth, hands, feet, touch | Ôn U6: book, pen, schoolbag, ruler, eraser, bag, new, look",
+      "cum": "Ôn: my grandpa / my big sister / I have big eyes. / Touch your nose! / What is this? / This is a pen. / That is a ruler.",
+      "cau": "[Ngữ pháp: Who is he? – câu hỏi tiếng Anh, có tên người thân] Who is he? – He is my grandpa. / I have a small nose. Touch your nose! / Look! This is my new schoolbag. / What is that? – That is my big brother's book.",
+      "truyen": "Grandpa's New Schoolbag — Grandpa: Look, Bông! This is a new schoolbag. Bông: I am happy! What is this? Grandma: This is a pen. Bông: What is that? Big brother: That is a ruler. Bông: Thank you, Grandpa! I have a big family!",
+      "video": "Xem lại: The People In My Family – Super Simple Songs – https://www.youtube.com/watch?v=yDua9ms9_eg · Head Shoulders Knees & Toes (Sing It) – Super Simple Songs – https://www.youtube.com/watch?v=ZanHgPprl-0 · What's this? – It's a pencil. Eraser. (Stationery) – English Singsing – https://www.youtube.com/watch?v=mTisVqSrfF0"
+     },
+     "zh": {
+      "tu": "Ôn: 家人 jiārén, 爷爷 yéye, 奶奶 nǎinai, 哥哥 gēge, 姐姐 jiějie, 妹妹 mèimei, 谁 shéi, 头 tóu, 眼睛 yǎnjing, 耳朵 ěrduo, 鼻子 bízi, 嘴巴 zuǐba, 手 shǒu, 脚 jiǎo, 摸摸 mōmo | Ôn U6: 书 shū, 笔 bǐ, 书包 shūbāo, 尺子 chǐzi, 橡皮 xiàngpí, 新 xīn, 那 nà",
+      "cum": "Ôn: 我爷爷 wǒ yéye / 我姐姐 wǒ jiějie / 我有大大的眼睛 wǒ yǒu dàdà de yǎnjing / 摸摸鼻子 mōmo bízi / 这是什么 zhè shì shénme / 这是笔 zhè shì bǐ / 那是尺子 nà shì chǐzi",
+      "cau": "[Cầu nối] [Cùng tranh, hai tiếng] That is my big brother's book. ↔ 那是我哥哥的书。 [giống: that ↔ 那 · khác: 's ↔ 的; big brother ↔ 哥哥 (một từ)] / 这是谁？— 这是我爷爷。(Zhè shì shéi? — Zhè shì wǒ yéye.) / 我有小小的鼻子。摸摸鼻子！(Wǒ yǒu xiǎoxiǎo de bízi. Mōmo bízi!) / 看！这是我的新书包。(Kàn! Zhè shì wǒ de xīn shūbāo.) / 那是什么？— 那是我哥哥的书。(Nà shì shénme? — Nà shì wǒ gēge de shū.) / [Chuyển ngữ] [Leo nói 1 từ tiếng Anh, con chạm nút loa tiếng Trung đúng để nói lại cho Xiaomei; 2 lượt, 3 nút loa] grandpa → 爷爷 / nose → 鼻子",
+      "truyen": "爷爷的新书包 — 爷爷：Bông，看！这是新书包。Bông：我很开心！这是什么？奶奶：这是笔。Bông：那是什么？哥哥：那是尺子。Bông：谢谢爷爷！我的家人真多！(Yéye: Bông, kàn! Zhè shì xīn shūbāo. Bông: Wǒ hěn kāixīn! Zhè shì shénme? Nǎinai: Zhè shì bǐ. Bông: Nà shì shénme? Gēge: Nà shì chǐzi. Bông: Xièxie yéye! Wǒ de jiārén zhēn duō!)",
+      "video": "Xem lại: 我爱家人 I Love My Family – EduChinese – https://www.youtube.com/watch?v=0z38T38Sv60 · 头肩膀膝盖脚 – 朱妮托尼 – https://www.youtube.com/watch?v=-7BDwnfA5IE · School Supplies in Chinese 文具歌 – AliMiMi – https://www.youtube.com/watch?v=wtF5hMyBkjA"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn U1–U4: hello, goodbye, teacher, friend, name, birthday, grandpa, big sister, head, nose, hands | Ôn U5–U8: happy, sad, sleepy, tired, book, pen, ruler, bed, sofa, on, under, dog, bird, fish, run, fly, swim",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" · Chuyển ý: \"Now, Chinese! 我们说中文！\" · Khen: \"Well done! 真棒！\" · Tiếng Việt chỉ để nhắc nề nếp · không thêm câu mới; dùng lại Listen! 听！/ Your turn! 该你了！/ Try again! 再试一次！ 1) Bingo tranh 9 ô (mỗi ô một tranh của Unit 1–8; cô đọc, con chạm và đặt nút) : hello / birthday / grandpa / nose / happy / ruler / sofa / fish / jump. 2) Vòng quay chủ đề – kim dừng ở unit nào, cô hỏi câu của unit đó, con trả lời (8 câu): What's your name? / How old are you? / Who is he? / How do you feel? / What is this? / Where is the book? / Can a fish run? / Touch your nose! 3) Leo nói tiếng Anh – Xiaomei nói tiếng Trung (NL6): rối đưa đồ hoặc tranh, con đáp đúng tiếng của rối.",
+     "truyen": "Bông's Busy Day — Bông: Hello, teacher! I am happy. My name is Bông. I'm six. Look! This is my new schoolbag. Oh no! Where is my book? Not under the chair. Leo: The book is on the sofa! Bông: Thank you, Leo! Teacher: Look! Birds can fly. Fish can swim. Fish can't run! Bông: Ha ha! Goodbye, teacher! See you tomorrow!",
+     "baihat": "Liên khúc Anh – Trung – Kids (mỗi bài một đoạn): Hello, Teacher (Mary Had a Little Lamb): Hello, teacher, hello, friends, / Hello, hello, hello! · How Do You Feel? (Twinkle, Twinkle, Little Star): Tell me, how do you feel now? / I am happy, happy, wow! · What Is This? (Skip to My Lou): What is this? It is a book, / Look, look, look at my book! · Where Is My Book? (Oh Where, Oh Where Has My Little Dog Gone?): Oh where, oh where is my book today? · Dogs Can Run (Row, Row, Row Your Boat): Run, run, run, my dog, / dogs can run all day"
+    },
+    "zh": {
+     "flash": "Ôn U1–U4: 你好 nǐ hǎo, 再见 zàijiàn, 老师 lǎoshī, 朋友 péngyou, 叫 jiào, 生日 shēngrì, 爷爷 yéye, 姐姐 jiějie, 头 tóu, 鼻子 bízi, 手 shǒu | Ôn U5–U8: 开心 kāixīn, 难过 nánguò, 困 kùn, 累 lèi, 书 shū, 笔 bǐ, 尺子 chǐzi, 床 chuáng, 沙发 shāfā, 上 shàng, 下 xià, 狗 gǒu, 鸟 niǎo, 鱼 yú, 跑 pǎo, 飞 fēi, 游泳 yóuyǒng",
+     "slide": "[Cầu nối Anh – Trung] Bingo hai tiếng – cùng ô tranh: cô đọc tiếng Anh, con chạm ô rồi nói từ tiếng Trung của ô đó (happy ↔ 开心, ruler ↔ 尺子, sofa ↔ 沙发, fish ↔ 鱼). 1) Bingo tranh 9 ô tiếng Trung (cô đọc, con chạm): 你好 / 生日 / 爷爷 / 鼻子 / 开心 / 尺子 / 沙发 / 鱼 / 跳. 2) Nhìn chữ – Tìm tranh cho chữ (chữ đã gặp Unit 1–8): 心 → trái tim / 子 → em bé / 上, 下 → quả bóng trên, dưới bàn / 鱼, 鸟, 狗 → con cá, con chim, con chó. 3) Vòng quay chủ đề – kim dừng ở unit nào, Xiaomei hỏi câu của unit đó, con đáp bằng tiếng Trung (8 câu): 你叫什么？/ 你几岁？/ 这是谁？/ 你心情怎么样？/ 这是什么？/ 书在哪儿？/ 鱼能跑吗？/ 摸摸鼻子！; NL6: rối Leo hoặc Xiaomei đưa đồ, con đáp đúng tiếng của rối. 4) [Chuyển ngữ] (NL1) Rối Leo nói 1 từ tiếng Anh, con nói lại 1 từ tiếng Trung cho rối Xiaomei (mỗi con 1 lượt): grandpa → 爷爷 / nose → 鼻子 / happy → 开心 / book → 书. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo nói: \"My grandpa is happy.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: Leo的爷爷很开心。 (Leo de yéye hěn kāixīn.)",
+     "truyen": "Bông忙碌的一天 (Bông mánglù de yì tiān) — Bông：老师好！我很开心。我叫Bông，我六岁。看！这是我的新书包。哎呀！我的书在哪儿？不在椅子下。Xiaomei：书在沙发上！Bông：谢谢你，Xiaomei！老师：看！鸟能飞。鱼能游泳。鱼不能跑！Bông：哈哈！老师，再见！明天见！(Bông: Lǎoshī hǎo! Wǒ hěn kāixīn. Wǒ jiào Bông, wǒ liù suì. Kàn! Zhè shì wǒ de xīn shūbāo. Āiyā! Wǒ de shū zài nǎr? Bú zài yǐzi xià. Xiaomei: Shū zài shāfā shang! Bông: Xièxie nǐ, Xiaomei! Lǎoshī: Kàn! Niǎo néng fēi. Yú néng yóuyǒng. Yú bù néng pǎo! Bông: Hāhā! Lǎoshī, zàijiàn! Míngtiān jiàn!)",
+     "baihat": "Liên khúc Anh – Trung – Kids (tiếng Trung): 老师好 (Mary Had a Little Lamb): 老师好呀，朋友好，/ 你好你好你好！(Lǎoshī hǎo ya, péngyou hǎo, / nǐ hǎo nǐ hǎo nǐ hǎo!) · 你今天心情怎样？(Twinkle, Twinkle): 你今天心情怎样？/ 我很开心哈哈哈！(Nǐ jīntiān xīnqíng zěnyàng? / Wǒ hěn kāixīn hā hā hā!) · 这是什么？(Skip to My Lou): 这是什么？这是书，/ 看看看，这是书！(Zhè shì shénme? Zhè shì shū, / kàn kàn kàn, zhè shì shū!) · 我的书呀在哪儿？: 我的书呀今天在哪儿？(Wǒ de shū ya jīntiān zài nǎr?) · 小狗能跑 (Row, Row, Row Your Boat): 跑跑跑，小狗跑，/ 能跑一整天 (Pǎo pǎo pǎo, xiǎogǒu pǎo, / néng pǎo yì zhěng tiān)"
+    }
+   }
+  },
+  {
+   "buoi": 38,
+   "unit": "",
+   "label_buoi": "Buổi dạy 38. Tuần 19 · Ôn và kiểm tra chặng 2 (Unit 5–8) – Kiểm tra chặng 2 (nghe – chạm, nói, chuyển ngữ)",
+   "web": [
+    {
+     "ngay": 75,
+     "label": "Ngày 75. Ôn chặng 2 · Quét Unit 7, 8 và tổng hợp Unit 1–8",
+     "en": {
+      "tu": "Ôn U7: bed, chair, table, sofa, on, under, not, where, thank you | Ôn U8: dog, cat, bird, fish, rabbit, mouse, run, fly, swim, jump, can | Ôn nhanh: kitten, puppy, happy",
+      "cum": "Ôn: Where is the book? / The book is on the table. / Not under the chair. / Birds can fly. / Fish can't run.",
+      "cau": "Where is the kitten? – The kitten is on the sofa. / The puppy is under the bed. Dogs can run! / Fish can swim. Fish can't run. / Thank you, Leo!",
+      "truyen": "Where Is My Kitten? — Bông: Where is my kitten? Not on the bed. Not under the chair. Leo: Look! The kitten is on the sofa! Bông: Thank you, Leo! The kitten can jump! I am happy!",
+      "video": "Xem lại: In On Under Song – English Vitamin Bubbles – https://www.youtube.com/watch?v=dupaTS-c8Xc · Animal Movements Song – Run Jump Fly Swim – KidsNest Channel – https://www.youtube.com/watch?v=EyslpSBZ990"
+     },
+     "zh": {
+      "tu": "Ôn U7: 床 chuáng, 椅子 yǐzi, 桌子 zhuōzi, 沙发 shāfā, 上 shàng, 下 xià, 不 bù, 哪儿 nǎr, 谢谢 xièxie | Ôn U8: 狗 gǒu, 猫 māo, 鸟 niǎo, 鱼 yú, 兔子 tùzi, 老鼠 lǎoshǔ, 跑 pǎo, 飞 fēi, 游泳 yóuyǒng, 跳 tiào, 能 néng | Ôn nhanh: 小猫 xiǎomāo, 小狗 xiǎogǒu, 开心 kāixīn",
+      "cum": "Ôn: 书在哪儿 shū zài nǎr / 书在桌子上 shū zài zhuōzi shang / 不在椅子下 bú zài yǐzi xià / 鸟能飞 niǎo néng fēi / 鱼不能跑 yú bù néng pǎo",
+      "cau": "[Cầu nối] [Cùng tranh, hai tiếng] The kitten is on the sofa. ↔ 小猫在沙发上。 [giống: kitten ↔ 小猫 · khác: on đứng trước ↔ 上 đứng sau] / 小猫在哪儿？— 小猫在沙发上。(Xiǎomāo zài nǎr? — Xiǎomāo zài shāfā shang.) / 小狗在床下。狗能跑！(Xiǎogǒu zài chuáng xià. Gǒu néng pǎo!) / 鱼能游泳，鱼不能跑。(Yú néng yóuyǒng, yú bù néng pǎo.) / 谢谢你，Xiaomei！(Xièxie nǐ, Xiaomei!)",
+      "truyen": "我的小猫在哪儿？— Bông：我的小猫在哪儿？不在床上。不在椅子下。Xiaomei：看！小猫在沙发上！Bông：谢谢你，Xiaomei！小猫能跳！我很开心！(Bông: Wǒ de xiǎomāo zài nǎr? Bú zài chuáng shang. Bú zài yǐzi xià. Xiaomei: Kàn! Xiǎomāo zài shāfā shang! Bông: Xièxie nǐ, Xiaomei! Xiǎomāo néng tiào! Wǒ hěn kāixīn!)",
+      "video": "Xem lại: Tìm YouTube: \"上下 方位 儿歌 幼儿\" (cùng chủ đề trên – dưới với In On Under Song) · The Big Green Forest 1: I Can Hop 我会跳 – Little Fox Chinese – https://www.youtube.com/watch?v=RFizy8IKgKs · Góc Xem thêm: Home and Furniture 家具 – Kangaroo Friends – https://www.youtube.com/watch?v=ktFPfIu6Fv4"
+     }
+    },
+    {
+     "ngay": 76,
+     "label": "Ngày 76. Ôn chặng 2 · Bài luyện trước kiểm tra (chạm tranh, Unit 5–8, nhiễu Unit 1–4)",
+     "en": {
+      "tu": "Ôn (nghe, không có tranh mẫu): happy, tired, schoolbag, ruler, sofa, under, bird, swim | Phương án nhiễu: teacher, birthday, grandma, nose",
+      "cum": "Ôn: How do you feel? / What is that? / Where is the book? / Dogs can run.",
+      "cau": "Nghe câu, chạm tranh (8 câu, mỗi câu 3 tranh, có 1 tranh của Unit 1–4): I am tired. / That is a ruler. / The book is under the chair. / Birds can fly. / I am scared! / This is my schoolbag. / The cat is on the sofa. / Fish can swim.",
+      "truyen": "Leo's Day — Leo: I am sleepy. Leo: Look! This is my new schoolbag. Leo: Where is my pen? It is under the table. Leo: My dog can run. Leo: How do you feel? I am happy!",
+      "video": "Góc Xem thêm (sau khi làm bài): Can You Jump? – Maple Leaf Learning – https://www.youtube.com/watch?v=Q3x4ns95WiE"
+     },
+     "zh": {
+      "tu": "Ôn (nghe, không có tranh mẫu): 开心 kāixīn, 累 lèi, 书包 shūbāo, 尺子 chǐzi, 沙发 shāfā, 下 xià, 鸟 niǎo, 游泳 yóuyǒng | Phương án nhiễu: 老师 lǎoshī, 生日 shēngrì, 奶奶 nǎinai, 鼻子 bízi",
+      "cum": "Ôn: 你心情怎么样 nǐ xīnqíng zěnmeyàng / 那是什么 nà shì shénme / 书在哪儿 shū zài nǎr / 狗能跑 gǒu néng pǎo",
+      "cau": "[Cầu nối] [Cùng tranh, hai tiếng] I am tired. ↔ 我很累。/ Fish can swim. ↔ 鱼能游泳。 [giống: một tranh, hai câu cùng nghĩa · khác: tiếng Anh có am, tiếng Trung không có am mà thêm 很 trước cảm xúc (我很累); can ↔ 能 · truyện song song: Leo: I am sleepy. ↔ Xiaomei: 我很困。· cùng câu, hai bạn] / Nghe câu, chạm tranh (8 câu): 我很累。(Wǒ hěn lèi.) / 那是尺子。(Nà shì chǐzi.) / 书在椅子下。(Shū zài yǐzi xià.) / 鸟能飞。(Niǎo néng fēi.) / 我很害怕！(Wǒ hěn hàipà!) / 这是我的书包。(Zhè shì wǒ de shūbāo.) / 猫在沙发上。(Māo zài shāfā shang.) / 鱼能游泳。(Yú néng yóuyǒng.) / [Chuyển ngữ] [Leo nói 1 từ tiếng Anh, con chạm nút loa tiếng Trung đúng để nói lại cho Xiaomei; 2 lượt, 3 nút loa] scared → 害怕 / sofa → 沙发",
+      "truyen": "Xiaomei的一天 — Xiaomei：我很困。Xiaomei：看！这是我的新书包。Xiaomei：我的笔在哪儿？在桌子下。Xiaomei：我的小狗能跑。Xiaomei：你心情怎么样？我很开心！(Xiaomei: Wǒ hěn kùn. Xiaomei: Kàn! Zhè shì wǒ de xīn shūbāo. Xiaomei: Wǒ de bǐ zài nǎr? Zài zhuōzi xià. Xiaomei: Wǒ de xiǎogǒu néng pǎo. Xiaomei: Nǐ xīnqíng zěnmeyàng? Wǒ hěn kāixīn!)",
+      "video": "Góc Xem thêm (sau khi làm bài): The Big Green Forest 1: I Can Hop 我会跳 – Little Fox Chinese – https://www.youtube.com/watch?v=RFizy8IKgKs (video nói 会, con chỉ cần nghe hiểu) · 10 个动物宠物的中文 – AliMiMi – https://www.youtube.com/watch?v=wKLVEPt3yGM"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn kiểm tra U5–U8: happy, sad, sleepy, scared, angry, tired, book, pen, schoolbag, ruler, eraser, bed, chair, table, sofa, on, under, dog, cat, bird, fish, rabbit, run, fly, swim, jump | Nhiễu U1–U4: teacher, friend, birthday, grandpa, nose, hands",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" · Chuyển ý: \"Now, Chinese! 我们说中文！\" · Khen: \"Well done! 真棒！\" · Tiếng Việt chỉ để nhắc nề nếp · không thêm câu mới; hướng dẫn cách làm bài kiểm tra bằng tiếng Việt, câu hỏi kiểm tra chỉ bằng tiếng Anh, tiếng Trung 1) Kiểm tra nghe – chạm tranh (8 câu, mỗi câu 3 tranh): I am sad. / I am sleepy. / What is that? – That is a bag. / This is a pen. / The book is on the table. / The ball is under the bed. / Rabbits can jump. / Fish can't run. 2) Kiểm tra nói – cô hỏi từng con (4 câu, con trả lời bằng câu ngắn): How do you feel? / What is this? (cô giơ thước) / Where is the book? (sách trên ghế) / Can birds fly? 3) [Chuyển ngữ] NL1 – nghe từ tiếng Anh, chạm nút loa tiếng Trung đúng trong 3 nút (4 lượt): scared / eraser / sofa / rabbit. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo nói: \"The rabbit's on the sofa.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 兔子在沙发上。 (Tùzi zài shāfā shang.)",
+     "truyen": "Leo's Day (cô kể, con chạm tranh theo thứ tự) — Leo: I am sleepy. Leo: Look! This is my new schoolbag. What is this? This is my book. Leo: Where is my pen? Not on the bed. It is under the table! Leo: My dog can run. My bird can fly. Leo: How do you feel? I am happy!",
+     "baihat": "Liên khúc kết chặng: How Do You Feel? – Tell me, how do you feel now? / I am happy, happy, wow! · Where Is My Book? – It's not on the bed, it's under the chair, / My book is right over there! · Dogs Can Run – Fly, fly, fly, my bird, / birds can fly up high · Vè: Run, dog, run! Fly, bird, fly! Swim, fish, swim! Jump, rabbit, high!"
+    },
+    "zh": {
+     "flash": "Ôn kiểm tra U5–U8: 开心 kāixīn, 难过 nánguò, 困 kùn, 害怕 hàipà, 生气 shēngqì, 累 lèi, 书 shū, 笔 bǐ, 书包 shūbāo, 尺子 chǐzi, 橡皮 xiàngpí, 床 chuáng, 椅子 yǐzi, 桌子 zhuōzi, 沙发 shāfā, 上 shàng, 下 xià, 狗 gǒu, 猫 māo, 鸟 niǎo, 鱼 yú, 兔子 tùzi, 跑 pǎo, 飞 fēi, 游泳 yóuyǒng, 跳 tiào | Nhiễu U1–U4: 老师 lǎoshī, 朋友 péngyou, 生日 shēngrì, 爷爷 yéye, 鼻子 bízi, 手 shǒu",
+     "slide": "[Cầu nối Anh – Trung] tổng kết 4 mối nối của chặng 2 bằng 4 tranh: I am happy. ↔ 我很开心。(không có am, thêm 很 trước cảm xúc) / This is a pen. ↔ 这是笔。(không có a) / on the table ↔ 桌子上 (上 đứng sau) / Dogs can run. ↔ 狗能跑。(-s ↔ không đổi). 1) Kiểm tra nghe – chạm tranh (8 câu): 我很难过。/ 我很困。/ 那是什么？— 那是包。/ 这是笔。/ 书在桌子上。/ 球在床下。/ 兔子能跳。/ 鱼不能跑。 2) Kiểm tra nói với rối Xiaomei (4 câu, con đáp bằng tiếng Trung): 你心情怎么样？/ 这是什么？/ 书在哪儿？/ 鸟能飞吗？ 3) [Chuyển ngữ] NL1 – nghe từ tiếng Trung, chạm nút loa tiếng Anh đúng (4 lượt): 害怕 / 橡皮 / 沙发 / 兔子; NL6: Leo hỏi, con đáp tiếng Anh; Xiaomei hỏi, con đáp tiếng Trung.",
+     "truyen": "Xiaomei的一天 — Xiaomei：我很困。Xiaomei：看！这是我的新书包。这是什么？这是我的书。Xiaomei：我的笔在哪儿？不在床上。在桌子下！Xiaomei：我的小狗能跑。我的小鸟能飞。Xiaomei：你心情怎么样？我很开心！(Xiaomei: Wǒ hěn kùn. Xiaomei: Kàn! Zhè shì wǒ de xīn shūbāo. Zhè shì shénme? Zhè shì wǒ de shū. Xiaomei: Wǒ de bǐ zài nǎr? Bú zài chuáng shang. Zài zhuōzi xià! Xiaomei: Wǒ de xiǎogǒu néng pǎo. Wǒ de xiǎoniǎo néng fēi. Xiaomei: Nǐ xīnqíng zěnmeyàng? Wǒ hěn kāixīn!)",
+     "baihat": "Liên khúc kết chặng (tiếng Trung): 你今天心情怎样？/ 我很开心哈哈哈！(Nǐ jīntiān xīnqíng zěnyàng? / Wǒ hěn kāixīn hā hā hā!) · 不在床上，在椅子下，/ 我的书就在那儿！(Bú zài chuáng shang, zài yǐzi xià, / wǒ de shū jiù zài nàr!) · 飞飞飞，小鸟飞，/ 鸟能飞得高 (Fēi fēi fēi, xiǎoniǎo fēi, / niǎo néng fēi de gāo) · Vè: 小狗跑跑跑，小鸟飞飞飞，小鱼游游游，小兔跳跳跳！(Xiǎogǒu pǎo pǎo pǎo, xiǎoniǎo fēi fēi fēi, xiǎoyú yóu yóu yóu, xiǎotù tiào tiào tiào!)"
+    }
+   }
+  }
+ ]
+}

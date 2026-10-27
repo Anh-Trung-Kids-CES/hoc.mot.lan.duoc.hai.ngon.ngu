@@ -1,0 +1,1032 @@
+{
+ "course": "Pupa",
+ "part": "b",
+ "rows": [
+  {
+   "buoi": 21,
+   "unit": 5,
+   "label_buoi": "Buổi dạy 21. Unit 5 · Materials – Đồ vật làm bằng gì?",
+   "web": [
+    {
+     "ngay": 41,
+     "label": "Ngày 41. Unit 5 · Gỗ, nhựa, thủy tinh, kim loại",
+     "en": {
+      "tu": "Mới: wood, plastic, glass, metal | Ôn: cup, bottle, plate, castle",
+      "cum": "Mới: made of wood / made of plastic / a glass cup / a metal box | Ôn: a cup of milk / a big plate",
+      "cau": "[Ngữ pháp: be made of – vẫn nhìn thấy chất liệu] What is it made of? / What is this cup made of? / This cup is made of glass. / The table is made of wood. / The chair is made of plastic.",
+      "truyen": "What is it made of? — The teacher holds up a cup. 'What is this cup made of?' she asks. 'It's made of glass,' says Anna. Leo says, 'The table is made of wood and the chair is made of plastic.' 'Great!' says the teacher.",
+      "video": "Tìm YouTube: \"materials for kids wood plastic glass metal\""
+     },
+     "zh": {
+      "tu": "Mới: 木头 mùtou (= wood), 塑料 sùliào (= plastic), 玻璃 bōli (= glass), 金属 jīnshǔ (= metal) | Ôn: 杯子 bēizi, 盒子 hézi, 桌子 zhuōzi, 椅子 yǐzi",
+      "cum": "Mới: 用木头做的 yòng mùtou zuò de (= made of wood) / 用塑料做的 yòng sùliào zuò de (= made of plastic) / 玻璃杯 bōlibēi (= a glass cup) / 金属盒子 jīnshǔ hézi (= a metal box) | Ôn: 一杯牛奶 yì bēi niúnǎi / 一个大盘子 yí ge dà pánzi",
+      "cau": "[Cầu nối] This cup is made of glass. ↔ 这个杯子是用玻璃做的。(Zhège bēizi shì yòng bōli zuò de.) [giống: đồ vật đứng đầu câu · khác: is made of + chất liệu ↔ chất liệu kẹp giữa 是用……做的] / [Ngữ pháp: 是用 + chất liệu + 做的] 这是用什么做的？(Zhè shì yòng shénme zuò de?) / 这个杯子是用什么做的？(Zhège bēizi shì yòng shénme zuò de?) / 这个杯子是用玻璃做的。(Zhège bēizi shì yòng bōli zuò de.) / 这张桌子是用木头做的。(Zhè zhāng zhuōzi shì yòng mùtou zuò de.) / 这把椅子是用塑料做的。(Zhè bǎ yǐzi shì yòng sùliào zuò de.)",
+      "truyen": "这是用什么做的？— 老师拿起一个杯子问：“这个杯子是用什么做的？”Anna说：“是用玻璃做的。”Leo说：“这张桌子是用木头做的，这把椅子是用塑料做的。”老师说：“很好！”(Lǎoshī náqǐ yí ge bēizi wèn: “Zhège bēizi shì yòng shénme zuò de?” Anna shuō: “Shì yòng bōli zuò de.” Leo shuō: “Zhè zhāng zhuōzi shì yòng mùtou zuò de, zhè bǎ yǐzi shì yòng sùliào zuò de.” Lǎoshī shuō: “Hěn hǎo!”)",
+      "video": "Tìm YouTube: \"材料 儿童 木头 塑料 玻璃 金属\""
+     }
+    },
+    {
+     "ngay": 42,
+     "label": "Ngày 42. Unit 5 · Len, bông, gạch – ở khắp nơi",
+     "en": {
+      "tu": "Mới: wool, cotton, brick, everywhere | Ôn: sweater, blanket, wall, T-shirt",
+      "cum": "Mới: a wool sweater / a cotton T-shirt / a brick wall / flowers everywhere | Ôn: a warm blanket / a glass bottle",
+      "cau": "[Ngữ pháp: be made of] My sweater is made of wool. / This T-shirt is made of cotton. / Grandma's house is made of brick. / There are flowers everywhere in the garden.",
+      "truyen": "Grandma's house — Nhan visits Grandma. Her house is made of brick. Grandma gives Nhan a new sweater. 'It's made of wool,' she says. 'It's beautiful!' says Nhan. There are flowers everywhere in Grandma's garden.",
+      "video": "Tìm YouTube: \"where does wool come from for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 砖 zhuān (= brick), 到处 dàochù (= everywhere), 啊 a (= tiếng cảm thán như It's beautiful!) | Ôn: 墙 qiáng (= wall), 房子 fángzi, 花园 huāyuán | Chỉ nghe hiểu (tranh trong truyện): 羊毛 yángmáo, 棉 mián / 棉布 miánbù (= cotton), T恤 tīxù (= T-shirt) | Nghe làm quen: 毛衣 máoyī (= sweater)",
+      "cum": "Mới: 用砖做的房子 yòng zhuān zuò de fángzi (= a brick house) / 到处都是花 dàochù dōu shì huā (= flowers everywhere) / 好漂亮啊 hǎo piàoliang a | Nghe làm quen: 一件毛衣 yí jiàn máoyī / 羊毛毛衣 yángmáo máoyī (= a wool sweater) / 棉T恤 mián tīxù (= a cotton T-shirt)",
+      "cau": "[Cầu nối] Grandma's house is made of brick. ↔ 奶奶的房子是用砖做的。(Nǎinai de fángzi shì yòng zhuān zuò de.) [giống: cùng khuôn câu chất liệu của ngày 41 · khác: Grandma's ↔ 奶奶的 (sở hữu 's ↔ 的)] / [Ngữ pháp: 是用……做的] 奶奶的房子是用砖做的。(Nǎinai de fángzi shì yòng zhuān zuò de.) / 我的毛衣是用羊毛做的。(Wǒ de máoyī shì yòng yángmáo zuò de.) (= My sweater is made of wool.) / 这件T恤是用棉布做的。(Zhè jiàn tīxù shì yòng miánbù zuò de.) (= This T-shirt is made of cotton.) / 花园里到处都是花。(Huāyuán li dàochù dōu shì huā.) / 这件毛衣好漂亮啊！(Zhè jiàn máoyī hǎo piàoliang a!) (= It's beautiful!) / [Chuyển ngữ] [Ghi âm trên Trang luyện nói (NL2): nghe Leo nói 2 câu tiếng Anh rồi nói lại bằng tiếng Trung cho Xiaomei] The table is made of wood. Grandma's house is made of brick. → 这张桌子是用木头做的。奶奶的房子是用砖做的。 (Zhè zhāng zhuōzi shì yòng mùtou zuò de. Nǎinai de fángzi shì yòng zhuān zuò de.)",
+      "truyen": "奶奶的房子 — Nhan去看奶奶。奶奶的房子是用砖做的。奶奶送给Nhan一件新毛衣，说：“是用羊毛做的。”Nhan说：“好漂亮啊！”奶奶的花园里到处都是花。(Nhan qù kàn nǎinai. Nǎinai de fángzi shì yòng zhuān zuò de. Nǎinai sòng gěi Nhan yí jiàn xīn máoyī, shuō: “Shì yòng yángmáo zuò de.” Nhan shuō: “Hǎo piàoliang a!” Nǎinai de huāyuán li dàochù dōu shì huā.)",
+      "video": "Tìm YouTube: \"羊毛 毛衣 是怎么来的 儿童\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "wood, plastic, glass, metal, wool, cotton, brick, everywhere | Ôn: cup, bottle, plate, sweater, blanket",
+     "slide": "[Lời cô] Vào bài: Good morning, class! 同学们好！ · Chuyển ý: Now, let's look at the materials. 现在我们看一看这些材料。 · Nhắc: Hands up, please. 请举手。 · Khen: Excellent! 太好了！ · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): material / 材料, metal / 金属. 1) Nhìn đồ vật chọn chất liệu (6 câu): cup – glass / table – wood / bottle – plastic / box – metal / sweater – wool / wall – brick. 2) Kéo thả câu vào tranh: This cup is made of glass. / My sweater is made of wool. / This T-shirt is made of cotton. 3) Hỏi – đáp theo cặp với đồ thật trong lớp: What is it made of? – It's made of ___.",
+     "truyen": "Grandma's house — Nhan visits Grandma. Her house is made of brick and the door is made of wood. In the kitchen, there are glass cups and metal boxes. Grandma gives Nhan a sweater. 'It's made of wool,' she says. 'And this T-shirt is made of cotton.' 'Thank you, Grandma!' says Nhan. There are flowers everywhere in the garden.",
+     "baihat": "What Is It Made Of? (giai điệu: Mary Had a Little Lamb) — What is this cup made of, made of, made of? / What is this cup made of? / It's made of glass! / What is this box made of, made of, made of? / What is this box made of? / It's made of metal! (Câu sau đổi: sweater – wool / table – wood)"
+    },
+    "zh": {
+     "flash": "木头 mùtou, 塑料 sùliào, 玻璃 bōli, 金属 jīnshǔ, 砖 zhuān, 到处 dàochù | Nghe: 羊毛 yángmáo, 棉 mián, 毛衣 máoyī, 被子 bèizi | Ôn: 杯子 bēizi, 瓶子 píngzi, 盘子 pánzi",
+     "slide": "1) Nghe chọn tranh (5 câu, cùng bộ tranh đồ vật của phần tiếng Anh): 木头 / 塑料 / 玻璃 / 金属 / 砖. 2) Ghép nửa câu: 这个杯子 + 是用玻璃做的。/ 这张桌子 + 是用木头做的。/ 奶奶的房子 + 是用砖做的。/ 这把椅子 + 是用塑料做的。/ 这件毛衣 + 是用羊毛做的。/ 这件T恤 + 是用棉布做的。3) [Cầu nối Anh – Trung] Cùng tranh, hai tiếng: cô giơ thẻ 'glass cup', rối Leo nói This cup is made of glass., rối Xiaomei nói 这个杯子是用玻璃做的。Con tìm điểm giống (đồ vật đứng đầu câu) và khác (is made of ↔ 是用……做的). 4) [Chuyển ngữ] Trò 'Đi săn chất liệu' theo nhóm (NL6): nhóm cầm 1 đồ vật trong lớp, hỏi rối Leo bằng tiếng Anh (What is it made of?), rồi kể lại 2 câu cho rối Xiaomei bằng tiếng Trung: 这是一个盒子。它是用金属做的。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo kể: \"Look around our classroom! The tables are made of wood, and the windows are made of glass. My cup is made of plastic, but Anna's cup is made of metal. Grandma's house is made of brick. Everything around us is made of something!\" → con nói lại cho rối Xiaomei bằng tiếng Trung (tóm 3 ý, rồi trả lời câu hỏi thêm của Xiaomei: Anna的杯子是用什么做的？(Anna de bēizi shì yòng shénme zuò de?)). Mẫu: 教室里的桌子是用木头做的，窗户是用玻璃做的。Leo的杯子是用塑料做的，Anna的杯子是用金属做的。奶奶的房子是用砖做的。(Jiàoshì li de zhuōzi shì yòng mùtou zuò de, chuānghu shì yòng bōli zuò de. Leo de bēizi shì yòng sùliào zuò de, Anna de bēizi shì yòng jīnshǔ zuò de. Nǎinai de fángzi shì yòng zhuān zuò de.) · Trả lời Xiaomei: 是用金属做的。(Shì yòng jīnshǔ zuò de.)",
+     "truyen": "奶奶的房子 — Nhan去看奶奶。奶奶的房子是用砖做的，门是用木头做的。厨房里有玻璃杯和金属盒子。奶奶送给Nhan一件毛衣，说：“是用羊毛做的。这件T恤是用棉布做的。”Nhan说：“谢谢奶奶！”花园里到处都是花。(Nhan qù kàn nǎinai. Nǎinai de fángzi shì yòng zhuān zuò de, mén shì yòng mùtou zuò de. Chúfáng li yǒu bōlibēi hé jīnshǔ hézi. Nǎinai sòng gěi Nhan yí jiàn máoyī, shuō: “Shì yòng yángmáo zuò de. Zhè jiàn tīxù shì yòng miánbù zuò de.” Nhan shuō: “Xièxie nǎinai!” Huāyuán li dàochù dōu shì huā.)",
+     "baihat": "这是用什么做的？(giai điệu: Mary Had a Little Lamb – cùng giai điệu bài tiếng Anh) — 这个杯子用什么做，(Zhège bēizi yòng shénme zuò,) / 什么做，什么做？(shénme zuò, shénme zuò?) / 这个杯子用什么做？(zhège bēizi yòng shénme zuò?) / 是用玻璃做的！(shì yòng bōli zuò de!) / 这个盒子用什么做……是用金属做的！(Zhège hézi yòng shénme zuò… shì yòng jīnshǔ zuò de!) (Câu sau đổi: 毛衣 – 羊毛 / 桌子 – 木头)"
+    }
+   }
+  },
+  {
+   "buoi": 22,
+   "unit": 5,
+   "label_buoi": "Buổi dạy 22. Unit 5 · Materials – Made of hay made from?",
+   "web": [
+    {
+     "ngay": 43,
+     "label": "Ngày 43. Unit 5 · Made from – Giấy làm từ gỗ",
+     "en": {
+      "tu": "Mới: over, perhaps, paper | Ôn: bridge, factory, museum, river",
+      "cum": "Mới: make sure / by myself / over the river / made from wood | Ôn: a metal bridge / a big factory / a big change",
+      "cau": "[Ngữ pháp: be made from – chất liệu đã biến đổi] Paper is made from wood. / The bridge over the river is made of metal. / I made this paper boat by myself. / Make sure your boat is dry. / Perhaps the box is made of wood. / Wood changes into paper. What a big change!",
+      "truyen": "The paper factory — Leo's class visits a factory near the bridge. 'Paper is made from wood,' says the manager. 'Wood changes into paper. It's a big change!' Leo makes a paper boat. 'I made it by myself!' he says. 'Make sure it's dry,' says the teacher. Perhaps the boat can go over the river!",
+      "video": "Tìm YouTube: \"how paper is made for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 纸 zhǐ (= paper), 大概 dàgài (= perhaps), 变化 biànhuà (= change) | Ôn: 经理 jīnglǐ (= manager), 桥 qiáo, 河 hé, 自己 zìjǐ, 附近 fùjìn, 博物馆 bówùguǎn | Chỉ nghe hiểu (tranh trong truyện): 工厂 gōngchǎng",
+      "cum": "Mới: 用木头做的 yòng mùtou zuò de (= made from wood) / 变化很大 biànhuà hěn dà / 大概是 dàgài shì (= perhaps) | Ôn: 我自己做的 wǒ zìjǐ zuò de (= by myself) / 河上的桥 hé shang de qiáo (= the bridge over the river)",
+      "cau": "[Cầu nối] Paper is made from wood. ↔ 纸是用木头做的。(Zhǐ shì yòng mùtou zuò de.) [giống: chất liệu wood / 木头 đứng sau · khác: tiếng Anh tách made of / made from, tiếng Trung dùng chung 是用……做的] / [Ngữ pháp: 是用……做的 – dùng cho cả made of lẫn made from] 纸是用木头做的。(Zhǐ shì yòng mùtou zuò de.) / 河上的桥是用金属做的。(Hé shang de qiáo shì yòng jīnshǔ zuò de.) / 这只纸船是我自己做的。(Zhè zhī zhǐchuán shì wǒ zìjǐ zuò de.) / 纸船一定要干干的。(Zhǐchuán yídìng yào gāngān de.) (= Make sure your boat is dry.) / 这个盒子大概是用木头做的。(Zhège hézi dàgài shì yòng mùtou zuò de.) / 木头变成了纸，变化真大！(Mùtou biànchéngle zhǐ, biànhuà zhēn dà!) (= Wood changes into paper. What a big change!)",
+      "truyen": "纸工厂 — Leo的班去参观桥附近的一个纸工厂。工厂的经理说：“纸是用木头做的。木头变成了纸，变化很大！”Leo做了一只纸船：“是我自己做的！”老师说：“纸船一定要干干的。”纸船大概能过河呢！(Leo de bān qù cānguān qiáo fùjìn de yí ge zhǐ gōngchǎng. Gōngchǎng de jīnglǐ shuō: “Zhǐ shì yòng mùtou zuò de. Mùtou biànchéngle zhǐ, biànhuà hěn dà!” Leo zuòle yì zhī zhǐchuán: “Shì wǒ zìjǐ zuò de!” Lǎoshī shuō: “Zhǐchuán yídìng yào gāngān de.” Zhǐchuán dàgài néng guò hé ne!)",
+      "video": "Tìm YouTube: \"纸是怎么做出来的 动画\""
+     }
+    },
+    {
+     "ngay": 44,
+     "label": "Ngày 44. Unit 5 · Thư gửi bạn – Cuộc thi chai nhựa",
+     "en": {
+      "tu": "Mới: thousand, save | Ôn: competition, prize, letter, airport",
+      "cum": "Mới: dear (Dear Xiaomei) / enter a competition / save plastic / a thousand bottles | Ôn: win a prize / write a letter",
+      "cau": "Dear Xiaomei, I want to enter a competition. / [Ngữ pháp: be made from] Our castle is made from a thousand plastic bottles. / Let's save paper and plastic. / We want to win the prize. / We use more and more plastic bottles. / Saving plastic is a good habit. / I hang the letter on my wall. / A thousand take away a hundred is nine hundred.",
+      "truyen": "A letter to Xiaomei — Dear Xiaomei, our school has a competition. My group wants to enter it. We are making a castle from a thousand plastic bottles. We want to save plastic and win the prize! Saving plastic is a good habit. Love, Bông. Xiaomei is happy. She hangs the letter on her wall.",
+      "video": "Tìm YouTube: \"plastic bottle castle craft for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 越来越 yuèláiyuè (= more and more), 习惯 xíguàn (= habit), 减 jiǎn (= take away), 挂 guà (= hang) | Ôn: 参加 cānjiā, 比赛 bǐsài, 奖 jiǎng, 信 xìn, 千 qiān | Chỉ nghe hiểu (tranh trong truyện): 城堡 chéngbǎo",
+      "cum": "Mới: 越来越多 yuèláiyuè duō / 好习惯 hǎo xíguàn / 一千减一百 yìqiān jiǎn yìbǎi / 挂在墙上 guà zài qiáng shang | Ôn: Xiaomei，你好 Xiaomei, nǐ hǎo (= Dear Xiaomei) / 参加比赛 cānjiā bǐsài (= enter a competition) / 一千个瓶子 yìqiān ge píngzi (= a thousand bottles) / 少用塑料 shǎo yòng sùliào (= save plastic) / 写信 xiě xìn (= write a letter)",
+      "cau": "[Cầu nối] A thousand take away a hundred is nine hundred. ↔ 一千减一百是九百。(Yìqiān jiǎn yìbǎi shì jiǔbǎi.) [giống: cùng một phép trừ của môn Toán, số đứng cùng chỗ · khác: take away ↔ 减; Dear Xiaomei ↔ Xiaomei，你好！(thư tiếng Trung mở đầu bằng lời chào)] / Xiaomei，你好！我想参加一个比赛。(Xiaomei, nǐ hǎo! Wǒ xiǎng cānjiā yí ge bǐsài.) / 我们的城堡是用一千个塑料瓶子做的。(Wǒmen de chéngbǎo shì yòng yìqiān ge sùliào píngzi zuò de.) / 我们用的塑料瓶子越来越多。(Wǒmen yòng de sùliào píngzi yuèláiyuè duō.) / 少用纸和塑料是一个好习惯。(Shǎo yòng zhǐ hé sùliào shì yí ge hǎo xíguàn.) / 一千减一百是九百。(Yìqiān jiǎn yìbǎi shì jiǔbǎi.) / 我把信挂在墙上。(Wǒ bǎ xìn guà zài qiáng shang.) / [Chuyển ngữ] [Chuyển thư (NL2, ghi âm): nghe thư tiếng Anh của Bông (Our school has a competition. We are making a castle from a thousand plastic bottles.) rồi nói lại 2 câu bằng tiếng Trung cho Xiaomei] 我们学校有一个比赛。我们用一千个塑料瓶子做一个城堡。 (Wǒmen xuéxiào yǒu yí ge bǐsài. Wǒmen yòng yìqiān ge sùliào píngzi zuò yí ge chéngbǎo.)",
+      "truyen": "给Xiaomei的信 — Xiaomei，你好！我们学校有一个比赛，我们组要参加。我们用一千个塑料瓶子做一个城堡。我们想少用塑料，还想得奖！少用塑料是一个好习惯。Bông。Xiaomei很高兴，把信挂在墙上。(Xiaomei, nǐ hǎo! Wǒmen xuéxiào yǒu yí ge bǐsài, wǒmen zǔ yào cānjiā. Wǒmen yòng yìqiān ge sùliào píngzi zuò yí ge chéngbǎo. Wǒmen xiǎng shǎo yòng sùliào, hái xiǎng dé jiǎng! Shǎo yòng sùliào shì yí ge hǎo xíguàn. Bông. Xiaomei hěn gāoxìng, bǎ xìn guà zài qiáng shang.)",
+      "video": "Tìm YouTube: \"塑料瓶 手工 儿童\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "over, perhaps, paper, thousand, save, make sure, by myself, dear, enter a competition | Ôn: bridge, factory, museum, competition, prize, change, more and more, habit, take away, hang",
+     "slide": "[Lời cô] Vào bài: Hello, everyone! 大家好！ · Chuyển ý: Now, let's read a letter. 现在我们读一封信。 · Nhắc: Listen carefully, please. 请认真听。 · Khen: Well done! 真棒！ · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): made from / chất liệu đã biến đổi, competition / 比赛. 1) Phân loại câu vào 2 cột made of / made from (6 câu): This cup is made of glass. / Paper is made from wood. / The bridge is made of metal. / Our castle is made from plastic bottles. / My sweater is made of wool. / This card is made from paper. 2) Điền từ vào thư (dear / enter / thousand / save / by myself): Dear Xiaomei, I want to enter a competition... 3) Nói theo tranh: I made this ___ by myself. / Make sure your ___ is dry. 4) Tính nhẩm trong thư: A thousand take away a hundred is ___. (nine hundred)",
+     "truyen": "The plastic bottle castle — Dear Xiaomei, our school has a competition. My group wants to enter it. We visit a factory near the bridge over the river. 'Paper is made from wood,' says the manager. Then we make a castle from a thousand plastic bottles. I made the door by myself! Perhaps we will win the prize. Love, Bông.",
+     "baihat": "Made Of, Made From (giai điệu: London Bridge Is Falling Down) — Paper is made from wood, from wood, from wood. / Paper is made from wood. / Save the paper! / The bridge is made of metal, metal, metal. / The bridge is made of metal, / over the river!"
+    },
+    "zh": {
+     "flash": "纸 zhǐ, 大概 dàgài, 变化 biànhuà, 越来越 yuèláiyuè, 习惯 xíguàn, 减 jiǎn, 挂 guà | Ôn: 河上 hé shang (= over the river), 千 qiān, 少用 shǎo yòng, 一定要 yídìng yào, 自己 zìjǐ, Xiaomei，你好 (= Dear Xiaomei), 参加比赛 cānjiā bǐsài, 桥 qiáo, 博物馆 bówùguǎn, 比赛 bǐsài, 奖 jiǎng | Nghe: 工厂 gōngchǎng",
+     "slide": "1) Tính nhẩm với 减 (cùng bài toán trong thư ở bài 4 phần tiếng Anh): 一千减一百是多少？(九百). 2) Nối câu theo thư của Bông: Xiaomei，你好！ + 我想参加一个比赛。/ 我们用了 + 一千个塑料瓶子。/ 我们用的瓶子 + 越来越多。/ 少用塑料 + 是一个好习惯。3) [Cầu nối Anh – Trung] Hai cột made of / made from của phần tiếng Anh đặt cạnh thẻ tiếng Trung: This cup is made of glass. ↔ 这个杯子是用玻璃做的。/ Paper is made from wood. ↔ 纸是用木头做的。Con phát hiện: tiếng Anh có 2 cách nói, tiếng Trung chỉ một khuôn 是用……做的; Dear Xiaomei ↔ Xiaomei，你好！; take away ↔ 减 là cùng phép trừ của môn Toán. 4) Nói theo tranh (cùng tranh bài 3 phần tiếng Anh): 这个___是我自己做的。/ 纸船一定要干干的。5) [Chuyển ngữ] Chuyển tin nhắn cho Xiaomei (NL2): cô (vai Leo) đọc 3 câu tiếng Anh trong thư (Our school has a competition. We are making a castle from a thousand plastic bottles. We want to win the prize!), nhóm nói lại ý bằng tiếng Trung cho rối Xiaomei: 我们学校有一个比赛。我们用一千个塑料瓶子做一个城堡。我们想得奖！ [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo đọc thư của Bông: \"Dear Xiaomei, Our school is having a competition this month. Every class has to make something from old plastic bottles. My class is building a castle from a thousand bottles! We are using more and more bottles every day. Our teacher says that using less plastic is a good habit. Love, Bông\" → con nói lại cho rối Xiaomei bằng tiếng Trung (tóm 3 ý, rồi trả lời câu hỏi thêm của Xiaomei: Bông的班用多少个瓶子做城堡？(Bông de bān yòng duōshao ge píngzi zuò chéngbǎo?)). Mẫu: Bông说，她们学校这个月有一个比赛。她们班用塑料瓶子做一个城堡，用的瓶子越来越多。老师说，少用塑料是一个好习惯。(Bông shuō, tāmen xuéxiào zhège yuè yǒu yí ge bǐsài. Tāmen bān yòng sùliào píngzi zuò yí ge chéngbǎo, yòng de píngzi yuèláiyuè duō. Lǎoshī shuō, shǎo yòng sùliào shì yí ge hǎo xíguàn.) · Trả lời Xiaomei: 用一千个瓶子。(Yòng yìqiān ge píngzi.)",
+     "truyen": "塑料瓶城堡 — Xiaomei，你好！我们学校有一个比赛，我们组要参加。我们去参观了河上那座桥附近的纸工厂。工厂的经理说：“纸是用木头做的。”然后我们用一千个塑料瓶子做了一个城堡。城堡的门是我自己做的！我们大概能得奖。Bông。(Xiaomei, nǐ hǎo! Wǒmen xuéxiào yǒu yí ge bǐsài, wǒmen zǔ yào cānjiā. Wǒmen qù cānguānle hé shang nà zuò qiáo fùjìn de zhǐ gōngchǎng. Gōngchǎng de jīnglǐ shuō: “Zhǐ shì yòng mùtou zuò de.” Ránhòu wǒmen yòng yìqiān ge sùliào píngzi zuòle yí ge chéngbǎo. Chéngbǎo de mén shì wǒ zìjǐ zuò de! Wǒmen dàgài néng dé jiǎng. Bông.)",
+     "baihat": "纸是用木头做的 (giai điệu: London Bridge Is Falling Down – cùng giai điệu bài tiếng Anh) — 纸是用木头做的，(Zhǐ shì yòng mùtou zuò de,) / 木头的，木头的，(mùtou de, mùtou de,) / 纸是用木头做的，(zhǐ shì yòng mùtou zuò de,) / 要少用纸！(yào shǎo yòng zhǐ!) / 桥是用金属做的，(Qiáo shì yòng jīnshǔ zuò de,) / 金属的，金属的，(jīnshǔ de, jīnshǔ de,) / 桥是用金属做的，(qiáo shì yòng jīnshǔ zuò de,) / 就在河上！(jiù zài hé shang!)"
+    }
+   }
+  },
+  {
+   "buoi": 23,
+   "unit": 5,
+   "label_buoi": "Buổi dạy 23. Unit 5 · Materials – Nhanh lên! Thật ra là…",
+   "web": [
+    {
+     "ngay": 45,
+     "label": "Ngày 45. Unit 5 · Nhanh lên! Thật ra là nhựa",
+     "en": {
+      "tu": "Mới: begin, hurry, fire, actually, anything | Ôn: wood, fire station, fire fighter, plastic",
+      "cum": "Mới: the lesson begins / hurry up / a big fire / a gold ring / a glass vase | Ôn: made of wood / a fire fighter",
+      "cau": "[Ngữ pháp: made of / made from] This vase is made of glass. / This ring is made of gold. / Actually, my ring is made of plastic, not gold. / Is there anything made of metal in your bag? / Hurry! The lesson begins at eight. / Fire fighters put out fires. / If the vase is made of glass, be careful!",
+      "truyen": "Hurry, Leo! — The lesson begins. Leo can't find his ring. 'Is it made of gold?' asks Anna. 'Actually, it's made of plastic,' says Leo. 'Is there anything under the desk?' Anna looks. 'Here it is! Hurry, Leo!'",
+      "video": "Tìm YouTube: \"made of or made from grammar for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 开始 kāishǐ (= begin), 黄金 huángjīn (= gold), 戒指 jièzhi (= ring), 花瓶 huāpíng (= vase), 如果…那么… rúguǒ… nàme… (= if … then) | Ôn: 快 kuài, 玻璃 bōli, 塑料 sùliào | Chỉ nghe hiểu (tranh): 火 huǒ (= fire), 消防员 xiāofángyuán (= fire fighter)",
+      "cum": "Mới: 开始上课 kāishǐ shàngkè (= the lesson begins) / 黄金戒指 huángjīn jièzhi (= a gold ring) / 玻璃花瓶 bōli huāpíng (= a glass vase) / 如果……那么要小心 rúguǒ… nàme yào xiǎoxīn | Ôn: 不是黄金，是塑料 bú shì huángjīn, shì sùliào (= actually, it's plastic) / 快一点儿 kuài yìdiǎnr (= hurry up) / 用玻璃做的 yòng bōli zuò de",
+      "cau": "[Cầu nối] Actually, my ring is made of plastic. ↔ 我的戒指不是用黄金做的，是用塑料做的。(Wǒ de jièzhi bú shì yòng huángjīn zuò de, shì yòng sùliào zuò de.) [giống: chất liệu nói bằng cùng khuôn made of / 是用……做的 · khác: Actually không cần một từ riêng, tiếng Trung nói 不是……，是……; If…, be careful! ↔ 如果……，那么要小心] / [Ngữ pháp: 如果…那么…] 这个花瓶是用玻璃做的。(Zhège huāpíng shì yòng bōli zuò de.) / 这个戒指是用黄金做的。(Zhège jièzhi shì yòng huángjīn zuò de.) / 我的戒指不是用黄金做的，是用塑料做的。(Wǒ de jièzhi bú shì yòng huángjīn zuò de, shì yòng sùliào zuò de.) / 你的书包里有用金属做的东西吗？(Nǐ de shūbāo li yǒu yòng jīnshǔ zuò de dōngxi ma?) (= Is there anything made of metal in your bag?) / 快！八点开始上课！(Kuài! Bā diǎn kāishǐ shàngkè!) / 消防员会灭火。(Xiāofángyuán huì miè huǒ.) (= Fire fighters put out fires.) / 如果花瓶是用玻璃做的，那么你要小心。(Rúguǒ huāpíng shì yòng bōli zuò de, nàme nǐ yào xiǎoxīn.)",
+      "truyen": "快点儿，Leo！— 开始上课了。Leo找不到他的戒指。Anna问：“是用黄金做的吗？”Leo说：“不是，是用塑料做的。桌子下面有东西吗？”Anna看了看：“在这儿！快点儿，Leo！”(Kāishǐ shàngkè le. Leo zhǎo bu dào tā de jièzhi. Anna wèn: “Shì yòng huángjīn zuò de ma?” Leo shuō: “Bú shì, shì yòng sùliào zuò de. Zhuōzi xiàmiàn yǒu dōngxi ma?” Anna kàn le kàn: “Zài zhèr! Kuài diǎnr, Leo!”)",
+      "video": "Tìm YouTube: \"是用什么做的 汉语 儿童\""
+     }
+    },
+    {
+     "ngay": 46,
+     "label": "Ngày 46. Unit 5 · Ôn không tranh – Đố vui chất liệu",
+     "en": {
+      "tu": "Ôn: wood, plastic, glass, metal, wool, cotton, brick, everywhere, over, paper | Ôn nhanh: castle, cave, pond, stream",
+      "cum": "Ôn: made of glass / made from wood / by myself / make sure / enter a competition / a thousand bottles",
+      "cau": "Ôn (nghe câu – chọn chất liệu, không tranh): This T-shirt is made of cotton. / Paper is made from wood. / The bridge over the river is made of metal. / I made this card by myself. / Is there anything made of wool?",
+      "truyen": "Guess what I am! — I'm made of glass. I'm on the table. You can put flowers in me. Make sure you don't drop me! What am I? (A vase!)",
+      "video": "Tìm YouTube: \"materials quiz for kids guess the material\""
+     },
+     "zh": {
+      "tu": "Ôn: 木头 mùtou, 塑料 sùliào, 玻璃 bōli, 金属 jīnshǔ, 纸 zhǐ, 砖 zhuān, 到处 dàochù, 桥 qiáo, 花瓶 huāpíng, 自己 zìjǐ | Nghe: 羊毛 yángmáo, 棉 mián",
+      "cum": "Ôn: 是用……做的 shì yòng… zuò de (= made of / made from) / 我自己做的 wǒ zìjǐ zuò de (= by myself) / 一定要 yídìng yào (= make sure) / 参加比赛 cānjiā bǐsài (= enter a competition) / 一千个瓶子 yìqiān ge píngzi (= a thousand bottles)",
+      "cau": "[Cầu nối] I'm made of glass. What am I? ↔ 我是用玻璃做的。我是什么？(Wǒ shì yòng bōli zuò de. Wǒ shì shénme?) [giống: câu đố tả chất liệu rồi hỏi · khác: What am I? đảo trật tự, 我是什么？giữ trật tự câu kể] / Ôn (nghe – chọn đúng/sai, không tranh): 这件T恤是用棉布做的。(Zhè jiàn tīxù shì yòng miánbù zuò de.) / 纸是用木头做的。(Zhǐ shì yòng mùtou zuò de.) / 河上的桥是用金属做的。(Hé shang de qiáo shì yòng jīnshǔ zuò de.) / 这张卡片是我自己做的。(Zhè zhāng kǎpiàn shì wǒ zìjǐ zuò de.) (= I made this card by myself.) / 有用羊毛做的东西吗？(Yǒu yòng yángmáo zuò de dōngxi ma?) (= Is there anything made of wool?) / [Chuyển ngữ] [Ghi âm (NL2): nghe câu đố tiếng Anh (I'm made of glass. You can put flowers in me.) rồi nói lại cho Xiaomei bằng tiếng Trung] 我是用玻璃做的。你可以把花放在我里面。 (Wǒ shì yòng bōli zuò de. Nǐ kěyǐ bǎ huā fàng zài wǒ lǐmiàn.)",
+      "truyen": "猜一猜 — 我是用玻璃做的。我在桌子上。你可以把花放在我里面。你一定不要让我掉在地上！我是什么？（花瓶！）(Wǒ shì yòng bōli zuò de. Wǒ zài zhuōzi shang. Nǐ kěyǐ bǎ huā fàng zài wǒ lǐmiàn. Nǐ yídìng bú yào ràng wǒ diào zài dì shang! Wǒ shì shénme? (Huāpíng!))",
+      "video": "Tìm YouTube: \"猜谜语 材料 儿童\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "begin, hurry, fire, actually, anything, gold, ring, vase | Ôn: wood, plastic, glass, metal, wool, cotton, brick, fire fighter",
+     "slide": "[Lời cô] Vào bài: Good afternoon, class! 同学们好！ · Chuyển ý: Let's play a game! 我们来玩游戏吧！ · Nhắc: Hurry up, please! 请快一点儿！ · Khen: Great job! 太棒了！ · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): actually / 不是……是……, anything / 什么东西. 1) Nghe – chọn đúng/sai (5 câu): This vase is made of glass. / Actually, the ring is made of plastic. / The table is made of metal. / Paper is made from wood. / The wall is made of brick. + Complete the sentence (2): If the vase is made of glass, ___. (be careful!) / If the lesson begins, ___. (hurry!) 2) Trò 'Hộp bí mật': con sờ đồ trong hộp và đoán: Is it made of wood? – Yes, it is. / Actually, it's made of plastic! 3) Đóng vai đoạn hội thoại 'Hurry, Leo!' theo cặp.",
+     "truyen": "Hurry, Leo! — The lesson begins at eight. Leo can't find his ring. 'Is it made of gold?' asks Anna. 'Actually, it's made of plastic,' says Leo. 'It's a present from my grandma.' They look everywhere. 'Is there anything under the desk?' Anna looks. 'Here it is! Hurry, Leo! The teacher is coming!'",
+     "baihat": "Hurry, Hurry! (giai điệu: Row, Row, Row Your Boat) — Hurry, hurry, hurry up, / the lesson will begin! / Is my ring made of gold? / Actually, it's plastic! / Hurry, hurry, hurry up, / let's all go in!"
+    },
+    "zh": {
+     "flash": "开始 kāishǐ, 黄金 huángjīn, 戒指 jièzhi, 花瓶 huāpíng, 快 kuài (= hurry) | Nghe: 火 huǒ, 消防员 xiāofángyuán, 羊毛 yángmáo, 棉 mián | Ôn: 木头 mùtou, 塑料 sùliào, 玻璃 bōli, 金属 jīnshǔ, 砖 zhuān",
+     "slide": "1) Nghe – chọn đúng/sai (5 câu, cùng câu của phần tiếng Anh): 这个花瓶是用玻璃做的。/ 戒指不是用黄金做的，是用塑料做的。/ 这张桌子是用金属做的。/ 纸是用木头做的。/ 这面墙是用砖做的。+ Hoàn thành câu 如果…那么… (2 câu): 如果花瓶是用玻璃做的，那么___。(要小心) / 如果开始上课了，那么___。(快进教室). 2) Trò 'Hộp bí mật' (cùng hộp đồ của phần tiếng Anh): 这个是用木头做的吗？— 是的。/ 不是，是用塑料做的！3) [Cầu nối Anh – Trung] Cùng tranh 'Hurry, Leo!': rối Leo nói Actually, it's made of plastic., rối Xiaomei nói 不是，是用塑料做的。Con chỉ ra: Actually không cần một từ riêng, tiếng Trung nói 不是……，是…… (khác); If ↔ 如果 cùng mở đầu (giống); If…, be careful! ↔ 如果……，那么要小心 (tiếng Trung thêm 那么). 4) [Chuyển ngữ] Đóng vai theo cặp (NL6): bạn A đóng Anna nói 2–3 câu tiếng Anh (Is it made of gold? Here it is! Hurry, Leo!), bạn B nói lại cho rối Xiaomei bằng tiếng Trung: 是用黄金做的吗？在这儿！快点儿，Leo！ [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo kể: \"The lesson begins in five minutes, but Anna can't find her ring. Leo searches everywhere and finds it under a vase. 'Here it is!' says Leo. 'Actually, it isn't made of gold. It's made of plastic,' says Anna. 'If the lesson begins, we will be late. Hurry, Leo!'\" → con nói lại cho rối Xiaomei bằng tiếng Trung (tóm 3 ý, rồi trả lời câu hỏi thêm của Xiaomei: 如果开始上课了，那么他们会怎么样？(Rúguǒ kāishǐ shàngkè le, nàme tāmen huì zěnmeyàng?)). Mẫu: 五分钟以后开始上课，Anna找不到她的戒指。Leo在花瓶下面找到了戒指。戒指不是用黄金做的，是用塑料做的。(Wǔ fēnzhōng yǐhòu kāishǐ shàngkè, Anna zhǎo bu dào tā de jièzhi. Leo zài huāpíng xiàmiàn zhǎodàole jièzhi. Jièzhi bú shì yòng huángjīn zuò de, shì yòng sùliào zuò de.) · Trả lời Xiaomei: 那么他们会迟到，所以要快点儿！(Nàme tāmen huì chídào, suǒyǐ yào kuài diǎnr!)",
+     "truyen": "快点儿，Leo！— 八点开始上课。Leo找不到他的戒指。Anna问：“是用黄金做的吗？”Leo说：“不是，是用塑料做的。是奶奶送给我的。”他们到处找。Leo说：“桌子下面有东西吗？”Anna看了看：“在这儿！快点儿，Leo！老师来了！”(Bā diǎn kāishǐ shàngkè. Leo zhǎo bu dào tā de jièzhi. Anna wèn: “Shì yòng huángjīn zuò de ma?” Leo shuō: “Bú shì, shì yòng sùliào zuò de. Shì nǎinai sòng gěi wǒ de.” Tāmen dàochù zhǎo. Leo shuō: “Zhuōzi xiàmiàn yǒu dōngxi ma?” Anna kàn le kàn: “Zài zhèr! Kuài diǎnr, Leo! Lǎoshī lái le!”)",
+     "baihat": "快快快！(giai điệu: Row, Row, Row Your Boat – cùng giai điệu bài tiếng Anh) — 快快快，快一点，(Kuài kuài kuài, kuài yìdiǎn,) / 开始上课了！(kāishǐ shàngkè le!) / 戒指是用黄金做的？(Jièzhi shì yòng huángjīn zuò de?) / 不是，是塑料！(Bú shì, shì sùliào!) / 快快快，快一点，(Kuài kuài kuài, kuài yìdiǎn,) / 大家进教室！(dàjiā jìn jiàoshì!)"
+    }
+   }
+  },
+  {
+   "buoi": 24,
+   "unit": 5,
+   "label_buoi": "Buổi dạy 24. Unit 5 · Materials – Ba chú heo & Phiên dịch nhí · Luyện Flyers Nói phần 3",
+   "web": [
+    {
+     "ngay": 47,
+     "label": "Ngày 47. Unit 5 · Truyện & chuyển ngữ – Ba chú heo con",
+     "en": {
+      "tu": "Ôn: brick, wood, paper, hurry, everywhere, metal | Ôn nhanh: cave, path, view",
+      "cum": "Ôn: a house made of paper / a house made of wood / a brick house / hurry up / by myself",
+      "cau": "[Chuyển ngữ] Anh → Trung: The first pig's house is made of paper. / The second pig's house is made of wood. / The third pig's house is made of brick. / Hurry! The wolf is coming! / [Flyers Nói phần 3 (mẫu): nhìn 5 tranh, nghe câu mẫu từng tranh rồi ghi âm câu kể của con] (1) Three little pigs wanted to build new houses. / (2) The first pig made his house of paper. / (3) The second pig made his house of wood. / (4) The third pig made his house of brick. / (5) The wolf couldn't blow down the brick house.",
+      "truyen": "The Three Little Pigs — The first little pig makes a house of paper by himself. The second pig's house is made of wood. The third pig's house is made of brick. The wolf comes. 'Hurry!' The paper house and the wooden house fall down, but the brick house is strong. Actually, the third pig is very clever!",
+      "video": "Tìm YouTube: \"The Three Little Pigs story for kids\""
+     },
+     "zh": {
+      "tu": "Ôn: 砖 zhuān, 木头 mùtou, 纸 zhǐ, 到处 dàochù, 快 kuài (= hurry), 金属 jīnshǔ (= metal), 自己 zìjǐ (= by myself) | Nghe: 结实 jiēshi (= strong)",
+      "cum": "Ôn: 用纸做的房子 yòng zhǐ zuò de fángzi / 用木头做的房子 yòng mùtou zuò de fángzi / 用砖做的房子 yòng zhuān zuò de fángzi / 快跑 kuài pǎo (= hurry) / 自己做 zìjǐ zuò (= by myself)",
+      "cau": "[Cầu nối] The third pig's house is made of brick. ↔ 第三只小猪的房子是用砖做的。(Dì sān zhī xiǎo zhū de fángzi shì yòng zhuān zuò de.) [giống: the third ↔ 第三 (số thứ tự đứng trước) · khác: tiếng Trung thêm lượng từ 只 cho con vật (三只小猪)] / [Chuyển ngữ] Trung → Anh: 第一只小猪的房子是用纸做的。(Dì yī zhī xiǎo zhū de fángzi shì yòng zhǐ zuò de.) / 第二只小猪的房子是用木头做的。(Dì èr zhī xiǎo zhū de fángzi shì yòng mùtou zuò de.) / 第三只小猪的房子是用砖做的。(Dì sān zhī xiǎo zhū de fángzi shì yòng zhuān zuò de.) / 快跑！大灰狼来了！(Kuài pǎo! Dà huīláng lái le!)",
+      "truyen": "三只小猪 — 第一只小猪自己用纸做房子。第二只小猪的房子是用木头做的。第三只小猪的房子是用砖做的。大灰狼来了！“快跑！”纸房子和木头房子都倒了，可是砖房子很结实。第三只小猪真聪明！(Dì yī zhī xiǎo zhū zìjǐ yòng zhǐ zuò fángzi. Dì èr zhī xiǎo zhū de fángzi shì yòng mùtou zuò de. Dì sān zhī xiǎo zhū de fángzi shì yòng zhuān zuò de. Dà huīláng lái le! “Kuài pǎo!” Zhǐ fángzi hé mùtou fángzi dōu dǎo le, kěshì zhuān fángzi hěn jiēshi. Dì sān zhī xiǎo zhū zhēn cōngming!)",
+      "video": "Tìm YouTube: \"三只小猪 故事 儿童\""
+     }
+    },
+    {
+     "ngay": 48,
+     "label": "Ngày 48. Unit 5 · Phiên dịch nhí – Ở cửa hàng",
+     "en": {
+      "tu": "Ôn: glass, metal, wool, cotton, plastic, save, thousand | Ôn nhanh: pyramid, stream",
+      "cum": "Ôn: a glass vase / a wool sweater / a cotton T-shirt / made of metal / save plastic",
+      "cau": "Phiên dịch nhí (con dịch cho bạn Xiaomei): This sweater is made of wool. / This T-shirt is made of cotton. / Is there anything made of glass? / This vase is made of glass. / If the vase is made of glass, be careful!",
+      "truyen": "At the shop — Bông and Xiaomei are in a shop. Xiaomei asks, 'What is this sweater made of?' Bông asks the shop assistant. 'It's made of wool. And these shoes are made of leather,' says the woman. Bông tells Xiaomei in Chinese. 'Thank you, Bông!' says Xiaomei.",
+      "video": "Tìm YouTube: \"what is it made of song kids\""
+     },
+     "zh": {
+      "tu": "Ôn: 玻璃 bōli, 金属 jīnshǔ, 塑料 sùliào, 花瓶 huāpíng, 少用 shǎo yòng, 鞋子 xiézi | Nghe làm quen: 毛衣 máoyī (= sweater) | Chỉ nghe hiểu (tranh trong truyện): 羊毛 yángmáo, 棉 mián / 棉布 miánbù, 皮革 pígé",
+      "cum": "Ôn: 玻璃花瓶 bōli huāpíng / 用金属做的 yòng jīnshǔ zuò de / 少用塑料 shǎo yòng sùliào | Nghe làm quen: 羊毛毛衣 yángmáo máoyī (= a wool sweater) / 棉T恤 mián tīxù (= a cotton T-shirt)",
+      "cau": "[Cầu nối] What is this sweater made of? ↔ 这件毛衣是用什么做的？(Zhè jiàn máoyī shì yòng shénme zuò de?) [giống: hỏi chất liệu bằng What / 什么 · khác: What lên đầu câu, 什么 đứng đúng chỗ câu trả lời (是用……做的)] / Phiên dịch nhí (con dịch cho bạn Anna): 这件毛衣是用什么做的？(Zhè jiàn máoyī shì yòng shénme zuò de?) / 这件毛衣是用羊毛做的。(Zhè jiàn máoyī shì yòng yángmáo zuò de.) / 这件T恤是用棉布做的。(Zhè jiàn tīxù shì yòng miánbù zuò de.) / 有用玻璃做的东西吗？(Yǒu yòng bōli zuò de dōngxi ma?) / 这个花瓶是用玻璃做的。(Zhège huāpíng shì yòng bōli zuò de.) / [Ngữ pháp: 如果…那么…] 如果花瓶是用玻璃做的，那么你要小心。(Rúguǒ huāpíng shì yòng bōli zuò de, nàme nǐ yào xiǎoxīn.)",
+      "truyen": "在商店 — Bông和Xiaomei在商店里。Xiaomei问：“这件毛衣是用什么做的？”Bông用英语问阿姨。阿姨说：“是用羊毛做的。这双鞋子是用皮革做的。”Bông用汉语告诉Xiaomei。Xiaomei说：“谢谢你，Bông！”(Bông hé Xiaomei zài shāngdiàn li. Xiaomei wèn: “Zhè jiàn máoyī shì yòng shénme zuò de?” Bông yòng Yīngyǔ wèn āyí. Āyí shuō: “Shì yòng yángmáo zuò de. Zhè shuāng xiézi shì yòng pígé zuò de.” Bông yòng Hànyǔ gàosu Xiaomei. Xiaomei shuō: “Xièxie nǐ, Bông!”)",
+      "video": "Tìm YouTube: \"这是用什么做的 儿歌\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn: wood, plastic, glass, metal, wool, cotton, brick, paper, everywhere, over, hurry, begin, fire, save, thousand, take away, by myself, make sure, change, if (If…, be careful!)",
+     "slide": "[Lời cô] Vào bài: Good morning, everyone! 大家早上好！ · Chuyển ý: It's story time! 现在是故事时间！ · Nhắc: Take turns, please. 请轮流说。 · Khen: Fantastic! 太好了！ · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): wolf / 大灰狼, strong / 结实. 1) Kể lại truyện 'The Three Little Pigs' theo 4 tranh, dùng: made of paper / made of wood / made of brick / Hurry! 2) [Chuyển ngữ] Phiên dịch nhí theo cặp (NL6): một bạn nói tiếng Anh, một bạn dịch sang tiếng Trung: This vase is made of glass. ↔ 这个花瓶是用玻璃做的。/ Paper is made from wood. ↔ 纸是用木头做的。/ The bridge is made of metal. ↔ 这座桥是用金属做的。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo kể: \"Three little pigs wanted new houses. The first pig made his house of paper, and the second pig used wood. The third pig worked hard and made his house of brick. Then a wolf came and blew down the paper house and the wooden house. 'Hurry!' said the pigs, and they all ran to the brick house. The wolf couldn't blow it down.\" → con nói lại cho rối Xiaomei bằng tiếng Trung (tóm 3 ý, rồi trả lời câu hỏi thêm của Xiaomei: 哪个房子没有倒？(Nǎge fángzi méiyǒu dǎo?)). Mẫu: 第一只小猪的房子是用纸做的，第二只小猪的房子是用木头做的，第三只小猪的房子是用砖做的。大灰狼来了，纸房子和木头房子都倒了。小猪们都跑到砖房子里。(Dì yī zhī xiǎozhū de fángzi shì yòng zhǐ zuò de, dì èr zhī xiǎozhū de fángzi shì yòng mùtou zuò de, dì sān zhī xiǎozhū de fángzi shì yòng zhuān zuò de. Dà huīláng lái le, zhǐ fángzi hé mùtou fángzi dōu dǎo le. Xiǎozhūmen dōu pǎodào zhuān fángzi li.) · Trả lời Xiaomei: 砖房子没有倒。(Zhuān fángzi méiyǒu dǎo.) 3) Kiểm tra nhanh unit (6 câu chọn đáp án): made of / made from. 4) Flyers Nói phần 3 (mẫu): kể truyện theo 5 tranh 'The Three Little Pigs'. Cô: 'These pictures tell a story. It's called The Three Little Pigs. Just look at the pictures first.' Cô kể tranh 1: Three little pigs wanted to build new houses. Con kể tranh 2–5: (2) The first pig made his house of paper. The second pig made his house of wood. / (3) The third pig made his house of brick. It was very strong. / (4) The wolf came. He blew down the paper house and the house of wood. 'Hurry!' said the pigs. / (5) They all ran to the brick house. The wolf couldn't blow it down, and the pigs were happy.",
+     "truyen": "The Three Little Pigs — The first little pig makes a house of paper by himself. The second pig's house is made of wood. The third pig's house is made of brick. One day, the wolf comes. 'Hurry!' The paper house and the wooden house fall down. The pigs run to the brick house. It is very strong. Actually, the third pig is very clever! (Nghe thêm cuối truyện: The wolf's shoes are made of leather.)",
+     "baihat": "This Little House (giai điệu: The Wheels on the Bus) — The house is made of brick, brick, brick, / brick, brick, brick, brick, brick, brick. / The house is made of brick, brick, brick, / strong and safe! / The door is made of wood, wood, wood... / The window's made of glass, glass, glass..."
+    },
+    "zh": {
+     "flash": "Ôn: 木头 mùtou, 塑料 sùliào, 玻璃 bōli, 金属 jīnshǔ, 砖 zhuān, 纸 zhǐ, 到处 dàochù, 河上 hé shang (= over), 快 kuài (= hurry), 开始 kāishǐ, 少用 shǎo yòng, 千 qiān, 减 jiǎn (= take away), 自己 zìjǐ, 变化 biànhuà (= change), 如果…那么… rúguǒ… nàme… (= If…, be careful!), 一定要 yídìng yào (= make sure) | Nghe: 羊毛 yángmáo, 棉 mián, 火 huǒ",
+     "slide": "1) Sắp xếp tranh (cùng 4 tranh 'The Three Little Pigs' của phần tiếng Anh) và đọc lại truyện 三只小猪 (4 câu): 第一只小猪的房子是用纸做的。… 2) [Cầu nối Anh – Trung] Cùng tranh, hai tiếng: rối Leo kể The third pig's house is made of brick., rối Xiaomei kể 第三只小猪的房子是用砖做的。Con tìm điểm giống (the third ↔ 第三) và khác (tiếng Trung thêm lượng từ 只: 三只小猪). 3) [Chuyển ngữ] Phiên dịch nhí (NL5): cô (vai Xiaomei) kể 3 câu tiếng Trung, con nói lại ý bằng tiếng Anh cho rối Leo: 大灰狼来了！纸房子倒了。砖房子很结实。→ The wolf comes! The paper house falls down. The brick house is strong. 4) Kiểm tra nhanh chữ Hán (6 câu): nhìn tranh chọn chữ 木头 / 塑料 / 玻璃 / 金属 / 砖 / 纸.",
+     "truyen": "三只小猪 — 第一只小猪自己用纸做房子。第二只小猪的房子是用木头做的。第三只小猪的房子是用砖做的。有一天，大灰狼来了！“快跑！”纸房子和木头房子都倒了。小猪们都跑到砖房子里。砖房子很结实。第三只小猪真聪明！(Dì yī zhī xiǎo zhū zìjǐ yòng zhǐ zuò fángzi. Dì èr zhī xiǎo zhū de fángzi shì yòng mùtou zuò de. Dì sān zhī xiǎo zhū de fángzi shì yòng zhuān zuò de. Yǒu yì tiān, dà huīláng lái le! “Kuài pǎo!” Zhǐ fángzi hé mùtou fángzi dōu dǎo le. Xiǎozhūmen dōu pǎo dào zhuān fángzi li. Zhuān fángzi hěn jiēshi. Dì sān zhī xiǎo zhū zhēn cōngming!) (Nghe thêm cuối truyện: 大灰狼的鞋子是用皮革做的。Dà huīláng de xiézi shì yòng pígé zuò de.)",
+     "baihat": "小房子 (giai điệu: The Wheels on the Bus – cùng giai điệu bài tiếng Anh) — 房子是用砖做的，砖做的，(Fángzi shì yòng zhuān zuò de, zhuān zuò de,) / 砖做的，砖做的，(zhuān zuò de, zhuān zuò de,) / 房子是用砖做的，砖做的，(fángzi shì yòng zhuān zuò de, zhuān zuò de,) / 结实安全！(jiēshi ānquán!) / 门是木头做的，木头做的……(Mén shì mùtou zuò de, mùtou zuò de…) / 窗户是玻璃做的……(Chuānghu shì bōli zuò de…)"
+    }
+   }
+  },
+  {
+   "buoi": 25,
+   "unit": 6,
+   "label_buoi": "Buổi dạy 25. Unit 6 · Space – Con người có thể làm gì trong vũ trụ?",
+   "web": [
+    {
+     "ngay": 49,
+     "label": "Ngày 49. Unit 6 · Vũ trụ, hành tinh, Trái Đất, tên lửa",
+     "en": {
+      "tu": "Mới: space, planet, Earth, rocket | Ôn nhanh: butterfly, together | Ôn: future, star, moon",
+      "cum": "Mới: in space / planet Earth / travel by rocket / other planets | Ôn: in the future / look at the stars together",
+      "cau": "What could people do in space? / [Ngữ pháp: could + V – khả năng trong tương lai] People could travel to Mars by rocket one day. / Earth is a planet. / In the future, people could live on other planets.",
+      "truyen": "Leo's dream — Leo and Dad look at the stars together at night. 'Earth is a planet,' says Dad. 'One day, people could travel to other planets by rocket.' Leo smiles. 'In the future, I could go to space too!'",
+      "video": "Tìm YouTube: \"planets for kids solar system\""
+     },
+     "zh": {
+      "tu": "Mới: 太空 tàikōng (= space), 地球 dìqiú (= Earth), 行星 xíngxīng (= planet), 火箭 huǒjiàn (= rocket), 火星 Huǒxīng (= Mars), 将来 jiānglái (= future), 其他 qítā (= other) | Ôn nhanh: 蝴蝶 húdié, 一起 yìqǐ | Ôn: 星星 xīngxing, 月亮 yuèliang",
+      "cum": "Mới: 在太空 zài tàikōng (= in space) / 地球是一颗行星 dìqiú shì yì kē xíngxīng (= Earth is a planet) / 坐火箭去 zuò huǒjiàn qù (= travel by rocket) / 其他行星 qítā xíngxīng (= other planets) / 将来能…… jiānglái néng… | Ôn: 一起看星星 yìqǐ kàn xīngxing (= look at the stars together)",
+      "cau": "[Cầu nối] People could travel to Mars by rocket one day. ↔ 将来人们能坐火箭去火星。(Jiānglái rénmen néng zuò huǒjiàn qù Huǒxīng.) [giống: Ai – có thể – đi đâu (could ↔ 能) · khác: by rocket đứng cuối ↔ 坐火箭 đứng trước 去火星; one day ↔ 将来 đứng đầu] / [Ngữ pháp: 将来 + 能 + V] 将来人们在太空能做什么？(Jiānglái rénmen zài tàikōng néng zuò shénme?) (= What could people do in space?) / 将来人们能坐火箭去火星。(Jiānglái rénmen néng zuò huǒjiàn qù Huǒxīng.) / 地球是一颗行星。(Dìqiú shì yì kē xíngxīng.) / 将来，人们能住在其他行星上。(Jiānglái, rénmen néng zhù zài qítā xíngxīng shang.)",
+      "truyen": "Leo的梦 — 晚上，Leo和爸爸一起看星星。爸爸说：“地球是一颗行星。将来，人们能坐火箭去其他行星。”Leo笑了：“将来我也能去太空！”(Wǎnshang, Leo hé bàba yìqǐ kàn xīngxing. Bàba shuō: “Dìqiú shì yì kē xíngxīng. Jiānglái, rénmen néng zuò huǒjiàn qù qítā xíngxīng.” Leo xiào le: “Jiānglái wǒ yě néng qù tàikōng!”)",
+      "video": "Tìm YouTube: \"八大行星 儿童 动画\""
+     }
+    },
+    {
+     "ngay": 50,
+     "label": "Ngày 50. Unit 6 · Phi hành gia, tàu vũ trụ, kính thiên văn",
+     "en": {
+      "tu": "Mới: astronaut, spaceship, land, telescope | Ôn nhanh: join, member | Ôn: moon, club",
+      "cum": "Mới: an astronaut in a spaceship / land on the moon / look through a telescope / join the space club | Ôn: a club member",
+      "cau": "[Ngữ pháp: could + V] In the future, astronauts could land on other planets. / The spaceship could land on the moon. / We could see the moon with a telescope. / Anna is a member of the space club. / Ten, nine, eight… The rocket takes off!",
+      "truyen": "The space club — Anna joins the space club. She is a new member. She looks through a telescope. 'I can see the moon!' she says. An astronaut visits the club. 'One day, our spaceship could land on Mars,' he says.",
+      "video": "Tìm YouTube: \"what do astronauts do for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 宇航员 yǔhángyuán (= astronaut), 宇宙飞船 yǔzhòu fēichuán (= spaceship), 望远镜 wàngyuǎnjìng (= telescope), 降落 jiàngluò (= land), 起飞 qǐfēi (= tranh: tên lửa bay lên, take off) | Ôn nhanh: 参加 cānjiā (= join), 成员 chéngyuán (= member, nghe) | Ôn: 月亮 yuèliang, 小组 xiǎozǔ (= club) | Nghe làm quen: 月球 yuèqiú (= the moon, khi nói về bay vào vũ trụ)",
+      "cum": "Mới: 坐宇宙飞船的宇航员 zuò yǔzhòu fēichuán de yǔhángyuán (= an astronaut in a spaceship) / 在月球上降落 zài yuèqiú shang jiàngluò (= land on the moon) / 用望远镜看 yòng wàngyuǎnjìng kàn (= look through a telescope) / 参加太空小组 cānjiā tàikōng xiǎozǔ (= join the space club) / 火箭起飞了 huǒjiàn qǐfēi le | Ôn: 小组成员 xiǎozǔ chéngyuán (= a club member)",
+      "cau": "[Cầu nối] We could see the moon with a telescope. ↔ 我们能用望远镜看月亮。(Wǒmen néng yòng wàngyuǎnjìng kàn yuèliang.) [giống: could ↔ 能 đứng trước động từ · khác: with a telescope đứng cuối ↔ 用望远镜 đứng trước 看] / [Ngữ pháp: 将来 + 能 + V] 将来，宇航员能在其他行星上降落。(Jiānglái, yǔhángyuán néng zài qítā xíngxīng shang jiàngluò.) / 宇宙飞船能在月球上降落。(Yǔzhòu fēichuán néng zài yuèqiú shang jiàngluò.) / 我们能用望远镜看月亮。(Wǒmen néng yòng wàngyuǎnjìng kàn yuèliang.) / Anna是太空小组的成员。(Anna shì tàikōng xiǎozǔ de chéngyuán.) / 火箭起飞了！(Huǒjiàn qǐfēi le!) / [Chuyển ngữ] [Ghi âm (NL2): nghe Anna nói 2 câu tiếng Anh (I can see the moon! One day, our spaceship could land on Mars.) rồi nói lại bằng tiếng Trung cho Xiaomei] 我能看见月亮！将来，我们的宇宙飞船能在火星上降落。 (Wǒ néng kànjiàn yuèliang! Jiānglái, wǒmen de yǔzhòu fēichuán néng zài Huǒxīng shang jiàngluò.)",
+      "truyen": "太空小组 — Anna参加了太空小组，她是新成员。她用望远镜看月亮：“我能看见月亮！”一个宇航员来了。他说：“将来，我们的宇宙飞船能在火星上降落。”(Anna cānjiāle tàikōng xiǎozǔ, tā shì xīn chéngyuán. Tā yòng wàngyuǎnjìng kàn yuèliang: “Wǒ néng kànjiàn yuèliang!” Yí ge yǔhángyuán lái le. Tā shuō: “Jiānglái, wǒmen de yǔzhòu fēichuán néng zài Huǒxīng shang jiàngluò.”)",
+      "video": "Tìm YouTube: \"宇航员 宇宙飞船 儿童 科普\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "space, planet, Earth, rocket, astronaut, spaceship, land, telescope | Ôn: butterfly, together, join, member, moon, star, Mars, future, other, take off",
+     "slide": "[Lời cô] Vào bài: Good morning, class! 同学们好！ · Chuyển ý: Now, let's go to space! 现在我们去太空吧！ · Nhắc: Eyes on me, please. 请看老师。 · Khen: Brilliant! 太棒了！ · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): planet / 行星, telescope / 望远镜. 1) Nhìn tranh chọn từ (6 câu): space / planet / Earth / rocket / astronaut / spaceship. 2) Kéo thả câu vào tranh: People could travel to Mars by rocket. / Astronauts could land on other planets. / We could see the moon with a telescope. 3) Đếm ngược: Ten, nine, eight… The rocket takes off! 4) Nói nối tiếp theo vòng: In the future, people could ___ (go to space / live on other planets / land on the moon).",
+     "truyen": "The space club — Anna joins the space club. She is a new member. She and Leo look through a telescope together. 'I can see the moon!' says Anna. 'Earth is a planet, and Mars is a planet too,' says Leo. An astronaut visits the club. 'One day, our spaceship could land on Mars. People could travel there by rocket,' he says.",
+     "baihat": "Ten, Nine, Rocket Time! (giai điệu: Twinkle Twinkle Little Star) — Ten, nine, eight, the rocket's here, / astronauts are sitting near. / Up in space the planets shine, / Earth is blue and looks so fine. / One day we could land on Mars, / flying high above the stars!"
+    },
+    "zh": {
+     "flash": "太空 tàikōng, 地球 dìqiú, 行星 xíngxīng, 火箭 huǒjiàn, 火星 Huǒxīng, 将来 jiānglái, 其他 qítā, 宇航员 yǔhángyuán, 宇宙飞船 yǔzhòu fēichuán, 望远镜 wàngyuǎnjìng, 起飞 qǐfēi, 降落 jiàngluò | Ôn: 蝴蝶 húdié, 一起 yìqǐ, 参加 cānjiā, 星星 xīngxing, 月亮 yuèliang | Nghe: 成员 chéngyuán",
+     "slide": "1) Nghe chọn tranh (6 câu, cùng bộ tranh của phần tiếng Anh): 太空 / 地球 / 行星 / 火箭 / 宇航员 / 宇宙飞船. 2) Sắp xếp từ thành câu: 将来 / 人们 / 能 / 坐火箭 / 去火星 → 将来人们能坐火箭去火星。/ 宇航员 / 能 / 在其他行星上 / 降落 → 宇航员能在其他行星上降落。+ Nói nối tiếp theo vòng (cùng vòng của phần tiếng Anh): 将来，人们能___（去太空 / 住在其他行星上 / 在月球上降落）。3) [Cầu nối Anh – Trung] Cùng tranh tên lửa: rối Leo nói People could travel to Mars by rocket., rối Xiaomei nói 将来人们能坐火箭去火星。Con xếp thẻ từ hai câu thẳng hàng để thấy: could ↔ 能 (giống vị trí); by rocket ở cuối ↔ 坐火箭 trước 去火星 (khác). 4) [Chuyển ngữ] Phóng viên vũ trụ (NL6): cô (vai Leo) nói 2 câu tiếng Anh: Earth is a planet. Astronauts could land on the moon. – con nói lại cho rối Xiaomei bằng tiếng Trung: 地球是一颗行星。宇航员能在月球上降落。Kết thúc bằng đếm ngược: 十、九、八……火箭起飞了！ [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo kể: \"Earth is our planet, but there are many other planets in space. In the future, people could travel to Mars by rocket. Astronauts could land on other planets in a spaceship. Tonight, we can look at the moon with a telescope. Ten, nine, eight… the rocket takes off!\" → con nói lại cho rối Xiaomei bằng tiếng Trung (tóm 3 ý, rồi trả lời câu hỏi thêm của Xiaomei: 宇航员能坐什么在其他行星上降落？(Yǔhángyuán néng zuò shénme zài qítā xíngxīng shang jiàngluò?)). Mẫu: 地球是我们的行星，太空里还有很多其他行星。将来人们能坐火箭去火星。今天晚上我们能用望远镜看月亮。(Dìqiú shì wǒmen de xíngxīng, tàikōng li hái yǒu hěn duō qítā xíngxīng. Jiānglái rénmen néng zuò huǒjiàn qù Huǒxīng. Jīntiān wǎnshang wǒmen néng yòng wàngyuǎnjìng kàn yuèliang.) · Trả lời Xiaomei: 坐宇宙飞船。(Zuò yǔzhòu fēichuán.)",
+     "truyen": "太空小组 — Anna参加了太空小组，她是新成员。她和Leo一起用望远镜看月亮。Anna说：“我能看见月亮！”Leo说：“地球是一颗行星，火星也是一颗行星。”一个宇航员来了。他说：“将来，人们能坐火箭去火星，我们的宇宙飞船能在火星上降落。”(Anna cānjiāle tàikōng xiǎozǔ, tā shì xīn chéngyuán. Tā hé Leo yìqǐ yòng wàngyuǎnjìng kàn yuèliang. Anna shuō: “Wǒ néng kànjiàn yuèliang!” Leo shuō: “Dìqiú shì yì kē xíngxīng, Huǒxīng yě shì yì kē xíngxīng.” Yí ge yǔhángyuán lái le. Tā shuō: “Jiānglái, rénmen néng zuò huǒjiàn qù Huǒxīng, wǒmen de yǔzhòu fēichuán néng zài Huǒxīng shang jiàngluò.”)",
+     "baihat": "十九八，火箭来了 (giai điệu: Twinkle Twinkle Little Star – cùng giai điệu bài tiếng Anh) — 十、九、八，火箭来了，(Shí, jiǔ, bā, huǒjiàn lái le,) / 宇航员们坐上来。(yǔhángyuánmen zuò shànglai.) / 太空行星亮晶晶，(Tàikōng xíngxīng liàng jīngjīng,) / 地球蓝蓝真美丽。(dìqiú lánlán zhēn měilì.) / 将来能到火星上，(Jiānglái néng dào Huǒxīng shang,) / 飞过一颗颗星星！(fēiguò yì kē kē xīngxing!)"
+    }
+   }
+  },
+  {
+   "buoi": 26,
+   "unit": 6,
+   "label_buoi": "Buổi dạy 26. Unit 6 · Space – Nếu con muốn, chúng ta có thể…",
+   "web": [
+    {
+     "ngay": 51,
+     "label": "Ngày 51. Unit 6 · Thay vào đó – Chuyến phiêu lưu vũ trụ",
+     "en": {
+      "tu": "Mới: instead, adventure | Ôn (từ nối Unit 5): metal, glass, plastic | Ôn nhanh: file | Ôn: museum, engineer",
+      "cum": "Mới: could (khả năng) / if you want / go on an adventure / instead of the park | Ôn: made of metal and glass",
+      "cau": "[Ngữ pháp: could + V] If you want, we could go to the space museum. / We could go by bus instead of by car. / The spaceship is made of metal and glass. / What an adventure! / Maybe it will rain. / I have an idea!",
+      "truyen": "A space adventure — Bông wants to go to the park, but maybe it will rain. 'I have an idea!' says Mum. 'If you want, we could go to the space museum instead.' 'OK!' says Bông. In the museum, there is a big spaceship. It is made of metal and glass. 'What an adventure!' says Bông.",
+      "video": "Tìm YouTube: \"space museum tour for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 可能 kěnéng (= maybe), 办法 bànfǎ (= idea), 行 xíng (= OK) | Ôn (từ nối Unit 5): 金属 jīnshǔ, 玻璃 bōli, 塑料 sùliào | Ôn: 博物馆 bówùguǎn | Nghe làm quen: 冒险 màoxiǎn (= adventure)",
+      "cum": "Mới: 可能会下雨 kěnéng huì xià yǔ (= maybe it will rain) / 一个好办法 yí ge hǎo bànfǎ (= a good idea) / 行不行？xíng bu xíng? | Nghe: 去冒险 qù màoxiǎn (= go on an adventure) | Ôn: 如果你想 rúguǒ nǐ xiǎng (= if you want) / 用金属和玻璃做的 yòng jīnshǔ hé bōli zuò de (= made of metal and glass)",
+      "cau": "[Cầu nối] If you want, we could go to the space museum instead. ↔ 如果你想，我们可以去太空博物馆，不去公园了。(Rúguǒ nǐ xiǎng, wǒmen kěyǐ qù tàikōng bówùguǎn, bú qù gōngyuán le.) [giống: If ↔ 如果 mở đầu, vế sau là việc có thể làm · khác: instead (1 từ cuối câu) ↔ tiếng Trung nói rõ 不去公园了] / 可能会下雨。(Kěnéng huì xià yǔ.) / 我有一个好办法！(Wǒ yǒu yí ge hǎo bànfǎ!) / 如果你想，我们可以去太空博物馆。(Rúguǒ nǐ xiǎng, wǒmen kěyǐ qù tàikōng bówùguǎn.) / 我们可以坐公共汽车去，不开车去了。(Wǒmen kěyǐ zuò gōnggòng qìchē qù, bù kāichē qù le.) (= We could go by bus instead of by car.) / 行不行？——行！(Xíng bu xíng? — Xíng!) / 宇宙飞船是用金属和玻璃做的。(Yǔzhòu fēichuán shì yòng jīnshǔ hé bōli zuò de.) / 真是一次大冒险！(Zhēn shì yí cì dà màoxiǎn!) (= What an adventure!)",
+      "truyen": "太空大冒险 — Bông想去公园，可是可能会下雨。妈妈说：“我有一个好办法！如果你想，我们可以去太空博物馆，不去公园了。”Bông说：“行！”博物馆里有一艘很大的宇宙飞船，是用金属和玻璃做的。Bông说：“真是一次大冒险！”(Bông xiǎng qù gōngyuán, kěshì kěnéng huì xià yǔ. Māma shuō: “Wǒ yǒu yí ge hǎo bànfǎ! Rúguǒ nǐ xiǎng, wǒmen kěyǐ qù tàikōng bówùguǎn, bú qù gōngyuán le.” Bông shuō: “Xíng!” Bówùguǎn li yǒu yì sōu hěn dà de yǔzhòu fēichuán, shì yòng jīnshǔ hé bōli zuò de. Bông shuō: “Zhēn shì yí cì dà màoxiǎn!”)",
+      "video": "Tìm YouTube: \"中国科技馆 太空 儿童\""
+     }
+    },
+    {
+     "ngay": 52,
+     "label": "Ngày 52. Unit 6 · Tin rằng – Quyết định – Bảo vệ môi trường",
+     "en": {
+      "tu": "Mới: anywhere, believe, decide, environment | Ôn (từ nối Unit 5): save, wood, paper | Ôn: future, use",
+      "cum": "Mới: by yourself / go anywhere / I believe / decide to save / the environment on Earth | Ôn: save paper and plastic / travel to space",
+      "cau": "Don't go into space by yourself. / With a rocket, you could go anywhere. / I believe people could live on other planets. / We decide to save the environment on Earth. / One day, people could travel to space.",
+      "truyen": "Nhan's choice — Nhan reads a book about space. 'I believe we could go anywhere one day,' he says. 'But first, we must save the environment on Earth,' says his teacher. Nhan decides to use less paper and plastic.",
+      "video": "Tìm YouTube: \"save the earth for kids environment\""
+     },
+     "zh": {
+      "tu": "Mới: 关于 guānyú (= about), 决定 juédìng (= decide), 旅游 lǚyóu (= travel) | Ôn (từ nối Unit 5): 木头 mùtou, 纸 zhǐ, 少用 shǎo yòng | Ôn: 将来 jiānglái (= future), 用 yòng (= use), 自己 zìjǐ | Nghe làm quen: 相信 xiāngxìn (= believe), 环境 huánjìng (= environment)",
+      "cum": "Mới: 一本关于太空的书 yì běn guānyú tàikōng de shū (= a book about space) / 决定爱护 juédìng àihù (= decide to save) / 去太空旅游 qù tàikōng lǚyóu (= travel to space) | Ôn: 哪儿都能去 nǎr dōu néng qù (= go anywhere) / 别自己一个人去 bié zìjǐ yí ge rén qù (= don't go by yourself) | Nghe làm quen: 我相信 wǒ xiāngxìn (= I believe) / 爱护地球的环境 àihù dìqiú de huánjìng (= save the environment on Earth)",
+      "cau": "[Cầu nối] I believe people could live on other planets. ↔ 我相信人们能住在其他行星上。(Wǒ xiāngxìn rénmen néng zhù zài qítā xíngxīng shang.) [giống: I believe ↔ 我相信 đứng đầu, sau là cả một câu · khác: on other planets đứng cuối ↔ 在其他行星上 có thêm chữ 上] / 别自己一个人去太空。(Bié zìjǐ yí ge rén qù tàikōng.) / 有了火箭，你哪儿都能去。(Yǒule huǒjiàn, nǐ nǎr dōu néng qù.) / 我相信人们能住在其他行星上。(Wǒ xiāngxìn rénmen néng zhù zài qítā xíngxīng shang.) / 我们决定爱护地球的环境。(Wǒmen juédìng àihù dìqiú de huánjìng.) / 将来，人们能去太空旅游。(Jiānglái, rénmen néng qù tàikōng lǚyóu.) (= One day, people could travel to space.) / Nhan在看一本关于太空的书。(Nhan zài kàn yì běn guānyú tàikōng de shū.) / [Chuyển ngữ] [Ghi âm (NL2): nghe cô giáo của Nhan nói 2 câu tiếng Anh (First, we must save the environment on Earth. Use less paper and plastic.) rồi nói lại ý bằng tiếng Trung cho Xiaomei] 我们先要爱护地球。少用纸和塑料。 (Wǒmen xiān yào àihù dìqiú. Shǎo yòng zhǐ hé sùliào.)",
+      "truyen": "Nhan的决定 — Nhan在看一本关于太空的书。他说：“我相信，将来我们哪儿都能去！”老师说：“可是我们先要爱护地球的环境。”Nhan决定少用纸和塑料。(Nhan zài kàn yì běn guānyú tàikōng de shū. Tā shuō: “Wǒ xiāngxìn, jiānglái wǒmen nǎr dōu néng qù!” Lǎoshī shuō: “Kěshì wǒmen xiān yào àihù dìqiú de huánjìng.” Nhan juédìng shǎo yòng zhǐ hé sùliào.)",
+      "video": "Tìm YouTube: \"爱护地球 儿童 动画\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "instead, adventure, anywhere, believe, decide, environment, could, if you want, by yourself | Ôn: metal, glass, plastic, save, paper, museum, maybe, idea, OK, about, travel",
+     "slide": "[Lời cô] Vào bài: Hello, class! 同学们好！ · Chuyển ý: Let's vote! 我们来投票吧！ · Nhắc: One at a time, please. 请一个一个说。 · Khen: Good idea! 好办法！ · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): environment / 环境 huánjìng, believe / 相信 xiāngxìn. 1) Ghép câu (5 câu): If you want, + we could go to the museum instead. / With a rocket, + you could go anywhere. / Don't go into space + by yourself. / I believe + people could live on other planets. / We decide + to save the environment. 2) Phiếu chọn lựa (cặp đôi): A: Let's go to the park. B: If you want, we could ___ instead. 3) Bình chọn cả lớp: What could we do to save the environment? (save paper / use less plastic).",
+     "truyen": "A space adventure — Bông wants to go to the park, but it might rain. 'If you want, we could go to the space museum instead,' says Mum. In the museum, there is a big spaceship made of metal and glass. 'With a rocket, you could go anywhere,' says the guide. 'I believe I could be an astronaut,' says Bông. On the way home, she decides to save paper and plastic for the environment.",
+     "baihat": "If You Want (giai điệu: Frère Jacques) — If you want, if you want, / we could go, we could go / on a space adventure, on a space adventure, / instead, instead! / Save the Earth, save the Earth, / save our home, save our home!"
+    },
+    "zh": {
+     "flash": "可能 kěnéng, 办法 bànfǎ, 行 xíng, 关于 guānyú, 决定 juédìng, 旅游 lǚyóu, 哪儿都 nǎr dōu (= anywhere), 能 néng (= could), 如果你想 rúguǒ nǐ xiǎng, 自己 zìjǐ (= by yourself), ……，不去……了 (= … instead of …) | Nghe: 冒险 màoxiǎn, 相信 xiāngxìn, 环境 huánjìng | Ôn: 金属 jīnshǔ, 玻璃 bōli, 塑料 sùliào, 少用 shǎo yòng, 纸 zhǐ, 博物馆 bówùguǎn",
+     "slide": "1) Ghép câu (cùng 5 câu ghép của phần tiếng Anh): 如果你想，+ 我们可以去博物馆，不去公园了。/ 有了火箭，+ 你哪儿都能去。/ 别自己一个人 + 去太空。/ 我相信 + 人们能住在其他行星上。/ 我们决定 + 爱护环境。2) Phiếu chọn lựa theo cặp (cùng phiếu của phần tiếng Anh): A: 我们去公园吧。B: 如果你想，我们可以去___，不去公园了。+ Bình chọn cả lớp (cùng câu hỏi của phần tiếng Anh): 我们能做什么来爱护环境？（少用纸 / 少用塑料）3) [Cầu nối Anh – Trung] Cùng phiếu chọn lựa của phần tiếng Anh: rối Leo đọc If you want, we could go to the museum instead., rối Xiaomei đọc 如果你想，我们可以去博物馆，不去公园了。Con chỉ ra: If you want ↔ 如果你想 cùng mở đầu câu (giống); instead ↔ tiếng Trung nói rõ 不去……了 (khác). 4) [Chuyển ngữ] Chuyển tin nhắn (NL2): con nghe tin nhắn tiếng Anh của Bông (Maybe it will rain. If you want, we could go to the space museum instead.) rồi nói lại cho rối Xiaomei bằng tiếng Trung: 可能会下雨。如果你想，我们可以去太空博物馆，不去公园了。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo đọc tin nhắn thoại của Bông: \"Hi Xiaomei! It might rain tomorrow. If you want, we could go to the space museum instead of the park. My mum has decided that we will go by bus. Please use your own cup, because we want to use less plastic. See you tomorrow!\" → con nói lại cho rối Xiaomei bằng tiếng Trung (tóm 3 ý, rồi trả lời câu hỏi thêm của Xiaomei: 她们明天怎么去博物馆？(Tāmen míngtiān zěnme qù bówùguǎn?)). Mẫu: 明天可能会下雨。如果你想，我们可以去太空博物馆，不去公园了。请用自己的杯子，因为我们要少用塑料。(Míngtiān kěnéng huì xià yǔ. Rúguǒ nǐ xiǎng, wǒmen kěyǐ qù tàikōng bówùguǎn, bú qù gōngyuán le. Qǐng yòng zìjǐ de bēizi, yīnwèi wǒmen yào shǎo yòng sùliào.) · Trả lời Xiaomei: Bông的妈妈决定坐公共汽车去。(Bông de māma juédìng zuò gōnggòng qìchē qù.)",
+     "truyen": "太空大冒险 — Bông想去公园，可是可能会下雨。妈妈说：“如果你想，我们可以去太空博物馆，不去公园了。”博物馆里有一艘很大的宇宙飞船，是用金属和玻璃做的。导游说：“有了火箭，你哪儿都能去。”Bông说：“我相信我能当宇航员！”回家的路上，她决定少用纸和塑料，爱护环境。(Bông xiǎng qù gōngyuán, kěshì kěnéng huì xià yǔ. Māma shuō: “Rúguǒ nǐ xiǎng, wǒmen kěyǐ qù tàikōng bówùguǎn, bú qù gōngyuán le.” Bówùguǎn li yǒu yì sōu hěn dà de yǔzhòu fēichuán, shì yòng jīnshǔ hé bōli zuò de. Dǎoyóu shuō: “Yǒule huǒjiàn, nǐ nǎr dōu néng qù.” Bông shuō: “Wǒ xiāngxìn wǒ néng dāng yǔhángyuán!” Huí jiā de lùshang, tā juédìng shǎo yòng zhǐ hé sùliào, àihù huánjìng.)",
+     "baihat": "如果你想 (giai điệu: Frère Jacques – cùng giai điệu bài tiếng Anh) — 如果你想，如果你想，(Rúguǒ nǐ xiǎng, rúguǒ nǐ xiǎng,) / 我们能去，我们能去，(wǒmen néng qù, wǒmen néng qù,) / 去太空大冒险，去太空大冒险，(qù tàikōng dà màoxiǎn, qù tàikōng dà màoxiǎn,) / 不去公园，不去公园！(bú qù gōngyuán, bú qù gōngyuán!) / 爱护地球，爱护地球，(Àihù dìqiú, àihù dìqiú,) / 我们的家，我们的家！(wǒmen de jiā, wǒmen de jiā!)"
+    }
+   }
+  },
+  {
+   "buoi": 27,
+   "unit": 6,
+   "label_buoi": "Buổi dạy 27. Unit 6 · Space – Tìm nước trên sao Hỏa",
+   "web": [
+    {
+     "ngay": 53,
+     "label": "Ngày 53. Unit 6 · Đi theo – Tìm kiếm – Thì thầm trên sao Hỏa",
+     "en": {
+      "tu": "Mới: follow, search, might, piece, whisper, across, other | Ôn: rock, water, fast",
+      "cum": "Mới: follow me / search for water / a piece of rock / whisper to a friend / fly across the sky / on other planets",
+      "cau": "[Ngữ pháp: could / might – có thể] There might be water under the rock. / The astronauts search for water on other planets. / A rocket flies across the sky. / The astronaut brings back a piece of rock. / 'Follow me,' Leo whispers. / Mars is very cold and very dry.",
+      "truyen": "Search on Mars — Two astronauts land on Mars. 'Follow me,' says Anna. They search for water across the red sand. Mars is very cold and very dry. Leo finds a piece of rock. 'Wait!' he whispers. 'There might be water under it.'",
+      "video": "Tìm YouTube: \"Mars rover for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 等 děng (= wait), 不但…而且… búdàn… érqiě… (= not only … but also) | Ôn: 火星 Huǒxīng, 可能 kěnéng, 石头 shítou, 水 shuǐ (= water), 快 kuài (= fast), 其他 qítā, 找 zhǎo, 跟 gēn | Chỉ nghe hiểu (tranh trong truyện): 小声说 xiǎoshēng shuō",
+      "cum": "Mới: 等一下 děng yíxià (= wait) / 不但很冷，而且很干 búdàn hěn lěng, érqiě hěn gān | Ôn: 跟我来 gēn wǒ lái (= follow me) / 找水 zhǎo shuǐ (= search for water) / 一块石头 yí kuài shítou (= a piece of rock) / 在其他行星上 zài qítā xíngxīng shang (= on other planets)",
+      "cau": "[Cầu nối] There might be water under the rock. ↔ 石头下面可能有水。(Shítou xiàmiàn kěnéng yǒu shuǐ.) [giống: might ↔ 可能 đặt trước động từ · khác: under the rock đứng cuối ↔ 石头下面 đứng đầu (nơi chốn trước); very cold and very dry ↔ 不但很冷，而且很干] / [Ngữ pháp: 不但…而且…] 石头下面可能有水。(Shítou xiàmiàn kěnéng yǒu shuǐ.) / 宇航员在其他行星上找水。(Yǔhángyuán zài qítā xíngxīng shang zhǎo shuǐ.) / 火箭飞过天空。(Huǒjiàn fēiguò tiānkōng.) / 宇航员拿回来一块石头。(Yǔhángyuán ná huílai yí kuài shítou.) / Leo小声说：“跟我来。”(Leo xiǎoshēng shuō: “Gēn wǒ lái.”) (= 'Follow me,' Leo whispers.) / 火星不但很冷，而且很干。(Huǒxīng búdàn hěn lěng, érqiě hěn gān.) / 等一下！(Děng yíxià!)",
+      "truyen": "在火星上找水 — 两个宇航员在火星上降落了。Anna说：“跟我来。”他们走过红色的沙子，找水。火星不但很冷，而且很干。Leo找到一块石头。他小声说：“等一下！石头下面可能有水。”(Liǎng ge yǔhángyuán zài Huǒxīng shang jiàngluò le. Anna shuō: “Gēn wǒ lái.” Tāmen zǒuguò hóngsè de shāzi, zhǎo shuǐ. Huǒxīng búdàn hěn lěng, érqiě hěn gān. Leo zhǎodào yí kuài shítou. Tā xiǎoshēng shuō: “Děng yíxià! Shítou xiàmiàn kěnéng yǒu shuǐ.”)",
+      "video": "Tìm YouTube: \"火星 儿童 科普 动画\""
+     }
+    },
+    {
+     "ngay": 54,
+     "label": "Ngày 54. Unit 6 · Ôn không tranh – Nghe đoán vũ trụ",
+     "en": {
+      "tu": "Ôn: space, planet, Earth, rocket, astronaut, spaceship, land, instead, telescope, adventure | Ôn nhanh: butterfly, member, together",
+      "cum": "Ôn: by yourself / could / if you want / go anywhere / search for water / follow me / a piece of rock",
+      "cau": "Ôn (nghe – chọn đúng/sai, không tranh): Earth is a planet. / Astronauts could land on other planets. / We could see the moon with a telescope. / If you want, we could go by rocket instead of by plane. / There might be water on Mars.",
+      "truyen": "Who am I? — I live in a spaceship. I wear a big white suit. I could land on the moon or on other planets. I search for water and rocks. Who am I? (An astronaut!)",
+      "video": "Tìm YouTube: \"space vocabulary quiz for kids\""
+     },
+     "zh": {
+      "tu": "Ôn: 太空 tàikōng, 地球 dìqiú, 行星 xíngxīng, 火箭 huǒjiàn, 火星 Huǒxīng, 宇航员 yǔhángyuán, 宇宙飞船 yǔzhòu fēichuán, 降落 jiàngluò, 望远镜 wàngyuǎnjìng, ……，不……了 (= … instead of …: 坐火箭去，不坐飞机了), 可能 kěnéng, 其他 qítā, 找 zhǎo, 跟 gēn, 石头 shítou | Ôn nhanh: 蝴蝶 húdié, 成员 chéngyuán (nghe), 一起 yìqǐ | Nghe: 冒险 màoxiǎn (= adventure)",
+      "cum": "Ôn: 别自己一个人去 bié zìjǐ yí ge rén qù (= by yourself) / 能… néng… (= could) / 如果你想 rúguǒ nǐ xiǎng (= if you want) / 哪儿都能去 nǎr dōu néng qù (= go anywhere) / 找水 zhǎo shuǐ (= search for water) / 跟我来 gēn wǒ lái (= follow me) / 一块石头 yí kuài shítou (= a piece of rock)",
+      "cau": "[Cầu nối] Who am I? I could land on other planets. ↔ 我是谁？我能在其他行星上降落。(Wǒ shì shéi? Wǒ néng zài qítā xíngxīng shang jiàngluò.) [giống: câu đố tự giới thiệu bằng I / 我 · khác: Who am I? đảo trật tự, 我是谁？giữ trật tự câu kể] / Ôn (nghe – chọn đúng/sai, không tranh): 地球是一颗行星。(Dìqiú shì yì kē xíngxīng.) / 宇航员能在其他行星上降落。(Yǔhángyuán néng zài qítā xíngxīng shang jiàngluò.) / 我们能用望远镜看月亮。(Wǒmen néng yòng wàngyuǎnjìng kàn yuèliang.) / 如果你想，我们可以坐火箭去，不坐飞机了。(Rúguǒ nǐ xiǎng, wǒmen kěyǐ zuò huǒjiàn qù, bú zuò fēijī le.) / 火星上可能有水。(Huǒxīng shang kěnéng yǒu shuǐ.) / [Chuyển ngữ] [Ghi âm (NL7): nghe câu đố tiếng Anh 'Who am I?' rồi nói lại 3 ý chính bằng tiếng Trung cho Xiaomei] 我住在宇宙飞船里。我能在月球上降落。我找水和石头。 (Wǒ zhù zài yǔzhòu fēichuán li. Wǒ néng zài yuèqiú shang jiàngluò. Wǒ zhǎo shuǐ hé shítou.)",
+      "truyen": "我是谁？— 我住在宇宙飞船里。我穿一件很大的白衣服。我能在月球上或者其他行星上降落。我找水和石头。我是谁？（宇航员！）(Wǒ zhù zài yǔzhòu fēichuán li. Wǒ chuān yí jiàn hěn dà de bái yīfu. Wǒ néng zài yuèqiú shang huòzhě qítā xíngxīng shang jiàngluò. Wǒ zhǎo shuǐ hé shítou. Wǒ shì shéi? (Yǔhángyuán!))",
+      "video": "Tìm YouTube: \"太空 词语 儿童 认知\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "follow, search, might, piece, whisper, across, other | Ôn: space, planet, Earth, rocket, astronaut, spaceship, land, telescope, instead, adventure, wait, cold and dry, rock, Mars",
+     "slide": "[Lời cô] Vào bài: Good afternoon, everyone! 大家下午好！ · Chuyển ý: Follow me! 跟我来！ · Nhắc: Quiet, please. 请安静。 · Khen: Super! 真棒！ · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): might / 可能, across / 过. 1) Trò 'Simon says' phiên bản vũ trụ: Follow me! / Whisper 'rocket'! / Walk across the room! / Search for a piece of rock! 2) Nghe – đánh số tranh theo truyện 'Search on Mars' (4 tranh). 3) Đoán với might: There might be ___ on Mars. (water / rocks / people?) – con giơ thẻ Yes/No.",
+     "truyen": "Search on Mars — Two astronauts land on Mars. 'Follow me,' says Anna. They walk across the red sand and search for water. 'Other planets are cold and dry,' says Anna. Leo finds a piece of rock. 'There might be water under it,' he whispers. They take the rock back to the spaceship. 'What an adventure!'",
+     "baihat": "Follow Me to Mars (giai điệu: The Wheels on the Bus) — The astronauts walk across the sand, / across the sand, across the sand. / The astronauts walk across the sand / and search for water. / 'Follow me,' the astronaut whispers... / 'There might be water here!'"
+    },
+    "zh": {
+     "flash": "等 děng, 不但…而且… búdàn… érqiě… | Nghe: 小声说 xiǎoshēng shuō, 冒险 màoxiǎn | Ôn: 跟 gēn, 找 zhǎo, 可能 kěnéng, 一块 yí kuài (= a piece), 走过 zǒuguò (= across), 其他 qítā, 石头 shítou, 太空 tàikōng, 地球 dìqiú, 行星 xíngxīng, 火星 Huǒxīng, 火箭 huǒjiàn, 宇航员 yǔhángyuán, 宇宙飞船 yǔzhòu fēichuán, 降落 jiàngluò, 望远镜 wàngyuǎnjìng, 不去……了 (= instead)",
+     "slide": "1) Trò 'Simon says' bằng tiếng Trung (cùng lệnh của phần tiếng Anh): 跟我来！/ 小声说“火箭”！/ 走到教室的另一边！(Zǒu dào jiàoshì de lìng yì biān!) / 找一块石头！+ 听一听，给四张图排顺序（cùng 4 tranh 'Search on Mars' của phần tiếng Anh）。2) Đoán với 可能 (cùng thẻ Yes/No của phần tiếng Anh): 火星上可能有___。(水 / 石头 / 人?)3) [Cầu nối Anh – Trung] Cùng 4 tranh 'Search on Mars': rối Leo nói There might be water under the rock., rối Xiaomei nói 石头下面可能有水。Con tìm: might ↔ 可能 trước động từ (giống); under the rock ở cuối ↔ 石头下面 ở đầu (khác). 4) [Chuyển ngữ] Bộ đàm vũ trụ (NL6): một bạn là Anna nói 2–3 câu tiếng Anh (Follow me. Let's search for water. There might be water under the rock.), bạn kia báo lại cho trạm Xiaomei bằng tiếng Trung: 跟我来。我们一起找水。石头下面可能有水。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Anna gọi về trạm (cô đọc): \"Station Xiaomei, this is Anna. We are walking across Mars now. Follow me, everyone! Let's search for water together. There might be water under that big rock. Wait! I can see a small piece of ice!\" → con nói lại cho rối Xiaomei bằng tiếng Trung (tóm 3 ý, rồi trả lời câu hỏi thêm của Xiaomei: Anna看见了什么？(Anna kànjiànle shénme?)). Mẫu: Anna说，他们现在在火星上走。大家跟她一起找水。那块大石头下面可能有水。(Anna shuō, tāmen xiànzài zài Huǒxīng shang zǒu. Dàjiā gēn tā yìqǐ zhǎo shuǐ. Nà kuài dà shítou xiàmiàn kěnéng yǒu shuǐ.) · Trả lời Xiaomei: 她看见了一小块冰。(Tā kànjiànle yì xiǎo kuài bīng.)",
+     "truyen": "在火星上找水 — 两个宇航员在火星上降落了。Anna说：“跟我来。”他们走过红色的沙子，找水。Anna说：“其他行星不但很冷，而且很干。”Leo找到一块石头。他小声说：“石头下面可能有水。”他们把石头拿回了宇宙飞船。“真是一次大冒险！”(Liǎng ge yǔhángyuán zài Huǒxīng shang jiàngluò le. Anna shuō: “Gēn wǒ lái.” Tāmen zǒuguò hóngsè de shāzi, zhǎo shuǐ. Anna shuō: “Qítā xíngxīng búdàn hěn lěng, érqiě hěn gān.” Leo zhǎodào yí kuài shítou. Tā xiǎoshēng shuō: “Shítou xiàmiàn kěnéng yǒu shuǐ.” Tāmen bǎ shítou náhuíle yǔzhòu fēichuán. “Zhēn shì yí cì dà màoxiǎn!”)",
+     "baihat": "跟我去火星 (Gēn wǒ qù Huǒxīng) (giai điệu: The Wheels on the Bus – cùng giai điệu bài tiếng Anh) — 宇航员走过红沙子，(Yǔhángyuán zǒuguò hóng shāzi,) / 红沙子，红沙子，(hóng shāzi, hóng shāzi,) / 宇航员走过红沙子，(yǔhángyuán zǒuguò hóng shāzi,) / 一起找水。(yìqǐ zhǎo shuǐ.) / “跟我来，”宇航员小声说……(“Gēn wǒ lái,” yǔhángyuán xiǎoshēng shuō…) / “这里可能有水！”(“Zhèli kěnéng yǒu shuǐ!”)"
+    }
+   }
+  },
+  {
+   "buoi": 28,
+   "unit": 6,
+   "label_buoi": "Buổi dạy 28. Unit 6 · Space – Sao chổi & Phiên dịch nhí",
+   "web": [
+    {
+     "ngay": 55,
+     "label": "Ngày 55. Unit 6 · Truyện & chuyển ngữ – Sao chổi đêm nay",
+     "en": {
+      "tu": "Ôn: telescope, space, planet, rocket, whisper, believe, across | Ôn nhanh: file, join",
+      "cum": "Ôn: look through a telescope / fly across the sky / I believe / whisper to Mum / could see",
+      "cau": "[Chuyển ngữ] Anh → Trung: We could see the stars with a telescope. / In the future, people could travel to space. / I believe astronauts could land on Mars. / Let's search the sky together.",
+      "truyen": "The comet — At night, Xiaomei and Mum look through a telescope. 'Look! A comet is flying across the sky,' whispers Mum. 'We could see comets with a telescope.' Xiaomei can't believe it. 'One day, I could fly a rocket into space!' she says.",
+      "video": "Tìm YouTube: \"what is a comet for kids\""
+     },
+     "zh": {
+      "tu": "Ôn: 一起 yìqǐ, 望远镜 wàngyuǎnjìng, 太空 tàikōng, 行星 xíngxīng, 火箭 huǒjiàn (= rocket), 将来 jiānglái, 找 zhǎo | Nghe làm quen: 相信 xiāngxìn (= believe) | Chỉ nghe hiểu (tranh trong truyện): 彗星 huìxīng, 小声说 xiǎoshēng shuō",
+      "cum": "Ôn: 用望远镜看 yòng wàngyuǎnjìng kàn / 将来能去太空 jiānglái néng qù tàikōng / 飞过天空 fēiguò tiānkōng (= fly across the sky) / 能看见 néng kànjiàn (= could see) | Nghe làm quen: 我相信 wǒ xiāngxìn (= I believe) / 小声说 xiǎoshēng shuō (= whisper)",
+      "cau": "[Cầu nối] Look! A comet is flying across the sky. ↔ 看！一颗彗星飞过天空。(Kàn! Yì kē huìxīng fēiguò tiānkōng.) [giống: Look! ↔ 看！đứng đầu để gọi chú ý · khác: star / planet / comet / Mars ↔ 星星 / 行星 / 彗星 / 火星: tiếng Trung đều có chữ 星] / [Chuyển ngữ] Trung → Anh: 我们能用望远镜看星星。(Wǒmen néng yòng wàngyuǎnjìng kàn xīngxing.) / 将来人们能去太空旅游。(Jiānglái rénmen néng qù tàikōng lǚyóu.) / 我相信宇航员能在火星上降落。(Wǒ xiāngxìn yǔhángyuán néng zài Huǒxīng shang jiàngluò.) / 我们一起在天空里找一找吧。(Wǒmen yìqǐ zài tiānkōng li zhǎo yi zhǎo ba.)",
+      "truyen": "彗星 — 晚上，Xiaomei和妈妈用望远镜看天空。妈妈小声说：“看！一颗彗星飞过天空。我们能用望远镜看彗星。”Xiaomei不敢相信：“真的吗？”她说：“将来我也能开火箭去太空！”(Wǎnshang, Xiaomei hé māma yòng wàngyuǎnjìng kàn tiānkōng. Māma xiǎoshēng shuō: “Kàn! Yì kē huìxīng fēiguò tiānkōng. Wǒmen néng yòng wàngyuǎnjìng kàn huìxīng.” Xiaomei bù gǎn xiāngxìn: “Zhēn de ma?” Tā shuō: “Jiānglái wǒ yě néng kāi huǒjiàn qù tàikōng!”)",
+      "video": "Tìm YouTube: \"彗星是什么 儿童\""
+     }
+    },
+    {
+     "ngay": 56,
+     "label": "Ngày 56. Unit 6 · Phiên dịch nhí – Phỏng vấn phi hành gia",
+     "en": {
+      "tu": "Ôn: astronaut, spaceship, Earth, environment, decide, instead, anywhere | Ôn nhanh: together, member",
+      "cum": "Ôn: by yourself / if you want / save the environment / decide to / go anywhere",
+      "cau": "Phiên dịch nhí (con dịch cho bạn Xiaomei): What could people do in space? / In the future, people could grow plants in space. / Astronauts never go into space by themselves. / We must save the environment on Earth.",
+      "truyen": "Meet an astronaut — An astronaut visits Bông's school. Xiaomei can't speak English, so Bông helps her. 'What could people do in space?' asks Xiaomei. Bông says it in English. 'In the future, people could grow plants in space,' says the astronaut. Bông tells Xiaomei in Chinese.",
+      "video": "Tìm YouTube: \"astronaut answers kids questions\""
+     },
+     "zh": {
+      "tu": "Ôn: 宇航员 yǔhángyuán, 宇宙飞船 yǔzhòu fēichuán, 地球 dìqiú, 将来 jiānglái, 决定 juédìng, ……，不去……了 (= … instead of …: 去博物馆，不去公园了), 哪儿都 nǎr dōu (= anywhere), 自己 zìjǐ | Ôn nhanh: 一起 yìqǐ, 成员 chéngyuán (nghe) | Nghe làm quen: 环境 huánjìng (= environment), 植物 zhíwù (= plants)",
+      "cum": "Ôn: 在太空能做什么 zài tàikōng néng zuò shénme / 别自己一个人去 bié zìjǐ yí ge rén qù (= by yourself) / 如果你想 rúguǒ nǐ xiǎng (= if you want) / 决定 juédìng (= decide to) / 哪儿都能去 nǎr dōu néng qù (= go anywhere) | Nghe làm quen: 爱护环境 àihù huánjìng (= save the environment)",
+      "cau": "[Cầu nối] What could people do in space? ↔ 将来人们在太空能做什么？(Jiānglái rénmen zài tàikōng néng zuò shénme?) [giống: could ↔ 能 hỏi việc có thể làm · khác: What đứng đầu câu tiếng Anh, 什么 đứng cuối câu tiếng Trung; in space ↔ 在太空 đứng trước động từ] / Phiên dịch nhí (con dịch cho bạn Anna): 将来人们在太空能做什么？(Jiānglái rénmen zài tàikōng néng zuò shénme?) / 将来，人们能在太空种植物。(Jiānglái, rénmen néng zài tàikōng zhòng zhíwù.) / 宇航员从来不一个人去太空。(Yǔhángyuán cónglái bù yí ge rén qù tàikōng.) / 我们要爱护地球的环境。(Wǒmen yào àihù dìqiú de huánjìng.)",
+      "truyen": "见宇航员 — 一个宇航员来Bông的学校。Xiaomei不会说英语，Bông帮她。Xiaomei问：“将来人们在太空能做什么？”Bông用英语问宇航员。宇航员用英语回答。Bông用汉语告诉Xiaomei：“将来，人们能在太空种植物。”(Yí ge yǔhángyuán lái Bông de xuéxiào. Xiaomei bú huì shuō Yīngyǔ, Bông bāng tā. Xiaomei wèn: “Jiānglái rénmen zài tàikōng néng zuò shénme?” Bông yòng Yīngyǔ wèn yǔhángyuán. Yǔhángyuán yòng Yīngyǔ huídá. Bông yòng Hànyǔ gàosu Xiaomei: “Jiānglái, rénmen néng zài tàikōng zhòng zhíwù.”)",
+      "video": "Tìm YouTube: \"王亚平 太空授课 儿童\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn: space, planet, Earth, rocket, astronaut, spaceship, land, instead, telescope, adventure, anywhere, believe, decide, environment, follow, search, might, piece, whisper, across, other, could, if you want, by yourself",
+     "slide": "[Lời cô] Vào bài: Good morning, class! 同学们好！ · Chuyển ý: Let's listen to the story. 我们来听故事。 · Nhắc: Speak loudly, please. 请大声说。 · Khen: Excellent! 太好了！ · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): comet / 彗星, interview / 采访. 1) Nghe truyện của buổi rồi trả lời 3 câu: What do Xiaomei and Mum look through? (a telescope) / What could Xiaomei do one day? (fly a rocket into space) / What does she decide? (to join the space club). 2) [Chuyển ngữ] Phiên dịch nhí theo cặp (NL6): What could people do in space? ↔ 人们在太空能做什么？/ People could travel to Mars by rocket. ↔ 人们能坐火箭去火星。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo kể lại buổi phỏng vấn phi hành gia: \"Last year, the astronaut flew a rocket into space. She lived in a spaceship for two months. From the spaceship, Earth looked very beautiful. In space, you can't walk – you fly! She believes that one day people could live on other planets.\" → con nói lại cho rối Xiaomei bằng tiếng Trung (tóm 3 ý, rồi trả lời câu hỏi thêm của Xiaomei: 在太空里，人们能走路吗？(Zài tàikōng li, rénmen néng zǒulù ma?)). Mẫu: 去年这位宇航员坐火箭去了太空，在宇宙飞船里住了两个月。她说，从宇宙飞船上看，地球很漂亮。她说，将来人们能住在其他行星上。(Qùnián zhè wèi yǔhángyuán zuò huǒjiàn qùle tàikōng, zài yǔzhòu fēichuán li zhùle liǎng ge yuè. Tā shuō, cóng yǔzhòu fēichuán shang kàn, dìqiú hěn piàoliang. Tā shuō, jiānglái rénmen néng zhù zài qítā xíngxīng shang.) · Trả lời Xiaomei: 人们不能走路，在太空里人们是飞的。(Rénmen bù néng zǒulù, zài tàikōng li rénmen shì fēi de.) 3) Kiểm tra nhanh unit (6 câu chọn đáp án): could / might / instead / by yourself.",
+     "truyen": "The comet — At night, Xiaomei and Mum look through a telescope. 'Look! A comet is flying across the sky,' whispers Mum. 'We could see comets with a telescope.' Xiaomei can't believe it. 'One day, I could fly a rocket into space. I could go anywhere!' she says. 'If you want, you could join the space club,' says Mum. Xiaomei decides to join it the next day.",
+     "baihat": "Comet in the Sky (giai điệu: Twinkle Twinkle Little Star) — Twinkle, twinkle, comet bright, / flying across the sky tonight. / With my telescope I see / planets, stars and Earth with me. / One day I could fly so far, / past the moon and every star!"
+    },
+    "zh": {
+     "flash": "Ôn: 太空 tàikōng, 行星 xíngxīng, 地球 dìqiú, 火箭 huǒjiàn, 宇航员 yǔhángyuán, 宇宙飞船 yǔzhòu fēichuán, 降落 jiàngluò, 不去……了 (= instead), 望远镜 wàngyuǎnjìng, 哪儿都 nǎr dōu (= anywhere), 决定 juédìng, 跟 gēn (= follow), 找 zhǎo, 可能 kěnéng, 一块 yí kuài (= a piece), 飞过 fēiguò (= across), 其他 qítā, 能 néng (= could), 如果你想 rúguǒ nǐ xiǎng, 自己 zìjǐ (= by yourself) | Nghe: 冒险 màoxiǎn, 相信 xiāngxìn, 环境 huánjìng, 小声说 xiǎoshēng shuō",
+     "slide": "1) Nghe truyện của buổi rồi chọn đúng/sai (3 câu): Xiaomei和妈妈用望远镜看天空。(对) / Xiaomei想坐火车去太空。(错) / Xiaomei决定参加太空小组。(对) 2) [Chuyển ngữ] Phiên dịch nhí (NL5): cô nói câu tiếng Trung, con dịch sang tiếng Anh: 人们在太空能做什么？→ What could people do in space? / 人们能坐火箭去火星。→ People could travel to Mars by rocket. 3) Kiểm tra nhanh chữ Hán (6 câu): nhìn tranh chọn chữ 太空 / 地球 / 火箭 / 宇航员 / 望远镜 / 行星. 4) [Cầu nối Anh – Trung] Cùng tranh bầu trời đêm của truyện 'The comet': con xếp thẻ star – 星星 / planet – 行星 / comet – 彗星 / Mars – 火星 và phát hiện: tiếng Anh mỗi vật một tên khác hẳn, tiếng Trung cùng có chữ 星; could ↔ 能 đứng trước động từ ở cả hai tiếng.",
+     "truyen": "彗星 — 晚上，Xiaomei和妈妈用望远镜看天空。妈妈小声说：“看！一颗彗星飞过天空。我们能用望远镜看彗星。”Xiaomei不敢相信！她说：“将来我也能开火箭去太空，哪儿都能去！”妈妈说：“如果你想，你可以参加太空小组。”Xiaomei决定第二天就去。(Wǎnshang, Xiaomei hé māma yòng wàngyuǎnjìng kàn tiānkōng. Māma xiǎoshēng shuō: “Kàn! Yì kē huìxīng fēiguò tiānkōng. Wǒmen néng yòng wàngyuǎnjìng kàn huìxīng.” Xiaomei bù gǎn xiāngxìn! Tā shuō: “Jiānglái wǒ yě néng kāi huǒjiàn qù tàikōng, nǎr dōu néng qù!” Māma shuō: “Rúguǒ nǐ xiǎng, nǐ kěyǐ cānjiā tàikōng xiǎozǔ.” Xiaomei juédìng dì-èr tiān jiù qù.)",
+     "baihat": "小彗星 (giai điệu: Twinkle Twinkle Little Star – 小星星) — 一闪一闪小彗星，(Yì shǎn yì shǎn xiǎo huìxīng,) / 飞过天空亮晶晶，(fēiguò tiānkōng liàng jīngjīng,) / 用望远镜看一看，(yòng wàngyuǎnjìng kàn yi kàn,) / 地球行星在身边，(dìqiú xíngxīng zài shēnbiān,) / 将来我坐火箭去，(jiānglái wǒ zuò huǒjiàn qù,) / 飞过月亮和星星！(fēiguò yuèliang hé xīngxing!)"
+    }
+   }
+  },
+  {
+   "buoi": 29,
+   "unit": 7,
+   "label_buoi": "Buổi dạy 29. Unit 7 · Transport – Con đi học bằng gì?",
+   "web": [
+    {
+     "ngay": 57,
+     "label": "Ngày 57. Unit 7 · Giao thông – Đèn giao thông – Tắc đường",
+     "en": {
+      "tu": "Mới: traffic, light, jam, underground | Ôn nhanh: as, ever | Ôn: bus, car, taxi, bicycle",
+      "cum": "Mới: traffic lights / a traffic jam / a red light / by underground | Ôn: by bus / by taxi / by bicycle",
+      "cau": "[Ngữ pháp: How …? – hỏi cách đi lại] How do you go to school? / I go to school by underground. / How does your dad go to work? – By car. / There is a big traffic jam. / Stop at the red light!",
+      "truyen": "A traffic jam — Nhan's dad drives him to school. There is a big traffic jam on the road. The traffic light is red and all the cars stop. 'Tomorrow, let's go by underground,' says Nhan.",
+      "video": "Tìm YouTube: \"traffic lights song for kids red yellow green\""
+     },
+     "zh": {
+      "tu": "Mới: 红绿灯 hónglǜdēng (= traffic lights), 堵车 dǔchē (= traffic jam), 地铁 dìtiě (= underground), 停 tíng (= stop) | Ôn: 公共汽车 gōnggòng qìchē, 出租车 chūzūchē, 自行车 zìxíngchē, 坐 zuò, 开 kāi",
+      "cum": "Mới: 红绿灯 hónglǜdēng (= traffic lights) / 堵车了 dǔchē le (= a traffic jam) / 红灯 hóng dēng (= a red light) / 坐地铁 zuò dìtiě (= by underground) | Ôn: 坐公共汽车 zuò gōnggòng qìchē (= by bus) / 坐出租车 zuò chūzūchē (= by taxi) / 骑自行车 qí zìxíngchē (= by bicycle)",
+      "cau": "[Cầu nối] I go to school by underground. ↔ 我坐地铁去学校。(Wǒ zuò dìtiě qù xuéxiào.) [giống: Ai – đi – đâu · khác: by underground đứng cuối ↔ 坐地铁 đứng trước 去学校; by bicycle ↔ 骑自行车 (không dùng 坐)] / [Ngữ pháp: 怎么 + V; 坐 + phương tiện + 去 + nơi chốn] 你怎么去学校？(Nǐ zěnme qù xuéxiào?) / 我坐地铁去学校。(Wǒ zuò dìtiě qù xuéxiào.) / 你爸爸怎么去上班？——开车。(Nǐ bàba zěnme qù shàngbān? — Kāichē.) / 路上堵车很厉害。(Lùshang dǔchē hěn lìhai.) / 红灯，停！(Hóng dēng, tíng!)",
+      "truyen": "堵车 — 爸爸开车送Nhan去学校。路上堵车很厉害。红灯亮了，车都停了。Nhan说：“明天我们坐地铁去学校吧！”(Bàba kāichē sòng Nhan qù xuéxiào. Lùshang dǔchē hěn lìhai. Hóng dēng liàng le, chē dōu tíng le. Nhan shuō: “Míngtiān wǒmen zuò dìtiě qù xuéxiào ba!”)",
+      "video": "Tìm YouTube: \"红绿灯 儿歌 交通安全\""
+     }
+    },
+    {
+     "ngay": 58,
+     "label": "Ngày 58. Unit 7 · Xe cứu hỏa, xe điện, bánh xe, hành khách",
+     "en": {
+      "tu": "Mới: electric, wheel, passenger | Ôn nhanh: high, winner | Ôn: lorry, motorbike, helicopter",
+      "cum": "Mới: a red fire engine / an electric car / kilometre (ten kilometres) / four wheels / a lot of passengers | Ôn: a big lorry / by motorbike",
+      "cau": "[Ngữ pháp: will + V – dự đoán tương lai] Everyone will drive an electric car. / A fire engine has six wheels. / My school is two kilometres from my house. / The bus has a lot of passengers. / The passengers get on and get off the bus.",
+      "truyen": "Leo's toy cars — Leo has a red fire engine and an electric car. The fire engine has six wheels. His toy bus has ten little passengers. 'In the future, everyone will drive an electric car,' says Leo.",
+      "video": "Tìm YouTube: \"vehicles for kids fire engine electric car\""
+     },
+     "zh": {
+      "tu": "Mới: 辆 liàng (= lượng từ cho xe: an electric car → 一辆电动汽车), 电动汽车 diàndòng qìchē (= electric car), 上车 shàngchē (= get on), 下车 xiàchē (= get off) | Ôn: 卡车 kǎchē (= lorry), 摩托车 mótuōchē | Nghe làm quen: 直升机 zhíshēngjī (= helicopter) | Chỉ nghe hiểu (tranh trong truyện): 轮子 lúnzi, 乘客 chéngkè, 消防车 xiāofángchē, 公里 gōnglǐ (= kilometre)",
+      "cum": "Mới: 一辆电动汽车 yí liàng diàndòng qìchē (= an electric car) / 一辆红色的消防车 yí liàng hóngsè de xiāofángchē (= a red fire engine) / 上车、下车 shàngchē, xiàchē (= get on, get off) | Ôn: 骑摩托车 qí mótuōchē (= by motorbike) | Nghe làm quen: 很多乘客 hěn duō chéngkè (= a lot of passengers)",
+      "cau": "[Cầu nối] Everyone will drive an electric car. ↔ 将来大家都会开电动汽车。(Jiānglái dàjiā dōu huì kāi diàndòng qìchē.) [giống: will ↔ 会 đứng trước động từ · khác: an electric car ↔ 一辆电动汽车 (xe dùng lượng từ 辆, không có an); everyone ↔ 大家都] / [Ngữ pháp: 会 + V – dự đoán] 将来大家都会开电动汽车。(Jiānglái dàjiā dōu huì kāi diàndòng qìchē.) / Leo有一辆电动汽车。(Leo yǒu yí liàng diàndòng qìchē.) / 消防车有六个轮子。(Xiāofángchē yǒu liù ge lúnzi.) / 我的学校离我家两公里。(Wǒ de xuéxiào lí wǒ jiā liǎng gōnglǐ.) (= My school is two kilometres from my house.) / 公共汽车上有很多乘客。(Gōnggòng qìchē shang yǒu hěn duō chéngkè.) / 大家上车、下车。(Dàjiā shàngchē, xiàchē.) / [Chuyển ngữ] [Ghi âm (NL2): nghe Nhan nói 2 câu tiếng Anh (There is a big traffic jam. Tomorrow, let's go by underground.) rồi nói lại bằng tiếng Trung cho Xiaomei] 路上堵车很厉害。明天我们坐地铁去吧！ (Lùshang dǔchē hěn lìhai. Míngtiān wǒmen zuò dìtiě qù ba!)",
+      "truyen": "Leo的玩具车 — Leo有一辆红色的消防车和一辆电动汽车。消防车有六个轮子。他的玩具公共汽车上有十个小乘客。Leo说：“将来大家都会开电动汽车。”(Leo yǒu yí liàng hóngsè de xiāofángchē hé yí liàng diàndòng qìchē. Xiāofángchē yǒu liù ge lúnzi. Tā de wánjù gōnggòng qìchē shang yǒu shí ge xiǎo chéngkè. Leo shuō: “Jiānglái dàjiā dōu huì kāi diàndòng qìchē.”)",
+      "video": "Tìm YouTube: \"消防车 电动汽车 儿童 认知\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "traffic, light, jam, underground, fire engine, kilometre, electric, wheel, passenger | Ôn: bus, car, taxi, bicycle, lorry, motorbike, stop, get on, get off",
+     "slide": "[Lời cô] Vào bài: Good morning, class! 同学们好！ · Chuyển ý: Let's do a class survey. 我们来做个调查。 · Nhắc: Wait for the green light! 等绿灯！ · Khen: Well done! 做得好！ · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): traffic jam / 堵车, underground / 地铁. 1) Nhìn tranh chọn từ (6 câu): traffic lights / traffic jam / underground / fire engine / electric car / passenger. 2) Khảo sát lớp: How do you go to school? – I go to school by ___. (ghi bảng kết quả) 3) Đoán với will: In the future, everyone will ___. (drive an electric car / go by underground) – nhiễu: beetle / cave.",
+     "truyen": "A traffic jam — Nhan's dad drives him to school. There is a big traffic jam on the road. The traffic light is red and all the cars stop. A fire engine with six wheels is in the jam too. 'My school is only two kilometres from here,' says Nhan. 'Tomorrow, let's go by underground. In the future, everyone will drive an electric car!'",
+     "baihat": "Red Light, Green Light (giai điệu: Frère Jacques) — Red light, red light, / stop the car, stop the car! / Green light, green light, / go, go, go! go, go, go! / Traffic jam, traffic jam, / take the underground!"
+    },
+    "zh": {
+     "flash": "红绿灯 hónglǜdēng, 堵车 dǔchē, 地铁 dìtiě, 停 tíng, 辆 liàng, 电动汽车 diàndòng qìchē, 上车 shàngchē, 下车 xiàchē | Nghe: 消防车 xiāofángchē, 轮子 lúnzi, 乘客 chéngkè, 公里 gōnglǐ | Ôn: 公共汽车 gōnggòng qìchē, 出租车 chūzūchē, 自行车 zìxíngchē, 汽车 qìchē, 卡车 kǎchē, 摩托车 mótuōchē",
+     "slide": "1) Nghe chọn tranh (6 câu, cùng bộ tranh của phần tiếng Anh): 红绿灯 / 堵车 / 地铁 / 消防车 / 电动汽车 / 乘客. 2) Đoán với 会 (cùng bài đoán của phần tiếng Anh): 将来大家都会___。(开电动汽车 / 坐地铁) + Điền lượng từ: 一___车 (辆) / 一___公共汽车 (辆) / 一___自行车 (辆). 3) Khảo sát lớp bằng tiếng Trung (cùng bảng kết quả của phần tiếng Anh): 你怎么去学校？— 我坐___去学校。4) [Cầu nối Anh – Trung] Cùng bảng khảo sát: rối Leo đọc I go to school by underground., rối Xiaomei đọc 我坐地铁去学校。Con dùng thẻ màu để thấy by underground ở cuối ↔ 坐地铁 trước 去学校 (khác), Ai – đi – đâu (giống); by bicycle ↔ 骑自行车 (đổi động từ). 5) [Chuyển ngữ] Báo cáo khảo sát (NL7): một bạn đọc kết quả bằng tiếng Anh (Ten children go to school by bus. Five children go by underground.), bạn khác nói lại cho rối Xiaomei bằng tiếng Trung: 十个同学坐公共汽车去学校。五个同学坐地铁去学校。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo đọc bảng khảo sát: \"Here are the results of our class survey. Twelve children go to school by bus. Eight children go by underground, because there are no traffic jams underground. Five children walk to school, and three go by bicycle. Nobody goes by electric car yet.\" → con nói lại cho rối Xiaomei bằng tiếng Trung (tóm 3 ý, rồi trả lời câu hỏi thêm của Xiaomei: 坐什么去学校的同学最多？(Zuò shénme qù xuéxiào de tóngxué zuì duō?)). Mẫu: 八个同学坐地铁去学校，因为地铁不堵车。五个同学走路去，三个同学骑自行车去。还没有同学坐电动汽车去。(Bā ge tóngxué zuò dìtiě qù xuéxiào, yīnwèi dìtiě bù dǔchē. Wǔ ge tóngxué zǒulù qù, sān ge tóngxué qí zìxíngchē qù. Hái méiyǒu tóngxué zuò diàndòng qìchē qù.) · Trả lời Xiaomei: 坐公共汽车的同学最多，有十二个。(Zuò gōnggòng qìchē de tóngxué zuì duō, yǒu shí'èr ge.)",
+     "truyen": "堵车 — 爸爸开车送Nhan去学校。路上堵车很厉害。红灯亮了，车都停了。一辆有六个轮子的消防车也在堵车。Nhan说：“我的学校离这儿只有两公里。明天我们坐地铁去吧！将来大家都会开电动汽车！”(Bàba kāichē sòng Nhan qù xuéxiào. Lùshang dǔchē hěn lìhai. Hóng dēng liàng le, chē dōu tíng le. Yí liàng yǒu liù ge lúnzi de xiāofángchē yě zài dǔchē. Nhan shuō: “Wǒ de xuéxiào lí zhèr zhǐ yǒu liǎng gōnglǐ. Míngtiān wǒmen zuò dìtiě qù ba! Jiānglái dàjiā dōu huì kāi diàndòng qìchē!”)",
+     "baihat": "红绿灯 (giai điệu: 两只老虎 Two Tigers – cùng giai điệu Frère Jacques của bài tiếng Anh) — 红灯停车，红灯停车，(Hóng dēng tíng chē, hóng dēng tíng chē,) / 绿灯行，绿灯行，(lǜ dēng xíng, lǜ dēng xíng,) / 堵车我坐地铁，堵车我坐地铁，(dǔchē wǒ zuò dìtiě, dǔchē wǒ zuò dìtiě,) / 去学校，去学校。(qù xuéxiào, qù xuéxiào.)"
+    }
+   }
+  },
+  {
+   "buoi": 30,
+   "unit": 7,
+   "label_buoi": "Buổi dạy 30. Unit 7 · Transport – Hỏi đường & phương tiện tương lai · Luyện YCT口试（中级）第一部分",
+   "web": [
+    {
+     "ngay": 59,
+     "label": "Ngày 59. Unit 7 · Đến nơi – Ngã tư – Đừng quên",
+     "en": {
+      "tu": "Mới: arrive, intersection, forget | Ôn (từ nối Unit 6): rocket, spaceship, astronaut, could | Ôn: map, ticket, police officer",
+      "cum": "Mới: get to the museum / arrive at the station / at the intersection / don't forget | Ôn: by rocket / buy a ticket",
+      "cau": "How do you get to the museum? / Turn left at the intersection. / We arrive at the station at eight o'clock. / In the future, people could get to the moon by rocket. / We leave home at seven and start our trip. / Don't forget your ticket! / Cross the road at the zebra crossing.",
+      "truyen": "Getting to the museum — Anna and Xiaomei leave home and start their trip. They want to get to the space museum. 'Turn left at the intersection and cross the road at the zebra crossing,' says a police officer. They arrive at the museum. 'Oh no! I forgot my ticket!' says Xiaomei. 'Don't worry, I have two,' says Anna.",
+      "video": "Tìm YouTube: \"asking for directions for kids turn left turn right\""
+     },
+     "zh": {
+      "tu": "Mới: 十字路口 shízì lùkǒu (= intersection), 斑马线 bānmǎxiàn (= zebra crossing), 离开 líkāi (= leave), 出发 chūfā (= start), 忘记 wàngjì (= forget), 带 dài (= bring) | Ôn (từ nối Unit 6): 火箭 huǒjiàn, 宇航员 yǔhángyuán, 将来 jiānglái | Ôn: 左 zuǒ, 票 piào, 警察 jǐngchá (= police officer), 地图 dìtú (= map)",
+      "cum": "Mới: 在十字路口 zài shízì lùkǒu (= at the intersection) / 走斑马线 zǒu bānmǎxiàn / 离开家 líkāi jiā / 出发去博物馆 chūfā qù bówùguǎn / 别忘记带票 bié wàngjì dài piào (= don't forget your ticket) | Ôn: 怎么去博物馆 zěnme qù bówùguǎn (= how do you get to the museum) / 到车站 dào chēzhàn (= arrive at the station) / 坐火箭 zuò huǒjiàn (= by rocket) / 买票 mǎi piào (= buy a ticket)",
+      "cau": "[Cầu nối] Turn left at the intersection. ↔ 在十字路口往左拐。(Zài shízì lùkǒu wǎng zuǒ guǎi.) [giống: câu ra lệnh, không cần chủ ngữ · khác: at the intersection đứng cuối ↔ 在十字路口 đứng đầu (nơi chốn trước, hành động sau)] / 请问，怎么去博物馆？(Qǐngwèn, zěnme qù bówùguǎn?) / 在十字路口往左拐。(Zài shízì lùkǒu wǎng zuǒ guǎi.) / 请走斑马线过马路。(Qǐng zǒu bānmǎxiàn guò mǎlù.) / 我们八点到车站。(Wǒmen bā diǎn dào chēzhàn.) / 将来，人们能坐火箭去月球。(Jiānglái, rénmen néng zuò huǒjiàn qù yuèqiú.) / 别忘记带票！(Bié wàngjì dài piào!)",
+      "truyen": "去博物馆 — Anna和Xiaomei离开家，出发去太空博物馆。警察说：“在十字路口往左拐，请走斑马线过马路。”她们到了博物馆。Xiaomei说：“哎呀！我忘记带票了！”Anna说：“别着急，我带了两张。”(Anna hé Xiaomei líkāi jiā, chūfā qù tàikōng bówùguǎn. Jǐngchá shuō: “Zài shízì lùkǒu wǎng zuǒ guǎi, qǐng zǒu bānmǎxiàn guò mǎlù.” Tāmen dàole bówùguǎn. Xiaomei shuō: “Āiyā! Wǒ wàngjì dài piào le!” Anna shuō: “Bié zháojí, wǒ dàile liǎng zhāng.”)",
+      "video": "Tìm YouTube: \"问路 往左拐 往右拐 儿童 汉语\""
+     }
+    },
+    {
+     "ngay": 60,
+     "label": "Ngày 60. Unit 7 · Thích hơn – Khám phá – Cải thiện giao thông",
+     "en": {
+      "tu": "Mới: prefer, explore, sell, million, improve | Ôn (từ nối Unit 6): Earth, environment, planet | Ôn: travel, train",
+      "cum": "Mới: prefer the train / explore the city / sell tickets / a million cars / improve the traffic | Ôn: save the environment",
+      "cau": "[Ngữ pháp: will + V] Will buses replace motorbikes? / I prefer the underground to the bus. / A million people will drive electric cars. / Electric buses will improve the environment on Earth. / They sell tickets at the station.",
+      "truyen": "Leo's city plan — Leo draws a city of the future. 'A million people will travel by electric bus,' he says. 'Electric buses will improve the traffic and the environment.' Anna prefers trains. 'I'll explore the city by train,' she says.",
+      "video": "Tìm YouTube: \"transport of the future for kids\""
+     },
+     "zh": {
+      "tu": "Ôn (từ nối Unit 6): 地球 dìqiú, 行星 xíngxīng, 环境 huánjìng (nghe) | Chỉ nghe hiểu (tranh): 一百万 yìbǎi wàn (= a million) | Ôn: 旅游 lǚyóu, 火车 huǒchē, 卖 mài, 更喜欢 gèng xǐhuan (= prefer)",
+      "cum": "Ôn: 更喜欢坐火车 gèng xǐhuan zuò huǒchē (= prefer the train) / 卖票 mài piào (= sell tickets) / 爱护环境 àihù huánjìng (= save the environment) / 让交通变得更好 ràng jiāotōng biàn de gèng hǎo (= improve the traffic) | Nghe làm quen: 一百万人 yìbǎi wàn rén (= a million people)",
+      "cau": "[Cầu nối] I prefer the underground to the bus. ↔ 比起公共汽车，我更喜欢坐地铁。(Bǐqǐ gōnggòng qìchē, wǒ gèng xǐhuan zuò dìtiě.) [giống: cả hai đều so sánh hai phương tiện, người nói thích một cái hơn · khác: prefer (1 từ) ↔ 更喜欢 (thích hơn); to the bus đứng cuối ↔ 比起公共汽车 đứng đầu] / [Ngữ pháp: 会 + V] 公共汽车会代替摩托车吗？(Gōnggòng qìchē huì dàitì mótuōchē ma?) / 比起公共汽车，我更喜欢坐地铁。(Bǐqǐ gōnggòng qìchē, wǒ gèng xǐhuan zuò dìtiě.) / 将来，一百万人会开电动汽车。(Jiānglái, yìbǎi wàn rén huì kāi diàndòng qìchē.) / 电动公共汽车会让地球的环境变得更好。(Diàndòng gōnggòng qìchē huì ràng dìqiú de huánjìng biàn de gèng hǎo.) / 车站里卖票。(Chēzhàn li mài piào.) / [Chuyển ngữ] [Tin nhắn chỉ đường (NL2): nghe tin nhắn tiếng Anh của Anna (Turn left at the intersection. Don't forget your ticket!) rồi nói lại bằng tiếng Trung cho Xiaomei] 在十字路口往左拐。别忘记带票！ (Zài shízì lùkǒu wǎng zuǒ guǎi. Bié wàngjì dài piào!)",
+      "truyen": "Leo的城市计划 — Leo画了一个未来的城市。他说：“一百万人会坐电动公共汽车。电动公共汽车会让交通和环境变得更好。”Anna更喜欢火车。她说：“我会坐火车去看看这个城市。”(Leo huàle yí ge wèilái de chéngshì. Tā shuō: “Yìbǎi wàn rén huì zuò diàndòng gōnggòng qìchē. Diàndòng gōnggòng qìchē huì ràng jiāotōng hé huánjìng biàn de gèng hǎo.” Anna gèng xǐhuan huǒchē. Tā shuō: “Wǒ huì zuò huǒchē qù kànkan zhège chéngshì.”)",
+      "video": "Tìm YouTube: \"未来交通 电动汽车 儿童\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "get to, arrive, intersection, forget, prefer, explore, sell, million, improve | Ôn: rocket, spaceship, astronaut, Earth, environment, map, ticket, leave, start, zebra crossing",
+     "slide": "[Lời cô] Vào bài: Hello, everyone! 大家好！ · Chuyển ý: Now, work in pairs. 现在两个人一组。 · Nhắc: Look at the map, please. 请看地图。 · Khen: Perfect! 非常好！ · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): intersection / 十字路口, improve / 变得更好 biàn de gèng hǎo. 1) Chỉ đường trên bản đồ (cặp đôi): How do I get to the museum? – Turn left at the intersection. / Go straight. 2) Ghép câu (4 câu): I prefer + the underground to the bus. / Electric buses will + improve the environment. / They sell tickets + at the station. / Don't forget + your ticket! 3) Tranh luận nhỏ: Will buses replace motorbikes? – Yes, they will / No, they won't, because…",
+     "truyen": "Getting to the museum — Anna and Xiaomei leave home and start their trip to the space museum. 'Turn left at the intersection and cross the road at the zebra crossing,' says a police officer. They arrive at the museum at ten. 'Oh no! I forgot my ticket!' says Xiaomei. 'Don't worry. They sell tickets here,' says Anna. Inside, they explore a city of the future. 'A million people will travel by electric bus. It will improve the environment!'",
+     "baihat": "How Do I Get There? (giai điệu: London Bridge Is Falling Down) — How do I get to the museum, museum, museum? / How do I get to the museum? / Turn left here! / Don't forget your ticket, ticket, ticket. / Don't forget your ticket, / now we're here!"
+    },
+    "zh": {
+     "flash": "十字路口 shízì lùkǒu, 斑马线 bānmǎxiàn, 离开 líkāi, 出发 chūfā, 忘记 wàngjì, 别忘记带 bié wàngjì dài (= don't forget) | Nghe: 一百万 yìbǎi wàn, 环境 huánjìng | Ôn: 怎么去 zěnme qù (= get to), 到 dào (= arrive), 更喜欢 gèng xǐhuan (= prefer), 卖 mài, 变得更好 biàn de gèng hǎo (= improve), 火箭 huǒjiàn, 宇宙飞船 yǔzhòu fēichuán, 宇航员 yǔhángyuán, 地球 dìqiú, 地图 dìtú, 票 piào",
+     "slide": "1) Chỉ đường trên bản đồ (cùng bản đồ của phần tiếng Anh): 请问，怎么去博物馆？— 在十字路口往左拐。/ 一直走。– con đi theo hướng dẫn trên sàn lớp. 2) [Cầu nối Anh – Trung] Cùng bản đồ: rối Leo nói Turn left at the intersection., rối Xiaomei nói 在十字路口往左拐。Con chỉ ra: cả hai là câu ra lệnh không chủ ngữ (giống); at the intersection ở cuối ↔ 在十字路口 ở đầu (khác). 3) [Chuyển ngữ] Hướng dẫn viên nhí (NL6): bạn A đọc 3 câu tiếng Anh chỉ đường (Turn left at the intersection. Cross the road at the zebra crossing. Don't forget your ticket!), bạn B nói lại cho rối Xiaomei bằng tiếng Trung: 在十字路口往左拐。请走斑马线过马路。别忘记带票！ [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo đọc hướng dẫn đường: \"How to get to the museum: Leave the station and go straight. At the intersection, turn left. Cross the road at the zebra crossing. The museum is next to the bridge. They sell tickets at the door, so don't forget to bring some money!\" → con nói lại cho rối Xiaomei bằng tiếng Trung (tóm 3 ý, rồi trả lời câu hỏi thêm của Xiaomei: 在哪儿买票？(Zài nǎr mǎi piào?)). Mẫu: 离开车站，一直走，在十字路口往左拐。请走斑马线过马路。博物馆在桥旁边。(Líkāi chēzhàn, yìzhí zǒu, zài shízì lùkǒu wǎng zuǒ guǎi. Qǐng zǒu bānmǎxiàn guò mǎlù. Bówùguǎn zài qiáo pángbiān.) · Trả lời Xiaomei: 在博物馆门口买票，别忘记带钱！(Zài bówùguǎn ménkǒu mǎi piào, bié wàngjì dài qián!) 4) Ghép câu (cùng 4 câu của phần tiếng Anh): 比起公共汽车，+ 我更喜欢坐地铁。/ 电动公共汽车会让 + 地球的环境变得更好。/ 车站里 + 卖票。/ 别忘记 + 带票！+ Tranh luận nhỏ: 公共汽车会代替摩托车吗？— 会 / 不会，因为…… 5) YCT口试（中级）第一部分 听后重复 (mẫu, 10 câu, từng em; cô đọc 1 lần, con nói lại 1 lần): 我每天坐地铁去学校。/ 在十字路口往左拐。/ 别忘记带车票！/ 我们八点出发。/ 路上有很多车。/ 红灯亮的时候，车要停下来。/ 我们离开家的时候，天还没亮。/ 公共汽车停在学校门口。/ 你坐地铁，在第三站下车。/ 先下车，再上车。",
+     "truyen": "去博物馆 — Anna和Xiaomei离开家，出发去太空博物馆。警察说：“在十字路口往左拐，请走斑马线过马路。”她们十点到了博物馆。Xiaomei说：“哎呀，我忘记带票了！”Anna说：“别着急，这里卖票。”在博物馆里，她们参观了一个未来的城市：“一百万人会坐电动公共汽车，环境会变得更好！”(Anna hé Xiaomei líkāi jiā, chūfā qù tàikōng bówùguǎn. Jǐngchá shuō: “Zài shízì lùkǒu wǎng zuǒ guǎi, qǐng zǒu bānmǎxiàn guò mǎlù.” Tāmen shí diǎn dàole bówùguǎn. Xiaomei shuō: “Āiyā, wǒ wàngjì dài piào le!” Anna shuō: “Bié zháojí, zhèli mài piào.” Zài bówùguǎn li, tāmen cānguānle yí ge wèilái de chéngshì: “Yìbǎi wàn rén huì zuò diàndòng gōnggòng qìchē, huánjìng huì biàn de gèng hǎo!”)",
+     "baihat": "怎么去博物馆？(giai điệu: London Bridge Is Falling Down – cùng giai điệu bài tiếng Anh) — 请问怎么去博物馆，(Qǐngwèn zěnme qù bówùguǎn,) / 博物馆，博物馆？(bówùguǎn, bówùguǎn?) / 请问怎么去博物馆？(qǐngwèn zěnme qù bówùguǎn?) / 往左拐！(Wǎng zuǒ guǎi!) / 别忘记带你的票，(Bié wàngjì dài nǐ de piào,) / 你的票，你的票，(nǐ de piào, nǐ de piào,) / 别忘记带你的票，(bié wàngjì dài nǐ de piào,) / 我们到了！(wǒmen dào le!)"
+    }
+   }
+  },
+  {
+   "buoi": 31,
+   "unit": 7,
+   "label_buoi": "Buổi dạy 31. Unit 7 · Transport – Chuyến tàu đêm",
+   "web": [
+    {
+     "ngay": 61,
+     "label": "Ngày 61. Unit 7 · Động cơ, còi tàu – Vừa tỉnh dậy",
+     "en": {
+      "tu": "Mới: engine, whistle | Ôn: train, platform, passenger, traffic, journey",
+      "cum": "Mới: the train's engine / blow a whistle / a long journey | Ôn: on the platform / passengers get on",
+      "cau": "[Ngữ pháp: will + V] Listen! The train will leave soon. / The guard blows the whistle. / The engine is very loud. / The passengers get on the train. / Grandpa is sitting by the window. / The window is open. / Wake up, Bông! We're here!",
+      "truyen": "The night train — Bông and Grandpa are on the platform. The guard blows the whistle. 'Toot toot!' The engine starts. The passengers get on the train. 'Our journey will be long,' says Grandpa. 'It's eight hundred kilometres to Hanoi.' Grandpa is sitting by the window and reading. Bông falls asleep. In the morning, Grandpa says, 'Wake up, Bông! We're here!'",
+      "video": "Tìm YouTube: \"steam train whistle sound for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 醒 xǐng (= wake up), 着 zhe (= -ing chỉ trạng thái: sitting → 坐着) | Ôn: 火车 huǒchē, 到 dào (= arrive, We're here!), 出发 chūfā, 上车 shàngchē | Chỉ nghe hiểu (tranh trong truyện): 乘客 chéngkè, 公里 gōnglǐ, 发动机 fādòngjī, 哨子 shàozi, 站台 zhàntái",
+      "cum": "Mới: 醒了 xǐng le / 醒醒 xǐngxing (= wake up) / 坐着 zuòzhe / 开着窗户 kāizhe chuānghu | Ôn: 大家上车 dàjiā shàngchē (= passengers get on) / 火车出发了 huǒchē chūfā le",
+      "cau": "[Cầu nối] Grandpa is sitting by the window. ↔ 爷爷在窗户旁边坐着。(Yéye zài chuānghu pángbiān zuòzhe.) [giống: đều tả việc đang kéo dài · khác: is + -ing ↔ động từ + 着; Toot toot! ↔ 呜呜！(tiếng còi mỗi tiếng một kiểu)] / [Ngữ pháp: động từ + 着 – trạng thái kéo dài] 听！火车快要出发了。(Tīng! Huǒchē kuài yào chūfā le.) / 列车员吹哨子。(Lièchēyuán chuī shàozi.) (= The guard blows the whistle.) / 发动机很响。(Fādòngjī hěn xiǎng.) (= The engine is very loud.) / 大家上火车了。(Dàjiā shàng huǒchē le.) / 爷爷在窗户旁边坐着。(Yéye zài chuānghu pángbiān zuòzhe.) / 窗户开着。(Chuānghu kāizhe.) / 醒醒！我们到了！(Xǐngxing! Wǒmen dào le!)",
+      "truyen": "夜里的火车 — Bông和爷爷在站台上。列车员吹哨子：“呜呜！”发动机响了，乘客上了火车。爷爷说：“我们要坐很久，到河内有八百公里。”爷爷在窗户旁边坐着看书，Bông睡着了。早上，爷爷说：“Bông，醒醒！我们到了！”(Bông hé yéye zài zhàntái shang. Lièchēyuán chuī shàozi: “Wū wū!” Fādòngjī xiǎng le, chéngkè shàngle huǒchē. Yéye shuō: “Wǒmen yào zuò hěn jiǔ, dào Hénèi yǒu bābǎi gōnglǐ.” Yéye zài chuānghu pángbiān zuòzhe kàn shū, Bông shuìzháo le. Zǎoshang, yéye shuō: “Bông, xǐngxing! Wǒmen dào le!”)",
+      "video": "Tìm YouTube: \"火车 鸣笛 声音 儿童\""
+     }
+    },
+    {
+     "ngay": 62,
+     "label": "Ngày 62. Unit 7 · Ôn không tranh – Nghe đoán phương tiện",
+     "en": {
+      "tu": "Ôn: traffic, light, jam, underground, electric, wheel, passenger, arrive, intersection, forget, prefer, engine | Ôn nhanh: as, ever, of course",
+      "cum": "Ôn: fire engine / get to / kilometre / a traffic jam / at the intersection / sell tickets",
+      "cau": "Ôn (nghe – chọn đúng/sai, không tranh): How do you go to school? – By underground. / Turn left at the intersection. / A fire engine is red. / Everyone will drive an electric car. / Have you ever been in a traffic jam? – Of course!",
+      "truyen": "What am I? — I'm red and I have six wheels. I'm very fast. I have a loud whistle and a strong engine. I go to fires and help people. What am I? (A fire engine!)",
+      "video": "Tìm YouTube: \"guess the vehicle sound quiz for kids\""
+     },
+     "zh": {
+      "tu": "Ôn: 红绿灯 hónglǜdēng, 堵车 dǔchē, 地铁 dìtiě, 电动汽车 diàndòng qìchē, 乘客 chéngkè, 到 dào (= arrive), 十字路口 shízì lùkǒu, 忘记 wàngjì, 更喜欢 gèng xǐhuan (= prefer), 当然 dāngrán (= of course) | Chỉ nghe hiểu (tranh trong truyện): 轮子 lúnzi, 消防车 xiāofángchē, 发动机 fādòngjī, 哨子 shàozi",
+      "cum": "Ôn: 怎么去 zěnme qù (= get to) / 两公里 liǎng gōnglǐ (= kilometre) / 堵车了 dǔchē le (= a traffic jam) / 在十字路口 zài shízì lùkǒu (= at the intersection) / 卖票 mài piào (= sell tickets) | Nghe làm quen: 消防车 xiāofángchē (= fire engine)",
+      "cau": "[Cầu nối] I'm red and I'm very fast. ↔ 我是红色的，我跑得很快。(Wǒ shì hóngsè de, wǒ pǎo de hěn kuài.) [giống: câu đố tả bằng I / 我 · khác: very fast (tính từ) ↔ 跑得很快 (động từ 跑 + 得)] / Ôn (nghe – chọn đúng/sai, không tranh): 你怎么去学校？——坐地铁。(Nǐ zěnme qù xuéxiào? — Zuò dìtiě.) / 在十字路口往左拐。(Zài shízì lùkǒu wǎng zuǒ guǎi.) / 消防车是红色的。(Xiāofángchē shì hóngsè de.) / 将来大家都会开电动汽车。(Jiānglái dàjiā dōu huì kāi diàndòng qìchē.) / 你堵过车吗？——当然！(Nǐ dǔguo chē ma? — Dāngrán!) (= Have you ever been in a traffic jam? – Of course!) / [YCT口试（中级）第一部分 听后重复 (mẫu): con nghe rồi nói lại, ghi âm trên Trang luyện nói] 我们早上七点出发。(Wǒmen zǎoshang qī diǎn chūfā.) / 别忘记带车票！(Bié wàngjì dài chēpiào!) / 火车停了，我醒了。(Huǒchē tíng le, wǒ xǐng le.) / [Chuyển ngữ] [Ghi âm (NL7): nghe câu đố tiếng Anh 'What am I?' rồi nói lại 3 ý bằng tiếng Trung cho Xiaomei] 我是红色的。我跑得很快。哪里着火了，我就去帮助人们。 (Wǒ shì hóngsè de. Wǒ pǎo de hěn kuài. Nǎli zháohuǒ le, wǒ jiù qù bāngzhù rénmen.)",
+      "truyen": "猜一猜 — 我是红色的，我有六个轮子。我跑得很快。我有很响的哨子和很有力的发动机。哪里着火了，我就去帮助人们。我是什么？（消防车！）(Wǒ shì hóngsè de, wǒ yǒu liù ge lúnzi. Wǒ pǎo de hěn kuài. Wǒ yǒu hěn xiǎng de shàozi hé hěn yǒulì de fādòngjī. Nǎli zháohuǒ le, wǒ jiù qù bāngzhù rénmen. Wǒ shì shénme? (Xiāofángchē!))",
+      "video": "Tìm YouTube: \"猜一猜 交通工具 儿童\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "engine, whistle | Ôn: traffic, light, jam, underground, fire engine, kilometre, electric, wheel, passenger, arrive, intersection, forget, prefer, train, platform, journey, wake up, sitting",
+     "slide": "[Lời cô] Vào bài: Good afternoon, class! 同学们好！ · Chuyển ý: Listen and guess! 听一听，猜一猜！ · Nhắc: Quiet, please. 请安静。 · Khen: Great listening! 听得真好！ · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): engine, platform (cô dùng tranh). 1) Nghe âm thanh đoán phương tiện (6 âm): train whistle / fire engine / electric car / motorbike / helicopter / underground. 2) Trò 'What am I?' theo nhóm: con tự viết 3 câu đố về một phương tiện (I have ___ wheels. I'm ___.) 3) Nghe – chọn đúng/sai về truyện 'The night train' (4 câu).",
+     "truyen": "The night train — Bông and Grandpa are on the platform. The guard blows the whistle. 'Toot toot!' The engine starts and the passengers get on the train. 'Our journey will be long. It's eight hundred kilometres,' says Grandpa. Grandpa is sitting by the window. Bông falls asleep. In the morning, the train arrives in Hanoi. 'Wake up, Bông! We're here!'",
+     "baihat": "The Train Song (giai điệu: The Wheels on the Bus) — The wheels on the train go round and round, / round and round, round and round. / The wheels on the train go round and round / all through the night. / The whistle on the train goes toot, toot, toot... / The passengers on the train go to sleep..."
+    },
+    "zh": {
+     "flash": "醒 xǐng, 着 zhe | Nghe: 发动机 fādòngjī, 哨子 shàozi, 站台 zhàntái | Ôn: 红绿灯 hónglǜdēng, 堵车 dǔchē, 地铁 dìtiě, 消防车 xiāofángchē, 公里 gōnglǐ, 电动汽车 diàndòng qìchē, 轮子 lúnzi, 乘客 chéngkè, 到 dào, 十字路口 shízì lùkǒu, 忘记 wàngjì, 更喜欢 gèng xǐhuan, 火车 huǒchē",
+     "slide": "1) Nghe âm thanh đoán phương tiện (cùng 6 âm của phần tiếng Anh), con nói tiếng Trung: 火车 / 消防车 / 电动汽车 / 摩托车 / 直升机 zhíshēngjī (nghe) / 地铁. 2) Trò '我是什么？' theo nhóm (cùng phiếu câu đố của phần tiếng Anh): 我有___个轮子。我是___的。+ Nghe – chọn đúng/sai về truyện 夜里的火车 (4 câu): 列车员吹哨子。(对) / Bông和奶奶在站台上。(错) / 爷爷在窗户旁边坐着。(对) / 早上，火车到了河内。(对)3) [Cầu nối Anh – Trung] Cùng tranh 'The night train': rối Leo nói Grandpa is sitting by the window., rối Xiaomei nói 爷爷在窗户旁边坐着。Con tìm điểm giống (đều là việc đang kéo dài) và khác (is + -ing ↔ động từ + 着); Toot toot! ↔ 呜呜！4) [Chuyển ngữ] Loa nhà ga (NL6): cô (vai Leo) đọc thông báo tiếng Anh 2 câu (The train will leave soon. Passengers, please get on the train.), con nói lại cho rối Xiaomei bằng tiếng Trung: 火车快要出发了。大家请上车。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Loa nhà ga (cô vai Leo đọc): \"Good evening, passengers. The night train to Hanoi will leave at nine o'clock. Please get on the train now and find your seat. The journey is ten hours long. We will arrive in Hanoi at seven o'clock tomorrow morning.\" → con nói lại cho rối Xiaomei bằng tiếng Trung (tóm 3 ý, rồi trả lời câu hỏi thêm của Xiaomei: 火车几点到河内？(Huǒchē jǐ diǎn dào Hénèi?)). Mẫu: 去河内的火车晚上九点出发。大家请现在上车，找自己的座位。火车要开十个小时。(Qù Hénèi de huǒchē wǎnshang jiǔ diǎn chūfā. Dàjiā qǐng xiànzài shàngchē, zhǎo zìjǐ de zuòwèi. Huǒchē yào kāi shí ge xiǎoshí.) · Trả lời Xiaomei: 明天早上七点到。(Míngtiān zǎoshang qī diǎn dào.)",
+     "truyen": "夜里的火车 — Bông和爷爷在站台上。列车员吹哨子：“呜呜！”发动机响了，乘客们上了火车。爷爷说：“我们要坐很久，有八百公里。”爷爷在窗户旁边坐着。Bông睡着了。早上，火车到了河内。爷爷说：“Bông，醒醒！我们到了！”(Bông hé yéye zài zhàntái shang. Lièchēyuán chuī shàozi: “Wū wū!” Fādòngjī xiǎng le, chéngkèmen shàngle huǒchē. Yéye shuō: “Wǒmen yào zuò hěn jiǔ, yǒu bābǎi gōnglǐ.” Yéye zài chuānghu pángbiān zuòzhe. Bông shuìzháo le. Zǎoshang, huǒchē dàole Hénèi. Yéye shuō: “Bông, xǐngxing! Wǒmen dào le!”)",
+     "baihat": "火车轮子转呀转 (giai điệu: The Wheels on the Bus – cùng giai điệu bài tiếng Anh) — 火车的轮子转呀转呀转，(Huǒchē de lúnzi zhuàn ya zhuàn ya zhuàn,) / 转呀转，转呀转，(zhuàn ya zhuàn, zhuàn ya zhuàn,) / 火车的轮子转呀转呀转，(huǒchē de lúnzi zhuàn ya zhuàn ya zhuàn,) / 整整一夜。(zhěngzhěng yí yè.) / 火车哨子呜呜呜……(Huǒchē shàozi wū wū wū…) / 乘客们坐着睡着了……(Chéngkèmen zuòzhe shuìzháo le…)"
+    }
+   }
+  },
+  {
+   "buoi": 32,
+   "unit": 7,
+   "label_buoi": "Buổi dạy 32. Unit 7 · Transport – Xe cứu hỏa & Phiên dịch nhí · Luyện Flyers Nói phần 3",
+   "web": [
+    {
+     "ngay": 63,
+     "label": "Ngày 63. Unit 7 · Truyện & chuyển ngữ – Xe cứu hỏa bị tắc đường",
+     "en": {
+      "tu": "Ôn: fire engine, traffic jam, light, intersection, arrive, improve, million | Ôn nhanh: look like, winner",
+      "cum": "Ôn: a fire engine / a traffic jam / at the intersection / get to the fire / in the future",
+      "cau": "[Chuyển ngữ] Anh → Trung: How do you go to school? / I go to school by underground. / Turn left at the crossroads. / Cross the road at the zebra crossing.",
+      "truyen": "The fire engine — There is a fire near the bridge. The fire engine leaves the fire station, but there is a big traffic jam. 'Please stop!' says a police officer at the intersection. All the cars stop and the fire engine gets to the fire. The fire fighters save the house!",
+      "video": "Tìm YouTube: \"fire engine story for kids\""
+     },
+     "zh": {
+      "tu": "Ôn: 堵车 dǔchē, 红绿灯 hónglǜdēng, 十字路口 shízì lùkǒu, 停 tíng, 出发 chūfā, 辆 liàng, 离开 líkāi, 消防员 xiāofángyuán | Chỉ nghe hiểu (tranh trong truyện): 消防车 xiāofángchē",
+      "cum": "Ôn: 堵车了 dǔchē le / 在十字路口 zài shízì lùkǒu / 车都停了 chē dōu tíng le | Nghe làm quen: 一辆消防车 yí liàng xiāofángchē",
+      "cau": "[Cầu nối] All the cars stop. ↔ 车都停了。(Chē dōu tíng le.) [giống: Ai – làm gì · khác: all đứng trước cars ↔ 都 đứng sau 车, trước động từ; cars thêm -s ↔ 车 không đổi] / [Chuyển ngữ] Trung → Anh: 你怎么去学校？(Nǐ zěnme qù xuéxiào?) / 我坐地铁去学校。(Wǒ zuò dìtiě qù xuéxiào.) / 在十字路口往左拐。(Zài shízì lùkǒu wǎng zuǒ guǎi.) / 请走斑马线过马路。(Qǐng zǒu bānmǎxiàn guò mǎlù.)",
+      "truyen": "消防车 — 桥附近着火了！一辆消防车离开消防站出发了。可是路上堵车了。在十字路口，警察说：“请停车！”车都停了，消防车很快就到了。消防员救了那座房子！(Qiáo fùjìn zháohuǒ le! Yí liàng xiāofángchē líkāi xiāofángzhàn chūfā le. Kěshì lùshang dǔchē le. Zài shízì lùkǒu, jǐngchá shuō: “Qǐng tíng chē!” Chē dōu tíng le, xiāofángchē hěn kuài jiù dào le. Xiāofángyuán jiùle nà zuò fángzi!)",
+      "video": "Tìm YouTube: \"消防车 故事 儿童 动画\""
+     }
+    },
+    {
+     "ngay": 64,
+     "label": "Ngày 64. Unit 7 · Phiên dịch nhí – Hỏi đường cho bạn",
+     "en": {
+      "tu": "Ôn: get to, intersection, underground, ticket, forget, prefer, kilometre | Ôn nhanh: ever, as",
+      "cum": "Ôn: How do I get to…? / turn left / by underground / don't forget your ticket",
+      "cau": "Phiên dịch nhí (con dịch cho bạn Xiaomei): How do I get to the airport? / Take the underground and get off at the third station. / It's ten kilometres from here. / Don't forget your ticket!",
+      "truyen": "Lost in the city — Xiaomei is visiting Hanoi. She wants to get to the airport. A man asks, 'Can I help you?' Xiaomei doesn't understand, so Nhan helps her. 'Take the underground. It's ten kilometres from here,' says the man. Nhan tells Xiaomei in Chinese. 'Don't forget your ticket!' he says.",
+      "video": "Tìm YouTube: \"how do I get to the station dialogue for kids\""
+     },
+     "zh": {
+      "tu": "Ôn: 公里 gōnglǐ, 地铁 dìtiě, 十字路口 shízì lùkǒu, 下车 xiàchē, 带 dài, 忘记 wàngjì, 票 piào (= ticket), 机场 jīchǎng (= airport), 怎么去 zěnme qù (= get to)",
+      "cum": "Ôn: 怎么去机场 zěnme qù jīchǎng / 坐地铁 zuò dìtiě / 在第三站下车 zài dì-sān zhàn xiàchē / 离这儿十公里 lí zhèr shí gōnglǐ (= ten kilometres from here) / 别忘记 bié wàngjì",
+      "cau": "[Cầu nối] Take the underground and get off at the third station. ↔ 你坐地铁，在第三站下车。(Nǐ zuò dìtiě, zài dì-sān zhàn xiàchē.) [giống: the third ↔ 第三 (số thứ tự) · khác: at the third station đứng cuối ↔ 在第三站 đứng trước 下车] / Phiên dịch nhí (con dịch cho bạn Anna): 请问，怎么去机场？(Qǐngwèn, zěnme qù jīchǎng?) / 你坐地铁，在第三站下车。(Nǐ zuò dìtiě, zài dì-sān zhàn xiàchē.) / 机场离这儿十公里。(Jīchǎng lí zhèr shí gōnglǐ.) / 别忘记带车票！(Bié wàngjì dài chēpiào!)",
+      "truyen": "问路 — Xiaomei在河内，她想去机场，可是她迷路了。一个叔叔用英语问Xiaomei要不要帮忙。Xiaomei不明白，Nhan帮她。叔叔用英语告诉她怎么去。Nhan用汉语告诉Xiaomei：“你坐地铁去，机场离这儿十公里。”Nhan还说：“别忘记带车票！”(Xiaomei zài Hénèi, tā xiǎng qù jīchǎng, kěshì tā mílù le. Yí ge shūshu yòng Yīngyǔ wèn Xiaomei yào bu yào bāngmáng. Xiaomei bù míngbai, Nhan bāng tā. Shūshu yòng Yīngyǔ gàosu tā zěnme qù. Nhan yòng Hànyǔ gàosu Xiaomei: “Nǐ zuò dìtiě qù, jīchǎng lí zhèr shí gōnglǐ.” Nhan hái shuō: “Bié wàngjì dài chēpiào!”)",
+      "video": "Tìm YouTube: \"问路 汉语 儿童 对话\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn: traffic, light, jam, underground, fire engine, get to, kilometre, electric, wheel, passenger, arrive, intersection, forget, prefer, explore, sell, million, improve, engine, whistle",
+     "slide": "[Lời cô] Vào bài: Good morning, everyone! 大家早上好！ · Chuyển ý: Let's tell the story together. 我们一起讲故事。 · Nhắc: Hands up before you speak. 说话前请举手。 · Khen: Wonderful! 太棒了！ · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): fire station / 消防站, police officer / 警察. 1) Kể lại truyện 'The fire engine' theo 4 tranh (gợi ý: fire / traffic jam / intersection / gets to the fire). 2) [Chuyển ngữ] Phiên dịch nhí theo cặp (NL6), đóng vai hỏi đường: How do I get to the airport? ↔ 请问，怎么去机场？/ Take the underground. ↔ 你坐地铁。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo chỉ đường ra sân bay: \"The airport is about twenty kilometres from here. Don't take a taxi, because there might be a traffic jam. Take the underground and get off at the third station. Then take the airport bus from the station. And don't forget your ticket!\" → con nói lại cho rối Xiaomei bằng tiếng Trung (tóm 3 ý, rồi trả lời câu hỏi thêm của Xiaomei: 在第几站下车？(Zài dì jǐ zhàn xiàchē?)). Mẫu: 机场离这儿大概二十公里。别坐出租车，因为可能会堵车。你先坐地铁，然后在车站坐去机场的公共汽车。(Jīchǎng lí zhèr dàgài èrshí gōnglǐ. Bié zuò chūzūchē, yīnwèi kěnéng huì dǔchē. Nǐ xiān zuò dìtiě, ránhòu zài chēzhàn zuò qù jīchǎng de gōnggòng qìchē.) · Trả lời Xiaomei: 在第三站下车。(Zài dì sān zhàn xiàchē.) 3) Kiểm tra nhanh unit (6 câu chọn đáp án): How do you…? / will / by + phương tiện. 4) Flyers Nói phần 3 (mẫu): kể truyện theo 5 tranh 'The Fire Engine and the Traffic Jam'. Cô kể tranh 1: There was a fire in a tall building. The fire fighters got into the fire engine. Con kể tranh 2–5: (2) There was a traffic jam at the intersection. The fire engine couldn't move. / (3) A police officer saw the fire engine. He stopped the cars at the traffic lights. / (4) The cars moved to the side, and the fire engine went very fast. / (5) It got to the building in five minutes. The fire fighters stopped the fire, and everyone said, 'Thank you!'",
+     "truyen": "The fire engine — There is a fire near the bridge. The fire engine leaves the fire station, but there is a big traffic jam. The traffic lights are red. 'Please stop!' says a police officer at the intersection. All the cars stop and the fire engine gets to the fire in five minutes. The fire fighters save the house. 'In the future, electric fire engines will be even faster,' says Leo.",
+     "baihat": "Fire Engine, Fire Engine (giai điệu: Frère Jacques) — Fire engine, fire engine, / hurry up, hurry up! / Stop at the intersection, stop at the intersection, / cars, please stop! cars, please stop!"
+    },
+    "zh": {
+     "flash": "Ôn: 红绿灯 hónglǜdēng, 堵车 dǔchē, 地铁 dìtiě, 消防车 xiāofángchē, 怎么去 zěnme qù (= get to), 公里 gōnglǐ, 电动汽车 diàndòng qìchē, 轮子 lúnzi, 乘客 chéngkè, 到 dào (= arrive), 十字路口 shízì lùkǒu, 忘记 wàngjì, 更喜欢 gèng xǐhuan (= prefer), 卖 mài, 变得更好 biàn de gèng hǎo (= improve), 发动机 fādòngjī | Nghe: 一百万 yìbǎi wàn, 哨子 shàozi",
+     "slide": "1) Đọc lại truyện 消防车 theo vai (người kể – cảnh sát). 2) [Chuyển ngữ] Phiên dịch nhí (NL5): cô nói câu tiếng Trung, con dịch sang tiếng Anh: 你坐地铁，在第三站下车。→ Take the underground and get off at the third station. / 别忘记带车票！→ Don't forget your ticket! 3) Kiểm tra nhanh chữ Hán (6 câu): nhìn tranh chọn chữ 地铁 / 红绿灯 / 十字路口 / 斑马线 / 公共汽车 / 电动汽车. 4) [Cầu nối Anh – Trung] Cùng 4 tranh 'The fire engine': rối Leo nói All the cars stop., rối Xiaomei nói 车都停了。Con tìm: all đứng trước cars ↔ 都 đứng sau 车 (khác); cars có -s ↔ 车 không đổi; Ai – làm gì (giống).",
+     "truyen": "消防车 — 桥附近着火了！一辆消防车离开消防站出发了。可是路上堵车了，红灯亮着。在十字路口，警察说：“请停车！”车都停了，消防车五分钟就到了。消防员救了那座房子。Leo说：“将来，电动消防车会更快！”(Qiáo fùjìn zháohuǒ le! Yí liàng xiāofángchē líkāi xiāofángzhàn chūfā le. Kěshì lùshang dǔchē le, hóng dēng liàngzhe. Zài shízì lùkǒu, jǐngchá shuō: “Qǐng tíng chē!” Chē dōu tíng le, xiāofángchē wǔ fēnzhōng jiù dào le. Xiāofángyuán jiùle nà zuò fángzi. Leo shuō: “Jiānglái, diàndòng xiāofángchē huì gèng kuài!”)",
+     "baihat": "消防车，快一点 (giai điệu: 两只老虎 Two Tigers – cùng giai điệu Frère Jacques của bài tiếng Anh) — 消防车呀，消防车呀，(Xiāofángchē ya, xiāofángchē ya,) / 快一点，快一点，(kuài yìdiǎn, kuài yìdiǎn,) / 十字路口停车，十字路口停车，(shízì lùkǒu tíng chē, shízì lùkǒu tíng chē,) / 车停下，车停下！(chē tíngxià, chē tíngxià!)"
+    }
+   }
+  },
+  {
+   "buoi": 33,
+   "unit": 8,
+   "label_buoi": "Buổi dạy 33. Unit 8 · Weather – Nếu trời mát, chúng mình sẽ…",
+   "web": [
+    {
+     "ngay": 65,
+     "label": "Ngày 65. Unit 8 · Cắm trại, đại dương, sa mạc – Nếu… thì…",
+     "en": {
+      "tu": "Mới: camp, ocean, desert, sunshine, if | Ôn nhanh: dictionary, gym | Ôn: weather, hot, cold, sunny, beach",
+      "cum": "Mới: go camping / by the ocean / in the desert / warm sunshine | Ôn: on the beach / a sunny day",
+      "cau": "[Ngữ pháp: câu điều kiện loại 1 – If + hiện tại đơn, … will + V] What will you do if it is cool? / If the weather is cool, we will go camping. / If it is sunny, we will swim in the ocean. / It's very dry in the desert. / The ocean is very big.",
+      "truyen": "Camping plans — 'What will you do this weekend?' asks Anna. 'If the weather is cool, we will go camping by the ocean,' says Leo. 'I love the sunshine and the beach!' 'I don't like the desert. It's very hot and dry,' says Anna.",
+      "video": "Tìm YouTube: \"weather song for kids what will you do if\""
+     },
+     "zh": {
+      "tu": "Mới: 海洋 hǎiyáng (= ocean), 沙漠 shāmò (= desert), 阳光 yángguāng (= sunshine), 晴 qíng (= sunny), 干燥 gānzào (= dry) | Ôn nhanh: 词典 cídiǎn (= dictionary), 体育馆 tǐyùguǎn (= gym) | Ôn: 天气 tiānqì, 热 rè, 冷 lěng, 海边 hǎibiān, 如果 rúguǒ",
+      "cum": "Mới: 去露营 qù lùyíng (= go camping) / 在沙漠里 zài shāmò li (= in the desert) / 温暖的阳光 wēnnuǎn de yángguāng (= warm sunshine) / 晴天 qíngtiān (= a sunny day) / 很干燥 hěn gānzào | Ôn: 在海边 zài hǎibiān (= by the ocean / on the beach) / 天气很热 tiānqì hěn rè",
+      "cau": "[Cầu nối] If the weather is cool, we will go camping. ↔ 如果天气凉快，我们就去露营。(Rúguǒ tiānqì liángkuai, wǒmen jiù qù lùyíng.) [giống: If ↔ 如果 mở đầu vế điều kiện · khác: will ↔ 就 ở vế sau; is cool ↔ 凉快 (không cần 是)] / [Ngữ pháp: 如果……，就……] 如果天气凉快，你会做什么？(Rúguǒ tiānqì liángkuai, nǐ huì zuò shénme?) / 如果天气凉快，我们就去露营。(Rúguǒ tiānqì liángkuai, wǒmen jiù qù lùyíng.) / 如果是晴天，我们就去海里游泳。(Rúguǒ shì qíngtiān, wǒmen jiù qù hǎi li yóuyǒng.) / 沙漠里很干燥。(Shāmò li hěn gānzào.) / 海洋很大。(Hǎiyáng hěn dà.) (= The ocean is very big.)",
+      "truyen": "露营计划 — Anna问：“这个周末你会做什么？”Leo说：“如果天气凉快，我们就去海边露营。我喜欢阳光和海滩！”Anna说：“我不喜欢沙漠，那里又热又干燥。”(Anna wèn: “Zhège zhōumò nǐ huì zuò shénme?” Leo shuō: “Rúguǒ tiānqì liángkuai, wǒmen jiù qù hǎibiān lùyíng. Wǒ xǐhuan yángguāng hé hǎitān!” Anna shuō: “Wǒ bù xǐhuan shāmò, nàli yòu rè yòu gānzào.”)",
+      "video": "Tìm YouTube: \"天气 儿歌 晴天 下雨\""
+     }
+    },
+    {
+     "ngay": 66,
+     "label": "Ngày 66. Unit 8 · Tháng Tư, tháng Mười một – Sương mù lúc này",
+     "en": {
+      "tu": "Mới: April, November, fog, foggy | Ôn nhanh: letter, timetable | Ôn: spring, autumn, temperature, cloudy",
+      "cum": "Mới: a.m. (7 a.m.) / at the moment / in April / in November / a foggy morning | Ôn: in spring / in autumn",
+      "cau": "What's the weather like at the moment? – It's foggy. / What's the temperature today? / We go to school at 7 a.m. / It's warm in April. / [Ngữ pháp: If + hiện tại, will + V] If it is foggy, we will not go by bike.",
+      "truyen": "A foggy morning — It's 7 a.m. in November. Nhan looks out of the window. 'What's the weather like at the moment?' asks Mum. 'It's foggy. I can't see the trees!' says Nhan. 'If it is foggy, we will go by bus, not by bike,' says Mum.",
+      "video": "Tìm YouTube: \"months of the year song for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 温度 wēndù (= temperature), 春季 chūnjì (= spring), 秋季 qiūjì (= autumn) | Ôn nhanh: 信 xìn (= letter), 时间表 shíjiānbiǎo (= timetable) | Ôn: 四月 sì yuè, 十一月 shíyī yuè, 春天 chūntiān, 秋天 qiūtiān, 现在 xiànzài | Chỉ nghe hiểu (tranh trong truyện): 有雾 yǒu wù",
+      "cum": "Mới: 今天的温度 jīntiān de wēndù / 春季 chūnjì / 秋季 qiūjì | Ôn: 早上七点 zǎoshang qī diǎn (= 7 a.m.) / 在四月 zài sì yuè (= in April) / 在十一月 zài shíyī yuè (= in November) / 现在 xiànzài (= at the moment) | Nghe làm quen: 有雾 yǒu wù (= foggy)",
+      "cau": "[Cầu nối] It's 7 a.m. in November. ↔ 现在是十一月，早上七点。(Xiànzài shì shíyī yuè, zǎoshang qī diǎn.) [giống: số giờ, số tháng giống nhau (7, 11) · khác: November là tên riêng ↔ 十一月 = số 11 + 月; tiếng Trung nói tháng trước giờ (lớn → nhỏ)] / 现在天气怎么样？——有雾，我看不见树！(Xiànzài tiānqì zěnmeyàng? — Yǒu wù, wǒ kàn bu jiàn shù!) / 今天多少度？(Jīntiān duōshao dù?) / 我们早上七点去学校。(Wǒmen zǎoshang qī diǎn qù xuéxiào.) / 四月是春季，很暖和。(Sì yuè shì chūnjì, hěn nuǎnhuo.) / 十一月是秋季，很凉快。(Shíyī yuè shì qiūjì, hěn liángkuai.) / [Ngữ pháp: 如果……，就……] 如果有雾，我们就不骑自行车。(Rúguǒ yǒu wù, wǒmen jiù bù qí zìxíngchē.) / [Chuyển ngữ] [Ghi âm (NL2): nghe mẹ của Nhan nói 2 câu tiếng Anh (If it is foggy, we will go by bus. We won't go by bike.) rồi nói lại ý bằng tiếng Trung cho Xiaomei] 如果有雾，我们就坐公共汽车。我们不骑自行车。 (Rúguǒ yǒu wù, wǒmen jiù zuò gōnggòng qìchē. Wǒmen bù qí zìxíngchē.)",
+      "truyen": "有雾的早上 — 十一月，早上七点，Nhan看窗外。妈妈问：“现在天气怎么样？”Nhan说：“有雾！我看不见树！”妈妈说：“如果有雾，我们就坐公共汽车，不骑自行车。”(Shíyī yuè, zǎoshang qī diǎn, Nhan kàn chuāng wài. Māma wèn: “Xiànzài tiānqì zěnmeyàng?” Nhan shuō: “Yǒu wù! Wǒ kàn bu jiàn shù!” Māma shuō: “Rúguǒ yǒu wù, wǒmen jiù zuò gōnggòng qìchē, bù qí zìxíngchē.”)",
+      "video": "Tìm YouTube: \"十二个月 儿歌 汉语\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "camp, ocean, desert, sunshine, if, April, November, fog, foggy, a.m., at the moment | Ôn: weather, hot, cold, sunny, dry, spring, autumn, temperature",
+     "slide": "[Lời cô] Vào bài: Good morning, class! 同学们好！ · Chuyển ý: What's the weather like today? 今天天气怎么样？ · Nhắc: Sit in a circle, please. 请坐成一个圆圈。 · Khen: Well done! 真棒！ · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): desert / 沙漠, temperature / 温度. 1) Nhìn tranh chọn từ (6 câu): camp / ocean / desert / sunshine / fog / foggy. 2) Vòng tròn 'If…': cô rút thẻ thời tiết, con nói: If it is sunny, we will ___. / If it is foggy, we will ___. 3) Lịch tháng: chỉ và nói It's warm in April. / It's cool in November. (nhiễu: castle / prize).",
+     "truyen": "Camping plans — 'What will you do this weekend?' asks Anna. 'If the weather is cool, we will go camping by the ocean,' says Leo. 'I love the sunshine.' On Saturday, at 7 a.m., Leo looks out of the window. 'What's the weather like at the moment?' asks Mum. 'It's foggy!' says Leo. 'If it is foggy, we will wait. It's November, so it's cool.' At midday, the sun comes out. They go camping!",
+     "baihat": "If It's Sunny (giai điệu: If You're Happy and You Know It – dân gian) — If it's sunny, we will go camping, yes, we will! / If it's sunny, we will go camping, yes, we will! / If it's foggy, we will wait, / we will play and we'll be late, / if it's sunny, we will go camping, yes, we will!"
+    },
+    "zh": {
+     "flash": "海洋 hǎiyáng, 沙漠 shāmò, 阳光 yángguāng, 晴 qíng, 干燥 gānzào, 温度 wēndù, 春季 chūnjì, 秋季 qiūjì | Nghe: 露营 lùyíng, 雾 wù (= fog), 有雾 yǒu wù | Ôn: 如果 rúguǒ (= if), 四月 sì yuè, 十一月 shíyī yuè, 早上七点 zǎoshang qī diǎn (= 7 a.m.), 现在 xiànzài (= at the moment), 天气 tiānqì, 热 rè, 冷 lěng, 晴天 qíngtiān",
+     "slide": "1) Nghe chọn tranh (6 câu, cùng thẻ thời tiết của phần tiếng Anh): 露营 / 海洋 / 沙漠 / 阳光 / 雾 wù / 有雾. 2) Vòng tròn 如果……，就……: cô rút thẻ thời tiết, con nói: 如果是晴天，我们就___。/ 如果有雾，我们就___。3) Lịch tháng (cùng lịch của phần tiếng Anh): 四月是春季，很暖和。/ 十一月是秋季，很凉快。4) [Cầu nối Anh – Trung] Cùng thẻ 'cool weather – camping': rối Leo nói If the weather is cool, we will go camping., rối Xiaomei nói 如果天气凉快，我们就去露营。Con tìm: If ↔ 如果 cùng mở đầu (giống); will ↔ 就 ở vế sau (khác); November ↔ 十一月 = số 11 + 月. 5) [Chuyển ngữ] Kế hoạch cuối tuần (NL6): bạn A nói 2 câu tiếng Anh (If it is sunny, we will swim in the ocean. If it rains, we will stay at home.), bạn B nói lại cho rối Xiaomei bằng tiếng Trung: 如果是晴天，我们就去海里游泳。如果下雨，我们就在家。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo kể kế hoạch cuối tuần: \"This weekend, my family is going camping by the ocean. On Saturday, it will be sunny and hot, so we will swim in the ocean. On Sunday morning, it might rain. If it rains, we will stay inside and read books. If the weather is cool in the afternoon, we will go for a walk on the beach.\" → con nói lại cho rối Xiaomei bằng tiếng Trung (tóm 3 ý, rồi trả lời câu hỏi thêm của Xiaomei: 如果星期天下午天气凉快，他们做什么？(Rúguǒ xīngqītiān xiàwǔ tiānqì liángkuai, tāmen zuò shénme?)). Mẫu: 这个周末Leo家去海边露营。星期六是晴天，很热，他们就去海里游泳。星期天上午可能下雨，如果下雨，他们就在里面看书。(Zhège zhōumò Leo jiā qù hǎibiān lùyíng. Xīngqīliù shì qíngtiān, hěn rè, tāmen jiù qù hǎi li yóuyǒng. Xīngqītiān shàngwǔ kěnéng xià yǔ, rúguǒ xià yǔ, tāmen jiù zài lǐmiàn kàn shū.) · Trả lời Xiaomei: 他们就去海边散步。(Tāmen jiù qù hǎibiān sànbù.)",
+     "truyen": "露营计划 — Anna问：“这个周末你会做什么？”Leo说：“如果天气凉快，我们就去海边露营。我喜欢阳光！”星期六早上七点，Leo看窗外。妈妈问：“现在天气怎么样？”Leo说：“有雾！”妈妈说：“如果有雾，我们就等一等。十一月是秋季，很凉快。”中午，太阳出来了。他们去露营了！(Anna wèn: “Zhège zhōumò nǐ huì zuò shénme?” Leo shuō: “Rúguǒ tiānqì liángkuai, wǒmen jiù qù hǎibiān lùyíng. Wǒ xǐhuan yángguāng!” Xīngqīliù zǎoshang qī diǎn, Leo kàn chuāng wài. Māma wèn: “Xiànzài tiānqì zěnmeyàng?” Leo shuō: “Yǒu wù!” Māma shuō: “Rúguǒ yǒu wù, wǒmen jiù děng yi děng. Shíyī yuè shì qiūjì, hěn liángkuai.” Zhōngwǔ, tàiyáng chūlai le. Tāmen qù lùyíng le!)",
+     "baihat": "如果是晴天 (giai điệu: If You're Happy and You Know It – cùng giai điệu bài tiếng Anh) — 如果是晴天，我们就去露营，我们会去！(Rúguǒ shì qíngtiān, wǒmen jiù qù lùyíng, wǒmen huì qù!) / 如果是晴天，我们就去露营，我们会去！/ 如果有雾，我们就等，(Rúguǒ yǒu wù, wǒmen jiù děng,) / 我们玩一玩，会晚一点，(wǒmen wán yi wán, huì wǎn yìdiǎn,) / 如果是晴天，我们就去露营，我们会去！(rúguǒ shì qíngtiān, wǒmen jiù qù lùyíng, wǒmen huì qù!)"
+    }
+   }
+  },
+  {
+   "buoi": 34,
+   "unit": 8,
+   "label_buoi": "Buổi dạy 34. Unit 8 · Weather – Sớm, muộn & các tháng · Luyện YCT口试（中级）第三部分",
+   "web": [
+    {
+     "ngay": 67,
+     "label": "Ngày 67. Unit 8 · Lát nữa – Sớm, muộn – Buổi trưa",
+     "en": {
+      "tu": "Mới: early, late, hour, midday | Ôn (từ nối Unit 7): traffic, jam, underground, electric | Ôn nhanh: uniform",
+      "cum": "Mới: in a minute / get up early / be late for school / an hour / at midday | Ôn: a traffic jam / by underground",
+      "cau": "[Ngữ pháp: If + hiện tại, will + V] If there is a traffic jam, we will be late. / If you get up early, you won't be late. / Hurry! The bus will come in a minute. / It takes an hour by car. / It's very hot at midday. / It's a quarter past seven. We are still in time!",
+      "truyen": "Don't be late! — It's raining and there is a traffic jam. 'If we go by car, we will be late,' says Dad. 'It takes an hour!' 'Let's go by underground. The train will come in a minute. It's a quarter past seven. We are still in time!' says Leo. They get to school early.",
+      "video": "Tìm YouTube: \"early or late kids english lesson\""
+     },
+     "zh": {
+      "tu": "Mới: 马上 mǎshàng (= in a minute), 来得及 / 来不及 láidejí / lái bu jí (= in time / too late), 刻 kè (= quarter) | Ôn (từ nối Unit 7): 地铁 dìtiě, 堵车 dǔchē, 电动汽车 diàndòng qìchē | Ôn nhanh: 校服 xiàofú (= uniform) | Ôn: 迟到 chídào, 小时 xiǎoshí, 中午 zhōngwǔ, 起床 qǐchuáng",
+      "cum": "Mới: 马上就来 mǎshàng jiù lái (= in a minute) / 七点一刻 qī diǎn yí kè / 还来得及 hái láidejí / 来不及了 lái bu jí le | Ôn: 早一点儿起床 zǎo yìdiǎnr qǐchuáng (= get up early) / 上学迟到 shàngxué chídào (= be late for school) / 一个小时 yí ge xiǎoshí (= an hour) / 在中午 zài zhōngwǔ (= at midday) / 坐地铁 zuò dìtiě",
+      "cau": "[Cầu nối] If there is a traffic jam, we will be late. ↔ 如果堵车，我们就会迟到。(Rúguǒ dǔchē, wǒmen jiù huì chídào.) [giống: vế If / 如果 trước, vế kết quả sau · khác: a quarter past seven ↔ 七点一刻 (giờ trước, 一刻 = 15 phút); in a minute ↔ 马上 đứng trước động từ] / [Ngữ pháp: 如果……，就……] 如果堵车，我们就会迟到。(Rúguǒ dǔchē, wǒmen jiù huì chídào.) / 如果你早一点儿起床，就不会迟到。(Rúguǒ nǐ zǎo yìdiǎnr qǐchuáng, jiù bú huì chídào.) / 快！公共汽车马上就来。(Kuài! Gōnggòng qìchē mǎshàng jiù lái.) / 开车要一个小时。(Kāichē yào yí ge xiǎoshí.) / 中午很热。(Zhōngwǔ hěn rè.) / 现在七点一刻，还来得及！(Xiànzài qī diǎn yí kè, hái láidejí!)",
+      "truyen": "别迟到！— 下雨了，路上堵车。爸爸说：“如果我们开车，就会迟到。要一个小时！”Leo说：“我们坐地铁吧，地铁马上就来，还来得及！”他们很早就到了学校。(Xià yǔ le, lùshang dǔchē. Bàba shuō: “Rúguǒ wǒmen kāichē, jiù huì chídào. Yào yí ge xiǎoshí!” Leo shuō: “Wǒmen zuò dìtiě ba, dìtiě mǎshàng jiù lái, hái láidejí!” Tāmen hěn zǎo jiù dàole xuéxiào.)",
+      "video": "Tìm YouTube: \"不要迟到 来得及 儿童 动画\""
+     }
+    },
+    {
+     "ngay": 68,
+     "label": "Ngày 68. Unit 8 · Tháng Hai, tháng Bảy, tháng Tám – Bờ biển",
+     "en": {
+      "tu": "Mới: February, July, August, coast, later | Ôn (từ nối Unit 7): light, passenger, arrive | Ôn: summer, winter, snow, Beijing",
+      "cum": "Mới: in February / in July and August / on the coast / see you later | Ôn: in summer / in winter / arrive in Beijing",
+      "cau": "[Ngữ pháp: If + hiện tại, will + V?] If it snows today, will you go to Beijing? / In July and August, it's hot on the coast. / It's cold in February. / I'll call you later. / It often snows in Beijing in winter.",
+      "truyen": "A phone call — Xiaomei calls Bông from Beijing in February. 'It's snowing here!' says Xiaomei. 'If it snows tomorrow, will you make a snowman?' asks Bông. 'Yes! In July and August, I will visit you on the coast,' says Xiaomei. 'See you later!'",
+      "video": "Tìm YouTube: \"seasons and months for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 冬季 dōngjì (= winter), 夏季 xiàjì (= summer), 经常 jīngcháng (= often), 海岸 hǎi'àn (= coast) | Ôn (từ nối Unit 7): 红绿灯 hónglǜdēng, 乘客 chéngkè, 到 dào (= arrive) | Ôn: 二月 èr yuè, 七月 qī yuè, 八月 bā yuè, 下雪 xià xuě, 北京 Běijīng, 再见 zàijiàn",
+      "cum": "Mới: 冬季 dōngjì / 夏季 xiàjì / 经常下雪 jīngcháng xià xuě / 在海岸边 zài hǎi'àn biān (= on the coast) / 再见 zàijiàn (= see you later) | Ôn: 在二月 zài èr yuè (= in February) / 七月和八月 qī yuè hé bā yuè (= in July and August) / 到北京 dào Běijīng (= arrive in Beijing) / 晚一点儿给你打电话 wǎn yìdiǎnr gěi nǐ dǎ diànhuà (= call you later)",
+      "cau": "[Cầu nối] It often snows in Beijing in winter. ↔ 北京冬天经常下雪。(Běijīng dōngtiān jīngcháng xià xuě.) [giống: often ↔ 经常 đứng trước động từ · khác: in Beijing, in winter đứng cuối ↔ 北京、冬天 đứng đầu; February / July / August ↔ 二月 / 七月 / 八月 (số + 月)] / [Ngữ pháp: 如果……，会……吗？] 如果今天下雪，你会去北京吗？(Rúguǒ jīntiān xià xuě, nǐ huì qù Běijīng ma?) / 七月和八月是夏季，海岸边很热。(Qī yuè hé bā yuè shì xiàjì, hǎi'àn biān hěn rè.) / 二月是冬季，很冷。(Èr yuè shì dōngjì, hěn lěng.) / 北京冬天经常下雪。(Běijīng dōngtiān jīngcháng xià xuě.) / 我晚一点儿给你打电话。(Wǒ wǎn yìdiǎnr gěi nǐ dǎ diànhuà.) (= I'll call you later.) / [Chuyển ngữ] [Tin nhắn thoại (NL2): nghe Xiaomei nói 2 câu tiếng Trung (北京下雪了！七月和八月，我会去海岸边看你。) rồi nói lại ý bằng tiếng Anh cho Leo] It's snowing in Beijing! In July and August, Xiaomei will visit Bông on the coast.",
+      "truyen": "打电话 — 二月，Xiaomei从北京给Bông打电话：“北京下雪了！冬天这里经常下雪。”Bông问：“如果明天下雪，你会堆雪人吗？”Xiaomei说：“会！七月和八月，我会去海岸边看你。再见！”(Èr yuè, Xiaomei cóng Běijīng gěi Bông dǎ diànhuà: “Běijīng xià xuě le! Dōngtiān zhèli jīngcháng xià xuě.” Bông wèn: “Rúguǒ míngtiān xià xuě, nǐ huì duī xuěrén ma?” Xiaomei shuō: “Huì! Qī yuè hé bā yuè, wǒ huì qù hǎi'àn biān kàn nǐ. Zàijiàn!”)",
+      "video": "Tìm YouTube: \"四季 月份 儿歌 汉语\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "early, late, hour, midday, in a minute, February, July, August, coast, later | Ôn: traffic, jam, underground, electric, summer, winter, snow, a quarter, in time, often",
+     "slide": "[Lời cô] Vào bài: Hello, class! 同学们好！ · Chuyển ý: Let's spin the wheel! 我们来转转盘！ · Nhắc: Don't be late! 别迟到！ · Khen: Good job! 做得好！ · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): a quarter / 一刻, coast / 海岸. 1) Ghép câu điều kiện (5 câu): If there is a traffic jam, + we will be late. / If you get up early, + you won't be late. / If it snows today, + will you go to Beijing? / If it is hot in July, + we will go to the coast. / If it rains, + we will stay at home. 2) Vòng quay tháng: con quay và nói một câu về tháng đó (It's cold in February.). 3) Đóng vai gọi điện 'A phone call' theo cặp. 4) Đọc giờ trên đồng hồ: It's a quarter past seven. – Hurry! The bus will come in a minute. We are still in time!",
+     "truyen": "Don't be late! — It's a quarter past seven in February. It's raining and there is a traffic jam. 'If we go by car, we will be late,' says Dad. 'It takes an hour!' 'Let's go by underground. The train will come in a minute,' says Leo. They get to school early. Later, Leo talks to Xiaomei on the phone. 'In July and August, I will visit you on the coast,' says Xiaomei.",
+     "baihat": "Months of the Year (giai điệu: Here We Go Round the Mulberry Bush – dân gian) — January, February, it's cold, it's cold, / it's cold, it's cold! / April, it's warm, the flowers grow, / July, August, it's hot on the coast! / November, it's cool, let's go to bed early!"
+    },
+    "zh": {
+     "flash": "马上 mǎshàng, 来得及 láidejí, 来不及 lái bu jí, 刻 kè, 冬季 dōngjì, 夏季 xiàjì, 经常 jīngcháng, 海岸 hǎi'àn | Ôn: 早 zǎo (= early), 迟到 chídào (= late), 小时 xiǎoshí, 中午 zhōngwǔ, 二月 èr yuè, 七月 qī yuè, 八月 bā yuè, 晚一点儿 wǎn yìdiǎnr (= later), 堵车 dǔchē, 地铁 dìtiě, 电动汽车 diàndòng qìchē, 下雪 xià xuě",
+     "slide": "1) Ghép câu 如果……，就…… (cùng 5 câu của phần tiếng Anh): 如果堵车，+ 我们就会迟到。/ 如果你早一点儿起床，+ 就不会迟到。/ 如果今天下雪，+ 你会去北京吗？/ 如果七月很热，+ 我们就去海岸边。/ 如果下雨，+ 我们就在家。2) Đọc giờ (cùng đồng hồ bài 4 phần tiếng Anh): 现在七点一刻。快！公共汽车马上就来。还来得及！(Xiànzài qī diǎn yí kè. Kuài! Gōnggòng qìchē mǎshàng jiù lái. Hái láidejí!) + đóng vai 打电话 theo cặp (cùng truyện 'A phone call'). 3) Vòng quay tháng (cùng vòng quay của phần tiếng Anh): con quay và nói một câu tiếng Trung: 二月是冬季，很冷。/ 七月是夏季，海岸边很热。/ 北京冬天经常下雪。4) [Cầu nối Anh – Trung] Cùng tranh đồng hồ: rối Leo nói It's a quarter past seven., rối Xiaomei nói 现在七点一刻。Con phát hiện: quarter ↔ 一刻 đều là 15 phút (giống); tháng tiếng Anh có tên riêng (February), tiếng Trung chỉ là số + 月 (二月) (khác). 5) [Chuyển ngữ] Tin nhắn cho bố (NL2): nghe Leo nói 3 câu tiếng Anh (There is a traffic jam. Let's go by underground. The train will come in a minute.), nói lại cho rối Xiaomei bằng tiếng Trung: 路上堵车了。我们坐地铁吧。地铁马上就来。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo nhắn tin cho bố: \"Dad, there's a traffic jam on our road, so the bus will be late. Let's go by underground instead of by bus. The station is only five minutes from our house. The train will come in a minute, and it's only a quarter past seven. We are still in time for school!\" → con nói lại cho rối Xiaomei bằng tiếng Trung (tóm 3 ý, rồi trả lời câu hỏi thêm của Xiaomei: 现在几点？(Xiànzài jǐ diǎn?)). Mẫu: 路上堵车了，公共汽车会迟到。我们坐地铁吧，不坐公共汽车了。地铁马上就来，我们还来得及！(Lù shang dǔchē le, gōnggòng qìchē huì chídào. Wǒmen zuò dìtiě ba, bú zuò gōnggòng qìchē le. Dìtiě mǎshàng jiù lái, wǒmen hái láidejí!) · Trả lời Xiaomei: 现在七点一刻。(Xiànzài qī diǎn yí kè.) 6) YCT口试（中级）第三部分 回答问题 (mẫu, từng em, câu hỏi in kèm pinyin, mỗi câu trả lời 3–4 câu): 你最喜欢什么季节？为什么？(Nǐ zuì xǐhuan shénme jìjié? Wèishénme?) – Đoạn mẫu: 我最喜欢秋天。秋天不冷也不热，经常是晴天。我经常和爸爸去公园。/ 下雨的时候，你经常做什么？(Xià yǔ de shíhou, nǐ jīngcháng zuò shénme?) – Đoạn mẫu: 下雨的时候，我经常在家看书。雨停了，我就马上出去玩。",
+     "truyen": "别迟到！— 二月，早上七点一刻。下雨了，路上堵车。爸爸说：“如果我们开车，就会迟到。要一个小时！”Leo说：“我们坐地铁吧，地铁马上就来！”他们很早就到了学校。后来，Leo和Xiaomei打电话。Xiaomei说：“七月和八月，我会去海岸边看你！”(Èr yuè, zǎoshang qī diǎn yí kè. Xià yǔ le, lùshang dǔchē. Bàba shuō: “Rúguǒ wǒmen kāichē, jiù huì chídào. Yào yí ge xiǎoshí!” Leo shuō: “Wǒmen zuò dìtiě ba, dìtiě mǎshàng jiù lái!” Tāmen hěn zǎo jiù dàole xuéxiào. Hòulái, Leo hé Xiaomei dǎ diànhuà. Xiaomei shuō: “Qī yuè hé bā yuè, wǒ huì qù hǎi'àn biān kàn nǐ!”)",
+     "baihat": "一年十二个月 (giai điệu: Here We Go Round the Mulberry Bush – cùng giai điệu bài tiếng Anh) — 一月二月，冬季冷，(Yī yuè èr yuè, dōngjì lěng,) / 冬季冷，冬季冷！(dōngjì lěng, dōngjì lěng!) / 四月春季，花儿开，(Sì yuè chūnjì, huār kāi,) / 七月八月，海岸热！(qī yuè bā yuè, hǎi'àn rè!) / 十一月秋季，早点儿睡！(Shíyī yuè qiūjì, zǎo diǎnr shuì!)"
+    }
+   }
+  },
+  {
+   "buoi": 35,
+   "unit": 8,
+   "label_buoi": "Buổi dạy 35. Unit 8 · Weather – Tuyết rơi lúc nửa đêm",
+   "web": [
+    {
+     "ngay": 69,
+     "label": "Ngày 69. Unit 8 · Đóng băng – Nửa đêm – Đột nhiên",
+     "en": {
+      "tu": "Mới: freeze, midnight, ago, century | Ôn: ice, snow, cold, river, lake",
+      "cum": "Mới: the lake will freeze / at midnight / two days ago / a hundred years ago / this century | Ôn: cold ice",
+      "cau": "[Ngữ pháp: If + hiện tại, will + V] If it is very cold, the lake will freeze. / If it is windy, we won't go outside. / It snowed at midnight. / Two days ago, it was sunny. / A century is a hundred years. / It was sunny just now. Suddenly, it's windy!",
+      "truyen": "Snow at midnight — Two days ago, it was sunny in the mountains. Then, at midnight, it suddenly began to snow. 'If it is very cold, the lake will freeze,' says Grandpa. 'A century ago, people skated on this lake.' In the morning, Leo and Anna make a snowman.",
+      "video": "Tìm YouTube: \"why does water freeze for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 刚才 gāngcái (= just now), 突然 tūrán (= suddenly) | Ôn: 刮风 guāfēng, 下雪 xià xuě, 冷 lěng, 冰 bīng, 河 hé (= river), 以前 yǐqián | Nghe làm quen: 世纪 shìjì (= century) | Chỉ nghe hiểu (tranh trong truyện): 半夜 bànyè, 湖 hú, 结冰 jiébīng",
+      "cum": "Mới: 刚才还是晴天 gāngcái hái shì qíngtiān / 突然下雪了 tūrán xià xuě le | Ôn: 两天以前 liǎng tiān yǐqián (= two days ago) / 一百年以前 yìbǎi nián yǐqián (= a century ago) / 刮风了 guāfēng le | Nghe làm quen: 湖会结冰 hú huì jiébīng (= the lake will freeze) / 半夜 bànyè (= at midnight)",
+      "cau": "[Cầu nối] Two days ago, it was sunny. ↔ 两天以前，是晴天。(Liǎng tiān yǐqián, shì qíngtiān.) [giống: mốc thời gian đứng đầu câu; ago và 以前 đều đứng sau số ngày · khác: was (quá khứ) ↔ tiếng Trung không đổi động từ] / [Ngữ pháp: 如果……，就……] 如果很冷，湖就会结冰。(Rúguǒ hěn lěng, hú jiù huì jiébīng.) / 如果刮风，我们就不出去。(Rúguǒ guāfēng, wǒmen jiù bù chūqu.) / 半夜下雪了。(Bànyè xià xuě le.) / 一个世纪是一百年。(Yí ge shìjì shì yìbǎi nián.) (= A century is a hundred years.) / 一百年以前，人们在湖上滑冰。(Yìbǎi nián yǐqián, rénmen zài hú shang huábīng.) (= A century ago, people skated on the lake.) / 两天以前，是晴天。(Liǎng tiān yǐqián, shì qíngtiān.) / 刚才还是晴天，突然刮风了！(Gāngcái hái shì qíngtiān, tūrán guāfēng le!)",
+      "truyen": "半夜下雪了 — 两天以前，山上是晴天。半夜，突然下雪了。爷爷说：“如果很冷，湖就会结冰。一百年以前，人们在这个湖上滑冰。”早上，Leo和Anna堆了一个雪人。(Liǎng tiān yǐqián, shān shang shì qíngtiān. Bànyè, tūrán xià xuě le. Yéye shuō: “Rúguǒ hěn lěng, hú jiù huì jiébīng. Yìbǎi nián yǐqián, rénmen zài zhège hú shang huábīng.” Zǎoshang, Leo hé Anna duīle yí ge xuěrén.)",
+      "video": "Tìm YouTube: \"湖水 结冰 儿童 科普\""
+     }
+    },
+    {
+     "ngay": 70,
+     "label": "Ngày 70. Unit 8 · Ôn không tranh – Nghe đoán thời tiết",
+     "en": {
+      "tu": "Ôn: April, November, February, July, August, camp, desert, ocean, coast, fog, foggy, sunshine, freeze, early, late | Ôn nhanh: gym, letter",
+      "cum": "Ôn: a.m. / at the moment / in a minute / go camping / at midday / at midnight",
+      "cau": "Ôn (nghe – chọn đúng/sai, không tranh): If the weather is cool, we will go camping. / It's very dry in the desert. / What's the weather like at the moment? – It's foggy. / If it is windy, we won't go outside. / The bus will come in a minute.",
+      "truyen": "Guess the place! — It's very hot at midday and very cold at midnight. There is a lot of sunshine but no rain. It's very dry. There are camels here. Where is it? (The desert!)",
+      "video": "Tìm YouTube: \"weather vocabulary quiz for kids\""
+     },
+     "zh": {
+      "tu": "Ôn: 四月 sì yuè, 十一月 shíyī yuè, 二月 èr yuè, 七月 qī yuè, 八月 bā yuè, 露营 lùyíng, 沙漠 shāmò, 海洋 hǎiyáng, 海岸 hǎi'àn, 雾 wù / 有雾 yǒu wù, 阳光 yángguāng, 干燥 gānzào, 马上 mǎshàng, 早 zǎo (= early), 迟到 chídào (= be late) | Ôn nhanh: 体育馆 tǐyùguǎn (= gym), 信 xìn (= letter) | Chỉ nghe hiểu (tranh trong truyện): 骆驼 luòtuo, 半夜 bànyè, 结冰 jiébīng (= freeze)",
+      "cum": "Ôn: 早上七点 zǎoshang qī diǎn (= 7 a.m.) / 现在 xiànzài (= at the moment) / 马上 mǎshàng (= in a minute) / 去露营 qù lùyíng (= go camping) / 在中午 zài zhōngwǔ (= at midday) / 如果……，就…… rúguǒ…, jiù… | Nghe làm quen: 半夜 bànyè (= at midnight)",
+      "cau": "[Cầu nối] It's very hot at midday and very cold at midnight. ↔ 这里中午很热，半夜很冷。(Zhèli zhōngwǔ hěn rè, bànyè hěn lěng.) [giống: very ↔ 很 đứng trước tính từ · khác: tiếng Anh cần is, tiếng Trung không cần 是 trước tính từ] / Ôn (nghe – chọn đúng/sai, không tranh): 如果天气凉快，我们就去露营。(Rúguǒ tiānqì liángkuai, wǒmen jiù qù lùyíng.) / 沙漠里很干燥。(Shāmò li hěn gānzào.) / 现在天气怎么样？——有雾。(Xiànzài tiānqì zěnmeyàng? — Yǒu wù.) / 如果刮风，我们就不出去。(Rúguǒ guāfēng, wǒmen jiù bù chūqu.) / 公共汽车马上就来。(Gōnggòng qìchē mǎshàng jiù lái.) / [Chuyển ngữ] [Ghi âm (NL7): nghe câu đố tiếng Anh 'Guess the place!' rồi nói lại 3 ý chính bằng tiếng Trung cho Xiaomei] 这里中午很热，半夜很冷。这里阳光很多，不下雨。这里很干燥。 (Zhèli zhōngwǔ hěn rè, bànyè hěn lěng. Zhèli yángguāng hěn duō, bú xià yǔ. Zhèli hěn gānzào.)",
+      "truyen": "猜一猜 — 这里中午很热，半夜很冷。这里阳光很多，可是不下雨，非常干燥。这里有骆驼。这是哪儿？（沙漠！）(Zhèli zhōngwǔ hěn rè, bànyè hěn lěng. Zhèli yángguāng hěn duō, kěshì bú xià yǔ, fēicháng gānzào. Zhèli yǒu luòtuo. Zhè shì nǎr? (Shāmò!))",
+      "video": "Tìm YouTube: \"天气 词语 儿童 认知\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "freeze, midnight, ago, century | Ôn: just now, suddenly, April, November, February, July, August, camp, desert, ocean, coast, fog, foggy, sunshine, early, late, hour, midday, if",
+     "slide": "[Lời cô] Vào bài: Good afternoon, class! 同学们好！ · Chuyển ý: Let's put the pictures in order. 我们来排一排图片。 · Nhắc: Work in groups, please. 请分组。 · Khen: Amazing! 太厉害了！ · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): century / 一百年, freeze / 变成冰. 1) Sắp xếp sự việc theo thời gian (4 thẻ): Two days ago, it was sunny. → At midnight, it suddenly began to snow. → The lake will freeze. → In the morning, they make a snowman. 2) Trò 'Guess the place!' theo nhóm: desert / ocean / coast / mountains (con đọc câu đố, nhóm khác đoán). 3) Nghe – chọn đúng/sai (5 câu) về truyện 'Snow at midnight'.",
+     "truyen": "Snow at midnight — Two days ago, it was sunny in the mountains. Leo and Anna went camping with Grandpa. Then, at midnight, it suddenly began to snow. 'If it is very cold, the lake will freeze,' says Grandpa. 'A century ago, people skated on this lake.' In the morning, the lake is white. Leo and Anna make a big snowman. 'If it is sunny at midday, our snowman will melt!' laughs Anna.",
+     "baihat": "Snowflakes at Midnight (giai điệu: Twinkle Twinkle Little Star) — Snowflakes, snowflakes, falling down, / at midnight on the quiet town. / If it's cold, the lake will freeze, / white and shiny on the trees. / In the morning, come and play, / make a snowman, hip hooray!"
+    },
+    "zh": {
+     "flash": "刚才 gāngcái, 突然 tūrán, 以前 yǐqián (= ago) | Nghe: 结冰 jiébīng (= freeze), 半夜 bànyè (= midnight), 一百年 yìbǎi nián / 世纪 shìjì (= century) | Ôn: 四月 sì yuè, 十一月 shíyī yuè, 二月 èr yuè, 七月 qī yuè, 八月 bā yuè, 露营 lùyíng, 沙漠 shāmò, 海洋 hǎiyáng, 海岸 hǎi'àn, 雾 wù, 有雾 yǒu wù, 阳光 yángguāng, 早 zǎo, 迟到 chídào, 小时 xiǎoshí, 中午 zhōngwǔ, 如果 rúguǒ",
+     "slide": "1) Sắp xếp sự việc theo thời gian (cùng 4 thẻ của phần tiếng Anh): 两天以前，是晴天。→ 半夜，突然下雪了。→ 湖会结冰。→ 早上，他们堆雪人。2) Trò '猜一猜这是哪儿？' theo nhóm (cùng bộ câu đố của phần tiếng Anh): 沙漠 / 海洋 / 海岸 / 山上. 3) Nghe – chọn đúng/sai (5 câu, cùng truyện 半夜下雪了): 两天以前，山上是晴天。(对) / 半夜突然下雨了。(错) / 如果很冷，湖就会结冰。(对) / 一百年以前，人们在湖上滑冰。(对) / 早上，湖是白色的。(对) 4) [Cầu nối Anh – Trung] Cùng thẻ 'Two days ago': rối Leo nói Two days ago, it was sunny., rối Xiaomei nói 两天以前，是晴天。Con phát hiện: ago và 以前 đều đứng sau số ngày (giống); was ↔ tiếng Trung không đổi động từ (khác); a century ↔ 一百年 (cùng khái niệm Toán: 100 năm). 5) [Chuyển ngữ] Đoán nơi chốn (NL7): nhóm nghe câu đố tiếng Anh 'Guess the place!' (desert / ocean), nói lại 2–3 ý bằng tiếng Trung cho nhóm Xiaomei đoán: 这里很干燥，有骆驼。/ 这里有很多水和鱼。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Câu đố 'Guess the place!' (Leo đọc): \"It is very hot in the day, but it is cold at night. It is very dry here, and it hardly ever rains. There isn't much water. You can see camels walking in the sunshine. Where is it?\" → con nói lại cho rối Xiaomei bằng tiếng Trung (tóm 3 ý, rồi trả lời câu hỏi thêm của Xiaomei: 这是哪儿？(Zhè shì nǎr?)). Mẫu: 这里白天很热，可是晚上很冷。这里很干燥，很少下雨。这里没有很多水。(Zhèli báitiān hěn rè, kěshì wǎnshang hěn lěng. Zhèli hěn gānzào, hěn shǎo xià yǔ. Zhèli méiyǒu hěn duō shuǐ.) · Trả lời Xiaomei: 这是沙漠。(Zhè shì shāmò.)",
+     "truyen": "半夜下雪了 — 两天以前，山上是晴天。Leo和Anna跟爷爷去露营。半夜，突然下雪了。爷爷说：“如果很冷，湖就会结冰。一百年以前，人们在这个湖上滑冰。”早上，湖是白色的。Leo和Anna堆了一个大雪人。Anna笑着说：“如果中午是晴天，我们的雪人就会化了！”(Liǎng tiān yǐqián, shān shang shì qíngtiān. Leo hé Anna gēn yéye qù lùyíng. Bànyè, tūrán xià xuě le. Yéye shuō: “Rúguǒ hěn lěng, hú jiù huì jiébīng. Yìbǎi nián yǐqián, rénmen zài zhège hú shang huábīng.” Zǎoshang, hú shì báisè de. Leo hé Anna duīle yí ge dà xuěrén. Anna xiàozhe shuō: “Rúguǒ zhōngwǔ shì qíngtiān, wǒmen de xuěrén jiù huì huà le!”)",
+     "baihat": "半夜的雪花 (giai điệu: Twinkle Twinkle Little Star – cùng giai điệu bài tiếng Anh) — 雪花雪花飘下来，(Xuěhuā xuěhuā piāo xiàlai,) / 半夜落在静小镇。(bànyè luò zài jìng xiǎozhèn.) / 如果很冷湖结冰，(Rúguǒ hěn lěng hú jiébīng,) / 树上白白亮晶晶。(shù shang báibái liàng jīngjīng.) / 早上快来一起玩，(Zǎoshang kuài lái yìqǐ wán,) / 堆个雪人真好玩！(duī ge xuěrén zhēn hǎowán!)"
+    }
+   }
+  },
+  {
+   "buoi": 36,
+   "unit": 8,
+   "label_buoi": "Buổi dạy 36. Unit 8 · Weather – Cắm trại & Bản tin thời tiết · Luyện YCT口试（中级）第二部分",
+   "web": [
+    {
+     "ngay": 71,
+     "label": "Ngày 71. Unit 8 · Truyện & chuyển ngữ – Chuyến cắm trại",
+     "en": {
+      "tu": "Ôn: camp, ocean, coast, sunshine, foggy, later, early, hour | Ôn nhanh: timetable, uniform",
+      "cum": "Ôn: go camping / at the moment / in a minute / on the coast / see you later",
+      "cau": "[Chuyển ngữ] Anh → Trung: What will you do if it is cool? / If the weather is cool, we will go camping. / If it is windy, we won't go outside. / What's the temperature today?",
+      "truyen": "The camping trip — In July, Leo's family goes camping on the coast. In the morning, it's sunny. 'Let's swim in the ocean!' says Leo. Suddenly, it becomes foggy and windy. 'If it is windy, we won't swim,' says Dad. 'We'll swim later.' At night, Dad tells Leo about the Earth's atmosphere and the stars.",
+      "video": "Tìm YouTube: \"camping story for kids\""
+     },
+     "zh": {
+      "tu": "Ôn: 晴 qíng, 阳光 yángguāng, 海洋 hǎiyáng, 海岸 hǎi'àn, 露营 lùyíng, 突然 tūrán, 马上 mǎshàng, 温度 wēndù, 晚一点儿 wǎn yìdiǎnr (= later), 早 zǎo (= early), 小时 xiǎoshí (= hour) | Chỉ nghe hiểu (tranh trong truyện): 有雾 yǒu wù, 大气层 dàqìcéng",
+      "cum": "Ôn: 去露营 qù lùyíng / 在海岸边 zài hǎi'àn biān / 突然刮风了 tūrán guāfēng le / 马上回来 mǎshàng huílai",
+      "cau": "[Cầu nối] Suddenly, it becomes windy. ↔ 突然，刮风了。(Tūrán, guāfēng le.) [giống: Suddenly ↔ 突然 đứng đầu câu · khác: windy (tính từ) ↔ 刮风 (động từ: gió thổi)] / [Chuyển ngữ] Trung → Anh: 如果天气凉快，你会做什么？(Rúguǒ tiānqì liángkuai, nǐ huì zuò shénme?) / 如果天气凉快，我们就去露营。(Rúguǒ tiānqì liángkuai, wǒmen jiù qù lùyíng.) / 如果刮风，我们就不出去。(Rúguǒ guāfēng, wǒmen jiù bù chūqu.) / 今天多少度？(Jīntiān duōshao dù?) / [YCT口试（中级）第二部分 看图说话 (mẫu): nhìn tranh cắm trại, nghe đoạn mẫu rồi ghi âm đoạn của con] 今天是晴天，Leo和爸爸去海边露营。下午突然刮风了。爸爸说：“我们马上回去吧！”(Jīntiān shì qíngtiān, Leo hé bàba qù hǎibiān lùyíng. Xiàwǔ tūrán guāfēng le. Bàba shuō: “Wǒmen mǎshàng huíqu ba!”)",
+      "truyen": "去海边露营 — 七月，Leo一家去海岸边露营。早上是晴天。Leo说：“我们去海里游泳吧！”突然起雾了，还刮起了风。爸爸说：“如果刮风，我们就不游泳。我们晚一点儿再去。”晚上，爸爸给Leo讲地球的大气层和星星。(Qī yuè, Leo yì jiā qù hǎi'àn biān lùyíng. Zǎoshang shì qíngtiān. Leo shuō: “Wǒmen qù hǎi li yóuyǒng ba!” Tūrán qǐ wù le, hái guāqǐle fēng. Bàba shuō: “Rúguǒ guāfēng, wǒmen jiù bù yóuyǒng. Wǒmen wǎn yìdiǎnr zài qù.” Wǎnshang, bàba gěi Leo jiǎng dìqiú de dàqìcéng hé xīngxing.)",
+      "video": "Tìm YouTube: \"露营 儿童 动画\""
+     }
+    },
+    {
+     "ngay": 72,
+     "label": "Ngày 72. Unit 8 · Phiên dịch nhí – Bản tin thời tiết",
+     "en": {
+      "tu": "Ôn: April, November, February, July, August, foggy, freeze, midday, midnight, sunshine | Ôn nhanh: dictionary, letter",
+      "cum": "Ôn: at the moment / at 7 a.m. / in a minute / the lake will freeze",
+      "cau": "Phiên dịch nhí (con dịch bản tin cho bạn Xiaomei): Good morning! It's 7 a.m. At the moment, it's foggy in Hanoi. / The temperature is 15 degrees. / If it is very cold tonight, the water will freeze in the mountains. / It will be sunny at midday.",
+      "truyen": "The weather report — Nhan is the weather reporter in class. 'Good morning! It's 7 a.m. At the moment, it's foggy in Hanoi. The temperature is fifteen degrees. At midday, there will be sunshine. If you go out tonight, wear a coat!' Bông says it again in Chinese for Xiaomei.",
+      "video": "Tìm YouTube: \"kids weather report presentation\""
+     },
+     "zh": {
+      "tu": "Ôn: 晴 qíng, 温度 wēndù, 阳光 yángguāng, 中午 zhōngwǔ (= midday), 半夜 bànyè (= midnight), 现在 xiànzài (= at the moment), 早上七点 zǎoshang qī diǎn (= 7 a.m.) | Nghe: 结冰 jiébīng (= freeze) | Chỉ nghe hiểu (tranh trong truyện): 有雾 yǒu wù",
+      "cum": "Ôn: 今天多少度 jīntiān duōshao dù / 中午会是晴天 zhōngwǔ huì shì qíngtiān / 如果冷，就多穿衣服 rúguǒ lěng, jiù duō chuān yīfu / 水会变成冰 shuǐ huì biànchéng bīng",
+      "cau": "[Cầu nối] The temperature is 15 degrees. ↔ 温度是十五度。(Wēndù shì shíwǔ dù.) [giống: con số giống hệt (15) · khác: degrees thêm -s ↔ 度 không đổi; 7 a.m. ↔ 早上七点 (buổi trước, giờ sau)] / Phiên dịch nhí (con dịch bản tin cho bạn Anna): 大家早上好！现在是早上七点。(Dàjiā zǎoshang hǎo! Xiànzài shì zǎoshang qī diǎn.) / 现在河内有雾。(Xiànzài Hénèi yǒu wù.) / 温度是十五度。(Wēndù shì shíwǔ dù.) / 如果今天晚上很冷，山上的水就会变成冰。(Rúguǒ jīntiān wǎnshang hěn lěng, shān shang de shuǐ jiù huì biànchéng bīng.) / 中午会是晴天。(Zhōngwǔ huì shì qíngtiān.)",
+      "truyen": "天气预报 — Nhan在班上用英语做天气预报。Bông用汉语说给Xiaomei听：“大家早上好！现在是早上七点。河内现在有雾，温度是十五度。中午会有阳光。如果晚上出去，就穿上外套！”(Nhan zài bān shang yòng Yīngyǔ zuò tiānqì yùbào. Bông yòng Hànyǔ shuō gěi Xiaomei tīng: “Dàjiā zǎoshang hǎo! Xiànzài shì zǎoshang qī diǎn. Hénèi xiànzài yǒu wù, wēndù shì shíwǔ dù. Zhōngwǔ huì yǒu yángguāng. Rúguǒ wǎnshang chūqu, jiù chuānshang wàitào!”)",
+      "video": "Tìm YouTube: \"小朋友 天气预报 播报\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn: April, November, February, July, August, camp, desert, ocean, coast, fog, foggy, sunshine, freeze, early, late, hour, midday, midnight, later, ago, century, a.m., at the moment, in a minute, if",
+     "slide": "[Lời cô] Vào bài: Good morning, everyone! 大家早上好！ · Chuyển ý: Now, it's your weather report. 现在请你们做天气预报。 · Nhắc: Speak clearly, please. 请说清楚。 · Khen: Great report! 报告得真好！ · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): atmosphere / 大气层, weather report / 天气预报. 1) Kể lại truyện 'The camping trip' theo 4 tranh (gợi ý: sunny / suddenly foggy and windy / swim later / stars at night). 2) Dự án nhóm 'Weather report': mỗi nhóm làm bản tin 4 câu (It's 7 a.m. / At the moment, it's ___. / The temperature is ___ degrees. / If ___, ___ will ___.) rồi một bạn nói lại ý bằng tiếng Trung cho rối Xiaomei – [Chuyển ngữ] (NL7). [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo đọc bản tin mẫu: \"Good morning! It's 7 a.m. At the moment, it's cool on the coast, but it will be sunny later. At midday, the temperature will be twenty-eight degrees. In the afternoon, it might be windy. If it's windy, please don't swim in the ocean.\" → con nói lại cho rối Xiaomei bằng tiếng Trung (tóm 3 ý, rồi trả lời câu hỏi thêm của Xiaomei: 中午的温度是多少度？(Zhōngwǔ de wēndù shì duōshao dù?)). Mẫu: 现在是早上七点，海边很凉快，晚一点儿会是晴天。下午可能会刮风。如果刮风，就别去海里游泳。(Xiànzài shì zǎoshang qī diǎn, hǎibiān hěn liángkuai, wǎn yìdiǎnr huì shì qíngtiān. Xiàwǔ kěnéng huì guāfēng. Rúguǒ guāfēng, jiù bié qù hǎi li yóuyǒng.) · Trả lời Xiaomei: 二十八度。(Èrshíbā dù.) 3) Kiểm tra nhanh unit (6 câu chọn đáp án): If…will / months / a.m.",
+     "truyen": "The camping trip — In July, Leo's family goes camping on the coast. In the morning, it's sunny and there is a lot of sunshine. 'Let's swim in the ocean!' says Leo. Suddenly, it becomes foggy and windy. 'If it is windy, we won't swim,' says Dad. 'We'll swim later.' At midnight, the sky is clear. Dad tells Leo about the Earth's atmosphere. 'The atmosphere keeps us safe,' he says. Leo looks at the stars and smiles.",
+     "baihat": "Weather Report Song (giai điệu: The Wheels on the Bus) — The weather today is sunny and hot, / sunny and hot, sunny and hot. / The weather today is sunny and hot, / let's go camping! / The weather today is foggy and cold... / let's stay at home! / The weather today is windy and wet... / take your coat!"
+    },
+    "zh": {
+     "flash": "Ôn: 四月 sì yuè, 十一月 shíyī yuè, 二月 èr yuè, 七月 qī yuè, 八月 bā yuè, 露营 lùyíng, 沙漠 shāmò, 海洋 hǎiyáng, 海岸 hǎi'àn, 雾 wù, 有雾 yǒu wù, 阳光 yángguāng, 早 zǎo, 迟到 chídào, 小时 xiǎoshí, 中午 zhōngwǔ, 半夜 bànyè, 晚一点儿 wǎn yìdiǎnr (= later), 以前 yǐqián (= ago), 一百年 yìbǎi nián (= century), 早上 zǎoshang (= a.m.), 现在 xiànzài, 马上 mǎshàng, 如果 rúguǒ | Nghe: 结冰 jiébīng",
+     "slide": "1) Đọc lại truyện 去海边露营 theo vai (Leo – bố). 2) [Chuyển ngữ] Phiên dịch nhí (NL7): cô đọc bản tin tiếng Trung, con dịch sang tiếng Anh: 今天的温度是十五度。→ The temperature is fifteen degrees. / 如果刮风，我们就不出去。→ If it is windy, we won't go outside. 3) Dự án nhóm '天气预报' (cùng khung bản tin của phần tiếng Anh): 现在是早上七点。/ 现在___。/ 温度是___度。/ 如果___，就___。+ Kiểm tra nhanh chữ Hán (6 câu): nhìn tranh chọn chữ 晴 / 阳光 / 沙漠 / 海洋 / 冬季 / 夏季. 4) YCT口试（中级）第二部分 看图说话 (mẫu, 2 tranh, từng em nói một đoạn 4–5 câu): Tranh 1 – cắm trại bên biển: 今天是晴天。Leo和爸爸去海边露营。他们一边吃东西，一边看大海。Leo说：“太好了！” / Tranh 2 – trời đột nhiên đổi: 下午，突然刮风了。爸爸说：“我们马上回去吧！”晚上，天又晴了，他们看到了很多星星。 5) [Cầu nối Anh – Trung] Cùng bản tin của nhóm: rối Leo đọc The temperature is 15 degrees., rối Xiaomei đọc 温度是十五度。Con phát hiện: con số giống hệt (giống); degrees có -s ↔ 度 không đổi; 7 a.m. ↔ 早上七点 (buổi trước, giờ sau) (khác).",
+     "truyen": "去海边露营 — 七月，Leo一家去海岸边露营。早上是晴天，阳光很好。Leo说：“我们去海里游泳吧！”突然起雾了，还刮起了风。爸爸说：“如果刮风，我们就不游泳。我们晚一点儿再去。”半夜，天很晴。爸爸给Leo讲地球的大气层：“大气层保护我们。”Leo看着星星笑了。(Qī yuè, Leo yì jiā qù hǎi'àn biān lùyíng. Zǎoshang shì qíngtiān, yángguāng hěn hǎo. Leo shuō: “Wǒmen qù hǎi li yóuyǒng ba!” Tūrán qǐ wù le, hái guāqǐle fēng. Bàba shuō: “Rúguǒ guāfēng, wǒmen jiù bù yóuyǒng. Wǒmen wǎn yìdiǎnr zài qù.” Bànyè, tiān hěn qíng. Bàba gěi Leo jiǎng dìqiú de dàqìcéng: “Dàqìcéng bǎohù wǒmen.” Leo kànzhe xīngxing xiào le.)",
+     "baihat": "天气预报歌 (giai điệu: The Wheels on the Bus – cùng giai điệu bài tiếng Anh) — 今天的天气是又晴又热，(Jīntiān de tiānqì shì yòu qíng yòu rè,) / 晴又热，晴又热，(qíng yòu rè, qíng yòu rè,) / 今天的天气是又晴又热，(jīntiān de tiānqì shì yòu qíng yòu rè,) / 去露营吧！(qù lùyíng ba!) / 今天有雾又很冷……在家玩！(Jīntiān yǒu wù yòu hěn lěng… zài jiā wán!) / 今天刮风又下雨……多穿衣！(Jīntiān guāfēng yòu xià yǔ… duō chuān yī!)"
+    }
+   }
+  },
+  {
+   "buoi": 37,
+   "unit": "",
+   "label_buoi": "Buổi dạy 37. Ôn chặng 2 · Quét lại Unit 1–8 – Trò chơi tổng hợp",
+   "web": [
+    {
+     "ngay": 73,
+     "label": "Ngày 73. Ôn chặng 2 · Quét Unit 1–5: Gia đình, trường học, nông thôn, thành phố, chất liệu",
+     "en": {
+      "tu": "Ôn: Unit 1 as, ever, husband, nephew / Unit 2 dictionary, timetable, uniform, winner / Unit 3 butterfly, hill, friendly / Unit 4 airport, bridge, museum, noisy / Unit 5 wood, plastic, glass, metal, wool, everywhere",
+      "cum": "Ôn: look like / of course / join a club / write a letter / fire station / police station / made of glass / made from wood / by myself / make sure",
+      "cau": "Ôn: Your uncle is a teacher, isn't he? / Don't forget your workbook. / My neighbours are very friendly. / This museum is as big as that hotel. / This cup is made of glass. / Paper is made from wood.",
+      "truyen": "A day in the city — Nhan's uncle is a photographer. He takes Nhan to the museum by the bridge. The museum is as big as a castle. Inside, there are old cups made of glass and boxes made of metal. 'Paper is made from wood,' Uncle explains. 'Of course!' says Nhan.",
+      "video": "Tìm YouTube: \"Flyers vocabulary review family school city\""
+     },
+     "zh": {
+      "tu": "Ôn: Unit 1 叔叔 shūshu (= uncle), 当然 dāngrán (= of course) / Unit 2 词典 cídiǎn, 时间表 shíjiānbiǎo, 校服 xiàofú / Unit 3 邻居 línjū, 友好 yǒuhǎo, 蝴蝶 húdié / Unit 4 机场 jīchǎng, 桥 qiáo, 博物馆 bówùguǎn, 附近 fùjìn, 一样 yíyàng (= as … as) / Unit 5 木头 mùtou, 塑料 sùliào, 玻璃 bōli, 金属 jīnshǔ, 到处 dàochù | Nghe: 羊毛 yángmáo (= wool), 旧 jiù (= old) | Chỉ nghe hiểu (tranh trong truyện): 城堡 chéngbǎo, 摄影师 shèyǐngshī (= photographer)",
+      "cum": "Ôn: 他是你的叔叔，是不是？tā shì nǐ de shūshu, shì bu shì / 参加小组 cānjiā xiǎozǔ (= join a club) / 写信 xiě xìn (= write a letter) / 消防站 xiāofángzhàn (= fire station) / 警察局 jǐngchájú (= police station) / 和……一样大 hé… yíyàng dà / 是用……做的 shì yòng… zuò de / 我自己做的 wǒ zìjǐ zuò de (= by myself) / 一定要 yídìng yào (= make sure)",
+      "cau": "[Cầu nối] This museum is as big as that hotel. ↔ 这个博物馆和那个酒店一样大。(Zhège bówùguǎn hé nàge jiǔdiàn yíyàng dà.) [giống: so sánh hai vật, big ↔ 大 · khác: as … as kẹp tính từ ↔ 和……一样 + tính từ ở cuối] / Ôn: 你叔叔是老师，是不是？(Nǐ shūshu shì lǎoshī, shì bu shì?) / 别忘了你的练习册。(Bié wàngle nǐ de liànxícè.) / 我的邻居很友好。(Wǒ de línjū hěn yǒuhǎo.) / 这个博物馆和那个酒店一样大。(Zhège bówùguǎn hé nàge jiǔdiàn yíyàng dà.) / 这个杯子是用玻璃做的。(Zhège bēizi shì yòng bōli zuò de.)",
+      "truyen": "去博物馆 — Nhan的叔叔是摄影师。他带Nhan去桥附近的博物馆。博物馆和城堡一样大。里面有用玻璃做的旧杯子和用金属做的盒子。叔叔说：“纸是用木头做的。”Nhan说：“当然！”(Nhan de shūshu shì shèyǐngshī. Tā dài Nhan qù qiáo fùjìn de bówùguǎn. Bówùguǎn hé chéngbǎo yíyàng dà. Lǐmiàn yǒu yòng bōli zuò de jiù bēizi hé yòng jīnshǔ zuò de hézi. Shūshu shuō: “Zhǐ shì yòng mùtou zuò de.” Nhan shuō: “Dāngrán!”)",
+      "video": "Tìm YouTube: \"YCT4 词汇 复习\""
+     }
+    },
+    {
+     "ngay": 74,
+     "label": "Ngày 74. Ôn chặng 2 · Quét Unit 6–8: Vũ trụ, giao thông, thời tiết",
+     "en": {
+      "tu": "Ôn: Unit 6 space, planet, Earth, rocket, astronaut, spaceship, land, instead / Unit 7 traffic, light, jam, underground, electric, passenger / Unit 8 camp, desert, ocean, April, November, foggy, freeze",
+      "cum": "Ôn: could (khả năng) / if you want / by yourself / fire engine / get to / kilometre / a.m. / at the moment / in a minute",
+      "cau": "Ôn: People could travel to Mars by rocket one day. / How do you go to school? – I go to school by underground. / Everyone will drive an electric car. / If the weather is cool, we will go camping. / If it is windy, we won't go outside.",
+      "truyen": "Leo's future day — It's 7 a.m. in the future. At the moment, it's foggy. Leo goes to school by electric underground. There is no traffic jam. After school, he could fly to the moon by rocket. 'If the weather is good on the moon, we will go camping!' he laughs.",
+      "video": "Tìm YouTube: \"Flyers vocabulary review space transport weather\""
+     },
+     "zh": {
+      "tu": "Ôn: Unit 6 太空 tàikōng, 行星 xíngxīng, 地球 dìqiú, 火箭 huǒjiàn, 宇航员 yǔhángyuán, 宇宙飞船 yǔzhòu fēichuán, 降落 jiàngluò, 不去……了 (= instead), 将来 jiānglái / Unit 7 红绿灯 hónglǜdēng, 堵车 dǔchē, 地铁 dìtiě, 电动汽车 diàndòng qìchē, 乘客 chéngkè / Unit 8 露营 lùyíng, 沙漠 shāmò, 海洋 hǎiyáng, 四月 sì yuè, 十一月 shíyī yuè, 马上 mǎshàng | Nghe: 结冰 jiébīng (= freeze) | Chỉ nghe hiểu (tranh trong truyện): 有雾 yǒu wù",
+      "cum": "Ôn: 能… néng… (= could) / 如果你想 rúguǒ nǐ xiǎng (= if you want) / 消防车 xiāofángchē (= fire engine) / 怎么去 zěnme qù (= get to) / 早上七点 zǎoshang qī diǎn (= 7 a.m.) / 现在 xiànzài (= at the moment) / 坐地铁去学校 zuò dìtiě qù xuéxiào / 会开电动汽车 huì kāi diàndòng qìchē / 如果……，就…… rúguǒ…, jiù…",
+      "cau": "[Cầu nối] Everyone will drive an electric car. ↔ 大家都会开电动汽车。(Dàjiā dōu huì kāi diàndòng qìchē.) [giống: will ↔ 会 đứng trước động từ · khác: an electric car ↔ 电动汽车 (không có an); everyone ↔ 大家都 (thêm 都)] / Ôn: 将来人们能坐火箭去火星。(Jiānglái rénmen néng zuò huǒjiàn qù Huǒxīng.) / 我坐地铁去学校。(Wǒ zuò dìtiě qù xuéxiào.) / 大家都会开电动汽车。(Dàjiā dōu huì kāi diàndòng qìchē.) / 如果天气凉快，我们就去露营。(Rúguǒ tiānqì liángkuai, wǒmen jiù qù lùyíng.) / [Chuyển ngữ] [Ghi âm (NL7): nghe truyện tiếng Anh 'Leo's future day' rồi nói lại 2 ý chính bằng tiếng Trung cho Xiaomei] Leo坐电动地铁去学校，不堵车。放学以后，他能坐火箭去月球。 (Leo zuò diàndòng dìtiě qù xuéxiào, bù dǔchē. Fàngxué yǐhòu, tā néng zuò huǒjiàn qù yuèqiú.)",
+      "truyen": "未来的一天 — 未来的一天，早上七点，外面有雾。Leo坐电动地铁去学校，路上不堵车。放学以后，他能坐火箭去月球。他笑着说：“如果月球上天气好，我们就去露营！”(Wèilái de yì tiān, zǎoshang qī diǎn, wàimiàn yǒu wù. Leo zuò diàndòng dìtiě qù xuéxiào, lùshang bù dǔchē. Fàngxué yǐhòu, tā néng zuò huǒjiàn qù yuèqiú. Tā xiàozhe shuō: “Rúguǒ yuèqiú shang tiānqì hǎo, wǒmen jiù qù lùyíng!”)",
+      "video": "Tìm YouTube: \"YCT4 词汇 复习 太空 交通 天气\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn quét: husband, nephew, timetable, uniform, butterfly, hill, airport, bridge, museum, wood, plastic, glass, metal, wool, planet, Earth, rocket, astronaut, spaceship, traffic, jam, underground, electric, fire engine, camp, desert, ocean, foggy, April, November",
+     "slide": "[Lời cô] Vào bài: Hello, everyone! 大家好！ · Chuyển ý: Team A, it's your turn. A队，该你们了。 · Nhắc: Work as a team. 请一起合作。 · Khen: Well played! 玩得真好！ · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): review / 复习. 1) Trò 'Bánh xe chủ đề' (8 ô = 8 unit): quay trúng ô nào, đội nói 2 câu của unit đó (VD Unit 5: This cup is made of glass. / Unit 8: If it is cool, we will go camping.). 2) Phân loại 24 từ vào 4 cột Materials / Space / Transport / Weather (có từ nhiễu của Unit 1–4: nephew, timetable, hill, museum). 3) Đố nhanh ngữ pháp: chọn made of / made from, could / will, If… will….",
+     "truyen": "Leo's future day — It's 7 a.m. in the future. At the moment, it's foggy. Leo puts on his uniform and goes to school by electric underground. There is no traffic jam. His school is made of glass and metal. After school, his uncle, an astronaut, says, 'If you want, we could fly to the moon by rocket.' 'If the weather is good on the moon, we will go camping!' laughs Leo.",
+     "baihat": "Our Big Review (giai điệu: The Wheels on the Bus) — The cup is made of glass, glass, glass... / The rocket goes up to space, space, space... / The underground goes fast, fast, fast... / If it's cool, we will go camping, camping, camping... all day long!"
+    },
+    "zh": {
+     "flash": "Ôn quét: 时间表 shíjiānbiǎo, 校服 xiàofú, 蝴蝶 húdié, 机场 jīchǎng, 桥 qiáo, 博物馆 bówùguǎn, 木头 mùtou, 塑料 sùliào, 玻璃 bōli, 金属 jīnshǔ, 行星 xíngxīng, 地球 dìqiú, 火箭 huǒjiàn, 宇航员 yǔhángyuán, 宇宙飞船 yǔzhòu fēichuán, 红绿灯 hónglǜdēng, 堵车 dǔchē, 地铁 dìtiě, 电动汽车 diàndòng qìchē, 消防车 xiāofángchē, 露营 lùyíng, 沙漠 shāmò, 海洋 hǎiyáng, 有雾 yǒu wù, 四月 sì yuè, 十一月 shíyī yuè | Nghe: 丈夫 zhàngfu (= husband), 小山 xiǎoshān (= hill), 羊毛 yángmáo",
+     "slide": "1) Trò 'Bánh xe chủ đề' (8 ô = 8 unit): đội nói 2 câu tiếng Trung của unit đó (VD Unit 6: 将来人们能坐火箭去火星。/ Unit 7: 我坐地铁去学校。). 2) Đố nhanh mẫu câu (cùng bài đố ngữ pháp của phần tiếng Anh): 是用……做的 / 能 + V / 会 + V / 如果……，就……. 3) Phân loại 20 thẻ chữ Hán Unit 5–8 vào 4 cột 材料 / 太空 / 交通 / 天气 (cùng 4 cột của phần tiếng Anh; nhiễu Unit 1–4: 时间表 / 小山 / 博物馆), đội đọc nhanh từng thẻ. 4) [Cầu nối Anh – Trung] Bảng mẫu câu hai tiếng (cùng 'Bánh xe chủ đề'): made of ↔ 是用……做的 / could ↔ 能 / will ↔ 会 / If…, … will… ↔ 如果……，就…… / is + -ing ↔ V + 着. Con nối từng cặp và nói 1 điểm giống, 1 điểm khác. 5) [Chuyển ngữ] Tiếp sức (NL6): đội nghe 3 câu tiếng Anh trong truyện 'Leo's future day' (Leo goes to school by electric underground. There is no traffic jam. If the weather is good on the moon, we will go camping!), nói lại cho rối Xiaomei bằng tiếng Trung: Leo坐电动地铁去学校。路上不堵车。如果月球上天气好，我们就去露营！ [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo kể 'Leo's future day': \"In the future, Leo goes to school by electric underground. There are no traffic jams, so he is never late. His school bag is made of paper, not plastic. After school, he flies to the moon in a spaceship with his friends. If the weather is good on the moon, they will go camping!\" → con nói lại cho rối Xiaomei bằng tiếng Trung (tóm 3 ý, rồi trả lời câu hỏi thêm của Xiaomei: Leo的书包是用什么做的？(Leo de shūbāo shì yòng shénme zuò de?)). Mẫu: 将来Leo坐电动地铁去学校，路上不堵车，他不会迟到。放学以后，他和朋友坐宇宙飞船去月球。如果月球上天气好，他们就去露营。(Jiānglái Leo zuò diàndòng dìtiě qù xuéxiào, lù shang bù dǔchē, tā bú huì chídào. Fàngxué yǐhòu, tā hé péngyou zuò yǔzhòu fēichuán qù yuèqiú. Rúguǒ yuèqiú shang tiānqì hǎo, tāmen jiù qù lùyíng.) · Trả lời Xiaomei: 是用纸做的，不是用塑料做的。(Shì yòng zhǐ zuò de, bú shì yòng sùliào zuò de.)",
+     "truyen": "未来的一天 — 未来的一天，早上七点，外面有雾。Leo穿着校服，坐电动地铁去学校，路上不堵车。学校是用玻璃和金属做的。放学以后，Leo的叔叔来了，他是宇航员。叔叔说：“如果你想，我们可以坐火箭去月球。”Leo说：“如果月球上天气好，我们就去露营！”(Wèilái de yì tiān, zǎoshang qī diǎn, wàimiàn yǒu wù. Leo chuānzhe xiàofú, zuò diàndòng dìtiě qù xuéxiào, lùshang bù dǔchē. Xuéxiào shì yòng bōli hé jīnshǔ zuò de. Fàngxué yǐhòu, Leo de shūshu lái le, tā shì yǔhángyuán. Shūshu shuō: “Rúguǒ nǐ xiǎng, wǒmen kěyǐ zuò huǒjiàn qù yuèqiú.” Leo shuō: “Rúguǒ yuèqiú shang tiānqì hǎo, wǒmen jiù qù lùyíng!”)",
+     "baihat": "我们一起复习 (giai điệu: The Wheels on the Bus – cùng giai điệu bài tiếng Anh) — 杯子是用玻璃做的，玻璃，玻璃……(Bēizi shì yòng bōli zuò de, bōli, bōli…) / 火箭飞上太空，太空，太空……(Huǒjiàn fēishàng tàikōng, tàikōng, tàikōng…) / 地铁跑得很快，很快，很快……(Dìtiě pǎo de hěn kuài, hěn kuài, hěn kuài…) / 如果凉快，我们就去露营……一整天！(Rúguǒ liángkuai, wǒmen jiù qù lùyíng… yì zhěng tiān!)"
+    }
+   }
+  },
+  {
+   "buoi": 38,
+   "unit": "",
+   "label_buoi": "Buổi dạy 38. Ôn chặng 2 · Kiểm tra chặng 2 (Unit 5–8) · Luyện Flyers Nói phần 1",
+   "web": [
+    {
+     "ngay": 75,
+     "label": "Ngày 75. Ôn chặng 2 · Luyện đề kiểm tra tiếng Anh (Unit 5–8, dạng Flyers)",
+     "en": {
+      "tu": "Ôn: glass, metal, wool, plastic, planet, astronaut, rocket, traffic, underground, passenger, desert, ocean, coast, foggy",
+      "cum": "Ôn: made of / made from / could + V / will + V / If…, … will… / by underground / at the moment",
+      "cau": "Luyện đề – Listening (nối tên với tranh): Anna's sweater is made of wool. / Leo goes to school by underground. / Nhan wants to be an astronaut. / Bông's family will go camping if it is cool. – Reading (chọn từ điền): An ___ travels in a spaceship. (astronaut) / Stop at the red ___! (light)",
+      "truyen": "Luyện đề – Reading & Writing (đọc truyện, trả lời 4 câu): Bông's class enters a competition. They make a rocket from plastic bottles. 'If it is sunny, we will show it in the playground,' says the teacher. But at midday it suddenly rains, so they show it in the classroom instead. Their rocket wins the prize!",
+      "video": "Tìm YouTube: \"Cambridge Flyers listening practice\""
+     },
+     "zh": {
+      "tu": "Ôn: 玻璃 bōli, 金属 jīnshǔ, 塑料 sùliào, 行星 xíngxīng, 宇航员 yǔhángyuán, 火箭 huǒjiàn, 地铁 dìtiě, 红绿灯 hónglǜdēng, 乘客 chéngkè, 沙漠 shāmò, 海洋 hǎiyáng, 海岸 hǎi'àn, 有雾 yǒu wù | Nghe: 羊毛 yángmáo",
+      "cum": "Ôn: 是用……做的 shì yòng… zuò de / 将来能 jiānglái néng / 会去露营 huì qù lùyíng (= will go camping) / 如果……，就…… rúguǒ…, jiù… / 坐地铁去学校 zuò dìtiě qù xuéxiào / 现在 xiànzài (= at the moment)",
+      "cau": "[Cầu nối] Stop at the red light! ↔ 红灯，停！(Hóng dēng, tíng!) [giống: câu ra lệnh ngắn · khác: tiếng Trung nói 红灯 trước rồi mới 停] / Luyện đề nhẹ (cho quen dạng YCT4 – Nghe chọn tranh): Anna的毛衣是用羊毛做的。(Anna de máoyī shì yòng yángmáo zuò de.) / Leo坐地铁去学校。(Leo zuò dìtiě qù xuéxiào.) / Nhan想当宇航员。(Nhan xiǎng dāng yǔhángyuán.) / 如果天气凉快，Bông一家就去露营。(Rúguǒ tiānqì liángkuai, Bông yì jiā jiù qù lùyíng.) / 红灯，停！(Hóng dēng, tíng!)",
+      "truyen": "Bài đọc ngắn – trả lời câu hỏi: Bông的班参加了一个比赛。他们用塑料瓶子做了一个火箭。老师说：“如果是晴天，我们就在操场上给大家看。”可是中午突然下雨了，他们就在教室里给大家看。他们的火箭得奖了！(Bông de bān cānjiāle yí ge bǐsài. Tāmen yòng sùliào píngzi zuòle yí ge huǒjiàn. Lǎoshī shuō: “Rúguǒ shì qíngtiān, wǒmen jiù zài cāochǎng shang gěi dàjiā kàn.” Kěshì zhōngwǔ tūrán xià yǔ le, tāmen jiù zài jiàoshì li gěi dàjiā kàn. Tāmen de huǒjiàn dé jiǎng le!)",
+      "video": "Tìm YouTube: \"YCT4 听力 第一部分 练习\""
+     }
+    },
+    {
+     "ngay": 76,
+     "label": "Ngày 76. Ôn chặng 2 · Luyện đề kiểm tra tiếng Trung (Unit 5–8, dạng YCT4)",
+     "en": {
+      "tu": "Ôn: everywhere, perhaps, instead, believe, arrive, forget, prefer, early, late, later, ago",
+      "cum": "Ôn: by myself / by yourself / if you want / get to / in a minute / at the moment",
+      "cau": "[Chuyển ngữ] Ôn chuyển ngữ (phục vụ phần chuyển ngữ trong bài kiểm tra): This vase is made of glass. ↔ 这个花瓶是用玻璃做的。/ People could travel to Mars by rocket. ↔ 将来人们能坐火箭去火星。/ Turn left at the intersection. ↔ 在十字路口往左拐。/ If it is windy, we won't go outside. ↔ 如果刮风，我们就不出去。",
+      "truyen": "Speaking practice — Look at the picture and tell the story: Leo forgets his umbrella. Suddenly it rains. 'If we hurry, we will get to the underground in a minute,' says Anna. They arrive early. 'Perhaps I'll take my umbrella tomorrow,' laughs Leo.",
+      "video": "Tìm YouTube: \"Flyers speaking tell the story practice\""
+     },
+     "zh": {
+      "tu": "Ôn: 到处 dàochù, 大概 dàgài (= perhaps), 不去……了 (= instead), 到 dào (= arrive), 忘记 wàngjì, 更喜欢 gèng xǐhuan (= prefer), 早 zǎo, 迟到 chídào (= be late), 晚一点儿 wǎn yìdiǎnr (= later), 以前 yǐqián (= ago) | Nghe: 相信 xiāngxìn (= believe)",
+      "cum": "Ôn: 我自己 wǒ zìjǐ (= by myself) / 别自己一个人去 bié zìjǐ yí ge rén qù (= by yourself) / 如果你想 rúguǒ nǐ xiǎng (= if you want) / 怎么去 zěnme qù (= get to) / 马上 mǎshàng (= in a minute) / 现在 xiànzài (= at the moment)",
+      "cau": "[Cầu nối] If we hurry, we will get to the underground in a minute. ↔ 如果我们快一点儿，马上就能到地铁站。(Rúguǒ wǒmen kuài yìdiǎnr, mǎshàng jiù néng dào dìtiězhàn.) [giống: If ↔ 如果 mở đầu vế điều kiện · khác: will ↔ 就能 ở vế sau; in a minute đứng cuối ↔ 马上 đứng trước động từ] / Luyện đề YCT4 – Sắp xếp từ thành câu: 用 / 这个 / 是 / 做的 / 杯子 / 玻璃 → 这个杯子是用玻璃做的。(Zhège bēizi shì yòng bōli zuò de.) / 不但 / 很冷 / 火星 / 而且 / 很干 → 火星不但很冷，而且很干。(Huǒxīng búdàn hěn lěng, érqiě hěn gān.) / 如果 / 下雨 / 就 / 我们 / 坐地铁 → 如果下雨，我们就坐地铁。(Rúguǒ xià yǔ, wǒmen jiù zuò dìtiě.) / [YCT口试（中级）第三部分 回答问题 (mẫu): con đọc câu hỏi có pinyin, ghi âm câu trả lời 2–3 câu trên Trang luyện nói] 你怎么去学校？(Nǐ zěnme qù xuéxiào?) – 我坐地铁去学校。如果下雨，妈妈就开车送我。(Wǒ zuò dìtiě qù xuéxiào. Rúguǒ xià yǔ, māma jiù kāichē sòng wǒ.) / 你觉得将来人们会去太空旅游吗？(Nǐ juéde jiānglái rénmen huì qù tàikōng lǚyóu ma?) – 我觉得会，因为火箭越来越多。(Wǒ juéde huì, yīnwèi huǒjiàn yuèláiyuè duō.)",
+      "truyen": "Bài đọc YCT4 – chọn đúng/sai: Leo忘记带雨伞了。突然下雨了。Anna说：“如果我们快一点儿，马上就能到地铁站。”他们很早就到了学校。Leo笑着说：“明天我大概会带雨伞。”(Leo wàngjì dài yǔsǎn le. Tūrán xià yǔ le. Anna shuō: “Rúguǒ wǒmen kuài yìdiǎnr, mǎshàng jiù néng dào dìtiězhàn.” Tāmen hěn zǎo jiù dàole xuéxiào. Leo xiàozhe shuō: “Míngtiān wǒ dàgài huì dài yǔsǎn.”) — Chọn đúng/sai: Leo带了雨伞。(错) / 突然下雨了。(对) / 他们到学校迟到了。(错) / 明天Leo大概会带雨伞。(对)",
+      "video": "Tìm YouTube: \"YCT4 阅读 练习 小学生\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Từ kiểm tra: wood, plastic, glass, metal, wool, everywhere, over, planet, Earth, rocket, astronaut, spaceship, land, instead, traffic, light, jam, fire engine, get to, kilometre, camp, desert, ocean, April, November, a.m., at the moment, in a minute",
+     "slide": "[Lời cô] Vào bài: Good morning, class! 同学们好！ · Chuyển ý: Now, let's start the test. 现在开始考试。 · Nhắc: Work by yourself, please. 请自己做。 · Khen: You did it! 你们做到了！ · Tiếng Việt: chỉ giữ nề nếp và nhắc quy chế kiểm tra; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): spot the difference / 找不同. Bài kiểm tra tiếng Anh (dạng Flyers, ≤30 phút): 1) Listening (5 câu): nghe và nối tên – tranh (Anna: wool sweater / Leo: underground / Nhan: astronaut / Bông: camping / Xiaomei: fire engine). 2) Reading & Writing (6 câu): đọc định nghĩa chọn từ: You use this to look at stars. (telescope) / This is very dry and hot. (desert) / You can see this at the intersection: red, yellow, green. (traffic lights). 3) Speaking (theo cặp): kể truyện 3 tranh với If…, … will… và made of. 4) Flyers Nói phần 1 (mẫu, từng em với cô): tìm điểm khác giữa 2 tranh 'At the Space Museum'. Cô: 'For example, in my picture the rocket is red, but in your picture it's white.' Con nêu 5 điểm khác: In my picture, there are two astronauts. – In my picture, there are three. / In my picture, the girl is looking through a telescope. – In my picture, she's reading a book. / In my picture, the bus is at the traffic lights. – In my picture, it's on the bridge. / In my picture, the boy's sweater is made of wool. – In my picture, he's wearing a plastic coat. / In my picture, it's sunny. – In my picture, it's foggy.",
+     "truyen": "Bài đọc kiểm tra — Bông's class enters a competition. They make a rocket from a thousand plastic bottles. 'If it is sunny, we will show it in the playground,' says the teacher. But at midday it suddenly rains, so they show it in the classroom instead. A real astronaut comes to see it. 'In the future, you could build a real spaceship!' he says. Their rocket wins the prize! (Câu hỏi: What is the rocket made from? / Where do they show it? / Who comes to see it?)",
+     "baihat": "Cả lớp hát ôn trước giờ kiểm tra: 'If It's Sunny' (giai điệu: If You're Happy and You Know It) — If it's sunny, we will go camping, yes, we will! / If it's foggy, we will stay inside, yes, we will! / If you want, we could fly a rocket to the moon, / if it's sunny, we will go camping, yes, we will!"
+    },
+    "zh": {
+     "flash": "Từ kiểm tra (cùng 28 thẻ của phần tiếng Anh): 木头 mùtou, 塑料 sùliào, 玻璃 bōli, 金属 jīnshǔ, 羊毛 yángmáo (nghe), 到处 dàochù, 河上 hé shang (= over), 行星 xíngxīng, 地球 dìqiú, 火箭 huǒjiàn, 宇航员 yǔhángyuán, 宇宙飞船 yǔzhòu fēichuán, 降落 jiàngluò, 不去……了 (= instead), 红绿灯 hónglǜdēng (= traffic light), 堵车 dǔchē (= traffic jam), 消防车 xiāofángchē, 怎么去 zěnme qù (= get to), 公里 gōnglǐ, 露营 lùyíng, 沙漠 shāmò, 海洋 hǎiyáng, 四月 sì yuè, 十一月 shíyī yuè, 早上 zǎoshang (= a.m.), 现在 xiànzài (= at the moment), 马上 mǎshàng (= in a minute)",
+     "slide": "Bài kiểm tra tiếng Trung (dạng YCT4, ≤30 phút): 1) Nghe chọn tranh (5 câu): 这个杯子是用玻璃做的。/ 火箭起飞了。/ 我坐地铁去学校。/ 在十字路口往左拐。/ 今天是晴天。2) Đọc – sắp xếp từ thành câu (4 câu) với 是用……做的 / 不但……而且…… / 如果……，就…… / V + 着. 3) [Chuyển ngữ] Chuyển ngữ ngắn (BRIDGE, 3 câu): Paper is made from wood. → 纸是用木头做的。/ I go to school by underground. → 我坐地铁去学校。/ If it is windy, we won't go outside. → 如果刮风，我们就不出去。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo đọc thông báo: \"Welcome to the Space Museum! The museum opens at nine o'clock and closes at five o'clock. You can look at real rockets and see the stars through a big telescope. The best way to get here is by underground. Please don't forget your ticket!\" → con nói lại cho rối Xiaomei bằng tiếng Trung (tóm 3 ý, rồi trả lời câu hỏi thêm của Xiaomei: 博物馆几点关门？(Bówùguǎn jǐ diǎn guān mén?)). Mẫu: 太空博物馆九点开门。在那儿可以看火箭，也可以用大望远镜看星星。坐地铁去最好。(Tàikōng bówùguǎn jiǔ diǎn kāi mén. Zài nàr kěyǐ kàn huǒjiàn, yě kěyǐ yòng dà wàngyuǎnjìng kàn xīngxing. Zuò dìtiě qù zuì hǎo.) · Trả lời Xiaomei: 五点关门。(Wǔ diǎn guān mén.) 4) [Cầu nối Anh – Trung] Chữa bài sau giờ kiểm tra (5 phút, ngoài 30 phút làm bài): cô đặt câu Flyers và câu YCT cùng nghĩa cạnh nhau (Leo goes to school by underground. ↔ Leo坐地铁去学校。/ Stop at the red light! ↔ 红灯，停！), con chỉ 1 điểm giống, 1 điểm khác.",
+     "truyen": "Bài đọc kiểm tra — Bông的班参加了一个比赛。他们用一千个塑料瓶子做了一个火箭。老师说：“如果是晴天，我们就在操场上给大家看。”可是中午突然下雨了，他们就在教室里给大家看。一个宇航员也来了，他说：“将来你们能做真的宇宙飞船！”他们的火箭得奖了！(Bông de bān cānjiāle yí ge bǐsài. Tāmen yòng yìqiān ge sùliào píngzi zuòle yí ge huǒjiàn. Lǎoshī shuō: “Rúguǒ shì qíngtiān, wǒmen jiù zài cāochǎng shang gěi dàjiā kàn.” Kěshì zhōngwǔ tūrán xià yǔ le, tāmen jiù zài jiàoshì li gěi dàjiā kàn. Yí ge yǔhángyuán yě lái le, tā shuō: “Jiānglái nǐmen néng zuò zhēn de yǔzhòu fēichuán!” Tāmen de huǒjiàn dé jiǎng le!) (Câu hỏi: 火箭是用什么做的？/ 他们在哪儿给大家看火箭？/ 谁来了？)",
+     "baihat": "Hát ôn trước giờ kiểm tra: 如果是晴天 (giai điệu: If You're Happy and You Know It – cùng giai điệu, cùng lời bài tiếng Anh) — 如果是晴天，我们就去露营，我们会去！(Rúguǒ shì qíngtiān, wǒmen jiù qù lùyíng, wǒmen huì qù!) / 如果有雾，我们就在家里，我们会的！(Rúguǒ yǒu wù, wǒmen jiù zài jiā li, wǒmen huì de!) / 如果你想，我们可以开火箭去月球，(Rúguǒ nǐ xiǎng, wǒmen kěyǐ kāi huǒjiàn qù yuèqiú,) / 如果是晴天，我们就去露营，我们会去！(rúguǒ shì qíngtiān, wǒmen jiù qù lùyíng, wǒmen huì qù!)"
+    }
+   }
+  }
+ ]
+}

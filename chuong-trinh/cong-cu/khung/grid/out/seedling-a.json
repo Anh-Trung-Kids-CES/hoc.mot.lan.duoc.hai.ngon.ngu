@@ -1,0 +1,1146 @@
+{
+ "course": "Seedling",
+ "part": "a",
+ "rows": [
+  {
+   "buoi": 1,
+   "unit": "",
+   "label_buoi": "Buổi dạy 1. Mở khóa · Bài đầu vào phần 1 + ôn quét Little Seed Unit 1–6",
+   "web": [
+    {
+     "ngay": 1,
+     "label": "Ngày 1. Mở khóa · Ôn quét Little Seed Unit 1–3: chào hỏi, tên tuổi, gia đình (từ con quên vào Hộp ôn)",
+     "en": {
+      "tu": "Ôn: hello, goodbye, teacher, friend, everyone, tomorrow, kitten, puppy, name, birthday, old, what, brother, sister, grandma, grandpa, family, who, little",
+      "cum": "see you / how old / my family / big brother / little sister",
+      "cau": "Hello, teacher! / Goodbye, friend! See you tomorrow! / What's your name? – My name is Bông. / How old are you? – I'm six. / Who is she? – She is my little sister.",
+      "truyen": "Bông Is Back — Bông is in the park. Bông: Hello, Leo! Hello, Anna! Leo: Hello, Bông! How old are you? Bông: I'm six! Look! This is my family: Mummy, Daddy and my little sister. Anna: Hello, little sister! Goodbye, Bông! See you tomorrow!",
+      "video": "Hello Song for Kids – Greeting Song – https://www.youtube.com/watch?v=gghDRJVxFxU"
+     },
+     "zh": {
+      "tu": "Ôn: 你好 nǐ hǎo, 再见 zàijiàn, 老师 lǎoshī, 朋友 péngyou, 大家 dàjiā, 明天 míngtiān, 叫 jiào, 名字 míngzi, 岁 suì, 生日 shēngrì, 哥哥 gēge, 姐姐 jiějie, 弟弟 dìdi, 妹妹 mèimei, 爷爷 yéye, 奶奶 nǎinai, 家人 jiārén, 小猫 xiǎo māo, 小狗 xiǎo gǒu",
+      "cum": "你好 nǐ hǎo / 再见 zàijiàn / 叫什么 jiào shénme / 几岁 jǐ suì / 我的家人 wǒ de jiārén",
+      "cau": "[Cầu nối] What's your name? – My name is Bông. ↔ 你叫什么？— 我叫Bông。(Nǐ jiào shénme? — Wǒ jiào Bông.) [giống: tên đứng cuối câu trả lời · khác: What đứng đầu câu ↔ 什么 đứng cuối câu] / 你好！(Nǐ hǎo!) / 你叫什么？(Nǐ jiào shénme?) — 我叫Bông。(Wǒ jiào Bông.) / 你几岁？(Nǐ jǐ suì?) — 我六岁。(Wǒ liù suì.) / 这是我的家人。(Zhè shì wǒ de jiārén.) / 她是谁？(Tā shì shéi?) — 她是我妹妹。(Tā shì wǒ mèimei.) / 再见！(Zàijiàn!) / [Chuyển ngữ] [nghe rối Leo nói 1 câu tiếng Anh, nói lại ý đó bằng tiếng Trung cho rối Xiaomei, ghi âm trên Trang luyện nói] Leo: She is my little sister. → 她是我妹妹。(Tā shì wǒ mèimei.)",
+      "truyen": "Bông回来了 (Bông Is Back) — Bông在公园。Bông：你好，Leo！你好，Anna！Leo：你好，Bông！你几岁？Bông：我六岁！看！这是我的家人：爸爸、妈妈和妹妹。Anna：妹妹，你好！Bông，再见！(Bông huílái le — Bông zài gōngyuán. Bông: Nǐ hǎo, Leo! Nǐ hǎo, Anna! Leo: Nǐ hǎo, Bông! Nǐ jǐ suì? Bông: Wǒ liù suì! Kàn! Zhè shì wǒ de jiārén: bàba, māma hé mèimei. Anna: Mèimei, nǐ hǎo! Bông, zàijiàn!)",
+      "video": "Hello Song 你好歌 – Little Fox Chinese – https://www.youtube.com/watch?v=m_rDIzj6DRE"
+     }
+    },
+    {
+     "ngay": 2,
+     "label": "Ngày 2. Mở khóa · Ôn quét Little Seed Unit 4–6: cơ thể, cảm xúc, đồ dùng học tập",
+     "en": {
+      "tu": "Ôn: head, eye, ear, nose, mouth, hand, foot/feet, touch, small, happy, sad, angry, tired, sleepy, feel, bag, book, pen, ruler, rubber, notebook, schoolbag, new",
+      "cum": "touch your nose / two eyes / how do you feel / a new schoolbag / my pencil case",
+      "cau": "Touch your nose! / I have two eyes and two ears. / How do you feel? – I feel happy. / Look! This is my new schoolbag. / That is my pen.",
+      "truyen": "Bông's New Schoolbag — Bông: Look! A new schoolbag! Leo: Oh! How do you feel, Bông? Bông: I feel happy! This is my book, and this is my ruler. Leo: I have a new pen. Anna: I feel sleepy… Bông: Touch your nose, Anna!",
+      "video": "My Body Vocabulary Chant – Fun Kids English – https://www.youtube.com/watch?v=mOyriQBIFV4 / What's this? – It's a pencil. Eraser. (Stationery) – English Singsing – https://www.youtube.com/watch?v=mTisVqSrfF0"
+     },
+     "zh": {
+      "tu": "Ôn: 头 tóu, 眼睛 yǎnjing, 耳朵 ěrduo, 鼻子 bízi, 嘴巴 zuǐba, 手 shǒu, 脚 jiǎo, 开心 kāixīn, 难过 nánguò, 生气 shēngqì, 累 lèi, 困 kùn, 心情 xīnqíng, 书包 shūbāo, 书 shū, 笔 bǐ, 尺子 chǐzi, 橡皮 xiàngpí, 新 xīn",
+      "cum": "摸摸鼻子 mōmo bízi / 很开心 hěn kāixīn / 心情怎么样 xīnqíng zěnmeyàng / 新书包 xīn shūbāo",
+      "cau": "[Cầu nối] I have two eyes and two ears. ↔ 我有两只眼睛和两只耳朵。(Wǒ yǒu liǎng zhī yǎnjing hé liǎng zhī ěrduo.) [giống: I have ↔ 我有, two ↔ 两, and ↔ 和 · khác: tiếng Trung thêm 只 sau số; eyes có -s, 眼睛 không đổi] / 摸摸鼻子！(Mōmo bízi!) (= Touch your nose!) / 我有两只眼睛和两只耳朵。(Wǒ yǒu liǎng zhī yǎnjing hé liǎng zhī ěrduo.) / 你心情怎么样？(Nǐ xīnqíng zěnmeyàng?) — 我很开心！(Wǒ hěn kāixīn!) / 看！这是我的新书包。(Kàn! Zhè shì wǒ de xīn shūbāo.) / 那是我的笔。(Nà shì wǒ de bǐ.)",
+      "truyen": "Bông的新书包 (Bông's New Schoolbag) — Bông：看！我的新书包！Leo：Bông，你心情怎么样？Bông：我很开心！这是我的书，这是我的尺子。Leo：我有一支新笔。Anna：我很困……Bông：Anna，摸摸鼻子！(Bông de xīn shūbāo — Bông: Kàn! Wǒ de xīn shūbāo! Leo: Bông, nǐ xīnqíng zěnmeyàng? Bông: Wǒ hěn kāixīn! Zhè shì wǒ de shū, zhè shì wǒ de chǐzi. Leo: Wǒ yǒu yì zhī xīn bǐ. Anna: Wǒ hěn kùn…… Bông: Anna, mōmo bízi!)",
+      "video": "School Supplies in Chinese 文具歌 – AliMiMi – https://www.youtube.com/watch?v=wtF5hMyBkjA / 头肩膀膝盖脚 – 朱妮托尼 – https://www.youtube.com/watch?v=-7BDwnfA5IE"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn: hello, goodbye, teacher, friend, name, birthday, brother, sister, grandma, grandpa, family, head, nose, ear, hand, happy, sad, tired, book, pen, schoolbag",
+     "slide": "[Lời cô] Vào bài: \"Chào cả lớp! Hello, everyone! 大家好！\" · Khen: \"Giỏi lắm! Well done! 真棒！\" · Câu mới buổi này (nhắc): \"Ngồi xuống nào! Sit down, please. 请坐。\" 1) Bài đầu vào – nghe chọn tranh (6 câu; từ con chọn sai cô ghi vào Hộp ôn của con): Hello, teacher! / He is my brother. / Touch your nose! / I feel happy. / This is my book. / She is my grandma. 2) Bài đầu vào – hỏi đáp từng con với cô (3 câu): What's your name? – My name is ___. / How old are you? – I'm ___. / Who is she? – She is my ___. 3) Trò chơi Simon says (cả lớp): Touch your head! / Touch your ears! / Touch your mouth! / Touch your feet! 4) [Chuyển ngữ] Rối Leo nói 1 câu tiếng Anh, con nói lại ý đó bằng tiếng Trung cho rối Xiaomei (chỉ hiểu tiếng Trung): \"How old are you?\" → \"你几岁？(Nǐ jǐ suì?)\"; từng con nói, cả lớp vỗ tay khi Xiaomei hiểu. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"This is my little sister. She's five years old, and today is her birthday!\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 这是我妹妹。她五岁，今天是她的生日！ (Zhè shì wǒ mèimei. Tā wǔ suì, jīntiān shì tā de shēngrì!)",
+     "truyen": "Hello Again! — It's a new day. Bông goes to class with a new schoolbag. Bông: Hello, teacher! Hello, friends! Leo: Hello, Bông! How do you feel? Bông: I feel happy! Teacher: Hello! What's your name? Nhan: My name is Nhan. I'm five. Bông: Hello, Nhan! Look! This is my book. Nhan: Oh! A big book!",
+     "baihat": "Hello Again (giai điệu Frère Jacques) — Hello, teacher! Hello, teacher! / Hello, friends! Hello, friends! / What's your name? What's your name? / I'm Bông! I'm Bông!"
+    },
+    "zh": {
+     "flash": "Ôn: 你好 nǐ hǎo, 再见 zàijiàn, 老师 lǎoshī, 朋友 péngyou, 名字 míngzi, 生日 shēngrì, 家人 jiārén, 哥哥 gēge, 姐姐 jiějie, 弟弟 dìdi, 妹妹 mèimei, 爷爷 yéye, 奶奶 nǎinai, 头 tóu, 鼻子 bízi, 耳朵 ěrduo, 手 shǒu, 开心 kāixīn, 难过 nánguò, 累 lèi, 书 shū, 笔 bǐ, 书包 shūbāo",
+     "slide": "1) Bài đầu vào – nghe chọn tranh (6 câu, cùng 6 tranh với phần tiếng Anh; từ sai vào Hộp ôn): 你好，老师！(Nǐ hǎo, lǎoshī!) / 他是我哥哥。(Tā shì wǒ gēge.) / 摸摸鼻子！(Mōmo bízi!) / 我很开心。(Wǒ hěn kāixīn.) / 这是我的书。(Zhè shì wǒ de shū.) / 她是我奶奶。(Tā shì wǒ nǎinai.) 2) Bài đầu vào – hỏi đáp từng con: 你叫什么？— 我叫___。(Nǐ jiào shénme? — Wǒ jiào ___.) / 你几岁？— 我___岁。(Nǐ jǐ suì? — Wǒ ___ suì.) / 她是谁？— 她是我___。(Tā shì shéi? — Tā shì wǒ ___.) 3) Trò chơi \"Xiaomei nói\" (cả lớp, như Simon says): 摸摸头！(Mōmo tóu!) / 摸摸耳朵！(Mōmo ěrduo!) / 摸摸嘴巴！(Mōmo zuǐba!) / 摸摸脚！(Mōmo jiǎo!) 4) [Cầu nối Anh – Trung] Cùng thẻ tranh gia đình: rối Leo nói tiếng Anh \"She is my grandma.\", rối Xiaomei nói tiếng Trung \"她是我奶奶。(Tā shì wǒ nǎinai.)\"; con tìm điểm giống và khác. Cô chỉ: giống: She is my ↔ 她是我 cùng thứ tự · khác: 奶奶 lặp âm (nǎi-nai), grandma thì không; với người thân nói 我奶奶, không cần 的.",
+     "truyen": "又见面了！(Hello Again!) — 今天，Bông带新书包去上课。Bông：你好，老师！朋友们好！Leo：你好，Bông！你心情怎么样？Bông：我很开心！老师：你好！你叫什么？Nhan：我叫Nhan。我五岁。Bông：你好，Nhan！看！这是我的书。Nhan：哦！好大的书！(Yòu jiànmiàn le! — Jīntiān, Bông dài xīn shūbāo qù shàngkè. Bông: Nǐ hǎo, lǎoshī! Péngyoumen hǎo! Leo: Nǐ hǎo, Bông! Nǐ xīnqíng zěnmeyàng? Bông: Wǒ hěn kāixīn! Lǎoshī: Nǐ hǎo! Nǐ jiào shénme? Nhan: Wǒ jiào Nhan. Wǒ wǔ suì. Bông: Nǐ hǎo, Nhan! Kàn! Zhè shì wǒ de shū. Nhan: Ó! Hǎo dà de shū!)",
+     "baihat": "你好歌 (giai điệu 两只老虎 = Frère Jacques, cùng bài Hello Again) — 老师你好，老师你好，/ 朋友好，朋友好，/ 你叫什么名字？你叫什么名字？/ 我叫Bông，我叫Bông。(Lǎoshī nǐ hǎo, lǎoshī nǐ hǎo, / péngyou hǎo, péngyou hǎo, / nǐ jiào shénme míngzi? Nǐ jiào shénme míngzi? / Wǒ jiào Bông, wǒ jiào Bông.)"
+    }
+   }
+  },
+  {
+   "buoi": 2,
+   "unit": "",
+   "label_buoi": "Buổi dạy 2. Mở khóa · Bài đầu vào phần 2 + ôn quét Little Seed Unit 7–12, lập Hộp ôn",
+   "web": [
+    {
+     "ngay": 3,
+     "label": "Ngày 3. Mở khóa · Ôn quét Little Seed Unit 7–9: ngôi nhà, con vật, đồ ăn",
+     "en": {
+      "tu": "Ôn: bed, chair, table, sofa, on, under, where, thank you, cat, dog, bird, fish, rabbit, mouse, run, jump, swim, fly, can, apple, banana, milk, rice, water, eat, drink, like, pizza",
+      "cum": "thank you / on the sofa / under the table / can jump / eat an apple / drink milk",
+      "cau": "Where is the cat? – It's under the table. / The rabbit can jump. / Birds can fly. / I like bananas. / I eat rice and drink water. / Thank you!",
+      "truyen": "Where Is the Cat? — Anna: Where is my cat? Is it on the bed? No. Is it on the sofa? No. Leo: Look! It's under the table! The cat can jump! Anna: Thank you, Leo!",
+      "video": "Where is it? (In, On, Under) – Maple Leaf Learning – https://www.youtube.com/watch?v=8F0NYBBKczM / Animal Movements Song – Run Jump Fly Swim – KidsNest Channel – https://www.youtube.com/watch?v=EyslpSBZ990"
+     },
+     "zh": {
+      "tu": "Ôn: 床 chuáng, 椅子 yǐzi, 桌子 zhuōzi, 沙发 shāfā, 上 shàng, 下 xià, 哪儿 nǎr, 在 zài, 谢谢 xièxie, 猫 māo, 狗 gǒu, 鸟 niǎo, 鱼 yú, 兔子 tùzi, 老鼠 lǎoshǔ, 跑 pǎo, 跳 tiào, 飞 fēi, 游泳 yóuyǒng, 吃 chī, 喝 hē, 苹果 píngguǒ, 香蕉 xiāngjiāo, 牛奶 niúnǎi, 米饭 mǐfàn, 水 shuǐ, 喜欢 xǐhuan",
+      "cum": "在桌子下 zài zhuōzi xià / 在沙发上 zài shāfā shang / 会飞 huì fēi / 喜欢吃 xǐhuan chī / 喝牛奶 hē niúnǎi",
+      "cau": "[Cầu nối] Where is the cat? – It's under the table. ↔ 猫在哪儿？— 猫在桌子下。(Māo zài nǎr? — Māo zài zhuōzi xià.) [giống: cùng tranh con mèo dưới bàn · khác: under đứng trước the table, 下 đứng sau 桌子] / 猫在哪儿？(Māo zài nǎr?) — 猫在桌子下。(Māo zài zhuōzi xià.) / 兔子会跳。(Tùzi huì tiào.) / 鸟会飞。(Niǎo huì fēi.) / 我喜欢吃香蕉。(Wǒ xǐhuan chī xiāngjiāo.) / 我吃米饭，喝水。(Wǒ chī mǐfàn, hē shuǐ.) / 谢谢！(Xièxie!) / [Chuyển ngữ] [nghe rối Leo nói 1 câu tiếng Anh, nói lại ý đó bằng tiếng Trung cho rối Xiaomei, ghi âm trên Trang luyện nói] Leo: Birds can fly. → 鸟会飞。(Niǎo huì fēi.)",
+      "truyen": "猫在哪儿？(Where Is the Cat?) — Anna：我的猫在哪儿？在床上吗？不在。在沙发上吗？不在。Leo：看！猫在桌子下！猫会跳！Anna：谢谢你，Leo！(Māo zài nǎr? — Anna: Wǒ de māo zài nǎr? Zài chuáng shang ma? Bú zài. Zài shāfā shang ma? Bú zài. Leo: Kàn! Māo zài zhuōzi xià! Māo huì tiào! Anna: Xièxie nǐ, Leo!)",
+      "video": "Tìm YouTube: \"在哪里 上面 下面 儿歌\" / Tìm YouTube: \"小动物 跑 跳 飞 游泳 儿歌\""
+     }
+    },
+    {
+     "ngay": 4,
+     "label": "Ngày 4. Mở khóa · Ôn quét Little Seed Unit 10–12: thời tiết, màu sắc, đếm số",
+     "en": {
+      "tu": "Ôn: weather, sunny, rainy, cloudy, windy, snowy, hot, cold, park, play, go, home, red, blue, yellow, green, pink, purple, orange, black, white, grey, rainbow, cake, egg, monkey, party, how many",
+      "cum": "play in the park / go home / a red cake / how many",
+      "cau": "How's the weather? – It's sunny. / It's rainy. Go home! / I like red and blue. / How many eggs? – Six eggs. / It's a party!",
+      "truyen": "Party in the Park — It's sunny. Bông and Anna go to the park. Look! A rainbow: red, yellow, green, blue! It's Leo's birthday party. How many cakes? One, two, three cakes! Bông: Happy birthday, Leo!",
+      "video": "How's The Weather? – Super Simple Songs – https://www.youtube.com/watch?v=KBL5aXSJTlE / Red Yellow Green Blue – Super Simple Songs – https://www.youtube.com/watch?v=aMTIm-D1l54"
+     },
+     "zh": {
+      "tu": "Ôn: 天气 tiānqì, 晴天 qíngtiān, 下雨 xià yǔ, 刮风 guā fēng, 下雪 xià xuě, 热 rè, 冷 lěng, 公园 gōngyuán, 玩 wán, 回 huí, 红色 hóngsè, 黄色 huángsè, 绿色 lǜsè, 蓝色 lánsè, 粉色 fěnsè, 紫色 zǐsè, 蛋糕 dàngāo, 鸡蛋 jīdàn, 猴子 hóuzi, 快乐 kuàilè, 几 jǐ, 个 gè | Nghe làm quen: 彩虹 cǎihóng (= rainbow, tranh), 派对 pàiduì (= party, tranh)",
+      "cum": "天气怎么样 tiānqì zěnmeyàng / 在公园玩 zài gōngyuán wán / 回家 huí jiā / 生日快乐 shēngrì kuàilè / 几个 jǐ ge",
+      "cau": "[Cầu nối] How's the weather? – It's sunny. ↔ 天气怎么样？— 是晴天。(Tiānqì zěnmeyàng? — Shì qíngtiān.) [giống: cùng hỏi – đáp thời tiết · khác: How đứng đầu câu ↔ 怎么样 đứng cuối câu] / 天气怎么样？(Tiānqì zěnmeyàng?) — 是晴天。(Shì qíngtiān.) / 下雨了！回家吧！(Xià yǔ le! Huí jiā ba!) / 我在公园玩。(Wǒ zài gōngyuán wán.) / 我喜欢红色和蓝色。(Wǒ xǐhuan hóngsè hé lánsè.) / 有几个鸡蛋？(Yǒu jǐ ge jīdàn?) — 六个。(Liù ge.) / (nghe làm quen, có tranh) 今天有派对！(Jīntiān yǒu pàiduì!) (= It's a party!)",
+      "truyen": "公园里的派对 (Party in the Park) — 今天是晴天。Bông和Anna去公园。看！彩虹！红色、黄色、绿色、蓝色！今天是Leo的生日派对。有几个蛋糕？一、二、三！Bông：生日快乐，Leo！(Gōngyuán li de pàiduì — Jīntiān shì qíngtiān. Bông hé Anna qù gōngyuán. Kàn! Cǎihóng! Hóngsè, huángsè, lǜsè, lánsè! Jīntiān shì Leo de shēngrì pàiduì. Yǒu jǐ ge dàngāo? Yī, èr, sān! Bông: Shēngrì kuàilè, Leo!)",
+      "video": "天气歌 今天天气怎么样？– Coolong Chinese – https://www.youtube.com/watch?v=ML_h4DdThAw / Colors Song 颜色歌 – Cool Panda Chinese Learning – https://www.youtube.com/watch?v=iij7vZG15Cc"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn: chair, table, sofa, bed, under, on, cat, dog, bird, rabbit, fish, jump, fly, apple, banana, milk, sunny, rainy, windy, red, blue, yellow, green, rainbow, cake, monkey, how many",
+     "slide": "[Lời cô] Vào bài: \"Chào cả lớp! Hello, everyone! 大家好！\" · Khen: \"Giỏi lắm! Well done! 真棒！\" · Nhắc: \"Ngồi xuống nào! Sit down, please. 请坐。\" 1) Bài đầu vào phần 2 – nghe chọn tranh (6 câu): The cat is under the table. / The bird can fly. / I like apples. / It's rainy. / The rainbow is red, yellow and green. / How many monkeys? – Four monkeys. 2) Đếm và nói theo cặp: How many cakes? – Three cakes. / How many eggs? – Six eggs. 3) Hộp ôn: lật thẻ 6 từ cả lớp chọn sai nhiều nhất trong 2 buổi (ví dụ: grandpa, sleepy, ruler, sofa, windy, purple), con nhìn thẻ nói to từ. 4) [Chuyển ngữ] Rối Leo nói 1 câu tiếng Anh, con nói lại ý đó bằng tiếng Trung cho rối Xiaomei (chỉ hiểu tiếng Trung): \"The bird can fly.\" → \"鸟会飞。(Niǎo huì fēi.)\"; từng con nói, cả lớp vỗ tay khi Xiaomei hiểu. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"The bird can fly, but the fish can't fly. The fish can swim.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 鸟会飞，鱼不会飞。鱼会游泳。 (Niǎo huì fēi, yú bú huì fēi. Yú huì yóuyǒng.)",
+     "truyen": "Party in the Park — It's sunny. Bông, Anna and Nhan go to the park. Look! A rainbow: red, yellow, green, blue, purple! It's Leo's birthday party. How many cakes? One, two, three cakes! How many monkeys? Two monkeys! The monkeys jump and jump. Friends: Happy birthday, Leo! Oh no! It's rainy! Go home, friends!",
+     "baihat": "Weather Song (giai điệu Twinkle Twinkle Little Star) — How's the weather? Is it hot? / Sunny, sunny, yes, it's hot! / Rainy, rainy, go home, go! / Windy, windy, cold, cold, oh! / How's the weather? Is it hot? / Sunny, sunny, yes, it's hot!"
+    },
+    "zh": {
+     "flash": "Ôn: 床 chuáng, 椅子 yǐzi, 桌子 zhuōzi, 沙发 shāfā, 上 shàng, 下 xià, 猫 māo, 狗 gǒu, 鸟 niǎo, 兔子 tùzi, 鱼 yú, 跳 tiào, 飞 fēi, 苹果 píngguǒ, 香蕉 xiāngjiāo, 牛奶 niúnǎi, 晴天 qíngtiān, 下雨 xià yǔ, 刮风 guā fēng, 红色 hóngsè, 蓝色 lánsè, 黄色 huángsè, 绿色 lǜsè, 蛋糕 dàngāo, 猴子 hóuzi, 几 jǐ | Nghe làm quen: 彩虹 cǎihóng",
+     "slide": "1) Bài đầu vào phần 2 – nghe chọn tranh (6 câu): 猫在桌子下。(Māo zài zhuōzi xià.) / 鸟会飞。(Niǎo huì fēi.) / 我喜欢吃苹果。(Wǒ xǐhuan chī píngguǒ.) / 今天下雨。(Jīntiān xià yǔ.) / (nghe làm quen 彩虹) 彩虹是红色、黄色和绿色的。(Cǎihóng shì hóngsè, huángsè hé lǜsè de.) / 有几只猴子？— 四只。(Yǒu jǐ zhī hóuzi? — Sì zhī.) 2) Đếm và nói: 有几个蛋糕？— 三个。(Yǒu jǐ ge dàngāo? — Sān ge.) / 有几个鸡蛋？— 六个。(Yǒu jǐ ge jīdàn? — Liù ge.) 3) Hộp ôn: lật thẻ 6 từ sai nhiều nhất (ví dụ: 爷爷 yéye, 困 kùn, 尺子 chǐzi, 沙发 shāfā, 刮风 guā fēng, 紫色 zǐsè), con nhìn thẻ nói to từ. 4) [Cầu nối Anh – Trung] Cùng thẻ con mèo dưới bàn: rối Leo nói tiếng Anh \"The cat is under the table.\", rối Xiaomei nói tiếng Trung \"猫在桌子下。(Māo zài zhuōzi xià.)\"; con tìm điểm giống và khác. Cô chỉ: giống: cat ↔ 猫 đứng đầu câu · khác: under đứng trước the table, 下 đứng sau 桌子.",
+     "truyen": "公园里的派对 (Party in the Park) — 今天是晴天。Bông、Anna和Nhan去公园。看！彩虹！红色、黄色、绿色、蓝色、紫色！今天是Leo的生日派对。有几个蛋糕？一、二、三！有几只猴子？两只！猴子跳啊跳。大家：生日快乐，Leo！下雨了！回家吧！(Gōngyuán li de pàiduì — Jīntiān shì qíngtiān. Bông, Anna hé Nhan qù gōngyuán. Kàn! Cǎihóng! Hóngsè, huángsè, lǜsè, lánsè, zǐsè! Jīntiān shì Leo de shēngrì pàiduì. Yǒu jǐ ge dàngāo? Yī, èr, sān! Yǒu jǐ zhī hóuzi? Liǎng zhī! Hóuzi tiào a tiào. Dàjiā: Shēngrì kuàilè, Leo! Xià yǔ le! Huí jiā ba!)",
+     "baihat": "天气歌 (giai điệu Twinkle Twinkle Little Star / 小星星, cùng bài Weather Song) — 今天天气热不热？/ 晴天晴天，热热热！/ 下雨下雨，回家吧！/ 刮风刮风，冷冷冷！/ 今天天气热不热？/ 晴天晴天，热热热！(Jīntiān tiānqì rè bu rè? / Qíngtiān qíngtiān, rè rè rè! / Xià yǔ xià yǔ, huí jiā ba! / Guā fēng guā fēng, lěng lěng lěng! / Jīntiān tiānqì rè bu rè? / Qíngtiān qíngtiān, rè rè rè!)"
+    }
+   }
+  },
+  {
+   "buoi": 3,
+   "unit": 1,
+   "label_buoi": "Buổi dạy 3. Unit 1 · Greeting – Chào cô, chào bạn (chào buổi sáng, chào cô, chào cả lớp)",
+   "web": [
+    {
+     "ngay": 5,
+     "label": "Ngày 5. Unit 1 · Chào buổi sáng: Good morning, class!",
+     "en": {
+      "tu": "Mới: good, morning, class | Ôn: hello, teacher, everyone",
+      "cum": "good morning / good morning, class / hello, everyone",
+      "cau": "Good morning, class! / Good morning, teacher! / Hello, everyone! / Hello, Bông! / [Lệnh lớp học] Look! Listen! / Point to Mrs Lan. / Point to a kid. / OK, start! / [Lời web] Vào bài: \"Mình cùng học nhé! Let's learn!\" · Khen: \"Giỏi quá! Great! 真棒！\"",
+      "truyen": "Good Morning, Class! — Bông and Leo go to class. Bông: Good morning, teacher! Teacher: Good morning, Bông! Leo: Good morning, teacher! Teacher: Good morning, class! Hello, everyone! Bông is happy.",
+      "video": "Greeting: Good morning, Goodbye – https://www.youtube.com/watch?v=Fw0rdSHzWFY"
+     },
+     "zh": {
+      "tu": "Mới: 早上好 zǎoshang hǎo (= good morning), 您 nín (= you – to a teacher, grandma), 您好 nín hǎo (= hello – to a teacher) | Ôn: 你好 nǐ hǎo, 老师 lǎoshī, 大家 dàjiā, 老师好 lǎoshī hǎo (= hello, teacher)",
+      "cum": "早上好 zǎoshang hǎo / 小朋友们，早上好 xiǎo péngyoumen, zǎoshang hǎo / 大家好 dàjiā hǎo / 您好 nín hǎo",
+      "cau": "[Cầu nối] Good morning, teacher! ↔ 老师，早上好！(Lǎoshī, zǎoshang hǎo!) [giống: cùng lời chào buổi sáng, morning ↔ 早上 · khác: tiếng Trung gọi 老师 trước rồi mới chào 早上好] / 小朋友们，早上好！(Xiǎo péngyoumen, zǎoshang hǎo!) (= Good morning, class!) / 老师，早上好！(Lǎoshī, zǎoshang hǎo!) (= Good morning, teacher!) / 大家好！(Dàjiā hǎo!) (= Hello, everyone!) / 你好，Bông！(Nǐ hǎo, Bông!) (= Hello, Bông!) / [Ngữ pháp: chào người lớn dùng 您] 老师，您好！(Lǎoshī, nín hǎo!) (= Hello, teacher!) / [Lệnh lớp học] 看！(Kàn!) / 听！(Tīng!) / (nghe làm quen) 指一指Lan老师！(Zhǐ yi zhǐ Lan lǎoshī!) / 指一指小朋友！(Zhǐ yi zhǐ xiǎo péngyou!) / 开始！(Kāishǐ!) / [Chuyển ngữ] [nghe rối Leo nói 1 câu tiếng Anh, nói lại ý đó bằng tiếng Trung cho rối Xiaomei, ghi âm trên Trang luyện nói] Leo: Hello, everyone! → 大家好！(Dàjiā hǎo!)",
+      "truyen": "小朋友们，早上好！(Good Morning, Class!) — Bông和Leo去上课。Bông：老师，早上好！老师：Bông，早上好！Leo：老师，早上好！老师：小朋友们，早上好！大家好！Bông很开心。(Xiǎo péngyoumen, zǎoshang hǎo! — Bông hé Leo qù shàngkè. Bông: Lǎoshī, zǎoshang hǎo! Lǎoshī: Bông, zǎoshang hǎo! Leo: Lǎoshī, zǎoshang hǎo! Lǎoshī: Xiǎo péngyoumen, zǎoshang hǎo! Dàjiā hǎo! Bông hěn kāixīn.)",
+      "video": "Mrs. Kelly's Class 1: 你好！– Little Fox Chinese – https://www.youtube.com/watch?v=ePzxGxOj7us"
+     }
+    },
+    {
+     "ngay": 6,
+     "label": "Ngày 6. Unit 1 · Chào cô Lan, chào các bạn nhỏ",
+     "en": {
+      "tu": "Mới: Mrs, kid, man/men | Ôn: friend, daddy, mummy, good morning",
+      "cum": "Mrs Lan / hello, kids / a man / two men",
+      "cau": "Good morning, Mrs Lan! / Hello, kids! / Look! A man. He is my daddy. / One man, two men! / Look and listen. Point to the man.",
+      "truyen": "Mrs Lan's Class — Mrs Lan: Good morning, kids! Kids: Good morning, Mrs Lan! Look! A man is in the class. Anna: He is my daddy! Daddy: Hello, kids! Kids: Hello! Two men! Leo: He is my daddy!",
+      "video": "Tìm YouTube: \"hello kids good morning song\""
+     },
+     "zh": {
+      "tu": "Mới: 你们 nǐmen (= you – kids), 你们好 nǐmen hǎo (= hello, kids), 小朋友 xiǎo péngyou (= kids) | Ôn: 早上好 zǎoshang hǎo (= good morning), 朋友 péngyou, 爸爸 bàba, 妈妈 māma | Nghe làm quen: 男人 nánrén (= man/men, tranh)",
+      "cum": "Lan老师，早上好 Lan lǎoshī, zǎoshang hǎo / 你们好 nǐmen hǎo / 小朋友 xiǎo péngyou / (nghe làm quen) 一个男人 yí ge nánrén / 两个男人 liǎng ge nánrén",
+      "cau": "[Cầu nối] Hello, kids! ↔ 小朋友，你们好！(Xiǎo péngyou, nǐmen hǎo!) [giống: cùng chào nhiều bạn nhỏ · khác: kids thêm -s; tiếng Trung đổi 你 → 你们 khi chào nhiều người] / Lan老师，早上好！(Lan lǎoshī, zǎoshang hǎo!) (= Good morning, Mrs Lan!) / 小朋友，你们好！(Xiǎo péngyou, nǐmen hǎo!) / (nghe làm quen) 看！一个男人。他是我爸爸。(Kàn! Yí ge nánrén. Tā shì wǒ bàba.) / (nghe làm quen, có tranh) 一个男人，两个男人！(Yí ge nánrén, liǎng ge nánrén!) (= One man, two men!) / (nghe làm quen) 看一看，听一听。指一指这个男人！(Kàn yi kàn, tīng yi tīng. Zhǐ yi zhǐ zhège nánrén!) (= Look and listen. Point to the man.)",
+      "truyen": "Lan老师的小朋友 (Mrs Lan's Class) — Lan老师：小朋友们，早上好！小朋友：Lan老师，早上好！看！一个男人在教室里。Anna：他是我爸爸！爸爸：小朋友们，你们好！小朋友：您好！看！两个男人！Leo：他是我爸爸！(Lan lǎoshī de xiǎo péngyou — Lan lǎoshī: Xiǎo péngyoumen, zǎoshang hǎo! Xiǎo péngyou: Lan lǎoshī, zǎoshang hǎo! Kàn! Yí ge nánrén zài jiàoshì li. Anna: Tā shì wǒ bàba! Bàba: Xiǎo péngyoumen, nǐmen hǎo! Xiǎo péngyou: Nín hǎo! Kàn! Liǎng ge nánrén! Leo: Tā shì wǒ bàba!)",
+      "video": "Tìm YouTube: \"你们好 问好歌 儿歌\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: good, morning, class, Mrs, kid, man/men | Ôn: hello, teacher, friend, everyone, daddy | Thẻ lệnh đề: look, listen, point (to), start",
+     "slide": "[Lời cô] Vào bài: \"Chào buổi sáng cả lớp! Good morning, class! 小朋友们好！\" · Khen: \"Giỏi lắm! Well done! 真棒！\" · Nhắc: \"Ngồi xuống nào! Sit down, please. 请坐。\" · Câu mới buổi này (lệnh): \"Nhìn nào! Nghe nào! Look! Listen! 看！听！\" 1) Nghe chọn tranh (4 câu): Good morning, class! / Hello, kids! / Good morning, Mrs Lan! / Look! A man. 2) Đóng vai cô – trò: một con làm cô nói \"Good morning, class!\", cả lớp đáp \"Good morning, Mrs Lan!\" 3) Đếm và chọn tranh: one man / two men / one kid / two kids. 4) Lệnh lớp học (cô làm mẫu, con làm theo): Look! / Listen! / Point to Mrs Lan! / Point to a kid! / OK, start! 5) [Chuyển ngữ] Rối Leo nói 1 câu tiếng Anh, con nói lại ý đó bằng tiếng Trung cho rối Xiaomei (chỉ hiểu tiếng Trung): \"Hello, kids!\" → \"小朋友，你们好！(Xiǎo péngyou, nǐmen hǎo!)\"; từng con nói, cả lớp vỗ tay khi Xiaomei hiểu. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"Look! This is Mrs Lan. She is my new teacher.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 看！这是Lan老师。她是我的新老师。 (Kàn! Zhè shì Lan lǎoshī. Tā shì wǒ de xīn lǎoshī.)",
+     "truyen": "Good Morning, Mrs Lan! — Morning. Bông, Leo and Anna go to class. Mrs Lan: Good morning, class! Hello, kids! Kids: Good morning, Mrs Lan! Look! A man is in the class. Anna: He is my daddy! Daddy: Hello, kids! Kids: Hello! Good morning!",
+     "baihat": "Good Morning Song (giai điệu Frère Jacques) — Good morning, good morning, / Mrs Lan, Mrs Lan! / Hello, kids! Hello, everyone! / Hello, kids! Hello, everyone! / Good morning, class! Good morning, class!"
+    },
+    "zh": {
+     "flash": "Mới: 早上好 zǎoshang hǎo, 您 nín, 您好 nín hǎo, 你们 nǐmen, 你们好 nǐmen hǎo, 小朋友 xiǎo péngyou | Ôn: 你好 nǐ hǎo, 老师好 lǎoshī hǎo, 大家 dàjiā, 老师 lǎoshī, 爸爸 bàba | Thẻ lệnh đề: 看 kàn, 听 tīng | Nghe làm quen: 指一指 zhǐ yi zhǐ (= point), 开始 kāishǐ (= start), 男人 nánrén (tranh một người đàn ông / hai người đàn ông)",
+     "slide": "1) Nghe chọn tranh (4 câu, cùng 4 tranh với phần tiếng Anh): 小朋友们，早上好！(Xiǎo péngyoumen, zǎoshang hǎo!) / 小朋友，你们好！(Xiǎo péngyou, nǐmen hǎo!) / Lan老师，早上好！(Lan lǎoshī, zǎoshang hǎo!) / (nghe làm quen) 看！一个男人。(Kàn! Yí ge nánrén.) 2) Đóng vai cô – trò: một con làm cô nói 小朋友们，早上好！(Xiǎo péngyoumen, zǎoshang hǎo!), cả lớp đáp Lan老师，早上好！(Lan lǎoshī, zǎoshang hǎo!) 3) Đếm và chọn tranh (nghe làm quen 男人): 一个男人 / 两个男人 / 一个小朋友 / 两个小朋友 (yí ge nánrén / liǎng ge nánrén / yí ge xiǎo péngyou / liǎng ge xiǎo péngyou). 4) Lệnh lớp học (cô làm mẫu, con làm theo): 看！(Kàn!) / 听！(Tīng!) / (nghe làm quen) 指一指Lan老师！(Zhǐ yi zhǐ Lan lǎoshī!) / 指一指小朋友！(Zhǐ yi zhǐ xiǎo péngyou!) / 开始！(Kāishǐ!) 5) [Cầu nối Anh – Trung] Cùng thẻ cô Lan: rối Leo nói tiếng Anh \"Good morning, Mrs Lan!\", rối Xiaomei nói tiếng Trung \"Lan老师，早上好！(Lan lǎoshī, zǎoshang hǎo!)\"; con tìm điểm giống và khác. Cô chỉ: giống: đều là lời chào cô buổi sáng, morning ↔ 早上 · khác: Mrs trước tên ↔ 老师 sau tên; tiếng Trung gọi người trước rồi mới chào 早上好.",
+     "truyen": "Lan老师，早上好！(Good Morning, Mrs Lan!) — 早上，Bông、Leo和Anna来上课。Lan老师：小朋友们，早上好！你们好！Bông、Leo和Anna：Lan老师，早上好！看！一个男人在教室里！Anna：他是我爸爸！爸爸：小朋友们，你们好！小朋友：您好！早上好！(Lan lǎoshī, zǎoshang hǎo! — Zǎoshang, Bông, Leo hé Anna lái shàngkè. Lan lǎoshī: Xiǎo péngyoumen, zǎoshang hǎo! Nǐmen hǎo! Bông, Leo hé Anna: Lan lǎoshī, zǎoshang hǎo! Kàn! Yí ge nánrén zài jiàoshì li! Anna: Tā shì wǒ bàba! Bàba: Xiǎo péngyoumen, nǐmen hǎo! Xiǎo péngyou: Nín hǎo! Zǎoshang hǎo!)",
+     "baihat": "早上好歌 (giai điệu 两只老虎 = Frère Jacques, cùng bài Good Morning Song) — 早上好呀，早上好呀，/ Lan老师，Lan老师，/ 小朋友，大家好！小朋友，大家好！/ 早上好！早上好！(Zǎoshang hǎo ya, zǎoshang hǎo ya, / Lan lǎoshī, Lan lǎoshī, / xiǎo péngyou, dàjiā hǎo! Xiǎo péngyou, dàjiā hǎo! / Zǎoshang hǎo! Zǎoshang hǎo!)"
+    }
+   }
+  },
+  {
+   "buoi": 4,
+   "unit": 1,
+   "label_buoi": "Buổi dạy 4. Unit 1 · Greeting – Chào cô, chào bạn (giờ học, tạm biệt, hẹn gặp lại)",
+   "web": [
+    {
+     "ngay": 7,
+     "label": "Ngày 7. Unit 1 · Giờ học: bài học, bài hát, câu chuyện",
+     "en": {
+      "tu": "Mới: lesson, song, story | Ôn: Mrs, kid, class, book, new, like",
+      "cum": "lesson time / a song / a new story",
+      "cau": "Kids, it's lesson time! / I like the song. / Look! A new story. / Good morning, class! It's lesson time. / Listen and point to the song. / Look at the example. Point to the story. / Let's sing together!",
+      "truyen": "Lesson Time — Mrs Lan: Kids, it's lesson time! Look! A new book. Leo: A story! I like stories. Anna: I like songs. Mrs Lan: A song and a story! Let's sing together! Kids: Oh, good!",
+      "video": "Tìm YouTube: \"story time song for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 我们 wǒmen (= we – let's), 一起 yìqǐ (= together – tranh cả lớp cùng làm) | Ôn: 小朋友 xiǎo péngyou, 看 kàn, 书 shū, 新 xīn, 喜欢 xǐhuan, 唱歌 chànggē | Nghe làm quen: 上课 shàngkè (= lesson time, tranh), 故事 gùshi (= story, tranh)",
+      "cum": "上课了 shàngkè le / 唱歌 chànggē / 新书 xīn shū / 我们一起 wǒmen yìqǐ / 一起唱歌 yìqǐ chànggē",
+      "cau": "[Cầu nối] Look! A new book. ↔ 看！新书！(Kàn! Xīn shū!) [giống: Look! ↔ 看！ đứng đầu câu, new ↔ 新 đứng trước book ↔ 书 · khác: tiếng Trung không có a] / (nghe làm quen) 小朋友，上课了！(Xiǎo péngyou, shàngkè le!) (= Kids, it's lesson time!) / 看！新书！(Kàn! Xīn shū!) (= Look! A new book.) / (nghe làm quen) 我喜欢听故事。(Wǒ xǐhuan tīng gùshi.) (= I like stories.) / 我喜欢唱歌。(Wǒ xǐhuan chànggē.) (= I like songs.) / 我们一起唱歌吧！(Wǒmen yìqǐ chànggē ba!) (= Let's sing together!) / (nghe làm quen) 听一听，指一指：故事！(Tīng yi tīng, zhǐ yi zhǐ: gùshi!) (= Listen and point. Point to the story.)",
+      "truyen": "上课了 (Lesson Time) — Lan老师：小朋友，上课了！看！新书！Leo：故事！我喜欢听故事。Anna：我喜欢唱歌。Lan老师：唱歌，听故事！我们一起唱歌吧！小朋友：好！(Shàngkè le — Lan lǎoshī: Xiǎo péngyou, shàngkè le! Kàn! Xīn shū! Leo: Gùshi! Wǒ xǐhuan tīng gùshi. Anna: Wǒ xǐhuan chànggē. Lan lǎoshī: Chànggē, tīng gùshi! Wǒmen yìqǐ chànggē ba! Xiǎo péngyou: Hǎo!)",
+      "video": "Tìm YouTube: \"故事时间 儿歌 幼儿\""
+     }
+    },
+    {
+     "ngay": 8,
+     "label": "Ngày 8. Unit 1 · Vẫy tay tạm biệt, hẹn gặp ngày mai",
+     "en": {
+      "tu": "Mới: wave, write, video | Ôn: goodbye, see you, tomorrow, name, lesson",
+      "cum": "wave goodbye / write your name / a new video / see you tomorrow",
+      "cau": "Wave goodbye! / Write your name, Bông. / Look! A video. / Goodbye, Mrs Lan! See you tomorrow! / Listen and write your name. OK, start!",
+      "truyen": "Goodbye, Mrs Lan! — Mrs Lan: Write your name, kids. Bông: B-Ô-N-G. Mrs Lan: Good, Bông! Look! A video. Kids: A song! Mrs Lan: Goodbye, class! See you tomorrow! The kids wave goodbye. Kids: Goodbye, Mrs Lan!",
+      "video": "Tìm YouTube: \"goodbye song for kids wave goodbye\""
+     },
+     "zh": {
+      "tu": "Mới: 老师再见 lǎoshī zàijiàn (= goodbye, teacher), 见 jiàn (= see), 明天见 míngtiān jiàn (= see you tomorrow) | Ôn: 明天 míngtiān, 再见 zàijiàn (= goodbye), 名字 míngzi, 写 xiě, 挥挥手 huīhui shǒu | Nghe làm quen: 视频 shìpín (= video, tranh)",
+      "cum": "老师再见 lǎoshī zàijiàn / 明天见 míngtiān jiàn / 小朋友们再见 xiǎo péngyoumen zàijiàn / 挥挥手 huīhui shǒu / 写名字 xiě míngzi",
+      "cau": "[Cầu nối] Goodbye, Mrs Lan! See you tomorrow! ↔ Lan老师再见！明天见！(Lan lǎoshī zàijiàn! Míngtiān jiàn!) [giống: tạm biệt rồi hẹn gặp · khác: Mrs đứng trước tên, 老师 đứng sau tên (Lan老师); tomorrow cuối câu ↔ 明天 đầu câu] / [Ngữ pháp: danh xưng + 再见] 老师再见！(Lǎoshī zàijiàn!) / 明天见！(Míngtiān jiàn!) / 再见，Leo！明天见！(Zàijiàn, Leo! Míngtiān jiàn!) / 小朋友们再见！(Xiǎo péngyoumen zàijiàn!) / 挥挥手，再见！(Huīhui shǒu, zàijiàn!) (= Wave goodbye!) / Bông，写名字。(Bông, xiě míngzi.) (= Write your name, Bông.) / (nghe làm quen) 看！视频！(Kàn! Shìpín!) (= Look! A video.) / [Chuyển ngữ] [nghe rối Leo nói 1 câu tiếng Anh, nói lại ý đó bằng tiếng Trung cho rối Xiaomei, ghi âm trên Trang luyện nói] Leo: Wave goodbye! → 挥挥手，再见！(Huīhui shǒu, zàijiàn!)",
+      "truyen": "Lan老师再见 (Goodbye, Mrs Lan!) — Lan老师：小朋友，写名字。Bông：B-Ô-N-G。Lan老师：好，Bông！看！视频！小朋友：唱歌！Lan老师：小朋友们，再见！明天见！小朋友挥挥手：Lan老师再见！(Lan lǎoshī zàijiàn — Lan lǎoshī: Xiǎo péngyou, xiě míngzi. Bông: B-Ô-N-G. Lan lǎoshī: Hǎo, Bông! Kàn! Shìpín! Xiǎo péngyou: Chànggē! Lan lǎoshī: Xiǎo péngyoumen, zàijiàn! Míngtiān jiàn! Xiǎo péngyou huīhui shǒu: Lan lǎoshī zàijiàn!)",
+      "video": "Tìm YouTube: \"再见歌 儿歌 明天见\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: lesson, song, story, wave, write, video | Ôn: goodbye, see you, tomorrow, class, Mrs | Nghe hiểu: together (Let's sing together!)",
+     "slide": "[Lời cô] Vào bài: \"Chào buổi sáng cả lớp! Good morning, class! 小朋友们好！\" · Khen: \"Giỏi lắm! Well done! 真棒！\" · Nhắc: \"Ngồi xuống nào! Sit down, please. 请坐。\" · Lệnh: \"Nhìn nào! Nghe nào! Look! Listen! 看！听！\" 1) Nghe chọn tranh (4 câu): It's lesson time! / I like the song. / Look! A new story. / Look! A video. 2) Nghe và làm động tác (4 lệnh): Wave goodbye! / Write your name! / Touch your head! / Wave, wave, wave! 3) Ghép lời nói với lúc trong buổi học: đầu buổi → Good morning, Mrs Lan!; cuối buổi → Goodbye! See you tomorrow! 4) Lệnh đề – cô làm mẫu câu ví dụ trước: Look at the example. Listen and point: Wave goodbye! / Write your name! OK, start! 5) [Chuyển ngữ] Rối Leo nói 1 câu tiếng Anh, con nói lại ý đó bằng tiếng Trung cho rối Xiaomei (chỉ hiểu tiếng Trung): \"Look! A new book.\" → \"看！新书！(Kàn! Xīn shū!)\"; từng con nói, cả lớp vỗ tay khi Xiaomei hiểu. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"Let's wave goodbye together. Goodbye, Mrs Lan! See you tomorrow!\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 我们一起挥挥手。Lan老师再见！明天见！ (Wǒmen yìqǐ huīhui shǒu. Lan lǎoshī zàijiàn! Míngtiān jiàn!)",
+     "truyen": "Lesson Time — Mrs Lan: Good morning, kids! It's lesson time. Look! A new book. Leo: A story! I like stories. Anna: I like songs. Mrs Lan: A song and a story! Write your name, kids. Bông: B-Ô-N-G. Mrs Lan: Good! Goodbye, class! See you tomorrow! The kids wave goodbye.",
+     "baihat": "Wave Goodbye Song (giai điệu London Bridge Is Falling Down) — Goodbye, goodbye, Mrs Lan, / Mrs Lan, Mrs Lan, / Wave goodbye, wave goodbye, / See you tomorrow!"
+    },
+    "zh": {
+     "flash": "Mới: 一起 yìqǐ, 我们 wǒmen, 老师再见 lǎoshī zàijiàn, 见 jiàn, 明天见 míngtiān jiàn | Ôn: 再见 zàijiàn, 明天 míngtiān, 唱歌 chànggē, 挥挥手 huīhui shǒu, 写 xiě | Nghe làm quen: 上课 shàngkè, 故事 gùshi, 视频 shìpín",
+     "slide": "1) Nghe chọn tranh (4 câu, cùng 4 tranh với phần tiếng Anh): (nghe làm quen) 上课了！(Shàngkè le!) / 我喜欢唱歌。(Wǒ xǐhuan chànggē.) / 看！新故事！(Kàn! Xīn gùshi!) / (nghe làm quen) 看！视频！(Kàn! Shìpín!) 2) Nghe và làm động tác (4 lệnh): 挥挥手！(Huīhui shǒu!) / 写名字！(Xiě míngzi!) / 摸摸头！(Mōmo tóu!) / 挥挥手，再见！(Huīhui shǒu, zàijiàn!) 3) Ghép lời nói với lúc trong buổi học (cùng tranh với phần tiếng Anh): đầu buổi → Lan老师，早上好！(Lan lǎoshī, zǎoshang hǎo!); cuối buổi → 再见！明天见！(Zàijiàn! Míngtiān jiàn!) 4) Lệnh đề – cô làm mẫu câu ví dụ trước (nghe làm quen): 看例子。听一听，指一指：挥挥手，再见！/ 写名字！开始！(Kàn lìzi. Tīng yi tīng, zhǐ yi zhǐ: Huīhui shǒu, zàijiàn! / Xiě míngzi! Kāishǐ!) 5) [Cầu nối Anh – Trung] Cùng thẻ bạn vẫy tay: rối Leo nói tiếng Anh \"Goodbye! See you tomorrow!\", rối Xiaomei nói tiếng Trung \"再见！明天见！(Zàijiàn! Míngtiān jiàn!)\"; con tìm điểm giống và khác. Cô chỉ: giống: tạm biệt rồi hẹn gặp · khác: tomorrow cuối câu ↔ 明天 đầu câu.",
+     "truyen": "上课了 (Lesson Time) — Lan老师：小朋友们，早上好！上课了！看！新书！Leo：故事！我喜欢听故事。Anna：我喜欢唱歌。Lan老师：唱歌，听故事！小朋友，写名字。Bông：B-Ô-N-G。Lan老师：好！小朋友们，再见！明天见！小朋友挥挥手：老师再见！(Shàngkè le — Lan lǎoshī: Xiǎo péngyoumen, zǎoshang hǎo! Shàngkè le! Kàn! Xīn shū! Leo: Gùshi! Wǒ xǐhuan tīng gùshi. Anna: Wǒ xǐhuan chànggē. Lan lǎoshī: Chànggē, tīng gùshi! Xiǎo péngyou, xiě míngzi. Bông: B-Ô-N-G. Lan lǎoshī: Hǎo! Xiǎo péngyoumen, zàijiàn! Míngtiān jiàn! Xiǎo péngyou huīhui shǒu: Lǎoshī zàijiàn!)",
+     "baihat": "再见歌 (giai điệu London Bridge Is Falling Down, cùng bài Wave Goodbye Song) — 再见再见Lan老师，/ Lan老师，Lan老师，/ 挥挥手呀挥挥手，/ 明天再见！(Zàijiàn zàijiàn Lan lǎoshī, / Lan lǎoshī, Lan lǎoshī, / huīhui shǒu ya huīhui shǒu, / míngtiān zàijiàn!)"
+    }
+   }
+  },
+  {
+   "buoi": 5,
+   "unit": 1,
+   "label_buoi": "Buổi dạy 5. Unit 1 · Greeting – Chào cô, chào bạn (xin lỗi bạn, ôn không tranh)",
+   "web": [
+    {
+     "ngay": 9,
+     "label": "Ngày 9. Unit 1 · Xin lỗi bạn: I'm sorry!",
+     "en": {
+      "tu": "Mới: sorry | Ôn: kitten, puppy, friend, play",
+      "cum": "I'm sorry / sorry, Leo / throw the toy / tick the puppy",
+      "cau": "Sorry, Leo! / I'm sorry, Mrs Lan. / Tick the puppy. Tick the kitten. / Do you understand? – Yes! / Throw the toy, Anna! / Look and listen. Tick the kitten. Cross the puppy.",
+      "truyen": "Sorry, Leo! — Bông and Leo play in class. Bông throws the toy puppy. Oh no! The toy is on Leo's head! Bông: I'm sorry, Leo! Leo: Ha ha! I understand. Good friends!",
+      "video": "Tìm YouTube: \"sorry song for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 对不起 duìbuqǐ (= sorry), 好朋友 hǎo péngyou (= good friends) | Ôn: 小狗 xiǎo gǒu, 小猫 xiǎo māo, 玩 wán, 朋友 péngyou (= friend) | Nghe làm quen: 扔 rēng (= throw, tranh), 玩具 wánjù (= toy, tranh), 明白 míngbai (= understand, tranh)",
+      "cum": "对不起 duìbuqǐ / 好朋友 hǎo péngyou / (nghe làm quen) 扔玩具 rēng wánjù",
+      "cau": "[Cầu nối] Sorry, Leo! ↔ 对不起，Leo！(Duìbuqǐ, Leo!) [giống: xin lỗi + tên bạn, cùng thứ tự; good friends ↔ 好朋友: good ↔ 好 cùng đứng trước · khác: friends có -s, 朋友 không đổi] / 对不起，Leo！(Duìbuqǐ, Leo!) / 老师，对不起！(Lǎoshī, duìbuqǐ!) / 我们是好朋友。(Wǒmen shì hǎo péngyou.) / 看一看，选一选：小狗还是小猫？(Kàn yi kàn, xuǎn yi xuǎn: xiǎo gǒu háishi xiǎo māo?) (= Tick the puppy. Tick the kitten.) / 看一看，听一听：小猫 ✓，小狗 ✗。(Kàn yi kàn, tīng yi tīng: xiǎo māo ✓, xiǎo gǒu ✗.) (= Look and listen. Tick the kitten. Cross the puppy.) / [Chuyển ngữ] [nghe rối Leo nói 1 câu tiếng Anh, nói lại ý đó bằng tiếng Trung cho rối Xiaomei, ghi âm trên Trang luyện nói] Leo: Sorry, Anna! → 对不起，Anna！(Duìbuqǐ, Anna!)",
+      "truyen": "对不起 (Sorry, Leo!) — Bông和Leo在教室玩。Bông扔玩具小狗。哎呀！玩具小狗在Leo的头上！Bông：对不起，Leo！Leo：哈哈！我明白了。我们是好朋友！(Duìbuqǐ — Bông hé Leo zài jiàoshì wán. Bông rēng wánjù xiǎo gǒu. Āiyā! Wánjù xiǎo gǒu zài Leo de tóu shang! Bông: Duìbuqǐ, Leo! Leo: Hāha! Wǒ míngbai le. Wǒmen shì hǎo péngyou!)",
+      "video": "Tìm YouTube: \"对不起 儿歌 好朋友\""
+     }
+    },
+    {
+     "ngay": 10,
+     "label": "Ngày 10. Unit 1 · Ôn không tranh: nghe câu, chọn người nói · Luyện nói YCT口试 听后重复",
+     "en": {
+      "tu": "Ôn (không tranh): good, morning, class, Mrs, kid, man/men, lesson, song, story, wave, write, video, sorry",
+      "cum": "good morning / hello, kids / lesson time / wave goodbye / write your name / I'm sorry",
+      "cau": "Good morning, Mrs Lan! / Hello, kids! It's lesson time. / A song and a story! / I'm sorry, Anna. – I understand. / Wave goodbye! See you tomorrow!",
+      "truyen": "A Day in Class — Mrs Lan: Good morning, class! Kids: Good morning, Mrs Lan! Mrs Lan: It's lesson time. A song and a story! Leo throws the toy kitten. Leo: Sorry, Mrs Lan! Mrs Lan: I understand, Leo. Goodbye, kids! See you tomorrow! The kids wave goodbye.",
+      "video": "Tìm YouTube: \"good morning song classroom for kids\""
+     },
+     "zh": {
+      "tu": "Ôn (không tranh): 早上好 zǎoshang hǎo (= good morning), 你们好 nǐmen hǎo, 小朋友 xiǎo péngyou, 上课 shàngkè, 唱歌 chànggē, 故事 gùshi, 写 xiě, 挥挥手 huīhui shǒu, 视频 shìpín, 老师再见 lǎoshī zàijiàn, 明天见 míngtiān jiàn, 对不起 duìbuqǐ",
+      "cum": "早上好 zǎoshang hǎo / 你们好 nǐmen hǎo / 挥挥手 huīhui shǒu / 写名字 xiě míngzi / 明天见 míngtiān jiàn / 对不起 duìbuqǐ",
+      "cau": "[Cầu nối] Good morning, Mrs Lan! ↔ Lan老师，早上好！(Lan lǎoshī, zǎoshang hǎo!) [giống: cùng chào cô buổi sáng, morning ↔ 早上 · khác: Mrs Lan ↔ Lan老师: danh xưng tiếng Anh trước tên, tiếng Trung sau tên; tiếng Trung gọi người trước rồi mới chào] / Lan老师，早上好！(Lan lǎoshī, zǎoshang hǎo!) / 小朋友，你们好！上课了！(Xiǎo péngyou, nǐmen hǎo! Shàngkè le!) (= Hello, kids! It's lesson time.) / 唱歌，听故事！(Chànggē, tīng gùshi!) / 对不起，Anna！(Duìbuqǐ, Anna!) — 我明白了！(Wǒ míngbai le!) / 老师再见！明天见！(Lǎoshī zàijiàn! Míngtiān jiàn!) / [YCT口试（初级）第一部分 听后重复 (mẫu): con nghe từng câu, nói lại 1 lần, ghi âm trên Trang luyện nói, ~5 phút] 听，说：老师，早上好！(Lǎoshī, zǎoshang hǎo!) / 你们好！(Nǐmen hǎo!) / 对不起，Leo！(Duìbuqǐ, Leo!) / 挥挥手，再见！(Huīhui shǒu, zàijiàn!) / 老师再见！明天见！(Lǎoshī zàijiàn! Míngtiān jiàn!)",
+      "truyen": "上课的一天 (A Day in Class) — Lan老师：小朋友们，早上好！小朋友：Lan老师，早上好！Lan老师：上课了！唱歌，听故事！Leo扔玩具小猫。Leo：老师，对不起！Lan老师：我明白了，Leo。小朋友们，再见！明天见！小朋友挥挥手：老师再见！(Shàngkè de yì tiān — Lan lǎoshī: Xiǎo péngyoumen, zǎoshang hǎo! Xiǎo péngyou: Lan lǎoshī, zǎoshang hǎo! Lan lǎoshī: Shàngkè le! Chànggē, tīng gùshi! Leo rēng wánjù xiǎo māo. Leo: Lǎoshī, duìbuqǐ! Lan lǎoshī: Wǒ míngbai le, Leo. Xiǎo péngyoumen, zàijiàn! Míngtiān jiàn! Xiǎo péngyou huīhui shǒu: Lǎoshī zàijiàn!)",
+      "video": "Tìm YouTube: \"您好 你好 你们好 儿歌\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: sorry | Nghe hiểu mở rộng: toy, throw, tick, understand | Ôn: good morning, Mrs, kid, lesson, song, story, wave, write, kitten, puppy, good friends",
+     "slide": "[Lời cô] Vào bài: \"Chào buổi sáng cả lớp! Good morning, class! 小朋友们好！\" · Khen: \"Well done! 真棒！\" · Nhắc: \"Sit down, please. 请坐。\" · Lệnh: \"Nhìn nào! Nghe nào! Look! Listen! 看！听！\" · Câu mới buổi này (chuyển ý): \"Mình hát nhé! Let's sing! 我们一起唱吧！\" 1) Đóng vai xin lỗi theo tranh (4 tình huống): I'm sorry, Leo. / Sorry, Mrs Lan. / Sorry, Anna. / I'm sorry, Daddy. — bạn đáp: Ha ha! I understand. 2) Nghe – đánh dấu ✓ vào tranh đúng (4 câu): Tick the toy. / Tick the puppy. / Tick the kitten. / Tick the video. 3) Ôn không tranh: cô đọc câu, con giơ thẻ người nói (cô hay bạn): Good morning, class! / Good morning, Mrs Lan! / Hello, kids! / Goodbye, Mrs Lan! 4) Lệnh đề: Look and listen. Tick ✓ or cross ✗ (4 tranh): Good morning! [tranh buổi sáng ✓] / Goodbye! [tranh chào buổi sáng ✗] / Hello, kids! [tranh cô chào cả lớp ✓] / Sorry! [tranh hai bạn cười chào nhau ✗] 5) [Chuyển ngữ] Rối Leo nói 1 câu tiếng Anh, con nói lại ý đó bằng tiếng Trung cho rối Xiaomei (chỉ hiểu tiếng Trung): \"I'm sorry, Anna.\" → \"对不起，Anna！(Duìbuqǐ, Anna!)\"; từng con nói, cả lớp vỗ tay khi Xiaomei hiểu. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"I'm really sorry, Anna. You are my good friend.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 对不起，Anna！你是我的好朋友。 (Duìbuqǐ, Anna! Nǐ shì wǒ de hǎo péngyou.)",
+     "truyen": "Sorry, Leo! — It's lesson time. Bông and Leo play with a toy puppy. Bông throws the toy puppy. Oh no! The toy is on Leo's head! Bông: I'm sorry, Leo! Leo: Ha ha! I understand. Mrs Lan: Good kids! Good friends!",
+     "baihat": "Sorry Song (giai điệu Mary Had a Little Lamb) — I am sorry, sorry, Leo, / sorry, Leo, sorry, Leo, / I am sorry, sorry, Leo. / Ha ha! Good friends!"
+    },
+    "zh": {
+     "flash": "Mới: 对不起 duìbuqǐ, 好朋友 hǎo péngyou | Nghe làm quen: 玩具 wánjù, 扔 rēng, 明白 míngbai | Ôn: 早上好 zǎoshang hǎo, Lan老师 Lan lǎoshī, 小朋友 xiǎo péngyou, 上课 shàngkè, 唱歌 chànggē, 故事 gùshi, 挥挥手 huīhui shǒu, 写 xiě, 小猫 xiǎo māo, 小狗 xiǎo gǒu",
+     "slide": "1) Đóng vai xin lỗi (4 tình huống): 对不起，Leo！/ 老师，对不起！/ 对不起，Anna！/ 爸爸，对不起！(Duìbuqǐ, Leo! / Lǎoshī, duìbuqǐ! / Duìbuqǐ, Anna! / Bàba, duìbuqǐ!) — bạn đáp 哈哈！我明白了！(Hāha! Wǒ míngbai le!) 2) Nghe – đánh dấu ✓ vào tranh đúng (4 câu, cùng tranh với phần tiếng Anh): (nghe làm quen) 玩具 wánjù / 小狗 xiǎo gǒu / 小猫 xiǎo māo / 视频 shìpín 3) Ôn không tranh: cô đọc câu, con giơ thẻ người nói (cô hay bạn): 小朋友们，早上好！/ Lan老师，早上好！/ 小朋友，你们好！/ Lan老师再见！ 4) Lệnh đề: 看一看，听一听，打✓还是打✗？(Kàn yi kàn, tīng yi tīng, dǎ gōu háishi dǎ chā?) (4 tranh): 早上好！[tranh buổi sáng ✓] / 再见！[tranh chào buổi sáng ✗] / 你们好！[tranh cô chào cả lớp ✓] / 对不起！[tranh hai bạn cười chào nhau ✗] 5) [Cầu nối Anh – Trung] Cùng thẻ hai bạn: rối Leo nói tiếng Anh \"Sorry, Leo! Good friends!\", rối Xiaomei nói tiếng Trung \"对不起，Leo！好朋友！(Duìbuqǐ, Leo! Hǎo péngyou!)\"; con tìm điểm giống và khác. Cô chỉ: giống: good ↔ 好 đứng trước friends ↔ 朋友 · khác: friends có -s, 朋友 không đổi.",
+     "truyen": "对不起 (Sorry, Leo!) — 上课了。Bông和Leo玩玩具小狗。Bông扔玩具小狗。哎呀！玩具小狗在Leo的头上！Bông：对不起，Leo！Leo：哈哈！我明白了。Lan老师：好孩子！好朋友！(Duìbuqǐ — Shàngkè le. Bông hé Leo wán wánjù xiǎo gǒu. Bông rēng wánjù xiǎo gǒu. Āiyā! Wánjù xiǎo gǒu zài Leo de tóu shang! Bông: Duìbuqǐ, Leo! Leo: Hāha! Wǒ míngbai le. Lan lǎoshī: Hǎo háizi! Hǎo péngyou!)",
+     "baihat": "对不起歌 (giai điệu Mary Had a Little Lamb, cùng bài Sorry Song) — 对不起呀对不起Leo，/ 对不起Leo，对不起Leo，/ 对不起呀对不起Leo。/ 哈哈！好朋友！(Duìbuqǐ ya duìbuqǐ Leo, / duìbuqǐ Leo, duìbuqǐ Leo, / duìbuqǐ ya duìbuqǐ Leo. / Hāha! Hǎo péngyou!)"
+    }
+   }
+  },
+  {
+   "buoi": 6,
+   "unit": 1,
+   "label_buoi": "Buổi dạy 6. Unit 1 · Greeting – Chào cô, chào bạn (kể truyện, Phiên dịch nhí, kiểm tra cuối unit) · Luyện đề YCT1 Đọc phần 1",
+   "web": [
+    {
+     "ngay": 11,
+     "label": "Ngày 11. Unit 1 · Truyện của unit + chuyển ngữ: ghép câu Anh – Trung cùng nghĩa · Luyện đề YCT1 Nghe phần 1",
+     "en": {
+      "tu": "Ôn: good, morning, class, Mrs, kid, lesson, song, story, video, sorry, wave | Ôn khóa trước: teacher, friend, everyone, tomorrow",
+      "cum": "good morning, Mrs Lan / hello, everyone / a song and a story / see you tomorrow",
+      "cau": "Good morning, Mrs Lan! / Hello, everyone! / Good morning, class! / Goodbye, teacher! / See you tomorrow!",
+      "truyen": "Good Morning, Mrs Lan! — Morning. Bông, Leo and Anna go to class. Kids: Good morning, Mrs Lan! Mrs Lan: Good morning, class! Hello, everyone! It's lesson time. A song, a story and a video! Leo: I'm sorry, Mrs Lan. My book is at home. Mrs Lan: I understand. Look at Bông's book. Goodbye, kids! See you tomorrow! The kids wave goodbye.",
+      "video": "Hello Song for Kids – Greeting Song – https://www.youtube.com/watch?v=gghDRJVxFxU"
+     },
+     "zh": {
+      "tu": "Ôn: 早上好 zǎoshang hǎo (= good morning), 你们好 nǐmen hǎo, 大家好 dàjiā hǎo, 老师再见 lǎoshī zàijiàn, 明天见 míngtiān jiàn, 对不起 duìbuqǐ | Ôn khóa trước: 老师 lǎoshī, 朋友 péngyou, 大家 dàjiā, 明天 míngtiān",
+      "cum": "Lan老师，早上好 Lan lǎoshī, zǎoshang hǎo / 大家好 dàjiā hǎo / 唱歌、听故事 chànggē, tīng gùshi / 明天见 míngtiān jiàn",
+      "cau": "[Cầu nối] Hello, everyone! ↔ 大家好！(Dàjiā hǎo!) [giống: cùng chào mọi người · khác: Hello đứng đầu ↔ 好 đứng cuối, everyone ↔ 大家 đứng trước] / Lan老师，早上好！(Lan lǎoshī, zǎoshang hǎo!) / 大家好！(Dàjiā hǎo!) / 小朋友们，早上好！(Xiǎo péngyoumen, zǎoshang hǎo!) (= Good morning, class!) / 老师再见！(Lǎoshī zàijiàn!) / 明天见！(Míngtiān jiàn!) / [YCT1 Nghe phần 1 (mẫu): nghe từ, nhìn tranh chọn ✓ đúng / ✗ sai, 5 câu, ~10 phút] 听一听，看一看，对还是错？(Tīng yi tīng, kàn yi kàn, duì háishi cuò?) 1. 老师 lǎoshī [tranh cô giáo → ✓] 2. 书 shū [tranh con mèo → ✗] 3. 朋友 péngyou [tranh hai bạn nắm tay → ✓] 4. 小朋友 xiǎo péngyou [tranh các bạn nhỏ → ✓] 5. 爸爸 bàba [tranh em bé → ✗]",
+      "truyen": "Lan老师，早上好！(Good Morning, Mrs Lan!) — 早上，Bông、Leo和Anna来上课。Bông、Leo和Anna：Lan老师，早上好！Lan老师：小朋友们，早上好！大家好！上课了！唱歌，听故事，看视频！Leo：Lan老师，对不起，我的书在家。Lan老师：我明白了。Leo，看看Bông的书吧。小朋友们，再见！明天见！小朋友挥挥手：老师再见！(Lan lǎoshī, zǎoshang hǎo! — Zǎoshang, Bông, Leo hé Anna lái shàngkè. Bông, Leo hé Anna: Lan lǎoshī, zǎoshang hǎo! Lan lǎoshī: Xiǎo péngyoumen, zǎoshang hǎo! Dàjiā hǎo! Shàngkè le! Chànggē, tīng gùshi, kàn shìpín! Leo: Lan lǎoshī, duìbuqǐ, wǒ de shū zài jiā. Lan lǎoshī: Wǒ míngbai le. Leo, kànkan Bông de shū ba. Xiǎo péngyoumen, zàijiàn! Míngtiān jiàn! Xiǎo péngyou huīhui shǒu: Lǎoshī zàijiàn!)",
+      "video": "Hello Song 你好歌 – Little Fox Chinese – https://www.youtube.com/watch?v=m_rDIzj6DRE"
+     }
+    },
+    {
+     "ngay": 12,
+     "label": "Ngày 12. Unit 1 · Phiên dịch nhí: nghe Leo nói tiếng Anh, nói lại cho Xiaomei bằng tiếng Trung",
+     "en": {
+      "tu": "Ôn: good morning, everyone, Mrs, kid, sorry, wave, goodbye, see you, tomorrow",
+      "cum": "good morning, everyone / goodbye, teacher / see you tomorrow / I'm sorry",
+      "cau": "Leo: Good morning, everyone! / Leo: Hello, Mrs Lan! / Leo: I'm sorry! / Leo: Goodbye, teacher! / Leo: See you tomorrow!",
+      "truyen": "New Friend Xiaomei — Look! A new kid in class. She is Xiaomei. Mrs Lan: Good morning, kids! This is Xiaomei. Kids: Hello, Xiaomei! Leo: Good morning, Xiaomei! Xiaomei: Hello, everyone! Goodbye time. Xiaomei: Goodbye! See you tomorrow!",
+      "video": "Greeting: Good morning, Goodbye – https://www.youtube.com/watch?v=Fw0rdSHzWFY"
+     },
+     "zh": {
+      "tu": "Ôn: 早上好 zǎoshang hǎo (= good morning), 大家好 dàjiā hǎo, 老师好 lǎoshī hǎo (= hello, teacher), 对不起 duìbuqǐ, 老师再见 lǎoshī zàijiàn, 明天见 míngtiān jiàn",
+      "cum": "大家早上好 dàjiā zǎoshang hǎo / Lan老师好 Lan lǎoshī hǎo / 老师再见 lǎoshī zàijiàn / 明天见 míngtiān jiàn / 对不起 duìbuqǐ",
+      "cau": "[Cầu nối] See you tomorrow! ↔ 明天见！(Míngtiān jiàn!) [giống: cùng hẹn ngày mai · khác: tiếng Anh 3 từ, tiếng Trung 2 phần; tomorrow ↔ 明天 lên đầu] / 大家早上好！(Dàjiā zǎoshang hǎo!) (= Good morning, everyone!) / Lan老师好！(Lan lǎoshī hǎo!) (= Hello, Mrs Lan!) / 对不起！(Duìbuqǐ!) / 老师再见！(Lǎoshī zàijiàn!) / 明天见！(Míngtiān jiàn!)",
+      "truyen": "新朋友Xiaomei (New Friend Xiaomei) — 看！新朋友！她是Xiaomei。Lan老师：小朋友们，早上好！这是Xiaomei。小朋友：Xiaomei，你好！Leo：Xiaomei，早上好！Xiaomei：大家好！放学了。Xiaomei：再见！明天见！(Xīn péngyou Xiaomei — Kàn! Xīn péngyou! Tā shì Xiaomei. Lan lǎoshī: Xiǎo péngyoumen, zǎoshang hǎo! Zhè shì Xiaomei. Xiǎo péngyou: Xiaomei, nǐ hǎo! Leo: Xiaomei, zǎoshang hǎo! Xiaomei: Dàjiā hǎo! Fàngxué le. Xiaomei: Zàijiàn! Míngtiān jiàn!)",
+      "video": "Mrs. Kelly's Class 1: 你好！– Little Fox Chinese – https://www.youtube.com/watch?v=ePzxGxOj7us"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn cả unit: good, morning, class, Mrs, kid, man/men, lesson, song, story, wave, write, video, sorry | Ôn khóa trước: hello, goodbye, teacher, friend, everyone, tomorrow",
+     "slide": "[Lời cô] Vào bài: \"Chào buổi sáng cả lớp! Good morning, class! 小朋友们好！\" · Khen: \"Well done! 真棒！\" · Nhắc: \"Sit down, please. 请坐。\" · Lệnh: \"Nhìn nào! Nghe nào! Look! Listen! 看！听！\" · Chuyển ý: \"Mình hát nhé! Let's sing! 我们一起唱吧！\" 1) [Chuyển ngữ] Phiên dịch nhí (nói lại 1 câu) theo cặp: bạn A làm Leo nói tiếng Anh (Good morning, everyone! / Goodbye, teacher! / See you tomorrow! / I'm sorry!), bạn B nói lại bằng tiếng Trung cho Xiaomei. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"Good morning, everyone! We are good friends.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 大家早上好！我们是好朋友。 (Dàjiā zǎoshang hǎo! Wǒmen shì hǎo péngyou.) 2) Kiểm tra cuối unit – nghe chọn tranh (5 câu): Good morning, class! / Hello, kids! / Write your name. / Wave goodbye! / I'm sorry, Leo. 3) Kịch ngắn 4 vai (Mrs Lan, Bông, Leo, Anna) diễn truyện Good Morning, Mrs Lan!",
+     "truyen": "Good Morning, Mrs Lan! — Morning. Bông, Leo and Anna go to class. Kids: Good morning, Mrs Lan! Mrs Lan: Good morning, class! Hello, everyone! It's lesson time. A song, a story and a video! Leo: I'm sorry, Mrs Lan. My book is at home. Mrs Lan: I understand. Look at Bông's book. Write your name, kids. Goodbye, kids! See you tomorrow! The kids wave goodbye. Kids: Goodbye, Mrs Lan!",
+     "baihat": "Wave Goodbye Song (giai điệu Row, Row, Row Your Boat) — Wave, wave, wave goodbye, / Goodbye, Mrs Lan! / See you, see you, see you, kids, / See you tomorrow!"
+    },
+    "zh": {
+     "flash": "Ôn cả unit: 早上好 zǎoshang hǎo, 您 nín, 您好 nín hǎo, 你们好 nǐmen hǎo, 小朋友 xiǎo péngyou, 男人 nánrén (nghe làm quen), 上课 shàngkè, 唱歌 chànggē, 故事 gùshi, 挥挥手 huīhui shǒu, 写 xiě, 视频 shìpín, 老师再见 lǎoshī zàijiàn, 明天见 míngtiān jiàn, 对不起 duìbuqǐ | Ôn khóa trước: 老师 lǎoshī, 朋友 péngyou, 大家 dàjiā, 明天 míngtiān",
+     "slide": "1) Phiên dịch nhí: nghe câu tiếng Anh của Leo (Good morning, everyone! / Goodbye, teacher! / See you tomorrow! / I'm sorry!), nói lại cho Xiaomei: 大家早上好！(Dàjiā zǎoshang hǎo!) / 老师再见！(Lǎoshī zàijiàn!) / 明天见！(Míngtiān jiàn!) / 对不起！(Duìbuqǐ!) 2) Kiểm tra cuối unit – nghe chọn tranh (5 câu, cùng 5 tranh với phần tiếng Anh): 小朋友们，早上好！/ 小朋友，你们好！/ 写名字。/ 挥挥手，再见！/ 对不起，Leo！ 3) Kịch ngắn 4 vai diễn truyện \"Lan老师，早上好！\". 4) YCT1 Đọc phần 1 (mẫu): con nhìn tranh, đọc từ có pinyin, chọn ✓ / ✗ — 读一读，看一看，对还是错？(Dú yi dú, kàn yi kàn, duì háishi cuò?) Câu ví dụ: 老师 lǎoshī [tranh cô giáo ✓]. 1. 书 shū [quyển sách ✓] 2. 小朋友 xiǎo péngyou [tranh một ông cụ ✗] 3. 妈妈 māma [mẹ ✓] 4. 朋友 péngyou [ông ✗] 5. 再见 zàijiàn [bạn vẫy tay tạm biệt ✓] 5) [Cầu nối Anh – Trung] Cùng tranh truyện của unit: rối Leo nói tiếng Anh \"Hello, everyone! Hello, kids!\", rối Xiaomei nói tiếng Trung \"大家好！小朋友，你们好！(Dàjiā hǎo! Xiǎo péngyou, nǐmen hǎo!)\"; con tìm điểm giống và khác. Cô chỉ: giống: cùng chào nhiều người · khác: kids thêm -s ↔ 你 thêm 们; Hello đầu câu ↔ 好 cuối câu.",
+     "truyen": "Lan老师，早上好！(Good Morning, Mrs Lan!) — 早上，Bông、Leo和Anna来上课。Bông、Leo和Anna：Lan老师，早上好！Lan老师：小朋友们，早上好！大家好！上课了！唱歌，听故事，看视频！Leo：Lan老师，对不起，我的书在家。Lan老师：我明白了。Leo，看看Bông的书吧。小朋友，写名字。小朋友们，再见！明天见！小朋友挥挥手：老师再见！(Lan lǎoshī, zǎoshang hǎo! — Zǎoshang, Bông, Leo hé Anna lái shàngkè. Bông, Leo hé Anna: Lan lǎoshī, zǎoshang hǎo! Lan lǎoshī: Xiǎo péngyoumen, zǎoshang hǎo! Dàjiā hǎo! Shàngkè le! Chànggē, tīng gùshi, kàn shìpín! Leo: Lan lǎoshī, duìbuqǐ, wǒ de shū zài jiā. Lan lǎoshī: Wǒ míngbai le. Leo, kànkan Bông de shū ba. Xiǎo péngyou, xiě míngzi. Xiǎo péngyoumen, zàijiàn! Míngtiān jiàn! Xiǎo péngyou huīhui shǒu: Lǎoshī zàijiàn!)",
+     "baihat": "挥挥手 (giai điệu Row, Row, Row Your Boat, cùng bài Wave Goodbye Song) — 挥挥挥挥手，/ Lan老师再见！/ 明天见呀小朋友，/ 我们明天见！(Huī huī huīhui shǒu, / Lan lǎoshī zàijiàn! / Míngtiān jiàn ya xiǎo péngyou, / wǒmen míngtiān jiàn!)"
+    }
+   }
+  },
+  {
+   "buoi": 7,
+   "unit": 2,
+   "label_buoi": "Buổi dạy 7. Unit 2 · Name and age – Tên và tuổi (giới thiệu tên, tuổi, Nice to meet you)",
+   "web": [
+    {
+     "ngay": 13,
+     "label": "Ngày 13. Unit 2 · Rất vui được gặp bạn: Nice to meet you!",
+     "en": {
+      "tu": "Mới: nice, year | Ôn: name, what, hello, old",
+      "cum": "nice to meet you / five years old / six years old",
+      "cau": "Hello, I'm Leo. / Nice to meet you! / How old are you? – I'm five years old. / I'm six years old. / [Lệnh lớp học] Here is a question: What's your name? Listen and answer: My name is Leo. / [Chuyển ngữ] [nghe rối Xiaomei nói 1 câu tiếng Trung, nói lại ý đó bằng tiếng Anh cho rối Leo, ghi âm trên Trang luyện nói] Xiaomei: 很高兴认识你！(Hěn gāoxìng rènshi nǐ!) → Nice to meet you! / [Lời web] Vào bài: \"Mình cùng học nhé! Let's learn!\" · Chuyển ý: \"Tiếp nào! Next!\" · Khen: \"Great! 真棒！\"",
+      "truyen": "Nice to Meet You — Leo and Nhan are in the park. Leo: Hello, I'm Leo. Nhan: Hello, I'm Nhan. Leo: Nice to meet you! How old are you? Nhan: I'm five years old. Leo: I'm six years old.",
+      "video": "Greeting: Good afternoon, Nice to meet you – https://www.youtube.com/watch?v=zqAcFdsmtbk"
+     },
+     "zh": {
+      "tu": "Mới: 认识 rènshi (= meet), 高兴 gāoxìng (= nice, happy) | Ôn: 叫 jiào, 岁 suì, 是 shì",
+      "cum": "很高兴认识你 hěn gāoxìng rènshi nǐ / 我是Leo wǒ shì Leo / 五岁 wǔ suì",
+      "cau": "[Cầu nối] How old are you? – I'm five years old. ↔ 你几岁？— 我五岁。(Nǐ jǐ suì? — Wǒ wǔ suì.) [giống: five ↔ 五, cùng số tuổi · khác: tiếng Trung không cần am, years old, chỉ 五岁] / 你好，我是Leo。(Nǐ hǎo, wǒ shì Leo.) / 很高兴认识你！(Hěn gāoxìng rènshi nǐ!) / 你几岁？(Nǐ jǐ suì?) — 我五岁。(Wǒ wǔ suì.) / 我六岁。(Wǒ liù suì.) / [Lệnh lớp học] 听问题，回答：你叫什么名字？(Tīng wèntí, huídá: Nǐ jiào shénme míngzi?) ——我叫Leo。(Wǒ jiào Leo.)",
+      "truyen": "很高兴认识你 (Nice to Meet You) — Leo和Nhan在公园。Leo：你好，我是Leo。Nhan：你好，我是Nhan。Leo：很高兴认识你！你几岁？Nhan：我五岁。Leo：我六岁。(Hěn gāoxìng rènshi nǐ — Leo hé Nhan zài gōngyuán. Leo: Nǐ hǎo, wǒ shì Leo. Nhan: Nǐ hǎo, wǒ shì Nhan. Leo: Hěn gāoxìng rènshi nǐ! Nǐ jǐ suì? Nhan: Wǒ wǔ suì. Leo: Wǒ liù suì.)",
+      "video": "My Name Is Minwoo 我叫敏宇 – Little Fox Chinese – https://www.youtube.com/watch?v=c06HlhucAwk"
+     }
+    },
+    {
+     "ngay": 14,
+     "label": "Ngày 14. Unit 2 · Bạn tên là gì? Tớ cũng vậy!",
+     "en": {
+      "tu": "Mới: again, me too | Ôn: my, your, name, how old, nice",
+      "cum": "me too / what's your name / my name is / nice to meet you again",
+      "cau": "What's your name? – My name is Anna. / I'm six years old. – Me too! / Nice to meet you again, Bông! / Hello again! / Look at the example: My name is Bông. Now you! / Find your friend. Say: Nice to meet you!",
+      "truyen": "Me Too! — Anna: Hello! What's your name? Bông: My name is Bông. Anna: Nice to meet you, Bông! How old are you? Bông: I'm six years old. Anna: Me too! The next day. Bông: Hello again, Anna! Anna: Hello again, Bông!",
+      "video": "What is your name? – LucyMax English for Kids – https://www.youtube.com/watch?v=78GhhuwR7M4"
+     },
+     "zh": {
+      "tu": "Mới: 你叫什么名字 nǐ jiào shénme míngzi (= what's your name), 我也是 wǒ yě shì (= me too) | Ôn: 名字 míngzi, 什么 shénme, 也 yě, 认识 rènshi",
+      "cum": "你叫什么名字 nǐ jiào shénme míngzi / 我也是 wǒ yě shì / 我叫Anna wǒ jiào Anna",
+      "cau": "[Cầu nối] I'm six years old. – Me too! ↔ 我六岁。— 我也是！(Wǒ liù suì. — Wǒ yě shì!) [giống: Me too ↔ 我也是 cùng ý mình cũng vậy · khác: tiếng Trung có 也 ở giữa] / 你叫什么名字？(Nǐ jiào shénme míngzi?) — 我叫Anna。(Wǒ jiào Anna.) / 我六岁。(Wǒ liù suì.) — 我也是！(Wǒ yě shì!) / 很高兴认识你！(Hěn gāoxìng rènshi nǐ!) — 我也是！(Wǒ yě shì!) / (nghe làm quen) 你好！又见面了！(Nǐ hǎo! Yòu jiànmiàn le!) (= Hello again! Nice to meet you again!) / 说一说：我叫Bông。(Shuō yi shuō: Wǒ jiào Bông.) / (nghe làm quen) 找一找你的朋友，说：很高兴认识你！(Zhǎo yi zhǎo nǐ de péngyou, shuō: Hěn gāoxìng rènshi nǐ!) (= Find your friend. Say: Nice to meet you!)",
+      "truyen": "我也是 (Me Too!) — Anna：你好！你叫什么名字？Bông：我叫Bông。Anna：很高兴认识你，Bông！你几岁？Bông：我六岁。Anna：我也是！第二天。Bông：Anna，你好！又见面了！Anna：Bông，你好！又见面了！(Wǒ yě shì — Anna: Nǐ hǎo! Nǐ jiào shénme míngzi? Bông: Wǒ jiào Bông. Anna: Hěn gāoxìng rènshi nǐ, Bông! Nǐ jǐ suì? Bông: Wǒ liù suì. Anna: Wǒ yě shì! Dì-èr tiān. Bông: Anna, nǐ hǎo! Yòu jiànmiàn le! Anna: Bông, nǐ hǎo! Yòu jiànmiàn le!)",
+      "video": "What's Your Name? 你叫什么名字？– Little Fox Chinese – https://www.youtube.com/watch?v=7ZMc8JJYA94"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: nice, year, again, me too | Ôn: name, what, my, your, how old, old | Thẻ lệnh đề: question, answer, find, example",
+     "slide": "[Lời cô] Vào bài: \"Good morning, class! 小朋友们好！\" · Khen: \"Well done! 真棒！\" · Nhắc: \"Sit down, please. 请坐。\" · Lệnh: \"Look! Listen! 看！听！\" · Chuyển ý: \"Mình hát nhé! Let's sing! 我们一起唱吧！\" · Câu mới buổi này (nhắc): \"Thử lại nào! Try again! 再试一次！\" 1) Nghe chọn tranh (4 câu): Nice to meet you! / I'm five years old. / What's your name? / Me too! 2) Vòng tròn hỏi – đáp: A hỏi What's your name? – B: My name is ___. – A: Nice to meet you! – B: Me too! 3) Giơ ngón tay theo câu cô nói: I'm five years old. / I'm six years old. / Me too! 4) Lệnh đề: Look at the example (cô: My name is Mrs Lan.). Listen to the question and answer: What's your name? / How old are you? — con trả lời rồi hỏi lại bạn. 5) [Chuyển ngữ] Rối Xiaomei nói 1 câu tiếng Trung, con nói lại ý đó bằng tiếng Anh cho rối Leo (chỉ hiểu tiếng Anh): \"我也是！(Wǒ yě shì!)\" → \"Me too!\"; từng con nói, cả lớp vỗ tay khi Leo hiểu. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"My name is Leo, and I'm five years old. Nice to meet you!\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 我叫Leo，我五岁。很高兴认识你！ (Wǒ jiào Leo, wǒ wǔ suì. Hěn gāoxìng rènshi nǐ!)",
+     "truyen": "Me Too! — Anna and Bông are in the park. Anna: Hello! What's your name? Bông: My name is Bông. Anna: Nice to meet you, Bông! How old are you? Bông: I'm six years old. Anna: Me too! Leo: Hello! I'm Leo. I'm six years old. Anna and Bông: Me too! Nice to meet you, Leo!",
+     "baihat": "What's Your Name? (giai điệu Frère Jacques) — What's your name? What's your name? / I'm Leo! I'm Leo! / Nice to meet you! Nice to meet you! / Me too! Me too!"
+    },
+    "zh": {
+     "flash": "Mới: 认识 rènshi, 高兴 gāoxìng, 什么名字 shénme míngzi, 我也是 wǒ yě shì | Ôn: 叫 jiào, 名字 míngzi, 岁 suì, 是 shì | Thẻ lệnh đề: 问题 wèntí, 回答 huídá | Nghe làm quen: 找 zhǎo (= find), 例子 lìzi (= example), 又见面了 yòu jiànmiàn le (= again)",
+     "slide": "1) Nghe chọn tranh (4 câu): 很高兴认识你！(Hěn gāoxìng rènshi nǐ!) / 我五岁。(Wǒ wǔ suì.) / 你叫什么名字？(Nǐ jiào shénme míngzi?) / 我也是！(Wǒ yě shì!) 2) Vòng tròn hỏi – đáp: 你叫什么名字？— 我叫___。— 很高兴认识你！— 我也是！3) Giơ ngón tay theo câu cô nói: 我五岁。/ 我六岁。/ 我也是！(Wǒ wǔ suì. / Wǒ liù suì. / Wǒ yě shì!) 4) Lệnh đề: cô làm mẫu câu ví dụ (我叫Lan老师。Wǒ jiào Lan lǎoshī.), rồi 听问题，回答：你叫什么名字？/ 你几岁？(Tīng wèntí, huídá: Nǐ jiào shénme míngzi? / Nǐ jǐ suì?) — con trả lời rồi hỏi lại bạn. 5) [Cầu nối Anh – Trung] Cùng thẻ hai bạn bắt tay: rối Leo nói tiếng Anh \"Nice to meet you! I'm five years old.\", rối Xiaomei nói tiếng Trung \"很高兴认识你！我五岁。(Hěn gāoxìng rènshi nǐ! Wǒ wǔ suì.)\"; con tìm điểm giống và khác. Cô chỉ: giống: five ↔ 五 · khác: tiếng Trung không cần am, years old.",
+     "truyen": "我也是 (Me Too!) — Anna和Bông在公园。Anna：你好！你叫什么名字？Bông：我叫Bông。Anna：很高兴认识你，Bông！你几岁？Bông：我六岁。Anna：我也是！Leo：你好！我是Leo。我六岁。Anna和Bông：我们也是！很高兴认识你，Leo！(Wǒ yě shì — Anna hé Bông zài gōngyuán. Anna: Nǐ hǎo! Nǐ jiào shénme míngzi? Bông: Wǒ jiào Bông. Anna: Hěn gāoxìng rènshi nǐ, Bông! Nǐ jǐ suì? Bông: Wǒ liù suì. Anna: Wǒ yě shì! Leo: Nǐ hǎo! Wǒ shì Leo. Wǒ liù suì. Anna hé Bông: Wǒmen yě shì! Hěn gāoxìng rènshi nǐ, Leo!)",
+     "baihat": "认识你歌 (giai điệu 两只老虎 = Frère Jacques, cùng bài What's Your Name?) — 你叫什么？你叫什么？/ 我叫Leo，我叫Leo，/ 很高兴认识你，很高兴认识你，/ 我也是，我也是。(Nǐ jiào shénme? Nǐ jiào shénme? / Wǒ jiào Leo, wǒ jiào Leo, / hěn gāoxìng rènshi nǐ, hěn gāoxìng rènshi nǐ, / wǒ yě shì, wǒ yě shì.)"
+    }
+   }
+  },
+  {
+   "buoi": 8,
+   "unit": 2,
+   "label_buoi": "Buổi dạy 8. Unit 2 · Name and age – Tên và tuổi (số 7–10, What about you?, so sánh số)",
+   "web": [
+    {
+     "ngay": 15,
+     "label": "Ngày 15. Unit 2 · Đếm số: seven, eight",
+     "en": {
+      "tu": "Mới: number, seven, eight | Ôn (từ nối Unit 1): good, kid, class, Mrs, morning",
+      "cum": "number seven / number eight / eight years old",
+      "cau": "Good morning, kids! Look at the numbers. / Seven! Number seven! / One, two, three, four, five, six, seven, eight! / My brother is eight years old. / Find number seven. Point to number eight. / Read and choose: seven or eight?",
+      "truyen": "Count With Mrs Lan — Mrs Lan: Good morning, class! Look at the numbers. Kids: One, two, three, four, five, six, seven, eight! Leo: Number eight! My brother is eight years old. Mrs Lan: Good, Leo! Good kids!",
+      "video": "Tìm YouTube: \"count to ten song for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 七 qī (= seven), 八 bā (= eight), 数字 shùzì (= number) | Ôn (từ nối Unit 1): 早上好 zǎoshang hǎo (= good morning), 大家 dàjiā, Lan老师 Lan lǎoshī, 小朋友 xiǎo péngyou",
+      "cum": "数字七 shùzì qī / 数字八 shùzì bā / 八岁 bā suì / 看数字 kàn shùzì",
+      "cau": "[Cầu nối] My brother is eight years old. ↔ 我哥哥八岁。(Wǒ gēge bā suì.) [giống: eight ↔ 八, số đứng trước tuổi · khác: tiếng Trung không cần is, years old; brother ↔ 哥哥] / 小朋友们，早上好！看数字。(Xiǎo péngyoumen, zǎoshang hǎo! Kàn shùzì.) (= Good morning, kids! Look at the numbers.) / 七！数字七！(Qī! Shùzì qī!) / 一、二、三、四、五、六、七、八！(Yī, èr, sān, sì, wǔ, liù, qī, bā!) / 我哥哥八岁。(Wǒ gēge bā suì.) / 看一看，选一选：七还是八？(Kàn yi kàn, xuǎn yi xuǎn: qī háishi bā?) / [Chuyển ngữ] [nghe rối Leo nói 1 câu tiếng Anh, nói lại ý đó bằng tiếng Trung cho rối Xiaomei, ghi âm trên Trang luyện nói] Leo: Number seven! → 数字七！(Shùzì qī!)",
+      "truyen": "和Lan老师一起数数 (Count With Mrs Lan) — Lan老师：小朋友们，早上好！看数字。小朋友：一、二、三、四、五、六、七、八！Leo：八！我哥哥八岁。Lan老师：好，Leo！(Hé Lan lǎoshī yìqǐ shǔ shù — Lan lǎoshī: Xiǎo péngyoumen, zǎoshang hǎo! Kàn shùzì. Xiǎo péngyou: Yī, èr, sān, sì, wǔ, liù, qī, bā! Leo: Bā! Wǒ gēge bā suì. Lan lǎoshī: Hǎo, Leo!)",
+      "video": "Tìm YouTube: \"数字歌 一到十 儿歌\""
+     }
+    },
+    {
+     "ngay": 16,
+     "label": "Ngày 16. Unit 2 · Số nine, ten và câu hỏi What about you?",
+     "en": {
+      "tu": "Mới: nine, ten, about | Ôn (từ nối Unit 1): write, wave, sorry, story, number",
+      "cum": "number nine / number ten / what about you",
+      "cau": "I'm five years old. What about you? – I'm six. / Ten is bigger than nine. Nine is smaller than ten. / Write number nine. / Ten kids wave goodbye. / Sorry! It's nine, not ten. / Write the number nine. Is it correct? – Yes! / Listen to the question: How old are you? Answer: I'm six.",
+      "truyen": "What About You? — Mrs Lan: Write a number, kids. Anna writes 9. Leo writes 10. Anna: Nine! What about you, Leo? Leo: Ten! Ten is big. Nine is small. Anna: Nine is not small! Leo: Sorry, Anna! Nine is big, ten is big!",
+      "video": "Tìm YouTube: \"count to ten numbers song for kids nine ten\""
+     },
+     "zh": {
+      "tu": "Mới: 九 jiǔ (= nine), 你呢 nǐ ne (= what about you?), 大于 dàyú (= is bigger than – Ten is bigger than nine), 小于 xiǎoyú (= is smaller than – Nine is smaller than ten) | Ôn: 大 dà, 小 xiǎo | Ôn (từ nối Unit 1): 写 xiě, 挥挥手 huīhui shǒu, 对不起 duìbuqǐ, 十 shí, 数字 shùzì",
+      "cum": "十大于九 shí dàyú jiǔ / 九小于十 jiǔ xiǎoyú shí / 什么数字 shénme shùzì / 你呢 nǐ ne",
+      "cau": "[Cầu nối] Ten is big. Nine is small. ↔ 十很大。九很小。(Shí hěn dà. Jiǔ hěn xiǎo.) [giống: Ten ↔ 十, Nine ↔ 九 đứng đầu; big ↔ 大, small ↔ 小 · khác: tiếng Trung không cần is, thêm 很 trước 大 / 小] / [Ngữ pháp: so sánh số A 大于 B / A 小于 B] 十大于九。(Shí dàyú jiǔ.) (= Ten is bigger than nine.) / 九小于十。(Jiǔ xiǎoyú shí.) (= Nine is smaller than ten.) / 我五岁。你呢？(Wǒ wǔ suì. Nǐ ne?) (= I'm five years old. What about you?) — 我六岁。(Wǒ liù suì.) / 写一写：九。对还是错？——对！(Xiě yi xiě: jiǔ. Duì háishi cuò? — Duì!) / 十个小朋友挥挥手，再见！(Shí ge xiǎo péngyou huīhui shǒu, zàijiàn!) (= Ten kids wave goodbye.) / 对不起！是九，不是十。(Duìbuqǐ! Shì jiǔ, bú shì shí.) (= Sorry! It's nine, not ten.) / 九大于十，对不对？——错！(Jiǔ dàyú shí, duì bu duì? — Cuò!)",
+      "truyen": "你呢？(What About You?) — Lan老师：小朋友，写一个数字。Anna写九。Leo写十。Anna：九！Leo，你呢？Leo：十！十很大。九很小！Anna：九不小！Leo：对不起，Anna！九很大，十也很大！(Nǐ ne? — Lan lǎoshī: Xiǎo péngyou, xiě yí ge shùzì. Anna xiě jiǔ. Leo xiě shí. Anna: Jiǔ! Leo, nǐ ne? Leo: Shí! Shí hěn dà. Jiǔ hěn xiǎo! Anna: Jiǔ bù xiǎo! Leo: Duìbuqǐ, Anna! Jiǔ hěn dà, shí yě hěn dà!)",
+      "video": "Tìm YouTube: \"数一数 一到十 儿歌 九 十\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: number, seven, eight, nine, ten, about | Cụm: bigger than, smaller than | Ôn (từ nối Unit 1): good, kid, class, write, wave, sorry",
+     "slide": "[Lời cô] Vào bài: \"Good morning, class! 小朋友们好！\" · Khen: \"Well done! 真棒！\" · Lệnh: \"Look! Listen! 看！听！\" · Chuyển ý: \"Mình hát nhé! Let's sing! 我们一起唱吧！\" · Nhắc: \"Thử lại nào! Try again! 再试一次！\" 1) Nghe – chọn số (4 câu): Number seven! / Number eight! / Number nine! / Number ten! 2) Chuỗi hỏi – đáp cả lớp: I'm five years old. What about you? – I'm six years old. What about you? … 3) Số nào to, số nào nhỏ: cô giơ hai thẻ số, con nói Ten is big. Nine is small. / Eight is big. Seven is small. 4) Lệnh đề: Find the number! Point to seven. / Write the number ten. / Is it correct? (cô viết 8 nói \"nine\") – No! 5) [Chuyển ngữ] Rối Leo nói 1 câu tiếng Anh, con nói lại ý đó bằng tiếng Trung cho rối Xiaomei (chỉ hiểu tiếng Trung): \"My brother is eight years old.\" → \"我哥哥八岁。(Wǒ gēge bā suì.)\"; từng con nói, cả lớp vỗ tay khi Xiaomei hiểu. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"My brother is eight years old, and my sister is ten. Ten is bigger than eight!\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 我哥哥八岁，我姐姐十岁。十大于八！ (Wǒ gēge bā suì, wǒ jiějie shí suì. Shí dàyú bā!)",
+     "truyen": "What About You? — Mrs Lan: Good morning, kids! Look at the numbers. Kids: One, two, three, four, five, six, seven, eight, nine, ten! Mrs Lan: Write a number, kids. Anna writes 9. Leo writes 10. Anna: Nine! What about you, Leo? Leo: Ten! Ten is big. Nine is small. Bông: My brother is eight years old. Number eight!",
+     "baihat": "Number Song (giai điệu Twinkle Twinkle Little Star) — One, two, three, four, five, six, seven, / Eight and nine and ten, again! / Seven, eight, nine, ten, I can! / Number, number, ten, ten, ten!"
+    },
+    "zh": {
+     "flash": "Mới: 七 qī, 八 bā, 数字 shùzì, 九 jiǔ, 你呢 nǐ ne, 大于 dàyú, 小于 xiǎoyú | Ôn: 大 dà, 小 xiǎo, 十 shí | Ôn (từ nối Unit 1): 小朋友 xiǎo péngyou, 大家 dàjiā, 写 xiě, 挥挥手 huīhui shǒu, 对不起 duìbuqǐ",
+     "slide": "1) Nghe – chọn số (4 câu): 七 qī / 八 bā / 九 jiǔ / 十 shí 2) Chuỗi hỏi – đáp cả lớp (= What about you?): 我五岁。你呢？— 我六岁。你呢？…(Wǒ wǔ suì. Nǐ ne? — Wǒ liù suì. Nǐ ne? …) 3) Số nào to, số nào nhỏ: cô giơ hai thẻ số, con nói 十很大，九很小。(Shí hěn dà, jiǔ hěn xiǎo.) / 八很大，七很小。(Bā hěn dà, qī hěn xiǎo.) 4) Lệnh đề: (nghe làm quen) 找一找：七！(Zhǎo yi zhǎo: qī!) / 写一写：十。(Xiě yi xiě: shí.) / 对还是错？(cô viết 8, nói 九) — 错！(Cuò!) 5) [Cầu nối Anh – Trung] Cùng thẻ số 9 và 10: rối Leo nói tiếng Anh \"Ten is big. Nine is small.\", rối Xiaomei nói tiếng Trung \"十很大。九很小。(Shí hěn dà. Jiǔ hěn xiǎo.)\"; con tìm điểm giống và khác. Cô chỉ: giống: Ten ↔ 十, Nine ↔ 九 đứng đầu; big ↔ 大, small ↔ 小 · khác: tiếng Trung không cần is, thêm 很 trước 大 / 小.",
+     "truyen": "你呢？(What About You?) — Lan老师：小朋友们，早上好！我们一起看数字。小朋友：一、二、三、四、五、六、七、八、九、十！Lan老师：小朋友，写一个数字。Anna写九。Leo写十。Anna：九！Leo，你呢？Leo：十！十很大。九很小。Bông：我哥哥八岁。数字八！(Nǐ ne? — Lan lǎoshī: Xiǎo péngyoumen, zǎoshang hǎo! Wǒmen yìqǐ kàn shùzì. Xiǎo péngyou: Yī, èr, sān, sì, wǔ, liù, qī, bā, jiǔ, shí! Lan lǎoshī: Xiǎo péngyou, xiě yí ge shùzì. Anna xiě jiǔ. Leo xiě shí. Anna: Jiǔ! Leo, nǐ ne? Leo: Shí! Shí hěn dà. Jiǔ hěn xiǎo. Bông: Wǒ gēge bā suì. Shùzì bā!)",
+     "baihat": "数字歌 (giai điệu Twinkle Twinkle Little Star / 小星星, cùng bài Number Song) — 一二三四五六七，/ 八九十呀，再一次！/ 七八九十，我会数！/ 数字数字，十十十！(Yī èr sān sì wǔ liù qī, / bā jiǔ shí ya, zài yí cì! / Qī bā jiǔ shí, wǒ huì shǔ! / Shùzì shùzì, shí shí shí!)"
+    }
+   }
+  },
+  {
+   "buoi": 9,
+   "unit": 2,
+   "label_buoi": "Buổi dạy 9. Unit 2 · Name and age – Tên và tuổi (Wow! Really?, ôn không tranh) · Luyện đề YCT1 Nghe phần 3 + Starters Nói phần 4",
+   "web": [
+    {
+     "ngay": 17,
+     "label": "Ngày 17. Unit 2 · Wow! Thật không?",
+     "en": {
+      "tu": "Mới: wow | Ôn: birthday, old, years old, again, me too",
+      "cum": "wow / really / try again / hold my hand / bye",
+      "cau": "Wow! I'm seven years old! – Really? / Try again! / Hold my hand. / Bye! See you! / The end. / [Chuyển ngữ] [nghe rối Xiaomei nói 1 câu tiếng Trung, nói lại ý đó bằng tiếng Anh cho rối Leo, ghi âm trên Trang luyện nói] Xiaomei: 再试一次！(Zài shì yí cì!) → Try again!",
+      "truyen": "Really? — Nhan: I'm ten years old! Kids: Wow! Really? Nhan: Ha ha! No. I'm five. Try again! Leo: You are five years old! Nhan: Yes! Hold my hand, Leo. Bye, kids! The end.",
+      "video": "Tìm YouTube: \"how old are you song for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 哇 wā (= wow), 真的吗 zhēn de ma (= really?) | Ôn: 岁 suì, 又见面了 yòu jiànmiàn le (= again), 几岁 jǐ suì, 生日 shēngrì, 我也是 wǒ yě shì",
+      "cum": "哇 wā / 真的吗 zhēn de ma / 我十岁 wǒ shí suì / 再试一次 zài shì yí cì / 拉拉手 lāla shǒu / 再见 zàijiàn",
+      "cau": "[Cầu nối] Wow! Really? ↔ 哇！真的吗？(Wā! Zhēn de ma?) [giống: Wow ↔ 哇 nghe gần giống nhau · khác: câu hỏi tiếng Trung thêm 吗 ở cuối] / 哇！我七岁！(Wā! Wǒ qī suì!) — 真的吗？(Zhēn de ma?) / 我十岁！— 真的吗？(Wǒ shí suì! — Zhēn de ma?) / 再试一次！(Zài shì yí cì!) (= Try again!) / (nghe làm quen) 拉拉手！(Lāla shǒu!) (= Hold my hand.) / 再见！(Zàijiàn!) (= Bye! See you!) / 听问题，回答问题：你几岁？——我七岁。(Tīng wèntí, huídá wèntí: Nǐ jǐ suì? — Wǒ qī suì.)",
+      "truyen": "真的吗？(Really?) — Nhan：我十岁！小朋友：哇！真的吗？Nhan：哈哈！不是。我五岁。再试一次！Leo：你五岁！Nhan：是！Leo，拉拉手。小朋友们，再见！(Zhēn de ma? — Nhan: Wǒ shí suì! Xiǎo péngyou: Wā! Zhēn de ma? Nhan: Hāha! Bú shì. Wǒ wǔ suì. Zài shì yí cì! Leo: Nǐ wǔ suì! Nhan: Shì! Leo, lāla shǒu. Xiǎo péngyoumen, zàijiàn!)",
+      "video": "Tìm YouTube: \"你几岁 儿歌\""
+     }
+    },
+    {
+     "ngay": 18,
+     "label": "Ngày 18. Unit 2 · Ôn không tranh: nghe câu hỏi, chọn câu trả lời · Luyện nói YCT口试 听后重复",
+     "en": {
+      "tu": "Ôn (không tranh): nice, year, again, me too, number, seven, eight, nine, ten, about, wow | Ôn khóa trước: name, how old, birthday",
+      "cum": "nice to meet you / years old / what about you / me too / try again",
+      "cau": "What's your name? – My name is Anna. / How old are you? – I'm seven years old. / Nice to meet you! – Me too! / I'm six. What about you? – I'm five. / Wow! Really?",
+      "truyen": "Anna's Birthday — It's Anna's birthday. Anna: I'm six years old! Leo: Wow! Me too! Bông: Number six! Happy birthday, Anna! Anna: Thank you! Look! A green and blue cake!",
+      "video": "Tìm YouTube: \"how old are you I'm five years old song\""
+     },
+     "zh": {
+      "tu": "Ôn (không tranh): 认识 rènshi, 高兴 gāoxìng, 什么名字 shénme míngzi, 我也是 wǒ yě shì, 七 qī, 八 bā, 九 jiǔ, 十 shí, 数字 shùzì, 你呢 nǐ ne, 哇 wā | Ôn khóa trước: 生日 shēngrì, 绿色 lǜsè, 蓝色 lánsè",
+      "cum": "很高兴认识你 hěn gāoxìng rènshi nǐ / 你叫什么名字 nǐ jiào shénme míngzi / 你呢 nǐ ne / 我也是 wǒ yě shì / 再试一次 zài shì yí cì",
+      "cau": "[Cầu nối] Nice to meet you! – Me too! ↔ 很高兴认识你！— 我也是！(Hěn gāoxìng rènshi nǐ! — Wǒ yě shì!) [giống: cùng câu chào bạn mới · khác: nice ↔ 高兴 đứng trước meet you ↔ 认识你] / 你叫什么名字？— 我叫Anna。(Nǐ jiào shénme míngzi? — Wǒ jiào Anna.) / 你几岁？— 我七岁。(Nǐ jǐ suì? — Wǒ qī suì.) / 很高兴认识你！— 我也是！(Hěn gāoxìng rènshi nǐ! — Wǒ yě shì!) / 我六岁。你呢？— 我五岁。(Wǒ liù suì. Nǐ ne? — Wǒ wǔ suì.) (= I'm six. What about you? – I'm five.) / 哇！真的吗？(Wā! Zhēn de ma?) / [YCT口试（初级）第一部分 听后重复 (mẫu): con nghe từng câu, nói lại 1 lần, ghi âm trên Trang luyện nói, ~5 phút] 听，说：认识你很高兴。(Rènshi nǐ hěn gāoxìng.) / 我叫Xiaomei。(Wǒ jiào Xiaomei.) / 你几岁？(Nǐ jǐ suì?) / 我七岁。(Wǒ qī suì.) / 哇！真的吗？(Wā! Zhēn de ma?)",
+      "truyen": "Anna的生日 (Anna's Birthday) — 今天是Anna的生日。Anna：我六岁！Leo：哇！我也是！Bông：数字六！生日快乐，Anna！Anna：谢谢！看！绿色和蓝色的蛋糕！(Anna de shēngrì — Jīntiān shì Anna de shēngrì. Anna: Wǒ liù suì! Leo: Wā! Wǒ yě shì! Bông: Shùzì liù! Shēngrì kuàilè, Anna! Anna: Xièxie! Kàn! Lǜsè hé lánsè de dàngāo!)",
+      "video": "Tìm YouTube: \"你几岁 我五岁 儿歌\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: wow | Nghe hiểu mở rộng: really, try, hold, bye, end | Ôn: nice, year, again, me too, number, seven, eight, nine, ten, birthday",
+     "slide": "[Lời cô] Vào bài: \"Good morning, class! 小朋友们好！\" · Khen: \"Well done! 真棒！\" · Lệnh: \"Look! Listen! 看！听！\" · Chuyển ý: \"Let's sing! 我们一起唱吧！\" · Nhắc: \"Thử lại nào! Try again! 再试一次！\" · Câu mới buổi này (khen thêm): \"Đúng rồi! Good job! 对了！\" 1) Trò chơi Wow! Really?: con nói một tuổi (I'm ten years old!), cả lớp đáp Wow! Really?, con nói thật I'm five! 2) Nghe và làm (4 lệnh): Hold my hand. / Try again! / Wave bye! / Write number seven. 3) Ôn không tranh – nghe câu hỏi, chọn câu đáp (3 câu): What's your name? → My name is Anna. / How old are you? → I'm six years old. / Nice to meet you! → Me too! 4) Starters Nói phần 4 (mẫu, nhẹ – cô làm giám khảo, hỏi từng con 3 câu về bản thân): Listen to the question. Answer. What's your name? – My name is ___. / How old are you? – I'm ___. / Who is your friend? – ___ is my friend. 5) [Chuyển ngữ] Rối Xiaomei nói 1 câu tiếng Trung, con nói lại ý đó bằng tiếng Anh cho rối Leo (chỉ hiểu tiếng Anh): \"我十岁！(Wǒ shí suì!)\" → \"I'm ten years old!\"; từng con nói, cả lớp vỗ tay khi Leo hiểu. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"I'm not ten years old. I'm only six!\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 我不是十岁，我六岁！ (Wǒ bú shì shí suì, wǒ liù suì!)",
+     "truyen": "Really? — It's Nhan's birthday. Nhan: I'm ten years old! Kids: Wow! Really? Nhan: Ha ha! No. Try again! Leo: Seven? Nhan: No! Anna: Six? Nhan: Yes! I'm six years old! Kids: Happy birthday, Nhan! Look! A green cake! Nhan: Hold my hand. Bye-bye! The end.",
+     "baihat": "Wow, Really? (giai điệu Mary Had a Little Lamb) — I am seven years old, / years old, years old, / I am seven years old! / Wow! Really? Wow!"
+    },
+    "zh": {
+     "flash": "Mới: 哇 wā, 真的吗 zhēn de ma | Ôn: 认识 rènshi, 高兴 gāoxìng, 又见面了 yòu jiànmiàn le, 我也是 wǒ yě shì, 七 qī, 八 bā, 九 jiǔ, 十 shí, 数字 shùzì, 生日 shēngrì, 再见 zàijiàn | Nghe làm quen: 拉拉手 lāla shǒu, 再试一次 zài shì yí cì",
+     "slide": "1) Trò chơi 哇！真的吗？: con nói 我十岁！(Wǒ shí suì!), cả lớp đáp 哇！真的吗？(Wā! Zhēn de ma?), con nói thật 我五岁！(Wǒ wǔ suì!) 2) Nghe và làm (4 lệnh, cùng 4 lệnh với phần tiếng Anh): (nghe làm quen) 拉拉手！(Lāla shǒu!) / 再试一次！(Zài shì yí cì!) / 挥挥手，再见！(Huīhui shǒu, zàijiàn!) / 写一写：七。(Xiě yi xiě: qī.) 3) Ôn không tranh – nghe câu hỏi, chọn câu đáp: 你叫什么名字？→ 我叫Anna。/ 你几岁？→ 我六岁。/ 很高兴认识你！→ 我也是！ 4) YCT1 Nghe phần 3 (mẫu): nghe câu, nhìn tranh chọn ✓ / ✗ — 听一听，看一看，对还是错？(Tīng yi tīng, kàn yi kàn, duì háishi cuò?) 1. 我七岁。(Wǒ qī suì.) [bánh 7 nến ✓] 2. 我叫Leo。(Wǒ jiào Leo.) [tranh bạn Anna ✗] 3. 认识你很高兴。(Rènshi nǐ hěn gāoxìng.) [hai bạn bắt tay, cười ✓] 4. 九大于八。(Jiǔ dàyú bā.) [9 > 8 ✓] 5. 七大于十。(Qī dàyú shí.) [tranh ghi 7 < 10 ✗] 5) [Cầu nối Anh – Trung] Cùng thẻ bánh sinh nhật: rối Leo nói tiếng Anh \"Wow! Really?\", rối Xiaomei nói tiếng Trung \"哇！真的吗？(Wā! Zhēn de ma?)\"; con tìm điểm giống và khác. Cô chỉ: giống: Wow ↔ 哇 nghe gần giống · khác: câu hỏi tiếng Trung thêm 吗 ở cuối.",
+     "truyen": "真的吗？(Really?) — 今天是Nhan的生日。Nhan：我十岁！小朋友：哇！真的吗？Nhan：哈哈！不是。再试一次！Leo：七岁？Nhan：不是！Anna：六岁？Nhan：是！我六岁！小朋友：生日快乐，Nhan！看！绿色的蛋糕！Nhan：拉拉手。再见！(Zhēn de ma? — Jīntiān shì Nhan de shēngrì. Nhan: Wǒ shí suì! Xiǎo péngyou: Wā! Zhēn de ma? Nhan: Hāha! Bú shì. Zài shì yí cì! Leo: Qī suì? Nhan: Bú shì! Anna: Liù suì? Nhan: Shì! Wǒ liù suì! Xiǎo péngyou: Shēngrì kuàilè, Nhan! Kàn! Lǜsè de dàngāo! Nhan: Lāla shǒu. Zàijiàn!)",
+     "baihat": "我七岁 (giai điệu Mary Had a Little Lamb, cùng bài Wow, Really?) — 我呀我呀七岁了，/ 七岁了，七岁了，/ 我呀我呀七岁了！/ 哇！真的吗？哇！(Wǒ ya wǒ ya qī suì le, / qī suì le, qī suì le, / wǒ ya wǒ ya qī suì le! / Wā! Zhēn de ma? Wā!)"
+    }
+   }
+  },
+  {
+   "buoi": 10,
+   "unit": 2,
+   "label_buoi": "Buổi dạy 10. Unit 2 · Name and age – Tên và tuổi (kể truyện, Phiên dịch nhí, kiểm tra cuối unit)",
+   "web": [
+    {
+     "ngay": 19,
+     "label": "Ngày 19. Unit 2 · Truyện của unit + chuyển ngữ: Nice to Meet You, Xiaomei! · 很高兴认识你，Xiaomei！ · Luyện đề YCT1 Nghe phần 2",
+     "en": {
+      "tu": "Ôn: nice, year, again, me too, number, seven, eight, nine, ten, about, wow | Ôn (Unit 1): good morning, class, kid",
+      "cum": "nice to meet you / what's your name again / seven years old / me too",
+      "cau": "What's your name again? – My name is Xiaomei. / Nice to meet you, Xiaomei! / How old are you? – I'm six years old. / Me too!",
+      "truyen": "Nice to Meet You, Xiaomei! — Morning. Leo: Good morning! What's your name again? Xiaomei: My name is Xiaomei. Leo: Nice to meet you, Xiaomei! How old are you? Xiaomei: I'm six years old. What about you? Leo: I'm seven! Xiaomei: Wow! Really? Leo: Ha ha! No. I'm six. Me too! Xiaomei: Look! My blue and yellow schoolbag. Number six!",
+      "video": "What is your name? – LucyMax English for Kids – https://www.youtube.com/watch?v=78GhhuwR7M4"
+     },
+     "zh": {
+      "tu": "Ôn: 认识 rènshi, 高兴 gāoxìng, 什么名字 shénme míngzi, 我也是 wǒ yě shì, 七 qī, 八 bā, 九 jiǔ, 数字 shùzì, 你呢 nǐ ne, 哇 wā | Ôn (Unit 1): 早上好 zǎoshang hǎo (= good morning), 小朋友 xiǎo péngyou, 大家 dàjiā",
+      "cum": "很高兴认识你 hěn gāoxìng rènshi nǐ / 你叫什么名字 nǐ jiào shénme míngzi / 我也是 wǒ yě shì",
+      "cau": "[Cầu nối] What's your name? – My name is Xiaomei. ↔ 你叫什么名字？— 我叫Xiaomei。(Nǐ jiào shénme míngzi? — Wǒ jiào Xiaomei.) [giống: tên đứng cuối câu trả lời · khác: What đầu câu ↔ 什么名字 cuối câu] / 你叫什么名字？(Nǐ jiào shénme míngzi?) — 我叫Xiaomei。(Wǒ jiào Xiaomei.) / 很高兴认识你！(Hěn gāoxìng rènshi nǐ!) / 你几岁？— 我六岁。(Nǐ jǐ suì? — Wǒ liù suì.) / 我也是！(Wǒ yě shì!) / [YCT1 Nghe phần 2 (mẫu): nghe cụm từ, chọn 1 trong 3 tranh A / B / C, 5 câu, ~10 phút] 听一听，选一选。(Tīng yi tīng, xuǎn yi xuǎn.) 1. 七岁 qī suì [A bánh 7 nến ✓ / B bánh 6 nến / C bánh 9 nến] 2. 八 bā [A số 8 ✓ / B số 3 / C số 10] 3. 认识你 rènshi nǐ [A hai bạn bắt tay ✓ / B hai bạn ngủ / C một bạn khóc] 4. 我的名字 wǒ de míngzi [A con viết tên ✓ / B con ăn / C con chạy] 5. 九大于七 jiǔ dàyú qī [A 9 > 7 ✓ / B 7 > 9 / C 9 = 9]",
+      "truyen": "很高兴认识你，Xiaomei！(Nice to Meet You, Xiaomei!) — 早上。Leo：早上好！你叫什么名字来着？Xiaomei：我叫Xiaomei。Leo：很高兴认识你，Xiaomei！你几岁？Xiaomei：我六岁。你呢？Leo：我七岁！Xiaomei：哇！真的吗？Leo：哈哈！不是。我六岁。我也是！Xiaomei：看！我的书包是蓝色和黄色的。数字六！(Hěn gāoxìng rènshi nǐ, Xiaomei! — Zǎoshang. Leo: Zǎoshang hǎo! Nǐ jiào shénme míngzi láizhe? Xiaomei: Wǒ jiào Xiaomei. Leo: Hěn gāoxìng rènshi nǐ, Xiaomei! Nǐ jǐ suì? Xiaomei: Wǒ liù suì. Nǐ ne? Leo: Wǒ qī suì! Xiaomei: Wā! Zhēn de ma? Leo: Hāha! Bú shì. Wǒ liù suì. Wǒ yě shì! Xiaomei: Kàn! Wǒ de shūbāo shì lánsè hé huángsè de. Shùzì liù!)",
+      "video": "What's Your Name? 你叫什么名字？– Little Fox Chinese – https://www.youtube.com/watch?v=7ZMc8JJYA94"
+     }
+    },
+    {
+     "ngay": 20,
+     "label": "Ngày 20. Unit 2 · Phiên dịch nhí: nghe Xiaomei hỏi tiếng Trung, trả lời Leo bằng tiếng Anh",
+     "en": {
+      "tu": "Ôn: nice, year, me too, number, seven, eight, nine, ten, about | Ôn khóa trước: name, what, how old",
+      "cum": "what's your name / how old / years old / nice to meet you",
+      "cau": "What's your name? / My name is Bông. / How old are you? / I'm six years old. What about you? / Nice to meet you! – Me too!",
+      "truyen": "Bông, Leo and Xiaomei — Leo: What's your name? Bông: Xiaomei, 你叫什么名字？ Xiaomei: 我叫Xiaomei。 Bông: Leo, she is Xiaomei. Leo: Nice to meet you, Xiaomei! How old are you? Xiaomei: 我六岁。 Bông: She is six years old. Leo: Me too!",
+      "video": "Greeting: Good afternoon, Nice to meet you – https://www.youtube.com/watch?v=zqAcFdsmtbk"
+     },
+     "zh": {
+      "tu": "Ôn: 认识 rènshi, 高兴 gāoxìng, 什么名字 shénme míngzi, 我也是 wǒ yě shì, 七 qī, 八 bā, 九 jiǔ, 十 shí, 你几岁 nǐ jǐ suì, 你呢 nǐ ne | Ôn khóa trước: 叫 jiào, 岁 suì",
+      "cum": "你叫什么名字 nǐ jiào shénme míngzi / 你几岁 nǐ jǐ suì / 很高兴认识你 hěn gāoxìng rènshi nǐ",
+      "cau": "[Cầu nối] How old are you? ↔ 你几岁？(Nǐ jǐ suì?) [giống: cùng hỏi tuổi bạn · khác: How old đứng đầu ↔ 几岁 đứng cuối câu] / 你叫什么名字？(Nǐ jiào shénme míngzi?) / 我叫Xiaomei。(Wǒ jiào Xiaomei.) / 你几岁？(Nǐ jǐ suì?) / 我六岁。(Wǒ liù suì.) / 他也六岁！(Tā yě liù suì!) (= Me too! – Bông nói lại cho Xiaomei) / 很高兴认识你！(Hěn gāoxìng rènshi nǐ!)",
+      "truyen": "Bông、Leo和Xiaomei (Bông, Leo and Xiaomei) — Leo：What's your name? Bông：Xiaomei，你叫什么名字？Xiaomei：我叫Xiaomei。Bông：Leo, she is Xiaomei. Leo：Nice to meet you, Xiaomei! How old are you? Bông：Xiaomei，很高兴认识你！你几岁？Xiaomei：我六岁。Bông：She is six years old. Leo：Me too! Bông：Xiaomei，他也六岁！(Bông, Leo hé Xiaomei — Leo: What's your name? Bông: Xiaomei, nǐ jiào shénme míngzi? Xiaomei: Wǒ jiào Xiaomei. Bông: Leo, she is Xiaomei. Leo: Nice to meet you, Xiaomei! How old are you? Bông: Xiaomei, hěn gāoxìng rènshi nǐ! Nǐ jǐ suì? Xiaomei: Wǒ liù suì. Bông: She is six years old. Leo: Me too! Bông: Xiaomei, tā yě liù suì!)",
+      "video": "My Name Is Minwoo 我叫敏宇 – Little Fox Chinese – https://www.youtube.com/watch?v=c06HlhucAwk"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn cả unit: nice, year, again, me too, number, seven, eight, nine, ten, about, wow | Ôn khóa trước: name, what, how old, birthday",
+     "slide": "[Lời cô] Vào bài: \"Good morning, class! 小朋友们好！\" · Khen: \"Well done! 真棒！\" · Chuyển ý: \"Let's sing! 我们一起唱吧！\" · Nhắc: \"Thử lại nào! Try again! 再试一次！\" · Khen thêm: \"Đúng rồi! Good job! 对了！\" 1) [Chuyển ngữ] Phiên dịch nhí (nói lại 1 câu) theo nhóm 3: Leo hỏi tiếng Anh (What's your name? / How old are you?), Xiaomei trả lời tiếng Trung, Bông nói lại cho Leo: Her name is Xiaomei. / She is six years old. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"This is my new friend. Her name is Anna, and she is seven years old.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 这是我的新朋友。她叫Anna，她七岁。 (Zhè shì wǒ de xīn péngyou. Tā jiào Anna, tā qī suì.) 2) Kiểm tra cuối unit – nghe chọn tranh (5 câu): Nice to meet you! / I'm eight years old. / Number nine. / Me too! / What about you? 3) Kịch ngắn 3 vai diễn truyện Nice to Meet You, Xiaomei! 4) Lệnh đề: Read the question. Choose the answer (2 câu): How old are you? – (a) I'm seven. (b) My name is Leo. / What's your name? – (a) I'm six. (b) My name is Anna.",
+     "truyen": "Nice to Meet You, Xiaomei! — Morning. Leo: Good morning! What's your name again? Xiaomei: My name is Xiaomei. Leo: Nice to meet you, Xiaomei! How old are you? Xiaomei: I'm six years old. What about you? Leo: I'm seven! Xiaomei: Wow! Really? Leo: Ha ha! No. I'm six. Xiaomei: Me too! Look! My blue and yellow schoolbag. Number six! Leo: Hold my hand, Xiaomei. Good friends!",
+     "baihat": "Nice to Meet You (giai điệu Row, Row, Row Your Boat) — Hello, hello, what's your name? / My name is Xiaomei. / Nice, nice, nice to meet you! / I'm six years old!"
+    },
+    "zh": {
+     "flash": "Ôn cả unit: 认识 rènshi, 高兴 gāoxìng, 什么名字 shénme míngzi, 我也是 wǒ yě shì, 你呢 nǐ ne, 七 qī, 八 bā, 九 jiǔ, 十 shí, 数字 shùzì, 又见面了 yòu jiànmiàn le, 哇 wā, 真的吗 zhēn de ma | Nghe làm quen: 拉拉手 lāla shǒu | Ôn khóa trước: 叫 jiào, 名字 míngzi, 岁 suì, 生日 shēngrì",
+     "slide": "1) Phiên dịch nhí theo nhóm 3 (cùng hoạt động với phần tiếng Anh): Leo hỏi tiếng Anh, Bông nói lại câu hỏi cho Xiaomei: 你叫什么名字？(Nǐ jiào shénme míngzi?) / 你几岁？(Nǐ jǐ suì?); Xiaomei trả lời: 我叫Xiaomei。(Wǒ jiào Xiaomei.) / 我六岁。(Wǒ liù suì.); Bông nói lại cho Leo bằng tiếng Anh. 2) Kiểm tra cuối unit – nghe chọn tranh (5 câu, cùng 5 tranh với phần tiếng Anh): 很高兴认识你！/ 我八岁。/ 数字九。/ 我也是！/ 我六岁。你呢？ 3) Kịch ngắn 3 vai diễn truyện 很高兴认识你，Xiaomei！ 4) Lệnh đề: 读问题，选答案 (2 câu): 你几岁？— (a) 我七岁。(b) 我叫Leo。/ 你叫什么名字？— (a) 我六岁。(b) 我叫Anna。(Nǐ jǐ suì? — (a) Wǒ qī suì. (b) Wǒ jiào Leo. / Nǐ jiào shénme míngzi? — (a) Wǒ liù suì. (b) Wǒ jiào Anna.) 5) [Cầu nối Anh – Trung] Cùng tranh truyện Nice to Meet You, Xiaomei!: rối Leo nói tiếng Anh \"What's your name?\", rối Xiaomei nói tiếng Trung \"你叫什么名字？(Nǐ jiào shénme míngzi?)\"; con tìm điểm giống và khác. Cô chỉ: giống: cùng hỏi tên · khác: What đầu câu ↔ 什么名字 cuối câu.",
+     "truyen": "很高兴认识你，Xiaomei！(Nice to Meet You, Xiaomei!) — 早上。Leo：早上好！你叫什么名字来着？Xiaomei：我叫Xiaomei。Leo：很高兴认识你，Xiaomei！你几岁？Xiaomei：我六岁。你呢？Leo：我七岁！Xiaomei：哇！真的吗？Leo：哈哈！不是。我六岁。Xiaomei：我也是！看！我的书包是蓝色和黄色的。数字六！Leo：Xiaomei，拉拉手。我们是好朋友！(Hěn gāoxìng rènshi nǐ, Xiaomei! — Zǎoshang. Leo: Zǎoshang hǎo! Nǐ jiào shénme míngzi láizhe? Xiaomei: Wǒ jiào Xiaomei. Leo: Hěn gāoxìng rènshi nǐ, Xiaomei! Nǐ jǐ suì? Xiaomei: Wǒ liù suì. Nǐ ne? Leo: Wǒ qī suì! Xiaomei: Wā! Zhēn de ma? Leo: Hāha! Bú shì. Wǒ liù suì. Xiaomei: Wǒ yě shì! Kàn! Wǒ de shūbāo shì lánsè hé huángsè de. Shùzì liù! Leo: Xiaomei, lāla shǒu. Wǒmen shì hǎo péngyou!)",
+     "baihat": "认识你 (giai điệu Row, Row, Row Your Boat, cùng bài Nice to Meet You) — 你好你好叫什么？/ 我叫Xiaomei。/ 很高兴呀认识你！/ 我呀六岁啦！(Nǐ hǎo nǐ hǎo jiào shénme? / Wǒ jiào Xiaomei. / Hěn gāoxìng ya rènshi nǐ! / Wǒ ya liù suì la!)"
+    }
+   }
+  },
+  {
+   "buoi": 11,
+   "unit": 3,
+   "label_buoi": "Buổi dạy 11. Unit 3 · Family – Gia đình em (ảnh gia đình, Who is he? / Who is she?)",
+   "web": [
+    {
+     "ngay": 21,
+     "label": "Ngày 21. Unit 3 · Ảnh gia đình: Who is she?",
+     "en": {
+      "tu": "Mới: photo, mother | Ôn: family, who, she, mummy",
+      "cum": "a family photo / my mother / who is she",
+      "cau": "Look! A family photo. / Who is she? – She is my mummy. / She is my mother. / This is my family. / [Lệnh lớp học] Look at the photo. Point to the mother. / Find the baby. / [Lời web] Vào bài: \"Let's learn! 我们一起学！\" · Chuyển ý: \"Tiếp nào! Next! 下一个！\" · Khen: \"Great! 真棒！\"",
+      "truyen": "Family Photo — Bông: Look! A family photo. Leo: Who is she? Bông: She is my mummy. She is my mother. Leo: Hello, Bông's mummy! Bông: I love my family photo.",
+      "video": "This is My Family – Florentis Learning – https://www.youtube.com/watch?v=T02Q3hMGlOI"
+     },
+     "zh": {
+      "tu": "Mới: 照片 zhàopiàn (= photo), 家庭 jiātíng (= family) | Ôn: 谁 shéi, 她 tā, 妈妈 māma, 家人 jiārén",
+      "cum": "家庭照片 jiātíng zhàopiàn / 她是谁 tā shì shéi / 我妈妈 wǒ māma",
+      "cau": "[Cầu nối] Who is she? – She is my mummy. ↔ 她是谁？— 她是我妈妈。(Tā shì shéi? — Tā shì wǒ māma.) [giống: She is my ↔ 她是我, cùng thứ tự · khác: Who đầu câu ↔ 谁 cuối câu; photo ↔ 照片] / 看！这是我的家庭照片。(Kàn! Zhè shì wǒ de jiātíng zhàopiàn.) / 她是谁？(Tā shì shéi?) — 她是我妈妈。(Tā shì wǒ māma.) / 这是我的家人。(Zhè shì wǒ de jiārén.) / 宝宝在哪儿？(Bǎobao zài nǎr?) (= Find the baby.) / [Lệnh lớp học] 看一看照片：她是谁？(Kàn yi kàn zhàopiàn: Tā shì shéi?) / 听问题，回答：她是我妈妈。(Tīng wèntí, huídá: Tā shì wǒ māma.) / [Chuyển ngữ] [nghe rối Leo nói 1 câu tiếng Anh, nói lại ý đó bằng tiếng Trung cho rối Xiaomei, ghi âm trên Trang luyện nói] Leo: Look! A family photo. → 看！家庭照片！(Kàn! Jiātíng zhàopiàn!)",
+      "truyen": "家庭照片 (Family Photo) — Bông：看！这是我的家庭照片。Leo：她是谁？Bông：她是我妈妈。Leo：Bông的妈妈，您好！Bông：我喜欢我的家庭照片。(Jiātíng zhàopiàn — Bông: Kàn! Zhè shì wǒ de jiātíng zhàopiàn. Leo: Tā shì shéi? Bông: Tā shì wǒ māma. Leo: Bông de māma, nín hǎo! Bông: Wǒ xǐhuan wǒ de jiātíng zhàopiàn.)",
+      "video": "我的家人 My Family – SMAP Education – https://www.youtube.com/watch?v=HcN6qd23x-c"
+     }
+    },
+    {
+     "ngay": 22,
+     "label": "Ngày 22. Unit 3 · Anh trai, em gái, em bé: Who is he?",
+     "en": {
+      "tu": "Mới: baby, older, younger | Ôn: brother, sister, little, he, daddy",
+      "cum": "my older brother / my younger sister / a baby / baby brother",
+      "cau": "Who is he? – He is my daddy. / This is my older brother. / This is my younger sister. / Look! A baby. He is my baby brother. / Tick ✓ the baby. Cross ✗ the cat. / Choose: brother or sister?",
+      "truyen": "My Brother and Sister — Leo: Who is he? Bông: He is my daddy. And this is my older brother. Leo: Who is she? Bông: She is my younger sister. Look! A baby. He is my baby brother. Leo: A little baby!",
+      "video": "The People In My Family – Super Simple Songs – https://www.youtube.com/watch?v=yDua9ms9_eg"
+     },
+     "zh": {
+      "tu": "Ôn: 他 tā, 哥哥 gēge, 妹妹 mèimei, 弟弟 dìdi, 宝宝 bǎobao, 爸爸 bàba | Ghi chú chữ (không ghi Mới): 他 / 她 cùng đọc tā, chữ 她 có bộ 女",
+      "cum": "他是谁 tā shì shéi / 我哥哥 wǒ gēge / 我妹妹 wǒ mèimei / 宝宝 bǎobao",
+      "cau": "[Cầu nối] Who is he? – He is my daddy. ↔ 他是谁？— 他是我爸爸。(Tā shì shéi? — Tā shì wǒ bàba.) [giống: He is my ↔ 他是我 · khác: he / she nghe khác nhau, 他 / 她 cùng đọc tā, chỉ khác chữ (她 có bộ 女)] / [Ngữ pháp: he / she – 他 / 她 cùng đọc tā; chữ 她 có bộ 女] 他是谁？(Tā shì shéi?) — 他是我爸爸。(Tā shì wǒ bàba.) / 这是我哥哥。(Zhè shì wǒ gēge.) / 这是我妹妹。(Zhè shì wǒ mèimei.) / 看！宝宝！他是我弟弟。(Kàn! Bǎobao! Tā shì wǒ dìdi.) / 看一看：宝宝打✓，猫打✗。(Kàn yi kàn: bǎobao dǎ gōu, māo dǎ chā.) (= Tick ✓ the baby. Cross ✗ the cat.) / 选一选：哥哥还是妹妹？(Xuǎn yi xuǎn: gēge háishi mèimei?)",
+      "truyen": "我的哥哥和妹妹 (My Brother and Sister) — Leo：他是谁？Bông：他是我爸爸。这是我哥哥。Leo：她是谁？Bông：她是我妹妹。看！这是宝宝，他是我弟弟。Leo：小宝宝！(Wǒ de gēge hé mèimei — Leo: Tā shì shéi? Bông: Tā shì wǒ bàba. Zhè shì wǒ gēge. Leo: Tā shì shéi? Bông: Tā shì wǒ mèimei. Kàn! Zhè shì bǎobao, tā shì wǒ dìdi. Leo: Xiǎo bǎobao!)",
+      "video": "谁有兄弟姐妹 Who Has Siblings? – Little Chinese Learners – https://www.youtube.com/watch?v=iNCv5ex7sqA"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: photo, mother, baby, older, younger | Ôn: family, who, he, she, brother, sister, little, daddy, mummy | Thẻ lệnh đề: tick, cross, draw a line, choose",
+     "slide": "[Lời cô] Vào bài: \"Good morning, class! 小朋友们好！\" · Khen: \"Well done! 真棒！\" · Chuyển ý: \"Let's sing! 我们一起唱吧！\" · Nhắc: \"Try again! 再试一次！\" · Khen thêm: \"Đúng rồi! Good job! 对了！\" · Câu mới buổi này (nhắc): \"Trật tự nào! Quiet, please. 请安静。\" 1) Nghe chọn tranh (4 câu): She is my mother. / He is my daddy. / This is my older brother. / This is my younger sister. 2) Hỏi – đáp với ảnh gia đình con mang tới: Who is she? – She is my ___. / Who is he? – He is my ___. 3) Xếp tranh người thân từ nhỏ đến lớn và nói: baby – younger sister – older brother – mother. 4) Lệnh đề: Look at the photo. Tick ✓ the mother. Cross ✗ the baby. / Choose: (a) brother (b) sister. 5) [Chuyển ngữ] Rối Leo nói 1 câu tiếng Anh, con nói lại ý đó bằng tiếng Trung cho rối Xiaomei (chỉ hiểu tiếng Trung): \"He is my daddy.\" → \"他是我爸爸。(Tā shì wǒ bàba.)\"; từng con nói, cả lớp vỗ tay khi Xiaomei hiểu. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"Look! This is my family photo. He is my daddy, and she is my mummy.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 看！这是我的家庭照片。他是我爸爸，她是我妈妈。 (Kàn! Zhè shì wǒ de jiātíng zhàopiàn. Tā shì wǒ bàba, tā shì wǒ māma.)",
+     "truyen": "Bông's Family Photo (phần 1) — It's lesson time. Bông has a family photo. Leo: Who is she? Bông: She is my mummy. She is my mother. Leo: Who is he? Bông: He is my daddy. This is my older brother, and this is my younger sister. Look! A baby. He is my baby brother. Leo: A little baby!",
+     "baihat": "Who Is She? (giai điệu Frère Jacques) — Who is she? Who is she? / She's my mummy! She's my mummy! / Who is he? Who is he? / He's my daddy! He's my daddy!"
+    },
+    "zh": {
+     "flash": "Mới: 照片 zhàopiàn, 家庭 jiātíng | Ôn: 谁 shéi, 他 tā, 她 tā, 妈妈 māma, 爸爸 bàba, 哥哥 gēge, 妹妹 mèimei, 宝宝 bǎobao | Thẻ lệnh đề: 选 xuǎn, 对 duì, 错 cuò | Ghi chú chữ (không làm thẻ): bộ 女 nǚ trong chữ 她",
+     "slide": "1) Nghe chọn tranh (4 câu): 她是我妈妈。(Tā shì wǒ māma.) / 他是我爸爸。(Tā shì wǒ bàba.) / 这是我哥哥。(Zhè shì wǒ gēge.) / 这是我妹妹。(Zhè shì wǒ mèimei.) 2) Nhìn chữ: cô chỉ bộ 女 (nǚ) trong chữ 她, hai chữ 他 / 她 cùng đọc tā; con ghép chữ với tranh có tên người thân: 他是我爸爸 / 她是我妈妈. 3) Hỏi – đáp với ảnh gia đình: 她是谁？— 她是我___。/ 他是谁？— 他是我___。 4) Xếp tranh người thân từ nhỏ đến lớn và nói (cùng tranh với phần tiếng Anh): 宝宝 – 妹妹 – 哥哥 – 妈妈 (bǎobao – mèimei – gēge – māma). 5) Lệnh đề: 看照片：妈妈打✓，宝宝打✗。(Kàn zhàopiàn: māma dǎ gōu, bǎobao dǎ chā.) / 选一选：哥哥还是妹妹？(Xuǎn yi xuǎn: gēge háishi mèimei?) 6) [Cầu nối Anh – Trung] Cùng ảnh gia đình: rối Leo nói tiếng Anh \"Who is she? – She is my mother.\", rối Xiaomei nói tiếng Trung \"她是谁？— 她是我妈妈。(Tā shì shéi? — Tā shì wǒ māma.)\"; con tìm điểm giống và khác. Cô chỉ: giống: She is my ↔ 她是我 · khác: he / she khác âm, 他 / 她 cùng âm tā, khác chữ; Who đầu câu ↔ 谁 cuối câu.",
+     "truyen": "我的家庭照片 (Bông's Family Photo, phần 1) — 上课了。Bông有家庭照片。Leo：她是谁？Bông：她是我妈妈。Leo：他是谁？Bông：他是我爸爸。这是我哥哥，这是我妹妹。看！这是宝宝，他是我弟弟。Leo：小宝宝！(Wǒ de jiātíng zhàopiàn — Shàngkè le. Bông yǒu jiātíng zhàopiàn. Leo: Tā shì shéi? Bông: Tā shì wǒ māma. Leo: Tā shì shéi? Bông: Tā shì wǒ bàba. Zhè shì wǒ gēge, zhè shì wǒ mèimei. Kàn! Zhè shì bǎobao, tā shì wǒ dìdi. Leo: Xiǎo bǎobao!)",
+     "baihat": "她是谁 (giai điệu 两只老虎 = Frère Jacques, cùng bài Who Is She?) — 她是谁呀？她是谁呀？/ 是妈妈，是妈妈！/ 他是谁呀？他是谁呀？/ 是爸爸，是爸爸！(Tā shì shéi ya? Tā shì shéi ya? / Shì māma, shì māma! / Tā shì shéi ya? Tā shì shéi ya? / Shì bàba, shì bàba!)"
+    }
+   }
+  },
+  {
+   "buoi": 12,
+   "unit": 3,
+   "label_buoi": "Buổi dạy 12. Unit 3 · Family – Gia đình em (cô, chú, mẹ Xiaomei đến lớp)",
+   "web": [
+    {
+     "ngay": 23,
+     "label": "Ngày 23. Unit 3 · Mẹ của Xiaomei đến lớp: sit down, learn",
+     "en": {
+      "tu": "Mới: learn, down | Ôn (từ nối Unit 2): nice, number, year, again, wow | Nghe hiểu (tranh cờ): Chinese, Vietnamese",
+      "cum": "sit down / look down / learn numbers",
+      "cau": "Sit down, Leo! / I learn numbers with my mother. / Xiaomei's mother is Chinese. – I'm Vietnamese. / My older brother is eight years old. / Look down! A baby! Wow! / Draw a line: Leo – his mother. / Listen and choose the picture.",
+      "truyen": "Xiaomei's Mother — Mrs Lan: Sit down, kids. Look! Xiaomei's mother is in the class. Xiaomei: She is my mother. She is Chinese. Mother: Hello, kids! Nice to meet you! Kids: Wow! Nice to meet you! Kids learn numbers with Xiaomei's mother: seven, eight, nine, ten!",
+      "video": "Tìm YouTube: \"sit down stand up song for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 中国人 Zhōngguó rén (= Chinese – tranh cờ Trung Quốc), 越南人 Yuènán rén (= Vietnamese – tranh cờ Việt Nam), 学 xué (= learn) | Ôn (từ nối Unit 2): 认识 rènshi, 高兴 gāoxìng, 数字 shùzì, 七 qī, 八 bā, 九 jiǔ",
+      "cum": "学数字 xué shùzì / 和妈妈学 hé māma xué / 是中国人 shì Zhōngguó rén / 很高兴认识您 hěn gāoxìng rènshi nín / 坐下 zuòxià",
+      "cau": "[Cầu nối] I learn numbers with my mother. ↔ 我和妈妈学数字。(Wǒ hé māma xué shùzì.) [giống: learn ↔ 学, numbers ↔ 数字 · khác: with my mother ↔ 和妈妈 đứng trước 学; numbers có -s, 数字 không đổi] / 坐下，Leo！(Zuòxià, Leo!) (= Sit down, Leo!) / 我和妈妈学数字。(Wǒ hé māma xué shùzì.) (= I learn numbers with my mother.) / 我哥哥八岁。(Wǒ gēge bā suì.) / (nghe làm quen) 往下看！宝宝！哇！(Wǎng xià kàn! Bǎobao! Wā!) (= Look down! A baby! Wow!) / 看！这是Xiaomei的妈妈。她是中国人。(Kàn! Zhè shì Xiaomei de māma. Tā shì Zhōngguó rén.) / 很高兴认识您！(Hěn gāoxìng rènshi nín!) (= Nice to meet you!) / 我是越南人。(Wǒ shì Yuènán rén.) / 哇！我们和Xiaomei的妈妈学数字：七、八、九、十！(Wā! Wǒmen hé Xiaomei de māma xué shùzì: qī, bā, jiǔ, shí!) / 听一听，选一选：她是中国人。对还是错？(Tīng yi tīng, xuǎn yi xuǎn: Tā shì Zhōngguó rén. Duì háishi cuò?)",
+      "truyen": "Xiaomei的妈妈 (Xiaomei's Mother) — Lan老师：小朋友，坐下。看！这是Xiaomei的妈妈。Xiaomei：她是我妈妈。她是中国人。妈妈：小朋友们好！很高兴认识你们！小朋友：哇！很高兴认识您！小朋友和Xiaomei的妈妈学数字：七、八、九、十！(Xiaomei de māma — Lan lǎoshī: Xiǎo péngyou, zuòxià. Kàn! Zhè shì Xiaomei de māma. Xiaomei: Tā shì wǒ māma. Tā shì Zhōngguó rén. Māma: Xiǎo péngyoumen hǎo! Hěn gāoxìng rènshi nǐmen! Xiǎo péngyou: Wā! Hěn gāoxìng rènshi nín! Xiǎo péngyou hé Xiaomei de māma xué shùzì: qī, bā, jiǔ, shí!)",
+      "video": "Tìm YouTube: \"坐下 站起来 儿歌 课堂\""
+     }
+    },
+    {
+     "ngay": 24,
+     "label": "Ngày 24. Unit 3 · Cô và chú: aunt, uncle",
+     "en": {
+      "tu": "Mới: aunt, uncle | Ôn (từ nối Unit 2): me too, about, nine, ten, really",
+      "cum": "my aunt / my uncle / what about you",
+      "cau": "Who is he? – He is my uncle. / Who is she? – She is my aunt. / I have an aunt and an uncle. What about you? – Me too! / Really? Nine cousins? / Choose the right picture: my aunt or my uncle? / Look at the example: This is my uncle.",
+      "truyen": "Uncle and Aunt — Anna has a family photo. Leo: Who is he? Anna: He is my uncle. Leo: Who is she? Anna: She is my aunt. I have nine cousins! Leo: Wow! Really? Me too!",
+      "video": "Tìm YouTube: \"aunt uncle cousin family song for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 叔叔 shūshu (= uncle), 阿姨 āyí (= aunt) | Ôn (từ nối Unit 2): 我也是 wǒ yě shì, 你呢 nǐ ne, 九 jiǔ, 十 shí, 真的吗 zhēn de ma | Nghe làm quen: 表哥 biǎogē, 表姐 biǎojiě (= cousins, tranh)",
+      "cum": "我叔叔 wǒ shūshu / 我阿姨 wǒ āyí / 叔叔和阿姨 shūshu hé āyí / 你呢 nǐ ne",
+      "cau": "[Cầu nối] He is my uncle. She is my aunt. ↔ 他是我叔叔。她是我阿姨。(Tā shì wǒ shūshu. Tā shì wǒ āyí.) [giống: cùng mẫu He / She is my … ↔ 他 / 她是我… · khác: tiếng Trung có nhiều từ cho cô, chú; bài này dùng 叔叔, 阿姨] / 他是谁？(Tā shì shéi?) — 他是我叔叔。(Tā shì wǒ shūshu.) / 她是谁？(Tā shì shéi?) — 她是我阿姨。(Tā shì wǒ āyí.) / 我有叔叔和阿姨。你呢？(Wǒ yǒu shūshu hé āyí. Nǐ ne?) — 我也是！(Wǒ yě shì!) / (nghe làm quen) 真的吗？九个表哥表姐？(Zhēn de ma? Jiǔ ge biǎogē biǎojiě?) (= Really? Nine cousins?) / 说一说：这是我叔叔。(Shuō yi shuō: Zhè shì wǒ shūshu.) / [Chuyển ngữ] [nghe rối Leo nói 1 câu tiếng Anh, nói lại ý đó bằng tiếng Trung cho rối Xiaomei, ghi âm trên Trang luyện nói] Leo: I have an aunt and an uncle. → 我有叔叔和阿姨。(Wǒ yǒu shūshu hé āyí.)",
+      "truyen": "叔叔和阿姨 (Uncle and Aunt) — Anna有家庭照片。Leo：他是谁？Anna：他是我叔叔。Leo：她是谁？Anna：她是我阿姨。我有九个表哥表姐！Leo：哇！真的吗？我也是！(Shūshu hé āyí — Anna yǒu jiātíng zhàopiàn. Leo: Tā shì shéi? Anna: Tā shì wǒ shūshu. Leo: Tā shì shéi? Anna: Tā shì wǒ āyí. Wǒ yǒu jiǔ ge biǎogē biǎojiě! Leo: Wā! Zhēn de ma? Wǒ yě shì!)",
+      "video": "Tìm YouTube: \"叔叔 阿姨 家人 儿歌\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: learn, down, aunt, uncle | Ôn (từ nối Unit 2): nice, number, me too, about, nine, ten, wow | Nghe hiểu (tranh cờ): Chinese, Vietnamese",
+     "slide": "[Lời cô] Vào bài: \"Good morning, class! 小朋友们好！\" · Khen: \"Well done! 真棒！\" · Nhắc: \"Try again! 再试一次！\" · Khen thêm: \"Đúng rồi! Good job! 对了！\" · Nhắc: \"Trật tự nào! Quiet, please. 请安静。\" 1) Nghe và làm theo (4 lệnh): Sit down! / Look down! / Write number nine! / Wave goodbye! 2) Cây gia đình trên slide – chạm và nói: Who is he? – He is my uncle. / Who is she? – She is my aunt. 3) Chuỗi What about you?: I have an uncle. What about you? – Me too! / I have an aunt. What about you? – Me too! 4) [Chuyển ngữ] Rối Xiaomei nói 1 câu tiếng Trung, con nói lại ý đó bằng tiếng Anh cho rối Leo (chỉ hiểu tiếng Anh): \"她是我妈妈。她是中国人。(Tā shì wǒ māma. Tā shì Zhōngguó rén.)\" → \"She is my mother. She is Chinese.\"; từng con nói, cả lớp vỗ tay khi Leo hiểu. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"He is my uncle, and she is my aunt. I learn numbers with my aunt.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 他是我叔叔，她是我阿姨。我和阿姨学数字。 (Tā shì wǒ shūshu, tā shì wǒ āyí. Wǒ hé āyí xué shùzì.)",
+     "truyen": "Xiaomei's Mother — Mrs Lan: Sit down, kids. Look! Xiaomei's mother is in the class. She is Chinese. Mother: Hello, kids! Nice to meet you! Kids: Nice to meet you! Kids learn numbers with Xiaomei's mother. Look! Anna has a photo. Leo: Who is he? Anna: He is my uncle. Leo: Who is she? Anna: She is my aunt. I have nine cousins! Leo: Wow! Really?",
+     "baihat": "Uncle and Aunt (giai điệu London Bridge Is Falling Down) — Who is he? He is my uncle, / is my uncle, is my uncle. / Who is she? She is my aunt. / I love them!"
+    },
+    "zh": {
+     "flash": "Mới: 中国人 Zhōngguó rén, 越南人 Yuènán rén, 学 xué, 叔叔 shūshu, 阿姨 āyí | Ôn: 坐下 zuòxià | Ôn (từ nối Unit 2): 认识 rènshi, 高兴 gāoxìng, 我也是 wǒ yě shì, 你呢 nǐ ne, 数字 shùzì",
+     "slide": "1) Nghe và làm theo (4 lệnh, cùng 4 lệnh với phần tiếng Anh): 坐下！(Zuòxià!) / (nghe làm quen) 往下看！(Wǎng xià kàn!) / 写一写：九！(Xiě yi xiě: jiǔ!) / 挥挥手，再见！(Huīhui shǒu, zàijiàn!) 2) Cây gia đình – chạm và nói: 他是谁？— 他是我叔叔。/ 她是谁？— 她是我阿姨。 3) Chuỗi 你呢: 我有叔叔。你呢？— 我也是！(Wǒ yǒu shūshu. Nǐ ne? — Wǒ yě shì!) / 我有阿姨。你呢？— 我也是！(Wǒ yǒu āyí. Nǐ ne? — Wǒ yě shì!) 4) [Cầu nối Anh – Trung] Cùng tranh mẹ Xiaomei dạy đếm: rối Leo nói tiếng Anh \"I learn numbers with my mother.\", rối Xiaomei nói tiếng Trung \"我和妈妈学数字。(Wǒ hé māma xué shùzì.)\"; con tìm điểm giống và khác. Cô chỉ: giống: learn ↔ 学, numbers ↔ 数字 · khác: with my mother ↔ 和妈妈 đứng trước 学.",
+     "truyen": "Xiaomei的妈妈 (Xiaomei's Mother) — Lan老师：小朋友，坐下。看！这是Xiaomei的妈妈。她是中国人。妈妈：小朋友们好！很高兴认识你们！小朋友：很高兴认识您！小朋友和Xiaomei的妈妈学数字：七、八、九、十！看！Anna有家庭照片。Leo：他是谁？Anna：他是我叔叔。Leo：她是谁？Anna：她是我阿姨。我有九个表哥表姐！Leo：哇！真的吗？(Xiaomei de māma — Lan lǎoshī: Xiǎo péngyou, zuòxià. Kàn! Zhè shì Xiaomei de māma. Tā shì Zhōngguó rén. Māma: Xiǎo péngyoumen hǎo! Hěn gāoxìng rènshi nǐmen! Xiǎo péngyou: Hěn gāoxìng rènshi nín! Xiǎo péngyou hé Xiaomei de māma xué shùzì: qī, bā, jiǔ, shí! Kàn! Anna yǒu jiātíng zhàopiàn. Leo: Tā shì shéi? Anna: Tā shì wǒ shūshu. Leo: Tā shì shéi? Anna: Tā shì wǒ āyí. Wǒ yǒu jiǔ ge biǎogē biǎojiě! Leo: Wā! Zhēn de ma?)",
+     "baihat": "叔叔阿姨 (giai điệu London Bridge Is Falling Down, cùng bài Uncle and Aunt) — 他是谁？他是叔叔，/ 是叔叔，是叔叔。/ 她是谁？她是阿姨。/ 我爱他们！(Tā shì shéi? Tā shì shūshu, / shì shūshu, shì shūshu. / Tā shì shéi? Tā shì āyí. / Wǒ ài tāmen!)"
+    }
+   }
+  },
+  {
+   "buoi": 13,
+   "unit": 3,
+   "label_buoi": "Buổi dạy 13. Unit 3 · Family – Gia đình em (I love my family, ôn không tranh) · Starters Nghe phần 1",
+   "web": [
+    {
+     "ngay": 25,
+     "label": "Ngày 25. Unit 3 · Con yêu gia đình: I love my family",
+     "en": {
+      "tu": "Mới: love, them | Ôn: grandma, grandpa, family, young",
+      "cum": "I love my family / I love them / grandfather and grandmother / Mr and Mrs",
+      "cau": "I love my family. / This is my grandmother and my grandfather. I love them! / My cousin is a girl. / Mr Nam is my father. / The children are happy. / Listen and draw a line from Grandma to the baby.",
+      "truyen": "I Love My Family — Bông: This is my grandfather and grandmother. This is my father and my mother. This is my cousin. She is a little girl. I love my family. I love them!",
+      "video": "My Family, I Love You – Pinkfong – https://www.youtube.com/watch?v=G3v28DX-7Dk"
+     },
+     "zh": {
+      "tu": "Mới: 爱 ài (= love), 我爱 wǒ ài (= I love), 女孩 nǚhái (= girl – chữ 女 nǚ, như bộ 女 trong 她) | Ôn: 家人 jiārén, 爷爷 yéye, 奶奶 nǎinai, 爸爸 bàba, 妈妈 māma | Nghe làm quen: 表妹 biǎomèi (= cousin, tranh)",
+      "cum": "我爱我的家人 wǒ ài wǒ de jiārén / 我爱爸爸妈妈 wǒ ài bàba māma / 爷爷奶奶 yéye nǎinai",
+      "cau": "[Cầu nối] I love my family. ↔ 我爱我的家人。(Wǒ ài wǒ de jiārén.) [giống: Ai – yêu – ai, I love ↔ 我爱 cùng thứ tự · khác: my family ↔ 我的家人 có thêm 的] / 我爱我的家人。(Wǒ ài wǒ de jiārén.) / 我爱爸爸妈妈。(Wǒ ài bàba māma.) / 这是我爷爷和奶奶，我爱爷爷奶奶。(Zhè shì wǒ yéye hé nǎinai, wǒ ài yéye nǎinai.) / (nghe làm quen) 我爱他们！(Wǒ ài tāmen!) (= I love them!) / (nghe làm quen 表妹) 我表妹是小女孩。(Wǒ biǎomèi shì xiǎo nǚhái.) (= My cousin is a girl.) / 他叫Nam，他是我爸爸。(Tā jiào Nam, tā shì wǒ bàba.) (= Mr Nam is my father.) / 小朋友很开心。(Xiǎo péngyou hěn kāixīn.) (= The children are happy.) / 听一听，连一连：奶奶 — 宝宝。(Tīng yi tīng, lián yi lián: nǎinai — bǎobao.) (= Listen and draw a line from Grandma to the baby.) / [Chuyển ngữ] [nghe rối Leo nói 1 câu tiếng Anh, nói lại ý đó bằng tiếng Trung cho rối Xiaomei, ghi âm trên Trang luyện nói] Leo: This is my grandmother and my grandfather. → 这是我奶奶和爷爷。(Zhè shì wǒ nǎinai hé yéye.)",
+      "truyen": "我爱我的家人 (I Love My Family) — Bông：这是我爷爷和奶奶。这是我爸爸和妈妈。这是我表妹，她是小女孩。我爱我的家人！我爱他们！(Wǒ ài wǒ de jiārén — Bông: Zhè shì wǒ yéye hé nǎinai. Zhè shì wǒ bàba hé māma. Zhè shì wǒ biǎomèi, tā shì xiǎo nǚhái. Wǒ ài wǒ de jiārén! Wǒ ài tāmen!)",
+      "video": "我爱家人 I Love My Family – EduChinese – https://www.youtube.com/watch?v=0z38T38Sv60"
+     }
+    },
+    {
+     "ngay": 26,
+     "label": "Ngày 26. Unit 3 · Ôn không tranh: nghe và đoán người thân · Luyện nói YCT口试 听后重复",
+     "en": {
+      "tu": "Ôn (không tranh): photo, mother, baby, older, younger, learn, down, aunt, uncle, love, them | Nghe hiểu: Chinese, Vietnamese | Ôn khóa trước: brother, sister, grandma, grandpa, who, big, little",
+      "cum": "a family photo / my older brother / my younger sister / my uncle / I love them",
+      "cau": "Who is she? – She is my aunt. / Who is he? – He is my uncle. / This is my big brother. / Sit down, kids! / I love them!",
+      "truyen": "Photo Day in Class — Mrs Lan: Kids, it's lesson time. Sit down. Look at your family photo! Leo: Who is she? Anna: She is my aunt. Leo: Who is he? Anna: He is my uncle. And this is my baby cousin. Anna: I love them!",
+      "video": "Tìm YouTube: \"who is she who is he family song for kids\""
+     },
+     "zh": {
+      "tu": "Ôn (không tranh): 照片 zhàopiàn, 家庭 jiātíng, 宝宝 bǎobao, 坐下 zuòxià, 中国人 Zhōngguó rén, 越南人 Yuènán rén, 叔叔 shūshu, 阿姨 āyí, 爱 ài | Ôn khóa trước: 哥哥 gēge, 姐姐 jiějie, 弟弟 dìdi, 妹妹 mèimei, 家 jiā | Nghe làm quen: 表弟 biǎodì (= baby cousin, tranh)",
+      "cum": "家庭照片 jiātíng zhàopiàn / 他是我叔叔 tā shì wǒ shūshu / 她是我阿姨 tā shì wǒ āyí / 我爱我的家人 wǒ ài wǒ de jiārén",
+      "cau": "[Cầu nối] Who is she? – She is my aunt. ↔ 她是谁？— 她是我阿姨。(Tā shì shéi? — Tā shì wǒ āyí.) [giống: She is my aunt ↔ 她是我阿姨 cùng thứ tự · khác: Who đầu câu ↔ 谁 cuối câu] / 她是谁？— 她是我阿姨。(Tā shì shéi? — Tā shì wǒ āyí.) / 他是谁？— 他是我叔叔。(Tā shì shéi? — Tā shì wǒ shūshu.) / 这是我哥哥。(Zhè shì wǒ gēge.) (= This is my big brother.) / 坐下，小朋友！(Zuòxià, xiǎo péngyou!) (= Sit down, kids!) / 我爱他们！(Wǒ ài tāmen!) / 我爱我的家人！(Wǒ ài wǒ de jiārén!) / [YCT口试（初级）第一部分 听后重复 (mẫu): con nghe từng câu, nói lại 1 lần, ghi âm trên Trang luyện nói, ~5 phút] 听，说：这是我的家庭照片。(Zhè shì wǒ de jiātíng zhàopiàn.) / 她是我妈妈。(Tā shì wǒ māma.) / 他是我叔叔。(Tā shì wǒ shūshu.) / 我爱我的家人。(Wǒ ài wǒ de jiārén.) / 小朋友，坐下。(Xiǎo péngyou, zuòxià.)",
+      "truyen": "看照片 (Photo Day in Class) — Lan老师：小朋友，上课了。坐下。看看你们的家庭照片！Leo：她是谁？Anna：她是我阿姨。Leo：他是谁？Anna：他是我叔叔。这是我的小表弟，他是宝宝。我爱他们！(Kàn zhàopiàn — Lan lǎoshī: Xiǎo péngyou, shàngkè le. Zuòxià. Kànkan nǐmen de jiātíng zhàopiàn! Leo: Tā shì shéi? Anna: Tā shì wǒ āyí. Leo: Tā shì shéi? Anna: Tā shì wǒ shūshu. Zhè shì wǒ de xiǎo biǎodì, tā shì bǎobao. Wǒ ài tāmen!)",
+      "video": "Tìm YouTube: \"他是谁 她是谁 儿歌\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: love, them | Nghe hiểu mở rộng: grandfather, grandmother, father, mum, cousin, girl, child/children, woman/women, Mr, Miss | Ôn: photo, mother, baby, aunt, uncle, grandma, grandpa",
+     "slide": "[Lời cô] Vào bài: \"Good morning, class! 小朋友们好！\" · Khen: \"Well done! 真棒！\" · Nhắc: \"Try again! 再试一次！\" · Khen thêm: \"Good job! 对了！\" · Nhắc: \"Trật tự nào! Quiet, please. 请安静。\" · Câu mới buổi này (chuyển ý): \"Mình chơi nhé! Let's play! 我们一起玩吧！\" 1) Nghe chọn tranh (4 câu): This is my grandfather. / This is my grandmother. / My cousin is a girl. / Mr Nam and Mrs Lan. 2) Làm thiệp tặng gia đình: con dán ảnh, nói khi tặng: I love my family. I love them! 3) Ôn không tranh – nghe câu, giơ thẻ người thân: He is my uncle. / She is my aunt. / He is my baby brother. / She is my younger sister. 4) Starters Nghe phần 1 (mẫu, nhẹ): tranh gia đình Bông ở công viên, ngoài tranh có tên Anna, Leo, Xiaomei, Bông. Look at the picture. Listen and draw a line. Example: This is Anna. She is the baby. (nối Anna với em bé) 1. Leo is sitting down with his uncle. 2. Xiaomei is with her mother. She is happy. 3. Bông is the older sister. She has got a photo. 5) [Chuyển ngữ] Rối Leo nói 1 câu tiếng Anh, con nói lại ý đó bằng tiếng Trung cho rối Xiaomei (chỉ hiểu tiếng Trung): \"This is my grandfather.\" → \"这是我爷爷。(Zhè shì wǒ yéye.)\"; từng con nói, cả lớp vỗ tay khi Xiaomei hiểu. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"This is my grandfather, and this is my grandmother. I love them!\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 这是我爷爷，这是我奶奶。我爱他们！ (Zhè shì wǒ yéye, zhè shì wǒ nǎinai. Wǒ ài tāmen!)",
+     "truyen": "I Love My Family — Bông: This is my grandfather and my grandmother. This is my father and my mother. This is my older brother and my younger sister. This is my cousin. She is a little girl. Mrs Lan: Wow, a big family! Bông: I love my family. I love them!",
+     "baihat": "I Love My Family (giai điệu Mary Had a Little Lamb) — I love my family, / family, family, / I love my family, / I love them!"
+    },
+    "zh": {
+     "flash": "Mới: 爱 ài, 我爱 wǒ ài | Ôn: 女孩 nǚhái, 表妹 biǎomèi (nghe làm quen), 照片 zhàopiàn, 家庭 jiātíng, 叔叔 shūshu, 阿姨 āyí, 爷爷 yéye, 奶奶 nǎinai, 家人 jiārén",
+     "slide": "1) Nghe chọn tranh (4 câu, cùng 4 tranh với phần tiếng Anh): 这是我爷爷。(Zhè shì wǒ yéye.) / 这是我奶奶。(Zhè shì wǒ nǎinai.) / (nghe làm quen 表妹) 我表妹是女孩。(Wǒ biǎomèi shì nǚhái.) / Nam叔叔和Lan老师。(Nam shūshu hé Lan lǎoshī.) 2) Làm thiệp: con nói khi tặng 我爱我的家人！我爱他们！(Wǒ ài wǒ de jiārén! Wǒ ài tāmen!) 3) Ôn không tranh – nghe câu, giơ thẻ: 他是我叔叔。/ 她是我阿姨。/ 这是我弟弟。/ 这是我妹妹。 4) [Cầu nối Anh – Trung] Cùng thiệp tặng gia đình: rối Leo nói tiếng Anh \"I love my family.\", rối Xiaomei nói tiếng Trung \"我爱我的家人。(Wǒ ài wǒ de jiārén.)\"; con tìm điểm giống và khác. Cô chỉ: giống: Ai – yêu – ai cùng thứ tự · khác: tiếng Trung thêm 的 sau 我.",
+     "truyen": "我爱我的家人 (I Love My Family) — Bông：这是我爷爷和奶奶。这是我爸爸和妈妈。这是我哥哥和妹妹。这是我表妹，她是小女孩。Lan老师：哇，好大的一家人！Bông：我爱我的家人！我爱他们！(Wǒ ài wǒ de jiārén — Bông: Zhè shì wǒ yéye hé nǎinai. Zhè shì wǒ bàba hé māma. Zhè shì wǒ gēge hé mèimei. Zhè shì wǒ biǎomèi, tā shì xiǎo nǚhái. Lan lǎoshī: Wā, hǎo dà de yì jiā rén! Bông: Wǒ ài wǒ de jiārén! Wǒ ài tāmen!)",
+     "baihat": "我爱我的家人 (giai điệu Mary Had a Little Lamb, cùng bài I Love My Family) — 我爱我的家人，/ 家人，家人，/ 我爱我的家人，/ 我爱他们！(Wǒ ài wǒ de jiārén, / jiārén, jiārén, / wǒ ài wǒ de jiārén, / wǒ ài tāmen!)"
+    }
+   }
+  },
+  {
+   "buoi": 14,
+   "unit": 3,
+   "label_buoi": "Buổi dạy 14. Unit 3 · Family – Gia đình em (kể truyện, Phiên dịch nhí, kiểm tra cuối unit) · Luyện đề YCT1 Đọc phần 2",
+   "web": [
+    {
+     "ngay": 27,
+     "label": "Ngày 27. Unit 3 · Truyện của unit + chuyển ngữ: Bông's Family Photo · Bông的家庭照片 · Luyện đề YCT1 Nghe phần 4",
+     "en": {
+      "tu": "Ôn: photo, mother, baby, older, younger, learn, down, aunt, uncle, love, them | Ôn (Unit 1): lesson, Mrs, kid, video",
+      "cum": "a family photo / sit down / my baby brother / I love my family",
+      "cau": "Who is he? – He is my daddy. / Who is she? – She is my mummy. / This is my older brother and this is my younger sister. / He is my uncle, and she is my aunt. / I love my family!",
+      "truyen": "Bông's Family Photo — It's lesson time. Mrs Lan: Kids, sit down. Look at Bông's family photo. Leo: Who is he? Bông: He is my daddy. Leo: Who is she? Bông: She is my mummy. This is my older brother, and this is my younger sister. Look down! A baby! He is my baby brother. Xiaomei: Wow! Who is he? Bông: He is my uncle, and she is my aunt. I love my family! I love them!",
+      "video": "My Family, I Love You – Pinkfong – https://www.youtube.com/watch?v=G3v28DX-7Dk"
+     },
+     "zh": {
+      "tu": "Ôn: 照片 zhàopiàn, 家庭 jiātíng, 宝宝 bǎobao, 坐下 zuòxià, 叔叔 shūshu, 阿姨 āyí, 爱 ài | Ôn (Unit 1): 上课 shàngkè, Lan老师 Lan lǎoshī, 小朋友 xiǎo péngyou",
+      "cum": "家庭照片 jiātíng zhàopiàn / 他是谁 tā shì shéi / 她是谁 tā shì shéi / 我爱我的家人 wǒ ài wǒ de jiārén",
+      "cau": "[Cầu nối] This is my older brother and this is my younger sister. ↔ 这是我哥哥，这是我妹妹。(Zhè shì wǒ gēge, zhè shì wǒ mèimei.) [giống: This is my ↔ 这是我 lặp hai lần · khác: older brother ↔ 哥哥, younger sister ↔ 妹妹: hai từ ↔ một từ] / 他是谁？— 他是我爸爸。(Tā shì shéi? — Tā shì wǒ bàba.) / 她是谁？— 她是我妈妈。(Tā shì shéi? — Tā shì wǒ māma.) / 这是我哥哥，这是我妹妹。(Zhè shì wǒ gēge, zhè shì wǒ mèimei.) / 他是我叔叔，她是我阿姨。(Tā shì wǒ shūshu, tā shì wǒ āyí.) / 我爱我的家人！(Wǒ ài wǒ de jiārén!) / [YCT1 Nghe phần 4 (mẫu): nghe hội thoại ngắn, chọn 1 trong 3 tranh A / B / C, 5 câu, ~10 phút] 听一听，选一选。(Tīng yi tīng, xuǎn yi xuǎn.) 1. Anna：他是谁？(Tā shì shéi?) Leo：他是我叔叔。(Tā shì wǒ shūshu.) [A chú ✓ / B ông / C em bé] 2. Anna：他是你哥哥吗？(Tā shì nǐ gēge ma?) Bông：是，他是我哥哥。(Shì, tā shì wǒ gēge.) [A anh trai ✓ / B bố / C em bé] 3. Bông：这是谁？(Zhè shì shéi?) Anna：这是我妹妹。(Zhè shì wǒ mèimei.) [A em gái ✓ / B anh trai / C mẹ] 4. Leo：你爱谁？(Nǐ ài shéi?) Bông：我爱我奶奶。(Wǒ ài wǒ nǎinai.) [A bà ✓ / B ông / C cô] 5. Anna：她是你阿姨吗？(Tā shì nǐ āyí ma?) Bông：是，她是我阿姨。(Shì, tā shì wǒ āyí.) [A cô ✓ / B mẹ / C chị]",
+      "truyen": "Bông的家庭照片 (Bông's Family Photo) — 上课了。Lan老师：小朋友，坐下。看看Bông的家庭照片。Leo：他是谁？Bông：他是我爸爸。Leo：她是谁？Bông：她是我妈妈。这是我哥哥，这是我妹妹。往下看！宝宝！他是我弟弟。Xiaomei：哇！他是谁？Bông：他是我叔叔，她是我阿姨。我爱我的家人！我爱他们！(Bông de jiātíng zhàopiàn — Shàngkè le. Lan lǎoshī: Xiǎo péngyou, zuòxià. Kànkan Bông de jiātíng zhàopiàn. Leo: Tā shì shéi? Bông: Tā shì wǒ bàba. Leo: Tā shì shéi? Bông: Tā shì wǒ māma. Zhè shì wǒ gēge, zhè shì wǒ mèimei. Wǎng xià kàn! Bǎobao! Tā shì wǒ dìdi. Xiaomei: Wā! Tā shì shéi? Bông: Tā shì wǒ shūshu, tā shì wǒ āyí. Wǒ ài wǒ de jiārén! Wǒ ài tāmen!)",
+      "video": "我爱家人 I Love My Family – EduChinese – https://www.youtube.com/watch?v=0z38T38Sv60"
+     }
+    },
+    {
+     "ngay": 28,
+     "label": "Ngày 28. Unit 3 · Phiên dịch nhí: giới thiệu gia đình Bông cho Xiaomei",
+     "en": {
+      "tu": "Ôn: mother, baby, older, younger, aunt, uncle, love | Ôn khóa trước: brother, sister, grandma, grandpa, family",
+      "cum": "my older brother / my younger sister / my aunt / my uncle",
+      "cau": "Bông: This is my older brother. / Bông: This is my younger sister. / Bông: He is my uncle. / Bông: She is my aunt. / Bông: I love my family.",
+      "truyen": "Leo Shows His Family — Leo: Look! My family photo. This is my grandpa and grandma. This is my mother. He is my uncle. She is my aunt. And this is my baby sister. I love them!",
+      "video": "This is My Family – Florentis Learning – https://www.youtube.com/watch?v=T02Q3hMGlOI"
+     },
+     "zh": {
+      "tu": "Ôn: 照片 zhàopiàn, 哥哥 gēge, 妹妹 mèimei, 叔叔 shūshu, 阿姨 āyí, 爱 ài, 家人 jiārén, 爷爷 yéye, 奶奶 nǎinai",
+      "cum": "这是我哥哥 zhè shì wǒ gēge / 这是我妹妹 zhè shì wǒ mèimei / 我爱我的家人 wǒ ài wǒ de jiārén",
+      "cau": "[Cầu nối] She is my aunt. ↔ 她是我阿姨。(Tā shì wǒ āyí.) [giống: She – is – my – aunt ↔ 她 – 是 – 我 – 阿姨, từng từ cùng thứ tự · khác: she / he khác âm, 她 / 他 cùng đọc tā] / 这是我哥哥。(Zhè shì wǒ gēge.) / 这是我妹妹。(Zhè shì wǒ mèimei.) / 他是我叔叔。(Tā shì wǒ shūshu.) / 她是我阿姨。(Tā shì wǒ āyí.) / 我爱我的家人。(Wǒ ài wǒ de jiārén.)",
+      "truyen": "Leo的家人 (Leo Shows His Family) — Leo：看！我的家庭照片。这是我爷爷和奶奶。这是我妈妈。他是我叔叔。她是我阿姨。这是我的小妹妹。我爱他们！(Leo de jiārén — Leo: Kàn! Wǒ de jiātíng zhàopiàn. Zhè shì wǒ yéye hé nǎinai. Zhè shì wǒ māma. Tā shì wǒ shūshu. Tā shì wǒ āyí. Zhè shì wǒ de xiǎo mèimei. Wǒ ài tāmen!)",
+      "video": "我的家人 My Family – SMAP Education – https://www.youtube.com/watch?v=HcN6qd23x-c"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn cả unit: photo, mother, baby, older, younger, learn, down, aunt, uncle, love, them | Nghe hiểu: Chinese, Vietnamese | Ôn khóa trước: family, who, brother, sister, grandma, grandpa",
+     "slide": "[Lời cô] Vào bài: \"Good morning, class! 小朋友们好！\" · Khen: \"Well done! 真棒！\" · Khen thêm: \"Good job! 对了！\" · Nhắc: \"Trật tự nào! Quiet, please. 请安静。\" · Chuyển ý: \"Mình chơi nhé! Let's play! 我们一起玩吧！\" 1) [Chuyển ngữ] Phiên dịch nhí (nói lại 1 câu) theo cặp: bạn A làm Bông giới thiệu ảnh bằng tiếng Anh (This is my older brother. / She is my aunt.), bạn B nói lại bằng tiếng Trung cho Xiaomei. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"This is my aunt, and that is my uncle. I love my family!\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 这是我阿姨，那是我叔叔。我爱我的家人！ (Zhè shì wǒ āyí, nà shì wǒ shūshu. Wǒ ài wǒ de jiārén!) 2) Kiểm tra cuối unit – nghe chọn tranh (5 câu): Who is she? – She is my aunt. / He is my uncle. / This is my younger sister. / Look! A baby. / Sit down! 3) Kể truyện theo tranh: mỗi con chọn 1 tranh trong Bông's Family Photo và nói câu của tranh.",
+     "truyen": "Bông's Family Photo — It's lesson time. Mrs Lan: Kids, sit down. Look at Bông's family photo. Leo: Who is he? Bông: He is my daddy. Leo: Who is she? Bông: She is my mummy. This is my older brother, and this is my younger sister. Look down! A baby! He is my baby brother. Xiaomei: Wow! Who is he? Bông: He is my uncle, and she is my aunt. I love my family! I love them!",
+     "baihat": "My Family Song (giai điệu Row, Row, Row Your Boat) — Love, love, love my family, / Mummy, Daddy, me! / Uncle, aunt and baby brother, / I love my family!"
+    },
+    "zh": {
+     "flash": "Ôn cả unit: 照片 zhàopiàn, 家庭 jiātíng, 宝宝 bǎobao, 妈妈 māma, 中国人 Zhōngguó rén, 越南人 Yuènán rén, 叔叔 shūshu, 阿姨 āyí, 爱 ài | Ôn khóa trước: 哥哥 gēge, 姐姐 jiějie, 弟弟 dìdi, 妹妹 mèimei, 爷爷 yéye, 奶奶 nǎinai",
+     "slide": "1) Phiên dịch nhí: nghe câu tiếng Anh của bạn, nói lại: 这是我哥哥。/ 她是我阿姨。/ 他是我叔叔。/ 我爱我的家人。 2) Kiểm tra cuối unit – nghe chọn tranh (5 câu, cùng 5 tranh với phần tiếng Anh): 她是谁？— 她是我阿姨。/ 他是我叔叔。/ 这是我妹妹。/ 看！宝宝！/ 坐下！ 3) Kể truyện theo tranh Bông的家庭照片: mỗi con nói câu của 1 tranh. 4) YCT1 Đọc phần 2 (mẫu): con đọc câu có pinyin, chọn tranh A–F đúng — 读一读，选一选。(Dú yi dú, xuǎn yi xuǎn.) 1. 她是我妈妈。(Tā shì wǒ māma.) 2. 他是我叔叔。(Tā shì wǒ shūshu.) 3. 我爱我奶奶。(Wǒ ài wǒ nǎinai.) 4. 这是我的家庭照片。(Zhè shì wǒ de jiātíng zhàopiàn.) 5. 这是宝宝。(Zhè shì bǎobao.) [Tranh A–F: mẹ, chú, con ôm bà, ảnh cả nhà, em bé, bạn gái cầm cờ Trung Quốc (tranh thừa)] 5) [Cầu nối Anh – Trung] Cùng ảnh gia đình Bông: rối Leo nói tiếng Anh \"This is my older brother and my younger sister.\", rối Xiaomei nói tiếng Trung \"这是我哥哥和我妹妹。(Zhè shì wǒ gēge hé wǒ mèimei.)\"; con tìm điểm giống và khác. Cô chỉ: giống: This is my ↔ 这是我, and ↔ 和 · khác: older brother ↔ 哥哥, younger sister ↔ 妹妹: hai từ ↔ một từ.",
+     "truyen": "Bông的家庭照片 (Bông's Family Photo) — 上课了。Lan老师：小朋友，坐下。看看Bông的家庭照片。Leo：他是谁？Bông：他是我爸爸。Leo：她是谁？Bông：她是我妈妈。这是我哥哥，这是我妹妹。往下看！宝宝！他是我弟弟。Xiaomei：哇！他是谁？Bông：他是我叔叔，她是我阿姨。我爱我的家人！我爱他们！(Bông de jiātíng zhàopiàn — Shàngkè le. Lan lǎoshī: Xiǎo péngyou, zuòxià. Kànkan Bông de jiātíng zhàopiàn. Leo: Tā shì shéi? Bông: Tā shì wǒ bàba. Leo: Tā shì shéi? Bông: Tā shì wǒ māma. Zhè shì wǒ gēge, zhè shì wǒ mèimei. Wǎng xià kàn! Bǎobao! Tā shì wǒ dìdi. Xiaomei: Wā! Tā shì shéi? Bông: Tā shì wǒ shūshu, tā shì wǒ āyí. Wǒ ài wǒ de jiārén! Wǒ ài tāmen!)",
+     "baihat": "我爱我的家 (giai điệu Row, Row, Row Your Boat, cùng bài My Family Song) — 爱爱爱我的家，/ 妈妈、爸爸、我！/ 叔叔、阿姨和弟弟，/ 我爱我的家人！(Ài ài ài wǒ de jiā, / māma, bàba, wǒ! / Shūshu, āyí hé dìdi, / wǒ ài wǒ de jiārén!)"
+    }
+   }
+  },
+  {
+   "buoi": 15,
+   "unit": 4,
+   "label_buoi": "Buổi dạy 15. Unit 4 · Body – Cơ thể em (cơ thể, tóc, tay, chân, ngón tay, ngón chân)",
+   "web": [
+    {
+     "ngay": 29,
+     "label": "Ngày 29. Unit 4 · Cơ thể của em: body, hair, arm",
+     "en": {
+      "tu": "Mới: body, hair, arm | Ôn: head, have, big, small, black",
+      "cum": "my body / black hair / long hair / two arms / a big head",
+      "cau": "This is my body. / I have a big head. / I have black hair. My hair is long. / This is my arm. I've got two arms. / [Lệnh lớp học] Point to your hair. Point to your arm. / Colour the hair black. / [Lời web] Vào bài: \"Let's learn! 我们一起学！\" · Chuyển ý: \"Next! 下一个！\" · Khen: \"Well done! 真棒！\" · Câu mới: \"Thử lại nào! Try again! 再试一次！\"",
+      "truyen": "My Body — Anna: Look! This is my body. I have a big head and long black hair. These are my arms. One, two! Leo: I've got two arms. Me too!",
+      "video": "My Body Vocabulary Chant – Fun Kids English – https://www.youtube.com/watch?v=mOyriQBIFV4"
+     },
+     "zh": {
+      "tu": "Mới: 身体 shēntǐ (= body), 头发 tóufa (= hair), 长 cháng (= long – tranh tóc dài) | Ôn: 头 tóu, 大 dà, 小 xiǎo, 黑色 hēisè | Nghe làm quen: 胳膊 gēbo (= arm, tranh)",
+      "cum": "我的身体 wǒ de shēntǐ / 头发很长 tóufa hěn cháng / 头很大 tóu hěn dà / (nghe làm quen) 我的胳膊 wǒ de gēbo",
+      "cau": "[Cầu nối] This is my body. ↔ 这是我的身体。(Zhè shì wǒ de shēntǐ.) [giống: This is my ↔ 这是我的, body ↔ 身体 · khác: tiếng Trung thêm 的 sau 我; I have black hair. ↔ 我的头发是黑色的。: tiếng Anh nói \"tôi có tóc đen\", tiếng Trung nói \"tóc của tôi màu đen\", không dùng 有] / [Ngữ pháp: 我的 + bộ phận cơ thể + 很大 / 很小 / 很长] 这是我的身体。(Zhè shì wǒ de shēntǐ.) / 我的头很大。(Wǒ de tóu hěn dà.) / 我的头发是黑色的。(Wǒ de tóufa shì hēisè de.) (= I have black hair.) / 我的头发很长。(Wǒ de tóufa hěn cháng.) (= My hair is long.) / (nghe làm quen) 这是我的胳膊。我有两条胳膊。(Zhè shì wǒ de gēbo. Wǒ yǒu liǎng tiáo gēbo.) (= This is my arm. I've got two arms.) / [Lệnh lớp học] (nghe làm quen) 指一指你的头发！(Zhǐ yi zhǐ nǐ de tóufa!) (= Point to your hair.) / 把头发涂成黑色！(Bǎ tóufa tú chéng hēisè!) (= Colour the hair black.)",
+      "truyen": "我的身体 (My Body) — Anna：看！这是我的身体。我的头很大，我的头发是黑色的，很长。这是我的胳膊，一、二！Leo：我也是！我有两条胳膊！(Wǒ de shēntǐ — Anna: Kàn! Zhè shì wǒ de shēntǐ. Wǒ de tóu hěn dà, wǒ de tóufa shì hēisè de, hěn cháng. Zhè shì wǒ de gēbo, yī, èr! Leo: Wǒ yě shì! Wǒ yǒu liǎng tiáo gēbo!)",
+      "video": "头肩膀膝盖脚 – 朱妮托尼 – https://www.youtube.com/watch?v=-7BDwnfA5IE / Big and Small 大大小小 – Little Chinese Learners – https://www.youtube.com/watch?v=yM0DA-em5MY"
+     }
+    },
+    {
+     "ngay": 30,
+     "label": "Ngày 30. Unit 4 · Chân, ngón tay, ngón chân: I've got ten fingers",
+     "en": {
+      "tu": "Mới: leg, finger, toe | Ôn: hand, foot/feet, eye, ear, little",
+      "cum": "two legs / ten fingers / ten toes / I've got",
+      "cau": "I've got two legs. / I've got ten fingers. / I've got ten toes. / I've got two eyes and two ears. / My baby brother is small. I'm big! / Look! Daddy is tall. / Put your hand on your leg. / Look and write the number: 10 fingers.",
+      "truyen": "Ten Fingers, Ten Toes — Bông's baby brother has ten little fingers. Bông: One, two, three … ten! Ten fingers! Leo: And ten little toes! Bông: I've got two legs. Baby has two little legs. Bông: I'm big! Baby is small.",
+      "video": "Tìm YouTube: \"ten little fingers ten little toes song\""
+     },
+     "zh": {
+      "tu": "Mới: 个子 gèzi (= tranh chiều cao – vóc dáng; 个子高 = tall), 两只 liǎng zhī (= two – two eyes, two ears) | Ôn: 手 shǒu, 脚 jiǎo, 眼睛 yǎnjing, 耳朵 ěrduo, 有 yǒu, 小 xiǎo, 宝宝 bǎobao, 十 shí | Nghe làm quen: 高 gāo (= tall, trong 个子高), 手指 shǒuzhǐ (= finger), 脚趾 jiǎozhǐ (= toe), 腿 tuǐ (= leg)",
+      "cum": "两只眼睛 liǎng zhī yǎnjing / 两只耳朵 liǎng zhī ěrduo / 个子很高 gèzi hěn gāo / (nghe làm quen) 十个手指 shí ge shǒuzhǐ / 十个脚趾 shí ge jiǎozhǐ / 两条腿 liǎng tiáo tuǐ",
+      "cau": "[Cầu nối] I've got two eyes and two ears. ↔ 我有两只眼睛，两只耳朵。(Wǒ yǒu liǎng zhī yǎnjing, liǎng zhī ěrduo.) [giống: I've got ↔ 我有 + số + bộ phận · khác: thêm 只 giữa số và từ; two ↔ 两 (không dùng 二); eyes có -s, 眼睛 không đổi] / 我有两只眼睛，两只耳朵。(Wǒ yǒu liǎng zhī yǎnjing, liǎng zhī ěrduo.) (= I've got two eyes and two ears.) / (nghe làm quen) 我有两条腿。(Wǒ yǒu liǎng tiáo tuǐ.) (= I've got two legs.) / (nghe làm quen) 一、二、三……十！十个手指！十个脚趾！(Yī, èr, sān … shí! Shí ge shǒuzhǐ! Shí ge jiǎozhǐ!) (= I've got ten fingers. I've got ten toes.) / 宝宝很小。我很大！(Bǎobao hěn xiǎo. Wǒ hěn dà!) (= My baby brother is small. I'm big!) / 看！爸爸个子很高。(Kàn! Bàba gèzi hěn gāo.) (= Look! Daddy is tall.) / (nghe làm quen) 把手放在腿上。(Bǎ shǒu fàng zài tuǐ shang.) (= Put your hand on your leg.) / (nghe làm quen) 看一看，写数字：十个手指。(Kàn yi kàn, xiě shùzì: shí ge shǒuzhǐ.) (= Look and write the number: 10 fingers.) / [Chuyển ngữ] [nghe rối Leo nói 1 câu tiếng Anh, nói lại ý đó bằng tiếng Trung cho rối Xiaomei, ghi âm trên Trang luyện nói] Leo: My baby brother is small. I'm big! → 宝宝很小。我很大！(Bǎobao hěn xiǎo. Wǒ hěn dà!)",
+      "truyen": "十个手指，十个脚趾 (Ten Fingers, Ten Toes) — 宝宝有十个小手指。Bông：一、二、三……十！十个手指！Leo：也有十个小脚趾！Bông：我有两条腿。宝宝也有两条小腿。Bông：我很大！宝宝很小。(Shí ge shǒuzhǐ, shí ge jiǎozhǐ — Bǎobao yǒu shí ge xiǎo shǒuzhǐ. Bông: Yī, èr, sān … shí! Shí ge shǒuzhǐ! Leo: Yě yǒu shí ge xiǎo jiǎozhǐ! Bông: Wǒ yǒu liǎng tiáo tuǐ. Bǎobao yě yǒu liǎng tiáo xiǎo tuǐ. Bông: Wǒ hěn dà! Bǎobao hěn xiǎo.)",
+      "video": "Tìm YouTube: \"十个手指 十个脚趾 儿歌\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: body, hair, arm, leg, finger, toe | Ôn: head, hand, foot/feet, eye, ear, big, small, have | Thẻ lệnh đề: point (to), put, colour, correct | Nghe hiểu: long (long hair), tall",
+     "slide": "[Lời cô] Vào bài: \"Good morning, class! 小朋友们好！\" · Khen: \"Well done! 真棒！\" · Khen thêm: \"Good job! 对了！\" · Nhắc: \"Quiet, please. 请安静。\" · Chuyển ý: \"Mình chơi nhé! Let's play! 我们一起玩吧！\" · Câu mới buổi này (nhắc): \"Giơ tay nào! Hands up! 请举手！\" 1) Nghe – chạm vào bộ phận trên tranh (4 câu): arm / leg / hair / toe. 2) Đếm và nói: I've got ten fingers. / I've got two legs. / I've got ten toes. 3) Mô tả với big / small, chọn tranh đúng: I have a big head. / I have a small nose. / Baby has small fingers. / I'm tall. 4) Lệnh đề: Listen and colour (tranh bạn nhỏ để trắng): Colour the hair black. / Colour the arm red. / Point to the leg. 5) [Chuyển ngữ] Rối Leo nói 1 câu tiếng Anh, con nói lại ý đó bằng tiếng Trung cho rối Xiaomei (chỉ hiểu tiếng Trung): \"This is my body.\" → \"这是我的身体。(Zhè shì wǒ de shēntǐ.)\"; từng con nói, cả lớp vỗ tay khi Xiaomei hiểu. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"My hair is long and black. My brother is very tall.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 我的头发很长，是黑色的。我哥哥个子很高。 (Wǒ de tóufa hěn cháng, shì hēisè de. Wǒ gēge gèzi hěn gāo.)",
+     "truyen": "My Body — Anna: Look! This is my body. I have a big head and long black hair. These are my arms. One, two! These are my legs. Leo: I've got ten fingers. One, two, three … ten! Bông: And ten toes! My baby brother has ten little toes!",
+     "baihat": "This Is My Body (giai điệu Frère Jacques) — This is my body, this is my body, / arms and legs, arms and legs, / fingers, toes and hair, fingers, toes and hair, / one, two, three! One, two, three!"
+    },
+    "zh": {
+     "flash": "Mới: 身体 shēntǐ, 头发 tóufa, 长 cháng (= long), 个子 gèzi (= tall – 个子高) | Ôn: 头 tóu, 手 shǒu, 脚 jiǎo, 眼睛 yǎnjing, 耳朵 ěrduo, 大 dà, 小 xiǎo | Thẻ lệnh đề (nghe làm quen): 指 zhǐ, 放 fàng, 涂颜色 tú yánsè, 对 duì | Nghe làm quen: 高 gāo (个子高), 胳膊 gēbo, 腿 tuǐ, 手指 shǒuzhǐ, 脚趾 jiǎozhǐ",
+     "slide": "1) Nghe – chạm vào bộ phận trên tranh (4 câu, cùng tranh với phần tiếng Anh): (nghe làm quen) 胳膊 gēbo / (nghe làm quen) 腿 tuǐ / 头发 tóufa / (nghe làm quen) 脚趾 jiǎozhǐ 2) Đếm và nói: 我有十个手指。(Wǒ yǒu shí ge shǒuzhǐ.) / 我有两条腿。(Wǒ yǒu liǎng tiáo tuǐ.) / 我有十个脚趾。(Wǒ yǒu shí ge jiǎozhǐ.) 3) 很大 / 很小 / 很高 – chọn tranh đúng: 我的头很大。(Wǒ de tóu hěn dà.) / 我的鼻子很小。(Wǒ de bízi hěn xiǎo.) / 宝宝的手指很小。(Bǎobao de shǒuzhǐ hěn xiǎo.) / 我个子很高。(Wǒ gèzi hěn gāo.) 4) Lệnh đề – nghe và tô (tranh bạn nhỏ để trắng): 头发是黑色的。(Tóufa shì hēisè de.) / 胳膊是红色的。(Gēbo shì hóngsè de.) / (nghe làm quen) 指一指腿！(Zhǐ yi zhǐ tuǐ!) 5) [Cầu nối Anh – Trung] Cùng tranh bạn nhỏ: rối Leo nói tiếng Anh \"I've got two eyes and two ears.\", rối Xiaomei nói tiếng Trung \"我有两只眼睛，两只耳朵。(Wǒ yǒu liǎng zhī yǎnjing, liǎng zhī ěrduo.)\"; con tìm điểm giống và khác. Cô chỉ: giống: I've got ↔ 我有 + số + bộ phận · khác: thêm 只 sau số; two ↔ 两; eyes có -s, 眼睛 không đổi.",
+     "truyen": "我的身体 (My Body) — Anna：看！这是我的身体。我的头很大，我的头发是黑色的，很长。这是我的胳膊，一、二！这是我的腿。Leo：我有十个手指。一、二、三……十！Bông：也有十个脚趾！我弟弟有十个小脚趾！(Wǒ de shēntǐ — Anna: Kàn! Zhè shì wǒ de shēntǐ. Wǒ de tóu hěn dà, wǒ de tóufa shì hēisè de, hěn cháng. Zhè shì wǒ de gēbo, yī, èr! Zhè shì wǒ de tuǐ. Leo: Wǒ yǒu shí ge shǒuzhǐ. Yī, èr, sān … shí! Bông: Yě yǒu shí ge jiǎozhǐ! Wǒ dìdi yǒu shí ge xiǎo jiǎozhǐ!)",
+     "baihat": "这是身体 (giai điệu 两只老虎 = Frère Jacques, cùng bài This Is My Body) — 这是身体，这是身体，/ 胳膊腿，胳膊腿，/ 手指脚趾头发，手指脚趾头发，/ 一二三！一二三！(Zhè shì shēntǐ, zhè shì shēntǐ, / gēbo tuǐ, gēbo tuǐ, / shǒuzhǐ jiǎozhǐ tóufa, shǒuzhǐ jiǎozhǐ tóufa, / yī èr sān! Yī èr sān!)"
+    }
+   }
+  },
+  {
+   "buoi": 16,
+   "unit": 4,
+   "label_buoi": "Buổi dạy 16. Unit 4 · Body – Cơ thể em (vai, đầu gối, vỗ tay, dậm chân)",
+   "web": [
+    {
+     "ngay": 31,
+     "label": "Ngày 31. Unit 4 · Vai, đầu gối: Head, shoulders, knees and toes",
+     "en": {
+      "tu": "Mới: shoulder, knee | Ôn (từ nối Unit 3): baby, mother, photo, learn, grandmother",
+      "cum": "head, shoulders, knees and toes / touch your shoulders / touch your knees",
+      "cau": "Head, shoulders, knees and toes! / Eyes and ears and mouth and nose! / Open your mouth, baby! / Touch your shoulders! / Touch your knees! / I learn the body song with my mother. / My baby brother has small knees. / Is it correct? This is my knee. – Yes! / Listen and colour: Colour the shoulder red.",
+      "truyen": "The Body Song — Bông and Mother learn a song. Mother: Head, shoulders, knees and toes! Eyes and ears and mouth and nose! Bông: Head, shoulders, knees and toes! Mother: Open your mouth, baby! Baby: Ha ha! Grandmother: Good, Bông! Look! A photo of Bông and the baby.",
+      "video": "Head Shoulders Knees & Toes (Sing It) – Super Simple Songs – https://www.youtube.com/watch?v=ZanHgPprl-0"
+     },
+     "zh": {
+      "tu": "Mới: 口 kǒu (= mouth), 张大口 zhāng dà kǒu (= open your mouth) | Ôn (từ nối Unit 3): 妈妈 māma, 照片 zhàopiàn, 学 xué, 宝宝 bǎobao | Ôn khóa trước: 眼睛 yǎnjing, 耳朵 ěrduo, 鼻子 bízi, 嘴巴 zuǐba, 奶奶 nǎinai | Chỉ nghe hiểu (theo bài hát): 肩膀 jiānbǎng (= shoulder), 膝盖 xīgài (= knee)",
+      "cum": "眼睛、耳朵、口、鼻子 yǎnjing, ěrduo, kǒu, bízi / 张大口 zhāng dà kǒu / 宝宝的口 bǎobao de kǒu / (chỉ nghe hiểu) 头、肩膀、膝盖、脚 tóu, jiānbǎng, xīgài, jiǎo",
+      "cau": "[Cầu nối] Open your mouth! ↔ 张大口！(Zhāng dà kǒu!) [giống: đều là lệnh, không có I / you đứng đầu · khác: tiếng Trung không có your; mouth ↔ 口: chữ 口 giống hình cái miệng] / (chỉ nghe hiểu, theo bài hát) 头、肩膀、膝盖、脚！(Tóu, jiānbǎng, xīgài, jiǎo!) (= Head, shoulders, knees and toes!) / 眼睛、耳朵、口、鼻子！(Yǎnjing, ěrduo, kǒu, bízi!) (= Eyes and ears and mouth and nose!) / (nghe làm quen) 摸摸你的肩膀！摸摸你的膝盖！(Mōmo nǐ de jiānbǎng! Mōmo nǐ de xīgài!) (= Touch your shoulders! Touch your knees!) / 宝宝，张大口！(Bǎobao, zhāng dà kǒu!) (= Open your mouth, baby!) / (nghe làm quen) 宝宝的膝盖很小。(Bǎobao de xīgài hěn xiǎo.) (= My baby brother has small knees.) / 我和妈妈学身体歌。(Wǒ hé māma xué shēntǐ gē.) (= I learn the body song with my mother.) / (nghe làm quen) 对还是错？这是我的膝盖。——对！(Duì háishi cuò? Zhè shì wǒ de xīgài. — Duì!) (= Is it correct? This is my knee. – Yes!) / (nghe làm quen) 听一听，涂一涂：肩膀是红色的。(Tīng yi tīng, tú yi tú: Jiānbǎng shì hóngsè de.) (= Listen and colour: Colour the shoulder red.)",
+      "truyen": "身体歌 (The Body Song) — Bông和妈妈学身体歌。妈妈：头、肩膀、膝盖、脚！眼睛、耳朵、口、鼻子！Bông：头、肩膀、膝盖、脚！妈妈：宝宝，张大口！宝宝：啊——！哈哈！奶奶：好，Bông！看！Bông和宝宝的照片。(Shēntǐ gē — Bông hé māma xué shēntǐ gē. Māma: Tóu, jiānbǎng, xīgài, jiǎo! Yǎnjing, ěrduo, kǒu, bízi! Bông: Tóu, jiānbǎng, xīgài, jiǎo! Māma: Bǎobao, zhāng dà kǒu! Bǎobao: Ā——! Hāha! Nǎinai: Hǎo, Bông! Kàn! Bông hé bǎobao de zhàopiàn.)",
+      "video": "头肩膀膝盖脚 – 朱妮托尼 – https://www.youtube.com/watch?v=-7BDwnfA5IE"
+     }
+    },
+    {
+     "ngay": 32,
+     "label": "Ngày 32. Unit 4 · Vỗ tay, dậm chân: Clap your hands! Stamp your feet!",
+     "en": {
+      "tu": "Mới: clap, stamp | Ôn (từ nối Unit 3): aunt, uncle, down, cousin, touch",
+      "cum": "clap your hands / stamp your feet / touch your ears / sit down",
+      "cau": "Clap your hands! / Stamp your feet! / Touch your ears! / My uncle can clap and stamp. / Sit down, kids! / Find your toes. Point to your knee. Put your hands on your shoulders.",
+      "truyen": "Uncle's Body Game — Uncle: Clap your hands! The kids clap. Uncle: Stamp your feet! The kids stamp. Uncle: Touch your ears! Cousin: My nose? Ha ha! Aunt: Sit down, kids!",
+      "video": "Tìm YouTube: \"clap your hands stamp your feet song for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 拍拍手 pāipai shǒu (= clap your hands), 跺跺脚 duòduo jiǎo (= stamp your feet) | Ôn (từ nối Unit 3): 叔叔 shūshu, 阿姨 āyí, 坐下 zuòxià | Ôn: 摸摸 mōmo (= touch), 耳朵 ěrduo, 脚 jiǎo (= feet) | Nghe làm quen: 表姐 biǎojiě (= cousin, tranh)",
+      "cum": "摸摸你的耳朵 mōmo nǐ de ěrduo / 拍拍手 pāipai shǒu / 跺跺脚 duòduo jiǎo / 坐下 zuòxià",
+      "cau": "[Cầu nối] Clap your hands! ↔ 拍拍手！(Pāipai shǒu!) [giống: lệnh bắt đầu bằng động từ, clap ↔ 拍 · khác: tiếng Trung lặp 拍拍, không có your; hands có -s, 手 không đổi] / 摸摸你的耳朵！(Mōmo nǐ de ěrduo!) / 拍拍手！(Pāipai shǒu!) / 跺跺脚！(Duòduo jiǎo!) / (nghe làm quen) 把手放在肩膀上！(Bǎ shǒu fàng zài jiānbǎng shang!) (= Put your hands on your shoulders.) / 我叔叔会拍手，也会跺脚。(Wǒ shūshu huì pāi shǒu, yě huì duò jiǎo.) (= My uncle can clap and stamp.) / 小朋友，坐下！(Xiǎo péngyou, zuòxià!) (= Sit down, kids!) / 听，说：拍拍手！跺跺脚！(Tīng, shuō: Pāipai shǒu! Duòduo jiǎo!) / (nghe làm quen) 找一找你的脚趾！指一指你的膝盖！(Zhǎo yi zhǎo nǐ de jiǎozhǐ! Zhǐ yi zhǐ nǐ de xīgài!) (= Find your toes. Point to your knee.) / [Chuyển ngữ] [nghe rối Leo nói 1 câu tiếng Anh, nói lại ý đó bằng tiếng Trung cho rối Xiaomei, ghi âm trên Trang luyện nói] Leo: Stamp your feet! → 跺跺脚！(Duòduo jiǎo!)",
+      "truyen": "和叔叔一起玩 (Uncle's Body Game) — 叔叔：拍拍手！小朋友拍拍手。叔叔：跺跺脚！小朋友跺跺脚。叔叔：摸摸你的耳朵！表姐：我的鼻子？哈哈！阿姨：小朋友，坐下！(Hé shūshu yìqǐ wán — Shūshu: Pāipai shǒu! Xiǎo péngyou pāipai shǒu. Shūshu: Duòduo jiǎo! Xiǎo péngyou duòduo jiǎo. Shūshu: Mōmo nǐ de ěrduo! Biǎojiě: Wǒ de bízi? Hāha! Āyí: Xiǎo péngyou, zuòxià!)",
+      "video": "Tìm YouTube: \"拍拍手 跺跺脚 儿歌\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: shoulder, knee, clap, stamp | Ôn (từ nối Unit 3): baby, mother, aunt, uncle, down, learn | Ôn khóa trước: touch, head, ear, mouth (open your mouth)",
+     "slide": "[Lời cô] Vào bài: \"Good morning, class! 小朋友们好！\" · Khen: \"Well done! 真棒！\" · Nhắc: \"Quiet, please. 请安静。\" · Chuyển ý: \"Mình chơi nhé! Let's play! 我们一起玩吧！\" · Nhắc: \"Giơ tay nào! Hands up! 请举手！\" 1) Hát và làm động tác Head, shoulders, knees and toes, nhanh dần 3 lượt. 2) Simon says (4 lệnh): Clap your hands! / Stamp your feet! / Touch your knees! / Touch your shoulders! 3) Ai làm gì: cô giơ thẻ người thân, con làm động tác: My uncle can clap. / My aunt can stamp. / My baby brother can clap. 4) Lệnh đề: Put your hands on your knees! / Find your toes! / Is it correct? (cô chỉ đầu gối, nói \"This is my arm.\") – No! It's my knee. 5) [Chuyển ngữ] Rối Leo nói 1 câu tiếng Anh, con nói lại ý đó bằng tiếng Trung cho rối Xiaomei (chỉ hiểu tiếng Trung): \"Stamp your feet!\" → \"跺跺脚！(Duòduo jiǎo!)\"; từng con nói, cả lớp vỗ tay khi Xiaomei hiểu. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"Clap your hands, everyone! Then stamp your feet!\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 大家拍拍手！跺跺脚！ (Dàjiā pāipai shǒu! Duòduo jiǎo!)",
+     "truyen": "Uncle's Body Game — Bông, Mother and the baby learn a song. Mother: Head, shoulders, knees and toes! Eyes and ears and mouth and nose! Open your mouth, baby! Look! Uncle and Aunt are at home. Uncle: Clap your hands! Stamp your feet! Touch your knees! The baby claps. Ha ha! Aunt: Sit down, kids! Well done!",
+     "baihat": "Clap and Stamp (giai điệu London Bridge Is Falling Down) — Clap, clap, clap your hands, / clap your hands, clap your hands, / Stamp, stamp, stamp your feet, / Touch your knees!"
+    },
+    "zh": {
+     "flash": "Mới: 口 kǒu, 张大口 zhāng dà kǒu, 拍拍手 pāipai shǒu, 跺跺脚 duòduo jiǎo | Ôn (từ nối Unit 3): 宝宝 bǎobao, 妈妈 māma, 叔叔 shūshu, 阿姨 āyí, 坐下 zuòxià, 学 xué | Ôn khóa trước: 摸摸 mōmo, 头 tóu, 耳朵 ěrduo, 嘴巴 zuǐba | Chỉ nghe hiểu: 肩膀 jiānbǎng, 膝盖 xīgài",
+     "slide": "1) Hát và làm động tác bài 头、肩膀、膝盖、脚 (chỉ nghe hiểu, theo video 朱妮托尼), nhanh dần 3 lượt. 2) Trò chơi \"Xiaomei nói\" (4 lệnh, cùng 4 lệnh với phần tiếng Anh): 拍拍手！(Pāipai shǒu!) / 跺跺脚！(Duòduo jiǎo!) / (nghe làm quen) 摸摸你的膝盖！(Mōmo nǐ de xīgài!) / (nghe làm quen) 摸摸你的肩膀！(Mōmo nǐ de jiānbǎng!) 3) Ai làm gì: cô giơ thẻ người thân, cô nói 叔叔拍拍手！(Shūshu pāipai shǒu!) / 阿姨跺跺脚！(Āyí duòduo jiǎo!) / 宝宝拍拍手！(Bǎobao pāipai shǒu!), con làm động tác của người được gọi. 4) Lệnh đề (cùng 3 lệnh với phần tiếng Anh): (nghe làm quen) 把手放在膝盖上！(Bǎ shǒu fàng zài xīgài shang!) / 找一找你的脚趾！(Zhǎo yi zhǎo nǐ de jiǎozhǐ!) / 对还是错？(cô chỉ đầu gối, nói 这是我的胳膊。Zhè shì wǒ de gēbo.) — 错！这是我的膝盖。(Cuò! Zhè shì wǒ de xīgài.) 5) [Cầu nối Anh – Trung] Cùng thẻ lệnh vỗ tay, há miệng: rối Leo nói tiếng Anh \"Clap your hands! Open your mouth!\", rối Xiaomei nói tiếng Trung \"拍拍手！张大口！(Pāipai shǒu! Zhāng dà kǒu!)\"; con tìm điểm giống và khác. Cô chỉ: giống: lệnh bắt đầu bằng động từ · khác: tiếng Trung không có your; mouth ↔ 口, chữ 口 giống hình cái miệng.",
+     "truyen": "和叔叔一起玩 (Uncle's Body Game) — Bông、妈妈和宝宝学身体歌。妈妈：头、肩膀、膝盖、脚！眼睛、耳朵、口、鼻子！宝宝，张大口！宝宝：啊——！看！叔叔和阿姨在家。叔叔：拍拍手！跺跺脚！摸摸你的膝盖！宝宝拍拍手。哈哈！阿姨：小朋友，坐下！真棒！(Hé shūshu yìqǐ wán — Bông, māma hé bǎobao xué shēntǐ gē. Māma: Tóu, jiānbǎng, xīgài, jiǎo! Yǎnjing, ěrduo, kǒu, bízi! Bǎobao, zhāng dà kǒu! Bǎobao: Ā——! Kàn! Shūshu hé āyí zài jiā. Shūshu: Pāipai shǒu! Duòduo jiǎo! Mōmo nǐ de xīgài! Bǎobao pāipai shǒu. Hāha! Āyí: Xiǎo péngyou, zuòxià! Zhēn bàng!)",
+     "baihat": "拍拍手 (giai điệu London Bridge Is Falling Down, cùng bài Clap and Stamp) — 拍拍拍拍小手，/ 拍小手，拍小手，/ 跺跺跺跺小脚，/ 摸膝盖！(Pāi pāi pāipai xiǎo shǒu, / pāi xiǎo shǒu, pāi xiǎo shǒu, / duò duò duòduo xiǎo jiǎo, / mō xīgài!)"
+    }
+   }
+  },
+  {
+   "buoi": 17,
+   "unit": 4,
+   "label_buoi": "Buổi dạy 17. Unit 4 · Body – Cơ thể em (Fun in town, ôn không tranh)",
+   "web": [
+    {
+     "ngay": 33,
+     "label": "Ngày 33. Unit 4 · Vui quá! Fun in town",
+     "en": {
+      "tu": "Mới: fun, town | Ôn: park, go, daddy, happy",
+      "cum": "a show in town / it's fun / well done / show me your fingers",
+      "cau": "Look! A body show in town. / It's fun! / Clap your hands! Well done! / Show me your fingers. / I feel happy. / [Chuyển ngữ] [nghe rối Xiaomei nói 1 câu tiếng Trung, nói lại ý đó bằng tiếng Anh cho rối Leo, ghi âm trên Trang luyện nói] Xiaomei: 拍拍手！真棒！(Pāipai shǒu! Zhēn bàng!) → Clap your hands! Well done!",
+      "truyen": "Fun in Town — Bông and Daddy go to town. Look! A show in the park. A man: Clap your hands! Stamp your feet! Bông: It's fun! I feel happy! Daddy: Well done, Bông!",
+      "video": "Tìm YouTube: \"if you're happy and you know it clap your hands\""
+     },
+     "zh": {
+      "tu": "Mới: 好玩 hǎowán (= fun), 真好玩 zhēn hǎowán (= it's fun) | Ôn: 高兴 gāoxìng, 公园 gōngyuán, 开心 kāixīn | Nghe làm quen: 城里 chéngli (= town), 表演 biǎoyǎn (= show)",
+      "cum": "真好玩 zhēn hǎowán / 我很高兴 wǒ hěn gāoxìng / 在公园 zài gōngyuán / 真棒 zhēn bàng / (nghe làm quen) 去城里 qù chéngli",
+      "cau": "[Cầu nối] It's fun! ↔ 真好玩！(Zhēn hǎowán!) [giống: cùng câu khen trò chơi · khác: fun ↔ 好玩, tiếng Trung thêm 真 cho mạnh hơn] / 真好玩！(Zhēn hǎowán!) / 我很高兴！(Wǒ hěn gāoxìng!) / (nghe làm quen) 看！城里有身体表演！(Kàn! Chéngli yǒu shēntǐ biǎoyǎn!) (= Look! A body show in town.) / 拍拍手！真棒！(Pāipai shǒu! Zhēn bàng!) (= Clap your hands! Well done!) / (nghe làm quen) 给我看看你的手指！(Gěi wǒ kànkan nǐ de shǒuzhǐ!) (= Show me your fingers.) / 爸爸，真好玩！(Bàba, zhēn hǎowán!)",
+      "truyen": "真好玩 (Fun in Town) — Bông和爸爸去城里。看！公园里有表演！一个叔叔：拍拍手！跺跺脚！Bông：真好玩！我很高兴！爸爸：Bông，真棒！(Zhēn hǎowán — Bông hé bàba qù chéngli. Kàn! Gōngyuán li yǒu biǎoyǎn! Yí ge shūshu: Pāipai shǒu! Duòduo jiǎo! Bông: Zhēn hǎowán! Wǒ hěn gāoxìng! Bàba: Bông, zhēn bàng!)",
+      "video": "Tìm YouTube: \"如果你很开心 拍拍手 儿歌\""
+     }
+    },
+    {
+     "ngay": 34,
+     "label": "Ngày 34. Unit 4 · Ôn không tranh: nghe lệnh, chạm đúng bộ phận · Luyện nói YCT口试 听后重复",
+     "en": {
+      "tu": "Ôn (không tranh): arm, body, clap, fun, hair, leg, shoulder, town, finger, knee, stamp, toe, tall | Ôn khóa trước: head, eye, ear, nose, mouth, hand, foot/feet, touch",
+      "cum": "touch your knees / clap your hands / stamp your feet / ten fingers / it's fun",
+      "cau": "Touch your shoulders! / Touch your toes! / Clap your hands! / Stamp your feet! / I've got two arms and two legs. / Listen and point: Point to your knee! / Put your hands on your shoulders! / Find your toes!",
+      "truyen": "Simon Says With Mrs Lan — Mrs Lan: Touch your knees! Touch your shoulders! Clap your hands! Leo stamps his feet. Mrs Lan: Oh no, Leo! Ha ha! Kids: It's fun!",
+      "video": "Tìm YouTube: \"simon says body parts for kids\""
+     },
+     "zh": {
+      "tu": "Ôn (không tranh): 身体 shēntǐ, 头发 tóufa, 个子 gèzi, 高 gāo, 两只 liǎng zhī, 胳膊 gēbo (nghe làm quen), 腿 tuǐ (nghe làm quen), 口 kǒu, 摸摸 mōmo, 拍拍手 pāipai shǒu, 跺跺脚 duòduo jiǎo, 好玩 hǎowán | Ôn khóa trước: 鼻子 bízi, 耳朵 ěrduo, 眼睛 yǎnjing, 嘴巴 zuǐba, 手 shǒu, 脚 jiǎo, 头 tóu",
+      "cum": "(nghe làm quen) 摸摸你的膝盖 mōmo nǐ de xīgài / 拍拍手 pāipai shǒu / 跺跺脚 duòduo jiǎo / (nghe làm quen) 十个手指 shí ge shǒuzhǐ / 真好玩 zhēn hǎowán",
+      "cau": "[Cầu nối] Clap your hands! ↔ 拍拍手！(Pāipai shǒu!) [giống: lệnh, động từ đứng đầu · khác: Touch your … ↔ 摸摸你的…: tiếng Trung lặp 摸摸 và thêm 的] / (nghe làm quen) 摸摸你的肩膀！(Mōmo nǐ de jiānbǎng!) / (nghe làm quen) 摸摸你的脚趾！(Mōmo nǐ de jiǎozhǐ!) / 拍拍手！(Pāipai shǒu!) / 跺跺脚！(Duòduo jiǎo!) / (nghe làm quen) 我有两只胳膊，两条腿。(Wǒ yǒu liǎng zhī gēbo, liǎng tiáo tuǐ.) (= I've got two arms and two legs.) / (nghe làm quen) 指一指你的膝盖！(Zhǐ yi zhǐ nǐ de xīgài!) (= Point to your knee!) / [YCT口试（初级）第一部分 听后重复 (mẫu): con nghe từng câu, nói lại 1 lần, ghi âm trên Trang luyện nói, ~5 phút] 听，说：我有两只手。(Wǒ yǒu liǎng zhī shǒu.) / 我有十个手指。(Wǒ yǒu shí ge shǒuzhǐ.) / 摸摸你的肩膀！(Mōmo nǐ de jiānbǎng!) / 拍拍手，跺跺脚！(Pāipai shǒu, duòduo jiǎo!) / 真好玩！(Zhēn hǎowán!)",
+      "truyen": "Lan老师说 (Simon Says With Mrs Lan) — Lan老师：摸摸你的膝盖！摸摸你的肩膀！拍拍手！Leo跺跺脚。Lan老师：哎呀，Leo！哈哈！小朋友：真好玩！(Lan lǎoshī shuō — Lan lǎoshī: Mōmo nǐ de xīgài! Mōmo nǐ de jiānbǎng! Pāipai shǒu! Leo duòduo jiǎo. Lan lǎoshī: Āiyā, Leo! Hāha! Xiǎo péngyou: Zhēn hǎowán!)",
+      "video": "Tìm YouTube: \"老师说 摸摸 身体 游戏 儿童\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: fun, town | Nghe hiểu mở rộng: show, well (well done) | Ôn: arm, body, hair, leg, finger, toe, shoulder, knee, clap, stamp",
+     "slide": "[Lời cô] Vào bài: \"Good morning, class! 小朋友们好！\" · Khen: \"Well done! 真棒！\" · Nhắc: \"Quiet, please. 请安静。\" · Chuyển ý: \"Let's play! 我们一起玩吧！\" · Nhắc: \"Giơ tay nào! Hands up! 请举手！\" · Câu mới buổi này (chuyển ý): \"Tiếp nào! Next! 下一个！\" 1) Diễn Body Show theo nhóm: nhóm diễn ra lệnh Clap your hands! / Stamp your feet! / Touch your toes!, cả lớp làm và hô Well done! It's fun! 2) Nghe chọn tranh (4 câu): a show in town / It's fun! / Show me your arms. / Well done! 3) Ôn không tranh – cô đọc lệnh, con chạm đúng: Touch your shoulders! / Touch your knees! / Touch your hair! / Touch your fingers! 4) [Chuyển ngữ] Rối Xiaomei nói 1 câu tiếng Trung, con nói lại ý đó bằng tiếng Anh cho rối Leo (chỉ hiểu tiếng Anh): \"拍拍手！(Pāipai shǒu!)\" → \"Clap your hands!\"; từng con nói, cả lớp vỗ tay khi Leo hiểu. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"Clap your hands and stamp your feet. It's fun! Well done!\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 拍拍手，跺跺脚。真好玩！真棒！ (Pāipai shǒu, duòduo jiǎo. Zhēn hǎowán! Zhēn bàng!)",
+     "truyen": "Fun in Town — Bông and Daddy go to town. Look! A show in the park. A man: Hello, kids! Show me your hands. Clap your hands! Stamp your feet! Touch your shoulders! Bông: It's fun! I feel happy! Daddy: Well done, Bông!",
+     "baihat": "Body Show (giai điệu Mary Had a Little Lamb) — It's a body show in town, / show in town, show in town, / Clap and stamp and touch your knees, / It's fun! Well done!"
+    },
+    "zh": {
+     "flash": "Mới: 好玩 hǎowán, 真好玩 zhēn hǎowán | Ôn: 身体 shēntǐ, 头发 tóufa, 拍拍手 pāipai shǒu, 跺跺脚 duòduo jiǎo | Nghe làm quen: 城里 chéngli, 表演 biǎoyǎn, 真棒 zhēn bàng, 胳膊 gēbo, 腿 tuǐ, 手指 shǒuzhǐ, 脚趾 jiǎozhǐ, 肩膀 jiānbǎng, 膝盖 xīgài",
+     "slide": "1) Diễn theo nhóm: nhóm ra lệnh 拍拍手！/ 跺跺脚！/ (nghe làm quen) 摸摸你的脚趾！, cả lớp làm và hô 真棒！真好玩！(Zhēn bàng! Zhēn hǎowán!) 2) Nghe chọn tranh (4 câu, cùng 4 tranh với phần tiếng Anh): (nghe làm quen) 城里的表演 (chéngli de biǎoyǎn) / 真好玩！(Zhēn hǎowán!) / 给我看看你的胳膊！(Gěi wǒ kànkan nǐ de gēbo!) / 真棒！(Zhēn bàng!) 3) Ôn không tranh – nghe lệnh, chạm đúng (nghe làm quen 肩膀, 膝盖, 手指): 摸摸你的肩膀！/ 摸摸你的膝盖！/ 摸摸你的头发！/ 摸摸你的手指！ 4) [Cầu nối Anh – Trung] Cùng tranh Body Show: rối Leo nói tiếng Anh \"It's fun! Well done!\", rối Xiaomei nói tiếng Trung \"真好玩！真棒！(Zhēn hǎowán! Zhēn bàng!)\"; con tìm điểm giống và khác. Cô chỉ: giống: cùng câu khen · khác: tiếng Trung thêm 真 ở đầu cả hai câu.",
+     "truyen": "真好玩 (Fun in Town) — Bông和爸爸去城里。看！公园里有表演！一个叔叔：小朋友们好！给我看看你们的手！拍拍手！跺跺脚！摸摸你的肩膀！Bông：真好玩！我很高兴！爸爸：Bông，真棒！(Zhēn hǎowán — Bông hé bàba qù chéngli. Kàn! Gōngyuán li yǒu biǎoyǎn! Yí ge shūshu: Xiǎo péngyoumen hǎo! Gěi wǒ kànkan nǐmen de shǒu! Pāipai shǒu! Duòduo jiǎo! Mōmo nǐ de jiānbǎng! Bông: Zhēn hǎowán! Wǒ hěn gāoxìng! Bàba: Bông, zhēn bàng!)",
+     "baihat": "身体表演 (giai điệu Mary Had a Little Lamb, cùng bài Body Show) — 城里有身体表演，/ 在城里，在城里，/ 拍拍跺跺摸膝盖，/ 真好玩！真棒！(Chéngli yǒu shēntǐ biǎoyǎn, / zài chéngli, zài chéngli, / pāipai duòduo mō xīgài, / zhēn hǎowán! Zhēn bàng!)"
+    }
+   }
+  },
+  {
+   "buoi": 18,
+   "unit": 4,
+   "label_buoi": "Buổi dạy 18. Unit 4 · Body – Cơ thể em (kể truyện, Phiên dịch nhí, kiểm tra cuối unit) · Luyện đề YCT1 Nghe phần 2",
+   "web": [
+    {
+     "ngay": 35,
+     "label": "Ngày 35. Unit 4 · Truyện của unit + chuyển ngữ: Fun in Town · 真好玩 · Luyện đề YCT1 Đọc phần 1",
+     "en": {
+      "tu": "Ôn: arm, body, clap, fun, hair, leg, shoulder, town, finger, knee, stamp, toe | Ôn (Unit 1, truyện – chuyển ngữ): good, morning, man/men, sorry, wave",
+      "cum": "good morning, kids / clap your hands / stamp your feet / wave your arms / it's fun",
+      "cau": "Good morning, kids! / Clap your hands! Stamp your feet! / Touch your knees! Touch your toes! / Sorry, Bông! / Wave your arms! Well done!",
+      "truyen": "Fun in Town — Morning. Bông, Daddy and Leo go to town. Look! A body show in the park. Two men: Good morning, kids! Clap your hands! Stamp your feet! Touch your knees! Touch your toes! Leo stamps on Bông's foot. Leo: Sorry, Bông! Bông: Ha ha! It's fun! Men: Wave your arms! Well done, kids! Goodbye! The kids wave goodbye.",
+      "video": "Head Shoulders Knees & Toes (Sing It) – Super Simple Songs – https://www.youtube.com/watch?v=ZanHgPprl-0"
+     },
+     "zh": {
+      "tu": "Ôn: 身体 shēntǐ, 头发 tóufa, 摸摸 mōmo, 拍拍手 pāipai shǒu, 跺跺脚 duòduo jiǎo, 真好玩 zhēn hǎowán | Ôn (Unit 1, truyện – chuyển ngữ): 早上好 zǎoshang hǎo (= good morning), 叔叔 shūshu (= man), 对不起 duìbuqǐ, 挥挥手 huīhui shǒu (= wave) | Nghe làm quen: 胳膊 gēbo (= arm, tranh)",
+      "cum": "小朋友们，早上好 xiǎo péngyoumen, zǎoshang hǎo / 拍拍手 pāipai shǒu / 跺跺脚 duòduo jiǎo / (nghe làm quen) 挥挥胳膊 huīhui gēbo / 挥挥手 huīhui shǒu / 真棒 zhēn bàng",
+      "cau": "[Cầu nối] Good morning, kids! ↔ 小朋友们，早上好！(Xiǎo péngyoumen, zǎoshang hǎo!) [giống: cùng chào nhiều bạn buổi sáng · khác: kids thêm -s ↔ 小朋友 thêm 们; good morning đứng trước ↔ 早上好 đứng sau] / 小朋友们，早上好！(Xiǎo péngyoumen, zǎoshang hǎo!) / 拍拍手！跺跺脚！(Pāipai shǒu! Duòduo jiǎo!) / (nghe làm quen) 摸摸你的膝盖！摸摸你的脚趾！(Mōmo nǐ de xīgài! Mōmo nǐ de jiǎozhǐ!) / 对不起，Bông！(Duìbuqǐ, Bông!) / 挥挥胳膊！真棒！(Huīhui gēbo! Zhēn bàng!) (= Wave your arms! Well done!) / 真好玩！(Zhēn hǎowán!) / [YCT1 Đọc phần 1 (mẫu): con đọc từ có pinyin, nhìn tranh chọn ✓ / ✗, 5 câu, ~10 phút] 读一读，看一看，对还是错？(Dú yi dú, kàn yi kàn, duì háishi cuò?) 1. 手 shǒu [tranh bàn tay ✓] 2. 头发 tóufa [tranh cái chân ✗] 3. 眼睛 yǎnjing [tranh đôi mắt ✓] 4. 口 kǒu [tranh cái tai ✗] 5. 脚 jiǎo [tranh bàn chân ✓]",
+      "truyen": "真好玩 (Fun in Town) — 早上，Bông、爸爸和Leo去城里。看！公园里有身体表演！两个叔叔：小朋友们，早上好！拍拍手！跺跺脚！摸摸你的膝盖！摸摸你的脚趾！Leo跺脚，踩到了Bông的脚。Leo：对不起，Bông！Bông：哈哈！真好玩！叔叔：挥挥胳膊！真棒，小朋友！再见！小朋友挥挥手：叔叔，再见！(Zhēn hǎowán — Zǎoshang, Bông, bàba hé Leo qù chéngli. Kàn! Gōngyuán li yǒu shēntǐ biǎoyǎn! Liǎng ge shūshu: Xiǎo péngyoumen, zǎoshang hǎo! Pāipai shǒu! Duòduo jiǎo! Mōmo nǐ de xīgài! Mōmo nǐ de jiǎozhǐ! Leo duò jiǎo, cǎi dào le Bông de jiǎo. Leo: Duìbuqǐ, Bông! Bông: Hāha! Zhēn hǎowán! Shūshu: Huīhui gēbo! Zhēn bàng, xiǎo péngyou! Zàijiàn! Xiǎo péngyou huīhui shǒu: Shūshu, zàijiàn!)",
+      "video": "头肩膀膝盖脚 – 朱妮托尼 – https://www.youtube.com/watch?v=-7BDwnfA5IE"
+     }
+    },
+    {
+     "ngay": 36,
+     "label": "Ngày 36. Unit 4 · Phiên dịch nhí: nghe lệnh tiếng Anh, nói lại lệnh tiếng Trung cho Xiaomei",
+     "en": {
+      "tu": "Ôn: clap, stamp, shoulder, knee, toe, finger, arm, leg, hair | Ôn khóa trước: touch, ear, nose, head",
+      "cum": "clap your hands / stamp your feet / touch your ears / touch your head",
+      "cau": "Leo: Clap your hands! / Leo: Stamp your feet! / Leo: Touch your ears! / Leo: Touch your head! / Leo: I've got ten fingers.",
+      "truyen": "Bông the Little Interpreter — Leo: Clap your hands, Xiaomei! Xiaomei looks at Bông. Bông: 拍拍手！ Xiaomei claps. Leo: Stamp your feet! Bông: 跺跺脚！ Xiaomei stamps. Leo: Good, Xiaomei! It's fun!",
+      "video": "My Body Vocabulary Chant – Fun Kids English – https://www.youtube.com/watch?v=mOyriQBIFV4"
+     },
+     "zh": {
+      "tu": "Ôn: 拍拍手 pāipai shǒu, 跺跺脚 duòduo jiǎo, 摸摸 mōmo, 头发 tóufa, 鼻子 bízi, 手指 shǒuzhǐ (nghe làm quen) | Ôn khóa trước: 耳朵 ěrduo, 头 tóu, 手 shǒu, 脚 jiǎo",
+      "cum": "拍拍手 pāipai shǒu / 跺跺脚 duòduo jiǎo / 摸摸你的耳朵 mōmo nǐ de ěrduo / 摸摸你的头 mōmo nǐ de tóu",
+      "cau": "[Cầu nối] Stamp your feet! ↔ 跺跺脚！(Duòduo jiǎo!) [giống: lệnh, động từ đứng đầu · khác: foot → feet đổi chữ khi nhiều, 脚 không đổi] / 拍拍手！(Pāipai shǒu!) / 跺跺脚！(Duòduo jiǎo!) / 摸摸你的耳朵！(Mōmo nǐ de ěrduo!) / 摸摸你的头！(Mōmo nǐ de tóu!) / (nghe làm quen) 我有十个手指。(Wǒ yǒu shí ge shǒuzhǐ.) (= I've got ten fingers.)",
+      "truyen": "Bông和Xiaomei (Bông the Little Interpreter) — Leo：Clap your hands, Xiaomei! Xiaomei看Bông。Bông：拍拍手！Xiaomei拍拍手。Leo：Stamp your feet! Bông：跺跺脚！Xiaomei跺跺脚。Leo：Good, Xiaomei! It's fun! Bông：Xiaomei，真棒！真好玩！(Bông hé Xiaomei — Leo: Clap your hands, Xiaomei! Xiaomei kàn Bông. Bông: Pāipai shǒu! Xiaomei pāipai shǒu. Leo: Stamp your feet! Bông: Duòduo jiǎo! Xiaomei duòduo jiǎo. Leo: Good, Xiaomei! It's fun! Bông: Xiaomei, zhēn bàng! Zhēn hǎowán!)",
+      "video": "Tìm YouTube: \"身体部位 儿歌 拍拍手\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn cả unit: arm, body, clap, fun, hair, leg, shoulder, town, finger, knee, stamp, toe, tall | Ôn (Unit 1): good morning, man/men, sorry, wave | Ôn khóa trước: touch, head, ear, nose, foot/feet",
+     "slide": "[Lời cô] Vào bài: \"Good morning, class! 小朋友们好！\" · Khen: \"Well done! 真棒！\" · Chuyển ý: \"Let's play! 我们一起玩吧！\" · Nhắc: \"Giơ tay nào! Hands up! 请举手！\" · Chuyển ý: \"Tiếp nào! Next! 下一个！\" 1) [Chuyển ngữ] Phiên dịch nhí (nói lại 1 câu) theo cặp: bạn A làm Leo ra lệnh tiếng Anh (Clap your hands! / Stamp your feet! / Touch your knees!), bạn B nói lại lệnh tiếng Trung cho Xiaomei, Xiaomei làm. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"Touch your head, then touch your nose. It's fun!\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 摸摸你的头，摸摸你的鼻子。真好玩！ (Mōmo nǐ de tóu, mōmo nǐ de bízi. Zhēn hǎowán!) 2) Kiểm tra cuối unit – nghe chọn tranh (5 câu): I've got ten fingers. / Touch your shoulders! / Stamp your feet! / I have black hair. / It's fun! 3) Kịch ngắn diễn truyện Fun in Town (vai: Bông, Leo, Daddy, two men).",
+     "truyen": "Fun in Town — Morning. Bông, Daddy and Leo go to town. Look! A body show in the park. Two men: Good morning, kids! Clap your hands! Stamp your feet! Touch your knees! Touch your toes! Leo stamps on Bông's foot. Leo: Sorry, Bông! Bông: Ha ha! It's fun! Men: Wave your arms! Show me your fingers! Well done, kids! Goodbye! The kids wave goodbye.",
+     "baihat": "Fun in Town (giai điệu Row, Row, Row Your Boat) — Clap, clap, clap your hands, / Stamp your feet, one, two! / Touch your knees and touch your toes, / It's fun in town!"
+    },
+    "zh": {
+     "flash": "Ôn cả unit: 身体 shēntǐ, 头发 tóufa, 个子 gèzi, 高 gāo, 摸摸 mōmo, 拍拍手 pāipai shǒu, 跺跺脚 duòduo jiǎo, 好玩 hǎowán | Nghe làm quen: 胳膊 gēbo, 腿 tuǐ, 手指 shǒuzhǐ, 脚趾 jiǎozhǐ, 肩膀 jiānbǎng, 膝盖 xīgài, 城里 chéngli | Ôn (Unit 1): 早上好 zǎoshang hǎo, 叔叔 shūshu, 对不起 duìbuqǐ, 挥挥手 huīhui shǒu",
+     "slide": "1) Phiên dịch nhí: nghe lệnh tiếng Anh của Leo (Clap your hands! / Stamp your feet! / Touch your knees!), nói lại cho Xiaomei: 拍拍手！/ 跺跺脚！/ 摸摸你的膝盖！— Xiaomei làm. 2) Kiểm tra cuối unit – nghe chọn tranh (5 câu, cùng 5 tranh với phần tiếng Anh): 我有十个手指。/ 摸摸你的肩膀！/ 跺跺脚！/ 我的头发是黑色的。/ 真好玩！ 3) Kịch ngắn diễn truyện 真好玩 (vai: Bông, Leo, 爸爸, 两个叔叔). 4) YCT1 Nghe phần 2 (mẫu): nghe cụm từ, chọn 1 trong 3 tranh — 听一听，选一选。(Tīng yi tīng, xuǎn yi xuǎn.) 1. 两只手 liǎng zhī shǒu [A 2 bàn tay ✓ / B 2 bàn chân / C 1 bàn tay] 2. 黑头发 hēi tóufa [A tóc đen ✓ / B tóc vàng / C cái mũ] 3. 拍拍手 pāipai shǒu [A vỗ tay ✓ / B dậm chân / C chạm đầu] 4. 跺跺脚 duòduo jiǎo [A dậm chân ✓ / B vỗ tay / C há miệng] 5. 张大口 zhāng dà kǒu [A há to miệng ✓ / B nhắm mắt / C vẫy tay] 5) [Cầu nối Anh – Trung] Cùng tranh truyện Fun in Town: rối Leo nói tiếng Anh \"Touch your head!\", rối Xiaomei nói tiếng Trung \"摸摸你的头！(Mōmo nǐ de tóu!)\"; con tìm điểm giống và khác. Cô chỉ: giống: Touch your head ↔ 摸摸你的头 cùng thứ tự · khác: tiếng Trung lặp 摸摸, thêm 的.",
+     "truyen": "真好玩 (Fun in Town) — 早上，Bông、爸爸和Leo去城里。看！公园里有身体表演！两个叔叔：小朋友们，早上好！拍拍手！跺跺脚！摸摸你的膝盖！摸摸你的脚趾！Leo跺脚，踩到了Bông的脚。Leo：对不起，Bông！Bông：哈哈！真好玩！叔叔：挥挥胳膊！给我看看你们的手指！真棒，小朋友！再见！小朋友挥挥手：叔叔，再见！(Zhēn hǎowán — Zǎoshang, Bông, bàba hé Leo qù chéngli. Kàn! Gōngyuán li yǒu shēntǐ biǎoyǎn! Liǎng ge shūshu: Xiǎo péngyoumen, zǎoshang hǎo! Pāipai shǒu! Duòduo jiǎo! Mōmo nǐ de xīgài! Mōmo nǐ de jiǎozhǐ! Leo duò jiǎo, cǎi dào le Bông de jiǎo. Leo: Duìbuqǐ, Bông! Bông: Hāha! Zhēn hǎowán! Shūshu: Huīhui gēbo! Gěi wǒ kànkan nǐmen de shǒuzhǐ! Zhēn bàng, xiǎo péngyou! Zàijiàn! Xiǎo péngyou huīhui shǒu: Shūshu, zàijiàn!)",
+     "baihat": "真好玩 (giai điệu Row, Row, Row Your Boat, cùng bài Fun in Town) — 拍拍拍拍手，/ 跺跺脚，一、二！/ 摸摸膝盖摸脚趾，/ 城里真好玩！(Pāi pāi pāipai shǒu, / duòduo jiǎo, yī, èr! / Mōmo xīgài mō jiǎozhǐ, / chéngli zhēn hǎowán!)"
+    }
+   }
+  },
+  {
+   "buoi": 19,
+   "unit": "",
+   "label_buoi": "Buổi dạy 19. Ôn chặng 1 · Ôn Unit 1–2 + làm thử bài kiểm tra phần nghe",
+   "web": [
+    {
+     "ngay": 37,
+     "label": "Ngày 37. Ôn chặng 1 · Quét Unit 1 Greeting (từ con sai vào Hộp ôn)",
+     "en": {
+      "tu": "Ôn (Unit 1): good, morning, class, Mrs, kid, man/men, lesson, song, story, wave, write, video, sorry | Nghe hiểu: toy, throw, tick, understand",
+      "cum": "good morning, class / hello, kids / lesson time / wave goodbye / write your name / I'm sorry",
+      "cau": "Good morning, Mrs Lan! / Hello, everyone! / It's lesson time. A song and a story! / I'm sorry, Leo. – I understand. / Goodbye! See you tomorrow!",
+      "truyen": "Back in Class — Morning. Kids: Good morning, Mrs Lan! Mrs Lan: Good morning, class! It's lesson time. Write your name, kids. Leo throws a toy. Leo: Sorry, Mrs Lan! Mrs Lan: I understand. Look! A video and a song! Goodbye, kids! The kids wave goodbye.",
+      "video": "Hello Song for Kids – Greeting Song – https://www.youtube.com/watch?v=gghDRJVxFxU"
+     },
+     "zh": {
+      "tu": "Ôn (Unit 1): 早上好 zǎoshang hǎo (= good morning), 你们 nǐmen, 你们好 nǐmen hǎo, 小朋友 xiǎo péngyou, 上课 shàngkè, 唱歌 chànggē, 故事 gùshi, 写 xiě, 挥挥手 huīhui shǒu, 视频 shìpín, 老师再见 lǎoshī zàijiàn, 明天见 míngtiān jiàn, 对不起 duìbuqǐ | Nghe làm quen: 玩具 wánjù, 扔 rēng, 明白 míngbai",
+      "cum": "早上好 zǎoshang hǎo / Lan老师，早上好 Lan lǎoshī, zǎoshang hǎo / 你们好 nǐmen hǎo / 写名字 xiě míngzi / 明天见 míngtiān jiàn / 对不起 duìbuqǐ",
+      "cau": "[Cầu nối] Goodbye! See you tomorrow! ↔ 再见！明天见！(Zàijiàn! Míngtiān jiàn!) [giống: tạm biệt rồi hẹn ngày mai · khác: tomorrow cuối câu ↔ 明天 đầu câu] / Lan老师，早上好！(Lan lǎoshī, zǎoshang hǎo!) (= Good morning, Mrs Lan!) / 小朋友，你们好！(Xiǎo péngyou, nǐmen hǎo!) / 大家好！(Dàjiā hǎo!) (= Hello, everyone!) / 上课了！唱歌，听故事！(Shàngkè le! Chànggē, tīng gùshi!) (= It's lesson time. A song and a story!) / 对不起，Leo！— 我明白了！(Duìbuqǐ, Leo! — Wǒ míngbai le!) (= I'm sorry, Leo. – I understand.) / 再见！明天见！(Zàijiàn! Míngtiān jiàn!)",
+      "truyen": "回到教室 (Back in Class) — 早上。小朋友：Lan老师，早上好！Lan老师：小朋友们，早上好！上课了！小朋友，写名字。Leo扔玩具。Leo：老师，对不起！Lan老师：我明白了。看！视频！唱歌吧！小朋友们，再见！小朋友挥挥手。(Huí dào jiàoshì — Zǎoshang. Xiǎo péngyou: Lan lǎoshī, zǎoshang hǎo! Lan lǎoshī: Xiǎo péngyoumen, zǎoshang hǎo! Shàngkè le! Xiǎo péngyou, xiě míngzi. Leo rēng wánjù. Leo: Lǎoshī, duìbuqǐ! Lan lǎoshī: Wǒ míngbai le. Kàn! Shìpín! Chànggē ba! Xiǎo péngyoumen, zàijiàn! Xiǎo péngyou huīhui shǒu.)",
+      "video": "Hello Song 你好歌 – Little Fox Chinese – https://www.youtube.com/watch?v=m_rDIzj6DRE"
+     }
+    },
+    {
+     "ngay": 38,
+     "label": "Ngày 38. Ôn chặng 1 · Quét Unit 2 Name and age (từ con sai vào Hộp ôn)",
+     "en": {
+      "tu": "Ôn (Unit 2): nice, year, again, me too, number, seven, eight, nine, ten, about, wow | Nghe hiểu: bye, end, hold, really, try",
+      "cum": "nice to meet you / years old / what about you / me too / try again",
+      "cau": "What's your name? – My name is Anna. / Nice to meet you! – Me too! / How old are you? – I'm six years old. What about you? / Wow! Number ten! / Really? Try again!",
+      "truyen": "Leo's Number Game — Leo: I'm ten years old! Anna: Wow! Really? Leo: No! Try again! Anna: Seven? Eight? Leo: No! I'm six years old. What about you? Anna: Me too! Nice to meet you again, Leo!",
+      "video": "What is your name? – LucyMax English for Kids – https://www.youtube.com/watch?v=78GhhuwR7M4"
+     },
+     "zh": {
+      "tu": "Ôn (Unit 2): 认识 rènshi, 高兴 gāoxìng, 什么名字 shénme míngzi, 我也是 wǒ yě shì, 七 qī, 八 bā, 九 jiǔ, 十 shí, 数字 shùzì, 你呢 nǐ ne, 哇 wā, 真的吗 zhēn de ma",
+      "cum": "很高兴认识你 hěn gāoxìng rènshi nǐ / 你叫什么名字 nǐ jiào shénme míngzi / 我也是 wǒ yě shì / 再试一次 zài shì yí cì",
+      "cau": "[Cầu nối] How old are you? – I'm six years old. ↔ 你几岁？— 我六岁。(Nǐ jǐ suì? — Wǒ liù suì.) [giống: six ↔ 六 · khác: tiếng Trung không cần years old] / 你叫什么名字？— 我叫Anna。(Nǐ jiào shénme míngzi? — Wǒ jiào Anna.) / 很高兴认识你！— 我也是！(Hěn gāoxìng rènshi nǐ! — Wǒ yě shì!) / 你几岁？— 我六岁。(Nǐ jǐ suì? — Wǒ liù suì.) / 你呢？(Nǐ ne?) (= What about you?) / 哇！数字十！(Wā! Shùzì shí!) / 真的吗？再试一次！(Zhēn de ma? Zài shì yí cì!) / [Chuyển ngữ] [nghe rối Leo nói 1 câu tiếng Anh, nói lại ý đó bằng tiếng Trung cho rối Xiaomei, ghi âm trên Trang luyện nói] Leo: Nice to meet you! → 很高兴认识你！(Hěn gāoxìng rènshi nǐ!)",
+      "truyen": "Leo几岁？(Leo's Number Game) — Leo：我十岁！Anna：哇！真的吗？Leo：不是！再试一次！Anna：七岁？八岁？Leo：不是！我六岁。你呢？Anna：我也是！Leo，很高兴又见到你！(Leo jǐ suì? — Leo: Wǒ shí suì! Anna: Wā! Zhēn de ma? Leo: Bú shì! Zài shì yí cì! Anna: Qī suì? Bā suì? Leo: Bú shì! Wǒ liù suì. Nǐ ne? Anna: Wǒ yě shì! Leo, hěn gāoxìng yòu jiàndào nǐ!)",
+      "video": "What's Your Name? 你叫什么名字？– Little Fox Chinese – https://www.youtube.com/watch?v=7ZMc8JJYA94"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn (Unit 1): good, morning, class, Mrs, kid, man/men, lesson, song, story, wave, write, video, sorry | Ôn (Unit 2): nice, year, again, me too, number, seven, eight, nine, ten, about, wow",
+     "slide": "[Lời cô] Vào bài: \"Good morning, class! 小朋友们好！\" · Khen: \"Well done! 真棒！\" · Chuyển ý: \"Let's play! 我们一起玩吧！\" · Nhắc: \"Hands up! 请举手！\" · Chuyển ý: \"Tiếp nào! Next! 下一个！\" · Câu mới buổi này (kết bài): \"Tạm biệt cả lớp! Goodbye, kids! 小朋友们再见！\" 1) Làm thử phần nghe – chọn tranh (6 câu): Good morning, class! / Write your name. / I'm sorry, Leo. / Nice to meet you! / I'm eight years old. / Number nine. 2) Hỏi – đáp theo cặp: What's your name? – My name is ___. / How old are you? – I'm ___ years old. What about you? – Me too! 3) Hộp ôn: lật thẻ 6 từ cả lớp sai nhiều nhất ở ngày 37–38 (ví dụ: Mrs, lesson, wave, again, about, nine), con nói từ và đặt 1 câu. 4) [Chuyển ngữ] Rối Xiaomei nói 1 câu tiếng Trung, con nói lại ý đó bằng tiếng Anh cho rối Leo (chỉ hiểu tiếng Anh): \"老师再见！(Lǎoshī zàijiàn!)\" → \"Goodbye, teacher!\"; từng con nói, cả lớp vỗ tay khi Leo hiểu. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"Good morning, everyone! My name is Leo. Nice to meet you!\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 大家早上好！我叫Leo，很高兴认识你们！ (Dàjiā zǎoshang hǎo! Wǒ jiào Leo, hěn gāoxìng rènshi nǐmen!)",
+     "truyen": "Good Morning, Xiaomei! — Morning. Kids: Good morning, Mrs Lan! Mrs Lan: Good morning, class! Look! A new kid. Xiaomei: Hello, everyone! My name is Xiaomei. I'm six years old. Leo: Nice to meet you, Xiaomei! I'm six years old. Xiaomei: Me too! Mrs Lan: It's lesson time. Seven, eight, nine, ten! Kids: Wow! A song and a story! Mrs Lan: Goodbye, kids! See you tomorrow!",
+     "baihat": "Ôn 2 bài hát: Good Morning Song (giai điệu Frère Jacques) — Good morning, good morning, / Mrs Lan, Mrs Lan! / Hello, kids! Hello, everyone! / Good morning, class! + What's Your Name? (giai điệu Frère Jacques) — What's your name? What's your name? / I'm Leo! I'm Leo! / Nice to meet you! Nice to meet you! / Me too! Me too!"
+    },
+    "zh": {
+     "flash": "Ôn (Unit 1): 您好 nín hǎo, 早上好 zǎoshang hǎo, 你们好 nǐmen hǎo, 小朋友 xiǎo péngyou, 上课 shàngkè, 唱歌 chànggē, 故事 gùshi, 挥挥手 huīhui shǒu, 写 xiě, 视频 shìpín, 老师再见 lǎoshī zàijiàn, 明天见 míngtiān jiàn, 对不起 duìbuqǐ | Ôn (Unit 2): 认识 rènshi, 高兴 gāoxìng, 又见面了 yòu jiànmiàn le, 什么名字 shénme míngzi, 我也是 wǒ yě shì, 你呢 nǐ ne, 七 qī, 八 bā, 九 jiǔ, 十 shí, 数字 shùzì, 哇 wā",
+     "slide": "1) Làm thử phần nghe – chọn tranh (6 câu, cùng 6 tranh với phần tiếng Anh): 小朋友们，早上好！(Xiǎo péngyoumen, zǎoshang hǎo!) / 写名字。(Xiě míngzi.) / 对不起，Leo！(Duìbuqǐ, Leo!) / 很高兴认识你！(Hěn gāoxìng rènshi nǐ!) / 我八岁。(Wǒ bā suì.) / 数字九。(Shùzì jiǔ.) 2) Hỏi – đáp theo cặp: 你叫什么名字？— 我叫___。/ 你几岁？— 我___岁。你呢？— 我也是！ 3) Hộp ôn: lật thẻ 6 từ sai nhiều nhất (ví dụ: Lan老师 Lan lǎoshī, 上课 shàngkè, 挥挥手 huīhui shǒu, 又见面了 yòu jiànmiàn le, 你呢 nǐ ne, 九 jiǔ), con nói từ và đặt 1 câu. 4) [Cầu nối Anh – Trung] Cùng cặp thẻ Anh – Trung Unit 1–2: rối Leo nói tiếng Anh \"Good morning, Mrs Lan! / Nice to meet you!\", rối Xiaomei nói tiếng Trung \"Lan老师，早上好！/ 很高兴认识你！(Lan lǎoshī, zǎoshang hǎo! / Hěn gāoxìng rènshi nǐ!)\"; con tìm điểm giống và khác. Cô chỉ: giống: mỗi cặp thẻ cùng một tranh, cùng nghĩa · khác: con tự nói một điểm khác về thứ tự từ.",
+     "truyen": "Xiaomei，早上好！(Good Morning, Xiaomei!) — 早上。小朋友：Lan老师，早上好！Lan老师：小朋友们，早上好！看！新朋友！Xiaomei：大家好！我叫Xiaomei。我六岁。Leo：很高兴认识你，Xiaomei！我六岁。Xiaomei：我也是！Lan老师：上课了！七、八、九、十！小朋友：哇！唱歌，听故事！Lan老师：小朋友们，再见！明天见！(Xiaomei, zǎoshang hǎo! — Zǎoshang. Xiǎo péngyou: Lan lǎoshī, zǎoshang hǎo! Lan lǎoshī: Xiǎo péngyoumen, zǎoshang hǎo! Kàn! Xīn péngyou! Xiaomei: Dàjiā hǎo! Wǒ jiào Xiaomei. Wǒ liù suì. Leo: Hěn gāoxìng rènshi nǐ, Xiaomei! Wǒ liù suì. Xiaomei: Wǒ yě shì! Lan lǎoshī: Shàngkè le! Qī, bā, jiǔ, shí! Xiǎo péngyou: Wā! Chànggē, tīng gùshi! Lan lǎoshī: Xiǎo péngyoumen, zàijiàn! Míngtiān jiàn!)",
+     "baihat": "Ôn 2 bài hát: 早上好歌 (giai điệu 两只老虎 = Frère Jacques, cùng bài Good Morning Song) — 早上好呀，早上好呀，/ Lan老师，Lan老师，/ 小朋友，大家好！小朋友，大家好！/ 早上好！早上好！+ 认识你歌 (giai điệu 两只老虎 = Frère Jacques, cùng bài What's Your Name?) — 你叫什么？你叫什么？/ 我叫Leo，我叫Leo，/ 很高兴认识你，很高兴认识你，/ 我也是，我也是。(Zǎoshang hǎo ya, zǎoshang hǎo ya, / Lan lǎoshī, Lan lǎoshī, / xiǎo péngyou, dàjiā hǎo! Xiǎo péngyou, dàjiā hǎo! / Zǎoshang hǎo! Zǎoshang hǎo! + Nǐ jiào shénme? Nǐ jiào shénme? / Wǒ jiào Leo, wǒ jiào Leo, / hěn gāoxìng rènshi nǐ, hěn gāoxìng rènshi nǐ, / wǒ yě shì, wǒ yě shì.)"
+    }
+   }
+  },
+  {
+   "buoi": 20,
+   "unit": "",
+   "label_buoi": "Buổi dạy 20. Ôn chặng 1 · Kiểm tra chặng 1 (Unit 1–4): nghe, nói, nhận diện",
+   "web": [
+    {
+     "ngay": 39,
+     "label": "Ngày 39. Ôn chặng 1 · Quét Unit 3 Family (từ con sai vào Hộp ôn)",
+     "en": {
+      "tu": "Ôn (Unit 3): photo, mother, baby, older, younger, learn, down, aunt, uncle, love, them | Nghe hiểu: grandfather, grandmother, father, mum, cousin, girl, child/children, Mr, Miss, woman/women, Chinese, Vietnamese",
+      "cum": "a family photo / my older brother / my younger sister / my aunt and uncle / I love them",
+      "cau": "Who is she? – She is my aunt. / Who is he? – He is my uncle. / This is my older brother. / This is my younger sister. / I love my family!",
+      "truyen": "Grandma's Photo — Grandma has a family photo. Bông: Who is he? Grandma: He is your uncle. Bông: Who is she? Grandma: She is your mother. She is a baby! Bông: Wow! I love them!",
+      "video": "The People In My Family – Super Simple Songs – https://www.youtube.com/watch?v=yDua9ms9_eg"
+     },
+     "zh": {
+      "tu": "Ôn (Unit 3): 照片 zhàopiàn, 家庭 jiātíng, 女 nǚ, 女孩 nǚhái, 中国人 Zhōngguó rén, 越南人 Yuènán rén, 叔叔 shūshu, 阿姨 āyí, 爱 ài",
+      "cum": "家庭照片 jiātíng zhàopiàn / 他是我叔叔 tā shì wǒ shūshu / 她是我阿姨 tā shì wǒ āyí / 我爱我的家人 wǒ ài wǒ de jiārén",
+      "cau": "[Cầu nối] Who is he? – He is my uncle. ↔ 他是谁？— 他是我叔叔。(Tā shì shéi? — Tā shì wǒ shūshu.) [giống: He is my ↔ 他是我 · khác: Who đầu câu ↔ 谁 cuối câu] / [Ngữ pháp: he / she – 他 / 她 cùng đọc tā] 他是谁？— 他是我叔叔。(Tā shì shéi? — Tā shì wǒ shūshu.) / 她是谁？— 她是我阿姨。(Tā shì shéi? — Tā shì wǒ āyí.) / 这是我哥哥。这是我妹妹。(Zhè shì wǒ gēge. Zhè shì wǒ mèimei.) (= This is my older brother. / This is my younger sister.) / 我爱我的家人！(Wǒ ài wǒ de jiārén!) / [Chuyển ngữ] [nghe rối Leo nói 1 câu tiếng Anh, nói lại ý đó bằng tiếng Trung cho rối Xiaomei, ghi âm trên Trang luyện nói] Leo: I love my family! → 我爱我的家人！(Wǒ ài wǒ de jiārén!)",
+      "truyen": "奶奶的照片 (Grandma's Photo) — 奶奶有家庭照片。Bông：他是谁？奶奶：他是你叔叔。Bông：她是谁？奶奶：她是你妈妈。她是宝宝！Bông：哇！我爱他们！(Nǎinai de zhàopiàn — Nǎinai yǒu jiātíng zhàopiàn. Bông: Tā shì shéi? Nǎinai: Tā shì nǐ shūshu. Bông: Tā shì shéi? Nǎinai: Tā shì nǐ māma. Tā shì bǎobao! Bông: Wā! Wǒ ài tāmen!)",
+      "video": "我爱家人 I Love My Family – EduChinese – https://www.youtube.com/watch?v=0z38T38Sv60"
+     }
+    },
+    {
+     "ngay": 40,
+     "label": "Ngày 40. Ôn chặng 1 · Quét Unit 4 Body + luyện trước bài kiểm tra",
+     "en": {
+      "tu": "Ôn (Unit 4): arm, body, clap, fun, hair, leg, shoulder, town, finger, knee, stamp, toe, tall | Nghe hiểu: show, well",
+      "cum": "head, shoulders, knees and toes / clap your hands / stamp your feet / ten fingers / it's fun",
+      "cau": "I've got ten fingers and ten toes. / I have black hair. / Touch your shoulders! Touch your knees! / Clap your hands! Stamp your feet! / It's fun! Well done!",
+      "truyen": "Uncle's Show — Uncle: Good morning, kids! Clap your hands! Stamp your feet! Touch your knees and toes! Show me your arms! Kids: Ha ha! It's fun! Uncle: Well done!",
+      "video": "Head Shoulders Knees & Toes (Sing It) – Super Simple Songs – https://www.youtube.com/watch?v=ZanHgPprl-0"
+     },
+     "zh": {
+      "tu": "Ôn (Unit 4): 身体 shēntǐ, 头发 tóufa, 个子 gèzi, 高 gāo, 摸摸 mōmo, 拍拍手 pāipai shǒu, 跺跺脚 duòduo jiǎo, 好玩 hǎowán | Nghe làm quen: 手指 shǒuzhǐ, 脚趾 jiǎozhǐ, 肩膀 jiānbǎng, 膝盖 xīgài, 胳膊 gēbo",
+      "cum": "(nghe làm quen) 十个手指 shí ge shǒuzhǐ / 我的头发是黑色的 wǒ de tóufa shì hēisè de / 拍拍手 pāipai shǒu / 跺跺脚 duòduo jiǎo / 真好玩 zhēn hǎowán",
+      "cau": "[Cầu nối] It's fun! ↔ 真好玩！(Zhēn hǎowán!) [giống: cùng câu khen · khác: tiếng Trung thêm 真; Touch your knees ↔ 摸摸你的膝盖 cùng thứ tự, tiếng Trung lặp 摸摸, thêm 的] / (nghe làm quen) 我有十个手指，十个脚趾。(Wǒ yǒu shí ge shǒuzhǐ, shí ge jiǎozhǐ.) (= I've got ten fingers and ten toes.) / [Ngữ pháp: 我的 + bộ phận cơ thể + 是…的 / 很大] 我的头发是黑色的。(Wǒ de tóufa shì hēisè de.) (= I have black hair.) / (nghe làm quen) 摸摸你的肩膀！摸摸你的膝盖！(Mōmo nǐ de jiānbǎng! Mōmo nǐ de xīgài!) / 拍拍手！跺跺脚！(Pāipai shǒu! Duòduo jiǎo!) / 真好玩！真棒！(Zhēn hǎowán! Zhēn bàng!)",
+      "truyen": "叔叔的表演 (Uncle's Show) — 叔叔：小朋友们，早上好！拍拍手！跺跺脚！摸摸你的膝盖和脚趾！给我看看你们的胳膊！小朋友：哈哈！真好玩！叔叔：真棒！(Shūshu de biǎoyǎn — Shūshu: Xiǎo péngyoumen, zǎoshang hǎo! Pāipai shǒu! Duòduo jiǎo! Mōmo nǐ de xīgài hé jiǎozhǐ! Gěi wǒ kànkan nǐmen de gēbo! Xiǎo péngyou: Hāha! Zhēn hǎowán! Shūshu: Zhēn bàng!)",
+      "video": "头肩膀膝盖脚 – 朱妮托尼 – https://www.youtube.com/watch?v=-7BDwnfA5IE"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn (Unit 3): photo, mother, baby, older, younger, learn, down, aunt, uncle, love, them | Nghe hiểu: Chinese, Vietnamese | Ôn (Unit 4): arm, body, clap, fun, hair, leg, shoulder, town, finger, knee, stamp, toe, tall",
+     "slide": "[Lời cô] Vào bài: \"Good morning, class! 小朋友们好！\" · Khen: \"Well done! 真棒！\" · Nhắc: \"Hands up! 请举手！\" · Chuyển ý: \"Tiếp nào! Next! 下一个！\" · Kết bài: \"Tạm biệt cả lớp! Goodbye, kids! 小朋友们再见！\" 1) Kiểm tra phần nghe – chọn tranh (8 câu, 2 câu mỗi unit): Good morning, Mrs Lan! / Wave goodbye! / Nice to meet you! / I'm nine years old. / He is my uncle. / This is my younger sister. / Touch your knees! / I've got ten toes. 2) Kiểm tra phần nói – cô hỏi từng con (4 câu): What's your name? / How old are you? / Who is he? (ảnh gia đình) / Touch your shoulders! (con làm và nói Shoulders!) 3) Nhận diện từ – nhìn tranh chọn từ đúng (4 câu): shoulder / knee / uncle / aunt. 4) [Chuyển ngữ] Rối Leo nói 1 câu tiếng Anh, con nói lại ý đó bằng tiếng Trung cho rối Xiaomei (chỉ hiểu tiếng Trung): \"Touch your knees!\" → \"摸摸你的膝盖！(Mōmo nǐ de xīgài!)\"; từng con nói, cả lớp vỗ tay khi Xiaomei hiểu. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"This is my uncle. He is tall, and he has got black hair.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 这是我叔叔。他个子很高，头发是黑色的。 (Zhè shì wǒ shūshu. Tā gèzi hěn gāo, tóufa shì hēisè de.)",
+     "truyen": "Fun Day With My Family — Good morning! Bông, Mother, Uncle and the baby go to town. Look! A show in the park. A man: Hello, kids! Clap your hands! Stamp your feet! Touch your knees and toes! Bông: It's fun! Uncle: Look! A photo! Bông: This is my mother, my uncle and my baby brother. I love them! Man: Well done! Goodbye!",
+     "baihat": "Ôn 2 bài hát: Who Is She? (giai điệu Frère Jacques) — Who is she? Who is she? / She's my mummy! She's my mummy! / Who is he? Who is he? / He's my daddy! He's my daddy! + Clap and Stamp (giai điệu London Bridge Is Falling Down) — Clap, clap, clap your hands, / clap your hands, clap your hands, / Stamp, stamp, stamp your feet, / Touch your knees!"
+    },
+    "zh": {
+     "flash": "Ôn (Unit 3): 照片 zhàopiàn, 家庭 jiātíng, 中国人 Zhōngguó rén, 越南人 Yuènán rén, 叔叔 shūshu, 阿姨 āyí, 爱 ài | Ôn (Unit 4): 身体 shēntǐ, 头发 tóufa, 个子 gèzi, 高 gāo, 摸摸 mōmo, 拍拍手 pāipai shǒu, 跺跺脚 duòduo jiǎo, 好玩 hǎowán | Nghe làm quen: 胳膊 gēbo, 腿 tuǐ, 手指 shǒuzhǐ, 脚趾 jiǎozhǐ, 肩膀 jiānbǎng, 膝盖 xīgài",
+     "slide": "1) Kiểm tra phần nghe – chọn tranh (8 câu, 2 câu mỗi unit, cùng 8 tranh với phần tiếng Anh): Lan老师，早上好！/ 挥挥手，再见！/ 很高兴认识你！/ 我九岁。/ 他是我叔叔。/ 这是我妹妹。/ 摸摸你的膝盖！/ 我有十个脚趾。 2) Kiểm tra phần nói – cô hỏi từng con: 你叫什么名字？/ 你几岁？/ 他是谁？(ảnh gia đình) / 摸摸你的肩膀！(con làm và nói 肩膀！) 3) Nhận diện từ – nhìn tranh chọn từ đúng (4 câu, cùng tranh với phần tiếng Anh): 肩膀 jiānbǎng / 膝盖 xīgài / 叔叔 shūshu / 阿姨 āyí; thêm nhận diện chữ Hán: 口 kǒu / 女 nǚ. 4) [Cầu nối Anh – Trung] Cùng cặp thẻ Anh – Trung Unit 3–4: rối Leo nói tiếng Anh \"He is my uncle. / I've got two ears.\", rối Xiaomei nói tiếng Trung \"他是我叔叔。/ 我有两只耳朵。(Tā shì wǒ shūshu. / Wǒ yǒu liǎng zhī ěrduo.)\"; con tìm điểm giống và khác. Cô chỉ: giống: mỗi cặp thẻ cùng một tranh, cùng nghĩa · khác: con tự nói một điểm khác (只, -s).",
+     "truyen": "和家人一起玩 (Fun Day With My Family) — 早上好！Bông、妈妈、叔叔和宝宝去城里。看！公园里有表演！表演的叔叔：小朋友们好！拍拍手！跺跺脚！摸摸你的膝盖和脚趾！Bông：真好玩！叔叔：看！照片！Bông：这是我妈妈、我叔叔和我弟弟。我爱他们！表演的叔叔：真棒！再见！(Hé jiārén yìqǐ wán — Zǎoshang hǎo! Bông, māma, shūshu hé bǎobao qù chéngli. Kàn! Gōngyuán li yǒu biǎoyǎn! Biǎoyǎn de shūshu: Xiǎo péngyoumen hǎo! Pāipai shǒu! Duòduo jiǎo! Mōmo nǐ de xīgài hé jiǎozhǐ! Bông: Zhēn hǎowán! Shūshu: Kàn! Zhàopiàn! Bông: Zhè shì wǒ māma, wǒ shūshu hé wǒ dìdi. Wǒ ài tāmen! Biǎoyǎn de shūshu: Zhēn bàng! Zàijiàn!)",
+     "baihat": "Ôn 2 bài hát: 她是谁 (giai điệu 两只老虎 = Frère Jacques, cùng bài Who Is She?) — 她是谁呀？她是谁呀？/ 是妈妈，是妈妈！/ 他是谁呀？他是谁呀？/ 是爸爸，是爸爸！(Tā shì shéi ya? Tā shì shéi ya? / Shì māma, shì māma! / Tā shì shéi ya? Tā shì shéi ya? / Shì bàba, shì bàba!) + 拍拍手 (giai điệu London Bridge Is Falling Down, cùng bài Clap and Stamp) — 拍拍拍拍小手，/ 拍小手，拍小手，/ 跺跺跺跺小脚，/ 摸膝盖！(Pāi pāi pāipai xiǎo shǒu, / pāi xiǎo shǒu, pāi xiǎo shǒu, / duò duò duòduo xiǎo jiǎo, / mō xīgài!)"
+    }
+   }
+  }
+ ]
+}

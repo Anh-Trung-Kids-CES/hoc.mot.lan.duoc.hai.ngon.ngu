@@ -1,0 +1,1716 @@
+{
+ "course": "PreB",
+ "part": "a",
+ "rows": [
+  {
+   "buoi": 1,
+   "unit": "",
+   "label_buoi": "Buổi dạy 1. Tuần 1 · Mở khóa – Làm quen cô và bạn",
+   "web": [
+    {
+     "ngay": 1,
+     "label": "Ngày 1. Mở khóa · Chào cô, chào bạn",
+     "en": {
+      "tu": "Mới: hi, bye-bye",
+      "cum": "hi, Bông / hi, Leo / bye-bye, Anna",
+      "cau": "Hi! I'm Bông. / Hi! I'm Leo. / Bye-bye! / [Lời web] Vào bài: \"Chào con! Hello!\" · Chuyển ý: \"Nhìn này! Look!\" · Khen: \"Giỏi quá! Good job!\"",
+      "truyen": "Hi, I'm Bông — Bông waves: “Hi! I'm Bông.” Leo waves: “Hi! I'm Leo.” Ding, dong! Bông and Leo wave: “Bye-bye! Bye-bye!”",
+      "video": "Tìm YouTube: \"say hi song for preschool wave hello\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    },
+    {
+     "ngay": 2,
+     "label": "Ngày 2. Mở khóa · Nhìn, nghe, vỗ tay",
+     "en": {
+      "tu": "Mới: look, listen, clap | Ôn: hi, bye-bye",
+      "cum": "look at me / listen, please / clap, clap, clap",
+      "cau": "Look! / Listen! / Clap, clap, clap! / Hi! Look at me!",
+      "truyen": "Look and listen — Leo: “Hi, Bông! Look!” Bông looks. Leo: “Listen!” Clap, clap, clap! Bông: “Clap, clap, clap!” Leo and Bông: “Bye-bye!”",
+      "video": "Tìm YouTube: \"look listen clap song for kids classroom\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: hi, bye-bye, look, listen, clap (tranh: bạn vẫy tay chào, bạn vẫy tay tạm biệt, đôi mắt nhìn, đôi tai nghe, hai tay vỗ)",
+     "slide": "[Lời cô] Vào bài: \"Chào cả lớp! Hello, everyone!\" · Nhắc: \"Nhìn cô nào! Look!\" · Khen: \"Giỏi lắm! Good job!\" · Chào về: \"Tạm biệt! Bye-bye!\" · Câu mới buổi này: Hello, everyone! / Look! 1) Nghe và làm theo (5 lệnh): Look! / Listen! / Clap, clap, clap! / Hi! / Bye-bye! 2) Nghe tên và chạm đúng bạn trên slide (3 câu): Hi, Bông! / Hi, Leo! / Hi, Anna! 3) Trò chơi Chiếc hộp bí mật: cô mở hộp và nói Look!, con nhìn tranh bạn mới hiện ra rồi vẫy tay nói Hi!",
+     "truyen": "Hi, I'm Bông — Bông comes to class. She looks: Leo! “Hi! I'm Bông.” “Hi! I'm Leo.” Leo claps: clap, clap, clap. Bông claps: clap, clap, clap. Listen! Ding, dong! “Bye-bye, Leo!” “Bye-bye, Bông!”",
+     "baihat": "Hi Song — giai điệu Frère Jacques: Hi, hi, Bông! Hi, hi, Leo! / Look, look, look! Look, look, look! / Listen, listen, listen! Listen, listen, listen! / Clap, clap, clap! Clap, clap, clap!"
+    },
+    "zh": {
+     "flash": "–",
+     "slide": "–",
+     "truyen": "–",
+     "baihat": "–"
+    }
+   }
+  },
+  {
+   "buoi": 2,
+   "unit": "",
+   "label_buoi": "Buổi dạy 2. Tuần 1 · Mở khóa – Hát, nhảy và bài đầu vào",
+   "web": [
+    {
+     "ngay": 3,
+     "label": "Ngày 3. Mở khóa · Hát và nhảy (kèm bài đầu vào nghe – chạm tranh)",
+     "en": {
+      "tu": "Mới: sing, dance | Ôn: look, listen, clap",
+      "cum": "let's sing / let's dance / good job",
+      "cau": "Let's sing! / Let's dance! / Good job! / Look and listen.",
+      "truyen": "Let's sing! — Anna: “Hi! I'm Anna. Let's sing!” Leo: “La, la, la!” Bông: “Let's dance!” Anna, Leo and Bông dance and clap. “Good job!”",
+      "video": "Tìm YouTube: \"let's sing and dance action song preschool\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    },
+    {
+     "ngay": 4,
+     "label": "Ngày 4. Mở khóa · Ôn tuần + truyện Buổi học đầu tiên",
+     "en": {
+      "tu": "Ôn: hi, bye-bye, look, listen, clap, sing, dance",
+      "cum": "hi, Anna / look at me / let's sing / let's dance / good job",
+      "cau": "Hi! I'm Leo. / Look! Listen! / Let's sing and dance! / Good job! Bye-bye!",
+      "truyen": "Our first class — Bông, Leo and Anna come to class. “Hi! Hi! Hi!” Look! Listen! La, la, la. “Let's sing!” “Let's dance!” Clap, clap, clap. “Good job!” “Bye-bye, Anna! Bye-bye, Leo! Bye-bye, Bông!”",
+      "video": "Tìm YouTube: \"bye bye song for kids preschool\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: sing, dance | Ôn: hi, bye-bye, look, listen, clap",
+     "slide": "[Lời cô] Vào bài: \"Chào cả lớp! Hello, everyone!\" · Nhắc: \"Nghe nào! Listen!\" · Chuyển ý: \"Mình cùng hát nào! Let's sing!\" · Khen: \"Giỏi lắm! Good job!\" · Câu mới buổi này: Listen! / Let's sing! 1) Bài đầu vào – nghe và chạm tranh (8 tranh, cô ghi lại con đã nhận ra từ nào): hello / cat / dog / apple / red / one / mommy / ball. 2) Nghe lệnh và làm theo (4 lệnh): Let's sing! / Let's dance! / Clap, clap, clap! / Look! 3) Nghe và chạm bạn được khen (3 câu): Good job, Anna! / Good job, Leo! / Good job, Bông!",
+     "truyen": "Let's sing and dance — Anna comes to class. “Hi! I'm Anna.” Bông and Leo: “Hi, Anna!” Listen! La, la, la. “Let's sing!” Bông, Leo and Anna sing. “Let's dance!” They dance and clap. “Good job!” Ding, dong! “Bye-bye, Anna! Bye-bye, Leo! Bye-bye, Bông!”",
+     "baihat": "Let's Sing — giai điệu Row, Row, Row Your Boat: Sing, sing, sing with me, / La, la, la, la, la! / Dance, dance, dance with me, / Clap, clap, clap, clap, clap! (Đoạn kết: Bye-bye, bye-bye, bye-bye, bye-bye, / Good job, bye-bye!)"
+    },
+    "zh": {
+     "flash": "–",
+     "slide": "–",
+     "truyen": "–",
+     "baihat": "–"
+    }
+   }
+  },
+  {
+   "buoi": 3,
+   "unit": 1,
+   "label_buoi": "Buổi dạy 3. Unit 1 · Greeting – Chào cô, chào bạn",
+   "web": [
+    {
+     "ngay": 5,
+     "label": "Ngày 5. Unit 1 · Chào cô giáo",
+     "en": {
+      "tu": "Mới: hello, goodbye, teacher | Ôn: hi, bye-bye",
+      "cum": "hello, teacher / goodbye, teacher / hello, Bông / goodbye, Leo",
+      "cau": "Hello, teacher! / Goodbye, teacher! / Hello, Bông! / Goodbye, Leo! / [Lời web] Vào bài: \"Mình cùng học nhé! Let's learn!\" · Nhắc: \"Nghe nào! Listen!\" · Khen: \"Giỏi quá! Good job!\"",
+      "truyen": "Hello, teacher! — Bông comes to class: “Hello, teacher!” The teacher waves: “Hello, Bông!” Listen! Ding, dong! “Goodbye, teacher!” “Goodbye, Bông!”",
+      "video": "Tìm YouTube: \"hello goodbye song for preschool\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    },
+    {
+     "ngay": 6,
+     "label": "Ngày 6. Unit 1 · Chào bạn mới: boy, girl",
+     "en": {
+      "tu": "Mới: friend, boy, girl | Ôn: hello, goodbye, teacher",
+      "cum": "hello, friend / my friend / a boy / a girl",
+      "cau": "Hello, friend! / I'm a boy. / I'm a girl. / Leo is my friend.",
+      "truyen": "My friend Leo — Bông: “Hello, Leo!” Leo: “Hello, Bông! I'm a boy.” Bông: “I'm a girl.” Bông and Leo clap: “Leo is my friend! Bông is my friend!”",
+      "video": "Tìm YouTube: \"boy and girl song for toddlers hello friend\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: hello, goodbye, teacher, friend, boy, girl | Ôn: hi, bye-bye, look, listen, clap",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone!\" (bỏ tiếng Việt) · Nhắc: \"Nhìn cô, nghe cô! Look! Listen!\" · Chuyển ý: \"Mình cùng chơi nào! Let's play!\" · Khen: \"Giỏi lắm! Good job!\" · Câu mới buổi này: Let's play! 1) Nghe và chạm tranh (4 câu): hello / goodbye / teacher / friend. 2) Nghe và chọn bạn trai hay bạn gái (4 câu): I'm a boy. (Leo) / I'm a girl. (Bông) / I'm a girl. (Anna) / I'm a boy. (Nhan) 3) Trò chơi Vẫy tay: cô nói Hello, teacher! thì con vẫy tay chào, cô nói Goodbye, friend! thì con vẫy tay tạm biệt (6 lượt).",
+     "truyen": "Hello, friend! — Bông comes to class: “Hello, teacher!” Teacher: “Hello, Bông!” Leo comes: “Hello, teacher! Hello, Bông!” Bông: “Hello, Leo! I'm a girl.” Leo: “I'm a boy. Bông is my friend.” Ding, dong! “Goodbye, teacher! Goodbye, friend!”",
+     "baihat": "Hello, Teacher — giai điệu Frère Jacques: Hello, teacher! Hello, teacher! / Hello, friend! Hello, friend! / I'm a boy, I'm a girl; I'm a boy, I'm a girl. / Hello, hello! Hello, hello!"
+    },
+    "zh": {
+     "flash": "–",
+     "slide": "–",
+     "truyen": "–",
+     "baihat": "–"
+    }
+   }
+  },
+  {
+   "buoi": 4,
+   "unit": 1,
+   "label_buoi": "Buổi dạy 4. Unit 1 · Greeting – Yes hay no? Bạn mới Anna",
+   "web": [
+    {
+     "ngay": 7,
+     "label": "Ngày 7. Unit 1 · Yes hay no?",
+     "en": {
+      "tu": "Mới: yes, no | Ôn: boy, girl, friend, teacher",
+      "cum": "yes, teacher / no, no / a boy or a girl",
+      "cau": "[Ngữ pháp: câu hỏi Yes/No với Are you…? / Is it…?] Are you a boy? – Yes! / Are you a girl? – No! / Is it Leo? – Yes!",
+      "truyen": "Yes or no? — Teacher: “Leo, are you a girl?” Leo: “No, no! I'm a boy.” Teacher: “Bông, are you a girl?” Bông: “Yes! I'm a girl.” Leo and Bông clap: “Good job!”",
+      "video": "Tìm YouTube: \"yes no song for kids preschool\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    },
+    {
+     "ngay": 8,
+     "label": "Ngày 8. Unit 1 · Ôn unit + truyện Bạn mới Anna",
+     "en": {
+      "tu": "Ôn: hello, goodbye, teacher, friend, boy, girl, yes, no, look, listen, clap",
+      "cum": "hello, teacher / goodbye, friend / my friend / a boy / a girl",
+      "cau": "Hello! I'm Anna. I'm a girl. / Are you a boy? – No! / Are you my friend? – Yes! / Goodbye, teacher!",
+      "truyen": "A new friend — Anna comes to class: “Hello, teacher! Hello!” Leo: “Hello! Are you a boy?” Anna: “No! I'm a girl. I'm Anna.” Leo: “I'm Leo. I'm a boy.” Bông: “Anna, are you my friend?” Anna: “Yes!” Clap, clap, clap! “Goodbye, teacher! Goodbye, friends!”",
+      "video": "Tìm YouTube: \"hello friend song for kids\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: yes, no | Ôn: hello, goodbye, teacher, friend, boy, girl",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone!\" · Nhắc: \"Look! Listen!\" (bỏ tiếng Việt) · Chuyển ý: \"Mình cùng chơi nào! Let's play!\" · Khen: \"Good job!\" (bỏ tiếng Việt) · Câu mới buổi này: \"Lại đây nào! Come here, please.\" 1) Nghe câu hỏi và chạm Yes (bạn gật đầu) hoặc No (bạn lắc đầu) (4 câu): Are you a boy? (tranh Leo) / Are you a girl? (tranh Leo) / Is it Leo? (tranh Bông) / Is it the teacher? (tranh cô giáo). 2) Nghe và nối tên với tranh (4 nhân vật): Bông – a girl / Leo – a boy / Anna – a girl / the teacher. 3) Đóng vai chào hỏi theo cặp: Hello, friend! – Hello! / Are you a girl? – Yes! / Goodbye, teacher! – Goodbye!",
+     "truyen": "A new friend — Anna comes to class. She looks: a boy and a girl. “Hello!” Leo: “Hello! Are you a boy?” Anna: “No, no! I'm a girl. I'm Anna.” Leo: “I'm Leo. I'm a boy.” Bông: “Hello, Anna! Are you my friend?” Anna: “Yes!” Teacher: “Good job, friends!” Ding, dong! “Goodbye, teacher! Goodbye, Anna!”",
+     "baihat": "Goodbye Song — giai điệu Mary Had a Little Lamb: Goodbye, teacher, yes, yes, yes, / yes, yes, yes, yes, yes, yes, / Goodbye, teacher, goodbye, friends, / goodbye, bye-bye, bye! (Lời 2: Are you a boy? No, no, no, / no, no, no, no, no, no, / Are you a boy? No, no, no, / I'm a girl, bye-bye!)"
+    },
+    "zh": {
+     "flash": "–",
+     "slide": "–",
+     "truyen": "–",
+     "baihat": "–"
+    }
+   }
+  },
+  {
+   "buoi": 5,
+   "unit": 2,
+   "label_buoi": "Buổi dạy 5. Unit 2 · Name and age – Tên con là gì? Con mấy tuổi?",
+   "web": [
+    {
+     "ngay": 9,
+     "label": "Ngày 9. Unit 2 · Tên con là gì?",
+     "en": {
+      "tu": "Mới: name, one, two | Ôn: hello, boy, girl, friend",
+      "cum": "my name / your name / one, two",
+      "cau": "[Ngữ pháp: What's your name? – My name is…] What's your name? – My name is Leo. / My name is Bông. / One, two – clap, clap! / [Lời web] Vào bài: \"Mình cùng học nhé! Let's learn!\" · Chuyển ý: \"Mình cùng chơi nào! Let's play!\" · Khen: \"Good job!\"",
+      "truyen": "What's your name? — Leo: “Hello! What's your name?” Girl: “My name is Anna. What's your name?” Leo: “My name is Leo.” Anna and Leo: “One, two – clap, clap!”",
+      "video": "Tìm YouTube: \"what's your name song for preschool\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    },
+    {
+     "ngay": 10,
+     "label": "Ngày 10. Unit 2 · Đếm 3, 4, 5 – Con mấy tuổi?",
+     "en": {
+      "tu": "Mới: three, four, five | Ôn: one, two, name",
+      "cum": "one, two, three / four, five / I'm four / I'm five",
+      "cau": "[Ngữ pháp: How old are you? – I'm + số] How old are you? – I'm four. / How old are you? – I'm five. / One, two, three, four, five!",
+      "truyen": "How old are you? — Teacher: “Bông, how old are you?” Bông: “I'm four.” Teacher: “Leo, how old are you?” Leo counts: “One, two, three, four, five. I'm five!” Teacher: “Good job!”",
+      "video": "Tìm YouTube: \"how old are you song for kids count to five\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: name, one, two, three, four, five | Ôn: hello, friend, boy, girl, yes, no",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone!\" · Nhắc: \"Look! Listen!\" · Chuyển ý: \"Let's play!\" (bỏ tiếng Việt) · Khen: \"Good job!\" · Câu mới buổi này: \"Đến lượt con! Your turn!\" 1) Nghe số và chạm đúng số chấm (5 câu): one / two / three / four / five. 2) Nghe và chạm bạn đang nói (3 câu): My name is Leo. / My name is Bông. / My name is Anna. 3) Nghe tuổi và chạm bạn (3 câu): I'm four. (Bông) / I'm five. (Leo) / I'm three. (Nhan)",
+     "truyen": "What's your name? — Teacher: “Hello, friends! What's your name?” “My name is Bông.” “My name is Leo.” “My name is Anna.” Teacher: “How old are you, Bông?” Bông: “I'm four.” Leo: “One, two, three, four, five – I'm five!” Anna: “I'm five, too!” Teacher: “Good job!”",
+     "baihat": "One, Two, Three, Four, Five — giai điệu Twinkle, Twinkle, Little Star: One, two, three, four, five, / What's your name? My name is Leo! / One, two, three, four, five, / How old are you? I am five!"
+    },
+    "zh": {
+     "flash": "–",
+     "slide": "–",
+     "truyen": "–",
+     "baihat": "–"
+    }
+   }
+  },
+  {
+   "buoi": 6,
+   "unit": 2,
+   "label_buoi": "Buổi dạy 6. Unit 2 · Name and age – Sinh nhật vui vẻ",
+   "web": [
+    {
+     "ngay": 11,
+     "label": "Ngày 11. Unit 2 · Sinh nhật và bánh",
+     "en": {
+      "tu": "Mới: birthday, cake | Ôn: three, four, five, name",
+      "cum": "happy birthday / a birthday cake / my birthday",
+      "cau": "Happy birthday, Leo! / It's my birthday. / Look! A birthday cake! / I'm five!",
+      "truyen": "Leo's birthday — It's Leo's birthday. Look! A birthday cake! Bông and Anna: “Happy birthday, Leo! How old are you?” Leo: “I'm five! One, two, three, four, five!”",
+      "video": "Tìm YouTube: \"birthday cake song for kids preschool\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    },
+    {
+     "ngay": 12,
+     "label": "Ngày 12. Unit 2 · Ôn unit + truyện Sinh nhật Anna",
+     "en": {
+      "tu": "Ôn: name, one, two, three, four, five, birthday, cake, friend, teacher, yes, no",
+      "cum": "my name / your name / happy birthday / a birthday cake / I'm five",
+      "cau": "What's your name? – My name is Anna. / How old are you? – I'm five. / Is it your birthday? – Yes! / Look! A cake!",
+      "truyen": "Anna's birthday — Leo: “Hello, Anna! Is it your birthday?” Anna: “Yes!” Bông: “How old are you?” Anna: “I'm five!” Look! A birthday cake. Friends count: “One, two, three, four, five!” “Happy birthday, Anna!” Leo: “Teacher, is it your birthday?” Teacher: “No, no!”",
+      "video": "Tìm YouTube: \"birthday party song for preschool counting candles\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: birthday, cake | Ôn: name, one, two, three, four, five, teacher, friend",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone!\" · Gọi con: \"Come here, please.\" (bỏ tiếng Việt) · Mời: \"Đến lượt con! Your turn!\" · Khen: \"Giỏi quá! Well done!\" · Câu mới buổi này: Well done! 1) Nghe tuổi và chạm chiếc bánh có đúng số nến (4 câu): I'm three. / I'm four. / I'm five. / I'm two. 2) Nghe và chạm tranh (4 câu): birthday / cake / name / friend. 3) Trò chơi Thổi nến: cô hỏi How old are you? – I'm five!, cả lớp đếm one, two, three, four, five rồi cùng thổi nến trên slide.",
+     "truyen": "Anna's birthday — It's Anna's birthday. Leo: “Hello, Anna! Is it your birthday?” Anna: “Yes!” Bông: “How old are you?” Anna: “I'm five!” Look! A birthday cake. Friends count: “One, two, three, four, five!” “Happy birthday, Anna!” Leo: “Teacher, is it your birthday?” Teacher: “No, no! It's Anna's birthday.” Clap, clap, clap!",
+     "baihat": "Look, a Cake! — giai điệu Mary Had a Little Lamb: It's my birthday, look, a cake! / Look, a cake! Look, a cake! / It's my birthday, look, a cake! / One, two, three, four, five! (Lời 2: Happy birthday, Anna, Anna… / How old are you? I'm five!)"
+    },
+    "zh": {
+     "flash": "–",
+     "slide": "–",
+     "truyen": "–",
+     "baihat": "–"
+    }
+   }
+  },
+  {
+   "buoi": 7,
+   "unit": 3,
+   "label_buoi": "Buổi dạy 7. Unit 3 · Family – Mẹ, bố, em bé và anh chị em",
+   "web": [
+    {
+     "ngay": 13,
+     "label": "Ngày 13. Unit 3 · Mẹ, bố và em bé",
+     "en": {
+      "tu": "Mới: mommy, daddy, baby | Ôn: name, birthday, cake",
+      "cum": "my mommy / my daddy / hello, baby",
+      "cau": "[Ngữ pháp: This is my + người thân] This is my mommy. / This is my daddy. / Hello, baby! / [Lời web] Vào bài: \"Let's learn!\" · Chuyển ý: \"Let's play!\" · Khen: \"Giỏi quá! Well done!\"",
+      "truyen": "Bông's mommy — Bông: “Look! This is my mommy. This is my daddy.” Mommy: “And this is the baby.” Bông: “Hello, baby!” Baby: “Ba-ba!”",
+      "video": "Tìm YouTube: \"mommy daddy baby song for toddlers\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    },
+    {
+     "ngay": 14,
+     "label": "Ngày 14. Unit 3 · Anh trai, chị gái",
+     "en": {
+      "tu": "Mới: brother, sister | Ôn: mommy, daddy, baby, boy, girl",
+      "cum": "my brother / my sister / a boy / a girl",
+      "cau": "This is my brother. He's a boy. / This is my sister. She's a girl. / Is he your brother? – Yes!",
+      "truyen": "My brother Nhan — Bông: “This is my brother. His name is Nhan. He's three.” Leo: “This is my sister. Her name is Xiaomei. She's five.” Nhan and Xiaomei: “Hello!”",
+      "video": "Tìm YouTube: \"brother and sister song for kids family\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: mommy, daddy, baby, brother, sister | Ôn: name, one, two, three, four, five, birthday",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone!\" · Nhắc: \"Im lặng nào! Quiet, please.\" · Mời: \"Your turn!\" (bỏ tiếng Việt) · Khen: \"Giỏi quá! Well done!\" · Câu mới buổi này: Quiet, please. 1) Nghe và chạm người thân trong tranh gia đình Bông (5 câu): mommy / daddy / baby / brother / sister. 2) Nghe câu và chọn tranh đúng (3 câu): This is my mommy. / This is my brother. / This is my sister. 3) Trò chơi Ngón tay gia đình: cô nói Hello, Daddy! con giơ ngón cái, Hello, Mommy! con giơ ngón trỏ, Hello, brother! con giơ ngón giữa, Hello, sister! con giơ ngón áp út, Hello, baby! con giơ ngón út.",
+     "truyen": "Bông's family — Bông: “Hello! My name is Bông. Look! This is my mommy. This is my daddy.” Mommy: “And this is the baby.” Bông: “Hello, baby!” Bông: “This is my brother. His name is Nhan. He's three.” Leo: “This is my sister, Xiaomei. She's five.” Nhan and Xiaomei: “Hello, friends!”",
+     "baihat": "Where Is Mommy? — giai điệu Frère Jacques: Where is Mommy? Where is Mommy? / Here I am! Here I am! / Hello, hello, Mommy! Hello, hello, Mommy! / I love you! I love you! (Lời 2: Where is Daddy? … / Lời 3: Where is brother? … / Lời 4: Where is sister? … / Lời 5: Where is baby? …)"
+    },
+    "zh": {
+     "flash": "–",
+     "slide": "–",
+     "truyen": "–",
+     "baihat": "–"
+    }
+   }
+  },
+  {
+   "buoi": 8,
+   "unit": 3,
+   "label_buoi": "Buổi dạy 8. Unit 3 · Family – Ông bà và cả nhà",
+   "web": [
+    {
+     "ngay": 15,
+     "label": "Ngày 15. Unit 3 · Ông bà và cả nhà",
+     "en": {
+      "tu": "Mới: grandma, grandpa, family | Ôn: brother, sister, mommy, daddy",
+      "cum": "my grandma / my grandpa / my family",
+      "cau": "This is my grandma. / This is my grandpa. / This is my family. / I love my family.",
+      "truyen": "My family — Bông: “Look! This is my family. This is my grandpa and this is my grandma. This is my mommy and my daddy. This is my brother, Nhan, and the baby. I love my family!”",
+      "video": "Tìm YouTube: \"family song for preschool grandma grandpa\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    },
+    {
+     "ngay": 16,
+     "label": "Ngày 16. Unit 3 · Ôn unit + truyện Sinh nhật bà",
+     "en": {
+      "tu": "Ôn: mommy, daddy, brother, sister, grandma, grandpa, baby, family, one, two, three, four, five, birthday, cake",
+      "cum": "my family / my grandma / happy birthday / a birthday cake",
+      "cau": "This is my family. / Happy birthday, Grandma! / Look! A cake! / Mommy – one, Daddy – two, Nhan – three!",
+      "truyen": "Grandma's birthday — It's Grandma's birthday. Mommy, Daddy, Nhan, Bông and the baby: “Happy birthday, Grandma!” Look! A birthday cake. Grandpa counts: “Mommy – one, Daddy – two, Nhan – three, Bông – four, the baby – five!” Grandma: “I love my family!”",
+      "video": "Tìm YouTube: \"happy birthday grandma song for kids\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: grandma, grandpa, family | Ôn: mommy, daddy, brother, sister, baby, birthday, cake",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone!\" · Nhắc: \"Im lặng nào! Quiet, please.\" · Hỏi cả lớp: \"Giơ tay lên nào! Hands up!\" · Khen: \"Well done!\" (bỏ tiếng Việt) · Câu mới buổi này: Hands up! 1) Nghe và chạm tranh (4 câu): grandma / grandpa / family / baby. 2) Nghe và xếp cả nhà vào khung ảnh theo lời cô (5 câu, con chỉ, cô kéo): This is my grandpa. / This is my grandma. / This is my mommy. / This is my daddy. / This is my family! 3) Nghe Yes/No theo tranh gia đình Bông (3 câu): Is this Grandma? / Is this Daddy? / Is this the baby?",
+     "truyen": "Grandma's birthday — It's Grandma's birthday. Mommy, Daddy, Nhan, Bông and the baby come in: “Happy birthday, Grandma!” Look! A birthday cake. Grandma: “Hello, baby! Hello, Nhan! Hello, Bông!” Grandpa counts: “Mommy – one, Daddy – two, Nhan – three, Bông – four, the baby – five!” Bông: “And Grandpa!” Grandma smiles: “I love my family!” Clap, clap, clap!",
+     "baihat": "This Is My Family — giai điệu The Wheels on the Bus: This is my grandma, grandma, grandma, / This is my grandpa, I love them so! / This is my mommy and my daddy, / This is my family, hello, hello! (Lời 2: This is my brother, brother, brother, / This is my sister and the baby, too…)"
+    },
+    "zh": {
+     "flash": "–",
+     "slide": "–",
+     "truyen": "–",
+     "baihat": "–"
+    }
+   }
+  },
+  {
+   "buoi": 9,
+   "unit": 4,
+   "label_buoi": "Buổi dạy 9. Unit 4 · Body – Đầu, mắt, tai, mũi, miệng",
+   "web": [
+    {
+     "ngay": 17,
+     "label": "Ngày 17. Unit 4 · Đầu, mắt và tai",
+     "en": {
+      "tu": "Mới: head, eyes, ears | Ôn: mommy, daddy, baby",
+      "cum": "my head / two eyes / two ears",
+      "cau": "[Ngữ pháp: This is my… / These are my…] This is my head. / These are my eyes. / These are my ears. / One, two – two eyes! / [Lời web] Vào bài: \"Let's learn!\" · Chuyển ý: \"Chạm vào nhé! Touch!\" · Khen: \"Well done!\"",
+      "truyen": "Baby's eyes — Mommy: “Look, baby! This is my head. These are my eyes. One, two – two eyes!” Baby: “Ba-ba!” Mommy: “And these are my ears.”",
+      "video": "Tìm YouTube: \"head eyes ears song for toddlers\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    },
+    {
+     "ngay": 18,
+     "label": "Ngày 18. Unit 4 · Mũi và miệng",
+     "en": {
+      "tu": "Mới: nose, mouth | Ôn: head, eyes, ears",
+      "cum": "my nose / my mouth / one nose / one mouth",
+      "cau": "This is my nose. / This is my mouth. / One nose, one mouth, two eyes!",
+      "truyen": "Funny face — Leo: “Look, Bông! This is my nose. This is my mouth. Two eyes and two ears.” Bông: “Ha ha! Funny face!”",
+      "video": "Tìm YouTube: \"nose mouth eyes ears song preschool\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: head, eyes, ears, nose, mouth | Ôn: mommy, daddy, baby, grandma, grandpa",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone!\" · Nhắc: \"Quiet, please.\" · Chuyển ý: \"Nói theo cô nào! Say it with me.\" · Khen: \"Good job! Well done!\" · Câu mới buổi này: Say it with me. 1) Nghe và chạm bộ phận trên khuôn mặt (5 câu): head / eyes / ears / nose / mouth. 2) Nghe câu và chọn tranh đúng (3 câu): This is my nose. / These are my eyes. / This is my mouth. 3) Trò chơi Mặt chú gấu: cô đọc từ, con chạm lên mặt mình rồi chạm slide để gắn bộ phận đó cho gấu (5 lượt): eyes / nose / mouth / ears / head.",
+     "truyen": "Grandpa's funny face — Grandpa: “Look, Nhan! This is my head. These are my eyes. This is my nose.” Nhan: “And this is your mouth, Grandpa!” Grandpa: “Yes! And these are my ears.” Nhan: “One, two – two ears! Ha ha! Funny face!”",
+     "baihat": "This Is My Head — giai điệu Here We Go Round the Mulberry Bush: This is my head, my head, my head, / This is my head, hello, hello! / These are my eyes, my eyes, my eyes, / These are my eyes, hello, hello! (Lời 3: These are my ears… / Lời 4: This is my nose… / Lời 5: This is my mouth…)"
+    },
+    "zh": {
+     "flash": "–",
+     "slide": "–",
+     "truyen": "–",
+     "baihat": "–"
+    }
+   }
+  },
+  {
+   "buoi": 10,
+   "unit": 4,
+   "label_buoi": "Buổi dạy 10. Unit 4 · Body – Tay, chân và chạm",
+   "web": [
+    {
+     "ngay": 19,
+     "label": "Ngày 19. Unit 4 · Tay, chân và chạm",
+     "en": {
+      "tu": "Mới: hands, feet, touch | Ôn: nose, mouth, head",
+      "cum": "touch your head / touch your nose / clap your hands / my feet",
+      "cau": "[Ngữ pháp: câu mệnh lệnh Touch your… / Clap your…] Touch your head. / Touch your nose. / Clap your hands. / Look at my feet!",
+      "truyen": "Touch your nose! — Teacher: “Touch your head!” Leo touches his head. “Touch your nose!” Bông touches her nose. “Clap your hands!” Clap, clap, clap! “Look at your feet!” Ha ha! “Good job!”",
+      "video": "Tìm YouTube: \"touch your head action song for kids\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    },
+    {
+     "ngay": 20,
+     "label": "Ngày 20. Unit 4 · Ôn unit + truyện Mũi của em bé",
+     "en": {
+      "tu": "Ôn: head, eyes, ears, nose, mouth, hands, feet, touch, mommy, baby, sister, family",
+      "cum": "touch your nose / clap your hands / my eyes / my ears",
+      "cau": "Touch your nose, baby! / No, baby! This is your nose. / Clap your hands! / Yes! Good job!",
+      "truyen": "Baby's nose — Mommy: “Touch your nose, baby!” The baby touches her ears. Bông: “No, baby! These are your ears. This is your nose!” The baby touches her nose. “Yes! Good job!” Mommy and Bông clap their hands.",
+      "video": "Tìm YouTube: \"head shoulders knees and toes kids song\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: hands, feet, touch | Ôn: head, eyes, ears, nose, mouth",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone!\" · Hỏi: \"Hands up!\" (bỏ tiếng Việt) · Nhắc: \"Làm lại nào! Again, please.\" · Khen: \"Well done!\" · Câu mới buổi này: Again, please. 1) Nghe lệnh và làm theo (6 lệnh): Touch your head. / Touch your nose. / Touch your ears. / Clap your hands. / Touch your mouth. / Look at your feet. 2) Nghe và chạm tranh (4 câu): hands / feet / eyes / ears. 3) Trò chơi Teacher says: cô nói Teacher says touch your nose! thì con làm theo; cô chỉ nói Touch your feet! (không có Teacher says) thì con đứng yên (6 lượt).",
+     "truyen": "Baby's nose — Mommy: “Look, baby! These are my eyes. This is my mouth. Touch your nose, baby!” The baby touches her ears. Bông: “No, baby! These are your ears. This is your nose!” The baby touches her head. Nhan: “No, baby! This is your head!” The baby touches her nose. “Yes! Good job, baby!” Mommy, Bông and Nhan clap their hands. Clap, clap, clap!",
+     "baihat": "Head and Eyes and Ears and Nose — giai điệu Head, Shoulders, Knees and Toes (dân gian): Head and eyes and ears and nose, ears and nose! / Head and eyes and ears and nose, ears and nose! / Mouth and hands and feet – touch, touch! / Head and eyes and ears and nose, ears and nose!"
+    },
+    "zh": {
+     "flash": "–",
+     "slide": "–",
+     "truyen": "–",
+     "baihat": "–"
+    }
+   }
+  },
+  {
+   "buoi": 11,
+   "unit": 5,
+   "label_buoi": "Buổi dạy 11. Unit 5 · Feelings – Vui, buồn, giận, mệt",
+   "web": [
+    {
+     "ngay": 21,
+     "label": "Ngày 21. Unit 5 · Vui và buồn",
+     "en": {
+      "tu": "Mới: happy, sad, smile | Ôn: eyes, mouth, friend",
+      "cum": "I'm happy / I'm sad / smile, please",
+      "cau": "[Ngữ pháp: How are you? – I'm + cảm xúc] How are you? – I'm happy. / I'm sad. / Smile, Leo! / [Lời web] Vào bài: \"Let's learn!\" · Chuyển ý: \"Con sẵn sàng chưa? Are you ready?\" · Khen: \"Well done!\"",
+      "truyen": "Leo is sad — Leo is sad. Bông: “How are you, Leo?” Leo: “I'm sad.” Bông: “Hello, friend! Smile!” Leo smiles. “I'm happy!”",
+      "video": "Tìm YouTube: \"happy sad feelings song for toddlers\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    },
+    {
+     "ngay": 22,
+     "label": "Ngày 22. Unit 5 · Giận và mệt",
+     "en": {
+      "tu": "Mới: angry, tired | Ôn: happy, sad, smile",
+      "cum": "I'm angry / I'm tired / an angry face",
+      "cau": "I'm angry! / I'm tired. / Are you angry? – No, I'm tired.",
+      "truyen": "Anna is tired — Leo: “Anna, are you angry?” Anna: “No, I'm tired.” Leo: “Are you sad?” Anna: “No! I'm tired.” Leo: “Smile, Anna!” Anna smiles.",
+      "video": "Tìm YouTube: \"angry tired feelings song preschool\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: happy, sad, smile, angry, tired | Ôn: head, eyes, mouth, nose, touch",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone!\" · Chuyển ý: \"Các con sẵn sàng chưa? Are you ready? – Yes!\" · Nhắc: \"Say it with me.\" (bỏ tiếng Việt) · Khen: \"Well done!\" · Câu mới buổi này: Are you ready? 1) Nghe và chạm khuôn mặt đúng (4 câu): I'm happy. / I'm sad. / I'm angry. / I'm tired. 2) Nghe câu hỏi và chạm Yes/No theo tranh (3 câu): Is Leo happy? (tranh Leo buồn) / Is Anna tired? (tranh Anna ngáp) / Is Bông angry? (tranh Bông giận). 3) Trò chơi Gương mặt: cô nói Smile! / Sad face! / Angry face! / Tired face! – con làm nét mặt, rồi chạm tranh giống mình.",
+     "truyen": "Leo is sad — Leo is sad. Bông: “How are you, Leo?” Leo: “I'm sad.” Anna: “Are you angry?” Leo: “No. I'm sad and tired.” Bông: “Hello, friend! Smile! Touch your nose!” Leo touches his nose. Ha ha! Leo smiles. “I'm happy!”",
+     "baihat": "Are You Happy? — giai điệu Frère Jacques: Are you happy? Are you happy? / Yes, I am! Yes, I am! / Smile, smile, smile, smile! Smile, smile, smile, smile! / I am happy! I am happy! (Lời 2: Are you sad? Are you sad? / No, I'm not! No, I'm not! … / Lời 3: Are you tired? …)"
+    },
+    "zh": {
+     "flash": "–",
+     "slide": "–",
+     "truyen": "–",
+     "baihat": "–"
+    }
+   }
+  },
+  {
+   "buoi": 12,
+   "unit": 5,
+   "label_buoi": "Buổi dạy 12. Unit 5 · Feelings – Buồn ngủ, đói bụng",
+   "web": [
+    {
+     "ngay": 23,
+     "label": "Ngày 23. Unit 5 · Buồn ngủ và đói bụng",
+     "en": {
+      "tu": "Mới: sleepy, hungry | Ôn: tired, happy, cake",
+      "cum": "I'm sleepy / I'm hungry / a sleepy baby",
+      "cau": "I'm sleepy. / I'm hungry. / Are you hungry? – Yes! / Look! A cake!",
+      "truyen": "Hungry Nhan — Nhan: “Mommy, I'm hungry!” Mommy: “Look! A cake.” Nhan is happy. Yum, yum! Now Nhan is sleepy. Shh!",
+      "video": "Tìm YouTube: \"sleepy hungry feelings song for kids\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    },
+    {
+     "ngay": 24,
+     "label": "Ngày 24. Unit 5 · Ôn unit + truyện Một ngày của Nhan",
+     "en": {
+      "tu": "Ôn: happy, sad, angry, tired, sleepy, hungry, smile, head, eyes, mouth, hands, touch",
+      "cum": "I'm happy / I'm hungry / I'm sleepy / clap your hands",
+      "cau": "How are you? – I'm happy! / Are you hungry? – Yes! / I'm tired and sleepy. / Smile and clap your hands!",
+      "truyen": "Nhan's day — Nhan is happy. He smiles and claps his hands. Nhan is hungry: “Mommy, I'm hungry!” Look! A cake. Yum! Leo is sad: “I'm hungry, too.” Nhan: “Here, Leo!” Leo smiles. Now Nhan is tired and sleepy. Shh!",
+      "video": "Tìm YouTube: \"how are you feelings song for preschool\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: sleepy, hungry | Ôn: happy, sad, angry, tired, smile, cake",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone!\" · Chuyển ý: \"Are you ready? – Yes!\" · Nhắc: \"Again, please.\" (bỏ tiếng Việt) · Khen: \"Tuyệt quá! Great!\" · Câu mới buổi này: Great! 1) Nghe và chạm tranh (6 câu): happy / sad / angry / tired / sleepy / hungry. 2) Nghe và nối bạn với khuôn mặt cảm xúc (3 câu): Nhan is hungry. / The baby is sleepy. / Bông is happy. 3) Đóng vai theo cặp, cô làm mẫu: How are you? – I'm hungry! / How are you? – I'm sleepy! / How are you? – I'm happy!",
+     "truyen": "Nhan's day — Nhan is happy. He smiles and claps his hands. Then Nhan is hungry: “Mommy, I'm hungry!” Mommy: “Look! A cake.” Yum, yum! Leo comes in. Leo is sad: “I'm hungry, too.” Nhan: “Here, Leo!” Leo smiles: “I'm happy!” Now Nhan is tired. He touches his eyes. He's sleepy. Shh!",
+     "baihat": "Happy, Happy — giai điệu Twinkle, Twinkle, Little Star: Happy, happy, smile, smile, smile, / Sad, sad, sad, boo-hoo, boo-hoo, / Hungry, hungry, yum, yum, yum, / Sleepy, sleepy, shh, shh, shh! / Angry, angry, grr, grr, grr, / Tired, tired, yawn, yawn, yawn!"
+    },
+    "zh": {
+     "flash": "–",
+     "slide": "–",
+     "truyen": "–",
+     "baihat": "–"
+    }
+   }
+  },
+  {
+   "buoi": 13,
+   "unit": 6,
+   "label_buoi": "Buổi dạy 13. Unit 6 · School – Cặp, sách, bút mực, bút chì, thước",
+   "web": [
+    {
+     "ngay": 25,
+     "label": "Ngày 25. Unit 6 · Cặp, sách và bút mực",
+     "en": {
+      "tu": "Mới: bag, book, pen | Ôn: happy, hands, teacher",
+      "cum": "my bag / a book / a pen / my school bag",
+      "cau": "[Ngữ pháp: What's this? – It's a…] What's this? – It's a book. / It's a pen. / This is my bag. / [Lời web] Vào bài: \"Let's learn!\" · Chuyển ý: \"Are you ready?\" · Khen: \"Tuyệt quá! Great!\"",
+      "truyen": "Bông's bag — Bông: “Look! This is my bag.” Leo: “What's this?” Bông: “It's a book.” Leo: “What's this?” Bông: “It's a pen.” Bông is happy.",
+      "video": "Tìm YouTube: \"what's in my school bag song for kids\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    },
+    {
+     "ngay": 26,
+     "label": "Ngày 26. Unit 6 · Bút chì và thước",
+     "en": {
+      "tu": "Mới: pencil, ruler | Ôn: bag, book, pen",
+      "cum": "a pencil / a ruler / my pencil / a pen or a pencil",
+      "cau": "What's this? – It's a pencil. / It's a ruler. / Is it a pen? – No, it's a pencil.",
+      "truyen": "Pen or pencil? — Teacher: “Leo, what's this? Is it a pen?” Leo: “No! It's a pencil.” Teacher: “What's this?” Leo: “It's a ruler.” Teacher: “Good job!”",
+      "video": "Tìm YouTube: \"pencil ruler classroom objects song preschool\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: bag, book, pen, pencil, ruler | Ôn: happy, sad, angry, tired, hands",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone!\" · Chuyển ý: \"Are you ready?\" (bỏ tiếng Việt) · Nhắc: \"Chỉ cho cô xem nào! Show me!\" · Khen: \"Great! Well done!\" · Câu mới buổi này: Show me! 1) Nghe và chạm đồ dùng học tập (5 câu): bag / book / pen / pencil / ruler. 2) Nghe What's this? và câu trả lời, chạm tranh đúng (3 câu): It's a book. / It's a pencil. / It's a ruler. 3) Trò chơi Cặp thần kỳ: cô lấy từng đồ thật ra khỏi cặp và hỏi Is it a pen? / Is it a book? – con gật (Yes) hoặc lắc đầu (No) (5 lượt).",
+     "truyen": "Bông's bag — Bông: “Look! This is my bag.” Leo: “What's this?” Bông: “It's a book.” Leo: “Is it a pen?” Bông: “No! It's a pencil. And this is a pen.” Leo: “What's this?” Bông: “It's a ruler.” Leo: “Good job, Bông!” Bông is happy.",
+     "baihat": "In My Bag — giai điệu Row, Row, Row Your Boat: Book, book, book and pen, / In my bag, my bag! / Pencil, ruler, book and pen, / In my bag, my bag!"
+    },
+    "zh": {
+     "flash": "–",
+     "slide": "–",
+     "truyen": "–",
+     "baihat": "–"
+    }
+   }
+  },
+  {
+   "buoi": 14,
+   "unit": 6,
+   "label_buoi": "Buổi dạy 14. Unit 6 · School – Bàn học, ngồi xuống, đứng lên",
+   "web": [
+    {
+     "ngay": 27,
+     "label": "Ngày 27. Unit 6 · Bàn học: ngồi xuống, đứng lên",
+     "en": {
+      "tu": "Mới: desk, sit down, stand up | Ôn: pencil, ruler, book",
+      "cum": "my desk / sit down, please / stand up, please / on the desk",
+      "cau": "Stand up, please. / Sit down, please. / The book is on the desk. / Put your pencil on the desk.",
+      "truyen": "Stand up, sit down! — Teacher: “Hello, friends! Stand up, please.” Bông, Leo and Anna stand up: “Hello, teacher!” Teacher: “Sit down, please.” They sit down. Look! A book and a pencil on the desk.",
+      "video": "Tìm YouTube: \"stand up sit down song for kids\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    },
+    {
+     "ngay": 28,
+     "label": "Ngày 28. Unit 6 · Ôn unit + truyện Cặp của Leo đâu?",
+     "en": {
+      "tu": "Ôn: book, pen, pencil, bag, ruler, desk, sit down, stand up, happy, sad, tired, hungry",
+      "cum": "my bag / on the desk / sit down, please / stand up, please",
+      "cau": "[Ngữ pháp: Where's…?] Where's my bag? / Is it on the desk? – No! / It's my pencil. / I'm happy!",
+      "truyen": "Where's my bag? — Leo is sad: “Where's my bag?” Anna: “Is it on the desk?” Leo: “No!” Bông: “Look! A bag, a book, a pen, a pencil and a ruler.” Leo: “Yes! It's my bag!” Leo is happy. Teacher: “Sit down, please.” Leo sits down and smiles.",
+      "video": "Tìm YouTube: \"classroom objects song for preschool bag book pencil\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: desk, sit down, stand up | Ôn: bag, book, pen, pencil, ruler, sad, happy",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone!\" · Nhắc: \"Stand up, please. / Sit down, please.\" (câu của unit, không cần tiếng Việt) · Chuyển ý: \"Xếp hàng nào! Line up, please.\" · Khen: \"Great!\" · Câu mới buổi này: Line up, please. 1) Nghe lệnh và làm theo (4 lệnh): Stand up, please. / Sit down, please. / Touch your desk. / Touch your book. 2) Nghe và chạm tranh (4 câu): desk / bag / ruler / pencil. 3) Kiểm tra nhanh cuối unit – nghe và chạm Yes/No theo tranh (3 câu): Is it a pen? (tranh bút chì) / Is it a bag? (tranh cặp) / Is it a desk? (tranh bàn).",
+     "truyen": "Where's my bag? — Teacher: “Stand up, please!” Bông, Leo and Anna stand up. Leo is sad: “Where's my bag?” Anna: “Is it on the desk?” Leo: “No!” Teacher: “Is it on my desk?” Leo: “No!” Bông: “Look! A bag, a book, a pen, a pencil and a ruler.” Leo: “Yes! It's my bag!” Leo is happy. Teacher: “Sit down, please.” Leo sits down and smiles.",
+     "baihat": "Stand Up, Sit Down — giai điệu London Bridge Is Falling Down: Stand up, sit down, clap your hands, / clap your hands, clap your hands, / Stand up, sit down, clap your hands, / Hello, teacher!"
+    },
+    "zh": {
+     "flash": "–",
+     "slide": "–",
+     "truyen": "–",
+     "baihat": "–"
+    }
+   }
+  },
+  {
+   "buoi": 15,
+   "unit": "",
+   "label_buoi": "Buổi dạy 15. Tuần 8 · Ôn chặng – Unit 1–4: chào hỏi, tên tuổi, gia đình, cơ thể",
+   "web": [
+    {
+     "ngay": 29,
+     "label": "Ngày 29. Ôn chặng · Unit 1–2: chào hỏi, tên và tuổi",
+     "en": {
+      "tu": "Ôn: hello, goodbye, teacher, friend, boy, girl, yes, no, name, one, two, three, four, five, birthday, cake",
+      "cum": "hello, teacher / my friend / a boy / a girl / my name / happy birthday",
+      "cau": "Hello! What's your name? – My name is Bông. / How old are you? – I'm four. / Are you a boy? – No, I'm a girl. / Happy birthday!",
+      "truyen": "Hello, Nhan! — Nhan comes to class: “Hello, teacher!” Leo: “Hello! What's your name?” “My name is Nhan.” “How old are you?” “I'm three.” Bông: “Nhan is my brother!” Leo: “Is it your birthday, Nhan?” Nhan: “No!” Ha ha!",
+      "video": "Tìm YouTube: \"hello what's your name how old are you song for kids\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    },
+    {
+     "ngay": 30,
+     "label": "Ngày 30. Ôn chặng · Unit 3–4: gia đình và cơ thể",
+     "en": {
+      "tu": "Ôn: mommy, daddy, brother, sister, grandma, grandpa, baby, family, head, eyes, ears, nose, mouth, hands, feet, touch",
+      "cum": "my family / my grandma / touch your nose / clap your hands",
+      "cau": "This is my family. / This is my grandpa. / Touch your head. / These are my eyes.",
+      "truyen": "Grandpa's game — Grandpa: “Bông, touch your nose!” Bông touches her nose. “Nhan, touch your ears!” Nhan touches his ears. “Baby, clap your hands!” Clap, clap! Mommy and Daddy: “Good job, family!”",
+      "video": "Tìm YouTube: \"finger family song and body parts song preschool\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn: hello, goodbye, teacher, friend, boy, girl, yes, no, name, one, two, three, four, five, birthday, cake, mommy, daddy, brother, sister, grandma, grandpa, baby, family, head, eyes, ears, nose, mouth, hands, feet, touch",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! Are you ready?\" · Nhắc: \"Look! Listen! Show me!\" (bỏ tiếng Việt) · Chuyển ý: \"Mình cùng kiểm tra nhé! Let's check!\" · Khen: \"Good job! Great!\" · Câu mới buổi này: Let's check! 1) Trò chơi Quét chủ đề – nghe và chạm tranh đúng trong 4 tranh (8 câu, mỗi unit 2 câu): goodbye / girl / four / cake / grandpa / sister / ears / feet. 2) Nghe câu và chọn tranh (4 câu): Hello! My name is Leo. / I'm five. / This is my family. / Touch your nose. 3) Trò chơi Nhảy ô chủ đề: 4 ô màu dán sàn (Unit 1, 2, 3, 4), cô nói một từ, con nhảy vào ô đúng chủ đề (8 lượt): hello / friend / five / name / daddy / baby / mouth / hands.",
+     "truyen": "Nhan at school — Nhan comes to class with Bông. “Hello, teacher!” Teacher: “Hello! What's your name?” “My name is Nhan. I'm three.” Bông: “This is my brother.” Teacher: “Touch your nose, Nhan!” Nhan touches his nose. “Touch your ears!” Nhan touches his ears. “Clap your hands!” Clap, clap! “Good job! Goodbye, Nhan!” “Goodbye, teacher!”",
+     "baihat": "Ôn chặng Medley 1 — nối 4 bài đã học: Hello, Teacher (Frère Jacques) → One, Two, Three, Four, Five (Twinkle, Twinkle, Little Star) → Where Is Mommy? (Frère Jacques) → Head and Eyes and Ears and Nose (Head, Shoulders, Knees and Toes). Đoạn dùng: Hello, teacher! Hello, friend! / One, two, three, four, five, how old are you? I am five! / Where is Daddy? Here I am! / Head and eyes and ears and nose, ears and nose!"
+    },
+    "zh": {
+     "flash": "–",
+     "slide": "–",
+     "truyen": "–",
+     "baihat": "–"
+    }
+   }
+  },
+  {
+   "buoi": 16,
+   "unit": "",
+   "label_buoi": "Buổi dạy 16. Tuần 8 · Ôn chặng – Unit 5–6 + kiểm tra nghe 6 chủ đề",
+   "web": [
+    {
+     "ngay": 31,
+     "label": "Ngày 31. Ôn chặng · Unit 5–6: cảm xúc và trường học",
+     "en": {
+      "tu": "Ôn: happy, sad, angry, tired, sleepy, hungry, smile, book, pen, pencil, bag, ruler, desk, sit down, stand up",
+      "cum": "I'm happy / I'm hungry / my bag / on the desk / stand up, please",
+      "cau": "How are you? – I'm happy. / What's this? – It's a ruler. / Stand up, please. Sit down, please. / Are you tired? – Yes!",
+      "truyen": "Sleepy Leo — Teacher: “Stand up, please!” Leo is tired and sleepy. Anna: “Leo, stand up!” Leo stands up. Teacher: “What's this?” Leo: “It's a pencil!” Teacher: “Good job!” Leo smiles. He's happy.",
+      "video": "Tìm YouTube: \"feelings song and classroom objects song for preschool\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    },
+    {
+     "ngay": 32,
+     "label": "Ngày 32. Ôn chặng · Trộn 6 chủ đề + luyện nghe trước kiểm tra",
+     "en": {
+      "tu": "Ôn: hello, friend, yes, no, five, name, birthday, mommy, grandma, baby, eyes, nose, hands, happy, hungry, smile, bag, book, desk, stand up",
+      "cum": "my name / my family / touch your nose / I'm hungry / my bag",
+      "cau": "Hello! My name is Anna. I'm five. / This is my grandma. / Touch your nose! / I'm hungry. / What's this? – It's my bag.",
+      "truyen": "Anna's grandma — Anna: “Hello, teacher! This is my grandma.” Grandma: “Hello!” Teacher: “Anna, how old are you?” Anna: “I'm five.” Grandma: “Look! This is Anna's bag. A book, a pen and a cake!” Anna: “I'm hungry!” Teacher and Grandma smile. Yum, yum!",
+      "video": "Tìm YouTube: \"preschool review song hello family body feelings\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn: happy, sad, angry, tired, sleepy, hungry, smile, book, pen, pencil, bag, ruler, desk, sit down, stand up, hello, name, five, grandma, nose, hands",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone!\" · Chuyển ý: \"Let's check!\" (bỏ tiếng Việt) · Nhắc: \"Nhìn và chạm nhé! Look and touch.\" / \"Quiet, please.\" · Khen: \"Well done!\" · Câu mới buổi này: Look and touch. 1) Kiểm tra nghe – chạm tranh đúng trong 3 tranh (12 câu, mỗi chủ đề 2 câu): hello / boy / three / birthday / mommy / baby / eyes / hands / sad / hungry / pencil / desk. 2) Kiểm tra nghe – chạm Yes/No theo tranh (4 câu): Is it a ruler? / Is Leo happy? / Is this Grandpa? / Is it a cake? 3) Kiểm tra nghe – làm theo lệnh (4 lệnh): Stand up. / Touch your head. / Clap your hands. / Sit down. (Cô ghi kết quả từng con vào phiếu ôn chặng.)",
+     "truyen": "Anna's grandma — Anna comes to class with Grandma. Anna: “Hello, teacher! This is my grandma.” Grandma: “Hello! Hello, friends!” Teacher: “Anna, how old are you?” Anna: “I'm five.” Grandma: “Look! This is Anna's bag. A book, a pen, a pencil and a cake!” Anna: “I'm hungry!” Leo: “I'm hungry, too!” Teacher and Grandma smile. Yum, yum! “Goodbye, Grandma!”",
+     "baihat": "Ôn chặng Medley 2 — Are You Happy? (Frère Jacques) → In My Bag (Row, Row, Row Your Boat) → Stand Up, Sit Down (London Bridge Is Falling Down). Đoạn dùng: Are you happy? Yes, I am! Smile, smile, smile! / Book, book, book and pen, in my bag, my bag! / Stand up, sit down, clap your hands, hello, teacher!"
+    },
+    "zh": {
+     "flash": "–",
+     "slide": "–",
+     "truyen": "–",
+     "baihat": "–"
+    }
+   }
+  },
+  {
+   "buoi": 17,
+   "unit": 7,
+   "label_buoi": "Buổi dạy 17. Unit 7 · House – Giường, ghế, bàn, sofa, cửa",
+   "web": [
+    {
+     "ngay": 33,
+     "label": "Ngày 33. Unit 7 · Giường, ghế và bàn",
+     "en": {
+      "tu": "Mới: bed, chair, table | Ôn: desk, sit down, book",
+      "cum": "my bed / a chair / on the table / sit on the chair",
+      "cau": "[Ngữ pháp: giới từ on] The book is on the table. / Sit on the chair, please. / This is my bed. / [Lời web] Vào bài: \"Let's learn! Are you ready?\" · Chuyển ý: \"Look and touch.\" · Khen: \"Great!\"",
+      "truyen": "Bông's room — Bông: “Look! This is my bed. This is a chair and this is a table.” Nhan: “What's this?” Bông: “It's my book. It's on the table.” Nhan sits on the chair.",
+      "video": "Tìm YouTube: \"bed chair table furniture song for toddlers\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    },
+    {
+     "ngay": 34,
+     "label": "Ngày 34. Unit 7 · Sofa, cửa ra vào, cửa sổ",
+     "en": {
+      "tu": "Mới: sofa, door, window | Ôn: bed, chair, table",
+      "cum": "on the sofa / open the door / look out of the window",
+      "cau": "Grandpa is on the sofa. / Open the door, please. / It's a window. / Knock, knock! – Hello!",
+      "truyen": "Knock, knock! — Knock, knock! Bông: “Mommy, open the door, please!” Mommy opens the door. “Hello, Grandma!” Grandma sits on the sofa. Bông looks out of the window: “Grandpa!”",
+      "video": "Tìm YouTube: \"door window sofa house song for kids\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: bed, chair, table, sofa, door, window | Ôn: desk, book, bag, sit down, stand up",
+     "slide": "[Lời cô] Vào bài: \"Mời vào! Come in!\" (cô đứng ở cửa lớp) · Nhắc: \"Look and touch.\" (bỏ tiếng Việt) · Chuyển ý: \"Let's play!\" · Khen: \"Great!\" · Câu mới buổi này: Come in! 1) Nghe và chạm đồ vật trong ngôi nhà (6 câu): bed / chair / table / sofa / door / window. 2) Nghe và chọn tranh đúng vị trí (3 câu): The book is on the table. / The bag is on the chair. / Grandpa is on the sofa. 3) Trò chơi Gõ cửa: cô gõ Knock, knock!, cả lớp nói Open the door!, một con chạm cửa trên slide để mở ra đồ vật bất ngờ và cô đọc tên (6 lượt): bed / sofa / chair / table / window / book.",
+     "truyen": "Bông's room — Bông: “Look! This is my bed. This is my chair and this is my table.” Nhan: “What's this?” Bông: “It's my book. It's on the table.” Knock, knock! Bông: “Open the door, please!” Grandpa: “Hello!” Grandpa sits on the sofa. Nhan sits on the chair. Bông looks out of the window: “Grandma!”",
+     "baihat": "Knock, Knock — giai điệu The Wheels on the Bus: The door in my home goes knock, knock, knock, / knock, knock, knock, knock, knock, knock! / The door in my home goes knock, knock, knock, / Open the door – hello! (Lời 2: Grandpa on the sofa goes yawn, yawn, yawn…)"
+    },
+    "zh": {
+     "flash": "–",
+     "slide": "–",
+     "truyen": "–",
+     "baihat": "–"
+    }
+   }
+  },
+  {
+   "buoi": 18,
+   "unit": 7,
+   "label_buoi": "Buổi dạy 18. Unit 7 · House – Bồn tắm và nhà của con",
+   "web": [
+    {
+     "ngay": 35,
+     "label": "Ngày 35. Unit 7 · Bồn tắm và nhà của con",
+     "en": {
+      "tu": "Mới: bath, home | Ôn: sofa, door, bed",
+      "cum": "bath time / my home / bed time",
+      "cau": "Bath time! / I'm home! / This is my home. / I love my home.",
+      "truyen": "Bath time — Nhan is home: “Mommy, I'm home!” Mommy: “Bath time, Nhan!” Splash, splash! Nhan is happy. Then he's sleepy. Bed time!",
+      "video": "Tìm YouTube: \"bath time song for toddlers\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    },
+    {
+     "ngay": 36,
+     "label": "Ngày 36. Unit 7 · Ôn unit + truyện Nhà của Leo",
+     "en": {
+      "tu": "Ôn: bed, chair, table, sofa, door, window, bath, home, book, bag, desk, sit down, stand up",
+      "cum": "my home / on the sofa / on the table / open the door / bath time",
+      "cau": "This is my home. / Where's your bag? – It's on the bed. / Sit down on the chair, please. / Open the door, please.",
+      "truyen": "Leo's home — Knock, knock! Leo opens the door: “Hello, Bông! This is my home.” Look: a sofa, a table and two chairs. Bông: “Where's your bag?” Leo: “It's on the bed!” Mommy: “Sit down on the chair, please. Look, a cake!” Bông and Leo are happy.",
+      "video": "Tìm YouTube: \"my house rooms song for preschool\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: bath, home | Ôn: bed, chair, table, sofa, door, window",
+     "slide": "[Lời cô] Vào bài: \"Come in! Hello, everyone!\" (bỏ tiếng Việt) · Chuyển ý: \"Let's sing!\" · Khen: \"Well done!\" · Chào về: \"Đến giờ về rồi! Time to go home!\" · Câu mới buổi này: Time to go home! 1) Nghe và chạm tranh (4 câu): bath / bed / sofa / window. 2) Nghe và sắp xếp 4 tranh theo truyện Bath time (con chỉ, cô kéo): I'm home! / Bath time! / Splash, splash! / Bed time! 3) Nghe Yes/No theo tranh nhà Leo (3 câu): Is the bag on the bed? / Is it a window? / Is it a door?",
+     "truyen": "Leo's home — Knock, knock! Leo opens the door: “Hello, Bông! Hello, Nhan! This is my home.” Look: a sofa, a table and two chairs. A window and a big bed. Bông: “Where's your bag?” Leo: “It's on the bed!” Leo's mommy: “Sit down on the chair, please. Look, a cake!” Bông, Nhan and Leo are happy. Yum! Then Nhan is sleepy. Bông: “Let's go home, Nhan. Bath time!”",
+     "baihat": "This Is the Way — giai điệu Here We Go Round the Mulberry Bush: This is the way we take a bath, take a bath, take a bath, / This is the way we take a bath, at home, at home! / This is the way we go to bed, go to bed, go to bed, / This is the way we go to bed, at home, at home!"
+    },
+    "zh": {
+     "flash": "–",
+     "slide": "–",
+     "truyen": "–",
+     "baihat": "–"
+    }
+   }
+  },
+  {
+   "buoi": 19,
+   "unit": 8,
+   "label_buoi": "Buổi dạy 19. Unit 8 · Animals – Mèo, chó, chim, cá, thỏ, vịt",
+   "web": [
+    {
+     "ngay": 37,
+     "label": "Ngày 37. Unit 8 · Mèo, chó và chim",
+     "en": {
+      "tu": "Mới: cat, dog, bird | Ôn: sofa, window, home",
+      "cum": "a cat / a dog / a bird / meow, meow / woof, woof",
+      "cau": "What's this? – It's a cat. / It's a dog. Woof, woof! / Look! A bird at the window. / The cat is on the sofa. / [Lời web] Vào bài: \"Let's learn!\" · Chuyển ý: \"Your turn!\" · Khen: \"Great! Well done!\"",
+      "truyen": "Bông's cat — Bông: “Look! It's my cat. Meow!” The cat is on the sofa. Woof, woof! Leo: “It's my dog!” Tweet, tweet! Bông: “Look! A bird at the window!”",
+      "video": "Tìm YouTube: \"cat dog bird animal sounds song for toddlers\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    },
+    {
+     "ngay": 38,
+     "label": "Ngày 38. Unit 8 · Cá, thỏ và vịt",
+     "en": {
+      "tu": "Mới: fish, rabbit, duck | Ôn: cat, dog, bird",
+      "cum": "a fish / a rabbit / a duck / quack, quack / hop, hop",
+      "cau": "[Ngữ pháp: I like + danh từ số nhiều -s] I like rabbits. / It's a fish. / Is it a duck? – Yes! Quack, quack!",
+      "truyen": "Hop, hop, rabbit! — Anna: “Look! It's a rabbit. Hop, hop!” Leo: “Is it a duck?” Anna: “No! It's a rabbit.” Quack, quack! Leo: “Look! A duck and a fish!” Anna: “I like rabbits.”",
+      "video": "Tìm YouTube: \"fish rabbit duck song for kids\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: cat, dog, bird, fish, rabbit, duck | Ôn: sofa, window, bed, home",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone!\" · Nhắc: \"Nhẹ tay nào! Be gentle!\" (khi chơi rối con vật) · Mời: \"Your turn!\" · Khen: \"Great!\" · Câu mới buổi này: Be gentle! 1) Nghe tên và tiếng kêu con vật, chạm tranh (6 câu): cat / dog / bird / fish / rabbit / duck. 2) Nghe và chọn tranh đúng (3 câu): The cat is on the sofa. / The bird is at the window. / The dog is on the bed. 3) Trò chơi Bắt chước con vật: cô nói It's a rabbit! con nhảy hop, hop; It's a duck! con đi lạch bạch quack, quack; It's a fish! con làm cá bơi; It's a bird! con dang tay bay (6 lượt).",
+     "truyen": "Bông's pets — Bông: “Look! It's my cat. Meow!” The cat is on the sofa. Woof, woof! Leo: “It's my dog!” Tweet, tweet! “Look! A bird at the window!” Anna: “And a fish!” Quack, quack! “It's a duck!” Hop, hop! “It's a rabbit!” Bông: “I like cats.” Leo: “I like dogs.” Anna: “I like rabbits.”",
+     "baihat": "Bông Has a Little Cat — giai điệu Mary Had a Little Lamb: Bông has got a little cat, little cat, little cat, / Bông has got a little cat, meow, meow, meow! (Lời 2: Leo has got a little dog… woof, woof, woof! / Lời 3: Anna has a little duck… quack, quack, quack!)"
+    },
+    "zh": {
+     "flash": "–",
+     "slide": "–",
+     "truyen": "–",
+     "baihat": "–"
+    }
+   }
+  },
+  {
+   "buoi": 20,
+   "unit": 8,
+   "label_buoi": "Buổi dạy 20. Unit 8 · Animals – Ngựa, ếch và trang trại của ông",
+   "web": [
+    {
+     "ngay": 39,
+     "label": "Ngày 39. Unit 8 · Ngựa và ếch",
+     "en": {
+      "tu": "Mới: horse, frog | Ôn: fish, rabbit, duck",
+      "cum": "a horse / a frog / ribbit, ribbit / neigh, neigh",
+      "cau": "It's a horse. Neigh! / It's a frog. Ribbit, ribbit! / Is it a frog? – No, it's a duck. / I like horses.",
+      "truyen": "Grandpa's farm — Grandpa: “Look, Nhan! It's a horse.” Neigh! Nhan: “And a frog!” Ribbit, ribbit! Grandpa: “Is it a duck?” Nhan: “No! It's a frog.” Nhan is happy.",
+      "video": "Tìm YouTube: \"horse frog farm animals song for preschool\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    },
+    {
+     "ngay": 40,
+     "label": "Ngày 40. Unit 8 · Ôn unit + truyện Con mèo đâu rồi?",
+     "en": {
+      "tu": "Ôn: cat, dog, bird, fish, rabbit, duck, horse, frog, bed, chair, table, sofa, home",
+      "cum": "on the bed / on the sofa / on the table / meow, meow",
+      "cau": "Where's the cat? / Is it on the sofa? – No! / Is it on the bed? – No! / Look! It's on the table!",
+      "truyen": "Where's the cat? — Bông: “Where's my cat?” Leo: “Is it on the sofa?” No! It's a dog. Woof! Anna: “Is it on the bed?” No! It's a rabbit. Hop, hop! Meow! Bông: “Look! My cat is on the table!” Ha ha!",
+      "video": "Tìm YouTube: \"where is the cat song for kids animals\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: horse, frog | Ôn: cat, dog, bird, fish, rabbit, duck, sofa, bed, table",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone!\" · Nhắc: \"Be gentle!\" (bỏ tiếng Việt) · Mời: \"Ai tiếp theo nào? Who's next?\" · Khen: \"Well done!\" · Chào về: \"Time to go home!\" · Câu mới buổi này: Who's next? 1) Nghe và chạm tranh (8 câu): cat / dog / bird / fish / rabbit / duck / horse / frog. 2) Nghe và chạm Yes/No theo tranh (3 câu): Is it a frog? (tranh ếch) / Is it a horse? (tranh vịt) / Is it a rabbit? (tranh thỏ). 3) Nghe truyện Where's the cat? và chạm chỗ con mèo trốn (3 câu): Is it on the sofa? / Is it on the bed? / It's on the table!",
+     "truyen": "Where's the cat? — Bông is home. “Where's my cat?” Leo: “Is it on the sofa?” No! It's a dog. Woof! Anna: “Is it on the bed?” No! It's a rabbit. Hop, hop! Leo: “Is it on the chair?” No! It's a duck. Quack! Meow, meow! Bông: “Look! My cat is on the table!” Ha ha! The cat is happy.",
+     "baihat": "On Grandpa's Farm — giai điệu Old MacDonald Had a Farm (dân gian): Grandpa has a farm, E-I-E-I-O! / And on his farm he has a duck, E-I-E-I-O! / With a quack, quack here and a quack, quack there, / Quack, quack, quack, quack, quack, quack, quack! (Lời 2: a horse – neigh, neigh / Lời 3: a frog – ribbit, ribbit / Lời 4: a dog – woof, woof)"
+    },
+    "zh": {
+     "flash": "–",
+     "slide": "–",
+     "truyen": "–",
+     "baihat": "–"
+    }
+   }
+  },
+  {
+   "buoi": 21,
+   "unit": 9,
+   "label_buoi": "Buổi dạy 21. Unit 9 · Food – Táo, chuối, sữa, nước, nước ép",
+   "web": [
+    {
+     "ngay": 41,
+     "label": "Ngày 41. Unit 9 · Táo, chuối và sữa",
+     "en": {
+      "tu": "Mới: apple, banana, milk | Ôn: hungry, rabbit, horse",
+      "cum": "an apple / a banana / some milk / milk, please",
+      "cau": "[Ngữ pháp: I like… / Do you like…?] I like apples. / Do you like bananas? – Yes! / Milk, please. / I'm hungry! / [Lời web] Vào bài: \"Let's learn!\" · Chuyển ý: \"Are you ready?\" · Khen: \"Tuyệt vời! Fantastic!\"",
+      "truyen": "Hungry Leo — Leo: “Mommy, I'm hungry!” Mommy: “Do you like apples?” Leo: “Yes! I like apples and bananas.” Mommy: “And milk?” Leo: “Milk, please!” Yum!",
+      "video": "Tìm YouTube: \"apple banana milk song for toddlers\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    },
+    {
+     "ngay": 42,
+     "label": "Ngày 42. Unit 9 · Nước và nước ép",
+     "en": {
+      "tu": "Mới: water, juice | Ôn: apple, banana, milk",
+      "cum": "some water / apple juice / water, please / here you are",
+      "cau": "Water, please. / Apple juice, please. / Here you are. – Thank you! / Do you like juice? – Yes!",
+      "truyen": "Juice or water? — Anna is tired. Teacher: “Water or juice?” Anna: “Apple juice, please.” Teacher: “Here you are.” Anna: “Thank you!” Leo: “Water, please!” Anna and Leo smile.",
+      "video": "Tìm YouTube: \"water juice please thank you song for kids\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: apple, banana, milk, water, juice | Ôn: hungry, tired, cat, rabbit, horse",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone!\" · Nhắc: \"Rửa tay nào! Wash your hands, please.\" (trước trò chơi đồ ăn) · Mời: \"Who's next?\" (bỏ tiếng Việt) · Khen: \"Great!\" · Câu mới buổi này: Wash your hands, please. 1) Nghe và chạm thức ăn, đồ uống (5 câu): apple / banana / milk / water / juice. 2) Nghe I like… và chạm món bạn thích (3 câu): Leo: I like apples. / Anna: I like juice. / Bông: I like bananas. 3) Đóng vai Cửa hàng nhỏ: cô nói Milk, please. / Water, please. / A banana, please. / Apple juice, please., con chạm đúng tranh, đưa đồ chơi cho cô và nghe cô nói Thank you!",
+     "truyen": "Hungry Leo — Leo: “Mommy, I'm hungry!” Mommy: “Do you like apples?” Leo: “Yes! I like apples and bananas.” Mommy: “Here you are.” Leo: “Thank you!” Mommy: “Milk or water?” Leo: “Milk, please!” Bông comes in. Bông is tired: “Apple juice, please.” Mommy: “Here you are.” Bông and Leo smile. Yum, yum!",
+     "baihat": "Yum, Yum, Yum — giai điệu Row, Row, Row Your Boat: Yum, yum, yum, I'm hungry, / Apples, please, for me! / Bananas, milk and apple juice, / Yum, yum, yum for me!"
+    },
+    "zh": {
+     "flash": "–",
+     "slide": "–",
+     "truyen": "–",
+     "baihat": "–"
+    }
+   }
+  },
+  {
+   "buoi": 22,
+   "unit": 9,
+   "label_buoi": "Buổi dạy 22. Unit 9 · Food – Cơm, trứng, bánh và bữa ăn",
+   "web": [
+    {
+     "ngay": 43,
+     "label": "Ngày 43. Unit 9 · Cơm, trứng và bánh",
+     "en": {
+      "tu": "Mới: rice, egg, cake | Ôn: water, juice, milk",
+      "cum": "rice and egg / a cake / rice, please",
+      "cau": "I like rice. / An egg, please. / Do you like cake? – Yes! Yum, yum! / Here you are.",
+      "truyen": "Rice and egg — Grandma: “Rice and egg, Nhan?” Nhan: “Yes, please!” Grandma: “Here you are.” Nhan: “Thank you! Yum, yum!” Grandma: “And cake?” Nhan: “Yes! I like cake!”",
+      "video": "Tìm YouTube: \"rice egg food song for preschool\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    },
+    {
+     "ngay": 44,
+     "label": "Ngày 44. Unit 9 · Ôn unit + truyện Những con vật đói bụng",
+     "en": {
+      "tu": "Ôn: apple, banana, milk, water, rice, egg, juice, cake, cat, dog, rabbit, duck, horse, frog",
+      "cum": "an apple, please / some milk / here you are / thank you",
+      "cau": "I'm hungry! / An apple, please. – Here you are. / Do you like milk? – Yes! / Thank you!",
+      "truyen": "Hungry animals — The cat is hungry: “Meow! Milk, please!” Bông: “Here you are.” The rabbit is hungry. Anna: “An apple?” Hop, hop – yum! The horse is hungry. Leo: “A banana? Here you are.” The duck: “Quack! Rice, please!” The animals are happy.",
+      "video": "Tìm YouTube: \"hungry animals food song for kids\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: rice, egg, cake | Ôn: apple, banana, milk, water, juice, cat, rabbit, horse, duck",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone!\" · Nhắc: \"Wash your hands, please.\" (bỏ tiếng Việt) · Đáp lời con: \"Thank you! – Không có gì! You're welcome.\" · Khen: \"Well done!\" · Câu mới buổi này: You're welcome. 1) Nghe và chạm tranh (8 câu): apple / banana / milk / water / rice / egg / juice / cake. 2) Nghe và cho con vật ăn đúng món (4 câu, con chạm món, cô kéo vào miệng con vật): The cat: milk, please. / The rabbit: an apple, please. / The horse: a banana, please. / The duck: rice, please. 3) Nghe và chạm Yes/No theo tranh (3 câu): Do you like eggs? / Is it juice? (tranh nước) / Is it rice? (tranh cơm).",
+     "truyen": "Hungry animals — Bông, Anna and Leo are at Grandpa's farm. The cat is hungry: “Meow! Milk, please!” Bông: “Here you are.” The rabbit is hungry. Anna: “An apple?” Hop, hop – yum! The horse is hungry. Leo: “A banana? Here you are.” The duck: “Quack! Rice, please!” Grandpa: “And the dog? An egg?” Woof, woof! The animals are happy. Bông: “Grandpa, I'm hungry!” Grandpa: “Cake and juice? Here you are!” “Thank you, Grandpa!”",
+     "baihat": "Rice and Egg — giai điệu London Bridge Is Falling Down: Rice and egg and milk, please, / milk, please, milk, please, / Rice and egg and milk, please, / Thank you, Grandma!"
+    },
+    "zh": {
+     "flash": "–",
+     "slide": "–",
+     "truyen": "–",
+     "baihat": "–"
+    }
+   }
+  },
+  {
+   "buoi": 23,
+   "unit": 10,
+   "label_buoi": "Buổi dạy 23. Unit 10 · Weather – Nắng, nóng, mưa, nhiều mây",
+   "web": [
+    {
+     "ngay": 45,
+     "label": "Ngày 45. Unit 10 · Trời nắng và nóng",
+     "en": {
+      "tu": "Mới: sunny, hot | Ôn: water, juice",
+      "cum": "a sunny day / so hot / water, please",
+      "cau": "[Ngữ pháp: It's + thời tiết] It's sunny. / It's hot! / I'm hot. Water, please. / [Lời web] Vào bài: \"Let's learn!\" · Chuyển ý: \"Look and touch.\" · Khen: \"Fantastic!\"",
+      "truyen": "A sunny day — Look! It's sunny. Leo: “It's hot!” Mommy: “Water or juice?” Leo: “Water, please!” Leo is happy.",
+      "video": "Tìm YouTube: \"sunny day hot weather song for toddlers\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    },
+    {
+     "ngay": 46,
+     "label": "Ngày 46. Unit 10 · Trời mưa và nhiều mây",
+     "en": {
+      "tu": "Mới: rainy, cloudy | Ôn: sunny, hot",
+      "cum": "a rainy day / a cloudy day / splash, splash",
+      "cau": "It's rainy. / It's cloudy. / Is it sunny? – No, it's rainy.",
+      "truyen": "Rainy day — Bông looks out of the window. “Is it sunny?” Mommy: “No, it's cloudy.” Pitter, patter! “Look! It's rainy!” Bông is sad. Splash, splash! Now Bông is happy.",
+      "video": "Tìm YouTube: \"rainy day cloudy song for preschool\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: sunny, hot, rainy, cloudy | Ôn: water, juice, milk, happy, sad, window",
+     "slide": "[Lời cô] Vào bài: \"Chào buổi sáng cả lớp! Good morning, everyone!\" · Chuyển ý: \"Are you ready?\" · Mời: \"Who's next?\" · Khen: \"Great!\" · Câu mới buổi này: Good morning, everyone! 1) Nghe và chạm tranh thời tiết (4 câu): sunny / hot / rainy / cloudy. 2) Nghe Is it…? và chạm Yes/No theo tranh cửa sổ (3 câu): Is it sunny? / Is it rainy? / Is it cloudy? 3) Trò chơi Ô che mưa: cô nói It's rainy! con giơ tay che đầu như cầm ô, It's sunny! con quạt tay nói It's hot!, It's cloudy! con ngồi xuống (6 lượt).",
+     "truyen": "A sunny day, a rainy day — Look! It's sunny. Leo: “It's hot! Water, please!” Mommy: “Here you are.” Then it's cloudy. Pitter, patter – it's rainy! Leo is sad. Mommy: “Look! Splash, splash!” Leo and Mommy splash. Leo is happy.",
+     "baihat": "Sunny, Sunny — giai điệu Twinkle, Twinkle, Little Star: Sunny, sunny, it is hot, / Water, water, drink a lot! / Cloudy, cloudy, rainy too, / Splash, splash, splash with me and you!"
+    },
+    "zh": {
+     "flash": "–",
+     "slide": "–",
+     "truyen": "–",
+     "baihat": "–"
+    }
+   }
+  },
+  {
+   "buoi": 24,
+   "unit": 10,
+   "label_buoi": "Buổi dạy 24. Unit 10 · Weather – Gió và lạnh",
+   "web": [
+    {
+     "ngay": 47,
+     "label": "Ngày 47. Unit 10 · Trời gió và lạnh",
+     "en": {
+      "tu": "Mới: windy, cold | Ôn: rainy, cloudy, sunny",
+      "cum": "a windy day / so cold / whoosh, whoosh",
+      "cau": "It's windy. Whoosh! / It's cold. / I'm cold, Mommy! / Is it hot? – No, it's cold.",
+      "truyen": "Windy day — Whoosh, whoosh! It's windy. Nhan: “Mommy, I'm cold!” Mommy: “Milk, Nhan?” Nhan: “Yes, please.” Hot milk! Nhan smiles.",
+      "video": "Tìm YouTube: \"windy day cold weather song for kids\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    },
+    {
+     "ngay": 48,
+     "label": "Ngày 48. Unit 10 · Ôn unit + truyện Thời tiết ơi!",
+     "en": {
+      "tu": "Ôn: sunny, rainy, cloudy, windy, hot, cold, water, milk, juice, apple, door, window",
+      "cum": "a sunny day / a rainy day / a windy day / water, please",
+      "cau": "Is it sunny? – Yes! / Is it rainy? – No, it's cloudy. / It's windy and cold. / Look out of the window!",
+      "truyen": "Weather, weather — Bông looks out of the window. It's sunny: “It's hot! Water, please!” It's cloudy. It's rainy: splash, splash! It's windy: whoosh! It's cold: “Mommy, hot milk, please!” Mommy: “Here you are.” Bông: “Thank you!”",
+      "video": "Tìm YouTube: \"weather song for preschool sunny rainy windy\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: windy, cold | Ôn: sunny, hot, rainy, cloudy, milk, water",
+     "slide": "[Lời cô] Vào bài: \"Good morning, everyone!\" (bỏ tiếng Việt) · Đáp lời: \"You're welcome.\" (bỏ tiếng Việt) · Khen: \"Tuyệt vời! Fantastic!\" · Chào về: \"Time to go home!\" · Câu mới buổi này: Fantastic! 1) Nghe và chạm tranh (6 câu): sunny / rainy / cloudy / windy / hot / cold. 2) Nghe và chọn đồ cho Bông theo thời tiết (3 câu, con chạm tranh, cô kéo): It's cold. (áo ấm) / It's hot. (mũ, cốc nước) / It's rainy. (ô). 3) Kiểm tra nhanh cuối unit – nghe và chạm Yes/No theo tranh (3 câu): Is it windy? / Is it cold? / Is it sunny?",
+     "truyen": "Weather, weather — Bông looks out of the window. It's sunny: “It's hot! Water, please!” Mommy: “Here you are.” Then it's cloudy. Pitter, patter – it's rainy! Splash, splash! Then whoosh, whoosh – it's windy! Bông: “Mommy, I'm cold!” Mommy: “Hot milk?” Bông: “Yes, please!” Mommy: “Here you are.” Bông: “Thank you!” Bông smiles.",
+     "baihat": "Is It Sunny? — giai điệu Frère Jacques: Is it sunny? Is it sunny? / No, it's not! No, it's not! / It is windy, windy! It is windy, windy! / And it's cold! And it's cold! (Lời 2: Is it rainy? … Yes, it is! … / It is cloudy, cloudy! … / Splash, splash, splash!)"
+    },
+    "zh": {
+     "flash": "–",
+     "slide": "–",
+     "truyen": "–",
+     "baihat": "–"
+    }
+   }
+  },
+  {
+   "buoi": 25,
+   "unit": 11,
+   "label_buoi": "Buổi dạy 25. Unit 11 · Colors – Đỏ, xanh dương, vàng, xanh lá, hồng, cam",
+   "web": [
+    {
+     "ngay": 49,
+     "label": "Ngày 49. Unit 11 · Đỏ, xanh dương, vàng",
+     "en": {
+      "tu": "Mới: red, blue, yellow | Ôn: apple, banana, bag",
+      "cum": "a red apple / a yellow banana / a blue bag",
+      "cau": "[Ngữ pháp: What colour is it? – It's + màu] What colour is it? – It's red. / A red apple. / It's yellow. / I like blue. / [Lời web] Vào bài: \"Let's learn!\" · Chuyển ý: \"Your turn!\" · Khen: \"Fantastic! Great!\"",
+      "truyen": "Red, yellow, blue — Leo: “What colour is it?” Bông: “It's red. A red apple!” Leo: “What colour is it?” Bông: “It's yellow. A yellow banana!” Leo: “I like blue. My bag is blue.”",
+      "video": "Tìm YouTube: \"red blue yellow colours song for toddlers\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    },
+    {
+     "ngay": 50,
+     "label": "Ngày 50. Unit 11 · Xanh lá, hồng, cam",
+     "en": {
+      "tu": "Mới: green, pink, orange | Ôn: red, blue, yellow",
+      "cum": "a green frog / a pink cake / orange juice",
+      "cau": "It's green. A green frog! / A pink cake. / Orange juice, please. / Is it pink? – No, it's orange.",
+      "truyen": "Anna's party — Look! A pink cake. Anna: “I like pink!” Leo: “Orange juice, please.” Ribbit! Bông: “Look! A green frog!” Ha ha!",
+      "video": "Tìm YouTube: \"green pink orange colours song preschool\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: red, blue, yellow, green, pink, orange | Ôn: apple, banana, juice, cake, frog, bag",
+     "slide": "[Lời cô] Vào bài: \"Good morning, everyone!\" · Nhắc: \"Chọn một màu nào! Choose a colour.\" · Mời: \"Your turn!\" · Khen: \"Fantastic!\" · Câu mới buổi này: Choose a colour. 1) Nghe và chạm ô màu (6 câu): red / blue / yellow / green / pink / orange. 2) Nghe và chạm đúng đồ vật (4 câu): a red apple / a yellow banana / a green frog / a pink cake. 3) Trò chơi Tìm màu trong lớp: cô nói Touch red! / Touch blue! / Touch green! / Touch yellow!, con chạy đi chạm một đồ vật có màu đó.",
+     "truyen": "Anna's party — It's Anna's birthday. Look! A pink cake. Anna: “I like pink!” Leo: “What colour is it?” Anna: “It's red. A red apple!” Bông: “And a yellow banana!” Leo: “Orange juice, please.” Anna: “Here you are.” Ribbit! “Look! A green frog!” Ha ha! Leo: “My bag is blue. Happy birthday, Anna!”",
+     "baihat": "Is It Red? — giai điệu Mary Had a Little Lamb: Is it red? Yes, it's red! Yes, it's red! Yes, it's red! / Is it red? Yes, it's red! A red, red apple! (Lời 2: Is it yellow? … a yellow banana! / Lời 3: Is it green? … a green, green frog! / Lời 4: Is it pink? … a pink, pink cake!)"
+    },
+    "zh": {
+     "flash": "–",
+     "slide": "–",
+     "truyen": "–",
+     "baihat": "–"
+    }
+   }
+  },
+  {
+   "buoi": 26,
+   "unit": 11,
+   "label_buoi": "Buổi dạy 26. Unit 11 · Colors – Đen, trắng và cầu vồng",
+   "web": [
+    {
+     "ngay": 51,
+     "label": "Ngày 51. Unit 11 · Đen và trắng",
+     "en": {
+      "tu": "Mới: black, white | Ôn: green, pink, orange",
+      "cum": "a black cat / a white rabbit / black and white",
+      "cau": "It's black. A black cat! / It's white. A white rabbit! / What colour is the dog? – It's black and white.",
+      "truyen": "Black and white — Bông: “Look! A black cat.” Leo: “And a white rabbit!” Anna: “What colour is the dog?” Leo: “It's black and white!” Woof, woof!",
+      "video": "Tìm YouTube: \"black and white colours song for kids\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    },
+    {
+     "ngay": 52,
+     "label": "Ngày 52. Unit 11 · Ôn unit + truyện Cầu vồng sau mưa",
+     "en": {
+      "tu": "Ôn: red, blue, yellow, green, pink, orange, black, white, sunny, rainy, cloudy, windy",
+      "cum": "a red apple / a green frog / a black cat / orange juice",
+      "cau": "It's rainy. Then it's sunny. / Look! Red, orange, yellow, green, blue! / What colour is it? – It's pink. / I like yellow.",
+      "truyen": "Rainbow after rain — It's rainy and cloudy. Bông is sad. Then it's sunny! Bông looks out of the window. Red, orange, yellow, green, blue – a rainbow! Bông: “What colour is it, Mommy?” Mommy: “It's red and orange and yellow and green and blue!” Bông is happy: “I like the rainbow!”",
+      "video": "Tìm YouTube: \"rainbow colours song for preschool\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: black, white | Ôn: red, blue, yellow, green, pink, orange, sunny, rainy, cat, rabbit",
+     "slide": "[Lời cô] Vào bài: \"Good morning, everyone!\" · Nhắc: \"Choose a colour.\" (bỏ tiếng Việt) · \"Đặt vào đây nào! Put it here.\" · Khen: \"Fantastic! Well done!\" · Câu mới buổi này: Put it here. 1) Nghe và tô màu trên slide (con chạm màu, cô tô, 4 câu): a black cat / a white rabbit / a blue bird / a yellow duck. 2) Nghe câu và chạm tranh đúng (4 câu): It's black. (mèo đen) / It's white. (thỏ trắng) / It's green. (ếch) / It's pink. (bánh hồng). 3) Kiểm tra nhanh cuối unit – nghe và chạm Yes/No theo tranh (3 câu): Is the cat black? / Is the frog pink? / Is the rabbit white?",
+     "truyen": "Rainbow after rain — It's rainy and cloudy. Bông is sad. Her black cat is sad, too. Then it's sunny! Bông looks out of the window. Red, orange, yellow, green, blue – a rainbow! Bông: “What colour is it, Mommy?” Mommy: “It's red and orange and yellow and green and blue!” Bông: “And pink?” Mommy: “No pink!” Bông is happy: “I like the rainbow!” Meow! The black cat is happy, too.",
+     "baihat": "Black Cat, White Cat — giai điệu Twinkle, Twinkle, Little Star: Black cat, white cat, meow, meow, meow, / Yellow duck says quack, quack, quack, / Green frog, ribbit, pink cake, yum, / Red and orange, blue – what fun! / Black cat, white cat, meow, meow, meow, / Colours, colours, here and now!"
+    },
+    "zh": {
+     "flash": "–",
+     "slide": "–",
+     "truyen": "–",
+     "baihat": "–"
+    }
+   }
+  },
+  {
+   "buoi": 27,
+   "unit": 12,
+   "label_buoi": "Buổi dạy 27. Unit 12 · Numbers and counting – Đếm 6 đến 9, bóng và đồ chơi",
+   "web": [
+    {
+     "ngay": 53,
+     "label": "Ngày 53. Unit 12 · Số 6, 7 và quả bóng",
+     "en": {
+      "tu": "Mới: six, seven, ball | Ôn: one, two, three, four, five, red",
+      "cum": "a ball / six balls / seven balls / a red ball",
+      "cau": "[Ngữ pháp: số nhiều -s] One ball, two balls. / Six balls! / Seven balls! / Look! A red ball. / [Lời web] Vào bài: \"Let's learn! Let's count!\" · Chuyển ý: \"Are you ready?\" · Khen: \"Fantastic! Well done!\"",
+      "truyen": "Leo's balls — Leo: “Look! A red ball. A blue ball.” Bông counts: “One, two, three, four, five, six. Six balls!” Anna: “And a yellow ball. Seven balls!”",
+      "video": "Tìm YouTube: \"count to seven song for toddlers balls\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    },
+    {
+     "ngay": 54,
+     "label": "Ngày 54. Unit 12 · Số 8, 9 và đồ chơi",
+     "en": {
+      "tu": "Mới: eight, nine, toy | Ôn: six, seven, ball",
+      "cum": "my toy / eight toys / nine toys",
+      "cau": "This is my toy. / Eight toys! / Nine toys! / I like my toys.",
+      "truyen": "Nhan's toys — Nhan: “Look! My toys!” A ball, a duck, a cat, a horse… Bông counts: “One, two, three, four, five, six, seven, eight. Eight toys!” Nhan: “And my frog! Nine toys!”",
+      "video": "Tìm YouTube: \"count to nine song for preschool toys\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: six, seven, eight, nine, ball, toy | Ôn: one, two, three, four, five, red, blue, yellow",
+     "slide": "[Lời cô] Vào bài: \"Good morning, everyone!\" · Chuyển ý: \"Mình cùng đếm nào! Let's count!\" · Nhắc: \"Put it here.\" (bỏ tiếng Việt) · Khen: \"Great!\" · Câu mới buổi này: Let's count! 1) Nghe số và chạm đúng số chấm (4 câu): six / seven / eight / nine. 2) Nghe và chạm tranh đúng số lượng (4 câu): six balls / seven balls / eight toys / nine toys. 3) Trò chơi Đếm bóng: cô thả từng quả bóng vào giỏ, cả lớp đếm theo one… nine, cô dừng bất ngờ và hỏi, con nghe số rồi chạm số đó trên slide (4 lượt).",
+     "truyen": "Toys and balls — Leo: “Look! A red ball, a blue ball, a yellow ball.” Bông counts: “One, two, three, four, five, six, seven. Seven balls!” Nhan: “Look! My toys!” A duck, a cat, a horse, a frog… Bông counts: “One, two, three, four, five, six, seven, eight, nine. Nine toys!” Nhan is happy: “I like my toys!”",
+     "baihat": "Count with Me — giai điệu Twinkle, Twinkle, Little Star: One, two, three, four, five, six, seven, / Count my balls and count my toys! / Eight and nine, eight and nine, / Count with me, it's play time! / One, two, three, four, five, six, seven, / Count my balls and count my toys!"
+    },
+    "zh": {
+     "flash": "–",
+     "slide": "–",
+     "truyen": "–",
+     "baihat": "–"
+    }
+   }
+  },
+  {
+   "buoi": 28,
+   "unit": 12,
+   "label_buoi": "Buổi dạy 28. Unit 12 · Numbers and counting – Số 10 và How many?",
+   "web": [
+    {
+     "ngay": 55,
+     "label": "Ngày 55. Unit 12 · Số 10 và How many?",
+     "en": {
+      "tu": "Mới: ten, how many | Ôn: eight, nine, toy, ball",
+      "cum": "how many balls / how many toys / ten balls",
+      "cau": "[Ngữ pháp: How many + danh từ số nhiều?] How many balls? – Ten! / How many toys? – Nine! / Let's count: one to ten!",
+      "truyen": "How many balls? — Teacher: “How many balls?” Friends count: “One, two, three, four, five, six, seven, eight, nine, ten!” Leo: “Ten balls!” Teacher: “Good job!”",
+      "video": "Tìm YouTube: \"how many count to ten song for kids\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    },
+    {
+     "ngay": 56,
+     "label": "Ngày 56. Unit 12 · Ôn unit + truyện Hộp đồ chơi của Nhan",
+     "en": {
+      "tu": "Ôn: six, seven, eight, nine, ten, how many, ball, toy, red, blue, yellow, green, black, white",
+      "cum": "how many balls / a red ball / my toy / ten toys",
+      "cau": "How many red balls? – Six! / How many toys? – Ten! / What colour is the ball? – It's blue. / This is my toy.",
+      "truyen": "Nhan's toy box — Nhan: “Bông, how many toys?” Bông counts: “One, two, three… ten! Ten toys!” Nhan: “How many balls?” Bông: “Seven balls. Red, blue, yellow, green, pink, orange and white!” Nhan: “Where's my black ball?” Woof! The dog has it! Ha ha!",
+      "video": "Tìm YouTube: \"counting to ten song preschool balls\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: ten, how many | Ôn: six, seven, eight, nine, ball, toy, red, green, black, white",
+     "slide": "[Lời cô] Vào bài: \"Good morning, everyone!\" · Chuyển ý: \"Let's count!\" (bỏ tiếng Việt) · Cuối giờ: \"Dọn đồ chơi nào! Tidy up, please.\" · Khen: \"Fantastic!\" · Câu mới buổi này: Tidy up, please. 1) Nghe câu hỏi How many…? và câu trả lời, chạm tranh có đúng số lượng (4 câu): How many balls? – Ten. / How many toys? – Eight. / How many cats? – Six. / How many ducks? – Nine. 2) Nghe và chạm đúng hộp đồ chơi (3 câu): ten red balls / seven green balls / nine white balls. 3) Kiểm tra nhanh cuối unit – nghe số và chạm (5 câu): six / eight / ten / seven / nine.",
+     "truyen": "Nhan's toy box — Nhan: “Bông, how many toys?” Bông counts: “One, two, three, four, five, six, seven, eight, nine, ten! Ten toys!” Nhan: “How many balls?” Bông: “Seven balls. Red, blue, yellow, green, pink, orange and white!” Nhan: “Where's my black ball?” Bông: “Is it on the bed?” “No!” “Is it on the sofa?” “No!” Woof! The dog has it! Ha ha! Nhan: “Eight balls!”",
+     "baihat": "How Many Balls? — giai điệu This Old Man (dân gian): How many balls? Let's count them all! / One, two, three, four, five – a ball! / Six, seven, eight, nine, ten – / Count them all again! / How many balls? Ten balls, ten balls!"
+    },
+    "zh": {
+     "flash": "–",
+     "slide": "–",
+     "truyen": "–",
+     "baihat": "–"
+    }
+   }
+  },
+  {
+   "buoi": 29,
+   "unit": "",
+   "label_buoi": "Buổi dạy 29. Tuần 15 · Cuối khóa – Ôn toàn khóa và dự án All About Me",
+   "web": [
+    {
+     "ngay": 57,
+     "label": "Ngày 57. Cuối khóa · Ôn Unit 1–4",
+     "en": {
+      "tu": "Ôn: hello, goodbye, teacher, friend, boy, girl, yes, no, name, one, two, three, four, five, birthday, cake, mommy, daddy, brother, sister, grandma, grandpa, baby, family, head, eyes, ears, nose, mouth, hands, feet, touch",
+      "cum": "hello, teacher / my name / happy birthday / my family / touch your nose",
+      "cau": "Hello! My name is Leo. / How old are you? – I'm five. / This is my family. / Touch your head!",
+      "truyen": "Leo's birthday — It's Leo's birthday. “Hello, Grandma! Hello, Grandpa!” Xiaomei: “Happy birthday, brother!” Look! A birthday cake. Daddy: “How old are you, Leo?” Leo: “I'm five!” Mommy: “Clap your hands!” Clap, clap! Leo's family is happy.",
+      "video": "Tìm YouTube: \"hello song family song body parts song preschool review\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    },
+    {
+     "ngay": 58,
+     "label": "Ngày 58. Cuối khóa · Ôn Unit 5–8",
+     "en": {
+      "tu": "Ôn: happy, sad, angry, tired, sleepy, hungry, smile, book, pen, pencil, bag, ruler, desk, sit down, stand up, bed, chair, table, sofa, door, window, bath, home, cat, dog, bird, fish, rabbit, duck, horse, frog",
+      "cum": "I'm sleepy / on the desk / on the sofa / bath time / a rabbit",
+      "cau": "How are you? – I'm happy. / What's this? – It's a pencil. / The cat is on the sofa. / Is it a frog? – No, it's a duck.",
+      "truyen": "Bông's afternoon — Bông is home: “I'm home!” Her bag is on the sofa. Her book and pencil are on the table. Meow! The cat is on the bed. Bông is tired and sleepy. Mommy: “Bath time, Bông!” Splash, splash! Bông smiles. She's happy.",
+      "video": "Tìm YouTube: \"feelings school house animals song preschool review\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn (trộn 12 chủ đề, 24 thẻ): hello, friend, five, birthday, grandma, baby, nose, hands, happy, sleepy, pencil, bag, sofa, window, rabbit, frog, banana, juice, rainy, cold, pink, white, ten, toy",
+     "slide": "[Lời cô] Vào bài: \"Good morning, everyone! Are you ready?\" · Chuyển ý: \"Mình cùng tập nào! Let's practise!\" · Nhắc: \"Tidy up, please.\" (bỏ tiếng Việt) · Khen: \"Well done! Fantastic!\" · Câu mới buổi này: Let's practise! 1) Nghe và chạm tranh – quét 12 chủ đề (12 câu, mỗi unit 1 câu): goodbye / three / grandpa / ears / sad / ruler / door / horse / egg / windy / orange / how many. 2) Dự án All About Me – nghe cô và chọn tranh dán lên poster của con (5 câu): My name is… / I'm four. (hoặc I'm five.) / This is my family. / I like red. / I like cats. 3) Nghe câu và chạm tranh trộn chủ đề (4 câu): The cat is on the sofa. / It's sunny and hot. / How many balls? – Ten. / A pink cake.",
+     "truyen": "Leo's birthday party — It's Leo's birthday. Knock, knock! Leo opens the door: “Hello, friends!” Bông and Anna: “Happy birthday, Leo!” Grandma and Grandpa sit on the sofa. Xiaomei: “Look! A birthday cake on the table!” Daddy: “How old are you, Leo?” Leo: “I'm five!” Woof, woof! Leo's dog is happy, too. Leo: “I'm hungry!” Mommy: “Here you are.” Leo smiles: “Thank you! I love my family and my friends!”",
+     "baihat": "Little Stage Medley (tập lần 1) — Hello, Teacher (Frère Jacques) + Head and Eyes and Ears and Nose (Head, Shoulders, Knees and Toes) + Bông Has a Little Cat (Mary Had a Little Lamb) + How Many Balls? (This Old Man). Đoạn dùng: Hello, teacher! Hello, friend! / Head and eyes and ears and nose, ears and nose! / Bông has got a little cat, meow, meow, meow! / How many balls? Let's count them all!"
+    },
+    "zh": {
+     "flash": "–",
+     "slide": "–",
+     "truyen": "–",
+     "baihat": "–"
+    }
+   }
+  },
+  {
+   "buoi": 30,
+   "unit": "",
+   "label_buoi": "Buổi dạy 30. Tuần 15 · Cuối khóa – Sân khấu nhỏ cho ba mẹ",
+   "web": [
+    {
+     "ngay": 59,
+     "label": "Ngày 59. Cuối khóa · Ôn Unit 9–12",
+     "en": {
+      "tu": "Ôn: apple, banana, milk, water, rice, egg, juice, cake, sunny, rainy, cloudy, windy, hot, cold, red, blue, yellow, green, pink, orange, black, white, six, seven, eight, nine, ten, how many, ball, toy",
+      "cum": "orange juice / a sunny day / a red ball / how many toys",
+      "cau": "Do you like apples? – Yes! / It's sunny and hot. / What colour is it? – It's green. / How many balls? – Ten!",
+      "truyen": "Picnic day — It's sunny and hot. Bông, Leo and Anna have a picnic. Apples, bananas, rice and eggs! Anna: “Orange juice, please.” Leo: “Here you are.” Leo: “How many balls?” Bông: “One, two, three… ten! Ten red balls!” Whoosh! It's windy and cloudy. Pitter, patter – it's rainy! “Let's go home!”",
+      "video": "Tìm YouTube: \"food weather colours counting song for kids review\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    },
+    {
+     "ngay": 60,
+     "label": "Ngày 60. Cuối khóa · Tập cho Sân khấu nhỏ",
+     "en": {
+      "tu": "Ôn: hello, goodbye, name, five, family, happy, cat, red, ten, how many, sunny, apple",
+      "cum": "hello, Mommy / hello, Daddy / my name / I'm happy",
+      "cau": "Hello, Mommy! Hello, Daddy! / My name is Bông. I'm four. / This is my family. / Goodbye! Thank you!",
+      "truyen": "The little stage — Mommy and Daddy come to class. Bông: “Hello, Mommy! Hello, Daddy!” Leo, Anna and Bông stand up. They sing and dance. “How many friends? One, two, three!” Clap, clap, clap! Teacher: “Good job, friends!” Bông is happy: “Thank you! Goodbye!”",
+      "video": "Tìm YouTube: \"goodbye song for preschool end of year\""
+     },
+     "zh": {
+      "tu": "–",
+      "cum": "–",
+      "cau": "–",
+      "truyen": "–",
+      "video": "–"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn (thẻ cho phần chỉ tranh trên sân khấu): hello, goodbye, mommy, daddy, family, happy, smile, home, cat, dog, apple, cake, sunny, rainy, red, yellow, ten, ball",
+     "slide": "[Lời cô] Vào bài: \"Good morning, everyone! Hello, Mommy and Daddy!\" · Chuyển ý: \"Let's practise!\" · Cuối buổi: \"Cúi chào nào! Bow, please.\" / \"Vỗ tay cho bạn nào! Clap for your friends!\" · Khen: \"Fantastic! Well done!\" · Câu mới buổi này: Bow, please. / Clap for your friends! 1) Sân khấu nhỏ – ba mẹ đọc từ, con chạy lên chạm tranh (8 câu): mommy / cat / apple / sunny / red / ball / happy / home. 2) Con giới thiệu poster All About Me (con chỉ tranh, cô đọc mẫu, con nói theo nếu muốn): My name is Leo. / I'm five. / This is my family. / I like dogs. 3) Trò chơi chung với ba mẹ – nghe lệnh và làm theo (4 lệnh): Stand up! / Touch your nose! / Clap your hands! / Sit down! (Kết thúc: trao giấy khen hoàn thành PreB.)",
+     "truyen": "The little stage — Mommy, Daddy, Grandma and Grandpa come to class. Bông: “Hello, Mommy! Hello, Daddy!” Teacher: “Stand up, please!” Leo, Anna and Bông stand up. They sing and dance. Leo: “My name is Leo. I'm five. I like dogs.” Anna: “My name is Anna. I like pink.” “How many friends? One, two, three!” Clap, clap, clap! Teacher: “Good job, friends!” Bông is happy. She smiles: “Thank you! Goodbye, teacher! Goodbye, friends!”",
+     "baihat": "Goodbye, PreB — giai điệu Mary Had a Little Lamb: Goodbye, teacher, goodbye, friends, / goodbye, friends, goodbye, friends, / Goodbye, teacher, goodbye, friends, / I'm happy – thank you! (Lời 2: Hello, Mommy, hello, Daddy, / hello, Daddy, hello, Daddy, / Hello, Mommy, hello, Daddy, / this is my family!) – sau đó biểu diễn Little Stage Medley."
+    },
+    "zh": {
+     "flash": "–",
+     "slide": "–",
+     "truyen": "–",
+     "baihat": "–"
+    }
+   }
+  }
+ ]
+}

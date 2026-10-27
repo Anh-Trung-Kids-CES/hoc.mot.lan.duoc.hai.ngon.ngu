@@ -1,0 +1,1032 @@
+{
+ "course": "Canopy",
+ "part": "b",
+ "rows": [
+  {
+   "buoi": 21,
+   "unit": 5,
+   "label_buoi": "Buổi dạy 21. Unit 5 · Places in town · 地方 – Hiểu: nơi chốn trong thành phố, đi đâu; tô 家",
+   "web": [
+    {
+     "ngay": 41,
+     "label": "Ngày 41. Unit 5 · Nơi chốn 1: nhà, trường, công viên, sở thú, cửa hàng",
+     "en": {
+      "tu": "Mới: place, home, park, zoo, shop, store | Ôn: school, homework, way, all, bathroom, mirror, kick",
+      "cum": "go home / go to school / go to the park / go to the zoo / a shop (UK) = a store (US)",
+      "cau": "Where are you going? / I go to the park. / [Ngữ pháp: go home không có to] I go home. / Let's go to the zoo! / [Ngữ pháp: shop (UK) – store (US)] This place is a shop. In the US, it is a store. / There is a big mirror in the bathroom. / I go to the park to kick a ball.",
+      "truyen": "Where Are You Going? — Leo: Where are you going, Xiaomei? Xiaomei: I go to the park. Leo: I go to the zoo! Bông: I go home. Goodbye, all!",
+      "video": "Where Are You Going? Places Song – Fun Kids English – https://www.youtube.com/watch?v=FxRGkjkVTGA"
+     },
+     "zh": {
+      "tu": "Mới: 地方 dìfang (= place), 家 jiā (= home), 公园 gōngyuán (= park), 动物园 dòngwùyuán (= zoo) | Ôn: 学校 xuéxiào, 商店 shāngdiàn | Ôn: 镜子 jìngzi, 踢球 tī qiú | Nghe làm quen (có tranh, không kiểm tra): 卫生间 wèishēngjiān (= bathroom)",
+      "cum": "回家 huí jiā / 去学校 qù xuéxiào / 去公园 qù gōngyuán / 去动物园 qù dòngwùyuán",
+      "cau": "[Cầu nối] I go to the park. ↔ 我去公园。(Wǒ qù gōngyuán.) [giống: Ai – đi – đâu · khác: go home ↔ 回家, không nói 去家] / 你去哪儿？(Nǐ qù nǎr?) / 我去公园。(Wǒ qù gōngyuán.) / [Ngữ pháp: về nhà là 回家, không nói 去家] 我回家。(Wǒ huí jiā.) / 我们去动物园吧！(Wǒmen qù dòngwùyuán ba!) (= Let's go to the zoo!) / [shop (UK) – store (US) ↔ đều là 商店] 这个地方是商店。(Zhège dìfang shì shāngdiàn.) (= This place is a shop.) / 卫生间里有一个大镜子。(Wèishēngjiān lǐ yǒu yí ge dà jìngzi.) (= There is a big mirror in the bathroom.) / 我去公园踢球。(Wǒ qù gōngyuán tī qiú.) (= I go to the park to kick a ball.)",
+      "truyen": "你去哪儿？ — Leo：Xiaomei，你去哪儿？Xiaomei：我去公园。Leo：我去动物园！Bông：我回家。大家再见！（Leo: Xiaomei, nǐ qù nǎr? Xiaomei: Wǒ qù gōngyuán. Leo: Wǒ qù dòngwùyuán! Bông: Wǒ huí jiā. Dàjiā zàijiàn!）",
+      "video": "地方 Places Part 1 – Little Chinese Learners – https://www.youtube.com/watch?v=XAeEErUCojk"
+     }
+    },
+    {
+     "ngay": 42,
+     "label": "Ngày 42. Unit 5 · Nơi chốn 2: nhà hàng, rạp chiếu phim, thư viện, bệnh viện",
+     "en": {
+      "tu": "Mới: restaurant, cinema, library, hospital | Ôn: shop, store, park, write, understand, paper",
+      "cum": "go to the restaurant / go to the cinema / go to the library / a hospital on my street / a bookshop on my street",
+      "cau": "Where is the library? It's on my street. / There is a cinema on my street. / [Ngữ pháp: go to the + nơi chốn] I go to the library. / Is it a hospital? No, it's a restaurant. / I go to the bookshop to buy paper and pencils. / This is the school door.",
+      "truyen": "My Street — This is my street. There is a shop, a bookshop and a restaurant. There is a library, too. The cinema is big. The hospital is white.",
+      "video": "Where Are You Going? Places Song – English Tree – https://www.youtube.com/watch?v=Bp8wUmETBYU"
+     },
+     "zh": {
+      "tu": "Mới: 饭店 fàndiàn (= restaurant), 电影院 diànyǐngyuàn (= cinema), 图书馆 túshūguǎn (= library), 门 mén (= door), 街 jiē (= street) | Ôn: 学校 xuéxiào, 商店 shāngdiàn, 铅笔 qiānbǐ | Nghe làm quen (có tranh, không kiểm tra): 医院 yīyuàn (= hospital), 书店 shūdiàn (= bookshop)",
+      "cum": "去饭店 qù fàndiàn / 去电影院 qù diànyǐngyuàn / 去图书馆 qù túshūguǎn / 去商店 qù shāngdiàn / 学校的门 xuéxiào de mén / 我家这条街上 wǒ jiā zhè tiáo jiē shang",
+      "cau": "[Cầu nối] There is a cinema on my street. ↔ 我家这条街上有电影院。(Wǒ jiā zhè tiáo jiē shang yǒu diànyǐngyuàn.) [khác: tiếng Anh nói \"có cái gì\" trước rồi mới nói ở đâu; tiếng Trung nói nơi chốn trước: 街上 + 有 + 电影院] / 图书馆在哪儿？(Túshūguǎn zài nǎr?) / 我去图书馆。(Wǒ qù túshūguǎn.) / [Ngữ pháp: 是 / 不是] 这是医院吗？不是，这是饭店。(Zhè shì yīyuàn ma? Bú shì, zhè shì fàndiàn.) / 这是学校的门。(Zhè shì xuéxiào de mén.) / [Chuyển ngữ] [nghe Leo nói tiếng Anh, nói lại 1 câu bằng tiếng Trung cho Xiaomei, ghi âm] Leo: \"I go to the library.\" → 我去图书馆。(Wǒ qù túshūguǎn.) / 我去书店买铅笔。(Wǒ qù shūdiàn mǎi qiānbǐ.) (= I go to the bookshop to buy pencils.)",
+      "truyen": "我家的街 — 这是我家这条街。街上有商店、书店和饭店，也有图书馆。电影院很大。医院是白色的。（Zhè shì wǒ jiā zhè tiáo jiē. Jiē shang yǒu shāngdiàn, shūdiàn hé fàndiàn, yě yǒu túshūguǎn. Diànyǐngyuàn hěn dà. Yīyuàn shì báisè de.）",
+      "video": "Tìm YouTube: \"图书馆 电影院 饭店 地方 儿童中文\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "place, home, park, zoo, shop, store, restaurant, cinema, library, hospital, door, street | Ôn: school, homework | Từ thi: bathroom, mirror, camera, radio, tablet, bookshop",
+     "slide": "[Lời cô] Vào bài: \"Good morning, class! 同学们好！\" · Chuyển ý: \"Now, let's play! 现在我们玩游戏！\" · Khen: \"Excellent! 太好了！\" · Câu mới buổi này: \"Where are you going? 你去哪儿？\" (cô hỏi khi con đứng lên đi lấy đồ) · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): place / 地方, shop (UK) – store (US) 1) Bản đồ thành phố trống: nghe tên, dán 6 nơi lên bản đồ: home / school / shop / park / restaurant / zoo. 2) Nhìn tranh chọn từ (6 câu): cinema / library / hospital / park / zoo / shop. 3) Trò Bản đồ trên sàn: cô nói \"Go to the library!\", \"Go home!\", con chạy đến đúng thẻ; con hỏi – đáp: Where are you going? – I go to the park. 4) Starters Nói phần 1 (mẫu): cô đưa tranh to 'My home and my street' (phòng khách, bathroom, bookshop, park) và 4 thẻ đồ vật; cô hỏi Where's the bookshop? – con chỉ vào tranh; rồi: Put the camera on the table. / Put the radio next to the TV. / Put the tablet under the chair. / Put the mirror in the bathroom. – con đặt thẻ đúng chỗ; cô hỏi thêm: Is the park next to the bookshop? – Yes, it is.",
+     "truyen": "Leo's Picture — Leo draws a picture of his town. \"This is my home. This is my school. This is the park.\" Bông: \"Where are you going, Leo?\" Leo: \"I go to the zoo!\"",
+     "baihat": "Where Are You Going? (giai điệu Frère Jacques) — đoạn Park: Where are you going? / To the park! / I go to the park to play. / Play, play, play! · đoạn Home: Where are you going? / I am going home! / I am going home, going home. / Home, home, home! · Vè: Home, school, shop and park, I go home before it's dark!"
+    },
+    "zh": {
+     "flash": "地方 dìfang, 家 jiā, 公园 gōngyuán, 动物园 dòngwùyuán, 饭店 fàndiàn, 电影院 diànyǐngyuàn, 图书馆 túshūguǎn, 门 mén, 街 jiē | Ôn: 学校 xuéxiào, 商店 shāngdiàn | Ôn: 镜子 jìngzi | Nghe làm quen: 医院 yīyuàn, 书店 shūdiàn, 卫生间 wèishēngjiān, 平板电脑 píngbǎn diànnǎo",
+     "slide": "1) Nghe – chạm (6 câu): 家 / 学校 / 商店 / 公园 / 饭店 / 动物园. 2) Đúng hay sai: \"go home\" = 去家? (sai) → 回家 (đúng); \"go to school\" = 去学校 (đúng). 3) Tô 家: mái nhà 宀 và chú lợn 豕, 10 nét theo thứ tự (chấm, chấm, ngang móc; ngang, phẩy, cong móc, phẩy, phẩy, phẩy, mác). 4) YCT2 Nghe phần 2 (mẫu): nghe câu, chọn 1 trong 3 tranh (5 câu): ① 我去公园。(Wǒ qù gōngyuán.) ② 他回家。(Tā huí jiā.) ③ 我们去动物园。(Wǒmen qù dòngwùyuán.) ④ 这是学校的门。(Zhè shì xuéxiào de mén.) ⑤ 我去图书馆。(Wǒ qù túshūguǎn.) 5) Nhìn tranh chọn chữ Hán (6 câu, cùng tranh của phần tiếng Anh): 电影院 / 图书馆 / 医院 (nghe làm quen) / 公园 / 动物园 / 商店. 6) Trò Bản đồ trên sàn bằng tiếng Trung: cô nói \"去图书馆！\", \"回家！\", con chạy đến đúng thẻ; con hỏi – đáp: 你去哪儿？— 我去公园。 7) Cùng tranh to 'My home and my street': cô hỏi 公园在哪儿？– con chỉ vào tranh; cô nói 镜子在卫生间里。平板电脑在椅子下面。(Jìngzi zài wèishēngjiān lǐ. Píngbǎn diànnǎo zài yǐzi xiàmiàn.) – con đặt thẻ đúng chỗ (卫生间, 平板电脑 nghe làm quen). [Cầu nối Anh – Trung] Cùng bản đồ thành phố của phần tiếng Anh: rối Leo nói \"I go to the park.\", rối Xiaomei nói \"我去公园。\"; con tìm điểm giống (Ai – đi – đâu) và điểm khác (go home ↔ 回家, không nói 去家). [Chuyển ngữ] Rối Leo nói 1 câu tiếng Anh \"I go to the zoo.\", con nói lại câu đó bằng tiếng Trung cho rối Xiaomei: 我去动物园。(NL5) [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo kể: \"Hi, Xiaomei! Today I'm going to the zoo with my mum. We're going to the park, too. My dad is going home.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: Leo和妈妈去动物园，也去公园。他爸爸回家。 (Leo hé māma qù dòngwùyuán, yě qù gōngyuán. Tā bàba huí jiā.)",
+     "truyen": "Leo的画 — Leo画他住的地方。“这是我家，这是学校，这是公园。”Bông：“Leo，你去哪儿？”Leo：“我去动物园！”（Leo huà tā zhù de dìfang. “Zhè shì wǒ jiā, zhè shì xuéxiào, zhè shì gōngyuán.” Bông: “Leo, nǐ qù nǎr?” Leo: “Wǒ qù dòngwùyuán!”）",
+     "baihat": "你去哪儿？(giai điệu Frère Jacques) — đoạn Park: 你去哪儿？/ 去公园！/ 我去公园玩。/ 玩，玩，玩！ · đoạn Home: 你去哪儿？/ 我回家！/ 我回家，我回家。/ 家，家，家！ · Vè ZH: 家、学校、商店、公园，天黑以前我回家！(Jiā, xuéxiào, shāngdiàn, gōngyuán, tiān hēi yǐqián wǒ huí jiā!)"
+    }
+   }
+  },
+  {
+   "buoi": 22,
+   "unit": 5,
+   "label_buoi": "Buổi dạy 22. Unit 5 · Places in town · 地方 – Hiểu: đi đâu để làm gì; chép 家, tô 门",
+   "web": [
+    {
+     "ngay": 43,
+     "label": "Ngày 43. Unit 5 · Đi để làm gì 1: học, chơi, mua đồ",
+     "en": {
+      "tu": "Mới: study, English, play, buy, thing | Ôn (nối Unit 4): read, draw, music, comic, computer, bookshop, paper, alphabet",
+      "cum": "buy things / study English / play with friends / read comics at the library / play in the playground",
+      "cau": "[Ngữ pháp: to + việc làm] I go to the shop to buy things. / I go to the library to study English. / Leo goes to school to study Chinese. / I go to the park to play with my friends. / I go to the library to read comics. / I go to the bookshop to buy paper and an alphabet book. / I go to the park to kick a ball with my friends. / Here is your paper. – Thanks!",
+      "truyen": "Anna's Things — Anna goes to the shop to buy things. She buys a comic. Then she goes to the bookshop to buy paper and an alphabet book. \"Thanks!\" says Anna. She goes to the library to study English. Then she plays with her friends in the playground.",
+      "video": "Tìm YouTube: \"I go to the shop to buy kids song places and actions\""
+     },
+     "zh": {
+      "tu": "Mới: 学习 xuéxí (= study), 玩 wán (= play), 买 mǎi (= buy), 东西 dōngxi (= thing, things) | Ôn (nối Unit 4): 看书 kàn shū, 画 huà, 音乐 yīnyuè, 电脑 diànnǎo | Ôn: 英语 Yīngyǔ, 汉语 Hànyǔ, 漫画 mànhuà, 踢球 tī qiú, 谢谢 xièxie | Nghe làm quen: 书店 shūdiàn, 纸 zhǐ (= paper)",
+      "cum": "买东西 mǎi dōngxi / 学习英语 xuéxí Yīngyǔ / 和朋友玩 hé péngyou wán / 去图书馆看书 qù túshūguǎn kàn shū",
+      "cau": "[Cầu nối] I go to the shop to buy things. ↔ 我去商店买东西。(Wǒ qù shāngdiàn mǎi dōngxi.) [giống: đi đâu trước, làm gì sau · khác: tiếng Anh cần \"to\", tiếng Trung đặt hai việc liền nhau] / [Ngữ pháp: nơi chốn + việc làm liền nhau] 我去商店买东西。(Wǒ qù shāngdiàn mǎi dōngxi.) / 我去图书馆学习英语。(Wǒ qù túshūguǎn xuéxí Yīngyǔ.) / Leo去学校学习汉语。(Leo qù xuéxiào xuéxí Hànyǔ.) / 我去公园和朋友玩。(Wǒ qù gōngyuán hé péngyou wán.) / 我去图书馆看书。(Wǒ qù túshūguǎn kàn shū.) / 我去书店买纸。(Wǒ qù shūdiàn mǎi zhǐ.) (= I go to the bookshop to buy paper.) / 我去图书馆看漫画。(Wǒ qù túshūguǎn kàn mànhuà.) / 我去公园和朋友踢球。(Wǒ qù gōngyuán hé péngyou tī qiú.) / 给你。——谢谢！(Gěi nǐ. — Xièxie!) (= Here is your paper. – Thanks!)",
+      "truyen": "Anna的东西 — Anna去商店买东西。她买漫画。然后她去书店买纸和书。Anna说：“谢谢！”她去图书馆学习英语。然后，她和朋友玩。（Anna qù shāngdiàn mǎi dōngxi. Tā mǎi mànhuà. Ránhòu tā qù shūdiàn mǎi zhǐ hé shū. Anna shuō: “Xièxie!” Tā qù túshūguǎn xuéxí Yīngyǔ. Ránhòu, tā hé péngyou wán.）",
+      "video": "你去哪里？Where are you going? – Coolong Chinese – https://www.youtube.com/watch?v=Bh013yaanCo"
+     }
+    },
+    {
+     "ngay": 44,
+     "label": "Ngày 44. Unit 5 · Đi để làm gì 2: ăn, xem, đi dạo; trước – sau · Luyện đề Starters Đọc – viết phần 1",
+     "en": {
+      "tu": "Mới: eat, see, walk, first, then, also | Ôn (nối Unit 4): ride, bike, watch, TV, sing, dance",
+      "cum": "eat dinner / see animals / take a walk / ride my bike in the park / first … then …",
+      "cau": "I go to the zoo to see animals. / [Ngữ pháp: first – then] First, I go to the shop. Then, I go to the park. / I go to the park to ride my bike. I also take a walk. / First, we eat dinner. Then, we watch TV. / I go to the park to talk and play with my friends. / Where do you go on Sunday? – Pardon? – Where do you go on Sunday? – I go to the zoo. / [Starters Đọc – viết phần 1 (mẫu): nhìn tranh, đánh dấu ✓ hoặc ✗] Example: [tranh công viên] a park ✓ / 1) [tranh nhà sách] a bookshop ✓ 2) [tranh rạp chiếu phim] a library ✗ 3) [tranh tờ giấy] paper ✓ 4) [tranh bạn đi dạo] take a walk ✓ 5) [tranh sở thú] a hospital ✗ / Is it correct? Yes, it is correct! / [Chuyển ngữ] [nghe Xiaomei nói tiếng Trung, nói lại 1 câu bằng tiếng Anh cho Leo, ghi âm] Xiaomei: \"我去动物园看动物。\" → I go to the zoo to see animals. / We go to the restaurant to eat buns.",
+      "truyen": "Bông's Sunday — First, Bông goes to the park to take a walk. Then, she goes to the zoo to see animals. She also sings and dances with her friends. Then, she goes home to eat dinner.",
+      "video": "Tìm YouTube: \"first then sequencing song for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 散步 sànbù (= take a walk), 然后 ránhòu (= then) | Ôn (nối Unit 4): 唱歌 chànggē, 跳舞 tiàowǔ, 电视 diànshì | Ôn: 先 xiān, 吃 chī, 看 kàn, 包子 bāozi | Ôn: 骑 qí, 自行车 zìxíngchē, 也 yě, 说话 shuōhuà",
+      "cum": "吃晚饭 chī wǎnfàn / 看动物 kàn dòngwù / 去公园散步 qù gōngyuán sànbù / 先……然后…… xiān……ránhòu……",
+      "cau": "[Cầu nối] First, I go to the shop. Then, I go to the park. ↔ 我先去商店，然后去公园。(Wǒ xiān qù shāngdiàn, ránhòu qù gōngyuán.) [giống: first ↔ 先, then ↔ 然后 · khác: first đứng đầu câu, 先 đứng sau 我] / 我去动物园看动物。(Wǒ qù dòngwùyuán kàn dòngwù.) / [Ngữ pháp: 先……然后……] 我先去商店，然后去公园。(Wǒ xiān qù shāngdiàn, ránhòu qù gōngyuán.) / 我们先吃晚饭，然后看电视。(Wǒmen xiān chī wǎnfàn, ránhòu kàn diànshì.) / 我们去饭店吃包子。(Wǒmen qù fàndiàn chī bāozi.) / 我去公园骑自行车，也散步。(Wǒ qù gōngyuán qí zìxíngchē, yě sànbù.) (= I go to the park to ride my bike. I also take a walk.) / 我去公园和朋友说话、玩。(Wǒ qù gōngyuán hé péngyou shuōhuà, wán.) / 星期天你去哪儿？——请再说一次。——星期天你去哪儿？——我去动物园。(Xīngqītiān nǐ qù nǎr? — Qǐng zài shuō yí cì. — Xīngqītiān nǐ qù nǎr? — Wǒ qù dòngwùyuán.) (= Pardon?)",
+      "truyen": "Bông的星期天 — Bông先去公园散步。然后，她去动物园看动物。她也和朋友唱歌、跳舞。然后，她回家吃晚饭。（Bông xiān qù gōngyuán sànbù. Ránhòu, tā qù dòngwùyuán kàn dòngwù. Tā yě hé péngyou chànggē, tiàowǔ. Ránhòu, tā huí jiā chī wǎnfàn.）",
+      "video": "Tìm YouTube: \"先 然后 儿歌 去公园散步\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "study, English, play, buy, thing, eat, see, walk, first, then, also | Ôn: read, ride, bike, watch, TV, park, shop",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" · Chuyển ý: \"Now, listen and say. 现在听一听，说一说。\" · Khen: \"Well done! 真棒！\" · Câu mới buổi này: \"Your turn! 该你了！\" · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): thing / 东西, first – then / 先……然后…… 1) Trò Đi đâu, làm gì: mỗi con giữ một thẻ nơi chốn, tìm bạn giữ thẻ việc làm đúng (shop – buy things / zoo – see animals / library – study English / park – play with friends / school – study Chinese). 2) Đối chiếu NL9: I go to the park to play. ↔ 我去公园玩。 – con chạm vào chữ \"to\" ở câu tiếng Anh. 3) Xếp 2 tranh theo thứ tự rồi nói: First, I go to the shop. Then, I go to the park. 4) Starters Đọc – viết phần 3 (mẫu): nhìn tranh, xếp chữ cái thành từ, viết vào ô (Example: o-z-o → zoo): ① k-r-a-p → park ② h-o-p-s → shop ③ p-a-p-r-e → paper ④ k-o-o-b-s-h-o-p → bookshop ⑤ m-o-e-h → home. 5) Trò Đá bóng: con kick quả bóng mềm vào một thẻ nơi chốn rồi nói I go to the ___ to ___. (I go to the bookshop to buy paper.) – cô nói: Choose a card and kick the ball! [Chuyển ngữ] Rối Xiaomei nói \"我去图书馆看书。\", con nói lại bằng tiếng Anh cho rối Leo: I go to the library to read. (NL5) [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo kể: \"On Sunday, I go to the shop to buy things. Then I go to the library to study English. After that, I take a walk in the park.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 星期天，Leo先去商店买东西，然后去图书馆学习英语。然后，他去公园散步。 (Xīngqītiān, Leo xiān qù shāngdiàn mǎi dōngxi, ránhòu qù túshūguǎn xuéxí Yīngyǔ. Ránhòu, tā qù gōngyuán sànbù.)",
+     "truyen": "Xiaomei at the Library — Xiaomei goes to the library to study English. She also reads comics. Then she goes to the shop to buy things. First she buys a pencil. Then she buys a book. She goes home to eat dinner.",
+     "baihat": "Where Are You Going? — đoạn Shop: Where are you going? / To the shop! / I go to the shop to buy things. / Buy, buy, buy! · ôn đoạn Park: Where are you going? / To the park! / I go to the park to play. / Play, play, play! · ôn vè: Home, school, shop and park, I go home before it's dark!"
+    },
+    "zh": {
+     "flash": "学习 xuéxí, 玩 wán, 买 mǎi, 东西 dōngxi, 散步 sànbù, 然后 ránhòu | Ôn: 看书 kàn shū, 吃 chī, 看 kàn, 先 xiān | Ôn: 英语 Yīngyǔ, 也 yě, 骑 qí, 自行车 zìxíngchē, 电视 diànshì, 公园 gōngyuán, 商店 shāngdiàn",
+     "slide": "1) Nối nơi với việc: 公园 – 玩 / 商店 – 买东西 / 动物园 – 看动物 / 图书馆 – 学习英语 / 学校 – 学习汉语. 2) Xếp câu: 我 / 去 / 商店 / 买东西 → 我去商店买东西。(phương án nhiễu: 我商店买东西 thiếu 去; 我买东西去商店 đảo trật tự). 3) Chép 家 vào ô; tô 门 3 nét: chấm, sổ, ngang gập móc (cánh cổng trường, cổng công viên). 4) Xếp 2 tranh theo thứ tự rồi nói: 我先去商店，然后去公园。 5) Nhìn tranh, chọn chữ Hán đúng (cùng 5 tranh của bài xếp chữ cái tiếng Anh): 公园 / 商店 / 纸 (nghe làm quen) / 书店 (nghe làm quen) / 家. 6) Trò Đá bóng bằng tiếng Trung: con đá quả bóng mềm vào một thẻ nơi chốn rồi nói 我去___ ___。(我去商店买东西。) 7) Đối chiếu: I go to the library to read comics. ↔ 我去图书馆看漫画。 [Cầu nối Anh – Trung] Cùng thẻ nơi chốn và thẻ việc làm của phần tiếng Anh: Leo \"I go to the shop to buy things.\" – Xiaomei \"我去商店买东西。\"; con chạm vào \"to\" và thấy tiếng Trung không cần chữ nào ở chỗ đó; first – then ↔ 先 – 然后.",
+     "truyen": "Xiaomei去图书馆 — Xiaomei去图书馆学习英语。她也看漫画。然后，她去商店买东西。她先买铅笔，然后买书。她回家吃晚饭。（Xiaomei qù túshūguǎn xuéxí Yīngyǔ. Tā yě kàn mànhuà. Ránhòu, tā qù shāngdiàn mǎi dōngxi. Tā xiān mǎi qiānbǐ, ránhòu mǎi shū. Tā huí jiā chī wǎnfàn.）",
+     "baihat": "你去哪儿？— đoạn Shop: 你去哪儿？/ 去商店！/ 我去商店买东西。/ 买，买，买！ · ôn đoạn Park: 你去哪儿？/ 去公园！/ 我去公园玩。/ 玩，玩，玩！ · ôn vè ZH: 家、学校、商店、公园，天黑以前我回家！(Jiā, xuéxiào, shāngdiàn, gōngyuán, tiān hēi yǐqián wǒ huí jiā!)"
+    }
+   }
+  },
+  {
+   "buoi": 23,
+   "unit": 5,
+   "label_buoi": "Buổi dạy 23. Unit 5 · Places in town · 地方 – Làm quen: thời gian + nơi + việc; truyện Leo's Saturday; nói theo vần; chép 门",
+   "web": [
+    {
+     "ngay": 45,
+     "label": "Ngày 45. Unit 5 · Thời gian + nơi chốn + việc làm (nhóm 3, nối Unit 1, 3) · Luyện đề YCT2 Đọc phần 1",
+     "en": {
+      "tu": "Mới: afternoon, busy, dark, part | Ôn: morning, evening, week, Monday, Saturday, Sunday, family, people",
+      "cum": "on Monday morning / on Saturday evening / on Sunday afternoon / every day / before it's dark / a busy part of town / play in the sand",
+      "cau": "On Monday morning, I go to school to study. / On Saturday evening, my family goes to the restaurant to eat dinner. / On Sunday afternoon, I go to the park to play with my friends. / [Ngữ pháp: every / before] Every evening, I go home before it's dark. / This part of town is busy. / My shoes are dirty. I go home before it's dark. / Look at the clock: 2:05 – two oh five. 0 is zero. / Leo doesn't go alone. He goes with his friends.",
+      "truyen": "A Busy Afternoon — On Sunday afternoon, the park is busy. Leo plays in the sand in the playground. He sees a shell in the sand. Oh no! His hands and shoes are dirty! At five o'clock, Leo goes home before it's dark.",
+      "video": "Tìm YouTube: \"morning afternoon evening song for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 上午 shàngwǔ (= morning, before twelve o'clock), 下午 xiàwǔ (= afternoon), 家人 jiārén (= family), 人 rén (= people, person), 零 líng (= zero, 0) | Ôn: 早上 zǎoshang, 晚上 wǎnshang, 星期 xīngqī | Nghe làm quen (có tranh, không kiểm tra): 天黑以前 tiān hēi yǐqián (= before it's dark), 脏 zāng (= dirty), 沙子 shāzi (= sand), 贝壳 bèiké (= shell), 都 dōu (= both, all)",
+      "cum": "星期一早上 xīngqīyī zǎoshang / 星期六晚上 xīngqīliù wǎnshang / 星期天下午 xīngqītiān xiàwǔ / 一个人 yí ge rén / 两点零五分 liǎng diǎn líng wǔ fēn",
+      "cau": "[Cầu nối] On Sunday afternoon, I go to the park. ↔ 星期天下午，我去公园。(Xīngqītiān xiàwǔ, wǒ qù gōngyuán.) [giống: thời gian đứng đầu câu · khác: tiếng Anh cần \"on\", tiếng Trung không cần · số 0: zero ↔ 零] / 星期一早上，我去学校学习。(Xīngqīyī zǎoshang, wǒ qù xuéxiào xuéxí.) / 星期六晚上，我的家人去饭店吃晚饭。(Xīngqīliù wǎnshang, wǒ de jiārén qù fàndiàn chī wǎnfàn.) / 星期天下午，我去公园和朋友玩。(Xīngqītiān xiàwǔ, wǒ qù gōngyuán hé péngyou wán.) / Leo不是一个人去，他和朋友去。(Leo bú shì yí ge rén qù, tā hé péngyou qù.) / [YCT2 Đọc phần 1 (mẫu): nhìn tranh, đọc cụm, chọn đúng ✓ hay sai ✗] 1) [tranh công viên buổi chiều] 下午去公园 (xiàwǔ qù gōngyuán) ✓ 2) [tranh bạn về nhà] 去学校 (qù xuéxiào) ✗ 3) [tranh bạn mua đồ] 买东西 (mǎi dōngxi) ✓ 4) [tranh đồng hồ 2:05] 两点零五分 (liǎng diǎn líng wǔ fēn) ✓ 5) [tranh thư viện] 去饭店 (qù fàndiàn) ✗ / [Ngữ pháp: 每天 / 以前] 每天晚上，天黑以前，我回家。(Měi tiān wǎnshang, tiān hēi yǐqián, wǒ huí jiā.) (= Every evening, I go home before it's dark.) / 这儿人很多。(Zhèr rén hěn duō.) (= This part of town is busy.) / 我的鞋很脏。(Wǒ de xié hěn zāng.) (= My shoes are dirty.)",
+      "truyen": "热闹的下午 — 星期天下午，公园里人很多。Leo在沙子里玩。沙子里有一个贝壳！哎呀！他的手和鞋都很脏！五点，天黑以前，Leo回家。（Xīngqītiān xiàwǔ, gōngyuán lǐ rén hěn duō. Leo zài shāzi lǐ wán. Shāzi lǐ yǒu yí ge bèiké! Āiyā! Tā de shǒu hé xié dōu hěn zāng! Wǔ diǎn, tiān hēi yǐqián, Leo huí jiā.）",
+      "video": "Tìm YouTube: \"上午 下午 晚上 儿歌\""
+     }
+    },
+    {
+     "ngay": 46,
+     "label": "Ngày 46. Unit 5 · Ôn không tranh, vòng Từ vựng + truyện 1 My week · Luyện đề YCT2 Nghe phần 1",
+     "en": {
+      "tu": "Ôn (không tranh): place, home, park, zoo, shop, store, restaurant, cinema, library, hospital, study, English, buy, thing, walk, first, then, also, afternoon, busy, dark, part",
+      "cum": "go home / go to school / go to the zoo / buy things / eat dinner / see animals / play with friends / take a walk",
+      "cau": "Where are you going? / I go to the shop to buy things. / [Ngữ pháp: every] Every evening, I go home to eat dinner. / First, I go to the zoo. Then, I go home. / I go to the bookshop to buy paper.",
+      "truyen": "My week — My name is Leo. On Monday morning, I go to school to study. On Tuesday afternoon, I go to the shop to buy things. On Wednesday afternoon, I go to the park to play with my friends. Every evening, I go home to eat dinner.",
+      "video": "Where Are You Going? Places Song – Fun Kids English – https://www.youtube.com/watch?v=FxRGkjkVTGA"
+     },
+     "zh": {
+      "tu": "Ôn (không tranh, ẩn pinyin, chữ Hán có loa): 地方 dìfang, 家 jiā, 学校 xuéxiào, 商店 shāngdiàn, 公园 gōngyuán, 饭店 fàndiàn, 动物园 dòngwùyuán, 电影院 diànyǐngyuàn, 图书馆 túshūguǎn, 学习 xuéxí, 买 mǎi, 东西 dōngxi, 散步 sànbù, 然后 ránhòu, 下午 xiàwǔ | Ôn: 先 xiān | Nghe làm quen: 书店 shūdiàn, 纸 zhǐ, 天黑以前 tiān hēi yǐqián",
+      "cum": "回家 huí jiā / 去学校 qù xuéxiào / 去动物园 qù dòngwùyuán / 买东西 mǎi dōngxi / 吃晚饭 chī wǎnfàn / 看动物 kàn dòngwù / 和朋友玩 hé péngyou wán",
+      "cau": "[Cầu nối] I go home to eat dinner. ↔ 我回家吃晚饭。(Wǒ huí jiā chī wǎnfàn.) [giống: đi đâu – làm gì · khác: không có \"to\"; go home ↔ 回家] / 你去哪儿？(Nǐ qù nǎr?) / 我去商店买东西。(Wǒ qù shāngdiàn mǎi dōngxi.) / 我去公园玩。(Wǒ qù gōngyuán wán.) / 我回家吃晚饭。(Wǒ huí jiā chī wǎnfàn.) / [YCT2 Nghe phần 1 (mẫu): nghe cụm, chọn ✓ hay ✗ với tranh, ~5 phút] 1) [tranh ngôi nhà] 回家 (huí jiā) ✓ 2) [tranh thư viện] 去电影院 (qù diànyǐngyuàn) ✗ 3) [tranh mua đồ] 买东西 (mǎi dōngxi) ✓ 4) [tranh đi dạo] 散步 (sànbù) ✓ 5) [tranh sở thú] 去公园 (qù gōngyuán) ✗ / [Chuyển ngữ] [nghe Leo nói tiếng Anh, nói lại 1 câu bằng tiếng Trung cho Xiaomei, ghi âm] Leo: \"Every evening, I go home to eat dinner.\" → 每天晚上，我回家吃晚饭。(Měi tiān wǎnshang, wǒ huí jiā chī wǎnfàn.) / 我先去动物园，然后回家。(Wǒ xiān qù dòngwùyuán, ránhòu huí jiā.) / 我去书店买纸。(Wǒ qù shūdiàn mǎi zhǐ.) (= I go to the bookshop to buy paper.)",
+      "truyen": "我的一个星期 — 我叫Leo。星期一早上，我去学校学习。星期二下午，我去商店买东西。星期三下午，我去公园和朋友玩。每天晚上，我回家吃晚饭。（Wǒ jiào Leo. Xīngqīyī zǎoshang, wǒ qù xuéxiào xuéxí. Xīngqī'èr xiàwǔ, wǒ qù shāngdiàn mǎi dōngxi. Xīngqīsān xiàwǔ, wǒ qù gōngyuán hé péngyou wán. Měi tiān wǎnshang, wǒ huí jiā chī wǎnfàn.）",
+      "video": "地方 Places Part 1 – Little Chinese Learners – https://www.youtube.com/watch?v=XAeEErUCojk"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "afternoon, busy, dark, part | Ôn: morning, evening, week, Monday, Saturday, Sunday, first, then | Ôn: zero, family, people, dirty",
+     "slide": "[Lời cô] Vào bài: \"Good afternoon, class! 同学们好！\" · Chuyển ý: \"Now, let's read. 现在我们读一读。\" · Khen: \"Good job! 很好！\" · Câu mới buổi này: \"Look at the clock. 看看几点了。\" · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): morning – afternoon / 早上 – 上午 – 下午, a busy part of town 1) Xếp câu, thời gian đứng đầu: On Monday morning, / I go to school / to study. (3 câu của Ngày 45). 2) Nghe chọn tranh (6 câu): on Monday morning / on Saturday evening / on Sunday afternoon / every evening / before it's dark / a busy part of town. 3) Đọc Leo's Saturday trên bản đồ, một con đẩy xe đồ chơi qua từng nơi; hỏi bằng tiếng kia sau bản tiếng Trung: Where does Leo go first? 4) Starters Nghe phần 1 (mẫu): tranh to một con phố (bookshop, park, cinema, library) có 7 bạn, 5 tên ở mép tranh; con nghe và kẻ nối tên với người. Example: Leo is the boy with the ball. He goes to the park to play. ① Anna is the girl at the bookshop. She buys paper. ② Bông is the girl with the dirty shoes. ③ Kim is the girl at the cinema. ④ Sam is the boy in the library. He reads an alphabet book. ⑤ Ben is the boy at the shop. He talks to his friend.",
+     "truyen": "Leo's Saturday — It is Saturday. Leo goes to the park to play. Then he goes to the shop to buy things. In the evening, he goes to the restaurant to eat dinner. Then he goes home.",
+     "baihat": "Limerick: Where are you going, little Lee? To the zoo, the zoo, to see, see, see! (vần Lee – see; con thay the zoo bằng nơi khác, tự tìm vần) · Where Are You Going? cả bài (Park, Shop, Home) · Ôn vè: Home, school, shop and park, I go home before it's dark!"
+    },
+    "zh": {
+     "flash": "上午 shàngwǔ, 下午 xiàwǔ, 家人 jiārén, 人 rén, 零 líng | Ôn: 早上 zǎoshang, 晚上 wǎnshang, 星期 xīngqī, 然后 ránhòu | Ôn: 先 xiān | Nghe làm quen: 天黑以前 tiān hēi yǐqián, 脏 zāng",
+     "slide": "1) 早上 và 上午 cùng nghĩa morning: nhìn đồng hồ chọn 早上 (7 giờ) hay 上午 (10 giờ); 下午 (3 giờ), 晚上 (8 giờ). 2) Thanh điệu: nghe chọn 商店 shāngdiàn (1–4) / 公园 gōngyuán (1–2) / 回家 huí jiā (2–1); thời gian đứng đầu câu ZH: 星期一早上，我去学校学习。 3) Chép 门 vào ô (chấm, sổ, ngang gập móc); câu hỏi sau bản tiếng Anh: Leo晚上去哪儿？ 4) YCT口试（初级）第三部分 看图说话 (mẫu): cô đóng vai giám khảo, chiếu tranh Leo chơi ở công viên lúc 5 giờ chiều, hỏi 请说一说这张图。(Qǐng shuō yi shuō zhè zhāng tú.) – từng con nói 2–3 câu, ví dụ: 星期天下午，Leo在公园玩。五点，他回家。(Xīngqītiān xiàwǔ, Leo zài gōngyuán wán. Wǔ diǎn, tā huí jiā.) Cô ghi âm, mỗi con 1 tranh. 5) Nghe chọn tranh (6 câu, cùng tranh phần tiếng Anh): 星期一早上 / 星期六晚上 / 星期天下午 / 每天晚上 / 天黑以前 / 人很多. 6) Đọc Leo的星期六 trên bản đồ, một con đẩy xe đồ chơi qua từng nơi: 先去公园，然后去商店，晚上去饭店，然后回家。 7) Cùng tranh con phố của bài nghe tiếng Anh: nghe và nối tên với người (nghe làm quen): Leo在公园玩。Anna在书店买东西。Bông的鞋很脏。Kim在电影院。Sam在图书馆看书。 [Cầu nối Anh – Trung] Cùng đồng hồ và tranh Leo's Saturday: \"On Saturday evening, he goes to the restaurant.\" ↔ \"星期六晚上，他去饭店。\"; giống: thời gian đứng đầu câu; khác: on ↔ không cần; morning có hai cách nói 早上 / 上午. [Chuyển ngữ] Rối Leo nói \"On Saturday, I go to the park to play.\", con nói lại cho rối Xiaomei: 星期六，我去公园玩。(NL5) [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo kể: \"On Sunday morning, I go to the shop with my mum. In the afternoon, I play with my friends in the park. In the evening, I go home and have dinner with my family.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 星期天上午，Leo和妈妈去商店。下午，他去公园和朋友玩。晚上，他回家和家人吃晚饭。 (Xīngqītiān shàngwǔ, Leo hé māma qù shāngdiàn. Xiàwǔ, tā qù gōngyuán hé péngyou wán. Wǎnshang, tā huí jiā hé jiārén chī wǎnfàn.)",
+     "truyen": "Leo的星期六 — 今天星期六。Leo去公园玩。然后他去商店买东西。晚上，他去饭店吃晚饭。然后他回家。（Jīntiān xīngqīliù. Leo qù gōngyuán wán. Ránhòu tā qù shāngdiàn mǎi dōngxi. Wǎnshang, tā qù fàndiàn chī wǎnfàn. Ránhòu tā huí jiā.）",
+     "baihat": "Limerick: 你去哪儿，小Lee？去动物园，看，看，看！(Nǐ qù nǎr, xiǎo Lee? Qù dòngwùyuán, kàn, kàn, kàn!) (nhịp lặp 看看看 như see, see, see; con thay 动物园 bằng nơi khác) · 你去哪儿？cả bài (Park, Shop, Home) · Ôn vè: 家、学校、商店、公园，天黑以前我回家！(Jiā, xuéxiào, shāngdiàn, gōngyuán, tiān hēi yǐqián wǒ huí jiā!)"
+    }
+   }
+  },
+  {
+   "buoi": 24,
+   "unit": 5,
+   "label_buoi": "Buổi dạy 24. Unit 5 · Places in town · 地方 – Vận dụng: đọc, diễn My week; dẫn đường; tờ bản đồ đầu tiên",
+   "web": [
+    {
+     "ngay": 47,
+     "label": "Ngày 47. Unit 5 · Truyện 2 My busy week + chuyển ngữ (NL5, NL7, PS-2) · Luyện đề Starters Đọc – viết phần 4",
+     "en": {
+      "tu": "Ôn: zoo, restaurant, family, morning, evening, afternoon, Saturday, Sunday, busy, then, first",
+      "cum": "go to school on Monday morning / eat dinner on Saturday evening / play with friends on Sunday afternoon / go to the zoo to see animals",
+      "cau": "On Saturday morning, I go to the zoo to see animals. / [Ngữ pháp: thời gian đứng đầu câu] On Saturday evening, my family goes to the restaurant to eat dinner. / Every day is a good day! / Where does Leo go on Monday afternoon? He goes to the shop. / [Starters Đọc – viết phần 4 (mẫu): đọc đoạn văn, chọn từ trong khung, chép vào chỗ trống; khung: town, zoo, bookshop, paper, park, restaurant] Example: My name is Leo. I live in a big (0) town. / On Saturday morning, I go to the (1) ___ to see animals. Then I go to the (2) ___ to buy (3) ___. In the afternoon, I go to the (4) ___ to play. In the evening, my family goes to the (5) ___ to eat dinner. [Đáp án: 1 zoo, 2 bookshop, 3 paper, 4 park, 5 restaurant]",
+      "truyen": "My busy week — My name is Leo. On Monday morning, I go to school to study. On Saturday morning, I go to the zoo to see animals. On Saturday evening, my family goes to the restaurant to eat dinner. On Sunday morning, I go to the park to play. Every day is a good day!",
+      "video": "Where Are You Going? Places Song – English Tree – https://www.youtube.com/watch?v=Bp8wUmETBYU"
+     },
+     "zh": {
+      "tu": "Ôn: 动物园 dòngwùyuán, 饭店 fàndiàn, 家人 jiārén, 早上 zǎoshang, 上午 shàngwǔ, 下午 xiàwǔ, 晚上 wǎnshang, 星期六 xīngqīliù, 星期天 xīngqītiān, 然后 ránhòu | Nghe làm quen: 书店 shūdiàn, 纸 zhǐ, 都 dōu",
+      "cum": "星期一早上去学校 xīngqīyī zǎoshang qù xuéxiào / 星期六晚上吃晚饭 xīngqīliù wǎnshang chī wǎnfàn / 星期天下午和朋友玩 xīngqītiān xiàwǔ hé péngyou wán / 去动物园看动物 qù dòngwùyuán kàn dòngwù",
+      "cau": "[Cầu nối] Every day is a good day! ↔ 每天都是好日子！(Měi tiān dōu shì hǎo rìzi!) [giống: every day ↔ 每天 · khác: tiếng Trung thêm 都 sau 每天] / 星期六早上，我去动物园看动物。(Xīngqīliù zǎoshang, wǒ qù dòngwùyuán kàn dòngwù.) / 星期六晚上，我的家人去饭店吃晚饭。(Xīngqīliù wǎnshang, wǒ de jiārén qù fàndiàn chī wǎnfàn.) / 每天都是好日子！(Měi tiān dōu shì hǎo rìzi!) / [PS-2] 星期一上午Leo去学校，下午去商店。(Xīngqīyī shàngwǔ Leo qù xuéxiào, xiàwǔ qù shāngdiàn.) / 星期一下午，Leo去哪儿？他去商店。(Xīngqīyī xiàwǔ, Leo qù nǎr? Tā qù shāngdiàn.) / 我去书店买纸。(Wǒ qù shūdiàn mǎi zhǐ.)",
+      "truyen": "很忙的一个星期 — 我叫Leo。星期一早上，我去学校学习。星期六早上，我去动物园看动物。星期六晚上，我的家人去饭店吃晚饭。星期天上午，我去公园玩。每天都是好日子！（Wǒ jiào Leo. Xīngqīyī zǎoshang, wǒ qù xuéxiào xuéxí. Xīngqīliù zǎoshang, wǒ qù dòngwùyuán kàn dòngwù. Xīngqīliù wǎnshang, wǒ de jiārén qù fàndiàn chī wǎnfàn. Xīngqītiān shàngwǔ, wǒ qù gōngyuán wán. Měi tiān dōu shì hǎo rìzi!）",
+      "video": "你去哪里？Where are you going? – Coolong Chinese – https://www.youtube.com/watch?v=Bh013yaanCo"
+     }
+    },
+    {
+     "ngay": 48,
+     "label": "Ngày 48. Unit 5 · Phiên dịch nhí + ôn unit (NL6, PS-3) · Luyện nói YCT口试 phần 1",
+     "en": {
+      "tu": "Ôn: place, cinema, library, hospital, English, part, thing, also, dark, walk, store, shop, buy, study",
+      "cum": "go to the cinema / go to the library to study English / a busy part of town / before it's dark / play in the sand / take a walk",
+      "cau": "[Phiên dịch nhí] Xiaomei: \"我去图书馆看书。\" → Xiaomei goes to the library to read. / Who goes to the zoo? Anna goes to the zoo. / Anna doesn't go to the park. / I also go to the cinema on Saturday afternoon.",
+      "truyen": "Three Friends, Three Places — Leo, Anna and Bông go to three places: the park, the zoo and the library. Anna doesn't go to the park. Bông goes to the library to read. Where does Anna go? Anna goes to the zoo!",
+      "video": "Tìm YouTube: \"places in town kids song library cinema hospital\""
+     },
+     "zh": {
+      "tu": "Ôn: 地方 dìfang, 电影院 diànyǐngyuàn, 图书馆 túshūguǎn, 东西 dōngxi, 散步 sànbù, 人 rén, 学习 xuéxí, 买 mǎi",
+      "cum": "去电影院 qù diànyǐngyuàn / 去图书馆学习 qù túshūguǎn xuéxí / 在沙子里玩 zài shāzi lǐ wán / 去公园散步 qù gōngyuán sànbù / 买东西 mǎi dōngxi / 人很多 rén hěn duō / 天黑以前 tiān hēi yǐqián",
+      "cau": "[Cầu nối] Anna doesn't go to the park. ↔ Anna不去公园。(Anna bú qù gōngyuán.) [giống: từ phủ định đứng trước động từ: doesn't go ↔ 不去 · 不 đọc bú trước thanh 4] / [Phiên dịch nhí] Leo: \"I go to the cinema.\" → Leo去电影院。(Leo qù diànyǐngyuàn.) / 谁去动物园？Anna去动物园。(Shéi qù dòngwùyuán? Anna qù dòngwùyuán.) / Anna不去公园。(Anna bú qù gōngyuán.) / [YCT口试（初级）第一部分 听后重复 (mẫu): nghe một câu, nói lại 1 lần, ghi âm trên Trang luyện nói, ~5 phút] 1) 我去图书馆。(Wǒ qù túshūguǎn.) 2) 他回家。(Tā huí jiā.) 3) 我们去公园玩。(Wǒmen qù gōngyuán wán.) 4) 星期六下午，我去商店。(Xīngqīliù xiàwǔ, wǒ qù shāngdiàn.) 5) 我先去学校，然后回家。(Wǒ xiān qù xuéxiào, ránhòu huí jiā.) / 星期六下午，我也去电影院。(Xīngqīliù xiàwǔ, wǒ yě qù diànyǐngyuàn.)",
+      "truyen": "三个朋友 — Leo、Anna和Bông去三个地方：公园、动物园和图书馆。Anna不去公园。Bông去图书馆看书。Anna去哪儿？Anna去动物园！（Leo, Anna hé Bông qù sān ge dìfang: gōngyuán, dòngwùyuán hé túshūguǎn. Anna bú qù gōngyuán. Bông qù túshūguǎn kàn shū. Anna qù nǎr? Anna qù dòngwùyuán!）",
+      "video": "你去哪里？Where are you going? – Coolong Chinese – https://www.youtube.com/watch?v=Bh013yaanCo"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn: place, home, school, shop, store, park, restaurant, zoo, cinema, library, hospital, study, English, play, buy, thing, eat, see, walk, first, then, also, morning, afternoon, busy, dark, part, family",
+     "slide": "[Lời cô] Vào bài: \"Good morning, class! 同学们好！\" · Chuyển ý: \"Now, let's make a map. 现在我们一起画地图。\" · Khen: \"Excellent! 太好了！\" · Câu mới buổi này: \"Work in pairs. 两个人一组。\" · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): busy / 很忙, every evening / 每天晚上 1) Đọc My week theo câu, mỗi con nói một ngày trong tuần của Leo. 2) Chuyền bóng hỏi đường (NL6): bạn cầm bóng hỏi \"Where are you going?\" – bạn nhận bóng đáp tiếng Anh: \"I go to the library to study English.\"; hỏi bằng tiếng Trung thì đáp tiếng Trung. 3) PS-3 trên lớp: three friends, three places – \"Anna doesn't go to the park.\" \"Bông goes to the library.\" → Where does Anna go? 4) Vẽ tờ bản đồ đầu tiên (home, school, park, shop gần nhà), con nói 2 câu: On Saturday afternoon, I go to the park to play. Every evening, I go home. 5) Starters Đọc – viết phần 5 (mẫu): 3 tranh truyện My week, con trả lời bằng 1 từ. Example: Who goes to school on Monday? – Leo. ① Where does Leo go on Tuesday afternoon? – (to the) shop ② What does Leo buy at the shop? – things ③ Where does Leo play on Wednesday? – (in the) park ④ Who does Leo play with? – (his) friends ⑤ When does Leo go home to eat dinner? – (every) evening. 6) Starters Nói phần 3 (mẫu): cô nói Let's talk about these cards. – giơ thẻ đồ vật (camera, radio, tablet, mirror), hỏi What's this? – It's a camera. / What colour is it? / Have you got a tablet? – con nghe chưa rõ thì nói Pardon?; trả lời đúng, cô nói Thanks! That's correct! [Chuyển ngữ] Xiaomei nói \"我去公园。\", con nói lại cho khách chỉ biết tiếng Anh: Xiaomei goes to the park. (NL6) [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo kể: \"This is my busy week. On Monday morning, I go to school to study. On Saturday, my family and I go to the zoo to see the animals, and in the evening we have dinner at a restaurant.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 星期一早上，Leo去学校学习。星期六，他和家人去动物园看动物。晚上，他们去饭店吃晚饭。 (Xīngqīyī zǎoshang, Leo qù xuéxiào xuéxí. Xīngqīliù, tā hé jiārén qù dòngwùyuán kàn dòngwù. Wǎnshang, tāmen qù fàndiàn chī wǎnfàn.)",
+     "truyen": "My week — My name is Leo. On Monday morning, I go to school to study. On Tuesday afternoon, I go to the shop to buy things. On Wednesday afternoon, I go to the park to play with my friends. Every evening, I go home to eat dinner. (đọc và diễn, mỗi con một câu; cô hỏi: What does Leo do on Tuesday afternoon?)",
+     "baihat": "Biểu diễn vè: Home, school, shop and park, I go home before it's dark! · Where Are You Going? cả bài — Park: … I go to the park to play. / Play, play, play! · Shop: … I go to the shop to buy things. / Buy, buy, buy! · Zoo: Where are you going? / To the zoo! / I go to the zoo to see animals. / See, see, see! · Home: Where are you going? / I am going home! / I am going home, going home. / Home, home, home!"
+    },
+    "zh": {
+     "flash": "Ôn: 地方 dìfang, 家 jiā, 学校 xuéxiào, 商店 shāngdiàn, 公园 gōngyuán, 饭店 fàndiàn, 动物园 dòngwùyuán, 学习 xuéxí, 玩 wán, 买 mǎi, 东西 dōngxi, 散步 sànbù, 然后 ránhòu, 上午 shàngwǔ, 下午 xiàwǔ, 家人 jiārén, 电影院 diànyǐngyuàn, 图书馆 túshūguǎn, 也 yě",
+     "slide": "1) Đọc 我的一个星期 có pinyin, mỗi con một câu; trả lời: 星期二下午，Leo去哪儿？ 2) Xiaomei hỏi \"你去哪儿？\", con chỉ đường trên bản đồ và đáp tiếng Trung: 我去公园和朋友玩。 3) Chép 家 và 门 vào ô, dán lên tờ bản đồ (家 trên nhà con, 门 trên cổng trường). 4) YCT2 Đọc phần 3 (mẫu): câu hỏi bên trái, câu trả lời xáo trộn bên phải (5 cặp + 1 câu nhiễu), con kéo nối: ① 你去哪儿？(Nǐ qù nǎr?) — 我去图书馆。(Wǒ qù túshūguǎn.) ② 你几点回家？(Nǐ jǐ diǎn huí jiā?) — 五点零五分。(Wǔ diǎn líng wǔ fēn.) ③ 星期六你去哪儿？(Xīngqīliù nǐ qù nǎr?) — 我去动物园。(Wǒ qù dòngwùyuán.) ④ 你去商店做什么？(Nǐ qù shāngdiàn zuò shénme?) — 买东西。(Mǎi dōngxi.) ⑤ 你和谁一起去公园？(Nǐ hé shéi yìqǐ qù gōngyuán?) — 和朋友一起去。(Hé péngyou yìqǐ qù.) · câu nhiễu: 我是学生。(Wǒ shì xuéshēng.) 5) PS-3 bằng tiếng Trung: Anna不去公园。Bông去图书馆看书。→ Anna去哪儿？ 6) Vẽ tờ bản đồ đầu tiên, con nói 2 câu tiếng Trung: 星期六下午，我去公园玩。每天晚上，我回家。 7) Cùng thẻ đồ vật của phần tiếng Anh: 这是什么？— 这是镜子 / 平板电脑；照相机 (平板电脑, 照相机 nghe làm quen); nghe chưa rõ thì nói: 什么？请再说一次。 [Cầu nối Anh – Trung] Cùng tờ bản đồ My week: con đọc 1 câu tiếng Anh, bạn đọc câu tiếng Trung cùng nghĩa; cả lớp tìm cặp every evening ↔ 每天晚上, go home ↔ 回家.",
+     "truyen": "我的一个星期 — 我叫Leo。星期一早上，我去学校学习。星期二下午，我去商店买东西。星期三下午，我去公园和朋友玩。每天晚上，我回家吃晚饭。（Wǒ jiào Leo. Xīngqīyī zǎoshang, wǒ qù xuéxiào xuéxí. Xīngqī'èr xiàwǔ, wǒ qù shāngdiàn mǎi dōngxi. Xīngqīsān xiàwǔ, wǒ qù gōngyuán hé péngyou wán. Měi tiān wǎnshang, wǒ huí jiā chī wǎnfàn.）",
+     "baihat": "Biểu diễn vè ZH: 家、学校、商店、公园，天黑以前我回家！(Jiā, xuéxiào, shāngdiàn, gōngyuán, tiān hēi yǐqián wǒ huí jiā!) · 你去哪儿？cả bài — Park: 你去哪儿？/ 去公园！/ 我去公园玩。/ 玩，玩，玩！ · Shop: 你去哪儿？/ 去商店！/ 我去商店买东西。/ 买，买，买！ · Zoo: 你去哪儿？/ 去动物园！/ 我去动物园看动物。/ 看，看，看！ · Home: 你去哪儿？/ 我回家！/ 我回家，我回家。/ 家，家，家！"
+    }
+   }
+  },
+  {
+   "buoi": 25,
+   "unit": 6,
+   "label_buoi": "Buổi dạy 25. Unit 6 · Job · 工作 – Hiểu: hỏi – đáp nghề của một người; tô 生",
+   "web": [
+    {
+     "ngay": 49,
+     "label": "Ngày 49. Unit 6 · Nghề nghiệp 1: học sinh, bác sĩ, đầu bếp, nha sĩ, lái xe",
+     "en": {
+      "tu": "Mới: job, student, doctor, chef, dentist, driver | Ôn: teacher, clock, Monday, Sunday, mirror, alphabet",
+      "cum": "is a teacher / is a doctor / is a chef / is a driver / a student at school",
+      "cau": "What does he do? / He is a teacher. / [Ngữ pháp: a + nghề] She is a dentist. / I am a student. / What's your job? I am a chef. / The dentist looks at my teeth with a small mirror. / The teacher says the alphabet with the students. / The teacher says, \"Look at the example. Choose the correct answer.\"",
+      "truyen": "Job Day — It's Job Day at school! Bông: \"What does he do?\" Anna: \"He is a doctor.\" Xiaomei: \"She is a dentist.\" Leo: \"And I am a student!\"",
+      "video": "Jobs (v1) Kids Vocab – English Singsing – https://www.youtube.com/watch?v=R69YKFmlcnA"
+     },
+     "zh": {
+      "tu": "Mới: 工作 gōngzuò (= job, work), 学生 xuéshēng (= student), 医生 yīshēng (= doctor), 厨师 chúshī (= chef), 牙医 yáyī (= dentist), 司机 sījī (= driver) | Ôn: 老师 lǎoshī, 星期天 xīngqītiān | Ôn: 镜子 jìngzi | Nghe làm quen (có tranh, không kiểm tra): 字母 zìmǔ (= alphabet), 职业日 zhíyè rì (= Job Day), 例子 lìzi (= example)",
+      "cum": "是老师 shì lǎoshī / 是医生 shì yīshēng / 是厨师 shì chúshī / 是司机 shì sījī / 做什么工作 zuò shénme gōngzuò",
+      "cau": "[Cầu nối] She is a dentist. ↔ 她是牙医。(Tā shì yáyī.) [giống: is ↔ 是 · khác: tiếng Anh cần \"a\", tiếng Trung không có] / 他做什么工作？(Tā zuò shénme gōngzuò?) / 他是老师。(Tā shì lǎoshī.) / [Ngữ pháp: tiếng Trung không cần \"a\" trước nghề] 她是牙医。(Tā shì yáyī.) / 我是学生。(Wǒ shì xuéshēng.) / 你做什么工作？我是厨师。(Nǐ zuò shénme gōngzuò? Wǒ shì chúshī.) / 牙医用小镜子看我的牙。(Yáyī yòng xiǎo jìngzi kàn wǒ de yá.) / 老师和学生一起读字母。(Lǎoshī hé xuéshēng yìqǐ dú zìmǔ.) (= The teacher says the alphabet with the students.) / 老师说：“请看例子，选对的。”(Lǎoshī shuō: “Qǐng kàn lìzi, xuǎn duì de.”) (= Look at the example. Choose the correct answer.)",
+      "truyen": "做什么工作？ — 今天是学校的职业日！Bông问：“他做什么工作？”Anna说：“他是医生。”Xiaomei说：“她是牙医。”Leo说：“我是学生！”（Jīntiān shì xuéxiào de zhíyè rì! Bông wèn: “Tā zuò shénme gōngzuò?” Anna shuō: “Tā shì yīshēng.” Xiaomei shuō: “Tā shì yáyī.” Leo shuō: “Wǒ shì xuéshēng!”）",
+      "video": "职业 小警察 & 小医生 – Baobei Chinese – https://www.youtube.com/watch?v=KXUQKIClmW0"
+     }
+    },
+    {
+     "ngay": 50,
+     "label": "Ngày 50. Unit 6 · Nghề nghiệp 2: y tá, nông dân, lính cứu hỏa, nhân viên · Luyện đề Starters Đọc – viết phần 2",
+     "en": {
+      "tu": "Mới: nurse, farmer, firefighter, employee | Ôn: Tuesday, week, calendar, which, tablet, goat, paper",
+      "cum": "is a nurse / is a farmer / is a firefighter / is an employee",
+      "cau": "[Ngữ pháp: an trước nguyên âm] She is an employee. / He is a firefighter. / Is she a nurse? No, she is a doctor. / Is he a farmer? Yes, he is. / Write your name on the paper. / [Starters Đọc – viết phần 2 (mẫu): nhìn tranh nông trại, đọc câu, viết yes hoặc no] Example: The farmer is in the picture. – yes / 1) The farmer's shoes are dirty. – yes 2) The nurse writes on a tablet. – yes 3) The firefighter is a woman. – no 4) There is a goat next to the farmer. – yes 5) The employee is at the bookshop. – no / [Chuyển ngữ] [nghe Xiaomei nói tiếng Trung, nói lại 1 câu bằng tiếng Anh cho Leo, ghi âm] Xiaomei: \"她是护士吗？\" → Is she a nurse? / Which job do you like?",
+      "truyen": "Who Is It? — Leo looks at a photo. \"Is she a nurse?\" \"No, she is a doctor.\" \"Is he a farmer?\" \"Yes, he is.\" \"Is she an employee?\" \"Yes, she is!\"",
+      "video": "Jobs Song: What Do You Do? – Fun Kids English – https://www.youtube.com/watch?v=ckKQclquAXU"
+     },
+     "zh": {
+      "tu": "Mới: 员工 yuángōng (= employee), 护士 hùshi (= nurse), 农民 nóngmín (= farmer), 消防员 xiāofángyuán (= firefighter) | Ôn: 星期二 xīngqī'èr, 照片 zhàopiàn",
+      "cum": "是员工 shì yuángōng / 是护士 shì hùshi / 是农民 shì nóngmín / 是消防员 shì xiāofángyuán",
+      "cau": "[Cầu nối] Is she a nurse? ↔ 她是护士吗？(Tā shì hùshi ma?) [khác: tiếng Anh đưa \"Is\" lên đầu; tiếng Trung giữ nguyên câu, thêm 吗 ở cuối] / 她是员工。(Tā shì yuángōng.) / [Ngữ pháp: câu hỏi 吗] 他是消防员吗？(Tā shì xiāofángyuán ma?) / 她是护士吗？不是，她是医生。(Tā shì hùshi ma? Bú shì, tā shì yīshēng.) / 你喜欢什么工作？(Nǐ xǐhuan shénme gōngzuò?) / 请在纸上写你的名字。(Qǐng zài zhǐ shang xiě nǐ de míngzi.) (= Write your name on the paper.)",
+      "truyen": "这是谁？ — Leo看照片。“她是护士吗？”“不是，她是医生。”“他是农民吗？”“是。”“她是员工吗？”“是！”（Leo kàn zhàopiàn. “Tā shì hùshi ma?” “Bú shì, tā shì yīshēng.” “Tā shì nóngmín ma?” “Shì.” “Tā shì yuángōng ma?” “Shì!”）",
+      "video": "Tìm YouTube: \"职业 儿歌 护士 消防员 农民\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "job, student, doctor, chef, dentist, driver, nurse, farmer, firefighter, employee | Ôn: teacher",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" · Chuyển ý: \"Now, let's guess! 现在我们猜一猜！\" · Khen: \"Great! 真好！\" · Câu mới buổi này: \"What does he do? 他做什么工作？\" (cô dùng để mở mọi trò đoán nghề) · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): employee / 员工, firefighter / 消防员 1) Nhìn tranh chọn từ (6 câu): doctor / chef / dentist / driver / nurse / firefighter. 2) Đối chiếu: a doctor ↔ 医生, an employee ↔ 员工 (tiếng Trung không có a / an) – kéo a hoặc an vào trước 4 nghề. 3) Trò Đoán nghề qua động tác: một con diễn, cả lớp hỏi \"What does he do?\" và đoán \"He is a driver!\". 4) Starters Nghe phần 2 (mẫu): con nghe và viết tên hoặc số. Example: What's the dentist's name? – Kim. K-I-M. ① What's the doctor's name? – Sam. Can you spell it? – S-A-M. ② How old is the student? – seven ③ How many nurses are there? – four ④ What's the farmer's name? – Ben. B-E-N. ⑤ How many buses are there? – three. 5) Starters Nói phần 2 (mẫu): tranh bệnh viện; cô hỏi: What's this? – A hospital. / How many doctors are there? – Two. / What colour is the nurse's bag? – Blue. / What's the doctor doing? – He's talking to a boy. – con trả lời 1 từ hoặc 1 câu ngắn; nghe chưa rõ thì nói Pardon?",
+     "truyen": "Job Day at School — It is Job Day. Bông shows a photo. \"This is a doctor. This is a chef. This is a firefighter.\" Leo asks, \"What's your job, Miss?\" \"I am a teacher!\"",
+     "baihat": "What Does Dad Do? (giai điệu The Farmer in the Dell) — đoạn Bố: What does Dad do? / What does Dad do? / He's a doctor, he works at a hospital. / Dad is a doctor! · đoạn Mẹ: What does Mom do? / What does Mom do? / She's a teacher, she works at a school. / Mom is a teacher! · Vè: Driver, driver, drive the bus, Doctor, doctor, help all of us!"
+    },
+    "zh": {
+     "flash": "工作 gōngzuò, 学生 xuéshēng, 医生 yīshēng, 厨师 chúshī, 牙医 yáyī, 司机 sījī, 员工 yuángōng, 护士 hùshi, 农民 nóngmín, 消防员 xiāofángyuán | Ôn: 老师 lǎoshī",
+     "slide": "1) Nghe – chạm (6 câu): 医生 / 厨师 / 牙医 / 司机 / 护士 / 消防员. 2) Hỏi – đáp theo tranh: 他做什么工作？— 他是司机。 3) Tô 生: mầm cây hai lá nhú lên khỏi mặt đất, 5 nét (phẩy, ngang, ngang, sổ, ngang); tìm 生 trong 学生, 医生. 4) YCT2 Đọc phần 1 (mẫu): nhìn tranh, đọc từ, chọn ✓ hay ✗: ① [tranh bác sĩ] 医生 (yīshēng) ✓ ② [tranh đầu bếp] 司机 (sījī) ✗ ③ [tranh học sinh] 学生 (xuéshēng) ✓ ④ [tranh nha sĩ] 牙医 (yáyī) ✓ ⑤ [tranh lái xe] 老师 (lǎoshī) ✗ 5) Trò Đoán nghề qua động tác bằng tiếng Trung: một con diễn, cả lớp hỏi 他做什么工作？ và đoán 他是司机！ 6) Nghe và viết số (tương ứng bài nghe tên – số tiếng Anh): 有几个护士？— 四个。学生几岁？— 七岁。 7) Cùng tranh bệnh viện của phần tiếng Anh: 这是什么地方？— 医院 (nghe làm quen)。有几个医生？— 两个。护士的包是什么颜色的？— 蓝色。 [Cầu nối Anh – Trung] Cùng thẻ nghề của phần tiếng Anh: Leo \"He is a doctor.\" – Xiaomei \"他是医生。\"; khác: a / an ↔ không có; mẹo: chữ 生 có trong 学生 (student) và 医生 (doctor). [Chuyển ngữ] Rối Leo nói \"He is a driver.\", con nói lại cho rối Xiaomei: 他是司机。(NL5) [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo kể: \"This is a photo of my uncle and my aunt. My uncle is a firefighter. My aunt is a dentist, and I'm a student.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 这是Leo的叔叔和阿姨。叔叔是消防员，阿姨是牙医。Leo是学生。 (Zhè shì Leo de shūshu hé āyí. Shūshu shì xiāofángyuán, āyí shì yáyī. Leo shì xuéshēng.)",
+     "truyen": "老师做什么工作？ — 今天是职业日。Bông给大家看照片：“这是医生。这是厨师。这是消防员。”Leo问：“老师，您做什么工作？”“我是老师！”（Jīntiān shì zhíyè rì. Bông gěi dàjiā kàn zhàopiàn: “Zhè shì yīshēng. Zhè shì chúshī. Zhè shì xiāofángyuán.” Leo wèn: “Lǎoshī, nín zuò shénme gōngzuò?” “Wǒ shì lǎoshī!”）",
+     "baihat": "爸爸做什么工作？(giai điệu The Farmer in the Dell) — đoạn Bố: 爸爸做什么工作？/ 爸爸做什么工作？/ 他是医生，他在医院工作。/ 爸爸是医生！ · đoạn Mẹ: 妈妈做什么工作？/ 妈妈做什么工作？/ 她是老师，她在学校工作。/ 妈妈是老师！ · Vè ZH: 司机司机开大巴，医生医生帮大家！(Sījī sījī kāi dàbā, yīshēng yīshēng bāng dàjiā!)"
+    }
+   }
+  },
+  {
+   "buoi": 26,
+   "unit": 6,
+   "label_buoi": "Buổi dạy 26. Unit 6 · Job · 工作 – Hiểu: nghề và nơi làm việc; chép 生, tô 工",
+   "web": [
+    {
+     "ngay": 51,
+     "label": "Ngày 51. Unit 6 · Nơi làm việc (nhóm 2, nối Unit 5): làm ở trường, bệnh viện, nhà hàng, cửa hàng · Luyện đề YCT2 Đọc phần 2",
+     "en": {
+      "tu": "Mới: work, don't worry | Ôn (nối Unit 5): hospital, school, restaurant, shop, library, cinema",
+      "cum": "work at a school / work at a hospital / work at a restaurant / work at a shop / start work at eight o'clock",
+      "cau": "[Ngữ pháp: he / she works – thêm s] He works at a school. / She is an employee. She works at a shop. / The doctor works at a hospital. / Don't worry! The nurse is here. / The doctor talks to Bông. \"Don't worry!\" / Sorry! – It's OK. Don't worry!",
+      "truyen": "At the Hospital — Bông is at the hospital with her mum. She is sad. The nurse says, \"Don't worry!\" The doctor works at the hospital. He starts work at eight o'clock.",
+      "video": "Tìm YouTube: \"where do they work jobs and places song for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 医院 yīyuàn (= hospital), 别担心 bié dānxīn (= don't worry), 没关系 méi guānxi (= it's OK) | Ôn (nối Unit 5): 学校 xuéxiào, 饭店 fàndiàn, 商店 shāngdiàn, 图书馆 túshūguǎn, 电影院 diànyǐngyuàn",
+      "cum": "在学校工作 zài xuéxiào gōngzuò / 在医院工作 zài yīyuàn gōngzuò / 在饭店工作 zài fàndiàn gōngzuò / 在商店工作 zài shāngdiàn gōngzuò",
+      "cau": "[Cầu nối] He works at a school. ↔ 他在学校工作。(Tā zài xuéxiào gōngzuò.) [khác: tiếng Anh nói việc trước, nơi sau; tiếng Trung nói nơi trước (在学校), việc sau · works thêm -s ↔ 工作 không đổi] / [Ngữ pháp: 在 + nơi chốn + 工作] 他在学校工作。(Tā zài xuéxiào gōngzuò.) / 她是员工，她在商店工作。(Tā shì yuángōng, tā zài shāngdiàn gōngzuò.) / 医生在医院工作。(Yīshēng zài yīyuàn gōngzuò.) / 别担心！护士在这儿。(Bié dānxīn! Hùshi zài zhèr.) (= Don't worry! The nurse is here.) / 对不起！——没关系！别担心！(Duìbuqǐ! — Méi guānxi! Bié dānxīn!) / [YCT2 Đọc phần 2 (mẫu): đọc hội thoại, chọn tranh A–E] 1) 你妈妈在哪儿工作？— 她在医院工作。(Nǐ māma zài nǎr gōngzuò? — Tā zài yīyuàn gōngzuò.) 2) 他是厨师吗？— 是，他在饭店工作。(Tā shì chúshī ma? — Shì, tā zài fàndiàn gōngzuò.) 3) 你爸爸是老师吗？— 不是，他是司机。(Nǐ bàba shì lǎoshī ma? — Bú shì, tā shì sījī.) 4) 你去哪儿？— 我去学校学习。(Nǐ qù nǎr? — Wǒ qù xuéxiào xuéxí.) 5) 你姐姐做什么工作？— 她是员工，她在商店工作。(Nǐ jiějie zuò shénme gōngzuò? — Tā shì yuángōng, tā zài shāngdiàn gōngzuò.) / 医生和Bông说话：“别担心！”(Yīshēng hé Bông shuōhuà: “Bié dānxīn!”) / 早上八点，医生去医院工作。(Zǎoshang bā diǎn, yīshēng qù yīyuàn gōngzuò.) (= He starts work at eight o'clock.)",
+      "truyen": "在医院 — Bông和妈妈在医院。Bông很难过。护士说：“别担心！”医生在医院工作。早上八点，他去工作。（Bông hé māma zài yīyuàn. Bông hěn nánguò. Hùshi shuō: “Bié dānxīn!” Yīshēng zài yīyuàn gōngzuò. Zǎoshang bā diǎn, tā qù gōngzuò.）",
+      "video": "Tìm YouTube: \"在医院工作 职业 儿童 动画\""
+     }
+    },
+    {
+     "ngay": 52,
+     "label": "Ngày 52. Unit 6 · Yêu nghề: oh dear, love; ai làm ở đâu",
+     "en": {
+      "tu": "Mới: oh dear, love | Ôn (nối Unit 5): busy, afternoon, then, first, buy, thing",
+      "cum": "love my job / oh dear! / whose photo? / live in this town / find the hospital",
+      "cau": "Oh dear! The restaurant is busy! / I love my job! / Whose photo is this? It's Anna's photo. / [Ngữ pháp: from / her] Xiaomei is from China. She speaks Chinese. This is her dad. He is a chef. / [Ngữ pháp: Don't be + tính từ] Don't be silly! You are a dentist, not a chef! / [Ngữ pháp: so sánh, chỉ nghe hiểu] The firefighter is taller than the chef. / We all love our jobs! / I think the doctor is great.",
+      "truyen": "Oh Dear! — It is Saturday afternoon. The restaurant is busy. \"Oh dear!\" says the chef. His friend says, \"Don't worry! I can cook, too.\" Then they cook dinner. The chef says, \"I love my job!\"",
+      "video": "Tìm YouTube: \"I love my job community helpers song for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 比 bǐ (= than, dùng để so sánh: 比厨师高 = taller than the chef; tranh: lính cứu hỏa đứng cạnh đầu bếp, cao hơn), 大家 dàjiā (= everyone, all of us), 都 dōu (= all) | Ôn (nối Unit 5): 下午 xiàwǔ, 然后 ránhòu, 买 mǎi, 人 rén | Ôn: 爱 ài, 觉得 juéde | Nghe làm quen (có tranh, không kiểm tra): 傻 shǎ (= silly)",
+      "cum": "爱我的工作 ài wǒ de gōngzuò / 大家都爱工作 dàjiā dōu ài gōngzuò / 比厨师高 bǐ chúshī gāo / 谁的照片 shéi de zhàopiàn",
+      "cau": "[Cầu nối] I love my job! ↔ 我爱我的工作！(Wǒ ài wǒ de gōngzuò!) [giống: Ai – yêu – gì; my ↔ 我的 · The restaurant is busy! ↔ 饭店里人很多！] / [Ngữ pháp: A 比 B + tính từ] 消防员比厨师高。(Xiāofángyuán bǐ chúshī gāo.) (= The firefighter is taller than the chef.) / 饭店里人很多。(Fàndiàn lǐ rén hěn duō.) (= The restaurant is busy!) / 我爱我的工作！(Wǒ ài wǒ de gōngzuò!) / 这是谁的照片？(Zhè shì shéi de zhàopiàn?) (= Whose photo is this?) / 我们都爱我们的工作！(Wǒmen dōu ài wǒmen de gōngzuò!) (= We all love our jobs!) / 我觉得医生很好。(Wǒ juéde yīshēng hěn hǎo.) / [Chuyển ngữ] [nghe Leo nói tiếng Anh, nói lại 1 câu bằng tiếng Trung cho Xiaomei, ghi âm] Leo: \"I love my job!\" → 我爱我的工作！(Wǒ ài wǒ de gōngzuò!) / 这是Anna的照片。(Zhè shì Anna de zhàopiàn.) / Xiaomei是中国人。她说汉语。她爸爸是厨师。(Xiaomei shì Zhōngguó rén. Tā shuō Hànyǔ. Tā bàba shì chúshī.) / 别傻了！你是牙医，不是厨师！(Bié shǎ le! Nǐ shì yáyī, bú shì chúshī!) (= Don't be silly! You are a dentist, not a chef!)",
+      "truyen": "饭店里人很多 — 星期六下午，饭店里人很多。厨师说：“哎呀！”朋友说：“别担心！我也会做饭。”然后他们做饭。厨师说：“我爱我的工作！”（Xīngqīliù xiàwǔ, fàndiàn lǐ rén hěn duō. Chúshī shuō: “Āiyā!” Péngyou shuō: “Bié dānxīn! Wǒ yě huì zuòfàn.” Ránhòu tāmen zuòfàn. Chúshī shuō: “Wǒ ài wǒ de gōngzuò!”）",
+      "video": "Tìm YouTube: \"我爱我的工作 儿歌 职业\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "work, don't worry, oh dear, love, employee | Ôn: hospital, school, restaurant, shop, doctor, chef, teacher | Nghe hiểu: taller than, everyone",
+     "slide": "[Lời cô] Vào bài: \"Good morning, class! 同学们好！\" · Chuyển ý: \"Now, let's go to the map. 现在我们看地图。\" · Khen: \"Well done! 真棒！\" · Câu mới buổi này: \"Don't worry! 别担心！\" (cô động viên khi con nói sai) · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): work (việc làm và nơi làm) / 工作, oh dear / 哎呀 1) Trò Nghề ở đâu?: ghép thẻ nghề với thẻ nơi làm việc trên bản đồ Unit 5 (doctor – hospital / chef – restaurant / teacher – school / employee – shop). 2) Đối chiếu NL9: He works at a hospital. ↔ 他在医院工作。 – con kéo \"at a hospital\" ra sau, kéo 在医院 lên trước. 3) Đóng vai 2 câu: A: Oh dear! B: Don't worry! – rồi nói: I love my job! 4) Starters Nghe phần 3 (mẫu): mỗi câu có 3 tranh A, B, C; con nghe và chọn tranh đúng. Example: What does Kim's mum do? – She's a nurse. ① Where does the chef work? – At a restaurant. ② What's Sam's dad's job? – He's a farmer. On Sunday, he goes fishing. ③ Which man is Ben's dad? – The man with the camera. ④ Where is the dentist's mirror? – On the table. ⑤ What's the firefighter doing? – He's talking to the children. 5) Starters Đọc – viết phần 3 (mẫu): xếp chữ cái thành từ nghề nghiệp. Example: c-o-d-o-t-r → doctor ① r-u-s-e-n → nurse ② f-e-h-c → chef ③ r-a-m-e-f-r → farmer ④ v-e-r-i-d-r → driver ⑤ d-u-s-e-n-t-t → student. Choose the correct letters! [Chuyển ngữ] Rối Xiaomei nói \"医生在医院工作。\", con nói lại cho rối Leo: The doctor works at a hospital. (NL5) [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo kể: \"My uncle is a chef. He works at a restaurant. My aunt is an employee at a shop. They both love their jobs.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: Leo的叔叔是厨师，他在饭店工作。他阿姨是员工，她在商店工作。他们都爱工作。 (Leo de shūshu shì chúshī, tā zài fàndiàn gōngzuò. Tā āyí shì yuángōng, tā zài shāngdiàn gōngzuò. Tāmen dōu ài gōngzuò.)",
+     "truyen": "Where Do They Work? — Mr Lee is a doctor. He works at a hospital. Miss Hoa is a teacher. She works at a school. Tom is an employee. He works at a shop. They all love their jobs.",
+     "baihat": "What Does Dad Do? — đoạn Đầu bếp: What does he do? / What does he do? / He's a chef, he works at a restaurant. / He is a chef! · đoạn Con: What do you do? / What do you do? / I'm a student, I study at school. / I am a student! · ôn đoạn Bố · ôn vè: Driver, driver, drive the bus, Doctor, doctor, help all of us!"
+    },
+    "zh": {
+     "flash": "工作 gōngzuò, 医院 yīyuàn, 别担心 bié dānxīn, 员工 yuángōng, 比 bǐ, 大家 dàjiā | Ôn: 学校 xuéxiào, 饭店 fàndiàn, 商店 shāngdiàn, 哎呀 āiyā, 爱 ài | Ôn: 医生 yīshēng, 厨师 chúshī, 老师 lǎoshī",
+     "slide": "1) Xếp câu: 他 / 在 / 医院 / 工作 → 他在医院工作。(phương án nhiễu: 他工作在医院。) 2) Nghe chọn nơi làm việc: 厨师在哪儿工作？→ 饭店 / 医院 / 学校. 3) Chép 生 trong 学生, 医生; tô 工: cái thước thợ, 3 nét (ngang, sổ, ngang); tìm 工 trong 工作, 员工. 4) Đóng vai 2 câu bằng tiếng Trung: A: 哎呀！ B: 别担心！ – rồi nói: 我爱我的工作！ 5) Nhìn tranh, chọn chữ Hán đúng cho nghề (cùng tranh bài xếp chữ cái tiếng Anh): 护士 / 厨师 / 农民 / 司机 / 学生. 6) Nghe chọn tranh (tương ứng bài nghe tiếng Anh): 厨师在哪儿工作？— 在饭店。Sam的爸爸做什么工作？— 他是农民。牙医的镜子在哪儿？— 在桌子上。 [Cầu nối Anh – Trung] Cùng bản đồ Unit 5: Leo \"The chef works at a restaurant.\" – Xiaomei \"厨师在饭店工作。\"; con kéo thẻ nơi chốn: ở cuối câu tiếng Anh, ở giữa câu tiếng Trung; works có -s ↔ 工作 không đổi.",
+     "truyen": "在哪儿工作？ — Lee叔叔是医生，他在医院工作。Hoa老师在学校工作。Tom是员工，他在商店工作。大家都爱工作。（Lee shūshu shì yīshēng, tā zài yīyuàn gōngzuò. Hoa lǎoshī zài xuéxiào gōngzuò. Tom shì yuángōng, tā zài shāngdiàn gōngzuò. Dàjiā dōu ài gōngzuò.）",
+     "baihat": "ôn vè ZH: 司机司机开大巴，医生医生帮大家！(Sījī sījī kāi dàbā, yīshēng yīshēng bāng dàjiā!) · 爸爸做什么工作？— đoạn Đầu bếp: 他做什么工作？/ 他做什么工作？/ 他是厨师，他在饭店工作。/ 他是厨师！ · đoạn Con: 你做什么工作？/ 你做什么工作？/ 我是学生，我在学校学习。/ 我是学生！ · ôn đoạn Bố: 爸爸做什么工作？/ 爸爸做什么工作？/ 他是医生，他在医院工作。/ 爸爸是医生！"
+    }
+   }
+  },
+  {
+   "buoi": 27,
+   "unit": 6,
+   "label_buoi": "Buổi dạy 27. Unit 6 · Job · 工作 – Làm quen: giới thiệu nghề người thân qua ảnh; truyện Anna's Family; nói theo vần; chép 工",
+   "web": [
+    {
+     "ngay": 53,
+     "label": "Ngày 53. Unit 6 · Nghề của người thân (nhóm 3, nối Little Seed Unit 3 và Unit 5) · Luyện đề YCT2 Nghe phần 3",
+     "en": {
+      "tu": "Mới: dad, mom, older (older brother, older sister) | Ôn: mother, father, brother, sister, family, grandma, uncle, aunt, fishing, radio",
+      "cum": "my dad / my mom / my older sister / my older brother / what job",
+      "cau": "What does your mom do? / My mom is a doctor. / My dad is a chef. He works at a restaurant. / [Ngữ pháp: his / her] Her dad is a farmer. His mom is a nurse. / My grandpa is a farmer. On Sunday, he goes fishing. / My dad is a driver. He listens to the radio in his bus.",
+      "truyen": "Bông's Family Photo — This is a photo of my family. My dad is a driver. My mom is a nurse. She works at a hospital. My older sister is a student. I love my family!",
+      "video": "Ana and her Family – Smile and Learn – https://www.youtube.com/watch?v=l15mghqYTmQ"
+     },
+     "zh": {
+      "tu": "Mới (cụm): 我爸爸 wǒ bàba (= my dad), 我妈妈 wǒ māma (= my mom), 我姐姐 wǒ jiějie (= my older sister), 我哥哥 wǒ gēge (= my older brother) | Ôn: 爸爸 bàba, 妈妈 māma, 哥哥 gēge, 姐姐 jiějie, 家人 jiārén, 照片 zhàopiàn, 爱 ài | Ôn: 爷爷 yéye, 奶奶 nǎinai, 叔叔 shūshu, 阿姨 āyí, 农民 nóngmín, 司机 sījī | Nghe làm quen (có tranh, không kiểm tra): 钓鱼 diàoyú (= go fishing), 收音机 shōuyīnjī (= radio)",
+      "cum": "我爸爸 wǒ bàba / 我妈妈 wǒ māma / 我姐姐 wǒ jiějie / 做什么工作 zuò shénme gōngzuò / 你妈妈的工作 nǐ māma de gōngzuò",
+      "cau": "[Cầu nối] My mom is a doctor. ↔ 我妈妈是医生。(Wǒ māma shì yīshēng.) [khác: my mom ↔ 我妈妈, người thân không cần 的 · his / her ↔ 他 / 她, đọc giống nhau tā] / 你妈妈做什么工作？(Nǐ māma zuò shénme gōngzuò?) / 我妈妈是医生。(Wǒ māma shì yīshēng.) / 我爸爸是厨师，他在饭店工作。(Wǒ bàba shì chúshī, tā zài fàndiàn gōngzuò.) / [Ngữ pháp: 他 / 她 luôn đi kèm tên người thân] 我姐姐是学生，她在学校学习。(Wǒ jiějie shì xuéshēng, tā zài xuéxiào xuéxí.) / [YCT2 Nghe phần 3 (mẫu): nghe hội thoại, chọn 1 trong 3 tranh, ~5 phút] 1) Anna：你爸爸做什么工作？Leo：我爸爸是厨师。(Anna: Nǐ bàba zuò shénme gōngzuò? Leo: Wǒ bàba shì chúshī.) 2) Bông：你妈妈在哪儿工作？Xiaomei：她在学校工作，她是老师。(Bông: Nǐ māma zài nǎr gōngzuò? Xiaomei: Tā zài xuéxiào gōngzuò, tā shì lǎoshī.) 3) Leo：你哥哥是学生吗？Anna：是，他是学生。(Leo: Nǐ gēge shì xuéshēng ma? Anna: Shì, tā shì xuéshēng.) 4) Xiaomei：你爷爷做什么工作？Bông：我爷爷是农民。(Xiaomei: Nǐ yéye zuò shénme gōngzuò? Bông: Wǒ yéye shì nóngmín.) 5) Anna：你姐姐在医院工作吗？Leo：不，她在饭店工作。(Anna: Nǐ jiějie zài yīyuàn gōngzuò ma? Leo: Bù, tā zài fàndiàn gōngzuò.) / 她爸爸是农民。他妈妈是护士。(Tā bàba shì nóngmín. Tā māma shì hùshi.) (= Her dad is a farmer. His mom is a nurse.) / 我爷爷是农民。星期天，他去钓鱼。(Wǒ yéye shì nóngmín. Xīngqītiān, tā qù diàoyú.) / 我爸爸是司机，他在车上听收音机。(Wǒ bàba shì sījī, tā zài chē shang tīng shōuyīnjī.)",
+      "truyen": "Bông家的照片 — 这是我家的照片。我爸爸是司机。我妈妈是护士，她在医院工作。我姐姐是学生。我爱我的家人！（Zhè shì wǒ jiā de zhàopiàn. Wǒ bàba shì sījī. Wǒ māma shì hùshi, tā zài yīyuàn gōngzuò. Wǒ jiějie shì xuéshēng. Wǒ ài wǒ de jiārén!）",
+      "video": "我的家人 My Family – SMAP Education – https://www.youtube.com/watch?v=HcN6qd23x-c"
+     }
+    },
+    {
+     "ngay": 54,
+     "label": "Ngày 54. Unit 6 · Ôn không tranh, vòng Từ vựng + truyện 1 My family · Luyện đề Starters Đọc – viết phần 4",
+     "en": {
+      "tu": "Ôn (không tranh): job, student, doctor, chef, dentist, driver, nurse, farmer, firefighter, employee, work, dad, mom, love",
+      "cum": "is a teacher / is a doctor / is a chef / is a driver / work at a hospital / work at a school",
+      "cau": "What does he do? He is a dentist. / The doctor works at a hospital. / Where does the chef work? He works at a restaurant. / [Ngữ pháp: a / an] She is an employee. / [Starters Đọc – viết phần 4 (mẫu): chọn từ trong khung, chép vào chỗ trống; khung: student, hospital, farmer, dirty, fishing, paper] Example: My name is Anna. I am a (0) student. / My dad is a doctor. He works at a (1) ___. My grandpa is a (2) ___. His shoes are (3) ___. On Sunday, he goes (4) ___. I draw my family on (5) ___. [Đáp án: 1 hospital, 2 farmer, 3 dirty, 4 fishing, 5 paper] / [Chuyển ngữ] [nghe Xiaomei nói tiếng Trung, nói lại 1 câu bằng tiếng Anh cho Leo, ghi âm] Xiaomei: \"我妈妈是老师。\" → My mom is a teacher.",
+      "truyen": "My family — My name is Anna. I am a student. My dad is a doctor. He works at a hospital. My mom is a teacher. She works at a school.",
+      "video": "Jobs Song: What Do You Do? – Fun Kids English – https://www.youtube.com/watch?v=ckKQclquAXU"
+     },
+     "zh": {
+      "tu": "Ôn (không tranh, ẩn pinyin): 工作 gōngzuò, 学生 xuéshēng, 医生 yīshēng, 厨师 chúshī, 牙医 yáyī, 司机 sījī, 员工 yuángōng, 护士 hùshi, 医院 yīyuàn",
+      "cum": "是老师 shì lǎoshī / 是医生 shì yīshēng / 是厨师 shì chúshī / 是司机 shì sījī / 在医院工作 zài yīyuàn gōngzuò / 在学校工作 zài xuéxiào gōngzuò",
+      "cau": "[Cầu nối] The doctor works at a hospital. ↔ 医生在医院工作。(Yīshēng zài yīyuàn gōngzuò.) [giống: cùng nghề, cùng nơi làm · khác: at a hospital ở cuối ↔ 在医院 ở giữa] / 他做什么工作？他是牙医。(Tā zuò shénme gōngzuò? Tā shì yáyī.) / 医生在医院工作。(Yīshēng zài yīyuàn gōngzuò.) / 厨师在哪儿工作？他在饭店工作。(Chúshī zài nǎr gōngzuò? Tā zài fàndiàn gōngzuò.) / 他是学生。(Tā shì xuéshēng.) / 她是员工。(Tā shì yuángōng.) (= She is an employee. – tiếng Trung không cần a / an)",
+      "truyen": "我的家人 — 我叫Anna。我是学生。我爸爸是医生。他在医院工作。我妈妈是老师。她在学校工作。（Wǒ jiào Anna. Wǒ shì xuéshēng. Wǒ bàba shì yīshēng. Tā zài yīyuàn gōngzuò. Wǒ māma shì lǎoshī. Tā zài xuéxiào gōngzuò.）",
+      "video": "职业 小警察 & 小医生 – Baobei Chinese – https://www.youtube.com/watch?v=KXUQKIClmW0"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "dad, mom, older brother, older sister, love | Ôn: doctor, teacher, student, chef, driver, nurse, hospital, school",
+     "slide": "[Lời cô] Vào bài: \"Good afternoon, class! 同学们好！\" · Chuyển ý: \"Now, show me your photo. 现在给我看看你的照片。\" · Khen: \"Super! 太好了！\" · Câu mới buổi này: \"Again, please. 请再说一次。\" · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): older sister / 姐姐 (tiếng Anh cần older, tiếng Trung đã có sẵn) 1) Ảnh gia đình: con giơ ảnh và nói My dad is a … / My mom is a … 2) a hay an?: kéo a / an vào trước: doctor, employee, chef, nurse (a doctor, an employee). 3) Đọc Anna's Family theo câu, hỏi sau bản tiếng Trung: Where does Anna's dad work? 4) Starters Nói phần 3 (mẫu): thẻ đồ vật nghề nghiệp: camera, tablet, radio, mirror, paper; cô hỏi What's this? – It's a mirror. / Who has a mirror at work? – The dentist. / What colour is the camera? / Can you spell 'radio'? – R-A-D-I-O. 5) Starters Nói phần 4 (mẫu): câu hỏi về bản thân, cô là giám khảo, từng con: What's your name? / How old are you? / What does your mum do? / Where does your dad work? / Let's talk about your family. – con nghe chưa rõ thì nói Pardon?",
+     "truyen": "Anna's Family — This is Anna's family. Her dad is a doctor. He works at a hospital. Her mom is a teacher. She works at a school. Anna is a student.",
+     "baihat": "Limerick: My dad is a chef, he cooks all day, My mom is a doctor – hip hip hooray! (vần day – hooray) · ôn vè: Driver, driver, drive the bus, Doctor, doctor, help all of us! · What Does Dad Do? cả bài"
+    },
+    "zh": {
+     "flash": "我爸爸 wǒ bàba, 我妈妈 wǒ māma, 我姐姐 wǒ jiějie, 我哥哥 wǒ gēge | Ôn: 医生 yīshēng, 老师 lǎoshī, 学生 xuéshēng, 厨师 chúshī, 司机 sījī, 护士 hùshi, 爱 ài | Ôn: 医院 yīyuàn, 学校 xuéxiào",
+     "slide": "1) Câu hỏi ZH luôn kèm người thân: 你爸爸做什么工作？— 我爸爸是……（他 và 她 đọc giống nhau tā). 2) Thanh điệu: 医生 yīshēng, 司机 sījī (1–1), 厨师 chúshī (2–1), 牙医 yáyī (2–1) – nghe chọn đúng. 3) Chép 工 vào ô; đọc Anna的家人, hỏi sau bản tiếng Anh: Anna的妈妈做什么工作？ 4) YCT口试（初级）第三部分 看图说话 (mẫu): tranh Ngày hội nghề nghiệp (bác sĩ, đầu bếp, lái xe); cô hỏi 请说一说这张图。(Qǐng shuō yi shuō zhè zhāng tú.) – từng con nói 2–3 câu: 这是医生，他在医院工作。他是厨师，他在饭店工作。(Zhè shì yīshēng, tā zài yīyuàn gōngzuò. Tā shì chúshī, tā zài fàndiàn gōngzuò.) Cô đóng vai giám khảo và ghi âm. 5) a hay an? ↔ tiếng Trung không cần: kéo thẻ a doctor / an employee sang 医生 / 员工, con thấy tiếng Trung không có từ nào đứng trước nghề. 6) Cùng thẻ đồ vật nghề nghiệp của phần tiếng Anh: 这是什么？— 这是镜子。谁工作的时候用镜子？— 牙医。“工”怎么写？– con viết lên không (tương ứng Can you spell?). 7) Câu hỏi về bản thân bằng tiếng Trung: 你叫什么名字？你几岁？你妈妈做什么工作？你爸爸在哪儿工作？– nghe chưa rõ thì nói: 请再说一次。 [Cầu nối Anh – Trung] Cùng ảnh gia đình: Leo \"My dad is a chef.\" – Xiaomei \"我爸爸是厨师。\"; khác: my dad ↔ 我爸爸 (không cần 的); his / her ↔ 他 / 她 đọc giống nhau tā. [Chuyển ngữ] Rối Leo nói \"My dad is a chef.\", con nói lại cho rối Xiaomei: Leo的爸爸是厨师。(NL5) [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo kể: \"Look at my family photo! My dad is a chef and he works at a restaurant. My older sister is a nurse. She works at a hospital.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 这是Leo家的照片。他爸爸是厨师，在饭店工作。他姐姐是护士，在医院工作。 (Zhè shì Leo jiā de zhàopiàn. Tā bàba shì chúshī, zài fàndiàn gōngzuò. Tā jiějie shì hùshi, zài yīyuàn gōngzuò.)",
+     "truyen": "Anna的家人 — 这是Anna的家人。她爸爸是医生，他在医院工作。她妈妈是老师，她在学校工作。Anna是学生。（Zhè shì Anna de jiārén. Tā bàba shì yīshēng, tā zài yīyuàn gōngzuò. Tā māma shì lǎoshī, tā zài xuéxiào gōngzuò. Anna shì xuéshēng.）",
+     "baihat": "Limerick: 我爸爸是厨师，整天做饭忙；我妈妈是医生——真棒真棒棒！(Wǒ bàba shì chúshī, zhěngtiān zuòfàn máng; wǒ māma shì yīshēng — zhēn bàng zhēn bàngbàng!) (vần máng – bàng) · ôn vè: 司机司机开大巴，医生医生帮大家！(Sījī sījī kāi dàbā, yīshēng yīshēng bāng dàjiā!) · 爸爸做什么工作？cả bài"
+    }
+   }
+  },
+  {
+   "buoi": 28,
+   "unit": 6,
+   "label_buoi": "Buổi dạy 28. Unit 6 · Job · 工作 – Vận dụng: đọc, diễn My family; ngày hội nghề nghiệp; thêm người làm việc vào bản đồ",
+   "web": [
+    {
+     "ngay": 55,
+     "label": "Ngày 55. Unit 6 · Truyện 2 Our family + chuyển ngữ (NL5, NL7, PS-2) · Luyện nói YCT口试 phần 2",
+     "en": {
+      "tu": "Ôn: dad, mom, older sister, doctor, teacher, chef, student, hospital, school, restaurant, love",
+      "cum": "my dad is a doctor / my mom works at a school / my older sister is a chef / go to the hospital to work",
+      "cau": "On Monday morning, my dad goes to the hospital to work. / My older sister is a chef. She works at a restaurant. / [Ngữ pháp: thời gian đầu câu] On Saturday evening, we go to the restaurant to eat dinner. / Where does Anna's dad work? He works at a hospital.",
+      "truyen": "Our family — My name is Anna. I am a student. On Monday morning, my dad goes to the hospital to work. He is a doctor. My mom is a teacher. She works at a school. My older sister is a chef. She works at a restaurant. On Saturday evening, we go to the restaurant to eat dinner. I love my family!",
+      "video": "Ana and her Family – Smile and Learn – https://www.youtube.com/watch?v=l15mghqYTmQ"
+     },
+     "zh": {
+      "tu": "Ôn: 爸爸 bàba, 妈妈 māma, 姐姐 jiějie, 医生 yīshēng, 老师 lǎoshī, 厨师 chúshī, 学生 xuéshēng, 医院 yīyuàn, 学校 xuéxiào, 饭店 fàndiàn, 爱 ài",
+      "cum": "我爸爸是医生 wǒ bàba shì yīshēng / 我妈妈在学校工作 wǒ māma zài xuéxiào gōngzuò / 我姐姐是厨师 wǒ jiějie shì chúshī / 去医院工作 qù yīyuàn gōngzuò",
+      "cau": "[Cầu nối] Where does Anna's dad work? ↔ Anna的爸爸在哪儿工作？(Anna de bàba zài nǎr gōngzuò?) [giống: Anna's ↔ Anna的 · khác: where đứng đầu câu; 哪儿 đứng đúng chỗ của câu trả lời] / 星期一早上，我爸爸去医院工作。(Xīngqīyī zǎoshang, wǒ bàba qù yīyuàn gōngzuò.) / 我姐姐是厨师，她在饭店工作。(Wǒ jiějie shì chúshī, tā zài fàndiàn gōngzuò.) / 我爱我家！(Wǒ ài wǒ jiā!) / [PS-2] Anna的爸爸在哪儿工作？他在医院工作。(Anna de bàba zài nǎr gōngzuò? Tā zài yīyuàn gōngzuò.) / [YCT口试（初级）第二部分 听后回答 (mẫu): nghe câu hỏi, trả lời ngắn, ghi âm trên Trang luyện nói, ~3 phút] 1) 你爸爸做什么工作？(Nǐ bàba zuò shénme gōngzuò?) → 我爸爸是司机。(Wǒ bàba shì sījī.) 2) 医生在哪儿工作？(Yīshēng zài nǎr gōngzuò?) → 在医院。(Zài yīyuàn.) 3) 你是学生吗？(Nǐ shì xuéshēng ma?) → 是，我是学生。(Shì, wǒ shì xuéshēng.) 4) 你妈妈在哪儿工作？(Nǐ māma zài nǎr gōngzuò?) → 她在学校工作。(Tā zài xuéxiào gōngzuò.) 5) 厨师在哪儿工作？(Chúshī zài nǎr gōngzuò?) → 在饭店。(Zài fàndiàn.)",
+      "truyen": "我们的家 — 我叫Anna。我是学生。星期一早上，我爸爸去医院工作，他是医生。我妈妈是老师，她在学校工作。我姐姐是厨师，她在饭店工作。星期六晚上，我们去饭店吃晚饭。我爱我家！（Wǒ jiào Anna. Wǒ shì xuéshēng. Xīngqīyī zǎoshang, wǒ bàba qù yīyuàn gōngzuò, tā shì yīshēng. Wǒ māma shì lǎoshī, tā zài xuéxiào gōngzuò. Wǒ jiějie shì chúshī, tā zài fàndiàn gōngzuò. Xīngqīliù wǎnshang, wǒmen qù fàndiàn chī wǎnfàn. Wǒ ài wǒ jiā!）",
+      "video": "我的家人 My Family – SMAP Education – https://www.youtube.com/watch?v=HcN6qd23x-c"
+     }
+    },
+    {
+     "ngay": 56,
+     "label": "Ngày 56. Unit 6 · Phiên dịch nhí + ôn unit (NL6, PS-3) · Luyện đề YCT2 Đọc phần 4",
+     "en": {
+      "tu": "Ôn: job, nurse, farmer, firefighter, employee, dentist, driver, work, don't worry, oh dear, love",
+      "cum": "is a firefighter / is an employee / work at a shop / love my job / whose photo",
+      "cau": "[Phiên dịch nhí] Xiaomei: \"我爸爸是司机。\" → Xiaomei's dad is a driver. / Leo's dad doesn't work at a hospital. / What does Anna's dad do? He is a doctor. / Oh dear! – Don't worry!",
+      "truyen": "Three Dads — Anna, Leo and Bông show photos of their dads: a doctor, a chef and a driver. Bông's dad is a driver. Leo's dad doesn't work at a hospital. Leo's dad is a chef. What does Anna's dad do? He is a doctor!",
+      "video": "Introducing Family from Photographs – English Singsing – https://www.youtube.com/watch?v=sjISX1HxCsI"
+     },
+     "zh": {
+      "tu": "Ôn: 工作 gōngzuò, 员工 yuángōng, 护士 hùshi, 农民 nóngmín, 消防员 xiāofángyuán, 牙医 yáyī, 司机 sījī, 别担心 bié dānxīn",
+      "cum": "是消防员 shì xiāofángyuán / 是员工 shì yuángōng / 在商店工作 zài shāngdiàn gōngzuò / 爱我的工作 ài wǒ de gōngzuò / 谁的照片 shéi de zhàopiàn",
+      "cau": "[Cầu nối] Xiaomei's dad is a driver. ↔ Xiaomei的爸爸是司机。(Xiaomei de bàba shì sījī.) [giống: 's ↔ 的 · khác: không có a] / [Phiên dịch nhí] Leo: \"My mom is a nurse.\" → Leo的妈妈是护士。(Leo de māma shì hùshi.) / Leo的爸爸不在医院工作。(Leo de bàba bú zài yīyuàn gōngzuò.) / Bông的爸爸是司机。(Bông de bàba shì sījī.) / 哎呀！——别担心！(Āiyā! — Bié dānxīn!) (= Oh dear! – Don't worry!) / [YCT2 Đọc phần 4 (mẫu): hội thoại thiếu, chọn 1 trong 6 đáp án A–F] 1) 你爸爸做什么工作？(Nǐ bàba zuò shénme gōngzuò?) — ___ 2) 你妈妈在哪儿工作？(Nǐ māma zài nǎr gōngzuò?) — ___ 3) 哎呀！(Āiyā!) — ___ 4) 这是谁的照片？(Zhè shì shéi de zhàopiàn?) — ___ 5) 你哥哥是医生吗？(Nǐ gēge shì yīshēng ma?) — ___ / A 这是Anna的照片。(Zhè shì Anna de zhàopiàn.) B 他是司机。(Tā shì sījī.) C 不是，他是学生。(Bú shì, tā shì xuéshēng.) D 她在医院工作。(Tā zài yīyuàn gōngzuò.) E 别担心！(Bié dānxīn!) F 我去公园。(Wǒ qù gōngyuán.) [F thừa; đáp án: 1B 2D 3E 4A 5C] / Anna的爸爸做什么工作？他是医生。(Anna de bàba zuò shénme gōngzuò? Tā shì yīshēng.)",
+      "truyen": "三个爸爸 — Anna、Leo和Bông给大家看爸爸的照片：一个是医生，一个是厨师，一个是司机。Bông的爸爸是司机。Leo的爸爸不在医院工作，他是厨师。Anna的爸爸做什么工作？他是医生！（Anna, Leo hé Bông gěi dàjiā kàn bàba de zhàopiàn: yí ge shì yīshēng, yí ge shì chúshī, yí ge shì sījī. Bông de bàba shì sījī. Leo de bàba bú zài yīyuàn gōngzuò, tā shì chúshī. Anna de bàba zuò shénme gōngzuò? Tā shì yīshēng!）",
+      "video": "我的家人 My Family – SMAP Education – https://www.youtube.com/watch?v=HcN6qd23x-c"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn: job, student, doctor, chef, dentist, driver, nurse, farmer, firefighter, employee, work, dad, mom, love, don't worry, oh dear, hospital, teacher",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" · Chuyển ý: \"Now, it's Job Day! 现在我们说说工作！\" · Khen: \"Good job! 很好！\" · Câu mới buổi này: \"Thank you, everyone! 谢谢大家！\" · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): tên hoạt động Ngày hội nghề nghiệp; nghề thật của người thân con chưa biết từ (cô gợi ý) 1) Đọc và diễn My family, mỗi con một câu. 2) Ngày hội nghề nghiệp (NL6): con mang ảnh người thân, khách hỏi \"What does your dad do?\" – con đáp \"My dad is a … He works at a …\"; khách hỏi tiếng Trung thì đáp tiếng Trung. 3) PS-3 trên lớp: three friends, three dads – clue cards \"Bông's dad is a driver.\" \"Leo's dad doesn't work at a hospital.\" → What does Anna's dad do? 4) Thêm người làm việc vào bản đồ thành phố: doctor ở hospital, chef ở restaurant, teacher ở school. 5) Starters Đọc – viết phần 4 (mẫu, trên giấy): đoạn My grandpa; khung: farmer, goat, dirty, fishing, camera, paper. Example: My grandpa is a (0) farmer. ① He has a (1) ___ on his farm. ② His shoes are (2) ___. ③ On Sunday, he goes (3) ___. ④ He takes photos with his (4) ___. ⑤ I draw him on (5) ___. (Đáp án: goat, dirty, fishing, camera, paper) 6) Starters Đọc – viết phần 5 (mẫu): 3 tranh truyện Our family, trả lời bằng 1 từ. Example: Who is a student? – Anna. ① What is Anna's dad's job? – doctor ② Where does Anna's mom work? – (at a) school ③ Where does the older sister work? – (at a) restaurant ④ When do they eat dinner at the restaurant? – (on Saturday) evening. [Chuyển ngữ] Khách nói tiếng Trung \"我妈妈是护士。\", con nói lại cho khách chỉ biết tiếng Anh: Her mom is a nurse. (NL6) [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo kể: \"Here's a message from Anna: 'My dad is a doctor and he works at a hospital. My mum is a teacher. On Saturday evening, we eat dinner at a restaurant.'\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: Anna的爸爸是医生，他在医院工作。她妈妈是老师。星期六晚上，他们去饭店吃晚饭。 (Anna de bàba shì yīshēng, tā zài yīyuàn gōngzuò. Tā māma shì lǎoshī. Xīngqīliù wǎnshang, tāmen qù fàndiàn chī wǎnfàn.)",
+     "truyen": "My family — My name is Anna. I am a student. My dad is a doctor. He works at a hospital. My mom is a teacher. She works at a school. (đọc, diễn; cô hỏi: Where does Anna's mom work?)",
+     "baihat": "Biểu diễn vè: Driver, driver, drive the bus, Doctor, doctor, help all of us! · What Does Dad Do? cả bài — Bố: … He's a doctor, he works at a hospital. / Dad is a doctor! · Mẹ: … She's a teacher, she works at a school. / Mom is a teacher! · Đầu bếp: … He's a chef, he works at a restaurant. / He is a chef! · Con: What do you do? / What do you do? / I'm a student, I study at school. / I am a student!"
+    },
+    "zh": {
+     "flash": "Ôn: 工作 gōngzuò, 学生 xuéshēng, 医生 yīshēng, 医院 yīyuàn, 厨师 chúshī, 司机 sījī, 员工 yuángōng, 牙医 yáyī, 护士 hùshi, 别担心 bié dānxīn, 老师 lǎoshī, 爸爸 bàba, 妈妈 māma, 爱 ài, 哎呀 āiyā, 农民 nóngmín, 消防员 xiāofángyuán",
+     "slide": "1) Đọc 我的家人 có pinyin, hỏi chéo: Where does Anna's dad work? (sau bản tiếng Trung). 2) Phóng viên nhí: hỏi bạn \"你爸爸做什么工作？\" – bạn đáp \"我爸爸是……，他在……工作。\" (nghề thật của người thân). 3) Chép 生 và 工 vào ô, dán cạnh người làm việc trên bản đồ (生 cạnh 医生, 工 cạnh 员工). 4) YCT2 Nghe phần 4 (mẫu): nghe câu hỏi, chọn 1 trong 3 đáp án chữ có pinyin: ① 你爸爸做什么工作？(Nǐ bàba zuò shénme gōngzuò?) A 在医院 (zài yīyuàn) B 他是医生 (tā shì yīshēng) C 星期一 (xīngqīyī) ② 医生在哪儿工作？(Yīshēng zài nǎr gōngzuò?) A 在医院 (zài yīyuàn) B 学生 (xuéshēng) C 下午 (xiàwǔ) ③ 你几点去学校？(Nǐ jǐ diǎn qù xuéxiào?) A 老师 (lǎoshī) B 公园 (gōngyuán) C 七点 (qī diǎn) ④ 你妈妈是老师吗？(Nǐ māma shì lǎoshī ma?) A 我去商店 (wǒ qù shāngdiàn) B 不是，她是护士 (bú shì, tā shì hùshi) C 很好 (hěn hǎo) ⑤ 你和谁去饭店？(Nǐ hé shéi qù fàndiàn?) A 和家人 (hé jiārén) B 在饭店 (zài fàndiàn) C 厨师 (chúshī) — đáp án: ①B ②A ③C ④B ⑤A. 5) PS-3 bằng tiếng Trung: Bông的爸爸是司机。Leo的爸爸不在医院工作。→ Anna的爸爸做什么工作？ 6) Thêm người làm việc vào bản đồ, nói tiếng Trung: 医生在医院，厨师在饭店，老师在学校。 7) Cùng tranh ông ở nông trại của bài đọc tiếng Anh: 我爷爷是农民。他有山羊。星期天他去钓鱼。他拍照。(山羊, 钓鱼: nghe làm quen) [Cầu nối Anh – Trung] Cùng ảnh người thân ở Ngày hội nghề nghiệp: một con nói 1 câu tiếng Anh, bạn nói câu tiếng Trung cùng nghĩa; cả lớp tìm cặp at a hospital ↔ 在医院, at a school ↔ 在学校.",
+     "truyen": "我的家人 — 我叫Anna。我是学生。我爸爸是医生。他在医院工作。我妈妈是老师。她在学校工作。（Wǒ jiào Anna. Wǒ shì xuéshēng. Wǒ bàba shì yīshēng. Tā zài yīyuàn gōngzuò. Wǒ māma shì lǎoshī. Tā zài xuéxiào gōngzuò.）",
+     "baihat": "Biểu diễn vè ZH: 司机司机开大巴，医生医生帮大家！(Sījī sījī kāi dàbā, yīshēng yīshēng bāng dàjiā!) · 爸爸做什么工作？cả bài — Bố: 他是医生，他在医院工作。/ 爸爸是医生！ · Mẹ: 她是老师，她在学校工作。/ 妈妈是老师！ · Đầu bếp: 他是厨师，他在饭店工作。/ 他是厨师！ · Con: 你做什么工作？/ 你做什么工作？/ 我是学生，我在学校学习。/ 我是学生！"
+    }
+   }
+  },
+  {
+   "buoi": 29,
+   "unit": 7,
+   "label_buoi": "Buổi dạy 29. Unit 7 · Transports · 交通工具 – Hiểu: gọi tên phương tiện; hỏi – đáp đi học bằng gì; tô 车",
+   "web": [
+    {
+     "ngay": 57,
+     "label": "Ngày 57. Unit 7 · Phương tiện 1: ô tô, xe buýt, xe đạp, xe máy, tàu hỏa, máy bay",
+     "en": {
+      "tu": "Mới: car, bus, bicycle, motorbike, train, plane | Ôn: now, o'clock, Friday, bike, yellow, skateboard",
+      "cum": "take a bus / ride a bike / drive a car / take a plane",
+      "cau": "How do you go to school? / I take a bus to school. / [Ngữ pháp: bike = bicycle] I ride my bicycle. I ride my bike. / Look! A yellow bus! / Look! A boy on a skateboard!",
+      "truyen": "Look at the Street! — Leo and Anna look at the street. \"A yellow bus!\" says Anna. \"A red car!\" says Leo. \"A motorbike and a bicycle, too!\" \"Look! A train and a plane!\"",
+      "video": "Transportation Song – Easy Monkey Songs – https://www.youtube.com/watch?v=UQkoukhczT8"
+     },
+     "zh": {
+      "tu": "Mới: 汽车 qìchē (= car), 公共汽车 gōnggòng qìchē (= bus), 自行车 zìxíngchē (= bicycle, bike), 摩托车 mótuōchē (= motorbike), 火车 huǒchē (= train), 飞机 fēijī (= plane) | Ôn: 现在 xiànzài, 点 diǎn, 星期五 xīngqīwǔ, 黄色 huángsè | Ôn: 滑板 huábǎn, 骑 qí",
+      "cum": "坐公共汽车 zuò gōnggòng qìchē / 骑自行车 qí zìxíngchē / 开车 kāichē / 坐飞机 zuò fēijī",
+      "cau": "[Cầu nối] Look! A yellow bus! ↔ 看！黄色的公共汽车！(Kàn! Huángsè de gōnggòng qìchē!) [giống: màu đứng trước xe · mẹo: nhiều xe tiếng Trung có chung chữ 车: 汽车, 火车, 自行车, 摩托车] / 你怎么去上学？(Nǐ zěnme qù shàngxué?) / 我坐公共汽车去上学。(Wǒ zuò gōnggòng qìchē qù shàngxué.) / 这是火车，那是飞机。(Zhè shì huǒchē, nà shì fēijī.) / 看！黄色的公共汽车！(Kàn! Huángsè de gōnggòng qìchē!) / 看！他玩滑板！(Kàn! Tā wán huábǎn!) (= Look! A boy on a skateboard!) / [bike = bicycle ↔ đều là 自行车] 我骑自行车。(Wǒ qí zìxíngchē.)",
+      "truyen": "看车 — Leo和Anna看街上的车。Anna说：“看！黄色的公共汽车！”Leo说：“看！红色的汽车！”Anna说：“这儿也有摩托车和自行车！”Leo说：“看，火车和飞机！”（Leo hé Anna kàn jiē shang de chē. Anna shuō: “Kàn! Huángsè de gōnggòng qìchē!” Leo shuō: “Kàn! Hóngsè de qìchē!” Anna shuō: “Zhèr yě yǒu mótuōchē hé zìxíngchē!” Leo shuō: “Kàn, huǒchē hé fēijī!”）",
+      "video": "交通工具歌 Chinese Transportation Song – Giggling Panda – https://www.youtube.com/watch?v=5bUXLUlkIHw"
+     }
+    },
+    {
+     "ngay": 58,
+     "label": "Ngày 58. Unit 7 · Phương tiện 2: taxi, trực thăng, tàu thủy, xe tải · Luyện đề YCT2 Nghe phần 2",
+     "en": {
+      "tu": "Mới: taxi, helicopter, ship, lorry, truck | Ôn: Saturday, weekend, month, December, boat, dirty, scary",
+      "cum": "take a taxi / a big ship / a red lorry / a helicopter at the hospital",
+      "cau": "[Ngữ pháp: lorry (UK) – truck (US)] This is a lorry. In the US, it is a truck. / I take a taxi to the hospital. / Is it a ship or a boat? It's a big ship. / Which is big, the lorry or the car? / The lorry is very dirty! / Is the helicopter scary? No, it isn't. It's fun!",
+      "truyen": "At the Weekend — At the weekend, Leo goes to the park. He sees a lorry, a taxi and a helicopter. Then he sees a big ship and a little boat. \"Wow!\" says Leo.",
+      "video": "Tìm YouTube: \"helicopter ship lorry taxi vocabulary for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 出租车 chūzūchē (= taxi), 直升机 zhíshēngjī (= helicopter), 船 chuán (= ship, boat), 卡车 kǎchē (= lorry, truck) | Ôn: 周末 zhōumò, 星期六 xīngqīliù, 月 yuè | Ôn: 怕 pà, 好玩 hǎowán | Nghe làm quen: 脏 zāng",
+      "cum": "坐出租车 zuò chūzūchē / 大船 dà chuán / 红色的卡车 hóngsè de kǎchē / 看直升机 kàn zhíshēngjī",
+      "cau": "[Cầu nối] This is a lorry. ↔ 这是卡车。(Zhè shì kǎchē.) [khác: tiếng Anh có hai từ lorry (UK) / truck (US), tiếng Trung chỉ một từ 卡车 · Is it a ship or a boat? ↔ 都是船] / 我坐出租车去医院。(Wǒ zuò chūzūchē qù yīyuàn.) / 这是大船。(Zhè shì dà chuán.) (= It's a big ship.) / [YCT2 Nghe phần 2 (mẫu): nghe câu, chọn 1 trong 3 tranh, ~5 phút] 1) 这是出租车。(Zhè shì chūzūchē.) 2) 那是直升机。(Nà shì zhíshēngjī.) 3) 那是船，不是卡车。(Nà shì chuán, bú shì kǎchē.) 4) 火车很长。(Huǒchē hěn cháng.) 5) 这是爸爸的卡车。(Zhè shì bàba de kǎchē.) / [Chuyển ngữ] [nghe Leo nói tiếng Anh, nói lại 1 câu bằng tiếng Trung cho Xiaomei, ghi âm] Leo: \"I take a taxi to the hospital.\" → 我坐出租车去医院。(Wǒ zuò chūzūchē qù yīyuàn.) / 卡车和汽车，哪个大？——卡车大。(Kǎchē hé qìchē, nǎge dà? — Kǎchē dà.) (= Which is big, the lorry or the car? – The lorry.) / 卡车很脏！(Kǎchē hěn zāng!) / 你怕直升机吗？不怕，很好玩！(Nǐ pà zhíshēngjī ma? Bú pà, hěn hǎowán!) (= Is the helicopter scary? No, it's fun!)",
+      "truyen": "周末 — 周末，Leo去公园。他看见了卡车、出租车和直升机。然后，他看见一条大船和一条小船。Leo说：“哇！”（Zhōumò, Leo qù gōngyuán. Tā kànjiànle kǎchē, chūzūchē hé zhíshēngjī. Ránhòu, tā kànjiàn yì tiáo dà chuán hé yì tiáo xiǎo chuán. Leo shuō: “Wā!”）",
+      "video": "Tìm YouTube: \"交通工具 儿歌 直升机 轮船 卡车\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "car, bus, bicycle, motorbike, train, plane, taxi, helicopter, ship, lorry, truck | Ôn: bike, boat | Từ thi: skateboard, baseball cap",
+     "slide": "[Lời cô] Vào bài: \"Good morning, class! 同学们好！\" · Chuyển ý: \"Now, listen! 现在听一听！\" · Khen: \"Excellent! 太好了！\" · Câu mới buổi này: \"Close your eyes. 闭上眼睛。\" (trò Tiếng xe nào?) · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): lorry (UK) – truck (US) / 卡车, helicopter / 直升机 1) Trò Tiếng xe nào?: cô phát tiếng còi tàu, tiếng máy bay, tiếng còi xe buýt – con giơ thẻ và gọi tên: train / plane / bus / motorbike / car / helicopter. 2) Nhìn tranh chọn từ (6 câu), có cặp lorry – truck: chọn cả hai đều đúng. 3) Hỏi – đáp theo tranh: How do you go to school? – I take a bus to school. 4) Starters Nói phần 1 (mẫu): tranh to một con phố (bus stop, park, bookshop, helicopter trên trời); cô hỏi Where's the helicopter? – con chỉ; rồi: Put the skateboard under the tree. / Put the baseball cap on the car. / Put the boy next to the bus. – con đặt thẻ đúng chỗ; Is the taxi next to the lorry? – Yes, it is.",
+     "truyen": "The Yellow Bus — It is eight o'clock. Anna takes the yellow bus to school. Leo rides his bicycle. A taxi, a lorry and a motorbike go, too. \"Goodbye, bus!\" says Anna.",
+     "baihat": "How Do You Go to School? (giai điệu Here We Go Round the Mulberry Bush) — đoạn Bike: This is the way I ride a bike, / ride a bike, ride a bike, / This is the way I ride a bike, / I go to school by bike! · đoạn Bus: This is the way I take a bus, / take a bus, take a bus, / This is the way I take a bus, / I take a bus to school! · Vè: Train goes choo-choo, plane goes zoom, Bike goes ring-ring, car goes vroom!"
+    },
+    "zh": {
+     "flash": "汽车 qìchē, 公共汽车 gōnggòng qìchē, 自行车 zìxíngchē, 摩托车 mótuōchē, 火车 huǒchē, 飞机 fēijī, 出租车 chūzūchē, 卡车 kǎchē, 船 chuán, 直升机 zhíshēngjī | Ôn: 滑板 huábǎn, 帽子 màozi",
+     "slide": "1) Nghe – chạm (6 câu): 汽车 / 公共汽车 / 自行车 / 摩托车 / 火车 / 飞机. 2) Tìm 车: chạm vào chữ 车 trong 汽车, 火车, 自行车, 摩托车, 出租车, 卡车 (飞机, 船 không có 车). 3) Tô 车: cỗ xe nhìn từ trên xuống, hai bánh đỏ; 4 nét (ngang, phẩy gập, ngang, sổ). 4) YCT2 Đọc phần 2 (mẫu): đọc hội thoại, chọn tranh A–E: ① 这是什么？— 这是公共汽车。(Zhè shì shénme? — Zhè shì gōnggòng qìchē.) ② 那是飞机吗？— 不是，是直升机。(Nà shì fēijī ma? — Bú shì, shì zhíshēngjī.) ③ 你爸爸是司机吗？— 是，他是出租车司机。(Nǐ bàba shì sījī ma? — Shì, tā shì chūzūchē sījī.) ④ 这是火车吗？— 是，火车很长。(Zhè shì huǒchē ma? — Shì, huǒchē hěn cháng.) ⑤ 你看，船！— 真大！(Nǐ kàn, chuán! — Zhēn dà!) 5) Trò Tiếng xe nào? bằng tiếng Trung: cô phát tiếng còi, con giơ thẻ và nói 火车！飞机！公共汽车！摩托车！汽车！直升机！ 6) lorry – truck ↔ một từ 卡车: nhìn tranh chọn, hai thẻ tiếng Anh cùng ghép với 卡车. 7) Hỏi – đáp theo tranh: 你怎么去上学？— 我坐公共汽车去上学。 8) Cùng tranh to con phố của phần tiếng Anh: 直升机在哪儿？– con chỉ; cô nói 滑板 – 树下，帽子 – 汽车上 – con đặt thẻ đúng chỗ (nghe làm quen). [Cầu nối Anh – Trung] Cùng thẻ phương tiện: Leo \"A yellow bus!\" – Xiaomei \"黄色的公共汽车！\"; giống: màu đứng trước xe; mẹo: nhiều xe tiếng Trung có chung chữ 车 (汽车, 火车, 卡车, 出租车). [Chuyển ngữ] Rối Leo nói \"I take a bus to school.\", con nói lại cho rối Xiaomei: 我坐公共汽车去上学。(NL5) [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo kể: \"Every morning, I take the yellow bus to school. My older brother rides his bike. My mum goes to work by motorbike.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 每天早上，Leo坐黄色的公共汽车去上学。他哥哥骑自行车。他妈妈骑摩托车去工作。 (Měi tiān zǎoshang, Leo zuò huángsè de gōnggòng qìchē qù shàngxué. Tā gēge qí zìxíngchē. Tā māma qí mótuōchē qù gōngzuò.)",
+     "truyen": "黄色的公共汽车 — 八点了。Anna坐黄色的公共汽车去上学。Leo骑自行车。出租车、卡车和摩托车也在路上跑。Anna说：“公共汽车，再见！”（Bā diǎn le. Anna zuò huángsè de gōnggòng qìchē qù shàngxué. Leo qí zìxíngchē. Chūzūchē, kǎchē hé mótuōchē yě zài lù shang pǎo. Anna shuō: “Gōnggòng qìchē, zàijiàn!”）",
+     "baihat": "你怎么去上学？(giai điệu Here We Go Round the Mulberry Bush) — đoạn Bike: 我这样骑自行车，/ 骑自行车，骑自行车，/ 我这样骑自行车，/ 我骑自行车去上学！ · đoạn Bus: 我这样坐公共汽车，/ 坐公共汽车，坐公共汽车，/ 我这样坐公共汽车，/ 我坐公共汽车去上学！ · Vè ZH: 火车呜呜呜，飞机嗡嗡嗡，自行车铃铃铃，汽车嘀嘀嘀！(Huǒchē wūwūwū, fēijī wēngwēngwēng, zìxíngchē línglínglíng, qìchē dīdīdī!)"
+    }
+   }
+  },
+  {
+   "buoi": 30,
+   "unit": 7,
+   "label_buoi": "Buổi dạy 30. Unit 7 · Transports · 交通工具 – Hiểu: 坐 / 骑 / 开; by bike và 骑自行车去; chép 车",
+   "web": [
+    {
+     "ngay": 59,
+     "label": "Ngày 59. Unit 7 · Cách đi 1 (nhóm 2, nối Unit 6): ngồi, lái, by bike · Luyện đề Starters Đọc – viết phần 1",
+     "en": {
+      "tu": "Mới: sit, drive, by | Ôn (nối Unit 6): driver, doctor, work, dad, mom, job, baseball cap, camera, radio",
+      "cum": "sit on the bus / drive a car / go to school by bike / go to work by car / ride a motorbike",
+      "cau": "[Ngữ pháp: by + phương tiện, không có a] I go to school by bike. / I drive to work. / My dad is a driver. He drives a bus. / [Ngữ pháp: us] Sit on the bus with us! / I catch the bus at eight o'clock. / My dad drives the bus and listens to the radio. / [Starters Đọc – viết phần 1 (mẫu): nhìn tranh, đánh dấu ✓ hoặc ✗] Example: [tranh xe buýt] a bus ✓ / 1) [tranh tàu hỏa] a plane ✗ 2) [tranh ván trượt] a skateboard ✓ 3) [tranh mũ lưỡi trai] a baseball cap ✓ 4) [tranh xe tải] a taxi ✗ 5) [tranh máy ảnh] a camera ✓",
+      "truyen": "Dad's Job — My dad is a driver. He drives a bus. Every morning, I sit on his bus. I go to school by bus. \"Goodbye, Dad!\"",
+      "video": "How Do You Go To School? Transportation Song – Wormhole English – https://www.youtube.com/watch?v=Hl9OO-8vJTA"
+     },
+     "zh": {
+      "tu": "Mới: 坐 zuò (= sit; take a bus, train), 开 kāi (= drive) | Ôn (nối Unit 6): 骑 qí, 司机 sījī, 工作 gōngzuò, 医生 yīshēng, 爸爸 bàba | Nghe làm quen: 收音机 shōuyīnjī",
+      "cum": "坐公共汽车 zuò gōnggòng qìchē / 骑摩托车 qí mótuōchē / 开车 kāichē / 骑自行车去上学 qí zìxíngchē qù shàngxué",
+      "cau": "[Cầu nối] I go to school by bike. ↔ 我骑自行车去上学。(Wǒ qí zìxíngchē qù shàngxué.) [khác: by bike ở cuối câu ↔ 骑自行车 đứng trước 去 · tiếng Trung chọn động từ theo xe: 坐 / 骑 / 开] / [Ngữ pháp: phương tiện đứng trước 去] 我骑自行车去上学。(Wǒ qí zìxíngchē qù shàngxué.) / [Ngữ pháp: 坐 / 骑 / 开 đi đúng xe] 我爸爸是司机，他开公共汽车。(Wǒ bàba shì sījī, tā kāi gōnggòng qìchē.) / 妈妈骑摩托车。(Māma qí mótuōchē.) / 我坐火车。(Wǒ zuò huǒchē.) / 我开车去工作。(Wǒ kāichē qù gōngzuò.) (= I drive to work.) / 和我们一起坐公共汽车吧！(Hé wǒmen yìqǐ zuò gōnggòng qìchē ba!) (= Sit on the bus with us!) / 我八点坐公共汽车。(Wǒ bā diǎn zuò gōnggòng qìchē.) (= I catch the bus at eight o'clock.) / 爸爸开公共汽车，听收音机。(Bàba kāi gōnggòng qìchē, tīng shōuyīnjī.)",
+      "truyen": "爸爸的工作 — 我爸爸是司机，他开公共汽车。每天早上，我坐爸爸的公共汽车去上学。我说：“爸爸，再见！”（Wǒ bàba shì sījī, tā kāi gōnggòng qìchē. Měi tiān zǎoshang, wǒ zuò bàba de gōnggòng qìchē qù shàngxué. Wǒ shuō: “Bàba, zàijiàn!”）",
+      "video": "交通工具 你怎么去学校？– DinoMomChinese – https://www.youtube.com/watch?v=fAfi5zXmuEg"
+     }
+    },
+    {
+     "ngay": 60,
+     "label": "Ngày 60. Unit 7 · Cách đi 2: đi bộ, đi học, đi làm; chuyến đi dễ",
+     "en": {
+      "tu": "Mới: easy, round, yours | Ôn (nối Unit 6): nurse, chef, firefighter, employee, hospital, love | Ôn: walk",
+      "cum": "walk to the park / go to work / the wheels go round and round / an easy trip / talk on the bus",
+      "cau": "[Ngữ pháp: walk to – không nói by walk] I walk to the park. / Riding a bike is easy! / The wheels go round and round. / [Ngữ pháp: yours] Is this bike yours? Yes, it is. / I ride my skateboard to the park. It's easy! / My grandpa goes fishing. He goes by bike. / [Chuyển ngữ] [nghe Xiaomei nói tiếng Trung, nói lại 1 câu bằng tiếng Anh cho Leo, ghi âm] Xiaomei: \"我走路去公园。\" → I walk to the park.",
+      "truyen": "Bông and Mum — Bông's mum is a nurse. She works at a hospital. Every morning, they walk to the bus. They sit on the bus and talk. The wheels go round and round. \"It's easy!\" says Bông.",
+      "video": "Tìm YouTube: \"The Wheels on the Bus go round and round nursery rhyme\""
+     },
+     "zh": {
+      "tu": "Mới: 走路 zǒulù (= walk), 走 zǒu (= walk, go), 上班 shàngbān (= go to work) | Ôn: 上学 shàngxué | Ôn (nối Unit 6): 护士 hùshi, 厨师 chúshī, 医院 yīyuàn, 消防员 xiāofángyuán | Ôn: 你的 nǐ de, 滑板 huábǎn | Nghe làm quen (có tranh, không kiểm tra): 容易 róngyì (= easy), 轮子 lúnzi (= wheels), 转 zhuàn (= go round), 钓鱼 diàoyú (= go fishing)",
+      "cum": "走路去公园 zǒulù qù gōngyuán / 去上班 qù shàngbān / 去上学 qù shàngxué / 开车去上班 kāichē qù shàngbān",
+      "cau": "[Cầu nối] I walk to the park. ↔ 我走路去公园。(Wǒ zǒulù qù gōngyuán.) [giống: walk ↔ 走路 · khác: không nói by walk; tiếng Trung cũng không nói 坐走路] / 我走路去公园。(Wǒ zǒulù qù gōngyuán.) / 妈妈是护士，她坐公共汽车去上班。(Māma shì hùshi, tā zuò gōnggòng qìchē qù shàngbān.) / 骑自行车很容易！(Qí zìxíngchē hěn róngyì!) / 公共汽车的轮子转呀转。(Gōnggòng qìchē de lúnzi zhuàn ya zhuàn.) (= The wheels go round and round.) / 这是你的自行车吗？是。(Zhè shì nǐ de zìxíngchē ma? Shì.) (= Is this bike yours? Yes, it is.) / 我滑滑板去公园，很容易！(Wǒ huá huábǎn qù gōngyuán, hěn róngyì!) / 我爷爷骑自行车去钓鱼。(Wǒ yéye qí zìxíngchē qù diàoyú.)",
+      "truyen": "Bông和妈妈 — Bông的妈妈是护士，她在医院工作。每天早上，Bông和妈妈走路去坐公共汽车。她们在公共汽车上说话。轮子转呀转。Bông说：“很容易！”（Bông de māma shì hùshi, tā zài yīyuàn gōngzuò. Měi tiān zǎoshang, Bông hé māma zǒulù qù zuò gōnggòng qìchē. Tāmen zài gōnggòng qìchē shang shuōhuà. Lúnzi zhuàn ya zhuàn. Bông shuō: “Hěn róngyì!”）",
+      "video": "Tìm YouTube: \"公共汽车的轮子转呀转 儿歌\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "sit, drive, by, easy, round, yours | Ôn: ride, walk, go to work, go to school, driver, bus, bike, car",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" · Chuyển ý: \"Now, let's move! 现在我们动一动！\" · Khen: \"Well done! 真棒！\" · Câu mới buổi này: \"Come here, please. 请过来。\" · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): by bike / 骑自行车, sit / 坐 (坐 cũng là đi xe buýt, tàu) 1) Trò Ngồi, cưỡi hay lái?: cô nói phương tiện (bus / bike / car / motorbike), con làm động tác sit / ride / drive và nói: I take a bus. / I ride a bike. / I drive a car. 2) Đối chiếu NL9: I go to school by bike. ↔ 我骑自行车去上学。 – kéo \"by bike\" về cuối câu tiếng Anh. 3) Đúng hay sai: \"I go to school by walk.\" (sai) → I walk to school. / \"I go by a bike.\" (sai) → by bike. 4) Starters Nghe phần 4 (mẫu): tranh phố đen trắng; con nghe và tô màu. Example: Can you see the bus? Colour it yellow. ① Colour the boy's baseball cap red. ② Colour the skateboard blue. ③ Colour the lorry under the tree green. ④ Colour the taxi next to the bookshop orange. ⑤ Colour the helicopter grey. [Chuyển ngữ] Rối Xiaomei nói \"我骑自行车去公园。\", con nói lại cho rối Leo: I ride my bike to the park. (NL5) [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo kể: \"My dad is a driver and he drives a bus every day. My mum walks to work. I go to school by bike.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: Leo的爸爸是司机，他每天开公共汽车。他妈妈走路去上班。Leo骑自行车去上学。 (Leo de bàba shì sījī, tā měi tiān kāi gōnggòng qìchē. Tā māma zǒulù qù shàngbān. Leo qí zìxíngchē qù shàngxué.)",
+     "truyen": "How Do You Go? — Leo rides his bike to school. Anna takes a bus. Bông's mum walks to work. Leo's dad drives a car. \"Is this bike yours, Leo?\" \"Yes, it is!\"",
+     "baihat": "How Do You Go to School? — đoạn Car · Dad: This is the way Dad drives a car, / drives a car, drives a car, / This is the way Dad drives a car, / Dad drives to work! · ôn đoạn Bike: This is the way I ride a bike, / ride a bike, ride a bike, / This is the way I ride a bike, / I go to school by bike! · ôn vè: Train goes choo-choo, plane goes zoom, Bike goes ring-ring, car goes vroom!"
+    },
+    "zh": {
+     "flash": "坐 zuò, 骑 qí, 开 kāi, 走路 zǒulù, 走 zǒu, 上班 shàngbān | Ôn: 上学 shàngxué, 司机 sījī | Ôn: 你的 nǐ de, 公共汽车 gōnggòng qìchē, 自行车 zìxíngchē, 汽车 qìchē | Nghe làm quen: 容易 róngyì, 轮子 lúnzi",
+     "slide": "1) Kéo động từ vào đúng xe: 坐 → 公共汽车, 火车, 飞机 / 骑 → 自行车, 摩托车 / 开 → 汽车. 2) Đối chiếu NL9 (cùng câu bài 2 phần tiếng Anh): 我骑自行车去上学。↔ I go to school by bike. – kéo 骑自行车 lên trước 去. 3) Chép 车 trong 汽车, 火车 vào ô. 4) YCT口试（初级）第二部分 听后回答 (mẫu): cô hỏi, từng con trả lời ngắn: ① 你坐公共汽车去上学吗？(Nǐ zuò gōnggòng qìchē qù shàngxué ma?) — 不，我走路去。(Bù, wǒ zǒulù qù.) ② 你爸爸开车去上班吗？(Nǐ bàba kāichē qù shàngbān ma?) — 是，他开车去。(Shì, tā kāichē qù.) ③ 你骑自行车吗？(Nǐ qí zìxíngchē ma?) — 骑，我骑自行车去公园。(Qí, wǒ qí zìxíngchē qù gōngyuán.) ④ 你喜欢坐火车吗？(Nǐ xǐhuan zuò huǒchē ma?) — 喜欢。(Xǐhuan.) ⑤ 你妈妈骑摩托车吗？(Nǐ māma qí mótuōchē ma?) — 不，她走路去上班。(Bù, tā zǒulù qù shàngbān.) 5) Trò Ngồi, cưỡi hay lái? bằng tiếng Trung: cô nói xe, con làm động tác và nói 我坐公共汽车。/ 我骑自行车。/ 我开车。 6) Đúng hay sai: 我坐走路去学校 (sai → 我走路去学校) / 我骑自行车去上学 (đúng). 7) Cùng tranh phố đen trắng, nghe câu tiếng Trung và tô màu: 公共汽车是黄色的。帽子是红色的。滑板是蓝色的。直升机是灰色的。 [Cầu nối Anh – Trung] Cùng tranh bạn đạp xe: Leo \"I go to school by bike.\" – Xiaomei \"我骑自行车去上学。\"; khác: by bike ở cuối ↔ 骑自行车 đứng trước 去; tiếng Anh take / ride / drive ↔ tiếng Trung 坐 / 骑 / 开.",
+     "truyen": "你怎么去？ — Leo骑自行车去上学。Anna坐公共汽车。Bông的妈妈走路去上班。Leo的爸爸开车。“Leo，这是你的自行车吗？”“是！”（Leo qí zìxíngchē qù shàngxué. Anna zuò gōnggòng qìchē. Bông de māma zǒulù qù shàngbān. Leo de bàba kāichē. “Leo, zhè shì nǐ de zìxíngchē ma?” “Shì!”）",
+     "baihat": "ôn vè ZH: 火车呜呜呜，飞机嗡嗡嗡，自行车铃铃铃，汽车嘀嘀嘀！(Huǒchē wūwūwū, fēijī wēngwēngwēng, zìxíngchē línglínglíng, qìchē dīdīdī!) · 你怎么去上学？— đoạn Car · Dad: 爸爸这样开汽车，/ 开汽车，开汽车，/ 爸爸这样开汽车，/ 爸爸开车去上班！ · ôn đoạn Bike: 我这样骑自行车，/ 骑自行车，骑自行车，/ 我这样骑自行车，/ 我骑自行车去上学！"
+    }
+   }
+  },
+  {
+   "buoi": 31,
+   "unit": 7,
+   "label_buoi": "Buổi dạy 31. Unit 7 · Transports · 交通工具 – Làm quen: truyện How Do We Go?; vẽ đường đến trường; nói theo vần; tô 走",
+   "web": [
+    {
+     "ngay": 61,
+     "label": "Ngày 61. Unit 7 · Ai đi, đi đâu (nhóm 3, nối Unit 5 và Unit 6): Bắc Kinh, Thượng Hải · Luyện đề YCT2 Đọc phần 3",
+     "en": {
+      "tu": "Mới: Beijing, Shanghai, boy, trip | Ôn: how, driver, park, shop, tomorrow",
+      "cum": "take a train to Beijing / take a plane to Shanghai / how to go / a trip to Beijing",
+      "cau": "How does he go to work? / He takes a bus to work. / I take a train to Beijing. / The boy on the bike is Leo. / [Ngữ pháp: us] Come on a trip with us! / Xiaomei takes her camera on the trip. / The boy with the baseball cap is Leo. / How does he go to work? – Pardon? – How does he go to work? – He takes a bus. / Thank you! – You're welcome! / I take a bus. And you?",
+      "truyen": "A Trip to Beijing — Tomorrow, Xiaomei's family goes on a trip. They take a train to Beijing. Xiaomei's dad takes a plane to Shanghai to work. \"Come with us, Bông!\" says Xiaomei.",
+      "video": "Tìm YouTube: \"How does he go to work? kids transport song\""
+     },
+     "zh": {
+      "tu": "Mới: 北京 Běijīng (= Beijing), 上海 Shànghǎi (= Shanghai), 怎么 zěnme (= how), 不客气 bú kèqi (= you're welcome), 呢 ne (= and you?) | Ôn: 司机 sījī, 公园 gōngyuán, 商店 shāngdiàn | Ôn: 帽子 màozi | Nghe làm quen: 照相机 zhàoxiàngjī (= camera), 旅行 lǚxíng (= trip)",
+      "cum": "坐火车去北京 zuò huǒchē qù Běijīng / 坐飞机去上海 zuò fēijī qù Shànghǎi / 怎么去 zěnme qù / 你呢 nǐ ne",
+      "cau": "[Cầu nối] I take a train to Beijing. ↔ 我坐火车去北京。(Wǒ zuò huǒchē qù Běijīng.) [giống: Beijing ↔ 北京, Shanghai ↔ 上海, tên tiếng Anh viết theo pinyin · khác: take a train ↔ 坐火车 đứng trước 去] / 他怎么去上班？(Tā zěnme qù shàngbān?) / 他坐公共汽车去上班。(Tā zuò gōnggòng qìchē qù shàngbān.) / 我坐火车去北京。(Wǒ zuò huǒchē qù Běijīng.) / [Ngữ pháp: 呢 hỏi lại] 我坐公共汽车，你呢？(Wǒ zuò gōnggòng qìchē, nǐ ne?) / 谢谢！——不客气！(Xièxie! — Bú kèqi!) (= Thank you! – You're welcome!) / [YCT2 Đọc phần 3 (mẫu): nối câu hỏi với câu trả lời A–E] 1) 你怎么去北京？(Nǐ zěnme qù Běijīng?) 2) 你爸爸去哪儿？(Nǐ bàba qù nǎr?) 3) 谢谢你！(Xièxie nǐ!) 4) 我坐公共汽车，你呢？(Wǒ zuò gōnggòng qìchē, nǐ ne?) 5) 你几点去上学？(Nǐ jǐ diǎn qù shàngxué?) / A 不客气！(Bú kèqi!) B 我骑自行车。(Wǒ qí zìxíngchē.) C 坐火车去。(Zuò huǒchē qù.) D 七点零五分。(Qī diǎn líng wǔ fēn.) E 他去上海工作。(Tā qù Shànghǎi gōngzuò.) [Đáp án: 1C 2E 3A 4B 5D] / 骑自行车的是Leo。(Qí zìxíngchē de shì Leo.) (= The boy on the bike is Leo.) / Xiaomei带照相机去北京。(Xiaomei dài zhàoxiàngjī qù Běijīng.) (= Xiaomei takes her camera on the trip.) / 戴帽子的是Leo。(Dài màozi de shì Leo.) (= The boy with the baseball cap is Leo.) / 他怎么去上班？——请再说一次。——他怎么去上班？——坐公共汽车。(Tā zěnme qù shàngbān? — Qǐng zài shuō yí cì. — Tā zěnme qù shàngbān? — Zuò gōnggòng qìchē.)",
+      "truyen": "去北京 — 明天，Xiaomei和家人去旅行。他们坐火车去北京。Xiaomei的爸爸坐飞机去上海工作。Xiaomei说：“Bông，和我们一起去吧！”（Míngtiān, Xiaomei hé jiārén qù lǚxíng. Tāmen zuò huǒchē qù Běijīng. Xiaomei de bàba zuò fēijī qù Shànghǎi gōngzuò. Xiaomei shuō: “Bông, hé wǒmen yìqǐ qù ba!”）",
+      "video": "Tìm YouTube: \"你怎么去 交通工具 儿童 中文 动画\""
+     }
+    },
+    {
+     "ngay": 62,
+     "label": "Ngày 62. Unit 7 · Ôn không tranh, vòng Từ vựng + truyện 1 How does my family go? · Luyện nói YCT口试 phần 1",
+     "en": {
+      "tu": "Ôn (không tranh): car, bus, bicycle, motorbike, train, plane, taxi, helicopter, ship, lorry, truck, sit, drive, Beijing, Shanghai",
+      "cum": "take a bus / ride a bike / drive a car / take a plane / ride a motorbike / take a train / walk to the park",
+      "cau": "I take a plane to Shanghai. / I ride a motorbike to the shop. It takes ten minutes. / [Ngữ pháp: drives – thêm s] My dad drives to work. / How does Mom go to work? She rides a motorbike to work.",
+      "truyen": "How does my family go? — My dad is a driver. He drives to work. My mom is a teacher. She rides a motorbike to school. I take a bus to school. My older brother walks to the park.",
+      "video": "Transportation Song – Easy Monkey Songs – https://www.youtube.com/watch?v=UQkoukhczT8"
+     },
+     "zh": {
+      "tu": "Ôn (không tranh, ẩn pinyin): 汽车 qìchē, 公共汽车 gōnggòng qìchē, 自行车 zìxíngchē, 摩托车 mótuōchē, 火车 huǒchē, 飞机 fēijī, 坐 zuò, 骑 qí, 开 kāi, 走路 zǒulù, 上班 shàngbān | Ôn: 分钟 fēnzhōng",
+      "cum": "坐公共汽车 zuò gōnggòng qìchē / 骑自行车 qí zìxíngchē / 开车 kāichē / 坐飞机 zuò fēijī / 骑摩托车 qí mótuōchē / 坐火车 zuò huǒchē",
+      "cau": "[Cầu nối] My dad drives to work. ↔ 我爸爸开车去上班。(Wǒ bàba kāichē qù shàngbān.) [khác: drives thêm -s ↔ 开 không đổi; to work ↔ 去上班] / 我坐飞机去上海。(Wǒ zuò fēijī qù Shànghǎi.) / 我骑摩托车去商店，要十分钟。(Wǒ qí mótuōchē qù shāngdiàn, yào shí fēnzhōng.) / 妈妈怎么去上班？她骑摩托车去上班。(Māma zěnme qù shàngbān? Tā qí mótuōchē qù shàngbān.) / 我走路去公园。(Wǒ zǒulù qù gōngyuán.) / [YCT口试（初级）第一部分 听后重复 (mẫu): nghe một câu, nói lại 1 lần, ghi âm trên Trang luyện nói, ~5 phút] 1) 我坐公共汽车去上学。(Wǒ zuò gōnggòng qìchē qù shàngxué.) 2) 我爸爸开车去上班。(Wǒ bàba kāichē qù shàngbān.) 3) 我哥哥骑自行车。(Wǒ gēge qí zìxíngchē.) 4) 我们坐火车去北京。(Wǒmen zuò huǒchē qù Běijīng.) 5) 我走路去公园。(Wǒ zǒulù qù gōngyuán.) / [Chuyển ngữ] [nghe Leo nói tiếng Anh, nói lại 1 câu bằng tiếng Trung cho Xiaomei, ghi âm] Leo: \"My dad drives to work.\" → 我爸爸开车去上班。(Wǒ bàba kāichē qù shàngbān.)",
+      "truyen": "我家人怎么去？ — 我爸爸是司机。他开车去上班。我妈妈是老师。她骑摩托车去学校。我坐公共汽车去上学。我哥哥走路去公园。（Wǒ bàba shì sījī. Tā kāichē qù shàngbān. Wǒ māma shì lǎoshī. Tā qí mótuōchē qù xuéxiào. Wǒ zuò gōnggòng qìchē qù shàngxué. Wǒ gēge zǒulù qù gōngyuán.）",
+      "video": "学习交通工具 Car, Bus, Airplane – AliMiMi – https://www.youtube.com/watch?v=R2pxIKVsuzQ"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Beijing, Shanghai, boy, trip, how | Ôn: driver, park, shop, train, plane, bus | Ôn: You're welcome, And you?",
+     "slide": "[Lời cô] Vào bài: \"Good afternoon, class! 同学们好！\" · Chuyển ý: \"Now, let's draw the way. 现在我们画一画去学校的路。\" · Khen: \"Great! 真好！\" · Câu mới buổi này: \"Line up, please. 请排队。\" · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): trip / 旅行, Beijing – Shanghai (chỉ trên bản đồ) 1) Đọc How Do We Go? theo câu; con vẽ đường đi của Leo, Anna, Bông lên bản đồ lớp và gắn thẻ phương tiện. 2) Hỏi – đáp: How does he go to work? – He takes a bus to work. (tranh: bác sĩ đi ô tô, đầu bếp đi xe buýt, cô giáo đi xe máy); rồi con nói cách đi thật của mình và hỏi lại bạn: I take a bus. And you? 3) Âm /aɪ/ trong bike, ride, drive: nghe chọn từ có /aɪ/ (bike / bus / ride / drive / train). 4) Starters Đọc – viết phần 5 (mẫu): 3 tranh truyện How does my family go?, trả lời bằng 1 từ. Example: Who is a driver? – (my) dad ① What does Mom ride to school? – (a) motorbike ② How does the boy go to school? – (by) bus ③ Where does the older brother walk? – (to the) park ④ What colour is the bus? – yellow. 5) Starters Nói phần 3 (mẫu): thẻ đồ vật skateboard, baseball cap, camera, radio; cô hỏi What's this? – It's a skateboard. / Have you got a skateboard? / What colour is your baseball cap? / Do you like baseball? – con nghe chưa rõ thì nói Pardon?, cô hỏi lại.",
+     "truyen": "How Do We Go? — Leo rides a bike to school. Anna takes a bus to school. Bông walks to school. Dad drives to work. On Sunday, Xiaomei takes a train to Beijing.",
+     "baihat": "Limerick: I go to school by bus, bus, bus, My friends come too and sit with us! (vần bus – us) · How Do You Go to School? — đoạn Train: This is the way we take a train, / take a train, take a train, / This is the way we take a train, / We take a train to Beijing! · đoạn Plane: This is the way we take a plane, / take a plane, take a plane, / This is the way we take a plane, / We take a plane to Shanghai! · ôn vè: Train goes choo-choo, plane goes zoom, Bike goes ring-ring, car goes vroom!"
+    },
+    "zh": {
+     "flash": "北京 Běijīng, 上海 Shànghǎi, 怎么 zěnme, 不客气 bú kèqi, 呢 ne | Ôn: 司机 sījī, 公园 gōngyuán, 商店 shāngdiàn, 火车 huǒchē, 飞机 fēijī | Nghe làm quen: 男孩 nánhái, 旅行 lǚxíng (= trip), 去北京旅行 qù Běijīng lǚxíng (= a trip to Beijing)",
+     "slide": "1) Thanh điệu: 坐 zuò (4), 骑 qí (2), 开 kāi (1); bẫy 骑 qí ≠ 七 qī, 坐 zuò ≠ 走 zǒu – nghe chọn đúng. 2) Hỏi lại bằng 呢: 我坐公共汽车，你呢？ – bạn đáp cách đi thật của mình. 3) Tô 走: người vung tay, bàn chân đỏ đang bước; 7 nét (ngang, sổ, ngang, sổ, ngang, phẩy, mác); câu hỏi sau bản tiếng Anh: Xiaomei星期天去哪儿？ 4) YCT口试（初级）第三部分 看图说话 (mẫu): tranh gia đình đi các phương tiện; cô hỏi 请说一说这张图。(Qǐng shuō yi shuō zhè zhāng tú.) – từng con nói 2–3 câu: 爸爸开车去上班。妈妈骑摩托车。我坐公共汽车去上学。(Bàba kāichē qù shàngbān. Māma qí mótuōchē. Wǒ zuò gōnggòng qìchē qù shàngxué.) Cô ghi âm. 5) Đọc 我们怎么去？ và vẽ đường đi của Leo, Anna, Bông lên bản đồ lớp, gắn thẻ phương tiện. 6) Hỏi – đáp theo tranh: 医生怎么去上班？— 他开车去上班。厨师怎么去上班？— 他坐公共汽车去上班。 7) Cùng thẻ đồ vật của phần tiếng Anh: 这是什么？— 滑板 / 帽子；你有滑板吗？– nghe chưa rõ thì nói: 请再说一次。 [Cầu nối Anh – Trung] Cùng bản đồ Trung Quốc nhỏ: Beijing ↔ 北京, Shanghai ↔ 上海 (tên tiếng Anh viết theo pinyin, con nghe thấy âm gần giống); Leo \"I take a train to Beijing.\" – Xiaomei \"我坐火车去北京。\". [Chuyển ngữ] Rối Leo nói \"Xiaomei takes a train to Beijing.\", con nói lại cho bà của Xiaomei (chỉ hiểu tiếng Trung): Xiaomei坐火车去北京。(NL6) [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo kể: \"Anna's family are going on a trip on Sunday. They're taking the train to Beijing. Her dad isn't going with them – he's flying to Shanghai for work.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 星期天，Anna和家人坐火车去北京。她爸爸坐飞机去上海工作。 (Xīngqītiān, Anna hé jiārén zuò huǒchē qù Běijīng. Tā bàba zuò fēijī qù Shànghǎi gōngzuò.)",
+     "truyen": "我们怎么去？ — Leo骑自行车去上学。Anna坐公共汽车去上学。Bông走路去上学。爸爸开车去上班。星期天，Xiaomei坐火车去北京。（Leo qí zìxíngchē qù shàngxué. Anna zuò gōnggòng qìchē qù shàngxué. Bông zǒulù qù shàngxué. Bàba kāichē qù shàngbān. Xīngqītiān, Xiaomei zuò huǒchē qù Běijīng.）",
+     "baihat": "Limerick: 我坐公共汽车去上学，嘀嘀嘀！朋友和我坐一起！(Wǒ zuò gōnggòng qìchē qù shàngxué, dīdīdī! Péngyou hé wǒ zuò yìqǐ!) (vần dī – qǐ) · 你怎么去上学？— đoạn Train: 我们这样坐火车，/ 坐火车，坐火车，/ 我们这样坐火车，/ 坐火车去北京！ · đoạn Plane: 我们这样坐飞机，/ 坐飞机，坐飞机，/ 我们这样坐飞机，/ 坐飞机去上海！ · ôn vè: 火车呜呜呜，飞机嗡嗡嗡，自行车铃铃铃，汽车嘀嘀嘀！(Huǒchē wūwūwū, fēijī wēngwēngwēng, zìxíngchē línglínglíng, qìchē dīdīdī!)"
+    }
+   }
+  },
+  {
+   "buoi": 32,
+   "unit": 7,
+   "label_buoi": "Buổi dạy 32. Unit 7 · Transports · 交通工具 – Vận dụng: đọc, diễn How does my family go?; khảo sát lớp; vẽ đường đi lên bản đồ",
+   "web": [
+    {
+     "ngay": 63,
+     "label": "Ngày 63. Unit 7 · Truyện 2 Our weekend trip + chuyển ngữ (NL5, NL7, PS-2) · Luyện đề Starters Đọc – viết phần 3",
+     "en": {
+      "tu": "Ôn: train, plane, bus, bicycle, Beijing, Shanghai, trip, zoo, park, restaurant, Saturday, Sunday",
+      "cum": "Dad takes a plane to Shanghai / we take a train to Beijing / how to go to the park / ride bikes to the park",
+      "cau": "On Saturday morning, we take a train to Beijing. / [Ngữ pháp: thời gian đầu câu] In the afternoon, we ride bikes to the park to play. / On Sunday, Dad takes a plane to Shanghai to work. / How does Leo go to school on Wednesday? He takes a bus. / [Starters Đọc – viết phần 3 (mẫu): kéo chữ cái thành từ] Example: c-a-r → car / 1) i-x-a-t → taxi 2) p-i-h-s → ship 3) k-i-b-e → bike 4) p-r-i-t → trip 5) a-o-b-t → boat",
+      "truyen": "Our weekend trip — On Saturday morning, we take a train to Beijing. We go to the zoo to see animals. In the afternoon, we ride bikes to the park to play. Then we take a boat and go fishing. In the evening, we take a bus to the restaurant to eat dinner. On Sunday, Dad takes a plane to Shanghai to work. We take a train home.",
+      "video": "How Do You Go To School? Transportation Song – Wormhole English – https://www.youtube.com/watch?v=Hl9OO-8vJTA"
+     },
+     "zh": {
+      "tu": "Ôn: 火车 huǒchē, 飞机 fēijī, 公共汽车 gōnggòng qìchē, 自行车 zìxíngchē, 北京 Běijīng, 上海 Shànghǎi, 动物园 dòngwùyuán, 公园 gōngyuán, 饭店 fàndiàn | Nghe làm quen: 钓鱼 diàoyú",
+      "cum": "爸爸坐飞机去上海 bàba zuò fēijī qù Shànghǎi / 坐火车去北京 zuò huǒchē qù Běijīng / 怎么去公园 zěnme qù gōngyuán / 骑自行车去公园玩 qí zìxíngchē qù gōngyuán wán",
+      "cau": "[Cầu nối] We take a train home. ↔ 我们坐火车回家。(Wǒmen zuò huǒchē huí jiā.) [giống Unit 5: home không cần to ↔ 回家 không cần 去] / 星期六早上，我们坐火车去北京。(Xīngqīliù zǎoshang, wǒmen zuò huǒchē qù Běijīng.) / 晚上，我们坐公共汽车去饭店吃晚饭。(Wǎnshang, wǒmen zuò gōnggòng qìchē qù fàndiàn chī wǎnfàn.) / 我们坐火车回家。(Wǒmen zuò huǒchē huí jiā.) / [PS-2] 星期三Leo怎么去上学？他坐公共汽车。(Xīngqīsān Leo zěnme qù shàngxué? Tā zuò gōnggòng qìchē.) / 下午，我们骑自行车去公园玩。(Xiàwǔ, wǒmen qí zìxíngchē qù gōngyuán wán.) / 星期天，爸爸坐飞机去上海工作。(Xīngqītiān, bàba zuò fēijī qù Shànghǎi gōngzuò.)",
+      "truyen": "我们去北京 — 星期六早上，我们坐火车去北京。我们去动物园看动物。下午，我们骑自行车去公园玩。然后我们坐船去钓鱼。晚上，我们坐公共汽车去饭店吃晚饭。星期天，爸爸坐飞机去上海工作。我们坐火车回家。（Xīngqīliù zǎoshang, wǒmen zuò huǒchē qù Běijīng. Wǒmen qù dòngwùyuán kàn dòngwù. Xiàwǔ, wǒmen qí zìxíngchē qù gōngyuán wán. Ránhòu wǒmen zuò chuán qù diàoyú. Wǎnshang, wǒmen zuò gōnggòng qìchē qù fàndiàn chī wǎnfàn. Xīngqītiān, bàba zuò fēijī qù Shànghǎi gōngzuò. Wǒmen zuò huǒchē huí jiā.）",
+      "video": "交通工具歌 Chinese Transportation Song – Giggling Panda – https://www.youtube.com/watch?v=5bUXLUlkIHw"
+     }
+    },
+    {
+     "ngay": 64,
+     "label": "Ngày 64. Unit 7 · Phiên dịch nhí + ôn unit (NL6, PS-3) · Luyện đề YCT2 Nghe phần 4",
+     "en": {
+      "tu": "Ôn: taxi, helicopter, ship, lorry, truck, motorbike, sit, drive, easy, round, boy, trip, by",
+      "cum": "take a taxi / ride a motorbike / go to school by bike / walk to school / sit with us",
+      "cau": "[Phiên dịch nhí] Xiaomei: \"我坐飞机去上海。\" → Xiaomei takes a plane to Shanghai. / Anna doesn't walk. / Leo doesn't ride a bike. / How does Anna go to school? She goes to school by bike. / I walk. And you?",
+      "truyen": "Three Friends, Three Ways — Leo, Anna and Bông go to school. One rides a bike, one takes a bus and one walks. Bông walks to school. Anna doesn't walk. Leo doesn't ride a bike. How does Anna go to school? She rides a bike!",
+      "video": "How Do You Go To School? Transportation Song – Wormhole English – https://www.youtube.com/watch?v=Hl9OO-8vJTA"
+     },
+     "zh": {
+      "tu": "Ôn: 出租车 chūzūchē, 直升机 zhíshēngjī, 船 chuán, 卡车 kǎchē, 摩托车 mótuōchē, 坐 zuò, 骑 qí, 开 kāi, 走 zǒu, 怎么 zěnme, 呢 ne",
+      "cum": "坐出租车 zuò chūzūchē / 骑摩托车 qí mótuōchē / 骑自行车去上学 qí zìxíngchē qù shàngxué / 走路去上学 zǒulù qù shàngxué",
+      "cau": "[Cầu nối] How does Anna go to school? ↔ Anna怎么去上学？(Anna zěnme qù shàngxué?) [khác: how + does đứng đầu câu ↔ 怎么 đứng trước 去; tiếng Trung không có does] / [Phiên dịch nhí] Leo: \"I take a bus to school.\" → Leo坐公共汽车去上学。(Leo zuò gōnggòng qìchē qù shàngxué.) / Anna不走路。(Anna bù zǒulù.) / Anna怎么去上学？(Anna zěnme qù shàngxué?) / [Ngữ pháp: 呢] 我走路，你呢？(Wǒ zǒulù, nǐ ne?) / [YCT2 Nghe phần 4 (mẫu): nghe câu hỏi, chọn 1 trong 3 đáp án chữ, ~5 phút] 1) 你怎么去上学？(Nǐ zěnme qù shàngxué?) A 学校 (xuéxiào) B 走路 (zǒulù) C 老师 (lǎoshī) 2) 你爸爸开什么车？(Nǐ bàba kāi shénme chē?) A 出租车 (chūzūchē) B 医院 (yīyuàn) C 下午 (xiàwǔ) 3) 你们坐什么去北京？(Nǐmen zuò shénme qù Běijīng?) A 公园 (gōngyuán) B 星期天 (xīngqītiān) C 火车 (huǒchē) 4) 谁骑自行车？(Shéi qí zìxíngchē?) A 我哥哥 (wǒ gēge) B 自行车 (zìxíngchē) C 很好 (hěn hǎo) 5) 你妈妈几点去上班？(Nǐ māma jǐ diǎn qù shàngbān?) A 上海 (Shànghǎi) B 八点 (bā diǎn) C 飞机 (fēijī) [Đáp án: 1B 2A 3C 4A 5B] / Leo不骑自行车。(Leo bù qí zìxíngchē.)",
+      "truyen": "三个朋友怎么去上学？ — Leo、Anna和Bông去上学：一个骑自行车，一个坐公共汽车，一个走路。Bông走路去上学。Anna不走路。Leo不骑自行车。Anna怎么去上学？她骑自行车去上学！（Leo, Anna hé Bông qù shàngxué: yí ge qí zìxíngchē, yí ge zuò gōnggòng qìchē, yí ge zǒulù. Bông zǒulù qù shàngxué. Anna bù zǒulù. Leo bù qí zìxíngchē. Anna zěnme qù shàngxué? Tā qí zìxíngchē qù shàngxué!）",
+      "video": "交通工具 你怎么去学校？– DinoMomChinese – https://www.youtube.com/watch?v=fAfi5zXmuEg"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn: car, bus, bicycle, motorbike, train, plane, taxi, helicopter, ship, lorry, truck, sit, drive, walk, go to work, You're welcome, easy, round, trip, boy, Beijing, Shanghai",
+     "slide": "[Lời cô] Vào bài: \"Good morning, class! 同学们好！\" · Chuyển ý: \"Now, ask your friends. 现在问问你的同学。\" · Khen: \"Super! 太好了！\" · Câu mới buổi này: \"Be careful! 小心！\" · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): nhắc an toàn giao thông (đội mũ bảo hiểm, đi bộ trên vỉa hè, qua đường cùng người lớn) 1) Đọc và diễn How does my family go?, mỗi con một người trong nhà. 2) Khảo sát lớp (NL6): hỏi 5 bạn \"How do you go to school?\" – đánh dấu vào biểu đồ tranh (bus / bike / car / motorbike / walk); bạn hỏi tiếng Trung thì đáp tiếng Trung. 3) PS-3 trên lớp: three friends, three ways – \"Bông walks to school.\" \"Anna doesn't walk.\" \"Leo doesn't ride a bike.\" → How does Anna go to school? 4) An toàn giao thông: chọn tranh đúng (đội mũ bảo hiểm khi ngồi xe máy, xe đạp; đi bộ trên vỉa hè, qua đường cùng người lớn) rồi nói: I walk with Mum. Vẽ đường từ nhà đến trường lên bản đồ thành phố. 5) Starters Nghe phần 1 (mẫu): tranh bến xe buýt có 7 người, tên ở mép tranh; con nghe và nối tên với người. Example: Leo is the boy on the bike. ① Anna is the girl with the camera. ② Tom is the boy on the skateboard. ③ Lucy is the girl with the baseball cap. ④ Ben is the boy at the bus stop. He catches the bus. ⑤ Bông is the girl. She talks to the driver. 6) Starters Đọc – viết phần 4 (mẫu): khung: train, camera, fishing, skateboard, bus, plane. Example: On Saturday, we take a (0) train to Beijing. ① Dad takes his (1) ___. ② We take a boat and go (2) ___. ③ My brother rides his (3) ___. ④ We take a (4) ___ to the restaurant. ⑤ On Sunday, Dad takes a (5) ___ to Shanghai. (Đáp án: camera, fishing, skateboard, bus, plane) [Chuyển ngữ] Bạn trả lời khảo sát bằng tiếng Trung \"我走路去上学。\", con báo lại cho rối Leo bằng tiếng Anh: Bông walks to school. (NL6) [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo kể: \"In our class survey, Bông walks to school, Anna rides her bike, and Ben takes the bus with his older brother.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: Bông走路去上学。Anna骑自行车去上学。Ben和哥哥坐公共汽车去上学。 (Bông zǒulù qù shàngxué. Anna qí zìxíngchē qù shàngxué. Ben hé gēge zuò gōnggòng qìchē qù shàngxué.)",
+     "truyen": "How does my family go? — My dad is a driver. He drives to work. My mom is a teacher. She rides a motorbike to school. I take a bus to school. My older brother walks to the park. (đọc, diễn; cô hỏi: How does my mom go to school?)",
+     "baihat": "Biểu diễn vè: Train goes choo-choo, plane goes zoom, Bike goes ring-ring, car goes vroom! · How Do You Go to School? cả bài — How Do You Go to School? (giai điệu Here We Go Round the Mulberry Bush) — đoạn Bike: This is the way I ride a bike, / ride a bike, ride a bike, / This is the way I ride a bike, / I go to school by bike! · đoạn Bus: This is the way I take a bus, / take a bus, take a bus, / This is the way I take a bus, / I take a bus to school! · đoạn Car · Dad: This is the way Dad drives a car, / drives a car, drives a car, / This is the way Dad drives a car, / Dad drives to work! · đoạn Train: This is the way we take a train, / take a train, take a train, / This is the way we take a train, / We take a train to Beijing! · đoạn Plane: This is the way we take a plane, / take a plane, take a plane, / This is the way we take a plane, / We take a plane to Shanghai!"
+    },
+    "zh": {
+     "flash": "Ôn: 汽车 qìchē, 公共汽车 gōnggòng qìchē, 自行车 zìxíngchē, 摩托车 mótuōchē, 火车 huǒchē, 飞机 fēijī, 坐 zuò, 骑 qí, 开 kāi, 走 zǒu, 走路 zǒulù, 上班 shàngbān, 北京 Běijīng, 上海 Shànghǎi, 不客气 bú kèqi, 出租车 chūzūchē, 直升机 zhíshēngjī, 船 chuán, 卡车 kǎchē | Nghe làm quen: 容易 róngyì, 轮子 lúnzi, 男孩 nánhái",
+     "slide": "1) Đọc 我家人怎么去？ có pinyin, hỏi chéo sau bản tiếng Trung: How does my mom go to school? 2) Khảo sát lớp bằng tiếng Trung: 你怎么去上学？ – 我……去上学。 rồi cảm ơn: 谢谢！– 不客气！ 3) Bắt bẫy NL4: 我坐自行车 (sai động từ → 骑) / 我去上学骑自行车 (sai trật tự → 我骑自行车去上学); chép 车 và 走 vào ô, dán lên đường đi trên bản đồ. 4) YCT2 Nghe phần 1 (mẫu): nghe cụm, chọn ✓ hay ✗ với tranh: ① [tranh tàu hỏa] 坐火车 (zuò huǒchē) ✓ ② [tranh xe máy] 骑自行车 (qí zìxíngchē) ✗ ③ [tranh taxi] 开出租车 (kāi chūzūchē) ✓ ④ [tranh bạn đi bộ] 走路去上学 (zǒulù qù shàngxué) ✓ ⑤ [tranh tàu thủy] 坐飞机去上海 (zuò fēijī qù Shànghǎi) ✗ 5) PS-3 bằng tiếng Trung: Bông走路去上学。Anna不走路。Leo不骑自行车。→ Anna怎么去上学？ 6) An toàn giao thông: chọn tranh đúng rồi nói 我和妈妈一起走路。小心！ 7) Cùng tranh bến xe buýt của bài nghe tiếng Anh: nghe và nối tên (nghe làm quen): Anna在拍照。Tom在滑滑板。Lucy戴着帽子。Bông和司机说话。 [Cầu nối Anh – Trung] Cùng biểu đồ khảo sát: con đọc kết quả bằng tiếng Anh (Five friends take a bus.) rồi bằng tiếng Trung (五个朋友坐公共汽车。); giống: con số; khác: friends có -s ↔ 朋友 không đổi.",
+     "truyen": "我家人怎么去？ — 我爸爸是司机。他开车去上班。我妈妈是老师。她骑摩托车去学校。我坐公共汽车去上学。我哥哥走路去公园。（Wǒ bàba shì sījī. Tā kāichē qù shàngbān. Wǒ māma shì lǎoshī. Tā qí mótuōchē qù xuéxiào. Wǒ zuò gōnggòng qìchē qù shàngxué. Wǒ gēge zǒulù qù gōngyuán.）",
+     "baihat": "Biểu diễn vè ZH: 火车呜呜呜，飞机嗡嗡嗡，自行车铃铃铃，汽车嘀嘀嘀！(Huǒchē wūwūwū, fēijī wēngwēngwēng, zìxíngchē línglínglíng, qìchē dīdīdī!) · 你怎么去上学？cả bài — 你怎么去上学？(giai điệu Here We Go Round the Mulberry Bush) — đoạn Bike: 我这样骑自行车，/ 骑自行车，骑自行车，/ 我这样骑自行车，/ 我骑自行车去上学！ · đoạn Bus: 我这样坐公共汽车，/ 坐公共汽车，坐公共汽车，/ 我这样坐公共汽车，/ 我坐公共汽车去上学！ · đoạn Car · Dad: 爸爸这样开汽车，/ 开汽车，开汽车，/ 爸爸这样开汽车，/ 爸爸开车去上班！ · đoạn Train: 我们这样坐火车，/ 坐火车，坐火车，/ 我们这样坐火车，/ 坐火车去北京！ · đoạn Plane: 我们这样坐飞机，/ 坐飞机，坐飞机，/ 我们这样坐飞机，/ 坐飞机去上海！"
+    }
+   }
+  },
+  {
+   "buoi": 33,
+   "unit": 8,
+   "label_buoi": "Buổi dạy 33. Unit 8 · At the zoo · 在动物园 – Hiểu: gọi tên con vật sở thú; hỏi đây là con gì; tô 高",
+   "web": [
+    {
+     "ngay": 65,
+     "label": "Ngày 65. Unit 8 · Con vật sở thú 1: voi, hổ, hươu cao cổ, rắn, khỉ",
+     "en": {
+      "tu": "Mới: animal, elephant, tiger, giraffe, snake, monkey | Ôn: zoo, long, say, when, grey (US: gray), bat, scary, camera",
+      "cum": "go to the zoo / zoo animals / a small monkey / a big elephant / grey (UK) = gray (US)",
+      "cau": "What animal is this? / This is an elephant. / [Ngữ pháp: a / an] It's a tiger. It's an elephant. / Let's go to the zoo to see animals! / [Ngữ pháp: grey (UK) – gray (US)] The elephant is grey. In the US, it is gray. / Look! A bat! Is it scary? / The snake is scary! / Leo takes a photo with his camera.",
+      "truyen": "At the Zoo Gate — Leo and Xiaomei go to the zoo. \"What animal is this?\" asks Leo. \"It's a tiger!\" says Xiaomei. \"And this is an elephant!\" \"Look! A monkey and a snake!\"",
+      "video": "Let's Go To The Zoo – Super Simple Songs – https://www.youtube.com/watch?v=OwRmivbNgQk"
+     },
+     "zh": {
+      "tu": "Mới: 动物 dòngwù (= animal), 大象 dàxiàng (= elephant), 老虎 lǎohǔ (= tiger), 长颈鹿 chángjǐnglù (= giraffe), 蛇 shé (= snake), 猴子 hóuzi (= monkey) | Ôn: 动物园 dòngwùyuán, 长 cháng, 说 shuō | Ôn: 灰色 huīsè, 怕 pà, 拍照 pāizhào | Nghe làm quen: 蝙蝠 biānfú, 照相机 zhàoxiàngjī (= camera)",
+      "cum": "去动物园 qù dòngwùyuán / 动物园的动物 dòngwùyuán de dòngwù / 小猴子 xiǎo hóuzi / 大大的大象 dàdà de dàxiàng",
+      "cau": "[Cầu nối] What animal is this? ↔ 这是什么动物？(Zhè shì shénme dòngwù?) [giống: what animal ↔ 什么动物 · khác: what đứng đầu, 什么 đứng chỗ câu trả lời] / 这是什么动物？(Zhè shì shénme dòngwù?) / 这是大象。(Zhè shì dàxiàng.) / 那是老虎。(Nà shì lǎohǔ.) / 我们去动物园看动物吧！(Wǒmen qù dòngwùyuán kàn dòngwù ba!) / [grey (UK) – gray (US) ↔ 灰色] 大象是灰色的。(Dàxiàng shì huīsè de.) / 看！蝙蝠！你怕吗？(Kàn! Biānfú! Nǐ pà ma?) / 我怕蛇！(Wǒ pà shé!) (= The snake is scary!) / Leo用照相机拍照。(Leo yòng zhàoxiàngjī pāizhào.) (= Leo takes a photo with his camera.)",
+      "truyen": "在动物园门口 — Leo和Xiaomei去动物园。Leo问：“这是什么动物？”Xiaomei说：“是老虎！”“这是大象！”“看！猴子和蛇！”（Leo hé Xiaomei qù dòngwùyuán. Leo wèn: “Zhè shì shénme dòngwù?” Xiaomei shuō: “Shì lǎohǔ!” “Zhè shì dàxiàng!” “Kàn! Hóuzi hé shé!”）",
+      "video": "Zoo Animals 动物园动物 – Galaxy Kids Chinese – https://www.youtube.com/watch?v=oMkR6NC7cz0"
+     }
+    },
+    {
+     "ngay": 66,
+     "label": "Ngày 66. Unit 8 · Con vật sở thú 2: gấu, ngựa vằn, sư tử, gấu trúc · Luyện đề Starters Đọc – viết phần 2",
+     "en": {
+      "tu": "Mới: bear, zebra, lion, panda | Ôn: present, card, yesterday, date, crocodile, dirty",
+      "cum": "a big bear / a zebra and a lion / a black and white panda / a lot of animals",
+      "cau": "Is it a lion? No, it's a bear. / The zebra is black and white. / [Ngữ pháp: a lot of] There are a lot of animals at the zoo. / Which animal do you like? I like the panda. / [Starters Đọc – viết phần 2 (mẫu): nhìn tranh sở thú, đọc câu, viết yes hoặc no] Example: There are two bears. – yes / 1) The crocodile is in the water. – yes 2) The zebra is grey. – no 3) The lion is next to the tiger. – yes 4) There is a bat in the tree. – yes 5) The bear is dirty. – yes / [Chuyển ngữ] [nghe Xiaomei nói tiếng Trung, nói lại 1 câu bằng tiếng Anh cho Leo, ghi âm] Xiaomei: \"我喜欢熊猫。\" → I like the panda. / Pandas live in China.",
+      "truyen": "Which Animal? — Xiaomei likes the panda. Leo likes the lion. \"Is it a bear?\" \"No, it's a panda!\" The zebra is black and white, too. There are a lot of animals at the zoo!",
+      "video": "Tìm YouTube: \"zoo animals bear zebra lion panda vocabulary for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 熊猫 xióngmāo (= panda), 狮子 shīzi (= lion), 斑马 bānmǎ (= zebra), 熊 xióng (= bear) | Ôn: 中国 Zhōngguó, 卡片 kǎpiàn | Nghe làm quen: 脏 zāng (= dirty), 鳄鱼 èyú (= crocodile)",
+      "cum": "大熊 dà xióng / 斑马和狮子 bānmǎ hé shīzi / 黑白的熊猫 hēibái de xióngmāo / 很多动物 hěn duō dòngwù",
+      "cau": "[Cầu nối] I like the panda. ↔ 我喜欢熊猫。(Wǒ xǐhuan xióngmāo.) [giống: Ai – thích – gì · mẹo: 熊猫 = 熊 (bear) + 猫 (cat)] / 这是熊吗？不是，这是熊猫。(Zhè shì xióng ma? Bú shì, zhè shì xióngmāo.) / 熊猫在中国。(Xióngmāo zài Zhōngguó.) / 动物园里有很多动物。(Dòngwùyuán lǐ yǒu hěn duō dòngwù.) / 你喜欢什么动物？我喜欢熊猫。(Nǐ xǐhuan shénme dòngwù? Wǒ xǐhuan xióngmāo.) / 这是狮子吗？不是，这是熊。(Zhè shì shīzi ma? Bú shì, zhè shì xióng.) / 斑马是黑白的。(Bānmǎ shì hēibái de.)",
+      "truyen": "你喜欢什么动物？ — Xiaomei喜欢熊猫。Leo喜欢狮子。“这是熊吗？”“不是，这是熊猫！”斑马也是黑白的。动物园里有很多动物！（Xiaomei xǐhuan xióngmāo. Leo xǐhuan shīzi. “Zhè shì xióng ma?” “Bú shì, zhè shì xióngmāo!” Bānmǎ yě shì hēibái de. Dòngwùyuán lǐ yǒu hěn duō dòngwù!）",
+      "video": "与动物一起唱歌学习 – Swoop Woops – https://www.youtube.com/watch?v=usZcsXTK6vM"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "animal, elephant, tiger, giraffe, snake, monkey, bear, zebra, lion, panda | Ôn: zoo | Từ thi: crocodile, bat, goat, grey (gray), scary",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" · Chuyển ý: \"Now, let's go to the zoo! 现在我们去动物园吧！\" · Khen: \"Excellent! 太好了！\" · Câu mới buổi này: \"What animal is this? 这是什么动物？\" · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): zebra / 斑马, panda / 熊猫 (gấu trúc) 1) Cổng sở thú (nối Unit 5): Where are you going? – I go to the zoo to see animals. 2) Trò Bóng con vật: cô chiếu bóng đen, con đoán: It's an elephant! / It's a giraffe! (6 bóng: elephant, tiger, giraffe, snake, monkey, lion). 3) Nhìn tranh chọn từ (6 câu): bear / zebra / panda / lion / tiger / monkey; phương án nhiễu bear – panda. 4) Starters Nói phần 2 (mẫu): tranh to sở thú; cô hỏi: What's this? – It's a crocodile. / How many monkeys are there? – Three. / What colour is the elephant? – Grey (US: gray). / Is the bat scary? – Yes! – con trả lời 1 từ hoặc 1 câu ngắn. 5) Starters Nói phần 1 (mẫu): cùng tranh, 4 thẻ con vật: Put the bat in the tree. / Put the crocodile next to the snake. / Put the goat under the tree. / Put the monkey on the elephant. – cô nói Choose a card and put it in the picture!",
+     "truyen": "Hello, Zoo! — Leo and Xiaomei are at the zoo. They see a lion and a tiger. They see a bear, a zebra and a panda. \"What animal is this?\" asks Xiaomei. \"It's a giraffe!\" says Leo.",
+     "baihat": "đoạn 2: The tiger is big, the snake is long, / the monkey is small and cute, / the giraffe is tall, so very tall – / Hello, hello, zoo! · Vè: Elephant, elephant, big and grey, Swing your long nose and come and play!"
+    },
+    "zh": {
+     "flash": "动物 dòngwù, 大象 dàxiàng, 老虎 lǎohǔ, 长颈鹿 chángjǐnglù, 蛇 shé, 猴子 hóuzi, 熊猫 xióngmāo, 狮子 shīzi, 斑马 bānmǎ, 熊 xióng | Ôn: 动物园 dòngwùyuán | Ôn: 灰色 huīsè, 怕 pà | Nghe làm quen: 蝙蝠 biānfú, 鳄鱼 èyú",
+     "slide": "1) Nghe – chạm (6 câu): 大象 / 老虎 / 长颈鹿 / 蛇 / 猴子 / 熊猫. 2) Hỏi – đáp theo bóng con vật: 这是什么动物？— 这是长颈鹿。 3) Tô 高: ngôi tháp mái nhọn, cửa sổ và cổng; 10 nét (chấm, ngang, sổ, ngang gập, ngang, sổ, ngang gập móc, sổ, ngang gập, ngang). 4) YCT2 Nghe phần 2 (mẫu): nghe câu, chọn 1 trong 3 tranh: ① 这是熊猫。(Zhè shì xióngmāo.) ② 那是狮子，不是老虎。(Nà shì shīzi, bú shì lǎohǔ.) ③ 我喜欢斑马。(Wǒ xǐhuan bānmǎ.) ④ 猴子很小。(Hóuzi hěn xiǎo.) ⑤ 我们去动物园看大象。(Wǒmen qù dòngwùyuán kàn dàxiàng.) 5) Cổng sở thú (nối Unit 5): 你去哪儿？— 我去动物园看动物。 6) Cùng tranh to sở thú của phần tiếng Anh: 这是什么？— 这是鳄鱼 (nghe làm quen)。有几只猴子？— 三只。大象是什么颜色的？— 灰色。你怕蝙蝠吗？— 怕！ 7) Nhìn tranh chọn chữ Hán (6 câu): 熊 / 斑马 / 熊猫 / 狮子 / 老虎 / 猴子; phương án nhiễu 熊 – 熊猫. [Cầu nối Anh – Trung] Cùng bóng con vật của phần tiếng Anh: Leo \"It's an elephant!\" – Xiaomei \"是大象！\"; mẹo: 大象 có chữ 大 (big); 熊猫 = 熊 (bear) + 猫 (cat). [Chuyển ngữ] Rối Leo nói \"This is a tiger.\", con nói lại cho rối Xiaomei: 这是老虎。(NL5) [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo kể: \"I'm at the zoo! I can see a tiger and a lion. The elephant is grey, and the zebra is black and white.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: Leo在动物园。他看见老虎和狮子。大象是灰色的，斑马是黑白的。 (Leo zài dòngwùyuán. Tā kànjiàn lǎohǔ hé shīzi. Dàxiàng shì huīsè de, bānmǎ shì hēibái de.)",
+     "truyen": "你好，动物园！ — Leo和Xiaomei在动物园。他们看见狮子和老虎。他们也看见熊、斑马和熊猫。Xiaomei问：“这是什么动物？”Leo说：“是长颈鹿！”（Leo hé Xiaomei zài dòngwùyuán. Tāmen kànjiàn shīzi hé lǎohǔ. Tāmen yě kànjiàn xióng, bānmǎ hé xióngmāo. Xiaomei wèn: “Zhè shì shénme dòngwù?” Leo shuō: “Shì chángjǐnglù!”）",
+     "baihat": "đoạn 2: 老虎很大，蛇很长，/ 小猴子很可爱，/ 长颈鹿很高，高又高——/ 你好，动物园！ · Vè ZH: 大象大象，又大又灰，摇摇长鼻子，来玩来玩！(Dàxiàng dàxiàng, yòu dà yòu huī, yáoyao cháng bízi, lái wán lái wán!)"
+    }
+   }
+  },
+  {
+   "buoi": 34,
+   "unit": 8,
+   "label_buoi": "Buổi dạy 34. Unit 8 · At the zoo · 在动物园 – Hiểu: tả con vật bằng to, nhỏ, dài, ngắn, cao, thấp; chép 高, tô 长",
+   "web": [
+    {
+     "ngay": 67,
+     "label": "Ngày 67. Unit 8 · Tả con vật 1 (nhóm 2, nối Unit 7): cao, thấp, rất, thật là · Luyện đề YCT2 Nghe phần 3",
+     "en": {
+      "tu": "Mới: tall, short, very, so | Ôn: big, small, long | Ôn (nối Unit 7): bus, car, train, plane",
+      "cum": "very big / very long / very tall / very short / so tall",
+      "cau": "The giraffe is tall. / The monkey is small. / [Ngữ pháp: is + tính từ] The tiger is very big. / The giraffe is so tall! / [Ngữ pháp: short = ngắn và thấp] The bus is long. The car is short. I am short. My older brother is tall. / The crocodile is long and very scary! / Can you spell \"tall\"? – T-A-L-L.",
+      "truyen": "Tall and Short — The giraffe is tall. The monkey is short. The bus is long. The car is short. \"Wow! The giraffe is so tall!\" says Leo. \"It is very tall!\"",
+      "video": "Tìm YouTube: \"tall short long big small opposites song for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 矮 ǎi (= short, not tall), 短 duǎn (= short, not long) | Ôn: 高 gāo, 长 cháng, 大 dà, 小 xiǎo, 真 zhēn | Ôn (nối Unit 7): 公共汽车 gōnggòng qìchē, 汽车 qìchē, 火车 huǒchē | Nghe làm quen: 鳄鱼 èyú",
+      "cum": "很大 hěn dà / 很长 hěn cháng / 很高 hěn gāo / 很矮 hěn ǎi / 很短 hěn duǎn",
+      "cau": "[Cầu nối] The giraffe is tall. ↔ 长颈鹿很高。(Chángjǐnglù hěn gāo.) [khác: is + tall ↔ 很 + 高, không nói 是高 · một từ short ↔ hai từ 矮 (người, con vật) / 短 (đồ vật, đuôi)] / 长颈鹿很高。(Chángjǐnglù hěn gāo.) / 猴子很小。(Hóuzi hěn xiǎo.) / [Ngữ pháp: 很 + tính từ, không nói 是高] 老虎很大。(Lǎohǔ hěn dà.) / [Ngữ pháp: 短 ngắn – 矮 thấp] 公共汽车很长，汽车很短。(Gōnggòng qìchē hěn cháng, qìchē hěn duǎn.) 我很矮，哥哥很高。(Wǒ hěn ǎi, gēge hěn gāo.) / [YCT2 Nghe phần 3 (mẫu): nghe hội thoại, chọn 1 trong 3 tranh, ~5 phút] 1) Leo：什么动物很高？Xiaomei：长颈鹿很高。(Leo: Shénme dòngwù hěn gāo? Xiaomei: Chángjǐnglù hěn gāo.) 2) Anna：大象大吗？Bông：大象很大。(Anna: Dàxiàng dà ma? Bông: Dàxiàng hěn dà.) 3) Leo：这是什么动物？Xiaomei：这是蛇，蛇很长。(Leo: Zhè shì shénme dòngwù? Xiaomei: Zhè shì shé, shé hěn cháng.) 4) Bông：猴子大吗？Anna：不大，猴子很小。(Bông: Hóuzi dà ma? Anna: Bú dà, hóuzi hěn xiǎo.) 5) Xiaomei：你哥哥高吗？Leo：他很高，我很矮。(Xiaomei: Nǐ gēge gāo ma? Leo: Tā hěn gāo, wǒ hěn ǎi.) / 鳄鱼很长，我很怕！(Èyú hěn cháng, wǒ hěn pà!) (= The crocodile is long and very scary!) / “高”怎么写？(“Gāo” zěnme xiě?) (= Can you spell \"tall\"?)",
+      "truyen": "高和矮 — 长颈鹿很高。猴子很矮。公共汽车很长，汽车很短。Leo说：“哇！长颈鹿真高！它很高很高！”（Chángjǐnglù hěn gāo. Hóuzi hěn ǎi. Gōnggòng qìchē hěn cháng, qìchē hěn duǎn. Leo shuō: “Wā! Chángjǐnglù zhēn gāo! Tā hěn gāo hěn gāo!”）",
+      "video": "Tìm YouTube: \"高 矮 长 短 反义词 儿歌\""
+     }
+    },
+    {
+     "ngay": 68,
+     "label": "Ngày 68. Unit 8 · Tả con vật 2: cổ, đuôi, chân; its, but",
+     "en": {
+      "tu": "Mới: neck, swing | Ôn: nose, tail, leg, ear, head | Ôn (nối Unit 7): ride, drive, sit",
+      "cum": "a long neck / a long nose / a long tail / swing its tail / swing on the swing",
+      "cau": "[Ngữ pháp: its] Its neck is long. / The elephant swings its long nose. / [Ngữ pháp: but] The monkey is small, but its tail is long. / The snake is long, but it is not tall. / The silly monkey swings its tail. / Leo and Xiaomei talk about the animals. \"The giraffe is so tall!\" – \"Pardon?\" – \"The giraffe is so tall!\" – \"That's correct!\" / The tiger has four legs.",
+      "truyen": "The Monkey's Tail — The monkey is small, but its tail is long. It swings its tail. The giraffe is tall. Its neck is very long. The elephant swings its nose. \"OK, let's go!\" says Leo.",
+      "video": "Tìm YouTube: \"animal body parts neck tail trunk song for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 脖子 bózi (= neck), 尾巴 wěiba (= tail), 腿 tuǐ (= leg), 它 tā (= it, its), 可是 kěshì (= but) | Ôn: 鼻子 bízi, 耳朵 ěrduo, 头 tóu | Ôn (nối Unit 7): 骑 qí, 坐 zuò, 开 kāi | Nghe làm quen (có tranh, không kiểm tra): 摇 yáo (= swing), 傻 shǎ (= silly)",
+      "cum": "长颈鹿的脖子 chángjǐnglù de bózi / 猴子的尾巴 hóuzi de wěiba / 大象的鼻子 dàxiàng de bízi / 四条腿 sì tiáo tuǐ",
+      "cau": "[Cầu nối] The monkey is small, but its tail is long. ↔ 猴子很小，可是它的尾巴很长。(Hóuzi hěn xiǎo, kěshì tā de wěiba hěn cháng.) [giống: but ↔ 可是, its ↔ 它的] / [Ngữ pháp: 's ↔ 的] 大象的鼻子很长。(Dàxiàng de bízi hěn cháng.) / 它的脖子很长。(Tā de bózi hěn cháng.) / [Ngữ pháp: 可是] 猴子很小，可是它的尾巴很长。(Hóuzi hěn xiǎo, kěshì tā de wěiba hěn cháng.) / 老虎有四条腿。(Lǎohǔ yǒu sì tiáo tuǐ.) / [Chuyển ngữ] [nghe Leo nói tiếng Anh, nói lại 1 câu bằng tiếng Trung cho Xiaomei, ghi âm] Leo: \"The giraffe is so tall!\" → 长颈鹿真高！(Chángjǐnglù zhēn gāo!) / 大象摇它的长鼻子。(Dàxiàng yáo tā de cháng bízi.) (= The elephant swings its long nose.) / 蛇很长，可是不高。(Shé hěn cháng, kěshì bù gāo.) / 傻傻的小猴子摇尾巴。(Shǎshǎ de xiǎo hóuzi yáo wěiba.) / 长颈鹿真高！——请再说一次。——长颈鹿真高！——对了！(Chángjǐnglù zhēn gāo! — Qǐng zài shuō yí cì. — Chángjǐnglù zhēn gāo! — Duì le!)",
+      "truyen": "猴子的尾巴 — 猴子很小，可是它的尾巴很长。它摇尾巴。长颈鹿很高，它的脖子很长很长。大象摇鼻子。Leo说：“好，我们走吧！”（Hóuzi hěn xiǎo, kěshì tā de wěiba hěn cháng. Tā yáo wěiba. Chángjǐnglù hěn gāo, tā de bózi hěn cháng hěn cháng. Dàxiàng yáo bízi. Leo shuō: “Hǎo, wǒmen zǒu ba!”）",
+      "video": "Tìm YouTube: \"动物 身体 脖子 尾巴 儿歌\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "tall, short, very, so, neck, swing, but, its | Ôn: big, small, long, nose, tail, leg",
+     "slide": "[Lời cô] Vào bài: \"Good morning, class! 同学们好！\" · Chuyển ý: \"Now, show me tall! Show me short! 现在做一做：高！矮！\" · Khen: \"Well done! 真棒！\" · Câu mới buổi này: \"Stand up, please. 请站起来。\" · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): short = 矮 (thấp) / 短 (ngắn), neck / 脖子 1) Trò Cặp trái nghĩa: cô nói \"tall\", con nói \"short\"; cô nói \"big\", con nói \"small\"; cô nói \"long\", con nói \"short\". 2) Đố vật: một con tả \"Its neck is long. It is very tall.\" – cả lớp đoán: It's a giraffe! 3) Kéo câu vào tranh (4 câu): The monkey is small, but its tail is long. / The elephant swings its nose. / The giraffe is so tall! / The snake is long. 4) Starters Nghe phần 3 (mẫu): mỗi câu 3 tranh, con nghe và chọn tranh đúng. Example: Which animal is tall? – The giraffe. ① Which is the crocodile? – It's long and green. ② Which animal is scary? – The snake. ③ Where's the bat? – In the tree. ④ Which monkey is silly? – The monkey with the hat. ⑤ Where's the goat? – Next to the zebra. 5) Starters Đọc – viết phần 3 (mẫu): xếp chữ cái thành tên con vật. Example: l-i-o-n → lion ① t-a-b → bat ② e-r-a-b → bear ③ a-g-t-o → goat ④ k-a-e-n-s → snake ⑤ r-a-b-e-z → zebra. [Chuyển ngữ] Rối Xiaomei nói \"猴子很小，可是它的尾巴很长。\", con nói lại cho rối Leo: The monkey is small, but its tail is long. (NL5) [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo kể: \"The giraffe is very tall and its neck is really long. The snake is long, but it isn't tall. The zebra's tail is short.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 长颈鹿很高，它的脖子很长。蛇很长，可是它不高。斑马的尾巴很短。 (Chángjǐnglù hěn gāo, tā de bózi hěn cháng. Shé hěn cháng, kěshì tā bù gāo. Bānmǎ de wěiba hěn duǎn.)",
+     "truyen": "Leo and the Giraffe — Leo is short. The giraffe is very tall. Its neck is long. Leo looks up. \"You are so tall!\" The giraffe swings its neck. \"OK! Goodbye, giraffe!\"",
+     "baihat": "Long, Long, Long — Long, Long, Long (giai điệu Pop! Goes the Weasel) — đoạn 1: The elephant's nose is long, long, long, / the giraffe's neck is long, too, / the monkey's tail is long, long, long – / Hello, hello, zoo! · ôn đoạn 2: The tiger is big, the snake is long, / the monkey is small and cute, / the giraffe is tall, so very tall – / Hello, hello, zoo! · ôn vè: Elephant, elephant, big and grey, Swing your long nose and come and play!"
+    },
+    "zh": {
+     "flash": "矮 ǎi, 短 duǎn, 可是 kěshì, 脖子 bózi, 尾巴 wěiba, 腿 tuǐ, 它 tā | Ôn: 高 gāo, 长 cháng, 大 dà, 小 xiǎo | Ôn: 真 zhēn, 鼻子 bízi | Nghe làm quen: 摇 yáo",
+     "slide": "1) Đối chiếu NL9: The giraffe is tall. ↔ 长颈鹿很高。 – chọn câu đúng (nhiễu: 长颈鹿是高。 / 长颈鹿很长。). 2) Ngắn hay thấp?: một chữ short, hai chữ Hán – tranh cây bút ngắn → 短, bạn nhỏ thấp → 矮 (6 tranh). 3) Chép 高 vào ô; tô 长: ông cụ tóc dài bay trong gió, 4 nét (phẩy, ngang, sổ hất, mác). 4) YCT口试（初级）第一部分 听后重复 (mẫu): cô đọc một câu, từng con nói lại 1 lần: ① 长颈鹿很高。(Chángjǐnglù hěn gāo.) ② 大象的鼻子很长。(Dàxiàng de bízi hěn cháng.) ③ 猴子很小，可是它的尾巴很长。(Hóuzi hěn xiǎo, kěshì tā de wěiba hěn cháng.) ④ 蛇很长，可是不高。(Shé hěn cháng, kěshì bù gāo.) ⑤ 我很矮，哥哥很高。(Wǒ hěn ǎi, gēge hěn gāo.) 5) Trò Cặp trái nghĩa bằng tiếng Trung: cô nói 高, con nói 矮; 大 – 小; 长 – 短. 6) Đố vật: một con tả 它的脖子很长，它很高。– cả lớp đoán: 是长颈鹿！ 7) Nhìn tranh chọn chữ Hán tên con vật (tương ứng bài xếp chữ cái): 熊 / 蛇 / 斑马 / 狮子; nghe chọn tranh: 什么动物很长？— 鳄鱼 (nghe làm quen)；蝙蝠在哪儿？— 在树上。 [Cầu nối Anh – Trung] Cùng tranh hươu cao cổ: Leo \"The giraffe is tall.\" – Xiaomei \"长颈鹿很高。\"; khác: is ↔ 很; một từ short ↔ hai từ 矮 / 短; giống: but ↔ 可是, its ↔ 它的.",
+     "truyen": "Leo和长颈鹿 — Leo很矮。长颈鹿很高很高，它的脖子很长。Leo看长颈鹿：“你真高！”长颈鹿摇摇脖子。Leo说：“好！长颈鹿，再见！”（Leo hěn ǎi. Chángjǐnglù hěn gāo hěn gāo, tā de bózi hěn cháng. Leo kàn chángjǐnglù: “Nǐ zhēn gāo!” Chángjǐnglù yáoyao bózi. Leo shuō: “Hǎo! Chángjǐnglù, zàijiàn!”）",
+     "baihat": "Vè ZH: 大象大象，又大又灰，摇摇长鼻子，来玩来玩！(Dàxiàng dàxiàng, yòu dà yòu huī, yáoyao cháng bízi, lái wán lái wán!) · 长长长 — 长长长 (giai điệu Pop! Goes the Weasel) — đoạn 1: 大象的鼻子长长长，/ 长颈鹿脖子也长，/ 小猴的尾巴长长长——/ 你好，动物园！ · ôn đoạn 2: 老虎很大，蛇很长，/ 小猴子很可爱，/ 长颈鹿很高，高又高——/ 你好，动物园！"
+    }
+   }
+  },
+  {
+   "buoi": 35,
+   "unit": 8,
+   "label_buoi": "Buổi dạy 35. Unit 8 · At the zoo · 在动物园 – Làm quen: trò hướng dẫn viên; truyện đọc thêm; nói theo vần; chép 长",
+   "web": [
+    {
+     "ngay": 69,
+     "label": "Ngày 69. Unit 8 · Sở thú và cửa hàng sở thú (nhóm 3, nối Unit 5): have got, tiền · Luyện đề YCT2 Đọc phần 4",
+     "en": {
+      "tu": "Mới: have got, has got, a lot of | Ôn (nối Unit 5): zoo, buy, first, then, thing | Ôn: hand, foot, arm, mango, pineapple, watermelon, kiwi, grape, pie, lemonade, goat",
+      "cum": "have got a long neck / has got four legs / hasn't got legs / a lot of animals / buy things at the zoo shop",
+      "cau": "[Ngữ pháp: has got] The elephant has got a long nose. / [Ngữ pháp: hasn't got] The snake hasn't got legs. / I have got two hands. / First, we buy things at the zoo shop. Then, we see the lions. / Thanks! – You're welcome! / At the zoo shop, Leo buys a mango pie and a lemonade. / The monkeys eat grapes and kiwis. The elephant eats a watermelon. / Xiaomei buys a pineapple. / Leo has got money. He buys a panda at the zoo shop. / There is a goat at the zoo farm.",
+      "truyen": "The Zoo Shop — First, Leo and Xiaomei go to the zoo shop. They buy two things: a panda and a giraffe. The giraffe has got a long neck. \"Thanks!\" says Leo. Then they buy a pie and a lemonade. They see a lot of animals. The monkeys eat mangoes and grapes. The elephant eats a big watermelon!",
+      "video": "Tìm YouTube: \"have got has got animals song for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 钱 qián (= money), 没有 méiyǒu (= hasn't got, haven't got) | Ôn (nối Unit 5): 动物园 dòngwùyuán, 买 mǎi, 东西 dōngxi, 然后 ránhòu | Ôn: 手 shǒu, 脚 jiǎo | Ôn: 派 pài | Nghe làm quen (có tranh, không kiểm tra): 芒果 mángguǒ (= mango), 菠萝 bōluó (= pineapple), 葡萄 pútao (= grape), 西瓜 xīguā (= watermelon), 柠檬水 níngméngshuǐ (= lemonade), 山羊 shānyáng (= goat)",
+      "cum": "有长脖子 yǒu cháng bózi / 没有腿 méiyǒu tuǐ / 买东西 mǎi dōngxi / 有很多动物 yǒu hěn duō dòngwù",
+      "cau": "[Cầu nối] The snake hasn't got legs. ↔ 蛇没有腿。(Shé méiyǒu tuǐ.) [giống: has got ↔ 有, hasn't got ↔ 没有 · khác: legs có -s, 腿 không đổi] / [Ngữ pháp: 有 / 没有] 蛇没有腿。(Shé méiyǒu tuǐ.) / 大象有长鼻子。(Dàxiàng yǒu cháng bízi.) / 我们先在动物园的商店买东西，然后去看狮子。(Wǒmen xiān zài dòngwùyuán de shāngdiàn mǎi dōngxi, ránhòu qù kàn shīzi.) / [YCT2 Đọc phần 4 (mẫu): hội thoại thiếu, chọn 1 trong 6 đáp án A–F] 1) Leo买什么？(Leo mǎi shénme?) — ___ 2) 你喜欢什么动物？(Nǐ xǐhuan shénme dòngwù?) — ___ 3) 谢谢！(Xièxie!) — ___ 4) 长颈鹿高吗？(Chángjǐnglù gāo ma?) — ___ 5) 蛇有腿吗？(Shé yǒu tuǐ ma?) — ___ / A 不客气！(Bú kèqi!) B 很高。(Hěn gāo.) C 没有。(Méiyǒu.) D 熊猫。(Xióngmāo.) E 我喜欢大象。(Wǒ xǐhuan dàxiàng.) F 我坐火车。(Wǒ zuò huǒchē.) [F thừa; đáp án: 1D 2E 3A 4B 5C] / 我有两只手。(Wǒ yǒu liǎng zhī shǒu.) / 谢谢！——不客气！(Xièxie! — Bú kèqi!) (= Thanks! – You're welcome!) / Leo有钱，他买熊猫。(Leo yǒu qián, tā mǎi xióngmāo.) / 在动物园的商店，Leo买一个芒果派和一杯柠檬水。(Zài dòngwùyuán de shāngdiàn, Leo mǎi yí ge mángguǒ pài hé yì bēi níngméngshuǐ.) / Xiaomei买菠萝。猴子吃葡萄。大象吃西瓜。(Xiaomei mǎi bōluó. Hóuzi chī pútao. Dàxiàng chī xīguā.) / 动物园里也有山羊。(Dòngwùyuán lǐ yě yǒu shānyáng.)",
+      "truyen": "动物园的商店 — Leo和Xiaomei先去动物园的商店。他们买两个东西：熊猫和长颈鹿。长颈鹿有长脖子。Leo说：“谢谢！”然后，他们买派和柠檬水。他们看见很多动物。猴子吃芒果和葡萄。大象吃一个大西瓜！（Leo hé Xiaomei xiān qù dòngwùyuán de shāngdiàn. Tāmen mǎi liǎng ge dōngxi: xióngmāo hé chángjǐnglù. Chángjǐnglù yǒu cháng bózi. Leo shuō: “Xièxie!” Ránhòu, tāmen mǎi pài hé níngméngshuǐ. Tāmen kànjiàn hěn duō dòngwù. Hóuzi chī mángguǒ hé pútao. Dàxiàng chī yí ge dà xīguā!）",
+      "video": "Tìm YouTube: \"有 没有 动物 儿歌\""
+     }
+    },
+    {
+     "ngay": 70,
+     "label": "Ngày 70. Unit 8 · Ôn không tranh, vòng Từ vựng + truyện 1 At the Zoo · Luyện đề Starters Nghe phần 2",
+     "en": {
+      "tu": "Ôn (không tranh): animal, elephant, tiger, giraffe, snake, monkey, bear, zebra, lion, tall, short, very, so, neck, swing",
+      "cum": "very big / very tall / very short / a long neck / a long tail / has got",
+      "cau": "The tiger is big. / Which animal is tall? The giraffe is tall. / The elephant is big. / The monkey is small, but its tail is long. / [Starters Nghe phần 2 (mẫu): nghe, viết tên hoặc số, ~5 phút] Example: What's the girl's name? – Grace. G-R-A-C-E. / 1) How many crocodiles are there? – three 2) What's the elephant's name? – Pat. Can you spell it? – P-A-T. 3) How old is the giraffe? – nine 4) How many bats are in the tree? – ten 5) What's the monkey's name? – Silly! S-I-L-L-Y. / [Chuyển ngữ] [nghe Xiaomei nói tiếng Trung, nói lại 1 câu bằng tiếng Anh cho Leo, ghi âm] Xiaomei: \"大象很大。\" → The elephant is big.",
+      "truyen": "At the Zoo — Leo and Xiaomei go to the zoo. The giraffe is tall. Its neck is long. The elephant is big. Its nose is long. The monkey is small, but its tail is long!",
+      "video": "Let's Go To The Zoo – Super Simple Songs – https://www.youtube.com/watch?v=OwRmivbNgQk"
+     },
+     "zh": {
+      "tu": "Ôn (không tranh, ẩn pinyin): 动物 dòngwù, 大象 dàxiàng, 老虎 lǎohǔ, 长颈鹿 chángjǐnglù, 蛇 shé, 猴子 hóuzi, 矮 ǎi, 短 duǎn, 脖子 bózi, 尾巴 wěiba, 熊 xióng, 斑马 bānmǎ, 狮子 shīzi, 真 zhēn | Ôn: 多少 duōshao | Nghe làm quen: 蝙蝠 biānfú",
+      "cum": "很大 hěn dà / 很高 hěn gāo / 很矮 hěn ǎi / 长颈鹿的脖子 chángjǐnglù de bózi / 猴子的尾巴 hóuzi de wěiba",
+      "cau": "[Cầu nối] The elephant is big. ↔ 大象很大。(Dàxiàng hěn dà.) [mẹo: 大象 có chữ 大 (big) · is ↔ 很] / 老虎很大。(Lǎohǔ hěn dà.) / 什么动物很高？(Shénme dòngwù hěn gāo?) / 大象很大。(Dàxiàng hěn dà.) / 猴子很小，可是它的尾巴很长。(Hóuzi hěn xiǎo, kěshì tā de wěiba hěn cháng.) / 树上有多少只蝙蝠？——十只。(Shù shang yǒu duōshao zhī biānfú? — Shí zhī.) (= How many bats are in the tree? – ten)",
+      "truyen": "在动物园 — Leo和Xiaomei去动物园。长颈鹿很高，它的脖子很长。大象很大，它的鼻子很长。猴子很小，可是它的尾巴很长！（Leo hé Xiaomei qù dòngwùyuán. Chángjǐnglù hěn gāo, tā de bózi hěn cháng. Dàxiàng hěn dà, tā de bízi hěn cháng. Hóuzi hěn xiǎo, kěshì tā de wěiba hěn cháng!）",
+      "video": "Zoo Animals 动物园动物 – Galaxy Kids Chinese – https://www.youtube.com/watch?v=oMkR6NC7cz0"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "have got, has got, a lot of, neck, swing, money | Ôn: zoo, buy, first, then, elephant, giraffe, monkey, nose, tail, leg | Từ thi: mango, pineapple, watermelon, kiwi, grapes, pie",
+     "slide": "[Lời cô] Vào bài: \"Good afternoon, class! 同学们好！\" · Chuyển ý: \"Now, follow me! 现在跟我来！\" · Khen: \"Good job! 很好！\" · Câu mới buổi này: \"Hands up! 举手！\" · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): have got / 有, hasn't got / 没有 1) Hướng dẫn viên: cô kể đường đi qua từng chuồng, con giơ thẻ con vật và thẻ tính từ: This is the elephant. It has got a long nose. 2) Âm /ʒ/ trong giraffe, âm /ɪ/ – /iː/ trong it's – tiger: nghe nhắc lại. 3) Có hay không có?: kéo has got / hasn't got vào 4 câu: The snake ___ legs. The giraffe ___ a long neck. The monkey ___ a long tail. The elephant ___ a long nose. 4) Starters Nói phần 3 (mẫu): thẻ đồ ăn ở quầy sở thú: mango, pineapple, watermelon, kiwi, grapes, pie; cô hỏi What's this? – It's a pineapple. / What colour is the watermelon? – Green and red. / Do you like kiwis? – Yes, I do. / Which do you want? Choose one! 5) Starters Nói phần 4 (mẫu): cô là giám khảo, từng con: What's your favourite animal? / Is it scary? / How do you go to the zoo? / Do you like mangoes? – con nghe chưa rõ thì nói Pardon?; trả lời xong cô nói That's correct! Let's talk about the silly monkey.",
+     "truyen": "The Zoo Guide — Hello! This is the zoo. First, we see the elephants. They have got long noses. Then, we see the giraffe. It is very tall. The snake is long, but it hasn't got legs. Thanks!",
+     "baihat": "Limerick: A tiger is big, a monkey is small, But a giraffe is the tallest of all! (vần small – all) · Long, Long, Long cả bài — Long, Long, Long (giai điệu Pop! Goes the Weasel) — đoạn 1: The elephant's nose is long, long, long, / the giraffe's neck is long, too, / the monkey's tail is long, long, long – / Hello, hello, zoo! · đoạn 2: The tiger is big, the snake is long, / the monkey is small and cute, / the giraffe is tall, so very tall – / Hello, hello, zoo! · ôn vè: Elephant, elephant, big and grey, Swing your long nose and come and play!"
+    },
+    "zh": {
+     "flash": "钱 qián, 没有 méiyǒu | Ôn: 鼻子 bízi, 脖子 bózi, 尾巴 wěiba, 腿 tuǐ, 动物园 dòngwùyuán | Ôn: 有 yǒu, 很多 hěn duō, 买 mǎi, 先 xiān, 然后 ránhòu, 大象 dàxiàng, 长颈鹿 chángjǐnglù, 猴子 hóuzi | Nghe làm quen: 摇 yáo, 西瓜 xīguā, 芒果 mángguǒ, 菠萝 bōluó, 葡萄 pútao",
+     "slide": "1) Thanh điệu: 长 cháng (2), 短 duǎn (3), 高 gāo (1), 矮 ǎi (3) – nghe chọn đúng thanh. 2) 有 hay 没有?: 蛇___腿。(没有) / 长颈鹿___长脖子。(有) / 猴子___长尾巴。(有). 3) Chép 长 trong 长颈鹿 vào ô; hỏi sau bản tiếng Anh: 什么动物很高？ 4) YCT口试（初级）第三部分 看图说话 (mẫu): cô đóng vai giám khảo, mỗi con 2 tranh, nói 2–3 câu mỗi tranh. Tranh 1 (hươu cao cổ, voi, khỉ): 长颈鹿很高。大象很大，它的鼻子很长。猴子很小。(Chángjǐnglù hěn gāo. Dàxiàng hěn dà, tā de bízi hěn cháng. Hóuzi hěn xiǎo.) Tranh 2 (rắn): 蛇很长，它没有腿。(Shé hěn cháng, tā méiyǒu tuǐ.) 5) Hướng dẫn viên bằng tiếng Trung: cô kể đường đi qua từng chuồng, con giơ thẻ: 这是大象，它有长鼻子。 6) Cùng thẻ đồ ăn ở quầy sở thú của phần tiếng Anh: 这是什么？— 这是菠萝 / 西瓜 / 芒果 (nghe làm quen)；西瓜是什么颜色的？— 绿色和红色。 7) Câu hỏi về bản thân: 你喜欢什么动物？你怎么去动物园？– nghe chưa rõ thì nói: 请再说一次。 [Cầu nối Anh – Trung] Cùng tranh quầy sở thú: Leo \"The snake hasn't got legs.\" – Xiaomei \"蛇没有腿。\"; has got ↔ 有, hasn't got ↔ 没有; legs có -s ↔ 腿 không đổi. [Chuyển ngữ] Rối Leo nói \"The snake hasn't got legs.\", con nói lại cho rối Xiaomei: 蛇没有腿。(NL5) [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo kể: \"I'm your zoo guide today! First, we're going to see the elephants – they've got long noses. Then we'll visit the snake. It's long, but it hasn't got any legs.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 我们先看大象，大象的鼻子很长。然后看蛇，蛇很长，可是它没有腿。 (Wǒmen xiān kàn dàxiàng, dàxiàng de bízi hěn cháng. Ránhòu kàn shé, shé hěn cháng, kěshì tā méiyǒu tuǐ.)",
+     "truyen": "我们去看动物 — 你好！这是动物园。我们先看大象，它们的鼻子很长。然后看长颈鹿，它很高。蛇很长，可是它没有腿。谢谢大家！（Nǐ hǎo! Zhè shì dòngwùyuán. Wǒmen xiān kàn dàxiàng, tāmen de bízi hěn cháng. Ránhòu kàn chángjǐnglù, tā hěn gāo. Shé hěn cháng, kěshì tā méiyǒu tuǐ. Xièxie dàjiā!）",
+     "baihat": "Limerick: 老虎大，猴子小，长颈鹿最高最高！(Lǎohǔ dà, hóuzi xiǎo, chángjǐnglù zuì gāo zuì gāo!) (vần xiǎo – gāo) · 长长长 cả bài — 长长长 (giai điệu Pop! Goes the Weasel) — đoạn 1: 大象的鼻子长长长，/ 长颈鹿脖子也长，/ 小猴的尾巴长长长——/ 你好，动物园！ · đoạn 2: 老虎很大，蛇很长，/ 小猴子很可爱，/ 长颈鹿很高，高又高——/ 你好，动物园！ · ôn vè: 大象大象，又大又灰，摇摇长鼻子，来玩来玩！(Dàxiàng dàxiàng, yòu dà yòu huī, yáoyao cháng bízi, lái wán lái wán!)"
+    }
+   }
+  },
+  {
+   "buoi": 36,
+   "unit": 8,
+   "label_buoi": "Buổi dạy 36. Unit 8 · At the zoo · 在动物园 – Vận dụng: đọc, diễn At the Zoo; hướng dẫn viên sở thú; thêm sở thú vào bản đồ",
+   "web": [
+    {
+     "ngay": 71,
+     "label": "Ngày 71. Unit 8 · Truyện 2 At the Zoo (thêm câu) + chuyển ngữ (NL5, NL7, PS-2) · Luyện nói YCT口试 phần 3 · Luyện đề Starters Đọc – viết phần 5",
+     "en": {
+      "tu": "Ôn: elephant, giraffe, monkey, tiger, snake, tall, very, neck, nose, tail, leg, has got",
+      "cum": "the giraffe's neck is long / the little monkey's tail / go to the zoo to see animals / hasn't got legs",
+      "cau": "The snake has no legs. It hasn't got legs. / I am short. My older brother is tall. / Which animal is small but has got a long tail? The monkey! / [PS-2] The elephants are next to the tigers. / [Starters Đọc – viết phần 5 (mẫu): đọc truyện At the Zoo, trả lời bằng 1 từ] Example: Who goes to the zoo with Leo? – Xiaomei / 1) Which animal is tall? – (the) giraffe 2) What is long on the elephant? – (its) nose 3) Is the tiger big or small? – big 4) Which animal hasn't got legs? – (the) snake",
+      "truyen": "At the Zoo (truyện 2) — Leo and Xiaomei go to the zoo. The giraffe is tall. Its neck is long. The elephant is big. Its nose is long. The tiger is big, too. The snake is long. It hasn't got legs!",
+      "video": "Let's Go To The Zoo – Super Simple Songs – https://www.youtube.com/watch?v=OwRmivbNgQk"
+     },
+     "zh": {
+      "tu": "Ôn: 大象 dàxiàng, 长颈鹿 chángjǐnglù, 猴子 hóuzi, 老虎 lǎohǔ, 蛇 shé, 高 gāo, 矮 ǎi, 脖子 bózi, 鼻子 bízi, 尾巴 wěiba, 腿 tuǐ, 没有 méiyǒu",
+      "cum": "长颈鹿的脖子很长 chángjǐnglù de bózi hěn cháng / 小猴子的尾巴 xiǎo hóuzi de wěiba / 去动物园看动物 qù dòngwùyuán kàn dòngwù / 没有腿 méiyǒu tuǐ",
+      "cau": "[Cầu nối] The tiger is big, too. ↔ 老虎也很大。(Lǎohǔ yě hěn dà.) [khác: too ở cuối câu ↔ 也 đứng trước 很] / 蛇没有腿。(Shé méiyǒu tuǐ.) / 我很矮，我哥哥很高。(Wǒ hěn ǎi, wǒ gēge hěn gāo.) / 老虎也很大。(Lǎohǔ yě hěn dà.) / [PS-2] 大象旁边是什么动物？大象旁边是老虎。(Dàxiàng pángbiān shì shénme dòngwù? Dàxiàng pángbiān shì lǎohǔ.) / [YCT口试（初级）第三部分 看图说话 (mẫu): nhìn tranh, nói 2–3 câu, ghi âm trên Trang luyện nói, ~5 phút] 1) [tranh voi] 大象很大，它的鼻子很长。(Dàxiàng hěn dà, tā de bízi hěn cháng.) 2) [tranh rắn] 蛇很长，它没有腿。(Shé hěn cháng, tā méiyǒu tuǐ.) 3) [tranh khỉ] 猴子很小，可是它的尾巴很长。(Hóuzi hěn xiǎo, kěshì tā de wěiba hěn cháng.) / 什么动物很小，可是尾巴很长？猴子！(Shénme dòngwù hěn xiǎo, kěshì wěiba hěn cháng? Hóuzi!)",
+      "truyen": "在动物园（二） — Leo和Xiaomei去动物园。长颈鹿很高，它的脖子很长。大象很大，它的鼻子很长。老虎也很大。蛇很长，它没有腿！（Leo hé Xiaomei qù dòngwùyuán. Chángjǐnglù hěn gāo, tā de bózi hěn cháng. Dàxiàng hěn dà, tā de bízi hěn cháng. Lǎohǔ yě hěn dà. Shé hěn cháng, tā méiyǒu tuǐ!）",
+      "video": "与动物一起唱歌学习 – Swoop Woops – https://www.youtube.com/watch?v=usZcsXTK6vM"
+     }
+    },
+    {
+     "ngay": 72,
+     "label": "Ngày 72. Unit 8 · Phiên dịch nhí + câu đố con vật (NL6, PS-3) · Luyện đề YCT2 Đọc phần 1",
+     "en": {
+      "tu": "Ôn: bear, zebra, lion, panda, short, so, swing, a lot of, have got, animal",
+      "cum": "a lot of animals / a black and white zebra / swing its tail / so tall",
+      "cau": "[Phiên dịch nhí] Xiaomei: \"熊猫很可爱。\" → The panda is cute. / It is not small. It is very tall. Its neck is long. What animal is it? / It is not tall. It is long. It hasn't got legs. / Thanks! – You're welcome! / It is green and red. It is big and round. What is it? – A watermelon! / The silly monkey eats a pineapple.",
+      "truyen": "Animal Riddles — Leo says: \"It is not small. It is very tall. Its neck is long. What animal is it?\" Xiaomei says: \"It's a giraffe!\" Xiaomei says: \"It is not tall. It is long. It hasn't got legs.\" Leo says: \"It's a snake!\"",
+      "video": "Tìm YouTube: \"guess the animal riddles for kids zoo\""
+     },
+     "zh": {
+      "tu": "Ôn: 熊猫 xióngmāo, 狮子 shīzi, 斑马 bānmǎ, 熊 xióng, 矮 ǎi, 短 duǎn, 没有 méiyǒu, 它 tā, 动物 dòngwù | Nghe làm quen: 西瓜 xīguā, 菠萝 bōluó (= pineapple), 傻 shǎ",
+      "cum": "很多动物 hěn duō dòngwù / 黑白的斑马 hēibái de bānmǎ / 它是什么动物 tā shì shénme dòngwù / 它不高 tā bù gāo",
+      "cau": "[Cầu nối] The panda is cute. ↔ 熊猫很可爱。(Xióngmāo hěn kě'ài.) [giống: cùng một câu đố, hai tiếng · khác: is ↔ 很] / [Phiên dịch nhí] Leo: \"It hasn't got legs.\" → 它没有腿。(Tā méiyǒu tuǐ.) / 它不高。它很长。它没有腿。(Tā bù gāo. Tā hěn cháng. Tā méiyǒu tuǐ.) / 它是什么动物？(Tā shì shénme dòngwù?) / [YCT2 Đọc phần 1 (mẫu): nhìn tranh, đọc cụm, chọn ✓ hay ✗] 1) [tranh hươu cao cổ] 很高 (hěn gāo) ✓ 2) [tranh rắn] 有腿 (yǒu tuǐ) ✗ 3) [tranh gấu trúc] 熊猫 (xióngmāo) ✓ 4) [tranh khỉ đuôi dài] 长尾巴 (cháng wěiba) ✓ 5) [tranh sư tử] 斑马 (bānmǎ) ✗ / 它不小。它很高。它的脖子很长。它是什么动物？(Tā bù xiǎo. Tā hěn gāo. Tā de bózi hěn cháng. Tā shì shénme dòngwù?) / 谢谢！——不客气！(Xièxie! — Bú kèqi!) (= Thanks! – You're welcome!) / 它是绿色和红色的。它很大，很圆。它是什么？——西瓜！(Tā shì lǜsè hé hóngsè de. Tā hěn dà, hěn yuán. Tā shì shénme? — Xīguā!) / 傻傻的小猴子吃菠萝。(Shǎshǎ de xiǎo hóuzi chī bōluó.)",
+      "truyen": "猜一猜 — Leo说：“它不小。它很高。它的脖子很长。它是什么动物？”Xiaomei说：“是长颈鹿！”Xiaomei说：“它不高。它很长。它没有腿。”Leo说：“是蛇！”（Leo shuō: “Tā bù xiǎo. Tā hěn gāo. Tā de bózi hěn cháng. Tā shì shénme dòngwù?” Xiaomei shuō: “Shì chángjǐnglù!” Xiaomei shuō: “Tā bù gāo. Tā hěn cháng. Tā méiyǒu tuǐ.” Leo shuō: “Shì shé!”）",
+      "video": "Zoo Animals 动物园动物 – Galaxy Kids Chinese – https://www.youtube.com/watch?v=oMkR6NC7cz0"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn: animal, elephant, tiger, giraffe, snake, monkey, bear, zebra, lion, panda, tall, short, long, very, so, neck, tail, leg, swing, have got, a lot of",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" · Chuyển ý: \"Now, you are the zoo guide! 现在你是动物园的导游！\" · Khen: \"Great! 真好！\" · Câu mới buổi này: \"Thank you, everyone! 谢谢大家！\" · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): phần Giá trị (vì sao hươu cao cổ cổ dài; cơ thể mỗi người một khác) cô có thể nói bằng tiếng Việt 1) Đọc và diễn At the Zoo, mỗi con một con vật. 2) Hướng dẫn viên sở thú (NL6): khách hỏi tiếng Anh \"What animal is it?\" – con đáp tiếng Anh; khách hỏi \"这是什么动物？\" – con đáp tiếng Trung. 3) PS-3 trên lớp: câu đố \"It is not small. It is very tall. Its neck is long.\" → What animal is it? 4) Giá trị: vì sao hươu cao cổ cổ dài (ăn lá trên cao), voi vòi dài (lấy nước); cơ thể mỗi người một khác, nói cao thấp không phải để chê. Thêm sở thú vào bản đồ thành phố. 5) Starters Đọc – viết phần 5 (mẫu): 3 tranh truyện The Zoo Shop, trả lời bằng 1 từ. Example: Where do Leo and Xiaomei go first? – (the zoo) shop ① What do they eat? – (a) pie ② What do they drink? – lemonade ③ What does the elephant eat? – (a) watermelon ④ What do the monkeys eat? – mangoes. 6) Starters Đọc – viết phần 4 (mẫu): khung: grey, crocodile, bat, goat, scary, dirty. Example: The elephant is big and (0) grey. ① The (1) ___ is long and green. ② The (2) ___ is in the tree. ③ The (3) ___ is at the zoo farm. ④ The snake is (4) ___! ⑤ The bear sits in the sand. It is (5) ___. (Đáp án: crocodile, bat, goat, scary, dirty) [Chuyển ngữ] Hướng dẫn viên: khách nói tiếng Trung \"长颈鹿很高。\", con nói lại cho khách chỉ biết tiếng Anh: The giraffe is very tall. (NL6) [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo kể: \"Welcome to our zoo! First, look at the giraffe – it's very tall. Then, look at the panda. It's black and white, and it's very cute.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 先看长颈鹿，它很高。然后看熊猫，它是黑白的，很可爱。 (Xiān kàn chángjǐnglù, tā hěn gāo. Ránhòu kàn xióngmāo, tā shì hēibái de, hěn kě'ài.)",
+     "truyen": "At the Zoo — Leo and Xiaomei go to the zoo. The giraffe is tall. Its neck is long. The elephant is big. Its nose is long. The monkey is small, but its tail is long! (đọc, diễn; cô hỏi: Which animal is small but has got a long tail?)",
+     "baihat": "Biểu diễn vè: Elephant, elephant, big and grey, Swing your long nose and come and play! · Long, Long, Long cả bài — Long, Long, Long (giai điệu Pop! Goes the Weasel) — đoạn 1: The elephant's nose is long, long, long, / the giraffe's neck is long, too, / the monkey's tail is long, long, long – / Hello, hello, zoo! · đoạn 2: The tiger is big, the snake is long, / the monkey is small and cute, / the giraffe is tall, so very tall – / Hello, hello, zoo!"
+    },
+    "zh": {
+     "flash": "Ôn: 动物 dòngwù, 大象 dàxiàng, 老虎 lǎohǔ, 长颈鹿 chángjǐnglù, 蛇 shé, 猴子 hóuzi, 熊猫 xióngmāo, 矮 ǎi, 短 duǎn, 脖子 bózi, 尾巴 wěiba, 腿 tuǐ, 没有 méiyǒu, 熊 xióng, 斑马 bānmǎ, 狮子 shīzi, 高 gāo, 长 cháng, 很多 hěn duō, 有 yǒu",
+     "slide": "1) Đọc 在动物园 có pinyin, hỏi chéo sau bản tiếng Trung: Which animal is small but has got a long tail? 2) PS-3 câu đố tiếng Trung (cùng câu đố phần tiếng Anh): “它不小。它很高。它的脖子很长。它是什么动物？”(Tā bù xiǎo. Tā hěn gāo. Tā de bózi hěn cháng. Tā shì shénme dòngwù?) — 是长颈鹿！(Shì chángjǐnglù!) 3) Bắt bẫy NL4: The boy is short → 男孩很短? (sai) → 男孩很矮; chép 高 và 长 vào ô, dán lên chuồng hươu cao cổ trên bản đồ. 4) YCT2 Đọc phần 3 (mẫu): nối câu hỏi với câu trả lời (5 cặp + 1 câu nhiễu): ① 这是什么动物？(Zhè shì shénme dòngwù?) — 这是大象。(Zhè shì dàxiàng.) ② 长颈鹿的脖子长吗？(Chángjǐnglù de bózi cháng ma?) — 很长。(Hěn cháng.) ③ 你喜欢什么动物？(Nǐ xǐhuan shénme dòngwù?) — 熊猫。(Xióngmāo.) ④ 蛇有腿吗？(Shé yǒu tuǐ ma?) — 没有。(Méiyǒu.) ⑤ 大象吃什么？(Dàxiàng chī shénme?) — 西瓜。(Xīguā.) · câu nhiễu: 我坐公共汽车。(Wǒ zuò gōnggòng qìchē.) 5) Hướng dẫn viên sở thú bằng tiếng Trung: khách hỏi 这是什么动物？– con đáp 这是长颈鹿，它很高。 6) Giá trị (cô nói ngắn bằng tiếng Trung, có tranh): 长颈鹿的脖子很长，它吃高高的叶子；大家不一样，高和矮都很好！ 7) Cùng tranh truyện The Zoo Shop của bài đọc tiếng Anh: Leo和Xiaomei先去哪儿？— 商店。大象吃什么？— 西瓜 (nghe làm quen)。 [Cầu nối Anh – Trung] Cùng truyện At the Zoo: rối Leo đọc 1 câu tiếng Anh, rối Xiaomei đọc câu tiếng Trung cùng nghĩa; con ghép cặp câu và tìm Its neck ↔ 它的脖子, Its nose ↔ 它的鼻子.",
+     "truyen": "在动物园 — Leo和Xiaomei去动物园。长颈鹿很高，它的脖子很长。大象很大，它的鼻子很长。猴子很小，可是它的尾巴很长！（Leo hé Xiaomei qù dòngwùyuán. Chángjǐnglù hěn gāo, tā de bózi hěn cháng. Dàxiàng hěn dà, tā de bízi hěn cháng. Hóuzi hěn xiǎo, kěshì tā de wěiba hěn cháng!）",
+     "baihat": "Biểu diễn vè ZH: 大象大象，又大又灰，摇摇长鼻子，来玩来玩！(Dàxiàng dàxiàng, yòu dà yòu huī, yáoyao cháng bízi, lái wán lái wán!) · 长长长 cả bài — 长长长 (giai điệu Pop! Goes the Weasel) — đoạn 1: 大象的鼻子长长长，/ 长颈鹿脖子也长，/ 小猴的尾巴长长长——/ 你好，动物园！ · đoạn 2: 老虎很大，蛇很长，/ 小猴子很可爱，/ 长颈鹿很高，高又高——/ 你好，动物园！"
+    }
+   }
+  },
+  {
+   "buoi": 37,
+   "unit": "",
+   "label_buoi": "Buổi dạy 37. Tuần 19 · Ôn và kiểm tra chặng 2 (Unit 5–8) – Ôn tổng hợp: bản đồ thành phố của em (nơi chốn, người làm việc, đường đi, sở thú)",
+   "web": [
+    {
+     "ngay": 73,
+     "label": "Ngày 73. Ôn chặng 2 · Quét Unit 5 (nơi chốn) và Unit 6 (nghề nghiệp), kèm thứ – giờ Unit 1–2 · Thi thử YCT2 Nghe phần 1–2 (~10 phút)",
+     "en": {
+      "tu": "Ôn: place, home, shop, store, park, zoo, restaurant, cinema, library, hospital, study, buy, walk, afternoon, busy, job, student, doctor, chef, dentist, driver, nurse, farmer, firefighter, employee, work | Ôn (Unit 1–2): Monday, Saturday, o'clock, birthday, bookshop, paper, alphabet, tablet, radio, fishing",
+      "cum": "go to the park to play / go to the shop to buy things / work at a hospital / work at a restaurant / on Saturday afternoon / is an employee",
+      "cau": "Where are you going? I go to the library to study English. / What does your mom do? My mom is a nurse. She works at a hospital. / [Ngữ pháp: first – then] First, I go to the shop. Then, I go home. / [Ngữ pháp: works – thêm s] My dad is a chef. He works at a restaurant. / On Sunday, Grandpa goes fishing. / Mum writes on her tablet. Dad listens to the radio. / I go to the bookshop to buy paper and an alphabet book.",
+      "truyen": "Mum's Saturday — On Saturday morning, Bông's mum goes to the hospital. She is a nurse. At twelve o'clock, she eats lunch at a restaurant. On Saturday afternoon, she goes to the shop to buy things. Then she goes home before it's dark.",
+      "video": "Where Are You Going? Places Song – Fun Kids English – https://www.youtube.com/watch?v=FxRGkjkVTGA · Jobs Song: What Do You Do? – Fun Kids English – https://www.youtube.com/watch?v=ckKQclquAXU"
+     },
+     "zh": {
+      "tu": "Ôn: 地方 dìfang, 家 jiā, 商店 shāngdiàn, 公园 gōngyuán, 饭店 fàndiàn, 动物园 dòngwùyuán, 学习 xuéxí, 买 mǎi, 东西 dōngxi, 散步 sànbù, 然后 ránhòu, 上午 shàngwǔ, 下午 xiàwǔ, 工作 gōngzuò, 学生 xuéshēng, 医生 yīshēng, 医院 yīyuàn, 厨师 chúshī, 司机 sījī, 员工 yuángōng, 牙医 yáyī | Ôn (Unit 1–2): 星期六 xīngqīliù, 点 diǎn, 生日 shēngrì | Ôn: 爷爷 yéye | Nghe làm quen (ôn chặng): 钓鱼 diàoyú, 收音机 shōuyīnjī, 书店 shūdiàn, 纸 zhǐ, 平板电脑 píngbǎn diànnǎo",
+      "cum": "去公园玩 qù gōngyuán wán / 去商店买东西 qù shāngdiàn mǎi dōngxi / 在医院工作 zài yīyuàn gōngzuò / 在饭店工作 zài fàndiàn gōngzuò / 星期六下午 xīngqīliù xiàwǔ",
+      "cau": "[Cầu nối] My mom is a nurse. She works at a hospital. ↔ 我妈妈是护士，她在医院工作。(Wǒ māma shì hùshi, tā zài yīyuàn gōngzuò.) [ôn: a + nghề ↔ không có a; at a hospital ↔ 在医院 đứng trước 工作] / 你去哪儿？我去图书馆学习。(Nǐ qù nǎr? Wǒ qù túshūguǎn xuéxí.) / 你妈妈做什么工作？我妈妈是护士，她在医院工作。(Nǐ māma zuò shénme gōngzuò? Wǒ māma shì hùshi, tā zài yīyuàn gōngzuò.) / [Ngữ pháp: 先……然后……] 我先去商店，然后回家。(Wǒ xiān qù shāngdiàn, ránhòu huí jiā.) / [Ngữ pháp: 在 + nơi + 工作] 我爸爸是厨师，他在饭店工作。(Wǒ bàba shì chúshī, tā zài fàndiàn gōngzuò.) / [Thi thử YCT2 trên web · Nghe phần 1 + phần 2, 10 câu, ~10 phút, có pinyin] [Phần 1 – nghe cụm, chọn ✓ hay ✗ với tranh] 1) [tranh thư viện] 去图书馆 (qù túshūguǎn) ✓ 2) [tranh bác sĩ] 是护士 (shì hùshi) ✗ 3) [tranh nhà hàng] 去饭店 (qù fàndiàn) ✓ 4) [tranh đầu bếp] 是厨师 (shì chúshī) ✓ 5) [tranh bệnh viện] 去图书馆 (qù túshūguǎn) ✗ [Phần 2 – nghe câu, chọn 1 trong 3 tranh] 6) 我妈妈在医院工作。(Wǒ māma zài yīyuàn gōngzuò.) 7) 我们去动物园看动物。(Wǒmen qù dòngwùyuán kàn dòngwù.) 8) 星期天下午，我去商店买东西。(Xīngqītiān xiàwǔ, wǒ qù shāngdiàn mǎi dōngxi.) 9) 他是司机。(Tā shì sījī.) 10) 我爸爸是厨师，他在饭店工作。(Wǒ bàba shì chúshī, tā zài fàndiàn gōngzuò.) / 星期天，爷爷去钓鱼。(Xīngqītiān, yéye qù diàoyú.) / 妈妈在平板电脑上写字。爸爸听收音机。(Māma zài píngbǎn diànnǎo shang xiě zì. Bàba tīng shōuyīnjī.) / 我去书店买纸和书。(Wǒ qù shūdiàn mǎi zhǐ hé shū.)",
+      "truyen": "妈妈的星期六 — 星期六上午，Bông的妈妈去医院，她是护士。中午十二点，她在饭店吃午饭。星期六下午，她去商店买东西。然后，天黑以前，她回家。（Xīngqīliù shàngwǔ, Bông de māma qù yīyuàn, tā shì hùshi. Zhōngwǔ shí'èr diǎn, tā zài fàndiàn chī wǔfàn. Xīngqīliù xiàwǔ, tā qù shāngdiàn mǎi dōngxi. Ránhòu, tiān hēi yǐqián, tā huí jiā.）",
+      "video": "你去哪里？Where are you going? – Coolong Chinese – https://www.youtube.com/watch?v=Bh013yaanCo · 职业 小警察 & 小医生 – Baobei Chinese – https://www.youtube.com/watch?v=KXUQKIClmW0"
+     }
+    },
+    {
+     "ngay": 74,
+     "label": "Ngày 74. Ôn chặng 2 · Quét Unit 7 (phương tiện) và Unit 8 (sở thú), kèm một ngày – sở thích Unit 3–4 · Thi thử YCT2 Nghe phần 3–4 (~10 phút)",
+     "en": {
+      "tu": "Ôn: car, bus, bicycle, motorbike, train, plane, taxi, helicopter, ship, lorry, truck, sit, drive, trip, Beijing, Shanghai, elephant, tiger, giraffe, snake, bear, zebra, lion, tall, short, very, neck, swing, have got, money | Ôn (Unit 3–4): get up, breakfast, singing, dancing, grey (gray), mango, pineapple, crocodile, scary, silly",
+      "cum": "take a bus to school / ride a bike / drive to work / take a train to Beijing / has got a long neck / hasn't got legs",
+      "cau": "How do you go to school? I go to school by bike. / [Ngữ pháp: by + phương tiện] My dad goes to work by car. / The giraffe is tall. Its neck is long. / [Ngữ pháp: has got / hasn't got] The elephant has got a long nose. The snake hasn't got legs. / The elephant is grey. In the US, it is gray. / The silly monkey eats a mango and a pineapple. / The crocodile is scary! / [Chuyển ngữ] [nghe Xiaomei nói tiếng Trung, nói lại 1 câu bằng tiếng Anh cho Leo, ghi âm] Xiaomei: \"我坐公共汽车去动物园。\" → I take a bus to the zoo.",
+      "truyen": "Leo's Zoo Trip — Leo gets up at seven o'clock and eats breakfast. Then he takes a bus to the zoo. He sees a tall giraffe and a big elephant. The monkey is small, but its tail is long. Leo likes drawing, so he draws the animals.",
+      "video": "How Do You Go To School? Transportation Song – Wormhole English – https://www.youtube.com/watch?v=Hl9OO-8vJTA · Let's Go To The Zoo – Super Simple Songs – https://www.youtube.com/watch?v=OwRmivbNgQk"
+     },
+     "zh": {
+      "tu": "Ôn: 汽车 qìchē, 公共汽车 gōnggòng qìchē, 自行车 zìxíngchē, 摩托车 mótuōchē, 火车 huǒchē, 飞机 fēijī, 坐 zuò, 骑 qí, 开 kāi, 上班 shàngbān, 北京 Běijīng, 上海 Shànghǎi, 动物 dòngwù, 大象 dàxiàng, 老虎 lǎohǔ, 长颈鹿 chángjǐnglù, 蛇 shé, 矮 ǎi, 短 duǎn, 脖子 bózi, 尾巴 wěiba, 腿 tuǐ, 钱 qián | Ôn (Unit 3–4): 起床 qǐchuáng, 早饭 zǎofàn, 画 huà, 唱歌 chànggē, 跳舞 tiàowǔ | Ôn: 灰色 huīsè, 怕 pà | Nghe làm quen (ôn chặng): 芒果 mángguǒ, 菠萝 bōluó, 鳄鱼 èyú, 傻 shǎ",
+      "cum": "坐公共汽车去上学 zuò gōnggòng qìchē qù shàngxué / 骑自行车 qí zìxíngchē / 开车去上班 kāichē qù shàngbān / 坐火车去北京 zuò huǒchē qù Běijīng / 长颈鹿的脖子 chángjǐnglù de bózi / 没有腿 méiyǒu tuǐ",
+      "cau": "[Cầu nối] The elephant has got a long nose. The snake hasn't got legs. ↔ 大象有长鼻子，蛇没有腿。(Dàxiàng yǒu cháng bízi, shé méiyǒu tuǐ.) [ôn: has got ↔ 有, hasn't got ↔ 没有] / 你怎么去上学？我骑自行车去上学。(Nǐ zěnme qù shàngxué? Wǒ qí zìxíngchē qù shàngxué.) / [Ngữ pháp: phương tiện trước 去] 我爸爸开车去上班。(Wǒ bàba kāichē qù shàngbān.) / 长颈鹿很高，它的脖子很长。(Chángjǐnglù hěn gāo, tā de bózi hěn cháng.) / [Ngữ pháp: 有 / 没有] 大象有长鼻子，蛇没有腿。(Dàxiàng yǒu cháng bízi, shé méiyǒu tuǐ.) / [Thi thử YCT2 trên web · Nghe phần 3 + phần 4, 10 câu, ~10 phút] [Phần 3 – nghe hội thoại, chọn 1 trong 3 tranh] 11) Leo：你怎么去上学？Anna：我骑自行车去。(Leo: Nǐ zěnme qù shàngxué? Anna: Wǒ qí zìxíngchē qù.) 12) Bông：你爸爸怎么去上班？Xiaomei：他开车去。(Bông: Nǐ bàba zěnme qù shàngbān? Xiaomei: Tā kāichē qù.) 13) Anna：什么动物很高？Leo：长颈鹿。(Anna: Shénme dòngwù hěn gāo? Leo: Chángjǐnglù.) 14) Xiaomei：你们坐什么去上海？Bông：坐飞机。(Xiaomei: Nǐmen zuò shénme qù Shànghǎi? Bông: Zuò fēijī.) 15) Leo：蛇有腿吗？Anna：没有，蛇没有腿。(Leo: Shé yǒu tuǐ ma? Anna: Méiyǒu, shé méiyǒu tuǐ.) [Phần 4 – nghe câu hỏi, chọn 1 trong 3 đáp án chữ] 16) 你几点回家？(Nǐ jǐ diǎn huí jiā?) A 五点零五分 (wǔ diǎn líng wǔ fēn) B 公园 (gōngyuán) C 老师 (lǎoshī) 17) 你们怎么去北京？(Nǐmen zěnme qù Běijīng?) A 很高 (hěn gāo) B 坐火车 (zuò huǒchē) C 医生 (yīshēng) 18) 大象的鼻子怎么样？(Dàxiàng de bízi zěnmeyàng?) A 很长 (hěn cháng) B 星期六 (xīngqīliù) C 在学校 (zài xuéxiào) 19) 猴子的尾巴怎么样？(Hóuzi de wěiba zěnmeyàng?) A 去商店 (qù shāngdiàn) B 骑自行车 (qí zìxíngchē) C 很长 (hěn cháng) 20) 你喜欢什么动物？(Nǐ xǐhuan shénme dòngwù?) A 熊猫 (xióngmāo) B 饭店 (fàndiàn) C 下午 (xiàwǔ) [Đáp án phần 4: 16A 17B 18A 19C 20A] / 大象是灰色的。(Dàxiàng shì huīsè de.) / 傻傻的小猴子吃芒果和菠萝。(Shǎshǎ de xiǎo hóuzi chī mángguǒ hé bōluó.) / 我怕鳄鱼！(Wǒ pà èyú!) (= The crocodile is scary!)",
+      "truyen": "Leo去动物园 — Leo早上七点起床，吃早饭。然后他坐公共汽车去动物园。他看见很高的长颈鹿和很大的大象。猴子很小，可是它的尾巴很长。Leo喜欢画画，他画动物。（Leo zǎoshang qī diǎn qǐchuáng, chī zǎofàn. Ránhòu tā zuò gōnggòng qìchē qù dòngwùyuán. Tā kànjiàn hěn gāo de chángjǐnglù hé hěn dà de dàxiàng. Hóuzi hěn xiǎo, kěshì tā de wěiba hěn cháng. Leo xǐhuan huàhuà, tā huà dòngwù.）",
+      "video": "交通工具歌 Chinese Transportation Song – Giggling Panda – https://www.youtube.com/watch?v=5bUXLUlkIHw · Zoo Animals 动物园动物 – Galaxy Kids Chinese – https://www.youtube.com/watch?v=oMkR6NC7cz0"
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn Unit 5–8: home, school, shop, park, restaurant, zoo, cinema, library, hospital, doctor, chef, teacher, driver, nurse, employee, bus, bike, car, train, plane, taxi, elephant, giraffe, tiger, monkey, snake, tall, short | Ôn Unit 1–4: Monday, o'clock, get up, hobby | Từ thi: bookshop, camera, skateboard, baseball cap, crocodile, watermelon, pie, goat, radio, tablet, mirror, grey",
+     "slide": "[Lời cô] Vào bài: \"Good morning, class! 同学们好！\" · Chuyển ý: \"Now, let's review! 现在我们复习！\" · Khen: \"Excellent! 太好了！\" · Câu mới buổi này: \"Look at the example. 看例子。\" · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): không có từ mới; tiếng Việt chỉ để hướng dẫn cách làm bài thi thử 1) Ghép bản đồ: con dán nơi chốn (Unit 5), người làm việc (Unit 6), phương tiện và đường đi (Unit 7), sở thú (Unit 8) lên bản đồ lớn; mỗi con nói 1 câu: The doctor works at the hospital. / I take a bus to the zoo. 2) Nghe chọn tranh (8 câu, trộn 4 unit): Where are you going? / What does he do? / How do you go to school? / What animal is it? 3) Trò Chuyền bóng 4 câu hỏi: Where are you going? – What does your dad do? – How does he go to work? – What animal do you like? 4) Thi thử Starters Nghe trọn 4 phần (~20 phút, đề giấy, cô đi cùng). Phần 1 – nối tên (tranh phố có bookshop, zoo, bus stop): Example: Leo is the boy on the skateboard. ① Anna is the girl with the camera. ② Sam is the boy with the baseball cap. ③ Kim is the girl at the bookshop. She buys paper. ④ Ben is the man in the taxi. He is a driver. ⑤ Lucy is the girl. She talks to the doctor. Phần 2 – viết tên hoặc số: Example: What's the driver's name? – Tom. T-O-M. ① How many buses are there? – four ② What's the nurse's name? – Grace. Can you spell it? – G-R-A-C-E. ③ How old is Lucy? – seven ④ How many crocodiles are at the zoo? – two ⑤ What's the farmer's name? – Pat. P-A-T. Phần 3 – chọn tranh: ① How does Kim go to school? – By bike. ② What does Sam's mum do? – She's a dentist. ③ Where does Ben go on Saturday? – To the cinema. ④ Which animal is scary? – The crocodile. ⑤ What does Lucy eat at the zoo? – A watermelon. Phần 4 – tô màu: Example: Colour the bus yellow. ① Colour the baseball cap red. ② Colour the skateboard blue. ③ Colour the elephant grey (US: gray). ④ Colour the pie brown. ⑤ Colour the goat white. 5) Thi thử Starters Nói từng em (3–5 phút mỗi em, cô là giám khảo, các bạn khác làm bản đồ). Phần 1 – tranh to con phố: Where's the bookshop? / Put the camera next to the bookshop. / Put the goat under the tree. Phần 2 – How many taxis are there? / What colour is the lorry? Phần 3 – thẻ đồ vật: What's this? (a radio / a tablet / a mirror) / Have you got a tablet? Phần 4 – What's your name? / How do you go to school? / What does your dad do? – nghe chưa rõ thì nói Pardon?",
+     "truyen": "Our Town — This is our town. There is a school, a hospital, a library and a zoo. Leo's dad is a driver. He drives a bus. Anna's dad is a doctor. He works at the hospital. On Saturday, we take a bus to the zoo to see the giraffe. It is very tall!",
+     "baihat": "Ôn 4 bài hát Unit 5–8 — Where Are You Going?: Where are you going? / To the park! / I go to the park to play. / Play, play, play! · What Does Dad Do?: What does Dad do? / … He's a doctor, he works at a hospital. / Dad is a doctor! · How Do You Go to School?: This is the way I ride a bike, / … / I go to school by bike! · Long, Long, Long: The elephant's nose is long, long, long, / … / Hello, hello, zoo!"
+    },
+    "zh": {
+     "flash": "Ôn Unit 5–8: 家 jiā, 学校 xuéxiào, 商店 shāngdiàn, 公园 gōngyuán, 饭店 fàndiàn, 动物园 dòngwùyuán, 医院 yīyuàn, 医生 yīshēng, 厨师 chúshī, 司机 sījī, 员工 yuángōng, 公共汽车 gōnggòng qìchē, 自行车 zìxíngchē, 汽车 qìchē, 火车 huǒchē, 飞机 fēijī, 大象 dàxiàng, 长颈鹿 chángjǐnglù, 老虎 lǎohǔ, 猴子 hóuzi, 蛇 shé, 高 gāo, 矮 ǎi | Ôn Unit 1–4: 星期一 xīngqīyī, 点 diǎn, 起床 qǐchuáng, 爱好 àihào | Ôn thêm: 老师 lǎoshī, 图书馆 túshūguǎn, 电影院 diànyǐngyuàn, 护士 hùshi, 出租车 chūzūchē | Ôn (đồ vật, con vật trong đề): 镜子 jìngzi, 滑板 huábǎn, 帽子 màozi, 灰色 huīsè | Nghe làm quen: 书店 shūdiàn, 照相机 zhàoxiàngjī, 鳄鱼 èyú, 西瓜 xīguā, 山羊 shānyáng, 平板电脑 píngbǎn diànnǎo",
+     "slide": "1) Xếp vào nhóm theo chữ chung: 园 (公园, 动物园) / 店 (商店, 饭店) / 生 (学生, 医生) / 车 (汽车, 火车, 自行车) / 长 (长颈鹿). 2) Bắt bẫy tổng hợp (Đúng hay sai, 6 câu): 去家 / 他工作在医院 / 我坐自行车 / 长颈鹿是高 / 男孩很短 / 我去公园玩 (chỉ câu cuối đúng). 3) Chép lại 8 chữ Hán chặng 2: 家 门 生 工 车 走 高 长, mỗi chữ 1 ô. 4) Thi thử YCT口试（初级） từng em, rút gọn đủ 3 phần (~6 phút mỗi em, cô là giám khảo, ghi âm). 第一部分 听后重复: 我去图书馆学习。(Wǒ qù túshūguǎn xuéxí.) / 我爸爸是医生。(Wǒ bàba shì yīshēng.) / 我们坐火车去北京。(Wǒmen zuò huǒchē qù Běijīng.) / 长颈鹿很高。(Chángjǐnglù hěn gāo.) / 我先去商店，然后回家。(Wǒ xiān qù shāngdiàn, ránhòu huí jiā.) 第二部分 听后回答: 你去哪儿？(Nǐ qù nǎr?) / 你妈妈做什么工作？(Nǐ māma zuò shénme gōngzuò?) / 你怎么去上学？(Nǐ zěnme qù shàngxué?) / 你喜欢什么动物？(Nǐ xǐhuan shénme dòngwù?) / 你几点回家？(Nǐ jǐ diǎn huí jiā?) 第三部分 看图说话 (2 tranh): tranh bệnh viện → 这是医院。她是护士，她在医院工作。(Zhè shì yīyuàn. Tā shì hùshi, tā zài yīyuàn gōngzuò.) / tranh sở thú → 大象很大，长颈鹿很高。(Dàxiàng hěn dà, chángjǐnglù hěn gāo.) 5) Ghép bản đồ bằng tiếng Trung: con dán nơi chốn, người làm việc, phương tiện, sở thú; mỗi con nói 1 câu: 医生在医院工作。/ 我坐公共汽车去动物园。 6) Nghe chọn tranh (8 câu, trộn 4 unit): 你去哪儿？/ 他做什么工作？/ 你怎么去上学？/ 这是什么动物？ 7) Chuyền bóng 4 câu hỏi tiếng Trung: 你去哪儿？– 你爸爸做什么工作？– 他怎么去上班？– 你喜欢什么动物？ [Cầu nối Anh – Trung] Cùng bản đồ thành phố lớn: mỗi nhóm chọn 1 câu tiếng Anh của Unit 5–8 và câu tiếng Trung cùng nghĩa, dán cạnh nhau (I take a bus to the zoo. ↔ 我坐公共汽车去动物园。), rồi nói 1 điểm khác. [Chuyển ngữ] Mỗi con rút 1 thẻ câu tiếng Anh trên bản đồ (The doctor works at the hospital.), nói lại cho rối Xiaomei bằng tiếng Trung: 医生在医院工作。(NL5) [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo kể: \"On my map, Bông's mum is a nurse at the hospital. In the afternoon, she goes to the shop to buy things. Then she takes a bus home.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: Bông的妈妈是护士，她在医院工作。下午，她去商店买东西。然后她坐公共汽车回家。 (Bông de māma shì hùshi, tā zài yīyuàn gōngzuò. Xiàwǔ, tā qù shāngdiàn mǎi dōngxi. Ránhòu tā zuò gōnggòng qìchē huí jiā.)",
+     "truyen": "我们住的地方 — 这是我们住的地方。这儿有学校、医院、图书馆和动物园。Leo的爸爸是司机，他开公共汽车。Anna的爸爸是医生，他在医院工作。星期六，我们坐公共汽车去动物园看长颈鹿。它很高！（Zhè shì wǒmen zhù de dìfang. Zhèr yǒu xuéxiào, yīyuàn, túshūguǎn hé dòngwùyuán. Leo de bàba shì sījī, tā kāi gōnggòng qìchē. Anna de bàba shì yīshēng, tā zài yīyuàn gōngzuò. Xīngqīliù, wǒmen zuò gōnggòng qìchē qù dòngwùyuán kàn chángjǐnglù. Tā hěn gāo!）",
+     "baihat": "Ôn 4 bài hát Unit 5–8 — 你去哪儿？: 你去哪儿？/ 去公园！/ 我去公园玩。/ 玩，玩，玩！ · 爸爸做什么工作？: 爸爸做什么工作？/ … 他是医生，他在医院工作。/ 爸爸是医生！ · 你怎么去上学？: 我这样骑自行车，/ … / 我骑自行车去上学！ · 长长长: 大象的鼻子长长长，/ … / 你好，动物园！"
+    }
+   }
+  },
+  {
+   "buoi": 38,
+   "unit": "",
+   "label_buoi": "Buổi dạy 38. Tuần 19 · Ôn và kiểm tra chặng 2 (Unit 5–8) – Kiểm tra chặng 2 (Unit 5–8) và nói theo cặp",
+   "web": [
+    {
+     "ngay": 75,
+     "label": "Ngày 75. Ôn chặng 2 · Luyện dạng đề Starters và YCT2 (nghe – đọc, mỗi phần ≤30 phút) · Thi thử YCT2 Đọc phần 1–2 (~12 phút)",
+     "en": {
+      "tu": "Ôn (từ trong đề): shop, park, zoo, library, hospital, doctor, nurse, chef, driver, bus, car, bike, train, plane, giraffe, elephant, monkey, snake, tiger, tall, short, long",
+      "cum": "go to the library / work at a hospital / take a bus / has got a long tail / on Sunday afternoon",
+      "cau": "[Dạng Starters Listening Part 4 – nghe và tô màu] Colour the bus yellow. Colour the giraffe's neck orange. / [Dạng Starters Reading Part 2 – nhìn tranh, viết yes / no] The monkey has got a long tail. (yes) The snake has got legs. (no) / [Dạng Starters Reading Part 4 – điền từ] I go to the ___ to see animals. (zoo) / Where does the doctor work? At the hospital. / Look at the example. Choose the correct answer. / Can you spell \"zoo\"? – Pardon? – Can you spell \"zoo\"? – Z-O-O.",
+      "truyen": "Test Story · Sunday Afternoon — On Sunday afternoon, Anna and her dad take a bus to the zoo. They see a tall giraffe and a long snake. Then they go to the library to read. Anna's dad is a doctor, but on Sunday he doesn't work.",
+      "video": "Tìm YouTube: \"Cambridge Pre A1 Starters listening practice places transport animals\""
+     },
+     "zh": {
+      "tu": "Ôn (từ trong đề): 商店 shāngdiàn, 公园 gōngyuán, 动物园 dòngwùyuán, 医院 yīyuàn, 医生 yīshēng, 厨师 chúshī, 司机 sījī, 公共汽车 gōnggòng qìchē, 自行车 zìxíngchē, 飞机 fēijī, 火车 huǒchē, 长颈鹿 chángjǐnglù, 大象 dàxiàng, 猴子 hóuzi, 高 gāo, 矮 ǎi, 尾巴 wěiba, 蛇 shé, 老虎 lǎohǔ | Nghe làm quen: 例子 lìzi",
+      "cum": "去图书馆 qù túshūguǎn / 在医院工作 zài yīyuàn gōngzuò / 坐公共汽车 zuò gōnggòng qìchē / 长长的尾巴 chángcháng de wěiba / 星期天下午 xīngqītiān xiàwǔ",
+      "cau": "[Cầu nối] Where does the doctor work? At the hospital. ↔ 医生在哪儿工作？在医院。(Yīshēng zài nǎr gōngzuò? Zài yīyuàn.) [giống: trả lời ngắn được ở cả hai tiếng: At the hospital. ↔ 在医院。] / [Dạng YCT2 听力 – nghe chọn tranh đúng/sai] 他坐飞机去北京。(Tā zuò fēijī qù Běijīng.) / [Dạng YCT2 听力 – nghe hội thoại chọn tranh] 你妈妈做什么工作？她是医生。(Nǐ māma zuò shénme gōngzuò? Tā shì yīshēng.) / [Dạng YCT2 阅读 – nối câu hỏi với câu trả lời] 你怎么去上学？— 我走路去。(Nǐ zěnme qù shàngxué? — Wǒ zǒulù qù.) / [Thi thử YCT2 trên web · Đọc phần 1 + phần 2, 10 câu, ~12 phút] [Phần 1 – nhìn tranh, đọc cụm, chọn ✓ hay ✗] 1) [tranh xe buýt] 公共汽车 (gōnggòng qìchē) ✓ 2) [tranh bệnh viện] 饭店 (fàndiàn) ✗ 3) [tranh hươu cao cổ] 很矮 (hěn ǎi) ✗ 4) [tranh đầu bếp] 厨师 (chúshī) ✓ 5) [tranh máy bay] 坐飞机 (zuò fēijī) ✓ [Phần 2 – đọc hội thoại, chọn tranh A–E] 6) 你去哪儿？— 我去动物园看长颈鹿。(Nǐ qù nǎr? — Wǒ qù dòngwùyuán kàn chángjǐnglù.) 7) 你爸爸怎么去上班？— 他开车去。(Nǐ bàba zěnme qù shàngbān? — Tā kāichē qù.) 8) 这是什么地方？— 这是图书馆。(Zhè shì shénme dìfang? — Zhè shì túshūguǎn.) 9) 你妈妈是医生吗？— 不是，她是老师。(Nǐ māma shì yīshēng ma? — Bú shì, tā shì lǎoshī.) 10) 你看什么？— 我看长颈鹿。(Nǐ kàn shénme? — Wǒ kàn chángjǐnglù.) / [Dạng tô màu] 公共汽车是黄色的。长颈鹿的脖子是橙色的。(Gōnggòng qìchē shì huángsè de. Chángjǐnglù de bózi shì chéngsè de.) / [Dạng đúng – sai] 猴子的尾巴很长。(对) 蛇有腿。(不对) (Hóuzi de wěiba hěn cháng. Shé yǒu tuǐ.) / [Dạng điền từ] 我去___看动物。(动物园) (Wǒ qù ___ kàn dòngwù.) / 请看例子，选对的。(Qǐng kàn lìzi, xuǎn duì de.) (= Look at the example. Choose the correct answer.) / “动物园”怎么写？——请再说一次。——“动物园”怎么写？(“Dòngwùyuán” zěnme xiě? — Qǐng zài shuō yí cì. — “Dòngwùyuán” zěnme xiě?) (= Can you spell \"zoo\"? – Pardon?)",
+      "truyen": "星期天下午 — 星期天下午，Anna和爸爸坐公共汽车去动物园。他们看见很高的长颈鹿和很长的蛇。然后他们去图书馆看书。Anna的爸爸是医生，可是星期天他不工作。（Xīngqītiān xiàwǔ, Anna hé bàba zuò gōnggòng qìchē qù dòngwùyuán. Tāmen kànjiàn hěn gāo de chángjǐnglù hé hěn cháng de shé. Ránhòu tāmen qù túshūguǎn kàn shū. Anna de bàba shì yīshēng, kěshì xīngqītiān tā bù gōngzuò.）",
+      "video": "Tìm YouTube: \"YCT2 听力 练习 少儿汉语考试二级\""
+     }
+    },
+    {
+     "ngay": 76,
+     "label": "Ngày 76. Ôn chặng 2 · Chuyển ngữ và giải đố tổng hợp (NL1–NL8, PS-1 → PS-3) · Thi thử YCT2 Đọc phần 3–4 (~12 phút)",
+     "en": {
+      "tu": "Ôn: place, thing, part, also, then, first, busy, dark, job, love, don't worry, oh dear, easy, round, boy, trip, lorry, truck, bear, zebra, lion, so, very, swing, a lot of",
+      "cum": "a busy part of town / love my job / an easy trip / a lot of animals / so tall",
+      "cau": "[Chuyển ngữ] [Phiên dịch nhí] Xiaomei: \"我爸爸坐火车去上海工作。\" → Xiaomei's dad takes a train to Shanghai to work. / [PS-3] Leo doesn't take a bus. The boy on the bike is Leo. / Anna's mom is not a doctor. She works at a school. What does Anna's mom do? She is a teacher. / Oh dear! – Don't worry! / Thanks! – That's correct! / Who goes to the bookshop? – Bông goes to the bookshop to buy paper.",
+      "truyen": "Who Goes Where? — Leo, Anna and Bông go to three places: the zoo, the library and the hospital. Anna doesn't go to the zoo. Bông goes to the hospital. Her mum is a nurse. Leo takes a bus to the zoo. Where does Anna go? To the library!",
+      "video": "Tìm YouTube: \"logic puzzle for kids who goes where\""
+     },
+     "zh": {
+      "tu": "Ôn: 地方 dìfang, 东西 dōngxi, 人 rén, 然后 ránhòu, 别担心 bié dānxīn, 斑马 bānmǎ, 狮子 shīzi, 熊 xióng, 真 zhēn, 很 hěn, 卡车 kǎchē | Nghe làm quen: 书店 shūdiàn, 纸 zhǐ, 摇 yáo",
+      "cum": "人很多 rén hěn duō / 爱我的工作 ài wǒ de gōngzuò / 很多动物 hěn duō dòngwù / 真高 zhēn gāo",
+      "cau": "[Cầu nối] Anna doesn't go to the zoo. ↔ Anna不去动物园。(Anna bú qù dòngwùyuán.) [ôn: doesn't ↔ 不, cùng đứng trước động từ] / [Phiên dịch nhí] Leo: \"My mom rides a motorbike to work.\" → Leo的妈妈骑摩托车去上班。(Leo de māma qí mótuōchē qù shàngbān.) / [PS-3] Anna不去动物园。(Anna bú qù dòngwùyuán.) / Bông去医院，她妈妈是护士。(Bông qù yīyuàn, tā māma shì hùshi.) / [Thi thử YCT2 trên web · Đọc phần 3 + phần 4, 10 câu, ~12 phút] [Phần 3 – nối câu hỏi với câu trả lời A–E] 11) 你几点去学校？(Nǐ jǐ diǎn qù xuéxiào?) 12) 你怎么去北京？(Nǐ zěnme qù Běijīng?) 13) 谢谢！(Xièxie!) 14) 你去哪儿？(Nǐ qù nǎr?) 15) 你姐姐做什么工作？(Nǐ jiějie zuò shénme gōngzuò?) / A 不客气！(Bú kèqi!) B 我去图书馆。(Wǒ qù túshūguǎn.) C 七点零五分。(Qī diǎn líng wǔ fēn.) D 坐火车。(Zuò huǒchē.) E 她是护士。(Tā shì hùshi.) [Đáp án: 11C 12D 13A 14B 15E] [Phần 4 – hội thoại thiếu, chọn 1 trong 6 đáp án A–F] 16) 对不起！(Duìbuqǐ!) — ___ 17) 你哥哥高吗？(Nǐ gēge gāo ma?) — ___ 18) 你去商店做什么？(Nǐ qù shāngdiàn zuò shénme?) — ___ 19) 蛇有腿吗？(Shé yǒu tuǐ ma?) — ___ 20) 你和谁去公园？(Nǐ hé shéi qù gōngyuán?) — ___ / A 没关系。(Méi guānxi.) B 他很高。(Tā hěn gāo.) C 买东西。(Mǎi dōngxi.) D 没有。(Méiyǒu.) E 和朋友一起去。(Hé péngyou yìqǐ qù.) F 我是学生。(Wǒ shì xuéshēng.) [F thừa; đáp án: 16A 17B 18C 19D 20E] / Leo不坐公共汽车。骑自行车的是Leo。(Leo bú zuò gōnggòng qìchē. Qí zìxíngchē de shì Leo.) / Anna的妈妈不是医生，她在学校工作。她做什么工作？她是老师。(Anna de māma bú shì yīshēng, tā zài xuéxiào gōngzuò. Tā zuò shénme gōngzuò? Tā shì lǎoshī.) / 哎呀！——别担心！(Āiyā! — Bié dānxīn!) / 谢谢！你说对了！(Xièxie! Nǐ shuō duì le!) (= Thanks! – That's correct!) / 谁去书店？Bông去书店买纸。(Shéi qù shūdiàn? Bông qù shūdiàn mǎi zhǐ.)",
+      "truyen": "谁去哪儿？ — Leo、Anna和Bông去三个地方：动物园、图书馆和医院。Anna不去动物园。Bông去医院，她妈妈是护士。Leo坐公共汽车去动物园。Anna去哪儿？她去图书馆！（Leo, Anna hé Bông qù sān ge dìfang: dòngwùyuán, túshūguǎn hé yīyuàn. Anna bú qù dòngwùyuán. Bông qù yīyuàn, tā māma shì hùshi. Leo zuò gōnggòng qìchē qù dòngwùyuán. Anna qù nǎr? Tā qù túshūguǎn!）",
+      "video": "Tìm YouTube: \"儿童 逻辑 推理 谁去哪儿 中文\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Từ trong bài kiểm tra: home, shop, park, zoo, library, hospital, restaurant, doctor, teacher, chef, driver, nurse, student, bus, bike, car, train, plane, taxi, elephant, giraffe, monkey, snake, tiger, lion, tall, short, long, big, small | Từ thi: bookshop, crocodile, skateboard, mirror, goat, baseball cap, bat, mango, pie, kiwi, grape, radio, tablet, pineapple, camera, paper",
+     "slide": "[Lời cô] Vào bài: \"Good morning, class! 同学们好！\" · Chuyển ý: \"Now, it's test time. 现在我们考试。\" · Nhắc: \"Be quiet, please. 请安静。\" · Khen: \"Well done, everyone! 大家都很棒！\" · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): hướng dẫn quy trình kiểm tra, giữ nề nếp phòng thi 1) Thi thử Starters Đọc – viết trọn 5 phần (20 phút, đề giấy, cô đi cùng). Phần 1 – ✓ hay ✗: Example: [tranh sở thú] a zoo ✓ ① [tranh nhà sách] a bookshop ✓ ② [tranh rắn] a crocodile ✗ ③ [tranh ván trượt] a skateboard ✓ ④ [tranh gương] a mirror ✓ ⑤ [tranh thư viện] a hospital ✗. Phần 2 – tranh công viên, viết yes / no: Example: There is a giraffe. – yes ① The giraffe is short. – no ② There are two goats. – yes ③ The boy has got a baseball cap. – yes ④ The bear is dirty. – yes ⑤ The bat is on the bus. – no. Phần 3 – xếp chữ cái: Example: m-a-n-g-o → mango ① e-i-p → pie ② w-i-k-i → kiwi ③ a-r-e-p-g → grape ④ d-i-o-r-a → radio ⑤ e-l-b-t-a-t → tablet. Phần 4 – điền từ (khung: chef, restaurant, pineapple, mango, camera, paper): Example: Anna's uncle is a (0) chef. He works at a (1) ___. He makes (2) ___ pies and (3) ___ pies. Anna takes photos with her (4) ___. She draws the restaurant on (5) ___. (Đáp án: restaurant, pineapple, mango, camera, paper) Phần 5 – 3 tranh Bông's Busy Week, trả lời 1 từ: Example: How does Bông go to school? – (by) bus ① Where does she study English? – (at the) library ② What does her dad drive? – (a) taxi ③ Where do they go on Saturday? – (to the) zoo ④ What is long on the elephant? – (its) nose. 2) Chữa bài nghe buổi 37 và nghe lại nhanh (5 phút): nghe tên và nối người với nơi chốn (Anna – library, Leo – zoo, Bông – hospital); nghe chọn tranh (How does she go to school? She takes a bus.). 3) Chữa bài đọc: The giraffe is short. – no; điền từ: The chef works at a ___. (restaurant). 4) Nói theo cặp (dạng Starters Nói phần 2 và 4): cô chỉ bản đồ hỏi Where are you going? / What does your dad do? / How do you go to school? / What animal is it? [Chuyển ngữ] Nói theo cặp: bạn A nghe cô nói tiếng Trung \"他坐公共汽车去动物园。\", nói lại cho bạn B bằng tiếng Anh: He takes a bus to the zoo. (NL5) [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo kể: \"On Sunday afternoon, Anna and her dad take a bus to the zoo. They see a tall giraffe and a long snake. Her dad is a doctor, but he doesn't work on Sundays.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 星期天下午，Anna和爸爸坐公共汽车去动物园。他们看见很高的长颈鹿和很长的蛇。她爸爸是医生，可是星期天他不工作。 (Xīngqītiān xiàwǔ, Anna hé bàba zuò gōnggòng qìchē qù dòngwùyuán. Tāmen kànjiàn hěn gāo de chángjǐnglù hé hěn cháng de shé. Tā bàba shì yīshēng, kěshì xīngqītiān tā bù gōngzuò.)",
+     "truyen": "Bông's Busy Week — On Monday morning, Bông takes a bus to school. On Wednesday afternoon, she walks to the library to study English. Her dad is a driver. He drives a taxi. On Saturday, they go to the zoo. The elephant has got a long nose!",
+     "baihat": "Hát cả lớp sau bài kiểm tra: Where Are You Going? (đoạn Zoo): Where are you going? / To the zoo! / I go to the zoo to see animals. / See, see, see! · Long, Long, Long (đoạn 2): The tiger is big, the snake is long, / the monkey is small and cute, / the giraffe is tall, so very tall – / Hello, hello, zoo!"
+    },
+    "zh": {
+     "flash": "Từ trong bài kiểm tra: 家 jiā, 商店 shāngdiàn, 公园 gōngyuán, 动物园 dòngwùyuán, 图书馆 túshūguǎn, 医院 yīyuàn, 饭店 fàndiàn, 医生 yīshēng, 老师 lǎoshī, 厨师 chúshī, 司机 sījī, 学生 xuéshēng, 公共汽车 gōnggòng qìchē, 自行车 zìxíngchē, 汽车 qìchē, 火车 huǒchē, 飞机 fēijī, 大象 dàxiàng, 长颈鹿 chángjǐnglù, 猴子 hóuzi, 蛇 shé, 老虎 lǎohǔ, 高 gāo, 矮 ǎi, 狮子 shīzi, 长 cháng, 大 dà, 小 xiǎo | Ôn (đồ vật, con vật trong đề): 滑板 huábǎn, 镜子 jìngzi, 帽子 màozi | Nghe làm quen: 芒果 mángguǒ, 菠萝 bōluó, 葡萄 pútao, 书店 shūdiàn, 鳄鱼 èyú, 山羊 shānyáng, 照相机 zhàoxiàngjī, 平板电脑 píngbǎn diànnǎo",
+     "slide": "1) Kiểm tra nghe (≤30 phút, dạng YCT2 听力): nghe câu, chọn tranh đúng/sai (他骑自行车去上学。); nghe hội thoại chọn tranh (你爸爸在哪儿工作？他在饭店工作。). 2) Kiểm tra đọc (dạng YCT2 阅读): nối chữ Hán với tranh (医院, 动物园, 火车, 长颈鹿); chọn câu trả lời đúng: 你去哪儿？— A. 我去公园。 B. 我是医生。 3) Nói theo cặp: hỏi – đáp 3 câu bằng tiếng Trung theo tranh bản đồ; chép 4 chữ Hán do cô đọc: 家 车 高 工. 4) Chữa bài nghe – đọc YCT2 (buổi 37 và bài vừa làm): nghe lại câu sai, chọn lại: 长颈鹿很矮。– 不对！长颈鹿很高。/ 医生在哪儿工作？– 在医院。 [Cầu nối Anh – Trung] Sau bài kiểm tra: cô chiếu 4 cặp câu Anh – Trung của chặng 2, con nói điểm khác: a doctor ↔ 医生; at a hospital ↔ 在医院 (đứng trước 工作); by bike ↔ 骑自行车 (đứng trước 去); is tall ↔ 很高.",
+     "truyen": "Bông的一个星期 — 星期一早上，Bông坐公共汽车去上学。星期三下午，她走路去图书馆学习英语。她爸爸是司机，他开出租车。星期六，他们去动物园。大象的鼻子很长！（Xīngqīyī zǎoshang, Bông zuò gōnggòng qìchē qù shàngxué. Xīngqīsān xiàwǔ, tā zǒulù qù túshūguǎn xuéxí Yīngyǔ. Tā bàba shì sījī, tā kāi chūzūchē. Xīngqīliù, tāmen qù dòngwùyuán. Dàxiàng de bízi hěn cháng!）",
+     "baihat": "Hát cả lớp sau bài kiểm tra: 你去哪儿？(đoạn Zoo): 你去哪儿？/ 去动物园！/ 我去动物园看动物。/ 看，看，看！ · 长长长 (đoạn 2): 老虎很大，蛇很长，/ 小猴子很可爱，/ 长颈鹿很高，高又高——/ 你好，动物园！"
+    }
+   }
+  }
+ ]
+}

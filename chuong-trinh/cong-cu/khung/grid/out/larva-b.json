@@ -1,0 +1,1032 @@
+{
+ "course": "Larva",
+ "part": "b",
+ "rows": [
+  {
+   "buoi": 21,
+   "unit": 5,
+   "label_buoi": "Buổi dạy 21. Unit 5 · Animals – Con vật trong sở thú",
+   "web": [
+    {
+     "ngay": 41,
+     "label": "Ngày 41. Unit 5 · Ở sở thú: con vật mới",
+     "en": {
+      "tu": "Mới: kangaroo, panda, dolphin, wolf, cage, feed | Ôn: how often, zoo, elephant, giraffe, tiger, lion, penguin, lake",
+      "cum": "go to the zoo / feed the panda / a kangaroo in a cage / a grey wolf / a dolphin in the sea / Welcome to the zoo! / a big bear and two lions",
+      "cau": "Welcome to the zoo! / Look! It's a panda. / The kangaroo can jump. / The dolphin can swim. / The wolf is in a cage. / Can I feed the panda? / How often do you go to the zoo? / Look! The penguins are swimming in the lake. / There's a big bear and two lions, too.",
+      "truyen": "Leo at the Zoo — On Saturday Leo goes to the zoo with his dad. 'Welcome to the zoo!' says the zoo keeper. Leo sees a panda, a kangaroo, a dolphin, a bear and two lions. The kangaroo can jump! A grey wolf is in a big cage. 'Can I feed the panda?' asks Leo. 'Yes, you can,' says Dad. 'How often can we come here?' 'Every month!' Then they see some penguins in a lake. They can't fly, but they can swim!",
+      "video": "Tìm YouTube: \"zoo animals for kids kangaroo panda dolphin wolf\""
+     },
+     "zh": {
+      "tu": "Mới: 熊 xióng (= bear), 狮子 shīzi (= lion), 狼 láng (= wolf), 欢迎 huānyíng (= welcome), 喂 wèi (= feed), 袋鼠 dàishǔ (= kangaroo), 海豚 hǎitún (= dolphin) | Ôn: 熊猫 xióngmāo, 大象 dàxiàng, 老虎 lǎohǔ, 动物园 dòngwùyuán, 跳 tiào, 游泳 yóuyǒng | Nghe làm quen: 笼子 lóngzi (= cage), 企鹅 qǐ'é (= penguin), 湖 hú (= lake), 多长时间一次 duō cháng shíjiān yí cì (= how often)",
+      "cum": "欢迎来动物园 huānyíng lái dòngwùyuán / 一只熊 yì zhī xióng / 两只狮子 liǎng zhī shīzi / 一只狼 yì zhī láng / 喂熊猫 wèi xióngmāo / 一只袋鼠 yì zhī dàishǔ / 一只海豚 yì zhī hǎitún / 在笼子里 zài lóngzi lǐ",
+      "cau": "[Cầu nối] Can I feed the panda? ↔ 我可以喂熊猫吗？(Wǒ kěyǐ wèi xióngmāo ma?) [giống: Can I + việc muốn làm ↔ 我可以 + việc muốn làm; khác: tiếng Trung không đảo chữ, chỉ thêm 吗 ở cuối câu] / 欢迎来动物园！(Huānyíng lái dòngwùyuán!) / 看！这是熊猫。(Kàn! Zhè shì xióngmāo.) / 袋鼠会跳，海豚会游泳。(Dàishǔ huì tiào, hǎitún huì yóuyǒng.) / 狼在笼子里。(Láng zài lóngzi lǐ.) / 我可以喂熊猫吗？(Wǒ kěyǐ wèi xióngmāo ma?) / 你多长时间去一次动物园？(Nǐ duō cháng shíjiān qù yí cì dòngwùyuán?) / 看！企鹅在湖里游泳。(Kàn! Qǐ'é zài hú lǐ yóuyǒng.) / 还有一只熊和两只狮子。(Hái yǒu yì zhī xióng hé liǎng zhī shīzi.)",
+      "truyen": "Leo去动物园 — 星期六，Leo和爸爸去动物园。'欢迎来动物园！' Leo看见熊猫、袋鼠、海豚、熊和两只狮子。袋鼠会跳！一只狼在大笼子里。Leo问：'我可以喂熊猫吗？' 爸爸说：'可以。' Leo问：'我们多长时间可以来一次？' 爸爸说：'每个月！' 然后他们看见企鹅在湖里。企鹅不会飞，可是会游泳！ (Xīngqīliù, Leo hé bàba qù dòngwùyuán. 'Huānyíng lái dòngwùyuán!' Leo kànjiàn xióngmāo, dàishǔ, hǎitún, xióng hé liǎng zhī shīzi. Dàishǔ huì tiào! Yì zhī láng zài dà lóngzi lǐ. Leo wèn: 'Wǒ kěyǐ wèi xióngmāo ma?' Bàba shuō: 'Kěyǐ.' Leo wèn: 'Wǒmen duō cháng shíjiān kěyǐ lái yí cì?' Bàba shuō: 'Měi gè yuè!' Ránhòu tāmen kànjiàn qǐ'é zài hú lǐ. Qǐ'é bú huì fēi, kěshì huì yóuyǒng!)",
+      "video": "Tìm YouTube: \"动物园 动物 儿童 熊猫 袋鼠 海豚 狮子\""
+     }
+    },
+    {
+     "ngay": 42,
+     "label": "Ngày 42. Unit 5 · Nhanh hay chậm?",
+     "en": {
+      "tu": "Mới: fast, slow, heavy, huge, loud, than | Ôn: how often, horse, bear, mouse, cat, big",
+      "cum": "very fast / very slow / a huge elephant / a loud lion / bigger than / smaller than / faster than",
+      "cau": "[Ngữ pháp: so sánh hơn A is bigger than B] The elephant is bigger than the cat. / The mouse is smaller than the lion. / The horse is faster than the bear. / It's fast. / The elephant is huge and heavy. / The lion is loud.",
+      "truyen": "The Animal Race — Leo and Anna watch an animal race at the zoo. The horse is fast. The bear is slow and heavy. The elephant is huge. It's bigger than the horse, but it's slower. The lion is loud: 'Roar!' 'The horse is first!' says Anna.",
+      "video": "Tìm YouTube: \"comparatives for kids bigger than faster than animals\""
+     },
+     "zh": {
+      "tu": "Mới: 快 kuài (= fast), 慢 màn (= slow) | Ôn: 马 mǎ, 熊 xióng, 大象 dàxiàng, 猫 māo, 老鼠 lǎoshǔ, 大 dà, 小 xiǎo | Ôn nhanh: 多长时间一次 duō cháng shíjiān yí cì | Nghe làm quen: 重 zhòng (= heavy), 声音很大 shēngyīn hěn dà (= loud)",
+      "cum": "很快 hěn kuài / 很慢 hěn màn / 很大很重 hěn dà hěn zhòng / 声音很大 shēngyīn hěn dà / 比猫大 bǐ māo dà / 比狮子小 bǐ shīzi xiǎo / 比熊快 bǐ xióng kuài",
+      "cau": "[Cầu nối] The horse is faster than the bear. ↔ 马比熊快。(Mǎ bǐ xióng kuài.) [giống: A đứng trước, B đứng sau; khác: tiếng Anh tính từ thêm -er + than, tiếng Trung A 比 B + tính từ, 快 không đổi] / [Ngữ pháp: so sánh A 比 B + tính từ] 大象比猫大。(Dàxiàng bǐ māo dà.) / 老鼠比狮子小。(Lǎoshǔ bǐ shīzi xiǎo.) / 马比熊快。(Mǎ bǐ xióng kuài.) / 它很快。(Tā hěn kuài.) / 大象很大，也很重。(Dàxiàng hěn dà, yě hěn zhòng.) / 狮子的声音很大。(Shīzi de shēngyīn hěn dà.) / [Chuyển ngữ] [Leo nói tiếng Anh, con nói lại bằng tiếng Trung cho Xiaomei, 2 câu] The horse is fast. The bear is slow. → 马很快，熊很慢。(Mǎ hěn kuài, xióng hěn màn.)",
+      "truyen": "比一比 — Leo和Anna在动物园看动物跑。马很快。熊很慢，也很重。大象很大，它比马大，可是比马慢。狮子的声音很大：'嗷——！' Anna说：'马第一！' (Leo hé Anna zài dòngwùyuán kàn dòngwù pǎo. Mǎ hěn kuài. Xióng hěn màn, yě hěn zhòng. Dàxiàng hěn dà, tā bǐ mǎ dà, kěshì bǐ mǎ màn. Shīzi de shēngyīn hěn dà: 'Áo——!' Anna shuō: 'Mǎ dì-yī!')",
+      "video": "Tìm YouTube: \"比较 儿童 大象比猫大 快 慢\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: kangaroo, panda, dolphin, wolf, cage, feed, fast, slow, heavy, huge, loud, than | Ôn: elephant, lion, horse, bear, mouse, penguin, lake, welcome, how often",
+     "slide": "[Lời cô] Vào bài: Good morning, class! 同学们好！ · Chuyển ý: Now, let's go to the zoo! 现在我们去动物园吧！ · Khen: Well done! 真棒！ · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): cage, feed / 喂, than / 比. 1) Nhìn tranh chọn từ (6 câu): kangaroo / panda / dolphin / wolf / cage / feed. 2) Kéo thả từ so sánh vào câu: The elephant is ___ than the cat. (bigger) / The mouse is ___ than the lion. (smaller) / The horse is ___ than the bear. (faster). 3) Nghe cô tả, chọn con vật: 'It's huge and heavy.' (elephant) / 'It's fast and it can jump.' (kangaroo) 4) Nghe cô đọc, chỉ vào tranh (3 câu): 'The penguin is swimming in the lake.' / 'The kangaroo is next to the lake.' / 'The wolf is in a cage.'",
+     "truyen": "A Day at the Zoo — Leo and Dad go to the zoo. First they see a kangaroo. It's fast and it can jump. Then they see a panda. It's slow, but it's very cute. Leo feeds the panda. A grey wolf is in a cage. It's loud! The elephant is huge and heavy. It's bigger than the kangaroo. 'I love the zoo!' says Leo.",
+     "baihat": "Animals at the Zoo (giai điệu The Farmer in the Dell) — The kangaroo is fast, the kangaroo is fast, / Jump, jump, jump all day, the kangaroo is fast. / The panda is slow, the panda is slow, / Eat, eat, eat all day, the panda is slow. / The elephant is huge, it's bigger than the cat, / Stamp, stamp, stamp all day, it's bigger than the cat."
+    },
+    "zh": {
+     "flash": "Mới: 熊 xióng, 狮子 shīzi, 狼 láng, 欢迎 huānyíng, 快 kuài, 慢 màn, 喂 wèi, 袋鼠 dàishǔ, 海豚 hǎitún | Ôn: 熊猫 xióngmāo, 大象 dàxiàng, 马 mǎ, 老鼠 lǎoshǔ | Nghe làm quen: 笼子 lóngzi, 企鹅 qǐ'é, 湖 hú, 重 zhòng, 多长时间一次 duō cháng shíjiān yí cì",
+     "slide": "[Cầu nối Anh – Trung] Cùng tranh sở thú: rối Leo nói \"Can I feed the panda? The horse is faster than the bear.\", rối Xiaomei nói \"我可以喂熊猫吗？马比熊快。\" — con tìm điểm giống (A trước, B sau) và khác (faster than ↔ 比…快, tính từ không đổi; tiếng Trung chỉ thêm 吗, không đảo chữ). 1) Nghe chọn tranh (6 câu, cùng tranh bài tiếng Anh): 袋鼠 / 熊猫 / 海豚 / 狼 / 笼子 / 喂. 2) Nối câu với tranh: 大象比猫大。/ 老鼠比狮子小。/ 马比熊快。 3) Nghe cô tả, chọn con vật: '它很大，很重。'(大象) / '它很快，会跳。'(袋鼠) 4) Nghe cô đọc, chỉ vào tranh: '企鹅在湖里游泳。' / '狼在笼子里。' [Chuyển ngữ] Cặp đôi: con A đọc tấm biển sở thú tiếng Anh 3 câu (Welcome to the zoo! The elephant is huge. The horse is fast.), con B nói lại bằng tiếng Trung cho khách Trung Quốc: 欢迎来动物园！大象很大。马很快。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo đọc tấm biển sở thú: \"Welcome to our zoo! Every morning the dolphins swim and play in the sea pool. At ten o'clock, visitors can feed the pandas. Please don't feed the grey wolf in the cage. Our kangaroos can jump higher and run faster than the horses!\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 欢迎来动物园！十点可以喂熊猫，可是别喂狼。袋鼠比马快。 (Huānyíng lái dòngwùyuán! Shí diǎn kěyǐ wèi xióngmāo, kěshì bié wèi láng. Dàishǔ bǐ mǎ kuài.)",
+     "truyen": "动物园的一天 — Leo和爸爸去动物园。他们先看见袋鼠，袋鼠很快，会跳。然后看见熊猫，熊猫很慢，很可爱。Leo喂熊猫。一只狼在笼子里，它的声音很大！大象很大，也很重，它比袋鼠大。Leo说：'我很喜欢动物园！' (Leo hé bàba qù dòngwùyuán. Tāmen xiān kànjiàn dàishǔ, dàishǔ hěn kuài, huì tiào. Ránhòu kànjiàn xióngmāo, xióngmāo hěn màn, hěn kě'ài. Leo wèi xióngmāo. Yì zhī láng zài lóngzi lǐ, tā de shēngyīn hěn dà! Dàxiàng hěn dà, yě hěn zhòng, tā bǐ dàishǔ dà. Leo shuō: 'Wǒ hěn xǐhuan dòngwùyuán!')",
+     "baihat": "动物园 (giai điệu The Farmer in the Dell, như bài tiếng Anh) — 袋鼠跑得快呀，袋鼠跑得快呀，跳跳跳一整天，袋鼠跑得快呀。熊猫走得慢呀，熊猫走得慢呀，吃吃吃一整天，熊猫走得慢呀。大象真大真大，它比小猫大呀，踩踩踩一整天，它比小猫大呀。(Dàishǔ pǎo de kuài ya, dàishǔ pǎo de kuài ya, tiào tiào tiào yì zhěng tiān, dàishǔ pǎo de kuài ya. Xióngmāo zǒu de màn ya, xióngmāo zǒu de màn ya, chī chī chī yì zhěng tiān, xióngmāo zǒu de màn ya. Dàxiàng zhēn dà zhēn dà, tā bǐ xiǎo māo dà ya, cǎi cǎi cǎi yì zhěng tiān, tā bǐ xiǎo māo dà ya.)"
+    }
+   }
+  },
+  {
+   "buoi": 22,
+   "unit": 5,
+   "label_buoi": "Buổi dạy 22. Unit 5 · Animals – Con vật như thế nào? · Luyện Movers Nói phần 1",
+   "web": [
+    {
+     "ngay": 43,
+     "label": "Ngày 43. Unit 5 · Con vật như thế nào?",
+     "en": {
+      "tu": "Mới: dangerous, clever, kind, naughty, brave, famous | Ôn: quick, safe, cage, how often",
+      "cum": "a dangerous wolf / a clever dolphin / a kind panda / a naughty bird / a brave girl / a famous zoo",
+      "cau": "The wolf is dangerous. / Dolphins are clever. / The naughty bird takes my hat! / You are brave and kind. / Stay here. It's safe. / The wolf is dangerous, so it's in a cage. / Where's my hat? I know! It's outside.",
+      "truyen": "The Naughty Bird — Bông and Nhan are at a famous zoo. They see a clever dolphin. It's quick and it can play with a ball. Then a naughty bird takes Nhan's hat! Bông is brave. 'Stop, bird!' she says. The bird puts the hat outside, on the grass. 'Thank you, Bông. You're very kind,' says Nhan.",
+      "video": "Tìm YouTube: \"adjectives for kids brave clever kind naughty dangerous\""
+     },
+     "zh": {
+      "tu": "Mới: 危险 wēixiǎn (= dangerous), 知道 zhīdào (= know) | Ôn: 外面 wàimiàn, 帽子 màozi, 安全 ānquán, 害怕 hàipà, 多长时间一次 duō cháng shíjiān yí cì | Nghe làm quen: 聪明 cōngming (= clever), 笼子 lóngzi (= cage), 淘气 táoqì (= naughty)",
+      "cum": "淘气的小鸟 táoqì de xiǎo niǎo / 很危险 hěn wēixiǎn / 聪明的海豚 cōngming de hǎitún / 我知道 wǒ zhīdào / 在外面 zài wàimiàn / 我的帽子呢 wǒ de màozi ne",
+      "cau": "[Cầu nối] The wolf is dangerous. ↔ 狼很危险。(Láng hěn wēixiǎn.) [giống: con vật + tính từ; khác: tiếng Anh cần is, tiếng Trung không dùng 是 mà dùng 很 trước tính từ] / 海豚很聪明。(Hǎitún hěn cōngming.) / 淘气的小鸟拿了我的帽子！(Táoqì de xiǎo niǎo nále wǒ de màozi!) / 你不害怕，你真好！(Nǐ bú hàipà, nǐ zhēn hǎo!) / 别走，这儿很安全。(Bié zǒu, zhèr hěn ānquán.) / 狼很危险，所以它在笼子里。(Láng hěn wēixiǎn, suǒyǐ tā zài lóngzi lǐ.) / 我的帽子呢？——我知道！在外面。(Wǒ de màozi ne? — Wǒ zhīdào! Zài wàimiàn.)",
+      "truyen": "淘气的小鸟 — Bông和Nhan在动物园。他们看见一只聪明的海豚，它很快，会玩球。一只淘气的小鸟拿了Nhan的帽子！Bông不害怕，她说：'小鸟，别跑！' 小鸟放下了帽子，帽子在外面的草上。Nhan说：'谢谢你，Bông！你真好！' (Bông hé Nhan zài dòngwùyuán. Tāmen kànjiàn yì zhī cōngming de hǎitún, tā hěn kuài, huì wán qiú. Yì zhī táoqì de xiǎo niǎo nále Nhan de màozi! Bông bú hàipà, tā shuō: 'Xiǎo niǎo, bié pǎo!' Xiǎo niǎo fàngxiàle màozi, màozi zài wàimiàn de cǎo shang. Nhan shuō: 'Xièxie nǐ, Bông! Nǐ zhēn hǎo!')",
+      "video": "Tìm YouTube: \"儿童 形容词 动物 聪明 危险 淘气\""
+     }
+    },
+    {
+     "ngay": 44,
+     "label": "Ngày 44. Unit 5 · Tốt hơn, tốt nhất",
+     "en": {
+      "tu": "Mới: bad, better, best, boring, exciting, brilliant, difficult | Ôn: worse, worst, terrible, surprised, how often",
+      "cum": "good – better – best / bad – worse – worst / an exciting day / a boring game / a difficult game / Brilliant!",
+      "cau": "[Ngữ pháp: so sánh hơn better / worse] Pandas are better than wolves! / The zoo is exciting. It isn't boring. / The dolphin show is the best! / This game is difficult. / My drawing is bad, but your drawing is worse. / Brilliant! / Can we see the dolphins? Of course!",
+      "truyen": "The Best Day — Anna's class goes to the zoo. 'The zoo is boring,' says Leo. 'Can we see the dolphin show?' asks Leo. 'Of course!' says the teacher. Then they see the dolphin show. It's exciting! A dolphin jumps over a ball. 'Brilliant!' says Leo. He is surprised. 'This is the best day!'",
+      "video": "Tìm YouTube: \"good better best bad worse worst song for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 难 nán (= difficult), 当然 dāngrán (= of course), 坏 huài (= bad) | Ôn: 最 zuì, 好 hǎo, 可以 kěyǐ, 画 huà, 太棒了 tài bàng le | Nghe làm quen: 精彩 jīngcǎi (= exciting), 没意思 méiyìsi (= boring), 更 gèng (= -er: better, worse), 表演 biǎoyǎn (= show), 吃惊 chījīng (= surprised)",
+      "cum": "好 – 更好 – 最好 hǎo – gèng hǎo – zuì hǎo / 坏 – 更坏 – 最坏 huài – gèng huài – zuì huài / 很难 hěn nán / 不难 bù nán / 当然可以 dāngrán kěyǐ / 比狼好 bǐ láng hǎo / 最好 zuì hǎo / 很精彩 hěn jīngcǎi / 没意思 méiyìsi / 太棒了 tài bàng le",
+      "cau": "[Cầu nối] This game is difficult. ↔ 这个游戏很难。(Zhège yóuxì hěn nán.) [giống: This game ↔ 这个游戏 đứng đầu câu; khác: tiếng Anh có is, tiếng Trung không dùng 是 mà dùng 很 trước 难] / 熊猫比狼好！(Xióngmāo bǐ láng hǎo!) / 动物园很精彩！(Dòngwùyuán hěn jīngcǎi!) / 海豚表演最好！(Hǎitún biǎoyǎn zuì hǎo!) / 我画得不好，你画得更不好。(Wǒ huà de bù hǎo, nǐ huà de gèng bù hǎo.) / 太棒了！(Tài bàng le!) / 我们可以看海豚吗？——当然可以！(Wǒmen kěyǐ kàn hǎitún ma? — Dāngrán kěyǐ!) / [Chuyển ngữ] [Leo nhắn tin tiếng Anh, con chuyển cho Xiaomei bằng tiếng Trung, 2 câu] Can we see the dolphins? Of course! → 我们可以看海豚吗？——当然可以！(Wǒmen kěyǐ kàn hǎitún ma? — Dāngrán kěyǐ!)",
+      "truyen": "最好的一天 — Anna的班去动物园。Leo说：'动物园没意思。' Leo问：'老师，我们可以看海豚表演吗？' 老师说：'当然可以！' 然后他们看海豚表演，很精彩！一只海豚跳过了一个球。Leo说：'哇！太棒了！' Leo很吃惊：'今天是最好的一天！' (Anna de bān qù dòngwùyuán. Leo shuō: 'Dòngwùyuán méiyìsi.' Leo wèn: 'Lǎoshī, wǒmen kěyǐ kàn hǎitún biǎoyǎn ma?' Lǎoshī shuō: 'Dāngrán kěyǐ!' Ránhòu tāmen kàn hǎitún biǎoyǎn, hěn jīngcǎi! Yì zhī hǎitún tiàoguòle yí gè qiú. Leo shuō: 'Wā! Tài bàng le!' Leo hěn chījīng: 'Jīntiān shì zuì hǎo de yì tiān!')",
+      "video": "Tìm YouTube: \"好 更好 最好 儿童 汉语 比较\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: dangerous, clever, kind, naughty, brave, famous, bad, better, best, boring, exciting, brilliant, difficult | Ôn: safe, worse, worst, surprised, know, outside, hat, of course",
+     "slide": "[Lời cô] Vào bài: Hello, everyone! 大家好！ · Chuyển ý: Now, work in pairs. 现在两个人一组。 · Khen: Excellent! 太好了！ · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): naughty / 淘气, famous, brilliant. 1) Nhìn tranh chọn tính từ (6 câu): dangerous / clever / kind / naughty / brave / famous. 2) Điền từ vào thang so sánh: good – ___ – best / bad – worse – ___ (better, worst). 3) Đọc câu chọn Yes/No theo tranh: The wolf is dangerous. / The dolphin show is boring. / The panda is kind. 4) Movers Nói phần 1 (mẫu, cô là giám khảo, từng em, ~2 phút): cô đưa 2 tranh sở thú gần giống nhau. Cô: 'In picture A, the wolf is in a cage. In picture B, the wolf isn't in a cage.' Con tìm 4 điểm khác: In picture A, the penguin is in the lake. In picture B, it's next to the lake. / In picture A, the horse is fast. In picture B, it's slow. / In picture A, there are two kangaroos. In picture B, there are three. / In picture A, the bird is naughty. In picture B, it's kind.",
+     "truyen": "The Naughty Bird at the Zoo — Anna's class goes to a famous zoo. Leo thinks the zoo is boring. Then a naughty bird takes Nhan's hat! Bông is brave and quick: 'Stop, bird!' The bird drops the hat. Then they watch the dolphin show. The dolphins are clever. It's exciting! 'This is the best day! Brilliant!' says Leo.",
+     "baihat": "Good, Better, Best (giai điệu London Bridge) — Good, better, best, the panda is the best, / The panda is the best, so kind and cute! / Bad, worse, worst, the wolf is the worst, / The wolf is the worst, be careful, too!"
+    },
+    "zh": {
+     "flash": "Mới: 危险 wēixiǎn, 知道 zhīdào, 难 nán, 当然 dāngrán, 坏 huài | Ôn: 好 hǎo, 最好 zuì hǎo, 不害怕 bú hàipà, 太棒了 tài bàng le, 安全 ānquán, 外面 wàimiàn, 帽子 màozi | Nghe làm quen: 淘气 táoqì, 聪明 cōngming, 精彩 jīngcǎi, 没意思 méiyìsi",
+     "slide": "[Cầu nối Anh – Trung] Cùng thẻ tranh con sói và gấu trúc: rối Leo nói \"The wolf is dangerous. The panda is the best!\", rối Xiaomei nói \"狼很危险。熊猫最好！\" — con tìm: tiếng Anh có is, tiếng Trung dùng 很; the best ↔ 最好 (最 đứng trước tính từ). 1) Nhìn tranh chọn từ (cùng tranh bài tiếng Anh): 危险 / 聪明 / 好 / 淘气. 2) Điền vào thang: 好 – ___ – 最好 / 坏 – 更坏 – ___ (更好, 最坏). 3) Nghe chọn đúng/sai theo tranh: 狼很危险。/ 海豚表演没意思。/ 熊猫很好。 4) Tìm điểm khác giữa 2 tranh sở thú (cùng tranh Movers phần 1, nói tiếng Trung ngắn): 图A，狼在笼子里；图B，狼不在笼子里。/ 图A，马很快；图B，马很慢。/ 图A有两只袋鼠，图B有三只。 [Chuyển ngữ] Hướng dẫn viên nhí: cô (vai khách nói tiếng Anh) nói 3 câu \"This game is difficult. Can we see the dolphins? Of course!\" → con nói lại cho rối Xiaomei: 这个游戏很难。我们可以看海豚吗？——当然可以！ [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo (hướng dẫn viên) kể: \"Welcome to the animal show! First, we can watch the dolphins. They are the best swimmers in the zoo. Then we can see the wolves, but be careful — wolves are dangerous animals. The last game is very difficult, but of course you can play it!\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 先看海豚，然后看狼。狼很危险，要小心！这个游戏很难，可是当然可以玩。 (Xiān kàn hǎitún, ránhòu kàn láng. Láng hěn wēixiǎn, yào xiǎoxīn! Zhège yóuxì hěn nán, kěshì dāngrán kěyǐ wán.)",
+     "truyen": "淘气的小鸟和帽子 — Anna的班去动物园。Leo觉得动物园没意思。一只淘气的小鸟拿了Nhan的帽子！Bông不害怕，跑得很快：'小鸟，别跑！' 小鸟放下了帽子。然后他们看海豚表演，海豚很聪明，表演很精彩！Leo说：'今天是最好的一天！太棒了！' (Anna de bān qù dòngwùyuán. Leo juéde dòngwùyuán méiyìsi. Yì zhī táoqì de xiǎo niǎo nále Nhan de màozi! Bông bú hàipà, pǎo de hěn kuài: 'Xiǎo niǎo, bié pǎo!' Xiǎo niǎo fàngxiàle màozi. Ránhòu tāmen kàn hǎitún biǎoyǎn, hǎitún hěn cōngming, biǎoyǎn hěn jīngcǎi! Leo shuō: 'Jīntiān shì zuì hǎo de yì tiān! Tài bàng le!')",
+     "baihat": "好、更好、最好 (giai điệu London Bridge, như bài tiếng Anh) — 好，更好，熊猫最好，最最好，最最好，好，更好，熊猫最好，真可爱呀！坏，更坏，坏狼最坏，最最坏，最最坏，坏，更坏，坏狼最坏，要小心呀！(Hǎo, gèng hǎo, xióngmāo zuì hǎo, zuì zuì hǎo, zuì zuì hǎo, hǎo, gèng hǎo, xióngmāo zuì hǎo, zhēn kě'ài ya! Huài, gèng huài, huài láng zuì huài, zuì zuì huài, zuì zuì huài, huài, gèng huài, huài láng zuì huài, yào xiǎoxīn ya!)"
+    }
+   }
+  },
+  {
+   "buoi": 23,
+   "unit": 5,
+   "label_buoi": "Buổi dạy 23. Unit 5 · Animals – Sợ, ngủ hay thức? · YCT口试 phần 2",
+   "web": [
+    {
+     "ngay": 45,
+     "label": "Ngày 45. Unit 5 · Sợ, ngủ hay thức?",
+     "en": {
+      "tu": "Mới: afraid, frightened, asleep, awake, careful | Ôn: how often, dream, noise, quiet, safe",
+      "cum": "be afraid of snakes / frightened of the wolf / fast asleep / wide awake / Be careful! / make a noise",
+      "cau": "I'm afraid of snakes. / Are you frightened of the wolf? / The panda is asleep. / Is the lion awake? / Be careful! The tiger is awake. / Be quiet! Don't make a noise. / Leo is worried. Don't worry. We're safe.",
+      "truyen": "Shh! — Bông and Leo visit the zoo in the evening. The panda is asleep. Maybe it has a dream. The lion is awake. Leo is frightened. 'Be careful, Leo. Be quiet, don't make a noise,' says Bông. 'Don't worry. Don't be afraid. The lion is in a cage. We're safe.'",
+      "video": "Tìm YouTube: \"asleep awake afraid feelings song for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 担心 dānxīn (= worried; 别担心 = Don't worry) | Ôn: 害怕 hàipà, 睡觉 shuìjiào, 别 bié, 小心 xiǎoxīn, 说话 shuōhuà, 安全 ānquán | Nghe làm quen: 蛇 shé (= snake), 醒 xǐng (= awake), 着急 zháojí (= worried, anxious)",
+      "cum": "很担心 hěn dānxīn / 别担心 bié dānxīn / 害怕蛇 hàipà shé / 别害怕 bié hàipà / 在睡觉 zài shuìjiào / 没睡觉 méi shuìjiào / 小心！xiǎoxīn! / 别说话 bié shuōhuà",
+      "cau": "[Cầu nối] Don't be afraid! ↔ 别害怕！(Bié hàipà!) [giống: câu khuyên ngắn, Don't ↔ 别 đứng đầu; khác: tiếng Trung không cần be; Don't worry ↔ 别担心] / 我害怕蛇。(Wǒ hàipà shé.) / 你害怕狼吗？(Nǐ hàipà láng ma?) / 熊猫在睡觉。(Xióngmāo zài shuìjiào.) / 狮子醒了吗？(Shīzi xǐng le ma?) / 小心！老虎没睡觉。(Xiǎoxīn! Lǎohǔ méi shuìjiào.) / 别说话！(Bié shuōhuà!) / Leo很担心。别担心，我们很安全。(Leo hěn dānxīn. Bié dānxīn, wǒmen hěn ānquán.)",
+      "truyen": "嘘！— 晚上，Bông和Leo在动物园。熊猫在睡觉。狮子没睡觉。Leo很害怕。Bông说：'小心，Leo！别说话。' '别担心，别害怕！狮子在笼子里，我们很安全。' (Wǎnshang, Bông hé Leo zài dòngwùyuán. Xióngmāo zài shuìjiào. Shīzi méi shuìjiào. Leo hěn hàipà. Bông shuō: 'Xiǎoxīn, Leo! Bié shuōhuà.' 'Bié dānxīn, bié hàipà! Shīzi zài lóngzi lǐ, wǒmen hěn ānquán.')",
+      "video": "Tìm YouTube: \"儿童歌 睡觉 害怕 别害怕 动物\""
+     }
+    },
+    {
+     "ngay": 46,
+     "label": "Ngày 46. Unit 5 · Ôn không tranh: đoán con vật · Luyện nói Movers phần 4, YCT口试 phần 1",
+     "en": {
+      "tu": "Ôn: kangaroo, panda, dolphin, wolf, fast, slow, heavy, than, dangerous, clever, afraid, asleep, careful | Ôn nhanh: how often",
+      "cum": "faster than / slower than / heavier than / afraid of / Be careful!",
+      "cau": "(Nghe – trả lời, không tranh) Which is faster, a kangaroo or a bear? / The elephant is heavier than the panda. / Is the wolf dangerous? Yes, it is. / Is the panda awake? No, it's asleep. / How often do you feed your cat? / Is the penguin in the lake? Yes, it is. / Is the wolf in a cage? Yes, it is. Are you frightened? No, I'm not! / [Movers Nói phần 4 (mẫu) – ghi âm câu trả lời trên Trang luyện nói, ≤5 phút] What's your favourite animal? / Which animal are you afraid of? / How often do you go to the zoo?",
+      "truyen": "Guess the Animal — Listen and guess. It's black and white. It's slower than a kangaroo. It's heavy, but it's kind and cute. It's from China. What is it? A panda! / It lives in the sea. It's clever and fast. It isn't dangerous. What is it? A dolphin!",
+      "video": "Tìm YouTube: \"guess the animal riddles for kids\""
+     },
+     "zh": {
+      "tu": "Ôn: 熊 xióng, 狼 láng, 快 kuài, 慢 màn, 危险 wēixiǎn, 害怕 hàipà, 睡觉 shuìjiào, 小心 xiǎoxīn, 大象 dàxiàng, 重 zhòng, 袋鼠 dàishǔ, 海豚 hǎitún, 喂 wèi | Ôn nhanh: 多长时间一次 duō cháng shíjiān yí cì | Nghe làm quen: 笼子 lóngzi, 企鹅 qǐ'é, 湖 hú, 聪明 cōngming",
+      "cum": "比熊快 bǐ xióng kuài / 比熊猫重 bǐ xióngmāo zhòng / 害怕狼 hàipà láng / 小心！xiǎoxīn!",
+      "cau": "[Cầu nối] Is the wolf dangerous? Yes, it is. ↔ 狼危险吗？——很危险。(Láng wēixiǎn ma? — Hěn wēixiǎn.) [giống: câu hỏi có/không; khác: tiếng Anh đảo Is lên đầu và đáp Yes, it is; tiếng Trung giữ trật tự, thêm 吗, đáp bằng chính tính từ] / (Nghe – trả lời, không tranh) 袋鼠和熊，哪个快？(Dàishǔ hé xióng, nǎge kuài?) / 大象比熊猫重。(Dàxiàng bǐ xióngmāo zhòng.) / 熊猫醒了吗？——没醒，它在睡觉。(Xióngmāo xǐng le ma? — Méi xǐng, tā zài shuìjiào.) / 你多长时间喂一次猫？(Nǐ duō cháng shíjiān wèi yí cì māo?) / 企鹅在湖里吗？——在。(Qǐ'é zài hú lǐ ma? — Zài.) / 狼在笼子里吗？——在。你害怕吗？——不害怕！(Láng zài lóngzi lǐ ma? — Zài. Nǐ hàipà ma? — Bú hàipà!) / [YCT口试（初级）第一部分 听后重复 (mẫu, cùng ý câu hỏi Movers phần 4) – Trang luyện nói: nghe 1 lần, nói lại 1 lần, ≤5 phút] 我最喜欢熊猫。(Wǒ zuì xǐhuan xióngmāo.) / 我害怕狼。(Wǒ hàipà láng.) / 我每个月去动物园。(Wǒ měi gè yuè qù dòngwùyuán.) / [Chuyển ngữ] [nghe Bông nói tiếng Anh, con nói lại bằng tiếng Trung cho Xiaomei, 3 câu] The panda is asleep. Don't be afraid. Be careful! → 熊猫在睡觉。别害怕，小心！(Xióngmāo zài shuìjiào. Bié hàipà, xiǎoxīn!)",
+      "truyen": "猜一猜 — 它是黑白的。它比袋鼠慢。它很可爱。它从中国来。它是什么？熊猫！/ 它在海里。它很聪明，游得很快。它不危险。它是什么？海豚！(Tā shì hēibái de. Tā bǐ dàishǔ màn. Tā hěn kě'ài. Tā cóng Zhōngguó lái. Tā shì shénme? Xióngmāo! / Tā zài hǎi lǐ. Tā hěn cōngming, yóu de hěn kuài. Tā bù wēixiǎn. Tā shì shénme? Hǎitún!)",
+      "video": "Tìm YouTube: \"猜动物 儿童 谜语 熊猫\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: afraid, frightened, asleep, awake, careful | Ôn: kangaroo, panda, dolphin, wolf, lion, fast, slow, heavy, than, dangerous, clever, quiet, noise, worried, Don't worry",
+     "slide": "[Lời cô] Vào bài: Good afternoon, class! 同学们好！ · Chuyển ý: Shh! Listen carefully. 嘘！认真听。 · Khen: Great job! 很好！ · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): asleep / 在睡觉, frightened / 害怕, careful. 1) Nhìn tranh chọn asleep / awake (4 tranh: panda, lion, cat, wolf). 2) Nghe cô đọc câu, chọn tranh đúng: Be careful! The tiger is awake. / The panda is asleep. / I'm afraid of snakes. 3) Trò đoán con vật không tranh: cô đọc 3 câu gợi ý (It's bigger than a cat. It's dangerous. It's loud.) → con nói tên (lion). 4) Ghép câu khuyên với tình huống (4 tranh): Don't worry! / Don't be afraid! / Be careful! / Be quiet!",
+     "truyen": "The Night at the Zoo — Bông and Leo are at the zoo in the evening. The panda is asleep. The lion is awake and loud. Leo is frightened. 'Be careful. Be quiet,' says Bông. 'Don't be afraid. We're safe.' Then they see the kangaroo. It's awake, too! It jumps fast. Leo laughs. 'The zoo at night is exciting!'",
+     "baihat": "Are You Asleep? (giai điệu Frère Jacques) — Are you asleep? Are you asleep, / Panda bear, panda bear? / Lion is awake now, lion is awake now, / Be careful! Be careful!"
+    },
+    "zh": {
+     "flash": "Mới: 担心 dānxīn | Ôn: 害怕 hàipà, 睡觉 shuìjiào, 小心 xiǎoxīn, 说话 shuōhuà, 狮子 shīzi, 狼 láng, 袋鼠 dàishǔ, 海豚 hǎitún, 快 kuài, 慢 màn, 危险 wēixiǎn | Nghe làm quen: 着急 zháojí",
+     "slide": "[Cầu nối Anh – Trung] Cùng tranh sở thú ban đêm: rối Leo nói \"The panda is asleep. Don't be afraid!\", rối Xiaomei nói \"熊猫在睡觉。别害怕！\" — con tìm: Don't ↔ 别 đứng đầu câu khuyên; asleep ↔ 在睡觉 (đang ngủ). 1) Nghe chọn tranh (cùng tranh bài tiếng Anh): 熊猫在睡觉。/ 狮子没睡觉。/ 小心！老虎没睡觉。/ 我害怕蛇。 2) Ghép câu khuyên với tình huống: 别担心！/ 别害怕！/ 小心！/ 别说话！ 3) Đoán con vật không tranh: 它比猫大，它很危险，它的声音很大。它是什么？(狮子) 4) YCT口试（初级）第二部分 听后回答 (mẫu, cô là giám khảo hỏi, từng em trả lời ngắn): 你喜欢什么动物？— 我喜欢熊猫。(Nǐ xǐhuan shénme dòngwù? — Wǒ xǐhuan xióngmāo.) / 熊猫快吗？— 不快，很慢。(Xióngmāo kuài ma? — Bú kuài, hěn màn.) / 狮子在睡觉吗？— 没睡觉，它醒了。(Shīzi zài shuìjiào ma? — Méi shuìjiào, tā xǐng le.) / 你害怕狼吗？— 我害怕。(Nǐ hàipà láng ma? — Wǒ hàipà.) / 你知道熊猫在哪儿吗？— 当然知道！(Nǐ zhīdào xióngmāo zài nǎr ma? — Dāngrán zhīdào!) [Chuyển ngữ] Nhân viên sở thú nhí: cô đọc tấm biển tiếng Anh 3 câu \"The lion is awake. Be quiet. Don't be afraid.\" → con nói lại cho rối Xiaomei bằng tiếng Trung: 狮子没睡觉。别说话。别害怕！ [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo đọc thông báo của người trông sở thú: \"It's night at the zoo now. The pandas are asleep, so please be quiet. But the tiger isn't asleep — it's awake and hungry. Be careful and don't go near it! Don't worry, the tiger is in a big cage.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 熊猫在睡觉，别说话。老虎没睡觉，它饿了，要小心！别害怕！ (Xióngmāo zài shuìjiào, bié shuōhuà. Lǎohǔ méi shuìjiào, tā è le, yào xiǎoxīn! Bié hàipà!)",
+     "truyen": "嘘！小心！— 晚上，Bông和Leo在动物园。熊猫在睡觉。狮子没睡觉，它的声音很大。Leo很害怕。Bông说：'小心！别说话。别害怕，我们很安全。' 然后他们看见袋鼠，它也没睡觉，跳得很快。Leo笑了：'晚上的动物园很精彩！' (Wǎnshang, Bông hé Leo zài dòngwùyuán. Xióngmāo zài shuìjiào. Shīzi méi shuìjiào, tā de shēngyīn hěn dà. Leo hěn hàipà. Bông shuō: 'Xiǎoxīn! Bié shuōhuà. Bié hàipà, wǒmen hěn ānquán.' Ránhòu tāmen kànjiàn dàishǔ, tā yě méi shuìjiào, tiào de hěn kuài. Leo xiào le: 'Wǎnshang de dòngwùyuán hěn jīngcǎi!')",
+     "baihat": "你睡了吗 (giai điệu Frère Jacques, như bài tiếng Anh) — 你睡了吗？你睡了吗？大熊猫，大熊猫？狮子现在醒了，狮子现在醒了，要小心！要小心！(Nǐ shuì le ma? Nǐ shuì le ma? Dà xióngmāo, dà xióngmāo? Shīzi xiànzài xǐng le, shīzi xiànzài xǐng le, yào xiǎoxīn! Yào xiǎoxīn!)"
+    }
+   }
+  },
+  {
+   "buoi": 24,
+   "unit": 5,
+   "label_buoi": "Buổi dạy 24. Unit 5 · Animals – Truyện và Phiên dịch nhí · Luyện Movers Nói phần 2, YCT口试 看图说话",
+   "web": [
+    {
+     "ngay": 47,
+     "label": "Ngày 47. Unit 5 · Truyện: Sư tử và chuột",
+     "en": {
+      "tu": "Ôn: huge, asleep, awake, afraid, frightened, worried, brave, kind, clever, than | Ôn nhanh: how often",
+      "cum": "a huge lion / a small mouse / fast asleep / I know the way / bigger than",
+      "cau": "The lion is bigger than the mouse. / The mouse is small, but she is brave. / Don't be afraid. I know the way! / Thank you. You are very kind.",
+      "truyen": "The Lion and the Mouse — A huge lion is asleep. A small mouse runs on his nose. The lion is awake and angry. 'Please don't eat me!' says the mouse. The lion laughs and lets her go. One day the lion can't find his home. He is worried and frightened. The mouse says, 'Don't be afraid. I know the way!' She takes him home. 'You are small, but you are clever and kind!' says the lion.",
+      "video": "Tìm YouTube: \"The Lion and the Mouse story for kids\""
+     },
+     "zh": {
+      "tu": "Ôn: 狮子 shīzi, 老鼠 lǎoshǔ, 知道 zhīdào, 害怕 hàipà, 着急 zháojí, 生气 shēngqì, 可是 kěshì | Ôn nhanh: 多长时间一次 duō cháng shíjiān yí cì | Nghe làm quen: 聪明 cōngming",
+      "cum": "一只大狮子 yì zhī dà shīzi / 一只小老鼠 yì zhī xiǎo lǎoshǔ / 在睡觉 zài shuìjiào / 我知道路 wǒ zhīdào lù / 比老鼠大 bǐ lǎoshǔ dà",
+      "cau": "[Cầu nối] The lion is bigger than the mouse. ↔ 狮子比老鼠大。(Shīzi bǐ lǎoshǔ dà.) [giống: A trước, B sau; khác: bigger than ↔ 比 … 大, 大 không thêm -er] / 老鼠很小，可是它不害怕。(Lǎoshǔ hěn xiǎo, kěshì tā bú hàipà.) / 别害怕，我知道路！(Bié hàipà, wǒ zhīdào lù!) / 谢谢你，你真好！(Xièxie nǐ, nǐ zhēn hǎo!)",
+      "truyen": "狮子和老鼠 — 一只大狮子在睡觉。一只小老鼠跑到它的鼻子上。狮子不睡了，很生气。老鼠说：'别吃我！' 狮子笑了，没吃老鼠。有一天，狮子找不到家，它很着急，也很害怕。小老鼠说：'别害怕，我知道路！' 它帮助狮子回家。狮子说：'你很小，可是很聪明，你真好！' (Yì zhī dà shīzi zài shuìjiào. Yì zhī xiǎo lǎoshǔ pǎodào tā de bízi shang. Shīzi bú shuì le, hěn shēngqì. Lǎoshǔ shuō: 'Bié chī wǒ!' Shīzi xiào le, méi chī lǎoshǔ. Yǒu yì tiān, shīzi zhǎo bú dào jiā, tā hěn zháojí, yě hěn hàipà. Xiǎo lǎoshǔ shuō: 'Bié hàipà, wǒ zhīdào lù!' Tā bāngzhù shīzi huí jiā. Shīzi shuō: 'Nǐ hěn xiǎo, kěshì hěn cōngming, nǐ zhēn hǎo!')",
+      "video": "Tìm YouTube: \"狮子和老鼠 儿童故事\""
+     }
+    },
+    {
+     "ngay": 48,
+     "label": "Ngày 48. Unit 5 · Phiên dịch nhí ở sở thú",
+     "en": {
+      "tu": "Ôn: panda, kangaroo, wolf, dolphin, fast, slow, dangerous, careful, than, best | Ôn nhanh: how often",
+      "cum": "Welcome to the zoo! / Of course! / Be careful! / slower than / Don't be afraid.",
+      "cau": "(Phiên dịch nhí: nghe tiếng Trung, nói tiếng Anh) Welcome to the zoo! / Is the lion dangerous? Yes, it is. Be careful! / Can we see the pandas? Of course! / The panda is slower than the horse. / Do you know where the wolf is? / Are you frightened of the lion? No, I'm not. It's in a cage.",
+      "truyen": "Little Interpreter at the Zoo — Xiaomei is from China. She visits the zoo in Hanoi with Nhan. Nhan helps her. 'Welcome to the zoo!' says the zoo keeper. Nhan says it in Chinese for Xiaomei. Xiaomei asks, 'Is the lion dangerous?' 'Yes, it is. Be careful!' 'Can we see the pandas?' 'Of course!' The pandas are slow and cute. 'This is the best zoo!' says Xiaomei.",
+      "video": "Tìm YouTube: \"kids interpreter English Chinese animals zoo\""
+     },
+     "zh": {
+      "tu": "Ôn: 欢迎 huānyíng, 当然 dāngrán, 知道 zhīdào, 慢 màn, 危险 wēixiǎn, 小心 xiǎoxīn, 害怕 hàipà, 最 zuì | Ôn nhanh: 多长时间一次 duō cháng shíjiān yí cì | Nghe làm quen: 笼子 lóngzi",
+      "cum": "欢迎来动物园 huānyíng lái dòngwùyuán / 当然可以 dāngrán kěyǐ / 小心！xiǎoxīn! / 比马慢 bǐ mǎ màn / 别害怕 bié hàipà",
+      "cau": "[Cầu nối] Welcome to the zoo! ↔ 欢迎来动物园！(Huānyíng lái dòngwùyuán!) [giống: Welcome ↔ 欢迎 đứng đầu; khác: tiếng Trung thêm 来 (come) trước nơi chốn, không có to the] / (Phiên dịch nhí: nghe tiếng Anh, nói tiếng Trung) 欢迎来动物园！(Huānyíng lái dòngwùyuán!) / 狮子危险吗？——很危险，小心！(Shīzi wēixiǎn ma? — Hěn wēixiǎn, xiǎoxīn!) / 我们可以看熊猫吗？——当然可以！(Wǒmen kěyǐ kàn xióngmāo ma? — Dāngrán kěyǐ!) / 熊猫比马慢。(Xióngmāo bǐ mǎ màn.) / 你知道狼在哪儿吗？(Nǐ zhīdào láng zài nǎr ma?) / 你害怕狮子吗？——不害怕，它在笼子里。(Nǐ hàipà shīzi ma? — Bú hàipà, tā zài lóngzi lǐ.) / [Chuyển ngữ] [Phiên dịch nhí: nghe khách nói tiếng Anh, con nói lại bằng tiếng Trung cho Xiaomei, 3 câu] Welcome to the zoo! The lion is dangerous. The panda is slower than the horse. → 欢迎来动物园！狮子很危险。熊猫比马慢。(Huānyíng lái dòngwùyuán! Shīzi hěn wēixiǎn. Xióngmāo bǐ mǎ màn.)",
+      "truyen": "小翻译 — Xiaomei是中国人。她和Nhan去河内动物园，Nhan帮助她。'欢迎来动物园！' Nhan用汉语说给Xiaomei听。Xiaomei问：'狮子危险吗？' '很危险，小心！' Xiaomei问：'我们可以看熊猫吗？' '当然可以！' 熊猫很慢，很可爱。Xiaomei说：'这个动物园最好！' (Xiaomei shì Zhōngguó rén. Tā hé Nhan qù Hénèi dòngwùyuán, Nhan bāngzhù tā. 'Huānyíng lái dòngwùyuán!' Nhan yòng Hànyǔ shuō gěi Xiaomei tīng. Xiaomei wèn: 'Shīzi wēixiǎn ma?' 'Hěn wēixiǎn, xiǎoxīn!' Xiaomei wèn: 'Wǒmen kěyǐ kàn xióngmāo ma?' 'Dāngrán kěyǐ!' Xióngmāo hěn màn, hěn kě'ài. Xiaomei shuō: 'Zhège dòngwùyuán zuì hǎo!')",
+      "video": "Tìm YouTube: \"动物园 中英文 儿童 欢迎 熊猫\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn: kangaroo, panda, slow, fast, heavy, than, huge, brave, kind, clever, dangerous, afraid, asleep, awake, careful, worried, best, lion, mouse, welcome, of course, know",
+     "slide": "[Lời cô] Vào bài: Good morning, class! 同学们好！ · Chuyển ý: Let's listen to the story. 我们听故事吧。 · Khen: Brilliant! 真厉害！ · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): the way / 路, angry / 生气. 1) Xếp tranh theo thứ tự truyện The Lion and the Mouse (5 tranh) và nói 1 câu cho mỗi tranh. 2) Đọc và chọn từ đúng (dạng Movers Reading Part 4, 5 câu): The lion is ___ than the mouse. (bigger / smaller) / The mouse is small but ___. (brave / boring) 3) Phiên dịch nhí: cô nói câu tiếng Việt tình huống, con nói tiếng Anh: Welcome to the zoo! / Be careful! / Of course! 4) Movers Nói phần 2 (mẫu, kể truyện theo 4 tranh, từng em, ~2 phút): Cô: 'These pictures tell a story. It's called The Lion and the Mouse. Look at picture 1. The lion is asleep. A mouse runs on his nose. Now you tell the story.' Con: Picture 2: The lion is awake and angry. The mouse is frightened. / Picture 3: The lion can't find his home. He's afraid. / Picture 4: The mouse is brave and kind. She takes the lion home.",
+     "truyen": "The Lion and the Mouse — A huge lion is asleep under a tree. A small mouse runs on his nose. The lion is awake and angry. 'Please don't eat me! I can help you one day,' says the mouse. The lion laughs. 'You are smaller than my foot!' But he lets her go. One day the lion can't find his home. He is worried and frightened. The brave mouse says, 'Don't be afraid. I know the way!' She takes him home. 'You are small, but you are the best friend!' says the lion.",
+     "baihat": "The Lion and the Mouse (giai điệu Row, Row, Row Your Boat) — Small, small, small brown mouse, / Brave and kind and clever, / Helps the huge and frightened lion, / Best friends now forever!"
+    },
+    "zh": {
+     "flash": "Ôn: 袋鼠 dàishǔ, 熊猫 xióngmāo, 狮子 shīzi, 老鼠 lǎoshǔ, 快 kuài, 慢 màn, 危险 wēixiǎn, 害怕 hàipà, 着急 zháojí, 睡觉 shuìjiào, 小心 xiǎoxīn, 最好 zuì hǎo, 欢迎 huānyíng, 当然 dāngrán, 知道 zhīdào | Nghe làm quen: 重 zhòng, 聪明 cōngming",
+     "slide": "[Cầu nối Anh – Trung] Cùng 5 tranh truyện: rối Leo kể \"The lion is bigger than the mouse.\", rối Xiaomei kể \"狮子比老鼠大。\" — con so sánh: bigger than ↔ 比…大; tên hai con vật đứng cùng chỗ ở hai tiếng. 1) Xếp tranh truyện 狮子和老鼠 (cùng 5 tranh) và nói 1 câu mỗi tranh: 狮子在睡觉。/ 别吃我！/ 狮子很害怕。/ 别害怕，我知道路！/ 你真好！ 2) Đọc chọn từ đúng (5 câu): 狮子比老鼠___。(大 / 小) / 老鼠很小，可是它不___。(害怕 / 快) 3) [Chuyển ngữ] Phiên dịch nhí Anh → Trung (cô nói tiếng Anh, con nói lại cho rối Xiaomei): Welcome to the zoo! → 欢迎来动物园！/ Be careful! → 小心！/ Of course! → 当然！ [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo kể tóm truyện: \"One day a big lion is asleep. A little mouse runs on his nose and the lion wakes up. He is very angry, but the mouse says, 'Please don't eat me!' Later the lion can't find the way home and he is afraid. The kind mouse knows the way, and she takes the lion home.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 狮子很生气，老鼠说：\"别吃我！\"然后狮子找不到家，很害怕。老鼠知道路，帮助狮子回家。 (Shīzi hěn shēngqì, lǎoshǔ shuō: \"Bié chī wǒ!\" Ránhòu shīzi zhǎo bu dào jiā, hěn hàipà. Lǎoshǔ zhīdào lù, bāngzhù shīzi huí jiā.) 4) YCT口试（初级）第三部分 看图说话 (mẫu, cùng 4 tranh truyện Movers phần 2, mỗi tranh 2–3 câu): Tranh 1: 狮子在睡觉。老鼠跑到它的鼻子上。/ Tranh 2: 狮子很生气。老鼠很害怕。/ Tranh 3: 狮子找不到家，它很害怕。/ Tranh 4: 老鼠不害怕，它帮助狮子回家。",
+     "truyen": "狮子和老鼠 — 一只大狮子在树下睡觉。小老鼠跑到它的鼻子上。狮子不睡了，很生气。老鼠说：'别吃我！以后我可以帮助你。' 狮子笑了：'你比我的脚小！' 可是它让老鼠走了。有一天，狮子找不到家，它很着急，也很害怕。小老鼠不害怕，它说：'别害怕，我知道路！' 它帮助狮子回家了。狮子说：'你很小，可是你是我最好的朋友！' (Yì zhī dà shīzi zài shù xià shuìjiào. Xiǎo lǎoshǔ pǎodào tā de bízi shang. Shīzi bú shuì le, hěn shēngqì. Lǎoshǔ shuō: 'Bié chī wǒ! Yǐhòu wǒ kěyǐ bāngzhù nǐ.' Shīzi xiào le: 'Nǐ bǐ wǒ de jiǎo xiǎo!' Kěshì tā ràng lǎoshǔ zǒu le. Yǒu yì tiān, shīzi zhǎo bú dào jiā, tā hěn zháojí, yě hěn hàipà. Xiǎo lǎoshǔ bú hàipà, tā shuō: 'Bié hàipà, wǒ zhīdào lù!' Tā bāngzhù shīzi huí jiā le. Shīzi shuō: 'Nǐ hěn xiǎo, kěshì nǐ shì wǒ zuì hǎo de péngyou!')",
+     "baihat": "小老鼠 (giai điệu Row, Row, Row Your Boat, như bài tiếng Anh) — 小小小老鼠，不怕又聪明，帮助害怕的大狮子，永远是好朋友！(Xiǎo xiǎo xiǎo lǎoshǔ, bú pà yòu cōngming, bāngzhù hàipà de dà shīzi, yǒngyuǎn shì hǎo péngyou!)"
+    }
+   }
+  },
+  {
+   "buoi": 25,
+   "unit": 6,
+   "label_buoi": "Buổi dạy 25. Unit 6 · I Like Sports – Trượt băng và đội bóng",
+   "web": [
+    {
+     "ngay": 49,
+     "label": "Ngày 49. Unit 6 · Trượt băng, trượt patin",
+     "en": {
+      "tu": "Mới: ice, skate, ice skates, ice skating, roller skates, roller skating, practise | Ôn: could, sometimes, hobby, ride, bike",
+      "cum": "go ice skating / go roller skating / a pair of ice skates / new roller skates / skate on the ice / practise every day",
+      "cau": "[Ngữ pháp: Can + động từ] Can you skate? Yes, I can. / No, I can't. / I go ice skating at the weekend. / I practise roller skating every day. / I couldn't skate last year, but I can now. / Sometimes I fall on the ice. / Dad goes running every morning. / Grandpa does tai chi in the park.",
+      "truyen": "Anna's New Skates — Anna has got a pair of new roller skates. She can't skate well. She practises every day after school. Sometimes she falls, but she doesn't cry. Now she can skate fast! Dad goes running every morning, and Grandpa does tai chi in the park. 'Let's go ice skating at the weekend!' says Dad.",
+      "video": "Tìm YouTube: \"ice skating roller skating vocabulary for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 滑冰 huábīng (= skate, ice skating), 跑步 pǎobù (= go running), 太极拳 tàijíquán (= tranh: tai chi) | Ôn: 冰 bīng, 练习 liànxí, 去年 qùnián, 周末 zhōumò, 每 měi, 快 kuài | Nghe làm quen: 有时候 yǒu shíhou (= sometimes), 摔倒 shuāidǎo (= fall), 滑旱冰 huá hànbīng (= roller skating), 旱冰鞋 hànbīngxié (= roller skates)",
+      "cum": "去滑冰 qù huábīng / 去滑旱冰 qù huá hànbīng / 一双新旱冰鞋 yì shuāng xīn hànbīngxié / 在冰上滑冰 zài bīng shang huábīng / 每天练习 měi tiān liànxí / 每天跑步 měi tiān pǎobù / 打太极拳 dǎ tàijíquán",
+      "cau": "[Cầu nối] Can you skate? Yes, I can. ↔ 你会滑冰吗？——会。(Nǐ huì huábīng ma? — Huì.) [giống: can ↔ 会 đứng trước động từ; khác: tiếng Trung đáp bằng chính 会 / 不会, không cần Yes, I] / [Ngữ pháp: 会 + động từ] 你会滑冰吗？——会。/ 不会。(Nǐ huì huábīng ma? — Huì. / Bú huì.) / 周末我去滑冰。(Zhōumò wǒ qù huábīng.) / 我每天练习滑旱冰。(Wǒ měi tiān liànxí huá hànbīng.) / 去年我不会滑冰，现在会了。(Qùnián wǒ bú huì huábīng, xiànzài huì le.) / 有时候我在冰上摔倒。(Yǒu shíhou wǒ zài bīng shang shuāidǎo.) / 爸爸每天早上跑步。(Bàba měi tiān zǎoshang pǎobù.) / 爷爷在公园打太极拳。(Yéye zài gōngyuán dǎ tàijíquán.)",
+      "truyen": "Anna的新旱冰鞋 — Anna有一双新的旱冰鞋。她滑得不好。她每天放学以后练习。有时候她摔倒了，可是她不哭。现在她滑得很快！爸爸每天早上跑步，爷爷在公园打太极拳。爸爸说：'周末我们一起去滑冰吧！' (Anna yǒu yì shuāng xīn de hànbīngxié. Tā huá de bù hǎo. Tā měi tiān fàngxué yǐhòu liànxí. Yǒu shíhou tā shuāidǎo le, kěshì tā bù kū. Xiànzài tā huá de hěn kuài! Bàba měi tiān zǎoshang pǎobù, yéye zài gōngyuán dǎ tàijíquán. Bàba shuō: 'Zhōumò wǒmen yìqǐ qù huábīng ba!')",
+      "video": "Tìm YouTube: \"滑冰 跑步 太极拳 儿童 运动\""
+     }
+    },
+    {
+     "ngay": 50,
+     "label": "Ngày 50. Unit 6 · Đội bóng của em",
+     "en": {
+      "tu": "Mới: team, volleyball, win, match, player, goal, kick, score | Ôn: lift, quarter, football, basketball, ball, have to / has to",
+      "cum": "a football match / play volleyball / win the match / score a goal / kick the ball / a good player / my team",
+      "cau": "What sport do you like? I like football. / I don't like basketball. / Do you like volleyball? / Our team can win! / He kicks the ball and scores a goal. / The match starts at quarter past four. / [Ngữ pháp: have to / has to + động từ] We have to practise every day. / Leo has to get up early on Saturday.",
+      "truyen": "The Big Match — Leo's team has a football match on Saturday. It starts at quarter past three. Leo kicks the ball. Goal! Leo scores! Leo's team wins the match. 'You're a brilliant player!' says the teacher. 'But we have to practise again on Monday!' After the match, the team takes the lift to the café on the roof.",
+      "video": "Tìm YouTube: \"sports vocabulary for kids football volleyball team win\""
+     },
+     "zh": {
+      "tu": "Mới: 篮球 lánqiú (= basketball), 打篮球 dǎ lánqiú (= play basketball), 足球 zúqiú (= football), 踢足球 tī zúqiú (= play football), 排球 páiqiú (= volleyball) | Ôn: 喜欢 xǐhuan, 队 duì, 进球 jìn qiú, 练习 liànxí, 要 yào, 起床 qǐchuáng, 电梯 diàntī | Nghe làm quen: 比赛 bǐsài (= match), 赢 yíng (= win), 咖啡馆 kāfēiguǎn (= café)",
+      "cum": "踢足球 tī zúqiú / 打篮球 dǎ lánqiú / 打排球 dǎ páiqiú / 我们的队 wǒmen de duì / 足球比赛 zúqiú bǐsài / 进球 jìn qiú / 赢了 yíng le",
+      "cau": "[Cầu nối] I like football. I don't like basketball. ↔ 我喜欢足球。我不喜欢篮球。(Wǒ xǐhuan zúqiú. Wǒ bù xǐhuan lánqiú.) [giống: Ai – thích – gì, cùng trật tự; khác: don't like ↔ 不喜欢, 不 đứng ngay trước 喜欢, không cần do] / 你喜欢什么运动？——我喜欢足球。(Nǐ xǐhuan shénme yùndòng? — Wǒ xǐhuan zúqiú.) / 我不喜欢篮球。(Wǒ bù xǐhuan lánqiú.) / 你喜欢打排球吗？(Nǐ xǐhuan dǎ páiqiú ma?) / 我们的队会赢！(Wǒmen de duì huì yíng!) / 他踢球，进球了！(Tā tī qiú, jìn qiú le!) / 比赛四点十五分开始。(Bǐsài sì diǎn shíwǔ fēn kāishǐ.) / 我们要每天练习。(Wǒmen yào měi tiān liànxí.) / Leo星期六要早点儿起床。(Leo xīngqīliù yào zǎo diǎnr qǐchuáng.) / [Chuyển ngữ] [Leo nhắn tin tiếng Anh, con chuyển cho Xiaomei bằng tiếng Trung, 3 câu] I like football. I don't like basketball. Do you like volleyball? → 我喜欢足球。我不喜欢篮球。你喜欢排球吗？(Wǒ xǐhuan zúqiú. Wǒ bù xǐhuan lánqiú. Nǐ xǐhuan páiqiú ma?)",
+      "truyen": "大比赛 — 星期六，Leo的队有一场足球比赛。比赛三点十五分开始。Leo踢球，进了！Leo的队赢了。老师说：'你踢得真好！可是星期一我们还要练习！' 比赛以后，他们坐电梯去楼顶的咖啡馆。(Xīngqīliù, Leo de duì yǒu yì chǎng zúqiú bǐsài. Bǐsài sān diǎn shíwǔ fēn kāishǐ. Leo tī qiú, jìn le! Leo de duì yíng le. Lǎoshī shuō: 'Nǐ tī de zhēn hǎo! Kěshì xīngqīyī wǒmen hái yào liànxí!' Bǐsài yǐhòu, tāmen zuò diàntī qù lóudǐng de kāfēiguǎn.)",
+      "video": "Tìm YouTube: \"踢足球 打篮球 打排球 儿童 汉语\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: ice, skate, ice skates, ice skating, roller skates, roller skating, practise, team, volleyball, win, match, player, goal, kick, score | Ôn: football, basketball, badminton, ball, bike, have to / has to, go running, tai chi",
+     "slide": "[Lời cô] Vào bài: Hello, everyone! 大家好！ · Chuyển ý: Now, stand up and play! 现在站起来玩吧！ · Khen: Well done! 真棒！ · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): practise, score, match. 1) Nhìn tranh chọn từ (8 câu): ice skates / roller skates / volleyball / goal / kick / score / team / player. 2) Hỏi – đáp theo bảng tick: Can you skate? Yes, I can. / No, I can't. — Do you like volleyball? 3) Nghe chọn tranh đúng (dạng Movers Listening Part 4): 'The match starts at quarter past four.' / 'He kicks the ball and scores a goal.' 4) Nhìn tranh nói câu với have to / has to (4 câu): A football player has to kick the ball. / We have to practise every day. / You have to wear ice skates on the ice. / Our team has to win the match!",
+     "truyen": "The Skating Team — Anna practises roller skating every day. Leo plays in a football team. On Saturday, Leo's team has a match. Leo kicks the ball and scores a goal! His team wins. Then Leo and Anna go ice skating. Leo can't skate well. 'Practise every day, like me!' says Anna.",
+     "baihat": "This Is the Way We Skate on Ice (giai điệu Here We Go Round the Mulberry Bush) — This is the way we skate on ice, / skate on ice, skate on ice, / This is the way we skate on ice, / so early in the morning. / This is the way we kick the ball, / kick the ball, score a goal, / This is the way our team can win, / so early in the morning."
+    },
+    "zh": {
+     "flash": "Mới: 滑冰 huábīng, 跑步 pǎobù, 太极拳 tàijíquán, 篮球 lánqiú, 打篮球 dǎ lánqiú, 足球 zúqiú, 踢足球 tī zúqiú, 排球 páiqiú | Ôn: 练习 liànxí, 队 duì, 进球 jìn qiú, 要 yào | Nghe làm quen: 比赛 bǐsài, 赢 yíng, 滑旱冰 huá hànbīng",
+     "slide": "[Cầu nối Anh – Trung] Cùng bộ thẻ môn thể thao: rối Leo nói \"play football / play basketball / play volleyball\", rối Xiaomei nói \"踢足球 / 打篮球 / 打排球\" — con xếp thẻ thành 2 nhóm 踢 (chân) và 打 (tay), thấy tiếng Anh chỉ dùng play; ice skating ↔ 滑冰 không cần play. 1) Nghe chọn tranh (cùng tranh bài tiếng Anh): 滑冰 / 排球 / 进球 / 踢 / 队. 2) Hỏi – đáp theo bảng tick: 你会滑冰吗？— 会。/ 不会。— 你喜欢排球吗？ 3) Nghe chọn tranh đúng: 比赛四点十五分开始。/ 他踢球，进球了！ 4) Nhìn tranh nói câu với 要: 踢足球要用脚。/ 我们要每天练习。/ 我们的队要赢！ [Chuyển ngữ] Phóng viên nhí (cặp đôi): con A nghe bạn trả lời phỏng vấn bằng tiếng Anh 3 câu (I like football. I can skate. I practise every day.), rồi nói lại cho rối Xiaomei: 他喜欢足球。他会滑冰。他每天练习。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo đọc lời bạn Nhan trả lời phỏng vấn: \"My name's Nhan and I love sport! Every Saturday I play football with my team, and sometimes I score a goal. On Sundays I go ice skating with my dad. It's difficult, but it's great fun. We practise every day, because we want to be the best team!\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: Nhan星期六和她的队踢足球，星期天和爸爸去滑冰。她们每天练习。 (Nhan xīngqīliù hé tā de duì tī zúqiú, xīngqītiān hé bàba qù huábīng. Tāmen měi tiān liànxí.)",
+     "truyen": "滑冰队和足球队 — Anna每天练习滑旱冰。Leo在足球队里。星期六，Leo的队有比赛。Leo踢球，进了！他的队赢了。然后Leo和Anna一起去滑冰。Leo滑得不好。Anna说：'你要每天练习，像我一样！' (Anna měi tiān liànxí huá hànbīng. Leo zài zúqiú duì lǐ. Xīngqīliù, Leo de duì yǒu bǐsài. Leo tī qiú, jìn le! Tā de duì yíng le. Ránhòu Leo hé Anna yìqǐ qù huábīng. Leo huá de bù hǎo. Anna shuō: 'Nǐ yào měi tiān liànxí, xiàng wǒ yíyàng!')",
+     "baihat": "我们就这样去滑冰 (giai điệu Here We Go Round the Mulberry Bush, như bài tiếng Anh) — 我们就这样去滑冰，去滑冰，去滑冰，我们就这样去滑冰，天刚刚亮的时候。我们就这样来踢球，踢踢球，进球了，这样我们的队会赢，天刚刚亮的时候。(Wǒmen jiù zhèyàng qù huábīng, qù huábīng, qù huábīng, wǒmen jiù zhèyàng qù huábīng, tiān gānggāng liàng de shíhou. Wǒmen jiù zhèyàng lái tī qiú, tī tī qiú, jìn qiú le, zhèyàng wǒmen de duì huì yíng, tiān gānggāng liàng de shíhou.)"
+    }
+   }
+  },
+  {
+   "buoi": 26,
+   "unit": 6,
+   "label_buoi": "Buổi dạy 26. Unit 6 · I Like Sports – Hội chợ, phim và nhạc",
+   "web": [
+    {
+     "ngay": 51,
+     "label": "Ngày 51. Unit 6 · Hội chợ cuối tuần",
+     "en": {
+      "tu": "Mới: funfair, fair, circus, dress up, band, pop star | Ôn: exciting, boring, best, brave, afraid, half",
+      "cum": "go to the funfair / at the circus / dress up as a clown / a pop star in a band / an exciting fair",
+      "cau": "Let's go to the funfair! / The circus is exciting. It isn't boring. / I want to dress up as a pop star. / My brother plays in a band. / The band starts at half past six. / Don't be afraid of the clown! / At the fair, we can play table tennis, tennis and badminton.",
+      "truyen": "At the Funfair — Bông and Nhan go to the funfair in the park. There is a circus, too. Nhan dresses up as a clown. A band plays music. 'I want to be a pop star!' says Bông, and she sings with the band. Then they play table tennis and badminton at the fair. 'This is the best day!'",
+      "video": "Tìm YouTube: \"funfair circus vocabulary for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 乒乓球 pīngpāngqiú (= table tennis), 网球 wǎngqiú (= tennis), 羽毛球 yǔmáoqiú (= badminton) | Ôn: 小丑 xiǎochǒu, 唱歌 chànggē, 害怕 hàipà, 半 bàn, 精彩 jīngcǎi, 最 zuì | Nghe làm quen: 游乐园 yóulèyuán (= funfair), 马戏 mǎxì (= circus), 乐队 yuèduì (= band), 歌星 gēxīng (= pop star), 打扮成 dǎban chéng (= dress up as)",
+      "cum": "去游乐园 qù yóulèyuán / 看马戏 kàn mǎxì / 打扮成小丑 dǎban chéng xiǎochǒu / 打扮成歌星 dǎban chéng gēxīng / 在乐队里 zài yuèduì lǐ / 打乒乓球 dǎ pīngpāngqiú / 打网球 dǎ wǎngqiú / 打羽毛球 dǎ yǔmáoqiú",
+      "cau": "[Cầu nối] Let's go to the funfair! ↔ 我们去游乐园吧！(Wǒmen qù yóulèyuán ba!) [giống: rủ bạn cùng đi; khác: Let's đứng đầu câu, tiếng Trung dùng 我们 … 吧, 吧 ở cuối] / 马戏很精彩！(Mǎxì hěn jīngcǎi!) / 我想打扮成歌星。(Wǒ xiǎng dǎban chéng gēxīng.) / 我哥哥在乐队里。(Wǒ gēge zài yuèduì lǐ.) / 乐队六点半开始表演。(Yuèduì liù diǎn bàn kāishǐ biǎoyǎn.) / 别害怕小丑！(Bié hàipà xiǎochǒu!) / 在游乐园，我们可以打乒乓球、网球和羽毛球。(Zài yóulèyuán, wǒmen kěyǐ dǎ pīngpāngqiú, wǎngqiú hé yǔmáoqiú.)",
+      "truyen": "在游乐园 — Bông和Nhan去公园里的游乐园。那儿也有马戏。Nhan打扮成小丑。一个乐队在演奏音乐。Bông说：'我想当歌星！' 她和乐队一起唱歌。然后她们在游乐园打乒乓球和羽毛球。'今天是最好的一天！' (Bông hé Nhan qù gōngyuán lǐ de yóulèyuán. Nàr yě yǒu mǎxì. Nhan dǎban chéng xiǎochǒu. Yí gè yuèduì zài yǎnzòu yīnyuè. Bông shuō: 'Wǒ xiǎng dāng gēxīng!' Tā hé yuèduì yìqǐ chànggē. Ránhòu tāmen zài yóulèyuán dǎ pīngpāngqiú hé yǔmáoqiú. 'Jīntiān shì zuì hǎo de yì tiān!')",
+      "video": "Tìm YouTube: \"游乐园 马戏 小丑 儿童 汉语\""
+     }
+    },
+    {
+     "ngay": 52,
+     "label": "Ngày 52. Unit 6 · Phim và nhạc",
+     "en": {
+      "tu": "Mới: film, movie, film star, CD, DVD, comic book | Ôn: famous, clever, difficult, meal, watch, TV, app, website, laptop",
+      "cum": "watch a film (US movie) / a famous film star / a new CD / a DVD about animals / read a comic book",
+      "cau": "Do you like films? Yes, I do. / My favourite film star is very famous. / I listen to a CD in the car. / We watch a DVD after our meal. / I read comic books at the weekend. / In the USA, a film is called a movie. / I listen to music on an app. / Mum looks at a website about films on her laptop. / Do you like movies? Yes, I love movies!",
+      "truyen": "Film Night — It's Friday evening. Leo's family has a film night. Dad has a new DVD about animals: pandas, lions and a clever dolphin. After the film, Leo reads a comic book and listens to a CD by a famous pop star. Then Mum finds a website about the film star on her laptop, and Leo listens to music on an app. 'I love film night!' says Leo.",
+      "video": "Tìm YouTube: \"film movie comic book vocabulary for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 电影 diànyǐng (= film, movie), 上网 shàngwǎng (= go online) | Ôn: 电视 diànshì, 电脑 diànnǎo, 漫画 mànhuà, 音乐 yīnyuè, 吃饭 chīfàn, 周末 zhōumò | Nghe làm quen: 明星 míngxīng (= film star), 有名 yǒumíng (= famous), 网站 wǎngzhàn (= website)",
+      "cum": "看电影 kàn diànyǐng / 电影明星 diànyǐng míngxīng / 听CD tīng CD / 看DVD kàn DVD / 看漫画 kàn mànhuà / 用电脑上网 yòng diànnǎo shàngwǎng",
+      "cau": "[Cầu nối] Do you like films? ↔ 你喜欢看电影吗？(Nǐ xǐhuan kàn diànyǐng ma?) [giống: hỏi sở thích; khác: tiếng Trung cần 看 (watch): 看电影; film (Anh) và movie (Mỹ) đều là 电影; CD, DVD đọc giống nhau ở hai tiếng] / 你喜欢看电影吗？——喜欢。(Nǐ xǐhuan kàn diànyǐng ma? — Xǐhuan.) / 我最喜欢的电影明星很有名。(Wǒ zuì xǐhuan de diànyǐng míngxīng hěn yǒumíng.) / 在车里我听CD。(Zài chē lǐ wǒ tīng CD.) / 吃饭以后我们看DVD。(Chīfàn yǐhòu wǒmen kàn DVD.) / 周末我看漫画。(Zhōumò wǒ kàn mànhuà.) / 我上网听音乐。(Wǒ shàngwǎng tīng yīnyuè.) / 妈妈用电脑看一个电影网站。(Māma yòng diànnǎo kàn yí gè diànyǐng wǎngzhàn.) / [Chuyển ngữ] [Leo kể bằng tiếng Anh, con kể lại cho Xiaomei bằng tiếng Trung, 3 câu] It's film night. I like films. After the film, I go online. → 今天晚上看电影。我喜欢看电影。看完电影，我上网。(Jīntiān wǎnshang kàn diànyǐng. Wǒ xǐhuan kàn diànyǐng. Kànwán diànyǐng, wǒ shàngwǎng.)",
+      "truyen": "电影之夜 — 星期五晚上，Leo一家看电影。爸爸有一张新的DVD，里面有很多动物：熊猫、狮子和聪明的海豚。看完电影，Leo看漫画，听一个歌星的CD。然后妈妈用电脑上网，找到那个电影明星的网站。Leo上网听音乐。Leo说：'我喜欢电影之夜！' (Xīngqīwǔ wǎnshang, Leo yì jiā kàn diànyǐng. Bàba yǒu yì zhāng xīn de DVD, lǐmiàn yǒu hěn duō dòngwù: xióngmāo, shīzi hé cōngming de hǎitún. Kànwán diànyǐng, Leo kàn mànhuà, tīng yí gè gēxīng de CD. Ránhòu māma yòng diànnǎo shàngwǎng, zhǎodào nàge diànyǐng míngxīng de wǎngzhàn. Leo shàngwǎng tīng yīnyuè. Leo shuō: 'Wǒ xǐhuan diànyǐng zhī yè!')",
+      "video": "Tìm YouTube: \"看电影 漫画 CD 儿童 汉语\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: funfair, fair, circus, dress up, band, pop star, film, movie, film star, CD, DVD, comic book | Ôn: clown, table tennis, tennis, badminton, exciting, boring, famous, clever, watch, TV, app, website, laptop",
+     "slide": "[Lời cô] Vào bài: Good morning, class! 同学们好！ · Chuyển ý: Now, let's go to the funfair! 现在我们去游乐园吧！ · Khen: Excellent! 太好了！ · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): funfair, circus, dress up, online / 上网. 1) Nhìn tranh chọn từ (6 câu): circus / band / pop star / CD / DVD / comic book. 2) Ghép từ tiếng Anh – Anh với tiếng Anh – Mỹ: film ↔ movie / film star ↔ movie star. 3) Đọc đoạn ngắn và trả lời Yes/No (dạng Movers Reading): 'Bông dresses up as a pop star. She sings with a band.' — Does Bông sing? / Is Nhan a clown? 4) Nhìn tranh chọn từ rồi nói câu (4 câu): laptop / app / website / CD → I watch a movie on my laptop. / I listen to a CD in the car. / There's a music game on this app. / This website is about pop stars.",
+     "truyen": "The Funfair and the Film — On Saturday, Bông and Nhan go to the funfair. There's a circus and a band. Nhan dresses up as a clown and Bông dresses up as a pop star. In the evening, they watch a film on DVD at Bông's house. The film star is very famous. After the film, they read comic books. 'Today is exciting, not boring!'",
+     "baihat": "Pop Star Song (giai điệu Twinkle, Twinkle, Little Star) — Pop star, pop star, in a band, / Sing a song and clap your hands. / At the funfair, at the fair, / Dress up, dress up, everywhere. / Watch a film and read a comic, / Pop star, pop star, you're fantastic!"
+    },
+    "zh": {
+     "flash": "Mới: 乒乓球 pīngpāngqiú, 网球 wǎngqiú, 羽毛球 yǔmáoqiú, 电影 diànyǐng, 上网 shàngwǎng | Ôn: 小丑 xiǎochǒu, 漫画 mànhuà, 电视 diànshì, 电脑 diànnǎo, 精彩 jīngcǎi, 没意思 méiyìsi | Nghe làm quen: 游乐园 yóulèyuán, 马戏 mǎxì, 乐队 yuèduì, 歌星 gēxīng, 明星 míngxīng, 打扮成 dǎban chéng",
+     "slide": "[Cầu nối Anh – Trung] Cùng tấm vé xem phim: rối Leo đọc \"film (UK) = movie (US)\", rối Xiaomei đọc \"电影\" — con thấy tiếng Anh có hai cách nói, tiếng Trung chỉ một; CD, DVD đọc giống nhau ở cả hai tiếng; Let's … ↔ 我们…吧. 1) Nghe chọn tranh (cùng tranh bài tiếng Anh): 马戏 / 乐队 / 歌星 / CD / DVD / 漫画. 2) Nghe đoạn ngắn, trả lời 对 / 不对: 'Bông打扮成歌星。她和乐队一起唱歌。' — Bông唱歌吗？/ Nhan是小丑吗？ 3) Nhìn tranh nói câu (4 câu): 我用电脑看电影。/ 在车里我听CD。/ 我上网听音乐。/ 这是歌星的网站。 [Chuyển ngữ] Tin nhắn mời bạn: cô chiếu tin nhắn tiếng Anh của Bông \"Let's go to the funfair! Let's watch a film tonight!\" → con nói lại cho Xiaomei: 我们去游乐园吧！今天晚上我们一起看电影吧！ [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo đọc tin nhắn của Bông: \"Hi Xiaomei! This weekend there's a funfair in the park. There's a funny clown, and a band plays music at half past seven. Let's go together on Saturday! After that, we can watch a film at my house.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 周末公园里有小丑，七点半有音乐。星期六我们一起去吧！然后去我家看电影。 (Zhōumò gōngyuán lǐ yǒu xiǎochǒu, qī diǎn bàn yǒu yīnyuè. Xīngqīliù wǒmen yìqǐ qù ba! Ránhòu qù wǒ jiā kàn diànyǐng.)",
+     "truyen": "游乐园和电影 — 星期六，Bông和Nhan去游乐园。那儿有马戏，也有乐队。Nhan打扮成小丑，Bông打扮成歌星。晚上，她们在Bông家看DVD电影。那个电影明星很有名。看完电影，她们看漫画。她们说：'今天很精彩！' (Xīngqīliù, Bông hé Nhan qù yóulèyuán. Nàr yǒu mǎxì, yě yǒu yuèduì. Nhan dǎban chéng xiǎochǒu, Bông dǎban chéng gēxīng. Wǎnshang, tāmen zài Bông jiā kàn DVD diànyǐng. Nàge diànyǐng míngxīng hěn yǒumíng. Kànwán diànyǐng, tāmen kàn mànhuà. Tāmen shuō: 'Jīntiān hěn jīngcǎi!')",
+     "baihat": "小歌星 (giai điệu Twinkle, Twinkle, Little Star, như bài tiếng Anh) — 乐队里的小歌星，唱唱歌呀拍拍手。游乐园里真好玩，打扮打扮真好看。看看电影看漫画，小歌星呀你真棒！(Yuèduì lǐ de xiǎo gēxīng, chàngchang gē ya pāipai shǒu. Yóulèyuán lǐ zhēn hǎowán, dǎban dǎban zhēn hǎokàn. Kànkan diànyǐng kàn mànhuà, xiǎo gēxīng ya nǐ zhēn bàng!)"
+    }
+   }
+  },
+  {
+   "buoi": 27,
+   "unit": 6,
+   "label_buoi": "Buổi dạy 27. Unit 6 · I Like Sports – Quà tặng và trò đoán",
+   "web": [
+    {
+     "ngay": 53,
+     "label": "Ngày 53. Unit 6 · Món quà thể thao",
+     "en": {
+      "tu": "Mới: net, bat, sail, model, catch a bus | Ôn: could, sometimes, baseball, boat, river",
+      "cum": "hit the ball with a bat / over the net / sail a boat / a model boat / catch the bus",
+      "cau": "The ball is in the net! / I've got a new baseball bat. / We sail a model boat on the river. / Let's catch the bus to the park. / Sometimes Grandpa sails a real boat. / Grandpa doesn't often play baseball. / We sail a model boat on the lake. / Grandpa's present is a CD.",
+      "truyen": "Leo's Present — It's Leo's birthday. Grandpa gives him a present: a model boat, a baseball bat and a CD! On Sunday they catch the bus to the river. Leo sails his model boat on the lake next to the river. Then they play baseball. Leo hits the ball with his new bat. It goes over the net!",
+      "video": "Tìm YouTube: \"sports equipment for kids bat net ball\""
+     },
+     "zh": {
+      "tu": "Mới: 礼物 lǐwù (= present), 少 shǎo (= not often, few) | Ôn: 生日 shēngrì, 有时候 yǒu shíhou, 船 chuán, 公共汽车 gōnggòng qìchē, 河 hé | Nghe làm quen: 球棒 qiúbàng (= bat), 棒球 bàngqiú (= baseball), 网 wǎng (= net), 玩具船 wánjù chuán (= model boat), 湖 hú (= lake)",
+      "cum": "生日礼物 shēngrì lǐwù / 一个礼物 yí gè lǐwù / 很少 hěn shǎo / 一只玩具船 yì zhī wánjù chuán / 坐公共汽车 zuò gōnggòng qìchē / 用球棒打球 yòng qiúbàng dǎ qiú / 过网 guò wǎng",
+      "cau": "[Cầu nối] Grandpa's present is a CD. ↔ 爷爷的礼物是一张CD。(Yéye de lǐwù shì yì zhāng CD.) [giống: CD đọc giống nhau ở hai tiếng; khác: Grandpa's ↔ 爷爷的, 's ↔ 的; tiếng Trung thêm 一张 (lượng từ cho CD)] / 球在网里！(Qiú zài wǎng lǐ!) / 我有一个新球棒。(Wǒ yǒu yí gè xīn qiúbàng.) / 我们在河上玩玩具船。(Wǒmen zài hé shang wán wánjù chuán.) / 我们坐公共汽车去公园吧！(Wǒmen zuò gōnggòng qìchē qù gōngyuán ba!) / 爷爷有时候开真的船。(Yéye yǒu shíhou kāi zhēn de chuán.) / 爷爷很少打棒球。(Yéye hěn shǎo dǎ bàngqiú.) / 我们在湖上玩玩具船。(Wǒmen zài hú shang wán wánjù chuán.) / 爷爷的礼物是一张CD。(Yéye de lǐwù shì yì zhāng CD.)",
+      "truyen": "Leo的生日礼物 — 今天是Leo的生日。爷爷给他礼物：一只玩具船、一个球棒和一张CD！星期天，他们坐公共汽车去河边。Leo在河边的湖上玩玩具船。然后他们打棒球。Leo用新球棒打球，球过了网！(Jīntiān shì Leo de shēngrì. Yéye gěi tā lǐwù: yì zhī wánjù chuán, yí gè qiúbàng hé yì zhāng CD! Xīngqītiān, tāmen zuò gōnggòng qìchē qù hé biān. Leo zài hé biān de hú shang wán wánjù chuán. Ránhòu tāmen dǎ bàngqiú. Leo yòng xīn qiúbàng dǎ qiú, qiú guòle wǎng!)",
+      "video": "Tìm YouTube: \"儿童 运动 球棒 球网 汉语\""
+     }
+    },
+    {
+     "ngay": 54,
+     "label": "Ngày 54. Unit 6 · Ôn không tranh: Tôi là ai? · Luyện nói Movers phần 4, YCT口试 phần 2",
+     "en": {
+      "tu": "Ôn: ice, skate, practise, team, volleyball, win, match, film, comic book, roller skating, band, net | Ôn nhanh: could, sometimes",
+      "cum": "go ice skating / win the match / watch a film / sing in a band / dress up as a clown / catch the bus",
+      "cau": "(Nghe – trả lời, không tranh) What sport do you like? / Can you skate? / Do you like volleyball? / Let's play table tennis together! / Who scores the goal? / Could you swim when you were five? / What can you sail on the lake? A model boat! / Do you like movies? / [Movers Nói phần 4 (mẫu) – ghi âm câu trả lời trên Trang luyện nói, ≤5 phút] What's your favourite sport? / Can you skate? / What do you do at the weekend?",
+      "truyen": "Who Am I? — Listen and guess. I play in a team. I kick the ball. I score goals. Who am I? A football player! / I've got skates. I skate on the ice. I practise every day. What's my sport? Ice skating! / I sing in a band. I'm very famous. Who am I? A pop star! / I'm small. I've got a sail. Leo puts me on the lake. What am I? A model boat!",
+      "video": "Tìm YouTube: \"guess the sport game for kids\""
+     },
+     "zh": {
+      "tu": "Ôn: 踢足球 tī zúqiú, 排球 páiqiú, 乒乓球 pīngpāngqiú, 滑冰 huábīng, 电影 diànyǐng, 进球 jìn qiú, 练习 liànxí, 玩具船 wánjù chuán, 湖 hú | Ôn nhanh: 有时候 yǒu shíhou | Nghe làm quen: 比赛 bǐsài, 赢 yíng, 乐队 yuèduì, 歌星 gēxīng, 打扮成 dǎban chéng",
+      "cum": "去滑冰 qù huábīng / 赢了比赛 yíngle bǐsài / 看电影 kàn diànyǐng / 在乐队里唱歌 zài yuèduì lǐ chànggē / 打扮成小丑 dǎban chéng xiǎochǒu / 坐公共汽车 zuò gōnggòng qìchē",
+      "cau": "[Cầu nối] What sport do you like? ↔ 你喜欢什么运动？(Nǐ xǐhuan shénme yùndòng?) [giống: hỏi sở thích; khác: tiếng Anh What đứng đầu câu, tiếng Trung 什么 đứng đúng chỗ của câu trả lời: 我喜欢足球] / (Nghe – trả lời, không tranh) 你喜欢什么运动？(Nǐ xǐhuan shénme yùndòng?) / 你会滑冰吗？(Nǐ huì huábīng ma?) / 你喜欢打排球吗？(Nǐ xǐhuan dǎ páiqiú ma?) / 我们一起打乒乓球吧！(Wǒmen yìqǐ dǎ pīngpāngqiú ba!) / 谁进球了？(Shéi jìn qiú le?) / 你五岁的时候会游泳吗？(Nǐ wǔ suì de shíhou huì yóuyǒng ma?) / 你能在湖上开什么船？——玩具船！(Nǐ néng zài hú shang kāi shénme chuán? — Wánjù chuán!) / 你喜欢看电影吗？(Nǐ xǐhuan kàn diànyǐng ma?) / [YCT口试（初级）第二部分 听后回答 (mẫu, cùng câu hỏi Movers phần 4) – nghe câu hỏi, ghi âm câu trả lời ngắn, ≤5 phút] 你最喜欢什么运动？— 我最喜欢踢足球。(Nǐ zuì xǐhuan shénme yùndòng? — Wǒ zuì xǐhuan tī zúqiú.) / 你会滑冰吗？— 会。(Nǐ huì huábīng ma? — Huì.) / 周末你做什么？— 周末我看电影。(Zhōumò nǐ zuò shénme? — Zhōumò wǒ kàn diànyǐng.) / [Chuyển ngữ] [nghe Anna nói tiếng Anh, con nói lại cho Xiaomei bằng tiếng Trung, 3 câu] I can skate. Let's play table tennis together! I don't often watch films. → 我会滑冰。我们一起打乒乓球吧！我很少看电影。(Wǒ huì huábīng. Wǒmen yìqǐ dǎ pīngpāngqiú ba! Wǒ hěn shǎo kàn diànyǐng.)",
+      "truyen": "猜一猜 — 我在一个队里。我用脚踢球，我会进球。我是谁？我是踢足球的！/ 我在冰上滑，我每天练习。这是什么运动？滑冰！/ 我在乐队里唱歌。很多人喜欢我。我是谁？歌星！/ 我很小，Leo把我放在湖上。我是什么？玩具船！(Wǒ zài yí gè duì lǐ. Wǒ yòng jiǎo tī qiú, wǒ huì jìn qiú. Wǒ shì shéi? Wǒ shì tī zúqiú de! / Wǒ zài bīng shang huá, wǒ měi tiān liànxí. Zhè shì shénme yùndòng? Huábīng! / Wǒ zài yuèduì lǐ chànggē. Hěn duō rén xǐhuan wǒ. Wǒ shì shéi? Gēxīng! / Wǒ hěn xiǎo, Leo bǎ wǒ fàng zài hú shang. Wǒ shì shénme? Wánjù chuán!)",
+      "video": "Tìm YouTube: \"猜运动 儿童 汉语 游戏\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: net, bat, sail, model, catch a bus | Ôn: present, not often, ice skating, roller skating, practise, team, volleyball, win, match, goal, film, comic book, band, pop star, CD, lake",
+     "slide": "[Lời cô] Vào bài: Hello, everyone! 大家好！ · Chuyển ý: Now, it's your turn. 现在该你了。 · Khen: Great job! 很好！ · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): sail, model, catch a bus, not often / 很少. 1) Nhìn tranh chọn từ (5 câu): net / bat / sail / model boat / catch the bus. 2) Trò 'Who am I?': cô đọc 3 câu gợi ý, đội nào đoán đúng trước được điểm (football player / ice skater / pop star / film star). 3) Nghe và tô màu (dạng Movers Listening Part 5): 'Colour the bat red.' / 'Colour the model boat blue.' / 'Colour the net green.' 4) Nghe chọn tranh đúng (3 câu): 'Leo sails his model boat on the lake.' / 'Grandpa gives Leo a CD.' / 'They have to catch the bus to the park.'",
+     "truyen": "Leo's Birthday Present — It's Leo's birthday. Grandpa gives him a model boat and a baseball bat. They catch the bus to the river. Leo sails his model boat. Then Grandpa says, 'Can you hit the ball with your bat?' Leo practises. The ball goes over the net! 'You're a good player!' says Grandpa. 'Our team can win!'",
+     "baihat": "Catch the Bus (giai điệu The Wheels on the Bus) — We catch the bus to the river, the river, the river, / We catch the bus to the river, to sail our boat. / We hit the ball with a baseball bat, a baseball bat, a baseball bat, / We hit the ball with a baseball bat, over the net!"
+    },
+    "zh": {
+     "flash": "Mới: 礼物 lǐwù, 少 shǎo | Ôn: 玩具船 wánjù chuán, 公共汽车 gōnggòng qìchē, 滑冰 huábīng, 练习 liànxí, 队 duì, 排球 páiqiú, 进球 jìn qiú, 电影 diànyǐng, 漫画 mànhuà | Nghe làm quen: 球棒 qiúbàng, 湖 hú, 网 wǎng, 比赛 bǐsài, 赢 yíng, 乐队 yuèduì, 歌星 gēxīng",
+     "slide": "[Cầu nối Anh – Trung] Cùng hộp quà sinh nhật: rối Leo nói \"Grandpa's present is a CD.\", rối Xiaomei nói \"爷爷的礼物是一张CD。\" — con tìm: CD giống nhau ở hai tiếng; Grandpa's ↔ 爷爷的 ('s ↔ 的). 1) Nghe chọn tranh (cùng tranh bài tiếng Anh): 球棒 / 网 / 玩具船 / 坐公共汽车. 2) Trò 猜一猜: cô đọc gợi ý (我用脚踢球…… / 我在冰上滑…… / 我在乐队里唱歌……) → đội đoán: 足球 / 滑冰 / 歌星. 3) Nghe và tô màu: 球棒是红色的。/ 玩具船是蓝色的。/ 网是绿色的。 4) Nghe chọn tranh đúng: Leo在湖上玩玩具船。/ 爷爷给Leo一张CD。/ 我们要坐公共汽车去公园。 [Chuyển ngữ] Thiệp cảm ơn: con nghe Leo đọc thiệp tiếng Anh 3 câu \"Thank you, Grandpa! I love my present. Let's play together!\" rồi nói lại cho Xiaomei: 谢谢爷爷！我很喜欢我的礼物。我们一起玩吧！ [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo đọc thiệp: \"Dear Grandpa, thank you for my birthday present! I love my new model boat. Tomorrow we can catch the bus to the lake and sail it together. I don't often see you, so I'm very happy. Love, Leo.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 谢谢爷爷的生日礼物！我很喜欢玩具船。明天我们一起坐公共汽车去玩吧！ (Xièxie yéye de shēngrì lǐwù! Wǒ hěn xǐhuan wánjù chuán. Míngtiān wǒmen yìqǐ zuò gōnggòng qìchē qù wán ba!)",
+     "truyen": "Leo的生日礼物 — 今天是Leo的生日。爷爷给他一只玩具船和一个球棒。他们坐公共汽车去河边。Leo玩玩具船。然后爷爷问：'你会用球棒打球吗？' Leo练习。球过了网！爷爷说：'你打得真好！我们的队会赢！' (Jīntiān shì Leo de shēngrì. Yéye gěi tā yì zhī wánjù chuán hé yí gè qiúbàng. Tāmen zuò gōnggòng qìchē qù hé biān. Leo wán wánjù chuán. Ránhòu yéye wèn: 'Nǐ huì yòng qiúbàng dǎ qiú ma?' Leo liànxí. Qiú guòle wǎng! Yéye shuō: 'Nǐ dǎ de zhēn hǎo! Wǒmen de duì huì yíng!')",
+     "baihat": "坐车去河边 (giai điệu The Wheels on the Bus, như bài tiếng Anh) — 我们坐车去河边，去河边，去河边，我们坐车去河边，玩玩具船。我们用球棒打打球，打打球，打打球，我们用球棒打打球，球过了网！(Wǒmen zuò chē qù hé biān, qù hé biān, qù hé biān, wǒmen zuò chē qù hé biān, wán wánjù chuán. Wǒmen yòng qiúbàng dǎda qiú, dǎda qiú, dǎda qiú, wǒmen yòng qiúbàng dǎda qiú, qiú guòle wǎng!)"
+    }
+   }
+  },
+  {
+   "buoi": 28,
+   "unit": 6,
+   "label_buoi": "Buổi dạy 28. Unit 6 · I Like Sports – Truyện và Phiên dịch nhí · Luyện Movers Nói phần 3, YCT口试 看图说话",
+   "web": [
+    {
+     "ngay": 55,
+     "label": "Ngày 55. Unit 6 · Truyện: Nhan và đội bóng chuyền",
+     "en": {
+      "tu": "Ôn: team, volleyball, practise, win, match, player, net, score, difficult, brave | Ôn nhanh: sometimes, could",
+      "cum": "play volleyball / practise every day / over the net / win the match / a good player",
+      "cau": "Nhan can't play volleyball well. / Volleyball is difficult, but Nhan is brave. / She practises every day after school. / Our team can win the match!",
+      "truyen": "Nhan and the Volleyball Team — Nhan wants to be in the school volleyball team. But she can't hit the ball over the net. Sometimes she cries. Her friend Leo says, 'Don't be sad. Let's practise together!' They practise every day. On Saturday there's a big match. Nhan hits the ball over the net and scores! His team wins. 'You're a brilliant player, Nhan!'",
+      "video": "Tìm YouTube: \"volleyball for kids practise team story\""
+     },
+     "zh": {
+      "tu": "Ôn: 排球 páiqiú, 难 nán, 练习 liànxí, 队 duì, 进球 jìn qiú, 别 bié, 难过 nánguò, 哭 kū, 有时候 yǒu shíhou, 害怕 hàipà | Nghe làm quen: 网 wǎng, 比赛 bǐsài, 赢 yíng",
+      "cum": "打排球 dǎ páiqiú / 每天练习 měi tiān liànxí / 过网 guò wǎng / 赢比赛 yíng bǐsài / 打得很好 dǎ de hěn hǎo",
+      "cau": "[Cầu nối] Let's practise together! ↔ 我们一起练习吧！(Wǒmen yìqǐ liànxí ba!) [giống: rủ bạn cùng tập; khác: Let's ↔ 我们一起 … 吧, 吧 ở cuối câu] / Nhan打排球打得不好。(Nhan dǎ páiqiú dǎ de bù hǎo.) / 排球很难，可是Nhan不害怕。(Páiqiú hěn nán, kěshì Nhan bú hàipà.) / 她每天放学以后练习。(Tā měi tiān fàngxué yǐhòu liànxí.) / 我们的队会赢！(Wǒmen de duì huì yíng!)",
+      "truyen": "Nhan和排球队 — Nhan想进学校的排球队。可是她的球过不了网。有时候她会哭。Leo说：'别难过！我们一起练习吧！' 他们每天练习。星期六有一场大比赛。Nhan的球过了网，得分了！她的队赢了。'Nhan，你打得真好！' (Nhan xiǎng jìn xuéxiào de páiqiú duì. Kěshì tā de qiú guò bù liǎo wǎng. Yǒu shíhou tā huì kū. Leo shuō: 'Bié nánguò! Wǒmen yìqǐ liànxí ba!' Tāmen měi tiān liànxí. Xīngqīliù yǒu yì chǎng dà bǐsài. Nhan de qiú guòle wǎng, défēn le! Tā de duì yíng le. 'Nhan, nǐ dǎ de zhēn hǎo!')",
+      "video": "Tìm YouTube: \"打排球 儿童 故事 汉语\""
+     }
+    },
+    {
+     "ngay": 56,
+     "label": "Ngày 56. Unit 6 · Phiên dịch nhí: phỏng vấn thể thao",
+     "en": {
+      "tu": "Ôn: ice skating, volleyball, team, win, film, pop star, practise, skate | Ôn nhanh: could, sometimes",
+      "cum": "What sport do you like? / Can you play …? / Let's play … together! / I don't like …",
+      "cau": "(Phiên dịch nhí: nghe tiếng Trung, nói tiếng Anh) What sport do you like? I like table tennis. / Can you play badminton? Yes, I can. / I don't like basketball. / Let's play table tennis together! / Do you like films? / Do you like movies? Yes, I do. / I play a volleyball game on an app.",
+      "truyen": "The Sports Interview — Xiaomei visits Anna's school. Nhan is the little interpreter. Anna asks, 'What sport do you like?' Nhan says it in Chinese. Xiaomei answers, 'I like table tennis and ice skating.' Nhan says it in English. 'Can you play badminton?' 'No, I can't.' 'Let's play table tennis together!' The girls play and laugh.",
+      "video": "Tìm YouTube: \"sports interview kids English Chinese\""
+     },
+     "zh": {
+      "tu": "Ôn: 乒乓球 pīngpāngqiú, 羽毛球 yǔmáoqiú, 滑冰 huábīng, 篮球 lánqiú, 排球 páiqiú, 电影 diànyǐng, 上网 shàngwǎng, 游戏 yóuxì",
+      "cum": "你喜欢什么运动 nǐ xǐhuan shénme yùndòng / 你会……吗 nǐ huì … ma / 一起打乒乓球 yìqǐ dǎ pīngpāngqiú / 我不喜欢 wǒ bù xǐhuan",
+      "cau": "[Cầu nối] Can you play badminton? No, I can't. ↔ 你会打羽毛球吗？——不会。(Nǐ huì dǎ yǔmáoqiú ma? — Bú huì.) [giống: can ↔ 会; khác: tiếng Trung đáp ngắn 不会, không cần No, I can't] / (Phiên dịch nhí: nghe tiếng Anh, nói tiếng Trung) 你喜欢什么运动？——我喜欢乒乓球。(Nǐ xǐhuan shénme yùndòng? — Wǒ xǐhuan pīngpāngqiú.) / 你会打羽毛球吗？——会。(Nǐ huì dǎ yǔmáoqiú ma? — Huì.) / 我不喜欢篮球。(Wǒ bù xǐhuan lánqiú.) / 我们一起打乒乓球吧！(Wǒmen yìqǐ dǎ pīngpāngqiú ba!) / 你喜欢看电影吗？——喜欢。(Nǐ xǐhuan kàn diànyǐng ma? — Xǐhuan.) / 我上网玩排球游戏。(Wǒ shàngwǎng wán páiqiú yóuxì.) / [Chuyển ngữ] [Phiên dịch nhí: nghe Anna hỏi tiếng Anh, con nói lại bằng tiếng Trung cho Xiaomei, 3 câu] What sport do you like? Can you play badminton? Let's play table tennis together! → 你喜欢什么运动？你会打羽毛球吗？我们一起打乒乓球吧！",
+      "truyen": "运动采访 — Xiaomei来Anna的学校。Nhan是小翻译。Anna问：'你喜欢什么运动？' Nhan用汉语说。Xiaomei说：'我喜欢乒乓球和滑冰。' Nhan用英语说。Anna问：'你会打羽毛球吗？' Xiaomei说：'不会。' Anna说：'我们一起打乒乓球吧！' 她们一起打球，笑了。(Xiaomei lái Anna de xuéxiào. Nhan shì xiǎo fānyì. Anna wèn: 'Nǐ xǐhuan shénme yùndòng?' Nhan yòng Hànyǔ shuō. Xiaomei shuō: 'Wǒ xǐhuan pīngpāngqiú hé huábīng.' Nhan yòng Yīngyǔ shuō. Anna wèn: 'Nǐ huì dǎ yǔmáoqiú ma?' Xiaomei shuō: 'Bú huì.' Anna shuō: 'Wǒmen yìqǐ dǎ pīngpāngqiú ba!' Tāmen yìqǐ dǎ qiú, xiào le.)",
+      "video": "Tìm YouTube: \"你喜欢什么运动 儿童 对话\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn: present, table tennis, badminton, ice, skate, practise, team, volleyball, win, match, player, goal, score, net, bat, film, band, pop star, comic book",
+     "slide": "[Lời cô] Vào bài: Good morning, class! 同学们好！ · Chuyển ý: Let's listen to the story. 我们听故事吧。 · Khen: Brilliant! 真厉害！ · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): practise, net. 1) Xếp 5 tranh truyện Nhan and the Volleyball Team và kể lại, mỗi tranh 1 câu. 2) Đọc và điền từ (dạng Movers Reading Part 3, 5 chỗ trống): practise / team / net / win / match. 3) Phiên dịch nhí theo cặp: một con hỏi bằng tiếng Việt tình huống, bạn kia nói tiếng Anh: What sport do you like? / Can you play badminton? / Let's play table tennis together! 4) Movers Nói phần 3 (mẫu, chọn tranh khác loại và giải thích, từng em): Bộ 1: volleyball / football / tennis ball / CD → 'The CD is different because it isn't a ball.' / Bộ 2: CD / DVD / movie / model boat → 'The model boat is different because we sail it. We don't watch it or listen to it.' / Bộ 3: ice skates / roller skates / bat / comic book → 'The comic book is different because it isn't for sport.'",
+     "truyen": "Nhan and the Volleyball Team — Nhan wants to be in the school volleyball team, but volleyball is difficult. She can't hit the ball over the net. Sometimes she cries. Leo says, 'Don't be sad. Let's practise together!' They practise every day after school. On Saturday there's a big match. Nhan is brave. She hits the ball over the net and scores! Her team wins the match. The teacher gives her a present: a comic book about a famous volleyball player.",
+     "baihat": "Practise Every Day (giai điệu Mary Had a Little Lamb) — Nhan can play volleyball, volleyball, volleyball, / Nhan can play volleyball, he practises every day! / Hit the ball over the net, over the net, over the net, / Hit the ball over the net, and our team can win!"
+    },
+    "zh": {
+     "flash": "Ôn: 滑冰 huábīng, 练习 liànxí, 队 duì, 排球 páiqiú, 进球 jìn qiú, 电影 diànyǐng, 漫画 mànhuà, 礼物 lǐwù, 乒乓球 pīngpāngqiú, 羽毛球 yǔmáoqiú | Nghe làm quen: 比赛 bǐsài, 赢 yíng, 网 wǎng, 球棒 qiúbàng, 乐队 yuèduì, 歌星 gēxīng",
+     "slide": "[Cầu nối Anh – Trung] Cùng 5 tranh truyện: rối Leo nói \"Let's practise together!\", rối Xiaomei nói \"我们一起练习吧！\" — con tìm: Let's … ↔ 我们一起…吧; play volleyball ↔ 打排球 (打 là động từ dùng tay). 1) Xếp 5 tranh và kể truyện Nhan和排球队, mỗi tranh 1 câu: 排球很难。/ 她的球过不了网。/ 别难过！我们一起练习吧！/ 球过了网，得分了！/ 她的队赢了。 2) Điền từ (5 chỗ trống): 练习 / 队 / 网 / 赢 / 比赛 — 我们每天___。/ 我们的___会赢！/ 球过了___。/ 星期六有一场___。/ 她的队___了。 3) [Chuyển ngữ] Anh → Trung (cô nói tiếng Anh, con nói lại cho rối Xiaomei): What sport do you like? → 你喜欢什么运动？/ Can you play badminton? → 你会打羽毛球吗？/ Let's play table tennis together! → 我们一起打乒乓球吧！ [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo kể: \"Nhan is in the volleyball team. At first, volleyball is difficult for him, and his ball can't go over the net. He is very sad. I say, 'Don't be sad! Let's practise together!' Now they practise every day after school.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 排球很难，Nhan很难过。Leo说：\"别难过！我们一起练习吧！\"他们每天练习。 (Páiqiú hěn nán, Nhan hěn nánguò. Leo shuō: \"Bié nánguò! Wǒmen yìqǐ liànxí ba!\" Tāmen měi tiān liànxí.) 4) Chọn tranh khác loại và nói vì sao (cùng bộ tranh Movers phần 3): 排球 / 足球 / 网球 / CD → CD不一样，它不是球。 5) YCT口试（初级）第三部分 看图说话 (mẫu, nhìn tranh nói 2–3 câu): Tranh đội bóng chuyền: 他们在打排球。Nhan很高兴。Nhan的队赢了。(Tāmen zài dǎ páiqiú. Nhan hěn gāoxìng. Nhan de duì yíng le.) / Tranh Leo và Nhan luyện tập: 他们每天练习。Nhan的球过了网。(Tāmen měi tiān liànxí. Nhan de qiú guòle wǎng.)",
+     "truyen": "Nhan和排球队 — Nhan想进学校的排球队，可是排球很难。她的球过不了网。有时候她会哭。Leo说：'别难过！我们一起练习吧！' 他们每天放学以后练习。星期六有一场大比赛。Nhan不害怕。她的球过了网，得分了！她的队赢了比赛。老师给她一个礼物：一本漫画书，讲一个有名的排球明星。(Nhan xiǎng jìn xuéxiào de páiqiú duì, kěshì páiqiú hěn nán. Tā de qiú guò bù liǎo wǎng. Yǒu shíhou tā huì kū. Leo shuō: 'Bié nánguò! Wǒmen yìqǐ liànxí ba!' Tāmen měi tiān fàngxué yǐhòu liànxí. Xīngqīliù yǒu yì chǎng dà bǐsài. Nhan bú hàipà. Tā de qiú guòle wǎng, défēn le! Tā de duì yíngle bǐsài. Lǎoshī gěi tā yí gè lǐwù: yì běn mànhuà shū, jiǎng yí gè yǒumíng de páiqiú míngxīng.)",
+     "baihat": "Nhan会打排球 (giai điệu Mary Had a Little Lamb, như bài tiếng Anh) — 我们Nhan会打排球，打排球，打排球，我们Nhan会打排球，她每天都练习！打的球呀过了网，过了网，过了网，打的球呀过了网，我们的队会赢！(Wǒmen Nhan huì dǎ páiqiú, dǎ páiqiú, dǎ páiqiú, wǒmen Nhan huì dǎ páiqiú, tā měi tiān dōu liànxí! Dǎ de qiú ya guòle wǎng, guòle wǎng, guòle wǎng, dǎ de qiú ya guòle wǎng, wǒmen de duì huì yíng!)"
+    }
+   }
+  },
+  {
+   "buoi": 29,
+   "unit": 7,
+   "label_buoi": "Buổi dạy 29. Unit 7 · Yummy Food – Bữa trưa và tráng miệng",
+   "web": [
+    {
+     "ngay": 57,
+     "label": "Ngày 57. Unit 7 · Hộp cơm trưa",
+     "en": {
+      "tu": "Mới: sandwich, cheese, salad, pasta, sauce, pancake | Ôn: always, country, bread, tomato, lunch, breakfast, shopping centre",
+      "cum": "a cheese sandwich / a tomato salad / pasta with tomato sauce / pancakes for breakfast / a lunch box",
+      "cau": "I want to eat rice. / I want to eat a cheese sandwich. / I always have pancakes for breakfast. / I'd like pasta with tomato sauce, please. / Pasta is from Italy. It's a famous food in that country. / Mum buys cheese and bread at the shopping centre. / The shop sells bread and cheese.",
+      "truyen": "Lunch Box — On Sunday, Mum buys cheese and tomatoes at the shopping centre. On Monday, she makes Anna's lunch box: a cheese sandwich and a tomato salad. Leo always has pasta with tomato sauce. At lunch they sit together at school. Anna gives Leo half of her sandwich. 'Thank you! Yummy!' says Leo.",
+      "video": "Tìm YouTube: \"food vocabulary for kids sandwich cheese salad pasta pancake\""
+     },
+     "zh": {
+      "tu": "Mới: 面包 miànbāo (= bread), 菜 cài (= dish, food), 卖 mài (= sells, sell) | Ôn: 米饭 mǐfàn, 午饭 wǔfàn, 早饭 zǎofàn, 商店 shāngdiàn, 西红柿 xīhóngshì, 半 bàn | Nghe làm quen: 三明治 sānmíngzhì (= sandwich), 奶酪 nǎilào (= cheese), 沙拉 shālā (= salad), 意大利面 Yìdàlì miàn (= pasta), 煎饼 jiānbing (= pancake), 商场 shāngchǎng (= shopping centre)",
+      "cum": "奶酪三明治 nǎilào sānmíngzhì / 西红柿沙拉 xīhóngshì shālā / 意大利面 Yìdàlì miàn / 早饭吃煎饼 zǎofàn chī jiānbing / 卖面包 mài miànbāo / 半个三明治 bàn gè sānmíngzhì",
+      "cau": "[Cầu nối] I want to eat a cheese sandwich. ↔ 我想吃奶酪三明治。(Wǒ xiǎng chī nǎilào sānmíngzhì.) [giống: Ai – muốn – ăn – gì, cùng trật tự; khác: tiếng Anh cần to và a, tiếng Trung không cần; sandwich ↔ 三明治 sānmíngzhì, salad ↔ 沙拉 shālā đọc gần giống (từ mượn âm); bread ↔ 面包 là từ khác] / 我想吃米饭。(Wǒ xiǎng chī mǐfàn.) / 我想吃奶酪三明治。(Wǒ xiǎng chī nǎilào sānmíngzhì.) / 早饭我每天吃煎饼。(Zǎofàn wǒ měi tiān chī jiānbing.) / 请给我意大利面。(Qǐng gěi wǒ Yìdàlì miàn.) / 意大利面是意大利的菜。(Yìdàlì miàn shì Yìdàlì de cài.) / 妈妈在商场买奶酪和面包。(Māma zài shāngchǎng mǎi nǎilào hé miànbāo.) / 这个商店卖面包和奶酪。(Zhège shāngdiàn mài miànbāo hé nǎilào.)",
+      "truyen": "饭盒 — 星期天，妈妈在商场买奶酪和西红柿。星期一，她给Anna做午饭：奶酪三明治和西红柿沙拉。Leo每天都吃意大利面。中午，他们在学校一起吃午饭。Anna给Leo半个三明治。Leo说：'谢谢！很好吃！' (Xīngqītiān, māma zài shāngchǎng mǎi nǎilào hé xīhóngshì. Xīngqīyī, tā gěi Anna zuò wǔfàn: nǎilào sānmíngzhì hé xīhóngshì shālā. Leo měi tiān dōu chī Yìdàlì miàn. Zhōngwǔ, tāmen zài xuéxiào yìqǐ chī wǔfàn. Anna gěi Leo bàn gè sānmíngzhì. Leo shuō: 'Xièxie! Hěn hǎochī!')",
+      "video": "Tìm YouTube: \"儿童 食物 三明治 沙拉 汉语\""
+     }
+    },
+    {
+     "ngay": 58,
+     "label": "Ngày 58. Unit 7 · Đồ uống và tráng miệng",
+     "en": {
+      "tu": "Mới: dessert, biscuit, cookie, milkshake, tea, coffee | Ôn: past, look for, ice cream, chocolate, juice, milk",
+      "cum": "a chocolate milkshake / a cup of tea / a cup of coffee / biscuits (US cookies) / ice cream for dessert",
+      "cau": "What's your favourite dessert? / My favourite dessert is ice cream. / What would you like to drink? I'd like a milkshake, please. / Grandma drinks tea at half past three. / In the USA, biscuits are called cookies.",
+      "truyen": "Grandma's Tea Time — At half past three, Grandma has tea time. She drinks a cup of tea. Dad drinks coffee. Bông has a chocolate milkshake and some biscuits. 'What's your favourite dessert, Grandma?' asks Bông. 'Ice cream!' says Grandma. Everyone laughs.",
+      "video": "Tìm YouTube: \"desserts and drinks vocabulary for kids milkshake biscuit\""
+     },
+     "zh": {
+      "tu": "Mới: 甜点 tiándiǎn (= dessert), 饼干 bǐnggān (= biscuit, cookie), 冰淇淋 bīngqílín (= ice cream), 巧克力 qiǎokèlì (= chocolate) | Ôn: 茶 chá, 果汁 guǒzhī, 牛奶 niúnǎi, 最 zuì, 半 bàn | Nghe làm quen: 咖啡 kāfēi (= coffee), 奶昔 nǎixī (= milkshake)",
+      "cum": "吃甜点 chī tiándiǎn / 巧克力饼干 qiǎokèlì bǐnggān / 一个冰淇淋 yí gè bīngqílín / 一杯茶 yì bēi chá / 一杯咖啡 yì bēi kāfēi / 巧克力奶昔 qiǎokèlì nǎixī",
+      "cau": "[Cầu nối] My favourite dessert is ice cream. ↔ 我最喜欢的甜点是冰淇淋。(Wǒ zuì xǐhuan de tiándiǎn shì bīngqílín.) [giống: cùng trật tự; chocolate ↔ 巧克力 qiǎokèlì, coffee ↔ 咖啡 kāfēi đọc gần giống (từ mượn âm); khác: favourite ↔ 最喜欢的; biscuit (Anh) = cookie (Mỹ) ↔ đều là 饼干] / 你最喜欢的甜点是什么？(Nǐ zuì xǐhuan de tiándiǎn shì shénme?) / 我最喜欢的甜点是冰淇淋。(Wǒ zuì xǐhuan de tiándiǎn shì bīngqílín.) / 你想喝什么？——我想喝奶昔。(Nǐ xiǎng hē shénme? — Wǒ xiǎng hē nǎixī.) / 下午三点半，奶奶喝茶。(Xiàwǔ sān diǎn bàn, nǎinai hē chá.) / 爸爸喝咖啡。(Bàba hē kāfēi.) / [Chuyển ngữ] [Bông nói tiếng Anh, con nói lại cho bà của Xiaomei bằng tiếng Trung, 3 câu] Grandma drinks tea. I have some biscuits. My favourite dessert is ice cream. → 奶奶喝茶。我吃饼干。我最喜欢的甜点是冰淇淋。(Nǎinai hē chá. Wǒ chī bǐnggān. Wǒ zuì xǐhuan de tiándiǎn shì bīngqílín.)",
+      "truyen": "奶奶的下午茶 — 下午三点半，奶奶喝茶。爸爸喝咖啡。Bông喝巧克力奶昔，吃饼干。Bông问：'奶奶，你最喜欢的甜点是什么？' 奶奶说：'冰淇淋！' 大家都笑了。(Xiàwǔ sān diǎn bàn, nǎinai hē chá. Bàba hē kāfēi. Bông hē qiǎokèlì nǎixī, chī bǐnggān. Bông wèn: 'Nǎinai, nǐ zuì xǐhuan de tiándiǎn shì shénme?' Nǎinai shuō: 'Bīngqílín!' Dàjiā dōu xiào le.)",
+      "video": "Tìm YouTube: \"甜点 冰淇淋 巧克力 饼干 儿童\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: sandwich, cheese, salad, pasta, sauce, pancake, dessert, biscuit, cookie, milkshake, tea, coffee | Ôn: bread, tomato, ice cream, chocolate, juice, milk, shopping centre, shop, food, sell",
+     "slide": "[Lời cô] Vào bài: Hello, everyone! 大家好！ · Chuyển ý: Now, open your lunch box! 现在打开你的饭盒！ · Khen: Yummy! Well done! 真棒！ · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): dessert / 甜点, sauce. 1) Nhìn tranh chọn từ (8 câu): sandwich / cheese / salad / pasta / pancake / milkshake / tea / coffee. 2) Hỏi – đáp cặp đôi: What's your favourite dessert? — My favourite dessert is … / What would you like to drink? — I'd like …, please. 3) Kéo thả món ăn vào hộp cơm theo câu cô đọc: 'Put a cheese sandwich and a salad in Anna's lunch box.' 4) Đóng vai đi mua đồ (cặp đôi): Let's go to the shopping centre. We have to buy cheese, pasta and tea. — OK! Can we buy a milkshake, too?",
+     "truyen": "Lunch and Tea Time — At school, Anna has a cheese sandwich and a tomato salad. Leo has pasta with tomato sauce. After school, they go to Grandma's house. It's half past three: tea time! Grandma drinks tea. Anna drinks a milkshake. Leo eats biscuits. 'In America, biscuits are called cookies,' says Grandma. 'What's your favourite dessert?' 'Pancakes!' says Leo.",
+     "baihat": "What Would You Like? (giai điệu London Bridge) — What would you like to eat today, eat today, eat today? / A cheese sandwich and a salad, please, yummy, yummy! / What would you like to drink today, drink today, drink today? / A milkshake or a cup of tea, yummy, yummy!"
+    },
+    "zh": {
+     "flash": "Mới: 面包 miànbāo, 菜 cài, 卖 mài, 甜点 tiándiǎn, 饼干 bǐnggān, 冰淇淋 bīngqílín, 巧克力 qiǎokèlì | Ôn: 西红柿 xīhóngshì, 商店 shāngdiàn, 茶 chá, 果汁 guǒzhī, 牛奶 niúnǎi | Nghe làm quen: 三明治 sānmíngzhì, 奶酪 nǎilào, 沙拉 shālā, 意大利面 Yìdàlì miàn, 煎饼 jiānbing, 奶昔 nǎixī, 咖啡 kāfēi, 商场 shāngchǎng",
+     "slide": "[Cầu nối Anh – Trung] Cùng thẻ món ăn: rối Leo đọc \"chocolate, coffee, salad\", rối Xiaomei đọc \"巧克力, 咖啡, 沙拉\" — con tìm từ đọc gần giống nhau ở hai tiếng (từ mượn âm); biscuit (UK) = cookie (US) nhưng tiếng Trung chỉ một từ 饼干. 1) Nghe chọn tranh (8 câu, cùng tranh bài tiếng Anh): 三明治 / 奶酪 / 沙拉 / 意大利面 / 煎饼 / 奶昔 / 茶 / 咖啡. 2) Hỏi – đáp cặp đôi: 你最喜欢的甜点是什么？— 我最喜欢的甜点是……/ 你想喝什么？— 我想喝…… 3) Kéo thả món ăn vào hộp cơm theo câu cô đọc: 'Anna的饭盒里有奶酪三明治和沙拉。' 4) Đóng vai đi mua đồ (cặp đôi): 我们去商场吧。我们要买奶酪、意大利面和茶。— 好！我们也可以买奶昔吗？ [Chuyển ngữ] Hộp cơm của Anna: con nghe Anna nói tiếng Anh 3 câu \"I want to eat a cheese sandwich. My favourite dessert is ice cream. I'd like some biscuits, please.\" rồi nói lại cho rối Xiaomei: 我想吃奶酪三明治。我最喜欢的甜点是冰淇淋。我想吃饼干。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Anna nói: \"Mum and I are at the shopping centre. This shop sells bread, biscuits and chocolate. For lunch, I want rice and a cheese sandwich. My favourite dessert is chocolate ice cream! Mum would like a cup of tea, but I'd like some juice.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 这个商店卖面包、饼干和巧克力。Anna最喜欢的甜点是巧克力冰淇淋。妈妈想喝茶，Anna想喝果汁。 (Zhège shāngdiàn mài miànbāo, bǐnggān hé qiǎokèlì. Anna zuì xǐhuan de tiándiǎn shì qiǎokèlì bīngqílín. Māma xiǎng hē chá, Anna xiǎng hē guǒzhī.)",
+     "truyen": "午饭和下午茶 — 在学校，Anna吃奶酪三明治和西红柿沙拉。Leo吃意大利面。放学以后，他们去奶奶家。三点半了，喝茶的时间到了！奶奶喝茶，Anna喝奶昔，Leo吃饼干。奶奶说：'在美国，饼干的英语名字不一样。' 奶奶问：'你们最喜欢的甜点是什么？' Leo说：'煎饼！' (Zài xuéxiào, Anna chī nǎilào sānmíngzhì hé xīhóngshì shālā. Leo chī Yìdàlì miàn. Fàngxué yǐhòu, tāmen qù nǎinai jiā. Sān diǎn bàn le, hē chá de shíjiān dào le! Nǎinai hē chá, Anna hē nǎixī, Leo chī bǐnggān. Nǎinai shuō: 'Zài Měiguó, bǐnggān de Yīngyǔ míngzi bù yíyàng.' Nǎinai wèn: 'Nǐmen zuì xǐhuan de tiándiǎn shì shénme?' Leo shuō: 'Jiānbing!')",
+     "baihat": "今天你想吃什么 (giai điệu London Bridge, như bài tiếng Anh) — 今天你想吃什么，吃什么，吃什么？奶酪三明治和沙拉，真好吃呀！今天你想喝什么，喝什么，喝什么？奶昔或者一杯茶，真好喝呀！(Jīntiān nǐ xiǎng chī shénme, chī shénme, chī shénme? Nǎilào sānmíngzhì hé shālā, zhēn hǎochī ya! Jīntiān nǐ xiǎng hē shénme, hē shénme, hē shénme? Nǎixī huòzhě yì bēi chá, zhēn hǎohē ya!)"
+    }
+   }
+  },
+  {
+   "buoi": 30,
+   "unit": 7,
+   "label_buoi": "Buổi dạy 30. Unit 7 · Yummy Food – Vị món ăn và ở nhà hàng",
+   "web": [
+    {
+     "ngay": 59,
+     "label": "Ngày 59. Unit 7 · Vị gì thế?",
+     "en": {
+      "tu": "Mới: sweet, salty, sour, spicy, bitter, both | Ôn: team, win, practise, match, film, flag",
+      "cum": "very sweet / too salty / a sour lemon / spicy food / bitter coffee / both … and …",
+      "cau": "This cake is very sweet. / Lemons are sour. / The chips are salty. / I don't like spicy food. / Coffee is bitter. / I like both cheese and chocolate. / Our team can win the tasting game!",
+      "truyen": "The Tasting Game — Leo's team plays a tasting game after the football match. Leo eats a lemon. 'Sour!' Anna drinks coffee. 'Bitter!' Nhan eats chips. 'Salty!' Bông eats a sweet. 'Sweet!' Xiaomei eats some spicy chicken. 'Spicy!' Their team wins the game!",
+      "video": "Tìm YouTube: \"tastes for kids sweet salty sour spicy bitter\""
+     },
+     "zh": {
+      "tu": "Mới: 甜 tián (= sweet), 咸 xián (= salty), 酸 suān (= sour), 辣 là (= spicy), 苦 kǔ (= bitter), 糖果 tángguǒ (= a sweet, sweets) | Ôn: 都 dōu, 柠檬 níngméng, 薯条 shǔtiáo, 足球 zúqiú, 队 duì, 比赛 bǐsài, 赢 yíng, 咖啡 kāfēi",
+      "cum": "很甜 hěn tián / 太咸了 tài xián le / 有点儿酸 yǒudiǎnr suān / 很辣 hěn là / 很苦 hěn kǔ / 都喜欢 dōu xǐhuan",
+      "cau": "[Cầu nối] I don't like spicy food. ↔ 我不喜欢辣的菜。(Wǒ bù xǐhuan là de cài.) [giống: Ai – không thích – gì; khác: don't ↔ 不 đứng trước 喜欢; spicy food ↔ 辣的菜, thêm 的] / 这个蛋糕很甜。(Zhège dàngāo hěn tián.) / 柠檬很酸。(Níngméng hěn suān.) / 薯条很咸。(Shǔtiáo hěn xián.) / 我不喜欢辣的菜。(Wǒ bù xǐhuan là de cài.) / 咖啡很苦。(Kāfēi hěn kǔ.) / 奶酪和巧克力我都喜欢。(Nǎilào hé qiǎokèlì wǒ dōu xǐhuan.) / 我们的队会赢！(Wǒmen de duì huì yíng!)",
+      "truyen": "尝一尝 — 足球比赛以后，Leo的队玩一个游戏：尝一尝！Leo吃柠檬：'很酸！' Anna喝咖啡：'很苦！' Nhan吃薯条：'很咸！' Bông吃糖果：'很甜！' Xiaomei吃鸡肉：'很辣！' 他们的队赢了！(Zúqiú bǐsài yǐhòu, Leo de duì wán yí gè yóuxì: cháng yi cháng! Leo chī níngméng: 'Hěn suān!' Anna hē kāfēi: 'Hěn kǔ!' Nhan chī shǔtiáo: 'Hěn xián!' Bông chī tángguǒ: 'Hěn tián!' Xiaomei chī jīròu: 'Hěn là!' Tāmen de duì yíng le!)",
+      "video": "Tìm YouTube: \"酸甜苦辣咸 儿童 味道\""
+     }
+    },
+    {
+     "ngay": 60,
+     "label": "Ngày 60. Unit 7 · Ở nhà hàng",
+     "en": {
+      "tu": "Mới: excuse me, call, change, something, nothing, because | Ôn: language, look for, menu, waiter, watermelon, building, elevator",
+      "cum": "Excuse me! / call the waiter / change my drink / something sweet / nothing in the bowl",
+      "cau": "[Ngữ pháp: câu hỏi lựa chọn … or …?] Do you like apples or bananas? / Would you like ice cream or watermelon? / Excuse me, can I change my drink, please? / I want something sweet. / There's nothing in my bowl! / I like watermelon because it's sweet. / The restaurant is at the top of a tall building. We take the elevator (UK lift).",
+      "truyen": "At the Restaurant — Leo and his dad take the elevator to a restaurant at the top of a tall building. 'Excuse me!' Dad calls the waiter. 'Can we see the menu, please?' Leo wants something sweet. 'Ice cream or watermelon?' asks the waiter. 'Watermelon, because it's hot today!' Leo's juice is sour. 'Excuse me, can I change my drink, please?'",
+      "video": "Tìm YouTube: \"at the restaurant role play for kids excuse me menu\""
+     },
+     "zh": {
+      "tu": "Mới: 还是 háishi (= or), 西瓜 xīguā (= watermelon), 因为 yīnwèi (= because) | Ôn: 服务员 fúwùyuán, 菜单 càidān, 请问 qǐngwèn, 甜 tián, 碗 wǎn, 什么都没有 shénme dōu méiyǒu, 电梯 diàntī, 楼 lóu | Nghe làm quen: 换 huàn (= change)",
+      "cum": "苹果还是香蕉 píngguǒ háishi xiāngjiāo / 冰淇淋还是西瓜 bīngqílín háishi xīguā / 请问 qǐngwèn / 叫服务员 jiào fúwùyuán / 换一杯 huàn yì bēi / 甜的 tián de / 碗里什么都没有 wǎn lǐ shénme dōu méiyǒu",
+      "cau": "[Cầu nối] Would you like ice cream or watermelon? ↔ 你想吃冰淇淋还是西瓜？(Nǐ xiǎng chī bīngqílín háishi xīguā?) [giống: A or B ↔ A 还是 B, cùng vị trí; khác: câu hỏi có 还是 thì không thêm 吗] / [Ngữ pháp: câu hỏi lựa chọn A 还是 B？] 你喜欢苹果还是香蕉？(Nǐ xǐhuan píngguǒ háishi xiāngjiāo?) / 请问，我可以换一杯吗？(Qǐngwèn, wǒ kěyǐ huàn yì bēi ma?) / 我想吃甜的。(Wǒ xiǎng chī tián de.) / 我的碗里什么都没有！(Wǒ de wǎn lǐ shénme dōu méiyǒu!) / 我喜欢西瓜，因为西瓜很甜。(Wǒ xǐhuan xīguā, yīnwèi xīguā hěn tián.) / 饭店在一个高楼上，我们坐电梯。(Fàndiàn zài yí gè gāo lóu shang, wǒmen zuò diàntī.) / [Chuyển ngữ] [bố Leo nói tiếng Anh với người phục vụ, con nói lại bằng tiếng Trung, 2–3 câu] Excuse me! Can we see the menu, please? Leo would like watermelon because it's hot today. → 请问，可以看看菜单吗？Leo想吃西瓜，因为今天很热。(Qǐngwèn, kěyǐ kànkan càidān ma? Leo xiǎng chī xīguā, yīnwèi jīntiān hěn rè.)",
+      "truyen": "在饭店 — Leo和爸爸坐电梯去高楼上的饭店。爸爸叫服务员：'请问，可以看看菜单吗？' Leo想吃甜的。服务员问：'冰淇淋还是西瓜？' Leo说：'西瓜，因为今天很热！' Leo的果汁很酸。'请问，我可以换一杯吗？' (Leo hé bàba zuò diàntī qù gāo lóu shang de fàndiàn. Bàba jiào fúwùyuán: 'Qǐngwèn, kěyǐ kànkan càidān ma?' Leo xiǎng chī tián de. Fúwùyuán wèn: 'Bīngqílín háishi xīguā?' Leo shuō: 'Xīguā, yīnwèi jīntiān hěn rè!' Leo de guǒzhī hěn suān. 'Qǐngwèn, wǒ kěyǐ huàn yì bēi ma?')",
+      "video": "Tìm YouTube: \"在饭店 点菜 儿童 汉语 菜单\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: sweet, salty, sour, spicy, bitter, both, excuse me, call, change, something, nothing, because | Ôn: or, menu, waiter, watermelon, lemon, coffee, chips, building, elevator, soup, sweets",
+     "slide": "[Lời cô] Vào bài: Good morning, class! 同学们好！ · Chuyển ý: Now, let's taste! 现在我们尝一尝！ · Khen: Excellent! 太好了！ · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): bitter / 苦, sour / 酸, because / 因为. 1) Nhìn tranh chọn vị (5 câu): sweet / salty / sour / spicy / bitter. 2) Đóng vai nhà hàng: Excuse me! Can I see the menu, please? — Would you like … or …? — …, please, because … 3) Nghe và nối (dạng Movers Listening Part 1): cô đọc 'Leo wants something sweet. Anna doesn't want anything spicy.' → nối tên với món. 4) Nghe chọn tranh (3 câu): 'The restaurant is in a tall building.' / 'Leo and Dad take the elevator.' / 'The waiter brings the menu.'",
+     "truyen": "The Tasting Restaurant — Leo's family goes to a new restaurant. 'Excuse me!' Dad calls the waiter. 'Would you like something sweet or something spicy?' asks the waiter. Leo wants both! The chicken is spicy. The soup is salty. The lemon juice is sour. Dad's coffee is bitter. 'Can I change my drink, please? I want a milkshake because it's sweet!' says Leo. There's nothing on his plate at the end. Yummy!",
+     "baihat": "Sweet and Sour (giai điệu Twinkle, Twinkle, Little Star) — Sweet, sweet, sweet, the cake is sweet, / Salty, salty chips I eat. / Sour lemon, spicy food, / Bitter coffee isn't good! / Excuse me, please, can I change? / Something sweet, the same again!"
+    },
+    "zh": {
+     "flash": "Mới: 甜 tián, 咸 xián, 酸 suān, 辣 là, 苦 kǔ, 糖果 tángguǒ, 还是 háishi, 西瓜 xīguā, 因为 yīnwèi | Ôn: 都 dōu, 请问 qǐngwèn, 服务员 fúwùyuán, 菜单 càidān, 什么都没有 shénme dōu méiyǒu, 柠檬 níngméng, 咖啡 kāfēi, 薯条 shǔtiáo, 汤 tāng, 电梯 diàntī | Nghe làm quen: 换 huàn",
+     "slide": "[Cầu nối Anh – Trung] Cùng 5 thẻ vị: rối Leo nói \"sweet, salty, sour, spicy, bitter\", rối Xiaomei nói \"甜, 咸, 酸, 辣, 苦\" — con ghép cặp; rồi so \"Ice cream or watermelon?\" ↔ \"冰淇淋还是西瓜？\": or ↔ 还是 đứng cùng chỗ. 1) Nghe chọn tranh vị (cùng tranh bài tiếng Anh): 很甜 / 太咸了 / 有点儿酸 / 很辣 / 很苦. 2) Đóng vai nhà hàng: 请问，可以看看菜单吗？— 你想吃……还是……？— ……，因为…… 3) Nghe và nối tên với món: 'Leo想吃甜的。Anna不想吃辣的。' 4) Nghe chọn tranh: 饭店在一个高楼上。/ Leo和爸爸坐电梯。/ 服务员拿来菜单。 [Chuyển ngữ] Phục vụ nhí: khách nói tiếng Anh 2 câu \"I want something sweet. The soup is too salty.\" → con nói lại cho đầu bếp Xiaomei: 我想吃甜的。这个汤太咸了。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo (khách) nói: \"Excuse me! The soup is too salty, and it's spicy, too. I don't like spicy food. I'd like something sweet, please. Can I have watermelon or ice cream? Ice cream, please, because it's very hot today.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 他说这个汤太咸了，也很辣。他想吃甜的。他要冰淇淋，因为今天很热。 (Tā shuō zhège tāng tài xián le, yě hěn là. Tā xiǎng chī tián de. Tā yào bīngqílín, yīnwèi jīntiān hěn rè.)",
+     "truyen": "新饭店尝一尝 — Leo一家去一个新饭店。爸爸叫服务员：'服务员！' 服务员问：'你们想吃甜的还是辣的？' Leo说：'我都想吃！' 鸡肉很辣。汤很咸。柠檬汁很酸。爸爸的咖啡很苦。Leo说：'请问，我可以换一杯吗？我想喝奶昔，因为奶昔很甜！' 最后，他的盘子里什么都没有了。真好吃！(Leo yì jiā qù yí gè xīn fàndiàn. Bàba jiào fúwùyuán: 'Fúwùyuán!' Fúwùyuán wèn: 'Nǐmen xiǎng chī tián de háishi là de?' Leo shuō: 'Wǒ dōu xiǎng chī!' Jīròu hěn là. Tāng hěn xián. Níngméng zhī hěn suān. Bàba de kāfēi hěn kǔ. Leo shuō: 'Qǐngwèn, wǒ kěyǐ huàn yì bēi ma? Wǒ xiǎng hē nǎixī, yīnwèi nǎixī hěn tián!' Zuìhòu, tā de pánzi lǐ shénme dōu méiyǒu le. Zhēn hǎochī!)",
+     "baihat": "酸甜苦辣 (giai điệu Twinkle, Twinkle, Little Star, như bài tiếng Anh) — 甜甜甜呀蛋糕甜，薯条咸咸我爱吃。柠檬酸呀菜很辣，咖啡很苦不好喝！请问可以换一换？甜的再来一个吧！(Tián tián tián ya dàngāo tián, shǔtiáo xiánxián wǒ ài chī. Níngméng suān ya cài hěn là, kāfēi hěn kǔ bù hǎohē! Qǐngwèn kěyǐ huàn yi huàn? Tián de zài lái yí gè ba!)"
+    }
+   }
+  },
+  {
+   "buoi": 31,
+   "unit": 7,
+   "label_buoi": "Buổi dạy 31. Unit 7 · Yummy Food – Làm bánh và thực đơn bí mật · Luyện Movers Nói phần 3",
+   "web": [
+    {
+     "ngay": 61,
+     "label": "Ngày 61. Unit 7 · Làm bánh pancake",
+     "en": {
+      "tu": "Mới: break, inside, badly, loudly, quickly | Ôn: look for, flag, pancake, plate, chocolate, shape, have to",
+      "cum": "look inside the box / break a plate / cook badly / laugh loudly / eat quickly",
+      "cau": "Look inside the box. There's some chocolate! / Oh no! I break a plate. / Don't eat quickly. / My brother laughs loudly. / I'm looking for the chocolate. / I cook badly, but my pancakes are yummy. / [Ngữ pháp: have to] You have to wash your hands first. / My pancake isn't round. It's a funny shape!",
+      "truyen": "Making Pancakes — Nhan and his mum make pancakes. 'You have to wash your hands first,' says Mum. Nhan is looking for the chocolate. It's inside the box! Oh no! Nhan breaks a plate. 'It's OK,' says Mum. Nhan makes the pancakes badly — they aren't round. They're funny shapes! But they're yummy! His brother eats quickly and laughs loudly. 'More, please!'",
+      "video": "Tìm YouTube: \"making pancakes for kids English\""
+     },
+     "zh": {
+      "tu": "Mới: 但是 dànshì (= but) | Ôn: 找 zhǎo, 里面 lǐmiàn, 盒子 hézi, 盘子 pánzi, 煎饼 jiānbing, 圆 yuán, 洗手 xǐ shǒu | Nghe làm quen: 打破 dǎpò (= break), 大声 dàshēng (= loudly), 样子 yàngzi (= shape)",
+      "cum": "但是很好吃 dànshì hěn hǎochī / 找巧克力 zhǎo qiǎokèlì / 在盒子里面 zài hézi lǐmiàn / 打破盘子 dǎpò pánzi / 吃得很快 chī de hěn kuài / 大声笑 dàshēng xiào",
+      "cau": "[Cầu nối] I cook badly, but my pancakes are yummy. ↔ 我做得不好，但是我的煎饼很好吃。(Wǒ zuò de bù hǎo, dànshì wǒ de jiānbing hěn hǎochī.) [giống: but ↔ 但是 nối hai ý trái nhau, đứng đầu vế sau; khác: cook badly ↔ 做得不好, tiếng Trung dùng 得 + 不好 sau động từ, không có đuôi -ly như badly] / 看看盒子里面，有巧克力！(Kànkan hézi lǐmiàn, yǒu qiǎokèlì!) / 哎呀！我打破了一个盘子。(Āiyā! Wǒ dǎpòle yí gè pánzi.) / 别吃得太快！(Bié chī de tài kuài!) / 我哥哥大声笑。(Wǒ gēge dàshēng xiào.) / 我在找巧克力。(Wǒ zài zhǎo qiǎokèlì.) / 你要先洗手。(Nǐ yào xiān xǐ shǒu.) / 我的煎饼不圆，样子很好玩！(Wǒ de jiānbing bù yuán, yàngzi hěn hǎowán!)",
+      "truyen": "做煎饼 — Nhan和妈妈做煎饼。妈妈说：'你要先洗手。' Nhan在找巧克力。在盒子里面！哎呀！Nhan打破了一个盘子。妈妈说：'没关系。' Nhan做得不好，煎饼不圆，样子很好玩，但是很好吃！哥哥吃得很快，大声笑：'还要！' (Nhan hé māma zuò jiānbing. Māma shuō: 'Nǐ yào xiān xǐ shǒu.' Nhan zài zhǎo qiǎokèlì. Zài hézi lǐmiàn! Āiyā! Nhan dǎpòle yí gè pánzi. Māma shuō: 'Méi guānxi.' Nhan zuò de bù hǎo, jiānbing bù yuán, yàngzi hěn hǎowán, dànshì hěn hǎochī! Gēge chī de hěn kuài, dàshēng xiào: 'Hái yào!')",
+      "video": "Tìm YouTube: \"做煎饼 儿童 汉语\""
+     }
+    },
+    {
+     "ngay": 62,
+     "label": "Ngày 62. Unit 7 · Ôn không tranh: thực đơn bí mật · Luyện nói Movers phần 4, YCT口试 phần 2",
+     "en": {
+      "tu": "Ôn: sandwich, sweet, excuse me, biscuit, cookie, pasta, salad, dessert, salty, spicy, sour, bitter, because | Ôn nhanh: always, country",
+      "cum": "a cheese sandwich / something sweet / both … and … / Excuse me! / because it's sweet",
+      "cau": "(Nghe – trả lời, không tranh) Do you like pasta or salad? / What's your favourite dessert? / Is coffee sweet or bitter? / Excuse me, can I have a sandwich, please? / Why do you like ice cream? Because it's sweet. / Is your pancake round? No, it's a funny shape. / [Movers Nói phần 4 (mẫu) – ghi âm câu trả lời trên Trang luyện nói, ≤5 phút] What's your favourite food? / What do you have for breakfast? / Do you like spicy food?",
+      "truyen": "The Secret Menu — Listen and guess the food. It's round. It's sweet. We eat it for breakfast with chocolate sauce. What is it? A pancake! / It's yellow. It's sour. We make lemonade with it. What is it? A lemon! / It's from Italy. We eat it with tomato sauce. What is it? Pasta!",
+      "video": "Tìm YouTube: \"guess the food riddles for kids\""
+     },
+     "zh": {
+      "tu": "Ôn: 三明治 sānmíngzhì, 奶酪 nǎilào, 意大利面 Yìdàlì miàn, 沙拉 shālā, 煎饼 jiānbing, 甜点 tiándiǎn, 饼干 bǐnggān, 冰淇淋 bīngqílín, 甜 tián, 咸 xián, 辣 là, 酸 suān, 苦 kǔ, 咖啡 kāfēi, 柠檬 níngméng, 还是 háishi, 因为 yīnwèi, 请问 qǐngwèn | Nghe làm quen: 西红柿酱 xīhóngshì jiàng (= tomato sauce)",
+      "cum": "奶酪三明治 nǎilào sānmíngzhì / 甜的 tián de / 都喜欢 dōu xǐhuan / 请问 qǐngwèn / 因为很甜 yīnwèi hěn tián",
+      "cau": "[Cầu nối] Why do you like ice cream? Because it's sweet. ↔ 你为什么喜欢冰淇淋？——因为冰淇淋很甜。(Nǐ wèishénme xǐhuan bīngqílín? — Yīnwèi bīngqílín hěn tián.) [giống: Because ↔ 因为 đứng đầu câu trả lời; khác: Why đứng đầu câu, 为什么 đứng sau 你] / (Nghe – trả lời, không tranh) 你喜欢意大利面还是沙拉？(Nǐ xǐhuan Yìdàlì miàn háishi shālā?) / 你最喜欢的甜点是什么？(Nǐ zuì xǐhuan de tiándiǎn shì shénme?) / 咖啡甜还是苦？——很苦。(Kāfēi tián háishi kǔ? — Hěn kǔ.) / 请问，我可以吃一个三明治吗？(Qǐngwèn, wǒ kěyǐ chī yí gè sānmíngzhì ma?) / 你为什么喜欢冰淇淋？——因为冰淇淋很甜。(Nǐ wèishénme xǐhuan bīngqílín? — Yīnwèi bīngqílín hěn tián.) / 你的煎饼圆吗？——不圆，样子很好玩！(Nǐ de jiānbing yuán ma? — Bù yuán, yàngzi hěn hǎowán!) / [YCT口试（初级）第二部分 听后回答 (mẫu, cùng câu hỏi Movers phần 4) – ghi âm câu trả lời ngắn, ≤5 phút] 你最喜欢什么菜？— 我最喜欢意大利面。(Nǐ zuì xǐhuan shénme cài? — Wǒ zuì xǐhuan Yìdàlì miàn.) / 早饭你吃什么？— 我吃面包。(Zǎofàn nǐ chī shénme? — Wǒ chī miànbāo.) / 你喜欢吃辣的吗？— 不喜欢。(Nǐ xǐhuan chī là de ma? — Bù xǐhuan.) / [Chuyển ngữ] [nghe Nhan nói tiếng Anh, con nói lại cho Xiaomei bằng tiếng Trung, 2 câu] I like ice cream because it's sweet. But coffee is bitter. → 我喜欢冰淇淋，因为冰淇淋很甜。但是咖啡很苦。(Wǒ xǐhuan bīngqílín, yīnwèi bīngqílín hěn tián. Dànshì kāfēi hěn kǔ.)",
+      "truyen": "秘密菜单 — 猜一猜！它是圆的，很甜。早饭我们吃它，上面有巧克力。它是什么？煎饼！/ 它是黄色的，很酸，我们用它做柠檬水。它是什么？柠檬！/ 它从意大利来，我们吃它的时候放西红柿酱。它是什么？意大利面！(Cāi yi cāi! Tā shì yuán de, hěn tián. Zǎofàn wǒmen chī tā, shàngmiàn yǒu qiǎokèlì. Tā shì shénme? Jiānbing! / Tā shì huángsè de, hěn suān, wǒmen yòng tā zuò níngméng shuǐ. Tā shì shénme? Níngméng! / Tā cóng Yìdàlì lái, wǒmen chī tā de shíhou fàng xīhóngshì jiàng. Tā shì shénme? Yìdàlì miàn!)",
+      "video": "Tìm YouTube: \"猜食物 谜语 儿童 汉语\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: break, inside, badly, loudly, quickly | Ôn: sandwich, cheese, pasta, sauce, pancake, dessert, biscuit, cookie, sweet, salty, sour, spicy, bitter, excuse me, something, nothing, shape, have to, chocolate, but",
+     "slide": "[Lời cô] Vào bài: Hello, everyone! 大家好！ · Chuyển ý: Now, wash your hands. Let's cook! 现在洗手，我们来做饭吧！ · Khen: Great job! 很好！ · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): badly, inside / 里面, but / 但是. 1) Nhìn tranh chọn trạng từ (4 câu): He eats quickly. / She laughs loudly. / He cooks badly. / Look inside the box. 2) Trò 'Secret Menu': cô đọc 3 gợi ý, đội đoán món (pancake / lemon / pasta / sandwich). 3) Sắp xếp các bước làm pancake theo tranh và nói: First … Then … 4) Movers Nói phần 3 (mẫu, chọn tranh khác loại và giải thích, từng em): Bộ 1: pancake / sandwich / pasta / laptop → 'The laptop is different because we can't eat it.' / Bộ 2: tea / coffee / milkshake / cheese → 'Cheese is different because it isn't a drink.' / Bộ 3: lemon / sweets / chocolate / ice cream → 'The lemon is different because it's sour. The others are sweet.' 5) Nói theo tranh: What shape is your pancake? It's a funny shape! 6) Nối hai nửa câu với but: My pancake isn't round — but it's yummy. / I cook badly — but it's sweet.",
+     "truyen": "Nhan's Pancake Party — Nhan and his mum make pancakes for a party. Nhan is looking for the chocolate. It's inside the box! Oh no, he breaks a plate. 'Don't worry,' says Mum. Nhan makes the pancakes badly — they aren't round. But with chocolate sauce they're sweet and yummy! His friends eat quickly and laugh loudly. 'Can we have something more?' 'Sorry, there's nothing on the plate now!'",
+     "baihat": "Pancake Song (giai điệu Row, Row, Row Your Boat) — Make, make, make pancakes, / Look inside the box, / Chocolate sauce and cheese and milk, / Eat them quickly, yum! / Oh no, I break a plate, / Laughing loudly, ha! / Pancakes, pancakes, round or not, / They're the best, hurrah!"
+    },
+    "zh": {
+     "flash": "Mới: 但是 dànshì | Ôn: 里面 lǐmiàn, 盒子 hézi, 盘子 pánzi, 煎饼 jiānbing, 巧克力 qiǎokèlì, 三明治 sānmíngzhì, 奶酪 nǎilào, 意大利面 Yìdàlì miàn, 甜点 tiándiǎn, 饼干 bǐnggān, 甜 tián, 咸 xián, 酸 suān, 辣 là, 苦 kǔ, 请问 qǐngwèn, 什么都没有 shénme dōu méiyǒu | Nghe làm quen: 打破 dǎpò, 大声 dàshēng",
+     "slide": "[Cầu nối Anh – Trung] Cùng tranh bánh pancake méo: rối Leo nói \"It's a funny shape, but it's yummy!\", rối Xiaomei nói \"它的样子很好玩，但是很好吃！\" — con tìm: but ↔ 但是 cùng đứng giữa hai ý; inside the box ↔ 在盒子里面 (tiếng Trung nói cái hộp trước, 里面 sau). 1) Nhìn tranh chọn câu (cùng tranh bài tiếng Anh): 他吃得很快。/ 她大声笑。/ 他做得不好。/ 看看盒子里面。 2) Nối hai nửa câu với 但是: 我的煎饼不圆 — 但是很好吃 / 我做得不好 — 但是很甜. 3) Trò 秘密菜单: cô đọc gợi ý → đội đoán món (煎饼 / 柠檬 / 意大利面 / 三明治). 4) Sắp xếp các bước làm 煎饼 theo tranh và nói: 先洗手，然后…… 5) Chọn tranh khác loại (cùng bộ tranh Movers phần 3): 茶 / 咖啡 / 奶昔 / 奶酪 → 奶酪不一样，它不是喝的。/ 柠檬 / 糖果 / 巧克力 / 冰淇淋 → 柠檬不一样，它很酸。 [Chuyển ngữ] Tin nhắn của mẹ Nhan: cô chiếu tin nhắn tiếng Anh \"The chocolate is inside the box. You have to wash your hands first.\" → con nhắn lại cho Xiaomei bằng tiếng Trung: 巧克力在盒子里面。你要先洗手。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo đọc tin nhắn của mẹ Nhan: \"Hi Nhan! Let's make pancakes together tonight. First, wash your hands. Then look inside the big box — the milk and the eggs are in there. Is your pancake a funny shape? Don't worry, it's still yummy!\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 妈妈说：今天晚上我们一起做煎饼吧！先洗手，然后看看大盒子里面，牛奶和鸡蛋在里面。煎饼不圆，但是很好吃！ (Māma shuō: Jīntiān wǎnshang wǒmen yìqǐ zuò jiānbing ba! Xiān xǐ shǒu, ránhòu kànkan dà hézi lǐmiàn, niúnǎi hé jīdàn zài lǐmiàn. Jiānbing bù yuán, dànshì hěn hǎochī!)",
+     "truyen": "Nhan的煎饼 — Nhan和妈妈给朋友们做煎饼。Nhan在找巧克力。在盒子里面！哎呀，Nhan打破了一个盘子！妈妈说：'别担心。' Nhan做得不好，煎饼不圆。但是有巧克力，很甜，很好吃！朋友们吃得很快，大声笑。'还有吗？' '对不起，盘子里什么都没有了！' (Nhan hé māma gěi péngyoumen zuò jiānbing. Nhan zài zhǎo qiǎokèlì. Zài hézi lǐmiàn! Āiyā, Nhan dǎpòle yí gè pánzi! Māma shuō: 'Bié dānxīn.' Nhan zuò de bù hǎo, jiānbing bù yuán. Dànshì yǒu qiǎokèlì, hěn tián, hěn hǎochī! Péngyoumen chī de hěn kuài, dàshēng xiào. 'Hái yǒu ma?' 'Duìbuqǐ, pánzi lǐ shénme dōu méiyǒu le!')",
+     "baihat": "做煎饼 (giai điệu Row, Row, Row Your Boat, như bài tiếng Anh) — 做做做煎饼，看看盒子里，巧克力、奶酪和牛奶，吃得快快的！哎呀打破盘子，大声笑哈哈！煎饼煎饼圆不圆，都是最好的！(Zuò zuò zuò jiānbing, kànkan hézi lǐ, qiǎokèlì, nǎilào hé niúnǎi, chī de kuàikuài de! Āiyā dǎpò pánzi, dàshēng xiào hāhā! Jiānbing jiānbing yuán bù yuán, dōu shì zuì hǎo de!)"
+    }
+   }
+  },
+  {
+   "buoi": 32,
+   "unit": 7,
+   "label_buoi": "Buổi dạy 32. Unit 7 · Yummy Food – Truyện và Phiên dịch nhí · Luyện Movers Nói phần 4, YCT口试 phần 1–2",
+   "web": [
+    {
+     "ngay": 63,
+     "label": "Ngày 63. Unit 7 · Truyện: Thực đơn của Xiaomei",
+     "en": {
+      "tu": "Ôn: sandwich, sweet, salad, pasta, dessert, milkshake, cookie, spicy, both, because | Ôn nhanh: always, country, language",
+      "cum": "a class party / a menu for the party / something sweet / both … and …",
+      "cau": "Let's make a menu! / We want both sweet and salty food. / Leo doesn't eat spicy food. / I like cookies because they're sweet.",
+      "truyen": "Xiaomei's Menu — Xiaomei and Bông make a menu for the class party. 'Let's have sandwiches and pasta,' says Bông. 'And a salad!' says Xiaomei. 'Leo doesn't like spicy food, so no spicy chicken.' For dessert, they want both ice cream and cookies. For drinks, milkshakes and lemonade. The class loves the menu!",
+      "video": "Tìm YouTube: \"make a menu for kids food project\""
+     },
+     "zh": {
+      "tu": "Ôn: 三明治 sānmíngzhì, 意大利面 Yìdàlì miàn, 沙拉 shālā, 菜单 càidān, 甜点 tiándiǎn, 饼干 bǐnggān, 冰淇淋 bīngqílín, 奶昔 nǎixī, 辣 là, 甜 tián, 咸 xián, 都 dōu, 因为 yīnwèi",
+      "cum": "做菜单 zuò càidān / 甜的和咸的 tián de hé xián de / 不吃辣的 bù chī là de / 冰淇淋和饼干 bīngqílín hé bǐnggān",
+      "cau": "[Cầu nối] Leo doesn't eat spicy food. ↔ Leo不吃辣的菜。(Leo bù chī là de cài.) [giống: tên người đứng đầu, cùng trật tự; khác: doesn't ↔ 不, eat ↔ 吃 không thêm -s] / 我们做一个菜单吧！(Wǒmen zuò yí gè càidān ba!) / 甜的和咸的，我们都要。(Tián de hé xián de, wǒmen dōu yào.) / Leo不吃辣的菜。(Leo bù chī là de cài.) / 我喜欢饼干，因为饼干很甜。(Wǒ xǐhuan bǐnggān, yīnwèi bǐnggān hěn tián.)",
+      "truyen": "Xiaomei的菜单 — Xiaomei和Bông给班里的聚会做菜单。Bông说：'我们吃三明治和意大利面吧。' Xiaomei说：'还有沙拉！Leo不喜欢辣的，所以不要辣的鸡肉。' 甜点，她们要冰淇淋，也要饼干。喝的有奶昔和柠檬水。大家都很喜欢这个菜单！(Xiaomei hé Bông gěi bān lǐ de jùhuì zuò càidān. Bông shuō: 'Wǒmen chī sānmíngzhì hé Yìdàlì miàn ba.' Xiaomei shuō: 'Hái yǒu shālā! Leo bù xǐhuan là de, suǒyǐ bú yào là de jīròu.' Tiándiǎn, tāmen yào bīngqílín, yě yào bǐnggān. Hē de yǒu nǎixī hé níngméng shuǐ. Dàjiā dōu hěn xǐhuan zhège càidān!)",
+      "video": "Tìm YouTube: \"儿童 做菜单 汉语 甜点\""
+     }
+    },
+    {
+     "ngay": 64,
+     "label": "Ngày 64. Unit 7 · Phiên dịch nhí: gọi món",
+     "en": {
+      "tu": "Ôn: excuse me, sandwich, sweet, biscuit, cookie, salty, spicy, change, something, because | Ôn nhanh: language, look for",
+      "cum": "Excuse me! / What would you like? / … or …? / because it's …",
+      "cau": "(Phiên dịch nhí: nghe tiếng Trung, nói tiếng Anh) Excuse me, can I see the menu, please? / Would you like tea or juice? / I want something sweet. / This soup is too salty. / I like watermelon because it's sweet.",
+      "truyen": "The Little Interpreter at the Café — Xiaomei's grandma visits Hanoi. She can't speak English. Nhan helps her at a café. 'Excuse me!' Nhan calls the waiter. 'Grandma would like tea or juice?' 'Tea, please.' 'And something sweet: chocolate biscuits!' Grandma smiles. 'Thank you, little interpreter!'",
+      "video": "Tìm YouTube: \"ordering food role play kids English Chinese\""
+     },
+     "zh": {
+      "tu": "Ôn: 还是 háishi, 甜 tián, 咸 xián, 饼干 bǐnggān, 巧克力 qiǎokèlì, 西瓜 xīguā, 因为 yīnwèi, 菜单 càidān, 服务员 fúwùyuán | Nghe làm quen: 咖啡馆 kāfēiguǎn (= café)",
+      "cum": "请给我菜单 qǐng gěi wǒ càidān / 茶还是果汁 chá háishi guǒzhī / 甜的 tián de / 太咸了 tài xián le",
+      "cau": "[Cầu nối] Would you like tea or juice? ↔ 你想喝茶还是果汁？(Nǐ xiǎng hē chá háishi guǒzhī?) [giống: or ↔ 还是 giữa hai lựa chọn; khác: tiếng Trung phân biệt 喝 (uống) và 吃 (ăn), tiếng Anh dùng chung would like] / (Phiên dịch nhí: nghe tiếng Anh, nói tiếng Trung) 请问，我可以看看菜单吗？(Qǐngwèn, wǒ kěyǐ kànkan càidān ma?) / 你想喝茶还是果汁？(Nǐ xiǎng hē chá háishi guǒzhī?) / 我想吃甜的。(Wǒ xiǎng chī tián de.) / 这个汤太咸了。(Zhège tāng tài xián le.) / 我喜欢西瓜，因为西瓜很甜。(Wǒ xǐhuan xīguā, yīnwèi xīguā hěn tián.) / [Chuyển ngữ] [Phiên dịch nhí: nghe Nhan nói tiếng Anh, con nói lại cho bà của Xiaomei bằng tiếng Trung, 3 câu] Would you like tea or juice? I want something sweet. This soup is too salty. → 你想喝茶还是果汁？我想吃甜的。这个汤太咸了。",
+      "truyen": "小翻译在咖啡馆 — Xiaomei的奶奶来河内。她不会说英语。Nhan在咖啡馆帮助她。Nhan叫服务员：'服务员！' '奶奶想喝茶还是果汁？' 奶奶说：'喝茶。' Nhan说：'还要甜的：巧克力饼干！' 奶奶笑了：'谢谢你，小翻译！' (Xiaomei de nǎinai lái Hénèi. Tā bú huì shuō Yīngyǔ. Nhan zài kāfēiguǎn bāngzhù tā. Nhan jiào fúwùyuán: 'Fúwùyuán!' 'Nǎinai xiǎng hē chá háishi guǒzhī?' Nǎinai shuō: 'Hē chá.' Nhan shuō: 'Hái yào tián de: qiǎokèlì bǐnggān!' Nǎinai xiào le: 'Xièxie nǐ, xiǎo fānyì!')",
+      "video": "Tìm YouTube: \"点菜 儿童 汉语 对话 饭店\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn: ice cream, sandwich, sweet, excuse me, biscuit, cookie, cheese, salad, pasta, pancake, milkshake, dessert, salty, sour, spicy, bitter, both, because",
+     "slide": "[Lời cô] Vào bài: Good morning, class! 同学们好！ · Chuyển ý: Now, work in groups. 现在分小组。 · Khen: Brilliant! 真厉害！ · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): menu / 菜单, starter, main. 1) Dự án nhỏ: mỗi nhóm làm thực đơn của riêng mình (Starter / Main / Dessert / Drinks) và giới thiệu: 'Our menu has …' 2) Đọc truyện Xiaomei's Menu, chọn đúng/sai (dạng Movers Reading Part 2, 5 câu): Leo likes spicy food. (No) / They want both ice cream and cookies. (Yes) 3) Phiên dịch nhí theo cặp tại 'nhà hàng lớp': Excuse me! / Would you like … or …? / …, please, because … 4) Movers Nói phần 4 (mẫu, cô là giám khảo hỏi từng em, ~2 phút): What's your name? / What's your favourite food? / What do you have for lunch? / Who cooks in your house? / Do you like spicy food? Why?",
+     "truyen": "Xiaomei's Menu — Xiaomei and Bông make a menu for the class party. 'Let's have sandwiches, pasta and a big salad,' says Bông. 'Leo doesn't like spicy food,' says Xiaomei, 'so no spicy chicken.' For dessert, they want both ice cream and chocolate cookies. For drinks, there's milkshake, lemonade and tea. At the party, Leo says, 'Excuse me, can I have something sweet?' 'Of course! Here's a cookie!' Everyone loves Xiaomei's menu.",
+     "baihat": "Our Party Menu (giai điệu The Wheels on the Bus) — On our menu there's pasta and cheese, / pasta and cheese, pasta and cheese, / On our menu there's pasta and cheese, / and salad, too! / For dessert we've got cookies and ice cream, / cookies and ice cream, cookies and ice cream, / For dessert we've got cookies and ice cream, / sweet and yummy!"
+    },
+    "zh": {
+     "flash": "Ôn: 三明治 sānmíngzhì, 奶酪 nǎilào, 沙拉 shālā, 意大利面 Yìdàlì miàn, 煎饼 jiānbing, 奶昔 nǎixī, 甜点 tiándiǎn, 饼干 bǐnggān, 冰淇淋 bīngqílín, 甜 tián, 咸 xián, 酸 suān, 辣 là, 苦 kǔ, 都 dōu, 因为 yīnwèi, 请问 qǐngwèn",
+     "slide": "[Cầu nối Anh – Trung] Cùng thực đơn của lớp: rối Leo đọc \"Dessert: cookies and ice cream\", rối Xiaomei đọc \"甜点：饼干和冰淇淋\" — con thấy and ↔ 和 nối hai món; Would you like A or B? ↔ A还是B？ 1) Mỗi nhóm làm 菜单 (cùng thực đơn tiếng Anh) và giới thiệu: 我们的菜单有……，甜点是……，喝的是…… 2) Đọc truyện Xiaomei的菜单, chọn 对 / 不对: Leo喜欢吃辣的。(不对) / 她们要冰淇淋，也要饼干。(对) 3) [Chuyển ngữ] Anh → Trung (cô nói tiếng Anh, con nói lại cho rối Xiaomei): Excuse me, the menu, please. → 服务员，请给我菜单。/ Tea or juice? → 茶还是果汁？/ I want something sweet, because I like sweet food. → 我想吃甜的，因为我喜欢甜的。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo (phục vụ) đọc thực đơn rồi gọi món: \"Welcome to our class restaurant! Here is the menu. You can have pasta or rice. For dessert, there are biscuits and ice cream. I'd like pasta and ice cream, please, because I love sweet food.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 菜单上有意大利面和米饭，甜点有饼干和冰淇淋。他想吃意大利面和冰淇淋，因为他喜欢甜的。 (Càidān shang yǒu Yìdàlì miàn hé mǐfàn, tiándiǎn yǒu bǐnggān hé bīngqílín. Tā xiǎng chī Yìdàlì miàn hé bīngqílín, yīnwèi tā xǐhuan tián de.) 4) YCT口试（初级）第一部分 听后重复 + 第二部分 听后回答 (mẫu, cùng câu hỏi Movers phần 4, từng em): nghe nói lại: 我想吃面包。(Wǒ xiǎng chī miànbāo.) / 这个菜很辣。(Zhège cài hěn là.) — rồi trả lời: 你最喜欢什么菜？— 意大利面。(Nǐ zuì xǐhuan shénme cài? — Yìdàlì miàn.) / 午饭你吃什么？— 我吃米饭。(Wǔfàn nǐ chī shénme? — Wǒ chī mǐfàn.) / 你家谁做饭？— 妈妈做饭。(Nǐ jiā shéi zuò fàn? — Māma zuò fàn.) / 你喜欢吃辣的吗？为什么？— 不喜欢，因为太辣了。(Nǐ xǐhuan chī là de ma? Wèishénme? — Bù xǐhuan, yīnwèi tài là le.)",
+     "truyen": "Xiaomei的菜单 — Xiaomei和Bông给班里的聚会做菜单。Bông说：'我们吃三明治、意大利面和一个大沙拉吧。' Xiaomei说：'Leo不喜欢辣的，所以不要辣的鸡肉。' 甜点，她们要冰淇淋，也要巧克力饼干。喝的有奶昔、柠檬水和茶。聚会上，Leo说：'请问，我可以吃甜的吗？' '当然可以！给你一块饼干！' 大家都很喜欢Xiaomei的菜单。(Xiaomei hé Bông gěi bān lǐ de jùhuì zuò càidān. Bông shuō: 'Wǒmen chī sānmíngzhì, Yìdàlì miàn hé yí gè dà shālā ba.' Xiaomei shuō: 'Leo bù xǐhuan là de, suǒyǐ bú yào là de jīròu.' Tiándiǎn, tāmen yào bīngqílín, yě yào qiǎokèlì bǐnggān. Hē de yǒu nǎixī, níngméng shuǐ hé chá. Jùhuì shang, Leo shuō: 'Qǐngwèn, wǒ kěyǐ chī tián de ma?' 'Dāngrán kěyǐ! Gěi nǐ yí kuài bǐnggān!' Dàjiā dōu hěn xǐhuan Xiaomei de càidān.)",
+     "baihat": "我们的菜单 (giai điệu The Wheels on the Bus, như bài tiếng Anh) — 我们菜单有面和奶酪，面和奶酪，面和奶酪，我们菜单有面和奶酪，还有沙拉！甜点有饼干和冰淇淋，饼干冰淇淋，饼干冰淇淋，甜点有饼干和冰淇淋，又甜又好吃！(Wǒmen càidān yǒu miàn hé nǎilào, miàn hé nǎilào, miàn hé nǎilào, wǒmen càidān yǒu miàn hé nǎilào, hái yǒu shālā! Tiándiǎn yǒu bǐnggān hé bīngqílín, bǐnggān bīngqílín, bǐnggān bīngqílín, tiándiǎn yǒu bǐnggān hé bīngqílín, yòu tián yòu hǎochī!)"
+    }
+   }
+  },
+  {
+   "buoi": 33,
+   "unit": 8,
+   "label_buoi": "Buổi dạy 33. Unit 8 · How's the weather today? – Bốn mùa và khi con bị ốm",
+   "web": [
+    {
+     "ngay": 65,
+     "label": "Ngày 65. Unit 8 · Bốn mùa",
+     "en": {
+      "tu": "Mới: season, spring, summer, autumn, fall, winter, wind | Ôn: usually, sandwich, sweet, snow, sun, tractor",
+      "cum": "four seasons / in spring / in summer / in autumn (US fall) / in winter / a strong wind",
+      "cau": "How's the weather today? / It's sunny today. / What season is it now? It's summer. / In winter it usually snows in the mountains. / In autumn there's a lot of wind. / In the USA, autumn is called fall. / In spring the farmer drives his tractor on the farm.",
+      "truyen": "Four Seasons in the Park — In spring, Bông sees lots of flowers in the park. In summer, it's hot and sunny, and she eats a sweet ice cream. In autumn, the wind is strong and the leaves fall. In winter, it's cold. 'What's your favourite season?' asks Mum. 'Summer, because I love ice cream!'",
+      "video": "Tìm YouTube: \"four seasons song for kids spring summer autumn winter\""
+     },
+     "zh": {
+      "tu": "Mới: 季节 jìjié (= season), 春天 chūntiān (= spring), 夏天 xiàtiān (= summer), 秋天 qiūtiān (= autumn, fall), 冬天 dōngtiān (= winter) | Ôn: 天气 tiānqì, 晴天 qíngtiān, 冷 lěng, 热 rè, 刮风 guāfēng, 下雪 xiàxuě, 山 shān, 农民 nóngmín, 农场 nóngchǎng | Nghe làm quen: 通常 tōngcháng (= usually), 拖拉机 tuōlājī (= tractor)",
+      "cum": "四个季节 sì gè jìjié / 春天 chūntiān / 夏天很热 xiàtiān hěn rè / 秋天刮风 qiūtiān guāfēng / 冬天很冷 dōngtiān hěn lěng / 风很大 fēng hěn dà",
+      "cau": "[Cầu nối] What season is it now? It's summer. ↔ 现在是什么季节？——现在是夏天。(Xiànzài shì shénme jìjié? — Xiànzài shì xiàtiān.) [giống: hỏi – đáp về mùa; khác: What đứng đầu, 什么季节 đứng đúng chỗ câu trả lời; spring, summer, autumn, winter ↔ 春天、夏天、秋天、冬天 đều có 天; autumn (Anh) = fall (Mỹ) ↔ đều là 秋天] / 今天天气怎么样？(Jīntiān tiānqì zěnmeyàng?) / 今天是晴天。(Jīntiān shì qíngtiān.) / 现在是什么季节？——现在是夏天。(Xiànzài shì shénme jìjié? — Xiànzài shì xiàtiān.) / 冬天，山上通常会下雪。(Dōngtiān, shān shang tōngcháng huì xiàxuě.) / 秋天风很大。(Qiūtiān fēng hěn dà.) / 春天，农民在农场开拖拉机。(Chūntiān, nóngmín zài nóngchǎng kāi tuōlājī.)",
+      "truyen": "公园的四个季节 — 春天，Bông在公园里看见很多花。夏天很热，是晴天，她吃甜的冰淇淋。秋天风很大，叶子掉了。冬天很冷。妈妈问：'你最喜欢什么季节？' Bông说：'夏天，因为我喜欢冰淇淋！' (Chūntiān, Bông zài gōngyuán lǐ kànjiàn hěn duō huā. Xiàtiān hěn rè, shì qíngtiān, tā chī tián de bīngqílín. Qiūtiān fēng hěn dà, yèzi diào le. Dōngtiān hěn lěng. Māma wèn: 'Nǐ zuì xǐhuan shénme jìjié?' Bông shuō: 'Xiàtiān, yīnwèi wǒ xǐhuan bīngqílín!')",
+      "video": "Tìm YouTube: \"四季歌 儿童 春夏秋冬\""
+     }
+    },
+    {
+     "ngay": 66,
+     "label": "Ngày 66. Unit 8 · Con bị ốm",
+     "en": {
+      "tu": "Mới: ill, sick, cough, temperature, fever, matter, more | Ôn: shower, how long, minute, cold, doctor, text, have to",
+      "cum": "What's the matter? / have a cough / have a temperature / have a fever / feel ill / drink more water",
+      "cau": "[Ngữ pháp: have got + bệnh] Are you well? / I've got a cold. / What's the matter? I've got a cough. / Leo is sick. He's got a temperature. / Drink more water. / How long do you sleep? Ten hours. / Leo has to stay in bed. / Mum sends a text to Leo's teacher: 'Leo is ill today.'",
+      "truyen": "Leo Is Ill — It's winter. Leo is ill. He's got a cough and a temperature. 'What's the matter, Leo?' asks Mum. 'I've got a fever.' Mum calls the doctor. 'Drink more water and sleep,' says the doctor. 'Don't have a cold shower.' Leo can't go to school today. Mum sends a text to his teacher: 'Leo has to stay in bed.'",
+      "video": "Tìm YouTube: \"what's the matter song for kids I've got a cold cough\""
+     },
+     "zh": {
+      "tu": "Mới: 身体 shēntǐ (= body; 你身体好吗 = Are you well?), 生病 shēngbìng (= ill, sick), 感冒 gǎnmào (= a cold), 发烧 fāshāo (= fever, temperature) | Ôn: 怎么了 zěnme le, 医生 yīshēng, 冷 lěng, 喝水 hē shuǐ, 小时 xiǎoshí, 床 chuáng, 洗澡 xǐzǎo | Nghe làm quen: 咳嗽 késou (= cough), 短信 duǎnxìn (= text)",
+      "cum": "你怎么了 nǐ zěnme le / 身体好 shēntǐ hǎo / 生病了 shēngbìng le / 感冒了 gǎnmào le / 发烧了 fāshāo le / 咳嗽 késou / 多喝水 duō hē shuǐ / 发短信 fā duǎnxìn",
+      "cau": "[Cầu nối] What's the matter? I've got a fever. ↔ 你怎么了？——我发烧了。(Nǐ zěnme le? — Wǒ fāshāo le.) [giống: hỏi thăm rồi kể bệnh; khác: I've got a … ↔ … 了 (了 chỉ trạng thái mới), tiếng Trung không cần a] / [Ngữ pháp: 了 chỉ sự thay đổi trạng thái] 你身体好吗？(Nǐ shēntǐ hǎo ma?) / 我感冒了。(Wǒ gǎnmào le.) / 你怎么了？——我咳嗽。(Nǐ zěnme le? — Wǒ késou.) / Leo生病了，他发烧了。(Leo shēngbìng le, tā fāshāo le.) / 多喝水！(Duō hē shuǐ!) / 你睡几个小时？——十个小时。(Nǐ shuì jǐ gè xiǎoshí? — Shí gè xiǎoshí.) / Leo要在床上睡觉。(Leo yào zài chuáng shang shuìjiào.) / 妈妈给老师发短信：'Leo今天生病了。'(Māma gěi lǎoshī fā duǎnxìn: 'Leo jīntiān shēngbìng le.') / [Chuyển ngữ] [mẹ Leo nhắn tin tiếng Anh; con nói lại tin nhắn cho cô giáo người Trung Quốc, 3 câu] Leo is ill today. He's got a fever. He has to stay in bed. → Leo今天生病了。他发烧了。他要在床上睡觉。(Leo jīntiān shēngbìng le. Tā fāshāo le. Tā yào zài chuáng shang shuìjiào.)",
+      "truyen": "Leo生病了 — 冬天，Leo生病了。他咳嗽，也发烧了。妈妈问：'Leo，你怎么了？' Leo说：'我发烧了。' 妈妈给医生打电话。 医生说：'多喝水，多睡觉。别洗冷水澡。' 今天Leo不能去上学。妈妈给老师发短信：'Leo要在床上睡觉。' (Dōngtiān, Leo shēngbìng le. Tā késou, yě fāshāo le. Māma wèn: 'Leo, nǐ zěnme le?' Leo shuō: 'Wǒ fāshāo le.' Māma gěi yīshēng dǎ diànhuà. Yīshēng shuō: 'Duō hē shuǐ, duō shuìjiào. Bié xǐ lěngshuǐ zǎo.' Jīntiān Leo bù néng qù shàngxué. Māma gěi lǎoshī fā duǎnxìn: 'Leo yào zài chuáng shang shuìjiào.')",
+      "video": "Tìm YouTube: \"我感冒了 儿童 汉语 生病 发烧\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: season, spring, summer, autumn, fall, winter, wind, ill, sick, cough, temperature, fever, matter, more | Ôn: sunny, cold, hot, snow, doctor, tractor, text, have to, well",
+     "slide": "[Lời cô] Vào bài: Hello, everyone! 大家好！ · Chuyển ý: Now, look at the weather. 现在看看天气。 · Khen: Well done! 真棒！ · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): season / 季节, temperature / 发烧. 1) Nhìn tranh chọn mùa (4 câu): spring / summer / autumn (fall) / winter. 2) Hỏi – đáp theo tranh: How's the weather today? — It's sunny / windy. / What season is it now? — It's … 3) Đóng vai bác sĩ – bệnh nhân: What's the matter? — I've got a cough / a temperature / a fever. — Drink more water! 4) Nhìn tranh nói câu (3 câu): In spring the farmer drives his tractor. / Mum sends a text to the teacher. / You're ill. You have to stay in bed.",
+     "truyen": "Leo's Winter — It's winter. The wind is strong and it's very cold. Leo plays outside without his sweater. The next day he's ill. He's got a cough, a fever and a temperature. 'What's the matter?' asks Mum. Mum calls the doctor. 'Drink more water and sleep,' says the doctor. In spring Leo is well again. 'Spring is my favourite season!' he says.",
+     "baihat": "Four Seasons (giai điệu Frère Jacques) — Spring and summer, spring and summer, / Autumn, winter, autumn, winter, / How's the weather today? How's the weather today? / Sunny and hot! Sunny and hot! / What's the matter? What's the matter? / I've got a cough, I've got a cough!"
+    },
+    "zh": {
+     "flash": "Mới: 季节 jìjié, 春天 chūntiān, 夏天 xiàtiān, 秋天 qiūtiān, 冬天 dōngtiān, 身体 shēntǐ, 生病 shēngbìng, 感冒 gǎnmào, 发烧 fāshāo | Ôn: 晴天 qíngtiān, 冷 lěng, 热 rè, 下雪 xiàxuě, 医生 yīshēng, 要 yào | Nghe làm quen: 咳嗽 késou, 拖拉机 tuōlājī, 短信 duǎnxìn",
+     "slide": "[Cầu nối Anh – Trung] Cùng 4 tranh bốn mùa: rối Leo nói \"spring, summer, autumn, winter\", rối Xiaomei nói \"春天、夏天、秋天、冬天\" — con thấy cả bốn từ tiếng Trung đều có 天; rồi so \"I've got a fever.\" ↔ \"我发烧了。\" (không cần got a, thêm 了). 1) Nghe chọn tranh mùa: 春天 / 夏天 / 秋天 / 冬天. 2) Hỏi – đáp theo tranh: 今天天气怎么样？— 今天是晴天。/ 今天刮风。— 现在是什么季节？— 现在是…… 3) Đóng vai bác sĩ – bệnh nhân: 你怎么了？— 我咳嗽。/ 我发烧了。— 多喝水！ 4) Nhìn tranh nói câu (3 câu): 春天，农民开拖拉机。/ 妈妈给老师发短信。/ 你生病了，要在床上睡觉。 [Chuyển ngữ] Gọi bác sĩ: con nghe mẹ Leo nói tiếng Anh 2–3 câu \"Leo is ill. He's got a cold and a fever.\" rồi nói lại cho bác sĩ Xiaomei: Leo生病了。他感冒了，也发烧了。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo đọc lời mẹ Leo gọi bác sĩ: \"Hello, doctor. It's winter and it's very cold here. My son Leo is ill. He's got a cold and a fever, and he's got a cough, too. He's in bed now, and he drinks a lot of water.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 现在是冬天，很冷。Leo生病了，他感冒了，也发烧了。他在床上，喝很多水。 (Xiànzài shì dōngtiān, hěn lěng. Leo shēngbìng le, tā gǎnmào le, yě fāshāo le. Tā zài chuáng shang, hē hěn duō shuǐ.)",
+     "truyen": "Leo的冬天 — 冬天，风很大，很冷。Leo没穿毛衣，在外面玩。第二天，Leo生病了。他咳嗽，也发烧了。妈妈问：'你怎么了？' 妈妈给医生打电话。医生说：'多喝水，多睡觉。' 春天，Leo的身体好了。他说：'春天是我最喜欢的季节！' (Dōngtiān, fēng hěn dà, hěn lěng. Leo méi chuān máoyī, zài wàimiàn wán. Dì-èr tiān, Leo shēngbìng le. Tā késou, yě fāshāo le. Māma wèn: 'Nǐ zěnme le?' Māma gěi yīshēng dǎ diànhuà. Yīshēng shuō: 'Duō hē shuǐ, duō shuìjiào.' Chūntiān, Leo de shēntǐ hǎo le. Tā shuō: 'Chūntiān shì wǒ zuì xǐhuan de jìjié!')",
+     "baihat": "四季歌 (giai điệu Frère Jacques – 两只老虎, như bài tiếng Anh) — 春天夏天，春天夏天，秋天冬天，秋天冬天，今天天气怎么样？今天天气怎么样？晴天很热！晴天很热！你怎么了？你怎么了？我咳嗽了，我咳嗽了！(Chūntiān xiàtiān, chūntiān xiàtiān, qiūtiān dōngtiān, qiūtiān dōngtiān, jīntiān tiānqì zěnmeyàng? Jīntiān tiānqì zěnmeyàng? Qíngtiān hěn rè! Qíngtiān hěn rè! Nǐ zěnme le? Nǐ zěnme le? Wǒ késou le, wǒ késou le!)"
+    }
+   }
+  },
+  {
+   "buoi": 34,
+   "unit": 8,
+   "label_buoi": "Buổi dạy 34. Unit 8 · How's the weather today? – Đau ở đâu? Ở nha sĩ",
+   "web": [
+    {
+     "ngay": 67,
+     "label": "Ngày 67. Unit 8 · Con đau ở đâu?",
+     "en": {
+      "tu": "Mới: sore, throat, headache, earache, toothache, stomach, stomach-ache, stomachache | Ôn: sweet, chocolate, biscuit, spicy, excuse me, quickly",
+      "cum": "a sore throat / have a headache / have an earache / have a toothache / have a stomach-ache (US stomachache) / not well",
+      "cau": "I've got a sore throat. / I've got a headache. / I've got a toothache because I eat lots of sweets. / Spicy food gives me a stomach-ache. / Excuse me, I've got an earache. / In the USA, people write 'stomachache'. / Nhan is ill. Her stomach hurts. She isn't well.",
+      "truyen": "Too Many Sweets — After the party, Nhan eats lots of sweet biscuits and chocolate very quickly. At night, she's got a stomach-ache and a toothache. 'What's the matter?' asks Dad. 'My stomach! And my tooth!' Dad says, 'No more sweets today!'",
+      "video": "Tìm YouTube: \"I've got a headache toothache stomachache song for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 疼 téng (= hurt, ache), 嗓子疼 sǎngzi téng (= sore throat), 牙疼 yá téng (= toothache), 肚子 dùzi (= stomach), 舒服 shūfu (= well, comfortable; 不舒服 = not well) | Ôn: 头 tóu, 耳朵 ěrduo, 甜 tián, 巧克力 qiǎokèlì, 饼干 bǐnggān, 糖果 tángguǒ, 辣 là | Nghe làm quen: 不好意思 bù hǎoyìsi (= excuse me)",
+      "cum": "嗓子疼 sǎngzi téng / 头疼 tóu téng / 耳朵疼 ěrduo téng / 牙疼 yá téng / 肚子疼 dùzi téng / 不舒服 bù shūfu",
+      "cau": "[Cầu nối] I've got a stomach-ache. ↔ 我肚子疼。(Wǒ dùzi téng.) [giống: stomach + ache ↔ 肚子 + 疼, cùng ghép bộ phận + đau, như tooth + ache ↔ 牙 + 疼; khác: tiếng Anh dùng I've got a, tiếng Trung nói thẳng 我 + bộ phận + 疼] / 我嗓子疼。(Wǒ sǎngzi téng.) / 我头疼。(Wǒ tóu téng.) / 我吃了很多糖果，牙疼了。(Wǒ chīle hěn duō tángguǒ, yá téng le.) / 吃辣的菜，我肚子疼。(Chī là de cài, wǒ dùzi téng.) / 不好意思，我耳朵疼。(Bù hǎoyìsi, wǒ ěrduo téng.) / Nhan生病了，她肚子疼，她不舒服。(Nhan shēngbìng le, tā dùzi téng, tā bù shūfu.)",
+      "truyen": "糖果太多了 — 聚会以后，Nhan很快地吃了很多甜饼干和巧克力。晚上，她肚子疼，牙也疼。爸爸问：'你怎么了？' Nhan说：'我的肚子！还有我的牙！' 爸爸说：'今天别吃糖果了！' (Jùhuì yǐhòu, Nhan hěn kuài de chīle hěn duō tián bǐnggān hé qiǎokèlì. Wǎnshang, tā dùzi téng, yá yě téng. Bàba wèn: 'Nǐ zěnme le?' Nhan shuō: 'Wǒ de dùzi! Hái yǒu wǒ de yá!' Bàba shuō: 'Jīntiān bié chī tángguǒ le!')",
+      "video": "Tìm YouTube: \"头疼 牙疼 肚子疼 儿童 汉语\""
+     }
+    },
+    {
+     "ngay": 68,
+     "label": "Ngày 68. Unit 8 · Ở phòng khám nha sĩ",
+     "en": {
+      "tu": "Mới: toothbrush, toothpaste, hurt, carefully, quietly, think | Ôn: straight, sandwich, salad, sweet, dentist",
+      "cum": "a new toothbrush / some toothpaste / brush your teeth carefully / speak quietly / I think …",
+      "cau": "Where does it hurt? My tooth hurts. / Brush your teeth carefully. / I think you've got a toothache. / Please speak quietly. The baby is asleep. / Go straight to the bathroom and brush your teeth. / I've got an earache. My ear hurts. / Are you hungry? Eat a sandwich, not sweets. / I'm full, thank you. / Take this medicine, please.",
+      "truyen": "At the Dentist — Nhan goes to the dentist. 'Where does it hurt?' 'Here!' The dentist looks carefully. 'I think you eat lots of sweets.' He gives Nhan a new toothbrush and some toothpaste. 'Brush your teeth carefully every morning and evening. Eat a sandwich or a salad, not sweets!'",
+      "video": "Tìm YouTube: \"brush your teeth song for kids toothbrush toothpaste\""
+     },
+     "zh": {
+      "tu": "Mới: 饿 è (= hungry), 饱 bǎo (= full), 药 yào (= medicine) | Ôn: 疼 téng, 牙医 yáyī, 刷牙 shuāyá, 觉得 juéde, 洗手间 xǐshǒujiān, 耳朵 ěrduo, 三明治 sānmíngzhì, 沙拉 shālā, 糖果 tángguǒ | Nghe làm quen: 牙刷 yáshuā (= toothbrush), 牙膏 yágāo (= toothpaste), 小声 xiǎoshēng (= quietly)",
+      "cum": "一把新牙刷 yì bǎ xīn yáshuā / 一些牙膏 yìxiē yágāo / 好好儿刷牙 hǎohāor shuāyá / 小声说话 xiǎoshēng shuōhuà / 我觉得 wǒ juéde / 很饿 hěn è / 吃饱了 chībǎo le / 吃药 chī yào",
+      "cau": "[Cầu nối] Where does it hurt? ↔ 你哪儿疼？(Nǐ nǎr téng?) [giống: hỏi chỗ đau; khác: Where đứng đầu và cần does, 哪儿 đứng trước 疼, không cần trợ động từ] / 你哪儿疼？——我的牙疼。(Nǐ nǎr téng? — Wǒ de yá téng.) / 好好儿刷牙。(Hǎohāor shuāyá.) / 我觉得你牙疼。(Wǒ juéde nǐ yá téng.) / 请小声说话，小宝宝在睡觉。(Qǐng xiǎoshēng shuōhuà, xiǎo bǎobao zài shuìjiào.) / 快去洗手间刷牙！(Kuài qù xǐshǒujiān shuāyá!) / 我耳朵疼。(Wǒ ěrduo téng.) / 你饿吗？吃三明治，别吃糖果。(Nǐ è ma? Chī sānmíngzhì, bié chī tángguǒ.) / 我吃饱了，谢谢。(Wǒ chībǎo le, xièxie.) / 请吃这个药。(Qǐng chī zhège yào.) / [Chuyển ngữ] [nha sĩ nói tiếng Anh, con nói lại cho bà của Xiaomei bằng tiếng Trung, 3 câu] She's got a toothache. Take this medicine. Don't eat sweets! → 她牙疼。吃这个药吧。别吃糖果！(Tā yá téng. Chī zhège yào ba. Bié chī tángguǒ!)",
+      "truyen": "看牙医 — Nhan去看牙医。牙医问：'你哪儿疼？' Nhan说：'这儿！' 牙医好好儿地看了看：'我觉得你吃了很多糖果。' 他给Nhan一把新牙刷和一些牙膏。'每天早上和晚上好好儿刷牙。吃三明治或者沙拉，别吃糖果！' (Nhan qù kàn yáyī. Yáyī wèn: 'Nǐ nǎr téng?' Nhan shuō: 'Zhèr!' Yáyī hǎohāor de kànle kàn: 'Wǒ juéde nǐ chīle hěn duō tángguǒ.' Tā gěi Nhan yì bǎ xīn yáshuā hé yìxiē yágāo. 'Měi tiān zǎoshang hé wǎnshang hǎohāor shuāyá. Chī sānmíngzhì huòzhě shālā, bié chī tángguǒ!')",
+      "video": "Tìm YouTube: \"刷牙歌 儿童 牙刷 牙膏\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: sore, throat, headache, earache, toothache, stomach, stomach-ache, stomachache, toothbrush, toothpaste, hurt, carefully, quietly, think | Ôn: hungry, full, medicine, sweet, chocolate, dentist, doctor, not well",
+     "slide": "[Lời cô] Vào bài: Good morning, class! 同学们好！ · Chuyển ý: Now, let's play doctor. 现在我们玩看医生的游戏。 · Khen: Excellent! 太好了！ · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): sore throat / 嗓子疼, hurt / 疼, medicine / 药. 1) Nhìn tranh chọn bệnh (6 câu): headache / earache / toothache / stomach-ache / sore throat / cough. 2) Trò 'Doctor, doctor': một con diễn tả bằng động tác, bạn hỏi What's the matter? — I've got a … / Where does it hurt? 3) Đọc và chọn lời khuyên đúng (dạng Movers Reading Part 1): I've got a toothache. → Brush your teeth carefully. / I've got a sore throat. → Drink more water. 4) Hỏi – đáp theo tranh (cặp đôi): Where does it hurt? — My ear hurts. I've got an earache. / Are you ill? — Yes, I've got a headache.",
+     "truyen": "Nhan at the Dentist — After the party, Nhan eats lots of sweets quickly. At night she's got a stomach-ache and a toothache. The next day Dad takes her to the dentist. 'Where does it hurt?' asks the dentist. He looks carefully. 'I think you eat too many sweets.' He gives Nhan a toothbrush, some toothpaste and some medicine. 'Brush your teeth carefully. Speak quietly now and rest.' At home Nhan is hungry. She eats a sandwich. 'I'm full! Thank you!'",
+     "baihat": "Brush Your Teeth (giai điệu Here We Go Round the Mulberry Bush) — This is the way we brush our teeth, / brush our teeth, brush our teeth, / Toothbrush, toothpaste, carefully, / no more toothache! / What's the matter? Where does it hurt? / Where does it hurt? Where does it hurt? / I've got a headache and a sore throat, / I'm not well today!"
+    },
+    "zh": {
+     "flash": "Mới: 疼 téng, 嗓子疼 sǎngzi téng, 牙疼 yá téng, 肚子 dùzi, 舒服 shūfu, 饿 è, 饱 bǎo, 药 yào | Ôn: 头疼 tóu téng, 耳朵疼 ěrduo téng, 刷牙 shuāyá, 觉得 juéde, 糖果 tángguǒ, 巧克力 qiǎokèlì, 牙医 yáyī, 医生 yīshēng | Nghe làm quen: 牙刷 yáshuā, 牙膏 yágāo, 小声 xiǎoshēng",
+     "slide": "[Cầu nối Anh – Trung] Cùng tranh cơ thể: rối Leo nói \"toothache, stomach-ache, sore throat\", rối Xiaomei nói \"牙疼, 肚子疼, 嗓子疼\" — con thấy hai tiếng đều ghép bộ phận + đau (tooth + ache ↔ 牙 + 疼). 1) Nghe chỉ vào tranh (cùng 6 tranh bài tiếng Anh): 头疼 / 耳朵疼 / 牙疼 / 肚子疼 / 嗓子疼 / 咳嗽. 2) Trò 看医生: một con diễn tả bằng động tác, bạn hỏi 你怎么了？— 我……疼。/ 你哪儿疼？ 3) Chọn lời khuyên đúng: 我牙疼。→ 好好儿刷牙。/ 我嗓子疼。→ 多喝水。 4) Hỏi – đáp theo tranh (cặp đôi): 你哪儿疼？— 我耳朵疼。/ 你生病了吗？— 生病了，我头疼。 [Chuyển ngữ] Ở phòng khám (cặp đôi): con A (bệnh nhân) nói tiếng Anh 3 câu \"I've got a toothache. My stomach hurts, too. I'm not well.\" → con B (y tá) nói lại cho bác sĩ Xiaomei: 我牙疼。我肚子也疼。我不舒服。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo (bệnh nhân) nói: \"I'm not well today. I ate a lot of sweets and chocolate, and now I've got a toothache. My stomach hurts, too. I'm not hungry, so I can't eat my lunch. Can you give me some medicine, please?\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 他吃了很多糖果和巧克力，现在牙疼，肚子也疼。他不饿。请给他一些药。 (Tā chīle hěn duō tángguǒ hé qiǎokèlì, xiànzài yá téng, dùzi yě téng. Tā bú è. Qǐng gěi tā yìxiē yào.)",
+     "truyen": "Nhan看牙医 — 聚会以后，Nhan很快地吃了很多糖果。晚上，她肚子疼，牙也疼。第二天，爸爸带她去看牙医。牙医问：'你哪儿疼？' 他好好儿地看了看：'我觉得你吃了太多糖果。' 他给Nhan牙刷、牙膏和药。'好好儿刷牙。现在小声说话，好好休息。' 回家以后，Nhan饿了，她吃了一个三明治：'我吃饱了！谢谢！' (Jùhuì yǐhòu, Nhan hěn kuài de chīle hěn duō tángguǒ. Wǎnshang, tā dùzi téng, yá yě téng. Dì-èr tiān, bàba dài tā qù kàn yáyī. Yáyī wèn: 'Nǐ nǎr téng?' Tā hǎohāor de kànle kàn: 'Wǒ juéde nǐ chīle tài duō tángguǒ.' Tā gěi Nhan yáshuā, yágāo hé yào. 'Hǎohāor shuāyá. Xiànzài xiǎoshēng shuōhuà, hǎohǎo xiūxi.' Huí jiā yǐhòu, Nhan è le, tā chīle yí gè sānmíngzhì: 'Wǒ chībǎo le! Xièxie!')",
+     "baihat": "我们来刷牙 (giai điệu Here We Go Round the Mulberry Bush, như bài tiếng Anh) — 我们一起来刷牙，来刷牙，来刷牙，牙刷牙膏好好刷，牙不疼了！你怎么了？哪儿疼？哪儿疼？哪儿疼？我头疼，嗓子疼，今天不舒服！(Wǒmen yìqǐ lái shuāyá, lái shuāyá, lái shuāyá, yáshuā yágāo hǎohǎo shuā, yá bù téng le! Nǐ zěnme le? Nǎr téng? Nǎr téng? Nǎr téng? Wǒ tóu téng, sǎngzi téng, jīntiān bù shūfu!)"
+    }
+   }
+  },
+  {
+   "buoi": 35,
+   "unit": 8,
+   "label_buoi": "Buổi dạy 35. Unit 8 · How's the weather today? – Ngày mưa và bản tin thời tiết",
+   "web": [
+    {
+     "ngay": 69,
+     "label": "Ngày 69. Unit 8 · Ngày mưa ở nhà",
+     "en": {
+      "tu": "Mới: bring, climb, fix, invite, off | Ôn: how long, minute, usually, umbrella, wet, station",
+      "cum": "bring an umbrella / climb a tree / fix the bike / invite friends / take off your wet shoes",
+      "cau": "Bring your umbrella. It's raining. / Don't climb the tree. It's wet! / My bike is broken. Dad can fix it. / I want to invite you to my house. / Take off your wet shoes, please. / How long can you stay? Thirty minutes. / We have to wait for the bus at the station. Bring your umbrella! / Mum is tired. She wants to rest. / Is there something to do? Let's fix the bike!",
+      "truyen": "A Rainy Day — Anna wants to invite Bông to play. But it's raining and windy. 'Bring your umbrella!' says Bông's mum. Bông comes. She takes off her wet shoes. They can't climb the tree today. They help Dad fix Anna's bike inside the house. 'Rainy days are fun, too!' says Anna.",
+      "video": "Tìm YouTube: \"rainy day vocabulary for kids umbrella\""
+     },
+     "zh": {
+      "tu": "Mới: 休息 xiūxi (= rest), 事情 shìqing (= something, thing) | Ôn: 带 dài, 雨伞 yǔsǎn, 请 qǐng, 下雨 xià yǔ, 刮风 guāfēng, 爬 pá, 树 shù, 湿 shī, 脱 tuō, 鞋 xié, 自行车 zìxíngchē, 坏 huài, 分钟 fēnzhōng, 等 děng | Nghe làm quen: 修 xiū (= fix), 车站 chēzhàn (= station)",
+      "cum": "带雨伞 dài yǔsǎn / 爬树 pá shù / 修自行车 xiū zìxíngchē / 请朋友 qǐng péngyou / 脱湿鞋 tuō shī xié / 在家休息 zài jiā xiūxi / 什么事情 shénme shìqing",
+      "cau": "[Cầu nối] Bring your umbrella. It's raining. ↔ 下雨了，带雨伞吧！(Xià yǔ le, dài yǔsǎn ba!) [giống: lời nhắc khi trời mưa; khác: tiếng Anh nói việc cần làm trước, tiếng Trung nói thời tiết trước; It's raining ↔ 下雨了, không có It] / 别爬树，树很湿！(Bié pá shù, shù hěn shī!) / 我的自行车坏了，爸爸会修。(Wǒ de zìxíngchē huài le, bàba huì xiū.) / 我想请你来我家。(Wǒ xiǎng qǐng nǐ lái wǒ jiā.) / 请脱湿鞋。(Qǐng tuō shī xié.) / 你可以在这儿待多长时间？——三十分钟。(Nǐ kěyǐ zài zhèr dāi duō cháng shíjiān? — Sānshí fēnzhōng.) / 我们要在车站等公共汽车，带雨伞吧！(Wǒmen yào zài chēzhàn děng gōnggòng qìchē, dài yǔsǎn ba!) / 妈妈累了，她想休息一下。(Māma lèi le, tā xiǎng xiūxi yíxià.) / 有什么事情要做吗？——我们修自行车吧！(Yǒu shénme shìqing yào zuò ma? — Wǒmen xiū zìxíngchē ba!)",
+      "truyen": "下雨天 — Anna想请Bông来玩。可是下雨了，也刮风。Bông的妈妈说：'带雨伞吧！' Bông来了。她脱了湿鞋。今天她们不能爬树。她们在家里帮爸爸修Anna的自行车。Anna说：'下雨天也很好玩！' (Anna xiǎng qǐng Bông lái wán. Kěshì xià yǔ le, yě guāfēng. Bông de māma shuō: 'Dài yǔsǎn ba!' Bông lái le. Tā tuōle shī xié. Jīntiān tāmen bù néng pá shù. Tāmen zài jiā lǐ bāng bàba xiū Anna de zìxíngchē. Anna shuō: 'Xià yǔ tiān yě hěn hǎowán!')",
+      "video": "Tìm YouTube: \"下雨了 儿童 汉语 雨伞\""
+     }
+    },
+    {
+     "ngay": 70,
+     "label": "Ngày 70. Unit 8 · Ôn không tranh: bản tin thời tiết · Luyện nói Movers phần 4, YCT口试 phần 2 (听后回答)",
+     "en": {
+      "tu": "Ôn: cough, temperature, toothache, sore, spring, summer, winter, autumn, fall, headache, season, more | Ôn nhanh: usually, how long, minute",
+      "cum": "a sore throat / in winter / in summer / What's the matter? / drink more water",
+      "cau": "(Nghe – trả lời, không tranh) How's the weather today? / What season is it now? / Are you well? / What's the matter? I've got a cough. / I don't feel well. – Take some medicine and rest. / Mum is ill. What things can you do to help? – I can bring her some water. / How long do you brush your teeth? Two minutes. / Can you climb a tree in the rain? No, it's wet! / Who can fix the bike? Dad can. / Where does it hurt? My ear hurts. I've got an earache. / [Movers Nói phần 4 (mẫu) – ghi âm câu trả lời trên Trang luyện nói, ≤5 phút] What's your favourite season? Why? / What do you do when you're ill?",
+      "truyen": "The Weather Report — Listen. 'Good morning! It's spring in Hanoi. Today it's warm and sunny. In Beijing, it's windy and cold. Children, bring your sweaters!' / Riddle: It's the hottest season. We go to the beach and eat ice cream. What season is it? Summer!",
+      "video": "Tìm YouTube: \"weather report for kids English\""
+     },
+     "zh": {
+      "tu": "Ôn: 季节 jìjié, 春天 chūntiān, 夏天 xiàtiān, 秋天 qiūtiān, 冬天 dōngtiān, 天气 tiānqì, 晴天 qíngtiān, 刮风 guāfēng, 身体 shēntǐ, 发烧 fāshāo, 疼 téng, 嗓子疼 sǎngzi téng, 耳朵 ěrduo, 刷牙 shuāyá, 分钟 fēnzhōng, 爬 pá, 毛衣 máoyī | Nghe làm quen: 咳嗽 késou, 修 xiū",
+      "cum": "今天天气怎么样 jīntiān tiānqì zěnmeyàng / 在冬天 zài dōngtiān / 在夏天 zài xiàtiān / 你怎么了 nǐ zěnme le / 嗓子疼 sǎngzi téng / 多喝水 duō hē shuǐ",
+      "cau": "[Cầu nối] How's the weather today? ↔ 今天天气怎么样？(Jīntiān tiānqì zěnmeyàng?) [giống: hỏi thời tiết; khác: How đứng đầu câu tiếng Anh, 怎么样 đứng cuối câu tiếng Trung; today ↔ 今天 đứng đầu] / (Nghe – trả lời, không tranh) 今天天气怎么样？(Jīntiān tiānqì zěnmeyàng?) / 现在是什么季节？(Xiànzài shì shénme jìjié?) / 你身体好吗？(Nǐ shēntǐ hǎo ma?) / 你怎么了？——我咳嗽。(Nǐ zěnme le? — Wǒ késou.) / 我不舒服。——吃点儿药，休息一下吧。(Wǒ bù shūfu. — Chī diǎnr yào, xiūxi yíxià ba.) / 妈妈生病了。你能做什么事情帮她？——我可以给她拿水。(Māma shēngbìng le. Nǐ néng zuò shénme shìqing bāng tā? — Wǒ kěyǐ gěi tā ná shuǐ.) / 你刷牙刷几分钟？——两分钟。(Nǐ shuāyá shuā jǐ fēnzhōng? — Liǎng fēnzhōng.) / 下雨的时候，你可以爬树吗？——不可以，树很湿！(Xià yǔ de shíhou, nǐ kěyǐ pá shù ma? — Bù kěyǐ, shù hěn shī!) / 谁会修自行车？——爸爸会。(Shéi huì xiū zìxíngchē? — Bàba huì.) / 你哪儿疼？——我耳朵疼。(Nǐ nǎr téng? — Wǒ ěrduo téng.) / [YCT口试（初级）第二部分 听后回答 (mẫu, cùng câu hỏi Movers phần 4) – ghi âm câu trả lời ngắn, ≤5 phút] 你最喜欢什么季节？为什么？— 夏天，因为我喜欢游泳。(Nǐ zuì xǐhuan shénme jìjié? Wèishénme? — Xiàtiān, yīnwèi wǒ xǐhuan yóuyǒng.) / 你生病的时候做什么？— 我多喝水，在床上睡觉。(Nǐ shēngbìng de shíhou zuò shénme? — Wǒ duō hē shuǐ, zài chuáng shang shuìjiào.) / [Chuyển ngữ] [phát thanh viên nhí: nghe bản tin tiếng Anh, nói lại ý chính bằng tiếng Trung, 3 câu] It's spring in Hanoi. It's sunny today. In Beijing, it's windy and cold. → 河内现在是春天，今天是晴天。北京刮风，很冷。(Hénèi xiànzài shì chūntiān, jīntiān shì qíngtiān. Běijīng guāfēng, hěn lěng.)",
+      "truyen": "天气预报 — 请听：'大家好！河内现在是春天。今天天气很好，是晴天。北京刮风，很冷。小朋友们，带毛衣吧！' / 猜一猜：这个季节最热，我们去海边，吃冰淇淋。是什么季节？夏天！(Qǐng tīng: 'Dàjiā hǎo! Hénèi xiànzài shì chūntiān. Jīntiān tiānqì hěn hǎo, shì qíngtiān. Běijīng guāfēng, hěn lěng. Xiǎopéngyoumen, dài máoyī ba!' / Cāi yi cāi: zhège jìjié zuì rè, wǒmen qù hǎibiān, chī bīngqílín. Shì shénme jìjié? Xiàtiān!)",
+      "video": "Tìm YouTube: \"儿童 天气预报 汉语 晴天 刮风\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: bring, climb, fix, invite, off | Ôn: rest, something, cough, temperature, toothache, sore, spring, summer, autumn, winter, season, headache, umbrella, wet, windy, station",
+     "slide": "[Lời cô] Vào bài: Hello, everyone! 大家好！ · Chuyển ý: Now, you are the weather reporter. 现在你是天气预报员。 · Khen: Great job! 很好！ · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): invite, fix, rest / 休息. 1) Nhìn tranh chọn động từ (5 câu): bring / climb / fix / invite / take off. 2) Làm phát thanh viên thời tiết: con chọn thẻ thành phố + thẻ thời tiết và nói: 'In Hanoi it's sunny. In Beijing it's windy and cold.' 3) Nghe và chọn tranh (dạng Movers Listening Part 3): 'Bông brings her umbrella because it's raining.' / 'Dad fixes the bike.' 4) Nghe và chọn tranh (2 câu): 'Bông is at the bus station. It's raining.' / 'We have to wait for the bus.'",
+     "truyen": "A Rainy Day at Anna's — It's autumn. Anna invites Bông to play. But it's raining and windy. Bông brings her umbrella. She takes off her wet shoes. 'Let's climb the tree!' says Bông. 'No, it's wet. Be careful!' says Anna's dad. Anna's bike is broken, so they help Dad fix it. Then they watch the weather report on TV: 'Tomorrow it's sunny!' 'Hooray! Tomorrow we can climb the tree!'",
+     "baihat": "Rain, Rain (giai điệu Row, Row, Row Your Boat) — Rain, rain, rain today, / Bring your umbrella, please, / Take off your shoes, come inside, / Fix the bike with me! / Wind, wind, wind today, / Don't climb up the tree, / Invite your friends and play inside, / Happy, you and me!"
+    },
+    "zh": {
+     "flash": "Mới: 休息 xiūxi, 事情 shìqing | Ôn: 带 dài, 爬 pá, 请 qǐng, 脱 tuō, 湿 shī, 雨伞 yǔsǎn, 刮风 guāfēng, 季节 jìjié, 春天 chūntiān, 夏天 xiàtiān, 秋天 qiūtiān, 冬天 dōngtiān, 发烧 fāshāo, 牙疼 yá téng, 嗓子疼 sǎngzi téng, 头疼 tóu téng | Nghe làm quen: 修 xiū, 车站 chēzhàn, 咳嗽 késou",
+     "slide": "[Cầu nối Anh – Trung] Cùng bản đồ thời tiết: rối Leo nói \"In Hanoi it's sunny. In Beijing it's windy and cold.\", rối Xiaomei nói \"河内是晴天。北京刮风，很冷。\" — con tìm: tên thành phố đứng đầu câu ở cả hai tiếng; tiếng Anh cần it's, tiếng Trung không có. 1) Nhìn tranh chọn từ (cùng 5 tranh bài tiếng Anh): 带 / 爬 / 修 / 请 / 脱. 2) Làm phát thanh viên: con chọn thẻ thành phố + thẻ thời tiết và nói: 今天河内是晴天。北京刮风，很冷。 3) Nghe chọn tranh: Bông带雨伞，因为下雨了。/ 爸爸修自行车。 4) Nghe chọn tranh: Bông在车站，下雨了。/ 我们要等公共汽车。 [Chuyển ngữ] Phát thanh viên nhí: cô đọc bản tin tiếng Anh 3 câu \"It's autumn. Today it's raining in Hanoi. Bring your umbrella!\" → con nói lại ý chính cho khán giả Trung Quốc: 现在是秋天。今天河内下雨了。带雨伞吧！ [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo đọc bản tin thời tiết: \"Good morning! Here is the weather. It's autumn now. Today it's raining and windy in Hanoi, so bring your umbrella and wear a sweater. In Beijing it's sunny, but it's cold. Tomorrow the rain stops, and you can ride your bike again!\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 现在是秋天。今天河内下雨，也刮风，带雨伞，穿毛衣吧！北京是晴天，但是很冷。 (Xiànzài shì qiūtiān. Jīntiān Hénèi xià yǔ, yě guāfēng, dài yǔsǎn, chuān máoyī ba! Běijīng shì qíngtiān, dànshì hěn lěng.)",
+     "truyen": "Anna家的下雨天 — 秋天，Anna请Bông来家里玩。可是下雨了，也刮风。Bông带了雨伞。她脱了湿鞋。Bông说：'我们去爬树吧！' Anna的爸爸说：'不行，树很湿。小心！' Anna的自行车坏了，所以她们帮爸爸修自行车。然后她们看电视上的天气预报：'明天是晴天！' '太好了！明天我们可以爬树了！' (Qiūtiān, Anna qǐng Bông lái jiā lǐ wán. Kěshì xià yǔ le, yě guāfēng. Bông dàile yǔsǎn. Tā tuōle shī xié. Bông shuō: 'Wǒmen qù pá shù ba!' Anna de bàba shuō: 'Bù xíng, shù hěn shī. Xiǎoxīn!' Anna de zìxíngchē huài le, suǒyǐ tāmen bāng bàba xiū zìxíngchē. Ránhòu tāmen kàn diànshì shang de tiānqì yùbào: 'Míngtiān shì qíngtiān!' 'Tài hǎo le! Míngtiān wǒmen kěyǐ pá shù le!')",
+     "baihat": "下雨了 (giai điệu Row, Row, Row Your Boat, như bài tiếng Anh) — 下下下雨了，带上小雨伞，脱鞋子，快进来，一起修车吧！刮刮刮风了，别去爬大树，请朋友，家里玩，我们真快乐！(Xià xià xià yǔ le, dàishang xiǎo yǔsǎn, tuō xiézi, kuài jìnlái, yìqǐ xiū chē ba! Guā guā guā fēng le, bié qù pá dà shù, qǐng péngyou, jiā lǐ wán, wǒmen zhēn kuàilè!)"
+    }
+   }
+  },
+  {
+   "buoi": 36,
+   "unit": 8,
+   "label_buoi": "Buổi dạy 36. Unit 8 · How's the weather today? – Truyện và Phiên dịch nhí · Luyện Movers Nói phần 2, YCT口试 看图说话",
+   "web": [
+    {
+     "ngay": 71,
+     "label": "Ngày 71. Unit 8 · Truyện: Gấu nhỏ qua bốn mùa",
+     "en": {
+      "tu": "Ôn: spring, summer, autumn, winter, season, cough, temperature, sore, toothache, more, ill | Ôn nhanh: usually, how long",
+      "cum": "in spring / in winter / a sore throat / What's the matter? / Are you well?",
+      "cau": "In winter, Little Bear usually sleeps. / What's the matter, Little Bear? I've got a sore throat. / Are you well now? Yes, I am! / Spring is my favourite season. / Where does it hurt? My ear hurts. I've got an earache. / Little Bear can climb a tree. / In autumn Little Bear eats lots of fruit. He's full! / In spring he's ill, but Rabbit helps him.",
+      "truyen": "Little Bear's Seasons — In autumn, Little Bear eats lots of fruit. In winter, it's cold and he usually sleeps in his house under a big tree. In spring, he wakes up, but he's ill. He's got a cough and a sore throat. 'What's the matter?' asks Rabbit. Rabbit brings him hot water. Then Rabbit has got an earache. 'My ear hurts!' Little Bear climbs a tree and gets some fruit for his friend. In summer, Little Bear is well. 'I love summer! I can swim in the river!'",
+      "video": "Tìm YouTube: \"bear seasons story for kids\""
+     },
+     "zh": {
+      "tu": "Ôn: 春天 chūntiān, 夏天 xiàtiān, 秋天 qiūtiān, 冬天 dōngtiān, 季节 jìjié, 嗓子疼 sǎngzi téng, 耳朵 ěrduo, 疼 téng, 身体 shēntǐ, 爬 pá, 树 shù, 兔子 tùzi, 通常 tōngcháng | Nghe làm quen: 咳嗽 késou",
+      "cum": "在春天 zài chūntiān / 在冬天 zài dōngtiān / 嗓子疼 sǎngzi téng / 你怎么了 nǐ zěnme le / 你身体好吗 nǐ shēntǐ hǎo ma",
+      "cau": "[Cầu nối] In winter, Little Bear usually sleeps. ↔ 冬天，小熊通常在睡觉。(Dōngtiān, xiǎoxióng tōngcháng zài shuìjiào.) [giống: nói mùa rồi nói việc; khác: Little Bear ↔ 小熊, little ↔ 小 đứng trước; usually ↔ 通常 đứng trước động từ, 冬天 đặt ở đầu câu] / 小熊，你怎么了？——我嗓子疼。(Xiǎoxióng, nǐ zěnme le? — Wǒ sǎngzi téng.) / 你身体好了吗？——好了！(Nǐ shēntǐ hǎo le ma? — Hǎo le!) / 春天是我最喜欢的季节。(Chūntiān shì wǒ zuì xǐhuan de jìjié.) / 你哪儿疼？——我耳朵疼。(Nǐ nǎr téng? — Wǒ ěrduo téng.) / 小熊会爬树。(Xiǎoxióng huì pá shù.) / 秋天，小熊吃了很多水果，它吃饱了！(Qiūtiān, xiǎoxióng chīle hěn duō shuǐguǒ, tā chībǎo le!) / 春天，小熊生病了，但是兔子帮它。(Chūntiān, xiǎoxióng shēngbìng le, dànshì tùzi bāng tā.)",
+      "truyen": "小熊的四个季节 — 秋天，小熊吃了很多水果。冬天很冷，它通常在大树下的家里睡觉。春天，小熊醒了，可是它生病了。它咳嗽，嗓子疼。兔子问：'你怎么了？' 兔子给它热水。然后，兔子耳朵疼了：'我的耳朵疼！' 小熊爬树，给朋友拿水果。夏天，小熊的身体好了。'我喜欢夏天！我可以在河里游泳！' (Qiūtiān, xiǎoxióng chīle hěn duō shuǐguǒ. Dōngtiān hěn lěng, tā tōngcháng zài dà shù xià de jiā lǐ shuìjiào. Chūntiān, xiǎoxióng xǐng le, kěshì tā shēngbìng le. Tā késou, sǎngzi téng. Tùzi wèn: 'Nǐ zěnme le?' Tùzi gěi tā rè shuǐ. Ránhòu, tùzi ěrduo téng le: 'Wǒ de ěrduo téng!' Xiǎoxióng pá shù, gěi péngyou ná shuǐguǒ. Xiàtiān, xiǎoxióng de shēntǐ hǎo le. 'Wǒ xǐhuan xiàtiān! Wǒ kěyǐ zài hé lǐ yóuyǒng!')",
+      "video": "Tìm YouTube: \"小熊 四季 儿童故事\""
+     }
+    },
+    {
+     "ngay": 72,
+     "label": "Ngày 72. Unit 8 · Phiên dịch nhí: gọi điện hỏi thăm",
+     "en": {
+      "tu": "Ôn: summer, winter, spring, autumn, cough, temperature, sore, toothache, more, season | Ôn nhanh: minute, how long",
+      "cum": "How's the weather? / Are you well? / I've got a cold. / Get well soon!",
+      "cau": "(Phiên dịch nhí: nghe tiếng Trung, nói tiếng Anh) How's the weather in Beijing today? It's cold and windy. / What season is it now? It's winter. / Are you well? No, I've got a cold. / I've got a sore throat. / Drink more water and rest! / I don't feel well. I take my medicine every day. / I've got lots of things to do, but I have to rest. / Hello? Is that Xiaomei? / Where does it hurt? My throat hurts. I've got an earache, too. / Nhan sends Xiaomei a text: 'Get well soon!' / Can Grandpa fix your laptop?",
+      "truyen": "A Phone Call to Beijing — Nhan calls Xiaomei in Beijing. 'How's the weather today?' 'It's winter here. It's very cold and windy.' 'In Hanoi, it's warm,' says Nhan. 'Are you well?' 'No, I've got a cold and a sore throat.' 'Oh no! Drink more water. Get well soon!' Leo listens and says it in Chinese for Grandma. After the call, Nhan sends Xiaomei a text: 'Get well soon!'",
+      "video": "Tìm YouTube: \"phone call weather health role play kids\""
+     },
+     "zh": {
+      "tu": "Ôn: 冬天 dōngtiān, 季节 jìjié, 天气 tiānqì, 刮风 guāfēng, 感冒 gǎnmào, 嗓子疼 sǎngzi téng, 耳朵 ěrduo, 身体 shēntǐ, 休息 xiūxi, 喂 wéi, 起来 qǐlái | Ôn nhanh: 电脑 diànnǎo | Nghe làm quen: 短信 duǎnxìn, 修 xiū",
+      "cum": "北京天气怎么样 Běijīng tiānqì zěnmeyàng / 你身体好吗 nǐ shēntǐ hǎo ma / 我感冒了 wǒ gǎnmào le / 快好起来吧 kuài hǎo qǐlái ba",
+      "cau": "[Cầu nối] I've got a cold. ↔ 我感冒了。(Wǒ gǎnmào le.) [giống: kể bệnh ngắn; khác: tiếng Trung dùng 感冒 + 了, không có got a] / (Phiên dịch nhí: nghe tiếng Anh, nói tiếng Trung) 今天北京天气怎么样？——很冷，刮风。(Jīntiān Běijīng tiānqì zěnmeyàng? — Hěn lěng, guāfēng.) / 现在是什么季节？——现在是冬天。(Xiànzài shì shénme jìjié? — Xiànzài shì dōngtiān.) / 你身体好吗？——不好，我感冒了。(Nǐ shēntǐ hǎo ma? — Bù hǎo, wǒ gǎnmào le.) / 我嗓子疼。(Wǒ sǎngzi téng.) / 多喝水，好好休息！(Duō hē shuǐ, hǎohǎo xiūxi!) / 我不舒服，我每天吃药。(Wǒ bù shūfu, wǒ měi tiān chī yào.) / 我有很多事情要做，但是我要休息。(Wǒ yǒu hěn duō shìqing yào zuò, dànshì wǒ yào xiūxi.) / 喂，你好！是Xiaomei吗？(Wéi, nǐ hǎo! Shì Xiaomei ma?) / 你哪儿疼？——我嗓子疼，耳朵也疼。(Nǐ nǎr téng? — Wǒ sǎngzi téng, ěrduo yě téng.) / Nhan给Xiaomei发短信：'快好起来吧！'(Nhan gěi Xiaomei fā duǎnxìn: 'Kuài hǎo qǐlái ba!') / 爷爷会修你的电脑吗？(Yéye huì xiū nǐ de diànnǎo ma?) / [Chuyển ngữ] [Phiên dịch nhí: nghe Nhan nói tiếng Anh qua điện thoại, con nói lại bằng tiếng Trung cho Xiaomei, 3 câu] Are you well? I've got a cold. Drink more water and rest! → 你身体好吗？我感冒了。多喝水，好好休息！",
+      "truyen": "给北京打电话 — Nhan给北京的Xiaomei打电话。'今天天气怎么样？' '这儿现在是冬天，很冷，刮风。' Nhan说：'河内很暖和。' '你身体好吗？' '不好，我感冒了，嗓子疼。' '哎呀！多喝水。快好起来吧！' Leo听了，用汉语说给奶奶听。打完电话，Nhan给Xiaomei发短信：'快好起来吧！' (Nhan gěi Běijīng de Xiaomei dǎ diànhuà. 'Jīntiān tiānqì zěnmeyàng?' 'Zhèr xiànzài shì dōngtiān, hěn lěng, guāfēng.' Nhan shuō: 'Hénèi hěn nuǎnhuo.' 'Nǐ shēntǐ hǎo ma?' 'Bù hǎo, wǒ gǎnmào le, sǎngzi téng.' 'Āiyā! Duō hē shuǐ. Kuài hǎo qǐlái ba!' Leo tīng le, yòng Hànyǔ shuō gěi nǎinai tīng. Dǎwán diànhuà, Nhan gěi Xiaomei fā duǎnxìn: 'Kuài hǎo qǐlái ba!')",
+      "video": "Tìm YouTube: \"打电话 问天气 儿童 汉语\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn: cough, temperature, toothache, sore, spring, summer, winter, autumn, fall, season, headache, stomach-ache, toothbrush, bring, fix, more, climb, hurt, earache, text, Are you well?, Hello? (phone)",
+     "slide": "[Lời cô] Vào bài: Good morning, class! 同学们好！ · Chuyển ý: Let's listen to the story. 我们听故事吧。 · Khen: Brilliant! 真厉害！ · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): season / 季节, wake up. 1) Xếp 4 tranh truyện Little Bear's Seasons theo mùa và nói: In autumn … / In winter … / In spring … / In summer … 2) Hội thoại kết hợp 3 chủ đề (thời tiết – mùa – sức khỏe) theo thẻ gợi ý: How's the weather? → What season is it? → Are you well? → I've got … 3) Phiên dịch nhí qua 'điện thoại': một con gọi bằng tiếng Trung, bạn dịch sang tiếng Anh cho cả lớp. 4) Movers Nói phần 2 (mẫu, kể truyện theo 4 tranh 'The Rainy Day', từng em, ~2 phút): Cô: 'Look at picture 1. It's raining. Bông brings her umbrella to Anna's house.' Con: Picture 2: Anna's bike is broken. Dad fixes it. / Picture 3: Bông wants to climb the tree, but it's wet. She falls. / Picture 4: Her leg hurts. Anna's mum sends a text to Bông's mum. 5) Đóng vai bác sĩ (cặp đôi): A: I don't feel well. – B: Take this medicine and rest. / A: Are you hungry? – B: No, I'm full, thank you. 6) Gọi điện hỏi thăm (cặp đôi): Hello? Are you well? — I've got a cold. — Drink more water and rest!",
+     "truyen": "Little Bear's Seasons — In autumn, Little Bear eats lots of fruit. In winter, it's cold and it snows. Little Bear usually sleeps in his house under a big tree. In spring, he wakes up. He's hungry, but he's ill. He's got a cough and a sore throat. 'What's the matter?' asks Rabbit. Rabbit brings him hot water. 'Drink more water and rest.' In summer, Little Bear is well. He climbs the tree and swims in the river. 'Summer is my favourite season!'",
+     "baihat": "Little Bear's Song (giai điệu Mary Had a Little Lamb) — Little Bear sleeps in winter, / in winter, in winter, / Little Bear sleeps in winter, / when it's cold and snows. / Little Bear has got a cough, / a sore throat, a sore throat, / Drink more water, Little Bear, / and in summer you'll be well!"
+    },
+    "zh": {
+     "flash": "Ôn: 季节 jìjié, 春天 chūntiān, 夏天 xiàtiān, 秋天 qiūtiān, 冬天 dōngtiān, 发烧 fāshāo, 头疼 tóu téng, 耳朵疼 ěrduo téng, 牙疼 yá téng, 肚子疼 dùzi téng, 嗓子疼 sǎngzi téng, 疼 téng, 带 dài, 爬 pá, 身体 shēntǐ, 喂 wéi | Nghe làm quen: 咳嗽 késou, 牙刷 yáshuā, 修 xiū, 短信 duǎnxìn",
+     "slide": "[Cầu nối Anh – Trung] Cùng 4 tranh truyện Gấu nhỏ: rối Leo kể \"In winter, Little Bear usually sleeps.\", rối Xiaomei kể \"冬天，小熊通常在睡觉。\" — con tìm: mùa đứng đầu câu; Little Bear ↔ 小熊 (little ↔ 小). 1) Xếp 4 tranh truyện 小熊的四个季节 theo mùa và nói: 秋天…… / 冬天…… / 春天…… / 夏天…… 2) Hội thoại 3 chủ đề (thời tiết – mùa – sức khỏe) theo thẻ gợi ý: 今天天气怎么样？→ 现在是什么季节？→ 你身体好吗？→ 我感冒了。 3) [Chuyển ngữ] Phiên dịch nhí qua 'điện thoại' (cô nói tiếng Anh, con nói lại cho rối Xiaomei): How's the weather today? → 今天天气怎么样？/ I've got a cold. → 我感冒了。/ Drink more water! → 多喝水！ [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo gọi điện kể: \"Hello, Xiaomei! It's winter here and it's very cold. I've got a cold and a sore throat, and my ear hurts, too. The doctor says I have to rest at home. Don't worry, I drink a lot of water!\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: Leo说现在是冬天，很冷。他感冒了，嗓子疼，耳朵也疼。医生说他要在家休息。 (Leo shuō xiànzài shì dōngtiān, hěn lěng. Tā gǎnmào le, sǎngzi téng, ěrduo yě téng. Yīshēng shuō tā yào zài jiā xiūxi.) 4) YCT口试（初级）第三部分 看图说话 (mẫu, cùng 4 tranh 'The Rainy Day' của Movers phần 2, mỗi tranh 2–3 câu): Tranh 1: 下雨了。Bông带雨伞去Anna家。/ Tranh 2: Anna的自行车坏了，爸爸修自行车。/ Tranh 3: Bông想爬树，可是树很湿，她摔倒了。/ Tranh 4: 她的腿疼。Anna的妈妈给Bông的妈妈发短信。 5) Gọi điện hỏi thăm: 喂，你好！你身体好吗？— 我感冒了。— 多喝水，好好休息！(Wéi, nǐ hǎo! Nǐ shēntǐ hǎo ma? — Wǒ gǎnmào le. — Duō hē shuǐ, hǎohǎo xiūxi!) 6) Đóng vai bác sĩ (cùng cặp thẻ bài tiếng Anh): A: 我不舒服。—— B: 吃这个药，好好休息。/ A: 你饿吗？—— B: 不饿，我吃饱了，谢谢。(A: Wǒ bù shūfu. — B: Chī zhège yào, hǎohǎo xiūxi. / A: Nǐ è ma? — B: Bú è, wǒ chībǎo le, xièxie.)",
+     "truyen": "小熊的四个季节 — 秋天，小熊吃了很多水果。冬天很冷，下雪了。小熊通常在大树下的家里睡觉。春天，它醒了。它很饿，可是它生病了。它咳嗽，嗓子疼。兔子问：'你怎么了？' 兔子给它热水：'多喝水，好好休息。' 夏天，小熊的身体好了。它爬树，在河里游泳。'夏天是我最喜欢的季节！' (Qiūtiān, xiǎoxióng chīle hěn duō shuǐguǒ. Dōngtiān hěn lěng, xiàxuě le. Xiǎoxióng tōngcháng zài dà shù xià de jiā lǐ shuìjiào. Chūntiān, tā xǐng le. Tā hěn è, kěshì tā shēngbìng le. Tā késou, sǎngzi téng. Tùzi wèn: 'Nǐ zěnme le?' Tùzi gěi tā rè shuǐ: 'Duō hē shuǐ, hǎohǎo xiūxi.' Xiàtiān, xiǎoxióng de shēntǐ hǎo le. Tā pá shù, zài hé lǐ yóuyǒng. 'Xiàtiān shì wǒ zuì xǐhuan de jìjié!')",
+     "baihat": "小熊之歌 (giai điệu Mary Had a Little Lamb, như bài tiếng Anh) — 小熊冬天在睡觉，在睡觉，在睡觉，小熊冬天在睡觉，很冷下雪了。小熊咳嗽嗓子疼，嗓子疼，嗓子疼，多喝水呀小熊熊，夏天身体好！(Xiǎoxióng dōngtiān zài shuìjiào, zài shuìjiào, zài shuìjiào, xiǎoxióng dōngtiān zài shuìjiào, hěn lěng xiàxuě le. Xiǎoxióng késou sǎngzi téng, sǎngzi téng, sǎngzi téng, duō hē shuǐ ya xiǎoxióngxiong, xiàtiān shēntǐ hǎo!)"
+    }
+   }
+  },
+  {
+   "buoi": 37,
+   "unit": "",
+   "label_buoi": "Buổi dạy 37. Ôn và kiểm tra chặng 2 · Ôn tổng hợp Unit 1, 2, 5, 6 · Luyện nói Movers theo cặp, mini YCT口试（初级）",
+   "web": [
+    {
+     "ngay": 73,
+     "label": "Ngày 73. Ôn chặng 2 · Quét Unit 1 và Unit 5 (bạn mới, con vật)",
+     "en": {
+      "tu": "Ôn: country, flag, language, could, look for (U1) | kangaroo, panda, slow, than, fast, heavy, dangerous, clever, afraid, worried (U5) | Ôn từ thi: climb, penguin, lake",
+      "cum": "look for my flag / speak two languages / bigger than / faster than / be afraid of",
+      "cau": "Where are you from? I'm from Vietnam. / I can speak two languages. / I couldn't swim last year, but I can now. / The kangaroo is faster than the panda. / The elephant is heavier than the lion. / Are you afraid of wolves? / Can you climb a tree? Yes, I can. / Penguins can swim in the lake, but they can't fly.",
+      "truyen": "Leo's New Friend — Leo has got a new friend, Xiaomei. She's from China. She can speak two languages. They go to the zoo. Xiaomei is looking for the pandas. She is worried. 'Pandas are slow, but kangaroos are fast!' says Leo. 'The wolf is dangerous. Be careful!' 'I'm not afraid,' says Xiaomei. 'I'm brave!'",
+      "video": "Tìm YouTube: \"Movers vocabulary review animals countries\""
+     },
+     "zh": {
+      "tu": "Ôn: 国家 guójiā, 找 zhǎo, 去年 qùnián (U1) | 袋鼠 dàishǔ, 熊猫 xióngmāo, 慢 màn, 快 kuài, 比 bǐ, 危险 wēixiǎn, 害怕 hàipà, 着急 zháojí, 狼 láng (U5) | Ôn từ thi: 爬 pá, 湖 hú | Nghe làm quen: 企鹅 qǐ'é, 重 zhòng, 语言 yǔyán (= language)",
+      "cum": "你是哪国人 nǐ shì nǎ guó rén / 会说两种语言 huì shuō liǎng zhǒng yǔyán / 比熊猫快 bǐ xióngmāo kuài / 比狮子重 bǐ shīzi zhòng / 害怕狼 hàipà láng",
+      "cau": "[Cầu nối] Where are you from? I'm from Vietnam. ↔ 你是哪国人？——我是越南人。(Nǐ shì nǎ guó rén? — Wǒ shì Yuènán rén.) [giống: hỏi – đáp quê; khác: tiếng Anh hỏi from where, tiếng Trung hỏi 哪国人 (người nước nào)] / 我会说两种语言。(Wǒ huì shuō liǎng zhǒng yǔyán.) / 去年我不会游泳，现在会了。(Qùnián wǒ bú huì yóuyǒng, xiànzài huì le.) / 袋鼠比熊猫快。(Dàishǔ bǐ xióngmāo kuài.) / 大象比狮子重。(Dàxiàng bǐ shīzi zhòng.) / 你害怕狼吗？(Nǐ hàipà láng ma?) / 你会爬树吗？——会。(Nǐ huì pá shù ma? — Huì.) / 企鹅会在湖里游泳，可是不会飞。(Qǐ'é huì zài hú lǐ yóuyǒng, kěshì bú huì fēi.)",
+      "truyen": "新朋友 — Leo有一个新朋友Xiaomei，她是中国人。她会说两种语言。他们去动物园。Xiaomei在找熊猫，她很着急。 Leo说：'熊猫很慢，可是袋鼠很快！' '狼很危险，小心！' Xiaomei说：'我不害怕，我很勇敢！' (Leo yǒu yí gè xīn péngyou Xiaomei, tā shì Zhōngguó rén. Tā huì shuō liǎng zhǒng yǔyán. Tāmen qù dòngwùyuán. Xiaomei zài zhǎo xióngmāo, tā hěn zháojí. Leo shuō: 'Xióngmāo hěn màn, kěshì dàishǔ hěn kuài!' 'Láng hěn wēixiǎn, xiǎoxīn!' Xiaomei shuō: 'Wǒ bú hàipà, wǒ hěn yǒnggǎn!')",
+      "video": "Tìm YouTube: \"YCT3 词汇 复习 动物 国家 比较\""
+     }
+    },
+    {
+     "ngay": 74,
+     "label": "Ngày 74. Ôn chặng 2 · Quét Unit 2 và Unit 6 (một ngày của em, thể thao)",
+     "en": {
+      "tu": "Ôn: always, shower, sometimes, half, meal, minute, past, quarter, usually, lift, how often, how long (U2) | ice, practise, skate, team, volleyball, win, film, comic book, ice skating, roller skating (U6) | Ôn từ thi: CD, movie, model, sail, lake, website",
+      "cum": "half past seven / quarter past four / how often / practise every day / win the match / go ice skating",
+      "cau": "What time is it? It's half past seven. / How often do you play volleyball? Twice a week. / I usually have a shower after the match. / How long do you practise? Forty minutes. / Can you skate? Yes, I can. / Our team always wins! / I listen to a CD and watch a movie at the weekend. / Leo sails his model boat on the lake. / I look at a website about volleyball. / [Movers Nói phần 4 (mẫu) – luyện theo cặp với người nhà rồi ghi âm, ≤5 phút] What do you do after school? / How often do you play sport?",
+      "truyen": "Anna's Busy Day — Anna usually gets up at quarter past six. She has a shower and eats her meal. After school, she practises volleyball for forty minutes. Sometimes she goes roller skating with Leo. In the evening, she reads a comic book or watches a film. 'How often do you skate?' 'Every Saturday!'",
+      "video": "Tìm YouTube: \"telling the time and sports review for kids\""
+     },
+     "zh": {
+      "tu": "Ôn: 半 bàn, 每 měi, 小时 xiǎoshí, 分钟 fēnzhōng, 洗澡 xǐzǎo, 次 cì, 有时候 yǒu shíhou, 通常 tōngcháng (U2) | 滑冰 huábīng, 练习 liànxí, 队 duì, 赢 yíng, 排球 páiqiú, 电影 diànyǐng, 漫画 mànhuà, 上网 shàngwǎng (U6) | Ôn từ thi: CD, 玩具船 wánjù chuán, 湖 hú | Nghe làm quen: 滑旱冰 huá hànbīng, 网站 wǎngzhàn",
+      "cum": "七点半 qī diǎn bàn / 四点十五分 sì diǎn shíwǔ fēn / 一个星期两次 yí gè xīngqī liǎng cì / 每天练习 měi tiān liànxí / 赢比赛 yíng bǐsài / 去滑冰 qù huábīng",
+      "cau": "[Cầu nối] What time is it? It's half past seven. ↔ 现在几点？——现在七点半。(Xiànzài jǐ diǎn? — Xiànzài qī diǎn bàn.) [giống: con số giống nhau; khác: half past seven ↔ 七点半, tiếng Trung nói giờ trước, 半 sau] / 你一个星期打几次排球？——两次。(Nǐ yí gè xīngqī dǎ jǐ cì páiqiú? — Liǎng cì.) / 比赛以后，我通常洗澡。(Bǐsài yǐhòu, wǒ tōngcháng xǐzǎo.) / 你练习多长时间？——四十分钟。(Nǐ liànxí duō cháng shíjiān? — Sìshí fēnzhōng.) / 你会滑冰吗？——会。(Nǐ huì huábīng ma? — Huì.) / 我们的队每次都赢！(Wǒmen de duì měi cì dōu yíng!) / 周末我听CD，看电影。(Zhōumò wǒ tīng CD, kàn diànyǐng.) / Leo在湖上玩玩具船。(Leo zài hú shang wán wánjù chuán.) / 我看一个排球网站。(Wǒ kàn yí gè páiqiú wǎngzhàn.) / [YCT口试（初级）第二部分 听后回答 (mẫu, cùng câu hỏi Movers phần 4) – luyện với người nhà rồi ghi âm, ≤5 phút] 放学以后你做什么？— 我打排球。(Fàngxué yǐhòu nǐ zuò shénme? — Wǒ dǎ páiqiú.) / 你一个星期做几次运动？— 三次。(Nǐ yí gè xīngqī zuò jǐ cì yùndòng? — Sān cì.) / [Chuyển ngữ] [nghe Anna kể tiếng Anh, con kể lại cho Xiaomei bằng tiếng Trung, 3 câu] I get up at half past six. I play volleyball for one hour. Then I have a shower. → 我六点半起床。我打排球，打一个小时。然后我洗澡。(Wǒ liù diǎn bàn qǐchuáng. Wǒ dǎ páiqiú, dǎ yí gè xiǎoshí. Ránhòu wǒ xǐzǎo.)",
+      "truyen": "Anna忙的一天 — Anna通常六点十五分起床。她洗澡，吃饭。放学以后，她练习排球，练习四十分钟。有时候她和Leo去滑旱冰。晚上，她看漫画或者看电影。'你多长时间滑一次冰？' '每个星期六！' (Anna tōngcháng liù diǎn shíwǔ fēn qǐchuáng. Tā xǐzǎo, chīfàn. Fàngxué yǐhòu, tā liànxí páiqiú, liànxí sìshí fēnzhōng. Yǒu shíhou tā hé Leo qù huá hànbīng. Wǎnshang, tā kàn mànhuà huòzhě kàn diànyǐng. 'Nǐ duō cháng shíjiān huá yí cì bīng?' 'Měi gè xīngqīliù!')",
+      "video": "Tìm YouTube: \"几点了 儿童 汉语 运动 复习\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn: country, flag, language, could, look for, always, sometimes, usually, half, quarter, minute, how often, how long, kangaroo, panda, fast, slow, heavy, than, ice, skate, practise, team, volleyball, win, penguin, lake, CD, movie, model, sail",
+     "slide": "[Lời cô] Vào bài: Hello, everyone! 大家好！ · Chuyển ý: Now, spin the wheel! 现在转一转！ · Khen: Well done! 真棒！ · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): language, quarter past. 1) Trò 'Bánh xe ôn tập': quay bánh xe chủ đề (Countries / Time / Animals / Sports), con trả lời câu hỏi cô rút: Where are you from? / What time is it? / Which is faster, a kangaroo or a panda? / What sport do you like? 2) Dạng Movers Listening Part 2 (5 câu): nghe hội thoại và điền giờ, tên môn thể thao vào phiếu (quarter past four / volleyball). 3) Dạng Movers Reading Part 5 rút gọn: đọc đoạn 'Anna's Busy Day' và điền 1–3 từ vào 5 câu. 4) Luyện nói Movers theo cặp (mẫu, 4 trạm × 4 phút, cô đi vòng nghe và sửa, cuối giờ cô làm giám khảo cho 2–3 cặp): Trạm 1 – phần 1: con A cầm tranh A, con B cầm tranh B (sở thú), lần lượt nói điểm khác: In my picture, the penguin is in the lake. — In my picture, it's next to the lake. / Trạm 2 – phần 2: hai con kể nối 4 tranh 'Leo's Model Boat': Leo and Grandpa catch the bus to the lake. / Leo sails his model boat. / The boat goes far away and Leo is sad. / Grandpa gets the boat and Leo is happy. / Trạm 3 – phần 3: chọn tranh khác loại và nói because: CD / DVD / movie / football → 'The football is different because we play with it.' / Trạm 4 – phần 4: hỏi – đáp về bản thân: What's your favourite sport? / How often do you go to the zoo? / What's your favourite animal?",
+     "truyen": "The Sports Day at the Zoo — Leo and Xiaomei go to the zoo on Sports Day. Xiaomei is from China and can speak two languages. At quarter past nine, there's an animal race. The kangaroo is faster than the panda. The elephant is heavier than the lion. Then the children play volleyball. Leo's team practises every day, so they win! 'How often do you come here?' asks Xiaomei. 'Sometimes on Saturdays!' says Leo.",
+     "baihat": "Review Song (giai điệu The Farmer in the Dell) — I'm from Vietnam, I'm from Vietnam, / I can speak two languages, I'm from Vietnam! / The kangaroo is fast, the panda is slow, / Faster, slower, here we go! / I practise every day, I practise every day, / My team can win the volleyball, hip hip hooray!"
+    },
+    "zh": {
+     "flash": "Ôn: 国家 guójiā, 找 zhǎo, 半 bàn, 分钟 fēnzhōng, 次 cì, 有时候 yǒu shíhou, 通常 tōngcháng, 袋鼠 dàishǔ, 熊猫 xióngmāo, 快 kuài, 慢 màn, 比 bǐ, 滑冰 huábīng, 练习 liànxí, 队 duì, 赢 yíng, 排球 páiqiú, 电影 diànyǐng, 玩具船 wánjù chuán, 湖 hú | Nghe làm quen: 企鹅 qǐ'é, 重 zhòng",
+     "slide": "[Cầu nối Anh – Trung] Bánh xe ôn tập hai tiếng: mỗi ô 1 tranh, rối Leo nói câu tiếng Anh, rối Xiaomei nói câu tiếng Trung cùng nghĩa (The kangaroo is faster than the panda. ↔ 袋鼠比熊猫快。/ half past seven ↔ 七点半 / play volleyball ↔ 打排球) — con chỉ ra 1 điểm giống, 1 điểm khác ở mỗi cặp. 1) Trò 'Bánh xe ôn tập' (cùng 4 chủ đề: quốc gia / giờ / con vật / thể thao): 你是哪国人？/ 现在几点？/ 袋鼠快还是熊猫快？/ 你喜欢什么运动？ 2) Nghe hội thoại, điền giờ và môn thể thao vào phiếu: 比赛四点十五分开始。/ 我喜欢打排球。 3) Đọc đoạn 'Anna忙的一天' và điền từ vào 5 câu: Anna___六点十五分起床。(通常) / 她练习排球，练习四十___。(分钟) 4) Mini YCT口试（初级）thi thử (~10 phút, cô là giám khảo, từng em, có ghi âm; cùng chủ đề các trạm Movers): 第一部分 听后重复 (5 câu): 熊猫比袋鼠慢。(Xióngmāo bǐ dàishǔ màn.) / 我喜欢打排球。(Wǒ xǐhuan dǎ páiqiú.) / 企鹅在湖里游泳。(Qǐ'é zài hú lǐ yóuyǒng.) / 现在七点半。(Xiànzài qī diǎn bàn.) / 我们的队赢了。(Wǒmen de duì yíng le.) — 第二部分 听后回答 (3 câu): 你最喜欢什么运动？(Nǐ zuì xǐhuan shénme yùndòng?) / 你一个月去几次动物园？(Nǐ yí gè yuè qù jǐ cì dòngwùyuán?) / 你最喜欢什么动物？(Nǐ zuì xǐhuan shénme dòngwù?) — 第三部分 看图说话 (2 tranh, mỗi tranh 2–3 câu): Tranh sở thú: 企鹅在湖里。袋鼠很快。(Qǐ'é zài hú lǐ. Dàishǔ hěn kuài.) / Tranh 'Leo的玩具船': Leo和爷爷坐公共汽车去湖边。Leo玩玩具船。(Leo hé yéye zuò gōnggòng qìchē qù hú biān. Leo wán wánjù chuán.) [Chuyển ngữ] Trạm phiên dịch: con nghe bạn giới thiệu bằng tiếng Anh 3 câu (I'm from Vietnam. I can speak Chinese and English. I like volleyball.) → nói lại cho rối Xiaomei: 他是越南人。他会说汉语和英语。他喜欢打排球。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo đọc lời bạn Bông giới thiệu: \"Hi, I'm Bông. I'm from Vietnam, and I can speak English and Chinese. I usually get up at half past six. Every Saturday I play volleyball with my team. My favourite animal is the kangaroo, because it's faster than the panda!\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 她是越南人，会说英语和汉语。她通常六点半起床。她最喜欢袋鼠，因为袋鼠比熊猫快。 (Tā shì Yuènán rén, huì shuō Yīngyǔ hé Hànyǔ. Tā tōngcháng liù diǎn bàn qǐchuáng. Tā zuì xǐhuan dàishǔ, yīnwèi dàishǔ bǐ xióngmāo kuài.)",
+     "truyen": "动物园运动会 — 运动会那天，Leo和Xiaomei去动物园。Xiaomei是中国人，她会说两种语言。九点十五分，动物比赛跑步。袋鼠比熊猫快。大象比狮子重。然后，小朋友们打排球。Leo的队每天练习，所以他们赢了！Xiaomei问：'你多长时间来一次？' Leo说：'有时候星期六来！' (Yùndònghuì nà tiān, Leo hé Xiaomei qù dòngwùyuán. Xiaomei shì Zhōngguó rén, tā huì shuō liǎng zhǒng yǔyán. Jiǔ diǎn shíwǔ fēn, dòngwù bǐsài pǎobù. Dàishǔ bǐ xióngmāo kuài. Dàxiàng bǐ shīzi zhòng. Ránhòu, xiǎopéngyoumen dǎ páiqiú. Leo de duì měi tiān liànxí, suǒyǐ tāmen yíng le! Xiaomei wèn: 'Nǐ duō cháng shíjiān lái yí cì?' Leo shuō: 'Yǒu shíhou xīngqīliù lái!')",
+     "baihat": "复习歌 (giai điệu The Farmer in the Dell, như bài tiếng Anh) — 我是越南人，我是越南人，我会说两种语言，我是越南人！袋鼠快，熊猫慢，快快慢慢，一起来！我每天练习，我每天练习，我们的队打排球，我们赢了，好！(Wǒ shì Yuènán rén, wǒ shì Yuènán rén, wǒ huì shuō liǎng zhǒng yǔyán, wǒ shì Yuènán rén! Dàishǔ kuài, xióngmāo màn, kuàikuài mànmàn, yìqǐ lái! Wǒ měi tiān liànxí, wǒ měi tiān liànxí, wǒmen de duì dǎ páiqiú, wǒmen yíng le, hǎo!)"
+    }
+   }
+  },
+  {
+   "buoi": 38,
+   "unit": "",
+   "label_buoi": "Buổi dạy 38. Ôn và kiểm tra chặng 2 · Kiểm tra chặng 2 (Unit 5–8, quét Unit 1–8)",
+   "web": [
+    {
+     "ngay": 75,
+     "label": "Ngày 75. Ôn chặng 2 · Quét Unit 3 và Unit 7 (nghề nghiệp, món ăn)",
+     "en": {
+      "tu": "Ôn: cry, fall, grow, leaf/leaves, engineer, future, pilot, all right, be called, police officer (U3) | sandwich, sweet, excuse me, biscuit, cookie, salad, pasta, dessert, spicy, sour, because (U7) | Ôn từ thi: shopping centre, building, elevator",
+      "cum": "when I grow up / in the future / a police officer / Excuse me! / something sweet / because it's …",
+      "cau": "What do you want to be? I want to be a pilot. / I want to be an engineer when I grow up. / Are you all right? / Excuse me, can I have a sandwich, please? / Do you like biscuits or cake? / I like pasta because it isn't spicy. / The shopping centre is in a big building. There are lots of shops in it. We take the elevator to the café.",
+      "truyen": "The Future Chef — Nhan wants to be a chef in the future. 'When I grow up, I want to cook for a pilot and a police officer!' She makes a sandwich, a salad and some sweet cookies. Leo eats a spicy chicken leg and cries, 'It's spicy!' 'Are you all right?' asks Nhan. 'Yes! I like your food because it's yummy!'",
+      "video": "Tìm YouTube: \"jobs and food vocabulary review for kids Movers\""
+     },
+     "zh": {
+      "tu": "Ôn: 警察 jǐngchá, 哭 kū (U3) | 三明治 sānmíngzhì, 饼干 bǐnggān, 菜 cài, 还是 háishi, 辣 là, 甜 tián, 因为 yīnwèi, 请问 qǐngwèn, 沙拉 shālā, 意大利面 Yìdàlì miàn (U7) | Ôn từ thi: 商场 shāngchǎng, 商店 shāngdiàn, 楼 lóu, 电梯 diàntī | Nghe làm quen: 飞行员 fēixíngyuán (= pilot), 工程师 gōngchéngshī (= engineer)",
+      "cum": "长大以后 zhǎngdà yǐhòu / 想当飞行员 xiǎng dāng fēixíngyuán / 想当警察 xiǎng dāng jǐngchá / 请问 qǐngwèn / 甜的 tián de / 因为不辣 yīnwèi bú là",
+      "cau": "[Cầu nối] I want to be a pilot. ↔ 我想当飞行员。(Wǒ xiǎng dāng fēixíngyuán.) [giống: want to be ↔ 想当 đứng trước nghề; khác: when I grow up ↔ 长大以后, tiếng Trung hay đặt ở đầu câu] / 你长大以后想当什么？——我想当飞行员。(Nǐ zhǎngdà yǐhòu xiǎng dāng shénme? — Wǒ xiǎng dāng fēixíngyuán.) / 我长大以后想当工程师。(Wǒ zhǎngdà yǐhòu xiǎng dāng gōngchéngshī.) / 你没事吧？(Nǐ méi shì ba?) / 请问，我可以吃一个三明治吗？(Qǐngwèn, wǒ kěyǐ chī yí gè sānmíngzhì ma?) / 你喜欢饼干还是蛋糕？(Nǐ xǐhuan bǐnggān háishi dàngāo?) / 我喜欢意大利面，因为它不辣。(Wǒ xǐhuan Yìdàlì miàn, yīnwèi tā bú là.) / 商场在一个大楼里，里面有很多商店。我们坐电梯去咖啡馆。(Shāngchǎng zài yí gè dà lóu lǐ, lǐmiàn yǒu hěn duō shāngdiàn. Wǒmen zuò diàntī qù kāfēiguǎn.)",
+      "truyen": "未来的小厨师 — Nhan长大以后想当厨师：'长大以后，我想给飞行员和警察做饭！' 她做了三明治、沙拉和甜饼干。Leo吃了一个很辣的鸡腿，他大声说：'很辣！' Nhan问：'你没事吧？' Leo说：'没事！我喜欢你做的菜，因为很好吃！' (Nhan zhǎngdà yǐhòu xiǎng dāng chúshī: 'Zhǎngdà yǐhòu, wǒ xiǎng gěi fēixíngyuán hé jǐngchá zuò fàn!' Tā zuòle sānmíngzhì, shālā hé tián bǐnggān. Leo chīle yí gè hěn là de jītuǐ, tā dàshēng shuō: 'Hěn là!' Nhan wèn: 'Nǐ méi shì ba?' Leo shuō: 'Méi shì! Wǒ xǐhuan nǐ zuò de cài, yīnwèi hěn hǎochī!')",
+      "video": "Tìm YouTube: \"我长大以后想当 儿童 汉语 食物 复习\""
+     }
+    },
+    {
+     "ngay": 76,
+     "label": "Ngày 76. Ôn chặng 2 · Quét Unit 4 và Unit 8 (trang phục, thời tiết – sức khỏe) · Chuẩn bị mini YCT口试",
+     "en": {
+      "tu": "Ôn: dream, straight, sweater, get dressed, put on, take off, backpack, rucksack (U4) | cough, temperature, toothache, sore, spring, summer, winter, autumn, fall (U8) | Ôn từ thi: ill, have to, hurt, earache, fix, tractor, station",
+      "cum": "put on your sweater / take off your wet shoes / a sore throat / in winter / in summer",
+      "cau": "What's your favourite colour? I like blue best. / It's winter. Put on your sweater! / It's summer. Take off your sweater. / What's the matter? I've got a cough and a temperature. / I've got a toothache. / Get dressed quickly, it's late! / Bông is ill. She has to stay at home. / Little Bear eats lots of fruit. Now he's full. / Bông is ill, so she can't do things outside. She has to rest. / My ear hurts. I've got an earache. / Grandpa fixes his tractor on the farm. / We wait at the station. It's cold, so put on your sweater!",
+      "truyen": "Bông's Bad Dream — Bông has a bad dream: it's winter, but she isn't wearing her sweater! She wakes up. It's spring and it's sunny. She gets dressed and puts on her blue backpack. At school, Leo has got a cough and a sore throat. 'Have you got a temperature?' asks the teacher. 'Go home and rest!' In the USA, autumn is called fall.",
+      "video": "Tìm YouTube: \"clothes weather health review for kids Movers\""
+     },
+     "zh": {
+      "tu": "Ôn: 衣服 yīfu, 鞋 xié, 最 zuì, 外面 wàimiàn, 毛衣 máoyī, 脱 tuō (U4) | 季节 jìjié, 春天 chūntiān, 夏天 xiàtiān, 秋天 qiūtiān, 冬天 dōngtiān, 发烧 fāshāo, 生病 shēngbìng, 疼 téng, 休息 xiūxi (U8) | Ôn từ thi: 耳朵疼 ěrduo téng, 修 xiū, 拖拉机 tuōlājī, 车站 chēzhàn | Nghe làm quen: 咳嗽 késou, 背包 bēibāo (= backpack, rucksack)",
+      "cum": "穿毛衣 chuān máoyī / 脱毛衣 tuō máoyī / 嗓子疼 sǎngzi téng / 在冬天 zài dōngtiān / 在夏天 zài xiàtiān",
+      "cau": "[Cầu nối] It's winter. Put on your sweater! ↔ 冬天很冷，穿上毛衣！(Dōngtiān hěn lěng, chuānshang máoyī!) [giống: lời khuyên theo mùa; khác: put on ↔ 穿上, take off ↔ 脱; It's winter ↔ 冬天, không có It's] / 你最喜欢什么颜色？——我最喜欢蓝色。(Nǐ zuì xǐhuan shénme yánsè? — Wǒ zuì xǐhuan lánsè.) / 冬天很冷，穿上毛衣！(Dōngtiān hěn lěng, chuānshang máoyī!) / 夏天很热，脱毛衣吧。(Xiàtiān hěn rè, tuō máoyī ba.) / 你怎么了？——我咳嗽，也发烧了。(Nǐ zěnme le? — Wǒ késou, yě fāshāo le.) / 我牙疼。(Wǒ yá téng.) / 快穿衣服，太晚了！(Kuài chuān yīfu, tài wǎn le!) / Bông生病了，她要在家休息。(Bông shēngbìng le, tā yào zài jiā xiūxi.) / 小熊吃了很多水果，现在它吃饱了。(Xiǎoxióng chīle hěn duō shuǐguǒ, xiànzài tā chībǎo le.) / Bông生病了，不能在外面做事情，她要休息。(Bông shēngbìng le, bù néng zài wàimiàn zuò shìqing, tā yào xiūxi.) / 我耳朵疼。(Wǒ ěrduo téng.) / 爷爷在农场修拖拉机。(Yéye zài nóngchǎng xiū tuōlājī.) / 我们在车站等车，很冷，穿上毛衣！(Wǒmen zài chēzhàn děng chē, hěn lěng, chuānshang máoyī!) / [Chuẩn bị mini YCT口试（初级）(mẫu) – Trang luyện nói, ≤10 phút] 听后重复: 冬天很冷。(Dōngtiān hěn lěng.) / 我感冒了。(Wǒ gǎnmào le.) / 快穿衣服！(Kuài chuān yīfu!) — 听后回答: 你怎么了？— 我嗓子疼。(Nǐ zěnme le? — Wǒ sǎngzi téng.) — 看图说话: 冬天，外面很冷。Bông穿上毛衣。(Dōngtiān, wàimiàn hěn lěng. Bông chuānshang máoyī.) / [Chuyển ngữ] [nghe cô giáo nói tiếng Anh, con nói lại cho mẹ của Xiaomei bằng tiếng Trung, 3 câu] Leo has got a cold. He's got a temperature. He has to go home and rest. → Leo感冒了。他发烧了。他要回家休息。(Leo gǎnmào le. Tā fāshāo le. Tā yào huí jiā xiūxi.)",
+      "truyen": "Bông的梦 — Bông做了一个不好的梦：冬天很冷，可是她没穿毛衣！然后她醒了。现在是春天，是晴天。她穿好衣服，背上蓝色的背包。在学校，Leo咳嗽，嗓子疼。老师问：'你发烧了吗？回家好好休息吧！'(Bông zuòle yí gè bù hǎo de mèng: dōngtiān hěn lěng, kěshì tā méi chuān máoyī! Ránhòu tā xǐng le. Xiànzài shì chūntiān, shì qíngtiān. Tā chuānhǎo yīfu, bēishang lánsè de bēibāo. Zài xuéxiào, Leo késou, sǎngzi téng. Lǎoshī wèn: 'Nǐ fāshāo le ma? Huí jiā hǎohǎo xiūxi ba!')",
+      "video": "Tìm YouTube: \"YCT3 复习 衣服 天气 身体\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn: cry, grow, engineer, future, pilot, police officer, dream, straight, sweater, get dressed, put on, take off, kangaroo, panda, than, fast, slow, heavy, ice, practise, skate, team, volleyball, win, sandwich, sweet, excuse me, biscuit, cookie, cough, temperature, toothache, sore, spring, summer, winter, autumn",
+     "slide": "[Lời cô] Vào bài: Good morning, class! 同学们好！ · Chuyển ý: Now, it's test time. Be quiet, please. 现在考试，请安静。 · Khen: Excellent! 太好了！ · Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): trong bài kiểm tra cô không giải nghĩa từ. Bài kiểm tra chặng 2 dạng Movers (mỗi phần ≤ 15 phút): 1) Nghe (Listening Part 1 & 4): nối tên với người trong tranh công viên (Leo is playing volleyball. / Anna has got a cough.) và chọn tranh đúng cho 5 câu hỏi (What's the matter with Nhan? → toothache). 2) Đọc – viết (Reading Part 2 & 4): đọc đoạn 'Xiaomei's Menu' chọn Yes/No; điền 5 từ (than / sweet / practise / winter / sore). 3) Nói (Speaking): nhìn 2 tranh tìm điểm khác (The kangaroo is fast. / The panda is slow.), trả lời 4 câu: What's your favourite season? What sport can you play? What's your favourite dessert? What's the matter?",
+     "truyen": "The Big Review Day — It's winter in Beijing. It's cold there, but it's warm in Hanoi. Xiaomei visits Leo. She wants to be a pilot in the future. They go to the zoo: the kangaroo is faster than the panda. Then Leo's team plays volleyball and wins. At lunch they eat cheese sandwiches and sweet cookies. In the evening, Xiaomei has got a cough and a sore throat. 'Put on your sweater and drink more water!' says Leo's mum. The next day, Xiaomei is well again.",
+     "baihat": "Unit 5 to 8 Song (giai điệu London Bridge) — Kangaroos are faster than pandas, faster than pandas, faster than pandas, / Practise every day, our team can win, hip hooray! / Sandwiches and cookies are sweet, cookies are sweet, cookies are sweet, / Spring, summer, autumn, winter — I've got a cough today!"
+    },
+    "zh": {
+     "flash": "Ôn: 警察 jǐngchá, 哭 kū, 衣服 yīfu, 毛衣 máoyī, 穿 chuān, 脱 tuō, 袋鼠 dàishǔ, 熊猫 xióngmāo, 比 bǐ, 快 kuài, 慢 màn, 重 zhòng, 滑冰 huábīng, 练习 liànxí, 队 duì, 排球 páiqiú, 赢 yíng, 三明治 sānmíngzhì, 甜 tián, 请问 qǐngwèn, 饼干 bǐnggān, 发烧 fāshāo, 牙疼 yá téng, 嗓子疼 sǎngzi téng, 春天 chūntiān, 夏天 xiàtiān, 秋天 qiūtiān, 冬天 dōngtiān | Nghe làm quen: 咳嗽 késou, 飞行员 fēixíngyuán, 工程师 gōngchéngshī",
+     "slide": "[Cầu nối Anh – Trung] Trước giờ kiểm tra (5 phút): cô chiếu 3 cặp câu cùng tranh — I've got a cough. ↔ 我咳嗽。/ Put on your sweater! ↔ 穿上毛衣！/ The panda is slower than the kangaroo. ↔ 熊猫比袋鼠慢。— con nói nhanh 1 điểm khác ở mỗi cặp. Bài kiểm tra chặng 2 phần tiếng Trung dạng YCT3 (cùng tranh, cùng chủ đề bài tiếng Anh; mỗi phần ≤ 15 phút): 1) Nghe: nối tên với người trong tranh công viên (Leo在打排球。/ Anna咳嗽。) và chọn tranh đúng cho 5 câu hỏi (Nhan怎么了？→ 她牙疼。). 2) Đọc: đọc đoạn 'Xiaomei的菜单' chọn 对 / 不对; chọn từ điền vào 5 chỗ trống: 比 / 甜 / 练习 / 冬天 / 疼 (袋鼠___熊猫快。/ 饼干很___。/ 我们每天___。/ ___很冷。/ 我嗓子___。). 3) Nói: nhìn 2 tranh tìm điểm khác (袋鼠很快。/ 熊猫很慢。), trả lời 4 câu: 你最喜欢什么季节？/ 你会什么运动？/ 你最喜欢的甜点是什么？/ 你怎么了？ [Chuyển ngữ] Phần Nói của bài kiểm tra (thêm 1 câu): con nghe cô đọc tin nhắn tiếng Anh 3 câu \"It's cold today. Put on your sweater. Drink more water!\" → nói lại cho rối Xiaomei: 今天很冷。穿上毛衣。多喝水！ [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo đọc tin nhắn: \"Hi Nhan! It's winter, and it's very cold today. It's raining, too, so put on your sweater and take your umbrella. Have you got a sore throat? Drink more water and have a good rest. See you on Monday!\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 今天很冷，也下雨了。穿上毛衣，带雨伞吧！多喝水，好好休息！ (Jīntiān hěn lěng, yě xià yǔ le. Chuānshang máoyī, dài yǔsǎn ba! Duō hē shuǐ, hǎohǎo xiūxi!)",
+     "truyen": "大复习 — 现在北京是冬天，很冷；河内很暖和。Xiaomei来河内看Leo。她长大以后想当飞行员。他们去动物园：袋鼠比熊猫快。然后Leo的队打排球，他们赢了。中午他们吃奶酪三明治和甜饼干。晚上，Xiaomei咳嗽，嗓子疼。Leo的妈妈说：'穿上毛衣，多喝水！' 第二天，Xiaomei的身体好了。(Xiànzài Běijīng shì dōngtiān, hěn lěng; Hénèi hěn nuǎnhuo. Xiaomei lái Hénèi kàn Leo. Tā zhǎngdà yǐhòu xiǎng dāng fēixíngyuán. Tāmen qù dòngwùyuán: dàishǔ bǐ xióngmāo kuài. Ránhòu Leo de duì dǎ páiqiú, tāmen yíng le. Zhōngwǔ tāmen chī nǎilào sānmíngzhì hé tián bǐnggān. Wǎnshang, Xiaomei késou, sǎngzi téng. Leo de māma shuō: 'Chuānshang máoyī, duō hē shuǐ!' Dì-èr tiān, Xiaomei de shēntǐ hǎo le.)",
+     "baihat": "复习歌 (giai điệu London Bridge, như bài tiếng Anh) — 袋鼠要比熊猫快，比熊猫快，比熊猫快，袋鼠要比熊猫快，每天练习我们赢！三明治饼干真甜，饼干甜，饼干甜，春天夏天秋天冬天，今天我咳嗽了！(Dàishǔ yào bǐ xióngmāo kuài, bǐ xióngmāo kuài, bǐ xióngmāo kuài, dàishǔ yào bǐ xióngmāo kuài, měi tiān liànxí wǒmen yíng! Sānmíngzhì bǐnggān zhēn tián, bǐnggān tián, bǐnggān tián, chūntiān xiàtiān qiūtiān dōngtiān, jīntiān wǒ késou le!)"
+    }
+   }
+  }
+ ]
+}

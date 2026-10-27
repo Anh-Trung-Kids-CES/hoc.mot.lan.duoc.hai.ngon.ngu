@@ -1,0 +1,1708 @@
+{
+"canopy-a": [
+{
+"word": "add",
+"lang": "EN",
+"level": "Starters",
+"have": 0,
+"add": 5,
+"base": 0,
+"target": 5
+},
+{
+"word": "complete",
+"lang": "EN",
+"level": "Starters",
+"have": 0,
+"add": 5,
+"base": 0,
+"target": 5
+},
+{
+"word": "enjoy",
+"lang": "EN",
+"level": "Starters",
+"have": 0,
+"add": 5,
+"base": 0,
+"target": 5
+},
+{
+"word": "lizard",
+"lang": "EN",
+"level": "Starters",
+"have": 0,
+"add": 5,
+"base": 0,
+"target": 5
+},
+{
+"word": "question",
+"lang": "EN",
+"level": "Starters",
+"have": 0,
+"add": 5,
+"base": 0,
+"target": 5
+},
+{
+"word": "alien",
+"lang": "EN",
+"level": "Starters",
+"have": 1,
+"add": 4,
+"base": 0,
+"target": 4
+},
+{
+"word": "bean",
+"lang": "EN",
+"level": "Starters",
+"have": 1,
+"add": 4,
+"base": 0,
+"target": 4
+},
+{
+"word": "find",
+"lang": "EN",
+"level": "Starters",
+"have": 1,
+"add": 4,
+"base": 0,
+"target": 4
+},
+{
+"word": "lime",
+"lang": "EN",
+"level": "Starters",
+"have": 1,
+"add": 4,
+"base": 0,
+"target": 4
+},
+{
+"word": "painting",
+"lang": "EN",
+"level": "Starters",
+"have": 1,
+"add": 4,
+"base": 1,
+"target": 5
+},
+{
+"word": "pear",
+"lang": "EN",
+"level": "Starters",
+"have": 1,
+"add": 4,
+"base": 0,
+"target": 4
+},
+{
+"word": "shell",
+"lang": "EN",
+"level": "Starters",
+"have": 1,
+"add": 4,
+"base": 0,
+"target": 4
+},
+{
+"word": "start",
+"lang": "EN",
+"level": "Starters",
+"have": 1,
+"add": 4,
+"base": 0,
+"target": 4
+},
+{
+"word": "tomato",
+"lang": "EN",
+"level": "Starters",
+"have": 1,
+"add": 4,
+"base": 1,
+"target": 5
+},
+{
+"word": "balloon",
+"lang": "EN",
+"level": "Starters",
+"have": 2,
+"add": 3,
+"base": 2,
+"target": 5
+},
+{
+"word": "bookcase",
+"lang": "EN",
+"level": "Starters",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "coconut",
+"lang": "EN",
+"level": "Starters",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "donkey",
+"lang": "EN",
+"level": "Starters",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "hockey",
+"lang": "EN",
+"level": "Starters",
+"have": 2,
+"add": 3,
+"base": 2,
+"target": 5
+},
+{
+"word": "mine",
+"lang": "EN",
+"level": "Starters",
+"have": 2,
+"add": 3,
+"base": 2,
+"target": 5
+},
+{
+"word": "pet",
+"lang": "EN",
+"level": "Starters",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "poster",
+"lang": "EN",
+"level": "Starters",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "sand",
+"lang": "EN",
+"level": "Starters",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "street",
+"lang": "EN",
+"level": "Starters",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "woman/women",
+"lang": "EN",
+"level": "Starters",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "carrot",
+"lang": "EN",
+"level": "Starters",
+"have": 3,
+"add": 2,
+"base": 0,
+"target": 2
+},
+{
+"word": "fantastic",
+"lang": "EN",
+"level": "Starters",
+"have": 3,
+"add": 2,
+"base": 0,
+"target": 2
+},
+{
+"word": "hit",
+"lang": "EN",
+"level": "Starters",
+"have": 3,
+"add": 2,
+"base": 3,
+"target": 5
+},
+{
+"word": "potato",
+"lang": "EN",
+"level": "Starters",
+"have": 3,
+"add": 2,
+"base": 0,
+"target": 2
+},
+{
+"word": "yours",
+"lang": "EN",
+"level": "Starters",
+"have": 3,
+"add": 2,
+"base": 0,
+"target": 2
+},
+{
+"word": "beautiful",
+"lang": "EN",
+"level": "Starters",
+"have": 4,
+"add": 1,
+"base": 2,
+"target": 3
+},
+{
+"word": "from",
+"lang": "EN",
+"level": "Starters",
+"have": 4,
+"add": 1,
+"base": 0,
+"target": 1
+},
+{
+"word": "handbag",
+"lang": "EN",
+"level": "Starters",
+"have": 4,
+"add": 1,
+"base": 0,
+"target": 1
+},
+{
+"word": "soccer",
+"lang": "EN",
+"level": "Starters",
+"have": 4,
+"add": 1,
+"base": 4,
+"target": 5
+},
+{
+"word": "whose",
+"lang": "EN",
+"level": "Starters",
+"have": 4,
+"add": 1,
+"base": 0,
+"target": 1
+},
+{
+"word": "里面",
+"lang": "ZH",
+"level": "YCT2",
+"have": 4,
+"add": 1,
+"base": 0,
+"target": 1
+}
+],
+"canopy-b": [
+{
+"word": "choose",
+"lang": "EN",
+"level": "Starters",
+"have": 0,
+"add": 5,
+"base": 0,
+"target": 5
+},
+{
+"word": "dirty",
+"lang": "EN",
+"level": "Starters",
+"have": 0,
+"add": 5,
+"base": 0,
+"target": 5
+},
+{
+"word": "example",
+"lang": "EN",
+"level": "Starters",
+"have": 0,
+"add": 5,
+"base": 0,
+"target": 5
+},
+{
+"word": "paper",
+"lang": "EN",
+"level": "Starters",
+"have": 0,
+"add": 5,
+"base": 0,
+"target": 5
+},
+{
+"word": "scary",
+"lang": "EN",
+"level": "Starters",
+"have": 0,
+"add": 5,
+"base": 0,
+"target": 5
+},
+{
+"word": "alphabet",
+"lang": "EN",
+"level": "Starters",
+"have": 1,
+"add": 4,
+"base": 0,
+"target": 4
+},
+{
+"word": "bookshop",
+"lang": "EN",
+"level": "Starters",
+"have": 1,
+"add": 4,
+"base": 1,
+"target": 5
+},
+{
+"word": "gray",
+"lang": "EN",
+"level": "Starters",
+"have": 1,
+"add": 4,
+"base": 0,
+"target": 4
+},
+{
+"word": "mango",
+"lang": "EN",
+"level": "Starters",
+"have": 1,
+"add": 4,
+"base": 0,
+"target": 4
+},
+{
+"word": "pardon",
+"lang": "EN",
+"level": "Starters",
+"have": 1,
+"add": 4,
+"base": 0,
+"target": 4
+},
+{
+"word": "pineapple",
+"lang": "EN",
+"level": "Starters",
+"have": 1,
+"add": 4,
+"base": 0,
+"target": 4
+},
+{
+"word": "silly",
+"lang": "EN",
+"level": "Starters",
+"have": 1,
+"add": 4,
+"base": 0,
+"target": 4
+},
+{
+"word": "talk",
+"lang": "EN",
+"level": "Starters",
+"have": 1,
+"add": 4,
+"base": 1,
+"target": 5
+},
+{
+"word": "watermelon",
+"lang": "EN",
+"level": "Starters",
+"have": 1,
+"add": 4,
+"base": 0,
+"target": 4
+},
+{
+"word": "baseball cap",
+"lang": "EN",
+"level": "Starters",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "camera",
+"lang": "EN",
+"level": "Starters",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "correct",
+"lang": "EN",
+"level": "Starters",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "fishing",
+"lang": "EN",
+"level": "Starters",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "kiwi",
+"lang": "EN",
+"level": "Starters",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "mirror",
+"lang": "EN",
+"level": "Starters",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "pie",
+"lang": "EN",
+"level": "Starters",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "radio",
+"lang": "EN",
+"level": "Starters",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "spell",
+"lang": "EN",
+"level": "Starters",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "tablet",
+"lang": "EN",
+"level": "Starters",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "bat",
+"lang": "EN",
+"level": "Starters",
+"have": 3,
+"add": 2,
+"base": 0,
+"target": 2
+},
+{
+"word": "bathroom",
+"lang": "EN",
+"level": "Starters",
+"have": 3,
+"add": 2,
+"base": 0,
+"target": 2
+},
+{
+"word": "crocodile",
+"lang": "EN",
+"level": "Starters",
+"have": 3,
+"add": 2,
+"base": 0,
+"target": 2
+},
+{
+"word": "grape",
+"lang": "EN",
+"level": "Starters",
+"have": 3,
+"add": 2,
+"base": 0,
+"target": 2
+},
+{
+"word": "kick",
+"lang": "EN",
+"level": "Starters",
+"have": 3,
+"add": 2,
+"base": 0,
+"target": 2
+},
+{
+"word": "skateboard",
+"lang": "EN",
+"level": "Starters",
+"have": 3,
+"add": 2,
+"base": 0,
+"target": 2
+},
+{
+"word": "baseball",
+"lang": "EN",
+"level": "Starters",
+"have": 4,
+"add": 1,
+"base": 0,
+"target": 1
+},
+{
+"word": "catch",
+"lang": "EN",
+"level": "Starters",
+"have": 4,
+"add": 1,
+"base": 0,
+"target": 1
+},
+{
+"word": "goat",
+"lang": "EN",
+"level": "Starters",
+"have": 4,
+"add": 1,
+"base": 0,
+"target": 1
+},
+{
+"word": "lemonade",
+"lang": "EN",
+"level": "Starters",
+"have": 4,
+"add": 1,
+"base": 0,
+"target": 1
+},
+{
+"word": "thanks",
+"lang": "EN",
+"level": "Starters",
+"have": 4,
+"add": 1,
+"base": 3,
+"target": 4
+},
+{
+"word": "包子",
+"lang": "ZH",
+"level": "YCT2",
+"have": 4,
+"add": 1,
+"base": 0,
+"target": 1
+},
+{
+"word": "零",
+"lang": "ZH",
+"level": "YCT2",
+"have": 4,
+"add": 1,
+"base": 4,
+"target": 5
+}
+],
+"canopy-c": [
+{
+"word": "closed",
+"lang": "EN",
+"level": "Starters",
+"have": 0,
+"add": 5,
+"base": 0,
+"target": 5
+},
+{
+"word": "double",
+"lang": "EN",
+"level": "Starters",
+"have": 0,
+"add": 5,
+"base": 0,
+"target": 5
+},
+{
+"word": "jellyfish",
+"lang": "EN",
+"level": "Starters",
+"have": 0,
+"add": 5,
+"base": 0,
+"target": 5
+},
+{
+"word": "point",
+"lang": "EN",
+"level": "Starters",
+"have": 0,
+"add": 5,
+"base": 0,
+"target": 5
+},
+{
+"word": "sentence",
+"lang": "EN",
+"level": "Starters",
+"have": 0,
+"add": 5,
+"base": 0,
+"target": 5
+},
+{
+"word": "answer",
+"lang": "EN",
+"level": "Starters",
+"have": 1,
+"add": 4,
+"base": 0,
+"target": 4
+},
+{
+"word": "clean",
+"lang": "EN",
+"level": "Starters",
+"have": 1,
+"add": 4,
+"base": 0,
+"target": 4
+},
+{
+"word": "hers",
+"lang": "EN",
+"level": "Starters",
+"have": 1,
+"add": 4,
+"base": 1,
+"target": 5
+},
+{
+"word": "onion",
+"lang": "EN",
+"level": "Starters",
+"have": 1,
+"add": 4,
+"base": 1,
+"target": 5
+},
+{
+"word": "pea",
+"lang": "EN",
+"level": "Starters",
+"have": 1,
+"add": 4,
+"base": 1,
+"target": 5
+},
+{
+"word": "sausage",
+"lang": "EN",
+"level": "Starters",
+"have": 1,
+"add": 4,
+"base": 1,
+"target": 5
+},
+{
+"word": "skateboarding",
+"lang": "EN",
+"level": "Starters",
+"have": 1,
+"add": 4,
+"base": 0,
+"target": 4
+},
+{
+"word": "theirs",
+"lang": "EN",
+"level": "Starters",
+"have": 1,
+"add": 4,
+"base": 1,
+"target": 5
+},
+{
+"word": "armchair",
+"lang": "EN",
+"level": "Starters",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "badminton",
+"lang": "EN",
+"level": "Starters",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "basketball",
+"lang": "EN",
+"level": "Starters",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "classmate",
+"lang": "EN",
+"level": "Starters",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "doll",
+"lang": "EN",
+"level": "Starters",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "hippo",
+"lang": "EN",
+"level": "Starters",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "lemon",
+"lang": "EN",
+"level": "Starters",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "ours",
+"lang": "EN",
+"level": "Starters",
+"have": 2,
+"add": 3,
+"base": 2,
+"target": 5
+},
+{
+"word": "playground",
+"lang": "EN",
+"level": "Starters",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "rug",
+"lang": "EN",
+"level": "Starters",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "spider",
+"lang": "EN",
+"level": "Starters",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "wall",
+"lang": "EN",
+"level": "Starters",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "bee",
+"lang": "EN",
+"level": "Starters",
+"have": 3,
+"add": 2,
+"base": 0,
+"target": 2
+},
+{
+"word": "cupboard",
+"lang": "EN",
+"level": "Starters",
+"have": 3,
+"add": 2,
+"base": 0,
+"target": 2
+},
+{
+"word": "hall",
+"lang": "EN",
+"level": "Starters",
+"have": 3,
+"add": 2,
+"base": 0,
+"target": 2
+},
+{
+"word": "meatballs",
+"lang": "EN",
+"level": "Starters",
+"have": 3,
+"add": 2,
+"base": 3,
+"target": 5
+},
+{
+"word": "sport",
+"lang": "EN",
+"level": "Starters",
+"have": 3,
+"add": 2,
+"base": 0,
+"target": 2
+},
+{
+"word": "beach",
+"lang": "EN",
+"level": "Starters",
+"have": 4,
+"add": 1,
+"base": 4,
+"target": 5
+},
+{
+"word": "chocolate",
+"lang": "EN",
+"level": "Starters",
+"have": 4,
+"add": 1,
+"base": 0,
+"target": 1
+},
+{
+"word": "guitar",
+"lang": "EN",
+"level": "Starters",
+"have": 4,
+"add": 1,
+"base": 0,
+"target": 1
+},
+{
+"word": "meat",
+"lang": "EN",
+"level": "Starters",
+"have": 4,
+"add": 1,
+"base": 4,
+"target": 5
+},
+{
+"word": "throw",
+"lang": "EN",
+"level": "Starters",
+"have": 4,
+"add": 1,
+"base": 0,
+"target": 1
+},
+{
+"word": "茶",
+"lang": "ZH",
+"level": "YCT2",
+"have": 4,
+"add": 1,
+"base": 4,
+"target": 5
+}
+],
+"larva-a": [
+{
+"word": "have (got) to",
+"lang": "EN",
+"level": "Movers",
+"have": 0,
+"add": 5,
+"base": 0,
+"target": 5
+},
+{
+"word": "carefully",
+"lang": "EN",
+"level": "Movers",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "DVD",
+"lang": "EN",
+"level": "Movers",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "funfair",
+"lang": "EN",
+"level": "Movers",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "loudly",
+"lang": "EN",
+"level": "Movers",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "quietly",
+"lang": "EN",
+"level": "Movers",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "address",
+"lang": "EN",
+"level": "Movers",
+"have": 3,
+"add": 2,
+"base": 0,
+"target": 2
+},
+{
+"word": "change",
+"lang": "EN",
+"level": "Movers",
+"have": 3,
+"add": 2,
+"base": 0,
+"target": 2
+},
+{
+"word": "email",
+"lang": "EN",
+"level": "Movers",
+"have": 3,
+"add": 2,
+"base": 0,
+"target": 2
+},
+{
+"word": "internet",
+"lang": "EN",
+"level": "Movers",
+"have": 3,
+"add": 2,
+"base": 0,
+"target": 2
+},
+{
+"word": "move",
+"lang": "EN",
+"level": "Movers",
+"have": 3,
+"add": 2,
+"base": 0,
+"target": 2
+},
+{
+"word": "road",
+"lang": "EN",
+"level": "Movers",
+"have": 3,
+"add": 2,
+"base": 0,
+"target": 2
+},
+{
+"word": "stomach",
+"lang": "EN",
+"level": "Movers",
+"have": 3,
+"add": 2,
+"base": 0,
+"target": 2
+},
+{
+"word": "toothbrush",
+"lang": "EN",
+"level": "Movers",
+"have": 3,
+"add": 2,
+"base": 0,
+"target": 2
+},
+{
+"word": "brilliant",
+"lang": "EN",
+"level": "Movers",
+"have": 4,
+"add": 1,
+"base": 0,
+"target": 1
+},
+{
+"word": "bus station",
+"lang": "EN",
+"level": "Movers",
+"have": 4,
+"add": 1,
+"base": 0,
+"target": 1
+},
+{
+"word": "dress up",
+"lang": "EN",
+"level": "Movers",
+"have": 4,
+"add": 1,
+"base": 0,
+"target": 1
+},
+{
+"word": "field",
+"lang": "EN",
+"level": "Movers",
+"have": 4,
+"add": 1,
+"base": 0,
+"target": 1
+},
+{
+"word": "huge",
+"lang": "EN",
+"level": "Movers",
+"have": 4,
+"add": 1,
+"base": 0,
+"target": 1
+},
+{
+"word": "jungle",
+"lang": "EN",
+"level": "Movers",
+"have": 4,
+"add": 1,
+"base": 0,
+"target": 1
+},
+{
+"word": "parrot",
+"lang": "EN",
+"level": "Movers",
+"have": 4,
+"add": 1,
+"base": 0,
+"target": 1
+},
+{
+"word": "second",
+"lang": "EN",
+"level": "Movers",
+"have": 4,
+"add": 1,
+"base": 4,
+"target": 5
+},
+{
+"word": "square",
+"lang": "EN",
+"level": "Movers",
+"have": 4,
+"add": 1,
+"base": 0,
+"target": 1
+},
+{
+"word": "teach",
+"lang": "EN",
+"level": "Movers",
+"have": 4,
+"add": 1,
+"base": 0,
+"target": 1
+},
+{
+"word": "waterfall",
+"lang": "EN",
+"level": "Movers",
+"have": 4,
+"add": 1,
+"base": 0,
+"target": 1
+}
+],
+"larva-b": [
+{
+"word": "have to / has to (have got to)",
+"lang": "EN",
+"level": "Movers",
+"have": 0,
+"add": 5,
+"base": 0,
+"target": 5
+},
+{
+"word": "CD",
+"lang": "EN",
+"level": "Movers",
+"have": 2,
+"add": 3,
+"base": 2,
+"target": 5
+},
+{
+"word": "earache",
+"lang": "EN",
+"level": "Movers",
+"have": 2,
+"add": 3,
+"base": 2,
+"target": 5
+},
+{
+"word": "hurt",
+"lang": "EN",
+"level": "Movers",
+"have": 2,
+"add": 3,
+"base": 2,
+"target": 5
+},
+{
+"word": "model",
+"lang": "EN",
+"level": "Movers",
+"have": 2,
+"add": 3,
+"base": 2,
+"target": 5
+},
+{
+"word": "sail",
+"lang": "EN",
+"level": "Movers",
+"have": 2,
+"add": 3,
+"base": 2,
+"target": 5
+},
+{
+"word": "app",
+"lang": "EN",
+"level": "Movers",
+"have": 3,
+"add": 2,
+"base": 0,
+"target": 2
+},
+{
+"word": "climb",
+"lang": "EN",
+"level": "Movers",
+"have": 3,
+"add": 2,
+"base": 3,
+"target": 5
+},
+{
+"word": "fix",
+"lang": "EN",
+"level": "Movers",
+"have": 3,
+"add": 2,
+"base": 3,
+"target": 5
+},
+{
+"word": "lake",
+"lang": "EN",
+"level": "Movers",
+"have": 3,
+"add": 2,
+"base": 0,
+"target": 2
+},
+{
+"word": "movie",
+"lang": "EN",
+"level": "Movers",
+"have": 3,
+"add": 2,
+"base": 2,
+"target": 4
+},
+{
+"word": "shape",
+"lang": "EN",
+"level": "Movers",
+"have": 3,
+"add": 2,
+"base": 0,
+"target": 2
+},
+{
+"word": "text",
+"lang": "EN",
+"level": "Movers",
+"have": 3,
+"add": 2,
+"base": 0,
+"target": 2
+},
+{
+"word": "website",
+"lang": "EN",
+"level": "Movers",
+"have": 3,
+"add": 2,
+"base": 0,
+"target": 2
+},
+{
+"word": "building",
+"lang": "EN",
+"level": "Movers",
+"have": 4,
+"add": 1,
+"base": 0,
+"target": 1
+},
+{
+"word": "cage",
+"lang": "EN",
+"level": "Movers",
+"have": 4,
+"add": 1,
+"base": 3,
+"target": 4
+},
+{
+"word": "elevator",
+"lang": "EN",
+"level": "Movers",
+"have": 4,
+"add": 1,
+"base": 0,
+"target": 1
+},
+{
+"word": "frightened",
+"lang": "EN",
+"level": "Movers",
+"have": 4,
+"add": 1,
+"base": 4,
+"target": 5
+},
+{
+"word": "ill",
+"lang": "EN",
+"level": "Movers",
+"have": 4,
+"add": 1,
+"base": 4,
+"target": 5
+},
+{
+"word": "laptop",
+"lang": "EN",
+"level": "Movers",
+"have": 4,
+"add": 1,
+"base": 0,
+"target": 1
+},
+{
+"word": "penguin",
+"lang": "EN",
+"level": "Movers",
+"have": 4,
+"add": 1,
+"base": 0,
+"target": 1
+},
+{
+"word": "shopping centre",
+"lang": "EN",
+"level": "Movers",
+"have": 4,
+"add": 1,
+"base": 0,
+"target": 1
+},
+{
+"word": "station",
+"lang": "EN",
+"level": "Movers",
+"have": 4,
+"add": 1,
+"base": 0,
+"target": 1
+},
+{
+"word": "tractor",
+"lang": "EN",
+"level": "Movers",
+"have": 4,
+"add": 1,
+"base": 0,
+"target": 1
+},
+{
+"word": "喂",
+"lang": "ZH",
+"level": "YCT3",
+"have": 4,
+"add": 1,
+"base": 0,
+"target": 1
+}
+],
+"larva-c": [
+{
+"word": "badly",
+"lang": "EN",
+"level": "Movers",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "break",
+"lang": "EN",
+"level": "Movers",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "circus",
+"lang": "EN",
+"level": "Movers",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "fair",
+"lang": "EN",
+"level": "Movers",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "invite",
+"lang": "EN",
+"level": "Movers",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "naughty",
+"lang": "EN",
+"level": "Movers",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "toothpaste",
+"lang": "EN",
+"level": "Movers",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "better",
+"lang": "EN",
+"level": "Movers",
+"have": 3,
+"add": 2,
+"base": 0,
+"target": 2
+},
+{
+"word": "difference",
+"lang": "EN",
+"level": "Movers",
+"have": 3,
+"add": 2,
+"base": 3,
+"target": 5
+},
+{
+"word": "ice skates",
+"lang": "EN",
+"level": "Movers",
+"have": 3,
+"add": 2,
+"base": 1,
+"target": 3
+},
+{
+"word": "machine",
+"lang": "EN",
+"level": "Movers",
+"have": 3,
+"add": 2,
+"base": 3,
+"target": 5
+},
+{
+"word": "nothing",
+"lang": "EN",
+"level": "Movers",
+"have": 3,
+"add": 2,
+"base": 0,
+"target": 2
+},
+{
+"word": "snail",
+"lang": "EN",
+"level": "Movers",
+"have": 3,
+"add": 2,
+"base": 3,
+"target": 5
+},
+{
+"word": "think",
+"lang": "EN",
+"level": "Movers",
+"have": 3,
+"add": 2,
+"base": 0,
+"target": 2
+},
+{
+"word": "wind",
+"lang": "EN",
+"level": "Movers",
+"have": 3,
+"add": 2,
+"base": 0,
+"target": 2
+},
+{
+"word": "car park",
+"lang": "EN",
+"level": "Movers",
+"have": 4,
+"add": 1,
+"base": 4,
+"target": 5
+},
+{
+"word": "feed",
+"lang": "EN",
+"level": "Movers",
+"have": 4,
+"add": 1,
+"base": 1,
+"target": 2
+},
+{
+"word": "ground",
+"lang": "EN",
+"level": "Movers",
+"have": 4,
+"add": 1,
+"base": 3,
+"target": 4
+},
+{
+"word": "inside",
+"lang": "EN",
+"level": "Movers",
+"have": 4,
+"add": 1,
+"base": 0,
+"target": 1
+},
+{
+"word": "message",
+"lang": "EN",
+"level": "Movers",
+"have": 4,
+"add": 1,
+"base": 4,
+"target": 5
+},
+{
+"word": "sauce",
+"lang": "EN",
+"level": "Movers",
+"have": 4,
+"add": 1,
+"base": 0,
+"target": 1
+},
+{
+"word": "sports centre",
+"lang": "EN",
+"level": "Movers",
+"have": 4,
+"add": 1,
+"base": 4,
+"target": 5
+},
+{
+"word": "swimsuit",
+"lang": "EN",
+"level": "Movers",
+"have": 4,
+"add": 1,
+"base": 4,
+"target": 5
+},
+{
+"word": "treasure",
+"lang": "EN",
+"level": "Movers",
+"have": 4,
+"add": 1,
+"base": 4,
+"target": 5
+}
+],
+"cocoon": [
+{
+"word": "comb",
+"lang": "EN",
+"level": "Flyers",
+"have": 4,
+"add": 1,
+"base": 0,
+"target": 1
+},
+{
+"word": "fur",
+"lang": "EN",
+"level": "Flyers",
+"have": 4,
+"add": 1,
+"base": 0,
+"target": 1
+},
+{
+"word": "tyre",
+"lang": "EN",
+"level": "Flyers",
+"have": 2,
+"add": 3,
+"base": 0,
+"target": 3
+},
+{
+"word": "without",
+"lang": "EN",
+"level": "Flyers",
+"have": 4,
+"add": 1,
+"base": 0,
+"target": 1
+},
+{
+"word": "年轻",
+"lang": "ZH",
+"level": "YCT4",
+"have": 4,
+"add": 1,
+"base": 0,
+"target": 1
+}
+]
+}

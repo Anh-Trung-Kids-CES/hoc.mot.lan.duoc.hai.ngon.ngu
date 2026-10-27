@@ -1,0 +1,804 @@
+{
+ "course": "Larva Plus",
+ "part": "a",
+ "rows": [
+  {
+   "buoi": 1,
+   "unit": "",
+   "label_buoi": "Buổi dạy 1. Mở khóa · Bài đầu vào tiếng Anh theo dạng đề Movers (Nghe, Đọc – viết, Nói)",
+   "web": [
+    {
+     "ngay": 1,
+     "label": "Ngày 1. Mở khóa · Ôn quét Larva U1–U3: bản thân, một ngày của con, nghề nghiệp",
+     "en": {
+      "tu": "Ôn: country, flag, language, always, shower, sometimes, half, meal, minute, past, quarter, usually, cry, fall, grow, leaf/leaves, engineer, future, pilot",
+      "cum": "could swim / look for / how often / how long / have a shower / half past seven / quarter past six / be called / police officer / all right",
+      "cau": "Where are you from? – I'm from Vietnam. / What language do you speak? – I speak English and Chinese. / What time do you usually have a shower? – I usually have a shower at quarter past six. / How long do you study every day? – I study for thirty minutes. / What do you want to be in the future? – I want to be a police officer.",
+      "truyen": "Leo's Morning — Leo is from England. He always gets up at quarter past six and has a shower. He usually has his first meal at seven o'clock. Leo wants to be a police officer in the future, because police officers help people.",
+      "video": "Tìm YouTube: \"telling the time quarter past half past for kids\""
+     },
+     "zh": {
+      "tu": "Ôn: 国家 guójiā, 半 bàn, 每 měi, 分钟 fēnzhōng, 洗澡 xǐzǎo, 帮助 bāngzhù, 次 cì, 警察 jǐngchá, 哭 kū, 工程师 gōngchéngshī, 飞行员 fēixíngyuán, 以后 yǐhòu | Nghe làm quen (có tranh, không kiểm tra): 语言 yǔyán (= language), 总是 zǒngshì (= always), 通常 tōngcháng (= usually)",
+      "cum": "越南人 Yuènán rén / 英国人 Yīngguó rén / 说汉语 shuō Hànyǔ / 六点十五分 liù diǎn shíwǔ fēn / 每天 měi tiān / 三十分钟 sānshí fēnzhōng / 想当警察 xiǎng dāng jǐngchá / 帮助别人 bāngzhù biérén",
+      "cau": "[Cầu nối] I want to be a police officer in the future. ↔ 我长大以后想当警察。(Wǒ zhǎngdà yǐhòu xiǎng dāng jǐngchá.)· giống: want to be ↔ 想当 + nghề · khác: in the future cuối câu ↔ 长大以后 đầu câu; quarter past six ↔ 六点十五分 (giờ đứng trước động từ) / 你是哪国人？(Nǐ shì nǎ guó rén?) / 我是越南人。(Wǒ shì Yuènán rén.) / 你会说什么语言？(Nǐ huì shuō shénme yǔyán?) / 我会说英语和汉语。(Wǒ huì shuō Yīngyǔ hé Hànyǔ.) / 你通常几点洗澡？(Nǐ tōngcháng jǐ diǎn xǐzǎo?) / 我通常六点十五分洗澡。(Wǒ tōngcháng liù diǎn shíwǔ fēn xǐzǎo.) / 你每天学习多久？(Nǐ měi tiān xuéxí duō jiǔ?) / 我学习三十分钟。(Wǒ xuéxí sānshí fēnzhōng.) / 我长大以后想当警察。(Wǒ zhǎngdà yǐhòu xiǎng dāng jǐngchá.)",
+      "truyen": "Leo的早上 — Leo是英国人。他总是六点十五分起床，先洗澡。他通常七点吃早饭。Leo长大以后想当警察，因为警察帮助别人。(Leo shì Yīngguó rén. Tā zǒngshì liù diǎn shíwǔ fēn qǐchuáng, xiān xǐzǎo. Tā tōngcháng qī diǎn chī zǎofàn. Leo zhǎngdà yǐhòu xiǎng dāng jǐngchá, yīnwèi jǐngchá bāngzhù biérén.)",
+      "video": "Tìm YouTube: \"几点了 儿歌 认识时间\""
+     }
+    },
+    {
+     "ngay": 2,
+     "label": "Ngày 2. Mở khóa · Ôn quét Larva U4–U6: quần áo, con vật, thể thao",
+     "en": {
+      "tu": "Ôn: dream, straight, sweater, kangaroo, panda, slow, than, fast, heavy, ice, practise, skate, team, volleyball, win",
+      "cum": "put on / take off / get dressed / backpack / faster than / play volleyball / ice skating",
+      "cau": "What's your favourite colour? – I like green best. / Put on your sweater. It's cold outside. / A kangaroo is faster than a panda. / Pandas are slow and heavy. / Our team practises volleyball on Saturday and we always win!",
+      "truyen": "Anna's Red Sweater — Anna puts on her red sweater and goes to the park. She sees a kangaroo and a panda in her picture book. 'The kangaroo is faster than the panda!' she says. In the afternoon she plays volleyball with her team, and they win.",
+      "video": "Tìm YouTube: \"Cambridge Movers comparatives faster than for kids\""
+     },
+     "zh": {
+      "tu": "Ôn: 件 jiàn, 毛衣 máoyī, 穿上 chuān shàng, 书包 shūbāo, 外面 wàimiàn, 最 zuì, 快 kuài, 慢 màn, 比 bǐ, 重 zhòng, 排球 páiqiú, 队 duì, 赢 yíng, 熊猫 xióngmāo, 袋鼠 dàishǔ",
+      "cum": "一件毛衣 yí jiàn máoyī / 穿上毛衣 chuān shàng máoyī / 最喜欢 zuì xǐhuan / 走得很慢 zǒu de hěn màn / 跑得很快 pǎo de hěn kuài / 打排球 dǎ páiqiú",
+      "cau": "[Cầu nối] Pandas are slow. ↔ 熊猫走得很慢。· giống: con vật – tính chất · khác: EN: be + slow; ZH: 走得很慢 (động từ + 得 + tính từ); faster than ↔ 跑得比……快 / 你最喜欢什么颜色？(Nǐ zuì xǐhuan shénme yánsè?) / 我最喜欢绿色。(Wǒ zuì xǐhuan lǜsè.) / 外面很冷，穿上毛衣吧。(Wàimiàn hěn lěng, chuān shàng máoyī ba.) / 熊猫走得很慢，也很重。(Xióngmāo zǒu de hěn màn, yě hěn zhòng.) / 袋鼠跑得比熊猫快。(Dàishǔ pǎo de bǐ xióngmāo kuài.) / 我们队星期六练习打排球，我们总是赢！(Wǒmen duì xīngqīliù liànxí dǎ páiqiú, wǒmen zǒngshì yíng!) / [Chuyển ngữ] (NL3) Anna nhắn tiếng Anh, con nhắn lại cho Xiaomei bằng tiếng Trung: Put on your sweater. It's cold outside. We play volleyball on Saturday. → 外面很冷，穿上毛衣吧。我们星期六打排球。(Wàimiàn hěn lěng, chuān shàng máoyī ba. Wǒmen xīngqīliù dǎ páiqiú.)",
+      "truyen": "Anna的红毛衣 — Anna穿上红色的毛衣去公园。她在图画书里看到一只袋鼠和一只熊猫。Anna说：“袋鼠跑得比熊猫快！”下午，她和她的队一起打排球，她们赢了。(Anna chuān shàng hóngsè de máoyī qù gōngyuán. Tā zài túhuà shū lǐ kàndào yì zhī dàishǔ hé yì zhī xióngmāo. Anna shuō: “Dàishǔ pǎo de bǐ xióngmāo kuài!” Xiàwǔ, tā hé tā de duì yìqǐ dǎ páiqiú, tāmen yíng le.)",
+      "video": "Tìm YouTube: \"袋鼠 熊猫 谁跑得快 比一比 儿童 中文\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "country, flag, language, shower, half past, quarter past, usually, always, sometimes, pilot, police officer, engineer, sweater, kangaroo, panda, faster than, volleyball, team",
+     "slide": "[Lời cô] Vào bài: Good morning, class! Welcome back! 同学们好！欢迎回来！· Chuyển ý: Now, let's do a test. 现在我们做一个小测试。· Nhắc: Listen carefully. 认真听。· Khen: Well done! 真棒！· Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): future / 以后, country / 国家 1) Bài đầu vào Nghe Part 1 – nối tên với người trong tranh (5 câu, 8 phút): Leo is wearing a sweater / Anna is playing volleyball / Bông is looking for her bag / Xiaomei has got a ticket / Mr Brown is a pilot. 2) Bài đầu vào Đọc – viết Part 1 – đọc định nghĩa, chép từ (5 câu, 10 phút): This person flies a plane. – a pilot / You wear this when it's cold. – a sweater / This animal is black and white. – a panda / You wash in this every morning. – a shower / People in different countries speak these. – languages. 3) Nói Part 4 – câu hỏi cá nhân theo cặp (5 phút): What's your name? / Where are you from? / What time do you usually get up? / What do you want to be in the future?",
+     "truyen": "Leo's Busy Day — Leo is from England, but he lives in Vietnam now. He speaks two languages: English and Vietnamese. He always gets up at quarter past six and has a shower. After breakfast he puts on his sweater and his backpack. On Saturday he practises volleyball with his team. They are faster than the other team, so they win. Leo wants to be a pilot in the future and travel to many countries.",
+     "baihat": "Giai điệu Frère Jacques – lời mới \"What's the Time?\": What's the time? What's the time? / Quarter past six, quarter past six. / Get up, have a shower, get up, have a shower, / Then go to school, then go to school."
+    },
+    "zh": {
+     "flash": "国家 guójiā, 国旗 guóqí, 语言 yǔyán, 洗澡 xǐzǎo, 半 bàn, 六点十五分 liù diǎn shíwǔ fēn, 通常 tōngcháng, 总是 zǒngshì, 有时候 yǒu shíhou, 飞行员 fēixíngyuán, 警察 jǐngchá, 工程师 gōngchéngshī, 毛衣 máoyī, 袋鼠 dàishǔ, 熊猫 xióngmāo, 比……快 bǐ…kuài, 排球 páiqiú, 队 duì",
+     "slide": "[Cầu nối Anh – Trung] Cùng 4 thẻ tranh của bài đầu vào (đồng hồ 6:15, vòi sen, phi công, bóng chuyền): rối Leo nói câu tiếng Anh, rối Xiaomei nói câu tiếng Trung cùng tranh; con tìm điểm giống và khác: quarter past six ↔ 六点十五分 / have a shower ↔ 洗澡 / Mr Brown is a pilot. ↔ Brown先生是飞行员。(Brown xiānsheng shì fēixíngyuán.) / Anna is playing volleyball. ↔ Anna在打排球。(Anna zài dǎ páiqiú.) (giờ đứng trước động từ trong tiếng Trung; is …-ing ↔ 在 + động từ). 1) Bài đầu vào YCT3 Nghe phần 1 – dùng lại 5 tranh của bài Nghe Part 1 tiếng Anh, nghe câu, đánh √ hoặc × (5 câu, 6 phút): Leo穿着一件毛衣。(Leo chuānzhe yí jiàn máoyī.) / Anna在打排球。(Anna zài dǎ páiqiú.) / Bông在找她的书包。(Bông zài zhǎo tā de shūbāo.) / Xiaomei拿着一张票。(Xiaomei názhe yì zhāng piào.) / Brown先生是飞行员。(Brown xiānsheng shì fēixíngyuán.) 2) Nhìn lại 5 tranh của bài Đọc – viết Part 1 tiếng Anh, nói nhanh 1 cụm tiếng Trung (5 tranh): 飞行员 fēixíngyuán / 穿毛衣 chuān máoyī / 熊猫 xióngmāo / 洗澡 xǐzǎo / 说英语和汉语 shuō Yīngyǔ hé Hànyǔ. 3) [Chuyển ngữ] (NL3, 4 phút) Rối Leo nói 3 câu tiếng Anh về mình, con nói lại cho rối Xiaomei bằng tiếng Trung: I'm from England. I get up at quarter past six. I want to be a pilot. → 我是英国人。我六点十五分起床。我想当飞行员。(Wǒ shì Yīngguó rén. Wǒ liù diǎn shíwǔ fēn qǐchuáng. Wǒ xiǎng dāng fēixíngyuán.) [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo kể (5 câu, con tóm 3 ý chính): \"Hi, I'm Leo. I'm from England, but now I live in Vietnam. I can speak English and a little Chinese. On school days I usually get up at quarter past six and have a shower before breakfast. In the future I'd like to be a pilot because I love flying to different countries.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: Leo是英国人，现在住在越南。他通常六点十五分起床，先洗澡，再吃早饭。他以后想当飞行员。 (Leo shì Yīngguó rén, xiànzài zhù zài Yuènán. Tā tōngcháng liù diǎn shíwǔ fēn qǐchuáng, xiān xǐzǎo, zài chī zǎofàn. Tā yǐhòu xiǎng dāng fēixíngyuán.)",
+     "truyen": "Leo的一天 — Leo是英国人，现在住在越南。他会说两种语言：英语和越南语。他总是六点十五分起床，先洗澡。吃完早饭，他穿上毛衣，背上书包。星期六，他和他的队一起练习打排球。他们比别的队快，所以赢了。Leo长大以后想开飞机，去很多国家旅行。(Leo shì Yīngguó rén, xiànzài zhù zài Yuènán. Tā huì shuō liǎng zhǒng yǔyán: Yīngyǔ hé Yuènányǔ. Tā zǒngshì liù diǎn shíwǔ fēn qǐchuáng, xiān xǐzǎo. Chī wán zǎofàn, tā chuān shàng máoyī, bēi shàng shūbāo. Xīngqīliù, tā hé tā de duì yìqǐ liànxí dǎ páiqiú. Tāmen bǐ bié de duì kuài, suǒyǐ yíng le. Leo zhǎngdà yǐhòu xiǎng kāi fēijī, qù hěn duō guójiā lǚxíng.)",
+     "baihat": "Giai điệu Frère Jacques (= Two Tigers 两只老虎) – lời mới \"现在几点\": 现在几点？现在几点？(Xiànzài jǐ diǎn? Xiànzài jǐ diǎn?) / 六点十五，六点十五。(Liù diǎn shíwǔ, liù diǎn shíwǔ.) / 起床去洗个澡，起床去洗个澡，(Qǐchuáng qù xǐ ge zǎo, qǐchuáng qù xǐ ge zǎo,) / 去上学，去上学。(Qù shàngxué, qù shàngxué.)"
+    }
+   }
+  },
+  {
+   "buoi": 2,
+   "unit": "",
+   "label_buoi": "Buổi dạy 2. Mở khóa · Bài đầu vào tiếng Trung theo dạng đề YCT3 + chuyển ngữ",
+   "web": [
+    {
+     "ngay": 3,
+     "label": "Ngày 3. Mở khóa · Ôn quét Larva U7–U9: đồ ăn, thời tiết – sức khỏe, trường học",
+     "en": {
+      "tu": "Ôn: sandwich, sweet, cough, temperature, toothache, sore, spring, summer, winter, gate, leave, office, right, turn",
+      "cum": "have got a cough / have a temperature / sore throat / turn left / turn right / have to / come on",
+      "cau": "What's the matter? – I've got a toothache. / You've got a temperature. You have to stay in bed. / Do you like sweet food? – Yes, I love chocolate. / Turn right at the gate. The office is on the left. / In winter it's cold. In summer it's hot.",
+      "truyen": "Bông Is Ill — It's winter. Bông has got a cough and a sore throat, so she can't go to school. Mum says, 'You've got a temperature. You have to stay in bed.' The next day Bông is better. She walks through the school gate, turns right and says hello to her teacher.",
+      "video": "Tìm YouTube: \"What's the matter song for kids illness\""
+     },
+     "zh": {
+      "tu": "Ôn: 甜 tián, 巧克力 qiǎokèlì, 咳嗽 késou, 发烧 fāshāo, 嗓子疼 sǎngzi téng, 牙疼 yá téng, 疼 téng, 休息 xiūxi, 春天 chūntiān, 夏天 xiàtiān, 冬天 dōngtiān, 大门 dàmén, 办公室 bàngōngshì, 左 zuǒ, 右 yòu",
+      "cum": "咳嗽 késou / 发烧 fāshāo / 嗓子疼 sǎngzi téng / 牙疼 yá téng / 在床上休息 zài chuáng shang xiūxi / 在左边 zài zuǒbiān / 往右走 wǎng yòu zǒu",
+      "cau": "[Cầu nối] I've got a cough. ↔ 我咳嗽了。(Wǒ késou le.) · giống: câu ngắn nói mình bị ốm · khác: EN: have got + bệnh; ZH: bệnh + 了; turn right ↔ 往右走 / 你怎么了？(Nǐ zěnme le?) / 我牙疼。(Wǒ yá téng.) / 你发烧了，要在床上休息。(Nǐ fāshāo le, yào zài chuáng shang xiūxi.) / 你喜欢吃甜的吗？(Nǐ xǐhuan chī tián de ma?) / 喜欢，我很喜欢吃巧克力。(Xǐhuan, wǒ hěn xǐhuan chī qiǎokèlì.) / 到了大门往右走，办公室在左边。(Dào le dàmén wǎng yòu zǒu, bàngōngshì zài zuǒbiān.) / 冬天很冷，夏天很热。(Dōngtiān hěn lěng, xiàtiān hěn rè.)",
+      "truyen": "Bông生病了 — 冬天到了。Bông咳嗽，嗓子也疼，不能去上学。妈妈说：“你发烧了，要在床上休息。”第二天，Bông好了。她走进学校大门，往右走，跟老师说“老师好”。(Dōngtiān dào le. Bông késou, sǎngzi yě téng, bù néng qù shàngxué. Māma shuō: “Nǐ fāshāo le, yào zài chuáng shang xiūxi.” Dì-èr tiān, Bông hǎo le. Tā zǒu jìn xuéxiào dàmén, wǎng yòu zǒu, gēn lǎoshī shuō “Lǎoshī hǎo”.)",
+      "video": "Tìm YouTube: \"你怎么了 生病 儿歌 中文\""
+     }
+    },
+    {
+     "ngay": 4,
+     "label": "Ngày 4. Mở khóa · Ôn quét Larva U10–U12: mua sắm, kỳ nghỉ, lễ hội",
+     "en": {
+      "tu": "Ôn: shopping, supermarket, cheap, expensive, let, money, shark, ticket, travel, hotel, London, suitcase, visit, holiday, festival, lucky, wish",
+      "cum": "go shopping / how much / too expensive / bus station / shopping centre / buy a ticket",
+      "cau": "Let's go to the supermarket! / How much is this toy? – It's ten dollars. / It's too expensive! This one is cheap. / We travel to London and stay in a hotel. / Happy holiday! I wish you a lucky new year.",
+      "truyen": "Xiaomei's Holiday Toy — It's a holiday. Xiaomei and her dad go shopping at the supermarket. It isn't far from their house. Xiaomei wants a toy shark, but it's too expensive: one hundred dollars! 'Let's look for a cheap one,' says Dad. Xiaomei finds a small shark for ten dollars. She is very lucky!",
+      "video": "Tìm YouTube: \"How much is it shopping song for kids\""
+     },
+     "zh": {
+      "tu": "Ôn: 超市 chāoshì, 车站 chēzhàn, 贵 guì, 便宜 piányi, 远 yuǎn, 让 ràng, 太 tài, 玩具 wánjù, 鲨鱼 shāyú, 钱 qián, 美元 měiyuán, 旅行 lǚxíng, 伦敦 Lúndūn, 参观 cānguān, 节日 jiérì, 放假 fàngjià, 祝 zhù, 幸运 xìngyùn | Nghe làm quen (có tranh, không kiểm tra): 宾馆 bīnguǎn (= hotel), 假期 jiàqī (= holiday)",
+      "cum": "去超市 qù chāoshì / 多少钱 duōshao qián / 太贵了 tài guì le / 很便宜 hěn piányi / 十美元 shí měiyuán / 假期快乐 jiàqī kuàilè",
+      "cau": "[Cầu nối] It's too expensive! ↔ 太贵了！· giống: too ↔ 太 đứng trước tính từ · khác: ZH thêm 了 cuối câu; dollar ↔ 美元 / 我们去超市吧！(Wǒmen qù chāoshì ba!) / 这个多少钱？(Zhège duōshao qián?) / 十美元。(Shí měiyuán.) / 这个玩具太贵了！(Zhège wánjù tài guì le!) / 这个很便宜。(Zhège hěn piányi.) / 我们去伦敦旅行，住在宾馆里。(Wǒmen qù Lúndūn lǚxíng, zhù zài bīnguǎn lǐ.) / 假期快乐！祝你新年好运！(Jiàqī kuàilè! Zhù nǐ xīnnián hǎo yùn!) / [Chuyển ngữ] (NL3) Nghe Dad nói tiếng Anh, nói lại cho Xiaomei bằng tiếng Trung: Let's go to the supermarket! This toy is too expensive. This one is cheap. → 我们去超市吧！这个玩具太贵了。这个很便宜。(Wǒmen qù chāoshì ba! Zhège wánjù tài guì le. Zhège hěn piányi.)",
+      "truyen": "Xiaomei的假期玩具 — 放假了，Xiaomei和爸爸去超市买东西。超市离家不远。Xiaomei想买一个玩具鲨鱼，可是太贵了，要一百美元。爸爸说：“我们找一个便宜的吧。”Xiaomei找到一个十美元的小鲨鱼。她真幸运！(Fàngjià le, Xiaomei hé bàba qù chāoshì mǎi dōngxi. Chāoshì lí jiā bù yuǎn. Xiaomei xiǎng mǎi yí ge wánjù shāyú, kěshì tài guì le, yào yìbǎi měiyuán. Bàba shuō: “Wǒmen zhǎo yí ge piányi de ba.” Xiaomei zhǎodào yí ge shí měiyuán de xiǎo shāyú. Tā zhēn xìngyùn!)",
+      "video": "Tìm YouTube: \"多少钱 买东西 儿歌\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "cough, temperature, toothache, sore throat, winter, summer, gate, office, turn right, turn left, supermarket, cheap, expensive, money, ticket, holiday, lucky",
+     "slide": "[Lời cô] Vào bài: Hello, everyone! Are you ready? 大家好！准备好了吗？· Chuyển ý: Now, let's listen. 现在我们听一听。· Nhắc: Hands up, please. 请举手。· Khen: Excellent! 太好了！· Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): temperature / 发烧, expensive / 贵 1) Bài đầu vào Nghe Part 4 Movers – nghe, đánh dấu tranh đúng (5 câu, 8 phút): What's the matter with Bông? (cough / toothache / temperature) / Where is the office? (next to the gate / behind the library / on the right) / How much is the toy shark? (ten dollars / fifteen dollars / one hundred dollars). 2) Đọc – viết Part 2 – chọn câu đáp (5 câu): What's the matter? – I've got a cough. / How much is this? – It's ten dollars. / Shall we go shopping? – Yes, let's go! / Where's the office? – Turn right at the gate.",
+     "truyen": "Bông's Shopping Day — In winter Bông has got a cough, so she stays at home. When she is better, her dad says, 'Let's go to the supermarket.' They take the bus from the bus station. Bông wants a big toy shark, but it's too expensive. She buys a small one. It's cheap: only ten dollars. 'I'm lucky!' says Bông.",
+     "baihat": "Giai điệu London Bridge – lời mới \"How Much Is It?\": How much is it? Ten dollars, ten dollars, ten dollars. / How much is it? Ten dollars. / It's very cheap!"
+    },
+    "zh": {
+     "flash": "咳嗽 késou, 发烧 fāshāo, 牙疼 yá téng, 嗓子疼 sǎngzi téng, 冬天 dōngtiān, 夏天 xiàtiān, 大门 dàmén, 办公室 bàngōngshì, 往右走 wǎng yòu zǒu, 往左走 wǎng zuǒ zǒu, 超市 chāoshì, 便宜 piányi, 贵 guì, 钱 qián, 票 piào, 假期 jiàqī, 幸运 xìngyùn",
+     "slide": "[Cầu nối Anh – Trung] Dùng lại tranh Bông ốm và tranh siêu thị của phần tiếng Anh: rối Leo nói What's the matter? – I've got a cough. / It's too expensive!, rối Xiaomei nói 你怎么了？– 我咳嗽了。/ 太贵了！; con tìm điểm giống (too ↔ 太) và khác (ZH thêm 了 cuối câu; turn right ↔ 往右走). 1) Bài đầu vào YCT3 Đọc phần 2 – nối câu với tranh (5 câu, 8 phút): 我牙疼。(Wǒ yá téng.) / 办公室在大门旁边。(Bàngōngshì zài dàmén pángbiān.) / 这个玩具太贵了。(Zhège wánjù tài guì le.) / 我们去超市吧！(Wǒmen qù chāoshì ba!) / 他咳嗽了，在家休息。(Tā késou le, zài jiā xiūxi.) 2) YCT3 Đọc phần 3 – nối câu hỏi với câu trả lời, cùng 4 cặp của bài Đọc – viết Part 2 tiếng Anh (4 câu): 你怎么了？– 我咳嗽了。/ 这个多少钱？– 十美元。/ 我们去买东西吧？– 好，走吧！/ 办公室在哪儿？– 到了大门往右走。 3) [Chuyển ngữ] Bắt bẫy (NL4, Phiên dịch nhí): \"It's too expensive.\" → 太贵了 (không phải 很贵) / \"Turn left.\" → 往左走 (左 zuǒ khác 右 yòu). 4) [Chuyển ngữ] (NL3, 4 phút) Rối Leo nhắn 3 câu tiếng Anh, con nhắn lại cho rối Xiaomei bằng tiếng Trung: Bông has got a cough. She has to stay in bed. She can't go to school. → Bông咳嗽了。她要在床上休息。她不能去上学。(Bông késou le. Tā yào zài chuáng shang xiūxi. Tā bù néng qù shàngxué.) [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo đọc tin nhắn (4 câu, con tóm 3 ý chính): \"Bông isn't very well today. She's got a bad cough, so the doctor says she has to stay in bed. She can't go to school this week. Her mum is going to buy some medicine for her.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: Bông咳嗽了，医生说她要在床上休息。她这个星期不能去上学。她妈妈要去买药。 (Bông késou le, yīshēng shuō tā yào zài chuáng shang xiūxi. Tā zhège xīngqī bù néng qù shàngxué. Tā māma yào qù mǎi yào.)",
+     "truyen": "Bông去超市 — 冬天，Bông咳嗽了，在家休息。她好了以后，爸爸说：“我们去超市吧！”他们在车站坐公共汽车去超市。Bông想买一个大玩具鲨鱼，可是太贵了。她买了一个小的，很便宜，只要十美元。Bông说：“我真幸运！”(Dōngtiān, Bông késou le, zài jiā xiūxi. Tā hǎo le yǐhòu, bàba shuō: “Wǒmen qù chāoshì ba!” Tāmen zài chēzhàn zuò gōnggòng qìchē qù chāoshì. Bông xiǎng mǎi yí ge dà wánjù shāyú, kěshì tài guì le. Tā mǎi le yí ge xiǎo de, hěn piányi, zhǐ yào shí měiyuán. Bông shuō: “Wǒ zhēn xìngyùn!”)",
+     "baihat": "Giai điệu London Bridge – lời mới \"多少钱\": 它多少钱？十美元，十美元，十美元。(Tā duōshao qián? Shí měiyuán, shí měiyuán, shí měiyuán.) / 它多少钱？十美元。(Tā duōshao qián? Shí měiyuán.) / 非常便宜！(Fēicháng piányi!)"
+    }
+   }
+  },
+  {
+   "buoi": 3,
+   "unit": 1,
+   "label_buoi": "Buổi dạy 3. Unit 1 · Me and my day · Kỹ năng: dạng bài Nghe và Đọc – viết Movers, chiến lược làm bài (Larva U1 · Hello, It's Me)",
+   "web": [
+    {
+     "ngay": 5,
+     "label": "Ngày 5. Unit 1 · Ôn Larva U1 (quốc gia, ngôn ngữ) + đề Movers Nghe Part 1 (≤30 phút)",
+     "en": {
+      "tu": "Ôn: country, flag, language, america, england, france, germany, japan, korea, russia, vietnam, age | Ôn nhanh (Mở khóa): pilot, sweater, supermarket, cough",
+      "cum": "be from / speak two languages / the flag of Japan / could speak / look for",
+      "cau": "Where are you from? – I'm from Japan. / Which country is this flag from? – It's France. / How many languages can you speak? – I can speak three languages. / [Ngữ pháp: could = quá khứ của can] When I was five, I could speak English. / Movers Nghe Part 1 (mẫu): Can you see the boy with the flag? – Yes. – That's Leo. He's from England. / [Chuyển ngữ] (NL3) Nghe Xiaomei nói tiếng Trung, nói lại cho Leo bằng tiếng Anh: 我是中国人。我会说汉语和英语。→ I'm from China. I can speak Chinese and English.",
+      "truyen": "The Flag Game — The teacher shows the children a flag. 'Which country is this?' she asks. 'It's Japan!' shouts Bông. The next flag is from Russia. Leo is from England and Anna is from America. Xiaomei is from China. She could speak Chinese and English when she was five!",
+      "video": "Tìm YouTube: \"countries and flags song for kids where are you from\""
+     },
+     "zh": {
+      "tu": "Ôn: 国家 guójiā, 越南 Yuènán, 英国 Yīngguó, 美国 Měiguó, 法国 Fǎguó, 德国 Déguó, 日本 Rìběn, 韩国 Hánguó, 俄罗斯 Éluósī | Ôn nhanh (Mở khóa): 飞行员 fēixíngyuán, 毛衣 máoyī, 超市 chāoshì, 咳嗽 késou | Nghe làm quen (có tranh, không kiểm tra): 国旗 guóqí (= flag)",
+      "cum": "哪国人 nǎ guó rén / 哪个国家的国旗 nǎge guójiā de guóqí / 美国人 Měiguó rén / 日本人 Rìběn rén / 说汉语 shuō Hànyǔ / 会说三种语言 huì shuō sān zhǒng yǔyán",
+      "cau": "[Cầu nối] I'm from Japan. ↔ 我是日本人。· giống: tên nước nghe gần nhau (France ↔ 法国 Fǎguó, America ↔ 美国 Měiguó) · khác: EN: be from + nước; ZH: 是 + nước + 人 / 你是哪国人？(Nǐ shì nǎ guó rén?) / [Ngữ pháp: 是 + tên nước + 人] 我是越南人，Anna是美国人。(Wǒ shì Yuènán rén, Anna shì Měiguó rén.) / 这是哪个国家的国旗？——是法国的。(Zhè shì nǎge guójiā de guóqí? — Shì Fǎguó de.) / 你会说几种语言？(Nǐ huì shuō jǐ zhǒng yǔyán?) / 我会说三种语言。(Wǒ huì shuō sān zhǒng yǔyán.) / 我五岁的时候就会说英语。(Wǒ wǔ suì de shíhou jiù huì shuō Yīngyǔ.) / YCT3 Nghe phần 1 (mẫu, cùng tranh bài Nghe Part 1 tiếng Anh): 那个拿着国旗的男孩是谁？——是Leo，他是英国人。(Nàge názhe guóqí de nánhái shì shéi? — Shì Leo, tā shì Yīngguó rén.)",
+      "truyen": "这是哪个国家？— 老师拿出一面国旗，问：“这是哪个国家？”Bông大声说：“是日本！”下一面是俄罗斯的国旗。Leo是英国人，Anna是美国人，Xiaomei是中国人。Xiaomei五岁的时候就会说汉语和英语。(Lǎoshī ná chū yí miàn guóqí, wèn: “Zhè shì nǎge guójiā?” Bông dà shēng shuō: “Shì Rìběn!” Xià yí miàn shì Éluósī de guóqí. Leo shì Yīngguó rén, Anna shì Měiguó rén, Xiaomei shì Zhōngguó rén. Xiaomei wǔ suì de shíhou jiù huì shuō Hànyǔ hé Yīngyǔ.)",
+      "video": "Tìm YouTube: \"你是哪国人 儿歌 国家\""
+     }
+    },
+    {
+     "ngay": 6,
+     "label": "Ngày 6. Unit 1 · Ôn Larva U1 (gia đình, ngoại hình) + đề Movers Đọc – viết Part 1 (≤30 phút)",
+     "en": {
+      "tu": "Ôn: beard, moustache, curly, blond(e), parent, grandparent, granddaughter, grandson, daughter, son, grown-up, clown, pirate, hide, shout, must, well",
+      "cum": "has got a beard / curly hair / blond hair / look for / hide behind / shout loudly",
+      "cau": "My grandpa has got a white beard and a moustache. / Who's the girl with curly blond hair? – She's Mrs Smith's daughter. / You mustn't shout in the classroom. / Movers Đọc – viết Part 1 (mẫu): A man can have this on his face, under his nose. – a moustache / Your mum and dad are your ___. – parents / This person wears funny clothes and makes people laugh. – a clown",
+      "truyen": "Hide and Seek with Grandpa — Bông's grandparents visit her house. Grandpa has got a long white beard and a moustache. Bông hides behind the door. Grandpa looks for her. 'Where's my granddaughter?' he shouts. Bông laughs and Grandpa finds her. 'You must hide well next time!' he says. Then Grandma gives Bông a red flower.",
+      "video": "Tìm YouTube: \"describing people beard moustache curly hair for kids\""
+     },
+     "zh": {
+      "tu": "Ôn: 爷爷 yéye, 奶奶 nǎinai, 爸爸妈妈 bàba māma, 女儿 nǚ'ér, 孙女 sūnnǚ, 头发 tóufa, 小丑 xiǎochǒu, 找 zhǎo, 叫 jiào, 藏 cáng | Nghe làm quen (có tranh, không kiểm tra): 胡子 húzi (= beard), 卷发 juǎnfà (= curly hair)",
+      "cum": "白胡子 bái húzi / 长胡子 cháng húzi / 黄头发 huáng tóufa / 藏在门后面 cáng zài mén hòumiàn / 大声叫 dà shēng jiào / 一朵红花 yì duǒ hóng huā",
+      "cau": "[Cầu nối] Grandpa looks for Bông. ↔ 爷爷找Bông。· giống: Ai – làm gì – ai · khác: look for ↔ 找 (không có for); hide behind the door ↔ 藏在门后面 (cáng zài mén hòumiàn) / 我爷爷有白胡子。(Wǒ yéye yǒu bái húzi.) / 那个卷发、黄头发的女孩是谁？——她是史密斯太太的女儿。(Nàge juǎnfà, huáng tóufa de nǚhái shì shéi? — Tā shì Shǐmìsī tàitai de nǚ'ér.) / 在教室里不要大声叫！(Zài jiàoshì lǐ bú yào dà shēng jiào!) / [Ngữ pháp: 因为……所以……] 因为Bông在门后面，所以爷爷找不到她。(Yīnwèi Bông zài mén hòumiàn, suǒyǐ yéye zhǎo bú dào tā.) / 爷爷说：“我的孙女在哪儿？”(Yéye shuō: “Wǒ de sūnnǚ zài nǎr?”) / 奶奶送给Bông一朵红花。(Nǎinai sòng gěi Bông yì duǒ hóng huā.)",
+      "truyen": "爷爷找Bông — 爷爷奶奶来Bông家。爷爷有长长的白胡子。Bông藏在门后面，爷爷找她。爷爷大声说：“我的孙女在哪儿？”Bông笑了，爷爷找到了她。爷爷说：“下次你要藏好！”然后奶奶送给Bông一朵红花。(Yéye nǎinai lái Bông jiā. Yéye yǒu chángcháng de bái húzi. Bông cáng zài mén hòumiàn, yéye zhǎo tā. Yéye dà shēng shuō: “Wǒ de sūnnǚ zài nǎr?” Bông xiào le, yéye zhǎodào le tā. Yéye shuō: “Xià cì nǐ yào cáng hǎo!” Ránhòu nǎinai sòng gěi Bông yì duǒ hóng huā.)",
+      "video": "Tìm YouTube: \"爷爷 白胡子 头发 外貌 儿童 中文\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "country, flag, language, Japan, France, Germany, Korea, Vietnam, beard, moustache, curly, blond, parents, grandparents, granddaughter, grandson, grown-up, clown, hide, shout, look for",
+     "slide": "[Lời cô] Vào bài: Good afternoon, class! 同学们好！· Chuyển ý: Look at the pictures first. 先看图片。· Nhắc: Write neatly, please. 写清楚。· Khen: Great job! 做得很好！· Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): language / 语言, grown-up / 大人 1) Nghe Part 1 Movers – nối tên với người trong tranh (5 câu, 10 phút; chiến lược: nhìn tranh trước, nghe tên rồi nghe chi tiết tóc, râu, việc đang làm): Mr Brown has got a beard and a moustache / Anna has got curly blond hair / Leo is hiding behind the tree / Grandma is looking for her glasses / The clown is shouting. 2) Đọc – viết Part 1 – đọc định nghĩa, chọn từ trong khung rồi chép (5 câu; chiến lược: gạch chân từ khóa, chép đúng chính tả): This person is your mum's or dad's mum. – a grandmother / A man can have this under his nose. – a moustache / This is your mum and dad's son. – a brother / This person makes children laugh at the circus. – a clown / People in different countries speak these. – languages. 3) Đọc – viết Part 2 – chọn câu đáp A/B/C (4 câu): Where are you from? – I'm from Korea. / Who's that man? – He's my grandpa. / Can you speak French? – No, I can't. 4) [Chuyển ngữ] (NL3, 4 phút) Rối Xiaomei nói 3 câu tiếng Trung, con nói lại cho rối Leo bằng tiếng Anh: 我爸爸是英国人。我妈妈是法国人。我会说英语和法语。→ My dad is from England. My mum is from France. I can speak English and French. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo kể (5 câu, con tóm 3 ý chính): \"This is a photo of my family. My dad is from England and my mum is from France. At home we speak English and French. My grandpa lives with us, and he's got a big beard. Now I'm learning Chinese at school, too.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: Leo的爸爸是英国人，妈妈是法国人。他们在家说英语和法语。Leo现在在学校学习汉语。 (Leo de bàba shì Yīngguó rén, māma shì Fǎguó rén. Tāmen zài jiā shuō Yīngyǔ hé Fǎyǔ. Leo xiànzài zài xuéxiào xuéxí Hànyǔ.)",
+     "truyen": "The Family Photo — Anna is from America. She shows Bông a family photo. 'This is my grandpa. He's got a beard and a moustache. This is my grandma. She's got curly hair. These are my parents. My dad is from England and my mum is from France, so I can speak two languages: English and French!' Bông says, 'Wow! I'm from Vietnam and I can speak Vietnamese, English and Chinese too!'",
+     "baihat": "Giai điệu Mary Had a Little Lamb – lời mới \"Where Are You From?\": Where are you from, from, from? / Where are you from? / I'm from Vietnam, Vietnam, Vietnam. / I'm from Vietnam!"
+    },
+    "zh": {
+     "flash": "国家 guójiā, 国旗 guóqí, 语言 yǔyán, 日本 Rìběn, 法国 Fǎguó, 德国 Déguó, 韩国 Hánguó, 越南 Yuènán, 大胡子 dà húzi, 小胡子 xiǎo húzi, 卷发 juǎnfà, 黄头发 huáng tóufa, 爸爸妈妈 bàba māma, 爷爷奶奶 yéye nǎinai, 孙女 sūnnǚ, 孙子 sūnzi, 大人 dàrén, 小丑 xiǎochǒu, 藏 cáng, 大声叫 dà shēng jiào, 找 zhǎo",
+     "slide": "[Cầu nối Anh – Trung] Cùng thẻ lá cờ và ảnh gia đình Anna: rối Leo nói I'm from France. / Anna can speak English and French., rối Xiaomei nói 我是法国人。/ Anna会说英语和法语。; con tìm điểm giống (tên nước nghe gần nhau: France ↔ 法国 Fǎguó, America ↔ 美国 Měiguó) và khác (be from ↔ 是…人). 1) YCT3 Nghe phần 1 – dùng lại 5 tranh của bài Nghe Part 1 tiếng Anh, nghe câu, nhìn tranh đánh √/× (5 câu, 8 phút; chiến lược: nhìn tranh, đoán từ trước khi nghe): Brown先生有胡子。(Brown xiānsheng yǒu húzi.) / Anna是卷发、黄头发。(Anna shì juǎnfà, huáng tóufa.) / Leo藏在树后面。(Leo cáng zài shù hòumiàn.) / 奶奶在找她的眼镜。(Nǎinai zài zhǎo tā de yǎnjìng.) / 那个小丑在大声叫。(Nàge xiǎochǒu zài dà shēng jiào.) 2) YCT3 Nghe phần 2 – nghe câu hỏi, chọn tranh A/B/C, cùng nội dung bài Đọc – viết Part 2 tiếng Anh (3 câu): 你是哪国人？– 我是韩国人。(Nǐ shì nǎ guó rén? – Wǒ shì Hánguó rén.) / 那个男人是谁？– 他是我爷爷。(Nàge nánrén shì shéi? – Tā shì wǒ yéye.) / 你会说法语吗？– 不会。(Nǐ huì shuō Fǎyǔ ma? – Bú huì.) 3) Luyện lại bài Đọc – viết Part 1 tiếng Anh: nhìn 5 tranh của bài, con nói từ tiếng Trung (3 phút): 奶奶 nǎinai / 胡子 húzi / 哥哥 gēge / 小丑 xiǎochǒu / 语言 yǔyán.",
+     "truyen": "我的家 — Anna是美国人。她给Bông看照片：“这是我爷爷，他有胡子。这是我奶奶，她是卷发。这是我爸爸妈妈。我爸爸是英国人，我妈妈是法国人，所以我会说英语和法语！”Bông说：“哇！我是越南人，我会说越南语、英语和汉语！”(Anna shì Měiguó rén. Tā gěi Bông kàn zhàopiàn: “Zhè shì wǒ yéye, tā yǒu húzi. Zhè shì wǒ nǎinai, tā shì juǎnfà. Zhè shì wǒ bàba māma. Wǒ bàba shì Yīngguó rén, wǒ māma shì Fǎguó rén, suǒyǐ wǒ huì shuō Yīngyǔ hé Fǎyǔ!” Bông shuō: “Wà! Wǒ shì Yuènán rén, wǒ huì shuō Yuènányǔ, Yīngyǔ hé Hànyǔ!”)",
+     "baihat": "Giai điệu Mary Had a Little Lamb – lời mới \"你是哪国人\": 你是哪国人，哪国人，哪国人？(Nǐ shì nǎ guó rén, nǎ guó rén, nǎ guó rén?) / 你是哪国人？(Nǐ shì nǎ guó rén?) / 我是越南人，越南人，越南人。(Wǒ shì Yuènán rén, Yuènán rén, Yuènán rén.) / 我是越南人！(Wǒ shì Yuènán rén!)"
+    }
+   }
+  },
+  {
+   "buoi": 4,
+   "unit": 1,
+   "label_buoi": "Buổi dạy 4. Unit 1 · Me and my day · Kỹ năng: dạng bài đề YCT3, chuyển ngữ có bẫy (Larva U2 · My Day)",
+   "web": [
+    {
+     "ngay": 7,
+     "label": "Ngày 7. Unit 1 · Ôn Larva U2 (giờ giấc, hoạt động hằng ngày) + đề YCT3 Nghe phần 1–2 (≤30 phút)",
+     "en": {
+      "tu": "Ôn: always, usually, sometimes, shower, half, quarter, past, minute, meal, after | Từ nối Larva U1: country, language, grown-up",
+      "cum": "half past seven / quarter past six / quarter to eight / have a shower / how long / for thirty minutes",
+      "cau": "What time is it? – It's quarter past six. / I always have a shower after dinner. / How long do you study every day? – I study for thirty minutes. / [Ngữ pháp: trạng từ tần suất đứng trước động từ thường] I usually have my first meal at seven o'clock. / Grown-ups in my country usually have lunch at twelve o'clock.",
+      "truyen": "Xiaomei's Day — Xiaomei always gets up at half past six. She has a shower and has breakfast at quarter past seven. After school she sometimes plays with Bông. She usually does her homework for forty minutes. Her last meal is dinner at seven o'clock.",
+      "video": "Tìm YouTube: \"my daily routine song for kids always usually sometimes\""
+     },
+     "zh": {
+      "tu": "Ôn: 半 bàn, 十五分 shíwǔ fēn, 每 měi, 分钟 fēnzhōng, 洗澡 xǐzǎo, 完 wán, 吃饭 chīfàn, 有时候 yǒu shíhou | Từ nối Larva U1: 国家 guójiā, 大人 dàrén, 语言 yǔyán (nghe làm quen từ ngày 1) | Nghe làm quen (có tranh, không kiểm tra; đã nghe ở ngày 1): 总是 zǒngshì (= always), 通常 tōngcháng (= usually)",
+      "cum": "七点半 qī diǎn bàn / 六点十五分 liù diǎn shíwǔ fēn / 每天 měi tiān / 三十分钟 sānshí fēnzhōng / 吃完晚饭 chī wán wǎnfàn / 洗澡 xǐzǎo",
+      "cau": "[Cầu nối] I always have a shower after dinner. ↔ 我总是吃完晚饭就洗澡。(Wǒ zǒngshì chī wán wǎnfàn jiù xǐzǎo.) · giống: hai việc nối tiếp nhau · khác: after dinner cuối câu ↔ 吃完晚饭 đầu câu, thêm 就; always ↔ 总是 (cùng đứng trước động từ); half past seven ↔ 七点半 (半 sau giờ) / 现在几点？(Xiànzài jǐ diǎn?) / 现在六点十五分。(Xiànzài liù diǎn shíwǔ fēn.) / 我总是吃完晚饭就洗澡。(Wǒ zǒngshì chī wán wǎnfàn jiù xǐzǎo.) / 你每天学习多久？(Nǐ měi tiān xuéxí duō jiǔ?) / 我学习三十分钟。(Wǒ xuéxí sānshí fēnzhōng.) / [Ngữ pháp: từ chỉ thời gian, tần suất đứng trước động từ] 我通常七点吃早饭。(Wǒ tōngcháng qī diǎn chī zǎofàn.) / 在我们国家，大人通常十二点吃午饭。(Zài wǒmen guójiā, dàrén tōngcháng shí'èr diǎn chī wǔfàn.)",
+      "truyen": "Xiaomei的一天 — Xiaomei总是六点半起床，洗完澡，七点十五分吃早饭。放学以后，她有时候和Bông一起玩。她通常做四十分钟作业。晚上七点吃晚饭。(Xiaomei zǒngshì liù diǎn bàn qǐchuáng, xǐ wán zǎo, qī diǎn shíwǔ fēn chī zǎofàn. Fàngxué yǐhòu, tā yǒu shíhou hé Bông yìqǐ wán. Tā tōngcháng zuò sìshí fēnzhōng zuòyè. Wǎnshang qī diǎn chī wǎnfàn.)",
+      "video": "Tìm YouTube: \"我的一天 儿歌 几点起床\""
+     }
+    },
+    {
+     "ngay": 8,
+     "label": "Ngày 8. Unit 1 · Ôn Larva U2 (nhà, tần suất) + đề YCT3 Đọc phần 1–2; Hộp ôn",
+     "en": {
+      "tu": "Ôn: balcony, basement, roof, stairs, upstairs, downstairs, lift, blanket, towel, bottle, glass, plate, seat, dry, wet, snow, never, often, last, second, third | Hộp ôn: moustache, granddaughter",
+      "cum": "how often / take the lift / go upstairs / go downstairs / a glass of water / a dry towel / on the second floor",
+      "cau": "How often do you take the lift? – I never take the lift. I always walk upstairs. / How often do you play on the computer? – Once a week. / My flat is on the third floor. / Can I have a dry towel? My hair is wet. / There's a bottle of milk and a glass on the table. / When it snows, we put a blanket on the seat on the balcony.",
+      "truyen": "A Snowy Day at Grandma's — Leo visits his grandma in England. It's snowing! Leo plays outside and his coat is wet. Grandma gives him a dry towel and a warm blanket. They have hot milk in big glasses upstairs. 'How often does it snow here?' asks Leo. 'Very often in winter!' says Grandma.",
+      "video": "Tìm YouTube: \"parts of a house upstairs downstairs balcony basement kids\""
+     },
+     "zh": {
+      "tu": "Ôn: 杯子 bēizi, 电脑 diànnǎo, 每 měi, 常常 chángcháng, 从来不 cónglái bù, 楼梯 lóutī, 楼上 lóushàng, 楼下 lóuxià, 毯子 tǎnzi, 湿 shī, 干 gān, 牛奶 niúnǎi | Ôn khóa trước: 下雪 xià xuě, 阳台 yángtái | Hộp ôn: 胡子 húzi, 孙女 sūnnǚ | Nghe làm quen (có tranh, không kiểm tra): 电梯 diàntī (= lift), 毛巾 máojīn (= towel), 总是 zǒngshì (= always, đã nghe ở ngày 1)",
+      "cum": "一个杯子 yí ge bēizi / 玩电脑 wán diànnǎo / 坐电梯 zuò diàntī / 走楼梯上楼 zǒu lóutī shàng lóu / 在三楼 zài sān lóu / 一条干毛巾 yì tiáo gān máojīn / 每个星期 měi ge xīngqī",
+      "cau": "[Cầu nối] There's a glass on the table. ↔ 桌子上有一个杯子。· giống: chỉ chỗ đồ vật · khác: EN: There's + vật + on the table; ZH: 桌子上 + 有 + vật (nơi chốn đứng đầu) / 你多久坐一次电梯？——我从来不坐电梯，我总是走楼梯上楼。(Nǐ duō jiǔ zuò yí cì diàntī? — Wǒ cónglái bú zuò diàntī, wǒ zǒngshì zǒu lóutī shàng lóu.) / 我家在三楼。(Wǒ jiā zài sān lóu.) / 我每个星期玩一次电脑。(Wǒ měi ge xīngqī wán yí cì diànnǎo.) / 我的头发湿了，可以给我一条干毛巾吗？(Wǒ de tóufa shī le, kěyǐ gěi wǒ yì tiáo gān máojīn ma?) / 下雪的时候，我们在阳台的椅子上放一条毯子。(Xià xuě de shíhou, wǒmen zài yángtái de yǐzi shang fàng yì tiáo tǎnzi.) / YCT3 Đọc phần 2 (mẫu, nối câu với tranh): 桌子上有一个杯子。(Zhuōzi shàng yǒu yí ge bēizi.) / 这儿冬天常常下雪吗？(Zhèr dōngtiān chángcháng xià xuě ma?) / [Chuyển ngữ] (NL3) Grandma nhắn tiếng Anh, con nhắn lại cho Xiaomei bằng tiếng Trung: It's snowing! Leo is cold. Give him a glass of hot milk. → 下雪了！Leo很冷。给他一杯热牛奶。(Xià xuě le! Leo hěn lěng. Gěi tā yì bēi rè niúnǎi.)",
+      "truyen": "下雪天去奶奶家 — Leo去英国看奶奶。下雪了！Leo在外面玩，外套湿了。奶奶给他一条干毛巾和一条暖和的毯子。他们在楼上用大杯子喝热牛奶。Leo问：“这儿多久下一次雪？”奶奶说：“冬天常常下雪！”(Leo qù Yīngguó kàn nǎinai. Xià xuě le! Leo zài wàimiàn wán, wàitào shī le. Nǎinai gěi tā yì tiáo gān máojīn hé yì tiáo nuǎnhuo de tǎnzi. Tāmen zài lóushàng yòng dà bēizi hē rè niúnǎi. Leo wèn: “Zhèr duō jiǔ xià yí cì xuě?” Nǎinai shuō: “Dōngtiān chángcháng xià xuě!”)",
+      "video": "Tìm YouTube: \"我的家 楼上 楼下 房间 儿歌 中文\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "always, usually, sometimes, never, often, how often, shower, half past, quarter past, minute, meal, after, balcony, basement, upstairs, downstairs, lift, towel, blanket, glass, dry, wet",
+     "slide": "[Lời cô] Vào bài: Good morning, everyone! 大家早上好！· Chuyển ý: Now, it's Chinese time. 现在是中文时间。· Nhắc: Put your hand up. 请举手。· Khen: Brilliant! 真棒！· Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): how often / 多久……一次 (duō jiǔ … yí cì), quarter past / 十五分 1) Nghe Part 3 Movers – nghe và nối ngày/việc với tranh (5 câu, 10 phút): On Monday Leo has a shower at quarter past six / On Tuesday he takes the lift / On Wednesday he has dinner on the balcony / On Thursday he plays in the basement / On Friday he puts a blanket on his bed. 2) Sắp xếp từ thành câu: always / I / a shower / have / after dinner → I always have a shower after dinner. / How often / you / take / the lift / do → How often do you take the lift? 3) Khoanh từ đúng: My hair is (wet / dry), so I need a towel. / I live on the (third / three) floor.",
+     "truyen": "Leo's Week — On Monday Leo always gets up at quarter past six. He has a shower and goes downstairs for breakfast. He never takes the lift because he likes walking. After school he often plays in the basement with his friends. In the evening he sometimes has dinner on the balcony. Before bed he puts a big blanket on his bed and reads for twenty minutes.",
+     "baihat": "Giai điệu Here We Go Round the Mulberry Bush – lời mới \"This Is the Way\": This is the way I have a shower, have a shower, have a shower. / This is the way I have a shower at quarter past six in the morning."
+    },
+    "zh": {
+     "flash": "总是 zǒngshì, 通常 tōngcháng, 有时候 yǒu shíhou, 从来不 cónglái bù, 常常 chángcháng, 多久……一次 duō jiǔ … yí cì, 洗澡 xǐzǎo, 半 bàn, 六点十五分 liù diǎn shíwǔ fēn, 分钟 fēnzhōng, 吃饭 chīfàn, 以后 yǐhòu, 阳台 yángtái, 地下室 dìxiàshì, 楼上 lóushàng, 楼下 lóuxià, 电梯 diàntī, 毛巾 máojīn, 毯子 tǎnzi, 杯子 bēizi, 干 gān, 湿 shī",
+     "slide": "[Cầu nối Anh – Trung] Cùng tranh thời gian biểu một tuần của Leo ở phần tiếng Anh: rối Leo nói I get up at quarter past six. I always have a shower after dinner., rối Xiaomei nói 我六点十五分起床。我总是吃完饭就洗澡。; con tìm điểm khác: giờ cuối câu (EN) ↔ trước động từ (ZH); after dinner ↔ 吃完饭 đầu câu. 1) YCT3 Nghe phần 3 – dùng lại tranh thời gian biểu của bài Nghe Part 3 tiếng Anh, nghe đối thoại, chọn tranh A/B/C (4 câu, 8 phút): 男：星期一你几点洗澡？女：六点十五分。(Nán: Xīngqīyī nǐ jǐ diǎn xǐzǎo? Nǚ: Liù diǎn shíwǔ fēn.) / 男：星期二你坐电梯吗？女：坐。(Nán: Xīngqī'èr nǐ zuò diàntī ma? Nǚ: Zuò.) / 男：星期三你在哪儿吃晚饭？女：在阳台上。(Nán: Xīngqīsān nǐ zài nǎr chī wǎnfàn? Nǚ: Zài yángtái shang.) / 男：你家在几楼？女：三楼。(Nán: Nǐ jiā zài jǐ lóu? Nǚ: Sān lóu.) 2) [Chuyển ngữ] Bắt bẫy (NL4, Phiên dịch nhí, 6 câu): \"half past seven\" → 七点半 (không nói 半七点) / \"I get up at seven.\" → 我七点起床 (giờ đứng trước động từ, không nói 我起床七点) / \"quarter past six\" → 六点十五分 (không nói 十五分六点) / \"I never take the lift.\" → 我从来不坐电梯 (cónglái bú zuò diàntī) / \"every day\" → 每天 / \"I live on the third floor.\" → 我家在三楼 (tầng = số + 楼, không nói 楼三). 3) [Chuyển ngữ] (NL3, 4 phút) Rối Leo kể 3 câu tiếng Anh về tuần của mình, con kể lại cho rối Xiaomei: On Monday I get up at quarter past six. I have a shower. Then I have breakfast. → 星期一我六点十五分起床。我先洗澡，再吃早饭。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo kể (5 câu, con tóm 3 ý chính): \"I live on the third floor of a tall building. I never take the lift – I always walk down the stairs. On school days I get up at quarter past six. I have a shower and then I have breakfast with my sister. At half past seven I go to school.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: Leo家在三楼，他从来不坐电梯。他六点十五分起床，先洗澡，再吃早饭。七点半他去上学。 (Leo jiā zài sān lóu, tā cónglái bú zuò diàntī. Tā liù diǎn shíwǔ fēn qǐchuáng, xiān xǐzǎo, zài chī zǎofàn. Qī diǎn bàn tā qù shàngxué.)",
+     "truyen": "Leo的一个星期 — 星期一，Leo总是六点十五分起床。他先洗澡，再下楼吃早饭。他从来不坐电梯，因为他喜欢走路。放学以后，他常常和朋友们在地下室玩。晚上，他有时候在阳台上吃晚饭。睡觉以前，他在床上放一条大毯子，看二十分钟书。(Xīngqīyī, Leo zǒngshì liù diǎn shíwǔ fēn qǐchuáng. Tā xiān xǐzǎo, zài xià lóu chī zǎofàn. Tā cónglái bú zuò diàntī, yīnwèi tā xǐhuan zǒulù. Fàngxué yǐhòu, tā chángcháng hé péngyoumen zài dìxiàshì wán. Wǎnshang, tā yǒu shíhou zài yángtái shang chī wǎnfàn. Shuìjiào yǐqián, tā zài chuáng shang fàng yì tiáo dà tǎnzi, kàn èrshí fēnzhōng shū.)",
+     "baihat": "Giai điệu Here We Go Round the Mulberry Bush – lời mới \"这样洗澡\": 我们每天这样洗澡，这样洗澡，这样洗澡，(Wǒmen měi tiān zhèyàng xǐzǎo, zhèyàng xǐzǎo, zhèyàng xǐzǎo,) / 我们每天这样洗澡，早上六点十五分。(Wǒmen měi tiān zhèyàng xǐzǎo, zǎoshang liù diǎn shíwǔ fēn.)"
+    }
+   }
+  },
+  {
+   "buoi": 5,
+   "unit": 1,
+   "label_buoi": "Buổi dạy 5. Unit 1 · Me and my day · Nói: luyện Movers Nói phần 1–4 và YCT口试（初级）第一–三部分 theo cặp, theo tranh",
+   "web": [
+    {
+     "ngay": 9,
+     "label": "Ngày 9. Unit 1 · Ôn tuần: đề luyện ngắn hai tiếng; từ con hay sai trong tuần · Trang luyện nói YCT口试（初级）第一部分",
+     "en": {
+      "tu": "Ôn (hay sai): moustache / beard, granddaughter / grandson, curly / straight, quarter / half, often / never, upstairs / downstairs, wet / dry",
+      "cum": "quarter past six (không phải quarter to six) / has got curly hair / walk upstairs / a dry towel",
+      "cau": "Movers Đọc – viết Part 2 (mẫu): Bông: How often do you have a shower? Leo: Every day. / Bông: What time do you get up? Leo: At quarter past six. / Bông: Who's the man with the beard? Leo: He's my grandpa. / Movers Nghe Part 2 (mẫu, viết số/tên): My granddaughter is seven. Her name is A-N-N-A.",
+      "truyen": "Two Grandpas — Anna's grandpa has got a beard but no moustache. Leo's grandpa has got a moustache but no beard. Both grandpas get up at quarter past six. Anna's grandpa usually walks upstairs, but Leo's grandpa always takes the lift.",
+      "video": "Tìm YouTube: \"telling the time quarter past half past song for kids\""
+     },
+     "zh": {
+      "tu": "Ôn (hay sai): 小胡子 xiǎo húzi / 大胡子 dà húzi, 孙女 sūnnǚ / 孙子 sūnzi, 卷发 juǎnfà / 直发 zhífà, 十五分 shíwǔ fēn / 半 bàn, 常常 chángcháng / 从来不 cónglái bù, 楼上 lóushàng / 楼下 lóuxià, 湿 shī / 干 gān",
+      "cum": "六点十五分 liù diǎn shíwǔ fēn (không phải 五点四十五分 wǔ diǎn sìshíwǔ fēn) / 大胡子 dà húzi / 走楼梯上楼 zǒu lóutī shàng lóu / 一条干毛巾 yì tiáo gān máojīn",
+      "cau": "[Cầu nối] At quarter past six. ↔ 六点十五分。· giống: giờ = số + phút · khác: quarter past six ↔ 六点十五分, half past six ↔ 六点半 (EN phút trước giờ, ZH giờ trước phút) / YCT3 Nghe phần 4 (mẫu, nghe chọn đáp án chữ): 问：Xiaomei几点起床？(Wèn: Xiaomei jǐ diǎn qǐchuáng?) A. 六点 B. 六点半 C. 七点半 / 你多久洗一次澡？——每天。(Nǐ duō jiǔ xǐ yí cì zǎo? — Měi tiān.) / 有大胡子的男人是谁？——他是我爷爷。(Yǒu dà húzi de nánrén shì shéi? — Tā shì wǒ yéye.) / YCT口试（初级）第一部分 听后重复 – Trang luyện nói (mẫu, ≤8 phút; con nghe mỗi câu 1 lần rồi ghi âm nói lại): 我每天六点十五分起床。(Wǒ měi tiān liù diǎn shíwǔ fēn qǐchuáng.) / 我爷爷有大胡子。(Wǒ yéye yǒu dà húzi.) / 我不坐电梯，我走楼梯上楼。(Wǒ bú zuò diàntī, wǒ zǒu lóutī shàng lóu.) / 我家在三楼。(Wǒ jiā zài sān lóu.) / 我每天洗澡。(Wǒ měi tiān xǐzǎo.)",
+      "truyen": "两个爷爷 — Anna的爷爷有大胡子，没有小胡子。Leo的爷爷有小胡子，没有大胡子。两个爷爷每天都六点十五分起床。Anna的爷爷通常走楼梯上楼，Leo的爷爷总是坐电梯。(Anna de yéye yǒu dà húzi, méiyǒu xiǎo húzi. Leo de yéye yǒu xiǎo húzi, méiyǒu dà húzi. Liǎng ge yéye měi tiān dōu liù diǎn shíwǔ fēn qǐchuáng. Anna de yéye tōngcháng zǒu lóutī shàng lóu, Leo de yéye zǒngshì zuò diàntī.)",
+      "video": "Tìm YouTube: \"认识时间 几点几分 儿歌\""
+     }
+    },
+    {
+     "ngay": 10,
+     "label": "Ngày 10. Unit 1 · Đảo ôn từ không tranh + đề Movers Đọc – viết Part 3 (≤30 phút)",
+     "en": {
+      "tu": "Ôn (không tranh, nghe – chọn chữ): country, flag, language, beard, curly, parent, hide, shout, always, sometimes, usually, minute, meal, basement, balcony, roof, stairs, towel, plate",
+      "cum": "look for / hide behind / have a shower / how long / how often",
+      "cau": "Movers Đọc – viết Part 3 (mẫu, chọn từ điền vào truyện): Last Sunday Bông's family had a big (meal). Grandpa sat on the (balcony). Bông wanted to (hide) from her brother, so she ran down the (stairs) to the (basement). / Chọn tên đúng cho truyện: Bông's Sunday / Bông's School Day / Bông's Holiday / [Chuyển ngữ] (NL3) Nghe Mum gọi bằng tiếng Trung, nói lại cho Leo bằng tiếng Anh: 吃饭了！Bông在楼下。哥哥找了十分钟。→ Dinner time! Bông is downstairs. Her brother looked for her for ten minutes.",
+      "truyen": "Bông's Sunday — Last Sunday Bông's family had a big meal at home. Grandpa sat on the balcony and read a book. Bông wanted to hide from her brother, so she ran down the stairs to the basement. Her brother looked for her for ten minutes. Then Mum shouted, 'Dinner time!' and Bông came upstairs.",
+      "video": "Tìm YouTube: \"hide and seek song for kids\""
+     },
+     "zh": {
+      "tu": "Ôn (không tranh, nghe – chọn chữ): 国家 guójiā, 国旗 guóqí, 胡子 húzi, 卷发 juǎnfà, 爸爸妈妈 bàba māma, 藏 cáng, 叫 jiào, 总是 zǒngshì, 有时候 yǒu shíhou, 通常 tōngcháng, 分钟 fēnzhōng, 吃饭 chīfàn, 阳台 yángtái, 地下室 dìxiàshì, 楼梯 lóutī, 毛巾 máojīn, 盘子 pánzi",
+      "cum": "因为……所以…… yīnwèi…suǒyǐ… / 一家人 yìjiārén / 在阳台上看书 zài yángtái shang kàn shū / 跑下楼梯 pǎo xià lóutī / 跑到地下室 pǎo dào dìxiàshì / 十分钟 shí fēnzhōng",
+      "cau": "[Cầu nối] Her brother looked for her for ten minutes. ↔ 哥哥找了十分钟。· giống: thời lượng = số + phút · khác: for ten minutes cuối câu EN; ZH 找了 + 十分钟 (thời lượng sau động từ, còn giờ cụ thể đứng trước động từ) / 上个星期天，Bông一家人在家吃饭。(Shàng ge xīngqītiān, Bông yìjiārén zài jiā chīfàn.) / 爷爷坐在阳台上看书。(Yéye zuò zài yángtái shang kàn shū.) / [Ngữ pháp: 因为……所以……] 因为Bông不想让哥哥找到她，所以她跑下楼梯，跑到地下室。(Yīnwèi Bông bù xiǎng ràng gēge zhǎodào tā, suǒyǐ tā pǎo xià lóutī, pǎo dào dìxiàshì.) / 哥哥找了十分钟。(Gēge zhǎo le shí fēnzhōng.) / 妈妈大声说：“吃饭了！”(Māma dà shēng shuō: “Chīfàn le!”) / Chọn tên đúng cho truyện: Bông的星期天 / Bông在学校的一天 / Bông的假期",
+      "truyen": "Bông的星期天 — 上个星期天，Bông一家人在家一起吃大餐。爷爷坐在阳台上看书。Bông不想让哥哥找到她，就跑下楼梯，跑到地下室。哥哥找了十分钟。妈妈大声说：“吃饭了！”Bông就上楼来了。(Shàng ge xīngqītiān, Bông yìjiārén zài jiā yìqǐ chī dàcān. Yéye zuò zài yángtái shang kàn shū. Bông bù xiǎng ràng gēge zhǎodào tā, jiù pǎo xià lóutī, pǎo dào dìxiàshì. Gēge zhǎo le shí fēnzhōng. Māma dà shēng shuō: “Chīfàn le!” Bông jiù shàng lóu lái le.)",
+      "video": "Tìm YouTube: \"捉迷藏 儿歌 中文\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "beard, moustache, curly, blond, grandparents, granddaughter, hide, look for, always, usually, sometimes, never, often, quarter past, half past, balcony, basement, upstairs, downstairs, lift",
+     "slide": "[Lời cô] Vào bài: Hello, class! Let's practise speaking. 同学们好！我们来练习说话。· Chuyển ý: Work in pairs. 两个人一组。· Nhắc: Your turn! 该你了！· Khen: Well done! 说得很好！· Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): difference / 不一样, grandparents / 爷爷奶奶 1) Movers Nói phần 1 – tìm 6 điểm khác nhau giữa 2 tranh nhà (theo cặp, 5 phút): In my picture the man has got a beard. In your picture he's got a moustache. / In my picture the girl is on the balcony. In your picture she's in the basement. / In my picture it's quarter past six. In your picture it's half past six. 2) Movers Nói phần 2 – kể truyện tranh 4 khung \"Bông's Sunday\" (bắt đầu: Bông's family is having a big meal…). 3) Movers Nói phần 3 – chọn từ khác loại và nói vì sao: towel / blanket / glass / Japan → Japan is a country. / always / never / often / upstairs. 4) Movers Nói phần 4 – câu hỏi cá nhân: What time do you get up? How often do you take the lift? Where is your grandparents' house? 5) [Chuyển ngữ] (NL6, 4 phút) Phỏng vấn hai tiếng: rối Leo hỏi tiếng Anh, rối Xiaomei hỏi tiếng Trung; con trả lời đúng tiếng, rồi kể lại câu trả lời của bạn cho rối kia bằng tiếng kia: What time do you get up? / 你几点起床？→ Anna gets up at half past six. / Anna六点半起床。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo kể (5 câu, con tóm 3 ý chính): \"Yesterday I asked Anna about her day. She gets up at half past six every morning. She never takes the lift because she lives on the second floor. Her grandparents' house is near the park. She visits them every Sunday.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: Anna每天六点半起床。她家在二楼，所以她从来不坐电梯。她每个星期天去看爷爷奶奶。 (Anna měi tiān liù diǎn bàn qǐchuáng. Tā jiā zài èr lóu, suǒyǐ tā cónglái bú zuò diàntī. Tā měi ge xīngqītiān qù kàn yéye nǎinai.)",
+     "truyen": "Bông's Big Family — Bông lives in a tall building. Her flat is on the third floor. Her grandparents live downstairs on the first floor. Grandpa has got a white beard and Grandma has got curly hair. Every Sunday the family has a big meal together on the balcony. Bông usually helps Grandma, and she always puts the plates and glasses on the table. After the meal they play hide and seek. Bông often hides in the basement!",
+     "baihat": "Giai điệu The Wheels on the Bus – lời mới \"Up and Down the Stairs\": I walk up the stairs to the third floor, third floor, third floor. / I walk up the stairs to the third floor, I never take the lift!"
+    },
+    "zh": {
+     "flash": "大胡子 dà húzi, 小胡子 xiǎo húzi, 卷发 juǎnfà, 黄头发 huáng tóufa, 爷爷奶奶 yéye nǎinai, 孙女 sūnnǚ, 藏 cáng, 找 zhǎo, 总是 zǒngshì, 通常 tōngcháng, 有时候 yǒu shíhou, 从来不 cónglái bù, 常常 chángcháng, 六点十五分 liù diǎn shíwǔ fēn, 半 bàn, 阳台 yángtái, 地下室 dìxiàshì, 楼上 lóushàng, 楼下 lóuxià, 电梯 diàntī",
+     "slide": "[Cầu nối Anh – Trung] Dùng lại tranh 'Bông's Sunday' của Movers Nói phần 2: con kể 1 câu tiếng Anh với rối Leo, rồi 1 câu cùng tranh bằng tiếng Trung với rối Xiaomei: Bông's family is having a big meal. ↔ Bông一家人在吃饭。/ Bông is running down the stairs. ↔ Bông正在跑下楼梯。(Bông zhèngzài pǎo xià lóutī.); con tìm điểm giống và khác (is …-ing ↔ 在 + động từ; down the stairs ↔ 下楼梯, hướng đi gắn vào động từ). Cô đóng vai giám khảo YCT口试（初级）, con thi từng em hoặc theo cặp. 1) YCT口试（初级）第一部分 听后重复 (mẫu, cô đọc mỗi câu 1 lần, con nói lại 1 lần; 5 câu, 4 phút): 我爷爷有大胡子。(Wǒ yéye yǒu dà húzi.) / 我每天六点十五分起床。(Wǒ měi tiān liù diǎn shíwǔ fēn qǐchuáng.) / 我从来不坐电梯，我走楼梯上楼。(Wǒ cónglái bú zuò diàntī, wǒ zǒu lóutī shàng lóu.) / 因为Bông不想让哥哥找到她，所以她跑到地下室。(Yīnwèi Bông bù xiǎng ràng gēge zhǎodào tā, suǒyǐ tā pǎo dào dìxiàshì.) / 毛巾、毯子、杯子都是东西，日本是国家。(Máojīn, tǎnzi, bēizi dōu shì dōngxi, Rìběn shì guójiā.) 2) YCT口试（初级）第二部分 听后回答 (mẫu, cô hỏi, con trả lời ngắn; sau đó hỏi – đáp về bản thân theo cặp; 4 câu, 4 phút): 你几点起床？—— 我六点半起床。(Nǐ jǐ diǎn qǐchuáng? — Wǒ liù diǎn bàn qǐchuáng.) / 你多久坐一次电梯？—— 我从来不坐电梯，我走楼梯上楼。(Nǐ duō jiǔ zuò yí cì diàntī? — Wǒ cónglái bú zuò diàntī, wǒ zǒu lóutī shàng lóu.) / 你爷爷奶奶家在哪儿？—— 在越南。(Nǐ yéye nǎinai jiā zài nǎr? — Zài Yuènán.) / 你家在几楼？—— 三楼。(Nǐ jiā zài jǐ lóu? — Sān lóu.) 3) YCT口试（初级）第三部分 看图说话 (mẫu, dùng lại 2 tranh nhà của Movers Nói phần 1; bước 1 – nhìn tranh trả lời câu hỏi, theo cặp, 6 phút): 现在几点？– 现在六点十五分。(Xiànzài jǐ diǎn? – Xiànzài liù diǎn shíwǔ fēn.) / 谁有大胡子？– 爷爷有大胡子。(Shéi yǒu dà húzi? – Yéye yǒu dà húzi.) / 女孩在哪儿？– 她在阳台上。/ 她在地下室。(Nǚhái zài nǎr? – Tā zài yángtái shang. / Tā zài dìxiàshì.); bước 2 – nhìn 1 tranh, nói 2–3 câu (2 tranh, 6 phút): Tranh 'Bông一家人吃饭' – 今天是星期天。Bông一家人在吃饭。爷爷在阳台上看书。(Jīntiān shì xīngqītiān. Bông yìjiārén zài chīfàn. Yéye zài yángtái shang kàn shū.) / Tranh 'Nhà' (tranh của Movers Nói phần 1) – 爷爷有大胡子。女孩在阳台上。现在六点十五分。(Yéye yǒu dà húzi. Nǚhái zài yángtái shang. Xiànzài liù diǎn shíwǔ fēn.)",
+     "truyen": "Bông的大家庭 — Bông家住在一个很高的楼里，她家在三楼。爷爷奶奶住在楼下的一楼。爷爷有白胡子，奶奶是卷发。每个星期天，一家人一起在阳台上吃大餐。Bông通常帮奶奶，她总是把盘子和杯子放在桌子上。吃完饭，大家一起玩捉迷藏。Bông常常藏在地下室！(Bông jiā zhù zài yí ge hěn gāo de lóu lǐ, tā jiā zài sān lóu. Yéye nǎinai zhù zài lóuxià de yī lóu. Yéye yǒu bái húzi, nǎinai shì juǎnfà. Měi ge xīngqītiān, yìjiārén yìqǐ zài yángtái shang chī dàcān. Bông tōngcháng bāng nǎinai, tā zǒngshì bǎ pánzi hé bēizi fàng zài zhuōzi shang. Chī wán fàn, dàjiā yìqǐ wán zhuōmícáng. Bông chángcháng cáng zài dìxiàshì!)",
+     "baihat": "Giai điệu The Wheels on the Bus – lời mới \"走上三楼\": 我走楼梯走上三楼，上三楼，上三楼，(Wǒ zǒu lóutī zǒu shàng sān lóu, shàng sān lóu, shàng sān lóu,) / 我走楼梯走上三楼，我从来不坐电梯！(Wǒ zǒu lóutī zǒu shàng sān lóu, wǒ cónglái bú zuò diàntī!)"
+    }
+   }
+  },
+  {
+   "buoi": 6,
+   "unit": 1,
+   "label_buoi": "Buổi dạy 6. Unit 1 · Me and my day · Thi thử phần có tính giờ: Movers Nghe Part 1–3 và YCT3 Nghe phần 1–3; cô nhận xét từng con",
+   "web": [
+    {
+     "ngay": 11,
+     "label": "Ngày 11. Unit 1 · Đề YCT3 Đọc phần 3–4 (≤30 phút); truyện, đoạn đọc của chủ đề",
+     "en": {
+      "tu": "Ôn: country, language, grown-up, parent, son, daughter, usually, always, meal, minute, half, quarter, past, after",
+      "cum": "speak two languages / after school / for twenty minutes / at half past eight",
+      "cau": "Movers Đọc – viết Part 5 (mẫu, hoàn thành câu 1–3 từ): Leo is from ___. (England) / Leo usually gets up at ___. (quarter past six) / After school, Leo plays for ___. (twenty minutes) / Leo's parents speak two ___. (languages)",
+      "truyen": "A Letter from Leo — Hello! My name's Leo. I'm eight. I'm from England, but now I live in Vietnam. My parents speak two languages. I usually get up at quarter past six. After school I play football for twenty minutes. Then I have my last meal at seven o'clock. I go to bed at half past eight.",
+      "video": "Tìm YouTube: \"daily routine song for kids what time do you go to bed\""
+     },
+     "zh": {
+      "tu": "Ôn: 国家 guójiā, 英国人 Yīngguó rén, 语言 yǔyán, 大人 dàrén, 爸爸妈妈 bàba māma, 儿子 érzi, 女儿 nǚ'ér, 通常 tōngcháng, 总是 zǒngshì, 半 bàn, 十五分 shíwǔ fēn, 分钟 fēnzhōng, 吃完 chī wán, 以后 yǐhòu",
+      "cum": "八点半 bā diǎn bàn / 放学以后 fàngxué yǐhòu / 二十分钟 èrshí fēnzhōng / 吃完晚饭 chī wán wǎnfàn",
+      "cau": "[Cầu nối] I go to bed at half past eight. ↔ 我八点半睡觉。· giống: half past eight ↔ 八点半 · khác: giờ cuối câu EN ↔ trước động từ ZH / YCT3 Đọc phần 3 (mẫu, nối câu hỏi – câu trả lời): 你是哪国人？– 我是英国人。/ 你爸爸妈妈会说几种语言？– 两种。/ 放学以后你踢多久足球？– 二十分钟。/ 你每天几点睡觉？– 八点半。/ 你每天几点起床？– 六点十五分。 / YCT3 Đọc phần 4 (mẫu, chọn từ điền chỗ trống: 半 / 每 / 完): 我（每）天六点十五分起床。/ 我八点（半）睡觉。/ 吃（完）晚饭，我八点半睡觉。",
+      "truyen": "Leo的信 — 你好！我叫Leo，我八岁。我是英国人，现在住在越南。我爸爸妈妈会说两种语言。我通常六点十五分起床。放学以后，我踢二十分钟足球。晚上七点我吃晚饭。我八点半睡觉。(Nǐ hǎo! Wǒ jiào Leo, wǒ bā suì. Wǒ shì Yīngguó rén, xiànzài zhù zài Yuènán. Wǒ bàba māma huì shuō liǎng zhǒng yǔyán. Wǒ tōngcháng liù diǎn shíwǔ fēn qǐchuáng. Fàngxué yǐhòu, wǒ tī èrshí fēnzhōng zúqiú. Wǎnshang qī diǎn wǒ chī wǎnfàn. Wǒ bā diǎn bàn shuìjiào.)",
+      "video": "Tìm YouTube: \"我的一天 几点睡觉 儿歌\""
+     }
+    },
+    {
+     "ngay": 12,
+     "label": "Ngày 12. Unit 1 · Ôn unit: Hộp ôn, tổng hợp lỗi sai, Phiên dịch nhí",
+     "en": {
+      "tu": "Ôn (Hộp ôn cả unit): flag, language, moustache, beard, curly, granddaughter, grandson, hide, must, quarter, half, past, usually, sometimes, how often, how long, upstairs, downstairs, lift, towel, wet, dry",
+      "cum": "quarter past / half past / how often / how long / look for / could speak",
+      "cau": "Sửa lỗi hay gặp: I usually get up at quarter past six. (không viết: I get up usually) / My grandpa has got a beard. (không viết: My grandpa have got) / How long do you study? – For thirty minutes. / [Chuyển ngữ] Phiên dịch nhí: Xiaomei is from China. She could speak two languages when she was five.",
+      "truyen": "The Little Interpreter — Bông meets Mr Wang at the supermarket. Mr Wang is from China and he can't speak English. Leo asks, 'What time is it?' Bông says to Mr Wang, '现在几点？' Mr Wang says, '七点半。' Bông tells Leo, 'It's half past seven!' Leo smiles. 'You're a great interpreter, Bông!'",
+      "video": "Tìm YouTube: \"kids interpreter English Chinese role play\""
+     },
+     "zh": {
+      "tu": "Ôn (Hộp ôn cả unit): 国旗 guóqí, 语言 yǔyán, 胡子 húzi, 卷发 juǎnfà, 孙女 sūnnǚ, 孙子 sūnzi, 藏 cáng, 半 bàn, 十五分 shíwǔ fēn, 通常 tōngcháng, 有时候 yǒu shíhou, 多久……一次 duō jiǔ … yí cì, 多久 duō jiǔ, 楼上 lóushàng, 楼下 lóuxià, 电梯 diàntī, 毛巾 máojīn, 湿 shī, 干 gān",
+      "cum": "六点十五分 liù diǎn shíwǔ fēn / 七点半 qī diǎn bàn / 多久……一次 duō jiǔ … yí cì / 多久 duō jiǔ / 三十分钟 sānshí fēnzhōng / 找 zhǎo / 五岁的时候就会说 wǔ suì de shíhou jiù huì shuō",
+      "cau": "[Cầu nối] What time is it? – It's half past seven. ↔ 现在几点？– 七点半。· giống: hỏi – đáp giờ · khác: EN có It's; ZH dùng 现在 + 几点, đáp chỉ cần số / Sửa lỗi hay gặp: 我通常六点十五分起床。(Wǒ tōngcháng liù diǎn shíwǔ fēn qǐchuáng.) (không viết: 我起床六点十五分) / 我爷爷有大胡子。(Wǒ yéye yǒu dà húzi.) (有 không đổi theo người nói, khác has / have) / 你学习多久？——三十分钟。(Nǐ xuéxí duō jiǔ? — Sānshí fēnzhōng.) (không viết: 我三十分钟学习) / 王先生是中国人。(Wáng xiānsheng shì Zhōngguó rén.) / [Chuyển ngữ] Phiên dịch nhí: \"Xiaomei is from China. She could speak two languages when she was five.\" → Xiaomei是中国人，她五岁的时候就会说汉语和英语。(Xiaomei shì Zhōngguó rén, tā wǔ suì de shíhou jiù huì shuō Hànyǔ hé Yīngyǔ.)",
+      "truyen": "小翻译 — Bông在超市里看到王先生。王先生是中国人，不会说英语。Leo用英语问现在几点。Bông问王先生：“现在几点？”王先生说：“七点半。”Bông用英语告诉Leo：现在七点半。Leo笑了：“Bông，你是一个很好的小翻译！”(Bông zài chāoshì lǐ kàndào Wáng xiānsheng. Wáng xiānsheng shì Zhōngguó rén, bú huì shuō Yīngyǔ. Leo yòng Yīngyǔ wèn xiànzài jǐ diǎn. Bông wèn Wáng xiānsheng: “Xiànzài jǐ diǎn?” Wáng xiānsheng shuō: “Qī diǎn bàn.” Bông yòng Yīngyǔ gàosu Leo: xiànzài qī diǎn bàn. Leo xiào le: “Bông, nǐ shì yí ge hěn hǎo de xiǎo fānyì!”)",
+      "video": "Tìm YouTube: \"中英文 小翻译 儿童 对话\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "country, language, flag, parents, grandparents, beard, moustache, curly, blond, quarter past, half past, usually, always, sometimes, never, how often, how long, upstairs, downstairs, lift, balcony, basement",
+     "slide": "[Lời cô] Vào bài: Good morning, class! Today is test day. 同学们好！今天我们考试。· Chuyển ý: You have twenty minutes. 你们有二十分钟。· Nhắc: Pens down, please. 请放下笔。· Khen: Good try! 很好，继续努力！· Tiếng Việt: chỉ giữ nề nếp và nhận xét riêng từng con; từ khó hình dung (cô quyết định có giải nghĩa không): interpreter / 小翻译 1) Thi thử Movers Nghe Part 1 (5 câu) + Part 2 (5 câu) + Part 3 (5 câu), tính giờ 20 phút: Part 1 nối tên – người (Mr Brown with a beard / Anna with curly hair / Leo hiding behind the tree…); Part 2 nghe viết tên, số (Leo's grandma lives on the ___ floor. – third / Bông gets up at ___ – quarter past six); Part 3 nối ngày – tranh (Monday: shower / Tuesday: lift / Wednesday: balcony…). 2) Cô chữa nhanh và ghi lỗi từng con vào Hộp ôn (5 phút): quarter/half, beard/moustache, upstairs/downstairs.",
+     "truyen": "Leo's Test Day — Today Leo has a test. He gets up at quarter past six and has a shower. He has his first meal and walks downstairs. He never takes the lift. In class he listens carefully and looks at the pictures. 'Which man has got a beard?' 'Who lives on the third floor?' Leo answers all the questions. His teacher says, 'Well done, Leo!'",
+     "baihat": "Giai điệu Twinkle Twinkle Little Star – lời mới \"Listen Well\": Listen, listen, listen well, / Look and listen, then you tell. / Quarter past and half past too, / Always, never, I know you!"
+    },
+    "zh": {
+     "flash": "国家 guójiā, 语言 yǔyán, 国旗 guóqí, 爸爸妈妈 bàba māma, 爷爷奶奶 yéye nǎinai, 大胡子 dà húzi, 小胡子 xiǎo húzi, 卷发 juǎnfà, 黄头发 huáng tóufa, 十五分 shíwǔ fēn, 半 bàn, 通常 tōngcháng, 总是 zǒngshì, 有时候 yǒu shíhou, 从来不 cónglái bù, 多久……一次 duō jiǔ … yí cì, 多久 duō jiǔ, 楼上 lóushàng, 楼下 lóuxià, 电梯 diàntī, 阳台 yángtái, 地下室 dìxiàshì",
+     "slide": "[Cầu nối Anh – Trung] Sau khi chữa đề, cô đặt cạnh nhau 2 cặp câu con hay sai ở hai đề: It's quarter past six. ↔ 现在六点十五分。/ Leo's grandma lives on the third floor. ↔ Leo的奶奶住在三楼。(Leo de nǎinai zhù zài sān lóu.); con nói điểm giống, điểm khác (giờ: EN phút trước giờ, ZH giờ trước phút; third floor ↔ 三楼, nơi chốn sau 在). 1) Thi thử YCT3 Nghe phần 1 (5 câu, nhìn tranh √/×) + phần 2 (5 câu, chọn tranh) + phần 3 (5 câu, đối thoại chọn tranh), tính giờ 18 phút; dùng lại tranh của đề Nghe tiếng Anh: Brown先生有大胡子。(Brown xiānsheng yǒu dà húzi.) / Anna是卷发。(Anna shì juǎnfà.) / Leo藏在树后面。(Leo cáng zài shù hòumiàn.) / 男：奶奶家在几楼？女：三楼。(Nán: Nǎinai jiā zài jǐ lóu? Nǚ: Sān lóu.) / 男：你几点起床？女：六点十五分。(Nán: Nǐ jǐ diǎn qǐchuáng? Nǚ: Liù diǎn shíwǔ fēn.) / 星期二Leo坐电梯。(Xīngqī'èr Leo zuò diàntī.) 2) Cô nhận xét từng con, ghi lỗi vào Hộp ôn (5 phút): 半 vị trí trong giờ, 大胡子/小胡子, 楼上/楼下. 3) [Chuyển ngữ] (NL7, 3 phút) Cô đọc 3 câu của 'A Letter from Leo' bằng tiếng Anh, con chọn 1 trong 3 câu tóm tắt tiếng Trung đúng rồi nói lại cho rối Xiaomei: A. Leo是英国人，每天六点十五分起床。B. Leo是美国人，每天七点起床。C. Leo是中国人，不会说英语。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Cô đọc thư 'A Letter from Leo' (5 câu, con tóm 3 ý chính): \"I'm from England, but now I live in Vietnam. My parents speak two languages. I usually get up at quarter past six. After school I play football for twenty minutes. I go to bed at half past eight.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: Leo是英国人，现在住在越南。他通常六点十五分起床。放学以后他踢二十分钟足球。 (Leo shì Yīngguó rén, xiànzài zhù zài Yuènán. Tā tōngcháng liù diǎn shíwǔ fēn qǐchuáng. Fàngxué yǐhòu tā tī èrshí fēnzhōng zúqiú.)",
+     "truyen": "Leo考试 — 今天Leo考试。他六点十五分起床，先洗澡，再吃早饭。他走楼梯下楼，他从来不坐电梯。上课的时候，他认真听，看图片。“哪个男人有大胡子？”“谁家在三楼？”Leo都会。老师说：“Leo，你真棒！”(Jīntiān Leo kǎoshì. Tā liù diǎn shíwǔ fēn qǐchuáng, xiān xǐzǎo, zài chī zǎofàn. Tā zǒu lóutī xià lóu, tā cónglái bú zuò diàntī. Shàngkè de shíhou, tā rènzhēn tīng, kàn túpiàn. “Nǎge nánrén yǒu dà húzi?” “Shéi jiā zài sān lóu?” Leo dōu huì. Lǎoshī shuō: “Leo, nǐ zhēn bàng!”)",
+     "baihat": "Giai điệu Twinkle Twinkle Little Star – lời mới \"认真听\": 认真听来认真听，(Rènzhēn tīng lái rènzhēn tīng,) / 先看图片再说话。(Xiān kàn túpiàn zài shuōhuà.) / 六点十五七点半，(Liù diǎn shíwǔ qī diǎn bàn,) / 总是从不我都会！(Zǒngshì cóng bù wǒ dōu huì!)"
+    }
+   }
+  },
+  {
+   "buoi": 7,
+   "unit": 2,
+   "label_buoi": "Buổi dạy 7. Unit 2 · Jobs and school · Kỹ năng: Movers Nghe Part 4 và Đọc – viết Part 4, chiến lược làm bài (Larva U3 · When I Grow Up)",
+   "web": [
+    {
+     "ngay": 13,
+     "label": "Ngày 13. Unit 2 · Ôn Larva U3 (nghề nghiệp, ước mơ) + đề Movers Nghe Part 4 (≤30 phút)",
+     "en": {
+      "tu": "Ôn: engineer, pilot, police officer, scientist, vet, future, workplace, build, carry, need, be called | Ôn nhanh (Unit 1): beard, quarter past, how often, language",
+      "cum": "want to be / police officer / in the future / be called / build a bridge / carry a bag",
+      "cau": "What do you want to be in the future? – I want to be a scientist. / [Ngữ pháp: want to be + nghề] I want to be a pilot when I grow up. / What does your mum do? – She's an engineer. She builds bridges. / A vet helps sick animals. / Movers Nghe Part 4 (mẫu, đánh dấu tranh): What does Leo's uncle do? – He's a pilot. He flies big planes.",
+      "truyen": "Jobs Day — Today is Jobs Day at school. Bông's mum is an engineer. She builds bridges. Leo's dad is a pilot. Anna's aunt is a vet and she carries a big bag for sick animals. 'What do you want to be in the future?' asks the teacher. 'I want to be a scientist!' says Xiaomei.",
+      "video": "Tìm YouTube: \"jobs song for kids what do you want to be\""
+     },
+     "zh": {
+      "tu": "Ôn: 工程师 gōngchéngshī, 警察 jǐngchá, 科学家 kēxuéjiā, 飞行员 fēixíngyuán, 动物医生 dòngwù yīshēng, 以后 yǐhòu, 帮助 bāngzhù, 拿 ná | Ôn nhanh (Unit 1): 胡子 húzi, 十五分 shíwǔ fēn, 多久……一次 duō jiǔ … yí cì, 语言 yǔyán | Nghe làm quen (có tranh, không kiểm tra): 造桥 zào qiáo (= build bridges)",
+      "cum": "想当 xiǎng dāng / 长大以后 zhǎngdà yǐhòu / 当科学家 dāng kēxuéjiā / 造桥 zào qiáo / 帮助生病的动物 bāngzhù shēngbìng de dòngwù / 拿着一个大包 názhe yí ge dà bāo",
+      "cau": "[Cầu nối] I want to be a scientist. ↔ 我想当科学家。· giống: want to be ↔ 想当, cùng trật tự Ai – muốn làm – nghề · khác: EN có a/an trước nghề, ZH không / 你想当什么？(Nǐ xiǎng dāng shénme?) / [Ngữ pháp: 想当 + nghề] 我想当科学家。(Wǒ xiǎng dāng kēxuéjiā.) / 我长大以后想当警察。(Wǒ zhǎngdà yǐhòu xiǎng dāng jǐngchá.) / 你妈妈是做什么的？——她是工程师，她造桥。(Nǐ māma shì zuò shénme de? — Tā shì gōngchéngshī, tā zào qiáo.) / 我长大以后想当飞行员。(Wǒ zhǎngdà yǐhòu xiǎng dāng fēixíngyuán.) / Leo的叔叔开大飞机。(Leo de shūshu kāi dà fēijī.) / 动物医生帮助生病的动物。(Dòngwù yīshēng bāngzhù shēngbìng de dòngwù.)",
+      "truyen": "职业日 — 今天是学校的职业日。Bông的妈妈是工程师，她造桥。Leo的爸爸是飞行员。Anna的阿姨是动物医生，她拿着一个大包，帮助生病的动物。老师问：“你们长大以后想当什么？”Xiaomei说：“我想当科学家！”(Jīntiān shì xuéxiào de zhíyè rì. Bông de māma shì gōngchéngshī, tā zào qiáo. Leo de bàba shì fēixíngyuán. Anna de āyí shì dòngwù yīshēng, tā názhe yí ge dà bāo, bāngzhù shēngbìng de dòngwù. Lǎoshī wèn: “Nǐmen zhǎngdà yǐhòu xiǎng dāng shénme?” Xiaomei shuō: “Wǒ xiǎng dāng kēxuéjiā!”)",
+      "video": "Tìm YouTube: \"我长大以后想当 职业 儿歌\""
+     }
+    },
+    {
+     "ngay": 14,
+     "label": "Ngày 14. Unit 2 · Ôn Larva U3 (động từ, giới từ nơi chốn) + đề Movers Đọc – viết Part 4 (≤30 phút)",
+     "en": {
+      "tu": "Ôn: cry, fall, grow, leaf/leaves, lose, slowly, back, bottom, hundred, why, all right, above, below, along, around, out of, any, everything",
+      "cum": "fall off / grow slowly / at the bottom of / out of the window / all right",
+      "cau": "Why are you crying? – I lost my bag. / Leaves fall from the trees in autumn. / Trees grow slowly. Some trees live for a hundred years. / The bird is above the tree and the cat is below it. / Movers Đọc – viết Part 4 (mẫu, chọn A/B/C): Trees (grow / grows / growing) very slowly. In autumn their (leaf / leaves / leafs) fall to the ground.",
+      "truyen": "The Little Tree — Leo plants a little tree in the garden. It grows slowly. In autumn its leaves fall and Leo cries. 'Why are you crying?' asks Grandpa. 'My tree is dying!' says Leo. 'It's all right,' says Grandpa. 'The leaves will grow back in spring. Some trees live for a hundred years!'",
+      "video": "Tìm YouTube: \"why do leaves fall kids science\""
+     },
+     "zh": {
+      "tu": "Ôn: 百 bǎi, 别 bié, 哭 kū, 为什么 wèishénme, 掉 diào, 长 zhǎng, 丢 diū, 慢慢地 mànmàn de, 上面 shàngmiàn, 下面 xiàmiàn | Ôn khóa trước: 秋天 qiūtiān, 春天 chūntiān, 鸟 niǎo | Nghe làm quen (có tranh, không kiểm tra): 树叶 shùyè (= leaf/leaves)",
+      "cum": "一百年 yìbǎi nián / 别哭 bié kū / 种小树 zhòng xiǎo shù / 在树上面 zài shù shàngmiàn / 在树下面 zài shù xiàmiàn",
+      "cau": "[Cầu nối] Why are you crying? ↔ 你为什么哭？· giống: why ↔ 为什么 · khác: why đầu câu EN, 为什么 sau chủ ngữ ZH; a hundred years ↔ 一百年 / 你为什么哭？(Nǐ wèishénme kū?) / 我的包丢了。(Wǒ de bāo diū le.) / 别哭了！(Bié kū le!) / 秋天树叶掉了。(Qiūtiān shùyè diào le.) / [Ngữ pháp: câu chữ 把] Leo把小树种在花园里。(Leo bǎ xiǎo shù zhòng zài huāyuán lǐ.) / 小树长得很慢。(Xiǎo shù zhǎng de hěn màn.) / 有的树能活一百年。(Yǒu de shù néng huó yìbǎi nián.) / 鸟在树上面，猫在树下面。(Niǎo zài shù shàngmiàn, māo zài shù xiàmiàn.) / [Chuyển ngữ] (NL3) Grandpa nói tiếng Anh, con nói lại cho Xiaomei bằng tiếng Trung: It's all right. Don't cry. The leaves will grow back in spring. → 没关系，别哭！春天树叶会再长出来。(Méi guānxi, bié kū! Chūntiān shùyè huì zài zhǎng chūlái.)",
+      "truyen": "小树 — Leo在花园里种了一棵小树。小树长得很慢。秋天，树叶掉了，Leo哭了。爷爷问：“你为什么哭？”Leo说：“我的小树要死了！”爷爷说：“没关系，别哭！春天树叶会再长出来。有的树能活一百年！”(Leo zài huāyuán lǐ zhòng le yì kē xiǎo shù. Xiǎo shù zhǎng de hěn màn. Qiūtiān, shùyè diào le, Leo kū le. Yéye wèn: “Nǐ wèishénme kū?” Leo shuō: “Wǒ de xiǎo shù yào sǐ le!” Yéye shuō: “Méi guānxi, bié kū! Chūntiān shùyè huì zài zhǎng chūlái. Yǒu de shù néng huó yìbǎi nián!”)",
+      "video": "Tìm YouTube: \"树叶为什么会掉 秋天 儿童 科普\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "engineer, pilot, police officer, scientist, vet, future, workplace, build, carry, need, cry, fall, grow, leaf/leaves, lose, slowly, hundred, why, above, below, around, along",
+     "slide": "[Lời cô] Vào bài: Hello, everyone! Let's start. 大家好！我们开始吧。· Chuyển ý: Read the question first. 先看问题。· Nhắc: Look at the three pictures. 看三张图片。· Khen: Super! 太棒了！· Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): workplace / 工作的地方, engineer 1) Nghe Part 4 Movers – nghe, đánh dấu tranh đúng A/B/C (5 câu, 10 phút; chiến lược: đọc câu hỏi, nhìn khác biệt giữa 3 tranh trước khi nghe): What does Bông's mum do? (engineer / pilot / vet) / What did Leo lose? (bag / hat / ball) / Where is the bird? (above the tree / below the tree / around the tree). 2) Đọc – viết Part 4 – điền A/B/C vào đoạn văn về nghề (5 câu; chiến lược: đọc cả câu, xem số ít – số nhiều, thì của động từ): Vets (help / helps / helping) sick animals. / Pilots fly planes (above / below / out of) the clouds. / An engineer (build / builds / building) bridges. 3) Ghép nghề với nơi làm việc (4 cặp): pilot – plane / vet – animal hospital / police officer – police station / engineer – bridge.",
+     "truyen": "Leo's Dream — Leo wants to be a pilot in the future. His uncle is a pilot and he flies big planes above the clouds. One day Leo goes to his uncle's workplace at the airport. He sees a hundred planes! An engineer is checking a plane and a police officer is walking along the road. 'Do you need any help?' asks the engineer. 'No, thanks. I'm all right,' says Leo. 'I'm just looking at everything!'",
+     "baihat": "Giai điệu Row Row Row Your Boat – lời mới \"Fly, Fly, Fly the Plane\": Fly, fly, fly the plane / High above the trees. / I want to be a pilot, / Fly with me, please!"
+    },
+    "zh": {
+     "flash": "工程师 gōngchéngshī, 飞行员 fēixíngyuán, 警察 jǐngchá, 科学家 kēxuéjiā, 动物医生 dòngwù yīshēng, 以后 yǐhòu, 工作的地方 gōngzuò de dìfang, 造 zào, 拿 ná, 需要 xūyào, 哭 kū, 掉 diào, 长 zhǎng, 树叶 shùyè, 丢 diū, 慢慢地 mànmàn de, 百 bǎi, 为什么 wèishénme, 上面 shàngmiàn, 下面 xiàmiàn",
+     "slide": "[Cầu nối Anh – Trung] Cùng thẻ nghề (cảnh sát, nhà khoa học, phi công, bác sĩ thú y): rối Leo nói I want to be a scientist., rối Xiaomei nói 我想当科学家。; con tìm điểm giống (want to be ↔ 想当) và khác (EN có a/an, ZH không); Why are you crying? ↔ 你为什么哭？(为什么 đứng sau chủ ngữ). 1) YCT3 Nghe phần 3 – dùng lại tranh của bài Nghe Part 4 tiếng Anh, nghe đối thoại chọn tranh A/B/C (3 câu, 8 phút): 女：Bông的妈妈是做什么的？男：她是工程师。(Nǚ: Bông de māma shì zuò shénme de? Nán: Tā shì gōngchéngshī.) / 女：Leo，你为什么哭？男：我的书包丢了。(Nǚ: Leo, nǐ wèishénme kū? Nán: Wǒ de shūbāo diū le.) / 男：鸟在哪儿？女：在树上面。(Nán: Niǎo zài nǎr? Nǚ: Zài shù shàngmiàn.) 2) YCT3 Nghe phần 4 – nghe chọn đáp án chữ A/B/C (3 câu): 问：Bông的妈妈是做什么的？A. 工程师 B. 动物医生 C. 警察 (đáp án A) / 问：Leo丢了什么？A. 书包 B. 帽子 C. 球 (đáp án A). 3) [Chuyển ngữ] (NL3, 4 phút) Rối Leo nói 3 câu về ước mơ, con nói lại cho rối Xiaomei: My uncle is a pilot. I want to be a pilot too. I want to help people. → 我叔叔是飞行员。我也想当飞行员。我想帮助别人。(Wǒ shūshu shì fēixíngyuán. Wǒ yě xiǎng dāng fēixíngyuán. Wǒ xiǎng bāngzhù biérén.) [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo kể (5 câu, con tóm 3 ý chính): \"My uncle is a pilot. He flies big planes above the clouds. He visits lots of different countries. When I grow up, I want to be a pilot too. My sister wants to be an engineer because she likes building bridges.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: Leo的叔叔是飞行员，他在云上面飞。Leo长大以后也想当飞行员。他姐姐想当工程师，因为她喜欢造桥。 (Leo de shūshu shì fēixíngyuán, tā zài yún shàngmiàn fēi. Leo zhǎngdà yǐhòu yě xiǎng dāng fēixíngyuán. Tā jiějie xiǎng dāng gōngchéngshī, yīnwèi tā xǐhuan zào qiáo.) 4) Luyện lại bài Đọc – viết Part 4 tiếng Anh bằng tiếng Trung (3 câu, 3 phút): 动物医生帮助生病的动物。(Dòngwù yīshēng bāngzhù shēngbìng de dòngwù.) / 飞行员在云上面飞。(Fēixíngyuán zài yún shàngmiàn fēi.) / 工程师造桥。(Gōngchéngshī zào qiáo.) 5) Ghép nghề với nơi làm việc, cùng 4 cặp của phần tiếng Anh, con nói bằng tiếng Trung: 飞行员 – 飞机 / 动物医生 – 动物医院 / 警察 – 警察局 / 工程师 – 桥.",
+     "truyen": "Leo的梦想 — Leo长大以后想开飞机。他的叔叔开大飞机，在云上面飞。有一天，Leo去叔叔工作的地方——机场。他看到一百架飞机！一个工程师在检查飞机，一个警察在路上走。工程师问：“你需要帮忙吗？”Leo说：“不用，谢谢！我没事。我只是在看看这里的一切！”(Leo zhǎngdà yǐhòu xiǎng kāi fēijī. Tā de shūshu kāi dà fēijī, zài yún shàngmiàn fēi. Yǒu yì tiān, Leo qù shūshu gōngzuò de dìfang — jīchǎng. Tā kàndào yìbǎi jià fēijī! Yí ge gōngchéngshī zài jiǎnchá fēijī, yí ge jǐngchá zài lù shang zǒu. Gōngchéngshī wèn: “Nǐ xūyào bāngmáng ma?” Leo shuō: “Bú yòng, xièxie! Wǒ méi shì. Wǒ zhǐshì zài kànkan zhèlǐ de yíqiè!”)",
+     "baihat": "Giai điệu Row Row Row Your Boat – lời mới \"开飞机\": 飞，飞，飞飞机，(Fēi, fēi, fēi fēijī,) / 高高飞过树。(Gāogāo fēi guò shù.) / 我想当飞行员，(Wǒ xiǎng dāng fēixíngyuán,) / 和我一起飞！(Hé wǒ yìqǐ fēi!)"
+    }
+   }
+  },
+  {
+   "buoi": 8,
+   "unit": 2,
+   "label_buoi": "Buổi dạy 8. Unit 2 · Jobs and school · Kỹ năng: dạng bài đề YCT3, chuyển ngữ có bẫy (Larva U9 · At School)",
+   "web": [
+    {
+     "ngay": 15,
+     "label": "Ngày 15. Unit 2 · Ôn Larva U9 (nơi chốn ở trường, chỉ đường) + đề YCT3 Nghe phần 3–4 (≤30 phút)",
+     "en": {
+      "tu": "Ôn: gate, office, canteen, leave, turn, left, right, have (got) to, come on | Từ nối Unit 1: always, usually, half past, upstairs",
+      "cum": "turn left / turn right / next to the gate / between the library and the office / have to leave / come on",
+      "cau": "Where is the office? – It's next to the gate. / Turn left and the canteen is on the right. / The canteen is between the library and the office. / I have to leave at half past four. / Come on! We're late. / I always have lunch in the canteen.",
+      "truyen": "Anna's First Day — It's Anna's first day at her new school. 'Where's the office?' she asks Bông. 'Come on, I'll show you,' says Bông. 'Go through the gate and turn right. The office is next to the library.' At twelve o'clock they have lunch in the canteen. Anna has to leave at half past four.",
+      "video": "Tìm YouTube: \"turn left turn right directions song kids\""
+     },
+     "zh": {
+      "tu": "Ôn: 大门 dàmén, 办公室 bàngōngshì, 食堂 shítáng, 图书馆 túshūguǎn, 左 zuǒ, 右 yòu, 中间 zhōngjiān, 迟到 chídào | Từ nối Unit 1: 总是 zǒngshì, 通常 tōngcháng, 半 bàn, 楼上 lóushàng",
+      "cum": "往左走 wǎng zuǒ zǒu / 在右边 zài yòubiān / 在大门旁边 zài dàmén pángbiān / 在……中间 zài…zhōngjiān / 四点半 sì diǎn bàn",
+      "cau": "[Cầu nối] The canteen is between the library and the office. ↔ 食堂在图书馆和办公室中间。· giống: the library and the office ↔ 图书馆和办公室 · khác: between đứng trước ↔ 中间 đứng cuối / 办公室在哪儿？——在大门旁边。(Bàngōngshì zài nǎr? — Zài dàmén pángbiān.) / 往左走，食堂在右边。(Wǎng zuǒ zǒu, shítáng zài yòubiān.) / [Ngữ pháp: 在 + nơi chốn + 中间] 食堂在图书馆和办公室中间。(Shítáng zài túshūguǎn hé bàngōngshì zhōngjiān.) / 我四点半要走。(Wǒ sì diǎn bàn yào zǒu.) / 快走吧！我们要迟到了！(Kuài zǒu ba! Wǒmen yào chídào le!) / 我总是在食堂吃午饭。(Wǒ zǒngshì zài shítáng chī wǔfàn.)",
+      "truyen": "Anna第一天上学 — 今天Anna第一天来新学校。她问Bông：“办公室在哪儿？”Bông说：“走吧，我带你去。走进大门，往右走，办公室在图书馆旁边。”中午十二点，她们在食堂吃饭。下午四点半，Anna要回家了。(Jīntiān Anna dì-yī tiān lái xīn xuéxiào. Tā wèn Bông: “Bàngōngshì zài nǎr?” Bông shuō: “Zǒu ba, wǒ dài nǐ qù. Zǒu jìn dàmén, wǎng yòu zǒu, bàngōngshì zài túshūguǎn pángbiān.” Zhōngwǔ shí'èr diǎn, tāmen zài shítáng chīfàn. Xiàwǔ sì diǎn bàn, Anna yào huí jiā le.)",
+      "video": "Tìm YouTube: \"我的学校 在哪儿 左边右边 儿歌\""
+     }
+    },
+    {
+     "ngay": 16,
+     "label": "Ngày 16. Unit 2 · Ôn Larva U9 (trong lớp học) + đề YCT3 Đọc phần 3–4; Hộp ôn",
+     "en": {
+      "tu": "Ôn: circle, square, shape, difference, different, idea, mean, mistake, wrong, teach, practice, text, website, wait, move, only, shall, laugh | Hộp ôn: engineer, leaves",
+      "cum": "make a mistake / What does it mean? / Shall we…? / wait for / a different shape / the wrong answer",
+      "cau": "What does this word mean? / Draw a circle and a square. They are different shapes. / Sorry, I made a mistake. That's the wrong answer. / Shall we practise on the school website? – Good idea! / Wait for me! / Our teacher teaches us English and Chinese. / Which class are you in? – I'm in class three. / [Chuyển ngữ] (NL3) Nghe bạn mới nói tiếng Trung, nói lại cho cô bằng tiếng Anh: 对不起，我迟到了。这个字是什么意思？→ Sorry, I'm late. What does this word mean?",
+      "truyen": "Leo's Mistake — In the maths lesson the teacher says, 'Draw a circle.' Leo draws a square. 'That's wrong, Leo!' laughs Bông. Leo says, 'Oops! I made a mistake.' The teacher smiles. 'It's all right. What's the difference between a circle and a square?' Leo thinks. 'A square has four sides!'",
+      "video": "Tìm YouTube: \"shapes song circle square triangle kids\""
+     },
+     "zh": {
+      "tu": "Ôn: 迟到 chídào, 课 kè, 班 bān, 笑 xiào, 意思 yìsi, 错 cuò, 不一样 bù yíyàng, 练习 liànxí | Ôn khóa trước: 圆 yuán, 等 děng, 教 jiāo | Hộp ôn: 工程师 gōngchéngshī, 树叶 shùyè | Nghe làm quen (có tranh, không kiểm tra): 正方形 zhèngfāngxíng (= square), 形状 xíngzhuàng (= shape), 网站 wǎngzhàn (= website), 主意 zhǔyi (= idea)",
+      "cum": "画一个圆 huà yí ge yuán / 数学课 shùxué kè / 什么意思 shénme yìsi / 我错了 wǒ cuò le / 等等我 děngdeng wǒ / 三班 sān bān",
+      "cau": "[Cầu nối] What does this word mean? ↔ 这个字是什么意思？· giống: hỏi nghĩa của từ · khác: EN: does … mean; ZH: 是什么意思 (không dịch từng chữ); I made a mistake ↔ 我错了 / 这个字是什么意思？(Zhège zì shì shénme yìsi?) / 请画一个圆和一个正方形。(Qǐng huà yí ge yuán hé yí ge zhèngfāngxíng.) / 圆和正方形是不一样的形状。(Yuán hé zhèngfāngxíng shì bù yíyàng de xíngzhuàng.) / 对不起，我错了。(Duìbuqǐ, wǒ cuò le.) / 我们在学校网站上练习吧？——好主意！(Wǒmen zài xuéxiào wǎngzhàn shang liànxí ba? — Hǎo zhǔyi!) / 等等我！(Děngdeng wǒ!) / 老师教我们英语和汉语。(Lǎoshī jiāo wǒmen Yīngyǔ hé Hànyǔ.) / 你在几班？——我在三班。(Nǐ zài jǐ bān? — Wǒ zài sān bān.) / 对不起，我迟到了。(Duìbuqǐ, wǒ chídào le.)",
+      "truyen": "Leo画错了 — 上数学课的时候，老师说：“请画一个圆。”Leo画了一个正方形。Bông笑了：“Leo，你画错了！”Leo说：“哎呀！我错了。”老师笑着说：“没关系。圆和正方形有什么不一样？”Leo想了想：“正方形有四条边！”(Shàng shùxué kè de shíhou, lǎoshī shuō: “Qǐng huà yí ge yuán.” Leo huà le yí ge zhèngfāngxíng. Bông xiào le: “Leo, nǐ huà cuò le!” Leo shuō: “Āiyā! Wǒ cuò le.” Lǎoshī xiàozhe shuō: “Méi guānxi. Yuán hé zhèngfāngxíng yǒu shénme bù yíyàng?” Leo xiǎng le xiǎng: “Zhèngfāngxíng yǒu sì tiáo biān!”)",
+      "video": "Tìm YouTube: \"圆形 正方形 形状 儿歌 中文\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "gate, office, canteen, leave, turn, left, right, have to, come on, circle, square, shape, difference, different, idea, mean, mistake, wrong, teach, practice, website, wait",
+     "slide": "[Lời cô] Vào bài: Good afternoon, everyone! 大家下午好！· Chuyển ý: Now, let's look at the map. 现在我们看地图。· Nhắc: Don't worry, try again. 别着急，再试一次。· Khen: That's right! 对了！· Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): right (đúng) / right (bên phải) ↔ 对 / 右, difference / 不一样 1) Nghe – vẽ đường đi trên sơ đồ trường (5 câu, 8 phút): Go through the gate and turn left. / The canteen is next to the library. / Walk along the road and turn right. The office is on the right. 2) Đọc – viết Part 2 – chọn câu đáp A/B/C (5 câu): What does 'canteen' mean? – It's where we have lunch. / Shall we go to the library? – Good idea! / Where's the office? – It's next to the gate. / Sorry, I made a mistake. – That's all right. 3) Phân biệt từ dễ nhầm: right (đúng) / right (bên phải); different / difference; teach / learn.",
+     "truyen": "A Map of Our School — The teacher gives the children a map of the school. 'This is the gate. Turn right and you can see the office. The library is between the office and the canteen. Shall we find the playground?' Bông has an idea: 'Let's draw circles on the places we like!' Leo draws a circle on the canteen. Everyone laughs.",
+     "baihat": "Giai điệu The Wheels on the Bus – lời mới \"Left and Right\": Turn left at the gate, then turn right, turn right, turn right. / Turn left at the gate, then turn right, / The office is on the right!"
+    },
+    "zh": {
+     "flash": "大门 dàmén, 办公室 bàngōngshì, 食堂 shítáng, 走 zǒu, 往……走 wǎng…zǒu, 左 zuǒ, 右 yòu, 要 yào, 快点 kuài diǎn, 圆 yuán, 正方形 zhèngfāngxíng, 形状 xíngzhuàng, 不一样 bù yíyàng, 主意 zhǔyi, 意思 yìsi, 错 cuò, 教 jiāo, 练习 liànxí, 网站 wǎngzhàn, 等 děng",
+     "slide": "[Cầu nối Anh – Trung] Cùng sơ đồ trường của truyện 'A Map of Our School': rối Leo nói The library is between the office and the canteen., rối Xiaomei nói 图书馆在办公室和食堂中间。; con tìm điểm giống (A and B ↔ A和B) và khác (between đứng trước ↔ 中间 đứng cuối); right có 2 nghĩa ↔ 对 / 右 hai chữ khác nhau. 1) YCT3 Đọc phần 3 – nối câu hỏi với câu trả lời, cùng nội dung bài Đọc – viết Part 2 tiếng Anh (5 câu, 8 phút): “食堂”是什么意思？– 是吃午饭的地方。/ 我们去图书馆吧？– 好！/ 办公室在哪儿？– 在大门旁边。/ 对不起，我错了。– 没关系。 2) YCT3 Đọc phần 4 – chọn từ điền (左 / 中间 / 对 / 错 / 意思): 图书馆在办公室和食堂（中间）。/ 到了大门往（左）走。/ 对不起，我（错）了。/ 这个字是什么（意思）？/ 你说得（对）！ 3) [Chuyển ngữ] Bắt bẫy (NL4, Phiên dịch nhí): \"What does it mean?\" → 是什么意思？(không dịch từng chữ 它意思什么) / \"The canteen is between A and B.\" → 食堂在A和B中间 (中间 đứng cuối) / \"Turn left.\" → 往左走 / \"Shall we go to the library?\" → 我们去图书馆好吗？(Wǒmen qù túshūguǎn hǎo ma?) 4) [Chuyển ngữ] (NL6, 4 phút) Chỉ đường hai tiếng: rối Leo hỏi Where's the office? bằng tiếng Anh, rối Xiaomei hỏi 办公室在哪儿？; con chỉ đường đúng tiếng, 2–3 câu: Go through the gate and turn right. It's next to the library. / 走进大门，往右走。在图书馆旁边。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo đọc tin nhắn (5 câu, con tóm 3 ý chính): \"Hi! Our class is in a new classroom this week. Go through the gate and turn left. The library is between the office and the canteen. Our classroom is upstairs, above the library. See you at eight o'clock!\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: Leo说：“走进大门，往左走。图书馆在办公室和食堂中间，我们的新教室在图书馆楼上。八点见！” (Leo shuō: “Zǒu jìn dàmén, wǎng zuǒ zǒu. Túshūguǎn zài bàngōngshì hé shítáng zhōngjiān, wǒmen de xīn jiàoshì zài túshūguǎn lóushàng. Bā diǎn jiàn!”)",
+     "truyen": "我们学校的地图 — 老师给大家一张学校的地图：“这是大门。往右走就是办公室。图书馆在办公室和食堂中间。我们去找操场吧？”Bông说：“我们在喜欢的地方画一个圆吧！”Leo在食堂上画了一个圆。大家都笑了。(Lǎoshī gěi dàjiā yì zhāng xuéxiào de dìtú: “Zhè shì dàmén. Wǎng yòu zǒu jiù shì bàngōngshì. Túshūguǎn zài bàngōngshì hé shítáng zhōngjiān. Wǒmen qù zhǎo cāochǎng ba?” Bông shuō: “Wǒmen zài xǐhuan de dìfang huà yí ge yuán ba!” Leo zài shítáng shang huà le yí ge yuán. Dàjiā dōu xiào le.)",
+     "baihat": "Giai điệu The Wheels on the Bus – lời mới \"往左走，往右走\": 到了大门往左走，再往右走，往右走，往右走，(Dào le dàmén wǎng zuǒ zǒu, zài wǎng yòu zǒu, wǎng yòu zǒu, wǎng yòu zǒu,) / 到了大门往左走，再往右走，办公室在右边！(Dào le dàmén wǎng zuǒ zǒu, zài wǎng yòu zǒu, bàngōngshì zài yòubiān!)"
+    }
+   }
+  },
+  {
+   "buoi": 9,
+   "unit": 2,
+   "label_buoi": "Buổi dạy 9. Unit 2 · Jobs and school · Nói: luyện Movers Nói phần 1–4 và YCT口试（初级）第一–三部分 theo cặp, theo tranh",
+   "web": [
+    {
+     "ngay": 17,
+     "label": "Ngày 17. Unit 2 · Ôn tuần: đề luyện ngắn hai tiếng; từ con hay sai trong tuần · Trang luyện nói YCT口试（初级）第二部分",
+     "en": {
+      "tu": "Ôn (hay sai): engineer / scientist, leaf / leaves, left / right, office / canteen, different / difference, mistake / wrong, above / below",
+      "cum": "a different shape (không phải a difference shape) / turn right / two leaves (không phải two leafs) / make a mistake",
+      "cau": "Movers Nghe Part 2 (mẫu, viết tên/số): The new teacher is called Mr Hill. H-I-L-L. / His office is in room number fifteen. / Movers Đọc – viết Part 1 (mẫu): This person helps sick animals. – a vet / You have lunch here at school. – a canteen / This shape has four sides that are the same. – a square",
+      "truyen": "Two Leaves — Bông finds two leaves in the school garden. One is big and one is small. 'What's the difference?' asks Leo. 'They are different shapes,' says Bông. 'This one is like a circle.' They take the leaves to the office and show the teacher.",
+      "video": "Tìm YouTube: \"spot the difference leaves shapes for kids\""
+     },
+     "zh": {
+      "tu": "Ôn (hay sai): 工程师 gōngchéngshī / 科学家 kēxuéjiā, 一片树叶 yí piàn shùyè / 两片树叶 liǎng piàn shùyè, 左 zuǒ / 右 yòu, 办公室 bàngōngshì / 食堂 shítáng, 不一样 bù yíyàng / 有什么不一样 yǒu shénme bù yíyàng, 我错了 wǒ cuò le (= I made a mistake) / 错 cuò (= wrong), 上面 shàngmiàn / 下面 xiàmiàn",
+      "cum": "往右走 wǎng yòu zǒu / 两片树叶 liǎng piàn shùyè (không nói 两树叶) / 不一样 bù yíyàng / 我错了 wǒ cuò le",
+      "cau": "[Cầu nối] What's the difference? ↔ 它们有什么不一样？· giống: hỏi điểm khác · khác: EN dùng danh từ difference, ZH dùng 不一样; two leaves (-s) ↔ 两片树叶 (không đổi, thêm lượng từ 片) / YCT3 Nghe phần 1 (mẫu, √/×): 新老师叫Hill先生。(Xīn lǎoshī jiào Hill xiānsheng.) / 他的办公室是十五号。(Tā de bàngōngshì shì shíwǔ hào.) / 动物医生帮助生病的动物。(Dòngwù yīshēng bāngzhù shēngbìng de dòngwù.) / 我们在食堂吃午饭。(Wǒmen zài shítáng chī wǔfàn.) / 这是一个正方形。(Zhè shì yí ge zhèngfāngxíng.) / YCT口试（初级）第二部分 听后回答 – Trang luyện nói (mẫu, ≤8 phút; con nghe câu hỏi rồi ghi âm câu trả lời ngắn): 新老师叫什么？—— 他叫Hill先生。(Xīn lǎoshī jiào shénme? — Tā jiào Hill xiānsheng.) / 图书馆在哪儿？—— 在食堂和办公室中间。(Túshūguǎn zài nǎr? — Zài shítáng hé bàngōngshì zhōngjiān.) / 你长大以后想当什么？—— 我想当科学家。(Nǐ zhǎngdà yǐhòu xiǎng dāng shénme? — Wǒ xiǎng dāng kēxuéjiā.) / 这两片树叶有什么不一样？—— 一片大，一片小。(Zhè liǎng piàn shùyè yǒu shénme bù yíyàng? — Yí piàn dà, yí piàn xiǎo.) / 这是什么形状？—— 是正方形。(Zhè shì shénme xíngzhuàng? — Shì zhèngfāngxíng.)",
+      "truyen": "两片树叶 — Bông在学校花园里找到两片树叶，一片大，一片小。Leo问：“它们有什么不一样？”Bông说：“它们的形状不一样，这片像一个圆。”他们拿着树叶去办公室给老师看。(Bông zài xuéxiào huāyuán lǐ zhǎodào liǎng piàn shùyè, yí piàn dà, yí piàn xiǎo. Leo wèn: “Tāmen yǒu shénme bù yíyàng?” Bông shuō: “Tāmen de xíngzhuàng bù yíyàng, zhè piàn xiàng yí ge yuán.” Tāmen názhe shùyè qù bàngōngshì gěi lǎoshī kàn.)",
+      "video": "Tìm YouTube: \"找不同 树叶 形状 儿童 中文\""
+     }
+    },
+    {
+     "ngay": 18,
+     "label": "Ngày 18. Unit 2 · Đảo ôn từ không tranh + đề Movers Nghe Part 5 và Đọc – viết Part 6 (≤30 phút)",
+     "en": {
+      "tu": "Ôn (không tranh, nghe – chọn chữ): pilot, vet, scientist, engineer, police officer, future, grow, fall, cry, gate, office, canteen, left, right, circle, square, mistake, website, text",
+      "cum": "colour the circle / write 'office' on the door / above the gate / below the window",
+      "cau": "Movers Nghe Part 5 (mẫu, tô màu và viết): Can you see the leaf below the window? Colour it brown. / Write 'office' on the door next to the gate. / Movers Đọc – viết Part 6 (mẫu): Where is the police officer? – He's next to the gate. / What is the vet carrying? – She's carrying a bag. / Now write two sentences about the picture.",
+      "truyen": "Busy Morning at School — It's eight o'clock. A police officer is standing next to the school gate. A vet is carrying a cat into the office. Above the gate there is a big sign. Below the window, two leaves are falling. Bông's text message says, 'Wait for me at the canteen!'",
+      "video": "Tìm YouTube: \"places at school song for kids office canteen gate\""
+     },
+     "zh": {
+      "tu": "Ôn (không tranh, nghe – chọn chữ): 飞行员 fēixíngyuán, 动物医生 dòngwù yīshēng, 科学家 kēxuéjiā, 工程师 gōngchéngshī, 警察 jǐngchá, 以后 yǐhòu, 长 zhǎng, 掉 diào, 哭 kū, 大门 dàmén, 办公室 bàngōngshì, 食堂 shítáng, 左 zuǒ, 右 yòu, 圆 yuán, 正方形 zhèngfāngxíng, 错 cuò, 网站 wǎngzhàn",
+      "cum": "在大门旁边 zài dàmén pángbiān / 拿着一个包 názhe yí ge bāo / 把它涂成棕色 bǎ tā tú chéng zōngsè / 在食堂等我 zài shítáng děng wǒ",
+      "cau": "[Cầu nối] Wait for me at the canteen! ↔ 在食堂等我！(Zài shítáng děng wǒ!)· giống: wait ↔ 等 · khác: at the canteen cuối câu EN ↔ 在食堂 trước động từ ZH / 警察在大门旁边。(Jǐngchá zài dàmén pángbiān.) / 动物医生拿着一个包。(Dòngwù yīshēng názhe yí ge bāo.) / 你能看见窗户下面的树叶吗？把它涂成棕色。(Nǐ néng kànjiàn chuānghu xiàmiàn de shùyè ma? Bǎ tā tú chéng zōngsè.) / 请在大门旁边的门上写“办公室”。(Qǐng zài dàmén pángbiān de mén shang xiě “bàngōngshì”.) / 在食堂等我！(Zài shítáng děng wǒ!) / [Chuyển ngữ] (NL3) Bông nhắn tiếng Anh, con nhắn lại cho Xiaomei bằng tiếng Trung: The police officer is next to the gate. Wait for me at the canteen! → 警察在大门旁边。在食堂等我！(Jǐngchá zài dàmén pángbiān. Zài shítáng děng wǒ!)",
+      "truyen": "学校的早上 — 早上八点，一个警察站在学校大门旁边。一个动物医生抱着一只猫走进办公室。大门上面有一个大牌子。窗户下面，两片树叶掉下来了。Bông的短信说：“在食堂等我！”(Zǎoshang bā diǎn, yí ge jǐngchá zhàn zài xuéxiào dàmén pángbiān. Yí ge dòngwù yīshēng bàozhe yì zhī māo zǒu jìn bàngōngshì. Dàmén shàngmiàn yǒu yí ge dà páizi. Chuānghu xiàmiàn, liǎng piàn shùyè diào xiàlái le. Bông de duǎnxìn shuō: “Zài shítáng děng wǒ!”)",
+      "video": "Tìm YouTube: \"学校 大门 办公室 食堂 中文 儿歌\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "pilot, vet, scientist, engineer, police officer, future, workplace, build, carry, grow, fall, cry, gate, office, canteen, left, right, circle, square, shape, mistake, teach",
+     "slide": "[Lời cô] Vào bài: Hello, class! Speaking time! 同学们好！我们来说一说！· Chuyển ý: Work in pairs. 两个人一组。· Nhắc: Speak loudly, please. 请大声说。· Khen: Well done! 说得真好！· Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): shape, scientist / 科学家 1) Movers Nói phần 1 – tìm 6 điểm khác nhau giữa 2 tranh sân trường (theo cặp, 5 phút): In my picture the police officer is next to the gate. In your picture he's in the office. / In my picture there are two leaves. In your picture there are three. / In my picture the boy is drawing a circle. In your picture he's drawing a square. 2) Movers Nói phần 2 – kể truyện tranh 4 khung \"Leo's Little Tree\" (bắt đầu: Leo plants a little tree…). 3) Movers Nói phần 3 – chọn từ khác loại và nói vì sao: pilot / vet / engineer / canteen → canteen is a place. / circle / square / office / shape. 4) Movers Nói phần 4: What do you want to be in the future? Why? Where do you have lunch at school? 5) [Chuyển ngữ] (NL3, 4 phút) Rối Xiaomei nói 3 câu tiếng Trung, con nói lại cho rối Leo bằng tiếng Anh: 我长大以后想当科学家。我们学校有一个小花园。花园在食堂旁边。→ I want to be a scientist in the future. Our school has got a small garden. It's next to the canteen. [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo kể (5 câu, con tóm 3 ý chính): \"When I grow up, I'd like to be a scientist because I love learning about plants. Our school has got a small garden. It's next to the canteen. Every Friday our class looks after the flowers there. Last week we saw a beautiful butterfly in the garden.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: Leo长大以后想当科学家。他们学校有一个小花园，在食堂旁边。上个星期他们在花园里看见了一只很漂亮的蝴蝶。 (Leo zhǎngdà yǐhòu xiǎng dāng kēxuéjiā. Tāmen xuéxiào yǒu yí ge xiǎo huāyuán, zài shítáng pángbiān. Shàng ge xīngqī tāmen zài huāyuán lǐ kànjiàn le yì zhī hěn piàoliang de húdié.)",
+     "truyen": "Our School Garden — At Bông's school there is a small garden next to the canteen. The children grow flowers and trees there. Every Friday a scientist comes and teaches them about plants. 'Why do leaves fall?' asks Leo. 'Because it's autumn,' says the scientist. Bông wants to be a scientist too. Leo wants to be an engineer and build a big bridge in the future.",
+     "baihat": "Giai điệu Frère Jacques – lời mới \"What Do You Want to Be?\": What do you want to be? What do you want to be? / A vet, a vet. / I want to help animals, I want to help animals, / Every day, every day."
+    },
+    "zh": {
+     "flash": "飞行员 fēixíngyuán, 动物医生 dòngwù yīshēng, 科学家 kēxuéjiā, 工程师 gōngchéngshī, 警察 jǐngchá, 以后 yǐhòu, 工作的地方 gōngzuò de dìfang, 造 zào, 拿 ná, 长 zhǎng, 掉 diào, 哭 kū, 大门 dàmén, 办公室 bàngōngshì, 食堂 shítáng, 左 zuǒ, 右 yòu, 圆 yuán, 正方形 zhèngfāngxíng, 形状 xíngzhuàng, 错 cuò, 教 jiāo",
+     "slide": "[Cầu nối Anh – Trung] Dùng lại tranh 'Leo's Little Tree' và tranh sân trường của Movers Nói: con nói 1 câu tiếng Anh với rối Leo, rồi cùng tranh 1 câu tiếng Trung với rối Xiaomei: The police officer is next to the gate. ↔ 警察在大门旁边。/ Leaves fall in autumn. ↔ 秋天树叶掉了。; con tìm điểm giống (next to ↔ 旁边) và khác (next to the gate ↔ 大门旁边: thứ tự đảo; leaves -s ↔ 树叶 không đổi). Cô đóng vai giám khảo YCT口试（初级）, con thi từng em hoặc theo cặp. 1) YCT口试（初级）第一部分 听后重复 (mẫu, cô đọc mỗi câu 1 lần, con nói lại 1 lần; 5 câu, 4 phút): 我长大以后想当科学家。(Wǒ zhǎngdà yǐhòu xiǎng dāng kēxuéjiā.) / Leo把小树种在花园里。(Leo bǎ xiǎo shù zhòng zài huāyuán lǐ.) / 办公室在大门旁边。(Bàngōngshì zài dàmén pángbiān.) / 秋天树叶掉了。(Qiūtiān shùyè diào le.) / 他在画一个圆。(Tā zài huà yí ge yuán.) 2) YCT口试（初级）第二部分 听后回答 (mẫu, cô hỏi, con trả lời ngắn; sau đó hỏi – đáp theo cặp; 5 câu, 4 phút): 你画了什么？—— 我画了一个正方形。(Nǐ huà le shénme? — Wǒ huà le yí ge zhèngfāngxíng.) / 你们学校有花园吗？—— 有。(Nǐmen xuéxiào yǒu huāyuán ma? — Yǒu.) / 你想当什么？—— 我想当警察。(Nǐ xiǎng dāng shénme? — Wǒ xiǎng dāng jǐngchá.) / 你在哪儿吃午饭？—— 在食堂。(Nǐ zài nǎr chī wǔfàn? — Zài shítáng.) / 你为什么想当科学家？—— 因为我喜欢动物和树。(Nǐ wèishénme xiǎng dāng kēxuéjiā? — Yīnwèi wǒ xǐhuan dòngwù hé shù.) 3) YCT口试（初级）第三部分 看图说话 (mẫu; bước 1 – nhìn tranh trả lời câu hỏi, theo cặp, 6 phút): 警察在哪儿？– 警察在大门旁边。(Jǐngchá zài nǎr? – Jǐngchá zài dàmén pángbiān.) / 他是做什么的？– 他是警察。(Tā shì zuò shénme de? – Tā shì jǐngchá.) / Leo为什么哭？– 因为他的小树要死了。(Leo wèishénme kū? – Yīnwèi tā de xiǎo shù yào sǐ le.); bước 2 – nhìn 1 tranh, nói 2–3 câu (2 tranh, 6 phút): Tranh 'Sân trường' (tranh của Movers Nói phần 1) – 警察在大门旁边。地上有两片树叶。男孩在画一个圆。(Jǐngchá zài dàmén pángbiān. Dì shang yǒu liǎng piàn shùyè. Nánhái zài huà yí ge yuán.) / Tranh 'Leo的小树' (tranh của Movers Nói phần 2) – Leo在花园里种了一棵小树。秋天树叶掉了。Leo哭了。(Leo zài huāyuán lǐ zhòng le yì kē xiǎo shù. Qiūtiān shùyè diào le. Leo kū le.)",
+     "truyen": "学校的花园 — Bông的学校有一个小花园，在食堂旁边。孩子们在花园里种花和树。每个星期五，一位科学家来给他们讲植物。Leo问：“为什么树叶会掉？”科学家说：“因为秋天到了。”Bông长大以后也想当科学家。Leo说：“我长大以后想当工程师，造一座大桥！”(Bông de xuéxiào yǒu yí ge xiǎo huāyuán, zài shítáng pángbiān. Háizimen zài huāyuán lǐ zhòng huā hé shù. Měi ge xīngqīwǔ, yí wèi kēxuéjiā lái gěi tāmen jiǎng zhíwù. Leo wèn: “Wèishénme shùyè huì diào?” Kēxuéjiā shuō: “Yīnwèi qiūtiān dào le.” Bông zhǎngdà yǐhòu yě xiǎng dāng kēxuéjiā. Leo shuō: “Wǒ zhǎngdà yǐhòu xiǎng dāng gōngchéngshī, zào yí zuò dà qiáo!”)",
+     "baihat": "Giai điệu Frère Jacques – lời mới \"你想当什么\": 你想当什么？你想当什么？(Nǐ xiǎng dāng shénme? Nǐ xiǎng dāng shénme?) / 动物医生，动物医生。(Dòngwù yīshēng, dòngwù yīshēng.) / 我想帮助动物，我想帮助动物，(Wǒ xiǎng bāngzhù dòngwù, wǒ xiǎng bāngzhù dòngwù,) / 每一天，每一天。(Měi yì tiān, měi yì tiān.)"
+    }
+   }
+  },
+  {
+   "buoi": 10,
+   "unit": 2,
+   "label_buoi": "Buổi dạy 10. Unit 2 · Jobs and school · Thi thử phần có tính giờ: Movers Đọc – viết Part 1–3 và YCT3 Đọc phần 1–3; cô nhận xét từng con",
+   "web": [
+    {
+     "ngay": 19,
+     "label": "Ngày 19. Unit 2 · Đề YCT3 Đọc phần 1–2 (≤30 phút); truyện, đoạn đọc của chủ đề",
+     "en": {
+      "tu": "Ôn: future, workplace, need, teach, practice, website, text, leave, have to, only, move, wait",
+      "cum": "have to practise / on the website / send a text / only one / move the chairs",
+      "cau": "Movers Đọc – viết Part 3 (mẫu, chọn từ điền vào truyện): Miss Lan (teaches) English. Every day the children (practise) on the school (website). One day the computer didn't work, so they had to (move) to the library. / Chọn tên truyện: A Day in the Library / The New Teacher / A Trip to the Zoo",
+      "truyen": "A Day in the Library — Miss Lan teaches English at Bông's school. Every day the children practise on the school website. One day the computers in the classroom didn't work. 'We have to move to the library,' said Miss Lan. The children waited at the door. There was only one computer, so they read books together. Leo said, 'This is a great idea!'",
+      "video": "Tìm YouTube: \"library song for kids reading books\""
+     },
+     "zh": {
+      "tu": "Ôn: 教 jiāo, 练习 liànxí, 网站 wǎngzhàn, 本 běn, 只 zhǐ, 等 děng, 要 yào, 图书馆 túshūguǎn, 教室 jiàoshì, 电脑 diànnǎo | Nghe làm quen (có tranh, không kiểm tra): 搬 bān (= move), 主意 zhǔyi (= idea)",
+      "cum": "上英语课 shàng Yīngyǔ kè / 在学校网站上练习 zài xuéxiào wǎngzhàn shang liànxí / 去图书馆 qù túshūguǎn / 只有一台电脑 zhǐ yǒu yì tái diànnǎo / 搬椅子 bān yǐzi",
+      "cau": "[Cầu nối] Miss Lan teaches English. ↔ Lan老师教英语。· giống: Ai – dạy – môn gì · khác: Miss Lan ↔ Lan老师 (chức danh sau tên); teaches thêm -es ↔ 教 không đổi / YCT3 Đọc phần 1 (mẫu, nhìn tranh √/×): 他们在图书馆看书。(Tāmen zài túshūguǎn kàn shū.) / 我们得去图书馆。(Wǒmen děi qù túshūguǎn.) / YCT3 Đọc phần 2 (mẫu, nối câu với tranh): 大家把椅子搬到图书馆。(Dàjiā bǎ yǐzi bān dào túshūguǎn.) / 图书馆里有很多本书。(Túshūguǎn lǐ yǒu hěn duō běn shū.) / Lan老师教英语。(Lan lǎoshī jiāo Yīngyǔ.) / 每天，大家在学校网站上练习英语。(Měi tiān, dàjiā zài xuéxiào wǎngzhàn shang liànxí Yīngyǔ.) / 我们去图书馆吧！(Wǒmen qù túshūguǎn ba!) / 大家在门口等。(Dàjiā zài ménkǒu děng.) / 图书馆里只有一台电脑。(Túshūguǎn lǐ zhǐ yǒu yì tái diànnǎo.)",
+      "truyen": "在图书馆上课 — Lan老师教英语。每天，大家在学校网站上练习英语。有一天，教室的电脑坏了。Lan老师说：“我们得去图书馆。”大家在门口等。图书馆里只有一台电脑，所以大家一起看书。Leo说：“这是个好主意！”(Lan lǎoshī jiāo Yīngyǔ. Měi tiān, dàjiā zài xuéxiào wǎngzhàn shang liànxí Yīngyǔ. Yǒu yì tiān, jiàoshì de diànnǎo huài le. Lan lǎoshī shuō: “Wǒmen děi qù túshūguǎn.” Dàjiā zài ménkǒu děng. Túshūguǎn lǐ zhǐ yǒu yì tái diànnǎo, suǒyǐ dàjiā yìqǐ kàn shū. Leo shuō: “Zhè shì ge hǎo zhǔyi!”)",
+      "video": "Tìm YouTube: \"图书馆 看书 儿歌 中文\""
+     }
+    },
+    {
+     "ngay": 20,
+     "label": "Ngày 20. Unit 2 · Ôn unit: Hộp ôn, tổng hợp lỗi sai, Phiên dịch nhí",
+     "en": {
+      "tu": "Ôn (Hộp ôn cả unit): engineer, pilot, scientist, vet, police officer, future, cry, fall, grow, leaves, hundred, why, gate, office, canteen, turn, left, right, mistake, difference, shape, teach",
+      "cum": "want to be / turn left / make a mistake / What does it mean? / have to",
+      "cau": "Sửa lỗi hay gặp: I want to be a pilot. (không viết: I want be pilot) / two leaves (không viết: two leafs) / The canteen is between the library and the office. / [Chuyển ngữ] Phiên dịch nhí: My mum is an engineer. She builds bridges. / Turn right at the gate.",
+      "truyen": "The Little Interpreter at School — A new boy from China comes to Bông's class. He can't speak English. The teacher asks, 'What do you want to be?' Bông asks him, '你想当什么？' He says, '我想当科学家。' Bông tells the teacher, 'He wants to be a scientist!' The teacher says, 'Thank you, Bông. You're a great helper!'",
+      "video": "Tìm YouTube: \"English Chinese school words for kids\""
+     },
+     "zh": {
+      "tu": "Ôn (Hộp ôn cả unit): 警察 jǐngchá, 科学家 kēxuéjiā, 工程师 gōngchéngshī, 飞行员 fēixíngyuán, 动物医生 dòngwù yīshēng, 以后 yǐhòu, 哭 kū, 掉 diào, 长 zhǎng, 树叶 shùyè, 一百 yìbǎi, 为什么 wèishénme, 大门 dàmén, 办公室 bàngōngshì, 食堂 shítáng, 中间 zhōngjiān, 左 zuǒ, 右 yòu, 错 cuò, 不一样 bù yíyàng, 形状 xíngzhuàng, 教 jiāo",
+      "cum": "想当 xiǎng dāng / 往右走 wǎng yòu zǒu / 什么意思 shénme yìsi / 两片树叶 liǎng piàn shùyè",
+      "cau": "[Cầu nối] What do you want to be? ↔ 你想当什么？· giống: want to be ↔ 想当 · khác: what đầu câu EN ↔ 什么 cuối câu ZH (đứng đúng chỗ câu trả lời) / Sửa lỗi hay gặp: 我想当飞行员。(Wǒ xiǎng dāng fēixíngyuán.) (không viết: 我想当是飞行员) / 两片树叶 (liǎng piàn shùyè) (không viết: 两树叶) / 食堂在图书馆和办公室中间。(Shítáng zài túshūguǎn hé bàngōngshì zhōngjiān.) (không viết: 食堂在中间图书馆和办公室) / [Chuyển ngữ] Phiên dịch nhí: \"My mum is an engineer. She builds bridges.\" → 我妈妈是工程师，她造桥。(Wǒ māma shì gōngchéngshī, tā zào qiáo.) / \"Turn right at the gate.\" → 到了大门往右走。(Dào le dàmén wǎng yòu zǒu.)",
+      "truyen": "学校里的小翻译 — 一个中国男孩来到Bông的班。他不会说英语。老师用英语问他想当什么。Bông问他：“你想当什么？”他说：“我想当科学家。”Bông用英语告诉老师：他想当科学家。老师说：“谢谢你，Bông！你真是个好帮手！”(Yí ge Zhōngguó nánhái lái dào Bông de bān. Tā bú huì shuō Yīngyǔ. Lǎoshī yòng Yīngyǔ wèn tā xiǎng dāng shénme. Bông wèn tā: “Nǐ xiǎng dāng shénme?” Tā shuō: “Wǒ xiǎng dāng kēxuéjiā.” Bông yòng Yīngyǔ gàosu lǎoshī: tā xiǎng dāng kēxuéjiā. Lǎoshī shuō: “Xièxie nǐ, Bông! Nǐ zhēn shì ge hǎo bāngshou!”)",
+      "video": "Tìm YouTube: \"中英文 学校 词汇 儿童\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "engineer, pilot, scientist, vet, police officer, future, grow, fall, leaves, hundred, gate, office, canteen, left, right, circle, square, shape, mistake, wrong, teach, website, practise",
+     "slide": "[Lời cô] Vào bài: Good morning, class! Test time! 同学们好！今天考试！· Chuyển ý: Check your answers. 检查一下。· Nhắc: Time's up! 时间到了！· Khen: Only one mistake. Well done! 只错了一个，真棒！· Tiếng Việt: chỉ giữ nề nếp và nhận xét riêng từng con; từ khó hình dung (cô quyết định có giải nghĩa không): practice / 练习, website 1) Thi thử Movers Đọc – viết Part 1 (5 câu định nghĩa) + Part 2 (6 câu đối thoại) + Part 3 (5 chỗ trống + chọn tên truyện), tính giờ 22 phút: This person flies planes. – a pilot / You have lunch here. – a canteen / What do you want to be? – A vet. / Miss Lan (teaches) English… 2) Cô chữa nhanh, ghi lỗi từng con vào Hộp ôn (5 phút): leaf/leaves, teach/teaches, left/right.",
+     "truyen": "Bông's Big Test — Today Bông has a reading test. She reads every question slowly. 'This person helps sick animals.' – 'A vet!' she writes. 'You have lunch here at school.' – 'A canteen!' She checks her answers and finds one mistake. She changes it. When the test finishes, the teacher says, 'Well done! Only one wrong answer!'",
+     "baihat": "Giai điệu Twinkle Twinkle Little Star – lời mới \"Read It Slowly\": Read it slowly, read it well, / Find the words and then you spell. / Check your answers, one, two, three, / No more mistakes, you'll see!"
+    },
+    "zh": {
+     "flash": "警察 jǐngchá, 科学家 kēxuéjiā, 工程师 gōngchéngshī, 飞行员 fēixíngyuán, 动物医生 dòngwù yīshēng, 以后 yǐhòu, 长 zhǎng, 掉 diào, 树叶 shùyè, 一百 yìbǎi, 大门 dàmén, 办公室 bàngōngshì, 食堂 shítáng, 左 zuǒ, 右 yòu, 圆 yuán, 正方形 zhèngfāngxíng, 形状 xíngzhuàng, 错 cuò, 教 jiāo, 网站 wǎngzhàn, 练习 liànxí",
+     "slide": "[Cầu nối Anh – Trung] Sau khi chữa đề, cô đặt cạnh nhau 2 cặp câu từ hai đề: What do you want to be? ↔ 你想当什么？/ They have lunch in the canteen. ↔ 他们在食堂吃饭。; con nói điểm khác: what đầu câu ↔ 什么 cuối câu; in the canteen cuối câu ↔ 在食堂 trước động từ. 1) Thi thử YCT3 Đọc phần 1 (5 câu √/×) + phần 2 (5 câu nối với tranh) + phần 3 (5 câu hỏi – đáp), tính giờ 20 phút: 他们在食堂吃饭。(Tāmen zài shítáng chīfàn.) / 这个人开飞机。(Zhège rén kāi fēijī.) / Lan老师教什么？– 她教英语。/ 你想当什么？– 我想当动物医生。 2) Cô nhận xét từng con, ghi lỗi vào Hộp ôn (5 phút): 中间 đứng cuối, câu 把, 左/右. 3) [Chuyển ngữ] (NL7, 3 phút) Cô đọc 3 câu tiếng Anh của 'A Day in the Library', con chọn câu tóm tắt tiếng Trung đúng rồi nói lại cho rối Xiaomei: A. 电脑坏了，大家去图书馆看书。B. 大家去食堂吃饭。C. Leo迟到了。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Cô đọc đoạn 'A Day in the Library' (5 câu, con tóm 3 ý chính): \"Miss Lan teaches English at Bông's school. Every day the children practise on the school website. One day the computers in the classroom didn't work. They had to move to the library. There was only one computer, so they read books together.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 大家每天在学校网站上练习。有一天，教室的电脑坏了，大家去图书馆。那儿只有一台电脑，所以大家一起看书。 (Dàjiā měi tiān zài xuéxiào wǎngzhàn shang liànxí. Yǒu yì tiān, jiàoshì de diànnǎo huài le, dàjiā qù túshūguǎn. Nàr zhǐ yǒu yì tái diànnǎo, suǒyǐ dàjiā yìqǐ kàn shū.)",
+     "truyen": "Bông考试 — 今天Bông有阅读考试。她看得很慢很认真。“这个人帮助生病的动物。”——“动物医生！”“他们在哪儿吃午饭？”——“在食堂！”她看完了，找到一个错的地方，改好了。老师说：“只错了一个，Bông，你真棒！”(Jīntiān Bông yǒu yuèdú kǎoshì. Tā kàn de hěn màn hěn rènzhēn. “Zhège rén bāngzhù shēngbìng de dòngwù.” — “Dòngwù yīshēng!” “Tāmen zài nǎr chī wǔfàn?” — “Zài shítáng!” Tā kàn wán le, zhǎodào yí ge cuò de dìfang, gǎi hǎo le. Lǎoshī shuō: “Zhǐ cuò le yí ge, Bông, nǐ zhēn bàng!”)",
+     "baihat": "Giai điệu Twinkle Twinkle Little Star – lời mới \"慢慢看\": 慢慢看来认真看，(Mànmàn kàn lái rènzhēn kàn,) / 看懂问题再写字。(Kàn dǒng wèntí zài xiě zì.) / 一二三来看一看，(Yī èr sān lái kàn yi kàn,) / 没有错了我真棒！(Méiyǒu cuò le wǒ zhēn bàng!)"
+    }
+   }
+  },
+  {
+   "buoi": 11,
+   "unit": 3,
+   "label_buoi": "Buổi dạy 11. Unit 3 · Clothes and shopping · Kỹ năng: Movers Nghe Part 5 và Đọc – viết Part 2, chiến lược làm bài (Larva U4 · My Favourite Colour)",
+   "web": [
+    {
+     "ngay": 21,
+     "label": "Ngày 21. Unit 3 · Ôn Larva U4 (màu sắc, quần áo) + đề Movers Nghe Part 5 (≤30 phút)",
+     "en": {
+      "tu": "Ôn: sweater, pair, helmet, backpack (UK rucksack), rucksack, get dressed, get undressed, put on, take off | Ôn nhanh (Unit 2): pilot, canteen, office, mistake",
+      "cum": "put on a sweater / take off your helmet / a pair of shoes / get dressed / a purple backpack",
+      "cau": "What's your favourite colour? – I like purple best. / [Ngữ pháp: like … best] I like my orange sweater best. / Put on your helmet before you ride your bike. / Take off your shoes, please. / I've got a new pair of trousers. / It's raining outside. Take your umbrella! / Movers Nghe Part 5 (mẫu): Can you see the boy with the backpack? Colour his backpack orange.",
+      "truyen": "Getting Dressed — It's cold this morning. Bông gets dressed quickly. She puts on her pink sweater and a pair of grey trousers. Then she takes her purple backpack. Her brother puts on his helmet because he rides his bike to school. 'Don't forget your rucksack!' shouts Mum.",
+      "video": "Tìm YouTube: \"getting dressed song put on take off kids\""
+     },
+     "zh": {
+      "tu": "Ôn: 毛衣 máoyī, 件 jiàn, 裤子 kùzi, 鞋 xié, 双 shuāng, 头盔 tóukuī, 书包 shūbāo, 穿上 chuān shàng, 橙 chéng, 粉 fěn, 紫 zǐ, 最 zuì, 外面 wàimiàn, 雨伞 yǔsǎn | Ôn nhanh (Unit 2): 飞行员 fēixíngyuán, 食堂 shítáng, 办公室 bàngōngshì, 错 cuò | Nghe làm quen (có tranh, không kiểm tra): 脱 tuō (= take off)",
+      "cum": "一件毛衣 yí jiàn máoyī / 一条裤子 yì tiáo kùzi / 一双鞋 yì shuāng xié / 穿上毛衣 chuān shàng máoyī / 戴上头盔 dài shàng tóukuī / 脱鞋 tuō xié / 橙色的书包 chéngsè de shūbāo / 紫色 zǐsè",
+      "cau": "[Cầu nối] I like purple best. ↔ 我最喜欢紫色。· giống: thích nhất · khác: best cuối câu EN ↔ 最 trước 喜欢 ZH; put on a sweater ↔ 穿上毛衣, put on a helmet ↔ 戴上头盔 (hai động từ khác nhau) / 你最喜欢什么颜色？(Nǐ zuì xǐhuan shénme yánsè?) / [Ngữ pháp: 最喜欢] 我最喜欢紫色。(Wǒ zuì xǐhuan zǐsè.) / 我最喜欢我的橙色毛衣。(Wǒ zuì xǐhuan wǒ de chéngsè máoyī.) / 骑自行车以前，要戴上头盔。(Qí zìxíngchē yǐqián, yào dài shàng tóukuī.) / 请脱鞋。(Qǐng tuō xié.) / 我有一条新裤子。(Wǒ yǒu yì tiáo xīn kùzi.) / 外面下雨了，拿上雨伞吧！(Wàimiàn xià yǔ le, ná shàng yǔsǎn ba!) / 他的书包是橙色的。(Tā de shūbāo shì chéngsè de.)",
+      "truyen": "穿衣服 — 今天早上很冷。Bông很快地穿好衣服。她穿上一件粉色的毛衣和一条灰色的裤子，然后拿上紫色的书包。哥哥骑自行车去上学，所以他戴上头盔。妈妈大声说：“别忘了你的书包！”(Jīntiān zǎoshang hěn lěng. Bông hěn kuài de chuān hǎo yīfu. Tā chuān shàng yí jiàn fěnsè de máoyī hé yì tiáo huīsè de kùzi, ránhòu ná shàng zǐsè de shūbāo. Gēge qí zìxíngchē qù shàngxué, suǒyǐ tā dài shàng tóukuī. Māma dà shēng shuō: “Bié wàng le nǐ de shūbāo!”)",
+      "video": "Tìm YouTube: \"穿衣服 儿歌 穿上 脱下\""
+     }
+    },
+    {
+     "ngay": 22,
+     "label": "Ngày 22. Unit 3 · Ôn Larva U4 (tính từ, so sánh) + đề Movers Đọc – viết Part 2 (≤30 phút)",
+     "en": {
+      "tu": "Ôn: dream, straight, quick, quiet, safe, strong, weak, surprised, terrible, worse, worst, noise, outside, most, someone",
+      "cum": "a terrible noise / the worst day / be surprised / straight hair / go outside / stay safe",
+      "cau": "[Ngữ pháp: so sánh bad – worse – worst] My cold is worse today. This is the worst day! / Someone is making a terrible noise outside. / Be quiet, please! The baby is sleeping. / Wear your helmet. It keeps you safe. / I had a strange dream last night. / Movers Đọc – viết Part 2 (mẫu): What's that noise? – A It's someone outside. B Yes, it is. C I'm quiet.",
+      "truyen": "The Terrible Noise — Leo is reading quietly. Suddenly there is a terrible noise outside. Leo is surprised. 'Someone is shouting!' he says. He looks out of the window. It's his brother. He's carrying a big, heavy box and he isn't strong enough. 'Can you help me?' he asks. Leo goes outside and helps him. Now the box is safe.",
+      "video": "Tìm YouTube: \"loud and quiet sounds for kids\""
+     },
+     "zh": {
+      "tu": "Ôn: 外面 wàimiàn, 最 zuì, 安静 ānjìng, 吃惊 chījīng, 声音 shēngyīn, 有人 yǒu rén | Ôn khóa trước: 箱子 xiāngzi, 重 zhòng | Nghe làm quen (có tranh, không kiểm tra): 安全 ānquán (= safe), 梦 mèng (= dream), 最糟糕 zuì zāogāo (= the worst)",
+      "cum": "在外面 zài wàimiàn / 很大的声音 hěn dà de shēngyīn / 最糟糕的一天 zuì zāogāo de yì tiān / 请安静 qǐng ānjìng / 很吃惊 hěn chījīng / 很安全 hěn ānquán",
+      "cau": "[Cầu nối] Someone is shouting outside! ↔ 有人在外面叫！· giống: someone ↔ 有人 · khác: outside cuối câu EN ↔ 在外面 trước động từ ZH; the worst ↔ 最糟糕的 (最 + tính từ, không đổi dạng từ) / 有人在外面叫！(Yǒu rén zài wàimiàn jiào!) / 谁在外面？(Shéi zài wàimiàn?) / [Ngữ pháp: 最 + tính từ ↔ the worst] 我感冒更重了，今天是最糟糕的一天！(Wǒ gǎnmào gèng zhòng le, jīntiān shì zuì zāogāo de yì tiān!) / 请安静！小宝宝在睡觉。(Qǐng ānjìng! Xiǎo bǎobao zài shuìjiào.) / 戴上头盔，很安全。(Dài shàng tóukuī, hěn ānquán.) / 昨天晚上我做了一个奇怪的梦。(Zuótiān wǎnshang wǒ zuò le yí ge qíguài de mèng.) / 哥哥拿着一个大箱子，太重了。(Gēge názhe yí ge dà xiāngzi, tài zhòng le.) / Leo很吃惊。(Leo hěn chījīng.) / [Chuyển ngữ] (NL3) Leo nói tiếng Anh, con nói lại cho Xiaomei bằng tiếng Trung: Someone is shouting outside! It's my brother. Can you help me? → 有人在外面叫！是我哥哥。你能帮我吗？(Yǒu rén zài wàimiàn jiào! Shì wǒ gēge. Nǐ néng bāng wǒ ma?)",
+      "truyen": "谁在外面叫？— Leo在家安静地看书。突然，外面有很大的声音！Leo很吃惊：“有人在大声叫！”Leo往窗外看，是哥哥！哥哥拿着一个大箱子，太重了，他的力气不够大。哥哥问：“你能帮我吗？”Leo出去帮哥哥。现在箱子很安全了。(Leo zài jiā ānjìng de kàn shū. Tūrán, wàimiàn yǒu hěn dà de shēngyīn! Leo hěn chījīng: “Yǒu rén zài dà shēng jiào!” Leo wǎng chuāng wài kàn, shì gēge! Gēge názhe yí ge dà xiāngzi, tài zhòng le, tā de lìqi bú gòu dà. Gēge wèn: “Nǐ néng bāng wǒ ma?” Leo chūqù bāng gēge. Xiànzài xiāngzi hěn ānquán le.)",
+      "video": "Tìm YouTube: \"大声 小声 安静 儿歌 中文\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "sweater, pair, helmet, backpack, rucksack, get dressed, get undressed, put on, take off, dream, straight, quick, quiet, safe, strong, weak, surprised, terrible, worse, worst, noise, outside",
+     "slide": "[Lời cô] Vào bài: Hello, everyone! 大家好！· Chuyển ý: Now, let's listen and colour. 现在我们听一听。· Nhắc: Only one colour, please. 只用一个颜色。· Khen: Beautiful! 真漂亮！· Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): surprised, terrible 1) Nghe Part 5 Movers – nghe, tô màu và viết (5 lệnh, 10 phút; chiến lược: tìm đúng đồ vật trước, chỉ tô 1 màu, viết đúng chính tả): Colour the sweater on the chair pink. / The boy with the helmet – colour his helmet orange. / Write 'SALE' on the bag. / Colour the pair of shoes under the table purple. / Can you see the backpack? Colour it green. 2) Đọc – viết Part 2 – chọn câu đáp A/B/C (5 câu; chiến lược: đọc câu trước và sau chỗ trống): What's your favourite colour? – Purple. / Can I put on your sweater? – Yes, you can. / Why are you surprised? – Because there's a terrible noise outside. 3) Điền dạng so sánh: bad – worse – the worst / good – better – the best.",
+     "truyen": "Anna's Worst Morning — It was Anna's worst morning! She got up late and got dressed very quickly. She put on her sweater the wrong way. She couldn't find her pair of shoes. Then there was a terrible noise outside: her bike fell over! Anna was surprised, but her helmet was safe. She laughed, put on her backpack and walked to school. 'Tomorrow will be better!' she said.",
+     "baihat": "Giai điệu Mary Had a Little Lamb – lời mới \"Put On Your Sweater\": Put on your sweater, sweater, sweater, / Put on your sweater, it's cold outside! / Take off your helmet, helmet, helmet, / Take off your helmet, come inside!"
+    },
+    "zh": {
+     "flash": "毛衣 máoyī, 一双 yì shuāng, 头盔 tóukuī, 书包 shūbāo, 穿衣服 chuān yīfu, 脱衣服 tuō yīfu, 穿上 chuān shàng, 脱 tuō, 梦 mèng, 快 kuài, 安静 ānjìng, 安全 ānquán, 吃惊 chījīng, 最糟糕 zuì zāogāo, 声音 shēngyīn, 外面 wàimiàn",
+     "slide": "[Cầu nối Anh – Trung] Cùng tranh Bông mặc đồ và tranh 'Anna's Worst Morning': rối Leo nói Put on your sweater. / I like purple best., rối Xiaomei nói 穿上毛衣。/ 我最喜欢紫色。; con tìm điểm giống (put on ↔ 穿上: động từ + hướng) và khác (put on dùng cho cả áo và mũ ↔ 穿 cho áo, 戴 cho mũ; a pair of shoes ↔ 一双鞋). 1) YCT3 Nghe phần 1 – dùng lại tranh của bài Nghe Part 5 tiếng Anh, nghe, nhìn tranh √/× (5 câu, 8 phút; chiến lược: chú ý màu và lượng từ 件/条/双): 椅子上的毛衣是粉色的。(Yǐzi shang de máoyī shì fěnsè de.) / 那个男孩戴着头盔，头盔是橙色的。(Nàge nánhái dàizhe tóukuī, tóukuī shì chéngsè de.) / 桌子下面有一双紫色的鞋。(Zhuōzi xiàmiàn yǒu yì shuāng zǐsè de xié.) / 这个书包是绿色的。(Zhège shūbāo shì lǜsè de.) / 我最喜欢紫色。(Wǒ zuì xǐhuan zǐsè.) 2) YCT3 Nghe phần 2 – nghe chọn tranh A/B/C, cùng nội dung bài Đọc – viết Part 2 tiếng Anh (3 câu): 我能穿你的毛衣吗？——能。(Wǒ néng chuān nǐ de máoyī ma? — Néng.) / 外面有人在大声叫！(Wàimiàn yǒu rén zài dà shēng jiào!) / 你为什么很吃惊？——因为外面有很大的声音。(Nǐ wèishénme hěn chījīng? — Yīnwèi wàimiàn yǒu hěn dà de shēngyīn.) 3) [Chuyển ngữ] (NL3, 4 phút) Rối Leo kể 3 câu tiếng Anh về buổi sáng của Anna, con kể lại cho rối Xiaomei: Anna got up late. She couldn't find her shoes. Her bike fell over. → Anna起晚了。她找不到她的鞋。她的自行车倒了。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo kể (5 câu, con tóm 3 ý chính): \"Yesterday was a terrible morning for Anna. She got up late because she was very tired. She couldn't find her shoes, so she wore her old ones. Then her bike fell over on the way. In the end, she was late for school.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: Anna起晚了，她找不到她的鞋。她的自行车倒了，她上学迟到了。 (Anna qǐ wǎn le, tā zhǎo bu dào tā de xié. Tā de zìxíngchē dǎo le, tā shàngxué chídào le.)",
+     "truyen": "Anna最糟糕的早上 — 那天早上，Anna起晚了。她穿衣服穿得很快，把毛衣穿反了。她找不到她的鞋。然后，外面有很大的声音：她的自行车倒了！Anna很吃惊，可是她的头盔没事。Anna笑了，背上书包走路去上学。她说：“明天会更好！”(Nà tiān zǎoshang, Anna qǐ wǎn le. Tā chuān yīfu chuān de hěn kuài, bǎ máoyī chuān fǎn le. Tā zhǎo bú dào tā de xié. Ránhòu, wàimiàn yǒu hěn dà de shēngyīn: tā de zìxíngchē dǎo le! Anna hěn chījīng, kěshì tā de tóukuī méi shì. Anna xiào le, bēi shàng shūbāo zǒulù qù shàngxué. Tā shuō: “Míngtiān huì gèng hǎo!”)",
+     "baihat": "Giai điệu Mary Had a Little Lamb – lời mới \"穿上毛衣\": 穿上毛衣，穿毛衣，穿毛衣，(Chuān shàng máoyī, chuān máoyī, chuān máoyī,) / 穿上毛衣，外面很冷！(Chuān shàng máoyī, wàimiàn hěn lěng!) / 摘下头盔，摘头盔，摘头盔，(Zhāi xià tóukuī, zhāi tóukuī, zhāi tóukuī,) / 摘下头盔，快进来！(Zhāi xià tóukuī, kuài jìnlái!)"
+    }
+   }
+  },
+  {
+   "buoi": 12,
+   "unit": 3,
+   "label_buoi": "Buổi dạy 12. Unit 3 · Clothes and shopping · Kỹ năng: dạng bài đề YCT3, chuyển ngữ có bẫy (Larva U10 · Let's Go Shopping)",
+   "web": [
+    {
+     "ngay": 23,
+     "label": "Ngày 23. Unit 3 · Ôn Larva U10 (mua sắm, tiền, giá) + đề YCT3 Nghe phần 1–2 (≤30 phút)",
+     "en": {
+      "tu": "Ôn: shopping, supermarket, cheap, expensive, money, let, sale, size, dollar, yuan | Từ nối Unit 2: gate, office, turn left, turn right",
+      "cum": "go shopping / how much / too expensive / on sale / What size? / ten dollars",
+      "cau": "Let's go shopping at the supermarket! / How much is this sweater? – It's fifteen dollars. / [Ngữ pháp: too + tính từ] This hat is too expensive. This one is cheap. / What size are your shoes? – Size thirty. / These T-shirts are on sale today. / Let me pay. I've got some money.",
+      "truyen": "Shopping with Mum — Leo and his mum go shopping at the supermarket. Leo wants a new sweater. 'How much is this one?' he asks. 'Forty dollars. It's too expensive,' says Mum. 'Look! These sweaters are on sale. They're only ten dollars.' Leo finds his size. 'Let me pay with my money!' he says.",
+      "video": "Tìm YouTube: \"how much is it shopping dialogue kids\""
+     },
+     "zh": {
+      "tu": "Ôn: 超市 chāoshì, 贵 guì, 便宜 piányi, 太 tài, 让 ràng, 元 yuán, 美元 měiyuán, 件 jiàn, 毛衣 máoyī, 打折 dǎzhé | Ôn khóa trước: 钱 qián, 号 hào | Nghe làm quen (có tranh, không kiểm tra): 付钱 fù qián (= pay) | Từ nối Unit 2: 左 zuǒ, 右 yòu",
+      "cum": "去超市 qù chāoshì / 多少钱 duōshao qián / 太贵了 tài guì le / 很便宜 hěn piányi / 在打折 zài dǎzhé / 十五美元 shíwǔ měiyuán / 多大的鞋 duō dà de xié",
+      "cau": "[Cầu nối] How much is this sweater? – It's forty dollars. It's too expensive. ↔ 这件毛衣多少钱？– 四十美元，太贵了。(Zhè jiàn máoyī duōshao qián? – Sìshí měiyuán, tài guì le.) · giống: số tiền = số + đơn vị (dollars ↔ 美元, yuan ↔ 元) · khác: How much đầu câu ↔ 多少钱 cuối câu; ZH cần lượng từ 件 / 我们去超市买东西吧！(Wǒmen qù chāoshì mǎi dōngxi ba!) / 这件毛衣多少钱？——十五美元。(Zhè jiàn máoyī duōshao qián? — Shíwǔ měiyuán.) / [Ngữ pháp: 太 + tính từ + 了] 这个帽子太贵了。(Zhège màozi tài guì le.) / 这个很便宜。(Zhège hěn piányi.) / 你穿多大的鞋？——三十号。(Nǐ chuān duō dà de xié? — Sānshí hào.) / 今天这些T恤打折。(Jīntiān zhèxiē T xù dǎzhé.) / 让我付钱吧，我有钱。(Ràng wǒ fù qián ba, wǒ yǒu qián.)",
+      "truyen": "和妈妈去超市 — Leo和妈妈去超市买东西。Leo想买一件新毛衣。他问：“这件多少钱？”妈妈说：“四十美元，太贵了。看！这些毛衣在打折，只要十美元。”Leo找到了他的号。Leo说：“让我用我的钱付吧！”(Leo hé māma qù chāoshì mǎi dōngxi. Leo xiǎng mǎi yí jiàn xīn máoyī. Tā wèn: “Zhè jiàn duōshao qián?” Māma shuō: “Sìshí měiyuán, tài guì le. Kàn! Zhèxiē máoyī zài dǎzhé, zhǐ yào shí měiyuán.” Leo zhǎodào le tā de hào. Leo shuō: “Ràng wǒ yòng wǒ de qián fù ba!”)",
+      "video": "Tìm YouTube: \"多少钱 买东西 中文 对话 儿童\""
+     }
+    },
+    {
+     "ngay": 24,
+     "label": "Ngày 24. Unit 3 · Ôn Larva U10 (địa điểm trong thành phố, công nghệ) + đề YCT3 Đọc phần 3–4; Hộp ôn",
+     "en": {
+      "tu": "Ôn: bus station, bus stop, car park, city centre, shopping centre, sports centre, café, market, station, road, building, address, app, e-book, email, internet, laptop, machine, message, send | Hộp ôn: sweater, worst",
+      "cum": "at the bus stop / in the city centre / next to the car park / send a message / on the internet / read an e-book",
+      "cau": "Where's the shopping centre? – It's in the city centre, next to the bus station. / What's your address? / I send an email to my grandma on my laptop. / Mum reads e-books on her app. / The café is between the market and the sports centre. / Let's take the bus. The bus stop is near our building. / [Chuyển ngữ] (NL3) Nghe Grandma gọi bằng tiếng Trung, nhắn lại cho Leo bằng tiếng Anh: 喂，我们在咖啡店见吧！咖啡店离车站很近。→ Hello! Let's meet at the café. The café is near the bus station.",
+      "truyen": "A Message from Grandma — Grandma sends Bông a message on the internet: 'Let's meet at the café in the city centre!' Bông and her dad walk to the bus stop near their building. They take the bus to the bus station. The café is next to the shopping centre. Grandma is waiting there with a present: a new e-book!",
+      "video": "Tìm YouTube: \"places in town song kids bus station supermarket\""
+     },
+     "zh": {
+      "tu": "Ôn: 车站 chēzhàn, 近 jìn, 市场 shìchǎng, 楼 lóu, 发 fā, 喂 wèi, 电子邮件 diànzǐ yóujiàn, 电子书 diànzǐshū | Ôn khóa trước: 商场 shāngchǎng, 咖啡 kāfēi, 电脑 diànnǎo, 网上 wǎng shang | Hộp ôn: 毛衣 máoyī, 最糟糕 zuì zāogāo | Nghe làm quen (có tranh, không kiểm tra): 地址 dìzhǐ (= address), 消息 xiāoxi (= message), 应用 yìngyòng (= app)",
+      "cum": "在公共汽车站 zài gōnggòng qìchē zhàn / 在市中心 zài shì zhōngxīn / 在停车场旁边 zài tíngchēchǎng pángbiān / 发消息 fā xiāoxi / 在网上 zài wǎng shang / 看电子书 kàn diànzǐshū",
+      "cau": "[Cầu nối] Let's meet at the café! ↔ 我们在咖啡店见吧！· giống: café ↔ 咖啡 kāfēi đọc gần giống (từ mượn âm) · khác: Let's đầu câu ↔ 吧 cuối câu; at the café cuối câu EN ↔ 在咖啡店 trước động từ ZH / 商场在哪儿？——在市中心，在汽车站旁边。(Shāngchǎng zài nǎr? — Zài shì zhōngxīn, zài qìchē zhàn pángbiān.) / 你家的地址是什么？(Nǐ jiā de dìzhǐ shì shénme?) / 我用笔记本电脑给奶奶发电子邮件。(Wǒ yòng bǐjìběn diànnǎo gěi nǎinai fā diànzǐ yóujiàn.) / 妈妈用手机应用看电子书。(Māma yòng shǒujī yìngyòng kàn diànzǐshū.) / 咖啡店在市场和体育中心中间。(Kāfēidiàn zài shìchǎng hé tǐyù zhōngxīn zhōngjiān.) / 我们坐公共汽车吧，车站离我们的楼很近。(Wǒmen zuò gōnggòng qìchē ba, chēzhàn lí wǒmen de lóu hěn jìn.) / YCT3 Đọc phần 4 (mẫu, điền: 近 / 发 / 中间): 车站离我们的楼很（近）。/ 奶奶在网上给Bông（发）消息。/ 咖啡店在市场和体育中心（中间）。 / 我们在咖啡店见吧！(Wǒmen zài kāfēidiàn jiàn ba!)",
+      "truyen": "奶奶的消息 — 奶奶在网上给Bông发消息：“我们在市中心的咖啡店见吧！”Bông和爸爸走到楼旁边的公共汽车站。他们坐公共汽车到汽车站。咖啡店在商场旁边。奶奶在那儿等他们，还送给Bông一个礼物：一本新的电子书！(Nǎinai zài wǎng shang gěi Bông fā xiāoxi: “Wǒmen zài shì zhōngxīn de kāfēidiàn jiàn ba!” Bông hé bàba zǒu dào lóu pángbiān de gōnggòng qìchē zhàn. Tāmen zuò gōnggòng qìchē dào qìchē zhàn. Kāfēidiàn zài shāngchǎng pángbiān. Nǎinai zài nàr děng tāmen, hái sòng gěi Bông yí ge lǐwù: yì běn xīn de diànzǐshū!)",
+      "video": "Tìm YouTube: \"城市 车站 商店 咖啡店 中文 儿童\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "shopping, supermarket, cheap, expensive, money, sale, size, dollar, how much, go shopping, bus station, bus stop, car park, city centre, shopping centre, sports centre, café, market, address, email, laptop, message",
+     "slide": "[Lời cô] Vào bài: Good afternoon, class! Let's go shopping! 同学们好！我们去买东西吧！· Chuyển ý: Now, listen and write. 现在听一听，写一写。· Nhắc: Check your spelling. 看看写对了没有。· Khen: Great! 太好了！· Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): sale, size 1) Nghe Part 2 Movers – nghe, viết tên và số (5 câu, 8 phút): The shop is called Toy World. / The sweater is ___ dollars. – twelve / The bus number is ___. – fifteen / Grandma's address is ___ Green Road. – twenty / The café is next to the ___. – market 2) Đọc – viết Part 1 (5 định nghĩa): You can buy food and drink here. – a supermarket / People wait here for a bus. – a bus stop / You put your car here when you go shopping. – a car park / You use this to send emails. – a laptop / You can drink coffee here. – a café. 3) Khoanh từ đúng: It's too (cheap / expensive), I can't buy it. / These shoes are on (sale / size).",
+     "truyen": "The Sale at the Shopping Centre — On Saturday there is a big sale at the shopping centre. Xiaomei and her mum take the bus from the bus stop near their building. In a clothes shop, Xiaomei finds a purple sweater. 'What size is it?' asks Mum. 'It's my size!' says Xiaomei. 'How much is it?' 'Only eight dollars. It's cheap!' Then they have a drink at the café next to the car park.",
+     "baihat": "Giai điệu London Bridge – lời mới \"Going Shopping\": We are going shopping now, shopping now, shopping now. / We are going shopping now, at the shopping centre!"
+    },
+    "zh": {
+     "flash": "超市 chāoshì, 买东西 mǎi dōngxi, 贵 guì, 便宜 piányi, 钱 qián, 打折 dǎzhé, 号 hào, 美元 měiyuán, 多少钱 duōshao qián, 汽车站 qìchē zhàn, 公共汽车站 gōnggòng qìchē zhàn, 停车场 tíngchēchǎng, 市中心 shì zhōngxīn, 商场 shāngchǎng, 体育中心 tǐyù zhōngxīn, 咖啡店 kāfēidiàn, 市场 shìchǎng, 地址 dìzhǐ, 电子邮件 diànzǐ yóujiàn, 笔记本电脑 bǐjìběn diànnǎo, 消息 xiāoxi",
+     "slide": "[Cầu nối Anh – Trung] Cùng tranh cửa hàng của truyện 'The Sale at the Shopping Centre': rối Leo nói How much is it? – Only eight dollars. It's cheap!, rối Xiaomei nói 多少钱？– 只要八美元，很便宜！; con tìm điểm giống (eight dollars ↔ 八美元) và khác (How much đầu câu ↔ 多少钱 cuối câu; It's cheap ↔ 很便宜, không dùng 是); café ↔ 咖啡 (từ mượn âm). 1) YCT3 Đọc phần 3 – nối câu hỏi với câu trả lời, cùng nội dung bài Nghe Part 2 tiếng Anh (5 câu, 8 phút): 这家商店叫什么？– 叫Toy World。/ 这件毛衣多少钱？– 十二美元。/ 公共汽车是几路？– 十五路。/ 奶奶家的地址是什么？– 格林路二十号。/ 咖啡店在哪儿？– 在市场旁边。 2) [Chuyển ngữ] Bắt bẫy (NL4, Phiên dịch nhí, 5 câu): \"too expensive\" → 太贵了 (có 了 cuối câu) / \"It's cheap.\" → 很便宜 (không nói 是便宜) / \"How much is it?\" → 多少钱？/ \"ten yuan\" → 十块钱 hoặc 十元 / \"a sweater\" → 一件毛衣 (lượng từ 件), \"a pair of shoes\" → 一双鞋 (lượng từ 双). 3) [Chuyển ngữ] (NL3, 4 phút) Rối Leo đọc tin nhắn tiếng Anh, con nhắn lại cho rối Xiaomei: Let's go shopping! The sweaters are on sale. They are only ten dollars. → 我们去买东西吧！毛衣在打折，只要十美元。(Wǒmen qù mǎi dōngxi ba! Máoyī zài dǎzhé, zhǐ yào shí měiyuán.) [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo đọc tin nhắn (5 câu, con tóm 3 ý chính): \"Hi Xiaomei! Let's go shopping at the market on Saturday. The sweaters are on sale – they're only ten dollars. The shoes are too expensive, but the hats are cheap. Let's meet at the café next to the market at ten o'clock.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 星期六我们去市场买东西吧！毛衣在打折，只要十美元。十点在咖啡店见！ (Xīngqīliù wǒmen qù shìchǎng mǎi dōngxi ba! Máoyī zài dǎzhé, zhǐ yào shí měiyuán. Shí diǎn zài kāfēidiàn jiàn!) 4) Luyện lại bài Đọc – viết Part 1 tiếng Anh: nhìn 5 tranh của bài, con nói từ tiếng Trung (3 phút): 超市 chāoshì / 公共汽车站 gōnggòng qìchē zhàn / 停车场 tíngchēchǎng / 笔记本电脑 bǐjìběn diànnǎo / 咖啡店 kāfēidiàn.",
+     "truyen": "商场大减价 — 星期六，商场里有大减价。Xiaomei和妈妈在楼旁边的公共汽车站坐车去。在一家服装店里，Xiaomei找到一件紫色的毛衣。妈妈问：“是多大号的？”Xiaomei说：“是我的号！”“多少钱？”“只要八美元，很便宜！”然后，她们在停车场旁边的咖啡店喝东西。(Xīngqīliù, shāngchǎng lǐ yǒu dà jiǎnjià. Xiaomei hé māma zài lóu pángbiān de gōnggòng qìchē zhàn zuò chē qù. Zài yì jiā fúzhuāng diàn lǐ, Xiaomei zhǎodào yí jiàn zǐsè de máoyī. Māma wèn: “Shì duō dà hào de?” Xiaomei shuō: “Shì wǒ de hào!” “Duōshao qián?” “Zhǐ yào bā měiyuán, hěn piányi!” Ránhòu, tāmen zài tíngchēchǎng pángbiān de kāfēidiàn hē dōngxi.)",
+     "baihat": "Giai điệu London Bridge – lời mới \"去买东西\": 我们一起去买东西，买东西，买东西，(Wǒmen yìqǐ qù mǎi dōngxi, mǎi dōngxi, mǎi dōngxi,) / 我们一起去买东西，我们一起去商场！(Wǒmen yìqǐ qù mǎi dōngxi, wǒmen yìqǐ qù shāngchǎng!)"
+    }
+   }
+  },
+  {
+   "buoi": 13,
+   "unit": 3,
+   "label_buoi": "Buổi dạy 13. Unit 3 · Clothes and shopping · Nói: luyện Movers Nói phần 1–4 và YCT口试（初级）第一–三部分 theo cặp, theo tranh",
+   "web": [
+    {
+     "ngay": 25,
+     "label": "Ngày 25. Unit 3 · Ôn tuần: đề luyện ngắn hai tiếng; từ con hay sai trong tuần · Trang luyện nói YCT口试（初级）第三部分",
+     "en": {
+      "tu": "Ôn (hay sai): cheap / expensive, put on / take off, get dressed / get undressed, worse / worst, quiet / quick, bus stop / bus station, sale / size",
+      "cum": "put on (mặc vào) – take off (cởi ra) / the worst (không phải the most bad) / too expensive",
+      "cau": "Movers Đọc – viết Part 4 (mẫu, chọn A/B/C): Shopping centres are (big / bigger / biggest) buildings with lots of shops. You can (buy / buys / buying) clothes, toys and food there. / Movers Nghe Part 1 (mẫu): The girl who's putting on her sweater is Anna. The boy taking off his helmet is Leo.",
+      "truyen": "Quick or Quiet? — Leo and Bông are in the library. Leo walks very quickly and makes a noise. 'Be quiet!' says Bông. 'Sorry,' says Leo. 'I'm quick, but I'm not quiet!' They laugh quietly. Then they go to the bus stop together.",
+      "video": "Tìm YouTube: \"be quiet in the library song for kids\""
+     },
+     "zh": {
+      "tu": "Ôn (hay sai): 便宜 piányi / 贵 guì, 穿上 chuān shàng / 脱下 tuō xià, 穿衣服 chuān yīfu / 脱衣服 tuō yīfu, 更糟 gèng zāo / 最糟糕 zuì zāogāo, 安静 ānjìng / 快 kuài, 公共汽车站 gōnggòng qìchē zhàn / 汽车站 qìchē zhàn, 打折 dǎzhé / 号 hào",
+      "cum": "穿上毛衣 chuān shàng máoyī – 摘下头盔 zhāi xià tóukuī / 最糟糕 zuì zāogāo (the worst) / 太贵了 tài guì le",
+      "cau": "[Cầu nối] Be quiet! ↔ 请安静！(Qǐng ānjìng!) · giống: câu ra lệnh ngắn, không có chủ ngữ · khác: EN: Be + tính từ; ZH: 请 + tính từ, không cần 是; bus stop ↔ 公共汽车站 / YCT3 Nghe phần 2 (mẫu, chọn tranh): 穿毛衣的女孩是Anna，摘头盔的男孩是Leo。(Chuān máoyī de nǚhái shì Anna, zhāi tóukuī de nánhái shì Leo.) / 商场是很大的楼，里面有很多商店。(Shāngchǎng shì hěn dà de lóu, lǐmiàn yǒu hěn duō shāngdiàn.) / 在商场里可以买衣服、玩具和吃的。(Zài shāngchǎng lǐ kěyǐ mǎi yīfu, wánjù hé chī de.) / YCT口试（初级）第三部分 看图说话 – Trang luyện nói (mẫu, ≤8 phút; con nhìn tranh, ghi âm 2–3 câu): Tranh 'Mặc đồ' – Anna在穿毛衣。Leo在摘头盔。(Anna zài chuān máoyī. Leo zài zhāi tóukuī.) / Tranh 'Thư viện' – Leo走得很快，还在说话。Bông说：“请安静！”(Leo zǒu de hěn kuài, hái zài shuōhuà. Bông shuō: “Qǐng ānjìng!”) / 然后他们一起去公共汽车站。(Ránhòu tāmen yìqǐ qù gōnggòng qìchē zhàn.)",
+      "truyen": "快还是安静？— Leo和Bông在图书馆。Leo走得很快，还发出了声音。Bông说：“请安静！”Leo说：“对不起！我走得很快，可是我不安静！”他们都小声地笑了。然后他们一起去公共汽车站。(Leo hé Bông zài túshūguǎn. Leo zǒu de hěn kuài, hái fāchū le shēngyīn. Bông shuō: “Qǐng ānjìng!” Leo shuō: “Duìbuqǐ! Wǒ zǒu de hěn kuài, kěshì wǒ bù ānjìng!” Tāmen dōu xiǎoshēng de xiào le. Ránhòu tāmen yìqǐ qù gōnggòng qìchē zhàn.)",
+      "video": "Tìm YouTube: \"图书馆里要安静 儿歌\""
+     }
+    },
+    {
+     "ngay": 26,
+     "label": "Ngày 26. Unit 3 · Đảo ôn từ không tranh + đề Movers Đọc – viết Part 5 (≤30 phút)",
+     "en": {
+      "tu": "Ôn (không tranh, nghe – chọn chữ): sweater, helmet, pair, backpack, strong, weak, safe, surprised, terrible, dream, shopping, cheap, expensive, money, market, café, address, message, laptop, plant",
+      "cum": "go shopping / at the market / a pair of shoes / send a message / plant flowers",
+      "cau": "Movers Đọc – viết Part 5 (mẫu, hoàn thành câu 1–3 từ): Bông went to the ___ with her grandma. (market) / Grandma bought a ___ for the garden. (plant) / Bông wanted a new ___ of shoes. (pair) / The shoes were too ___, so they didn't buy them. (expensive) / Bông sent a ___ to her mum. (message)",
+      "truyen": "At the Market — Last Sunday Bông went to the market with her grandma. Grandma bought a big plant for the garden. Bông wanted a new pair of shoes, but they were too expensive. 'Let's look for a cheaper pair,' said Grandma. They found a red pair on sale. Bông was surprised and happy. She sent a message to her mum: 'I've got new shoes!'",
+      "video": "Tìm YouTube: \"at the market shopping song for kids\""
+     },
+     "zh": {
+      "tu": "Ôn (không tranh, nghe – chọn chữ): 毛衣 máoyī, 头盔 tóukuī, 双 shuāng, 书包 shūbāo, 安全 ānquán, 吃惊 chījīng, 梦 mèng, 买东西 mǎi dōngxi, 贵 guì, 便宜 piányi, 钱 qián, 找 zhǎo, 市场 shìchǎng, 咖啡店 kāfēidiàn, 地址 dìzhǐ, 消息 xiāoxi, 笔记本电脑 bǐjìběn diànnǎo, 植物 zhíwù",
+      "cum": "去市场 qù shìchǎng / 一双鞋 yì shuāng xié / 买植物 mǎi zhíwù / 太贵了 tài guì le / 找一双便宜一点的 zhǎo yì shuāng piányi yìdiǎn de / 发消息 fā xiāoxi",
+      "cau": "[Cầu nối] The shoes are too expensive. Let's look for a cheaper pair. ↔ 这双鞋太贵了！我们找一双便宜一点的吧。(Zhè shuāng xié tài guì le! Wǒmen zhǎo yì shuāng piányi yìdiǎn de ba.)· giống: too ↔ 太 · khác: a pair of shoes ↔ 一双鞋 (lượng từ 双); Let's đầu câu ↔ 吧 cuối câu / 这双鞋太贵了！(Zhè shuāng xié tài guì le!) / 我们找一双便宜一点的吧。(Wǒmen zhǎo yì shuāng piányi yìdiǎn de ba.) / 奶奶给花园买了一棵大植物。(Nǎinai gěi huāyuán mǎi le yì kē dà zhíwù.) / 这双红鞋在打折。(Zhè shuāng hóng xié zài dǎzhé.) / [Chuyển ngữ] (NL3) Bông nhắn Mum bằng tiếng Anh, con nhắn lại cho Xiaomei bằng tiếng Trung: I've got new shoes! They are red. They are cheap. → 我有新鞋了！是红色的，很便宜。(Wǒ yǒu xīn xié le! Shì hóngsè de, hěn piányi.)",
+      "truyen": "在市场 — 上个星期天，Bông和奶奶去市场。奶奶给花园买了一棵大植物。Bông想买一双新鞋，可是太贵了。奶奶说：“我们找一双便宜一点的吧。”她们找到一双在打折的红鞋。Bông又吃惊又高兴。她给妈妈发消息：“我有新鞋了！”(Shàng ge xīngqītiān, Bông hé nǎinai qù shìchǎng. Nǎinai gěi huāyuán mǎi le yì kē dà zhíwù. Bông xiǎng mǎi yì shuāng xīn xié, kěshì tài guì le. Nǎinai shuō: “Wǒmen zhǎo yì shuāng piányi yìdiǎn de ba.” Tāmen zhǎodào yì shuāng zài dǎzhé de hóng xié. Bông yòu chījīng yòu gāoxìng. Tā gěi māma fā xiāoxi: “Wǒ yǒu xīn xié le!”)",
+      "video": "Tìm YouTube: \"去市场 买东西 鞋 儿歌\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "sweater, helmet, pair, backpack, put on, take off, quick, quiet, strong, weak, surprised, terrible, worse, worst, shopping, supermarket, market, cheap, expensive, money, sale, size, bus stop, café",
+     "slide": "[Lời cô] Vào bài: Hello, everyone! Speaking time! 大家好！我们来说一说！· Chuyển ý: Now, you are the shop assistant. 现在你来卖东西。· Nhắc: Your turn! 该你了！· Khen: Very good! 说得很好！· Tiếng Việt: chỉ giữ nề nếp; từ khó hình dung của buổi (cô quyết định có giải nghĩa không): safe, terrible 1) Movers Nói phần 1 – tìm 6 điểm khác nhau giữa 2 tranh cửa hàng quần áo (theo cặp, 5 phút): In my picture the sweater is purple. In your picture it's orange. / In my picture the boy is putting on a helmet. In your picture he's taking it off. / In my picture the shoes are ten dollars. In your picture they're twenty dollars. 2) Movers Nói phần 2 – kể truyện tranh 4 khung \"At the Market\" (bắt đầu: Bông and her grandma go to the market…). 3) Movers Nói phần 3 – chọn từ khác loại và nói vì sao: sweater / helmet / backpack / café → a café is a place. / cheap / expensive / quiet / supermarket. 4) Movers Nói phần 4: Where do you go shopping? What's your favourite colour? What do you put on when it's cold? 5) [Chuyển ngữ] (NL6, 4 phút) Cửa hàng hai tiếng: khách Leo hỏi tiếng Anh, khách Xiaomei hỏi tiếng Trung; con bán hàng, trả lời đúng tiếng rồi nhắn lại giá cho khách kia: How much is this helmet? – Twenty dollars. / 这个头盔多少钱？– 二十美元。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Leo kể (4 câu, con tóm 3 ý chính): \"Last Saturday I went to the sports shop with my dad. I needed a new helmet for my bike. The red helmet was twenty dollars, but the blue one was cheaper. It was only fifteen dollars, so I bought the blue one.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: Leo和爸爸去买头盔。红色的头盔二十美元，蓝色的只要十五美元。他买了蓝色的。 (Leo hé bàba qù mǎi tóukuī. Hóngsè de tóukuī èrshí měiyuán, lánsè de zhǐ yào shíwǔ měiyuán. Tā mǎi le lánsè de.)",
+     "truyen": "Leo's Birthday Money — For his birthday Leo got some money from his grandparents. 'Let's go shopping!' says Dad. They take the bus to the shopping centre in the city centre. Leo looks at a strong blue helmet, but it's too expensive. Then he finds a cool orange backpack on sale. 'What size do you want?' asks the shop assistant. 'The big one, please!' says Leo. He's very happy.",
+     "baihat": "Giai điệu Row Row Row Your Boat – lời mới \"Cheap, Cheap, Cheap\": Cheap, cheap, cheap, it's cheap, / Only two dollars, see! / Expensive, expensive, oh no, no, / That's too much for me!"
+    },
+    "zh": {
+     "flash": "毛衣 máoyī, 头盔 tóukuī, 双 shuāng, 书包 shūbāo, 穿上 chuān shàng, 脱 tuō, 快 kuài, 安静 ānjìng, 强壮 qiángzhuàng, 弱 ruò, 吃惊 chījīng, 最糟糕 zuì zāogāo, 买东西 mǎi dōngxi, 超市 chāoshì, 市场 shìchǎng, 便宜 piányi, 贵 guì, 钱 qián, 打折 dǎzhé, 号 hào, 公共汽车站 gōnggòng qìchē zhàn, 咖啡店 kāfēidiàn",
+     "slide": "[Cầu nối Anh – Trung] Dùng lại tranh 'At the Market' của Movers Nói phần 2: con kể 1 câu tiếng Anh với rối Leo, rồi cùng tranh 1 câu tiếng Trung với rối Xiaomei: The shoes are too expensive. ↔ 这双鞋太贵了。/ Let's look for a cheap pair. ↔ 我们找一双便宜的吧。; con tìm điểm giống (too ↔ 太) và khác (a pair of ↔ 一双; Let's ↔ …吧). Cô đóng vai giám khảo YCT口试（初级）, con thi từng em hoặc theo cặp. 1) YCT口试（初级）第一部分 听后重复 (mẫu, cô đọc mỗi câu 1 lần, con nói lại 1 lần; 5 câu, 4 phút): 我最喜欢紫色。(Wǒ zuì xǐhuan zǐsè.) / 这个头盔太贵了。(Zhège tóukuī tài guì le.) / 我们找一双便宜一点的吧。(Wǒmen zhǎo yì shuāng piányi yìdiǎn de ba.) / 外面很冷，穿上毛衣吧。(Wàimiàn hěn lěng, chuān shàng máoyī ba.) / 这双鞋太贵了。(Zhè shuāng xié tài guì le.) 2) YCT口试（初级）第二部分 听后回答 (mẫu, cô hỏi, con trả lời ngắn; 5 câu, 4 phút): 你最喜欢什么颜色？—— 我最喜欢橙色。(Nǐ zuì xǐhuan shénme yánsè? — Wǒ zuì xǐhuan chéngsè.) / 你常常去哪儿买东西？—— 我常常去超市。(Nǐ chángcháng qù nǎr mǎi dōngxi? — Wǒ chángcháng qù chāoshì.) / 冷的时候，你穿什么？—— 我穿毛衣。(Lěng de shíhou, nǐ chuān shénme? — Wǒ chuān máoyī.) / 这个头盔多少钱？—— 二十美元。(Zhège tóukuī duōshao qián? — Èrshí měiyuán.) 3) YCT口试（初级）第三部分 看图说话 (mẫu; bước 1 – nhìn tranh trả lời câu hỏi, theo cặp, 5 phút): 毛衣是什么颜色的？– 是紫色的。(Máoyī shì shénme yánsè de? – Shì zǐsè de.) / 这双鞋多少钱？– 十美元。(Zhè shuāng xié duōshao qián? – Shí měiyuán.) / 那个男孩在戴头盔吗？– 不，他在摘头盔。(Nàge nánhái zài dài tóukuī ma? – Bù, tā zài zhāi tóukuī.); bước 2 – nhìn 1 tranh, nói 2–3 câu (2 tranh, 5 phút): Tranh 'Ở chợ' (tranh của Movers Nói phần 2) – Bông和奶奶去市场。鞋太贵了。她们找一双便宜的。(Bông hé nǎinai qù shìchǎng. Xié tài guì le. Tāmen zhǎo yì shuāng piányi de.) / Tranh 'Cửa hàng quần áo' (tranh của Movers Nói phần 1) – 毛衣是紫色的。男孩在戴头盔。这双鞋十美元。(Máoyī shì zǐsè de. Nánhái zài dài tóukuī. Zhè shuāng xié shí měiyuán.) 4) Đóng vai mua bán theo cặp (người bán – người mua, 4 phút): 你要买什么？– 我要买一个头盔。– 多少钱？– 二十美元。– 太贵了！有便宜的吗？(Nǐ yào mǎi shénme? – Wǒ yào mǎi yí ge tóukuī. – Duōshao qián? – Èrshí měiyuán. – Tài guì le! Yǒu piányi de ma?)",
+     "truyen": "Leo的生日钱 — Leo过生日，爷爷奶奶给了他一些钱。爸爸说：“我们去买东西吧！”他们坐公共汽车去市中心的商场。Leo看到一个很结实的蓝色头盔，可是太贵了。然后，他看到一个很酷的橙色书包，正在打折。店员问：“你要多大号的？”Leo说：“请给我大的！”Leo很高兴。(Leo guò shēngrì, yéye nǎinai gěi le tā yìxiē qián. Bàba shuō: “Wǒmen qù mǎi dōngxi ba!” Tāmen zuò gōnggòng qìchē qù shì zhōngxīn de shāngchǎng. Leo kàndào yí ge hěn jiēshi de lánsè tóukuī, kěshì tài guì le. Ránhòu, tā kàndào yí ge hěn kù de chéngsè shūbāo, zhèngzài dǎzhé. Diànyuán wèn: “Nǐ yào duō dà hào de?” Leo shuō: “Qǐng gěi wǒ dà de!” Leo hěn gāoxìng.)",
+     "baihat": "Giai điệu Row Row Row Your Boat – lời mới \"便宜便宜\": 便宜，真便宜，(Piányi, zhēn piányi,) / 只要两美元！(Zhǐ yào liǎng měiyuán!) / 太贵太贵不要不要，(Tài guì tài guì bú yào bú yào,) / 对我太贵了！(Duì wǒ tài guì le!)"
+    }
+   }
+  },
+  {
+   "buoi": 14,
+   "unit": 3,
+   "label_buoi": "Buổi dạy 14. Unit 3 · Clothes and shopping · Thi thử phần có tính giờ: Movers Đọc – viết Part 4–6 và YCT3 Nghe phần 4 + Đọc phần 4; cô nhận xét từng con",
+   "web": [
+    {
+     "ngay": 27,
+     "label": "Ngày 27. Unit 3 · Đề YCT3 Nghe phần 4 và Đọc phần 4 (≤30 phút); truyện, đoạn đọc của chủ đề",
+     "en": {
+      "tu": "Ôn: city, building, road, station, ground, machine, internet, app, e-book, email, send, address, plant, outside, safe",
+      "cum": "on the internet / a ticket machine / at the station / cross the road safely / tall buildings",
+      "cau": "Movers Đọc – viết Part 6 (mẫu, nhìn tranh thành phố): Where is the ticket machine? – It's at the station. / What is the girl doing? – She's sending an email on her laptop. / Write two sentences: There are tall buildings in the city. / A boy is crossing the road safely.",
+      "truyen": "A Day in the City — Xiaomei visits the city with her mum. There are many tall buildings and busy roads. At the station they buy tickets from a machine. Xiaomei uses an app on Mum's phone to find the address of a café. They cross the road safely and go inside. Xiaomei reads an e-book while Mum sends an email.",
+      "video": "Tìm YouTube: \"city vocabulary for kids buildings road station\""
+     },
+     "zh": {
+      "tu": "Ôn: 车站 chēzhàn, 外面 wàimiàn, 进 jìn, 找 zhǎo, 发 fā, 楼 lóu, 路 lù, 城市 chéngshì, 机器 jīqì, 网上 wǎng shang, 电子邮件 diànzǐ yóujiàn, 电子书 diànzǐshū, 安全 ānquán | Ôn khóa trước: 电脑 diànnǎo, 咖啡 kāfēi | Nghe làm quen (có tranh, không kiểm tra): 票 piào (= ticket), 地址 dìzhǐ (= address), 应用 yìngyòng (= app)",
+      "cum": "在车站 zài chēzhàn / 用机器买票 yòng jīqì mǎi piào / 在网上 zài wǎng shang / 安全地过马路 ānquán de guò mǎlù / 很高的楼 hěn gāo de lóu",
+      "cau": "[Cầu nối] At the station they buy tickets. ↔ 她们在车站买票。· giống: Ai – mua – vé · khác: at the station cuối câu EN ↔ 在车站 trước động từ ZH; tickets (-s) ↔ 票 không đổi / YCT3 Nghe phần 4 (mẫu, chọn đáp án chữ): 问：她们在哪儿买票？A. 车站 B. 超市 C. 学校 / YCT3 Đọc phần 4 (mẫu, điền: 机器 / 进 / 找 / 安全): 她们在车站用（机器）买票。/ 她们（进）去咖啡店。/ Xiaomei用手机应用（找）咖啡店的地址。/ 她们（安全）地过马路。 / 她在用笔记本电脑发电子邮件。(Tā zài yòng bǐjìběn diànnǎo fā diànzǐ yóujiàn.) / 一个男孩在安全地过马路。(Yí ge nánhái zài ānquán de guò mǎlù.) / 城里有很多很高的楼。(Chéng lǐ yǒu hěn duō hěn gāo de lóu.) / 她们在车站买票。(Tāmen zài chēzhàn mǎi piào.)",
+      "truyen": "在城里的一天 — Xiaomei和妈妈去城里。城里有很多很高的楼，马路上车很多。她们在车站用机器买票。Xiaomei用妈妈手机上的应用找到一个咖啡店的地址。她们安全地过马路，走了进去。Xiaomei在里面看电子书，妈妈发电子邮件。(Xiaomei hé māma qù chéng lǐ. Chéng lǐ yǒu hěn duō hěn gāo de lóu, mǎlù shang chē hěn duō. Tāmen zài chēzhàn yòng jīqì mǎi piào. Xiaomei yòng māma shǒujī shang de yìngyòng zhǎodào yí ge kāfēidiàn de dìzhǐ. Tāmen ānquán de guò mǎlù, zǒu le jìnqù. Xiaomei zài lǐmiàn kàn diànzǐshū, māma fā diànzǐ yóujiàn.)",
+      "video": "Tìm YouTube: \"城市 高楼 车站 买票 中文 儿童\""
+     }
+    },
+    {
+     "ngay": 28,
+     "label": "Ngày 28. Unit 3 · Ôn unit: Hộp ôn, tổng hợp lỗi sai, Phiên dịch nhí",
+     "en": {
+      "tu": "Ôn (Hộp ôn cả unit): sweater, pair, helmet, backpack, rucksack, put on, take off, get dressed, worse, worst, surprised, terrible, quiet, quick, shopping, supermarket, cheap, expensive, money, how much, sale, size, bus stop, city centre, café",
+      "cum": "put on / take off / too expensive / on sale / how much / go shopping",
+      "cau": "Sửa lỗi hay gặp: This is the worst day. (không viết: the most bad day) / Put on your sweater. (không viết: Wear on) / How much is this sweater? (không viết: How many money) / [Chuyển ngữ] Phiên dịch nhí: These shoes are too expensive. Let's look for a cheap pair.",
+      "truyen": "The Little Interpreter at the Shop — Anna is shopping with Bông in a Chinese shop. Anna asks, 'How much is this hat?' Bông asks the shop assistant, '这个帽子多少钱？' The assistant says, '二十元。' Bông tells Anna, 'It's twenty yuan. It's cheap!' Anna smiles. 'Thank you, Bông!'",
+      "video": "Tìm YouTube: \"shopping English Chinese role play kids\""
+     },
+     "zh": {
+      "tu": "Ôn (Hộp ôn cả unit): 毛衣 máoyī, 双 shuāng, 头盔 tóukuī, 书包 shūbāo, 穿上 chuān shàng, 脱下 tuō xià, 穿衣服 chuān yīfu, 最糟糕 zuì zāogāo, 吃惊 chījīng, 安静 ānjìng, 快 kuài, 超市 chāoshì, 贵 guì, 便宜 piányi, 钱 qián, 多少钱 duōshao qián, 打折 dǎzhé, 号 hào, 公共汽车站 gōnggòng qìchē zhàn, 市中心 shì zhōngxīn, 咖啡店 kāfēidiàn",
+      "cum": "穿上 chuān shàng / 脱下 tuō xià / 太贵了 tài guì le / 在打折 zài dǎzhé / 多少钱 duōshao qián / 去买东西 qù mǎi dōngxi / 一件毛衣 yí jiàn máoyī / 一双鞋 yì shuāng xié",
+      "cau": "[Cầu nối] How much is this hat? – It's twenty yuan. ↔ 这个帽子多少钱？– 二十元。· giống: yuan ↔ 元, số đếm giống nhau · khác: How much đầu câu ↔ 多少钱 cuối câu / Sửa lỗi hay gặp: 这个太贵了。(Zhège tài guì le.) (không viết: 这个太贵) / 今天是最糟糕的一天。(Jīntiān shì zuì zāogāo de yì tiān.) (the worst ↔ 最糟糕) / 穿上毛衣。(Chuān shàng máoyī.) (không nói: 戴上毛衣) / 这件毛衣多少钱？(Zhè jiàn máoyī duōshao qián?) (không viết: 多少个钱) / 一件毛衣 (yí jiàn máoyī) (không viết: 一个毛衣) / [Chuyển ngữ] Phiên dịch nhí: \"These shoes are too expensive. Let's look for a cheap pair.\" → 这双鞋太贵了，我们找一双便宜的吧。(Zhè shuāng xié tài guì le, wǒmen zhǎo yì shuāng piányi de ba.)",
+      "truyen": "商店里的小翻译 — Anna和Bông在一个中国商店买东西。Anna用英语问这个帽子多少钱。Bông问店员：“这个帽子多少钱？”店员说：“二十元。”Bông用英语告诉Anna：二十元，很便宜！Anna笑了：“谢谢你，Bông！”(Anna hé Bông zài yí ge Zhōngguó shāngdiàn mǎi dōngxi. Anna yòng Yīngyǔ wèn zhège màozi duōshao qián. Bông wèn diànyuán: “Zhège màozi duōshao qián?” Diànyuán shuō: “Èrshí yuán.” Bông yòng Yīngyǔ gàosu Anna: èrshí yuán, hěn piányi! Anna xiào le: “Xièxie nǐ, Bông!”)",
+      "video": "Tìm YouTube: \"中文 买东西 角色扮演 儿童\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "sweater, pair, helmet, backpack, put on, take off, worse, worst, surprised, terrible, safe, shopping, supermarket, market, cheap, expensive, money, sale, size, city, building, station, machine, app, email, message",
+     "slide": "[Lời cô] Vào bài: Good morning, class! Last test of the unit! 同学们好！今天是这个单元最后一次考试！· Chuyển ý: You have twenty-five minutes. 你们有二十五分钟。· Nhắc: Pens down, please. 请放下笔。· Khen: You did well! 你们做得很好！· Tiếng Việt: chỉ giữ nề nếp và nhận xét riêng từng con; từ khó hình dung (cô quyết định có giải nghĩa không): machine, app 1) Thi thử Movers Đọc – viết Part 4 (5 chỗ trống A/B/C về shopping centres) + Part 5 (7 câu hoàn thành truyện \"At the Market\") + Part 6 (tranh thành phố: 2 câu hoàn thành, 2 câu trả lời, 2 câu tự viết), tính giờ 25 phút. 2) Cô chữa nhanh, ghi lỗi từng con vào Hộp ôn (5 phút): worse/worst, put on/take off, how much/how many.",
+     "truyen": "Xiaomei's Test Day — Today Xiaomei has a reading and writing test. She puts on her favourite purple sweater for good luck. She reads the story about the market and writes short answers. In the last part she looks at a picture of the city. She writes, 'There are tall buildings. A girl is buying a ticket from a machine.' When she finishes, she checks her spelling. 'I'm not surprised you did well,' says her teacher.",
+     "baihat": "Giai điệu Twinkle Twinkle Little Star – lời mới \"Write It Well\": Write it well and write it clear, / Check your spelling, never fear. / Cheap, expensive, sale and size, / Read the story, you'll be wise!"
+    },
+    "zh": {
+     "flash": "毛衣 máoyī, 一双 yì shuāng, 头盔 tóukuī, 书包 shūbāo, 穿上 chuān shàng, 脱下 tuō xià, 最糟糕 zuì zāogāo, 吃惊 chījīng, 安全 ānquán, 买东西 mǎi dōngxi, 超市 chāoshì, 市场 shìchǎng, 贵 guì, 便宜 piányi, 钱 qián, 打折 dǎzhé, 号 hào, 城市 chéngshì, 楼 lóu, 车站 chēzhàn, 机器 jīqì, 应用 yìngyòng, 电子邮件 diànzǐ yóujiàn, 消息 xiāoxi",
+     "slide": "[Cầu nối Anh – Trung] Sau khi chữa đề, cô đặt cạnh nhau 2 cặp câu từ hai đề: These shoes are too expensive. ↔ 这双鞋太贵了。/ There are tall buildings in the city. ↔ 城里有很多很高的楼。; con nói điểm khác: There are ↔ 有 (nơi chốn đứng đầu câu ZH); shoes (-s) ↔ 一双鞋 (lượng từ). 1) Thi thử YCT3 Nghe phần 4 (5 câu, nghe chọn đáp án chữ) + Đọc phần 4 (5 câu, chọn từ điền: 贵 / 找 / 植物 / 楼 / 买), tính giờ 20 phút: 问：Bông和奶奶去哪儿了？A. 超市 B. 市场 C. 学校 / 这双鞋太（贵）了。/ 我们（找）一双便宜的吧。/ 奶奶给花园买了一棵（植物）。/ 城里有很多很高的（楼）。/ 一个女孩在车站用机器（买）票。/ Đọc thêm (cùng tranh thành phố của đề tiếng Anh, √/×): 城里有很多很高的楼。(Chéng lǐ yǒu hěn duō hěn gāo de lóu.) / 一个女孩在车站买票。(Yí ge nǚhái zài chēzhàn mǎi piào.) 2) Cô nhận xét từng con, ghi lỗi vào Hộp ôn (5 phút): lượng từ 件/双, 太…了, 穿/戴/摘 (穿毛衣, 戴头盔, 摘头盔). 3) [Chuyển ngữ] (NL7, 3 phút) Cô đọc 3 câu tiếng Anh của 'A Day in the City', con chọn 1 trong 3 câu tóm tắt tiếng Trung đúng rồi nói lại cho rối Xiaomei: A. Xiaomei和妈妈去城里，在车站买票。B. Xiaomei和奶奶去市场买鞋。C. Xiaomei在家看书。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Cô đọc đoạn 'A Day in the City' (5 câu, con tóm 3 ý chính): \"Xiaomei visits the city with her mum. There are many tall buildings and busy roads. At the station they buy tickets from a machine. Xiaomei uses an app on Mum's phone to find the address of a café. They cross the road safely and go inside.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: Xiaomei和妈妈去城里，城里有很多很高的楼。她们在车站用机器买票。然后她们安全地过马路，去咖啡店。 (Xiaomei hé māma qù chéng lǐ, chéng lǐ yǒu hěn duō hěn gāo de lóu. Tāmen zài chēzhàn yòng jīqì mǎi piào. Ránhòu tāmen ānquán de guò mǎlù, qù kāfēidiàn.)",
+     "truyen": "Xiaomei考试 — 今天Xiaomei有读写考试。她穿上最喜欢的紫色毛衣，希望有好运气。她看了在市场买鞋的故事，写了几个短答案。最后，她看城里的图片，写：“城里有很多很高的楼。一个女孩在用机器买票。”写完以后，她检查了拼写。老师说：“你做得这么好，我一点儿也不吃惊！”(Jīntiān Xiaomei yǒu dú xiě kǎoshì. Tā chuān shàng zuì xǐhuan de zǐsè máoyī, xīwàng yǒu hǎo yùnqi. Tā kàn le zài shìchǎng mǎi xié de gùshi, xiě le jǐ ge duǎn dá'àn. Zuìhòu, tā kàn chéng lǐ de túpiàn, xiě: “Chéng lǐ yǒu hěn duō hěn gāo de lóu. Yí ge nǚhái zài yòng jīqì mǎi piào.” Xiě wán yǐhòu, tā jiǎnchá le pīnxiě. Lǎoshī shuō: “Nǐ zuò de zhème hǎo, wǒ yìdiǎnr yě bù chījīng!”)",
+     "baihat": "Giai điệu Twinkle Twinkle Little Star – lời mới \"认真写\": 认真写来写清楚，(Rènzhēn xiě lái xiě qīngchu,) / 写完以后看一看。(Xiě wán yǐhòu kàn yi kàn.) / 便宜贵和打折号，(Piányi guì hé dǎzhé hào,) / 看完故事我都会！(Kàn wán gùshi wǒ dōu huì!)"
+    }
+   }
+  }
+ ]
+}

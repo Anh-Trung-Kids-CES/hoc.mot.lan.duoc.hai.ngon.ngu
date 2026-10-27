@@ -1,0 +1,1260 @@
+{
+ "course": "Seedling",
+ "part": "c",
+ "rows": [
+  {
+   "buoi": 39,
+   "unit": 9,
+   "label_buoi": "Buổi dạy 39. Unit 9 · Food – Món con thích, món con không thích · Starters Nói phần 4",
+   "web": [
+    {
+     "ngay": 77,
+     "label": "Ngày 77. Unit 9 · Food · Túi trái cây của mẹ",
+     "en": {
+      "tu": "Mới: food, fruit | Ôn: mother, apple, banana, like",
+      "cum": "fruit and food / an apple and a banana / green grapes / a big coconut",
+      "cau": "[Ngữ pháp: like / don't like + V-ing] I like eating apples. / I don't like eating bananas. / Apples are fruit. / Is it food? – Yes, it is. / [Lệnh lớp học] Look at the fruit. Choose your favourite fruit. / Point to the apple. / [Lời web] Vào bài: \"Mình cùng học nhé! Let's learn! 我们一起学吧！\" · Khen: \"Giỏi quá! Great! 真棒！\" · Sang tiếng Trung: \"Giờ nói tiếng Trung nhé! Now in Chinese! 用中文说！\"",
+      "truyen": "Mother's Fruit Bag — Bông's mother has got a big bag. 'Look, Bông! Fruit!' In the bag there are apples, bananas and green grapes. 'I like eating apples!' says Bông. 'I don't like eating bananas.' 'Me too!' says Mother.",
+      "video": "Tìm YouTube: \"fruit song for kids I like apples\""
+     },
+     "zh": {
+      "tu": "Mới: 食物 shíwù (= food), 水果 shuǐguǒ (= fruit) | Ôn: 妈妈 māma, 苹果 píngguǒ, 香蕉 xiāngjiāo, 喜欢 xǐhuan | Nghe hiểu (chỉ trong truyện, có tranh): 葡萄 pútao (= grapes)",
+      "cum": "很多水果 hěn duō shuǐguǒ / 苹果和香蕉 píngguǒ hé xiāngjiāo / 妈妈的水果 māma de shuǐguǒ",
+      "cau": "[Cầu nối] I like eating apples. ↔ 我喜欢吃苹果。(Wǒ xǐhuan chī píngguǒ.) · giống: cùng thứ tự Ai – thích – ăn – món gì · khác: tiếng Anh thêm -ing (eating) và -s (apples); tiếng Trung giữ nguyên 吃, 苹果 / [Ngữ pháp: 喜欢 / 不喜欢 + 吃 + món ăn] 我喜欢吃苹果。(Wǒ xǐhuan chī píngguǒ.) / 我不喜欢吃香蕉。(Wǒ bù xǐhuan chī xiāngjiāo.) / 苹果是水果。(Píngguǒ shì shuǐguǒ.) / 这是食物吗？(Zhè shì shíwù ma?) / [Lệnh lớp học] 选一选：苹果还是香蕉？(Xuǎn yi xuǎn: píngguǒ háishi xiāngjiāo?) / 看一看，说一说：这是水果。(Kàn yi kàn, shuō yi shuō: Zhè shì shuǐguǒ.)",
+      "truyen": "妈妈的水果包 — 妈妈有一个大包。“Bông，你看！水果！”包里有苹果、香蕉和绿色的葡萄。Bông说：“我喜欢吃苹果！我不喜欢吃香蕉。”妈妈说：“我也是！” (Māma de shuǐguǒ bāo — Māma yǒu yí gè dà bāo. “Bông, nǐ kàn! Shuǐguǒ!” Bāo li yǒu píngguǒ, xiāngjiāo hé lǜsè de pútao. Bông shuō: “Wǒ xǐhuan chī píngguǒ! Wǒ bù xǐhuan chī xiāngjiāo.” Māma shuō: “Wǒ yě shì!”)",
+      "video": "Tìm YouTube: \"水果儿歌 幼儿 苹果 香蕉\""
+     }
+    },
+    {
+     "ngay": 78,
+     "label": "Ngày 78. Unit 9 · Food · Buổi sáng của Leo",
+     "en": {
+      "tu": "Mới: bread, juice | Ôn: mother, milk, water, drink",
+      "cum": "bread and milk / orange juice / apple juice / lemon juice",
+      "cau": "[Ngữ pháp: like + V-ing] Do you like drinking milk? – Yes, I do. / No, I don't. / I want to drink juice. / I like eating bread. / Listen to the question and answer: Do you like bread? – Yes, I do.",
+      "truyen": "Leo in the Morning — It's morning. Mother has got bread and milk. 'Do you like drinking milk, Leo?' 'No, I don't. I want to drink juice!' 'Orange juice or apple juice?' 'Apple juice, please!' Leo eats bread and drinks apple juice. 'Thank you, Mother!'",
+      "video": "Tìm YouTube: \"do you like drinking milk song for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 面包 miànbāo (= bread), 果汁 guǒzhī (= juice), 想 xiǎng (= want) | Ôn: 妈妈 māma, 牛奶 niúnǎi, 水 shuǐ, 喝 hē | Nghe hiểu (chỉ trong truyện, có tranh): 橙汁 chéngzhī (= orange juice; 橙 như trong 橙色 orange)",
+      "cum": "面包和牛奶 miànbāo hé niúnǎi / 苹果汁 píngguǒzhī / 想喝水 xiǎng hē shuǐ",
+      "cau": "[Cầu nối] I want to drink juice. ↔ 我想喝果汁。(Wǒ xiǎng hē guǒzhī.) · giống: I = 我, want = 想, drink = 喝, juice = 果汁, cùng thứ tự · khác: apple juice ↔ 苹果汁 (苹果 + 汁, ghép như apple + juice); tiếng Trung không có \"to\" / [Ngữ pháp: 喜欢 + 喝 + đồ uống + 吗？] 你喜欢喝牛奶吗？(Nǐ xǐhuan hē niúnǎi ma?) / 我想喝果汁。(Wǒ xiǎng hē guǒzhī.) / 我想喝水。(Wǒ xiǎng hē shuǐ.) / 我喜欢吃面包。(Wǒ xǐhuan chī miànbāo.) / 听问题，回答问题：你想喝什么？——我想喝果汁。(Tīng wèntí, huídá wèntí: Nǐ xiǎng hē shénme? — Wǒ xiǎng hē guǒzhī.) / [Chuyển ngữ] Leo nói tiếng Anh: \"I want to drink juice.\" – con nói lại câu đó cho Xiaomei bằng tiếng Trung: 我想喝果汁。(Wǒ xiǎng hē guǒzhī.)",
+      "truyen": "Leo的早上 — 早上了。妈妈有面包和牛奶。“Leo，你喜欢喝牛奶吗？”“不喜欢。我想喝果汁！”“橙汁还是苹果汁？”“苹果汁，谢谢！”Leo吃面包，喝苹果汁。“谢谢妈妈！” (Leo de zǎoshang — Zǎoshang le. Māma yǒu miànbāo hé niúnǎi. “Leo, nǐ xǐhuan hē niúnǎi ma?” “Bù xǐhuan. Wǒ xiǎng hē guǒzhī!” “Chéngzhī háishi píngguǒzhī?” “Píngguǒzhī, xièxie!” Leo chī miànbāo, hē píngguǒzhī. “Xièxie māma!”)",
+      "video": "Tìm YouTube: \"我想喝 儿歌 牛奶 果汁\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: food, fruit, bread, juice | Ôn: apple, banana, milk, water, eat, drink, mother | Thẻ lệnh đề: cross, tick, choose, complete",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" · Chuyển ý: \"Now, let's speak Chinese! 我们说中文吧！\" · Khen: \"Well done! 真棒！\" · Câu mới buổi này: \"Giơ tay lên nào! Hands up! 举手！\" 1) Nhìn tranh chọn từ (4 câu): food / fruit / bread / juice. 2) Nghe câu, giơ thẻ mặt cười hoặc mặt mếu (4 câu): I like eating apples. / I don't like eating bananas. / I like eating bread. / I don't like drinking milk. 3) Hỏi đáp theo tranh, từng cặp: Do you like drinking juice? – Yes, I do. / No, I don't. I want to drink water. 4) Starters Nói phần 4 (mẫu, nhẹ – cô làm giám khảo, hỏi từng con 3 câu): Listen to the question and answer. What's your favourite food? – Noodles. / Do you like ice cream? – Yes. / What fruit do you like? – Bananas.",
+     "truyen": "Mother's Fruit Bag — Bông's mother has got a big bag. 'Look, Bông! Fruit and food!' In the bag there are apples, bananas, bread and orange juice. 'I like eating apples!' says Bông. 'I don't like eating bananas.' Leo says: 'I like eating bread! Do you like drinking juice, Bông?' 'Yes, I do!' 'Here you are!' says Mother.",
+     "baihat": "I Like Food – giai điệu Frère Jacques (câu 1): I like apples, I like apples, / Yes, I do! Yes, I do! / Bread and milk and juice, please, / Bread and milk and juice, please, / Yum, yum, yum! Yum, yum, yum!"
+    },
+    "zh": {
+     "flash": "Mới: 食物 shíwù, 水果 shuǐguǒ, 面包 miànbāo, 果汁 guǒzhī | Ôn: 苹果 píngguǒ, 香蕉 xiāngjiāo, 牛奶 niúnǎi, 水 shuǐ, 吃 chī, 喝 hē, 妈妈 māma | Thẻ lệnh đề: 打叉 dǎ chā, 打勾 dǎ gōu, 选 xuǎn, 填一填 tián yi tián",
+     "slide": "1) Nghe chọn tranh (4 câu): 食物 shíwù / 水果 shuǐguǒ / 面包 miànbāo / 果汁 guǒzhī. 2) Nghe câu, giơ thẻ mặt cười hoặc mặt mếu (4 câu): 我喜欢吃苹果。(Wǒ xǐhuan chī píngguǒ.) / 我不喜欢吃香蕉。(Wǒ bù xǐhuan chī xiāngjiāo.) / 我喜欢吃面包。(Wǒ xǐhuan chī miànbāo.) / 我不喜欢喝牛奶。(Wǒ bù xǐhuan hē niúnǎi.) 3) Hỏi đáp theo tranh, từng cặp: 你喜欢喝果汁吗？(Nǐ xǐhuan hē guǒzhī ma?) – 喜欢。(Xǐhuan.) / 不喜欢，我想喝水。(Bù xǐhuan, wǒ xiǎng hē shuǐ.) 4) [Cầu nối Anh – Trung] Cùng tranh túi trái cây của mẹ: rối Leo nói \"I like eating apples.\", rối Xiaomei nói \"我喜欢吃苹果。\" Con tìm điểm giống (cùng thứ tự Ai – thích – ăn – gì) và điểm khác (eating, apples có đuôi; 吃, 苹果 không đổi). 5) [Chuyển ngữ] Rối Leo nói 1 câu tiếng Anh, con nói lại câu đó bằng tiếng Trung cho rối Xiaomei (mỗi con 1 câu): I like eating bread. → 我喜欢吃面包。/ I want to drink juice. → 我想喝果汁。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"I usually have bread for breakfast. I don't like drinking milk, so I drink juice.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 早上我吃面包。我不喜欢喝牛奶，我喝果汁。 (Zǎoshang wǒ chī miànbāo. Wǒ bù xǐhuan hē niúnǎi, wǒ hē guǒzhī.)",
+     "truyen": "妈妈的水果包 — 妈妈有一个大包。“Bông，你看！水果和食物！”有苹果、香蕉、面包和果汁。Bông说：“我喜欢吃苹果！我不喜欢吃香蕉。”Leo说：“我喜欢吃面包！Bông，你喜欢喝果汁吗？”“喜欢！”妈妈说：“Bông，这是你的果汁！” (Māma de shuǐguǒ bāo — Māma yǒu yí gè dà bāo. “Bông, nǐ kàn! Shuǐguǒ hé shíwù!” Yǒu píngguǒ, xiāngjiāo, miànbāo hé guǒzhī. Bông shuō: “Wǒ xǐhuan chī píngguǒ! Wǒ bù xǐhuan chī xiāngjiāo.” Leo shuō: “Wǒ xǐhuan chī miànbāo! Bông, nǐ xǐhuan hē guǒzhī ma?” “Xǐhuan!” Māma shuō: “Bông, zhè shì nǐ de guǒzhī!”)",
+     "baihat": "我爱食物 – giai điệu 两只老虎 (cùng giai điệu Frère Jacques của bài I Like Food, cùng ý), đoạn 1: 我爱苹果，我爱苹果，我喜欢！我喜欢！面包牛奶果汁，面包牛奶果汁，真好吃！真好吃！(Wǒ ài píngguǒ, wǒ ài píngguǒ, wǒ xǐhuan! Wǒ xǐhuan! Miànbāo niúnǎi guǒzhī, miànbāo niúnǎi guǒzhī, zhēn hǎochī! Zhēn hǎochī!)"
+    }
+   }
+  },
+  {
+   "buoi": 40,
+   "unit": 9,
+   "label_buoi": "Buổi dạy 40. Unit 9 · Food – Mì, kem và khoai tây chiên",
+   "web": [
+    {
+     "ngay": 79,
+     "label": "Ngày 79. Unit 9 · Food · Bát mì của Leo",
+     "en": {
+      "tu": "Mới: noodles, ice cream | Ôn: hippo, duck, frog, yes, mother",
+      "cum": "hot noodles / chocolate ice cream / a big hippo / a duck and a frog",
+      "cau": "[Ngữ pháp: like + V-ing] I like eating noodles. / The hippo likes eating ice cream. / Do you like eating noodles, Frog? – Yes, I do! / The duck doesn't like eating chocolate. / Find the noodles. Colour the ice cream pink.",
+      "truyen": "Leo's Noodles — Leo is hungry. Dad has got noodles and rice. 'I want to eat noodles!' says Leo. The cat looks at the noodles. 'No, Cat! Cats don't eat noodles!' Leo eats the noodles. 'Mmm, nice!' Then Dad has got a chocolate ice cream. 'Do you want ice cream, Leo?' 'Yes, please!'",
+      "video": "Tìm YouTube: \"noodles song for kids I like noodles\""
+     },
+     "zh": {
+      "tu": "Mới: 面条 miàntiáo (= noodles), 冰淇淋 bīngqílín (= ice cream), 好吃 hǎochī (= nice, yummy) | Ôn: 河马 hémǎ, 鸭子 yāzi, 青蛙 qīngwā, 米饭 mǐfàn, 饿 è",
+      "cum": "好吃的面条 hǎochī de miàntiáo / 真好吃 zhēn hǎochī / 爸爸的冰淇淋 bàba de bīngqílín",
+      "cau": "[Cầu nối] Mmm, nice! ↔ 真好吃！(Zhēn hǎochī!) · giống: cùng là lời khen món ăn · khác: 好吃 = 好 (good) + 吃 (eat), tiếng Trung nói rõ \"ăn ngon\" / 我喜欢吃面条。(Wǒ xǐhuan chī miàntiáo.) / 面条真好吃！(Miàntiáo zhēn hǎochī!) / 你想吃冰淇淋吗？(Nǐ xiǎng chī bīngqílín ma?) – 想！(Xiǎng!) / 河马喜欢吃冰淇淋。(Hémǎ xǐhuan chī bīngqílín.) / 鸭子不喜欢吃巧克力。(Yāzi bù xǐhuan chī qiǎokèlì.) / 青蛙，你喜欢吃面条吗？(Qīngwā, nǐ xǐhuan chī miàntiáo ma?) – 喜欢！(Xǐhuan!) / 爸爸有面条和米饭。(Bàba yǒu miàntiáo hé mǐfàn.) / 说一说：面条很好吃。(Shuō yi shuō: Miàntiáo hěn hǎochī.) / 找一找面条。给冰淇淋涂上粉色。(Zhǎo yi zhǎo miàntiáo. Gěi bīngqílín tú shang fěnsè.)",
+      "truyen": "Leo的面条 — Leo饿了。爸爸有面条，有米饭。Leo说：“我想吃面条！”小猫看着面条。“不行，小猫！猫不吃面条！”Leo吃面条：“真好吃！”爸爸有一个巧克力冰淇淋。“Leo，你想吃冰淇淋吗？”“想！谢谢爸爸！” (Leo de miàntiáo — Leo è le. Bàba yǒu miàntiáo, yǒu mǐfàn. Leo shuō: “Wǒ xiǎng chī miàntiáo!” Xiǎo māo kànzhe miàntiáo. “Bù xíng, xiǎo māo! Māo bù chī miàntiáo!” Leo chī miàntiáo: “Zhēn hǎochī!” Bàba yǒu yí gè qiǎokèlì bīngqílín. “Leo, nǐ xiǎng chī bīngqílín ma?” “Xiǎng! Xièxie bàba!”)",
+      "video": "Tìm YouTube: \"面条 儿歌 真好吃\""
+     }
+    },
+    {
+     "ngay": 80,
+     "label": "Ngày 80. Unit 9 · Food · Bánh của quái vật xanh",
+     "en": {
+      "tu": "Mới: chips (UK) = fries (US) | Ôn: crocodile, monster, spider, bee, mother",
+      "cum": "a burger and chips / a burger and fries / chips (UK) – fries (US) / a green monster",
+      "cau": "[Ngữ pháp: doesn't like + V-ing] I like eating chips. / The crocodile likes eating burgers and chips. / The bee doesn't like eating burgers. / Do you like eating chips? – No, I don't. / Complete the sentence: I like ___ (chips). / Read the sentence: Leo likes noodles.",
+      "truyen": "The Monster's Chips — A green monster has got a burger and chips. The spider looks. 'Mmm, it looks nice!' 'Do you like eating chips, Spider?' 'Yes, I do!' The bee says: 'Me too! I like fries!' The monster, the spider and the bee eat the chips together.",
+      "video": "Tìm YouTube: \"chips or fries British American English kids\""
+     },
+     "zh": {
+      "tu": "Mới: 看起来 kàn qǐlái (= looks: it looks nice), 汉堡 hànbǎo (= burger), 薯条 shǔtiáo (= chips, fries) | Ôn: 好吃 hǎochī | Nghe hiểu (có tranh): 怪物 guàiwù (= monster), 蜘蛛 zhīzhū (= spider), 蜜蜂 mìfēng (= bee), 鳄鱼 èyú (= crocodile)",
+      "cum": "看起来很好吃 kàn qǐlái hěn hǎochī / 看起来真好吃 kàn qǐlái zhēn hǎochī / 汉堡和薯条 hànbǎo hé shǔtiáo",
+      "cau": "[Cầu nối] It looks nice! ↔ 看起来很好吃！(Kàn qǐlái hěn hǎochī!) · giống: look ↔ 看 · khác: burger ↔ 汉堡 hànbǎo nghe gần giống (từ mượn âm); chips (UK) / fries (US) là hai cách nói, tiếng Trung chỉ có 薯条 / 这个汉堡看起来很好吃！(Zhège hànbǎo kàn qǐlái hěn hǎochī!) / 怪物的汉堡和薯条看起来真好吃。(Guàiwù de hànbǎo hé shǔtiáo kàn qǐlái zhēn hǎochī.) / 鳄鱼喜欢吃汉堡和薯条。(Èyú xǐhuan chī hànbǎo hé shǔtiáo.) / 你喜欢吃薯条吗？(Nǐ xǐhuan chī shǔtiáo ma?) – 不喜欢。(Bù xǐhuan.) / 看一看，读一读：看起来很好吃！(Kàn yi kàn, dú yi dú: Kàn qǐlái hěn hǎochī!) / [Chuyển ngữ] Con quái vật nói tiếng Anh: \"I like eating chips.\" – con nói lại cho Xiaomei bằng tiếng Trung: 我喜欢吃薯条。(Wǒ xǐhuan chī shǔtiáo.)",
+      "truyen": "怪物的薯条 — 绿色的怪物有汉堡和薯条。蜘蛛看：“看起来很好吃！”“蜘蛛，你喜欢吃薯条吗？”“喜欢！”蜜蜂说：“我也喜欢！”怪物、蜘蛛和蜜蜂一起吃薯条。 (Guàiwù de shǔtiáo — Lǜsè de guàiwù yǒu hànbǎo hé shǔtiáo. Zhīzhū kàn: “Kàn qǐlái hěn hǎochī!” “Zhīzhū, nǐ xǐhuan chī shǔtiáo ma?” “Xǐhuan!” Mìfēng shuō: “Wǒ yě xǐhuan!” Guàiwù, zhīzhū hé mìfēng yìqǐ chī shǔtiáo.)",
+      "video": "Tìm YouTube: \"薯条 汉堡 儿童中文 看起来很好吃\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: noodles, ice cream, chips, fries | Ôn: food, fruit, bread, juice, hippo, crocodile, monster",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" · Chuyển ý: \"Now, let's speak Chinese! 我们说中文吧！\" · Khen: \"Great! 太好了！\" · Nhắc lại câu mới buổi trước: \"Giơ tay lên nào! Hands up! 举手！\" (lần cuối kèm tiếng Việt) 1) Nhìn tranh chọn từ, có phương án nhiễu (4 câu): noodles / ice cream / chips / father; fries / cousin / juice / bread. 2) Nghe và nối con vật với món ăn: The hippo likes eating ice cream. / The crocodile likes eating chips. / The frog likes eating noodles. / The monster likes eating fries. 3) Hộp bí mật: con đoán món trong hộp – Is it ice cream? – Yes, it is! / No, it isn't. It's noodles! 4) Lệnh đề: Look at the menu. Tick ✓ the food you like, cross ✗ the food you don't like. Complete the sentence: I like ___. I don't like ___.",
+     "truyen": "Leo's Noodles — Leo is hungry. Dad has got noodles and rice. 'I want to eat noodles!' says Leo. The cat looks at the noodles. 'No, Cat! Cats don't eat noodles!' Leo eats the noodles. 'Mmm, nice!' Then Dad has got two ice creams: a chocolate ice cream and a lemon ice cream. 'Do you like eating chocolate ice cream, Leo?' 'Yes, I do! Thank you, Dad!'",
+     "baihat": "I Like Food – giai điệu Frère Jacques (câu 2): I like noodles, I like noodles, / Yes, I do! Yes, I do! / Ice cream, chips and burgers, / Ice cream, chips and burgers, / Yum, yum, yum! Yum, yum, yum!"
+    },
+    "zh": {
+     "flash": "Mới: 面条 miàntiáo, 冰淇淋 bīngqílín, 薯条 shǔtiáo | Ôn: 食物 shíwù, 水果 shuǐguǒ, 面包 miànbāo, 果汁 guǒzhī | Nghe hiểu (tranh): 河马 hémǎ, 鳄鱼 èyú, 怪物 guàiwù",
+     "slide": "1) Nghe chọn tranh, có phương án nhiễu (4 câu): 面条 miàntiáo / 冰淇淋 bīngqílín / 薯条 shǔtiáo / 爸爸 bàba; 薯条 shǔtiáo / 表姐 biǎojiě / 果汁 guǒzhī / 面包 miànbāo. 2) Nghe và nối con vật với món ăn: 河马喜欢吃冰淇淋。(Hémǎ xǐhuan chī bīngqílín.) / 鳄鱼喜欢吃薯条。(Èyú xǐhuan chī shǔtiáo.) / 青蛙喜欢吃面条。(Qīngwā xǐhuan chī miàntiáo.) / 怪物喜欢吃薯条。(Guàiwù xǐhuan chī shǔtiáo.) 3) Hộp bí mật: con đoán món trong hộp – 是冰淇淋吗？(Shì bīngqílín ma?) – 是！(Shì!) / 不是，是面条！(Bú shì, shì miàntiáo!) 3b) Nhìn thực đơn: món con thích đánh ✓, món con không thích đánh ✗, rồi nói: 我喜欢吃___。我不喜欢吃___。(Wǒ xǐhuan chī ___. Wǒ bù xǐhuan chī ___.) 4) [Cầu nối Anh – Trung] Cùng tranh hộp bí mật: rối Leo nói \"a burger and chips\", rối Xiaomei nói \"汉堡和薯条\"; con nghe hai từ hamburger – 汉堡 hànbǎo giống nhau thế nào; chips / fries hai cách nói ↔ chỉ một 薯条. 5) [Chuyển ngữ] Rối Leo nói 1 câu, con nói lại bằng tiếng Trung cho rối Xiaomei: I like eating ice cream. → 我喜欢吃冰淇淋。 / I like eating noodles. → 我喜欢吃面条。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"The hippo is very hungry. He wants to eat noodles because they look yummy.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 河马很饿。它想吃面条，面条看起来很好吃。 (Hémǎ hěn è. Tā xiǎng chī miàntiáo, miàntiáo kàn qǐlái hěn hǎochī.)",
+     "truyen": "Leo的面条 — Leo饿了。爸爸有面条，有米饭。Leo说：“我想吃面条！”小猫看着面条。“不行，小猫！猫不吃面条！”Leo吃面条：“真好吃！”爸爸有两个冰淇淋：一个巧克力的，一个柠檬的。“Leo，你喜欢吃巧克力冰淇淋吗？”“喜欢！谢谢爸爸！” (Leo de miàntiáo — Leo è le. Bàba yǒu miàntiáo, yǒu mǐfàn. Leo shuō: “Wǒ xiǎng chī miàntiáo!” Xiǎo māo kànzhe miàntiáo. “Bù xíng, xiǎo māo! Māo bù chī miàntiáo!” Leo chī miàntiáo: “Zhēn hǎochī!” Bàba yǒu liǎng gè bīngqílín: yí gè qiǎokèlì de, yí gè níngméng de. “Leo, nǐ xǐhuan chī qiǎokèlì bīngqílín ma?” “Xǐhuan! Xièxie bàba!”)",
+     "baihat": "我爱食物 – giai điệu 两只老虎 (đoạn 2, cùng ý câu 2 bài I Like Food): 我爱面条，我爱面条，我喜欢！我喜欢！冰淇淋和薯条，冰淇淋和汉堡，真好吃！真好吃！(Wǒ ài miàntiáo, wǒ ài miàntiáo, wǒ xǐhuan! Wǒ xǐhuan! Bīngqílín hé shǔtiáo, bīngqílín hé hànbǎo, zhēn hǎochī! Zhēn hǎochī!)"
+    }
+   }
+  },
+  {
+   "buoi": 41,
+   "unit": 9,
+   "label_buoi": "Buổi dạy 41. Unit 9 · Food – Đánh dấu món con thích · Luyện đề YCT1 Đọc phần 2",
+   "web": [
+    {
+     "ngay": 81,
+     "label": "Ngày 81. Unit 9 · Food · Trang đồ ăn của Anna",
+     "en": {
+      "tu": "Mới: candy (US) = sweets (UK), cross | Ôn: rice, pizza, eat, page, tick",
+      "cum": "put a cross / a cross on the candy / rice and beans / pizza and carrots",
+      "cau": "[Ngữ pháp: don't like + V-ing] I don't like eating candy. / Put a cross on the sweets. / Tick the fruit. / I want to eat rice. / Tick ✓ the food you like. Cross ✗ the food you don't like. / Is it correct?",
+      "truyen": "Anna's Food Page — Anna has got a page with food on it. She ticks the fruit: apples, grapes and a kiwi. She puts a cross on the candy. 'I don't like eating candy. I want to eat fruit!' The teacher says: 'Great, Anna!'",
+      "video": "Tìm YouTube: \"healthy food unhealthy food for kids sweets fruit\""
+     },
+     "zh": {
+      "tu": "Mới: 糖果 tángguǒ (= candy, sweets) | Ôn: 米饭 mǐfàn, 比萨 bǐsà, 吃 chī, 打勾 dǎ gōu (= tick) | Nghe hiểu (có tranh): 打叉 dǎ chā (= cross)",
+      "cum": "很多糖果 hěn duō tángguǒ / 不吃糖果 bù chī tángguǒ / 吃米饭 chī mǐfàn",
+      "cau": "[Cầu nối] I don't like eating candy. ↔ 我不喜欢吃糖果。(Wǒ bù xǐhuan chī tángguǒ.) · giống: don't ↔ 不, cùng đứng trước like ↔ 喜欢 · khác: candy (US) / sweets (UK) hai cách nói, tiếng Trung chỉ một: 糖果 / 我不喜欢吃糖果。(Wǒ bù xǐhuan chī tángguǒ.) / 给糖果打叉。(Gěi tángguǒ dǎ chā.) / 给水果打勾。(Gěi shuǐguǒ dǎ gōu.) / 我想吃米饭。(Wǒ xiǎng chī mǐfàn.) / 我喜欢吃比萨。(Wǒ xǐhuan chī bǐsà.) / 读一读：糖果、水果。(Dú yi dú: tángguǒ, shuǐguǒ.) / Anna不喜欢吃糖果，对不对？——对！(Anna bù xǐhuan chī tángguǒ, duì bu duì? — Duì!)",
+      "truyen": "Anna的食物图 — Anna有一张食物图。她给水果打勾：苹果、葡萄……她给糖果打叉。Anna说：“我不喜欢吃糖果。我想吃水果！”老师说：“很好，Anna！” (Anna de shíwù tú — Anna yǒu yì zhāng shíwù tú. Tā gěi shuǐguǒ dǎ gōu: píngguǒ, pútao… Tā gěi tángguǒ dǎ chā. Anna shuō: “Wǒ bù xǐhuan chī tángguǒ. Wǒ xiǎng chī shuǐguǒ!” Lǎoshī shuō: “Hěn hǎo, Anna!”)",
+      "video": "Tìm YouTube: \"糖果 水果 儿歌 幼儿\""
+     }
+    },
+    {
+     "ngay": 82,
+     "label": "Ngày 82. Unit 9 · Food · Ôn không tranh: Leo muốn ăn gì? · Luyện nói YCT口试 听后重复 + 听后回答",
+     "en": {
+      "tu": "Ôn: food, fruit, bread, juice, noodles, ice cream, chips, fries, candy, sweets, cross",
+      "cum": "orange juice / chocolate ice cream / hot noodles / put a cross / a burger and chips",
+      "cau": "I like eating noodles. / I don't like eating candy. / Do you like drinking juice? – Yes, I do. / I want to drink water.",
+      "truyen": "What Does Leo Want? — (chỉ nghe, không tranh) Leo is hungry. 'I want to eat... noodles? No. Ice cream? No. Bread? Yes!' Leo eats bread and drinks orange juice. 'Mmm, nice!'",
+      "video": "Tìm YouTube: \"food vocabulary for kids listen and repeat\""
+     },
+     "zh": {
+      "tu": "Ôn: 食物 shíwù, 水果 shuǐguǒ, 面包 miànbāo, 果汁 guǒzhī, 想 xiǎng, 面条 miàntiáo, 好吃 hǎochī, 糖果 tángguǒ, 冰淇淋 bīngqílín, 薯条 shǔtiáo | Nghe hiểu (có tranh): 橙汁 chéngzhī (= orange juice)",
+      "cum": "想吃面条 xiǎng chī miàntiáo / 想喝果汁 xiǎng hē guǒzhī / 汉堡和薯条 hànbǎo hé shǔtiáo",
+      "cau": "[Cầu nối] Do you like drinking juice? – Yes, I do. ↔ 你喜欢喝果汁吗？——喜欢。(Nǐ xǐhuan hē guǒzhī ma? — Xǐhuan.) · khác: tiếng Anh đưa Do lên đầu câu hỏi; tiếng Trung giữ nguyên câu, thêm 吗 ở cuối, trả lời bằng chính 喜欢 / 我想吃面包。(Wǒ xiǎng chī miànbāo.) / 你想喝什么？(Nǐ xiǎng hē shénme?) – 我想喝果汁。(Wǒ xiǎng hē guǒzhī.) / 我不想吃冰淇淋。(Wǒ bù xiǎng chī bīngqílín.) / [YCT口试（初级）第一部分 听后重复 (mẫu): con nghe từng câu, nói lại 1 lần, ghi âm trên Trang luyện nói, ~5 phút] 听，说：我喜欢吃面条。(Wǒ xǐhuan chī miàntiáo.) / 我想喝果汁。(Wǒ xiǎng hē guǒzhī.) / 面包很好吃。(Miànbāo hěn hǎochī.) / 我不想吃冰淇淋。(Wǒ bù xiǎng chī bīngqílín.) / 我不喜欢吃糖果。(Wǒ bù xǐhuan chī tángguǒ.) / [YCT口试（初级）第二部分 听后回答 (mẫu): con nghe câu hỏi, trả lời ngắn, ghi âm trên Trang luyện nói, ~5 phút] 听问题，回答问题。(Tīng wèntí, huídá wèntí.) 1. 你喜欢吃什么？(Nǐ xǐhuan chī shénme?) ——我喜欢吃面条。(Wǒ xǐhuan chī miàntiáo.) 2. 你想喝什么？(Nǐ xiǎng hē shénme?) ——我想喝牛奶。(Wǒ xiǎng hē niúnǎi.) 3. 你喜欢吃冰淇淋吗？(Nǐ xǐhuan chī bīngqílín ma?) ——喜欢。(Xǐhuan.) 4. 你饿吗？(Nǐ è ma?) ——我很饿。(Wǒ hěn è.) 5. 你喜欢什么水果？(Nǐ xǐhuan shénme shuǐguǒ?) ——我喜欢苹果。(Wǒ xǐhuan píngguǒ.) / [Chuyển ngữ] (nghe không tranh) Leo nói tiếng Anh: \"I want to eat bread.\" – con nói lại cho Xiaomei: 我想吃面包。(Wǒ xiǎng chī miànbāo.)",
+      "truyen": "Leo想吃什么？ — Leo饿了。Leo想吃……面条？不想。冰淇淋？不想。面包？想！Leo吃面包，喝橙汁：“真好吃！” (Leo xiǎng chī shénme? — Leo è le. Leo xiǎng chī… miàntiáo? Bù xiǎng. Bīngqílín? Bù xiǎng. Miànbāo? Xiǎng! Leo chī miànbāo, hē chéngzhī: “Zhēn hǎochī!”)",
+      "video": "Tìm YouTube: \"你想吃什么 儿童中文 食物\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: candy, sweets, cross | Ôn: food, fruit, bread, juice, noodles, ice cream, chips, fries, rice, pizza",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" · Chuyển ý: \"Now, let's speak Chinese! 我们说中文吧！\" · Khen: \"Good job! 很好！\" · Câu mới buổi này: \"Nói to lên nhé! Louder, please! 大声一点！\" · Câu đã quen (bỏ tiếng Việt): \"Hands up! 举手！\" 1) Tick hoặc cross theo lời cô trên tranh bàn ăn (4 câu): Tick the fruit. / Put a cross on the candy. / Tick the juice. / Put a cross on the chips. 2) Nghe không tranh rồi chọn tranh đúng (4 câu): I want to eat noodles. / I don't like eating sweets. / I want to drink water. / I like eating bread. 3) Hỏi đáp vòng tròn: Do you like eating ice cream? – Yes, I do. / No, I don't. I want to eat rice.",
+     "truyen": "Anna's Food Page — Anna has got a page with food on it. 'Tick the food you like,' says the teacher. Anna ticks the fruit: apples, grapes and a kiwi. She ticks the rice and the bread. She puts a cross on the candy and the chocolate. 'I don't like eating candy. I want to eat fruit!' Leo has got a page too. He puts a cross on the carrots! The teacher says: 'Great, Anna! Great, Leo!'",
+     "baihat": "I Like Food – giai điệu Frère Jacques (câu 3): Do you like sweets? Do you like sweets? / No, I don't! No, I don't! / Put a cross on candy, / Put a cross on candy, / Fruit for me! Fruit for me!"
+    },
+    "zh": {
+     "flash": "Mới: 糖果 tángguǒ | Ôn: 食物 shíwù, 水果 shuǐguǒ, 面包 miànbāo, 果汁 guǒzhī, 面条 miàntiáo, 冰淇淋 bīngqílín, 薯条 shǔtiáo, 米饭 mǐfàn, 比萨 bǐsà | Nghe hiểu (tranh): 打叉 dǎ chā",
+     "slide": "1) Tick hoặc cross theo lời cô trên tranh bàn ăn (4 câu): 给水果打勾。(Gěi shuǐguǒ dǎ gōu.) / 给糖果打叉。(Gěi tángguǒ dǎ chā.) / 给果汁打勾。(Gěi guǒzhī dǎ gōu.) / 给薯条打叉。(Gěi shǔtiáo dǎ chā.) 2) Nghe không tranh rồi chọn tranh đúng (4 câu): 我想吃面条。(Wǒ xiǎng chī miàntiáo.) / 我不喜欢吃糖果。(Wǒ bù xǐhuan chī tángguǒ.) / 我想喝水。(Wǒ xiǎng hē shuǐ.) / 我喜欢吃面包。(Wǒ xǐhuan chī miànbāo.) 3) Hỏi đáp vòng tròn: 你喜欢吃冰淇淋吗？(Nǐ xǐhuan chī bīngqílín ma?) – 喜欢。(Xǐhuan.) / 不喜欢，我想吃米饭。(Bù xǐhuan, wǒ xiǎng chī mǐfàn.) 4) YCT1 Đọc phần 2 (mẫu): con đọc câu có pinyin, chọn tranh A–F — 读一读，选一选。(Dú yi dú, xuǎn yi xuǎn.) 1. 我喜欢吃面条。(Wǒ xǐhuan chī miàntiáo.) 2. 我想喝果汁。(Wǒ xiǎng hē guǒzhī.) 3. 冰淇淋看起来很好吃。(Bīngqílín kàn qǐlái hěn hǎochī.) 4. 这是面包。(Zhè shì miànbāo.) 5. 我不喜欢吃糖果。(Wǒ bù xǐhuan chī tángguǒ.) [Tranh A–F: bát mì, cốc nước ép, cây kem, bánh mì, bạn lắc đầu với kẹo, bát cơm (tranh thừa)] 5) [Cầu nối Anh – Trung] Cùng trang đồ ăn: rối Leo nói \"I don't like eating candy.\", rối Xiaomei nói \"我不喜欢吃糖果。\" Con chỉ vị trí của don't và 不 (đều đứng trước like / 喜欢). 6) [Chuyển ngữ] Rối Leo nói 1 câu, con nói lại cho rối Xiaomei: I want to eat rice. → 我想吃米饭。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"I don't like eating sweets, so I put a cross on the candy. But I really like rice, so I tick it.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 我不喜欢吃糖果，给糖果打叉。我很喜欢吃米饭，给米饭打勾。 (Wǒ bù xǐhuan chī tángguǒ, gěi tángguǒ dǎ chā. Wǒ hěn xǐhuan chī mǐfàn, gěi mǐfàn dǎ gōu.)",
+     "truyen": "Anna的食物图 — Anna有一张食物图。老师说：“你喜欢的食物，打勾。”Anna给水果打勾：苹果、葡萄……她给米饭和面包打勾！她给糖果和巧克力打叉！Anna说：“我不喜欢吃糖果。我想吃水果！”Leo也有一张食物图，他给胡萝卜打叉！老师说：“很好，Anna！很好，Leo！” (Anna de shíwù tú — Anna yǒu yì zhāng shíwù tú. Lǎoshī shuō: “Nǐ xǐhuan de shíwù, dǎ gōu.” Anna gěi shuǐguǒ dǎ gōu: píngguǒ, pútao… Tā gěi mǐfàn hé miànbāo dǎ gōu! Tā gěi tángguǒ hé qiǎokèlì dǎ chā! Anna shuō: “Wǒ bù xǐhuan chī tángguǒ. Wǒ xiǎng chī shuǐguǒ!” Leo yě yǒu yì zhāng shíwù tú, tā gěi húluóbo dǎ chā! Lǎoshī shuō: “Hěn hǎo, Anna! Hěn hǎo, Leo!”)",
+     "baihat": "我爱食物 – giai điệu 两只老虎 (đoạn 3, cùng ý câu 3 bài I Like Food): 爱吃糖吗？爱吃糖吗？不喜欢！不喜欢！给糖果打个叉，给糖果打个叉，吃水果！吃水果！(Ài chī táng ma? Ài chī táng ma? Bù xǐhuan! Bù xǐhuan! Gěi tángguǒ dǎ ge chā, gěi tángguǒ dǎ ge chā, chī shuǐguǒ! Chī shuǐguǒ!)"
+    }
+   }
+  },
+  {
+   "buoi": 42,
+   "unit": 9,
+   "label_buoi": "Buổi dạy 42. Unit 9 · Food – Phiên dịch nhí và kiểm tra nhỏ · YCT口试 看图说话",
+   "web": [
+    {
+     "ngay": 83,
+     "label": "Ngày 83. Unit 9 · Food · Truyện: Bức tranh đồ ăn (chuyển ngữ) · Luyện đề YCT1 Nghe phần 2",
+     "en": {
+      "tu": "Ôn: crayon, pencil, scissors, glue, board, school, food, ice cream, pizza",
+      "cum": "paint with crayons / a picture of food / scissors and glue / on the board",
+      "cau": "Anna has got crayons and a pencil. / Leo has got scissors and glue. / Look at the board! / It's an ice cream! It's a pizza!",
+      "truyen": "The Food Picture — At school, Anna and Leo make a food picture. Anna has got crayons and a pencil. She paints a big ice cream. Leo has got scissors and glue. He makes a pizza. Anna and Leo put the picture on the board. 'Look! Ice cream and pizza! Great!' says the teacher.",
+      "video": "Tìm YouTube: \"draw food for kids ice cream pizza easy\""
+     },
+     "zh": {
+      "tu": "Ôn: 铅笔 qiānbǐ, 蜡笔 làbǐ, 剪刀 jiǎndāo, 胶水 jiāoshuǐ, 黑板 hēibǎn, 学校 xuéxiào, 食物 shíwù, 冰淇淋 bīngqílín, 比萨 bǐsà",
+      "cum": "食物画 shíwù huà / 用蜡笔画画 yòng làbǐ huà huà / 剪刀和胶水 jiǎndāo hé jiāoshuǐ / 在黑板上 zài hēibǎn shang / 一个大冰淇淋 yí gè dà bīngqílín",
+      "cau": "[Cầu nối] It's an ice cream! ↔ 这是冰淇淋！(Zhè shì bīngqílín!) · giống: ice cream ↔ 冰淇淋 (冰 = ice, 淇淋 nghe gần \"cream\"); pizza ↔ 比萨 bǐsà nghe gần giống · khác: tiếng Anh cần an, tiếng Trung không cần / [Chuyển ngữ] Anna has got crayons and a pencil. ↔ Anna有蜡笔和铅笔。(Anna yǒu làbǐ hé qiānbǐ.) / Leo has got scissors and glue. ↔ Leo有剪刀和胶水。(Leo yǒu jiǎndāo hé jiāoshuǐ.) / Look at the board! ↔ 看黑板！(Kàn hēibǎn!) / I want to eat ice cream. ↔ 我想吃冰淇淋。(Wǒ xiǎng chī bīngqílín.) / It's a pizza! ↔ 这是比萨！(Zhè shì bǐsà!) / [YCT1 Nghe phần 2 (mẫu): nghe cụm từ, chọn 1 trong 3 tranh A / B / C, 5 câu, ~10 phút] 听一听，选一选。(Tīng yi tīng, xuǎn yi xuǎn.) 1. 吃面条 chī miàntiáo [A ăn mì ✓ / B ăn cơm / C uống sữa] 2. 喝果汁 hē guǒzhī [A uống nước ép ✓ / B uống nước / C ăn bánh mì] 3. 很多水果 hěn duō shuǐguǒ [A nhiều hoa quả ✓ / B một quả táo / C bánh mì] 4. 冰淇淋 bīngqílín [A kem ✓ / B kẹo / C bánh mì] 5. 好吃的面包 hǎochī de miànbāo [A bánh mì ✓ / B bát mì / C cốc nước ép]",
+      "truyen": "食物画 — Anna和Leo在学校画一张食物画。Anna有蜡笔和铅笔，画一个大冰淇淋。Leo有剪刀和胶水，做一个比萨。Anna和Leo的画在黑板上。老师说：“看！冰淇淋和比萨！真棒！” (Shíwù huà — Anna hé Leo zài xuéxiào huà yì zhāng shíwù huà. Anna yǒu làbǐ hé qiānbǐ, huà yí gè dà bīngqílín. Leo yǒu jiǎndāo hé jiāoshuǐ, zuò yí gè bǐsà. Anna hé Leo de huà zài hēibǎn shang. Lǎoshī shuō: “Kàn! Bīngqílín hé bǐsà! Zhēn bàng!”)",
+      "video": "Tìm YouTube: \"食物 儿童中文 认读 冰淇淋 比萨\""
+     }
+    },
+    {
+     "ngay": 84,
+     "label": "Ngày 84. Unit 9 · Food · Phiên dịch nhí: Chuyến dã ngoại",
+     "en": {
+      "tu": "Ôn: food, fruit, bread, juice, noodles, ice cream, chips, fries, candy, cross, picnic",
+      "cum": "a picnic in the park / bread and juice / noodles or rice",
+      "cau": "[Phiên dịch nhí] I want to eat noodles. → 我想吃面条。/ I want to drink juice. → 我想喝果汁。/ Do you like eating ice cream? → 你喜欢吃冰淇淋吗？/ I don't like eating candy. → 我不喜欢吃糖果。",
+      "truyen": "The Picnic — Bông and Nhan have a picnic in the park. Nhan has got bread, fruit and juice. Bông has got noodles and ice cream. 'Do you like eating noodles, Nhan?' 'No, I don't. I like eating fruit!' 'Me too!' says Bông.",
+      "video": "Tìm YouTube: \"picnic song for kids food\""
+     },
+     "zh": {
+      "tu": "Ôn: 食物 shíwù, 水果 shuǐguǒ, 面包 miànbāo, 果汁 guǒzhī, 面条 miàntiáo, 冰淇淋 bīngqílín, 糖果 tángguǒ, 薯条 shǔtiáo, 公园 gōngyuán, 野餐 yěcān",
+      "cum": "在公园 zài gōngyuán / 面包和果汁 miànbāo hé guǒzhī / 面条还是米饭 miàntiáo háishi mǐfàn",
+      "cau": "[Cầu nối] I want to eat noodles. ↔ 我想吃面条。(Wǒ xiǎng chī miàntiáo.) · giống: cùng thứ tự Ai – muốn – ăn – món gì · khác: want to eat ↔ 想吃 (không có \"to\"); Me too! ↔ 我也是！ / [Phiên dịch nhí] 我想吃面条。(Wǒ xiǎng chī miàntiáo.) → I want to eat noodles. / 你喜欢喝果汁吗？(Nǐ xǐhuan hē guǒzhī ma?) → Do you like drinking juice? / 你喜欢吃冰淇淋吗？(Nǐ xǐhuan chī bīngqílín ma?) → Do you like eating ice cream?",
+      "truyen": "野餐 — Bông和Nhan在公园野餐。Nhan有面包、水果和果汁。Bông有面条和冰淇淋。“Nhan，你喜欢吃面条吗？”“不喜欢。我喜欢吃水果！”Bông说：“我也是！” (Yěcān — Bông hé Nhan zài gōngyuán yěcān. Nhan yǒu miànbāo, shuǐguǒ hé guǒzhī. Bông yǒu miàntiáo hé bīngqílín. “Nhan, nǐ xǐhuan chī miàntiáo ma?” “Bù xǐhuan. Wǒ xǐhuan chī shuǐguǒ!” Bông shuō: “Wǒ yě shì!”)",
+      "video": "Tìm YouTube: \"公园 野餐 儿歌\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn: food, fruit, bread, juice, noodles, ice cream, chips, fries, candy, sweets, cross, crayon, pencil, scissors, glue, board, school",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" · Chuyển ý: \"Now, let's speak Chinese! 我们说中文吧！\" · Khen: \"Well done! 真棒！\" · Nhắc lại câu mới buổi trước: \"Nói to lên nhé! Louder, please! 大声一点！\" (lần cuối kèm tiếng Việt) 1) Chuyển ngữ nhanh: cô nói tiếng Anh, con chạm thẻ tiếng Trung (4 cặp): noodles – 面条 / juice – 果汁 / ice cream – 冰淇淋 / bread – 面包. 2) Kiểm tra nhỏ Unit 9 – nghe chọn tranh (5 câu, phương án nhiễu: father / grandmother / girl): I like eating noodles. / I don't like eating candy. / Do you like drinking milk? / Put a cross on the chips. / I want to eat bread. 3) [Chuyển ngữ] Đóng vai Phiên dịch nhí ở buổi dã ngoại: rối Leo nói tiếng Anh, con nói lại câu đó bằng tiếng Trung cho rối Xiaomei: I want to eat noodles. ↔ 我想吃面条。/ I want to drink juice. ↔ 我想喝果汁。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"We're having a picnic in the park today. I'm hungry, so I want to eat noodles and drink some juice.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 今天我们在公园野餐。我饿了，我想吃面条，喝果汁。 (Jīntiān wǒmen zài gōngyuán yěcān. Wǒ è le, wǒ xiǎng chī miàntiáo, hē guǒzhī.)",
+     "truyen": "The Picnic — Bông and Nhan have a picnic in the park. Nhan has got bread, fruit and orange juice. Bông has got noodles, chips and ice cream. 'Do you like eating noodles, Nhan?' 'No, I don't. I like eating fruit!' 'Do you like eating ice cream?' 'Yes, I do!' Bông and Nhan eat the ice cream. 'Mmm, nice!'",
+     "baihat": "I Like Food – giai điệu Frère Jacques (cả bài: câu 1 + câu 2 + câu 3, con hát và làm động tác tick / cross). Nghe thêm: Do You Like Broccoli Ice Cream? (chỉ nghe, không chép lời)"
+    },
+    "zh": {
+     "flash": "Ôn: 食物 shíwù, 水果 shuǐguǒ, 面包 miànbāo, 果汁 guǒzhī, 面条 miàntiáo, 冰淇淋 bīngqílín, 薯条 shǔtiáo, 糖果 tángguǒ, 打叉 dǎ chā, 蜡笔 làbǐ, 铅笔 qiānbǐ, 剪刀 jiǎndāo, 胶水 jiāoshuǐ, 黑板 hēibǎn, 学校 xuéxiào",
+     "slide": "1) Chuyển ngữ ngược: cô nói tiếng Trung, con chạm thẻ tiếng Anh (4 cặp): 面条 – noodles / 果汁 – juice / 冰淇淋 – ice cream / 面包 – bread. 2) Kiểm tra nhỏ Unit 9 – nghe chọn tranh (5 câu): 我喜欢吃面条。(Wǒ xǐhuan chī miàntiáo.) / 我不喜欢吃糖果。(Wǒ bù xǐhuan chī tángguǒ.) / 你喜欢喝牛奶吗？(Nǐ xǐhuan hē niúnǎi ma?) / 给薯条打叉。(Gěi shǔtiáo dǎ chā.) / 我想吃面包。(Wǒ xiǎng chī miànbāo.) 3) Kể lại truyện 野餐 theo 4 tranh, mỗi con một câu. 4) YCT口试（初级）第三部分 看图说话 (mẫu – cô làm giám khảo, từng con nhìn tranh nói 2–3 câu): 看图说话。(Kàn tú shuōhuà.) Tranh 1: Leo ăn mì → Leo喜欢吃面条。面条很好吃。(Leo xǐhuan chī miàntiáo. Miàntiáo hěn hǎochī.) Tranh 2: Anna cầm cốc nước ép → Anna有果汁。她想喝果汁。(Anna yǒu guǒzhī. Tā xiǎng hē guǒzhī.) Tranh 3: bàn đầy hoa quả → 这是水果。我喜欢吃苹果和香蕉。(Zhè shì shuǐguǒ. Wǒ xǐhuan chī píngguǒ hé xiāngjiāo.) 5) [Cầu nối Anh – Trung] Cùng 4 tranh truyện The Picnic / 野餐: rối Leo kể câu tiếng Anh, rối Xiaomei kể câu tiếng Trung; con tìm cặp giống: in the park ↔ 在公园, noodles ↔ 面条, Me too! ↔ 我也是！",
+     "truyen": "野餐 — Bông和Nhan在公园野餐。Nhan有面包、水果和果汁。Bông有面条、薯条和冰淇淋。“Nhan，你喜欢吃面条吗？”“不喜欢。我喜欢吃水果！”“你喜欢吃冰淇淋吗？”“喜欢！”Bông和Nhan一起吃冰淇淋：“真好吃！” (Yěcān — Bông hé Nhan zài gōngyuán yěcān. Nhan yǒu miànbāo, shuǐguǒ hé guǒzhī. Bông yǒu miàntiáo, shǔtiáo hé bīngqílín. “Nhan, nǐ xǐhuan chī miàntiáo ma?” “Bù xǐhuan. Wǒ xǐhuan chī shuǐguǒ!” “Nǐ xǐhuan chī bīngqílín ma?” “Xǐhuan!” Bông hé Nhan yìqǐ chī bīngqílín: “Zhēn hǎochī!”)",
+     "baihat": "我爱食物 – giai điệu 两只老虎 (cả bài: đoạn 1 + 2 + 3, cùng ý cả bài I Like Food; con hát và làm động tác ✓ / ✗): 我爱苹果，我爱苹果，我喜欢！我喜欢！面包牛奶果汁，面包牛奶果汁，真好吃！真好吃！/ 我爱面条，我爱面条，我喜欢！我喜欢！冰淇淋和薯条，冰淇淋和汉堡，真好吃！真好吃！/ 爱吃糖吗？爱吃糖吗？不喜欢！不喜欢！给糖果打个叉，给糖果打个叉，吃水果！吃水果！(Wǒ ài píngguǒ, wǒ ài píngguǒ, wǒ xǐhuan! Wǒ xǐhuan! Miànbāo niúnǎi guǒzhī, miànbāo niúnǎi guǒzhī, zhēn hǎochī! Zhēn hǎochī! / Wǒ ài miàntiáo, wǒ ài miàntiáo, wǒ xǐhuan! Wǒ xǐhuan! Bīngqílín hé shǔtiáo, bīngqílín hé hànbǎo, zhēn hǎochī! Zhēn hǎochī! / Ài chī táng ma? Ài chī táng ma? Bù xǐhuan! Bù xǐhuan! Gěi tángguǒ dǎ ge chā, gěi tángguǒ dǎ ge chā, chī shuǐguǒ! Chī shuǐguǒ!)"
+    }
+   }
+  },
+  {
+   "buoi": 43,
+   "unit": 10,
+   "label_buoi": "Buổi dạy 43. Unit 10 · Weather – Hôm nay trời thế nào?",
+   "web": [
+    {
+     "ngay": 85,
+     "label": "Ngày 85. Unit 10 · Weather · Hôm nay trời nắng",
+     "en": {
+      "tu": "Mới: today, come, smile | Ôn: arm, leg, body, weather, sunny",
+      "cum": "sunny today / come and play / a big smile / come to the park",
+      "cau": "How's the weather today? – It's sunny. / It's hot today. / Come and play, Leo! / Smile, please! / [Lệnh lớp học] Look at the picture. Answer the question: How's the weather today? – It's sunny. / [Lời web] Vào bài: \"Let's learn! 我们一起学吧！\" · Khen: \"Great! 真棒！\" · Sang tiếng Trung: \"Now in Chinese! 用中文说！\" · Câu mới: \"Nghe lại nhé! Listen again! 再听一次！\"",
+      "truyen": "Sunny Today — 'How's the weather today, Mum?' asks Anna. 'It's sunny!' Anna smiles. 'Come and play, Leo!' Anna and Leo go to the park. It's hot and sunny today.",
+      "video": "Tìm YouTube: \"how's the weather today song for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 去 qù (= go) | Ôn: 今天 jīntiān, 天气 tiānqì, 晴天 qíngtiān, 热 rè, 公园 gōngyuán, 笑一笑 xiào yi xiào, 来 lái",
+      "cum": "今天天气 jīntiān tiānqì / 来玩吧 lái wán ba / 笑一笑 xiào yi xiào / 去公园 qù gōngyuán",
+      "cau": "[Cầu nối] How's the weather today? ↔ 今天天气怎么样？(Jīntiān tiānqì zěnmeyàng?) · giống: today ↔ 今天, weather ↔ 天气 · khác: tiếng Anh để today cuối câu, tiếng Trung để 今天 đầu câu / 今天天气怎么样？(Jīntiān tiānqì zěnmeyàng?) / 今天是晴天。(Jīntiān shì qíngtiān.) / 今天很热。(Jīntiān hěn rè.) / Leo，来玩吧！(Leo, lái wán ba!) / 笑一笑！(Xiào yi xiào!) / Anna和Leo去公园。(Anna hé Leo qù gōngyuán.) / [Lệnh lớp học] 听问题，回答问题：今天天气怎么样？——今天是晴天。(Tīng wèntí, huídá wèntí: Jīntiān tiānqì zěnmeyàng? — Jīntiān shì qíngtiān.)",
+      "truyen": "今天是晴天 — “妈妈，今天天气怎么样？”“今天是晴天！”Anna笑了：“Leo，来玩吧！”Anna和Leo去公园。今天很热，是晴天。 (Jīntiān shì qíngtiān — “Māma, jīntiān tiānqì zěnmeyàng?” “Jīntiān shì qíngtiān!” Anna xiào le: “Leo, lái wán ba!” Anna hé Leo qù gōngyuán. Jīntiān hěn rè, shì qíngtiān.)",
+      "video": "Tìm YouTube: \"今天天气怎么样 儿歌\""
+     }
+    },
+    {
+     "ngay": 86,
+     "label": "Ngày 86. Unit 10 · Weather · Trời lạnh, mặc áo khoác",
+     "en": {
+      "tu": "Mới: hat, coat, scarf | Ôn: class, kid, cold, snowy",
+      "cum": "a big coat / a long scarf / wear a hat / a T-shirt and a hat",
+      "cau": "It's cold. Wear your coat! / It's hot. Wear a T-shirt and a hat. / Kids, wear your scarf! / I've got a red hat. / Colour the hat red. Colour the scarf blue.",
+      "truyen": "Cold Today — It's cold today. 'Wear your coat, Leo!' says Dad. Leo wears his coat, a hat and a long scarf. 'Come and play, Dad!' Dad wears his coat and hat too.",
+      "video": "Tìm YouTube: \"put on your coat hat scarf song kids\""
+     },
+     "zh": {
+      "tu": "Mới: 穿 chuān (= wear), 外套 wàitào (= coat), 帽子 màozi (= hat) | Ôn: 戴 dài, 小朋友 xiǎopéngyǒu, 冷 lěng, 下雪 xià xuě | Nghe hiểu (có tranh; 围巾 con đã nghe trong bài hát thời tiết Little Seed): 围巾 wéijīn (= scarf), T恤 T xù (= T-shirt)",
+      "cum": "穿外套 chuān wàitào / 戴帽子 dài màozi / 戴围巾 dài wéijīn / 今天很冷 jīntiān hěn lěng",
+      "cau": "[Cầu nối] Wear your coat! ↔ 穿外套！(Chuān wàitào!) · giống: wear ↔ 穿, coat ↔ 外套 · khác: wear a hat ↔ 戴帽子 (mũ dùng 戴, không dùng 穿); scarf ↔ 围巾, cũng dùng 戴 / 今天很冷。(Jīntiān hěn lěng.) / 穿外套！(Chuān wàitào!) / 戴帽子！(Dài màozi!) / 戴围巾！(Dài wéijīn!) / 今天很热，穿T恤，戴帽子。(Jīntiān hěn rè, chuān T xù, dài màozi.) / 我有一个红帽子。(Wǒ yǒu yí gè hóng màozi.) / 看一看，说一说：我穿外套。(Kàn yi kàn, shuō yi shuō: Wǒ chuān wàitào.) / [Chuyển ngữ] Bố của Leo nói tiếng Anh: \"It's cold. Wear your coat!\" – con nói lại cho Xiaomei: 今天很冷，穿外套！(Jīntiān hěn lěng, chuān wàitào!)",
+      "truyen": "今天很冷 — 今天很冷。爸爸说：“Leo，穿外套！”Leo穿外套，戴帽子，戴长长的围巾。“爸爸，来玩吧！”爸爸也穿外套，戴帽子。 (Jīntiān hěn lěng — Jīntiān hěn lěng. Bàba shuō: “Leo, chuān wàitào!” Leo chuān wàitào, dài màozi, dài chángcháng de wéijīn. “Bàba, lái wán ba!” Bàba yě chuān wàitào, dài màozi.)",
+      "video": "Tìm YouTube: \"穿衣服 儿歌 外套 帽子\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: today, come, smile, hat, coat, scarf | Ôn: weather, sunny, cold, hot, windy, park | Thẻ lệnh đề: question, answer, spell, colour",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" · Chuyển ý: \"Now, let's speak Chinese! 我们说中文吧！\" · Khen: \"Great! 太好了！\" · Câu mới buổi này: \"Đứng lên nào! Stand up, please! 请站起来！\" · Câu đã quen (bỏ tiếng Việt): \"Hands up! 举手！\" / \"Louder, please! 大声一点！\" 1) Nhìn tranh chọn từ (4 câu): hat / coat / scarf / T-shirt. 2) Nghe và chạm tranh thời tiết (4 câu): It's sunny today. / It's cold today. / It's hot today. / It's windy today. 3) Mặc đồ cho bạn Leo: cô nói câu, con kéo đồ vào tranh Leo: It's cold. Wear a coat! / Wear a hat! / Wear a scarf! / It's hot. Wear a T-shirt! 4) Lệnh đề: Listen to the question and answer: How's the weather today? / Colour the scarf blue. / Spell \"hat\".",
+     "truyen": "Sunny Today, Cold Today — On Monday it's sunny. 'Come and play, Leo!' says Anna. Anna smiles. Leo wears a T-shirt and a hat. Then it's cold and windy. 'Wear your coat and your scarf!' says Dad. Leo wears his coat and his long scarf. 'How's the weather today, Leo?' 'It's cold!'",
+     "baihat": "How's the Weather? – giai điệu Mary Had a Little Lamb (câu 1): How's the weather, weather, weather? / How's the weather? It's sunny today! / Come and play and smile, smile, smile, / Come and play, it's sunny today!"
+    },
+    "zh": {
+     "flash": "Mới: 外套 wàitào, 帽子 màozi, 围巾 wéijīn | Ôn: 今天 jīntiān, 来 lái, 笑一笑 xiào yi xiào, 天气 tiānqì, 晴天 qíngtiān, 冷 lěng, 热 rè, 刮风 guāfēng, 公园 gōngyuán | Thẻ lệnh đề: 问题 wèntí, 回答 huídá, 涂 tú",
+     "slide": "1) Nhìn tranh chọn từ (4 câu): 外套 wàitào / 帽子 màozi / 围巾 wéijīn / T恤 T xù. 2) Nghe và chạm tranh thời tiết (4 câu): 今天是晴天。(Jīntiān shì qíngtiān.) / 今天很冷。(Jīntiān hěn lěng.) / 今天很热。(Jīntiān hěn rè.) / 今天刮风。(Jīntiān guāfēng.) 3) Mặc đồ cho bạn Leo: cô nói câu, con chạm đồ để mặc cho Leo: 今天很冷，穿外套！(Jīntiān hěn lěng, chuān wàitào!) / 戴帽子！(Dài màozi!) / 戴围巾！(Dài wéijīn!) / 今天很热，穿T恤！(Jīntiān hěn rè, chuān T xù!) 4) Lệnh đề: 听问题，回答问题：今天天气怎么样？(Tīng wèntí, huídá wèntí: Jīntiān tiānqì zěnmeyàng?) / 给围巾涂上蓝色。(Gěi wéijīn tú shang lánsè.) 5) [Cầu nối Anh – Trung] Cùng tranh mặc đồ cho Leo: rối Leo nói \"Wear a coat! Wear a hat!\", rối Xiaomei nói \"穿外套！戴帽子！\" Con phát hiện: tiếng Anh một từ wear, tiếng Trung có hai từ: 穿 (áo) và 戴 (mũ, khăn). 6) [Chuyển ngữ] Rối Leo nói 1 câu tiếng Anh, con nói lại bằng tiếng Trung cho rối Xiaomei: It's sunny today. → 今天是晴天。/ It's cold today. → 今天很冷。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"It's very cold today and it's snowing. Put on your coat and wear your hat!\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 今天很冷，下雪了。穿外套，戴帽子！ (Jīntiān hěn lěng, xià xuě le. Chuān wàitào, dài màozi!)",
+     "truyen": "今天是晴天，今天很冷 — 星期一是晴天。Anna说：“Leo，来玩吧！”Anna笑了。Leo穿T恤，戴帽子。……刮风了，很冷。爸爸说：“穿外套，戴围巾！”Leo穿外套，戴长长的围巾。“Leo，今天天气怎么样？”“很冷！” (Jīntiān shì qíngtiān, jīntiān hěn lěng — Xīngqīyī shì qíngtiān. Anna shuō: “Leo, lái wán ba!” Anna xiào le. Leo chuān T xù, dài màozi. … Guāfēng le, hěn lěng. Bàba shuō: “Chuān wàitào, dài wéijīn!” Leo chuān wàitào, dài chángcháng de wéijīn. “Leo, jīntiān tiānqì zěnmeyàng?” “Hěn lěng!”) [星期一 xīngqīyī: chỉ nghe hiểu, cô chỉ tranh lịch]",
+     "baihat": "今天天气 – giai điệu Mary Had a Little Lamb (cùng giai điệu, cùng ý với bài How's the Weather?) (câu 1): 今天天气怎么样？/ 怎么样？怎么样？/ 来玩来玩笑一笑，/ 今天是大晴天！(Jīntiān tiānqì zěnmeyàng? / Zěnmeyàng? Zěnmeyàng? / Lái wán lái wán xiào yi xiào, / Jīntiān shì dà qíngtiān!)"
+    }
+   }
+  },
+  {
+   "buoi": 44,
+   "unit": 10,
+   "label_buoi": "Buổi dạy 44. Unit 10 · Weather – Ô, mưa và ra ngoài chơi",
+   "web": [
+    {
+     "ngay": 87,
+     "label": "Ngày 87. Unit 10 · Weather · Mưa ở buổi dã ngoại",
+     "en": {
+      "tu": "Mới: umbrella, drop, a lot | Ôn: bread, juice, food, fun, good, rain",
+      "cum": "a big umbrella / rain a lot / drop the bread / a lot of food",
+      "cau": "It's cloudy. / It's raining a lot. / Open your umbrella! / Oh no! Don't drop the juice! / We've got a lot of food: bread, fruit and juice. / Spell \"hat\": h-a-t. / Listen and tick ✓ the umbrella. OK, start!",
+      "truyen": "Rain at the Picnic — Bông and Nhan have a lot of food: bread, fruit and juice. It's cloudy. Oh no! It's raining a lot! Nhan drops the bread. 'Open the umbrella, Bông!' Bông opens the big umbrella. 'Good! We can eat now!'",
+      "video": "Tìm YouTube: \"it's raining umbrella song for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 雨伞 yǔsǎn (= umbrella), 多云 duōyún (= cloudy), 掉 diào (= drop) | Ôn: 下雨 xià yǔ, 很多 hěn duō, 食物 shíwù, 面包 miànbāo, 果汁 guǒzhī | Nghe hiểu (có tranh): 打开 dǎkāi (= open)",
+      "cum": "一个大雨伞 yí gè dà yǔsǎn / 雨很大 yǔ hěn dà / 面包掉了 miànbāo diào le / 很多食物 hěn duō shíwù",
+      "cau": "[Cầu nối] It's raining. ↔ 下雨了。(Xià yǔ le.) · giống: rain ↔ 雨 · khác: tiếng Anh cần It's … -ing, tiếng Trung không có \"it\"; umbrella ↔ 雨伞 = 雨 (rain) + 伞 / 今天多云。(Jīntiān duōyún.) / 下雨了，雨很大！(Xià yǔ le, yǔ hěn dà!) / 打开雨伞！(Dǎkāi yǔsǎn!) / 哎呀！小心，别把果汁弄掉了！(Āiyā! Xiǎoxīn, bié bǎ guǒzhī nòng diào le!) / 我们有很多食物：面包、水果和果汁。(Wǒmen yǒu hěn duō shíwù: miànbāo, shuǐguǒ hé guǒzhī.) / 选一选：雨伞还是帽子？(Xuǎn yi xuǎn: yǔsǎn háishi màozi?) / 听一听，给雨伞打勾。(Tīng yi tīng, gěi yǔsǎn dǎ gōu.)",
+      "truyen": "下雨了 — Bông和Nhan有很多食物：面包、水果和果汁。今天多云。哎呀！下雨了！雨很大！Nhan的面包掉了。“Bông，打开雨伞！”Bông打开大雨伞。“好了！我们能吃了！” (Xià yǔ le — Bông hé Nhan yǒu hěn duō shíwù: miànbāo, shuǐguǒ hé guǒzhī. Jīntiān duōyún. Āiyā! Xià yǔ le! Yǔ hěn dà! Nhan de miànbāo diào le. “Bông, dǎkāi yǔsǎn!” Bông dǎkāi dà yǔsǎn. “Hǎo le! Wǒmen néng chī le!”)",
+      "video": "Tìm YouTube: \"下雨了 儿歌 雨伞\""
+     }
+    },
+    {
+     "ngay": 88,
+     "label": "Ngày 88. Unit 10 · Weather · Ở nhà hay ra ngoài?",
+     "en": {
+      "tu": "Mới: out, go out, stay | Ôn: noodles, ice cream, chips, man/men, morning, home",
+      "cum": "go out / stay at home / out in the rain / look out of the window",
+      "cau": "It's raining. I stay at home. / It's sunny. I go out and play. / Can I go out, Mum? – No, stay at home. / We eat noodles at home. / Read the question: Can we go out today? Choose: yes or no.",
+      "truyen": "Stay or Go Out? — It's morning. 'Can I go out, Mum?' asks Leo. 'Look out of the window. It's raining a lot!' 'OK. I stay at home.' Leo and Mum eat noodles. Then it's sunny! 'Now you can go out!' says Mum. 'Yes!' says Leo.",
+      "video": "Tìm YouTube: \"can I go out to play rainy day song kids\""
+     },
+     "zh": {
+      "tu": "Mới: 出 chū (= out), 出去 chūqù (= go out) | Ôn: 早上 zǎoshang, 家 jiā, 在家 zài jiā, 面条 miàntiáo, 冰淇淋 bīngqílín, 薯条 shǔtiáo | Nghe hiểu (chỉ trong truyện): 窗外 chuāng wài (= out of the window; 窗 = window, 外 như trong 外套)",
+      "cum": "出去玩 chūqù wán / 在家 zài jiā / 我们出去 wǒmen chūqù",
+      "cau": "[Cầu nối] Can I go out? ↔ 我能出去吗？(Wǒ néng chūqù ma?) · giống: can ↔ 能, go out ↔ 出去 (出 = out, 去 = go) · khác: thứ tự ngược: go + out ↔ 出 + 去; stay at home ↔ 在家 / 妈妈，我想出去玩。(Māma, wǒ xiǎng chūqù wán.) / 妈妈，我能出去吗？(Māma, wǒ néng chūqù ma?) – 不能，在家吧。(Bù néng, zài jiā ba.) / 下雨了，我们在家。(Xià yǔ le, wǒmen zài jiā.) / 今天是晴天，我们出去！(Jīntiān shì qíngtiān, wǒmen chūqù!) / 我们在家吃面条。(Wǒmen zài jiā chī miàntiáo.) / 读一读，说一说：我们出去玩吧！(Dú yi dú, shuō yi shuō: Wǒmen chūqù wán ba!) / [Chuyển ngữ] Leo nói tiếng Anh: \"It's raining. I stay at home.\" – con nói lại cho Xiaomei: 下雨了，我在家。(Xià yǔ le, wǒ zài jiā.)",
+      "truyen": "出去还是在家？ — 早上了。Leo说：“妈妈，我能出去吗？”妈妈说：“你看窗外，下雨了，雨很大！”“好吧，我在家。”Leo和妈妈在家吃面条。……晴天了！妈妈说：“你能出去了！”Leo说：“太好了！” (Chūqù háishi zài jiā? — Zǎoshang le. Leo shuō: “Māma, wǒ néng chūqù ma?” Māma shuō: “Nǐ kàn chuāng wài, xià yǔ le, yǔ hěn dà!” “Hǎo ba, wǒ zài jiā.” Leo hé māma zài jiā chī miàntiáo. … Qíngtiān le! Māma shuō: “Nǐ néng chūqù le!” Leo shuō: “Tài hǎo le!”)",
+      "video": "Tìm YouTube: \"出去玩 儿歌 幼儿\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: umbrella, drop, a lot, out, go out, stay | Ôn: today, come, smile, hat, coat, scarf, bread, juice, noodles",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" · Chuyển ý: \"Now, let's speak Chinese! 我们说中文吧！\" · Khen: \"Good job! 很好！\" · Nhắc lại câu mới buổi trước: \"Đứng lên nào! Stand up, please! 请站起来！\" (lần cuối kèm tiếng Việt) 1) Nhìn tranh chọn từ, có phương án nhiễu (4 câu): umbrella / toy / coat / sorry. 2) Nghe và chọn: ở nhà hay ra ngoài (4 câu): It's raining a lot. I stay at home. / It's sunny. I go out. / It's snowing. I go out. / It's windy. I stay at home. 3) Trò chơi 'Đừng làm rơi!': con chuyền ô và nói: Don't drop the umbrella! / Oh no! I drop the bread! 4) Lệnh đề: Read the question. Choose the answer: Can we go out? – (a) Yes, it's sunny. (b) No, it's raining. / Put the hat on the snowman.",
+     "truyen": "Rain at the Picnic — Bông and Nhan have a lot of food in the park: bread, fruit and orange juice. It's cloudy. Oh no! It's raining a lot! Nhan drops the bread. 'Open the umbrella, Bông!' Bông opens the big umbrella. 'Good!' Then Bông and Nhan go home. 'Can we go out again, Mum?' 'No, stay at home. It's raining!' Bông and Nhan look out of the window.",
+     "baihat": "How's the Weather? – giai điệu Mary Had a Little Lamb (câu 1): How's the weather, weather, weather? / How's the weather? It's sunny today! / Come and play and smile, smile, smile, / Come and play, it's sunny today! / (câu 2): It is cold, so wear your coat, / wear your coat, wear your coat, / Wear your coat and hat and scarf, / It is cold today!"
+    },
+    "zh": {
+     "flash": "Mới: 雨伞 yǔsǎn, 掉 diào, 很多 hěn duō, 出 chū, 出去 chūqù, 在家 zài jiā | Ôn: 今天 jīntiān, 来 lái, 笑一笑 xiào yi xiào, 帽子 màozi, 外套 wàitào, 围巾 wéijīn, 面包 miànbāo, 果汁 guǒzhī, 面条 miàntiáo",
+     "slide": "1) Nghe chọn tranh, có phương án nhiễu (4 câu): 雨伞 yǔsǎn / 玩具 wánjù / 外套 wàitào / 对不起 duìbuqǐ. 2) Nghe và chọn: ở nhà hay ra ngoài (4 câu): 下雨了，雨很大，我在家。(Xià yǔ le, yǔ hěn dà, wǒ zài jiā.) / 今天是晴天，我出去。(Jīntiān shì qíngtiān, wǒ chūqù.) / 今天下雪，我出去。(Jīntiān xià xuě, wǒ chūqù.) / 今天刮风，我在家。(Jīntiān guāfēng, wǒ zài jiā.) 3) Trò chơi 'Đừng làm rơi!': con chuyền ô và nói: 别把雨伞弄掉了！(Bié bǎ yǔsǎn nòng diào le!) / 哎呀！我的面包掉了！(Āiyā! Wǒ de miànbāo diào le!) 4) Lệnh đề: 读一读，选一选：我们能出去吗？(Dú yi dú, xuǎn yi xuǎn: Wǒmen néng chūqù ma?) – (a) 能，今天是晴天。(Néng, jīntiān shì qíngtiān.) (b) 不能，下雨了。(Bù néng, xià yǔ le.) / 给雪人戴帽子。(Gěi xuěrén dài màozi.) 5) [Cầu nối Anh – Trung] Cùng tranh buổi dã ngoại mưa: rối Leo nói \"Open the umbrella!\", rối Xiaomei nói \"打开雨伞！\" Con tìm: umbrella ↔ 雨伞 (có 雨 = rain); stay at home ↔ 在家; go out ↔ 出去 (thứ tự ngược). 6) [Chuyển ngữ] Rối Leo hỏi mẹ bằng tiếng Anh, con nói lại câu đó bằng tiếng Trung cho rối Xiaomei: Can I go out, Mum? → 妈妈，我能出去吗？ [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"Mum, it isn't raining any more. Can I go out and play?\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 妈妈，不下雨了。我能出去玩吗？ (Māma, bú xià yǔ le. Wǒ néng chūqù wán ma?)",
+     "truyen": "下雨了 — Bông和Nhan在公园，有很多食物：面包、水果和果汁。今天多云。哎呀！下雨了！雨很大！Nhan的面包掉了。“Bông，打开雨伞！”Bông打开大雨伞。“好了！”Bông和Nhan回家了。“妈妈，我们还能出去吗？”“不能，在家吧。下雨了！”Bông和Nhan看窗外。 (Xià yǔ le — Bông hé Nhan zài gōngyuán, yǒu hěn duō shíwù: miànbāo, shuǐguǒ hé guǒzhī. Jīntiān duōyún. Āiyā! Xià yǔ le! Yǔ hěn dà! Nhan de miànbāo diào le. “Bông, dǎkāi yǔsǎn!” Bông dǎkāi dà yǔsǎn. “Hǎo le!” Bông hé Nhan huí jiā le. “Māma, wǒmen hái néng chūqù ma?” “Bù néng, zài jiā ba. Xià yǔ le!” Bông hé Nhan kàn chuāng wài.)",
+     "baihat": "今天天气 – giai điệu Mary Had a Little Lamb (cùng giai điệu, cùng ý với bài How's the Weather?) (câu 1): 今天天气怎么样？/ 怎么样？怎么样？/ 来玩来玩笑一笑，/ 今天是大晴天！(Jīntiān tiānqì zěnmeyàng? / Zěnmeyàng? Zěnmeyàng? / Lái wán lái wán xiào yi xiào, / Jīntiān shì dà qíngtiān!) / (câu 2): 今天很冷穿外套，/ 穿外套，穿外套，/ 外套帽子和围巾，/ 今天很冷很冷！(Jīntiān hěn lěng chuān wàitào, / chuān wàitào, chuān wàitào, / wàitào màozi hé wéijīn, / jīntiān hěn lěng hěn lěng!)"
+    }
+   }
+  },
+  {
+   "buoi": 45,
+   "unit": 10,
+   "label_buoi": "Buổi dạy 45. Unit 10 · Weather – Người tuyết và 'Rain, rain, go away' · Luyện đề YCT1 Nghe phần 1",
+   "web": [
+    {
+     "ngay": 89,
+     "label": "Ngày 89. Unit 10 · Weather · Người tuyết",
+     "en": {
+      "tu": "Mới: snowman, away, go away | Ôn: chips, fries, candy, nice, photo, snowy",
+      "cum": "a big snowman / another snowman / go away / Rain, rain, go away",
+      "cau": "It's snowing. I make a snowman. / Look! Another snowman! / Rain, rain, go away! Come again another day. / Go away, Sun! / Draw a snowman. Put a hat on the snowman. Is it correct? – Yes!",
+      "truyen": "The Snowman — It's snowing! Anna and Xiaomei go out. Anna makes a big snowman. Xiaomei makes another snowman. Mum has got a nice photo of the two snowmen. Then the sun comes out. 'Oh no! Go away, Sun!'",
+      "video": "Tìm YouTube: \"build a snowman song for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 雪人 xuěrén (= snowman), 走开 zǒukāi (= go away) | Ôn: 薯条 shǔtiáo, 糖果 tángguǒ, 下雪 xià xuě, 出去 chūqù, 照片 zhàopiàn | Nghe hiểu (có tranh): 太阳 tàiyáng (= sun), 堆 duī (= make, trong 堆雪人: make a snowman; đã nghe trong bài hát Little Seed), 出来 chūlái (= come out)",
+      "cum": "一个大雪人 yí gè dà xuěrén / 两个雪人 liǎng gè xuěrén / 堆雪人 duī xuěrén / 太阳，走开！tàiyáng, zǒukāi!",
+      "cau": "[Cầu nối] Go away, Sun! ↔ 太阳，走开！(Tàiyáng, zǒukāi!) · giống: go away ↔ 走开 (hai tiếng, một ý) · khác nhưng dễ nhớ: snowman ↔ 雪人 = 雪 (snow) + 人 (man), ghép đúng như tiếng Anh / 今天下雪，我堆雪人。(Jīntiān xià xuě, wǒ duī xuěrén.) / Anna和Xiaomei出去玩。(Anna hé Xiaomei chūqù wán.) / 看，一个大雪人！(Kàn, yí gè dà xuěrén!) / 两个雪人！(Liǎng gè xuěrén!) / 小雨快走开！(Xiǎo yǔ kuài zǒukāi!) / 画一画：给雪人戴帽子。(Huà yi huà: gěi xuěrén dài màozi.)",
+      "truyen": "雪人 — 下雪了！Anna和Xiaomei出去玩。Anna堆一个大雪人。Xiaomei也堆一个雪人。妈妈有一张两个雪人的照片。太阳出来了！“不好！太阳，走开！” (Xuěrén — Xià xuě le! Anna hé Xiaomei chūqù wán. Anna duī yí gè dà xuěrén. Xiaomei yě duī yí gè xuěrén. Māma yǒu yì zhāng liǎng gè xuěrén de zhàopiàn. Tàiyáng chūlái le! “Bù hǎo! Tàiyáng, zǒukāi!”)",
+      "video": "Tìm YouTube: \"下雪了 雪人 儿歌\""
+     }
+    },
+    {
+     "ngay": 90,
+     "label": "Ngày 90. Unit 10 · Weather · Ôn không tranh: Nghe đoán thời tiết · Luyện nói YCT口试 听后重复 + 听后回答",
+     "en": {
+      "tu": "Ôn: today, come, smile, hat, coat, scarf, umbrella, drop, a lot, out, go out, stay, snowman, away, go away",
+      "cum": "wear a coat / open the umbrella / go out and play / stay at home / make a snowman",
+      "cau": "How's the weather today? – It's raining. / It's cold. Wear your coat and scarf. / It's snowing. I make a snowman. / It's sunny. I go out.",
+      "truyen": "Guess the Weather — (chỉ nghe, không tranh) Leo wears a coat, a hat and a scarf. He makes a snowman. How's the weather? — It's snowing! Anna opens her umbrella. She stays at home. How's the weather? — It's raining!",
+      "video": "Tìm YouTube: \"weather vocabulary for kids listen sunny rainy snowy windy\""
+     },
+     "zh": {
+      "tu": "Ôn: 去 qù, 穿 chuān, 外套 wàitào, 帽子 màozi, 雨伞 yǔsǎn, 出去 chūqù, 在家 zài jiā, 雪人 xuěrén, 走开 zǒukāi, 冷 lěng, 晴天 qíngtiān | Nghe hiểu (có tranh): 围巾 wéijīn (= scarf), 堆 duī (= make)",
+      "cum": "穿外套 chuān wàitào / 打开雨伞 dǎkāi yǔsǎn / 出去玩 chūqù wán / 在家 zài jiā / 堆雪人 duī xuěrén",
+      "cau": "[Cầu nối] It's snowing. ↔ 下雪了。(Xià xuě le.) · giống: snow ↔ 雪 · khác: tiếng Anh dùng It's + -ing; tiếng Trung nói 下雪了, giống cách nói 下雨了 / 今天天气怎么样？(Jīntiān tiānqì zěnmeyàng?) – 今天下雨。(Jīntiān xià yǔ.) / 今天很冷，穿外套，戴围巾。(Jīntiān hěn lěng, chuān wàitào, dài wéijīn.) / 今天下雪，我堆雪人。(Jīntiān xià xuě, wǒ duī xuěrén.) / 今天是晴天，我出去。(Jīntiān shì qíngtiān, wǒ chūqù.) / [YCT口试（初级）第一部分 听后重复 (mẫu): con nghe từng câu, nói lại 1 lần, ghi âm trên Trang luyện nói, ~5 phút] 听，说：今天很冷。(Jīntiān hěn lěng.) / 我穿外套。(Wǒ chuān wàitào.) / 今天下雨，我们在家。(Jīntiān xià yǔ, wǒmen zài jiā.) / 我们出去玩吧！(Wǒmen chūqù wán ba!) / 这是雪人。(Zhè shì xuěrén.) / [YCT口试（初级）第二部分 听后回答 (mẫu): con nghe câu hỏi, trả lời ngắn, ghi âm trên Trang luyện nói, ~5 phút] 听问题，回答问题。(Tīng wèntí, huídá wèntí.) 1. 今天天气怎么样？(Jīntiān tiānqì zěnmeyàng?) ——今天下雨。(Jīntiān xià yǔ.) 2. 你穿什么？(Nǐ chuān shénme?) ——我穿外套。(Wǒ chuān wàitào.) 3. 今天冷吗？(Jīntiān lěng ma?) ——很冷。(Hěn lěng.) 4. 你要雨伞吗？(Nǐ yào yǔsǎn ma?) ——要。(Yào.) 5. 我们出去玩，好吗？(Wǒmen chūqù wán, hǎo ma?) ——好！(Hǎo!) / [Chuyển ngữ] (nghe không tranh) Anna nói tiếng Anh: \"It's cold. I wear a coat.\" – con nói lại cho Xiaomei: 今天很冷，我穿外套。(Jīntiān hěn lěng, wǒ chuān wàitào.)",
+      "truyen": "猜猜天气 — Leo穿外套，戴帽子，戴围巾。Leo堆雪人。今天天气怎么样？——下雪了！Anna打开雨伞。Anna在家。今天天气怎么样？——下雨了！ (Cāicai tiānqì — Leo chuān wàitào, dài màozi, dài wéijīn. Leo duī xuěrén. Jīntiān tiānqì zěnmeyàng? — Xià xuě le! Anna dǎkāi yǔsǎn. Anna zài jiā. Jīntiān tiānqì zěnmeyàng? — Xià yǔ le!)",
+      "video": "Tìm YouTube: \"天气 儿童中文 晴天 下雨 下雪 刮风\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: snowman, away, go away | Ôn: today, come, smile, hat, coat, scarf, umbrella, drop, a lot, out, go out, stay, cold",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" · Chuyển ý: \"Now, let's speak Chinese! 我们说中文吧！\" · Khen: \"Well done! 真棒！\" · Câu mới buổi này: \"Mình làm cùng nhau nhé! Together! 一起来！\" · Câu đã quen (bỏ tiếng Việt): \"Louder, please! 大声一点！\" / \"Stand up, please! 请站起来！\" 1) Nghe không tranh, chọn tranh thời tiết đúng (4 câu): It's snowing. / It's raining a lot. / It's windy. / It's sunny and hot. 2) Hoàn thành câu bằng thẻ từ: Rain, rain, go ___ (away) / Come again ___ day (another) / Look! A big ___ (snowman). 3) Trò chơi 'Mặc gì hôm nay?': cô giơ thẻ thời tiết, con nói: It's cold. I wear a coat and a scarf. / It's raining. I've got an umbrella.",
+     "truyen": "The Snowman — It's snowing today! 'Can we go out, Mum?' 'Yes! Wear your coats, hats and scarves.' Anna and Xiaomei go out. Anna makes a big snowman. Xiaomei makes another snowman. The snowmen smile! Mum has got a nice photo. Then the sun comes out. 'Oh no! Go away, Sun! Stay, Snowman, stay!'",
+     "baihat": "Rain, Rain, Go Away – vè dân gian Anh (hết bản quyền): Rain, rain, go away, / Come again another day. / Little Leo wants to play, / Rain, rain, go away! + câu thêm: Snow, snow, come and stay, / Make a snowman, it's a snowy day!"
+    },
+    "zh": {
+     "flash": "Mới: 雪人 xuěrén, 走开 zǒukāi | Ôn: 今天 jīntiān, 来 lái, 笑一笑 xiào yi xiào, 帽子 màozi, 外套 wàitào, 围巾 wéijīn, 雨伞 yǔsǎn, 掉 diào, 很多 hěn duō, 出 chū, 出去 chūqù, 在家 zài jiā, 冷 lěng",
+     "slide": "1) Nghe không tranh, chọn tranh thời tiết đúng (4 câu): 今天下雪。(Jīntiān xià xuě.) / 下雨了，雨很大。(Xià yǔ le, yǔ hěn dà.) / 今天刮风。(Jīntiān guāfēng.) / 今天是晴天，很热。(Jīntiān shì qíngtiān, hěn rè.) 2) Hoàn thành câu bằng thẻ từ: 小雨快___！(走开) (Xiǎo yǔ kuài zǒukāi!) / 下一次你再___吧。(来) (Xià yí cì nǐ zài lái ba.) / 看，一个大___！(雪人) (Kàn, yí gè dà xuěrén!) 3) Trò chơi 'Hôm nay mặc gì?': cô giơ thẻ thời tiết, con nói: 今天很冷，我穿外套，戴围巾。(Jīntiān hěn lěng, wǒ chuān wàitào, dài wéijīn.) / 下雨了，我有雨伞。(Xià yǔ le, wǒ yǒu yǔsǎn.) 4) YCT1 Nghe phần 1 (mẫu): nghe từ, nhìn tranh chọn ✓ / ✗ — 听一听，看一看，对还是错？(Tīng yi tīng, kàn yi kàn, duì háishi cuò?) 1. 雨伞 yǔsǎn [cái ô ✓] 2. 帽子 màozi [áo khoác ✗] 3. 雪人 xuěrén [người tuyết ✓] 4. 外套 wàitào [áo khoác ✓] 5. 下雪 xià xuě [trời nắng ✗] 5) [Cầu nối Anh – Trung] Cùng tranh người tuyết: rối Leo nói \"snowman\", rối Xiaomei nói \"雪人\"; con ghép thẻ: snow + man ↔ 雪 + 人 (ghép giống nhau); Rain, rain, go away! ↔ 小雨快走开！ 6) [Chuyển ngữ] Rối Leo nói 1 câu, con nói lại cho rối Xiaomei: Look! A big snowman! → 看，一个大雪人！ [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"Look! There's a big snowman in the park. It's wearing a red hat.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 看，公园里有一个大雪人。雪人的帽子是红色的。 (Kàn, gōngyuán li yǒu yí gè dà xuěrén. Xuěrén de màozi shì hóngsè de.)",
+     "truyen": "雪人 — 下雪了！Anna说：“妈妈，我们能出去吗？”妈妈说：“能！穿外套，戴帽子，戴围巾。”Anna和Xiaomei出去玩。Anna堆一个大雪人，Xiaomei也堆一个雪人。雪人笑了！妈妈有一张照片。太阳出来了！“不好！太阳，走开！雪人，别走！别走！” (Xuěrén — Xià xuě le! Anna shuō: “Māma, wǒmen néng chūqù ma?” Māma shuō: “Néng! Chuān wàitào, dài màozi, dài wéijīn.” Anna hé Xiaomei chūqù wán. Anna duī yí gè dà xuěrén, Xiaomei yě duī yí gè xuěrén. Xuěrén xiào le! Māma yǒu yì zhāng zhàopiàn. Tàiyáng chūlái le! “Bù hǎo! Tàiyáng, zǒukāi! Xuěrén, bié zǒu! Bié zǒu!”)",
+     "baihat": "小雨快走开 – vè cùng ý, cùng số tiếng từng dòng với Rain, Rain, Go Away (5 – 7 – 7 – 5): 小雨快走开，/ 下一次你再来吧。/ 小Leo想出去玩，/ 小雨快走开！(Xiǎo yǔ kuài zǒukāi, / xià yí cì nǐ zài lái ba. / Xiǎo Leo xiǎng chūqù wán, / xiǎo yǔ kuài zǒukāi!) + câu thêm (cùng ý Snow, snow, come and stay, / Make a snowman, it's a snowy day!): 小雪来，别走，/ 堆个雪人，今天下雪啦！(Xiǎo xuě lái, bié zǒu, / duī ge xuěrén, jīntiān xià xuě la!)"
+    }
+   }
+  },
+  {
+   "buoi": 46,
+   "unit": 10,
+   "label_buoi": "Buổi dạy 46. Unit 10 · Weather – Phát thanh viên thời tiết nhí và kiểm tra nhỏ · YCT口试 看图说话",
+   "web": [
+    {
+     "ngay": 91,
+     "label": "Ngày 91. Unit 10 · Weather · Truyện: Cái ô ở đâu? (chuyển ngữ) · Luyện đề YCT1 Nghe phần 3",
+     "en": {
+      "tu": "Ôn: bedroom, kitchen, hall, door, window, living room, umbrella, go out",
+      "cum": "in the bedroom / in the kitchen / in the hall / under the coat",
+      "cau": "Where's my umbrella? / It isn't in the bedroom. / It isn't in the kitchen. / It's in the hall, under the coat!",
+      "truyen": "Where's the Umbrella? — It's raining. Leo wants to go out. 'Where's my umbrella?' It isn't in the bedroom. It isn't in the kitchen. It isn't in the living room. Look! It's in the hall, under Dad's coat! 'Now I can go out!'",
+      "video": "Tìm YouTube: \"where is my umbrella story for kids\""
+     },
+     "zh": {
+      "tu": "Ôn: 雨伞 yǔsǎn, 哪儿 nǎr, 卧室 wòshì, 客厅 kètīng, 门 mén, 外套 wàitào, 出去 chūqù | Nghe hiểu (có tranh): 厨房 chúfáng (= kitchen), 门口 ménkǒu (= hall, chỗ cửa ra vào)",
+      "cum": "在卧室 zài wòshì / 不在客厅 bú zài kètīng / 在门口 zài ménkǒu / 在外套下面 zài wàitào xiàmian",
+      "cau": "[Cầu nối] Where's my umbrella? ↔ 我的雨伞在哪儿？(Wǒ de yǔsǎn zài nǎr?) · giống: my ↔ 我的 · khác: where đứng đầu câu tiếng Anh, 哪儿 đứng cuối câu tiếng Trung; under the coat ↔ 在外套下面 (下面 đứng sau) / [Chuyển ngữ] Where's my umbrella? ↔ 我的雨伞在哪儿？(Wǒ de yǔsǎn zài nǎr?) / It isn't in the bedroom. ↔ 雨伞不在卧室。(Yǔsǎn bú zài wòshì.) / It isn't in the kitchen. ↔ 雨伞不在厨房。(Yǔsǎn bú zài chúfáng.) / It's in the hall, under Dad's coat! ↔ 雨伞在门口，在爸爸的外套下面！(Yǔsǎn zài ménkǒu, zài bàba de wàitào xiàmian!) / Now I can go out! ↔ 我能出去了！(Wǒ néng chūqù le!) / [YCT1 Nghe phần 3 (mẫu): nghe câu, nhìn tranh chọn ✓ / ✗, 5 câu, ~10 phút] 听一听，看一看，对还是错？(Tīng yi tīng, kàn yi kàn, duì háishi cuò?) 1. 雨伞在门口。(Yǔsǎn zài ménkǒu.) [cái ô ở cửa ra vào ✓] 2. 雨伞在卧室。(Yǔsǎn zài wòshì.) [cái ô ở trong bếp ✗] 3. 雨伞在外套下面。(Yǔsǎn zài wàitào xiàmian.) [cái ô dưới áo khoác ✓] 4. 这是客厅。(Zhè shì kètīng.) [phòng khách ✓] 5. 下雨了。(Xià yǔ le.) [trời nắng ✗]",
+      "truyen": "雨伞在哪儿？ — 下雨了。Leo想出去。“我的雨伞在哪儿？”雨伞不在卧室。雨伞不在厨房。雨伞不在客厅。看！雨伞在门口，在爸爸的外套下面！“我能出去了！” (Yǔsǎn zài nǎr? — Xià yǔ le. Leo xiǎng chūqù. “Wǒ de yǔsǎn zài nǎr?” Yǔsǎn bú zài wòshì. Yǔsǎn bú zài chúfáng. Yǔsǎn bú zài kètīng. Kàn! Yǔsǎn zài ménkǒu, zài bàba de wàitào xiàmian! “Wǒ néng chūqù le!”)",
+      "video": "Tìm YouTube: \"雨伞在哪儿 儿童故事\""
+     }
+    },
+    {
+     "ngay": 92,
+     "label": "Ngày 92. Unit 10 · Weather · Phiên dịch nhí: Bản tin thời tiết",
+     "en": {
+      "tu": "Ôn: today, weather, sunny, cloudy, windy, cold, hot, coat, scarf, hat, umbrella, go out, stay",
+      "cum": "the weather today / wear a coat / have got an umbrella / go out and play",
+      "cau": "[Phiên dịch nhí] Good morning! How's the weather today? → 大家早上好！今天天气怎么样？/ It's cloudy and windy today. → 今天多云，刮风。/ Wear your coat! → 穿外套！/ It's raining. Stay at home! → 下雨了，在家吧！",
+      "truyen": "The Little Weather Reporter — Nhan is the weather reporter today. 'Good morning, everyone! How's the weather today? It's cloudy and windy. It's cold, too. Wear your coat and your scarf! Have you got an umbrella? Goodbye!'",
+      "video": "Tìm YouTube: \"kids weather report sunny cloudy windy\""
+     },
+     "zh": {
+      "tu": "Ôn: 今天 jīntiān, 天气 tiānqì, 晴天 qíngtiān, 多云 duōyún, 刮风 guāfēng, 冷 lěng, 热 rè, 穿 chuān, 外套 wàitào, 雨伞 yǔsǎn, 出去 chūqù, 在家 zài jiā, 帽子 màozi | Nghe hiểu (có tranh): 围巾 wéijīn (= scarf)",
+      "cum": "今天的天气 jīntiān de tiānqì / 穿外套 chuān wàitào / 有雨伞 yǒu yǔsǎn",
+      "cau": "[Cầu nối] It's cloudy and windy today. ↔ 今天多云，刮风。(Jīntiān duōyún, guāfēng.) · giống: cùng nói hai kiểu thời tiết nối nhau · khác: tiếng Anh có and, tiếng Trung chỉ ngắt bằng dấu phẩy; today đứng cuối ↔ 今天 đứng đầu / [Phiên dịch nhí] 今天很冷。(Jīntiān hěn lěng.) → It's cold today. / 穿外套，戴围巾！(Chuān wàitào, dài wéijīn!) → Wear your coat and your scarf! / 你有雨伞吗？(Nǐ yǒu yǔsǎn ma?) → Have you got an umbrella?",
+      "truyen": "小小天气播报员 — 今天Nhan是天气播报员。“大家早上好！今天天气怎么样？今天多云，刮风。今天也很冷。穿外套，戴围巾！你有雨伞吗？再见！” (Xiǎoxiǎo tiānqì bōbàoyuán — Jīntiān Nhan shì tiānqì bōbàoyuán. “Dàjiā zǎoshang hǎo! Jīntiān tiānqì zěnmeyàng? Jīntiān duōyún, guāfēng. Jīntiān yě hěn lěng. Chuān wàitào, dài wéijīn! Nǐ yǒu yǔsǎn ma? Zàijiàn!”)",
+      "video": "Tìm YouTube: \"儿童 天气预报 播报 幼儿园\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn: today, come, smile, hat, coat, scarf, umbrella, drop, a lot, out, go out, stay, snowman, away, go away, another, kitchen, bedroom, hall",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" · Chuyển ý: \"Now, let's speak Chinese! 我们说中文吧！\" · Khen: \"Great! 太好了！\" · Nhắc lại câu mới buổi trước: \"Mình làm cùng nhau nhé! Together! 一起来！\" (lần cuối kèm tiếng Việt) 1) Chuyển ngữ nhanh: cô nói tiếng Anh, con chạm thẻ tiếng Trung (4 cặp): umbrella – 雨伞 / coat – 外套 / hat – 帽子 / snowman – 雪人. 2) Kiểm tra nhỏ Unit 10 – nghe chọn tranh (5 câu, phương án nhiễu: hungry / uncle / finger): It's raining a lot. / Wear your scarf. / Look! A snowman! / I stay at home. / Open your umbrella. 3) Phát thanh viên nhí: mỗi con chọn 1 thẻ thời tiết và nói: Good morning! How's the weather today? It's ___. Wear your ___!",
+     "truyen": "Where's the Umbrella? — It's raining a lot today. Leo wants to go out. 'Where's my umbrella?' It isn't in the bedroom. It isn't in the kitchen. It isn't in the living room. 'Come and look, Dad!' Dad smiles. 'Look! It's in the hall, under my coat!' Leo opens his umbrella. 'Now I can go out!' 'Wear your hat, too!'",
+     "baihat": "How's the Weather? – giai điệu Mary Had a Little Lamb (câu 1): How's the weather, weather, weather? / How's the weather? It's sunny today! / Come and play and smile, smile, smile, / Come and play, it's sunny today! / (câu 2): It is cold, so wear your coat, / wear your coat, wear your coat, / Wear your coat and hat and scarf, / It is cold today! / Rain, Rain, Go Away – vè dân gian Anh (hết bản quyền): Rain, rain, go away, / Come again another day. / Little Leo wants to play, / Rain, rain, go away! + câu thêm: Snow, snow, come and stay, / Make a snowman, it's a snowy day! (cả bài, con hát và làm động tác)"
+    },
+    "zh": {
+     "flash": "Ôn: 今天 jīntiān, 来 lái, 笑一笑 xiào yi xiào, 帽子 màozi, 外套 wàitào, 雨伞 yǔsǎn, 掉 diào, 很多 hěn duō, 出 chū, 出去 chūqù, 在家 zài jiā, 雪人 xuěrén, 走开 zǒukāi, 卧室 wòshì | Nghe hiểu (tranh): 围巾 wéijīn, 厨房 chúfáng, 门口 ménkǒu",
+     "slide": "1) Chuyển ngữ ngược: cô nói tiếng Trung, con chạm thẻ tiếng Anh (4 cặp): 雨伞 – umbrella / 外套 – coat / 帽子 – hat / 雪人 – snowman. 2) Kiểm tra nhỏ Unit 10 – nghe chọn tranh (5 câu): 下雨了，雨很大。(Xià yǔ le, yǔ hěn dà.) / 戴围巾！(Dài wéijīn!) / 看，雪人！(Kàn, xuěrén!) / 我在家。(Wǒ zài jiā.) / 打开雨伞！(Dǎkāi yǔsǎn!) 3) Bản tin thời tiết nhí: con nói 大家早上好！今天天气怎么样？今天___。穿___！(Dàjiā zǎoshang hǎo! Jīntiān tiānqì zěnmeyàng? Jīntiān ___. Chuān ___!) 4) YCT口试（初级）第三部分 看图说话 (mẫu – cô làm giám khảo, từng con nhìn tranh nói 2–3 câu): 看图说话。(Kàn tú shuōhuà.) Tranh 1: trời mưa, Bông cầm ô → 今天下雨。Bông有雨伞。(Jīntiān xià yǔ. Bông yǒu yǔsǎn.) Tranh 2: tuyết rơi, Leo mặc áo khoác, đội mũ → 今天很冷。Leo穿外套。(Jīntiān hěn lěng. Leo chuān wàitào.) Tranh 3: trời nắng ở công viên → 今天是晴天。我们去公园玩。(Jīntiān shì qíngtiān. Wǒmen qù gōngyuán wán.) 5) [Cầu nối Anh – Trung] Cùng thẻ thời tiết: rối Leo đọc bản tin \"It's cloudy and windy today.\", rối Xiaomei đọc \"今天多云，刮风。\" Con chỉ: today đứng cuối ↔ 今天 đứng đầu; and ↔ dấu phẩy. 6) [Chuyển ngữ] Phát thanh viên nhí: rối Leo đọc 1 câu bản tin tiếng Anh, con nói lại câu đó bằng tiếng Trung cho rối Xiaomei: It's cold. Wear your coat! → 今天很冷，穿外套！ [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"Today it's cloudy and cold, and it's raining. Put on your coat and open your umbrella!\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 今天多云，很冷，下雨了。穿外套，打开雨伞！ (Jīntiān duōyún, hěn lěng, xià yǔ le. Chuān wàitào, dǎkāi yǔsǎn!)",
+     "truyen": "雨伞在哪儿？ — 下雨了，雨很大。Leo想出去。“我的雨伞在哪儿？”雨伞不在卧室。雨伞不在厨房。雨伞不在客厅。“爸爸，你来看！”爸爸笑了：“看！雨伞在门口，在我的外套下面！”Leo打开雨伞：“我能出去了！”“也要戴帽子！” (Yǔsǎn zài nǎr? — Xià yǔ le, yǔ hěn dà. Leo xiǎng chūqù. “Wǒ de yǔsǎn zài nǎr?” Yǔsǎn bú zài wòshì. Yǔsǎn bú zài chúfáng. Yǔsǎn bú zài kètīng. “Bàba, nǐ lái kàn!” Bàba xiào le: “Kàn! Yǔsǎn zài ménkǒu, zài wǒ de wàitào xiàmian!” Leo dǎkāi yǔsǎn: “Wǒ néng chūqù le!” “Yě yào dài màozi!”)",
+     "baihat": "今天天气 – giai điệu Mary Had a Little Lamb (cùng giai điệu, cùng ý với bài How's the Weather?) (câu 1): 今天天气怎么样？/ 怎么样？怎么样？/ 来玩来玩笑一笑，/ 今天是大晴天！(Jīntiān tiānqì zěnmeyàng? / Zěnmeyàng? Zěnmeyàng? / Lái wán lái wán xiào yi xiào, / Jīntiān shì dà qíngtiān!) / (câu 2): 今天很冷穿外套，/ 穿外套，穿外套，/ 外套帽子和围巾，/ 今天很冷很冷！(Jīntiān hěn lěng chuān wàitào, / chuān wàitào, chuān wàitào, / wàitào màozi hé wéijīn, / jīntiān hěn lěng hěn lěng!) + 小雨快走开 – vè cùng ý, cùng số tiếng từng dòng với Rain, Rain, Go Away (5 – 7 – 7 – 5): 小雨快走开，/ 下一次你再来吧。/ 小Leo想出去玩，/ 小雨快走开！(Xiǎo yǔ kuài zǒukāi, / xià yí cì nǐ zài lái ba. / Xiǎo Leo xiǎng chūqù wán, / xiǎo yǔ kuài zǒukāi!) + câu thêm (cùng ý Snow, snow, come and stay, / Make a snowman, it's a snowy day!): 小雪来，别走，/ 堆个雪人，今天下雪啦！(Xiǎo xuě lái, bié zǒu, / duī ge xuěrén, jīntiān xià xuě la!) (cả bài, con hát và làm động tác)"
+    }
+   }
+  },
+  {
+   "buoi": 47,
+   "unit": 11,
+   "label_buoi": "Buổi dạy 47. Unit 11 · Colours – Màu nâu, vàng kim, bạc",
+   "web": [
+    {
+     "ngay": 93,
+     "label": "Ngày 93. Unit 11 · Colours · Áo khoác nâu của Leo",
+     "en": {
+      "tu": "Mới: brown, cool | Ôn: again, baby, colour, red, yellow",
+      "cum": "a brown jacket / brown boots / new clothes / Cool!",
+      "cau": "[Ngữ pháp: màu + danh từ] What colour is it? – It's brown. / a brown jacket / What colour is the apple? – It's red. / Cool! / [Lệnh lớp học] Look at the example. Colour the coat brown. / [Lời web] Vào bài: \"Let's learn! 我们一起学吧！\" · Khen: \"Cool! 真酷！\" · Sang tiếng Trung: \"Now in Chinese! 用中文说！\" · Nhắc: \"Listen again! 再听一次！\"",
+      "truyen": "Leo's New Jacket — Leo has got new clothes. 'What colour is your jacket, Leo?' asks Anna. 'It's brown!' 'And your boots?' 'My boots are brown too!' 'Cool!' says Anna.",
+      "video": "Tìm YouTube: \"what colour is it song for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 棕色 zōngsè (= brown), 衣服 yīfu (= clothes), 酷 kù (= cool) | Ôn: 外套 wàitào (= coat, jacket), 颜色 yánsè, 红色 hóngsè, 黄色 huángsè, 再 zài | Nghe hiểu (chỉ trong truyện, có tranh): 靴子 xuēzi (= boots)",
+      "cum": "棕色的外套 zōngsè de wàitào / 新衣服 xīn yīfu / 真酷！zhēn kù!",
+      "cau": "[Cầu nối] What colour is your jacket? – It's brown. ↔ 你的外套是什么颜色的？——是棕色的。(Nǐ de wàitào shì shénme yánsè de? — Shì zōngsè de.) · giống: Cool! ↔ 酷！kù — từ mượn âm, nghe giống · khác: tiếng Anh hỏi What colour ở đầu, tiếng Trung để 什么颜色 ở cuối / [Ngữ pháp: màu + 的 + danh từ] 这是什么颜色？(Zhè shì shénme yánsè?) – 是棕色。(Shì zōngsè.) / 棕色的外套 (zōngsè de wàitào) / 苹果是什么颜色的？(Píngguǒ shì shénme yánsè de?) – 苹果是红色的。(Píngguǒ shì hóngsè de.) / 真酷！(Zhēn kù!) / [Lệnh lớp học] 看一看，说一说：这是棕色的外套。(Kàn yi kàn, shuō yi shuō: Zhè shì zōngsè de wàitào.)",
+      "truyen": "Leo的新衣服 — Leo有新衣服。Anna说：“Leo，你的外套是什么颜色的？”“是棕色的！”“你的靴子呢？”“我的靴子也是棕色的！”Anna说：“真酷！” (Leo de xīn yīfu — Leo yǒu xīn yīfu. Anna shuō: “Leo, nǐ de wàitào shì shénme yánsè de?” “Shì zōngsè de!” “Nǐ de xuēzi ne?” “Wǒ de xuēzi yě shì zōngsè de!” Anna shuō: “Zhēn kù!”)",
+      "video": "Tìm YouTube: \"颜色儿歌 什么颜色\""
+     }
+    },
+    {
+     "ngay": 94,
+     "label": "Ngày 94. Unit 11 · Colours · Váy vàng kim của Xiaomei",
+     "en": {
+      "tu": "Mới: gold, silver | Ôn: clap, favourite, hair, white, black",
+      "cum": "a gold dress / a silver handbag / a white shirt / my favourite colour",
+      "cau": "What colour do you like? – I like gold. / My favourite colour is silver. / a gold dress / a silver handbag / Draw a line from the gold dress to Xiaomei. / Choose: gold or silver?",
+      "truyen": "Xiaomei's Gold Dress — Xiaomei has got a gold dress. Mum has got a silver handbag. 'What colour do you like, Xiaomei?' 'I like gold! Gold is my favourite colour.' Mum claps. 'Cool!'",
+      "video": "Tìm YouTube: \"gold and silver colours for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 金色 jīnsè (= gold), 银色 yínsè (= silver), 裙子 qúnzi (= dress, skirt) | Ôn: 拍拍手 pāipai shǒu, 喜欢 xǐhuan, 头发 tóufa, 白色 báisè, 黑色 hēisè | Nghe hiểu (có tranh): 衬衫 chènshān (= shirt)",
+      "cum": "金色的裙子 jīnsè de qúnzi / 银色的包 yínsè de bāo / 白色的衬衫 báisè de chènshān",
+      "cau": "[Cầu nối] What colour do you like? – I like gold. ↔ 你喜欢什么颜色？——我喜欢金色。(Nǐ xǐhuan shénme yánsè? — Wǒ xǐhuan jīnsè.) · giống: gold ↔ 金色, silver ↔ 银色 (色 = colour) · khác: tiếng Trung hỏi không đổi trật tự, chỉ thay 金色 bằng 什么颜色 / 你喜欢什么颜色？(Nǐ xǐhuan shénme yánsè?) – 我喜欢金色。(Wǒ xǐhuan jīnsè.) / 我最喜欢银色。(Wǒ zuì xǐhuan yínsè.) / 金色的裙子 (jīnsè de qúnzi) / 银色的包 (yínsè de bāo) / 选一选：金色还是银色？(Xuǎn yi xuǎn: jīnsè háishi yínsè?) / [Chuyển ngữ] Anna nói tiếng Anh: \"I like gold.\" – con nói lại cho Xiaomei: 我喜欢金色。(Wǒ xǐhuan jīnsè.)",
+      "truyen": "Xiaomei的金色裙子 — Xiaomei有金色的裙子。妈妈有银色的包。“Xiaomei，你喜欢什么颜色？”“我喜欢金色！”妈妈拍拍手：“真酷！” (Xiaomei de jīnsè qúnzi — Xiaomei yǒu jīnsè de qúnzi. Māma yǒu yínsè de bāo. “Xiaomei, nǐ xǐhuan shénme yánsè?” “Wǒ xǐhuan jīnsè!” Māma pāipai shǒu: “Zhēn kù!”)",
+      "video": "Tìm YouTube: \"你喜欢什么颜色 儿歌\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: brown, cool, gold, silver | Ôn: colour, red, yellow, blue, white, black, favourite | Thẻ lệnh đề: colour, draw a line, example, find",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" · Chuyển ý: \"Now, let's speak Chinese! 我们说中文吧！\" · Khen: \"Good job! 很好！\" · Câu mới buổi này: \"Xếp hàng nào! Line up, please! 排队！\" · Câu đã quen (bỏ tiếng Việt): \"Stand up, please! 请站起来！\" / \"Together! 一起来！\" 1) Nhìn tranh chọn màu (4 câu): brown / gold / silver / black. 2) Nghe và tô màu trên slide (4 câu): a brown jacket / a gold dress / a silver handbag / a white shirt. 3) Hỏi đáp vòng tròn: What colour do you like? – I like brown. / My favourite colour is gold. – Cool! 4) Lệnh đề – Look at the example: Colour the coat brown. Now you: Colour the dress gold. Draw a line from the silver ball to Leo.",
+     "truyen": "Leo's New Jacket — Leo has got new clothes. 'What colour is your jacket, Leo?' asks Anna. 'It's brown!' 'And your boots?' 'My boots are brown too!' 'Cool!' says Anna. Then Xiaomei has got a gold dress and a silver handbag. 'What colour do you like, Xiaomei?' 'I like gold! It's my favourite colour.' Anna claps. 'Cool!'",
+     "baihat": "Cool Colours – giai điệu London Bridge (câu 1): Brown and gold and silver too, / Silver too, silver too, / Brown and gold and silver too, / Cool, cool colours!"
+    },
+    "zh": {
+     "flash": "Mới: 棕色 zōngsè, 酷 kù, 金色 jīnsè, 银色 yínsè | Ôn: 颜色 yánsè, 红色 hóngsè, 黄色 huángsè, 蓝色 lánsè, 白色 báisè, 黑色 hēisè, 最喜欢 zuì xǐhuan | Thẻ lệnh đề: 涂 tú, 连 lián, 找 zhǎo",
+     "slide": "1) Nghe chọn màu (4 câu): 棕色 zōngsè / 金色 jīnsè / 银色 yínsè / 黑色 hēisè. 2) Nghe và tô màu trên slide, rồi nói đủ cụm 'màu + 的 + đồ vật' (4 cụm): 棕色的外套 (zōngsè de wàitào) / 金色的裙子 (jīnsè de qúnzi) / 银色的包 (yínsè de bāo) / 白色的衬衫 (báisè de chènshān). 3) Hỏi đáp: 你喜欢什么颜色？(Nǐ xǐhuan shénme yánsè?) – 我喜欢金色。(Wǒ xǐhuan jīnsè.) 3b) Lệnh đề: 看一看，涂一涂：棕色的外套，金色的裙子。(Kàn yi kàn, tú yi tú: zōngsè de wàitào, jīnsè de qúnzi.) / 连一连：银色的球 – Leo。(Lián yi lián: yínsè de qiú – Leo.) 4) [Cầu nối Anh – Trung] Cùng tranh áo khoác của Leo và váy của Xiaomei: rối Leo nói \"Cool!\", rối Xiaomei nói \"真酷！\" — con nghe cool ↔ 酷 kù gần giống nhau; rối Leo nói \"a gold dress\", rối Xiaomei nói \"金色的裙子\": màu đứng trước ở cả hai tiếng, tiếng Trung thêm 的. 5) [Chuyển ngữ] Rối Leo nói 1 câu, con nói lại bằng tiếng Trung cho rối Xiaomei: My favourite colour is brown. → 我最喜欢棕色。/ It's gold. → 是金色的。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"My favourite colour is brown. I've got a brown jacket and it's really cool!\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 我最喜欢棕色。我有棕色的外套，真酷！ (Wǒ zuì xǐhuan zōngsè. Wǒ yǒu zōngsè de wàitào, zhēn kù!)",
+     "truyen": "Leo的新衣服 — Leo有新衣服。Anna说：“Leo，你的外套是什么颜色的？”“是棕色的！”“你的靴子呢？”“也是棕色的！”“真酷！”Xiaomei有金色的裙子和银色的包。“Xiaomei，你喜欢什么颜色？”“我喜欢金色！”Anna拍拍手：“真酷！” (Leo de xīn yīfu — Leo yǒu xīn yīfu. Anna shuō: “Leo, nǐ de wàitào shì shénme yánsè de?” “Shì zōngsè de!” “Nǐ de xuēzi ne?” “Yě shì zōngsè de!” “Zhēn kù!” Xiaomei yǒu jīnsè de qúnzi hé yínsè de bāo. “Xiaomei, nǐ xǐhuan shénme yánsè?” “Wǒ xǐhuan jīnsè!” Anna pāipai shǒu: “Zhēn kù!”)",
+     "baihat": "酷酷颜色 – giai điệu London Bridge (cùng giai điệu, cùng ý với bài Cool Colours) (câu 1): 棕色金色银色的，/ 银色的，银色的，/ 棕色金色银色的，/ 酷酷颜色！(Zōngsè jīnsè yínsè de, / yínsè de, yínsè de, / zōngsè jīnsè yínsè de, / kù kù yánsè!)"
+    }
+   }
+  },
+  {
+   "buoi": 48,
+   "unit": 11,
+   "label_buoi": "Buổi dạy 48. Unit 11 · Colours – Bóng nảy và cửa hàng quần áo",
+   "web": [
+    {
+     "ngay": 95,
+     "label": "Ngày 95. Unit 11 · Colours · Hai quả bóng nảy",
+     "en": {
+      "tu": "Mới: bounce, they | Ôn: hat, umbrella, T-shirt, wear, smile, go to bed, learn",
+      "cum": "bounce the ball / a gold ball and a silver ball / a brown hat / wear a T-shirt",
+      "cau": "[Ngữ pháp: They're + màu] Look at the balls. They're gold and silver. / What colour are they? – They're red. / Bounce the ball! / Leo wears a brown hat. / Listen and colour: Colour the ball silver.",
+      "truyen": "The Bouncing Balls — Leo and Anna have got two balls. They're gold and silver. 'Bounce the ball!' Bounce, bounce! The gold ball bounces on Leo's hat. The silver ball bounces on Anna's umbrella! Leo and Anna smile. 'Cool!'",
+      "video": "Tìm YouTube: \"bounce the ball song for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 他们 tāmen (= they), 拍球 pāi qiú (= bounce the ball) | Ôn: 帽子 màozi, 雨伞 yǔsǎn, 笑 xiào, 穿 chuān, 球 qiú",
+      "cum": "拍球 pāi qiú / 金色的球 jīnsè de qiú / 银色的球 yínsè de qiú / 棕色的帽子 zōngsè de màozi",
+      "cau": "[Cầu nối] Leo and Anna bounce the balls. ↔ Leo和Anna拍球。(Leo hé Anna pāi qiú.) · giống: bounce the ball ↔ 拍球 · khác: tiếng Anh dùng they cho cả người và đồ vật (They're gold and silver), tiếng Trung 他们 chỉ dùng cho người: 他们拍球 / Leo和Anna有两个球。(Leo hé Anna yǒu liǎng gè qiú.) / 他们拍球。(Tāmen pāi qiú.) / 球是金色和银色的。(Qiú shì jīnsè hé yínsè de.) / Leo戴棕色的帽子。(Leo dài zōngsè de màozi.) / 听一听，涂一涂：给球涂上银色。(Tīng yi tīng, tú yi tú: gěi qiú tú shang yínsè.)",
+      "truyen": "拍球 — Leo和Anna有两个球，一个金色的，一个银色的。他们拍球。拍拍拍！金色的球跳到Leo的帽子上，银色的球跳到Anna的雨伞上！他们笑了：“真酷！” (Pāi qiú — Leo hé Anna yǒu liǎng gè qiú, yí gè jīnsè de, yí gè yínsè de. Tāmen pāi qiú. Pāi pāi pāi! Jīnsè de qiú tiào dào Leo de màozi shang, yínsè de qiú tiào dào Anna de yǔsǎn shang! Tāmen xiào le: “Zhēn kù!”)",
+      "video": "Tìm YouTube: \"拍皮球 儿歌\""
+     }
+    },
+    {
+     "ngay": 96,
+     "label": "Ngày 96. Unit 11 · Colours · Cửa hàng quần áo của bà Brown",
+     "en": {
+      "tu": "Mới: trousers, jeans, shorts | Ôn: snowman, go out, stay, a lot, me too, Mrs",
+      "cum": "blue jeans / brown trousers / white shorts / a lot of clothes",
+      "cau": "[Ngữ pháp: They're + màu] What colour are your trousers? – They're brown. / My jeans are blue. / It's hot. I wear shorts and a T-shirt. / It's cold. I go out in jeans and a coat. / Find the jeans. Point to the shorts. / Spell \"red\": r-e-d.",
+      "truyen": "Mrs Brown's Shop — Mrs Brown has got a lot of clothes. 'Have you got blue jeans?' asks Nhan. 'Yes! They're here.' 'And white shorts?' 'Yes!' Nhan smiles. 'It's hot today. I want the shorts!' 'Me too!' says Bông.",
+      "video": "Tìm YouTube: \"clothes song for kids trousers jeans shorts\""
+     },
+     "zh": {
+      "tu": "Mới: 裤子 kùzi (= trousers), 短裤 duǎnkù (= shorts) | Ôn: 商店 shāngdiàn, 穿 chuān, 很多 hěn duō, 阿姨 āyí | Nghe hiểu (có tranh): 牛仔裤 niúzǎikù (= jeans)",
+      "cum": "蓝色的牛仔裤 lánsè de niúzǎikù / 棕色的裤子 zōngsè de kùzi / 白色的短裤 báisè de duǎnkù / 很多衣服 hěn duō yīfu",
+      "cau": "[Cầu nối] Have you got blue jeans? ↔ 有蓝色的牛仔裤吗？(Yǒu lánsè de niúzǎikù ma?) · giống: màu đứng trước đồ vật: blue jeans ↔ 蓝色的牛仔裤 · khác: tiếng Trung thêm 的; shorts ↔ 短裤 = 短 (short) + 裤 (trousers) / 有蓝色的牛仔裤吗？(Yǒu lánsè de niúzǎikù ma?) / 有！(Yǒu!) / 今天很热，我想穿短裤。(Jīntiān hěn rè, wǒ xiǎng chuān duǎnkù.) / 今天很冷，我穿牛仔裤和外套出去。(Jīntiān hěn lěng, wǒ chuān niúzǎikù hé wàitào chūqù.) / 你的裤子是什么颜色的？(Nǐ de kùzi shì shénme yánsè de?) ——是棕色的。(Shì zōngsè de.) / 读一读：裤子、短裤。(Dú yi dú: kùzi, duǎnkù.) / 听问题，回答问题：你穿什么？(Tīng wèntí, huídá wèntí: Nǐ chuān shénme?) / [Chuyển ngữ] Nhan nói tiếng Anh: \"It's hot today. I want the shorts!\" – con nói lại cho Xiaomei: 今天很热，我想穿短裤！(Jīntiān hěn rè, wǒ xiǎng chuān duǎnkù!)",
+      "truyen": "Brown阿姨的商店 — Brown阿姨有很多衣服。Nhan说：“有蓝色的牛仔裤吗？”“有！”“有白色的短裤吗？”“有！”Nhan笑了：“今天很热，我想穿短裤！”Bông说：“我也是！” (Brown āyí de shāngdiàn — Brown āyí yǒu hěn duō yīfu. Nhan shuō: “Yǒu lánsè de niúzǎikù ma?” “Yǒu!” “Yǒu báisè de duǎnkù ma?” “Yǒu!” Nhan xiào le: “Jīntiān hěn rè, wǒ xiǎng chuān duǎnkù!” Bông shuō: “Wǒ yě shì!”)",
+      "video": "Tìm YouTube: \"衣服 儿童中文 裤子 短裤\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: bounce, they, trousers, jeans, shorts | Ôn: brown, cool, gold, silver, hat, coat, scarf, T-shirt, wear, umbrella",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" · Chuyển ý: \"Now, let's speak Chinese! 我们说中文吧！\" · Khen: \"Well done! 真棒！\" · Nhắc lại câu mới buổi trước: \"Xếp hàng nào! Line up, please! 排队！\" (lần cuối kèm tiếng Việt) 1) Nhìn tranh chọn từ, có phương án nhiễu (4 câu): jeans / knee / shorts / toe; trousers / song / bounce / story. 2) Nghe và tô màu (4 câu): The jeans are blue. / The shorts are white. / The trousers are brown. / The balls are gold and silver. 3) Hỏi đáp theo tranh, số nhiều: What colour are they? – They're brown. / They're gold. 4) Lệnh đề: Find the jeans! Point to the shorts! Spell \"red\". Read the sentence and tick ✓ or cross ✗: The socks are brown.",
+     "truyen": "The Bouncing Balls — Leo and Anna have got two balls. They're gold and silver. 'Bounce the ball!' Bounce, bounce! The gold ball bounces on Leo's brown hat. The silver ball bounces on Anna's umbrella! Then Leo and Anna go to Mrs Brown's shop. Mrs Brown has got a lot of clothes. 'What colour are the jeans?' 'They're blue.' 'And the shorts?' 'They're white.' 'Cool!'",
+     "baihat": "Cool Colours – giai điệu London Bridge (câu 1): Brown and gold and silver too, / Silver too, silver too, / Brown and gold and silver too, / Cool, cool colours! / (câu 2): Bounce the ball and clap your hands, / Clap your hands, clap your hands, / Bounce the ball and clap your hands, / They are red and blue!"
+    },
+    "zh": {
+     "flash": "Mới: 他们 tāmen, 拍球 pāi qiú, 裤子 kùzi, 短裤 duǎnkù | Ôn: 棕色 zōngsè, 酷 kù, 金色 jīnsè, 银色 yínsè, 穿 chuān, 帽子 màozi, 外套 wàitào, 围巾 wéijīn, T恤 T xù, 雨伞 yǔsǎn | Nghe hiểu (tranh): 牛仔裤 niúzǎikù",
+     "slide": "1) Nghe chọn tranh, có phương án nhiễu (4 câu): 牛仔裤 niúzǎikù / 膝盖 xīgài / 短裤 duǎnkù / 脚趾 jiǎozhǐ; 裤子 kùzi / 歌 gē / 拍球 pāi qiú / 故事 gùshi. 2) Nghe và tô màu (4 câu): 牛仔裤是蓝色的。(Niúzǎikù shì lánsè de.) / 短裤是白色的。(Duǎnkù shì báisè de.) / 裤子是棕色的。(Kùzi shì zōngsè de.) / 球是金色和银色的。(Qiú shì jīnsè hé yínsè de.) 3) Hỏi đáp theo tranh: 是什么颜色的？(Shì shénme yánsè de?) – 是棕色的。(Shì zōngsè de.) / 是金色的。(Shì jīnsè de.) 4) Lệnh đề: 找一找牛仔裤！(Zhǎo yi zhǎo niúzǎikù!) 指一指短裤！(Zhǐ yi zhǐ duǎnkù!) 读一读，打勾还是打叉：袜子是棕色的。(Dú yi dú, dǎ gōu háishi dǎ chā: Wàzi shì zōngsè de.) 5) [Cầu nối Anh – Trung] Cùng thẻ quần áo: rối Leo nói \"trousers – shorts\", rối Xiaomei nói \"裤子 – 短裤\"; con thấy 短裤 = 短 (short) + 裤; rối Leo nói \"They're blue.\" (quần), rối Xiaomei nói \"是蓝色的。\" — tiếng Trung không cần they cho đồ vật. 6) [Chuyển ngữ] Rối Leo hỏi ở cửa hàng, con nói lại câu đó bằng tiếng Trung cho rối Xiaomei: Have you got blue jeans? → 有蓝色的牛仔裤吗？(Yǒu lánsè de niúzǎikù ma?) [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"Have you got any blue jeans? I don't want to wear shorts because it's cold today.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 有蓝色的牛仔裤吗？我不想穿短裤，今天很冷。 (Yǒu lánsè de niúzǎikù ma? Wǒ bù xiǎng chuān duǎnkù, jīntiān hěn lěng.)",
+     "truyen": "拍球 — Leo和Anna有两个球，一个金色的，一个银色的。拍拍拍！金色的球跳到Leo的棕色帽子上，银色的球跳到Anna的雨伞上！他们去Brown阿姨的商店。商店有很多衣服。“牛仔裤是什么颜色的？”“是蓝色的。”“短裤呢？”“是白色的。”“真酷！” (Pāi qiú — Leo hé Anna yǒu liǎng gè qiú, yí gè jīnsè de, yí gè yínsè de. Pāi pāi pāi! Jīnsè de qiú tiào dào Leo de zōngsè màozi shang, yínsè de qiú tiào dào Anna de yǔsǎn shang! Tāmen qù Brown āyí de shāngdiàn. Shāngdiàn yǒu hěn duō yīfu. “Niúzǎikù shì shénme yánsè de?” “Shì lánsè de.” “Duǎnkù ne?” “Shì báisè de.” “Zhēn kù!”)",
+     "baihat": "酷酷颜色 – giai điệu London Bridge (cùng giai điệu, cùng ý với bài Cool Colours) (câu 1): 棕色金色银色的，/ 银色的，银色的，/ 棕色金色银色的，/ 酷酷颜色！(Zōngsè jīnsè yínsè de, / yínsè de, yínsè de, / zōngsè jīnsè yínsè de, / kù kù yánsè!) / (câu 2): 他们拍球拍拍手，/ 拍拍手，拍拍手，/ 他们拍球拍拍手，/ 红色蓝色！(Tāmen pāi qiú pāipai shǒu, / pāipai shǒu, pāipai shǒu, / tāmen pāi qiú pāipai shǒu, / hóngsè lánsè!)"
+    }
+   }
+  },
+  {
+   "buoi": 49,
+   "unit": 11,
+   "label_buoi": "Buổi dạy 49. Unit 11 · Colours – Màu sắc và đồ vật · Starters Nghe phần 4",
+   "web": [
+    {
+     "ngay": 97,
+     "label": "Ngày 97. Unit 11 · Colours · Cặp kính của bà",
+     "en": {
+      "tu": "Mới: skirt, sock, glasses | Ôn: coat, scarf, drop, number, lesson, grandma",
+      "cum": "a pink skirt / white socks / gold glasses / a red apple and a yellow banana",
+      "cau": "[Ngữ pháp: màu + danh từ / They're] a red apple / a yellow banana / My socks are white. They're cool! / Grandma has got gold glasses. / Read the sentence: Grandma's glasses are brown. Is it correct? Tick ✓ or cross ✗.",
+      "truyen": "Grandma's Glasses — 'Where are my glasses?' says Grandma. 'What colour are they, Grandma?' asks Bông. 'They're gold.' Bông looks under the coat and the scarf. No glasses! 'Grandma! They're on your head!'",
+      "video": "Tìm YouTube: \"where are my glasses story for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 眼镜 yǎnjìng (= glasses), 袜子 wàzi (= socks) | Ôn: 裙子 qúnzi, 外套 wàitào, 围巾 wéijīn, 奶奶 nǎinai, 您 nín, 黄色 huángsè",
+      "cum": "金色的眼镜 jīnsè de yǎnjìng / 白色的袜子 báisè de wàzi / 粉色的裙子 fěnsè de qúnzi",
+      "cau": "[Cầu nối] Grandma's glasses are gold. ↔ 奶奶的眼镜是金色的。(Nǎinai de yǎnjìng shì jīnsè de.) · giống: Grandma's ↔ 奶奶的 ('s ↔ 的) · khác: glasses, socks có -s; 眼镜, 袜子 không đổi / [Ngữ pháp: màu + 的 + danh từ] 红色的苹果 (hóngsè de píngguǒ) / 黄色的香蕉 (huángsè de xiāngjiāo) / 我的袜子是白色的。(Wǒ de wàzi shì báisè de.) / 奶奶的眼镜是金色的。(Nǎinai de yǎnjìng shì jīnsè de.) / 我的眼镜在哪儿？(Wǒ de yǎnjìng zài nǎr?) / 读一读：奶奶的眼镜是棕色的。对还是错？——错！是金色的。(Dú yi dú: Nǎinai de yǎnjìng shì zōngsè de. Duì háishi cuò? — Cuò! Shì jīnsè de.)",
+      "truyen": "奶奶的眼镜 — 奶奶说：“我的眼镜在哪儿？”Bông说：“奶奶，您的眼镜是什么颜色的？”“是金色的。”Bông看外套下面，看围巾下面，没有眼镜。“奶奶！眼镜在您的头上！” (Nǎinai de yǎnjìng — Nǎinai shuō: “Wǒ de yǎnjìng zài nǎr?” Bông shuō: “Nǎinai, nín de yǎnjìng shì shénme yánsè de?” “Shì jīnsè de.” Bông kàn wàitào xiàmian, kàn wéijīn xiàmian, méiyǒu yǎnjìng. “Nǎinai! Yǎnjìng zài nín de tóu shang!”)",
+      "video": "Tìm YouTube: \"眼镜在哪儿 儿童故事\""
+     }
+    },
+    {
+     "ngay": 98,
+     "label": "Ngày 98. Unit 11 · Colours · Ôn không tranh: Đoán bạn mặc gì · Luyện nói YCT口试 听后重复 + 听后回答",
+     "en": {
+      "tu": "Ôn: brown, cool, gold, silver, bounce, they, clothes, jacket, dress, shirt, jeans, shorts, skirt, glasses",
+      "cum": "a brown jacket / a gold dress / silver glasses / blue jeans / bounce the ball",
+      "cau": "What colour is it? – It's silver. / What colour are they? – They're brown. / What colour do you like? – I like gold. / a red apple, a yellow banana",
+      "truyen": "Who Is It? — (chỉ nghe, không tranh) Who has got a pink skirt, white socks and gold glasses? It's Grandma! Who has got blue jeans and a brown jacket? Who bounces a ball? It's Leo!",
+      "video": "Tìm YouTube: \"clothes and colours listening for kids\""
+     },
+     "zh": {
+      "tu": "Ôn: 棕色 zōngsè, 衣服 yīfu, 金色 jīnsè, 银色 yínsè, 他们 tāmen, 裤子 kùzi, 裙子 qúnzi, 眼镜 yǎnjìng, 袜子 wàzi | Nghe hiểu (có tranh): 牛仔裤 niúzǎikù (= jeans)",
+      "cum": "棕色的外套 zōngsè de wàitào / 蓝色的牛仔裤 lánsè de niúzǎikù / 金色的眼镜 jīnsè de yǎnjìng",
+      "cau": "[Cầu nối] What colour are they? – They're brown. ↔ 是什么颜色的？——是棕色的。(Shì shénme yánsè de? — Shì zōngsè de.) · khác: tiếng Anh đổi is → are khi nhiều đồ vật; tiếng Trung không đổi / 这是什么颜色？(Zhè shì shénme yánsè?) – 是银色。(Shì yínsè.) / 你喜欢什么颜色？(Nǐ xǐhuan shénme yánsè?) – 我喜欢棕色。(Wǒ xǐhuan zōngsè.) / 红色的苹果，黄色的香蕉 (hóngsè de píngguǒ, huángsè de xiāngjiāo) / [YCT口试（初级）第一部分 听后重复 (mẫu): con nghe từng câu, nói lại 1 lần, ghi âm trên Trang luyện nói, ~5 phút] 听，说：这是我的衣服。(Zhè shì wǒ de yīfu.) / 我的裙子是红色的。(Wǒ de qúnzi shì hóngsè de.) / 他们穿棕色的裤子。(Tāmen chuān zōngsè de kùzi.) / 奶奶的眼镜是金色的。(Nǎinai de yǎnjìng shì jīnsè de.) / 我喜欢银色。(Wǒ xǐhuan yínsè.) / [YCT口试（初级）第二部分 听后回答 (mẫu): con nghe câu hỏi, trả lời ngắn, ghi âm trên Trang luyện nói, ~5 phút] 听问题，回答问题。(Tīng wèntí, huídá wèntí.) 1. 你喜欢什么颜色？(Nǐ xǐhuan shénme yánsè?) ——我喜欢绿色。(Wǒ xǐhuan lǜsè.) 2. 你的外套是什么颜色的？(Nǐ de wàitào shì shénme yánsè de?) ——是蓝色的。(Shì lánsè de.) 3. 你有裙子吗？(Nǐ yǒu qúnzi ma?) ——有。(Yǒu.) 4. 你穿袜子吗？(Nǐ chuān wàzi ma?) ——穿。(Chuān.) 5. 谁有金色的眼镜？(Shéi yǒu jīnsè de yǎnjìng?) ——奶奶。(Nǎinai.) / [Chuyển ngữ] (nghe không tranh) Leo nói tiếng Anh: \"Grandma has got gold glasses.\" – con nói lại cho Xiaomei: 奶奶有金色的眼镜。(Nǎinai yǒu jīnsè de yǎnjìng.)",
+      "truyen": "猜猜是谁 — 谁穿粉色的裙子、白色的袜子？谁有金色的眼镜？是奶奶！谁穿蓝色的牛仔裤、棕色的外套？谁拍球？是Leo！ (Cāicai shì shéi — Shéi chuān fěnsè de qúnzi, báisè de wàzi? Shéi yǒu jīnsè de yǎnjìng? Shì nǎinai! Shéi chuān lánsè de niúzǎikù, zōngsè de wàitào? Shéi pāi qiú? Shì Leo!)",
+      "video": "Tìm YouTube: \"颜色 衣服 儿童中文 听力\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: skirt, sock, glasses | Ôn: brown, cool, gold, silver, bounce, they, jacket, boots, dress, shirt, handbag, jeans, shorts, trousers",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" · Chuyển ý: \"Now, let's speak Chinese! 我们说中文吧！\" · Khen: \"Great! 太好了！\" · Câu mới buổi này: \"Lại đây với cô nào! Come here, please! 请过来！\" · Câu đã quen (bỏ tiếng Việt): \"Together! 一起来！\" / \"Line up, please! 排队！\" 1) Nghe không tranh, chọn tranh đúng (4 câu): a pink skirt / white socks / gold glasses / a brown jacket. 2) Trò chơi 'Ai đây?': cô tả, con đoán bạn trong lớp: He has got blue jeans. They're blue! / She has got a red dress. 3) Ghép màu với đồ ăn (nối 4 cặp): a red apple / a yellow banana / an orange carrot / a brown coconut. 4) Starters Nghe phần 4 (mẫu, nhẹ): tranh cửa hàng quần áo của bà Brown để trắng. Look at the picture. Listen and colour. Example: Can you see the dress? Yes. Colour it gold. 1. Colour the jeans blue. 2. Can you see the socks? Colour them brown. 3. Colour the skirt pink. 4. Now colour the glasses red.",
+     "truyen": "Grandma's Glasses — 'Where are my glasses?' says Grandma. 'What colour are they, Grandma?' asks Bông. 'They're gold.' Bông looks under the coat. No! She looks under the scarf. No! She looks in the handbag. No glasses! Then Bông smiles. 'Grandma! They're on your head!' Grandma smiles. 'Thank you, Bông!'",
+     "baihat": "Cool Colours – giai điệu London Bridge (câu 1): Brown and gold and silver too, / Silver too, silver too, / Brown and gold and silver too, / Cool, cool colours! / (câu 2): Bounce the ball and clap your hands, / Clap your hands, clap your hands, / Bounce the ball and clap your hands, / They are red and blue! / (câu 3): Jeans and shorts and skirts and socks, / Skirts and socks, skirts and socks, / Jeans and shorts and skirts and socks, / What colour are they?"
+    },
+    "zh": {
+     "flash": "Mới: 眼镜 yǎnjìng, 袜子 wàzi | Ôn: 棕色 zōngsè, 酷 kù, 金色 jīnsè, 银色 yínsè, 拍球 pāi qiú, 他们 tāmen, 外套 wàitào, 裙子 qúnzi, 包 bāo, 裤子 kùzi, 短裤 duǎnkù | Nghe hiểu (tranh): 靴子 xuēzi, 衬衫 chènshān, 牛仔裤 niúzǎikù",
+     "slide": "1) Nghe không tranh, chọn tranh đúng (4 cụm): 粉色的裙子 (fěnsè de qúnzi) / 白色的袜子 (báisè de wàzi) / 金色的眼镜 (jīnsè de yǎnjìng) / 棕色的外套 (zōngsè de wàitào). 2) Trò chơi 'Ai đây?': cô tả, con đoán bạn trong lớp: 谁穿蓝色的牛仔裤？(Shéi chuān lánsè de niúzǎikù?) / 谁穿红色的裙子？(Shéi chuān hóngsè de qúnzi?) – 是___！(Shì ___!) 3) Ghép màu với đồ ăn (nối 2 cặp): 红色的苹果 (hóngsè de píngguǒ) / 黄色的香蕉 (huángsè de xiāngjiāo). 4) [Cầu nối Anh – Trung] Cùng tranh bà tìm kính: rối Leo nói \"Grandma's glasses\", rối Xiaomei nói \"奶奶的眼镜\"; con ghép thẻ 's ↔ 的; glasses, socks có -s, 眼镜, 袜子 không đổi. 5) [Chuyển ngữ] Rối Leo nói 1 câu, con nói lại cho rối Xiaomei: They're on your head! → 眼镜在您的头上！ [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"Grandma, your glasses aren't on the table. They're on your head!\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 奶奶，您的眼镜不在桌子上。眼镜在您的头上！ (Nǎinai, nín de yǎnjìng bú zài zhuōzi shang. Yǎnjìng zài nín de tóu shang!)",
+     "truyen": "奶奶的眼镜 — 奶奶说：“我的眼镜在哪儿？”Bông说：“奶奶，您的眼镜是什么颜色的？”“是金色的。”Bông看外套下面，没有。Bông看围巾下面，没有。Bông看包里，没有。Bông笑了：“奶奶！眼镜在您的头上！”奶奶也笑了：“谢谢你，Bông！” (Nǎinai de yǎnjìng — Nǎinai shuō: “Wǒ de yǎnjìng zài nǎr?” Bông shuō: “Nǎinai, nín de yǎnjìng shì shénme yánsè de?” “Shì jīnsè de.” Bông kàn wàitào xiàmian, méiyǒu. Bông kàn wéijīn xiàmian, méiyǒu. Bông kàn bāo li, méiyǒu. Bông xiào le: “Nǎinai! Yǎnjìng zài nín de tóu shang!” Nǎinai yě xiào le: “Xièxie nǐ, Bông!”)",
+     "baihat": "酷酷颜色 – giai điệu London Bridge (cùng giai điệu, cùng ý với bài Cool Colours) (câu 1): 棕色金色银色的，/ 银色的，银色的，/ 棕色金色银色的，/ 酷酷颜色！(Zōngsè jīnsè yínsè de, / yínsè de, yínsè de, / zōngsè jīnsè yínsè de, / kù kù yánsè!) / (câu 2): 他们拍球拍拍手，/ 拍拍手，拍拍手，/ 他们拍球拍拍手，/ 红色蓝色！(Tāmen pāi qiú pāipai shǒu, / pāipai shǒu, pāipai shǒu, / tāmen pāi qiú pāipai shǒu, / hóngsè lánsè!) / (câu 3): 裤子裙子和袜子，/ 和袜子，和袜子，/ 裤子裙子和袜子，/ 什么颜色？(Kùzi qúnzi hé wàzi, / hé wàzi, hé wàzi, / kùzi qúnzi hé wàzi, / shénme yánsè?)"
+    }
+   }
+  },
+  {
+   "buoi": 50,
+   "unit": 11,
+   "label_buoi": "Buổi dạy 50. Unit 11 · Colours – Phiên dịch nhí và kiểm tra nhỏ · Luyện đề YCT1 Nghe phần 4 + YCT口试 看图说话",
+   "web": [
+    {
+     "ngay": 99,
+     "label": "Ngày 99. Unit 11 · Colours · Truyện: Khu rừng nhiều màu (chuyển ngữ) · Luyện đề YCT1 Đọc phần 3",
+     "en": {
+      "tu": "Ôn: forest, frog, duck, crocodile, polar bear, bee, spider, tail, wing, brown, green, yellow",
+      "cum": "in the forest / a green frog / a yellow duck / a white polar bear / a brown tail",
+      "cau": "What colour is the frog? – It's green. / The polar bear is white. / The bee is yellow and black. / The ducks are yellow. They're cool!",
+      "truyen": "The Colourful Forest — In the forest there are a lot of animals. A green frog hops. A yellow duck can swim. A big brown donkey has got a long tail. A bee is yellow and black. 'What colour is the crocodile?' 'It's green!' 'And the polar bear?' 'It's white!'",
+      "video": "Tìm YouTube: \"animal colours for kids green frog yellow duck\""
+     },
+     "zh": {
+      "tu": "Ôn: 青蛙 qīngwā, 颜色 yánsè, 白色 báisè, 棕色 zōngsè, 黄色 huángsè, 绿色 lǜsè, 黑色 hēisè, 鸭子 yāzi, 动物 dòngwù, 尾巴 wěiba, 长 cháng | Nghe hiểu (chỉ trong truyện, có tranh): 森林 sēnlín (= forest), 北极熊 běijíxióng (= polar bear), 蜜蜂 mìfēng (= bee), 驴 lǘ (= donkey), 鳄鱼 èyú (= crocodile)",
+      "cum": "在森林里 zài sēnlín li / 绿色的青蛙 lǜsè de qīngwā / 黄色的鸭子 huángsè de yāzi / 白色的北极熊 báisè de běijíxióng / 长长的尾巴 chángcháng de wěiba",
+      "cau": "[Cầu nối] The polar bear is white. ↔ 北极熊是白色的。(Běijíxióng shì báisè de.) · giống: polar bear ↔ 北极熊 (北极 = polar, 熊 = bear), cùng ghép hai phần · khác: tiếng Trung nói màu bằng 是……的 / [Chuyển ngữ] What colour is the frog? ↔ 青蛙是什么颜色的？(Qīngwā shì shénme yánsè de?) / It's green. ↔ 青蛙是绿色的。(Qīngwā shì lǜsè de.) / The polar bear is white. ↔ 北极熊是白色的。(Běijíxióng shì báisè de.) / The bee is yellow and black. ↔ 蜜蜂是黄色和黑色的。(Mìfēng shì huángsè hé hēisè de.) / The ducks are yellow. ↔ 鸭子是黄色的。(Yāzi shì huángsè de.) / [YCT1 Đọc phần 3 (mẫu): tranh + câu hỏi, chọn 1 trong 6 câu trả lời A–F, 5 câu, ~10 phút] 读一读，选一选。(Dú yi dú, xuǎn yi xuǎn.) 1. 青蛙是什么颜色的？(Qīngwā shì shénme yánsè de?) 2. 北极熊是什么颜色的？(Běijíxióng shì shénme yánsè de?) 3. 蜜蜂是什么颜色的？(Mìfēng shì shénme yánsè de?) 4. 驴有什么？(Lǘ yǒu shénme?) 5. 鸭子能做什么？(Yāzi néng zuò shénme?) — A 是绿色的。(Shì lǜsè de.) B 是白色的。(Shì báisè de.) C 是黄色和黑色的。(Shì huángsè hé hēisè de.) D 有长长的尾巴。(Yǒu chángcháng de wěiba.) E 能游泳。(Néng yóuyǒng.) F 今天下雨。(Jīntiān xià yǔ.) [F là phương án nhiễu]",
+      "truyen": "很多颜色的动物 — 森林里有很多动物。绿色的青蛙跳来跳去。黄色的鸭子能游泳。棕色的驴有长长的尾巴。蜜蜂是黄色和黑色的。“鳄鱼是什么颜色的？”“是绿色的！”“北极熊呢？”“是白色的！” (Hěn duō yánsè de dòngwù — Sēnlín li yǒu hěn duō dòngwù. Lǜsè de qīngwā tiào lái tiào qù. Huángsè de yāzi néng yóuyǒng. Zōngsè de lǘ yǒu chángcháng de wěiba. Mìfēng shì huángsè hé hēisè de. “Èyú shì shénme yánsè de?” “Shì lǜsè de!” “Běijíxióng ne?” “Shì báisè de!”)",
+      "video": "Tìm YouTube: \"动物 颜色 儿歌 幼儿\""
+     }
+    },
+    {
+     "ngay": 100,
+     "label": "Ngày 100. Unit 11 · Colours · Phiên dịch nhí: Mua quần áo",
+     "en": {
+      "tu": "Ôn: brown, cool, gold, silver, bounce, they, jeans, skirt, socks, glasses, dress, colour",
+      "cum": "a gold dress / brown trousers / white socks / What colour?",
+      "cau": "[Phiên dịch nhí] What colour do you like? → 你喜欢什么颜色？/ I like brown. → 我喜欢棕色。/ Have you got a white skirt? → 有白色的裙子吗？/ The socks are silver. → 袜子是银色的。",
+      "truyen": "At the Clothes Shop — Xiaomei and Leo are at the clothes shop. Leo says it in English. Xiaomei says it in Chinese. 'Have you got a gold skirt?' 'Yes! Here it is.' 'What colour are the socks?' 'They're white.' 'Cool! Thank you!'",
+      "video": "Tìm YouTube: \"shopping for clothes role play kids English\""
+     },
+     "zh": {
+      "tu": "Ôn: 颜色 yánsè, 棕色 zōngsè, 金色 jīnsè, 银色 yínsè, 衣服 yīfu, 裤子 kùzi, 裙子 qúnzi, 袜子 wàzi, 眼镜 yǎnjìng, 他们 tāmen",
+      "cum": "什么颜色 shénme yánsè / 金色的裙子 jīnsè de qúnzi / 白色的袜子 báisè de wàzi",
+      "cau": "[Cầu nối] Have you got a gold skirt? ↔ 有金色的裙子吗？(Yǒu jīnsè de qúnzi ma?) · giống: gold skirt ↔ 金色的裙子, màu trước đồ vật · khác: tiếng Trung không cần you, thêm 吗 cuối câu để hỏi / [Phiên dịch nhí] 有金色的裙子吗？(Yǒu jīnsè de qúnzi ma?) → Have you got a gold skirt? / 袜子是什么颜色的？(Wàzi shì shénme yánsè de?) → What colour are the socks? / 裤子是棕色的。(Kùzi shì zōngsè de.) → The trousers are brown.",
+      "truyen": "在商店 — Xiaomei和Leo在商店。Leo说英语，Xiaomei说中文。“有金色的裙子吗？”“有！在这儿！”“袜子是什么颜色的？”“是白色的。”“真酷！谢谢！” (Zài shāngdiàn — Xiaomei hé Leo zài shāngdiàn. Leo shuō Yīngyǔ, Xiaomei shuō Zhōngwén. “Yǒu jīnsè de qúnzi ma?” “Yǒu! Zài zhèr!” “Wàzi shì shénme yánsè de?” “Shì báisè de.” “Zhēn kù! Xièxie!”)",
+      "video": "Tìm YouTube: \"买衣服 情景对话 儿童中文\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn: brown, cool, gold, silver, bounce, they, clothes, jacket, boots, dress, shirt, handbag, jeans, shorts, trousers, skirt, sock, glasses, frog, duck, polar bear",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" · Chuyển ý: \"Now, let's speak Chinese! 我们说中文吧！\" · Khen: \"Good job! 很好！\" · Nhắc lại câu mới buổi trước: \"Lại đây với cô nào! Come here, please! 请过来！\" (lần cuối kèm tiếng Việt) 1) Chuyển ngữ nhanh: cô nói tiếng Anh, con chạm thẻ tiếng Trung (4 cặp): brown – 棕色 / gold – 金色 / silver – 银色 / skirt – 裙子. 2) Kiểm tra nhỏ Unit 11 – nghe chọn tranh (5 câu, phương án nhiễu: video / excited / classmate): a brown jacket / a gold dress / They're silver. / Bounce the ball! / The polar bear is white. 3) [Chuyển ngữ] Đóng vai Phiên dịch nhí ở cửa hàng quần áo (thẻ tình huống: shop): rối Leo hỏi tiếng Anh, con nói lại câu đó bằng tiếng Trung cho rối Xiaomei: Have you got a gold skirt? ↔ 有金色的裙子吗？ [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"Have you got a gold skirt? I don't like the silver one. I like gold.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 有金色的裙子吗？我不喜欢银色的，我喜欢金色的。 (Yǒu jīnsè de qúnzi ma? Wǒ bù xǐhuan yínsè de, wǒ xǐhuan jīnsè de.)",
+     "truyen": "The Colourful Forest — In the forest there are a lot of animals. A green frog hops. A yellow duck can swim. A brown donkey has got a long tail. 'What colour is the polar bear?' 'It's white!' 'What colour are the bees?' 'They're yellow and black!' Look! A silver alien in a gold boat! 'Hello, animals! Cool colours!'",
+     "baihat": "Cool Colours – giai điệu London Bridge (câu 1): Brown and gold and silver too, / Silver too, silver too, / Brown and gold and silver too, / Cool, cool colours! / (câu 2): Bounce the ball and clap your hands, / Clap your hands, clap your hands, / Bounce the ball and clap your hands, / They are red and blue! / (câu 3): Jeans and shorts and skirts and socks, / Skirts and socks, skirts and socks, / Jeans and shorts and skirts and socks, / What colour are they? (cả bài, con chỉ vào đồ của mình khi hát)"
+    },
+    "zh": {
+     "flash": "Ôn: 棕色 zōngsè, 酷 kù, 金色 jīnsè, 银色 yínsè, 拍球 pāi qiú, 他们 tāmen, 衣服 yīfu, 外套 wàitào, 裙子 qúnzi, 包 bāo, 裤子 kùzi, 短裤 duǎnkù, 眼镜 yǎnjìng, 袜子 wàzi, 青蛙 qīngwā, 鸭子 yāzi | Nghe hiểu (tranh): 北极熊 běijíxióng, 牛仔裤 niúzǎikù",
+     "slide": "1) Chuyển ngữ ngược: cô nói tiếng Trung, con chạm thẻ tiếng Anh (4 cặp): 棕色 – brown / 金色 – gold / 银色 – silver / 裙子 – skirt. 2) Kiểm tra nhỏ Unit 11 – nghe chọn tranh (5 câu): 棕色的外套 (zōngsè de wàitào) / 金色的裙子 (jīnsè de qúnzi) / 是银色的。(Shì yínsè de.) / 拍球！(Pāi qiú!) / 北极熊是白色的。(Běijíxióng shì báisè de.)3) Đóng vai ở cửa hàng (thẻ tình huống: 商店 shāngdiàn): 您好！有___的___吗？– 有！/ 没有。 4) YCT1 Nghe phần 4 (mẫu): nghe hội thoại, chọn 1 trong 3 tranh — 听一听，选一选。(Tīng yi tīng, xuǎn yi xuǎn.) 1. Anna：你喜欢什么颜色？(Nǐ xǐhuan shénme yánsè?) Leo：我喜欢棕色。(Wǒ xǐhuan zōngsè.) [A màu nâu ✓ / B màu đỏ / C màu xanh lá] 2. Bông：这是谁的裙子？(Zhè shì shéi de qúnzi?) Xiaomei：是我的。(Shì wǒ de.) [A Xiaomei cầm váy ✓ / B Leo cầm quần / C Bông cầm tất] 3. Leo：他们穿什么？(Tāmen chuān shénme?) Anna：他们穿裤子。(Tāmen chuān kùzi.) [A hai bạn mặc quần dài ✓ / B hai bạn mặc váy / C hai bạn đi tất] 4. 奶奶：我的眼镜在哪儿？(Wǒ de yǎnjìng zài nǎr?) Bông：在桌子上。(Zài zhuōzi shang.) [A kính trên bàn ✓ / B kính dưới ghế / C kính trên giường] 5. Anna：你要金色还是银色？(Nǐ yào jīnsè háishi yínsè?) Leo：我要银色。(Wǒ yào yínsè.) [A màu bạc ✓ / B màu vàng kim / C màu nâu] 5) YCT口试（初级）第三部分 看图说话 (mẫu – cô làm giám khảo, từng con nhìn tranh nói 2–3 câu): 看图说话。(Kàn tú shuōhuà.) Tranh 1: Xiaomei mặc váy vàng kim → Xiaomei穿裙子。她的裙子是金色的。(Xiaomei chuān qúnzi. Tā de qúnzi shì jīnsè de.) Tranh 2: bà đeo kính nâu → 这是奶奶。奶奶的眼镜是棕色的。(Zhè shì nǎinai. Nǎinai de yǎnjìng shì zōngsè de.) Tranh 3: hai bạn chơi bóng bạc → 他们一起玩球。球是银色的。(Tāmen yìqǐ wán qiú. Qiú shì yínsè de.) 6) [Cầu nối Anh – Trung] Cùng tranh khu rừng nhiều màu: rối Leo nói \"a green frog, a white polar bear\", rối Xiaomei nói \"绿色的青蛙，白色的北极熊\"; con tìm: màu đứng trước ở cả hai tiếng; polar bear ↔ 北极熊 (熊 = bear).",
+     "truyen": "很多颜色的动物 — 森林里有很多动物。绿色的青蛙跳来跳去。黄色的鸭子能游泳。棕色的驴有长长的尾巴。“北极熊是什么颜色的？”“是白色的！”“蜜蜂是什么颜色的？”“是黄色和黑色的！”看！银色的外星人在金色的船上！“你们好，动物们！颜色真酷！” (Hěn duō yánsè de dòngwù — Sēnlín li yǒu hěn duō dòngwù. Lǜsè de qīngwā tiào lái tiào qù. Huángsè de yāzi néng yóuyǒng. Zōngsè de lǘ yǒu chángcháng de wěiba. “Běijíxióng shì shénme yánsè de?” “Shì báisè de!” “Mìfēng shì shénme yánsè de?” “Shì huángsè hé hēisè de!” Kàn! Yínsè de wàixīngrén zài jīnsè de chuán shang! “Nǐmen hǎo, dòngwùmen! Yánsè zhēn kù!”)",
+     "baihat": "酷酷颜色 – giai điệu London Bridge (cùng giai điệu, cùng ý với bài Cool Colours) (câu 1): 棕色金色银色的，/ 银色的，银色的，/ 棕色金色银色的，/ 酷酷颜色！(Zōngsè jīnsè yínsè de, / yínsè de, yínsè de, / zōngsè jīnsè yínsè de, / kù kù yánsè!) / (câu 2): 他们拍球拍拍手，/ 拍拍手，拍拍手，/ 他们拍球拍拍手，/ 红色蓝色！(Tāmen pāi qiú pāipai shǒu, / pāipai shǒu, pāipai shǒu, / tāmen pāi qiú pāipai shǒu, / hóngsè lánsè!) / (câu 3): 裤子裙子和袜子，/ 和袜子，和袜子，/ 裤子裙子和袜子，/ 什么颜色？(Kùzi qúnzi hé wàzi, / hé wàzi, hé wàzi, / kùzi qúnzi hé wàzi, / shénme yánsè?) (cả bài, con chỉ vào đồ của mình khi hát)"
+    }
+   }
+  },
+  {
+   "buoi": 51,
+   "unit": 12,
+   "label_buoi": "Buổi dạy 51. Unit 12 · Numbers – Đếm người, đếm giày",
+   "web": [
+    {
+     "ngay": 101,
+     "label": "Ngày 101. Unit 12 · Numbers, time and dates · Đếm người ở bữa tiệc",
+     "en": {
+      "tu": "Mới: count, person/people | Ôn: board, crayon, how many, apple, egg, party",
+      "cum": "count the apples / one person, two people / an apple, two apples / an egg, three eggs",
+      "cau": "[Ngữ pháp: số ít – số nhiều: an apple / two apples] How many apples are there? – There are two apples. / How many people are there? – There are five people. / There is one person. / Count the eggs: one egg, two eggs, three eggs! / [Lệnh lớp học] Count the people. Write the number. Start! / Point to the cake. / [Lời web] Vào bài: \"Let's learn! 我们一起学吧！\" · Khen: \"Hooray! 太好了！\" · Sang tiếng Trung: \"Now in Chinese! 用中文说！\" · Câu mới: \"Đếm cùng nhé! Let's count! 我们一起数！\"",
+      "truyen": "Anna's Party — Anna has got a party. 'How many people are there?' Anna counts: one, two, three, four, five people! 'How many apples are there?' Mum counts: one, two, three, four, five apples. Five people and five apples. 'Great!'",
+      "video": "Tìm YouTube: \"how many song for kids counting apples\""
+     },
+     "zh": {
+      "tu": "Mới: 个 gè (= lượng từ đặt giữa số và vật khi đếm, tiếng Anh không có từ riêng: an apple = 一个苹果, two apples = 两个苹果), 人 rén (= person, people), 派对 pàiduì (= party) | Ôn: 几 jǐ, 两 liǎng, 苹果 píngguǒ, 鸡蛋 jīdàn, 蛋糕 dàngāo",
+      "cum": "两个苹果 liǎng gè píngguǒ / 五个人 wǔ gè rén / 一个鸡蛋 yí gè jīdàn",
+      "cau": "[Cầu nối] How many people are there? – There are five people. ↔ 有几个人？——有五个人。(Yǒu jǐ gè rén? — Yǒu wǔ gè rén.) · giống: five ↔ 五; party ↔ 派对 pàiduì (từ mượn âm) · khác: person → people đổi từ, 人 không đổi nhưng thêm 个 sau số / [Ngữ pháp: lượng từ 个; dùng 两 thay cho 二] 有几个苹果？(Yǒu jǐ gè píngguǒ?) – 有两个苹果。(Yǒu liǎng gè píngguǒ.) / 有几个人？(Yǒu jǐ gè rén?) – 有五个人。(Yǒu wǔ gè rén.) / 一个鸡蛋，两个鸡蛋，三个鸡蛋 (yí gè jīdàn, liǎng gè jīdàn, sān gè jīdàn) / [Lệnh lớp học] 看一看，说一说：有几个人？(Kàn yi kàn, shuō yi shuō: Yǒu jǐ gè rén?) / 指一指蛋糕！(Zhǐ yi zhǐ dàngāo!) (= Point to the cake.) / 听问题，回答问题：有几个人？——有四个人。(Tīng wèntí, huídá wèntí: Yǒu jǐ gè rén? — Yǒu sì gè rén.)",
+      "truyen": "Anna的派对 — Anna有一个派对。有几个人？Anna数：一、二、三、四、五，有五个人！有几个苹果？妈妈数：一、二、三、四、五，有五个苹果！五个人，五个苹果。“太好了！” (Anna de pàiduì — Anna yǒu yí gè pàiduì. Yǒu jǐ gè rén? Anna shǔ: yī, èr, sān, sì, wǔ, yǒu wǔ gè rén! Yǒu jǐ gè píngguǒ? Māma shǔ: yī, èr, sān, sì, wǔ, yǒu wǔ gè píngguǒ! Wǔ gè rén, wǔ gè píngguǒ. “Tài hǎo le!”)",
+      "video": "Tìm YouTube: \"有几个 数一数 儿歌\""
+     }
+    },
+    {
+     "ngay": 102,
+     "label": "Ngày 102. Unit 12 · Numbers, time and dates · Chiếc giày ở đâu?",
+     "en": {
+      "tu": "Mới: shoe, word | Ôn: close, keyboard, letter, open, boots, sock",
+      "cum": "two shoes / brown shoes / a new word / spell the word",
+      "cau": "[Ngữ pháp: a shoe / two shoes] How many shoes are there? – There are two shoes. / I've got two brown shoes. / What's this word? – It's 'shoe'. / Can you spell 'shoe'? – S-H-O-E. / Spell the word: s-h-o-e. / Write the word \"shoe\". / Find the shoe.",
+      "truyen": "Where's My Shoe? — Leo has got new shoes. They're brown. 'Where's my shoe?' One shoe is under the bed. Where's the other shoe? Leo opens the cupboard. 'Look! My shoe!' Two shoes! Leo writes a new word on the keyboard: S-H-O-E.",
+      "video": "Tìm YouTube: \"one two buckle my shoe nursery rhyme\""
+     },
+     "zh": {
+      "tu": "Mới: 鞋 xié (= shoe), 字 zì (= word) | Ôn: 键盘 jiànpán, 写 xiě, 双 shuāng, 只 zhī, 两 liǎng | Nghe hiểu (chỉ trong truyện, có tranh): 柜子 guìzi (= cupboard), 打开 dǎkāi (= open)",
+      "cum": "一双鞋 yì shuāng xié / 一只鞋 yì zhī xié / 写一个字 xiě yí gè zì",
+      "cau": "[Cầu nối] I've got two shoes. ↔ 我有一双鞋。(Wǒ yǒu yì shuāng xié.) · giống: I've got ↔ 我有 · khác: two shoes ↔ 一双鞋 (双 = một đôi); shoe thêm -s, 鞋 không đổi; word ↔ 字 / 我有一双新鞋。(Wǒ yǒu yì shuāng xīn xié.) / 我的鞋在哪儿？(Wǒ de xié zài nǎr?) / 一只鞋在床下面。(Yì zhī xié zài chuáng xiàmian.) / 这个字是“鞋”。(Zhège zì shì “xié”.) / 写一写这个字：鞋。(Xiě yi xiě zhège zì: xié.) / 读一读：鞋、字、人。(Dú yi dú: xié, zì, rén.) / [Chuyển ngữ] Leo nói tiếng Anh: \"Where's my shoe?\" – con nói lại cho Xiaomei: 我的鞋在哪儿？(Wǒ de xié zài nǎr?)",
+      "truyen": "我的鞋在哪儿？ — Leo有一双新鞋，是棕色的。“我的鞋在哪儿？”一只鞋在床下面。还有一只鞋呢？Leo打开柜子。看！在这儿！一双鞋！Leo在键盘上写一个新字：“鞋”。 (Wǒ de xié zài nǎr? — Leo yǒu yì shuāng xīn xié, shì zōngsè de. “Wǒ de xié zài nǎr?” Yì zhī xié zài chuáng xiàmian. Hái yǒu yì zhī xié ne? Leo dǎkāi guìzi. Kàn! Zài zhèr! Yì shuāng xié! Leo zài jiànpán shang xiě yí gè xīn zì: “xié”.)",
+      "video": "Tìm YouTube: \"鞋子 儿歌 一双鞋\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: count, person/people, shoe, word | Ôn: how many, apple, egg, cake, boots, sock, letter | Thẻ lệnh đề: spell, sentence, question, point (to)",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" · Chuyển ý: \"Now, let's speak Chinese! 我们说中文吧！\" · Khen: \"Well done! 真棒！\" · Câu mới buổi này: \"Con thử lại nhé! Try again! 再试一次！\" · Câu đã quen (bỏ tiếng Việt): \"Line up, please! 排队！\" / \"Come here, please! 请过来！\" 1) Đếm và chọn số (4 câu): How many apples are there? / How many people are there? / How many shoes are there? / How many eggs are there? 2) Chọn đúng số ít – số nhiều (4 câu): an apple / two apples; a shoe / three shoes; one person / four people; an egg / five eggs. 3) Đánh vần từ mới bằng thẻ chữ cái: S-H-O-E (shoe) / W-O-R-D (word). 4) Lệnh đề: Point to the people and count. / Spell \"shoe\". / Read the sentence: There are five people. Is it correct?",
+     "truyen": "Anna's Party — Anna has got a party. 'How many people are there?' Anna counts: one, two, three, four, five people! 'How many apples are there?' Mum counts: one, two, three, four, five apples. Five people, five apples! Then Leo says: 'Where's my shoe?' Anna counts the shoes: one, two, three... nine shoes! 'Look! Your shoe is under the table!' Ten shoes. 'Great!'",
+     "baihat": "One, Two, Buckle My Shoe – vè đếm dân gian Anh (hết bản quyền): One, two, buckle my shoe; / Three, four, knock at the door; / Five, six, pick up sticks; / Seven, eight, lay them straight; / Nine, ten, a big fat hen! (con đếm ngón tay, đoạn 'pick up' làm động tác nhặt)"
+    },
+    "zh": {
+     "flash": "Mới: 数 shǔ, 人 rén, 鞋 xié, 字 zì | Ôn: 几 jǐ, 苹果 píngguǒ, 鸡蛋 jīdàn, 蛋糕 dàngāo, 靴子 xuēzi, 袜子 wàzi | Thẻ lệnh đề: 句子 jùzi, 问题 wèntí, 指一指 zhǐ yi zhǐ",
+     "slide": "1) Đếm và nói (4 câu): 有几个苹果？(Yǒu jǐ gè píngguǒ?) – 有两个苹果。/ 有几个人？– 有五个人。/ 有几只鞋？(Yǒu jǐ zhī xié?) – 有两只鞋。/ 有几个鸡蛋？– 有三个鸡蛋。 2) Chọn đúng: một hay nhiều, 个 hay 只 (4 câu): 一个苹果 / 两__苹果; 一只鞋 / 三__鞋; 一个人 / 四__人; 一个鸡蛋 / 五__鸡蛋. 3) Tìm chữ: cô đọc, con chạm đúng chữ trên bảng: 人 / 鞋 / 字 / 个. 4) [Cầu nối Anh – Trung] Cùng tranh bữa tiệc: rối Leo đếm \"one apple, two apples; one person, five people\", rối Xiaomei đếm \"一个苹果，两个苹果；一个人，五个人\"; con thấy tiếng Anh đổi đuôi (-s, person → people), tiếng Trung không đổi mà thêm 个. 5) [Chuyển ngữ] Rối Leo nói 1 câu, con nói lại bằng tiếng Trung cho rối Xiaomei: There are five people. → 有五个人。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"There are five people at the party. Look! There are two shoes under the table.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 派对上有五个人。你看！桌子下面有两只鞋。 (Pàiduì shang yǒu wǔ gè rén. Nǐ kàn! Zhuōzi xiàmian yǒu liǎng zhī xié.)",
+     "truyen": "Anna的派对 — Anna有一个派对。有几个人？Anna数：一、二、三、四、五，有五个人！有几个苹果？妈妈数：一、二、三、四、五，有五个苹果！Leo说：“我的鞋在哪儿？”Anna数鞋：一、二、三……九只鞋！“看！你的鞋在桌子下面！”十只鞋。“太好了！” (Anna de pàiduì — Anna yǒu yí gè pàiduì. Yǒu jǐ gè rén? Anna shǔ: yī, èr, sān, sì, wǔ, yǒu wǔ gè rén! Yǒu jǐ gè píngguǒ? Māma shǔ: yī, èr, sān, sì, wǔ, yǒu wǔ gè píngguǒ! Leo shuō: “Wǒ de xié zài nǎr?” Anna shǔ xié: yī, èr, sān… jiǔ zhī xié! “Kàn! Nǐ de xié zài zhuōzi xiàmian!” Shí zhī xié. “Tài hǎo le!”)",
+     "baihat": "一二，穿鞋子 – vè đếm, cùng ý với One, Two, Buckle My Shoe: 一二，穿鞋子；(Yī èr, chuān xiézi;) / 三四，敲敲门；(sān sì, qiāoqiao mén;) / 五六，捡树枝；(wǔ liù, jiǎn shùzhī;) / 七八，摆整齐；(qī bā, bǎi zhěngqí;) / 九十，大母鸡！(jiǔ shí, dà mǔjī!) (con đếm ngón tay, đoạn 捡树枝 làm động tác nhặt)"
+    }
+   }
+  },
+  {
+   "buoi": 52,
+   "unit": 12,
+   "label_buoi": "Buổi dạy 52. Unit 12 · Time – Mấy giờ rồi? Hôm nay thứ mấy?",
+   "web": [
+    {
+     "ngay": 103,
+     "label": "Ngày 103. Unit 12 · Numbers, time and dates · Nhặt đồ lên nào!",
+     "en": {
+      "tu": "Mới: let's, pick up, hooray | Ôn: brown, gold, silver, clothes, jacket, dress, line, pencil, time",
+      "cum": "pick up the pencil / pick up your clothes / let's count / Hooray!",
+      "cau": "[Ngữ pháp: hỏi giờ] What time is it? – It's eight o'clock. / Let's pick up the clothes! / Pick up the gold pencil, please. / Let's count! One, two, three... ten! Hooray! / Read the question: What time is it? Answer: It's three o'clock.",
+      "truyen": "Let's Pick Up! — Anna's bedroom has got a lot of clothes. 'Let's pick up the clothes!' says Mum. Anna picks up a brown jacket, a gold dress and silver socks. 'Let's count! One, two, three... ten!' 'Hooray!' 'What time is it, Mum?' 'It's eight o'clock. Let's go to bed!'",
+      "video": "Tìm YouTube: \"clean up song pick up for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 现在 xiànzài (= now), 点 diǎn (= o'clock), 拿起来 ná qǐlái (= pick up) | Ôn: 铅笔 qiānbǐ, 衣服 yīfu, 外套 wàitào, 裙子 qúnzi, 金色 jīnsè, 棕色 zōngsè, 银色 yínsè, 太好了 tài hǎo le, 睡觉 shuìjiào",
+      "cum": "现在几点 xiànzài jǐ diǎn / 八点 bā diǎn / 拿起来 ná qǐlái / 我们数一数吧 wǒmen shǔ yi shǔ ba",
+      "cau": "[Cầu nối] Let's count! ↔ 我们数一数吧！(Wǒmen shǔ yi shǔ ba!) · giống: Let's ↔ 我们……吧, cùng là rủ nhau · khác: tiếng Trung đặt 吧 cuối câu; Hooray! ↔ 太好了！; What time is it? ↔ 现在几点？ (có 现在 = now) / [Ngữ pháp: hỏi giờ với 几] 现在几点？(Xiànzài jǐ diǎn?) – 现在八点。(Xiànzài bā diǎn.) / 我们把衣服拿起来吧！(Wǒmen bǎ yīfu ná qǐlái ba!) / 请拿起金色的铅笔。(Qǐng ná qǐ jīnsè de qiānbǐ.) / 我们数一数吧！(Wǒmen shǔ yi shǔ ba!) / 太好了！(Tài hǎo le!) / 我们睡觉吧！(Wǒmen shuìjiào ba!) / 听问题，回答问题：现在几点？——现在三点。(Tīng wèntí, huídá wèntí: Xiànzài jǐ diǎn? — Xiànzài sān diǎn.)",
+      "truyen": "我们拿起来吧！ — Anna的卧室里有很多衣服。妈妈说：“我们把衣服拿起来吧！”Anna拿起棕色的外套、金色的裙子和银色的袜子。“我们数一数吧！一、二、三……十！”“太好了！”“妈妈，现在几点？”“现在八点。我们睡觉吧！” (Wǒmen ná qǐlái ba! — Anna de wòshì li yǒu hěn duō yīfu. Māma shuō: “Wǒmen bǎ yīfu ná qǐlái ba!” Anna ná qǐ zōngsè de wàitào, jīnsè de qúnzi hé yínsè de wàzi. “Wǒmen shǔ yi shǔ ba! Yī, èr, sān… shí!” “Tài hǎo le!” “Māma, xiànzài jǐ diǎn?” “Xiànzài bā diǎn. Wǒmen shuìjiào ba!”)",
+      "video": "Tìm YouTube: \"收拾玩具 儿歌 拿起来\""
+     }
+    },
+    {
+     "ngay": 104,
+     "label": "Ngày 104. Unit 12 · Numbers, time and dates · Thứ Bảy chơi bóng bàn",
+     "en": {
+      "tu": "Mới: table tennis, tennis racket | Ôn: right, tell, monkey, cool, bounce",
+      "cum": "play table tennis / a tennis racket / a red tennis racket / on Saturday",
+      "cau": "[Ngữ pháp: hỏi thứ] What day is it today? – It's Saturday. / Let's play table tennis! / I've got a new tennis racket. / How many tennis rackets are there? – There are two tennis rackets. / Complete the sentence: On Saturday, I play ___. / Is it correct? Tick ✓ or cross ✗. / Listen and draw a line: Leo – the tennis racket.",
+      "truyen": "Table Tennis on Saturday — 'What day is it today?' 'It's Saturday!' 'Hooray! Let's play table tennis!' Leo and Dad play table tennis. The ball bounces. Bounce, bounce! Then Dad has got a new tennis racket. 'Cool! Let's play tennis on Sunday!'",
+      "video": "Tìm YouTube: \"days of the week song for kids\""
+     },
+     "zh": {
+      "tu": "Mới: 星期 xīngqī (= week; 星期六 = Saturday; 星期天 = Sunday), 乒乓球 pīngpāngqiú (= table tennis) | Ôn: 球 qiú, 爸爸 bàba, 对 duì, 拍球 pāi qiú, 酷 kù | Nghe hiểu (có tranh): 网球拍 wǎngqiúpāi (= tennis racket), 网球 wǎngqiú (= tennis)",
+      "cum": "星期六 xīngqīliù / 打乒乓球 dǎ pīngpāngqiú / 星期天 xīngqītiān",
+      "cau": "[Cầu nối] Let's play table tennis! ↔ 我们打乒乓球吧！(Wǒmen dǎ pīngpāngqiú ba!) · giống: table tennis còn gọi ping-pong ↔ 乒乓球 pīngpāng nghe giống · khác: tiếng Trung gọi thứ bằng số: 星期一 (Monday) … 星期六 (Saturday), riêng Sunday là 星期天 / [Ngữ pháp: hỏi thứ với 几] 今天星期几？(Jīntiān xīngqī jǐ?) – 今天星期六。(Jīntiān xīngqīliù.) / 我们打乒乓球吧！(Wǒmen dǎ pīngpāngqiú ba!) / 爸爸有一个新网球拍。(Bàba yǒu yí gè xīn wǎngqiúpāi.) / 有几个网球拍？(Yǒu jǐ gè wǎngqiúpāi?) – 有两个网球拍。(Yǒu liǎng gè wǎngqiúpāi.) / 星期天我们打网球吧！(Xīngqītiān wǒmen dǎ wǎngqiú ba!) / 选一选：星期六还是星期天？(Xuǎn yi xuǎn: xīngqīliù háishi xīngqītiān?) / [Chuyển ngữ] Leo nói tiếng Anh: \"It's Saturday! Let's play table tennis!\" – con nói lại cho Xiaomei: 今天星期六！我们打乒乓球吧！(Jīntiān xīngqīliù! Wǒmen dǎ pīngpāngqiú ba!)",
+      "truyen": "星期六 — “今天星期几？”“今天星期六！”“太好了！我们打乒乓球吧！”Leo和爸爸打乒乓球。球跳，跳，跳！爸爸有一个新网球拍。“真酷！星期天我们打网球吧！” (Xīngqīliù — “Jīntiān xīngqī jǐ?” “Jīntiān xīngqīliù!” “Tài hǎo le! Wǒmen dǎ pīngpāngqiú ba!” Leo hé bàba dǎ pīngpāngqiú. Qiú tiào, tiào, tiào! Bàba yǒu yí gè xīn wǎngqiúpāi. “Zhēn kù! Xīngqītiān wǒmen dǎ wǎngqiú ba!”)",
+      "video": "Tìm YouTube: \"星期歌 儿歌 星期一\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: let's, pick up, hooray, table tennis, tennis racket | Ôn: count, person/people, shoe, word, clothes, brown, gold, silver",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" · Chuyển ý: \"Now, let's speak Chinese! 我们说中文吧！\" · Khen: \"Great! 太好了！\" · Nhắc lại câu mới buổi trước: \"Con thử lại nhé! Try again! 再试一次！\" (lần cuối kèm tiếng Việt) 1) Nhìn đồng hồ chọn giờ (4 câu): It's seven o'clock. / It's eight o'clock. / It's ten o'clock. / It's twelve o'clock. 2) Trò chơi 'Cô bảo': Let's pick up the pencil! / Let's pick up the shoe! / Let's count to ten! / Hooray! 3) Nhìn lịch trả lời, có phương án nhiễu (4 câu): What day is it today? – It's Monday / Saturday / Sunday; table tennis / tennis racket / glue / scissors. 4) Lệnh đề: Read the question and write the answer: What time is it? – It's ___ o'clock. / Complete the sentence: Today is ___.",
+     "truyen": "Let's Pick Up! — Anna's bedroom has got a lot of clothes. 'Let's pick up the clothes!' says Mum. Anna picks up a brown jacket, a gold dress and silver socks. 'Let's count! One, two, three... ten!' 'Hooray!' 'What time is it?' 'It's eight o'clock. Let's go to bed!' Then: 'What day is it today?' 'It's Saturday!' Anna and Dad play table tennis. 'Cool!'",
+     "baihat": "What Time Is It? – giai điệu Frère Jacques: What time is it? What time is it? / Eight o'clock! Eight o'clock! / Let's count to eight, / Let's count to eight, / Hooray! Hooray! / Seven Days – giai điệu Twinkle Twinkle Little Star: Monday, Tuesday, Wednesday too, / Thursday, Friday, a new shoe! / Saturday, Sunday, let's go play, / Seven days, hip hip hooray!"
+    },
+    "zh": {
+     "flash": "Mới: 拿起来 ná qǐlái, 乒乓球 pīngpāngqiú, 网球拍 wǎngqiúpāi | Ôn: 太好了 tài hǎo le, 数 shǔ, 人 rén, 鞋 xié, 字 zì, 衣服 yīfu, 棕色 zōngsè, 金色 jīnsè, 银色 yínsè",
+     "slide": "1) Nhìn đồng hồ, trả lời (4 câu): 现在几点？– 现在七点。/ 现在八点。/ 现在十点。/ 现在十二点。2) Trò chơi 'Cô bảo': 我们拿起铅笔吧！(Wǒmen ná qǐ qiānbǐ ba!) / 我们拿起鞋吧！(Wǒmen ná qǐ xié ba!) / 我们数到十吧！(Wǒmen shǔ dào shí ba!) / 太好了！(Tài hǎo le!) 3) Nhìn lịch trả lời, có phương án nhiễu (4 câu): 今天星期几？(Jīntiān xīngqī jǐ?) – 今天星期一 / 星期六 / 星期天; 乒乓球 / 网球拍 / 胶水 / 剪刀. Rồi hỏi đáp cặp: 现在几点？(Xiànzài jǐ diǎn?) – 现在___点。 4) [Cầu nối Anh – Trung] Cùng tờ lịch tuần: rối Leo đọc \"Monday … Saturday, Sunday\", rối Xiaomei đọc \"星期一 … 星期六，星期天\"; con tìm quy luật: tiếng Trung đếm thứ bằng số 1–6, riêng Chủ nhật là 星期天; Hooray! ↔ 太好了！ 5) [Chuyển ngữ] Rối Leo nói 1 câu, con nói lại cho rối Xiaomei: It's eight o'clock. Let's go to bed! → 现在八点。我们睡觉吧！ [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"It's eight o'clock now. Let's go to bed because tomorrow is Monday.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 现在八点了。我们睡觉吧，明天星期一。 (Xiànzài bā diǎn le. Wǒmen shuìjiào ba, míngtiān xīngqīyī.)",
+     "truyen": "星期六 — Anna的卧室里有很多衣服。妈妈说：“我们把衣服拿起来吧！”Anna拿起棕色的外套、金色的裙子和银色的袜子。“我们数一数吧！一、二、三……十！”“太好了！”“现在几点？”“现在八点。我们睡觉吧！”……“今天星期几？”“今天星期六！”Anna和爸爸打乒乓球。“真酷！” (Xīngqīliù — Anna de wòshì li yǒu hěn duō yīfu. Māma shuō: “Wǒmen bǎ yīfu ná qǐlái ba!” Anna ná qǐ zōngsè de wàitào, jīnsè de qúnzi hé yínsè de wàzi. “Wǒmen shǔ yi shǔ ba! Yī, èr, sān… shí!” “Tài hǎo le!” “Xiànzài jǐ diǎn?” “Xiànzài bā diǎn. Wǒmen shuìjiào ba!” … “Jīntiān xīngqī jǐ?” “Jīntiān xīngqīliù!” Anna hé bàba dǎ pīngpāngqiú. “Zhēn kù!”)",
+     "baihat": "现在几点 – giai điệu 两只老虎 (cùng giai điệu Frère Jacques của bài What Time Is It?, cùng ý): 现在几点？现在几点？八点了！八点了！我们数到八吧，我们数到八吧，太好了！太好了！(Xiànzài jǐ diǎn? Xiànzài jǐ diǎn? Bā diǎn le! Bā diǎn le! Wǒmen shǔ dào bā ba, wǒmen shǔ dào bā ba, tài hǎo le! Tài hǎo le!) / 星期歌 – giai điệu Twinkle Twinkle Little Star (cùng giai điệu, cùng ý với bài Seven Days): 星期一二星期三，/ 星期四五新鞋子，/ 周六周日去玩吧，/ 一个星期太好了！(Xīngqīyī èr xīngqīsān, / xīngqīsì wǔ xīn xiézi, / zhōuliù zhōurì qù wán ba, / yí gè xīngqī tài hǎo le!) [周六 zhōuliù = 星期六, 周日 zhōurì = 星期天: chỉ nghe hiểu]"
+    }
+   }
+  },
+  {
+   "buoi": 53,
+   "unit": 12,
+   "label_buoi": "Buổi dạy 53. Unit 12 · Dates – Hôm nay ngày mấy? · Starters Nghe phần 1",
+   "web": [
+    {
+     "ngay": 105,
+     "label": "Ngày 105. Unit 12 · Numbers, time and dates · Ngày 1 tháng 6 – chụp ảnh nào!",
+     "en": {
+      "tu": "Mới: take a photo, take a picture, use, for | Ôn: grandmother, cousin, scarf, wear, cake",
+      "cum": "take a photo / take a picture / a cake for Grandmother / use a pencil",
+      "cau": "[Ngữ pháp: hỏi ngày tháng] What's the date today? – It's the first of June. / Let's take a photo! / This cake is for Grandmother. / Use my pencil, please. / Put the photo on the poster. / Read the sentence and choose the correct answer. / Look at the example: It's the first of June.",
+      "truyen": "Happy Children's Day — 'What's the date today?' 'It's the first of June! It's Children's Day!' Grandmother has got a cake for Bông. 'Let's take a photo!' Bông's cousin uses Dad's phone and takes a picture. 'Hooray!'",
+      "video": "Tìm YouTube: \"what's the date today song for kids months\""
+     },
+     "zh": {
+      "tu": "Mới: 月 yuè (= month; 六月 = June), 号 hào (= date; 一号 = the first), 拍照 pāizhào (= take a photo, take a picture) | Ôn: 奶奶 nǎinai, 围巾 wéijīn, 戴 dài, 照片 zhàopiàn, 蛋糕 dàngāo, 快乐 kuàilè | Nghe hiểu: 表哥 biǎogē (= cousin), 用 yòng (= use), 手机 shǒujī (= phone, có tranh)",
+      "cum": "六月一号 liù yuè yī hào / 几月几号 jǐ yuè jǐ hào / 拍照 pāizhào",
+      "cau": "[Cầu nối] Let's take a photo! ↔ 我们拍照吧！(Wǒmen pāizhào ba!) · giống: Let's ↔ 我们……吧 · khác: the first of June ↔ 六月一号: tiếng Trung nói tháng trước, ngày sau, tên tháng là số (六月 = tháng 6) / [Ngữ pháp: hỏi ngày tháng với 几] 今天几月几号？(Jīntiān jǐ yuè jǐ hào?) – 今天六月一号。(Jīntiān liù yuè yī hào.) / 儿童节快乐！(Értóng Jié kuàilè!) / 我们拍照吧！(Wǒmen pāizhào ba!) / 这是给奶奶的蛋糕。(Zhè shì gěi nǎinai de dàngāo.) / 请用我的铅笔。(Qǐng yòng wǒ de qiānbǐ.) / 读一读：六月一号。(Dú yi dú: liù yuè yī hào.)",
+      "truyen": "六一快乐 — “今天几月几号？”“今天六月一号！儿童节快乐！”奶奶有一个蛋糕，是给Bông的。“我们拍照吧！”Bông的表哥用爸爸的手机拍照。“太好了！” (Liù-Yī kuàilè — “Jīntiān jǐ yuè jǐ hào?” “Jīntiān liù yuè yī hào! Értóng Jié kuàilè!” Nǎinai yǒu yí gè dàngāo, shì gěi Bông de. “Wǒmen pāizhào ba!” Bông de biǎogē yòng bàba de shǒujī pāizhào. “Tài hǎo le!”)",
+      "video": "Tìm YouTube: \"几月几号 儿歌 日期\""
+     }
+    },
+    {
+     "ngay": 106,
+     "label": "Ngày 106. Unit 12 · Numbers, time and dates · Ôn không tranh: Mấy giờ, thứ mấy, ngày nào? · Luyện nói YCT口试 听后重复 + 听后回答",
+     "en": {
+      "tu": "Ôn: count, person/people, shoe, word, let's, pick up, hooray, table tennis, tennis racket, take a photo, take a picture, use, for",
+      "cum": "count the people / pick up the shoe / play table tennis / take a photo",
+      "cau": "How many people are there? – There are four people. / What time is it? – It's nine o'clock. / What day is it today? – It's Sunday. / What's the date today? – It's the first of June.",
+      "truyen": "What Do You Hear? — (chỉ nghe, không tranh) It's Saturday. It's ten o'clock. Leo and Dad play table tennis. Then Mum says: 'Let's take a photo!' One, two, three... 'Hooray!'",
+      "video": "Tìm YouTube: \"what time is it listening for kids o'clock\""
+     },
+     "zh": {
+      "tu": "Ôn: 个 gè, 人 rén, 鞋 xié, 字 zì, 现在 xiànzài, 点 diǎn, 星期 xīngqī, 月 yuè, 号 hào",
+      "cum": "现在几点 xiànzài jǐ diǎn / 今天星期几 jīntiān xīngqī jǐ / 几月几号 jǐ yuè jǐ hào",
+      "cau": "[Cầu nối] What time is it? – It's nine o'clock. ↔ 现在几点？——现在九点。(Xiànzài jǐ diǎn? — Xiànzài jiǔ diǎn.) · giống: nine ↔ 九, o'clock ↔ 点 · khác: tiếng Trung trả lời giữ nguyên câu hỏi, chỉ thay 几 bằng 九 / 现在几点？(Xiànzài jǐ diǎn?) – 现在九点。(Xiànzài jiǔ diǎn.) / 今天星期几？(Jīntiān xīngqī jǐ?) – 今天星期天。(Jīntiān xīngqītiān.) / 今天几月几号？(Jīntiān jǐ yuè jǐ hào?) – 今天六月一号。(Jīntiān liù yuè yī hào.) / [YCT口试（初级）第一部分 听后重复 (mẫu): con nghe từng câu, nói lại 1 lần, ghi âm trên Trang luyện nói, ~5 phút] 听，说：现在八点。(Xiànzài bā diǎn.) / 今天星期一。(Jīntiān xīngqīyī.) / 今天六月一号。(Jīntiān liù yuè yī hào.) / 这是我的鞋。(Zhè shì wǒ de xié.) / 有四个人。(Yǒu sì gè rén.) / [YCT口试（初级）第二部分 听后回答 (mẫu): con nghe câu hỏi, trả lời ngắn, ghi âm trên Trang luyện nói, ~5 phút] 听问题，回答问题。(Tīng wèntí, huídá wèntí.) 1. 现在几点？(Xiànzài jǐ diǎn?) ——现在九点。(Xiànzài jiǔ diǎn.) 2. 今天星期几？(Jīntiān xīngqī jǐ?) ——今天星期六。(Jīntiān xīngqīliù.) 3. 今天几月几号？(Jīntiān jǐ yuè jǐ hào?) ——今天六月一号。(Jīntiān liù yuè yī hào.) 4. 有几个人？(Yǒu jǐ gè rén?) ——有四个人。(Yǒu sì gè rén.) 5. Leo和爸爸打什么？(Leo hé bàba dǎ shénme?) ——打乒乓球。(Dǎ pīngpāngqiú.) / [Chuyển ngữ] (nghe không tranh) Mẹ nói tiếng Anh: \"Let's take a photo!\" – con nói lại cho Xiaomei: 我们拍照吧！(Wǒmen pāizhào ba!)",
+      "truyen": "你听到了什么？ — 今天星期六。现在十点。Leo和爸爸打乒乓球。妈妈说：“我们拍照吧！”一、二、三……“太好了！” (Nǐ tīngdào le shénme? — Jīntiān xīngqīliù. Xiànzài shí diǎn. Leo hé bàba dǎ pīngpāngqiú. Māma shuō: “Wǒmen pāizhào ba!” Yī, èr, sān… “Tài hǎo le!”)",
+      "video": "Tìm YouTube: \"时间 星期 日期 儿童中文 听力\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Mới: take a photo, take a picture, use, for | Ôn: count, person/people, shoe, word, let's, pick up, hooray, table tennis, tennis racket, cake",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" · Chuyển ý: \"Now, let's speak Chinese! 我们说中文吧！\" · Khen: \"Good job! 很好！\" · Câu mới buổi này: \"Đọc theo cô nào! Read with me! 跟我读！\" · Câu đã quen (bỏ tiếng Việt): \"Come here, please! 请过来！\" / \"Try again! 再试一次！\" 1) Nhìn lịch chọn ngày (4 câu): the first of June / Saturday / Sunday / eight o'clock. 2) Nghe không tranh, chọn tranh đúng (4 câu): Let's take a photo! / This cake is for Grandmother. / Use the pencil. / Pick up the tennis racket. 3) Hỏi đáp vòng tròn: What's the date today? – It's the ___ of ___. / What day is it today? – It's ___. 4) Starters Nghe phần 1 (mẫu, nhẹ): tranh bữa tiệc 1/6 ở lớp, ngoài tranh có tên Anna, Leo, Bông, Xiaomei, Mrs Lan. Look at the picture. Listen and draw a line. Example: This is Leo. He has got a tennis racket. 1. Anna is taking a photo. 2. Bông is picking up a shoe. 3. Xiaomei is counting the people. 4. Mrs Lan is sitting down. She has got a cake.",
+     "truyen": "Happy Children's Day — 'What's the date today?' 'It's the first of June! It's Children's Day!' Grandmother has got a big cake for Bông. 'How many people are there?' Bông counts: 'One, two, three, four, five, six people!' 'Let's take a photo!' Bông's cousin uses Dad's phone and takes a picture. 'Hooray! Happy Children's Day!'",
+     "baihat": "Seven Days – giai điệu Twinkle Twinkle Little Star: Monday, Tuesday, Wednesday too, / Thursday, Friday, a new shoe! / Saturday, Sunday, let's go play, / Seven days, hip hip hooray! + vè đếm: One, Two, Buckle My Shoe – vè đếm dân gian Anh (hết bản quyền): One, two, buckle my shoe; / Three, four, knock at the door; / Five, six, pick up sticks; / Seven, eight, lay them straight; / Nine, ten, a big fat hen! (con đếm ngón tay, đoạn 'pick up' làm động tác nhặt)"
+    },
+    "zh": {
+     "flash": "Mới: 拍照 pāizhào, 用 yòng, 给 gěi | Ôn: 数 shǔ, 人 rén, 鞋 xié, 字 zì, 拿起来 ná qǐlái, 太好了 tài hǎo le, 乒乓球 pīngpāngqiú, 网球拍 wǎngqiúpāi, 蛋糕 dàngāo",
+     "slide": "1) Nhìn lịch chọn (4 câu): 六月一号 liù yuè yī hào / 星期六 xīngqīliù / 星期天 xīngqītiān / 八点 bā diǎn. 2) Nghe không tranh, chọn tranh đúng (4 câu): 我们拍照吧！(Wǒmen pāizhào ba!) / 这是给奶奶的蛋糕。(Zhè shì gěi nǎinai de dàngāo.) / 用铅笔吧。(Yòng qiānbǐ ba.) / 拿起网球拍。(Ná qǐ wǎngqiúpāi.) 3) Hỏi đáp vòng tròn: 今天几月几号？(Jīntiān jǐ yuè jǐ hào?) – 今天___月___号。/ 今天星期几？(Jīntiān xīngqī jǐ?) – 今天星期___。 4) [Cầu nối Anh – Trung] Cùng lịch ngày 1/6: rối Leo nói \"It's the first of June.\", rối Xiaomei nói \"今天六月一号。\" Con xếp thẻ: tiếng Anh ngày trước – tháng sau, tiếng Trung tháng trước – ngày sau; tên tháng tiếng Trung là số (六月). 5) [Chuyển ngữ] Rối Leo nói 1 câu, con nói lại cho rối Xiaomei: This cake is for Grandmother. → 这是给奶奶的蛋糕。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"Today is the first of June. This cake is for Grandmother, so let's take a photo!\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 今天六月一号。这是给奶奶的蛋糕，我们拍照吧！ (Jīntiān liù yuè yī hào. Zhè shì gěi nǎinai de dàngāo, wǒmen pāizhào ba!)",
+     "truyen": "六一快乐 — “今天几月几号？”“今天六月一号！儿童节快乐！”奶奶有一个大蛋糕。有几个人？Bông数：一、二、三、四、五、六，有六个人！“我们拍照吧！”Bông的表哥用爸爸的手机拍照。“太好了！儿童节快乐！” (Liù-Yī kuàilè — “Jīntiān jǐ yuè jǐ hào?” “Jīntiān liù yuè yī hào! Értóng Jié kuàilè!” Nǎinai yǒu yí gè dà dàngāo. Yǒu jǐ gè rén? Bông shǔ: yī, èr, sān, sì, wǔ, liù, yǒu liù gè rén! “Wǒmen pāizhào ba!” Bông de biǎogē yòng bàba de shǒujī pāizhào. “Tài hǎo le! Értóng Jié kuàilè!”)",
+     "baihat": "星期歌 – giai điệu Twinkle Twinkle Little Star (cùng giai điệu, cùng ý với bài Seven Days): 星期一二星期三，/ 星期四五新鞋子，/ 周六周日去玩吧，/ 一个星期太好了！(Xīngqīyī èr xīngqīsān, / xīngqīsì wǔ xīn xiézi, / zhōuliù zhōurì qù wán ba, / yí gè xīngqī tài hǎo le!) [周六 zhōuliù = 星期六, 周日 zhōurì = 星期天: chỉ nghe hiểu] + vè đếm 一二，穿鞋子 (đọc lại, cùng ý với One, Two, Buckle My Shoe): 一二，穿鞋子；三四，敲敲门；五六，捡树枝；七八，摆整齐；九十，大母鸡！(Yī èr, chuān xiézi; sān sì, qiāoqiao mén; wǔ liù, jiǎn shùzhī; qī bā, bǎi zhěngqí; jiǔ shí, dà mǔjī!)"
+    }
+   }
+  },
+  {
+   "buoi": 54,
+   "unit": 12,
+   "label_buoi": "Buổi dạy 54. Unit 12 · Numbers, time and dates – Phiên dịch nhí và kiểm tra nhỏ · Luyện đề YCT1 Nghe phần 2 + YCT口试 看图说话",
+   "web": [
+    {
+     "ngay": 107,
+     "label": "Ngày 107. Unit 12 · Numbers, time and dates · Truyện: Bữa trưa lúc 12 giờ (chuyển ngữ) · Luyện đề YCT1 Đọc phần 1",
+     "en": {
+      "tu": "Ôn: noodles, burger, fries, ice cream, juice, food, count, let's, o'clock",
+      "cum": "twelve o'clock / three burgers / two ice creams / a lot of food",
+      "cau": "It's twelve o'clock. Let's eat! / How many burgers are there? – There are three burgers. / There are two ice creams. / Let's count the food!",
+      "truyen": "Twelve O'Clock — It's twelve o'clock. 'Let's eat!' says Dad. There's a lot of food: noodles, three burgers, fries and two ice creams. 'How many burgers are there?' Leo counts: 'One, two, three!' 'And how many people?' 'Three people! One burger for one person. Hooray!'",
+      "video": "Tìm YouTube: \"counting food for kids how many burgers\""
+     },
+     "zh": {
+      "tu": "Ôn: 现在 xiànzài, 点 diǎn, 个 gè, 人 rén, 面条 miàntiáo, 汉堡 hànbǎo, 薯条 shǔtiáo, 冰淇淋 bīngqílín",
+      "cum": "十二点 shí'èr diǎn / 三个汉堡 sān gè hànbǎo / 两个冰淇淋 liǎng gè bīngqílín",
+      "cau": "[Cầu nối] How many burgers are there? ↔ 有几个汉堡？(Yǒu jǐ gè hànbǎo?) · giống: how many ↔ 几, burger ↔ 汉堡 (từ mượn âm) · khác: burgers có -s; 汉堡 không đổi, thêm 个 / [Chuyển ngữ] It's twelve o'clock. ↔ 现在十二点。(Xiànzài shí'èr diǎn.) / How many burgers are there? ↔ 有几个汉堡？(Yǒu jǐ gè hànbǎo?) / There are two ice creams. ↔ 有两个冰淇淋。(Yǒu liǎng gè bīngqílín.) / [YCT1 Đọc phần 1 (mẫu): con đọc từ có pinyin, nhìn tranh chọn ✓ / ✗, 5 câu, ~10 phút] 读一读，看一看，对还是错？(Dú yi dú, kàn yi kàn, duì háishi cuò?) 1. 汉堡 hànbǎo [bánh hamburger ✓] 2. 面条 miàntiáo [bát cơm ✗] 3. 十二点 shí'èr diǎn [đồng hồ 12 giờ ✓] 4. 冰淇淋 bīngqílín [bánh mì ✗] 5. 三个人 sān gè rén [3 người ✓]",
+      "truyen": "十二点了 — 现在十二点。爸爸说：“我们吃饭吧！”有很多食物：面条、三个汉堡、薯条和两个冰淇淋。“有几个汉堡？”Leo数：“一、二、三！”“有几个人？”“三个人！一个人一个汉堡。太好了！” (Shí'èr diǎn le — Xiànzài shí'èr diǎn. Bàba shuō: “Wǒmen chī fàn ba!” Yǒu hěn duō shíwù: miàntiáo, sān gè hànbǎo, shǔtiáo hé liǎng gè bīngqílín. “Yǒu jǐ gè hànbǎo?” Leo shǔ: “Yī, èr, sān!” “Yǒu jǐ gè rén?” “Sān gè rén! Yí gè rén yí gè hànbǎo. Tài hǎo le!”)",
+      "video": "Tìm YouTube: \"数一数 食物 儿童中文\""
+     }
+    },
+    {
+     "ngay": 108,
+     "label": "Ngày 108. Unit 12 · Numbers, time and dates · Phiên dịch nhí: Lịch của lớp",
+     "en": {
+      "tu": "Ôn: count, person/people, shoe, word, let's, pick up, hooray, table tennis, tennis racket, take a photo, use, for, Monday, Saturday, school",
+      "cum": "the class calendar / on Monday / at eight o'clock / the first of June",
+      "cau": "[Phiên dịch nhí] What time is it? → 现在几点？/ It's eight o'clock. → 现在八点。/ What day is it today? → 今天星期几？/ What's the date today? → 今天几月几号？",
+      "truyen": "The Class Calendar — At school, Xiaomei and Nhan make a class calendar. 'What's the date today?' 'It's the first of June.' 'What day is it?' 'It's Monday.' 'What time is the English lesson?' 'It's at eight o'clock!' 'Let's write the words!' 'Hooray!'",
+      "video": "Tìm YouTube: \"calendar song for kids days months\""
+     },
+     "zh": {
+      "tu": "Ôn: 现在 xiànzài, 点 diǎn, 星期 xīngqī, 月 yuè, 号 hào, 个 gè, 人 rén, 写 xiě, 学校 xuéxiào | Nghe hiểu (có tranh): 日历 rìlì (= calendar)",
+      "cum": "星期一 xīngqīyī / 八点 bā diǎn / 六月一号 liù yuè yī hào",
+      "cau": "[Cầu nối] What's the date today? ↔ 今天几月几号？(Jīntiān jǐ yuè jǐ hào?) · giống: today ↔ 今天 · khác: tiếng Trung hỏi cả tháng và ngày bằng 几: 几月几号 / [Phiên dịch nhí] 今天星期一。(Jīntiān xīngqīyī.) → It's Monday today. / 现在八点。(Xiànzài bā diǎn.) → It's eight o'clock. / 今天六月一号。(Jīntiān liù yuè yī hào.) → It's the first of June.",
+      "truyen": "我们的日历 — Xiaomei和Nhan在学校做班级日历。“今天几月几号？”“今天六月一号。”“今天星期几？”“今天星期一。”“英语课几点？”“八点！”“我们写字吧！”“太好了！” (Wǒmen de rìlì — Xiaomei hé Nhan zài xuéxiào zuò bānjí rìlì. “Jīntiān jǐ yuè jǐ hào?” “Jīntiān liù yuè yī hào.” “Jīntiān xīngqī jǐ?” “Jīntiān xīngqīyī.” “Yīngyǔ kè jǐ diǎn?” “Bā diǎn!” “Wǒmen xiě zì ba!” “Tài hǎo le!”)",
+      "video": "Tìm YouTube: \"日历 儿童中文 星期 月 号\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn: count, person/people, shoe, word, let's, pick up, hooray, table tennis, tennis racket, take a photo, take a picture, use, for, noodles, burger, ice cream",
+     "slide": "[Lời cô] Vào bài: \"Hello, everyone! 大家好！\" · Chuyển ý: \"Now, let's speak Chinese! 我们说中文吧！\" · Khen: \"Well done! 真棒！\" · Nhắc lại câu mới buổi trước: \"Đọc theo cô nào! Read with me! 跟我读！\" (lần cuối kèm tiếng Việt) 1) Chuyển ngữ nhanh: cô nói tiếng Anh, con chạm thẻ tiếng Trung (4 cặp): shoe – 鞋 / word – 字 / eight o'clock – 八点 / Saturday – 星期六. 2) Kiểm tra nhỏ Unit 12 – nghe chọn tranh (5 câu, phương án nhiễu: page / paint / scissors): There are three people. / It's eight o'clock. / Pick up the shoe. / Let's play table tennis. / Let's take a photo! 3) [Chuyển ngữ] Đóng vai Phiên dịch nhí làm lịch lớp: rối Leo hỏi tiếng Anh, con nói lại câu hỏi bằng tiếng Trung cho rối Xiaomei, rối Xiaomei trả lời: What day is it today? → 今天星期几？– 今天星期一。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"What day is it today? And what's the date today?\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 今天星期几？今天几月几号？ (Jīntiān xīngqī jǐ? Jīntiān jǐ yuè jǐ hào?)",
+     "truyen": "Twelve O'Clock — It's Saturday. It's twelve o'clock. 'Let's eat!' says Dad. There's a lot of food: noodles, three burgers, fries and two ice creams. 'How many burgers are there?' Leo counts: 'One, two, three!' 'And how many people?' 'Three people!' Then Mum picks up the phone. 'Let's take a photo!' 'Hooray!'",
+     "baihat": "One, Two, Buckle My Shoe – vè đếm dân gian Anh (hết bản quyền): One, two, buckle my shoe; / Three, four, knock at the door; / Five, six, pick up sticks; / Seven, eight, lay them straight; / Nine, ten, a big fat hen! (con đếm ngón tay, đoạn 'pick up' làm động tác nhặt) / What Time Is It? – giai điệu Frère Jacques: What time is it? What time is it? / Eight o'clock! Eight o'clock! / Let's count to eight, / Let's count to eight, / Hooray! Hooray! / Seven Days – giai điệu Twinkle Twinkle Little Star: Monday, Tuesday, Wednesday too, / Thursday, Friday, a new shoe! / Saturday, Sunday, let's go play, / Seven days, hip hip hooray! (cả ba bài)"
+    },
+    "zh": {
+     "flash": "Ôn: 数 shǔ, 人 rén, 鞋 xié, 字 zì, 拿起来 ná qǐlái, 太好了 tài hǎo le, 乒乓球 pīngpāngqiú, 网球拍 wǎngqiúpāi, 拍照 pāizhào, 用 yòng, 给 gěi, 面条 miàntiáo, 汉堡 hànbǎo, 冰淇淋 bīngqílín",
+     "slide": "1) Chuyển ngữ ngược: cô nói tiếng Trung, con chạm thẻ tiếng Anh (4 cặp): 鞋 – shoe / 字 – word / 八点 – eight o'clock / 星期六 – Saturday. 2) Kiểm tra nhỏ Unit 12 – nghe chọn tranh (5 câu): 有三个人。(Yǒu sān gè rén.) / 现在八点。(Xiànzài bā diǎn.) / 拿起鞋。(Ná qǐ xié.) / 我们打乒乓球吧。(Wǒmen dǎ pīngpāngqiú ba.) / 我们拍照吧！(Wǒmen pāizhào ba!) 3) Làm lịch lớp: mỗi con nói 今天___月___号，星期___，现在___点。 4) YCT1 Nghe phần 2 (mẫu): nghe cụm từ, chọn 1 trong 3 tranh — 听一听，选一选。(Tīng yi tīng, xuǎn yi xuǎn.) 1. 三点 sān diǎn [A đồng hồ 3 giờ ✓ / B 8 giờ / C 10 giờ] 2. 星期天 xīngqītiān [A lịch Chủ nhật ✓ / B thứ Hai / C thứ Bảy] 3. 一双鞋 yì shuāng xié [A đôi giày ✓ / B đôi tất / C cái mũ] 4. 五个人 wǔ gè rén [A 5 người ✓ / B 3 người / C 4 người] 5. 六月一号 liù yuè yī hào [A lịch 1/6 ✓ / B lịch 8/6 / C lịch 1/5] 5) YCT口试（初级）第三部分 看图说话 (mẫu – cô làm giám khảo, từng con nhìn tranh nói 2–3 câu): 看图说话。(Kàn tú shuōhuà.) Tranh 1: đồng hồ 12 giờ, cả nhà ăn mì → 现在十二点。我们吃面条。(Xiànzài shí'èr diǎn. Wǒmen chī miàntiáo.) Tranh 2: lịch thứ Bảy, Leo và bố chơi bóng bàn → 今天星期六。Leo和爸爸打乒乓球。(Jīntiān xīngqīliù. Leo hé bàba dǎ pīngpāngqiú.) Tranh 3: tiệc 1/6 có 5 bạn → 今天六月一号。有五个人。太好了！(Jīntiān liù yuè yī hào. Yǒu wǔ gè rén. Tài hǎo le!) 6) [Cầu nối Anh – Trung] Cùng tranh bữa trưa 12 giờ: rối Leo nói \"three burgers, two ice creams\", rối Xiaomei nói \"三个汉堡，两个冰淇淋\"; con tìm: burger ↔ 汉堡 nghe giống; burgers có -s, 汉堡 thêm 个; two ↔ 两 (không nói 二个).",
+     "truyen": "十二点了 — 今天星期六。现在十二点。爸爸说：“我们吃饭吧！”有很多食物：面条、三个汉堡、薯条和两个冰淇淋。“有几个汉堡？”Leo数：“一、二、三！”“有几个人？”“三个人！”妈妈拿起手机：“我们拍照吧！”“太好了！” (Shí'èr diǎn le — Jīntiān xīngqīliù. Xiànzài shí'èr diǎn. Bàba shuō: “Wǒmen chī fàn ba!” Yǒu hěn duō shíwù: miàntiáo, sān gè hànbǎo, shǔtiáo hé liǎng gè bīngqílín. “Yǒu jǐ gè hànbǎo?” Leo shǔ: “Yī, èr, sān!” “Yǒu jǐ gè rén?” “Sān gè rén!” Māma ná qǐ shǒujī: “Wǒmen pāizhào ba!” “Tài hǎo le!”)",
+     "baihat": "一二，穿鞋子 – vè đếm, cùng ý với One, Two, Buckle My Shoe: 一二，穿鞋子；三四，敲敲门；五六，捡树枝；七八，摆整齐；九十，大母鸡！(Yī èr, chuān xiézi; sān sì, qiāoqiao mén; wǔ liù, jiǎn shùzhī; qī bā, bǎi zhěngqí; jiǔ shí, dà mǔjī!) / 现在几点 – giai điệu 两只老虎 (cùng giai điệu Frère Jacques của bài What Time Is It?): 现在几点？现在几点？八点了！八点了！我们数到八吧，我们数到八吧，太好了！太好了！(Xiànzài jǐ diǎn? Xiànzài jǐ diǎn? Bā diǎn le! Bā diǎn le! Wǒmen shǔ dào bā ba, wǒmen shǔ dào bā ba, tài hǎo le! Tài hǎo le!) / 星期歌 – giai điệu Twinkle Twinkle Little Star (cùng ý Seven Days): 星期一二星期三，/ 星期四五新鞋子，/ 周六周日去玩吧，/ 一个星期太好了！(Xīngqīyī èr xīngqīsān, / xīngqīsì wǔ xīn xiézi, / zhōuliù zhōurì qù wán ba, / yí gè xīngqī tài hǎo le!) [周六 zhōuliù = 星期六, 周日 zhōurì = 星期天: chỉ nghe hiểu] (cả ba bài)"
+    }
+   }
+  },
+  {
+   "buoi": 55,
+   "unit": "",
+   "label_buoi": "Buổi dạy 55. Tuần 28 · Cuối khóa · Dự án 'My Book – Sách về con' (ôn Unit 1–6) · Thi thử trọn đề YCT1",
+   "web": [
+    {
+     "ngay": 109,
+     "label": "Ngày 109. Tuần 28 · Cuối khóa · Ôn Unit 1–3: Chào hỏi, tên tuổi, gia đình",
+     "en": {
+      "tu": "Ôn: class, good, kid, lesson, morning, Mrs, sorry, song, story, wave, again, nice, number, year, me too, baby, mother, aunt, uncle, photo, learn",
+      "cum": "Good morning, class! / See you tomorrow / my aunt and my uncle / a family photo / Me too!",
+      "cau": "Good morning, Mrs Brown! / What's your name? – My name is Anna. / How old are you? – I'm six years old. / Who is he? – He is my uncle. / I love my family.",
+      "truyen": "Anna's Family Photo — 'Good morning, class!' says Mrs Brown. 'Good morning, Mrs Brown!' Anna has got a family photo. 'This is my mother. This is my aunt and this is my uncle. This is my baby brother. He is one year old!' 'Nice photo, Anna!'",
+      "video": "Tìm YouTube: \"good morning song family members song for kids\""
+     },
+     "zh": {
+      "tu": "Ôn: 早上好 zǎoshang hǎo, 同学们 tóngxuémen, 老师 lǎoshī, 数字 shùzì, 照片 zhàopiàn, 家庭 jiātíng, 妈妈 māma, 阿姨 āyí, 叔叔 shūshu, 弟弟 dìdi, 岁 suì, 明天见 míngtiān jiàn",
+      "cum": "同学们早上好 tóngxuémen zǎoshang hǎo / 明天见 míngtiān jiàn / 我的阿姨和叔叔 wǒ de āyí hé shūshu / 我的家庭照片 wǒ de jiātíng zhàopiàn",
+      "cau": "[Cầu nối] How old are you? – I'm six years old. ↔ 你几岁？——我六岁。(Nǐ jǐ suì? — Wǒ liù suì.) · giống: six ↔ 六 · khác: tiếng Trung không cần am, years old; chỉ nói 六岁 / Brown老师早上好！(Brown lǎoshī zǎoshang hǎo!) / 你叫什么名字？(Nǐ jiào shénme míngzi?) – 我叫Anna。(Wǒ jiào Anna.) / 你几岁？(Nǐ jǐ suì?) – 我六岁。(Wǒ liù suì.) / 他是谁？(Tā shì shéi?) – 他是我叔叔。(Tā shì wǒ shūshu.) / 我爱我的家人。(Wǒ ài wǒ de jiārén.) / [Chuẩn bị thi thử YCT1 – lệnh đề] 听一听，看一看，对还是错？(Tīng yi tīng, kàn yi kàn, duì háishi cuò?) / 读一读，选一选。(Dú yi dú, xuǎn yi xuǎn.) / 听问题，回答问题。(Tīng wèntí, huídá wèntí.) / [Chuyển ngữ] Anna nói tiếng Anh: \"This is my uncle.\" – con nói lại cho Xiaomei: 这是我叔叔。(Zhè shì wǒ shūshu.)",
+      "truyen": "Anna的家庭照片 — 老师说：“同学们早上好！”“老师早上好！”Anna有一张家庭照片。“这是我妈妈。这是我阿姨，这是我叔叔。这是我弟弟，他一岁！”老师说：“照片真棒，Anna！” (Anna de jiātíng zhàopiàn — Lǎoshī shuō: “Tóngxuémen zǎoshang hǎo!” “Lǎoshī zǎoshang hǎo!” Anna yǒu yì zhāng jiātíng zhàopiàn. “Zhè shì wǒ māma. Zhè shì wǒ āyí, zhè shì wǒ shūshu. Zhè shì wǒ dìdi, tā yí suì!” Lǎoshī shuō: “Zhàopiàn zhēn bàng, Anna!”)",
+      "video": "Tìm YouTube: \"你好歌 家人 儿歌 幼儿\""
+     }
+    },
+    {
+     "ngay": 110,
+     "label": "Ngày 110. Tuần 28 · Cuối khóa · Ôn Unit 4–6: Cơ thể, cảm xúc, trường học",
+     "en": {
+      "tu": "Ôn: arm, body, clap, fun, hair, leg, shoulder, finger, knee, toe, close, right, tell, hungry, thirsty, excited, favourite, go to bed, board, crayon, line, open, pencil, glue, scissors",
+      "cum": "clap your hands / touch your knees / hungry and thirsty / open your book / a red crayon",
+      "cau": "Touch your shoulders! / Clap your hands! / How do you feel? – I'm excited! / Are you hungry? – Yes, I am. / What is this? – This is a pencil. / What are these? – These are crayons. / [Lệnh đề] Look and listen. Tick ✓ or cross ✗. / Read the question. Write the answer. / Spell your name.",
+      "truyen": "Leo's Busy Day — At school, Leo opens his book. 'What is this?' 'It's a pencil!' Then the kids clap their hands and touch their knees and toes. It's fun! At home, Leo is hungry and thirsty. At eight o'clock he is tired. 'Go to bed, Leo!'",
+      "video": "Tìm YouTube: \"head shoulders knees and toes nursery rhyme\""
+     },
+     "zh": {
+      "tu": "Ôn: 头发 tóufa, 肩膀 jiānbǎng, 膝盖 xīgài, 脚趾 jiǎozhǐ, 拍拍手 pāipai shǒu, 饿 è, 渴 kě, 兴奋 xīngfèn, 铅笔 qiānbǐ, 蜡笔 làbǐ, 剪刀 jiǎndāo, 胶水 jiāoshuǐ, 读 dú, 写 xiě, 学校 xuéxiào",
+      "cum": "拍拍手 pāipai shǒu / 摸摸膝盖 mōmo xīgài / 在学校 zài xuéxiào / 又饿又渴 yòu è yòu kě",
+      "cau": "[Cầu nối] Are you hungry? – Yes, I am. ↔ 你饿吗？——我很饿。(Nǐ è ma? — Wǒ hěn è.) · khác: tiếng Anh cần are / am, tiếng Trung không có, thêm 吗 để hỏi và 很 khi trả lời / 摸摸你的肩膀！(Mōmo nǐ de jiānbǎng!) / 拍拍手！(Pāipai shǒu!) / 你感觉怎么样？(Nǐ gǎnjué zěnmeyàng?) – 我很兴奋！(Wǒ hěn xīngfèn!) / 你饿吗？(Nǐ è ma?) – 我很饿。(Wǒ hěn è.) / 这是什么？(Zhè shì shénme?) – 这是铅笔。(Zhè shì qiānbǐ.) / 看一看，听一听，对还是错？(Kàn yi kàn, tīng yi tīng, duì háishi cuò?)",
+      "truyen": "Leo的一天 — 在学校，Leo打开书。“这是什么？”“这是铅笔！”小朋友们拍拍手，摸摸膝盖，摸摸脚趾。真好玩！回家了，Leo饿了，也渴了。八点了，Leo困了。“Leo，睡觉吧！” (Leo de yì tiān — Zài xuéxiào, Leo dǎkāi shū. “Zhè shì shénme?” “Zhè shì qiānbǐ!” Xiǎopéngyǒumen pāipai shǒu, mōmo xīgài, mōmo jiǎozhǐ. Zhēn hǎowán! Huí jiā le, Leo è le, yě kě le. Bā diǎn le, Leo kùn le. “Leo, shuìjiào ba!”)",
+      "video": "Tìm YouTube: \"身体歌 拍拍手 儿歌\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn: hello, goodbye, morning, Mrs, name, year, number, mother, aunt, uncle, baby, photo, arm, leg, hair, knee, toe, clap, hungry, thirsty, excited, favourite, pencil, crayon, scissors, glue, school",
+     "slide": "[Lời cô] Vào bài: \"Good morning, class! 同学们好！\" · Chuyển ý: \"Now, let's speak Chinese! 我们说中文吧！\" · Khen: \"Great! 太好了！\" · Câu mới buổi này: \"Bắt đầu nào! Start! 开始！\" · Câu đã quen (bỏ tiếng Việt): \"Try again! 再试一次！\" / \"Read with me! 跟我读！\" 1) Quét nhanh Unit 1–6 – nhìn tranh chọn từ (6 câu): uncle / knee / excited / scissors / photo / thirsty. 2) Trò chơi 'Simon says' ôn cơ thể và cảm xúc: Touch your shoulders! / Clap your hands! / Show me 'excited'! 3) Dự án 'My Book' – bước 1: con dùng crayon, pencil, scissors, glue làm 3 trang đầu và nói: Hello! My name is ___. I'm ___ years old. / This is my family photo. This is my ___. / I've got two arms and two legs. I'm happy! 4) Lệnh đề trước giờ thi (cô ôn nhanh bằng tiếng Anh, con làm động tác): Look! Listen! Read! Write your name. Tick ✓. Cross ✗. Draw a line. Choose. Colour. Point to the answer. OK, start! 5) [Chuyển ngữ] (lồng vào bước 3) Rối Leo đọc 1 câu trang 'My Book' của bạn bằng tiếng Anh, con nói lại câu đó bằng tiếng Trung cho rối Xiaomei: I'm six years old. → 我六岁。/ This is my uncle. → 这是我叔叔。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"I'm six years old. This is my family photo, and this man is my uncle.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 我六岁。这是我的家庭照片，他是我叔叔。 (Wǒ liù suì. Zhè shì wǒ de jiātíng zhàopiàn, tā shì wǒ shūshu.)",
+     "truyen": "My Book — Bông makes a book. 'Look! This is my book!' Page one: 'Hello! My name is Bông. I'm six years old.' Page two: 'This is my family photo. This is my mother, this is my uncle and this is my baby cousin.' Page three: 'I've got long hair. I'm happy and excited!' The teacher says: 'Great book, Bông!'",
+     "baihat": "Bài hát ôn toàn khóa (phần 1) – giai điệu Frère Jacques: Good morning, teacher! Good morning, teacher! / How are you? How are you? / I am very happy, I am very happy, / Thank you! Thank you! + Head, shoulders, knees and toes (đồng dao dân gian Anh, hết bản quyền): Head, shoulders, knees and toes, knees and toes, / Head, shoulders, knees and toes, knees and toes, / And eyes and ears and mouth and nose, / Head, shoulders, knees and toes, knees and toes!"
+    },
+    "zh": {
+     "flash": "Ôn: 你好 nǐ hǎo, 再见 zàijiàn, 早上 zǎoshang, 名字 míngzi, 岁 suì, 数字 shùzì, 妈妈 māma, 阿姨 āyí, 叔叔 shūshu, 宝宝 bǎobao, 照片 zhàopiàn, 头发 tóufa, 胳膊 gēbo, 腿 tuǐ, 膝盖 xīgài, 脚趾 jiǎozhǐ, 拍拍手 pāipai shǒu, 饿 è, 渴 kě, 兴奋 xīngfèn, 铅笔 qiānbǐ, 蜡笔 làbǐ, 剪刀 jiǎndāo, 胶水 jiāoshuǐ, 学校 xuéxiào",
+     "slide": "1) Quét nhanh Unit 1–6 – nghe chọn tranh (6 từ): 叔叔 shūshu / 膝盖 xīgài / 兴奋 xīngfèn / 剪刀 jiǎndāo / 照片 zhàopiàn / 渴 kě2) Trò chơi 'Cô bảo' ôn cơ thể và cảm xúc: 摸摸你的肩膀！(Mōmo nǐ de jiānbǎng!) / 拍拍手！(Pāipai shǒu!) / 我很兴奋！(Wǒ hěn xīngfèn!) (con làm mặt háo hức) 3) Dự án 'Sách về con' – bước 1: con làm trang tiếng Trung và nói: 我叫___。我___岁。这是我的家庭照片。这是我的___。我有两只胳膊，两条腿。(Wǒ yǒu liǎng zhī gēbo, liǎng tiáo tuǐ.) 我很开心！ 4) [Cầu nối Anh – Trung] Trang 'My Book' hai tiếng (lồng vào bước 3, ~3 phút): cùng ảnh gia đình, con nói câu tiếng Anh với rối Leo rồi câu tiếng Trung với rối Xiaomei: This is my mother. ↔ 这是我妈妈。– giống: this ↔ 这, is ↔ 是, my mother ↔ 我妈妈; khác: tiếng Trung nói 我妈妈, không cần 的. 5) THI THỬ TRỌN ĐỀ YCT1 trên lớp (35 câu, ~35 phút, cô đọc phần nghe 2 lần và đi cùng từng con; hoạt động 1–2 ở trên rút còn 5 phút). 听力 Nghe phần 1 – nghe từ, ✓ / ✗: 1. 鱼 yú [con cá ✓] 2. 面条 miàntiáo [bánh mì ✗] 3. 雨伞 yǔsǎn [cái ô ✓] 4. 眼睛 yǎnjing [cái tai ✗] 5. 门 mén [cái cửa ✓]. Nghe phần 2 – nghe cụm, chọn 1/3 tranh: 6. 喝牛奶 hē niúnǎi [A uống sữa ✓ / B ăn mì / C uống nước ép] 7. 穿外套 chuān wàitào [A mặc áo khoác ✓ / B đội mũ / C cầm ô] 8. 八点 bā diǎn [A 8 giờ ✓ / B 3 giờ / C 12 giờ] 9. 红色的裙子 hóngsè de qúnzi [A váy đỏ ✓ / B váy xanh / C quần đỏ] 10. 三个苹果 sān gè píngguǒ [A 3 quả táo ✓ / B 1 quả / C 5 quả]. Nghe phần 3 – nghe câu, ✓ / ✗: 11. 我很渴。(Wǒ hěn kě.) [bạn uống nước ✓] 12. 猫在床下面。(Māo zài chuáng xiàmian.) [mèo trên giường ✗] 13. 今天下雪。(Jīntiān xià xuě.) [tuyết, người tuyết ✓] 14. 鸟不能飞。(Niǎo bù néng fēi.) [chim đang bay ✗] 15. 我爱我的妈妈。(Wǒ ài wǒ de māma.) [con ôm mẹ ✓]. Nghe phần 4 – hội thoại, chọn 1/3 tranh: 16. Leo：你几岁？Anna：我六岁。(Nǐ jǐ suì? Wǒ liù suì.) [A bánh 6 nến ✓ / B 7 / C 8] 17. Bông：今天星期几？Leo：今天星期天。(Jīntiān xīngqī jǐ? Jīntiān xīngqītiān.) [A Chủ nhật ✓ / B thứ Hai / C thứ Bảy] 18. Anna：你想吃什么？Xiaomei：我想吃冰淇淋。(Nǐ xiǎng chī shénme? Wǒ xiǎng chī bīngqílín.) [A kem ✓ / B kẹo / C mì] 19. Leo：他是谁？Bông：他是我叔叔。(Tā shì shéi? Tā shì wǒ shūshu.) [A chú ✓ / B ông / C anh trai] 20. Xiaomei：球在哪儿？Leo：球在椅子下面。(Qiú zài nǎr? Qiú zài yǐzi xiàmian.) [A dưới ghế ✓ / B trên ghế / C trên bàn]. 阅读 Đọc phần 1 – từ, ✓ / ✗: 21. 狗 gǒu [con chó ✓] 22. 鞋 xié [đôi tất ✗] 23. 船 chuán [con thuyền ✓] 24. 面包 miànbāo [bát mì ✗] 25. 雪人 xuěrén [người tuyết ✓]. Đọc phần 2 – câu, chọn tranh A–F: 26. 小朋友们一起排队。(Xiǎopéngyǒumen yìqǐ páiduì.) 27. 鸭子能游泳。(Yāzi néng yóuyǒng.) 28. 奶奶的眼镜是棕色的。(Nǎinai de yǎnjìng shì zōngsè de.) 29. 现在十二点。(Xiànzài shí'èr diǎn.) 30. 我们出去玩吧！(Wǒmen chūqù wán ba!) [Tranh: xếp hàng, vịt bơi, kính nâu, đồng hồ 12 giờ, các bạn chạy ra sân, cái kéo (thừa)]. Đọc phần 3 – hội thoại thiếu, chọn A–F: 31. 你叫什么名字？(Nǐ jiào shénme míngzi?) 32. 今天天气怎么样？(Jīntiān tiānqì zěnmeyàng?) 33. 你喜欢什么颜色？(Nǐ xǐhuan shénme yánsè?) 34. 现在几点？(Xiànzài jǐ diǎn?) 35. 你家有几个人？(Nǐ jiā yǒu jǐ gè rén?) — A 我叫Bông。(Wǒ jiào Bông.) B 今天下雨。(Jīntiān xià yǔ.) C 我喜欢绿色。(Wǒ xǐhuan lǜsè.) D 现在三点。(Xiànzài sān diǎn.) E 我家有四个人。(Wǒ jiā yǒu sì gè rén.) F 我很饿。(Wǒ hěn è.) [F nhiễu]. Cô chấm ngay, ghi câu sai vào Hộp ôn.",
+     "truyen": "我的书 — Bông做了一本书。“你们看，这是我的书！”第一页：“你们好！我叫Bông。我六岁。”第二页：“这是我的家庭照片。这是我妈妈，这是我叔叔，这是我的小表弟。”第三页：“我的头发很长。我很开心，也很兴奋！”老师说：“Bông，真棒！” (Wǒ de shū — Bông zuò le yì běn shū. “Nǐmen kàn, zhè shì wǒ de shū!” Dì-yī yè: “Nǐmen hǎo! Wǒ jiào Bông. Wǒ liù suì.” Dì-èr yè: “Zhè shì wǒ de jiātíng zhàopiàn. Zhè shì wǒ māma, zhè shì wǒ shūshu, zhè shì wǒ de xiǎo biǎodì.” Dì-sān yè: “Wǒ de tóufa hěn cháng. Wǒ hěn kāixīn, yě hěn xīngfèn!” Lǎoshī shuō: “Bông, zhēn bàng!”)",
+     "baihat": "Bài hát ôn toàn khóa (phần 1) – giai điệu 两只老虎 (cùng giai điệu Frère Jacques, cùng ý bài Good morning, teacher!): 老师早安，老师早安，你好吗？你好吗？我今天很高兴，我今天很高兴，谢谢您！谢谢您！(Lǎoshī zǎo'ān, lǎoshī zǎo'ān, nǐ hǎo ma? Nǐ hǎo ma? Wǒ jīntiān hěn gāoxìng, wǒ jīntiān hěn gāoxìng, xièxie nín! Xièxie nín!) + 头和肩膀膝脚趾 (cùng giai điệu, cùng ý Head, shoulders, knees and toes): 头和肩膀膝脚趾，膝脚趾，/ 头和肩膀膝脚趾，膝脚趾，/ 眼睛耳朵鼻子嘴，/ 头和肩膀膝脚趾，膝脚趾！(Tóu hé jiānbǎng xī jiǎozhǐ, xī jiǎozhǐ, / tóu hé jiānbǎng xī jiǎozhǐ, xī jiǎozhǐ, / yǎnjing ěrduo bízi zuǐ, / tóu hé jiānbǎng xī jiǎozhǐ, xī jiǎozhǐ!)"
+    }
+   }
+  },
+  {
+   "buoi": 56,
+   "unit": "",
+   "label_buoi": "Buổi dạy 56. Tuần 28 · Cuối khóa · Trình bày dự án, hồ sơ BRIDGE và ôn YCT1 (ôn Unit 7–12) · Thi nói mini YCT口试（初级）3 phần",
+   "web": [
+    {
+     "ngay": 111,
+     "label": "Ngày 111. Tuần 28 · Cuối khóa · Ôn Unit 7–9: Nhà, con vật, đồ ăn",
+     "en": {
+      "tu": "Ôn: door, lamp, window, apartment, flat, dining room, living room, boat, duck, frog, tail, yes, forest, hop, wing, polar bear, bread, cross, food, fruit, juice, noodles, candy, chips, fries, ice cream",
+      "cum": "in the living room / on the table / a polar bear in the snow / frogs can hop / orange juice and bread",
+      "cau": "Where is the cat? – The cat is on the sofa. / The ball is under the bed. / Ducks can swim. Frogs can hop. / Can a fish fly? – No, it can't. / I like eating noodles. / I don't like eating candy.",
+      "truyen": "Where Is the Puppy? — Nhan has got a pet puppy. 'Where is my puppy?' It isn't on the sofa. It isn't under the bed. Look! It's under the table! The puppy is hungry. 'Do you like eating bread?' 'Woof! Yes!' Nhan and the puppy eat bread. 'Mmm, nice!'",
+      "video": "Tìm YouTube: \"where is it in on under song for kids animals\""
+     },
+     "zh": {
+      "tu": "Ôn: 门 mén, 窗户 chuānghu, 船 chuán, 尾巴 wěiba, 哪儿 nǎr, 上 shàng, 下面 xiàmian, 沙发 shāfā, 桌子 zhuōzi, 好吃 hǎochī, 面条 miàntiáo, 糖果 tángguǒ, 客厅 kètīng, 青蛙 qīngwā, 鸭子 yāzi, 食物 shíwù, 水果 shuǐguǒ, 面包 miànbāo, 果汁 guǒzhī",
+      "cum": "在客厅 zài kètīng / 在桌子上 zài zhuōzi shang / 青蛙能跳 qīngwā néng tiào / 面包和果汁 miànbāo hé guǒzhī",
+      "cau": "[Cầu nối] Ducks can swim. ↔ 鸭子能游泳。(Yāzi néng yóuyǒng.) · giống: can ↔ 能, cùng thứ tự · khác: ducks có -s, 鸭子 không đổi / 猫在哪儿？(Māo zài nǎr?) – 猫在沙发上。(Māo zài shāfā shang.) / 球在床下面。(Qiú zài chuáng xiàmian.) / 鸭子能游泳，青蛙能跳。(Yāzi néng yóuyǒng, qīngwā néng tiào.) / 鱼能飞吗？(Yú néng fēi ma?) – 不能。(Bù néng.) / 我喜欢吃面条。(Wǒ xǐhuan chī miàntiáo.) / 我不喜欢吃糖果。(Wǒ bù xǐhuan chī tángguǒ.) / [YCT口试（初级）第一部分 听后重复 (mẫu): con nghe từng câu, nói lại 1 lần, ghi âm trên Trang luyện nói, ~5 phút] 听，说：我喜欢吃面条。(Wǒ xǐhuan chī miàntiáo.) / 球在床下面。(Qiú zài chuáng xiàmian.) / 鸭子能游泳。(Yāzi néng yóuyǒng.)",
+      "truyen": "小狗在哪儿？ — Nhan有一只小狗。“我的小狗在哪儿？”小狗不在沙发上。小狗不在床下面。看！小狗在桌子下面！小狗饿了。“你喜欢吃面包吗？”“汪！喜欢！”Nhan和小狗一起吃面包：“真好吃！” (Xiǎo gǒu zài nǎr? — Nhan yǒu yì zhī xiǎo gǒu. “Wǒ de xiǎo gǒu zài nǎr?” Xiǎo gǒu bú zài shāfā shang. Xiǎo gǒu bú zài chuáng xiàmian. Kàn! Xiǎo gǒu zài zhuōzi xiàmian! Xiǎo gǒu è le. “Nǐ xǐhuan chī miànbāo ma?” “Wāng! Xǐhuan!” Nhan hé xiǎo gǒu yìqǐ chī miànbāo: “Zhēn hǎochī!”)",
+      "video": "Tìm YouTube: \"在哪儿 儿歌 动物 能 飞\""
+     }
+    },
+    {
+     "ngay": 112,
+     "label": "Ngày 112. Tuần 28 · Cuối khóa · Ôn Unit 10–12: Thời tiết, màu sắc, số – giờ – ngày",
+     "en": {
+      "tu": "Ôn: today, come, smile, hat, coat, scarf, umbrella, snowman, go out, stay, go away, a lot, brown, gold, silver, shop, cool, bounce, they, count, person/people, shoe, word, let's, pick up, hooray, take a photo, use, for",
+      "cum": "wear a coat and a scarf / a brown hat / gold and silver / two shoes / take a photo",
+      "cau": "How's the weather today? – It's snowing. / What colour is it? – It's gold. / What colour are they? – They're brown. / How many people are there? – There are four people. / What time is it? – It's eight o'clock. / What day is it today? – It's Saturday.",
+      "truyen": "Snow Day Photo — 'How's the weather today?' 'It's snowing!' Leo wears a brown coat, a gold hat and a silver scarf. 'Let's go out and make a snowman!' Leo counts: one, two, three snowmen! 'Let's take a photo!' 'Hooray!'",
+      "video": "Tìm YouTube: \"weather colours numbers review song for kids\""
+     },
+     "zh": {
+      "tu": "Ôn: 我们 wǒmen, 去 qù, 出 chū, 穿 chuān, 雨伞 yǔsǎn, 雪人 xuěrén, 棕色 zōngsè, 金色 jīnsè, 银色 yínsè, 商店 shāngdiàn, 他们 tāmen, 个 gè, 点 diǎn, 现在 xiànzài, 星期 xīngqī, 拍照 pāizhào, 太好了 tài hǎo le | Nghe hiểu (có tranh): 围巾 wéijīn (= scarf), 堆 duī (= make)",
+      "cum": "穿外套 chuān wàitào / 银色的围巾 yínsè de wéijīn / 金色的帽子 jīnsè de màozi / 两只鞋 liǎng zhī xié / 我们拍照吧 wǒmen pāizhào ba",
+      "cau": "[Cầu nối] What day is it today? – It's Saturday. ↔ 今天星期几？——今天星期六。(Jīntiān xīngqī jǐ? — Jīntiān xīngqīliù.) · khác: tiếng Trung trả lời giữ nguyên câu hỏi, chỉ thay 几 bằng 六 / 今天天气怎么样？(Jīntiān tiānqì zěnmeyàng?) – 今天下雪。(Jīntiān xià xuě.) / 这是什么颜色？(Zhè shì shénme yánsè?) – 是金色。(Shì jīnsè.) / 是什么颜色的？(Shì shénme yánsè de?) – 是棕色的。(Shì zōngsè de.) / 有几个人？(Yǒu jǐ gè rén?) – 有四个人。(Yǒu sì gè rén.) / 现在几点？(Xiànzài jǐ diǎn?) – 现在八点。(Xiànzài bā diǎn.) / 今天星期几？(Jīntiān xīngqī jǐ?) – 今天星期六。(Jīntiān xīngqīliù.) / [YCT口试（初级）第二部分 听后回答 (mẫu): con nghe câu hỏi, trả lời ngắn, ghi âm trên Trang luyện nói, ~5 phút] 听问题，回答问题。(Tīng wèntí, huídá wèntí.) 1. 今天天气怎么样？(Jīntiān tiānqì zěnmeyàng?) 2. 你喜欢什么颜色？(Nǐ xǐhuan shénme yánsè?) 3. 现在几点？(Xiànzài jǐ diǎn?) / [Chuyển ngữ] Leo nói tiếng Anh: \"It's snowing. Let's go out!\" – con nói lại cho Xiaomei: 今天下雪。我们出去玩吧！(Jīntiān xià xuě. Wǒmen chūqù wán ba!)",
+      "truyen": "下雪了 — “今天天气怎么样？”“今天下雪！”Leo穿棕色的外套，戴金色的帽子和银色的围巾。“我们出去堆雪人吧！”Leo数：一个雪人，两个雪人，三个雪人！“我们拍照吧！”“太好了！” (Xià xuě le — “Jīntiān tiānqì zěnmeyàng?” “Jīntiān xià xuě!” Leo chuān zōngsè de wàitào, dài jīnsè de màozi hé yínsè de wéijīn. “Wǒmen chūqù duī xuěrén ba!” Leo shǔ: yí gè xuěrén, liǎng gè xuěrén, sān gè xuěrén! “Wǒmen pāizhào ba!” “Tài hǎo le!”)",
+      "video": "Tìm YouTube: \"天气 颜色 数字 复习 儿歌\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Ôn: window, living room, duck, frog, polar bear, food, fruit, juice, noodles, ice cream, coat, scarf, umbrella, snowman, brown, gold, silver, count, people, shoe, let's, take a photo, hooray",
+     "slide": "[Lời cô] Vào bài: \"Good morning, class! 同学们好！\" · Chuyển ý: \"Now, let's speak Chinese! 我们说中文吧！\" · Khen: \"Good job! 很好！\" · Nhắc lại câu mới buổi trước: \"Bắt đầu nào! Start! 开始！\" (lần cuối kèm tiếng Việt) 1) Quét nhanh Unit 7–12 – nhìn tranh chọn từ (6 câu): window / frog / noodles / umbrella / silver / shoe. 2) Dự án 'My Book' – bước 2: con làm 3 trang cuối và trình bày trước lớp: My home: This is my living room. / I like eating ___. I don't like eating ___. / My favourite colour is ___. Today is ___. It's ___ (weather). 3) [Chuyển ngữ] Hồ sơ BRIDGE – chuyển ngữ: rối Leo nói tiếng Anh, con nói lại tiếng Trung cho rối Xiaomei (4 câu): I like eating noodles. → 我喜欢吃面条。/ It's raining. → 今天下雨。/ It's brown. → 是棕色。/ It's eight o'clock. → 现在八点。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"It's twelve o'clock and I'm hungry. Let's eat noodles because they're yummy!\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 现在十二点，我饿了。我们吃面条吧，面条很好吃！ (Xiànzài shí'èr diǎn, wǒ è le. Wǒmen chī miàntiáo ba, miàntiáo hěn hǎochī!)",
+     "truyen": "Our Books — It's Saturday. The kids show their books. Leo: 'This is my living room. I like eating noodles. My favourite colour is brown.' Anna: 'I don't like eating candy. Today it's snowing. Let's make a snowman!' Mrs Brown counts the books: 'One, two, three... ten books! Let's take a photo!' 'Hooray!'",
+     "baihat": "Bài hát ôn toàn khóa (phần 2): I Like Food (Unit 9, câu 1) + How's the Weather? (Unit 10, câu 1) + Cool Colours (Unit 11, câu 1) + One, Two, Buckle My Shoe (Unit 12) – cả lớp biểu diễn khi trình bày dự án"
+    },
+    "zh": {
+     "flash": "Ôn: 窗户 chuānghu, 客厅 kètīng, 鸭子 yāzi, 青蛙 qīngwā, 北极熊 běijíxióng, 食物 shíwù, 水果 shuǐguǒ, 果汁 guǒzhī, 面条 miàntiáo, 冰淇淋 bīngqílín, 外套 wàitào, 围巾 wéijīn, 雨伞 yǔsǎn, 雪人 xuěrén, 棕色 zōngsè, 金色 jīnsè, 银色 yínsè, 数 shǔ, 人 rén, 鞋 xié, 拍照 pāizhào, 太好了 tài hǎo le",
+     "slide": "1) Quét nhanh Unit 7–12 dạng YCT1 – nghe từ, chọn tranh đúng (6 câu): 窗户 chuānghu / 青蛙 qīngwā / 面条 miàntiáo / 雨伞 yǔsǎn / 银色 yínsè / 鞋 xié.2) Ôn dạng YCT1 – Nghe câu hỏi, chọn tranh trả lời (3 câu): 你几岁？/ 今天星期几？/ 有几个苹果？3) Dự án 'Sách về con' – bước 2 và hồ sơ BRIDGE: con trình bày trang tiếng Trung: 这是我的客厅。我喜欢吃___。我不喜欢吃___。我最喜欢___色。今天___月___号，星期___。今天天气___。 4) [Cầu nối Anh – Trung] (lồng vào bước 3, ~3 phút) Mỗi con đặt trang tiếng Anh cạnh trang tiếng Trung của mình, chỉ cho bạn một cặp câu giống nghĩa và một điểm khác: I like eating noodles. ↔ 我喜欢吃面条。(cùng thứ tự; eating ↔ 吃 không đổi) / It's eight o'clock. ↔ 现在八点。(tiếng Trung có 现在). 5) THI NÓI MINI YCT口试（初级）đủ 3 phần (cô làm giám khảo, từng con ~5 phút, cả lớp làm tiếp dự án khi chờ): 第一部分 听后重复 (5 câu): 我叫Leo，我六岁。(Wǒ jiào Leo, wǒ liù suì.) / 我爱我的家人。(Wǒ ài wǒ de jiārén.) / 我很渴，我要喝水。(Wǒ hěn kě, wǒ yào hē shuǐ.) / 猫在桌子下面。(Māo zài zhuōzi xiàmian.) / 今天星期六。(Jīntiān xīngqīliù.) — 第二部分 听后回答 (3 câu): 你喜欢吃什么？(Nǐ xǐhuan chī shénme?) / 今天天气怎么样？(Jīntiān tiānqì zěnmeyàng?) / 现在几点？(Xiànzài jǐ diǎn?) — 第三部分 看图说话 (2 tranh, mỗi tranh 2–3 câu): Tranh 1: trời mưa, Anna cầm ô đỏ → 今天下雨。Anna有雨伞。雨伞是红色的。(Jīntiān xià yǔ. Anna yǒu yǔsǎn. Yǔsǎn shì hóngsè de.) Tranh 2: 12 giờ, Leo và bố ăn mì → 现在十二点。Leo和爸爸吃面条。面条很好吃。(Xiànzài shí'èr diǎn. Leo hé bàba chī miàntiáo. Miàntiáo hěn hǎochī.) Cô chấm theo thang 3 mức: nói đủ câu / nói được từ / chưa nói.",
+     "truyen": "我们的书 — 今天星期六。小朋友们给大家看自己的书。Leo说：“这是我的客厅。我喜欢吃面条。我最喜欢棕色。”Anna说：“我不喜欢吃糖果。今天下雪。我们堆雪人吧！”Brown老师数书：“一、二、三……十本书！我们拍照吧！”“太好了！” (Wǒmen de shū — Jīntiān xīngqīliù. Xiǎopéngyǒumen gěi dàjiā kàn zìjǐ de shū. Leo shuō: “Zhè shì wǒ de kètīng. Wǒ xǐhuan chī miàntiáo. Wǒ zuì xǐhuan zōngsè.” Anna shuō: “Wǒ bù xǐhuan chī tángguǒ. Jīntiān xià xuě. Wǒmen duī xuěrén ba!” Brown lǎoshī shǔ shū: “Yī, èr, sān… shí běn shū! Wǒmen pāizhào ba!” “Tài hǎo le!”)",
+     "baihat": "Bài hát ôn toàn khóa (phần 2), cùng giai điệu và cùng ý với từng bài tiếng Anh: 我爱食物 (Unit 9, đoạn 1, giai điệu 两只老虎 = Frère Jacques): 我爱苹果，我爱苹果，我喜欢！我喜欢！面包牛奶果汁，面包牛奶果汁，真好吃！真好吃！+ 今天天气 (Unit 10, câu 1, giai điệu Mary Had a Little Lamb): 今天天气怎么样？/ 怎么样？怎么样？/ 来玩来玩笑一笑，/ 今天是大晴天！+ 酷酷颜色 (Unit 11, câu 1, giai điệu London Bridge): 棕色金色银色的，/ 银色的，银色的，/ 棕色金色银色的，/ 酷酷颜色！+ vè 一二，穿鞋子 (Unit 12): 一二，穿鞋子；三四，敲敲门；五六，捡树枝；七八，摆整齐；九十，大母鸡！(Wǒ ài píngguǒ, wǒ ài píngguǒ, wǒ xǐhuan! Wǒ xǐhuan! Miànbāo niúnǎi guǒzhī, miànbāo niúnǎi guǒzhī, zhēn hǎochī! Zhēn hǎochī! / Jīntiān tiānqì zěnmeyàng? / Zěnmeyàng? Zěnmeyàng? / Lái wán lái wán xiào yi xiào, / Jīntiān shì dà qíngtiān! / Zōngsè jīnsè yínsè de, / yínsè de, yínsè de, / zōngsè jīnsè yínsè de, / kù kù yánsè! / Yī èr, chuān xiézi; sān sì, qiāoqiao mén; wǔ liù, jiǎn shùzhī; qī bā, bǎi zhěngqí; jiǔ shí, dà mǔjī!) – cả lớp biểu diễn khi trình bày dự án"
+    }
+   }
+  },
+  {
+   "buoi": 57,
+   "unit": "",
+   "label_buoi": "Buổi dạy 57. Tuần lễ hội 1 · Noel (đổi theo lịch thật: Trung thu / Halloween / Tết / 1-6) · Merry Christmas! – Cây thông và quà Noel",
+   "web": [
+    {
+     "ngay": 113,
+     "label": "Ngày 113. Tuần lễ hội 1 · Noel (đổi theo lịch thật: Trung thu / Halloween / Tết / 1-6) · Cây thông Noel",
+     "en": {
+      "tu": "Mới (nghe hiểu, không kiểm tra): Christmas, Christmas tree, star | Ôn: gold, silver, red, green, count",
+      "cum": "a big Christmas tree / a gold star / red and green",
+      "cau": "Merry Christmas! / Look at the Christmas tree! / It's got a gold star. / How many stars are there? – There are five stars.",
+      "truyen": "Our Christmas Tree — 'Look, Bông! A big Christmas tree!' says Dad. The tree is green. It's got red and silver balls and a gold star. Bông counts the stars: one, two, three, four, five! 'Merry Christmas!'",
+      "video": "Tìm YouTube: \"Christmas tree song for kids\""
+     },
+     "zh": {
+      "tu": "Mới (nghe hiểu, không kiểm tra): 圣诞节 Shèngdàn Jié (= Christmas), 圣诞树 shèngdànshù (= Christmas tree), 星星 xīngxing (= star) | Ôn: 金色 jīnsè, 银色 yínsè, 绿色 lǜsè, 红色 hóngsè, 数 shǔ",
+      "cum": "大圣诞树 dà shèngdànshù / 金色的星星 jīnsè de xīngxing / 圣诞快乐 Shèngdàn kuàilè",
+      "cau": "[Cầu nối] Look at the Christmas tree! ↔ 看，圣诞树！(Kàn, shèngdànshù!) · giống: Christmas tree ↔ 圣诞树 (圣诞 = Christmas, 树 = tree), ghép như tiếng Anh · khác: Merry Christmas! ↔ 圣诞快乐！ (chúc bằng 快乐, như 生日快乐) / 圣诞快乐！(Shèngdàn kuàilè!) / 看，圣诞树！(Kàn, shèngdànshù!) / 圣诞树是绿色的。(Shèngdànshù shì lǜsè de.) / 有几颗星星？(Yǒu jǐ kē xīngxing?) – 有五颗。(Yǒu wǔ kē.)",
+      "truyen": "我们的圣诞树 — 爸爸说：“Bông，你看！大圣诞树！”圣诞树是绿色的，有红色和银色的球，有金色的星星。Bông数星星：一、二、三、四、五！“圣诞快乐！” (Wǒmen de shèngdànshù — Bàba shuō: “Bông, nǐ kàn! Dà shèngdànshù!” Shèngdànshù shì lǜsè de, yǒu hóngsè hé yínsè de qiú, yǒu jīnsè de xīngxing. Bông shǔ xīngxing: yī, èr, sān, sì, wǔ! “Shèngdàn kuàilè!”)",
+      "video": "Tìm YouTube: \"圣诞树 儿歌 幼儿\""
+     }
+    },
+    {
+     "ngay": 114,
+     "label": "Ngày 114. Tuần lễ hội 1 · Noel (đổi theo lịch thật: Trung thu / Halloween / Tết / 1-6) · Quà của ông già Noel",
+     "en": {
+      "tu": "Mới (nghe hiểu, không kiểm tra): present, Father Christmas | Ôn: for, thank you, toy, shoe, sock",
+      "cum": "a present for you / a big present / Father Christmas",
+      "cau": "This present is for you! / Thank you, Father Christmas! / What's in the present? – It's a toy! / Merry Christmas!",
+      "truyen": "A Present for Leo — Father Christmas has got a lot of presents. 'This present is for you, Leo!' Leo opens the present. It's a red toy boat! 'Thank you, Father Christmas! Merry Christmas!'",
+      "video": "Tìm YouTube: \"Father Christmas presents story for kids\""
+     },
+     "zh": {
+      "tu": "Mới (nghe hiểu, không kiểm tra): 礼物 lǐwù (= present), 圣诞老人 Shèngdàn Lǎorén (= Father Christmas) | Ôn: 谢谢 xièxie, 玩具 wánjù, 很多 hěn duō, 红色 hóngsè, 船 chuán",
+      "cum": "很多礼物 hěn duō lǐwù / 圣诞老人 Shèngdàn Lǎorén / 谢谢你 xièxie nǐ",
+      "cau": "[Cầu nối] This present is for you! ↔ 这个礼物是给你的！(Zhège lǐwù shì gěi nǐ de!) · khác: for you ↔ 给你的, đứng cuối câu; Father Christmas ↔ 圣诞老人 (圣诞 = Christmas, 老人 = ông) / 圣诞老人有很多礼物。(Shèngdàn Lǎorén yǒu hěn duō lǐwù.) / 这个礼物是给你的！(Zhège lǐwù shì gěi nǐ de!) / 礼物里是什么？(Lǐwù li shì shénme?) – 是玩具！(Shì wánjù!) / 谢谢圣诞老人！(Xièxie Shèngdàn Lǎorén!) / 圣诞快乐！(Shèngdàn kuàilè!) / [Chuyển ngữ] Ông già Noel nói tiếng Anh: \"This present is for you!\" – con nói lại cho Xiaomei: 这个礼物是给你的！(Zhège lǐwù shì gěi nǐ de!)",
+      "truyen": "Leo的礼物 — 圣诞老人有很多礼物。“Leo，这个礼物是给你的！”Leo打开礼物：是一个红色的玩具船！“谢谢圣诞老人！圣诞快乐！” (Leo de lǐwù — Shèngdàn Lǎorén yǒu hěn duō lǐwù. “Leo, zhège lǐwù shì gěi nǐ de!” Leo dǎkāi lǐwù: shì yí gè hóngsè de wánjù chuán! “Xièxie Shèngdàn Lǎorén! Shèngdàn kuàilè!”)",
+      "video": "Tìm YouTube: \"圣诞老人 礼物 儿童 故事\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Nghe hiểu (không kiểm tra): Christmas, Christmas tree, star, present, Father Christmas | Ôn: gold, silver, red, green, count, for, toy",
+     "slide": "[Lời cô] Vào bài: \"Good morning, class! 同学们好！\" · Chuyển ý: \"Now, let's speak Chinese! 我们说中文吧！\" · Khen: \"Well done! 真棒！\" · Câu mới buổi này: \"Cả lớp cùng nói nào! Let's say it together! 我们一起说！\" · Câu đã quen (bỏ tiếng Việt): \"Read with me! 跟我读！\" / \"Start! 开始！\" 1) Nghe và chạm tranh (4 câu, không chấm điểm): Christmas tree / star / present / Father Christmas. 2) Trang trí cây thông trên slide: cô nói, con chạm để đặt đồ: a gold star / a red ball / a silver ball / a present under the tree. 3) Tặng quà cho bạn: This present is for you! – Thank you! Merry Christmas!",
+     "truyen": "Our Christmas Tree — 'Look, Bông! A big Christmas tree!' says Dad. The tree is green. It's got red and silver balls and a gold star. Bông counts the stars: one, two, three, four, five! Then Father Christmas has got a lot of presents. 'This present is for you, Bông!' 'Thank you, Father Christmas! Merry Christmas!'",
+     "baihat": "We Wish You a Merry Christmas – bài hát mừng Giáng sinh dân gian Anh (hết bản quyền), đoạn 1: We wish you a Merry Christmas, / We wish you a Merry Christmas, / We wish you a Merry Christmas / And a Happy New Year!"
+    },
+    "zh": {
+     "flash": "Nghe hiểu (không kiểm tra): 圣诞节 Shèngdàn Jié, 圣诞树 shèngdànshù, 星星 xīngxing, 礼物 lǐwù, 圣诞老人 Shèngdàn Lǎorén | Ôn: 金色 jīnsè, 银色 yínsè, 红色 hóngsè, 绿色 lǜsè, 数 shǔ, 给 gěi, 玩具 wánjù",
+     "slide": "1) Nghe và chạm tranh (4 câu, không chấm điểm): 圣诞树 / 星星 / 礼物 / 圣诞老人. 2) Trang trí cây thông trên slide: cô nói, con chạm để đặt đồ: 金色的星星 (jīnsè de xīngxing) / 红色的球 (hóngsè de qiú) / 银色的球 (yínsè de qiú) / 树下面的礼物 (shù xiàmian de lǐwù).3) Tặng quà: 这个礼物是给你的！(Zhège lǐwù shì gěi nǐ de!) – 谢谢！圣诞快乐！(Xièxie! Shèngdàn kuàilè!) 4) [Cầu nối Anh – Trung] Cùng tranh cây thông: rối Leo nói \"Christmas tree\", rối Xiaomei nói \"圣诞树\"; con ghép thẻ Christmas + tree ↔ 圣诞 + 树. 5) [Chuyển ngữ] Rối Leo tặng quà và nói tiếng Anh, con nói lại câu đó bằng tiếng Trung cho rối Xiaomei: This present is for you! → 这个礼物是给你的！ [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"This present is for you! It's under the Christmas tree.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 这个礼物是给你的！礼物在圣诞树下面。 (Zhège lǐwù shì gěi nǐ de! Lǐwù zài shèngdànshù xiàmian.)",
+     "truyen": "我们的圣诞树 — 爸爸说：“Bông，你看！大圣诞树！”圣诞树是绿色的，有红色和银色的球，有金色的星星。Bông数星星：一、二、三、四、五！圣诞老人有很多礼物。“Bông，这个礼物是给你的！”“谢谢圣诞老人！圣诞快乐！” (Wǒmen de shèngdànshù — Bàba shuō: “Bông, nǐ kàn! Dà shèngdànshù!” Shèngdànshù shì lǜsè de, yǒu hóngsè hé yínsè de qiú, yǒu jīnsè de xīngxing. Bông shǔ xīngxing: yī, èr, sān, sì, wǔ! Shèngdàn Lǎorén yǒu hěn duō lǐwù. “Bông, zhège lǐwù shì gěi nǐ de!” “Xièxie Shèngdàn Lǎorén! Shèngdàn kuàilè!”)",
+     "baihat": "我们祝你圣诞快乐 – giai điệu We Wish You a Merry Christmas (cùng giai điệu, cùng ý), đoạn 1: 我们祝你圣诞快乐，/ 我们祝你圣诞快乐，/ 我们祝你圣诞快乐，/ 还有新年快乐！(Wǒmen zhù nǐ Shèngdàn kuàilè, / wǒmen zhù nǐ Shèngdàn kuàilè, / wǒmen zhù nǐ Shèngdàn kuàilè, / hái yǒu xīnnián kuàilè!) Nghe thêm: 铃儿响叮当 (chỉ nghe, không chép lời)"
+    }
+   }
+  },
+  {
+   "buoi": 58,
+   "unit": "",
+   "label_buoi": "Buổi dạy 58. Tuần lễ hội 1 · Noel (đổi theo lịch thật: Trung thu / Halloween / Tết / 1-6) · Tuyết Noel và thiệp chúc mừng",
+   "web": [
+    {
+     "ngay": 115,
+     "label": "Ngày 115. Tuần lễ hội 1 · Noel (đổi theo lịch thật: Trung thu / Halloween / Tết / 1-6) · Tuyết rơi đêm Noel",
+     "en": {
+      "tu": "Mới (nghe hiểu, không kiểm tra): snow, Christmas card | Ôn: snowman, scarf, hat, cold, go out",
+      "cum": "a Christmas card / a snowman with a scarf / white snow",
+      "cau": "It's snowing on Christmas Day! / Let's make a snowman! / The snowman has got a red hat and a scarf. / This Christmas card is for Grandma.",
+      "truyen": "Christmas Snow — It's Christmas Day. It's cold and it's snowing! Anna and Xiaomei go out. They make a snowman with a red hat and a long scarf. Then Anna makes a Christmas card for Grandma. 'Merry Christmas, Grandma!'",
+      "video": "Tìm YouTube: \"Christmas snowman song for kids\""
+     },
+     "zh": {
+      "tu": "Mới (nghe hiểu, không kiểm tra): 圣诞卡 shèngdànkǎ (= Christmas card), 雪 xuě (= snow) | Ôn: 下雪 xià xuě, 雪人 xuěrén, 帽子 màozi, 冷 lěng, 出去 chūqù | Nghe hiểu: 围巾 wéijīn (= scarf), 堆 duī (= make)",
+      "cum": "圣诞卡 shèngdànkǎ / 白色的雪 báisè de xuě / 戴帽子和围巾的雪人 dài màozi hé wéijīn de xuěrén",
+      "cau": "[Cầu nối] This Christmas card is for Grandma. ↔ 这是给奶奶的圣诞卡。(Zhè shì gěi nǎinai de shèngdànkǎ.) · giống: card ↔ 卡 kǎ (từ mượn âm, nghe giống) · khác: for Grandma ↔ 给奶奶的, đặt trước 圣诞卡 / 圣诞节下雪了！(Shèngdàn Jié xià xuě le!) / 我们堆雪人吧！(Wǒmen duī xuěrén ba!) / 雪人戴红色的帽子和围巾。(Xuěrén dài hóngsè de màozi hé wéijīn.)",
+      "truyen": "圣诞节的雪 — 今天是圣诞节。今天很冷，下雪了！Anna和Xiaomei出去堆雪人。雪人戴红色的帽子和长长的围巾！Anna写圣诞卡：“奶奶，圣诞快乐！” (Shèngdàn Jié de xuě — Jīntiān shì Shèngdàn Jié. Jīntiān hěn lěng, xià xuě le! Anna hé Xiaomei chūqù duī xuěrén. Xuěrén dài hóngsè de màozi hé chángcháng de wéijīn! Anna xiě shèngdànkǎ: “Nǎinai, Shèngdàn kuàilè!”)",
+      "video": "Tìm YouTube: \"圣诞节 雪人 儿歌\""
+     }
+    },
+    {
+     "ngay": 116,
+     "label": "Ngày 116. Tuần lễ hội 1 · Noel (đổi theo lịch thật: Trung thu / Halloween / Tết / 1-6) · Phiên dịch nhí: Chúc mừng Giáng sinh",
+     "en": {
+      "tu": "Ôn (nghe hiểu, không kiểm tra): Christmas, Christmas tree, star, present, Father Christmas, Christmas card, snow",
+      "cum": "Merry Christmas / a present for you / a Christmas card",
+      "cau": "[Phiên dịch nhí] Merry Christmas! → 圣诞快乐！/ This present is for you. → 这是你的礼物。/ Thank you! → 谢谢！/ Look at the Christmas tree! → 看，圣诞树！",
+      "truyen": "Christmas Wishes — Leo and Xiaomei make Christmas cards. Leo writes 'Merry Christmas!' in English. Xiaomei writes '圣诞快乐！' in Chinese. They give the cards to their teacher. 'Thank you! Merry Christmas, kids!'",
+      "video": "Tìm YouTube: \"Merry Christmas in different languages kids\""
+     },
+     "zh": {
+      "tu": "Ôn (nghe hiểu, không kiểm tra): 圣诞节 Shèngdàn Jié, 圣诞树 shèngdànshù, 星星 xīngxing, 礼物 lǐwù, 圣诞老人 Shèngdàn Lǎorén, 圣诞卡 shèngdànkǎ",
+      "cum": "圣诞快乐 Shèngdàn kuàilè / 你的礼物 nǐ de lǐwù / 写圣诞卡 xiě shèngdànkǎ",
+      "cau": "[Cầu nối] Merry Christmas! ↔ 圣诞快乐！(Shèngdàn kuàilè!) · giống: cùng là lời chúc ngắn · khác: Thank you, teacher! ↔ 谢谢老师！ (tiếng Trung gọi người ngay sau 谢谢, không cần dấu phẩy) / [Phiên dịch nhí] 圣诞快乐！(Shèngdàn kuàilè!) → Merry Christmas! / 这是你的礼物。(Zhè shì nǐ de lǐwù.) → This present is for you. / 谢谢老师！(Xièxie lǎoshī!) → Thank you, teacher!",
+      "truyen": "圣诞快乐 — Leo和Xiaomei写圣诞卡。Leo写英语：“Merry Christmas!”Xiaomei写中文：“圣诞快乐！”Leo和Xiaomei给老师圣诞卡。老师说：“谢谢你们！圣诞快乐！” (Shèngdàn kuàilè — Leo hé Xiaomei xiě shèngdànkǎ. Leo xiě Yīngyǔ: “Merry Christmas!” Xiaomei xiě Zhōngwén: “Shèngdàn kuàilè!” Leo hé Xiaomei gěi lǎoshī shèngdànkǎ. Lǎoshī shuō: “Xièxie nǐmen! Shèngdàn kuàilè!”)",
+      "video": "Tìm YouTube: \"圣诞快乐 中文 儿童 祝福\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Nghe hiểu (không kiểm tra): Christmas, Christmas tree, star, present, Father Christmas, snow, Christmas card | Ôn: snowman, scarf, hat, cold, for",
+     "slide": "[Lời cô] Vào bài: \"Good morning, class! 同学们好！\" · Chuyển ý: \"Now, let's speak Chinese! 我们说中文吧！\" · Khen: \"Great! 太好了！\" · Nhắc lại câu mới buổi trước: \"Cả lớp cùng nói nào! Let's say it together! 我们一起说！\" (lần cuối kèm tiếng Việt) 1) Nghe và chạm tranh (4 câu, không chấm điểm): snow / Christmas card / snowman / present. 2) Làm thiệp Noel: con chọn màu và nói: My card is red and gold. This card is for ___. 3) [Chuyển ngữ] Phiên dịch nhí tặng thiệp (rối Leo nói tiếng Anh, con nói lại tiếng Trung cho rối Xiaomei): Merry Christmas! ↔ 圣诞快乐！/ This present is for you. ↔ 这是你的礼物。 [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"Merry Christmas, Grandma! This red and gold card is for you.\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 奶奶，圣诞快乐！这是给您的圣诞卡，是红色和金色的。 (Nǎinai, Shèngdàn kuàilè! Zhè shì gěi nín de shèngdànkǎ, shì hóngsè hé jīnsè de.)",
+     "truyen": "Christmas Snow — It's Christmas Day. It's cold and it's snowing! Anna and Xiaomei go out. They make a snowman with a red hat and a long scarf. 'Let's take a photo!' Then Anna makes a Christmas card for Grandma and Xiaomei makes a card for her teacher. 'Merry Christmas, Grandma! Merry Christmas, teacher!'",
+     "baihat": "We Wish You a Merry Christmas (đoạn 1, hát lại) + Jingle Bells – bài hát dân gian Mỹ 1857 (hết bản quyền), điệp khúc: Jingle bells, jingle bells, / Jingle all the way! / Oh what fun it is to ride / In a one-horse open sleigh, hey!"
+    },
+    "zh": {
+     "flash": "Nghe hiểu (không kiểm tra): 圣诞节 Shèngdàn Jié, 圣诞树 shèngdànshù, 星星 xīngxing, 礼物 lǐwù, 圣诞老人 Shèngdàn Lǎorén, 圣诞卡 shèngdànkǎ | Ôn: 下雪 xià xuě, 雪人 xuěrén, 帽子 màozi | Nghe hiểu: 雪 xuě, 围巾 wéijīn",
+     "slide": "1) Nghe và chạm tranh (4 câu, không chấm điểm): 雪 / 圣诞卡 / 雪人 / 礼物. 2) Làm thiệp Noel: con chọn màu và nói: 我的圣诞卡是红色和金色的。(Wǒ de shèngdànkǎ shì hóngsè hé jīnsè de.) 这是给___的圣诞卡。(Zhè shì gěi ___ de shèngdànkǎ.) 3) [Cầu nối Anh – Trung] Cùng tấm thiệp: rối Leo đọc \"Merry Christmas, Grandma!\", rối Xiaomei đọc \"奶奶，圣诞快乐！\"; con thấy tiếng Trung gọi người trước rồi mới chúc; card ↔ 卡 kǎ nghe giống.",
+     "truyen": "圣诞节的雪 — 今天是圣诞节。今天很冷，下雪了！Anna和Xiaomei出去堆雪人。雪人戴红色的帽子和长长的围巾！“我们拍照吧！”Anna写圣诞卡：“奶奶，圣诞快乐！”Xiaomei写圣诞卡：“老师，圣诞快乐！” (Shèngdàn Jié de xuě — Jīntiān shì Shèngdàn Jié. Jīntiān hěn lěng, xià xuě le! Anna hé Xiaomei chūqù duī xuěrén. Xuěrén dài hóngsè de màozi hé chángcháng de wéijīn! “Wǒmen pāizhào ba!” Anna xiě shèngdànkǎ: “Nǎinai, Shèngdàn kuàilè!” Xiaomei xiě shèngdànkǎ: “Lǎoshī, Shèngdàn kuàilè!”)",
+     "baihat": "我们祝你圣诞快乐 (đoạn 1, hát lại, cùng giai điệu We Wish You a Merry Christmas): 我们祝你圣诞快乐，/ 我们祝你圣诞快乐，/ 我们祝你圣诞快乐，/ 还有新年快乐！(Wǒmen zhù nǐ Shèngdàn kuàilè, / wǒmen zhù nǐ Shèngdàn kuàilè, / wǒmen zhù nǐ Shèngdàn kuàilè, / hái yǒu xīnnián kuàilè!) + 叮叮当 – giai điệu Jingle Bells (cùng giai điệu, lời mới cùng ý), điệp khúc: 叮叮当，叮叮当，/ 铃儿响叮当！/ 坐上雪橇多快乐，/ 一匹马儿拉着跑，嘿！(Dīng dīng dāng, dīng dīng dāng, / líng'ér xiǎng dīngdāng! / Zuò shang xuěqiāo duō kuàilè, / yì pǐ mǎr lā zhe pǎo, hēi!)"
+    }
+   }
+  },
+  {
+   "buoi": 59,
+   "unit": "",
+   "label_buoi": "Buổi dạy 59. Tuần lễ hội 2 · Tết Nguyên đán – 春节 (đổi theo lịch thật nếu cần) · Happy New Year! – Chúc Tết và lì xì",
+   "web": [
+    {
+     "ngay": 117,
+     "label": "Ngày 117. Tuần lễ hội 2 · Tết Nguyên đán – 春节 (đổi theo lịch thật nếu cần) · Chúc mừng năm mới",
+     "en": {
+      "tu": "Mới (nghe hiểu, không kiểm tra): Lunar New Year, Happy New Year | Ôn: family, grandmother, grandfather, red, gold",
+      "cum": "Happy New Year! / Lunar New Year / red and gold",
+      "cau": "Happy New Year! / It's Lunar New Year. / Happy New Year, Grandmother! / The house is red and gold.",
+      "truyen": "Happy New Year! — It's Lunar New Year. Bông's family goes to Grandmother's house. The house is red and gold. 'Happy New Year, Grandmother! Happy New Year, Grandfather!' Grandmother smiles. 'Happy New Year, Bông!'",
+      "video": "Tìm YouTube: \"Lunar New Year for kids Happy New Year song\""
+     },
+     "zh": {
+      "tu": "Mới (nghe hiểu, không kiểm tra): 春节 Chūn Jié (= Lunar New Year), 新年快乐 xīnnián kuàilè (= Happy New Year) | Ôn: 家人 jiārén, 奶奶 nǎinai, 爷爷 yéye, 红色 hóngsè, 金色 jīnsè",
+      "cum": "新年快乐 xīnnián kuàilè / 春节 Chūn Jié / 红色和金色 hóngsè hé jīnsè",
+      "cau": "[Cầu nối] Happy New Year, Grandmother! ↔ 奶奶，新年快乐！(Nǎinai, xīnnián kuàilè!) · giống: New Year ↔ 新年, Happy ↔ 快乐 · khác: thứ tự ngược: Happy + New Year ↔ 新年 + 快乐; tiếng Trung gọi người trước rồi chúc / 新年快乐！(Xīnnián kuàilè!) / 今天是春节。(Jīntiān shì Chūn Jié.) / 奶奶，新年快乐！(Nǎinai, xīnnián kuàilè!) / 爷爷，新年快乐！(Yéye, xīnnián kuàilè!)",
+      "truyen": "新年快乐 — 今天是春节。Bông和家人去奶奶家。奶奶家是红色和金色的。“奶奶，新年快乐！爷爷，新年快乐！”奶奶笑了：“Bông，新年快乐！” (Xīnnián kuàilè — Jīntiān shì Chūn Jié. Bông hé jiārén qù nǎinai jiā. Nǎinai jiā shì hóngsè hé jīnsè de. “Nǎinai, xīnnián kuàilè! Yéye, xīnnián kuàilè!” Nǎinai xiào le: “Bông, xīnnián kuàilè!”)",
+      "video": "Tìm YouTube: \"新年快乐 儿歌 春节\""
+     }
+    },
+    {
+     "ngay": 118,
+     "label": "Ngày 118. Tuần lễ hội 2 · Tết Nguyên đán – 春节 (đổi theo lịch thật nếu cần) · Bao lì xì đỏ",
+     "en": {
+      "tu": "Mới (nghe hiểu, không kiểm tra): red envelope, lucky money | Ôn: for, thank you, count, red",
+      "cum": "a red envelope / lucky money / for you",
+      "cau": "This red envelope is for you! / Thank you, Grandfather! / Let's count the red envelopes! / How many red envelopes are there? – There are three.",
+      "truyen": "The Red Envelopes — Grandfather has got three red envelopes. 'This red envelope is for Bông. This one is for Nhan, and this one is for the baby.' 'Thank you, Grandfather! Happy New Year!' Bông counts: one, two, three red envelopes!",
+      "video": "Tìm YouTube: \"red envelope lucky money Lunar New Year kids\""
+     },
+     "zh": {
+      "tu": "Mới (nghe hiểu, không kiểm tra): 红包 hóngbāo (= red envelope, lucky money), 新年快乐 xīnnián kuàilè (= Happy New Year) | Ôn: 谢谢 xièxie, 给 gěi, 数 shǔ, 几 jǐ, 爷爷 yéye",
+      "cum": "一个红包 yí gè hóngbāo / 新年快乐 xīnnián kuàilè / 谢谢爷爷 xièxie yéye",
+      "cau": "[Cầu nối] How many red envelopes are there? – There are three. ↔ 有几个红包？——有三个。(Yǒu jǐ gè hóngbāo? — Yǒu sān gè.) · giống: red ↔ 红 · khác: red envelope ↔ 红包 (红 + 包, chỉ hai tiếng); envelopes có -s, 红包 không đổi / 这个红包是给你的！(Zhège hóngbāo shì gěi nǐ de!) / 谢谢爷爷！(Xièxie yéye!) / 新年快乐！(Xīnnián kuàilè!) / 有几个红包？(Yǒu jǐ gè hóngbāo?) – 有三个。(Yǒu sān gè.) / [Chuyển ngữ] Ông nói tiếng Anh: \"This red envelope is for you!\" – con nói lại cho Xiaomei: 这个红包是给你的！(Zhège hóngbāo shì gěi nǐ de!)",
+      "truyen": "红包 — 爷爷有三个红包。“这个红包是给Bông的，这个是给Nhan的，这个是给宝宝的。”“谢谢爷爷！新年快乐！”Bông数：一、二、三，三个红包！ (Hóngbāo — Yéye yǒu sān gè hóngbāo. “Zhège hóngbāo shì gěi Bông de, zhège shì gěi Nhan de, zhège shì gěi bǎobao de.” “Xièxie yéye! Xīnnián kuàilè!” Bông shǔ: yī, èr, sān, sān gè hóngbāo!)",
+      "video": "Tìm YouTube: \"红包 新年快乐 儿歌\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Nghe hiểu (không kiểm tra): Lunar New Year, Happy New Year, red envelope, lucky money | Ôn: family, grandmother, grandfather, red, gold, count, for",
+     "slide": "[Lời cô] Vào bài: \"Good morning, class! 同学们好！\" · Chuyển ý: \"Now, let's speak Chinese! 我们说中文吧！\" · Khen: \"Good job! 很好！\" · Câu mới buổi này: \"Hẹn gặp lại nhé! See you next time! 下次见！\" · Câu đã quen (bỏ tiếng Việt): \"Start! 开始！\" / \"Let's say it together! 我们一起说！\" 1) Nghe và chạm tranh (4 câu, không chấm điểm): red envelope / Happy New Year / Grandmother / Grandfather. 2) Đóng vai chúc Tết ông bà: Happy New Year, Grandfather! – Happy New Year! This red envelope is for you. – Thank you! 3) Đếm bao lì xì trên slide: How many red envelopes are there? – There are ___.",
+     "truyen": "Happy New Year! — It's Lunar New Year. Bông's family goes to Grandmother's house. The house is red and gold. 'Happy New Year, Grandmother! Happy New Year, Grandfather!' Grandfather has got three red envelopes. 'This red envelope is for Bông. This one is for Nhan, and this one is for the baby.' 'Thank you, Grandfather!' Bông counts: one, two, three!",
+     "baihat": "Happy New Year – giai điệu Frère Jacques: Happy New Year! Happy New Year! / Red and gold! Red and gold! / Red envelopes for you, / Red envelopes for you, / Thank you! Thank you!"
+    },
+    "zh": {
+     "flash": "Nghe hiểu (không kiểm tra): 春节 Chūn Jié, 新年快乐 xīnnián kuàilè, 红包 hóngbāo | Ôn: 家人 jiārén, 奶奶 nǎinai, 爷爷 yéye, 红色 hóngsè, 金色 jīnsè, 数 shǔ, 给 gěi",
+     "slide": "1) Nghe và chạm tranh (4 câu, không chấm điểm): 红包 / 新年快乐 / 奶奶 / 爷爷. 2) Đóng vai chúc Tết: 爷爷，新年快乐！(Yéye, xīnnián kuàilè!) – 新年快乐！这个红包是给你的。(Xīnnián kuàilè! Zhège hóngbāo shì gěi nǐ de.) – 谢谢爷爷！(Xièxie yéye!) 3) Đếm: 有几个红包？– 有___个。 4) [Cầu nối Anh – Trung] Cùng tranh chúc Tết ông bà: rối Leo nói \"Happy New Year, Grandfather!\", rối Xiaomei nói \"爷爷，新年快乐！\"; con tìm: New Year ↔ 新年, Happy ↔ 快乐 (thứ tự ngược), tiếng Trung gọi ông trước. 5) [Chuyển ngữ] Rối Leo nói 1 câu, con nói lại bằng tiếng Trung cho rối Xiaomei: Thank you, Grandfather! → 谢谢爷爷！ [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"Happy New Year, Grandfather! Thank you for the red envelope!\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 爷爷，新年快乐！谢谢您的红包！ (Yéye, xīnnián kuàilè! Xièxie nín de hóngbāo!)",
+     "truyen": "新年快乐 — 今天是春节。Bông和家人去奶奶家。奶奶家是红色和金色的。“奶奶，新年快乐！爷爷，新年快乐！”爷爷有三个红包：“这个红包是给Bông的，这个是给Nhan的，这个是给宝宝的。”“谢谢爷爷！”Bông数：一、二、三！ (Xīnnián kuàilè — Jīntiān shì Chūn Jié. Bông hé jiārén qù nǎinai jiā. Nǎinai jiā shì hóngsè hé jīnsè de. “Nǎinai, xīnnián kuàilè! Yéye, xīnnián kuàilè!” Yéye yǒu sān gè hóngbāo: “Zhège hóngbāo shì gěi Bông de, zhège shì gěi Nhan de, zhège shì gěi bǎobao de.” “Xièxie yéye!” Bông shǔ: yī, èr, sān!)",
+     "baihat": "新年快乐 – giai điệu 两只老虎 (cùng giai điệu Frère Jacques của bài Happy New Year, cùng ý): 新年快乐，新年快乐，红和金，红和金。红包是给你的，红包是给你的，谢谢！谢谢！(Xīnnián kuàilè, xīnnián kuàilè, hóng hé jīn, hóng hé jīn. Hóngbāo shì gěi nǐ de, hóngbāo shì gěi nǐ de, xièxie! Xièxie!) Nghe thêm: 新年好 (chỉ nghe, không chép lời)"
+    }
+   }
+  },
+  {
+   "buoi": 60,
+   "unit": "",
+   "label_buoi": "Buổi dạy 60. Tuần lễ hội 2 · Tết Nguyên đán – 春节 (đổi theo lịch thật nếu cần) · Đèn lồng, pháo hoa và món ăn ngày Tết",
+   "web": [
+    {
+     "ngay": 119,
+     "label": "Ngày 119. Tuần lễ hội 2 · Tết Nguyên đán – 春节 (đổi theo lịch thật nếu cần) · Đèn lồng và pháo hoa",
+     "en": {
+      "tu": "Mới (nghe hiểu, không kiểm tra): lantern, fireworks | Ôn: red, yellow, gold, silver, go out, count",
+      "cum": "a red lantern / big fireworks / red and yellow lanterns",
+      "cau": "Look at the red lanterns! / How many lanterns are there? – There are four lanterns. / Look! Fireworks! / The fireworks are gold and silver.",
+      "truyen": "Lanterns and Fireworks — Leo and Dad go out. There are a lot of red lanterns. 'How many lanterns are there?' Leo counts: one, two, three, four! Then — boom! 'Look! Fireworks!' The fireworks are gold and silver. 'Hooray! Happy New Year!'",
+      "video": "Tìm YouTube: \"lanterns fireworks Lunar New Year for kids\""
+     },
+     "zh": {
+      "tu": "Mới (nghe hiểu, không kiểm tra): 灯笼 dēnglong (= lantern), 烟花 yānhuā (= fireworks) | Ôn: 红色 hóngsè, 金色 jīnsè, 银色 yínsè, 出去 chūqù, 个 gè",
+      "cum": "红灯笼 hóng dēnglong / 很多烟花 hěn duō yānhuā / 金色的烟花 jīnsè de yānhuā",
+      "cau": "[Cầu nối] The fireworks are gold and silver. ↔ 烟花是金色和银色的。(Yānhuā shì jīnsè hé yínsè de.) · giống: gold ↔ 金色, silver ↔ 银色, and ↔ 和 · khác: fireworks, lanterns có -s; 烟花, 灯笼 không đổi / 看，红灯笼！(Kàn, hóng dēnglong!) / 有几个灯笼？(Yǒu jǐ gè dēnglong?) – 有四个。(Yǒu sì gè.) / 看，烟花！(Kàn, yānhuā!) / 烟花是金色的。(Yānhuā shì jīnsè de.)",
+      "truyen": "灯笼和烟花 — Leo和爸爸出去玩。有很多红灯笼。“有几个灯笼？”Leo数：一、二、三、四！看，烟花！烟花是金色和银色的。“太好了！新年快乐！” (Dēnglong hé yānhuā — Leo hé bàba chūqù wán. Yǒu hěn duō hóng dēnglong. “Yǒu jǐ gè dēnglong?” Leo shǔ: yī, èr, sān, sì! Kàn, yānhuā! Yānhuā shì jīnsè hé yínsè de. “Tài hǎo le! Xīnnián kuàilè!”)",
+      "video": "Tìm YouTube: \"灯笼 烟花 春节 儿歌\""
+     }
+    },
+    {
+     "ngay": 120,
+     "label": "Ngày 120. Tuần lễ hội 2 · Tết Nguyên đán – 春节 (đổi theo lịch thật nếu cần) · Phiên dịch nhí: Bánh chưng và sủi cảo",
+     "en": {
+      "tu": "Mới (nghe hiểu, không kiểm tra): rice cake (chung cake), dumplings | Ôn: food, eat, like, nice, Happy New Year",
+      "cum": "a green rice cake / Chinese dumplings / Tết food",
+      "cau": "[Phiên dịch nhí] I like eating rice cake. → 我喜欢吃粽子。/ Do you like eating dumplings? → 你喜欢吃饺子吗？/ Happy New Year! → 新年快乐！",
+      "truyen": "Tết Food — At Bông's house there is a green rice cake for Tết. At Xiaomei's house there are Chinese dumplings for Spring Festival. 'Do you like eating dumplings, Bông?' 'Yes, I do! Do you like eating rice cake, Xiaomei?' 'Yes! It's nice!' 'Happy New Year!'",
+      "video": "Tìm YouTube: \"banh chung Vietnamese Tet for kids dumplings Chinese New Year\""
+     },
+     "zh": {
+      "tu": "Mới (nghe hiểu, không kiểm tra): 饺子 jiǎozi (= dumplings), 越南粽子 Yuènán zòngzi (= rice cake, chung cake) | Ôn: 食物 shíwù, 吃 chī, 喜欢 xǐhuan, 好吃 hǎochī, 新年快乐 xīnnián kuàilè",
+      "cum": "吃饺子 chī jiǎozi / 绿色的粽子 lǜsè de zòngzi / 春节的食物 Chūn Jié de shíwù",
+      "cau": "[Cầu nối] Do you like eating dumplings? ↔ 你喜欢吃饺子吗？(Nǐ xǐhuan chī jiǎozi ma?) · giống: like eating ↔ 喜欢吃 (như Unit 9) · khác: tiếng Anh đưa Do lên đầu, tiếng Trung thêm 吗 cuối câu / [Phiên dịch nhí] 你喜欢吃饺子吗？(Nǐ xǐhuan chī jiǎozi ma?) → Do you like eating dumplings? / 粽子真好吃！(Zòngzi zhēn hǎochī!) → The rice cake is nice! / 新年快乐！(Xīnnián kuàilè!) → Happy New Year!",
+      "truyen": "春节的食物 — Bông家有绿色的粽子。Xiaomei家有饺子。“Bông，你喜欢吃饺子吗？”“喜欢！Xiaomei，你喜欢吃粽子吗？”“喜欢！真好吃！”“新年快乐！” (Chūn Jié de shíwù — Bông jiā yǒu lǜsè de zòngzi. Xiaomei jiā yǒu jiǎozi. “Bông, nǐ xǐhuan chī jiǎozi ma?” “Xǐhuan! Xiaomei, nǐ xǐhuan chī zòngzi ma?” “Xǐhuan! Zhēn hǎochī!” “Xīnnián kuàilè!”)",
+      "video": "Tìm YouTube: \"包饺子 儿歌 春节\""
+     }
+    }
+   ],
+   "lop": {
+    "en": {
+     "flash": "Nghe hiểu (không kiểm tra): lantern, fireworks, rice cake, dumplings, Happy New Year | Ôn: red, gold, silver, count, food, like eating",
+     "slide": "[Lời cô] Vào bài: \"Good morning, class! 同学们好！\" · Chuyển ý: \"Now, let's speak Chinese! 我们说中文吧！\" · Khen: \"Well done! 真棒！\" · Nhắc lại câu mới buổi trước: \"Hẹn gặp lại nhé! See you next time! 下次见！\" (lần cuối kèm tiếng Việt) 1) Nghe và chạm tranh (4 câu, không chấm điểm): lantern / fireworks / rice cake / dumplings. 2) Tô màu đèn lồng theo lời cô: a red lantern / a yellow lantern / gold fireworks / silver fireworks. 3) [Chuyển ngữ] Phiên dịch nhí mâm cỗ Tết (rối Leo nói tiếng Anh, con nói lại tiếng Trung cho rối Xiaomei): Do you like eating dumplings? ↔ 你喜欢吃饺子吗？/ Happy New Year! ↔ 新年快乐！ [Bản nâng cao] (cho con trội tiếng Anh, ~3 phút) Rối Leo nói 2 câu liền nhau: \"Do you like eating dumplings? I love them, they're really yummy!\" → con nói lại cho rối Xiaomei bằng tiếng Trung. Mẫu: 你喜欢吃饺子吗？我很喜欢，饺子真好吃！ (Nǐ xǐhuan chī jiǎozi ma? Wǒ hěn xǐhuan, jiǎozi zhēn hǎochī!)",
+     "truyen": "Tết with Friends — It's Lunar New Year. Bông, Xiaomei and Leo go out. There are a lot of red lanterns. Leo counts: one, two, three, four lanterns! Look! Gold and silver fireworks! Then Bông's mother has got a green rice cake and Xiaomei's mother has got dumplings. 'Do you like eating dumplings, Bông?' 'Yes, I do! It's nice!' 'Happy New Year, everyone!'",
+     "baihat": "Happy New Year – giai điệu Frère Jacques (câu 2): Look, the lanterns! Look, the lanterns! / Red and gold! Red and gold! / Fireworks in the sky, / Fireworks in the sky, / Happy New Year! Happy New Year!"
+    },
+    "zh": {
+     "flash": "Nghe hiểu (không kiểm tra): 灯笼 dēnglong, 烟花 yānhuā, 粽子 zòngzi, 饺子 jiǎozi, 新年快乐 xīnnián kuàilè | Ôn: 红色 hóngsè, 金色 jīnsè, 银色 yínsè, 数 shǔ, 食物 shíwù, 喜欢吃 xǐhuan chī",
+     "slide": "1) Nghe và chạm tranh (4 câu, không chấm điểm): 灯笼 / 烟花 / 饺子 / 粽子. 2) Tô màu đèn lồng theo lời cô: 红灯笼 (hóng dēnglong) / 黄灯笼 (huáng dēnglong) / 金色的烟花 (jīnsè de yānhuā) / 银色的烟花 (yínsè de yānhuā).3) Mời bạn ăn: 你喜欢吃饺子吗？– 喜欢！真好吃！新年快乐！ 4) [Cầu nối Anh – Trung] Cùng tranh đèn lồng và pháo hoa: rối Leo nói \"four red lanterns\", rối Xiaomei nói \"四个红灯笼\"; con thấy lanterns có -s, 灯笼 không đổi mà thêm 个; gold ↔ 金色 như Unit 11.",
+     "truyen": "和朋友过春节 — 今天是春节。Bông、Xiaomei和Leo出去玩。有很多红灯笼。Leo数：一、二、三、四！看，烟花！金色和银色的烟花！Bông的妈妈有绿色的粽子，Xiaomei的妈妈有饺子。“Bông，你喜欢吃饺子吗？”“喜欢！真好吃！”“大家新年快乐！” (Hé péngyou guò Chūn Jié — Jīntiān shì Chūn Jié. Bông, Xiaomei hé Leo chūqù wán. Yǒu hěn duō hóng dēnglong. Leo shǔ: yī, èr, sān, sì! Kàn, yānhuā! Jīnsè hé yínsè de yānhuā! Bông de māma yǒu lǜsè de zòngzi, Xiaomei de māma yǒu jiǎozi. “Bông, nǐ xǐhuan chī jiǎozi ma?” “Xǐhuan! Zhēn hǎochī!” “Dàjiā xīnnián kuàilè!”)",
+     "baihat": "新年快乐 – giai điệu 两只老虎 (câu 2, cùng giai điệu, cùng ý câu 2 bài Happy New Year): 看看灯笼！看看灯笼！红和金，红和金。看天上的烟花，看天上的烟花，新年快乐！新年快乐！(Kànkan dēnglong! Kànkan dēnglong! Hóng hé jīn, hóng hé jīn. Kàn tiān shang de yānhuā, kàn tiān shang de yānhuā, xīnnián kuàilè! Xīnnián kuàilè!)"
+    }
+   }
+  }
+ ]
+}
