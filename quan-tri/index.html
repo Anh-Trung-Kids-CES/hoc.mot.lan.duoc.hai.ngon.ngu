@@ -225,6 +225,79 @@ td.l,th.l{text-align:left}
 .acc.off{opacity:.6}
 .mk-tam{font:700 24px/1.2 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.06em;background:var(--soft);border-radius:12px;padding:14px;text-align:center;margin:10px 0}
 
+/* ---------- Sổ tay ---------- */
+.st-hd{margin:16px 0 6px}
+.st-hd h2{font-size:21px;margin:0 0 4px}
+.st-meta{color:var(--muted);font-size:13px;margin:0}
+.st-meta a{color:var(--blue);font-weight:600}
+.st-jump{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 4px}
+.st-jump .chip{text-decoration:none;color:var(--ink);display:inline-flex;align-items:center}
+.st-sec{margin:26px 0 0}
+.st-sec>h3{font-size:16px;margin:0 0 4px}
+.st-sec>.hint{margin:0 0 12px}
+.st-map{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px}
+.st-lbl{font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+.st-flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:22px}
+.st-flow li{position:relative;display:flex}
+.st-flow li+li::before{content:"→";position:absolute;left:-17px;top:38px;color:var(--axis);font-weight:700}
+.st-node{flex:1;text-align:left;border:1px solid var(--line);background:var(--bg);border-radius:12px;padding:10px 10px 12px;display:flex;flex-direction:column;gap:4px;min-height:44px}
+.st-node:hover{border-color:var(--red)}
+.st-node .no{font-size:12px;color:var(--muted);font-weight:600}
+.st-node b{font-size:14px;line-height:1.3}
+.st-node small{font-size:12px;color:var(--muted);line-height:1.35}
+.st-pills{display:flex;flex-wrap:wrap;gap:4px;margin-top:2px}
+.st-pill{font-size:11px;font-weight:600;border-radius:999px;padding:2px 7px;background:var(--blue-soft);color:var(--blue)}
+.st-loop{margin:12px 0 16px;border:1px dashed var(--axis);border-radius:10px;padding:8px 12px;font-size:13px;color:var(--muted);text-align:center}
+.st-loop b{color:var(--ink)}
+.st-inner{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.st-inner .st-node{background:var(--red-soft);border-color:transparent}
+.st-base{margin-top:12px}
+.st-base .st-node{width:100%;background:var(--amber-soft);border-color:transparent;flex-direction:row;align-items:center;gap:10px;flex-wrap:wrap}
+.st-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-items:start}
+.st-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;scroll-margin-top:120px}
+.st-card:has(details[open]){grid-column:1/-1}
+.st-card.flash{outline:3px solid var(--focus);outline-offset:2px}
+.st-ch{display:flex;gap:10px;align-items:flex-start}
+.st-ic{font-size:22px;line-height:1;flex:none;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--soft)}
+.st-ch .no{font-size:12px;color:var(--muted);font-weight:600}
+.st-ch h4{margin:0;font-size:16px}
+.st-ch p{margin:2px 0 0;color:var(--muted);font-size:13px}
+.st-new{display:inline-block;margin-left:6px;font-size:11px;font-weight:700;border-radius:999px;padding:1px 7px;background:var(--green-soft);color:var(--green);vertical-align:middle}
+.st-card details{margin-top:10px}
+.st-card summary{cursor:pointer;font-weight:600;color:var(--blue);font-size:14px;min-height:36px;display:flex;align-items:center}
+.st-body{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 24px;margin-top:6px}
+.st-body .full{grid-column:1/-1}
+.st-body h5{margin:0 0 4px;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.03em}
+.st-body p,.st-body li{font-size:14px;margin:0}
+.st-body ol,.st-body ul{margin:0;padding-left:20px;display:grid;gap:4px}
+.st-body a{color:var(--blue);font-weight:600}
+.st-tpl{display:flex;flex-wrap:wrap;gap:6px}
+.st-tpl span{font-size:13px;border:1px solid var(--line);border-radius:999px;padding:3px 10px;background:var(--soft)}
+.st-search{display:flex;gap:8px;margin:0 0 10px}
+.st-search input{flex:1;border:1px solid var(--line);background:var(--card);border-radius:12px;padding:10px 12px;min-height:44px;font-size:16px}
+.st-faq{display:grid;gap:8px}
+.st-q{background:var(--card);border:1px solid var(--line);border-radius:12px}
+.st-q summary{cursor:pointer;padding:12px 14px;display:flex;gap:10px;align-items:baseline;list-style:none;min-height:44px}
+.st-q summary::-webkit-details-marker{display:none}
+.st-q summary::before{content:"＋";color:var(--muted);font-weight:700;flex:none}
+.st-q[open] summary::before{content:"－"}
+.st-q summary b{flex:1;font-size:15px}
+.st-tag{font-size:11px;font-weight:600;color:var(--muted);white-space:nowrap}
+.st-duyet{font-size:11px;font-weight:700;border-radius:999px;padding:1px 7px;background:var(--amber-soft);color:var(--amber);white-space:nowrap}
+.st-a{padding:0 14px 14px 36px}
+.st-a p{margin:0 0 10px;font-size:15px;white-space:pre-line}
+.st-log{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.st-log li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-size:14px}
+.st-log time{font-weight:700;margin-right:6px}
+.st-log .k{font-size:12px;font-weight:700;color:var(--blue);margin-right:6px}
+@media (max-width:860px){
+  .st-flow{grid-template-columns:1fr;gap:18px}
+  .st-flow li+li::before{content:"↓";left:16px;top:-18px}
+  .st-inner,.st-grid,.st-body{grid-template-columns:1fr}
+  .st-chips{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px}
+  .st-chips .chip{flex:none}
+}
+
 .toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--ink);color:var(--bg);border-radius:12px;padding:10px 16px;font-weight:600;z-index:90;max-width:calc(100% - 32px)}
 .loading{padding:60px 16px;text-align:center;color:var(--muted)}
 .fatal{max-width:560px;margin:60px auto;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px}
@@ -255,6 +328,7 @@ td.l,th.l{text-align:left}
     <button type="button" data-t="viec" class="on">Việc hôm nay <span class="n" id="nViec">0</span></button>
     <button type="button" data-t="ht">Học thử <span class="n ht" id="nHt">0</span></button>
     <button type="button" data-t="gd">Gia đình</button>
+    <button type="button" data-t="st">Sổ tay</button>
     <button type="button" data-t="bc" class="ql" hidden>Báo cáo</button>
     <button type="button" data-t="tk" class="ql" hidden>Tài khoản</button>
   </nav>
@@ -401,7 +475,7 @@ function render(){
   $('#nViec').textContent=D.gd.reduce((a,f)=>a+f.viec.length,0);
   $('#nHt').textContent=D.gd.filter(f=>f.hocThu).length;
   Object.values(CH).forEach(c=>c.destroy()); CH={};
-  if(TAB==='viec') rViec(); else if(TAB==='ht') rHt(); else if(TAB==='gd') rGd(); else if(TAB==='bc') rBc(); else rTk();
+  if(TAB==='viec') rViec(); else if(TAB==='ht') rHt(); else if(TAB==='gd') rGd(); else if(TAB==='st') rSt(); else if(TAB==='bc') rBc(); else rTk();
 }
 function aiPicker(){ if(!D.laQL) return '';
   const names=[...new Set(D.gd.map(f=>f.nguoiHoTro||'(chưa giao)'))].sort();
@@ -938,15 +1012,112 @@ async function save(f){
   catch(e){ b.disabled=false; b.textContent='Lưu'; if(!e.silent) say(e.message); }
 }
 
+/* ---------- Sổ tay chăm sóc phụ huynh (dữ liệu: so-tay.json, cập nhật 18:00 mỗi ngày) ---------- */
+let ST=null, ST_ERR='', ST_Q='', ST_B='', ST_OPEN='';
+async function taiSoTay(){
+  try{ const r=await fetch('so-tay.json?t='+Date.now(),{cache:'no-store'}); if(!r.ok) throw new Error(r.status); ST=await r.json(); ST_ERR=''; }
+  catch(e){ ST_ERR='Chưa tải được sổ tay. Bấm Tải lại hoặc thử lại sau.'; }
+}
+function stBlock(id){ return (ST.blocks||[]).find(b=>b.id===id); }
+function stMoi(id){ const lim=Date.now()-3*864e5;
+  return (ST.nhatKy||[]).some(n=>(n.blocks||[]).includes(id) && Date.parse(n.ngay+'T23:59:59+07:00')>=lim); }
+function stNode(id, cls){ const b=stBlock(id); if(!b) return '';
+  return `<button type="button" class="st-node ${cls||''}" data-stgo="${esc(b.id)}" aria-label="Mở block ${esc(b.ten)}">
+    <span class="no">${b.so?'Block '+b.so:'Nền tảng'} ${b.icon||''}</span><b>${esc(b.ten)}</b><small>${esc(b.tom||'')}</small>
+    ${(b.trangThai||[]).length?`<span class="st-pills">${b.trangThai.map(t=>`<span class="st-pill">${esc(t)}</span>`).join('')}</span>`:''}</button>`; }
+function stList(arr, tag){ return arr&&arr.length?`<${tag}>${arr.map(x=>`<li>${esc(x)}</li>`).join('')}</${tag}>`:''; }
+function stCard(b){
+  const nFaq=(ST.faq||[]).filter(f=>f.b===b.id).length;
+  const tpl=(b.tinMau||[]).map(k=>((D&&D.tinMau&&D.tinMau[k])||{}).ten||k);
+  const open=ST_OPEN===b.id;
+  return `<article class="st-card" id="st-${esc(b.id)}">
+    <div class="st-ch"><span class="st-ic" aria-hidden="true">${b.icon||'•'}</span><div>
+      <span class="no">${b.so?'Block '+b.so:'Nền tảng'} · ${b.loai==='noi-bo'?'Nội bộ':b.loai==='nen'?'Áp dụng mọi block':'Phụ huynh thấy'}</span>
+      <h4>${esc(b.ten)}${stMoi(b.id)?'<span class="st-new">Mới cập nhật</span>':''}</h4><p>${esc(b.tom||'')}</p></div></div>
+    <details data-stcard="${esc(b.id)}" ${open?'open':''}><summary>Xem chi tiết</summary><div class="st-body">
+      <div class="full"><h5>Mục tiêu</h5><p>${esc(b.mucTieu||'')}</p></div>
+      <div><h5>Ai phụ trách</h5><p>${esc(b.phuTrach||'')}</p></div>
+      <div><h5>Cam kết thời gian</h5><p>${esc(b.camKet||'')}</p></div>
+      ${b.lam&&b.lam.length?`<div class="full"><h5>Việc cần làm</h5>${stList(b.lam,'ol')}</div>`:''}
+      ${b.luuY&&b.luuY.length?`<div class="full"><h5>Lưu ý</h5>${stList(b.luuY,'ul')}</div>`:''}
+      ${b.chuyenCap?`<div><h5>Chuyển cấp</h5><p>${esc(b.chuyenCap)}</p></div>`:''}
+      ${(b.trangThai||[]).length?`<div><h5>Trạng thái gia đình</h5><p>${b.trangThai.map(esc).join(' · ')}</p></div>`:''}
+      ${tpl.length?`<div class="full"><h5>Tin mẫu Zalo dùng ở block này</h5><div class="st-tpl">${tpl.map(t=>`<span>📋 ${esc(t)}</span>`).join('')}</div><p class="hint">Mở hồ sơ gia đình, bấm 📋 Tin mẫu để có tin đã điền sẵn tên con.</p></div>`:''}
+      ${(b.lienKet||[]).length?`<div class="full"><h5>Liên kết</h5><ul>${b.lienKet.map(l=>`<li><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.ten)}</a></li>`).join('')}</ul></div>`:''}
+      ${nFaq?`<div class="full"><button class="act" type="button" data-stfaq="${esc(b.id)}">❓ ${nFaq} câu hỏi thường gặp của block này</button></div>`:''}
+    </div></details></article>`;
+}
+function stNorm(s){ return String(s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/đ/g,'d'); }
+function stFaqHtml(){
+  const ws=stNorm(ST_Q).split(/\s+/).filter(Boolean);
+  const list=(ST.faq||[]).filter(f=>{ if(ST_B&&f.b!==ST_B) return false; const t=stNorm(f.h+' '+f.d+' '+((stBlock(f.b)||{}).ten||'')); return ws.every(w=>t.includes(w)); });
+  if(!list.length) return `<div class="empty"><b>Chưa có câu hỏi phù hợp</b>Thử từ khóa khác, hoặc ghi câu hỏi mới vào phần Ghi chú của hồ sơ để bổ sung sổ tay.</div>`;
+  return list.map(f=>{ const b=stBlock(f.b)||{}; const i=(ST.faq||[]).indexOf(f);
+    return `<details class="st-q"><summary><b>${esc(f.h)}</b>${f.duyet?'<span class="st-duyet">Cần Quản lý duyệt</span>':''}<span class="st-tag">${esc(b.ten||'')}</span></summary>
+      <div class="st-a"><p>${esc(f.d)}</p><button class="act" type="button" data-stcp="${i}">📄 Chép câu trả lời</button></div></details>`; }).join('');
+}
+function stBindFaq(){
+  document.querySelectorAll('[data-stcp]').forEach(b=>b.onclick=()=>copyText(ST.faq[+b.dataset.stcp].d,'Đã chép câu trả lời. Nhớ thay tên con trước khi gửi.'));
+}
+function stRefreshFaq(){
+  $('#stFaqList').innerHTML=stFaqHtml(); stBindFaq();
+  document.querySelectorAll('[data-stb]').forEach(c=>c.classList.toggle('on',c.dataset.stb===ST_B));
+}
+async function rSt(){
+  const m=$('#main');
+  if(!ST && !ST_ERR){ m.innerHTML='<div class="loading">Đang tải sổ tay…</div>'; await taiSoTay(); if(TAB!=='st') return; }
+  if(!ST){ m.innerHTML=`<div class="fatal"><b>Sổ tay</b>${esc(ST_ERR)}</div>`; ST_ERR=''; return; }
+  const sd=ST.soDo||{}, cap=ST.capNhat?new Date(ST.capNhat):null;
+  const counts={}; (ST.faq||[]).forEach(f=>counts[f.b]=(counts[f.b]||0)+1);
+  const nhatKy=(ST.nhatKy||[]).slice().sort((a,b)=>String(b.ngay).localeCompare(String(a.ngay)));
+  m.innerHTML=`<section class="st-hd"><h2>Sổ tay chăm sóc phụ huynh</h2>
+    <p class="st-meta">Cập nhật ${cap?esc(cap.toLocaleString('vi-VN',{hour:'2-digit',minute:'2-digit',day:'2-digit',month:'2-digit',year:'numeric'})):'—'} · Tự rà soát lúc 18:00 mỗi ngày khi dự án có thay đổi${ST.nguonDayDu?` · <a href="${esc(ST.nguonDayDu)}" target="_blank" rel="noopener">Bản đầy đủ</a>`:''}</p>
+    <div class="st-jump"><a class="chip" href="#stMap">Sơ đồ tổng quan</a><a class="chip" href="#stBlocks">Các block</a><a class="chip" href="#stFaq">Câu hỏi thường gặp <span class="c">${(ST.faq||[]).length}</span></a><a class="chip" href="#stLog">Nhật ký thay đổi</a></div></section>
+
+  <section class="st-sec" id="stMap"><h3>Sơ đồ tổng quan</h3><p class="hint">Bấm vào một ô để mở block tương ứng. Nhãn xanh là trạng thái gia đình trên trang quản trị.</p>
+    <div class="st-map">
+      <p class="st-lbl">Hành trình của phụ huynh</p>
+      <ol class="st-flow">${(sd.hanhTrinh||[]).map(id=>`<li>${stNode(id)}</li>`).join('')}</ol>
+      ${sd.vong?`<div class="st-loop">↺ <b>${esc(sd.vong)}</b></div>`:''}
+      <p class="st-lbl">Đội hỗ trợ vận hành phía sau</p>
+      <div class="st-inner">${(sd.noiBo||[]).map(id=>stNode(id)).join('')}</div>
+      ${sd.nen?`<div class="st-base">${stNode(sd.nen)}</div>`:''}
+    </div></section>
+
+  <section class="st-sec" id="stBlocks"><h3>Các block</h3><p class="hint">Mỗi block là một điểm chạm hoặc một mảng việc: mục tiêu, người phụ trách, cam kết thời gian, việc cần làm, lưu ý, tin mẫu.</p>
+    <div class="st-grid">${(ST.blocks||[]).slice().sort((a,b)=>a.so-b.so).map(stCard).join('')}</div></section>
+
+  <section class="st-sec" id="stFaq"><h3>Câu hỏi phụ huynh hay gặp</h3><p class="hint">Câu trả lời viết sẵn để chép gửi Zalo. Câu có nhãn vàng cần hỏi Quản lý trước khi trả lời chắc chắn.</p>
+    <div class="st-search"><input id="stQ" type="search" placeholder="Tìm: hoàn phí, micro, Zoom, xếp hạng…" aria-label="Tìm câu hỏi" value="${esc(ST_Q)}"></div>
+    <div class="bar st-chips" style="margin-top:0"><button class="chip ${!ST_B?'on':''}" type="button" data-stb="">Tất cả<span class="c">${(ST.faq||[]).length}</span></button>
+      ${(ST.blocks||[]).filter(b=>counts[b.id]).map(b=>`<button class="chip ${ST_B===b.id?'on':''}" type="button" data-stb="${esc(b.id)}">${esc(b.ten)}<span class="c">${counts[b.id]}</span></button>`).join('')}</div>
+    <div class="st-faq" id="stFaqList"></div></section>
+
+  <section class="st-sec" id="stLog"><h3>Nhật ký thay đổi</h3><p class="hint">Mỗi ngày lúc 18:00, sổ tay được rà lại theo thay đổi trong ngày của hệ thống và các điểm chạm với phụ huynh. Ngày không có thay đổi thì không ghi.</p>
+    <ul class="st-log">${nhatKy.map(n=>`<li><time>${esc(n.ngay.split('-').reverse().join('/'))}</time><span class="k">${esc(n.loai||'')}</span>${esc(n.noiDung)}${(n.blocks||[]).length?` <span class="st-tag">· ${n.blocks.map(id=>esc((stBlock(id)||{}).ten||id)).join(', ')}</span>`:''}</li>`).join('')}</ul></section>`;
+  stRefreshFaq();
+  m.querySelectorAll('[data-stgo]').forEach(b=>b.onclick=()=>stGo(b.dataset.stgo));
+  m.querySelectorAll('[data-stcard]').forEach(d=>d.ontoggle=()=>{ if(d.open) ST_OPEN=d.dataset.stcard; else if(ST_OPEN===d.dataset.stcard) ST_OPEN=''; });
+  m.querySelectorAll('[data-stfaq]').forEach(b=>b.onclick=()=>{ ST_B=b.dataset.stfaq; ST_Q=''; $('#stQ').value=''; stRefreshFaq(); $('#stFaq').scrollIntoView({behavior:'smooth'}); });
+  m.querySelectorAll('[data-stb]').forEach(c=>c.onclick=()=>{ ST_B=c.dataset.stb; stRefreshFaq(); });
+  m.querySelectorAll('.st-jump a').forEach(a=>a.onclick=e=>{ e.preventDefault(); const t=document.querySelector(a.getAttribute('href')); if(t) t.scrollIntoView({behavior:'smooth'}); });
+  $('#stQ').oninput=e=>{ ST_Q=e.target.value; stRefreshFaq(); };
+}
+function stGo(id){
+  const c=document.getElementById('st-'+id); if(!c) return;
+  const d=c.querySelector('details'); if(d) d.open=true; ST_OPEN=id;
+  c.scrollIntoView({behavior:'smooth',block:'start'}); c.classList.add('flash'); setTimeout(()=>c.classList.remove('flash'),1600);
+}
+
 /* ---------- khung ---------- */
 $('#tabs').onclick=e=>{ const b=e.target.closest('button'); if(!b||!D) return; TAB=b.dataset.t; render(); window.scrollTo({top:0}); };
-$('#reload').onclick=()=>{ TK=null; load(); };
+$('#reload').onclick=()=>{ TK=null; if(TAB==='st'){ ST=null; } load(); };
 $('#meBtn').onclick=e=>{ e.stopPropagation(); const p=$('#mePop'); p.hidden=!p.hidden; $('#meBtn').setAttribute('aria-expanded',String(!p.hidden)); };
 document.addEventListener('click',e=>{ if(!e.target.closest('.menu')) $('#mePop').hidden=true; });
 document.addEventListener('keydown',e=>{ if(e.key==='Escape'){ $('#mePop').hidden=true; if(OPEN) closeFam(); else if($('#sheetHost').innerHTML && !$('#fMk')) $('#sheetHost').innerHTML=''; } });
 $('#mDoiMk').onclick=()=>{ $('#mePop').hidden=true; showDoiMk(false); };
 $('#mThoat').onclick=async()=>{ $('#mePop').hidden=true; try{ await api('dangXuat'); }catch(e){} store.clear(); D=null; TK=null; showLogin(); };
-setInterval(()=>{ if(D && !OPEN && !$('#sheetHost').innerHTML && document.visibilityState==='visible' && TAB!=='tk') load(); }, 120000);
+setInterval(()=>{ if(D && !OPEN && !$('#sheetHost').innerHTML && document.visibilityState==='visible' && TAB!=='tk' && TAB!=='st') load(); }, 120000);
 setInterval(()=>{ if(D && !OPEN && !$('#sheetHost').innerHTML && TAB==='viec') rViec(); }, 30000);
 batDau();
 </script>

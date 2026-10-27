@@ -21,6 +21,14 @@
 - Bạn Vận hành **không cần quyền mở Sheet** nữa. Chỉ Quản lý giữ quyền Sheet, vì ai mở Sheet cũng đọc được Mã thiết lập.
 - Nhập sai mật khẩu 6 lần: tài khoản tạm chặn 15 phút. Phiên đăng nhập hết sau 6 giờ không dùng.
 
+## Sổ tay chăm sóc phụ huynh (tab Sổ tay, cả đội xem được)
+- Nội dung nằm ở tệp `quan-tri/so-tay.json`: 10 block (điểm chạm và mảng việc nội bộ), sơ đồ tổng quan, câu hỏi thường gặp kèm câu trả lời mẫu, nhật ký thay đổi.
+- Tab Sổ tay tự đọc tệp này; sửa tệp và đẩy lên GitHub là trang đổi theo sau 1–2 phút. Không cần cập nhật máy chủ Apps Script.
+- **Cập nhật tự động 18:00 mỗi ngày (giờ Việt Nam):** một việc định kỳ rà các thay đổi trong ngày (mã nguồn web học, trang quản trị, trang ưu đãi, quyết định mới của dự án). Có thay đổi ảnh hưởng tới hệ thống hoặc điểm chạm với phụ huynh thì sửa block, câu hỏi liên quan và ghi một dòng vào Nhật ký thay đổi; không có thì không sửa gì.
+- Câu hỏi có `"duyet": true` hiện nhãn vàng "Cần Quản lý duyệt": Quản lý chốt câu trả lời rồi bỏ nhãn.
+- Tệp này công khai trên GitHub: **không ghi tên, số điện thoại hay dữ liệu gia đình** vào đây.
+- Bản dài để đọc và bình luận: https://claude.ai/artifact/Nri2gNd4ZaoDVnmR95izMS
+
 ## Báo cáo (chỉ Quản lý)
 Số đóng phí và doanh thu, đăng ký, bé học hôm nay, bé nghỉ từ 2 ngày; tuyển sinh theo ngày; số bé học mỗi ngày; phễu chuyển đổi; hiệu quả theo mã CTV; tiến độ 21 ngày theo nhóm; phân bố số buổi đã học; danh sách bé cần nhắc; đăng ký theo nhóm, kênh biết đến, tuổi; gia đình theo trạng thái; đội vận hành. Lọc 7 ngày / 14 ngày / cả đợt, mỗi biểu đồ có "Xem dạng bảng", các bảng chính tải được CSV.
 

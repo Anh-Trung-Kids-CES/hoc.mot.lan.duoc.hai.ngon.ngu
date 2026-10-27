@@ -1,0 +1,337 @@
+{
+  "phienBan": 1,
+  "capNhat": "2026-10-27T15:30:00+07:00",
+  "ghiChu": "Sổ tay chăm sóc phụ huynh hiển thị ở tab Sổ tay của trang quản trị. Tệp này công khai trên GitHub: KHÔNG ghi tên, số điện thoại hay bất kỳ dữ liệu gia đình nào vào đây.",
+  "nguonDayDu": "https://claude.ai/artifact/Nri2gNd4ZaoDVnmR95izMS",
+  "soDo": {
+    "hanhTrinh": ["cong-dong", "dang-ky", "kich-hoat", "web-hoc", "su-kien", "sau-thu-thach"],
+    "noiBo": ["quan-tri", "lang-nghe", "khieu-nai"],
+    "nen": "nguyen-tac",
+    "vong": "Bố mẹ chia sẻ hành trình của con trong nhóm → con được tính hoàn thành thử thách"
+  },
+  "blocks": [
+    {
+      "id": "nguyen-tac",
+      "so": 0,
+      "ten": "Nguyên tắc chung",
+      "icon": "🧭",
+      "loai": "nen",
+      "tom": "Người có giải pháp, không phải người muốn bán",
+      "trangThai": [],
+      "mucTieu": "Mọi tin nhắn, bài đăng, cuộc gọi đều mở đầu bằng điều phụ huynh nhận được: một giải pháp, một cách học thông minh, hoặc thông tin giúp chuẩn bị cho con.",
+      "phuTrach": "Cả đội",
+      "camKet": "Giờ làm việc 8:00–21:00. Việc \"gọi trong 1 giờ\" phát sinh ngoài giờ được dời sang 9:00 sáng hôm sau.",
+      "lam": [
+        "Xưng \"em\" hoặc \"CES\", gọi phụ huynh là \"anh/chị\" hoặc \"ba mẹ bé + tên con\".",
+        "Trả lời theo 4 bước: Ghi nhận → Trả lời thẳng → Hướng dẫn cụ thể → Hẹn bước tiếp theo.",
+        "Khen cụ thể việc con làm được: \"Bé An hôm nay tự nói được 3 từ tiếng Trung\".",
+        "Nói vai trò của ba mẹ thật đơn giản: mở bài đúng giờ, khen con khi con làm và khi con xong.",
+        "Nhắc nguyên tắc 3 KHÔNG khi phù hợp: không ép con nói, không sửa lỗi của con, không so sánh con."
+      ],
+      "luuY": [
+        "Không dùng thuật ngữ chuyên môn với phụ huynh (translanguaging, BRIDGE, JTBD…).",
+        "Không gây áp lực mua: không \"chỉ còn hôm nay\", không gọi dồn dập.",
+        "Không đăng ảnh, video, họ tên đầy đủ của con khi chưa có đồng ý của ba mẹ.",
+        "Không xin số điện thoại, địa chỉ trong nhóm chung; chuyển sang nhắn riêng.",
+        "Thừa nhận lỗi của hệ thống và nói rõ khi nào xong; không đổ lỗi cho máy hay cho ba mẹ."
+      ],
+      "chuyenCap": "",
+      "tinMau": [],
+      "lienKet": []
+    },
+    {
+      "id": "cong-dong",
+      "so": 1,
+      "ten": "Cộng đồng",
+      "icon": "👥",
+      "loai": "diem-cham",
+      "tom": "Nhóm Facebook, nhóm Zalo dự án và nhóm học liệu theo tuổi",
+      "trangThai": ["Nuôi dưỡng"],
+      "mucTieu": "Mỗi ngày nhóm có ít nhất một khoảnh khắc con tiến bộ được khen công khai; không câu hỏi nào bị bỏ quá 4 giờ trong giờ làm việc.",
+      "phuTrach": "Bạn trực cộng đồng",
+      "camKet": "Chào thành viên mới trong 24 giờ · Bình luận khen hành trình trong 4 giờ · Ghi nhận hành trình cùng ngày",
+      "lam": [
+        "Ghim quy tắc nhóm: không quảng cáo; giữ 3 KHÔNG; chỉ đăng ảnh của con mình; câu hỏi tài khoản, phí nhắn Zalo hỗ trợ.",
+        "Thứ Hai: mở vòng mới (chủ đề tuần, câu chuyện tuần, việc ba mẹ cần làm).",
+        "Thứ Ba – Thứ Năm: mẹo 1 phút để khen con, kèm 1–2 hành trình nổi bật.",
+        "Thứ Sáu: nhắc Zoom tối Chủ nhật. Thứ Bảy: bảng vàng top 5 tuần.",
+        "Với mỗi bài chia sẻ hành trình: khen cụ thể, đánh dấu đã ghi nhận trên trang quản trị, xin phép nếu muốn đưa vào bài tổng hợp.",
+        "Ghi lại các ba mẹ hay chia sẻ, hay hỏi để mời làm \"phụ huynh dẫn đường\" và mời gọi khảo sát ngắn (block Lắng nghe phụ huynh)."
+      ],
+      "luuY": [
+        "Không xóa bài bức xúc của phụ huynh; trả lời ngắn công khai rằng đội đã nhắn riêng, rồi xử lý riêng.",
+        "Phụ huynh có con dưới 5 tuổi: mời vào nhóm học liệu đúng tuổi (0–3 hoặc 3–5)."
+      ],
+      "chuyenCap": "Bức xúc công khai → Quản lý trong 15 phút.",
+      "tinMau": ["nuoi_duong"],
+      "lienKet": [
+        {"ten": "Nhóm Facebook cộng đồng", "url": "https://www.facebook.com/groups/1057551126772261"},
+        {"ten": "Fanpage CES", "url": "https://www.facebook.com/profile.php?id=61570747978937"},
+        {"ten": "Nhóm Zalo dự án", "url": "https://zalo.me/g/atdjpv272"},
+        {"ten": "Nhóm học liệu 0–3 tuổi", "url": "https://zalo.me/g/63shvzmfizo7jd0v8amz"},
+        {"ten": "Nhóm học liệu 3–5 tuổi", "url": "https://zalo.me/g/lgqg8t0xkwgjli122qxl"},
+        {"ten": "Nhóm học liệu 5–10 tuổi", "url": "https://zalo.me/g/vf7a0zktwj9pr4zp59mh?joinSrc=9"},
+        {"ten": "Nhóm học liệu từ 7 tuổi", "url": "https://zalo.me/g/s7pkggsuajwudjwuibef?joinSrc=9"}
+      ]
+    },
+    {
+      "id": "dang-ky",
+      "so": 2,
+      "ten": "Đăng ký & học thử",
+      "icon": "📝",
+      "loai": "diem-cham",
+      "tom": "Trang ưu đãi, link CTV, học thử miễn phí trên một link duy nhất",
+      "trangThai": ["Đang dùng thử", "Mời đăng ký"],
+      "mucTieu": "Gia đình học thử cho con học xong buổi 2 và thấy được con tiến bộ ngay trong những buổi đầu.",
+      "phuTrach": "Bạn tư vấn – đăng ký (được giao tự động trên trang quản trị)",
+      "camKet": "Gia đình \"nóng\" (điểm từ 60): gọi trong 1 giờ · Gia đình \"ấm\" (điểm từ 35): nhắn Zalo mẫu · Học thử mới: chào trong 24 giờ",
+      "lam": [
+        "Ba mẹ mở link học (từ trang ưu đãi, nhóm cộng đồng hoặc link riêng của CTV), bấm Học miễn phí, nhập tên con, tuổi, số điện thoại.",
+        "Gia đình hiện ở tab Học thử của trang quản trị và vào Việc hôm nay của bạn được giao.",
+        "Con học 3 buổi đầu (mỗi buổi khoảng 15 phút). Sau buổi 1, web mời ba mẹ để lại Zalo; sau buổi 2, nút Kích hoạt thử thách 21 ngày hiện ra.",
+        "Xếp đúng cấp độ: con chưa học tiếng Trung → Little Seed; con có tiếng Anh A1 và tiếng Trung YCT 1 → Canopy. Phân vân thì cho học Little Seed trước, giáo viên xem tiến độ rồi chuyển.",
+        "Gia đình đến từ CTV nhưng nhắn trực tiếp: hỏi \"Anh/chị biết chương trình qua ai ạ?\" và ghi mã CTV để tính hiệu quả."
+      ],
+      "luuY": [
+        "Ba mẹ dùng MỘT link từ học thử đến hết 21 ngày. Không gửi link mới; chỉ mở khóa trên trang quản trị.",
+        "Chương trình dành cho con 5–10 tuổi."
+      ],
+      "chuyenCap": "Đăng ký sau hạn (25/10/2026) hoặc xin ngoại lệ → Quản lý.",
+      "tinMau": ["chao_thu", "nhac_thu", "moi_nong", "moi_am", "goi_lai"],
+      "lienKet": [
+        {"ten": "Trang ưu đãi", "url": "https://ceseducation.github.io/little-language-explorers/"},
+        {"ten": "Link học (một link cho ba mẹ)", "url": "https://anh-trung-kids-ces.github.io/hoc.mot.lan.duoc.hai.ngon.ngu/"}
+      ]
+    },
+    {
+      "id": "kich-hoat",
+      "so": 3,
+      "ten": "Kích hoạt & phí 79k",
+      "icon": "🔓",
+      "loai": "diem-cham",
+      "tom": "Đóng phí học liệu, đội tích Mở khóa 21 ngày",
+      "trangThai": ["Chờ đóng phí"],
+      "mucTieu": "Từ lúc ba mẹ báo đã chuyển khoản đến lúc con học tiếp được không quá 15 phút trong giờ làm việc.",
+      "phuTrach": "Bạn tư vấn – đăng ký",
+      "camKet": "Đã chuyển khoản mà chưa mở khóa: mức Khẩn, phản hồi trong 15 phút",
+      "lam": [
+        "Ba mẹ chuyển khoản 79.000đ, nội dung: LLE – tên con – khóa – số Zalo.",
+        "Đối chiếu chuyển khoản, tìm gia đình theo số điện thoại trên trang quản trị.",
+        "Tích ô Mở khóa 21 ngày. Lần sau ba mẹ mở link, web tự chúc mừng và mở đủ 21 ngày, giữ nguyên các buổi đã học.",
+        "Gửi tin mẫu \"Đã đóng phí: gửi link học chính\" hoặc bấm Chép tài khoản để gửi Zalo.",
+        "Ba mẹ đã đóng phí nhưng chưa để lại Zalo: hướng dẫn bấm \"Ba mẹ đã đóng phí? Đăng nhập\", nhập tên con và số đã đăng ký."
+      ],
+      "luuY": [
+        "79k là phí đăng ký sự kiện và học liệu dùng suốt 21 ngày, KHÔNG hoàn lại. Không dùng các cụm \"cọc cam kết\", \"hoàn 100%\" (chính sách cũ đã bỏ).",
+        "Bỏ tích Mở khóa thì máy đó quay về bản học thử; chỉ làm khi Quản lý yêu cầu."
+      ],
+      "chuyenCap": "Đòi hoàn phí, xin giảm phí, hai anh em cùng học → Quản lý trong 1 giờ.",
+      "tinMau": ["moi_kich_hoat", "nhac_phi", "link_hoc"],
+      "lienKet": [
+        {"ten": "Zalo hỗ trợ 0974 840 845", "url": "https://zalo.me/0974840845"}
+      ]
+    },
+    {
+      "id": "web-hoc",
+      "so": 4,
+      "ten": "Web học 21 ngày",
+      "icon": "🎒",
+      "loai": "diem-cham",
+      "tom": "Con tự học, ba mẹ mở bài và khen con",
+      "trangThai": ["Đang học 21 ngày"],
+      "mucTieu": "Con học đều ít nhất 5/6 ngày mỗi vòng; lỗi kỹ thuật không làm con bỏ học.",
+      "phuTrach": "Bạn hỗ trợ kỹ thuật; bạn được giao gia đình",
+      "camKet": "Con không vào được bài ngay giờ học: Khẩn, 15 phút · Mất tiến độ: Cao, xử lý trong 24 giờ · Lỗi ghi bảng tester trong ngày",
+      "lam": [
+        "Giải thích cấu trúc: 3 vòng (Khám phá – Bứt phá – Chinh phục), mỗi vòng 6 ngày học và 1 buổi Zoom tối Chủ nhật, sau đó là Chung kết tỏa sáng.",
+        "Học một lần được hai ngôn ngữ: cùng một câu chuyện, con nghe tiếng Anh rồi tiếng Trung; tiếng Trung chỉ là thêm một cách nói mới.",
+        "Học kỹ bài chính trước, rồi mới mở Góc khám phá để học thêm bài cùng chủ đề.",
+        "Con làm bài được sao; sao đổi ở phòng đổi quà theo quy chế đổi sao; ô Xếp hạng tuần ở trang chủ ghi số sao con đạt trong tuần.",
+        "Lỗi kỹ thuật: hướng dẫn ba mẹ tự thử trước, đội kiểm tra trên trang quản trị, rồi mới ghi bảng tester (xem Câu hỏi thường gặp)."
+      ],
+      "luuY": [
+        "Mỗi bài không quá 30 phút; con mệt thì dừng, hôm sau học tiếp đúng chỗ đang dừng.",
+        "Ghi bảng tester: một lỗi một dòng, ghi tên bài, cấp độ, loại máy, trình duyệt, ảnh màn hình. KHÔNG ghi số điện thoại phụ huynh.",
+        "Con nghỉ từ 2 ngày: gửi tin mẫu \"Bé nghỉ học vài ngày\"; ngày thứ 4 gọi hỏi thăm."
+      ],
+      "chuyenCap": "Lỗi ảnh hưởng nhiều con cùng lúc → người phụ trách web + Quản lý ngay lập tức.",
+      "tinMau": ["nhac_hoc", "link_hoc"],
+      "lienKet": [
+        {"ten": "Link học", "url": "https://anh-trung-kids-ces.github.io/hoc.mot.lan.duoc.hai.ngon.ngu/"}
+      ]
+    },
+    {
+      "id": "su-kien",
+      "so": 5,
+      "ten": "Zoom, xếp hạng & chung kết",
+      "icon": "🏆",
+      "loai": "diem-cham",
+      "tom": "3 buổi Zoom tối Chủ nhật, vinh danh top 5 tuần, chung kết livestream",
+      "trangThai": ["Đang học 21 ngày"],
+      "mucTieu": "Ít nhất 6/10 con đã kích hoạt dự Zoom; mọi gia đình biết lịch trước 2 ngày.",
+      "phuTrach": "Giáo viên chuyên môn; bạn trực cộng đồng nhắc lịch",
+      "camKet": "Nhắc Zoom thứ Sáu và 1 giờ trước buổi học · Đăng bảng vàng thứ Bảy",
+      "lam": [
+        "Thứ Sáu: đăng lịch và link Zoom; nhắc ba mẹ cho con vào sớm 5 phút để thử micro.",
+        "Tối Chủ nhật: giáo viên dạy; bạn trực cộng đồng ghi lại khoảnh khắc (chỉ đăng khi ba mẹ đồng ý).",
+        "Thứ Bảy: vinh danh top 5 mỗi tuần; hỏi ba mẹ trước khi nêu tên con.",
+        "Chung kết tỏa sáng: vòng 1 từ vựng, vòng 2 câu và nghe, vòng 3 thách đấu phản xạ với giáo viên; livestream trên Facebook.",
+        "Giải chung kết: cúp, cờ và giấy chứng nhận cho top 3 mỗi nhóm, kèm bộ quà (học liệu Anh–Trung của CES, bài đánh giá IQ, vé sự kiện văn hóa)."
+      ],
+      "luuY": [
+        "Không so sánh con trước mặt ba mẹ; khen sự chăm chỉ, không chỉ thứ hạng."
+      ],
+      "chuyenCap": "Thắc mắc về chấm điểm, thứ hạng → giáo viên chuyên môn, rồi Quản lý.",
+      "tinMau": [],
+      "lienKet": [
+        {"ten": "Fanpage CES (livestream)", "url": "https://www.facebook.com/profile.php?id=61570747978937"}
+      ]
+    },
+    {
+      "id": "sau-thu-thach",
+      "so": 6,
+      "ten": "Sau thử thách & khóa dài",
+      "icon": "🌱",
+      "loai": "diem-cham",
+      "tom": "Tổng kết tiến bộ, mời gói web dài hạn hoặc lớp online/offline",
+      "trangThai": ["Chờ tư vấn khóa dài", "Đã tư vấn", "Học viên khóa dài", "Nuôi dưỡng", "Dừng"],
+      "mucTieu": "Mỗi gia đình hoàn thành nhận lời mời phù hợp, bắt đầu từ tiến bộ thật của con.",
+      "phuTrach": "Bạn được giao gia đình; Quản lý chốt tư vấn",
+      "camKet": "Gửi tổng kết tiến bộ trong 7 ngày sau chung kết",
+      "lam": [
+        "Mở đầu bằng tiến bộ thật của con: số buổi, số sao, những từ con đã nói được ở cả hai thứ tiếng.",
+        "Mời bước tiếp phù hợp: gói web dài hạn để con tự học tiếp, hoặc lớp online/offline 2 buổi mỗi tuần để có giáo viên kèm.",
+        "Gia đình chưa sẵn sàng: chuyển trạng thái Nuôi dưỡng, mời vào nhóm học liệu, báo khi mở đợt mới.",
+        "Gia đình dừng: chọn đúng lý do (Phí, Thời gian, Con chưa hợp tuổi, Con chưa thích, Đã học nơi khác, Rút đồng ý, Khác) để đội học được từ đó."
+      ],
+      "luuY": [
+        "Chưa có bảng học phí khóa dài chính thức thì không tự báo giá; hẹn Quản lý tư vấn."
+      ],
+      "chuyenCap": "Hỏi học phí khóa dài, học bổng, hợp tác → Quản lý trong ngày.",
+      "tinMau": ["nuoi_duong"],
+      "lienKet": []
+    },
+    {
+      "id": "quan-tri",
+      "so": 7,
+      "ten": "Trang quản trị",
+      "icon": "🗂️",
+      "loai": "noi-bo",
+      "tom": "Công cụ nội bộ: việc hôm nay, mở khóa, sửa hồ sơ, báo cáo",
+      "trangThai": [],
+      "mucTieu": "Mọi thay đổi về gia đình làm trên trang quản trị; Sheet gốc chỉ để đối chiếu, không ai sửa tay.",
+      "phuTrach": "Cả đội (Báo cáo và Tài khoản chỉ Quản lý)",
+      "camKet": "Mở Việc hôm nay đầu mỗi ca, làm hết việc quá hạn trước khi nhận việc mới",
+      "lam": [
+        "Việc hôm nay: việc được sắp theo độ gấp; bấm Gọi, Zalo, Chép SĐT, Tin mẫu, rồi Ghi kết quả sau mỗi lần liên hệ.",
+        "Học thử: danh sách gia đình học thử mới, liên hệ trong 24 giờ.",
+        "Gia đình: lọc theo trạng thái, theo số điện thoại; tích Mở khóa 21 ngày; Chép tài khoản; Sửa thông tin (ghi vào Lịch sử sửa).",
+        "Tạo tài khoản thủ công khi ba mẹ không tự đăng ký được (kiểm tra trùng số trước).",
+        "Gộp hồ sơ trùng số điện thoại: chỉ Quản lý; giữ hồ sơ đã mở khóa và học xa nhất.",
+        "Báo cáo (Quản lý): đóng phí, đăng ký, bé học hôm nay, bé nghỉ từ 2 ngày, phễu chuyển đổi, hiệu quả theo mã CTV."
+      ],
+      "luuY": [
+        "Mỗi người một tài khoản; không chia sẻ mật khẩu. Sai 6 lần bị khóa 15 phút; phiên hết sau 6 giờ không dùng.",
+        "Không chụp màn hình danh sách nhiều gia đình gửi ra ngoài đội.",
+        "Không đăng nhập trên máy công cộng; đăng xuất khi hết ca.",
+        "Phụ huynh yêu cầu xóa dữ liệu của con: chuyển Quản lý xử lý trong 7 ngày.",
+        "Nghi ngờ lộ dữ liệu: báo Quản lý ngay, không tự xử lý."
+      ],
+      "chuyenCap": "Quên mật khẩu → Quản lý cấp mật khẩu tạm.",
+      "tinMau": [],
+      "lienKet": []
+    },
+    {
+      "id": "lang-nghe",
+      "so": 8,
+      "ten": "Lắng nghe phụ huynh",
+      "icon": "👂",
+      "loai": "noi-bo",
+      "tom": "Gọi khảo sát 2–3 phút, hiểu kết quả ba mẹ mong muốn cho con",
+      "trangThai": [],
+      "mucTieu": "Cuối mỗi tuần có một điểm chốt với các mẹ tích cực: hiểu ba mẹ thật sự muốn con đạt được gì, để mời khóa phù hợp.",
+      "phuTrach": "Bạn được giao gia đình; Quản lý tổng hợp",
+      "camKet": "Mỗi tuần gọi khảo sát các ba mẹ tích cực; ghi kết quả trong ngày",
+      "lam": [
+        "Chọn ba mẹ tích cực (hay chia sẻ hành trình, con học đều) để gọi ngắn 2–3 phút.",
+        "Hỏi 5 điều: bối cảnh của gia đình; ba mẹ \"thuê\" chương trình để giải quyết việc gì cho con; điều đang khó, đang cản trở; kết quả cụ thể, đo được ba mẹ mong muốn; vì sao lại là lúc này.",
+        "Ghi vào ô Mong muốn của phụ huynh và Thắc mắc chưa trả lời trên hồ sơ gia đình.",
+        "Chia ba mẹ thành nhóm theo mong muốn để mời hoạt động khác nhau (ví dụ: nhóm muốn thi chứng chỉ, nhóm muốn con tự tin nói)."
+      ],
+      "luuY": [
+        "Đây là cuộc gọi lắng nghe, không phải cuộc gọi bán; chỉ giới thiệu khóa khi ba mẹ hỏi hoặc ở điểm chốt cuối tuần.",
+        "Ghi đúng lời ba mẹ nói, không tự suy diễn."
+      ],
+      "chuyenCap": "Mong muốn ngoài khả năng chương trình → Quản lý.",
+      "tinMau": ["goi_lai"],
+      "lienKet": []
+    },
+    {
+      "id": "khieu-nai",
+      "so": 9,
+      "ten": "Khiếu nại & chuyển cấp",
+      "icon": "🚨",
+      "loai": "noi-bo",
+      "tom": "5 bước xử lý, mô hình LẮNG NGHE, khi nào chuyển Quản lý",
+      "trangThai": [],
+      "mucTieu": "Mọi yêu cầu có người chịu trách nhiệm đến khi đóng; ba mẹ bức xúc được nhắn riêng trong 15 phút.",
+      "phuTrach": "Người nhận yêu cầu → Quản lý",
+      "camKet": "Khẩn: phản hồi 15 phút, xong trong ca · Cao: 1 giờ, xong trong 24 giờ · Thường: 4 giờ, xong trong 48 giờ",
+      "lam": [
+        "Tiếp nhận: trả lời ngay cả khi chưa có lời giải: \"Em đã nhận, em kiểm tra và báo lại anh/chị trước … giờ ạ.\"",
+        "Phân loại: mức (Khẩn / Cao / Thường) và loại (Đăng ký, Phí, Kỹ thuật, Chuyên môn, Cộng đồng, Khiếu nại).",
+        "Xử lý theo block liên quan và Câu hỏi thường gặp.",
+        "Chuyển cấp khi quá quyền hoặc quá thời hạn.",
+        "Đóng: báo kết quả cho ba mẹ, Ghi kết quả trên trang quản trị, đề xuất bổ sung sổ tay nếu là tình huống mới."
+      ],
+      "luuY": [
+        "LẮNG NGHE: nghe hết, không ngắt lời → ghi nhận cảm xúc → xin lỗi về trải nghiệm → chuyển sang nhắn riêng → đưa giải pháp và mốc thời gian → hỏi thăm lại trong 24 giờ.",
+        "Liên quan an toàn trẻ em hoặc ảnh của con bị dùng sai → Quản lý ngay lập tức."
+      ],
+      "chuyenCap": "Hoàn phí, ngoại lệ, bức xúc công khai, an toàn trẻ em, báo chí – đối tác → Quản lý.",
+      "tinMau": [],
+      "lienKet": []
+    }
+  ],
+  "faq": [
+    {"b": "dang-ky", "h": "Chương trình này khác gì các lớp tiếng Anh, tiếng Trung khác?", "d": "Dạ, điểm khác lớn nhất là con học tiếng Anh và tiếng Trung trong cùng một câu chuyện, cùng một chủ đề. Con hiểu bằng tiếng Anh rồi thì tiếng Trung chỉ là thêm một cách nói mới, nên con đỡ quá tải và tiết kiệm thời gian: học một lần được hai ngôn ngữ ạ."},
+    {"b": "dang-ky", "h": "Con mấy tuổi thì học được?", "d": "Dạ, thử thách 21 ngày dành cho các con từ 5 đến 10 tuổi ạ. Nếu con nhỏ hơn, em gửi anh/chị nhóm học liệu miễn phí đúng tuổi của con để ba mẹ chơi cùng con ở nhà nhé."},
+    {"b": "dang-ky", "h": "Con chưa biết tiếng Trung có học được không?", "d": "Dạ được ạ. Con chưa học tiếng Trung sẽ vào nhóm Little Seed, bắt đầu từ những từ và câu con đã quen bằng tiếng Anh, rồi thêm cách nói tiếng Trung."},
+    {"b": "dang-ky", "h": "Nên chọn Little Seed hay Canopy?", "d": "Dạ, nếu con chưa học tiếng Trung thì chọn Little Seed. Nếu con đã nói được câu ngắn tiếng Anh (trình độ A1) và đã học tiếng Trung đến khoảng YCT 1 thì chọn Canopy. Anh/chị còn phân vân, cho con học Little Seed trước, cô giáo xem tiến độ rồi chuyển nhóm cho con nếu cần ạ."},
+    {"b": "dang-ky", "h": "Học thử thế nào, có mất phí không?", "d": "Dạ, học thử hoàn toàn miễn phí ạ. Anh/chị mở link, bấm Học miễn phí, nhập tên con, tuổi và số điện thoại là con học được ngay. Con học thử 3 buổi đầu, mỗi buổi khoảng 15 phút."},
+    {"b": "dang-ky", "h": "Mỗi ngày con học bao lâu?", "d": "Dạ, mỗi buổi khoảng 15 phút và không bài nào quá 30 phút ạ. Con mệt thì dừng, hôm sau con học tiếp đúng chỗ đang dừng."},
+    {"b": "dang-ky", "h": "Ba mẹ không biết tiếng Anh, tiếng Trung thì có kèm con được không?", "d": "Dạ được ạ. Con tự học trên web, có giọng đọc và hướng dẫn sẵn. Ba mẹ chỉ cần mở bài đúng giờ và khen con khi con làm, khi con xong. Không cần sửa lỗi hay dạy lại cho con đâu ạ."},
+    {"b": "dang-ky", "h": "Hết hạn đăng ký chưa? Đăng ký muộn có được không?", "d": "Dạ, đợt này đã khai mạc ngày 26/10/2026. Em xin phép hỏi lại quản lý xem còn nhận thêm được không và báo anh/chị trong hôm nay ạ.", "duyet": true},
+    {"b": "dang-ky", "h": "Con học trên điện thoại được không?", "d": "Dạ được ạ, con học ngay trên trình duyệt của điện thoại, máy tính bảng hoặc máy tính, không cần cài ứng dụng. Học bằng Chrome và Wi-Fi ổn định sẽ mượt nhất ạ."},
+    {"b": "kich-hoat", "h": "Phí 79k gồm những gì?", "d": "Dạ, 79.000đ là phí đăng ký sự kiện và học liệu con dùng suốt 21 ngày, gồm các buổi học trên web và 3 buổi học Zoom với giáo viên vào tối Chủ nhật ạ."},
+    {"b": "kich-hoat", "h": "Có được hoàn lại phí 79k không?", "d": "Dạ, 79k là phí đăng ký và học liệu nên chương trình không hoàn lại ạ. Nếu con đang gặp khó khăn khi học, anh/chị kể em nghe nhé, em cùng giáo viên tìm cách để con học vui và đều hơn."},
+    {"b": "kich-hoat", "h": "Chuyển khoản ghi nội dung gì?", "d": "Dạ, anh/chị ghi nội dung: LLE – tên con – khóa – số Zalo, ví dụ LLE – Minh An – Little Seed – 09xx. Chuyển xong anh/chị nhắn em ảnh giao dịch để em mở khóa ngay ạ."},
+    {"b": "kich-hoat", "h": "Đã chuyển khoản rồi mà con chưa học tiếp được?", "d": "Dạ em xin lỗi để con phải chờ ạ. Em kiểm tra và mở khóa ngay. Anh/chị tải lại trang là con học tiếp trên chính link cũ. Nếu vẫn chưa mở, anh/chị bấm \"Ba mẹ đã đóng phí? Đăng nhập\", nhập tên con và số đã đăng ký giúp em ạ."},
+    {"b": "kich-hoat", "h": "Hai anh em cùng học thì đóng phí thế nào?", "d": "Dạ, mỗi con có một hồ sơ học riêng để theo dõi tiến độ ạ. Về phí cho anh chị em, em xin phép hỏi quản lý và báo anh/chị trong hôm nay nhé.", "duyet": true},
+    {"b": "web-hoc", "h": "Web không có tiếng?", "d": "Dạ anh/chị kiểm tra giúp em: tăng âm lượng, tắt chế độ im lặng, rồi chạm vào màn hình một lần để trình duyệt cho phát âm thanh ạ. Nếu vẫn chưa có tiếng, anh/chị gửi em ảnh màn hình và cho em biết con học bằng máy gì nhé."},
+    {"b": "web-hoc", "h": "Con nói mà web không thu âm được?", "d": "Dạ, khi web hỏi quyền dùng micro, anh/chị bấm Cho phép giúp em ạ. Nếu lỡ bấm Chặn, em gửi anh/chị ảnh hướng dẫn bật lại micro cho đúng loại máy của con."},
+    {"b": "web-hoc", "h": "Đổi máy hoặc đổi trình duyệt thì có mất bài đã học không?", "d": "Dạ, anh/chị mở đúng link cũ, bấm Đăng nhập, nhập tên con và số đã đăng ký là con học tiếp được ạ. Nếu tiến độ hiện chưa đủ, anh/chị nhắn em, em kiểm tra trên hệ thống trong ngày."},
+    {"b": "web-hoc", "h": "Bài bị khóa, con không mở được bài tiếp theo?", "d": "Dạ, mỗi ngày con mở được bài của ngày đó theo hành trình 21 ngày ạ. Anh/chị tải lại trang giúp em; nếu vẫn khóa, em kiểm tra tiến độ của con và báo lại ngay."},
+    {"b": "web-hoc", "h": "Con lỡ mấy ngày không học có học bù được không?", "d": "Dạ được ạ. Tài khoản của con mở suốt 21 ngày, con học tiếp đúng chỗ đang dừng. Anh/chị cho con học mỗi ngày một buổi ngắn để kịp các bạn nhé."},
+    {"b": "web-hoc", "h": "Góc khám phá là gì?", "d": "Dạ, Góc khám phá có thêm các bài cùng chủ đề để con học rộng hơn ạ. Con học kỹ bài chính của ngày trước, rồi mới mở Góc khám phá nhé."},
+    {"b": "web-hoc", "h": "Sao dùng để làm gì?", "d": "Dạ, con làm bài sẽ được sao ạ. Sao dùng để đổi quà trong phòng đổi quà: nuôi thú cưng, trang trí hình đại diện, quà thật và học bổng, theo quy chế đổi sao của chương trình."},
+    {"b": "web-hoc", "h": "Xếp hạng tính thế nào?", "d": "Dạ, ô Xếp hạng tuần ở trang chủ ghi số sao con đạt được trong tuần ạ. Mỗi tuần chương trình vinh danh 5 bạn chăm chỉ nhất trong nhóm cộng đồng."},
+    {"b": "web-hoc", "h": "Con có học bằng tiếng Việt không?", "d": "Dạ, nội dung học là tiếng Anh và tiếng Trung ạ. Tiếng Việt chỉ dùng trong lời hướng dẫn để con biết cần làm gì."},
+    {"b": "cong-dong", "h": "Vì sao phải chia sẻ hành trình học của con trong nhóm?", "d": "Dạ, chia sẻ hành trình là điều kiện để con được tính hoàn thành thử thách ạ. Mỗi bài chia sẻ cũng giúp ba mẹ thấy con tiến bộ từng ngày, và đội được khen con công khai."},
+    {"b": "cong-dong", "h": "Chia sẻ hành trình như thế nào?", "d": "Dạ, anh/chị đăng vào nhóm Facebook cộng đồng một ảnh, một đoạn video ngắn hoặc vài dòng kể lại hôm nay con học gì, con nói được gì ạ. Anh/chị chỉ đăng hình ảnh của con mình nhé."},
+    {"b": "cong-dong", "h": "Không muốn đăng ảnh của con thì sao?", "d": "Dạ, anh/chị có thể chia sẻ ảnh màn hình kết quả học hoặc vài dòng kể lại việc con học ạ. Em xin phép xác nhận lại với quản lý và báo anh/chị.", "duyet": true},
+    {"b": "cong-dong", "h": "Có nhóm học liệu theo tuổi của con không?", "d": "Dạ có ạ, chương trình có nhóm Zalo học liệu miễn phí cho 0–3 tuổi, 3–5 tuổi, 5–10 tuổi và từ 7 tuổi. Em gửi anh/chị link nhóm đúng tuổi của con nhé."},
+    {"b": "su-kien", "h": "Lịch học Zoom với giáo viên thế nào?", "d": "Dạ, mỗi vòng có 1 buổi Zoom vào tối Chủ nhật, cả thử thách có 3 buổi ạ. Em gửi link và giờ vào thứ Sáu; anh/chị cho con vào sớm 5 phút để thử micro nhé."},
+    {"b": "su-kien", "h": "Con vắng buổi Zoom thì sao?", "d": "Dạ, con vẫn học tiếp trên web bình thường ạ. Em xin phép hỏi giáo viên cách để con bù phần đã lỡ và báo lại anh/chị.", "duyet": true},
+    {"b": "su-kien", "h": "Chung kết diễn ra thế nào?", "d": "Dạ, chung kết có 3 vòng: từ vựng, câu và nghe, rồi vòng thách đấu phản xạ cùng giáo viên. Chung kết được livestream trên fanpage CES để cả nhà cùng cổ vũ con ạ."},
+    {"b": "su-kien", "h": "Giải thưởng gồm những gì?", "d": "Dạ, mỗi tuần vinh danh top 5. Ở chung kết, top 3 mỗi nhóm nhận cúp, cờ, giấy chứng nhận và bộ quà gồm học liệu Anh–Trung của CES, bài đánh giá IQ và vé sự kiện văn hóa ạ."},
+    {"b": "sau-thu-thach", "h": "Hết 21 ngày con học tiếp thế nào?", "d": "Dạ, sau thử thách em gửi anh/chị tổng kết tiến bộ của con, rồi gợi ý bước tiếp phù hợp: gói web dài hạn để con tự học tiếp, hoặc lớp online/offline 2 buổi mỗi tuần có giáo viên kèm ạ."},
+    {"b": "sau-thu-thach", "h": "Học phí khóa dài bao nhiêu?", "d": "Dạ, học phí tùy hình thức học và lộ trình của con ạ. Em xin phép hẹn quản lý tư vấn riêng để chọn đúng khóa cho con; anh/chị tiện nghe máy giờ nào ạ?", "duyet": true},
+    {"b": "khieu-nai", "h": "Con không chịu học, ba mẹ nản?", "d": "Dạ, rất nhiều bé cũng có lúc như vậy ạ. Anh/chị thử cho con học vào cùng một giờ mỗi ngày, ngồi cạnh và khen ngay khi con nói được một từ. Không ép con nói, không sửa lỗi nhé ạ. Sau 3 ngày con vẫn chưa hứng thú, em nhờ cô giáo xem tiến độ và gợi ý riêng cho con."},
+    {"b": "khieu-nai", "h": "Web lỗi nhiều, ba mẹ muốn dừng?", "d": "Dạ em xin lỗi vì trải nghiệm chưa tốt ạ. Anh/chị cho em biết lỗi con gặp và máy con học, em ưu tiên xử lý và báo lại trước [giờ]. Em cũng nhắn riêng để hỗ trợ anh/chị nhanh nhất."},
+    {"b": "quan-tri", "h": "Thông tin của con có bị chia sẻ ra ngoài không?", "d": "Dạ không ạ. Thông tin của con chỉ đội hỗ trợ được giao mới xem, để theo dõi việc học. Nếu anh/chị muốn xóa thông tin của con, em chuyển quản lý xử lý trong 7 ngày."}
+  ],
+  "nhatKy": [
+    {"ngay": "2026-10-27", "loai": "Tạo mới", "noiDung": "Tạo sổ tay chăm sóc phụ huynh dạng block: 10 block, sơ đồ tổng quan và 36 câu hỏi thường gặp, khớp với trạng thái gia đình và tin mẫu Zalo trên trang quản trị.", "blocks": []}
+  ]
+}
