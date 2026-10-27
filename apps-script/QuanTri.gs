@@ -416,6 +416,7 @@ function qtHanGoi_(t, cd) {
 }
 function qtViec_(f, cd, now) {
   const st = f.trangThai, lan = f.lan, lh = f.lienHeGanNhat, sa = f.doiTrangThaiLuc, v = [];
+  if (f.moKhoa) return v;   // đã đóng phí và đã mở khóa 21 ngày → không còn ở Việc hôm nay
   if (f.henGoiLai && f.henGoiLai <= now + 2 * 3600e3 && f.henGoiLai > lh)
     v.push({ loai: 'goi_lai', uuTien: 0, ten: 'Gọi lại theo hẹn', han: f.henGoiLai, tin: 'goi_lai' });
   if (st === 'Đang dùng thử' && !lh)
@@ -431,10 +432,9 @@ function qtViec_(f, cd, now) {
     if (now - lh > 24 * 3600e3 || (sat && lh < cd.han - 24 * 3600e3))
       v.push({ loai: 'phi', uuTien: 3, ten: 'Nhắc đóng phí' + (cd.han > now ? ' – còn ' + Math.max(0, Math.round((cd.han - now) / 3600e3)) + ' giờ tới hạn' : ''), han: Math.max(lh + 24 * 3600e3, now), tin: 'nhac_phi' });
   }
-  if (st === 'Đang học 21 ngày' && !f.moKhoa)
+  // Đã đóng phí nhưng chưa mở: chỉ một thẻ "Mở khóa 21 ngày"; tin mẫu đi kèm là tin gửi link học, Zoom, nhóm Zalo.
+  if (st === 'Đang học 21 ngày')
     v.push({ loai: 'mo', uuTien: 1, ten: 'Mở khóa 21 ngày (đã đóng phí, chưa mở)', han: sa + 2 * 3600e3, tin: 'link_hoc' });
-  if (st === 'Đang học 21 ngày' && lh < sa)
-    v.push({ loai: 'link', uuTien: 3, ten: 'Đã đóng phí: gửi link học chính, lịch Zoom, nhóm Zalo', han: sa + 12 * 3600e3, tin: 'link_hoc' });
   return v;
 }
 

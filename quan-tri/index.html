@@ -380,11 +380,15 @@ function boot(){
   if(OPEN){ const f=fam(OPEN); if(f) openFam(f.code,true); else closeFam(); }
 }
 const fam=code=>D.gd.find(f=>f.code===code);
+/* Việc hôm nay chỉ giữ gia đình CHƯA mở khóa 21 ngày.
+   Đã đóng phí + đã mở khóa → không còn việc nào. Đã đóng phí nhưng chưa mở → một việc "Mở khóa 21 ngày" (tin mẫu gửi link học đi kèm thẻ đó). */
+function locViec(){ if(!D||!D.gd) return; D.gd.forEach(f=>{ f.viec=f.moKhoa?[]:(f.viec||[]).filter(v=>v.loai!=='link'); }); }
 const tasks=()=>{ const out=[]; D.gd.forEach(f=>f.viec.forEach(v=>out.push({v,f}))); return out
   .filter(x=>!FILTER.ai || (FILTER.ai==='(chưa giao)'?!x.f.nguoiHoTro:x.f.nguoiHoTro===FILTER.ai))
   .sort((a,b)=>a.v.uuTien-b.v.uuTien || a.v.han-b.v.han); };
 
 function render(){
+  locViec();
   document.querySelectorAll('#tabs button').forEach(b=>{ b.classList.toggle('on',b.dataset.t===TAB); b.setAttribute('aria-current',b.dataset.t===TAB?'page':'false'); });
   $('#nViec').textContent=D.gd.reduce((a,f)=>a+f.viec.length,0);
   Object.values(CH).forEach(c=>c.destroy()); CH={};
@@ -803,7 +807,7 @@ async function copy(ta){ try{ await navigator.clipboard.writeText(ta.value); toa
 
 const EVN={vao:'Quay lại học',hoc:'Bé bắt đầu học',xong1:'Xong buổi 1',xong2:'Xong buổi 2',xong3:'Xong 3 buổi',noi:'Con nói thành tiếng',khoa:'Bấm phần bị khóa',bam_dk:'Bấm "Đăng ký cho con"',zalo:'Ba mẹ để lại Zalo',dong_hanh:'Mở Ba mẹ đồng hành'};
 function openFam(code, keep){
-  const f=fam(code); if(!f) return; OPEN=code; if(!keep) api('ghiMoHoSo',{code}).catch(()=>{});
+  locViec(); const f=fam(code); if(!f) return; OPEN=code; if(!keep) api('ghiMoHoSo',{code}).catch(()=>{});
   const host=$('#sheetHost'), h=f.hoc;
   host.innerHTML=`<div class="sheet" role="dialog" aria-modal="true" aria-labelledby="pTitle"><div class="panel">
     <div class="p-hd"><h2 id="pTitle">${esc(f.phuHuynh||'(chưa có tên)')} – bé ${esc(f.tenCon)}<small>${esc(f.code)} · ${esc(f.trangThai)} ${lanBadge(f)}</small></h2><button class="x" type="button" aria-label="Đóng">✕</button></div>
