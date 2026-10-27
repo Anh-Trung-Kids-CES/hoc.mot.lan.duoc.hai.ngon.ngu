@@ -65,3 +65,11 @@ Tiến độ ở chế độ giáo viên lưu riêng (`lle-progress-gv`), không
 - Bấm ô học thử → màn **Tên của con · Con mấy tuổi? · Số điện thoại (Zalo) của ba mẹ**, 1 ô đồng ý bắt buộc (nhắn hướng dẫn và nhận xét) và 1 ô không bắt buộc (tư vấn khoá). Mọi lối vào bản học thử (kể cả link vào thẳng một buổi) đều qua màn này.
 - Gửi về Apps Script `action=family` như cổng Zalo → tab **Gia đình**, nguồn "Web học thử", trạng thái "Đang dùng thử", giao người vận hành → trang quản trị hiện việc **Gọi chào** trong *Việc hôm nay*. Tên ba/mẹ ghi tạm "Ba mẹ bé <tên con>", đội sửa trên trang quản trị khi gọi. Không cần cập nhật máy chủ.
 - Đã có số điện thoại nên cổng Zalo sau buổi 1 không hỏi lại. Máy đã học thử trước đó: ô đỏ hiện "Con … học tiếp" và vào thẳng.
+
+## Cập nhật 27/10/2026 (kích hoạt 21 ngày sau buổi 2)
+- Ô trên màn vào web đổi tên thành **Học thử miễn phí**.
+- Bé học xong **buổi 2** (bất kỳ khoá nào): web tự mở bảng **Kích hoạt 21 ngày thử thách** (1 lần), ruy băng dưới màn hình chuyển thành nút đỏ "🚀 Kích hoạt 21 ngày thử thách" để mở lại bất cứ lúc nào. Bảng mời ở các phần bị khoá cũng có nút này.
+- Bảng kích hoạt: phí học liệu 79.000đ, 21 ngày gồm 3 buổi học với giáo viên và các buổi bài tập trên web; mã QR chuyển khoản (`tai-nguyen/trang/qr-chuyen-khoan.webp`); nội dung chuyển khoản gợi ý `LLE <TÊN CON> <SĐT>` có nút Chép; nút **Nhắn Zalo đội hỗ trợ** (https://zalo.me/0974840845) tự chép sẵn tin nhắn để ba mẹ dán.
+- Bấm nút Zalo được ghi là `bam_dk` (tính điểm Ý định, gia đình lên làn nóng trên trang quản trị).
+- Đội nhận ảnh chuyển khoản → tick **Mở khóa 21 ngày** trên trang quản trị → lần mở web sau, máy tự mở đủ 21 ngày theo số điện thoại đã để lại.
+- Bỏ dòng hạn đăng ký 25/10 và nút sang trang ưu đãi trong bảng mời của bản học thử.

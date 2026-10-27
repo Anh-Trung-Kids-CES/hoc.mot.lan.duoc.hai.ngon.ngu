@@ -921,6 +921,9 @@ function dangKyLink(){ const q=new URLSearchParams(), r=demoRef(), f=demoFam();
   const qs=q.toString(); return DANG_KY_LINK+(qs?(DANG_KY_LINK.includes('?')?'&':'?')+qs:''); }
 function demoFam(){ return lsGet('lle-fam',null); }
 const DEMO_FEE = "79.000đ", DEMO_HAN = "hết ngày 25/10/2026", DEMO_KHAI_MAC = "thứ Hai 26/10/2026";
+/* Kích hoạt 21 ngày: hiện khi bé học xong buổi 2 của bản học thử. Ba mẹ quét QR đóng phí học liệu rồi nhắn Zalo đội hỗ trợ;
+   đội tick "Mở khóa 21 ngày" trên trang quản trị, lần mở web sau máy tự mở đủ 21 ngày theo số điện thoại đã để lại. */
+const KH_SAU_BUOI = 2, KH_ZALO = "https://zalo.me/0974840845", KH_QR = "tai-nguyen/trang/qr-chuyen-khoan.webp";
 const KID_KEY = DEMO ? 'lle-kid-demo' : 'lle-kid';
 let TEACHER = !DEMO && GV_LINK;
 function toggleTeacher(){ TEACHER=!TEACHER; lsSet('lle-teacher',TEACHER); P=lsGet(progKey(),{})||{}; updateStars(); toast(TEACHER?'Đã bật chế độ giáo viên: mở tất cả các ngày':'Đã tắt chế độ giáo viên'); route(); }
@@ -2004,7 +2007,7 @@ function showEntry(){
   const sp=document.createElement('div'); sp.className='splash entry';
   const coThu=!!(KID&&KID.name);
   const thu=coThu ? `<b>Con ${esc(KID.name)} học tiếp</b><small>Bản học thử: con học tiếp đúng chỗ đang dừng</small>`
-                  : `<b>Học thử ${DEMO_N} buổi miễn phí</b><small>Ba mẹ chưa đăng ký: học miễn phí ${DEMO_N} buổi đầu, chỉ cần tên, tuổi của con và số điện thoại</small>`;
+                  : `<b>Học thử miễn phí</b><small>Ba mẹ chưa đăng ký: học miễn phí ${DEMO_N} buổi đầu, chỉ cần tên, tuổi của con và số điện thoại</small>`;
   sp.innerHTML=`<div class="en-box" role="dialog" aria-label="Đăng nhập hoặc đăng ký">
     <img class="en-art" src="tai-nguyen/nhan-vat/huou_huou1_a.webp" alt="">
     <span class="en-kick">Thử thách 21 ngày Bật phản xạ Anh – Trung</span>
@@ -2107,6 +2110,8 @@ const demoShown={};
 function demoCheckDone(){
   if(!DEMO || !KID || !GROUPS[KID.group]) return; const g=KID.group, n=demoDone(g);
   if(n>lsGet('lle-demo-n-'+g,0)){ lsSet('lle-demo-n-'+g,n); if(n<DEMO_N) demoTrack('xong'+n, g); }
+  demoRibbon();
+  if(n>=KH_SAU_BUOI && n<DEMO_N && !lsGet('lle-kh-hoi',false)){ lsSet('lle-kh-hoi',true); setTimeout(()=>kichHoat(true), 2200); }
   if(n>=1 && ZALO_OK && !demoFam() && !lsGet('lle-zalo-hoi',false)){ lsSet('lle-zalo-hoi',true); setTimeout(()=>zaloGate(), 2200); }
   if(demoShown[g] || n<DEMO_N || lsGet('lle-demo-xong-'+g,false)) return;
   demoShown[g]=true; lsSet('lle-demo-xong-'+g,true); demoTrack('xong3', g);
@@ -2132,8 +2137,9 @@ function demoGate(why){
       <li>🏆 <b>Bảng vàng Top 10</b> mỗi chặng và <b>Phòng đổi quà</b> bằng sao</li>
       <li>🌟 <b>Chung kết tỏa sáng</b> livestream: cúp, cờ và giấy chứng nhận cho Top 3 mỗi khoá</li>
     </ul>
-    <p class="dm-info">Phí <b>${DEMO_FEE}</b> cho sự kiện và học liệu 21 ngày · Hạn đăng ký: <b>${DEMO_HAN}</b> · Khai mạc: <b>${DEMO_KHAI_MAC}</b></p>
-    <div class="row"><a class="btn g" href="${dangKyLink()}" target="_blank" rel="noopener">📝 Đăng ký cho con</a>
+    <p class="dm-info">Phí học liệu <b>${DEMO_FEE}</b> · 21 ngày gồm <b>3 buổi học với giáo viên</b> và các buổi làm bài tập trên web</p>
+    ${demoMaxDone()>=KH_SAU_BUOI ? '' : `<p class="kh-chua">🎁 Con học xong <b>buổi ${KH_SAU_BUOI}</b> là có nút <b>Kích hoạt 21 ngày thử thách</b>.</p>`}
+    <div class="row">${demoMaxDone()>=KH_SAU_BUOI ? '<button class="btn g" type="button" id="dmKh">🚀 Kích hoạt 21 ngày</button>' : ''}
       <button class="btn y" id="dmLater" type="button">${why==='xong'?'Xem lại bài đã học':'Để sau'}</button></div>
     <button class="mk-link" id="dmMk" type="button">Ba mẹ đã đóng phí? <b>Đăng nhập để mở đủ 21 ngày</b></button>
     ${demoFam()||!KID||!ZALO_OK?'':'<button class="dm-zalo" id="dmZalo" type="button">📩 Nhận nhận xét của cô qua Zalo</button>'}
@@ -2141,7 +2147,7 @@ function demoGate(why){
   document.body.appendChild(ov);
   const close=()=>ov.remove();
   ov.querySelector('.pp-x').onclick=close; ov.querySelector('#dmLater').onclick=close;
-  ov.querySelector('a.btn.g').addEventListener('click',()=>demoTrack('bam_dk'));
+  const kh=ov.querySelector('#dmKh'); if(kh) kh.onclick=()=>{ close(); kichHoat(); };
   const dz=ov.querySelector('#dmZalo'); if(dz) dz.onclick=()=>{ close(); zaloGate(); };
   ov.querySelector('#dmMk').onclick=()=>{ close(); moKhoaDangNhap(KID&&KID.group); };
   ov.addEventListener('click',e=>{ if(e.target===ov) close(); });
@@ -2198,6 +2204,45 @@ function zaloGate(){
     sfx.win(); ov.querySelector('#zgok').onclick=()=>ov.remove();
   });
   setTimeout(()=>{ try{ $('#zgp').focus(); }catch(e){} },300);
+}
+/* ---------- KÍCH HOẠT 21 NGÀY THỬ THÁCH (sau buổi 2) ---------- */
+function demoMaxDone(){ return Object.keys(GROUPS).reduce((m,g)=>Math.max(m, demoDone(g)), 0); }
+function demoRibbon(){ const rb=document.querySelector('.demo-rb'); if(!rb) return;
+  const on=demoMaxDone()>=KH_SAU_BUOI; rb.classList.toggle('kh', on);
+  rb.innerHTML= on ? '<b>🚀 Kích hoạt 21 ngày thử thách</b><span>· Học một lần, được hai ngôn ngữ ·</span><i>Kích hoạt ngay →</i>'
+                   : '<b>Anh-Trung-Kids</b><span>· Học thử miễn phí ·</span><i>Học một lần, được hai ngôn ngữ</i>'; }
+function chep(t){ try{ if(navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(t).then(()=>true,()=>false); }catch(e){}
+  try{ const a=document.createElement('textarea'); a.value=t; a.style.cssText='position:fixed;opacity:0'; document.body.appendChild(a); a.select(); const ok=document.execCommand('copy'); a.remove(); return Promise.resolve(ok); }catch(e){ return Promise.resolve(false); } }
+function kichHoat(tuDong){
+  if(!DEMO || document.querySelector('.overlay.kh')) return;
+  document.querySelectorAll('.overlay.demo').forEach(x=>x.remove());
+  const nm=KID&&KID.name||'con', f=demoFam(), sdt=f&&f.acct&&!f.acct.includes('@')?f.acct:'';
+  const nd=('LLE '+slugName(nm).replace(/-/g,' ').toUpperCase()+(sdt?' '+sdt:'')).trim();
+  const tin=`Chào đội hỗ trợ Anh-Trung-Kids, em đã chuyển ${DEMO_FEE} phí học liệu cho bé ${nm}${sdt?' (SĐT '+sdt+')':''}. Nhờ đội kích hoạt 21 ngày thử thách cho con giúp em ạ.`;
+  const ov=document.createElement('div'); ov.className='overlay pp kh';
+  ov.innerHTML=`<div class="modal pp-box dm-box kh-box" role="dialog" aria-labelledby="khh">
+    <button class="pp-x" aria-label="Đóng">✕</button>
+    <h3 id="khh">${tuDong?`${esc(nm)} xong buổi ${KH_SAU_BUOI}! 🎉<br>`:''}Kích hoạt 21 ngày thử thách 🚀</h3>
+    <p class="kh-lead">Ba mẹ đóng giúp cô <b>${DEMO_FEE} phí học liệu</b> nhé. Con sẽ tham gia <b>21 ngày</b> gồm <b>3 buổi học với giáo viên</b> và các buổi làm bài tập trên web.</p>
+    <ol class="kh-steps">
+      <li><span><b>Quét mã để chuyển ${DEMO_FEE}</b></span>
+        <img class="kh-qr" src="${KH_QR}" alt="Mã QR chuyển khoản Techcombank, PHAM DUC ANH">
+        <span class="kh-nd">Nội dung chuyển khoản: <code>${esc(nd)}</code> <button type="button" class="kh-chep" id="khNd">Chép</button></span></li>
+      <li><span><b>Nhắn Zalo đội hỗ trợ</b>, gửi kèm ảnh chuyển khoản. Web tự chép sẵn tin nhắn, ba mẹ chỉ cần dán vào Zalo.</span>
+        <a class="btn g kh-zalo" id="khZalo" href="${KH_ZALO}" target="_blank" rel="noopener">💬 Nhắn Zalo đội hỗ trợ</a></li>
+      <li><span>Đội xác nhận xong, ba mẹ <b>mở lại đúng link này</b>: con học tiếp đủ 21 ngày, giữ nguyên sao và các buổi đã học.</span></li>
+    </ol>
+    <div class="row"><button class="btn y" type="button" id="khLater">${tuDong?'Con học tiếp buổi '+(KH_SAU_BUOI+1):'Để sau'}</button></div>
+    <button class="mk-link" id="khMk" type="button">Đội đã kích hoạt? <b>Đăng nhập bằng số điện thoại</b></button>
+  </div>`;
+  document.body.appendChild(ov);
+  const close=()=>ov.remove();
+  ov.querySelector('.pp-x').onclick=close; ov.querySelector('#khLater').onclick=close;
+  ov.addEventListener('click',e=>{ if(e.target===ov) close(); });
+  ov.querySelector('#khNd').onclick=e=>{ chep(nd).then(ok=>{ e.target.textContent=ok?'Đã chép ✓':'Chép'; }); };
+  ov.querySelector('#khZalo').addEventListener('click',()=>{ demoTrack('bam_dk'); chep(tin).then(ok=>{ if(ok) toast('Đã chép tin nhắn. Ba mẹ dán vào Zalo rồi gửi kèm ảnh chuyển khoản nhé.'); }); });
+  ov.querySelector('#khMk').onclick=()=>{ close(); moKhoaDangNhap(KID&&KID.group); };
+  if(tuDong){ confetti&&confetti(30); sfx.win&&sfx.win(); }
 }
 /* Gửi thông tin gia đình; chưa chắc đã tới máy chủ thì lần mở web sau gửi lại (máy chủ gộp theo mã người xem). */
 async function zaloSend(){
@@ -2311,9 +2356,8 @@ if(DEMO){
   document.body.classList.add('is-demo');
   document.title='Anh-Trung-Kids – Học một lần, được hai ngôn ngữ';
   const rb=document.createElement('a'); rb.className='demo-rb'; rb.href='#'; rb.setAttribute('role','button');
-  rb.innerHTML='<b>Anh-Trung-Kids</b><span>· Học một lần, được hai ngôn ngữ ·</span><i>Đăng ký học đủ 21 ngày →</i>';
-  rb.onclick=e=>{ e.preventDefault(); sfx.pop(); demoGate(); };
-  document.body.appendChild(rb);
+  rb.onclick=e=>{ e.preventDefault(); sfx.pop(); if(demoMaxDone()>=KH_SAU_BUOI) kichHoat(); else demoGate(); };
+  document.body.appendChild(rb); demoRibbon();
   demoTrack('mo');
   if(KID && GROUPS[KID.group] && lsGet('lle-vao-ngay','')!==jToday()){ lsSet('lle-vao-ngay',jToday()); demoTrack('vao', KID.group); }
   zaloPing();

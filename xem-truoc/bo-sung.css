@@ -253,3 +253,19 @@ body.is-demo:not(.in-step) .toast{bottom:calc(max(10px,env(safe-area-inset-botto
 .en-opt.try i{background:rgba(255,255,255,.92)}
 .splash.entry .en-box{gap:10px}
 @media (max-height:760px){ .en-art{width:92px;height:92px} .en-opt{padding:10px 12px} .en-opt b{font-size:20px} .en-opt small{font-size:13px} }
+/* Kích hoạt 21 ngày thử thách sau buổi 2 (27/10/2026) */
+.kh-box h3{font-size:20px;padding:0 34px}
+.kh-lead{background:#FFF4CC;border-radius:14px;padding:10px 12px;line-height:1.45}
+.kh-steps{margin:8px 0 4px;padding-left:24px;display:grid;gap:12px;line-height:1.4}
+.kh-steps li::marker{font-weight:800;color:var(--red-dark)}
+.kh-steps li > span{display:block}
+.kh-qr{display:block;width:min(240px,100%);margin:8px auto 4px;border-radius:14px;border:2px solid #F0E2C0;background:#fff}
+.kh-nd{font-size:14px;text-align:center}
+.kh-nd code{font-family:inherit;font-weight:800;background:#FFFBF0;border:2px dashed #F0E2C0;border-radius:8px;padding:1px 6px;white-space:nowrap}
+.kh-chep{font:inherit;font-size:13px;font-weight:800;border:2px solid var(--yellow);background:#fff;border-radius:10px;padding:2px 10px;margin-left:4px;cursor:pointer}
+.kh-zalo{display:inline-block;margin-top:8px;text-decoration:none}
+.kh-chua{text-align:center;font-weight:700;color:var(--red-dark)}
+.demo-rb.kh{background:var(--red);color:#fff;border-color:var(--red-dark)}
+.demo-rb.kh b{background:#fff;color:#B8141C}
+.demo-rb.kh span{color:#FFE3A3}
+.demo-rb.kh i{color:#fff}
