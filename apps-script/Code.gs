@@ -98,7 +98,7 @@ function doPost(e) {
 
 function doGet(e) {
   const p = e.parameter || {};
-  if (p.action === 'ping') return json_({ ok: true, v: 7 });          // v3: Bảng Gia đình · v4: mở khóa 21 ngày · v5: trang quản trị có tài khoản · v7: Xếp hạng
+  if (p.action === 'ping') return json_({ ok: true, v: 8 });          // v3: Bảng Gia đình · v4: mở khóa 21 ngày · v5: trang quản trị có tài khoản · v7: Xếp hạng · v8: việc theo vai trò CTV/Sale/Cố vấn
   if (p.action === 'xephang') return json_(xepHang_(p));
   if (p.action === 'access') return json_(access_(p));
   if (p.action === 'visit') return visit_(p);
@@ -190,7 +190,7 @@ function visit_(p) {
 /* ---------- Bảng Gia đình: ba mẹ để lại Zalo ở cổng sau buổi 1 ----------
  * Ghi 1 dòng vào tab "Gia đình" của Sheet này (tự tạo nếu chưa có), trạng thái "Đang dùng thử",
  * rồi giao cho 1 bạn vận hành theo lượt: bạn đang nhận ít gia đình nhất trong tab "Đội"
- * (cột Vai trò = Vận hành, cột "Nhận gia đình mới" = TRUE). Trang quản trị đọc và cập nhật tab này.
+ * (cột Vai trò = Vận hành hoặc Sale, cột "Nhận gia đình mới" = TRUE). CTV và Cố vấn không nhận gia đình mới. Trang quản trị đọc và cập nhật tab này.
  * Một gia đình (cùng mã người xem hoặc cùng số Zalo) gửi lại thì chỉ cập nhật, không tạo dòng mới. */
 const GD_HEAD = ['Mã gia đình', 'Tạo lúc', 'Nguồn', 'Mã người xem', 'Mã CTV', 'Tên ba/mẹ', 'Số Zalo', 'Tên con', 'Tuổi', 'Khoá',
   'ĐY học tập', 'ĐY tư vấn', 'ĐY tin ưu đãi', 'Trạng thái', 'Đổi trạng thái lúc', 'Người hỗ trợ', 'Liên hệ đầu', 'Liên hệ gần nhất',
@@ -214,7 +214,7 @@ function giaDinhSheet_(ss) {
 function chonNguoiHoTro_(ss, rows) {
   const team = ss.getSheetByName('Đội'); if (!team || team.getLastRow() < 2) return '';
   const ppl = team.getRange(2, 1, team.getLastRow() - 1, 5).getValues()
-    .filter(r => r[1] && String(r[2]).trim() === 'Vận hành' && (r[3] === true || String(r[3]).toUpperCase() === 'TRUE')
+    .filter(r => r[1] && ['Vận hành', 'Sale'].indexOf(String(r[2]).trim()) >= 0 && (r[3] === true || String(r[3]).toUpperCase() === 'TRUE')
       && !(r[4] === false || String(r[4]).toUpperCase() === 'FALSE'))           // cột E: Đang hoạt động
     .map(r => String(r[1]).trim());
   if (!ppl.length) return '';

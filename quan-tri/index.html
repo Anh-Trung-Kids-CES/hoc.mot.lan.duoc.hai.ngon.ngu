@@ -133,6 +133,23 @@ nav .n.ht{background:#B8141C}
 .lan-ấm{background:var(--amber-soft);color:var(--amber)}
 .lan-lạnh{background:var(--blue-soft);color:var(--blue)}
 .st{background:var(--soft);color:var(--ink);font-weight:600}
+/* vai trò và nhóm phụ huynh (27/10/2026) */
+.badge.ai-ctv{background:var(--amber-soft);color:var(--amber)}
+.badge.ai-sale{background:var(--red-soft);color:var(--red)}
+.badge.ai-cv{background:var(--ink);color:var(--card)}
+.badge.nh{background:var(--soft);color:var(--ink);border:1px solid var(--line)}
+.badge.qh{background:var(--red);color:#fff}
+.act.xong{background:var(--green-soft);border-color:var(--green-soft);color:var(--green)}
+.act.chuyen{background:var(--amber-soft);border-color:var(--amber-soft);color:var(--amber)}
+.dang-ghi{font-size:13px;background:var(--amber-soft);color:var(--amber);border-radius:10px;padding:8px 10px;margin:0 0 10px}
+.vt-row{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 10px}
+.the-ds{display:grid;gap:8px;margin:8px 0 0}
+.the-ds label{font-size:13px;font-weight:600;display:grid;gap:4px}
+.the-ds textarea{min-height:52px}
+.the-ds .jt{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px}
+.the-tien{display:flex;gap:4px;margin:4px 0 0}
+.the-tien i{flex:1;height:6px;border-radius:3px;background:var(--line)}
+.the-tien i.on{background:var(--green)}
 
 .fam{display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;text-align:left;width:100%}
 .fam .nm{font-weight:700}
@@ -457,16 +474,33 @@ function boot(){
   $('#hanInfo').textContent=h ? (hr>0?`Hạn đăng ký ${D.caiDat.hanText} · còn ${hr} giờ`:`Khai mạc ${D.caiDat.khaiMac}`) : '';
   document.querySelectorAll('#tabs .ql').forEach(b=>b.hidden=!D.laQL);
   if(!D.laQL && (TAB==='bc'||TAB==='tk')) TAB='viec';
+  if(D.cap==='cv' && !FILTER.vtDat){ FILTER.ai='@cv'; FILTER.vtDat=1; }
   render();
   if(OPEN){ const f=fam(OPEN); if(f) openFam(f.code,true); else closeFam(); }
 }
 const fam=code=>D.gd.find(f=>f.code===code);
-/* Việc hôm nay chỉ giữ gia đình CHƯA mở khóa 21 ngày.
-   Đã đóng phí + đã mở khóa → không còn việc nào. Đã đóng phí nhưng chưa mở → một việc "Mở khóa 21 ngày" (tin mẫu gửi link học đi kèm thẻ đó). */
-function locViec(){ if(!D||!D.gd) return; D.gd.forEach(f=>{ f.viec=f.moKhoa?[]:(f.viec||[]).filter(v=>v.loai!=='link'); }); }
+/* ---------- vai trò (27/10/2026): CTV · Sale · Cố vấn · Quản lý ----------
+   Máy chủ cũ chưa gửi D.cap: trang chạy như trước (Quản lý thấy cả đội, Vận hành thấy gia đình của mình). */
+const VT_TEN={ctv:'CTV',sale:'Sale',cv:'Cố vấn',ql:'Quản lý'};
+const CAP=()=>D&&(D.cap||(D.laQL?'ql':'sale'));
+const XEM_HET=()=>D&&(D.xemHet||D.laQL);
+const MOT_NGAY=864e5;
+const qua24=v=>v.han<Date.now()-MOT_NGAY;
+const homNay=t=>t&&new Date(t).toDateString()===new Date().toDateString();
+/* Việc hôm nay: gia đình đã mở khóa 21 ngày chỉ còn các việc theo bản đồ điểm chạm (g21) do máy chủ sinh. */
+function locViec(){ if(!D||!D.gd) return; D.gd.forEach(f=>{ f.viec=(f.viec||[]).filter(v=>v.loai!=='link' && (!f.moKhoa || v.g21)); }); }
+function hopLoc(x){ const a=FILTER.ai, v=x.v, f=x.f;
+  if(!a) return true;
+  if(a==='@ctv') return v.ai==='ctv';
+  if(a==='@sale') return v.ai==='sale';
+  if(a==='@cv') return v.ai==='cv' || qua24(v);
+  if(a==='@late') return qua24(v);
+  if(a==='(chưa giao)') return !f.nguoiHoTro;
+  return f.nguoiHoTro===a; }
 const tasks=()=>{ const out=[]; D.gd.forEach(f=>f.viec.forEach(v=>out.push({v,f}))); return out
   .filter(x=>!FILTER.vht || x.f.hocThu)
-  .filter(x=>!FILTER.ai || (FILTER.ai==='(chưa giao)'?!x.f.nguoiHoTro:x.f.nguoiHoTro===FILTER.ai))
+  .filter(x=>!D.cap || XEM_HET() || !x.v.ai || x.v.ai===CAP())
+  .filter(hopLoc)
   .sort((a,b)=>a.v.uuTien-b.v.uuTien || a.v.han-b.v.han); };
 
 function render(){
@@ -477,42 +511,71 @@ function render(){
   Object.values(CH).forEach(c=>c.destroy()); CH={};
   if(TAB==='viec') rViec(); else if(TAB==='ht') rHt(); else if(TAB==='gd') rGd(); else if(TAB==='st') rSt(); else if(TAB==='bc') rBc(); else rTk();
 }
-function aiPicker(){ if(!D.laQL) return '';
+function aiPicker(){ if(!XEM_HET()) return '';
   const names=[...new Set(D.gd.map(f=>f.nguoiHoTro||'(chưa giao)'))].sort();
-  return `<select class="sm" id="aiSel" aria-label="Lọc theo người hỗ trợ"><option value="">Cả đội</option>${names.map(n=>`<option ${FILTER.ai===n?'selected':''}>${esc(n)}</option>`).join('')}</select>`; }
+  const o=(v,t)=>`<option value="${esc(v)}" ${FILTER.ai===v?'selected':''}>${esc(t)}</option>`;
+  const vt=D.cap?`<optgroup label="Theo vai trò">${o('@ctv','Hàng việc CTV')}${o('@sale','Việc của sale')}${o('@cv','Cần cố vấn quyết')}${o('@late','Quá hạn hơn 24 giờ')}</optgroup><optgroup label="Theo người phụ trách">`:'';
+  return `<select class="sm" id="aiSel" aria-label="Lọc việc theo vai trò hoặc người phụ trách"><option value="">Cả đội</option>${vt}${names.map(n=>o(n,n)).join('')}${D.cap?'</optgroup>':''}</select>`; }
 function bindAi(){ const s=$('#aiSel'); if(s) s.onchange=()=>{ FILTER.ai=s.value; render(); }; }
 function lanBadge(f){ if(!['Đang dùng thử','Mời đăng ký'].includes(f.trangThai)) return '';
   return `<span class="badge lan-${f.lan}" title="Điểm gia đình">${f.lan} · ${f.diem}</span>`; }
+const NHOM_TEN={A:'Tích cực',B:'Học đều',C:'Tụt nhịp',D:'Học thử',E:'Nuôi dưỡng'};
+function nhomBadge(f){ return f.nhom?`<span class="badge nh" title="Nhóm ${f.nhom}: ${NHOM_TEN[f.nhom]||''}">${f.nhom} · ${NHOM_TEN[f.nhom]||''}</span>`:''; }
+function aiBadge(v){ return v.ai&&XEM_HET()?`<span class="badge ai-${v.ai}">${VT_TEN[v.ai]||v.ai}</span>`:''; }
 function famLine(f){ return `${esc(f.phuHuynh||'(chưa có tên)')} – bé ${esc(f.tenCon||'?')}${f.tuoi?`, ${esc(f.tuoi)} tuổi`:''}${f.khoa?` · ${esc(f.khoa)}`:''}`; }
-function callBtns(f, tin){
-  const p=f.zalo&&/^0\d{9,10}$/.test(f.zalo)?f.zalo:'', so=String(f.zalo||'').replace(/[^\d+]/g,'');
-  return `${p?`<a class="act pri" href="tel:${p}">📞 Gọi</a><a class="act" href="https://zalo.me/${p}" target="_blank" rel="noopener">💬 Zalo</a>`:''}
+function callBtns(f, tin, viec){
+  const p=f.zalo&&/^0\d{9,10}$/.test(f.zalo)?f.zalo:'', so=String(f.zalo||'').replace(/[^\d+]/g,''), ctv=CAP()==='ctv';
+  return `${p&&!ctv?`<a class="act pri" href="tel:${p}">📞 Gọi</a>`:''}${p?`<a class="act" href="https://zalo.me/${p}" target="_blank" rel="noopener">💬 Zalo</a>`:''}
     ${so?`<button class="act" type="button" data-sdt="${esc(so)}" title="Chép số ${esc(so)}" aria-label="Chép số điện thoại ${esc(so)}">📄 Chép SĐT</button>`:''}
-    ${tin?`<button class="act" type="button" data-tin="${tin}" data-code="${esc(f.code)}">📋 Tin mẫu</button>`:''}
-    <button class="act" type="button" data-open="${esc(f.code)}">✍️ Ghi kết quả</button>`; }
+    ${tin?`<button class="act" type="button" data-tin="${tin}" data-code="${esc(f.code)}"${viec?` data-viec="${esc(viec)}"`:''}>📋 Tin mẫu</button>`:''}
+    <button class="act" type="button" data-open="${esc(f.code)}"${viec?` data-viec="${esc(viec)}"`:''}>✍️ Ghi kết quả</button>`; }
 
 /* ---------- Việc hôm nay ---------- */
-function rViec(){
-  const T=tasks(), now=Date.now();
+function oSo(b,t,warn){ return `<div class="stat ${warn?'warn':''}"><b>${b}</b><span>${t}</span></div>`; }
+function tomTat(T){
+  const now=Date.now(), late=T.filter(x=>x.v.han<now).length, cap=CAP();
+  const toi=c=>c.ai===D.me.ten;
+  if(cap==='ctv'){
+    const xong=D.gd.reduce((a,f)=>a+f.lienHe.filter(c=>toi(c)&&homNay(c.t)&&c.kq!=='Chuyển sale').length,0);
+    const chuyen=D.gd.reduce((a,f)=>a+f.lienHe.filter(c=>toi(c)&&homNay(c.t)&&c.kq==='Chuyển sale').length,0);
+    return oSo(T.length,`việc trong ca${late?` · ${late} quá hạn`:''}`,late)+oSo(xong,'đã xong hôm nay')+oSo(chuyen,'đã chuyển sale hôm nay');
+  }
   const thu=D.gd.filter(f=>['Đang dùng thử','Mời đăng ký'].includes(f.trangThai));
-  const cho=D.gd.filter(f=>f.trangThai==='Chờ đóng phí').length, late=T.filter(x=>x.v.han<now).length;
+  const cho=D.gd.filter(f=>f.trangThai==='Chờ đóng phí').length;
+  let h=oSo(T.length,`việc cần làm${late?` · ${late} quá hạn`:''}`,late);
+  if(cap==='sale' && D.cap){
+    const hoc=D.gd.filter(f=>f.moKhoa), du=hoc.filter(f=>f.theDu>=6).length, hen=D.gd.filter(f=>f.henGoiLai&&f.henGoiLai>now).length;
+    return h+oSo(D.gd.filter(f=>f.nhom==='A').length,'gia đình nhóm A (tích cực)')+oSo(`${du} / ${hoc.length}`,'thẻ đủ 6 ô (đang học 21 ngày)')+oSo(hen,'lịch hẹn sắp tới');
+  }
+  h+=oSo(`${thu.filter(f=>f.lan==='nóng').length} / ${thu.filter(f=>f.lan==='ấm').length} / ${thu.filter(f=>f.lan==='lạnh').length}`,'đang thử: nóng / ấm / lạnh')+oSo(cho,'đã đăng ký, chờ đóng phí');
+  if(XEM_HET()){
+    const chuaGiao=D.bc?D.bc.chuaGiao:D.gd.filter(f=>!f.nguoiHoTro&&!['Dừng','Học viên khóa dài'].includes(f.trangThai)).length;
+    if(D.cap){ const all=[]; D.gd.forEach(f=>f.viec.forEach(v=>all.push(v)));
+      h+=oSo(all.filter(v=>v.loai==='xin').length,'chờ cố vấn cho ý kiến',all.some(v=>v.loai==='xin'))+oSo(all.filter(qua24).length,'việc quá hạn hơn 24 giờ',all.some(qua24)); }
+    h+=oSo(chuaGiao,'gia đình chưa giao người',chuaGiao);
+  }
+  return h;
+}
+function rViec(){
+  const T=tasks(), ctv=CAP()==='ctv';
   $('#main').innerHTML=`
-    <div class="summary">
-      <div class="stat ${late?'warn':''}"><b>${T.length}</b><span>việc cần làm${late?` · ${late} quá hạn`:''}</span></div>
-      <div class="stat"><b>${thu.filter(f=>f.lan==='nóng').length} / ${thu.filter(f=>f.lan==='ấm').length} / ${thu.filter(f=>f.lan==='lạnh').length}</b><span>đang thử: nóng / ấm / lạnh</span></div>
-      <div class="stat"><b>${cho}</b><span>đã đăng ký, chờ đóng phí</span></div>
-      ${D.laQL&&D.bc?`<div class="stat ${D.bc.chuaGiao?'warn':''}"><b>${D.bc.chuaGiao}</b><span>gia đình chưa giao người</span></div>`:''}
-    </div>
+    <div class="summary">${tomTat(T)}</div>
     <div class="bar">${aiPicker()}<button class="chip ${FILTER.vht?'on':''}" id="vht" type="button" aria-pressed="${FILTER.vht}">🎁 Chỉ học thử<span class="c">${D.gd.reduce((a,f)=>a+(f.hocThu?f.viec.length:0),0)}</span></button></div>
+    ${ctv?'<p class="hint">Hàng việc CTV: nhắn theo tin mẫu, gửi xong bấm "Đã gửi tin". Ba mẹ hỏi giá, lịch học, muốn học tiếp hoặc phàn nàn: bấm "Chuyển sale" và ghi rõ ba mẹ nói gì.</p>':''}
     <div class="list">${T.length?T.map(({v,f})=>{ const u=until(v.han);
       return `<article class="task p${v.uuTien}">
-        <div class="t-top"><span class="t-name">${esc(v.ten)}</span>${f.hocThu?'<span class="badge ht">Học thử</span>':''}${lanBadge(f)}<span class="t-when ${u.late?'late':''}">${v.dem?(v.demTen||'để lại số')+' '+ago(v.dem)+' · ':''}${u.s}</span></div>
+        <div class="t-top"><span class="t-name">${esc(v.ten)}</span>${aiBadge(v)}${qua24(v)&&XEM_HET()?'<span class="badge qh">Quá hạn hơn 24 giờ</span>':''}${f.hocThu?'<span class="badge ht">Học thử</span>':''}${nhomBadge(f)}${lanBadge(f)}<span class="t-when ${u.late?'late':''}">${v.dem?(v.demTen||'để lại số')+' '+ago(v.dem)+' · ':''}${u.s}</span></div>
         <p class="t-fam"><button type="button" data-open="${esc(f.code)}">${famLine(f)}</button></p>
-        <div class="t-meta">${f.hoc?`Học thử ${f.hoc.soBuoi}/3 buổi · nói ${f.hoc.noi} lần · `:''}${esc(f.trangThai)}${D.laQL?` · ${esc(f.nguoiHoTro||'chưa giao')}`:''}${f.lienHeGanNhat?` · liên hệ ${ago(f.lienHeGanNhat)}`:''}</div>
-        <div class="acts">${v.loai==='mo'?`<button class="act ok" type="button" data-mkgo="${esc(f.code)}">✓ Mở khóa 21 ngày</button>`:''}${callBtns(f, v.tin)}</div></article>`; }).join('')
-      :`<div class="empty"><b>Không còn việc nào 🎉</b>Gia đình mới để lại Zalo sẽ hiện ở đây. Trang tự tải lại mỗi 2 phút.</div>`}</div>`;
+        <div class="t-meta">${f.hoc?`Học thử ${f.hoc.soBuoi}/3 buổi · nói ${f.hoc.noi} lần · `:''}${f.h21?`21 ngày: ${f.h21.buoi} buổi, lần cuối ${ago(f.h21.cuoi)} · `:''}${esc(f.trangThai)}${XEM_HET()?` · ${esc(f.nguoiHoTro||'chưa giao')}`:''}${f.lienHeGanNhat?` · liên hệ ${ago(f.lienHeGanNhat)}`:''}</div>
+        <div class="acts">${v.loai==='mo'?`<button class="act ok" type="button" data-mkgo="${esc(f.code)}">✓ Mở khóa 21 ngày</button>`:''}${v.ai==='ctv'&&v.tin&&v.loai!=='mo'?`<button class="act xong" type="button" data-xong="${esc(f.code)}" data-viec="${esc(v.loai)}">✓ Đã gửi tin</button>`:''}${callBtns(f, v.tin, v.loai)}${ctv?`<button class="act chuyen" type="button" data-chuyen="${esc(f.code)}" data-viec="${esc(v.loai)}">↗ Chuyển sale</button>`:''}</div></article>`; }).join('')
+      :`<div class="empty"><b>Không còn việc nào 🎉</b>${ctv?'Việc mới của ca sẽ hiện ở đây.':'Gia đình mới để lại Zalo sẽ hiện ở đây.'} Trang tự tải lại mỗi 2 phút.</div>`}</div>`;
   const vh=$('#vht'); if(vh) vh.onclick=()=>{ FILTER.vht=!FILTER.vht; rViec(); };
   bindAi(); bindActs($('#main'));
+}
+async function daGui(code, viec, btn){
+  btn.disabled=true; btn.textContent='Đang lưu…';
+  try{ D=await api('ghiLienHe',{p:{code, ketQua:'Đã nhắn Zalo', viec, ghiChu:'Đã gửi tin mẫu'}}); toast('Đã ghi: đã gửi tin'); render(); }
+  catch(e){ btn.disabled=false; btn.textContent='✓ Đã gửi tin'; if(!e.silent) toast(e.message); }
 }
 
 /* ---------- Học thử: danh sách riêng các gia đình đăng ký ở ô "Học thử miễn phí" (tab "Đăng ký học thử") ---------- */
@@ -542,7 +605,7 @@ function rHt(){
     <div class="list">${L.length?L.map(f=>{ const b=htBuoi(f);
       return `<div class="famrow"><button class="fam" type="button" data-open="${esc(f.code)}">
         <span class="nm">Bé ${esc(f.tenCon||'?')}${f.tuoi?`, ${esc(f.tuoi)} tuổi`:''}${f.khoa?` · ${esc(f.khoa)}`:''}</span>${htBam(f)&&!f.moKhoa?'<span class="badge kh">Đã bấm kích hoạt</span>':''}
-        <span class="sub">Đăng ký ${ago(f.hocThu.t)} · ${esc(f.zalo||'chưa có số')} · <span class="ht-buoi" title="Đã học ${b}/3 buổi">${[1,2,3].map(i=>`<i class="${b>=i?'on':''}"></i>`).join('')}</span> ${b}/3 buổi${f.hoc&&f.hoc.noi?` · nói ${f.hoc.noi} lần`:''} · ${f.dyTuVan?'✓ tư vấn':'✗ tư vấn'} · ${esc(f.ref)}${D.laQL?` · ${esc(f.nguoiHoTro||'chưa giao')}`:''}${f.viec.length?` · <b>${f.viec.length} việc</b>`:''}</span></button>
+        <span class="sub">Đăng ký ${ago(f.hocThu.t)} · ${esc(f.zalo||'chưa có số')} · <span class="ht-buoi" title="Đã học ${b}/3 buổi">${[1,2,3].map(i=>`<i class="${b>=i?'on':''}"></i>`).join('')}</span> ${b}/3 buổi${f.hoc&&f.hoc.noi?` · nói ${f.hoc.noi} lần`:''} · ${f.dyTuVan?'✓ tư vấn':'✗ tư vấn'} · ${esc(f.ref)}${XEM_HET()?` · ${esc(f.nguoiHoTro||'chưa giao')}`:''}${f.viec.length?` · <b>${f.viec.length} việc</b>`:''}</span></button>
         ${mkBox(f)}${cpkBtn(f)}</div>`; }).join('')
       :`<div class="empty"><b>Chưa có gia đình nào ở đây</b>Ba mẹ đăng ký ở ô "Học thử miễn phí" trên web học sẽ hiện ở đây.</div>`}</div>`;
   const qi=$('#q'); qi.oninput=()=>{ FILTER.q=qi.value; const pos=qi.selectionStart; rHt(); const m=$('#q'); m.focus(); m.setSelectionRange(pos,pos); };
@@ -589,7 +652,7 @@ function rGd(){
       ${D.laQL?`<button class="act pri" type="button" id="gopHet">Gộp tất cả ${soTrung-soNhom} dòng trùng</button>`:''}</div>`:''}
     <div class="list">${L.length?L.map(f=>`<div class="famrow"><button class="fam" type="button" data-open="${esc(f.code)}">
         <span class="nm">${famLine(f)}</span>${lanBadge(f)}
-        <span class="sub">${laTrung(f)?'<span class="badge trung">Trùng số</span> ':''}<span class="badge st">${esc(f.trangThai)}</span> · ${esc(f.zalo||'chưa có số')} · ${esc(f.ref)} · ${esc(f.nguon)}${D.laQL?` · ${esc(f.nguoiHoTro||'chưa giao')}`:''}${f.viec.length?` · <b>${f.viec.length} việc</b>`:''}</span></button>
+        <span class="sub">${laTrung(f)?'<span class="badge trung">Trùng số</span> ':''}<span class="badge st">${esc(f.trangThai)}</span> · ${esc(f.zalo||'chưa có số')} · ${esc(f.ref)} · ${esc(f.nguon)}${XEM_HET()?` · ${esc(f.nguoiHoTro||'chưa giao')}`:''}${f.viec.length?` · <b>${f.viec.length} việc</b>`:''}</span></button>
         ${mkBox(f)}${cpkBtn(f)}</div>`).join('')
       :`<div class="empty"><b>Chưa có gia đình nào ở đây</b>${D.laQL?'':'Gia đình được giao cho bạn sẽ hiện ở đây.'}</div>`}</div>`;
   const qi=$('#q'); qi.oninput=()=>{ FILTER.q=qi.value; const pos=qi.selectionStart; rGd(); const n=$('#q'); n.focus(); n.setSelectionRange(pos,pos); };
@@ -751,7 +814,7 @@ function tkForm(t){
       <label>Tên đăng nhập<input id="tU" value="${esc(t.user)}" ${moi?'':'readonly'} autocapitalize="none" spellcheck="false" placeholder="ví dụ: thao.nguyen"></label>
       <label>Tên hiển thị (dùng ở cột Người hỗ trợ)<input id="tTen" value="${esc(t.ten)}" maxlength="40" placeholder="ví dụ: Thảo"></label>
       <div class="two">
-        <label>Vai trò<select id="tVt">${['Vận hành','Quản lý'].map(v=>`<option ${t.vaiTro===v?'selected':''}>${v}</option>`).join('')}</select></label>
+        <label>Vai trò<select id="tVt">${(D.vaiTroDs||['Vận hành','Quản lý']).map(v=>`<option ${t.vaiTro===v?'selected':''}>${v}</option>`).join('')}</select></label>
         <label>Nhận gia đình mới<select id="tNhan"><option value="1" ${t.nhan?'selected':''}>Có</option><option value="0" ${t.nhan?'':'selected'}>Không</option></select></label>
       </div>
       ${moi?'':`<label>Trạng thái<select id="tHd"><option value="1" ${t.hoatDong?'selected':''}>Đang hoạt động</option><option value="0" ${t.hoatDong?'':'selected'}>Tạm khóa (không đăng nhập được)</option></select></label>`}
@@ -896,8 +959,10 @@ function bindActs(root){
   root.querySelectorAll('[data-tk]').forEach(b=>b.onclick=()=>chepTk(b.dataset.tk));
   root.querySelectorAll('[data-mk]').forEach(c=>c.onchange=()=>moKhoaTick(c.dataset.mk, c.checked, c));
   root.querySelectorAll('[data-mkgo]').forEach(b=>b.onclick=()=>moKhoaTick(b.dataset.mkgo, true, b));
-  root.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>openFam(b.dataset.open));
-  root.querySelectorAll('[data-tin]').forEach(b=>b.onclick=()=>showTpl(fam(b.dataset.code), b.dataset.tin));
+  root.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>openFam(b.dataset.open, false, {viec:b.dataset.viec||''}));
+  root.querySelectorAll('[data-tin]').forEach(b=>b.onclick=()=>showTpl(fam(b.dataset.code), b.dataset.tin, b.dataset.viec||''));
+  root.querySelectorAll('[data-xong]').forEach(b=>b.onclick=()=>daGui(b.dataset.xong, b.dataset.viec, b));
+  root.querySelectorAll('[data-chuyen]').forEach(b=>b.onclick=()=>openFam(b.dataset.chuyen, false, {viec:b.dataset.viec||'', kq:'Chuyển sale'}));
   root.querySelectorAll('[data-sdt]').forEach(b=>b.onclick=()=>copyText(b.dataset.sdt, 'Đã chép số '+b.dataset.sdt));
 }
 function xung(f){ const n=String(f.phuHuynh||'').trim(); if(!n) return 'anh/chị';
@@ -910,12 +975,12 @@ function fillTpl(key,f){
     so_buoi:h.soBuoi||0, so_lan_noi:h.noi||0, hoc_them:h.noi?` và đã nói thành tiếng ${h.noi} lần`:'', link_dang_ky:linkDk(f),
     han:D.caiDat.hanText, khai_mac:D.caiDat.khaiMac, phi:D.caiDat.phi, so_zalo:f.zalo||'', link_hoc:D.caiDat.linkHoc};
   return String(t).replace(/\{(\w+)\}/g,(m,k)=>k in map?map[k]:m); }
-function showTpl(f,key){
+function showTpl(f,key,viec){
   if(!f) return; const txt=fillTpl(key,f), title=(D.tinMau[key]||{}).ten||'Tin mẫu';
   const host=$('#sheetHost'); host.innerHTML=`<div class="sheet" role="dialog" aria-modal="true" aria-label="${esc(title)}"><div class="panel">
     <div class="p-hd"><h2>${esc(title)}<small>${famLine(f)}</small></h2><button class="x" type="button" aria-label="Đóng">✕</button></div>
     <div class="box tpl"><textarea id="tplTxt" aria-label="Nội dung tin nhắn">${esc(txt)}</textarea>
-      <div class="acts"><button class="act pri" type="button" id="cp">📋 Chép tin</button>${f.zalo?`<a class="act" href="https://zalo.me/${esc(f.zalo)}" target="_blank" rel="noopener">💬 Mở Zalo</a>`:''}<button class="act" type="button" data-open="${esc(f.code)}">✍️ Ghi kết quả</button></div>
+      <div class="acts"><button class="act pri" type="button" id="cp">📋 Chép tin</button>${f.zalo?`<a class="act" href="https://zalo.me/${esc(f.zalo)}" target="_blank" rel="noopener">💬 Mở Zalo</a>`:''}<button class="act" type="button" data-open="${esc(f.code)}"${viec?` data-viec="${esc(viec)}"`:''}>✍️ Ghi kết quả</button></div>
       <p class="hint">Sửa nội dung ngay trong ô trên nếu cần. Tin mẫu gốc nằm ở tab "Tin mẫu Zalo" của Sheet. Gửi xong nhớ bấm Ghi kết quả.</p></div></div></div>`;
   const close=()=>host.innerHTML=''; $('.x',host).onclick=close; $('.sheet',host).onclick=e=>{ if(e.target.classList.contains('sheet')) close(); };
   $('#cp',host).onclick=()=>copy($('#tplTxt',host)); bindActs(host);
@@ -928,13 +993,51 @@ async function copy(ta){ try{ await navigator.clipboard.writeText(ta.value); toa
   catch(e){ ta.focus(); ta.select(); try{ document.execCommand('copy'); toast('Đã chép'); }catch(_){ toast('Hãy giữ và chọn Sao chép'); } } }
 
 const EVN={vao:'Quay lại học',hoc:'Bé bắt đầu học',xong1:'Xong buổi 1',xong2:'Xong buổi 2',xong3:'Xong 3 buổi',noi:'Con nói thành tiếng',khoa:'Bấm phần bị khóa',bam_dk:'Bấm "Đăng ký cho con"',zalo:'Ba mẹ để lại Zalo',dong_hanh:'Mở Ba mẹ đồng hành'};
-function openFam(code, keep){
-  locViec(); const f=fam(code); if(!f) return; OPEN=code; if(!keep) api('ghiMoHoSo',{code}).catch(()=>{});
-  const host=$('#sheetHost'), h=f.hoc;
+/* ---------- Thẻ kết quả mong muốn (6 ô + câu JTBD + 4 lực), lưu ở tab "Thẻ gia đình" ---------- */
+const THE_O=[['o1','① Bối cảnh','Con học tiếng Anh ở đâu, ai đồng hành, con học lúc nào'],
+  ['khi','② Khi…','Tình huống, thời điểm khiến ba mẹ quyết định'],['muon','② Tôi muốn…','Tiến bộ ba mẹ muốn đạt (không ghi tên khoá học)'],['de','② Để…','Kết quả cho con, cảm xúc của ba mẹ'],
+  ['o3','③ Nỗi đau','Điều đang làm ba mẹ lo, đã thử cách gì, vì sao dừng'],['o4','④ Rào cản','Điều cản việc duy trì và việc quyết định'],
+  ['o5','⑤ Kết quả + cách đo','Con làm được gì thì ba mẹ thấy đáng, đo bằng gì, khi nào'],['o6','⑥ Vì sao cần ngay','Mốc sắp tới: vào lớp 1, chuyển trường, kỳ thi…'],
+  ['day','Lực đẩy','Không hài lòng với cách cũ'],['keo','Lực kéo','Điều hút ba mẹ đến cách mới'],['lo','Lo lắng','Điều ba mẹ sợ ở cách mới'],['thoiQuen','Thói quen','Điều giữ ba mẹ ở cách cũ']];
+const THE_MO=['khao_sat','bo_sung_the','boi_canh','phieu_nhu_cau','hoi_so_1','hoi_so_2','thu_giua'];
+function theBox(f){
+  const t=f.the||{}, cap=CAP(), du=f.theDu||0, duoc=k=>cap!=='ctv'||['o1','o4'].includes(k);
+  const fld=([k,l,ph])=>duoc(k)?`<label>${l}<textarea data-the="${k}" maxlength="600" placeholder="${esc(ph)}">${esc(t[k]||'')}</textarea></label>`:'';
+  const o=k=>THE_O.find(x=>x[0]===k);
+  return `<div class="box"><h3>Thẻ kết quả mong muốn · ${du}/6 ô</h3>
+    <div class="the-tien" aria-hidden="true">${[1,2,3,4,5,6].map(i=>`<i class="${du>=i?'on':''}"></i>`).join('')}</div>
+    <details ${THE_MO.includes(CUR.viec)?'open':''}><summary style="cursor:pointer;margin-top:8px;font-weight:600">${du?'Xem và sửa thẻ':'Điền thẻ'}</summary>
+    <form class="log" id="theF" novalidate><div class="the-ds">
+      <p class="hint" style="margin:0">Ghi nguyên văn lời ba mẹ, không ghi suy đoán của mình.${cap==='ctv'?' CTV ghi ô ① và ④; các ô khác do sale điền sau cuộc gọi.':''}</p>
+      ${cap!=='ctv'?`<label>Nhóm<select id="theNhom"><option value="">Tự xếp theo dữ liệu (đang là ${esc(f.nhom||'?')})</option>${['A','B','C','D','E'].map(n=>`<option value="${n}" ${t.nhom===n?'selected':''}>${n} · ${NHOM_TEN[n]}</option>`).join('')}</select></label>`:''}
+      ${fld(o('o1'))}
+      ${cap!=='ctv'?`<div class="jt">${fld(o('khi'))}${fld(o('muon'))}${fld(o('de'))}</div>`:''}
+      ${fld(o('o3'))}${fld(o('o4'))}${fld(o('o5'))}${fld(o('o6'))}
+      ${cap!=='ctv'?`<div class="jt">${fld(o('day'))}${fld(o('keo'))}${fld(o('lo'))}${fld(o('thoiQuen'))}</div>`:''}
+      <p class="err" id="theErr" hidden></p>
+      <div class="acts"><button class="save" type="submit" id="theOk">Lưu thẻ</button></div>
+      ${t.luc?`<p class="hint">Cập nhật ${fmt(t.luc)} · ${esc(t.ai||'')}</p>`:''}
+    </div></form></details></div>`;
+}
+function bindThe(f, host){
+  const fm=$('#theF',host); if(!fm) return;
+  fm.onsubmit=async e=>{ e.preventDefault();
+    const the={}; fm.querySelectorAll('[data-the]').forEach(x=>the[x.dataset.the]=x.value);
+    const n=$('#theNhom',fm); if(n) the.nhom=n.value;
+    const b=$('#theOk',fm), er=$('#theErr',fm); b.disabled=true; b.textContent='Đang lưu…';
+    try{ const d=await api('luuThe',{code:f.code, the}); D=d; toast(d.soSua?'Đã lưu thẻ':'Không có gì thay đổi'); openFam(f.code,true); render(); }
+    catch(x){ b.disabled=false; b.textContent='Lưu thẻ'; if(!x.silent){ er.hidden=false; er.textContent=x.message; } } };
+}
+let CUR={viec:'', kq:''};
+function openFam(code, keep, opt){
+  locViec(); const f=fam(code); if(!f) return; if(!keep||opt) CUR={viec:(opt&&opt.viec)||'', kq:(opt&&opt.kq)||''};
+  OPEN=code; if(!keep) api('ghiMoHoSo',{code}).catch(()=>{});
+  const host=$('#sheetHost'), h=f.hoc, cap=CAP(), vCur=f.viec.find(v=>v.loai===CUR.viec);
   host.innerHTML=`<div class="sheet" role="dialog" aria-modal="true" aria-labelledby="pTitle"><div class="panel">
-    <div class="p-hd"><h2 id="pTitle">${esc(f.phuHuynh||'(chưa có tên)')} – bé ${esc(f.tenCon)}<small>${esc(f.code)} · ${esc(f.trangThai)} ${lanBadge(f)}</small></h2><button class="x" type="button" aria-label="Đóng">✕</button></div>
+    <div class="p-hd"><h2 id="pTitle">${esc(f.phuHuynh||'(chưa có tên)')} – bé ${esc(f.tenCon)}<small>${esc(f.code)} · ${esc(f.trangThai)} ${nhomBadge(f)} ${lanBadge(f)}</small></h2><button class="x" type="button" aria-label="Đóng">✕</button></div>
     <div class="acts">${callBtns(f, f.viec[0]&&f.viec[0].tin)}</div>
-    ${f.viec.length?`<div class="box"><h3>Việc đang chờ</h3>${f.viec.map(v=>`<div>• ${esc(v.ten)} <span class="hint">(${until(v.han).s})</span></div>`).join('')}</div>`:''}
+    ${f.viec.length?`<div class="box"><h3>Việc đang chờ</h3>${f.viec.map(v=>`<div>• ${esc(v.ten)} ${aiBadge(v)} <span class="hint">(${until(v.han).s})</span></div>`).join('')}</div>`:''}
+    ${f.h21?`<div class="box"><h3>Học 21 ngày</h3><p style="margin:0">${f.h21.buoi} buổi đã học · ${f.h21.diem} sao · lần cuối ${ago(f.h21.cuoi)}</p></div>`:''}
     <label class="mk-big ${f.moKhoa?'on':''}"><input type="checkbox" data-mk="${esc(f.code)}" ${f.moKhoa?'checked':''}><span>Mở khóa 21 ngày<small>${f.moKhoa?'Đã mở'+(typeof f.moKhoaLuc==='number'?' lúc '+fmt(f.moKhoaLuc):'')+'. Bỏ tick để khóa lại.':(String(f.moKhoaLuc).startsWith('Khóa')?esc(f.moKhoaLuc)+'. ':'')+'Tick khi đã nhận phí: bé học đủ 21 ngày trên chính link cũ.'}</small></span></label>
     ${dupBox(f)}
     ${tkSo(f)?`<div class="box tpl tk-box"><h3>Tài khoản đăng nhập</h3>
@@ -966,18 +1069,21 @@ function openFam(code, keep){
       <div class="acts"><button class="save" type="submit" id="sOk">Lưu thay đổi</button><button class="act" type="button" id="sHuy">Huỷ</button></div>
       <p class="hint">Giá trị cũ được giữ trên Sheet (tab "Lịch sử sửa") để đối chiếu; các tab đơn đăng ký gốc không bị đổi. Đổi số điện thoại thì ba mẹ đăng nhập bằng số mới.</p>
     </form></div>
+    ${D.cap?theBox(f):''}
     <div class="box"><h3>Ghi kết quả liên hệ</h3><form class="log" id="logF" novalidate>
-      <label>Kết quả<select id="kq"><option value="">(chỉ đổi trạng thái / ghi chú)</option>${D.ketQua.map(k=>`<option>${esc(k)}</option>`).join('')}</select></label>
+      ${vCur?`<p class="dang-ghi">Đang ghi kết quả cho việc: <b>${esc(vCur.ten)}</b>. Lưu xong việc này tự đóng.</p>`:''}
+      ${D.cap?`<div class="vt-row">${cap==='ctv'?'<button class="act chuyen" type="button" data-kq="Chuyển sale">↗ Chuyển sale</button>':''}${cap==='sale'||cap==='ql'?'<button class="act" type="button" data-kq="Xin ý kiến cố vấn">🙋 Xin ý kiến cố vấn</button>':''}${cap==='cv'||cap==='ql'?'<button class="act" type="button" data-kq="Cố vấn trả lời">✓ Cố vấn trả lời</button>':''}</div>`:''}
+      <label>Kết quả<select id="kq"><option value="">(chỉ đổi trạng thái / ghi chú)</option>${D.ketQua.map(k=>`<option ${k===CUR.kq?'selected':''}>${esc(k)}</option>`).join('')}</select></label>
       <label>Ghi chú<textarea id="gc" maxlength="500" placeholder="Con thích phần nào, ba mẹ băn khoăn gì, đã gửi tin gì…"></textarea></label>
       <div class="two"><label>Hẹn gọi lại<input id="hen" type="datetime-local"></label>
-        <label>Trạng thái<select id="tt">${D.trangThai.map(t=>`<option ${t===f.trangThai?'selected':''}>${esc(t)}</option>`).join('')}</select></label></div>
+        <label ${cap==='ctv'?'hidden':''}>Trạng thái<select id="tt">${D.trangThai.map(t=>`<option ${t===f.trangThai?'selected':''}>${esc(t)}</option>`).join('')}</select></label></div>
       <div class="two" id="lyDoBox" hidden><label>Lý do (bắt buộc)<select id="ld"><option value="">Chọn lý do</option>${D.lyDo.map(k=>`<option>${esc(k)}</option>`).join('')}</select></label>
         <label>Thêm chi tiết<input id="ld2" maxlength="200"></label></div>
-      <div class="two"><label>Khoá<select id="kh"><option value="">${esc(f.khoa||'Chưa xếp')}</option><option>Little Seed</option><option>Canopy</option></select></label>
-        ${D.laQL?`<label>Người hỗ trợ<select id="ho"><option value="">(chưa giao)</option>${D.team.map(t=>`<option ${t.ten===f.nguoiHoTro?'selected':''}>${esc(t.ten)}</option>`).join('')}</select></label>`:'<span></span>'}</div>
+      <div class="two" ${cap==='ctv'?'hidden':''}><label>Khoá<select id="kh"><option value="">${esc(f.khoa||'Chưa xếp')}</option><option>Little Seed</option><option>Canopy</option></select></label>
+        ${XEM_HET()?`<label>Người hỗ trợ<select id="ho"><option value="">(chưa giao)</option>${D.team.filter(t=>t.cap!=='ctv').map(t=>`<option ${t.ten===f.nguoiHoTro?'selected':''}>${esc(t.ten)}</option>`).join('')}</select></label>`:'<span></span>'}</div>
       <p class="err" id="lerr" hidden></p>
       <button class="save" type="submit" id="sv">Lưu</button>
-      <p class="hint">Mỗi lần lưu ghi một dòng vào tab "Nhật ký cuộc gọi". Mời chứ không ép, không nói con làm sai, không so con với bạn khác.</p>
+      <p class="hint">Mỗi lần lưu ghi một dòng vào tab "Nhật ký cuộc gọi". Mời chứ không ép, không nói con làm sai, không so con với bạn khác.${cap==='ctv'?' CTV không báo giá, không hứa ưu đãi: ba mẹ hỏi thì chọn "Chuyển sale" và ghi rõ ba mẹ nói gì.':''}</p>
     </form></div>
     <div class="box"><h3>Điểm gia đình: ${f.diem}/100</h3><div class="score">${f.chiTietDiem.map(p=>`<div><span class="${p.ok?'ok':'no'}">${p.ok?'✓':'·'}</span>${esc(p.ten)}<em>${p.ok?'+'+p.diem:'0/'+p.diem} · ${esc(p.nhom)}</em></div>`).join('')}</div>
       <p class="hint">Điểm đo độ phù hợp và độ chăm, không đo con giỏi hay kém. Ba mẹ và bé không bao giờ thấy điểm này.</p></div>
@@ -990,11 +1096,14 @@ function openFam(code, keep){
   bindActs(host); host.querySelectorAll('.box [data-open], .acts [data-open]').forEach(b=>b.onclick=()=>$('#kq',host).focus());
   const tt=$('#tt',host), lb=$('#lyDoBox',host); const sync=()=>lb.hidden=!['Dừng','Nuôi dưỡng'].includes(tt.value); tt.onchange=sync; sync();
   $('#kq',host).onchange=e=>{ if(e.target.value==='Hẹn gọi lại') $('#hen',host).focus(); };
+  host.querySelectorAll('[data-kq]').forEach(b=>b.onclick=()=>{ $('#kq',host).value=b.dataset.kq; const g=$('#gc',host); g.placeholder=b.dataset.kq==='Chuyển sale'?'Ba mẹ nói gì? (hỏi giá, muốn học tiếp, phàn nàn…)':b.dataset.kq==='Xin ý kiến cố vấn'?'Cần cố vấn quyết điều gì?':'Cố vấn quyết thế nào?'; g.focus(); });
+  bindThe(f, host);
+  if(CUR.kq) setTimeout(()=>{ const g=$('#gc',host); if(g) g.focus(); },60);
   const xb=$('#xoaDong',host); if(xb) xb.onclick=()=>xoaDong(f, xb);
   bindSua(f, host);
   const tkB=$('#tkCp',host); if(tkB) tkB.onclick=()=>copyText($('#tkTxt',host).value, f.moKhoa?'Đã chép hướng dẫn đăng nhập. Dán vào Zalo gửi ba mẹ.':'Đã chép. Nhớ tick Mở khóa 21 ngày trước khi gửi.');
   $('#logF',host).onsubmit=e=>{ e.preventDefault(); save(f); };
-  if(!keep) setTimeout(()=>$('.x',host).focus(),50);
+  if(!keep) setTimeout(()=>{ const x=$('.x',host); if(x) x.focus(); },50);
 }
 function closeFam(){ OPEN=null; $('#sheetHost').innerHTML=''; }
 async function save(f){
@@ -1002,13 +1111,16 @@ async function save(f){
   const p={code:f.code, ketQua:g('#kq').value, ghiChu:g('#gc').value.trim(), trangThai:g('#tt').value!==f.trangThai?g('#tt').value:'',
     lyDo:g('#ld').value, lyDoThem:g('#ld2').value.trim(), khoa:g('#kh').value};
   const hen=g('#hen').value; if(hen) p.henGoiLai=new Date(hen).getTime();
-  if(D.laQL){ const ho=g('#ho').value; if(ho!==(f.nguoiHoTro||'')) p.nguoiHoTro=ho; }
+  if(XEM_HET()&&g('#ho')){ const ho=g('#ho').value; if(ho!==(f.nguoiHoTro||'')) p.nguoiHoTro=ho; }
   const say=t=>{ err.hidden=false; err.textContent=t; };
   if(!p.ketQua && !p.ghiChu && !p.trangThai && !p.henGoiLai && !p.khoa && p.nguoiHoTro==null) return say('Chọn kết quả, ghi chú hoặc đổi trạng thái trước khi lưu.');
   if(p.ketQua==='Hẹn gọi lại' && !p.henGoiLai) return say('Chọn giờ hẹn gọi lại.');
+  if(['Chuyển sale','Xin ý kiến cố vấn','Cố vấn trả lời'].includes(p.ketQua) && !p.ghiChu) return say('Ghi rõ nội dung khi chọn "'+p.ketQua+'".');
+  if(CUR.viec && f.viec.some(v=>v.loai===CUR.viec)) p.viec=CUR.viec;
+  if(CAP()==='ctv'){ p.trangThai=''; p.khoa=''; }
   if(['Dừng','Nuôi dưỡng'].includes(p.trangThai) && !p.lyDo) return say('Chọn lý do khi chuyển sang '+p.trangThai+'.');
   const b=g('#sv'); b.disabled=true; b.textContent='Đang lưu…';
-  try{ D=await api('ghiLienHe',{p}); toast('Đã lưu'); closeFam(); render(); }
+  try{ D=await api('ghiLienHe',{p}); toast('Đã lưu'); CUR={viec:'',kq:''}; closeFam(); render(); }
   catch(e){ b.disabled=false; b.textContent='Lưu'; if(!e.silent) say(e.message); }
 }
 

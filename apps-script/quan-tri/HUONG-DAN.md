@@ -11,7 +11,42 @@
 1. `https://script.google.com/u/2/home` (tài khoản anhtrung.home) → dự án **Anh-Trung-Kids – Máy chủ web học**.
 2. Tệp `Code.gs`: dán đè `apps-script/Code.gs`. Tệp **QuanTri.gs** (＋ → Tập lệnh, tên `QuanTri`): dán đè `apps-script/QuanTri.gs`. **Lưu**.
 3. **Triển khai → Quản lý các bản triển khai** → bút chì → Phiên bản: **Phiên bản mới** → **Triển khai**. Link /exec giữ nguyên.
-4. Kiểm tra: mở link /exec thêm `?action=ping`, thấy `"v":5` là đúng.
+4. Kiểm tra: mở link /exec thêm `?action=ping`, thấy `"v":8` là đúng (bản có việc theo vai trò).
+
+## Việc theo vai trò: CTV · Sale · Cố vấn (từ 27/10/2026, máy chủ `v:8`)
+
+Trang tự sinh việc theo **bản đồ điểm chạm** và chia theo ba cấp. Cần dán lại cả `Code.gs` và `QuanTri.gs` rồi triển khai **Phiên bản mới** (ping thấy `"v":8`). Khi máy chủ chưa cập nhật, trang vẫn chạy như cũ.
+
+| Vai trò (cột C tab Đội) | Thấy gì ở Việc hôm nay | Làm được |
+| --- | --- | --- |
+| **CTV** | Hàng việc CTV của mọi gia đình (nhắn tin mẫu), xếp theo hạn trong ca | Tin mẫu, Zalo, "✓ Đã gửi tin", "↗ Chuyển sale", ghi ô ① và ④ của thẻ, mở khóa cho gia đình đã ghi nhận đóng phí. Không có nút Gọi, không đổi trạng thái, không sửa thông tin |
+| **Sale** (và **Vận hành** cũ) | Việc của sale cho gia đình mình phụ trách: gọi gia đình nóng, khảo sát 2–3 phút, phiếu nhu cầu, tư vấn, vét sau chung kết, mời giới thiệu | Mọi việc với gia đình mình, điền Thẻ 6 ô, "🙋 Xin ý kiến cố vấn" |
+| **Cố vấn** | Mặc định lọc "Cần cố vấn quyết": xin ý kiến, giao người, việc quá hạn hơn 24 giờ. Đổi bộ lọc để xem hàng CTV, việc sale hoặc từng người | Giao người phụ trách, "✓ Cố vấn trả lời", điền Thẻ |
+| **Quản lý** | Như Cố vấn, thêm Báo cáo và Tài khoản | Mọi việc |
+
+- **Chưa có tài khoản CTV nào** đang hoạt động: việc CTV quay về người phụ trách như trước.
+- **Chia gia đình mới**: máy chủ web học chia cho người có vai trò **Vận hành** hoặc **Sale** và "Nhận gia đình mới" = TRUE. CTV, Cố vấn không nhận.
+- **Việc tự đóng**: bấm "Ghi kết quả" hoặc "✓ Đã gửi tin" từ đúng thẻ việc, trang ghi mã việc vào cột R ("Việc") của tab Nhật ký cuộc gọi, việc đó biến mất.
+- **Nhóm A–E** tự xếp: A gia đình nóng hoặc ba mẹ nhắn lại / được chuyển sale · B học đều · C nghỉ học từ 2 ngày · D học thử chưa kích hoạt · E nuôi dưỡng. Sale, Cố vấn chọn tay được trong Thẻ.
+- **Thẻ 6 ô** (bối cảnh, câu JTBD Khi / Tôi muốn / Để, nỗi đau, rào cản, kết quả + cách đo, vì sao cần ngay, 4 lực) lưu ở tab mới **Thẻ gia đình**.
+- **Tiến độ 21 ngày** của bé được nối với gia đình theo số điện thoại + tên con (giống cách web học đặt mã bé), nên trang biết bé nghỉ mấy ngày.
+- Tab **Cài đặt quản trị** có thêm "Ngày bắt đầu 21 ngày" (2026-10-26) và "Ngày chung kết" (để trống = ngày thứ 22). Việc theo tuần tính từ hai mốc này. Việc mới bắt đầu tính hạn từ 9:00 ngày 28/10/2026.
+- Tin mẫu mới tự thêm vào tab **Tin mẫu Zalo**: `boi_canh`, `hen_khao_sat`, `hoi_so_1`, `hoi_so_2`, `keo_nhip`, `thu_giua`, `phieu_nhu_cau`, `bao_cao`, `vet`, `gioi_thieu`, `ngoai_tuoi`. Sửa nội dung ngay trên Sheet; riêng `hoi_so_2` nên thay bằng các câu JTBD đội gom được ngày 2/11.
+
+| Mã việc | Ai | Khi nào sinh |
+| --- | --- | --- |
+| `chao`, `moi`, `phi` | Sale nếu gia đình nóng, CTV nếu không | Như cũ; việc CTV hạn trong ca (4 giờ làm việc) |
+| `mo` | CTV (đã đóng phí) · Sale (ba mẹ bấm Kích hoạt, cần kiểm tra chuyển khoản) | Như cũ |
+| `ngoai_tuoi` | CTV | Bé dưới 5 hoặc trên 10 tuổi, chưa mở khóa |
+| `chuyen` · `giao` | Sale có người phụ trách · Cố vấn nếu chưa có | CTV ghi "Chuyển sale", sale chưa liên hệ lại |
+| `xin` · `tra_loi` | Cố vấn · Sale | Sale ghi "Xin ý kiến cố vấn" · Cố vấn ghi "Cố vấn trả lời" |
+| `boi_canh` | CTV | Đã mở khóa, thẻ chưa có ô ① |
+| `khao_sat` | Sale | Nhóm A, có người phụ trách, 14 ngày đầu |
+| `hoi_so_1`, `hoi_so_2` | CTV | Nhóm B, C, từ ngày thứ 3 của tuần 1 và tuần 2 |
+| `keo_nhip` | CTV | Bé nghỉ từ 2 ngày (hoặc mở khóa 2 ngày chưa vào học) |
+| `thu_giua`, `phieu_nhu_cau`, `bo_sung_the` | CTV · Sale (nhóm A) · Sale | Từ ngày 15 (9/11) |
+| `bao_cao`, `vet_1..3` | CTV · Sale | Ngày 1–7 sau chung kết; vét ngày 1, 3, 6 |
+| `gioi_thieu` | Sale | 3 ngày sau khi chuyển "Học viên khóa dài" |
 
 ## Tài khoản
 - **Tài khoản đầu tiên:** mở trang, nhập **Mã thiết lập** lấy ở Sheet → tab **Cài đặt quản trị** → dòng **Mã thiết lập tài khoản**, rồi chọn tên đăng nhập và mật khẩu. Tài khoản này là **Quản lý**. Mã tự đổi sau mỗi lần dùng.
