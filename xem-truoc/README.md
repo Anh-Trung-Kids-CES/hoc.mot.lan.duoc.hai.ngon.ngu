@@ -59,3 +59,9 @@ Tiến độ ở chế độ giáo viên lưu riêng (`lle-progress-gv`), không
 - Màn nhập tên và bảng mời có lối "Ba mẹ đã đóng phí? Đăng nhập bằng số điện thoại". Gia đình đã để lại Zalo được tự mở khi đội tick, tiến độ học thử được mang sang.
 - Máy đã học bản đầy đủ trước khi có một link vẫn học tiếp (máy chủ nhận mã bé có trong tab TienDo). `?gv=1` vẫn là chế độ giáo viên.
 - Trang cũ ở gốc chuyển sang `cu/index.html`.
+
+## Cập nhật 27/10/2026 (ô học thử 3 buổi trên màn vào web)
+- Màn vào web có **3 ô**: Đăng nhập · Đăng ký cho con · **Học thử 3 buổi miễn phí** (ô đỏ, thay dòng chữ xanh cũ).
+- Bấm ô học thử → màn **Tên của con · Con mấy tuổi? · Số điện thoại (Zalo) của ba mẹ**, 1 ô đồng ý bắt buộc (nhắn hướng dẫn và nhận xét) và 1 ô không bắt buộc (tư vấn khoá). Mọi lối vào bản học thử (kể cả link vào thẳng một buổi) đều qua màn này.
+- Gửi về Apps Script `action=family` như cổng Zalo → tab **Gia đình**, nguồn "Web học thử", trạng thái "Đang dùng thử", giao người vận hành → trang quản trị hiện việc **Gọi chào** trong *Việc hôm nay*. Tên ba/mẹ ghi tạm "Ba mẹ bé <tên con>", đội sửa trên trang quản trị khi gọi. Không cần cập nhật máy chủ.
+- Đã có số điện thoại nên cổng Zalo sau buổi 1 không hỏi lại. Máy đã học thử trước đó: ô đỏ hiện "Con … học tiếp" và vào thẳng.

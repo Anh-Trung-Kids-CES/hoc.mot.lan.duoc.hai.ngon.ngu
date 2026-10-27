@@ -248,3 +248,8 @@ body.is-demo:not(.in-step) .toast{bottom:calc(max(10px,env(safe-area-inset-botto
 .en-try{margin-top:6px;border:0;background:none;font-family:inherit;font-weight:800;font-size:15px;color:#1F6FB5;text-decoration:underline;cursor:pointer;padding:4px}
 .en-snd{font-size:13px;color:var(--muted);font-weight:700}
 @media (max-height:640px){ .en-art{width:84px;height:84px} .en-box h2{font-size:22px} }
+/* Ô thứ ba trên màn vào web: học thử 3 buổi (27/10/2026) */
+.en-opt.try{background:var(--red);color:#fff;box-shadow:0 6px 0 var(--red-dark)}
+.en-opt.try i{background:rgba(255,255,255,.92)}
+.splash.entry .en-box{gap:10px}
+@media (max-height:760px){ .en-art{width:92px;height:92px} .en-opt{padding:10px 12px} .en-opt b{font-size:20px} .en-opt small{font-size:13px} }
