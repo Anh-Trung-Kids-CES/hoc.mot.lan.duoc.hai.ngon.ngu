@@ -161,6 +161,11 @@ nav .n.ht{background:#B8141C}
 .nv-ck{flex:none;display:inline-grid;place-items:center;width:22px;height:22px;border-radius:6px;border:2px solid var(--line);background:var(--card);font-weight:700;color:#fff}
 .nv-i.xong .nv-ck{background:var(--green);border-color:var(--green)}
 .nv-f{margin:8px 0 4px 32px}
+.nv-o{display:grid;gap:10px;margin:0 0 10px}
+.nv-q{display:grid!important;gap:4px}
+.nv-qh{font-weight:600;font-size:14px;line-height:1.45}
+.nv-q textarea{min-height:64px;width:100%}
+.nv-q textarea::placeholder{color:var(--muted);opacity:.75}
 .nv-hoi{background:var(--soft);border-radius:10px;padding:8px 12px;font-size:13px}
 .nv-hoi ul{margin:4px 0 0;padding-left:18px;display:grid;gap:3px}
 .nv-jt{border:1px solid var(--line);border-radius:10px;padding:8px 12px;margin:0;display:grid;gap:6px}
@@ -1047,14 +1052,15 @@ const THE_O=[
   ['keo','Lực kéo','Điều hút ba mẹ đến cách mới. Ví dụ: học một lần được hai ngôn ngữ, con tự học được ở nhà, có cô đồng hành.'],
   ['lo','Lo lắng','Điều ba mẹ sợ ở cách mới. Ví dụ: sợ con lẫn hai thứ tiếng, sợ con không theo được, sợ không có thời gian kèm.'],
   ['thoiQuen','Thói quen','Điều giữ ba mẹ ở cách cũ. Ví dụ: đã quen trung tâm cũ, đã đóng tiền khoá khác, con quen cô cũ.']];
-const THE_MO=['khao_sat','bo_sung_the','boi_canh','phieu_nhu_cau','hoi_so_1','hoi_so_2','thu_giua'];
+const THE_MO=['bo_sung_the'];
 function theBox(f){
   const t=f.the||{}, cap=CAP(), du=f.theDu||0, duoc=k=>cap!=='ctv'||['o1','o4'].includes(k);
   const fld=([k,l,ph])=>duoc(k)?`<label>${l}<textarea data-the="${k}" maxlength="600" placeholder="${esc(ph)}">${esc(t[k]||'')}</textarea></label>`:'';
   const o=k=>THE_O.find(x=>x[0]===k);
   return `<div class="box"><h3>Thẻ kết quả mong muốn · ${du}/6 ô</h3>
+    <p class="hint" style="margin:0 0 6px">Tự điền khi làm nhiệm vụ (chào mừng, gọi khảo sát, thư giữa chặng, Chốt 3). Mở ra để xem toàn bộ hoặc sửa.</p>
     <div class="the-tien" aria-hidden="true">${[1,2,3,4,5,6].map(i=>`<i class="${du>=i?'on':''}"></i>`).join('')}</div>
-    <details ${THE_MO.includes(CUR.viec)?'open':''}><summary style="cursor:pointer;margin-top:8px;font-weight:600">${du?'Xem và sửa thẻ':'Điền thẻ'}</summary>
+    <details ${THE_MO.includes(CUR.viec)?'open':''}><summary style="cursor:pointer;margin-top:8px;font-weight:600">${du?'Xem và sửa thẻ':'Mở thẻ'}</summary>
     <form class="log" id="theF" novalidate><div class="the-ds">
       <p class="hint" style="margin:0">Ghi nguyên văn lời ba mẹ, không ghi suy đoán của mình.${cap==='ctv'?' CTV ghi ô ① và ④; các ô khác do sale điền sau cuộc gọi.':''}</p>
       ${cap!=='ctv'?`<label>Nhóm<select id="theNhom"><option value="">Tự xếp theo dữ liệu (đang là ${esc(f.nhom||'?')})</option>${['A','B','C','D','E'].map(n=>`<option value="${n}" ${t.nhom===n?'selected':''}>${n} · ${NHOM_TEN[n]}</option>`).join('')}</select></label>`:''}
@@ -1112,19 +1118,33 @@ const jtbdCau=g=>`Khi ${g[2]}, tôi muốn ${g[3]}, để ${g[4]}.`;
 /* Câu hỏi gợi ý hiện trong từng nhiệm vụ khi mở ra */
 const NV_HOI={
   chao:['"Chị cho bé học thử vì muốn bé được gì ạ?"'],
-  moi:['"Bé học 2 buổi thấy thế nào chị? Chị còn băn khoăn gì không ạ?"'],
-  boi_canh:['"Trước giờ con học tiếng Anh ở đâu, bao lâu rồi ạ?"','"Nhà mình có ai nói được tiếng Anh hoặc tiếng Trung không ạ?"','"Con thường rảnh học vào lúc nào trong ngày ạ?"'],
-  khao_sat:['① "Bé hay học vào buổi nào, có ai ngồi cạnh bé không chị?"','Khi · "Sao chị lại muốn cho bé học thêm tiếng Trung ạ?" Mẹ trả lời ngắn thì hỏi: "Chị biết chương trình qua ai? Lúc đó chị thấy thích ở điểm nào?"','Muốn · "Trước giờ chị đã cho bé học ngoại ngữ theo cách nào? Cách nào bé hợp, cách nào chưa hợp?"','Để · "Học xong đợt này, chị mong thấy bé làm được gì nhất?" rồi "Bé làm được vậy thì chị vui nhất ở điểm nào?"','④ "Lúc cho bé tham gia, chị có lo gì không ạ?"'],
   hoi_so_1:['"Sau 21 ngày, ba mẹ mong nhất điều gì? 1. Con mạnh dạn nói · 2. Con thích tiếng Trung · 3. Con tự giác học · 4. Có lộ trình rõ"'],
   chot_1:['"Cuối tuần cô gửi chị đề xuất lộ trình riêng cho bé, mình hẹn 10 phút trao đổi nhé. Chị tiện tối thứ mấy ạ?"'],
-  thu_giua:['"Trước đây ba mẹ cho con học ngoại ngữ theo cách nào, chỗ nào ba mẹ thấy chưa ổn ạ?"'],
   hoi_so_2:['Gửi tin mẫu "hỏi bằng số tuần 2", ghi lại câu ba mẹ chọn bên dưới. Không câu nào đúng thì ghi lời ba mẹ.'],
   phieu_nhu_cau:['"Ba mẹ muốn con học tiếp theo cách nào: web, lớp online hay tại trung tâm?"','"Khung giờ nào tiện cho con? Mỗi tuần 2 hay 3 buổi?"','"Ba mẹ có muốn con học cùng các bạn trong thử thách không?"'],
   chot_2:['"Lớp đầu tiên sau thử thách chỉ nhận 6 bạn. Chị muốn cô giữ chỗ khung giờ này cho bé không ạ?"'],
-  chot_3:['"Sắp tới bé có mốc nào quan trọng không chị?"','"Chị muốn bé học online hay tại trung tâm? Đóng một lần hay chia 2 đợt ạ?"'],
+  chot_3:['"Chị muốn bé học online hay tại trung tâm? Đóng một lần hay chia 2 đợt ạ?"'],
   vet_1:['"Em đã chuẩn bị đề xuất lộ trình riêng cho bé dựa trên kết quả 21 ngày. Chị tiện giờ nào để em gọi 10 phút ạ?"'],
   gioi_thieu:['"Nếu chị có bạn bè cũng muốn cho con học Anh – Trung, chị giới thiệu giúp em nhé ạ."']};
-const NV_JTBD=['khao_sat','hoi_so_2','chot_3'];
+const NV_JTBD=['khao_sat','hoi_so_2'];
+/* Nhiệm vụ có câu hỏi ghi thẳng vào Thẻ kết quả mong muốn: [ô thẻ, nhãn, câu hỏi, hỏi tiếp] */
+const NV_O={
+  boi_canh:[['o1','① Bối cảnh','"Trước giờ con học tiếng Anh ở đâu, bao lâu rồi? Nhà mình có ai nói được tiếng Anh hoặc tiếng Trung không? Con thường rảnh học lúc nào?"','']],
+  moi:[['o4','④ Rào cản','"Bé học 2 buổi thấy thế nào chị? Chị còn băn khoăn gì không ạ?"','']],
+  khao_sat:[
+    ['o1','① Bối cảnh','"Bé hay học vào buổi nào, có ai ngồi cạnh bé không chị?"',''],
+    ['khi','② Khi','"Sao chị lại muốn cho bé học thêm tiếng Trung ạ?"','Mẹ trả lời ngắn thì hỏi tiếp: "Chị biết chương trình qua ai? Lúc đó chị thấy thích ở điểm nào?"'],
+    ['o3','③ Nỗi đau','"Trước giờ chị đã cho bé học ngoại ngữ theo cách nào? Cách nào bé hợp, cách nào chưa hợp?"',''],
+    ['muon','② Tôi muốn','"Học xong đợt này, chị mong thấy bé làm được gì nhất?"','Mẹ trả lời chung chung thì hỏi: "Cụ thể bé nói được gì thì chị vui nhất ạ?"'],
+    ['de','② Để','"Bé làm được vậy thì chị vui nhất ở điểm nào?"',''],
+    ['o4','④ Rào cản','"Lúc cho bé tham gia, chị có lo gì không ạ?"','']],
+  thu_giua:[['o3','③ Nỗi đau','"Trước đây ba mẹ cho con học ngoại ngữ theo cách nào, chỗ nào ba mẹ thấy chưa ổn ạ?"','']],
+  chot_3:[['o5','⑤ Kết quả + cách đo','"Cụ thể bé làm được gì thì chị thấy đáng ạ?"',''],['o6','⑥ Vì sao cần ngay','"Sắp tới bé có mốc nào quan trọng không chị?"','']]};
+const viDu=k=>{ const o=THE_O.find(x=>x[0]===k); const m=o&&o[2].match(/Ví dụ:([^]*)$/); return m?'Ví dụ:'+m[1]:''; };
+function nvO(f, ma){ const ds=NV_O[ma]; if(!ds) return ''; const t=f.the||{};
+  return `<div class="nv-o"><p class="hint" style="margin:0">Hỏi lần lượt, ghi nguyên văn lời ba mẹ. Mỗi câu trả lời lưu thẳng vào ô tương ứng của Thẻ kết quả mong muốn.</p>
+    ${ds.map(([k,nhan,hoi,tiep])=>`<label class="nv-q"><span class="nv-qh"><span class="badge nh">${esc(nhan)}</span> ${esc(hoi)}</span>${tiep?`<span class="hint" style="margin:0">${esc(tiep)}</span>`:''}
+      <textarea data-o="${k}" data-nhan="${esc(nhan)}" maxlength="600" placeholder="${esc(viDu(k)||'Ghi nguyên văn lời ba mẹ')}">${esc(t[k]||'')}</textarea></label>`).join('')}</div>`; }
 function nvXong(f,ma){ const n=f.nv||{}; return n[ma] || (ma==='vet_1' && (n.vet_2||n.vet_3)) || null; }
 function nvChang(){ const b=D.caiDat&&D.caiDat.batDau; if(!b) return -1; const ngay=Math.floor((Date.now()-b)/MOT_NGAY)+1;
   return ngay<1?0:ngay<=7?1:ngay<=14?2:ngay<=21?3:4; }
@@ -1140,25 +1160,36 @@ function nvBox(f){
           :`<details class="nv-i"><summary><span class="nv-ck" aria-hidden="true"></span><span><b>${esc(ten)}</b> <span class="badge ai-${ai}">${VT_TEN[ai]}</span></span></summary>
             <form class="log nv-f" data-nv="${ma}" novalidate>
               ${NV_HOI[ma]?`<div class="nv-hoi"><b>Câu hỏi gợi ý</b><ul>${NV_HOI[ma].map(q=>`<li>${esc(q)}</li>`).join('')}</ul></div>`:''}
+              ${nvO(f, ma)}
               ${NV_JTBD.includes(ma)?`<fieldset class="nv-jt"><legend>${ma==='hoi_so_2'?'Ba mẹ chọn câu nào?':'Lời ba mẹ khớp giả thuyết JTBD nào? (chọn được nhiều)'}</legend>
                 ${JTBD_GT.map((g,i)=>`<label class="nv-gt-op"><input type="checkbox" value="${g[0]}"><span><b>${ma==='hoi_so_2'?(i+1)+'. ':''}${esc(g[1])}</b> · ${esc(jtbdCau(g))}</span></label>`).join('')}
                 <label class="nv-gt-op"><input type="checkbox" value="khac"><span><b>Khác</b> · ghi bằng lời ba mẹ ở ô bên dưới</span></label>
-                ${(f.the&&(f.the.khi||f.the.muon||f.the.de))?'':'<p class="hint" style="margin:4px 0 0">Thẻ chưa có câu JTBD: chọn đúng một giả thuyết thì trang tự điền ô ② của thẻ.</p>'}</fieldset>`:''}
-              <label>Điều khai thác được (không bắt buộc)<textarea maxlength="500" placeholder="${esc(goiY||'Ghi chú ngắn')}"></textarea></label>
+                <p class="hint" style="margin:4px 0 0">Chọn đúng một giả thuyết thì các ô ② còn trống được điền sẵn; sửa lại theo lời ba mẹ.</p></fieldset>`:''}
+              <label>${NV_O[ma]?'Ghi chú thêm (không bắt buộc)':'Điều khai thác được (không bắt buộc)'}<textarea class="nv-note" maxlength="500" placeholder="${esc(NV_O[ma]?'Điều khác ba mẹ chia sẻ':(goiY||'Ghi chú ngắn'))}"></textarea></label>
               <div class="acts"><button class="save" type="submit">✓ Hoàn thành</button></div></form></details>`; }).join('')}</div>`).join('')}
   </div>`;
 }
 function bindNv(f, host){
-  host.querySelectorAll('form.nv-f').forEach(fm=>fm.onsubmit=async e=>{ e.preventDefault();
-    const b=fm.querySelector('button'), chon=[...fm.querySelectorAll('.nv-jt input:checked')].map(x=>x.value);
-    const gt=chon.map(v=>v==='khac'?'Khác':(JTBD_GT.find(g=>g[0]===v)||[])[1]).filter(Boolean);
-    const note=(gt.length?'[JTBD: '+gt.join('; ')+'] ':'')+fm.querySelector('textarea').value.trim();
-    b.disabled=true; b.textContent='Đang lưu…';
-    try{ D=await api('ghiLienHe',{p:{code:f.code, ketQua:'Hoàn thành nhiệm vụ', viec:fm.dataset.nv, ghiChu:note.slice(0,500)}});
-      const g1=chon.length===1&&JTBD_GT.find(g=>g[0]===chon[0]), t=f.the||{};
-      if(g1 && !(t.khi||t.muon||t.de) && CAP()!=='ctv') D=await api('luuThe',{code:f.code, the:{khi:g1[2], muon:g1[3], de:g1[4]}});
-      toast(g1&&!(t.khi||t.muon||t.de)&&CAP()!=='ctv'?'Đã hoàn thành và điền câu JTBD vào thẻ':'Đã đánh dấu hoàn thành'); openFam(f.code,true); render(); }
-    catch(x){ b.disabled=false; b.textContent='✓ Hoàn thành'; if(!x.silent) toast(x.message); } });
+  host.querySelectorAll('form.nv-f').forEach(fm=>{
+    // chọn đúng một giả thuyết: điền sẵn các ô ② còn trống trong chính nhiệm vụ này
+    fm.querySelectorAll('.nv-jt input').forEach(cb=>cb.onchange=()=>{ const chon=[...fm.querySelectorAll('.nv-jt input:checked')].map(x=>x.value);
+      const g=chon.length===1&&JTBD_GT.find(x=>x[0]===chon[0]); if(!g) return;
+      [['khi',2],['muon',3],['de',4]].forEach(([k,i])=>{ const ta=fm.querySelector(`[data-o="${k}"]`); if(ta&&!ta.value.trim()) ta.value=g[i]; }); });
+    fm.onsubmit=async e=>{ e.preventDefault();
+      const b=fm.querySelector('button.save'), chon=[...fm.querySelectorAll('.nv-jt input:checked')].map(x=>x.value), t=f.the||{};
+      const duoc=k=>CAP()!=='ctv'||['o1','o4'].includes(k), the={}, ngoai=[], daGhi=[];
+      fm.querySelectorAll('[data-o]').forEach(x=>{ const k=x.dataset.o, v=x.value.trim(); if(v&&duoc(k)) daGhi.push(x.dataset.nhan.split(' ')[0]);
+        if(v===(t[k]||'')) return; if(duoc(k)) the[k]=v; else if(v) ngoai.push(x.dataset.nhan+': '+v); });
+      const g1=chon.length===1&&JTBD_GT.find(g=>g[0]===chon[0]);
+      if(g1 && !fm.querySelector('[data-o="khi"]') && !(t.khi||t.muon||t.de) && CAP()!=='ctv') Object.assign(the,{khi:g1[2],muon:g1[3],de:g1[4]});
+      const gt=chon.map(v=>v==='khac'?'Khác':(JTBD_GT.find(g=>g[0]===v)||[])[1]).filter(Boolean);
+      const note=[gt.length?'[JTBD: '+gt.join('; ')+']':'', daGhi.length?'Đã ghi vào thẻ '+[...new Set(daGhi)].join(' ')+'.':'', ngoai.join(' · '), fm.querySelector('.nv-note').value.trim()].filter(Boolean).join(' ');
+      b.disabled=true; b.textContent='Đang lưu…';
+      try{ if(Object.keys(the).length) D=await api('luuThe',{code:f.code, the});
+        D=await api('ghiLienHe',{p:{code:f.code, ketQua:'Hoàn thành nhiệm vụ', viec:fm.dataset.nv, ghiChu:note.slice(0,500)}});
+        toast(Object.keys(the).length?'Đã hoàn thành và lưu vào thẻ':'Đã đánh dấu hoàn thành'); openFam(f.code,true); render(); }
+      catch(x){ b.disabled=false; b.textContent='✓ Hoàn thành'; if(!x.silent) toast(x.message); } };
+  });
 }
 /* Tài khoản đăng nhập: một dòng, một nút chép cả hướng dẫn (tên con + số + link + cách vào học); nội dung vẫn xem và sửa được */
 function tkRow(f){
