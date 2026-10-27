@@ -23,4 +23,4 @@ Thêm `?gv=1` vào cuối link, hoặc bấm nút "Chế độ giáo viên" ở 
 - **Nhóm vinh danh**: 5 bạn nhiều sao nhất tuần (`XH_TOP`). Không có nhóm xuống hạng; bạn ở dưới thấy "còn bao nhiêu sao nữa". Dòng của bé được tô xanh, ghi chữ "Con", luôn dùng điểm mới nhất trên máy.
 - Mỗi bạn hiện avatar đã chọn trong Phòng đổi quà (nhân vật, trang phục, nền, khung). Tab Tuần 1/2/3 và Tổng 21 ngày; tuần chưa tới bị khóa.
 - Máy chủ: `apps-script/Code.gs` thêm `?action=xephang` (cả bảng tới 50 bạn, kèm avatar, không lộ mã bé), `ping` trả `v:7`. Chưa cập nhật máy chủ thì web vẫn hiện Top 10 từ bản cũ, avatar các bạn khác là nhân vật mặc định.
-- **Trang chủ có ô "Xếp hạng tuần"** cạnh "Hành trình của con": ảnh là avatar của con, nhãn hiện "Hạng 7 · 142 ⭐" (nền xanh khi con trong Nhóm vinh danh), dòng dưới ghi tuần và số ngày còn lại. Trang chủ máy tính nay có 2 ô lớn + 6 ô nhỏ.
+- **Trang chủ có ô "Xếp hạng tuần"** cạnh "Hành trình của con": ảnh là avatar của con, nhãn chỉ ghi số sao con có trong tuần ("⭐ 142 tuần này"), không ghi hạng, dòng dưới ghi tuần và số ngày còn lại. Trang chủ máy tính nay có 2 ô lớn + 6 ô nhỏ.

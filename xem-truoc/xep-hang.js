@@ -129,16 +129,10 @@ async function xhFill(g,r){
   if(me && me.r<=XH_TOP && me.p>0){ try{ sfx.win(); confetti(24); }catch(e){} }
 }
 
-/* ---------- ô "Xếp hạng tuần" ở trang chủ: ảnh là avatar của con, nhãn hiện hạng tuần này ---------- */
+/* ---------- ô "Xếp hạng tuần" ở trang chủ: ảnh là avatar của con, nhãn chỉ ghi số sao con có trong tuần (không ghi hạng) ---------- */
 function xhHomeSub(){ const r=xhWeekNow(); return r ? `Tuần ${r} · ${xhLeft(r)}` : 'Tổng 21 ngày'; }
-async function xhHomeBadge(g){
-  const el=document.querySelector('#tRank .ht-badge'); if(!el || DEMO || TEACHER || !KID || KID.temp || !SCORE_API) return;
-  const r=xhWeekNow();
-  let d=null; try{ d=await xhLoad(g,r); }catch(e){ return; }
-  if(!document.body.contains(el)) return;
-  const list=xhMerge(d,g,r), me=list.find(x=>x.me);
-  if(!me || !me.p){ el.textContent='🏆 Học để có tên'; return; }
-  let rank=me.r; if(!d.full && d.myRank) rank=Math.max(rank,d.myRank);
-  el.textContent=(rank<=XH_TOP?'🏆 ':'')+'Hạng '+rank+' · '+me.p+' ⭐';
-  if(rank<=XH_TOP) el.classList.add('ok');
+function xhHomeBadge(g){
+  const el=document.querySelector('#tRank .ht-badge'); if(!el) return;
+  if(DEMO || TEACHER || !KID || KID.temp){ el.textContent='🏆'; return; }
+  el.textContent='⭐ '+xhMyPoints(g, xhWeekNow())+' tuần này';
 }
