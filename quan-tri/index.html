@@ -150,6 +150,8 @@ nav .n.ht{background:#B8141C}
 .cp-v{overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
 .cp-a{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
 .of-sum{margin:0;line-height:1.8}
+.tk-xem summary{cursor:pointer;font-size:13px;font-weight:600;margin:2px 0 6px}
+.tk-xem textarea{width:100%;min-height:150px;border:1px solid var(--line);border-radius:10px;padding:10px;background:var(--bg);font-size:14px;line-height:1.5;color:var(--ink)}
 @media (max-width:480px){.cp-row{grid-template-columns:1fr auto}.cp-l{grid-column:1/-1}}
 .vai-chips{display:inline-flex;flex-wrap:wrap;gap:6px;padding-left:10px;border-left:1px solid var(--line)}
 .act.xong{background:var(--green-soft);border-color:var(--green-soft);color:var(--green)}
@@ -1049,6 +1051,17 @@ function bindThe(f, host){
 }
 /* ---------- Hồ sơ gia đình chia 4 phần: 1 liên hệ và tài khoản · 2 thông tin đã khai thác · 3 offer · 4 lịch sử học và hành vi ---------- */
 function phan(n, ten, sub, html){ return `<section class="phan" aria-labelledby="ph${n}"><h3 class="phan-h" id="ph${n}"><span class="phan-n">${n}</span>${esc(ten)}</h3>${sub?`<p class="hint" style="margin:0 0 4px">${esc(sub)}</p>`:''}${html}</section>`; }
+/* Tài khoản đăng nhập: một dòng, một nút chép cả hướng dẫn (tên con + số + link + cách vào học); nội dung vẫn xem và sửa được */
+function tkRow(f){
+  if(!tkSo(f)) return `<div class="cp-row"><span class="cp-l">Tài khoản đăng nhập</span><b class="cp-v">—</b><span class="cp-a"></span></div>
+    <p class="hint" style="margin:0 0 6px">Chưa có số điện thoại hợp lệ nên chưa tạo được tài khoản. Sửa số trong phần 2 (Sửa thông tin) rồi bấm Tải lại.</p>`;
+  return `<div class="cp-row"><span class="cp-l">Tài khoản đăng nhập</span><b class="cp-v">${esc(tkTen(f))} · ${esc(tkSo(f))}</b>
+    <span class="cp-a"><button class="act sm-act pri" type="button" id="tkCp">📋 Chép tài khoản</button></span></div>
+    ${f.moKhoa?'':'<p class="err" style="margin:0 0 6px">Bé chưa được mở khóa: tick ô Kích hoạt bên dưới trước khi gửi, nếu không ba mẹ sẽ báo "Số này chưa được mở khóa".</p>'}
+    <details class="tk-xem"><summary>Xem hoặc sửa nội dung sẽ chép</summary>
+      <textarea id="tkTxt" aria-label="Hướng dẫn đăng nhập gửi ba mẹ">${esc(tkText(f))}</textarea>
+      <p class="hint">Nút Chép lấy đúng nội dung trong ô này: tên con, số đăng nhập, link học và cách vào học. Sửa tên con nếu ba mẹ gõ tên khác; ba mẹ phải nhập đúng tên này mỗi lần đăng nhập.</p></details>`;
+}
 function cpRow(nhan, giaTri, them){ const v=String(giaTri||'');
   return `<div class="cp-row"><span class="cp-l">${esc(nhan)}</span><b class="cp-v">${v?esc(v):'—'}</b><span class="cp-a">${v?`<button class="act sm-act" type="button" data-cp="${esc(v)}" aria-label="Chép ${esc(nhan)}">📄 Chép</button>`:''}${them||''}</span></div>`; }
 /* Offer: bảng giá theo tài liệu "Thông tin khóa học CES Anh – Trung" (online / tại trung tâm) */
@@ -1128,14 +1141,9 @@ function openFam(code, keep, opt){
     <div class="acts">${callBtns(f, f.viec[0]&&f.viec[0].tin)}</div>
     ${f.viec.length?`<div class="box"><h3>Việc đang chờ</h3>${f.viec.map(v=>`<div>• ${esc(v.ten)} ${aiBadge(v)} <span class="hint">(${until(v.han).s})</span></div>`).join('')}</div>`:''}
     ${phan(1,'Liên hệ và tài khoản','Bấm Chép rồi dán vào Zalo; tick kích hoạt khi đã nhận phí.',`
-    <div class="box cp-box">${cpRow('Số Zalo / SĐT', f.zalo, f.zalo&&/^0\d{9,10}$/.test(f.zalo)?`<a class="act sm-act" href="https://zalo.me/${esc(f.zalo)}" target="_blank" rel="noopener">💬 Zalo</a>`:'')}${cpRow('Tên con đăng nhập', tkTen(f))}${cpRow('Mã gia đình', f.code)}</div>
+    <div class="box cp-box">${cpRow('Số Zalo / SĐT', f.zalo, f.zalo&&/^0\d{9,10}$/.test(f.zalo)?`<a class="act sm-act" href="https://zalo.me/${esc(f.zalo)}" target="_blank" rel="noopener">💬 Zalo</a>`:'')}${tkRow(f)}${cpRow('Mã gia đình', f.code)}</div>
     <label class="mk-big ${f.moKhoa?'on':''}"><input type="checkbox" data-mk="${esc(f.code)}" ${f.moKhoa?'checked':''}><span>Kích hoạt: mở khóa 21 ngày<small>${f.moKhoa?'Đã mở'+(typeof f.moKhoaLuc==='number'?' lúc '+fmt(f.moKhoaLuc):'')+'. Bỏ tick để khóa lại.':(String(f.moKhoaLuc).startsWith('Khóa')?esc(f.moKhoaLuc)+'. ':'')+'Tick khi đã nhận phí: bé học đủ 21 ngày trên chính link cũ.'}</small></span></label>
     ${dupBox(f)}
-    ${tkSo(f)?`<div class="box tpl tk-box"><h3>Tài khoản đăng nhập</h3>
-      <textarea id="tkTxt" aria-label="Hướng dẫn đăng nhập gửi ba mẹ">${esc(tkText(f))}</textarea>
-      <div class="acts"><button class="act pri" type="button" id="tkCp">📋 Chép hướng dẫn đăng nhập</button>${tkSo(f).startsWith('0')?`<a class="act" href="https://zalo.me/${esc(tkSo(f))}" target="_blank" rel="noopener">💬 Mở Zalo</a>`:''}</div>
-      <p class="hint">${f.moKhoa?'Bé đã được mở khóa: gửi tin này là ba mẹ vào học được ngay.':'<b>Bé chưa được mở khóa.</b> Tick ô Mở khóa 21 ngày ở trên trước khi gửi, nếu không ba mẹ sẽ báo "Số này chưa được mở khóa".'} Sửa tên con trong ô trên nếu ba mẹ gõ tên khác; ba mẹ phải nhập đúng tên này mỗi lần đăng nhập.</p></div>`
-      :`<div class="box"><h3>Tài khoản đăng nhập</h3><p class="hint">Gia đình chưa có số điện thoại hợp lệ nên chưa tạo được tài khoản. Ghi đúng số Zalo vào tab Gia đình của Sheet rồi bấm Tải lại.</p></div>`}
     `)}
     ${phan(2,'Thông tin đã khai thác','Thông tin gia đình, thẻ 6 ô với câu JTBD, và ghi kết quả mỗi lần liên hệ.',`
     <div class="box" id="gdBox"><div class="h3row"><h3>Gia đình</h3><button class="act sm-act" type="button" id="suaBtn">✏️ Sửa thông tin</button></div><dl class="kv">
