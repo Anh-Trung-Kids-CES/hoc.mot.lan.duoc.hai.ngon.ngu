@@ -767,7 +767,6 @@ function qtTaiDuLieu_(s) {
     f.viec = qtViec_(f, cd, now).concat(qtViec21_(f, c, cd, now, capOf));
     const tuoi = qtTuoi_(f.tuoi);              // ngoài độ tuổi: không đưa vào luồng chốt, việc của sale chuyển cho CTV (trừ việc tiền, hẹn gọi lại)
     if (tuoi && (tuoi < 5 || tuoi > 10)) f.viec.forEach(x => { if (x.ai === 'sale' && x.loai !== 'mo' && x.loai !== 'goi_lai') x.ai = 'ctv'; });
-    if (!coCtv) f.viec.forEach(x => { if (x.ai === 'ctv') x.ai = 'sale'; });   // chưa có tài khoản CTV: người phụ trách làm như trước
     return f;
   });
   const gan = 7 * 864e5;

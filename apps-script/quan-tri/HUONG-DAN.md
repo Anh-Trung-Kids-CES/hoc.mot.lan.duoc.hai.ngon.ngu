@@ -24,7 +24,7 @@ Trang tự sinh việc theo **bản đồ điểm chạm** và chia theo ba cấ
 | **Cố vấn** | Mặc định lọc "Cần cố vấn quyết": xin ý kiến, giao người, việc quá hạn hơn 24 giờ. Đổi bộ lọc để xem hàng CTV, việc sale hoặc từng người | Giao người phụ trách, "✓ Cố vấn trả lời", điền Thẻ |
 | **Quản lý** | Như Cố vấn, thêm Báo cáo và Tài khoản | Mọi việc |
 
-- **Chưa có tài khoản CTV nào** đang hoạt động: việc CTV quay về người phụ trách như trước.
+- Việc CTV luôn tách riêng, kể cả khi chưa có tài khoản CTV. Quản lý, Cố vấn chọn nhanh hàng việc bằng các nút **Tất cả · CTV · Sale · Cố vấn** cạnh nút "Chỉ học thử".
 - **Chia gia đình mới**: máy chủ web học chia cho người có vai trò **Vận hành** hoặc **Sale** và "Nhận gia đình mới" = TRUE. CTV, Cố vấn không nhận.
 - **Việc tự đóng**: bấm "Ghi kết quả" hoặc "✓ Đã gửi tin" từ đúng thẻ việc, trang ghi mã việc vào cột R ("Việc") của tab Nhật ký cuộc gọi, việc đó biến mất.
 - **Nhóm A–E** tự xếp: A gia đình nóng hoặc ba mẹ nhắn lại / được chuyển sale · B học đều · C nghỉ học từ 2 ngày · D học thử chưa kích hoạt · E nuôi dưỡng. Sale, Cố vấn chọn tay được trong Thẻ.
