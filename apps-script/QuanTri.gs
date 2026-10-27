@@ -30,9 +30,9 @@ const QT_TRANG_THAI = ['Đang dùng thử', 'Mời đăng ký', 'Chờ đóng ph
   'Học viên khóa dài', 'Nuôi dưỡng', 'Dừng'];
 const QT_BUOC = QT_TRANG_THAI.slice(0, 7);
 const QT_LY_DO = ['Phí', 'Thời gian', 'Con chưa hợp tuổi', 'Con chưa thích', 'Đã học nơi khác', 'Rút đồng ý', 'Khác'];
-const QT_KET_QUA = ['Đã nói chuyện', 'Không nghe máy', 'Đã nhắn Zalo', 'Ba mẹ nhắn lại / hỏi thêm', 'Hẹn gọi lại', 'Chuyển sale', 'Xin ý kiến cố vấn', 'Cố vấn trả lời', 'Ghi chú nội bộ'];
+const QT_KET_QUA = ['Đã nói chuyện', 'Không nghe máy', 'Đã nhắn Zalo', 'Ba mẹ nhắn lại / hỏi thêm', 'Hẹn gọi lại', 'Hoàn thành nhiệm vụ', 'Chuyển sale', 'Xin ý kiến cố vấn', 'Cố vấn trả lời', 'Ghi chú nội bộ'];
 const QT_KQ_CAN_GHI_CHU = ['Chuyển sale', 'Xin ý kiến cố vấn', 'Cố vấn trả lời'];
-const QT_KQ_LIEN_HE = ['Đã nói chuyện', 'Không nghe máy', 'Đã nhắn Zalo', 'Ba mẹ nhắn lại / hỏi thêm', 'Hẹn gọi lại'];
+const QT_KQ_LIEN_HE = ['Đã nói chuyện', 'Không nghe máy', 'Đã nhắn Zalo', 'Ba mẹ nhắn lại / hỏi thêm', 'Hẹn gọi lại', 'Hoàn thành nhiệm vụ'];
 /* Thẻ kết quả mong muốn (6 ô) + câu JTBD + 4 lực, mỗi gia đình một dòng */
 const QT_THE_HEAD = ['Mã gia đình', 'Nhóm (chọn tay)', '① Bối cảnh', '② Khi', '② Tôi muốn', '② Để', '③ Nỗi đau', '④ Rào cản', '⑤ Kết quả + cách đo',
   '⑥ Vì sao cần ngay', 'Lực đẩy', 'Lực kéo', 'Lo lắng', 'Thói quen', 'Cập nhật lúc', 'Người cập nhật'];
@@ -776,6 +776,8 @@ function qtTaiDuLieu_(s) {
     const th = theAll[code];
     f.the = th ? QT_THE_KEY.slice(1).concat(QT_OFFER_KEY).reduce((o, k) => (o[k] = th[k], o), { luc: th.luc, ai: th.ai, oLuc: th.oLuc }) : null;
     f.theDu = qtTheDu_(f.the);
+    f.nv = {};                                 // nhiệm vụ theo bản đồ điểm chạm đã làm: mã việc → lần gần nhất
+    c.forEach(x => { if (x.viec && (!f.nv[x.viec] || x.t > f.nv[x.viec].t)) f.nv[x.viec] = { t: x.t, ai: x.ai, ghiChu: x.ghiChu, kq: x.kq }; });
     f.h21 = f.moKhoa ? qtHoc21Gd_(f, h21) : null;
     f._cd = cd; f.nhom = qtNhom_(f, c, now); delete f._cd;
     f.viec = qtViec_(f, cd, now).concat(qtViec21_(f, c, cd, now, capOf));

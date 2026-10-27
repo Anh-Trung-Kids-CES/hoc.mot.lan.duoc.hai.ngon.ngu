@@ -150,6 +150,17 @@ nav .n.ht{background:#B8141C}
 .cp-v{overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
 .cp-a{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
 .of-sum{margin:0;line-height:1.8}
+.nv-g{margin-top:10px;padding:8px 10px;border-radius:10px}
+.nv-g.now{background:var(--amber-soft)}
+.nv-gt{margin:0 0 4px;font-weight:700;font-size:14px}
+.nv-i{display:block;padding:6px 0;border-bottom:1px dashed var(--line)}
+.nv-i:last-child{border-bottom:0}
+.nv-i.xong{display:flex;gap:10px;align-items:flex-start}
+.nv-i summary{display:flex;gap:10px;align-items:center;cursor:pointer;list-style:none}
+.nv-i summary::-webkit-details-marker{display:none}
+.nv-ck{flex:none;display:inline-grid;place-items:center;width:22px;height:22px;border-radius:6px;border:2px solid var(--line);background:var(--card);font-weight:700;color:#fff}
+.nv-i.xong .nv-ck{background:var(--green);border-color:var(--green)}
+.nv-f{margin:8px 0 4px 32px}
 .tk-nut{padding:8px 0 4px;border-bottom:1px dashed var(--line);margin-bottom:6px}
 .tk-xem summary{cursor:pointer;font-size:13px;font-weight:600;margin:2px 0 6px}
 .tk-xem textarea{width:100%;min-height:150px;border:1px solid var(--line);border-radius:10px;padding:10px;background:var(--bg);font-size:14px;line-height:1.5;color:var(--ink)}
@@ -1052,6 +1063,52 @@ function bindThe(f, host){
 }
 /* ---------- Hồ sơ gia đình chia 4 phần: 1 liên hệ và tài khoản · 2 thông tin đã khai thác · 3 offer · 4 lịch sử học và hành vi ---------- */
 function phan(n, ten, sub, html){ return `<section class="phan" aria-labelledby="ph${n}"><h3 class="phan-h" id="ph${n}"><span class="phan-n">${n}</span>${esc(ten)}</h3>${sub?`<p class="hint" style="margin:0 0 4px">${esc(sub)}</p>`:''}${html}</section>`; }
+/* ---------- Nhiệm vụ theo bản đồ điểm chạm: tick hoàn thành + ghi điều đã khai thác được ----------
+   Mỗi lần tick ghi một dòng "Hoàn thành nhiệm vụ" vào Nhật ký kèm mã việc; việc cùng mã ở Việc hôm nay tự đóng. */
+const NV=[
+  {g:'Cửa vào · học thử', ds:[
+    ['chao','Chào ba mẹ sau khi đăng ký học thử','ctv','Ba mẹ mong gì khi cho con học thử?'],
+    ['moi','Mời kích hoạt 21 ngày khi bé xong buổi 2','ctv','Ba mẹ còn băn khoăn gì? (ô ④)'],
+    ['mo','Mở khóa và gửi tài khoản đăng nhập','ctv','']]},
+  {g:'Tuần 1 · Bạn', ds:[
+    ['boi_canh','Chào mừng 21 ngày + 3 câu bối cảnh','ctv','① Con học tiếng Anh ở đâu, ai ngồi cùng, học lúc nào'],
+    ['khao_sat','Gọi khảo sát 2–3 phút','sale','② Khi… tôi muốn… để… · ③ cách đã thử · ④ điều còn lo'],
+    ['hoi_so_1','Hỏi bằng số: mong muốn sau 21 ngày','ctv','Ba mẹ chọn số mấy, nói thêm gì'],
+    ['chot_1','Chốt 1: hẹn lịch tư vấn lộ trình','sale','Ngày giờ hẹn']]},
+  {g:'Tuần 2 · Bàn', ds:[
+    ['thu_giua','Thư giữa chặng + hỏi cách học trước đây','ctv','③ Trước đây con học thế nào, cách nào chưa hợp'],
+    ['hoi_so_2','Kiểm chứng JTBD: ba mẹ chọn câu giống nhà mình','ctv','Câu JTBD ba mẹ chọn']]},
+  {g:'Tuần 3 · Bàn – Bán', ds:[
+    ['phieu_nhu_cau','Phiếu nhu cầu học tập','sale','Hình thức, khung giờ, số buổi mỗi tuần, học cùng nhóm bạn'],
+    ['chot_2','Chốt 2: giữ chỗ lớp đầu / trưởng nhóm 6 bạn','sale','Lớp, khung giờ, nhóm'],
+    ['chot_3','Chốt 3: tư vấn 10 phút, đóng đợt 1','sale','⑤ con làm được gì thì đáng · ⑥ mốc sắp tới · kết quả chốt']]},
+  {g:'Chung kết và sau · Bán – Bám', ds:[
+    ['bao_cao','Gửi Báo cáo năng lực','ctv',''],
+    ['vet_1','Tư vấn lộ trình sau chung kết','sale','Lý do mua hoặc chưa mua'],
+    ['gioi_thieu','Mời giới thiệu bạn bè','sale','Gia đình được giới thiệu']]}];
+function nvXong(f,ma){ const n=f.nv||{}; return n[ma] || (ma==='vet_1' && (n.vet_2||n.vet_3)) || null; }
+function nvChang(){ const b=D.caiDat&&D.caiDat.batDau; if(!b) return -1; const ngay=Math.floor((Date.now()-b)/MOT_NGAY)+1;
+  return ngay<1?0:ngay<=7?1:ngay<=14?2:ngay<=21?3:4; }
+function nvBox(f){
+  if(!f.nv) return '';
+  const tong=NV.reduce((a,x)=>a+x.ds.length,0), xong=NV.reduce((a,x)=>a+x.ds.filter(d=>nvXong(f,d[0])).length,0), cg=nvChang();
+  return `<div class="box nv-box"><h3>Nhiệm vụ theo bản đồ điểm chạm · ${xong}/${tong}</h3>
+    <p class="hint" style="margin:0 0 6px">Làm xong thì tick và ghi ngắn điều khai thác được. Việc cùng tên ở Việc hôm nay tự đóng.</p>
+    ${NV.map((x,i)=>`<div class="nv-g ${i===cg?'now':''}"><p class="nv-gt">${esc(x.g)}${i===cg?' <span class="badge nh">Đang ở chặng này</span>':''}</p>
+      ${x.ds.map(([ma,ten,ai,goiY])=>{ const d=nvXong(f,ma);
+        return d?`<div class="nv-i xong"><span class="nv-ck" aria-hidden="true">✓</span><div><b>${esc(ten)}</b> <span class="badge ai-${ai}">${VT_TEN[ai]}</span>
+            <div class="hint" style="margin:2px 0 0">${fmt(d.t)} · ${esc(d.ai)}${d.ghiChu&&d.ghiChu!=='Đã gửi tin mẫu'?` – ${esc(d.ghiChu)}`:''}</div></div></div>`
+          :`<details class="nv-i"><summary><span class="nv-ck" aria-hidden="true"></span><span><b>${esc(ten)}</b> <span class="badge ai-${ai}">${VT_TEN[ai]}</span></span></summary>
+            <form class="log nv-f" data-nv="${ma}" novalidate><label>Điều khai thác được (không bắt buộc)<textarea maxlength="500" placeholder="${esc(goiY||'Ghi chú ngắn')}"></textarea></label>
+              <div class="acts"><button class="save" type="submit">✓ Hoàn thành</button></div></form></details>`; }).join('')}</div>`).join('')}
+  </div>`;
+}
+function bindNv(f, host){
+  host.querySelectorAll('form.nv-f').forEach(fm=>fm.onsubmit=async e=>{ e.preventDefault();
+    const b=fm.querySelector('button'), note=fm.querySelector('textarea').value.trim(); b.disabled=true; b.textContent='Đang lưu…';
+    try{ D=await api('ghiLienHe',{p:{code:f.code, ketQua:'Hoàn thành nhiệm vụ', viec:fm.dataset.nv, ghiChu:note}}); toast('Đã đánh dấu hoàn thành'); openFam(f.code,true); render(); }
+    catch(x){ b.disabled=false; b.textContent='✓ Hoàn thành'; if(!x.silent) toast(x.message); } });
+}
 /* Tài khoản đăng nhập: một dòng, một nút chép cả hướng dẫn (tên con + số + link + cách vào học); nội dung vẫn xem và sửa được */
 function tkRow(f){
   if(!tkSo(f)) return `<div class="cp-row"><span class="cp-l">Tài khoản đăng nhập</span><b class="cp-v">—</b><span class="cp-a"></span></div>
@@ -1141,11 +1198,12 @@ function openFam(code, keep, opt){
     <div class="acts">${callBtns(f, f.viec[0]&&f.viec[0].tin)}</div>
     ${f.viec.length?`<div class="box"><h3>Việc đang chờ</h3>${f.viec.map(v=>`<div>• ${esc(v.ten)} ${aiBadge(v)} <span class="hint">(${until(v.han).s})</span></div>`).join('')}</div>`:''}
     ${phan(1,'Liên hệ và tài khoản','Bấm Chép rồi dán vào Zalo; tick kích hoạt khi đã nhận phí.',`
-    <div class="box cp-box">${cpRow('Số Zalo / SĐT', f.zalo, f.zalo&&/^0\d{9,10}$/.test(f.zalo)?`<a class="act sm-act" href="https://zalo.me/${esc(f.zalo)}" target="_blank" rel="noopener">💬 Zalo</a>`:'')}${tkRow(f)}${cpRow('Mã gia đình', f.code)}</div>
+    <div class="box cp-box">${cpRow('Số Zalo / SĐT', f.zalo, f.zalo&&/^0\d{9,10}$/.test(f.zalo)?`<a class="act sm-act" href="https://zalo.me/${esc(f.zalo)}" target="_blank" rel="noopener">💬 Zalo</a>`:'')}${tkRow(f)}</div>
     <label class="mk-big ${f.moKhoa?'on':''}"><input type="checkbox" data-mk="${esc(f.code)}" ${f.moKhoa?'checked':''}><span>Kích hoạt: mở khóa 21 ngày<small>${f.moKhoa?'Đã mở'+(typeof f.moKhoaLuc==='number'?' lúc '+fmt(f.moKhoaLuc):'')+'. Bỏ tick để khóa lại.':(String(f.moKhoaLuc).startsWith('Khóa')?esc(f.moKhoaLuc)+'. ':'')+'Tick khi đã nhận phí: bé học đủ 21 ngày trên chính link cũ.'}</small></span></label>
     ${dupBox(f)}
     `)}
-    ${phan(2,'Thông tin đã khai thác','Thông tin gia đình, thẻ 6 ô với câu JTBD, và ghi kết quả mỗi lần liên hệ.',`
+    ${phan(2,'Thông tin đã khai thác','Nhiệm vụ theo bản đồ, thông tin gia đình, thẻ 6 ô với câu JTBD, và ghi kết quả mỗi lần liên hệ.',`
+    ${nvBox(f)}
     <div class="box" id="gdBox"><div class="h3row"><h3>Gia đình</h3><button class="act sm-act" type="button" id="suaBtn">✏️ Sửa thông tin</button></div><dl class="kv">
       <dt>Tên ba/mẹ</dt><dd>${esc(f.phuHuynh||'—')}</dd>
       <dt>Số Zalo</dt><dd>${esc(f.zalo||'—')}</dd>
@@ -1203,7 +1261,7 @@ function openFam(code, keep, opt){
   const tt=$('#tt',host), lb=$('#lyDoBox',host); const sync=()=>lb.hidden=!['Dừng','Nuôi dưỡng'].includes(tt.value); tt.onchange=sync; sync();
   $('#kq',host).onchange=e=>{ if(e.target.value==='Hẹn gọi lại') $('#hen',host).focus(); };
   host.querySelectorAll('[data-kq]').forEach(b=>b.onclick=()=>{ $('#kq',host).value=b.dataset.kq; const g=$('#gc',host); g.placeholder=b.dataset.kq==='Chuyển sale'?'Ba mẹ nói gì? (hỏi giá, muốn học tiếp, phàn nàn…)':b.dataset.kq==='Xin ý kiến cố vấn'?'Cần cố vấn quyết điều gì?':'Cố vấn quyết thế nào?'; g.focus(); });
-  bindThe(f, host); bindOffer(f, host);
+  bindThe(f, host); bindOffer(f, host); bindNv(f, host);
   if(CUR.kq) setTimeout(()=>{ const g=$('#gc',host); if(g) g.focus(); },60);
   const xb=$('#xoaDong',host); if(xb) xb.onclick=()=>xoaDong(f, xb);
   bindSua(f, host);

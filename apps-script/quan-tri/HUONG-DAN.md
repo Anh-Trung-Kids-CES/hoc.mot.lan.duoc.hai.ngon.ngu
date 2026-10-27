@@ -11,7 +11,7 @@
 1. `https://script.google.com/u/2/home` (tài khoản anhtrung.home) → dự án **Anh-Trung-Kids – Máy chủ web học**.
 2. Tệp `Code.gs`: dán đè `apps-script/Code.gs`. Tệp **QuanTri.gs** (＋ → Tập lệnh, tên `QuanTri`): dán đè `apps-script/QuanTri.gs`. **Lưu**.
 3. **Triển khai → Quản lý các bản triển khai** → bút chì → Phiên bản: **Phiên bản mới** → **Triển khai**. Link /exec giữ nguyên.
-4. Kiểm tra: mở link /exec thêm `?action=ping`, thấy `"v":9` là đúng (bản có việc theo vai trò và offer).
+4. Kiểm tra: mở link /exec thêm `?action=ping`, thấy `"v":10` là đúng (bản có việc theo vai trò, offer và nhiệm vụ theo bản đồ).
 
 ## Việc theo vai trò: CTV · Sale · Cố vấn (từ 27/10/2026, máy chủ `v:8`)
 
@@ -29,6 +29,7 @@ Trang tự sinh việc theo **bản đồ điểm chạm** và chia theo ba cấ
 - **Việc tự đóng**: bấm "Ghi kết quả" hoặc "✓ Đã gửi tin" từ đúng thẻ việc, trang ghi mã việc vào cột R ("Việc") của tab Nhật ký cuộc gọi, việc đó biến mất.
 - **Nhóm A–E** tự xếp: A gia đình nóng hoặc ba mẹ nhắn lại / được chuyển sale · B học đều · C nghỉ học từ 2 ngày · D học thử chưa kích hoạt · E nuôi dưỡng. Sale, Cố vấn chọn tay được trong Thẻ.
 - **Hồ sơ gia đình** chia 4 phần: 1 Liên hệ và tài khoản (chép SĐT, tên con, mã gia đình, hướng dẫn đăng nhập, kích hoạt) · 2 Thông tin đã khai thác (gia đình, Thẻ 6 ô, ghi kết quả) · 3 Offer đã trao đổi (tình trạng, lộ trình, hình thức, gói, học phí tự tính, khung giờ, ghi chú; nút tạo "Đề xuất lộ trình 1 trang") · 4 Lịch sử học trên web và hành vi. Offer lưu ở cột Q–W tab Thẻ gia đình; CTV chỉ xem.
+- **Nhiệm vụ theo bản đồ điểm chạm** (phần 2 của hồ sơ): 15 nhiệm vụ chia 5 chặng, chặng hiện tại tô vàng. Tick "✓ Hoàn thành" kèm ghi chú điều khai thác được → ghi dòng "Hoàn thành nhiệm vụ" vào Nhật ký với mã việc; việc cùng mã ở Việc hôm nay tự đóng.
 - **Thẻ 6 ô** (bối cảnh, câu JTBD Khi / Tôi muốn / Để, nỗi đau, rào cản, kết quả + cách đo, vì sao cần ngay, 4 lực) lưu ở tab mới **Thẻ gia đình**.
 - **Tiến độ 21 ngày** của bé được nối với gia đình theo số điện thoại + tên con (giống cách web học đặt mã bé), nên trang biết bé nghỉ mấy ngày.
 - Tab **Cài đặt quản trị** có thêm "Ngày bắt đầu 21 ngày" (2026-10-26) và "Ngày chung kết" (để trống = ngày thứ 22). Việc theo tuần tính từ hai mốc này. Việc mới bắt đầu tính hạn từ 9:00 ngày 28/10/2026.
