@@ -172,7 +172,8 @@ nav .n.ht{background:#B8141C}
 .vt-row{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 10px}
 .the-ds{display:grid;gap:8px;margin:8px 0 0}
 .the-ds label{font-size:13px;font-weight:600;display:grid;gap:4px}
-.the-ds textarea{min-height:52px}
+.the-ds textarea{min-height:76px;width:100%}
+.the-ds textarea::placeholder{color:var(--muted);opacity:.75}
 .the-ds .jt{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px}
 .the-tien{display:flex;gap:4px;margin:4px 0 0}
 .the-tien i{flex:1;height:6px;border-radius:3px;background:var(--line)}
@@ -1027,11 +1028,19 @@ async function copy(ta){ try{ await navigator.clipboard.writeText(ta.value); toa
 
 const EVN={vao:'Quay lại học',hoc:'Bé bắt đầu học',xong1:'Xong buổi 1',xong2:'Xong buổi 2',xong3:'Xong 3 buổi',noi:'Con nói thành tiếng',khoa:'Bấm phần bị khóa',bam_dk:'Bấm "Đăng ký cho con"',zalo:'Ba mẹ để lại Zalo',dong_hanh:'Mở Ba mẹ đồng hành'};
 /* ---------- Thẻ kết quả mong muốn (6 ô + câu JTBD + 4 lực), lưu ở tab "Thẻ gia đình" ---------- */
-const THE_O=[['o1','① Bối cảnh','Con học tiếng Anh ở đâu, ai đồng hành, con học lúc nào'],
-  ['khi','② Khi…','Tình huống, thời điểm khiến ba mẹ quyết định'],['muon','② Tôi muốn…','Tiến bộ ba mẹ muốn đạt (không ghi tên khoá học)'],['de','② Để…','Kết quả cho con, cảm xúc của ba mẹ'],
-  ['o3','③ Nỗi đau','Điều đang làm ba mẹ lo, đã thử cách gì, vì sao dừng'],['o4','④ Rào cản','Điều cản việc duy trì và việc quyết định'],
-  ['o5','⑤ Kết quả + cách đo','Con làm được gì thì ba mẹ thấy đáng, đo bằng gì, khi nào'],['o6','⑥ Vì sao cần ngay','Mốc sắp tới: vào lớp 1, chuyển trường, kỳ thi…'],
-  ['day','Lực đẩy','Không hài lòng với cách cũ'],['keo','Lực kéo','Điều hút ba mẹ đến cách mới'],['lo','Lo lắng','Điều ba mẹ sợ ở cách mới'],['thoiQuen','Thói quen','Điều giữ ba mẹ ở cách cũ']];
+const THE_O=[
+  ['o1','① Bối cảnh','Hỏi: "Bé hay học vào buổi nào, có ai ngồi cạnh bé không?" · "Tiếng Anh bé học ở trường hay học thêm?" Ví dụ: bé học tiếng Anh ở trường mầm non 2 năm, tối học cùng mẹ lúc 20h, nhà chưa ai nói tiếng Trung.'],
+  ['khi','② Khi…','Tình huống khiến ba mẹ cho con học. Hỏi: "Sao chị lại muốn cho bé học thêm tiếng Trung ạ?" Ví dụ: bé nói tiếng Anh được rồi, năm sau bé vào lớp 1, có bạn giới thiệu.'],
+  ['muon','② Tôi muốn…','Tiến bộ ba mẹ muốn đạt, không ghi tên khoá học. Hỏi: "Học xong đợt này, chị mong thấy bé làm được gì nhất?" Ví dụ: bé tự nói vài câu tiếng Trung mà không phải học thêm một lớp riêng.'],
+  ['de','② Để…','Kết quả cho con và cảm xúc của ba mẹ. Hỏi: "Bé làm được vậy thì chị vui nhất ở điểm nào?" Ví dụ: để con tự tin hơn, để vào lớp 1 con đã có nền hai ngoại ngữ.'],
+  ['o3','③ Nỗi đau','Hỏi: "Trước giờ chị cho bé học ngoại ngữ theo cách nào? Cách nào bé hợp, cách nào chưa hợp?" Ví dụ: học trung tâm 2 tháng, đưa đón xa, bé chán rồi dừng.'],
+  ['o4','④ Rào cản','Hỏi: "Lúc cho bé tham gia, chị có lo gì không?" · "Có hôm nào khó sắp xếp cho bé học không?" Ví dụ: sợ bé lẫn hai thứ tiếng, tối mẹ hay bận.'],
+  ['o5','⑤ Kết quả + cách đo','Kết quả cụ thể, đo bằng gì, khi nào. Hỏi: "Cụ thể bé làm được gì thì chị thấy đáng?" Ví dụ: sau 3 tháng bé tự giới thiệu bản thân bằng cả hai tiếng; tự mở bài học 5 ngày mỗi tuần.'],
+  ['o6','⑥ Vì sao cần ngay','Mốc sắp tới của bé. Hỏi: "Sắp tới bé có mốc nào quan trọng không chị?" Ví dụ: năm sau vào lớp 1, chuyển sang trường song ngữ, đi du lịch Trung Quốc.'],
+  ['day','Lực đẩy','Điều ba mẹ không hài lòng với cách cũ. Ví dụ: con chán, đưa đón xa, học mãi không thấy con nói.'],
+  ['keo','Lực kéo','Điều hút ba mẹ đến cách mới. Ví dụ: học một lần được hai ngôn ngữ, con tự học được ở nhà, có cô đồng hành.'],
+  ['lo','Lo lắng','Điều ba mẹ sợ ở cách mới. Ví dụ: sợ con lẫn hai thứ tiếng, sợ con không theo được, sợ không có thời gian kèm.'],
+  ['thoiQuen','Thói quen','Điều giữ ba mẹ ở cách cũ. Ví dụ: đã quen trung tâm cũ, đã đóng tiền khoá khác, con quen cô cũ.']];
 const THE_MO=['khao_sat','bo_sung_the','boi_canh','phieu_nhu_cau','hoi_so_1','hoi_so_2','thu_giua'];
 function theBox(f){
   const t=f.the||{}, cap=CAP(), du=f.theDu||0, duoc=k=>cap!=='ctv'||['o1','o4'].includes(k);
@@ -1044,9 +1053,9 @@ function theBox(f){
       <p class="hint" style="margin:0">Ghi nguyên văn lời ba mẹ, không ghi suy đoán của mình.${cap==='ctv'?' CTV ghi ô ① và ④; các ô khác do sale điền sau cuộc gọi.':''}</p>
       ${cap!=='ctv'?`<label>Nhóm<select id="theNhom"><option value="">Tự xếp theo dữ liệu (đang là ${esc(f.nhom||'?')})</option>${['A','B','C','D','E'].map(n=>`<option value="${n}" ${t.nhom===n?'selected':''}>${n} · ${NHOM_TEN[n]}</option>`).join('')}</select></label>`:''}
       ${fld(o('o1'))}
-      ${cap!=='ctv'?`<div class="jt">${fld(o('khi'))}${fld(o('muon'))}${fld(o('de'))}</div>`:''}
+      ${cap!=='ctv'?fld(o('khi'))+fld(o('muon'))+fld(o('de')):''}
       ${fld(o('o3'))}${fld(o('o4'))}${fld(o('o5'))}${fld(o('o6'))}
-      ${cap!=='ctv'?`<div class="jt">${fld(o('day'))}${fld(o('keo'))}${fld(o('lo'))}${fld(o('thoiQuen'))}</div>`:''}
+      ${cap!=='ctv'?fld(o('day'))+fld(o('keo'))+fld(o('lo'))+fld(o('thoiQuen')):''}
       <p class="err" id="theErr" hidden></p>
       <div class="acts"><button class="save" type="submit" id="theOk">Lưu thẻ</button></div>
       ${t.luc?`<p class="hint">Cập nhật ${fmt(t.luc)} · ${esc(t.ai||'')}</p>`:''}
