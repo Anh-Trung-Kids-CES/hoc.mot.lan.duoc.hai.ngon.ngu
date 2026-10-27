@@ -150,6 +150,7 @@ nav .n.ht{background:#B8141C}
 .cp-v{overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
 .cp-a{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
 .of-sum{margin:0;line-height:1.8}
+.tk-nut{padding:8px 0 4px;border-bottom:1px dashed var(--line);margin-bottom:6px}
 .tk-xem summary{cursor:pointer;font-size:13px;font-weight:600;margin:2px 0 6px}
 .tk-xem textarea{width:100%;min-height:150px;border:1px solid var(--line);border-radius:10px;padding:10px;background:var(--bg);font-size:14px;line-height:1.5;color:var(--ink)}
 @media (max-width:480px){.cp-row{grid-template-columns:1fr auto}.cp-l{grid-column:1/-1}}
@@ -1055,8 +1056,7 @@ function phan(n, ten, sub, html){ return `<section class="phan" aria-labelledby=
 function tkRow(f){
   if(!tkSo(f)) return `<div class="cp-row"><span class="cp-l">Tài khoản đăng nhập</span><b class="cp-v">—</b><span class="cp-a"></span></div>
     <p class="hint" style="margin:0 0 6px">Chưa có số điện thoại hợp lệ nên chưa tạo được tài khoản. Sửa số trong phần 2 (Sửa thông tin) rồi bấm Tải lại.</p>`;
-  return `<div class="cp-row"><span class="cp-l">Tài khoản đăng nhập</span><b class="cp-v">${esc(tkTen(f))} · ${esc(tkSo(f))}</b>
-    <span class="cp-a"><button class="act sm-act pri" type="button" id="tkCp">📋 Chép tài khoản</button></span></div>
+  return `<div class="tk-nut"><button class="act pri" type="button" id="tkCp">📋 Chép tài khoản</button></div>
     ${f.moKhoa?'':'<p class="err" style="margin:0 0 6px">Bé chưa được mở khóa: tick ô Kích hoạt bên dưới trước khi gửi, nếu không ba mẹ sẽ báo "Số này chưa được mở khóa".</p>'}
     <details class="tk-xem"><summary>Xem hoặc sửa nội dung sẽ chép</summary>
       <textarea id="tkTxt" aria-label="Hướng dẫn đăng nhập gửi ba mẹ">${esc(tkText(f))}</textarea>
