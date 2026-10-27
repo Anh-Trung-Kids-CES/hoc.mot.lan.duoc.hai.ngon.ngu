@@ -139,6 +139,7 @@ nav .n.ht{background:#B8141C}
 .badge.ai-cv{background:var(--ink);color:var(--card)}
 .badge.nh{background:var(--soft);color:var(--ink);border:1px solid var(--line)}
 .badge.qh{background:var(--red);color:#fff}
+.bd-frame{display:block;width:100%;height:calc(100vh - 200px);min-height:560px;border:1px solid var(--line);border-radius:var(--r);background:#fff}
 .vai-chips{display:inline-flex;flex-wrap:wrap;gap:6px;padding-left:10px;border-left:1px solid var(--line)}
 .act.xong{background:var(--green-soft);border-color:var(--green-soft);color:var(--green)}
 .act.chuyen{background:var(--amber-soft);border-color:var(--amber-soft);color:var(--amber)}
@@ -347,6 +348,7 @@ td.l,th.l{text-align:left}
     <button type="button" data-t="ht">Học thử <span class="n ht" id="nHt">0</span></button>
     <button type="button" data-t="gd">Gia đình</button>
     <button type="button" data-t="st">Sổ tay</button>
+    <button type="button" data-t="bd">Bản đồ</button>
     <button type="button" data-t="bc" class="ql" hidden>Báo cáo</button>
     <button type="button" data-t="tk" class="ql" hidden>Tài khoản</button>
   </nav>
@@ -509,7 +511,7 @@ function render(){
   $('#nViec').textContent=D.gd.reduce((a,f)=>a+f.viec.length,0);
   $('#nHt').textContent=D.gd.filter(f=>f.hocThu).length;
   Object.values(CH).forEach(c=>c.destroy()); CH={};
-  if(TAB==='viec') rViec(); else if(TAB==='ht') rHt(); else if(TAB==='gd') rGd(); else if(TAB==='st') rSt(); else if(TAB==='bc') rBc(); else rTk();
+  if(TAB==='viec') rViec(); else if(TAB==='ht') rHt(); else if(TAB==='gd') rGd(); else if(TAB==='st') rSt(); else if(TAB==='bd') rBd(); else if(TAB==='bc') rBc(); else rTk();
 }
 function aiPicker(){ if(!XEM_HET()) return '';
   const names=[...new Set(D.gd.map(f=>f.nguoiHoTro||'(chưa giao)'))].sort();
@@ -1129,6 +1131,12 @@ async function save(f){
   catch(e){ b.disabled=false; b.textContent='Lưu'; if(!e.silent) say(e.message); }
 }
 
+/* ---------- Bản đồ điểm chạm (quan-tri/ban-do.html: hành trình 21 ngày, điểm chốt, việc theo vai trò, JTBD, offer, kịch bản) ---------- */
+function rBd(){
+  $('#main').innerHTML=`<div class="bar"><p class="hint" style="margin:0;flex:1;min-width:220px">Hành trình 21 ngày, ba điểm chốt hằng tuần, việc theo vai trò CTV · Sale · Cố vấn, cách tìm JTBD, khung offer và kịch bản gọi.</p>
+    <a class="act" href="ban-do.html" target="_blank" rel="noopener">↗ Mở toàn trang</a></div>
+    <iframe class="bd-frame" src="ban-do.html" title="Bản đồ điểm chạm và chốt offer" loading="lazy"></iframe>`;
+}
 /* ---------- Sổ tay chăm sóc phụ huynh (dữ liệu: so-tay.json, cập nhật 18:00 mỗi ngày) ---------- */
 let ST=null, ST_ERR='', ST_Q='', ST_B='', ST_OPEN='';
 async function taiSoTay(){

@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bản đồ điểm chạm Anh – Trung Kids</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Be+Vietnam+Pro:wght@400;500;600&display=swap">
+<style>
+/* Layout: swimlane map (6 chặng × 9 làn) trong khung cuộn ngang, sau đó là các thẻ kịch bản xếp lưới */
+:root{
+  --paper:#FFFBF5; --surface:#FFFFFF; --ink:#2B1D1A; --muted:#6F5E58; --line:#EBDFD5;
+  --red:#C62828; --red-soft:#FCEAE6; --yellow:#E9A800; --yellow-soft:#FFF4D2;
+  --teal:#0E6F67; --teal-soft:#E2F2EF;
+  --f-display:"Baloo 2", "Be Vietnam Pro", system-ui, sans-serif;
+  --f-body:"Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#191312; --surface:#231B19; --ink:#F3EBE7; --muted:#B6A6A0; --line:#3A2E2B;
+  --red:#F2776C; --red-soft:#3A201D; --yellow:#F3C64A; --yellow-soft:#382E17;
+  --teal:#62C6B8; --teal-soft:#152E2B; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --paper:#191312; --surface:#231B19; --ink:#F3EBE7; --muted:#B6A6A0; --line:#3A2E2B;
+  --red:#F2776C; --red-soft:#3A201D; --yellow:#F3C64A; --yellow-soft:#382E17;
+  --teal:#62C6B8; --teal-soft:#152E2B; color-scheme:dark }
+*{box-sizing:border-box}
+body{background:var(--paper); color:var(--ink); font-family:var(--f-body); font-size:15px; line-height:1.55;
+  padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px)); padding-block:28px 56px}
+.wrap{max-width:1240px; margin:0 auto}
+h1,h2,h3{font-family:var(--f-display); line-height:1.15; text-wrap:balance; margin:0}
+h1{font-size:clamp(28px,4vw,40px); font-weight:700}
+h2{font-size:24px; font-weight:700}
+h3{font-size:18px; font-weight:600}
+p{margin:0}
+.eyebrow{font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--red); font-weight:600}
+header.wrap{display:grid; gap:10px; margin-bottom:22px}
+.lede{color:var(--muted); max-width:68ch}
+.bar{display:flex; flex-wrap:wrap; gap:8px 18px; align-items:center; margin-top:6px}
+.key{display:flex; flex-wrap:wrap; gap:6px 14px; font-size:13px; color:var(--muted)}
+.key span{display:inline-flex; align-items:center; gap:6px}
+.sw{width:12px; height:12px; border-radius:3px; border:1px solid var(--line)}
+.filter{display:flex; flex-wrap:wrap; gap:6px; align-items:center; font-size:13px}
+.filter b{font-weight:500; color:var(--muted); margin-right:2px}
+.filter button{font:inherit; font-size:13px; border:1px solid var(--line); background:var(--surface); color:var(--ink);
+  border-radius:999px; padding:4px 12px; cursor:pointer}
+.filter button[aria-pressed="true"]{background:var(--red); border-color:var(--red); color:var(--paper)}
+.filter button:focus-visible{outline:2px solid var(--yellow); outline-offset:2px}
+.hint{display:none; font-size:12px; color:var(--muted); margin:0 0 6px}
+@media (max-width:900px){.hint{display:block}}
+
+.scroll{overflow-x:auto; border:1px solid var(--line); border-radius:14px; background:var(--surface)}
+.map{display:grid; grid-template-columns:150px repeat(6, minmax(158px,1fr)); min-width:1110px; font-size:13px}
+.map > div{padding:10px 11px; border-bottom:1px solid var(--line); border-right:1px solid var(--line); min-width:0}
+.map > div:nth-child(7n){border-right:0}
+.ph{background:var(--surface); position:relative}
+.ph .n{font-family:var(--f-display); font-weight:700; font-size:16px; display:block}
+.ph .d{color:var(--muted); font-size:12px; font-variant-numeric:tabular-nums}
+.ph .seed{display:inline-block; margin-top:6px; font-size:11px; padding:1px 8px; border-radius:999px; background:var(--yellow-soft); color:var(--ink)}
+.lane{position:sticky; left:0; z-index:1; background:var(--surface); font-weight:600; font-size:13px}
+.lane small{display:block; font-weight:400; color:var(--muted); font-size:11.5px; margin-top:2px}
+.lane .g{display:inline-grid; place-items:center; width:22px; height:22px; border-radius:6px; background:var(--ink); color:var(--paper);
+  font-family:var(--f-display); font-size:14px; margin-right:6px; vertical-align:-3px}
+.corner{background:var(--surface); position:sticky; left:0; z-index:2; color:var(--muted); font-size:12px}
+.kid{background:var(--yellow-soft)}
+.ins{background:var(--teal-soft)}
+.ins .box{font-family:var(--f-display); font-weight:600; color:var(--teal); font-size:15px}
+.off{background:var(--red-soft)}
+.off .close{display:inline-block; font-size:11px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; color:var(--red); margin-bottom:2px}
+.cell ul{margin:0; padding-left:15px; display:grid; gap:4px}
+.cell .none{color:var(--muted)}
+.map .cell, .map .lane{transition:opacity .2s}
+.map[data-focus="A"] [data-g]:not([data-g="A"]),
+.map[data-focus="B"] [data-g]:not([data-g="B"]),
+.map[data-focus="C"] [data-g]:not([data-g="C"]),
+.map[data-focus="D"] [data-g]:not([data-g="D"]),
+.map[data-focus="E"] [data-g]:not([data-g="E"]){opacity:.22}
+@media (prefers-reduced-motion:reduce){.map .cell,.map .lane{transition:none}}
+
+.shortcut{margin-top:12px; display:flex; gap:10px; align-items:flex-start; padding:12px 14px; border-left:4px solid var(--red); background:var(--surface); border-radius:0; font-size:14px}
+.shortcut strong{color:var(--red)}
+
+section.wrap{margin-top:40px; display:grid; gap:16px}
+.sub{color:var(--muted); max-width:70ch}
+.grid3{display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:14px}
+.grid2{display:grid; grid-template-columns:repeat(auto-fit, minmax(340px,1fr)); gap:14px}
+@media (max-width:420px){.grid2{grid-template-columns:1fr}}
+.card{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:16px 18px; display:grid; gap:10px; align-content:start; min-width:0}
+.card .tag{font-size:12px; color:var(--muted); font-variant-numeric:tabular-nums}
+.step{display:inline-grid; place-items:center; min-width:30px; height:30px; padding:0 8px; border-radius:8px; background:var(--red); color:var(--paper); font-family:var(--f-display); font-weight:700; font-size:16px}
+.chead{display:flex; gap:10px; align-items:center}
+dl{margin:0; display:grid; gap:8px}
+dt{font-size:11.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); font-weight:600}
+dd{margin:0}
+.say{font-style:italic; border-left:3px solid var(--yellow); padding-left:10px}
+ol.q{margin:0; padding-left:20px; display:grid; gap:7px}
+ol.q li::marker{font-weight:600; color:var(--red)}
+.star{color:var(--yellow); font-weight:700}
+.pill{display:inline-block; font-size:11px; padding:0 7px; border-radius:999px; background:var(--teal-soft); color:var(--teal); font-weight:600; margin-right:4px}
+.note{font-size:13px; color:var(--muted)}
+table{border-collapse:collapse; width:100%; font-size:14px; font-variant-numeric:tabular-nums}
+th,td{text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top}
+th{font-size:12px; color:var(--muted); font-weight:600; text-transform:uppercase; letter-spacing:.05em}
+td.num{text-align:right; white-space:nowrap}
+.best td{background:var(--yellow-soft)}
+.tablewrap{overflow-x:auto}
+ul.plain{margin:0; padding-left:18px; display:grid; gap:6px}
+.checks{display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:10px; counter-reset:c}
+.check{border:1px solid var(--line); background:var(--surface); border-radius:12px; padding:12px 14px; display:grid; gap:4px}
+.check q{font-family:var(--f-display); font-weight:600; font-size:17px; quotes:"“" "”"; color:var(--red)}
+.check span{font-size:13px; color:var(--muted)}
+.part{display:flex; gap:10px; align-items:baseline; margin-top:10px}
+.part .lbl{font-family:var(--f-display); font-weight:700; font-size:14px; color:var(--paper); background:var(--ink); border-radius:6px; padding:1px 9px}
+.grid5{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px,1fr)); gap:12px}
+.mini h3{font-size:16px}
+.mini .for{font-size:11.5px; color:var(--teal); font-weight:600}
+.dotable td:first-child{white-space:nowrap; font-family:var(--f-display); font-weight:600; color:var(--teal)}
+.yes{color:var(--teal); font-weight:600}
+.no{color:var(--red); font-weight:600}
+.tpl{background:var(--paper); border:1px dashed var(--line); border-radius:10px; padding:14px 16px; display:grid; gap:10px; font-size:14px}
+.tpl h4{margin:0; font-family:var(--f-display); font-size:15px; font-weight:600}
+.tpl .slot{background:var(--yellow-soft); padding:0 4px; border-radius:4px}
+.formula{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:18px 20px; font-family:var(--f-display); font-size:clamp(18px,2.4vw,24px); line-height:1.35; font-weight:500}
+.formula b{color:var(--red); font-weight:700}
+.formula .s{background:var(--teal-soft); color:var(--teal); border-radius:6px; padding:0 6px; white-space:nowrap}
+.fk{display:inline-block; font-size:11.5px; font-weight:600; padding:1px 9px; border-radius:999px; background:var(--paper); border:1px solid var(--line)}
+.fk.go{background:var(--yellow-soft)}
+.fk.stop{background:var(--red-soft)}
+.steps{display:grid; grid-template-columns:repeat(auto-fit, minmax(230px,1fr)); gap:12px}
+.vs{display:grid; gap:8px}
+.vs p{padding:10px 12px; border-radius:10px; background:var(--paper); border:1px solid var(--line)}
+.toc{display:flex; flex-wrap:wrap; gap:6px 14px; font-size:13px; margin-top:4px}
+.toc a{color:var(--ink); text-decoration:underline; text-decoration-color:var(--line); text-underline-offset:3px}
+.toc a:hover{text-decoration-color:var(--red)}
+.role{display:inline-block; font-size:11.5px; font-weight:600; padding:1px 8px; border-radius:999px; white-space:nowrap; margin:1px 2px 1px 0}
+.role.ctv{background:var(--yellow-soft); color:var(--ink); border:1px solid var(--line)}
+.role.sale{background:var(--red-soft); color:var(--red); border:1px solid var(--line)}
+.role.cv{background:var(--ink); color:var(--paper)}
+.view h3{display:flex; gap:8px; align-items:center; flex-wrap:wrap}
+.btns{display:flex; flex-wrap:wrap; gap:6px}
+.btns span{font-size:12px; padding:3px 10px; border-radius:999px; border:1px solid var(--line); background:var(--paper)}
+.btns span.main{background:var(--red); color:var(--paper); border-color:var(--red)}
+.tiles{display:flex; flex-wrap:wrap; gap:6px}
+.tiles span{font-size:12px; padding:3px 10px; border-radius:8px; background:var(--yellow-soft)}
+.tasks{min-width:980px; font-size:13px}
+.tasks td{padding:9px 10px}
+.tasks td:first-child{font-weight:600; min-width:170px}
+.tasks td.n{color:var(--muted); font-variant-numeric:tabular-nums; width:34px; font-weight:400}
+.tasks tr.grp td{background:var(--paper); font-family:var(--f-display); font-weight:700; font-size:15px; color:var(--ink); padding-top:14px}
+.tasks[data-role="ctv"] tr[data-r]:not([data-r~="ctv"]),
+.tasks[data-role="sale"] tr[data-r]:not([data-r~="sale"]),
+.tasks[data-role="cv"] tr[data-r]:not([data-r~="cv"]){display:none}
+</style>
+</head>
+<body>
+
+
+<header class="wrap">
+  <span class="eyebrow">CES · Little Language Explorers → Anh – Trung Kids</span>
+  <h1>Bản đồ điểm chạm và chốt offer</h1>
+  <p class="lede">Hành trình 21 ngày từ học thử đến 7 ngày sau chung kết. Mỗi chặng trao giá trị cho gia đình, lấp dần thẻ 6 ô (① bối cảnh · ② JTBD · ③ nỗi đau · ④ rào cản · ⑤ kết quả và cách đo · ⑥ vì sao cần ngay) và có một điểm chốt mỗi tuần với nhóm mẹ tích cực.</p>
+  <div class="bar">
+    <div class="key">
+      <span><i class="sw" style="background:var(--yellow-soft)"></i>Trải nghiệm của con</span>
+      <span><i class="sw" style="background:var(--teal-soft)"></i>Insight thu được</span>
+      <span><i class="sw" style="background:var(--red-soft)"></i>Offer và điểm chốt</span>
+    </div>
+    <div class="filter" role="group" aria-label="Làm nổi một nhóm phụ huynh">
+      <b>Xem nhóm:</b>
+      <button type="button" id="f-all" data-f="" aria-pressed="true">Tất cả</button>
+      <button type="button" id="f-a" data-f="A" aria-pressed="false">A</button>
+      <button type="button" id="f-b" data-f="B" aria-pressed="false">B</button>
+      <button type="button" id="f-c" data-f="C" aria-pressed="false">C</button>
+      <button type="button" id="f-d" data-f="D" aria-pressed="false">D</button>
+      <button type="button" id="f-e" data-f="E" aria-pressed="false">E</button>
+    </div>
+  </div>
+  <nav class="toc" aria-label="Mục lục">
+    <a href="#map">Bản đồ</a><a href="#h-close">Điểm chốt hằng tuần</a><a href="#h-tasks">Việc hằng ngày theo vai trò</a><a href="#h-jtbd">Tìm JTBD</a><a href="#h-build">Xây dựng offer</a><a href="#h-scripts">Kịch bản</a><a href="#h-offer">Gỡ rào cản</a><a href="#h-ops">Nhịp vận hành</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <p class="hint">Vuốt ngang để xem đủ 6 chặng.</p>
+  <div class="scroll">
+    <div class="map" id="map">
+      <!-- header row -->
+      <div class="corner">Làn / Chặng</div>
+      <div class="ph"><span class="n">Cửa vào</span><span class="d">đến 25/10 · học thử</span></div>
+      <div class="ph"><span class="n">Tuần 1 · Khám phá</span><span class="d">26/10 – 1/11</span><span class="seed">Gieo: triết lý</span></div>
+      <div class="ph"><span class="n">Tuần 2 · Bứt phá</span><span class="d">2/11 – 8/11</span><span class="seed">Gieo: bằng chứng</span></div>
+      <div class="ph"><span class="n">Tuần 3 · Chinh phục</span><span class="d">9/11 – 15/11</span><span class="seed">Gieo: lộ trình</span></div>
+      <div class="ph"><span class="n">Chung kết tỏa sáng</span><span class="d">sau tuần 3 · livestream</span></div>
+      <div class="ph"><span class="n">7 ngày sau</span><span class="d">vét và chốt nốt</span></div>
+
+      <!-- Con -->
+      <div class="lane">Con trải nghiệm<small>web học</small></div>
+      <div class="cell kid"><ul><li>Học thử 2 bài miễn phí</li><li>Form: tên, tuổi, SĐT + 1 câu mong muốn</li></ul></div>
+      <div class="cell kid"><ul><li>6 ngày học Vòng khám phá</li><li>Sau bài 3: “Con thích bạn nào nhất?” (chọn bằng hình)</li></ul></div>
+      <div class="cell kid"><ul><li>Bảng xếp hạng, đổi sao</li><li>Góc khám phá cùng chủ đề</li></ul></div>
+      <div class="cell kid"><ul><li>Phiếu “Chuẩn bị hành trang” mở khoá Báo cáo năng lực</li></ul></div>
+      <div class="cell kid"><ul><li>Vòng 1 từ vựng · Vòng 2 câu + nghe · Vòng 3 thách đấu</li><li>Cúp, cờ, chứng nhận</li></ul></div>
+      <div class="cell kid"><ul><li>Vẫn dùng web trong lúc chờ khai giảng</li><li>Nhóm C: học thử 1 buổi lớp online</li></ul></div>
+
+      <!-- Cộng đồng -->
+      <div class="lane">Cộng đồng<small>group · Zalo · Zoom</small></div>
+      <div class="cell"><ul><li>Bình chọn, thảo luận trong group</li><li>Lời mời học thử 2 bài</li></ul></div>
+      <div class="cell"><ul><li>Zalo chào mừng + 3 câu ô ①</li><li>Bài “Vì sao chọn Anh + Trung?”</li><li>Zoom 1 · CN 1/11 + poll 1 câu</li></ul></div>
+      <div class="cell"><ul><li>Bài “3 lý do trẻ bỏ dở ngoại ngữ”</li><li>Góc “Mẹ kể chuyện”</li><li>Zoom 2 · CN 8/11 + Thư giữa chặng</li></ul></div>
+      <div class="cell"><ul><li>Bài “Bản đồ lộ trình Anh – Trung”</li><li>Zoom 3 · CN 15/11 + hỏi đáp</li></ul></div>
+      <div class="cell"><ul><li>Livestream chung kết trên Facebook</li></ul></div>
+      <div class="cell"><ul><li>Livestream “Lộ trình cho con 5–10 tuổi” với câu chuyện thật của gia đình A</li></ul></div>
+
+      <!-- Insight -->
+      <div class="lane">Insight thu được<small>ô của thẻ</small></div>
+      <div class="cell ins"><span class="box">① ②</span><ul><li>Nền tiếng Anh, mong muốn lớn nhất</li></ul></div>
+      <div class="cell ins"><span class="box">① ②</span><ul><li>Giờ học, thiết bị, ai ngồi cùng con</li><li>Câu JTBD nháp sau mỗi cuộc gọi nhóm A</li></ul></div>
+      <div class="cell ins"><span class="box">③ ④</span><ul><li>Rào cản duy trì; tỉ lệ đúng Anh so với Trung</li><li>Gom 3–5 JTBD (2/11), kiểm chứng trên số đông</li></ul></div>
+      <div class="cell ins"><span class="box">⑤ ⑥</span><ul><li>Kết quả mong muốn, mốc sắp tới, ý định học tiếp</li></ul></div>
+      <div class="cell ins"><span class="box">⑤</span><ul><li>Đối chiếu ngày 1 → ngày 21</li></ul></div>
+      <div class="cell ins"><span class="box">Lý do</span><ul><li>Vì sao mua, vì sao chưa mua</li></ul></div>
+
+      <!-- A -->
+      <div class="lane" data-g="A"><span class="g">A</span>Tích cực<small>con học đều, mẹ chia sẻ, dự Zoom</small></div>
+      <div class="cell" data-g="A"><span class="none">—</span></div>
+      <div class="cell" data-g="A"><ul><li><strong>Gọi khảo sát 2–3 phút</strong> (2–3/11), 6 câu</li></ul></div>
+      <div class="cell" data-g="A"><ul><li><strong>Phiếu nhu cầu học tập</strong> qua gọi hoặc Zalo (9–10/11)</li></ul></div>
+      <div class="cell" data-g="A"><ul><li><strong>Tư vấn 10 phút</strong>, đọc lại thẻ 6 ô</li></ul></div>
+      <div class="cell" data-g="A"><ul><li>Xin phép dùng câu chuyện của con cho livestream</li></ul></div>
+      <div class="cell" data-g="A"><ul><li>Mời giới thiệu bạn bè, nhận voucher</li></ul></div>
+
+      <!-- B -->
+      <div class="lane" data-g="B"><span class="g">B</span>Học đều, ít nói<small>con học, mẹ ít tương tác</small></div>
+      <div class="cell" data-g="B"><span class="none">—</span></div>
+      <div class="cell" data-g="B"><ul><li>Zalo trả lời bằng số: ô ② rồi ①</li></ul></div>
+      <div class="cell" data-g="B"><ul><li>Zalo câu ô ⑤</li><li>Chọn câu JTBD giống nhà mình nhất</li></ul></div>
+      <div class="cell" data-g="B"><ul><li>Zalo hỏi ý định; chọn “học tiếp” thì lên nhóm A</li></ul></div>
+      <div class="cell" data-g="B"><ul><li>Nhận Báo cáo năng lực</li></ul></div>
+      <div class="cell" data-g="B"><ul><li>Zalo “Đề xuất lộ trình 1 trang” + chọn số</li></ul></div>
+
+      <!-- C -->
+      <div class="lane" data-g="C"><span class="g">C</span>Tụt nhịp<small>nghỉ từ 2 ngày</small></div>
+      <div class="cell" data-g="C"><span class="none">—</span></div>
+      <div class="cell" data-g="C"><ul><li>Gửi bài 10 phút để bắt nhịp + 1 câu rào cản ④</li></ul></div>
+      <div class="cell" data-g="C"><ul><li>Hỗ trợ theo câu trả lời; tối đa 1 lần hỏi/tuần</li></ul></div>
+      <div class="cell" data-g="C"><ul><li>Như tuần 2</li></ul></div>
+      <div class="cell" data-g="C"><ul><li>Báo cáo năng lực + lời mời học thử lớp</li></ul></div>
+      <div class="cell" data-g="C"><ul><li>Học thử 1 buổi lớp online, rồi tư vấn</li></ul></div>
+
+      <!-- D -->
+      <div class="lane" data-g="D"><span class="g">D</span>Chưa kích hoạt<small>xong 2 bài thử, chưa đóng 79k</small></div>
+      <div class="cell" data-g="D"><ul><li>1 tin nhận xét về con + 1 câu ④</li></ul></div>
+      <div class="cell" data-g="D"><ul><li>Theo dõi cộng đồng như nhóm E</li></ul></div>
+      <div class="cell" data-g="D"><span class="none">—</span></div>
+      <div class="cell" data-g="D"><span class="none">—</span></div>
+      <div class="cell" data-g="D"><ul><li>Mời xem livestream chung kết</li></ul></div>
+      <div class="cell" data-g="D"><ul><li>Mời đợt thử thách sau</li></ul></div>
+
+      <!-- E -->
+      <div class="lane" data-g="E"><span class="g">E</span>Cộng đồng<small>chưa đăng ký</small></div>
+      <div class="cell" data-g="E"><ul><li>Bình chọn, thảo luận ① ② ③, ghi theo chủ đề</li></ul></div>
+      <div class="cell" data-g="E"><ul><li>Đọc bài chia sẻ, mời học thử 2 bài</li></ul></div>
+      <div class="cell" data-g="E"><ul><li>Bình chọn câu JTBD giống nhà mình</li><li>Mời học thử 2 bài</li></ul></div>
+      <div class="cell" data-g="E"><ul><li>Bài “Bản đồ lộ trình”</li></ul></div>
+      <div class="cell" data-g="E"><ul><li>Xem livestream chung kết</li></ul></div>
+      <div class="cell" data-g="E"><ul><li>Livestream lộ trình → giá gia đình được giới thiệu</li></ul></div>
+
+      <!-- Offer -->
+      <div class="lane">Offer và điểm chốt<small>nâng cam kết từng tuần</small></div>
+      <div class="cell off"><ul><li>Kích hoạt 21 ngày, 79k học liệu</li></ul></div>
+      <div class="cell off"><span class="close">Chốt 1</span><ul><li>Hẹn lịch tư vấn, nhận đề xuất lộ trình sớm</li><li>Mẹ nóng: tư vấn và chốt ngay</li></ul></div>
+      <div class="cell off"><span class="close">Chốt 2</span><ul><li>Giữ chỗ lớp đầu tiên (tối đa 6 bạn)</li><li>Mời làm trưởng nhóm 6 bạn</li></ul></div>
+      <div class="cell off"><span class="close">Chốt 3</span><ul><li>Đóng đợt 1: lộ trình hoặc giá nhóm 6 bạn</li><li>Offer nhấn theo JTBD chính của gia đình</li></ul></div>
+      <div class="cell off"><ul><li>Báo cáo kiêm kết quả xếp lộ trình</li><li>Nút “Nhận đề xuất lộ trình cho con”</li></ul></div>
+      <div class="cell off"><span class="close">Vét</span><ul><li>A chưa quyết, B, C</li><li>Nhóm 6 bạn hoàn tất học phí trong 7 ngày</li></ul></div>
+    </div>
+  </div>
+  <div class="shortcut"><strong>Lối tắt:</strong><span>Ở bất kỳ tuần nào, mẹ nói muốn cho con học tiếp thì chuyển ngay sang tư vấn 10 phút, không đợi đến điểm chốt tiếp theo.</span></div>
+</main>
+
+<section class="wrap" aria-labelledby="h-close">
+  <h2 id="h-close">Ba điểm chốt hằng tuần</h2>
+  <p class="sub">Mỗi tuần một nhịp cố định: Zoom Chủ nhật → gọi hoặc nhắn thứ Hai–Ba → một điểm chốt. Mức cam kết tăng dần, mẹ luôn được chọn bước tiếp theo.</p>
+  <div class="grid3">
+    <article class="card">
+      <div class="chead"><span class="step">1</span><div><h3>Hẹn tư vấn</h3><span class="tag">sau Zoom 1 · 2–3/11</span></div></div>
+      <dl>
+        <dt>Ai</dt><dd>Nhóm A</dd>
+        <dt>Hoạt động</dt><dd>Gọi khảo sát 2–3 phút (kịch bản bên dưới)</dd>
+        <dt>Câu chốt</dt><dd class="say">“Cuối tuần cô gửi chị đề xuất lộ trình riêng cho bé, mình hẹn 10 phút trao đổi nhé. Chị tiện tối thứ mấy ạ?”</dd>
+        <dt>Kết quả</dt><dd>Lịch hẹn tư vấn</dd>
+      </dl>
+    </article>
+    <article class="card">
+      <div class="chead"><span class="step">2</span><div><h3>Giữ chỗ lớp đầu</h3><span class="tag">sau Zoom 2 · 9–10/11</span></div></div>
+      <dl>
+        <dt>Ai</dt><dd>Nhóm A và nhóm B đã chọn “học tiếp”</dd>
+        <dt>Hoạt động</dt><dd>Phiếu nhu cầu học tập, 4 câu chọn nhanh: online / offline / web · khung giờ · 2 hay 3 buổi/tuần · muốn học cùng các bạn trong thử thách?</dd>
+        <dt>Câu chốt</dt><dd class="say">“Lớp đầu tiên sau thử thách chỉ nhận 6 bạn. Chị muốn cô giữ chỗ khung giờ này cho bé không ạ?”</dd>
+        <dt>Kết quả</dt><dd>Danh sách giữ chỗ theo level và khung giờ; trưởng nhóm 6 bạn</dd>
+      </dl>
+    </article>
+    <article class="card">
+      <div class="chead"><span class="step">3</span><div><h3>Đóng đợt 1</h3><span class="tag">Zoom 3 · 15/11 đến chung kết</span></div></div>
+      <dl>
+        <dt>Ai</dt><dd>Gia đình đã hẹn tư vấn hoặc giữ chỗ</dd>
+        <dt>Hoạt động</dt><dd>Tư vấn 10 phút, đọc lại thẻ 6 ô</dd>
+        <dt>Câu chốt</dt><dd class="say">“Chị muốn bé học online hay tại trung tâm? Đóng một lần hay chia 2 đợt ạ?”</dd>
+        <dt>Kết quả</dt><dd>Đóng đợt 1 theo chính sách thanh toán</dd>
+      </dl>
+    </article>
+  </div>
+  <p class="note">Đặc quyền cho gia đình chốt sớm (đề xuất, CES xác nhận): chọn khung giờ trước, xếp lộ trình bằng kết quả 21 ngày thay bài kiểm tra đầu vào, trưởng nhóm gom đủ 6 bạn để cả nhóm hưởng giá nhóm. Không giảm thêm ngoài bảng giá. “Giữ chỗ” là ghi danh; có thu đặt cọc hay không do CES quyết.</p>
+</section>
+
+<section class="wrap" aria-labelledby="h-scripts">
+  <h2 id="h-scripts">Kịch bản cho đội vận hành</h2>
+  <div class="grid2">
+    <article class="card">
+      <h3>Gọi khảo sát 2–3 phút · nhóm A</h3>
+      <dl>
+        <dt>Nhắn hẹn trước</dt>
+        <dd class="say">“Chị ơi, em là [tên] bên CES, đang đồng hành cùng bé [tên con]. Em muốn gọi chị 2 phút để hỏi thăm bé và gửi chị gợi ý riêng cho bé. Chị tiện nghe máy lúc nào ạ?”</dd>
+        <dt>Mở · 15 giây</dt>
+        <dd class="say">“Em chào chị, em là [tên] bên CES ạ. Mấy hôm nay bé [tên] học chăm lắm! Em hỏi chị vài câu thôi, để cô chọn bài hợp với bé hơn nhé.”</dd>
+        <dt>Hỏi · <span class="star">★</span> bắt buộc · <em>chữ nghiêng là gợi ý khi mẹ ngập ngừng</em></dt>
+        <dd><ol class="q">
+          <li><span class="pill">①</span><span class="star">★</span> “Bé nhà mình hay học vào buổi nào chị? Có ai ngồi cạnh bé không, hay bé tự học ạ?”</li>
+          <li><span class="pill">①</span>“Tiếng Anh thì bé học ở trường hay có đi học thêm ạ? Còn tiếng Trung, đây là lần đầu bé làm quen phải không chị?”</li>
+          <li><span class="pill">Khi</span><span class="star">★</span> “Sao chị lại muốn cho bé học thêm tiếng Trung ạ?” <em>Mẹ trả lời ngắn thì hỏi tiếp: “Chị biết chương trình qua ai ạ? Lúc đó chị thấy thích ở điểm nào?”</em></li>
+          <li><span class="pill">Muốn</span><span class="star">★</span> “Trước giờ chị đã cho bé học ngoại ngữ theo cách nào rồi ạ? Cách nào bé hợp, cách nào bé chưa hợp?” <em>Ví dụ: học ở trung tâm, xem video, mẹ tự dạy ở nhà…</em></li>
+          <li><span class="pill">③④</span>“Mấy hôm nay cho bé học, có hôm nào khó sắp xếp không chị?” <em>Ví dụ: nhà bận việc, bé chưa muốn ngồi học, vào web bị vướng…</em></li>
+          <li><span class="pill">Để</span><span class="star">★</span> “Học xong đợt này, chị mong thấy bé làm được gì nhất ạ?” <em>Ví dụ: bé tự nói vài câu tiếng Trung, tự giác ngồi học, mạnh dạn hơn…</em> Rồi hỏi thêm đúng một câu: “Bé làm được vậy thì chị vui nhất ở điểm nào ạ?”</li>
+          <li><span class="pill">④</span>“Lúc cho bé tham gia, chị có lo gì không ạ?” <em>Ví dụ: sợ bé lẫn hai thứ tiếng, sợ nhà mình không có thời gian kèm…</em></li>
+        </ol></dd>
+        <dt>Kết · 20 giây</dt>
+        <dd>Nhắc lại một ý mẹ vừa nói, trao một gợi ý (khung giờ, bài ngắn), rồi nói câu chốt của tuần.</dd>
+      </dl>
+      <dl>
+        <dt>Cách hỏi cho tự nhiên</dt>
+        <dd><ul class="plain">
+          <li>Bắt đầu từ chuyện của bé, câu dễ trả lời trước, câu cần suy nghĩ sau.</li>
+          <li>Mỗi lần chỉ hỏi một ý. Mẹ đang kể thì nghe hết, không chen ví dụ vào.</li>
+          <li>Chỉ đưa ví dụ khi mẹ ngập ngừng hoặc trả lời “chị cũng không biết nữa”.</li>
+          <li>Nhắc lại lời mẹ trước khi hỏi câu tiếp: “À, vậy là tối nào bé cũng học cùng bà ạ.”</li>
+          <li>Tránh từ nặng như “quyết định”, “vấn đề”, “chưa ổn”; dùng “hợp”, “chưa hợp”, “khó sắp xếp”.</li>
+        </ul></dd>
+      </dl>
+      <p class="note">Câu không ★ chỉ hỏi khi mẹ còn thời gian; mốc sắp tới (⑥) để dành cho phiếu tuần 3. Không giới thiệu khoá học khi mẹ chưa hỏi, không so sánh bé với bạn khác. Gác máy điền thẻ trong 2 phút, ghi nguyên văn câu mẹ nói và viết một câu JTBD nháp “Khi… tôi muốn… để…”.</p>
+    </article>
+    <article class="card">
+      <h3>Tư vấn chốt 10 phút · nhóm A, B</h3>
+      <ol class="q">
+        <li><strong>Nhắc lại thẻ ① ② · 1 phút.</strong> “Lần trước chị chia sẻ bé hay học buổi tối với mẹ, và chị muốn bé…”</li>
+        <li><strong>Cho thấy tiến bộ ⑤ · 2 phút.</strong> Mở báo cáo: “Ngày đầu bé…, đến ngày 21 bé đã…”</li>
+        <li><strong>Đề xuất một lộ trình · 2 phút.</strong> Little Seed → Lộ trình 1 (Starters + YCT 1, khoảng 10 tháng). Canopy → Lộ trình 2 (Movers + YCT 2, khoảng 12 tháng). Nói lại đầu ra bằng chính lời mẹ ở ô ⑤.</li>
+        <li><strong>Gỡ rào cản ④ · 3 phút.</strong> Chỉ trả lời đúng rào cản mẹ đã nêu (bảng bên dưới).</li>
+        <li><strong>Vì sao bây giờ ⑥ + câu chốt có lựa chọn · 2 phút.</strong> Dùng mốc của chính gia đình, rồi hỏi: online hay tại trung tâm, một lần hay 2 đợt.</li>
+      </ol>
+      <p class="note">Bước 1 trả lời “Đúng điều tôi cần”, bước 2–3 “Tôi tin có thể đạt được”, bước 4 “Sự đánh đổi là xứng đáng” (nêu đủ tiền, thời gian, công sức và chính sách giảm rủi ro), bước 5 “Tôi biết cách bắt đầu”. Mẹ chưa quyết: hẹn ngày gọi lại, không ép, ghi lý do vào thẻ.</p>
+    </article>
+  </div>
+</section>
+
+<section class="wrap" aria-labelledby="h-tasks">
+  <h2 id="h-tasks">Việc hằng ngày theo vai trò</h2>
+  <p class="sub">Mỗi điểm chạm trên bản đồ trở thành một loại việc trên trang quản trị, tự sinh khi có điều kiện, có hạn xử lý và người phụ trách theo ba cấp. Mỗi việc có sẵn các nút kết quả; bấm kết quả nào thì việc tiếp theo tự sinh.</p>
+
+  <div class="grid3">
+    <article class="card view">
+      <h3><span class="role ctv">CTV</span>Việc trong ca</h3>
+      <p>Làm theo giờ, không chăm sóc riêng từng gia đình. Thấy hàng việc chung, xếp theo hạn, gom các việc cùng tin mẫu để gửi liền một lượt.</p>
+      <div class="btns"><span>Zalo</span><span>Chép SĐT</span><span>Tin mẫu</span><span>Ghi kết quả</span><span class="main">Chuyển sale</span></div>
+      <p class="note">Không có nút Gọi. Hạn tính theo ca, không tính theo giờ đồng hồ.</p>
+      <div class="tiles"><span>việc trong ca</span><span>đã xong</span><span>tín hiệu đã chuyển sale</span></div>
+    </article>
+    <article class="card view">
+      <h3><span class="role sale">Sale</span>Gia đình của tôi</h3>
+      <p>Chỉ thấy gia đình mình phụ trách, chia theo 4B: Bạn · Bàn · Bán · Bám. Xếp theo độ nóng rồi theo hạn.</p>
+      <div class="btns"><span class="main">Gọi</span><span>Zalo</span><span>Thẻ 6 ô</span><span>Đề xuất 1 trang</span><span>Xin ý kiến</span><span>Ghi kết quả</span></div>
+      <p class="note">Việc của gia đình nóng có hạn ngắn nhất (1–2 giờ).</p>
+      <div class="tiles"><span>thẻ đủ 6 ô</span><span>lịch hẹn</span><span>giữ chỗ</span><span>đã đóng đợt 1</span></div>
+    </article>
+    <article class="card view">
+      <h3><span class="role cv">Cố vấn</span>Cần quyết</h3>
+      <p>Chỉ thấy những việc cần người quyết: xin ý kiến, khiếu nại, việc quá hạn, gia đình chưa giao người.</p>
+      <div class="btns"><span class="main">Duyệt</span><span>Không duyệt</span><span>Gọi cùng</span><span>Giao lại</span></div>
+      <p class="note">Quyết định lặp lại từ hai lần thì đánh dấu “thành quy tắc” để đưa vào kịch bản.</p>
+      <div class="tiles"><span>chờ ý kiến</span><span>quá hạn</span><span>chưa giao người</span></div>
+    </article>
+  </div>
+
+  <article class="card">
+    <h3>Gắn vào trang quản trị đang có</h3>
+    <ul class="plain">
+      <li>Cạnh nút <strong>“Chỉ học thử”</strong> có các nút chọn hàng việc <strong>Tất cả · Việc CTV · Việc Sale · Cần cố vấn</strong>; ô “Cả đội” lọc theo người phụ trách. CTV, Sale đăng nhập bằng tài khoản riêng chỉ thấy hàng việc của mình.</li>
+      <li>Ô <strong>“gia đình chưa giao người”</strong> trở thành việc <em>Giao người</em> của cố vấn lúc 9 giờ sáng: gia đình nóng và nhóm A giao cho sale, còn lại vào hàng CTV.</li>
+      <li>Việc <strong>“Gọi chào – vừa đăng ký học thử”</strong> tách theo độ nóng: gia đình nóng giao sale gọi trong 1 giờ; các gia đình còn lại để CTV nhắn Zalo chào trong ca. Như vậy hạn 1 giờ chỉ áp cho việc sale làm được, bớt việc quá hạn.</li>
+      <li>Bé <strong>dưới 5 hoặc trên 10 tuổi</strong> (ví dụ bé 3 tuổi đang có trong danh sách) sinh việc <em>Ngoài độ tuổi</em>: CTV mời vào nhóm Zalo đúng độ tuổi, không đưa vào luồng chốt Anh – Trung Kids.</li>
+      <li><strong>“Ghi kết quả”</strong> dùng nút kết quả cố định cho từng loại việc, cộng một ô ghi nguyên văn lời mẹ. Với sale, ô này mở luôn Thẻ 6 ô và câu JTBD.</li>
+    </ul>
+  </article>
+
+  <div class="filter" role="group" aria-label="Lọc việc theo vai trò">
+    <b>Lọc việc:</b>
+    <button type="button" id="r-all" data-r="" aria-pressed="true">Tất cả</button>
+    <button type="button" id="r-ctv" data-r="ctv" aria-pressed="false">CTV</button>
+    <button type="button" id="r-sale" data-r="sale" aria-pressed="false">Sale</button>
+    <button type="button" id="r-cv" data-r="cv" aria-pressed="false">Cố vấn</button>
+  </div>
+  <div class="scroll">
+    <table class="tasks" id="tasks">
+      <thead><tr><th>#</th><th>Việc (tên trên thẻ)</th><th>Sinh khi</th><th>Hạn</th><th>Ai làm</th><th>Nút chính</th><th>Kết quả → việc tiếp theo</th></tr></thead>
+      <tbody>
+        <tr class="grp"><td colspan="7">Học thử và kích hoạt</td></tr>
+        <tr data-r="sale ctv"><td class="n">1</td><td>Gọi chào – vừa đăng ký học thử</td><td>Đăng ký học thử</td><td>Nóng: 1 giờ · còn lại: trong ca</td><td><span class="role sale">Sale</span> nếu nóng<br><span class="role ctv">CTV</span> còn lại</td><td>Sale: Gọi · CTV: Zalo, Tin mẫu</td><td>Quan tâm → giao sale · Không nghe → gọi lại sau 3 giờ, tối đa 2 lần rồi nhắn Zalo · Không quan tâm → đóng</td></tr>
+        <tr data-r="ctv"><td class="n">2</td><td>Ngoài độ tuổi</td><td>Bé dưới 5 hoặc trên 10 tuổi</td><td>Trong ca</td><td><span class="role ctv">CTV</span></td><td>Tin mẫu</td><td>Đã mời vào nhóm Zalo đúng tuổi → đóng, gắn nhãn “nhóm khác”</td></tr>
+        <tr data-r="ctv"><td class="n">3</td><td>Nhắc học tiếp bài thử</td><td>24 giờ chưa học buổi thử kế tiếp</td><td>Trong ca</td><td><span class="role ctv">CTV</span></td><td>Zalo, Tin mẫu</td><td>Đã nhắn → chờ 24 giờ, lặp tối đa 2 lần</td></tr>
+        <tr data-r="sale ctv"><td class="n">4</td><td>Mời kích hoạt 21 ngày</td><td>Học xong buổi thử cuối, chưa đóng phí</td><td>Nóng: 2 giờ · còn lại: trong ca</td><td><span class="role sale">Sale</span> nếu nóng<br><span class="role ctv">CTV</span> còn lại</td><td>Tin mẫu kèm Zalo hỗ trợ</td><td>Đồng ý → “đã đăng ký, chờ đóng phí” · Phân vân → việc 5</td></tr>
+        <tr data-r="ctv"><td class="n">5</td><td>Hỏi lý do chưa kích hoạt</td><td>48 giờ sau lời mời, chưa đóng phí</td><td>Trong ca</td><td><span class="role ctv">CTV</span></td><td>Tin mẫu 4 lựa chọn</td><td>Ghi số 1–4 vào ô ④ · Hỏi giá → chuyển sale</td></tr>
+        <tr data-r="ctv"><td class="n">6</td><td>Mở khoá 21 ngày</td><td>Đã đóng phí, chưa mở</td><td>2 giờ</td><td><span class="role ctv">CTV</span></td><td>Mở khoá 21 ngày</td><td>Đã mở → sinh việc 7</td></tr>
+
+        <tr class="grp"><td colspan="7">Tuần 1 · Bạn</td></tr>
+        <tr data-r="ctv"><td class="n">7</td><td>Chào mừng 21 ngày + 3 câu ô ①</td><td>Vừa mở khoá</td><td>Trong ca</td><td><span class="role ctv">CTV</span></td><td>Zalo, Tin mẫu</td><td>Ghi câu trả lời vào ô ① · Mẹ trả lời dài, kể chuyện → đánh dấu nóng</td></tr>
+        <tr data-r="cv"><td class="n">8</td><td>Giao người</td><td>Gia đình chưa có người phụ trách</td><td>9 giờ sáng mỗi ngày</td><td><span class="role cv">Cố vấn</span></td><td>Giao cho sale · Để CTV</td><td>Nhóm A và gia đình nóng → sale · còn lại → hàng CTV</td></tr>
+        <tr data-r="sale"><td class="n">9</td><td>Hẹn giờ gọi khảo sát</td><td>Vừa được giao sale</td><td>24 giờ</td><td><span class="role sale">Sale</span></td><td>Zalo, Tin mẫu</td><td>Có giờ hẹn → sinh việc 10 đúng giờ đó</td></tr>
+        <tr data-r="sale"><td class="n">10</td><td>Gọi khảo sát 2–3 phút</td><td>Đến giờ hẹn</td><td>Đúng giờ hẹn</td><td><span class="role sale">Sale</span></td><td>Gọi, Thẻ 6 ô</td><td>Điền ① ② ③ ④, câu Khi/Muốn/Để, 4 lực · Đồng ý hẹn tư vấn → Chốt 1, sinh việc 23</td></tr>
+        <tr data-r="ctv"><td class="n">11</td><td>Hỏi bằng số (nhóm B)</td><td>Ngày 3 và ngày 5 mỗi tuần</td><td>Trong ca</td><td><span class="role ctv">CTV</span></td><td>Tin mẫu</td><td>Ghi số vào thẻ · Chọn “học tiếp” → chuyển sale</td></tr>
+        <tr data-r="ctv"><td class="n">12</td><td>Kéo nhịp (nhóm C)</td><td>2 ngày không học</td><td>Trong ca</td><td><span class="role ctv">CTV</span></td><td>Zalo, Tin mẫu (bài 10 phút + câu rào cản)</td><td>1 bận → gợi ý giờ ngắn · 2 chán → gửi truyện · 3 lỗi web → việc 13</td></tr>
+        <tr data-r="ctv"><td class="n">13</td><td>Hỗ trợ kỹ thuật</td><td>Mẹ báo lỗi hoặc chọn số 3</td><td>4 giờ</td><td><span class="role ctv">CTV</span></td><td>Zalo, Chép SĐT</td><td>Đã sửa → đóng · Không sửa được → báo nhóm kỹ thuật</td></tr>
+        <tr data-r="ctv"><td class="n">14</td><td>Nhắc Zoom Chủ nhật</td><td>17 giờ Chủ nhật</td><td>Trước 19 giờ</td><td><span class="role ctv">CTV</span></td><td>Tin mẫu gửi nhóm</td><td>Đã gửi</td></tr>
+
+        <tr class="grp"><td colspan="7">Tuần 2 · Bàn</td></tr>
+        <tr data-r="ctv"><td class="n">15</td><td>Gửi Thư giữa chặng</td><td>Sau Zoom 2 (8/11), đã có nhận xét của giáo viên</td><td>24 giờ</td><td><span class="role ctv">CTV</span></td><td>Tin mẫu</td><td>Đã gửi · Mẹ hỏi lại → chuyển sale</td></tr>
+        <tr data-r="cv"><td class="n">16</td><td>Duyệt bộ JTBD</td><td>Sau họp gom JTBD (2/11)</td><td>Trong ngày</td><td><span class="role cv">Cố vấn</span></td><td>Duyệt</td><td>Duyệt → sinh việc 17</td></tr>
+        <tr data-r="ctv"><td class="n">17</td><td>Kiểm chứng JTBD</td><td>Bộ JTBD đã duyệt (nhóm B, E)</td><td>Trong ca</td><td><span class="role ctv">CTV</span></td><td>Tin mẫu</td><td>Ghi số câu JTBD được chọn vào thẻ</td></tr>
+        <tr data-r="sale ctv"><td class="n">18</td><td>Phiếu nhu cầu học tập</td><td>9–10/11</td><td>Sale: 24 giờ · CTV: trong ca</td><td><span class="role sale">Sale</span> nhóm A<br><span class="role ctv">CTV</span> nhóm B</td><td>Gọi, Tin mẫu</td><td>Chọn lớp online hoặc tại trung tâm → việc 19</td></tr>
+        <tr data-r="sale"><td class="n">19</td><td>Gọi chốt giữ chỗ (Chốt 2)</td><td>Phiếu chọn lớp, hoặc gia đình nhóm A</td><td>24 giờ</td><td><span class="role sale">Sale</span></td><td>Gọi</td><td>Giữ chỗ (level, hình thức, khung giờ) · Nhận làm trưởng nhóm → việc 20</td></tr>
+        <tr data-r="sale"><td class="n">20</td><td>Ghép nhóm 6 bạn</td><td>Có 3 giữ chỗ trùng level, hình thức, khung giờ</td><td>48 giờ</td><td><span class="role sale">Sale</span></td><td>Danh sách nhóm</td><td>Đủ 6 bạn → báo giá nhóm, hạn hoàn tất 7 ngày</td></tr>
+
+        <tr class="grp"><td colspan="7">Tuần 3 · Bán</td></tr>
+        <tr data-r="ctv"><td class="n">21</td><td>Nhắc phiếu Hành trang</td><td>Từ 9/11, chưa điền</td><td>Trong ca</td><td><span class="role ctv">CTV</span></td><td>Tin mẫu</td><td>Đã điền → mở Báo cáo năng lực</td></tr>
+        <tr data-r="sale"><td class="n">22</td><td>Bổ sung thẻ</td><td>Ngày 15, thẻ chưa đủ 6 ô</td><td>48 giờ</td><td><span class="role sale">Sale</span></td><td>Gọi, Thẻ 6 ô</td><td>Thẻ đủ 6 ô</td></tr>
+        <tr data-r="sale"><td class="n">23</td><td>Tư vấn 10 phút (Chốt 3)</td><td>Có lịch hẹn, có giữ chỗ, hoặc mẹ bấm “Nhận đề xuất”</td><td>Đúng giờ hẹn</td><td><span class="role sale">Sale</span></td><td>Gọi, Thẻ, Đề xuất 1 trang, Xin ý kiến</td><td>Đóng đợt 1 → việc 25 · Chưa quyết → hẹn ngày, ghi lý do · Ngoài chính sách → việc 32</td></tr>
+        <tr data-r="sale"><td class="n">24</td><td>Mẹ bấm “Nhận đề xuất lộ trình”</td><td>Bấm nút trong Báo cáo năng lực</td><td>2 giờ</td><td><span class="role sale">Sale</span></td><td>Gọi, Zalo</td><td>Có lịch tư vấn → việc 23</td></tr>
+        <tr data-r="sale"><td class="n">25</td><td>Xác nhận thanh toán, xếp lớp</td><td>Mẹ báo đã chuyển khoản</td><td>24 giờ</td><td><span class="role sale">Sale</span></td><td>Xác nhận</td><td>Đã xếp lớp → sinh việc 30 sau 3 ngày</td></tr>
+
+        <tr class="grp"><td colspan="7">Chung kết và 7 ngày sau · Bám</td></tr>
+        <tr data-r="ctv"><td class="n">26</td><td>Gửi Báo cáo năng lực</td><td>Sau chung kết</td><td>24 giờ</td><td><span class="role ctv">CTV</span></td><td>Tin mẫu</td><td>Đã gửi</td></tr>
+        <tr data-r="sale"><td class="n">27</td><td>Vét chưa quyết</td><td>Ngày 1, 3, 6 sau chung kết</td><td>Trong ngày</td><td><span class="role sale">Sale</span></td><td>Gọi, Zalo</td><td>Chốt · Hẹn lại · Đóng kèm lý do</td></tr>
+        <tr data-r="ctv sale"><td class="n">28</td><td>Học thử lớp online (nhóm C)</td><td>Mẹ nhóm C nhận lời mời</td><td>Trước buổi học</td><td><span class="role ctv">CTV</span> xếp lịch<br><span class="role sale">Sale</span> tư vấn sau buổi</td><td>Zalo</td><td>Học xong → việc 23</td></tr>
+        <tr data-r="ctv"><td class="n">29</td><td>Mời đợt thử thách sau</td><td>Nhóm D, 7 ngày sau chung kết</td><td>Trong ca</td><td><span class="role ctv">CTV</span></td><td>Tin mẫu</td><td>Đã mời</td></tr>
+        <tr data-r="sale"><td class="n">30</td><td>Mời giới thiệu bạn bè</td><td>3 ngày sau khi xếp lớp</td><td>48 giờ</td><td><span class="role sale">Sale</span></td><td>Zalo</td><td>Có người được giới thiệu → giao sale</td></tr>
+        <tr data-r="sale"><td class="n">31</td><td>Hỏi thăm sau buổi học đầu</td><td>Sau buổi 1 của khoá</td><td>24 giờ</td><td><span class="role sale">Sale</span></td><td>Gọi</td><td>Ghi phản hồi · Chưa hài lòng → việc 33</td></tr>
+
+        <tr class="grp"><td colspan="7">Cố vấn · luôn mở</td></tr>
+        <tr data-r="cv"><td class="n">32</td><td>Xin ý kiến</td><td>Sale bấm “Xin ý kiến”: ngoài chính sách, xếp lộ trình, đặc quyền, đặt cọc, hình ảnh của con</td><td>24 giờ</td><td><span class="role cv">Cố vấn</span></td><td>Duyệt, Không duyệt, Gọi cùng</td><td>Ghi quyết định · Lặp từ 2 lần → đánh dấu “thành quy tắc”</td></tr>
+        <tr data-r="cv"><td class="n">33</td><td>Khiếu nại</td><td>CTV hoặc sale chuyển phàn nàn của mẹ</td><td>4 giờ</td><td><span class="role cv">Cố vấn</span></td><td>Gọi</td><td>Ghi cách xử lý</td></tr>
+        <tr data-r="cv"><td class="n">34</td><td>Việc quá hạn</td><td>Bất kỳ việc nào quá hạn hơn 24 giờ</td><td>Trong ngày</td><td><span class="role cv">Cố vấn</span></td><td>Giao lại</td><td>Giao lại hoặc đóng kèm lý do</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="grid2">
+    <article class="card">
+      <h3>CTV chuyển sale khi</h3>
+      <ul class="plain">
+        <li>Mẹ hỏi giá, lịch khai giảng hoặc ưu đãi</li>
+        <li>Mẹ chọn lớp online hoặc tại trung tâm, hoặc nói muốn cho con học tiếp</li>
+        <li>Mẹ trả lời dài, kể chuyện nhà mình</li>
+        <li>Mẹ phàn nàn (đồng thời báo cố vấn)</li>
+      </ul>
+      <p class="say">“Dạ để chị [tên sale] phụ trách bé gọi chị trao đổi kỹ hơn nhé. Chị tiện lúc nào ạ?”</p>
+      <p class="note">CTV không báo giá, không hứa ưu đãi, không giải thích chính sách hoàn phí, không đặt hạn chót.</p>
+    </article>
+    <article class="card">
+      <h3>Sale xin ý kiến cố vấn khi</h3>
+      <ul class="plain">
+        <li>Yêu cầu ngoài chính sách: giảm thêm, chia đợt khác, chuyển học phí cho em</li>
+        <li>Đặc quyền chốt sớm, đặt cọc giữ chỗ, ưu đãi có thời hạn</li>
+        <li>Con lệch trình độ, chưa rõ xếp lộ trình nào</li>
+        <li>Khiếu nại, hoặc mẹ cần chuyên gia trấn an trước khi quyết</li>
+        <li>Xin dùng hình ảnh, câu chuyện của con</li>
+      </ul>
+      <p class="say">“Việc này em xin ý kiến cố vấn và báo lại chị trước [giờ cụ thể] ạ.”</p>
+    </article>
+  </div>
+</section>
+
+<section class="wrap" aria-labelledby="h-jtbd">
+  <h2 id="h-jtbd">Tìm JTBD của phụ huynh</h2>
+  <p class="sub">Nghe câu chuyện thật để viết giả thuyết, rồi dùng khảo sát để kiểm chứng trên số đông. Mỗi gia đình kết thúc thử thách với một câu JTBD chính, và offer nhấn vào phần giải pháp khớp với câu đó.</p>
+  <p class="formula"><b>Khi</b> <span class="s">tình huống cụ thể</span>, <b>tôi muốn</b> <span class="s">việc cần làm</span>, <b>để</b> <span class="s">kết quả mong muốn</span>.</p>
+
+  <article class="card">
+    <h3>Mỗi vế lấy từ đâu</h3>
+    <div class="tablewrap">
+      <table class="dotable">
+        <thead><tr><th>Vế</th><th>Đi tìm điều gì</th><th>Nguồn trong thử thách</th></tr></thead>
+        <tbody>
+          <tr><td>Khi</td><td>Thời điểm, hoàn cảnh khiến mẹ hành động. “Mẹ có con 5 tuổi” là nhân khẩu học, chưa phải tình huống</td><td>Cuộc gọi tuần 1: lúc quyết định đăng ký, nhà đang có chuyện gì · dữ liệu web: con học giờ nào, trên thiết bị gì</td></tr>
+          <tr><td>Tôi muốn</td><td>Tiến bộ mẹ muốn đạt, không phải tên sản phẩm (“cho con học CES” là sai)</td><td>Cách mẹ đã thử trước đây và vì sao bỏ · phần con quay lại học nhiều nhất</td></tr>
+          <tr><td>Để</td><td>Kết quả cho con và cảm xúc của mẹ: yên tâm, tự hào, đỡ áp lực</td><td>Hỏi “điều gì sẽ khác?” rồi “vì sao quan trọng?” · khoảnh khắc mẹ chọn chia sẻ trong group (mẹ khoe điều gì chính là vế “để”)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
+
+  <div class="grid2">
+    <article class="card">
+      <h3>Bốn câu đào JTBD</h3>
+      <p class="note">Đã lồng vào kịch bản gọi 2–3 phút của nhóm A. Hỏi về chuyện đã xảy ra, không hỏi giả định.</p>
+      <ol class="q">
+        <li><span class="pill">Khi</span> “Sao chị lại muốn cho bé học thêm tiếng Trung ạ?” Hỏi tiếp nếu cần: “Chị biết chương trình qua ai ạ? Lúc đó chị thấy thích ở điểm nào?”</li>
+        <li><span class="pill">Muốn</span> “Trước giờ chị đã cho bé học ngoại ngữ theo cách nào rồi ạ? Cách nào bé hợp, cách nào bé chưa hợp?”</li>
+        <li><span class="pill">Để</span> “Học xong đợt này, chị mong thấy bé làm được gì nhất ạ?” Rồi hỏi thêm: “Bé làm được vậy thì chị vui nhất ở điểm nào ạ?”</li>
+        <li><span class="pill">④</span> “Lúc cho bé tham gia, chị có lo gì không ạ?”</li>
+      </ol>
+    </article>
+    <article class="card">
+      <h3>Ghi theo bốn lực của quyết định</h3>
+      <dl>
+        <dt><span class="fk stop">Đẩy</span></dt><dd>Điều mẹ không hài lòng với cách cũ: con chán, đưa đón mệt, không thấy tiến bộ</dd>
+        <dt><span class="fk go">Kéo</span></dt><dd>Điều hút mẹ đến cách mới: học một lần được hai ngôn ngữ, con tự học được</dd>
+        <dt><span class="fk">Lo lắng</span></dt><dd>Điều mẹ sợ ở cách mới: con lẫn hai thứ tiếng, không theo được</dd>
+        <dt><span class="fk">Thói quen</span></dt><dd>Điều giữ mẹ ở cách cũ: đã quen trung tâm cũ, đã đóng tiền</dd>
+      </dl>
+      <p class="note">Đẩy và kéo cho vế “tôi muốn”. Lo lắng và thói quen đi vào ô ④ của thẻ.</p>
+    </article>
+  </div>
+
+  <div class="steps">
+    <article class="card"><div class="chead"><span class="step">1</span><div><h3>Thu câu chuyện</h3><span class="tag">Tuần 1 · 26/10–1/11</span></div></div><p>Gọi khoảng 10–15 mẹ nhóm A. Gác máy là viết ngay một câu JTBD nháp bằng lời của mẹ.</p></article>
+    <article class="card"><div class="chead"><span class="step">2</span><div><h3>Gom lại</h3><span class="tag">Họp thứ Hai 2/11</span></div></div><p>Đặt các câu nháp cạnh nhau, gom câu giống nhau thành 3–5 JTBD chung, đặt tên ngắn cho từng JTBD.</p></article>
+    <article class="card"><div class="chead"><span class="step">3</span><div><h3>Kiểm chứng</h3><span class="tag">Tuần 2 · 2–8/11</span></div></div><p>Zalo nhóm B và bình chọn nhóm E: mẹ chọn câu giống nhà mình nhất. Đếm theo level và độ tuổi.</p></article>
+    <article class="card"><div class="chead"><span class="step">4</span><div><h3>Dùng để chốt</h3><span class="tag">Tuần 3 · 9–15/11</span></div></div><p>Gắn mỗi gia đình một JTBD chính; offer và đề xuất 1 trang nhấn vào phần giải pháp khớp với JTBD đó.</p></article>
+  </div>
+
+  <article class="card">
+    <h3>Tin nhắn kiểm chứng tuần 2</h3>
+    <p class="say">“Chị thấy câu nào giống nhà mình nhất ạ? Chị chỉ cần trả lời 1 số:<br>
+    1. Khi bé đã nói tiếng Anh cơ bản, tôi muốn thêm tiếng Trung mà không phải học thêm một lớp, để bé có hai ngoại ngữ mà không quá tải.<br>
+    2. Khi tối về mệt, tôi muốn có bài bé tự học được 15 phút, để bé tiến bộ mà mẹ không phải kèm.<br>
+    3. … (các JTBD đội vừa gom)<br>
+    Nếu không câu nào đúng, chị kể giúp cô bằng một câu nhé.”</p>
+    <p class="note">Câu trả lời “không câu nào đúng” là gợi ý cho JTBD còn bỏ sót. Thay danh sách bằng đúng các câu đội gom được ngày 2/11.</p>
+  </article>
+
+  <article class="card">
+    <h3>Giả thuyết JTBD ban đầu và offer nhấn vào</h3>
+    <p class="note">Suy ra từ đối tượng của chương trình, chưa phải dữ liệu. Tuần 1 sẽ xác nhận, sửa hoặc thay thế.</p>
+    <div class="tablewrap">
+      <table class="dotable">
+        <thead><tr><th>Tên</th><th>Câu JTBD</th><th>Offer nhấn vào</th></tr></thead>
+        <tbody>
+          <tr><td>Tận dụng tiếng Anh</td><td>Khi con đã nói tiếng Anh cơ bản, tôi muốn con học thêm tiếng Trung trên nền đó mà không thêm một lớp riêng, để con có hai ngoại ngữ mà không quá tải</td><td>Một chủ đề, hai ngôn ngữ, cùng bộ thẻ hình; Little Seed chỉ cần tiếng Anh cơ bản</td></tr>
+          <tr><td>Mẹ bận</td><td>Khi tối về mệt mà vẫn muốn con học đều, tôi muốn có bài con tự học được, để con tiến bộ mà mẹ không phải kèm</td><td>Bài có audio mẫu, tự chấm, 10–15 phút; lớp online, không đưa đón</td></tr>
+          <tr><td>Lộ trình rõ</td><td>Khi con học nhiều nơi mà không biết đã đến đâu, tôi muốn một lộ trình có mốc và chứng chỉ, để biết tiền và thời gian bỏ ra có kết quả</td><td>Đầu ra Cambridge và YCT, báo cáo hằng tháng, cam kết học lại</td></tr>
+          <tr><td>Mạnh dạn nói</td><td>Khi thấy con biết từ mà ngại nói, tôi muốn con được nói thường xuyên trong môi trường vui, để con tự tin giao tiếp</td><td>Lớp tối đa 6 bạn, ai cũng được nói mỗi buổi; nguyên tắc 3 KHÔNG</td></tr>
+          <tr><td>Chuẩn bị mốc</td><td>Khi con sắp vào lớp 1 hoặc chuyển trường, tôi muốn con có nền ngoại ngữ vững trước, để con không bị đuối khi lịch học dày</td><td>Mốc ở ô ⑥ của gia đình; đạt Flyers và YCT 3 trước khi hết cấp 1</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
+
+  <article class="card">
+    <h3>Kiểm tra một câu JTBD đã tốt chưa</h3>
+    <div class="vs">
+      <p><span class="no">Chưa tốt:</span> Khi là mẹ có con 6 tuổi, tôi muốn cho con học CES, để con giỏi.</p>
+      <p><span class="yes">Tốt:</span> Khi con đã nói tiếng Anh ở trường nhưng chưa biết tiếng Trung, tôi muốn con học thêm tiếng Trung mà không phải đưa đón thêm, để năm sau vào lớp 1 con đã có nền hai ngoại ngữ.</p>
+    </div>
+    <ul class="plain">
+      <li>Tình huống có chỉ ra một thời điểm hoặc hoàn cảnh cụ thể không?</li>
+      <li>Việc cần làm có còn đúng nếu đổi sang trung tâm khác không? Phải đúng thì mới là JTBD, vì JTBD là việc của mẹ, không phải sản phẩm của mình.</li>
+      <li>Kết quả có dùng được lời của chính mẹ không?</li>
+    </ul>
+  </article>
+</section>
+
+<section class="wrap" aria-labelledby="h-build">
+  <h2 id="h-build">Xây dựng offer</h2>
+  <p class="sub">Offer có hai phần: kết quả gia đình mong muốn (lấy từ thẻ 6 ô) và giải pháp CES đưa ra. Đi kèm là tổng chi phí, điều kiện, chính sách giảm rủi ro và bước tiếp theo. Mỗi offer phải giúp phụ huynh đi qua đủ bốn câu dưới đây.</p>
+  <div class="checks">
+    <div class="check"><q>Đúng điều tôi cần</q><span>Phần 1 · đọc lại thẻ 6 ô bằng lời của mẹ</span></div>
+    <div class="check"><q>Tôi tin có thể đạt được</q><span>Phần 2 · cách làm, thời gian thấy tiến bộ, người thực hiện, bằng chứng</span></div>
+    <div class="check"><q>Sự đánh đổi là xứng đáng</q><span>Tổng chi phí + chính sách giảm rủi ro</span></div>
+    <div class="check"><q>Tôi biết cách bắt đầu</q><span>Điều kiện + bước tiếp theo rõ ràng</span></div>
+  </div>
+
+  <div class="part"><span class="lbl">Phần 1</span><h3>Kết quả khách hàng mong muốn</h3></div>
+  <article class="card">
+    <div class="tablewrap">
+      <table class="dotable">
+        <thead><tr><th>Ô thẻ</th><th>Cần làm rõ</th><th>Ví dụ ghi lại (minh hoạ)</th></tr></thead>
+        <tbody>
+          <tr><td>① Bối cảnh</td><td>Con học ở đâu, ai đồng hành, nhịp sinh hoạt</td><td>Bé 5 tuổi, nói tiếng Anh cơ bản ở trường mầm non; mẹ đi làm, học buổi tối</td></tr>
+          <tr><td>② JTBD</td><td>Tiến bộ gia đình muốn đạt, viết theo câu “Khi… tôi muốn… để…”</td><td>Khi bé đã nói tiếng Anh ở trường, tôi muốn bé học thêm tiếng Trung mà không phải đưa đón thêm, để năm sau vào lớp 1 bé đã có nền hai ngoại ngữ</td></tr>
+          <tr><td>③ Nỗi đau</td><td>Điều đang làm họ lo, đã thử gì</td><td>Từng học lớp tiếng Trung, đưa đón mệt, bé chán sau 2 tháng</td></tr>
+          <tr><td>④ Rào cản</td><td>Điều cản duy trì và cản quyết định</td><td>Sợ bé lẫn hai thứ tiếng; tối mẹ mệt</td></tr>
+          <tr><td>⑤ Kết quả + đo</td><td>Kết quả cụ thể, đo bằng gì, khi nào</td><td>Sau 3 tháng bé giới thiệu bản thân bằng cả hai tiếng; tự học 5 ngày/tuần</td></tr>
+          <tr><td>⑥ Vì sao ngay</td><td>Mốc sắp tới, cái giá của việc chờ</td><td>Năm sau vào lớp 1, muốn có nền trước khi lịch học dày</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
+
+  <div class="part"><span class="lbl">Phần 2</span><h3>Giải pháp</h3></div>
+  <div class="grid5">
+    <article class="card mini"><span class="for">Khách nhận được gì</span><h3>Trọn một lộ trình</h3>
+      <ul class="plain"><li>120 buổi, lớp tối đa 6 bạn, online hoặc tại trung tâm</li><li>Bài trước và sau mỗi buổi, audio mẫu, tự chấm</li><li>Bộ quà 8.696.000đ: phần mềm học tập và CLB 24 tháng, bộ học liệu</li><li>Lời nhắn sau mỗi buổi; video, bài làm, báo cáo hằng tháng</li></ul></article>
+    <article class="card mini"><span class="for">Đạt kết quả bằng cách nào</span><h3>Một ngữ cảnh, hai ngoại ngữ</h3>
+      <ul class="plain"><li>Cùng chủ đề, cùng bộ thẻ hình cho tiếng Anh và tiếng Trung, con không học hai lần</li><li>Tiếng Việt làm cầu nối; luyện năng lực chuyển ngữ</li><li>Lớp nhỏ, bạn nào cũng được nói mỗi buổi</li></ul></article>
+    <article class="card mini"><span class="for">Bao lâu thấy tiến bộ</span><h3>Từ tuần đầu đến chứng chỉ</h3>
+      <ul class="plain"><li>Đã thấy ngay trong 21 ngày (báo cáo ngày 1 → ngày 21)</li><li>Báo cáo tiến bộ mỗi tháng</li><li>Lộ trình 1: Starters + YCT 1, khoảng 10 tháng</li><li>Lộ trình 2: Movers + YCT 2, khoảng 12 tháng</li></ul></article>
+    <article class="card mini"><span class="for">Ai thực hiện</span><h3>Giáo viên và gia đình</h3>
+      <ul class="plain"><li>Giáo viên được đào tạo riêng cho lớp tam ngữ, đánh giá theo 11 năng lực của British Council</li><li>Chuyên gia và đội đồng hành như trong thử thách</li><li>Bố mẹ: giữ giờ học, hỏi và khen</li></ul></article>
+    <article class="card mini"><span class="for">Bằng chứng để tin</span><h3>Thấy được, kiểm được</h3>
+      <ul class="plain"><li>Kết quả 21 ngày của chính con</li><li>Video các con đợt trước, câu chuyện gia đình nhóm A</li><li>Đầu ra đo bằng bài thi chuẩn Cambridge và YCT</li><li>Cam kết học lại miễn phí nếu không đạt</li></ul></article>
+  </div>
+
+  <div class="part"><span class="lbl">Tổng chi phí</span><h3>Tiền bạc + thời gian + công sức</h3></div>
+  <div class="grid3">
+    <article class="card">
+      <h3>Tiền bạc</h3>
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th>Lộ trình 120 buổi</th><th class="num">Online</th><th class="num">Offline</th></tr></thead>
+          <tbody>
+            <tr><td>Học phí gốc</td><td class="num">30.000.000đ</td><td class="num">36.000.000đ</td></tr>
+            <tr><td>Mua lộ trình</td><td class="num">20.999.000đ</td><td class="num">22.999.000đ</td></tr>
+            <tr><td>Gia đình được giới thiệu</td><td class="num">19.999.000đ</td><td class="num">21.999.000đ</td></tr>
+            <tr class="best"><td>Nhóm 6 bạn</td><td class="num">17.999.000đ</td><td class="num">18.999.000đ</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Mua lộ trình online khoảng 175.000đ/buổi; nhóm 6 bạn khoảng 150.000đ/buổi. Chia 2 đợt, giá giữ nguyên đến hết lộ trình. Người giới thiệu nhận voucher 1.000.000đ.</p>
+    </article>
+    <article class="card">
+      <h3>Thời gian</h3>
+      <ul class="plain">
+        <li>Lộ trình 1: 2–3 buổi/tuần, 45 phút, khoảng 10 tháng</li>
+        <li>Lộ trình 2: 3 buổi/tuần rồi 2 buổi/tuần, 50–75 phút, khoảng 12 tháng</li>
+        <li>Bài ở nhà 10–15 phút mỗi buổi ở các khoá đầu</li>
+        <li>Tổng với lộ trình 1: khoảng 2–3 giờ mỗi tuần cho con</li>
+      </ul>
+    </article>
+    <article class="card">
+      <h3>Công sức của bố mẹ</h3>
+      <ul class="plain">
+        <li>Giữ một giờ học cố định mỗi ngày</li>
+        <li>Hỏi và khen: “Hôm nay con học chuyện gì? Kể lại cho mẹ nhé.”</li>
+        <li>Lớp online: máy có camera, micro. Lớp offline: đưa đón</li>
+        <li>Giữ “3 KHÔNG”: không ép nói, không sửa lỗi, không so sánh</li>
+        <li>Không cần biết tiếng Anh hay tiếng Trung</li>
+      </ul>
+    </article>
+  </div>
+
+  <div class="grid3">
+    <article class="card">
+      <h3>Điều kiện cần đáp ứng</h3>
+      <ul class="plain">
+        <li>Con có tiếng Anh cơ bản để vào Little Seed; xếp lộ trình theo trình độ, không theo tuổi</li>
+        <li>Đi học và làm bài đủ 90% để hưởng cam kết đầu ra</li>
+        <li>Giá nhóm: 6 bạn cùng trình độ, cùng hình thức, cùng lịch khai giảng, hoàn tất học phí trong 7 ngày</li>
+        <li>Giá giới thiệu: gia đình chưa từng học CES, ghi tên người giới thiệu</li>
+      </ul>
+    </article>
+    <article class="card">
+      <h3>Chính sách giảm rủi ro</h3>
+      <ul class="plain">
+        <li>Hoàn 100% nếu báo dừng trước khai giảng từ 7 ngày (90% nếu dưới 7 ngày)</li>
+        <li>Dừng trong 3 buổi đầu: hoàn phần còn lại</li>
+        <li>Không đạt đầu ra: học lại miễn phí</li>
+        <li>Bảo lưu tối đa 6 tháng mỗi lộ trình; học bù hoặc xem bản ghi</li>
+        <li>Nhóm 6 bạn giữ giá dù sau khai giảng có bạn nghỉ</li>
+      </ul>
+    </article>
+    <article class="card">
+      <h3>Bước tiếp theo để bắt đầu</h3>
+      <ol class="q">
+        <li>Chọn online hay tại trung tâm, chọn khung giờ</li>
+        <li>Xác nhận lộ trình theo Báo cáo năng lực 21 ngày</li>
+        <li>Đóng đợt 1 trước khai giảng (một lần hoặc chia 2 đợt)</li>
+        <li>Nhận bộ học liệu; con dùng tiếp phần mềm đang học</li>
+      </ol>
+    </article>
+  </div>
+
+  <article class="card">
+    <h3>Khan hiếm và thời hạn: chỉ dùng khi có thật</h3>
+    <div class="grid2">
+      <div><p class="yes">Được nói</p><ul class="plain"><li>Mỗi lớp tối đa 6 bạn, khung giờ đẹp có hạn</li><li>Giá nhóm cần hoàn tất học phí trong 7 ngày</li><li>Ưu đãi riêng sau thử thách, chỉ khi CES chốt thời hạn bằng văn bản</li></ul></div>
+      <div><p class="no">Không nói</p><ul class="plain"><li>“Chỉ còn hôm nay” khi không có hạn thật</li><li>“Sắp hết chỗ” khi lớp chưa đầy</li><li>So sánh con với bạn khác để thúc giục</li></ul></div>
+    </div>
+  </article>
+
+  <article class="card">
+    <h3>Mẫu “Đề xuất lộ trình 1 trang” gửi phụ huynh</h3>
+    <div class="tpl">
+      <div><h4>Điều anh/chị mong cho bé <span class="note">· Đúng điều tôi cần</span></h4>
+        <p>Bé <span class="slot">[tên]</span>, <span class="slot">[bối cảnh ①]</span>. Anh/chị chia sẻ: <span class="slot">[câu JTBD “Khi… tôi muốn… để…” bằng lời của mẹ]</span>. Anh/chị sẽ thấy đáng khi bé <span class="slot">[⑤]</span>. Mốc sắp tới: <span class="slot">[⑥]</span>.</p></div>
+      <div><h4>Bé đã làm được trong 21 ngày <span class="note">· Tôi tin có thể đạt được</span></h4>
+        <p>Ngày 1: <span class="slot">[…]</span> → Ngày 21: <span class="slot">[…]</span>. Lộ trình đề xuất: <span class="slot">[Lộ trình 1 hoặc 2]</span>, đạt <span class="slot">[chứng chỉ]</span> sau khoảng <span class="slot">[10 hoặc 12]</span> tháng, học với giáo viên lớp tam ngữ, lớp tối đa 6 bạn.</p></div>
+      <div><h4>Đầu tư cho bé <span class="note">· Sự đánh đổi là xứng đáng</span></h4>
+        <p><span class="slot">[mức giá phù hợp]</span>, chia 2 đợt được · khoảng 2–3 giờ mỗi tuần · bố mẹ chỉ cần giữ giờ học, hỏi và khen. Đã gồm bộ quà 8.696.000đ. Gỡ đúng điều anh/chị lo: <span class="slot">[④ + chính sách tương ứng]</span>.</p></div>
+      <div><h4>Bắt đầu thế nào <span class="note">· Tôi biết cách bắt đầu</span></h4>
+        <p>Chọn hình thức và khung giờ → xác nhận lộ trình → đóng đợt 1 trước ngày <span class="slot">[khai giảng]</span>. Trả lời “1” để cô gọi tư vấn 10 phút.</p></div>
+    </div>
+  </article>
+</section>
+
+<section class="wrap" aria-labelledby="h-offer">
+  <h2 id="h-offer">Gỡ rào cản khi tư vấn</h2>
+  <div>
+    <article class="card">
+      <h3>Gỡ rào cản bằng chính sách có sẵn</h3>
+      <dl>
+        <dt>“Học phí cao”</dt><dd>Lộ trình online khoảng 175.000đ/buổi so với 230.000đ giá lẻ; chia 2 đợt; nhóm 6 bạn còn khoảng 150.000đ/buổi.</dd>
+        <dt>“Sợ bé không theo được hai thứ tiếng”</dt><dd>21 ngày vừa rồi là bằng chứng; hoàn phí nếu dừng trong 3 buổi đầu.</dd>
+        <dt>“Bố mẹ không biết ngoại ngữ”</dt><dd>Bài ở nhà có audio mẫu, tự chấm; bố mẹ chỉ cần hỏi và khen.</dd>
+        <dt>“Không có thời gian đưa đón”</dt><dd>Lớp online tối đa 6 bạn; nghỉ thì xem bản ghi.</dd>
+        <dt>“Sợ không hiệu quả”</dt><dd>Không đạt đầu ra thì học lại miễn phí, nếu học và làm bài đủ 90%.</dd>
+        <dt>“Để sang năm”</dt><dd>Nhắc lại mốc ở ô ⑥ của chính gia đình đó.</dd>
+      </dl>
+    </article>
+  </div>
+</section>
+
+<section class="wrap" aria-labelledby="h-ops">
+  <h2 id="h-ops">Nhịp vận hành</h2>
+  <div class="grid3">
+    <article class="card"><h3>Xếp nhóm</h3><p>Thứ Hai và thứ Năm xếp lại nhóm A–E từ trang quản trị. Mẹ nhóm B, C trả lời nhiệt tình thì chuyển lên A.</p></article>
+    <article class="card"><h3>Nhịp hỏi</h3><p>Mỗi gia đình tối đa 1 câu hỏi trong 2 ngày, câu nào cũng kèm một điều về con hoặc một gợi ý.</p></article>
+    <article class="card"><h3>Họp thứ Hai</h3><p>30 phút đọc thẻ mới, chốt 3–5 insight nổi bật và một thay đổi cho tuần tới. Giữ nguyên “3 KHÔNG” ở mọi điểm chạm.</p></article>
+  </div>
+</section>
+
+<script>
+(function(){
+  var map = document.getElementById('map');
+  var btns = document.querySelectorAll('.filter button[data-f]');
+  btns.forEach(function(b){
+    b.addEventListener('click', function(){
+      var f = b.getAttribute('data-f');
+      if (f) map.setAttribute('data-focus', f); else map.removeAttribute('data-focus');
+      btns.forEach(function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+    });
+  });
+  var tasks = document.getElementById('tasks');
+  var rbtns = document.querySelectorAll('.filter button[data-r]');
+  rbtns.forEach(function(b){
+    b.addEventListener('click', function(){
+      var r = b.getAttribute('data-r');
+      if (r) tasks.setAttribute('data-role', r); else tasks.removeAttribute('data-role');
+      rbtns.forEach(function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
