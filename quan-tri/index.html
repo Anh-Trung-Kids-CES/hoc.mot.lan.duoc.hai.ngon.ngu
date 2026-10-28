@@ -137,6 +137,7 @@ nav .n.ht{background:#B8141C}
 .badge.ai-ctv{background:var(--amber-soft);color:var(--amber)}
 .badge.ai-sale{background:var(--red-soft);color:var(--red)}
 .badge.ai-cv{background:var(--ink);color:var(--card)}
+.badge.ai-ql{background:var(--amber-soft);color:var(--amber)}
 .badge.nh{background:var(--soft);color:var(--ink);border:1px solid var(--line)}
 .badge.qh{background:var(--red);color:#fff}
 .bd-frame{display:block;width:100%;height:calc(100vh - 200px);min-height:560px;border:1px solid var(--line);border-radius:var(--r);background:#fff}
@@ -546,7 +547,7 @@ function hopNguoi(x){ const a=FILTER.ai, f=x.f;
   if(a==='(chưa giao)') return !f.nguoiHoTro;
   return f.nguoiHoTro===a; }
 /* Hàng việc theo vai trò (Quản lý, Cố vấn chọn bằng nút cạnh "Chỉ học thử") */
-function hopVai(v, vai){ if(!vai) return true; if(vai==='cv') return v.ai==='cv' || qua24(v); return v.ai===vai; }
+function hopVai(v, vai){ if(!vai) return true; return v.ai===vai; }   // Cố vấn chỉ thấy việc được chỉ định (Xin ý kiến)
 const tatCaViec=()=>{ const out=[]; D.gd.forEach(f=>f.viec.forEach(v=>out.push({v,f}))); return out
   .filter(x=>!FILTER.vht || x.f.hocThu)
   .filter(x=>!D.cap || XEM_HET() || !x.v.ai || x.v.ai===CAP())
@@ -568,7 +569,7 @@ function aiPicker(){ if(!XEM_HET()) return '';
   return `<select class="sm" id="aiSel" aria-label="Lọc theo người phụ trách"><option value="">Cả đội</option>${names.map(n=>o(n,n)).join('')}</select>`; }
 function vaiChips(){ if(!D.cap || !XEM_HET()) return '';
   const all=tatCaViec(), dem=k=>all.filter(x=>hopVai(x.v,k)).length;
-  return `<span class="vai-chips" role="group" aria-label="Chọn hàng việc theo vai trò">${[['','Tất cả'],['ctv','Việc CTV'],['sale','Việc Sale'],['cv','Cần cố vấn']].map(([k,t])=>
+  return `<span class="vai-chips" role="group" aria-label="Chọn hàng việc theo vai trò">${[['','Tất cả'],['ctv','Việc CTV'],['sale','Việc Sale'],['cv','Cần cố vấn'],['ql','Giao người']].map(([k,t])=>
     `<button class="chip ${FILTER.vai===k?'on':''}" type="button" data-vai="${k}" aria-pressed="${FILTER.vai===k}">${t}<span class="c">${dem(k)}</span></button>`).join('')}</span>`; }
 function bindAi(){ const s=$('#aiSel'); if(s) s.onchange=()=>{ FILTER.ai=s.value; render(); }; }
 function lanBadge(f){ if(!['Đang dùng thử','Mời đăng ký'].includes(f.trangThai)) return '';

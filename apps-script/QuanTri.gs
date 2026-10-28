@@ -550,6 +550,19 @@ function qtTheoLan_(x, f, cd, t0) {
   if (x.ten.indexOf('Gọi ') === 0) x.ten = 'Nhắn Zalo' + x.ten.slice(3);
   return x;
 }
+/* Phân luồng việc (28/10/2026):
+ * - Gia đình chưa kích hoạt tài khoản (chưa mở khóa 21 ngày, gồm cả đang học thử): mọi việc về CTV chăm sóc,
+ *   kể cả kiểm tra chuyển khoản và mở khóa. Không sinh việc "giao sale" cho nhóm này, trừ khi CTV đã bấm "Chuyển sale".
+ * - Gia đình đã kích hoạt: mọi việc về Sale.
+ * - Cố vấn chỉ nhận việc khi có người chỉ định ("Xin ý kiến cố vấn"). Việc giao người phụ trách là của Quản lý.
+ * - CTV đã bấm "Chuyển sale": việc liên hệ lại thuộc Sale; "Cố vấn đã trả lời" quay về Sale. */
+function qtPhanLuong_(f) {
+  f.viec = f.viec.filter(x => !(x.loai === 'giao' && !f.moKhoa && !x.dem));
+  f.viec.forEach(x => {
+    x.ai = x.loai === 'xin' ? 'cv' : x.loai === 'giao' ? 'ql'
+      : x.loai === 'chuyen' || x.loai === 'tra_loi' ? 'sale' : f.moKhoa ? 'sale' : 'ctv';
+  });
+}
 function qtViec_(f, cd, now) {
   const st = f.trangThai, lan = f.lan, lh = f.lienHeGanNhat, sa = f.doiTrangThaiLuc, v = [];
   if (f.moKhoa) return v;   // đã đóng phí và đã mở khóa 21 ngày → việc 21 ngày do qtViec21_ sinh
@@ -781,8 +794,7 @@ function qtTaiDuLieu_(s) {
     f.h21 = f.moKhoa ? qtHoc21Gd_(f, h21) : null;
     f._cd = cd; f.nhom = qtNhom_(f, c, now); delete f._cd;
     f.viec = qtViec_(f, cd, now).concat(qtViec21_(f, c, cd, now, capOf));
-    const tuoi = qtTuoi_(f.tuoi);              // ngoài độ tuổi: không đưa vào luồng chốt, việc của sale chuyển cho CTV (trừ việc tiền, hẹn gọi lại)
-    if (tuoi && (tuoi < 5 || tuoi > 10)) f.viec.forEach(x => { if (x.ai === 'sale' && x.loai !== 'mo' && x.loai !== 'goi_lai') x.ai = 'ctv'; });
+    qtPhanLuong_(f);
     return f;
   });
   const gan = 7 * 864e5;
@@ -939,8 +951,8 @@ function qtMoKhoa_(s, code, on) {
   const lock = LockService.getScriptLock(); lock.waitLock(20000);
   try {
     const g = qtTimGd_(s, code), r = g.r, now = new Date();
-    if (qtCap_(s.me.vaiTro) === 'ctv' && !(on && String(r[QT_C['Trạng thái']]) === 'Đang học 21 ngày'))
-      throw new Error('CTV chỉ mở khóa cho gia đình đã ghi nhận đóng phí (trạng thái "Đang học 21 ngày"). Kiểm tra chuyển khoản là việc của sale.');
+    if (qtCap_(s.me.vaiTro) === 'ctv' && !on)   // CTV kiểm tra chuyển khoản và mở khóa; chỉ Sale/Quản lý khóa lại
+      throw new Error('CTV không khóa lại được tài khoản. Nhờ Sale hoặc Quản lý nếu cần khóa.');
     r[QT_C['Mở khóa 21 ngày']] = !!on;
     r[QT_C['Mở khóa lúc']] = on ? now : 'Khóa ' + Utilities.formatDate(now, QT_TZ, 'dd/MM HH:mm') + ' · ' + s.me.ten;
     if (on && qtBuoc_(String(r[QT_C['Trạng thái']])) < qtBuoc_('Đang học 21 ngày')) { r[QT_C['Trạng thái']] = 'Đang học 21 ngày'; r[QT_C['Đổi trạng thái lúc']] = now; }
