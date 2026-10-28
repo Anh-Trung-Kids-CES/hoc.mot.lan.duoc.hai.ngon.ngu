@@ -179,6 +179,16 @@ nav .n.ht{background:#B8141C}
 .vai-chips{display:inline-flex;flex-wrap:wrap;gap:6px;padding-left:10px;border-left:1px solid var(--line)}
 .act.xong{background:var(--green-soft);border-color:var(--green-soft);color:var(--green)}
 .act.chuyen{background:var(--amber-soft);border-color:var(--amber-soft);color:var(--amber)}
+.badge.them{background:var(--ink);color:var(--card)}
+.t-them{list-style:none;margin:8px 0 0;padding:8px 10px;background:var(--soft);border-radius:10px;display:flex;flex-direction:column;gap:6px}
+.t-them li{display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;font-size:14px;padding-left:10px;border-left:3px solid var(--line)}
+.t-them li.p0,.t-them li.p1,.t-them li.p2{border-left-color:var(--red)}
+.t-them li.p3{border-left-color:var(--amber)}
+.t-them li.p4,.t-them li.p6{border-left-color:var(--blue)}
+.t-them .t-them-ten{font-weight:600}
+.t-them .act{min-height:32px;padding:4px 10px;font-size:13px}
+.t-them .hint{margin:0;font-size:12px}
+.dang-ghi ul{margin:4px 0 0;padding-left:18px}
 .dang-ghi{font-size:13px;background:var(--amber-soft);color:var(--amber);border-radius:10px;padding:8px 10px;margin:0 0 10px}
 .vt-row{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 10px}
 .the-ds{display:grid;gap:8px;margin:8px 0 0}
@@ -601,26 +611,43 @@ function tomTat(T){
   return h;
 }
 function rViec(){
-  const T=tasks(), ctv=CAP()==='ctv';
+  const T=tasks(), G=gopViec(T), ctv=CAP()==='ctv';
   $('#main').innerHTML=`
     <div class="summary">${tomTat(T)}</div>
+    ${G.length<T.length?`<p class="hint">${T.length} việc gộp thành ${G.length} thẻ: mỗi bé một thẻ, việc gấp nhất ở trên. Ghi kết quả một lần là đóng cả các việc của bé đó.</p>`:''}
     <div class="bar">${aiPicker()}<button class="chip ${FILTER.vht?'on':''}" id="vht" type="button" aria-pressed="${FILTER.vht}">🎁 Chỉ học thử<span class="c">${D.gd.reduce((a,f)=>a+(f.hocThu?f.viec.length:0),0)}</span></button>${vaiChips()}</div>
     ${FILTER.vai==='ctv'&&XEM_HET()?'<p class="hint">Đây là hàng việc của CTV: nhắn theo tin mẫu, không gọi tư vấn, không nói giá. CTV đăng nhập bằng tài khoản riêng sẽ chỉ thấy hàng này.</p>':''}
     ${ctv?'<p class="hint">Hàng việc CTV: nhắn theo tin mẫu, gửi xong bấm "Đã gửi tin". Ba mẹ hỏi giá, lịch học, muốn học tiếp hoặc phàn nàn: bấm "Chuyển sale" và ghi rõ ba mẹ nói gì.</p>':''}
-    <div class="list">${T.length?T.map(({v,f})=>{ const u=until(v.han);
+    <div class="list">${G.length?G.map(({f,ds})=>{ const v=ds[0], u=until(v.han), them=ds.slice(1), ma=ds.map(x=>x.loai).join(','),
+        gui=ds.filter(x=>x.ai==='ctv'&&x.tin&&x.loai!=='mo').map(x=>x.loai).join(',');
       return `<article class="task p${v.uuTien}">
-        <div class="t-top"><span class="t-name">${esc(v.ten)}</span>${aiBadge(v)}${qua24(v)&&XEM_HET()?'<span class="badge qh">Quá hạn hơn 24 giờ</span>':''}${f.hocThu?'<span class="badge ht">Học thử</span>':''}${nhomBadge(f)}${lanBadge(f)}<span class="t-when ${u.late?'late':''}">${v.dem?(v.demTen||'để lại số')+' '+ago(v.dem)+' · ':''}${u.s}</span></div>
+        <div class="t-top"><span class="t-name">${esc(v.ten)}</span>${them.length?`<span class="badge them" title="Gia đình này còn ${them.length} việc khác, liệt kê bên dưới">+${them.length} việc</span>`:''}${aiBadge(v)}${qua24(v)&&XEM_HET()?'<span class="badge qh">Quá hạn hơn 24 giờ</span>':''}${f.hocThu?'<span class="badge ht">Học thử</span>':''}${nhomBadge(f)}${lanBadge(f)}<span class="t-when ${u.late?'late':''}">${v.dem?(v.demTen||'để lại số')+' '+ago(v.dem)+' · ':''}${u.s}</span></div>
         <p class="t-fam"><button type="button" data-open="${esc(f.code)}">${famLine(f)}</button></p>
         <div class="t-meta">${f.hoc?`Học thử ${f.hoc.soBuoi}/3 buổi · nói ${f.hoc.noi} lần · `:''}${f.h21?`21 ngày: ${f.h21.buoi} buổi, lần cuối ${ago(f.h21.cuoi)} · `:''}${esc(f.trangThai)}${XEM_HET()?` · ${esc(f.nguoiHoTro||'chưa giao')}`:''}${f.lienHeGanNhat?` · liên hệ ${ago(f.lienHeGanNhat)}`:''}</div>
-        <div class="acts">${v.loai==='mo'?`<button class="act ok" type="button" data-mkgo="${esc(f.code)}">✓ Mở khóa 21 ngày</button>`:''}${v.ai==='ctv'&&v.tin&&v.loai!=='mo'?`<button class="act xong" type="button" data-xong="${esc(f.code)}" data-viec="${esc(v.loai)}">✓ Đã gửi tin</button>`:''}${callBtns(f, v.tin, v.loai)}${ctv?`<button class="act chuyen" type="button" data-chuyen="${esc(f.code)}" data-viec="${esc(v.loai)}">↗ Chuyển sale</button>`:''}</div></article>`; }).join('')
+        ${them.length?`<ul class="t-them" aria-label="Việc khác của gia đình này">${them.map(x=>{ const w=until(x.han);
+          return `<li class="p${x.uuTien}"><span class="t-them-ten">${esc(x.ten)}</span>${aiBadge(x)}<span class="t-when ${w.late?'late':''}">${w.s}</span>${x.loai==='mo'&&v.loai!=='mo'?`<button class="act ok" type="button" data-mkgo="${esc(f.code)}">✓ Mở khóa 21 ngày</button>`:''}${x.tin&&x.tin!==v.tin?`<button class="act" type="button" data-tin="${x.tin}" data-code="${esc(f.code)}" data-viec="${esc(ma)}">📋 Tin mẫu</button>`:''}${x.loai==='giao'?'<span class="hint">Chọn Người hỗ trợ ngay trong Ghi kết quả</span>':''}</li>`; }).join('')}</ul>`:''}
+        <div class="acts">${v.loai==='mo'?`<button class="act ok" type="button" data-mkgo="${esc(f.code)}">✓ Mở khóa 21 ngày</button>`:''}${gui?`<button class="act xong" type="button" data-xong="${esc(f.code)}" data-viec="${esc(gui)}">✓ Đã gửi tin</button>`:''}${callBtns(f, v.tin, ma)}${ctv?`<button class="act chuyen" type="button" data-chuyen="${esc(f.code)}" data-viec="${esc(ma)}">↗ Chuyển sale</button>`:''}</div></article>`; }).join('')
       :`<div class="empty"><b>Không còn việc nào 🎉</b>${ctv?'Việc mới của ca sẽ hiện ở đây.':'Gia đình mới để lại Zalo sẽ hiện ở đây.'} Trang tự tải lại mỗi 2 phút.</div>`}</div>`;
   const vh=$('#vht'); if(vh) vh.onclick=()=>{ FILTER.vht=!FILTER.vht; rViec(); };
   document.querySelectorAll('[data-vai]').forEach(b=>b.onclick=()=>{ FILTER.vai=b.dataset.vai; rViec(); });
   bindAi(); bindActs($('#main'));
 }
+/* Gộp việc theo gia đình: mỗi bé một thẻ, việc gấp nhất (đã xếp trước) ở trên, các việc còn lại liệt kê trong thẻ. */
+function gopViec(T){ const G=[], by={}; T.forEach(({v,f})=>{ let g=by[f.code]; if(!g){ g=by[f.code]={f,ds:[]}; G.push(g); } g.ds.push(v); }); return G; }
+/* Việc 21 ngày chỉ đóng khi Nhật ký có dòng ghi đúng mã việc. Các việc khác đóng theo lần liên hệ (chào, nhắc, mời),
+   theo người hỗ trợ (giao), theo ô mở khóa (mo) hoặc theo lượt cố vấn (chuyen, xin, tra_loi): không cần ghi thêm dòng. */
+const DONG_THEO_MA=v=>!!(v&&v.g21)&&!['giao','chuyen','xin','tra_loi','mo'].includes(v.loai);
+/* Sau khi lưu việc chính: ghi thêm một dòng cho mỗi việc 21 ngày còn lại của gia đình để chúng cùng đóng. */
+async function dongThem(f, ds, ketQua, ghiChu){
+  for(const v of ds.filter(DONG_THEO_MA)) D=await api('ghiLienHe',{p:{code:f.code, ketQua, viec:v.loai, ghiChu:('Cùng lần liên hệ'+(ghiChu?' · '+ghiChu:'')).slice(0,500)}});
+}
+const tachMa=s=>String(s||'').split(',').filter(Boolean);
 async function daGui(code, viec, btn){
   btn.disabled=true; btn.textContent='Đang lưu…';
-  try{ D=await api('ghiLienHe',{p:{code, ketQua:'Đã nhắn Zalo', viec, ghiChu:'Đã gửi tin mẫu'}}); toast('Đã ghi: đã gửi tin'); render(); }
+  const f=fam(code), ma=tachMa(viec), ds=f?ma.map(m=>f.viec.find(v=>v.loai===m)).filter(Boolean):[];
+  try{ D=await api('ghiLienHe',{p:{code, ketQua:'Đã nhắn Zalo', viec:ma[0], ghiChu:'Đã gửi tin mẫu'}});
+    if(f) await dongThem(f, ds.slice(1), 'Đã nhắn Zalo', 'Đã gửi tin mẫu');
+    toast('Đã ghi: đã gửi tin'); render(); }
   catch(e){ btn.disabled=false; btn.textContent='✓ Đã gửi tin'; if(!e.silent) toast(e.message); }
 }
 
@@ -1062,7 +1089,7 @@ function theBox(f){
   return `<div class="box"><h3>Thẻ kết quả mong muốn · ${du}/6 ô</h3>
     <p class="hint" style="margin:0 0 6px">Tự điền khi làm nhiệm vụ (chào mừng, gọi khảo sát, thư giữa chặng, Chốt 3). Mở ra để xem toàn bộ hoặc sửa.</p>
     <div class="the-tien" aria-hidden="true">${[1,2,3,4,5,6].map(i=>`<i class="${du>=i?'on':''}"></i>`).join('')}</div>
-    <details ${THE_MO.includes(CUR.viec)?'open':''}><summary style="cursor:pointer;margin-top:8px;font-weight:600">${du?'Xem và sửa thẻ':'Mở thẻ'}</summary>
+    <details ${tachMa(CUR.viec).some(m=>THE_MO.includes(m))?'open':''}><summary style="cursor:pointer;margin-top:8px;font-weight:600">${du?'Xem và sửa thẻ':'Mở thẻ'}</summary>
     <form class="log" id="theF" novalidate><div class="the-ds">
       <p class="hint" style="margin:0">Ghi nguyên văn lời ba mẹ, không ghi suy đoán của mình.${cap==='ctv'?' CTV ghi ô ① và ④; các ô khác do sale điền sau cuộc gọi.':''}</p>
       ${cap!=='ctv'?`<label>Nhóm<select id="theNhom"><option value="">Tự xếp theo dữ liệu (đang là ${esc(f.nhom||'?')})</option>${['A','B','C','D','E'].map(n=>`<option value="${n}" ${t.nhom===n?'selected':''}>${n} · ${NHOM_TEN[n]}</option>`).join('')}</select></label>`:''}
@@ -1276,7 +1303,7 @@ let CUR={viec:'', kq:''};
 function openFam(code, keep, opt){
   locViec(); const f=fam(code); if(!f) return; if(!keep||opt) CUR={viec:(opt&&opt.viec)||'', kq:(opt&&opt.kq)||''};
   OPEN=code; if(!keep) api('ghiMoHoSo',{code}).catch(()=>{});
-  const host=$('#sheetHost'), h=f.hoc, cap=CAP(), vCur=f.viec.find(v=>v.loai===CUR.viec);
+  const host=$('#sheetHost'), h=f.hoc, cap=CAP(), dsCur=tachMa(CUR.viec).map(m=>f.viec.find(v=>v.loai===m)).filter(Boolean), vCur=dsCur[0];
   host.innerHTML=`<div class="sheet" role="dialog" aria-modal="true" aria-labelledby="pTitle"><div class="panel">
     <div class="p-hd"><h2 id="pTitle">${esc(f.phuHuynh||'(chưa có tên)')} – bé ${esc(f.tenCon)}<small>${esc(f.code)} · ${esc(f.trangThai)} ${nhomBadge(f)} ${lanBadge(f)}</small></h2><button class="x" type="button" aria-label="Đóng">✕</button></div>
     <div class="acts">${callBtns(f, f.viec[0]&&f.viec[0].tin)}</div>
@@ -1314,7 +1341,7 @@ function openFam(code, keep, opt){
     </form></div>
     ${D.cap?theBox(f):''}
     <div class="box"><h3>Ghi kết quả liên hệ</h3><form class="log" id="logF" novalidate>
-      ${vCur?`<p class="dang-ghi">Đang ghi kết quả cho việc: <b>${esc(vCur.ten)}</b>. Lưu xong việc này tự đóng.</p>`:''}
+      ${dsCur.length>1?`<div class="dang-ghi">Đang ghi kết quả cho ${dsCur.length} việc của bé:<ul>${dsCur.map(x=>`<li><b>${esc(x.ten)}</b>${x.loai==='giao'?' · chọn Người hỗ trợ bên dưới':x.loai==='mo'?' · tick ô Mở khóa 21 ngày':''}</li>`).join('')}</ul>Chọn kết quả liên hệ rồi Lưu một lần là các việc cùng đóng.</div>`:vCur?`<p class="dang-ghi">Đang ghi kết quả cho việc: <b>${esc(vCur.ten)}</b>. Lưu xong việc này tự đóng.</p>`:''}
       ${D.cap?`<div class="vt-row">${cap==='ctv'?'<button class="act chuyen" type="button" data-kq="Chuyển sale">↗ Chuyển sale</button>':''}${cap==='sale'||cap==='ql'?'<button class="act" type="button" data-kq="Xin ý kiến cố vấn">🙋 Xin ý kiến cố vấn</button>':''}${cap==='cv'||cap==='ql'?'<button class="act" type="button" data-kq="Cố vấn trả lời">✓ Cố vấn trả lời</button>':''}</div>`:''}
       <label>Kết quả<select id="kq"><option value="">(chỉ đổi trạng thái / ghi chú)</option>${D.ketQua.map(k=>`<option ${k===CUR.kq?'selected':''}>${esc(k)}</option>`).join('')}</select></label>
       <label>Ghi chú<textarea id="gc" maxlength="500" placeholder="Con thích phần nào, ba mẹ băn khoăn gì, đã gửi tin gì…"></textarea></label>
@@ -1364,11 +1391,12 @@ async function save(f){
   if(!p.ketQua && !p.ghiChu && !p.trangThai && !p.henGoiLai && !p.khoa && p.nguoiHoTro==null) return say('Chọn kết quả, ghi chú hoặc đổi trạng thái trước khi lưu.');
   if(p.ketQua==='Hẹn gọi lại' && !p.henGoiLai) return say('Chọn giờ hẹn gọi lại.');
   if(['Chuyển sale','Xin ý kiến cố vấn','Cố vấn trả lời'].includes(p.ketQua) && !p.ghiChu) return say('Ghi rõ nội dung khi chọn "'+p.ketQua+'".');
-  if(CUR.viec && f.viec.some(v=>v.loai===CUR.viec)) p.viec=CUR.viec;
+  const dsLuu=tachMa(CUR.viec).map(m=>f.viec.find(v=>v.loai===m)).filter(Boolean); if(dsLuu.length) p.viec=dsLuu[0].loai;
   if(CAP()==='ctv'){ p.trangThai=''; p.khoa=''; }
   if(['Dừng','Nuôi dưỡng'].includes(p.trangThai) && !p.lyDo) return say('Chọn lý do khi chuyển sang '+p.trangThai+'.');
   const b=g('#sv'); b.disabled=true; b.textContent='Đang lưu…';
-  try{ D=await api('ghiLienHe',{p}); toast('Đã lưu'); CUR={viec:'',kq:''}; closeFam(); render(); }
+  try{ D=await api('ghiLienHe',{p}); if(p.ketQua) await dongThem(f, dsLuu.slice(1), p.ketQua, p.ghiChu);
+    toast('Đã lưu'); CUR={viec:'',kq:''}; closeFam(); render(); }
   catch(e){ b.disabled=false; b.textContent='Lưu'; if(!e.silent) say(e.message); }
 }
 
