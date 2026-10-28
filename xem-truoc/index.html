@@ -1282,6 +1282,31 @@ function gamePool(g,i){
   return pool;
 }
 
+/* ---------- đăng nhập chỉ cần SĐT/Gmail: máy chủ trả tên các con của số này ---------- */
+async function timCon(acct){
+  if(!SCORE_API) return null;
+  try{ const pv=await (await fetch(SCORE_API+'?action=ping&t='+Date.now())).json(); if(!pv || !(pv.v>=12)) return null; }catch(e){ return null; }   // máy chủ cũ chưa có tìm theo số: hỏi thêm tên như trước
+  try{ const r=await fetch(SCORE_API,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({action:'kids', phone:acct})});
+    const j=await r.json(); return j && j.ok && Array.isArray(j.kids) ? j.kids : null; }catch(e){ return null; }
+}
+/* Trả về tên con khi đã biết; trả '' khi đang chờ ba mẹ chọn bé hoặc nhập tên (form tự hiện phần đó) */
+async function tenTheoSo(ov, acct, nameSel, boxSel, form){
+  const nameIn=ov.querySelector(nameSel), box=ov.querySelector(boxSel);
+  if(!nameIn.closest('.pf-ten').hidden){ const v=nameIn.value.trim(); if(!v){ box.innerHTML='<p class="hint small">Ba mẹ nhập tên của con nhé.</p>'; nameIn.focus(); } return v; }
+  const kids=await timCon(acct);
+  if(kids && kids.length===1) return kids[0].name;
+  const moTen=msg=>{ box.innerHTML=msg?`<p class="hint small">${msg}</p>`:''; nameIn.closest('.pf-ten').hidden=false; nameIn.focus(); };
+  if(kids && kids.length>1){
+    box.innerHTML='<p class="hint"><b>Con nào đang học?</b></p><div class="row pf-chon">'+kids.map((k,i)=>`<button class="btn" type="button" data-i="${i}">${esc(k.name)}</button>`).join('')+'<button class="btn y" type="button" data-i="-1">Bé khác</button></div>';
+    box.querySelectorAll('button').forEach(b=>b.onclick=()=>{ const i=+b.dataset.i;
+      if(i<0) return moTen('Ba mẹ nhập tên bé mới nhé.');
+      box.innerHTML=''; nameIn.value=kids[i].name; nameIn.closest('.pf-ten').hidden=false; form.requestSubmit(); });
+    return '';
+  }
+  moTen(kids ? 'Số này chưa có hồ sơ học. Ba mẹ nhập tên con để bắt đầu nhé.' : 'Ba mẹ nhập thêm tên con nhé.');
+  return '';
+}
+
 /* ---------- hồ sơ: hỏi tên bé ---------- */
 function askProfile(g, then){
   if(TEACHER && !KID){ KID={name:'Giáo viên', code:'0000', group:g, temp:true}; updateStars(); then&&then(); return; }   // chế độ giáo viên: xem không cần nhập tên
@@ -1291,23 +1316,26 @@ function askProfile(g, then){
   ov.innerHTML=`<form class="modal" id="pf" novalidate>
     <div class="mart"><img class="mportrait cut" src="tai-nguyen/nhan-vat/kids_bong_a.webp" alt=""></div>
     <h3>Đăng nhập nhà thám hiểm</h3>
-    <p class="hint">Không cần mật khẩu. Lần sau, kể cả trên máy khác, bố mẹ nhập lại đúng tên con và số điện thoại (hoặc Gmail) này là con học tiếp, không mất sao và lộ trình.</p>
-    <label for="kname">Tên của con</label>
-    <input id="kname" required maxlength="24" autocomplete="off" placeholder="Ví dụ: Bông, Minh An" value="${esc(KID&&!KID.temp&&KID.name||'')}">
+    <p class="hint">Không cần mật khẩu. Lần sau, kể cả trên máy khác, bố mẹ chỉ cần nhập lại số điện thoại (hoặc Gmail) này là con học tiếp, không mất sao và lộ trình.</p>
     <label for="kacct">Số điện thoại hoặc Gmail của bố/mẹ</label>
     <input id="kacct" required autocomplete="tel email" inputmode="email" placeholder="Ví dụ: 0912 345 678 hoặc me.bong@gmail.com" value="">
+    <div id="kchon"></div>
+    <div class="pf-ten" hidden><label for="kname">Tên của con</label>
+    <input id="kname" maxlength="24" autocomplete="off" placeholder="Ví dụ: Bông, Minh An" value=""></div>
     <p class="hint small">Chỉ dùng để giữ tiến độ học của con, không hiển thị công khai. Bảng Xếp hạng của khoá chỉ hiện tên con và số sao.</p>
     <p class="pf-err" id="pferr" hidden></p>
     <div class="row"><button class="btn" type="submit" id="pfgo">Lên đường! 🚀</button></div>
   </form>`;
   document.body.appendChild(ov);
-  ov.querySelector('#kname').focus();
+  ov.querySelector('#kacct').focus();
   ov.querySelector('#pf').addEventListener('submit',async e=>{
     e.preventDefault();
-    const name=ov.querySelector('#kname').value.trim(), acct=normAcct(ov.querySelector('#kacct').value), err=ov.querySelector('#pferr');
-    if(!name){ err.hidden=false; err.textContent='Bố mẹ nhập tên của con nhé.'; return; }
+    const acct=normAcct(ov.querySelector('#kacct').value), err=ov.querySelector('#pferr'); err.hidden=true;
     if(!acct){ err.hidden=false; err.textContent='Số điện thoại (10 số) hoặc Gmail chưa đúng, bố mẹ kiểm tra lại nhé.'; return; }
-    const btn=ov.querySelector('#pfgo'); btn.disabled=true; btn.textContent='Đang mở hồ sơ…';
+    const btn=ov.querySelector('#pfgo'); btn.disabled=true; btn.textContent='Đang tìm hồ sơ…';
+    const name=await tenTheoSo(ov, acct, '#kname', '#kchon', ov.querySelector('#pf'));
+    if(!name){ btn.disabled=false; btn.textContent='Lên đường! 🚀'; return; }
+    btn.textContent='Đang mở hồ sơ…';
     const id=await hashStr(acct+'|'+slugName(name));
     if(!TEACHER){
       const kq=await moKhoaHoi(acct, name);
@@ -1329,7 +1357,7 @@ function askProfile(g, then){
 function logout(){
   if(KID && KID.id){ lsSet('lle-prog-'+KID.id, P); syncPush(); }
   KID=null; try{ localStorage.removeItem(KID_KEY); }catch(e){} P={}; lsSet(progKey(),P); updateStars();
-  toast('Đã đăng xuất. Lần sau nhập lại tên con và SĐT/Gmail là học tiếp.'); location.hash='#/'; route();
+  toast('Đã đăng xuất. Lần sau chỉ cần nhập lại SĐT/Gmail là học tiếp.'); location.hash='#/'; route();
 }
 
 /* ---------- MÀN HÌNH 1: chọn nhóm ---------- */
@@ -2269,11 +2297,12 @@ function moKhoaDangNhap(g, then){
   ov.innerHTML=`<form class="modal" id="mkf" novalidate>
     <div class="mart"><img class="mportrait cut" src="tai-nguyen/nhan-vat/kids_bong_a.webp" alt=""></div>
     <h3>Đăng nhập · Mở hành trình 21 ngày</h3>
-    <p class="hint">Ba mẹ nhập tên con và <b>số điện thoại (hoặc Gmail) đã đăng ký</b>. Lần sau, kể cả trên máy khác, nhập lại đúng tên và số này là con học tiếp.</p>
-    <label for="mkName">Tên của con</label>
-    <input id="mkName" maxlength="24" autocomplete="off" placeholder="Ví dụ: Bông, Minh An" value="${esc(KID&&!KID.temp&&KID.name||'')}">
+    <p class="hint">Ba mẹ chỉ cần nhập <b>số điện thoại (hoặc Gmail) đã đăng ký</b>. Lần sau, kể cả trên máy khác, nhập lại số này là con học tiếp.</p>
     <label for="mkAcct">Số điện thoại hoặc Gmail đã đăng ký</label>
     <input id="mkAcct" autocomplete="tel email" inputmode="email" placeholder="Ví dụ: 0912 345 678" value="">
+    <div id="mkChon"></div>
+    <div class="pf-ten" hidden><label for="mkName">Tên của con</label>
+    <input id="mkName" maxlength="24" autocomplete="off" placeholder="Ví dụ: Bông, Minh An" value="${esc(KID&&!KID.temp&&KID.name||'')}"></div>
     <p class="pf-err" id="mkErr" hidden></p>
     <div class="row"><button class="btn" type="submit" id="mkOk">Mở 21 ngày 🚀</button><button class="btn y" type="button" id="mkBack">Học thử 3 buổi</button></div>
   </form>`;
@@ -2282,18 +2311,19 @@ function moKhoaDangNhap(g, then){
   $('#mkBack').onclick=()=>{ ov.remove(); if(!KID) askProfile(g||'seed', then); };
   $('#mkf').addEventListener('submit', async e=>{
     e.preventDefault();
-    const name=$('#mkName').value.trim(), acct=normAcct($('#mkAcct').value);
-    const say=h=>{ err.hidden=false; err.innerHTML=h; };
-    if(!name) return say('Ba mẹ nhập tên của con nhé.');
+    const acct=normAcct($('#mkAcct').value);
+    const say=h=>{ err.hidden=false; err.innerHTML=h; }; err.hidden=true;
     if(!acct) return say('Số điện thoại (10 số) hoặc Gmail chưa đúng, ba mẹ kiểm tra lại nhé.');
     const b=$('#mkOk'); b.disabled=true; b.textContent='Đang kiểm tra…';
+    const name=await tenTheoSo(ov, acct, '#mkName', '#mkChon', $('#mkf'));
+    if(!name){ b.disabled=false; b.textContent='Mở 21 ngày 🚀'; return; }
     const kq=await moKhoaHoi(acct, name);
     b.disabled=false; b.textContent='Mở 21 ngày 🚀';
     if(!kq) return say('Chưa kết nối được. Ba mẹ kiểm tra mạng rồi bấm lại nhé.');
     if(!kq.ok) return say(`Số này chưa được mở khóa 21 ngày. Đội CES mở khóa trong ngày sau khi nhận phí; ba mẹ kiểm tra lại số đã đăng ký hoặc nhắn <a href="${ZALO_LINK}" target="_blank" rel="noopener">nhóm Zalo</a>. Trong lúc chờ, con vẫn học được 3 buổi đầu.`);
     ov.remove(); moKhoaChuyen(name, acct, g||(KID&&KID.group));
   });
-  setTimeout(()=>{ try{ $('#mkName').value? $('#mkAcct').focus() : $('#mkName').focus(); }catch(e){} },200);
+  setTimeout(()=>{ try{ $('#mkAcct').focus(); }catch(e){} },200);
 }
 /* Mỗi lần mở web: hỏi lại máy chủ.
    – Bản học thử: số Zalo ba mẹ để lại đã được mở khóa → tự chuyển sang 21 ngày.

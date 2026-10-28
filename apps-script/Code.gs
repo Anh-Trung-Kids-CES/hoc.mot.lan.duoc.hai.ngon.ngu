@@ -56,6 +56,7 @@ function doPost(e) {
   if (e && e.parameter && e.parameter.ho_ten_phu_huynh !== undefined) return json_(dangKy_(e.parameter));
   let d0 = {}; try { d0 = JSON.parse(e.postData.contents || '{}'); } catch (err) { return json_({ ok: false }); }
   if (d0.action === 'qt') return json_(quanTri_(d0));             // trang quản trị (tệp QuanTri.gs), tự khóa khi cần
+  if (d0.action === 'kids') return json_(kids_(d0));               // đăng nhập chỉ bằng SĐT/Gmail: tìm tên các con của số này (chỉ đọc)
   const lock = LockService.getScriptLock(); lock.waitLock(10000);
   try {
     const d = d0;
@@ -98,7 +99,7 @@ function doPost(e) {
 
 function doGet(e) {
   const p = e.parameter || {};
-  if (p.action === 'ping') return json_({ ok: true, v: 11 });          // v11: phân luồng CTV (chưa kích hoạt) / Sale (đã kích hoạt) / Cố vấn (chỉ định) · v3: Bảng Gia đình · v4: mở khóa 21 ngày · v5: trang quản trị có tài khoản · v7: Xếp hạng · v8: việc theo vai trò CTV/Sale/Cố vấn · v9: offer trong Thẻ gia đình · v10: nhiệm vụ theo bản đồ
+  if (p.action === 'ping') return json_({ ok: true, v: 12 });          // v12: đăng nhập chỉ cần SĐT (action kids) · v11: phân luồng CTV (chưa kích hoạt) / Sale (đã kích hoạt) / Cố vấn (chỉ định) · v3: Bảng Gia đình · v4: mở khóa 21 ngày · v5: trang quản trị có tài khoản · v7: Xếp hạng · v8: việc theo vai trò CTV/Sale/Cố vấn · v9: offer trong Thẻ gia đình · v10: nhiệm vụ theo bản đồ
   if (p.action === 'xephang') return json_(xepHang_(p));
   if (p.action === 'access') return json_(access_(p));
   if (p.action === 'visit') return visit_(p);
@@ -356,6 +357,32 @@ function bangMoKhoa_() {
   const out = { gd: gd, paid: paid, cu: cu };
   try { cache.put('mo-khoa-v1', JSON.stringify(out), 60); } catch (e) { }
   return out;
+}
+/* ---------- Đăng nhập chỉ bằng SĐT/Gmail ----------
+ * Web gửi POST {action:'kids', phone} và nhận về tên các con gắn với số này, để ba mẹ không phải gõ lại đúng tên.
+ * Nguồn: tab TienDo (bé đã học: so mã bé = băm(số|tên) nên chắc chắn đúng số) và tab Gia đình (cột Tên con).
+ * Chỉ trả tên con và nhóm học, không trả gì khác. */
+function slugTen_(s) {
+  return String(s || '').trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').replace(/[^a-z0-9]+/g, '-');
+}
+function maskSo_(a) { return a.indexOf('@') > 0 ? a.slice(0, 2) + '***@' + a.split('@')[1] : '***' + a.slice(-4); }
+function kids_(d) {
+  const phone = normPhone_(d.phone); if (!phone) return { ok: false };
+  const ss = ss_(), out = {}, mask = maskSo_(phone);
+  const td = ss.getSheetByName('TienDo');
+  if (td && td.getLastRow() > 1) td.getRange(2, 1, td.getLastRow() - 1, 4).getValues().forEach(r => {
+    const name = String(r[1] || '').trim(); if (!name || String(r[2]) !== mask) return;
+    const k = slugTen_(name); if (String(r[0]) !== hashAcct_(phone + '|' + k)) return;
+    out[k] = { name: name, group: String(r[3] || ''), hoc: true };
+  });
+  const gd = ss.getSheetByName('Gia đình');
+  if (gd && gd.getLastRow() > 1) gd.getRange(2, 1, gd.getLastRow() - 1, 10).getValues().forEach(r => {
+    if (normPhone_(r[6]) !== phone) return;
+    String(r[7] || '').split(/[,;\n]+/).map(x => x.trim()).filter(Boolean).forEach(name => {
+      const k = slugTen_(name); if (k && !out[k]) out[k] = { name: name, group: String(r[9] || ''), hoc: false };
+    });
+  });
+  return { ok: true, kids: Object.values(out).slice(0, 6) };
 }
 function access_(p) {
   const h = String(p.p || '').toLowerCase().replace(/[^0-9a-f]/g, '').slice(0, 16), id = String(p.id || '').slice(0, 40);
