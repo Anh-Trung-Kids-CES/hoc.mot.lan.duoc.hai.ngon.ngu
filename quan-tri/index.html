@@ -374,6 +374,26 @@ td.l,th.l{text-align:left}
 @media (max-width:760px){ .grid2{grid-template-columns:1fr} }
 @media (max-width:560px){ .two{grid-template-columns:1fr} .cv{height:230px} .cv.tall{height:300px} .stat b{font-size:22px} }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* Gọi sau 3 buổi */
+.g3row{display:grid;grid-template-columns:1fr 96px 96px;align-items:stretch;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.g3main{padding:12px 14px;min-width:0}
+.g3top{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px}
+.g3top .lnk{border:0;background:none;padding:0;font:inherit;font-weight:700;color:var(--ink);text-align:left;cursor:pointer;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+.g3sub{font-size:13px;color:var(--muted);margin-top:4px}
+.g3khen{font-size:14px;margin-top:6px}
+.g3dot{width:9px;height:9px;border-radius:50%;display:inline-block;flex:none;background:var(--axis)}
+.g3dot.p1{background:var(--red)} .g3dot.p2{background:var(--amber)} .g3dot.p4{background:var(--green)}
+.mk.zoom input{accent-color:var(--blue)} .mk.zoom.on{background:var(--blue-soft);color:var(--blue)}
+.g3ct{margin-top:8px} .g3ct>summary{cursor:pointer;font-weight:600;font-size:14px;min-height:32px;display:flex;align-items:center}
+.g3h{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:8px;margin-top:6px}
+.g3h>div{border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--bg)}
+.g3h h4{margin:0 0 6px;font-size:14px}
+.g3h dl{display:grid;grid-template-columns:auto 1fr;gap:4px 10px;margin:0;font-size:13px}
+.g3h dt{color:var(--muted)} .g3h dd{margin:0;font-variant-numeric:tabular-nums}
+.g3h .hint{font-size:12px}
+.g3hoi{margin:8px 0 0;padding-left:18px;font-size:14px}
+@media (max-width:560px){ .g3row{grid-template-columns:1fr 72px 72px} }
 </style>
 </head>
 <body>
@@ -395,6 +415,7 @@ td.l,th.l{text-align:left}
   </div>
   <nav id="tabs" aria-label="Màn hình">
     <button type="button" data-t="viec" class="on">Việc hôm nay <span class="n" id="nViec">0</span></button>
+    <button type="button" data-t="g3">Gọi 3 buổi <span class="n" id="nG3">0</span></button>
     <button type="button" data-t="ht">Học thử <span class="n ht" id="nHt">0</span></button>
     <button type="button" data-t="gd">Gia đình</button>
     <button type="button" data-t="st">Sổ tay</button>
@@ -560,8 +581,9 @@ function render(){
   document.querySelectorAll('#tabs button').forEach(b=>{ b.classList.toggle('on',b.dataset.t===TAB); b.setAttribute('aria-current',b.dataset.t===TAB?'page':'false'); });
   $('#nViec').textContent=D.gd.reduce((a,f)=>a+f.viec.length,0);
   $('#nHt').textContent=D.gd.filter(f=>f.hocThu).length;
+  $('#nG3').textContent=D.gd.filter(f=>f.moKhoa&&f.bc3&&!(f.g3&&f.g3.goi)).length;
   Object.values(CH).forEach(c=>c.destroy()); CH={};
-  if(TAB==='viec') rViec(); else if(TAB==='ht') rHt(); else if(TAB==='gd') rGd(); else if(TAB==='st') rSt(); else if(TAB==='bd') rBd(); else if(TAB==='bc') rBc(); else rTk();
+  if(TAB==='viec') rViec(); else if(TAB==='g3') rG3(); else if(TAB==='ht') rHt(); else if(TAB==='gd') rGd(); else if(TAB==='st') rSt(); else if(TAB==='bd') rBd(); else if(TAB==='bc') rBc(); else rTk();
 }
 function aiPicker(){ if(!XEM_HET()) return '';
   const names=[...new Set(D.gd.map(f=>f.nguoiHoTro||'(chưa giao)'))].sort();
@@ -652,6 +674,64 @@ async function daGui(code, viec, btn){
   catch(e){ btn.disabled=false; btn.textContent='✓ Đã gửi tin'; if(!e.silent) toast(e.message); }
 }
 
+
+/* ---------- Gọi sau 3 buổi: báo cáo học tập từng con + ô tích Đã gọi / Đồng ý Zoom (tab "Gọi sau 3 buổi" của Sheet) ---------- */
+const G3_TT=['Chưa vào web','Đã đăng nhập, chưa học','Cần kéo nhịp','Đang làm quen','Học đều','Học vượt'];
+const G3F={tt:'', goi:'', q:''}, G3_MO=new Set();
+function g3Hop(f){ const g=f.g3||{}; return !G3F.goi || (G3F.goi==='chua'?!g.goi:G3F.goi==='da'?!!g.goi:G3F.goi==='zoom'?!!g.zoom:!g.zoom); }
+function g3Box(ten, rows, note){ return `<div><h4>${esc(ten)}</h4><dl>${rows.map(([k,v])=>`<dt>${esc(k)}</dt><dd>${esc(v==null?'—':v)}</dd>`).join('')}</dl>${note?`<p class="hint">${esc(note)}</p>`:''}</div>`; }
+function rG3(){
+  const all=D.gd.filter(f=>f.moKhoa);
+  if(all.length && !all.some(f=>f.bc3)){ $('#main').innerHTML=`<div class="empty"><b>Máy chủ chưa có mục này</b>Cần cập nhật máy chủ Apps Script lên bản có "Gọi sau 3 buổi" (ping v12).</div>`; return; }
+  const q=G3F.q.trim().toLowerCase();
+  const base=all.filter(f=>f.bc3 && (!FILTER.ai || (FILTER.ai==='(chưa giao)'?!f.nguoiHoTro:f.nguoiHoTro===FILTER.ai))
+    && (!q || [f.phuHuynh,f.tenCon,f.zalo,f.code].join(' ').toLowerCase().includes(q)));
+  const L=base.filter(f=>(!G3F.tt||f.bc3.trangThai===G3F.tt) && g3Hop(f))
+    .sort((a,b)=>(!!a.g3.goi-!!b.g3.goi) || a.bc3.uuTien-b.bc3.uuTien || String(a.tenCon).localeCompare(String(b.tenCon),'vi'));
+  const daGoi=base.filter(f=>f.g3.goi).length, zoom=base.filter(f=>f.g3.zoom).length, can=base.filter(f=>f.bc3.uuTien<=2&&!f.g3.goi).length;
+  const nq=base.length?base[0].bc3.ngayQua:0, dem=t=>base.filter(f=>f.bc3.trangThai===t).length;
+  const goiOpt=[['','Mọi cuộc gọi',base.length],['chua','Chưa gọi',base.length-daGoi],['da','Đã gọi',daGoi],['zoom','Đồng ý Zoom',zoom],['chuazoom','Chưa xác nhận Zoom',base.length-zoom]];
+  $('#main').innerHTML=`
+    <div class="summary">${oSo(`${daGoi} / ${base.length}`,'con đã gọi')}${oSo(`${zoom} / ${base.length}`,'đồng ý tham gia Zoom')}${oSo(can,'chưa gọi mà cần gọi trước',can>0)}</div>
+    <p class="hint">Các con đã mở khóa 21 ngày. Số liệu web học tính ${nq} ngày đã qua từ khai mạc. Gọi xong thì tích <b>Đã gọi</b>; ba mẹ xác nhận cho con vào Zoom cuối tuần thì tích <b>Đồng ý Zoom</b>. Mỗi lần tích được ghi vào Nhật ký cuộc gọi.</p>
+    <div class="bar"><input class="search" id="g3q" type="search" placeholder="Tìm tên ba mẹ, tên con, SĐT" value="${esc(G3F.q)}" aria-label="Tìm gia đình">${aiPicker()}</div>
+    <div class="bar" role="group" aria-label="Lọc theo tình hình học">
+      <button class="chip ${!G3F.tt?'on':''}" type="button" data-g3tt="">Tất cả<span class="c">${base.length}</span></button>
+      ${G3_TT.filter(dem).map(t=>`<button class="chip ${G3F.tt===t?'on':''}" type="button" data-g3tt="${esc(t)}">${esc(t)}<span class="c">${dem(t)}</span></button>`).join('')}</div>
+    <div class="bar" role="group" aria-label="Lọc theo cuộc gọi">
+      ${goiOpt.map(([k,t,n])=>`<button class="chip ${G3F.goi===k?'on':''}" type="button" data-g3goi="${k}">${esc(t)}<span class="c">${n}</span></button>`).join('')}</div>
+    <div class="list">${L.length?L.map(f=>{ const b=f.bc3, g=f.g3||{}, nv=f.nv&&f.nv.goi_3b;
+      return `<div class="g3row"><div class="g3main">
+        <div class="g3top"><span class="g3dot p${b.uuTien}" aria-hidden="true"></span><b>${esc(b.trangThai)}</b><button class="lnk" type="button" data-open="${esc(f.code)}" data-viec="goi_3b">${famLine(f)}</button>${nhomBadge(f)}</div>
+        <div class="g3sub">Học ${b.ngayHoc}/${nq} ngày · ${b.bai} bài xong · nói ${b.noi} lượt · ${esc(f.zalo||'chưa có số')}${XEM_HET()?` · ${esc(f.nguoiHoTro||'chưa giao')}`:''}${g.goi?` · đã gọi ${fmt(g.goiLuc)} (${esc(g.goiAi)})`:nv?` · đã ghi kết quả ${fmt(nv.t)} (${esc(nv.ai)})`:''}${g.zoom?` · Zoom: ${esc(g.zoomAi)} ghi ${fmt(g.zoomLuc)}`:''}</div>
+        <p class="g3khen"><b>Khen:</b> ${esc(b.khen)}</p>
+        <div class="acts">${callBtns(f,'goi_3b','goi_3b')}</div>
+        <details class="g3ct" data-g3ct="${esc(f.code)}" ${G3_MO.has(f.code)?'open':''}><summary>Chi tiết theo 4H và câu hỏi thêm</summary>
+          <div class="g3h">
+            ${g3Box('H1 – Thái độ học tập',[['Ngày học',b.ngayHoc+' / '+nq],['Ngày chưa học',b.chuaHoc],['Học gần nhất',b.cuoi],['Bài Little Seed xong',b.seed],['Bài Canopy xong',b.canopy],['Câu Canopy đã làm',b.canopyCau],['Đang học',b.khoaHoc]],'Con tự đòi học hay mẹ phải nhắc thì hỏi ba mẹ.')}
+            ${g3Box('H2 – Cảm xúc khi học',[['Nhân vật con chọn',b.nhanVat],['Thú cưng',b.thuCung],['Quái vật',b.quaiVat],['Sao đã đổi quà',b.saoDoi],['Điểm đã nhận',b.diem]],'Mở lời: "Con thích bạn nào nhất ạ?"')}
+            ${g3Box('H3 – Tương tác với mẹ',[['Clip ba mẹ đã gửi',b.clip],['Huy hiệu',b.huyHieu]],'Con có rủ mẹ chơi, kể lại cho mẹ không thì hỏi ba mẹ.')}
+            ${g3Box('H4 – Mang ngôn ngữ về nhà',[['Lượt nói với micro',b.noi],['Lượt theo bước (bài Seed đã xong)',b.buoc],['Số tài khoản học',b.taiKhoan]],'Bài Canopy chưa ghi lượt nói. Con tự nói ở nhà thì xin ba mẹ một ví dụ cụ thể.')}
+          </div>
+          <ul class="g3hoi">${(b.hoi||[]).map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
+        </details></div>
+        <label class="mk ${g.goi?'on':''}" title="Tích khi đã gọi hỏi thăm sau 3 buổi"><input type="checkbox" data-g3="goi" data-code="${esc(f.code)}" ${g.goi?'checked':''}><span>${g.goi?'Đã gọi':'Chưa gọi'}</span></label>
+        <label class="mk zoom ${g.zoom?'on':''}" title="Tích khi ba mẹ đồng ý cho con tham gia Zoom cuối tuần"><input type="checkbox" data-g3="zoom" data-code="${esc(f.code)}" ${g.zoom?'checked':''}><span>${g.zoom?'Đồng ý Zoom':'Zoom?'}</span></label>
+      </div>`; }).join('')
+      :`<div class="empty"><b>Không có con nào ở đây</b>${XEM_HET()?'Đổi bộ lọc để xem các con khác.':'Gia đình được giao cho bạn đã mở khóa 21 ngày sẽ hiện ở đây.'}</div>`}</div>`;
+  const qi=$('#g3q'); qi.oninput=()=>{ G3F.q=qi.value; const pos=qi.selectionStart; rG3(); const n=$('#g3q'); n.focus(); try{ n.setSelectionRange(pos,pos); }catch(e){} };
+  document.querySelectorAll('[data-g3tt]').forEach(b=>b.onclick=()=>{ G3F.tt=b.dataset.g3tt; rG3(); });
+  document.querySelectorAll('[data-g3goi]').forEach(b=>b.onclick=()=>{ G3F.goi=b.dataset.g3goi; rG3(); });
+  document.querySelectorAll('[data-g3ct]').forEach(d=>d.ontoggle=()=>{ if(d.open) G3_MO.add(d.dataset.g3ct); else G3_MO.delete(d.dataset.g3ct); });
+  document.querySelectorAll('[data-g3]').forEach(c=>c.onchange=()=>g3Tick(c.dataset.code, c.dataset.g3, c.checked, c));
+  bindAi(); bindActs($('#main'));
+}
+async function g3Tick(code, loai, on, el){
+  const lb=el.closest('label'), f=fam(code); if(lb) lb.classList.add('busy');
+  try{ D=await api('tich3b',{code, loai, on});
+    toast(loai==='goi'?(on?'Đã ghi: đã gọi ba mẹ bé '+(f&&f.tenCon||''):'Đã bỏ tích Đã gọi'):(on?'Đã ghi: ba mẹ đồng ý Zoom':'Đã bỏ tích Đồng ý Zoom')); render(); }
+  catch(e){ el.checked=!on; if(lb) lb.classList.remove('busy'); if(!e.silent) toast(e.message); }
+}
 /* ---------- Học thử: danh sách riêng các gia đình đăng ký ở ô "Học thử miễn phí" (tab "Đăng ký học thử") ---------- */
 const htBuoi=f=>f.hoc?f.hoc.soBuoi:0, htBam=f=>!!(f.hoc&&f.hoc.tKichHoat);
 const HT_LOC=[['','Tất cả',()=>true],['chua','Chưa vào học',f=>!htBuoi(f)&&!f.moKhoa],['dang','Đang học (1 buổi)',f=>htBuoi(f)===1&&!htBam(f)&&!f.moKhoa],
@@ -1123,6 +1203,7 @@ const NV=[
     ['mo','Mở khóa và gửi tài khoản đăng nhập','ctv','']]},
   {g:'Tuần 1 · Bạn', ds:[
     ['boi_canh','Chào mừng 21 ngày + 3 câu bối cảnh','ctv','① Con học tiếng Anh ở đâu, ai ngồi cùng, học lúc nào'],
+    ['goi_3b','Gọi sau 3 buổi: hỏi trải nghiệm 4H, mời Zoom cuối tuần','sale','Con thích phần nào · ba mẹ mong gì khi cho con học hai thứ tiếng · đã xác nhận Zoom chưa'],
     ['khao_sat','Gọi khảo sát 2–3 phút','sale','② Khi… tôi muốn… để… · ③ cách đã thử · ④ điều còn lo'],
     ['hoi_so_1','Hỏi bằng số: mong muốn sau 21 ngày','ctv','Ba mẹ chọn số mấy, nói thêm gì'],
     ['chot_1','Chốt 1: hẹn lịch tư vấn lộ trình','sale','Ngày giờ hẹn']]},
@@ -1148,6 +1229,7 @@ const jtbdCau=g=>`Khi ${g[2]}, tôi muốn ${g[3]}, để ${g[4]}.`;
 /* Câu hỏi gợi ý hiện trong từng nhiệm vụ khi mở ra */
 const NV_HOI={
   chao:['"Chị cho bé học thử vì muốn bé được gì ạ?"'],
+  goi_3b:['"3 ngày qua chị thấy con học thế nào ạ? Con có tự nhắc mẹ mở bài không?"','"Phần nào con thích nhất, có phần nào con ngại không ạ?"','"Ngoài giờ học, con có tự nói tiếng Anh, tiếng Trung không? Chị kể giúp em một lần cụ thể."','"Khi cho con học hai thứ tiếng, chị lo nhất điều gì ạ?"','"Tối Chủ nhật có Zoom cuối vòng, con học theo nhóm 6 bạn. Chị xác nhận cho con tham gia nhé ạ?"'],
   hoi_so_1:['"Sau 21 ngày, ba mẹ mong nhất điều gì? 1. Con mạnh dạn nói · 2. Con thích tiếng Trung · 3. Con tự giác học · 4. Có lộ trình rõ"'],
   chot_1:['"Cuối tuần cô gửi chị đề xuất lộ trình riêng cho bé, mình hẹn 10 phút trao đổi nhé. Chị tiện tối thứ mấy ạ?"'],
   hoi_so_2:['Gửi tin mẫu "hỏi bằng số tuần 2", ghi lại câu ba mẹ chọn bên dưới. Không câu nào đúng thì ghi lời ba mẹ.'],

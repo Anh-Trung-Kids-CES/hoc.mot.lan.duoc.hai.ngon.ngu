@@ -24,3 +24,11 @@ Thêm `?gv=1` vào cuối link, hoặc bấm nút "Chế độ giáo viên" ở 
 - Mỗi bạn hiện avatar đã chọn trong Phòng đổi quà (nhân vật, trang phục, nền, khung). Tab Tuần 1/2/3 và Tổng 21 ngày; tuần chưa tới bị khóa.
 - Máy chủ: `apps-script/Code.gs` thêm `?action=xephang` (cả bảng tới 50 bạn, kèm avatar, không lộ mã bé), `ping` trả `v:7`. Chưa cập nhật máy chủ thì web vẫn hiện Top 10 từ bản cũ, avatar các bạn khác là nhân vật mặc định.
 - **Trang chủ có ô "Xếp hạng tuần"** cạnh "Hành trình của con": ảnh là avatar của con, nhãn chỉ ghi số sao con có trong tuần ("⭐ 142 tuần này"), không ghi hạng, dòng dưới ghi tuần và số ngày còn lại. Trang chủ máy tính nay có 2 ô lớn + 6 ô nhỏ.
+
+## Cập nhật 29/10/2026 (Trang quản trị: Gọi sau 3 buổi)
+
+- Trang quản trị có thêm mục **Gọi 3 buổi**: mỗi con đã mở khóa 21 ngày một dòng, kèm tình hình học (chưa vào web, cần kéo nhịp, học đều, học vượt…), số ngày học, bài xong, lượt nói, chi tiết theo 4H và câu khen, câu hỏi thêm cho cuộc gọi.
+- Lọc theo người hỗ trợ, tình hình học và cuộc gọi (chưa gọi, đã gọi, đồng ý Zoom, chưa xác nhận Zoom).
+- Hai ô tích **Đã gọi** và **Đồng ý Zoom** lưu ở tab "Gọi sau 3 buổi" của Sheet (tự tạo ở lần tích đầu). Mỗi lần tích ghi một dòng vào Nhật ký cuộc gọi.
+- Việc hôm nay có thêm việc Sale "Gọi sau 3 buổi" (ngày 4–7 của hành trình), tự đóng khi tích Đã gọi. Tin mẫu `goi_3b` dùng khi gọi không gặp.
+- Máy chủ: sửa `apps-script/QuanTri.gs` và `apps-script/Code.gs` (ping trả `v: 12`). Cần dán hai tệp này vào dự án Apps Script của máy chủ web học rồi **Triển khai → Quản lý triển khai → sửa → Phiên bản mới** (giữ nguyên link /exec).
