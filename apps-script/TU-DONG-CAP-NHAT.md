@@ -1,7 +1,7 @@
 # Tự động cập nhật máy chủ Apps Script
 
 Dự án **Anh-Trung-Kids – Máy chủ web học** (tài khoản anhtrung.home) có thêm tệp `TuCapNhat` (bản gốc: `apps-script/TuCapNhat.gs`).
-Cứ khoảng 10 phút, tệp này xem GitHub: nếu `apps-script/Code.gs` hoặc `apps-script/QuanTri.gs` trên nhánh `main` có bản mới, nó tự
+Cứ khoảng 10 phút, tệp này đọc tệp thô trên GitHub (raw.githubusercontent.com, không bị giới hạn lượt như api.github.com): nếu `apps-script/Code.gs` hoặc `apps-script/QuanTri.gs` trên nhánh `main` có bản mới, nó tự
 chép vào dự án, tạo phiên bản mới và cập nhật đúng bản triển khai đang chạy. Link /exec giữ nguyên.
 
 Không cần máy tính, không cần Node, không cần secret trên GitHub. Kho phải để **công khai** (hiện đang công khai).
@@ -16,7 +16,7 @@ Không cần máy tính, không cần Node, không cần secret trên GitHub. Kh
 
 ## Kiểm tra / xử lý
 
-- Xem trạng thái: chọn hàm `trangThaiTuCapNhat` → Chạy → Nhật ký thực thi hiện lần cập nhật cuối, commit GitHub, lỗi (nếu có).
+- Xem trạng thái: chọn hàm `trangThaiTuCapNhat` → Chạy → Nhật ký thực thi hiện lần cập nhật cuối (phiên bản, mã) và lỗi (nếu có).
 - Lịch chạy nằm ở mục ⏰ **Trình kích hoạt** (hàm `tuCapNhat`, mỗi 10 phút).
 - **An toàn:** nếu ai đó sửa thẳng `Mã.gs` hoặc `QuanTri.gs` trong trình soạn, lần sau tệp tự cập nhật **dừng, không ghi đè** và ghi lỗi.
   Đưa phần sửa đó lên GitHub, rồi chạy hàm `xoaLoiTuCapNhat`.
