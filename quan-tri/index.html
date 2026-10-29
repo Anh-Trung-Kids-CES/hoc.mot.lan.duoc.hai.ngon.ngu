@@ -1127,7 +1127,7 @@ function xung(f){ const n=String(f.phuHuynh||'').trim(); if(!n) return 'anh/ch�
 function linkDk(f){ const u=D.caiDat.link, q=[]; if(f.ref&&f.ref!=='TU_NHIEN') q.push('ref='+encodeURIComponent(f.ref)); q.push('fam='+encodeURIComponent(f.code));
   return u+(u.includes('?')?'&':'?')+q.join('&'); }
 function fillTpl(key,f){
-  const t=(D.tinMau[key]||{}).noiDung||''; const h=f.hoc||{};
+  const t=(D.tinMau[key]||{}).noiDung||''; const b3=f.bc3||{}, h={...(f.hoc||{})}; h.soBuoi=Math.max(+h.soBuoi||0,+b3.bai||0); h.noi=Math.max(+h.noi||0,+b3.noi||0);
   const map={phu_huynh:xung(f), ten_con:(f.tenCon||'con').split(',')[0].trim(), khoa:f.khoa||'phù hợp', nguoi_ho_tro:D.me.ten,
     so_buoi:h.soBuoi||0, so_lan_noi:h.noi||0, hoc_them:h.noi?` và đã nói thành tiếng ${h.noi} lần`:'', link_dang_ky:linkDk(f),
     han:D.caiDat.hanText, khai_mac:D.caiDat.khaiMac, phi:D.caiDat.phi, so_zalo:f.zalo||'', link_hoc:D.caiDat.linkHoc};
