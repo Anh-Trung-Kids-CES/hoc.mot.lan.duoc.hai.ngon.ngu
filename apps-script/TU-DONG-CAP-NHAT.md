@@ -1,26 +1,15 @@
-# Tự động cập nhật máy chủ Apps Script
+# Cập nhật máy chủ Apps Script
 
-Dự án **Anh-Trung-Kids – Máy chủ web học** (tài khoản anhtrung.home) có thêm tệp `TuCapNhat` (bản gốc: `apps-script/TuCapNhat.gs`).
-Cứ khoảng 10 phút, tệp này đọc tệp thô trên GitHub (raw.githubusercontent.com, không bị giới hạn lượt như api.github.com): nếu `apps-script/Code.gs` hoặc `apps-script/QuanTri.gs` trên nhánh `main` có bản mới, nó tự
-chép vào dự án, tạo phiên bản mới và cập nhật đúng bản triển khai đang chạy. Link /exec giữ nguyên.
+Máy chủ **Anh-Trung-Kids – Máy chủ web học** (tài khoản anhtrung.home) **không tự cập nhật** từ GitHub. Sau khi sửa `apps-script/Code.gs`
+hoặc `apps-script/QuanTri.gs`, phải dán vào dự án và triển khai (khoảng 2 phút):
 
-Không cần máy tính, không cần Node, không cần secret trên GitHub. Kho phải để **công khai** (hiện đang công khai).
+1. Mở dự án bằng anhtrung.home → dán `Code.gs` vào **Mã.gs**, `QuanTri.gs` vào **QuanTri.gs** → Lưu.
+2. **Triển khai → Quản lý tùy chọn triển khai** → bấm bút chì → Phiên bản: **Phiên bản mới** → **Triển khai**. Link /exec giữ nguyên.
+3. Kiểm tra: mở `.../exec?action=ping`, số `v` phải đúng số trong `Code.gs`.
 
-## Đã cài (29/10/2026)
+## Vì sao không tự động (đã thử 29/10/2026)
 
-1. Bật "Google Apps Script API" ở https://script.google.com/home/usersettings (tài khoản anhtrung.home).
-2. Cài đặt dự án → bật "Hiển thị tệp kê khai appsscript.json". Trong `appsscript.json` thêm `oauthScopes`:
-   spreadsheets, script.external_request, script.scriptapp, script.projects, script.deployments.
-3. Thêm tệp Script tên `TuCapNhat`, dán nội dung `apps-script/TuCapNhat.gs`.
-4. Chọn hàm `caiTuCapNhat` → Chạy → Cho phép. Hàm tạo lịch chạy 10 phút và cập nhật ngay lần đầu.
-
-## Kiểm tra / xử lý
-
-- Xem trạng thái: chọn hàm `trangThaiTuCapNhat` → Chạy → Nhật ký thực thi hiện lần cập nhật cuối (phiên bản, mã) và lỗi (nếu có).
-- Lịch chạy nằm ở mục ⏰ **Trình kích hoạt** (hàm `tuCapNhat`, mỗi 10 phút).
-- **An toàn:** nếu ai đó sửa thẳng `Mã.gs` hoặc `QuanTri.gs` trong trình soạn, lần sau tệp tự cập nhật **dừng, không ghi đè** và ghi lỗi.
-  Đưa phần sửa đó lên GitHub, rồi chạy hàm `xoaLoiTuCapNhat`.
-- Sửa `TuCapNhat.gs` hoặc thêm phạm vi mới (dùng dịch vụ Google mới như Gmail, Drive) thì phải dán tay vào dự án và sửa `appsscript.json`,
-  vì tệp này chỉ chép `Code.gs` và `QuanTri.gs`.
-- Muốn tắt: xoá trình kích hoạt `tuCapNhat` trong mục ⏰.
-- Trang quản trị cũ (`apps-script/quan-tri/`, dự án Apps Script riêng) không nằm trong việc tự cập nhật này.
+- GitHub Actions + clasp: cần Node trên máy và secret đăng nhập Google, quá rắc rối.
+- Tệp tự cập nhật nằm trong dự án Apps Script: đọc GitHub được, nhưng bước tự triển khai cần bật "Apps Script API" trong dự án
+  Google Cloud của script. Dự án Cloud mặc định không cho bật (báo thiếu quyền). Muốn làm phải chuyển script sang dự án Cloud riêng
+  và cài màn hình đồng ý OAuth, nên đã gỡ tệp này ra.

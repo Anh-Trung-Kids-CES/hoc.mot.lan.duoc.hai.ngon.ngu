@@ -32,4 +32,4 @@ Thêm `?gv=1` vào cuối link, hoặc bấm nút "Chế độ giáo viên" ở 
 - Hai ô tích **Đã gọi** và **Đồng ý Zoom** lưu ở tab "Gọi sau 3 buổi" của Sheet (tự tạo ở lần tích đầu). Mỗi lần tích ghi một dòng vào Nhật ký cuộc gọi.
 - Việc hôm nay có thêm việc Sale "Gọi sau 3 buổi" (ngày 4–7 của hành trình), tự đóng khi tích Đã gọi. Tin mẫu `goi_3b` dùng khi gọi không gặp.
 - Máy chủ: sửa `apps-script/QuanTri.gs` và `apps-script/Code.gs` (ping trả `v: 12`). Cần dán hai tệp này vào dự án Apps Script của máy chủ web học rồi **Triển khai → Quản lý triển khai → sửa → Phiên bản mới** (giữ nguyên link /exec).
-- Máy chủ Apps Script **tự cập nhật** khoảng 10 phút sau khi `apps-script/Code.gs` hoặc `apps-script/QuanTri.gs` trên `main` thay đổi (tệp `TuCapNhat` nằm ngay trong dự án Apps Script, bản gốc `apps-script/TuCapNhat.gs`). Cách kiểm tra và xử lý lỗi: `apps-script/TU-DONG-CAP-NHAT.md`.
+- Máy chủ Apps Script đã lên phiên bản 14 (ping v:12) ngày 29/10. Máy chủ **không tự cập nhật**: sửa `Code.gs`/`QuanTri.gs` thì dán vào dự án và triển khai phiên bản mới theo `apps-script/TU-DONG-CAP-NHAT.md`.
