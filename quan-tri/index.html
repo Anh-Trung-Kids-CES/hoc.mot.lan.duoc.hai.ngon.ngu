@@ -156,7 +156,11 @@ nav .n.ht{background:#B8141C}
 .nv-gt{margin:0 0 4px;font-weight:700;font-size:14px}
 .nv-i{display:block;padding:6px 0;border-bottom:1px dashed var(--line)}
 .nv-i:last-child{border-bottom:0}
-.nv-i.xong{display:flex;gap:10px;align-items:flex-start}
+.nv-i.xong summary{align-items:flex-start}
+.nv-xem{font-size:.82em;color:var(--muted,#888);white-space:nowrap}
+.nv-i.xong[open] .nv-xem{visibility:hidden}
+.nv-xemlai{margin:8px 0 4px 32px}
+.nv-dg p{margin:2px 0 0;white-space:pre-wrap}
 .nv-i summary{display:flex;gap:10px;align-items:center;cursor:pointer;list-style:none}
 .nv-i summary::-webkit-details-marker{display:none}
 .nv-ck{flex:none;display:inline-grid;place-items:center;width:22px;height:22px;border-radius:6px;border:2px solid var(--line);background:var(--card);font-weight:700;color:#fff}
@@ -1276,6 +1280,14 @@ function nvO(f, ma){ const ds=NV_O[ma]; if(!ds) return ''; const t=f.the||{}, g=
       return `<label class="nv-q"><span class="nv-qh"><span class="badge nh">${esc(nhan)}</span> ${esc(hoi)}</span>${tiep?`<span class="hint" style="margin:0">${esc(tiep)}</span>`:''}
       <textarea ${laH?'data-h':'data-o'}="${k}" data-nhan="${esc(nhan)}" maxlength="600" placeholder="${esc((laH?H4_VI_DU[k]:viDu(k))||'Ghi nguyên văn lời ba mẹ')}">${esc(cu||'')}</textarea></label>`; }).join('')}
     ${t1?goiT1Cuoi(f):''}</div>`; }
+/* Nhiệm vụ đã xong: mở ra xem lại câu trả lời đã ghi (lấy từ Thẻ kết quả mong muốn và 4H), chỉ xem */
+function nvDaGhi(f, ma, d){ const ds=NV_O[ma]||[], t=f.the||{}, g=f.g3||{}; let co=0;
+  const dong=ds.map(([k,nhan,hoi])=>{ if(k==='#') return `<p class="nv-gt" style="margin:6px 0 0">${esc(nhan)}</p>`;
+    const v=String((/^h\d$/.test(k)?g[k]:t[k])||'').trim(); if(v) co++;
+    return `<div class="nv-dg"><span class="nv-qh"><span class="badge nh">${esc(nhan)}</span> ${esc(hoi)}</span><p class="${v?'':'hint'}">${v?esc(v):'Chưa ghi'}</p></div>`; }).join('');
+  const ghi=d.ghiChu&&d.ghiChu!=='Đã gửi tin mẫu'?`<div class="nv-dg"><span class="nv-qh"><b>Ghi chú lúc hoàn thành</b></span><p>${esc(d.ghiChu)}</p></div>`:'';
+  if(!dong&&!ghi) return `<div class="nv-o nv-xemlai"><p class="hint" style="margin:0">Nhiệm vụ này không có nội dung ghi kèm.</p></div>`;
+  return `<div class="nv-o nv-xemlai">${dong?`<p class="hint" style="margin:0">${co} câu đã có câu trả lời. Muốn sửa: bấm ô ✓ để bỏ tích, mở lại nhiệm vụ (câu trả lời cũ vẫn còn), sửa rồi bấm Hoàn thành.</p>`:''}${dong}${ghi}</div>`; }
 function nvXong(f,ma){ const n=f.nv||{}; return n[ma] || (ma==='vet_1' && (n.vet_2||n.vet_3)) || (ma==='goi_t1' && n.goi_3b) || null; }
 function nvChang(){ const b=D.caiDat&&D.caiDat.batDau; if(!b) return -1; const ngay=Math.floor((Date.now()-b)/MOT_NGAY)+1;
   return ngay<1?0:ngay<=7?1:ngay<=14?2:ngay<=21?3:4; }
@@ -1286,8 +1298,8 @@ function nvBox(f){
     <p class="hint" style="margin:0 0 6px">Làm xong thì tick và ghi ngắn điều khai thác được. Việc cùng tên ở Việc hôm nay tự đóng. Tick nhầm thì bấm lại vào ô ✓ để bỏ tích.</p>
     ${NV.map((x,i)=>`<div class="nv-g ${i===cg?'now':''}"><p class="nv-gt">${esc(x.g)}${i===cg?' <span class="badge nh">Đang ở chặng này</span>':''}</p>
       ${x.ds.map(([ma,ten,ai,goiY])=>{ const d=nvXong(f,ma);
-        return d?`<div class="nv-i xong"><button class="nv-ck nv-bo" type="button" data-nv-bo="${ma}" title="Bỏ tích: nhiệm vụ hiện lại ở Việc hôm nay" aria-label="Bỏ tích ${esc(ten)}">✓</button><div><b>${esc(ten)}</b> <span class="badge ai-${ai}">${VT_TEN[ai]}</span>
-            <div class="hint" style="margin:2px 0 0">${fmt(d.t)} · ${esc(d.ai)}${d.ghiChu&&d.ghiChu!=='Đã gửi tin mẫu'?` – ${esc(d.ghiChu)}`:''}</div></div></div>`
+        return d?`<details class="nv-i xong"><summary><button class="nv-ck nv-bo" type="button" data-nv-bo="${ma}" title="Bỏ tích: nhiệm vụ hiện lại ở Việc hôm nay" aria-label="Bỏ tích ${esc(ten)}">✓</button><span><b>${esc(ten)}</b> <span class="badge ai-${ai}">${VT_TEN[ai]}</span> <span class="nv-xem">▸ Xem đã ghi</span>
+            <span class="hint" style="display:block;margin:2px 0 0">${fmt(d.t)} · ${esc(d.ai)}${d.ghiChu&&d.ghiChu!=='Đã gửi tin mẫu'?` – ${esc(d.ghiChu)}`:''}</span></span></summary>${nvDaGhi(f,ma,d)}</details>`
           :`<details class="nv-i"><summary><span class="nv-ck" aria-hidden="true"></span><span><b>${esc(ten)}</b> <span class="badge ai-${ai}">${VT_TEN[ai]}</span></span></summary>
             <form class="log nv-f" data-nv="${ma}" novalidate>
               ${NV_HOI[ma]?`<div class="nv-hoi"><b>Câu hỏi gợi ý</b><ul>${NV_HOI[ma].map(q=>`<li>${esc(q)}</li>`).join('')}</ul></div>`:''}
@@ -1301,7 +1313,7 @@ function nvBox(f){
   </div>`;
 }
 function bindNv(f, host){
-  host.querySelectorAll('[data-nv-bo]').forEach(b=>b.onclick=async()=>{ b.disabled=true;
+  host.querySelectorAll('[data-nv-bo]').forEach(b=>b.onclick=async e=>{ e.preventDefault(); e.stopPropagation(); b.disabled=true;
     try{ D=await api('boHoanThanh',{code:f.code, viec:b.dataset.nvBo}); toast('Đã bỏ tích. Câu trả lời đã ghi vẫn giữ nguyên.'); openFam(f.code,true); render(); }
     catch(x){ b.disabled=false; if(!x.silent) toast(/Không rõ yêu cầu/.test(x.message)?'Máy chủ chưa cập nhật bản có bỏ tích.':x.message); } });
   host.querySelectorAll('form.nv-f').forEach(fm=>{
