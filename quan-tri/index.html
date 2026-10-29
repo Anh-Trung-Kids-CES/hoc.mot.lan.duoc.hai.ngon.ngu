@@ -164,6 +164,7 @@ nav .n.ht{background:#B8141C}
 .nv-f{margin:10px 0 4px}
 .nv-o{display:grid;gap:10px;margin:0 0 10px}
 .nv-q{display:grid!important;gap:4px}
+.nv-loi{margin:0;font-size:14px;line-height:1.5;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:8px 10px}
 .nv-qh{font-weight:600;font-size:14px;line-height:1.45}
 .nv-q textarea{min-height:84px;width:100%;font-size:15px}
 .nv-q textarea::placeholder{color:var(--muted);opacity:.75}
@@ -700,18 +701,18 @@ function rG3(){
       ${G3_TT.filter(dem).map(t=>`<button class="chip ${G3F.tt===t?'on':''}" type="button" data-g3tt="${esc(t)}">${esc(t)}<span class="c">${dem(t)}</span></button>`).join('')}</div>
     <div class="bar" role="group" aria-label="Lọc theo cuộc gọi">
       ${goiOpt.map(([k,t,n])=>`<button class="chip ${G3F.goi===k?'on':''}" type="button" data-g3goi="${k}">${esc(t)}<span class="c">${n}</span></button>`).join('')}</div>
-    <div class="list">${L.length?L.map(f=>{ const b=f.bc3, g=f.g3||{}, nv=f.nv&&f.nv.goi_3b;
+    <div class="list">${L.length?L.map(f=>{ const b=f.bc3, g=f.g3||{}, nv=f.nv&&(f.nv.goi_t1||f.nv.goi_3b);
       return `<div class="g3row"><div class="g3main">
-        <div class="g3top"><span class="g3dot p${b.uuTien}" aria-hidden="true"></span><b>${esc(b.trangThai)}</b><button class="lnk" type="button" data-open="${esc(f.code)}" data-viec="goi_3b">${famLine(f)}</button>${nhomBadge(f)}</div>
+        <div class="g3top"><span class="g3dot p${b.uuTien}" aria-hidden="true"></span><b>${esc(b.trangThai)}</b><button class="lnk" type="button" data-open="${esc(f.code)}" data-viec="goi_t1">${famLine(f)}</button>${nhomBadge(f)}</div>
         <div class="g3sub">Học ${b.ngayHoc}/${nq} ngày · ${b.bai} bài xong · nói ${b.noi} lượt · ${esc(f.zalo||'chưa có số')}${XEM_HET()?` · ${esc(f.nguoiHoTro||'chưa giao')}`:''}${g.goi?` · đã gọi ${fmt(g.goiLuc)} (${esc(g.goiAi)})`:nv?` · đã ghi kết quả ${fmt(nv.t)} (${esc(nv.ai)})`:''}${g.zoom?` · Zoom: ${esc(g.zoomAi)} ghi ${fmt(g.zoomLuc)}`:''}</div>
         <p class="g3khen"><b>Khen:</b> ${esc(b.khen)}</p>
-        <div class="acts">${callBtns(f,'goi_3b','goi_3b')}</div>
+        <div class="acts">${callBtns(f,'goi_t1','goi_3b')}</div>
         <details class="g3ct" data-g3ct="${esc(f.code)}" ${G3_MO.has(f.code)?'open':''}><summary>Chi tiết theo 4H và câu hỏi thêm</summary>
           <div class="g3h">
-            ${g3Box('H1 – Thái độ học tập',[['Ngày học',b.ngayHoc+' / '+nq],['Ngày chưa học',b.chuaHoc],['Học gần nhất',b.cuoi],['Bài Little Seed xong',b.seed],['Bài Canopy xong',b.canopy],['Câu Canopy đã làm',b.canopyCau],['Đang học',b.khoaHoc]],'Con tự đòi học hay mẹ phải nhắc thì hỏi ba mẹ.')}
-            ${g3Box('H2 – Cảm xúc khi học',[['Nhân vật con chọn',b.nhanVat],['Thú cưng',b.thuCung],['Quái vật',b.quaiVat],['Sao đã đổi quà',b.saoDoi],['Điểm đã nhận',b.diem]],'Mở lời: "Con thích bạn nào nhất ạ?"')}
-            ${g3Box('H3 – Tương tác với mẹ',[['Clip ba mẹ đã gửi',b.clip],['Huy hiệu',b.huyHieu]],'Con có rủ mẹ chơi, kể lại cho mẹ không thì hỏi ba mẹ.')}
-            ${g3Box('H4 – Mang ngôn ngữ về nhà',[['Lượt nói với micro',b.noi],['Lượt theo bước (bài Seed đã xong)',b.buoc],['Số tài khoản học',b.taiKhoan]],'Bài Canopy chưa ghi lượt nói. Con tự nói ở nhà thì xin ba mẹ một ví dụ cụ thể.')}
+            ${g3Box('H1 – Thái độ học tập',[['Ngày học',b.ngayHoc+' / '+nq],['Ngày chưa học',b.chuaHoc],['Học gần nhất',b.cuoi],['Bài Little Seed xong',b.seed],['Bài Canopy xong',b.canopy],['Câu Canopy đã làm',b.canopyCau],['Đang học',b.khoaHoc],['Ba mẹ kể',g.h1||'—']],'Con tự đòi học hay mẹ phải nhắc thì hỏi ba mẹ.')}
+            ${g3Box('H2 – Cảm xúc khi học',[['Nhân vật con chọn',b.nhanVat],['Thú cưng',b.thuCung],['Quái vật',b.quaiVat],['Sao đã đổi quà',b.saoDoi],['Điểm đã nhận',b.diem],['Ba mẹ kể',g.h2||'—']],'Mở lời: "Con thích bạn nào nhất ạ?"')}
+            ${g3Box('H3 – Tương tác với mẹ',[['Clip ba mẹ đã gửi',b.clip],['Huy hiệu',b.huyHieu],['Ba mẹ kể',g.h3||'—']],'Con có rủ mẹ chơi, kể lại cho mẹ không thì hỏi ba mẹ.')}
+            ${g3Box('H4 – Mang ngôn ngữ về nhà',[['Lượt nói với micro',b.noi],['Lượt theo bước (bài Seed đã xong)',b.buoc],['Số tài khoản học',b.taiKhoan],['Ba mẹ kể',g.h4||'—']],'Bài Canopy chưa ghi lượt nói. Con tự nói ở nhà thì xin ba mẹ một ví dụ cụ thể.')}
           </div>
           <ul class="g3hoi">${(b.hoi||[]).map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
         </details></div>
@@ -1164,20 +1165,20 @@ const THE_O=[
   ['thoiQuen','Thói quen','Điều giữ ba mẹ ở cách cũ. Ví dụ: đã quen trung tâm cũ, đã đóng tiền khoá khác, con quen cô cũ.']];
 const THE_MO=['bo_sung_the'];
 function theBox(f){
-  const t=f.the||{}, cap=CAP(), du=f.theDu||0, duoc=k=>cap!=='ctv'||['o1','o4'].includes(k);
+  const t=f.the||{}, cap=CAP(), du=f.theDu||0, duoc=()=>true;
   const fld=([k,l,ph])=>duoc(k)?`<label>${l}<textarea data-the="${k}" maxlength="600" placeholder="${esc(ph)}">${esc(t[k]||'')}</textarea></label>`:'';
   const o=k=>THE_O.find(x=>x[0]===k);
   return `<div class="box"><h3>Thẻ kết quả mong muốn · ${du}/6 ô</h3>
-    <p class="hint" style="margin:0 0 6px">Tự điền khi làm nhiệm vụ (chào mừng, gọi khảo sát, thư giữa chặng, Chốt 3). Mở ra để xem toàn bộ hoặc sửa.</p>
+    <p class="hint" style="margin:0 0 6px">Tự điền khi làm nhiệm vụ (gọi tuần 1, thư giữa chặng, Chốt 3). Mở ra để xem toàn bộ hoặc sửa.</p>
     <div class="the-tien" aria-hidden="true">${[1,2,3,4,5,6].map(i=>`<i class="${du>=i?'on':''}"></i>`).join('')}</div>
     <details ${tachMa(CUR.viec).some(m=>THE_MO.includes(m))?'open':''}><summary style="cursor:pointer;margin-top:8px;font-weight:600">${du?'Xem và sửa thẻ':'Mở thẻ'}</summary>
     <form class="log" id="theF" novalidate><div class="the-ds">
-      <p class="hint" style="margin:0">Ghi nguyên văn lời ba mẹ, không ghi suy đoán của mình.${cap==='ctv'?' CTV ghi ô ① và ④; các ô khác do sale điền sau cuộc gọi.':''}</p>
+      <p class="hint" style="margin:0">Ghi nguyên văn lời ba mẹ, không ghi suy đoán của mình.</p>
       ${cap!=='ctv'?`<label>Nhóm<select id="theNhom"><option value="">Tự xếp theo dữ liệu (đang là ${esc(f.nhom||'?')})</option>${['A','B','C','D','E'].map(n=>`<option value="${n}" ${t.nhom===n?'selected':''}>${n} · ${NHOM_TEN[n]}</option>`).join('')}</select></label>`:''}
       ${fld(o('o1'))}
-      ${cap!=='ctv'?fld(o('khi'))+fld(o('muon'))+fld(o('de')):''}
+      ${fld(o('khi'))+fld(o('muon'))+fld(o('de'))}
       ${fld(o('o3'))}${fld(o('o4'))}${fld(o('o5'))}${fld(o('o6'))}
-      ${cap!=='ctv'?fld(o('day'))+fld(o('keo'))+fld(o('lo'))+fld(o('thoiQuen')):''}
+      ${fld(o('day'))+fld(o('keo'))+fld(o('lo'))+fld(o('thoiQuen'))}
       <p class="err" id="theErr" hidden></p>
       <div class="acts"><button class="save" type="submit" id="theOk">Lưu thẻ</button></div>
       ${t.luc?`<p class="hint">Cập nhật ${fmt(t.luc)} · ${esc(t.ai||'')}</p>`:''}
@@ -1202,9 +1203,7 @@ const NV=[
     ['moi','Mời kích hoạt 21 ngày khi bé xong buổi 2','ctv','Ba mẹ còn băn khoăn gì? (ô ④)'],
     ['mo','Mở khóa và gửi tài khoản đăng nhập','ctv','']]},
   {g:'Tuần 1 · Bạn', ds:[
-    ['boi_canh','Chào mừng 21 ngày + 3 câu bối cảnh','ctv','① Con học tiếng Anh ở đâu, ai ngồi cùng, học lúc nào'],
-    ['goi_3b','Gọi sau 3 buổi: hỏi trải nghiệm 4H, mời Zoom cuối tuần','sale','Con thích phần nào · ba mẹ mong gì khi cho con học hai thứ tiếng · đã xác nhận Zoom chưa'],
-    ['khao_sat','Gọi khảo sát 2–3 phút','sale','② Khi… tôi muốn… để… · ③ cách đã thử · ④ điều còn lo'],
+    ['goi_t1','Gọi tuần 1: trải nghiệm 4H + bối cảnh + mong muốn, mời Zoom','sale','Khoảng 6–7 phút, 10 câu'],
     ['hoi_so_1','Hỏi bằng số: mong muốn sau 21 ngày','ctv','Ba mẹ chọn số mấy, nói thêm gì'],
     ['chot_1','Chốt 1: hẹn lịch tư vấn lộ trình','sale','Ngày giờ hẹn']]},
   {g:'Tuần 2 · Bàn', ds:[
@@ -1229,7 +1228,6 @@ const jtbdCau=g=>`Khi ${g[2]}, tôi muốn ${g[3]}, để ${g[4]}.`;
 /* Câu hỏi gợi ý hiện trong từng nhiệm vụ khi mở ra */
 const NV_HOI={
   chao:['"Chị cho bé học thử vì muốn bé được gì ạ?"'],
-  goi_3b:['"3 ngày qua chị thấy con học thế nào ạ? Con có tự nhắc mẹ mở bài không?"','"Phần nào con thích nhất, có phần nào con ngại không ạ?"','"Ngoài giờ học, con có tự nói tiếng Anh, tiếng Trung không? Chị kể giúp em một lần cụ thể."','"Khi cho con học hai thứ tiếng, chị lo nhất điều gì ạ?"','"Tối Chủ nhật có Zoom cuối vòng, con học theo nhóm 6 bạn. Chị xác nhận cho con tham gia nhé ạ?"'],
   hoi_so_1:['"Sau 21 ngày, ba mẹ mong nhất điều gì? 1. Con mạnh dạn nói · 2. Con thích tiếng Trung · 3. Con tự giác học · 4. Có lộ trình rõ"'],
   chot_1:['"Cuối tuần cô gửi chị đề xuất lộ trình riêng cho bé, mình hẹn 10 phút trao đổi nhé. Chị tiện tối thứ mấy ạ?"'],
   hoi_so_2:['Gửi tin mẫu "hỏi bằng số tuần 2", ghi lại câu ba mẹ chọn bên dưới. Không câu nào đúng thì ghi lời ba mẹ.'],
@@ -1238,26 +1236,46 @@ const NV_HOI={
   chot_3:['"Chị muốn bé học online hay tại trung tâm? Đóng một lần hay chia 2 đợt ạ?"'],
   vet_1:['"Em đã chuẩn bị đề xuất lộ trình riêng cho bé dựa trên kết quả 21 ngày. Chị tiện giờ nào để em gọi 10 phút ạ?"'],
   gioi_thieu:['"Nếu chị có bạn bè cũng muốn cho con học Anh – Trung, chị giới thiệu giúp em nhé ạ."']};
-const NV_JTBD=['khao_sat','hoi_so_2'];
+const NV_JTBD=['goi_t1','hoi_so_2'];
 /* Nhiệm vụ có câu hỏi ghi thẳng vào Thẻ kết quả mong muốn: [ô thẻ, nhãn, câu hỏi, hỏi tiếp] */
 const NV_O={
-  boi_canh:[['o1','① Bối cảnh','"Trước giờ con học tiếng Anh ở đâu, bao lâu rồi? Nhà mình có ai nói được tiếng Anh hoặc tiếng Trung không? Con thường rảnh học lúc nào?"','']],
   moi:[['o4','④ Rào cản','"Bé học 2 buổi thấy thế nào chị? Chị còn băn khoăn gì không ạ?"','']],
-  khao_sat:[
-    ['o1','① Bối cảnh','"Bé hay học vào buổi nào, có ai ngồi cạnh bé không chị?"',''],
-    ['khi','② Khi','"Sao chị lại muốn cho bé học thêm tiếng Trung ạ?"','Mẹ trả lời ngắn thì hỏi tiếp: "Chị biết chương trình qua ai? Lúc đó chị thấy thích ở điểm nào?"'],
-    ['o3','③ Nỗi đau','"Trước giờ chị đã cho bé học ngoại ngữ theo cách nào? Cách nào bé hợp, cách nào chưa hợp?"',''],
-    ['muon','② Tôi muốn','"Học xong đợt này, chị mong thấy bé làm được gì nhất?"','Mẹ trả lời chung chung thì hỏi: "Cụ thể bé nói được gì thì chị vui nhất ạ?"'],
-    ['de','② Để','"Bé làm được vậy thì chị vui nhất ở điểm nào?"',''],
-    ['o4','④ Rào cản','"Lúc cho bé tham gia, chị có lo gì không ạ?"','']],
+  /* Cuộc gọi tuần 1 (29/10/2026): gộp chào mừng + 3 câu bối cảnh, gọi sau 3 buổi (4H) và gọi khảo sát; câu trùng đã bỏ.
+     Mục nhãn "#" là tiêu đề phần. Ô h1–h4 lưu ở bảng Gọi sau 3 buổi, các ô khác lưu vào Thẻ kết quả mong muốn. */
+  goi_t1:[
+    ['#','Phần 1 · Trải nghiệm học của con (4H) · 2 phút'],
+    ['h1','1 · H1 Thái độ','"Mấy hôm nay con tự nhắc mẹ mở bài, hay mẹ phải nhắc ạ?"','Hỏi tiếp: "Học xong một bài, con có đòi học tiếp không chị?"'],
+    ['h2','2 · H2 Cảm xúc','"Trong bài, phần nào con thích nhất, phần nào con muốn bỏ qua ạ?"','Hỏi tiếp: "Lúc thích, con thể hiện thế nào: cười, làm động tác theo nhân vật…?"'],
+    ['h3','3 · H3 Tương tác với mẹ','"Lúc học thường ai ngồi cạnh con? Con có kể lại hay đố lại người đó không ạ?"','Hỏi tiếp: "Con kể về bạn nào, đoạn nào ạ?"'],
+    ['h4','4 · H4 Mang ngôn ngữ về nhà','"Ngoài giờ học, chị có thấy con tự nói câu tiếng Anh, tiếng Trung nào không ạ?"','Hỏi tiếp: "Con nói gì, với ai, lúc đang làm gì ạ?"'],
+    ['#','Phần 2 · Bối cảnh và lý do · 2 phút'],
+    ['o1','5–6 · ① Bối cảnh','"Trước đợt này con đã học tiếng Anh, tiếng Trung ở đâu, bao lâu rồi chị?" · "Nhà mình có ai nói được tiếng Anh hoặc tiếng Trung không ạ?"',''],
+    ['o3','5 · ③ Nỗi đau','"Cách học đó con hợp và chưa hợp ở điểm nào ạ?"','Hỏi tiếp: "Vì sao nhà mình dừng cách đó ạ?"'],
+    ['khi','7 · ② Khi','"Sao chị muốn cho con học thêm tiếng Trung đúng lúc này ạ?"','Hỏi tiếp: "Chị biết chương trình qua ai, lúc đó thấy thích điểm nào?" Mẹ nêu mốc sắp tới (vào lớp 1, chuyển trường…) thì ghi thêm vào ô ⑥ trong thẻ.'],
+    ['#','Phần 3 · Mong muốn và băn khoăn · 2 phút'],
+    ['muon','8 · ② Tôi muốn','"Học xong 21 ngày, chị mong thấy con làm được gì nhất?"','Hỏi tiếp: "Cụ thể con nói được gì thì chị vui nhất ạ?"'],
+    ['de','9 · ② Để','"Con làm được vậy thì chị vui nhất ở điểm nào?"',''],
+    ['o4','10 · ④ Rào cản','"Từ giờ đến hết 21 ngày, điều gì có thể làm con khó học đều, hay chị còn lo gì không ạ?"','Hỏi tiếp: "Nếu có, chị muốn bên em hỗ trợ thế nào?"']],
   thu_giua:[['o3','③ Nỗi đau','"Trước đây ba mẹ cho con học ngoại ngữ theo cách nào, chỗ nào ba mẹ thấy chưa ổn ạ?"','']],
   chot_3:[['o5','⑤ Kết quả + cách đo','"Cụ thể bé làm được gì thì chị thấy đáng ạ?"',''],['o6','⑥ Vì sao cần ngay','"Sắp tới bé có mốc nào quan trọng không chị?"','']]};
 const viDu=k=>{ const o=THE_O.find(x=>x[0]===k); const m=o&&o[2].match(/Ví dụ:([^]*)$/); return m?'Ví dụ:'+m[1]:''; };
-function nvO(f, ma){ const ds=NV_O[ma]; if(!ds) return ''; const t=f.the||{};
-  return `<div class="nv-o"><p class="hint" style="margin:0">Hỏi lần lượt, ghi nguyên văn lời ba mẹ. Mỗi câu trả lời lưu thẳng vào ô tương ứng của Thẻ kết quả mong muốn.</p>
-    ${ds.map(([k,nhan,hoi,tiep])=>`<label class="nv-q"><span class="nv-qh"><span class="badge nh">${esc(nhan)}</span> ${esc(hoi)}</span>${tiep?`<span class="hint" style="margin:0">${esc(tiep)}</span>`:''}
-      <textarea data-o="${k}" data-nhan="${esc(nhan)}" maxlength="600" placeholder="${esc(viDu(k)||'Ghi nguyên văn lời ba mẹ')}">${esc(t[k]||'')}</textarea></label>`).join('')}</div>`; }
-function nvXong(f,ma){ const n=f.nv||{}; return n[ma] || (ma==='vet_1' && (n.vet_2||n.vet_3)) || null; }
+/* Mở lời, việc cần xem trước và lời kết riêng cho cuộc gọi tuần 1 */
+const H4_VI_DU={h1:'Ví dụ: con tự nhắc mẹ mở bài 2/3 hôm, học xong đòi học tiếp',h2:'Ví dụ: thích nhất phần nói theo Bông, hay bỏ qua phần chạm hình',h3:'Ví dụ: mẹ ngồi cạnh; con đố lại mẹ tên con vật bằng tiếng Trung',h4:'Ví dụ: tối qua con tự nói "xièxie" khi bà đưa bánh'};
+function goiT1Dau(f){ const b=f.bc3;
+  return `<p class="nv-loi"><b>Trước khi gọi:</b> ${b?`học ${b.ngayHoc} ngày · ${b.bai} bài xong · nói ${b.noi} lượt · đang ở mức "${esc(b.trangThai)}". Khen: ${esc(b.khen)}`:'xem số bài và giờ học ở tab Báo cáo học tập.'}</p>
+    <p class="nv-loi"><b>Mở lời:</b> "Dạ em chào chị, em là [tên], đồng hành cùng bé ${esc(f.tenCon||'[tên con]')} trong 21 ngày. Em gọi khoảng 5 phút để hỏi 3 ngày đầu con học thế nào, rồi gợi ý cho chị khung giờ và cách đồng hành hợp với nhà mình ạ."</p>
+    <p class="hint" style="margin:0">Mẹ bận, chỉ có 3 phút: hỏi câu 1, 2, 4, 7, 8, 10. Sau câu 4, dùng câu nối "chỉ số happy" trong kịch bản gọi.</p>`; }
+function goiT1Cuoi(f){ const z=f.g3&&f.g3.zoom;
+  return `<p class="nv-loi"><b>Kết thúc (30 giây):</b> trao lại một gợi ý dựa trên câu 1–4 (ví dụ: con thích phần nói theo nhân vật thì mỗi lần con tự nói, mẹ khen một câu). Rồi mời Zoom Chủ nhật: phần 1 con học theo nhóm 6 bạn với cô, phần 2 ba mẹ hỏi đáp cách đồng hành.</p>
+    <label class="nv-gt-op"><input type="checkbox" class="nv-zoom" ${z?'checked disabled':''}><span><b>Ba mẹ đồng ý cho con dự Zoom Chủ nhật</b>${z?' · đã ghi':''}</span></label>`; }
+function nvO(f, ma){ const ds=NV_O[ma]; if(!ds) return ''; const t=f.the||{}, g=f.g3||{}, t1=ma==='goi_t1';
+  return `<div class="nv-o">${t1?goiT1Dau(f):''}<p class="hint" style="margin:0">Hỏi lần lượt, ghi nguyên văn lời ba mẹ. ${t1?'Câu 1–4 lưu vào Báo cáo học tập (4H); câu 5–10 lưu thẳng vào Thẻ kết quả mong muốn.':'Mỗi câu trả lời lưu thẳng vào ô tương ứng của Thẻ kết quả mong muốn.'}</p>
+    ${ds.map(([k,nhan,hoi,tiep])=>{ if(k==='#') return `<p class="nv-gt" style="margin:6px 0 0">${esc(nhan)}</p>`;
+      const laH=/^h\d$/.test(k), cu=laH?g[k]:t[k];
+      return `<label class="nv-q"><span class="nv-qh"><span class="badge nh">${esc(nhan)}</span> ${esc(hoi)}</span>${tiep?`<span class="hint" style="margin:0">${esc(tiep)}</span>`:''}
+      <textarea ${laH?'data-h':'data-o'}="${k}" data-nhan="${esc(nhan)}" maxlength="600" placeholder="${esc((laH?H4_VI_DU[k]:viDu(k))||'Ghi nguyên văn lời ba mẹ')}">${esc(cu||'')}</textarea></label>`; }).join('')}
+    ${t1?goiT1Cuoi(f):''}</div>`; }
+function nvXong(f,ma){ const n=f.nv||{}; return n[ma] || (ma==='vet_1' && (n.vet_2||n.vet_3)) || (ma==='goi_t1' && n.goi_3b) || null; }
 function nvChang(){ const b=D.caiDat&&D.caiDat.batDau; if(!b) return -1; const ngay=Math.floor((Date.now()-b)/MOT_NGAY)+1;
   return ngay<1?0:ngay<=7?1:ngay<=14?2:ngay<=21?3:4; }
 function nvBox(f){
@@ -1289,17 +1307,21 @@ function bindNv(f, host){
       [['khi',2],['muon',3],['de',4]].forEach(([k,i])=>{ const ta=fm.querySelector(`[data-o="${k}"]`); if(ta&&!ta.value.trim()) ta.value=g[i]; }); });
     fm.onsubmit=async e=>{ e.preventDefault();
       const b=fm.querySelector('button.save'), chon=[...fm.querySelectorAll('.nv-jt input:checked')].map(x=>x.value), t=f.the||{};
-      const duoc=k=>CAP()!=='ctv'||['o1','o4'].includes(k), the={}, ngoai=[], daGhi=[];
+      const duoc=()=>true, the={}, ngoai=[], daGhi=[];
       fm.querySelectorAll('[data-o]').forEach(x=>{ const k=x.dataset.o, v=x.value.trim(); if(v&&duoc(k)) daGhi.push(x.dataset.nhan.split(' ')[0]);
         if(v===(t[k]||'')) return; if(duoc(k)) the[k]=v; else if(v) ngoai.push(x.dataset.nhan+': '+v); });
       const g1=chon.length===1&&JTBD_GT.find(g=>g[0]===chon[0]);
-      if(g1 && !fm.querySelector('[data-o="khi"]') && !(t.khi||t.muon||t.de) && CAP()!=='ctv') Object.assign(the,{khi:g1[2],muon:g1[3],de:g1[4]});
+      if(g1 && !fm.querySelector('[data-o="khi"]') && !(t.khi||t.muon||t.de)) Object.assign(the,{khi:g1[2],muon:g1[3],de:g1[4]});
+      const h={}, g=f.g3||{}; fm.querySelectorAll('[data-h]').forEach(x=>{ const k=x.dataset.h, v=x.value.trim(); if(v) daGhi.push(k.toUpperCase()); if(v!==(g[k]||'')) h[k]=v; });
+      const zEl=fm.querySelector('.nv-zoom'), zoom=!!(zEl&&zEl.checked&&!zEl.disabled);
       const gt=chon.map(v=>v==='khac'?'Khác':(JTBD_GT.find(g=>g[0]===v)||[])[1]).filter(Boolean);
-      const note=[gt.length?'[JTBD: '+gt.join('; ')+']':'', daGhi.length?'Đã ghi vào thẻ '+[...new Set(daGhi)].join(' ')+'.':'', ngoai.join(' · '), fm.querySelector('.nv-note').value.trim()].filter(Boolean).join(' ');
+      const note=[gt.length?'[JTBD: '+gt.join('; ')+']':'', daGhi.length?'Đã ghi '+[...new Set(daGhi)].join(' ')+'.':'', zoom?'Đồng ý Zoom.':'', ngoai.join(' · '), fm.querySelector('.nv-note').value.trim()].filter(Boolean).join(' ');
       b.disabled=true; b.textContent='Đang lưu…';
       try{ if(Object.keys(the).length) D=await api('luuThe',{code:f.code, the});
+        let loi4h='';
+        if(fm.dataset.nv==='goi_t1'){ try{ await api('luu4h',{code:f.code, h, zoom}); }catch(x){ loi4h=' · chưa lưu được 4H: '+x.message; } }
         D=await api('ghiLienHe',{p:{code:f.code, ketQua:'Hoàn thành nhiệm vụ', viec:fm.dataset.nv, ghiChu:note.slice(0,500)}});
-        toast(Object.keys(the).length?'Đã hoàn thành và lưu vào thẻ':'Đã đánh dấu hoàn thành'); openFam(f.code,true); render(); }
+        toast((Object.keys(the).length||Object.keys(h).length?'Đã hoàn thành và lưu câu trả lời':'Đã đánh dấu hoàn thành')+loi4h); openFam(f.code,true); render(); }
       catch(x){ b.disabled=false; b.textContent='✓ Hoàn thành'; if(!x.silent) toast(x.message); } };
   });
 }
