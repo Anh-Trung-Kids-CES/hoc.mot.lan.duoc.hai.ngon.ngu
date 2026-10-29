@@ -31,6 +31,7 @@ const QT_TRANG_THAI = ['Đang dùng thử', 'Mời đăng ký', 'Chờ đóng ph
 const QT_BUOC = QT_TRANG_THAI.slice(0, 7);
 const QT_LY_DO = ['Phí', 'Thời gian', 'Con chưa hợp tuổi', 'Con chưa thích', 'Đã học nơi khác', 'Rút đồng ý', 'Khác'];
 const QT_KET_QUA = ['Đã nói chuyện', 'Không nghe máy', 'Đã nhắn Zalo', 'Ba mẹ nhắn lại / hỏi thêm', 'Hẹn gọi lại', 'Hoàn thành nhiệm vụ', 'Chuyển sale', 'Xin ý kiến cố vấn', 'Cố vấn trả lời', 'Ghi chú nội bộ'];
+const QT_KQ_BO = 'Bỏ hoàn thành';                   // dòng Nhật ký khi bỏ tích một nhiệm vụ (không hiện trong danh sách kết quả)
 const QT_KQ_CAN_GHI_CHU = ['Chuyển sale', 'Xin ý kiến cố vấn', 'Cố vấn trả lời'];
 const QT_KQ_LIEN_HE = ['Đã nói chuyện', 'Không nghe máy', 'Đã nhắn Zalo', 'Ba mẹ nhắn lại / hỏi thêm', 'Hẹn gọi lại', 'Hoàn thành nhiệm vụ'];
 /* Thẻ kết quả mong muốn (6 ô) + câu JTBD + 4 lực, mỗi gia đình một dòng */
@@ -130,6 +131,7 @@ function quanTri_(d) {
     if (fn === 'luuThe') return qtLuuThe_(s, d.code, d.the || {});
     if (fn === 'tich3b') return qtTich3b_(s, d.code, String(d.loai || ''), !!d.on);
     if (fn === 'luu4h') return qtLuu4h_(s, d.code, d.h || {}, !!d.zoom);
+    if (fn === 'boHoanThanh') return qtBoHoanThanh_(s, d.code, d.viec);
     return { ok: false, err: 'Không rõ yêu cầu.' };
   } catch (e) {
     const m = String(e && e.message || e);
@@ -660,6 +662,21 @@ function qtLuu4h_(s, code, h, zoom) {
   if (zoom) qtGhiLienHe_(s, { code: code, ketQua: 'Ghi chú nội bộ', viec: 'zoom_dk', ghiChu: 'Ba mẹ đồng ý cho con tham gia Zoom cuối tuần' });
   return { ok: true };
 }
+/* Bỏ tích nhiệm vụ (29/10/2026): ghi dòng "Bỏ hoàn thành" cùng mã việc, việc sẽ hiện lại ở Việc hôm nay.
+ * Gọi tuần 1 (và Gọi sau 3 buổi cũ) bỏ luôn ô "Đã gọi"; câu trả lời đã ghi trong thẻ và 4H vẫn giữ nguyên. */
+function qtBoHoanThanh_(s, code, viec) {
+  viec = String(viec || '');
+  if (!/^[a-z0-9_]{2,24}$/.test(viec)) throw new Error('Không rõ nhiệm vụ cần bỏ tích.');
+  const ds = viec === 'goi_t1' || viec === 'goi_3b' ? ['goi_t1', 'goi_3b'] : viec === 'vet_1' ? ['vet_1', 'vet_2', 'vet_3'] : [viec];
+  const lock = LockService.getScriptLock(); lock.waitLock(20000);
+  try {
+    const g = qtTimGd_(s, code), r = g.r, nk = qtNhatKySheet_(s.ss), now = new Date();
+    ds.forEach(v => nk.appendRow([now, s.me.ten, r[QT_C['Tên ba/mẹ']], '', r[QT_C['Tên con']], r[QT_C['Tuổi']], '', '', '', r[QT_C['Khoá']],
+      r[QT_C['Trạng thái']], '', '', '', 'Bỏ tích nhiệm vụ', r[QT_C['Mã gia đình']], QT_KQ_BO, v]));
+  } finally { lock.releaseLock(); }
+  if (ds[0] === 'goi_t1') { const g3 = qtG3_(s.ss)[String(code)]; if (g3 && g3.goi) return qtTich3b_(s, code, 'goi', false); }
+  return qtTaiDuLieu_(s);
+}
 function qtLuuThe_(s, code, the) {
   const cap = qtCap_(s.me.vaiTro), keys = cap === 'ctv' ? QT_THE_CTV : QT_THE_KEY.slice(1).concat(QT_OFFER_KEY);
   const lock = LockService.getScriptLock(); lock.waitLock(20000);
@@ -807,7 +824,8 @@ function qtViec21_(f, c, cd, now, capOf) {
   const v = [], st = f.trangThai, chu = f.nguoiHoTro, capChu = capOf[chu] || '';
   const coChu = !!chu && capChu !== 'ctv';
   if (st === 'Dừng') return v;
-  const daLam = (ma, sau) => c.some(x => x.viec === ma && x.t >= (sau || 0));
+  const daLam = (ma, sau) => { const l = c.reduce((m, x) => x.viec === ma && (!m || x.t > m.t) ? x : m, null);
+    return !!l && l.kq !== QT_KQ_BO && l.t >= (sau || 0); };
   const cuoiKq = kq => c.reduce((m, x) => x.kq === kq && x.t > m.t ? x : m, { t: 0, ghiChu: '' });
   const capLienHeSau = (t, caps) => c.some(x => x.t > t && QT_KQ_LIEN_HE.indexOf(x.kq) >= 0 && caps.indexOf(capOf[x.ai] || 'sale') >= 0);
   const add = x => { x.g21 = true; if (x.han < QT_VIEC_MOI_TU + 4 * 3600e3) x.han = QT_VIEC_MOI_TU + 4 * 3600e3; v.push(x); };
@@ -964,6 +982,7 @@ function qtTaiDuLieu_(s) {
     f.theDu = qtTheDu_(f.the);
     f.nv = {};                                 // nhiệm vụ theo bản đồ điểm chạm đã làm: mã việc → lần gần nhất
     c.forEach(x => { if (x.viec && (!f.nv[x.viec] || x.t > f.nv[x.viec].t)) f.nv[x.viec] = { t: x.t, ai: x.ai, ghiChu: x.ghiChu, kq: x.kq }; });
+    Object.keys(f.nv).forEach(k => { if (f.nv[k].kq === QT_KQ_BO) delete f.nv[k]; });   // đã bỏ tích
     f.h21 = f.moKhoa ? qtHoc21Gd_(f, h21) : null;
     f.g3 = g3All[code] || { goi: false, zoom: false };
     f.bc3 = f.moKhoa ? qtBc3_(f, tdCT, cd, now) : null;
@@ -1043,7 +1062,7 @@ function qtBaoCao_(ss, fams, sk, nk, dk, cd, now) {
   fams.forEach(f => { const k = f.nguoiHoTro || '(chưa giao)', o = nguoi[k] || (nguoi[k] = { ten: k, gd: 0, viec: 0, phi: 0, goi: 0, phut: [] });
     o.gd++; o.viec += f.viec.length; if (qtBuoc_(f.trangThai) >= 3) o.phi++;
     if (f.nguon === 'Web học thử' && f.lienHeDau && f.taoLuc) o.phut.push((f.lienHeDau - f.taoLuc) / 60000); });
-  nk.all.forEach(c => { if (!c.ai || c.kq === 'Ghi chú nội bộ') return; const o = nguoi[c.ai] || (nguoi[c.ai] = { ten: c.ai, gd: 0, viec: 0, phi: 0, goi: 0, phut: [] }); o.goi++; });
+  nk.all.forEach(c => { if (!c.ai || c.kq === 'Ghi chú nội bộ' || c.kq === QT_KQ_BO) return; const o = nguoi[c.ai] || (nguoi[c.ai] = { ten: c.ai, gd: 0, viec: 0, phi: 0, goi: 0, phut: [] }); o.goi++; });
   const trungVi = a => { if (!a.length) return null; a = a.slice().sort((x, y) => x - y); return a[Math.floor(a.length / 2)]; };
   const doiNgu = Object.keys(nguoi).map(k => { const o = nguoi[k]; return { ten: o.ten, gd: o.gd, viec: o.viec, phi: o.phi, goi: o.goi, phut: trungVi(o.phut) }; })
     .sort((a, b) => b.gd - a.gd);

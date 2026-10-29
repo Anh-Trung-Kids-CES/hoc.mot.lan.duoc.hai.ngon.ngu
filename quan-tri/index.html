@@ -163,6 +163,7 @@ nav .n.ht{background:#B8141C}
 .nv-i.xong .nv-ck{background:var(--green);border-color:var(--green)}
 .nv-f{margin:10px 0 4px}
 .nv-o{display:grid;gap:10px;margin:0 0 10px}
+.nv-bo{cursor:pointer;font:inherit;padding:0}.nv-bo:hover{opacity:.75}
 .nv-q{display:grid!important;gap:4px}
 .nv-loi{margin:0;font-size:14px;line-height:1.5;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:8px 10px}
 .nv-qh{font-weight:600;font-size:14px;line-height:1.45}
@@ -1282,10 +1283,10 @@ function nvBox(f){
   if(!f.nv) return '';
   const tong=NV.reduce((a,x)=>a+x.ds.length,0), xong=NV.reduce((a,x)=>a+x.ds.filter(d=>nvXong(f,d[0])).length,0), cg=nvChang();
   return `<div class="box nv-box"><h3>Nhiệm vụ theo bản đồ điểm chạm · ${xong}/${tong}</h3>
-    <p class="hint" style="margin:0 0 6px">Làm xong thì tick và ghi ngắn điều khai thác được. Việc cùng tên ở Việc hôm nay tự đóng.</p>
+    <p class="hint" style="margin:0 0 6px">Làm xong thì tick và ghi ngắn điều khai thác được. Việc cùng tên ở Việc hôm nay tự đóng. Tick nhầm thì bấm lại vào ô ✓ để bỏ tích.</p>
     ${NV.map((x,i)=>`<div class="nv-g ${i===cg?'now':''}"><p class="nv-gt">${esc(x.g)}${i===cg?' <span class="badge nh">Đang ở chặng này</span>':''}</p>
       ${x.ds.map(([ma,ten,ai,goiY])=>{ const d=nvXong(f,ma);
-        return d?`<div class="nv-i xong"><span class="nv-ck" aria-hidden="true">✓</span><div><b>${esc(ten)}</b> <span class="badge ai-${ai}">${VT_TEN[ai]}</span>
+        return d?`<div class="nv-i xong"><button class="nv-ck nv-bo" type="button" data-nv-bo="${ma}" title="Bỏ tích: nhiệm vụ hiện lại ở Việc hôm nay" aria-label="Bỏ tích ${esc(ten)}">✓</button><div><b>${esc(ten)}</b> <span class="badge ai-${ai}">${VT_TEN[ai]}</span>
             <div class="hint" style="margin:2px 0 0">${fmt(d.t)} · ${esc(d.ai)}${d.ghiChu&&d.ghiChu!=='Đã gửi tin mẫu'?` – ${esc(d.ghiChu)}`:''}</div></div></div>`
           :`<details class="nv-i"><summary><span class="nv-ck" aria-hidden="true"></span><span><b>${esc(ten)}</b> <span class="badge ai-${ai}">${VT_TEN[ai]}</span></span></summary>
             <form class="log nv-f" data-nv="${ma}" novalidate>
@@ -1300,6 +1301,9 @@ function nvBox(f){
   </div>`;
 }
 function bindNv(f, host){
+  host.querySelectorAll('[data-nv-bo]').forEach(b=>b.onclick=async()=>{ b.disabled=true;
+    try{ D=await api('boHoanThanh',{code:f.code, viec:b.dataset.nvBo}); toast('Đã bỏ tích. Câu trả lời đã ghi vẫn giữ nguyên.'); openFam(f.code,true); render(); }
+    catch(x){ b.disabled=false; if(!x.silent) toast(/Không rõ yêu cầu/.test(x.message)?'Máy chủ chưa cập nhật bản có bỏ tích.':x.message); } });
   host.querySelectorAll('form.nv-f').forEach(fm=>{
     // chọn đúng một giả thuyết: điền sẵn các ô ② còn trống trong chính nhiệm vụ này
     fm.querySelectorAll('.nv-jt input').forEach(cb=>cb.onchange=()=>{ const chon=[...fm.querySelectorAll('.nv-jt input:checked')].map(x=>x.value);
