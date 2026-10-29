@@ -27,7 +27,7 @@ Thêm `?gv=1` vào cuối link, hoặc bấm nút "Chế độ giáo viên" ở 
 
 ## Cập nhật 29/10/2026 (Trang quản trị: Gọi sau 3 buổi)
 
-- Trang quản trị có thêm mục **Gọi 3 buổi**: mỗi con đã mở khóa 21 ngày một dòng, kèm tình hình học (chưa vào web, cần kéo nhịp, học đều, học vượt…), số ngày học, bài xong, lượt nói, chi tiết theo 4H và câu khen, câu hỏi thêm cho cuộc gọi.
+- Trang quản trị có thêm mục **Báo cáo học tập**: mỗi con đã mở khóa 21 ngày một dòng, kèm tình hình học (chưa vào web, cần kéo nhịp, học đều, học vượt…), số ngày học, bài xong, lượt nói, chi tiết theo 4H và câu khen, câu hỏi thêm cho cuộc gọi.
 - Lọc theo người hỗ trợ, tình hình học và cuộc gọi (chưa gọi, đã gọi, đồng ý Zoom, chưa xác nhận Zoom).
 - Hai ô tích **Đã gọi** và **Đồng ý Zoom** lưu ở tab "Gọi sau 3 buổi" của Sheet (tự tạo ở lần tích đầu). Mỗi lần tích ghi một dòng vào Nhật ký cuộc gọi.
 - Việc hôm nay có thêm việc Sale "Gọi sau 3 buổi" (ngày 4–7 của hành trình), tự đóng khi tích Đã gọi. Tin mẫu `goi_3b` dùng khi gọi không gặp.
