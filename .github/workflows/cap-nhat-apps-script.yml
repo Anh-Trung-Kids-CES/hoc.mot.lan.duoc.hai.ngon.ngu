@@ -1,0 +1,57 @@
+# Tự cập nhật máy chủ Apps Script (web học + trang quản trị) mỗi khi Code.gs hoặc QuanTri.gs trên main thay đổi.
+# Cần 2 secret của kho: CLASPRC_JSON và SCRIPT_ID. Cách lấy: apps-script/TU-DONG-CAP-NHAT.md
+name: Cập nhật máy chủ Apps Script
+on:
+  push:
+    branches: [main]
+    paths: ['apps-script/Code.gs', 'apps-script/QuanTri.gs']
+  workflow_dispatch:
+concurrency:
+  group: apps-script-deploy
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      # Bản triển khai đang chạy (link /exec trong quan-tri/index.html). Cập nhật bản này để link giữ nguyên.
+      DEPLOYMENT_ID: AKfycbwsLupVsEa0jqsJ5UDtU1KciL7AiniAhYQk_YZ5N05HESfL6pmSQjcImzZ8nyH9sQ9Lsg
+      CLASPRC_JSON: ${{ secrets.CLASPRC_JSON }}
+      SCRIPT_ID: ${{ secrets.SCRIPT_ID }}
+    steps:
+      - name: Kiểm tra secret
+        run: |
+          if [ -z "$CLASPRC_JSON" ] || [ -z "$SCRIPT_ID" ]; then
+            echo "::error::Chưa có secret CLASPRC_JSON hoặc SCRIPT_ID. Làm theo apps-script/TU-DONG-CAP-NHAT.md"; exit 1; fi
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 200
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Cài clasp
+        run: npm install -g @google/clasp@2.4.2
+      - name: Tải bản đang có trong Apps Script
+        run: |
+          printf '%s' "$CLASPRC_JSON" > ~/.clasprc.json
+          mkdir -p /tmp/gas && cd /tmp/gas
+          printf '{"scriptId":"%s","rootDir":"."}' "$SCRIPT_ID" > .clasp.json
+          clasp pull
+          ls -la
+      - name: So với lịch sử GitHub rồi chép bản mới vào
+        run: node .github/scripts/gop-apps-script.js /tmp/gas
+      - name: Đẩy mã và triển khai phiên bản mới
+        run: |
+          cd /tmp/gas
+          clasp push --force
+          clasp deploy --deploymentId "$DEPLOYMENT_ID" --description "GitHub ${GITHUB_SHA::7}"
+      - name: Kiểm tra máy chủ trả đúng phiên bản
+        run: |
+          muon=$(grep -o "action === 'ping') return json_({ ok: true, v: [0-9]*" apps-script/Code.gs | grep -o '[0-9]*$')
+          for i in 1 2 3 4 5 6; do
+            tra=$(curl -sL "https://script.google.com/macros/s/$DEPLOYMENT_ID/exec?action=ping" || true)
+            echo "Ping: $tra"
+            echo "$tra" | grep -q "\"v\":$muon" && { echo "Máy chủ đang chạy v$muon"; exit 0; }
+            sleep 10
+          done
+          echo "::error::Máy chủ chưa trả v$muon sau khi triển khai"; exit 1
