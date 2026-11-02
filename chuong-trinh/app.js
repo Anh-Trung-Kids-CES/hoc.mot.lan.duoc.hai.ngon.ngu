@@ -289,7 +289,7 @@ function kcell(t){
   t=String(t==null?'':t); if(!t) return '<span class="dash">–</span>';
   return t.split('\n').map(l=>{ let h=esc(l).replace(/^\[(\d+)\]\s*([^·]*)/,'<b>[$1] $2</b>'); return '<p class="kh">'+h+'</p>'; }).join('');
 }
-function blockName(b){ return b.kind==='unit'?'Unit '+b.unit:({mo:'Mở khóa',on:'Ôn chặng',cuoi:'Cuối khóa',le:'Lễ hội',thi:'Thi thử'}[b.kind]||b.kind); }
+function blockName(b){ if(b.kind==='le'&&/^le\d/.test(b.key||'')) return 'Lễ hội '+b.key.slice(2); return b.kind==='unit'?'Unit '+b.unit:({mo:'Mở khóa',on:'Ôn chặng',cuoi:'Cuối khóa',le:'Lễ hội',thi:'Thi thử'}[b.kind]||b.kind); }
 async function pageBang(cid,sel){
   setNav('home');
   const c=course(cid); if(!c) return pageHome();

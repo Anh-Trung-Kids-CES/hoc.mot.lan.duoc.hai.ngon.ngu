@@ -33,3 +33,9 @@ Tiêu chí rà soát: `grid/REVIEW_CRITERIA.md`.
 5. Xóa tab tạm.
 
 Quy định: trong repo chỉ sửa thư mục `chuong-trinh/`. Không động vào web 21 ngày.
+
+## Seedling 48 buổi (02/11/2026)
+Seedling đổi sang **48 buổi × 90 phút, 99 ngày web, 26 tuần** (tuần 1–3: 1 buổi + 3 ngày web; tuần 4–25: 2 buổi + 4 ngày web; tuần 26: buổi 48). Mỗi unit 4 buổi + 8 ngày web; Unit 1 thêm 3 ngày ôn quét Little Seed (ngày 3, 6, 9).
+- Nguồn: `grid/out/seedling-48.json` (mỗi buổi có thêm `tuan` và `ke_hoach` 90 phút; `phu_luc_le` là hoạt động lễ hội dùng khi trùng lịch). `seedling-a/b/c.json` là bản 60 buổi cũ, giữ để đối chiếu, không dùng để dựng web.
+- `data/bang/seedling.*` dựng thẳng từ `seedling-48.json` (không qua `build_site.py`); CSV có thêm cột U "Kế hoạch 90 phút".
+- Kiểm tra: `python3 check_principles.py seedling-48`.
