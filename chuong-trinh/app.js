@@ -124,7 +124,7 @@ function pageCourse(cid){
     <div class="fact card"><small>Tiếng Trung cuối khóa</small><b>${esc(c.zh)}</b></div>
     <div class="fact card"><small>Chuyển ngữ</small><b>${esc(c.bridge)}</b></div>
   </div>
-  <p><a class="btn-bang" href="#/bang/${c.id}">Bảng phân bổ theo buổi: ${c.id==='preb'||c.id==='larva-plus'||c.id==='butterfly'?'30 buổi, 60 ngày web':'60 buổi, 120 ngày web'}</a></p>
+  <p><a class="btn-bang" href="#/bang/${c.id}">Bảng phân bổ theo buổi: ${c.id==='seedling'?'48 buổi × 90 phút, 99 ngày web':c.id==='preb'||c.id==='larva-plus'||c.id==='butterfly'?'30 buổi, 60 ngày web':'60 buổi, 120 ngày web'}</a></p>
   <h2>Chương trình chi tiết</h2>
   <div class="detail card" id="ov"><p class="note">Đang tải…</p></div>
   ${c.units.length?`<h2>Các unit</h2>
@@ -285,6 +285,10 @@ function bcell(t){
     .replace(/ \| /g,'<br>').replace(/ \/ /g,'<br>').replace(/\n/g,'<br>');
   return h;
 }
+function kcell(t){
+  t=String(t==null?'':t); if(!t) return '<span class="dash">–</span>';
+  return t.split('\n').map(l=>{ let h=esc(l).replace(/^\[(\d+)\]\s*([^·]*)/,'<b>[$1] $2</b>'); return '<p class="kh">'+h+'</p>'; }).join('');
+}
 function blockName(b){ return b.kind==='unit'?'Unit '+b.unit:({mo:'Mở khóa',on:'Ôn chặng',cuoi:'Cuối khóa',le:'Lễ hội',thi:'Thi thử'}[b.kind]||b.kind); }
 async function pageBang(cid,sel){
   setNav('home');
@@ -292,24 +296,26 @@ async function pageBang(cid,sel){
   view.innerHTML=`<p class="crumb"><a href="#/">Lộ trình</a> › <a href="#/k/${c.id}">${esc(c.name)}</a> › Bảng phân bổ</p><h1>Bảng phân bổ theo buổi · ${esc(c.name)}</h1><p class="note">Đang tải…</p>`;
   let d; try{ const r=await fetch('data/bang/'+cid+'.json'); if(!r.ok) throw 0; d=await r.json(); }catch(e){ view.querySelector('.note').textContent='Bảng của khóa này đang soạn.'; return; }
   const B=d.blocks; let i=B.findIndex(b=>sel?(String(b.unit)===String(sel)||b.key===sel):true); if(i<0) i=0;
-  const nb=B.reduce((n,b)=>n+b.rows.length,0);
+  const U=B.filter(b=>b.kind!=='le'||!/^Phụ lục/.test(b.title||''));
+  const nb=U.reduce((n,b)=>n+b.rows.length,0), nw=U.reduce((n,b)=>n+b.rows.reduce((m,r)=>m+r.web.length,0),0);
+  const KH=B.some(b=>b.rows.some(r=>r.ke_hoach));
   view.innerHTML=`<p class="crumb"><a href="#/">Lộ trình</a> › <a href="#/k/${c.id}">${esc(c.name)}</a> › Bảng phân bổ</p>
   <h1>Bảng phân bổ theo buổi · ${esc(c.name)}</h1>
-  <p class="lead">${nb} buổi trên lớp, ${nb*2} ngày web. Cứ 2 ngày nội dung trên web đi trước 1 buổi học trên lớp. Hàng ngang là từng ngày web và từng buổi; cột là nội dung: trên web có Từ, Cụm từ, Câu, Truyện, Video; trên lớp có Flash card, Slide bài tập tương tác, Truyện, Bài hát.</p>
+  <p class="lead">${d.lead?esc(d.lead)+' ':''}${d.lead?'':nb+' buổi trên lớp, '+nw+' ngày web. '}Cứ 2 ngày nội dung trên web đi trước 1 buổi học trên lớp. Hàng ngang là từng ngày web và từng buổi; cột là nội dung: trên web có Từ, Cụm từ, Câu, Truyện, Video; trên lớp có Flash card, Slide bài tập tương tác, Truyện, Bài hát.</p>
   <p><a class="chip" href="data/bang/${cid}.csv" download>Tải bảng (CSV, mở được bằng Excel, Google Sheets)</a></p>
   <div class="bchips" role="tablist">${B.map((b,k)=>`<button role="tab" class="chip ${k===i?'on':''}" data-k="${k}" aria-selected="${k===i}">${esc(blockName(b))}</button>`).join('')}</div>
   <div id="bb"></div>`;
   const show=k=>{
     const b=B[k]; view.querySelectorAll('.bchips .chip').forEach(x=>{const on=+x.dataset.k===k; x.classList.toggle('on',on); x.setAttribute('aria-selected',on);});
-    const head=`<thead><tr><th rowspan="3" class="sc">Ngày web</th><th colspan="10" class="grp"><span>Nội dung đẩy lên web</span></th><th rowspan="3" class="sb">Buổi dạy</th><th colspan="8" class="grp"><span>Nội dung dạy trên lớp</span></th></tr>
-      <tr><th colspan="5" class="en">Tiếng Anh</th><th colspan="5" class="zh">Tiếng Trung</th><th colspan="4" class="en">Tiếng Anh</th><th colspan="4" class="zh">Tiếng Trung</th></tr>
+    const head=`<thead><tr><th rowspan="3" class="sc">Ngày web</th><th colspan="10" class="grp"><span>Nội dung đẩy lên web</span></th><th rowspan="3" class="sb">Buổi dạy</th><th colspan="${KH?9:8}" class="grp"><span>Nội dung dạy trên lớp</span></th></tr>
+      <tr><th colspan="5" class="en">Tiếng Anh</th><th colspan="5" class="zh">Tiếng Trung</th><th colspan="4" class="en">Tiếng Anh</th><th colspan="4" class="zh">Tiếng Trung</th>${KH?'<th rowspan="2" class="kh">Kế hoạch 90 phút</th>':''}</tr>
       <tr>${BWEB.map(x=>`<th>${x[1]}</th>`).join('')}${BWEB.map(x=>`<th>${x[1]}</th>`).join('')}${BLOP.map(x=>`<th>${x[1]}</th>`).join('')}${BLOP.map(x=>`<th>${x[1]}</th>`).join('')}</tr></thead>`;
     const body=b.rows.map(r=>r.web.map((w,j)=>`<tr class="${j?'w2':'w1'}"><th class="sc">${esc(w.label)}</th>
       ${BWEB.map(x=>`<td>${bcell(w.en[x[0]])}</td>`).join('')}${BWEB.map(x=>`<td class="zh">${bcell(w.zh[x[0]])}</td>`).join('')}
-      ${j===0?`<th rowspan="${r.web.length}" class="sb">${esc(r.label_buoi)}</th>${BLOP.map(x=>`<td rowspan="${r.web.length}" class="lop">${bcell(r.lop.en[x[0]])}</td>`).join('')}${BLOP.map(x=>`<td rowspan="${r.web.length}" class="lop zh">${bcell(r.lop.zh[x[0]])}</td>`).join('')}`:''}</tr>`).join('')).join('');
+      ${j===0?`<th rowspan="${r.web.length}" class="sb">${esc(r.label_buoi)}</th>${BLOP.map(x=>`<td rowspan="${r.web.length}" class="lop">${bcell(r.lop.en[x[0]])}</td>`).join('')}${BLOP.map(x=>`<td rowspan="${r.web.length}" class="lop zh">${bcell(r.lop.zh[x[0]])}</td>`).join('')}${KH?`<td rowspan="${r.web.length}" class="lop kh">${kcell(r.ke_hoach)}</td>`:''}`:''}</tr>`).join('')).join('');
     const cards=b.rows.map(r=>`<article class="bcard card"><h3>${esc(r.label_buoi)}</h3>
       ${r.web.map(w=>`<details><summary>${esc(w.label)}</summary>${['en','zh'].map(L=>`<div class="bl ${L}"><b>${L==='en'?'Tiếng Anh':'Tiếng Trung'}</b><dl>${BWEB.map(x=>`<dt>${x[1]}</dt><dd>${bcell(w[L][x[0]])}</dd>`).join('')}</dl></div>`).join('')}</details>`).join('')}
-      <details><summary>Trên lớp</summary>${['en','zh'].map(L=>`<div class="bl ${L}"><b>${L==='en'?'Tiếng Anh':'Tiếng Trung'}</b><dl>${BLOP.map(x=>`<dt>${x[1]}</dt><dd>${bcell(r.lop[L][x[0]])}</dd>`).join('')}</dl></div>`).join('')}</details></article>`).join('');
+      <details><summary>Trên lớp</summary>${['en','zh'].map(L=>`<div class="bl ${L}"><b>${L==='en'?'Tiếng Anh':'Tiếng Trung'}</b><dl>${BLOP.map(x=>`<dt>${x[1]}</dt><dd>${bcell(r.lop[L][x[0]])}</dd>`).join('')}</dl></div>`).join('')}</details>${r.ke_hoach?`<details><summary>Kế hoạch 90 phút</summary><div class="bl">${kcell(r.ke_hoach)}</div></details>`:''}</article>`).join('');
     $('#bb').innerHTML=`<h2>${esc(b.title||blockName(b))}</h2><div class="bwrap card"><table class="bang">${head}<tbody>${body}</tbody></table></div><div class="bcards">${cards}</div>`;
     history.replaceState(null,'','#/bang/'+cid+'/'+(b.kind==='unit'?b.unit:b.key));
   };
