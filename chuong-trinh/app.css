@@ -337,9 +337,3 @@ button.mic{cursor:pointer;position:relative}
   .gc audio{max-width:100%;width:100%}
   .leo-grid{grid-template-columns:1fr}
 }
-
-/* Kế hoạch 90 phút */
-.bang td.kh{min-width:420px;max-width:560px}
-.bang th.kh{min-width:420px}
-p.kh{margin:0 0 .45em;line-height:1.45}
-p.kh b{color:var(--ink,inherit)}
