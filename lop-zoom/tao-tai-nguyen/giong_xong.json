@@ -1,12 +1,38 @@
-[
- {
-  "file": "ls_co_huou_vi_zoom_02.mp3",
-  "text": "Cô quay vòng chọn bạn nhé!",
-  "lang": "vi"
- },
- {
-  "file": "ls_co_huou_zh_jiao.mp3",
-  "text": "叫",
-  "lang": "zh"
- }
-]
+{
+ "xong": [
+  "ls_co_huou_vi_zoom_01.mp3",
+  "ls_co_huou_vi_zoom_03.mp3",
+  "ls_co_huou_vi_zoom_04.mp3",
+  "ls_co_huou_vi_zoom_05.mp3",
+  "ls_co_huou_vi_zoom_06.mp3",
+  "ls_co_huou_vi_zoom_07.mp3",
+  "ls_co_huou_vi_zoom_08.mp3",
+  "ls_co_huou_vi_zoom_11.mp3",
+  "ls_co_huou_vi_zoom_12.mp3",
+  "ls_co_huou_vi_zoom_13.mp3",
+  "ls_co_huou_vi_zoom_14.mp3",
+  "ls_co_huou_vi_zoom_15.mp3",
+  "ls_co_huou_vi_zoom_16.mp3",
+  "ls_co_huou_vi_khen_01.mp3",
+  "ls_co_huou_vi_khen_02.mp3",
+  "ls_co_huou_vi_khen_03.mp3",
+  "ls_co_huou_vi_khen_04.mp3",
+  "ls_co_huou_vi_khen_05.mp3",
+  "ls_co_huou_vi_khen_06.mp3",
+  "ls_co_huou_vi_khen_07.mp3",
+  "ls_co_huou_vi_khen_08.mp3",
+  "ls_co_huou_vi_khen_09.mp3",
+  "ls_co_huou_vi_khen_10.mp3",
+  "ls_co_huou_vi_khen_11.mp3",
+  "ls_co_huou_vi_khen_12.mp3",
+  "ls_co_huou_vi_khen_13.mp3",
+  "ls_co_huou_vi_khen_14.mp3",
+  "ls_co_huou_vi_khen_15.mp3",
+  "ls_co_huou_vi_khen_16.mp3",
+  "ls_co_huou_vi_khen_17.mp3",
+  "ls_co_huou_vi_khen_18.mp3",
+  "ls_co_huou_vi_khen_19.mp3",
+  "ls_co_huou_vi_khen_20.mp3"
+ ],
+ "loi": []
+}
