@@ -250,14 +250,17 @@ const HD = {
 
 /* ======================= Âm thanh ======================= */
 const SND = (() => {
-  let cur = null, queue = [], ctx = null, token = 0;
+  let cur = null, queue = [], ctx = null, token = 0, EL = null;
   function stop() { token++; queue = []; if (cur) { try { cur.pause(); } catch (e) { } cur = null; } }
   let vol = 1;
   function playOne(src, tk) {
     return new Promise(res => {
       if (!src || tk !== token) return res();
-      const a = new Audio(src); cur = a; a.volume = vol;
-      const done = () => { if (cur === a) cur = null; res(); };
+      /* dùng lại một thẻ âm thanh đã được "mở khoá" bằng lần chạm đầu tiên: iPhone/iPad mới cho tự phát những câu sau */
+      const a = EL || (EL = new Audio()); cur = a;
+      try { a.pause(); } catch (e) { }
+      a.src = src; a.volume = vol;
+      const done = () => { a.onended = a.onerror = null; if (cur === a) cur = null; res(); };
       a.onended = done; a.onerror = done;
       a.play().catch(done);
     });
@@ -284,7 +287,11 @@ const SND = (() => {
       });
     } catch (e) { }
   }
-  function unlock() { try { ctx = ctx || new (window.AudioContext || window.webkitAudioContext)(); ctx.resume(); } catch (e) { } const a = new Audio(); a.muted = true; a.play().catch(() => { }); }
+  function unlock() {
+    try { ctx = ctx || new (window.AudioContext || window.webkitAudioContext)(); ctx.resume(); } catch (e) { }
+    EL = EL || new Audio();
+    try { EL.muted = true; EL.src = 'data:audio/mp3;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU4Ljc2LjEwMAAAAAAAAAAAAAAA//tQAAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAACAAABhgC7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7//////////////////////////////////////////////////////////////////8AAAAATGF2YzU4LjEzAAAAAAAAAAAAAAAAJAAAAAAAAAAAAYYoRBqpAAAAAAD/+xBkAA/wAABpAAAACAAADSAAAAEAAAGkAAAAIAAANIAAAARMQU1FMy4xMDBVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV'; const p = EL.play(); p && p.then(() => { EL.pause(); EL.muted = false; }).catch(() => { EL.muted = false; }); } catch (e) { }
+  }
   return { play, stop, beep, unlock };
 })();
 function hd(line) { return HD[line] || ''; }
