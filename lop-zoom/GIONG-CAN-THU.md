@@ -1,4 +1,7 @@
-# Giọng cô Hươu cần thu thêm cho Lớp Zoom
+# Giọng cô Hươu cho Lớp Zoom
+
+**Trạng thái 04/11/2026: ĐÃ TẠO ĐỦ 35/35 câu** (Gemini Batch API, giọng Sulafat), đã nghe soát bằng máy chép lời và đã gắn vào web (`gan_vao_web.py`).
+Muốn đổi câu: sửa `tao-tai-nguyen/giong.json`, chạy `tao_giong.py <khoá> <tên_file>` rồi `gan_vao_web.py`. Lưu ý: chỉ gửi đúng câu cần đọc, không kèm lời dặn giọng (máy sẽ đọc to cả lời dặn).
 
 Danh sách đầy đủ (máy đọc được) ở `tao-tai-nguyen/giong.json`; tạo tự động bằng `tao-tai-nguyen/tao_giong.py` (Gemini TTS, giọng **Sulafat**).
 Câu nào chưa có file thì màn bé chỉ hiện chữ hoặc tạm đọc câu có sẵn, không dùng giọng máy.
@@ -9,7 +12,7 @@ Câu nào chưa có file thì màn bé chỉ hiện chữ hoặc tạm đọc c�
 | ls_co_huou_vi_zoom_02.mp3 | Cô quay vòng chọn bạn nhé! |
 | ls_co_huou_vi_zoom_03.mp3 | Cả lớp cùng hỏi bạn nhé! |
 | ls_co_huou_vi_zoom_04.mp3 | Con nghe rồi chạm vào đường bay đúng nhé! |
-| ls_co_huou_vi_zoom_05.mp3 | Cả lớp bay tay nói theo nhé! |
+| ls_co_huou_vi_zoom_05.mp3 | Cả lớp đưa tay bay theo, nói theo nhé! |
 | ls_co_huou_vi_zoom_06.mp3 | Con nói cho bạn nghe nhé! |
 | ls_co_huou_vi_zoom_07.mp3 | Con nghe bạn nói rồi chạm tranh đúng nhé! |
 | ls_co_huou_vi_zoom_08.mp3 | Hai bạn ăn ý quá! |
@@ -39,4 +42,4 @@ Câu nào chưa có file thì màn bé chỉ hiện chữ hoặc tạm đọc c�
 | ls_co_huou_vi_khen_18.mp3 | Cả lớp cùng nhau thắng Rồng Lửa rồi! |
 | ls_co_huou_vi_khen_19.mp3 | Con nhớ truyện giỏi ghê! |
 | ls_co_huou_vi_khen_20.mp3 | Con xếp tranh đúng hết rồi! |
-| ls_co_huou_zh_jiao.mp3 | 叫 |
+| ls_co_huou_zh_jiao.mp3 | 叫 (gửi máy "叫。" để đọc đúng tiếng Trung) |

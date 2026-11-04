@@ -1,5 +1,7 @@
 # Hình biểu cảm cho trò "Cả lớp đấu Rồng Lửa" (tuỳ chọn)
 
+**Trạng thái 04/11/2026: ĐÃ VẼ ĐỦ 4 ảnh** (Gemini, ảnh gốc làm mẫu) và đã điền vào `BOSS_V` trong `lz-boss.js`.
+
 Hiện web dùng 2 ảnh có sẵn (`qua/ava_bong_sieu_nhan.webp`, `qua/mon_lua_3.webp`) và tạo biểu cảm bằng chuyển động
 (nhún theo nhịp, lao tới tấn công, rung khi trúng đòn, phát sáng khi được tiếp sức) cùng biểu tượng cảm xúc cạnh đầu nhân vật.
 Muốn nhân vật đổi nét mặt thật như phim hoạt hình, vẽ thêm 4 ảnh dưới đây bằng Gemini (tự động: `tao-tai-nguyen/tao_hinh.py`) (cùng nét 2D, nền trong suốt,

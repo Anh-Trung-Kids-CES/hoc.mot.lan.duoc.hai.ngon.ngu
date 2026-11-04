@@ -293,11 +293,11 @@ function vTone(st, seats) {
   const opts = [1, 2, 3, 4].map(t => `<button class="path${my && my.c === t ? ' chosen' : ''}${rv && CHIEU && t === x.t ? ' right' : ''}${rv && CHIEU && t !== x.t ? ' dim' : ''}" data-c="${t}">${planeSVG(t, 'pl' + t)}<span>${TONE_NAME[t]}</span></button>`).join('');
   const head = `<div class="tone-head"><img src="${tonePic(x)}" alt=""><div class="chu zh">${x.c}</div>
     <div class="tone-side"><div class="py">${rv && CHIEU ? x.py : x.p0}</div>${a ? `<button class="say zh tone-say" data-play><span class="ic">🔊</span>Nghe</button>` : '<p class="sub">Cô đọc trên Zoom</p>'}</div></div>`;
-  const body = rv && CHIEU ? `<div class="cheer" style="color:var(--red)">Cả lớp bay tay nói theo nhé! ✋ ${x.py}</div><div class="fly-big">${planeSVG(x.t, 'plBig', true)}</div>`
+  const body = rv && CHIEU ? `<div class="cheer" style="color:var(--red)">Cả lớp đưa tay bay theo, nói theo nhé! ✋ ${x.py}</div><div class="fly-big">${planeSVG(x.t, 'plBig', true)}</div>`
     : `<div class="paths${my || CHIEU ? ' locked' : ''}" id="pics">${opts}</div><p class="count" id="cnt"></p>`;
   const akey = ['tone', i, st.run || 0, rv ? 1 : 0, st.rp || 0].join('|');
   return {
-    key, akey, audio: rv ? [hd('Cả lớp bay tay nói theo nhé!'), 300].concat(a ? [a, 700, a, 700, a] : []) : (i === 0 && !st.rp ? [hd('Con nghe rồi chạm vào đường bay đúng nhé!'), 300] : []).concat(a ? [a, 800, a] : []),
+    key, akey, audio: rv ? [hd('Cả lớp đưa tay bay theo, nói theo nhé!'), 300].concat(a ? [a, 700, a, 700, a] : []) : (i === 0 && !st.rp ? [hd('Con nghe rồi chạm vào đường bay đúng nhé!'), 300] : []).concat(a ? [a, 800, a] : []),
     html: `<div class="qno">Máy bay thanh điệu ${i + 1}/${TONES.length}</div>${rv && CHIEU ? '' : '<p class="ask-line">✈️ Con nghe rồi chạm vào đường bay đúng nhé!</p>'}${head}${body}`,
     bind() {
       bindPlay(() => a ? [a] : []);

@@ -243,7 +243,7 @@ const CTL = {
         <p><span class="bigtxt zh">${x.c}</span> <span class="bigtxt" style="color:var(--red)">${x.py}</span> · thanh ${x.t} (${TONE_NAME[x.t]})</p>
         ${toneAudio(x) ? '' : '<p class="tip">Chữ này chưa có file giọng riêng: <b>cô đọc trên Zoom</b>.</p>'}
         ${qButtons(st, i, TONES.length, rv)}
-        <p class="tip">Sau khi hiện đáp án: cả lớp bay tay nói theo. Cô chấm từng bé ở cột phải: <b>Chuẩn</b> / <b>Gần</b> / <b>Luyện</b>. Bé 1 máy: bấm hộ số đường bay 1–4.</p>`;
+        <p class="tip">Sau khi hiện đáp án: cả lớp đưa tay bay theo, nói theo. Cô chấm từng bé ở cột phải: <b>Chuẩn</b> / <b>Gần</b> / <b>Luyện</b>. Bé 1 máy: bấm hộ số đường bay 1–4.</p>`;
     },
     bind(st) { qBind(st, TONES.length, 'pair'); },
     qid: st => `tone_${st.i || 0}_${st.run || 0}`, opts: 4,

@@ -53,7 +53,8 @@ Luật Little Seed: chỉ chạm và nói, 3 tranh, không bảng xếp hạng (
 - `co.html`, `lz-co.js`, `co.css` – màn cô
 - `lz-core.js` – cấu hình Firebase, nội dung Vòng 2, âm thanh, chỗ ngồi, thanh năng lượng
 - `lz.css` – kiểu chung
-- `GIONG-CAN-THU.md` – các câu giọng cô Hươu cần thu thêm
+- `GIONG-CAN-THU.md` – 35 câu giọng cô Hươu riêng cho Lớp Zoom (đã tạo đủ, đã gắn)
+- `HINH-CAN-VE.md` – 4 ảnh biểu cảm trận Rồng Lửa (đã vẽ đủ, đã gắn)
 - Mỗi lần sửa tệp .js/.css: đổi số `?v=` trong `index.html` và `co.html` để trình duyệt của cô và ba mẹ tải bản mới
 
 ## Đợt 2 (cho Zoom ngày 21)

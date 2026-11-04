@@ -5,11 +5,11 @@
 /* Ảnh biểu cảm (tuỳ chọn): khi vẽ xong thì điền đường dẫn (tính từ xem-truoc/tai-nguyen/), để trống thì dùng ảnh gốc
    và thêm biểu cảm bằng chuyển động + biểu tượng cảm xúc. Danh sách ảnh cần vẽ: lop-zoom/HINH-CAN-VE.md */
 const BOSS_V = {
-  heroWin: '',    // Bông siêu nhân reo vui, giơ nắm tay
-  heroHurt: '',   // Bông siêu nhân nhăn mặt, lùi lại
+  heroWin: 'qua/zoom_bong_thang.webp',    // Bông siêu nhân reo vui, giơ nắm tay
+  heroHurt: 'qua/zoom_bong_lui.webp',   // Bông siêu nhân nhăn mặt, lùi lại
   heroAtk: '',    // Bông siêu nhân tung tia sáng từ hai tay
-  monAngry: '',   // Rồng Lửa nổi giận, phun lửa
-  monDizzy: '',   // Rồng Lửa choáng, mắt xoay vòng
+  monAngry: 'qua/zoom_rong_gian.webp',   // Rồng Lửa nổi giận, phun lửa
+  monDizzy: 'qua/zoom_rong_choang.webp',   // Rồng Lửa choáng, mắt xoay vòng
   monFriend: ''   // Rồng Lửa cười hiền, ôm bánh sinh nhật
 };
 function bImg(key, base) { return BOSS_V[key] ? TN + BOSS_V[key] : base; }

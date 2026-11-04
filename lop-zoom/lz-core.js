@@ -162,9 +162,9 @@ const TONES = [
   { c: '五', py: 'wǔ', p0: 'wu', t: 3, k: 'five' },
   { c: '六', py: 'liù', p0: 'liu', t: 4, k: 'six' },
   { c: '你', py: 'nǐ', p0: 'ni', t: 3, k: 'you' },
-  { c: '叫', py: 'jiào', p0: 'jiao', t: 4, k: 'mna', a: '' },   // chưa có file đọc riêng chữ 叫: cô đọc trên Zoom
+  { c: '叫', py: 'jiào', p0: 'jiao', t: 4, k: 'mna', a: AU + 'ls_co_huou_zh_jiao.mp3' },   // giọng cô Hươu đọc riêng chữ 叫 (tạo 04/11)
 ];
-function toneAudio(x) { return x.a === '' ? '' : aud(x.k, 'zh'); }
+function toneAudio(x) { return x.a !== undefined ? x.a : aud(x.k, 'zh'); }
 function tonePic(x) { return pic(x.k, 1); }
 /* đường bay (SVG 100×60): mỗi thanh một đường */
 const TONE_PATH = {
@@ -253,6 +253,41 @@ const HD = {
   'Con nghe rồi thử nói bằng tiếng kia nhé!': AU + 'ls_co_huou_vi_033.mp3',
   'Tuyệt vời! Con đã học xong hôm nay rồi!': AU + 'ls_co_huou_vi_036.mp3',
   'Con nghe lại nhé.': AU + 'ls_co_huou_vi_024.mp3',
+  /* Lớp Zoom (thu 04/11/2026) */
+  'Con chờ cô một chút nhé, các bạn đang vào lớp.': AU + 'ls_co_huou_vi_zoom_01.mp3',
+  'Cô quay vòng chọn bạn nhé!': AU + 'ls_co_huou_vi_zoom_02.mp3',
+  'Cả lớp cùng hỏi bạn nhé!': AU + 'ls_co_huou_vi_zoom_03.mp3',
+  'Con nghe rồi chạm vào đường bay đúng nhé!': AU + 'ls_co_huou_vi_zoom_04.mp3',
+  'Cả lớp đưa tay bay theo, nói theo nhé!': AU + 'ls_co_huou_vi_zoom_05.mp3',
+  'Con nói cho bạn nghe nhé!': AU + 'ls_co_huou_vi_zoom_06.mp3',
+  'Con nghe bạn nói rồi chạm tranh đúng nhé!': AU + 'ls_co_huou_vi_zoom_07.mp3',
+  'Hai bạn ăn ý quá!': AU + 'ls_co_huou_vi_zoom_08.mp3',
+  'Cả nhóm giỏi quá! Cả nhóm được huy hiệu Bứt phá!': AU + 'ls_co_huou_vi_zoom_11.mp3',
+  'Con chạm lần lượt các tranh theo thứ tự truyện nhé!': AU + 'ls_co_huou_vi_zoom_12.mp3',
+  'Cả lớp cùng tiếp sức cho anh hùng Bông nhé!': AU + 'ls_co_huou_vi_zoom_13.mp3',
+  'Rồng Lửa nổi giận rồi! Cả lớp trả lời nhanh nào!': AU + 'ls_co_huou_vi_zoom_14.mp3',
+  'Cả lớp thắng rồi! Rồng Lửa biến lại thành quả trứng!': AU + 'ls_co_huou_vi_zoom_15.mp3',
+  'Con là cô giáo nhỏ! Con nói cho cả lớp nghe nhé!': AU + 'ls_co_huou_vi_zoom_16.mp3',
+  'Con nghe tiếng Anh tinh ghê!': AU + 'ls_co_huou_vi_khen_01.mp3',
+  'Tai con bắt được từ tiếng Anh rồi!': AU + 'ls_co_huou_vi_khen_02.mp3',
+  'Con nghe ra tiếng Trung rồi đó!': AU + 'ls_co_huou_vi_khen_03.mp3',
+  'Con nhận ra từ tiếng Trung nhanh ghê!': AU + 'ls_co_huou_vi_khen_04.mp3',
+  'Con nhìn chữ là nhận ra liền!': AU + 'ls_co_huou_vi_khen_05.mp3',
+  'Con nhớ mặt chữ rồi đó!': AU + 'ls_co_huou_vi_khen_06.mp3',
+  'Máy bay của con bay đúng đường rồi!': AU + 'ls_co_huou_vi_khen_07.mp3',
+  'Tai con bắt thanh điệu chuẩn ghê!': AU + 'ls_co_huou_vi_khen_08.mp3',
+  'Con nói rõ nên bạn hiểu liền!': AU + 'ls_co_huou_vi_khen_09.mp3',
+  'Bạn nghe con nói là hiểu ngay!': AU + 'ls_co_huou_vi_khen_10.mp3',
+  'Con hiểu ý bạn rồi đó!': AU + 'ls_co_huou_vi_khen_11.mp3',
+  'Con lắng nghe bạn giỏi ghê!': AU + 'ls_co_huou_vi_khen_12.mp3',
+  'Con đoán đúng cùng các bạn rồi!': AU + 'ls_co_huou_vi_khen_13.mp3',
+  'Cô giáo nhỏ nói hay ghê, các bạn hiểu rồi!': AU + 'ls_co_huou_vi_khen_14.mp3',
+  'Con nói rõ, cả lớp hiểu con rồi!': AU + 'ls_co_huou_vi_khen_15.mp3',
+  'Con hiểu cô giáo nhỏ rồi đó!': AU + 'ls_co_huou_vi_khen_16.mp3',
+  'Con lắng nghe bạn rất chăm!': AU + 'ls_co_huou_vi_khen_17.mp3',
+  'Cả lớp cùng nhau thắng Rồng Lửa rồi!': AU + 'ls_co_huou_vi_khen_18.mp3',
+  'Con nhớ truyện giỏi ghê!': AU + 'ls_co_huou_vi_khen_19.mp3',
+  'Con xếp tranh đúng hết rồi!': AU + 'ls_co_huou_vi_khen_20.mp3',
 };
 
 /* ======================= Âm thanh ======================= */
