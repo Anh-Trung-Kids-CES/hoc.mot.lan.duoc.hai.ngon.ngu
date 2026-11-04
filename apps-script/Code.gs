@@ -60,6 +60,8 @@ function doPost(e) {
   try {
     const d = d0;
     if (d.action === 'family') return json_(family_(d));
+    if (d.action === 'zoom') return json_(lopZoom_(d));          // kết quả buổi Zoom (lop-zoom/co.html)
+    if (d.action === 'zoomhs') return json_(lopZoomHoSo_(d));    // Chuẩn bị vào lớp (lop-zoom/index.html?chuan-bi)
     if (d.action === 'redeem') {
       if (!d.id || !d.code) return json_({ ok: false });
       const sh = sheet_('DoiQua', QUA_HEAD);
@@ -98,7 +100,7 @@ function doPost(e) {
 
 function doGet(e) {
   const p = e.parameter || {};
-  if (p.action === 'ping') return json_({ ok: true, v: 14 });          // v14: bỏ tích nhiệm vụ · v13: Gọi tuần 1 gộp (4H + thẻ), CTV ghi đủ 6 ô · v12: Gọi sau 3 buổi (báo cáo + ô tích Đã gọi / Đồng ý Zoom) · v11: phân luồng CTV (chưa kích hoạt) / Sale (đã kích hoạt) / Cố vấn (chỉ định) · v3: Bảng Gia đình · v4: mở khóa 21 ngày · v5: trang quản trị có tài khoản · v7: Xếp hạng · v8: việc theo vai trò CTV/Sale/Cố vấn · v9: offer trong Thẻ gia đình · v10: nhiệm vụ theo bản đồ
+  if (p.action === 'ping') return json_({ ok: true, v: 15 });          // v15: Lớp Zoom (tab Lớp Zoom, Chuẩn bị Zoom, ảnh con vào Drive) · v14: bỏ tích nhiệm vụ · v13: Gọi tuần 1 gộp (4H + thẻ), CTV ghi đủ 6 ô · v12: Gọi sau 3 buổi (báo cáo + ô tích Đã gọi / Đồng ý Zoom) · v11: phân luồng CTV (chưa kích hoạt) / Sale (đã kích hoạt) / Cố vấn (chỉ định) · v3: Bảng Gia đình · v4: mở khóa 21 ngày · v5: trang quản trị có tài khoản · v7: Xếp hạng · v8: việc theo vai trò CTV/Sale/Cố vấn · v9: offer trong Thẻ gia đình · v10: nhiệm vụ theo bản đồ
   if (p.action === 'xephang') return json_(xepHang_(p));
   if (p.action === 'access') return json_(access_(p));
   if (p.action === 'visit') return visit_(p);
@@ -367,4 +369,53 @@ function access_(p) {
   if (h && b.paid[h]) return { ok: true, via: 'da-dong-phi' };
   if (id && b.cu[id]) return { ok: true, via: 'dang-hoc' };
   return { ok: false, known: false };
+}
+
+
+/* ---------- Lớp Zoom (thư mục lop-zoom/ trên web học) ----------
+ * action 'zoom'  : màn cô gửi kết quả buổi Zoom. rows[0] là tiêu đề, mỗi dòng sau là một bé.
+ *                  Ghi vào tab "Lớp Zoom"; gửi lại cùng phòng + ngày + chỗ ngồi thì ghi đè dòng cũ.
+ * action 'zoomhs': ba mẹ điền "Chuẩn bị vào lớp" (tên con, tên ba mẹ, avatar, ảnh khi đồng ý).
+ *                  Ghi vào tab "Chuẩn bị Zoom"; ảnh lưu vào thư mục Drive riêng ZOOM_ANH_THU_MUC (không chia sẻ công khai).
+ * Hết thử thách: chạy hàm xoaAnhLopZoom() một lần để chuyển toàn bộ ảnh con vào thùng rác.
+ */
+const ZOOM_ANH_THU_MUC = 'Lớp Zoom – Ảnh con (xóa khi hết thử thách)';
+function lopZoom_(d) {
+  const rows = d.rows || [];
+  if (rows.length < 2) return { ok: false, n: 0 };
+  const head = rows[0].concat(['Cập nhật']);
+  const sh = sheet_('Lớp Zoom', head);
+  const n = sh.getLastRow(), keys = {};
+  if (n > 1) sh.getRange(2, 1, n - 1, 3).getValues().forEach((r, i) => { keys[[r[0], fmtDate_(r[1]), r[2]].join('|')] = i + 2; });
+  let cnt = 0;
+  rows.slice(1).forEach(r => {
+    const row = r.map(v => (v === null || v === undefined) ? '' : v).concat([new Date()]);
+    while (row.length < head.length) row.splice(row.length - 1, 0, '');
+    const k = [r[0], String(r[1]), r[2]].join('|');
+    if (keys[k]) sh.getRange(keys[k], 1, 1, row.length).setValues([row]); else sh.appendRow(row);
+    cnt++;
+  });
+  return { ok: true, n: cnt };
+}
+function fmtDate_(v) { return v instanceof Date ? Utilities.formatDate(v, 'Asia/Ho_Chi_Minh', 'yyyy-MM-dd') : String(v); }
+function lopZoomHoSo_(d) {
+  const sh = sheet_('Chuẩn bị Zoom', ['Thời gian', 'Tên con', 'Tên ba/mẹ', 'Avatar', 'Đồng ý cho lớp thấy ảnh', 'Ảnh (Drive)', 'Mã bé web 21 ngày', 'Khoá', 'Vòng']);
+  let link = '';
+  if (d.ok && d.photo && String(d.photo).indexOf('data:image/') === 0) {
+    try {
+      const it = DriveApp.getFoldersByName(ZOOM_ANH_THU_MUC), folder = it.hasNext() ? it.next() : DriveApp.createFolder(ZOOM_ANH_THU_MUC);
+      const b64 = String(d.photo).split(',')[1];
+      const blob = Utilities.newBlob(Utilities.base64Decode(b64), 'image/jpeg', ('anh-' + (d.kid || 'con') + '-' + Date.now()).replace(/[^\w\-]+/g, '_') + '.jpg');
+      link = folder.createFile(blob).getUrl();
+    } catch (e) { link = 'Lỗi lưu ảnh: ' + e; }
+  }
+  sh.appendRow([new Date(), String(d.kid || '').slice(0, 60), String(d.parent || '').slice(0, 60), String(d.ava || ''), d.ok ? 'Có' : 'Không', link, String(d.web || ''), String(d.khoa || ''), String(d.vong || '')]);
+  return { ok: true };
+}
+/* Chạy tay khi hết thử thách: chuyển ảnh con vào thùng rác và xoá link ảnh trong tab "Chuẩn bị Zoom" */
+function xoaAnhLopZoom() {
+  const it = DriveApp.getFoldersByName(ZOOM_ANH_THU_MUC);
+  while (it.hasNext()) { const f = it.next(); const fs = f.getFiles(); while (fs.hasNext()) fs.next().setTrashed(true); f.setTrashed(true); }
+  const sh = ss_().getSheetByName('Chuẩn bị Zoom');
+  if (sh && sh.getLastRow() > 1) sh.getRange(2, 6, sh.getLastRow() - 1, 1).clearContent();
 }

@@ -33,3 +33,8 @@ Thêm `?gv=1` vào cuối link, hoặc bấm nút "Chế độ giáo viên" ở 
 - Việc hôm nay có thêm việc Sale "Gọi sau 3 buổi" (ngày 4–7 của hành trình), tự đóng khi tích Đã gọi. Tin mẫu `goi_3b` dùng khi gọi không gặp.
 - Máy chủ: sửa `apps-script/QuanTri.gs` và `apps-script/Code.gs` (ping trả `v: 12`). Cần dán hai tệp này vào dự án Apps Script của máy chủ web học rồi **Triển khai → Quản lý triển khai → sửa → Phiên bản mới** (giữ nguyên link /exec).
 - Máy chủ Apps Script đã lên phiên bản 14 (ping v:12) ngày 29/10. Máy chủ **không tự cập nhật**: sửa `Code.gs`/`QuanTri.gs` thì dán vào dự án và triển khai phiên bản mới theo `apps-script/TU-DONG-CAP-NHAT.md`.
+
+## Cập nhật 04/11/2026 (Lớp Zoom đợt 1)
+- Thư mục mới **`lop-zoom/`**: web riêng cho buổi Zoom cuối tuần kiểu Wayground, đợt 1 Little Seed Vòng 2 (Zoom Chủ nhật 8/11). Link bé: `…/lop-zoom/` (nhập mã phòng 4 số), chuẩn bị trước: `…/lop-zoom/?chuan-bi`, màn cô: `…/lop-zoom/co.html`. Chi tiết: `lop-zoom/README.md`.
+- Đồng bộ bằng Firebase Realtime Database `anh-trung-kids-zoom`; dùng chung tranh, giọng ở `xem-truoc/tai-nguyen/little-seed`. Cùng tên miền nên máy đã đăng nhập web 21 ngày được điền sẵn tên con và avatar.
+- Máy chủ `apps-script/Code.gs` lên **v15** (`?action=ping` trả `v:15`): thêm `action:'zoom'` (tab "Lớp Zoom") và `action:'zoomhs'` (tab "Chuẩn bị Zoom", ảnh con vào thư mục Drive riêng). Cần dán và triển khai phiên bản mới; Google sẽ hỏi thêm quyền Drive. Chưa cập nhật thì màn cô vẫn tải được CSV.
