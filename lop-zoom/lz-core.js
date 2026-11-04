@@ -367,7 +367,7 @@ function energy(room) {
   const pxs = [];
   Object.values(room.marks || {}).forEach(m => Object.keys((m && m.px) || {}).forEach(q => pxs.push(q)));
   const all = new Set(qids.concat(pxs));
-  all.forEach(q => { if (!/^(on|tone|pair|lop|boss|xep)_/.test(q)) return; seats.forEach(s => { const a = answerOf(room, s, q); if (a && a.ok) good++; }); });
+  all.forEach(q => { if (!/^(on|tone|pair|lop|xep)_/.test(q)) return; /* trận Rồng Lửa có thanh sức mạnh riêng */ seats.forEach(s => { const a = answerOf(room, s, q); if (a && a.ok) good++; }); });
   const goal = n * 16;
   const st = room.state || {};
   const pct = st.ph === 'badge' ? 100 : Math.min(100, Math.round(good / goal * 100));
@@ -421,6 +421,8 @@ function bossInfo(room) {
   const T = b.dur || 120000, el = DB.now() - b.t0, t = Math.max(0, Math.min(1, el / T)), pre = 'boss_' + (b.run || 0) + '_';
   let H = 0; const players = new Set(), hits = [];
   Object.entries(room.answers || {}).forEach(([q, o]) => { if (q.indexOf(pre) !== 0) return; Object.entries(o || {}).forEach(([u, a]) => { players.add(u); if (a && a.ok) { H++; hits.push([a.at || 0, u]); } }); });
+  /* bé chỉ có 1 máy: con trả lời trên Zoom, cô bấm "⚡ +1" (marks/<chỗ>/bx/<lượt>_<n> = thời điểm) */
+  Object.entries(room.marks || {}).forEach(([seat, m]) => Object.entries((m && m.bx) || {}).forEach(([k, at]) => { if (k.indexOf((b.run || 0) + '_') === 0 && at) { H++; hits.push([at, seat]); } }));
   const n = Math.max(1, players.size, buildSeats(room.players).filter(s => s.ok && s.on).length);
   /* Thanh giằng co: kịch bản trận (rồng nổi giận quanh 62% thời gian, cuối trận anh hùng áp đảo)
      cộng với nhịp tiếp sức của cả lớp trong 6 giây gần nhất (trả lời đúng càng dồn dập, thanh càng về phía anh hùng). */

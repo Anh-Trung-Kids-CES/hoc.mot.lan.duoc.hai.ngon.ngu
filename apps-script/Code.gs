@@ -385,6 +385,7 @@ function lopZoom_(d) {
   if (rows.length < 2) return { ok: false, n: 0 };
   const head = rows[0].concat(['Cập nhật']);
   const sh = sheet_('Lớp Zoom', head);
+  if (sh.getLastColumn() < head.length || String(sh.getRange(1, 1).getValue()) !== String(head[0])) sh.getRange(1, 1, 1, head.length).setValues([head]);   // web thêm cột thì cập nhật dòng tiêu đề
   const n = sh.getLastRow(), keys = {};
   if (n > 1) sh.getRange(2, 1, n - 1, 3).getValues().forEach((r, i) => { keys[[r[0], fmtDate_(r[1]), r[2]].join('|')] = i + 2; });
   let cnt = 0;

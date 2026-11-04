@@ -127,8 +127,7 @@ function drawBar(st) {
   const qid = (CTL[st.ph] || {}).qid ? CTL[st.ph].qid(st) : '';
   const only = (CTL[st.ph] || {}).only ? CTL[st.ph].only(st) : null;
   if (qid) { const ss = seatsIn().filter(x => !only || only.indexOf(x.id) >= 0); lb += ` · ${ss.filter(x => answerOf(room, x, qid)).length}/${ss.length} đã chọn`; }
-  $('#shareBar').innerHTML = `<span class="lb">${esc(lb)}</span>` + BAR.filter(([sel]) => $('#ctl ' + sel))
-    .map(([sel, t, c], j) => `<button class="btn ${c}" data-bar="${j}">${t}</button>`).join('') + `<button class="btn ghost x" id="shX">✖ Về màn điều khiển</button>`;
+  $('#shareBar').innerHTML = `<span class="lb">${esc(lb)}</span>` + BAR.map(([sel, t, c], j) => $('#ctl ' + sel) ? `<button class="btn ${c}" data-bar="${j}">${t}</button>` : '').join('') + `<button class="btn ghost x" id="shX">✖ Về màn điều khiển</button>`;
   $$('[data-bar]').forEach(b => b.onclick = () => { const sel = BAR[+b.dataset.bar][0], el = $('#ctl ' + sel); if (sel === '#kq') { sharing = false; $('#share').classList.add('hide'); } el && el.click(); });
   $('#shX').onclick = closeShare;
   const amOn = st.amCo !== false;
@@ -336,7 +335,12 @@ const CTL = {
     kid(s, st) {
       const b = st.boss || {}, pre = 'boss_' + (b.run || 0) + '_'; let a = 0, ok = 0;
       Object.entries(room.answers || {}).forEach(([q, o]) => { if (q.indexOf(pre) !== 0) return; s.ids.forEach(id => { if (o && o[id]) { a++; if (o[id].ok) ok++; } }); });
-      return b.t0 ? `<span class="st ${a ? 'ok' : 'none'}">⚡ ${ok} đúng / ${a} câu</span>` : '';
+      const bx = Object.keys(((room.marks || {})[s.id] || {}).bx || {}).filter(k => k.indexOf((b.run || 0) + '_') === 0).length;
+      return b.t0 ? `<span class="st ${a || bx ? 'ok' : 'none'}">⚡ ${ok} đúng / ${a} câu${bx ? ` · cô +${bx}` : ''}</span> <button class="mk" data-bx="${s.id}" title="Bé chỉ có 1 máy: con trả lời đúng trên Zoom thì cô bấm">⚡ +1</button>` : '';
+    },
+    kbind(st) {
+      const b = st.boss || {};
+      $$('[data-bx]').forEach(x => x.onclick = () => mark(x.dataset.bx, 'bx/' + (b.run || 0) + '_' + Date.now().toString(36), DB.now()));
     }
   },
   xep: {
