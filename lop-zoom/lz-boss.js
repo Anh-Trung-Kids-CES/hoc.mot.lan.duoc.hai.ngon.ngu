@@ -149,9 +149,9 @@ function vBoss(st, seats) {
       bossDone = state; bossLastHits = info.H || 0; bossHitsAtFight = info.H || 0; bossSurgeSeen = false; bossFightT = Date.now();
       document.body.classList.toggle('boss-play', !CHIEU && state === 'run');
       bossFaces(info);
-      if (CHIEU && !muted) { if (state === 'run') { BA.mood('calm'); BA.start(); } else if (state === 'done') { BA.mood('win'); BA.start(); setTimeout(() => BA.stop(), 6000); } else BA.stop(); }
+      if (CHIEU && !muted) { if (state === 'run') { BA.mood('calm'); BA.start(); play([hd('Cả lớp cùng tiếp sức cho anh hùng Bông nhé!')]); } else if (state === 'done') { BA.mood('win'); BA.start(); setTimeout(() => BA.stop(), 6000); } else BA.stop(); }
       if (!CHIEU && state === 'run') { if (!BQ || BQ.run !== run) BQ = { run, n: +lsGet('lz-boss-' + CODE + '-' + run + '-' + DB.uid, 0) || 0, it: null }; bossAsk(); }
-      if (state === 'done') { if (CHIEU && !muted) BA.fanfare(); else SND.beep('win'); confetti(); if (!CHIEU) giveStar('boss_win_' + run, 'boss'); }
+      if (state === 'done') { if (CHIEU && !muted) { BA.fanfare(); setTimeout(() => play([hd('Cả lớp thắng rồi! Rồng Lửa biến lại thành quả trứng!')]), 1200); } else SND.beep('win'); confetti(); if (!CHIEU) giveStar('boss_win_' + run, 'boss'); }
     }
   };
 }
@@ -192,7 +192,7 @@ function bossUpdate() {
   bossFaces(info);
   if (state !== 'run') return;
   const sound = CHIEU && !muted;
-  if (info.surge && !bossSurgeSeen) { bossSurgeSeen = true; if (sound) { BA.mood('tense'); BA.roar(); } }
+  if (info.surge && !bossSurgeSeen) { bossSurgeSeen = true; if (sound) { BA.mood('tense'); BA.roar(); setTimeout(() => play([hd('Rồng Lửa nổi giận rồi! Cả lớp trả lời nhanh nào!')]), 600); } }
   if (!info.surge && bossSurgeSeen && sound) BA.mood('calm');
   const gap = info.surge ? 900 : 1500;
   if (Date.now() - bossFightT > gap) { bossFightT = Date.now(); bossFight(info, sound); }

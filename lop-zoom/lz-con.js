@@ -366,7 +366,7 @@ function vLop(st, seats) {
   const a = aud(item.k, l), b = aud(item.k, to);
   const akey = ['lop', p.n, st.run || 0, rv ? 1 : 0, me ? 1 : 0, st.rp || 0].join('|');
   const audio = rv ? [a, 600, hd(to === 'zh' ? 'Tiếng Trung nói thế nào nhỉ?' : 'Tiếng Anh nói thế nào nhỉ?'), 1800, b]
-    : me ? [hd('Đến lượt con!'), 300, a] : (p.n === 0 && !st.rp ? [hd('Con nghe bạn nói rồi chạm tranh đúng nhé!')] : null);
+    : me ? [hd('Con là cô giáo nhỏ! Con nói cho cả lớp nghe nhé!') || hd('Đến lượt con!'), 300, a] : (p.n === 0 && !st.rp ? [hd('Con nghe bạn nói rồi chạm tranh đúng nhé!')] : null);
   return {
     key, akey, audio, priv: !rv && me,
     html: `<div class="qno">📣 Cô giáo nhỏ · lượt ${(p.n || 0) + 1}${headAllowed(st) && !me ? HEAD_TAG : ''}</div>${who}${body}`,
@@ -431,7 +431,7 @@ function vXep(st, seats) {
   const doneMine = picks.length === 4;
   const key = ['xep', r, step, run, picks.join('')].join('|');
   return {
-    key, akey: 'xep|' + r + '|' + step, audio: step === 'xep' && !doneMine && !picks.length ? [hd('Con nghe và chạm vào tranh đúng nhé!')] : null,
+    key, akey: 'xep|' + r + '|' + step, audio: step === 'xep' && !doneMine && !picks.length ? [hd('Con chạm lần lượt các tranh theo thứ tự truyện nhé!') || hd('Con nghe và chạm vào tranh đúng nhé!')] : null,
     html: `${head}<p class="ask-line">${doneMine ? '✅ Con xếp xong rồi! Chờ cô nhé.' : `🧩 Con chạm tranh thứ <b>${picks.length + 1}</b> của truyện nhé!`}</p>
       <div class="xep-grid${step === 'rv' ? ' locked' : ''}">${order.map(i => { const n = picks.indexOf(i); return `<div class="xep-t kid${n >= 0 ? ' on' : ''}" data-i="${i}">${n >= 0 ? `<b class="xep-n">${n + 1}</b>` : ''}<img src="${S.scenes[i].img}" alt=""><span class="${S.to}">${esc(S.scenes[i][S.to])}</span><button class="xep-say" data-a="${xepAud(S.scenes[i], S.to)}" aria-label="Nghe">🔊</button></div>`; }).join('')}</div>
       ${step === 'xep' && picks.length ? '<button class="btn ghost" id="xRe">↺ Xếp lại</button>' : ''}`,
