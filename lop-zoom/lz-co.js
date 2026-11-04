@@ -511,16 +511,17 @@ const COLS = [['kid', 'Tên con'], ['parent', 'Ba/mẹ'], ['src', 'Vào lớp'],
   ['chaoEN', 'Chào bạn EN'], ['chaoZH', 'Chào bạn ZH'], ['pd', 'Phiên dịch nhí']];
 function drawResults() {
   const rows = results();
-  const sel = (id, k, v) => `<select data-h="${id}|${k}">${['', 0, 1, 2].map(n => `<option value="${n}" ${String(v) === String(n) ? 'selected' : ''}>${n === '' ? '–' : n}</option>`).join('')}</select>`;
+  const sel = (id, k, v) => `<div class="h4">${[2, 1, 0].map(n => { const L = H4[k].lv[n]; return `<button class="h4b l${n}${String(v) === String(n) ? ' on' : ''}" data-h="${id}|${k}|${n}" title="${esc(L[1])}">${n} · ${esc(L[0])}</button>`; }).join('')}</div>`;
   $('#body').innerHTML = `<div style="padding:12px 14px 40px"><div class="panel">
     <h3>Kết quả phòng ${CODE} · ${esc((room.state || {}).ngay || today())}</h3>
     <p class="small">Mỗi bé một dòng, tách EN và ZH. Chưa trả lời không tính là sai. 4H điều chỉnh: thái độ, cảm xúc, tương tác với bạn (0–2).</p>
     <div class="ctl"><button class="btn" id="send">📤 Gửi về Sheet</button><button class="btn ghost" id="csv">⬇ Tải CSV</button><button class="btn ghost" id="ph">🗑 Xóa ảnh các con khỏi phòng</button></div>
     <div id="sendMsg"></div>
+    <details class="h4-guide" open><summary>Mốc chấm 4H (bấm một mốc, bấm lại để bỏ)</summary><div class="two" style="grid-template-columns:repeat(3,1fr)">${Object.values(H4).map(h => `<div><b>${h.n}</b>${[2, 1, 0].map(n => `<div class="small"><b>${n} · ${esc(h.lv[n][0])}</b>: ${esc(h.lv[n][1])}</div>`).join('')}</div>`).join('')}</div></details>
     <div class="scroll-x"><table class="res"><tr>${COLS.map(c => `<th>${c[1]}</th>`).join('')}<th>Thái độ</th><th>Cảm xúc</th><th>Tương tác</th><th>Ghi chú của cô</th></tr>
     ${rows.map(r => `<tr>${COLS.map(c => `<td>${esc(r[c[0]])}</td>`).join('')}<td>${sel(r.id, 'td', r.h1)}</td><td>${sel(r.id, 'cx', r.h2)}</td><td>${sel(r.id, 'tt', r.h3)}</td>
       <td><textarea data-note="${r.id}">${esc(r.note)}</textarea></td></tr>`).join('') || `<tr><td colspan="${COLS.length + 4}">Chưa có bé nào.</td></tr>`}</table></div></div></div>`;
-  $$('[data-h]').forEach(x => x.onchange = () => { const [id, k] = x.dataset.h.split('|'); mark(id, 'h/' + k, x.value === '' ? null : +x.value); });
+  $$('[data-h]').forEach(x => x.onclick = () => { const [id, k, n] = x.dataset.h.split('|'), cur = ((((room.marks || {})[id] || {}).h) || {})[k]; mark(id, 'h/' + k, cur === +n ? null : +n); });
   $$('[data-note]').forEach(x => x.onchange = () => mark(x.dataset.note, 'note', x.value.trim() || null));
   $('#csv').onclick = () => downloadCSV(results());
   $('#send').onclick = sendSheet;
@@ -530,10 +531,17 @@ function drawResults() {
     toast('Đã xóa ảnh khỏi phòng.');
   };
 }
+/* Mốc chấm 4H điều chỉnh cho buổi Zoom (0–2). Sửa câu chữ ở đây nếu cô muốn đổi mốc. */
+const H4 = {
+  td: { n: 'Thái độ', lv: { 2: ['Tự giác', 'Tập trung gần cả buổi, tự chạm và trả lời ngay khi cô hỏi'], 1: ['Khi nhắc', 'Tham gia khi cô gọi tên hoặc ba mẹ nhắc, lúc tập trung lúc xao nhãng'], 0: ['Cần hỗ trợ', 'Chưa muốn tham gia, ba mẹ phải làm cùng hoặc con rời màn hình'] } },
+  cx: { n: 'Cảm xúc', lv: { 2: ['Hào hứng', 'Vui, cười, hăng hái, muốn được chọn, khoe khi đúng'], 1: ['Bình thường', 'Lúc đầu còn ngại, vui dần lên hoặc bình thản cả buổi'], 0: ['Còn ngại', 'Rụt rè, lo lắng, không muốn nói hoặc muốn dừng sớm'] } },
+  tt: { n: 'Tương tác với bạn', lv: { 2: ['Chủ động', 'Tự hỏi, đáp bạn, chơi đôi bạn tốt, cổ vũ bạn'], 1: ['Khi cô gợi ý', 'Hỏi, đáp bạn khi cô mời; chơi đôi bạn được nhưng còn chờ cô'], 0: ['Chưa', 'Chưa nói với bạn, chưa tham gia trò đôi bạn'] } }
+};
+function h4Txt(k, v) { return v === '' || v === undefined || v === null ? '' : `${v} – ${H4[k].lv[v][0]}`; }
 function csvRows(rows) {
   const head = ['Mã phòng', 'Ngày', 'Mã chỗ ngồi', 'Mã bé web 21 ngày'].concat(COLS.map(c => c[1]), ['Thái độ', 'Cảm xúc', 'Tương tác', 'Ghi chú', 'Chi tiết']);
   const date = (room.state || {}).ngay || today();
-  return [head].concat(rows.map(r => [CODE, date, r.id, r.web].concat(COLS.map(c => r[c[0]]), [r.h1, r.h2, r.h3, r.note, r.detail])));
+  return [head].concat(rows.map(r => [CODE, date, r.id, r.web].concat(COLS.map(c => r[c[0]]), [h4Txt('td', r.h1), h4Txt('cx', r.h2), h4Txt('tt', r.h3), r.note, r.detail])));
 }
 function downloadCSV(rows) {
   const csv = '﻿' + csvRows(rows).map(r => r.map(v => '"' + String(v == null ? '' : v).replace(/"/g, '""') + '"').join(',')).join('\r\n');

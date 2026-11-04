@@ -71,3 +71,13 @@ table.res textarea{width:180px;min-height:44px;font-size:13px}
 .share-bar .lb{color:#FFE9A8;font-weight:700;font-family:'Baloo 2',sans-serif;font-size:18px;margin-right:6px}
 .share-bar .x{margin-left:auto}
 .prev img{width:140px;height:140px}
+
+/* chấm 4H bằng mốc */
+.h4{display:flex;flex-direction:column;gap:4px;min-width:118px}
+.h4b{border:2px solid var(--line);background:#fff;border-radius:10px;padding:3px 8px;font-size:12px;font-weight:700;text-align:left;white-space:nowrap}
+.h4b.on.l2{background:var(--green);border-color:var(--green);color:#fff}
+.h4b.on.l1{background:var(--yellow);border-color:var(--yellow)}
+.h4b.on.l0{background:var(--orange);border-color:var(--orange);color:#fff}
+.h4-guide{margin:8px 0 12px;background:var(--yellow-soft);border-radius:12px;padding:8px 12px}
+.h4-guide summary{font-weight:700;cursor:pointer}
+.h4-guide .small{margin:3px 0}
