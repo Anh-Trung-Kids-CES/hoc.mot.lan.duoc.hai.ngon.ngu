@@ -53,7 +53,7 @@ body.co{font-family:'Be Vietnam Pro',system-ui,sans-serif;font-size:15px;backgro
 .code-big{font-family:'Baloo 2',sans-serif;font-size:28px;font-weight:800;background:var(--yellow);color:var(--ink);border-radius:12px;padding:0 12px;letter-spacing:3px}
 table.res{border-collapse:collapse;width:100%;font-size:13px}
 table.res th,table.res td{border:1px solid var(--line);padding:5px 6px;text-align:left;vertical-align:top}
-table.res th{background:var(--yellow-soft);position:sticky;top:52px}
+table.res th{background:var(--yellow-soft)}
 table.res select{font-size:13px;padding:2px}
 table.res textarea{width:180px;min-height:44px;font-size:13px}
 .scroll-x{overflow-x:auto}
@@ -62,3 +62,12 @@ table.res textarea{width:180px;min-height:44px;font-size:13px}
 @media (max-width:900px){.two{grid-template-columns:1fr}}
 .toggle{display:flex;gap:8px;align-items:center;font-weight:700}
 .toggle input{width:20px;height:20px}
+
+/* chế độ chia sẻ: cả màn hình là màn chiếu, thanh nút cô ở dưới (không hiện ai đúng ai sai) */
+.share{position:fixed;inset:0;z-index:80;background:var(--cream);display:flex;flex-direction:column}
+.share iframe{flex:1;border:0;width:100%;background:var(--cream)}
+.share-bar{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;padding:10px 14px;background:#3A2A1A}
+.share-bar .btn{font-size:20px;padding:10px 22px}
+.share-bar .lb{color:#FFE9A8;font-weight:700;font-family:'Baloo 2',sans-serif;font-size:18px;margin-right:6px}
+.share-bar .x{margin-left:auto}
+.prev img{width:140px;height:140px}

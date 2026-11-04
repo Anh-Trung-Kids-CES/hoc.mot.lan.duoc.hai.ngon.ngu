@@ -44,8 +44,9 @@ async function openRoom(code) {
   if (t !== DB.uid) return homeScreen('Phòng ' + code + ' không do trình duyệt này mở nên không điều khiển được. Cô mở phòng mới nhé.');
   CODE = code;
   $('#hdr').innerHTML = `<span class="code-big" title="Mã phòng">${code}</span>
-    <button class="pill y" id="chieu">📺 Mở màn chiếu</button><button class="pill" id="cp">🔗 Chép link cho ba mẹ</button>`;
+    <button class="pill y" id="shareBtn">🖥 Chia sẻ lên Zoom</button><button class="pill" id="chieu" title="Mở màn chiếu ở cửa sổ riêng">📺 Cửa sổ riêng</button><button class="pill" id="cp">🔗 Chép link cho ba mẹ</button>`;
   $('#chieu').onclick = () => window.open(kidLink() + 'index.html?chieu=' + code + (LZ_MOCK ? '&mock=1' : ''), 'lz-chieu', 'width=1100,height=760');
+  $('#shareBtn').onclick = openShare;
   $('#cp').onclick = () => { const l = kidLink() + '?phong=' + code + (LZ_MOCK ? '&mock=1' : ''); navigator.clipboard && navigator.clipboard.writeText(`Lớp Zoom cùng cô: ${l}  (mã phòng ${code})`); toast('Đã chép: ' + l); };
   app.innerHTML = `<nav class="tabs" id="tabs"></nav><div id="body"></div>`;
   DB.on(base(), v => { room = v || {}; draw(); });
@@ -59,7 +60,7 @@ function draw() {
   const waiting = seatsAll().filter(s => !s.ok).length;
   $('#tabs').innerHTML = [['lop', 'Buổi học'], ['them', 'Thêm bé' + (waiting ? `<span class="n">${waiting}</span>` : '')], ['kq', 'Kết quả']]
     .map(([id, n]) => `<button data-t="${id}" class="${TAB === id ? 'on' : ''}">${n}</button>`).join('');
-  $$('#tabs button').forEach(b => b.onclick = () => { TAB = b.dataset.t; dirty = false; draw(); });
+  $$('#tabs button').forEach(b => b.onclick = () => { TAB = b.dataset.t; dirty = false; if (sharing && TAB !== 'lop') { sharing = false; $('#share').classList.add('hide'); } draw(); });
   // đang gõ trong ô nhập thì để yên, vẽ lại khi rời ô
   const ae = document.activeElement;
   if (ae && $('#body').contains(ae) && /INPUT|TEXTAREA|SELECT/.test(ae.tagName)) { dirty = true; return; }
@@ -92,7 +93,48 @@ function drawClass() {
   $('#ctl').innerHTML = c.html(st);
   c.bind && c.bind(st);
   drawKids(st, c);
+  drawBar(st);
 }
+
+/* ---------- Chế độ chia sẻ lên Zoom ----------
+   Cả màn hình là màn chiếu (tranh to, có tiếng, không hiện ai đúng ai sai); thanh nút ở dưới bấm hộ các nút của màn điều khiển.
+   Phím tắt: → câu tiếp · ← câu trước · Space hiện đáp án · R phát lại · Esc thoát. */
+let sharing = false;
+function openShare() {
+  TAB = 'lop'; sharing = true;
+  const fr = $('#shareFr'), src = 'index.html?chieu=' + CODE + '&nhung=1' + (LZ_MOCK ? '&mock=1' : '');
+  if (!fr.getAttribute('src')) fr.src = src;
+  $('#share').classList.remove('hide');
+  draw();
+  toast('Trong Zoom: Chia sẻ màn hình → chọn cửa sổ này, tích "Chia sẻ âm thanh". Bấm nút đỏ giữa màn để bật tiếng.');
+}
+function closeShare() { sharing = false; $('#share').classList.add('hide'); draw(); }
+const BAR = [
+  ['#go', '▶ Bắt đầu', 'red'], ['[data-spin="en"]', '🎡 Quay · EN', ''], ['[data-spin="zh"]', '🎡 Quay · 中文', 'red'],
+  ['#pv', '◀', 'ghost'], ['#rp', '🔁 Phát lại', 'ghost'], ['#rv', '👁 Hiện đáp án', 'y'], ['#ag', '↺ Hỏi lại', 'ghost'],
+  ['#op', '🎁 Mở hộp quà', 'y'], ['#an', '👂 Nghe đáp án', 'y'], ['#nx', 'Tiếp ▶', ''], ['#kq', 'Xem kết quả', 'red']];
+function drawBar(st) {
+  if (!sharing) return;
+  const ph = PHASES.find(p => p.id === st.ph) || PHASES[0];
+  let lb = ph.ic + ' ' + ph.n;
+  if (st.ph === 'on') lb += ` ${(st.i || 0) + 1}/${QUIZ.length}`;
+  if (st.ph === 'tone') lb += ` ${(st.i || 0) + 1}/${TONES.length}`;
+  if (st.ph === 'story') lb += ` ${(st.scene || 0) + 1}/${STORY.length}`;
+  const qid = (CTL[st.ph] || {}).qid ? CTL[st.ph].qid(st) : '';
+  const only = (CTL[st.ph] || {}).only ? CTL[st.ph].only(st) : null;
+  if (qid) { const ss = seatsIn().filter(x => !only || only.indexOf(x.id) >= 0); lb += ` · ${ss.filter(x => answerOf(room, x, qid)).length}/${ss.length} đã chọn`; }
+  $('#shareBar').innerHTML = `<span class="lb">${esc(lb)}</span>` + BAR.filter(([sel]) => $('#ctl ' + sel))
+    .map(([sel, t, c], j) => `<button class="btn ${c}" data-bar="${j}">${t}</button>`).join('') + `<button class="btn ghost x" id="shX">✖ Về màn điều khiển</button>`;
+  $$('[data-bar]').forEach(b => b.onclick = () => { const sel = BAR[+b.dataset.bar][0], el = $('#ctl ' + sel); if (sel === '#kq') { sharing = false; $('#share').classList.add('hide'); } el && el.click(); });
+  $('#shX').onclick = closeShare;
+}
+window.lzKey = e => {
+  if (!sharing) return;
+  const k = { ArrowRight: '#nx', ArrowLeft: '#pv', ' ': '#rv', r: '#rp', R: '#rp' }[e.key];
+  if (e.key === 'Escape') return closeShare();
+  if (k) { const el = $('#ctl ' + k); if (el) { e.preventDefault(); el.click(); } }
+};
+document.addEventListener('keydown', e => { if (!/INPUT|TEXTAREA|SELECT/.test((document.activeElement || {}).tagName)) window.lzKey(e); });
 
 /* chuyển phần */
 function goPhase(ph) {
@@ -167,11 +209,11 @@ const CTL = {
       const i = st.i || 0, q = QUIZ[i], rv = st.step === 'rv', a = quizAns(q);
       return `<h2>⚡ Ôn nhanh · câu ${i + 1}/${QUIZ.length}</h2>
         <p><span class="flag ${quizLang(q)}">${{ en: 'English', zh: '中文', doc: 'Nhìn chữ' }[quizLang(q)]}</span> <span class="bigtxt ${q.l === 'zh' ? 'zh' : ''}">${esc(q.l === 'doc' ? q.chu : txt(q.k, q.l))}</span></p>
-        <div class="prev">${quizPics(q).map((s, c) => pv(s, c === a)).join('')}</div>
+        <div class="prev">${quizPics(q).map((s, c) => pv(s, c === a)).join('')}<button class="btn ghost sm" id="lp">🔊 Nghe trên máy cô</button></div>
         ${qButtons(st, i, QUIZ.length, rv)}
         <p class="tip">Mỗi câu đúng làm đầy thanh năng lượng chung. Bé chưa đúng thì cả lớp nghe lại, không sửa lỗi riêng.</p>`;
     },
-    bind(st) { qBind(st, QUIZ.length, 'tone'); },
+    bind(st) { qBind(st, QUIZ.length, 'tone'); $('#lp').onclick = () => SND.play([quizAudio(QUIZ[st.i || 0])]); },
     qid: st => `on_${st.i || 0}_${st.run || 0}`, opts: 3
   },
   tone: {

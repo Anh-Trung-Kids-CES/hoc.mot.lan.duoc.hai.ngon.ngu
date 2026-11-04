@@ -10,13 +10,13 @@ Web riêng cho buổi Zoom cuối tuần, kiểu Wayground: cô điều khiển 
 | Ba mẹ / bé (một link chung) | https://anh-trung-kids-ces.github.io/hoc.mot.lan.duoc.hai.ngon.ngu/lop-zoom/ |
 | Ba mẹ chuẩn bị trước buổi học | …/lop-zoom/?chuan-bi |
 | Cô (máy tính) | …/lop-zoom/co.html |
-| Màn chiếu cô chia sẻ trên Zoom | nút **📺 Mở màn chiếu** trên màn cô (…/lop-zoom/?chieu=MÃ) |
+| Chia sẻ lên Zoom | nút **🖥 Chia sẻ lên Zoom** trên màn cô: cả màn hình thành màn chiếu (tranh to, có tiếng), thanh nút cô ở dưới. Nút **📺 Cửa sổ riêng** mở màn chiếu ở cửa sổ khác (…/lop-zoom/?chieu=MÃ) |
 | Thử trên một máy, không cần Firebase | thêm `?mock=1` vào cả link cô và link bé, mở nhiều tab |
 | Thử nhiều bé trên một trình duyệt thật (Firebase) | link bé thêm `?thu=1` (mỗi tab là một bé khác) |
 
 ## Cách chạy một buổi
 1. **Trước buổi**: sale gửi link `?chuan-bi`. Ba mẹ điền tên con, tên ba/mẹ, chọn bạn đồng hành, ảnh con (không bắt buộc; chỉ hiện cho lớp khi tích "Đồng ý cho các bạn trong lớp thấy ảnh con").
-2. **Đầu giờ**: cô mở `co.html` → **Mở phòng mới** → được mã 4 số. Bấm **Mở màn chiếu**, chia sẻ cửa sổ đó trên Zoom (tích chia sẻ âm thanh). Bấm **Chép link cho ba mẹ** dán vào chat Zoom.
+2. **Đầu giờ**: cô mở `co.html` → **Mở phòng mới** → được mã 4 số. Bấm **Chép link cho ba mẹ** dán vào chat Zoom. Bấm **🖥 Chia sẻ lên Zoom**, bấm nút đỏ giữa màn để bật tiếng, rồi trong Zoom chia sẻ cửa sổ trình duyệt này và tích **Chia sẻ âm thanh**. Điều khiển bằng thanh nút dưới đáy hoặc phím: → câu tiếp, ← câu trước, Space hiện đáp án, R phát lại, Esc về màn điều khiển (xem bé nào đã chọn, chấm, bấm hộ).
 3. **Bé vào lớp**: mở link chung → nhập mã phòng → tên con và tên ba hoặc mẹ (máy đã chuẩn bị hoặc đã đăng nhập web 21 ngày thì điền sẵn). Rớt mạng mở lại thì vào đúng chỗ cũ.
 4. **Cô thêm bé nhanh** (thẻ *Thêm bé*): dán danh sách người tham gia Zoom (web tự tách tên con / tên ba mẹ, cô sửa trước khi thêm), hoặc gõ nhanh tên. Chỗ ngồi tạm vẫn ghi đủ dữ liệu; bé vào sau bằng mã phòng với đúng tên thì tự nhận chỗ. Có thể bật **Cô duyệt từng bé**. Nút 🔗 ghép hai chỗ của cùng một bé.
 5. **Bé chỉ có 1 máy**: bé xem màn chiếu, giơ ngón tay 1-2-3 (thanh điệu 1-4), cô bấm hộ ở cột phải.

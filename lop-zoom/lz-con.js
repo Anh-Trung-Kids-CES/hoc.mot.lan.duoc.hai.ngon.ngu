@@ -255,7 +255,8 @@ function vQuiz(st, seats) {
   else audio = i === 0 && !st.rp ? [hd('Con nghe và chạm vào tranh đúng nhé!'), 400, a, 700, a] : [a, 700, a];
   return {
     key, akey, audio,
-    html: `<div class="qno">Câu ${i + 1}/${QUIZ.length} <span class="flag ${lang}">${flag}</span></div>${prompt}
+    html: `<div class="qno">Câu ${i + 1}/${QUIZ.length} <span class="flag ${lang}">${flag}</span></div>
+      <p class="ask-line">${q.l === 'doc' ? '👀 Con nhìn chữ rồi chạm vào tranh đúng nhé!' : '👂 Con nghe và chạm vào tranh đúng nhé!'}</p>${prompt}
       <div class="pics${my || rv || CHIEU ? ' locked' : ''}" id="pics">${pics}</div><p class="count" id="cnt"></p>${after}`,
     bind() { bindPlay(() => [a]); bindPicks(qid, c => ({ c, ok: c === ans })); this.update(); },
     update() { const n = countAnswered(qid, seats); $('#cnt').textContent = rv ? '' : `${n}/${seats.length} bạn đã chọn`; }
@@ -274,14 +275,14 @@ function vTone(st, seats) {
   const my = myAnswer(qid), a = toneAudio(x);
   const key = ['tone', i, st.run || 0, rv ? 1 : 0, my ? my.c : '-'].join('|');
   const opts = [1, 2, 3, 4].map(t => `<button class="path${my && my.c === t ? ' chosen' : ''}${rv && t === x.t ? ' right' : ''}${rv && t !== x.t ? ' dim' : ''}" data-c="${t}">${planeSVG(t, 'pl' + t)}<span>${TONE_NAME[t]}</span></button>`).join('');
-  const head = `<div class="tone-head"><img src="${tonePic(x)}" alt=""><div><div class="chu zh">${x.c}</div></div></div>
-    <div class="py">${rv ? x.py : x.p0}</div>${a ? `<button class="say zh" data-play style="font-size:22px;padding:8px 18px"><span class="ic" style="font-size:26px">🔊</span>Nghe</button>` : '<p class="sub">Con nghe cô đọc trên Zoom nhé</p>'}`;
-  const body = rv ? `<div class="fly-big">${planeSVG(x.t, 'plBig', true)}</div><div class="cheer" style="color:var(--red)">Cả lớp bay tay nói theo nhé! ✋ ${x.py}</div>`
+  const head = `<div class="tone-head"><img src="${tonePic(x)}" alt=""><div class="chu zh">${x.c}</div>
+    <div class="tone-side"><div class="py">${rv ? x.py : x.p0}</div>${a ? `<button class="say zh tone-say" data-play><span class="ic">🔊</span>Nghe</button>` : '<p class="sub">Cô đọc trên Zoom</p>'}</div></div>`;
+  const body = rv ? `<div class="cheer" style="color:var(--red)">Cả lớp bay tay nói theo nhé! ✋ ${x.py}</div><div class="fly-big">${planeSVG(x.t, 'plBig', true)}</div>`
     : `<div class="paths${my || CHIEU ? ' locked' : ''}" id="pics">${opts}</div><p class="count" id="cnt"></p>`;
   const akey = ['tone', i, st.run || 0, rv ? 1 : 0, st.rp || 0].join('|');
   return {
     key, akey, audio: rv ? [hd('Cả lớp bay tay nói theo nhé!'), 300].concat(a ? [a, 700, a, 700, a] : []) : (i === 0 && !st.rp ? [hd('Con nghe rồi chạm vào đường bay đúng nhé!'), 300] : []).concat(a ? [a, 800, a] : []),
-    html: `<div class="qno">Máy bay thanh điệu ${i + 1}/${TONES.length}</div>${head}${body}`,
+    html: `<div class="qno">Máy bay thanh điệu ${i + 1}/${TONES.length}</div>${rv ? '' : '<p class="ask-line">✈️ Con nghe rồi chạm vào đường bay đúng nhé!</p>'}${head}${body}`,
     bind() {
       bindPlay(() => a ? [a] : []);
       $$('.path', $('#stage')).forEach(b => b.addEventListener('click', () => { const m = $('#pl' + b.dataset.c); m && m.beginElement && m.beginElement(); }));
@@ -386,11 +387,12 @@ function bindPicks(qid, judge, sel) {
 /* ======================= màn chiếu ======================= */
 function startChieu() {
   CODE = CHIEU;
+  if (window.parent !== window) document.addEventListener('keydown', e => { try { parent.lzKey && parent.lzKey(e); } catch (er) { } });
   document.title = 'Màn chiếu – Phòng ' + CODE;
   const link = location.href.split('?')[0];
   $('#topInfo').innerHTML = `<span class="chieu-code">Mã phòng ${esc(CODE)}</span> <button class="pill mute-btn" id="mu">${muted ? '🔇 Bật tiếng' : '🔊 Tắt tiếng'}</button>`;
   $('#mu').onclick = () => { muted = !muted; lsSet('lz-chieu-mute', muted); if (muted) SND.stop(); $('#mu').textContent = muted ? '🔇 Bật tiếng' : '🔊 Tắt tiếng'; };
-  app.innerHTML = `<div class="wrap"><div class="card" style="text-align:center"><h2>Màn chiếu phòng ${esc(CODE)}</h2><p class="vn">Cô chia sẻ cửa sổ này trên Zoom (tích "Chia sẻ âm thanh" để bé chỉ có 1 máy cũng nghe được).</p><button class="btn red" id="st">Bắt đầu chiếu</button><p class="vn small">Link cho ba mẹ: ${esc(link)}</p></div></div>`;
+  app.innerHTML = `<div class="wrap"><div class="card" style="text-align:center"><h2>Màn chiếu phòng ${esc(CODE)}</h2><p class="vn">Cô chia sẻ cửa sổ này trên Zoom (tích "Chia sẻ âm thanh" để bé chỉ có 1 máy cũng nghe được).</p><button class="btn red" id="st">🔊 Bắt đầu chiếu (bật tiếng)</button><p class="vn small">Link cho ba mẹ: ${esc(link)}</p></div></div>`;
   $('#st').onclick = () => { SND.unlock(); DB.on(roomPath(CODE), v => { room = v || {}; render(); }); };
 }
 

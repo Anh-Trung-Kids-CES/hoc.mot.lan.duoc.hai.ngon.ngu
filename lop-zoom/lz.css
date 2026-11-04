@@ -120,7 +120,10 @@ img{max-width:100%}
 .tone-head{display:flex;align-items:center;gap:16px}
 .tone-head img{width:110px;height:110px;border-radius:20px;object-fit:cover;box-shadow:var(--shadow)}
 .tone-head .chu{font-size:96px;padding:6px 26px}
-.py{font-size:40px;font-weight:800;color:var(--red)}
+.py{font-size:40px;font-weight:800;color:var(--red);line-height:1.1}
+.tone-head{flex-wrap:wrap;justify-content:center}
+.tone-side{display:flex;flex-direction:column;align-items:center;gap:6px}
+.tone-say{font-size:22px;padding:8px 18px}.tone-say .ic{font-size:26px}
 .paths{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;width:100%;max-width:560px}
 .path{border:4px solid var(--line);background:linear-gradient(#E8F6FF,#fff);border-radius:22px;padding:6px 6px 2px;box-shadow:var(--shadow)}
 .path svg{width:100%;height:auto;display:block}
@@ -128,7 +131,7 @@ img{max-width:100%}
 .path.chosen{border-color:var(--sky)}
 .path.right{border-color:var(--green);box-shadow:0 0 0 6px #BFF0CF,var(--shadow)}
 .path.dim{opacity:.45}
-.fly-big{width:min(92vw,560px);background:linear-gradient(#CFEFFF,#fff);border-radius:26px;box-shadow:var(--shadow);border:4px solid var(--green)}
+.fly-big{width:min(92vw,560px,80vh);background:linear-gradient(#CFEFFF,#fff);border-radius:26px;box-shadow:var(--shadow);border:4px solid var(--green)}
 .fly-big svg{width:100%;display:block}
 
 /* đôi bạn */
@@ -165,7 +168,34 @@ img{max-width:100%}
 .confetti i{position:absolute;top:-20px;width:12px;height:18px;border-radius:3px;animation:fall linear forwards}
 @keyframes fall{to{transform:translateY(110vh) rotate(720deg)}}
 
-/* màn chiếu (cô chia sẻ trên Zoom) */
+/* màn chiếu (cô chia sẻ trên Zoom): chữ và tranh to để bé nhìn rõ qua Zoom */
+.ask-line{margin:0;font-size:20px;font-weight:700;color:var(--ink);background:#fff;border-radius:999px;padding:4px 18px;box-shadow:0 3px 0 rgba(58,42,26,.08)}
+.chieu .stage{gap:16px}
+.chieu .stage h1{font-size:46px}
+.chieu .sub{font-size:26px}
+.chieu .qno{font-size:24px}.chieu .flag{font-size:20px;padding:3px 16px}
+.chieu .ask-line{font-size:32px;padding:6px 26px}
+.chieu .say{font-size:46px;padding:14px 40px}.chieu .say .ic{font-size:54px}
+.chieu .chu{font-size:180px;padding:10px 60px}.chieu .chu.latin{font-size:130px}
+.chieu .pics{width:auto;max-width:none;gap:26px;grid-template-columns:repeat(3,minmax(0,min(28vw,40vh)))}
+.chieu .pick{border-width:6px;border-radius:30px}
+.chieu .count{font-size:22px}.chieu .cheer{font-size:40px}
+.chieu .paths{max-width:none;width:min(94vw,1200px);grid-template-columns:repeat(4,1fr);gap:18px}
+.chieu .path span{font-size:20px}
+.chieu .tone-head img{width:min(20vh,160px);height:min(20vh,160px)}.chieu .tone-head .chu{font-size:min(17vh,140px);padding:4px 34px}.chieu .tone-say{font-size:30px}
+.chieu .py{font-size:60px}
+.chieu .path svg{max-height:22vh}
+.chieu .fly-big{width:min(70vw,62vh)}
+.chieu .scene{width:auto;max-width:92vw;max-height:52vh}
+.chieu .scene-cap{font-size:30px;padding:8px 26px;line-height:1.25}
+.chieu .big-pic{width:min(40vh,420px)}
+.chieu .duo .face{width:120px}.chieu .duo .face img{width:100px;height:100px}.chieu .duo .face span{font-size:18px}
+.chieu .wheel-box{width:min(58vh,560px)}.chieu .wheel .seat b{font-size:18px}
+.chieu .chosen-card b{font-size:40px}.chieu .chosen-card img{width:110px;height:110px}
+.chieu .gift{font-size:220px}.chieu .pd{font-size:34px}
+.chieu .medal{width:260px;height:260px}.chieu .medal b{font-size:44px}
+.chieu .team .face{width:130px}.chieu .team .face img{width:116px;height:116px}.chieu .team .face span{font-size:18px}
+.chieu .friends .face{width:84px}.chieu .friends .face img{width:70px;height:70px}.chieu .friends .face span{font-size:16px}
 .chieu .lz-top{font-size:22px}
 .chieu .stage{pointer-events:none}
 .chieu .chieu-code{font-size:26px;font-weight:800;background:var(--yellow);color:var(--ink);border-radius:14px;padding:2px 14px}
