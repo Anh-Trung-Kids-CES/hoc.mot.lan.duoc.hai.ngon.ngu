@@ -35,7 +35,7 @@ Web riêng cho buổi Zoom cuối tuần, kiểu Wayground: cô điều khiển 
 | 31–37 | Truyện + Phiên dịch nhí | Nghe 8 cảnh "Sinh nhật của Bông"; mở 4 hộp quà, phiên dịch nhí nói sang tiếng kia | được / cùng cô / chưa |
 | 37–40 | Huy hiệu Bứt phá | Huy hiệu cả nhóm, ảnh hoặc avatar các bạn | – |
 
-**Tặng sao**: khi cô bấm Hiện đáp án, máy bé nào đúng hiện màn "⭐ +1 sao" (bạn nói được sao khi bạn nghe hiểu); bé chưa đúng thì màn bé không hiện gì, không lộ đáp án trên máy bé. Đáp án đúng chỉ hiện trên màn chiếu cho cả lớp. Số sao trong buổi hiện ở góc màn bé (chưa cộng vào web 21 ngày – đợt 2).
+**Tặng sao**: khi cô bấm Hiện đáp án, máy bé nào đúng hiện ngôi sao to xoay vào kèm một lời khen theo đúng việc con vừa làm, đổi câu mỗi lần, không đọc thành tiếng (bạn nói được sao khi bạn nghe hiểu); bé chưa đúng thì màn bé không hiện gì, không lộ đáp án trên máy bé. Đáp án đúng chỉ hiện trên màn chiếu cho cả lớp. Số sao trong buổi hiện ở góc màn bé (chưa cộng vào web 21 ngày – đợt 2).
 
 Luật Little Seed: chỉ chạm và nói, 3 tranh, không bảng xếp hạng (chỉ có thanh năng lượng chung của nhóm), 3 KHÔNG (bé chưa đúng thì cả lớp nghe lại, không sửa lỗi riêng, màn bé không hiện ai đúng ai sai). Màn cô có ✓/○ từng bé nên **chỉ chia sẻ cửa sổ Màn chiếu**, không chia sẻ màn cô.
 

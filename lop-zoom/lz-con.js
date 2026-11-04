@@ -267,7 +267,7 @@ function vQuiz(st, seats) {
     html: `<div class="qno">Câu ${i + 1}/${QUIZ.length} <span class="flag ${lang}">${flag}</span></div>
       <p class="ask-line">${q.l === 'doc' ? '👀 Con nhìn chữ rồi chạm vào tranh đúng nhé!' : '👂 Con nghe và chạm vào tranh đúng nhé!'}</p>${prompt}
       <div class="pics${my || rv || CHIEU ? ' locked' : ''}" id="pics">${pics}</div><p class="count" id="cnt"></p>${after}`,
-    bind() { bindPlay(() => [a]); bindPicks(qid, c => ({ c, ok: c === ans })); if (rv && my && my.ok) giveStar(qid); this.update(); },
+    bind() { bindPlay(() => [a]); bindPicks(qid, c => ({ c, ok: c === ans })); if (rv && my && my.ok) giveStar(qid, 'on_' + lang); this.update(); },
     update() { const n = countAnswered(qid, seats); $('#cnt').textContent = rv ? '' : `${n}/${seats.length} bạn đã chọn`; }
   };
 }
@@ -297,7 +297,7 @@ function vTone(st, seats) {
       $$('.path', $('#stage')).forEach(b => b.addEventListener('click', () => { const m = $('#pl' + b.dataset.c); m && m.beginElement && m.beginElement(); }));
       bindPicks(qid, c => ({ c, ok: c === x.t }), '.path');
       if (my && !rv) { const m = $('#pl' + my.c); try { m && m.beginElement && m.beginElement(); } catch (e) { } }
-      if (rv && my && my.ok) giveStar(qid);
+      if (rv && my && my.ok) giveStar(qid, 'tone', { py: x.py });
       this.update && this.update();
     },
     update() { const el = $('#cnt'); if (el) el.textContent = `${countAnswered(qid, seats)}/${seats.length} bạn đã chọn`; }
@@ -329,7 +329,7 @@ function vPair(st, seats) {
     html: `<div class="qno">Trò chơi đôi bạn · lượt ${(p.n || 0) + 1}</div>${duo}${body}`,
     bind() {
       bindPlay(() => [a], role === 'say'); bindPicks(qid, c => ({ c, ok: c === ans, xem: role === 'see' || undefined }));
-      if (rv && !CHIEU) { if (role === 'say' && la && la.ok) giveStar(qid, 'Bạn hiểu con nói rồi!'); else if (role !== 'say' && my && my.ok) giveStar(qid); }
+      if (rv && !CHIEU) { if (role === 'say' && la && la.ok) giveStar(qid, 'pairSay', { ban: seatName(seats, p.b) }); else if (role !== 'say' && my && my.ok) giveStar(qid, role === 'hear' ? 'pairHear' : 'pairSee', { ban: seatName(seats, p.a) }); }
     }
   };
 }
@@ -365,7 +365,7 @@ function vLop(st, seats) {
     html: `<div class="qno">📣 Cô giáo nhỏ · lượt ${(p.n || 0) + 1}</div>${who}${body}`,
     bind() {
       bindPlay(() => [a], me); if (!me) bindPicks(qid, c => ({ c, ok: c === ans }));
-      if (rv && !CHIEU) { if (me && hit) giveStar(qid, `${hit} bạn hiểu con nói rồi!`); else if (!me && my && my.ok) giveStar(qid); }
+      if (rv && !CHIEU) { if (me && hit) giveStar(qid, 'lopSay', { n: hit }); else if (!me && my && my.ok) giveStar(qid, 'lopHear', { ban: seatName(seats, p.a) }); }
       this.update();
     },
     update() { const el = $('#cnt'); if (el) el.textContent = rv ? '' : `${others.filter(x => answerOf(room, x, qid)).length}/${others.length} bạn đã chọn`; }
@@ -397,7 +397,7 @@ function vGift(st, seats) {
     ${g.ans ? `<div class="cheer">Giỏi quá! 🎉</div>` : `<p class="sub" style="font-size:19px">${to === 'zh' ? 'Tiếng Trung nói thế nào nhỉ?' : 'Tiếng Anh nói thế nào nhỉ?'}</p>`}`;
   const ask = hd(to === 'zh' ? 'Tiếng Trung nói thế nào nhỉ?' : 'Tiếng Anh nói thế nào nhỉ?');
   const audio = !g.open ? [hd('Con chạm hộp quà xem nào!')].concat(me ? [300, hd('Con là Phiên dịch nhí!'), 300, hd('Con nghe rồi thử nói bằng tiếng kia nhé!')] : [])
-    : g.ans ? [sceneAud(G.s, to)].concat(me ? [400, hd('Giỏi quá!')] : []) : [sceneAud(G.s, from), 500, ask];
+    : g.ans ? [sceneAud(G.s, to)] : [sceneAud(G.s, from), 500, ask];
   return {
     key: ['gift', k, g.seat || '', g.open ? 1 : 0, g.ans ? 1 : 0].join('|'), akey: ['gift', k, g.seat || '', g.open ? 1 : 0, g.ans ? 1 : 0, st.rp || 0].join('|'), audio,
     html: `<div class="qno">🎁 Phiên dịch nhí</div>${row}${who}${body}`,
@@ -423,15 +423,35 @@ function confetti() {
 /* --- Tặng sao: chỉ hiện khi con đúng (lúc cô hiện đáp án). Chưa đúng thì màn con không hiện gì; kết quả nằm ở màn cô. --- */
 function stars() { return lsGet('lz-sao-' + CODE + '-' + DB.uid, []) || []; }
 function starPill() { const el = $('#saoPill'); if (el) el.textContent = '⭐ ' + stars().length; }
-function giveStar(qid, line) {
+/* Lời khen theo đúng việc con vừa làm, đổi câu mỗi lần (không lặp lại câu vừa dùng). Chỉ hiện chữ, không đọc thành tiếng. */
+const PRAISE = {
+  on_en: ['Con nghe tiếng Anh tinh ghê!', 'Tai con bắt được từ tiếng Anh rồi!', 'Con nghe một lần là chọn đúng!', 'Con nghe kỹ nên chọn trúng tranh!'],
+  on_zh: ['Con nghe ra tiếng Trung rồi đó!', 'Tiếng Trung con cũng nghe hiểu!', 'Con nhận ra từ tiếng Trung nhanh ghê!', 'Con nghe kỹ tiếng Trung nên chọn trúng!'],
+  on_doc: ['Con nhìn chữ là nhận ra liền!', 'Con nhớ mặt chữ rồi đó!', 'Mắt con tinh ghê, đọc được chữ rồi!'],
+  tone: ['Máy bay của con bay đúng đường {py}!', 'Con nghe ra thanh điệu {py} rồi!', 'Tai con bắt thanh điệu chuẩn ghê!', 'Con chọn đúng đường bay rồi đó!'],
+  pairSay: ['Con nói rõ nên {ban} hiểu liền!', '{ban} nghe con nói là hiểu ngay!', 'Con nói to, rõ, {ban} chọn đúng rồi!'],
+  pairHear: ['Con nghe {ban} nói và hiểu liền!', 'Con hiểu ý {ban} rồi đó!', 'Con lắng nghe bạn giỏi ghê!'],
+  pairSee: ['Con đoán đúng cùng hai bạn rồi!', 'Con nghe các bạn nói cũng hiểu luôn!'],
+  lopSay: ['Con nói rõ, {n} bạn hiểu con rồi!', 'Cô giáo nhỏ nói hay ghê, {n} bạn chọn đúng!', 'Cả lớp nghe con và {n} bạn hiểu rồi!'],
+  lopHear: ['Con nghe {ban} nói và chọn đúng rồi!', 'Con hiểu cô giáo nhỏ {ban} rồi đó!', 'Con lắng nghe bạn rất chăm!']
+};
+let lastPraise = '';
+function praise(kind, v) {
+  const list = PRAISE[kind] || PRAISE.on_en;
+  let pool = list.filter(x => x !== lastPraise); if (!pool.length) pool = list;
+  const t = pool[Math.floor(Math.random() * pool.length)];
+  lastPraise = t;
+  return t.replace(/\{(\w+)\}/g, (_, k) => (v && v[k] !== undefined) ? v[k] : '');
+}
+function giveStar(qid, kind, v) {
   if (CHIEU) return;
   const list = stars(); if (list.indexOf(qid) >= 0) return;
   list.push(qid); lsSet('lz-sao-' + CODE + '-' + DB.uid, list); starPill();
   let ov = $('#starOv'); if (ov) ov.remove();
   ov = document.createElement('div'); ov.id = 'starOv'; ov.className = 'star-ov';
-  ov.innerHTML = `<div class="star-card"><div class="star-big">⭐</div><b>+1 sao</b><p>${esc(line || 'Giỏi quá!')}</p><small>Con có ${list.length} ⭐ trong buổi này</small></div>`;
+  ov.innerHTML = `<div class="star-card"><div class="star-big">⭐</div><b>+1 sao</b><p>${esc(praise(kind, v))}</p><small>Con có ${list.length} ⭐ trong buổi này</small></div>`;
   document.body.appendChild(ov); ov.onclick = () => ov.remove();
-  SND.beep('win'); setTimeout(() => play([hd('Con được thêm một ngôi sao!')], amCo() ? 0.45 : 1), 350);
+  SND.beep('ok');
   setTimeout(() => { ov.classList.add('out'); setTimeout(() => ov.remove(), 500); }, 2600);
 }
 
