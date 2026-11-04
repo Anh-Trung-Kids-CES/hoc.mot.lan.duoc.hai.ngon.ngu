@@ -324,3 +324,21 @@ body.boss-play .stage{padding:6px}
 .b-mon.poof~.b-poof{animation:poofCloud .9s ease-out}
 @keyframes shrinkPoof{30%{transform:scale(.6) rotate(10deg);filter:brightness(2) blur(2px)}60%{transform:scale(1.1)}}
 @keyframes poofCloud{0%{opacity:0;transform:scale(.4)}35%{opacity:1;transform:scale(1.2)}100%{opacity:0;transform:scale(1.6)}}
+
+/* Nghe truyện, xếp tranh */
+.xep-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;width:100%;max-width:640px}
+.xep-t{position:relative;background:#fff;border:4px solid var(--line);border-radius:20px;padding:6px 6px 8px;box-shadow:var(--shadow);display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer}
+.xep-t img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px}
+.xep-t span{font-weight:800;font-size:17px;text-align:center}.xep-t span.zh{color:var(--red)}
+.xep-t small{font-size:14px;color:var(--muted)}
+.xep-t.on{border-color:var(--sky);box-shadow:0 0 0 4px var(--sky-soft),var(--shadow)}
+.xep-n{position:absolute;top:-12px;left:-12px;width:44px;height:44px;border-radius:50%;background:var(--sky);color:#fff;font-size:26px;display:grid;place-items:center;border:4px solid #fff;animation:pop .35s;z-index:2}
+.xep-say{position:absolute;top:8px;right:8px;border:0;background:rgba(255,255,255,.9);border-radius:50%;width:40px;height:40px;font-size:20px;box-shadow:0 2px 0 rgba(0,0,0,.12)}
+.xep-grid.locked .xep-t{pointer-events:none}.xep-grid.locked .xep-say{pointer-events:auto}
+.xep-grid.rv{grid-template-columns:repeat(4,1fr);max-width:1200px}
+.xep-grid.rv .xep-n{background:var(--green)}
+.xep-t.cur{border-color:var(--green);box-shadow:0 0 0 6px #BFF0CF,var(--shadow);transform:scale(1.04)}
+.chieu .xep-grid{max-width:min(1100px,92vw);grid-template-columns:repeat(4,1fr)}
+.chieu .xep-t span{font-size:24px}.chieu .xep-t small{font-size:18px}
+@media (max-width:520px){.xep-grid.rv{grid-template-columns:repeat(2,1fr)}.xep-t span{font-size:15px}}
+@media (max-height:480px) and (orientation:landscape){.xep-grid{grid-template-columns:repeat(4,1fr);max-width:none}.xep-t img{aspect-ratio:4/3;max-height:34vh}}

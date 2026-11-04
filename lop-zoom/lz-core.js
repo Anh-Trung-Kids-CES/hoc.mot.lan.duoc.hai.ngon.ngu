@@ -202,6 +202,20 @@ function sceneAud(i, l) { return AU + (l === 'zh' ? STORY[i].za : STORY[i].ea) +
 /* Phiên dịch nhí: 4 hộp quà, mỗi hộp một câu của truyện */
 const GIFTS = [{ s: 1, from: 'en' }, { s: 2, from: 'zh' }, { s: 5, from: 'en' }, { s: 6, from: 'zh' }];
 
+/* Nghe truyện, xếp tranh: 2 lượt chuyển ngữ.
+   Lượt 1: cô phát truyện Vòng 2 bằng tiếng Anh, các con xếp tranh có lời tiếng Trung.
+   Lượt 2: cô phát truyện Vòng 1 (ôn lại) bằng tiếng Trung, các con xếp tranh có lời tiếng Anh.
+   Mỗi truyện rút gọn 4 cảnh dễ phân biệt cho bé 5–7 tuổi. */
+const XEP = [
+  { title: 'Sinh nhật của Bông', from: 'en', to: 'zh', scenes: [0, 1, 4, 6].map(i => ({ img: IM + STORY[i].img + '.webp', en: STORY[i].en, zh: STORY[i].zh, ea: AU + STORY[i].ea + '.mp3', za: AU + STORY[i].za + '.mp3' })) },
+  { title: 'Một ngày của Bông', from: 'zh', to: 'en', scenes: [
+    { img: IM + 'tr1_c1.webp', en: 'Goodbye, mommy!', zh: '妈妈，再见！', ea: AU + 'ls_bong_en_goodbye_mommy.mp3', za: AU + 'ls_bong_zh_001.mp3' },
+    { img: IM + 'tr1_c3.webp', en: 'Hello, teacher!', zh: '老师好！', ea: AU + 'ls_bong_en_hello_teacher.mp3', za: AU + 'ls_bong_zh_003.mp3' },
+    { img: IM + 'tr1_c5.webp', en: 'Hello, friend!', zh: '朋友，你好！', ea: AU + 'ls_bong_en_hello_friend.mp3', za: AU + 'ls_bong_zh_005.mp3' },
+    { img: IM + 'tr1_c8.webp', en: 'Hello, daddy!', zh: '爸爸，你好！', ea: AU + 'ls_bong_en_hello_daddy.mp3', za: AU + 'ls_bong_zh_008.mp3' }] }
+];
+function xepAud(sc, l) { return l === 'zh' ? sc.za : sc.ea; }
+
 /* Chào bạn mới */
 const INTRO = {
   ask: { en: { t: "What's your name?", a: aud('wyn', 'en') }, zh: { t: '你叫什么？', a: aud('wyn', 'zh') } },
@@ -217,9 +231,9 @@ const PHASES = [
   { id: 'pair',  n: 'Trò chơi đôi bạn',      m: '18–24', ic: '🤝' },
   { id: 'lop',   n: 'Cô giáo nhỏ (cả lớp)',  m: '24–28', ic: '📣' },
   { id: 'boss',  n: 'Cả lớp đấu Rồng Lửa',   m: '28–31', ic: '🐉' },
-  { id: 'story', n: 'Truyện',                m: '31–34', ic: '📖' },
-  { id: 'gift',  n: 'Phiên dịch nhí',        m: '34–37', ic: '🎁' },
-  { id: 'badge', n: 'Huy hiệu Bứt phá',      m: '37–40', ic: '🏅' },
+  { id: 'xep',   n: 'Nghe truyện, xếp tranh', m: '31–36', ic: '🧩' },
+  { id: 'gift',  n: 'Phiên dịch nhí',        m: '36–38', ic: '🎁' },
+  { id: 'badge', n: 'Huy hiệu Bứt phá',      m: '38–40', ic: '🏅' },
 ];
 
 /* Giọng cô Hươu (Gemini TTS, giọng Sulafat) đã có sẵn ở web học. Câu chưa có file thì chỉ hiện chữ – cô nói trên Zoom.
@@ -357,7 +371,7 @@ function energy(room) {
   const pxs = [];
   Object.values(room.marks || {}).forEach(m => Object.keys((m && m.px) || {}).forEach(q => pxs.push(q)));
   const all = new Set(qids.concat(pxs));
-  all.forEach(q => { if (!/^(on|tone|pair|lop|boss)_/.test(q)) return; seats.forEach(s => { const a = answerOf(room, s, q); if (a && a.ok) good++; }); });
+  all.forEach(q => { if (!/^(on|tone|pair|lop|boss|xep)_/.test(q)) return; seats.forEach(s => { const a = answerOf(room, s, q); if (a && a.ok) good++; }); });
   const goal = n * 16;
   const st = room.state || {};
   const pct = st.ph === 'badge' ? 100 : Math.min(100, Math.round(good / goal * 100));

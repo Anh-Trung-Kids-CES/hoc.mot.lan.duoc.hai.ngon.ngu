@@ -33,9 +33,9 @@ Web riêng cho buổi Zoom cuối tuần, kiểu Wayground: cô điều khiển 
 | 18–24 | Đôi bạn | Bé A thấy tranh và nói, bé B nghe rồi chạm 1 trong 3 tranh, đổi vai, đổi tiếng; bạn khác đoán cho vui | tự động |
 | 24–28 | Cô giáo nhỏ (cả lớp) | Mỗi bạn một lượt nói cho cả lớp; cả lớp chạm tranh rồi cùng nói bằng tiếng kia | tự động |
 | 28–31 | Cả lớp đấu Rồng Lửa (tự chơi) | Mỗi bạn tự trả lời câu ngẫu nhiên trên máy mình (từ, cụm, chữ; EN/ZH), mỗi câu đúng +1 ⚡ cho anh hùng Bông. Giữa trận rồng nổi giận kéo thanh về phía rồng, cả lớp tiếp sức kéo lại, hết giờ cả lớp thắng. Cô tắt tiếng tất cả trên Zoom/Meet, không cần nói | tự động |
-| 31–34 | Truyện | Nghe 8 cảnh "Sinh nhật của Bông" | – |
-| 34–37 | Phiên dịch nhí | Mở 4 hộp quà, phiên dịch nhí nói sang tiếng kia | được / cùng cô / chưa |
-| 37–40 | Huy hiệu Bứt phá | Huy hiệu cả nhóm, ảnh hoặc avatar các bạn | – |
+| 31–36 | Nghe truyện, xếp tranh | Lượt 1: cô phát "Sinh nhật của Bông" (4 cảnh) bằng tiếng Anh, mỗi bạn chạm lần lượt 4 tranh có lời tiếng Trung (chạm 🔊 để nghe) theo thứ tự truyện. Lượt 2: cô phát "Một ngày của Bông" (Vòng 1, ôn lại) bằng tiếng Trung, các con xếp tranh có lời tiếng Anh. Hiện đáp án: màn chiếu xếp đúng thứ tự, đọc từng cảnh bằng tiếng kia, cả lớp nói theo | tự động: đúng cả 4 / số vị trí đúng; bé 1 máy cô bấm Đúng/Chưa |
+| 36–38 | Phiên dịch nhí | Mở hộp quà, phiên dịch nhí nói sang tiếng kia | được / cùng cô / chưa |
+| 38–40 | Huy hiệu Bứt phá | Huy hiệu cả nhóm, ảnh hoặc avatar các bạn | – |
 
 **Tặng sao**: khi cô bấm Hiện đáp án, máy bé nào đúng hiện ngôi sao to xoay vào (không chữ khen); cứ 3–4 sao im lặng thì sao kế tiếp có cô Hươu đọc một câu khen theo đúng việc con vừa làm, đổi câu mỗi lần (bạn nói được sao khi bạn nghe hiểu); bé chưa đúng thì màn bé không hiện gì, không lộ đáp án trên máy bé. Đáp án đúng chỉ hiện trên màn chiếu cho cả lớp. Số sao trong buổi hiện ở góc màn bé (chưa cộng vào web 21 ngày – đợt 2).
 

@@ -113,6 +113,7 @@ const BAR = [
   ['#go', '▶ Bắt đầu', 'red'], ['[data-spin="en"]', '🎡 Quay · EN', ''], ['[data-spin="zh"]', '🎡 Quay · 中文', 'red'],
   ['#pv', '◀', 'ghost'], ['#rp', '🔁 Phát lại', 'ghost'], ['#rv', '👁 Hiện đáp án', 'y'], ['#ag', '↺ Hỏi lại', 'ghost'],
   ['#bst', '⚔️ Bắt đầu trận đấu', 'red'], ['#ben', '🏁 Kết thúc ngay', 'ghost'], ['#bre', '↺ Đấu lại', 'ghost'],
+  ['#xgo', '🧩 Cho các con xếp tranh', 'y'], ['#xback', '◀ Nghe lại truyện', 'ghost'],
   ['#op', '🎁 Mở hộp quà', 'y'], ['#an', '👂 Nghe đáp án', 'y'], ['#nx', 'Tiếp ▶', ''], ['#kq', 'Xem kết quả', 'red']];
 function drawBar(st) {
   if (!sharing) return;
@@ -121,6 +122,7 @@ function drawBar(st) {
   if (st.ph === 'on') lb += ` ${(st.i || 0) + 1}/${QUIZ.length}`;
   if (st.ph === 'tone') lb += ` ${(st.i || 0) + 1}/${TONES.length}`;
   if (st.ph === 'story') lb += ` ${(st.scene || 0) + 1}/${STORY.length}`;
+  if (st.ph === 'xep') lb += ` · lượt ${((st.xep || {}).r || 0) + 1}/2`;
   const qid = (CTL[st.ph] || {}).qid ? CTL[st.ph].qid(st) : '';
   const only = (CTL[st.ph] || {}).only ? CTL[st.ph].only(st) : null;
   if (qid) { const ss = seatsIn().filter(x => !only || only.indexOf(x.id) >= 0); lb += ` · ${ss.filter(x => answerOf(room, x, qid)).length}/${ss.length} đã chọn`; }
@@ -147,6 +149,7 @@ function goPhase(ph) {
   if (!st.t0 && ph !== 'cho') p.t0 = DB.now();
   if (ph === 'on' || ph === 'tone') p.i = 0;
   if (ph === 'story') { p.scene = 0; p.l = 'both'; }
+  if (ph === 'xep') { p.xep = { r: 0, step: 'nghe', sc: 0 }; p.run = (st.run || 0) + 1; }
   if (ph === 'gift') p.gift = { k: 0, open: false, ans: false, seat: pickRandom('pd') || null };
   if (ph === 'boss') { const b = st.boss || {}; p.boss = { run: b.t0 ? (b.run || 0) : (b.run || 0), dur: b.dur || 120000 }; }
   if (ph === 'lop') { const turns = lopTurns(onlineSeats()); p.lturns = turns; p.run = (st.run || 0) + 1; Object.assign(p, lopPatch(turns, 0, p.run)); }
@@ -318,7 +321,7 @@ const CTL = {
         : state === 'run' ? `<p class="bigtxt">⚡ ${info.H} · còn ${Math.ceil(info.left / 1000)} giây${info.surge ? ' · ⚠️ rồng nổi giận' : ''}</p>
           <div class="ctl"><button class="btn ghost" id="ben">🏁 Kết thúc ngay (cả lớp thắng)</button></div>`
         : `<p class="bigtxt">🎉 Cả lớp thắng với ⚡ ${info.H}</p>`}
-        <div class="ctl">${state !== 'pre' ? '<button class="btn ghost" id="bre">↺ Đấu lại</button>' : ''}<button class="btn" id="nx">Tiếp: Truyện ▶</button></div>`;
+        <div class="ctl">${state !== 'pre' ? '<button class="btn ghost" id="bre">↺ Đấu lại</button>' : ''}<button class="btn" id="nx">Tiếp: Nghe truyện, xếp tranh ▶</button></div>`;
     },
     bind(st) {
       const b = st.boss || {};
@@ -326,13 +329,54 @@ const CTL = {
       $('#bst') && ($('#bst').onclick = () => setState({ boss: { run: (b.run || 0) + 1, dur: b.dur || 120000, t0: DB.now() } }));
       $('#ben') && ($('#ben').onclick = () => setState({ boss: Object.assign({}, b, { end: true }) }));
       $('#bre') && ($('#bre').onclick = () => setState({ boss: { run: (b.run || 0), dur: b.dur || 120000 } }));
-      $('#nx').onclick = () => goPhase('story');
+      $('#nx').onclick = () => goPhase('xep');
       clearTimeout(this._t); if (b.t0 && !b.end && DB.now() - b.t0 < (b.dur || 120000) + 1500) this._t = setTimeout(() => { if (TAB === 'lop' && (room.state || {}).ph === 'boss') draw(); }, 1000);
     },
     kid(s, st) {
       const b = st.boss || {}, pre = 'boss_' + (b.run || 0) + '_'; let a = 0, ok = 0;
       Object.entries(room.answers || {}).forEach(([q, o]) => { if (q.indexOf(pre) !== 0) return; s.ids.forEach(id => { if (o && o[id]) { a++; if (o[id].ok) ok++; } }); });
       return b.t0 ? `<span class="st ${a ? 'ok' : 'none'}">⚡ ${ok} đúng / ${a} câu</span>` : '';
+    }
+  },
+  xep: {
+    html: st => {
+      const x = st.xep || {}, r = x.r || 0, S = XEP[r], step = x.step || 'nghe', sc = x.sc || 0, qid = `xep_${r}_${st.run || 0}`;
+      const L = l => l === 'zh' ? 'tiếng Trung' : 'tiếng Anh';
+      let body;
+      if (step === 'nghe') body = `<div class="prev"><img class="scene-s" src="${S.scenes[sc].img}" alt=""><div><div class="small">Cảnh ${sc + 1}/4 · cô phát ${L(S.from)}</div><div class="bigtxt ${S.from}">${esc(S.scenes[sc][S.from])}</div></div></div>
+        <div class="ctl"><button class="btn ghost" id="pv">◀ Cảnh trước</button><button class="btn ghost" id="rp">🔁 Đọc lại</button>
+          ${sc < 3 ? '<button class="btn" id="nx">Cảnh tiếp ▶</button>' : '<button class="btn y" id="xgo">🧩 Cho các con xếp tranh</button>'}</div>`;
+      else if (step === 'xep') { const done = seatsIn().filter(s => answerOf(room, s, qid)).length;
+        body = `<p class="bigtxt">🧩 ${done}/${seatsIn().length} bạn đã xếp xong</p><p class="tip">Mỗi bạn thấy 4 tranh xáo, có lời ${L(S.to)} (chạm 🔊 để nghe), chạm lần lượt tranh 1→4. Bạn chỉ có 1 máy: con nói thứ tự trên Zoom, cô bấm Đúng/Chưa ở cột phải.</p>
+          <div class="ctl"><button class="btn ghost" id="xback">◀ Nghe lại truyện</button><button class="btn y" id="rv">👁 Hiện đáp án</button></div>`; }
+      else body = `<div class="prev"><img class="scene-s" src="${S.scenes[sc].img}" alt=""><div><div class="small">Đáp án · cảnh ${sc + 1}/4 · đọc ${L(S.to)}, cả lớp nói theo</div><div class="bigtxt ${S.to}">${esc(S.scenes[sc][S.to])}</div></div></div>
+        <div class="ctl"><button class="btn ghost" id="pv">◀</button><button class="btn ghost" id="rp">🔁 Đọc lại</button>
+          <button class="btn" id="nx">${sc < 3 ? 'Cảnh tiếp ▶' : r === 0 ? 'Sang lượt 2 (nghe tiếng Trung) ▶' : 'Tiếp: Phiên dịch nhí ▶'}</button></div>`;
+      return `<h2>🧩 Nghe truyện, xếp tranh · lượt ${r + 1}/2</h2><p><b>${esc(S.title)}</b>: cô phát <b>${L(S.from)}</b>, các con xếp tranh có lời <b>${L(S.to)}</b>.</p>${body}
+        <div class="ctl"><button class="btn ghost sm" id="xr0">Lượt 1</button><button class="btn ghost sm" id="xr1">Lượt 2</button></div>`;
+    },
+    bind(st) {
+      const x = st.xep || {}, r = x.r || 0, step = x.step || 'nghe', sc = x.sc || 0;
+      const set = o => setState({ xep: Object.assign({ r, step, sc }, o), rp: 0 });
+      $('#pv') && ($('#pv').onclick = () => sc > 0 && set({ sc: sc - 1 }));
+      $('#rp') && ($('#rp').onclick = () => setState({ rp: (st.rp || 0) + 1 }));
+      $('#xgo') && ($('#xgo').onclick = () => set({ step: 'xep', sc: 0 }));
+      $('#xback') && ($('#xback').onclick = () => set({ step: 'nghe', sc: 0 }));
+      $('#rv') && ($('#rv').onclick = () => set({ step: 'rv', sc: 0 }));
+      $('#nx') && ($('#nx').onclick = () => sc < 3 ? set({ sc: sc + 1 }) : step === 'rv' ? (r === 0 ? set({ r: 1, step: 'nghe', sc: 0 }) : goPhase('gift')) : set({ sc: sc + 1 }));
+      $('#xr0').onclick = () => set({ r: 0, step: 'nghe', sc: 0 }); $('#xr1').onclick = () => set({ r: 1, step: 'nghe', sc: 0 });
+    },
+    kid(s, st) {
+      const x = st.xep || {}, qid = `xep_${x.r || 0}_${st.run || 0}`, a = answerOf(room, s, qid);
+      if ((x.step || 'nghe') === 'nghe') return '';
+      const px = ((((room.marks || {})[s.id] || {}).px) || {})[qid];
+      return (a ? `<span class="st ${a.ok ? 'ok' : 'no'}">${a.ok ? '✓ đúng cả 4' : `○ đúng ${a.n || 0}/4 vị trí`}${a.ho ? ' (cô bấm)' : ''}</span>` : '<span class="st none">… đang xếp</span>') +
+        ` <button class="mk${px && px.ok ? ' on' : ''}" data-xpx="${s.id}|1">Đúng</button><button class="mk${px && !px.ok ? ' on o' : ''}" data-xpx="${s.id}|0">Chưa</button>`;
+    },
+    kbind(st) {
+      const x = st.xep || {}, qid = `xep_${x.r || 0}_${st.run || 0}`;
+      $$('[data-xpx]').forEach(b => b.onclick = () => { const [id, v] = b.dataset.xpx.split('|'), cur = ((((room.marks || {})[id] || {}).px) || {})[qid], ok = v === '1';
+        mark(id, 'px/' + qid, cur && !!cur.ok === ok ? null : { ok, n: ok ? 4 : 0, at: DB.now() }); });
     }
   },
   story: {
@@ -551,6 +595,7 @@ function latest(seat, prefix, qids) {
   const re = new RegExp('^' + prefix + '_(\\d+)$');
   return qids.filter(q => re.test(q)).sort((a, b) => +b.match(re)[1] - +a.match(re)[1]).map(q => answerOf(room, seat, q)).find(Boolean) || null;
 }
+function xepRes(seat, r, qids) { const a = latest(seat, 'xep_' + r, qids); return a ? (a.ok ? 'đúng cả 4' : `${a.n || 0}/4 vị trí`) : ''; }
 function results() {
   const st = room.state || {}, qids = allQids(), M = room.marks || {}, plog = st.plog || {}, llog = st.llog || {};
   return seatsIn().map(s => {
@@ -584,6 +629,7 @@ function results() {
       toneChon: `${tOk}/${TONES.length}`, toneCham: (g[2] + g[1] + g[0]) ? `chuẩn ${g[2]} · gần ${g[1]} · cần luyện ${g[0]}` : '',
       doiNoi: say[1] ? `${say[0]}/${say[1]}` : '', doiNghe: hear[1] ? `${hear[0]}/${hear[1]}` : '',
       boss: bA ? `${bOk}/${bA}` : '',
+      xep0: xepRes(s, 0, qids), xep1: xepRes(s, 1, qids),
       lopNoi: lSay[1] ? `${lSay[0]}/${lSay[1]} bạn hiểu` : '', lopNghe: lHear[1] ? `${lHear[0]}/${lHear[1]}` : '',
       chaoEN: lv(intro.en), chaoZH: lv(intro.zh), pd: pd.length ? pd.map(v => ['chưa', 'cùng cô', 'được'][v]).join(', ') : '',
       h1: h.td ?? '', h2: h.cx ?? '', h3: h.tt ?? '', note: m.note || '', detail: JSON.stringify(det)
@@ -592,7 +638,7 @@ function results() {
   });
 }
 const COLS = [['kid', 'Tên con'], ['parent', 'Ba/mẹ'], ['src', 'Vào lớp'], ['onEN', 'Ôn nhanh EN'], ['onZH', 'Ôn nhanh ZH'], ['doc', 'Nhìn chữ'], ['tg', 'TB phản hồi (giây)'],
-  ['toneChon', 'Thanh điệu chọn đúng'], ['toneCham', 'Cô chấm thanh điệu'], ['doiNoi', 'Đôi bạn: bạn hiểu con nói'], ['doiNghe', 'Đôi bạn: con nghe đúng'], ['lopNoi', 'Cô giáo nhỏ: cả lớp hiểu con nói'], ['lopNghe', 'Cô giáo nhỏ: con nghe bạn đúng'], ['boss', 'Đấu Rồng Lửa: đúng/câu'],
+  ['toneChon', 'Thanh điệu chọn đúng'], ['toneCham', 'Cô chấm thanh điệu'], ['doiNoi', 'Đôi bạn: bạn hiểu con nói'], ['doiNghe', 'Đôi bạn: con nghe đúng'], ['lopNoi', 'Cô giáo nhỏ: cả lớp hiểu con nói'], ['lopNghe', 'Cô giáo nhỏ: con nghe bạn đúng'], ['boss', 'Đấu Rồng Lửa: đúng/câu'], ['xep0', 'Xếp tranh (nghe EN, xếp ZH)'], ['xep1', 'Xếp tranh (nghe ZH, xếp EN)'],
   ['chaoEN', 'Chào bạn EN'], ['chaoZH', 'Chào bạn ZH'], ['pd', 'Phiên dịch nhí']];
 function drawResults() {
   const rows = results();

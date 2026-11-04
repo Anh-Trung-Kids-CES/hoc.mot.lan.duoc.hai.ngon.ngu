@@ -202,6 +202,7 @@ function view(st, seats) {
     case 'pair': return vPair(st, seats);
     case 'lop': return vLop(st, seats);
     case 'story': return vStory(st);
+    case 'xep': return vXep(st, seats);
     case 'gift': return vGift(st, seats);
     case 'boss': return vBoss(st, seats);
     case 'badge': return vBadge(st, seats);
@@ -389,6 +390,68 @@ function vStory(st) {
   };
 }
 
+/* --- Nghe truyện, xếp tranh --- */
+let xepPick = {};   // qid -> các cảnh con đã chạm theo thứ tự
+function xepOrder(r, run) {   // thứ tự xáo riêng cho từng máy, không trùng thứ tự đúng
+  let seed = 7; (DB.uid + r + run).split('').forEach(ch => seed = (seed * 31 + ch.charCodeAt(0)) % 99991);
+  let o = shuffleSeeded([0, 1, 2, 3], seed || 1);
+  if (o.join() === '0,1,2,3') o = [2, 0, 3, 1];
+  return o;
+}
+function vXep(st, seats) {
+  const x = st.xep || {}, r = x.r || 0, S = XEP[r], step = x.step || 'nghe', sc = Math.min(3, x.sc || 0), run = st.run || 0, qid = `xep_${r}_${run}`;
+  const lab = l => l === 'zh' ? '中文' : 'English';
+  const head = `<div class="qno">🧩 ${esc(S.title)} · Lượt ${r + 1}/2 <span class="flag ${S.from}">nghe ${lab(S.from)}</span> → <span class="flag ${S.to}">xếp ${lab(S.to)}</span></div>`;
+  if (step === 'nghe') {
+    const a = xepAud(S.scenes[sc], S.from);
+    return {
+      key: 'xep|' + r + '|nghe|' + sc, akey: 'xep|' + r + '|nghe|' + sc + '|' + (st.rp || 0), audio: sc === 0 && !st.rp ? [hd('Mình cùng nghe truyện nhé!'), 400, a] : [a],
+      html: `${head}<p class="ask-line">👂 Con nghe truyện thật kỹ, lát nữa con xếp lại tranh nhé!</p><img class="scene" src="${S.scenes[sc].img}" alt="">
+        <div class="scene-cap"><span class="${S.from}">${esc(S.scenes[sc][S.from])}</span></div><div class="dots">${S.scenes.map((_, j) => `<i class="${j <= sc ? 'on' : ''}"></i>`).join('')}</div>`
+    };
+  }
+  const order = xepOrder(r, run), my = myAnswer(qid), picks = xepPick[qid] || (my && my.order ? my.order.slice() : []);
+  if (CHIEU) {   // màn chiếu: lúc các con xếp thì chỉ hiện tranh xáo; lúc hiện đáp án thì hiện thứ tự đúng và đọc từng cảnh bằng tiếng kia
+    if (step === 'xep') return {
+      key: 'xep|' + r + '|xep', akey: 'xep|' + r + '|xep', audio: null,
+      html: `${head}<p class="ask-line">🧩 Các bạn xếp tranh theo thứ tự truyện vừa nghe nhé!</p>
+        <div class="xep-grid">${[1, 3, 0, 2].map(i => `<div class="xep-t"><img src="${S.scenes[i].img}" alt=""><span class="${S.to}">${esc(S.scenes[i][S.to])}</span></div>`).join('')}</div><p class="count" id="cnt"></p>`,
+      update() { const done = seats.filter(s => answerOf(room, s, qid)).length; $('#cnt').textContent = `${done}/${seats.length} bạn đã xếp xong`; },
+      bind() { this.update(); }
+    };
+    return {
+      key: 'xep|' + r + '|rv|' + sc, akey: 'xep|' + r + '|rv|' + sc + '|' + (st.rp || 0), audio: [xepAud(S.scenes[sc], S.to)],
+      html: `${head}<p class="ask-line">🗣️ Cả lớp cùng nói theo bằng ${S.to === 'zh' ? 'tiếng Trung' : 'tiếng Anh'} nhé!</p>
+        <div class="xep-grid rv">${S.scenes.map((s, i) => `<div class="xep-t${i === sc ? ' cur' : ''}"><b class="xep-n">${i + 1}</b><img src="${s.img}" alt=""><span class="${S.to}">${esc(s[S.to])}</span><small class="${S.from}">${esc(s[S.from])}</small></div>`).join('')}</div>`
+    };
+  }
+  /* máy bé: chạm lần lượt tranh 1, 2, 3, 4 */
+  const doneMine = picks.length === 4;
+  const key = ['xep', r, step, run, picks.join('')].join('|');
+  return {
+    key, akey: 'xep|' + r + '|' + step, audio: step === 'xep' && !doneMine && !picks.length ? [hd('Con nghe và chạm vào tranh đúng nhé!')] : null,
+    html: `${head}<p class="ask-line">${doneMine ? '✅ Con xếp xong rồi! Chờ cô nhé.' : `🧩 Con chạm tranh thứ <b>${picks.length + 1}</b> của truyện nhé!`}</p>
+      <div class="xep-grid${step === 'rv' ? ' locked' : ''}">${order.map(i => { const n = picks.indexOf(i); return `<div class="xep-t kid${n >= 0 ? ' on' : ''}" data-i="${i}">${n >= 0 ? `<b class="xep-n">${n + 1}</b>` : ''}<img src="${S.scenes[i].img}" alt=""><span class="${S.to}">${esc(S.scenes[i][S.to])}</span><button class="xep-say" data-a="${xepAud(S.scenes[i], S.to)}" aria-label="Nghe">🔊</button></div>`; }).join('')}</div>
+      ${step === 'xep' && picks.length ? '<button class="btn ghost" id="xRe">↺ Xếp lại</button>' : ''}`,
+    bind() {
+      $$('.xep-say', $('#stage')).forEach(b => b.onclick = e => { e.stopPropagation(); play([b.dataset.a], amCo() ? 0.45 : 1); });
+      if (step === 'rv') { if (my && my.ok) giveStar(qid, 'xep'); return; }
+      $$('.xep-t.kid', $('#stage')).forEach(t => t.onclick = () => {
+        const cur = (xepPick[qid] || picks).slice(), i = +t.dataset.i;
+        if (cur.indexOf(i) >= 0 || cur.length >= 4) return;
+        cur.push(i); xepPick[qid] = cur; SND.beep('pop');
+        if (cur.length === 4) {
+          const n = cur.filter((v, j) => v === j).length;
+          DB.set(roomPath(CODE) + '/answers/' + qid + '/' + DB.uid, { order: cur, n, ok: n === 4, ms: Math.round(performance.now() - shownAt), at: DB.now() }).catch(er => console.error(er));
+          SND.beep('ok');
+        }
+        lastStageKey = ''; render();
+      });
+      const re = $('#xRe'); if (re) re.onclick = () => { xepPick[qid] = []; if (myAnswer(qid)) DB.remove(roomPath(CODE) + '/answers/' + qid + '/' + DB.uid).catch(() => { }); lastStageKey = ''; render(); };
+    }
+  };
+}
+
 /* --- Phiên dịch nhí: mở hộp quà --- */
 function vGift(st, seats) {
   const g = st.gift || {}, k = Math.min(GIFTS.length - 1, g.k || 0), G = GIFTS[k], from = G.from, to = from === 'en' ? 'zh' : 'en', s = STORY[G.s];
@@ -442,7 +505,8 @@ const PRAISE = {
   pairSee: ['Con đoán đúng cùng các bạn rồi!'],
   lopSay: ['Cô giáo nhỏ nói hay ghê, các bạn hiểu rồi!', 'Con nói rõ, cả lớp hiểu con rồi!'],
   lopHear: ['Con hiểu cô giáo nhỏ rồi đó!', 'Con lắng nghe bạn rất chăm!'],
-  boss: ['Cả lớp cùng nhau thắng Rồng Lửa rồi!']
+  boss: ['Cả lớp cùng nhau thắng Rồng Lửa rồi!'],
+  xep: ['Con nhớ truyện giỏi ghê!', 'Con xếp tranh đúng hết rồi!']
 };
 let lastPraise = '';
 function praiseAudio(kind) {
