@@ -86,7 +86,7 @@ function bossScene(info, big) {
     <div class="b-msg" id="bMsg">${bossMsg(info)}</div></div>`;
 }
 function bossMsg(info) {
-  if (info.pre) return '⚔️ Rồng Lửa nghịch ngợm muốn thổi tắt nến sinh nhật của Bông! Cả lớp tiếp sức cho anh hùng nhé!';
+  if (info.pre) return BOSS.story;
   if (info.done) return '🎉 Cả lớp thắng rồi! Rồng Lửa biến lại thành quả trứng!';
   if (info.surge) return '⚠️ Rồng Lửa nổi giận! Cả lớp trả lời nhanh nào!';
   if (info.pos >= 70) return '💪 Anh hùng mạnh lên, Rồng Lửa nhỏ dần rồi! Tiếp sức nữa nào!';

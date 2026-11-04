@@ -1,4 +1,4 @@
-# Lớp Zoom cùng cô – đợt 1 (Little Seed · Vòng 2)
+# Lớp Zoom cùng cô – Little Seed và Canopy · Vòng 2
 
 Web riêng cho buổi Zoom cuối tuần, kiểu Wayground: cô điều khiển tốc độ, các bé chạm trên máy thứ hai.
 Đợt 1: **Little Seed Vòng 2 "Giới thiệu bản thân"** (Zoom ngày 14, Chủ nhật 8/11/2026, 40 phút, nhóm 6 bé).
@@ -51,11 +51,32 @@ Luật Little Seed: chỉ chạm và nói, 3 tranh, không bảng xếp hạng (
 ## Tệp
 - `index.html`, `lz-con.js` – màn bé + màn chiếu + chuẩn bị vào lớp
 - `co.html`, `lz-co.js`, `co.css` – màn cô
-- `lz-core.js` – cấu hình Firebase, nội dung Vòng 2, âm thanh, chỗ ngồi, thanh năng lượng
+- `lz-core.js` – cấu hình Firebase, khoá của phòng (`LZ_LOPS`), nội dung Little Seed Vòng 2, âm thanh, chỗ ngồi, thanh năng lượng
+- `lz-canopy.js` – nội dung Canopy Vòng 2 (tệp sinh từ `tao-tai-nguyen/tao_canopy_v2.js`)
 - `lz.css` – kiểu chung
 - `GIONG-CAN-THU.md` – 35 câu giọng cô Hươu riêng cho Lớp Zoom (đã tạo đủ, đã gắn)
 - `HINH-CAN-VE.md` – 4 ảnh biểu cảm trận Rồng Lửa (đã vẽ đủ, đã gắn)
 - Mỗi lần sửa tệp .js/.css: đổi số `?v=` trong `index.html` và `co.html` để trình duyệt của cô và ba mẹ tải bản mới
 
+## Canopy · Vòng 2 "Jobs – Ghé thăm nơi làm việc" (thêm 05/11/2026)
+Cùng một web, cùng 9 phần và mạch 40 phút như Little Seed, cùng luật: chạm và nói, 3 tranh, cô Hươu dẫn, 3 KHÔNG, không bảng xếp hạng (chỉ thanh năng lượng chung), tiếng chỉ phát ở máy cô, tặng sao.
+
+- **Mở phòng**: trên `co.html` cô bấm **Mở phòng mới · Canopy · Vòng 2**. Phòng ghi khoá ở `state.lop = 'canopy-v2'`.
+- **Link**: link chung cho bé vẫn là `…/lop-zoom/` (bé nhập mã phòng, web tự chuyển sang nội dung Canopy). Nút *Chép link cho ba mẹ* đã kèm `&lop=canopy-v2`. Chuẩn bị vào lớp cho nhóm Canopy: `…/lop-zoom/?chuan-bi&lop=canopy-v2`.
+- **Nội dung** (chỉ từ Vòng 2, tranh và giọng có sẵn của web học, không tạo thêm bằng Gemini):
+
+| Phần | Canopy làm gì |
+|---|---|
+| Chào bạn mới | Cả lớp hỏi What does your mom do? / 你妈妈做什么工作？, bạn được chọn nói nghề thật của mẹ: My mom is a … / 我妈妈是…; nói tốt thì cô hỏi thêm Where does she work? / 她在哪儿工作？ |
+| Ôn nhanh | 10 câu khó dần: từ (nghề, nơi làm việc, người thân) → cụm "work at a …" / 在…工作 → câu (他在医院工作。, My mom is a doctor., 我爸爸是厨师，他在饭店工作。) → nhìn chữ Hán 牙医, 学校 |
+| Máy bay thanh điệu | Từ hai chữ: 医生, 医院, 厨师, 学校, 饭店, 老师, 工作, 牙医. Con chọn 1 trong 4 đường bay hai chặng (ví dụ "Lượn + ngang" cho lǎoshī); các lựa chọn sai chỉ khác một chữ. Bé 1 máy: bấm hộ số đường bay 1–4 |
+| Đôi bạn, Cô giáo nhỏ | Tranh từ, cụm và câu (My dad is a doctor., My older sister is a chef., She is an employee. She works at a shop.…) |
+| Đấu Rồng Lửa | 46 câu ngẫu nhiên: nghề, nơi làm việc, người thân, cụm "làm ở…", nhìn chữ 医生 老师 厨师 司机 医院 学校 饭店 商店 |
+| Nghe truyện, xếp tranh | Truyện của Anna (ngày 5–6). Lượt 1 nghe EN: My name is Anna. / My dad is a doctor. / My mom is a teacher. / My older sister is a chef. → xếp tranh lời ZH. Lượt 2 nghe ZH: 他在医院工作。/ 她在学校工作。/ 星期六晚上，我们去饭店吃晚饭。/ 我爱我家！→ xếp tranh lời EN |
+
+- Màn bé không hiện pinyin (Canopy ôn bằng tiếng, như ngày ôn trên web học); màn cô luôn có pinyin, màn chiếu hiện pinyin khi hiện đáp án thanh điệu.
+- Kết quả gửi về tab "Lớp Zoom" với cột lớp "Canopy · Vòng 2"; tệp CSV tên `lop-zoom-canopy-v2-<mã>-<ngày>.csv`.
+- Sửa nội dung: sửa `tao-tai-nguyen/tao_canopy_v2.js` rồi chạy `node lop-zoom/tao-tai-nguyen/tao_canopy_v2.js` (tự báo nếu câu nào chưa có giọng hoặc tranh), không sửa tay `lz-canopy.js`.
+
 ## Đợt 2 (cho Zoom ngày 21)
-Canopy, thẻ báo cáo tự động, câu gợi ý cho sale, huy hiệu cộng sao, tab "Ghép hồ sơ Zoom" trên trang quản trị.
+Thẻ báo cáo tự động, câu gợi ý cho sale, huy hiệu cộng sao, tab "Ghép hồ sơ Zoom" trên trang quản trị.

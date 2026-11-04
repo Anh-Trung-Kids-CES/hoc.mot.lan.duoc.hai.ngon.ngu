@@ -71,7 +71,7 @@ function prepScreen() {
       <p class="vn small">Nhớ chuẩn bị 2 máy: một máy vào Zoom, một máy mở trang này. Chỉ có 1 máy cũng không sao, con giơ ngón tay 1-2-3 để cô bấm hộ.</p>
       <button class="btn ghost" id="again">Sửa thông tin</button></div></div>`;
     $('#again').onclick = prepScreen;
-    try { await apiPost({ action: 'zoomhs', kid: ME.kid, parent: ME.parent, ava: ME.ava, ok: ME.ok, photo: ME.ok ? photoBig || '' : '', web: ME.web || '', khoa: 'seed', vong: 2 }); } catch (e) { /* máy chủ chưa cập nhật: thông tin vẫn lưu trên máy */ }
+    try { await apiPost({ action: 'zoomhs', kid: ME.kid, parent: ME.parent, ava: ME.ava, ok: ME.ok, photo: ME.ok ? photoBig || '' : '', web: ME.web || '', khoa: LZ_CFG.khoa, vong: LZ_CFG.vong }); } catch (e) { /* máy chủ chưa cập nhật: thông tin vẫn lưu trên máy */ }
   });
 }
 
@@ -93,6 +93,8 @@ function codeScreen(msg) {
     el.onpaste = e => { const t = (e.clipboardData.getData('text') || '').replace(/\D/g, ''); if (t.length >= 4) { e.preventDefault(); ins.forEach((x, j) => x.value = t[j] || ''); } };
   });
   (ins.find(x => !x.value) || ins[3]).focus();
+  /* vừa tải lại để đổi khoá: vào tiếp luôn, ba mẹ không phải bấm lại */
+  if (QS.has('tiep') && pre.length === 4 && !codeScreen.auto) { codeScreen.auto = true; setTimeout(() => $('#cf') && $('#cf').requestSubmit ? $('#cf').requestSubmit() : $('#cf').dispatchEvent(new Event('submit', { cancelable: true })), 0); }
   $('#cf').onsubmit = async e => {
     e.preventDefault(); SND.unlock();
     const code = ins.map(x => x.value).join('');
@@ -100,6 +102,10 @@ function codeScreen(msg) {
     let t = null;
     try { t = await DB.get(roomPath(code) + '/teacher'); } catch (er) { return codeScreen('Mạng đang chập chờn. Ba mẹ thử lại nhé.'); }
     if (!t) return codeScreen('Chưa thấy phòng ' + code + '. Ba mẹ xem lại mã trên màn Zoom của cô nhé.');
+    /* phòng của khoá khác (Little Seed / Canopy): tải lại trang với đúng nội dung rồi vào tiếp */
+    let lop = '';
+    try { lop = await DB.get(roomPath(code) + '/state/lop'); } catch (er) { }
+    if (lop && LZ_LOPS[lop] && lop !== LZ_LOP) { location.replace(lopUrl(lop, { phong: code, tiep: 1 })); return; }
     CODE = code;
     if (ME && ME.kid) confirmScreen(); else profileForm('Thông tin của con', 'Vào lớp', () => join());
   };
@@ -290,10 +296,10 @@ function vTone(st, seats) {
   const i = Math.min(TONES.length - 1, st.i || 0), x = TONES[i], qid = `tone_${i}_${st.run || 0}`, rv = st.step === 'rv';
   const my = myAnswer(qid), a = toneAudio(x);
   const key = ['tone', i, st.run || 0, rv ? 1 : 0, my ? my.c : '-'].join('|');
-  const opts = [1, 2, 3, 4].map(t => `<button class="path${my && my.c === t ? ' chosen' : ''}${rv && CHIEU && t === x.t ? ' right' : ''}${rv && CHIEU && t !== x.t ? ' dim' : ''}" data-c="${t}">${planeSVG(t, 'pl' + t)}<span>${TONE_NAME[t]}</span></button>`).join('');
+  const opts = [1, 2, 3, 4].map(t => `<button class="path${x.o ? ' two' : ''}${my && my.c === t ? ' chosen' : ''}${rv && CHIEU && t === x.t ? ' right' : ''}${rv && CHIEU && t !== x.t ? ' dim' : ''}" data-c="${t}">${planeSVG(toneOpt(x, t), 'pl' + t)}<span>${TONE_NAME[toneOpt(x, t)]}</span></button>`).join('');
   const head = `<div class="tone-head"><img src="${tonePic(x)}" alt=""><div class="chu zh">${x.c}</div>
     <div class="tone-side"><div class="py">${rv && CHIEU ? x.py : x.p0}</div>${a ? `<button class="say zh tone-say" data-play><span class="ic">🔊</span>Nghe</button>` : '<p class="sub">Cô đọc trên Zoom</p>'}</div></div>`;
-  const body = rv && CHIEU ? `<div class="cheer" style="color:var(--red)">Cả lớp đưa tay bay theo, nói theo nhé! ✋ ${x.py}</div><div class="fly-big">${planeSVG(x.t, 'plBig', true)}</div>`
+  const body = rv && CHIEU ? `<div class="cheer" style="color:var(--red)">Cả lớp đưa tay bay theo, nói theo nhé! ✋ ${x.py}</div><div class="fly-big">${planeSVG(toneOpt(x, x.t), 'plBig', true)}</div>`
     : `<div class="paths${my || CHIEU ? ' locked' : ''}" id="pics">${opts}</div><p class="count" id="cnt"></p>`;
   const akey = ['tone', i, st.run || 0, rv ? 1 : 0, st.rp || 0].join('|');
   return {
@@ -480,7 +486,7 @@ function vGift(st, seats) {
 function vBadge(st, seats) {
   return {
     key: 'badge|' + seats.map(s => s.id + (s.photo ? 'p' : '')).join(','), akey: 'badge', audio: [hd('Cả nhóm giỏi quá! Cả nhóm được huy hiệu Bứt phá!'), 300, hd('Tuyệt vời! Con đã học xong hôm nay rồi!')],
-    html: `<div class="medal"><small>Huy hiệu</small><b>BỨT PHÁ</b><small>⭐ Vòng 2 ⭐</small></div><h1>Cả nhóm giỏi quá!</h1>
+    html: `<div class="medal"><small>Huy hiệu</small><b>BỨT PHÁ</b><small>⭐ Vòng ${LZ_CFG.vong} ⭐</small></div><h1>Cả nhóm giỏi quá!</h1>
       <div class="team">${seats.map(s => `<div class="face${s.id === mySeat ? ' me' : ''}"><img src="${faceOf(s)}" alt=""><span>${esc(s.kid)}</span></div>`).join('')}</div>`,
     bind() { if (!confettiDone) { confettiDone = true; SND.beep('win'); confetti(); } }
   };
@@ -553,8 +559,9 @@ function bindPicks(qid, judge, sel) {
 }
 
 /* ======================= màn chiếu ======================= */
-function startChieu() {
+async function startChieu() {
   CODE = CHIEU;
+  try { const lop = await DB.get(roomPath(CODE) + '/state/lop'); if (lop && LZ_LOPS[lop] && lop !== LZ_LOP) { location.replace(lopUrl(lop)); return; } } catch (e) { }
   if (window.parent !== window) document.addEventListener('keydown', e => { try { parent.lzKey && parent.lzKey(e); } catch (er) { } });
   document.title = 'Màn chiếu – Phòng ' + CODE;
   const link = location.href.split('?')[0];

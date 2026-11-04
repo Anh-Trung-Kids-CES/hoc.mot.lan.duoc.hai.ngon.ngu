@@ -14,14 +14,14 @@ const kidLink = () => location.href.replace(/co\.html.*$/, '');
 function homeScreen(msg) {
   const old = (lsGet('lz-co-rooms', []) || []).slice(0, 4);
   app.innerHTML = `<div class="wrap"><div class="card"><h2>Mở lớp Zoom</h2>
-    <p>Little Seed · Vòng 2 "Giới thiệu bản thân" · nhóm tối đa 6 bé, 40 phút.</p>
+    <p>Nhóm tối đa 6 bé, 40 phút. Cô chọn khoá của buổi học:</p>
     ${msg ? `<p class="msg err">${esc(msg)}</p>` : ''}
-    <button class="btn red" id="mk">Mở phòng mới</button>
-    ${old.length ? `<h3 style="margin-top:18px">Phòng đã mở trên máy này</h3><div class="ctl">${old.map(r => `<button class="btn ghost" data-r="${r.code}">Phòng ${r.code} · ${esc(r.d || '')}</button>`).join('')}</div>` : ''}
+    <div class="ctl">${Object.entries(LZ_LOPS).map(([id, c]) => `<button class="btn${id === LZ_LOP ? ' red' : ''}" data-mk="${id}">Mở phòng mới · ${esc(c.ten)}<br><small style="font-weight:500">${esc(c.chude)}</small></button>`).join('')}</div>
+    ${old.length ? `<h3 style="margin-top:18px">Phòng đã mở trên máy này</h3><div class="ctl">${old.map(r => `<button class="btn ghost" data-r="${r.code}">Phòng ${r.code} · ${esc((LZ_LOPS[r.lop] || LZ_LOPS['seed-v2']).ten)} · ${esc(r.d || '')}</button>`).join('')}</div>` : ''}
     <p class="tip">Cô dùng <b>cùng một trình duyệt</b> trên máy này từ lúc mở phòng đến hết buổi. Máy khác hoặc cửa sổ ẩn danh không điều khiển được phòng.</p>
     ${LZ_MOCK ? '<p class="tip">Đang ở <b>chế độ thử trên máy</b> (?mock=1): không dùng Firebase, mở thêm tab <code>index.html?mock=1</code> để làm bé.</p>' : ''}
   </div></div>`;
-  $('#mk').onclick = createRoom;
+  $$('[data-mk]').forEach(b => b.onclick = () => b.dataset.mk === LZ_LOP ? createRoom() : location.assign(lopUrl(b.dataset.mk, { moi: 1, phong: null })));
   $$('[data-r]').forEach(b => b.onclick = () => openRoom(b.dataset.r));
 }
 async function createRoom() {
@@ -31,10 +31,10 @@ async function createRoom() {
     if (t && t !== DB.uid) continue;
     try {
       await DB.set(roomPath(code) + '/teacher', DB.uid);
-      await DB.set(roomPath(code) + '/state', { ph: 'cho', run: 0, duyet: false, amCo: true, made: DB.now(), lop: 'seed-v2', ngay: today() });
+      await DB.set(roomPath(code) + '/state', { ph: 'cho', run: 0, duyet: false, amCo: true, made: DB.now(), lop: LZ_LOP, ngay: today() });
     } catch (e) { continue; }
     const list = (lsGet('lz-co-rooms', []) || []).filter(r => r.code !== code);
-    list.unshift({ code, d: new Date().toLocaleDateString('vi-VN') }); lsSet('lz-co-rooms', list.slice(0, 8));
+    list.unshift({ code, lop: LZ_LOP, d: new Date().toLocaleDateString('vi-VN') }); lsSet('lz-co-rooms', list.slice(0, 8));
     return openRoom(code);
   }
   homeScreen('Chưa mở được phòng. Cô kiểm tra mạng rồi thử lại nhé.');
@@ -42,12 +42,17 @@ async function createRoom() {
 async function openRoom(code) {
   const t = await DB.get(roomPath(code) + '/teacher');
   if (t !== DB.uid) return homeScreen('Phòng ' + code + ' không do trình duyệt này mở nên không điều khiển được. Cô mở phòng mới nhé.');
+  /* phòng của khoá khác: tải lại màn cô với đúng nội dung */
+  const lop = (await DB.get(roomPath(code) + '/state/lop')) || 'seed-v2';
+  if (LZ_LOPS[lop] && lop !== LZ_LOP) { location.replace(lopUrl(lop, { phong: code, moi: null })); return; }
+  history.replaceState(null, '', lopUrl(LZ_LOP, { phong: code, moi: null }));
+  document.title = 'Màn cô – ' + LZ_CFG.ten;
   CODE = code;
-  $('#hdr').innerHTML = `<span class="code-big" title="Mã phòng">${code}</span>
+  $('#hdr').innerHTML = `<span class="pill">${esc(LZ_CFG.ten)}</span><span class="code-big" title="Mã phòng">${code}</span>
     <button class="pill y" id="shareBtn">🖥 Chia sẻ lên Zoom</button><button class="pill" id="chieu" title="Mở màn chiếu ở cửa sổ riêng">📺 Cửa sổ riêng</button><button class="pill" id="cp">🔗 Chép link cho ba mẹ</button>`;
-  $('#chieu').onclick = () => window.open(kidLink() + 'index.html?chieu=' + code + (LZ_MOCK ? '&mock=1' : ''), 'lz-chieu', 'width=1100,height=760');
+  $('#chieu').onclick = () => window.open(kidLink() + 'index.html?chieu=' + code + '&lop=' + LZ_LOP + (LZ_MOCK ? '&mock=1' : ''), 'lz-chieu', 'width=1100,height=760');
   $('#shareBtn').onclick = openShare;
-  $('#cp').onclick = () => { const l = kidLink() + '?phong=' + code + (LZ_MOCK ? '&mock=1' : ''); navigator.clipboard && navigator.clipboard.writeText(`Lớp Zoom cùng cô: ${l}  (mã phòng ${code})`); toast('Đã chép: ' + l); };
+  $('#cp').onclick = () => { const l = kidLink() + '?phong=' + code + '&lop=' + LZ_LOP + (LZ_MOCK ? '&mock=1' : ''); navigator.clipboard && navigator.clipboard.writeText(`Lớp Zoom cùng cô: ${l}  (mã phòng ${code})`); toast('Đã chép: ' + l); };
   app.innerHTML = `<nav class="tabs" id="tabs"></nav><div id="body"></div>`;
   DB.on(base(), v => { room = v || {}; draw(); });
   clearInterval(tick); tick = setInterval(drawTimer, 1000);
@@ -107,7 +112,7 @@ function drawClass() {
 let sharing = false;
 function openShare() {
   TAB = 'lop'; sharing = true;
-  const fr = $('#shareFr'), src = 'index.html?chieu=' + CODE + '&nhung=1' + (LZ_MOCK ? '&mock=1' : '');
+  const fr = $('#shareFr'), src = 'index.html?chieu=' + CODE + '&lop=' + LZ_LOP + '&nhung=1' + (LZ_MOCK ? '&mock=1' : '');
   if (!fr.getAttribute('src')) fr.src = src;
   $('#share').classList.remove('hide');
   draw();
@@ -199,7 +204,7 @@ const CTL = {
   intro: {
     html: st => {
       const sp = st.spin || {}, s = seatsIn().find(x => x.id === sp.seat);
-      return `<h2>🎡 Chào bạn mới</h2><p>Cô quay vòng chọn bạn. Cả lớp hỏi <b>What's your name?</b> / <b class="zh">你叫什么？</b>, bạn trả lời <b>My name is…</b> / <b class="zh">我叫…</b></p>
+      return `<h2>🎡 Chào bạn mới</h2><p>Cô quay vòng chọn bạn. Cả lớp hỏi <b>${esc(INTRO.ask.en.t)}</b> / <b class="zh">${esc(INTRO.ask.zh.t)}</b>, bạn trả lời <b>${esc(INTRO.model.en.t)}</b> / <b class="zh">${esc(INTRO.model.zh.t)}</b></p>${INTRO.tip ? `<p class="tip">${INTRO.tip}</p>` : ''}
       <div class="ctl"><button class="btn" data-spin="en">🎡 Quay · tiếng Anh</button><button class="btn red" data-spin="zh">🎡 Quay · tiếng Trung</button></div>
       ${s ? `<div class="tip">Vừa chọn: <b>${esc(s.kid)}</b> (${sp.l === 'zh' ? 'tiếng Trung' : 'tiếng Anh'}). Chấm ở cột bên phải: <b>EN</b>/<b>ZH</b> = con nói được, bấm lần nữa = nói cùng cô.</div>` : ''}
       <p class="small">Bấm 🎯 cạnh tên bé để chọn đúng bạn đó.</p>
@@ -240,7 +245,7 @@ const CTL = {
     html: st => {
       const i = st.i || 0, x = TONES[i], rv = st.step === 'rv';
       return `<h2>✈️ Máy bay thanh điệu · ${i + 1}/${TONES.length}</h2>
-        <p><span class="bigtxt zh">${x.c}</span> <span class="bigtxt" style="color:var(--red)">${x.py}</span> · thanh ${x.t} (${TONE_NAME[x.t]})</p>
+        <p><span class="bigtxt zh">${x.c}</span> <span class="bigtxt" style="color:var(--red)">${x.py}</span> · ${x.o ? 'đường bay ' + x.t + ': ' : 'thanh ' + x.t + ' – '}${TONE_NAME[toneOpt(x, x.t)]}</p>
         ${toneAudio(x) ? '' : '<p class="tip">Chữ này chưa có file giọng riêng: <b>cô đọc trên Zoom</b>.</p>'}
         ${qButtons(st, i, TONES.length, rv)}
         <p class="tip">Sau khi hiện đáp án: cả lớp đưa tay bay theo, nói theo. Cô chấm từng bé ở cột phải: <b>Chuẩn</b> / <b>Gần</b> / <b>Luyện</b>. Bé 1 máy: bấm hộ số đường bay 1–4.</p>`;
@@ -686,12 +691,12 @@ function csvRows(rows) {
 function downloadCSV(rows) {
   const csv = '﻿' + csvRows(rows).map(r => r.map(v => '"' + String(v == null ? '' : v).replace(/"/g, '""') + '"').join(',')).join('\r\n');
   const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8' }));
-  a.download = `lop-zoom-${CODE}-${today()}.csv`; a.click();
+  a.download = `lop-zoom-${LZ_CFG.khoa}-v${LZ_CFG.vong}-${CODE}-${today()}.csv`; a.click();
 }
 async function sendSheet() {
   const m = $('#sendMsg'); m.innerHTML = '<p class="msg">Đang gửi…</p>';
   try {
-    const j = await apiPost({ action: 'zoom', room: CODE, ngay: (room.state || {}).ngay || today(), lop: 'Little Seed · Vòng 2', rows: csvRows(results()) });
+    const j = await apiPost({ action: 'zoom', room: CODE, ngay: (room.state || {}).ngay || today(), lop: LZ_CFG.ten, rows: csvRows(results()) });
     m.innerHTML = j && j.ok ? `<p class="msg">Đã ghi ${j.n} dòng vào tab "Lớp Zoom" của Sheet.</p>` : '<p class="msg err">Máy chủ chưa nhận. Có thể máy chủ Apps Script chưa lên bản mới (v15). Cô bấm Tải CSV để giữ kết quả.</p>';
   } catch (e) { m.innerHTML = '<p class="msg err">Chưa gửi được (mạng hoặc máy chủ chưa cập nhật). Cô bấm Tải CSV để giữ kết quả.</p>'; }
 }
@@ -700,6 +705,7 @@ async function sendSheet() {
 (async function () {
   try { await DB.init(); } catch (e) { console.error(e); app.innerHTML = '<div class="wrap"><div class="card"><h2>Chưa kết nối được Firebase</h2><p>' + esc(e.message || e) + '</p></div></div>'; return; }
   DB.onConn(ok => $('#net').classList.toggle('off', !ok));
+  if (QS.has('moi')) return createRoom();
   const q = QS.get('phong'); if (q) return openRoom(q);
   homeScreen();
 })();

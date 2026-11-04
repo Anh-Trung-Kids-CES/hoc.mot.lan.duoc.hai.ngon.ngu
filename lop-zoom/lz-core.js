@@ -17,6 +17,22 @@ const LZ_API = "https://script.google.com/macros/s/AKfycbwsLupVsEa0jqsJ5UDtU1Kci
 const QS = new URLSearchParams(location.search);
 const LZ_MOCK = QS.has('mock');
 
+/* ======================= Khoá của buổi Zoom =======================
+   Mỗi phòng ghi khoá ở state.lop. Trang tải nội dung theo ?lop= (mặc định Little Seed Vòng 2).
+   Nội dung Canopy nằm trong lz-canopy.js: tệp đó gán lại các biến nội dung bên dưới khi LZ_LOP là canopy. */
+const LZ_LOPS = {
+  'seed-v2':   { ten: 'Little Seed · Vòng 2', chude: 'Giới thiệu bản thân', khoa: 'seed', vong: 2 },
+  'canopy-v2': { ten: 'Canopy · Vòng 2', chude: 'Jobs – Ghé thăm nơi làm việc', khoa: 'canopy', vong: 2 },
+};
+const LZ_LOP = LZ_LOPS[QS.get('lop')] ? QS.get('lop') : 'seed-v2';
+const LZ_CFG = LZ_LOPS[LZ_LOP];
+/* đường dẫn của trang hiện tại với khoá khác (giữ các tham số thử như mock, thu, headsim) */
+function lopUrl(lop, extra) {
+  const q = new URLSearchParams(location.search); q.set('lop', lop);
+  Object.entries(extra || {}).forEach(([k, v]) => v === null ? q.delete(k) : q.set(k, v));
+  return location.pathname + '?' + q.toString();
+}
+
 /* ======================= tiện ích ======================= */
 const $ = (s, r) => (r || document).querySelector(s);
 const $$ = (s, r) => [...(r || document).querySelectorAll(s)];
@@ -112,7 +128,7 @@ const roomPath = code => 'rooms/' + code;
    Tranh và giọng lấy từ web học 21 ngày (xem-truoc/tai-nguyen/little-seed). Không thêm từ ngoài định mức. */
 const TN = '../xem-truoc/tai-nguyen/';
 const AU = TN + 'little-seed/audio/', IM = TN + 'little-seed/img/';
-const W = {   // 8 từ
+let W = {   // 8 từ
   name:  { en: 'name',  zh: '名字', py: 'míngzi', ea: 'ls_co_huou_en_name',  za: 'ls_co_huou_zh_020', im: 'v2_n8_tu_name' },
   you:   { en: 'you',   zh: '你',   py: 'nǐ',     ea: 'ls_co_huou_en_you',   za: 'ls_co_huou_zh_023', im: 'v2_n9_tu_you' },
   one:   { en: 'one',   zh: '一',   py: 'yī',     ea: 'ls_co_huou_en_one',   za: 'ls_co_huou_zh_026', im: 'v2_n10_tu_one' },
@@ -130,13 +146,13 @@ const W = {   // 8 từ
   i6:  { en: "I'm six!", zh: '我六岁！', ea: 'ls_bong_en_i_m_six', za: 'ls_bong_zh_012', im: 'v2_n11_cum_i_m_six' },
   n123:{ en: 'One, two, three!', zh: '一、二、三！', ea: 'ls_bong_en_one_two_three', za: 'ls_anna_zh_016', im: 'v2_n10_cum_one_two_three' },
 };
-const PIC_ANNA = TN + 'nhan-vat/kids_anna_a.webp', PIC_BONG = TN + 'nhan-vat/kids_bong_a.webp';
+let PIC_ANNA = TN + 'nhan-vat/kids_anna_a.webp', PIC_BONG = TN + 'nhan-vat/kids_bong_a.webp';
 function pic(k, v) { return IM + W[k].im + '_l' + (v || 2) + '.webp'; }
 function aud(k, l) { const w = W[k]; const f = l === 'zh' ? w.za : w.ea; return f ? AU + f + '.mp3' : ''; }
 function txt(k, l) { return l === 'zh' ? W[k].zh : W[k].en; }
 
 /* Ôn nhanh: 10 câu chạm 1 trong 3 tranh (4 EN, 4 ZH, 2 nhìn chữ) */
-const QUIZ = [
+let QUIZ = [
   { k: 'name',  l: 'en', o: ['you', 'name', 'three'] },
   { k: 'you',   l: 'zh', o: ['you', 'six', 'name'] },
   { k: 'three', l: 'en', o: ['one', 'two', 'three'] },
@@ -154,7 +170,7 @@ function quizAudio(q) { return q.audio || aud(q.k, q.l === 'doc' ? q.a : q.l); }
 function quizLang(q) { return q.l === 'doc' ? 'doc' : q.l; }
 
 /* Máy bay thanh điệu: thanh 1 ngang, 2 lên, 3 xuống rồi lên, 4 xuống */
-const TONES = [
+let TONES = [
   { c: '一', py: 'yī', p0: 'yi', t: 1, k: 'one' },
   { c: '二', py: 'èr', p0: 'er', t: 4, k: 'two' },
   { c: '三', py: 'sān', p0: 'san', t: 1, k: 'three' },
@@ -174,9 +190,11 @@ const TONE_PATH = {
   4: 'M8 10 Q50 14 92 52'
 };
 const TONE_NAME = { 1: 'Bay ngang', 2: 'Bay lên', 3: 'Lượn xuống rồi lên', 4: 'Lao xuống' };
+/* đường bay của lựa chọn thứ c (1–4): Little Seed chọn thẳng thanh 1–4; Canopy chọn 1 trong 4 cặp thanh của từ hai chữ (x.o, ví dụ 31 = thanh 3 rồi thanh 1) */
+function toneOpt(x, c) { return x.o ? x.o[c - 1] : c; }
 
 /* Trò chơi đôi bạn: bé A thấy tranh và nói, bé B nghe rồi chạm 1 trong 3 tranh */
-const PAIR_POOL = [
+let PAIR_POOL = [
   { k: 'you', o: ['name', 'you', 'one'] }, { k: 'four', o: ['four', 'six', 'two'] },
   { k: 'i5', o: ['i6', 'i5', 'wyn'] }, { k: 'mna', o: ['mna', 'hoy', 'n123'] },
   { k: 'two', o: ['three', 'one', 'two'] }, { k: 'six', o: ['five', 'six', 'four'] },
@@ -186,7 +204,7 @@ const PAIR_POOL = [
 ];
 
 /* Truyện 8 cảnh "Sinh nhật của Bông" */
-const STORY = [
+let STORY = [
   { img: 'tr2_c1', en: 'One, two, three, four, five, six!', ea: 'ls_bong_en_one_two_three_four_five_six', zh: '一、二、三、四、五、六！', za: 'ls_bong_zh_010' },
   { img: 'tr2_c2', en: 'Hello! My name is Anna.', ea: 'ls_anna_en_hello_my_name_is_anna', zh: '你好！我叫Anna。', za: 'ls_anna_zh_010' },
   { img: 'tr2_c3', en: "What's your name?", ea: 'ls_anna_en_what_s_your_name', zh: '你叫什么？', za: 'ls_anna_zh_011' },
@@ -196,17 +214,17 @@ const STORY = [
   { img: 'tr2_c7', en: "I'm six!", ea: 'ls_bong_en_i_m_six', zh: '我六岁！', za: 'ls_bong_zh_012' },
   { img: 'tr2_c8', en: "I'm five.", ea: 'ls_anna_en_i_m_five', zh: '我五岁。', za: 'ls_anna_zh_014' },
 ];
-const STORY_TITLE = 'Sinh nhật của Bông';
+let STORY_TITLE = 'Sinh nhật của Bông';
 function sceneImg(i) { return IM + STORY[i].img + '.webp'; }
 function sceneAud(i, l) { return AU + (l === 'zh' ? STORY[i].za : STORY[i].ea) + '.mp3'; }
 /* Phiên dịch nhí: 4 hộp quà, mỗi hộp một câu của truyện */
-const GIFTS = [{ s: 1, from: 'en' }, { s: 2, from: 'zh' }, { s: 5, from: 'en' }, { s: 6, from: 'zh' }];
+let GIFTS = [{ s: 1, from: 'en' }, { s: 2, from: 'zh' }, { s: 5, from: 'en' }, { s: 6, from: 'zh' }];
 
 /* Nghe truyện, xếp tranh: 2 lượt chuyển ngữ, cả 2 lượt đều là nội dung Vòng 2 (truyện "Sinh nhật của Bông" chia đôi, đủ 8 câu).
    Lượt 1: cô phát tiếng Anh (đếm nến, Anna đến chào, làm quen, "I'm five."), các con xếp tranh có lời tiếng Trung.
    Lượt 2: cô phát tiếng Trung (你叫什么？ 我叫Bông。 你几岁？ 我六岁！), các con xếp tranh có lời tiếng Anh. */
 function xepScene(i) { return { img: IM + STORY[i].img + '.webp', en: STORY[i].en, zh: STORY[i].zh, ea: AU + STORY[i].ea + '.mp3', za: AU + STORY[i].za + '.mp3' }; }
-const XEP = [
+let XEP = [
   { title: 'Sinh nhật của Bông (phần 1)', from: 'en', to: 'zh', scenes: [0, 1, 4, 7].map(xepScene) },
   { title: 'Sinh nhật của Bông (phần 2): hỏi tên, hỏi tuổi', from: 'zh', to: 'en', scenes: [2, 3, 5, 6].map(xepScene) }
 ];
@@ -221,7 +239,7 @@ function headAllowed(st) { st = st || {}; const m = Object.assign({}, HEAD_DEFAU
 const HEAD_TAG = '<span class="flag hdtag">🙆 quay đầu để chọn</span>';
 
 /* Chào bạn mới */
-const INTRO = {
+let INTRO = {
   ask: { en: { t: "What's your name?", a: aud('wyn', 'en') }, zh: { t: '你叫什么？', a: aud('wyn', 'zh') } },
   model: { en: { t: 'My name is …', a: AU + 'ls_bong_en_my_name_is_b_ng.mp3' }, zh: { t: '我叫…', a: AU + 'ls_bong_zh_011.mp3' } }
 };
@@ -445,10 +463,11 @@ function lopTurns(seats) {
    Mỗi bạn tự trả lời câu hỏi ngẫu nhiên trên máy mình (không chờ cô, không chờ bạn). Mỗi câu đúng = +1 ⚡ cho anh hùng Bông.
    Thanh giằng co giữa anh hùng và rồng: giữa trận rồng "nổi giận" kéo thanh về phía rồng (nguy cơ thua),
    các bạn tiếp sức kéo lại, hết giờ thì anh hùng tung đòn cuối và cả lớp thắng. Không bảng xếp hạng: chỉ có sức mạnh chung. */
-const BOSS = { hero: TN + 'qua/ava_bong_sieu_nhan.webp', mon: TN + 'qua/mon_lua_3.webp', stages: [0, 1, 2, 3].map(i => TN + 'qua/mon_lua_' + i + '.webp'), bg: TN + 'qua/bg_quai.webp', name: 'Rồng Lửa nghịch ngợm' };
-const BOSS_WORDS = ['name', 'you', 'one', 'two', 'three', 'four', 'five', 'six'];
-const BOSS_PHRASES = ['wyn', 'mna', 'hoy', 'i5', 'i6', 'n123', 'ntm'];
-const BOSS_ITEMS = (() => {
+let BOSS = { hero: TN + 'qua/ava_bong_sieu_nhan.webp', mon: TN + 'qua/mon_lua_3.webp', stages: [0, 1, 2, 3].map(i => TN + 'qua/mon_lua_' + i + '.webp'), bg: TN + 'qua/bg_quai.webp', name: 'Rồng Lửa nghịch ngợm',
+  story: '⚔️ Rồng Lửa nghịch ngợm muốn thổi tắt nến sinh nhật của Bông! Cả lớp tiếp sức cho anh hùng nhé!' };
+let BOSS_WORDS = ['name', 'you', 'one', 'two', 'three', 'four', 'five', 'six'];
+let BOSS_PHRASES = ['wyn', 'mna', 'hoy', 'i5', 'i6', 'n123', 'ntm'];
+let BOSS_ITEMS = (() => {
   const out = [];
   BOSS_WORDS.forEach(k => ['en', 'zh'].forEach(l => out.push({ k, l, cat: BOSS_WORDS })));
   BOSS_PHRASES.forEach(k => ['en', 'zh'].forEach(l => out.push({ k, l, cat: BOSS_PHRASES })));
