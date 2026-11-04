@@ -201,7 +201,7 @@ function view(st, seats) {
     case 'tone': return vTone(st, seats);
     case 'pair': return vPair(st, seats);
     case 'lop': return vLop(st, seats);
-    case 'story': return vStory(st);
+    case 'story':   // phòng mở từ bản cũ: phần Truyện nay là Nghe truyện, xếp tranh
     case 'xep': return vXep(st, seats);
     case 'gift': return vGift(st, seats);
     case 'boss': return vBoss(st, seats);

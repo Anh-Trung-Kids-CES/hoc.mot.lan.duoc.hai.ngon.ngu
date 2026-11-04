@@ -89,6 +89,7 @@ function drawClass() {
     <div class="panel"><h3>Các bé (${seatsIn().length})</h3><div class="kids" id="kids"></div></div></div>`;
   $$('[data-ph]').forEach(b => b.onclick = () => goPhase(b.dataset.ph));
   drawTimer();
+  if (st.ph === 'story') { goPhase('xep'); return; }   // phòng mở từ bản cũ
   const c = CTL[st.ph] || CTL.cho;
   $('#ctl').innerHTML = c.html(st);
   c.bind && c.bind(st);
