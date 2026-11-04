@@ -31,7 +31,7 @@ async function createRoom() {
     if (t && t !== DB.uid) continue;
     try {
       await DB.set(roomPath(code) + '/teacher', DB.uid);
-      await DB.set(roomPath(code) + '/state', { ph: 'cho', run: 0, duyet: false, made: DB.now(), lop: 'seed-v2', ngay: today() });
+      await DB.set(roomPath(code) + '/state', { ph: 'cho', run: 0, duyet: false, amCo: true, made: DB.now(), lop: 'seed-v2', ngay: today() });
     } catch (e) { continue; }
     const list = (lsGet('lz-co-rooms', []) || []).filter(r => r.code !== code);
     list.unshift({ code, d: new Date().toLocaleDateString('vi-VN') }); lsSet('lz-co-rooms', list.slice(0, 8));
@@ -127,6 +127,9 @@ function drawBar(st) {
     .map(([sel, t, c], j) => `<button class="btn ${c}" data-bar="${j}">${t}</button>`).join('') + `<button class="btn ghost x" id="shX">✖ Về màn điều khiển</button>`;
   $$('[data-bar]').forEach(b => b.onclick = () => { const sel = BAR[+b.dataset.bar][0], el = $('#ctl ' + sel); if (sel === '#kq') { sharing = false; $('#share').classList.add('hide'); } el && el.click(); });
   $('#shX').onclick = closeShare;
+  const amOn = st.amCo !== false;
+  $('#shX').insertAdjacentHTML('beforebegin', `<button class="btn ghost" id="shAm" title="Bấm để đổi">${amOn ? '🔈 Tiếng: chỉ máy cô' : '🔊 Tiếng: mọi máy'}</button>`);
+  $('#shAm').onclick = () => setState({ amCo: !amOn });
 }
 window.lzKey = e => {
   if (!sharing) return;
@@ -180,8 +183,9 @@ const CTL = {
       <p>Đọc mã phòng <span class="code-big">${CODE}</span> cho ba mẹ, hoặc dán link vào khung chat Zoom (nút <b>Chép link cho ba mẹ</b>).</p>
       <p class="tip">Bé chỉ có 1 máy: con xem màn chiếu cô chia sẻ, giơ ngón tay 1-2-3, cô bấm hộ ở cột bên phải. Cô thêm bé ở thẻ <b>Thêm bé</b> (dán danh sách người tham gia Zoom).</p>
       <label class="toggle"><input type="checkbox" id="dy" ${st.duyet ? 'checked' : ''}> Cô duyệt từng bé tự vào bằng mã phòng</label>
+      <label class="toggle" style="margin-top:8px"><input type="checkbox" id="amco" ${st.amCo !== false ? 'checked' : ''}> Tiếng chỉ phát ở máy cô (màn chiếu cô chia sẻ). Máy các con im lặng, trừ tiếng mẫu bí mật của bạn đang nói.</label>
       <div class="ctl"><button class="btn red" id="go">▶ Bắt đầu: Chào bạn mới</button></div>`,
-    bind() { $('#dy').onchange = e => setState({ duyet: e.target.checked }); $('#go').onclick = () => goPhase('intro'); }
+    bind() { $('#dy').onchange = e => setState({ duyet: e.target.checked }); $('#amco').onchange = e => setState({ amCo: e.target.checked }); $('#go').onclick = () => goPhase('intro'); }
   },
   intro: {
     html: st => {

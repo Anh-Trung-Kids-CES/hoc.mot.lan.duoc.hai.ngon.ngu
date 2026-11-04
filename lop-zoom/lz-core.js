@@ -241,18 +241,19 @@ const HD = {
 const SND = (() => {
   let cur = null, queue = [], ctx = null, token = 0;
   function stop() { token++; queue = []; if (cur) { try { cur.pause(); } catch (e) { } cur = null; } }
+  let vol = 1;
   function playOne(src, tk) {
     return new Promise(res => {
       if (!src || tk !== token) return res();
-      const a = new Audio(src); cur = a;
+      const a = new Audio(src); cur = a; a.volume = vol;
       const done = () => { if (cur === a) cur = null; res(); };
       a.onended = done; a.onerror = done;
       a.play().catch(done);
     });
   }
   /* play([src, 300, src2]) – số là khoảng nghỉ (ms) */
-  async function play(list) {
-    stop(); const tk = token;
+  async function play(list, v) {
+    stop(); const tk = token; vol = v || 1;
     for (const x of [].concat(list)) {
       if (tk !== token) return;
       if (typeof x === 'number') await new Promise(r => setTimeout(r, x)); else await playOne(x, tk);

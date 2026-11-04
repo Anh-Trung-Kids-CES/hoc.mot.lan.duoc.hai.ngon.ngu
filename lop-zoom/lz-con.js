@@ -11,7 +11,10 @@ let lastStageKey = '', lastAudioKey = '', shownAt = 0, localPick = {};
 let spinSeen = null, spinLanded = null, wheelAngle = 0, confettiDone = false;
 let muted = CHIEU ? !!lsGet('lz-chieu-mute', false) : false;
 
-function play(list) { if (!muted) SND.play(list); }
+function play(list, v) { if (!muted) SND.play(list, v); }
+/* Tiếng chỉ phát ở máy cô (mặc định): máy các con im lặng để Zoom không bị vọng tiếng;
+   riêng tiếng mẫu bí mật của bạn đang nói (priv) vẫn phát nhỏ trên máy bạn đó, màn chiếu không phát. */
+function amCo() { return ((room && room.state) || {}).amCo !== false; }
 
 /* ---------- thông tin có sẵn trên máy (đã đăng nhập web 21 ngày, hoặc đã chuẩn bị vào lớp) ---------- */
 function prefill() {
@@ -173,7 +176,12 @@ function render() {
     lastStageKey = v.key; shownAt = performance.now();
     $('#stage').innerHTML = v.html; v.bind && v.bind();
   } else if (v.update) v.update();
-  if (v.audio && v.akey !== lastAudioKey) { lastAudioKey = v.akey; play(v.audio); }
+  if (v.audio && v.akey !== lastAudioKey) {
+    lastAudioKey = v.akey;
+    if (CHIEU) { if (!v.priv) play(v.audio); }
+    else if (v.priv) play(v.audio, amCo() ? 0.45 : 1);
+    else if (!amCo()) play(v.audio);
+  }
 }
 function removed() {
   joined = false;
@@ -222,7 +230,7 @@ function vIntro(st, seats) {
     akey = 'intro-land|' + sp.n + '|' + l;
   }
   return {
-    key, akey, audio,
+    key, akey, audio, priv: !!(sp.n && landed && sp.seat === mySeat && !CHIEU),
     html: `<div class="wheel-box"><div class="pointer">🔻</div><div class="wheel" id="wh">${ring}</div><div class="hub">🎡</div></div><div id="under" style="display:flex;flex-direction:column;align-items:center;gap:10px">${under}</div>`,
     bind() {
       const wh = $('#wh');
@@ -309,16 +317,16 @@ function vPair(st, seats) {
   const picks = `<div class="pics${my || rv || CHIEU || role === 'say' ? ' locked' : ''}" id="pics">${item.o.map((k, c) => `<button class="pick${my && my.c === c ? ' chosen' : ''}${rv && c === ans ? ' right' : ''}${rv && c !== ans ? ' dim' : ''}" data-c="${c}"><img src="${pic(k, 3)}" alt=""></button>`).join('')}</div>`;
   let body;
   if (role === 'say') body = `<div class="my-turn">Đến lượt con nói!</div><img class="big-pic" src="${pic(item.k, 3)}" alt=""><span class="flag ${l}">${langLb}</span>
-      <button class="say ${l}" data-play style="font-size:20px;padding:8px 16px"><span class="ic" style="font-size:24px">🔊</span>Nghe mẫu</button><p class="sub">Con nói cho bạn ${esc(seatName(seats, p.b))} nghe nhé!</p>`;
+      <button class="say ${l}" data-play style="font-size:20px;padding:8px 16px"><span class="ic" style="font-size:24px">🔊</span>Nghe mẫu</button><p class="sub">Con nói cho bạn ${esc(seatName(seats, p.b))} nghe nhé!</p>${amCo() ? `<p class="msg vn" style="max-width:420px">🎧 Tiếng mẫu chỉ phát trên máy này. Ba mẹ tắt mic Zoom khi con nghe mẫu, bật lại khi con nói. Ba mẹ nhắc nhỏ nếu con cần: <b class="${l}">${esc(txt(item.k, l))}</b></p>` : ''}`;
   else if (role === 'hear') body = `<p class="sub" style="font-size:19px"><b>${esc(seatName(seats, p.a))}</b> nói, con nghe rồi chạm tranh đúng nhé!</p>${picks}`;
   else body = `<p class="sub"><b>${esc(seatName(seats, p.a))}</b> đang nói cho <b>${esc(seatName(seats, p.b))}</b> nghe. ${CHIEU ? '' : 'Con cũng đoán nhé!'}</p><span class="flag ${l}">${l === 'zh' ? '中文' : 'English'}</span>${picks}`;
   if (rv) body += la && la.ok ? `<div class="cheer">Hai bạn ăn ý quá! 🎉</div>` : `<p class="sub">Cả lớp cùng nghe nhé: <b class="${l}">${esc(txt(item.k, l))}</b></p>`;
   const a = aud(item.k, l);
   const akey = ['pair', p.n, st.run || 0, rv ? 1 : 0, role, st.rp || 0].join('|');
   return {
-    key, akey, audio: rv ? [a].concat(la && la.ok ? [400, hd('Hai bạn ăn ý quá!')] : []) : role === 'say' ? [hd('Đến lượt con!'), 300, hd('Con nói cho bạn nghe nhé!'), 300, a] : role === 'hear' ? [hd('Con nghe bạn nói rồi chạm tranh đúng nhé!')] : null,
+    key, akey, priv: !rv && role === 'say', audio: rv ? [a].concat(la && la.ok ? [400, hd('Hai bạn ăn ý quá!')] : []) : role === 'say' ? [hd('Đến lượt con!'), 300, hd('Con nói cho bạn nghe nhé!'), 300, a] : role === 'hear' ? [hd('Con nghe bạn nói rồi chạm tranh đúng nhé!')] : null,
     html: `<div class="qno">Trò chơi đôi bạn · lượt ${(p.n || 0) + 1}</div>${duo}${body}`,
-    bind() { bindPlay(() => [a]); bindPicks(qid, c => ({ c, ok: c === ans, xem: role === 'see' || undefined })); }
+    bind() { bindPlay(() => [a], role === 'say'); bindPicks(qid, c => ({ c, ok: c === ans, xem: role === 'see' || undefined })); }
   };
 }
 
@@ -336,7 +344,7 @@ function vLop(st, seats) {
   if (me) {
     body = `<div class="my-turn">Con là cô giáo nhỏ! 📣</div><img class="big-pic" src="${pic(item.k, 3)}" alt="">
       <button class="say ${l}" data-play style="font-size:20px;padding:8px 16px"><span class="ic" style="font-size:24px">🔊</span>Nghe mẫu</button>
-      <p class="sub">Con nói ${l === 'zh' ? 'bằng tiếng Trung' : 'bằng tiếng Anh'} cho cả lớp nghe nhé!</p>`;
+      <p class="sub">Con nói ${l === 'zh' ? 'bằng tiếng Trung' : 'bằng tiếng Anh'} cho cả lớp nghe nhé!</p>${amCo() ? `<p class="msg vn" style="max-width:420px">🎧 Tiếng mẫu chỉ phát trên máy này. Ba mẹ tắt mic Zoom khi con nghe mẫu, bật lại khi con nói. Ba mẹ nhắc nhỏ nếu con cần: <b class="${l}">${esc(txt(item.k, l))}</b></p>` : ''}`;
     if (rv) body += `<div class="cheer">${hit ? `${hit} bạn hiểu con rồi! 🎉` : 'Cả lớp cùng nói với con nhé!'}</div>`;
   } else {
     body = `<p class="ask-line">👂 Bạn ${esc(seatName(seats, p.a))} nói, cả lớp nghe rồi chạm tranh đúng nhé!</p>
@@ -349,9 +357,9 @@ function vLop(st, seats) {
   const audio = rv ? [a, 600, hd(to === 'zh' ? 'Tiếng Trung nói thế nào nhỉ?' : 'Tiếng Anh nói thế nào nhỉ?'), 1800, b]
     : me ? [hd('Đến lượt con!'), 300, a] : (p.n === 0 && !st.rp ? [hd('Con nghe bạn nói rồi chạm tranh đúng nhé!')] : null);
   return {
-    key, akey, audio,
+    key, akey, audio, priv: !rv && me,
     html: `<div class="qno">📣 Cô giáo nhỏ · lượt ${(p.n || 0) + 1}</div>${who}${body}`,
-    bind() { bindPlay(() => [a]); if (!me) bindPicks(qid, c => ({ c, ok: c === ans })); this.update(); },
+    bind() { bindPlay(() => [a], me); if (!me) bindPicks(qid, c => ({ c, ok: c === ans })); this.update(); },
     update() { const el = $('#cnt'); if (el) el.textContent = rv ? '' : `${others.filter(x => answerOf(room, x, qid)).length}/${others.length} bạn đã chọn`; }
   };
 }
@@ -405,7 +413,7 @@ function confetti() {
 }
 
 /* --- chạm và nghe --- */
-function bindPlay(fn) { $$('[data-play]', $('#stage')).forEach(b => b.onclick = () => play(fn())); }
+function bindPlay(fn, priv) { $$('[data-play]', $('#stage')).forEach(b => b.onclick = () => play(fn(), priv && amCo() ? 0.45 : 1)); }
 function bindPicks(qid, judge, sel) {
   if (CHIEU) return;
   $$(sel || '.pick', $('#stage')).forEach(b => b.addEventListener('click', () => {

@@ -19,9 +19,10 @@ Web riêng cho buổi Zoom cuối tuần, kiểu Wayground: cô điều khiển 
 2. **Đầu giờ**: cô mở `co.html` → **Mở phòng mới** → được mã 4 số. Bấm **Chép link cho ba mẹ** dán vào chat Zoom. Bấm **🖥 Chia sẻ lên Zoom**, bấm nút đỏ giữa màn để bật tiếng, rồi trong Zoom chia sẻ cửa sổ trình duyệt này và tích **Chia sẻ âm thanh**. Điều khiển bằng thanh nút dưới đáy hoặc phím: → câu tiếp, ← câu trước, Space hiện đáp án, R phát lại, Esc về màn điều khiển (xem bé nào đã chọn, chấm, bấm hộ).
 3. **Bé vào lớp**: mở link chung → nhập mã phòng → tên con và tên ba hoặc mẹ (máy đã chuẩn bị hoặc đã đăng nhập web 21 ngày thì điền sẵn). Rớt mạng mở lại thì vào đúng chỗ cũ.
 4. **Cô thêm bé nhanh** (thẻ *Thêm bé*): dán danh sách người tham gia Zoom (web tự tách tên con / tên ba mẹ, cô sửa trước khi thêm), hoặc gõ nhanh tên. Chỗ ngồi tạm vẫn ghi đủ dữ liệu; bé vào sau bằng mã phòng với đúng tên thì tự nhận chỗ. Có thể bật **Cô duyệt từng bé**. Nút 🔗 ghép hai chỗ của cùng một bé.
-5. **Bé chỉ có 1 máy**: bé xem màn chiếu, giơ ngón tay 1-2-3 (thanh điệu 1-4), cô bấm hộ ở cột phải.
-6. **6 phần**: bấm lần lượt ở cột trái. Mỗi câu: *Hiện đáp án* → *Câu tiếp*. *Phát lại* cho mọi máy đọc lại.
-7. **Sau buổi** (thẻ *Kết quả*): chấm 4H (thái độ, cảm xúc, tương tác với bạn, 0–2), ghi chú → **Gửi về Sheet** (tab "Lớp Zoom") hoặc **Tải CSV**. Nút **Xóa ảnh các con khỏi phòng**.
+5. **Tiếng** (mặc định *Tiếng chỉ phát ở máy cô*, đổi ở phần Chờ vào lớp hoặc nút 🔈 trên thanh chia sẻ): chỉ màn chiếu trên máy cô phát tiếng qua Zoom, máy web của các con im lặng nên không bị vọng. Riêng tiếng mẫu bí mật của bạn đang nói (Chào bạn mới, Đôi bạn, Cô giáo nhỏ) chỉ phát nhỏ trên máy bạn đó, màn chiếu không phát nên không lộ đáp án; màn bạn đó nhắc ba mẹ tắt mic Zoom khi con nghe mẫu và hiện chữ để ba mẹ nhắc nhỏ.
+6. **Bé chỉ có 1 máy**: bé xem màn chiếu, giơ ngón tay 1-2-3 (thanh điệu 1-4), cô bấm hộ ở cột phải.
+7. **Các phần**: bấm lần lượt ở cột trái. Mỗi câu: *Hiện đáp án* → *Câu tiếp*. *Phát lại* cho mọi máy đọc lại.
+8. **Sau buổi** (thẻ *Kết quả*): chấm 4H (thái độ, cảm xúc, tương tác với bạn, 0–2), ghi chú → **Gửi về Sheet** (tab "Lớp Zoom") hoặc **Tải CSV**. Nút **Xóa ảnh các con khỏi phòng**.
 
 ## Mạch 40 phút
 | Phút | Phần | Bé làm gì | Cô chấm |
