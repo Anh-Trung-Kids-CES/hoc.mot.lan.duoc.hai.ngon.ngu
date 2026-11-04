@@ -53,6 +53,7 @@ Luật Little Seed: chỉ chạm và nói, 3 tranh, không bảng xếp hạng (
 - `lz-core.js` – cấu hình Firebase, nội dung Vòng 2, âm thanh, chỗ ngồi, thanh năng lượng
 - `lz.css` – kiểu chung
 - `GIONG-CAN-THU.md` – các câu giọng cô Hươu cần thu thêm
+- Mỗi lần sửa tệp .js/.css: đổi số `?v=` trong `index.html` và `co.html` để trình duyệt của cô và ba mẹ tải bản mới
 
 ## Đợt 2 (cho Zoom ngày 21)
 Canopy, thẻ báo cáo tự động, câu gợi ý cho sale, huy hiệu cộng sao, tab "Ghép hồ sơ Zoom" trên trang quản trị.
