@@ -242,7 +242,7 @@ img{max-width:100%}
 .boss{width:min(96vw,760px);background:url(../xem-truoc/tai-nguyen/qua/bg_quai.webp) center/cover;border-radius:26px;padding:10px 12px 8px;box-shadow:var(--shadow);border:4px solid #fff;position:relative;overflow:hidden}
 .boss.big{width:min(96vw,1240px);padding:16px 22px 12px}
 .b-row{display:flex;align-items:flex-end;gap:8px;position:relative}
-.b-hero,.b-mon{flex:0 0 27%;position:relative;text-align:center;z-index:2}
+.b-hero,.b-mon{flex:0 0 27%;position:relative;text-align:center;z-index:2;transform:scale(var(--s,1));transform-origin:50% 100%;transition:transform .7s cubic-bezier(.3,1.4,.5,1)}
 .b-hero img,.b-mon img{height:min(24vh,190px);max-width:100%;object-fit:contain;filter:drop-shadow(0 6px 0 rgba(0,0,0,.15));transform-origin:50% 100%}
 .boss.big .b-hero img,.boss.big .b-mon img{height:min(48vh,430px)}
 .b-hero img{animation:bob 1.1s ease-in-out infinite}
@@ -258,7 +258,8 @@ img{max-width:100%}
 @keyframes hurt{20%{transform:translateX(-8px) rotate(-5deg);filter:brightness(1.6) saturate(.4)}50%{transform:translateX(8px) rotate(4deg)}80%{transform:translateX(-4px)}}
 .b-hero.charge img{filter:drop-shadow(0 0 18px #FFE14A) drop-shadow(0 0 6px #fff) brightness(1.1)}
 .boss.won .b-hero img{animation:jump .7s ease-in-out infinite}
-.boss.won .b-mon img{animation:bob 1.6s ease-in-out infinite}
+.boss.won .b-mon img{animation:eggWob 1.2s ease-in-out infinite}
+@keyframes eggWob{25%{transform:rotate(-7deg)}75%{transform:rotate(7deg)}}
 @keyframes jump{50%{transform:translateY(-18px) scale(1.06)}}
 .b-emo{position:absolute;top:2%;font-size:34px;z-index:3;filter:drop-shadow(0 2px 0 #fff)}
 .b-hero .b-emo{right:-6%}.b-mon .b-emo{left:-6%}
@@ -315,3 +316,11 @@ body.boss-play .stage{padding:6px}
 @keyframes plusUp{0%{transform:translate(-50%,10px) scale(.6);opacity:0}30%{opacity:1;transform:translate(-50%,0) scale(1.15)}100%{transform:translate(-50%,-60px) scale(1);opacity:0}}
 @media (orientation:landscape) and (min-width:700px){.boss-split{grid-template-rows:none;grid-template-columns:1fr 1fr;min-height:calc(100vh - 110px)}.bs-scene{display:flex;align-items:center}}
 @media (max-height:480px) and (orientation:landscape){.boss-split{grid-template-columns:1fr 1fr;grid-template-rows:none}.b-hero img,.b-mon img{height:30vh}.bs-q .pics{grid-template-columns:repeat(3,minmax(0,32vh))}.bs-q .pick{padding:3px}}
+
+.b-poof{position:absolute;right:4%;bottom:10%;width:27%;text-align:center;font-size:90px;opacity:0;pointer-events:none;z-index:4}
+.boss.big .b-poof{font-size:200px}
+.b-mon.poof~.b-poof,.b-mon.poof .b-emo{opacity:1}
+.b-mon.poof img{animation:shrinkPoof .9s ease-in-out}
+.b-mon.poof~.b-poof{animation:poofCloud .9s ease-out}
+@keyframes shrinkPoof{30%{transform:scale(.6) rotate(10deg);filter:brightness(2) blur(2px)}60%{transform:scale(1.1)}}
+@keyframes poofCloud{0%{opacity:0;transform:scale(.4)}35%{opacity:1;transform:scale(1.2)}100%{opacity:0;transform:scale(1.6)}}

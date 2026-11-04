@@ -386,7 +386,7 @@ function lopTurns(seats) {
    Mỗi bạn tự trả lời câu hỏi ngẫu nhiên trên máy mình (không chờ cô, không chờ bạn). Mỗi câu đúng = +1 ⚡ cho anh hùng Bông.
    Thanh giằng co giữa anh hùng và rồng: giữa trận rồng "nổi giận" kéo thanh về phía rồng (nguy cơ thua),
    các bạn tiếp sức kéo lại, hết giờ thì anh hùng tung đòn cuối và cả lớp thắng. Không bảng xếp hạng: chỉ có sức mạnh chung. */
-const BOSS = { hero: TN + 'qua/ava_bong_sieu_nhan.webp', mon: TN + 'qua/mon_lua_3.webp', bg: TN + 'qua/bg_quai.webp', name: 'Rồng Lửa nghịch ngợm' };
+const BOSS = { hero: TN + 'qua/ava_bong_sieu_nhan.webp', mon: TN + 'qua/mon_lua_3.webp', stages: [0, 1, 2, 3].map(i => TN + 'qua/mon_lua_' + i + '.webp'), bg: TN + 'qua/bg_quai.webp', name: 'Rồng Lửa nghịch ngợm' };
 const BOSS_WORDS = ['name', 'you', 'one', 'two', 'three', 'four', 'five', 'six'];
 const BOSS_PHRASES = ['wyn', 'mna', 'hoy', 'i5', 'i6', 'n123', 'ntm'];
 const BOSS_ITEMS = (() => {
@@ -419,10 +419,10 @@ function bossInfo(room) {
   const push = 22 * (Math.tanh(recent * 7) - 0.5);                               // nhịp chuẩn: 1 câu đúng / 7 giây / bạn
   const bump = Math.exp(-Math.pow((t - 0.62) / 0.11, 2));
   let pos = 50 + 10 * t - 35 * bump + (t > 0.85 ? (t - 0.85) / 0.15 * 30 : 0) + push;
-  const hp = H;
+  const prog = H / Math.max(8, n * (T / 1000) / 7 * 0.7);   // sức mạnh cả lớp so với mức dự kiến khi hết giờ (rồng nhỏ dần theo số này)
   const done = !!b.end || t >= 1;
   pos = done ? 100 : Math.max(8, Math.min(92, pos));
-  return { pre: false, run: b.run || 0, t, H, pos, surge: !done && bump > 0.35, done, left: Math.max(0, T - el), hits: hits.sort((x, y) => x[0] - y[0]) };
+  return { pre: false, run: b.run || 0, t, H, prog, pos, surge: !done && bump > 0.35, done, left: Math.max(0, T - el), hits: hits.sort((x, y) => x[0] - y[0]) };
 }
 
 /* Gửi lên máy chủ Apps Script (Sheet "Anh-Trung-Kids – Dữ liệu dự án") */

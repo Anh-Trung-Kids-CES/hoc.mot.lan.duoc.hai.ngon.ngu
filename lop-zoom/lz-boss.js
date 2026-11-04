@@ -66,6 +66,7 @@ const BA = (() => {
     zap() { C(); const t = ctx.currentTime; tone(1600, t, .28, 'sawtooth', .05, 200); tone(2400, t, .18, 'square', .02, 900); noise(t, .22, .07, 4000, 900); },
     roar() { C(); const t = ctx.currentTime; tone(120, t, .55, 'sawtooth', .07, 65); tone(180, t, .45, 'square', .03, 90); noise(t, .55, .16, 700, 180, 'lowpass'); },
     boom() { C(); const t = ctx.currentTime; tone(170, t, .38, 'sine', .28, 38); noise(t, .32, .18, 1400, 90, 'lowpass'); },
+    poof() { C(); const t = ctx.currentTime; noise(t, .45, .12, 2500, 400); [96, 91, 88, 84].forEach((n, j) => tone(N(n), t + j * .06, .12, 'triangle', .05)); },
     fanfare() { C(); const t = ctx.currentTime; [[72, 0], [76, .14], [79, .28], [84, .42], [79, .62], [84, .76], [88, .9]].forEach(([n, d]) => tone(N(n), t + d, .26, 'square', .05)); }
   };
 })();
@@ -79,32 +80,44 @@ function bossScene(info, big) {
       <div class="b-mid">${big ? '<div class="b-feed" id="bFeed"></div>' : ''}<div class="b-power">⚡ <b id="bH">${info.H || 0}</b></div>
         <div class="b-bar"><i id="bPos" style="left:${info.pos || 50}%"></i></div>
         <div class="b-time" id="bT">${info.pre ? '' : Math.ceil(info.left / 1000) + 's'}</div></div>
-      <div class="b-mon" id="bMon"><div class="b-emo" id="bMonEmo">😏</div><img id="bMonImg" src="${BOSS.mon}" alt="${BOSS.name}"></div>
-      <div class="b-beam" id="bBeam"></div><div class="b-fire" id="bFire"></div><div class="b-boom" id="bBoom">💥</div>
+      <div class="b-mon" id="bMon"><div class="b-emo" id="bMonEmo">😏</div><img id="bMonImg" src="${BOSS.stages[info.done ? 0 : (info.prog || 0) >= 0.8 ? 1 : (info.prog || 0) >= 0.5 ? 2 : 3]}" alt="${BOSS.name}"></div>
+      <div class="b-beam" id="bBeam"></div><div class="b-fire" id="bFire"></div><div class="b-boom" id="bBoom">💥</div><div class="b-poof">✨</div>
     </div>
     <div class="b-msg" id="bMsg">${bossMsg(info)}</div></div>`;
 }
 function bossMsg(info) {
   if (info.pre) return '⚔️ Rồng Lửa nghịch ngợm muốn thổi tắt nến sinh nhật của Bông! Cả lớp tiếp sức cho anh hùng nhé!';
-  if (info.done) return '🎉 Cả lớp thắng rồi! Rồng Lửa xin làm bạn với Bông!';
+  if (info.done) return '🎉 Cả lớp thắng rồi! Rồng Lửa biến lại thành quả trứng!';
   if (info.surge) return '⚠️ Rồng Lửa nổi giận! Cả lớp trả lời nhanh nào!';
-  if (info.pos >= 70) return '💪 Anh hùng mạnh lên rồi! Tiếp sức nữa nào!';
-  if (info.pos < 45) return '🔥 Rồng đang lấn tới! Các bạn ơi, tiếp sức!';
+  if (info.pos >= 70) return '💪 Anh hùng mạnh lên, Rồng Lửa nhỏ dần rồi! Tiếp sức nữa nào!';
+  if (info.pos < 45) return '🔥 Rồng đang lấn tới, anh hùng nhỏ lại rồi! Các bạn ơi, tiếp sức!';
   return '⚡ Mỗi câu đúng là một tia sức mạnh cho anh hùng!';
 }
-/* biểu cảm theo thế trận */
+/* biểu cảm và kích thước theo thế trận:
+   - các con càng kiếm nhiều ⚡, rồng càng nhỏ và lùi dần về bé (rồng lớn → rồng con → rồng vừa nở → quả trứng khi cả lớp thắng);
+   - lúc rồng áp đảo (thanh nghiêng về phía rồng) thì siêu nhân nhỏ dần đi, các bạn tiếp sức thì siêu nhân to lại. */
+let bossStage = 3;
 function bossFaces(info) {
-  const he = $('#bHeroEmo'), me = $('#bMonEmo'), hi = $('#bHeroImg'), mi = $('#bMonImg'); if (!he) return;
-  let h, m, hImg = BOSS.hero, mImg = BOSS.mon;
-  if (info.done) { h = '🥳'; m = '🥰'; hImg = bImg('heroWin', BOSS.hero); mImg = bImg('monFriend', BOSS.mon); }
-  else if (info.surge) { h = '😣'; m = '😠'; hImg = bImg('heroHurt', BOSS.hero); mImg = bImg('monAngry', BOSS.mon); }
-  else if (info.pos >= 66) { h = '💪'; m = '😵'; hImg = bImg('heroWin', BOSS.hero); mImg = bImg('monDizzy', BOSS.mon); }
-  else if (info.pos < 45) { h = '😰'; m = '😤'; hImg = bImg('heroHurt', BOSS.hero); mImg = bImg('monAngry', BOSS.mon); }
+  const he = $('#bHeroEmo'), me = $('#bMonEmo'), hi = $('#bHeroImg'), mi = $('#bMonImg'), H = $('#bHero'), M = $('#bMon'); if (!he) return;
+  const p = info.prog || 0, pos = info.pos || 50;
+  const stage = info.done ? 0 : p >= 0.8 ? 1 : p >= 0.5 ? 2 : 3;
+  let h, m, hImg = BOSS.hero, mImg = BOSS.stages[stage];
+  if (info.done) { h = '🥳'; m = '🥚'; hImg = bImg('heroWin', BOSS.hero); }
+  else if (info.surge) { h = '😣'; m = '😠'; hImg = bImg('heroHurt', BOSS.hero); if (stage === 3) mImg = bImg('monAngry', mImg); }
+  else if (pos >= 66) { h = '💪'; m = '😵'; hImg = bImg('heroWin', BOSS.hero); if (stage === 3) mImg = bImg('monDizzy', mImg); }
+  else if (pos < 45) { h = '😰'; m = '😤'; hImg = bImg('heroHurt', BOSS.hero); }
   else { h = '😤'; m = '😏'; }
-  if (he.textContent !== h) { he.textContent = h; he.classList.remove('pop'); void he.offsetWidth; he.classList.add('pop'); }
-  if (me.textContent !== m) { me.textContent = m; me.classList.remove('pop'); void me.offsetWidth; me.classList.add('pop'); }
+  if (he.textContent !== h) { he.textContent = h; flash(he, 'pop', 450); }
+  if (me.textContent !== m) { me.textContent = m; flash(me, 'pop', 450); }
   if (hi.getAttribute('src') !== hImg) hi.src = hImg;
-  if (mi.getAttribute('src') !== mImg) mi.src = mImg;
+  if (stage !== bossStage) {   // rồng biến nhỏ một bậc: làn khói lấp lánh rồi đổi hình
+    bossStage = stage; flash(M, 'poof', 900);
+    setTimeout(() => { mi.src = mImg; }, 300);
+    if (CHIEU && !muted) BA.poof();
+  } else if (mi.getAttribute('src') !== mImg && !M.classList.contains('poof')) mi.src = mImg;
+  const heroS = info.done ? 1.12 : pos < 50 ? Math.max(0.55, 1 - (50 - pos) / 42 * 0.45) : 1;
+  const monS = info.done ? 0.55 : Math.max(0.6, 1 - 0.4 * Math.min(1, p)) * (info.surge ? 1.12 : 1);
+  H.style.setProperty('--s', heroS.toFixed(3)); M.style.setProperty('--s', monS.toFixed(3));
 }
 function flash(el, cls, ms) { if (!el) return; el.classList.remove(cls); void el.offsetWidth; el.classList.add(cls); setTimeout(() => el.classList.remove(cls), ms || 600); }
 /* một nhịp đấu: anh hùng tung tia sáng khi các bạn vừa tiếp sức, rồng phun lửa khi lặng sức hoặc lúc nổi giận */
@@ -132,6 +145,7 @@ function vBoss(st, seats) {
   return {
     key, akey: key, audio: null, html,
     bind() {
+      bossStage = info.done ? 0 : (info.prog || 0) >= 0.8 ? 1 : (info.prog || 0) >= 0.5 ? 2 : 3;
       bossDone = state; bossLastHits = info.H || 0; bossHitsAtFight = info.H || 0; bossSurgeSeen = false; bossFightT = Date.now();
       document.body.classList.toggle('boss-play', !CHIEU && state === 'run');
       bossFaces(info);
