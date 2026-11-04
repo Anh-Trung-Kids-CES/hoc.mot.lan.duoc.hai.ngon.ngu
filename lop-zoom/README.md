@@ -33,7 +33,7 @@ Web riêng cho buổi Zoom cuối tuần, kiểu Wayground: cô điều khiển 
 | 18–24 | Đôi bạn | Bé A thấy tranh và nói, bé B nghe rồi chạm 1 trong 3 tranh, đổi vai, đổi tiếng; bạn khác đoán cho vui | tự động |
 | 24–28 | Cô giáo nhỏ (cả lớp) | Mỗi bạn một lượt nói cho cả lớp; cả lớp chạm tranh rồi cùng nói bằng tiếng kia | tự động |
 | 28–31 | Cả lớp đấu Rồng Lửa (tự chơi) | Mỗi bạn tự trả lời câu ngẫu nhiên trên máy mình (từ, cụm, chữ; EN/ZH), mỗi câu đúng +1 ⚡ cho anh hùng Bông. Giữa trận rồng nổi giận kéo thanh về phía rồng, cả lớp tiếp sức kéo lại, hết giờ cả lớp thắng. Cô tắt tiếng tất cả trên Zoom/Meet, không cần nói | tự động |
-| 31–36 | Nghe truyện, xếp tranh | Lượt 1: cô phát "Sinh nhật của Bông" (4 cảnh) bằng tiếng Anh, mỗi bạn chạm lần lượt 4 tranh có lời tiếng Trung (chạm 🔊 để nghe) theo thứ tự truyện. Lượt 2: cô phát "Một ngày của Bông" (Vòng 1, ôn lại) bằng tiếng Trung, các con xếp tranh có lời tiếng Anh. Hiện đáp án: màn chiếu xếp đúng thứ tự, đọc từng cảnh bằng tiếng kia, cả lớp nói theo | tự động: đúng cả 4 / số vị trí đúng; bé 1 máy cô bấm Đúng/Chưa |
+| 31–36 | Nghe truyện, xếp tranh | Truyện "Sinh nhật của Bông" chia đôi, đủ 8 câu Vòng 2. Lượt 1: cô phát phần 1 bằng tiếng Anh (đếm nến, Anna đến chào, làm quen, I'm five.), mỗi bạn chạm lần lượt 4 tranh có lời tiếng Trung (chạm 🔊 để nghe). Lượt 2: cô phát phần 2 bằng tiếng Trung (你叫什么？ 我叫Bông。 你几岁？ 我六岁！), các con xếp tranh có lời tiếng Anh. Hiện đáp án: màn chiếu xếp đúng thứ tự, đọc từng cảnh bằng tiếng kia, cả lớp nói theo | tự động: đúng cả 4 / số vị trí đúng; bé 1 máy cô bấm Đúng/Chưa |
 | 36–38 | Phiên dịch nhí | Mở hộp quà, phiên dịch nhí nói sang tiếng kia | được / cùng cô / chưa |
 | 38–40 | Huy hiệu Bứt phá | Huy hiệu cả nhóm, ảnh hoặc avatar các bạn | – |
 

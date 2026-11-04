@@ -202,17 +202,13 @@ function sceneAud(i, l) { return AU + (l === 'zh' ? STORY[i].za : STORY[i].ea) +
 /* Phiên dịch nhí: 4 hộp quà, mỗi hộp một câu của truyện */
 const GIFTS = [{ s: 1, from: 'en' }, { s: 2, from: 'zh' }, { s: 5, from: 'en' }, { s: 6, from: 'zh' }];
 
-/* Nghe truyện, xếp tranh: 2 lượt chuyển ngữ.
-   Lượt 1: cô phát truyện Vòng 2 bằng tiếng Anh, các con xếp tranh có lời tiếng Trung.
-   Lượt 2: cô phát truyện Vòng 1 (ôn lại) bằng tiếng Trung, các con xếp tranh có lời tiếng Anh.
-   Mỗi truyện rút gọn 4 cảnh dễ phân biệt cho bé 5–7 tuổi. */
+/* Nghe truyện, xếp tranh: 2 lượt chuyển ngữ, cả 2 lượt đều là nội dung Vòng 2 (truyện "Sinh nhật của Bông" chia đôi, đủ 8 câu).
+   Lượt 1: cô phát tiếng Anh (đếm nến, Anna đến chào, làm quen, "I'm five."), các con xếp tranh có lời tiếng Trung.
+   Lượt 2: cô phát tiếng Trung (你叫什么？ 我叫Bông。 你几岁？ 我六岁！), các con xếp tranh có lời tiếng Anh. */
+function xepScene(i) { return { img: IM + STORY[i].img + '.webp', en: STORY[i].en, zh: STORY[i].zh, ea: AU + STORY[i].ea + '.mp3', za: AU + STORY[i].za + '.mp3' }; }
 const XEP = [
-  { title: 'Sinh nhật của Bông', from: 'en', to: 'zh', scenes: [0, 1, 4, 6].map(i => ({ img: IM + STORY[i].img + '.webp', en: STORY[i].en, zh: STORY[i].zh, ea: AU + STORY[i].ea + '.mp3', za: AU + STORY[i].za + '.mp3' })) },
-  { title: 'Một ngày của Bông', from: 'zh', to: 'en', scenes: [
-    { img: IM + 'tr1_c1.webp', en: 'Goodbye, mommy!', zh: '妈妈，再见！', ea: AU + 'ls_bong_en_goodbye_mommy.mp3', za: AU + 'ls_bong_zh_001.mp3' },
-    { img: IM + 'tr1_c3.webp', en: 'Hello, teacher!', zh: '老师好！', ea: AU + 'ls_bong_en_hello_teacher.mp3', za: AU + 'ls_bong_zh_003.mp3' },
-    { img: IM + 'tr1_c5.webp', en: 'Hello, friend!', zh: '朋友，你好！', ea: AU + 'ls_bong_en_hello_friend.mp3', za: AU + 'ls_bong_zh_005.mp3' },
-    { img: IM + 'tr1_c8.webp', en: 'Hello, daddy!', zh: '爸爸，你好！', ea: AU + 'ls_bong_en_hello_daddy.mp3', za: AU + 'ls_bong_zh_008.mp3' }] }
+  { title: 'Sinh nhật của Bông (phần 1)', from: 'en', to: 'zh', scenes: [0, 1, 4, 7].map(xepScene) },
+  { title: 'Sinh nhật của Bông (phần 2): hỏi tên, hỏi tuổi', from: 'zh', to: 'en', scenes: [2, 3, 5, 6].map(xepScene) }
 ];
 function xepAud(sc, l) { return l === 'zh' ? sc.za : sc.ea; }
 
