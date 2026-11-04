@@ -144,10 +144,17 @@ function goPhase(ph) {
   if (ph === 'on' || ph === 'tone') p.i = 0;
   if (ph === 'story') { p.scene = 0; p.l = 'both'; }
   if (ph === 'gift') p.gift = { k: 0, open: false, ans: false, seat: pickRandom('pd') || null };
+  if (ph === 'lop') { const turns = lopTurns(onlineSeats()); p.lturns = turns; p.run = (st.run || 0) + 1; Object.assign(p, lopPatch(turns, 0, p.run)); }
   if (ph === 'pair') { const turns = pairTurns(onlineSeats()); p.turns = turns; p.run = (st.run || 0) + 1; Object.assign(p, pairPatch(turns, 0, p.run)); }
   setState(p);
 }
 /* bé đang có mặt: máy bé đang trực tuyến, hoặc chỗ cô tạo cho bé chỉ có 1 máy (cô bấm hộ) */
+function lopPatch(turns, n, run) {
+  const t = turns[n]; if (!t) return {};
+  const o = { lop: Object.assign({ n }, t), step: 'ask', rp: 0 };
+  o['llog/' + n + '_' + run] = t;
+  return o;
+}
 function onlineSeats() { const s = seatsIn(); const on = s.filter(x => x.on || (/^t_/.test(x.id) && x.ids.length < 2)); return on.length >= 2 ? on : s; }
 function pairPatch(turns, n, run) {
   const t = turns[n]; if (!t) return {};
@@ -243,7 +250,7 @@ const CTL = {
         <div class="prev">${it.o.map((k, c) => pv(pic(k, 3), k === it.k)).join('')}</div>
         <div class="ctl"><button class="btn ghost" id="pv">◀ Lượt trước</button>
           ${rv ? '' : '<button class="btn y" id="rv">👁 Hiện đáp án</button>'}
-          <button class="btn" id="nx">${(p.n || 0) + 1 < turns.length ? 'Lượt tiếp ▶' : 'Tiếp: Truyện ▶'}</button>
+          <button class="btn" id="nx">${(p.n || 0) + 1 < turns.length ? 'Lượt tiếp ▶' : 'Tiếp: Cô giáo nhỏ ▶'}</button>
           <button class="btn ghost" id="lg">Đổi sang ${l === 'zh' ? 'tiếng Anh' : 'tiếng Trung'}</button>
           <button class="btn ghost" id="re">🔀 Ghép đôi lại</button></div>
         <p class="small">Thứ tự: ${turns.map((t, j) => `<span style="${j === p.n ? 'font-weight:800;color:var(--red)' : ''}">${esc(nm(t.a))}→${esc(nm(t.b))}</span>`).join(' · ')}</p>
@@ -255,12 +262,43 @@ const CTL = {
       $('#re') && ($('#re').onclick = () => { const t = pairTurns(onlineSeats()), r = run + 1; setState(Object.assign({ turns: t, run: r }, pairPatch(t, 0, r))); });
       if (!turns.length) return;
       $('#pv').onclick = () => n > 0 && go(n - 1);
-      $('#nx').onclick = () => n + 1 < turns.length ? go(n + 1) : goPhase('story');
+      $('#nx').onclick = () => n + 1 < turns.length ? go(n + 1) : goPhase('lop');
       $('#rv') && ($('#rv').onclick = () => setState({ step: 'rv' }));
       $('#lg').onclick = () => { const t = Object.assign({}, turns[n], { l: (st.pair || {}).l === 'zh' ? 'en' : 'zh' }); const tt = turns.slice(); tt[n] = t; setState(Object.assign({ turns: tt }, pairPatch(tt, n, run))); };
     },
     qid: st => `pair_${(st.pair || {}).n || 0}_${st.run || 0}`, opts: 3,
     only: st => [(st.pair || {}).b]
+  },
+  lop: {
+    html: st => {
+      const p = st.lop || {}, turns = st.lturns || [], it = PAIR_POOL[p.k || 0], s = seatsAll(), nm = id => (s.find(x => x.id === id) || {}).kid || '…';
+      if (!turns.length) return `<h2>📣 Cô giáo nhỏ</h2><p>Cần ít nhất 1 bé trong lớp.</p><div class="ctl"><button class="btn" id="re">Xếp lượt</button></div>`;
+      const rv = st.step === 'rv', l = p.l === 'zh' ? 'zh' : 'en', to = l === 'zh' ? 'en' : 'zh';
+      return `<h2>📣 Cô giáo nhỏ (cả lớp) · lượt ${(p.n || 0) + 1}/${turns.length}</h2>
+        <p><b>${esc(nm(p.a))}</b> nói cho cả lớp 🗣️ <span class="flag ${l}">${l === 'zh' ? '中文' : 'English'}</span> <span class="bigtxt ${l}">${esc(txt(it.k, l))}</span>
+          → cả lớp chạm tranh, rồi cùng nói <span class="bigtxt ${to}" style="color:var(--red)">${esc(txt(it.k, to))}</span></p>
+        <div class="prev">${it.o.map((k, c) => pv(pic(k, 3), k === it.k)).join('')}</div>
+        <div class="ctl"><button class="btn ghost" id="pv">◀ Lượt trước</button><button class="btn ghost" id="rp">🔁 Phát lại</button>
+          ${rv ? '' : '<button class="btn y" id="rv">👁 Hiện đáp án</button>'}
+          <button class="btn" id="nx">${(p.n || 0) + 1 < turns.length ? 'Lượt tiếp ▶' : 'Tiếp: Truyện ▶'}</button>
+          <button class="btn ghost" id="lg">Đổi sang ${l === 'zh' ? 'tiếng Anh' : 'tiếng Trung'}</button>
+          <button class="btn ghost" id="re">🔀 Xếp lượt lại</button></div>
+        <p class="small">Thứ tự: ${turns.map((t, j) => `<span style="${j === p.n ? 'font-weight:800;color:var(--red)' : ''}">${esc(nm(t.a))}</span>`).join(' · ')}</p>
+        <p class="tip">Mỗi bạn một lượt làm cô giáo nhỏ: con thấy tranh trên máy mình và nói cho cả lớp nghe; các bạn còn lại cùng chạm 1 trong 3 tranh. Hiện đáp án xong, cả lớp cùng nói câu đó bằng tiếng kia (chuyển ngữ). Màn của bạn nói hiện "N bạn hiểu con rồi!". Bạn nói chỉ có 1 máy: cô nhắn riêng tranh cho con.</p>`;
+    },
+    bind(st) {
+      const turns = st.lturns || [], n = (st.lop || {}).n || 0, run = st.run || 0;
+      const go = k => setState(lopPatch(turns, k, run));
+      $('#re').onclick = () => { const t = lopTurns(onlineSeats()), r = run + 1; setState(Object.assign({ lturns: t, run: r }, lopPatch(t, 0, r))); };
+      if (!turns.length) return;
+      $('#pv').onclick = () => n > 0 && go(n - 1);
+      $('#rp').onclick = () => setState({ rp: (st.rp || 0) + 1 });
+      $('#nx').onclick = () => n + 1 < turns.length ? go(n + 1) : goPhase('story');
+      $('#rv') && ($('#rv').onclick = () => setState({ step: 'rv' }));
+      $('#lg').onclick = () => { const tt = turns.slice(); tt[n] = Object.assign({}, turns[n], { l: (st.lop || {}).l === 'zh' ? 'en' : 'zh' }); setState(Object.assign({ lturns: tt }, lopPatch(tt, n, run))); };
+    },
+    qid: st => `lop_${(st.lop || {}).n || 0}_${st.run || 0}`, opts: 3,
+    only: st => seatsIn().map(x => x.id).filter(id => id !== (st.lop || {}).a)
   },
   story: {
     html: st => {
@@ -366,6 +404,7 @@ function proxyOk(st, k) {
   if (st.ph === 'on') return k === quizAns(QUIZ[st.i || 0]);
   if (st.ph === 'tone') return k === TONES[st.i || 0].t;
   if (st.ph === 'pair') { const it = PAIR_POOL[(st.pair || {}).k || 0]; return k === it.o.indexOf(it.k); }
+  if (st.ph === 'lop') { const it = PAIR_POOL[(st.lop || {}).k || 0]; return k === it.o.indexOf(it.k); }
   return false;
 }
 function srcTag(s) {
@@ -478,7 +517,7 @@ function latest(seat, prefix, qids) {
   return qids.filter(q => re.test(q)).sort((a, b) => +b.match(re)[1] - +a.match(re)[1]).map(q => answerOf(room, seat, q)).find(Boolean) || null;
 }
 function results() {
-  const st = room.state || {}, qids = allQids(), M = room.marks || {}, plog = st.plog || {};
+  const st = room.state || {}, qids = allQids(), M = room.marks || {}, plog = st.plog || {}, llog = st.llog || {};
   return seatsIn().map(s => {
     const m = M[s.id] || {}, r = { id: s.id, kid: s.kid, parent: s.parent, web: s.web || '', src: /^t_/.test(s.id) && s.ids.length < 2 ? 'chỗ tạm' : s.src === 'zoom' ? 'từ Zoom' : 'tự vào' };
     const c = { en: [0, 0], zh: [0, 0], doc: [0, 0] }, times = [], det = { on: [], tone: [], pair: [] };
@@ -493,6 +532,13 @@ function results() {
       if (t.a === s.id && t.b !== 'co') { say[1]++; if (a.ok) say[0]++; }
       if (t.b === s.id) { hear[1]++; if (a.ok) hear[0]++; det.pair.push({ k: PAIR_POOL[t.k].k, l: t.l, ok: a.ok ? 1 : 0 }); }
     });
+    let lSay = [0, 0], lHear = [0, 0];
+    Object.entries(llog).forEach(([key, t]) => {
+      if (!t) return;
+      const qid = 'lop_' + key, others = seatsIn().filter(x => x.id !== t.a);
+      if (t.a === s.id) { const ans = others.map(x => answerOf(room, x, qid)).filter(Boolean); if (ans.length) { lSay[1] += ans.length; lSay[0] += ans.filter(a => a.ok).length; } }
+      else { const a = answerOf(room, s, qid); if (a) { lHear[1]++; if (a.ok) lHear[0]++; } }
+    });
     const pd = Object.values(m.pd || {}).filter(v => v !== null && v !== undefined), h = m.h || {}, intro = m.intro || {};
     const lv = v => v === 2 ? 'tự nói' : v === 1 ? 'nói cùng cô' : '';
     Object.assign(r, {
@@ -500,6 +546,7 @@ function results() {
       tg: times.length ? (times.reduce((x, y) => x + y, 0) / times.length / 1000).toFixed(1) : '',
       toneChon: `${tOk}/${TONES.length}`, toneCham: (g[2] + g[1] + g[0]) ? `chuẩn ${g[2]} · gần ${g[1]} · cần luyện ${g[0]}` : '',
       doiNoi: say[1] ? `${say[0]}/${say[1]}` : '', doiNghe: hear[1] ? `${hear[0]}/${hear[1]}` : '',
+      lopNoi: lSay[1] ? `${lSay[0]}/${lSay[1]} bạn hiểu` : '', lopNghe: lHear[1] ? `${lHear[0]}/${lHear[1]}` : '',
       chaoEN: lv(intro.en), chaoZH: lv(intro.zh), pd: pd.length ? pd.map(v => ['chưa', 'cùng cô', 'được'][v]).join(', ') : '',
       h1: h.td ?? '', h2: h.cx ?? '', h3: h.tt ?? '', note: m.note || '', detail: JSON.stringify(det)
     });
@@ -507,7 +554,7 @@ function results() {
   });
 }
 const COLS = [['kid', 'Tên con'], ['parent', 'Ba/mẹ'], ['src', 'Vào lớp'], ['onEN', 'Ôn nhanh EN'], ['onZH', 'Ôn nhanh ZH'], ['doc', 'Nhìn chữ'], ['tg', 'TB phản hồi (giây)'],
-  ['toneChon', 'Thanh điệu chọn đúng'], ['toneCham', 'Cô chấm thanh điệu'], ['doiNoi', 'Đôi bạn: bạn hiểu con nói'], ['doiNghe', 'Đôi bạn: con nghe đúng'],
+  ['toneChon', 'Thanh điệu chọn đúng'], ['toneCham', 'Cô chấm thanh điệu'], ['doiNoi', 'Đôi bạn: bạn hiểu con nói'], ['doiNghe', 'Đôi bạn: con nghe đúng'], ['lopNoi', 'Cô giáo nhỏ: cả lớp hiểu con nói'], ['lopNghe', 'Cô giáo nhỏ: con nghe bạn đúng'],
   ['chaoEN', 'Chào bạn EN'], ['chaoZH', 'Chào bạn ZH'], ['pd', 'Phiên dịch nhí']];
 function drawResults() {
   const rows = results();

@@ -214,7 +214,8 @@ const PHASES = [
   { id: 'intro', n: 'Chào bạn mới',          m: '0–5',   ic: '🎡' },
   { id: 'on',    n: 'Ôn nhanh',              m: '5–13',  ic: '⚡' },
   { id: 'tone',  n: 'Máy bay thanh điệu',    m: '13–21', ic: '✈️' },
-  { id: 'pair',  n: 'Trò chơi đôi bạn',      m: '21–31', ic: '🤝' },
+  { id: 'pair',  n: 'Trò chơi đôi bạn',      m: '21–27', ic: '🤝' },
+  { id: 'lop',   n: 'Cô giáo nhỏ (cả lớp)',  m: '27–31', ic: '📣' },
   { id: 'story', n: 'Truyện',                m: '31–34', ic: '📖' },
   { id: 'gift',  n: 'Phiên dịch nhí',        m: '34–37', ic: '🎁' },
   { id: 'badge', n: 'Huy hiệu Bứt phá',      m: '37–40', ic: '🏅' },
@@ -354,7 +355,7 @@ function energy(room) {
   const pxs = [];
   Object.values(room.marks || {}).forEach(m => Object.keys((m && m.px) || {}).forEach(q => pxs.push(q)));
   const all = new Set(qids.concat(pxs));
-  all.forEach(q => { if (!/^(on|tone|pair)_/.test(q)) return; seats.forEach(s => { const a = answerOf(room, s, q); if (a && a.ok) good++; }); });
+  all.forEach(q => { if (!/^(on|tone|pair|lop)_/.test(q)) return; seats.forEach(s => { const a = answerOf(room, s, q); if (a && a.ok) good++; }); });
   const goal = n * 16;
   const st = room.state || {};
   const pct = st.ph === 'badge' ? 100 : Math.min(100, Math.round(good / goal * 100));
@@ -371,6 +372,12 @@ function pairTurns(seats) {
     turns.push({ a: b, b: a, k: k++ % PAIR_POOL.length, l: l2 });
   }));
   return turns.filter(t => t.a !== 'co' || t.b !== 'co');
+}
+
+/* Cô giáo nhỏ: mỗi bạn một lượt nói cho cả lớp nghe (đổi tiếng mỗi lượt), cả lớp chạm tranh, rồi cùng nói bằng tiếng kia.
+   Dùng tranh khác với lượt đôi bạn (bắt đầu từ giữa PAIR_POOL). */
+function lopTurns(seats) {
+  return seats.map((s, j) => ({ a: s.id, k: (6 + j * 5) % PAIR_POOL.length, l: j % 2 ? 'zh' : 'en' }));
 }
 
 /* Gửi lên máy chủ Apps Script (Sheet "Anh-Trung-Kids – Dữ liệu dự án") */

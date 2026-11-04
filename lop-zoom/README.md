@@ -29,7 +29,8 @@ Web riêng cho buổi Zoom cuối tuần, kiểu Wayground: cô điều khiển 
 | 0–5 | Chào bạn mới | Vòng quay chọn bạn; cả lớp hỏi What's your name? / 你叫什么？, bạn trả lời | EN / ZH: tự nói (✓) hoặc nói cùng cô (~) |
 | 5–13 | Ôn nhanh | 10 câu nghe (4 EN, 4 ZH) hoặc nhìn chữ (三, Anna), chạm 1 trong 3 tranh | tự động: đúng/chưa, thời gian |
 | 13–21 | Máy bay thanh điệu | 一 二 三 四 五 六 你 叫: chạm 1 trong 4 đường bay, rồi cả lớp bay tay nói theo | chuẩn / gần / cần luyện |
-| 21–31 | Đôi bạn | Bé A thấy tranh và nói, bé B nghe rồi chạm 1 trong 3 tranh, đổi vai, đổi tiếng; bạn khác đoán cho vui | tự động |
+| 21–27 | Đôi bạn | Bé A thấy tranh và nói, bé B nghe rồi chạm 1 trong 3 tranh, đổi vai, đổi tiếng; bạn khác đoán cho vui | tự động |
+| 27–31 | Cô giáo nhỏ (cả lớp) | Mỗi bạn một lượt thấy tranh và nói cho cả lớp; cả lớp chạm 1 trong 3 tranh, rồi cùng nói câu đó bằng tiếng kia; màn bạn nói hiện "N bạn hiểu con rồi!" | tự động |
 | 31–37 | Truyện + Phiên dịch nhí | Nghe 8 cảnh "Sinh nhật của Bông"; mở 4 hộp quà, phiên dịch nhí nói sang tiếng kia | được / cùng cô / chưa |
 | 37–40 | Huy hiệu Bứt phá | Huy hiệu cả nhóm, ảnh hoặc avatar các bạn | – |
 

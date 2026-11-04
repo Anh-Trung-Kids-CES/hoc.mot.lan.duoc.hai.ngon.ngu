@@ -189,6 +189,7 @@ function view(st, seats) {
     case 'on': return vQuiz(st, seats);
     case 'tone': return vTone(st, seats);
     case 'pair': return vPair(st, seats);
+    case 'lop': return vLop(st, seats);
     case 'story': return vStory(st);
     case 'gift': return vGift(st, seats);
     case 'badge': return vBadge(st, seats);
@@ -318,6 +319,40 @@ function vPair(st, seats) {
     key, akey, audio: rv ? [a].concat(la && la.ok ? [400, hd('Hai bạn ăn ý quá!')] : []) : role === 'say' ? [hd('Đến lượt con!'), 300, hd('Con nói cho bạn nghe nhé!'), 300, a] : role === 'hear' ? [hd('Con nghe bạn nói rồi chạm tranh đúng nhé!')] : null,
     html: `<div class="qno">Trò chơi đôi bạn · lượt ${(p.n || 0) + 1}</div>${duo}${body}`,
     bind() { bindPlay(() => [a]); bindPicks(qid, c => ({ c, ok: c === ans, xem: role === 'see' || undefined })); }
+  };
+}
+
+/* --- Cô giáo nhỏ: một bạn nói, cả lớp nghe và chạm, rồi cả lớp nói bằng tiếng kia --- */
+function vLop(st, seats) {
+  const p = st.lop || {}, item = PAIR_POOL[p.k || 0], l = p.l === 'zh' ? 'zh' : 'en', to = l === 'zh' ? 'en' : 'zh';
+  const qid = `lop_${p.n || 0}_${st.run || 0}`, rv = st.step === 'rv';
+  if (p.a === undefined) return { key: 'lop-wait', html: `<h1>📣 Cô giáo nhỏ</h1><p class="sub">Cô đang chọn bạn làm cô giáo nhỏ…</p>` };
+  const me = !CHIEU && mySeat === p.a, ans = item.o.indexOf(item.k), my = myAnswer(qid);
+  const others = seats.filter(x => x.id !== p.a);
+  const hit = others.filter(x => { const a = answerOf(room, x, qid); return a && a.ok; }).length;
+  const key = ['lop', p.n, st.run || 0, rv ? 1 : 0, me ? 1 : 0, my ? my.c : '-', rv ? hit : ''].join('|');
+  const who = `<div class="chosen-card"><img src="${seatFace(seats, p.a)}" alt=""><b>${esc(me ? 'Con' : seatName(seats, p.a))}</b><span class="flag ${l}">${l === 'zh' ? '中文' : 'English'}</span></div>`;
+  let body;
+  if (me) {
+    body = `<div class="my-turn">Con là cô giáo nhỏ! 📣</div><img class="big-pic" src="${pic(item.k, 3)}" alt="">
+      <button class="say ${l}" data-play style="font-size:20px;padding:8px 16px"><span class="ic" style="font-size:24px">🔊</span>Nghe mẫu</button>
+      <p class="sub">Con nói ${l === 'zh' ? 'bằng tiếng Trung' : 'bằng tiếng Anh'} cho cả lớp nghe nhé!</p>`;
+    if (rv) body += `<div class="cheer">${hit ? `${hit} bạn hiểu con rồi! 🎉` : 'Cả lớp cùng nói với con nhé!'}</div>`;
+  } else {
+    body = `<p class="ask-line">👂 Bạn ${esc(seatName(seats, p.a))} nói, cả lớp nghe rồi chạm tranh đúng nhé!</p>
+      <div class="pics${my || rv || CHIEU ? ' locked' : ''}" id="pics">${item.o.map((k, c) => `<button class="pick${my && my.c === c ? ' chosen' : ''}${rv && c === ans ? ' right' : ''}${rv && c !== ans ? ' dim' : ''}" data-c="${c}"><img src="${pic(k, 3)}" alt=""></button>`).join('')}</div>
+      <p class="count" id="cnt"></p>`;
+  }
+  if (rv) body += `<p class="ask-line">🗣️ Cả lớp cùng nói bằng ${to === 'zh' ? 'tiếng Trung' : 'tiếng Anh'}: <b class="${to}">${esc(txt(item.k, to))}</b></p>`;
+  const a = aud(item.k, l), b = aud(item.k, to);
+  const akey = ['lop', p.n, st.run || 0, rv ? 1 : 0, me ? 1 : 0, st.rp || 0].join('|');
+  const audio = rv ? [a, 600, hd(to === 'zh' ? 'Tiếng Trung nói thế nào nhỉ?' : 'Tiếng Anh nói thế nào nhỉ?'), 1800, b]
+    : me ? [hd('Đến lượt con!'), 300, a] : (p.n === 0 && !st.rp ? [hd('Con nghe bạn nói rồi chạm tranh đúng nhé!')] : null);
+  return {
+    key, akey, audio,
+    html: `<div class="qno">📣 Cô giáo nhỏ · lượt ${(p.n || 0) + 1}</div>${who}${body}`,
+    bind() { bindPlay(() => [a]); if (!me) bindPicks(qid, c => ({ c, ok: c === ans })); this.update(); },
+    update() { const el = $('#cnt'); if (el) el.textContent = rv ? '' : `${others.filter(x => answerOf(room, x, qid)).length}/${others.length} bạn đã chọn`; }
   };
 }
 
