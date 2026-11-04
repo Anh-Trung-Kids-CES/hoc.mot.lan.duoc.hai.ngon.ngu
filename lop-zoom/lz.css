@@ -226,3 +226,14 @@ img{max-width:100%}
   .big-pic{width:38vh}.scene{max-height:58vh;width:auto;max-width:94vw}
   .wheel-box{width:62vh}.medal{width:120px;height:120px}.medal b{font-size:24px}
 }
+
+/* tặng sao */
+.star-ov{position:fixed;inset:0;z-index:60;display:grid;place-items:center;background:rgba(255,251,240,.75);animation:fadeIn .2s}
+.star-ov.out{opacity:0;transition:opacity .5s}
+.star-card{background:#fff;border-radius:30px;padding:18px 34px 16px;text-align:center;box-shadow:0 0 0 6px var(--yellow),var(--shadow);animation:pop .5s}
+.star-big{font-size:120px;line-height:1;animation:starSpin 1s cubic-bezier(.2,1.4,.4,1)}
+.star-card b{display:block;font-size:34px;color:var(--red)}
+.star-card p{margin:2px 0 4px;font-size:22px;font-weight:700}
+.star-card small{font-family:'Be Vietnam Pro',sans-serif;color:var(--muted);font-size:14px}
+@keyframes starSpin{from{transform:scale(.2) rotate(-180deg)}}
+@keyframes fadeIn{from{opacity:0}}
