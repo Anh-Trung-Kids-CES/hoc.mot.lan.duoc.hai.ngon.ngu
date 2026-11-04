@@ -342,3 +342,20 @@ body.boss-play .stage{padding:6px}
 .chieu .xep-t span{font-size:24px}.chieu .xep-t small{font-size:18px}
 @media (max-width:520px){.xep-grid.rv{grid-template-columns:repeat(2,1fr)}.xep-t span{font-size:15px}}
 @media (max-height:480px) and (orientation:landscape){.xep-grid{grid-template-columns:repeat(4,1fr);max-width:none}.xep-t img{aspect-ratio:4/3;max-height:34vh}}
+
+/* Chơi bằng đầu */
+.pick[data-hd]::before{content:attr(data-hd);position:absolute;top:-14px;left:50%;transform:translateX(-50%);font-size:26px;z-index:2;filter:drop-shadow(0 2px 0 #fff)}
+.pick.aim{border-color:#FFC72C;box-shadow:0 0 0 calc(4px + 10px * var(--hold,0)) rgba(255,199,44,.55),var(--shadow);transform:scale(calc(1 + .06 * var(--hold,0)))}
+.pick.aim::after{content:'';position:absolute;left:8%;right:8%;bottom:6px;height:8px;border-radius:999px;background:linear-gradient(90deg,#FFC72C calc(var(--hold,0) * 100%),rgba(0,0,0,.08) 0)}
+.hd-cam{position:fixed;left:10px;bottom:10px;width:96px;height:72px;border-radius:14px;overflow:hidden;z-index:40;border:3px solid var(--green);box-shadow:var(--shadow);background:#222}
+.hd-cam video{width:100%;height:100%;object-fit:cover;transform:scaleX(-1)}
+.hd-cam span{position:absolute;right:2px;bottom:0;font-size:18px}
+.hd-cam.noface{border-color:#bbb}
+.hd-cal{position:fixed;inset:0;z-index:70;background:rgba(255,251,240,.92);display:grid;place-items:center;padding:16px}
+.hd-card{background:#fff;border-radius:26px;padding:20px 24px;max-width:460px;text-align:center;box-shadow:0 0 0 5px var(--yellow),var(--shadow)}
+.hd-card h2{margin:6px 0 10px;font-size:26px}
+.hd-ic{font-size:90px;line-height:1;animation:pop .5s}
+.hd-prog{height:14px;background:#EFE7D2;border-radius:999px;overflow:hidden;margin:10px 0}
+.hd-prog i{display:block;height:100%;width:0;background:var(--green);transition:width .1s}
+.hd-toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);z-index:65;max-width:90vw;box-shadow:var(--shadow);font-weight:700}
+#hdBtn.y{background:var(--yellow);color:var(--ink)}

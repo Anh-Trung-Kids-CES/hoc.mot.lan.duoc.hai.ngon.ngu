@@ -228,8 +228,7 @@ const PHASES = [
   { id: 'lop',   n: 'Cô giáo nhỏ (cả lớp)',  m: '24–28', ic: '📣' },
   { id: 'boss',  n: 'Cả lớp đấu Rồng Lửa',   m: '28–31', ic: '🐉' },
   { id: 'xep',   n: 'Nghe truyện, xếp tranh', m: '31–36', ic: '🧩' },
-  { id: 'gift',  n: 'Phiên dịch nhí',        m: '36–38', ic: '🎁' },
-  { id: 'badge', n: 'Huy hiệu Bứt phá',      m: '38–40', ic: '🏅' },
+  { id: 'badge', n: 'Huy hiệu Bứt phá',      m: '36–40', ic: '🏅' },
 ];
 
 /* Giọng cô Hươu (Gemini TTS, giọng Sulafat) đã có sẵn ở web học. Câu chưa có file thì chỉ hiện chữ – cô nói trên Zoom.

@@ -138,7 +138,7 @@ async function join() {
   } catch (er) { console.error(er); return codeScreen('Chưa vào được lớp. Ba mẹ thử lại nhé.'); }
   joined = true;
   try { navigator.wakeLock && navigator.wakeLock.request('screen'); } catch (e) { }
-  $('#topInfo').innerHTML = `<span class="pill y" id="saoPill">⭐ 0</span> <span class="pill">${esc(ME.kid)} · Phòng ${CODE}</span>`; starPill();
+  $('#topInfo').innerHTML = `<span class="pill y" id="saoPill">⭐ 0</span> <span class="pill">${esc(ME.kid)} · Phòng ${CODE}</span>`; starPill(); HEAD.boot();
   DB.on(base, v => { room = v || {}; render(); });
 }
 function watchConn() {
