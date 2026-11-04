@@ -112,6 +112,7 @@ function closeShare() { sharing = false; $('#share').classList.add('hide'); draw
 const BAR = [
   ['#go', '▶ Bắt đầu', 'red'], ['[data-spin="en"]', '🎡 Quay · EN', ''], ['[data-spin="zh"]', '🎡 Quay · 中文', 'red'],
   ['#pv', '◀', 'ghost'], ['#rp', '🔁 Phát lại', 'ghost'], ['#rv', '👁 Hiện đáp án', 'y'], ['#ag', '↺ Hỏi lại', 'ghost'],
+  ['#bst', '⚔️ Bắt đầu trận đấu', 'red'], ['#ben', '🏁 Kết thúc ngay', 'ghost'], ['#bre', '↺ Đấu lại', 'ghost'],
   ['#op', '🎁 Mở hộp quà', 'y'], ['#an', '👂 Nghe đáp án', 'y'], ['#nx', 'Tiếp ▶', ''], ['#kq', 'Xem kết quả', 'red']];
 function drawBar(st) {
   if (!sharing) return;
@@ -147,6 +148,7 @@ function goPhase(ph) {
   if (ph === 'on' || ph === 'tone') p.i = 0;
   if (ph === 'story') { p.scene = 0; p.l = 'both'; }
   if (ph === 'gift') p.gift = { k: 0, open: false, ans: false, seat: pickRandom('pd') || null };
+  if (ph === 'boss') { const b = st.boss || {}; p.boss = { run: b.t0 ? (b.run || 0) : (b.run || 0), dur: b.dur || 120000 }; }
   if (ph === 'lop') { const turns = lopTurns(onlineSeats()); p.lturns = turns; p.run = (st.run || 0) + 1; Object.assign(p, lopPatch(turns, 0, p.run)); }
   if (ph === 'pair') { const turns = pairTurns(onlineSeats()); p.turns = turns; p.run = (st.run || 0) + 1; Object.assign(p, pairPatch(turns, 0, p.run)); }
   setState(p);
@@ -284,7 +286,7 @@ const CTL = {
         <div class="prev">${it.o.map((k, c) => pv(pic(k, 3), k === it.k)).join('')}</div>
         <div class="ctl"><button class="btn ghost" id="pv">◀ Lượt trước</button><button class="btn ghost" id="rp">🔁 Phát lại</button>
           ${rv ? '' : '<button class="btn y" id="rv">👁 Hiện đáp án</button>'}
-          <button class="btn" id="nx">${(p.n || 0) + 1 < turns.length ? 'Lượt tiếp ▶' : 'Tiếp: Truyện ▶'}</button>
+          <button class="btn" id="nx">${(p.n || 0) + 1 < turns.length ? 'Lượt tiếp ▶' : 'Tiếp: Đấu Rồng Lửa ▶'}</button>
           <button class="btn ghost" id="lg">Đổi sang ${l === 'zh' ? 'tiếng Anh' : 'tiếng Trung'}</button>
           <button class="btn ghost" id="re">🔀 Xếp lượt lại</button></div>
         <p class="small">Thứ tự: ${turns.map((t, j) => `<span style="${j === p.n ? 'font-weight:800;color:var(--red)' : ''}">${esc(nm(t.a))}</span>`).join(' · ')}</p>
@@ -297,12 +299,41 @@ const CTL = {
       if (!turns.length) return;
       $('#pv').onclick = () => n > 0 && go(n - 1);
       $('#rp').onclick = () => setState({ rp: (st.rp || 0) + 1 });
-      $('#nx').onclick = () => n + 1 < turns.length ? go(n + 1) : goPhase('story');
+      $('#nx').onclick = () => n + 1 < turns.length ? go(n + 1) : goPhase('boss');
       $('#rv') && ($('#rv').onclick = () => setState({ step: 'rv' }));
       $('#lg').onclick = () => { const tt = turns.slice(); tt[n] = Object.assign({}, turns[n], { l: (st.lop || {}).l === 'zh' ? 'en' : 'zh' }); setState(Object.assign({ lturns: tt }, lopPatch(tt, n, run))); };
     },
     qid: st => `lop_${(st.lop || {}).n || 0}_${st.run || 0}`, opts: 3,
     only: st => seatsIn().map(x => x.id).filter(id => id !== (st.lop || {}).a)
+  },
+  boss: {
+    html: st => {
+      const b = st.boss || {}, info = bossInfo(room), dur = (b.dur || 120000) / 1000;
+      const state = info.pre ? 'pre' : info.done ? 'done' : 'run';
+      return `<h2>🐉 Cả lớp đấu Rồng Lửa (tự chơi)</h2>
+        <p>Mỗi bạn tự trả lời câu hỏi ngẫu nhiên trên máy mình, câu nọ nối câu kia. Mỗi câu đúng +1 ⚡ cho anh hùng Bông. Giữa trận Rồng Lửa nổi giận kéo thanh về phía rồng, các bạn tiếp sức kéo lại; hết giờ cả lớp thắng.</p>
+        <p class="tip">Trước khi bắt đầu: bấm <b>Tắt tiếng tất cả</b> trên Zoom/Meet. Trong trận các con nghe câu hỏi trên máy mình, cô không cần nói.</p>
+        ${state === 'pre' ? `<p>Thời gian: ${[90, 120, 150, 180].map(x => `<button class="btn ${x === dur ? 'y' : 'ghost'} sm" data-dur="${x}">${x < 120 ? x + ' giây' : (x / 60) + ' phút'}</button>`).join(' ')}</p>
+          <div class="ctl"><button class="btn red" id="bst">⚔️ Bắt đầu trận đấu</button></div>`
+        : state === 'run' ? `<p class="bigtxt">⚡ ${info.H} · còn ${Math.ceil(info.left / 1000)} giây${info.surge ? ' · ⚠️ rồng nổi giận' : ''}</p>
+          <div class="ctl"><button class="btn ghost" id="ben">🏁 Kết thúc ngay (cả lớp thắng)</button></div>`
+        : `<p class="bigtxt">🎉 Cả lớp thắng với ⚡ ${info.H}</p>`}
+        <div class="ctl">${state !== 'pre' ? '<button class="btn ghost" id="bre">↺ Đấu lại</button>' : ''}<button class="btn" id="nx">Tiếp: Truyện ▶</button></div>`;
+    },
+    bind(st) {
+      const b = st.boss || {};
+      $$('[data-dur]').forEach(x => x.onclick = () => setState({ boss: Object.assign({}, b, { dur: +x.dataset.dur * 1000 }) }));
+      $('#bst') && ($('#bst').onclick = () => setState({ boss: { run: (b.run || 0) + 1, dur: b.dur || 120000, t0: DB.now() } }));
+      $('#ben') && ($('#ben').onclick = () => setState({ boss: Object.assign({}, b, { end: true }) }));
+      $('#bre') && ($('#bre').onclick = () => setState({ boss: { run: (b.run || 0), dur: b.dur || 120000 } }));
+      $('#nx').onclick = () => goPhase('story');
+      clearTimeout(this._t); if (b.t0 && !b.end && DB.now() - b.t0 < (b.dur || 120000) + 1500) this._t = setTimeout(() => { if (TAB === 'lop' && (room.state || {}).ph === 'boss') draw(); }, 1000);
+    },
+    kid(s, st) {
+      const b = st.boss || {}, pre = 'boss_' + (b.run || 0) + '_'; let a = 0, ok = 0;
+      Object.entries(room.answers || {}).forEach(([q, o]) => { if (q.indexOf(pre) !== 0) return; s.ids.forEach(id => { if (o && o[id]) { a++; if (o[id].ok) ok++; } }); });
+      return b.t0 ? `<span class="st ${a ? 'ok' : 'none'}">⚡ ${ok} đúng / ${a} câu</span>` : '';
+    }
   },
   story: {
     html: st => {
@@ -536,6 +567,8 @@ function results() {
       if (t.a === s.id && t.b !== 'co') { say[1]++; if (a.ok) say[0]++; }
       if (t.b === s.id) { hear[1]++; if (a.ok) hear[0]++; det.pair.push({ k: PAIR_POOL[t.k].k, l: t.l, ok: a.ok ? 1 : 0 }); }
     });
+    let bA = 0, bOk = 0; const bpre = 'boss_' + ((st.boss || {}).run || 0) + '_';
+    Object.entries(room.answers || {}).forEach(([q, o]) => { if (q.indexOf(bpre) !== 0) return; s.ids.forEach(id => { if (o && o[id]) { bA++; if (o[id].ok) bOk++; } }); });
     let lSay = [0, 0], lHear = [0, 0];
     Object.entries(llog).forEach(([key, t]) => {
       if (!t) return;
@@ -550,6 +583,7 @@ function results() {
       tg: times.length ? (times.reduce((x, y) => x + y, 0) / times.length / 1000).toFixed(1) : '',
       toneChon: `${tOk}/${TONES.length}`, toneCham: (g[2] + g[1] + g[0]) ? `chuẩn ${g[2]} · gần ${g[1]} · cần luyện ${g[0]}` : '',
       doiNoi: say[1] ? `${say[0]}/${say[1]}` : '', doiNghe: hear[1] ? `${hear[0]}/${hear[1]}` : '',
+      boss: bA ? `${bOk}/${bA}` : '',
       lopNoi: lSay[1] ? `${lSay[0]}/${lSay[1]} bạn hiểu` : '', lopNghe: lHear[1] ? `${lHear[0]}/${lHear[1]}` : '',
       chaoEN: lv(intro.en), chaoZH: lv(intro.zh), pd: pd.length ? pd.map(v => ['chưa', 'cùng cô', 'được'][v]).join(', ') : '',
       h1: h.td ?? '', h2: h.cx ?? '', h3: h.tt ?? '', note: m.note || '', detail: JSON.stringify(det)
@@ -558,7 +592,7 @@ function results() {
   });
 }
 const COLS = [['kid', 'Tên con'], ['parent', 'Ba/mẹ'], ['src', 'Vào lớp'], ['onEN', 'Ôn nhanh EN'], ['onZH', 'Ôn nhanh ZH'], ['doc', 'Nhìn chữ'], ['tg', 'TB phản hồi (giây)'],
-  ['toneChon', 'Thanh điệu chọn đúng'], ['toneCham', 'Cô chấm thanh điệu'], ['doiNoi', 'Đôi bạn: bạn hiểu con nói'], ['doiNghe', 'Đôi bạn: con nghe đúng'], ['lopNoi', 'Cô giáo nhỏ: cả lớp hiểu con nói'], ['lopNghe', 'Cô giáo nhỏ: con nghe bạn đúng'],
+  ['toneChon', 'Thanh điệu chọn đúng'], ['toneCham', 'Cô chấm thanh điệu'], ['doiNoi', 'Đôi bạn: bạn hiểu con nói'], ['doiNghe', 'Đôi bạn: con nghe đúng'], ['lopNoi', 'Cô giáo nhỏ: cả lớp hiểu con nói'], ['lopNghe', 'Cô giáo nhỏ: con nghe bạn đúng'], ['boss', 'Đấu Rồng Lửa: đúng/câu'],
   ['chaoEN', 'Chào bạn EN'], ['chaoZH', 'Chào bạn ZH'], ['pd', 'Phiên dịch nhí']];
 function drawResults() {
   const rows = results();

@@ -161,8 +161,11 @@ function countAnswered(qid, seats, only) {
   let n = 0; seats.forEach(s => { if (only && only.indexOf(s.id) < 0) return; if (answerOf(room, s, qid)) n++; }); return n;
 }
 
+let bossTick = null, bossDone = null;
 function render() {
   const st = room.state || { ph: 'cho' }, players = room.players || {};
+  if (st.ph === 'boss' && !bossTick) bossTick = setInterval(bossUpdate, 250);
+  if (st.ph !== 'boss' && bossTick) { clearInterval(bossTick); bossTick = null; }
   const meNode = players[DB.uid];
   if (!CHIEU && (!meNode || !meNode.kid)) return removed();
   mySeat = CHIEU ? '' : seatOf(players, DB.uid);
@@ -200,6 +203,7 @@ function view(st, seats) {
     case 'lop': return vLop(st, seats);
     case 'story': return vStory(st);
     case 'gift': return vGift(st, seats);
+    case 'boss': return vBoss(st, seats);
     case 'badge': return vBadge(st, seats);
     default: {
       const name = CHIEU ? '' : ', ' + (ME && ME.kid || '');
@@ -405,6 +409,85 @@ function vGift(st, seats) {
   };
 }
 
+/* --- Cả lớp đấu Rồng Lửa --- */
+let BQ = null, bossMissed = [], bossLastHits = 0, bossLastSfx = 0, bossSurgeSeen = false;
+function bossScene(info, big) {
+  return `<div class="boss${big ? ' big' : ''}${info.surge ? ' surge' : ''}${info.done ? ' won' : ''}">
+    <div class="b-row"><div class="b-hero"><img src="${BOSS.hero}" alt="Anh hùng Bông"><div class="b-bub" id="bBub"></div></div>
+      <div class="b-mid"><div class="b-power">⚡ <b id="bH">${info.H || 0}</b></div><div class="b-bar"><i id="bPos" style="left:${info.pos || 50}%"></i></div>
+      <div class="b-time" id="bT">${info.pre ? '' : Math.ceil(info.left / 1000) + 's'}</div></div>
+      <div class="b-mon"><img src="${BOSS.mon}" alt="${BOSS.name}"></div></div>
+    <div class="b-msg" id="bMsg">${bossMsg(info)}</div></div>`;
+}
+function bossMsg(info) {
+  if (info.pre) return '⚔️ Rồng Lửa nghịch ngợm muốn thổi tắt nến sinh nhật của Bông! Cả lớp tiếp sức cho anh hùng nhé!';
+  if (info.done) return '🎉 Cả lớp thắng rồi! Rồng Lửa xin làm bạn với Bông!';
+  if (info.surge) return '⚠️ Rồng Lửa nổi giận! Cả lớp trả lời nhanh nào!';
+  if (info.pos >= 70) return '💪 Anh hùng mạnh lên rồi! Tiếp sức nữa nào!';
+  if (info.pos < 45) return '🔥 Rồng đang lấn tới! Các bạn ơi, tiếp sức!';
+  return '⚡ Mỗi câu đúng là một tia sức mạnh cho anh hùng!';
+}
+function vBoss(st, seats) {
+  const info = bossInfo(room), run = info.run;
+  const state = info.pre ? 'pre' : info.done ? 'done' : 'run';
+  const key = 'boss|' + run + '|' + state;
+  let html = bossScene(info, CHIEU);
+  if (!CHIEU && state === 'run') html += `<div id="bq" class="bq"></div>`;
+  if (!CHIEU && state === 'pre') html += `<p class="sub">Cô bấm bắt đầu là con tự trả lời liên tục nhé. Câu nào cũng giúp anh hùng mạnh hơn!</p>`;
+  return {
+    key, akey: key, audio: null,
+    html,
+    bind() {
+      bossDone = state; bossLastHits = info.H || 0; bossSurgeSeen = false;
+      if (!CHIEU && state === 'run') { if (!BQ || BQ.run !== run) BQ = { run, n: +lsGet('lz-boss-' + CODE + '-' + run + '-' + DB.uid, 0) || 0, it: null }; bossAsk(); }
+      if (state === 'done') { SND.beep('win'); confetti(); if (!CHIEU) giveStar('boss_win_' + run, 'boss'); }
+    }
+  };
+}
+function bossAsk() {
+  const box = $('#bq'); if (!box) return;
+  const it = BQ.it = bossPick(BQ.it, bossMissed), lang = it.l;
+  const picsrc = k => pic(k, 2);
+  box.innerHTML = `${it.l === 'doc' ? `<div class="chu zh" style="font-size:80px;padding:4px 30px">${it.chu}</div>`
+      : `<button class="say ${lang}" id="bPlay"><span class="ic">🔊</span><span>${lang === 'zh' ? '中文' : 'English'}</span></button>`}
+    <div class="pics" id="pics">${it.o.map((k, c) => `<button class="pick" data-c="${c}"><img src="${picsrc(k)}" alt=""></button>`).join('')}</div>`;
+  const a = it.l === 'doc' ? '' : aud(it.k, lang);
+  if (a) { play([a]); $('#bPlay').onclick = () => play([a]); }
+  const t0 = performance.now();
+  $$('.pick', box).forEach(b => b.onclick = () => {
+    if (box.dataset.lock) return; box.dataset.lock = '1';
+    const c = +b.dataset.c, ok = c === it.ans, qid = 'boss_' + BQ.run + '_' + BQ.n;
+    BQ.n++; lsSet('lz-boss-' + CODE + '-' + BQ.run + '-' + DB.uid, BQ.n);
+    DB.set(roomPath(CODE) + '/answers/' + qid + '/' + DB.uid, { c, ok, ms: Math.round(performance.now() - t0), at: DB.now(), k: it.k, l: it.l }).catch(er => console.error(er));
+    b.classList.add('chosen');
+    if (ok) { SND.beep('ok'); const f = document.createElement('div'); f.className = 'b-plus'; f.textContent = '+1 ⚡'; box.appendChild(f); }
+    else bossMissed.push({ k: it.k, l: it.l });
+    setTimeout(() => { delete box.dataset.lock; if ($('#bq') === box) bossAsk(); }, ok ? 700 : 500);
+  });
+}
+function bossUpdate() {
+  if ((room.state || {}).ph !== 'boss') return;
+  const info = bossInfo(room), state = info.pre ? 'pre' : info.done ? 'done' : 'run';
+  if (state !== bossDone) { lastStageKey = ''; render(); return; }
+  const pos = $('#bPos'); if (!pos) return;
+  pos.style.left = info.pos + '%';
+  $('#bH').textContent = info.H || 0;
+  $('#bT').textContent = info.pre ? '' : Math.ceil(info.left / 1000) + 's';
+  $('#bMsg').textContent = bossMsg(info);
+  const sc = $('.boss'); sc && sc.classList.toggle('surge', info.surge);
+  if (info.surge && !bossSurgeSeen) { bossSurgeSeen = true; if (CHIEU && !muted) SND.beep('whoosh'); }
+  if (CHIEU && info.H > bossLastHits) {   // màn chiếu: avatar bạn vừa tiếp sức bay vào anh hùng
+    const P = room.players || {}, bub = $('#bBub');
+    info.hits.slice(bossLastHits).slice(-3).forEach(([, u]) => {
+      const seat = buildSeats(P).find(x => x.ids.indexOf(u) >= 0); if (!seat || !bub) return;
+      const e = document.createElement('img'); e.src = faceOf(seat); e.className = 'b-fly'; e.style.left = (10 + Math.random() * 60) + '%';
+      bub.appendChild(e); setTimeout(() => e.remove(), 1200);
+    });
+    if (Date.now() - bossLastSfx > 250 && !muted) { bossLastSfx = Date.now(); SND.beep('pop'); }
+  }
+  bossLastHits = info.H || 0;
+}
+
 /* --- Huy hiệu Bứt phá cả nhóm --- */
 function vBadge(st, seats) {
   return {
@@ -435,7 +518,8 @@ const PRAISE = {
   pairHear: ['Con hiểu ý bạn rồi đó!', 'Con lắng nghe bạn giỏi ghê!'],
   pairSee: ['Con đoán đúng cùng các bạn rồi!'],
   lopSay: ['Cô giáo nhỏ nói hay ghê, các bạn hiểu rồi!', 'Con nói rõ, cả lớp hiểu con rồi!'],
-  lopHear: ['Con hiểu cô giáo nhỏ rồi đó!', 'Con lắng nghe bạn rất chăm!']
+  lopHear: ['Con hiểu cô giáo nhỏ rồi đó!', 'Con lắng nghe bạn rất chăm!'],
+  boss: ['Cả lớp cùng nhau thắng Rồng Lửa rồi!']
 };
 let lastPraise = '';
 function praiseAudio(kind) {

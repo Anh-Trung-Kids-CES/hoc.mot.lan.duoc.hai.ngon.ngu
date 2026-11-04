@@ -28,11 +28,13 @@ Web riêng cho buổi Zoom cuối tuần, kiểu Wayground: cô điều khiển 
 | Phút | Phần | Bé làm gì | Cô chấm |
 |---|---|---|---|
 | 0–5 | Chào bạn mới | Vòng quay chọn bạn; cả lớp hỏi What's your name? / 你叫什么？, bạn trả lời | EN / ZH: tự nói (✓) hoặc nói cùng cô (~) |
-| 5–13 | Ôn nhanh | 10 câu nghe (4 EN, 4 ZH) hoặc nhìn chữ (三, Anna), chạm 1 trong 3 tranh | tự động: đúng/chưa, thời gian |
-| 13–21 | Máy bay thanh điệu | 一 二 三 四 五 六 你 叫: chạm 1 trong 4 đường bay, rồi cả lớp bay tay nói theo | chuẩn / gần / cần luyện |
-| 21–27 | Đôi bạn | Bé A thấy tranh và nói, bé B nghe rồi chạm 1 trong 3 tranh, đổi vai, đổi tiếng; bạn khác đoán cho vui | tự động |
-| 27–31 | Cô giáo nhỏ (cả lớp) | Mỗi bạn một lượt thấy tranh và nói cho cả lớp; cả lớp chạm 1 trong 3 tranh, rồi cùng nói câu đó bằng tiếng kia; màn bạn nói hiện "N bạn hiểu con rồi!" | tự động |
-| 31–37 | Truyện + Phiên dịch nhí | Nghe 8 cảnh "Sinh nhật của Bông"; mở 4 hộp quà, phiên dịch nhí nói sang tiếng kia | được / cùng cô / chưa |
+| 5–12 | Ôn nhanh | 10 câu nghe (4 EN, 4 ZH) hoặc nhìn chữ (三, Anna), chạm 1 trong 3 tranh | tự động: đúng/chưa, thời gian |
+| 12–18 | Máy bay thanh điệu | 一 二 三 四 五 六 你 叫: chạm 1 trong 4 đường bay, rồi cả lớp bay tay nói theo | chuẩn / gần / cần luyện |
+| 18–24 | Đôi bạn | Bé A thấy tranh và nói, bé B nghe rồi chạm 1 trong 3 tranh, đổi vai, đổi tiếng; bạn khác đoán cho vui | tự động |
+| 24–28 | Cô giáo nhỏ (cả lớp) | Mỗi bạn một lượt nói cho cả lớp; cả lớp chạm tranh rồi cùng nói bằng tiếng kia | tự động |
+| 28–31 | Cả lớp đấu Rồng Lửa (tự chơi) | Mỗi bạn tự trả lời câu ngẫu nhiên trên máy mình (từ, cụm, chữ; EN/ZH), mỗi câu đúng +1 ⚡ cho anh hùng Bông. Giữa trận rồng nổi giận kéo thanh về phía rồng, cả lớp tiếp sức kéo lại, hết giờ cả lớp thắng. Cô tắt tiếng tất cả trên Zoom/Meet, không cần nói | tự động |
+| 31–34 | Truyện | Nghe 8 cảnh "Sinh nhật của Bông" | – |
+| 34–37 | Phiên dịch nhí | Mở 4 hộp quà, phiên dịch nhí nói sang tiếng kia | được / cùng cô / chưa |
 | 37–40 | Huy hiệu Bứt phá | Huy hiệu cả nhóm, ảnh hoặc avatar các bạn | – |
 
 **Tặng sao**: khi cô bấm Hiện đáp án, máy bé nào đúng hiện ngôi sao to xoay vào (không chữ khen); cứ 3–4 sao im lặng thì sao kế tiếp có cô Hươu đọc một câu khen theo đúng việc con vừa làm, đổi câu mỗi lần (bạn nói được sao khi bạn nghe hiểu); bé chưa đúng thì màn bé không hiện gì, không lộ đáp án trên máy bé. Đáp án đúng chỉ hiện trên màn chiếu cho cả lớp. Số sao trong buổi hiện ở góc màn bé (chưa cộng vào web 21 ngày – đợt 2).

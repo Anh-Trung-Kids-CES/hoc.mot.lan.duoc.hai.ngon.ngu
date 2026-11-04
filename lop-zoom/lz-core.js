@@ -212,10 +212,11 @@ const INTRO = {
 const PHASES = [
   { id: 'cho',   n: 'Chờ vào lớp',          m: '',      ic: '🚪' },
   { id: 'intro', n: 'Chào bạn mới',          m: '0–5',   ic: '🎡' },
-  { id: 'on',    n: 'Ôn nhanh',              m: '5–13',  ic: '⚡' },
-  { id: 'tone',  n: 'Máy bay thanh điệu',    m: '13–21', ic: '✈️' },
-  { id: 'pair',  n: 'Trò chơi đôi bạn',      m: '21–27', ic: '🤝' },
-  { id: 'lop',   n: 'Cô giáo nhỏ (cả lớp)',  m: '27–31', ic: '📣' },
+  { id: 'on',    n: 'Ôn nhanh',              m: '5–12',  ic: '⚡' },
+  { id: 'tone',  n: 'Máy bay thanh điệu',    m: '12–18', ic: '✈️' },
+  { id: 'pair',  n: 'Trò chơi đôi bạn',      m: '18–24', ic: '🤝' },
+  { id: 'lop',   n: 'Cô giáo nhỏ (cả lớp)',  m: '24–28', ic: '📣' },
+  { id: 'boss',  n: 'Cả lớp đấu Rồng Lửa',   m: '28–31', ic: '🐉' },
   { id: 'story', n: 'Truyện',                m: '31–34', ic: '📖' },
   { id: 'gift',  n: 'Phiên dịch nhí',        m: '34–37', ic: '🎁' },
   { id: 'badge', n: 'Huy hiệu Bứt phá',      m: '37–40', ic: '🏅' },
@@ -356,7 +357,7 @@ function energy(room) {
   const pxs = [];
   Object.values(room.marks || {}).forEach(m => Object.keys((m && m.px) || {}).forEach(q => pxs.push(q)));
   const all = new Set(qids.concat(pxs));
-  all.forEach(q => { if (!/^(on|tone|pair|lop)_/.test(q)) return; seats.forEach(s => { const a = answerOf(room, s, q); if (a && a.ok) good++; }); });
+  all.forEach(q => { if (!/^(on|tone|pair|lop|boss)_/.test(q)) return; seats.forEach(s => { const a = answerOf(room, s, q); if (a && a.ok) good++; }); });
   const goal = n * 16;
   const st = room.state || {};
   const pct = st.ph === 'badge' ? 100 : Math.min(100, Math.round(good / goal * 100));
@@ -379,6 +380,49 @@ function pairTurns(seats) {
    Dùng tranh khác với lượt đôi bạn (bắt đầu từ giữa PAIR_POOL). */
 function lopTurns(seats) {
   return seats.map((s, j) => ({ a: s.id, k: (6 + j * 5) % PAIR_POOL.length, l: j % 2 ? 'zh' : 'en' }));
+}
+
+/* ======================= Cả lớp đấu Rồng Lửa =======================
+   Mỗi bạn tự trả lời câu hỏi ngẫu nhiên trên máy mình (không chờ cô, không chờ bạn). Mỗi câu đúng = +1 ⚡ cho anh hùng Bông.
+   Thanh giằng co giữa anh hùng và rồng: giữa trận rồng "nổi giận" kéo thanh về phía rồng (nguy cơ thua),
+   các bạn tiếp sức kéo lại, hết giờ thì anh hùng tung đòn cuối và cả lớp thắng. Không bảng xếp hạng: chỉ có sức mạnh chung. */
+const BOSS = { hero: TN + 'qua/ava_bong_sieu_nhan.webp', mon: TN + 'qua/mon_lua_3.webp', bg: TN + 'qua/bg_quai.webp', name: 'Rồng Lửa nghịch ngợm' };
+const BOSS_WORDS = ['name', 'you', 'one', 'two', 'three', 'four', 'five', 'six'];
+const BOSS_PHRASES = ['wyn', 'mna', 'hoy', 'i5', 'i6', 'n123', 'ntm'];
+const BOSS_ITEMS = (() => {
+  const out = [];
+  BOSS_WORDS.forEach(k => ['en', 'zh'].forEach(l => out.push({ k, l, cat: BOSS_WORDS })));
+  BOSS_PHRASES.forEach(k => ['en', 'zh'].forEach(l => out.push({ k, l, cat: BOSS_PHRASES })));
+  [['one', '一'], ['two', '二'], ['three', '三']].forEach(([k, c]) => out.push({ k, l: 'doc', chu: c, cat: ['one', 'two', 'three'] }));
+  return out;
+})();
+/* câu tiếp cho một bạn: tránh câu vừa hỏi, ưu tiên câu con vừa chọn chưa đúng (gặp lại ở thứ tiếng kia) */
+function bossPick(last, missed) {
+  let it = null;
+  if (missed && missed.length && Math.random() < .5) { const m = missed.shift(); it = BOSS_ITEMS.find(x => x.k === m.k && x.l !== m.l && x.l !== 'doc') || null; }
+  if (!it) { const pool = BOSS_ITEMS.filter(x => !last || x.k !== last.k); it = pool[Math.floor(Math.random() * pool.length)]; }
+  const others = it.cat.filter(k => k !== it.k).sort(() => Math.random() - .5).slice(0, 2);
+  const o = [it.k].concat(others).sort(() => Math.random() - .5);
+  return Object.assign({}, it, { o, ans: o.indexOf(it.k) });
+}
+function bossInfo(room) {
+  const st = room.state || {}, b = st.boss || {};
+  if (!b.t0) return { pre: true, run: b.run || 0, dur: b.dur || 120000 };
+  const T = b.dur || 120000, el = DB.now() - b.t0, t = Math.max(0, Math.min(1, el / T)), pre = 'boss_' + (b.run || 0) + '_';
+  let H = 0; const players = new Set(), hits = [];
+  Object.entries(room.answers || {}).forEach(([q, o]) => { if (q.indexOf(pre) !== 0) return; Object.entries(o || {}).forEach(([u, a]) => { players.add(u); if (a && a.ok) { H++; hits.push([a.at || 0, u]); } }); });
+  const n = Math.max(1, players.size, buildSeats(room.players).filter(s => s.ok && s.on).length);
+  /* Thanh giằng co: kịch bản trận (rồng nổi giận quanh 62% thời gian, cuối trận anh hùng áp đảo)
+     cộng với nhịp tiếp sức của cả lớp trong 6 giây gần nhất (trả lời đúng càng dồn dập, thanh càng về phía anh hùng). */
+  const now = DB.now(), win = Math.max(2000, Math.min(6000, el));
+  const recent = hits.filter(h => h[0] > now - win).length / n / (win / 1000);   // câu đúng mỗi giây của mỗi bạn
+  const push = 22 * (Math.tanh(recent * 7) - 0.5);                               // nhịp chuẩn: 1 câu đúng / 7 giây / bạn
+  const bump = Math.exp(-Math.pow((t - 0.62) / 0.11, 2));
+  let pos = 50 + 10 * t - 35 * bump + (t > 0.85 ? (t - 0.85) / 0.15 * 30 : 0) + push;
+  const hp = H;
+  const done = !!b.end || t >= 1;
+  pos = done ? 100 : Math.max(8, Math.min(92, pos));
+  return { pre: false, run: b.run || 0, t, H, pos, surge: !done && bump > 0.35, done, left: Math.max(0, T - el), hits: hits.sort((x, y) => x[0] - y[0]) };
 }
 
 /* Gửi lên máy chủ Apps Script (Sheet "Anh-Trung-Kids – Dữ liệu dự án") */
