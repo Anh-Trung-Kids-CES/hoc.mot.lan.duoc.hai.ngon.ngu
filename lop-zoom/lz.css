@@ -234,6 +234,6 @@ img{max-width:100%}
 .star-big{font-size:120px;line-height:1;animation:starSpin 1s cubic-bezier(.2,1.4,.4,1)}
 .star-card b{display:block;font-size:34px;color:var(--red)}
 .star-card p{margin:2px 0 4px;font-size:22px;font-weight:700}
-.star-card small{font-family:'Be Vietnam Pro',sans-serif;color:var(--muted);font-size:14px}
+.star-card small{font-weight:800;color:var(--muted);font-size:20px}
 @keyframes starSpin{from{transform:scale(.2) rotate(-180deg)}}
 @keyframes fadeIn{from{opacity:0}}

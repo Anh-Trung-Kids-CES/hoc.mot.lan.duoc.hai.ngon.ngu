@@ -297,7 +297,7 @@ function vTone(st, seats) {
       $$('.path', $('#stage')).forEach(b => b.addEventListener('click', () => { const m = $('#pl' + b.dataset.c); m && m.beginElement && m.beginElement(); }));
       bindPicks(qid, c => ({ c, ok: c === x.t }), '.path');
       if (my && !rv) { const m = $('#pl' + my.c); try { m && m.beginElement && m.beginElement(); } catch (e) { } }
-      if (rv && my && my.ok) giveStar(qid, 'tone', { py: x.py });
+      if (rv && my && my.ok) giveStar(qid, 'tone');
       this.update && this.update();
     },
     update() { const el = $('#cnt'); if (el) el.textContent = `${countAnswered(qid, seats)}/${seats.length} bạn đã chọn`; }
@@ -329,7 +329,7 @@ function vPair(st, seats) {
     html: `<div class="qno">Trò chơi đôi bạn · lượt ${(p.n || 0) + 1}</div>${duo}${body}`,
     bind() {
       bindPlay(() => [a], role === 'say'); bindPicks(qid, c => ({ c, ok: c === ans, xem: role === 'see' || undefined }));
-      if (rv && !CHIEU) { if (role === 'say' && la && la.ok) giveStar(qid, 'pairSay', { ban: seatName(seats, p.b) }); else if (role !== 'say' && my && my.ok) giveStar(qid, role === 'hear' ? 'pairHear' : 'pairSee', { ban: seatName(seats, p.a) }); }
+      if (rv && !CHIEU) { if (role === 'say' && la && la.ok) giveStar(qid, 'pairSay'); else if (role !== 'say' && my && my.ok) giveStar(qid, role === 'hear' ? 'pairHear' : 'pairSee'); }
     }
   };
 }
@@ -365,7 +365,7 @@ function vLop(st, seats) {
     html: `<div class="qno">📣 Cô giáo nhỏ · lượt ${(p.n || 0) + 1}</div>${who}${body}`,
     bind() {
       bindPlay(() => [a], me); if (!me) bindPicks(qid, c => ({ c, ok: c === ans }));
-      if (rv && !CHIEU) { if (me && hit) giveStar(qid, 'lopSay', { n: hit }); else if (!me && my && my.ok) giveStar(qid, 'lopHear', { ban: seatName(seats, p.a) }); }
+      if (rv && !CHIEU) { if (me && hit) giveStar(qid, 'lopSay'); else if (!me && my && my.ok) giveStar(qid, 'lopHear'); }
       this.update();
     },
     update() { const el = $('#cnt'); if (el) el.textContent = rv ? '' : `${others.filter(x => answerOf(room, x, qid)).length}/${others.length} bạn đã chọn`; }
@@ -423,36 +423,45 @@ function confetti() {
 /* --- Tặng sao: chỉ hiện khi con đúng (lúc cô hiện đáp án). Chưa đúng thì màn con không hiện gì; kết quả nằm ở màn cô. --- */
 function stars() { return lsGet('lz-sao-' + CODE + '-' + DB.uid, []) || []; }
 function starPill() { const el = $('#saoPill'); if (el) el.textContent = '⭐ ' + stars().length; }
-/* Lời khen theo đúng việc con vừa làm, đổi câu mỗi lần (không lặp lại câu vừa dùng). Chỉ hiện chữ, không đọc thành tiếng. */
+/* Tặng sao: ngôi sao to xoay vào, không chữ khen (các con chưa đọc kịp).
+   Cứ 3–4 sao im lặng thì sao kế tiếp có cô Hươu đọc một câu khen theo đúng việc con vừa làm, đổi câu mỗi lần.
+   Câu nào chưa có file giọng (xem GIONG-CAN-THU.md) thì tạm đọc "Giỏi quá!" – không dùng giọng máy. */
 const PRAISE = {
-  on_en: ['Con nghe tiếng Anh tinh ghê!', 'Tai con bắt được từ tiếng Anh rồi!', 'Con nghe một lần là chọn đúng!', 'Con nghe kỹ nên chọn trúng tranh!'],
-  on_zh: ['Con nghe ra tiếng Trung rồi đó!', 'Tiếng Trung con cũng nghe hiểu!', 'Con nhận ra từ tiếng Trung nhanh ghê!', 'Con nghe kỹ tiếng Trung nên chọn trúng!'],
-  on_doc: ['Con nhìn chữ là nhận ra liền!', 'Con nhớ mặt chữ rồi đó!', 'Mắt con tinh ghê, đọc được chữ rồi!'],
-  tone: ['Máy bay của con bay đúng đường {py}!', 'Con nghe ra thanh điệu {py} rồi!', 'Tai con bắt thanh điệu chuẩn ghê!', 'Con chọn đúng đường bay rồi đó!'],
-  pairSay: ['Con nói rõ nên {ban} hiểu liền!', '{ban} nghe con nói là hiểu ngay!', 'Con nói to, rõ, {ban} chọn đúng rồi!'],
-  pairHear: ['Con nghe {ban} nói và hiểu liền!', 'Con hiểu ý {ban} rồi đó!', 'Con lắng nghe bạn giỏi ghê!'],
-  pairSee: ['Con đoán đúng cùng hai bạn rồi!', 'Con nghe các bạn nói cũng hiểu luôn!'],
-  lopSay: ['Con nói rõ, {n} bạn hiểu con rồi!', 'Cô giáo nhỏ nói hay ghê, {n} bạn chọn đúng!', 'Cả lớp nghe con và {n} bạn hiểu rồi!'],
-  lopHear: ['Con nghe {ban} nói và chọn đúng rồi!', 'Con hiểu cô giáo nhỏ {ban} rồi đó!', 'Con lắng nghe bạn rất chăm!']
+  on_en: ['Con nghe tiếng Anh tinh ghê!', 'Tai con bắt được từ tiếng Anh rồi!'],
+  on_zh: ['Con nghe ra tiếng Trung rồi đó!', 'Con nhận ra từ tiếng Trung nhanh ghê!'],
+  on_doc: ['Con nhìn chữ là nhận ra liền!', 'Con nhớ mặt chữ rồi đó!'],
+  tone: ['Máy bay của con bay đúng đường rồi!', 'Tai con bắt thanh điệu chuẩn ghê!'],
+  pairSay: ['Con nói rõ nên bạn hiểu liền!', 'Bạn nghe con nói là hiểu ngay!'],
+  pairHear: ['Con hiểu ý bạn rồi đó!', 'Con lắng nghe bạn giỏi ghê!'],
+  pairSee: ['Con đoán đúng cùng các bạn rồi!'],
+  lopSay: ['Cô giáo nhỏ nói hay ghê, các bạn hiểu rồi!', 'Con nói rõ, cả lớp hiểu con rồi!'],
+  lopHear: ['Con hiểu cô giáo nhỏ rồi đó!', 'Con lắng nghe bạn rất chăm!']
 };
 let lastPraise = '';
-function praise(kind, v) {
+function praiseAudio(kind) {
   const list = PRAISE[kind] || PRAISE.on_en;
   let pool = list.filter(x => x !== lastPraise); if (!pool.length) pool = list;
   const t = pool[Math.floor(Math.random() * pool.length)];
   lastPraise = t;
-  return t.replace(/\{(\w+)\}/g, (_, k) => (v && v[k] !== undefined) ? v[k] : '');
+  return hd(t) || hd('Giỏi quá!');
 }
-function giveStar(qid, kind, v) {
+function giveStar(qid, kind) {
   if (CHIEU) return;
+  const key = 'lz-sao-' + CODE + '-' + DB.uid;
   const list = stars(); if (list.indexOf(qid) >= 0) return;
-  list.push(qid); lsSet('lz-sao-' + CODE + '-' + DB.uid, list); starPill();
+  list.push(qid); lsSet(key, list); starPill();
   let ov = $('#starOv'); if (ov) ov.remove();
   ov = document.createElement('div'); ov.id = 'starOv'; ov.className = 'star-ov';
-  ov.innerHTML = `<div class="star-card"><div class="star-big">⭐</div><b>+1 sao</b><p>${esc(praise(kind, v))}</p><small>Con có ${list.length} ⭐ trong buổi này</small></div>`;
+  ov.innerHTML = `<div class="star-card"><div class="star-big">⭐</div><b>+1 sao</b><small>⭐ ${list.length}</small></div>`;
   document.body.appendChild(ov); ov.onclick = () => ov.remove();
   SND.beep('ok');
-  setTimeout(() => { ov.classList.add('out'); setTimeout(() => ov.remove(), 500); }, 2600);
+  let next = +lsGet(key + '-noi', 0) || (4 + Math.floor(Math.random() * 2));   // sao thứ 4 hoặc 5 mới nói lần đầu
+  if (list.length >= next) {
+    setTimeout(() => play([praiseAudio(kind)], amCo() ? 0.45 : 1), 500);
+    next = list.length + 4 + Math.floor(Math.random() * 2);                     // sau đó 3–4 sao im lặng
+  }
+  lsSet(key + '-noi', next);
+  setTimeout(() => { ov.classList.add('out'); setTimeout(() => ov.remove(), 500); }, 2200);
 }
 
 /* --- chạm và nghe --- */
