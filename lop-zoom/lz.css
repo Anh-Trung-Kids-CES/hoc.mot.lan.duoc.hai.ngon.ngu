@@ -359,3 +359,7 @@ body.boss-play .stage{padding:6px}
 .hd-prog i{display:block;height:100%;width:0;background:var(--green);transition:width .1s}
 .hd-toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);z-index:65;max-width:90vw;box-shadow:var(--shadow);font-weight:700}
 #hdBtn.y{background:var(--yellow);color:var(--ink)}
+
+.flag.hdtag{background:#FFC72C;color:var(--ink);margin-left:6px}
+.bs-hd{position:absolute;top:6px;left:50%;transform:translateX(-50%)}
+.hd-cam.idle{opacity:.35;border-color:#ccc}

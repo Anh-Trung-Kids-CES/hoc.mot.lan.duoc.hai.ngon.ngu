@@ -212,6 +212,14 @@ const XEP = [
 ];
 function xepAud(sc, l) { return l === 'zh' ? sc.za : sc.ea; }
 
+/* Hình thức chọn đáp án theo từng phần, để buổi học có lúc tĩnh, lúc vận động:
+   Ôn nhanh, Đôi bạn: chạm (tĩnh, tập trung nghe) · Cô giáo nhỏ: quay đầu (vận động nhẹ) · Đấu Rồng Lửa: quay đầu (vận động mạnh, ngắn)
+   · Xếp tranh: chạm (lắng lại trước khi kết thúc). Cô bật/tắt từng phần trên màn cô (state.headIn). */
+const HEAD_DEFAULT = { on: false, pair: false, lop: true, boss: true };
+const HEAD_PHASES = Object.keys(HEAD_DEFAULT);
+function headAllowed(st) { st = st || {}; const m = Object.assign({}, HEAD_DEFAULT, st.headIn || {}); return !!m[st.ph]; }
+const HEAD_TAG = '<span class="flag hdtag">🙆 quay đầu để chọn</span>';
+
 /* Chào bạn mới */
 const INTRO = {
   ask: { en: { t: "What's your name?", a: aud('wyn', 'en') }, zh: { t: '你叫什么？', a: aud('wyn', 'zh') } },

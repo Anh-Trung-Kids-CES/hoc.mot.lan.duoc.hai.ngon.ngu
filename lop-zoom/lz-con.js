@@ -175,6 +175,8 @@ function render() {
   $('#en').innerHTML = energyHTML(energy(room));
   $('#friends').innerHTML = seats.map(s => `<div class="face${s.id === mySeat ? ' me' : ''}${s.on ? '' : ' off'}"><img src="${faceOf(s)}" alt=""><span>${esc(s.id === mySeat ? 'Con' : s.kid)}</span></div>`).join('') || '<span class="small">Các bạn đang vào lớp…</span>';
   const v = waiting ? { key: 'wait', html: viewWait() } : view(st, seats);
+  if (!CHIEU) HEAD.phase(st);
+  if (v.key) v.key += '|h' + (headAllowed(st) ? 1 : 0);
   if (v.key !== lastStageKey) {
     lastStageKey = v.key; shownAt = performance.now();
     $('#stage').innerHTML = v.html; v.bind && v.bind();
@@ -269,7 +271,7 @@ function vQuiz(st, seats) {
   else audio = i === 0 && !st.rp ? [hd('Con nghe và chạm vào tranh đúng nhé!'), 400, a, 700, a] : [a, 700, a];
   return {
     key, akey, audio,
-    html: `<div class="qno">Câu ${i + 1}/${QUIZ.length} <span class="flag ${lang}">${flag}</span></div>
+    html: `<div class="qno">Câu ${i + 1}/${QUIZ.length} <span class="flag ${lang}">${flag}</span>${headAllowed(st) ? HEAD_TAG : ''}</div>
       <p class="ask-line">${q.l === 'doc' ? '👀 Con nhìn chữ rồi chạm vào tranh đúng nhé!' : '👂 Con nghe và chạm vào tranh đúng nhé!'}</p>${prompt}
       <div class="pics${my || rv || CHIEU ? ' locked' : ''}" id="pics">${pics}</div><p class="count" id="cnt"></p>${after}`,
     bind() { bindPlay(() => [a]); bindPicks(qid, c => ({ c, ok: c === ans })); if (rv && my && my.ok) giveStar(qid, 'on_' + lang); this.update(); },
@@ -331,7 +333,7 @@ function vPair(st, seats) {
   const akey = ['pair', p.n, st.run || 0, rv ? 1 : 0, role, st.rp || 0].join('|');
   return {
     key, akey, priv: !rv && role === 'say', audio: rv ? [a].concat(CHIEU && la && la.ok ? [400, hd('Hai bạn ăn ý quá!')] : []) : role === 'say' ? [hd('Đến lượt con!'), 300, hd('Con nói cho bạn nghe nhé!'), 300, a] : role === 'hear' ? [hd('Con nghe bạn nói rồi chạm tranh đúng nhé!')] : null,
-    html: `<div class="qno">Trò chơi đôi bạn · lượt ${(p.n || 0) + 1}</div>${duo}${body}`,
+    html: `<div class="qno">Trò chơi đôi bạn · lượt ${(p.n || 0) + 1}${headAllowed(st) && role !== 'say' ? HEAD_TAG : ''}</div>${duo}${body}`,
     bind() {
       bindPlay(() => [a], role === 'say'); bindPicks(qid, c => ({ c, ok: c === ans, xem: role === 'see' || undefined }));
       if (rv && !CHIEU) { if (role === 'say' && la && la.ok) giveStar(qid, 'pairSay'); else if (role !== 'say' && my && my.ok) giveStar(qid, role === 'hear' ? 'pairHear' : 'pairSee'); }
@@ -367,7 +369,7 @@ function vLop(st, seats) {
     : me ? [hd('Đến lượt con!'), 300, a] : (p.n === 0 && !st.rp ? [hd('Con nghe bạn nói rồi chạm tranh đúng nhé!')] : null);
   return {
     key, akey, audio, priv: !rv && me,
-    html: `<div class="qno">📣 Cô giáo nhỏ · lượt ${(p.n || 0) + 1}</div>${who}${body}`,
+    html: `<div class="qno">📣 Cô giáo nhỏ · lượt ${(p.n || 0) + 1}${headAllowed(st) && !me ? HEAD_TAG : ''}</div>${who}${body}`,
     bind() {
       bindPlay(() => [a], me); if (!me) bindPicks(qid, c => ({ c, ok: c === ans }));
       if (rv && !CHIEU) { if (me && hit) giveStar(qid, 'lopSay'); else if (!me && my && my.ok) giveStar(qid, 'lopHear'); }

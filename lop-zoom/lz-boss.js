@@ -140,7 +140,7 @@ function vBoss(st, seats) {
   const state = info.pre ? 'pre' : info.done ? 'done' : 'run';
   const key = 'boss|' + run + '|' + state;
   let html;
-  if (!CHIEU && state === 'run') html = `<div class="boss-split"><div class="bs-scene">${bossScene(info, false)}</div><div class="bs-q"><div id="bq" class="bq"></div></div></div>`;
+  if (!CHIEU && state === 'run') html = `<div class="boss-split"><div class="bs-scene">${bossScene(info, false)}</div><div class="bs-q">${headAllowed(st) ? `<div class="bs-hd">${HEAD_TAG}</div>` : ''}<div id="bq" class="bq"></div></div></div>`;
   else html = bossScene(info, CHIEU) + (!CHIEU && state === 'pre' ? `<p class="sub">Cô bấm bắt đầu là con tự trả lời liên tục nhé. Câu nào đúng cũng giúp anh hùng mạnh hơn!</p>` : '');
   return {
     key, akey: key, audio: null, html,

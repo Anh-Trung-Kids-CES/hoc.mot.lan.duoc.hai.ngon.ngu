@@ -92,6 +92,10 @@ function drawClass() {
   if (st.ph === 'story') { goPhase('xep'); return; }   // phòng mở từ bản cũ
   const c = CTL[st.ph] || CTL.cho;
   $('#ctl').innerHTML = c.html(st);
+  if (HEAD_PHASES.indexOf(st.ph) >= 0) {
+    $('#ctl').insertAdjacentHTML('beforeend', `<label class="toggle" style="margin-top:10px"><input type="checkbox" id="hdIn" ${headAllowed(st) ? 'checked' : ''}> 🙆 Phần này các con chọn bằng cách quay đầu (máy đã bật camera; chạm vẫn được)</label>`);
+    $('#hdIn').onchange = e => setState({ ['headIn/' + st.ph]: e.target.checked });
+  }
   c.bind && c.bind(st);
   drawKids(st, c);
   drawBar(st);

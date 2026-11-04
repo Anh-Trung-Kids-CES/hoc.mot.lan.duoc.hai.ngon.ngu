@@ -37,6 +37,7 @@ const HEAD = (() => {
     raf = requestAnimationFrame(tick);
     const t = performance.now(); if (t - last < 66) return; last = t;
     let p = null;
+    if (!calib && !headAllowed((typeof room !== 'undefined' && room.state) || {})) { holdDir = ''; setAim(-1, 0); undecorate(); return; }   // phần này chạm: không chạy nhận diện cho đỡ tốn pin
     if (SIM) p = simPose;
     else if (lm && video && video.readyState >= 2) { try { const r = lm.detectForVideo(video, t); if (r.faceLandmarks && r.faceLandmarks[0]) p = pose(r.faceLandmarks[0]); } catch (e) { } }
     faceSeen = !!p; const box = $('#hdCam'); box && box.classList.toggle('noface', !p);
@@ -48,6 +49,7 @@ const HEAD = (() => {
     else if (Math.abs(dp) > TH_P) dir = 'U';
     else { base.yaw += (p.yaw - base.yaw) * .04; base.pitch += (p.pitch - base.pitch) * .04; }   // tư thế thẳng thay đổi chậm theo thời gian
     if (calib) return calibStep(dir, dy, t);
+    if (!headAllowed((typeof room !== 'undefined' && room.state) || {})) { holdDir = ''; setAim(-1, 0); undecorate(); return; }
     handle(dir, t);
   }
   const IDX = { L: 0, U: 1, R: 2 };
@@ -60,6 +62,7 @@ const HEAD = (() => {
     const a = picks(); if (i < 0 || !a[i]) return;
     a[i].classList.add('aim'); a[i].style.setProperty('--hold', Math.min(1, f).toFixed(2));
   }
+  function undecorate() { $$('.pick[data-hd]').forEach(x => delete x.dataset.hd); }
   function decorate() {
     picks().forEach((x, i) => { if (!x.dataset.hd) x.dataset.hd = ['⬅️', '⬆️', '➡️'][i]; });
   }
@@ -157,5 +160,15 @@ const HEAD = (() => {
     addEventListener('keydown', e => { if (e.key === 'ArrowLeft') simPose = { yaw: .4 * (sign || 1), pitch: 0 }; if (e.key === 'ArrowRight') simPose = { yaw: -.4 * (sign || 1), pitch: 0 }; if (e.key === 'ArrowUp') simPose = { yaw: 0, pitch: -.2 }; });
     addEventListener('keyup', () => { simPose = { yaw: 0, pitch: 0 }; });
   }
-  return { boot, start, stop, get on() { return on; } };
+  /* gọi mỗi lần màn bé vẽ lại: nhắc con khi sang phần chơi bằng đầu */
+  let lastPh = '', nudged = {};
+  function phase(st) {
+    const ok = headAllowed(st), cam = $('#hdCam');
+    cam && cam.classList.toggle('idle', !ok);
+    if (st.ph === lastPh) return; lastPh = st.ph;
+    if (!ok) return;
+    if (on) toastHead('🙆 Phần này con quay đầu để chọn tranh nhé!');
+    else if (!nudged[st.ph] && $('#hdBtn')) { nudged[st.ph] = 1; toastHead('🙆 Phần này có thể chơi bằng đầu: ba mẹ bấm nút 🙆 trên thanh đỏ để bật camera. Con chạm tranh cũng được.'); }
+  }
+  return { boot, start, stop, phase, get on() { return on; } };
 })();
