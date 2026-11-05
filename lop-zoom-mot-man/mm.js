@@ -94,7 +94,6 @@ function curQ() {
   const p = S.ph, run = S.run || 0;
   if (p === 'on') { const q = QUIZ[S.i]; return q && { qid: `on_${S.i}_${run}`, ans: quizAns(q) + 1, n: 3 }; }
   if (p === 'tone') { const x = TONES[S.i]; return x && { qid: `tone_${S.i}_${run}`, ans: x.t, n: 4 }; }
-  if (p === 'lop') { const t = lopTurnsNow()[S.li]; if (!t) return null; const it = PAIR_POOL[t.k]; return { qid: `lop_${S.li}_${run}`, ans: it.o.indexOf(it.k) + 1, n: 3, skip: t.a }; }
   if (p === 'xep') { if (S.xj < 0 || S.xj > 3) return null; return { qid: `xep_${S.xr}_${S.xj}_${run}`, ans: xepOrder(S.xr).indexOf(S.xj) + 1, n: 4 }; }
   if (p === 'boss') { const b = S.boss; if (!b.t0 || !b.q || bossDoneNow()) return null; return { qid: `boss_${b.run}_${b.qn}`, ans: b.q.ans + 1, n: 3, now: true }; }
   return null;
@@ -122,12 +121,11 @@ function reveal() {
   autoRvStart();
 }
 /* Hiện đáp án xong: tự sang câu sau vài giây để cô săn đáp án câu mới trong chat (tắt được, không tự sang phần khác) */
-const AUTO_RV_S = { on: 4, tone: 6, lop: 5, xep: 5 };
+const AUTO_RV_S = { on: 4, tone: 6, xep: 5 };
 let autoRvT = null, autoRvLeft = 0, autoRvKey = '';
 function autoRvLast() {
   if (S.ph === 'on') return S.i + 1 >= QUIZ.length;
   if (S.ph === 'tone') return S.i + 1 >= TONES.length;
-  if (S.ph === 'lop') return S.li + 1 >= lopTurnsNow().length;
   if (S.ph === 'xep') return S.xj >= 3;
   return true;
 }
@@ -376,29 +374,27 @@ function vTone() {
   };
 }
 
-/* --- Cô giáo nhỏ: một bạn nói (cô nhắn riêng từ cần nói), cả lớp gõ số tranh --- */
+/* --- Cô giáo nhỏ: mỗi bạn một lượt chọn một bức tranh, nói bằng tiếng Anh và tiếng Trung theo hướng dẫn của cô --- */
+function lt(id) { S.lt = S.lt || {}; return S.lt[id] || (S.lt[id] = {}); }
 function vLop() {
   const turns = lopTurnsNow(), n = turns.length;
   if (!n) return { key: 'lop0', html: `<h1 class="mm-h1">📣 Cô giáo nhỏ</h1><p class="mm-sub">Cô thêm bé trước nhé.</p>`, ctl: `<button class="btn" data-act="next">Tiếp ▶</button>` };
-  const li = Math.min(n - 1, S.li || 0), t = turns[li], it = PAIR_POOL[t.k], kid = kidById(t.a), rv = S.step === 'rv', l = t.l, o = l === 'en' ? 'zh' : 'en';
-  const ans = it.o.indexOf(it.k) + 1;
+  const li = Math.min(n - 1, S.li || 0), t = turns[li], it = PAIR_POOL[t.k], kid = kidById(t.a), m = lt(kid.id), c = m.c, k = c != null ? it.o[c] : null;
+  const pics = `<div class="mm-pics n3">${it.o.map((x, j) => `<button class="mm-pick lp${c === j ? ' right' : ''}${c != null && c !== j ? ' dim' : ''}" data-lp="${j}"><img src="${pic(x, 3)}" alt=""><span class="no">${j + 1}</span></button>`).join('')}</div>`;
+  const say = l => `<div class="lp-say"><button class="say ${l}" data-play="${aud(k, l)}"><span class="ic">🔊</span><span class="${l}">${esc(txt(k, l))}</span></button>${m[l] ? '<span class="lp-ok">✓</span>' : ''}</div>`;
   return {
-    key: ['lop', li, rv ? 1 : 0, S.run || 0].join('|'), akey: ['lop', li, rv ? 1 : 0, S.rp || 0].join('|'),
-    audio: rv ? [aud(it.k, l), 600, hd('Con nghe rồi thử nói bằng tiếng kia nhé!'), 400, aud(it.k, o)] : null,
+    key: ['lop', li, c == null ? '-' : c, m.en ? 1 : 0, m.zh ? 1 : 0].join('|'), akey: 'lop' + li,
     html: `<div class="qno">📣 Cô giáo nhỏ · lượt ${li + 1}/${n}</div>
       <div class="mm-row tight"><div class="chosen-card"><img src="${avaImg(kid.ava)}" alt=""><b>${esc(kid.kid)}</b></div>
-        <p class="ask-line">${rv ? `<b class="${l}">${esc(txt(it.k, l))}</b> → <b class="${o}">${esc(txt(it.k, o))}</b>` : `${esc(kid.kid)} nói ${flag(l)} cho cả lớp nghe. Các bạn gõ số tranh vào chat!`}</p></div>
-      ${numPics(it.o.map(k => pic(k, 3)), ans, rv)}
-      ${rv ? '<p class="ask-line">🔁 Cả lớp cùng nói bằng tiếng kia nào!</p>' : ''}`,
-    ctl: nav(li > 0 ? 'prev' : '', '', '', `<button class="btn ghost" data-act="dm" data-id="${kid.id}">📋 Chép lời nhắn riêng cho ${esc(kid.kid)}</button>`)
-      + `<button class="btn y" data-act="noiKid" data-id="${kid.id}">🎤 ${esc(kid.kid)} nói được +⭐</button>`
-      + (rv ? '' : `<button class="btn y" data-act="rv">👁 Hiện đáp án</button>`)
-      + `<button class="btn ghost" data-act="rp">🔁 Phát lại</button><button class="btn" data-act="next">${li + 1 < n ? 'Lượt tiếp ▶' : `Tiếp: ${phaseName('boss')} ▶`}</button>` + autoRvChk(),
-    tip: `Bấm <b>📋 Chép lời nhắn riêng</b> rồi dán vào tin nhắn riêng (chat Zoom → gửi riêng cho ${esc(kid.kid)}) để ba mẹ nhắc nhỏ con từ cần nói. Màn này không hiện đáp án trước. Con nói xong cô bấm 🎤, các bạn gõ số, cô bấm số từng bé rồi Hiện đáp án.`,
-    dm: `${kid.kid} ơi, con là cô giáo nhỏ! Ba mẹ nhắc nhỏ con nói cho cả lớp nghe bằng ${l === 'zh' ? 'tiếng Trung' : 'tiếng Anh'}: "${txt(it.k, l)}"${W[it.k] && W[it.k].py && l === 'zh' ? ' (' + W[it.k].py + ')' : ''}. Nói xong con giơ tay nhé!`
+        <p class="ask-line">${c == null ? `👆 ${esc(kid.kid)} chọn một bức tranh con thích nhé: 1, 2 hay 3?` : `🎤 ${esc(kid.kid)} nói bức tranh số ${c + 1} bằng tiếng Anh rồi tiếng Trung nhé!`}</p></div>
+      ${pics}
+      ${k ? `<div class="lp-says">${say('en')}${say('zh')}</div>` : ''}`,
+    ctl: nav(li > 0 ? 'prev' : '', '', '')
+      + (k ? `<button class="btn ${m.en ? 'y' : 'ghost'}" data-act="lpSay" data-l="en">🎤 Nói được tiếng Anh ${m.en ? '✓' : '+⭐'}</button><button class="btn ${m.zh ? 'y' : 'ghost'}" data-act="lpSay" data-l="zh">🎤 Nói được tiếng Trung ${m.zh ? '✓' : '+⭐'}</button><button class="btn ghost" data-act="lpRe">↺ Chọn lại tranh</button>` : '')
+      + `<button class="btn" data-act="next">${li + 1 < n ? 'Lượt tiếp ▶' : `Tiếp: ${phaseName('boss')} ▶`}</button>`,
+    tip: `Con nói số tranh (hoặc gõ vào chat), cô bấm vào bức tranh đó. Chữ tiếng Anh và tiếng Trung hiện dưới tranh; con nói, cô hướng dẫn nếu con cần (bấm 🔊 để nghe mẫu). Con nói được tiếng nào thì cô bấm nút tiếng đó, mỗi tiếng +${S.w.noi} ⭐ phát biểu (bấm lại để bỏ). Các bạn khác giơ tay nói theo thì cô bấm ✋ / 🎤 trên thẻ.`
   };
 }
-
 /* --- Đấu Rồng Lửa: cô hiện một câu cho cả lớp, các con gõ số trong chat, cô bấm cho từng bé, mỗi câu đúng +1 ⚡ --- */
 function roomFromS() {
   const players = {}, marks = {};
@@ -627,7 +623,7 @@ function reportRows() {
   return S.kids.map(k => {
     const t = totals(k.id), a = t.a;
     return { ma: k.id, kid: k.kid, parent: k.parent, tay: t.tay, chat: t.chat, rong: t.rong, dung: t.dung, noi: t.noi, sao: t.sao, adj: +S.adj[k.id] || 0, note: S.note[k.id] || '',
-      onEN: pct(a.onEN), onZH: pct(a.onZH), doc: pct(a.doc), tone: pct(a.tone), lop: pct(a.lop), xep: pct(a.xep), tieu: title(t)[0] };
+      onEN: pct(a.onEN), onZH: pct(a.onZH), doc: pct(a.doc), tone: pct(a.tone), lop: (m => [m.en ? 'EN ✓' : '', m.zh ? 'ZH ✓' : ''].filter(Boolean).join(' · ') || (m.c != null ? 'chọn tranh, chưa nói' : ''))((S.lt || {})[k.id] || {}), xep: pct(a.xep), tieu: title(t)[0] };
   });
 }
 function reportBox() {
@@ -711,13 +707,15 @@ const ACT = {
   full: () => { try { document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen(); } catch (e) { } },
   noiKid: b => bump(b.dataset.id, 'noi', 1),
   dm: b => { const t = VIEW && VIEW.dm; if (!t) return; (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(() => toast('Đã chép. Cô dán vào tin nhắn riêng trên Zoom.')).catch(() => prompt('Cô chép lời nhắn này:', t)); },
+  lpSay: b => { const t = lopTurnsNow()[S.li || 0]; if (!t) return; const m = lt(t.a), l = b.dataset.l; if (m[l]) { m[l] = 0; bump(t.a, 'noi', -1); } else { m[l] = 1; bump(t.a, 'noi', 1); } },
+  lpRe: () => { const t = lopTurnsNow()[S.li || 0]; if (t) { delete lt(t.a).c; save(); draw(); } },
   bossGo, bossNext, bossEnd: () => { S.boss.end = Date.now(); save(); bossTick(); },
   auto: b => { S.auto = b.checked; save(); }, autoRv: b => { S.autoRv = b.checked; save(); if (!b.checked) { autoRvStop(); draw(); } else if (S.step === 'rv') autoRvStart(); }, autoNoi: b => { S.autoNoi = b.checked; save(); },
   dur: b => { S.boss.dur = (+b.value || 3) * 60000; save(); },
 };
 document.addEventListener('click', e => {
   SND.unlock();
-  const t = e.target.closest('[data-act],[data-ph],[data-sc],[data-px],[data-spin],[data-play],[data-ava]');
+  const t = e.target.closest('[data-act],[data-ph],[data-sc],[data-px],[data-spin],[data-play],[data-ava],[data-lp]');
   if (!t || !S || t.closest('.mm-ov') && !t.dataset.act) return;
   if (t.dataset.ph) return goPhase(t.dataset.ph);
   if (t.dataset.sc) { const [id, f] = t.dataset.sc.split('|'); return bump(id, f, 1); }
@@ -725,6 +723,7 @@ document.addEventListener('click', e => {
   if (t.dataset.spin) { const [l, q] = t.dataset.spin.split('|'); return spin(l, q); }
   if (t.dataset.play !== undefined) { if (t.dataset.play) { SND.stop(); muted ? toast('Đang tắt tiếng') : SND.play([t.dataset.play]); } return; }
   if (t.dataset.ava) return cycleAva(t.dataset.ava);
+  if (t.dataset.lp !== undefined) { const tt = lopTurnsNow()[S.li || 0]; if (tt) { lt(tt.a).c = +t.dataset.lp; SND.beep('pop'); save(); draw(); } return; }
   const f = ACT[t.dataset.act]; if (f && t.tagName !== 'INPUT' && t.tagName !== 'SELECT') f(t);
 });
 document.addEventListener('change', e => { const t = e.target.closest('[data-act]'); if (t && (t.tagName === 'INPUT' || t.tagName === 'SELECT') && ACT[t.dataset.act]) ACT[t.dataset.act](t); });

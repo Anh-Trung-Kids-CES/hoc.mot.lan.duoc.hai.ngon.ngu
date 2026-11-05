@@ -187,3 +187,10 @@ table.res textarea{width:170px;min-height:40px;font-size:13px}
 .mk .jump{animation:mkjump .9s cubic-bezier(.2,1.6,.4,1)}
 .mk-btn button.jump{background:var(--green-soft);border-color:var(--green)}
 @keyframes mkjump{0%{transform:none}30%{transform:translateY(-10px) scale(1.35)}60%{transform:translateY(0) scale(.95)}100%{transform:none}}
+/* Cô giáo nhỏ: con chọn tranh, nói tiếng Anh rồi tiếng Trung */
+button.mm-pick{font:inherit;cursor:pointer}
+button.mm-pick.lp:hover{border-color:var(--sky)}
+.mm-pick.lp.right .no{background:var(--green)}
+.lp-says{display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+.lp-say{position:relative}
+.lp-ok{position:absolute;top:-12px;right:-12px;background:var(--green);color:#fff;border-radius:50%;width:36px;height:36px;display:grid;place-items:center;font-weight:800;font-size:22px;border:3px solid #fff;animation:pop .4s}
