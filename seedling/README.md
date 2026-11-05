@@ -24,7 +24,7 @@ Theo tab "Bước ngày web" của v7, thêm bước Vận động ở cuối:
 Học xong ngày trước mới mở ngày sau. Cô giáo thêm `?gv=1` vào link để mở hết (máy đó nhớ); `?gv=0` để tắt.
 
 ## Giọng và nhân vật tạo bằng Gemini (05/11/2026)
-- `tai-nguyen/giong/`: 1.942 câu tiếng Anh, tiếng Trung và 25 lời dặn tiếng Việt, tạo bằng Gemini 3.8 Flash TTS qua Batch API (rẻ hơn 50%). Giọng: Despina (Anh, chậm lại 10%), vi-vn-tutor-8 (Việt). Tiếng Trung (944 câu) làm lại 05/11 bằng Gemini 3.1 Flash TTS, giọng Leda, có lời dặn giữ tên gốc: Bông, Vũ, Lan đọc kiểu Việt; Leo, Anna kiểu Anh; Xiaomei đọc 小美. Cắt khoảng lặng hai đầu. Bảng ghép câu → tệp nằm trong `seedling-data.js` (sinh từ `gen_au.json`).
+- `tai-nguyen/giong/`: 1.942 câu tiếng Anh, tiếng Trung và 25 lời dặn tiếng Việt, tạo bằng Gemini 3.8 Flash TTS qua Batch API (rẻ hơn 50%). Giọng: Despina (Anh, chậm lại 10%), vi-vn-tutor-8 (Việt). Tiếng Trung (944 câu) làm lại 05/11 bằng Gemini 3.1 Flash TTS, giọng Leda, có lời dặn giữ tên gốc: Bông, Vũ, Lan đọc kiểu Việt; Leo, Anna kiểu Anh; Xiaomei đọc 小美. 13 câu có tên Vũ làm lại từng câu (chọn bản đọc Vũ đúng thanh ngã). Cắt khoảng lặng hai đầu. Bảng ghép câu → tệp nằm trong `seedling-data.js` (sinh từ `gen_au.json`).
 - `tai-nguyen/nhan-vat/nv_*_a.webp`: Vũ, anh trai Vũ, người diễn (Unit 4), Miss Hoa, Mrs Lan (người, thay cô Hươu khi Mrs Lan nói). Vẽ bằng Nano Banana 2.1, lấy Bông, Leo, anh trai Bông, mẹ Bông làm mẫu nét.
 - Công cụ: `cong-cu/gemini/` (gem.py, ia.py, bat.py, gen_audio.py, merge.py, gen_nv.py). Khoá đặt trong biến môi trường `GEMINI_API_KEY`, không lưu vào repo.
 
