@@ -38,3 +38,8 @@ Thêm `?gv=1` vào cuối link, hoặc bấm nút "Chế độ giáo viên" ở 
 - Thư mục mới **`lop-zoom/`**: web riêng cho buổi Zoom cuối tuần kiểu Wayground, đợt 1 Little Seed Vòng 2 (Zoom Chủ nhật 8/11). Link bé: `…/lop-zoom/` (nhập mã phòng 4 số), chuẩn bị trước: `…/lop-zoom/?chuan-bi`, màn cô: `…/lop-zoom/co.html`. Chi tiết: `lop-zoom/README.md`.
 - Đồng bộ bằng Firebase Realtime Database `anh-trung-kids-zoom`; dùng chung tranh, giọng ở `xem-truoc/tai-nguyen/little-seed`. Cùng tên miền nên máy đã đăng nhập web 21 ngày được điền sẵn tên con và avatar.
 - Máy chủ `apps-script/Code.gs` lên **v15** (`?action=ping` trả `v:15`): thêm `action:'zoom'` (tab "Lớp Zoom") và `action:'zoomhs'` (tab "Chuẩn bị Zoom", ảnh con vào thư mục Drive riêng). Cần dán và triển khai phiên bản mới; Google sẽ hỏi thêm quyền Drive. Chưa cập nhật thì màn cô vẫn tải được CSV.
+
+## Cập nhật 05/11/2026 (Lớp Zoom một màn)
+- Thư mục mới **`lop-zoom-mot-man/`**: bản Lớp Zoom chỉ dùng màn cô (chia sẻ lên Zoom), các con không cần máy thứ hai. Cô thêm bé bằng tên, bấm thay các con ✋ giơ tay / ✅ trả lời đúng (số con gõ trong chat) / 🎤 phát biểu; trận Rồng Lửa có bảng bấm đáp án từng bé; cuối buổi vinh danh, báo cáo theo dữ liệu cô bấm. Bản cũ `lop-zoom/` giữ nguyên. Chi tiết: `lop-zoom-mot-man/README.md`.
+- Máy chủ `apps-script/Code.gs` lên **v16**: `action:'zoommm'` (tab "Lớp Zoom 1 màn" và "Sao Zoom", tự ghép bé theo tên trong TienDo) và `?action=zoomsao&id=` (tổng sao Zoom của một bé).
+- Web học `xem-truoc/qua.js`: ví sao ở Phòng đổi quà cộng thêm sao Zoom (hỏi máy chủ khi mở web / đăng nhập), không đổi Xếp hạng.

@@ -62,6 +62,7 @@ function doPost(e) {
     if (d.action === 'family') return json_(family_(d));
     if (d.action === 'zoom') return json_(lopZoom_(d));          // kết quả buổi Zoom (lop-zoom/co.html)
     if (d.action === 'zoomhs') return json_(lopZoomHoSo_(d));    // Chuẩn bị vào lớp (lop-zoom/index.html?chuan-bi)
+    if (d.action === 'zoommm') return json_(zoomMotMan_(d));     // Lớp Zoom một màn (lop-zoom-mot-man/): báo cáo + cộng sao
     if (d.action === 'redeem') {
       if (!d.id || !d.code) return json_({ ok: false });
       const sh = sheet_('DoiQua', QUA_HEAD);
@@ -100,7 +101,8 @@ function doPost(e) {
 
 function doGet(e) {
   const p = e.parameter || {};
-  if (p.action === 'ping') return json_({ ok: true, v: 15 });          // v15: Lớp Zoom (tab Lớp Zoom, Chuẩn bị Zoom, ảnh con vào Drive) · v14: bỏ tích nhiệm vụ · v13: Gọi tuần 1 gộp (4H + thẻ), CTV ghi đủ 6 ô · v12: Gọi sau 3 buổi (báo cáo + ô tích Đã gọi / Đồng ý Zoom) · v11: phân luồng CTV (chưa kích hoạt) / Sale (đã kích hoạt) / Cố vấn (chỉ định) · v3: Bảng Gia đình · v4: mở khóa 21 ngày · v5: trang quản trị có tài khoản · v7: Xếp hạng · v8: việc theo vai trò CTV/Sale/Cố vấn · v9: offer trong Thẻ gia đình · v10: nhiệm vụ theo bản đồ
+  if (p.action === 'zoomsao') return json_(zoomSao_(p));        // web học hỏi số sao Zoom đã cộng cho một bé
+  if (p.action === 'ping') return json_({ ok: true, v: 16 });          // v16: Lớp Zoom một màn (tab Lớp Zoom 1 màn, Sao Zoom, ?action=zoomsao) · v15: Lớp Zoom (tab Lớp Zoom, Chuẩn bị Zoom, ảnh con vào Drive) · v14: bỏ tích nhiệm vụ · v13: Gọi tuần 1 gộp (4H + thẻ), CTV ghi đủ 6 ô · v12: Gọi sau 3 buổi (báo cáo + ô tích Đã gọi / Đồng ý Zoom) · v11: phân luồng CTV (chưa kích hoạt) / Sale (đã kích hoạt) / Cố vấn (chỉ định) · v3: Bảng Gia đình · v4: mở khóa 21 ngày · v5: trang quản trị có tài khoản · v7: Xếp hạng · v8: việc theo vai trò CTV/Sale/Cố vấn · v9: offer trong Thẻ gia đình · v10: nhiệm vụ theo bản đồ
   if (p.action === 'xephang') return json_(xepHang_(p));
   if (p.action === 'access') return json_(access_(p));
   if (p.action === 'visit') return visit_(p);
@@ -419,4 +421,58 @@ function xoaAnhLopZoom() {
   while (it.hasNext()) { const f = it.next(); const fs = f.getFiles(); while (fs.hasNext()) fs.next().setTrashed(true); f.setTrashed(true); }
   const sh = ss_().getSheetByName('Chuẩn bị Zoom');
   if (sh && sh.getLastRow() > 1) sh.getRange(2, 6, sh.getLastRow() - 1, 1).clearContent();
+}
+
+
+/* ---------- Lớp Zoom một màn (thư mục lop-zoom-mot-man/) ----------
+ * action 'zoommm' (POST): cô gửi báo cáo cuối buổi và số sao của từng bé.
+ *   d = { buoi, ngay, lop, khoa, vong, rows: [{ ma, kid, parent, web, tay, dung, noi, rong, sao, note }] }
+ *   - Tab "Lớp Zoom 1 màn": báo cáo từng bé (gửi lại cùng buổi + bé thì ghi đè).
+ *   - Tab "Sao Zoom": số sao cộng vào web học. Mã bé web để trống thì tự ghép theo tên con trong tab TienDo cùng khoá;
+ *     trùng tên hoặc không thấy thì để trống, ghi "cần ghép" – sale dán mã bé (cột G) bằng tay, web học tự nhận sao.
+ * action 'zoomsao' (GET ?id=<mã bé web>): tổng sao Zoom của bé, web học cộng vào ví sao (Phòng đổi quà).
+ */
+const ZMM_HEAD = ['Buổi', 'Ngày', 'Khoá', 'Mã trong buổi', 'Tên con', 'Ba/mẹ', 'Giơ tay', 'Trả lời đúng (chat)', 'Đúng trong trận Rồng', 'Phát biểu', 'Sao', 'Ghi chú của cô', 'Cập nhật'];
+const SAO_HEAD = ['Buổi', 'Ngày', 'Khoá', 'Mã trong buổi', 'Tên con', 'Ba/mẹ', 'Mã bé web', 'Sao', 'Ghép', 'Gợi ý', 'Cập nhật'];
+function zoomMotMan_(d) {
+  const rows = d.rows || [];
+  if (!d.buoi || !rows.length) return { ok: false, n: 0 };
+  const rep = sheet_('Lớp Zoom 1 màn', ZMM_HEAD), sao = sheet_('Sao Zoom', SAO_HEAD);
+  const keyOf = (sh) => { const n = sh.getLastRow(), k = {}; if (n > 1) sh.getRange(2, 1, n - 1, 4).getValues().forEach((r, i) => { k[r[0] + '|' + r[3]] = i + 2; }); return k; };
+  const kr = keyOf(rep), ks = keyOf(sao), kids = tienDoTen_(d.khoa), out = [];
+  rows.forEach(r => {
+    const k = d.buoi + '|' + r.ma, now = new Date();
+    const a = [d.buoi, d.ngay || '', d.lop || d.khoa || '', r.ma, r.kid || '', r.parent || '', +r.tay || 0, +r.dung || 0, +r.rong || 0, +r.noi || 0, +r.sao || 0, r.note || '', now];
+    if (kr[k]) rep.getRange(kr[k], 1, 1, a.length).setValues([a]); else rep.appendRow(a);
+    let web = String(r.web || ''), ghep = web ? 'có sẵn' : '', goi = '';
+    if (ks[k]) { const old = sao.getRange(ks[k], 7, 1, 3).getValues()[0]; if (!web && old[0]) { web = String(old[0]); ghep = String(old[2] || 'sale ghép'); } }
+    if (!web) {
+      const m = timBe_(kids, r.kid);
+      if (m.length === 1) { web = m[0].id; ghep = m[0].gan ? 'tự ghép (tên gần đúng)' : 'tự ghép'; }
+      else { ghep = 'cần ghép'; goi = m.slice(0, 5).map(x => x.name + ': ' + x.id).join(' · ') || 'không thấy bé này trong TienDo'; }
+    }
+    const b = [d.buoi, d.ngay || '', d.lop || d.khoa || '', r.ma, r.kid || '', r.parent || '', web, +r.sao || 0, ghep, goi, now];
+    if (ks[k]) sao.getRange(ks[k], 1, 1, b.length).setValues([b]); else sao.appendRow(b);
+    out.push({ ma: r.ma, ghep: ghep, web: web ? 1 : 0 });
+  });
+  return { ok: true, n: rows.length, rows: out };
+}
+function tenChuan_(s) { return String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[đĐ]/g, 'd').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(); }
+function tienDoTen_(khoa) {
+  const sh = ss_().getSheetByName('TienDo'); if (!sh || sh.getLastRow() < 2) return [];
+  return sh.getRange(2, 1, sh.getLastRow() - 1, 4).getValues().filter(r => r[0] && (!khoa || String(r[3]) === khoa)).map(r => ({ id: String(r[0]), name: String(r[1]), n: tenChuan_(r[1]) }));
+}
+/* trùng hẳn tên (bỏ dấu) trước; không có thì tên cô gõ là phần cuối tên trên web ("Minh Anh" khớp "Nguyễn Minh Anh") */
+function timBe_(kids, ten) {
+  const t = tenChuan_(ten); if (!t) return [];
+  const exact = kids.filter(x => x.n === t);
+  if (exact.length) return exact;
+  return kids.filter(x => (' ' + x.n).slice(-(t.length + 1)) === ' ' + t || (' ' + t).slice(-(x.n.length + 1)) === ' ' + x.n).map(x => Object.assign({ gan: true }, x));
+}
+function zoomSao_(p) {
+  const id = String(p.id || ''); if (!id) return { sao: 0 };
+  const sh = ss_().getSheetByName('Sao Zoom'); if (!sh || sh.getLastRow() < 2) return { sao: 0, n: 0 };
+  let sao = 0, n = 0;
+  sh.getRange(2, 7, sh.getLastRow() - 1, 2).getValues().forEach(r => { if (String(r[0]) === id) { sao += +r[1] || 0; n++; } });
+  return { sao: sao, n: n };
 }

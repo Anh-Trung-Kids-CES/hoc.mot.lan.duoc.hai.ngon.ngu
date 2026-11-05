@@ -41,7 +41,23 @@ function shop(){
   return s;
 }
 function qSave(){ shop().t = Date.now(); save(); }
-function qEarned(){ return myPoints(); }
+function qEarned(){ return myPoints() + qZoomSao(); }
+/* Sao từ Lớp Zoom một màn: cô cộng cuối buổi Zoom (tab "Sao Zoom" trên Sheet), web hỏi máy chủ ?action=zoomsao.
+   Chỉ cộng vào ví (Phòng đổi quà), không cộng vào Xếp hạng. Máy chủ chưa lên v16 thì trả bảng vàng, không có trường sao: coi như 0. */
+function qZoomSao(){ const z=lsGet('lle-zoomsao',null); return (z && KID && KID.id && z.id===KID.id && !DEMO && !TEACHER) ? (+z.n||0) : 0; }
+let qZoomT=0;
+async function qZoomPull(){
+  if(typeof SCORE_API==='undefined' || !SCORE_API || DEMO || TEACHER || !KID || !KID.id || KID.temp) return;
+  if(Date.now()-qZoomT<60000) return; qZoomT=Date.now();
+  try{ const r=await fetch(SCORE_API+'?action=zoomsao&id='+encodeURIComponent(KID.id)); const j=await r.json();
+    if(!j || typeof j.sao!=='number') return;
+    const old=qZoomSao(); lsSet('lle-zoomsao',{id:KID.id, n:j.sao, t:Date.now()});
+    if(j.sao>old){ updateStars(); bumpStars(); toast('🎉 Con được cộng '+(j.sao-old)+' ⭐ từ buổi Zoom cùng cô!'); }
+    else if(j.sao!==old) updateStars();
+  }catch(e){}
+}
+window.addEventListener('load', ()=>setTimeout(qZoomPull, 1500));
+document.addEventListener('visibilitychange', ()=>{ if(!document.hidden) qZoomPull(); });
 function qWallet(){ return Math.max(0, qEarned() - shop().spent); }
 function qGroup(){ return KID && GROUPS[KID.group] ? KID.group : 'seed'; }
 function qLessons(){ return doneCount(qGroup()); }
@@ -64,6 +80,7 @@ function qWalletHTML(){
 function avaSrc(a){ a=a||shop().ava; return a.o ? `${Q_IMG}ava_${a.c}_${a.o}.webp` : `tai-nguyen/nhan-vat/kids_${a.c}_a.webp`; }
 function avaBg(a){ a=a||shop().ava; return (AVA_BG[a.bg]||AVA_BG.studio).img; }
 function qSide(){
+  if(typeof qZoomPull==='function') qZoomPull();   // bé vừa đăng nhập: hỏi sao Zoom (tối đa 1 lần/phút)
   const b=document.getElementById('sdKid'); if(!b) return;
   const a=shop().ava, im=b.querySelector('.ava-mini');
   const html=`<span class="ava-mini fr-${a.fr}" style="background-image:url('${avaBg(a)}')"><img src="${avaSrc(a)}" alt=""></span>`;
