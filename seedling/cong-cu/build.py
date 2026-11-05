@@ -33,10 +33,11 @@ def avatar(ch, c1, c2):
 NV = TN + 'nhan-vat/'
 WHO = dict(DEMO['who'])
 WHO.update({
-    'nhan': ['Vũ', avatar('V', '#2FA37A', '#fff')],
-    'man': ['The man · 表演的人', avatar('M', '#7B5CD6', '#fff')],
-    'hoa': ['Miss Hoa · Hoa姐姐', avatar('H', '#E3487A', '#fff')],
-    'anh_nhan': ["Vũ's brother · 哥哥", avatar('B', '#F28C00', '#fff')],
+    'nhan': ['Vũ', NV + 'nv_vu_a.webp'],
+    'man': ['The man · 表演的人', NV + 'nv_nguoi_dien_a.webp'],
+    'hoa': ['Miss Hoa · Hoa姐姐', NV + 'nv_hoa_a.webp'],
+    'anh_nhan': ["Vũ's brother · 哥哥", NV + 'nv_anh_vu_a.webp'],
+    'lan': ['Mrs Lan · Lan老师', NV + 'nv_lan_a.webp'],
     'me_bong': ['Mummy · 妈妈', NV + 'fam_bong_me_a.webp'], 'bo_bong': ['Daddy · 爸爸', NV + 'fam_bong_bo_a.webp'],
     'me_leo': ['Mummy · 妈妈', NV + 'fam_leo_me_a.webp'], 'bo_leo': ['Dad · 爸爸', NV + 'fam_leo_bo_a.webp'],
     'me_xm': ["Xiaomei's mummy · 妈妈", NV + 'fam_xiaomei_me_a.webp'],
@@ -70,7 +71,7 @@ EXTRA_PIC = {
     'grandpa': NV + 'fam_bong_ong_a.webp', 'grandma': NV + 'fam_bong_ba_a.webp', 'baby': NV + 'fam_bong_em_gai_a.webp',
     'older': NV + 'fam_bong_anh_trai_a.webp', 'younger': NV + 'fam_bong_em_gai_a.webp', 'family': NV + 'bang_fam_bong.webp',
     'girl': NV + 'kids_anna_a.webp', 'kid': NV + 'kids_bong_a.webp', 'kids': TN + 'canh/u1/w_kids_c.webp', 'class': TN + 'canh/u1/w_kids_c.webp',
-    'friend': NV + 'kids_xiaomei_a.webp', 'teacher': NV + 'huou_huou3_a.webp', 'mrs': TN + 'canh/u1/w_mrs_lan_c.webp', 'mrs lan': TN + 'canh/u1/w_mrs_lan_c.webp',
+    'friend': NV + 'kids_xiaomei_a.webp', 'teacher': NV + 'nv_lan_a.webp', 'mrs': NV + 'nv_lan_a.webp', 'mrs lan': NV + 'nv_lan_a.webp', 'miss hoa': NV + 'nv_hoa_a.webp', 'photographer': NV + 'nv_hoa_a.webp',
     'man/men': TN + 'canh/u1/w_two_men_c.webp', 'man': TN + 'canh/u1/w_two_men_c.webp',
     'dog': TN + 'qua/pet_cun_1.webp', 'puppy': TN + 'qua/pet_cun_1.webp', 'cat': NV + 'pets_meo_ngoi_a.webp', 'kitten': NV + 'pets_meo_ngoi_a.webp',
     'pencil': TN + 'qua/gift_but_chi.webp', 'crayon': TN + 'qua/gift_sap_mau.webp', 'notebook': TN + 'qua/gift_so_tay.webp', 'pencil case': TN + 'qua/gift_hop_but.webp',
@@ -127,7 +128,9 @@ def img_for(en_text):
     return '', '🖼️'
 
 # ---------------------------------------------------------------- giọng có sẵn
-AU = LS['au']
+AU = dict(LS['au'])
+if os.path.exists(f'{W}/gen_au.json'):
+    AU.update(json.load(open(f'{W}/gen_au.json')))
 def au(t, l):
     a = AU.get(f'{l}:{t}') or AU.get(f'{l}:{t.strip("!.?")}') or ''
     if not a:
@@ -1056,8 +1059,12 @@ vi.update({
     'chon': 'Con nghe rồi chạm vào tranh đúng nhé!', 'de': 'Mình làm thử dạng bài thi nhé. Con nghe kỹ rồi chọn.', 'lam': 'Con nghe và làm theo nhé!',
     'nhac': 'Con nghe rồi nói lại đúng như vậy nhé!',
 })
+VI_A = dict(DEMO.get('vi_a', {}))
+if os.path.exists(f'{W}/gen_vi_a.json'):
+    for _k, _v in json.load(open(f'{W}/gen_vi_a.json')).items():
+        if not VI_A.get(_k): VI_A[_k] = _v
 SD = {'who': WHO, 'days': {str(k): v for k, v in days_out.items()}, 'lop': {str(k): v for k, v in lop.items()}, 'map': mp, 'soon': {},
-      'vi': vi, 'vi_a': DEMO.get('vi_a', {}), 'vi_t': DEMO.get('vi_t', {}), 'bg': {**bg_all, **DEMO['bg']}, 'reader': reader, 'units_q': units_q}
+      'vi': vi, 'vi_a': VI_A, 'vi_t': DEMO.get('vi_t', {}), 'bg': {**bg_all, **DEMO['bg']}, 'reader': reader, 'units_q': units_q}
 open(OUT, 'w').write('/* Dữ liệu web Seedling 48 buổi · 99 ngày – sinh từ Seedling_KhungChuongTrinh_48buoi_v7.xlsx (gen/build.py). Đừng sửa tay. */\nwindow.SD=' + json.dumps(SD, ensure_ascii=False) + ';\n')
 
 # ---------------------------------------------------------------- báo cáo
@@ -1072,6 +1079,7 @@ with open(REPORT, 'w') as f:
     f.write(f'\n## Câu chưa có giọng thu ({len(MISS_AU)} câu, đang đọc bằng giọng máy của trình duyệt)\n\n')
     for l, t in sorted(MISS_AU)[:4000]:
         f.write(f'- {l}: {t}\n')
+json.dump(sorted(MISS_AU), open(f'{W}/miss_au.json', 'w'), ensure_ascii=False, indent=0)
 print('days', len(days_out), 'steps', dict(cnt), 'miss_img', len(MISS_IMG), 'miss_au', len(MISS_AU))
 for n in sorted(days_out):
     print(n, days_out[n].get('unit'), days_out[n].get('kind'), ' → '.join(f"{s['type']}({len(s.get('cards') or s.get('qs') or s.get('items') or s.get('turns') or s.get('scenes') or s.get('scenes_en') or s.get('cmds') or [s for r in s.get('rounds', []) for s in r['qs']])})" for s in days_out[n]['steps']))

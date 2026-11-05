@@ -16,12 +16,17 @@ Web tự học cho lớp Seedling offline 48 buổi của Anh – Trung – Kids
 - `tai-nguyen/` – tranh, giọng (chép từ web 21 ngày và bản demo Unit 1).
 
 ## Thứ tự một ngày web
-Theo tab "Bước ngày web" của v6, thêm bước Vận động ở cuối:
+Theo tab "Bước ngày web" của v7, thêm bước Vận động ở cuối:
 - Ngày Phần: Thẻ nền Little Seed → Thẻ từ mới → Nghe truyện → Chạm đúng tranh (hoặc Nghe – chạm tranh) → Nói theo → Phiên dịch nhí → Mẹo âm → Vận động.
 - Ngày Cả truyện / Ôn: Nghe cả truyện → Trả lời câu hỏi → Nói theo / 听后重复 → Dạng đề → Phiên dịch nhí → Mẹo âm → Gọi lại → Vận động.
 
 ## Mở ngày
 Học xong ngày trước mới mở ngày sau. Cô giáo thêm `?gv=1` vào link để mở hết (máy đó nhớ); `?gv=0` để tắt.
 
+## Giọng và nhân vật tạo bằng Gemini (05/11/2026)
+- `tai-nguyen/giong/`: 1.942 câu tiếng Anh, tiếng Trung và 25 lời dặn tiếng Việt, tạo bằng Gemini 3.8 Flash TTS qua Batch API (rẻ hơn 50%). Giọng: Despina (Anh), zh-cn-techagent-1 (Trung), vi-vn-tutor-8 (Việt). Chậm lại 10%, cắt khoảng lặng hai đầu. Bảng ghép câu → tệp nằm trong `seedling-data.js` (sinh từ `gen_au.json`).
+- `tai-nguyen/nhan-vat/nv_*_a.webp`: Vũ, anh trai Vũ, người diễn (Unit 4), Miss Hoa, Mrs Lan (người, thay cô Hươu khi Mrs Lan nói). Vẽ bằng Nano Banana 2.1, lấy Bông, Leo, anh trai Bông, mẹ Bông làm mẫu nét.
+- Công cụ: `cong-cu/gemini/` (gem.py, ia.py, bat.py, gen_audio.py, merge.py, gen_nv.py). Khoá đặt trong biến môi trường `GEMINI_API_KEY`, không lưu vào repo.
+
 ## Còn thiếu
-Xem `CAN-BO-SUNG.md`: từ chưa có tranh (đang dùng biểu tượng tạm, cần vẽ theo phong cách 21 ngày) và câu chưa có giọng thu (đang đọc bằng giọng máy của trình duyệt).
+Xem `CAN-BO-SUNG.md`: từ chưa có tranh (đang dùng biểu tượng tạm, cần vẽ theo phong cách 21 ngày). Cảnh truyện Unit 1 (bản demo) vẫn vẽ Mrs Lan là cô Hươu.
