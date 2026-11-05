@@ -11,6 +11,8 @@ let lastStageKey = '', lastAudioKey = '', shownAt = 0, localPick = {};
 let spinSeen = null, spinLanded = null, wheelAngle = 0, confettiDone = false;
 let muted = CHIEU ? !!lsGet('lz-chieu-mute', false) : false;
 
+/* âm lượng tiếng chỉ phát trên máy con (tiếng mẫu bí mật, lời khen) khi tiếng chính phát ở máy cô: đủ nghe rõ, ba mẹ tắt mic Zoom lúc con nghe mẫu */
+const PRIV_VOL = 0.8;
 function play(list, v) { if (!muted) SND.play(list, v); }
 /* Tiếng chỉ phát ở máy cô (mặc định): máy các con im lặng để Zoom không bị vọng tiếng;
    riêng tiếng mẫu bí mật của bạn đang nói (priv) vẫn phát nhỏ trên máy bạn đó, màn chiếu không phát. */
@@ -185,12 +187,13 @@ function render() {
   if (v.key) v.key += '|h' + (headAllowed(st) ? 1 : 0);
   if (v.key !== lastStageKey) {
     lastStageKey = v.key; shownAt = performance.now();
+    if (!CHIEU && typeof TAY !== 'undefined') TAY.close();   // sang câu khác / cô hiện đáp án: đóng màn bay bằng tay
     $('#stage').innerHTML = v.html; v.bind && v.bind();
   } else if (v.update) v.update();
   if (v.audio && v.akey !== lastAudioKey) {
     lastAudioKey = v.akey;
     if (CHIEU) { if (!v.priv) play(v.audio); }
-    else if (v.priv) play(v.audio, amCo() ? 0.45 : 1);
+    else if (v.priv) play(v.audio, amCo() ? PRIV_VOL : 1);
     else if (!amCo()) play(v.audio);
   }
 }
@@ -205,6 +208,7 @@ function viewWait() { return `<img class="huou" src="${HUOU}" alt=""><h1>Cô đa
 function view(st, seats) {
   switch (st.ph) {
     case 'intro': return vIntro(st, seats);
+    case 'noi': return vNoi(st, seats);
     case 'on': return vQuiz(st, seats);
     case 'tone': return vTone(st, seats);
     case 'pair': return vPair(st, seats);
@@ -260,6 +264,43 @@ function vIntro(st, seats) {
   };
 }
 
+/* --- Nói theo cô: cô đọc mẫu, cả lớp nói theo (không chấm) --- */
+let noiRun = 0;
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+function vNoi(st, seats) {
+  const N = NOI.length, i = Math.min(N - 1, st.i || 0), it = NOI[i], od = st.od === 'zh' ? ['zh', 'en'] : ['en', 'zh'];
+  const key = ['noi', i, st.rp || 0, od[0]].join('|');
+  const here = CHIEU ? !muted : !amCo();   // máy này phát tiếng mẫu không
+  const lines = od.map(l => `<div class="noi-l" data-l="${l}"><span class="flag ${l}">${l === 'zh' ? '中文' : 'English'}</span><b class="${l}">${esc(txt(it.k, l))}</b></div>`).join('');
+  return {
+    key,
+    html: `<div class="qno">🗣️ Nói theo cô · ${i + 1}/${N} <span class="flag doc">${NOI_GRP[it.g]}</span></div>
+      <p class="ask-line">👂 Con nghe cô đọc rồi nói theo nhé!</p>
+      <img class="big-pic" src="${pic(it.k, 2)}" alt="">
+      <div class="noi-lines${here ? ' play' : ''}" id="noiL">${lines}</div>
+      <div class="noi-cue${here ? '' : ' show still'}" id="noiCue"><span>🗣️ ${CHIEU ? 'Cả lớp nói theo!' : 'Con nói theo cô nhé!'}</span><i id="noiBar"></i></div>
+      <div class="dots">${NOI.map((_, j) => `<i class="${j <= i ? 'on' : ''}"></i>`).join('')}</div>`,
+    bind() { if (here) noiPlay(lastStageKey, od.map(l => [l, aud(it.k, l)])); }   // khoá màn đã kèm hậu tố của render()
+  };
+}
+async function noiPlay(key, list) {
+  const my = ++noiRun, live = () => my === noiRun && lastStageKey === key;
+  await sleep(350);
+  for (const [l, src] of list) {
+    if (!live()) return;
+    $$('#noiL .noi-l').forEach(x => x.classList.toggle('on', x.dataset.l === l));
+    const t0 = performance.now(); await SND.play([src]); const d = performance.now() - t0;
+    if (!live()) return;
+    const gap = noiGap(d), cue = $('#noiCue'), bar = $('#noiBar');
+    SND.beep('tap');
+    if (cue) { cue.classList.add('show'); bar.style.transition = 'none'; bar.style.width = '100%'; void bar.offsetWidth; bar.style.transition = `width ${gap}ms linear`; bar.style.width = '0%'; }
+    await sleep(gap);
+    if (!live()) return;
+    cue && cue.classList.remove('show');
+  }
+  $$('#noiL .noi-l').forEach(x => x.classList.add('on'));
+}
+
 /* --- Ôn nhanh: nghe rồi chạm 1 trong 3 tranh --- */
 function vQuiz(st, seats) {
   const i = Math.min(QUIZ.length - 1, st.i || 0), q = QUIZ[i], qid = `on_${i}_${st.run || 0}`, rv = st.step === 'rv';
@@ -300,7 +341,7 @@ function vTone(st, seats) {
   const head = `<div class="tone-head"><img src="${tonePic(x)}" alt=""><div class="chu zh">${x.c}</div>
     <div class="tone-side"><div class="py">${rv && CHIEU ? x.py : x.p0}</div>${a ? `<button class="say zh tone-say" data-play><span class="ic">🔊</span>Nghe</button>` : '<p class="sub">Cô đọc trên Zoom</p>'}</div></div>`;
   const body = rv && CHIEU ? `<div class="cheer" style="color:var(--red)">Cả lớp đưa tay bay theo, nói theo nhé! ✋ ${x.py}</div><div class="fly-big">${planeSVG(toneOpt(x, x.t), 'plBig', true)}</div>`
-    : `<div class="paths${my || CHIEU ? ' locked' : ''}" id="pics">${opts}</div><p class="count" id="cnt"></p>`;
+    : `<div class="paths${my || CHIEU ? ' locked' : ''}" id="pics">${opts}</div>${!CHIEU && !my && st.tayOn !== false ? '<button class="btn tay-go" id="tayGo">✋ Bay bằng tay</button>' : ''}<p class="count" id="cnt"></p>`;
   const akey = ['tone', i, st.run || 0, rv ? 1 : 0, st.rp || 0].join('|');
   return {
     key, akey, audio: rv ? [hd('Cả lớp đưa tay bay theo, nói theo nhé!'), 300].concat(a ? [a, 700, a, 700, a] : []) : (i === 0 && !st.rp ? [hd('Con nghe rồi chạm vào đường bay đúng nhé!'), 300] : []).concat(a ? [a, 800, a] : []),
@@ -308,7 +349,8 @@ function vTone(st, seats) {
     bind() {
       bindPlay(() => a ? [a] : []);
       $$('.path', $('#stage')).forEach(b => b.addEventListener('click', () => { const m = $('#pl' + b.dataset.c); m && m.beginElement && m.beginElement(); }));
-      bindPicks(qid, c => ({ c, ok: c === x.t }), '.path');
+      bindPicks(qid, c => ({ c, ok: c === x.t, tay: TAY.used(qid) ? 1 : undefined }), '.path');
+      const tg = $('#tayGo'); if (tg) tg.onclick = () => TAY.start(x, qid, c => { const b = $(`.path[data-c="${c}"]`); b && b.click(); });
       if (my && !rv) { const m = $('#pl' + my.c); try { m && m.beginElement && m.beginElement(); } catch (e) { } }
       if (rv && my && my.ok) giveStar(qid, 'tone');
       this.update && this.update();
@@ -442,7 +484,7 @@ function vXep(st, seats) {
       <div class="xep-grid${step === 'rv' ? ' locked' : ''}">${order.map(i => { const n = picks.indexOf(i); return `<div class="xep-t kid${n >= 0 ? ' on' : ''}" data-i="${i}">${n >= 0 ? `<b class="xep-n">${n + 1}</b>` : ''}<img src="${S.scenes[i].img}" alt=""><span class="${S.to}">${esc(S.scenes[i][S.to])}</span><button class="xep-say" data-a="${xepAud(S.scenes[i], S.to)}" aria-label="Nghe">🔊</button></div>`; }).join('')}</div>
       ${step === 'xep' && picks.length ? '<button class="btn ghost" id="xRe">↺ Xếp lại</button>' : ''}`,
     bind() {
-      $$('.xep-say', $('#stage')).forEach(b => b.onclick = e => { e.stopPropagation(); play([b.dataset.a], amCo() ? 0.45 : 1); });
+      $$('.xep-say', $('#stage')).forEach(b => b.onclick = e => { e.stopPropagation(); play([b.dataset.a], amCo() ? PRIV_VOL : 1); });
       if (step === 'rv') { if (my && my.ok) giveStar(qid, 'xep'); return; }
       $$('.xep-t.kid', $('#stage')).forEach(t => t.onclick = () => {
         const cur = (xepPick[qid] || picks).slice(), i = +t.dataset.i;
@@ -536,7 +578,7 @@ function giveStar(qid, kind) {
   SND.beep('ok');
   let next = +lsGet(key + '-noi', 0) || (4 + Math.floor(Math.random() * 2));   // sao thứ 4 hoặc 5 mới nói lần đầu
   if (list.length >= next) {
-    setTimeout(() => play([praiseAudio(kind)], amCo() ? 0.45 : 1), 500);
+    setTimeout(() => play([praiseAudio(kind)], amCo() ? PRIV_VOL : 1), 500);
     next = list.length + 4 + Math.floor(Math.random() * 2);                     // sau đó 3–4 sao im lặng
   }
   lsSet(key + '-noi', next);
@@ -544,7 +586,7 @@ function giveStar(qid, kind) {
 }
 
 /* --- chạm và nghe --- */
-function bindPlay(fn, priv) { $$('[data-play]', $('#stage')).forEach(b => b.onclick = () => play(fn(), priv && amCo() ? 0.45 : 1)); }
+function bindPlay(fn, priv) { $$('[data-play]', $('#stage')).forEach(b => b.onclick = () => play(fn(), priv && amCo() ? PRIV_VOL : 1)); }
 function bindPicks(qid, judge, sel) {
   if (CHIEU) return;
   $$(sel || '.pick', $('#stage')).forEach(b => b.addEventListener('click', () => {

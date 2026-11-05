@@ -363,3 +363,28 @@ body.boss-play .stage{padding:6px}
 .flag.hdtag{background:#FFC72C;color:var(--ink);margin-left:6px}
 .bs-hd{position:absolute;top:6px;left:50%;transform:translateX(-50%)}
 .hd-cam.idle{opacity:.35;border-color:#ccc}
+
+/* Nói theo cô */
+.noi-lines{display:flex;flex-direction:column;gap:8px;align-items:center}
+.noi-l{display:flex;align-items:center;gap:10px;background:#fff;border-radius:16px;padding:6px 16px;box-shadow:0 3px 0 rgba(58,42,26,.08);font-size:22px;transition:transform .2s,opacity .2s}
+.noi-lines.play .noi-l{opacity:.45}
+.noi-lines.play .noi-l.on{opacity:1;transform:scale(1.06);outline:3px solid var(--yellow)}
+.noi-cue{visibility:hidden;display:flex;flex-direction:column;align-items:center;gap:6px;font-weight:800;font-size:22px;color:var(--red)}
+.noi-cue.show{visibility:visible;animation:noiPop .35s ease}
+.noi-cue i{display:block;height:8px;width:100%;min-width:220px;border-radius:99px;background:var(--yellow)}
+.noi-cue.still i{display:none}
+@keyframes noiPop{from{transform:scale(.8);opacity:0}to{transform:none;opacity:1}}
+.chieu .noi-l{font-size:34px;padding:8px 24px}
+.chieu .noi-cue{font-size:34px}
+
+/* Bay bằng tay (thanh điệu) */
+.tay-go{font-size:20px;padding:10px 22px;background:var(--yellow);color:var(--ink)}
+.tay-card{max-width:560px;width:94vw;padding:14px}
+.tay-top{display:flex;justify-content:space-between;align-items:center;font-size:19px;margin-bottom:8px}
+.tay-stage{position:relative;width:100%;aspect-ratio:4/3;background:#2b2320;border-radius:16px;overflow:hidden;touch-action:none}
+.tay-stage video{width:100%;height:100%;object-fit:cover;transform:scaleX(-1)}
+.tay-stage canvas{position:absolute;inset:0;width:100%;height:100%}
+.tay-big{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:800 96px "Baloo 2",system-ui,sans-serif;color:#fff;text-shadow:0 3px 12px rgba(0,0,0,.5);pointer-events:none}
+.tay-msg{text-align:center;font-weight:700;font-size:18px;margin:10px 0 6px}
+.tay-pick{display:flex;flex-direction:column;align-items:center;gap:4px}
+.tay-pick svg{width:220px;height:132px;background:#EAF6FF;border-radius:14px}

@@ -28,6 +28,7 @@ if (LZ_LOP === 'canopy-v2') (function () {
   }));
 
   PAIR_POOL = [{"k":"chef","o":["chef","driver","teacher"]},{"k":"hospital","o":["shop","hospital","school"]},{"k":"s_mT","o":["s_mT","s_mD","s_hH"]},{"k":"brother","o":["sister","dad","brother"]},{"k":"wsh","o":["wah","was","wsh"]},{"k":"s_dDoc","o":["s_dC","s_dDoc","s_mT"]},{"k":"dentist","o":["dentist","doctor","student"]},{"k":"restaurant","o":["restaurant","school","shop"]},{"k":"s_sisC","o":["s_emp","s_sS","s_sisC"]},{"k":"mom","o":["dad","mom","sister"]},{"k":"s_hH","o":["s_hH","s_sisC","s_emp"]},{"k":"driver","o":["employee","driver","chef"]}];
+  NOI = [{"k":"teacher","g":"tu"},{"k":"student","g":"tu"},{"k":"doctor","g":"tu"},{"k":"chef","g":"tu"},{"k":"dentist","g":"tu"},{"k":"driver","g":"tu"},{"k":"employee","g":"tu"},{"k":"hospital","g":"tu"},{"k":"school","g":"tu"},{"k":"restaurant","g":"tu"},{"k":"shop","g":"tu"},{"k":"dad","g":"tu"},{"k":"mom","g":"tu"},{"k":"brother","g":"tu"},{"k":"sister","g":"tu"},{"k":"wah","g":"cum"},{"k":"was","g":"cum"},{"k":"war","g":"cum"},{"k":"wsh","g":"cum"},{"k":"q_mom","g":"cau"},{"k":"s_mD","g":"cau"},{"k":"q_dad","g":"cau"},{"k":"s_hH","g":"cau"},{"k":"s_dC","g":"cau"},{"k":"s_emp","g":"cau"}];
 
   const SK = ["s_name","s_dDoc","s_mT","s_sisC","s_hH","s_sS","s_sat","s_love"];
   STORY = SK.map(k => ({ img: W[k].im, en: W[k].en, zh: W[k].zh, ea: W[k].ea, za: W[k].za }));

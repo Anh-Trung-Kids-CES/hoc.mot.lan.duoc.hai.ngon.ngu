@@ -121,7 +121,7 @@ function openShare() {
 function closeShare() { sharing = false; $('#share').classList.add('hide'); draw(); }
 const BAR = [
   ['#go', '▶ Bắt đầu', 'red'], ['[data-spin="en"]', '🎡 Quay · EN', ''], ['[data-spin="zh"]', '🎡 Quay · 中文', 'red'], ['[data-spin="en|dad"]', '🎡 Ba · EN', ''], ['[data-spin="zh|dad"]', '🎡 Ba · 中文', 'red'],
-  ['#pv', '◀', 'ghost'], ['#rp', '🔁 Phát lại', 'ghost'], ['#rv', '👁 Hiện đáp án', 'y'], ['#ag', '↺ Hỏi lại', 'ghost'],
+  ['#pv', '◀', 'ghost'], ['#rp', '🔁 Phát lại', 'ghost'], ['#rv', '👁 Hiện đáp án', 'y'], ['#au', '⏯ Tự chạy', 'y'], ['#ag', '↺ Hỏi lại', 'ghost'],
   ['#bst', '⚔️ Bắt đầu trận đấu', 'red'], ['#ben', '🏁 Kết thúc ngay', 'ghost'], ['#bre', '↺ Đấu lại', 'ghost'],
   ['#xgo', '🧩 Cho các con xếp tranh', 'y'], ['#xback', '◀ Nghe lại truyện', 'ghost'],
   ['#op', '🎁 Mở hộp quà', 'y'], ['#an', '👂 Nghe đáp án', 'y'], ['#nx', 'Tiếp ▶', ''], ['#kq', 'Xem kết quả', 'red']];
@@ -130,6 +130,7 @@ function drawBar(st) {
   const ph = PHASES.find(p => p.id === st.ph) || PHASES[0];
   let lb = ph.ic + ' ' + ph.n;
   if (st.ph === 'on') lb += ` ${(st.i || 0) + 1}/${QUIZ.length}`;
+  if (st.ph === 'noi') lb += ` ${(st.i || 0) + 1}/${NOI.length}`;
   if (st.ph === 'tone') lb += ` ${(st.i || 0) + 1}/${TONES.length}`;
   if (st.ph === 'story') lb += ` ${(st.scene || 0) + 1}/${STORY.length}`;
   if (st.ph === 'xep') lb += ` · lượt ${((st.xep || {}).r || 0) + 1}/2`;
@@ -145,7 +146,7 @@ function drawBar(st) {
 }
 window.lzKey = e => {
   if (!sharing) return;
-  const k = { ArrowRight: '#nx', ArrowLeft: '#pv', ' ': '#rv', r: '#rp', R: '#rp' }[e.key];
+  const k = { ArrowRight: '#nx', ArrowLeft: '#pv', ' ': (room.state || {}).ph === 'noi' ? '#au' : '#rv', r: '#rp', R: '#rp' }[e.key];
   if (e.key === 'Escape') return closeShare();
   if (k) { const el = $('#ctl ' + k); if (el) { e.preventDefault(); el.click(); } }
 };
@@ -156,7 +157,8 @@ function goPhase(ph) {
   const st = room.state || {};
   const p = { ph, step: 'ask', rp: 0 };
   if (!st.t0 && ph !== 'cho') p.t0 = DB.now();
-  if (ph === 'on' || ph === 'tone') p.i = 0;
+  if (ph === 'on' || ph === 'tone' || ph === 'noi') p.i = 0;
+  if (ph === 'noi') p.auto = false;
   if (ph === 'story') { p.scene = 0; p.l = 'both'; }
   if (ph === 'xep') { p.xep = { r: 0, step: 'nghe', sc: 0 }; p.run = (st.run || 0) + 1; }
   if (ph === 'gift') p.gift = { k: 0, open: false, ans: false, seat: pickRandom('pd') || null };
@@ -210,7 +212,7 @@ const CTL = {
       ${D ? `<div class="ctl"><button class="btn" data-spin="en|dad">🎡 Hỏi ba · tiếng Anh</button><button class="btn red" data-spin="zh|dad">🎡 Hỏi ba · tiếng Trung</button></div>` : ''}
       ${s ? `<div class="tip">Vừa chọn: <b>${esc(s.kid)}</b> (${D ? (sp.q === 'dad' ? 'hỏi về ba, ' : 'hỏi về mẹ, ') : ''}${sp.l === 'zh' ? 'tiếng Trung' : 'tiếng Anh'}). Chấm ở cột bên phải: <b>EN</b>/<b>ZH</b> = con nói được, bấm lần nữa = nói cùng cô.</div>` : ''}
       <p class="small">Bấm 🎯 cạnh tên bé để chọn đúng bạn đó.</p>
-      <div class="ctl"><button class="btn ghost" id="nx">Tiếp: Ôn nhanh ▶</button></div>`;
+      <div class="ctl"><button class="btn ghost" id="nx">Tiếp: Nói theo cô ▶</button></div>`;
     },
     bind(st) {
       $$('[data-spin]').forEach(b => b.onclick = () => spin(pickRandom('intro'), b.dataset.spin));
@@ -229,6 +231,32 @@ const CTL = {
         const [id, l] = b.dataset.intro.split('|'), cur = ((((room.marks || {})[id] || {}).intro) || {})[l] || 0;
         mark(id, 'intro/' + l, cur === 2 ? 1 : cur === 1 ? null : 2);
       });
+    }
+  },
+  noi: {
+    html: st => {
+      const N = NOI.length, i = Math.min(N - 1, st.i || 0), it = NOI[i], od = st.od === 'zh' ? 'zh' : 'en', w = W[it.k] || {};
+      const grp = Object.keys(NOI_GRP).filter(g => NOI.some(x => x.g === g));
+      return `<h2>🗣️ Nói theo cô · ${i + 1}/${N}</h2>
+        <p>Cô Hươu đọc mẫu trên màn chiếu, mỗi tiếng xong có tiếng “tách” và khoảng lặng để <b>cả lớp nói theo</b> (cô bật mic cho các con nói cùng lúc, hoặc mời từng bạn). Đi từ từ → cụm → câu, rồi mới sang Ôn nhanh chạm tranh.</p>
+        <div class="prev"><img src="${pic(it.k, 2)}" class="ans" alt=""><div><span class="flag doc">${NOI_GRP[it.g]}</span>
+          <div class="bigtxt">${esc(txt(it.k, 'en'))}</div><div class="bigtxt zh" style="color:var(--red)">${esc(txt(it.k, 'zh'))}</div>${w.py ? `<div class="small">${esc(w.py)}</div>` : ''}</div></div>
+        <div class="ctl"><button class="btn ghost" id="pv">◀ Trước</button><button class="btn ghost" id="rp">🔁 Đọc lại</button>
+          <button class="btn ${st.auto ? 'red' : 'y'}" id="au">${st.auto ? '⏸ Dừng tự chạy' : '▶ Tự chạy'}</button>
+          <button class="btn" id="nx">${i + 1 < N ? 'Tiếp ▶' : 'Sang Ôn nhanh ▶'}</button></div>
+        <div class="ctl">${grp.map(g => `<button class="btn ghost sm" data-g="${g}">${NOI_GRP[g]} (${NOI.filter(x => x.g === g).length})</button>`).join('')}
+          <button class="btn ghost sm" id="od">Đọc trước: ${od === 'zh' ? '中文' : 'English'} ⇄</button></div>
+        <p class="tip"><b>Tự chạy</b>: web tự sang câu sau khi các con nói theo xong; đến câu cuối thì dừng. Không chấm, không sửa lỗi riêng: bạn chưa nói được thì cả lớp nói lại cùng cô (bấm Đọc lại).</p>`;
+    },
+    bind(st) {
+      const N = NOI.length, i = st.i || 0;
+      $('#pv').onclick = () => i > 0 && setState({ i: i - 1, rp: 0 });
+      $('#rp').onclick = () => setState({ rp: (st.rp || 0) + 1 });
+      $('#nx').onclick = () => i + 1 < N ? setState({ i: i + 1, rp: 0 }) : goPhase('on');
+      $('#au').onclick = () => setState({ auto: !st.auto, rp: (st.rp || 0) + (st.auto ? 0 : 1) });
+      $('#od').onclick = () => setState({ od: st.od === 'zh' ? 'en' : 'zh', rp: (st.rp || 0) + 1 });
+      $$('[data-g]').forEach(b => b.onclick = () => setState({ i: NOI.findIndex(x => x.g === b.dataset.g), rp: 0 }));
+      noiAuto(st);
     }
   },
   on: {
@@ -250,9 +278,10 @@ const CTL = {
         <p><span class="bigtxt zh">${x.c}</span> <span class="bigtxt" style="color:var(--red)">${x.py}</span> · ${x.o ? 'đường bay ' + x.t + ': ' : 'thanh ' + x.t + ' – '}${TONE_NAME[toneOpt(x, x.t)]}</p>
         ${toneAudio(x) ? '' : '<p class="tip">Chữ này chưa có file giọng riêng: <b>cô đọc trên Zoom</b>.</p>'}
         ${qButtons(st, i, TONES.length, rv)}
+        <label class="toggle"><input type="checkbox" id="tayOn" ${st.tayOn !== false ? 'checked' : ''}> ✋ Cho các con <b>bay bằng tay</b> trước camera (máy bé nhận đường tay bay, chọn đường bay giống nhất). Con vẫn chạm được.</label>
         <p class="tip">Sau khi hiện đáp án: cả lớp đưa tay bay theo, nói theo. Cô chấm từng bé ở cột phải: <b>Chuẩn</b> / <b>Gần</b> / <b>Luyện</b>. Bé 1 máy: bấm hộ số đường bay 1–4.</p>`;
     },
-    bind(st) { qBind(st, TONES.length, 'pair'); },
+    bind(st) { qBind(st, TONES.length, 'pair'); $('#tayOn').onchange = e => setState({ tayOn: e.target.checked }); },
     qid: st => `tone_${st.i || 0}_${st.run || 0}`, opts: 4,
     kid(s, st) {
       const v = ((((room.marks || {})[s.id] || {}).tone) || {})[st.i || 0];
@@ -453,6 +482,30 @@ const CTL = {
   }
 };
 /* l = 'en' | 'zh', có thể kèm '|dad' (Canopy: hỏi về nghề của ba thay vì của mẹ) */
+/* Nói theo cô – tự chạy: màn cô ước thời gian câu mẫu (đọc độ dài tệp tiếng) theo đúng công thức màn chiếu dùng, rồi sang câu tiếp */
+const durCache = {};
+function audDur(src) {
+  if (!src) return 0;
+  if (durCache[src] !== undefined) return durCache[src];
+  durCache[src] = 0; const a = new Audio(); a.preload = 'metadata';
+  a.onloadedmetadata = () => { durCache[src] = isFinite(a.duration) ? a.duration * 1000 : 0; }; a.src = src;
+  return 0;
+}
+let noiTimer = { key: '', h: 0 };
+function noiAuto(st) {
+  NOI.forEach(it => ['en', 'zh'].forEach(l => audDur(aud(it.k, l))));
+  const i = st.i || 0, key = [st.ph, i, st.rp || 0, st.od || 'en', st.auto ? 1 : 0].join('|');
+  if (noiTimer.key === key) return;
+  clearTimeout(noiTimer.h); noiTimer = { key, h: 0 };
+  if (st.ph !== 'noi' || !st.auto) return;
+  const it = NOI[i]; if (!it) return;
+  const est = 400 + ['en', 'zh'].reduce((t, l) => { const d = audDur(aud(it.k, l)) || (it.g === 'tu' ? 1300 : 2400); return t + d + noiGap(d); }, 0) + 600;
+  noiTimer.h = setTimeout(() => {
+    const s = room.state || {};
+    if (s.ph !== 'noi' || !s.auto || (s.i || 0) !== i) return;
+    if (i + 1 < NOI.length) setState({ i: i + 1, rp: 0 }); else setState({ auto: false });
+  }, est);
+}
 function spin(seat, l) { if (!seat) return toast('Chưa có bé nào trong lớp.'); const sp = (room.state || {}).spin || {}, [lg, q] = String(l).split('|'); setState({ spin: { seat, l: lg, q: q || null, n: (sp.n || 0) + 1 } }); }
 function qButtons(st, i, n, rv) {
   return `<div class="ctl"><button class="btn ghost" id="pv">◀ Câu trước</button><button class="btn ghost" id="rp">🔁 Phát lại</button>
@@ -619,8 +672,8 @@ function results() {
     const m = M[s.id] || {}, r = { id: s.id, kid: s.kid, parent: s.parent, web: s.web || '', src: /^t_/.test(s.id) && s.ids.length < 2 ? 'chỗ tạm' : s.src === 'zoom' ? 'từ Zoom' : 'tự vào' };
     const c = { en: [0, 0], zh: [0, 0], doc: [0, 0] }, times = [], det = { on: [], tone: [], pair: [] };
     QUIZ.forEach((q, i) => { const a = latest(s, 'on_' + i, qids), L = quizLang(q); c[L][1]++; if (a && a.ok) c[L][0]++; if (a && a.ms && !a.ho) times.push(a.ms); det.on.push(a ? (a.ok ? 1 : 0) : null); });
-    let tOk = 0; const g = { 2: 0, 1: 0, 0: 0 };
-    TONES.forEach((x, i) => { const a = latest(s, 'tone_' + i, qids); if (a && a.ok) tOk++; if (a && a.ms && !a.ho) times.push(a.ms); det.tone.push(a ? (a.ok ? 1 : 0) : null); const v = (m.tone || {})[i]; if (v !== undefined && v !== null) g[v]++; });
+    let tOk = 0, tTay = 0; const g = { 2: 0, 1: 0, 0: 0 };
+    TONES.forEach((x, i) => { const a = latest(s, 'tone_' + i, qids); if (a && a.ok) tOk++; if (a && a.tay) tTay++; if (a && a.ms && !a.ho && !a.tay) times.push(a.ms); det.tone.push(a ? (a.ok ? 1 : 0) : null); const v = (m.tone || {})[i]; if (v !== undefined && v !== null) g[v]++; });
     let say = [0, 0], hear = [0, 0];
     Object.entries(plog).forEach(([key, t]) => {
       if (!t) return;
@@ -643,7 +696,7 @@ function results() {
     Object.assign(r, {
       onEN: `${c.en[0]}/${c.en[1]}`, onZH: `${c.zh[0]}/${c.zh[1]}`, doc: `${c.doc[0]}/${c.doc[1]}`,
       tg: times.length ? (times.reduce((x, y) => x + y, 0) / times.length / 1000).toFixed(1) : '',
-      toneChon: `${tOk}/${TONES.length}`, toneCham: (g[2] + g[1] + g[0]) ? `chuẩn ${g[2]} · gần ${g[1]} · cần luyện ${g[0]}` : '',
+      toneChon: `${tOk}/${TONES.length}` + (tTay ? ` (bay tay ${tTay})` : ''), toneCham: (g[2] + g[1] + g[0]) ? `chuẩn ${g[2]} · gần ${g[1]} · cần luyện ${g[0]}` : '',
       doiNoi: say[1] ? `${say[0]}/${say[1]}` : '', doiNghe: hear[1] ? `${hear[0]}/${hear[1]}` : '',
       boss: bA ? `${bOk}/${bA}` : '',
       xep0: xepRes(s, 0, qids), xep1: xepRes(s, 1, qids),

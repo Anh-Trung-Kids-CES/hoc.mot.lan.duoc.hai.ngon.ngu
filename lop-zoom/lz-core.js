@@ -244,13 +244,22 @@ let INTRO = {
   model: { en: { t: 'My name is …', a: AU + 'ls_bong_en_my_name_is_b_ng.mp3' }, zh: { t: '我叫…', a: AU + 'ls_bong_zh_011.mp3' } }
 };
 
+/* Nói theo cô (trước Ôn nhanh): cô đọc mẫu lần lượt từ → cụm → câu, mỗi tiếng xong có tiếng "tách" và khoảng lặng để cả lớp nói theo.
+   Không chấm, không sửa lỗi riêng. "Nice to meet you!" chỉ nghe ở Little Seed nên không đưa vào phần nói theo. */
+const NOI_GRP = { tu: 'Từ', cum: 'Cụm từ', cau: 'Câu' };
+let NOI = ['name', 'you', 'one', 'two', 'three', 'four', 'five', 'six'].map(k => ({ k, g: 'tu' }))
+  .concat(['n123', 'wyn', 'mna', 'hoy', 'i5', 'i6'].map(k => ({ k, g: 'cau' })));
+/* khoảng lặng cho các con nói theo, tính theo độ dài câu mẫu vừa đọc (máy chiếu và màn cô dùng chung công thức) */
+function noiGap(ms) { return Math.round(Math.max(1500, ms * 1.15 + 700)); }
+
 /* Mạch 40 phút */
 const PHASES = [
   { id: 'cho',   n: 'Chờ vào lớp',          m: '',      ic: '🚪' },
   { id: 'intro', n: 'Chào bạn mới',          m: '0–5',   ic: '🎡' },
-  { id: 'on',    n: 'Ôn nhanh',              m: '5–12',  ic: '⚡' },
-  { id: 'tone',  n: 'Máy bay thanh điệu',    m: '12–18', ic: '✈️' },
-  { id: 'pair',  n: 'Trò chơi đôi bạn',      m: '18–24', ic: '🤝' },
+  { id: 'noi',   n: 'Nói theo cô',           m: '5–9',   ic: '🗣️' },
+  { id: 'on',    n: 'Ôn nhanh',              m: '9–14',  ic: '⚡' },
+  { id: 'tone',  n: 'Máy bay thanh điệu',    m: '14–19', ic: '✈️' },
+  { id: 'pair',  n: 'Trò chơi đôi bạn',      m: '19–24', ic: '🤝' },
   { id: 'lop',   n: 'Cô giáo nhỏ (cả lớp)',  m: '24–28', ic: '📣' },
   { id: 'boss',  n: 'Cả lớp đấu Rồng Lửa',   m: '28–31', ic: '🐉' },
   { id: 'xep',   n: 'Nghe truyện, xếp tranh', m: '31–36', ic: '🧩' },

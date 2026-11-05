@@ -111,6 +111,12 @@ const PAIR_POOL = [
   { k: 'driver', o: ['employee', 'driver', 'chef'] },
 ];
 
+/* ---------- Nói theo cô: từ → cụm → câu (cô đọc mẫu, cả lớp nói theo) ---------- */
+const NOI = [].concat(
+  ['teacher', 'student', 'doctor', 'chef', 'dentist', 'driver', 'employee', 'hospital', 'school', 'restaurant', 'shop', 'dad', 'mom', 'brother', 'sister'].map(k => ({ k, g: 'tu' })),
+  ['wah', 'was', 'war', 'wsh'].map(k => ({ k, g: 'cum' })),
+  ['q_mom', 's_mD', 'q_dad', 's_hH', 's_dC', 's_emp'].map(k => ({ k, g: 'cau' })));
+
 /* ---------- Truyện của Anna (ngày 5–6) cho phần Nghe truyện, xếp tranh ---------- */
 const STORY_KEYS = ['s_name', 's_dDoc', 's_mT', 's_sisC', 's_hH', 's_sS', 's_sat', 's_love'];
 const XEP = [
@@ -130,7 +136,7 @@ const DOC = [['doctor', 'jobs'], ['teacher', 'jobs'], ['chef', 'jobs'], ['driver
 /* ---------- kiểm tra ---------- */
 const used = new Set();
 QUIZ.forEach(q => q.o.forEach(k => used.add(k))); PAIR_POOL.forEach(p => p.o.forEach(k => used.add(k)));
-['q_mom', 's_mD', 'q_dad', 's_dD'].forEach(k => used.add(k)); TONES.forEach(x => used.add(x.k)); STORY_KEYS.forEach(k => used.add(k)); Object.values(CATS).flat().forEach(k => used.add(k));
+['q_mom', 's_mD', 'q_dad', 's_dD'].forEach(k => used.add(k)); TONES.forEach(x => used.add(x.k)); NOI.forEach(x => used.add(x.k)); STORY_KEYS.forEach(k => used.add(k)); Object.values(CATS).flat().forEach(k => used.add(k));
 used.forEach(k => { if (!W[k]) miss.push('thiếu khoá ' + k); });
 [QUIZ, PAIR_POOL].forEach(list => list.forEach(q => { if (q.o.indexOf(q.k) < 0) miss.push('đáp án không nằm trong lựa chọn: ' + q.k); const ims = q.o.map(k => W[k].im); if (new Set(ims).size < ims.length) miss.push('trùng tranh trong một câu: ' + q.o.join(',')); }));
 if (miss.length) { console.error('Chưa đủ tài nguyên:\n' + miss.join('\n')); process.exit(1); }
@@ -170,6 +176,7 @@ if (LZ_LOP === 'canopy-v2') (function () {
   }));
 
   PAIR_POOL = ${J(PAIR_POOL)};
+  NOI = ${J(NOI)};
 
   const SK = ${J(STORY_KEYS)};
   STORY = SK.map(k => ({ img: W[k].im, en: W[k].en, zh: W[k].zh, ea: W[k].ea, za: W[k].za }));
