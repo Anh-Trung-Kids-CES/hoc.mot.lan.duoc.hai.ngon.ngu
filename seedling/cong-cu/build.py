@@ -1064,13 +1064,159 @@ vi.update({
     'aht': 'Con nghe: đây là tiếng Anh hay tiếng Trung?', 'ds': 'Tranh và câu con nghe có cùng nghĩa không?', 'c3': 'Con nghe rồi chọn tranh đúng nhé!',
     'chon': 'Con nghe rồi chạm vào tranh đúng nhé!', 'de': 'Mình làm thử dạng bài thi nhé. Con nghe kỹ rồi chọn.', 'lam': 'Con nghe và làm theo nhé!',
     'nhac': 'Con nghe rồi nói lại đúng như vậy nhé!',
+    'pdn': 'Bạn Xiaomei chỉ hiểu tiếng Trung. Con nghe Leo nói tiếng Anh, rồi nói lại bằng tiếng Trung cho Xiaomei nhé!',
+    'pdn_go': 'Đến lượt con! Con nói tiếng Trung cho Xiaomei nghe nhé!',
+    'pdn_ok': 'Xiaomei hiểu rồi! Cảm ơn con!',
+    'quiet': 'Cô chưa nghe thấy con nói. Con nói lại to hơn một chút nhé!',
+    'quiet2': 'Không sao, mình sang câu tiếp nhé!',
+    'next': 'Mình sang câu tiếp nhé!',
 })
+
+# ---------------------------------------------------------------- luật 5–10 câu mỗi bài (Nguyên tắc 17)
+MIN_Q, MAX_Q = 5, 10
+def _key_of(x):
+    return (str(x.get('en', '')).strip().lower(), str(x.get('zh', '')).strip())
+POOL = {'cards': [], 'nen': [], 'pdn': [], 'noi': [], 'meo_en': [], 'meo_zh': []}
+PAD_LOG = []
+def _pad(lst, pool, label, n, t):
+    have = {_key_of(x) for x in lst}
+    for x in pool:
+        if len(lst) >= MIN_Q: break
+        k = _key_of(x)
+        if k in have or not (k[0] or k[1]): continue
+        y = dict(x); y['on'] = True; lst.append(y); have.add(k)
+    PAD_LOG.append((n, t, label, len(lst)))
+ALL_NEN = {n: [c for s in days_out[n]['steps'] if s['type'] == 'nen' for c in s['cards']] for n in days_out}
+for n in sorted(days_out):
+    d = days_out[n]
+    # từ nền Little Seed là từ con đã biết: lấy từ các ngày gần nhất (trước rồi sau)
+    near = sorted((m for m in days_out if m != n), key=lambda m: (abs(m - n), m > n))
+    NEN_NEAR = [c for m in near for c in ALL_NEN[m]]
+    TODAY_NEN = ALL_NEN[n]
+    for s in d['steps']:
+        t = s['type']
+        if t in ('the', 'nen', 'goi') and isinstance(s.get('cards'), list):
+            cs = s['cards']
+            if len(cs) < MIN_Q:
+                pool = (NEN_NEAR if t == 'nen' else POOL['cards'] + TODAY_NEN + NEN_NEAR)
+                _pad(cs, pool, 'cards', n, t)
+            del cs[MAX_Q:]
+        elif t == 'pdn' and isinstance(s.get('items'), list):
+            if len(s['items']) < MIN_Q: _pad(s['items'], POOL['pdn'], 'items', n, t)
+            del s['items'][MAX_Q:]
+        elif t == 'noi' and isinstance(s.get('turns'), list):
+            if len(s['turns']) < MIN_Q:
+                have = {json.dumps(x.get('say'), ensure_ascii=False) for x in s['turns']}
+                for x in POOL['noi']:
+                    if len(s['turns']) >= MIN_Q: break
+                    k = json.dumps(x.get('say'), ensure_ascii=False)
+                    if k not in have: s['turns'].append(dict(x)); have.add(k)
+                PAD_LOG.append((n, t, 'turns', len(s['turns'])))
+            del s['turns'][MAX_Q:]
+        elif t == 'meo' and isinstance(s.get('quiz'), dict):
+            q = s['quiz']; q.setdefault('zh', []); q.setdefault('en', [])
+            letter = next((c.get('letter') for c in s.get('cards', []) if c.get('l') == 'en' and c.get('letter')), None)
+            keys = {b[0] for b in q.get('zh_btn', [])}
+            seen_en = {x[0] for x in q['en']}; seen_zh = {x[1] for x in q['zh']}
+            for (lt, x) in POOL['meo_en']:
+                if len(q['zh']) + len(q['en']) >= MIN_Q: break
+                if lt == letter and x[0] not in seen_en: q['en'].append(list(x)); seen_en.add(x[0])
+            if letter:
+                for (lt, x) in POOL['meo_en']:
+                    if len(q['zh']) + len(q['en']) >= MIN_Q: break
+                    w = x[0]
+                    if lt != letter and w not in seen_en and not w.lower().startswith(letter.lower()):
+                        q['en'].append([w, False]); seen_en.add(w)
+            for x in POOL['meo_zh']:
+                if len(q['zh']) + len(q['en']) >= MIN_Q: break
+                if x[2] in keys and x[1] not in seen_zh and q.get('zh_btn'): q['zh'].append(list(x)); seen_zh.add(x[1])
+            while len(q['zh']) + len(q['en']) > MAX_Q:
+                (q['en'] if len(q['en']) >= len(q['zh']) else q['zh']).pop()
+            PAD_LOG.append((n, t, 'quiz', len(q['zh']) + len(q['en'])))
+    # đưa mục của ngày này vào kho để ngày sau dùng ôn (mới nhất lên đầu)
+    for s in d['steps']:
+        t = s['type']
+        if t == 'the': POOL['cards'][:0] = [c for c in s['cards'] if not c.get('on') and (c.get('img') or c.get('e'))]
+        if t == 'nen': POOL['nen'][:0] = [c for c in s['cards'] if not c.get('on')]
+        if t == 'pdn': POOL['pdn'][:0] = [c for c in s['items'] if not c.get('on')]
+        if t == 'noi': POOL['noi'][:0] = list(s['turns'])
+        if t == 'meo':
+            letter = next((c.get('letter') for c in s.get('cards', []) if c.get('l') == 'en' and c.get('letter')), None)
+            POOL['meo_en'][:0] = [(letter, x) for x in s['quiz'].get('en', [])]
+            POOL['meo_zh'][:0] = list(s['quiz'].get('zh', []))
+
+
+# ---------------------------------------------------------------- Vận động: nghe từ → quay đầu chọn TRANH đúng (có tranh gây nhiễu)
+def _pic_cards(steps):
+    out = []
+    for s in sorted(steps, key=lambda s: 0 if s['type'] == 'the' else 1):
+        if s['type'] in ('the', 'nen'):
+            for c in s['cards']:
+                if c.get('img') and c.get('en') and c.get('zh'): out.append(c)
+    return out
+PIC_HIST = []
+for n in sorted(days_out):
+    d = days_out[n]
+    today = _pic_cards(d['steps'])
+    seen, T = set(), []
+    for c in sorted(today, key=lambda c: bool(c.get('on'))) + PIC_HIST:
+        k = c['img']
+        if k in seen or c['en'].lower() in {x['en'].lower() for x in T}: continue
+        seen.add(k); T.append(c)
+    gs = [s for s in d['steps'] if s['type'] == 'game']
+    if gs and len(T) >= 3:
+        nopt = 2 if n <= 3 else 3
+        rnd = random.Random(1000 + n)
+        targets = T[:max(3, min(len(T), 6))]
+        qs = []
+        for i in range(8):
+            c = targets[i % len(targets)]
+            l = 'en' if i % 2 == 0 else 'zh'
+            cand = [x for x in T if x['img'] != c['img'] and x['en'].lower() != c['en'].lower()]
+            opts = [c] + rnd.sample(cand, min(nopt - 1, len(cand)))
+            rnd.shuffle(opts)
+            t = c['en'] if l == 'en' else c['zh']
+            a = AU.get(f'{l}:{t}') or AU.get(f'{l}:{t.strip("!.?")}') or ''
+            qs.append({'m': 'pic', 'say': {'t': t, 'l': l, 'a': a},
+                       'opts': [{'en': o['en'], 'zh': o['zh'], 'img': o['img']} for o in opts], 'ans': opts.index(c)})
+        gs[0]['qs'] = qs
+    PIC_HIST[:0] = [c for c in today if not c.get('on')]
+    del PIC_HIST[40:]
+
+# ---------------------------------------------------------------- bảng giọng theo câu (web tự tìm file theo nội dung)
+SPOKEN = set()
+def _add(l, t):
+    if isinstance(t, str) and t.strip() and not t.startswith('tai-nguyen'):
+        if l == 'zh' and not CJK.search(t): return
+        SPOKEN.add((l, t.strip()))
+def _walk(o):
+    if isinstance(o, dict):
+        if isinstance(o.get('en'), str): _add('en', o['en'])
+        if isinstance(o.get('zh'), str): _add('zh', o['zh'])
+        if 't' in o and o.get('l') in ('en', 'zh'): _add(o['l'], o['t'])
+        for k, v in o.items():
+            if k == 'quiz' and isinstance(v, dict):
+                for x in v.get('zh', []): _add('zh', x[1])
+                for x in v.get('en', []): _add('en', x[0])
+            elif k == 'ex' and isinstance(v, list):
+                for x in v: _add('zh', x[1]) if x[1] else _add('en', x[0])
+            else: _walk(v)
+    elif isinstance(o, list):
+        for x in o: _walk(x)
+_walk(days_out); _walk(reader); _walk(lop)
+AUMAP, MISS_ALL = {}, []
+for (l, t) in sorted(SPOKEN):
+    a = AU.get(f'{l}:{t}') or AU.get(f'{l}:{t.strip("!.?")}')
+    if a: AUMAP[f'{l}:{t}'] = a
+    else: MISS_ALL.append([l, t])
+json.dump(MISS_ALL, open(f'{W}/miss_all.json', 'w'), ensure_ascii=False, indent=0)
+
 VI_A = dict(DEMO.get('vi_a', {}))
 if os.path.exists(f'{W}/gen_vi_a.json'):
     for _k, _v in json.load(open(f'{W}/gen_vi_a.json')).items():
         if not VI_A.get(_k): VI_A[_k] = _v
 SD = {'who': WHO, 'days': {str(k): v for k, v in days_out.items()}, 'lop': {str(k): v for k, v in lop.items()}, 'map': mp, 'soon': {},
-      'vi': vi, 'vi_a': VI_A, 'vi_t': DEMO.get('vi_t', {}), 'bg': {**bg_all, **DEMO['bg']}, 'reader': reader, 'units_q': units_q}
+      'vi': vi, 'vi_a': VI_A, 'vi_t': DEMO.get('vi_t', {}), 'bg': {**bg_all, **DEMO['bg']}, 'reader': reader, 'units_q': units_q, 'aumap': AUMAP}
 open(OUT, 'w').write('/* Dữ liệu web Seedling 48 buổi · 99 ngày – sinh từ Seedling_KhungChuongTrinh_48buoi_v7.xlsx (gen/build.py). Đừng sửa tay. */\nwindow.SD=' + json.dumps(SD, ensure_ascii=False) + ';\n')
 
 # ---------------------------------------------------------------- báo cáo
@@ -1086,6 +1232,7 @@ with open(REPORT, 'w') as f:
     for l, t in sorted(MISS_AU)[:4000]:
         f.write(f'- {l}: {t}\n')
 json.dump(sorted(MISS_AU), open(f'{W}/miss_au.json', 'w'), ensure_ascii=False, indent=0)
+print('pad', len(PAD_LOG), 'spoken', len(SPOKEN), 'miss_all', len(MISS_ALL))
 print('days', len(days_out), 'steps', dict(cnt), 'miss_img', len(MISS_IMG), 'miss_au', len(MISS_AU))
 for n in sorted(days_out):
     print(n, days_out[n].get('unit'), days_out[n].get('kind'), ' → '.join(f"{s['type']}({len(s.get('cards') or s.get('qs') or s.get('items') or s.get('turns') or s.get('scenes') or s.get('scenes_en') or s.get('cmds') or [s for r in s.get('rounds', []) for s in r['qs']])})" for s in days_out[n]['steps']))

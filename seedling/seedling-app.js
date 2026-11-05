@@ -50,8 +50,9 @@ async function seq(list, gap) { const my = RUN; for (const u of list) { if (my !
 function vi(key) { return { t: SD.vi[key] || key, l: 'vi', a: (SD.vi_a || {})[key] || '' }; }
 function hd(key) { return say(vi(key)); }
 function wait(ms) { return new Promise(r => setTimeout(r, REDUCED ? Math.min(ms, 300) : ms)); }
-function en(t, a) { return { t, l: 'en', a: a || '' }; }
-function zh(t, a) { return { t, l: 'zh', a: a || '' }; }
+function auOf(l, t) { const m = (window.SD && SD.aumap) || {}; const k = String(t || '').trim(); return m[l + ':' + k] || m[l + ':' + k.replace(/[!.?！。？]+$/, '')] || ''; }
+function en(t, a) { return { t, l: 'en', a: a || auOf('en', t) }; }
+function zh(t, a) { return { t, l: 'zh', a: a || auOf('zh', t) }; }
 
 /* ---------- thu giọng con (như web 21 ngày): tự bật, tự dừng khi con nói xong, phát lại ---------- */
 let recStream = null, recCur = null;
@@ -84,13 +85,19 @@ const SVG = {
 /* lượt nói của con: micro tự bật; không có micro thì đếm 3-2-1 */
 async function micTurn(mic, my) {
   const lbl = mic.querySelector('b'), lv = mic.querySelector('.ls-lv');
-  mic.className = 'ls-mic rec'; cap('🔴 Đang thu… con nói đi!'); if (lbl) lbl.textContent = '';
-  const r = await recTake({ maxMs: 5000, onLevel: v => { if (lv) lv.style.setProperty('--lv', (.25 + v * .9).toFixed(2)); } });
-  if (my !== RUN) return 'gone';
-  if (!r) { mic.className = 'ls-mic on'; cap('Con nói theo nhé!'); for (let s = 3; s >= 1; s--) { if (my !== RUN) return 'gone'; if (lbl) lbl.textContent = s; await wait(1000); } return 'count'; }
-  mic.className = 'ls-mic ok'; if (lbl) lbl.textContent = '✓'; sfx.ok(); cap('🎧 Con nghe lại giọng của con nhé'); await wait(250);
-  if (my !== RUN) return 'gone'; jRec(); await playFile(r.url); return 'rec';
+  for (let tryN = 0; tryN < 2; tryN++) {
+    mic.className = 'ls-mic rec'; cap('🔴 Đang thu… con nói đi!'); if (lbl) lbl.textContent = '';
+    const r = await recTake({ maxMs: 5000, onLevel: v => { if (lv) lv.style.setProperty('--lv', (.25 + v * .9).toFixed(2)); } });
+    if (my !== RUN) return 'gone';
+    if (!r) { mic.className = 'ls-mic on'; cap('Con nói theo nhé!'); for (let s = 3; s >= 1; s--) { if (my !== RUN) return 'gone'; if (lbl) lbl.textContent = s; await wait(1000); } return 'count'; }
+    if (!r.spoke) { mic.className = 'ls-mic on'; if (lbl) lbl.textContent = ''; cap('Cô chưa nghe thấy con nói'); if (tryN === 0) { await hd('quiet'); if (my !== RUN) return 'gone'; continue; } return 'quiet'; }
+    mic.className = 'ls-mic ok'; if (lbl) lbl.textContent = '✓'; sfx.ok(); cap('🎧 Con nghe lại giọng của con nhé'); await wait(250);
+    if (my !== RUN) return 'gone'; jRec(); await playFile(r.url); return 'rec';
+  }
+  return 'quiet';
 }
+/* lời sau lượt nói: chỉ khen khi thật sự nghe thấy con nói */
+function afterSpeak(how) { return hd(how === 'rec' ? 'speak' : how === 'quiet' ? 'quiet2' : 'next'); }
 
 /* ---------- tiến độ (lưu trên máy này) ---------- */
 let P = sget('sdl-progress', { days: {}, stars: 0, hop: {} });
@@ -208,7 +215,7 @@ R.nen = (step, body, day) => {
     cap('EN: ' + c.en); await say(en(c.en, c.a_en)); if (me !== RUN) return;
     if (c.zh) { if (z) z.classList.add('on'); await wait(300); cap('中文: ' + c.zh); await say(zh(c.zh, c.a_zh)); if (me !== RUN) return; z && z.querySelector('small').classList.add('on'); }
     body.querySelector('#mt').textContent = 'Con nói theo nhé!'; await hd('repeat'); if (me !== RUN) return;
-    const how = await micTurn(body.querySelector('#mic'), me); if (how === 'gone') return; star();
+    const how = await micTurn(body.querySelector('#mic'), me); if (how === 'gone') return; if (how === 'rec') star(); else await afterSpeak(how);
     if (seen.size >= C.length) { await wait(500); if (me === RUN) finish(); }
   }
   X.replay = () => hd('nen'); draw(); hd('nen');
@@ -275,8 +282,8 @@ R.noi = (step, body, day) => {
       <div class="row ls-nrow"><button class="ls-b" id="nx">Bỏ qua ▶</button></div></div></div>`;
     wireBg(body); body.querySelector('#nx').onclick = () => { stopAll(); ti++; turn(); };
     X.replay = () => { stopAll(); say(u); }; cap(u.t); await say(u); if (my !== RUN) return; await hd('turn'); if (my !== RUN) return;
-    const how = await micTurn(body.querySelector('#mic'), my); if (how === 'gone' || my !== RUN) return; star();
-    await hd(how === 'rec' ? 'speak' : 'speak2'); if (my !== RUN) return; await wait(600); if (my === RUN) { ti++; turn(); } }
+    const how = await micTurn(body.querySelector('#mic'), my); if (how === 'gone' || my !== RUN) return; if (how === 'rec') star();
+    await afterSpeak(how); if (my !== RUN) return; await wait(600); if (my === RUN) { ti++; turn(); } }
   (async () => { await hd('noi'); turn(); })();
 };
 /* 6. PHIÊN DỊCH NHÍ – Leo (EN) → con nói tiếng Trung cho Xiaomei; tuần 1: nghe mẫu tiếng Trung trước rồi nói theo */
@@ -291,20 +298,29 @@ R.pdn = (step, body) => {
     body.querySelector('#go').onclick = () => { stopAll(); next(); };
     const it = I[0]; X.replay = async () => { stopAll(); await say(en(it.en, it.a_en)); await wait(300); await say(zh(it.zh, it.a_zh)); }; await X.replay(); }
   async function next() { i++; const my = RUN; dots(i, I.length); if (i >= I.length) return finish(); const it = I[i];
-    body.innerHTML = `<div class="sx-pdn"><div class="sx-pp"><div class="sx-who">${face('leo')}<b>Leo</b></div>${bub(it.en, 'en', 'leo')}</div>
-      <div class="sx-arrow">➜</div><div class="sx-pp zhs"><div class="sx-who">${face('xiaomei')}<b>Xiaomei</b></div><div id="ans" class="sx-ans"><div class="ls-timer" id="tm"><b>?</b></div></div></div>
+    body.innerHTML = `<div class="sx-pdn2">
+      <ol class="sx-steps"><li id="s1">① Nghe Leo nói</li><li id="s2">② Con nói tiếng Trung</li><li id="s3">③ Xiaomei hiểu rồi!</li></ol>
+      <div class="sx-pdn"><div class="sx-pp" id="pl"><div class="sx-who">${face('leo')}<b>Leo</b><small>nói tiếng Anh</small></div>${bub(it.en, 'en', 'leo')}</div>
+      <div class="sx-arrow">➜</div><div class="sx-pp zhs" id="px"><div class="sx-who">${face('xiaomei')}<b>Xiaomei</b><small>chỉ hiểu tiếng Trung</small></div><div id="ans" class="sx-ans"><div class="sx-q">?</div></div></div>
       <div class="sx-microw"><div class="ls-mic idle" id="mic"><span class="ls-lv"></span>${SVG.mic}<b></b></div><span class="ls-lab" id="hint">Con nghe Leo nói nhé…</span></div>
-      <div class="row"><button class="ls-b" id="nx">Bỏ qua ▶</button></div></div>`;
+      <div class="row"><button class="ls-b" id="nx">Bỏ qua ▶</button></div></div></div>`;
     body.querySelector('#nx').onclick = () => { stopAll(); next(); };
-    const hint = body.querySelector('#hint'), showAns = () => { body.querySelector('#ans').innerHTML = bub(it.zh, 'zh', 'xiaomei', it.py); revealPy(body, 900); };
+    const hint = body.querySelector('#hint'), stepOn = k => body.querySelectorAll('.sx-steps li').forEach((li, j) => { li.classList.toggle('on', j === k - 1); li.classList.toggle('done', j < k - 1); });
+    const showAns = cls => { body.querySelector('#ans').innerHTML = `<div class="${cls || ''}">${bub(it.zh, 'zh', 'xiaomei', it.py)}</div>`; revealPy(body, 900); };
     X.replay = () => { stopAll(); say(en(it.en, it.a_en)); };
-    await say(en(it.en, it.a_en)); if (my !== RUN) return;
-    if (step.model_first) { hint.textContent = 'Cô nói mẫu tiếng Trung'; showAns(); await wait(300); await say(zh(it.zh, it.a_zh)); if (my !== RUN) return; }
-    else { hint.textContent = SD.vi.howzh; await hd('howzh'); if (my !== RUN) return; const tm = body.querySelector('#tm'); tm.className = 'ls-timer think';
-      for (let s = 3; s >= 1; s--) { tm.querySelector('b').textContent = s; await wait(1000); if (my !== RUN) return; }
-      showAns(); hint.textContent = SD.vi.ans; await say(zh(it.zh, it.a_zh)); if (my !== RUN) return; }
-    hint.textContent = SD.vi.repeat; await hd('turn'); if (my !== RUN) return;
-    const how = await micTurn(body.querySelector('#mic'), my); if (how === 'gone' || my !== RUN) return; star(); await hd(how === 'rec' ? 'speak' : 'speak2');
+    stepOn(1); body.querySelector('#pl').classList.add('talk'); await say(en(it.en, it.a_en)); if (my !== RUN) return; body.querySelector('#pl').classList.remove('talk');
+    stepOn(2); let how;
+    if (step.model_first) {   // tuần đầu: cô nói mẫu, con nói theo cho Xiaomei
+      hint.textContent = 'Cô nói mẫu, con nghe nhé'; showAns('sx-hintans'); await say(zh(it.zh, it.a_zh)); if (my !== RUN) return;
+      hint.textContent = 'Đến lượt con! Con nói tiếng Trung cho Xiaomei nhé'; await hd('pdn_go'); if (my !== RUN) return;
+      how = await micTurn(body.querySelector('#mic'), my); if (how === 'gone' || my !== RUN) return;
+    } else {                  // các tuần sau: con thử nói trước, rồi nghe đáp án
+      hint.textContent = SD.vi.howzh; await hd('howzh'); if (my !== RUN) return;
+      how = await micTurn(body.querySelector('#mic'), my); if (how === 'gone' || my !== RUN) return;
+      hint.textContent = SD.vi.ans; await hd('ans'); if (my !== RUN) return; showAns(); await say(zh(it.zh, it.a_zh)); if (my !== RUN) return;
+    }
+    stepOn(3); body.querySelector('#px').classList.add('happy'); body.querySelector('#ans').querySelector('div').className = '';
+    if (how === 'rec') { star(); hint.textContent = 'Xiaomei hiểu rồi! Cảm ơn con!'; await hd('pdn_ok'); } else await afterSpeak(how);
     await wait(500); if (my === RUN) next(); }
   (async () => { await hd('pdn'); step.bridge ? bridge() : next(); })();
 };
@@ -322,7 +338,7 @@ R.hoi = (step, body) => {
     revealPy(body, 900); const play = () => { stopAll(); return say(qu); }; X.replay = play; body.querySelector('#pq').onclick = play; play();
     body.querySelectorAll('.sx-opt').forEach(b => b.onclick = async () => { if (busy) return; busy = true; const n = +b.dataset.n, o = q.opts[n], ou = q.l === 'zh' ? zh(o[0]) : en(o);
       if (n === q.ans) { stopAll(); sfx.ok(); b.classList.add('right'); pop(b); if (!q.again) star(); await say(ou); if (my !== RUN) return;
-        body.querySelector('#mr').hidden = false; const how = await micTurn(body.querySelector('#mic'), my); if (how === 'gone' || my !== RUN) return; await hd('speak'); }
+        body.querySelector('#mr').hidden = false; const how = await micTurn(body.querySelector('#mic'), my); if (how === 'gone' || my !== RUN) return; await afterSpeak(how); }
       else { sfx.no(); shake(b); body.querySelectorAll('.sx-opt')[q.ans].classList.add('hint'); const a = q.opts[q.ans]; hopAdd(q.l === 'zh' ? zh(a[0]) : en(a));
         if (!back.has(qi) && !q.again) { back.add(qi); Q.push(Object.assign({}, q, { again: true })); } await hd('later'); }
       await wait(400); busy = false; if (my === RUN) { qi++; ask(); } }); }
@@ -380,7 +396,7 @@ R.goi = (step, body) => {
     X.replay = () => { stopAll(); seq([en(c.en, c.a_en), zh(c.zh, c.a_zh)], 300); };
     await hd('goi'); if (my !== RUN) return; const how = await micTurn(body.querySelector('#mic'), my); if (how === 'gone' || my !== RUN) return;
     body.querySelector('#ans').innerHTML = bub(c.en, 'en') + bub(c.zh, 'zh', '', c.py); revealPy(body, 900);
-    await seq([en(c.en, c.a_en), zh(c.zh, c.a_zh)], 300); if (my !== RUN) return; star(); await wait(700); if (my === RUN) { i++; show(); } }
+    await seq([en(c.en, c.a_en), zh(c.zh, c.a_zh)], 300); if (my !== RUN) return; if (how === 'rec') star(); await wait(700); if (my === RUN) { i++; show(); } }
   show();
 };
 
