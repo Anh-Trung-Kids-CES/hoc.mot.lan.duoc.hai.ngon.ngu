@@ -113,7 +113,11 @@ function reveal() {
   const q = curQ(); if (!q || S.step === 'rv') return;
   S.rv[q.qid] = 1; S.step = 'rv'; save(); draw();
   const good = Object.entries(S.px[q.qid] || {}).filter(([, a]) => a.ok).map(([id]) => id);
-  good.forEach((id, j) => setTimeout(() => { floatOn(id, '+' + S.w.dung + '⭐'); }, 250 + j * 160));
+  good.forEach((id, j) => setTimeout(() => {
+    floatOn(id, '+' + S.w.dung + '⭐');
+    const card = $('#mk-' + id); if (!card) return;
+    [card.querySelector('[data-sc$="|dung"]'), card.querySelector('.mk-star')].forEach(el => { if (!el) return; el.classList.remove('jump'); void el.offsetWidth; el.classList.add('jump'); });
+  }, 250 + j * 160));
   if (good.length) SND.beep('win');
 }
 

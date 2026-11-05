@@ -182,3 +182,8 @@ table.res textarea{width:170px;min-height:40px;font-size:13px}
   .mk-ans .num{font-size:20px;padding:3px 0}
   .mm-tip{font-size:15px}.mm-ctl .btn{font-size:18px;padding:10px 18px}
 }
+
+/* Hiện đáp án: ô ✅ và số sao của bạn đúng nhảy lên (tự cộng, cô không phải bấm) */
+.mk .jump{animation:mkjump .9s cubic-bezier(.2,1.6,.4,1)}
+.mk-btn button.jump{background:var(--green-soft);border-color:var(--green)}
+@keyframes mkjump{0%{transform:none}30%{transform:translateY(-10px) scale(1.35)}60%{transform:translateY(0) scale(.95)}100%{transform:none}}
