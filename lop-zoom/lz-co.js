@@ -68,7 +68,7 @@ function draw() {
   $$('#tabs button').forEach(b => b.onclick = () => { TAB = b.dataset.t; dirty = false; if (sharing && TAB !== 'lop') { sharing = false; $('#share').classList.add('hide'); } draw(); });
   // đang gõ trong ô nhập thì để yên, vẽ lại khi rời ô
   const ae = document.activeElement;
-  if (ae && $('#body').contains(ae) && /INPUT|TEXTAREA|SELECT/.test(ae.tagName)) { dirty = true; return; }
+  if (ae && $('#body').contains(ae) && (/TEXTAREA|SELECT/.test(ae.tagName) || (ae.tagName === 'INPUT' && !/^(checkbox|radio|button|submit)$/.test(ae.type)))) { dirty = true; return; }   // ô tích không chặn vẽ lại
   dirty = false;
   if (TAB === 'them') return drawAdd();
   if (TAB === 'kq') return drawResults();
@@ -91,7 +91,7 @@ function drawClass() {
   $('#body').innerHTML = `<div class="co-grid">
     <div class="panel"><div class="timer" id="timer">00:00</div><div class="phases">${PHASES.map(p => `<button data-ph="${p.id}" class="${st.ph === p.id ? 'on' : ''}"><span>${p.ic}</span><span>${p.n}<small>${p.m ? 'phút ' + p.m : 'trước giờ học'}</small></span></button>`).join('')}</div></div>
     <div class="panel" id="ctl"></div>
-    <div class="panel"><h3>Các bé (${seatsIn().length})</h3><div class="kids" id="kids"></div></div></div>`;
+    <div class="panel"><h3>Các bé (${seatsIn().length})${seatsAll().some(s => !s.ok) ? ` · <span style="color:var(--red)">${seatsAll().filter(s => !s.ok).length} bé chờ cô duyệt</span>` : ''}</h3><div class="kids" id="kids"></div></div></div>`;
   $$('[data-ph]').forEach(b => b.onclick = () => goPhase(b.dataset.ph));
   drawTimer();
   if (st.ph === 'story') { goPhase('xep'); return; }   // phòng mở từ bản cũ
@@ -523,8 +523,8 @@ function qBind(st, n, nextPh) {
 
 /* ---------- cột các bé ---------- */
 function drawKids(st, c) {
-  const seats = seatsAll(), qid = c.qid ? c.qid(st) : '', only = c.only ? c.only(st) : null;
-  $('#kids').innerHTML = seats.map(s => {
+  const seats = seatsAll(), qid = c.qid ? c.qid(st) : '', only = c.only ? c.only(st) : null, wait = seats.filter(s => !s.ok);
+  $('#kids').innerHTML = (wait.length > 1 ? `<button class="btn red" id="okAll" style="width:100%;margin-bottom:10px">Cho cả ${wait.length} bé vào lớp</button>` : '') + seats.map(s => {
     let row = '';
     if (!s.ok) row = `<button class="mk on" data-ok="${s.id}">Cho vào lớp</button><button class="mk" data-del="${s.id}">Không</button>`;
     else {
@@ -564,6 +564,7 @@ function srcTag(s) {
 function kidActions() {
   const P = room.players || {};
   $$('[data-ok]').forEach(b => b.onclick = () => DB.set(base() + '/players/' + b.dataset.ok + '/ok', true).catch(err));
+  $('#okAll') && ($('#okAll').onclick = () => seatsAll().filter(s => !s.ok).forEach(s => DB.set(base() + '/players/' + s.id + '/ok', true).catch(err)));
   $$('[data-del],[data-rm]').forEach(b => b.onclick = () => {
     const id = b.dataset.del || b.dataset.rm, s = seatsAll().find(x => x.id === id);
     if (b.dataset.rm && !confirm('Cho ' + (s ? s.kid : 'bé') + ' ra khỏi lớp? Kết quả đã ghi của bé vẫn giữ trong phòng nếu bé vào lại.')) return;
