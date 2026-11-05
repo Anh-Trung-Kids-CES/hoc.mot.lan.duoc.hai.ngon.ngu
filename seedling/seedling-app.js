@@ -266,8 +266,8 @@ R.cham = (step, body) => {
     body.innerHTML = `<div class="ls-ask"><span class="ls-lab">Câu ${qi + 1}/${Q.length} · nghe ${q.say.l === 'zh' ? 'tiếng Trung' : 'tiếng Anh'}${q.again ? ' · gặp lại' : ''}${q.nlq ? ' · nghe làm quen' : ''}</span>
       <div class="ls-opts sx-faces" style="--n:${opts.length}">${opts.map(w => `<button class="ls-opt" data-w="${w}">${pic(SD.who[w][1], '', '')}<span class="sx-nm">${esc(SD.who[w][0])}</span></button>`).join('')}</div></div>`;
     const play = () => { stopAll(); cap('Con nghe nhé…'); return say(q.say); }; X.replay = play; play();
-    body.querySelectorAll('.ls-opt').forEach(b => b.onclick = async () => { if (busy) return; busy = true; const me = RUN;
-      if (b.dataset.w === q.ans) { stopAll(); sfx.ok(); b.classList.add('right'); pop(b); if (!q.again) star(); cap((q.say.l === 'zh' ? '中文: ' : 'EN: ') + q.say.t); await hd(q.again ? 'retry' : 'ok'); }
+    body.querySelectorAll('.ls-opt').forEach(b => b.onclick = async () => { if (busy) return; busy = true; stopAll(); const me = RUN;
+      if (b.dataset.w === q.ans) { sfx.ok(); b.classList.add('right'); pop(b); if (!q.again) star(); cap((q.say.l === 'zh' ? '中文: ' : 'EN: ') + q.say.t); await hd(q.again ? 'retry' : 'ok'); }
       else { sfx.no(); shake(b); const r = body.querySelector(`.ls-opt[data-w="${q.ans}"]`); r && r.classList.add('hint'); hopAdd(q.say);
         if (!back.has(qi) && !q.again) { back.add(qi); Q.push(Object.assign({}, q, { again: true })); } await hd('later'); }
       await wait(500); busy = false; if (alive(my) || my !== RUN) { qi++; ask(); } }); };
@@ -379,7 +379,7 @@ R.meo = (step, body) => {
       body.innerHTML = `<div class="sx-meo"><span class="ls-lab">Nghe và chạm · ${qi + 1}/${Q.length}</span><div class="sx-big">${q.l === 'zh' ? `<b class="zh">${esc(q.hz)}</b><span>${esc(q.py.replace(/[āáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ]/g, m => 'aaaaeeeeiiiioooouuuuüüüü'['āáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ'.indexOf(m)]))}</span>` : `<b>${esc(q.w)}</b>`}</div>
         <div class="sx-opts two">${btns.map(([k, t]) => `<button class="sx-opt" data-k="${k}">${esc(t)}</button>`).join('')}</div></div>`;
       const play = () => { stopAll(); return say(q.u); }; X.replay = play; play();
-      body.querySelectorAll('.sx-opt').forEach(b => b.onclick = async () => { const me = RUN;
+      body.querySelectorAll('.sx-opt').forEach(b => b.onclick = async () => { stopAll(); const me = RUN;
         if (b.dataset.k === q.ans) { sfx.ok(); b.classList.add('right'); star(); await hd('ok'); } else { sfx.no(); shake(b); body.querySelector(`.sx-opt[data-k="${q.ans}"]`).classList.add('hint'); if (!back.has(qi)) { back.add(qi); Q.push(q); } await hd('later'); }
         await wait(300); if (me === RUN) { qi++; ask(); } }); };
     ask(); }

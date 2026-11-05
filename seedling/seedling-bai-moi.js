@@ -34,8 +34,8 @@ R.chon = (step, body) => {
     body.innerHTML = `<div class="ls-ask"><span class="ls-lab">Câu ${qi + 1}/${Q.length} · nghe ${q.say.l === 'zh' ? 'tiếng Trung' : 'tiếng Anh'}${q.again ? ' · gặp lại' : ''}</span>
       <div class="ls-opts sx-faces" style="--n:${q.opts.length}">${q.opts.map((o, i) => `<button class="ls-opt" data-i="${i}">${pic(o.img, o.e, '')}</button>`).join('')}</div></div>`;
     const play = () => { stopAll(); cap('Con nghe nhé…'); return say(q.say); }; X.replay = play; play();
-    body.querySelectorAll('.ls-opt').forEach(b => b.onclick = async () => { if (busy) return; busy = true; const me = RUN, i = +b.dataset.i;
-      if (i === q.ans) { stopAll(); sfx.ok(); b.classList.add('right'); pop(b); if (!q.again) star(); cap((q.say.l === 'zh' ? '中文: ' : 'EN: ') + q.say.t); await hd(q.again ? 'retry' : 'ok'); }
+    body.querySelectorAll('.ls-opt').forEach(b => b.onclick = async () => { if (busy) return; busy = true; stopAll(); const me = RUN, i = +b.dataset.i;
+      if (i === q.ans) { sfx.ok(); b.classList.add('right'); pop(b); if (!q.again) star(); cap((q.say.l === 'zh' ? '中文: ' : 'EN: ') + q.say.t); await hd(q.again ? 'retry' : 'ok'); }
       else { sfx.no(); shake(b); body.querySelectorAll('.ls-opt')[q.ans].classList.add('hint'); hopAdd(q.say);
         if (!back.has(qi) && !q.again) { back.add(qi); Q.push(Object.assign({}, q, { again: true })); } await hd('later'); }
       await wait(500); busy = false; if (me === RUN || alive(me)) { qi++; ask(); } }); };
@@ -114,8 +114,8 @@ R.game = (step, body) => {
     body.querySelector('#hdBtn').onclick = () => HEAD.on ? HEAD.stop() : HEAD.consent();
     HEAD.btn(); HEAD.mirror && HEAD.mirror();
     const play = () => { stopAll(); return say(q.say); }; X.replay = play; body.querySelector('#pq').onclick = play; play();
-    body.querySelectorAll('.hd-pick').forEach(b => b.onclick = async () => { if (busy) return; busy = true; const me = RUN, i = +b.dataset.i;
-      if (i === q.ans) { stopAll(); sfx.ok(); b.classList.add('right'); pop(b); if (!q.again) star(); await hd(q.again ? 'retry' : 'ok'); }
+    body.querySelectorAll('.hd-pick').forEach(b => b.onclick = async () => { if (busy) return; busy = true; stopAll(); const me = RUN, i = +b.dataset.i;
+      if (i === q.ans) { sfx.ok(); b.classList.add('right'); pop(b); if (!q.again) star(); await hd(q.again ? 'retry' : 'ok'); }
       else { sfx.no(); shake(b); const r = body.querySelectorAll('.hd-pick')[q.ans]; r && r.classList.add('hint'); hopAdd(q.say);
         if (!back.has(qi) && !q.again) { back.add(qi); Q.push(Object.assign({}, q, { again: true })); } await hd('later'); }
       await wait(600); busy = false; if (me === RUN) { qi++; ask(); } }); };
