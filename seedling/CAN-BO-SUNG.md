@@ -333,7 +333,7 @@ Số bước theo dạng bài: {'nen': 54, 'the': 67, 'truyen': 99, 'cham': 33, 
 - en: Anna and Leo go to the park.
 - en: Anna and Leo have a lot of food: bread, fruit and juice.
 - en: Anna and Leo make a big snowman.
-- en: Anna and Nhan play table tennis.
+- en: Anna and Vũ play table tennis.
 - en: Anna comes to Leo's house.
 - en: Anna comes to Leo's house. How's the weather?
 - en: Anna comes.
@@ -351,7 +351,7 @@ Số bước theo dạng bài: {'nen': 54, 'the': 67, 'truyen': 99, 'cham': 33, 
 - en: Are you hungry?
 - en: At home, Bông draws the picnic food.
 - en: At home, Mummy: “Put a cross on the food you don't like.” Bông puts a cross on the candy.
-- en: At the party, Anna and Nhan play table tennis.
+- en: At the party, Anna and Vũ play table tennis.
 - en: B, O, N, G! My name is on the keyboard!
 - en: B, O, N, G! My name is on the keyboard! I love school!
 - en: Back in the park, the frog hops.
@@ -360,9 +360,9 @@ Số bước theo dạng bài: {'nen': 54, 'the': 67, 'truyen': 99, 'cham': 33, 
 - en: Bedroom or bathroom? Bedroom!
 - en: Body!
 - en: Bounce, bounce!
-- en: Bye, Nhan! See you again! The end.
+- en: Bye, Vũ! See you again! The end.
 - en: Bông and Mummy are at a shop in town.
-- en: Bông and Nhan are excited. Mummy has got a big bag of food.
+- en: Bông and Vũ are excited. Mummy has got a big bag of food.
 - en: Bông can't pick up her shoe.
 - en: Bông is at a shop with Mummy: a pencil, a crayon, scissors and glue.
 - en: Bông is happy.
@@ -465,7 +465,7 @@ Số bước theo dạng bài: {'nen': 54, 'the': 67, 'truyen': 99, 'cham': 33, 
 - en: Hair!
 - en: Happy birthday, Leo!
 - en: Happy birthday, Leo! Look!
-- en: Happy birthday, Nhan!
+- en: Happy birthday, Vũ!
 - en: Has Bông got long hair?
 - en: Has the mouse got a long tail?
 - en: Have you got white shorts?
@@ -496,7 +496,7 @@ Số bước theo dạng bài: {'nen': 54, 'the': 67, 'truyen': 99, 'cham': 33, 
 - en: How many fingers?
 - en: How many people are there?
 - en: How old is Anna?
-- en: How old is Nhan?
+- en: How old is Vũ?
 - en: I
 - en: I don't like eating candy.
 - en: I have an aunt and an uncle.
@@ -540,7 +540,7 @@ Số bước theo dạng bài: {'nen': 54, 'the': 67, 'truyen': 99, 'cham': 33, 
 - en: In town, there is a show in the park. The man in the show is very tall.
 - en: In town, there is a show. The man is very tall: long arms, long legs!
 - en: Is Leo hungry?
-- en: Is Nhan nine?
+- en: Is Vũ nine?
 - en: Is Xiaomei's mother Chinese?
 - en: Is it a cake?
 - en: Is it a door or a window?
@@ -557,11 +557,11 @@ Số bước theo dạng bài: {'nen': 54, 'the': 67, 'truyen': 99, 'cham': 33, 
 - en: It has got two white wings.
 - en: It's Leo's birthday!
 - en: It's Leo's birthday.
-- en: It's Nhan's birthday.
-- en: It's Nhan's birthday. Bông and Xiaomei go to the park.
 - en: It's Saturday, the first of June.
 - en: It's Saturday.
 - en: It's Sunday.
+- en: It's Vũ's birthday.
+- en: It's Vũ's birthday. Bông and Xiaomei go to the park.
 - en: It's brown.
 - en: It's cold.
 - en: It's cold. Wear your coat!
@@ -683,7 +683,7 @@ Số bước theo dạng bài: {'nen': 54, 'the': 67, 'truyen': 99, 'cham': 33, 
 - en: Look! Fruit: apples, a kiwi and a coconut!
 - en: Look! It's right under the bed!
 - en: Look! Letters on the keyboard!
-- en: Look! Number seven on the cake! Nhan is seven years old. Wow!
+- en: Look! Number seven on the cake! Vũ is seven years old. Wow!
 - en: Look! Scissors!
 - en: Look! The snowman smiles!
 - en: Look! This is my brother. He is eight years old.
@@ -694,7 +694,7 @@ Số bước theo dạng bài: {'nen': 54, 'the': 67, 'truyen': 99, 'cham': 33, 
 - en: Make a line, please!
 - en: Make a line, please.
 - en: Me too!
-- en: Me too! Happy birthday, Nhan!
+- en: Me too! Happy birthday, Vũ!
 - en: Me too! I'm hungry!
 - en: Me too! I'm six years old.
 - en: Mmm, nice!
@@ -721,10 +721,8 @@ Số bước theo dạng bài: {'nen': 54, 'the': 67, 'truyen': 99, 'cham': 33, 
 - en: My schoolbag! Thank you, Daddy!
 - en: My socks are white.
 - en: Next morning, Bông goes to school with her new schoolbag.
-- en: Nhan has got a burger and chips.
-- en: Nhan, how old are you?
 - en: Nice to meet you! – Me too!
-- en: Nice to meet you, Nhan!
+- en: Nice to meet you, Vũ!
 - en: Nice to meet you, Xiaomei!
 - en: Nine kids and Mrs Lan.
 - en: No sweets, thank you.
@@ -884,6 +882,8 @@ Số bước theo dạng bài: {'nen': 54, 'the': 67, 'truyen': 99, 'cham': 33, 
 - en: Two snowmen!
 - en: Two wings! Can the duck fly?
 - en: Vietnamese
+- en: Vũ has got a burger and chips.
+- en: Vũ, how old are you?
 - en: Wave goodbye!
 - en: We are at a shop in town.
 - en: We learn numbers with Xiaomei's mother.
@@ -918,7 +918,7 @@ Số bước theo dạng bài: {'nen': 54, 'the': 67, 'truyen': 99, 'cham': 33, 
 - en: What has Leo got?
 - en: What has Leo got? – Noodles.
 - en: What has Mummy got?
-- en: What has Nhan got?
+- en: What has Vũ got?
 - en: What has the duck got? – Two white wings.
 - en: What has the little mouse got? – A long tail.
 - en: What is Leo's favourite toy?
@@ -1297,8 +1297,8 @@ Số bước theo dạng bài: {'nen': 54, 'the': 67, 'truyen': 99, 'cham': 33, 
 - zh: Anna和Leo回家了。
 - zh: Anna和Leo堆一个大雪人。
 - zh: Anna和Leo有很多食物：面包、水果和果汁。
-- zh: Anna和Nhan。
-- zh: Anna和Nhan打乒乓球。
+- zh: Anna和Vũ。
+- zh: Anna和Vũ打乒乓球。
 - zh: Anna打开书。看！一只北极熊！白色的，很高。
 - zh: Anna打开大雨伞。
 - zh: Anna有一个蛋糕，是给Lan老师的。
@@ -1313,7 +1313,7 @@ Số bước theo dạng bài: {'nen': 54, 'the': 67, 'truyen': 99, 'cham': 33, 
 - zh: Anna：你爱谁？Bông：我爱我奶奶。
 - zh: Anna：她是你阿姨吗？Bông：是，她是我阿姨。
 - zh: Bông向Leo挥挥手。
-- zh: Bông和Nhan很兴奋。妈妈有一大包食物。
+- zh: Bông和Vũ很兴奋。妈妈有一大包食物。
 - zh: Bông和妈妈在商店：铅笔、蜡笔、剪刀和胶水。
 - zh: Bông和妈妈在城里的商店。
 - zh: Bông喜欢金色的裙子。
@@ -1395,10 +1395,10 @@ Số bước theo dạng bài: {'nen': 54, 'the': 67, 'truyen': 99, 'cham': 33, 
 - zh: Leo，生日快乐！看！
 - zh: Leo，睡觉吧。
 - zh: Leo，闭上眼睛！右手摸一摸。
-- zh: Nhan有汉堡和薯条。
-- zh: Nhan，你几岁？
-- zh: Nhan，再见！
-- zh: Nhan，很高兴认识你！
+- zh: Vũ有汉堡和薯条。
+- zh: Vũ，你几岁？
+- zh: Vũ，再见！
+- zh: Vũ，很高兴认识你！
 - zh: Xiaomei把鞋拿起来。
 - zh: Xiaomei的妈妈是中国人。
 - zh: Xiaomei，你好！你几岁？
@@ -1502,8 +1502,8 @@ Số bước theo dạng bài: {'nen': 54, 'the': 67, 'truyen': 99, 'cham': 33, 
 - zh: 今天星期天。
 - zh: 今天是Leo的生日。
 - zh: 今天是Leo的生日！
-- zh: 今天是Nhan的生日。
-- zh: 今天是Nhan的生日。Bông和Xiaomei去公园。
+- zh: 今天是Vũ的生日。
+- zh: 今天是Vũ的生日。Bông和Xiaomei去公园。
 - zh: 今天是晴天，很热。
 - zh: 他不开心。
 - zh: 他们
@@ -1645,7 +1645,7 @@ Số bước theo dạng bài: {'nen': 54, 'the': 67, 'truyen': 99, 'cham': 33, 
 - zh: 在桌子上。
 - zh: 在桌子下面。
 - zh: 在森林里，小老鼠有长长的尾巴。
-- zh: 在派对上，Anna和Nhan打乒乓球。
+- zh: 在派对上，Anna和Vũ打乒乓球。
 - zh: 在黑板上写名字。
 - zh: 坐下吧。
 - zh: 城里
@@ -1787,7 +1787,7 @@ Số bước theo dạng bài: {'nen': 54, 'the': 67, 'truyen': 99, 'cham': 33, 
 - zh: 我也是！
 - zh: 我也是！我六岁。
 - zh: 我也是！我很饿！
-- zh: 我也是！生日快乐，Nhan！
+- zh: 我也是！生日快乐，Vũ！
 - zh: 我也有！
 - zh: 我五岁。你呢？
 - zh: 我们
@@ -1983,7 +1983,7 @@ Số bước theo dạng bài: {'nen': 54, 'the': 67, 'truyen': 99, 'cham': 33, 
 - zh: 球就在床下面。
 - zh: 球就在床下面！
 - zh: 生日
-- zh: 生日快乐，Nhan！
+- zh: 生日快乐，Vũ！
 - zh: 生气
 - zh: 用
 - zh: 电脑
@@ -2015,7 +2015,7 @@ Số bước theo dạng bài: {'nen': 54, 'the': 67, 'truyen': 99, 'cham': 33, 
 - zh: 看！水果：苹果、猕猴桃和椰子！
 - zh: 看！水里有鱼。鱼能游泳。
 - zh: 看！球就在床下面！
-- zh: 看！蛋糕上有数字七！Nhan七岁。哇！
+- zh: 看！蛋糕上有数字七！Vũ七岁。哇！
 - zh: 看！这是我哥哥。他八岁。
 - zh: 看！键盘上有A、B、C！
 - zh: 看！门口有人！她是谁？

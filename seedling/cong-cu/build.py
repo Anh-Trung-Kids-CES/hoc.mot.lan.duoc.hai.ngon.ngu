@@ -33,10 +33,10 @@ def avatar(ch, c1, c2):
 NV = TN + 'nhan-vat/'
 WHO = dict(DEMO['who'])
 WHO.update({
-    'nhan': ['Nhan', avatar('N', '#2FA37A', '#fff')],
+    'nhan': ['Vũ', avatar('V', '#2FA37A', '#fff')],
     'man': ['The man · 表演的人', avatar('M', '#7B5CD6', '#fff')],
     'hoa': ['Miss Hoa · Hoa姐姐', avatar('H', '#E3487A', '#fff')],
-    'anh_nhan': ["Nhan's brother · 哥哥", avatar('B', '#F28C00', '#fff')],
+    'anh_nhan': ["Vũ's brother · 哥哥", avatar('B', '#F28C00', '#fff')],
     'me_bong': ['Mummy · 妈妈', NV + 'fam_bong_me_a.webp'], 'bo_bong': ['Daddy · 爸爸', NV + 'fam_bong_bo_a.webp'],
     'me_leo': ['Mummy · 妈妈', NV + 'fam_leo_me_a.webp'], 'bo_leo': ['Dad · 爸爸', NV + 'fam_leo_bo_a.webp'],
     'me_xm': ["Xiaomei's mummy · 妈妈", NV + 'fam_xiaomei_me_a.webp'],
@@ -246,7 +246,7 @@ def sentences_en(text):
     parts = re.split(r"(?<=[.!?…])['’”]?\s+(?=['‘“A-Z\[])", text)
     out = []
     names = {'Dad': 'bo', 'Daddy': 'bo', 'Mummy': 'me', 'Grandma': 'ba', 'Grandpa': 'ong', 'Mrs Lan': 'lan', 'Anna': 'anna', 'Leo': 'leo',
-             'Bông': 'bong', 'Xiaomei': 'xiaomei', 'Nhan': 'nhan', 'Miss Hoa': 'hoa'}
+             'Bông': 'bong', 'Xiaomei': 'xiaomei', 'Nhan': 'nhan', 'Vũ': 'nhan', 'Miss Hoa': 'hoa'}
     for p in parts:
         p = p.strip()
         if not p:
@@ -346,7 +346,7 @@ def qa_zh(sent):
                 out.append((clean_zh(q), clean_zh(a)))
     return out
 
-EN_LBL = {'Bông': 'bong', 'Leo': 'leo', 'Anna': 'anna', 'Xiaomei': 'xiaomei', 'Nhan': 'nhan', 'Mrs Lan': 'lan', 'Mummy': 'me', 'Grandpa': 'ong',
+EN_LBL = {'Bông': 'bong', 'Leo': 'leo', 'Anna': 'anna', 'Xiaomei': 'xiaomei', 'Nhan': 'nhan', 'Vũ': 'nhan', 'Mrs Lan': 'lan', 'Mummy': 'me', 'Grandpa': 'ong',
           'Grandma': 'ba', 'Dad': 'bo', 'Daddy': 'bo', 'Kids': 'kids', 'The man': 'man', 'Miss Hoa': 'hoa'}
 def key_pairs(d, unit):
     """Các câu chính của ngày: ô Câu tiếng Anh và tiếng Trung xếp song song theo thứ tự (không gồm câu hỏi – đáp)."""
@@ -1058,7 +1058,7 @@ vi.update({
 })
 SD = {'who': WHO, 'days': {str(k): v for k, v in days_out.items()}, 'lop': {str(k): v for k, v in lop.items()}, 'map': mp, 'soon': {},
       'vi': vi, 'vi_a': DEMO.get('vi_a', {}), 'vi_t': DEMO.get('vi_t', {}), 'bg': {**bg_all, **DEMO['bg']}, 'reader': reader, 'units_q': units_q}
-open(OUT, 'w').write('/* Dữ liệu web Seedling 48 buổi · 99 ngày – sinh từ Seedling_KhungChuongTrinh_48buoi_v6.xlsx (gen/build.py). Đừng sửa tay. */\nwindow.SD=' + json.dumps(SD, ensure_ascii=False) + ';\n')
+open(OUT, 'w').write('/* Dữ liệu web Seedling 48 buổi · 99 ngày – sinh từ Seedling_KhungChuongTrinh_48buoi_v7.xlsx (gen/build.py). Đừng sửa tay. */\nwindow.SD=' + json.dumps(SD, ensure_ascii=False) + ';\n')
 
 # ---------------------------------------------------------------- báo cáo
 from collections import Counter

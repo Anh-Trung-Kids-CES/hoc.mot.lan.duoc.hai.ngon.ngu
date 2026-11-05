@@ -3,7 +3,7 @@
 Web tự học cho lớp Seedling offline 48 buổi của Anh – Trung – Kids (CES Việt Nam). Chỉ dùng cho lớp này, không phải bản chuẩn cho các khoá khác. Không sửa web 21 ngày (`xem-truoc/`) hay web Zoom (`lop-zoom/`); chỉ dùng chung bộ nhận diện khuôn mặt ở `lop-zoom/vendor/mediapipe`.
 
 ## Nguồn nội dung
-- `Seedling_KhungChuongTrinh_48buoi_v6.xlsx` (05/11/2026): tab Khung 48 buổi, Mạch từ theo ngày, Bước ngày web, Vai buổi I-R-P-P, Truyện unit, Hộp ôn & sao.
+- `Seedling_KhungChuongTrinh_48buoi_v7.xlsx` (05/11/2026): tab Khung 48 buổi, Mạch từ theo ngày, Bước ngày web, Vai buổi I-R-P-P, Truyện unit, Hộp ôn & sao.
 - Ngày web 1, 2, 3, 8 giữ bản demo Unit 1 đã duyệt (tranh cảnh Unit 1, giọng thu sẵn), thêm bước Vận động.
 - 95 ngày còn lại sinh tự động: `cong-cu/parse.py` đọc Excel (đã xuất JSON), `cong-cu/build.py` dựng `seedling-data.js`. Đừng sửa tay `seedling-data.js`; sửa Excel rồi dựng lại.
 

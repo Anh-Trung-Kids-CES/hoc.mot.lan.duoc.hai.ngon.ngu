@@ -10,13 +10,13 @@ def has_py(s):
 
 # ---------- người nói ----------
 EN_SPK = {
-    'Bông': 'bong', 'Leo': 'leo', 'Anna': 'anna', 'Xiaomei': 'xiaomei', 'Nhan': 'nhan', 'Mrs Lan': 'lan',
+    'Bông': 'bong', 'Leo': 'leo', 'Anna': 'anna', 'Xiaomei': 'xiaomei', 'Nhan': 'nhan', 'Vũ': 'nhan', 'Mrs Lan': 'lan',
     'Mummy': 'me', 'Mommy': 'me', 'Mum': 'me', 'Grandpa': 'ong', 'Grandma': 'ba', 'Dad': 'bo', 'Daddy': 'bo',
     'Kids': 'kids', 'The man': 'man', "Leo's daddy": 'bo_leo', "Anna's daddy": 'bo_anna', 'Miss Hoa': 'hoa',
-    "Xiaomei's mummy": 'me_xm', "Nhan's brother": 'anh_nhan',
+    "Xiaomei's mummy": 'me_xm', "Nhan's brother": 'anh_nhan', "Vũ's brother": 'anh_nhan',
 }
 ZH_SPK = {
-    'Bông': 'bong', 'Leo': 'leo', 'Anna': 'anna', 'Xiaomei': 'xiaomei', 'Nhan': 'nhan', 'Lan老师': 'lan',
+    'Bông': 'bong', 'Leo': 'leo', 'Anna': 'anna', 'Xiaomei': 'xiaomei', 'Nhan': 'nhan', 'Vũ': 'nhan', 'Lan老师': 'lan',
     '妈妈': 'me', '爷爷': 'ong', '奶奶': 'ba', '爸爸': 'bo', '小朋友': 'kids', '小朋友们': 'kids', '表演的人': 'man',
     'Leo的爸爸': 'bo_leo', 'Anna的爸爸': 'bo_anna', 'Hoa姐姐': 'hoa', 'Xiaomei的妈妈': 'me_xm',
 }
