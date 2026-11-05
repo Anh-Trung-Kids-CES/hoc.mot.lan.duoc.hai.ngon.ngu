@@ -106,6 +106,8 @@ function press(id, c) {
   SND.beep('pop');
   if (q.now && m[id] && m[id].ok && !(prev && prev.ok)) bossHit(id);
   draw();
+  /* cô tích đủ đáp án của các bé: tự hiện đáp án đúng và cộng sao (rồi tự sang câu nếu đang bật) */
+  if (!q.now && S.step === 'ask' && S.autoShow !== false && S.kids.length && S.kids.every(k => (S.px[q.qid] || {})[k.id])) { clearTimeout(autoT); const qid = q.qid; autoT = setTimeout(() => { const c2 = curQ(); if (c2 && c2.qid === qid && S.step === 'ask') reveal(); }, 800); }
   if (q.now && S.auto && S.kids.every(k => (S.px[q.qid] || {})[k.id])) { clearTimeout(autoT); const qid = q.qid; autoT = setTimeout(() => { const c2 = curQ(); if (c2 && c2.qid === qid) bossNext(); }, 1100); }
 }
 function reveal() {
@@ -140,7 +142,7 @@ function autoRvStart() {
   }, 1000);
 }
 function autoRvShow() { const b = $('#mmCtl [data-act="next"]'); if (b && !b.querySelector('.cd')) b.insertAdjacentHTML('beforeend', ' <span class="cd"></span>'); const c = b && b.querySelector('.cd'); if (c) c.textContent = '(' + autoRvLeft + ')'; }
-const autoRvChk = () => `<label class="mm-chk" title="Hiện đáp án xong thì vài giây sau tự sang câu tiếp"><input type="checkbox" data-act="autoRv" ${S.autoRv !== false ? 'checked' : ''}> Tự sang câu</label>`;
+const autoRvChk = () => `<label class="mm-chk" title="Cô tích đủ đáp án của các bé thì tự hiện đáp án đúng và cộng sao"><input type="checkbox" data-act="autoShow" ${S.autoShow !== false ? 'checked' : ''}> Tích đủ thì tự hiện đáp án</label><label class="mm-chk" title="Hiện đáp án xong thì vài giây sau tự sang câu tiếp"><input type="checkbox" data-act="autoRv" ${S.autoRv !== false ? 'checked' : ''}> Tự sang câu</label>`;
 
 /* ======================= vẽ ======================= */
 function draw() {
@@ -710,7 +712,7 @@ const ACT = {
   lpSay: b => { const t = lopTurnsNow()[S.li || 0]; if (!t) return; const m = lt(t.a), l = b.dataset.l; if (m[l]) { m[l] = 0; bump(t.a, 'noi', -1); } else { m[l] = 1; bump(t.a, 'noi', 1); } },
   lpRe: () => { const t = lopTurnsNow()[S.li || 0]; if (t) { delete lt(t.a).c; save(); draw(); } },
   bossGo, bossNext, bossEnd: () => { S.boss.end = Date.now(); save(); bossTick(); },
-  auto: b => { S.auto = b.checked; save(); }, autoRv: b => { S.autoRv = b.checked; save(); if (!b.checked) { autoRvStop(); draw(); } else if (S.step === 'rv') autoRvStart(); }, autoNoi: b => { S.autoNoi = b.checked; save(); },
+  auto: b => { S.auto = b.checked; save(); }, autoShow: b => { S.autoShow = b.checked; save(); }, autoRv: b => { S.autoRv = b.checked; save(); if (!b.checked) { autoRvStop(); draw(); } else if (S.step === 'rv') autoRvStart(); }, autoNoi: b => { S.autoNoi = b.checked; save(); },
   dur: b => { S.boss.dur = (+b.value || 3) * 60000; save(); },
 };
 document.addEventListener('click', e => {

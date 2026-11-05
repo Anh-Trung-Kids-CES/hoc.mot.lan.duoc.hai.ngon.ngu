@@ -38,6 +38,8 @@ Gõ đúng tên con như trên web học để sao tự cộng đúng bé. Thêm
 | 30–36 | Nghe truyện, chọn tranh | Nghe cả đoạn (có chữ), rồi từng câu: con gõ số tranh 1–4; hiện đáp án đọc câu bằng tiếng kia (chuyển ngữ) |
 | 36–40 | Vinh danh | Từng bạn một (theo thứ tự trong lớp, không xếp hạng): ảnh, danh hiệu theo việc con làm nhiều nhất, số sao; rồi huy hiệu cả nhóm |
 
+**Tích đủ thì tự hiện đáp án** (ô tích ở thanh nút, mặc định bật): cô tích xong số của bé cuối cùng thì gần 1 giây sau web tự hiện đáp án đúng và cộng sao, không cần bấm Hiện đáp án.
+
 **Tự sang câu** (ô tích ở thanh nút, mặc định bật): bấm Hiện đáp án xong, bạn đúng tự được cộng ✅ và sao (ô nhảy lên), vài giây sau web tự sang câu tiếp (Ôn nhanh 4 giây, Thanh điệu 6, Truyện 5) để cô săn đáp án câu mới trong chat. Nút Câu tiếp hiện số giây đếm ngược. Câu cuối của mỗi phần không tự sang phần khác. Ô số 1–2–3 vẫn do cô tự tích theo chat.
 
 Phím tắt: → tiếp / câu tiếp, ← trước, Space hiện đáp án, R phát lại, Z hoàn tác.
