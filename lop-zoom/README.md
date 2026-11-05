@@ -67,13 +67,14 @@ Cùng một web, cùng 9 phần và mạch 40 phút như Little Seed, cùng lu�
 
 | Phần | Canopy làm gì |
 |---|---|
-| Chào bạn mới | Cả lớp hỏi What does your mom do? / 你妈妈做什么工作？, bạn được chọn nói nghề thật của mẹ: My mom is a … / 我妈妈是…; nói tốt thì cô hỏi thêm Where does she work? / 她在哪儿工作？ |
+| Chào bạn mới | 4 nút quay: hỏi mẹ hoặc hỏi ba, tiếng Anh hoặc tiếng Trung (nên xen kẽ). Cả lớp hỏi What does your mom / dad do? / 你妈妈 / 你爸爸做什么工作？, bạn được chọn nói nghề thật: My mom / dad is a … / 我妈妈 / 我爸爸是…; nói tốt thì cô hỏi thêm Where does she / he work? |
 | Ôn nhanh | 10 câu khó dần: từ (nghề, nơi làm việc, người thân) → cụm "work at a …" / 在…工作 → câu (他在医院工作。, My mom is a doctor., 我爸爸是厨师，他在饭店工作。) → nhìn chữ Hán 牙医, 学校 |
 | Máy bay thanh điệu | Từ hai chữ: 医生, 医院, 厨师, 学校, 饭店, 老师, 工作, 牙医. Con chọn 1 trong 4 đường bay hai chặng (ví dụ "Lượn + ngang" cho lǎoshī); các lựa chọn sai chỉ khác một chữ. Bé 1 máy: bấm hộ số đường bay 1–4 |
 | Đôi bạn, Cô giáo nhỏ | Tranh từ, cụm và câu (My dad is a doctor., My older sister is a chef., She is an employee. She works at a shop.…) |
 | Đấu Rồng Lửa | 46 câu ngẫu nhiên: nghề, nơi làm việc, người thân, cụm "làm ở…", nhìn chữ 医生 老师 厨师 司机 医院 学校 饭店 商店 |
 | Nghe truyện, xếp tranh | Truyện của Anna (ngày 5–6). Lượt 1 nghe EN: My name is Anna. / My dad is a doctor. / My mom is a teacher. / My older sister is a chef. → xếp tranh lời ZH. Lượt 2 nghe ZH: 他在医院工作。/ 她在学校工作。/ 星期六晚上，我们去饭店吃晚饭。/ 我爱我家！→ xếp tranh lời EN |
 
+- Tranh từ đơn Canopy (đầu bếp, nha sĩ, tài xế, học sinh, bệnh viện; Vòng 3: xe đạp, xe máy, máy bay, đi học, đi làm) đã xoá các vệt tối thừa ở mép tranh (05/11), web học 21 ngày cũng dùng bản sạch này.
 - Màn bé không hiện pinyin (Canopy ôn bằng tiếng, như ngày ôn trên web học); màn cô luôn có pinyin, màn chiếu hiện pinyin khi hiện đáp án thanh điệu.
 - Kết quả gửi về tab "Lớp Zoom" với cột lớp "Canopy · Vòng 2"; tệp CSV tên `lop-zoom-canopy-v2-<mã>-<ngày>.csv`.
 - Sửa nội dung: sửa `tao-tai-nguyen/tao_canopy_v2.js` rồi chạy `node lop-zoom/tao-tai-nguyen/tao_canopy_v2.js` (tự báo nếu câu nào chưa có giọng hoặc tranh), không sửa tay `lz-canopy.js`.

@@ -224,11 +224,11 @@ function view(st, seats) {
 
 /* --- Chào bạn mới: vòng quay chọn bạn --- */
 function vIntro(st, seats) {
-  const sp = st.spin || {}, l = sp.l === 'zh' ? 'zh' : 'en', N = seats.length;
+  const sp = st.spin || {}, l = sp.l === 'zh' ? 'zh' : 'en', N = seats.length, I = (sp.q === 'dad' && INTRO.dad) || INTRO;
   const idx = Math.max(0, seats.findIndex(s => s.id === sp.seat));
   const target = sp.n ? -idx * 360 / Math.max(1, N) + 360 * (4 + sp.n) : 0;
   const landed = !sp.n || spinLanded === sp.n;
-  const key = 'intro|' + seats.map(s => s.id).join(',') + '|' + (sp.n || 0) + '|' + (landed ? 1 : 0) + '|' + l;
+  const key = 'intro|' + seats.map(s => s.id).join(',') + '|' + (sp.n || 0) + '|' + (landed ? 1 : 0) + '|' + l + (sp.q || '');
   const ring = seats.map((s, j) => {
     const a = j * 2 * Math.PI / Math.max(1, N);
     return `<div class="seat" style="left:${50 + 36 * Math.sin(a)}%;top:${50 - 36 * Math.cos(a)}%"><img src="${faceOf(s)}" alt=""><b>${esc(s.kid)}</b></div>`;
@@ -237,9 +237,9 @@ function vIntro(st, seats) {
   if (sp.n && landed && sp.seat) {
     const me = sp.seat === mySeat;
     under = `<div class="chosen-card"><img src="${seatFace(seats, sp.seat)}" alt=""><b>${esc(seatName(seats, sp.seat))}</b></div>` +
-      (me ? `<div class="my-turn">Đến lượt con!</div><button class="say ${l}" data-a="${INTRO.model[l].a}"><span class="ic">🔊</span><span class="${l}">${esc(INTRO.model[l].t)}</span></button>`
-          : `<p class="sub">Cả lớp cùng hỏi bạn:</p><button class="say ${l}" data-a="${INTRO.ask[l].a}"><span class="ic">🔊</span><span class="${l}">${esc(INTRO.ask[l].t)}</span></button>`);
-    audio = me ? [hd('Đến lượt con!'), 300, INTRO.model[l].a] : [hd('Cả lớp cùng hỏi bạn nhé!'), 200, INTRO.ask[l].a];
+      (me ? `<div class="my-turn">Đến lượt con!</div><button class="say ${l}" data-a="${I.model[l].a}"><span class="ic">🔊</span><span class="${l}">${esc(I.model[l].t)}</span></button>`
+          : `<p class="sub">Cả lớp cùng hỏi bạn:</p><button class="say ${l}" data-a="${I.ask[l].a}"><span class="ic">🔊</span><span class="${l}">${esc(I.ask[l].t)}</span></button>`);
+    audio = me ? [hd('Đến lượt con!'), 300, I.model[l].a] : [hd('Cả lớp cùng hỏi bạn nhé!'), 200, I.ask[l].a];
     akey = 'intro-land|' + sp.n + '|' + l;
   }
   return {

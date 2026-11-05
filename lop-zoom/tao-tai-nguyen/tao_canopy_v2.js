@@ -47,6 +47,8 @@ const SRC = {
   wsh: ['work at a shop', '在商店工作', 'zài shāngdiàn gōngzuò', 'v2_d2_p_work_at_a_shop'],
   // câu
   q_mom:  ['What does your mom do?', '你妈妈做什么工作？', 'Nǐ māma zuò shénme gōngzuò?', 'v2_d3_s1'],
+  q_dad:  ['What does your dad do?', '你爸爸做什么工作？', 'Nǐ bàba zuò shénme gōngzuò?', 'v2_d3_p_what_job'],
+  s_dD:   ['My dad is a doctor.', '我爸爸是医生。', 'Wǒ bàba shì yīshēng.', 'v2_d3_p_my_dad'],
   s_hT:   ['He is a teacher.', '他是老师。', 'Tā shì lǎoshī.', 'v2_d1_s2'],
   s_mD:   ['My mom is a doctor.', '我妈妈是医生。', 'Wǒ māma shì yīshēng.', 'v2_d3_s2'],
   s_dC:   ['My dad is a chef. He works at a restaurant.', '我爸爸是厨师，他在饭店工作。', 'Wǒ bàba shì chúshī, tā zài fàndiàn gōngzuò.', 'v2_d3_s3'],
@@ -128,7 +130,7 @@ const DOC = [['doctor', 'jobs'], ['teacher', 'jobs'], ['chef', 'jobs'], ['driver
 /* ---------- kiểm tra ---------- */
 const used = new Set();
 QUIZ.forEach(q => q.o.forEach(k => used.add(k))); PAIR_POOL.forEach(p => p.o.forEach(k => used.add(k)));
-used.add('q_mom'); used.add('s_mD'); TONES.forEach(x => used.add(x.k)); STORY_KEYS.forEach(k => used.add(k)); Object.values(CATS).flat().forEach(k => used.add(k));
+['q_mom', 's_mD', 'q_dad', 's_dD'].forEach(k => used.add(k)); TONES.forEach(x => used.add(x.k)); STORY_KEYS.forEach(k => used.add(k)); Object.values(CATS).flat().forEach(k => used.add(k));
 used.forEach(k => { if (!W[k]) miss.push('thiếu khoá ' + k); });
 [QUIZ, PAIR_POOL].forEach(list => list.forEach(q => { if (q.o.indexOf(q.k) < 0) miss.push('đáp án không nằm trong lựa chọn: ' + q.k); const ims = q.o.map(k => W[k].im); if (new Set(ims).size < ims.length) miss.push('trùng tranh trong một câu: ' + q.o.join(',')); }));
 if (miss.length) { console.error('Chưa đủ tài nguyên:\n' + miss.join('\n')); process.exit(1); }
@@ -180,7 +182,11 @@ if (LZ_LOP === 'canopy-v2') (function () {
   INTRO = {
     ask: { en: { t: W.q_mom.en, a: W.q_mom.ea }, zh: { t: W.q_mom.zh, a: W.q_mom.za } },
     model: { en: { t: 'My mom is a …', a: W.s_mD.ea }, zh: { t: '我妈妈是…', a: W.s_mD.za } },
-    tip: 'Bạn được chọn nói nghề thật của mẹ (hoặc ba). Nghề chưa học thì cô gợi ý từ gần nhất hoặc nói cùng con, không sửa lỗi riêng. Bạn nói tốt thì cô hỏi thêm: <b>Where does she work?</b> / <b class="zh">她在哪儿工作？</b>'
+    dad: {
+      ask: { en: { t: W.q_dad.en, a: W.q_dad.ea }, zh: { t: W.q_dad.zh, a: W.q_dad.za } },
+      model: { en: { t: 'My dad is a …', a: W.s_dD.ea }, zh: { t: '我爸爸是…', a: W.s_dD.za } }
+    },
+    tip: 'Mỗi lượt cô chọn hỏi về mẹ hoặc ba (nên xen kẽ). Bạn được chọn nói nghề thật của mẹ / ba. Nghề chưa học thì cô gợi ý từ gần nhất hoặc nói cùng con, không sửa lỗi riêng. Bạn nói tốt thì cô hỏi thêm: <b>Where does she / he work?</b> / <b class="zh">她 / 他在哪儿工作？</b>'
   };
 
   BOSS = Object.assign({}, BOSS, { story: '⚔️ Rồng Lửa nghịch ngợm làm rối tung bệnh viện, trường học và nhà hàng! Cả lớp tiếp sức cho anh hùng Bông nhé!' });

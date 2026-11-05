@@ -120,7 +120,7 @@ function openShare() {
 }
 function closeShare() { sharing = false; $('#share').classList.add('hide'); draw(); }
 const BAR = [
-  ['#go', '▶ Bắt đầu', 'red'], ['[data-spin="en"]', '🎡 Quay · EN', ''], ['[data-spin="zh"]', '🎡 Quay · 中文', 'red'],
+  ['#go', '▶ Bắt đầu', 'red'], ['[data-spin="en"]', '🎡 Quay · EN', ''], ['[data-spin="zh"]', '🎡 Quay · 中文', 'red'], ['[data-spin="en|dad"]', '🎡 Ba · EN', ''], ['[data-spin="zh|dad"]', '🎡 Ba · 中文', 'red'],
   ['#pv', '◀', 'ghost'], ['#rp', '🔁 Phát lại', 'ghost'], ['#rv', '👁 Hiện đáp án', 'y'], ['#ag', '↺ Hỏi lại', 'ghost'],
   ['#bst', '⚔️ Bắt đầu trận đấu', 'red'], ['#ben', '🏁 Kết thúc ngay', 'ghost'], ['#bre', '↺ Đấu lại', 'ghost'],
   ['#xgo', '🧩 Cho các con xếp tranh', 'y'], ['#xback', '◀ Nghe lại truyện', 'ghost'],
@@ -204,9 +204,11 @@ const CTL = {
   intro: {
     html: st => {
       const sp = st.spin || {}, s = seatsIn().find(x => x.id === sp.seat);
-      return `<h2>🎡 Chào bạn mới</h2><p>Cô quay vòng chọn bạn. Cả lớp hỏi <b>${esc(INTRO.ask.en.t)}</b> / <b class="zh">${esc(INTRO.ask.zh.t)}</b>, bạn trả lời <b>${esc(INTRO.model.en.t)}</b> / <b class="zh">${esc(INTRO.model.zh.t)}</b></p>${INTRO.tip ? `<p class="tip">${INTRO.tip}</p>` : ''}
-      <div class="ctl"><button class="btn" data-spin="en">🎡 Quay · tiếng Anh</button><button class="btn red" data-spin="zh">🎡 Quay · tiếng Trung</button></div>
-      ${s ? `<div class="tip">Vừa chọn: <b>${esc(s.kid)}</b> (${sp.l === 'zh' ? 'tiếng Trung' : 'tiếng Anh'}). Chấm ở cột bên phải: <b>EN</b>/<b>ZH</b> = con nói được, bấm lần nữa = nói cùng cô.</div>` : ''}
+      const D = INTRO.dad, qa = I => `Cả lớp hỏi <b>${esc(I.ask.en.t)}</b> / <b class="zh">${esc(I.ask.zh.t)}</b>, bạn trả lời <b>${esc(I.model.en.t)}</b> / <b class="zh">${esc(I.model.zh.t)}</b>`;
+      return `<h2>🎡 Chào bạn mới</h2><p>Cô quay vòng chọn bạn. ${D ? 'Hỏi về mẹ: ' + qa(INTRO) + '.<br>Hỏi về ba: ' + qa(D) + '.' : qa(INTRO)}</p>${INTRO.tip ? `<p class="tip">${INTRO.tip}</p>` : ''}
+      <div class="ctl"><button class="btn" data-spin="en">🎡 ${D ? 'Hỏi mẹ' : 'Quay'} · tiếng Anh</button><button class="btn red" data-spin="zh">🎡 ${D ? 'Hỏi mẹ' : 'Quay'} · tiếng Trung</button></div>
+      ${D ? `<div class="ctl"><button class="btn" data-spin="en|dad">🎡 Hỏi ba · tiếng Anh</button><button class="btn red" data-spin="zh|dad">🎡 Hỏi ba · tiếng Trung</button></div>` : ''}
+      ${s ? `<div class="tip">Vừa chọn: <b>${esc(s.kid)}</b> (${D ? (sp.q === 'dad' ? 'hỏi về ba, ' : 'hỏi về mẹ, ') : ''}${sp.l === 'zh' ? 'tiếng Trung' : 'tiếng Anh'}). Chấm ở cột bên phải: <b>EN</b>/<b>ZH</b> = con nói được, bấm lần nữa = nói cùng cô.</div>` : ''}
       <p class="small">Bấm 🎯 cạnh tên bé để chọn đúng bạn đó.</p>
       <div class="ctl"><button class="btn ghost" id="nx">Tiếp: Ôn nhanh ▶</button></div>`;
     },
@@ -222,7 +224,7 @@ const CTL = {
         <button class="mk${lv(m.zh)}" data-intro="${s.id}|zh">ZH ${m.zh === 2 ? '✓' : m.zh === 1 ? '~' : ''}</button>`;
     },
     kbind(st) {
-      $$('[data-pick]').forEach(b => b.onclick = () => spin(b.dataset.pick, (st.spin || {}).l || 'en'));
+      $$('[data-pick]').forEach(b => b.onclick = () => spin(b.dataset.pick, ((st.spin || {}).l || 'en') + ((st.spin || {}).q === 'dad' ? '|dad' : '')));
       $$('[data-intro]').forEach(b => b.onclick = () => {
         const [id, l] = b.dataset.intro.split('|'), cur = ((((room.marks || {})[id] || {}).intro) || {})[l] || 0;
         mark(id, 'intro/' + l, cur === 2 ? 1 : cur === 1 ? null : 2);
@@ -450,7 +452,8 @@ const CTL = {
     bind() { $('#kq').onclick = () => { TAB = 'kq'; draw(); }; $('#bk').onclick = () => setState({ ph: 'cho' }); }
   }
 };
-function spin(seat, l) { if (!seat) return toast('Chưa có bé nào trong lớp.'); const sp = (room.state || {}).spin || {}; setState({ spin: { seat, l, n: (sp.n || 0) + 1 } }); }
+/* l = 'en' | 'zh', có thể kèm '|dad' (Canopy: hỏi về nghề của ba thay vì của mẹ) */
+function spin(seat, l) { if (!seat) return toast('Chưa có bé nào trong lớp.'); const sp = (room.state || {}).spin || {}, [lg, q] = String(l).split('|'); setState({ spin: { seat, l: lg, q: q || null, n: (sp.n || 0) + 1 } }); }
 function qButtons(st, i, n, rv) {
   return `<div class="ctl"><button class="btn ghost" id="pv">◀ Câu trước</button><button class="btn ghost" id="rp">🔁 Phát lại</button>
     ${rv ? '<button class="btn ghost" id="ag">↺ Hỏi lại câu này</button>' : '<button class="btn y" id="rv">👁 Hiện đáp án</button>'}
