@@ -119,7 +119,30 @@ function reveal() {
     [card.querySelector('[data-sc$="|dung"]'), card.querySelector('.mk-star')].forEach(el => { if (!el) return; el.classList.remove('jump'); void el.offsetWidth; el.classList.add('jump'); });
   }, 250 + j * 160));
   if (good.length) SND.beep('win');
+  autoRvStart();
 }
+/* Hiện đáp án xong: tự sang câu sau vài giây để cô săn đáp án câu mới trong chat (tắt được, không tự sang phần khác) */
+const AUTO_RV_S = { on: 4, tone: 6, lop: 5, xep: 5 };
+let autoRvT = null, autoRvLeft = 0, autoRvKey = '';
+function autoRvLast() {
+  if (S.ph === 'on') return S.i + 1 >= QUIZ.length;
+  if (S.ph === 'tone') return S.i + 1 >= TONES.length;
+  if (S.ph === 'lop') return S.li + 1 >= lopTurnsNow().length;
+  if (S.ph === 'xep') return S.xj >= 3;
+  return true;
+}
+function autoRvStop() { clearInterval(autoRvT); autoRvT = null; autoRvKey = ''; }
+function autoRvStart() {
+  autoRvStop();
+  if (S.autoRv === false || !AUTO_RV_S[S.ph] || autoRvLast()) return;
+  autoRvLeft = AUTO_RV_S[S.ph]; autoRvKey = VKEY; autoRvShow();
+  autoRvT = setInterval(() => {
+    if (!S || VKEY !== autoRvKey || S.step !== 'rv') return autoRvStop();
+    if (--autoRvLeft <= 0) { autoRvStop(); step(1); } else autoRvShow();
+  }, 1000);
+}
+function autoRvShow() { const b = $('#mmCtl [data-act="next"]'); if (b && !b.querySelector('.cd')) b.insertAdjacentHTML('beforeend', ' <span class="cd"></span>'); const c = b && b.querySelector('.cd'); if (c) c.textContent = '(' + autoRvLeft + ')'; }
+const autoRvChk = () => `<label class="mm-chk" title="Hiện đáp án xong thì vài giây sau tự sang câu tiếp"><input type="checkbox" data-act="autoRv" ${S.autoRv !== false ? 'checked' : ''}> Tự sang câu</label>`;
 
 /* ======================= vẽ ======================= */
 function draw() {
@@ -131,6 +154,7 @@ function draw() {
   if (v.key !== VKEY) { VKEY = lastStageKey = v.key; $('#mmStage').innerHTML = v.html; v.bind && v.bind(); }
   else v.update && v.update();
   $('#mmCtl').innerHTML = v.ctl || '';
+  if (autoRvT) autoRvShow();
   $('#mmTip').innerHTML = v.tip ? '💡 ' + v.tip : '';
   if (v.audio && v.akey !== AKEY) { AKEY = v.akey; play(v.audio); }
   document.body.dataset.ph = S.ph;
@@ -327,7 +351,7 @@ function vOn() {
 function qCtl(i, n, rv, nextPh) {
   return nav(i > 0 ? 'prev' : '', '', '', `<button class="btn ghost" data-act="rp">🔁 Phát lại</button>`)
     + (rv ? '' : `<button class="btn y" data-act="rv">👁 Hiện đáp án</button>`)
-    + `<button class="btn" data-act="next">${i + 1 < n ? 'Câu tiếp ▶' : `Tiếp: ${phaseName(nextPh)} ▶`}</button>`;
+    + `<button class="btn" data-act="next">${i + 1 < n ? 'Câu tiếp ▶' : `Tiếp: ${phaseName(nextPh)} ▶`}</button>` + autoRvChk();
 }
 
 /* --- Máy bay thanh điệu --- */
@@ -369,7 +393,7 @@ function vLop() {
     ctl: nav(li > 0 ? 'prev' : '', '', '', `<button class="btn ghost" data-act="dm" data-id="${kid.id}">📋 Chép lời nhắn riêng cho ${esc(kid.kid)}</button>`)
       + `<button class="btn y" data-act="noiKid" data-id="${kid.id}">🎤 ${esc(kid.kid)} nói được +⭐</button>`
       + (rv ? '' : `<button class="btn y" data-act="rv">👁 Hiện đáp án</button>`)
-      + `<button class="btn ghost" data-act="rp">🔁 Phát lại</button><button class="btn" data-act="next">${li + 1 < n ? 'Lượt tiếp ▶' : `Tiếp: ${phaseName('boss')} ▶`}</button>`,
+      + `<button class="btn ghost" data-act="rp">🔁 Phát lại</button><button class="btn" data-act="next">${li + 1 < n ? 'Lượt tiếp ▶' : `Tiếp: ${phaseName('boss')} ▶`}</button>` + autoRvChk(),
     tip: `Bấm <b>📋 Chép lời nhắn riêng</b> rồi dán vào tin nhắn riêng (chat Zoom → gửi riêng cho ${esc(kid.kid)}) để ba mẹ nhắc nhỏ con từ cần nói. Màn này không hiện đáp án trước. Con nói xong cô bấm 🎤, các bạn gõ số, cô bấm số từng bé rồi Hiện đáp án.`,
     dm: `${kid.kid} ơi, con là cô giáo nhỏ! Ba mẹ nhắc nhỏ con nói cho cả lớp nghe bằng ${l === 'zh' ? 'tiếng Trung' : 'tiếng Anh'}: "${txt(it.k, l)}"${W[it.k] && W[it.k].py && l === 'zh' ? ' (' + W[it.k].py + ')' : ''}. Nói xong con giơ tay nhé!`
   };
@@ -463,7 +487,7 @@ function vXep() {
       <div class="mm-prompt"><button class="say ${rv ? to : X.from}" data-play="${xepAud(sc0, rv ? to : X.from)}"><span class="ic">🔊</span>${rv ? `<span class="${to}">${esc(sc0[to])}</span>` : flag(X.from)}</button></div>
       ${numPics(ord.map(k => X.scenes[k].img), ans, rv, 'wide')}
       <p class="ask-line">${rv ? `🔁 Cả lớp nói theo bằng ${to === 'zh' ? 'tiếng Trung' : 'tiếng Anh'} nhé!` : '⌨️ Câu này là tranh số mấy? Con gõ 1, 2, 3 hoặc 4 vào chat!'}</p>`,
-    ctl: `<button class="btn ghost" data-act="prev">◀ Trước</button><button class="btn ghost" data-act="rp">🔁 Phát lại</button>${rv ? '' : '<button class="btn y" data-act="rv">👁 Hiện đáp án</button>'}<button class="btn" data-act="next">${j < 3 ? 'Câu tiếp ▶' : r + 1 < R ? 'Đoạn tiếp ▶' : `Tiếp: ${phaseName('vinh')} ▶`}</button>`,
+    ctl: `<button class="btn ghost" data-act="prev">◀ Trước</button><button class="btn ghost" data-act="rp">🔁 Phát lại</button>${rv ? '' : '<button class="btn y" data-act="rv">👁 Hiện đáp án</button>'}<button class="btn" data-act="next">${j < 3 ? 'Câu tiếp ▶' : r + 1 < R ? 'Đoạn tiếp ▶' : `Tiếp: ${phaseName('vinh')} ▶`}</button>` + autoRvChk(),
     tip: `Hiện đáp án: cô Hươu đọc câu đó bằng ${to === 'zh' ? 'tiếng Trung' : 'tiếng Anh'} (chuyển ngữ), cả lớp nói theo. Bạn nói theo tốt cô bấm 🎤.`
   };
 }
@@ -682,13 +706,13 @@ function home(list) {
 /* ======================= bấm nút ======================= */
 const ACT = {
   start: () => goPhase('intro'), next: () => step(1), prev: () => step(-1), rv: reveal,
-  rp: () => { go({ rp: (S.rp || 0) + 1 }); }, undo, add: addBox, report: reportBox, set: setBox, copyVinh,
+  rp: () => { autoRvStop(); go({ rp: (S.rp || 0) + 1 }); }, undo, add: addBox, report: reportBox, set: setBox, copyVinh,
   mute: () => { muted = !muted; lsSet('mm-mute', muted); if (muted) { SND.stop(); BA.stop(); } draw(); },
   full: () => { try { document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen(); } catch (e) { } },
   noiKid: b => bump(b.dataset.id, 'noi', 1),
   dm: b => { const t = VIEW && VIEW.dm; if (!t) return; (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(() => toast('Đã chép. Cô dán vào tin nhắn riêng trên Zoom.')).catch(() => prompt('Cô chép lời nhắn này:', t)); },
   bossGo, bossNext, bossEnd: () => { S.boss.end = Date.now(); save(); bossTick(); },
-  auto: b => { S.auto = b.checked; save(); }, autoNoi: b => { S.autoNoi = b.checked; save(); },
+  auto: b => { S.auto = b.checked; save(); }, autoRv: b => { S.autoRv = b.checked; save(); if (!b.checked) { autoRvStop(); draw(); } else if (S.step === 'rv') autoRvStart(); }, autoNoi: b => { S.autoNoi = b.checked; save(); },
   dur: b => { S.boss.dur = (+b.value || 3) * 60000; save(); },
 };
 document.addEventListener('click', e => {
