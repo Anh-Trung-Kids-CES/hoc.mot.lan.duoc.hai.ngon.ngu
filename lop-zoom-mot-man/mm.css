@@ -217,3 +217,18 @@ button.mm-pick.lp:hover{border-color:var(--sky)}
 #rt th{min-width:74px}
 #rt th:first-child{min-width:130px}
 #rt td{white-space:normal}
+/* Ghép tranh: nghe truyện (tranh sáng theo câu) rồi ghép dải truyện */
+.xp-book figure{transition:transform .25s,box-shadow .25s,opacity .25s}
+.xp-book figure.on{transform:scale(1.06);border-color:var(--yellow);box-shadow:0 0 0 7px #FFE9A8,var(--shadow);z-index:1}
+.xp-book figure .no{background:var(--sky)}
+.xp-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;width:min(100%,calc(4 * min(24vh,250px) + 30px));background:#fff;border:3px dashed var(--line);border-radius:20px;padding:10px}
+.xp-slot{position:relative;aspect-ratio:4/3;border-radius:14px;background:var(--yellow-soft);display:grid;place-items:center;font-size:32px;border:3px dashed #EAD9AE}
+.xp-slot.cur{border-color:var(--sky);background:var(--sky-soft);animation:glow 1.2s ease-in-out infinite alternate}
+.xp-slot.full{border:3px solid var(--green);background:#fff;padding:3px;display:flex;flex-direction:column}
+.xp-slot.full img{width:100%;flex:1;min-height:0;object-fit:cover;border-radius:10px}
+.xp-slot.full small{font-weight:700;font-size:clamp(11px,1.5vh,15px);line-height:1.15;padding-top:2px}
+.xp-slot.new{animation:rise .7s cubic-bezier(.2,1.4,.4,1)}
+.xp-slot .no{position:absolute;top:-10px;left:-10px;width:30px;height:30px;border-radius:50%;background:var(--green);color:#fff;font-weight:800;font-size:17px;display:grid;place-items:center;border:2px solid #fff;z-index:2}
+.xp-slot:not(.full) .no{background:#C9B98F}
+.xp-pool .mm-pick.placed{opacity:.35;filter:grayscale(.6)}
+.xp-done{position:absolute;inset:0;display:grid;place-items:center;font-size:64px;color:var(--green);font-weight:800;text-shadow:0 3px 0 #fff}

@@ -35,12 +35,12 @@ Gõ đúng tên con như trên web học để sao tự cộng đúng bé. Thêm
 | 14–19 | Máy bay thanh điệu | Con gõ số đường bay 1–4; hiện đáp án: cả lớp đưa tay bay theo |
 | 19–25 | Cô giáo nhỏ | Mỗi bạn một lượt: con chọn 1 trong 3 tranh (nói số hoặc gõ chat, cô bấm vào tranh), chữ tiếng Anh và tiếng Trung hiện dưới tranh (🔊 nghe mẫu); con nói theo hướng dẫn của cô, cô bấm "Nói được tiếng Anh" / "Nói được tiếng Trung", mỗi tiếng +⭐ phát biểu. Báo cáo ghi EN ✓ · ZH ✓ |
 | 25–30 | Đấu Rồng Lửa | Cô hiện một câu cho cả lớp, các con gõ số, cô bấm số từng bé ở bảng bên phải; câu đúng +1 ⚡ cho anh hùng ngay; đủ các bé thì tự sang câu (tắt được); chọn 2–5 phút |
-| 30–36 | Nghe truyện, sắp xếp tranh | Mỗi đoạn một câu hỏi: cô phát cả đoạn 4 câu, 4 tranh xáo trộn có số, các con chọn **một đáp án thứ tự** trong 3 (ví dụ "Đáp án 2: 2 → 4 → 1 → 3") và gõ số đáp án vào chat. Hiện đáp án: tranh xếp lại đúng thứ tự kèm chữ, cô Hươu đọc lại cả đoạn bằng tiếng kia (chuyển ngữ). Phần này không tự sang đoạn sau |
+| 30–36 | Nghe truyện, ghép tranh | Mỗi đoạn: **(1) nghe truyện trước**: 4 tranh theo đúng thứ tự, có chữ, tranh sáng lên theo từng câu cô Hươu đọc (bấm Nghe lại truyện để nghe lần 2); **(2) ghép tranh**: tranh xáo trộn có số, cô Hươu đọc từng câu, các con gõ số tranh; hiện đáp án thì tranh bay vào dải truyện 4 ô, câu đó được đọc bằng tiếng kia; tranh đã ghép có ✓ và mờ đi nên càng về sau càng dễ; ghép xong câu 4 thì đọc lại cả đoạn bằng tiếng kia. Báo cáo ghi số câu đúng mỗi đoạn (ví dụ 3/4) |
 | 36–40 | Vinh danh | Từng bạn một (theo thứ tự trong lớp, không xếp hạng): ảnh, danh hiệu theo việc con làm nhiều nhất, số sao; rồi huy hiệu cả nhóm |
 
 **Tích đủ thì tự hiện đáp án** (ô tích ở thanh nút, mặc định bật): cô tích xong số của bé cuối cùng thì gần 1 giây sau web tự hiện đáp án đúng và cộng sao, không cần bấm Hiện đáp án.
 
-**Tự sang câu** (ô tích ở thanh nút, mặc định bật): bấm Hiện đáp án xong, bạn đúng tự được cộng ✅ và sao (ô nhảy lên), vài giây sau web tự sang câu tiếp (Ôn nhanh 4 giây, Thanh điệu 6) để cô săn đáp án câu mới trong chat. Nút Câu tiếp hiện số giây đếm ngược. Câu cuối của mỗi phần không tự sang phần khác. Ô số 1–2–3 vẫn do cô tự tích theo chat.
+**Tự sang câu** (ô tích ở thanh nút, mặc định bật): bấm Hiện đáp án xong, bạn đúng tự được cộng ✅ và sao (ô nhảy lên), vài giây sau web tự sang câu tiếp (Ôn nhanh 4 giây, Thanh điệu 6, Ghép tranh 5; câu 4 của Ghép tranh thì cô tự bấm) để cô săn đáp án câu mới trong chat. Nút Câu tiếp hiện số giây đếm ngược. Câu cuối của mỗi phần không tự sang phần khác. Ô số 1–2–3 vẫn do cô tự tích theo chat.
 
 Phím tắt: → tiếp / câu tiếp, ← trước, Space hiện đáp án, R phát lại, Z hoàn tác.
 

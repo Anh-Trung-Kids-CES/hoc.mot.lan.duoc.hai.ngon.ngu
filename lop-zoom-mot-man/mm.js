@@ -31,7 +31,7 @@ const MM_PH = [
   { id: 'tone', n: 'Máy bay thanh điệu', m: '14–19', ic: '✈️' },
   { id: 'lop', n: 'Cô giáo nhỏ', m: '19–25', ic: '📣' },
   { id: 'boss', n: 'Đấu Rồng Lửa', m: '25–30', ic: '🐉' },
-  { id: 'xep', n: 'Nghe truyện, chọn tranh', m: '30–36', ic: '📖' },
+  { id: 'xep', n: 'Nghe truyện, ghép tranh', m: '30–36', ic: '📖' },
   { id: 'vinh', n: 'Vinh danh', m: '36–40', ic: '🏆' },
 ];
 const NOPT = { on: 3, tone: 4, lop: 3, boss: 3, xep: 4 };   // số lựa chọn các con gõ trong chat
@@ -68,7 +68,7 @@ function autoCounts(id) {
     const a = m[id]; if (!a) return;
     const p = q.split('_')[0];
     if (p === 'boss') { o.rongN++; if (a.ok) o.rong++; return; }
-    if (p === 'xep' && S.rv[q]) o['x' + q.split('_')[1]] = a.ok ? 'đúng' : 'chưa đúng';
+    if (p === 'xep') { const x = o['x' + q.split('_')[1]] || (o['x' + q.split('_')[1]] = [0, 0]); x[1]++; if (a.ok) x[0]++; }
     if (!S.rv[q]) return;
     if (a.ok) o.dung++;
     if (o[p]) { o[p][1]++; if (a.ok) o[p][0]++; }
@@ -102,7 +102,7 @@ function curQ() {
   const p = S.ph, run = S.run || 0;
   if (p === 'on') { const q = QUIZ[S.i]; return q && { qid: `on_${S.i}_${run}`, ans: quizAns(q) + 1, n: 3 }; }
   if (p === 'tone') { const x = TONES[S.i]; return x && { qid: `tone_${S.i}_${run}`, ans: x.t, n: 4 }; }
-  if (p === 'xep') { if (!XEP[S.xr || 0]) return null; return { qid: `xep_${S.xr || 0}_${run}`, ans: xepOpts(S.xr || 0).ans, n: 3 }; }
+  if (p === 'xep') { const j = S.xj == null ? -1 : S.xj; if (!XEP[S.xr || 0] || j < 0 || j > 3) return null; return { qid: `xep_${S.xr || 0}_${j}_${run}`, ans: xepOrder(S.xr || 0).indexOf(j) + 1, n: 4 }; }
   if (p === 'boss') { const b = S.boss; if (!b.t0 || !b.q || bossDoneNow()) return null; return { qid: `boss_${b.run}_${b.qn}`, ans: b.q.ans + 1, n: 3, now: true }; }
   return null;
 }
@@ -131,11 +131,12 @@ function reveal() {
   autoRvStart();
 }
 /* Hiện đáp án xong: tự sang câu sau vài giây để cô săn đáp án câu mới trong chat (tắt được, không tự sang phần khác) */
-const AUTO_RV_S = { on: 4, tone: 6 };   // Truyện: đọc lại cả đoạn khi hiện đáp án nên cô tự bấm sang đoạn sau
+const AUTO_RV_S = { on: 4, tone: 6, xep: 5 };   // Ghép tranh: tự sang câu, câu 4 (đọc lại cả đoạn) thì cô tự bấm
 let autoRvT = null, autoRvLeft = 0, autoRvKey = '';
 function autoRvLast() {
   if (S.ph === 'on') return S.i + 1 >= QUIZ.length;
   if (S.ph === 'tone') return S.i + 1 >= TONES.length;
+  if (S.ph === 'xep') return (S.xj == null ? -1 : S.xj) >= 3;
   return true;
 }
 function autoRvStop() { clearInterval(autoRvT); autoRvT = null; autoRvKey = ''; }
@@ -242,7 +243,7 @@ function goPhase(ph) {
   if (!S.t0 && ph !== 'cho') p.t0 = Date.now();
   if (ph === 'on' || ph === 'tone' || ph === 'noi') p.i = 0;
   if (ph === 'lop') p.li = 0;
-  if (ph === 'xep') p.xr = 0;
+  if (ph === 'xep') { p.xr = 0; p.xj = -1; }
   if (ph === 'vinh') p.vi = 0;
   SND.stop(); BA.stop(); noiRun++;
   go(p);
@@ -474,30 +475,49 @@ function bossHit(id) {
   flash($('#bHero'), 'charge', 700);
   setTimeout(() => floatOn(id, '+1⚡'), 50);
 }
-/* --- Nghe truyện, sắp xếp tranh: nghe cả đoạn, chọn MỘT đáp án thứ tự (ví dụ Đáp án 2: 4-3-1-2), hiện đáp án đọc bằng tiếng kia --- */
-function xepOpts(r) {
-  const ord = xepOrder(r), right = [0, 1, 2, 3].map(k => ord.indexOf(k) + 1).join('-'), opts = [right];
-  let sd = 31 + r * 7 + (S.run || 0);
-  while (opts.length < 3) { const x = shuffleSeeded([1, 2, 3, 4], sd++).join('-'); if (opts.indexOf(x) < 0) opts.push(x); }
-  const pos = (r * 2 + 1 + (S.run || 0)) % 3, sh = opts.slice(1); sh.splice(pos, 0, right);   // đáp án đúng đổi chỗ giữa các đoạn
-  return { opts: sh, ans: pos + 1 };
+/* --- Nghe truyện, ghép tranh: (1) nghe cả truyện, tranh sáng lần lượt theo câu; (2) ghép tranh từng câu: cô Hươu đọc câu, các con gõ số tranh,
+   hiện đáp án thì tranh bay vào dải truyện; tranh đã ghép mờ đi nên càng về sau càng dễ; ghép xong cô Hươu đọc lại cả truyện bằng tiếng kia --- */
+let xepRun = 0;
+async function xepPlay(key, list) {
+  const my = ++xepRun, live = () => my === xepRun && lastStageKey === key;
+  await sleep(300);
+  for (const [k, src] of list) {
+    if (!live()) return;
+    $$('.xp-book figure').forEach((f, j) => f.classList.toggle('on', j === k));
+    await SND.play([src]); if (!live()) return; await sleep(500);
+  }
+  $$('.xp-book figure').forEach(f => f.classList.remove('on'));
 }
 function vXep() {
-  const R = XEP.length, r = Math.min(R - 1, S.xr || 0), X = XEP[r], ord = xepOrder(r), rv = S.step === 'rv', to = X.to, { opts, ans } = xepOpts(r);
-  const seq = l => { const a = []; X.scenes.forEach(sc0 => { a.push(xepAud(sc0, l)); a.push(600); }); return a; };
-  const picsAsk = `<div class="mm-pics wide n4">${ord.map((k, j) => `<div class="mm-pick"><img src="${X.scenes[k].img}" alt=""><span class="no">${j + 1}</span></div>`).join('')}</div>`;
-  const picsRv = `<div class="mm-story">${X.scenes.map(sc0 => `<figure class="ok"><span class="no">${ord.indexOf(X.scenes.indexOf(sc0)) + 1}</span><img src="${sc0.img}" alt=""><figcaption class="${to}">${esc(sc0[to])}</figcaption></figure>`).join('')}</div>`;
-  const chips = `<div class="xp-opts">${opts.map((o, j) => `<div class="xp-opt${rv && j + 1 === ans ? ' right' : ''}${rv && j + 1 !== ans ? ' dim' : ''}"><b>Đáp án ${j + 1}</b><span>${o.split('-').join(' → ')}</span></div>`).join('')}</div>`;
+  const R = XEP.length, r = Math.min(R - 1, S.xr || 0), X = XEP[r], ord = xepOrder(r), j = S.xj == null ? -1 : S.xj, rv = S.step === 'rv', from = X.from, to = X.to;
+  const lname = l => l === 'zh' ? 'tiếng Trung' : 'tiếng Anh';
+  if (j < 0) {   // nghe cả truyện trước
+    const list = X.scenes.map((sc0, k) => [k, xepAud(sc0, from)]);
+    return {
+      key: ['xep', r, 'nghe', S.rp || 0].join('|'),
+      html: `<div class="qno">📖 ${esc(X.title)} · đoạn ${r + 1}/${R} ${flag(from)}</div>
+        <p class="ask-line">👂 Các con nghe và xem truyện nhé. Nhớ tranh nào trước, tranh nào sau!</p>
+        <div class="mm-story xp-book">${X.scenes.map((sc0, k) => `<figure><span class="no">${k + 1}</span><img src="${sc0.img}" alt=""><figcaption class="${from}">${esc(sc0[from])}</figcaption></figure>`).join('')}</div>`,
+      ctl: `${r > 0 ? '<button class="btn ghost" data-act="prev">◀ Trước</button>' : ''}<button class="btn ghost" data-act="rp">🔁 Nghe lại truyện</button><button class="btn" data-act="next">Bắt đầu ghép tranh ▶</button>`,
+      tip: `Cô Hươu đọc cả đoạn bằng ${lname(from)}, tranh sáng lên theo từng câu. Nghe xong (có thể nghe 2 lần), bấm <b>Bắt đầu ghép tranh</b>: tranh xáo trộn, cô Hươu đọc lại từng câu để các con tìm tranh.`,
+      bind() { if (!muted) xepPlay(lastStageKey, list); }
+    };
+  }
+  const sc0 = X.scenes[j], ans = ord.indexOf(j) + 1, filled = rv ? j + 1 : j, done = rv && j === 3;
+  const strip = `<div class="xp-strip">${X.scenes.map((x, k) => k < filled ? `<div class="xp-slot full${k === j && rv ? ' new' : ''}"><img src="${x.img}" alt=""><span class="no">${k + 1}</span><small class="${to}">${esc(x[to])}</small></div>` : `<div class="xp-slot${k === j ? ' cur' : ''}"><span class="no">${k + 1}</span>${k === j ? '❓' : ''}</div>`).join('')}</div>`;
+  const pics = `<div class="mm-pics wide n4 xp-pool">${ord.map((k, c) => { const placed = k < j || (rv && k === j); return `<div class="mm-pick${rv && k === j ? ' right' : ''}${placed && !(rv && k === j) ? ' placed' : ''}"><img src="${X.scenes[k].img}" alt=""><span class="no">${c + 1}</span>${placed && !(rv && k === j) ? '<span class="xp-done">✓</span>' : ''}</div>`; }).join('')}</div>`;
+  const seqTo = []; X.scenes.forEach(x => { seqTo.push(xepAud(x, to)); seqTo.push(500); });
   return {
-    key: ['xep', r, rv ? 1 : 0, S.run || 0].join('|'), akey: ['xep', r, rv ? 1 : 0, S.rp || 0, S.run || 0].join('|'),
-    audio: rv ? seq(to) : seq(X.from),
-    html: `<div class="qno">📖 ${esc(X.title)} · đoạn ${r + 1}/${R} ${flag(rv ? to : X.from)}</div>
-      <div class="mm-prompt"><button class="say ${rv ? to : X.from}" data-play-seq="${rv ? to : X.from}"><span class="ic">🔊</span>${rv ? (to === 'zh' ? 'Nghe bằng tiếng Trung' : 'Nghe bằng tiếng Anh') : 'Nghe cả đoạn'}</button></div>
-      ${rv ? picsRv : picsAsk}${chips}
-      <p class="ask-line">${rv ? `🔁 Thứ tự đúng đây! Cả lớp nói theo bằng ${to === 'zh' ? 'tiếng Trung' : 'tiếng Anh'} nhé!` : '⌨️ Các tranh xếp theo thứ tự nào? Con gõ số đáp án 1, 2 hoặc 3 vào chat!'}</p>`,
-    seq: rv ? seq(to) : seq(X.from),
-    ctl: `${r > 0 ? '<button class="btn ghost" data-act="prev">◀ Trước</button>' : ''}<button class="btn ghost" data-act="rp">🔁 Nghe lại</button>${rv ? '' : '<button class="btn y" data-act="rv">👁 Hiện đáp án</button>'}<button class="btn" data-act="next">${r + 1 < R ? 'Đoạn tiếp ▶' : `Tiếp: ${phaseName('vinh')} ▶`}</button>` + autoRvChk(),
-    tip: `Cô phát cả đoạn (4 câu) bằng ${X.from === 'zh' ? 'tiếng Trung' : 'tiếng Anh'}, tranh xáo trộn có số. Các con gõ <b>số đáp án</b> (1, 2 hoặc 3) vào chat, cô tích cho từng bé. Hiện đáp án: tranh xếp lại đúng thứ tự, cô Hươu đọc lại bằng ${to === 'zh' ? 'tiếng Trung' : 'tiếng Anh'} (chuyển ngữ), cả lớp nói theo.`
+    key: ['xep', r, j, rv ? 1 : 0, S.run || 0].join('|'), akey: ['xep', r, j, rv ? 1 : 0, S.rp || 0, S.run || 0].join('|'),
+    audio: done ? [xepAud(sc0, to), 900].concat(seqTo) : rv ? [xepAud(sc0, to), 600, xepAud(sc0, to)] : [xepAud(sc0, from), 700, xepAud(sc0, from)],
+    seq: seqTo,
+    html: `<div class="qno">🧩 Ghép tranh · ${esc(X.title)} · câu ${j + 1}/4</div>
+      ${strip}
+      <div class="mm-prompt"><button class="say ${rv ? to : from}" data-play="${xepAud(sc0, rv ? to : from)}"><span class="ic">🔊</span>${rv ? `<span class="${to}">${esc(sc0[to])}</span>` : `Câu ${j + 1} ${flag(from)}`}</button>${done ? `<button class="say ${to}" data-play-seq="1"><span class="ic">📖</span>Cả truyện</button>` : ''}</div>
+      ${pics}
+      <p class="ask-line">${done ? `🎉 Ghép xong cả truyện! Cả lớp nghe lại bằng ${lname(to)} và nói theo nhé!` : rv ? `🔁 Cả lớp nói theo bằng ${lname(to)} nhé!` : `⌨️ Câu ${j + 1} là tranh số mấy? Con gõ số vào chat!`}</p>`,
+    ctl: `<button class="btn ghost" data-act="prev">◀ Trước</button><button class="btn ghost" data-act="rp">🔁 Phát lại</button>${rv ? '' : '<button class="btn y" data-act="rv">👁 Hiện đáp án</button>'}<button class="btn" data-act="next">${j < 3 ? 'Câu tiếp ▶' : r + 1 < R ? 'Đoạn tiếp ▶' : `Tiếp: ${phaseName('vinh')} ▶`}</button>` + autoRvChk(),
+    tip: `Tranh đã ghép có dấu ✓ và mờ đi, các con chỉ cần tìm trong các tranh còn lại. Hiện đáp án: tranh bay vào dải truyện, cô Hươu đọc câu đó bằng ${lname(to)} (chuyển ngữ). Ghép xong câu 4, cô Hươu đọc lại cả đoạn bằng ${lname(to)}.`
   };
 }
 
@@ -550,7 +570,12 @@ function step(d) {
   }
   if (p === 'lop') { const li = (S.li || 0) + d; if (li < 0) return; if (li >= lopTurnsNow().length) return goPhase(nx); return go(Object.assign(P, { li })); }
   if (p === 'boss') return d > 0 ? goPhase(nx) : null;
-  if (p === 'xep') { const r = (S.xr || 0) + d; if (r < 0) return; if (r >= XEP.length) return goPhase(nx); return go(Object.assign(P, { xr: r })); }
+  if (p === 'xep') {
+    let r = S.xr || 0, j = (S.xj == null ? -1 : S.xj) + d;
+    if (j > 3) { r++; j = -1; } if (j < -1) { r--; j = 3; }
+    if (r < 0) return; if (r >= XEP.length) return goPhase(nx);
+    xepRun++; return go(Object.assign(P, { xr: r, xj: j }));
+  }
   if (p === 'vinh') { const vi = (S.vi || 0) + d; if (vi < 0 || vi > S.kids.length) return; return go({ vi, rp: 0 }); }
 }
 
@@ -640,7 +665,7 @@ const RCOLS = [
   ['tone', 'Thanh điệu chọn đúng'], ['toneCham', 'Cô chấm thanh điệu'], ['lopEN', 'Cô giáo nhỏ: nói EN'], ['lopZH', 'Cô giáo nhỏ: nói ZH'],
   ['rongTxt', 'Đấu Rồng Lửa: đúng/câu'], ['xep0', 'XEP0'], ['xep1', 'XEP1']
 ];
-function rcolName(c) { if (c[0] === 'xep0' || c[0] === 'xep1') { const X = XEP[+c[0].slice(3)]; return X ? `Xếp tranh (nghe ${X.from === 'zh' ? 'ZH' : 'EN'}, đọc lại ${X.to === 'zh' ? 'ZH' : 'EN'})` : ''; } return c[1]; }
+function rcolName(c) { if (c[0] === 'xep0' || c[0] === 'xep1') { const X = XEP[+c[0].slice(3)]; return X ? `Ghép tranh (nghe ${X.from === 'zh' ? 'ZH' : 'EN'}, đọc lại ${X.to === 'zh' ? 'ZH' : 'EN'})` : ''; } return c[1]; }
 function reportRows() {
   return S.kids.map(k => {
     const t = totals(k.id), a = t.a, ch = (S.chao || {})[k.id] || {}, lt0 = (S.lt || {})[k.id] || {}, h = (S.h4 || {})[k.id] || {};
@@ -649,7 +674,7 @@ function reportRows() {
       chaoEN: chaoLv(ch.en), chaoZH: chaoLv(ch.zh), onEN: pct(a.onEN), onZH: pct(a.onZH), doc: pct(a.doc), tone: pct(a.tone),
       toneCham: (g[2] + g[1] + g[0]) ? `chuẩn ${g[2]} · gần ${g[1]} · cần luyện ${g[0]}` : '',
       lopEN: lt0.en ? 'được' : (lt0.c != null ? 'chưa' : ''), lopZH: lt0.zh ? 'được' : (lt0.c != null ? 'chưa' : ''),
-      rongTxt: a.rongN ? `${a.rong}/${a.rongN}` : '', xep0: a.x0 || '', xep1: a.x1 || '',
+      rongTxt: a.rongN ? `${a.rong}/${a.rongN}` : '', xep0: a.x0 ? pct(a.x0) : '', xep1: a.x1 ? pct(a.x1) : '',
       td: h.td ?? '', cx: h.cx ?? '', tt: h.tt ?? '', tieu: title(t)[0] };
   });
 }
@@ -740,7 +765,7 @@ function home(list) {
 /* ======================= bấm nút ======================= */
 const ACT = {
   start: () => goPhase('intro'), next: () => step(1), prev: () => step(-1), rv: reveal,
-  rp: () => { autoRvStop(); go({ rp: (S.rp || 0) + 1 }); }, undo, add: addBox, report: reportBox, set: setBox, copyVinh,
+  rp: () => { autoRvStop(); xepRun++; go({ rp: (S.rp || 0) + 1 }); }, undo, add: addBox, report: reportBox, set: setBox, copyVinh,
   mute: () => { muted = !muted; lsSet('mm-mute', muted); if (muted) { SND.stop(); BA.stop(); } draw(); },
   full: () => { try { document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen(); } catch (e) { } },
   noiKid: b => bump(b.dataset.id, 'noi', 1),
