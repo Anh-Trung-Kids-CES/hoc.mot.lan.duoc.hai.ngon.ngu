@@ -28,5 +28,7 @@ Học xong ngày trước mới mở ngày sau. Cô giáo thêm `?gv=1` vào lin
 - `tai-nguyen/nhan-vat/nv_*_a.webp`: Vũ, anh trai Vũ, người diễn (Unit 4), Miss Hoa, Mrs Lan (người, thay cô Hươu khi Mrs Lan nói). Vẽ bằng Nano Banana 2.1, lấy Bông, Leo, anh trai Bông, mẹ Bông làm mẫu nét.
 - Công cụ: `cong-cu/gemini/` (gem.py, ia.py, bat.py, gen_audio.py, merge.py, gen_nv.py). Khoá đặt trong biến môi trường `GEMINI_API_KEY`, không lưu vào repo.
 
+- `tai-nguyen/tranh/`: 186 tranh từ vựng, cắt từ 21 tờ 9 ô vẽ bằng Nano Banana 2.1 qua Batch API (tờ T02, T17 vẽ lại vì có chữ; T20, T21 thêm). Bảng từ → tranh: `cong-cu/gemini/gen_pic.json`, cắt bằng `cong-cu/gemini/cut.py`.
+
 ## Còn thiếu
-Xem `CAN-BO-SUNG.md`: từ chưa có tranh (đang dùng biểu tượng tạm, cần vẽ theo phong cách 21 ngày). Cảnh truyện Unit 1 (bản demo) vẫn vẽ Mrs Lan là cô Hươu.
+Xem `CAN-BO-SUNG.md`: 78 từ chức năng / trừu tượng (yes, what, can, today…) vẫn hiện biểu tượng hoặc thẻ chữ, theo danh sách "Không cần tranh". Cảnh truyện Unit 1 (bản demo) vẫn vẽ Mrs Lan là cô Hươu.
