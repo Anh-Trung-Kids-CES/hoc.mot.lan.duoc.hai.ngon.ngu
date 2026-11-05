@@ -30,6 +30,7 @@ const VOICE = new Audio(); VOICE.preload = 'auto'; try { VOICE.setAttribute('pla
 let voices = []; function loadVoices() { try { voices = speechSynthesis.getVoices(); } catch (e) {} } loadVoices(); try { speechSynthesis.onvoiceschanged = loadVoices; } catch (e) {}
 let RUN = 0;   // mỗi lần dừng / chuyển màn tăng RUN để huỷ chuỗi đang đọc
 function stopAll() { RUN++; try { speechSynthesis.cancel(); } catch (e) {} try { VOICE.onended = null; VOICE.onerror = null; VOICE.pause(); } catch (e) {} recAbort(); }
+function hush() { try { speechSynthesis.cancel(); } catch (e) {} try { VOICE.onended = null; VOICE.onerror = null; VOICE.pause(); } catch (e) {} }
 function tts(text, lang) {
   return new Promise(res => { let done = false; const fin = () => { if (!done) { done = true; res(); } };
     try { if (!('speechSynthesis' in window)) return setTimeout(fin, 700);
@@ -38,12 +39,16 @@ function tts(text, lang) {
       const v = voices.find(v => v.lang.replace('_', '-').toLowerCase() === L.toLowerCase()) || voices.find(v => v.lang.toLowerCase().startsWith(L.slice(0, 2))); if (v) u.voice = v;
       u.onend = fin; u.onerror = fin; speechSynthesis.cancel(); speechSynthesis.speak(u); setTimeout(fin, 1800 + t.length * 180); } catch (e) { setTimeout(fin, 600); } });
 }
-function playFile(src) { return new Promise(res => { try { VOICE.onended = () => res(true); VOICE.onerror = () => res(false); VOICE.src = src; const p = VOICE.play(); if (p && p.catch) p.catch(() => res(false)); } catch (e) { res(false); } }); }
+let PEND = null;   // lời đang phát dở: lời mới bắt đầu thì lời cũ coi như xong, không để chuỗi nào bị treo
+function playFile(src) { if (PEND) { const r = PEND; PEND = null; r('cut'); }
+  return new Promise(res => { let done = false; const fin = v => { if (done) return; done = true; if (PEND === fin) PEND = null; res(v); }; PEND = fin;
+    try { VOICE.onended = () => fin(true); VOICE.onerror = () => fin(false); VOICE.src = src; const p = VOICE.play(); if (p && p.catch) p.catch(() => fin(false)); } catch (e) { fin(false); } }); }
 /* u = {t, l, a}: phát một lời */
 async function say(u) {
   if (!u || !u.t) return; const my = RUN;
+  if (!u.a) { const a = u.l === 'vi' ? ((window.SD && SD.vi_tx) || {})[String(u.t).trim()] : auOf(u.l, u.t); if (a) u = Object.assign({}, u, { a }); }
   if (u.l === 'vi') { cap(u.t); if (u.a) await playFile(u.a); else await wait(Math.min(2200, 400 + u.t.length * 25)); return; }
-  if (u.a) { const ok = await playFile(u.a); if (ok || my !== RUN) return; }
+  if (u.a) { const ok = await playFile(u.a); if (ok || ok === 'cut' || my !== RUN) return; }
   if (my === RUN) await tts(u.t, u.l);
 }
 async function seq(list, gap) { const my = RUN; for (const u of list) { if (my !== RUN) return; await say(u); await wait(gap || 350); } }
@@ -138,7 +143,7 @@ const T = {
   truyen: { n: 'Nghe truyện', ic: 'cx_o_story', sub: 'Truyện kể dần', rules: ['Con nghe truyện 2 lần: một lần bằng tiếng Anh, một lần bằng tiếng Trung.', 'Truyện tự sang trang. Chữ gạch chân là từ con chưa học: con chạm để nghe.'] },
   cham: { n: 'Chạm đúng tranh', ic: 'ls_o_cham_hinh', sub: 'Ai nói câu này?', rules: ['Con nghe một câu.', 'Con chạm vào bạn đã nói câu đó.', 'Chưa đúng cũng không sao: mình làm câu khác, lát nữa gặp lại.'] },
   noi: { n: 'Nói theo', ic: 'ls_o_noi_theo', sub: 'Nói câu của nhân vật', rules: ['Con nghe bạn trong tranh nói trước.', 'Khi micro đỏ nhấp nháy là máy đang thu giọng con. Con nói to nhé!', 'Máy phát lại giọng con rồi tự sang câu tiếp.'] },
-  pdn: { n: 'Phiên dịch nhí', ic: 'ls_o_do_con', sub: 'Leo nói tiếng Anh · Xiaomei nghe tiếng Trung', rules: ['Bạn Leo nói tiếng Anh. Bạn Xiaomei chỉ hiểu tiếng Trung.', 'Con nói lại cho Xiaomei bằng tiếng Trung.', 'Cô đọc đáp án, con nói theo.'] },
+  pdn: { n: 'Phiên dịch nhí', ic: 'ls_o_do_con', sub: 'Leo nói tiếng Anh · Xiaomei nghe tiếng Trung', rules: ['Bạn Leo nói tiếng Anh. Bạn Xiaomei chỉ hiểu tiếng Trung.', 'Con nghe Leo nói, rồi con nói lại bằng tiếng Trung cho Xiaomei.', 'Xiaomei hiểu rồi là con được một ngôi sao.'] },
   hoi: { n: 'Trả lời câu hỏi', ic: 'cx_o_quiz', sub: 'Câu hỏi về cả truyện · YCT 听后回答', rules: ['Con nghe câu hỏi về truyện.', 'Con chạm vào câu trả lời đúng, rồi nói câu trả lời.'] },
   loi: { n: 'Lời lớp học', ic: 'ls_o_xem', sub: 'Câu cô nói mỗi buổi', rules: ['Đây là những câu cô Lan nói trên lớp.', 'Con chạm vào từng thẻ để nghe tiếng Anh và tiếng Trung.'] },
   meo: { n: 'Mẹo âm', ic: 'ls_o_anh_trung', sub: 'Thanh điệu và âm', rules: ['Con nghe và bắt chước âm 3 lần.', 'Rồi con nghe và chạm đúng kí hiệu.'] },
@@ -296,7 +301,7 @@ R.pdn = (step, body) => {
       <div class="sx-brow en">${face('leo')}<span class="sx-bt">${chunks(B.en)}</span></div><div class="sx-brow zh">${face('xiaomei')}<span class="sx-bt zh">${chunks(B.zh)}</span></div>
       <div class="row"><button class="btn g" id="go">Bắt đầu phiên dịch →</button></div></div>`;
     body.querySelector('#go').onclick = () => { stopAll(); next(); };
-    const it = I[0]; X.replay = async () => { stopAll(); await say(en(it.en, it.a_en)); await wait(300); await say(zh(it.zh, it.a_zh)); }; await X.replay(); }
+    const it = I[0]; X.replay = async () => { stopAll(); const me = RUN; await say(en(it.en, it.a_en)); if (me !== RUN) return; await wait(300); if (me !== RUN) return; await say(zh(it.zh, it.a_zh)); }; await X.replay(); }
   async function next() { i++; const my = RUN; dots(i, I.length); if (i >= I.length) return finish(); const it = I[i];
     body.innerHTML = `<div class="sx-pdn2">
       <ol class="sx-steps"><li id="s1">① Nghe Leo nói</li><li id="s2">② Con nói tiếng Trung</li><li id="s3">③ Xiaomei hiểu rồi!</li></ol>
@@ -330,14 +335,14 @@ R.hoi = (step, body) => {
   const back = new Set(); let qi = 0, busy = false;
   const optTx = (o, l) => l === 'zh' ? `<span class="zh">${esc(o[0])}</span><span class="sx-pyl" data-later>${esc(o[1])}</span>` : esc(o);
   async function ask() { const my = RUN; dots(qi, Q.length); if (qi >= Q.length) return finish(); const q = Q[qi];
-    const qu = q.l === 'zh' ? zh(q.q) : en(q.q);
+    const qu = q.l === 'zh' ? zh(q.q, q.a) : en(q.q, q.a);
     body.innerHTML = `<div class="sx-hoi"><span class="ls-lab">${q.yct ? 'YCT口试 听后回答 · ' : ''}Câu ${qi + 1}/${Q.length}${q.again ? ' · gặp lại' : ''}</span>
       <div class="sx-q">${q.img ? pic(q.img, '', 'sx-qimg') : ''}<div>${q.l === 'zh' ? `<b class="zh">${esc(q.q)}</b><span class="sx-pyl" data-later>${esc(q.py || '')}</span>` : `<b>${esc(q.q)}</b>`}</div><button class="ls-b sm" id="pq">${SVG.spk}</button></div>
       <div class="sx-opts">${q.opts.map((o, n) => `<button class="sx-opt" data-n="${n}">${optTx(o, q.l)}</button>`).join('')}</div>
       <div class="sx-microw" hidden id="mr"><div class="ls-mic idle" id="mic"><span class="ls-lv"></span>${SVG.mic}<b></b></div><span class="ls-lab">Con nói câu trả lời nhé!</span></div></div>`;
-    revealPy(body, 900); const play = () => { stopAll(); return say(qu); }; X.replay = play; body.querySelector('#pq').onclick = play; play();
+    revealPy(body, 900); const play = () => { hush(); return say(qu); }; X.replay = play; body.querySelector('#pq').onclick = play; play();
     body.querySelectorAll('.sx-opt').forEach(b => b.onclick = async () => { if (busy) return; busy = true; const n = +b.dataset.n, o = q.opts[n], ou = q.l === 'zh' ? zh(o[0]) : en(o);
-      if (n === q.ans) { stopAll(); sfx.ok(); b.classList.add('right'); pop(b); if (!q.again) star(); await say(ou); if (my !== RUN) return;
+      if (n === q.ans) { hush(); sfx.ok(); b.classList.add('right'); pop(b); if (!q.again) star(); await say(ou); if (my !== RUN) return;
         body.querySelector('#mr').hidden = false; const how = await micTurn(body.querySelector('#mic'), my); if (how === 'gone' || my !== RUN) return; await afterSpeak(how); }
       else { sfx.no(); shake(b); body.querySelectorAll('.sx-opt')[q.ans].classList.add('hint'); const a = q.opts[q.ans]; hopAdd(q.l === 'zh' ? zh(a[0]) : en(a));
         if (!back.has(qi) && !q.again) { back.add(qi); Q.push(Object.assign({}, q, { again: true })); } await hd('later'); }

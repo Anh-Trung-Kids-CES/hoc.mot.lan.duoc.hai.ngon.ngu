@@ -1070,7 +1070,25 @@ vi.update({
     'quiet': 'Cô chưa nghe thấy con nói. Con nói lại to hơn một chút nhé!',
     'quiet2': 'Không sao, mình sang câu tiếp nhé!',
     'next': 'Mình sang câu tiếp nhé!',
+    'did': 'Giỏi lắm! Con làm đúng rồi!',
 })
+
+
+# ---------------------------------------------------------------- dọn ký hiệu đáp án còn sót trong chữ hiện cho con
+def _clean(x):
+    if not isinstance(x, str): return x
+    x = re.sub(r'\s*\[[A-C] [^\]]*\]?\s*$', '', x)
+    x = re.sub(r'\s*\(\s*✓\s*\)?\s*$', '', x)
+    return x
+def _clean_walk(o):
+    if isinstance(o, dict):
+        for k, v in list(o.items()):
+            if k in ('en', 'zh', 'q', 't') and isinstance(v, str): o[k] = _clean(v)
+            elif k == 'opts' and isinstance(v, list): o[k] = [(_clean(x) if isinstance(x, str) else x) for x in v]
+            else: _clean_walk(v)
+    elif isinstance(o, list):
+        for x in o: _clean_walk(x)
+_clean_walk(days_out)
 
 # ---------------------------------------------------------------- luật 5–10 câu mỗi bài (Nguyên tắc 17)
 MIN_Q, MAX_Q = 5, 10
@@ -1194,6 +1212,15 @@ def _walk(o):
         if isinstance(o.get('en'), str): _add('en', o['en'])
         if isinstance(o.get('zh'), str): _add('zh', o['zh'])
         if 't' in o and o.get('l') in ('en', 'zh'): _add(o['l'], o['t'])
+        if isinstance(o.get('rounds'), list):
+            for r in o['rounds']:
+                l = r.get('l', 'en')
+                for q in r.get('qs', []):
+                    _add(l, q.get('q'))
+                    for op in q.get('opts', []):
+                        _add(l, op[0] if isinstance(op, list) else op)
+        if isinstance(o.get('q'), str) and isinstance(o.get('a'), str) and not o['a'].startswith('tai-nguyen'):
+            _add('zh' if CJK.search(o['q']) else 'en', o['q']); _add('zh' if CJK.search(o['a']) else 'en', o['a'])
         for k, v in o.items():
             if k == 'quiz' and isinstance(v, dict):
                 for x in v.get('zh', []): _add('zh', x[1])
@@ -1216,7 +1243,7 @@ if os.path.exists(f'{W}/gen_vi_a.json'):
     for _k, _v in json.load(open(f'{W}/gen_vi_a.json')).items():
         if not VI_A.get(_k): VI_A[_k] = _v
 SD = {'who': WHO, 'days': {str(k): v for k, v in days_out.items()}, 'lop': {str(k): v for k, v in lop.items()}, 'map': mp, 'soon': {},
-      'vi': vi, 'vi_a': VI_A, 'vi_t': DEMO.get('vi_t', {}), 'bg': {**bg_all, **DEMO['bg']}, 'reader': reader, 'units_q': units_q, 'aumap': AUMAP}
+      'vi': vi, 'vi_a': VI_A, 'vi_t': DEMO.get('vi_t', {}), 'bg': {**bg_all, **DEMO['bg']}, 'reader': reader, 'units_q': units_q, 'aumap': AUMAP, 'vi_tx': (json.load(open(f'{W}/gen_vi_tx.json')) if os.path.exists(f'{W}/gen_vi_tx.json') else {})}
 open(OUT, 'w').write('/* Dữ liệu web Seedling 48 buổi · 99 ngày – sinh từ Seedling_KhungChuongTrinh_48buoi_v7.xlsx (gen/build.py). Đừng sửa tay. */\nwindow.SD=' + json.dumps(SD, ensure_ascii=False) + ';\n')
 
 # ---------------------------------------------------------------- báo cáo

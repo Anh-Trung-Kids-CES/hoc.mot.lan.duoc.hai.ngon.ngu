@@ -20,7 +20,7 @@ function readerUnitFor(n) { const d = SD.days[n]; if (d && SD.reader[d.unit]) re
 /* ---------- tên, biểu tượng các dạng bài mới ---------- */
 Object.assign(T, {
   chon: { n: 'Nghe – chạm tranh', ic: 'ls_o_cham_hinh', sub: 'Từ của hôm nay', rules: ['Con nghe một từ.', 'Con chạm vào tranh đúng.', 'Chưa đúng cũng không sao: lát nữa mình gặp lại.'] },
-  game: { n: 'Vận động', ic: 'cx_o_puzzle', sub: 'Gọi lại từ cũ · quay đầu để chọn', rules: ['Con đứng hoặc ngồi thẳng trước máy.', 'Con nghe, rồi quay đầu sang trái, sang phải hoặc ngửa lên để chọn.', 'Không có camera thì con chạm để chọn nhé.'] },
+  game: { n: 'Vận động', ic: 'cx_o_puzzle', sub: 'Gọi lại từ cũ · quay đầu để chọn', rules: ['Con ngồi thẳng, nhìn vào máy.', 'Con nghe một từ, rồi quay đầu về phía tranh đúng và giữ yên một chút.', 'Không có camera thì con chạm vào tranh nhé.'] },
   de: { n: 'Dạng đề', ic: 'cx_o_tf', sub: 'Starters · YCT1', rules: ['Con nghe kỹ, mỗi câu nghe 2 lần.', 'Con chạm vào đáp án đúng.', 'Câu chưa đúng lát nữa gặp lại.'] },
   lam: { n: 'Nghe – làm theo', ic: 'ls_o_xem', sub: 'Listen and do · 听一听，做一做', rules: ['Con nghe lệnh.', 'Con đứng dậy làm theo lệnh.', 'Làm xong con chạm nút “Con làm rồi!”.'] },
   tl: { n: 'Nghe – trả lời', ic: 'cx_o_speak', sub: 'YCT口试 听后回答', rules: ['Con nghe câu hỏi.', 'Con nói câu trả lời, máy ghi lại giọng con.', 'Rồi con nghe câu trả lời mẫu.'] }
@@ -52,10 +52,10 @@ R.de = (step, body) => {
     body.innerHTML = `<div class="sx-hoi"><span class="ls-lab">${q.read ? 'Đọc và chọn tranh' : q.tf ? 'Nghe: đúng hay sai với tranh?' : 'Nghe và chọn tranh'} · Câu ${qi + 1}/${Q.length}${q.again ? ' · gặp lại' : ''}</span>${prompt}
       <div class="sx-opts ${q.tf ? 'two' : ''}">${q.opts.map((o, n) => `<button class="sx-opt" data-n="${n}">${q.tf ? '' : '<span class="sd-ph">🖼️</span>'}${esc(o)}</button>`).join('')}</div></div>`;
     revealPy(body, 900);
-    const play = async () => { stopAll(); const me = RUN; await say(q.say); if (me !== RUN || q.read) return; await wait(700); if (me === RUN) await say(q.say); };
+    let tok = 0; const play = async () => { hush(); const me = RUN, t = ++tok; await say(q.say); if (me !== RUN || t !== tok || q.read) return; await wait(700); if (me === RUN && t === tok) await say(q.say); };
     X.replay = play; const pq = body.querySelector('#pq'); if (pq) pq.onclick = play; play();
     body.querySelectorAll('.sx-opt').forEach(b => b.onclick = async () => { if (busy) return; busy = true; const n = +b.dataset.n;
-      if (n === q.ans) { stopAll(); sfx.ok(); b.classList.add('right'); pop(b); if (!q.again) star(); await hd('ok'); }
+      if (n === q.ans) { hush(); sfx.ok(); b.classList.add('right'); pop(b); if (!q.again) star(); await hd('ok'); }
       else { sfx.no(); shake(b); body.querySelectorAll('.sx-opt')[q.ans].classList.add('hint'); hopAdd(q.say);
         if (!back.has(qi) && !q.again) { back.add(qi); Q.push(Object.assign({}, q, { again: true })); } await hd('later'); }
       await wait(400); busy = false; if (my === RUN) { qi++; ask(); } }); };
@@ -69,7 +69,7 @@ R.lam = (step, body) => {
     body.innerHTML = `<div class="sx-goi"><span class="ls-lab">Lệnh ${i + 1}/${C.length} · ${c.l === 'zh' ? '听一听，做一做' : 'Listen and do'}</span><div class="sx-big">${pic(c.img, c.e, 'sx-gpic')}</div>
       <div id="ans" class="sx-ans2"></div><div class="row"><button class="btn g" id="did">✋ Con làm rồi!</button><button class="ls-b" id="nx">Bỏ qua ▶</button></div></div>`;
     const u = c.l === 'zh' ? zh(c.t, c.a) : en(c.t, c.a);
-    const play = () => { stopAll(); return say(u); }; X.replay = play;
+    const play = () => { hush(); return say(u); }; X.replay = play;
     body.querySelector('#nx').onclick = () => { stopAll(); i++; show(); };
     body.querySelector('#did').onclick = async () => { stopAll(); sfx.ok(); star(); body.querySelector('#ans').innerHTML = bub(c.t, c.l, '', c.py); revealPy(body, 600); await hd('did'); await wait(400); i++; show(); };
     await play(); if (my !== RUN) return; await wait(600); if (my === RUN) await play(); }
@@ -85,7 +85,7 @@ R.tl = (step, body) => {
       <div class="sx-microw"><div class="ls-mic idle" id="mic"><span class="ls-lv"></span>${SVG.mic}<b></b></div><span class="ls-lab">Con trả lời nhé!</span></div><div id="ans" class="sx-ans2"></div>
       <div class="row"><button class="ls-b" id="nx">Bỏ qua ▶</button></div></div>`;
     revealPy(body, 900); const q = zh(it.q, it.a_q);
-    const play = () => { stopAll(); return say(q); }; X.replay = play; body.querySelector('#pq').onclick = play;
+    const play = () => { hush(); return say(q); }; X.replay = play; body.querySelector('#pq').onclick = play;
     body.querySelector('#nx').onclick = () => { stopAll(); i++; show(); };
     await play(); if (my !== RUN) return; const how = await micTurn(body.querySelector('#mic'), my); if (how === 'gone' || my !== RUN) return;
     body.querySelector('#ans').innerHTML = bub(it.a, 'zh', '', it.apy); revealPy(body, 600); await say(zh(it.a, it.a_a)); if (my !== RUN) return;
