@@ -439,10 +439,17 @@ function zoomMotMan_(d) {
   if (!d.buoi || !rows.length) return { ok: false, n: 0 };
   const rep = sheet_('Lớp Zoom 1 màn', ZMM_HEAD), sao = sheet_('Sao Zoom', SAO_HEAD);
   const keyOf = (sh) => { const n = sh.getLastRow(), k = {}; if (n > 1) sh.getRange(2, 1, n - 1, 4).getValues().forEach((r, i) => { k[r[0] + '|' + r[3]] = i + 2; }); return k; };
+  /* báo cáo đầy đủ: trang gửi kèm tên cột (cols) và các ô của từng bé (cells), giống bảng Báo cáo trên màn cô */
+  if (d.cols && d.cols.length) {
+    const head = ['Buổi', 'Ngày', 'Khoá', 'Mã trong buổi'].concat(d.cols, ['Cập nhật']);
+    const cur = rep.getRange(1, 1, 1, Math.max(head.length, rep.getLastColumn())).getValues()[0];
+    if (cur.slice(0, head.length).join('|') !== head.join('|')) rep.getRange(1, 1, 1, head.length).setValues([head]);
+  }
   const kr = keyOf(rep), ks = keyOf(sao), kids = tienDoTen_(d.khoa), out = [];
   rows.forEach(r => {
     const k = d.buoi + '|' + r.ma, now = new Date();
-    const a = [d.buoi, d.ngay || '', d.lop || d.khoa || '', r.ma, r.kid || '', r.parent || '', +r.tay || 0, +r.dung || 0, +r.rong || 0, +r.noi || 0, +r.sao || 0, r.note || '', now];
+    const a = r.cells ? [d.buoi, d.ngay || '', d.lop || d.khoa || '', r.ma].concat(r.cells.map(v => v == null ? '' : v), [now])
+      : [d.buoi, d.ngay || '', d.lop || d.khoa || '', r.ma, r.kid || '', r.parent || '', +r.tay || 0, +r.dung || 0, +r.rong || 0, +r.noi || 0, +r.sao || 0, r.note || '', now];
     if (kr[k]) rep.getRange(kr[k], 1, 1, a.length).setValues([a]); else rep.appendRow(a);
     let web = String(r.web || ''), ghep = web ? 'có sẵn' : '', goi = '';
     if (ks[k]) { const old = sao.getRange(ks[k], 7, 1, 3).getValues()[0]; if (!web && old[0]) { web = String(old[0]); ghep = String(old[2] || 'sale ghép'); } }

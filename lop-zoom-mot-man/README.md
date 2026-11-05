@@ -45,7 +45,7 @@ Gõ đúng tên con như trên web học để sao tự cộng đúng bé. Thêm
 Phím tắt: → tiếp / câu tiếp, ← trước, Space hiện đáp án, R phát lại, Z hoàn tác.
 
 ## Cuối buổi
-📊 **Báo cáo**: mỗi bé một dòng: ✋, ✅ chat, ⚡ trận Rồng, 🎤, Ôn nhanh EN / ZH, Nhìn chữ, Thanh điệu, Cô giáo nhỏ, Truyện, ± sao (cô chỉnh tay), ⭐ tổng, ghi chú.
+📊 **Báo cáo** (đầy đủ như bản cũ): mỗi bé một dòng: ✋ giơ tay, ✅ đúng (chat), 🎤 phát biểu, Chào bạn EN / ZH (tự nói / nói cùng cô), Ôn nhanh EN, Ôn nhanh ZH, Nhìn chữ, Thanh điệu chọn đúng, Cô chấm thanh điệu (chuẩn / gần / cần luyện, chấm trên thẻ bé sau khi hiện đáp án), Cô giáo nhỏ nói EN / ZH, Đấu Rồng Lửa đúng/câu, Xếp tranh từng đoạn, **4H điều chỉnh** (thái độ, cảm xúc, tương tác với bạn 0–2, có mốc chấm), ± sao, ⭐ tổng, danh hiệu, ghi chú. Câu chưa hiện đáp án hoặc con chưa trả lời không tính là sai.
 - **📤 Gửi báo cáo & cộng sao vào web học**: ghi tab "Lớp Zoom 1 màn" (báo cáo) và "Sao Zoom" (sao) trên Sheet dữ liệu. Gửi lại cùng buổi thì ghi đè, không cộng trùng.
 - Máy chủ tự ghép bé với tài khoản web học theo tên con cùng khoá (tab TienDo). Trùng tên hoặc không thấy thì ghi "cần ghép" kèm gợi ý mã: sale dán mã bé vào cột **Mã bé web** của tab "Sao Zoom".
 - Web học (`xem-truoc/qua.js`) hỏi `?action=zoomsao&id=<mã bé>` khi con mở web hoặc đăng nhập, cộng số sao này vào **ví sao ở Phòng đổi quà** (không cộng vào Xếp hạng) và báo "Con được cộng N ⭐ từ buổi Zoom cùng cô!".

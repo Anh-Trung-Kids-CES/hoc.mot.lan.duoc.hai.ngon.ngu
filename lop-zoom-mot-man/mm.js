@@ -56,11 +56,12 @@ function kidById(id) { return S.kids.find(k => k.id === id); }
 function sc(id) { return S.sc[id] || (S.sc[id] = { tay: 0, dung: 0, noi: 0 }); }
 /* câu trả lời đúng cô bấm theo chat: chỉ tính khi cô đã Hiện đáp án (không lộ ai đúng ai sai trước đó); trận Rồng tính ngay */
 function autoCounts(id) {
-  const o = { dung: 0, rong: 0, on: [0, 0], onEN: [0, 0], onZH: [0, 0], doc: [0, 0], tone: [0, 0], lop: [0, 0], xep: [0, 0] };
+  const o = { dung: 0, rong: 0, rongN: 0, on: [0, 0], onEN: [0, 0], onZH: [0, 0], doc: [0, 0], tone: [0, 0], lop: [0, 0], xep: [0, 0] };
   Object.entries(S.px).forEach(([q, m]) => {
     const a = m[id]; if (!a) return;
     const p = q.split('_')[0];
-    if (p === 'boss') { if (a.ok) o.rong++; return; }
+    if (p === 'boss') { o.rongN++; if (a.ok) o.rong++; return; }
+    if (p === 'xep' && S.rv[q]) o['x' + q.split('_')[1]] = a.ok ? 'đúng' : 'chưa đúng';
     if (!S.rv[q]) return;
     if (a.ok) o.dung++;
     if (o[p]) { o[p][1]++; if (a.ok) o[p][0]++; }
@@ -188,7 +189,9 @@ function drawKids() {
   if (!S.kids.length) { box.innerHTML = head + `<div class="mk-empty"><p>Chưa có bé nào.</p><button class="btn" data-act="add">👥 Thêm bé</button></div>`; return; }
   box.innerHTML = head + `<div class="mk-list">${S.kids.map(k => {
     const t = totals(k.id), a = m[k.id];
-    const nums = q && q.skip !== k.id ? `<div class="mk-ans" title="Số con gõ trong chat">${Array.from({ length: q.n }, (_, j) => j + 1).map(c => `<button class="num${a && a.c === c ? ' on' : ''}${a && a.c === c && rv && a.ok ? ' ok' : ''}" data-px="${k.id}|${c}">${c}</button>`).join('')}</div>`
+    const tr = S.ph === 'tone' && S.step === 'rv' ? (((S.tr || {})[S.i] || {})[k.id]) : undefined;
+    const nums = S.ph === 'tone' && S.step === 'rv' ? `<div class="mk-ans tr" title="Cô chấm thanh điệu của con">${[[2, 'Chuẩn'], [1, 'Gần'], [0, 'Luyện']].map(([v, n]) => `<button class="num${tr === v ? ' on' : ''}" data-tr="${k.id}|${v}">${n}</button>`).join('')}</div>`
+      : q && q.skip !== k.id ? `<div class="mk-ans" title="Số con gõ trong chat">${Array.from({ length: q.n }, (_, j) => j + 1).map(c => `<button class="num${a && a.c === c ? ' on' : ''}${a && a.c === c && rv && a.ok ? ' ok' : ''}" data-px="${k.id}|${c}">${c}</button>`).join('')}</div>`
       : q && q.skip === k.id ? `<div class="mk-ans"><span class="mk-turn">📣 cô giáo nhỏ</span></div>` : '';
     return `<div class="mk${a && rv && a.ok ? ' win' : ''}" id="mk-${k.id}">
       <img src="${avaImg(k.ava)}" alt="" data-ava="${k.id}" title="Đổi bạn đồng hành">
@@ -272,7 +275,7 @@ function vIntro() {
     key: 'intro|' + S.kids.map(k => k.id).join(',') + '|' + (sp.n || 0) + '|' + (landed ? 1 : 0) + l + (sp.q || ''), akey, audio,
     html: `<div class="mm-row"><div class="wheel-box mm-wheel"><div class="pointer">🔻</div><div class="wheel" id="wh">${ring}</div><div class="hub">🎡</div></div>
       <div class="mm-col">${under}</div></div>`,
-    ctl: spinBtns + (kid && landed ? `<button class="btn ghost" data-play="${I.model[l].a}">🔊 Câu mẫu</button><button class="btn y" data-act="noiKid" data-id="${kid.id}">🎤 ${esc(kid.kid)} nói được +⭐</button>` : '') + `<button class="btn ghost" data-act="next">Tiếp: ${phaseName('noi')} ▶</button>`,
+    ctl: spinBtns + (kid && landed ? `<button class="btn ghost" data-play="${I.model[l].a}">🔊 Câu mẫu</button>${chaoBtns(kid.id, l)}` : '') + `<button class="btn ghost" data-act="next">Tiếp: ${phaseName('noi')} ▶</button>`,
     tip: (INTRO.tip ? INTRO.tip + ' ' : '') + 'Bạn được chọn nói xong, cô bấm <b>🎤</b> (ở đây hoặc trên thẻ của bé). Bạn nào giơ tay xin trả lời thay thì bấm <b>✋</b>.',
     bind() {
       const wh = $('#wh'); if (!wh) return;
@@ -295,6 +298,10 @@ function spin(l, q) {
   go({ spin: { seat: k.id, l, q: q || '', n } });
 }
 
+function chaoBtns(id, l) {
+  const v = ((S.chao || {})[id] || {})[l];
+  return `<button class="btn ${v === 2 ? 'y' : 'ghost'}" data-act="chao" data-id="${id}" data-l="${l}" data-v="2">🎤 Tự nói ${l === 'zh' ? '中文' : 'EN'} ${v === 2 ? '✓' : '+⭐'}</button><button class="btn ${v === 1 ? 'y' : 'ghost'}" data-act="chao" data-id="${id}" data-l="${l}" data-v="1">🎤 Nói cùng cô ${v === 1 ? '✓' : '+⭐'}</button>`;
+}
 /* --- Nói theo cô --- */
 function vNoi() {
   const N = NOI.length, i = Math.min(N - 1, S.i || 0), it = NOI[i];
@@ -613,26 +620,49 @@ function overlay(html) {
 
 /* ======================= báo cáo cuối buổi ======================= */
 const pct = a => a[1] ? `${a[0]}/${a[1]}` : '';
+/* Mốc chấm 4H điều chỉnh cho buổi Zoom một màn (0–2), giống bản cũ, đổi câu chữ cho cách học qua một màn hình */
+const H4 = {
+  td: { n: 'Thái độ', lv: { 2: ['Tự giác', 'Tập trung gần cả buổi, tự giơ tay, gõ chat và trả lời ngay khi cô hỏi'], 1: ['Khi nhắc', 'Tham gia khi cô gọi tên hoặc ba mẹ nhắc, lúc tập trung lúc xao nhãng'], 0: ['Cần hỗ trợ', 'Chưa muốn tham gia, ba mẹ phải làm cùng hoặc con rời màn hình'] } },
+  cx: { n: 'Cảm xúc', lv: { 2: ['Hào hứng', 'Vui, cười, hăng hái, muốn được chọn, khoe khi đúng'], 1: ['Bình thường', 'Lúc đầu còn ngại, vui dần lên hoặc bình thản cả buổi'], 0: ['Còn ngại', 'Rụt rè, lo lắng, không muốn nói hoặc muốn dừng sớm'] } },
+  tt: { n: 'Tương tác với bạn', lv: { 2: ['Chủ động', 'Tự hỏi, đáp bạn, nói theo bạn khi bạn làm cô giáo nhỏ, cổ vũ bạn'], 1: ['Khi cô gợi ý', 'Hỏi, đáp bạn khi cô mời; nói theo bạn nhưng còn chờ cô'], 0: ['Chưa', 'Chưa nói với bạn, chưa tham gia khi bạn làm cô giáo nhỏ'] } }
+};
+const chaoLv = v => v === 2 ? 'tự nói' : v === 1 ? 'nói cùng cô' : '';
+const RCOLS = [
+  ['kid', 'Tên con'], ['parent', 'Ba/mẹ'], ['tay', '✋ Giơ tay'], ['chat', '✅ Đúng (chat)'], ['noi', '🎤 Phát biểu'],
+  ['chaoEN', 'Chào bạn EN'], ['chaoZH', 'Chào bạn ZH'], ['onEN', 'Ôn nhanh EN'], ['onZH', 'Ôn nhanh ZH'], ['doc', 'Nhìn chữ'],
+  ['tone', 'Thanh điệu chọn đúng'], ['toneCham', 'Cô chấm thanh điệu'], ['lopEN', 'Cô giáo nhỏ: nói EN'], ['lopZH', 'Cô giáo nhỏ: nói ZH'],
+  ['rongTxt', 'Đấu Rồng Lửa: đúng/câu'], ['xep0', 'XEP0'], ['xep1', 'XEP1']
+];
+function rcolName(c) { if (c[0] === 'xep0' || c[0] === 'xep1') { const X = XEP[+c[0].slice(3)]; return X ? `Xếp tranh (nghe ${X.from === 'zh' ? 'ZH' : 'EN'}, đọc lại ${X.to === 'zh' ? 'ZH' : 'EN'})` : ''; } return c[1]; }
 function reportRows() {
   return S.kids.map(k => {
-    const t = totals(k.id), a = t.a;
+    const t = totals(k.id), a = t.a, ch = (S.chao || {})[k.id] || {}, lt0 = (S.lt || {})[k.id] || {}, h = (S.h4 || {})[k.id] || {};
+    const g = { 2: 0, 1: 0, 0: 0 }; Object.values(S.tr || {}).forEach(m => { const v = m[k.id]; if (v != null) g[v]++; });
     return { ma: k.id, kid: k.kid, parent: k.parent, tay: t.tay, chat: t.chat, rong: t.rong, dung: t.dung, noi: t.noi, sao: t.sao, adj: +S.adj[k.id] || 0, note: S.note[k.id] || '',
-      onEN: pct(a.onEN), onZH: pct(a.onZH), doc: pct(a.doc), tone: pct(a.tone), lop: (m => [m.en ? 'EN ✓' : '', m.zh ? 'ZH ✓' : ''].filter(Boolean).join(' · ') || (m.c != null ? 'chọn tranh, chưa nói' : ''))((S.lt || {})[k.id] || {}), xep: pct(a.xep), tieu: title(t)[0] };
+      chaoEN: chaoLv(ch.en), chaoZH: chaoLv(ch.zh), onEN: pct(a.onEN), onZH: pct(a.onZH), doc: pct(a.doc), tone: pct(a.tone),
+      toneCham: (g[2] + g[1] + g[0]) ? `chuẩn ${g[2]} · gần ${g[1]} · cần luyện ${g[0]}` : '',
+      lopEN: lt0.en ? 'được' : (lt0.c != null ? 'chưa' : ''), lopZH: lt0.zh ? 'được' : (lt0.c != null ? 'chưa' : ''),
+      rongTxt: a.rongN ? `${a.rong}/${a.rongN}` : '', xep0: a.x0 || '', xep1: a.x1 || '',
+      td: h.td ?? '', cx: h.cx ?? '', tt: h.tt ?? '', tieu: title(t)[0] };
   });
 }
 function reportBox() {
   const ov = overlay(`<h2>📊 Báo cáo buổi Zoom · ${esc(LZ_CFG.ten)} · ${esc(S.ngay)}</h2>
-    <p class="small">Số liệu theo đúng các lần cô bấm. Câu cô chưa bấm "Hiện đáp án" thì chưa tính. Cô chỉnh <b>± sao</b> hoặc ghi chú trước khi gửi. Một sao = ✋ ×${S.w.tay}, ✅ ×${S.w.dung}, 🎤 ×${S.w.noi} (đổi ở ⚙).</p>
-    <div class="scroll-x"><table class="res" id="rt"></table></div>
+    <p class="small">Mỗi bé một dòng, tách EN và ZH, theo đúng các lần cô bấm. Câu chưa hiện đáp án và câu con chưa trả lời không tính là sai. Chấm 4H điều chỉnh (thái độ, cảm xúc, tương tác với bạn, 0–2), chỉnh <b>± sao</b> và ghi chú trước khi gửi. Một sao = ✋ ×${S.w.tay}, ✅ ×${S.w.dung}, 🎤 ×${S.w.noi} (đổi ở ⚙).</p>
     <div class="ctl"><button class="btn red" id="send">📤 Gửi báo cáo & cộng sao vào web học</button><button class="btn ghost" id="csv">⬇ Tải CSV</button><button class="btn ghost" id="cp">📋 Chép lời vinh danh</button></div>
-    <div id="sendMsg">${S.sent ? `<p class="msg">Đã gửi lúc ${new Date(S.sent).toLocaleString('vi-VN')}. Gửi lại thì ghi đè, không cộng trùng.</p>` : ''}</div>`);
+    <div id="sendMsg">${S.sent ? `<p class="msg">Đã gửi lúc ${new Date(S.sent).toLocaleString('vi-VN')}. Gửi lại thì ghi đè, không cộng trùng.</p>` : ''}</div>
+    <details class="h4-guide" open><summary><b>Mốc chấm 4H</b> (bấm một mốc, bấm lại để bỏ)</summary><div class="h4-g">${Object.values(H4).map(x => `<div><b>${x.n}</b>${[2, 1, 0].map(n => `<div class="small"><b>${n} · ${esc(x.lv[n][0])}</b>: ${esc(x.lv[n][1])}</div>`).join('')}</div>`).join('')}</div></details>
+    <div class="scroll-x"><table class="res" id="rt"></table></div>`);
+  const h4btn = (id, f, v) => `<div class="h4b">${[2, 1, 0].map(n => `<button class="${String(v) === String(n) ? 'on' : ''}" data-h4="${id}|${f}|${n}" title="${esc(H4[f].lv[n][0])}">${n}</button>`).join('')}</div>`;
   const fill = () => {
     const rows = reportRows();
-    $('#rt', ov).innerHTML = `<tr><th>Tên con</th><th>Ba/mẹ</th><th>✋ Giơ tay</th><th>✅ Đúng (chat)</th><th>⚡ Đúng trận Rồng</th><th>🎤 Phát biểu</th><th>Ôn nhanh EN</th><th>Ôn nhanh ZH</th><th>Nhìn chữ</th><th>Thanh điệu</th><th>Cô giáo nhỏ</th><th>Truyện</th><th>± sao</th><th>⭐ Sao</th><th>Ghi chú của cô</th></tr>`
-      + rows.map(r => `<tr><td><b>${esc(r.kid)}</b><br><small>${esc(r.tieu)}</small></td><td>${esc(r.parent)}</td><td>${r.tay}</td><td>${r.chat}</td><td>${r.rong}</td><td>${r.noi}</td><td>${r.onEN}</td><td>${r.onZH}</td><td>${r.doc}</td><td>${r.tone}</td><td>${r.lop}</td><td>${r.xep}</td>
+    $('#rt', ov).innerHTML = `<tr>${RCOLS.map(c => `<th>${esc(rcolName(c))}</th>`).join('')}<th>Thái độ</th><th>Cảm xúc</th><th>Tương tác</th><th>± sao</th><th>⭐ Sao</th><th>Ghi chú của cô</th></tr>`
+      + rows.map(r => `<tr>${RCOLS.map(c => c[0] === 'kid' ? `<td><b>${esc(r.kid)}</b><br><small>${esc(r.tieu)}</small></td>` : `<td>${esc(r[c[0]])}</td>`).join('')}
+        <td>${h4btn(r.ma, 'td', r.td)}</td><td>${h4btn(r.ma, 'cx', r.cx)}</td><td>${h4btn(r.ma, 'tt', r.tt)}</td>
         <td><input type="number" class="adj" data-adj="${r.ma}" value="${r.adj}" step="1"></td><td><b>⭐ ${r.sao}</b></td><td><textarea data-note="${r.ma}">${esc(r.note)}</textarea></td></tr>`).join('');
     $$('[data-adj]', ov).forEach(x => x.onchange = () => { S.adj[x.dataset.adj] = Math.round(+x.value || 0); save(); draw(); fill(); });
     $$('[data-note]', ov).forEach(x => x.onchange = () => { S.note[x.dataset.note] = x.value.trim(); save(); });
+    $$('[data-h4]', ov).forEach(x => x.onclick = () => { const [id, f, n] = x.dataset.h4.split('|'); S.h4 = S.h4 || {}; const m = S.h4[id] || (S.h4[id] = {}); if (m[f] === +n) delete m[f]; else m[f] = +n; save(); fill(); });
   };
   fill();
   $('#csv', ov).onclick = downloadCSV;
@@ -642,8 +672,9 @@ function reportBox() {
     try {
       const pg = await (await fetch(LZ_API + '?action=ping&t=' + Date.now())).json();
       if (!pg || !(pg.v >= 16)) { m.innerHTML = `<p class="msg err">Máy chủ đang ở bản v${pg && pg.v}. Cần dán <b>apps-script/Code.gs</b> và triển khai bản v16 thì mới cộng sao được. Cô bấm Tải CSV để giữ kết quả.</p>`; return; }
-      const rows = reportRows().map(r => ({ ma: r.ma, kid: r.kid, parent: r.parent, tay: r.tay, dung: r.chat, rong: r.rong, noi: r.noi, sao: r.sao, note: r.note }));
-      const j = await apiPost({ action: 'zoommm', buoi: S.id, ngay: S.ngay, lop: LZ_CFG.ten, khoa: LZ_CFG.khoa, vong: LZ_CFG.vong, rows });
+      const t = reportTable();
+      const rows = reportRows().map((r, j) => ({ ma: r.ma, kid: r.kid, parent: r.parent, tay: r.tay, dung: r.chat, rong: r.rong, noi: r.noi, sao: r.sao, note: r.note, cells: t.rows[j] }));
+      const j = await apiPost({ action: 'zoommm', buoi: S.id, ngay: S.ngay, lop: LZ_CFG.ten, khoa: LZ_CFG.khoa, vong: LZ_CFG.vong, cols: t.head, rows });
       if (!j || !j.ok) throw new Error('máy chủ không nhận');
       S.sent = Date.now(); save();
       const need = (j.rows || []).filter(x => !x.web).map(x => (kidById(x.ma) || {}).kid).filter(Boolean);
@@ -651,10 +682,16 @@ function reportBox() {
     } catch (e) { m.innerHTML = '<p class="msg err">Chưa gửi được (mạng hoặc máy chủ). Cô bấm Tải CSV để giữ kết quả rồi thử lại sau.</p>'; }
   };
 }
+/* bảng báo cáo dùng chung cho Tải CSV và Gửi về Sheet */
+function reportTable() {
+  const head = RCOLS.map(rcolName).concat(['Thái độ', 'Cảm xúc', 'Tương tác', '± sao', 'Sao', 'Danh hiệu', 'Ghi chú của cô']);
+  const rows = reportRows().map(r => RCOLS.map(c => r[c[0]]).concat([r.td, r.cx, r.tt, r.adj, r.sao, r.tieu, r.note]));
+  return { head, rows };
+}
 function downloadCSV() {
-  const head = ['Buổi', 'Ngày', 'Khoá', 'Tên con', 'Ba/mẹ', 'Giơ tay', 'Đúng (chat)', 'Đúng trận Rồng', 'Phát biểu', 'Ôn nhanh EN', 'Ôn nhanh ZH', 'Nhìn chữ', 'Thanh điệu', 'Cô giáo nhỏ', 'Truyện', '± sao', 'Sao', 'Danh hiệu', 'Ghi chú'];
-  const rows = [head].concat(reportRows().map(r => [S.id, S.ngay, LZ_CFG.ten, r.kid, r.parent, r.tay, r.chat, r.rong, r.noi, r.onEN, r.onZH, r.doc, r.tone, r.lop, r.xep, r.adj, r.sao, r.tieu, r.note]));
-  const csv = '﻿' + rows.map(r => r.map(v => '"' + String(v == null ? '' : v).replace(/"/g, '""') + '"').join(',')).join('\r\n');
+  const t = reportTable();
+  const all = [['Buổi', 'Ngày', 'Khoá'].concat(t.head)].concat(t.rows.map(r => [S.id, S.ngay, LZ_CFG.ten].concat(r)));
+  const csv = '﻿' + all.map(r => r.map(v => '"' + String(v == null ? '' : v).replace(/"/g, '""') + '"').join(',')).join('\r\n');
   const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8' }));
   a.download = `lop-zoom-mot-man-${LZ_LOP}-${S.ngay}.csv`; a.click();
 }
@@ -700,6 +737,8 @@ const ACT = {
   mute: () => { muted = !muted; lsSet('mm-mute', muted); if (muted) { SND.stop(); BA.stop(); } draw(); },
   full: () => { try { document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen(); } catch (e) { } },
   noiKid: b => bump(b.dataset.id, 'noi', 1),
+  chao: b => { S.chao = S.chao || {}; const m = S.chao[b.dataset.id] || (S.chao[b.dataset.id] = {}), l = b.dataset.l, v = +b.dataset.v;
+    if (m[l] === v) { delete m[l]; bump(b.dataset.id, 'noi', -1); } else { const had = m[l] != null; m[l] = v; if (had) { save(); draw(); } else bump(b.dataset.id, 'noi', 1); } },
   dm: b => { const t = VIEW && VIEW.dm; if (!t) return; (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(() => toast('Đã chép. Cô dán vào tin nhắn riêng trên Zoom.')).catch(() => prompt('Cô chép lời nhắn này:', t)); },
   lpSay: b => { const t = lopTurnsNow()[S.li || 0]; if (!t) return; const m = lt(t.a), l = b.dataset.l; if (m[l]) { m[l] = 0; bump(t.a, 'noi', -1); } else { m[l] = 1; bump(t.a, 'noi', 1); } },
   lpRe: () => { const t = lopTurnsNow()[S.li || 0]; if (t) { delete lt(t.a).c; save(); draw(); } },
@@ -709,7 +748,7 @@ const ACT = {
 };
 document.addEventListener('click', e => {
   SND.unlock();
-  const t = e.target.closest('[data-act],[data-ph],[data-sc],[data-px],[data-spin],[data-play],[data-play-seq],[data-ava],[data-lp]');
+  const t = e.target.closest('[data-act],[data-ph],[data-sc],[data-px],[data-spin],[data-play],[data-play-seq],[data-ava],[data-lp],[data-tr]');
   if (!t || !S || t.closest('.mm-ov') && !t.dataset.act) return;
   if (t.dataset.ph) return goPhase(t.dataset.ph);
   if (t.dataset.sc) { const [id, f] = t.dataset.sc.split('|'); return bump(id, f, 1); }
@@ -717,6 +756,7 @@ document.addEventListener('click', e => {
   if (t.dataset.spin) { const [l, q] = t.dataset.spin.split('|'); return spin(l, q); }
   if (t.dataset.playSeq) { SND.stop(); if (VIEW && VIEW.seq) muted ? toast('Đang tắt tiếng') : SND.play(VIEW.seq); return; }
   if (t.dataset.play !== undefined) { if (t.dataset.play) { SND.stop(); muted ? toast('Đang tắt tiếng') : SND.play([t.dataset.play]); } return; }
+  if (t.dataset.tr) { const [id, v] = t.dataset.tr.split('|'); S.tr = S.tr || {}; const m = S.tr[S.i] || (S.tr[S.i] = {}); if (m[id] === +v) delete m[id]; else m[id] = +v; SND.beep('pop'); save(); draw(); return; }
   if (t.dataset.ava) return cycleAva(t.dataset.ava);
   if (t.dataset.lp !== undefined) { const tt = lopTurnsNow()[S.li || 0]; if (tt) { lt(tt.a).c = +t.dataset.lp; SND.beep('pop'); save(); draw(); } return; }
   const f = ACT[t.dataset.act]; if (f && t.tagName !== 'INPUT' && t.tagName !== 'SELECT') f(t);
