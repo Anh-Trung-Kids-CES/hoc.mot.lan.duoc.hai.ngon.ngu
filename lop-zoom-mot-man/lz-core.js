@@ -347,11 +347,11 @@ const SND = (() => {
   function beep(kind) {
     try {
       ctx = ctx || new (window.AudioContext || window.webkitAudioContext)();
-      const notes = { pop: [[660, .07]], ok: [[660, .08], [880, .12]], win: [[523, .1], [659, .1], [784, .1], [1047, .22]], tap: [[440, .05]], whoosh: [[300, .25]] }[kind] || [[500, .08]];
+      const notes = { pop: [[660, .07]], ok: [[660, .08], [880, .12]], win: [[523, .1], [659, .1], [784, .1], [1047, .22]], tap: [[440, .05]], whoosh: [[300, .25]], no: [[392, .13], [262, .3]] }[kind] || [[500, .08]];
       let t = ctx.currentTime;
       notes.forEach(([f, d]) => {
         const o = ctx.createOscillator(), g = ctx.createGain();
-        o.type = kind === 'whoosh' ? 'sawtooth' : 'triangle'; o.frequency.setValueAtTime(f, t);
+        o.type = kind === 'whoosh' ? 'sawtooth' : kind === 'no' ? 'square' : 'triangle'; o.frequency.setValueAtTime(f, t);
         if (kind === 'whoosh') o.frequency.exponentialRampToValueAtTime(900, t + d);
         g.gain.setValueAtTime(.0001, t); g.gain.exponentialRampToValueAtTime(.18, t + .015); g.gain.exponentialRampToValueAtTime(.0001, t + d);
         o.connect(g).connect(ctx.destination); o.start(t); o.stop(t + d + .02); t += d;

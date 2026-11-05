@@ -113,6 +113,7 @@ function press(id, c) {
   S.log.push({ k: 'px', q: q.qid, id, prev }); S.log = S.log.slice(-300); save();
   SND.beep('pop');
   if (q.now && m[id] && m[id].ok && !(prev && prev.ok)) bossHit(id);
+  if (q.now && m[id] && !m[id].ok) { SND.beep('no'); setTimeout(() => floatOn(id, '✗', 1), 30); }
   draw();
   /* cô tích đủ đáp án của các bé: tự hiện đáp án đúng và cộng sao (rồi tự sang câu nếu đang bật) */
   if (!q.now && S.step === 'ask' && S.autoShow !== false && S.kids.length && S.kids.every(k => (S.px[q.qid] || {})[k.id])) { clearTimeout(autoT); const qid = q.qid; autoT = setTimeout(() => { const c2 = curQ(); if (c2 && c2.qid === qid && S.step === 'ask') reveal(); }, 800); }
@@ -127,7 +128,10 @@ function reveal() {
     const card = $('#mk-' + id); if (!card) return;
     [card.querySelector('[data-sc$="|dung"]'), card.querySelector('.mk-star')].forEach(el => { if (!el) return; el.classList.remove('jump'); void el.offsetWidth; el.classList.add('jump'); });
   }, 250 + j * 160));
+  const bad = Object.entries(S.px[q.qid] || {}).filter(([, a]) => !a.ok).map(([id]) => id);
+  bad.forEach((id, j) => setTimeout(() => floatOn(id, '✗', 1), 250 + (good.length + j) * 160));
   if (good.length) SND.beep('win');
+  if (bad.length) setTimeout(() => SND.beep('no'), good.length ? 650 : 150);
   autoRvStart();
 }
 /* Hiện đáp án xong: tự sang câu sau vài giây để cô săn đáp án câu mới trong chat (tắt được, không tự sang phần khác) */
@@ -199,9 +203,9 @@ function drawKids() {
     const t = totals(k.id), a = m[k.id];
     const tr = S.ph === 'tone' && S.step === 'rv' ? (((S.tr || {})[S.i] || {})[k.id]) : undefined;
     const nums = S.ph === 'tone' && S.step === 'rv' ? `<div class="mk-ans tr" title="Cô chấm thanh điệu của con">${[[2, 'Chuẩn'], [1, 'Gần'], [0, 'Luyện']].map(([v, n]) => `<button class="num${tr === v ? ' on' : ''}" data-tr="${k.id}|${v}">${n}</button>`).join('')}</div>`
-      : q && q.skip !== k.id ? `<div class="mk-ans" title="Số con gõ trong chat">${Array.from({ length: q.n }, (_, j) => j + 1).map(c => `<button class="num${a && a.c === c ? ' on' : ''}${a && a.c === c && rv && a.ok ? ' ok' : ''}" data-px="${k.id}|${c}">${c}</button>`).join('')}</div>`
+      : q && q.skip !== k.id ? `<div class="mk-ans" title="Số con gõ trong chat">${Array.from({ length: q.n }, (_, j) => j + 1).map(c => `<button class="num${a && a.c === c ? ' on' : ''}${a && a.c === c && rv && a.ok ? ' ok' : ''}${a && a.c === c && rv && !a.ok ? ' no' : ''}" data-px="${k.id}|${c}">${a && a.c === c && rv && !a.ok ? '✗' : c}</button>`).join('')}</div>`
       : q && q.skip === k.id ? `<div class="mk-ans"><span class="mk-turn">📣 cô giáo nhỏ</span></div>` : '';
-    return `<div class="mk${a && rv && a.ok ? ' win' : ''}" id="mk-${k.id}">
+    return `<div class="mk${a && rv && a.ok ? ' win' : ''}${a && rv && !a.ok ? ' lose' : ''}" id="mk-${k.id}">
       <img src="${avaImg(k.ava)}" alt="" data-ava="${k.id}" title="Đổi bạn đồng hành">
       <div class="mk-nm"><b>${esc(k.kid)}</b><span class="mk-star">⭐ ${t.sao}</span></div>
       <div class="mk-row"><div class="mk-btn">
@@ -211,9 +215,9 @@ function drawKids() {
       </div>${nums}</div></div>`;
   }).join('')}</div>`;
 }
-function floatOn(id, text) {
+function floatOn(id, text, bad) {
   const card = $('#mk-' + id); if (!card) return;
-  const f = document.createElement('div'); f.className = 'mk-float'; f.textContent = text; card.appendChild(f);
+  const f = document.createElement('div'); f.className = 'mk-float' + (bad ? ' bad' : ''); f.textContent = text; card.appendChild(f);
   card.classList.remove('pulse'); void card.offsetWidth; card.classList.add('pulse');
   setTimeout(() => f.remove(), 1300);
 }

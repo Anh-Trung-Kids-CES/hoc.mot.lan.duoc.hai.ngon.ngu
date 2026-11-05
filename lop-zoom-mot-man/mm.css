@@ -232,3 +232,7 @@ button.mm-pick.lp:hover{border-color:var(--sky)}
 .xp-slot:not(.full) .no{background:#C9B98F}
 .xp-pool .mm-pick.placed{opacity:.35;filter:grayscale(.6)}
 .xp-done{position:absolute;inset:0;display:grid;place-items:center;font-size:64px;color:var(--green);font-weight:800;text-shadow:0 3px 0 #fff}
+/* trả lời chưa đúng: dấu ✗ đỏ */
+.mk-ans .num.no{background:#E3262E;border-color:#E3262E;color:#fff}
+.mk.lose{border-color:#F3A5A8;box-shadow:0 0 0 3px #FDE2E3}
+.mk-float.bad{color:#E3262E;font-size:28px}
