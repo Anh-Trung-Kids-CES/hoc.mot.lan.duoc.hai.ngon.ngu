@@ -24,11 +24,12 @@ Theo tab "Bước ngày web" của v7, thêm bước Vận động ở cuối:
 Học xong ngày trước mới mở ngày sau. Cô giáo thêm `?gv=1` vào link để mở hết (máy đó nhớ); `?gv=0` để tắt.
 
 ## Giọng và nhân vật tạo bằng Gemini (05/11/2026)
-- `tai-nguyen/giong/`: 1.942 câu tiếng Anh, tiếng Trung và 25 lời dặn tiếng Việt, tạo bằng Gemini 3.8 Flash TTS qua Batch API (rẻ hơn 50%). Giọng: Despina (Anh), zh-cn-techagent-1 (Trung), vi-vn-tutor-8 (Việt). Chậm lại 10%, cắt khoảng lặng hai đầu. Bảng ghép câu → tệp nằm trong `seedling-data.js` (sinh từ `gen_au.json`).
+- `tai-nguyen/giong/`: 1.942 câu tiếng Anh, tiếng Trung và 25 lời dặn tiếng Việt, tạo bằng Gemini 3.8 Flash TTS qua Batch API (rẻ hơn 50%). Giọng: Despina (Anh, chậm lại 10%), vi-vn-tutor-8 (Việt). Tiếng Trung (944 câu) làm lại 05/11 bằng Gemini 3.1 Flash TTS, giọng Leda, có lời dặn giữ tên gốc: Bông, Vũ, Lan đọc kiểu Việt; Leo, Anna kiểu Anh; Xiaomei đọc 小美. Cắt khoảng lặng hai đầu. Bảng ghép câu → tệp nằm trong `seedling-data.js` (sinh từ `gen_au.json`).
 - `tai-nguyen/nhan-vat/nv_*_a.webp`: Vũ, anh trai Vũ, người diễn (Unit 4), Miss Hoa, Mrs Lan (người, thay cô Hươu khi Mrs Lan nói). Vẽ bằng Nano Banana 2.1, lấy Bông, Leo, anh trai Bông, mẹ Bông làm mẫu nét.
 - Công cụ: `cong-cu/gemini/` (gem.py, ia.py, bat.py, gen_audio.py, merge.py, gen_nv.py). Khoá đặt trong biến môi trường `GEMINI_API_KEY`, không lưu vào repo.
 
+- `tai-nguyen/canh/u1/`: 10 cảnh (và 5 tranh phóng to cắt ra từ đó) đã thay cô Hươu bằng Mrs Lan dạng người (05/11).
 - `tai-nguyen/tranh/`: 186 tranh từ vựng, cắt từ 21 tờ 9 ô vẽ bằng Nano Banana 2.1 qua Batch API (tờ T02, T17 vẽ lại vì có chữ; T20, T21 thêm). Bảng từ → tranh: `cong-cu/gemini/gen_pic.json`, cắt bằng `cong-cu/gemini/cut.py`.
 
 ## Còn thiếu
-Xem `CAN-BO-SUNG.md`: 78 từ chức năng / trừu tượng (yes, what, can, today…) vẫn hiện biểu tượng hoặc thẻ chữ, theo danh sách "Không cần tranh". Cảnh truyện Unit 1 (bản demo) vẫn vẽ Mrs Lan là cô Hươu.
+Xem `CAN-BO-SUNG.md`: 78 từ chức năng / trừu tượng (yes, what, can, today…) vẫn hiện biểu tượng hoặc thẻ chữ, theo danh sách "Không cần tranh". 
