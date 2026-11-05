@@ -77,6 +77,7 @@ EXTRA_PIC = {
     'pencil': TN + 'qua/gift_but_chi.webp', 'crayon': TN + 'qua/gift_sap_mau.webp', 'notebook': TN + 'qua/gift_so_tay.webp', 'pencil case': TN + 'qua/gift_hop_but.webp',
     'toy': TN + 'qua/gift_xe.webp', 'school': TN + 'trang/ls_school.webp', 'park': TN + 'trang/ls_park.webp', 'home': TN + 'trang/ls_home.webp',
     'photo': TN + 'trang/ls_album.webp', 'write': TN + 'canh/u1/the_write_c.webp', 'sorry': TN + 'canh/u1/p3_3_c.webp',
+    'mum': NV + 'fam_bong_me_a.webp', 'brother': NV + 'fam_bong_anh_trai_a.webp', 'sister': NV + 'fam_anna_chi_gai_a.webp',
     'good morning': TN + 'canh/u1/p1_2_c.webp', 'morning': TN + 'canh/u1/p1_2_c.webp', 'wave': TN + 'canh/u1/p3_8_c.webp',
 }
 EMO = {
@@ -126,6 +127,11 @@ def img_for(en_text):
             return '', EMO[cand]
     MISS_IMG[k] = '🖼️'
     return '', '🖼️'
+
+# tranh từ vựng vẽ bằng Gemini (19 tờ 9 ô, cắt ra tai-nguyen/tranh/)
+if os.path.exists(f'{W}/gen_pic.json'):
+    for _w, _f in json.load(open(f'{W}/gen_pic.json')).items():
+        EXTRA_PIC.setdefault(norm_en(_w), TN + 'tranh/' + _f)
 
 # ---------------------------------------------------------------- giọng có sẵn
 AU = dict(LS['au'])
