@@ -10,6 +10,7 @@ Web riêng cho buổi Zoom cuối tuần, kiểu Wayground: cô điều khiển 
 | Ba mẹ / bé (một link chung) | https://anh-trung-kids-ces.github.io/hoc.mot.lan.duoc.hai.ngon.ngu/lop-zoom/ |
 | Ba mẹ chuẩn bị trước buổi học | …/lop-zoom/?chuan-bi |
 | Cô (máy tính) | …/lop-zoom/co.html |
+| Hướng dẫn giáo viên | …/lop-zoom/huong-dan.html (nút 📖 Hướng dẫn trên màn cô; ảnh minh hoạ trong `huong-dan-anh/`) |
 | Chia sẻ lên Zoom | nút **🖥 Chia sẻ lên Zoom** trên màn cô: cả màn hình thành màn chiếu (tranh to, có tiếng), thanh nút cô ở dưới. Nút **📺 Cửa sổ riêng** mở màn chiếu ở cửa sổ khác (…/lop-zoom/?chieu=MÃ) |
 | Thử trên một máy, không cần Firebase | thêm `?mock=1` vào cả link cô và link bé, mở nhiều tab |
 | Thử nhiều bé trên một trình duyệt thật (Firebase) | link bé thêm `?thu=1` (mỗi tab là một bé khác) |

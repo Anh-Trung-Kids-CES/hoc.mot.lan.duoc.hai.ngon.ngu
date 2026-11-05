@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hướng dẫn giáo viên – Lớp Zoom</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#E3262E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+SC:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--red:#E3262E;--red-d:#B81C23;--yellow:#FFC72C;--y-soft:#FFF4D1;--green:#3BB273;--blue:#4AA3E8;--ink:#2B2320;--muted:#6E625C;--line:#EADFD3;--paper:#FFFBF4;--card:#fff;--shadow:0 2px 0 #EADFD3,0 6px 18px rgba(80,40,20,.06)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 "Be Vietnam Pro",system-ui,sans-serif}
+h1,h2,h3{font-family:"Baloo 2",system-ui,sans-serif;line-height:1.2;margin:0 0 .4em}
+h1{font-size:clamp(26px,4vw,38px)}h2{font-size:26px;color:var(--red-d)}h3{font-size:19px}
+p{margin:.4em 0 .8em}
+a{color:var(--red-d)}
+.zh{font-family:"Noto Sans SC","Be Vietnam Pro",sans-serif}
+header.top{background:var(--red);color:#fff;padding:22px 16px 26px}
+header.top .in{max-width:1080px;margin:0 auto}
+header.top p{opacity:.95;max-width:720px;margin:6px 0 0}
+.badge{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:var(--yellow);font-size:22px;margin-right:8px;vertical-align:middle}
+nav.toc{position:sticky;top:0;z-index:5;background:rgba(255,251,244,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+nav.toc .in{max-width:1080px;margin:0 auto;display:flex;gap:6px;overflow-x:auto;padding:10px 16px;scrollbar-width:none}
+nav.toc a{flex:none;text-decoration:none;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:14px;font-weight:600}
+nav.toc a:hover{border-color:var(--red);color:var(--red-d)}
+main{max-width:1080px;margin:0 auto;padding:20px 16px 60px}
+section{margin:34px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 20px;box-shadow:var(--shadow)}
+.grid{display:grid;gap:14px}
+.g3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.links a.btn{display:block;text-decoration:none;color:var(--ink);background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 14px;font-weight:700}
+.links a.btn small{display:block;font-weight:500;color:var(--muted);font-size:13px;word-break:break-all}
+.links a.btn:hover{border-color:var(--red)}
+.links a.btn.main{background:var(--red);border-color:var(--red);color:#fff}.links a.btn.main small{color:#ffe5e5}
+.tip{background:var(--y-soft);border-left:4px solid var(--yellow);border-radius:10px;padding:10px 14px;margin:12px 0}
+.warn{background:#FDECEC;border-left:4px solid var(--red);border-radius:10px;padding:10px 14px;margin:12px 0}
+ol.steps{counter-reset:s;list-style:none;padding:0;margin:0}
+ol.steps>li{counter-increment:s;position:relative;padding:0 0 14px 46px}
+ol.steps>li::before{content:counter(s);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:50%;background:var(--red);color:#fff;font:700 17px/32px "Baloo 2",system-ui,sans-serif;text-align:center}
+ul.check{list-style:none;padding:0;margin:0}
+ul.check li{padding:4px 0 4px 30px;position:relative}
+ul.check li::before{content:"☐";position:absolute;left:4px;top:3px;color:var(--red);font-size:18px}
+figure{margin:12px 0}
+figure img{width:100%;height:auto;border-radius:12px;border:1px solid var(--line);display:block;background:#fff}
+figcaption{font-size:13.5px;color:var(--muted);margin-top:6px}
+.screens{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.screen{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px}
+.screen .ic{font-size:28px}
+kbd{display:inline-block;min-width:26px;text-align:center;font:600 13px/1 "Be Vietnam Pro",system-ui,sans-serif;padding:5px 7px;border:1px solid #d8cbbd;border-bottom-width:3px;border-radius:7px;background:#fff}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{text-align:left;vertical-align:top;padding:8px 10px;border-bottom:1px solid var(--line)}
+th{background:var(--y-soft);font-weight:700}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:#fff}
+.lv-switch{display:inline-flex;background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px;gap:4px;margin:4px 0 14px}
+.lv-switch button{border:0;background:none;font:700 15px "Be Vietnam Pro",system-ui,sans-serif;padding:7px 16px;border-radius:999px;cursor:pointer;color:var(--ink)}
+.lv-switch button.on{background:var(--red);color:#fff}
+.lv-switch button[data-lv=canopy].on{background:var(--green)}
+body.lv-seed .only-canopy,body.lv-canopy .only-seed{display:none}
+.phase{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px 18px;margin:14px 0;box-shadow:var(--shadow)}
+.phase-h{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.phase-h .ic{font-size:30px}
+.phase-h h3{margin:0}
+.min{font:700 13px "Be Vietnam Pro",system-ui,sans-serif;background:var(--red);color:#fff;border-radius:999px;padding:3px 10px}
+.rows{display:grid;grid-template-columns:150px 1fr;gap:6px 14px;margin-top:8px}
+.rows dt{font-weight:700;color:var(--muted);font-size:14px}
+.rows dd{margin:0}
+.pill{display:inline-block;background:var(--y-soft);border:1px solid #f1dc9c;border-radius:8px;padding:0 7px;font-weight:600;font-size:14px;white-space:nowrap}
+details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:4px 16px;margin:8px 0}
+details summary{cursor:pointer;font-weight:700;padding:10px 0;list-style:none}
+details summary::before{content:"▸ ";color:var(--red)}
+details[open] summary::before{content:"▾ "}
+details>div{padding:0 0 12px}
+.small{font-size:14px;color:var(--muted)}
+.rule{display:flex;gap:12px;align-items:flex-start}
+.rule b.n{font:800 26px "Baloo 2",system-ui,sans-serif;color:var(--red)}
+footer{max-width:1080px;margin:0 auto;padding:10px 16px 40px;color:var(--muted);font-size:14px}
+@media (max-width:640px){.rows{grid-template-columns:1fr}.rows dt{margin-top:6px}}
+@media print{nav.toc,.lv-switch{display:none}body{background:#fff}.only-canopy,.only-seed{display:block!important}.phase,.card{box-shadow:none;break-inside:avoid}header.top{background:#fff;color:var(--ink);border-bottom:3px solid var(--red)}}
+</style>
+</head>
+<body class="lv-seed">
+<header class="top"><div class="in">
+  <h1><span class="badge">🦌</span>Hướng dẫn giáo viên · Lớp Zoom cùng cô</h1>
+  <p>Buổi Zoom cuối tuần 40 phút, nhóm tối đa 6 bé. Cô điều khiển tốc độ trên máy tính, các con chạm và nói trên máy thứ hai. Dùng cho <b>Little Seed</b> và <b>Canopy</b> · Vòng 2.</p>
+</div></header>
+
+<nav class="toc"><div class="in">
+  <a href="#link">Link cần dùng</a><a href="#ba-man">3 màn hình</a><a href="#truoc">Trước buổi</a><a href="#mo-phong">Mở phòng, đón bé</a>
+  <a href="#chia-se">Chia sẻ lên Zoom</a><a href="#mach">Mạch 40 phút</a><a href="#nguyen-tac">Nguyên tắc</a><a href="#sau">Sau buổi</a><a href="#su-co">Xử lý sự cố</a>
+</div></nav>
+
+<main>
+
+<section id="link">
+  <h2>🔗 Link cần dùng</h2>
+  <div class="grid g3 links">
+    <a class="btn main" href="co.html">🧑‍🏫 Màn cô (máy tính của cô)<small>…/lop-zoom/co.html</small></a>
+    <a class="btn" href="./">👧 Link chung cho bé<small>…/lop-zoom/ · ba mẹ nhập mã phòng 4 số</small></a>
+    <a class="btn" href="./?chuan-bi">📝 Chuẩn bị vào lớp · Little Seed<small>…/lop-zoom/?chuan-bi</small></a>
+    <a class="btn" href="./?chuan-bi&lop=canopy-v2">📝 Chuẩn bị vào lớp · Canopy<small>…/lop-zoom/?chuan-bi&amp;lop=canopy-v2</small></a>
+    <a class="btn" href="co.html?mock=1">🧪 Tập thử trên một máy<small>co.html?mock=1 và index.html?mock=1 (mở nhiều tab làm bé)</small></a>
+  </div>
+  <p class="tip">Cô muốn tập trước: mở <b>co.html?mock=1</b> ở một tab, mở thêm 2–3 tab <b>index.html?mock=1</b> làm bé. Chế độ này chạy trên một máy, không cần mạng Firebase, không ghi dữ liệu thật.</p>
+</section>
+
+<section id="ba-man">
+  <h2>🖥 Buổi học có 3 màn hình</h2>
+  <div class="screens">
+    <div class="screen"><div class="ic">🧑‍🏫</div><h3>Màn cô</h3><p>Chỉ cô thấy. Có mã phòng, 9 phần của buổi học, danh sách bé với ✓/○ từng câu, nút chấm, bấm hộ, kết quả.</p><p class="small"><b>Không chia sẻ màn này lên Zoom</b> vì có đúng/sai của từng bé.</p></div>
+    <div class="screen"><div class="ic">📺</div><h3>Màn chiếu</h3><p>Cô chia sẻ màn này lên Zoom: tranh to, có tiếng, đáp án đúng hiện cho cả lớp, không hiện ai đúng ai sai.</p></div>
+    <div class="screen"><div class="ic">📱</div><h3>Màn bé</h3><p>Máy thứ hai của con (điện thoại, máy tính bảng). Con nghe, chạm tranh, nói. Đúng thì hiện ⭐, chưa đúng thì không hiện gì.</p></div>
+  </div>
+</section>
+
+<section id="truoc">
+  <h2>📋 Trước buổi học</h2>
+  <div class="grid g2">
+    <div class="card"><h3>1–2 ngày trước</h3><ul class="check">
+      <li>Sale gửi ba mẹ link <b>Chuẩn bị vào lớp</b> đúng khoá (Little Seed hoặc Canopy): ba mẹ điền tên con, tên ba/mẹ, con chọn bạn đồng hành, ảnh con nếu muốn.</li>
+      <li>Dặn ba mẹ chuẩn bị <b>2 máy</b>: một máy vào Zoom, một máy mở trang lớp. Chỉ có 1 máy vẫn học được: con giơ ngón tay, cô bấm hộ.</li>
+      <li>Cô tập thử một lượt bằng chế độ <b>?mock=1</b> nếu là lần đầu dạy.</li>
+    </ul></div>
+    <div class="card"><h3>15 phút trước giờ</h3><ul class="check">
+      <li>Dùng <b>máy tính</b>, trình duyệt Chrome. Từ lúc mở phòng đến hết buổi chỉ dùng <b>đúng một trình duyệt này</b> (không dùng cửa sổ ẩn danh, không đổi máy).</li>
+      <li>Cắm sạc, bật loa, mở Zoom.</li>
+      <li>Mở <b>Màn cô</b>, mở phòng mới đúng khoá (xem bước dưới).</li>
+      <li>Bấm <b>Chép link cho ba mẹ</b>, dán vào khung chat Zoom.</li>
+    </ul></div>
+  </div>
+</section>
+
+<section id="mo-phong">
+  <h2>🚪 Mở phòng và đón bé</h2>
+  <div class="grid g2">
+    <div>
+      <ol class="steps">
+        <li><b>Mở phòng mới.</b> Trên màn cô bấm <span class="pill">Mở phòng mới · Little Seed · Vòng 2</span> hoặc <span class="pill">Mở phòng mới · Canopy · Vòng 2</span>. Web tạo <b>mã phòng 4 số</b> hiện to ở góc trên.</li>
+        <li><b>Gửi link.</b> Bấm <span class="pill">🔗 Chép link cho ba mẹ</span> rồi dán vào chat Zoom, hoặc đọc mã phòng cho ba mẹ.</li>
+        <li><b>Bé vào lớp.</b> Ba mẹ mở link, nhập mã, gõ tên con và tên ba/mẹ (máy đã chuẩn bị hoặc đã học web 21 ngày thì điền sẵn). Bé hiện ở cột <b>Các bé</b> bên phải màn cô.</li>
+        <li><b>Cô thêm bé nhanh</b> (thẻ <span class="pill">Thêm bé</span>) nếu ba mẹ loay hoay:
+          <br>· Trong Zoom: <i>Người tham gia → chọn tên → chép</i>, dán vào ô, bấm <span class="pill">Tách tên</span>, sửa rồi thêm.
+          <br>· Hoặc gõ nhanh tên con, tên ba mẹ. Đây là <b>chỗ ngồi tạm</b>: vẫn ghi đủ kết quả (cô bấm hộ); khi bé vào bằng mã với đúng tên, máy bé tự nhận chỗ này.</li>
+        <li><b>Kiểm tra cột Các bé.</b> Chấm xanh = đang trực tuyến. <span class="pill">✏️</span> sửa tên · <span class="pill">🔗</span> ghép hai chỗ của cùng một bé · <span class="pill">✖</span> cho ra khỏi lớp.</li>
+      </ol>
+      <p class="tip">Muốn duyệt từng bé trước khi vào: ở phần <b>Chờ vào lớp</b> tích <i>Cô duyệt từng bé tự vào bằng mã phòng</i>. Bé chờ duyệt hiện nút <b>Cho vào lớp / Không</b>.</p>
+    </div>
+    <div>
+      <figure><img src="huong-dan-anh/mo-phong.webp" alt="Màn mở lớp Zoom với hai nút mở phòng Little Seed và Canopy" loading="lazy"><figcaption>Chọn đúng khoá khi mở phòng. Phòng nhớ khoá, máy bé tự tải đúng nội dung.</figcaption></figure>
+      <figure><img src="huong-dan-anh/man-co.webp" alt="Màn cô: cột phần học bên trái, điều khiển ở giữa, các bé bên phải" loading="lazy"><figcaption>Màn cô: trái là 9 phần và đồng hồ · giữa là nút điều khiển · phải là các bé.</figcaption></figure>
+      <figure><img src="huong-dan-anh/them-be.webp" alt="Thẻ Thêm bé: dán danh sách Zoom, gõ nhanh" loading="lazy"><figcaption>Thẻ Thêm bé.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="chia-se">
+  <h2>📡 Chia sẻ lên Zoom và điều khiển</h2>
+  <div class="grid g2">
+    <div>
+      <ol class="steps">
+        <li>Trên màn cô bấm <span class="pill">🖥 Chia sẻ lên Zoom</span>. Cả cửa sổ thành màn chiếu, thanh nút điều khiển nằm ở dưới đáy.</li>
+        <li>Bấm <b>nút đỏ giữa màn</b> để bật tiếng.</li>
+        <li>Trong Zoom: <b>Chia sẻ màn hình → chọn cửa sổ trình duyệt này → tích "Chia sẻ âm thanh"</b>.</li>
+        <li>Cần xem bé nào đã chọn, chấm hoặc bấm hộ: bấm <span class="pill">✖ Về màn điều khiển</span> hoặc phím <kbd>Esc</kbd>. Zoom vẫn đang chia sẻ cửa sổ, nên cô nên quay lại màn chiếu nhanh.</li>
+      </ol>
+      <p class="tip">Cách khác: <span class="pill">📺 Cửa sổ riêng</span> mở màn chiếu ở một cửa sổ khác. Cô chia sẻ cửa sổ đó trên Zoom, còn màn cô để ở cửa sổ kia (hợp với máy có 2 màn hình).</p>
+      <div class="tbl"><table>
+        <tr><th>Phím</th><th>Việc</th></tr>
+        <tr><td><kbd>→</kbd></td><td>Câu / lượt / cảnh tiếp</td></tr>
+        <tr><td><kbd>←</kbd></td><td>Câu trước</td></tr>
+        <tr><td><kbd>Space</kbd></td><td>Hiện đáp án</td></tr>
+        <tr><td><kbd>R</kbd></td><td>Phát lại tiếng</td></tr>
+        <tr><td><kbd>Esc</kbd></td><td>Về màn điều khiển</td></tr>
+      </table></div>
+      <p class="tip"><b>Tiếng chỉ phát ở máy cô</b> (mặc định): chỉ màn chiếu phát tiếng qua Zoom, máy các con im lặng để không vọng tiếng. Riêng tiếng mẫu bí mật của bạn đang nói (Chào bạn mới, Đôi bạn, Cô giáo nhỏ) phát nhỏ trên máy bạn đó; màn bạn đó nhắc ba mẹ tắt mic Zoom khi con nghe mẫu.</p>
+    </div>
+    <div>
+      <figure><img src="huong-dan-anh/chia-se.webp" alt="Chế độ chia sẻ: màn chiếu to, thanh nút ở dưới" loading="lazy"><figcaption>Chế độ Chia sẻ lên Zoom: thanh nút dưới đáy gồm Phát lại, Hiện đáp án, Tiếp, Tiếng, Về màn điều khiển.</figcaption></figure>
+      <figure><img src="huong-dan-anh/man-be.webp" alt="Màn của bé: nút Nghe và 3 tranh" loading="lazy"><figcaption>Màn bé cùng lúc đó: con bấm Nghe nếu muốn nghe lại, chạm 1 trong 3 tranh.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="mach">
+  <h2>⏱ Mạch 40 phút</h2>
+  <p>Bấm lần lượt các phần ở cột trái màn cô. Đồng hồ chạy từ lúc bắt đầu phần đầu tiên và chuyển đỏ khi quá giờ của phần. Mỗi câu thường là: <b>các con chọn → Hiện đáp án → Câu tiếp</b>. Nhiều bé chưa đúng: bấm <span class="pill">↺ Hỏi lại câu này</span> để cả lớp làm lại (kết quả lấy lần mới nhất).</p>
+  <div class="lv-switch" role="tablist" aria-label="Chọn khoá"><button data-lv="seed" class="on">🌱 Little Seed · Giới thiệu bản thân</button><button data-lv="canopy">🌳 Canopy · Jobs</button></div>
+
+  <div class="phase"><div class="phase-h"><span class="ic">🎡</span><h3>Chào bạn mới</h3><span class="min">phút 0–5</span></div>
+    <dl class="rows">
+      <dt>Mục tiêu</dt><dd>Mỗi bạn được gọi tên, nói một câu thật về mình. Khởi động không khí.</dd>
+      <dt>Cô bấm</dt><dd>
+        <span class="only-seed"><span class="pill">🎡 Quay · tiếng Anh</span> hoặc <span class="pill">🎡 Quay · tiếng Trung</span>.</span>
+        <span class="only-canopy"><span class="pill">🎡 Hỏi mẹ · tiếng Anh / tiếng Trung</span> hoặc <span class="pill">🎡 Hỏi ba · tiếng Anh / tiếng Trung</span>; nên xen kẽ mẹ và ba.</span>
+        Vòng quay ưu tiên bạn chưa được cô chấm. Muốn chọn đúng một bạn: bấm 🎯 cạnh tên bé.</dd>
+      <dt>Các con làm</dt><dd>
+        <span class="only-seed">Cả lớp hỏi <b>What's your name?</b> / <b class="zh">你叫什么？</b>, bạn được chọn trả lời <b>My name is…</b> / <b class="zh">我叫…</b></span>
+        <span class="only-canopy">Cả lớp hỏi <b>What does your mom / dad do?</b> / <b class="zh">你妈妈 / 你爸爸做什么工作？</b>, bạn được chọn nói nghề thật: <b>My mom / dad is a …</b> / <b class="zh">我妈妈 / 我爸爸是…</b>. Bạn nói tốt thì cô hỏi thêm <b>Where does she / he work?</b> Nghề chưa học thì cô gợi ý từ gần nhất hoặc nói cùng con.</span></dd>
+      <dt>Cô chấm</dt><dd>Cột phải, nút <span class="pill">EN</span> <span class="pill">ZH</span>: bấm 1 lần = ✓ con tự nói, bấm lần 2 = ~ nói cùng cô, bấm lần 3 = bỏ.</dd>
+    </dl></div>
+
+  <div class="phase"><div class="phase-h"><span class="ic">⚡</span><h3>Ôn nhanh</h3><span class="min">phút 5–12</span></div>
+    <dl class="rows">
+      <dt>Mục tiêu</dt><dd>Kiểm tra nhanh từ và câu của tuần bằng cả hai tiếng, có số liệu từng bé.</dd>
+      <dt>Nội dung</dt><dd>10 câu: 4 nghe tiếng Anh, 4 nghe tiếng Trung, 2 nhìn chữ.
+        <span class="only-seed">Từ name, you, one–six và các cụm của vòng; nhìn chữ <b class="zh">三</b> và <b>Anna</b>.</span>
+        <span class="only-canopy">Khó dần: từ (nghề, nơi làm việc, người thân) → cụm <i>work at a … / <span class="zh">在…工作</span></i> → câu (<span class="zh">他在医院工作。</span>, My mom is a doctor.…) → nhìn chữ <b class="zh">牙医</b>, <b class="zh">学校</b>.</span></dd>
+      <dt>Cô bấm</dt><dd>Chờ các con chọn (màn cô hiện "N/6 bạn đã chọn") → <span class="pill">👁 Hiện đáp án</span> (<kbd>Space</kbd>) → <span class="pill">Câu tiếp ▶</span> (<kbd>→</kbd>).</dd>
+      <dt>Cô chấm</dt><dd>Tự động: đúng/chưa và thời gian phản hồi. Bé 1 máy giơ 1-2-3 ngón tay, cô bấm hộ số tranh ở cột phải.</dd>
+    </dl>
+    <figure style="max-width:760px"><img src="huong-dan-anh/cham-tu-dong.webp" alt="Màn cô trong phần Ôn nhanh: mỗi bé có trạng thái đã chọn và nút bấm hộ" loading="lazy"><figcaption>Cột Các bé: ✓ đúng / ○ chưa đúng / … chưa chọn, kèm số giây; nút 1-2-3 để bấm hộ.</figcaption></figure></div>
+
+  <div class="phase"><div class="phase-h"><span class="ic">✈️</span><h3>Máy bay thanh điệu</h3><span class="min">phút 12–18</span></div>
+    <dl class="rows">
+      <dt>Mục tiêu</dt><dd>Nghe ra và nói đúng thanh điệu tiếng Trung.</dd>
+      <dt>Nội dung</dt><dd>
+        <span class="only-seed">8 chữ một âm tiết: <span class="zh">一 二 三 四 五 六 你 叫</span>. Con chạm 1 trong 4 đường bay: Bay ngang (thanh 1), Bay lên (2), Lượn xuống rồi lên (3), Lao xuống (4).</span>
+        <span class="only-canopy">8 từ hai chữ: <span class="zh">医生 医院 厨师 学校 饭店 老师 工作 牙医</span>. Con chạm 1 trong 4 <b>đường bay hai chặng</b> (ví dụ "Lượn + ngang" cho lǎoshī). Các lựa chọn sai chỉ khác đáp án ở một chữ.</span></dd>
+      <dt>Cô bấm</dt><dd>Hiện đáp án → màn chiếu hiện pinyin và máy bay bay mẫu; cô hô <b>"Cả lớp đưa tay bay theo, nói theo nhé!"</b>, các con vừa nói vừa đưa tay theo đường bay → Câu tiếp.</dd>
+      <dt>Cô chấm</dt><dd>Từng bé ở cột phải khi con nói: <span class="pill">Chuẩn</span> <span class="pill">Gần</span> <span class="pill">Luyện</span>. Bé 1 máy: bấm hộ số đường bay 1–4.</dd>
+    </dl>
+    <figure class="only-canopy" style="max-width:640px"><img src="huong-dan-anh/thanh-dieu.webp" alt="Màn chiếu thanh điệu Canopy: 老师 lǎoshī và đường bay hai chặng" loading="lazy"><figcaption>Canopy: sau khi hiện đáp án, máy bay bay mẫu hai chặng.</figcaption></figure></div>
+
+  <div class="phase"><div class="phase-h"><span class="ic">🤝</span><h3>Trò chơi đôi bạn</h3><span class="min">phút 18–24</span></div>
+    <dl class="rows">
+      <dt>Mục tiêu</dt><dd>Con nói cho bạn hiểu và nghe bạn nói: giao tiếp thật giữa các bé.</dd>
+      <dt>Cách chơi</dt><dd>Web tự ghép đôi (1-2, 3-4, 5-6; lẻ một bạn thì chơi với cô). Bạn A thấy tranh trên máy mình và nói; bạn B nghe rồi chạm 1 trong 3 tranh; sau đó đổi vai, đổi tiếng. Các bạn khác đoán cho vui.
+        <span class="only-canopy">Canopy có cả câu: <i>My dad is a doctor. / <span class="zh">我姐姐是厨师。</span></i></span></dd>
+      <dt>Cô bấm</dt><dd>Hiện đáp án → Lượt tiếp. <span class="pill">Đổi sang tiếng Anh/Trung</span> nếu lượt đó khó; <span class="pill">🔀 Ghép đôi lại</span> khi có bé vào muộn.</dd>
+      <dt>Lưu ý</dt><dd>Bạn nói nghe <b>tiếng mẫu bí mật</b> trên máy mình; ba mẹ tắt mic Zoom khi con nghe mẫu, bật lại khi con nói. Bạn nói chỉ có 1 máy: cô nhắn riêng tranh hoặc gợi ý.</dd>
+    </dl></div>
+
+  <div class="phase"><div class="phase-h"><span class="ic">📣</span><h3>Cô giáo nhỏ (cả lớp)</h3><span class="min">phút 24–28</span></div>
+    <dl class="rows">
+      <dt>Mục tiêu</dt><dd>Mỗi bạn một lượt nói trước cả lớp; cả lớp chuyển ngữ.</dd>
+      <dt>Cách chơi</dt><dd>Bạn được chọn nói câu trong tranh cho cả lớp nghe; các bạn còn lại chạm tranh. Hiện đáp án xong, <b>cả lớp cùng nói câu đó bằng tiếng kia</b>.</dd>
+      <dt>Chơi bằng đầu</dt><dd>Mặc định phần này các con chọn bằng cách quay đầu trái / ngửa lên / quay phải (nếu ba mẹ đã bật camera ở nút 🙆 trên màn bé). Cô tắt bằng ô <i>🙆 Phần này các con chọn bằng cách quay đầu</i>.</dd>
+    </dl></div>
+
+  <div class="phase"><div class="phase-h"><span class="ic">🐉</span><h3>Cả lớp đấu Rồng Lửa</h3><span class="min">phút 28–31</span></div>
+    <dl class="rows">
+      <dt>Mục tiêu</dt><dd>Vận động mạnh, ngắn; cả lớp cùng thắng, không xếp hạng ai.</dd>
+      <dt>Cô bấm</dt><dd>Chọn thời gian (mặc định 2 phút) → bấm <b>Tắt tiếng tất cả</b> trên Zoom → <span class="pill">⚔️ Bắt đầu trận đấu</span>. Các con tự trả lời câu ngẫu nhiên trên máy mình, mỗi câu đúng +1 ⚡. Giữa trận rồng nổi giận, các con tiếp sức kéo lại; hết giờ cả lớp thắng.</dd>
+      <dt>Bé 1 máy</dt><dd>Con trả lời trên Zoom, cô bấm <span class="pill">⚡ +1</span> cạnh tên con.</dd>
+    </dl></div>
+
+  <div class="phase"><div class="phase-h"><span class="ic">🧩</span><h3>Nghe truyện, xếp tranh</h3><span class="min">phút 31–36</span></div>
+    <dl class="rows">
+      <dt>Nội dung</dt><dd>
+        <span class="only-seed">Truyện <b>Sinh nhật của Bông</b> chia đôi. Lượt 1: nghe tiếng Anh, xếp tranh có lời tiếng Trung. Lượt 2: nghe tiếng Trung (hỏi tên, hỏi tuổi), xếp tranh có lời tiếng Anh.</span>
+        <span class="only-canopy">Truyện <b>Gia đình Anna</b>. Lượt 1 nghe tiếng Anh: My name is Anna. / My dad is a doctor. / My mom is a teacher. / My older sister is a chef. → xếp tranh lời tiếng Trung. Lượt 2 nghe tiếng Trung: <span class="zh">他在医院工作。/ 她在学校工作。/ 星期六晚上，我们去饭店吃晚饭。/ 我爱我家！</span> → xếp tranh lời tiếng Anh.</span></dd>
+      <dt>Cô bấm</dt><dd>Phát 4 cảnh (Cảnh tiếp) → <span class="pill">🧩 Cho các con xếp tranh</span> → chờ "N bạn đã xếp xong" → <span class="pill">👁 Hiện đáp án</span> → đọc từng cảnh bằng tiếng kia, cả lớp nói theo → sang lượt 2.</dd>
+      <dt>Cô chấm</dt><dd>Tự động: đúng cả 4 / số vị trí đúng. Bé 1 máy nói thứ tự trên Zoom, cô bấm <span class="pill">Đúng</span> / <span class="pill">Chưa</span>.</dd>
+    </dl></div>
+
+  <div class="phase"><div class="phase-h"><span class="ic">🏅</span><h3>Huy hiệu Bứt phá</h3><span class="min">phút 36–40</span></div>
+    <dl class="rows">
+      <dt>Cô làm</dt><dd>Màn chiếu hiện huy hiệu cả nhóm, ảnh hoặc bạn đồng hành của các con, thanh năng lượng đầy. Cô khen cả nhóm, chào tạm biệt, mời ba mẹ ở lại phần trao đổi (nếu có).</dd>
+    </dl></div>
+</section>
+
+<section id="nguyen-tac">
+  <h2>💛 Nguyên tắc khi dạy</h2>
+  <div class="grid g2">
+    <div class="card rule"><b class="n">1</b><div><b>3 KHÔNG: không ép nói, không sửa lỗi riêng, không so sánh.</b> Bé chưa đúng thì cả lớp nghe lại, cô nói mẫu cho cả lớp. Không gọi tên bé sai.</div></div>
+    <div class="card rule"><b class="n">2</b><div><b>Chỉ chia sẻ màn chiếu</b>, không bao giờ chia sẻ màn cô (có đúng/sai từng bé).</div></div>
+    <div class="card rule"><b class="n">3</b><div><b>Không xếp hạng.</b> Chỉ có thanh năng lượng chung của cả nhóm. Sao của từng con chỉ hiện trên máy con đó.</div></div>
+    <div class="card rule"><b class="n">4</b><div><b>Hai tiếng đi cùng nhau.</b> Mỗi phần đều có cả tiếng Anh và tiếng Trung; hiện đáp án xong là lúc cả lớp nói, nói theo, chuyển ngữ.</div></div>
+    <div class="card rule"><b class="n">5</b><div><b>Nhịp tĩnh – động.</b> Ôn nhanh, Đôi bạn: chạm, tập trung nghe. Thanh điệu: đưa tay bay. Cô giáo nhỏ, Rồng Lửa: vận động. Xếp tranh: lắng lại trước khi kết thúc.</div></div>
+    <div class="card rule"><b class="n">6</b><div><b>Canopy:</b> màn bé không hiện pinyin (con ôn bằng tai). Cô có pinyin trên màn cô để nhắc khi cần.</div></div>
+  </div>
+</section>
+
+<section id="sau">
+  <h2>📊 Sau buổi học</h2>
+  <div class="grid g2">
+    <div>
+      <ol class="steps">
+        <li>Mở thẻ <span class="pill">Kết quả</span>. Mỗi bé một dòng: ôn nhanh EN/ZH, nhìn chữ, thời gian phản hồi, thanh điệu, đôi bạn, cô giáo nhỏ, Rồng Lửa, xếp tranh, chào bạn.</li>
+        <li><b>Chấm 4H một lần</b> theo ấn tượng chung cả buổi:
+          <br>· <b>Thái độ</b>: Tự giác / Khi nhắc / Cần hỗ trợ
+          <br>· <b>Cảm xúc</b>: Hào hứng / Bình thường / Còn ngại
+          <br>· <b>Tương tác với bạn</b>: Chủ động / Khi cô gợi ý / Chưa</li>
+        <li>Ghi chú ngắn cho từng bé (điểm mạnh, điều cần luyện) để sale gọi ba mẹ.</li>
+        <li>Bấm <span class="pill">📤 Gửi về Sheet</span> (tab "Lớp Zoom"). Nếu báo lỗi: bấm <span class="pill">⬇ Tải CSV</span> để giữ kết quả, gửi cho quản lý.</li>
+        <li>Bấm <span class="pill">🗑 Xóa ảnh các con khỏi phòng</span>.</li>
+      </ol>
+    </div>
+    <figure><img src="huong-dan-anh/ket-qua.webp" alt="Thẻ Kết quả: bảng từng bé và mốc chấm 4H" loading="lazy"><figcaption>Thẻ Kết quả (dữ liệu ví dụ khi tập thử).</figcaption></figure>
+  </div>
+</section>
+
+<section id="su-co">
+  <h2>🛟 Xử lý sự cố</h2>
+  <details><summary>Bé rớt mạng, tải lại trang</summary><div>Ba mẹ mở lại link, nhập mã phòng: con vào đúng chỗ cũ, kết quả vẫn giữ. Nếu cột Các bé hiện 2 dòng cùng một bé, bấm 🔗 ở một dòng để ghép vào dòng kia.</div></details>
+  <details><summary>Ba mẹ báo "Chưa thấy phòng"</summary><div>Kiểm tra lại 4 số mã phòng trên màn cô. Phòng phải đang mở trên màn cô. Gửi lại link bằng nút Chép link cho ba mẹ (link đã có sẵn mã).</div></details>
+  <details><summary>Các con không nghe tiếng</summary><div>Trên màn chiếu bấm nút đỏ giữa màn để bật tiếng; kiểm tra nút 🔈 trên thanh chia sẻ; trong Zoom phải tích <b>Chia sẻ âm thanh</b>. Bấm <kbd>R</kbd> để phát lại.</div></details>
+  <details><summary>Tiếng bị vọng, hai lần</summary><div>Giữ chế độ <b>Tiếng chỉ phát ở máy cô</b> (phần Chờ vào lớp hoặc nút 🔈 trên thanh chia sẻ). Nhắc ba mẹ để máy web của con ở xa máy Zoom.</div></details>
+  <details><summary>iPhone / iPad của bé không phát tiếng mẫu</summary><div>Nhờ ba mẹ chạm vào màn hình một lần (Safari chỉ cho phát tiếng sau lần chạm đầu tiên) và bật tiếng máy (gạt nút im lặng).</div></details>
+  <details><summary>Màn cô báo "Phòng không do trình duyệt này mở"</summary><div>Phòng gắn với trình duyệt đã mở nó. Cô quay lại đúng máy và trình duyệt cũ, mở <b>co.html</b>, chọn phòng ở mục "Phòng đã mở trên máy này". Nếu không thể, mở phòng mới và gửi lại mã cho ba mẹ.</div></details>
+  <details><summary>Bé chỉ có 1 máy</summary><div>Con xem màn chiếu trên Zoom, giơ ngón tay 1-2-3 (thanh điệu 1–4); cô bấm hộ ở cột phải. Rồng Lửa: cô bấm ⚡ +1 khi con trả lời đúng. Xếp tranh: con nói thứ tự, cô bấm Đúng / Chưa.</div></details>
+  <details><summary>Gửi về Sheet báo lỗi</summary><div>Bấm <b>Tải CSV</b> để giữ kết quả trên máy, gửi tệp cho quản lý. Kết quả cũng vẫn nằm trong phòng, mở lại thẻ Kết quả sau vẫn còn.</div></details>
+  <details><summary>Mất mạng hẳn hoặc web không mở được</summary><div>Dạy tiếp bằng màn chiếu dự phòng (Wayground nếu đã chuẩn bị) hoặc bằng tranh và lời của cô theo đúng mạch 40 phút ở trên; ghi chú tay kết quả từng bé để nhập sau.</div></details>
+</section>
+</main>
+<footer>Anh-Trung-Kids · CES Việt Nam · Hướng dẫn cập nhật 05/11/2026 cho Little Seed và Canopy Vòng 2. In trang này: bấm Ctrl + P (bản in hiện đủ nội dung cả hai khoá).</footer>
+<script>
+(function () {
+  const btns = document.querySelectorAll('.lv-switch button');
+  function set(lv) {
+    document.body.classList.toggle('lv-seed', lv === 'seed'); document.body.classList.toggle('lv-canopy', lv === 'canopy');
+    btns.forEach(b => b.classList.toggle('on', b.dataset.lv === lv));
+    try { localStorage.setItem('lz-hd-lv', lv); } catch (e) { }
+  }
+  btns.forEach(b => b.onclick = () => set(b.dataset.lv));
+  let lv = new URLSearchParams(location.search).get('lop') === 'canopy-v2' ? 'canopy' : null;
+  if (!lv) { try { lv = localStorage.getItem('lz-hd-lv'); } catch (e) { } }
+  set(lv === 'canopy' ? 'canopy' : 'seed');
+})();
+</script>
+</body>
+</html>

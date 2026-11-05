@@ -14,7 +14,7 @@ const kidLink = () => location.href.replace(/co\.html.*$/, '');
 function homeScreen(msg) {
   const old = (lsGet('lz-co-rooms', []) || []).slice(0, 4);
   app.innerHTML = `<div class="wrap"><div class="card"><h2>Mở lớp Zoom</h2>
-    <p>Nhóm tối đa 6 bé, 40 phút. Cô chọn khoá của buổi học:</p>
+    <p>Nhóm tối đa 6 bé, 40 phút. Cô chọn khoá của buổi học: <a href="huong-dan.html?lop=${LZ_LOP}" target="_blank" rel="noopener">📖 Hướng dẫn giáo viên</a></p>
     ${msg ? `<p class="msg err">${esc(msg)}</p>` : ''}
     <div class="ctl">${Object.entries(LZ_LOPS).map(([id, c]) => `<button class="btn${id === LZ_LOP ? ' red' : ''}" data-mk="${id}">Mở phòng mới · ${esc(c.ten)}<br><small style="font-weight:500">${esc(c.chude)}</small></button>`).join('')}</div>
     ${old.length ? `<h3 style="margin-top:18px">Phòng đã mở trên máy này</h3><div class="ctl">${old.map(r => `<button class="btn ghost" data-r="${r.code}">Phòng ${r.code} · ${esc((LZ_LOPS[r.lop] || LZ_LOPS['seed-v2']).ten)} · ${esc(r.d || '')}</button>`).join('')}</div>` : ''}
@@ -49,7 +49,7 @@ async function openRoom(code) {
   document.title = 'Màn cô – ' + LZ_CFG.ten;
   CODE = code;
   $('#hdr').innerHTML = `<span class="pill">${esc(LZ_CFG.ten)}</span><span class="code-big" title="Mã phòng">${code}</span>
-    <button class="pill y" id="shareBtn">🖥 Chia sẻ lên Zoom</button><button class="pill" id="chieu" title="Mở màn chiếu ở cửa sổ riêng">📺 Cửa sổ riêng</button><button class="pill" id="cp">🔗 Chép link cho ba mẹ</button>`;
+    <button class="pill y" id="shareBtn">🖥 Chia sẻ lên Zoom</button><button class="pill" id="chieu" title="Mở màn chiếu ở cửa sổ riêng">📺 Cửa sổ riêng</button><button class="pill" id="cp">🔗 Chép link cho ba mẹ</button><a class="pill" href="huong-dan.html?lop=${LZ_LOP}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">📖 Hướng dẫn</a>`;
   $('#chieu').onclick = () => window.open(kidLink() + 'index.html?chieu=' + code + '&lop=' + LZ_LOP + (LZ_MOCK ? '&mock=1' : ''), 'lz-chieu', 'width=1100,height=760');
   $('#shareBtn').onclick = openShare;
   $('#cp').onclick = () => { const l = kidLink() + '?phong=' + code + '&lop=' + LZ_LOP + (LZ_MOCK ? '&mock=1' : ''); navigator.clipboard && navigator.clipboard.writeText(`Lớp Zoom cùng cô: ${l}  (mã phòng ${code})`); toast('Đã chép: ' + l); };
