@@ -6,6 +6,9 @@ con xem màn cô, giơ tay, gõ số vào khung chat Zoom, phát biểu; cô b�
 Link: https://anh-trung-kids-ces.github.io/hoc.mot.lan.duoc.hai.ngon.ngu/lop-zoom-mot-man/
 (Canopy: thêm `?lop=canopy-v2`, hoặc chọn khoá ngay trên trang mở đầu.)
 
+## Tiếng
+Không phát giọng hướng dẫn tiếng Việt của cô Hươu (05/11): hướng dẫn cho cô và các con chỉ hiện bằng chữ (dòng chữ giữa màn và dòng 💡 cho cô). Tiếng mẫu tiếng Anh, tiếng Trung của bài học, nhạc và tiếng trận Rồng vẫn phát; tắt hết bằng nút 🔊 Tiếng.
+
 ## Màn hình
 - **Thanh đỏ trên**: khoá, đồng hồ buổi học, ↩ Hoàn tác (phím Z), 🔊 Tiếng, 👥 Thêm bé, 📊 Báo cáo, ⚙ Cài đặt, ⛶ Toàn màn hình.
 - **Cột trái**: 9 phần của buổi 40 phút, bấm để chuyển.

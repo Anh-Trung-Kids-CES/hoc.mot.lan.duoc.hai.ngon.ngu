@@ -10,7 +10,10 @@ let muted = !!lsGet('mm-mute', false), room = {}, CODE = 'mm', lastStageKey = ''
 function play(list, v) { if (!muted) SND.play(list, v); }
 function giveStar() { }
 function render() { draw(); }
-window.BOSS_SPQ = 14;   // cô bấm hộ: dự kiến mỗi bé một câu đúng trong khoảng 14 giây
+window.BOSS_SPQ = 14;
+/* Bản một màn không phát giọng hướng dẫn tiếng Việt của cô Hươu: hướng dẫn chỉ hiện bằng chữ (cô đọc trên Zoom).
+   Tiếng mẫu tiếng Anh, tiếng Trung của bài học vẫn phát. */
+hd = function () { return ''; };   // cô bấm hộ: dự kiến mỗi bé một câu đúng trong khoảng 14 giây
 
 const HUOU = TN + 'nhan-vat/huou_huou1_a.webp';
 const MM_PH = [
@@ -216,7 +219,7 @@ function vCho() {
       <p class="mm-sub">${esc(LZ_CFG.ten)} · ${esc(LZ_CFG.chude)}</p>
       <div class="mm-faces">${S.kids.map(face).join('') || '<p class="mm-sub">Cô đang mời các bạn vào lớp…</p>'}</div>
       <div class="mm-rules"><span>✋ Giơ tay</span><span>⌨️ Gõ số vào chat</span><span>🎤 Phát biểu</span><span>= ⭐ đổi quà trên web học</span></div>`,
-    ctl: `<button class="btn ghost" data-act="add">👥 Thêm bé</button><button class="btn ghost" data-play="${hd('Chào con! Cô là cô Hươu.')}">🔊 Cô Hươu chào</button><button class="btn red" data-act="start">▶ Bắt đầu: Chào bạn mới</button>`,
+    ctl: `<button class="btn ghost" data-act="add">👥 Thêm bé</button><button class="btn red" data-act="start">▶ Bắt đầu: Chào bạn mới</button>`,
     tip: 'Cô chia sẻ <b>cả màn hình này</b> lên Zoom và tích <b>Chia sẻ âm thanh</b>. Dặn các con: muốn trả lời thì giơ tay; câu có tranh đánh số thì gõ số vào khung chat. Mỗi lần cô bấm ✋ ✅ 🎤 là con được thêm sao.'
   };
 }
