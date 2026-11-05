@@ -15,54 +15,75 @@ const BOSS_V = {
 function bImg(key, base) { return BOSS_V[key] ? TN + BOSS_V[key] : base; }
 
 /* ---------- âm thanh trận đấu ---------- */
+/* Nhạc trận đấu (bản một màn): sôi động hơn – trống bốn phách, clap, hi-hat, bass nảy, hợp âm nhấn và giai điệu vui.
+   Nhạc nhỏ lại (duck) mỗi khi đọc đề, để các con vẫn nghe rõ câu hỏi. Tất cả tự tạo bằng Web Audio, không dùng nhạc có bản quyền. */
 const BA = (() => {
-  let ctx = null, master = null, timer = null, step = 0, nextT = 0, mode = 'calm', on = false;
+  let ctx = null, master = null, music = null, timer = null, step = 0, nextT = 0, mode = 'calm', on = false, ducked = false;
+  const VOL = 0.55, DUCK = 0.16;
   function C() {
     if (!ctx) ctx = new (window.AudioContext || window.webkitAudioContext)();
-    if (!master) { master = ctx.createGain(); master.gain.value = 1; master.connect(ctx.destination); }
+    if (!master) {
+      master = ctx.createGain(); master.gain.value = 1;
+      const comp = ctx.createDynamicsCompressor(); comp.threshold.value = -14; comp.ratio.value = 4;
+      master.connect(comp).connect(ctx.destination);
+      music = ctx.createGain(); music.gain.value = VOL; music.connect(master);
+    }
     if (ctx.state === 'suspended') ctx.resume();
     return ctx;
   }
   const N = n => 440 * Math.pow(2, (n - 69) / 12);
-  function tone(f, t, d, type, vol, slideTo) {
+  function tone(f, t, d, type, vol, slideTo, out, cut) {
     const o = ctx.createOscillator(), g = ctx.createGain();
     o.type = type; o.frequency.setValueAtTime(f, t);
     if (slideTo) o.frequency.exponentialRampToValueAtTime(slideTo, t + d);
-    g.gain.setValueAtTime(.0001, t); g.gain.exponentialRampToValueAtTime(vol, t + .01); g.gain.exponentialRampToValueAtTime(.0001, t + d);
-    o.connect(g).connect(master); o.start(t); o.stop(t + d + .05);
+    g.gain.setValueAtTime(.0001, t); g.gain.exponentialRampToValueAtTime(vol, t + .008); g.gain.exponentialRampToValueAtTime(.0001, t + d);
+    let node = o;
+    if (cut) { const fl = ctx.createBiquadFilter(); fl.type = 'lowpass'; fl.frequency.setValueAtTime(cut, t); fl.Q.value = 6; o.connect(fl); node = fl; }
+    node.connect(g).connect(out || master); o.start(t); o.stop(t + d + .05);
   }
-  function noise(t, d, vol, f1, f2, type) {
+  function noise(t, d, vol, f1, f2, type, out) {
     const len = Math.max(1, Math.floor(ctx.sampleRate * d)), buf = ctx.createBuffer(1, len, ctx.sampleRate), x = buf.getChannelData(0);
     for (let i = 0; i < len; i++) x[i] = Math.random() * 2 - 1;
     const src = ctx.createBufferSource(); src.buffer = buf;
     const fl = ctx.createBiquadFilter(); fl.type = type || 'bandpass'; fl.frequency.setValueAtTime(f1, t);
     if (f2) fl.frequency.exponentialRampToValueAtTime(f2, t + d);
     const g = ctx.createGain(); g.gain.setValueAtTime(vol, t); g.gain.exponentialRampToValueAtTime(.0001, t + d);
-    src.connect(fl).connect(g).connect(master); src.start(t); src.stop(t + d);
+    src.connect(fl).connect(g).connect(out || master); src.start(t); src.stop(t + d);
   }
-  /* nhạc nền: 16 nhịp móc đơn, vui khi bình thường, dồn dập ở giọng thứ khi rồng nổi giận */
+  const kick = t => { tone(150, t, .16, 'sine', .55, 42, music); };
+  const clap = t => { noise(t, .12, .22, 1500, 900, 'bandpass', music); noise(t + .012, .1, .14, 1800, null, 'bandpass', music); };
+  const hat = (t, v) => noise(t, .035, v || .07, 8000, null, 'highpass', music);
+  /* 2 nhịp (32 móc đơn): giọng trưởng vui (calm), giọng thứ dồn dập khi rồng nổi giận (tense), thắng thì rộn ràng (win) */
   const P = {
-    calm: { bpm: 132, bass: [48, 0, 48, 0, 55, 0, 55, 0, 53, 0, 53, 0, 55, 0, 55, 0], lead: [72, 0, 79, 0, 76, 0, 79, 84, 77, 0, 84, 0, 79, 76, 74, 71] },
-    tense: { bpm: 156, bass: [45, 45, 0, 45, 52, 0, 52, 52, 48, 48, 0, 48, 50, 0, 52, 52], lead: [69, 72, 76, 72, 69, 72, 77, 72, 68, 72, 76, 72, 71, 74, 77, 80] },
-    win: { bpm: 140, bass: [48, 0, 52, 0, 55, 0, 52, 0, 53, 0, 57, 0, 55, 0, 59, 0], lead: [72, 76, 79, 84, 79, 84, 88, 84, 77, 81, 84, 89, 79, 83, 86, 91] }
+    calm: { bpm: 152, root: [48, 48, 45, 45, 41, 41, 43, 43],
+      lead: [72, 0, 76, 79, 0, 79, 76, 0, 74, 0, 76, 74, 72, 0, 67, 0, 69, 0, 72, 76, 0, 77, 76, 0, 74, 0, 72, 74, 76, 0, 79, 0] },
+    tense: { bpm: 168, root: [45, 45, 45, 45, 41, 41, 43, 44],
+      lead: [69, 72, 76, 72, 69, 72, 77, 72, 68, 71, 76, 71, 69, 72, 74, 76, 69, 72, 76, 81, 80, 76, 72, 69, 71, 74, 77, 74, 76, 80, 83, 80] },
+    win: { bpm: 160, root: [48, 48, 53, 53, 55, 55, 48, 48],
+      lead: [72, 76, 79, 84, 79, 84, 88, 84, 77, 81, 84, 89, 79, 83, 86, 91, 84, 88, 91, 96, 91, 88, 84, 79, 86, 83, 79, 74, 84, 0, 84, 0] }
   };
   function schedule() {
     const p = P[mode] || P.calm, spb = 60 / p.bpm / 2;
     while (nextT < ctx.currentTime + .25) {
-      const i = step % 16;
-      if (p.bass[i]) tone(N(p.bass[i]), nextT, spb * .9, 'triangle', .1);
-      if (p.lead[i]) tone(N(p.lead[i]), nextT, spb * .55, 'square', mode === 'tense' ? .03 : .022);
-      if (i % 4 === 0) { tone(110, nextT, .12, 'sine', .22, 45); }          // trống trầm
-      if (i % 4 === 2) noise(nextT, .05, .05, 7000, null, 'highpass');     // xoẹt
-      if (mode === 'tense' && i % 2 === 1) noise(nextT, .03, .03, 9000, null, 'highpass');
+      const i = step % 32, r = p.root[Math.floor(i / 4)];
+      if (i % 4 === 0) kick(nextT);                                            // trống bốn phách
+      if (mode === 'tense' && i % 4 === 3) kick(nextT);
+      if (i % 8 === 4) clap(nextT);                                            // clap phách 2 và 4
+      hat(nextT, i % 2 ? .085 : .04);                                          // hi-hat liên tục
+      tone(N(r + (i % 2 ? 12 : 0)), nextT, spb * .85, 'sawtooth', .07, null, music, mode === 'tense' ? 900 : 700);   // bass nảy quãng tám
+      if (i % 4 === 2) [0, 4, 7].forEach(s => tone(N(r + 24 + s + (mode === 'tense' && s === 4 ? -1 : 0)), nextT, spb * .6, 'square', .018, null, music, 2600));  // hợp âm nhấn
+      if (p.lead[i]) tone(N(p.lead[i]), nextT, spb * (p.lead[(i + 1) % 32] ? .9 : 1.7), 'triangle', .075, null, music);
+      if (i === 31) noise(nextT, spb, .05, 1200, 7000, 'bandpass', music);     // tiếng vút cuối câu nhạc
       nextT += spb; step++;
     }
   }
   return {
-    start() { C(); if (on) return; on = true; step = 0; nextT = ctx.currentTime + .05; timer = setInterval(schedule, 60); },
+    start() { C(); if (on) return; on = true; step = 0; nextT = ctx.currentTime + .05; music.gain.setValueAtTime(ducked ? DUCK : VOL, ctx.currentTime); timer = setInterval(schedule, 60); },
     stop() { on = false; clearInterval(timer); timer = null; },
     mood(m) { mode = m; },
-    power() { C(); const t = ctx.currentTime; [0, 4, 7, 12].forEach((s, j) => tone(N(79 + s), t + j * .045, .14, 'triangle', .09)); },
+    /* nhạc nhỏ lại khi đọc đề, to lại khi đọc xong */
+    duck(v) { ducked = !!v; if (!ctx || !music) return; const t = ctx.currentTime; music.gain.cancelScheduledValues(t); music.gain.setTargetAtTime(v ? DUCK : VOL, t, v ? .05 : .35); },
+    power() { C(); const t = ctx.currentTime; [0, 4, 7, 12].forEach((s, j) => tone(N(79 + s), t + j * .045, .14, 'triangle', .09)); noise(t, .2, .05, 3000, 9000); },
     zap() { C(); const t = ctx.currentTime; tone(1600, t, .28, 'sawtooth', .05, 200); tone(2400, t, .18, 'square', .02, 900); noise(t, .22, .07, 4000, 900); },
     roar() { C(); const t = ctx.currentTime; tone(120, t, .55, 'sawtooth', .07, 65); tone(180, t, .45, 'square', .03, 90); noise(t, .55, .16, 700, 180, 'lowpass'); },
     boom() { C(); const t = ctx.currentTime; tone(170, t, .38, 'sine', .28, 38); noise(t, .32, .18, 1400, 90, 'lowpass'); },

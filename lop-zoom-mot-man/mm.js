@@ -7,7 +7,14 @@
 /* các biến lz-boss.js cần (bản gốc dùng cho màn chiếu) */
 const CHIEU = 'mot-man';
 let muted = !!lsGet('mm-mute', false), room = {}, CODE = 'mm', lastStageKey = '';
-function play(list, v) { if (!muted) SND.play(list, v); }
+let duckN = 0;
+/* trong trận Rồng: nhạc nhỏ lại khi đọc đề, đọc xong nhạc to lại */
+function play(list, v) {
+  if (muted) return;
+  const pr = SND.play(list, v);
+  if (S && S.ph === 'boss' && pr && pr.then) { const my = ++duckN; BA.duck(true); pr.then(() => { if (my === duckN) BA.duck(false); }); }
+  return pr;
+}
 function giveStar() { }
 function render() { draw(); }
 window.BOSS_SPQ = 14;
@@ -755,7 +762,7 @@ document.addEventListener('click', e => {
   if (t.dataset.px) { const [id, c] = t.dataset.px.split('|'); return press(id, +c); }
   if (t.dataset.spin) { const [l, q] = t.dataset.spin.split('|'); return spin(l, q); }
   if (t.dataset.playSeq) { SND.stop(); if (VIEW && VIEW.seq) muted ? toast('Đang tắt tiếng') : SND.play(VIEW.seq); return; }
-  if (t.dataset.play !== undefined) { if (t.dataset.play) { SND.stop(); muted ? toast('Đang tắt tiếng') : SND.play([t.dataset.play]); } return; }
+  if (t.dataset.play !== undefined) { if (t.dataset.play) { SND.stop(); muted ? toast('Đang tắt tiếng') : play([t.dataset.play]); } return; }
   if (t.dataset.tr) { const [id, v] = t.dataset.tr.split('|'); S.tr = S.tr || {}; const m = S.tr[S.i] || (S.tr[S.i] = {}); if (m[id] === +v) delete m[id]; else m[id] = +v; SND.beep('pop'); save(); draw(); return; }
   if (t.dataset.ava) return cycleAva(t.dataset.ava);
   if (t.dataset.lp !== undefined) { const tt = lopTurnsNow()[S.li || 0]; if (tt) { lt(tt.a).c = +t.dataset.lp; SND.beep('pop'); save(); draw(); } return; }
