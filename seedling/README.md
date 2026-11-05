@@ -33,3 +33,10 @@ Học xong ngày trước mới mở ngày sau. Cô giáo thêm `?gv=1` vào lin
 
 ## Còn thiếu
 Xem `CAN-BO-SUNG.md`: 78 từ chức năng / trừu tượng (yes, what, can, today…) vẫn hiện biểu tượng hoặc thẻ chữ, theo danh sách "Không cần tranh". 
+
+## Sửa sau buổi duyệt 05/11 tối
+- Luật 5–10 câu: bài nào dưới 5 câu (Thẻ nền, Thẻ từ mới, Mẹo âm, Phiên dịch nhí, Nói theo, Gọi lại) được thêm mục ôn từ các ngày trước (`on: true`); Thẻ nền lấy từ Little Seed của các ngày gần nhất. Logic nằm cuối `cong-cu/build.py`.
+- Giọng: `SD.aumap` (câu → file). Web tự tìm file theo nội dung câu, không còn phải dùng giọng máy. 168 câu còn thiếu (chủ yếu ngày 1, 2, 3, 8 và Mẹo âm) đã tạo bằng Gemini.
+- Nói theo: chỉ khen và cho sao khi micro thật sự nghe thấy con nói; im lặng thì nhắc nói lại một lần rồi sang câu.
+- Phiên dịch nhí: 3 bước rõ ràng ① Nghe Leo nói → ② Con nói tiếng Trung → ③ Xiaomei hiểu rồi. Tuần đầu cô nói mẫu trước; các tuần sau con thử trước rồi nghe đáp án.
+- Vận động: nghe một từ rồi quay đầu chọn TRANH đúng (2 tranh ở ngày 1–3, 3 tranh từ ngày 4), có tranh gây nhiễu, không ghi chữ dưới tranh. Có khung camera của con ngay trong bài và mũi tên hướng đang quay. Màn "Đang mở camera" có nút "Chơi bằng chạm" và tự báo lỗi sau 30–40 giây.

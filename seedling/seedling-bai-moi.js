@@ -89,7 +89,7 @@ R.tl = (step, body) => {
     body.querySelector('#nx').onclick = () => { stopAll(); i++; show(); };
     await play(); if (my !== RUN) return; const how = await micTurn(body.querySelector('#mic'), my); if (how === 'gone' || my !== RUN) return;
     body.querySelector('#ans').innerHTML = bub(it.a, 'zh', '', it.apy); revealPy(body, 600); await say(zh(it.a, it.a_a)); if (my !== RUN) return;
-    star(); await wait(700); if (my === RUN) { i++; show(); } }
+    if (how === 'rec') star(); await wait(700); if (my === RUN) { i++; show(); } }
   (async () => { await hd('turn'); show(); })();
 };
 
@@ -102,13 +102,17 @@ R.game = (step, body) => {
       opts = `<button class="hd-pick sd-flag en" data-i="0"><b>EN</b><small>English</small></button><button class="hd-pick sd-flag zh" data-i="1"><b class="zh">中文</b><small>Tiếng Trung</small></button>`; }
     else if (q.m === 'ds') { top = `<div class="sd-dscard">${pic(q.card.img, q.card.e, '')}<b>${esc(q.card.en)}</b></div><span class="ls-lab">Câu tiếng Trung có cùng nghĩa với thẻ không?</span>`;
       opts = `<button class="hd-pick sd-yn ok" data-i="0"><b>✓</b><small>Đúng</small></button><button class="hd-pick sd-yn no" data-i="1"><b>✗</b><small>Sai</small></button>`; }
+    else if (q.m === 'pic') { top = `<span class="ls-lab">Con nghe rồi chọn tranh đúng</span>`;
+      opts = q.opts.map((o, i) => `<button class="hd-pick sd-pc" data-i="${i}" aria-label="tranh ${i + 1}">${pic(o.img, o.e, '')}</button>`).join(''); }
     else { top = `<span class="ls-lab">Con nghe rồi chọn tranh đúng</span>`;
       opts = q.opts.map((o, i) => `<button class="hd-pick sd-pc" data-i="${i}">${pic(o.img, o.e, '')}<small>${esc(q.say.l === 'zh' ? o.en : o.zh)}</small></button>`).join(''); }
+    const nOpt = q.m === 'c3' || (q.opts && q.opts.length === 3) ? 3 : 2;
     body.innerHTML = `<div class="sd-game hd-zone"><div class="sd-gtop">${top}<button class="ls-b sm" id="pq">${SVG.spk}</button></div>
-      <div class="sd-picks n${q.m === 'c3' ? 3 : 2}">${opts}</div>
-      <div class="sd-gbar"><button class="ls-b" id="hdBtn" type="button">🙆 ${HEAD.on ? 'Đang chơi bằng đầu' : 'Chơi bằng đầu'}</button><span class="ls-lab">${q.m === 'c3' ? '⬅️ trái · ⬆️ ngửa lên · ➡️ phải' : '⬅️ quay trái · ➡️ quay phải'}</span></div></div>`;
+      <div class="sd-mirror${HEAD.on ? '' : ' off'}" id="mir"><video muted playsinline autoplay></video><span class="sd-dir" id="mdir"></span><small id="mtip">${HEAD.on ? 'Con nhìn thẳng vào máy' : 'Bấm 🙆 để chơi bằng đầu'}</small></div>
+      <div class="sd-picks n${nOpt}">${opts}</div>
+      <div class="sd-gbar"><button class="ls-b" id="hdBtn" type="button">🙆 ${HEAD.on ? 'Đang chơi bằng đầu' : 'Chơi bằng đầu'}</button><span class="ls-lab">${nOpt === 3 ? '⬅️ quay trái · ⬆️ ngửa lên · ➡️ quay phải' : '⬅️ quay trái · ➡️ quay phải'}</span></div></div>`;
     body.querySelector('#hdBtn').onclick = () => HEAD.on ? HEAD.stop() : HEAD.consent();
-    HEAD.btn();
+    HEAD.btn(); HEAD.mirror && HEAD.mirror();
     const play = () => { stopAll(); return say(q.say); }; X.replay = play; body.querySelector('#pq').onclick = play; play();
     body.querySelectorAll('.hd-pick').forEach(b => b.onclick = async () => { if (busy) return; busy = true; const me = RUN, i = +b.dataset.i;
       if (i === q.ans) { stopAll(); sfx.ok(); b.classList.add('right'); pop(b); if (!q.again) star(); await hd(q.again ? 'retry' : 'ok'); }
