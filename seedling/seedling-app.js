@@ -306,7 +306,7 @@ R.pdn = (step, body) => {
     body.innerHTML = `<div class="sx-pdn2">
       <ol class="sx-steps"><li id="s1">① Nghe Leo nói</li><li id="s2">② Con nói tiếng Trung</li><li id="s3">③ Xiaomei hiểu rồi!</li></ol>
       <div class="sx-pdn"><div class="sx-pp" id="pl"><div class="sx-who">${face('leo')}<b>Leo</b><small>nói tiếng Anh</small></div>${bub(it.en, 'en', 'leo')}</div>
-      <div class="sx-arrow">➜</div><div class="sx-pp zhs" id="px"><div class="sx-who">${face('xiaomei')}<b>Xiaomei</b><small>chỉ hiểu tiếng Trung</small></div><div id="ans" class="sx-ans"><div class="sx-q">?</div></div></div>
+      <div class="sx-arrow">➜</div><div class="sx-pp zhs" id="px"><div class="sx-who">${face('xiaomei')}<b>Xiaomei</b><small>chỉ hiểu tiếng Trung</small></div><div id="ans" class="sx-ans"><div class="sx-qmark">?</div></div></div>
       <div class="sx-microw"><div class="ls-mic idle" id="mic"><span class="ls-lv"></span>${SVG.mic}<b></b></div><span class="ls-lab" id="hint">Con nghe Leo nói nhé…</span></div>
       <div class="row"><button class="ls-b" id="nx">Bỏ qua ▶</button></div></div></div>`;
     body.querySelector('#nx').onclick = () => { stopAll(); next(); };
