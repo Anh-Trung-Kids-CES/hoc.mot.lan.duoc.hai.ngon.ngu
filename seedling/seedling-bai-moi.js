@@ -25,7 +25,7 @@ Object.assign(T, {
   lam: { n: 'Nghe – làm theo', ic: 'ls_o_xem', sub: 'Listen and do · 听一听，做一做', rules: ['Con nghe lệnh.', 'Con đứng dậy làm theo lệnh.', 'Làm xong con chạm nút “Con làm rồi!”.'] },
   tl: { n: 'Nghe – trả lời', ic: 'cx_o_speak', sub: 'YCT口试 听后回答', rules: ['Con nghe câu hỏi.', 'Con nói câu trả lời, máy ghi lại giọng con.', 'Rồi con nghe câu trả lời mẫu.'] }
 });
-Object.assign(SD.vi, { gamego: 'Con quay đầu hoặc chạm để chọn nhé!', did: 'Con làm giỏi quá!' });
+Object.assign(SD.vi, { gamego: 'Con quay đầu hoặc chạm để chọn nhé!', did: 'Giỏi lắm! Con làm đúng rồi!' });
 
 /* ---------- CHỌN TRANH: nghe một từ, chạm 1 trong 3 tranh ---------- */
 R.chon = (step, body) => {
