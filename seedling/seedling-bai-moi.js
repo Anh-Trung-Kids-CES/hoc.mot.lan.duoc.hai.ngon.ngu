@@ -47,10 +47,11 @@ R.de = (step, body) => {
   const Q = step.qs.map(q => Object.assign({}, q)); const back = new Set(); let qi = 0, busy = false;
   const ask = async () => { const my = RUN; dots(qi, Q.length); if (qi >= Q.length) return finish(); const q = Q[qi];
     const prompt = q.read ? `<div class="sx-q"><div><b class="zh">${esc(q.say.t)}</b><span class="sx-pyl" data-later>${esc(q.py || '')}</span></div></div>`
-      : q.tf ? `<div class="sx-q sd-desc"><span class="sx-e">🖼️</span><div><b>${esc(q.desc)}</b><small>Tranh</small></div><button class="ls-b sm" id="pq">${SVG.spk}</button></div>`
+      : q.tf ? (q.img ? `<div class="sx-q sd-tfpic">${pic(q.img, '', 'sd-depic')}<button class="ls-b sm" id="pq">${SVG.spk}</button></div>`
+                      : `<div class="sx-q sd-desc"><span class="sx-e">🖼️</span><div><b>${esc(q.desc)}</b><small>Tranh</small></div><button class="ls-b sm" id="pq">${SVG.spk}</button></div>`)
       : `<div class="sx-q"><span class="sx-e">🎧</span><div><b>Con nghe nhé</b></div><button class="ls-b sm" id="pq">${SVG.spk}</button></div>`;
     body.innerHTML = `<div class="sx-hoi"><span class="ls-lab">${q.read ? 'Đọc và chọn tranh' : q.tf ? 'Nghe: đúng hay sai với tranh?' : 'Nghe và chọn tranh'} · Câu ${qi + 1}/${Q.length}${q.again ? ' · gặp lại' : ''}</span>${prompt}
-      <div class="sx-opts ${q.tf ? 'two' : ''}">${q.opts.map((o, n) => `<button class="sx-opt" data-n="${n}">${q.tf ? '' : '<span class="sd-ph">🖼️</span>'}${esc(o)}</button>`).join('')}</div></div>`;
+      <div class="sx-opts ${q.tf ? 'two' : ''}">${q.opts.map((o, n) => { const im = (q.imgs || [])[n]; return `<button class="sx-opt${im ? ' sd-picopt' : ''}" data-n="${n}" aria-label="${im ? 'tranh ' + (n + 1) : esc(o)}">${q.tf ? esc(o) : im ? pic(im, '', 'sd-depic') : '<span class="sd-ph">🖼️</span>' + esc(o)}</button>`; }).join('')}</div></div>`;
     revealPy(body, 900);
     let tok = 0; const play = async () => { hush(); const me = RUN, t = ++tok; await say(q.say); if (me !== RUN || t !== tok || q.read) return; await wait(700); if (me === RUN && t === tok) await say(q.say); };
     X.replay = play; const pq = body.querySelector('#pq'); if (pq) pq.onclick = play; play();

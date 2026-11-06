@@ -76,3 +76,9 @@ body.hub .sd-world{height:100%}
 .sd-dir.L{left:22%}.sd-dir.R{left:78%}.sd-dir.U{top:30%}
 .sd-pc .ls-pic{width:86%;height:clamp(110px,22vh,210px)}
 body:has(.sd-mirror:not(.off)) .hd-cam{display:none}
+
+/* Dạng đề: đáp án là tranh, không có chữ tiếng Việt */
+.sd-picopt{padding:8px;min-height:auto}
+.sd-picopt .sd-depic,.sd-tfpic .sd-depic{width:100%;height:clamp(110px,22vh,200px);object-fit:contain;display:block}
+.sd-tfpic{flex-direction:row;align-items:center;justify-content:center;gap:12px}
+.sd-tfpic .sd-depic{width:clamp(170px,34vh,300px);height:clamp(150px,30vh,260px);border-radius:18px;background:#fff}

@@ -1074,6 +1074,36 @@ vi.update({
 })
 
 
+
+# ---------------------------------------------------------------- Dạng đề: tranh thật thay chữ tiếng Việt; sửa câu A/B/C bị đọc nhầm thành đúng/sai
+DE_PLAN = json.load(open(f'{W}/de/plan.json')) if os.path.exists(f'{W}/de/plan.json') else {'have': {}, 'draw': {}}
+DE_DRAWN = json.load(open(f'{W}/de/drawn.json')) if os.path.exists(f'{W}/de/drawn.json') else {}
+DE_ABC_ANS = {'A số 3, B số 10, C số 8': 2, 'A 7 > 8, B 8 = 8, C 8 > 7': 2, 'A anh trai, B mẹ, C bé gái': 2}
+def _de_pic(vi):
+    vi = vi.strip()
+    return DE_PLAN['have'].get(vi) or (TN + 'tranh/' + DE_DRAWN[vi] if vi in DE_DRAWN else '')
+_PYGLUE = re.compile(r'(?<=[一-鿿])[a-zA-Zāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜü]+')
+for n in days_out:
+    for s in days_out[n]['steps']:
+        if s['type'] != 'de': continue
+        for q in s['qs']:
+            sy = q.get('say') or {}
+            if sy.get('l') == 'zh' and isinstance(sy.get('t'), str):
+                t2 = _PYGLUE.sub('', sy['t'])
+                if t2 != sy['t']:
+                    sy['t'] = t2; sy['a'] = AU.get(f'zh:{t2}', '')
+                    if q.get('py'):
+                        w = q['py'].split(); h = len(w) // 2
+                        if h and [x.lower() for x in w[:h]] == [x.lower() for x in w[h:]]: q['py'] = ' '.join(w[:h])
+            m = re.match(r'^A (.+), B (.+), C (.+)$', q.get('desc', '')) if q.get('tf') else None
+            if m:
+                q.pop('tf'); q['opts'] = [m.group(1), m.group(2), m.group(3)]; q['ans'] = DE_ABC_ANS.get(q['desc'], 0); q.pop('desc')
+            if q.get('tf'):
+                q['img'] = _de_pic(q.get('desc', ''))
+            else:
+                ims = [_de_pic(o) for o in q['opts']]
+                q['imgs'] = ims if all(ims) else []
+
 # ---------------------------------------------------------------- dọn ký hiệu đáp án còn sót trong chữ hiện cho con
 def _clean(x):
     if not isinstance(x, str): return x
