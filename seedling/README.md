@@ -40,3 +40,8 @@ Xem `CAN-BO-SUNG.md`: 78 từ chức năng / trừu tượng (yes, what, can, to
 - Nói theo: chỉ khen và cho sao khi micro thật sự nghe thấy con nói; im lặng thì nhắc nói lại một lần rồi sang câu.
 - Phiên dịch nhí: 3 bước rõ ràng ① Nghe Leo nói → ② Con nói tiếng Trung → ③ Xiaomei hiểu rồi. Tuần đầu cô nói mẫu trước; các tuần sau con thử trước rồi nghe đáp án.
 - Vận động: nghe một từ rồi quay đầu chọn TRANH đúng (2 tranh ở ngày 1–3, 3 tranh từ ngày 4), có tranh gây nhiễu, không ghi chữ dưới tranh. Có khung camera của con ngay trong bài và mũi tên hướng đang quay. Màn "Đang mở camera" có nút "Chơi bằng chạm" và tự báo lỗi sau 30–40 giây.
+
+## Sửa ngày 06/11
+- Chạy thử tự động cả 99 ngày bằng `cong-cu/kiem-tra-choi-het.py` (chơi từng bài tới màn "làm xong bước", ghi bài kẹt, câu dùng giọng máy, file giọng lỗi). Đã sửa kẹt ở Trả lời câu hỏi, Dạng đề, Nghe – trả lời, Phiên dịch nhí (nguyên nhân: tắt tiếng bằng `stopAll()` làm đổi lượt chạy; nay dùng `hush()` và lời mới tự kết thúc lời cũ).
+- Dạng đề: đáp án là tranh (96 tranh: 32 dùng lại, 64 vẽ mới ở `tai-nguyen/tranh/de_*.webp`, bảng `cong-cu/gemini/vi_en.json`, `plan.json`, `drawn.json`); 3 câu A/B/C bị đọc nhầm thành đúng/sai đã sửa.
+- Giọng: thêm 174 câu Anh–Trung (đáp án Trả lời câu hỏi…) và 140 câu tiếng Việt (hướng dẫn đầu bài, "Hôm nay con học") trong `SD.vi_tx`.

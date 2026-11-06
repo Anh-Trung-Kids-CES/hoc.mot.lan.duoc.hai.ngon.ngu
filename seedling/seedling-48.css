@@ -62,7 +62,7 @@ body.hub .sd-world{height:100%}
 .sx-pp .sx-who small{display:block;font-weight:700;color:var(--muted);font-size:12px}
 .sx-pp.talk{box-shadow:0 0 0 5px #9EC1F5}
 .sx-pp.happy{box-shadow:0 0 0 5px #9AD9B4;border-color:#2E9E5B}
-.sx-q{width:84px;height:84px;border-radius:50%;background:#FDECEC;color:#E3262E;display:grid;place-items:center;font-size:48px;font-weight:900}
+.sx-qmark{width:84px;height:84px;border-radius:50%;background:#FDECEC;color:#E3262E;display:grid;place-items:center;font-size:48px;font-weight:900}
 .sx-hintans{opacity:.85;border:3px dashed #E3262E;border-radius:22px;padding:2px}
 
 /* Vận động: gương camera ngay trong bài + mũi tên hướng con đang quay */
