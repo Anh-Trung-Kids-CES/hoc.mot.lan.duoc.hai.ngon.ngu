@@ -87,3 +87,10 @@ Cùng một web, cùng 9 phần và mạch 40 phút như Little Seed, cùng lu�
 
 ## Đợt 2 (cho Zoom ngày 21)
 Thẻ báo cáo tự động, câu gợi ý cho sale, huy hiệu cộng sao, tab "Ghép hồ sơ Zoom" trên trang quản trị.
+
+## Sao thành tích, vinh danh, cộng sao vào web học (08/11/2026)
+- Cột **Các bé** trên màn cô: mỗi bé có ✋ giơ tay và 🎤 phát biểu (cô bấm +1, bấm chuột phải −1), ✅ trả lời đúng (tự đếm mọi câu con chọn đúng trên máy con hoặc cô bấm hộ, kể cả trận Rồng; câu đoán cho vui khi không đến lượt không tính) và ⭐ tổng. Phát biểu tự cộng thêm khi cô chấm Chào bạn mới (EN/ZH) và Phiên dịch nhí.
+- Phần **Huy hiệu Bứt phá**: nút 🏆 Vinh danh từng bạn (theo thứ tự trong lớp, không xếp hạng) hiện trên màn chiếu và máy các con: ảnh, danh hiệu theo việc con làm nhiều nhất, số sao; màn cả nhóm hiện sao của từng bạn.
+- Thẻ **Kết quả**: thêm cột ✋, ✅, 🎤, ± sao (cô chỉnh), ⭐ Sao, danh hiệu. Nút **📤 Gửi về Sheet & cộng sao vào web học**: ghi báo cáo vào tab "Lớp Zoom", rồi ghi sao vào tab "Sao Zoom" (gửi lại cùng phòng + ngày thì ghi đè, không cộng trùng). Bé vào bằng máy đã đăng nhập web 21 ngày thì tự ghép mã bé; bé khác máy chủ ghép theo tên con, trùng tên thì sale dán mã bé. Web học cộng sao này vào ví Phòng đổi quà.
+- Cần máy chủ Apps Script **v16** (`apps-script/Code.gs`).
+

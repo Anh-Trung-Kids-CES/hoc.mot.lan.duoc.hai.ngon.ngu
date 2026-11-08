@@ -541,10 +541,24 @@ function vHat(st) {
 }
 
 function vBadge(st, seats) {
+  const vi = st.vinh == null ? -1 : st.vinh;
+  if (vi >= 0 && seats[vi]) {
+    const k = seats[vi], t = seatStars(room, k), [tt, ic] = starTitle(t), me = k.id === mySeat;
+    return {
+      key: 'vinh|' + vi + '|' + k.id + '|' + t.sao, akey: 'vinh|' + vi, audio: me ? [hd('Giỏi quá!')] : null,
+      html: `<div class="qno">🏆 Vinh danh · ${vi + 1}/${seats.length}</div>
+        <div class="vd-hero"><div class="vd-ava"><img src="${faceOf(k)}" alt=""><span class="vd-crown">👑</span></div>
+          <h1>${esc(me ? 'Con: ' + k.kid : k.kid)}</h1><div class="vd-title">${ic} ${esc(tt)}</div>
+          <div class="vd-star">⭐ ${t.sao}</div>
+          <div class="vd-counts"><span>✋ ${t.tay}</span><span>✅ ${t.dung}</span><span>🎤 ${t.noi}</span></div>
+          <p class="sub">Sao được cộng vào ví sao trên web học để con đổi quà nhé! 🎁</p></div>`,
+      bind() { SND.beep('win'); confetti(); }
+    };
+  }
   return {
-    key: 'badge|' + seats.map(s => s.id + (s.photo ? 'p' : '')).join(','), akey: 'badge', audio: [hd('Cả nhóm giỏi quá! Cả nhóm được huy hiệu Bứt phá!'), 300, hd('Tuyệt vời! Con đã học xong hôm nay rồi!')],
+    key: 'badge|' + seats.map(s => s.id + (s.photo ? 'p' : '') + seatStars(room, s).sao).join(','), akey: 'badge', audio: [hd('Cả nhóm giỏi quá! Cả nhóm được huy hiệu Bứt phá!'), 300, hd('Tuyệt vời! Con đã học xong hôm nay rồi!')],
     html: `<div class="medal"><small>Huy hiệu</small><b>BỨT PHÁ</b><small>⭐ Vòng ${LZ_CFG.vong} ⭐</small></div><h1>Cả nhóm giỏi quá!</h1>
-      <div class="team">${seats.map(s => `<div class="face${s.id === mySeat ? ' me' : ''}"><img src="${faceOf(s)}" alt=""><span>${esc(s.kid)}</span></div>`).join('')}</div>`,
+      <div class="team">${seats.map(s => `<div class="face${s.id === mySeat ? ' me' : ''}"><img src="${faceOf(s)}" alt=""><span>${esc(s.kid)}</span><b class="vd-mini">⭐ ${seatStars(room, s).sao}</b></div>`).join('')}</div>`,
     bind() { if (!confettiDone) { confettiDone = true; SND.beep('win'); confetti(); } }
   };
 }

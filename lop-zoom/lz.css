@@ -401,3 +401,13 @@ body.boss-play .stage{padding:6px}
 .song-lyr.big .sl b{font-size:clamp(28px,4.6vh,48px)}
 .song-lyr.big .sl .slpy{font-size:clamp(18px,2.6vh,26px)}
 .song-lyr.big .sl small{font-size:clamp(14px,1.9vh,18px)}
+
+/* Vinh danh từng bạn */
+.vd-hero{display:flex;flex-direction:column;align-items:center;gap:8px;animation:rise .7s cubic-bezier(.2,1.4,.4,1)}
+.vd-ava{position:relative}
+.vd-ava img{width:min(30vh,240px);height:min(30vh,240px);border-radius:50%;object-fit:cover;background:var(--yellow-soft);border:8px solid #fff;box-shadow:0 0 0 6px var(--yellow),var(--shadow)}
+.vd-crown{position:absolute;top:-34px;left:50%;transform:translateX(-50%) rotate(-8deg);font-size:58px;animation:pop .8s}
+.vd-title{font-weight:800;font-size:clamp(20px,3.2vh,30px);color:var(--red-dark);background:var(--yellow);border-radius:999px;padding:4px 20px}
+.vd-star{font-family:'Baloo 2',sans-serif;font-size:clamp(44px,7.5vh,76px);font-weight:800;line-height:1;animation:pop .9s}
+.vd-counts{display:flex;gap:10px}.vd-counts span{background:#fff;border-radius:999px;padding:4px 14px;font-weight:800;font-size:22px;box-shadow:0 3px 0 rgba(0,0,0,.08)}
+.vd-mini{display:block;color:var(--red-dark);font-size:15px}

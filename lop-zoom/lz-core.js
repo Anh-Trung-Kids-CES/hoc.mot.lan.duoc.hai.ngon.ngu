@@ -551,3 +551,25 @@ function energyHTML(e) {
   const stage = e.pct >= 100 ? '🌳' : e.pct >= 66 ? '🪴' : e.pct >= 33 ? '🌿' : '🌱';
   return `<div class="energy" role="img" aria-label="Năng lượng cả nhóm ${e.pct}%"><span class="en-ic">${stage}</span><div class="en-bar"><i style="width:${e.pct}%"></i></div><span class="en-lb">Năng lượng cả nhóm</span></div>`;
 }
+
+/* ======================= Sao thành tích (cộng vào ví sao web học để đổi quà) =======================
+   ✋ giơ tay, 🎤 phát biểu: cô bấm ở cột Các bé (marks/<chỗ>/sc). ✅ trả lời đúng: tự đếm mọi câu con chọn đúng
+   (máy con chọn hoặc cô bấm hộ, kể cả trận Rồng; câu "đoán cho vui" khi không đến lượt thì không tính).
+   Phát biểu còn tự cộng khi cô chấm Chào bạn mới (EN/ZH) và Phiên dịch nhí (được / cùng cô). ± sao: cô chỉnh ở thẻ Kết quả. */
+function seatStars(room, seat) {
+  const m = ((room.marks || {})[seat.id]) || {}, sc = m.sc || {};
+  const qs = new Set(Object.keys(room.answers || {}));
+  Object.values(room.marks || {}).forEach(x => Object.keys((x && x.px) || {}).forEach(q => qs.add(q)));
+  let dung = 0; qs.forEach(q => { const a = answerOf(room, seat, q); if (a && a.ok && !a.xem) dung++; });
+  const intro = m.intro || {}, autoNoi = ['en', 'zh'].filter(l => intro[l]).length + Object.values(m.pd || {}).filter(v => v >= 1).length;
+  const tay = +sc.tay || 0, noi = (+sc.noi || 0) + autoNoi, adj = +m.adj || 0;
+  return { tay, dung, noi, adj, sao: Math.max(0, tay + dung + noi + adj) };
+}
+function starTitle(t) {
+  const c = [[t.tay, 'Bạn hăng hái giơ tay', '🙋'], [t.dung, 'Bạn tinh tai, tinh mắt', '👀'], [t.noi, 'Bạn tự tin phát biểu', '🎤']];
+  const mx = Math.max(...c.map(x => x[0]));
+  if (!mx) return ['Bạn chăm chú lắng nghe', '💛'];
+  const top = c.filter(x => x[0] === mx);
+  return top.length === 3 ? ['Ngôi sao toàn năng', '🌟'] : [top[0][1], top[0][2]];
+}
+
