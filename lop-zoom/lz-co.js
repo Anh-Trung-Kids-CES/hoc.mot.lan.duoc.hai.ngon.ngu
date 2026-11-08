@@ -316,19 +316,20 @@ const CTL = {
       return `<h2>📖 Đọc theo cô · ${i + 1}/${DTC_N} · ${step === 'say' ? 'đọc theo' : 'chọn tranh'}</h2>
         <div class="prev"><img src="${pic(it.k, 2)}" alt=""><div><div class="bigtxt">${esc(txt(it.k, 'en'))}</div><div class="bigtxt zh" style="color:var(--red)">${esc(txt(it.k, 'zh'))}</div>${w.py ? `<div class="small">${esc(w.py)}</div>` : ''}</div></div>
         ${step === 'say' ? `<p>Cô Hươu đọc tiếng Anh rồi tiếng Trung, sau mỗi tiếng có khoảng lặng để <b>cả lớp đọc theo</b> (cô bật mic cho các con, hoặc mời từng bạn; bạn đọc tốt cô bấm 🎤).</p>
-          <div class="ctl"><button class="btn ghost" id="pv">◀ Trước</button><button class="btn ghost" id="rp">🔁 Đọc lại</button><button class="btn y" id="dgo">👉 Cho các con chọn tranh</button></div>`
+          <div class="ctl"><button class="btn ghost" id="pv">◀ Trước</button><button class="btn ghost" id="rp">🔁 Đọc lại (màn chiếu)</button><button class="btn ghost" id="dlp">🔊 Nghe mẫu trên máy cô</button><button class="btn y" id="dgo">👉 Cho các con chọn tranh</button></div>`
           : `<p>Cô Hươu đọc lại bằng <span class="flag ${l}">${l === 'zh' ? '中文' : 'English'}</span>, các con chạm 1 trong 3 tranh trên máy mình (bé 1 máy: giơ ngón tay, cô bấm hộ).</p>
           <div class="prev">${it.o.map((k, c) => pv(pic(k, 3), k === it.k)).join('')}</div>
-          <div class="ctl"><button class="btn ghost" id="dsay">◀ Đọc theo lại</button><button class="btn ghost" id="rp">🔁 Phát lại</button>
+          <div class="ctl"><button class="btn ghost" id="dsay">◀ Đọc theo lại</button><button class="btn ghost" id="rp">🔁 Phát lại (màn chiếu)</button><button class="btn ghost" id="dlp">🔊 Nghe trên máy cô</button>
             ${rv ? '<button class="btn ghost" id="ag">↺ Hỏi lại</button>' : '<button class="btn y" id="rv">👁 Hiện đáp án</button>'}
             <button class="btn" id="nx">${i + 1 < DTC_N ? 'Lượt tiếp ▶' : 'Tiếp: Đấu Rồng Lửa ▶'}</button></div>`}
-        <p class="tip">Mỗi lượt: đọc theo trước, rồi chọn tranh để kiểm tra con nghe hiểu. Câu chọn tranh luân phiên tiếng Anh / tiếng Trung.</p>`;
+        <p class="tip">Mỗi lượt: đọc theo trước, rồi chọn tranh để kiểm tra con nghe hiểu. Câu chọn tranh luân phiên tiếng Anh / tiếng Trung.<br>Giọng cô Hươu tự phát trên <b>màn chiếu</b> (máy chia sẻ Zoom, đã bấm "Bắt đầu chiếu", không tắt tiếng). Nút <b>🔊 Nghe trên máy cô</b> để cô nghe ngay trên máy này.</p>`;
     },
     bind(st) {
       const i = st.i || 0;
       $('#rp').onclick = () => setState({ rp: (st.rp || 0) + 1 });
       $('#pv') && ($('#pv').onclick = () => i > 0 && setState({ i: i - 1, step: 'ask', rp: 0 }));
       $('#dgo') && ($('#dgo').onclick = () => setState({ step: 'ask', rp: 0 }));
+      $('#dlp').onclick = () => { const it = dtcItem(i); SND.play((st.step || 'say') === 'say' ? [aud(it.k, 'en'), 1500, aud(it.k, 'zh')] : [aud(it.k, it.l)]); };
       $('#dsay') && ($('#dsay').onclick = () => setState({ step: 'say', rp: (st.rp || 0) + 1 }));
       $('#rv') && ($('#rv').onclick = () => setState({ step: 'rv' }));
       $('#ag') && ($('#ag').onclick = () => setState({ step: 'ask', run: (st.run || 0) + 1, rp: 0 }));
