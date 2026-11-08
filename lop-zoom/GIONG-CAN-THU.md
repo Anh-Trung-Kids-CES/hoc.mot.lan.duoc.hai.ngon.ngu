@@ -45,7 +45,8 @@ Câu nào chưa có file thì màn bé chỉ hiện chữ hoặc tạm đọc c�
 | ls_co_huou_zh_jiao.mp3 | 叫 (gửi máy "叫。" để đọc đúng tiếng Trung) |
 
 
-## Phần "他 hay 她?" – Little Seed Vòng 3 (thêm 08/11/2026) – CHƯA TẠO
+## Phần "他 hay 她?" – Little Seed Vòng 3 (thêm 08/11/2026) – CHƯA TẠO, đang dùng GIỌNG MÁY TẠM
+Theo yêu cầu chị Duyên (09/11): dùng tạm giọng máy tiếng Việt của trình duyệt (`ttsTam` trong lz-core.js) để duyệt nội dung và tính tương tác; chị chỉnh xong hết mới tạo giọng Gemini. Có file thì web tự dùng file, giọng máy không còn được gọi.
 9 câu cô Hươu dạy phân biệt 他 / 她 (đã có trong `tao-tai-nguyen/giong.json`, tự thêm khi chạy `tao_seed_v3.js`). Chưa có file thì màn chiếu hiện lời trong bong bóng, cô đọc trên Zoom.
 Tạo xong: chạy lại `node lop-zoom/tao-tai-nguyen/tao_seed_v3.js` là web tự gắn giọng (chỉ gắn câu đã có file).
 Ước tính chi phí Gemini (Batch API, giọng Sulafat): khoảng 600 ký tự, dưới 0,02 USD (lần 35 câu trước tốn khoảng 0,05 USD).

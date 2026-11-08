@@ -306,10 +306,11 @@ async function noiPlay(key, list) {
 }
 
 /* --- 他 hay 她? Cô Hươu dạy phân biệt hai chữ đồng âm (tā): nghe giống nhau → bộ 亻 người → bộ 女 nữ → động tác → câu ví dụ nói theo → luyện chọn chữ.
-   Lời cô Hươu chưa có file giọng thì hiện chữ trong bong bóng để cô đọc trên Zoom (không dùng giọng máy). --- */
+   Lời cô Hươu chưa có file giọng: TẠM đọc bằng giọng máy tiếng Việt để chị Duyên duyệt nội dung (09/11), vẫn hiện chữ trong bong bóng;
+   tạo giọng Gemini xong thì tự dùng file. Máy không có giọng tiếng Việt thì chỉ hiện chữ để cô đọc trên Zoom. --- */
 function pbSay(t) { return `<div class="pb-bubble"><img src="${HUOU}" alt=""><span>${esc(t)}</span></div>`; }
 function pbLines(keys) { return keys.map(k => PB.loi[k]); }
-function pbAud(keys) { const out = []; keys.forEach(k => { const a = hd(PB.loi[k]); if (a) out.push(a, 300); }); return out; }
+function pbAud(keys) { const out = []; keys.forEach(k => out.push(ttsTam(PB.loi[k]), 300)); return out; }   // chưa có file Gemini: tạm giọng máy
 function vPb(st, seats) {
   const p = st.pb || {}, s = p.s || 0, A = PB.a, Bq = PB.b;
   const dots = `<div class="dots">${PB.buoc.map((_, j) => `<i class="${j <= s ? 'on' : ''}"></i>`).join('')}</div>`;
@@ -353,7 +354,10 @@ function vPb(st, seats) {
         <div class="noi-lines${here ? ' play' : ''}" id="noiL">${lines}</div>
         <div class="noi-cue${here ? '' : ' show still'}" id="noiCue"><span>🗣️ ${CHIEU ? 'Cả lớp nói theo!' : 'Con nói theo cô nhé!'}</span><i id="noiBar"></i></div>
         ${v === 0 ? pbSay(PB.loi.vd) : ''}${dots}`,
-      bind() { if (here) noiPlay(lastStageKey, [['en', it.ea], ['zh', it.za]]); }
+      bind() {
+        if (!here) return; const key = lastStageKey;
+        (async () => { if (v === 0 && !st.rp) await SND.play([ttsTam(PB.loi.vd), 300]); if (lastStageKey === key) noiPlay(key, [['en', it.ea], ['zh', it.za]]); })();
+      }
     };
   }
   /* s === 5: luyện chọn chữ */

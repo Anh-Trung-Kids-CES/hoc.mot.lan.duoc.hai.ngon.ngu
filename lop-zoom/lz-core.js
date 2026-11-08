@@ -409,9 +409,24 @@ const HD = {
 /* ======================= Âm thanh ======================= */
 const SND = (() => {
   let cur = null, queue = [], ctx = null, token = 0, EL = null;
-  function stop() { token++; queue = []; if (cur) { try { cur.pause(); } catch (e) { } cur = null; } }
+  function stop() { token++; queue = []; if (cur) { try { cur.pause(); } catch (e) { } cur = null; } try { if (window.speechSynthesis) speechSynthesis.cancel(); } catch (e) { } }
   let vol = 1;
+  /* GIỌNG MÁY TẠM (09/11/2026, chị Duyên cho phép để duyệt nội dung): mục 'tts:vi|câu' đọc bằng giọng tiếng Việt có sẵn của trình duyệt.
+     Chỉ dùng cho lời cô Hươu chưa có file giọng (xem ttsTam). Có file Gemini thì hd() trả file, không còn gọi tới đây. */
+  function viVoice() { try { return (speechSynthesis.getVoices() || []).find(v => /^vi/i.test(v.lang)) || null; } catch (e) { return null; } }
+  try { if (window.speechSynthesis) { speechSynthesis.getVoices(); speechSynthesis.onvoiceschanged = () => speechSynthesis.getVoices(); } } catch (e) { }
+  function speak(t, tk) {
+    return new Promise(res => {
+      const v = window.speechSynthesis && viVoice();
+      if (!v || tk !== token) return res();   // máy không có giọng tiếng Việt: bỏ qua, màn vẫn hiện lời
+      const u = new SpeechSynthesisUtterance(t); u.voice = v; u.lang = v.lang; u.rate = 0.95; u.pitch = 1.1; u.volume = vol;
+      let ok = false; const done = () => { if (!ok) { ok = true; res(); } };
+      u.onend = done; u.onerror = done; setTimeout(done, 1500 + t.length * 120);   // phòng khi trình duyệt không báo xong
+      speechSynthesis.speak(u);
+    });
+  }
   function playOne(src, tk) {
+    if (typeof src === 'string' && src.indexOf('tts:vi|') === 0) return speak(src.slice(7), tk);
     return new Promise(res => {
       if (!src || tk !== token) return res();
       /* dùng lại một thẻ âm thanh đã được "mở khoá" bằng lần chạm đầu tiên: iPhone/iPad mới cho tự phát những câu sau */
@@ -453,6 +468,9 @@ const SND = (() => {
   return { play, stop, beep, unlock };
 })();
 function hd(line) { return HD[line] || ''; }
+/* lời cô Hươu chưa có file giọng: tạm đọc bằng giọng máy để duyệt nội dung (bỏ khi đã tạo giọng Gemini) */
+function ttsTam(line) { return hd(line) || 'tts:vi|' + line; }
+function coGiongMayVi() { try { return !!(window.speechSynthesis && speechSynthesis.getVoices().some(v => /^vi/i.test(v.lang))); } catch (e) { return false; } }
 
 /* ======================= Avatar ======================= */
 const AVATARS = [

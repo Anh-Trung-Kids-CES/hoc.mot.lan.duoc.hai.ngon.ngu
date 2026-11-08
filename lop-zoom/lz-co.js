@@ -353,7 +353,7 @@ const CTL = {
     html: st => {
       const p = st.pb || {}, s = p.s || 0, A = PB.a, Bq = PB.b, rv = st.step === 'rv';
       const tabs = `<div class="ctl">${PB.buoc.map((b, j) => `<button class="btn ${j === s ? 'red' : 'ghost'} sm" data-pbs="${j}">${j + 1}. ${esc(b)}</button>`).join('')}</div>`;
-      const loi = keys => `<div class="tip">🦌 <b>Lời cô Hươu</b> (${keys.every(k => hd(PB.loi[k])) ? 'màn chiếu tự đọc' : '<b>chưa có file giọng: cô đọc trên Zoom</b>'}): ${keys.map(k => '“' + esc(PB.loi[k]) + '”').join(' ')}</div>`;
+      const loi = keys => `<div class="tip">🦌 <b>Lời cô Hươu</b> (${keys.every(k => hd(PB.loi[k])) ? 'màn chiếu tự đọc' : coGiongMayVi() ? '<b>tạm đọc bằng giọng máy</b> để duyệt nội dung, sẽ thay giọng cô Hươu sau' : '<b>máy này không có giọng tiếng Việt: cô đọc trên Zoom</b> (Chrome/Edge trên máy tính thường có sẵn)'}): ${keys.map(k => '“' + esc(PB.loi[k]) + '”').join(' ')}</div>`;
       let body = '';
       if (s === 0) body = `<p>Màn chiếu hiện ${A.chu} (he) và ${Bq.chu} (she), phát tiếng <b>tā</b> của cả hai: các con nhận ra hai chữ đọc giống hệt nhau, nên phải <b>nhìn chữ</b>.</p>${loi(['nghe1', 'nghe2'])}`;
       if (s === 1 || s === 2) { const x = s === 1 ? A : Bq; body = `<div class="prev">${pbEq(x)}</div><p>Bộ <b class="zh">${x.bo}</b> bên trái: ${esc(x.nghia)}. Phần bên phải <b class="zh">${x.ben}</b> giống nhau ở cả hai chữ. Động tác: <b>${esc(x.dongtac)}</b>. Cả lớp làm theo và nói <b class="zh">${x.chu}</b> – <b>${x.g}</b>.</p>${loi(s === 1 ? ['chuA', 'tayA'] : ['chuB', 'tayB'])}`; }
