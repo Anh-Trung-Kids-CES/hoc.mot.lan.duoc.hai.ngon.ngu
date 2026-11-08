@@ -277,6 +277,11 @@ function songLyrics(big) {
   return `<div class="song-lyr${big ? ' big' : ''}">${SONG.loi.map(x => `<div class="sl"><b class="zh">${x.zh}</b><span class="slpy">${x.py}</span><small>${x.vi} · ${x.tay}</small></div>`).join('')}</div>`;
 }
 
+/* Đọc theo cô (phút 19–28): mỗi lượt cô Hươu đọc một từ/câu bằng tiếng Anh rồi tiếng Trung, cả lớp đọc theo;
+   sau đó cô đọc lại bằng một tiếng (luân phiên EN / ZH), các con chạm chọn 1 trong 3 tranh trên máy mình. Dùng 6 mục đầu của PAIR_POOL. */
+const DTC_N = 6;
+function dtcItem(i) { const it = PAIR_POOL[i % PAIR_POOL.length]; return { k: it.k, o: it.o, l: i % 2 ? 'zh' : 'en' }; }
+
 /* Mạch 40 phút */
 const PHASES = [
   { id: 'cho',   n: 'Chờ vào lớp',          m: '',      ic: '🚪' },
@@ -285,8 +290,7 @@ const PHASES = [
   { id: 'noi',   n: 'Nói theo cô',           m: '5–9',   ic: '🗣️' },
   { id: 'on',    n: 'Ôn nhanh',              m: '9–14',  ic: '⚡' },
   { id: 'tone',  n: 'Máy bay thanh điệu',    m: '14–19', ic: '✈️' },
-  { id: 'pair',  n: 'Trò chơi đôi bạn',      m: '19–24', ic: '🤝' },
-  { id: 'lop',   n: 'Cô giáo nhỏ (cả lớp)',  m: '24–28', ic: '📣' },
+  { id: 'dtc',   n: 'Đọc theo cô',           m: '19–28', ic: '📖' },   // thay Trò chơi đôi bạn + Cô giáo nhỏ (08/11/2026)
   { id: 'boss',  n: 'Cả lớp đấu Rồng Lửa',   m: '28–31', ic: '🐉' },
   { id: 'xep',   n: 'Nghe truyện, xếp tranh', m: '31–36', ic: '🧩' },
   { id: 'badge', n: 'Huy hiệu Bứt phá',      m: '36–40', ic: '🏅' },

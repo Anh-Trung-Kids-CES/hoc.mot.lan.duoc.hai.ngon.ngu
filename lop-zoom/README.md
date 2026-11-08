@@ -94,3 +94,6 @@ Thẻ báo cáo tự động, câu gợi ý cho sale, huy hiệu cộng sao, tab
 - Thẻ **Kết quả**: thêm cột ✋, ✅, 🎤, ± sao (cô chỉnh), ⭐ Sao, danh hiệu. Nút **📤 Gửi về Sheet & cộng sao vào web học**: ghi báo cáo vào tab "Lớp Zoom", rồi ghi sao vào tab "Sao Zoom" (gửi lại cùng phòng + ngày thì ghi đè, không cộng trùng). Bé vào bằng máy đã đăng nhập web 21 ngày thì tự ghép mã bé; bé khác máy chủ ghép theo tên con, trùng tên thì sale dán mã bé. Web học cộng sao này vào ví Phòng đổi quà.
 - Cần máy chủ Apps Script **v16** (`apps-script/Code.gs`).
 
+
+## Đọc theo cô (08/11/2026)
+Phút 19–28: gộp Trò chơi đôi bạn và Cô giáo nhỏ thành một phần **Đọc theo cô**, 6 lượt. Mỗi lượt: (1) cô Hươu đọc tiếng Anh rồi tiếng Trung, có khoảng lặng để cả lớp đọc theo; (2) cô bấm "Cho các con chọn tranh": cô Hươu đọc lại bằng một tiếng (luân phiên EN / ZH), các con chạm 1 trong 3 tranh trên máy mình (bé 1 máy: cô bấm hộ), rồi Hiện đáp án. Báo cáo thêm cột "Đọc theo cô: chọn tranh đúng". Mã Đôi bạn / Cô giáo nhỏ vẫn giữ cho phòng mở từ trước.

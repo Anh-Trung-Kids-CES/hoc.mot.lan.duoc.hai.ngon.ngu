@@ -212,6 +212,7 @@ function view(st, seats) {
     case 'noi': return vNoi(st, seats);
     case 'on': return vQuiz(st, seats);
     case 'tone': return vTone(st, seats);
+    case 'dtc': return vDtc(st, seats);
     case 'pair': return vPair(st, seats);
     case 'lop': return vLop(st, seats);
     case 'story':   // phòng mở từ bản cũ: phần Truyện nay là Nghe truyện, xếp tranh
@@ -300,6 +301,38 @@ async function noiPlay(key, list) {
     cue && cue.classList.remove('show');
   }
   $$('#noiL .noi-l').forEach(x => x.classList.add('on'));
+}
+
+/* --- Đọc theo cô: (1) cô Hươu đọc EN rồi ZH, cả lớp đọc theo; (2) cô đọc lại một tiếng, con chạm chọn tranh --- */
+function vDtc(st, seats) {
+  const i = Math.min(DTC_N - 1, st.i || 0), it = dtcItem(i), step = st.step || 'say', run = st.run || 0, qid = `dtc_${i}_${run}`, l = it.l;
+  const dots = `<div class="dots">${Array.from({ length: DTC_N }, (_, j) => `<i class="${j <= i ? 'on' : ''}"></i>`).join('')}</div>`;
+  if (step === 'say') {
+    const here = CHIEU ? !muted : !amCo();
+    const lines = ['en', 'zh'].map(x => `<div class="noi-l" data-l="${x}"><span class="flag ${x}">${x === 'zh' ? '中文' : 'English'}</span><b class="${x}">${esc(txt(it.k, x))}</b></div>`).join('');
+    return {
+      key: ['dtc', i, 'say', st.rp || 0].join('|'),
+      html: `<div class="qno">📖 Đọc theo cô · ${i + 1}/${DTC_N}</div>
+        <p class="ask-line">👂 Con nghe cô đọc rồi đọc theo nhé!</p>
+        <img class="big-pic" src="${pic(it.k, 2)}" alt="">
+        <div class="noi-lines${here ? ' play' : ''}" id="noiL">${lines}</div>
+        <div class="noi-cue${here ? '' : ' show still'}" id="noiCue"><span>🗣️ ${CHIEU ? 'Cả lớp đọc theo!' : 'Con đọc theo cô nhé!'}</span><i id="noiBar"></i></div>${dots}`,
+      bind() { if (here) noiPlay(lastStageKey, ['en', 'zh'].map(x => [x, aud(it.k, x)])); }
+    };
+  }
+  const rv = step === 'rv', ans = it.o.indexOf(it.k), my = myAnswer(qid), a = aud(it.k, l);
+  const pics = it.o.map((k, c) => `<button class="pick${my && my.c === c ? ' chosen' : ''}${rv && CHIEU && c === ans ? ' right' : ''}${rv && CHIEU && c !== ans ? ' dim' : ''}" data-c="${c}" aria-label="Tranh ${c + 1}"><img src="${pic(k, 3)}" alt=""></button>`).join('');
+  return {
+    key: ['dtc', i, run, rv ? 1 : 0, my ? my.c : '-'].join('|'), akey: ['dtc', i, run, rv ? 1 : 0, st.rp || 0].join('|'),
+    audio: rv ? [a, 600, a] : [a, 700, a],
+    html: `<div class="qno">📖 Đọc theo cô · ${i + 1}/${DTC_N} <span class="flag ${l}">${l === 'zh' ? '中文' : 'English'}</span>${headAllowed(st) ? HEAD_TAG : ''}</div>
+      <p class="ask-line">👂 Con nghe rồi chạm vào tranh đúng nhé!</p>
+      <button class="say ${l}" data-play><span class="ic">🔊</span>${rv && CHIEU ? `<span class="${l}">${esc(txt(it.k, l))}</span>` : '<span>Nghe</span>'}</button>
+      <div class="pics${my || rv || CHIEU ? ' locked' : ''}" id="pics">${pics}</div><p class="count" id="cnt"></p>
+      ${rv && CHIEU ? `<p class="sub">Cả lớp cùng đọc lại nhé: <b class="${l}">${esc(txt(it.k, l))}</b></p>` : ''}${dots}`,
+    bind() { bindPlay(() => [a]); bindPicks(qid, c => ({ c, ok: c === ans })); if (rv && my && my.ok) giveStar(qid, 'dtc'); this.update(); },
+    update() { const n = countAnswered(qid, seats), el = $('#cnt'); if (el) el.textContent = rv ? '' : `${n}/${seats.length} bạn đã chọn`; }
+  };
 }
 
 /* --- Ôn nhanh: nghe rồi chạm 1 trong 3 tranh --- */
