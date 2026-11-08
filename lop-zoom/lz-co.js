@@ -123,7 +123,7 @@ const BAR = [
   ['#go', '▶ Bắt đầu', 'red'], ['#sg', '▶ Phát bài hát', 'y'], ['#sgst', '⏹ Dừng video', 'ghost'], ['[data-spin="en"]', '🎡 Quay · EN', ''], ['[data-spin="zh"]', '🎡 Quay · 中文', 'red'], ['[data-spin="en|dad"]', '🎡 Ba · EN', ''], ['[data-spin="zh|dad"]', '🎡 Ba · 中文', 'red'],
   ['#pv', '◀', 'ghost'], ['#rp', '🔁 Phát lại', 'ghost'], ['#rv', '👁 Hiện đáp án', 'y'], ['#au', '⏯ Tự chạy', 'y'], ['#ag', '↺ Hỏi lại', 'ghost'],
   ['#bst', '⚔️ Bắt đầu trận đấu', 'red'], ['#ben', '🏁 Kết thúc ngay', 'ghost'], ['#bre', '↺ Đấu lại', 'ghost'],
-  ['#dgo', '👉 Cho các con chọn tranh', 'y'], ['#dsay', '◀ Đọc theo lại', 'ghost'], ['#xgo', '🧩 Cho các con xếp tranh', 'y'], ['#xback', '◀ Nghe lại truyện', 'ghost'],
+  ['#cna', '👂 Hiện câu tiếng kia', 'y'], ['#cnn', 'Tiếp ▶', ''], ['#cnd', '⇄ Đổi chiều', 'ghost'], ['#dgo', '👉 Cho các con chọn tranh', 'y'], ['#dsay', '◀ Đọc theo lại', 'ghost'], ['#xgo', '🧩 Cho các con xếp tranh', 'y'], ['#xback', '◀ Nghe lại truyện', 'ghost'],
   ['#vdn', '🏆 Vinh danh ▶', 'y'], ['#vdp', '◀ Bạn trước', 'ghost'], ['#op', '🎁 Mở hộp quà', 'y'], ['#an', '👂 Nghe đáp án', 'y'], ['#nx', 'Tiếp ▶', ''], ['#kq', 'Xem kết quả', 'red']];
 function drawBar(st) {
   if (!sharing) return;
@@ -163,6 +163,7 @@ function goPhase(ph) {
   if (ph === 'noi') p.auto = false;
   if (ph === 'story') { p.scene = 0; p.l = 'both'; }
   if (ph === 'badge') p.vinh = -1;
+  if (ph === 'cn') { const s0 = seatsIn()[0]; p.cn = { t: 0, j: 0, ans: false, from: 'en', seat: s0 ? s0.id : null }; }
   if (ph === 'xep') { p.xep = { r: 0, step: 'nghe', sc: 0 }; p.run = (st.run || 0) + 1; }
   if (ph === 'gift') p.gift = { k: 0, open: false, ans: false, seat: pickRandom('pd') || null };
   if (ph === 'boss') { const b = st.boss || {}; p.boss = { run: b.t0 ? (b.run || 0) : (b.run || 0), dur: b.dur || 120000 }; }
@@ -310,6 +311,38 @@ const CTL = {
     },
     kbind(st) { $$('[data-tone]').forEach(b => b.onclick = () => { const [id, n] = b.dataset.tone.split('|'); const cur = ((((room.marks || {})[id] || {}).tone) || {})[st.i || 0]; mark(id, 'tone/' + (st.i || 0), cur === +n ? null : +n); }); }
   },
+  cn: {
+    html: st => {
+      const c = st.cn || {}, sets = cnSets(), t = c.t || 0, set = sets[t % sets.length], d = cnDir(c), j = Math.min(set.lines.length - 1, c.j || 0), seats = seatsIn();
+      const kid = seats.find(x => x.id === c.seat), last = j + 1 >= set.lines.length, v = kid ? ((((room.marks || {})[kid.id] || {}).cn || {})[t + '_' + j]) : undefined;
+      return `<h2>🔁 Cô nói, con nói tiếng kia · lượt ${t + 1}/${seats.length || 1}</h2>
+        <p>Bạn nói: <select id="cnk">${seats.map(x => `<option value="${x.id}" ${x.id === c.seat ? 'selected' : ''}>${esc(x.kid)}</option>`).join('')}</select>
+          · Chiều: <b>cô ${d.from === 'zh' ? '中文' : 'EN'} → con ${d.to === 'zh' ? '中文' : 'EN'}</b> <button class="btn ghost sm" id="cnd">⇄ Đổi chiều</button></p>
+        <div class="prev"><img src="${set.img}" class="ans" alt="" style="width:150px;height:auto"><div>${set.lines.map((x, k) => `<div style="${k === j ? 'font-weight:800' : 'opacity:.6'}">${k + 1}. ${esc(x.en)} · <span class="zh" style="color:var(--red)">${esc(x.zh)}</span>${x.py ? ` <small>${esc(x.py)}</small>` : ''}</div>`).join('')}</div></div>
+        <div class="ctl"><button class="btn ghost" id="cnp">◀ Câu trước</button><button class="btn ghost" id="rp">🔁 Phát lại (màn chiếu)</button><button class="btn ghost" id="cnl">🔊 Nghe trên máy cô</button>
+          ${c.ans ? '' : `<button class="btn y" id="cna">👂 Hiện câu ${d.to === 'zh' ? 'tiếng Trung' : 'tiếng Anh'}</button>`}
+          <button class="btn" id="cnn">${!last ? 'Câu tiếp ▶' : t + 1 < seats.length ? 'Bạn tiếp ▶' : 'Tiếp: Huy hiệu ▶'}</button></div>
+        ${kid ? `<p>Chấm câu ${j + 1} của <b>${esc(kid.kid)}</b>: ${[[2, 'Tự nói'], [1, 'Nói cùng cô'], [0, 'Chưa']].map(([n, x]) => `<button class="mk${v === n ? ' on' + (n === 1 ? ' y' : n === 0 ? ' o' : '') : ''}" data-cn="${n}">${x}</button>`).join(' ')} <span class="small">(Tự nói / Nói cùng cô = +1 🎤)</span></p>` : ''}
+        <p class="tip">Mỗi bạn một tranh và 2–3 câu mẫu. Cô Hươu nói câu bằng ${d.from === 'zh' ? 'tiếng Trung' : 'tiếng Anh'} trên màn chiếu, bạn nói lại bằng ${d.to === 'zh' ? 'tiếng Trung' : 'tiếng Anh'}; cô bấm <b>Hiện câu</b> để cả lớp nghe câu đúng và nói theo. Lượt sau tự đổi chiều. Bạn chưa nói được thì cô nói cùng con, không sửa lỗi riêng.</p>`;
+    },
+    bind(st) {
+      const c = st.cn || {}, sets = cnSets(), t = c.t || 0, set = sets[t % sets.length], j = c.j || 0, seats = seatsIn();
+      const set_ = o => setState({ cn: Object.assign({}, c, o), rp: 0 });
+      $('#cnk').onchange = e => set_({ seat: e.target.value, j: 0, ans: false });
+      $('#cnd').onclick = () => set_({ from: cnDir(c).to, ans: false });
+      $('#cnp').onclick = () => j > 0 && set_({ j: j - 1, ans: false });
+      $('#rp').onclick = () => setState({ rp: (st.rp || 0) + 1 });
+      $('#cnl').onclick = () => { const L = set.lines[j], d = cnDir(c); SND.play([d.from === 'zh' ? L.za : L.ea, 1200, d.to === 'zh' ? L.za : L.ea]); };
+      $('#cna') && ($('#cna').onclick = () => set_({ ans: true }));
+      $('#cnn').onclick = () => {
+        if (j + 1 < set.lines.length) return set_({ j: j + 1, ans: false });
+        if (t + 1 >= seats.length) return goPhase('badge');
+        const i = seats.findIndex(x => x.id === c.seat), nx = seats[(i + 1) % seats.length];
+        set_({ t: t + 1, j: 0, ans: false, seat: nx ? nx.id : null, from: cnDir(c).to });
+      };
+      $$('[data-cn]').forEach(b => b.onclick = () => { if (!c.seat) return; const cur = ((((room.marks || {})[c.seat] || {}).cn) || {})[t + '_' + j]; mark(c.seat, 'cn/' + t + '_' + j, cur === +b.dataset.cn ? null : +b.dataset.cn); });
+    }
+  },
   dtc: {
     html: st => {
       const i = st.i || 0, it = dtcItem(i), step = st.step || 'say', rv = step === 'rv', l = it.l, w = W[it.k] || {};
@@ -444,7 +477,7 @@ const CTL = {
           <div class="ctl"><button class="btn ghost" id="xback">◀ Nghe lại truyện</button><button class="btn y" id="rv">👁 Hiện đáp án</button></div>`; }
       else body = `<div class="prev"><img class="scene-s" src="${S.scenes[sc].img}" alt=""><div><div class="small">Đáp án · cảnh ${sc + 1}/4 · đọc ${L(S.to)}, cả lớp nói theo</div><div class="bigtxt ${S.to}">${esc(S.scenes[sc][S.to])}</div></div></div>
         <div class="ctl"><button class="btn ghost" id="pv">◀</button><button class="btn ghost" id="rp">🔁 Đọc lại</button>
-          <button class="btn" id="nx">${sc < 3 ? 'Cảnh tiếp ▶' : r === 0 ? 'Sang lượt 2 (nghe tiếng Trung) ▶' : 'Tiếp: Huy hiệu ▶'}</button></div>`;
+          <button class="btn" id="nx">${sc < 3 ? 'Cảnh tiếp ▶' : r === 0 ? 'Sang lượt 2 (nghe tiếng Trung) ▶' : 'Tiếp: Cô nói, con nói ▶'}</button></div>`;
       return `<h2>🧩 Nghe truyện, xếp tranh · lượt ${r + 1}/2</h2><p><b>${esc(S.title)}</b>: cô phát <b>${L(S.from)}</b>, các con xếp tranh có lời <b>${L(S.to)}</b>.</p>${body}
         <div class="ctl"><button class="btn ghost sm" id="xr0">Lượt 1</button><button class="btn ghost sm" id="xr1">Lượt 2</button></div>`;
     },
@@ -456,7 +489,7 @@ const CTL = {
       $('#xgo') && ($('#xgo').onclick = () => set({ step: 'xep', sc: 0 }));
       $('#xback') && ($('#xback').onclick = () => set({ step: 'nghe', sc: 0 }));
       $('#rv') && ($('#rv').onclick = () => set({ step: 'rv', sc: 0 }));
-      $('#nx') && ($('#nx').onclick = () => sc < 3 ? set({ sc: sc + 1 }) : step === 'rv' ? (r === 0 ? set({ r: 1, step: 'nghe', sc: 0 }) : goPhase('badge')) : set({ sc: sc + 1 }));
+      $('#nx') && ($('#nx').onclick = () => sc < 3 ? set({ sc: sc + 1 }) : step === 'rv' ? (r === 0 ? set({ r: 1, step: 'nghe', sc: 0 }) : goPhase('cn')) : set({ sc: sc + 1 }));
       $('#xr0').onclick = () => set({ r: 0, step: 'nghe', sc: 0 }); $('#xr1').onclick = () => set({ r: 1, step: 'nghe', sc: 0 });
     },
     kid(s, st) {
@@ -742,6 +775,7 @@ function results() {
     QUIZ.forEach((q, i) => { const a = latest(s, 'on_' + i, qids), L = quizLang(q); c[L][1]++; if (a && a.ok) c[L][0]++; if (a && a.ms && !a.ho) times.push(a.ms); det.on.push(a ? (a.ok ? 1 : 0) : null); });
     let tOk = 0, tTay = 0; const g = { 2: 0, 1: 0, 0: 0 };
     TONES.forEach((x, i) => { const a = latest(s, 'tone_' + i, qids); if (a && a.ok) tOk++; if (a && a.tay) tTay++; if (a && a.ms && !a.ho && !a.tay) times.push(a.ms); det.tone.push(a ? (a.ok ? 1 : 0) : null); const v = (m.tone || {})[i]; if (v !== undefined && v !== null) g[v]++; });
+    const cnv = Object.values(m.cn || {}).filter(v => v != null), cnTxt = cnv.length ? `tự nói ${cnv.filter(v => v === 2).length} · cùng cô ${cnv.filter(v => v === 1).length} · chưa ${cnv.filter(v => v === 0).length}` : '';
     let dOk = 0, dN = 0; for (let i = 0; i < DTC_N; i++) { const a = latest(s, 'dtc_' + i, qids); if (a) { dN++; if (a.ok) dOk++; } }
     let say = [0, 0], hear = [0, 0];
     Object.entries(plog).forEach(([key, t]) => {
@@ -767,7 +801,7 @@ function results() {
       tg: times.length ? (times.reduce((x, y) => x + y, 0) / times.length / 1000).toFixed(1) : '',
       toneChon: `${tOk}/${TONES.length}` + (tTay ? ` (bay tay ${tTay})` : ''), toneCham: (g[2] + g[1] + g[0]) ? `chuẩn ${g[2]} · gần ${g[1]} · cần luyện ${g[0]}` : '',
       doiNoi: say[1] ? `${say[0]}/${say[1]}` : '', doiNghe: hear[1] ? `${hear[0]}/${hear[1]}` : '',
-      boss: bA ? `${bOk}/${bA}` : '', dtc: dN ? `${dOk}/${dN}` : '',
+      boss: bA ? `${bOk}/${bA}` : '', dtc: dN ? `${dOk}/${dN}` : '', cn: cnTxt,
       xep0: xepRes(s, 0, qids), xep1: xepRes(s, 1, qids),
       lopNoi: lSay[1] ? `${lSay[0]}/${lSay[1]} bạn hiểu` : '', lopNghe: lHear[1] ? `${lHear[0]}/${lHear[1]}` : '',
       chaoEN: lv(intro.en), chaoZH: lv(intro.zh), pd: pd.length ? pd.map(v => ['chưa', 'cùng cô', 'được'][v]).join(', ') : '',
@@ -778,7 +812,7 @@ function results() {
 }
 const COLS = [['kid', 'Tên con'], ['parent', 'Ba/mẹ'], ['src', 'Vào lớp'], ['onEN', 'Ôn nhanh EN'], ['onZH', 'Ôn nhanh ZH'], ['doc', 'Nhìn chữ'], ['tg', 'TB phản hồi (giây)'],
   ['toneChon', 'Thanh điệu chọn đúng'], ['toneCham', 'Cô chấm thanh điệu'], ['doiNoi', 'Đôi bạn: bạn hiểu con nói'], ['doiNghe', 'Đôi bạn: con nghe đúng'], ['lopNoi', 'Cô giáo nhỏ: cả lớp hiểu con nói'], ['lopNghe', 'Cô giáo nhỏ: con nghe bạn đúng'], ['boss', 'Đấu Rồng Lửa: đúng/câu'], ['xep0', 'Xếp tranh (nghe EN, xếp ZH)'], ['xep1', 'Xếp tranh (nghe ZH, xếp EN)'],
-  ['chaoEN', 'Chào bạn EN'], ['chaoZH', 'Chào bạn ZH'], ['dtc', 'Đọc theo cô: chọn tranh đúng']];
+  ['chaoEN', 'Chào bạn EN'], ['chaoZH', 'Chào bạn ZH'], ['dtc', 'Đọc theo cô: chọn tranh đúng'], ['cn', 'Cô nói, con nói tiếng kia']];
 function drawResults() {
   const rows = results();
   const sel = (id, k, v) => `<div class="h4">${[2, 1, 0].map(n => { const L = H4[k].lv[n]; return `<button class="h4b l${n}${String(v) === String(n) ? ' on' : ''}" data-h="${id}|${k}|${n}" title="${esc(L[1])}">${n} · ${esc(L[0])}</button>`; }).join('')}</div>`;

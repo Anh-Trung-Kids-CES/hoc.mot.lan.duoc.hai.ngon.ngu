@@ -213,6 +213,7 @@ function view(st, seats) {
     case 'on': return vQuiz(st, seats);
     case 'tone': return vTone(st, seats);
     case 'dtc': return vDtc(st, seats);
+    case 'cn': return vCn(st, seats);
     case 'pair': return vPair(st, seats);
     case 'lop': return vLop(st, seats);
     case 'story':   // phòng mở từ bản cũ: phần Truyện nay là Nghe truyện, xếp tranh
@@ -332,6 +333,24 @@ function vDtc(st, seats) {
       ${rv && CHIEU ? `<p class="sub">Cả lớp cùng đọc lại nhé: <b class="${l}">${esc(txt(it.k, l))}</b></p>` : ''}${dots}`,
     bind() { bindPlay(() => [a]); bindPicks(qid, c => ({ c, ok: c === ans })); if (rv && my && my.ok) giveStar(qid, 'dtc'); this.update(); },
     update() { const n = countAnswered(qid, seats), el = $('#cnt'); if (el) el.textContent = rv ? '' : `${n}/${seats.length} bạn đã chọn`; }
+  };
+}
+
+/* --- Cô nói, con nói tiếng kia: tranh + nội dung mẫu của bạn đến lượt; cô Hươu nói câu bằng một tiếng, bạn nói lại bằng tiếng kia --- */
+function vCn(st, seats) {
+  const c = st.cn || {}, sets = cnSets(), t = c.t || 0, set = sets[t % sets.length], d = cnDir(c), j = Math.min(set.lines.length - 1, c.j || 0), L = set.lines[j];
+  const kid = seats.find(x => x.id === c.seat), me = kid && kid.id === mySeat;
+  const src = x => d.from === 'zh' ? x.za : x.ea, dst = x => d.to === 'zh' ? x.za : x.ea;
+  const rows = set.lines.map((x, k) => `<div class="cn-l${k === j ? ' on' : ''}${k < j || (k === j && c.ans) ? ' done' : ''}"><span class="cn-no">${k + 1}</span>
+    <div><b class="${d.from}">${esc(x[d.from])}</b>${k < j || (k === j && c.ans) ? `<div class="cn-to ${d.to}">→ ${esc(x[d.to])}</div>` : k === j ? `<div class="cn-to q">→ ${d.to === 'zh' ? '中文' : 'English'} ?</div>` : ''}</div></div>`).join('');
+  return {
+    key: ['cn', t, c.seat || '', j, c.ans ? 1 : 0, d.from].join('|'), akey: ['cn', t, j, c.ans ? 1 : 0, st.rp || 0, d.from].join('|'),
+    audio: c.ans ? [dst(L)] : [src(L)],
+    html: `<div class="qno">🔁 Cô nói ${d.from === 'zh' ? 'tiếng Trung' : 'tiếng Anh'}, ${kid ? esc(me ? 'con' : kid.kid) : 'bạn'} nói ${d.to === 'zh' ? 'tiếng Trung' : 'tiếng Anh'} · câu ${j + 1}/${set.lines.length}</div>
+      ${kid ? (me ? '<div class="my-turn">Đến lượt con!</div>' : `<div class="chosen-card"><img src="${faceOf(kid)}" alt=""><b>${esc(kid.kid)}</b></div>`) : ''}
+      <div class="cn-box"><img class="cn-pic" src="${set.img}" alt=""><div class="cn-lines">${rows}</div></div>
+      <button class="say ${c.ans ? d.to : d.from}" data-play><span class="ic">🔊</span>${c.ans ? 'Nghe câu tiếng ' + (d.to === 'zh' ? 'Trung' : 'Anh') : 'Nghe cô nói'}</button>`,
+    bind() { bindPlay(() => [c.ans ? dst(L) : src(L)]); if (c.ans) SND.beep('ok'); }
   };
 }
 

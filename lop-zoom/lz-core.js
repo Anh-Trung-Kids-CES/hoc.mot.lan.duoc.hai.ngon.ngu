@@ -294,6 +294,32 @@ function dtcList() {
 }
 function dtcItem(i) { const L = dtcList(), it = L[i % L.length]; return { k: it.k, o: it.o, l: i % 2 ? 'zh' : 'en' }; }
 
+/* Cô nói, con nói tiếng kia (cuối buổi, 08/11/2026): mỗi con một tranh và một nội dung mẫu 2–3 câu theo mẫu câu của tuần.
+   Cô (giọng cô Hươu) nói từng câu bằng tiếng Anh, con nói lại bằng tiếng Trung; lượt sau đổi chiều (cô nói tiếng Trung, con nói tiếng Anh).
+   Little Seed không đưa "Nice to meet you!" vào phần con nói (từ này chỉ nghe). */
+function cnLine(k) { return { en: W[k].en, zh: W[k].zh, ea: aud(k, 'en'), za: aud(k, 'zh'), py: W[k].py || '' }; }
+function cnScene(i) { return { en: STORY[i].en, zh: STORY[i].zh, ea: sceneAud(i, 'en'), za: sceneAud(i, 'zh') }; }
+function cnSets() {
+  if (LZ_LOP === 'canopy-v2') return [
+    { img: pic('s_dDoc'), lines: ['s_name', 's_dDoc', 's_hH'].map(cnLine) },
+    { img: pic('s_mT'), lines: ['s_mT', 's_sS'].map(cnLine) },
+    { img: pic('s_dC'), lines: ['q_dad', 's_dC'].map(cnLine) },
+    { img: pic('s_emp'), lines: ['q_mom', 's_emp'].map(cnLine) },
+    { img: pic('s_sisC'), lines: ['s_sisC', 's_love'].map(cnLine) },
+    { img: pic('s_sat'), lines: ['s_sat', 's_love'].map(cnLine) }
+  ];
+  return [
+    { img: sceneImg(1), lines: [cnScene(1), cnLine('i5')] },                 // Hello! My name is Anna. · I'm five.
+    { img: sceneImg(3), lines: [cnLine('wyn'), cnScene(3), cnLine('i6')] },  // What's your name? · My name is Bông. · I'm six!
+    { img: sceneImg(7), lines: [cnLine('hoy'), cnLine('i5')] },              // How old are you? · I'm five.
+    { img: sceneImg(0), lines: [cnScene(0), cnLine('i6')] },                 // One, two, … six! · I'm six!
+    { img: sceneImg(6), lines: [cnLine('hoy'), cnLine('i6')] },              // How old are you? · I'm six!
+    { img: sceneImg(2), lines: [cnLine('wyn'), cnLine('mna'), cnLine('i5')] } // What's your name? · My name is Anna. · I'm five.
+  ];
+}
+/* chiều của lượt t: lượt chẵn cô nói EN → con nói ZH, lượt lẻ ngược lại (cô đổi được) */
+function cnDir(c) { return c && c.from === 'zh' ? { from: 'zh', to: 'en' } : { from: 'en', to: 'zh' }; }
+
 /* Mạch 40 phút */
 const PHASES = [
   { id: 'cho',   n: 'Chờ vào lớp',          m: '',      ic: '🚪' },
@@ -304,8 +330,9 @@ const PHASES = [
   { id: 'tone',  n: 'Máy bay thanh điệu',    m: '14–19', ic: '✈️' },
   { id: 'dtc',   n: 'Đọc theo cô',           m: '19–28', ic: '📖' },   // thay Trò chơi đôi bạn + Cô giáo nhỏ (08/11/2026)
   { id: 'boss',  n: 'Cả lớp đấu Rồng Lửa',   m: '28–31', ic: '🐉' },
-  { id: 'xep',   n: 'Nghe truyện, xếp tranh', m: '31–36', ic: '🧩' },
-  { id: 'badge', n: 'Huy hiệu Bứt phá',      m: '36–40', ic: '🏅' },
+  { id: 'xep',   n: 'Nghe truyện, xếp tranh', m: '31–35', ic: '🧩' },
+  { id: 'cn',    n: 'Cô nói, con nói tiếng kia', m: '35–38', ic: '🔁' },
+  { id: 'badge', n: 'Huy hiệu Bứt phá',      m: '38–40', ic: '🏅' },
 ];
 
 /* Giọng cô Hươu (Gemini TTS, giọng Sulafat) đã có sẵn ở web học. Câu chưa có file thì chỉ hiện chữ – cô nói trên Zoom.
@@ -577,7 +604,7 @@ function seatStars(room, seat) {
   const qs = new Set(Object.keys(room.answers || {}));
   Object.values(room.marks || {}).forEach(x => Object.keys((x && x.px) || {}).forEach(q => qs.add(q)));
   let dung = 0; qs.forEach(q => { const a = answerOf(room, seat, q); if (a && a.ok && !a.xem) dung++; });
-  const intro = m.intro || {}, autoNoi = ['en', 'zh'].filter(l => intro[l]).length + Object.values(m.pd || {}).filter(v => v >= 1).length;
+  const intro = m.intro || {}, autoNoi = ['en', 'zh'].filter(l => intro[l]).length + Object.values(m.pd || {}).filter(v => v >= 1).length + Object.values(m.cn || {}).filter(v => v >= 1).length;
   const tay = +sc.tay || 0, noi = (+sc.noi || 0) + autoNoi, adj = +m.adj || 0;
   return { tay, dung, noi, adj, sao: Math.max(0, tay + dung + noi + adj) };
 }

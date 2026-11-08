@@ -411,3 +411,17 @@ body.boss-play .stage{padding:6px}
 .vd-star{font-family:'Baloo 2',sans-serif;font-size:clamp(44px,7.5vh,76px);font-weight:800;line-height:1;animation:pop .9s}
 .vd-counts{display:flex;gap:10px}.vd-counts span{background:#fff;border-radius:999px;padding:4px 14px;font-weight:800;font-size:22px;box-shadow:0 3px 0 rgba(0,0,0,.08)}
 .vd-mini{display:block;color:var(--red-dark);font-size:15px}
+/* Cô nói, con nói tiếng kia */
+.cn-box{display:flex;gap:18px;align-items:center;background:#fff;border-radius:24px;padding:14px;box-shadow:var(--shadow);max-width:920px;width:100%}
+.cn-pic{width:42%;max-width:360px;border-radius:18px;object-fit:cover;aspect-ratio:4/3;background:var(--yellow-soft)}
+.cn-lines{flex:1;display:flex;flex-direction:column;gap:10px;text-align:left}
+.cn-l{display:flex;gap:10px;align-items:flex-start;padding:8px 12px;border-radius:14px;opacity:.55;font-size:20px}
+.cn-l.on{opacity:1;background:var(--yellow-soft);border:3px solid var(--yellow)}
+.cn-l.done{opacity:1}
+.cn-l b.zh{font-family:'Noto Sans SC',sans-serif;color:var(--red)}
+.cn-no{flex:none;width:30px;height:30px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-weight:800;font-size:16px}
+.cn-to{margin-top:4px;font-weight:700;color:var(--green)}
+.cn-to.zh{font-family:'Noto Sans SC',sans-serif}
+.cn-to.q{color:#999}
+.chieu .cn-l{font-size:30px}.chieu .cn-no{width:40px;height:40px;font-size:22px}
+@media (max-width:640px){.cn-box{flex-direction:column}.cn-pic{width:100%}}
