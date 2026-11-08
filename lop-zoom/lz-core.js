@@ -279,8 +279,20 @@ function songLyrics(big) {
 
 /* Đọc theo cô (phút 19–28): mỗi lượt cô Hươu đọc một từ/câu bằng tiếng Anh rồi tiếng Trung, cả lớp đọc theo;
    sau đó cô đọc lại bằng một tiếng (luân phiên EN / ZH), các con chạm chọn 1 trong 3 tranh trên máy mình. Dùng 6 mục đầu của PAIR_POOL. */
+/* Chỉ dùng từ có tranh rõ nghĩa để chọn (08/11): Little Seed dùng số đếm (tranh đếm đồ vật); Canopy dùng nghề, nơi chốn, người trong nhà.
+   Bỏ các từ/câu khó vẽ rõ (you, name, câu hỏi tên/tuổi…) vì tranh dễ gây nhầm. */
 const DTC_N = 6;
-function dtcItem(i) { const it = PAIR_POOL[i % PAIR_POOL.length]; return { k: it.k, o: it.o, l: i % 2 ? 'zh' : 'en' }; }
+const DTC_SEED = [
+  { k: 'four', o: ['four', 'six', 'two'] }, { k: 'two', o: ['three', 'one', 'two'] }, { k: 'six', o: ['five', 'six', 'four'] },
+  { k: 'one', o: ['one', 'three', 'five'] }, { k: 'five', o: ['two', 'three', 'five'] }, { k: 'three', o: ['six', 'three', 'one'] }
+];
+const DTC_CANOPY = ['chef', 'hospital', 'brother', 'dentist', 'restaurant', 'mom'];
+function dtcList() {
+  if (LZ_LOP !== 'canopy-v2') return DTC_SEED;
+  const L = DTC_CANOPY.map(k => PAIR_POOL.find(x => x.k === k)).filter(Boolean);
+  return L.length >= 3 ? L : PAIR_POOL.slice(0, DTC_N);
+}
+function dtcItem(i) { const L = dtcList(), it = L[i % L.length]; return { k: it.k, o: it.o, l: i % 2 ? 'zh' : 'en' }; }
 
 /* Mạch 40 phút */
 const PHASES = [
