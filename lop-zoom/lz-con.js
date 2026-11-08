@@ -213,6 +213,7 @@ function view(st, seats) {
     case 'on': return vQuiz(st, seats);
     case 'tone': return vTone(st, seats);
     case 'dtc': return vDtc(st, seats);
+    case 'pb': return vPb(st, seats);
     case 'cn': return vCn(st, seats);
     case 'pair': return vPair(st, seats);
     case 'lop': return vLop(st, seats);
@@ -302,6 +303,74 @@ async function noiPlay(key, list) {
     cue && cue.classList.remove('show');
   }
   $$('#noiL .noi-l').forEach(x => x.classList.add('on'));
+}
+
+/* --- 他 hay 她? Cô Hươu dạy phân biệt hai chữ đồng âm (tā): nghe giống nhau → bộ 亻 người → bộ 女 nữ → động tác → câu ví dụ nói theo → luyện chọn chữ.
+   Lời cô Hươu chưa có file giọng thì hiện chữ trong bong bóng để cô đọc trên Zoom (không dùng giọng máy). --- */
+function pbSay(t) { return `<div class="pb-bubble"><img src="${HUOU}" alt=""><span>${esc(t)}</span></div>`; }
+function pbLines(keys) { return keys.map(k => PB.loi[k]); }
+function pbAud(keys) { const out = []; keys.forEach(k => { const a = hd(PB.loi[k]); if (a) out.push(a, 300); }); return out; }
+function vPb(st, seats) {
+  const p = st.pb || {}, s = p.s || 0, A = PB.a, Bq = PB.b;
+  const dots = `<div class="dots">${PB.buoc.map((_, j) => `<i class="${j <= s ? 'on' : ''}"></i>`).join('')}</div>`;
+  const head = t => `<div class="qno">🔍 ${esc(PB.ten)} · ${esc(t)}</div>`;
+  const card = x => `<div class="pb-card ${x.g}"><img class="pic" src="${x.img}" alt=""><div class="pb-big">${x.chu}</div><small class="${x.g === 'he' ? 'pb-he' : 'pb-she'}">${x.g}</small></div>`;
+  if (s === 0) return {
+    key: 'pb0|' + (st.rp || 0), akey: 'pb0|' + (st.rp || 0),
+    audio: pbAud(['nghe1']).concat([A.za, 700, Bq.za, 500]).concat(pbAud(['nghe2'])),
+    html: `${head(PB.buoc[0])}<p class="ask-line">👂 tā … tā … Nghe giống nhau quá!</p><div class="pb-two">${card(A)}${card(Bq)}</div>
+      <div class="ctl"><button class="say zh" data-a="${A.za}"><span class="ic">🔊</span>${A.chu}</button><button class="say zh" data-a="${Bq.za}"><span class="ic">🔊</span>${Bq.chu}</button></div>
+      ${pbSay(PB.loi.nghe1 + ' ' + PB.loi.nghe2)}${dots}`,
+    bind() { $$('[data-a]', $('#stage')).forEach(b => b.onclick = () => play([b.dataset.a])); }
+  };
+  if (s === 1 || s === 2) {
+    const x = s === 1 ? A : Bq, L = s === 1 ? ['chuA', 'tayA'] : ['chuB', 'tayB'];
+    return {
+      key: 'pb' + s + '|' + (st.rp || 0), akey: 'pb' + s + '|' + (st.rp || 0),
+      audio: pbAud([L[0]]).concat(x.boA ? [x.boA, 500] : []).concat([x.za, 600, x.ea, 600]).concat(pbAud([L[1]])),
+      html: `${head(PB.buoc[s])}${pbEq(x)}
+        <div class="pb-row">${pbIcon(x)}<img class="pb-pic" src="${x.img}" alt=""><div class="pb-big ${x.g === 'he' ? 'pb-he' : 'pb-she'}" style="font-size:44px;font-weight:800">${x.g}</div></div>
+        <div class="pb-do">${x.dongtac}</div>${pbSay(PB.loi[L[0]])}${dots}`
+    };
+  }
+  if (s === 3) {
+    const f = p.f || 0, x = f ? (PB.flash[(f - 1) % PB.flash.length] === 'a' ? A : Bq) : null;
+    return {
+      key: 'pb3|' + f, akey: 'pb3|' + f + '|' + (st.rp || 0),
+      audio: f ? [x.za] : pbAud(['tpr']),
+      html: `${head(PB.buoc[3])}${x ? `<div class="pb-flash ${x.g}">${x.chu}</div>` : `<div class="pb-two"><div class="pb-card he"><div class="pb-big">${A.chu}</div><small>${esc(A.dongtac)}</small></div><div class="pb-card she"><div class="pb-big">${Bq.chu}</div><small>${esc(Bq.dongtac)}</small></div></div>`}
+        <p class="ask-line">🙆 ${CHIEU ? 'Cả lớp' : 'Con'} nhìn chữ rồi làm động tác nhé!</p>${f ? '' : pbSay(PB.loi.tpr)}${dots}`,
+      bind() { if (f) SND.beep('whoosh'); }
+    };
+  }
+  if (s === 4) {
+    const v = Math.min(PB.vd.length - 1, p.v || 0), it = PB.vd[v], here = CHIEU ? !muted : !amCo();
+    const lines = ['en', 'zh'].map(x => `<div class="noi-l" data-l="${x}"><span class="flag ${x}">${x === 'zh' ? '中文' : 'English'}</span><b class="${x}">${x === 'zh' ? pbColor(it.zh) : esc(it.en).replace(/\b(He|he)\b/, '<span class="pb-he">$1</span>').replace(/\b(She|she)\b/, '<span class="pb-she">$1</span>')}</b></div>`).join('');
+    return {
+      key: ['pb4', v, st.rp || 0].join('|'),
+      html: `${head(PB.buoc[4] + ' ' + (v + 1) + '/' + PB.vd.length)}<p class="ask-line">👂 Con nghe cô đọc rồi nói theo nhé!</p>
+        <div class="pb-row"><img class="pb-pic" src="${it.img}" alt="">${pbIcon(it.g === 'he' ? A : Bq)}</div>
+        <div class="noi-lines${here ? ' play' : ''}" id="noiL">${lines}</div>
+        <div class="noi-cue${here ? '' : ' show still'}" id="noiCue"><span>🗣️ ${CHIEU ? 'Cả lớp nói theo!' : 'Con nói theo cô nhé!'}</span><i id="noiBar"></i></div>
+        ${v === 0 ? pbSay(PB.loi.vd) : ''}${dots}`,
+      bind() { if (here) noiPlay(lastStageKey, [['en', it.ea], ['zh', it.za]]); }
+    };
+  }
+  /* s === 5: luyện chọn chữ */
+  const i = Math.min(PB.luyen.length - 1, p.i || 0), it = PB.luyen[i], run = st.run || 0, qid = `pb_${i}_${run}`, rv = st.step === 'rv';
+  const ans = it.g === 'she' ? 1 : 0, my = myAnswer(qid), goi = i < (PB.goiY || 0);
+  const opt = (x, c) => `<button class="pick pb-c ${x.g}${my && my.c === c ? ' chosen' : ''}${rv && CHIEU && c === ans ? ' right' : ''}${rv && CHIEU && c !== ans ? ' dim' : ''}" data-c="${c}" aria-label="${x.chu}"><b>${x.chu}</b>${goi ? pbIcon(x) : ''}</button>`;
+  const right = it.g === 'she' ? Bq : A;
+  return {
+    key: ['pb5', i, run, rv ? 1 : 0, my ? my.c : '-'].join('|'), akey: ['pb5', i, run, rv ? 1 : 0, st.rp || 0].join('|'),
+    audio: rv ? [it.ea, 600, it.za] : (i === 0 && !st.rp ? pbAud(['luyen']) : []).concat([it.za, 700, it.za]),
+    html: `${head(PB.buoc[5] + ' ' + (i + 1) + '/' + PB.luyen.length)}<p class="ask-line">👀 ${esc(PB.loi.luyen)}</p>
+      <div class="pb-row"><img class="pb-pic" src="${it.img}" alt=""><button class="say zh" data-play><span class="ic">🔊</span><span>${rv && CHIEU ? pbColor(it.zh) : 'Nghe'}</span></button></div>
+      <div class="pics pb-picks${my || rv || CHIEU ? ' locked' : ''}" id="pics">${opt(A, 0)}${opt(Bq, 1)}</div><p class="count" id="cnt"></p>
+      ${rv && CHIEU ? `<div class="pb-row">${pbEq(right)}<p class="sub">${pbColor(it.zh)} · <b class="en">${esc(it.en)}</b></p></div>` : ''}${dots}`,
+    bind() { bindPlay(() => [it.za]); bindPicks(qid, c => ({ c, ok: c === ans })); if (rv && my && my.ok) giveStar(qid, 'pb'); this.update(); },
+    update() { const n = countAnswered(qid, seats), el = $('#cnt'); if (el) el.textContent = rv ? '' : `${n}/${seats.length} bạn đã chọn`; }
+  };
 }
 
 /* --- Đọc theo cô: (1) cô Hươu đọc EN rồi ZH, cả lớp đọc theo; (2) cô đọc lại một tiếng, con chạm chọn tranh --- */
@@ -631,6 +700,7 @@ const PRAISE = {
   on_en: ['Con nghe tiếng Anh tinh ghê!', 'Tai con bắt được từ tiếng Anh rồi!'],
   on_zh: ['Con nghe ra tiếng Trung rồi đó!', 'Con nhận ra từ tiếng Trung nhanh ghê!'],
   on_doc: ['Con nhìn chữ là nhận ra liền!', 'Con nhớ mặt chữ rồi đó!'],
+  pb: ['Con nhìn chữ là nhận ra liền!', 'Con nhớ mặt chữ rồi đó!', 'Giỏi quá!'],
   tone: ['Máy bay của con bay đúng đường rồi!', 'Tai con bắt thanh điệu chuẩn ghê!'],
   pairSay: ['Con nói rõ nên bạn hiểu liền!', 'Bạn nghe con nói là hiểu ngay!'],
   pairHear: ['Con hiểu ý bạn rồi đó!', 'Con lắng nghe bạn giỏi ghê!'],

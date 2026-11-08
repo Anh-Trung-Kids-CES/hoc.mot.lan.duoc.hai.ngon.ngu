@@ -327,6 +327,19 @@ function cnSets() {
 /* chiều của lượt t: lượt chẵn cô nói EN → con nói ZH, lượt lẻ ngược lại (cô đổi được) */
 function cnDir(c) { return c && c.from === 'zh' ? { from: 'zh', to: 'en' } : { from: 'en', to: 'zh' }; }
 
+/* Phân biệt hai chữ đồng âm (Vòng 3: 他 / 她 cùng đọc tā). Khoá nào có PB thì mạch buổi có thêm phần 'pb' (do tệp nội dung của khoá chèn vào PHASES).
+   PB = { a: {chu, bo, ben, g:'he'}, b: {…, g:'she'}, vd: [câu ví dụ], luyen: [bài tập], loi: {lời cô Hươu} } – xem lz-seed-v3.js. */
+let PB = null;
+/* hình bộ chữ: 亻 vẽ người đứng (SVG), 女 dùng tranh bạn gái quỳ của web học ngày 19 */
+function pbIcon(x, cls) {
+  if (x.boImg) return `<img class="${cls || 'pb-ic'}" src="${x.boImg}" alt="">`;
+  return `<svg class="${cls || 'pb-ic'}" viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="#2F80ED" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="19" r="11"/><path d="M50 31 V63 M50 41 L33 55 M50 41 L67 55 M50 63 L37 90 M50 63 L63 90"/></g></svg>`;
+}
+/* 亻 + 也 = 他 : bộ bên trái tô màu, phần bên phải giống nhau thì mờ */
+function pbEq(x) { return `<div class="pb-eq ${x.g}"><span class="pb-bo">${x.bo}</span><b>+</b><span class="pb-ben">${x.ben}</span><b>=</b><span class="pb-chu">${x.chu}</span></div>`; }
+/* câu có chữ 他 / 她 tô màu theo chữ */
+function pbColor(t) { return esc(t).replace(/他/g, '<span class="pb-he">他</span>').replace(/她/g, '<span class="pb-she">她</span>'); }
+
 /* Mạch 40 phút */
 const PHASES = [
   { id: 'cho',   n: 'Chờ vào lớp',          m: '',      ic: '🚪' },

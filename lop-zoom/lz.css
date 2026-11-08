@@ -427,3 +427,35 @@ body.boss-play .stage{padding:6px}
 .cn-to.q{color:#999}
 .chieu .cn-l{font-size:30px}.chieu .cn-no{width:40px;height:40px;font-size:22px}
 @media (max-width:640px){.cn-box{flex-direction:column}.cn-pic{width:100%}}
+
+/* ---------- 他 hay 她? (phân biệt chữ đồng âm, Vòng 3) ---------- */
+.pb-he{color:#2F80ED}.pb-she{color:#E0457B}
+.pb-two{display:flex;gap:22px;justify-content:center;flex-wrap:wrap}
+.pb-card{background:#fff;border-radius:26px;box-shadow:var(--shadow);padding:12px 18px;display:flex;flex-direction:column;align-items:center;gap:6px;border:5px solid transparent}
+.pb-card.he{border-color:#2F80ED}.pb-card.she{border-color:#E0457B}
+.pb-card img.pic{width:min(30vw,190px);aspect-ratio:1;object-fit:cover;border-radius:18px}
+.pb-card .pb-big{font-family:'Noto Sans SC',sans-serif;font-size:84px;font-weight:800;line-height:1}
+.pb-card.he .pb-big{color:#2F80ED}.pb-card.she .pb-big{color:#E0457B}
+.pb-card small{font-size:20px;font-weight:800}
+.pb-eq{display:flex;align-items:center;gap:12px;font-family:'Noto Sans SC',sans-serif;font-weight:800;font-size:72px;line-height:1;background:#fff;border-radius:26px;padding:10px 26px;box-shadow:var(--shadow)}
+.pb-eq b{font-size:44px;color:#9a8b7a}
+.pb-eq .pb-ben{color:#c9bfb3}
+.pb-eq.he .pb-bo,.pb-eq.he .pb-chu{color:#2F80ED}.pb-eq.she .pb-bo,.pb-eq.she .pb-chu{color:#E0457B}
+.pb-eq .pb-bo{font-size:92px;animation:pbPulse 1.6s ease-in-out infinite}
+@keyframes pbPulse{50%{transform:scale(1.12)}}
+.pb-row{display:flex;align-items:center;gap:20px;justify-content:center;flex-wrap:wrap}
+.pb-ic{width:120px;height:120px;background:#fff;border-radius:22px;box-shadow:var(--shadow);padding:6px}
+.pb-pic{width:min(34vw,200px);aspect-ratio:1;object-fit:cover;border-radius:22px;box-shadow:var(--shadow);border:5px solid #fff}
+.pb-do{font-size:24px;font-weight:800;background:var(--yellow-soft,#fff4c9);border-radius:18px;padding:8px 18px;text-align:center}
+.pb-bubble{display:flex;gap:10px;align-items:flex-start;max-width:640px;margin:0 auto;font-size:17px;color:#6b5b4b}
+.pb-bubble img{width:44px;height:44px;border-radius:50%;flex:none}
+.pb-bubble span{background:#fff;border-radius:16px;padding:8px 14px;box-shadow:0 3px 0 rgba(58,42,26,.08)}
+.pb-flash{font-family:'Noto Sans SC',sans-serif;font-size:min(34vh,220px);font-weight:800;line-height:1;background:#fff;border-radius:40px;padding:10px 50px;box-shadow:var(--shadow);animation:noiPop .35s ease}
+.pb-flash.he{color:#2F80ED}.pb-flash.she{color:#E0457B}
+.pb-picks{display:flex;gap:24px;justify-content:center}
+.pick.pb-c{flex-direction:column;display:flex;align-items:center;justify-content:center;gap:4px;min-width:150px;padding:10px 16px}
+.pick.pb-c b{font-family:'Noto Sans SC',sans-serif;font-size:96px;line-height:1}
+.pick.pb-c.he b{color:#2F80ED}.pick.pb-c.she b{color:#E0457B}
+.pick.pb-c .pb-ic{width:64px;height:64px;box-shadow:none;padding:0}
+.chieu .pb-eq{font-size:96px}.chieu .pb-eq .pb-bo{font-size:120px}.chieu .pb-card .pb-big{font-size:110px}
+@media (max-width:520px){.pb-eq{font-size:48px;padding:8px 14px}.pb-eq .pb-bo{font-size:60px}.pb-card .pb-big{font-size:60px}.pick.pb-c b{font-size:70px}.pb-ic{width:84px;height:84px}}

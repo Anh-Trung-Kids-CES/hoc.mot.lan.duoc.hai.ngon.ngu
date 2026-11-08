@@ -10,6 +10,7 @@ const ROOT = path.join(__dirname, '..', '..'), XT = path.join(ROOT, 'xem-truoc')
 const AUD = 'tai-nguyen/little-seed/audio/', IMG = 'tai-nguyen/little-seed/img/';
 const miss = [];
 const has = p => fs.existsSync(path.join(XT, p));
+const rel = p => p ? '../xem-truoc/' + p : '';
 function a(f) { const p = AUD + f + '.mp3'; if (!has(p)) miss.push('giọng: ' + p); return p; }
 /* tranh có 3 kiểu vẽ (_l1, _l2, _l3) như Vòng 2, hoặc một tranh cảnh truyện cố định */
 function imV(base) { [1, 2, 3].forEach(v => { const p = IMG + base + '_l' + v + '.webp'; if (!has(p)) miss.push('tranh: ' + p); }); return { im: IMG + base, v: 1 }; }
@@ -124,6 +125,42 @@ const CN = [
   { img: 5, k: ['q_she', 's_lsis'] }, { img: 6, k: ['q_she', 's_bsis'] }, { img: 7, k: ['q_he', 's_lbro'] },
 ];
 
+/* ---------- 他 hay 她? (phút 8–12): cô Hươu dạy phân biệt hai chữ đồng âm tā (chỉ đạo 08/11 tối):
+   1 nghe giống nhau → 2 chữ 他 (bộ 亻 người đứng) → 3 chữ 她 (bộ 女, tranh bạn gái quỳ của web học ngày 19)
+   → 4 nhìn chữ làm động tác → 5 nói theo 4 câu ví dụ → 6 luyện 6 bài: nhìn tranh, nghe câu tā…, chạm 他 hay 她. ---------- */
+const LOI = {   // lời cô Hươu (tiếng Việt). File giọng: ls_co_huou_vi_zoom_<số>.mp3 – chưa có file thì màn hiện chữ để cô đọc trên Zoom
+  nghe1: [17, 'Các con ơi, he và she trong tiếng Trung đọc giống hệt nhau. Các con nghe nhé!'],
+  nghe2: [18, 'Nghe giống nhau quá! Vậy làm sao biết là bạn trai hay bạn gái? Mình nhìn chữ nhé!'],
+  chuA: [19, 'Chữ này có nét bên trái giống một người đứng thẳng. Đây là he: ông, anh trai, em trai.'],
+  tayA: [20, 'Cả lớp đứng thẳng, giơ một tay lên nào!'],
+  chuB: [21, 'Chữ này có chữ nữ bên trái, giống một bạn gái đang quỳ. Đây là she: bà, chị gái, em gái.'],
+  tayB: [22, 'Cả lớp khoanh hai tay trước ngực nào!'],
+  tpr: [23, 'Cô đổi chữ thật nhanh nhé! Chữ có người đứng thì giơ tay, chữ có chữ nữ thì khoanh tay!'],
+  vd: [24, 'Con nghe cô đọc rồi nói theo nhé!'],
+  luyen: [25, 'Bạn này là he hay she? Con nhìn tranh rồi chạm chữ đúng nhé!'],
+};
+const voiceFile = n => 'ls_co_huou_vi_zoom_' + n + '.mp3';
+const HD_PB = {};   // chỉ gắn câu đã có file giọng
+Object.values(LOI).forEach(([n, t]) => { if (has(AUD + voiceFile(n))) HD_PB[t] = rel(AUD + voiceFile(n)); });
+const PB = {
+  ten: '他 hay 她?',
+  buoc: ['Nghe giống nhau', 'Chữ 他', 'Chữ 她', 'Nhìn chữ, làm động tác', 'Nói theo câu ví dụ', 'Luyện chọn chữ'],
+  a: { g: 'he', chu: '他', bo: '亻', ben: '也', nghia: 'giống một người đứng thẳng (bộ người)', dongtac: 'Đứng thẳng, giơ một tay lên', img: rel(W.he.im + '_l2.webp'), za: rel(W.he.za), ea: rel(W.he.ea) },
+  b: { g: 'she', chu: '她', bo: '女', ben: '也', nghia: 'chữ 女 (nữ), giống một bạn gái đang quỳ', dongtac: 'Khoanh hai tay trước ngực', img: rel(W.she.im + '_l2.webp'), za: rel(W.she.za), ea: rel(W.she.ea),
+       boA: rel(a('ls_co_huou_zh_059')), boImg: rel(imF('../../trang/ls_nc_nu').im) },
+  vd: [['s_gpa', 'he'], ['s_gma', 'she'], ['s_bro', 'he'], ['s_lsis', 'she']].map(([k, g]) => ({ g, en: W[k].en, zh: W[k].zh, py: W[k].py, img: rel(W[k].im), ea: rel(W[k].ea), za: rel(W[k].za) })),
+  luyen: [['grandpa', 's_gpa', 'he'], ['lsis', 's_lsis', 'she'], ['bsis', 's_bsis', 'she'], ['bro', 's_bro', 'he'], ['grandma', 's_gma', 'she'], ['lbro', 's_lbro', 'he']]
+    .map(([k, sk, g]) => ({ g, en: W[sk].en, zh: W[sk].zh, py: W[sk].py, img: rel(W[k].im + '_l3.webp'), ea: rel(W[sk].ea), za: rel(W[sk].za) })),
+  goiY: 3,                                            // 3 bài đầu có hình bộ chữ dưới mỗi chữ để gợi ý
+  flash: ['a', 'b', 'b', 'a', 'b', 'a', 'a', 'b'],   // thứ tự chữ hiện ở bước động tác
+  loi: Object.fromEntries(Object.entries(LOI).map(([k, [, t]]) => [k, t])),
+};
+PB.luyen.forEach(x => { if ((x.g === 'he') !== /^He\b/.test(x.en)) miss.push('bài luyện sai he/she: ' + x.en); });
+/* ghi danh sách câu cần thu giọng vào giong.json (máy tạo giọng đọc tệp này) */
+const GJ = path.join(__dirname, 'giong.json'), gj = JSON.parse(fs.readFileSync(GJ, 'utf8'));
+Object.values(LOI).forEach(([n, t]) => { const f = voiceFile(n), o = gj.find(x => x.file === f); if (o) o.text = t; else gj.push({ file: f, text: t, lang: 'vi' }); });
+fs.writeFileSync(GJ, JSON.stringify(gj, null, 1) + '\n');
+
 /* ---------- Rồng Lửa ---------- */
 const CATS = {
   fam: ['grandpa', 'grandma', 'bro', 'lsis', 'bsis', 'lbro'],
@@ -146,7 +183,6 @@ DTC.filter(q => q.l === 'zh' && HS.includes(q.k) && !q.chu).forEach(q => miss.pu
 if (miss.length) { console.error('Chưa đủ tài nguyên / nội dung chưa hợp lệ:\n' + miss.join('\n')); process.exit(1); }
 
 /* ---------- ghi tệp ---------- */
-const rel = p => p ? '../xem-truoc/' + p : '';
 const WOUT = {};
 used.forEach(k => { const w = W[k]; WOUT[k] = { en: w.en, zh: w.zh, py: w.py, im: rel(w.im), v: w.v, ea: rel(w.ea), za: rel(w.za) }; });
 const SOUT = STORY.map(s => ({ img: rel(s.img), en: s.en, zh: s.zh, ea: rel(s.ea), za: rel(s.za) }));
@@ -198,6 +234,13 @@ if (LZ_LOP === 'seed-v3') (function () {
     },
     tip: 'Trước buổi nhắn ba mẹ: đến lượt con, con mời <b>một người trong nhà</b> ra camera (ông, bà, anh, chị, em, ba, mẹ) hoặc giơ <b>ảnh gia đình</b>. Cô bấm "he" nếu là người nam, "she" nếu là người nữ. Cả lớp hỏi, con giới thiệu: <b>He is my grandpa.</b> / <b class="zh">她是我妈妈。</b> Ba, mẹ (daddy 爸爸, mommy 妈妈 – Vòng 1) cũng được. Con nói tiếng nào cũng khen; con nói được thì cô hỏi thêm bằng tiếng kia. Không có ai bên cạnh thì con chỉ vào tranh trên màn chiếu.'
   };
+
+  /* 他 hay 她?: thêm phần vào mạch buổi, sau Nói theo cô; đặt lại số phút cho đủ 40 phút */
+  PB = ${J(PB)};
+  Object.assign(HD, ${J(HD_PB)});
+  PHASES.splice(PHASES.findIndex(p => p.id === 'noi') + 1, 0, { id: 'pb', n: '他 hay 她?', m: '', ic: '🔍' });
+  const MIN = { hat: '0–2', intro: '2–5', noi: '5–8', pb: '8–12', on: '12–16', tone: '16–19', dtc: '19–27', boss: '27–30', xep: '30–34', cn: '34–38', badge: '38–40' };
+  PHASES.forEach(p => { if (MIN[p.id]) p.m = MIN[p.id]; });
 
   BOSS = Object.assign({}, BOSS, { story: '⚔️ Rồng Lửa nghịch ngợm giấu mất album ảnh nhà Bông! Cả lớp tiếp sức cho anh hùng Bông tìm lại nhé!' });
   const CATS = ${J(CATS)};

@@ -124,13 +124,17 @@ const BAR = [
   ['#pv', '◀', 'ghost'], ['#rp', '🔁 Phát lại', 'ghost'], ['#rv', '👁 Hiện đáp án', 'y'], ['#au', '⏯ Tự chạy', 'y'], ['#ag', '↺ Hỏi lại', 'ghost'],
   ['#bst', '⚔️ Bắt đầu trận đấu', 'red'], ['#ben', '🏁 Kết thúc ngay', 'ghost'], ['#bre', '↺ Đấu lại', 'ghost'],
   ['#cna', '👂 Hiện câu tiếng kia', 'y'], ['#cnn', 'Tiếp ▶', ''], ['#cnd', '⇄ Đổi chiều', 'ghost'], ['#dgo', '👉 Cho các con chọn tranh', 'y'], ['#dsay', '◀ Đọc theo lại', 'ghost'], ['#xgo', '🧩 Cho các con xếp tranh', 'y'], ['#xback', '◀ Nghe lại truyện', 'ghost'],
+  ['#pbf', '⚡ Chữ tiếp', 'y'], ['#pbv1', 'Câu tiếp ▶', ''], ['#pbi1', 'Bài tiếp ▶', ''],
   ['#vdn', '🏆 Vinh danh ▶', 'y'], ['#vdp', '◀ Bạn trước', 'ghost'], ['#op', '🎁 Mở hộp quà', 'y'], ['#an', '👂 Nghe đáp án', 'y'], ['#nx', 'Tiếp ▶', ''], ['#kq', 'Xem kết quả', 'red']];
+/* nhãn nút quay theo khoá (Canopy: mẹ / ba, Vòng 3: he / she) */
+if (INTRO.lb) BAR.forEach(b => { if (/^\[data-spin/.test(b[0])) b[1] = '🎡 ' + (b[0].indexOf('dad') > 0 ? INTRO.lb[1] : INTRO.lb[0]) + (b[0].indexOf('zh') > 0 ? ' · 中文' : ' · EN'); });
 function drawBar(st) {
   if (!sharing) return;
   const ph = PHASES.find(p => p.id === st.ph) || PHASES[0];
   let lb = ph.ic + ' ' + ph.n;
   if (st.ph === 'on') lb += ` ${(st.i || 0) + 1}/${QUIZ.length}`;
   if (st.ph === 'dtc') lb += ` ${(st.i || 0) + 1}/${DTC_N}`;
+  if (st.ph === 'pb') { const p = st.pb || {}; lb += ` · ${PB.buoc[p.s || 0]}` + ((p.s || 0) === 5 ? ` ${(p.i || 0) + 1}/${PB.luyen.length}` : ''); }
   if (st.ph === 'noi') lb += ` ${(st.i || 0) + 1}/${NOI.length}`;
   if (st.ph === 'tone') lb += ` ${(st.i || 0) + 1}/${TONES.length}`;
   if (st.ph === 'story') lb += ` ${(st.scene || 0) + 1}/${STORY.length}`;
@@ -160,6 +164,7 @@ function goPhase(ph) {
   if (!st.t0 && ph !== 'cho') p.t0 = DB.now();
   if (ph === 'on' || ph === 'tone' || ph === 'noi') p.i = 0;
   if (ph === 'dtc') { p.i = 0; p.step = 'say'; }
+  if (ph === 'pb') { p.pb = { s: 0, i: 0, v: 0, f: 0 }; p.run = (st.run || 0) + 1; }
   if (ph === 'noi') p.auto = false;
   if (ph === 'story') { p.scene = 0; p.l = 'both'; }
   if (ph === 'badge') p.vinh = -1;
@@ -265,7 +270,7 @@ const CTL = {
           <div class="bigtxt">${esc(txt(it.k, 'en'))}</div><div class="bigtxt zh" style="color:var(--red)">${esc(txt(it.k, 'zh'))}</div>${w.py ? `<div class="small">${esc(w.py)}</div>` : ''}</div></div>
         <div class="ctl"><button class="btn ghost" id="pv">◀ Trước</button><button class="btn ghost" id="rp">🔁 Đọc lại</button>
           <button class="btn ${st.auto ? 'red' : 'y'}" id="au">${st.auto ? '⏸ Dừng tự chạy' : '▶ Tự chạy'}</button>
-          <button class="btn" id="nx">${i + 1 < N ? 'Tiếp ▶' : 'Sang Ôn nhanh ▶'}</button></div>
+          <button class="btn" id="nx">${i + 1 < N ? 'Tiếp ▶' : PB ? 'Sang ' + esc(PB.ten) + ' ▶' : 'Sang Ôn nhanh ▶'}</button></div>
         <div class="ctl">${grp.map(g => `<button class="btn ghost sm" data-g="${g}">${NOI_GRP[g]} (${NOI.filter(x => x.g === g).length})</button>`).join('')}
           <button class="btn ghost sm" id="od">Đọc trước: ${od === 'zh' ? '中文' : 'English'} ⇄</button></div>
         <p class="tip"><b>Tự chạy</b>: web tự sang câu sau khi các con nói theo xong; đến câu cuối thì dừng. Không chấm, không sửa lỗi riêng: bạn chưa nói được thì cả lớp nói lại cùng cô (bấm Đọc lại).</p>`;
@@ -274,7 +279,7 @@ const CTL = {
       const N = NOI.length, i = st.i || 0;
       $('#pv').onclick = () => i > 0 && setState({ i: i - 1, rp: 0 });
       $('#rp').onclick = () => setState({ rp: (st.rp || 0) + 1 });
-      $('#nx').onclick = () => i + 1 < N ? setState({ i: i + 1, rp: 0 }) : goPhase('on');
+      $('#nx').onclick = () => i + 1 < N ? setState({ i: i + 1, rp: 0 }) : goPhase(PB ? 'pb' : 'on');
       $('#au').onclick = () => setState({ auto: !st.auto, rp: (st.rp || 0) + (st.auto ? 0 : 1) });
       $('#od').onclick = () => setState({ od: st.od === 'zh' ? 'en' : 'zh', rp: (st.rp || 0) + 1 });
       $$('[data-g]').forEach(b => b.onclick = () => setState({ i: NOI.findIndex(x => x.g === b.dataset.g), rp: 0 }));
@@ -343,6 +348,49 @@ const CTL = {
       };
       $$('[data-cn]').forEach(b => b.onclick = () => { if (!c.seat) return; const cur = ((((room.marks || {})[c.seat] || {}).cn) || {})[t + '_' + j]; mark(c.seat, 'cn/' + t + '_' + j, cur === +b.dataset.cn ? null : +b.dataset.cn); });
     }
+  },
+  pb: {
+    html: st => {
+      const p = st.pb || {}, s = p.s || 0, A = PB.a, Bq = PB.b, rv = st.step === 'rv';
+      const tabs = `<div class="ctl">${PB.buoc.map((b, j) => `<button class="btn ${j === s ? 'red' : 'ghost'} sm" data-pbs="${j}">${j + 1}. ${esc(b)}</button>`).join('')}</div>`;
+      const loi = keys => `<div class="tip">🦌 <b>Lời cô Hươu</b> (${keys.every(k => hd(PB.loi[k])) ? 'màn chiếu tự đọc' : '<b>chưa có file giọng: cô đọc trên Zoom</b>'}): ${keys.map(k => '“' + esc(PB.loi[k]) + '”').join(' ')}</div>`;
+      let body = '';
+      if (s === 0) body = `<p>Màn chiếu hiện ${A.chu} (he) và ${Bq.chu} (she), phát tiếng <b>tā</b> của cả hai: các con nhận ra hai chữ đọc giống hệt nhau, nên phải <b>nhìn chữ</b>.</p>${loi(['nghe1', 'nghe2'])}`;
+      if (s === 1 || s === 2) { const x = s === 1 ? A : Bq; body = `<div class="prev">${pbEq(x)}</div><p>Bộ <b class="zh">${x.bo}</b> bên trái: ${esc(x.nghia)}. Phần bên phải <b class="zh">${x.ben}</b> giống nhau ở cả hai chữ. Động tác: <b>${esc(x.dongtac)}</b>. Cả lớp làm theo và nói <b class="zh">${x.chu}</b> – <b>${x.g}</b>.</p>${loi(s === 1 ? ['chuA', 'tayA'] : ['chuB', 'tayB'])}`; }
+      if (s === 3) { const f = p.f || 0; body = `<p>Cô bấm <b>⚡ Chữ tiếp</b>: màn chiếu hiện thật to ${A.chu} hoặc ${Bq.chu} (có tiếng tā). Các con làm động tác theo chữ: ${A.chu} <b>${esc(A.dongtac)}</b>, ${Bq.chu} <b>${esc(Bq.dongtac)}</b>. Cô nói "he!" / "she!" cùng các con. Không chấm.</p>
+        <div class="ctl"><button class="btn y" id="pbf">⚡ Chữ tiếp (${f}/${PB.flash.length})</button>${f ? '<button class="btn ghost" id="pbf0">↺ Về hai chữ</button>' : ''}</div>${f ? '' : loi(['tpr'])}`; }
+      if (s === 4) { const v = Math.min(PB.vd.length - 1, p.v || 0), it = PB.vd[v]; body = `<div class="prev"><img src="${it.img}" class="ans" alt=""><div><div class="bigtxt">${esc(it.en)}</div><div class="bigtxt zh">${pbColor(it.zh)}</div><div class="small">${esc(it.py)}</div></div></div>
+        <p>Câu ${v + 1}/${PB.vd.length}. Cô Hươu đọc tiếng Anh rồi tiếng Trung, có khoảng lặng để cả lớp nói theo. Cô chỉ vào chữ ${it.g === 'he' ? A.chu : Bq.chu} và hỏi lại: "he hay she?".</p>
+        <div class="ctl"><button class="btn ghost" id="pbv0">◀ Câu trước</button><button class="btn" id="pbv1">Câu tiếp ▶</button></div>${v === 0 ? loi(['vd']) : ''}`; }
+      if (s === 5) { const i = Math.min(PB.luyen.length - 1, p.i || 0), it = PB.luyen[i];
+        body = `<div class="prev"><img src="${it.img}" alt=""><div><div class="bigtxt zh">${pbColor(it.zh)}</div><div class="small">${esc(it.py)} · ${esc(it.en)}</div><div>Đáp án: <b class="bigtxt ${it.g === 'he' ? 'pb-he' : 'pb-she'}">${it.g === 'he' ? A.chu : Bq.chu}</b></div></div></div>
+        <p>Bài ${i + 1}/${PB.luyen.length}: màn chiếu phát câu tiếng Trung (nghe đều là tā), các con nhìn tranh rồi chạm chữ <b>${A.chu}</b> hoặc <b>${Bq.chu}</b>${i < (PB.goiY || 0) ? ' (bài đầu có hình bộ chữ gợi ý)' : ''}. Hiện đáp án: màn chiếu đọc câu tiếng Anh rồi tiếng Trung, cả lớp nói lại.</p>
+        <div class="ctl"><button class="btn ghost" id="pbi0">◀ Bài trước</button><button class="btn ghost" id="rp">🔁 Phát lại</button><button class="btn ghost" id="lp">🔊 Nghe trên máy cô</button>
+          ${rv ? '<button class="btn ghost" id="ag">↺ Hỏi lại</button>' : '<button class="btn y" id="rv">👁 Hiện đáp án</button>'}
+          <button class="btn" id="pbi1">${i + 1 < PB.luyen.length ? 'Bài tiếp ▶' : 'Tiếp: Ôn nhanh ▶'}</button></div>${i === 0 ? loi(['luyen']) : ''}
+        <p class="small">Bé 1 máy: giơ 1 ngón tay là ${A.chu}, 2 ngón là ${Bq.chu}; cô bấm hộ <b>1</b> / <b>2</b> ở cột phải.</p>`; }
+      return `<h2>🔍 ${esc(PB.ten)} · ${s + 1}/${PB.buoc.length} ${esc(PB.buoc[s])}</h2>${tabs}${body}
+        <div class="ctl"><button class="btn ghost" id="pv">◀ Bước trước</button>${s === 5 ? '' : '<button class="btn ghost" id="rp">🔁 Phát lại</button>'}<button class="btn" id="nx">${s + 1 < PB.buoc.length ? 'Bước tiếp ▶' : 'Tiếp: Ôn nhanh ▶'}</button></div>
+        <p class="tip">Mục tiêu: hai chữ đọc giống nhau (<b>tā</b>) nên con nhìn <b>bộ bên trái</b>: <b class="zh">${A.bo}</b> người – he, <b class="zh">${Bq.bo}</b> nữ – she. Không sửa lỗi riêng: bạn chọn chưa đúng thì cả lớp cùng nhìn lại bộ chữ.</p>`;
+    },
+    bind(st) {
+      const p = st.pb || {}, s = p.s || 0, set_ = o => setState({ pb: Object.assign({}, p, o), rp: 0, step: 'ask' });
+      $$('[data-pbs]').forEach(b => b.onclick = () => set_({ s: +b.dataset.pbs }));
+      $('#pv').onclick = () => s > 0 && set_({ s: s - 1 });
+      $('#nx').onclick = () => s + 1 < PB.buoc.length ? set_({ s: s + 1 }) : goPhase('on');
+      $('#rp') && ($('#rp').onclick = () => setState({ rp: (st.rp || 0) + 1 }));
+      $('#pbf') && ($('#pbf').onclick = () => set_({ f: (p.f || 0) % PB.flash.length + 1 }));
+      $('#pbf0') && ($('#pbf0').onclick = () => set_({ f: 0 }));
+      const v = p.v || 0, i = p.i || 0;
+      $('#pbv0') && ($('#pbv0').onclick = () => v > 0 && set_({ v: v - 1 }));
+      $('#pbv1') && ($('#pbv1').onclick = () => v + 1 < PB.vd.length ? set_({ v: v + 1 }) : set_({ s: 5, i: 0 }));
+      $('#pbi0') && ($('#pbi0').onclick = () => i > 0 && set_({ i: i - 1 }));
+      $('#pbi1') && ($('#pbi1').onclick = () => i + 1 < PB.luyen.length ? set_({ i: i + 1 }) : goPhase('on'));
+      $('#rv') && ($('#rv').onclick = () => setState({ step: 'rv' }));
+      $('#ag') && ($('#ag').onclick = () => setState({ step: 'ask', run: (st.run || 0) + 1, rp: 0 }));
+      $('#lp') && ($('#lp').onclick = () => { const it = PB.luyen[i]; SND.play([it.za]); });
+    },
+    qid: st => ((st.pb || {}).s || 0) === 5 ? `pb_${(st.pb || {}).i || 0}_${st.run || 0}` : '', opts: 2
   },
   dtc: {
     html: st => {
@@ -653,6 +701,7 @@ function proxyOk(st, k) {
   if (st.ph === 'on') return k === quizAns(QUIZ[st.i || 0]);
   if (st.ph === 'tone') return k === TONES[st.i || 0].t;
   if (st.ph === 'dtc') { const it = dtcItem(st.i || 0); return k === it.o.indexOf(it.k); }
+  if (st.ph === 'pb') { const it = PB.luyen[(st.pb || {}).i || 0]; return k === (it.g === 'she' ? 1 : 0); }
   if (st.ph === 'pair') { const it = PAIR_POOL[(st.pair || {}).k || 0]; return k === it.o.indexOf(it.k); }
   if (st.ph === 'lop') { const it = PAIR_POOL[(st.lop || {}).k || 0]; return k === it.o.indexOf(it.k); }
   return false;
@@ -778,6 +827,7 @@ function results() {
     TONES.forEach((x, i) => { const a = latest(s, 'tone_' + i, qids); if (a && a.ok) tOk++; if (a && a.tay) tTay++; if (a && a.ms && !a.ho && !a.tay) times.push(a.ms); det.tone.push(a ? (a.ok ? 1 : 0) : null); const v = (m.tone || {})[i]; if (v !== undefined && v !== null) g[v]++; });
     const cnv = Object.values(m.cn || {}).filter(v => v != null), cnTxt = cnv.length ? `tự nói ${cnv.filter(v => v === 2).length} · cùng cô ${cnv.filter(v => v === 1).length} · chưa ${cnv.filter(v => v === 0).length}` : '';
     let dOk = 0, dN = 0; for (let i = 0; i < DTC_N; i++) { const a = latest(s, 'dtc_' + i, qids); if (a) { dN++; if (a.ok) dOk++; } }
+    let pOk = 0, pN = 0; if (PB) PB.luyen.forEach((_, i) => { const a = latest(s, 'pb_' + i, qids); if (a) { pN++; if (a.ok) pOk++; } });
     let say = [0, 0], hear = [0, 0];
     Object.entries(plog).forEach(([key, t]) => {
       if (!t) return;
@@ -802,7 +852,7 @@ function results() {
       tg: times.length ? (times.reduce((x, y) => x + y, 0) / times.length / 1000).toFixed(1) : '',
       toneChon: `${tOk}/${TONES.length}` + (tTay ? ` (bay tay ${tTay})` : ''), toneCham: (g[2] + g[1] + g[0]) ? `chuẩn ${g[2]} · gần ${g[1]} · cần luyện ${g[0]}` : '',
       doiNoi: say[1] ? `${say[0]}/${say[1]}` : '', doiNghe: hear[1] ? `${hear[0]}/${hear[1]}` : '',
-      boss: bA ? `${bOk}/${bA}` : '', dtc: dN ? `${dOk}/${dN}` : '', cn: cnTxt,
+      boss: bA ? `${bOk}/${bA}` : '', dtc: dN ? `${dOk}/${dN}` : '', cn: cnTxt, pb: pN ? `${pOk}/${pN}` : '',
       xep0: xepRes(s, 0, qids), xep1: xepRes(s, 1, qids),
       lopNoi: lSay[1] ? `${lSay[0]}/${lSay[1]} bạn hiểu` : '', lopNghe: lHear[1] ? `${lHear[0]}/${lHear[1]}` : '',
       chaoEN: lv(intro.en), chaoZH: lv(intro.zh), pd: pd.length ? pd.map(v => ['chưa', 'cùng cô', 'được'][v]).join(', ') : '',
@@ -813,7 +863,7 @@ function results() {
 }
 const COLS = [['kid', 'Tên con'], ['parent', 'Ba/mẹ'], ['src', 'Vào lớp'], ['onEN', 'Ôn nhanh EN'], ['onZH', 'Ôn nhanh ZH'], ['doc', 'Nhìn chữ'], ['tg', 'TB phản hồi (giây)'],
   ['toneChon', 'Thanh điệu chọn đúng'], ['toneCham', 'Cô chấm thanh điệu'], ['doiNoi', 'Đôi bạn: bạn hiểu con nói'], ['doiNghe', 'Đôi bạn: con nghe đúng'], ['lopNoi', 'Cô giáo nhỏ: cả lớp hiểu con nói'], ['lopNghe', 'Cô giáo nhỏ: con nghe bạn đúng'], ['boss', 'Đấu Rồng Lửa: đúng/câu'], ['xep0', 'Xếp tranh (nghe EN, xếp ZH)'], ['xep1', 'Xếp tranh (nghe ZH, xếp EN)'],
-  ['chaoEN', 'Chào bạn EN'], ['chaoZH', 'Chào bạn ZH'], ['dtc', 'Đọc theo cô: chọn tranh đúng'], ['cn', 'Cô nói, con nói tiếng kia']];
+  ['chaoEN', 'Chào bạn EN'], ['chaoZH', 'Chào bạn ZH'], ['dtc', 'Đọc theo cô: chọn tranh đúng'], ['cn', 'Cô nói, con nói tiếng kia']].concat(PB ? [['pb', PB.ten + ': chọn chữ đúng']] : []);
 function drawResults() {
   const rows = results();
   const sel = (id, k, v) => `<div class="h4">${[2, 1, 0].map(n => { const L = H4[k].lv[n]; return `<button class="h4b l${n}${String(v) === String(n) ? ' on' : ''}" data-h="${id}|${k}|${n}" title="${esc(L[1])}">${n} · ${esc(L[0])}</button>`; }).join('')}</div>`;

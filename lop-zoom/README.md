@@ -118,3 +118,8 @@ Giữ nguyên bản cuối của Little Seed Vòng 2 (11 phần: Hát chào → 
 - **Huy hiệu Chinh phục** (tên huy hiệu theo khoá: `huy` trong `LZ_LOPS`). Vòng 3 không có file giọng "huy hiệu Chinh phục": cuối buổi cô Hươu nói "Giỏi quá!" rồi "Tuyệt vời! Con đã học xong hôm nay rồi!" (không tốn thêm Gemini).
 - Sửa nội dung: sửa `tao-tai-nguyen/tao_seed_v3.js` rồi chạy `node lop-zoom/tao-tai-nguyen/tao_seed_v3.js`, không sửa tay `lz-seed-v3.js`.
 - Đã chạy thử trọn buổi (`?mock=1`, cô + màn chiếu + 3 bé, bé vào bằng link chung tự chuyển sang Vòng 3): đủ 11 phần, không lỗi, không thiếu tranh/giọng; Vòng 2 và Canopy chạy lại không ảnh hưởng.
+
+### Phần mới "🔍 他 hay 她?" (08/11/2026 khuya, phút 8–12, chỉ khoá có `PB`)
+Cô Hươu dạy phân biệt hai chữ đồng âm tā, 6 bước: nghe giống nhau → 亻 + 也 = 他 (người đứng, giơ một tay) → 女 + 也 = 她 (tranh bạn gái quỳ của web học, khoanh tay) → nhìn chữ làm động tác (cô bấm ⚡ Chữ tiếp) → nói theo 4 câu ví dụ (他 xanh, 她 hồng) → luyện 6 bài: nhìn tranh, nghe câu tā…, chạm 他 hay 她 (3 bài đầu có hình bộ chữ gợi ý; mã câu `pb_<bài>_<lượt>`, bé 1 máy cô bấm hộ 1/2; cột báo cáo "他 hay 她?: chọn chữ đúng").
+Mạch Vòng 3 đặt lại: Hát 0–2 · Chào 2–5 · Nói theo 5–8 · 他 hay 她? 8–12 · Ôn nhanh 12–16 · Thanh điệu 16–19 · Đọc theo cô 19–27 · Rồng 27–30 · Xếp tranh 30–34 · Cô nói con nói 34–38 · Huy hiệu 38–40.
+Mã: dữ liệu `PB` trong `lz-seed-v3.js` (sinh từ `tao_seed_v3.js`), hàm chung `pbIcon/pbEq/pbColor` trong `lz-core.js`, màn bé `vPb` trong `lz-con.js`, màn cô `CTL.pb` trong `lz-co.js`. 9 câu giọng cô Hươu chưa tạo (xem `GIONG-CAN-THU.md`): chưa có file thì hiện lời trong bong bóng để cô đọc.

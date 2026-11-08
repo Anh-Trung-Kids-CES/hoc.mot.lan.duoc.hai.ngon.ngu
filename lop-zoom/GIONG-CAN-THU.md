@@ -43,3 +43,21 @@ Câu nào chưa có file thì màn bé chỉ hiện chữ hoặc tạm đọc c�
 | ls_co_huou_vi_khen_19.mp3 | Con nhớ truyện giỏi ghê! |
 | ls_co_huou_vi_khen_20.mp3 | Con xếp tranh đúng hết rồi! |
 | ls_co_huou_zh_jiao.mp3 | 叫 (gửi máy "叫。" để đọc đúng tiếng Trung) |
+
+
+## Phần "他 hay 她?" – Little Seed Vòng 3 (thêm 08/11/2026) – CHƯA TẠO
+9 câu cô Hươu dạy phân biệt 他 / 她 (đã có trong `tao-tai-nguyen/giong.json`, tự thêm khi chạy `tao_seed_v3.js`). Chưa có file thì màn chiếu hiện lời trong bong bóng, cô đọc trên Zoom.
+Tạo xong: chạy lại `node lop-zoom/tao-tai-nguyen/tao_seed_v3.js` là web tự gắn giọng (chỉ gắn câu đã có file).
+Ước tính chi phí Gemini (Batch API, giọng Sulafat): khoảng 600 ký tự, dưới 0,02 USD (lần 35 câu trước tốn khoảng 0,05 USD).
+
+| Tên file | Câu |
+|---|---|
+| ls_co_huou_vi_zoom_17.mp3 | Các con ơi, he và she trong tiếng Trung đọc giống hệt nhau. Các con nghe nhé! |
+| ls_co_huou_vi_zoom_18.mp3 | Nghe giống nhau quá! Vậy làm sao biết là bạn trai hay bạn gái? Mình nhìn chữ nhé! |
+| ls_co_huou_vi_zoom_19.mp3 | Chữ này có nét bên trái giống một người đứng thẳng. Đây là he: ông, anh trai, em trai. |
+| ls_co_huou_vi_zoom_20.mp3 | Cả lớp đứng thẳng, giơ một tay lên nào! |
+| ls_co_huou_vi_zoom_21.mp3 | Chữ này có chữ nữ bên trái, giống một bạn gái đang quỳ. Đây là she: bà, chị gái, em gái. |
+| ls_co_huou_vi_zoom_22.mp3 | Cả lớp khoanh hai tay trước ngực nào! |
+| ls_co_huou_vi_zoom_23.mp3 | Cô đổi chữ thật nhanh nhé! Chữ có người đứng thì giơ tay, chữ có chữ nữ thì khoanh tay! |
+| ls_co_huou_vi_zoom_24.mp3 | Con nghe cô đọc rồi nói theo nhé! |
+| ls_co_huou_vi_zoom_25.mp3 | Bạn này là he hay she? Con nhìn tranh rồi chạm chữ đúng nhé! |
