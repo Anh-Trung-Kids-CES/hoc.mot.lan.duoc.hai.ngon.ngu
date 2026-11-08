@@ -19,6 +19,15 @@ function playSeq(list) { let i = 0; const nx = () => { if (i >= list.length) { A
 function stopAll() { try { AU.pause(); AU.onended = null; NH.pause(); } catch (e) {} }
 function who(k) { return D.who[k] || { n: '', img: '' }; }
 const sessUnits = s => (s.units || []).filter(u => D.units[u]);
+const JG = [['s', 'a', 't', 'i', 'p', 'n'], ['c', 'k', 'c/k', '-ck', 'e', 'h', 'r', 'm', 'd'], ['g', 'o', 'u', 'l', 'f', 'b'], ['ai', 'j', 'oa', 'ie', 'ee', 'or'], ['z', 'w', 'ng', 'v', 'oo'], ['y', 'x', 'ch', 'sh', 'th'], ['qu', 'ou', 'oi', 'ue', 'er', 'ar']];
+const JL = { audio: 'https://jollylearning.com/resources/audio-and-video-resources/42-letter-sounds-video', all: 'https://jollylearning.com/resources/audio-and-video-resources' };
+function jollyGroups(sym) { const toks = String(sym).toLowerCase().split(/[\s·+]+/).filter(t => /^[-a-z\/]+$/.test(t)); const g = new Set(); toks.forEach(t => JG.forEach((G, i) => { if (G.includes(t)) g.add(i + 1); })); return [...g]; }
+function jollyBox(s) {
+  const syms = s.slides.filter(x => x.ty === 'sound' && x.l === 'en').map(x => x.sym); if (!syms.length) return '';
+  const g = [...new Set(syms.flatMap(jollyGroups))];
+  return `<div class="box"><h3>Âm chuẩn tiếng Anh · Jolly Learning (trang chính thức)</h3><p>Âm của buổi: <b>${syms.map(esc).join(' · ')}</b>${g.length ? ` — thuộc nhóm âm Jolly Phonics ${g.join(', ')}` : ''}. Cô mở trang chính thức để nghe âm chuẩn (giọng Anh – Anh) trước buổi, hoặc phát cho các con nghe.</p>
+    <a class="btn p" href="${JL.audio}" target="_blank" rel="noopener">🔊 42 âm Jolly Phonics</a> <a class="btn" href="${JL.all}" target="_blank" rel="noopener">Âm theo nhóm, video dạy âm</a></div>`;
+}
 
 /* ---------------- lớp & ghi nhận ---------------- */
 const Roster = { get: () => ls.get('sdd-lop', []), set: v => ls.set('sdd-lop', v) };
@@ -132,7 +141,7 @@ function wireAudio(el) {
 function tabChant(s, el) {
   const keys = ['hello', ...sessUnits(s), 'bye'];
   el.innerHTML = `<p>Cách dùng: lần 1 nghe nhạc nền và xem cô làm động tác; lần 2 nói theo từng câu (🔊); lần 3 cả lớp đọc theo nhịp trên nhạc nền, làm động tác. Câu tiếng Trung dùng đúng nội dung câu tiếng Anh.</p>
-    <div class="grid2">${keys.map(chantBox).join('')}</div>
+    <div class="grid2">${keys.map(chantBox).join('')}${jollyBox(s)}</div>
     <h2>Video bài hát (kênh ngoài, mở trên lớp)</h2>
     ${s.videos.length ? `<ul class="clean">${s.videos.map(v => `<li><a href="${esc(v.url)}" target="_blank" rel="noopener">${esc(v.label)}</a> <span class="chip">${v.l === 'zh' ? '中文' : 'English'}</span></li>`).join('')}</ul>` : '<p class="muted">Buổi này chưa có video gắn trong web học.</p>'}
     <p class="muted">Bài hát của GrapeSEED, Jolly Phonics không đưa lên web vì bản quyền; nếu trung tâm có bản quyền, cô mở từ tài khoản chính thức.</p>`;
@@ -290,7 +299,7 @@ function drawStage(st, x, teacher) {
     case 'pair': h = `<div class="sl"><div class="mid">👫 Đôi bạn · Talk with your friend</div><div class="frames">${x.items.map(it => `<div><span class="en" data-a="${esc(it.a_en)}">${esc(it.en)}</span><br><span class="zh" data-a="${esc(it.a_zh)}" style="font-size:.8em">${esc(it.zh)}</span></div>`).join('')}</div></div>`; break;
     case 'bridge': h = `<div class="sl"><div class="mid">🌉 Phiên dịch nhí · 小翻译</div><div class="big en" data-a="${esc(x.a_en)}">${esc(x.en)}</div>${rev ? `<div class="big zh" data-a="${esc(x.a_zh)}">${esc(x.zh)}</div><div class="py">${esc(x.py)}</div>` : '<div class="mid muted">→ 中文 ?</div>'}</div>`; break;
     case 'move': h = `<div class="sl"><h1>🤸 ${esc(x.game)}</h1><div class="timer" id="tmr"></div><div class="grid3" style="grid-template-columns:repeat(4,1fr)">${x.cards.map(c => `<div class="c">${c.img ? `<img src="${A(c.img)}" style="height:11vh">` : ''}<div class="en" style="font-weight:800">${esc(c.en)}</div><div class="zh">${esc(c.zh)}</div></div>`).join('')}</div><button class="btn" id="tgo">▶ Bắt đầu đếm giờ</button></div>`; break;
-    case 'sound': h = `<div class="sl"><div class="sym ${x.l}">${esc(x.sym)}</div><div class="mid">${esc(x.name || '')}</div><div class="opts">${x.ex.map(e => `<div class="opt"><div class="big ${x.l}">${esc(e[1] || e[0])}</div><div class="py">${esc(e[1] ? e[0] : '')}</div></div>`).join('')}</div></div>`; break;
+    case 'sound': h = `<div class="sl"><div class="sym ${x.l}">${esc(x.sym)}</div><div class="mid">${esc(x.name || '')}</div>${x.l === 'en' && teacher ? `<a class="btn s" href="${JL.audio}" target="_blank" rel="noopener">🔊 Âm chuẩn · Jolly Learning</a>` : ''}<div class="opts">${x.ex.map(e => `<div class="opt"><div class="big ${x.l}">${esc(e[1] || e[0])}</div><div class="py">${esc(e[1] ? e[0] : '')}</div></div>`).join('')}</div></div>`; break;
     case 'board': h = `<div class="sl"><h1>✏️ Bảng con · 写一写</h1>${(x.wb || []).map(w => `<div class="big ${/[一-鿿]/.test(w) ? 'zh' : 'en'}">${esc(w)}</div>`).join('')}</div>`; break;
     case 'bigbook': { const bk = bookFor(P.s); if (!bk) { h = ''; break; } const v = bookView(bk.b, ls.get('sdd-bbl', 'en'), sub, x.upto); h = `<div class="sl"><div class="mid">📖 Big Book · ${esc(bk.b.t)}</div>${v.html}<div><button class="btn" id="bbp">◀</button> <button class="btn" id="bbl">English / 中文</button> <button class="btn" id="bbn">▶</button></div></div>`; P.bb = v; break; }
     case 'craft': { const c = D.crafts[x.unit]; h = `<div class="sl"><h1>✂️ ${esc(c.name)}</h1><div class="big">${esc(c.steps[x.step])}</div><div class="mid muted">${esc(c.mat)}</div></div>`; break; }
