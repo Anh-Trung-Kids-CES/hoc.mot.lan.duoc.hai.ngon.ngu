@@ -19,10 +19,12 @@ const LZ_MOCK = QS.has('mock');
 
 /* ======================= Khoá của buổi Zoom =======================
    Mỗi phòng ghi khoá ở state.lop. Trang tải nội dung theo ?lop= (mặc định Little Seed Vòng 2).
-   Nội dung Canopy nằm trong lz-canopy.js: tệp đó gán lại các biến nội dung bên dưới khi LZ_LOP là canopy. */
+   Nội dung Canopy nằm trong lz-canopy.js, Little Seed Vòng 3 trong lz-seed-v3.js: các tệp đó gán lại các biến nội dung bên dưới.
+   huy: tên huy hiệu cuối buổi theo chặng (Vòng 2 Bứt phá, Vòng 3 Chinh phục). */
 const LZ_LOPS = {
-  'seed-v2':   { ten: 'Little Seed · Vòng 2', chude: 'Giới thiệu bản thân', khoa: 'seed', vong: 2 },
-  'canopy-v2': { ten: 'Canopy · Vòng 2', chude: 'Jobs – Ghé thăm nơi làm việc', khoa: 'canopy', vong: 2 },
+  'seed-v2':   { ten: 'Little Seed · Vòng 2', chude: 'Giới thiệu bản thân', khoa: 'seed', vong: 2, huy: 'Bứt phá' },
+  'canopy-v2': { ten: 'Canopy · Vòng 2', chude: 'Jobs – Ghé thăm nơi làm việc', khoa: 'canopy', vong: 2, huy: 'Bứt phá' },
+  'seed-v3':   { ten: 'Little Seed · Vòng 3', chude: 'Gia đình – Album ảnh nhà Bông', khoa: 'seed', vong: 3, huy: 'Chinh phục' },   // nội dung trong lz-seed-v3.js (Zoom ngày 21)
 };
 const LZ_LOP = LZ_LOPS[QS.get('lop')] ? QS.get('lop') : 'seed-v2';
 const LZ_CFG = LZ_LOPS[LZ_LOP];
@@ -192,6 +194,10 @@ const TONE_PATH = {
 const TONE_NAME = { 1: 'Bay ngang', 2: 'Bay lên', 3: 'Lượn xuống rồi lên', 4: 'Lao xuống' };
 /* đường bay của lựa chọn thứ c (1–4): Little Seed chọn thẳng thanh 1–4; Canopy chọn 1 trong 4 cặp thanh của từ hai chữ (x.o, ví dụ 31 = thanh 3 rồi thanh 1) */
 function toneOpt(x, c) { return x.o ? x.o[c - 1] : c; }
+/* ghi chú thêm cho cô ở phần thanh điệu (Vòng 3: từ lặp) */
+let TONE_TIP = '';
+/* chữ trên màn thanh điệu: từ lặp (哥哥, 奶奶…) thì tiếng sau mờ đi vì đọc nhẹ, con chọn thanh của tiếng đầu */
+function toneChar(x) { const c = String(x.c || ''); return c.length === 2 && c[0] === c[1] ? c[0] + '<span class="nhe">' + c[1] + '</span>' : c; }
 
 /* Trò chơi đôi bạn: bé A thấy tranh và nói, bé B nghe rồi chạm 1 trong 3 tranh */
 let PAIR_POOL = [
@@ -252,18 +258,87 @@ let NOI = ['name', 'you', 'one', 'two', 'three', 'four', 'five', 'six'].map(k =>
 /* khoảng lặng cho các con nói theo, tính theo độ dài câu mẫu vừa đọc (máy chiếu và màn cô dùng chung công thức) */
 function noiGap(ms) { return Math.round(Math.max(1500, ms * 1.15 + 700)); }
 
+/* Hát chào mở đầu (warm-up): video "Hello Song (你好歌)" của Little Fox Chinese, phát bằng trình phát YouTube nhúng
+   (không chép video lên web). Chỉ màn chiếu / màn cô chia sẻ phát video; máy các con hiện lời bài hát để hát theo.
+   Muốn đổi bài: thay id (đoạn sau watch?v= trên YouTube) và lời. */
+const SONG = {
+  id: 'm_rDIzj6DRE', ten: 'Hello Song · 你好歌', nguon: 'Little Fox Chinese',
+  loi: [
+    { zh: '你好！你好！', py: 'nǐ hǎo! nǐ hǎo!', vi: 'Hello!', tay: '👋 vẫy tay' },
+    { zh: '早上好！早上好！', py: 'zǎoshang hǎo!', vi: 'Good morning!', tay: '🌞 giơ hai tay lên như mặt trời mọc' },
+    { zh: '你好吗？', py: 'nǐ hǎo ma?', vi: 'How are you?', tay: '🤗 dang tay hỏi bạn' },
+    { zh: '晚上好！晚上好！', py: 'wǎnshang hǎo!', vi: 'Good evening!', tay: '🌙 áp hai tay lên má' }
+  ],
+  /* lời cô Hươu giới thiệu (hiện chữ cho cô đọc; chưa có file giọng) */
+  gioiThieu: [
+    'Chào các con! Hôm nay mình mở đầu bằng một bài hát chào thật vui nhé!',
+    'Các bạn thú trong bài hát chào nhau bằng tiếng Trung: 你好 nǐ hǎo, nghĩa là Hello!',
+    'Nghe 你好 thì vẫy tay. Nghe 早上好 thì giơ hai tay lên như mặt trời mọc. Nghe 晚上好 thì áp hai tay lên má.',
+    'Các con đứng dậy nào! Sẵn sàng chưa? 一、二、三！'
+  ],
+  sauBai: 'Giỏi quá! Cả lớp cùng chào nhau nào: Hello! 你好！'
+};
+function songSrc(auto, mute) { return 'https://www.youtube-nocookie.com/embed/' + SONG.id + '?rel=0&modestbranding=1&playsinline=1' + (auto ? '&autoplay=1' : '') + (mute ? '&mute=1' : ''); }
+function songLyrics(big) {
+  return `<div class="song-lyr${big ? ' big' : ''}">${SONG.loi.map(x => `<div class="sl"><b class="zh">${x.zh}</b><span class="slpy">${x.py}</span><small>${x.vi} · ${x.tay}</small></div>`).join('')}</div>`;
+}
+
+/* Đọc theo cô (phút 19–28): mỗi lượt cô Hươu đọc một từ/câu bằng tiếng Anh rồi tiếng Trung, cả lớp đọc theo;
+   sau đó cô đọc lại bằng một tiếng (luân phiên EN / ZH), các con chạm chọn 1 trong 3 tranh trên máy mình. Dùng 6 mục đầu của PAIR_POOL. */
+/* Chỉ dùng từ có tranh rõ nghĩa để chọn (08/11): Little Seed dùng số đếm (tranh đếm đồ vật); Canopy dùng nghề, nơi chốn, người trong nhà.
+   Bỏ các từ/câu khó vẽ rõ (you, name, câu hỏi tên/tuổi…) vì tranh dễ gây nhầm. */
+const DTC_N = 6;
+let DTC_SEED = [
+  { k: 'four', o: ['four', 'six', 'two'] }, { k: 'two', o: ['three', 'one', 'two'] }, { k: 'six', o: ['five', 'six', 'four'] },
+  { k: 'one', o: ['one', 'three', 'five'] }, { k: 'five', o: ['two', 'three', 'five'] }, { k: 'three', o: ['six', 'three', 'one'] }
+];
+const DTC_CANOPY = ['chef', 'hospital', 'brother', 'dentist', 'restaurant', 'mom'];
+function dtcList() {
+  if (LZ_LOP !== 'canopy-v2') return DTC_SEED;
+  const L = DTC_CANOPY.map(k => PAIR_POOL.find(x => x.k === k)).filter(Boolean);
+  return L.length >= 3 ? L : PAIR_POOL.slice(0, DTC_N);
+}
+function dtcItem(i) { const L = dtcList(), it = L[i % L.length]; return { k: it.k, o: it.o, l: i % 2 ? 'zh' : 'en' }; }
+
+/* Cô nói, con nói tiếng kia (cuối buổi, 08/11/2026): mỗi con một tranh và một nội dung mẫu 2–3 câu theo mẫu câu của tuần.
+   Cô (giọng cô Hươu) nói từng câu bằng tiếng Anh, con nói lại bằng tiếng Trung; lượt sau đổi chiều (cô nói tiếng Trung, con nói tiếng Anh).
+   Little Seed không đưa "Nice to meet you!" vào phần con nói (từ này chỉ nghe). */
+function cnLine(k) { return { en: W[k].en, zh: W[k].zh, ea: aud(k, 'en'), za: aud(k, 'zh'), py: W[k].py || '' }; }
+function cnScene(i) { return { en: STORY[i].en, zh: STORY[i].zh, ea: sceneAud(i, 'en'), za: sceneAud(i, 'zh') }; }
+function cnSets() {
+  if (LZ_LOP === 'canopy-v2') return [
+    { img: pic('s_dDoc'), lines: ['s_name', 's_dDoc', 's_hH'].map(cnLine) },
+    { img: pic('s_mT'), lines: ['s_mT', 's_sS'].map(cnLine) },
+    { img: pic('s_dC'), lines: ['q_dad', 's_dC'].map(cnLine) },
+    { img: pic('s_emp'), lines: ['q_mom', 's_emp'].map(cnLine) },
+    { img: pic('s_sisC'), lines: ['s_sisC', 's_love'].map(cnLine) },
+    { img: pic('s_sat'), lines: ['s_sat', 's_love'].map(cnLine) }
+  ];
+  return [
+    { img: sceneImg(1), lines: [cnScene(1), cnLine('i5')] },                 // Hello! My name is Anna. · I'm five.
+    { img: sceneImg(3), lines: [cnLine('wyn'), cnScene(3), cnLine('i6')] },  // What's your name? · My name is Bông. · I'm six!
+    { img: sceneImg(7), lines: [cnLine('hoy'), cnLine('i5')] },              // How old are you? · I'm five.
+    { img: sceneImg(0), lines: [cnScene(0), cnLine('i6')] },                 // One, two, … six! · I'm six!
+    { img: sceneImg(6), lines: [cnLine('hoy'), cnLine('i6')] },              // How old are you? · I'm six!
+    { img: sceneImg(2), lines: [cnLine('wyn'), cnLine('mna'), cnLine('i5')] } // What's your name? · My name is Anna. · I'm five.
+  ];
+}
+/* chiều của lượt t: lượt chẵn cô nói EN → con nói ZH, lượt lẻ ngược lại (cô đổi được) */
+function cnDir(c) { return c && c.from === 'zh' ? { from: 'zh', to: 'en' } : { from: 'en', to: 'zh' }; }
+
 /* Mạch 40 phút */
 const PHASES = [
   { id: 'cho',   n: 'Chờ vào lớp',          m: '',      ic: '🚪' },
-  { id: 'intro', n: 'Chào bạn mới',          m: '0–5',   ic: '🎡' },
+  { id: 'hat',   n: 'Hát chào',              m: '0–2',   ic: '🎵' },
+  { id: 'intro', n: 'Chào bạn mới',          m: '2–5',   ic: '🎡' },
   { id: 'noi',   n: 'Nói theo cô',           m: '5–9',   ic: '🗣️' },
   { id: 'on',    n: 'Ôn nhanh',              m: '9–14',  ic: '⚡' },
   { id: 'tone',  n: 'Máy bay thanh điệu',    m: '14–19', ic: '✈️' },
-  { id: 'pair',  n: 'Trò chơi đôi bạn',      m: '19–24', ic: '🤝' },
-  { id: 'lop',   n: 'Cô giáo nhỏ (cả lớp)',  m: '24–28', ic: '📣' },
+  { id: 'dtc',   n: 'Đọc theo cô',           m: '19–28', ic: '📖' },   // thay Trò chơi đôi bạn + Cô giáo nhỏ (08/11/2026)
   { id: 'boss',  n: 'Cả lớp đấu Rồng Lửa',   m: '28–31', ic: '🐉' },
-  { id: 'xep',   n: 'Nghe truyện, xếp tranh', m: '31–36', ic: '🧩' },
-  { id: 'badge', n: 'Huy hiệu Bứt phá',      m: '36–40', ic: '🏅' },
+  { id: 'xep',   n: 'Nghe truyện, xếp tranh', m: '31–35', ic: '🧩' },
+  { id: 'cn',    n: 'Cô nói, con nói tiếng kia', m: '35–38', ic: '🔁' },
+  { id: 'badge', n: 'Huy hiệu ' + (LZ_CFG.huy || 'Bứt phá'), m: '38–40', ic: '🏅' },
 ];
 
 /* Giọng cô Hươu (Gemini TTS, giọng Sulafat) đã có sẵn ở web học. Câu chưa có file thì chỉ hiện chữ – cô nói trên Zoom.
@@ -525,3 +600,25 @@ function energyHTML(e) {
   const stage = e.pct >= 100 ? '🌳' : e.pct >= 66 ? '🪴' : e.pct >= 33 ? '🌿' : '🌱';
   return `<div class="energy" role="img" aria-label="Năng lượng cả nhóm ${e.pct}%"><span class="en-ic">${stage}</span><div class="en-bar"><i style="width:${e.pct}%"></i></div><span class="en-lb">Năng lượng cả nhóm</span></div>`;
 }
+
+/* ======================= Sao thành tích (cộng vào ví sao web học để đổi quà) =======================
+   ✋ giơ tay, 🎤 phát biểu: cô bấm ở cột Các bé (marks/<chỗ>/sc). ✅ trả lời đúng: tự đếm mọi câu con chọn đúng
+   (máy con chọn hoặc cô bấm hộ, kể cả trận Rồng; câu "đoán cho vui" khi không đến lượt thì không tính).
+   Phát biểu còn tự cộng khi cô chấm Chào bạn mới (EN/ZH) và Phiên dịch nhí (được / cùng cô). ± sao: cô chỉnh ở thẻ Kết quả. */
+function seatStars(room, seat) {
+  const m = ((room.marks || {})[seat.id]) || {}, sc = m.sc || {};
+  const qs = new Set(Object.keys(room.answers || {}));
+  Object.values(room.marks || {}).forEach(x => Object.keys((x && x.px) || {}).forEach(q => qs.add(q)));
+  let dung = 0; qs.forEach(q => { const a = answerOf(room, seat, q); if (a && a.ok && !a.xem) dung++; });
+  const intro = m.intro || {}, autoNoi = ['en', 'zh'].filter(l => intro[l]).length + Object.values(m.pd || {}).filter(v => v >= 1).length + Object.values(m.cn || {}).filter(v => v >= 1).length;
+  const tay = +sc.tay || 0, noi = (+sc.noi || 0) + autoNoi, adj = +m.adj || 0;
+  return { tay, dung, noi, adj, sao: Math.max(0, tay + dung + noi + adj) };
+}
+function starTitle(t) {
+  const c = [[t.tay, 'Bạn hăng hái giơ tay', '🙋'], [t.dung, 'Bạn tinh tai, tinh mắt', '👀'], [t.noi, 'Bạn tự tin phát biểu', '🎤']];
+  const mx = Math.max(...c.map(x => x[0]));
+  if (!mx) return ['Bạn chăm chú lắng nghe', '💛'];
+  const top = c.filter(x => x[0] === mx);
+  return top.length === 3 ? ['Ngôi sao toàn năng', '🌟'] : [top[0][1], top[0][2]];
+}
+

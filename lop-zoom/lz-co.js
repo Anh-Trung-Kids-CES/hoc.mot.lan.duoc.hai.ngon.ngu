@@ -120,16 +120,17 @@ function openShare() {
 }
 function closeShare() { sharing = false; $('#share').classList.add('hide'); draw(); }
 const BAR = [
-  ['#go', '▶ Bắt đầu', 'red'], ['[data-spin="en"]', '🎡 Quay · EN', ''], ['[data-spin="zh"]', '🎡 Quay · 中文', 'red'], ['[data-spin="en|dad"]', '🎡 Ba · EN', ''], ['[data-spin="zh|dad"]', '🎡 Ba · 中文', 'red'],
+  ['#go', '▶ Bắt đầu', 'red'], ['#sg', '▶ Phát bài hát', 'y'], ['#sgst', '⏹ Dừng video', 'ghost'], ['[data-spin="en"]', '🎡 Quay · EN', ''], ['[data-spin="zh"]', '🎡 Quay · 中文', 'red'], ['[data-spin="en|dad"]', '🎡 Ba · EN', ''], ['[data-spin="zh|dad"]', '🎡 Ba · 中文', 'red'],
   ['#pv', '◀', 'ghost'], ['#rp', '🔁 Phát lại', 'ghost'], ['#rv', '👁 Hiện đáp án', 'y'], ['#au', '⏯ Tự chạy', 'y'], ['#ag', '↺ Hỏi lại', 'ghost'],
   ['#bst', '⚔️ Bắt đầu trận đấu', 'red'], ['#ben', '🏁 Kết thúc ngay', 'ghost'], ['#bre', '↺ Đấu lại', 'ghost'],
-  ['#xgo', '🧩 Cho các con xếp tranh', 'y'], ['#xback', '◀ Nghe lại truyện', 'ghost'],
-  ['#op', '🎁 Mở hộp quà', 'y'], ['#an', '👂 Nghe đáp án', 'y'], ['#nx', 'Tiếp ▶', ''], ['#kq', 'Xem kết quả', 'red']];
+  ['#cna', '👂 Hiện câu tiếng kia', 'y'], ['#cnn', 'Tiếp ▶', ''], ['#cnd', '⇄ Đổi chiều', 'ghost'], ['#dgo', '👉 Cho các con chọn tranh', 'y'], ['#dsay', '◀ Đọc theo lại', 'ghost'], ['#xgo', '🧩 Cho các con xếp tranh', 'y'], ['#xback', '◀ Nghe lại truyện', 'ghost'],
+  ['#vdn', '🏆 Vinh danh ▶', 'y'], ['#vdp', '◀ Bạn trước', 'ghost'], ['#op', '🎁 Mở hộp quà', 'y'], ['#an', '👂 Nghe đáp án', 'y'], ['#nx', 'Tiếp ▶', ''], ['#kq', 'Xem kết quả', 'red']];
 function drawBar(st) {
   if (!sharing) return;
   const ph = PHASES.find(p => p.id === st.ph) || PHASES[0];
   let lb = ph.ic + ' ' + ph.n;
   if (st.ph === 'on') lb += ` ${(st.i || 0) + 1}/${QUIZ.length}`;
+  if (st.ph === 'dtc') lb += ` ${(st.i || 0) + 1}/${DTC_N}`;
   if (st.ph === 'noi') lb += ` ${(st.i || 0) + 1}/${NOI.length}`;
   if (st.ph === 'tone') lb += ` ${(st.i || 0) + 1}/${TONES.length}`;
   if (st.ph === 'story') lb += ` ${(st.scene || 0) + 1}/${STORY.length}`;
@@ -158,8 +159,11 @@ function goPhase(ph) {
   const p = { ph, step: 'ask', rp: 0 };
   if (!st.t0 && ph !== 'cho') p.t0 = DB.now();
   if (ph === 'on' || ph === 'tone' || ph === 'noi') p.i = 0;
+  if (ph === 'dtc') { p.i = 0; p.step = 'say'; }
   if (ph === 'noi') p.auto = false;
   if (ph === 'story') { p.scene = 0; p.l = 'both'; }
+  if (ph === 'badge') p.vinh = -1;
+  if (ph === 'cn') { const s0 = seatsIn()[0]; p.cn = { t: 0, j: 0, ans: false, from: 'en', seat: s0 ? s0.id : null }; }
   if (ph === 'xep') { p.xep = { r: 0, step: 'nghe', sc: 0 }; p.run = (st.run || 0) + 1; }
   if (ph === 'gift') p.gift = { k: 0, open: false, ans: false, seat: pickRandom('pd') || null };
   if (ph === 'boss') { const b = st.boss || {}; p.boss = { run: b.t0 ? (b.run || 0) : (b.run || 0), dur: b.dur || 120000 }; }
@@ -200,23 +204,41 @@ const CTL = {
       <p class="tip">Bé chỉ có 1 máy: con xem màn chiếu cô chia sẻ, giơ ngón tay 1-2-3, cô bấm hộ ở cột bên phải. Cô thêm bé ở thẻ <b>Thêm bé</b> (dán danh sách người tham gia Zoom).</p>
       <label class="toggle"><input type="checkbox" id="dy" ${st.duyet ? 'checked' : ''}> Cô duyệt từng bé tự vào bằng mã phòng</label>
       <label class="toggle" style="margin-top:8px"><input type="checkbox" id="amco" ${st.amCo !== false ? 'checked' : ''}> Tiếng chỉ phát ở máy cô (màn chiếu cô chia sẻ). Máy các con im lặng, trừ tiếng mẫu bí mật của bạn đang nói.</label>
-      <div class="ctl"><button class="btn red" id="go">▶ Bắt đầu: Chào bạn mới</button></div>`,
-    bind() { $('#dy').onchange = e => setState({ duyet: e.target.checked }); $('#amco').onchange = e => setState({ amCo: e.target.checked }); $('#go').onclick = () => goPhase('intro'); }
+      <div class="ctl"><button class="btn red" id="go">▶ Bắt đầu: Hát chào</button></div>`,
+    bind() { $('#dy').onchange = e => setState({ duyet: e.target.checked }); $('#amco').onchange = e => setState({ amCo: e.target.checked }); $('#go').onclick = () => goPhase('hat'); }
+  },
+  hat: {
+    html: st => {
+      const sg = st.song || {};
+      return `<h2>🎵 Hát chào: ${esc(SONG.ten)}</h2>
+        <div class="tip"><b>Cô Hươu giới thiệu</b> (cô đọc):<ol style="margin:6px 0 0 18px;padding:0">${SONG.gioiThieu.map(x => `<li>${esc(x)}</li>`).join('')}</ol></div>
+        ${songLyrics(false)}
+        <div class="ctl">${sg.on ? '<button class="btn ghost" id="sgst">⏹ Dừng video</button><button class="btn y" id="sg">🔁 Hát lại từ đầu</button>' : '<button class="btn y" id="sg">▶ Phát bài hát</button>'}
+          <button class="btn" id="nx">Tiếp: Chào bạn mới ▶</button></div>
+        <p class="tip">Video phát trên <b>màn chiếu</b> (máy chia sẻ Zoom, nhớ tích "Chia sẻ âm thanh"). Máy các con chỉ hiện lời bài hát. Hát xong cô nói: <b>${esc(SONG.sauBai)}</b><br>
+          Video không chạy? Trên máy chiếu bấm vào khung video, hoặc mở <a href="https://www.youtube.com/watch?v=${SONG.id}" target="_blank" rel="noopener">bài hát trên YouTube</a> rồi chia sẻ cửa sổ đó.</p>`;
+    },
+    bind(st) {
+      const sg = st.song || {};
+      $('#sg').onclick = () => setState({ song: { on: true, n: (sg.n || 0) + 1 } });
+      $('#sgst') && ($('#sgst').onclick = () => setState({ song: { on: false, n: sg.n || 0 } }));
+      $('#nx').onclick = () => { setState({ song: { on: false, n: sg.n || 0 } }); goPhase('intro'); };
+    }
   },
   intro: {
     html: st => {
       const sp = st.spin || {}, s = seatsIn().find(x => x.id === sp.seat);
-      const D = INTRO.dad, qa = I => `Cả lớp hỏi <b>${esc(I.ask.en.t)}</b> / <b class="zh">${esc(I.ask.zh.t)}</b>, bạn trả lời <b>${esc(I.model.en.t)}</b> / <b class="zh">${esc(I.model.zh.t)}</b>`;
-      return `<h2>🎡 Chào bạn mới</h2><p>Cô quay vòng chọn bạn. ${D ? 'Hỏi về mẹ: ' + qa(INTRO) + '.<br>Hỏi về ba: ' + qa(D) + '.' : qa(INTRO)}</p>${INTRO.tip ? `<p class="tip">${INTRO.tip}</p>` : ''}
-      <div class="ctl"><button class="btn" data-spin="en">🎡 ${D ? 'Hỏi mẹ' : 'Quay'} · tiếng Anh</button><button class="btn red" data-spin="zh">🎡 ${D ? 'Hỏi mẹ' : 'Quay'} · tiếng Trung</button></div>
-      ${D ? `<div class="ctl"><button class="btn" data-spin="en|dad">🎡 Hỏi ba · tiếng Anh</button><button class="btn red" data-spin="zh|dad">🎡 Hỏi ba · tiếng Trung</button></div>` : ''}
-      ${s ? `<div class="tip">Vừa chọn: <b>${esc(s.kid)}</b> (${D ? (sp.q === 'dad' ? 'hỏi về ba, ' : 'hỏi về mẹ, ') : ''}${sp.l === 'zh' ? 'tiếng Trung' : 'tiếng Anh'}). Chấm ở cột bên phải: <b>EN</b>/<b>ZH</b> = con nói được, bấm lần nữa = nói cùng cô.</div>` : ''}
+      const D = INTRO.dad, LB = INTRO.lb || ['Hỏi mẹ', 'Hỏi ba'], VE = INTRO.ve || ['hỏi về mẹ', 'hỏi về ba'], qa = I => `Cả lớp hỏi <b>${esc(I.ask.en.t)}</b> / <b class="zh">${esc(I.ask.zh.t)}</b>, bạn trả lời <b>${esc(I.model.en.t)}</b> / <b class="zh">${esc(I.model.zh.t)}</b>`;
+      return `<h2>🎡 Chào bạn mới</h2><p>Cô quay vòng chọn bạn. ${D ? LB[0] + ': ' + qa(INTRO) + '.<br>' + LB[1] + ': ' + qa(D) + '.' : qa(INTRO)}</p>${INTRO.tip ? `<p class="tip">${INTRO.tip}</p>` : ''}
+      <div class="ctl"><button class="btn" data-spin="en">🎡 ${D ? LB[0] : 'Quay'} · tiếng Anh</button><button class="btn red" data-spin="zh">🎡 ${D ? LB[0] : 'Quay'} · tiếng Trung</button></div>
+      ${D ? `<div class="ctl"><button class="btn" data-spin="en|dad">🎡 ${LB[1]} · tiếng Anh</button><button class="btn red" data-spin="zh|dad">🎡 ${LB[1]} · tiếng Trung</button></div>` : ''}
+      ${s ? `<div class="tip">Vừa chọn: <b>${esc(s.kid)}</b> (${D ? (sp.q === 'dad' ? VE[1] : VE[0]) + ', ' : ''}${sp.l === 'zh' ? 'tiếng Trung' : 'tiếng Anh'}). Chấm ở cột bên phải: <b>EN</b>/<b>ZH</b> = con nói được, bấm lần nữa = nói cùng cô.</div>` : ''}
       <p class="small">Bấm 🎯 cạnh tên bé để chọn đúng bạn đó.</p>
       <div class="ctl"><button class="btn ghost" id="nx">Tiếp: Nói theo cô ▶</button></div>`;
     },
     bind(st) {
       $$('[data-spin]').forEach(b => b.onclick = () => spin(pickRandom('intro'), b.dataset.spin));
-      $('#nx').onclick = () => goPhase('on');
+      $('#nx').onclick = () => goPhase('noi');
     },
     kid(s, st) {
       const m = ((room.marks || {})[s.id] || {}).intro || {};
@@ -275,19 +297,79 @@ const CTL = {
     html: st => {
       const i = st.i || 0, x = TONES[i], rv = st.step === 'rv';
       return `<h2>✈️ Máy bay thanh điệu · ${i + 1}/${TONES.length}</h2>
-        <p><span class="bigtxt zh">${x.c}</span> <span class="bigtxt" style="color:var(--red)">${x.py}</span> · ${x.o ? 'đường bay ' + x.t + ': ' : 'thanh ' + x.t + ' – '}${TONE_NAME[toneOpt(x, x.t)]}</p>
+        <p><span class="bigtxt zh">${toneChar(x)}</span> <span class="bigtxt" style="color:var(--red)">${x.py}</span> · ${x.o ? 'đường bay ' + x.t + ': ' : 'thanh ' + x.t + ' – '}${TONE_NAME[toneOpt(x, x.t)]}</p>
         ${toneAudio(x) ? '' : '<p class="tip">Chữ này chưa có file giọng riêng: <b>cô đọc trên Zoom</b>.</p>'}
+        ${TONE_TIP ? `<p class="tip">${TONE_TIP}</p>` : ''}
         ${qButtons(st, i, TONES.length, rv)}
         <label class="toggle"><input type="checkbox" id="tayOn" ${st.tayOn !== false ? 'checked' : ''}> ✋ Cho các con <b>bay bằng tay</b> trước camera (máy bé nhận đường tay bay, chọn đường bay giống nhất). Con vẫn chạm được.</label>
         <p class="tip">Sau khi hiện đáp án: cả lớp đưa tay bay theo, nói theo. Cô chấm từng bé ở cột phải: <b>Chuẩn</b> / <b>Gần</b> / <b>Luyện</b>. Bé 1 máy: bấm hộ số đường bay 1–4.</p>`;
     },
-    bind(st) { qBind(st, TONES.length, 'pair'); $('#tayOn').onchange = e => setState({ tayOn: e.target.checked }); },
+    bind(st) { qBind(st, TONES.length, 'dtc'); $('#tayOn').onchange = e => setState({ tayOn: e.target.checked }); },
     qid: st => `tone_${st.i || 0}_${st.run || 0}`, opts: 4,
     kid(s, st) {
       const v = ((((room.marks || {})[s.id] || {}).tone) || {})[st.i || 0];
       return [[2, 'Chuẩn', ''], [1, 'Gần', ' y'], [0, 'Luyện', ' o']].map(([n, t, c]) => `<button class="mk${v === n ? ' on' + c : ''}" data-tone="${s.id}|${n}">${t}</button>`).join('');
     },
     kbind(st) { $$('[data-tone]').forEach(b => b.onclick = () => { const [id, n] = b.dataset.tone.split('|'); const cur = ((((room.marks || {})[id] || {}).tone) || {})[st.i || 0]; mark(id, 'tone/' + (st.i || 0), cur === +n ? null : +n); }); }
+  },
+  cn: {
+    html: st => {
+      const c = st.cn || {}, sets = cnSets(), t = c.t || 0, set = sets[t % sets.length], d = cnDir(c), j = Math.min(set.lines.length - 1, c.j || 0), seats = seatsIn();
+      const kid = seats.find(x => x.id === c.seat), last = j + 1 >= set.lines.length, v = kid ? ((((room.marks || {})[kid.id] || {}).cn || {})[t + '_' + j]) : undefined;
+      return `<h2>🔁 Cô nói, con nói tiếng kia · lượt ${t + 1}/${seats.length || 1}</h2>
+        <p>Bạn nói: <select id="cnk">${seats.map(x => `<option value="${x.id}" ${x.id === c.seat ? 'selected' : ''}>${esc(x.kid)}</option>`).join('')}</select>
+          · Chiều: <b>cô ${d.from === 'zh' ? '中文' : 'EN'} → con ${d.to === 'zh' ? '中文' : 'EN'}</b> <button class="btn ghost sm" id="cnd">⇄ Đổi chiều</button></p>
+        <div class="prev"><img src="${set.img}" class="ans" alt="" style="width:150px;height:auto"><div>${set.lines.map((x, k) => `<div style="${k === j ? 'font-weight:800' : 'opacity:.6'}">${k + 1}. ${esc(x.en)} · <span class="zh" style="color:var(--red)">${esc(x.zh)}</span>${x.py ? ` <small>${esc(x.py)}</small>` : ''}</div>`).join('')}</div></div>
+        <div class="ctl"><button class="btn ghost" id="cnp">◀ Câu trước</button><button class="btn ghost" id="rp">🔁 Phát lại (màn chiếu)</button><button class="btn ghost" id="cnl">🔊 Nghe trên máy cô</button>
+          ${c.ans ? '' : `<button class="btn y" id="cna">👂 Hiện câu ${d.to === 'zh' ? 'tiếng Trung' : 'tiếng Anh'}</button>`}
+          <button class="btn" id="cnn">${!last ? 'Câu tiếp ▶' : t + 1 < seats.length ? 'Bạn tiếp ▶' : 'Tiếp: Huy hiệu ▶'}</button></div>
+        ${kid ? `<p>Chấm câu ${j + 1} của <b>${esc(kid.kid)}</b>: ${[[2, 'Tự nói'], [1, 'Nói cùng cô'], [0, 'Chưa']].map(([n, x]) => `<button class="mk${v === n ? ' on' + (n === 1 ? ' y' : n === 0 ? ' o' : '') : ''}" data-cn="${n}">${x}</button>`).join(' ')} <span class="small">(Tự nói / Nói cùng cô = +1 🎤)</span></p>` : ''}
+        <p class="tip">Mỗi bạn một tranh và 2–3 câu mẫu. Cô Hươu nói câu bằng ${d.from === 'zh' ? 'tiếng Trung' : 'tiếng Anh'} trên màn chiếu, bạn nói lại bằng ${d.to === 'zh' ? 'tiếng Trung' : 'tiếng Anh'}; cô bấm <b>Hiện câu</b> để cả lớp nghe câu đúng và nói theo. Lượt sau tự đổi chiều. Bạn chưa nói được thì cô nói cùng con, không sửa lỗi riêng.</p>`;
+    },
+    bind(st) {
+      const c = st.cn || {}, sets = cnSets(), t = c.t || 0, set = sets[t % sets.length], j = c.j || 0, seats = seatsIn();
+      const set_ = o => setState({ cn: Object.assign({}, c, o), rp: 0 });
+      $('#cnk').onchange = e => set_({ seat: e.target.value, j: 0, ans: false });
+      $('#cnd').onclick = () => set_({ from: cnDir(c).to, ans: false });
+      $('#cnp').onclick = () => j > 0 && set_({ j: j - 1, ans: false });
+      $('#rp').onclick = () => setState({ rp: (st.rp || 0) + 1 });
+      $('#cnl').onclick = () => { const L = set.lines[j], d = cnDir(c); SND.play([d.from === 'zh' ? L.za : L.ea, 1200, d.to === 'zh' ? L.za : L.ea]); };
+      $('#cna') && ($('#cna').onclick = () => set_({ ans: true }));
+      $('#cnn').onclick = () => {
+        if (j + 1 < set.lines.length) return set_({ j: j + 1, ans: false });
+        if (t + 1 >= seats.length) return goPhase('badge');
+        const i = seats.findIndex(x => x.id === c.seat), nx = seats[(i + 1) % seats.length];
+        set_({ t: t + 1, j: 0, ans: false, seat: nx ? nx.id : null, from: cnDir(c).to });
+      };
+      $$('[data-cn]').forEach(b => b.onclick = () => { if (!c.seat) return; const cur = ((((room.marks || {})[c.seat] || {}).cn) || {})[t + '_' + j]; mark(c.seat, 'cn/' + t + '_' + j, cur === +b.dataset.cn ? null : +b.dataset.cn); });
+    }
+  },
+  dtc: {
+    html: st => {
+      const i = st.i || 0, it = dtcItem(i), step = st.step || 'say', rv = step === 'rv', l = it.l, w = W[it.k] || {};
+      return `<h2>📖 Đọc theo cô · ${i + 1}/${DTC_N} · ${step === 'say' ? 'đọc theo' : 'chọn tranh'}</h2>
+        <div class="prev"><img src="${pic(it.k, 2)}" alt=""><div><div class="bigtxt">${esc(txt(it.k, 'en'))}</div><div class="bigtxt zh" style="color:var(--red)">${esc(txt(it.k, 'zh'))}</div>${w.py ? `<div class="small">${esc(w.py)}</div>` : ''}</div></div>
+        ${step === 'say' ? `<p>Cô Hươu đọc tiếng Anh rồi tiếng Trung, sau mỗi tiếng có khoảng lặng để <b>cả lớp đọc theo</b> (cô bật mic cho các con, hoặc mời từng bạn; bạn đọc tốt cô bấm 🎤).</p>
+          <div class="ctl"><button class="btn ghost" id="pv">◀ Trước</button><button class="btn ghost" id="rp">🔁 Đọc lại (màn chiếu)</button><button class="btn ghost" id="dlp">🔊 Nghe mẫu trên máy cô</button><button class="btn y" id="dgo">👉 Cho các con chọn tranh</button></div>`
+          : `<p>Cô Hươu đọc lại bằng <span class="flag ${l}">${l === 'zh' ? '中文' : 'English'}</span>, các con chạm 1 trong 3 tranh trên máy mình (bé 1 máy: giơ ngón tay, cô bấm hộ).</p>
+          <div class="prev">${it.o.map((k, c) => pv(pic(k, 3), k === it.k)).join('')}</div>
+          <div class="ctl"><button class="btn ghost" id="dsay">◀ Đọc theo lại</button><button class="btn ghost" id="rp">🔁 Phát lại (màn chiếu)</button><button class="btn ghost" id="dlp">🔊 Nghe trên máy cô</button>
+            ${rv ? '<button class="btn ghost" id="ag">↺ Hỏi lại</button>' : '<button class="btn y" id="rv">👁 Hiện đáp án</button>'}
+            <button class="btn" id="nx">${i + 1 < DTC_N ? 'Lượt tiếp ▶' : 'Tiếp: Đấu Rồng Lửa ▶'}</button></div>`}
+        <p class="tip">Mỗi lượt: đọc theo trước, rồi chọn tranh để kiểm tra con nghe hiểu. Câu chọn tranh luân phiên tiếng Anh / tiếng Trung.<br>Giọng cô Hươu tự phát trên <b>màn chiếu</b> (máy chia sẻ Zoom, đã bấm "Bắt đầu chiếu", không tắt tiếng). Nút <b>🔊 Nghe trên máy cô</b> để cô nghe ngay trên máy này.</p>`;
+    },
+    bind(st) {
+      const i = st.i || 0;
+      $('#rp').onclick = () => setState({ rp: (st.rp || 0) + 1 });
+      $('#pv') && ($('#pv').onclick = () => i > 0 && setState({ i: i - 1, step: 'ask', rp: 0 }));
+      $('#dgo') && ($('#dgo').onclick = () => setState({ step: 'ask', rp: 0 }));
+      $('#dlp').onclick = () => { const it = dtcItem(i); SND.play((st.step || 'say') === 'say' ? [aud(it.k, 'en'), 1500, aud(it.k, 'zh')] : [aud(it.k, it.l)]); };
+      $('#dsay') && ($('#dsay').onclick = () => setState({ step: 'say', rp: (st.rp || 0) + 1 }));
+      $('#rv') && ($('#rv').onclick = () => setState({ step: 'rv' }));
+      $('#ag') && ($('#ag').onclick = () => setState({ step: 'ask', run: (st.run || 0) + 1, rp: 0 }));
+      $('#nx') && ($('#nx').onclick = () => i + 1 < DTC_N ? setState({ i: i + 1, step: 'say', rp: 0 }) : goPhase('boss'));
+    },
+    qid: st => (st.step || 'say') === 'say' ? '' : `dtc_${st.i || 0}_${st.run || 0}`, opts: 3
   },
   pair: {
     html: st => {
@@ -396,7 +478,7 @@ const CTL = {
           <div class="ctl"><button class="btn ghost" id="xback">◀ Nghe lại truyện</button><button class="btn y" id="rv">👁 Hiện đáp án</button></div>`; }
       else body = `<div class="prev"><img class="scene-s" src="${S.scenes[sc].img}" alt=""><div><div class="small">Đáp án · cảnh ${sc + 1}/4 · đọc ${L(S.to)}, cả lớp nói theo</div><div class="bigtxt ${S.to}">${esc(S.scenes[sc][S.to])}</div></div></div>
         <div class="ctl"><button class="btn ghost" id="pv">◀</button><button class="btn ghost" id="rp">🔁 Đọc lại</button>
-          <button class="btn" id="nx">${sc < 3 ? 'Cảnh tiếp ▶' : r === 0 ? 'Sang lượt 2 (nghe tiếng Trung) ▶' : 'Tiếp: Huy hiệu ▶'}</button></div>`;
+          <button class="btn" id="nx">${sc < 3 ? 'Cảnh tiếp ▶' : r === 0 ? 'Sang lượt 2 (nghe tiếng Trung) ▶' : 'Tiếp: Cô nói, con nói ▶'}</button></div>`;
       return `<h2>🧩 Nghe truyện, xếp tranh · lượt ${r + 1}/2</h2><p><b>${esc(S.title)}</b>: cô phát <b>${L(S.from)}</b>, các con xếp tranh có lời <b>${L(S.to)}</b>.</p>${body}
         <div class="ctl"><button class="btn ghost sm" id="xr0">Lượt 1</button><button class="btn ghost sm" id="xr1">Lượt 2</button></div>`;
     },
@@ -408,7 +490,7 @@ const CTL = {
       $('#xgo') && ($('#xgo').onclick = () => set({ step: 'xep', sc: 0 }));
       $('#xback') && ($('#xback').onclick = () => set({ step: 'nghe', sc: 0 }));
       $('#rv') && ($('#rv').onclick = () => set({ step: 'rv', sc: 0 }));
-      $('#nx') && ($('#nx').onclick = () => sc < 3 ? set({ sc: sc + 1 }) : step === 'rv' ? (r === 0 ? set({ r: 1, step: 'nghe', sc: 0 }) : goPhase('badge')) : set({ sc: sc + 1 }));
+      $('#nx') && ($('#nx').onclick = () => sc < 3 ? set({ sc: sc + 1 }) : step === 'rv' ? (r === 0 ? set({ r: 1, step: 'nghe', sc: 0 }) : goPhase('cn')) : set({ sc: sc + 1 }));
       $('#xr0').onclick = () => set({ r: 0, step: 'nghe', sc: 0 }); $('#xr1').onclick = () => set({ r: 1, step: 'nghe', sc: 0 });
     },
     kid(s, st) {
@@ -475,10 +557,22 @@ const CTL = {
     kbind(st) { const k = (st.gift || {}).k || 0; $$('[data-pd]').forEach(b => b.onclick = () => { const [id, n] = b.dataset.pd.split('|'); const cur = ((((room.marks || {})[id] || {}).pd) || {})[k]; mark(id, 'pd/' + k, cur === +n ? null : +n); }); }
   },
   badge: {
-    html: () => `<h2>🏅 Huy hiệu Bứt phá</h2><p>Màn các bé đang hiện huy hiệu cả nhóm, ảnh hoặc avatar của 6 bạn, thanh năng lượng đầy.</p>
-      <p class="tip">Sau buổi: mở thẻ <b>Kết quả</b>, chấm 4H (thái độ, cảm xúc, tương tác với bạn) rồi bấm <b>Gửi về Sheet</b>.</p>
-      <div class="ctl"><button class="btn red" id="kq">Xem kết quả ▶</button><button class="btn ghost" id="bk">Về phòng chờ</button></div>`,
-    bind() { $('#kq').onclick = () => { TAB = 'kq'; draw(); }; $('#bk').onclick = () => setState({ ph: 'cho' }); }
+    html: st => {
+      const seats = seatsIn(), vi = st.vinh == null ? -1 : st.vinh, k = seats[vi];
+      return `<h2>🏅 Huy hiệu ${esc(LZ_CFG.huy || 'Bứt phá')} & Vinh danh</h2>
+      <p>${k ? `Đang vinh danh: <b>${esc(k.kid)}</b> (${vi + 1}/${seats.length}) · ⭐ ${seatStars(room, k).sao} · ${esc(starTitle(seatStars(room, k))[0])}` : 'Màn các bé đang hiện huy hiệu cả nhóm và số sao của từng bạn.'}</p>
+      <div class="ctl"><button class="btn y" id="vdn">🏆 ${vi < 0 ? 'Vinh danh từng bạn' : vi + 1 < seats.length ? 'Bạn tiếp' : 'Cả nhóm'} ▶</button>${vi >= 0 ? '<button class="btn ghost" id="vdp">◀ Bạn trước</button><button class="btn ghost" id="vdt">Cả nhóm</button>' : ''}</div>
+      <p class="tip">Mỗi bạn đều được vinh danh, theo thứ tự trong lớp (không xếp hạng): ảnh, danh hiệu theo việc con làm nhiều nhất, số sao. Sao = ✋ giơ tay + ✅ trả lời đúng + 🎤 phát biểu (+ ± sao cô chỉnh ở thẻ Kết quả).<br>
+        Sau buổi: mở thẻ <b>Kết quả</b>, chấm 4H rồi bấm <b>Gửi về Sheet & cộng sao</b>: sao được cộng vào ví sao của con trên web học để đổi quà.</p>
+      <div class="ctl"><button class="btn red" id="kq">Xem kết quả ▶</button><button class="btn ghost" id="bk">Về phòng chờ</button></div>`;
+    },
+    bind(st) {
+      const n = seatsIn().length, vi = st.vinh == null ? -1 : st.vinh;
+      $('#vdn').onclick = () => setState({ vinh: vi + 1 < n ? vi + 1 : -1 });
+      $('#vdp') && ($('#vdp').onclick = () => setState({ vinh: vi > 0 ? vi - 1 : -1 }));
+      $('#vdt') && ($('#vdt').onclick = () => setState({ vinh: -1 }));
+      $('#kq').onclick = () => { TAB = 'kq'; draw(); }; $('#bk').onclick = () => setState({ ph: 'cho' });
+    }
   }
 };
 /* l = 'en' | 'zh', có thể kèm '|dad' (Canopy: hỏi về nghề của ba thay vì của mẹ) */
@@ -534,6 +628,8 @@ function drawKids(st, c) {
         row += ' <span class="small">bấm hộ</span>' + Array.from({ length: c.opts }, (_, k) => `<button class="px${px && px.c === k + (c.opts === 4 ? 1 : 0) ? ' on' : ''}" data-px="${s.id}|${k + (c.opts === 4 ? 1 : 0)}">${k + 1}</button>`).join('');
       }
       if (c.kid) row += ' ' + c.kid(s, st);
+      const t = seatStars(room, s);
+      row = `<span class="scb"><button class="sc" data-sc="${s.id}|tay" title="Giơ tay: bấm +1, bấm chuột phải −1">✋ ${t.tay}</button><span class="sc ro" title="Trả lời đúng (tự đếm)">✅ ${t.dung}</span><button class="sc" data-sc="${s.id}|noi" title="Phát biểu: bấm +1, bấm chuột phải −1">🎤 ${t.noi}</button><b class="sc-star">⭐ ${t.sao}</b></span>` + (row ? '<br>' + row : '');
     }
     return `<div class="kid${s.on ? '' : ' off'}${s.ok ? '' : ' wait'}"><img src="${faceOf(s)}" alt="">
       <div class="nm"><span class="dot"></span>${esc(s.kid)} ${srcTag(s)}
@@ -542,6 +638,10 @@ function drawKids(st, c) {
       ${row ? `<div class="row">${row}</div>` : ''}</div>`;
   }).join('') || '<p class="small">Chưa có bé nào. Thêm bé ở thẻ Thêm bé, hoặc chờ ba mẹ nhập mã phòng.</p>';
   kidActions();
+  $$('[data-sc]').forEach(b => {
+    const f = d => { const [id, k] = b.dataset.sc.split('|'), cur = +((((room.marks || {})[id] || {}).sc || {})[k] || 0); if (cur + d < 0) return; mark(id, 'sc/' + k, cur + d || null); b.classList.remove('bump'); void b.offsetWidth; b.classList.add('bump'); };
+    b.onclick = () => f(1); b.oncontextmenu = e => { e.preventDefault(); f(-1); };
+  });
   $$('[data-px]').forEach(b => b.onclick = () => {
     const [id, k] = b.dataset.px.split('|'), cur = ((((room.marks || {})[id] || {}).px) || {})[qid];
     const ok = proxyOk(st, +k);
@@ -552,6 +652,7 @@ function drawKids(st, c) {
 function proxyOk(st, k) {
   if (st.ph === 'on') return k === quizAns(QUIZ[st.i || 0]);
   if (st.ph === 'tone') return k === TONES[st.i || 0].t;
+  if (st.ph === 'dtc') { const it = dtcItem(st.i || 0); return k === it.o.indexOf(it.k); }
   if (st.ph === 'pair') { const it = PAIR_POOL[(st.pair || {}).k || 0]; return k === it.o.indexOf(it.k); }
   if (st.ph === 'lop') { const it = PAIR_POOL[(st.lop || {}).k || 0]; return k === it.o.indexOf(it.k); }
   return false;
@@ -675,6 +776,8 @@ function results() {
     QUIZ.forEach((q, i) => { const a = latest(s, 'on_' + i, qids), L = quizLang(q); c[L][1]++; if (a && a.ok) c[L][0]++; if (a && a.ms && !a.ho) times.push(a.ms); det.on.push(a ? (a.ok ? 1 : 0) : null); });
     let tOk = 0, tTay = 0; const g = { 2: 0, 1: 0, 0: 0 };
     TONES.forEach((x, i) => { const a = latest(s, 'tone_' + i, qids); if (a && a.ok) tOk++; if (a && a.tay) tTay++; if (a && a.ms && !a.ho && !a.tay) times.push(a.ms); det.tone.push(a ? (a.ok ? 1 : 0) : null); const v = (m.tone || {})[i]; if (v !== undefined && v !== null) g[v]++; });
+    const cnv = Object.values(m.cn || {}).filter(v => v != null), cnTxt = cnv.length ? `tự nói ${cnv.filter(v => v === 2).length} · cùng cô ${cnv.filter(v => v === 1).length} · chưa ${cnv.filter(v => v === 0).length}` : '';
+    let dOk = 0, dN = 0; for (let i = 0; i < DTC_N; i++) { const a = latest(s, 'dtc_' + i, qids); if (a) { dN++; if (a.ok) dOk++; } }
     let say = [0, 0], hear = [0, 0];
     Object.entries(plog).forEach(([key, t]) => {
       if (!t) return;
@@ -699,32 +802,33 @@ function results() {
       tg: times.length ? (times.reduce((x, y) => x + y, 0) / times.length / 1000).toFixed(1) : '',
       toneChon: `${tOk}/${TONES.length}` + (tTay ? ` (bay tay ${tTay})` : ''), toneCham: (g[2] + g[1] + g[0]) ? `chuẩn ${g[2]} · gần ${g[1]} · cần luyện ${g[0]}` : '',
       doiNoi: say[1] ? `${say[0]}/${say[1]}` : '', doiNghe: hear[1] ? `${hear[0]}/${hear[1]}` : '',
-      boss: bA ? `${bOk}/${bA}` : '',
+      boss: bA ? `${bOk}/${bA}` : '', dtc: dN ? `${dOk}/${dN}` : '', cn: cnTxt,
       xep0: xepRes(s, 0, qids), xep1: xepRes(s, 1, qids),
       lopNoi: lSay[1] ? `${lSay[0]}/${lSay[1]} bạn hiểu` : '', lopNghe: lHear[1] ? `${lHear[0]}/${lHear[1]}` : '',
       chaoEN: lv(intro.en), chaoZH: lv(intro.zh), pd: pd.length ? pd.map(v => ['chưa', 'cùng cô', 'được'][v]).join(', ') : '',
       h1: h.td ?? '', h2: h.cx ?? '', h3: h.tt ?? '', note: m.note || '', detail: JSON.stringify(det)
-    });
+    }, (t => ({ tay: t.tay, dung: t.dung, noi: t.noi, adj: t.adj, sao: t.sao, tieu: starTitle(t)[0] }))(seatStars(room, s)));
     return r;
   });
 }
 const COLS = [['kid', 'Tên con'], ['parent', 'Ba/mẹ'], ['src', 'Vào lớp'], ['onEN', 'Ôn nhanh EN'], ['onZH', 'Ôn nhanh ZH'], ['doc', 'Nhìn chữ'], ['tg', 'TB phản hồi (giây)'],
   ['toneChon', 'Thanh điệu chọn đúng'], ['toneCham', 'Cô chấm thanh điệu'], ['doiNoi', 'Đôi bạn: bạn hiểu con nói'], ['doiNghe', 'Đôi bạn: con nghe đúng'], ['lopNoi', 'Cô giáo nhỏ: cả lớp hiểu con nói'], ['lopNghe', 'Cô giáo nhỏ: con nghe bạn đúng'], ['boss', 'Đấu Rồng Lửa: đúng/câu'], ['xep0', 'Xếp tranh (nghe EN, xếp ZH)'], ['xep1', 'Xếp tranh (nghe ZH, xếp EN)'],
-  ['chaoEN', 'Chào bạn EN'], ['chaoZH', 'Chào bạn ZH']];
+  ['chaoEN', 'Chào bạn EN'], ['chaoZH', 'Chào bạn ZH'], ['dtc', 'Đọc theo cô: chọn tranh đúng'], ['cn', 'Cô nói, con nói tiếng kia']];
 function drawResults() {
   const rows = results();
   const sel = (id, k, v) => `<div class="h4">${[2, 1, 0].map(n => { const L = H4[k].lv[n]; return `<button class="h4b l${n}${String(v) === String(n) ? ' on' : ''}" data-h="${id}|${k}|${n}" title="${esc(L[1])}">${n} · ${esc(L[0])}</button>`; }).join('')}</div>`;
   $('#body').innerHTML = `<div style="padding:12px 14px 40px"><div class="panel">
     <h3>Kết quả phòng ${CODE} · ${esc((room.state || {}).ngay || today())}</h3>
     <p class="small">Mỗi bé một dòng, tách EN và ZH. Chưa trả lời không tính là sai. 4H điều chỉnh: thái độ, cảm xúc, tương tác với bạn (0–2).</p>
-    <div class="ctl"><button class="btn" id="send">📤 Gửi về Sheet</button><button class="btn ghost" id="csv">⬇ Tải CSV</button><button class="btn ghost" id="ph">🗑 Xóa ảnh các con khỏi phòng</button></div>
+    <div class="ctl"><button class="btn" id="send">📤 Gửi về Sheet & cộng sao vào web học</button><button class="btn ghost" id="csv">⬇ Tải CSV</button><button class="btn ghost" id="ph">🗑 Xóa ảnh các con khỏi phòng</button></div>
     <div id="sendMsg"></div>
     <details class="h4-guide" open><summary>Mốc chấm 4H (bấm một mốc, bấm lại để bỏ)</summary><div class="two" style="grid-template-columns:repeat(3,1fr)">${Object.values(H4).map(h => `<div><b>${h.n}</b>${[2, 1, 0].map(n => `<div class="small"><b>${n} · ${esc(h.lv[n][0])}</b>: ${esc(h.lv[n][1])}</div>`).join('')}</div>`).join('')}</div></details>
-    <div class="scroll-x"><table class="res"><tr>${COLS.map(c => `<th>${c[1]}</th>`).join('')}<th>Thái độ</th><th>Cảm xúc</th><th>Tương tác</th><th>Ghi chú của cô</th></tr>
-    ${rows.map(r => `<tr>${COLS.map(c => `<td>${esc(r[c[0]])}</td>`).join('')}<td>${sel(r.id, 'td', r.h1)}</td><td>${sel(r.id, 'cx', r.h2)}</td><td>${sel(r.id, 'tt', r.h3)}</td>
-      <td><textarea data-note="${r.id}">${esc(r.note)}</textarea></td></tr>`).join('') || `<tr><td colspan="${COLS.length + 4}">Chưa có bé nào.</td></tr>`}</table></div></div></div>`;
+    <div class="scroll-x"><table class="res"><tr>${COLS.map(c => `<th>${c[1]}</th>`).join('')}<th>✋ Giơ tay</th><th>✅ Đúng</th><th>🎤 Phát biểu</th><th>± sao</th><th>⭐ Sao</th><th>Thái độ</th><th>Cảm xúc</th><th>Tương tác</th><th>Ghi chú của cô</th></tr>
+    ${rows.map(r => `<tr>${COLS.map(c => `<td>${esc(r[c[0]])}</td>`).join('')}<td>${r.tay}</td><td>${r.dung}</td><td>${r.noi}</td><td><input type="number" class="adj" data-adj="${r.id}" value="${r.adj}" step="1" style="width:62px"></td><td><b>⭐ ${r.sao}</b><br><small>${esc(r.tieu)}</small></td><td>${sel(r.id, 'td', r.h1)}</td><td>${sel(r.id, 'cx', r.h2)}</td><td>${sel(r.id, 'tt', r.h3)}</td>
+      <td><textarea data-note="${r.id}">${esc(r.note)}</textarea></td></tr>`).join('') || `<tr><td colspan="${COLS.length + 9}">Chưa có bé nào.</td></tr>`}</table></div></div></div>`;
   $$('[data-h]').forEach(x => x.onclick = () => { const [id, k, n] = x.dataset.h.split('|'), cur = ((((room.marks || {})[id] || {}).h) || {})[k]; mark(id, 'h/' + k, cur === +n ? null : +n); });
   $$('[data-note]').forEach(x => x.onchange = () => mark(x.dataset.note, 'note', x.value.trim() || null));
+  $$('[data-adj]').forEach(x => x.onchange = () => mark(x.dataset.adj, 'adj', Math.round(+x.value || 0) || null));
   $('#csv').onclick = () => downloadCSV(results());
   $('#send').onclick = sendSheet;
   $('#ph').onclick = () => {
@@ -741,9 +845,9 @@ const H4 = {
 };
 function h4Txt(k, v) { return v === '' || v === undefined || v === null ? '' : `${v} – ${H4[k].lv[v][0]}`; }
 function csvRows(rows) {
-  const head = ['Mã phòng', 'Ngày', 'Mã chỗ ngồi', 'Mã bé web 21 ngày'].concat(COLS.map(c => c[1]), ['Thái độ', 'Cảm xúc', 'Tương tác', 'Ghi chú', 'Chi tiết']);
+  const head = ['Mã phòng', 'Ngày', 'Mã chỗ ngồi', 'Mã bé web 21 ngày'].concat(COLS.map(c => c[1]), ['Thái độ', 'Cảm xúc', 'Tương tác', 'Ghi chú', 'Chi tiết', 'Giơ tay', 'Trả lời đúng', 'Phát biểu', '± sao', 'Sao', 'Danh hiệu']);
   const date = (room.state || {}).ngay || today();
-  return [head].concat(rows.map(r => [CODE, date, r.id, r.web].concat(COLS.map(c => r[c[0]]), [h4Txt('td', r.h1), h4Txt('cx', r.h2), h4Txt('tt', r.h3), r.note, r.detail])));
+  return [head].concat(rows.map(r => [CODE, date, r.id, r.web].concat(COLS.map(c => r[c[0]]), [h4Txt('td', r.h1), h4Txt('cx', r.h2), h4Txt('tt', r.h3), r.note, r.detail, r.tay, r.dung, r.noi, r.adj, r.sao, r.tieu])));
 }
 function downloadCSV(rows) {
   const csv = '﻿' + csvRows(rows).map(r => r.map(v => '"' + String(v == null ? '' : v).replace(/"/g, '""') + '"').join(',')).join('\r\n');
@@ -752,10 +856,22 @@ function downloadCSV(rows) {
 }
 async function sendSheet() {
   const m = $('#sendMsg'); m.innerHTML = '<p class="msg">Đang gửi…</p>';
+  const ngay = (room.state || {}).ngay || today(), rows = results();
+  let msg = '';
   try {
-    const j = await apiPost({ action: 'zoom', room: CODE, ngay: (room.state || {}).ngay || today(), lop: LZ_CFG.ten, rows: csvRows(results()) });
-    m.innerHTML = j && j.ok ? `<p class="msg">Đã ghi ${j.n} dòng vào tab "Lớp Zoom" của Sheet.</p>` : '<p class="msg err">Máy chủ chưa nhận. Có thể máy chủ Apps Script chưa lên bản mới (v15). Cô bấm Tải CSV để giữ kết quả.</p>';
-  } catch (e) { m.innerHTML = '<p class="msg err">Chưa gửi được (mạng hoặc máy chủ chưa cập nhật). Cô bấm Tải CSV để giữ kết quả.</p>'; }
+    const j = await apiPost({ action: 'zoom', room: CODE, ngay, lop: LZ_CFG.ten, rows: csvRows(rows) });
+    msg = j && j.ok ? `<p class="msg">Đã ghi ${j.n} dòng vào tab "Lớp Zoom" của Sheet.</p>` : '<p class="msg err">Máy chủ chưa nhận báo cáo. Cô bấm Tải CSV để giữ kết quả.</p>';
+  } catch (e) { m.innerHTML = '<p class="msg err">Chưa gửi được (mạng hoặc máy chủ chưa cập nhật). Cô bấm Tải CSV để giữ kết quả.</p>'; return; }
+  /* cộng sao vào ví sao web học (tab "Sao Zoom"; gửi lại cùng phòng + ngày thì ghi đè, không cộng trùng) */
+  try {
+    const pg = await (await fetch(LZ_API + '?action=ping&t=' + Date.now())).json();
+    if (!pg || !(pg.v >= 16)) { m.innerHTML = msg + `<p class="msg err">Chưa cộng sao: máy chủ đang ở bản v${pg && pg.v}. Cần triển khai <b>apps-script/Code.gs</b> bản v16.</p>`; return; }
+    const j2 = await apiPost({ action: 'zoommm', chiSao: true, buoi: 'phong' + CODE + '-' + ngay, ngay, lop: LZ_CFG.ten, khoa: LZ_CFG.khoa, vong: LZ_CFG.vong,
+      rows: rows.map(r => ({ ma: r.id, kid: r.kid, parent: r.parent, web: r.web, tay: r.tay, dung: r.dung, rong: 0, noi: r.noi, sao: r.sao, note: r.note })) });
+    if (!j2 || !j2.ok) throw new Error('không nhận');
+    const need = (j2.rows || []).filter(x => !x.web).map(x => (rows.find(r => r.id === x.ma) || {}).kid).filter(Boolean);
+    m.innerHTML = msg + `<p class="msg">⭐ Đã ghi sao của ${j2.n} bé vào tab "Sao Zoom". ${need.length ? `<b>Chưa ghép được với tài khoản web học: ${need.map(esc).join(', ')}</b> (bé không vào bằng máy đã đăng nhập web 21 ngày, hoặc tên khác trên web). Sale dán mã bé vào cột "Mã bé web" của tab "Sao Zoom" là web tự cộng sao.` : 'Các bé đã ghép với tài khoản web học: lần tới con mở web là thấy sao trong ví đổi quà.'}</p>`;
+  } catch (e) { m.innerHTML = msg + '<p class="msg err">Chưa cộng sao được (mạng hoặc máy chủ). Cô bấm lại sau; gửi lại không bị cộng trùng.</p>'; }
 }
 
 /* ======================= khởi động ======================= */

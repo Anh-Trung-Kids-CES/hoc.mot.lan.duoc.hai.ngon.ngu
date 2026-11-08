@@ -1,4 +1,4 @@
-# Lớp Zoom cùng cô – Little Seed và Canopy · Vòng 2
+# Lớp Zoom cùng cô – Little Seed và Canopy · Vòng 2, Little Seed · Vòng 3
 
 Web riêng cho buổi Zoom cuối tuần, kiểu Wayground: cô điều khiển tốc độ, các bé chạm trên máy thứ hai.
 Đợt 1: **Little Seed Vòng 2 "Giới thiệu bản thân"** (Zoom ngày 14, Chủ nhật 8/11/2026, 40 phút, nhóm 6 bé).
@@ -35,8 +35,9 @@ Web riêng cho buổi Zoom cuối tuần, kiểu Wayground: cô điều khiển 
 | 19–24 | Đôi bạn | Bé A thấy tranh và nói, bé B nghe rồi chạm 1 trong 3 tranh, đổi vai, đổi tiếng; bạn khác đoán cho vui | tự động |
 | 24–28 | Cô giáo nhỏ (cả lớp) | Mỗi bạn một lượt nói cho cả lớp; cả lớp chạm tranh rồi cùng nói bằng tiếng kia | tự động |
 | 28–31 | Cả lớp đấu Rồng Lửa (tự chơi) | Mỗi bạn tự trả lời câu ngẫu nhiên trên máy mình (từ, cụm, chữ; EN/ZH), mỗi câu đúng +1 ⚡ cho anh hùng Bông. Giữa trận rồng nổi giận kéo thanh về phía rồng, cả lớp tiếp sức kéo lại, hết giờ cả lớp thắng. Cô tắt tiếng tất cả trên Zoom/Meet, không cần nói | tự động |
-| 31–36 | Nghe truyện, xếp tranh | Truyện "Sinh nhật của Bông" chia đôi, đủ 8 câu Vòng 2. Lượt 1: cô phát phần 1 bằng tiếng Anh (đếm nến, Anna đến chào, làm quen, I'm five.), mỗi bạn chạm lần lượt 4 tranh có lời tiếng Trung (chạm 🔊 để nghe). Lượt 2: cô phát phần 2 bằng tiếng Trung (你叫什么？ 我叫Bông。 你几岁？ 我六岁！), các con xếp tranh có lời tiếng Anh. Hiện đáp án: màn chiếu xếp đúng thứ tự, đọc từng cảnh bằng tiếng kia, cả lớp nói theo | tự động: đúng cả 4 / số vị trí đúng; bé 1 máy cô bấm Đúng/Chưa |
-| 36–40 | Huy hiệu Bứt phá | Huy hiệu cả nhóm, ảnh hoặc avatar các bạn | – |
+| 31–35 | Nghe truyện, xếp tranh | Truyện "Sinh nhật của Bông" chia đôi, đủ 8 câu Vòng 2. Lượt 1: cô phát phần 1 bằng tiếng Anh (đếm nến, Anna đến chào, làm quen, I'm five.), mỗi bạn chạm lần lượt 4 tranh có lời tiếng Trung (chạm 🔊 để nghe). Lượt 2: cô phát phần 2 bằng tiếng Trung (你叫什么？ 我叫Bông。 你几岁？ 我六岁！), các con xếp tranh có lời tiếng Anh. Hiện đáp án: màn chiếu xếp đúng thứ tự, đọc từng cảnh bằng tiếng kia, cả lớp nói theo | tự động: đúng cả 4 / số vị trí đúng; bé 1 máy cô bấm Đúng/Chưa |
+| 35–38 | Cô nói, con nói tiếng kia | Mỗi bạn một lượt: một tranh và 2–3 câu mẫu của tuần. Cô Hươu nói từng câu bằng một tiếng, con nói lại bằng tiếng kia; cô bấm Hiện câu để cả lớp nghe câu đúng | cô chấm Tự nói / Nói cùng cô / Chưa (+1 🎤) |
+| 38–40 | Huy hiệu Bứt phá | Huy hiệu cả nhóm, ảnh hoặc avatar các bạn | – |
 
 **🙆 Chơi bằng đầu** (nút trên thanh đỏ màn bé, ba mẹ bật và đồng ý dùng camera): con quay đầu sang trái ⬅️ / ngửa đầu lên ⬆️ / quay sang phải ➡️ để chọn tranh trái / giữa / phải, giữ khoảng 0,6 giây cho vòng sáng đầy là chọn. Lần đầu con tập 3 động tác (web tự biết hướng trái/phải của camera máy đó). Mặc định chỉ bật ở **Cô giáo nhỏ** (vận động nhẹ) và **Đấu Rồng Lửa** (vận động mạnh, ngắn); Ôn nhanh, Đôi bạn, Xếp tranh là chạm (tĩnh, tập trung nghe); Thanh điệu có "đưa tay bay theo". Cô bật/tắt từng phần bằng ô "🙆 Phần này các con chọn bằng cách quay đầu" trên màn cô. Phần đang chơi bằng đầu có nhãn vàng "🙆 quay đầu để chọn" trên màn bé; phần chạm thì máy tạm dừng nhận diện cho đỡ tốn pin. Hình camera chỉ xử lý trên máy, không ghi, không gửi. Bộ nhận diện MediaPipe (Apache-2.0) để sẵn trong `vendor/mediapipe/`; tệp mô hình khuôn mặt (~4 MB) tải từ Google ở lần đầu (có thể chép `face_landmarker.task` vào `vendor/mediapipe/` để không phụ thuộc mạng ngoài). Thử không cần camera: thêm `?headsim=1` (phím ← ↑ →).
 
@@ -87,3 +88,33 @@ Cùng một web, cùng 9 phần và mạch 40 phút như Little Seed, cùng lu�
 
 ## Đợt 2 (cho Zoom ngày 21)
 Thẻ báo cáo tự động, câu gợi ý cho sale, huy hiệu cộng sao, tab "Ghép hồ sơ Zoom" trên trang quản trị.
+
+## Sao thành tích, vinh danh, cộng sao vào web học (08/11/2026)
+- Cột **Các bé** trên màn cô: mỗi bé có ✋ giơ tay và 🎤 phát biểu (cô bấm +1, bấm chuột phải −1), ✅ trả lời đúng (tự đếm mọi câu con chọn đúng trên máy con hoặc cô bấm hộ, kể cả trận Rồng; câu đoán cho vui khi không đến lượt không tính) và ⭐ tổng. Phát biểu tự cộng thêm khi cô chấm Chào bạn mới (EN/ZH) và Phiên dịch nhí.
+- Phần **Huy hiệu Bứt phá**: nút 🏆 Vinh danh từng bạn (theo thứ tự trong lớp, không xếp hạng) hiện trên màn chiếu và máy các con: ảnh, danh hiệu theo việc con làm nhiều nhất, số sao; màn cả nhóm hiện sao của từng bạn.
+- Thẻ **Kết quả**: thêm cột ✋, ✅, 🎤, ± sao (cô chỉnh), ⭐ Sao, danh hiệu. Nút **📤 Gửi về Sheet & cộng sao vào web học**: ghi báo cáo vào tab "Lớp Zoom", rồi ghi sao vào tab "Sao Zoom" (gửi lại cùng phòng + ngày thì ghi đè, không cộng trùng). Bé vào bằng máy đã đăng nhập web 21 ngày thì tự ghép mã bé; bé khác máy chủ ghép theo tên con, trùng tên thì sale dán mã bé. Web học cộng sao này vào ví Phòng đổi quà.
+- Cần máy chủ Apps Script **v16** (`apps-script/Code.gs`).
+
+
+## Đọc theo cô (08/11/2026)
+Phút 19–28: gộp Trò chơi đôi bạn và Cô giáo nhỏ thành một phần **Đọc theo cô**, 6 lượt. Mỗi lượt: (1) cô Hươu đọc tiếng Anh rồi tiếng Trung, có khoảng lặng để cả lớp đọc theo; (2) cô bấm "Cho các con chọn tranh": cô Hươu đọc lại bằng một tiếng (luân phiên EN / ZH), các con chạm 1 trong 3 tranh trên máy mình (bé 1 máy: cô bấm hộ), rồi Hiện đáp án. Báo cáo thêm cột "Đọc theo cô: chọn tranh đúng". Mã Đôi bạn / Cô giáo nhỏ vẫn giữ cho phòng mở từ trước.
+
+## Cô nói, con nói tiếng kia (08/11/2026)
+Phút 35–38, trước Huy hiệu. Mỗi bạn một lượt (theo thứ tự trong lớp, cô đổi bạn được ở ô "Bạn nói"), mỗi lượt một tranh và 2–3 câu mẫu:
+- Little Seed: Hello! My name is Anna. / I'm five. · What's your name? / My name is Bông. / I'm six! · How old are you? / I'm five. · One…six! / I'm six! … (không dùng "Nice to meet you!" để con nói, câu này chỉ nghe).
+- Canopy: My name is Anna. / My dad is a doctor. / He works at a hospital. · My mom is a teacher. / She works at a school. · What does your dad do? / My dad is a chef… · What does your mom do? / She is an employee… · My older sister is a chef. / I love my family! · On Saturday evening… / I love my family!
+Lượt 1 cô nói tiếng Anh → con nói tiếng Trung, lượt sau tự đổi chiều (nút ⇄ Đổi chiều). Màn chiếu: tranh, câu đang nói sáng lên, câu tiếng kia ẩn đến khi cô bấm 👂 Hiện câu (phát tiếng câu đúng). Máy của bạn đến lượt hiện "Đến lượt con!". Cô chấm từng câu: Tự nói / Nói cùng cô (+1 🎤 phát biểu) / Chưa. Báo cáo thêm cột "Cô nói, con nói tiếng kia".
+
+
+## Little Seed · Vòng 3 "Gia đình – Album ảnh nhà Bông" (thêm 08/11/2026, cho Zoom ngày 21)
+Giữ nguyên bản cuối của Little Seed Vòng 2 (11 phần: Hát chào → Chào bạn mới → Nói theo cô → Ôn nhanh → Máy bay thanh điệu → Đọc theo cô → Đấu Rồng Lửa → Nghe truyện, xếp tranh → Cô nói, con nói tiếng kia → Huy hiệu), cùng luật, cùng cách chấm và gửi kết quả. Chỉ thay nội dung.
+
+- **Mở phòng**: `co.html` → **Mở phòng mới · Little Seed · Vòng 3** (`state.lop = 'seed-v3'`). Link chung cho bé không đổi; chuẩn bị vào lớp: `…/lop-zoom/?chuan-bi&lop=seed-v3`.
+- **Nội dung** (`lz-seed-v3.js`, sinh từ `tao-tai-nguyen/tao_seed_v3.js`; chỉ tranh và giọng có sẵn của ngày 15–20, không tạo thêm bằng Gemini): 8 từ (grandpa 爷爷, grandma 奶奶, big brother 哥哥, little sister 妹妹, big sister 姐姐, little brother 弟弟, he 他, she 她), 6 cụm "my …", 8 câu truyện "Album ảnh nhà Bông", chữ 他 她.
+- **他 / 她 cùng âm tā**: không có câu nghe tiếng Trung nào bắt con phân biệt he / she (máy sinh tự kiểm tra). Phân biệt bằng tiếng Anh hoặc nhìn chữ.
+- **Chào bạn mới**: hai nút *Hỏi "he"* / *Hỏi "she"*: con mời một người trong nhà ra camera (hoặc giơ ảnh), cả lớp hỏi Who is he? / Who is she? (他是谁？/ 她是谁？), con trả lời He is my … / 她是我….
+- **Máy bay thanh điệu**: 哥哥 爷爷 奶奶 妹妹 姐姐 弟弟 他 她. Từ lặp hiện chữ thứ hai mờ (đọc nhẹ), con chọn thanh của tiếng đầu.
+- **Đọc theo cô**: ông, chị gái, em trai, bà, anh trai, em gái. **Rồng Lửa**: 40 câu (từ, cụm, câu EN/ZH; he/she chỉ EN và nhìn chữ). **Xếp tranh**: lượt 1 nghe EN cảnh 1–4 (ông, bà) xếp tranh lời ZH; lượt 2 nghe ZH cảnh 5–8 (anh chị em) xếp tranh lời EN. **Cô nói, con nói**: 6 cặp hỏi đáp theo tranh truyện.
+- **Huy hiệu Chinh phục** (tên huy hiệu theo khoá: `huy` trong `LZ_LOPS`). Vòng 3 không có file giọng "huy hiệu Chinh phục": cuối buổi cô Hươu nói "Giỏi quá!" rồi "Tuyệt vời! Con đã học xong hôm nay rồi!" (không tốn thêm Gemini).
+- Sửa nội dung: sửa `tao-tai-nguyen/tao_seed_v3.js` rồi chạy `node lop-zoom/tao-tai-nguyen/tao_seed_v3.js`, không sửa tay `lz-seed-v3.js`.
+- Đã chạy thử trọn buổi (`?mock=1`, cô + màn chiếu + 3 bé, bé vào bằng link chung tự chuyển sang Vòng 3): đủ 11 phần, không lỗi, không thiếu tranh/giọng; Vòng 2 và Canopy chạy lại không ảnh hưởng.

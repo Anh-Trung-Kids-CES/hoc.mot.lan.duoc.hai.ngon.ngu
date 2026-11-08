@@ -387,6 +387,8 @@ function lopZoom_(d) {
   if (rows.length < 2) return { ok: false, n: 0 };
   const head = rows[0].concat(['Cập nhật']);
   const sh = sheet_('Lớp Zoom', head);
+  const cur = sh.getRange(1, 1, 1, Math.max(head.length, sh.getLastColumn())).getValues()[0];
+  if (cur.slice(0, head.length).join('|') !== head.join('|')) sh.getRange(1, 1, 1, head.length).setValues([head]);   // thêm cột mới (sao…) vào tiêu đề
   if (sh.getLastColumn() < head.length || String(sh.getRange(1, 1).getValue()) !== String(head[0])) sh.getRange(1, 1, 1, head.length).setValues([head]);   // web thêm cột thì cập nhật dòng tiêu đề
   const n = sh.getLastRow(), keys = {};
   if (n > 1) sh.getRange(2, 1, n - 1, 3).getValues().forEach((r, i) => { keys[[r[0], fmtDate_(r[1]), r[2]].join('|')] = i + 2; });
@@ -437,20 +439,21 @@ const SAO_HEAD = ['Buổi', 'Ngày', 'Khoá', 'Mã trong buổi', 'Tên con', 'B
 function zoomMotMan_(d) {
   const rows = d.rows || [];
   if (!d.buoi || !rows.length) return { ok: false, n: 0 };
-  const rep = sheet_('Lớp Zoom 1 màn', ZMM_HEAD), sao = sheet_('Sao Zoom', SAO_HEAD);
+  /* chiSao: bản 2 máy (lop-zoom/) đã ghi báo cáo vào tab "Lớp Zoom", ở đây chỉ ghi sao */
+  const rep = d.chiSao ? null : sheet_('Lớp Zoom 1 màn', ZMM_HEAD), sao = sheet_('Sao Zoom', SAO_HEAD);
   const keyOf = (sh) => { const n = sh.getLastRow(), k = {}; if (n > 1) sh.getRange(2, 1, n - 1, 4).getValues().forEach((r, i) => { k[r[0] + '|' + r[3]] = i + 2; }); return k; };
   /* báo cáo đầy đủ: trang gửi kèm tên cột (cols) và các ô của từng bé (cells), giống bảng Báo cáo trên màn cô */
-  if (d.cols && d.cols.length) {
+  if (rep && d.cols && d.cols.length) {
     const head = ['Buổi', 'Ngày', 'Khoá', 'Mã trong buổi'].concat(d.cols, ['Cập nhật']);
     const cur = rep.getRange(1, 1, 1, Math.max(head.length, rep.getLastColumn())).getValues()[0];
     if (cur.slice(0, head.length).join('|') !== head.join('|')) rep.getRange(1, 1, 1, head.length).setValues([head]);
   }
-  const kr = keyOf(rep), ks = keyOf(sao), kids = tienDoTen_(d.khoa), out = [];
+  const kr = rep ? keyOf(rep) : {}, ks = keyOf(sao), kids = tienDoTen_(d.khoa), out = [];
   rows.forEach(r => {
     const k = d.buoi + '|' + r.ma, now = new Date();
     const a = r.cells ? [d.buoi, d.ngay || '', d.lop || d.khoa || '', r.ma].concat(r.cells.map(v => v == null ? '' : v), [now])
       : [d.buoi, d.ngay || '', d.lop || d.khoa || '', r.ma, r.kid || '', r.parent || '', +r.tay || 0, +r.dung || 0, +r.rong || 0, +r.noi || 0, +r.sao || 0, r.note || '', now];
-    if (kr[k]) rep.getRange(kr[k], 1, 1, a.length).setValues([a]); else rep.appendRow(a);
+    if (rep) { if (kr[k]) rep.getRange(kr[k], 1, 1, a.length).setValues([a]); else rep.appendRow(a); }
     let web = String(r.web || ''), ghep = web ? 'có sẵn' : '', goi = '';
     if (ks[k]) { const old = sao.getRange(ks[k], 7, 1, 3).getValues()[0]; if (!web && old[0]) { web = String(old[0]); ghep = String(old[2] || 'sale ghép'); } }
     if (!web) {

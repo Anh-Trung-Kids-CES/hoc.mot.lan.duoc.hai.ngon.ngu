@@ -81,3 +81,11 @@ table.res textarea{width:180px;min-height:44px;font-size:13px}
 .h4-guide{margin:8px 0 12px;background:var(--yellow-soft);border-radius:12px;padding:8px 12px}
 .h4-guide summary{font-weight:700;cursor:pointer}
 .h4-guide .small{margin:3px 0}
+/* sao thành tích ở cột Các bé */
+.scb{display:inline-flex;gap:5px;align-items:center;flex-wrap:wrap}
+.sc{border:2px solid var(--line);background:#fffdf7;border-radius:10px;padding:2px 9px;font-weight:800;font-size:14px}
+button.sc:active{transform:scale(.94)}
+.sc.ro{background:#F1FAF4;border-color:#CDEBD8}
+.sc.bump{animation:scbump .5s cubic-bezier(.2,1.6,.4,1)}
+@keyframes scbump{40%{transform:scale(1.25);background:var(--yellow-soft)}}
+.sc-star{color:var(--red-dark);font-size:15px;margin-left:2px}
