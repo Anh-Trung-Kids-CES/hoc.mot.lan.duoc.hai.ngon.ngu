@@ -207,6 +207,7 @@ function viewWait() { return `<img class="huou" src="${HUOU}" alt=""><h1>Cô đa
 
 function view(st, seats) {
   switch (st.ph) {
+    case 'hat': return vHat(st);
     case 'intro': return vIntro(st, seats);
     case 'noi': return vNoi(st, seats);
     case 'on': return vQuiz(st, seats);
@@ -525,6 +526,20 @@ function vGift(st, seats) {
 /* --- Cả lớp đấu Rồng Lửa: xem lz-boss.js --- */
 
 /* --- Huy hiệu Bứt phá cả nhóm --- */
+/* --- Hát chào mở đầu: màn chiếu phát video YouTube khi cô bấm Phát; máy các con hiện lời để hát và làm động tác theo --- */
+function vHat(st) {
+  const sg = st.song || {}, playing = !!sg.on;
+  if (CHIEU) return {
+    key: 'hat|' + (playing ? sg.n : 0) + '|' + (muted ? 1 : 0),
+    html: playing ? `<div class="song-box"><iframe src="${songSrc(true, muted)}" allow="autoplay; encrypted-media; fullscreen" allowfullscreen title="${esc(SONG.ten)}"></iframe></div><p class="small">Video: ${esc(SONG.nguon)} (YouTube)</p>`
+      : `<div class="qno">🎵 Hát chào</div><h1>${esc(SONG.ten)}</h1><img class="huou" src="${HUOU}" alt="">${songLyrics(true)}<p class="sub">Cả lớp đứng dậy, sẵn sàng hát và làm động tác nhé!</p>`
+  };
+  return {
+    key: 'hat|' + (playing ? 1 : 0),
+    html: `<div class="qno">🎵 Hát chào</div><h1>${playing ? 'Cùng hát nào! 🎶' : esc(SONG.ten)}</h1>${songLyrics(false)}<p class="sub">Con xem màn cô trên Zoom, hát và làm động tác theo nhé!</p>`
+  };
+}
+
 function vBadge(st, seats) {
   return {
     key: 'badge|' + seats.map(s => s.id + (s.photo ? 'p' : '')).join(','), akey: 'badge', audio: [hd('Cả nhóm giỏi quá! Cả nhóm được huy hiệu Bứt phá!'), 300, hd('Tuyệt vời! Con đã học xong hôm nay rồi!')],

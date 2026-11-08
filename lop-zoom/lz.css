@@ -388,3 +388,16 @@ body.boss-play .stage{padding:6px}
 .tay-msg{text-align:center;font-weight:700;font-size:18px;margin:10px 0 6px}
 .tay-pick{display:flex;flex-direction:column;align-items:center;gap:4px}
 .tay-pick svg{width:220px;height:132px;background:#EAF6FF;border-radius:14px}
+
+/* Hát chào mở đầu */
+.song-box{width:min(96vw,calc((100vh - 170px) * 16 / 9));aspect-ratio:16/9;border-radius:22px;overflow:hidden;box-shadow:var(--shadow);border:5px solid #fff;background:#000}
+.song-box iframe{width:100%;height:100%;border:0;display:block}
+.song-lyr{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;width:min(100%,640px);margin:6px auto}
+.song-lyr .sl{background:#fff;border:3px solid var(--line);border-radius:18px;padding:8px 10px;display:flex;flex-direction:column;align-items:center;box-shadow:0 3px 0 rgba(0,0,0,.06)}
+.song-lyr .sl b{font-size:26px;color:var(--red)}
+.song-lyr .sl .slpy{font-size:17px;font-weight:700;color:var(--ink)}
+.song-lyr .sl small{font-family:'Be Vietnam Pro',sans-serif;color:var(--muted);font-size:13px;text-align:center}
+.song-lyr.big{width:min(100%,900px)}
+.song-lyr.big .sl b{font-size:clamp(28px,4.6vh,48px)}
+.song-lyr.big .sl .slpy{font-size:clamp(18px,2.6vh,26px)}
+.song-lyr.big .sl small{font-size:clamp(14px,1.9vh,18px)}

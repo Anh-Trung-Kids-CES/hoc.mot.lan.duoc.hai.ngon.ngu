@@ -120,7 +120,7 @@ function openShare() {
 }
 function closeShare() { sharing = false; $('#share').classList.add('hide'); draw(); }
 const BAR = [
-  ['#go', '▶ Bắt đầu', 'red'], ['[data-spin="en"]', '🎡 Quay · EN', ''], ['[data-spin="zh"]', '🎡 Quay · 中文', 'red'], ['[data-spin="en|dad"]', '🎡 Ba · EN', ''], ['[data-spin="zh|dad"]', '🎡 Ba · 中文', 'red'],
+  ['#go', '▶ Bắt đầu', 'red'], ['#sg', '▶ Phát bài hát', 'y'], ['#sgst', '⏹ Dừng video', 'ghost'], ['[data-spin="en"]', '🎡 Quay · EN', ''], ['[data-spin="zh"]', '🎡 Quay · 中文', 'red'], ['[data-spin="en|dad"]', '🎡 Ba · EN', ''], ['[data-spin="zh|dad"]', '🎡 Ba · 中文', 'red'],
   ['#pv', '◀', 'ghost'], ['#rp', '🔁 Phát lại', 'ghost'], ['#rv', '👁 Hiện đáp án', 'y'], ['#au', '⏯ Tự chạy', 'y'], ['#ag', '↺ Hỏi lại', 'ghost'],
   ['#bst', '⚔️ Bắt đầu trận đấu', 'red'], ['#ben', '🏁 Kết thúc ngay', 'ghost'], ['#bre', '↺ Đấu lại', 'ghost'],
   ['#xgo', '🧩 Cho các con xếp tranh', 'y'], ['#xback', '◀ Nghe lại truyện', 'ghost'],
@@ -200,8 +200,26 @@ const CTL = {
       <p class="tip">Bé chỉ có 1 máy: con xem màn chiếu cô chia sẻ, giơ ngón tay 1-2-3, cô bấm hộ ở cột bên phải. Cô thêm bé ở thẻ <b>Thêm bé</b> (dán danh sách người tham gia Zoom).</p>
       <label class="toggle"><input type="checkbox" id="dy" ${st.duyet ? 'checked' : ''}> Cô duyệt từng bé tự vào bằng mã phòng</label>
       <label class="toggle" style="margin-top:8px"><input type="checkbox" id="amco" ${st.amCo !== false ? 'checked' : ''}> Tiếng chỉ phát ở máy cô (màn chiếu cô chia sẻ). Máy các con im lặng, trừ tiếng mẫu bí mật của bạn đang nói.</label>
-      <div class="ctl"><button class="btn red" id="go">▶ Bắt đầu: Chào bạn mới</button></div>`,
-    bind() { $('#dy').onchange = e => setState({ duyet: e.target.checked }); $('#amco').onchange = e => setState({ amCo: e.target.checked }); $('#go').onclick = () => goPhase('intro'); }
+      <div class="ctl"><button class="btn red" id="go">▶ Bắt đầu: Hát chào</button></div>`,
+    bind() { $('#dy').onchange = e => setState({ duyet: e.target.checked }); $('#amco').onchange = e => setState({ amCo: e.target.checked }); $('#go').onclick = () => goPhase('hat'); }
+  },
+  hat: {
+    html: st => {
+      const sg = st.song || {};
+      return `<h2>🎵 Hát chào: ${esc(SONG.ten)}</h2>
+        <div class="tip"><b>Cô Hươu giới thiệu</b> (cô đọc):<ol style="margin:6px 0 0 18px;padding:0">${SONG.gioiThieu.map(x => `<li>${esc(x)}</li>`).join('')}</ol></div>
+        ${songLyrics(false)}
+        <div class="ctl">${sg.on ? '<button class="btn ghost" id="sgst">⏹ Dừng video</button><button class="btn y" id="sg">🔁 Hát lại từ đầu</button>' : '<button class="btn y" id="sg">▶ Phát bài hát</button>'}
+          <button class="btn" id="nx">Tiếp: Chào bạn mới ▶</button></div>
+        <p class="tip">Video phát trên <b>màn chiếu</b> (máy chia sẻ Zoom, nhớ tích "Chia sẻ âm thanh"). Máy các con chỉ hiện lời bài hát. Hát xong cô nói: <b>${esc(SONG.sauBai)}</b><br>
+          Video không chạy? Trên máy chiếu bấm vào khung video, hoặc mở <a href="https://www.youtube.com/watch?v=${SONG.id}" target="_blank" rel="noopener">bài hát trên YouTube</a> rồi chia sẻ cửa sổ đó.</p>`;
+    },
+    bind(st) {
+      const sg = st.song || {};
+      $('#sg').onclick = () => setState({ song: { on: true, n: (sg.n || 0) + 1 } });
+      $('#sgst') && ($('#sgst').onclick = () => setState({ song: { on: false, n: sg.n || 0 } }));
+      $('#nx').onclick = () => { setState({ song: { on: false, n: sg.n || 0 } }); goPhase('intro'); };
+    }
   },
   intro: {
     html: st => {
@@ -216,7 +234,7 @@ const CTL = {
     },
     bind(st) {
       $$('[data-spin]').forEach(b => b.onclick = () => spin(pickRandom('intro'), b.dataset.spin));
-      $('#nx').onclick = () => goPhase('on');
+      $('#nx').onclick = () => goPhase('noi');
     },
     kid(s, st) {
       const m = ((room.marks || {})[s.id] || {}).intro || {};

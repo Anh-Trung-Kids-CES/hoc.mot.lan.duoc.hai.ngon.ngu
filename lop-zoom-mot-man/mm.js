@@ -25,7 +25,8 @@ hd = function () { return ''; };   // cô bấm hộ: dự kiến mỗi bé mộ
 const HUOU = TN + 'nhan-vat/huou_huou1_a.webp';
 const MM_PH = [
   { id: 'cho', n: 'Chờ vào lớp', m: '', ic: '🚪' },
-  { id: 'intro', n: 'Chào bạn mới', m: '0–5', ic: '🎡' },
+  { id: 'hat', n: 'Hát chào', m: '0–2', ic: '🎵' },
+  { id: 'intro', n: 'Chào bạn mới', m: '2–5', ic: '🎡' },
   { id: 'noi', n: 'Nói theo cô', m: '5–9', ic: '🗣️' },
   { id: 'on', n: 'Ôn nhanh', m: '9–14', ic: '⚡' },
   { id: 'tone', n: 'Máy bay thanh điệu', m: '14–19', ic: '✈️' },
@@ -237,7 +238,7 @@ const nav = (prev, next, nextLabel, extra) => `${prev ? `<button class="btn ghos
 
 /* ======================= các phần của buổi học ======================= */
 function view() {
-  const f = { cho: vCho, intro: vIntro, noi: vNoi, on: vOn, tone: vTone, lop: vLop, boss: vBoss2, xep: vXep, vinh: vVinh }[S.ph] || vCho;
+  const f = { cho: vCho, hat: vHat, intro: vIntro, noi: vNoi, on: vOn, tone: vTone, lop: vLop, boss: vBoss2, xep: vXep, vinh: vVinh }[S.ph] || vCho;
   return f();
 }
 function phaseName(id) { return (MM_PH.find(p => p.id === id) || {}).n || ''; }
@@ -261,11 +262,24 @@ function vCho() {
       <p class="mm-sub">${esc(LZ_CFG.ten)} · ${esc(LZ_CFG.chude)}</p>
       <div class="mm-faces">${S.kids.map(face).join('') || '<p class="mm-sub">Cô đang mời các bạn vào lớp…</p>'}</div>
       <div class="mm-rules"><span>✋ Giơ tay</span><span>⌨️ Gõ số vào chat</span><span>🎤 Phát biểu</span><span>= ⭐ đổi quà trên web học</span></div>`,
-    ctl: `<button class="btn ghost" data-act="add">👥 Thêm bé</button><button class="btn red" data-act="start">▶ Bắt đầu: Chào bạn mới</button>`,
+    ctl: `<button class="btn ghost" data-act="add">👥 Thêm bé</button><button class="btn red" data-act="start">▶ Bắt đầu: Hát chào</button>`,
     tip: 'Cô chia sẻ <b>cả màn hình này</b> lên Zoom và tích <b>Chia sẻ âm thanh</b>. Dặn các con: muốn trả lời thì giơ tay; câu có tranh đánh số thì gõ số vào khung chat. Mỗi lần cô bấm ✋ ✅ 🎤 là con được thêm sao.'
   };
 }
 
+/* --- Hát chào mở đầu: video YouTube nhúng (không chép video lên web); cô bấm Phát, chia sẻ cả màn + âm thanh lên Zoom --- */
+function vHat() {
+  const on = !!S.songOn;
+  return {
+    key: 'hat|' + (on ? S.songN || 0 : 0) + '|' + (muted ? 1 : 0),
+    html: on ? `<div class="song-box"><iframe src="${songSrc(true, muted)}" allow="autoplay; encrypted-media; fullscreen" allowfullscreen title="${esc(SONG.ten)}"></iframe></div>`
+      : `<div class="qno">🎵 Hát chào</div><h1 class="mm-h1">${esc(SONG.ten)}</h1>${songLyrics(true)}<p class="ask-line">🙋 Cả lớp đứng dậy, sẵn sàng hát và làm động tác nhé!</p>`,
+    ctl: (on ? `<button class="btn ghost" data-act="songStop">⏹ Dừng video</button><button class="btn y" data-act="songGo">🔁 Hát lại</button>` : `<button class="btn y" data-act="songGo">▶ Phát bài hát</button>`)
+      + `<a class="btn ghost" href="https://www.youtube.com/watch?v=${SONG.id}" target="_blank" rel="noopener" style="text-decoration:none">YouTube ↗</a><button class="btn" data-act="next">Tiếp: ${phaseName('intro')} ▶</button>`,
+    tip: on ? `Hát xong cô nói: <b>${esc(SONG.sauBai)}</b> · Video: ${esc(SONG.nguon)} (YouTube)`
+      : `<b>Cô Hươu giới thiệu</b> (cô đọc): ${SONG.gioiThieu.map((x, j) => `<b>${j + 1}.</b> ${esc(x)}`).join(' ')}`
+  };
+}
 /* --- Chào bạn mới: vòng quay chọn bạn --- */
 function vIntro() {
   const sp = S.spin || {}, l = sp.l === 'zh' ? 'zh' : 'en', N = S.kids.length, I = (sp.q === 'dad' && INTRO.dad) || INTRO;
@@ -566,7 +580,7 @@ function vVinh() {
 function step(d) {
   const p = S.ph, nx = nextPhase();
   const P = { step: 'ask', rp: 0 };
-  if (p === 'cho' || p === 'intro') return d > 0 ? goPhase(nx) : null;
+  if (p === 'cho' || p === 'intro' || p === 'hat') { if (p === 'hat') S.songOn = false; return d > 0 ? goPhase(nx) : null; }
   if (p === 'noi' || p === 'on' || p === 'tone') {
     const N = p === 'noi' ? NOI.length : p === 'on' ? QUIZ.length : TONES.length, i = (S.i || 0) + d;
     if (i < 0) return; if (i >= N) return goPhase(nx);
@@ -768,7 +782,7 @@ function home(list) {
 
 /* ======================= bấm nút ======================= */
 const ACT = {
-  start: () => goPhase('intro'), next: () => step(1), prev: () => step(-1), rv: reveal,
+  start: () => goPhase('hat'), next: () => step(1), prev: () => step(-1), rv: reveal,
   rp: () => { autoRvStop(); xepRun++; go({ rp: (S.rp || 0) + 1 }); }, undo, add: addBox, report: reportBox, set: setBox, copyVinh,
   mute: () => { muted = !muted; lsSet('mm-mute', muted); if (muted) { SND.stop(); BA.stop(); } draw(); },
   full: () => { try { document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen(); } catch (e) { } },
@@ -778,6 +792,7 @@ const ACT = {
   dm: b => { const t = VIEW && VIEW.dm; if (!t) return; (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(() => toast('Đã chép. Cô dán vào tin nhắn riêng trên Zoom.')).catch(() => prompt('Cô chép lời nhắn này:', t)); },
   lpSay: b => { const t = lopTurnsNow()[S.li || 0]; if (!t) return; const m = lt(t.a), l = b.dataset.l; if (m[l]) { m[l] = 0; bump(t.a, 'noi', -1); } else { m[l] = 1; bump(t.a, 'noi', 1); } },
   lpRe: () => { const t = lopTurnsNow()[S.li || 0]; if (t) { delete lt(t.a).c; save(); draw(); } },
+  songGo: () => go({ songOn: true, songN: (S.songN || 0) + 1 }), songStop: () => go({ songOn: false }),
   bossGo, bossNext, bossEnd: () => { S.boss.end = Date.now(); save(); bossTick(); },
   auto: b => { S.auto = b.checked; save(); }, autoShow: b => { S.autoShow = b.checked; save(); }, autoRv: b => { S.autoRv = b.checked; save(); if (!b.checked) { autoRvStop(); draw(); } else if (S.step === 'rv') autoRvStart(); }, autoNoi: b => { S.autoNoi = b.checked; save(); },
   dur: b => { S.boss.dur = (+b.value || 3) * 60000; save(); },

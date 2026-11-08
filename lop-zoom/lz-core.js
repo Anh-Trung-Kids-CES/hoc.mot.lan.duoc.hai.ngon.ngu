@@ -252,10 +252,36 @@ let NOI = ['name', 'you', 'one', 'two', 'three', 'four', 'five', 'six'].map(k =>
 /* khoảng lặng cho các con nói theo, tính theo độ dài câu mẫu vừa đọc (máy chiếu và màn cô dùng chung công thức) */
 function noiGap(ms) { return Math.round(Math.max(1500, ms * 1.15 + 700)); }
 
+/* Hát chào mở đầu (warm-up): video "Hello Song (你好歌)" của Little Fox Chinese, phát bằng trình phát YouTube nhúng
+   (không chép video lên web). Chỉ màn chiếu / màn cô chia sẻ phát video; máy các con hiện lời bài hát để hát theo.
+   Muốn đổi bài: thay id (đoạn sau watch?v= trên YouTube) và lời. */
+const SONG = {
+  id: 'm_rDIzj6DRE', ten: 'Hello Song · 你好歌', nguon: 'Little Fox Chinese',
+  loi: [
+    { zh: '你好！你好！', py: 'nǐ hǎo! nǐ hǎo!', vi: 'Hello!', tay: '👋 vẫy tay' },
+    { zh: '早上好！早上好！', py: 'zǎoshang hǎo!', vi: 'Good morning!', tay: '🌞 giơ hai tay lên như mặt trời mọc' },
+    { zh: '你好吗？', py: 'nǐ hǎo ma?', vi: 'How are you?', tay: '🤗 dang tay hỏi bạn' },
+    { zh: '晚上好！晚上好！', py: 'wǎnshang hǎo!', vi: 'Good evening!', tay: '🌙 áp hai tay lên má' }
+  ],
+  /* lời cô Hươu giới thiệu (hiện chữ cho cô đọc; chưa có file giọng) */
+  gioiThieu: [
+    'Chào các con! Hôm nay mình mở đầu bằng một bài hát chào thật vui nhé!',
+    'Các bạn thú trong bài hát chào nhau bằng tiếng Trung: 你好 nǐ hǎo, nghĩa là Hello!',
+    'Nghe 你好 thì vẫy tay. Nghe 早上好 thì giơ hai tay lên như mặt trời mọc. Nghe 晚上好 thì áp hai tay lên má.',
+    'Các con đứng dậy nào! Sẵn sàng chưa? 一、二、三！'
+  ],
+  sauBai: 'Giỏi quá! Cả lớp cùng chào nhau nào: Hello! 你好！'
+};
+function songSrc(auto, mute) { return 'https://www.youtube-nocookie.com/embed/' + SONG.id + '?rel=0&modestbranding=1&playsinline=1' + (auto ? '&autoplay=1' : '') + (mute ? '&mute=1' : ''); }
+function songLyrics(big) {
+  return `<div class="song-lyr${big ? ' big' : ''}">${SONG.loi.map(x => `<div class="sl"><b class="zh">${x.zh}</b><span class="slpy">${x.py}</span><small>${x.vi} · ${x.tay}</small></div>`).join('')}</div>`;
+}
+
 /* Mạch 40 phút */
 const PHASES = [
   { id: 'cho',   n: 'Chờ vào lớp',          m: '',      ic: '🚪' },
-  { id: 'intro', n: 'Chào bạn mới',          m: '0–5',   ic: '🎡' },
+  { id: 'hat',   n: 'Hát chào',              m: '0–2',   ic: '🎵' },
+  { id: 'intro', n: 'Chào bạn mới',          m: '2–5',   ic: '🎡' },
   { id: 'noi',   n: 'Nói theo cô',           m: '5–9',   ic: '🗣️' },
   { id: 'on',    n: 'Ôn nhanh',              m: '9–14',  ic: '⚡' },
   { id: 'tone',  n: 'Máy bay thanh điệu',    m: '14–19', ic: '✈️' },
