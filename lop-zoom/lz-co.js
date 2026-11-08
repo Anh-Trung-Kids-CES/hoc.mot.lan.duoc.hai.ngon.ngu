@@ -228,11 +228,11 @@ const CTL = {
   intro: {
     html: st => {
       const sp = st.spin || {}, s = seatsIn().find(x => x.id === sp.seat);
-      const D = INTRO.dad, qa = I => `Cả lớp hỏi <b>${esc(I.ask.en.t)}</b> / <b class="zh">${esc(I.ask.zh.t)}</b>, bạn trả lời <b>${esc(I.model.en.t)}</b> / <b class="zh">${esc(I.model.zh.t)}</b>`;
-      return `<h2>🎡 Chào bạn mới</h2><p>Cô quay vòng chọn bạn. ${D ? 'Hỏi về mẹ: ' + qa(INTRO) + '.<br>Hỏi về ba: ' + qa(D) + '.' : qa(INTRO)}</p>${INTRO.tip ? `<p class="tip">${INTRO.tip}</p>` : ''}
-      <div class="ctl"><button class="btn" data-spin="en">🎡 ${D ? 'Hỏi mẹ' : 'Quay'} · tiếng Anh</button><button class="btn red" data-spin="zh">🎡 ${D ? 'Hỏi mẹ' : 'Quay'} · tiếng Trung</button></div>
-      ${D ? `<div class="ctl"><button class="btn" data-spin="en|dad">🎡 Hỏi ba · tiếng Anh</button><button class="btn red" data-spin="zh|dad">🎡 Hỏi ba · tiếng Trung</button></div>` : ''}
-      ${s ? `<div class="tip">Vừa chọn: <b>${esc(s.kid)}</b> (${D ? (sp.q === 'dad' ? 'hỏi về ba, ' : 'hỏi về mẹ, ') : ''}${sp.l === 'zh' ? 'tiếng Trung' : 'tiếng Anh'}). Chấm ở cột bên phải: <b>EN</b>/<b>ZH</b> = con nói được, bấm lần nữa = nói cùng cô.</div>` : ''}
+      const D = INTRO.dad, LB = INTRO.lb || ['Hỏi mẹ', 'Hỏi ba'], VE = INTRO.ve || ['hỏi về mẹ', 'hỏi về ba'], qa = I => `Cả lớp hỏi <b>${esc(I.ask.en.t)}</b> / <b class="zh">${esc(I.ask.zh.t)}</b>, bạn trả lời <b>${esc(I.model.en.t)}</b> / <b class="zh">${esc(I.model.zh.t)}</b>`;
+      return `<h2>🎡 Chào bạn mới</h2><p>Cô quay vòng chọn bạn. ${D ? LB[0] + ': ' + qa(INTRO) + '.<br>' + LB[1] + ': ' + qa(D) + '.' : qa(INTRO)}</p>${INTRO.tip ? `<p class="tip">${INTRO.tip}</p>` : ''}
+      <div class="ctl"><button class="btn" data-spin="en">🎡 ${D ? LB[0] : 'Quay'} · tiếng Anh</button><button class="btn red" data-spin="zh">🎡 ${D ? LB[0] : 'Quay'} · tiếng Trung</button></div>
+      ${D ? `<div class="ctl"><button class="btn" data-spin="en|dad">🎡 ${LB[1]} · tiếng Anh</button><button class="btn red" data-spin="zh|dad">🎡 ${LB[1]} · tiếng Trung</button></div>` : ''}
+      ${s ? `<div class="tip">Vừa chọn: <b>${esc(s.kid)}</b> (${D ? (sp.q === 'dad' ? VE[1] : VE[0]) + ', ' : ''}${sp.l === 'zh' ? 'tiếng Trung' : 'tiếng Anh'}). Chấm ở cột bên phải: <b>EN</b>/<b>ZH</b> = con nói được, bấm lần nữa = nói cùng cô.</div>` : ''}
       <p class="small">Bấm 🎯 cạnh tên bé để chọn đúng bạn đó.</p>
       <div class="ctl"><button class="btn ghost" id="nx">Tiếp: Nói theo cô ▶</button></div>`;
     },
@@ -297,8 +297,9 @@ const CTL = {
     html: st => {
       const i = st.i || 0, x = TONES[i], rv = st.step === 'rv';
       return `<h2>✈️ Máy bay thanh điệu · ${i + 1}/${TONES.length}</h2>
-        <p><span class="bigtxt zh">${x.c}</span> <span class="bigtxt" style="color:var(--red)">${x.py}</span> · ${x.o ? 'đường bay ' + x.t + ': ' : 'thanh ' + x.t + ' – '}${TONE_NAME[toneOpt(x, x.t)]}</p>
+        <p><span class="bigtxt zh">${toneChar(x)}</span> <span class="bigtxt" style="color:var(--red)">${x.py}</span> · ${x.o ? 'đường bay ' + x.t + ': ' : 'thanh ' + x.t + ' – '}${TONE_NAME[toneOpt(x, x.t)]}</p>
         ${toneAudio(x) ? '' : '<p class="tip">Chữ này chưa có file giọng riêng: <b>cô đọc trên Zoom</b>.</p>'}
+        ${TONE_TIP ? `<p class="tip">${TONE_TIP}</p>` : ''}
         ${qButtons(st, i, TONES.length, rv)}
         <label class="toggle"><input type="checkbox" id="tayOn" ${st.tayOn !== false ? 'checked' : ''}> ✋ Cho các con <b>bay bằng tay</b> trước camera (máy bé nhận đường tay bay, chọn đường bay giống nhất). Con vẫn chạm được.</label>
         <p class="tip">Sau khi hiện đáp án: cả lớp đưa tay bay theo, nói theo. Cô chấm từng bé ở cột phải: <b>Chuẩn</b> / <b>Gần</b> / <b>Luyện</b>. Bé 1 máy: bấm hộ số đường bay 1–4.</p>`;
@@ -558,7 +559,7 @@ const CTL = {
   badge: {
     html: st => {
       const seats = seatsIn(), vi = st.vinh == null ? -1 : st.vinh, k = seats[vi];
-      return `<h2>🏅 Huy hiệu Bứt phá & Vinh danh</h2>
+      return `<h2>🏅 Huy hiệu ${esc(LZ_CFG.huy || 'Bứt phá')} & Vinh danh</h2>
       <p>${k ? `Đang vinh danh: <b>${esc(k.kid)}</b> (${vi + 1}/${seats.length}) · ⭐ ${seatStars(room, k).sao} · ${esc(starTitle(seatStars(room, k))[0])}` : 'Màn các bé đang hiện huy hiệu cả nhóm và số sao của từng bạn.'}</p>
       <div class="ctl"><button class="btn y" id="vdn">🏆 ${vi < 0 ? 'Vinh danh từng bạn' : vi + 1 < seats.length ? 'Bạn tiếp' : 'Cả nhóm'} ▶</button>${vi >= 0 ? '<button class="btn ghost" id="vdp">◀ Bạn trước</button><button class="btn ghost" id="vdt">Cả nhóm</button>' : ''}</div>
       <p class="tip">Mỗi bạn đều được vinh danh, theo thứ tự trong lớp (không xếp hạng): ảnh, danh hiệu theo việc con làm nhiều nhất, số sao. Sao = ✋ giơ tay + ✅ trả lời đúng + 🎤 phát biểu (+ ± sao cô chỉnh ở thẻ Kết quả).<br>

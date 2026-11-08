@@ -120,6 +120,7 @@ img{max-width:100%}
 .tone-head{display:flex;align-items:center;gap:16px}
 .tone-head img{width:110px;height:110px;border-radius:20px;object-fit:cover;box-shadow:var(--shadow)}
 .tone-head .chu{font-size:96px;padding:6px 26px}
+.chu .nhe,.bigtxt .nhe{opacity:.38;font-size:.72em}
 .py{font-size:40px;font-weight:800;color:var(--red);line-height:1.1}
 .tone-head{flex-wrap:wrap;justify-content:center}
 .tone-side{display:flex;flex-direction:column;align-items:center;gap:6px}

@@ -19,10 +19,12 @@ const LZ_MOCK = QS.has('mock');
 
 /* ======================= Khoá của buổi Zoom =======================
    Mỗi phòng ghi khoá ở state.lop. Trang tải nội dung theo ?lop= (mặc định Little Seed Vòng 2).
-   Nội dung Canopy nằm trong lz-canopy.js: tệp đó gán lại các biến nội dung bên dưới khi LZ_LOP là canopy. */
+   Nội dung Canopy nằm trong lz-canopy.js, Little Seed Vòng 3 trong lz-seed-v3.js: các tệp đó gán lại các biến nội dung bên dưới.
+   huy: tên huy hiệu cuối buổi theo chặng (Vòng 2 Bứt phá, Vòng 3 Chinh phục). */
 const LZ_LOPS = {
-  'seed-v2':   { ten: 'Little Seed · Vòng 2', chude: 'Giới thiệu bản thân', khoa: 'seed', vong: 2 },
-  'canopy-v2': { ten: 'Canopy · Vòng 2', chude: 'Jobs – Ghé thăm nơi làm việc', khoa: 'canopy', vong: 2 },
+  'seed-v2':   { ten: 'Little Seed · Vòng 2', chude: 'Giới thiệu bản thân', khoa: 'seed', vong: 2, huy: 'Bứt phá' },
+  'canopy-v2': { ten: 'Canopy · Vòng 2', chude: 'Jobs – Ghé thăm nơi làm việc', khoa: 'canopy', vong: 2, huy: 'Bứt phá' },
+  'seed-v3':   { ten: 'Little Seed · Vòng 3', chude: 'Gia đình – Album ảnh nhà Bông', khoa: 'seed', vong: 3, huy: 'Chinh phục' },   // nội dung trong lz-seed-v3.js (Zoom ngày 21)
 };
 const LZ_LOP = LZ_LOPS[QS.get('lop')] ? QS.get('lop') : 'seed-v2';
 const LZ_CFG = LZ_LOPS[LZ_LOP];
@@ -192,6 +194,10 @@ const TONE_PATH = {
 const TONE_NAME = { 1: 'Bay ngang', 2: 'Bay lên', 3: 'Lượn xuống rồi lên', 4: 'Lao xuống' };
 /* đường bay của lựa chọn thứ c (1–4): Little Seed chọn thẳng thanh 1–4; Canopy chọn 1 trong 4 cặp thanh của từ hai chữ (x.o, ví dụ 31 = thanh 3 rồi thanh 1) */
 function toneOpt(x, c) { return x.o ? x.o[c - 1] : c; }
+/* ghi chú thêm cho cô ở phần thanh điệu (Vòng 3: từ lặp) */
+let TONE_TIP = '';
+/* chữ trên màn thanh điệu: từ lặp (哥哥, 奶奶…) thì tiếng sau mờ đi vì đọc nhẹ, con chọn thanh của tiếng đầu */
+function toneChar(x) { const c = String(x.c || ''); return c.length === 2 && c[0] === c[1] ? c[0] + '<span class="nhe">' + c[1] + '</span>' : c; }
 
 /* Trò chơi đôi bạn: bé A thấy tranh và nói, bé B nghe rồi chạm 1 trong 3 tranh */
 let PAIR_POOL = [
@@ -282,7 +288,7 @@ function songLyrics(big) {
 /* Chỉ dùng từ có tranh rõ nghĩa để chọn (08/11): Little Seed dùng số đếm (tranh đếm đồ vật); Canopy dùng nghề, nơi chốn, người trong nhà.
    Bỏ các từ/câu khó vẽ rõ (you, name, câu hỏi tên/tuổi…) vì tranh dễ gây nhầm. */
 const DTC_N = 6;
-const DTC_SEED = [
+let DTC_SEED = [
   { k: 'four', o: ['four', 'six', 'two'] }, { k: 'two', o: ['three', 'one', 'two'] }, { k: 'six', o: ['five', 'six', 'four'] },
   { k: 'one', o: ['one', 'three', 'five'] }, { k: 'five', o: ['two', 'three', 'five'] }, { k: 'three', o: ['six', 'three', 'one'] }
 ];
@@ -332,7 +338,7 @@ const PHASES = [
   { id: 'boss',  n: 'Cả lớp đấu Rồng Lửa',   m: '28–31', ic: '🐉' },
   { id: 'xep',   n: 'Nghe truyện, xếp tranh', m: '31–35', ic: '🧩' },
   { id: 'cn',    n: 'Cô nói, con nói tiếng kia', m: '35–38', ic: '🔁' },
-  { id: 'badge', n: 'Huy hiệu Bứt phá',      m: '38–40', ic: '🏅' },
+  { id: 'badge', n: 'Huy hiệu ' + (LZ_CFG.huy || 'Bứt phá'), m: '38–40', ic: '🏅' },
 ];
 
 /* Giọng cô Hươu (Gemini TTS, giọng Sulafat) đã có sẵn ở web học. Câu chưa có file thì chỉ hiện chữ – cô nói trên Zoom.

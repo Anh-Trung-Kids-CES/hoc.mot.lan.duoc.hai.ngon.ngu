@@ -391,7 +391,7 @@ function vTone(st, seats) {
   const my = myAnswer(qid), a = toneAudio(x);
   const key = ['tone', i, st.run || 0, rv ? 1 : 0, my ? my.c : '-'].join('|');
   const opts = [1, 2, 3, 4].map(t => `<button class="path${x.o ? ' two' : ''}${my && my.c === t ? ' chosen' : ''}${rv && CHIEU && t === x.t ? ' right' : ''}${rv && CHIEU && t !== x.t ? ' dim' : ''}" data-c="${t}">${planeSVG(toneOpt(x, t), 'pl' + t)}<span>${TONE_NAME[toneOpt(x, t)]}</span></button>`).join('');
-  const head = `<div class="tone-head"><img src="${tonePic(x)}" alt=""><div class="chu zh">${x.c}</div>
+  const head = `<div class="tone-head"><img src="${tonePic(x)}" alt=""><div class="chu zh">${toneChar(x)}</div>
     <div class="tone-side"><div class="py">${rv && CHIEU ? x.py : x.p0}</div>${a ? `<button class="say zh tone-say" data-play><span class="ic">🔊</span>Nghe</button>` : '<p class="sub">Cô đọc trên Zoom</p>'}</div></div>`;
   const body = rv && CHIEU ? `<div class="cheer" style="color:var(--red)">Cả lớp đưa tay bay theo, nói theo nhé! ✋ ${x.py}</div><div class="fly-big">${planeSVG(toneOpt(x, x.t), 'plBig', true)}</div>`
     : `<div class="paths${my || CHIEU ? ' locked' : ''}" id="pics">${opts}</div>${!CHIEU && !my && st.tayOn !== false ? '<button class="btn tay-go" id="tayGo">✋ Bay bằng tay</button>' : ''}<p class="count" id="cnt"></p>`;
@@ -608,8 +608,8 @@ function vBadge(st, seats) {
     };
   }
   return {
-    key: 'badge|' + seats.map(s => s.id + (s.photo ? 'p' : '') + seatStars(room, s).sao).join(','), akey: 'badge', audio: [hd('Cả nhóm giỏi quá! Cả nhóm được huy hiệu Bứt phá!'), 300, hd('Tuyệt vời! Con đã học xong hôm nay rồi!')],
-    html: `<div class="medal"><small>Huy hiệu</small><b>BỨT PHÁ</b><small>⭐ Vòng ${LZ_CFG.vong} ⭐</small></div><h1>Cả nhóm giỏi quá!</h1>
+    key: 'badge|' + seats.map(s => s.id + (s.photo ? 'p' : '') + seatStars(room, s).sao).join(','), akey: 'badge', audio: (LZ_CFG.huy || 'Bứt phá') === 'Bứt phá' ? [hd('Cả nhóm giỏi quá! Cả nhóm được huy hiệu Bứt phá!'), 300, hd('Tuyệt vời! Con đã học xong hôm nay rồi!')] : [hd('Giỏi quá!'), 300, hd('Tuyệt vời! Con đã học xong hôm nay rồi!')],
+    html: `<div class="medal"><small>Huy hiệu</small><b>${esc((LZ_CFG.huy || 'Bứt phá').toUpperCase())}</b><small>⭐ Vòng ${LZ_CFG.vong} ⭐</small></div><h1>Cả nhóm giỏi quá!</h1>
       <div class="team">${seats.map(s => `<div class="face${s.id === mySeat ? ' me' : ''}"><img src="${faceOf(s)}" alt=""><span>${esc(s.kid)}</span><b class="vd-mini">⭐ ${seatStars(room, s).sao}</b></div>`).join('')}</div>`,
     bind() { if (!confettiDone) { confettiDone = true; SND.beep('win'); confetti(); } }
   };
