@@ -244,6 +244,8 @@ def pdn(days):
     out = []
     for d, s in steps(days, 'pdn'):
         for it in s.get('items', []):
+            if '(nghelàmquen)' in it['zh']:
+                continue  # câu chỉ nghe làm quen, không đưa vào Phiên dịch nhí
             out.append(dict(en=it['en'], zh=it['zh'], py=it.get('py', ''),
                             a_en=it.get('a_en') or au('en', it['en']), a_zh=it.get('a_zh') or au('zh', it['zh'])))
     seen, res = set(), []
@@ -525,7 +527,158 @@ def build_session(n):
                 words=ws, videos=videos(days), blocks=blocks, slides=sl)
 
 
-SESS = {n: build_session(n) for n in range(1, 49)}
+
+# ================= Tuần 1–3: giáo án mẫu viết tay (buổi 1, 2, 3) =================
+LS_ENTRY = [('hello', '你好', 'nǐ hǎo'), ('goodbye', '再见', 'zàijiàn'), ('mommy', '妈妈', 'māma'), ('daddy', '爸爸', 'bàba'), ('kitten', '小猫', 'xiǎo māo'),
+            ('teacher', '老师', 'lǎoshī'), ('puppy', '小狗', 'xiǎo gǒu'), ('three', '三', 'sān'), ('big sister', '姐姐', 'jiějie')]
+
+
+def nen_cards(days_range=None, k=9):
+    """Bài đầu vào ngắn: 9 từ Little Seed có tranh (lớp chưa học Little Seed)."""
+    import glob
+    out = []
+    for en, zh, py in LS_ENTRY:
+        f = sorted(glob.glob(str(ROOT / 'tai-nguyen/little-seed/img' / f"v*_tu_{en.replace(' ', '_')}_l*.webp")))
+        if f:
+            out.append(dict(en=en, zh=zh, py=py, img='tai-nguyen/little-seed/img/' + Path(f[0]).name, a_en=au('en', en), a_zh=au('zh', zh), e=''))
+    return out[:k]
+
+
+def pick(qs, l, k):
+    return [q for q in qs if q['l'] == l and q['a']][:k]
+
+
+def tf_from(sc, pairs):
+    """pairs: [(i_hinh, i_cau)] – i_cau khác i_hinh → đáp án sai"""
+    pool = [x for x in sc if x['en'] and x['who'] not in ('narr',)]
+    out, used = [], set()
+    for a, b in pairs:
+        if a < len(pool) and b < len(pool) and pool[b]['en'] not in used and (a == b or pool[a]['en'] != pool[b]['en']):
+            used.add(pool[b]['en'])
+            out.append(S('2', 'tf', 'Thẻ', 'Đúng hay sai? Phát câu, đếm 3–2–1, các con giơ thẻ ✓ hoặc ✗. Cô bấm Đ/S từng bé rồi Hiện đáp án.',
+                         img=pool[a]['img'], who=pool[a]['who'], say=pool[b]['en'], a=pool[b]['a_en'], ans=(pool[a]['en'] == pool[b]['en'])))
+    return out
+
+
+def meo_of(days):
+    out = []
+    for d, s in steps(days, 'meo'):
+        for c in s['cards']:
+            if not any(c['l'] == o['l'] for o in out):
+                out.append(c)
+    return out
+
+
+def w13(n):
+    L = LOP[n]; days = L['days']; sl = []; blocks = []
+    if n == 1:
+        U1 = [1, 2, 3]
+        sl.append(S('1', 'title', 'Chiếu', 'Đón con ở cửa: "Good morning! 早上好！". Cả lớp ngồi vòng tròn.', t=L['t'], about=L['about']))
+        sl.append(S('1', 'song', 'Chiếu', 'Hello Chant: lần 1 cô làm mẫu động tác, lần 2 cả lớp đứng làm theo.', chant='hello'))
+        sl.append(S('1', 'note', 'Thẻ', 'Nếp lớp 1 · Thẻ trả lời: phát mỗi bé một bộ thẻ. Tập: cô hỏi, đếm 3–2–1, cả lớp cùng giơ. Ai giơ trước khi đếm xong thì giơ lại.', t='Show me your cards! · 3 – 2 – 1', body='Cả lớp cùng giơ thẻ, không ai giơ trước.'))
+        sl.append(S('1', 'grid', 'Thẻ', 'Bài đầu vào ngắn: cô nói từ (Anh rồi Trung), con chạm tranh trên thẻ mini hoặc chỉ lên màn. Cô ghi từ con chưa nhận ra vào phiếu ghi giấy.', cards=nen_cards(), l='en', t='Bài đầu vào · Point to … · 指一指'))
+        sl += quiz_from_game(game_qs(U1), 2, '1', 'Hỏi lại web ngày 1–3')
+        blocks.append(dict(k='[1]', name='Khởi động, bài đầu vào', min=14, acts=['Chào cửa lớp, vòng tròn', 'Hello Chant', 'Nếp lớp 1: thẻ trả lời, đếm 3–2–1', 'Bài đầu vào ngắn: từ Little Seed (chạm tranh, cô ghi phiếu)', 'Hỏi lại web ngày 1–3 (giơ thẻ số)']))
+        sc = {d: scenes([d]) for d in U1}
+        sl.append(S('2', 'mystery', 'Chiếu', 'Tranh bí ẩn: bấm → để tranh rõ dần. Hỏi "Who is it? Where?" Con đoán bằng tiếng Việt cũng được, cô nói lại bằng tiếng Anh.', img=DAYS[1].get('hero') or sc[1][0]['img']))
+        for d in U1:
+            sl += story_slides([x for x in sc[d] if x['en']], 'en', '2', 'Cô kể bằng rối que, đổi giọng từng nhân vật; bấm → từng câu, máy phát tiếng mẫu sau khi cô kể. Con chỉ nhân vật đang nói.')
+            sl += card_slides(words([d]), 'en', '2', 'Flashcard lớn: cô nói từ + động tác (mặt sau flashcard), cả lớp nhắc lại 2 lần to – nhỏ.')
+        sl += tf_from(sc[1] + sc[2] + sc[3], [(0, 0), (3, 16), (11, 11), (14, 7)])
+        blocks.append(dict(k='[2]', name='Tiếng Anh · Introduce Greeting phần 1–3', min=20, acts=['Tranh bí ẩn', 'Cô kể phần 1 → flashcard; phần 2 → flashcard; phần 3 → flashcard (rối que, động tác)', 'Đúng/Sai bằng thẻ ✓ ✗ (3 câu)']))
+        sl.append(S('3', 'move', 'Vận động', 'Greeting freeze: bật nhạc, con đi quanh lớp; tắt nhạc, cô giơ flashcard, con quay sang bạn gần nhất làm động tác và nói theo cô. 4–5 lượt.', game='Greeting freeze', cards=words(U1)[:8], sec=480))
+        sl.append(S('3', 'song', 'Vận động', 'Good Morning Chant: đứng vòng tròn, làm động tác từng câu.', chant='1'))
+        blocks.append(dict(k='[3]', name='Vận động', min=10, acts=['Greeting freeze (flashcard lớn)', 'Good Morning Chant']))
+        for q in [q for q in cham_qs(U1) if q['l'] == 'zh'][:2]:
+            sl.append(S('4', 'who', 'Thẻ', 'Ai đang nói? Phát tiếng Trung, các con giơ thẻ số nhân vật. Cô bấm số từng bé.', **q))
+        for d in U1:
+            sl += story_slides([x for x in sc[d] if x['zh']], 'zh', '4', 'Rối Xiaomei kể tiếng Trung; cô làm cùng động tác như phần tiếng Anh. Thêm động tác cúi chào cho 您.')
+        sl += card_slides(words(U1), 'zh', '4', '做一做: cô nói từ, cả lớp làm động tác rồi nói theo; tay vẽ thanh điệu.')
+        for it in pdn(U1)[:3]:
+            sl.append(S('4', 'bridge', 'Chiếu', 'Cầu nối Anh – Trung: Leo nói câu tiếng Anh, cô nói mẫu câu tiếng Trung, cả lớp nói theo cho Xiaomei. Hỏi: Mrs đứng trước tên, 老师 đứng sau tên.', **it))
+        blocks.append(dict(k='[4]', name='Tiếng Trung · Introduce Greeting phần 1–3', min=21, acts=['Ai đang nói? (2 câu)', 'Xiaomei kể phần 1–3', '做一做 với flashcard', 'Cầu nối Anh – Trung (3 câu, Phiên dịch nhí làm mẫu)']))
+        mz = meo_of([4, 5])
+        for c in mz:
+            sl.append(S('5', 'sound', 'Chiếu', 'Mẹo âm: cô làm mẫu bằng tay (thanh 1 tay đưa ngang; âm s tay uốn như rắn), cả lớp làm theo với các từ ví dụ.', **c))
+        sl.append(S('5', 'board', 'Thẻ', 'Bảng con: viết Mrs, kid, good; tô 上, 小 theo thứ tự nét (cô viết mẫu trên bảng lớn). Cô đi vòng, bấm ✏️ từng bé.', wb=L['wb']))
+        blocks.append(dict(k='[5]', name='Chữ và âm', min=7, acts=['Thanh 1 (đường bằng) · âm s 🐍', 'Bảng con: Mrs, kid, good · 上, 小']))
+        sl.append(S('6', 'bigbook', 'Chiếu', 'Big Book phần 1–3: mỗi con cầm một rối que; khi nhân vật của mình nói, con giơ rối lên. Lượt 2 cô dừng, con nói câu nhân vật cùng cô.', unit='1', upto='Phần 3'))
+        sl.append(S('6', 'craft', 'Thẻ', 'Thủ công: phát thẻ tên, con viết tên mình (Kids, write your name. · 小朋友们，写名字吧。), tô màu.', unit='1', step=0))
+        blocks.append(dict(k='[6]', name='Truyện, thủ công', min=14, acts=['Big Book phần 1–3 với rối que', 'Thủ công: viết tên lên thẻ tên']))
+    elif n == 2:
+        U1 = [1, 2, 3]; U4 = [4, 5, 6]
+        sl.append(S('1', 'title', 'Chiếu', 'Chào lớp bằng hai tiếng; con đeo thẻ tên làm buổi trước.', t=L['t'], about=L['about']))
+        sl.append(S('1', 'song', 'Chiếu', 'Hello Chant.', chant='hello'))
+        sl += quiz_from_game(game_qs(U4), 3, '1', 'Hỏi lại web ngày 4–6')
+        sl.append(S('1', 'note', 'Thẻ', 'Nếp lớp 2 · Đôi bạn: hai bạn ngồi quay mặt vào nhau, một bạn nói, bạn kia làm hoặc trả lời, rồi đổi vai. Cô làm mẫu với một bạn.', t='Đôi bạn · Talk with your friend', body='Ngồi quay mặt vào nhau · nói · đổi vai'))
+        blocks.append(dict(k='[1]', name='Khởi động', min=8, acts=['Hello Chant', 'Hỏi lại web ngày 4–6 (3 câu)', 'Nếp lớp 2: Đôi bạn']))
+        sl.append(S('2', 'song', 'Chiếu', 'Nhắc lại Greeting: Good Morning Chant, cả lớp làm động tác.', chant='1'))
+        sl.append(S('2', 'grid', 'Thẻ', 'Domino tranh / chuỗi trí nhớ: mỗi cặp trải thẻ mini Greeting, bạn A nói một câu, bạn B nối tranh tiếp theo trong truyện. Màn chỉ để nhắc.', cards=words(U1)[:9], l='en', t='Domino tranh · chuỗi trí nhớ'))
+        sl.append(S('2', 'pair', 'Thẻ', 'Đôi bạn chào nhau với rối que, nói cùng cô trước rồi tự nói. Cô đi vòng, bấm 🎤 EN.', items=pdn(U1)[:4], l='en'))
+        sc = {d: scenes([d]) for d in U4}
+        sl.append(S('2', 'mystery', 'Chiếu', 'Tranh bí ẩn: Bông và ông đi đâu?', img=DAYS[4].get('hero') or sc[4][0]['img']))
+        for d in U4:
+            sl += story_slides([x for x in sc[d] if x['en']], 'en', '2', 'Cô kể The Body Show; mỗi bộ phận cơ thể cô chạm vào người mình, con làm theo.')
+        sl += card_slides(words(U4), 'en', '2', 'Flashcard lớn: nói từ + chạm bộ phận cơ thể, cả lớp nhắc lại.')
+        blocks.append(dict(k='[2]', name='Tiếng Anh · Repeat Greeting + Introduce Body 1–3', min=20, acts=['Nhắc Greeting 8′: chant, domino tranh, Đôi bạn chào (nói cùng cô)', 'Body 12′: tranh bí ẩn, cô kể phần 1–3, flashcard + chạm cơ thể']))
+        sl.append(S('3', 'move', 'Vận động', 'Simon says: "Simon says touch your knees!" Cô nói lệnh không có "Simon says" thì con đứng yên. Lượt cuối nói tiếng Trung: 摸摸膝盖！', game='Simon says', cards=words(U4)[:8], sec=480))
+        sl.append(S('3', 'song', 'Vận động', 'Body Show Chant, đứng làm động tác.', chant='4'))
+        blocks.append(dict(k='[3]', name='Vận động', min=10, acts=['Simon says với bộ phận cơ thể', 'Body Show Chant']))
+        for q in [q for q in cham_qs(U1) if q['l'] == 'zh'][2:4]:
+            sl.append(S('4', 'who', 'Thẻ', 'Nhắc Greeting: Ai đang nói? Giơ thẻ số.', **q))
+        for d in U4:
+            sl += story_slides([x for x in sc[d] if x['zh']], 'zh', '4', 'Xiaomei kể The Body Show; chạm cơ thể như phần tiếng Anh.')
+        sl += card_slides(words(U4), 'zh', '4', '做一做: cô nói 摸摸肩膀、摸摸膝盖…, con chạm đúng chỗ rồi nói theo.')
+        for it in pdn(U4)[:3]:
+            sl.append(S('4', 'bridge', 'Chiếu', 'Cầu nối Anh – Trung: cô nói câu tiếng Anh, con thử nói tiếng Trung cùng cô rồi Hiện.', **it))
+        blocks.append(dict(k='[4]', name='Tiếng Trung · Repeat Greeting + Introduce Body 1–3', min=25, acts=['Ai đang nói? (Greeting)', 'Xiaomei kể Body phần 1–3', '做一做 chạm cơ thể', 'Cầu nối Anh – Trung (3 câu)']))
+        for c in meo_of([7, 8]):
+            sl.append(S('5', 'sound', 'Chiếu', 'Mẹo âm mới: thanh 4 tay chém xuống; âm a tay làm kiến bò. Ôn nhanh thanh 1 và âm s.', **c))
+        sl.append(S('5', 'board', 'Thẻ', 'Bảng con: viết arm, leg, toe; tô 个, 子. Cô bấm ✏️ từng bé.', wb=L['wb']))
+        blocks.append(dict(k='[5]', name='Chữ và âm', min=7, acts=['Thanh 4 (đi xuống) · âm a 🐜; ôn thanh 1, âm s', 'Bảng con: arm, leg, toe · 个, 子']))
+        sl.append(S('6', 'bigbook', 'Chiếu', 'Big Book Greeting: cô đọc, các con cầm rối que giơ lên khi nhân vật của mình nói; lượt 2 con nói câu nhân vật cùng cô (nói cùng cô = Repeat).', unit='1', upto='Phần 3'))
+        sl.append(S('6', 'craft', 'Thẻ', 'Thủ công: người giấy – vẽ mặt, tô màu, cắt các mảnh (cô đục lỗ ghim sau buổi).', unit='4', step=0))
+        blocks.append(dict(k='[6]', name='Truyện, thủ công', min=15, acts=['Nghe truyện Greeting ghép tranh (thẻ số)', 'Thủ công: người giấy bước 1']))
+    else:
+        U1 = [1, 2, 3, 8]; U4 = [4, 5, 6, 7, 9]
+        sl.append(S('1', 'title', 'Chiếu', 'Chào lớp; hôm nay các con diễn rối và giới thiệu người giấy.', t=L['t'], about=L['about']))
+        sl.append(S('1', 'song', 'Chiếu', 'Hello Chant.', chant='hello'))
+        sl += quiz_from_game(game_qs([7, 8, 9]), 3, '1', 'Hỏi lại web ngày 7–9')
+        sl.append(S('1', 'note', 'Thẻ', 'Nếp lớp 3 · Thuyết trình: bạn nói đứng lên, nhìn các bạn, nói to; cả lớp nghe rồi vỗ tay hai cái. Cô làm mẫu.', t='Show and tell · 1 – 2 – 👏👏', body='Đứng lên · nhìn bạn · nói to · cả lớp vỗ tay'))
+        blocks.append(dict(k='[1]', name='Khởi động', min=8, acts=['Hello Chant', 'Hỏi lại web ngày 7–9 (3 câu)', 'Nếp lớp 3: thuyết trình']))
+        sc7 = scenes([7])
+        sl += story_slides([x for x in sc7 if x['en']], 'en', '2', 'Body phần 4: cô kể nhanh, cả lớp vỗ tay, giậm chân theo câu.')
+        sl += card_slides(words([7]), 'en', '2', 'Flashcard: clap your hands, stamp your feet, it\'s fun – làm động tác.')
+        sl.append(S('2', 'grid', 'Thẻ', 'Thẻ úp đoán: mỗi cặp úp thẻ mini cơ thể, bạn A lật một thẻ và ra lệnh "Touch your …!", bạn B làm. Đổi vai.', cards=words([4, 5, 6, 7])[:9], l='en', t='Thẻ úp · Touch your …!'))
+        sl.append(S('2', 'pair', 'Thẻ', 'Đôi bạn Greeting tự nói (không có cô nói cùng): chào – xin lỗi – tạm biệt với rối que. Cô đi vòng, bấm 🎤 EN.', items=pdn([1, 2, 3, 8])[:4], l='en'))
+        blocks.append(dict(k='[2]', name='Tiếng Anh · Body phần 4 + Practice', min=20, acts=['Body phần 4 (6′)', 'Thẻ úp đoán + ra lệnh Touch your …! (7′)', 'Đôi bạn Greeting tự nói (7′)']))
+        sl.append(S('3', 'move', 'Vận động', 'Rồng Lửa theo đội: hai đội xếp hàng, cô giơ thẻ, bạn đầu hàng nói từ (Anh hoặc Trung) rồi chạy về cuối hàng. Điểm đội, không xếp hạng cá nhân.', game='Rồng Lửa theo đội', cards=words(U4)[:8], sec=480))
+        sl.append(S('3', 'song', 'Vận động', 'Body Show Chant.', chant='4'))
+        blocks.append(dict(k='[3]', name='Vận động', min=10, acts=['Rồng Lửa theo đội', 'Body Show Chant']))
+        sl += story_slides([x for x in sc7 if x['zh']], 'zh', '4', 'Xiaomei kể Body phần 4: 拍拍手！跺跺脚！')
+        sl.append(S('4', 'grid', 'Thẻ', 'Memory tranh – chữ Hán: mỗi cặp lật đôi thẻ tranh với thẻ chữ Trung, lật trúng phải nói từ.', cards=words([1, 2, 3, 4, 5, 6, 7])[:9], l='zh', t='Memory · 记一记'))
+        for it in pdn([1, 2, 3, 8])[:3] + pdn([7, 9])[:2]:
+            sl.append(S('4', 'bridge', 'Thẻ', 'Phiên dịch nhí không mẫu: một bạn đọc câu tiếng Anh, bạn kia nói tiếng Trung, rồi Hiện để kiểm tra. Cô bấm 🎤 中 từng bé.', hide=True, **it))
+        blocks.append(dict(k='[4]', name='Tiếng Trung · Practice', min=25, acts=['Xiaomei kể Body phần 4', 'Memory tranh – chữ Hán', 'Phiên dịch nhí không mẫu (Greeting 3 câu, Body 2 câu)']))
+        for c in meo_of([10, 11])[:2]:
+            sl.append(S('5', 'sound', 'Chiếu', 'Ôn âm s, a (không dạy quy tắc mới ở buổi 3): con nghe từ, giơ tay rắn hoặc tay kiến.', **c))
+        sl.append(S('5', 'board', 'Thẻ', 'Bảng con: viết fun, clap, stamp; tô 手, 好.', wb=L['wb']))
+        blocks.append(dict(k='[5]', name='Chữ và âm', min=7, acts=['Ôn s, a', 'Bảng con: fun, clap, stamp · 手, 好']))
+        sl.append(S('6', 'present', 'Thẻ', 'Produce Greeting: nhóm 3 bạn diễn rối "Good Morning, Mrs Lan!" (Bông, Mrs Lan, Grandpa), cả hai tiếng. Mỗi nhóm khoảng 1 phút. Cô chấm phiếu đánh giá Unit 1.',
+                     frames=[('Good morning, Mrs Lan!', 'Lan老师，早上好！'), ('Hello, Grandpa!', '爷爷，您好！'), ('Sorry, Leo!', '对不起，Leo！'), ('Goodbye, Mrs Lan! See you tomorrow!', 'Lan老师再见！明天见！')]))
+        sl.append(S('6', 'present', 'Thẻ', 'Body Show nhỏ: mỗi bé giơ người giấy, nói 1–2 câu. Cả lớp vỗ tay hai cái.',
+                     frames=[('This is my body.', '这是我的身体。'), ('Long arms! Long legs!', '胳膊很长，腿也很长！'), ('Two hands! Five fingers!', '两只手！五个手指！')]))
+        blocks.append(dict(k='[6]', name='Đầu ra (Produce)', min=15, acts=['Diễn rối Greeting theo nhóm 3 (chấm phiếu đánh giá)', 'Body Show nhỏ với người giấy']))
+    sl.append(S('7', 'praise', 'Chiếu', 'Vinh danh từng bạn theo việc con làm nhiều nhất (xem cột Các bé); huy hiệu cả lớp.'))
+    sl.append(S('7', 'song', 'Chiếu', 'Goodbye Chant.', chant='bye'))
+    nxt = LOP[n + 1]['days']
+    sl.append(S('7', 'home', 'Chiếu', 'Giao việc ở nhà.', wb=L['wb'], nxt=nxt))
+    blocks.append(dict(k='[7]', name='Vinh danh, việc ở nhà', min=4 if n == 1 else 5, acts=['Vinh danh', 'Goodbye Chant', f'Sách bài tập buổi {n}; web ngày {", ".join(map(str, nxt))}']))
+    base = build_session(n)
+    base.update(slides=sl, blocks=blocks, words=words(days) if n != 3 else words([7]))
+    return base
+
+SESS = {n: (w13(n) if n in (1, 2, 3) else build_session(n)) for n in range(1, 49)}
 
 # Big Book / Reader: truyện của từng unit (reader trên web)
 BOOKS = {}
