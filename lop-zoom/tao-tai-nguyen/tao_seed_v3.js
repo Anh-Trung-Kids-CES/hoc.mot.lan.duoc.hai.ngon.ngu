@@ -1,8 +1,9 @@
 /* Sinh lop-zoom/lz-seed-v3.js – nội dung Lớp Zoom Little Seed · Vòng 3 "Gia đình" (Zoom ngày 21).
    Chỉ dùng tranh và giọng đã có trong web học 21 ngày (xem-truoc/tai-nguyen/little-seed/), không tạo thêm bằng Gemini.
    Nội dung lấy đúng các ngày 15–20 của web học: 8 từ, 6 cụm "my …", 8 câu truyện "Album ảnh nhà Bông", chữ 他 她.
-   Lưu ý tiếng Trung: 他 và 她 cùng đọc tā, nên KHÔNG có câu nghe tiếng Trung bắt con phân biệt he / she
-   (chỉ phân biệt bằng tiếng Anh hoặc bằng nhìn chữ, đúng mục tiêu ngày 18–19).
+   他 và 她 cùng đọc tā: con phân biệt nhiều lần trong buổi bằng he / she (tiếng Anh) và bằng tiếng tā ĐI KÈM MẶT CHỮ
+   (bộ 亻 là người, bộ 女 là nữ). Mọi câu tiếng Trung có he / she đều hiện chữ trên màn (nghe: true hoặc chu),
+   không có câu chỉ nghe tā mà không thấy chữ. (Theo chỉ đạo 08/11: cứ phân biệt 他 – 她 cùng he – she, nhiều lần, có tiếng và mặt chữ.)
    Chạy: node lop-zoom/tao-tai-nguyen/tao_seed_v3.js  (báo lỗi nếu câu nào chưa có file giọng hoặc tranh) */
 const fs = require('fs'), path = require('path');
 const ROOT = path.join(__dirname, '..', '..'), XT = path.join(ROOT, 'xem-truoc');
@@ -55,18 +56,21 @@ const STORY = [
   ['tr3_c5', 's_bro'], ['tr3_c6', 's_lsis'], ['tr3_c7', 's_bsis'], ['tr3_c8', 's_lbro'],
 ].map(([img, k]) => ({ img: imF(img).im, en: W[k].en, zh: W[k].zh, ea: W[k].ea, za: W[k].za }));
 
-/* ---------- Ôn nhanh: 10 câu, khó dần: từ → he/she → cụm → câu → nhìn chữ (4 EN, 4 ZH, 2 nhìn chữ) ---------- */
+/* ---------- Ôn nhanh: 12 câu. he / she luôn đi cặp: câu tiếng Anh rồi ngay sau là tiếng tā + mặt chữ 他 / 她 (nghe: true),
+   cuối cùng câu hỏi 她是谁？ có chữ. Còn lại: từ → cụm → câu. ---------- */
 const QUIZ = [
   { k: 'grandpa', l: 'en', o: ['grandma', 'grandpa', 'bro'] },
   { k: 'bsis', l: 'zh', o: ['bsis', 'lsis', 'grandma'] },
+  { k: 'he', l: 'en', o: ['he', 'she', 'six'] },
+  { k: 'he', l: 'doc', chu: '他', a: 'zh', nghe: true, o: ['she', 'six', 'he'] },
   { k: 'lbro', l: 'en', o: ['bro', 'lsis', 'lbro'] },
   { k: 'grandma', l: 'zh', o: ['grandma', 'bsis', 'grandpa'] },
-  { k: 'she', l: 'en', o: ['he', 'she', 'six'] },
+  { k: 'she', l: 'en', o: ['six', 'he', 'she'] },
+  { k: 'she', l: 'doc', chu: '她', a: 'zh', nghe: true, o: ['he', 'she', 'six'] },
   { k: 'm_bro', l: 'zh', o: ['m_lsis', 'm_bro', 'm_gpa'] },
   { k: 's_lsis', l: 'en', o: ['s_lsis', 's_bsis', 's_gma'] },
   { k: 's_gpa', l: 'zh', o: ['s_bro', 's_lbro', 's_gpa'] },
-  { k: 'she', l: 'doc', chu: '她', a: 'zh', o: ['he', 'six', 'she'] },
-  { k: 'he', l: 'doc', chu: '他', a: 'zh', o: ['he', 'she', 'six'] },
+  { k: 'q_she', l: 'doc', chu: '她是谁？', a: 'zh', nghe: true, o: ['q_he', 'six', 'q_she'] },
 ];
 
 /* ---------- Máy bay thanh điệu: từ lặp đọc tiếng đầu theo thanh, tiếng sau đọc nhẹ.
@@ -82,17 +86,20 @@ const TONES = [
   { k: 'she', c: '她', py: 'tā', p0: 'ta', t: 1 },
 ];
 
-/* ---------- Đọc theo cô (6 lượt, chỉ từ có tranh rõ nghĩa; không dùng he/she vì 他/她 cùng âm) ---------- */
+/* ---------- Đọc theo cô (8 lượt): mỗi lượt đọc theo EN rồi ZH (màn hiện he ↔ 他, she ↔ 她), rồi chọn tranh.
+   he / she có 4 lượt: 2 lượt chọn bằng tiếng Anh, 2 lượt nghe tā có hiện mặt chữ (chu). ---------- */
 const DTC = [
-  { k: 'grandpa', o: ['grandma', 'grandpa', 'lbro'] },
-  { k: 'bsis', o: ['lsis', 'bsis', 'bro'] },
-  { k: 'lbro', o: ['lbro', 'bro', 'grandpa'] },
-  { k: 'grandma', o: ['bsis', 'grandma', 'lsis'] },
-  { k: 'bro', o: ['bro', 'lbro', 'grandpa'] },
-  { k: 'lsis', o: ['grandma', 'bsis', 'lsis'] },
+  { k: 'grandpa', l: 'en', o: ['grandma', 'grandpa', 'lbro'] },
+  { k: 'bsis', l: 'zh', o: ['lsis', 'bsis', 'bro'] },
+  { k: 'he', l: 'en', o: ['he', 'she', 'six'] },
+  { k: 'she', l: 'zh', chu: '她', o: ['six', 'she', 'he'] },
+  { k: 'lbro', l: 'en', o: ['lbro', 'bro', 'grandpa'] },
+  { k: 'grandma', l: 'zh', o: ['bsis', 'grandma', 'lsis'] },
+  { k: 'she', l: 'en', o: ['she', 'six', 'he'] },
+  { k: 'he', l: 'zh', chu: '他', o: ['six', 'he', 'she'] },
 ];
 /* Đôi bạn / Cô giáo nhỏ (giữ cho phòng cũ): từ và cụm */
-const PAIR_POOL = DTC.concat([
+const PAIR_POOL = DTC.filter(x => !['he', 'she'].includes(x.k)).map(x => ({ k: x.k, o: x.o })).concat([
   { k: 'm_gma', o: ['m_gma', 'm_bsis', 'm_lsis'] },
   { k: 'm_lbro', o: ['m_bro', 'm_lbro', 'm_gpa'] },
   { k: 's_bsis', o: ['s_lsis', 's_gma', 's_bsis'] },
@@ -132,9 +139,10 @@ const used = new Set(Object.keys(W));
   if (q.o.indexOf(q.k) < 0) miss.push('đáp án không nằm trong lựa chọn: ' + q.k);
   const ims = q.o.map(k => W[k].im); if (new Set(ims).size < ims.length) miss.push('trùng tranh trong một câu: ' + q.o.join(','));
 }));
-/* 他 / 她 cùng âm tā: câu nghe tiếng Trung không được đặt he và she cạnh nhau */
+/* 他 / 她 cùng âm tā: câu tiếng Trung có he / she phải hiện mặt chữ (không có câu chỉ nghe tā) */
 const HS = ['he', 'she', 'q_he', 'q_she'];
-QUIZ.filter(q => q.l === 'zh').forEach(q => { if (q.o.filter(k => HS.includes(k)).length > 1) miss.push('câu nghe tiếng Trung có cả he/she: ' + q.k); });
+QUIZ.filter(q => q.l === 'zh').forEach(q => { if (q.o.filter(k => HS.includes(k)).length > 1) miss.push('câu nghe tiếng Trung có he/she mà không hiện chữ: ' + q.k); });
+DTC.filter(q => q.l === 'zh' && HS.includes(q.k) && !q.chu).forEach(q => miss.push('Đọc theo cô: lượt tiếng Trung ' + q.k + ' thiếu mặt chữ'));
 if (miss.length) { console.error('Chưa đủ tài nguyên / nội dung chưa hợp lệ:\n' + miss.join('\n')); process.exit(1); }
 
 /* ---------- ghi tệp ---------- */
@@ -162,10 +170,11 @@ if (LZ_LOP === 'seed-v3') (function () {
   TONES = ${J(TONES)};
   toneAudio = function (x) { return aud(x.k, 'zh'); };
   tonePic = function (x) { return pic(x.k, 1); };
-  TONE_TIP = 'Từ lặp (哥哥, 爷爷, 奶奶, 妹妹, 姐姐, 弟弟): tiếng đầu đọc đúng thanh, tiếng sau đọc nhẹ. Con chọn đường bay của <b>tiếng đầu</b>. 他 và 她 cùng đọc <b>tā</b> (bay ngang).';
+  TONE_TIP = 'Từ lặp (哥哥, 爷爷, 奶奶, 妹妹, 姐姐, 弟弟): tiếng đầu đọc đúng thanh, tiếng sau đọc nhẹ. Con chọn đường bay của <b>tiếng đầu</b>. 他 và 她 cùng đọc <b>tā</b> (bay ngang): cô chỉ vào chữ, 亻 là người (he), 女 là nữ (she).';
 
   PAIR_POOL = ${J(PAIR_POOL)};
   DTC_SEED = ${J(DTC)};
+  DTC_N = DTC_SEED.length;
   NOI = ${J(NOI)};
 
   STORY = ${J(SOUT)};
@@ -194,9 +203,10 @@ if (LZ_LOP === 'seed-v3') (function () {
   const CATS = ${J(CATS)};
   BOSS_ITEMS = [];
   ['fam', 'my', 'cau'].forEach(c => CATS[c].forEach(k => ['en', 'zh'].forEach(l => BOSS_ITEMS.push({ k, l, cat: CATS[c] }))));
-  /* he / she: chỉ tiếng Anh và nhìn chữ (tiếng Trung cùng âm tā) */
-  ['he', 'she'].forEach(k => { BOSS_ITEMS.push({ k, l: 'en', cat: CATS.pro }); BOSS_ITEMS.push({ k, l: 'doc', chu: W[k].zh, cat: CATS.pro }); });
+  /* he / she gặp nhiều lần: tiếng Anh, và tiếng tā kèm mặt chữ 他 / 她 (mỗi loại 2 lần trong bộ câu); câu hỏi 他是谁？/ 她是谁？ có chữ */
+  ['he', 'she'].forEach(k => [1, 2].forEach(() => { BOSS_ITEMS.push({ k, l: 'en', cat: CATS.pro }); BOSS_ITEMS.push({ k, l: 'doc', chu: W[k].zh, nghe: true, cat: CATS.pro }); }));
+  ['q_he', 'q_she'].forEach(k => BOSS_ITEMS.push({ k, l: 'doc', chu: W[k].zh, nghe: true, cat: ['q_he', 'q_she', 'six'] }));
 })();
 `;
 fs.writeFileSync(path.join(ROOT, 'lop-zoom', 'lz-seed-v3.js'), out);
-console.log('Đã ghi lz-seed-v3.js:', Object.keys(WOUT).length, 'từ/câu,', QUIZ.length, 'câu ôn,', TONES.length, 'thanh điệu,', DTC.length, 'lượt Đọc theo cô, Rồng Lửa có', (CATS.fam.length + CATS.my.length + CATS.cau.length) * 2 + 4, 'câu');
+console.log('Đã ghi lz-seed-v3.js:', Object.keys(WOUT).length, 'từ/câu,', QUIZ.length, 'câu ôn,', TONES.length, 'thanh điệu,', DTC.length, 'lượt Đọc theo cô, Rồng Lửa có', (CATS.fam.length + CATS.my.length + CATS.cau.length) * 2 + 10, 'câu');

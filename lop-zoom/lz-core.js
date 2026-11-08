@@ -287,7 +287,7 @@ function songLyrics(big) {
    sau đó cô đọc lại bằng một tiếng (luân phiên EN / ZH), các con chạm chọn 1 trong 3 tranh trên máy mình. Dùng 6 mục đầu của PAIR_POOL. */
 /* Chỉ dùng từ có tranh rõ nghĩa để chọn (08/11): Little Seed dùng số đếm (tranh đếm đồ vật); Canopy dùng nghề, nơi chốn, người trong nhà.
    Bỏ các từ/câu khó vẽ rõ (you, name, câu hỏi tên/tuổi…) vì tranh dễ gây nhầm. */
-const DTC_N = 6;
+let DTC_N = 6;
 let DTC_SEED = [
   { k: 'four', o: ['four', 'six', 'two'] }, { k: 'two', o: ['three', 'one', 'two'] }, { k: 'six', o: ['five', 'six', 'four'] },
   { k: 'one', o: ['one', 'three', 'five'] }, { k: 'five', o: ['two', 'three', 'five'] }, { k: 'three', o: ['six', 'three', 'one'] }
@@ -298,7 +298,8 @@ function dtcList() {
   const L = DTC_CANOPY.map(k => PAIR_POOL.find(x => x.k === k)).filter(Boolean);
   return L.length >= 3 ? L : PAIR_POOL.slice(0, DTC_N);
 }
-function dtcItem(i) { const L = dtcList(), it = L[i % L.length]; return { k: it.k, o: it.o, l: i % 2 ? 'zh' : 'en' }; }
+/* it.l: lượt này chọn tranh bằng tiếng nào (mặc định xen kẽ EN / ZH); it.chu: lượt tiếng Trung hiện kèm mặt chữ (他 / 她 cùng âm tā) */
+function dtcItem(i) { const L = dtcList(), it = L[i % L.length]; return { k: it.k, o: it.o, l: it.l || (i % 2 ? 'zh' : 'en'), chu: it.chu || '' }; }
 
 /* Cô nói, con nói tiếng kia (cuối buổi, 08/11/2026): mỗi con một tranh và một nội dung mẫu 2–3 câu theo mẫu câu của tuần.
    Cô (giọng cô Hươu) nói từng câu bằng tiếng Anh, con nói lại bằng tiếng Trung; lượt sau đổi chiều (cô nói tiếng Trung, con nói tiếng Anh).

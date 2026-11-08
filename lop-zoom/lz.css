@@ -312,6 +312,7 @@ body.boss-play .stage{padding:6px}
 .bs-q{display:flex;align-items:center;justify-content:center;background:#fff;border-radius:22px;border:3px solid var(--line);padding:10px;position:relative}
 .bq{display:flex;flex-direction:column;align-items:center;gap:10px;width:100%;position:relative}
 .b-say{font-size:26px;padding:8px 22px}.b-chu{font-size:80px;padding:4px 30px}
+.dtc-chu{font-size:76px;padding:4px 28px;margin:2px auto 8px}
 .b-plus{position:absolute;top:30%;left:50%;transform:translateX(-50%);font-size:70px;font-weight:800;color:#C99A00;animation:plusUp .75s ease-out forwards;pointer-events:none;text-shadow:0 0 18px #FFE14A;display:flex;align-items:center;gap:4px}
 .b-plus b{font-size:44px}
 @keyframes plusUp{0%{transform:translate(-50%,10px) scale(.6);opacity:0}30%{opacity:1;transform:translate(-50%,0) scale(1.15)}100%{transform:translate(-50%,-60px) scale(1);opacity:0}}

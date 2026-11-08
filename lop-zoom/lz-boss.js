@@ -158,10 +158,10 @@ function vBoss(st, seats) {
 function bossAsk() {
   const box = $('#bq'); if (!box) return;
   const it = BQ.it = bossPick(BQ.it, bossMissed), lang = it.l;
-  box.innerHTML = `${it.l === 'doc' ? `<div class="chu zh b-chu">${it.chu}</div>`
+  box.innerHTML = `${it.l === 'doc' ? `<div class="chu zh b-chu">${it.chu}</div>${it.nghe ? '<button class="say zh b-say" id="bPlay"><span class="ic">🔊</span><span>中文</span></button>' : ''}`
       : `<button class="say ${lang} b-say" id="bPlay"><span class="ic">🔊</span><span>${lang === 'zh' ? '中文' : 'English'}</span></button>`}
     <div class="pics" id="pics">${it.o.map((k, c) => `<button class="pick" data-c="${c}"><img src="${pic(k, 2)}" alt=""></button>`).join('')}</div>`;
-  const a = it.l === 'doc' ? '' : aud(it.k, lang);
+  const a = it.l === 'doc' ? (it.nghe ? aud(it.k, 'zh') : '') : aud(it.k, lang);
   if (a) { play([a]); $('#bPlay').onclick = () => play([a]); }
   const t0 = performance.now();
   $$('.pick', box).forEach(b => b.onclick = () => {

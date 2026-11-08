@@ -328,7 +328,7 @@ function vDtc(st, seats) {
     audio: rv ? [a, 600, a] : [a, 700, a],
     html: `<div class="qno">📖 Đọc theo cô · ${i + 1}/${DTC_N} <span class="flag ${l}">${l === 'zh' ? '中文' : 'English'}</span>${headAllowed(st) ? HEAD_TAG : ''}</div>
       <p class="ask-line">👂 Con nghe rồi chạm vào tranh đúng nhé!</p>
-      <button class="say ${l}" data-play><span class="ic">🔊</span>${rv && CHIEU ? `<span class="${l}">${esc(txt(it.k, l))}</span>` : '<span>Nghe</span>'}</button>
+      ${it.chu && l === 'zh' ? `<div class="chu zh dtc-chu">${esc(it.chu)}</div>` : ''}<button class="say ${l}" data-play><span class="ic">🔊</span>${rv && CHIEU ? `<span class="${l}">${esc(txt(it.k, l))}</span>` : '<span>Nghe</span>'}</button>
       <div class="pics${my || rv || CHIEU ? ' locked' : ''}" id="pics">${pics}</div><p class="count" id="cnt"></p>
       ${rv && CHIEU ? `<p class="sub">Cả lớp cùng đọc lại nhé: <b class="${l}">${esc(txt(it.k, l))}</b></p>` : ''}${dots}`,
     bind() { bindPlay(() => [a]); bindPicks(qid, c => ({ c, ok: c === ans })); if (rv && my && my.ok) giveStar(qid, 'dtc'); this.update(); },
@@ -358,21 +358,22 @@ function vCn(st, seats) {
 function vQuiz(st, seats) {
   const i = Math.min(QUIZ.length - 1, st.i || 0), q = QUIZ[i], qid = `on_${i}_${st.run || 0}`, rv = st.step === 'rv';
   const ans = quizAns(q), my = myAnswer(qid), lang = quizLang(q), a = quizAudio(q);
-  const flag = { en: 'English', zh: '中文', doc: 'Nhìn chữ' }[lang];
+  const flag = q.nghe ? '中文 · nhìn chữ' : { en: 'English', zh: '中文', doc: 'Nhìn chữ' }[lang];
   const key = ['on', i, st.run || 0, rv ? 1 : 0, my ? my.c : '-'].join('|');
-  const prompt = q.l === 'doc' ? `<div class="chu ${/[a-z]/i.test(q.chu) ? 'latin' : 'zh'}">${esc(q.chu)}</div>`
+  const prompt = q.l === 'doc' ? `<div class="chu ${/[a-z]/i.test(q.chu) ? 'latin' : 'zh'}">${esc(q.chu)}</div>${q.nghe ? `<button class="say zh" data-play><span class="ic">🔊</span><span>Nghe</span></button>` : ''}`
     : `<button class="say ${q.l}" data-play><span class="ic">🔊</span>${rv && CHIEU ? `<span class="${q.l}">${esc(txt(q.k, q.l))}</span>` : '<span>Nghe</span>'}</button>`;
   const pics = quizPics(q).map((src, c) => `<button class="pick${my && my.c === c ? ' chosen' : ''}${rv && CHIEU && c === ans ? ' right' : ''}${rv && CHIEU && c !== ans ? ' dim' : ''}" data-c="${c}" aria-label="Tranh ${c + 1}"><img src="${src}" alt=""></button>`).join('');
   let after = '';
   if (rv && CHIEU) after = `<p class="sub">Cả lớp cùng nghe nhé: <b class="${lang === 'doc' ? q.a : lang}">${esc(q.l === 'doc' ? q.chu : txt(q.k, q.l))}</b></p>`;
   let audio, akey = ['on', i, st.run || 0, rv ? 1 : 0, st.rp || 0].join('|');
   if (rv) audio = [a, 600, a];
+  else if (q.l === 'doc' && q.nghe) audio = [a, 700, a];   // nghe tiếng và nhìn mặt chữ cùng lúc (他 / 她)
   else if (q.l === 'doc') audio = [hd('Con nhìn lại chữ nhé.')];
   else audio = i === 0 && !st.rp ? [hd('Con nghe và chạm vào tranh đúng nhé!'), 400, a, 700, a] : [a, 700, a];
   return {
     key, akey, audio,
     html: `<div class="qno">Câu ${i + 1}/${QUIZ.length} <span class="flag ${lang}">${flag}</span>${headAllowed(st) ? HEAD_TAG : ''}</div>
-      <p class="ask-line">${q.l === 'doc' ? '👀 Con nhìn chữ rồi chạm vào tranh đúng nhé!' : '👂 Con nghe và chạm vào tranh đúng nhé!'}</p>${prompt}
+      <p class="ask-line">${q.l === 'doc' ? (q.nghe ? '👂👀 Con nghe, nhìn chữ rồi chạm vào tranh đúng nhé!' : '👀 Con nhìn chữ rồi chạm vào tranh đúng nhé!') : '👂 Con nghe và chạm vào tranh đúng nhé!'}</p>${prompt}
       <div class="pics${my || rv || CHIEU ? ' locked' : ''}" id="pics">${pics}</div><p class="count" id="cnt"></p>${after}`,
     bind() { bindPlay(() => [a]); bindPicks(qid, c => ({ c, ok: c === ans })); if (rv && my && my.ok) giveStar(qid, 'on_' + lang); this.update(); },
     update() { const n = countAnswered(qid, seats); $('#cnt').textContent = rv ? '' : `${n}/${seats.length} bạn đã chọn`; }
