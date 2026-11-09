@@ -1,5 +1,10 @@
 # Kiểm tra 4 nguyên tắc cho một phần: python3 check_principles.py canopy-a
 import json, re, sys, glob
+
+def _moi(tu):
+    """Gộp mọi đoạn Mới (kể cả 'Mới · lõi', 'Mới · vòng ngoài') thành một đoạn, để kiểm như trước."""
+    parts=[re.sub(r'^\s*Mới(?:\s*·\s*(?:lõi|vòng ngoài))?(?:\s*\([^)]*\))?\s*:','',x) for x in tu.split(' | ') if re.match(r'\s*Mới',x)]
+    return re.match(r'(.*)',('Mới:'+', '.join(p.strip() for p in parts)+' |') if parts else '')
 import os as _os
 _K=_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))+'/'
 _CT=_os.path.abspath(_K+'../..')+'/'
@@ -36,7 +41,7 @@ for r in rows:
         n=w['ngay']
         if cid!='preb':
             if '[Cầu nối]' not in w['zh']['cau']: fail('[Cầu nối] trong câu zh mỗi ngày web','ngày %s'%n)
-            m=re.search(r'Mới:(.*?)(\||$)',w['zh']['tu'],re.S)
+            m=re.search(r'Mới:(.*?)(\||$)',_moi(w['zh']['tu']).group(1),re.S)
             if m and re.search(r'[一-鿿]',m.group(1)):
                 for it in re.split(r'[,，]\s*(?=[一-鿿])',m.group(1).strip()):
                     if not re.search(r'[一-鿿]',it): continue

@@ -1,4 +1,9 @@
 import json,re,collections
+
+def _moi(tu):
+    """Gộp mọi đoạn Mới (kể cả 'Mới · lõi', 'Mới · vòng ngoài') thành một đoạn, để kiểm như trước."""
+    parts=[re.sub(r'^\s*Mới(?:\s*·\s*(?:lõi|vòng ngoài))?(?:\s*\([^)]*\))?\s*:','',x) for x in tu.split(' | ') if re.match(r'\s*Mới',x)]
+    return re.match(r'(.*)',('Mới:'+', '.join(p.strip() for p in parts)+' |') if parts else '')
 import os as _os
 _K=_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))+'/'
 _CT=_os.path.abspath(_K+'../..')+'/'
@@ -16,7 +21,7 @@ for x in kho.values():
     if x.get('zh') and x.get('en'): gl.setdefault(x['zh'],set()).update(re.findall(r'[a-z]+',x['en'].lower()))
 HAN=re.compile(r'[一-鿿]+')
 def new_zh(tu):
-    m=re.search(r'Mới:(.*?)(\||$)',tu,re.S)
+    m=re.search(r'Mới:(.*?)(\||$)',_moi(tu).group(1),re.S)
     return HAN.findall(m.group(1)) if m else []
 BR=re.compile(r'Cầu nối|so sánh|giống nhau|khác nhau|cùng nghĩa|giống tiếng Anh|khác tiếng Anh|như tiếng Anh|EN ?↔ ?ZH|Anh ?↔ ?Trung',re.I)
 MED=re.compile(r'Phiên dịch nhí|chuyển ngữ|NL\d|nói lại bằng tiếng|dịch sang|mediation',re.I)
