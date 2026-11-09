@@ -836,7 +836,7 @@
     "phan": [
      {
       "phan": 1,
-      "y": "Vũ cho Leo xem ảnh gia đình: chú Minh đã cưới vợ, đây là chồng (husband) và vợ (wife) của chú.",
+      "y": "Vũ cho Leo xem ảnh cưới của bố mẹ: bố là chồng (husband), mẹ là vợ (wife).",
       "tu_moi_vao": [
        "married",
        "husband",
@@ -845,7 +845,7 @@
      },
      {
       "phan": 2,
-      "y": "Bông là cháu gái (niece), Vũ là cháu trai (nephew); cả nhà cùng họ Trần (surname), ai cũng bảo Bông trông giống (look like) cô Mai.",
+      "y": "Bông là cháu gái (niece), Vũ là cháu trai (nephew); bố Bông và bố Vũ là anh em nên cả nhà cùng họ Trần (surname), ai cũng bảo Bông trông giống (look like) mẹ của Vũ.",
       "tu_moi_vao": [
        "niece",
        "nephew",
@@ -1013,11 +1013,11 @@
    {
     "id": "T6",
     "loai": "Truyện anh em",
-    "ten_en": "Aunt Mai Works as a Nurse",
+    "ten_en": "Vũ's Mom Works as a Nurse",
     "ten_zh": "阿姨是护士",
     "khung_en": "She works as a ___.",
     "khung_zh": "她是___。",
-    "tinh_huong": "Cùng nhân vật, tình huống mới: Vũ và Bông đến bệnh viện thăm cô Mai (y tá) rồi đi xe buýt của chú Minh (người bán vé); áo của Bông rách lỗ, cô Mai vừa trò chuyện vừa khâu lại.",
+    "tinh_huong": "Cùng nhân vật, tình huống mới: Vũ và Bông đến bệnh viện thăm mẹ của Vũ (y tá, cũng là bác gái của Bông) rồi đi xe buýt, gặp bác bán vé (vai phụ, không tên); áo của Bông rách lỗ, mẹ của Vũ vừa trò chuyện vừa khâu lại.",
     "tu_en": [
      "husband",
      "wife",
@@ -1126,7 +1126,7 @@
     "ly_do": "'surname' là từ lõi tiếng Anh; 姓 là mẫu câu cơ bản (你姓什么？) nên nên cùng nhãn lõi."
    }
   ],
-  "ghi_chu": "Lịch Pupa: ngày 1–5 kể dần T1, ngày 6 nghe cả T1; ngày 7 truyện anh em T6; ngày 8 đọc dạng đề T7. Không dùng tên 'Nhan' trong truyện cũ: thay bằng Vũ; 'Aunt Lan' đổi thành cô Mai để không trùng cô Lan. Danh sách EN và ZH của unit không trùng nghĩa, nên bản Trung giữ cùng khung, cùng số ô, cùng tranh và động tác; ô Trung dùng từ Trung của unit gần tranh nhất.",
+  "ghi_chu": "Lịch Pupa: ngày 1–5 kể dần T1, ngày 6 nghe cả T1; ngày 7 truyện anh em T6; ngày 8 đọc dạng đề T7. Không dùng tên 'Nhan' trong truyện cũ: thay bằng Vũ; 'Aunt Lan' trong truyện cũ đổi thành mẹ của Vũ (bác gái của Bông), để không trùng cô Lan và không thêm nhân vật mới. Danh sách EN và ZH của unit không trùng nghĩa, nên bản Trung giữ cùng khung, cùng số ô, cùng tranh và động tác; ô Trung dùng từ Trung của unit gần tranh nhất.",
   "van_ban_theo_ngay": [
    [
     "T1 phần 1",

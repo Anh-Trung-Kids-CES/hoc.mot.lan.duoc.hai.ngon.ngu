@@ -13,8 +13,8 @@
    {"id": "T1", "loai": "Truyện khung", "ten_en": "The King and Queen of Our Family", "ten_zh": "我家的国王和王后",
     "khung_en": "Who is he? He is my ___.", "khung_zh": "他是谁？他是我的___。",
     "phan": [
-     {"phan": 1, "y": "Vũ cho Leo xem ảnh gia đình: chú Minh đã cưới vợ, đây là chồng (husband) và vợ (wife) của chú.", "tu_moi_vao": ["married", "husband", "wife"]},
-     {"phan": 2, "y": "Bông là cháu gái (niece), Vũ là cháu trai (nephew); cả nhà cùng họ Trần (surname), ai cũng bảo Bông trông giống (look like) cô Mai.", "tu_moi_vao": ["niece", "nephew", "surname", "look like"]},
+     {"phan": 1, "y": "Vũ cho Leo xem ảnh cưới của bố mẹ: bố là chồng (husband), mẹ là vợ (wife).", "tu_moi_vao": ["married", "husband", "wife"]},
+     {"phan": 2, "y": "Bông là cháu gái (niece), Vũ là cháu trai (nephew); bố Bông và bố Vũ là anh em nên cả nhà cùng họ Trần (surname), ai cũng bảo Bông trông giống (look like) mẹ của Vũ.", "tu_moi_vao": ["niece", "nephew", "surname", "look like"]},
      {"phan": 3, "y": "Ông bà hóa trang làm vua (as a king) và hoàng hậu (queen) cho buổi chụp ảnh – 'the best grandpa ever!'.", "tu_moi_vao": ["as", "king", "queen", "ever"]},
      {"phan": 4, "y": "Vương miện giấy bị thủng lỗ (hole); ông sửa (repair) – 'Is there enough paper?' 'Of course!'.", "tu_moi_vao": ["hole", "repair", "enough", "of course"]},
      {"phan": 5, "y": "Sửa xong (finish), các cháu (grandchild) chụp ảnh chung – 'Such a big family! And this is ___ (tên con)!'.", "tu_moi_vao": ["finish", "such", "grandchild"]}
@@ -36,9 +36,9 @@
     "khung_en": "One, two – ___ and ___!", "khung_zh": "一个___，一个___，他们俩真像！",
     "tu_en": ["husband", "wife", "married", "king", "queen", "niece", "nephew", "surname", "look like"],
     "tu_zh": ["儿子", "女儿", "俩", "像", "孩子", "姓", "表哥", "亲戚"]},
-   {"id": "T6", "loai": "Truyện anh em", "ten_en": "Aunt Mai Works as a Nurse", "ten_zh": "阿姨是护士",
+   {"id": "T6", "loai": "Truyện anh em", "ten_en": "Vũ's Mom Works as a Nurse", "ten_zh": "阿姨是护士",
     "khung_en": "She works as a ___.", "khung_zh": "她是___。",
-    "tinh_huong": "Cùng nhân vật, tình huống mới: Vũ và Bông đến bệnh viện thăm cô Mai (y tá) rồi đi xe buýt của chú Minh (người bán vé); áo của Bông rách lỗ, cô Mai vừa trò chuyện vừa khâu lại.",
+    "tinh_huong": "Cùng nhân vật, tình huống mới: Vũ và Bông đến bệnh viện thăm mẹ của Vũ (y tá, cũng là bác gái của Bông) rồi đi xe buýt, gặp bác bán vé (vai phụ, không tên); áo của Bông rách lỗ, mẹ của Vũ vừa trò chuyện vừa khâu lại.",
     "tu_en": ["husband", "wife", "married", "surname", "look like", "as", "of course", "ever", "repair", "hole", "enough", "finish", "such", "nephew"],
     "tu_zh": ["叔叔", "阿姨", "儿子", "女儿", "孙子", "护士", "售票员", "俩", "够", "别人", "另外", "好像", "一边…一边…", "无论", "孩子", "表哥"]},
    {"id": "T7", "loai": "Đọc dạng đề", "dang_de": "EN: Cambridge Flyers Reading & Writing Part 5 (đọc truyện, hoàn thành câu 1–4 từ). ZH: YCT4 阅读 第一部分 (看图判断对错) + 第四部分 (选词填空).",
@@ -64,7 +64,7 @@
    {"tu": "像 (= look like)", "nhan_hien_tai": "zh_vong_ngoai", "de_nghi": "zh_loi", "ly_do": "'look like' là từ lõi bên tiếng Anh và là mẫu câu chính của unit; tiếng Trung để vòng ngoài thì hai tiếng lệch nhau."},
    {"tu": "姓 (= surname)", "nhan_hien_tai": "zh_vong_ngoai", "de_nghi": "zh_loi", "ly_do": "'surname' là từ lõi tiếng Anh; 姓 là mẫu câu cơ bản (你姓什么？) nên nên cùng nhãn lõi."}
   ],
-  "ghi_chu": "Lịch Pupa: ngày 1–5 kể dần T1, ngày 6 nghe cả T1; ngày 7 truyện anh em T6; ngày 8 đọc dạng đề T7. Không dùng tên 'Nhan' trong truyện cũ: thay bằng Vũ; 'Aunt Lan' đổi thành cô Mai để không trùng cô Lan. Danh sách EN và ZH của unit không trùng nghĩa, nên bản Trung giữ cùng khung, cùng số ô, cùng tranh và động tác; ô Trung dùng từ Trung của unit gần tranh nhất."
+  "ghi_chu": "Lịch Pupa: ngày 1–5 kể dần T1, ngày 6 nghe cả T1; ngày 7 truyện anh em T6; ngày 8 đọc dạng đề T7. Không dùng tên 'Nhan' trong truyện cũ: thay bằng Vũ; 'Aunt Lan' trong truyện cũ đổi thành mẹ của Vũ (bác gái của Bông), để không trùng cô Lan và không thêm nhân vật mới. Danh sách EN và ZH của unit không trùng nghĩa, nên bản Trung giữ cùng khung, cùng số ô, cùng tranh và động tác; ô Trung dùng từ Trung của unit gần tranh nhất."
  },
  {
   "unit": "2",
