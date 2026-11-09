@@ -1,0 +1,454 @@
+[
+ {
+  "unit": "1",
+  "khoa": "Larva Plus",
+  "chu_de": "Me and my day · Kỹ năng: dạng bài Nghe và Đọc – viết Movers, chiến lược làm bài (Larva U1 · Hello, It's Me)",
+  "ngay_web": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12
+  ],
+  "buoi": [
+   3,
+   4,
+   5,
+   6
+  ],
+  "tu_en": [],
+  "tu_zh": [],
+  "tu_cu_quay_lai": {
+   "en": [
+    "town/city centre"
+   ],
+   "zh": []
+  },
+  "nghe_lai_mang": [
+   "Larva U1"
+  ],
+  "van_ban": [
+   {
+    "id": "R1",
+    "loai": "Mạng văn bản cũ",
+    "nguon": "Larva U1: T1 truyện khung (cài từ hay sai), T2 bài hát, T4 vè"
+   },
+   {
+    "id": "N1",
+    "loai": "Văn bản mới theo dạng đề",
+    "nguon": "nửa thời gian nghe, đọc (ng.t. 7b)"
+   }
+  ],
+  "van_ban_theo_ngay": [
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ]
+  ],
+  "nghe_ngam": {
+   "bo": [
+    "Larva U1 T1, T2, T4"
+   ],
+   "thoi_luong": "6–8 phút",
+   "bac": "cao"
+  }
+ },
+ {
+  "unit": "2",
+  "khoa": "Larva Plus",
+  "chu_de": "Jobs and school · Kỹ năng: Movers Nghe Part 4 và Đọc – viết Part 4, chiến lược làm bài (Larva U3 · When I Grow Up)",
+  "ngay_web": [
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20
+  ],
+  "buoi": [
+   7,
+   8,
+   9,
+   10
+  ],
+  "tu_en": [],
+  "tu_zh": [],
+  "tu_cu_quay_lai": {
+   "en": [],
+   "zh": []
+  },
+  "nghe_lai_mang": [
+   "Larva U3"
+  ],
+  "van_ban": [
+   {
+    "id": "R1",
+    "loai": "Mạng văn bản cũ",
+    "nguon": "Larva U3: T1 truyện khung (cài từ hay sai), T2 bài hát, T4 vè"
+   },
+   {
+    "id": "N1",
+    "loai": "Văn bản mới theo dạng đề",
+    "nguon": "nửa thời gian nghe, đọc (ng.t. 7b)"
+   }
+  ],
+  "van_ban_theo_ngay": [
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ]
+  ],
+  "nghe_ngam": {
+   "bo": [
+    "Larva U3 T1, T2, T4"
+   ],
+   "thoi_luong": "6–8 phút",
+   "bac": "cao"
+  }
+ },
+ {
+  "unit": "3",
+  "khoa": "Larva Plus",
+  "chu_de": "Clothes and shopping · Kỹ năng: Movers Nghe Part 5 và Đọc – viết Part 2, chiến lược làm bài (Larva U4 · My Favourite Colour)",
+  "ngay_web": [
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28
+  ],
+  "buoi": [
+   11,
+   12,
+   13,
+   14
+  ],
+  "tu_en": [],
+  "tu_zh": [],
+  "tu_cu_quay_lai": {
+   "en": [],
+   "zh": []
+  },
+  "nghe_lai_mang": [
+   "Larva U4"
+  ],
+  "van_ban": [
+   {
+    "id": "R1",
+    "loai": "Mạng văn bản cũ",
+    "nguon": "Larva U4: T1 truyện khung (cài từ hay sai), T2 bài hát, T4 vè"
+   },
+   {
+    "id": "N1",
+    "loai": "Văn bản mới theo dạng đề",
+    "nguon": "nửa thời gian nghe, đọc (ng.t. 7b)"
+   }
+  ],
+  "van_ban_theo_ngay": [
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ]
+  ],
+  "nghe_ngam": {
+   "bo": [
+    "Larva U4 T1, T2, T4"
+   ],
+   "thoi_luong": "6–8 phút",
+   "bac": "cao"
+  }
+ },
+ {
+  "unit": "4",
+  "khoa": "Larva Plus",
+  "chu_de": "Animals, weather and health · Kỹ năng: Movers Nghe Part 2 và Đọc – viết Part 3, chiến lược làm bài (Larva U5 · Animals)",
+  "ngay_web": [
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36
+  ],
+  "buoi": [
+   15,
+   16,
+   17,
+   18
+  ],
+  "tu_en": [],
+  "tu_zh": [],
+  "tu_cu_quay_lai": {
+   "en": [],
+   "zh": []
+  },
+  "nghe_lai_mang": [
+   "Larva U5"
+  ],
+  "van_ban": [
+   {
+    "id": "R1",
+    "loai": "Mạng văn bản cũ",
+    "nguon": "Larva U5: T1 truyện khung (cài từ hay sai), T2 bài hát, T4 vè"
+   },
+   {
+    "id": "N1",
+    "loai": "Văn bản mới theo dạng đề",
+    "nguon": "nửa thời gian nghe, đọc (ng.t. 7b)"
+   }
+  ],
+  "van_ban_theo_ngay": [
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ]
+  ],
+  "nghe_ngam": {
+   "bo": [
+    "Larva U5 T1, T2, T4"
+   ],
+   "thoi_luong": "6–8 phút",
+   "bac": "cao"
+  }
+ },
+ {
+  "unit": "5",
+  "khoa": "Larva Plus",
+  "chu_de": "Sports and food · Kỹ năng: Movers Đọc – viết Part 4 và Nghe Part 4, chiến lược làm bài (Larva U6 · I Like Sports)",
+  "ngay_web": [
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44
+  ],
+  "buoi": [
+   19,
+   20,
+   21,
+   22
+  ],
+  "tu_en": [],
+  "tu_zh": [],
+  "tu_cu_quay_lai": {
+   "en": [],
+   "zh": []
+  },
+  "nghe_lai_mang": [
+   "Larva U6"
+  ],
+  "van_ban": [
+   {
+    "id": "R1",
+    "loai": "Mạng văn bản cũ",
+    "nguon": "Larva U6: T1 truyện khung (cài từ hay sai), T2 bài hát, T4 vè"
+   },
+   {
+    "id": "N1",
+    "loai": "Văn bản mới theo dạng đề",
+    "nguon": "nửa thời gian nghe, đọc (ng.t. 7b)"
+   }
+  ],
+  "van_ban_theo_ngay": [
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ]
+  ],
+  "nghe_ngam": {
+   "bo": [
+    "Larva U6 T1, T2, T4"
+   ],
+   "thoi_luong": "6–8 phút",
+   "bac": "cao"
+  }
+ },
+ {
+  "unit": "6",
+  "khoa": "Larva Plus",
+  "chu_de": "Holidays and celebrations · Kỹ năng: Movers Nghe Part 5 và Đọc – viết Part 5, chiến lược làm bài (Larva U11 · My Dream Holiday)",
+  "ngay_web": [
+   45,
+   46,
+   47,
+   48,
+   49,
+   50,
+   51,
+   52
+  ],
+  "buoi": [
+   23,
+   24,
+   25,
+   26
+  ],
+  "tu_en": [],
+  "tu_zh": [],
+  "tu_cu_quay_lai": {
+   "en": [],
+   "zh": []
+  },
+  "nghe_lai_mang": [
+   "Larva U11"
+  ],
+  "van_ban": [
+   {
+    "id": "R1",
+    "loai": "Mạng văn bản cũ",
+    "nguon": "Larva U11: T1 truyện khung (cài từ hay sai), T2 bài hát, T4 vè"
+   },
+   {
+    "id": "N1",
+    "loai": "Văn bản mới theo dạng đề",
+    "nguon": "nửa thời gian nghe, đọc (ng.t. 7b)"
+   }
+  ],
+  "van_ban_theo_ngay": [
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ]
+  ],
+  "nghe_ngam": {
+   "bo": [
+    "Larva U11 T1, T2, T4"
+   ],
+   "thoi_luong": "6–8 phút",
+   "bac": "cao"
+  }
+ }
+]

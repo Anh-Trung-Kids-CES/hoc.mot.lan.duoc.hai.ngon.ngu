@@ -1,0 +1,484 @@
+[
+ {
+  "unit": "1",
+  "khoa": "Butterfly",
+  "chu_de": "Home and family · Kỹ năng: Flyers Nghe Part 1 và Đọc – viết Part 1, chiến lược làm bài; YCT4 Nghe phần 1 và Đọc phần 1 (Pupa U1 · Family, Pupa U5 · Materials) (Anh ~25 phút · Trung ~55 phút)",
+  "ngay_web": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12
+  ],
+  "buoi": [
+   3,
+   4,
+   5,
+   6
+  ],
+  "tu_en": [],
+  "tu_zh": [],
+  "tu_cu_quay_lai": {
+   "en": [
+    "stir-fry",
+    "use ... to ",
+    "bake bread in the oven"
+   ],
+   "zh": [
+    "电饭锅",
+    "一步一步",
+    "用烤箱烤面包",
+    "已经……了"
+   ]
+  },
+  "nghe_lai_mang": [
+   "Pupa U1",
+   "Pupa U5"
+  ],
+  "van_ban": [
+   {
+    "id": "R1",
+    "loai": "Mạng văn bản cũ",
+    "nguon": "Pupa U1: T1 truyện khung (cài từ hay sai), T2 bài hát, T4 vè"
+   },
+   {
+    "id": "R2",
+    "loai": "Mạng văn bản cũ",
+    "nguon": "Pupa U5: T1 truyện khung (cài từ hay sai), T2 bài hát, T4 vè"
+   },
+   {
+    "id": "N1",
+    "loai": "Văn bản mới theo dạng đề",
+    "nguon": "nửa thời gian nghe, đọc (ng.t. 7b)"
+   }
+  ],
+  "van_ban_theo_ngay": [
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R2"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R2"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ]
+  ],
+  "nghe_ngam": {
+   "bo": [
+    "Pupa U1 T1, T2, T4",
+    "Pupa U5 T1, T2, T4"
+   ],
+   "thoi_luong": "6–8 phút",
+   "bac": "cao"
+  }
+ },
+ {
+  "unit": "2",
+  "khoa": "Butterfly",
+  "chu_de": "School and future · Kỹ năng: Flyers Nghe Part 3 và Đọc – viết Part 3, chiến lược làm bài; YCT4 Nghe phần 3 và Đọc phần 3 (Pupa U2 · School, Cocoon U4 · School) (Anh ~25 phút · Trung ~55 phút)",
+  "ngay_web": [
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20
+  ],
+  "buoi": [
+   7,
+   8,
+   9,
+   10
+  ],
+  "tu_en": [],
+  "tu_zh": [],
+  "tu_cu_quay_lai": {
+   "en": [],
+   "zh": [
+    "已经……了"
+   ]
+  },
+  "nghe_lai_mang": [
+   "Pupa U2",
+   "Cocoon U4"
+  ],
+  "van_ban": [
+   {
+    "id": "R1",
+    "loai": "Mạng văn bản cũ",
+    "nguon": "Pupa U2: T1 truyện khung (cài từ hay sai), T2 bài hát, T4 vè"
+   },
+   {
+    "id": "R2",
+    "loai": "Mạng văn bản cũ",
+    "nguon": "Cocoon U4: T1 truyện khung (cài từ hay sai), T2 bài hát, T4 vè"
+   },
+   {
+    "id": "N1",
+    "loai": "Văn bản mới theo dạng đề",
+    "nguon": "nửa thời gian nghe, đọc (ng.t. 7b)"
+   }
+  ],
+  "van_ban_theo_ngay": [
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R2"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R2"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ]
+  ],
+  "nghe_ngam": {
+   "bo": [
+    "Pupa U2 T1, T2, T4",
+    "Cocoon U4 T1, T2, T4"
+   ],
+   "thoi_luong": "6–8 phút",
+   "bac": "cao"
+  }
+ },
+ {
+  "unit": "3",
+  "khoa": "Butterfly",
+  "chu_de": "Weather, nature and disasters · Kỹ năng: Flyers Nghe Part 5 và Đọc – viết Part 5, chiến lược làm bài; YCT4 Nghe phần 1–2 (Pupa U3 · The countryside, Cocoon U3 · Weather) (Anh ~25 phút · Trung ~55 phút)",
+  "ngay_web": [
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28
+  ],
+  "buoi": [
+   11,
+   12,
+   13,
+   14
+  ],
+  "tu_en": [],
+  "tu_zh": [],
+  "tu_cu_quay_lai": {
+   "en": [],
+   "zh": []
+  },
+  "nghe_lai_mang": [
+   "Pupa U3",
+   "Cocoon U3"
+  ],
+  "van_ban": [
+   {
+    "id": "R1",
+    "loai": "Mạng văn bản cũ",
+    "nguon": "Pupa U3: T1 truyện khung (cài từ hay sai), T2 bài hát, T4 vè"
+   },
+   {
+    "id": "R2",
+    "loai": "Mạng văn bản cũ",
+    "nguon": "Cocoon U3: T1 truyện khung (cài từ hay sai), T2 bài hát, T4 vè"
+   },
+   {
+    "id": "N1",
+    "loai": "Văn bản mới theo dạng đề",
+    "nguon": "nửa thời gian nghe, đọc (ng.t. 7b)"
+   }
+  ],
+  "van_ban_theo_ngay": [
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R2"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R2"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ]
+  ],
+  "nghe_ngam": {
+   "bo": [
+    "Pupa U3 T1, T2, T4",
+    "Cocoon U3 T1, T2, T4"
+   ],
+   "thoi_luong": "6–8 phút",
+   "bac": "cao"
+  }
+ },
+ {
+  "unit": "4",
+  "khoa": "Butterfly",
+  "chu_de": "Health, sports and food · Kỹ năng: dạng bài Nghe và Đọc – Viết Flyers, chiến lược làm bài (Pupa U9 · Health)",
+  "ngay_web": [
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36
+  ],
+  "buoi": [
+   15,
+   16,
+   17,
+   18
+  ],
+  "tu_en": [],
+  "tu_zh": [],
+  "tu_cu_quay_lai": {
+   "en": [],
+   "zh": []
+  },
+  "nghe_lai_mang": [
+   "Pupa U9"
+  ],
+  "van_ban": [
+   {
+    "id": "R1",
+    "loai": "Mạng văn bản cũ",
+    "nguon": "Pupa U9: T1 truyện khung (cài từ hay sai), T2 bài hát, T4 vè"
+   },
+   {
+    "id": "N1",
+    "loai": "Văn bản mới theo dạng đề",
+    "nguon": "nửa thời gian nghe, đọc (ng.t. 7b)"
+   }
+  ],
+  "van_ban_theo_ngay": [
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ]
+  ],
+  "nghe_ngam": {
+   "bo": [
+    "Pupa U9 T1, T2, T4"
+   ],
+   "thoi_luong": "6–8 phút",
+   "bac": "cao"
+  }
+ },
+ {
+  "unit": "5",
+  "khoa": "Butterfly",
+  "chu_de": "City, transport and directions · Kỹ năng: dạng bài Nghe và Đọc – Viết Flyers, chiến lược làm bài (Pupa U4 · City life)",
+  "ngay_web": [
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44
+  ],
+  "buoi": [
+   19,
+   20,
+   21,
+   22
+  ],
+  "tu_en": [],
+  "tu_zh": [],
+  "tu_cu_quay_lai": {
+   "en": [],
+   "zh": []
+  },
+  "nghe_lai_mang": [
+   "Pupa U4"
+  ],
+  "van_ban": [
+   {
+    "id": "R1",
+    "loai": "Mạng văn bản cũ",
+    "nguon": "Pupa U4: T1 truyện khung (cài từ hay sai), T2 bài hát, T4 vè"
+   },
+   {
+    "id": "N1",
+    "loai": "Văn bản mới theo dạng đề",
+    "nguon": "nửa thời gian nghe, đọc (ng.t. 7b)"
+   }
+  ],
+  "van_ban_theo_ngay": [
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ]
+  ],
+  "nghe_ngam": {
+   "bo": [
+    "Pupa U4 T1, T2, T4"
+   ],
+   "thoi_luong": "6–8 phút",
+   "bac": "cao"
+  }
+ },
+ {
+  "unit": "6",
+  "khoa": "Butterfly",
+  "chu_de": "Media, music and festivals · Kỹ năng: dạng bài Nghe và Đọc – Viết Flyers, chiến lược làm bài (Cocoon U5 · Television)",
+  "ngay_web": [
+   45,
+   46,
+   47,
+   48,
+   49,
+   50,
+   51,
+   52
+  ],
+  "buoi": [
+   23,
+   24,
+   25,
+   26
+  ],
+  "tu_en": [],
+  "tu_zh": [],
+  "tu_cu_quay_lai": {
+   "en": [],
+   "zh": []
+  },
+  "nghe_lai_mang": [
+   "Cocoon U5"
+  ],
+  "van_ban": [
+   {
+    "id": "R1",
+    "loai": "Mạng văn bản cũ",
+    "nguon": "Cocoon U5: T1 truyện khung (cài từ hay sai), T2 bài hát, T4 vè"
+   },
+   {
+    "id": "N1",
+    "loai": "Văn bản mới theo dạng đề",
+    "nguon": "nửa thời gian nghe, đọc (ng.t. 7b)"
+   }
+  ],
+  "van_ban_theo_ngay": [
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ]
+  ],
+  "nghe_ngam": {
+   "bo": [
+    "Cocoon U5 T1, T2, T4"
+   ],
+   "thoi_luong": "6–8 phút",
+   "bac": "cao"
+  }
+ }
+]

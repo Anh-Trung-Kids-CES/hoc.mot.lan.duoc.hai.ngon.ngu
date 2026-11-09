@@ -27,6 +27,16 @@ def norm_en(t):
     return ' ' + re.sub(r"[^a-z' ]+", ' ', t) + ' '
 
 
+def forms(w):
+    out = {w}
+    if w and ' ' not in w:
+        out |= {w + 's', w + 'es', w + 'ed', w + 'd', w + 'ing', w + "'s"}
+        if w.endswith('y'): out |= {w[:-1] + 'ies', w[:-1] + 'ied'}
+        if w.endswith('e'): out.add(w[:-1] + 'ing')
+        if re.search(r'[^aeiou][aeiou][bdgmnprt]$', w): out |= {w + w[-1] + 'ing', w + w[-1] + 'ed'}
+    return out
+
+
 def appearances(where):
     """Đếm số lần trong chuỗi mô tả nơi xuất hiện, ví dụ 'T1 phần 2 + T3' -> 2, 'T1 phần 1, phần 4' -> 2."""
     if not where:
@@ -100,8 +110,10 @@ def main(as_json=False):
     for c in ORDER:
         for r in load_rows(c):
             for w in r['web']:
-                units[c].append((norm_en(' '.join(w['en'].values())), ' '.join(w['zh'].values())))
-            units[c].append((norm_en(' '.join(r['lop']['en'].values())), ' '.join(r['lop']['zh'].values())))
+                t = ' '.join(w['en'].values())
+                units[c].append((norm_en(t) + norm_en(t.replace('-', ' ')), ' '.join(w['zh'].values())))
+            t = ' '.join(r['lop']['en'].values())
+            units[c].append((norm_en(t) + norm_en(t.replace('-', ' ')), ' '.join(r['lop']['zh'].values())))
     for x in cov:
         end = ORDER.index(MIL[x['level']])
         vs = [v for v in (re.sub(r'\s+', ' ', y).strip() for y in re.split(r'[/,]', re.sub(r'\(.*?\)', '', x['word']))) if v]
@@ -111,7 +123,7 @@ def main(as_json=False):
         for ci, c in enumerate(ORDER[:end + 1]):
             for e, z in units[c]:
                 if x['lang'] == 'Tiếng Anh':
-                    if any(norm_en(v).strip() and (' ' + norm_en(v).strip() + ' ') in e or (' ' + norm_en(v).strip() + 's ') in e for v in vs):
+                    if any((' ' + f + ' ') in e for v in vs for f in forms(norm_en(v).strip()) if f):
                         n += 1
                 elif any(v in z for v in vs):
                     n += 1

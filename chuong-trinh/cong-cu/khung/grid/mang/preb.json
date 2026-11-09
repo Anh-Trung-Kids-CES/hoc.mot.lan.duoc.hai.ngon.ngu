@@ -1,0 +1,4645 @@
+[
+ {
+  "unit": "1",
+  "khoa": "PreB",
+  "chu_de": "Greeting – Chào cô, chào bạn",
+  "ngay_web": [
+   5,
+   6,
+   7,
+   8
+  ],
+  "buoi": [
+   3,
+   4
+  ],
+  "tu_en": [
+   {
+    "tu": "hello",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 5",
+    "goi_lai": [
+     5,
+     6,
+     9,
+     17,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "goodbye",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 5",
+    "goi_lai": [
+     5,
+     6,
+     9,
+     17,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "teacher",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 5",
+    "goi_lai": [
+     5,
+     6,
+     9,
+     17,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "friend",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 6",
+    "goi_lai": [
+     6,
+     7,
+     10,
+     18,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "boy",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 6",
+    "goi_lai": [
+     6,
+     7,
+     10,
+     18,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "girl",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 6",
+    "goi_lai": [
+     6,
+     7,
+     10,
+     18,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "yes",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 7",
+    "goi_lai": [
+     7,
+     8,
+     11,
+     19,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "no",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 7",
+    "goi_lai": [
+     7,
+     8,
+     11,
+     19,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   }
+  ],
+  "tu_zh": [],
+  "tu_cu_quay_lai": {
+   "en": [],
+   "zh": []
+  },
+  "khung_cau": {
+   "en": "Hello, ___!",
+   "zh": "",
+   "o": "người được chào (teacher, friend, tên bạn)"
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "Let's learn!",
+    "zh": ""
+   },
+   {
+    "en": "Listen!",
+    "zh": ""
+   },
+   {
+    "en": "Good job!",
+    "zh": ""
+   }
+  ],
+  "van_ban": [
+   {
+    "id": "T1",
+    "loai": "Truyện khung",
+    "ten_en": "Hello, Friend!",
+    "ten_zh": "",
+    "khung_en": "Hello, ___!",
+    "khung_zh": "",
+    "phan": [
+     {
+      "phan": 1,
+      "y": "Bông đến lớp, chào cô Lan và các bạn: \"Hello, teacher! Hello, friend!\" – cô đáp \"Hello, Bông!\"",
+      "tu_moi_vao": [
+       "hello",
+       "teacher",
+       "friend"
+      ]
+     },
+     {
+      "phan": 2,
+      "y": "Leo hỏi Bông \"Are you a boy?\" – Bông lắc đầu \"No! I'm a girl.\" – Leo: \"I'm a boy.\"",
+      "tu_moi_vao": [
+       "boy",
+       "girl",
+       "no"
+      ]
+     },
+     {
+      "phan": 3,
+      "y": "Leo hỏi \"Are you my friend?\" – Bông gật \"Yes!\"; chuông ding dong, cả lớp chào \"Goodbye, teacher!\"; câu cuối: \"Goodbye, ___ (tên con)!\"",
+      "tu_moi_vao": [
+       "yes",
+       "goodbye"
+      ]
+     }
+    ],
+    "tu_en": [
+     "hello",
+     "goodbye",
+     "teacher",
+     "friend",
+     "boy",
+     "girl",
+     "yes",
+     "no"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T2",
+    "loai": "Bài hát vận động",
+    "kieu": "hỏi–đáp",
+    "giai_dieu": "dân gian hết bản quyền: Frère Jacques",
+    "khung_en": "Are you a ___? – Yes, yes, yes! / No, no, no!",
+    "khung_zh": "",
+    "o_thay": [
+     "boy",
+     "girl",
+     "friend",
+     "teacher"
+    ],
+    "dong_tac": "boy: khoe cơ tay; girl: vuốt tóc; friend: khoác vai bạn; teacher: giơ ngón tay như cô giảng; 'yes' gật đầu, 'no' lắc đầu. Lần cuối: \"Are you ___ (tên con)? – Yes!\"",
+    "tu_en": [
+     "boy",
+     "girl",
+     "friend",
+     "teacher",
+     "yes",
+     "no"
+    ],
+    "tu_zh": [],
+    "ghi_chu_thanh": ""
+   },
+   {
+    "id": "T3",
+    "loai": "Big book mẫu câu",
+    "kieu": "liệt kê",
+    "khung_en": "Hello, ___!",
+    "khung_zh": "",
+    "tu_en": [
+     "hello",
+     "goodbye",
+     "teacher",
+     "friend",
+     "boy",
+     "girl"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T4",
+    "loai": "Vè",
+    "kieu": "cặp đối lập",
+    "khung_en": "___, ___ – clap, clap!",
+    "khung_zh": "",
+    "tu_en": [
+     "hello",
+     "goodbye",
+     "yes",
+     "no",
+     "boy",
+     "girl"
+    ],
+    "tu_zh": []
+   }
+  ],
+  "dem_vong_ngoai": {},
+  "de_nghi_doi_nhan": [],
+  "ghi_chu": "Ngày web 1–3 kể dần phần 1–3, ngày 4 nghe cả truyện. T3: mỗi trang một người chào (Hello, teacher! / Hello, friend! / Hello, Leo – a boy! / Hello, Anna – a girl!), trang cuối \"Goodbye, ___ (tên con)!\". T4 vè vỗ tay theo cặp: hello–goodbye (vẫy tay chào / vẫy tay tạm biệt), yes–no (gật / lắc), boy–girl.",
+  "van_ban_theo_ngay": [
+   [
+    "T1 phần 1",
+    "T2"
+   ],
+   [
+    "T1 phần 2 (+ nghe lại phần trước)",
+    "T2",
+    "T4"
+   ],
+   [
+    "T1 phần 3 (+ nghe lại phần trước)",
+    "T3",
+    "T2"
+   ],
+   [
+    "T1 cả truyện",
+    "T4",
+    "T3"
+   ]
+  ],
+  "van_ban_tren_lop": [
+   {
+    "vai": "Introduce",
+    "van_ban": [
+     "T1",
+     "T2",
+     "T3",
+     "T4"
+    ],
+    "vai_cua_con": "nghe, chỉ tranh"
+   },
+   {
+    "vai": "Practice",
+    "van_ban": [
+     "T1",
+     "T2",
+     "T3",
+     "T4"
+    ],
+    "vai_cua_con": "nói cùng, thay tên mình/bạn vào ô"
+   }
+  ],
+  "nghe_ngam": {
+   "bo": [
+    "T1 Truyện khung",
+    "T2 Bài hát vận động",
+    "T3 Big book mẫu câu",
+    "T4 Vè"
+   ],
+   "on_xoan_oc": [],
+   "thoi_luong": "6–8 phút (bộ của unit) + 1–2 bài unit cũ",
+   "bac": "đầu",
+   "cach_nghe": "2–3 lượt × 10–15 phút/ngày theo mốc cố định; hiểu trước (nghe có reader hoặc gặp trên lớp) rồi mới nghe ngấm (ng.t. 48–49)",
+   "noi_dung": "chủ yếu bài hát, vè, câu cửa miệng; truyện khung ở bản nghe cùng reader"
+  },
+  "reader": {
+   "van_ban": [
+    "T1"
+   ],
+   "in": "A5, mã QR tới 2 bản audio (cùng reader có tiếng hiệu lật trang; nghe ngấm tốc độ tự nhiên)",
+   "cach_dung": "nghe và chỉ nhân vật, đồ vật; tiếng Trung có pinyin"
+  },
+  "bo_hoc_tai_nha": {
+   "flashcard_en": [
+    "hello",
+    "goodbye",
+    "teacher",
+    "friend",
+    "boy",
+    "girl",
+    "yes",
+    "no"
+   ],
+   "flashcard_zh": [],
+   "poster_the_gioi": [
+    "hello",
+    "goodbye",
+    "teacher",
+    "friend",
+    "boy",
+    "girl",
+    "yes",
+    "no"
+   ],
+   "poster_cau_cua_mieng": [
+    "Let's learn! / ",
+    "Listen! / ",
+    "Good job! / "
+   ],
+   "mo_khoa": "mở khi con học tới unit này; đồ unit cũ giữ nguyên (ng.t. 56)"
+  }
+ },
+ {
+  "unit": "2",
+  "khoa": "PreB",
+  "chu_de": "Name and age – Tên con là gì? Con mấy tuổi?",
+  "ngay_web": [
+   9,
+   10,
+   11,
+   12
+  ],
+  "buoi": [
+   5,
+   6
+  ],
+  "tu_en": [
+   {
+    "tu": "name",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 9",
+    "goi_lai": [
+     9,
+     10,
+     13,
+     21,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "one",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 9",
+    "goi_lai": [
+     9,
+     10,
+     13,
+     21,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "two",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 9",
+    "goi_lai": [
+     9,
+     10,
+     13,
+     21,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "three",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 10",
+    "goi_lai": [
+     10,
+     11,
+     14,
+     22,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "four",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 10",
+    "goi_lai": [
+     10,
+     11,
+     14,
+     22,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "five",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 10",
+    "goi_lai": [
+     10,
+     11,
+     14,
+     22,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "birthday",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 11",
+    "goi_lai": [
+     11,
+     12,
+     15,
+     23,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "cake",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 11",
+    "goi_lai": [
+     11,
+     12,
+     15,
+     23,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   }
+  ],
+  "tu_zh": [],
+  "tu_cu_quay_lai": {
+   "en": [],
+   "zh": []
+  },
+  "khung_cau": {
+   "en": "How old are you? – I'm ___.",
+   "zh": "",
+   "o": "số tuổi"
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "Happy birthday!",
+    "zh": ""
+   },
+   {
+    "en": "Look!",
+    "zh": ""
+   },
+   {
+    "en": "Clap, clap!",
+    "zh": ""
+   }
+  ],
+  "van_ban": [
+   {
+    "id": "T1",
+    "loai": "Truyện khung",
+    "ten_en": "Leo's Birthday Cake",
+    "ten_zh": "",
+    "khung_en": "I'm ___.",
+    "khung_zh": "",
+    "phan": [
+     {
+      "phan": 1,
+      "y": "Anna gặp Leo: \"What's your name?\" – \"My name is Leo.\" Hai bạn vỗ tay \"One, two – clap, clap!\"",
+      "tu_moi_vao": [
+       "name",
+       "one",
+       "two"
+      ]
+     },
+     {
+      "phan": 2,
+      "y": "Cô Lan hỏi tuổi: Vũ \"I'm three.\", Bông \"I'm four.\", Leo đếm ngón tay \"…four, five. I'm five!\"",
+      "tu_moi_vao": [
+       "three",
+       "four",
+       "five"
+      ]
+     },
+     {
+      "phan": 3,
+      "y": "Sinh nhật Leo: \"Look! A birthday cake!\" – cả lớp hát chúc; câu cuối: \"Happy birthday, ___ (tên con)!\"",
+      "tu_moi_vao": [
+       "birthday",
+       "cake"
+      ]
+     }
+    ],
+    "tu_en": [
+     "name",
+     "one",
+     "two",
+     "three",
+     "four",
+     "five",
+     "birthday",
+     "cake"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T2",
+    "loai": "Bài hát vận động",
+    "kieu": "đếm",
+    "giai_dieu": "dân gian hết bản quyền: Twinkle, Twinkle, Little Star",
+    "khung_en": "It's my birthday – I'm ___!",
+    "khung_zh": "",
+    "o_thay": [
+     "three",
+     "four",
+     "five"
+    ],
+    "dong_tac": "Mỗi lần đổi số: đếm \"one, two…\" rồi nhảy tại chỗ đúng số lần và giơ đúng số ngón tay (3 → nhảy 3 lần, 4 → vỗ 4 lần, 5 → dậm chân 5 lần). Lần cuối con hát tuổi của mình: \"I'm ___ (tên con), I'm ___!\"",
+    "tu_en": [
+     "one",
+     "two",
+     "three",
+     "four",
+     "five",
+     "birthday"
+    ],
+    "tu_zh": [],
+    "ghi_chu_thanh": ""
+   },
+   {
+    "id": "T3",
+    "loai": "Big book mẫu câu",
+    "kieu": "hỏi–đáp",
+    "khung_en": "How old are you? – I'm ___.",
+    "khung_zh": "",
+    "tu_en": [
+     "name",
+     "one",
+     "two",
+     "three",
+     "four",
+     "five",
+     "birthday",
+     "cake"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T4",
+    "loai": "Vè",
+    "kieu": "liệt kê",
+    "khung_en": "A birthday cake for ___!",
+    "khung_zh": "",
+    "tu_en": [
+     "name",
+     "one",
+     "two",
+     "birthday",
+     "cake"
+    ],
+    "tu_zh": []
+   }
+  ],
+  "dem_vong_ngoai": {},
+  "de_nghi_doi_nhan": [],
+  "ghi_chu": "Ngày web 1–3 kể dần, ngày 4 nghe cả truyện. T3: mỗi trang một bạn bên bánh có nến (Vũ 3, Bông 4, Leo 5), con đếm nến \"one, two, three…\"; trang cuối \"What's your name? – My name is ___ (tên con).\" T4 vè: \"Name, name – what's your name? One, two – a birthday cake for Leo / Bông / Anna / ___ (tên con)!\"",
+  "van_ban_theo_ngay": [
+   [
+    "T1 phần 1",
+    "T2"
+   ],
+   [
+    "T1 phần 2 (+ nghe lại phần trước)",
+    "T2",
+    "T4"
+   ],
+   [
+    "T1 phần 3 (+ nghe lại phần trước)",
+    "T3",
+    "T2"
+   ],
+   [
+    "T1 cả truyện",
+    "T4",
+    "T3"
+   ]
+  ],
+  "van_ban_tren_lop": [
+   {
+    "vai": "Introduce",
+    "van_ban": [
+     "T1",
+     "T2",
+     "T3",
+     "T4"
+    ],
+    "vai_cua_con": "nghe, chỉ tranh"
+   },
+   {
+    "vai": "Practice",
+    "van_ban": [
+     "T1",
+     "T2",
+     "T3",
+     "T4"
+    ],
+    "vai_cua_con": "nói cùng, thay tên mình/bạn vào ô"
+   }
+  ],
+  "nghe_ngam": {
+   "bo": [
+    "T1 Truyện khung",
+    "T2 Bài hát vận động",
+    "T3 Big book mẫu câu",
+    "T4 Vè"
+   ],
+   "on_xoan_oc": [
+    "U1 T2 bài hát"
+   ],
+   "thoi_luong": "6–8 phút (bộ của unit) + 1–2 bài unit cũ",
+   "bac": "đầu",
+   "cach_nghe": "2–3 lượt × 10–15 phút/ngày theo mốc cố định; hiểu trước (nghe có reader hoặc gặp trên lớp) rồi mới nghe ngấm (ng.t. 48–49)",
+   "noi_dung": "chủ yếu bài hát, vè, câu cửa miệng; truyện khung ở bản nghe cùng reader"
+  },
+  "reader": {
+   "van_ban": [
+    "T1"
+   ],
+   "in": "A5, mã QR tới 2 bản audio (cùng reader có tiếng hiệu lật trang; nghe ngấm tốc độ tự nhiên)",
+   "cach_dung": "nghe và chỉ nhân vật, đồ vật; tiếng Trung có pinyin"
+  },
+  "bo_hoc_tai_nha": {
+   "flashcard_en": [
+    "name",
+    "one",
+    "two",
+    "three",
+    "four",
+    "five",
+    "birthday",
+    "cake"
+   ],
+   "flashcard_zh": [],
+   "poster_the_gioi": [
+    "name",
+    "one",
+    "two",
+    "three",
+    "four",
+    "five",
+    "birthday",
+    "cake"
+   ],
+   "poster_cau_cua_mieng": [
+    "Happy birthday! / ",
+    "Look! / ",
+    "Clap, clap! / "
+   ],
+   "mo_khoa": "mở khi con học tới unit này; đồ unit cũ giữ nguyên (ng.t. 56)"
+  }
+ },
+ {
+  "unit": "3",
+  "khoa": "PreB",
+  "chu_de": "Family – Mẹ, bố, em bé và anh chị em",
+  "ngay_web": [
+   13,
+   14,
+   15,
+   16
+  ],
+  "buoi": [
+   7,
+   8
+  ],
+  "tu_en": [
+   {
+    "tu": "mommy",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 13",
+    "goi_lai": [
+     13,
+     14,
+     17,
+     25,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "daddy",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 13",
+    "goi_lai": [
+     13,
+     14,
+     17,
+     25,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "baby",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 13",
+    "goi_lai": [
+     13,
+     14,
+     17,
+     25,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "brother",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 14",
+    "goi_lai": [
+     14,
+     15,
+     18,
+     26,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "sister",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 14",
+    "goi_lai": [
+     14,
+     15,
+     18,
+     26,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "grandma",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 15",
+    "goi_lai": [
+     15,
+     16,
+     19,
+     27,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "grandpa",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 15",
+    "goi_lai": [
+     15,
+     16,
+     19,
+     27,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "family",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 15",
+    "goi_lai": [
+     15,
+     16,
+     19,
+     27,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   }
+  ],
+  "tu_zh": [],
+  "tu_cu_quay_lai": {
+   "en": [],
+   "zh": []
+  },
+  "khung_cau": {
+   "en": "This is my ___.",
+   "zh": "",
+   "o": "người thân"
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "Look!",
+    "zh": ""
+   },
+   {
+    "en": "I love you!",
+    "zh": ""
+   },
+   {
+    "en": "Shh!",
+    "zh": ""
+   }
+  ],
+  "van_ban": [
+   {
+    "id": "T1",
+    "loai": "Truyện khung",
+    "ten_en": "Bông's Family",
+    "ten_zh": "",
+    "khung_en": "This is my ___.",
+    "khung_zh": "",
+    "phan": [
+     {
+      "phan": 1,
+      "y": "Bông khoe ảnh: \"This is my mommy. This is my daddy.\" Em bé khóc oe oe: \"Hello, baby! Shh!\"",
+      "tu_moi_vao": [
+       "mommy",
+       "daddy",
+       "baby"
+      ]
+     },
+     {
+      "phan": 2,
+      "y": "Bông chỉ anh trai: \"This is my brother.\" Leo chỉ Xiaomei: \"This is my sister.\"",
+      "tu_moi_vao": [
+       "brother",
+       "sister"
+      ]
+     },
+     {
+      "phan": 3,
+      "y": "Ông bà đến chơi: \"This is my grandma. This is my grandpa. This is my family!\"; câu cuối: \"I love my family, ___ (tên con)!\"",
+      "tu_moi_vao": [
+       "grandma",
+       "grandpa",
+       "family"
+      ]
+     }
+    ],
+    "tu_en": [
+     "mommy",
+     "daddy",
+     "baby",
+     "brother",
+     "sister",
+     "grandma",
+     "grandpa",
+     "family"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T2",
+    "loai": "Bài hát vận động",
+    "kieu": "liệt kê",
+    "giai_dieu": "dân gian hết bản quyền: Here We Go Round the Mulberry Bush",
+    "khung_en": "This is my ___, my ___, my ___.",
+    "khung_zh": "",
+    "o_thay": [
+     "mommy",
+     "daddy",
+     "brother",
+     "sister",
+     "grandma",
+     "grandpa"
+    ],
+    "dong_tac": "mommy: hôn gió; daddy: khoe cơ tay; brother: đá bóng; sister: nhảy dây; grandma: đấm lưng; grandpa: vuốt râu. Câu kết: \"This is ___'s (tên con) family!\"",
+    "tu_en": [
+     "mommy",
+     "daddy",
+     "brother",
+     "sister",
+     "grandma",
+     "grandpa"
+    ],
+    "tu_zh": [],
+    "ghi_chu_thanh": ""
+   },
+   {
+    "id": "T3",
+    "loai": "Big book mẫu câu",
+    "kieu": "hỏi–đáp",
+    "khung_en": "Is this your ___? – Yes! / No!",
+    "khung_zh": "",
+    "tu_en": [
+     "mommy",
+     "daddy",
+     "baby",
+     "brother",
+     "sister",
+     "grandma",
+     "grandpa",
+     "family"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T4",
+    "loai": "Vè",
+    "kieu": "đếm",
+    "khung_en": "___ – one! ___ – two!",
+    "khung_zh": "",
+    "tu_en": [
+     "mommy",
+     "daddy",
+     "baby",
+     "brother",
+     "sister",
+     "family"
+    ],
+    "tu_zh": []
+   }
+  ],
+  "dem_vong_ngoai": {},
+  "de_nghi_doi_nhan": [],
+  "ghi_chu": "Ngày web 1–3 kể dần, ngày 4 nghe cả truyện. T3 lật tranh: \"Is this your mommy? – No! It's my grandma.\" (yes/no từ unit 1); trang cuối \"This is my family – and ___ (tên con)!\". T4 vè đếm (số từ unit 2): \"Mommy – one! Daddy – two! Brother – three! Sister – four! Baby – five! My family!\"",
+  "van_ban_theo_ngay": [
+   [
+    "T1 phần 1",
+    "T2"
+   ],
+   [
+    "T1 phần 2 (+ nghe lại phần trước)",
+    "T2",
+    "T4"
+   ],
+   [
+    "T1 phần 3 (+ nghe lại phần trước)",
+    "T3",
+    "T2"
+   ],
+   [
+    "T1 cả truyện",
+    "T4",
+    "T3"
+   ]
+  ],
+  "van_ban_tren_lop": [
+   {
+    "vai": "Introduce",
+    "van_ban": [
+     "T1",
+     "T2",
+     "T3",
+     "T4"
+    ],
+    "vai_cua_con": "nghe, chỉ tranh"
+   },
+   {
+    "vai": "Practice",
+    "van_ban": [
+     "T1",
+     "T2",
+     "T3",
+     "T4"
+    ],
+    "vai_cua_con": "nói cùng, thay tên mình/bạn vào ô"
+   }
+  ],
+  "nghe_ngam": {
+   "bo": [
+    "T1 Truyện khung",
+    "T2 Bài hát vận động",
+    "T3 Big book mẫu câu",
+    "T4 Vè"
+   ],
+   "on_xoan_oc": [
+    "U2 T2 bài hát",
+    "U1 T4 vè"
+   ],
+   "thoi_luong": "6–8 phút (bộ của unit) + 1–2 bài unit cũ",
+   "bac": "đầu",
+   "cach_nghe": "2–3 lượt × 10–15 phút/ngày theo mốc cố định; hiểu trước (nghe có reader hoặc gặp trên lớp) rồi mới nghe ngấm (ng.t. 48–49)",
+   "noi_dung": "chủ yếu bài hát, vè, câu cửa miệng; truyện khung ở bản nghe cùng reader"
+  },
+  "reader": {
+   "van_ban": [
+    "T1"
+   ],
+   "in": "A5, mã QR tới 2 bản audio (cùng reader có tiếng hiệu lật trang; nghe ngấm tốc độ tự nhiên)",
+   "cach_dung": "nghe và chỉ nhân vật, đồ vật; tiếng Trung có pinyin"
+  },
+  "bo_hoc_tai_nha": {
+   "flashcard_en": [
+    "mommy",
+    "daddy",
+    "baby",
+    "brother",
+    "sister",
+    "grandma",
+    "grandpa",
+    "family"
+   ],
+   "flashcard_zh": [],
+   "poster_the_gioi": [
+    "mommy",
+    "daddy",
+    "baby",
+    "brother",
+    "sister",
+    "grandma",
+    "grandpa",
+    "family"
+   ],
+   "poster_cau_cua_mieng": [
+    "Look! / ",
+    "I love you! / ",
+    "Shh! / "
+   ],
+   "mo_khoa": "mở khi con học tới unit này; đồ unit cũ giữ nguyên (ng.t. 56)"
+  }
+ },
+ {
+  "unit": "4",
+  "khoa": "PreB",
+  "chu_de": "Body – Đầu, mắt, tai, mũi, miệng",
+  "ngay_web": [
+   17,
+   18,
+   19,
+   20
+  ],
+  "buoi": [
+   9,
+   10
+  ],
+  "tu_en": [
+   {
+    "tu": "head",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 17",
+    "goi_lai": [
+     17,
+     18,
+     21,
+     29,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "eyes",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 17",
+    "goi_lai": [
+     17,
+     18,
+     21,
+     29,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "ears",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 17",
+    "goi_lai": [
+     17,
+     18,
+     21,
+     29,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "nose",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 18",
+    "goi_lai": [
+     18,
+     19,
+     22,
+     30,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "mouth",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 18",
+    "goi_lai": [
+     18,
+     19,
+     22,
+     30,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "hands",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 19",
+    "goi_lai": [
+     19,
+     20,
+     23,
+     31,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "feet",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 19",
+    "goi_lai": [
+     19,
+     20,
+     23,
+     31,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "touch",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Flyers",
+    "gap_dau": "ngày 19",
+    "goi_lai": [
+     19,
+     20,
+     23,
+     31,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   }
+  ],
+  "tu_zh": [],
+  "tu_cu_quay_lai": {
+   "en": [],
+   "zh": []
+  },
+  "khung_cau": {
+   "en": "Touch your ___!",
+   "zh": "",
+   "o": "bộ phận cơ thể"
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "Ha ha!",
+    "zh": ""
+   },
+   {
+    "en": "Look at me!",
+    "zh": ""
+   },
+   {
+    "en": "Well done!",
+    "zh": ""
+   }
+  ],
+  "van_ban": [
+   {
+    "id": "T1",
+    "loai": "Truyện khung",
+    "ten_en": "Funny Face",
+    "ten_zh": "",
+    "khung_en": "This is my ___.",
+    "khung_zh": "",
+    "phan": [
+     {
+      "phan": 1,
+      "y": "Mẹ chỉ cho em bé: \"Look, baby! This is my head. These are my eyes. These are my ears.\"",
+      "tu_moi_vao": [
+       "head",
+       "eyes",
+       "ears"
+      ]
+     },
+     {
+      "phan": 2,
+      "y": "Leo làm mặt hề: \"This is my nose. This is my mouth.\" Bông cười \"Ha ha!\"",
+      "tu_moi_vao": [
+       "nose",
+       "mouth"
+      ]
+     },
+     {
+      "phan": 3,
+      "y": "Cô Lan chơi trò: \"Touch your nose! Clap your hands! Look at my feet!\"; câu cuối: \"Touch your nose, ___ (tên con)!\"",
+      "tu_moi_vao": [
+       "touch",
+       "hands",
+       "feet"
+      ]
+     }
+    ],
+    "tu_en": [
+     "head",
+     "eyes",
+     "ears",
+     "nose",
+     "mouth",
+     "hands",
+     "feet",
+     "touch"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T2",
+    "loai": "Bài hát vận động",
+    "kieu": "liệt kê",
+    "giai_dieu": "dân gian hết bản quyền: There Is a Tavern in the Town (giai điệu Head, Shoulders, Knees and Toes)",
+    "khung_en": "Touch your ___, touch, touch, touch!",
+    "khung_zh": "",
+    "o_thay": [
+     "head",
+     "eyes",
+     "ears",
+     "nose",
+     "mouth",
+     "feet"
+    ],
+    "dong_tac": "Mỗi lần chạm đúng bộ phận vừa hát; lần sau nhanh hơn. Câu kết: \"Clap your hands, ___ (tên con)!\" – vỗ tay.",
+    "tu_en": [
+     "touch",
+     "head",
+     "eyes",
+     "ears",
+     "nose",
+     "mouth",
+     "feet",
+     "hands"
+    ],
+    "tu_zh": [],
+    "ghi_chu_thanh": ""
+   },
+   {
+    "id": "T3",
+    "loai": "Big book mẫu câu",
+    "kieu": "đếm",
+    "khung_en": "Look! Two ___!",
+    "khung_zh": "",
+    "tu_en": [
+     "head",
+     "eyes",
+     "ears",
+     "nose",
+     "mouth",
+     "hands",
+     "feet",
+     "touch"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T4",
+    "loai": "Vè",
+    "kieu": "hỏi–đáp",
+    "khung_en": "Where's your ___? – Here! Touch, touch!",
+    "khung_zh": "",
+    "tu_en": [
+     "nose",
+     "mouth",
+     "head",
+     "hands",
+     "feet",
+     "touch"
+    ],
+    "tu_zh": []
+   }
+  ],
+  "dem_vong_ngoai": {},
+  "de_nghi_doi_nhan": [],
+  "ghi_chu": "Ngày web 1–3 kể dần, ngày 4 nghe cả truyện. T3 đếm (số unit 2): \"Look! Two eyes! Touch!\" / two ears / two hands / two feet, rồi \"One nose, one mouth, one head!\"; trang cuối \"___ (tên con) has two eyes!\". T4 vè hỏi–đáp: \"Where's your nose? – Here! Touch, touch!\" (Where's là từ lạ duy nhất, có tranh chỉ tay).",
+  "van_ban_theo_ngay": [
+   [
+    "T1 phần 1",
+    "T2"
+   ],
+   [
+    "T1 phần 2 (+ nghe lại phần trước)",
+    "T2",
+    "T4"
+   ],
+   [
+    "T1 phần 3 (+ nghe lại phần trước)",
+    "T3",
+    "T2"
+   ],
+   [
+    "T1 cả truyện",
+    "T4",
+    "T3"
+   ]
+  ],
+  "van_ban_tren_lop": [
+   {
+    "vai": "Introduce",
+    "van_ban": [
+     "T1",
+     "T2",
+     "T3",
+     "T4"
+    ],
+    "vai_cua_con": "nghe, chỉ tranh"
+   },
+   {
+    "vai": "Practice",
+    "van_ban": [
+     "T1",
+     "T2",
+     "T3",
+     "T4"
+    ],
+    "vai_cua_con": "nói cùng, thay tên mình/bạn vào ô"
+   }
+  ],
+  "nghe_ngam": {
+   "bo": [
+    "T1 Truyện khung",
+    "T2 Bài hát vận động",
+    "T3 Big book mẫu câu",
+    "T4 Vè"
+   ],
+   "on_xoan_oc": [
+    "U3 T2 bài hát",
+    "U2 T4 vè"
+   ],
+   "thoi_luong": "6–8 phút (bộ của unit) + 1–2 bài unit cũ",
+   "bac": "đầu",
+   "cach_nghe": "2–3 lượt × 10–15 phút/ngày theo mốc cố định; hiểu trước (nghe có reader hoặc gặp trên lớp) rồi mới nghe ngấm (ng.t. 48–49)",
+   "noi_dung": "chủ yếu bài hát, vè, câu cửa miệng; truyện khung ở bản nghe cùng reader"
+  },
+  "reader": {
+   "van_ban": [
+    "T1"
+   ],
+   "in": "A5, mã QR tới 2 bản audio (cùng reader có tiếng hiệu lật trang; nghe ngấm tốc độ tự nhiên)",
+   "cach_dung": "nghe và chỉ nhân vật, đồ vật; tiếng Trung có pinyin"
+  },
+  "bo_hoc_tai_nha": {
+   "flashcard_en": [
+    "head",
+    "eyes",
+    "ears",
+    "nose",
+    "mouth",
+    "hands",
+    "feet",
+    "touch"
+   ],
+   "flashcard_zh": [],
+   "poster_the_gioi": [
+    "head",
+    "eyes",
+    "ears",
+    "nose",
+    "mouth",
+    "hands",
+    "feet",
+    "touch"
+   ],
+   "poster_cau_cua_mieng": [
+    "Ha ha! / ",
+    "Look at me! / ",
+    "Well done! / "
+   ],
+   "mo_khoa": "mở khi con học tới unit này; đồ unit cũ giữ nguyên (ng.t. 56)"
+  }
+ },
+ {
+  "unit": "5",
+  "khoa": "PreB",
+  "chu_de": "Feelings – Vui, buồn, giận, mệt",
+  "ngay_web": [
+   21,
+   22,
+   23,
+   24
+  ],
+  "buoi": [
+   11,
+   12
+  ],
+  "tu_en": [
+   {
+    "tu": "happy",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 21",
+    "goi_lai": [
+     21,
+     22,
+     25,
+     33,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "sad",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 21",
+    "goi_lai": [
+     21,
+     22,
+     25,
+     33,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "smile",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 21",
+    "goi_lai": [
+     21,
+     22,
+     25,
+     33,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "angry",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 22",
+    "goi_lai": [
+     22,
+     23,
+     26,
+     34,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "tired",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Movers",
+    "gap_dau": "ngày 22",
+    "goi_lai": [
+     22,
+     23,
+     26,
+     34,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "sleepy",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 23",
+    "goi_lai": [
+     23,
+     24,
+     27,
+     35,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "hungry",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Movers",
+    "gap_dau": "ngày 23",
+    "goi_lai": [
+     23,
+     24,
+     27,
+     35,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   }
+  ],
+  "tu_zh": [],
+  "tu_cu_quay_lai": {
+   "en": [],
+   "zh": []
+  },
+  "khung_cau": {
+   "en": "I'm ___.",
+   "zh": "",
+   "o": "cảm xúc"
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "How are you?",
+    "zh": ""
+   },
+   {
+    "en": "Oh no!",
+    "zh": ""
+   },
+   {
+    "en": "Yum, yum!",
+    "zh": ""
+   }
+  ],
+  "van_ban": [
+   {
+    "id": "T1",
+    "loai": "Truyện khung",
+    "ten_en": "Vũ's Day",
+    "ten_zh": "",
+    "khung_en": "I'm ___.",
+    "khung_zh": "",
+    "phan": [
+     {
+      "phan": 1,
+      "y": "Vũ làm rơi bóng: \"Oh no! I'm sad.\" Bông: \"Smile, Vũ!\" Vũ cười: \"I'm happy!\"",
+      "tu_moi_vao": [
+       "sad",
+       "smile",
+       "happy"
+      ]
+     },
+     {
+      "phan": 2,
+      "y": "Leo giậm chân. Anna hỏi \"Are you angry?\" – Leo: \"No, I'm tired.\"",
+      "tu_moi_vao": [
+       "angry",
+       "tired"
+      ]
+     },
+     {
+      "phan": 3,
+      "y": "Bụng Vũ kêu: \"I'm hungry!\" Ăn bánh \"Yum, yum!\" rồi ngáp \"I'm sleepy.\"; câu cuối: \"Good night, ___ (tên con)!\"",
+      "tu_moi_vao": [
+       "hungry",
+       "sleepy"
+      ]
+     }
+    ],
+    "tu_en": [
+     "happy",
+     "sad",
+     "smile",
+     "angry",
+     "tired",
+     "sleepy",
+     "hungry"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T2",
+    "loai": "Bài hát vận động",
+    "kieu": "hỏi–đáp",
+    "giai_dieu": "dân gian hết bản quyền: Frère Jacques",
+    "khung_en": "Are you ___? Are you ___? Yes, I am!",
+    "khung_zh": "",
+    "o_thay": [
+     "happy",
+     "sad",
+     "angry",
+     "tired",
+     "sleepy",
+     "hungry"
+    ],
+    "dong_tac": "happy: nhảy lên; sad: dụi mắt; angry: khoanh tay giậm chân; tired: gục vai; sleepy: áp má lên tay; hungry: xoa bụng. Câu kết: \"Smile, ___ (tên con)!\" – cười thật tươi.",
+    "tu_en": [
+     "happy",
+     "sad",
+     "angry",
+     "tired",
+     "sleepy",
+     "hungry",
+     "smile"
+    ],
+    "tu_zh": [],
+    "ghi_chu_thanh": ""
+   },
+   {
+    "id": "T3",
+    "loai": "Big book mẫu câu",
+    "kieu": "cặp đối lập",
+    "khung_en": "I'm ___.",
+    "khung_zh": "",
+    "tu_en": [
+     "happy",
+     "sad",
+     "smile",
+     "angry",
+     "tired",
+     "sleepy",
+     "hungry"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T4",
+    "loai": "Vè",
+    "kieu": "đếm",
+    "khung_en": "One, two – I'm ___!",
+    "khung_zh": "",
+    "tu_en": [
+     "happy",
+     "sad",
+     "angry",
+     "tired",
+     "hungry",
+     "sleepy",
+     "smile"
+    ],
+    "tu_zh": []
+   }
+  ],
+  "dem_vong_ngoai": {},
+  "de_nghi_doi_nhan": [],
+  "ghi_chu": "Ngày web 1–3 kể dần, ngày 4 nghe cả truyện. T3 hai trang đối nhau: happy ↔ sad, angry ↔ smile, hungry ↔ \"Yum, yum!\", tired/sleepy ↔ ngủ dậy tươi tỉnh; trang cuối \"I'm happy! – ___ (tên con)\". T4 vè đếm 1–5: \"One, two – I'm happy! Three, four – I'm sad! Five – smile!\"",
+  "van_ban_theo_ngay": [
+   [
+    "T1 phần 1",
+    "T2"
+   ],
+   [
+    "T1 phần 2 (+ nghe lại phần trước)",
+    "T2",
+    "T4"
+   ],
+   [
+    "T1 phần 3 (+ nghe lại phần trước)",
+    "T3",
+    "T2"
+   ],
+   [
+    "T1 cả truyện",
+    "T4",
+    "T3"
+   ]
+  ],
+  "van_ban_tren_lop": [
+   {
+    "vai": "Introduce",
+    "van_ban": [
+     "T1",
+     "T2",
+     "T3",
+     "T4"
+    ],
+    "vai_cua_con": "nghe, chỉ tranh"
+   },
+   {
+    "vai": "Practice",
+    "van_ban": [
+     "T1",
+     "T2",
+     "T3",
+     "T4"
+    ],
+    "vai_cua_con": "nói cùng, thay tên mình/bạn vào ô"
+   }
+  ],
+  "nghe_ngam": {
+   "bo": [
+    "T1 Truyện khung",
+    "T2 Bài hát vận động",
+    "T3 Big book mẫu câu",
+    "T4 Vè"
+   ],
+   "on_xoan_oc": [
+    "U4 T2 bài hát",
+    "U3 T4 vè"
+   ],
+   "thoi_luong": "6–8 phút (bộ của unit) + 1–2 bài unit cũ",
+   "bac": "đầu",
+   "cach_nghe": "2–3 lượt × 10–15 phút/ngày theo mốc cố định; hiểu trước (nghe có reader hoặc gặp trên lớp) rồi mới nghe ngấm (ng.t. 48–49)",
+   "noi_dung": "chủ yếu bài hát, vè, câu cửa miệng; truyện khung ở bản nghe cùng reader"
+  },
+  "reader": {
+   "van_ban": [
+    "T1"
+   ],
+   "in": "A5, mã QR tới 2 bản audio (cùng reader có tiếng hiệu lật trang; nghe ngấm tốc độ tự nhiên)",
+   "cach_dung": "nghe và chỉ nhân vật, đồ vật; tiếng Trung có pinyin"
+  },
+  "bo_hoc_tai_nha": {
+   "flashcard_en": [
+    "happy",
+    "sad",
+    "smile",
+    "angry",
+    "tired",
+    "sleepy",
+    "hungry"
+   ],
+   "flashcard_zh": [],
+   "poster_the_gioi": [
+    "happy",
+    "sad",
+    "smile",
+    "angry",
+    "tired",
+    "sleepy",
+    "hungry"
+   ],
+   "poster_cau_cua_mieng": [
+    "How are you? / ",
+    "Oh no! / ",
+    "Yum, yum! / "
+   ],
+   "mo_khoa": "mở khi con học tới unit này; đồ unit cũ giữ nguyên (ng.t. 56)"
+  }
+ },
+ {
+  "unit": "6",
+  "khoa": "PreB",
+  "chu_de": "School – Cặp, sách, bút mực, bút chì, thước",
+  "ngay_web": [
+   25,
+   26,
+   27,
+   28
+  ],
+  "buoi": [
+   13,
+   14
+  ],
+  "tu_en": [
+   {
+    "tu": "bag",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 25",
+    "goi_lai": [
+     25,
+     26,
+     29,
+     37,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "book",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 25",
+    "goi_lai": [
+     25,
+     26,
+     29,
+     37,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "pen",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 25",
+    "goi_lai": [
+     25,
+     26,
+     29,
+     37,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "pencil",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 26",
+    "goi_lai": [
+     26,
+     27,
+     30,
+     38,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "ruler",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 26",
+    "goi_lai": [
+     26,
+     27,
+     30,
+     38,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "desk",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 27",
+    "goi_lai": [
+     27,
+     28,
+     31,
+     39,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "sit down",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 27",
+    "goi_lai": [
+     27,
+     28,
+     31,
+     39,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "stand up",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 27",
+    "goi_lai": [
+     27,
+     28,
+     31,
+     39,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   }
+  ],
+  "tu_zh": [],
+  "tu_cu_quay_lai": {
+   "en": [],
+   "zh": []
+  },
+  "khung_cau": {
+   "en": "It's a ___.",
+   "zh": "",
+   "o": "đồ dùng học tập"
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "What's this?",
+    "zh": ""
+   },
+   {
+    "en": "Great!",
+    "zh": ""
+   },
+   {
+    "en": "Oh no!",
+    "zh": ""
+   }
+  ],
+  "van_ban": [
+   {
+    "id": "T1",
+    "loai": "Truyện khung",
+    "ten_en": "Where's My Bag?",
+    "ten_zh": "",
+    "khung_en": "It's a ___.",
+    "khung_zh": "",
+    "phan": [
+     {
+      "phan": 1,
+      "y": "Bông khoe: \"This is my bag.\" Leo hỏi \"What's this?\" – \"It's a book. It's a pen.\"",
+      "tu_moi_vao": [
+       "bag",
+       "book",
+       "pen"
+      ]
+     },
+     {
+      "phan": 2,
+      "y": "Cô Lan: \"Stand up, please! Sit down, please!\" rồi hỏi \"Is it a pen?\" – Leo: \"No! It's a pencil.\"",
+      "tu_moi_vao": [
+       "stand up",
+       "sit down",
+       "pencil"
+      ]
+     },
+     {
+      "phan": 3,
+      "y": "Leo mất cặp: \"Oh no!\" Anna chỉ: \"Look! On the desk!\" Trong cặp có \"a ruler\"; câu cuối: \"Good job, ___ (tên con)!\"",
+      "tu_moi_vao": [
+       "desk",
+       "ruler"
+      ]
+     }
+    ],
+    "tu_en": [
+     "bag",
+     "book",
+     "pen",
+     "pencil",
+     "ruler",
+     "desk",
+     "sit down",
+     "stand up"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T2",
+    "loai": "Bài hát vận động",
+    "kieu": "cặp đối lập",
+    "giai_dieu": "dân gian hết bản quyền: London Bridge Is Falling Down",
+    "khung_en": "Stand up, sit down, show your ___!",
+    "khung_zh": "",
+    "o_thay": [
+     "bag",
+     "book",
+     "pen",
+     "pencil",
+     "ruler"
+    ],
+    "dong_tac": "Đứng lên – ngồi xuống theo lời, rồi giơ cao đồ vật vừa hát. Câu kết: \"Stand up, sit down, ___ (tên con)!\"",
+    "tu_en": [
+     "stand up",
+     "sit down",
+     "bag",
+     "book",
+     "pen",
+     "pencil",
+     "ruler"
+    ],
+    "tu_zh": [],
+    "ghi_chu_thanh": ""
+   },
+   {
+    "id": "T3",
+    "loai": "Big book mẫu câu",
+    "kieu": "hỏi–đáp",
+    "khung_en": "What's this? – It's a ___.",
+    "khung_zh": "",
+    "tu_en": [
+     "bag",
+     "book",
+     "pen",
+     "pencil",
+     "ruler",
+     "desk"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T4",
+    "loai": "Vè",
+    "kieu": "đếm",
+    "khung_en": "One ___, two ___ – on the desk!",
+    "khung_zh": "",
+    "tu_en": [
+     "pen",
+     "pencil",
+     "book",
+     "ruler",
+     "desk",
+     "stand up",
+     "sit down"
+    ],
+    "tu_zh": []
+   }
+  ],
+  "dem_vong_ngoai": {},
+  "de_nghi_doi_nhan": [],
+  "ghi_chu": "Ngày web 1–3 kể dần, ngày 4 nghe cả truyện. T3 lật nắp: \"What's this? – It's a pencil.\"…; trang cuối \"It's ___'s (tên con) desk!\". T4 vè đếm, kết bằng \"Stand up! Sit down!\" để vận động.",
+  "van_ban_theo_ngay": [
+   [
+    "T1 phần 1",
+    "T2"
+   ],
+   [
+    "T1 phần 2 (+ nghe lại phần trước)",
+    "T2",
+    "T4"
+   ],
+   [
+    "T1 phần 3 (+ nghe lại phần trước)",
+    "T3",
+    "T2"
+   ],
+   [
+    "T1 cả truyện",
+    "T4",
+    "T3"
+   ]
+  ],
+  "van_ban_tren_lop": [
+   {
+    "vai": "Introduce",
+    "van_ban": [
+     "T1",
+     "T2",
+     "T3",
+     "T4"
+    ],
+    "vai_cua_con": "nghe, chỉ tranh"
+   },
+   {
+    "vai": "Practice",
+    "van_ban": [
+     "T1",
+     "T2",
+     "T3",
+     "T4"
+    ],
+    "vai_cua_con": "nói cùng, thay tên mình/bạn vào ô"
+   }
+  ],
+  "nghe_ngam": {
+   "bo": [
+    "T1 Truyện khung",
+    "T2 Bài hát vận động",
+    "T3 Big book mẫu câu",
+    "T4 Vè"
+   ],
+   "on_xoan_oc": [
+    "U5 T2 bài hát",
+    "U4 T4 vè"
+   ],
+   "thoi_luong": "6–8 phút (bộ của unit) + 1–2 bài unit cũ",
+   "bac": "đầu",
+   "cach_nghe": "2–3 lượt × 10–15 phút/ngày theo mốc cố định; hiểu trước (nghe có reader hoặc gặp trên lớp) rồi mới nghe ngấm (ng.t. 48–49)",
+   "noi_dung": "chủ yếu bài hát, vè, câu cửa miệng; truyện khung ở bản nghe cùng reader"
+  },
+  "reader": {
+   "van_ban": [
+    "T1"
+   ],
+   "in": "A5, mã QR tới 2 bản audio (cùng reader có tiếng hiệu lật trang; nghe ngấm tốc độ tự nhiên)",
+   "cach_dung": "nghe và chỉ nhân vật, đồ vật; tiếng Trung có pinyin"
+  },
+  "bo_hoc_tai_nha": {
+   "flashcard_en": [
+    "bag",
+    "book",
+    "pen",
+    "pencil",
+    "ruler",
+    "desk",
+    "sit down",
+    "stand up"
+   ],
+   "flashcard_zh": [],
+   "poster_the_gioi": [
+    "bag",
+    "book",
+    "pen",
+    "pencil",
+    "ruler",
+    "desk",
+    "sit down",
+    "stand up"
+   ],
+   "poster_cau_cua_mieng": [
+    "What's this? / ",
+    "Great! / ",
+    "Oh no! / "
+   ],
+   "mo_khoa": "mở khi con học tới unit này; đồ unit cũ giữ nguyên (ng.t. 56)"
+  }
+ },
+ {
+  "unit": "7",
+  "khoa": "PreB",
+  "chu_de": "House – Giường, ghế, bàn, sofa, cửa",
+  "ngay_web": [
+   33,
+   34,
+   35,
+   36
+  ],
+  "buoi": [
+   17,
+   18
+  ],
+  "tu_en": [
+   {
+    "tu": "bed",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 33",
+    "goi_lai": [
+     33,
+     34,
+     37,
+     45,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "chair",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 33",
+    "goi_lai": [
+     33,
+     34,
+     37,
+     45,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "table",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 33",
+    "goi_lai": [
+     33,
+     34,
+     37,
+     45,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "sofa",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 34",
+    "goi_lai": [
+     34,
+     35,
+     38,
+     46,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "door",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 34",
+    "goi_lai": [
+     34,
+     35,
+     38,
+     46,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "window",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 34",
+    "goi_lai": [
+     34,
+     35,
+     38,
+     46,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "bath",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 35",
+    "goi_lai": [
+     35,
+     36,
+     39,
+     47,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "home",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 35",
+    "goi_lai": [
+     35,
+     36,
+     39,
+     47,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   }
+  ],
+  "tu_zh": [],
+  "tu_cu_quay_lai": {
+   "en": [],
+   "zh": []
+  },
+  "khung_cau": {
+   "en": "It's on the ___.",
+   "zh": "",
+   "o": "đồ trong nhà"
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "Knock, knock!",
+    "zh": ""
+   },
+   {
+    "en": "Come in!",
+    "zh": ""
+   },
+   {
+    "en": "Splash, splash!",
+    "zh": ""
+   }
+  ],
+  "van_ban": [
+   {
+    "id": "T1",
+    "loai": "Truyện khung",
+    "ten_en": "Knock, Knock!",
+    "ten_zh": "",
+    "khung_en": "It's on the ___.",
+    "khung_zh": "",
+    "phan": [
+     {
+      "phan": 1,
+      "y": "Knock, knock! Bông mở cửa cho Vũ: \"Come in! This is my home.\" Vũ ngồi lên sofa.",
+      "tu_moi_vao": [
+       "door",
+       "home",
+       "sofa"
+      ]
+     },
+     {
+      "phan": 2,
+      "y": "Bông tìm sách: \"It's on the bed? No! It's on the chair? No! It's on the table!\"",
+      "tu_moi_vao": [
+       "bed",
+       "chair",
+       "table"
+      ]
+     },
+     {
+      "phan": 3,
+      "y": "Nhìn qua window thấy trời tối; em bé \"Bath time! Splash, splash!\"; câu cuối: \"Good night, ___ (tên con)!\"",
+      "tu_moi_vao": [
+       "window",
+       "bath"
+      ]
+     }
+    ],
+    "tu_en": [
+     "bed",
+     "chair",
+     "table",
+     "sofa",
+     "door",
+     "window",
+     "bath",
+     "home"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T2",
+    "loai": "Bài hát vận động",
+    "kieu": "liệt kê",
+    "giai_dieu": "dân gian hết bản quyền: Here We Go Round the Mulberry Bush",
+    "khung_en": "This is my ___, my ___, my ___.",
+    "khung_zh": "",
+    "o_thay": [
+     "bed",
+     "chair",
+     "table",
+     "sofa",
+     "door",
+     "window"
+    ],
+    "dong_tac": "bed: nằm ngủ; chair: ngồi xổm; table: gõ bàn; sofa: nhún nhảy; door: gõ cửa knock knock; window: hai tay làm khung nhìn ra. Câu kết: \"This is my home, ___ (tên con)!\"",
+    "tu_en": [
+     "bed",
+     "chair",
+     "table",
+     "sofa",
+     "door",
+     "window",
+     "home"
+    ],
+    "tu_zh": [],
+    "ghi_chu_thanh": ""
+   },
+   {
+    "id": "T3",
+    "loai": "Big book mẫu câu",
+    "kieu": "hỏi–đáp",
+    "khung_en": "Is Bông on the ___? – No! / Yes!",
+    "khung_zh": "",
+    "tu_en": [
+     "bed",
+     "chair",
+     "table",
+     "sofa",
+     "door",
+     "window",
+     "bath",
+     "home"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T4",
+    "loai": "Vè",
+    "kieu": "đếm",
+    "khung_en": "One, two – ___, ___!",
+    "khung_zh": "",
+    "tu_en": [
+     "door",
+     "window",
+     "bath",
+     "bed",
+     "home",
+     "chair",
+     "table"
+    ],
+    "tu_zh": []
+   }
+  ],
+  "dem_vong_ngoai": {},
+  "de_nghi_doi_nhan": [],
+  "ghi_chu": "Ngày web 1–3 kể dần, ngày 4 nghe cả truyện. T3 trốn tìm: \"Is Bông on the sofa? – No!\"… trang cuối Bông trong bồn tắm \"Is ___ (tên con) in the bath? – Yes!\". T4 vè: \"One, two – knock on the door! Three, four – bath, bath! Five – bed, bed! I'm home!\"",
+  "van_ban_theo_ngay": [
+   [
+    "T1 phần 1",
+    "T2"
+   ],
+   [
+    "T1 phần 2 (+ nghe lại phần trước)",
+    "T2",
+    "T4"
+   ],
+   [
+    "T1 phần 3 (+ nghe lại phần trước)",
+    "T3",
+    "T2"
+   ],
+   [
+    "T1 cả truyện",
+    "T4",
+    "T3"
+   ]
+  ],
+  "van_ban_tren_lop": [
+   {
+    "vai": "Introduce",
+    "van_ban": [
+     "T1",
+     "T2",
+     "T3",
+     "T4"
+    ],
+    "vai_cua_con": "nghe, chỉ tranh"
+   },
+   {
+    "vai": "Practice",
+    "van_ban": [
+     "T1",
+     "T2",
+     "T3",
+     "T4"
+    ],
+    "vai_cua_con": "nói cùng, thay tên mình/bạn vào ô"
+   }
+  ],
+  "nghe_ngam": {
+   "bo": [
+    "T1 Truyện khung",
+    "T2 Bài hát vận động",
+    "T3 Big book mẫu câu",
+    "T4 Vè"
+   ],
+   "on_xoan_oc": [
+    "U6 T2 bài hát",
+    "U5 T4 vè"
+   ],
+   "thoi_luong": "6–8 phút (bộ của unit) + 1–2 bài unit cũ",
+   "bac": "đầu",
+   "cach_nghe": "2–3 lượt × 10–15 phút/ngày theo mốc cố định; hiểu trước (nghe có reader hoặc gặp trên lớp) rồi mới nghe ngấm (ng.t. 48–49)",
+   "noi_dung": "chủ yếu bài hát, vè, câu cửa miệng; truyện khung ở bản nghe cùng reader"
+  },
+  "reader": {
+   "van_ban": [
+    "T1"
+   ],
+   "in": "A5, mã QR tới 2 bản audio (cùng reader có tiếng hiệu lật trang; nghe ngấm tốc độ tự nhiên)",
+   "cach_dung": "nghe và chỉ nhân vật, đồ vật; tiếng Trung có pinyin"
+  },
+  "bo_hoc_tai_nha": {
+   "flashcard_en": [
+    "bed",
+    "chair",
+    "table",
+    "sofa",
+    "door",
+    "window",
+    "bath",
+    "home"
+   ],
+   "flashcard_zh": [],
+   "poster_the_gioi": [
+    "bed",
+    "chair",
+    "table",
+    "sofa",
+    "door",
+    "window",
+    "bath",
+    "home"
+   ],
+   "poster_cau_cua_mieng": [
+    "Knock, knock! / ",
+    "Come in! / ",
+    "Splash, splash! / "
+   ],
+   "mo_khoa": "mở khi con học tới unit này; đồ unit cũ giữ nguyên (ng.t. 56)"
+  }
+ },
+ {
+  "unit": "8",
+  "khoa": "PreB",
+  "chu_de": "Animals – Mèo, chó, chim, cá, thỏ, vịt",
+  "ngay_web": [
+   37,
+   38,
+   39,
+   40
+  ],
+  "buoi": [
+   19,
+   20
+  ],
+  "tu_en": [
+   {
+    "tu": "cat",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 37",
+    "goi_lai": [
+     37,
+     38,
+     41,
+     49,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "dog",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 37",
+    "goi_lai": [
+     37,
+     38,
+     41,
+     49,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "bird",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 37",
+    "goi_lai": [
+     37,
+     38,
+     41,
+     49,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "fish",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 38",
+    "goi_lai": [
+     38,
+     39,
+     42,
+     50,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "rabbit",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Movers",
+    "gap_dau": "ngày 38",
+    "goi_lai": [
+     38,
+     39,
+     42,
+     50,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "duck",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 38",
+    "goi_lai": [
+     38,
+     39,
+     42,
+     50,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "horse",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 39",
+    "goi_lai": [
+     39,
+     40,
+     43,
+     51,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "frog",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 39",
+    "goi_lai": [
+     39,
+     40,
+     43,
+     51,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   }
+  ],
+  "tu_zh": [],
+  "tu_cu_quay_lai": {
+   "en": [],
+   "zh": []
+  },
+  "khung_cau": {
+   "en": "It's a ___.",
+   "zh": "",
+   "o": "con vật"
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "Look!",
+    "zh": ""
+   },
+   {
+    "en": "Ha ha!",
+    "zh": ""
+   },
+   {
+    "en": "Let's go!",
+    "zh": ""
+   }
+  ],
+  "van_ban": [
+   {
+    "id": "T1",
+    "loai": "Truyện khung",
+    "ten_en": "Grandpa's Farm",
+    "ten_zh": "",
+    "khung_en": "It's a ___.",
+    "khung_zh": "",
+    "phan": [
+     {
+      "phan": 1,
+      "y": "Bông và Leo về trang trại ông: meow – \"It's a cat.\" woof – \"It's a dog.\" tweet – \"It's a bird!\"",
+      "tu_moi_vao": [
+       "cat",
+       "dog",
+       "bird"
+      ]
+     },
+     {
+      "phan": 2,
+      "y": "Ở ao: \"Is it a fish? No! It's a duck. Quack!\" – \"It's a frog. Ribbit!\"",
+      "tu_moi_vao": [
+       "fish",
+       "duck",
+       "frog"
+      ]
+     },
+     {
+      "phan": 3,
+      "y": "Neigh! \"It's a horse!\" Hop, hop! \"It's a rabbit!\"; câu cuối: \"Goodbye, animals! Goodbye, ___ (tên con)!\"",
+      "tu_moi_vao": [
+       "horse",
+       "rabbit"
+      ]
+     }
+    ],
+    "tu_en": [
+     "cat",
+     "dog",
+     "bird",
+     "fish",
+     "rabbit",
+     "duck",
+     "horse",
+     "frog"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T2",
+    "loai": "Bài hát vận động",
+    "kieu": "liệt kê",
+    "giai_dieu": "dân gian hết bản quyền: Old MacDonald Had a Farm",
+    "khung_en": "Grandpa has a ___, E-I-E-I-O!",
+    "khung_zh": "",
+    "o_thay": [
+     "dog",
+     "cat",
+     "duck",
+     "horse",
+     "frog",
+     "rabbit"
+    ],
+    "dong_tac": "Mỗi lần một con vật: kêu tiếng của nó và làm động tác (chó vẫy đuôi, mèo vuốt râu, vịt lạch bạch, ngựa phi, ếch nhảy cóc, thỏ dựng tai). Câu kết: \"Grandpa has ___ (tên con), E-I-E-I-O!\"",
+    "tu_en": [
+     "dog",
+     "cat",
+     "duck",
+     "horse",
+     "frog",
+     "rabbit"
+    ],
+    "tu_zh": [],
+    "ghi_chu_thanh": ""
+   },
+   {
+    "id": "T3",
+    "loai": "Big book mẫu câu",
+    "kieu": "hỏi–đáp",
+    "khung_en": "Is it a ___? – No! It's a ___.",
+    "khung_zh": "",
+    "tu_en": [
+     "cat",
+     "dog",
+     "bird",
+     "fish",
+     "rabbit",
+     "duck",
+     "horse",
+     "frog"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T4",
+    "loai": "Vè",
+    "kieu": "đếm",
+    "khung_en": "One ___, two ___!",
+    "khung_zh": "",
+    "tu_en": [
+     "fish",
+     "bird",
+     "cat",
+     "dog",
+     "duck",
+     "frog"
+    ],
+    "tu_zh": []
+   }
+  ],
+  "dem_vong_ngoai": {},
+  "de_nghi_doi_nhan": [],
+  "ghi_chu": "Ngày web 1–3 kể dần, ngày 4 nghe cả truyện. T3 nghe tiếng kêu đoán con vật sau tấm che; trang cuối \"Is it ___ (tên con)? – Yes!\" (gương). T4 vè đếm: \"One fish, two fish – swim, swim! One bird, two birds – tweet, tweet!\"…",
+  "van_ban_theo_ngay": [
+   [
+    "T1 phần 1",
+    "T2"
+   ],
+   [
+    "T1 phần 2 (+ nghe lại phần trước)",
+    "T2",
+    "T4"
+   ],
+   [
+    "T1 phần 3 (+ nghe lại phần trước)",
+    "T3",
+    "T2"
+   ],
+   [
+    "T1 cả truyện",
+    "T4",
+    "T3"
+   ]
+  ],
+  "van_ban_tren_lop": [
+   {
+    "vai": "Introduce",
+    "van_ban": [
+     "T1",
+     "T2",
+     "T3",
+     "T4"
+    ],
+    "vai_cua_con": "nghe, chỉ tranh"
+   },
+   {
+    "vai": "Practice",
+    "van_ban": [
+     "T1",
+     "T2",
+     "T3",
+     "T4"
+    ],
+    "vai_cua_con": "nói cùng, thay tên mình/bạn vào ô"
+   }
+  ],
+  "nghe_ngam": {
+   "bo": [
+    "T1 Truyện khung",
+    "T2 Bài hát vận động",
+    "T3 Big book mẫu câu",
+    "T4 Vè"
+   ],
+   "on_xoan_oc": [
+    "U7 T2 bài hát",
+    "U6 T4 vè"
+   ],
+   "thoi_luong": "6–8 phút (bộ của unit) + 1–2 bài unit cũ",
+   "bac": "đầu",
+   "cach_nghe": "2–3 lượt × 10–15 phút/ngày theo mốc cố định; hiểu trước (nghe có reader hoặc gặp trên lớp) rồi mới nghe ngấm (ng.t. 48–49)",
+   "noi_dung": "chủ yếu bài hát, vè, câu cửa miệng; truyện khung ở bản nghe cùng reader"
+  },
+  "reader": {
+   "van_ban": [
+    "T1"
+   ],
+   "in": "A5, mã QR tới 2 bản audio (cùng reader có tiếng hiệu lật trang; nghe ngấm tốc độ tự nhiên)",
+   "cach_dung": "nghe và chỉ nhân vật, đồ vật; tiếng Trung có pinyin"
+  },
+  "bo_hoc_tai_nha": {
+   "flashcard_en": [
+    "cat",
+    "dog",
+    "bird",
+    "fish",
+    "rabbit",
+    "duck",
+    "horse",
+    "frog"
+   ],
+   "flashcard_zh": [],
+   "poster_the_gioi": [
+    "cat",
+    "dog",
+    "bird",
+    "fish",
+    "rabbit",
+    "duck",
+    "horse",
+    "frog"
+   ],
+   "poster_cau_cua_mieng": [
+    "Look! / ",
+    "Ha ha! / ",
+    "Let's go! / "
+   ],
+   "mo_khoa": "mở khi con học tới unit này; đồ unit cũ giữ nguyên (ng.t. 56)"
+  }
+ },
+ {
+  "unit": "9",
+  "khoa": "PreB",
+  "chu_de": "Food – Táo, chuối, sữa, nước, nước ép",
+  "ngay_web": [
+   41,
+   42,
+   43,
+   44
+  ],
+  "buoi": [
+   21,
+   22
+  ],
+  "tu_en": [
+   {
+    "tu": "apple",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 41",
+    "goi_lai": [
+     41,
+     42,
+     45,
+     53,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "banana",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 41",
+    "goi_lai": [
+     41,
+     42,
+     45,
+     53,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "milk",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 41",
+    "goi_lai": [
+     41,
+     42,
+     45,
+     53,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "water",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 42",
+    "goi_lai": [
+     42,
+     43,
+     46,
+     54,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "juice",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 42",
+    "goi_lai": [
+     42,
+     43,
+     46,
+     54,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "rice",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 43",
+    "goi_lai": [
+     43,
+     44,
+     47,
+     55,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "egg",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 43",
+    "goi_lai": [
+     43,
+     44,
+     47,
+     55,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "cake",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 43",
+    "goi_lai": [
+     43,
+     44,
+     47,
+     55,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   }
+  ],
+  "tu_zh": [],
+  "tu_cu_quay_lai": {
+   "en": [],
+   "zh": []
+  },
+  "khung_cau": {
+   "en": "___, please!",
+   "zh": "",
+   "o": "đồ ăn, đồ uống"
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "I'm hungry!",
+    "zh": ""
+   },
+   {
+    "en": "Here you are.",
+    "zh": ""
+   },
+   {
+    "en": "Thank you!",
+    "zh": ""
+   },
+   {
+    "en": "Yum, yum!",
+    "zh": ""
+   }
+  ],
+  "van_ban": [
+   {
+    "id": "T1",
+    "loai": "Truyện khung",
+    "ten_en": "Hungry Leo",
+    "ten_zh": "",
+    "khung_en": "___, please!",
+    "khung_zh": "",
+    "phan": [
+     {
+      "phan": 1,
+      "y": "Leo: \"Mommy, I'm hungry!\" Mẹ: \"An apple? A banana?\" – \"Apple, please! Milk, please!\"",
+      "tu_moi_vao": [
+       "apple",
+       "banana",
+       "milk"
+      ]
+     },
+     {
+      "phan": 2,
+      "y": "Anna mệt; cô Lan: \"Water or juice?\" – \"Juice, please.\" – \"Here you are.\" – \"Thank you!\"",
+      "tu_moi_vao": [
+       "water",
+       "juice"
+      ]
+     },
+     {
+      "phan": 3,
+      "y": "Bà dọn cơm: \"Rice and egg?\" – \"Yes, please! Yum, yum!\" Rồi \"Cake!\"; câu cuối: \"Cake for ___ (tên con)!\"",
+      "tu_moi_vao": [
+       "rice",
+       "egg",
+       "cake"
+      ]
+     }
+    ],
+    "tu_en": [
+     "apple",
+     "banana",
+     "milk",
+     "water",
+     "juice",
+     "rice",
+     "egg",
+     "cake"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T2",
+    "loai": "Bài hát vận động",
+    "kieu": "hỏi–đáp",
+    "giai_dieu": "dân gian hết bản quyền: Row, Row, Row Your Boat",
+    "khung_en": "Do you like ___? Yes, yes, yes!",
+    "khung_zh": "",
+    "o_thay": [
+     "apple",
+     "banana",
+     "rice",
+     "egg",
+     "cake"
+    ],
+    "dong_tac": "apple: cắn táo; banana: bóc chuối; rice: và cơm; egg: đập trứng; cake: thổi nến. Câu kết: \"Yum, yum, ___ (tên con)!\" – xoa bụng.",
+    "tu_en": [
+     "apple",
+     "banana",
+     "rice",
+     "egg",
+     "cake"
+    ],
+    "tu_zh": [],
+    "ghi_chu_thanh": ""
+   },
+   {
+    "id": "T3",
+    "loai": "Big book mẫu câu",
+    "kieu": "liệt kê",
+    "khung_en": "___, please!",
+    "khung_zh": "",
+    "tu_en": [
+     "apple",
+     "banana",
+     "milk",
+     "water",
+     "juice",
+     "rice",
+     "egg",
+     "cake"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T4",
+    "loai": "Vè",
+    "kieu": "đếm",
+    "khung_en": "One, two – ___ for you!",
+    "khung_zh": "",
+    "tu_en": [
+     "milk",
+     "water",
+     "juice",
+     "egg",
+     "rice"
+    ],
+    "tu_zh": []
+   }
+  ],
+  "dem_vong_ngoai": {},
+  "de_nghi_doi_nhan": [],
+  "ghi_chu": "Ngày web 1–3 kể dần, ngày 4 nghe cả truyện. T3: mỗi trang một món \"Milk, please!\"… trang cuối \"Cake for ___ (tên con)!\". T4 vè đếm, đưa cốc giả: \"One, two – milk for you! Three, four – juice for you!\"",
+  "van_ban_theo_ngay": [
+   [
+    "T1 phần 1",
+    "T2"
+   ],
+   [
+    "T1 phần 2 (+ nghe lại phần trước)",
+    "T2",
+    "T4"
+   ],
+   [
+    "T1 phần 3 (+ nghe lại phần trước)",
+    "T3",
+    "T2"
+   ],
+   [
+    "T1 cả truyện",
+    "T4",
+    "T3"
+   ]
+  ],
+  "van_ban_tren_lop": [
+   {
+    "vai": "Introduce",
+    "van_ban": [
+     "T1",
+     "T2",
+     "T3",
+     "T4"
+    ],
+    "vai_cua_con": "nghe, chỉ tranh"
+   },
+   {
+    "vai": "Practice",
+    "van_ban": [
+     "T1",
+     "T2",
+     "T3",
+     "T4"
+    ],
+    "vai_cua_con": "nói cùng, thay tên mình/bạn vào ô"
+   }
+  ],
+  "nghe_ngam": {
+   "bo": [
+    "T1 Truyện khung",
+    "T2 Bài hát vận động",
+    "T3 Big book mẫu câu",
+    "T4 Vè"
+   ],
+   "on_xoan_oc": [
+    "U8 T2 bài hát",
+    "U7 T4 vè"
+   ],
+   "thoi_luong": "6–8 phút (bộ của unit) + 1–2 bài unit cũ",
+   "bac": "đầu",
+   "cach_nghe": "2–3 lượt × 10–15 phút/ngày theo mốc cố định; hiểu trước (nghe có reader hoặc gặp trên lớp) rồi mới nghe ngấm (ng.t. 48–49)",
+   "noi_dung": "chủ yếu bài hát, vè, câu cửa miệng; truyện khung ở bản nghe cùng reader"
+  },
+  "reader": {
+   "van_ban": [
+    "T1"
+   ],
+   "in": "A5, mã QR tới 2 bản audio (cùng reader có tiếng hiệu lật trang; nghe ngấm tốc độ tự nhiên)",
+   "cach_dung": "nghe và chỉ nhân vật, đồ vật; tiếng Trung có pinyin"
+  },
+  "bo_hoc_tai_nha": {
+   "flashcard_en": [
+    "apple",
+    "banana",
+    "milk",
+    "water",
+    "juice",
+    "rice",
+    "egg",
+    "cake"
+   ],
+   "flashcard_zh": [],
+   "poster_the_gioi": [
+    "apple",
+    "banana",
+    "milk",
+    "water",
+    "juice",
+    "rice",
+    "egg",
+    "cake"
+   ],
+   "poster_cau_cua_mieng": [
+    "I'm hungry! / ",
+    "Here you are. / ",
+    "Thank you! / ",
+    "Yum, yum! / "
+   ],
+   "mo_khoa": "mở khi con học tới unit này; đồ unit cũ giữ nguyên (ng.t. 56)"
+  }
+ },
+ {
+  "unit": "10",
+  "khoa": "PreB",
+  "chu_de": "Weather – Nắng, nóng, mưa, nhiều mây",
+  "ngay_web": [
+   45,
+   46,
+   47,
+   48
+  ],
+  "buoi": [
+   23,
+   24
+  ],
+  "tu_en": [
+   {
+    "tu": "sunny",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Movers",
+    "gap_dau": "ngày 45",
+    "goi_lai": [
+     45,
+     46,
+     49,
+     57,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "hot",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Movers",
+    "gap_dau": "ngày 45",
+    "goi_lai": [
+     45,
+     46,
+     49,
+     57,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "rainy",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 46",
+    "goi_lai": [
+     46,
+     47,
+     50,
+     58,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "cloudy",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Movers",
+    "gap_dau": "ngày 46",
+    "goi_lai": [
+     46,
+     47,
+     50,
+     58,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "windy",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Movers",
+    "gap_dau": "ngày 47",
+    "goi_lai": [
+     47,
+     48,
+     51,
+     59,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "cold",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Movers",
+    "gap_dau": "ngày 47",
+    "goi_lai": [
+     47,
+     48,
+     51,
+     59,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   }
+  ],
+  "tu_zh": [],
+  "tu_cu_quay_lai": {
+   "en": [],
+   "zh": []
+  },
+  "khung_cau": {
+   "en": "It's ___.",
+   "zh": "",
+   "o": "thời tiết"
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "Oh no!",
+    "zh": ""
+   },
+   {
+    "en": "Whoosh!",
+    "zh": ""
+   },
+   {
+    "en": "Brr!",
+    "zh": ""
+   }
+  ],
+  "van_ban": [
+   {
+    "id": "T1",
+    "loai": "Truyện khung",
+    "ten_en": "Bông's Window",
+    "ten_zh": "",
+    "khung_en": "It's ___.",
+    "khung_zh": "",
+    "phan": [
+     {
+      "phan": 1,
+      "y": "Bông nhìn ra cửa sổ: \"Look! It's sunny. It's hot! Water, please!\"",
+      "tu_moi_vao": [
+       "sunny",
+       "hot"
+      ]
+     },
+     {
+      "phan": 2,
+      "y": "\"Is it sunny?\" Mẹ: \"No, it's cloudy.\" Lộp độp: \"It's rainy! Oh no!\"",
+      "tu_moi_vao": [
+       "cloudy",
+       "rainy"
+      ]
+     },
+     {
+      "phan": 3,
+      "y": "Whoosh! \"It's windy.\" Bông run: \"Brr! It's cold!\" Mẹ pha sữa nóng; câu cuối: \"Hot milk for ___ (tên con)!\"",
+      "tu_moi_vao": [
+       "windy",
+       "cold"
+      ]
+     }
+    ],
+    "tu_en": [
+     "sunny",
+     "hot",
+     "rainy",
+     "cloudy",
+     "windy",
+     "cold"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T2",
+    "loai": "Bài hát vận động",
+    "kieu": "hỏi–đáp",
+    "giai_dieu": "dân gian hết bản quyền: Frère Jacques",
+    "khung_en": "Is it ___? Is it ___? Yes, it is!",
+    "khung_zh": "",
+    "o_thay": [
+     "sunny",
+     "rainy",
+     "cloudy",
+     "windy",
+     "hot",
+     "cold"
+    ],
+    "dong_tac": "sunny: hai tay vẽ mặt trời; rainy: ngón tay rơi như mưa; cloudy: hai tay ôm đám mây; windy: lắc lư như cây; hot: quạt tay; cold: co ro. Câu kết: \"Look out, ___ (tên con)!\" – nhìn qua khung tay.",
+    "tu_en": [
+     "sunny",
+     "rainy",
+     "cloudy",
+     "windy",
+     "hot",
+     "cold"
+    ],
+    "tu_zh": [],
+    "ghi_chu_thanh": ""
+   },
+   {
+    "id": "T3",
+    "loai": "Big book mẫu câu",
+    "kieu": "cặp đối lập",
+    "khung_en": "It's ___.",
+    "khung_zh": "",
+    "tu_en": [
+     "sunny",
+     "hot",
+     "rainy",
+     "cloudy",
+     "windy",
+     "cold"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T4",
+    "loai": "Vè",
+    "kieu": "đếm",
+    "khung_en": "One, two, three – it's ___!",
+    "khung_zh": "",
+    "tu_en": [
+     "sunny",
+     "hot",
+     "rainy",
+     "cloudy",
+     "windy",
+     "cold"
+    ],
+    "tu_zh": []
+   }
+  ],
+  "dem_vong_ngoai": {},
+  "de_nghi_doi_nhan": [],
+  "ghi_chu": "Ngày web 1–3 kể dần, ngày 4 nghe cả truyện. T3 hai trang đối nhau: hot ↔ cold, sunny ↔ rainy, cloudy ↔ windy; trang cuối \"It's sunny, ___ (tên con)!\". T4 vè đếm vỗ tay 1–3 rồi hô thời tiết theo tranh.",
+  "van_ban_theo_ngay": [
+   [
+    "T1 phần 1",
+    "T2"
+   ],
+   [
+    "T1 phần 2 (+ nghe lại phần trước)",
+    "T2",
+    "T4"
+   ],
+   [
+    "T1 phần 3 (+ nghe lại phần trước)",
+    "T3",
+    "T2"
+   ],
+   [
+    "T1 cả truyện",
+    "T4",
+    "T3"
+   ]
+  ],
+  "van_ban_tren_lop": [
+   {
+    "vai": "Introduce",
+    "van_ban": [
+     "T1",
+     "T2",
+     "T3",
+     "T4"
+    ],
+    "vai_cua_con": "nghe, chỉ tranh"
+   },
+   {
+    "vai": "Practice",
+    "van_ban": [
+     "T1",
+     "T2",
+     "T3",
+     "T4"
+    ],
+    "vai_cua_con": "nói cùng, thay tên mình/bạn vào ô"
+   }
+  ],
+  "nghe_ngam": {
+   "bo": [
+    "T1 Truyện khung",
+    "T2 Bài hát vận động",
+    "T3 Big book mẫu câu",
+    "T4 Vè"
+   ],
+   "on_xoan_oc": [
+    "U9 T2 bài hát",
+    "U8 T4 vè"
+   ],
+   "thoi_luong": "6–8 phút (bộ của unit) + 1–2 bài unit cũ",
+   "bac": "đầu",
+   "cach_nghe": "2–3 lượt × 10–15 phút/ngày theo mốc cố định; hiểu trước (nghe có reader hoặc gặp trên lớp) rồi mới nghe ngấm (ng.t. 48–49)",
+   "noi_dung": "chủ yếu bài hát, vè, câu cửa miệng; truyện khung ở bản nghe cùng reader"
+  },
+  "reader": {
+   "van_ban": [
+    "T1"
+   ],
+   "in": "A5, mã QR tới 2 bản audio (cùng reader có tiếng hiệu lật trang; nghe ngấm tốc độ tự nhiên)",
+   "cach_dung": "nghe và chỉ nhân vật, đồ vật; tiếng Trung có pinyin"
+  },
+  "bo_hoc_tai_nha": {
+   "flashcard_en": [
+    "sunny",
+    "hot",
+    "rainy",
+    "cloudy",
+    "windy",
+    "cold"
+   ],
+   "flashcard_zh": [],
+   "poster_the_gioi": [
+    "sunny",
+    "hot",
+    "rainy",
+    "cloudy",
+    "windy",
+    "cold"
+   ],
+   "poster_cau_cua_mieng": [
+    "Oh no! / ",
+    "Whoosh! / ",
+    "Brr! / "
+   ],
+   "mo_khoa": "mở khi con học tới unit này; đồ unit cũ giữ nguyên (ng.t. 56)"
+  }
+ },
+ {
+  "unit": "11",
+  "khoa": "PreB",
+  "chu_de": "Colors – Đỏ, xanh dương, vàng, xanh lá, hồng, cam",
+  "ngay_web": [
+   49,
+   50,
+   51,
+   52
+  ],
+  "buoi": [
+   25,
+   26
+  ],
+  "tu_en": [
+   {
+    "tu": "red",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 49",
+    "goi_lai": [
+     49,
+     50,
+     53,
+     "khóa sau (ôn đầu khóa)",
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "blue",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 49",
+    "goi_lai": [
+     49,
+     50,
+     53,
+     "khóa sau (ôn đầu khóa)",
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "yellow",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 49",
+    "goi_lai": [
+     49,
+     50,
+     53,
+     "khóa sau (ôn đầu khóa)",
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "green",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 50",
+    "goi_lai": [
+     50,
+     51,
+     54,
+     "khóa sau (ôn đầu khóa)",
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "pink",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 50",
+    "goi_lai": [
+     50,
+     51,
+     54,
+     "khóa sau (ôn đầu khóa)",
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "orange",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 50",
+    "goi_lai": [
+     50,
+     51,
+     54,
+     "khóa sau (ôn đầu khóa)",
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "black",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 51",
+    "goi_lai": [
+     51,
+     52,
+     55,
+     "khóa sau (ôn đầu khóa)",
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "white",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 51",
+    "goi_lai": [
+     51,
+     52,
+     55,
+     "khóa sau (ôn đầu khóa)",
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   }
+  ],
+  "tu_zh": [],
+  "tu_cu_quay_lai": {
+   "en": [],
+   "zh": []
+  },
+  "khung_cau": {
+   "en": "What colour is it? – It's ___.",
+   "zh": "",
+   "o": "màu"
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "Wow!",
+    "zh": ""
+   },
+   {
+    "en": "Look!",
+    "zh": ""
+   },
+   {
+    "en": "I like it!",
+    "zh": ""
+   }
+  ],
+  "van_ban": [
+   {
+    "id": "T1",
+    "loai": "Truyện khung",
+    "ten_en": "Rainbow After Rain",
+    "ten_zh": "",
+    "khung_en": "It's ___.",
+    "khung_zh": "",
+    "phan": [
+     {
+      "phan": 1,
+      "y": "Leo hỏi \"What colour is it?\" – Bông: \"It's red. A red apple! It's yellow. A yellow banana!\" Leo: \"I like blue.\"",
+      "tu_moi_vao": [
+       "red",
+       "yellow",
+       "blue"
+      ]
+     },
+     {
+      "phan": 2,
+      "y": "Tiệc của Anna: \"A pink cake!\" \"Orange juice, please!\" Ribbit – \"A green frog!\"",
+      "tu_moi_vao": [
+       "pink",
+       "orange",
+       "green"
+      ]
+     },
+     {
+      "phan": 3,
+      "y": "\"A black cat! A white rabbit!\" Mưa tạnh, cầu vồng hiện ra; câu cuối: \"What colour, ___ (tên con)?\"",
+      "tu_moi_vao": [
+       "black",
+       "white"
+      ]
+     }
+    ],
+    "tu_en": [
+     "red",
+     "blue",
+     "yellow",
+     "green",
+     "pink",
+     "orange",
+     "black",
+     "white"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T2",
+    "loai": "Bài hát vận động",
+    "kieu": "hỏi–đáp",
+    "giai_dieu": "dân gian hết bản quyền: Mary Had a Little Lamb",
+    "khung_en": "Is it ___? Yes, it's ___!",
+    "khung_zh": "",
+    "o_thay": [
+     "red",
+     "yellow",
+     "blue",
+     "green",
+     "pink",
+     "orange"
+    ],
+    "dong_tac": "Cô giơ thẻ màu, con chạy chạm đồ vật có màu đó trong lớp rồi giơ tay \"Yes!\". Câu kết: \"___ (tên con) likes blue!\" – con tự chọn màu.",
+    "tu_en": [
+     "red",
+     "yellow",
+     "blue",
+     "green",
+     "pink",
+     "orange"
+    ],
+    "tu_zh": [],
+    "ghi_chu_thanh": ""
+   },
+   {
+    "id": "T3",
+    "loai": "Big book mẫu câu",
+    "kieu": "liệt kê",
+    "khung_en": "It's ___!",
+    "khung_zh": "",
+    "tu_en": [
+     "red",
+     "blue",
+     "yellow",
+     "green",
+     "pink",
+     "orange",
+     "black",
+     "white"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T4",
+    "loai": "Vè",
+    "kieu": "cặp đối lập",
+    "khung_en": "___ cat, ___ cat!",
+    "khung_zh": "",
+    "tu_en": [
+     "black",
+     "white",
+     "red",
+     "green",
+     "pink",
+     "blue"
+    ],
+    "tu_zh": []
+   }
+  ],
+  "dem_vong_ngoai": {},
+  "de_nghi_doi_nhan": [],
+  "ghi_chu": "Ngày web 1–3 kể dần, ngày 4 nghe cả truyện. T3 liệt kê cầu vồng (red, orange, yellow, green, blue) rồi pink, black, white; trang cuối \"It's ___'s (tên con) colour!\". T4 vè cặp đối lập: \"Black cat, white cat! Red apple, green apple! Pink pig, blue pig?\" (pig là từ lạ duy nhất, có tranh).",
+  "van_ban_theo_ngay": [
+   [
+    "T1 phần 1",
+    "T2"
+   ],
+   [
+    "T1 phần 2 (+ nghe lại phần trước)",
+    "T2",
+    "T4"
+   ],
+   [
+    "T1 phần 3 (+ nghe lại phần trước)",
+    "T3",
+    "T2"
+   ],
+   [
+    "T1 cả truyện",
+    "T4",
+    "T3"
+   ]
+  ],
+  "van_ban_tren_lop": [
+   {
+    "vai": "Introduce",
+    "van_ban": [
+     "T1",
+     "T2",
+     "T3",
+     "T4"
+    ],
+    "vai_cua_con": "nghe, chỉ tranh"
+   },
+   {
+    "vai": "Practice",
+    "van_ban": [
+     "T1",
+     "T2",
+     "T3",
+     "T4"
+    ],
+    "vai_cua_con": "nói cùng, thay tên mình/bạn vào ô"
+   }
+  ],
+  "nghe_ngam": {
+   "bo": [
+    "T1 Truyện khung",
+    "T2 Bài hát vận động",
+    "T3 Big book mẫu câu",
+    "T4 Vè"
+   ],
+   "on_xoan_oc": [
+    "U10 T2 bài hát",
+    "U9 T4 vè"
+   ],
+   "thoi_luong": "6–8 phút (bộ của unit) + 1–2 bài unit cũ",
+   "bac": "đầu",
+   "cach_nghe": "2–3 lượt × 10–15 phút/ngày theo mốc cố định; hiểu trước (nghe có reader hoặc gặp trên lớp) rồi mới nghe ngấm (ng.t. 48–49)",
+   "noi_dung": "chủ yếu bài hát, vè, câu cửa miệng; truyện khung ở bản nghe cùng reader"
+  },
+  "reader": {
+   "van_ban": [
+    "T1"
+   ],
+   "in": "A5, mã QR tới 2 bản audio (cùng reader có tiếng hiệu lật trang; nghe ngấm tốc độ tự nhiên)",
+   "cach_dung": "nghe và chỉ nhân vật, đồ vật; tiếng Trung có pinyin"
+  },
+  "bo_hoc_tai_nha": {
+   "flashcard_en": [
+    "red",
+    "blue",
+    "yellow",
+    "green",
+    "pink",
+    "orange",
+    "black",
+    "white"
+   ],
+   "flashcard_zh": [],
+   "poster_the_gioi": [
+    "red",
+    "blue",
+    "yellow",
+    "green",
+    "pink",
+    "orange",
+    "black",
+    "white"
+   ],
+   "poster_cau_cua_mieng": [
+    "Wow! / ",
+    "Look! / ",
+    "I like it! / "
+   ],
+   "mo_khoa": "mở khi con học tới unit này; đồ unit cũ giữ nguyên (ng.t. 56)"
+  }
+ },
+ {
+  "unit": "12",
+  "khoa": "PreB",
+  "chu_de": "Numbers and counting – Đếm 6 đến 9, bóng và đồ chơi",
+  "ngay_web": [
+   53,
+   54,
+   55,
+   56
+  ],
+  "buoi": [
+   27,
+   28
+  ],
+  "tu_en": [
+   {
+    "tu": "six",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 53",
+    "goi_lai": [
+     53,
+     54,
+     57,
+     "khóa sau (ôn đầu khóa)",
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "seven",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 53",
+    "goi_lai": [
+     53,
+     54,
+     57,
+     "khóa sau (ôn đầu khóa)",
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "ball",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 53",
+    "goi_lai": [
+     53,
+     54,
+     57,
+     "khóa sau (ôn đầu khóa)",
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "eight",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 54",
+    "goi_lai": [
+     54,
+     55,
+     58,
+     "khóa sau (ôn đầu khóa)",
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "nine",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 54",
+    "goi_lai": [
+     54,
+     55,
+     58,
+     "khóa sau (ôn đầu khóa)",
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "toy",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 54",
+    "goi_lai": [
+     54,
+     55,
+     58,
+     "khóa sau (ôn đầu khóa)",
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "ten",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 55",
+    "goi_lai": [
+     55,
+     56,
+     59,
+     "khóa sau (ôn đầu khóa)",
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   },
+   {
+    "tu": "how many",
+    "nghia": "",
+    "nhan": "Lõi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Starters",
+    "gap_dau": "ngày 55",
+    "goi_lai": [
+     55,
+     56,
+     59,
+     "khóa sau (ôn đầu khóa)",
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": false
+   }
+  ],
+  "tu_zh": [],
+  "tu_cu_quay_lai": {
+   "en": [],
+   "zh": []
+  },
+  "khung_cau": {
+   "en": "How many balls? – ___!",
+   "zh": "",
+   "o": "số (six – ten)"
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "Let's count!",
+    "zh": ""
+   },
+   {
+    "en": "Wow!",
+    "zh": ""
+   },
+   {
+    "en": "Good job!",
+    "zh": ""
+   }
+  ],
+  "van_ban": [
+   {
+    "id": "T1",
+    "loai": "Truyện khung",
+    "ten_en": "Vũ's Toy Box",
+    "ten_zh": "",
+    "khung_en": "___ balls!",
+    "khung_zh": "",
+    "phan": [
+     {
+      "phan": 1,
+      "y": "Leo lấy bóng: \"A red ball. A blue ball.\" Bông đếm \"…five, six! Six balls!\" Anna thêm: \"Seven balls!\"",
+      "tu_moi_vao": [
+       "ball",
+       "six",
+       "seven"
+      ]
+     },
+     {
+      "phan": 2,
+      "y": "Vũ mở hộp: \"Look! My toys!\" đếm \"…eight toys! Nine toys!\"",
+      "tu_moi_vao": [
+       "toy",
+       "eight",
+       "nine"
+      ]
+     },
+     {
+      "phan": 3,
+      "y": "Cô Lan: \"How many balls?\" – cả lớp \"Ten!\"; câu cuối: \"Ten toys for ___ (tên con)!\"",
+      "tu_moi_vao": [
+       "how many",
+       "ten"
+      ]
+     }
+    ],
+    "tu_en": [
+     "six",
+     "seven",
+     "ball",
+     "eight",
+     "nine",
+     "toy",
+     "ten",
+     "how many"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T2",
+    "loai": "Bài hát vận động",
+    "kieu": "đếm",
+    "giai_dieu": "dân gian hết bản quyền: This Old Man",
+    "khung_en": "How many balls? ___ balls! Let's count them all!",
+    "khung_zh": "",
+    "o_thay": [
+     "six",
+     "seven",
+     "eight",
+     "nine",
+     "ten"
+    ],
+    "dong_tac": "Mỗi lần thêm một quả bóng: tung bóng tưởng tượng đúng số lần, giơ ngón tay đúng số. Câu kết: \"Ten balls for ___ (tên con)!\"",
+    "tu_en": [
+     "how many",
+     "ball",
+     "six",
+     "seven",
+     "eight",
+     "nine",
+     "ten"
+    ],
+    "tu_zh": [],
+    "ghi_chu_thanh": ""
+   },
+   {
+    "id": "T3",
+    "loai": "Big book mẫu câu",
+    "kieu": "hỏi–đáp",
+    "khung_en": "How many ___? – ___!",
+    "khung_zh": "",
+    "tu_en": [
+     "six",
+     "seven",
+     "ball",
+     "eight",
+     "nine",
+     "toy",
+     "ten",
+     "how many"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T4",
+    "loai": "Vè",
+    "kieu": "liệt kê",
+    "khung_en": "A ___ in my toy box!",
+    "khung_zh": "",
+    "tu_en": [
+     "ball",
+     "toy",
+     "six",
+     "seven",
+     "eight",
+     "nine",
+     "ten"
+    ],
+    "tu_zh": []
+   }
+  ],
+  "dem_vong_ngoai": {},
+  "de_nghi_doi_nhan": [],
+  "ghi_chu": "Ngày web 1–3 kể dần, ngày 4 nghe cả truyện. T3: \"How many balls? – Six!\" / toys – Nine!…; trang cuối \"How many toys, ___ (tên con)?\". T4 vè liệt kê đồ chơi (ball, duck, cat, horse… từ unit 8) rồi đếm \"Six, seven, eight, nine, ten – toys!\".",
+  "van_ban_theo_ngay": [
+   [
+    "T1 phần 1",
+    "T2"
+   ],
+   [
+    "T1 phần 2 (+ nghe lại phần trước)",
+    "T2",
+    "T4"
+   ],
+   [
+    "T1 phần 3 (+ nghe lại phần trước)",
+    "T3",
+    "T2"
+   ],
+   [
+    "T1 cả truyện",
+    "T4",
+    "T3"
+   ]
+  ],
+  "van_ban_tren_lop": [
+   {
+    "vai": "Introduce",
+    "van_ban": [
+     "T1",
+     "T2",
+     "T3",
+     "T4"
+    ],
+    "vai_cua_con": "nghe, chỉ tranh"
+   },
+   {
+    "vai": "Practice",
+    "van_ban": [
+     "T1",
+     "T2",
+     "T3",
+     "T4"
+    ],
+    "vai_cua_con": "nói cùng, thay tên mình/bạn vào ô"
+   }
+  ],
+  "nghe_ngam": {
+   "bo": [
+    "T1 Truyện khung",
+    "T2 Bài hát vận động",
+    "T3 Big book mẫu câu",
+    "T4 Vè"
+   ],
+   "on_xoan_oc": [
+    "U11 T2 bài hát",
+    "U10 T4 vè"
+   ],
+   "thoi_luong": "6–8 phút (bộ của unit) + 1–2 bài unit cũ",
+   "bac": "đầu",
+   "cach_nghe": "2–3 lượt × 10–15 phút/ngày theo mốc cố định; hiểu trước (nghe có reader hoặc gặp trên lớp) rồi mới nghe ngấm (ng.t. 48–49)",
+   "noi_dung": "chủ yếu bài hát, vè, câu cửa miệng; truyện khung ở bản nghe cùng reader"
+  },
+  "reader": {
+   "van_ban": [
+    "T1"
+   ],
+   "in": "A5, mã QR tới 2 bản audio (cùng reader có tiếng hiệu lật trang; nghe ngấm tốc độ tự nhiên)",
+   "cach_dung": "nghe và chỉ nhân vật, đồ vật; tiếng Trung có pinyin"
+  },
+  "bo_hoc_tai_nha": {
+   "flashcard_en": [
+    "six",
+    "seven",
+    "ball",
+    "eight",
+    "nine",
+    "toy",
+    "ten",
+    "how many"
+   ],
+   "flashcard_zh": [],
+   "poster_the_gioi": [
+    "six",
+    "seven",
+    "ball",
+    "eight",
+    "nine",
+    "toy",
+    "ten",
+    "how many"
+   ],
+   "poster_cau_cua_mieng": [
+    "Let's count! / ",
+    "Wow! / ",
+    "Good job! / "
+   ],
+   "mo_khoa": "mở khi con học tới unit này; đồ unit cũ giữ nguyên (ng.t. 56)"
+  }
+ }
+]

@@ -115,7 +115,7 @@ def main(relabel=False):
     for c in ORDER:
         for u, d in T2[c].items():
             i = keys.index((c, u))
-            later = [k for k in keys[i + 1:] if not (k[0] in REVIEW)]
+            later = list(keys[i + 1:])          # gồm cả khóa ôn: từ cũ cài vào văn bản mới dạng đề
             for L in ('en', 'zh'):
                 for it in d[L]:
                     if it['tier'] != 'Vòng ngoài':

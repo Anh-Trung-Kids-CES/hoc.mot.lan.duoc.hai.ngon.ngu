@@ -1,0 +1,320 @@
+{
+ "T1": {
+  "loai": "Truyện khung",
+  "ten_en": "What Is Your Job?",
+  "ten_zh": "你做什么工作？",
+  "khung_en": "I am a ___.",
+  "khung_zh": "我是___。",
+  "phan_ten": [
+   [
+    "Job Day",
+    "职业日"
+   ],
+   [
+    "A Nurse, a Dentist and a Chef",
+    "护士、牙医和厨师"
+   ],
+   [
+    "A Big Man Comes In",
+    "大个子来了"
+   ],
+   [
+    "Oh Dear, My Tooth!",
+    "哎呀，我的牙！"
+   ],
+   [
+    "I Love My Job!",
+    "我爱我的工作！"
+   ]
+  ],
+  "en": [
+   "Mrs Lan says, \"What is your job?\" Anna's mom says, \"I am a doctor.\" Bông's dad says, \"I am a doctor!\" Leo says, \"I am a student!\"",
+   "Xiaomei's mom says, \"I am a nurse.\" Vũ's dad says, \"I am a dentist.\" Leo's dad says, \"I am a chef!\" Leo says, \"My dad is a chef!\"",
+   "Anna's dad says, \"I am a farmer.\" Bông's mom says, \"I am an employee.\" A big man comes in. \"I am a firefighter!\" \"Wow, a firefighter!\" says Vũ.",
+   "\"Oh dear, my tooth!\" says Bông. \"Don't worry, I am a dentist,\" says Vũ's dad. \"Don't worry, I am a doctor,\" says Anna's mom. They work at the hospital.",
+   "\"This is my older brother,\" says Vũ. \"I am a driver!\" \"I am a teacher. I love my job!\" says Mrs Lan. ___ says, \"I am a student!\""
+  ],
+  "zh": [
+   "Lan老师说：“你做什么工作？”Anna的妈妈说：“我是医生。”Bông的爸爸说：“我也是医生！”Anna说：“我妈妈是医生！”Leo说：“我是学生！”",
+   "Xiaomei的妈妈说：“我是护士。”Vũ的爸爸说：“我是牙医。”Leo的爸爸说：“我是厨师！”Leo说：“我爸爸是厨师！”",
+   "Anna的爸爸说：“我是农民。”Bông的妈妈说：“我是员工。”一个大个子来了：“我是消防员！”他比Lan老师高！",
+   "Bông说：“哎呀，我的牙！”Vũ的爸爸说：“别担心，我是牙医。”Anna的妈妈说：“没关系，我是医生。”他们都在医院工作。",
+   "Vũ说：“这是我哥哥。”哥哥说：“我是司机！”Bông说：“这是我姐姐。”姐姐说：“我是护士！”Lan老师说：“我是老师。大家都爱工作！”___说：“我是学生！”"
+  ],
+  "pinyin": [
+   "Lan lǎoshī shuō: \"Nǐ zuò shénme gōngzuò?\" Anna de māma shuō: \"Wǒ shì yīshēng.\" Bông de bàba shuō: \"Wǒ yě shì yīshēng!\" Anna shuō: \"Wǒ māma shì yīshēng!\" Leo shuō: \"Wǒ shì xuéshēng!\"",
+   "Xiaomei de māma shuō: \"Wǒ shì hùshi.\" Vũ de bàba shuō: \"Wǒ shì yáyī.\" Leo de bàba shuō: \"Wǒ shì chúshī!\" Leo shuō: \"Wǒ bàba shì chúshī!\"",
+   "Anna de bàba shuō: \"Wǒ shì nóngmín.\" Bông de māma shuō: \"Wǒ shì yuángōng.\" Yí ge dà gèzi lái le: \"Wǒ shì xiāofángyuán!\" Tā bǐ Lan lǎoshī gāo!",
+   "Bông shuō: \"Āiyā, wǒ de yá!\" Vũ de bàba shuō: \"Bié dānxīn, wǒ shì yáyī.\" Anna de māma shuō: \"Méi guānxi, wǒ shì yīshēng.\" Tāmen dōu zài yīyuàn gōngzuò.",
+   "Vũ shuō: \"Zhè shì wǒ gēge.\" Gēge shuō: \"Wǒ shì sījī!\" Bông shuō: \"Zhè shì wǒ jiějie.\" Jiějie shuō: \"Wǒ shì hùshi!\" Lan lǎoshī shuō: \"Wǒ shì lǎoshī. Dàjiā dōu ài gōngzuò!\" ___ shuō: \"Wǒ shì xuéshēng!\""
+  ],
+  "ghi_chu": "5 phần cho ngày web 1–5 (mỗi phần ≤30 chữ tiếng Anh), ngày 6–7 nghe cả truyện. ___ ở câu cuối phần 5 là chỗ chèn tên con."
+ },
+ "T2": {
+  "loai": "Bài hát vận động",
+  "ten_en": "I Am a Doctor",
+  "ten_zh": "我是医生",
+  "kieu": "liệt kê",
+  "giai_dieu": "tự sáng tác – Đô trưởng, 4/4, nhịp 112; 4 câu nhạc × 2 ô nhịp; 6 lượt ≈ 1 phút 45 giây",
+  "o_thay": [
+   "doctor",
+   "nurse",
+   "dentist",
+   "chef",
+   "farmer",
+   "student"
+  ],
+  "o_thay_zh": [
+   "医生",
+   "护士",
+   "牙医",
+   "厨师",
+   "农民",
+   "学生"
+  ],
+  "dong_tac": "doctor – áp tai nghe tim bạn; nurse – quấn băng tay; dentist – há miệng “Ah!”; chef – khuấy nồi; farmer – cuốc đất; student – viết lên không",
+  "en": [
+   [
+    "I am a doctor, a doctor, a doctor!",
+    "I am a doctor – like this, like this!",
+    "I am a doctor, a doctor, a doctor!",
+    "I love my job, my job, my job!"
+   ],
+   [
+    "I am a nurse, a nurse, a nurse!",
+    "I am a nurse – like this, like this!",
+    "I am a nurse, a nurse, a nurse!",
+    "I love my job, my job, my job!"
+   ],
+   [
+    "I am a dentist, a dentist, a dentist!",
+    "I am a dentist – like this, like this!",
+    "I am a dentist, a dentist, a dentist!",
+    "I love my job, my job, my job!"
+   ],
+   [
+    "I am a chef, a chef, a chef!",
+    "I am a chef – like this, like this!",
+    "I am a chef, a chef, a chef!",
+    "I love my job, my job, my job!"
+   ],
+   [
+    "I am a farmer, a farmer, a farmer!",
+    "I am a farmer – like this, like this!",
+    "I am a farmer, a farmer, a farmer!",
+    "I love my job, my job, my job!"
+   ],
+   [
+    "___ is a student, a student, a student!",
+    "___ is a student – like this, like this!",
+    "___ is a student, a student, a student!",
+    "I love my job, my job, my job!"
+   ]
+  ],
+  "zh": [
+   [
+    "我是医生，医生医生！",
+    "这样做呀，这样做！",
+    "我是医生，医生医生！",
+    "我爱我的工作！"
+   ],
+   [
+    "我是护士，护士护士！",
+    "这样做呀，这样做！",
+    "我是护士，护士护士！",
+    "我爱我的工作！"
+   ],
+   [
+    "我是牙医，牙医牙医！",
+    "这样做呀，这样做！",
+    "我是牙医，牙医牙医！",
+    "我爱我的工作！"
+   ],
+   [
+    "我是厨师，厨师厨师！",
+    "这样做呀，这样做！",
+    "我是厨师，厨师厨师！",
+    "我爱我的工作！"
+   ],
+   [
+    "我是农民，农民农民！",
+    "这样做呀，这样做！",
+    "我是农民，农民农民！",
+    "我爱我的工作！"
+   ],
+   [
+    "___是学生，学生学生！",
+    "这样做呀，这样做！",
+    "___是学生，学生学生！",
+    "我爱我的工作！"
+   ]
+  ],
+  "pinyin": [
+   [
+    "Wǒ shì yīshēng, yīshēng yīshēng!",
+    "Zhèyàng zuò ya, zhèyàng zuò!",
+    "Wǒ shì yīshēng, yīshēng yīshēng!",
+    "Wǒ ài wǒ de gōngzuò!"
+   ],
+   [
+    "Wǒ shì hùshi, hùshi hùshi!",
+    "Zhèyàng zuò ya, zhèyàng zuò!",
+    "Wǒ shì hùshi, hùshi hùshi!",
+    "Wǒ ài wǒ de gōngzuò!"
+   ],
+   [
+    "Wǒ shì yáyī, yáyī yáyī!",
+    "Zhèyàng zuò ya, zhèyàng zuò!",
+    "Wǒ shì yáyī, yáyī yáyī!",
+    "Wǒ ài wǒ de gōngzuò!"
+   ],
+   [
+    "Wǒ shì chúshī, chúshī chúshī!",
+    "Zhèyàng zuò ya, zhèyàng zuò!",
+    "Wǒ shì chúshī, chúshī chúshī!",
+    "Wǒ ài wǒ de gōngzuò!"
+   ],
+   [
+    "Wǒ shì nóngmín, nóngmín nóngmín!",
+    "Zhèyàng zuò ya, zhèyàng zuò!",
+    "Wǒ shì nóngmín, nóngmín nóngmín!",
+    "Wǒ ài wǒ de gōngzuò!"
+   ],
+   [
+    "___ shì xuéshēng, xuéshēng xuéshēng!",
+    "Zhèyàng zuò ya, zhèyàng zuò!",
+    "___ shì xuéshēng, xuéshēng xuéshēng!",
+    "Wǒ ài wǒ de gōngzuò!"
+   ]
+  ],
+  "ghi_chu_thanh": [
+   "Câu 1 và 3: 我 (wǒ, thanh 3) nốt thấp Đô, 是 (shì, thanh 4) nốt Sol xuống Mi, ô nghề hát trên hai nốt Sol – Sol.",
+   "医生 yīshēng (1–1): hai nốt Sol bằng – khớp thanh.",
+   "牙医 yáyī, 厨师 chúshī (2–1): âm đầu luyến Mi→Sol rồi Sol – khớp thanh 2 đi lên.",
+   "学生 xuésheng (2–nhẹ): Mi→Sol rồi Mi ngắn – khớp.",
+   "护士 hùshi (4–nhẹ): hát trên Sol bằng sẽ nghe thành hū → lượt này ĐỔI SANG VÈ VỖ TAY (nói theo nhịp, vỗ 2 tiếng ở ô).",
+   "农民 nóngmín (2–2): hai nốt bằng làm mất thanh 2 → lượt này ĐỔI SANG VÈ VỖ TAY.",
+   "Câu 4 我爱我的工作: 爱 (ài) Sol→Mi, 工 (gōng) Sol, 作 (zuò) Sol→Đô kết – khớp thanh 1–4.",
+   "Câu 2 做 (zuò) hai lần, hạ giọng ở cuối câu; vần 做/作 (-uò) giữa câu 2 và câu 4."
+  ],
+  "ghi_chu": "Bản Trung viết lại theo vần -uò (做/作), không dịch câu “like this”; cùng thứ tự 6 ô và cùng động tác với bản Anh. Lượt 6 có chỗ cho tên con."
+ },
+ "T3": {
+  "loai": "Big book mẫu câu",
+  "ten_en": "Who Is the Doctor?",
+  "ten_zh": "谁是医生？",
+  "kieu": "hỏi–đáp",
+  "khung_en": "Who is the ___? It's my ___!",
+  "khung_zh": "谁是___？是我___！",
+  "en": [
+   "Who is the doctor? It's my mom!",
+   "Who is the chef? It's my dad!",
+   "Who is the nurse? It's my older sister!",
+   "Who is the farmer? It's my older brother!",
+   "Who is the employee? It's my friend!",
+   "Who is the driver? It's my teacher!",
+   "Who is the firefighter? It's my cat! Oh dear!",
+   "Who is the dentist? It's my dog! Don't worry!",
+   "Who is the student? It's ___!"
+  ],
+  "zh": [
+   "谁是医生？是我妈妈！",
+   "谁是厨师？是我爸爸！",
+   "谁是护士？是我姐姐！",
+   "谁是农民？是我哥哥！",
+   "谁是员工？是我朋友！",
+   "谁是司机？是Lan老师！",
+   "谁是消防员？是小猫！哎呀！",
+   "谁是牙医？是小狗！别担心！",
+   "谁是学生？是___！"
+  ],
+  "pinyin": [
+   "Shéi shì yīshēng? Shì wǒ māma!",
+   "Shéi shì chúshī? Shì wǒ bàba!",
+   "Shéi shì hùshi? Shì wǒ jiějie!",
+   "Shéi shì nóngmín? Shì wǒ gēge!",
+   "Shéi shì yuángōng? Shì wǒ péngyou!",
+   "Shéi shì sījī? Shì Lan lǎoshī!",
+   "Shéi shì xiāofángyuán? Shì xiǎo māo! Āiyā!",
+   "Shéi shì yáyī? Shì xiǎo gǒu! Bié dānxīn!",
+   "Shéi shì xuéshēng? Shì ___!"
+  ],
+  "ghi_chu": "Mỗi trang một câu hỏi + một câu đáp; trang 7–8 tranh vui (mèo đội mũ lính cứu hỏa, chó đeo gương nha sĩ). Trang 9 để tên con."
+ },
+ "T4": {
+  "loai": "Vè",
+  "ten_en": "How Many Doctors?",
+  "ten_zh": "几个医生？",
+  "kieu": "đếm",
+  "khung_en": "How many ___s? One, two, three!",
+  "khung_zh": "几个___？一二三！",
+  "en": [
+   "How many doctors? One, two, three!",
+   "How many nurses? One, two, three!",
+   "How many chefs? One, two, three!",
+   "How many farmers? One, two, three!",
+   "How many employees? One, two, three!",
+   "How many dentists? One, two, three!",
+   "Oh dear, oh dear! Don't worry!",
+   "We work, we work, we love our jobs!"
+  ],
+  "zh": [
+   "几个医生？一二三！",
+   "几个护士？一二三！",
+   "几个厨师？一二三！",
+   "几个农民？一二三！",
+   "几个员工？一二三！",
+   "几个牙医？一二三！",
+   "哎呀哎呀，别担心！",
+   "大家都爱工作，一二三！"
+  ],
+  "pinyin": [
+   "Jǐ ge yīshēng? Yī èr sān!",
+   "Jǐ ge hùshi? Yī èr sān!",
+   "Jǐ ge chúshī? Yī èr sān!",
+   "Jǐ ge nóngmín? Yī èr sān!",
+   "Jǐ ge yuángōng? Yī èr sān!",
+   "Jǐ ge yáyī? Yī èr sān!",
+   "Āiyā āiyā, bié dānxīn!",
+   "Dàjiā dōu ài gōngzuò, yī èr sān!"
+  ],
+  "ghi_chu": "Vè vỗ tay: vỗ 3 tiếng ở “one, two, three / 一二三”; lượng từ 个 giữ cố định cho mọi nghề."
+ },
+ "T5": {
+  "loai": "Bài tiếng Trung riêng",
+  "ten_zh": "谁比谁高？",
+  "kieu": "chuỗi xích (vè vỗ tay)",
+  "khung_zh": "___比___高。",
+  "en": "",
+  "zh": [
+   "在医院，消防员比医生高。",
+   "医生比护士高。",
+   "护士比学生高。",
+   "学生比小狗高。",
+   "小狗比小猫高。",
+   "小猫说：“哎呀，我不高！”",
+   "大家都说：“没关系！没关系！”"
+  ],
+  "pinyin": [
+   "Zài yīyuàn, xiāofángyuán bǐ yīshēng gāo.",
+   "Yīshēng bǐ hùshi gāo.",
+   "Hùshi bǐ xuéshēng gāo.",
+   "Xuéshēng bǐ xiǎo gǒu gāo.",
+   "Xiǎo gǒu bǐ xiǎo māo gāo.",
+   "Xiǎo māo shuō: \"Āiyā, wǒ bù gāo!\"",
+   "Dàjiā dōu shuō: \"Méi guānxi! Méi guānxi!\""
+  ],
+  "ghi_chu": "Chuỗi xích: vật/người đứng cuối câu trước thành chủ ngữ câu sau. Dùng tranh xếp hàng theo chiều cao; luyện 比 và 没关系."
+ },
+ "T6": {
+  "loai": "Truyện anh em",
+  "ten_en": "Vũ's Toy Hospital",
+  "ten_zh": "Vũ的玩具医院",
+  "khung_en": "I am a ___.",
+  "khung_zh": "我是___。",
+  "en": "On Saturday, my older sister and I play a job game. \"I am a doctor!\" says my sister. I say, \"I am a nurse!\" Oh dear, my dog has a bad tooth! \"Don't worry, I am a dentist!\" says my sister. My mom says, \"I am a chef!\" My dad says, \"I am a driver!\" We work at a toy hospital, and we love our jobs! ___ says, \"I am a ___!\"",
+  "zh": "星期六，我和姐姐玩工作游戏。我姐姐比我高。她说：“我是医生！”我说：“我是护士！”哎呀，小狗的牙！姐姐说：“别担心，没关系，我是牙医！”我妈妈说：“我是厨师！”我爸爸说：“我是司机！”我们都在玩具医院工作，大家都爱这个游戏！___说：“我是___！”",
+  "pinyin": "Xīngqīliù, wǒ hé jiějie wán gōngzuò yóuxì. Wǒ jiějie bǐ wǒ gāo. Tā shuō: \"Wǒ shì yīshēng!\" Wǒ shuō: \"Wǒ shì hùshi!\" Āiyā, xiǎo gǒu de yá! Jiějie shuō: \"Bié dānxīn, méi guānxi, wǒ shì yáyī!\" Wǒ māma shuō: \"Wǒ shì chúshī!\" Wǒ bàba shuō: \"Wǒ shì sījī!\" Wǒmen dōu zài wánjù yīyuàn gōngzuò, dàjiā dōu ài zhège yóuxì! ___ shuō: \"Wǒ shì ___!\"",
+  "ghi_chu": "Truyện anh em ngày 8: cùng nhân vật, cùng bộ từ, tình huống mới; Vũ kể ngôi thứ nhất nên dùng tự nhiên my mom / 我妈妈. Từ lạ có tranh: bad (EN); 哎呀, 牙 (ZH)."
+ }
+}

@@ -1,0 +1,3823 @@
+[
+ {
+  "unit": "1",
+  "chu_de": "Time & Date 1 – Thứ trong tuần; quy luật 星期 + số; tô 日",
+  "khung_cau": {
+   "en": "It's ___ now.",
+   "zh": "现在是___。",
+   "o": "thứ / tháng / giờ"
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "Look at the calendar!",
+    "zh": "看日历！"
+   },
+   {
+    "en": "What time is it?",
+    "zh": "几点了？"
+   },
+   {
+    "en": "Well done!",
+    "zh": "真棒！"
+   },
+   {
+    "en": "Oh no!",
+    "zh": "哎呀！"
+   }
+  ],
+  "van_ban": [
+   {
+    "id": "T1",
+    "loai": "Truyện khung",
+    "ten_en": "Is It Sunday?",
+    "ten_zh": "今天星期天吗？",
+    "khung_en": "It's ___ now.",
+    "khung_zh": "现在是___。",
+    "phan": [
+     {
+      "phan": 1,
+      "y": "Bông thức dậy reo “It's Sunday now!”, mẹ cười: “It's Monday now.” (ZH vào: 星期天, 星期一)",
+      "tu_moi_vao": [
+       "sunday",
+       "monday",
+       "now"
+      ]
+     },
+     {
+      "phan": 2,
+      "y": "Mẹ bảo Bông nhìn lịch, chỉ từng ngày trong tuần đến thứ Bảy. (ZH vào: 日历, 星期几, 对, 不对; vòng ngoài có tranh: tuesday, wednesday, thursday, friday, saturday, 星期二, 星期三, 星期四, 星期五, 星期六, 星期日)",
+      "tu_moi_vao": [
+       "look at",
+       "calendar",
+       "week"
+      ]
+     },
+     {
+      "phan": 3,
+      "y": "Bông nhìn đồng hồ: không phải một giờ, hai giờ – “It's seven o'clock now!” (ZH vào: 钟, 几点, 七点; vòng ngoài có tranh: one o'clock, two o'clock, 一点, 两点)",
+      "tu_moi_vao": [
+       "clock",
+       "o'clock",
+       "seven o'clock"
+      ]
+     },
+     {
+      "phan": 4,
+      "y": "Ở lớp, cô Lan hỏi tháng nào: tháng Một, tháng Ba… “Which month is it now? It's October.” Sinh nhật Anna tháng Sáu. (ZH vào: 六月, 十月, 年; vòng ngoài có tranh: january, march, december, month, 一月, 三月, 十二月)",
+      "tu_moi_vao": [
+       "june",
+       "october",
+       "which"
+      ]
+     },
+     {
+      "phan": 5,
+      "y": "Mười hai giờ Bông ăn trưa, cô khen “Well done!”; cuối tuần cả nhà đi bể bơi – câu cuối: “It's ___'s weekend now!” (ZH vào: 十二点, 时间, 分钟; vòng ngoài có tranh: weekend, pool, 周末)",
+      "tu_moi_vao": [
+       "twelve o'clock",
+       "at",
+       "well done"
+      ]
+     }
+    ],
+    "tu_en": [
+     "monday",
+     "week",
+     "sunday",
+     "june",
+     "october",
+     "calendar",
+     "clock",
+     "now",
+     "which",
+     "look at",
+     "well done",
+     "o'clock",
+     "at",
+     "seven o'clock",
+     "twelve o'clock",
+     "tuesday",
+     "wednesday",
+     "thursday",
+     "friday",
+     "saturday",
+     "weekend",
+     "pool",
+     "january",
+     "march",
+     "december",
+     "month",
+     "one o'clock",
+     "two o'clock"
+    ],
+    "tu_zh": [
+     "星期一",
+     "星期几",
+     "星期天",
+     "六月",
+     "十月",
+     "年",
+     "日历",
+     "对",
+     "不对",
+     "钟",
+     "时间",
+     "七点",
+     "十二点",
+     "几点",
+     "分钟",
+     "星期二",
+     "星期三",
+     "星期四",
+     "星期五",
+     "星期六",
+     "星期日",
+     "周末",
+     "一月",
+     "三月",
+     "十二月",
+     "一点",
+     "两点"
+    ]
+   },
+   {
+    "id": "T2",
+    "loai": "Bài hát vận động",
+    "ten_en": "Seven Days",
+    "ten_zh": "一个星期七天",
+    "kieu": "liệt kê",
+    "giai_dieu": "dân gian hết bản quyền: Oh My Darling, Clementine (dân ca Mỹ thế kỷ 19) – Đô trưởng, nhịp 104",
+    "khung_en": "It's ___ now, ___ now! Seven days in a week!",
+    "khung_zh": "今天星期___，星期___！一个星期七天！",
+    "o_thay": [
+     "monday",
+     "tuesday",
+     "wednesday",
+     "thursday",
+     "friday",
+     "saturday"
+    ],
+    "dong_tac": "mỗi lượt giơ số ngón tay bằng số thứ của ngày (thứ Hai 1 ngón… thứ Bảy 6 ngón); lượt 6 kết “Saturday, Sunday – weekend now!” hai tay vẫy, nhảy",
+    "tu_en": [
+     "monday",
+     "tuesday",
+     "wednesday",
+     "thursday",
+     "friday",
+     "saturday",
+     "sunday",
+     "week",
+     "now",
+     "weekend"
+    ],
+    "tu_zh": [
+     "星期一",
+     "星期二",
+     "星期三",
+     "星期四",
+     "星期五",
+     "星期六",
+     "星期天",
+     "星期日",
+     "星期几"
+    ],
+    "ghi_chu_thanh": "星期 xīngqī (1–1) hát trên hai nốt bằng cao – khớp. Ô số: 一 yī, 三 sān, 天 tiān (thanh 1) khớp; 二 èr, 四 sì, 六 liù (thanh 4) và 五 wǔ (thanh 3) dễ lệch trên nốt bằng → các lượt thứ Ba, thứ Năm, thứ Sáu, thứ Bảy ĐỔI SANG VÈ VỖ TAY (nói theo nhịp). Câu hỏi 今天星期几 kết bằng 几 jǐ (thanh 3) ở nốt thấp."
+   },
+   {
+    "id": "T3",
+    "loai": "Big book mẫu câu",
+    "ten_en": "What Time Is It?",
+    "ten_zh": "现在几点？",
+    "kieu": "hỏi–đáp",
+    "khung_en": "What time is it? It's ___!",
+    "khung_zh": "现在几点？现在___！",
+    "tu_en": [
+     "clock",
+     "look at",
+     "o'clock",
+     "one o'clock",
+     "two o'clock",
+     "seven o'clock",
+     "twelve o'clock",
+     "now",
+     "at",
+     "well done"
+    ],
+    "tu_zh": [
+     "钟",
+     "几点",
+     "一点",
+     "两点",
+     "七点",
+     "十二点",
+     "时间",
+     "分钟",
+     "对",
+     "不对"
+    ]
+   },
+   {
+    "id": "T4",
+    "loai": "Vè",
+    "ten_en": "Months, Months",
+    "ten_zh": "一月一，三月三",
+    "kieu": "đếm",
+    "khung_en": "___ – number ___!",
+    "khung_zh": "___，___！",
+    "tu_en": [
+     "january",
+     "march",
+     "june",
+     "october",
+     "december",
+     "month",
+     "calendar",
+     "which"
+    ],
+    "tu_zh": [
+     "一月",
+     "三月",
+     "六月",
+     "十月",
+     "十二月",
+     "年",
+     "日历",
+     "对",
+     "不对"
+    ]
+   },
+   {
+    "id": "T6",
+    "loai": "Truyện anh em",
+    "ten_en": "Leo's Pool Day",
+    "ten_zh": "Leo去游泳",
+    "khung_en": "It's ___ now.",
+    "khung_zh": "现在是___。",
+    "y": "Leo tưởng hôm nay thứ Bảy đi bể bơi, nhìn lịch thấy tháng Sáu, Chủ nhật; bảy giờ dậy, mười hai giờ mới tới bể bơi – mẹ khen “Well done!”.",
+    "tu_en": [
+     "monday",
+     "week",
+     "sunday",
+     "june",
+     "october",
+     "calendar",
+     "clock",
+     "now",
+     "which",
+     "look at",
+     "well done",
+     "o'clock",
+     "at",
+     "seven o'clock",
+     "twelve o'clock",
+     "saturday",
+     "weekend",
+     "pool"
+    ],
+    "tu_zh": [
+     "星期一",
+     "星期几",
+     "星期天",
+     "六月",
+     "十月",
+     "年",
+     "日历",
+     "对",
+     "不对",
+     "钟",
+     "时间",
+     "七点",
+     "十二点",
+     "几点",
+     "分钟",
+     "星期六",
+     "周末"
+    ]
+   }
+  ],
+  "dem_vong_ngoai": {
+   "tuesday": "T1 phần 2 + T2",
+   "wednesday": "T1 phần 2 + T2",
+   "thursday": "T1 phần 2 + T2",
+   "friday": "T1 phần 2 + T2",
+   "saturday": "T1 phần 2 + T2 + T6",
+   "weekend": "T1 phần 5 + T2 + T6",
+   "pool": "T1 phần 5 + T6",
+   "january": "T1 phần 4 + T4",
+   "march": "T1 phần 4 + T4",
+   "december": "T1 phần 4 + T4",
+   "month": "T1 phần 4 + T4",
+   "one o'clock": "T1 phần 3 + T3",
+   "two o'clock": "T1 phần 3 + T3",
+   "星期二": "T1 phần 2 + T2",
+   "星期三": "T1 phần 2 + T2",
+   "星期四": "T1 phần 2 + T2",
+   "星期五": "T1 phần 2 + T2",
+   "星期六": "T1 phần 2 + T2 + T6",
+   "星期日": "T1 phần 2 + T2",
+   "周末": "T1 phần 5 + T6",
+   "一月": "T1 phần 4 + T4",
+   "三月": "T1 phần 4 + T4",
+   "十二月": "T1 phần 4 + T4",
+   "一点": "T1 phần 3 + T3",
+   "两点": "T1 phần 3 + T3"
+  },
+  "de_nghi_doi_nhan": [
+   {
+    "tu": "month",
+    "de_nghi": "vòng ngoài → lõi",
+    "ly_do": "Unit hỏi – đáp tháng (What month is it?, twelve months) – month là từ chủ đề, xuất hiện ở truyện, vè đếm tháng và big book; tiếng Trung đã có 年 là lõi."
+   }
+  ],
+  "ghi_chu": "Truyện khung kể ngày 1–7 (phần 1–5 ngày 1–5, cả truyện ngày 6–7); T6 ngày 8. Tháng ở tiếng Trung đọc bằng số + 月 nên vè đếm tháng hai tiếng cùng ô."
+ },
+ {
+  "unit": "2",
+  "chu_de": "Time & Date 2 – Hỏi – đáp ngày; hôm qua, hôm nay, ngày mai; tô 天",
+  "khung_cau": {
+   "en": "My present is a ___.",
+   "zh": "我的礼物是___。",
+   "o": "món quà"
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "Happy birthday!",
+    "zh": "生日快乐！"
+   },
+   {
+    "en": "When is your birthday?",
+    "zh": "你什么时候过生日？"
+   },
+   {
+    "en": "Here's a present!",
+    "zh": "这是礼物！"
+   },
+   {
+    "en": "Wow!",
+    "zh": "哇！"
+   }
+  ],
+  "van_ban": [
+   {
+    "id": "T1",
+    "loai": "Truyện khung",
+    "ten_en": "Presents for Anna",
+    "ten_zh": "给Anna的礼物",
+    "khung_en": "My present is a ___.",
+    "khung_zh": "我的礼物是___。",
+    "phan": [
+     {
+      "phan": 1,
+      "y": "Hôm qua là mùng 2, hôm nay mùng 3; Leo hỏi “When is Anna's birthday?” – Anna bảo “Say it: the 4th!”. (ZH vào: 昨天, 几号, 日, 几月几号, 什么时候; vòng ngoài có tranh: 1st, 2nd, 3rd, 4th, 三号)",
+      "tu_moi_vao": [
+       "yesterday",
+       "when",
+       "say"
+      ]
+     },
+     {
+      "phan": 2,
+      "y": "Bông làm thiệp, cắm nến; “My present is a card!” (ZH vào: 卡片, 做, 礼物, 告诉; vòng ngoài có tranh: 5th, 蜡烛)",
+      "tu_moi_vao": [
+       "card",
+       "present",
+       "candle"
+      ]
+     },
+     {
+      "phan": 3,
+      "y": "Leo tặng diều và quả bóng: “My present is a kite… a football! Kick!” (ZH vào: 足球, 踢; vòng ngoài có tranh: soccer, sport, 风筝, 运动)",
+      "tu_moi_vao": [
+       "kite",
+       "football",
+       "kick"
+      ]
+     },
+     {
+      "phan": 4,
+      "y": "Vũ tặng đàn ghi-ta, Xiaomei tặng ván trượt, Anna đánh bóng khúc côn cầu “Hit!” (ZH vào: 多少; vòng ngoài có tranh: robot, 吉他, 滑板, 机器人)",
+      "tu_moi_vao": [
+       "guitar",
+       "skateboard",
+       "hockey",
+       "hit"
+      ]
+     },
+     {
+      "phan": 5,
+      "y": "Xiaomei kể ở Trung Quốc sinh nhật ăn mì dài; câu cuối: “My present for ___ is a long kite!” (ZH vào: 中国, 长寿面, 过生日; vòng ngoài có tranh: 8th, 31st, fishing, 八号)",
+      "tu_moi_vao": [
+       "china",
+       "long"
+      ]
+     }
+    ],
+    "tu_en": [
+     "yesterday",
+     "when",
+     "say",
+     "card",
+     "present",
+     "candle",
+     "kite",
+     "china",
+     "long",
+     "guitar",
+     "football",
+     "skateboard",
+     "hockey",
+     "kick",
+     "hit",
+     "1st",
+     "2nd",
+     "3rd",
+     "8th",
+     "4th",
+     "5th",
+     "31st",
+     "robot",
+     "soccer",
+     "sport",
+     "fishing"
+    ],
+    "tu_zh": [
+     "昨天",
+     "日",
+     "几号",
+     "多少",
+     "告诉",
+     "什么时候",
+     "几月几号",
+     "卡片",
+     "做",
+     "礼物",
+     "中国",
+     "长寿面",
+     "过生日",
+     "足球",
+     "踢",
+     "三号",
+     "八号",
+     "蜡烛",
+     "风筝",
+     "机器人",
+     "吉他",
+     "滑板",
+     "运动"
+    ]
+   },
+   {
+    "id": "T2",
+    "loai": "Bài hát vận động",
+    "ten_en": "When Is Your Birthday?",
+    "ten_zh": "你什么时候过生日？",
+    "kieu": "hỏi–đáp",
+    "giai_dieu": "dân gian hết bản quyền: For He's a Jolly Good Fellow (dân ca Anh/Pháp) – Đô trưởng, nhịp 112",
+    "khung_en": "When is your birthday? It's the ___!",
+    "khung_zh": "你什么时候过生日？___过生日！",
+    "o_thay": [
+     "1st",
+     "2nd",
+     "3rd",
+     "4th",
+     "5th",
+     "8th"
+    ],
+    "dong_tac": "mỗi lượt vỗ tay đúng số ngày (1st vỗ 1, 2nd vỗ 2… 8th vỗ 8); câu cuối thổi nến",
+    "tu_en": [
+     "when",
+     "yesterday",
+     "say",
+     "present",
+     "candle",
+     "1st",
+     "2nd",
+     "3rd",
+     "4th",
+     "5th",
+     "8th"
+    ],
+    "tu_zh": [
+     "什么时候",
+     "几月几号",
+     "昨天",
+     "三号",
+     "八号",
+     "过生日",
+     "蜡烛",
+     "礼物",
+     "长寿面"
+    ],
+    "ghi_chu_thanh": "Ô ngày tiếng Trung kết bằng 号 hào (thanh 4) – đặt trên nốt đi xuống Sol→Mi. 过生日 guò shēngrì (4–1–4): 过 và 日 nốt xuống, 生 nốt cao – khớp. Lượt 三号 sān hào khớp; lượt 八号 bā hào khớp; nếu cô thấy con hát lệch 几月几号 (jǐ yuè jǐ hào: 3–4–3–4) thì câu hỏi ĐỔI SANG VÈ VỖ TAY."
+   },
+   {
+    "id": "T3",
+    "loai": "Big book mẫu câu",
+    "ten_en": "My Present Is a Kite",
+    "ten_zh": "我的礼物是风筝",
+    "kieu": "liệt kê",
+    "khung_en": "My present is a ___!",
+    "khung_zh": "我的礼物是___！",
+    "tu_en": [
+     "present",
+     "card",
+     "kite",
+     "football",
+     "guitar",
+     "skateboard",
+     "robot",
+     "hockey",
+     "china"
+    ],
+    "tu_zh": [
+     "礼物",
+     "卡片",
+     "做",
+     "风筝",
+     "足球",
+     "吉他",
+     "滑板",
+     "机器人",
+     "中国"
+    ]
+   },
+   {
+    "id": "T4",
+    "loai": "Vè",
+    "ten_en": "Kick and Hit",
+    "ten_zh": "踢踢踢",
+    "kieu": "cặp đối lập",
+    "khung_en": "Football? Kick! Hockey? Hit!",
+    "khung_zh": "足球？踢！___？___！",
+    "tu_en": [
+     "kick",
+     "hit",
+     "football",
+     "hockey",
+     "soccer",
+     "sport",
+     "long"
+    ],
+    "tu_zh": [
+     "足球",
+     "踢",
+     "运动",
+     "多少"
+    ]
+   },
+   {
+    "id": "T5",
+    "loai": "Bài tiếng Trung riêng",
+    "ten_zh": "几月几号？",
+    "kieu": "hỏi–đáp (vè vỗ tay)",
+    "khung_zh": "今天几月几号？今天___。",
+    "tu_en": [],
+    "tu_zh": [
+     "几月几号",
+     "几号",
+     "日",
+     "多少",
+     "告诉",
+     "昨天",
+     "什么时候",
+     "三号",
+     "八号"
+    ]
+   },
+   {
+    "id": "T6",
+    "loai": "Truyện anh em",
+    "ten_en": "Xiaomei's Long Noodles",
+    "ten_zh": "Xiaomei的长寿面",
+    "khung_en": "My present is a ___.",
+    "khung_zh": "我的礼物是___。",
+    "y": "Hôm qua, ngày 31, là sinh nhật Xiaomei ở Trung Quốc: bà nấu mì dài, các bạn gửi thiệp, diều, ghi-ta, ván trượt; ông tặng bộ câu cá; Leo đá bóng, Anna đánh bóng.",
+    "tu_en": [
+     "yesterday",
+     "when",
+     "say",
+     "card",
+     "present",
+     "candle",
+     "kite",
+     "china",
+     "long",
+     "guitar",
+     "skateboard",
+     "kick",
+     "hit",
+     "fishing",
+     "31st"
+    ],
+    "tu_zh": [
+     "昨天",
+     "什么时候",
+     "几月几号",
+     "几号",
+     "日",
+     "告诉",
+     "卡片",
+     "做",
+     "礼物",
+     "中国",
+     "长寿面",
+     "过生日",
+     "多少",
+     "蜡烛",
+     "风筝",
+     "吉他",
+     "滑板",
+     "踢"
+    ]
+   }
+  ],
+  "dem_vong_ngoai": {
+   "1st": "T1 phần 1 + T2",
+   "2nd": "T1 phần 1 + T2",
+   "3rd": "T1 phần 1 + T2",
+   "8th": "T1 phần 5 + T2",
+   "4th": "T1 phần 1 + T2",
+   "5th": "T1 phần 2 + T2",
+   "31st": "T1 phần 5 + T6",
+   "robot": "T1 phần 4 + T3",
+   "soccer": "T1 phần 3 + T4",
+   "sport": "T1 phần 3 + T4",
+   "fishing": "T1 phần 5 + T6",
+   "三号": "T1 phần 1 + T2 + T5",
+   "八号": "T1 phần 5 + T2 + T5",
+   "蜡烛": "T1 phần 2 + T2 + T6",
+   "风筝": "T1 phần 3 + T3 + T6",
+   "机器人": "T1 phần 4 + T3",
+   "吉他": "T1 phần 4 + T3 + T6",
+   "滑板": "T1 phần 4 + T3 + T6",
+   "运动": "T1 phần 3 + T4"
+  },
+  "de_nghi_doi_nhan": [
+   {
+    "tu": "1st, 2nd, 3rd",
+    "de_nghi": "vòng ngoài → lõi",
+    "ly_do": "Chủ đề unit là hỏi – đáp ngày; số thứ tự là ô thay chữ của khung câu ngày tháng (bài hát cả 7 lượt), trong khi tiếng Trung 几号 đã là lõi."
+   }
+  ],
+  "ghi_chu": "Từ đồ vật (candle, kite, guitar, skateboard) là lõi tiếng Anh nhưng vòng ngoài tiếng Trung – giữ nguyên nhãn; tiếng Trung tập trung vào câu hỏi ngày (T5)."
+ },
+ {
+  "unit": "3",
+  "chu_de": "My day – Kể buổi sáng có giờ; trật tự câu hai tiếng; tô 早",
+  "khung_cau": {
+   "en": "Every day, I ___.",
+   "zh": "每天，我___。",
+   "o": "việc hằng ngày"
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "Wake up!",
+    "zh": "起床啦！"
+   },
+   {
+    "en": "Good night!",
+    "zh": "晚安！"
+   },
+   {
+    "en": "Time for school!",
+    "zh": "上学啦！"
+   },
+   {
+    "en": "Me too!",
+    "zh": "我也是！"
+   }
+  ],
+  "van_ban": [
+   {
+    "id": "T1",
+    "loai": "Truyện khung",
+    "ten_en": "Leo's Day",
+    "ten_zh": "Leo的一天",
+    "khung_en": "Every day, I ___.",
+    "khung_zh": "每天，我___。",
+    "phan": [
+     {
+      "phan": 1,
+      "y": "Bảy giờ, mẹ gọi “Wake up, Leo!” – Leo thức dậy, ra khỏi giường: “Every day, I get up.” (ZH vào: 早上, 起床, 每天)",
+      "tu_moi_vao": [
+       "wake up",
+       "get up",
+       "every day"
+      ]
+     },
+     {
+      "phan": 2,
+      "y": "Leo rửa mặt, đánh răng, uống cốc sữa. (ZH vào: 洗脸, 刷牙, 先; vòng ngoài có tranh: tooth/teeth, cup, 杯)",
+      "tu_moi_vao": [
+       "wash",
+       "face",
+       "brush"
+      ]
+     },
+     {
+      "phan": 3,
+      "y": "Leo ăn sáng rồi đi học, trên đường gặp bạn cùng lớp mang bút chì, học tiếng Trung. (ZH vào: 早饭, 上学; vòng ngoài có tranh: way, 同学, 铅笔, 汉语)",
+      "tu_moi_vao": [
+       "breakfast",
+       "school",
+       "take"
+      ]
+     },
+     {
+      "phan": 4,
+      "y": "Trưa ăn cơm, tối làm bài tập, ăn tối, tắm. (ZH vào: 午饭, 晚上, 吃晚饭, 洗澡; vòng ngoài có tranh: noon, homework, bath, 中午, 作业)",
+      "tu_moi_vao": [
+       "lunch",
+       "evening",
+       "dinner"
+      ]
+     },
+     {
+      "phan": 5,
+      "y": "Leo đi ngủ; sáng thứ Bảy không đi học, không điện thoại, không máy tính bảng – câu cuối: “Good night, ___!” (ZH vào: 睡觉, 星期六早上, 说话; vòng ngoài có tranh: room, tomorrow morning, tablet, 房间)",
+      "tu_moi_vao": [
+       "sleep",
+       "saturday morning",
+       "phone"
+      ]
+     }
+    ],
+    "tu_en": [
+     "get up",
+     "wake up",
+     "wash",
+     "face",
+     "breakfast",
+     "lunch",
+     "brush",
+     "evening",
+     "dinner",
+     "sleep",
+     "school",
+     "take",
+     "every day",
+     "saturday morning",
+     "phone",
+     "noon",
+     "tooth/teeth",
+     "cup",
+     "bath",
+     "homework",
+     "room",
+     "way",
+     "tomorrow morning",
+     "tablet"
+    ],
+    "tu_zh": [
+     "起床",
+     "洗脸",
+     "早饭",
+     "早上",
+     "先",
+     "午饭",
+     "刷牙",
+     "晚上",
+     "吃晚饭",
+     "睡觉",
+     "洗澡",
+     "上学",
+     "每天",
+     "说话",
+     "星期六早上",
+     "中午",
+     "杯",
+     "房间",
+     "同学",
+     "铅笔",
+     "作业",
+     "汉语"
+    ]
+   },
+   {
+    "id": "T2",
+    "loai": "Bài hát vận động",
+    "ten_en": "Time to Get Up",
+    "ten_zh": "起床啦",
+    "kieu": "liệt kê",
+    "giai_dieu": "dân gian hết bản quyền: Frère Jacques (dân ca Pháp) – Đô trưởng, nhịp 108",
+    "khung_en": "Wake up, get up! Every day, I ___, I ___!",
+    "khung_zh": "起床啦！每天我___，我___！",
+    "o_thay": [
+     "wash",
+     "brush",
+     "breakfast",
+     "school",
+     "sleep"
+    ],
+    "dong_tac": "câu 1 cố định: dụi mắt rồi bật dậy; ô thay: wash (my face) – rửa mặt; brush (my teeth) – đánh răng; (eat) breakfast – xúc cơm; (go to) school – đeo cặp; sleep – áp má lên tay ngủ",
+    "tu_en": [
+     "wake up",
+     "get up",
+     "wash",
+     "face",
+     "brush",
+     "tooth/teeth",
+     "breakfast",
+     "school",
+     "sleep",
+     "every day"
+    ],
+    "tu_zh": [
+     "每天",
+     "起床",
+     "先",
+     "洗脸",
+     "刷牙",
+     "早饭",
+     "上学",
+     "睡觉"
+    ],
+    "ghi_chu_thanh": "每天 měitiān (3–1): 每 nốt thấp, 天 nốt cao – khớp đầu câu Frère Jacques (Đô–Rê). 起床 qǐchuáng (3–2) và 洗脸 xǐliǎn (3–3, đọc 2–3) đặt trên hai nốt đi lên – khớp. 睡觉 shuìjiào (4–4) trên nốt đi lên của giai điệu sẽ lệch → lượt “sleep” ĐỔI SANG VÈ VỖ TAY (thì thầm theo nhịp)."
+   },
+   {
+    "id": "T3",
+    "loai": "Big book mẫu câu",
+    "ten_en": "What Time Is It? It's Lunch Time!",
+    "ten_zh": "吃饭啦！",
+    "kieu": "hỏi–đáp",
+    "khung_en": "What time is it? It's ___ time!",
+    "khung_zh": "现在做什么？___！",
+    "tu_en": [
+     "breakfast",
+     "lunch",
+     "dinner",
+     "noon",
+     "evening",
+     "bath",
+     "homework",
+     "sleep",
+     "saturday morning"
+    ],
+    "tu_zh": [
+     "早上",
+     "早饭",
+     "中午",
+     "午饭",
+     "晚上",
+     "吃晚饭",
+     "洗澡",
+     "作业",
+     "睡觉",
+     "星期六早上"
+    ]
+   },
+   {
+    "id": "T4",
+    "loai": "Vè",
+    "ten_en": "Morning, Evening",
+    "ten_zh": "早上，晚上",
+    "kieu": "cặp đối lập",
+    "khung_en": "In the morning, I ___. In the evening, I ___.",
+    "khung_zh": "早上我___，晚上我___。",
+    "tu_en": [
+     "wake up",
+     "sleep",
+     "wash",
+     "face",
+     "evening",
+     "bath",
+     "take",
+     "phone",
+     "tablet"
+    ],
+    "tu_zh": [
+     "早上",
+     "晚上",
+     "起床",
+     "睡觉",
+     "洗脸",
+     "洗澡",
+     "刷牙",
+     "说话",
+     "每天"
+    ]
+   },
+   {
+    "id": "T6",
+    "loai": "Truyện anh em",
+    "ten_en": "Bông's Saturday Morning",
+    "ten_zh": "Bông的星期六早上",
+    "khung_en": "Every day, I ___.",
+    "khung_zh": "每天，我___。",
+    "y": "Sáng thứ Bảy Bông dậy muộn, không phải đi học; Bông rửa mặt, đánh răng, ăn sáng, gọi điện cho bà, tối ăn tối rồi ngủ sớm vì sáng mai lại đi học.",
+    "tu_en": [
+     "saturday morning",
+     "get up",
+     "wake up",
+     "wash",
+     "face",
+     "brush",
+     "breakfast",
+     "lunch",
+     "phone",
+     "take",
+     "school",
+     "every day",
+     "evening",
+     "dinner",
+     "sleep",
+     "cup",
+     "room",
+     "way",
+     "tomorrow morning"
+    ],
+    "tu_zh": [
+     "星期六早上",
+     "起床",
+     "早上",
+     "洗脸",
+     "刷牙",
+     "先",
+     "早饭",
+     "午饭",
+     "说话",
+     "上学",
+     "每天",
+     "晚上",
+     "吃晚饭",
+     "睡觉",
+     "洗澡",
+     "杯",
+     "房间",
+     "同学",
+     "铅笔",
+     "汉语"
+    ]
+   }
+  ],
+  "dem_vong_ngoai": {
+   "noon": "T1 phần 4 + T3",
+   "tooth/teeth": "T1 phần 2 + T2",
+   "cup": "T1 phần 2 + T6",
+   "bath": "T1 phần 4 + T3 + T4",
+   "homework": "T1 phần 4 + T3",
+   "room": "T1 phần 5 + T6",
+   "way": "T1 phần 3 + T6",
+   "tomorrow morning": "T1 phần 5 + T6",
+   "tablet": "T1 phần 5 + T4",
+   "中午": "T1 phần 4 + T3",
+   "杯": "T1 phần 2 + T6",
+   "房间": "T1 phần 5 + T6",
+   "同学": "T1 phần 3 + T6",
+   "铅笔": "T1 phần 3 + T6",
+   "作业": "T1 phần 4 + T3",
+   "汉语": "T1 phần 3 + T6"
+  },
+  "de_nghi_doi_nhan": [
+   {
+    "tu": "tooth/teeth",
+    "de_nghi": "vòng ngoài → lõi",
+    "ly_do": "brush là lõi và 刷牙 là lõi; brush luôn đi cùng teeth trong truyện, bài hát, vè – để vòng ngoài thì cụm lõi “brush my teeth” thiếu một nửa."
+   }
+  ],
+  "ghi_chu": "同学, 铅笔, 汉语 (vòng ngoài) đặt ở cảnh trên đường đến trường và truyện anh em, có tranh."
+ },
+ {
+  "unit": "4",
+  "chu_de": "Hobby – Hỏi – đáp sở thích; tám sở thích; tô 目",
+  "khung_cau": {
+   "en": "I like ___.",
+   "zh": "我喜欢___。",
+   "o": "sở thích"
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "What's your hobby?",
+    "zh": "你的爱好是什么？"
+   },
+   {
+    "en": "Catch the ball!",
+    "zh": "接球！"
+   },
+   {
+    "en": "I think it's fun!",
+    "zh": "我觉得很好玩！"
+   },
+   {
+    "en": "Me too!",
+    "zh": "我也是！"
+   }
+  ],
+  "van_ban": [
+   {
+    "id": "T1",
+    "loai": "Truyện khung",
+    "ten_en": "Talent Day",
+    "ten_zh": "才艺日",
+    "khung_en": "I like ___.",
+    "khung_zh": "我喜欢___。",
+    "phan": [
+     {
+      "phan": 1,
+      "y": "Ngày hội tài năng, cô Lan hỏi “What's your hobby?” – Anna: “I like singing.” (ZH vào: 爱好, 才艺, 唱歌)",
+      "tu_moi_vao": [
+       "hobby",
+       "talent",
+       "sing"
+      ]
+     },
+     {
+      "phan": 2,
+      "y": "Xiaomei thích đọc sách, Bông thích vẽ: “Look at my drawing!”; Leo đọc truyện tranh. (ZH vào: 看书, 阅读, 画; vòng ngoài có tranh: comic, 漫画)",
+      "tu_moi_vao": [
+       "read",
+       "draw",
+       "drawing"
+      ]
+     },
+     {
+      "phan": 3,
+      "y": "Vũ thích xem ti vi và nghe nhạc, mẹ Vũ chơi đàn piano, Anna nhảy. (ZH vào: 电视, 听, 音乐, 游戏; vòng ngoài có tranh: television, piano, dance, 钢琴, 跳舞)",
+      "tu_moi_vao": [
+       "watch",
+       "tv",
+       "listen",
+       "music"
+      ]
+     },
+     {
+      "phan": 4,
+      "y": "Ra sân: Leo đạp xe, các bạn bắt bóng, chơi bóng chày, bóng rổ, cầu lông. (ZH vào: 骑自行车, 接球; vòng ngoài có tranh: bike, bat, baseball, basketball, badminton, 篮球, 羽毛球, 放风筝)",
+      "tu_moi_vao": [
+       "ride",
+       "ball",
+       "catch"
+      ]
+     },
+     {
+      "phan": 5,
+      "y": "Bố Anna đội mũ lưỡi trai chụp ảnh cả lớp; câu cuối: “I like ___ with my friends!” (ZH vào: 打电话, 觉得, 照相; vòng ngoài có tranh: camera, computer, cook, 电脑, 做饭)",
+      "tu_moi_vao": [
+       "with",
+       "baseball cap"
+      ]
+     }
+    ],
+    "tu_en": [
+     "hobby",
+     "read",
+     "sing",
+     "draw",
+     "drawing",
+     "watch",
+     "tv",
+     "listen",
+     "music",
+     "talent",
+     "with",
+     "ride",
+     "ball",
+     "catch",
+     "baseball cap",
+     "dance",
+     "cook",
+     "television",
+     "comic",
+     "piano",
+     "bike",
+     "bat",
+     "badminton",
+     "basketball",
+     "baseball",
+     "camera",
+     "computer"
+    ],
+    "tu_zh": [
+     "爱好",
+     "看书",
+     "唱歌",
+     "画",
+     "电视",
+     "听",
+     "音乐",
+     "游戏",
+     "才艺",
+     "阅读",
+     "骑自行车",
+     "打电话",
+     "觉得",
+     "接球",
+     "照相",
+     "跳舞",
+     "做饭",
+     "钢琴",
+     "漫画",
+     "篮球",
+     "电脑",
+     "羽毛球",
+     "放风筝"
+    ]
+   },
+   {
+    "id": "T2",
+    "loai": "Bài hát vận động",
+    "ten_en": "What Is Your Hobby?",
+    "ten_zh": "你的爱好是什么？",
+    "kieu": "hỏi–đáp",
+    "giai_dieu": "dân gian hết bản quyền: Did You Ever See a Lassie? (dân ca Scotland) – Đô trưởng, nhịp 3/4, 112",
+    "khung_en": "What is your hobby? I like ___!",
+    "khung_zh": "你的爱好是什么？我喜欢___！",
+    "o_thay": [
+     "sing",
+     "read",
+     "drawing",
+     "dance",
+     "tv",
+     "music"
+    ],
+    "dong_tac": "sing(ing) – cầm micro; read(ing) – mở sách; drawing – vẽ lên không; danc(ing) – xoay; (watching) TV – khung tay; (listening to) music – tay áp tai",
+    "tu_en": [
+     "hobby",
+     "sing",
+     "read",
+     "draw",
+     "drawing",
+     "dance",
+     "watch",
+     "tv",
+     "television",
+     "listen",
+     "music"
+    ],
+    "tu_zh": [
+     "爱好",
+     "唱歌",
+     "看书",
+     "画",
+     "跳舞",
+     "电视",
+     "听",
+     "音乐"
+    ],
+    "ghi_chu_thanh": "爱好 àihào (4–4) ở đầu câu đặt trên hai nốt đi xuống – khớp. Ô: 唱歌 chànggē (4–1) xuống rồi cao – khớp; 看书 kànshū (4–1) khớp; 跳舞 tiàowǔ (4–3) cần nốt cuối thấp – khớp nếu kết câu ở Đô; 听音乐 tīng yīnyuè (1–1–4) khớp; 画画 huàhuà (4–4) và 看电视 kàn diànshì (4–4–4) dễ lệch trên nốt đi lên → hai lượt này ĐỔI SANG VÈ VỖ TAY."
+   },
+   {
+    "id": "T3",
+    "loai": "Big book mẫu câu",
+    "ten_en": "I Like Reading With My Friend",
+    "ten_zh": "我和朋友一起玩",
+    "kieu": "liệt kê",
+    "khung_en": "I like ___ with my friend.",
+    "khung_zh": "我和朋友___。",
+    "tu_en": [
+     "with",
+     "read",
+     "comic",
+     "ride",
+     "bike",
+     "ball",
+     "catch",
+     "badminton",
+     "basketball",
+     "piano",
+     "camera",
+     "computer"
+    ],
+    "tu_zh": [
+     "看书",
+     "阅读",
+     "漫画",
+     "骑自行车",
+     "接球",
+     "羽毛球",
+     "篮球",
+     "钢琴",
+     "照相",
+     "电脑",
+     "游戏",
+     "打电话"
+    ]
+   },
+   {
+    "id": "T4",
+    "loai": "Vè",
+    "ten_en": "Catch the Ball!",
+    "ten_zh": "接球！一二三！",
+    "kieu": "đếm",
+    "khung_en": "Catch the ball – one, two, ___!",
+    "khung_zh": "接球，接球，一二___！",
+    "tu_en": [
+     "catch",
+     "ball",
+     "baseball cap",
+     "bat",
+     "baseball",
+     "with",
+     "talent"
+    ],
+    "tu_zh": [
+     "接球",
+     "游戏",
+     "觉得",
+     "才艺"
+    ]
+   },
+   {
+    "id": "T6",
+    "loai": "Truyện anh em",
+    "ten_en": "Grandpa's Hobby",
+    "ten_zh": "爷爷的爱好",
+    "khung_en": "I like ___.",
+    "khung_zh": "我喜欢___。",
+    "y": "Leo gọi điện cho ông: ông thích đọc sách, nghe nhạc, xem TV, vẽ; cuối tuần ông đội mũ lưỡi trai đạp xe, chơi bắt bóng với Leo, nấu ăn, chụp ảnh – “Grandpa has got a talent!”",
+    "tu_en": [
+     "hobby",
+     "talent",
+     "read",
+     "sing",
+     "draw",
+     "drawing",
+     "watch",
+     "tv",
+     "listen",
+     "music",
+     "with",
+     "ride",
+     "ball",
+     "catch",
+     "baseball cap",
+     "cook"
+    ],
+    "tu_zh": [
+     "爱好",
+     "才艺",
+     "看书",
+     "阅读",
+     "唱歌",
+     "画",
+     "电视",
+     "听",
+     "音乐",
+     "游戏",
+     "打电话",
+     "觉得",
+     "照相",
+     "骑自行车",
+     "接球",
+     "做饭",
+     "放风筝"
+    ]
+   }
+  ],
+  "dem_vong_ngoai": {
+   "dance": "T1 phần 3 + T2",
+   "cook": "T1 phần 5 + T6",
+   "television": "T1 phần 3 + T2",
+   "comic": "T1 phần 2 + T3",
+   "piano": "T1 phần 3 + T3",
+   "bike": "T1 phần 4 + T3",
+   "bat": "T1 phần 4 + T4",
+   "badminton": "T1 phần 4 + T3",
+   "basketball": "T1 phần 4 + T3",
+   "baseball": "T1 phần 4 + T4",
+   "camera": "T1 phần 5 + T3",
+   "computer": "T1 phần 5 + T3",
+   "跳舞": "T1 phần 3 + T2",
+   "做饭": "T1 phần 5 + T6",
+   "钢琴": "T1 phần 3 + T3",
+   "漫画": "T1 phần 2 + T3",
+   "篮球": "T1 phần 4 + T3",
+   "电脑": "T1 phần 5 + T3",
+   "羽毛球": "T1 phần 4 + T3",
+   "放风筝": "T1 phần 4 + T6"
+  },
+  "de_nghi_doi_nhan": [
+   {
+    "tu": "bike",
+    "de_nghi": "vòng ngoài → lõi",
+    "ly_do": "ride là lõi và 骑自行车 là lõi; ride gần như chỉ đi với bike ở unit này nên để bike vòng ngoài làm cụm lõi “ride a bike” bị hụt."
+   }
+  ],
+  "ghi_chu": ""
+ },
+ {
+  "unit": "5",
+  "chu_de": "Places in town · 地方 – Hiểu: nơi chốn trong thành phố, đi đâu; tô 家",
+  "khung_cau": {
+   "en": "I go to the ___.",
+   "zh": "我去___。",
+   "o": "nơi chốn"
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "Let's go!",
+    "zh": "走吧！"
+   },
+   {
+    "en": "Where are you going?",
+    "zh": "你去哪儿？"
+   },
+   {
+    "en": "First…, then…",
+    "zh": "先……，然后……"
+   },
+   {
+    "en": "See you!",
+    "zh": "再见！"
+   }
+  ],
+  "van_ban": [
+   {
+    "id": "T1",
+    "loai": "Truyện khung",
+    "ten_en": "Leo's Busy Sunday",
+    "ten_zh": "Leo的星期天",
+    "khung_en": "I go to the ___.",
+    "khung_zh": "我去___。",
+    "phan": [
+     {
+      "phan": 1,
+      "y": "Leo ra khỏi nhà: “I go to the park to play.” – nhiều nơi trên phố. (ZH vào: 家, 公园, 玩; vòng ngoài có tranh: place, 地方, 街)",
+      "tu_moi_vao": [
+       "home",
+       "park",
+       "play"
+      ]
+     },
+     {
+      "phan": 2,
+      "y": "Đầu tiên đi công viên, rồi đến sở thú xem thú – “Then I go to the zoo.” (ZH vào: 动物园, 然后, 人; vòng ngoài có tranh: first, 上午)",
+      "tu_moi_vao": [
+       "zoo",
+       "see",
+       "then"
+      ]
+     },
+     {
+      "phan": 3,
+      "y": "Leo vào cửa hàng mua đồ, ăn ở nhà hàng đông người. (ZH vào: 饭店, 买, 门, 零; vòng ngoài có tranh: store, thing, busy, 东西)",
+      "tu_moi_vao": [
+       "shop",
+       "buy",
+       "restaurant",
+       "eat"
+      ]
+     },
+     {
+      "phan": 4,
+      "y": "Leo đến thư viện học tiếng Anh, Anna cũng học. (ZH vào: 图书馆, 学习; vòng ngoài có tranh: also, part)",
+      "tu_moi_vao": [
+       "library",
+       "study",
+       "english"
+      ]
+     },
+     {
+      "phan": 5,
+      "y": "Buổi chiều đi dạo, trời tối, đi ngang rạp chiếu phim, bệnh viện rồi về nhà – câu cuối: “___ goes home!” (ZH vào: 下午, 散步, 家人; vòng ngoài có tranh: cinema, hospital, dark, 电影院)",
+      "tu_moi_vao": [
+       "afternoon",
+       "walk"
+      ]
+     }
+    ],
+    "tu_en": [
+     "home",
+     "park",
+     "zoo",
+     "shop",
+     "restaurant",
+     "library",
+     "study",
+     "english",
+     "play",
+     "buy",
+     "eat",
+     "see",
+     "walk",
+     "then",
+     "afternoon",
+     "place",
+     "store",
+     "cinema",
+     "hospital",
+     "thing",
+     "first",
+     "also",
+     "busy",
+     "dark",
+     "part"
+    ],
+    "tu_zh": [
+     "家",
+     "公园",
+     "动物园",
+     "饭店",
+     "图书馆",
+     "门",
+     "学习",
+     "玩",
+     "买",
+     "散步",
+     "然后",
+     "下午",
+     "家人",
+     "人",
+     "零",
+     "地方",
+     "电影院",
+     "街",
+     "东西",
+     "上午"
+    ]
+   },
+   {
+    "id": "T2",
+    "loai": "Bài hát vận động",
+    "ten_en": "Where Are You Going?",
+    "ten_zh": "你去哪儿？",
+    "kieu": "hỏi–đáp",
+    "giai_dieu": "dân gian hết bản quyền: Frère Jacques (dân ca Pháp) – Đô trưởng, nhịp 108",
+    "khung_en": "Where are you going? To the ___! I go to the ___ to ___.",
+    "khung_zh": "你去哪儿？我去___！",
+    "o_thay": [
+     "park",
+     "zoo",
+     "shop",
+     "restaurant",
+     "library",
+     "home"
+    ],
+    "dong_tac": "park – chạy tại chỗ; zoo – làm voi; shop – xách túi; restaurant – cầm đũa; library – mở sách; home – vẫy tay chào",
+    "tu_en": [
+     "park",
+     "zoo",
+     "shop",
+     "restaurant",
+     "library",
+     "home",
+     "play",
+     "see",
+     "buy",
+     "eat",
+     "study",
+     "english",
+     "walk",
+     "then"
+    ],
+    "tu_zh": [
+     "公园",
+     "动物园",
+     "饭店",
+     "图书馆",
+     "家",
+     "玩",
+     "买",
+     "学习",
+     "散步",
+     "然后"
+    ],
+    "ghi_chu_thanh": "你去哪儿 nǐ qù nǎr (3–4–3): nốt thấp – cao xuống – thấp, đặt khớp với “Frère Jac-ques”. Ô: 公园 gōngyuán (1–2) khớp nốt cao rồi đi lên; 饭店 fàndiàn (4–4) và 动物园 dòngwùyuán (4–4–2) dễ lệch → hai lượt này ĐỔI SANG VÈ VỖ TAY; 图书馆 túshūguǎn (2–1–3) đặt trên Mi–Sol–Đô."
+   },
+   {
+    "id": "T3",
+    "loai": "Big book mẫu câu",
+    "ten_en": "This Is My Town",
+    "ten_zh": "这是我的街",
+    "kieu": "liệt kê",
+    "khung_en": "This is the ___.",
+    "khung_zh": "这是___。",
+    "tu_en": [
+     "place",
+     "part",
+     "park",
+     "zoo",
+     "shop",
+     "store",
+     "restaurant",
+     "library",
+     "cinema",
+     "hospital",
+     "home"
+    ],
+    "tu_zh": [
+     "地方",
+     "街",
+     "公园",
+     "动物园",
+     "饭店",
+     "图书馆",
+     "电影院",
+     "门",
+     "人",
+     "家"
+    ]
+   },
+   {
+    "id": "T4",
+    "loai": "Vè",
+    "ten_en": "How Many People?",
+    "ten_zh": "有几个人？",
+    "kieu": "đếm",
+    "khung_en": "How many people in the ___? ___!",
+    "khung_zh": "___里有几个人？___！",
+    "tu_en": [
+     "park",
+     "zoo",
+     "shop",
+     "restaurant",
+     "library",
+     "busy",
+     "dark",
+     "afternoon",
+     "home"
+    ],
+    "tu_zh": [
+     "人",
+     "公园",
+     "动物园",
+     "饭店",
+     "图书馆",
+     "零",
+     "家人",
+     "下午"
+    ]
+   },
+   {
+    "id": "T6",
+    "loai": "Truyện anh em",
+    "ten_en": "Anna's Saturday",
+    "ten_zh": "Anna的星期六",
+    "khung_en": "I go to the ___.",
+    "khung_zh": "我去___。",
+    "y": "Buổi sáng Anna học tiếng Anh ở thư viện, rồi mua đồ ở cửa hàng, ăn trưa ở nhà hàng; buổi chiều cửa thư viện đóng (không còn ai), cả nhà đi dạo công viên rồi về nhà.",
+    "tu_en": [
+     "study",
+     "english",
+     "library",
+     "then",
+     "shop",
+     "buy",
+     "thing",
+     "restaurant",
+     "eat",
+     "afternoon",
+     "walk",
+     "park",
+     "play",
+     "home",
+     "see",
+     "first",
+     "also"
+    ],
+    "tu_zh": [
+     "学习",
+     "图书馆",
+     "然后",
+     "买",
+     "东西",
+     "饭店",
+     "下午",
+     "散步",
+     "公园",
+     "玩",
+     "家",
+     "家人",
+     "门",
+     "上午",
+     "人",
+     "零"
+    ]
+   }
+  ],
+  "dem_vong_ngoai": {
+   "place": "T1 phần 1 + T3",
+   "store": "T1 phần 3 + T3",
+   "cinema": "T1 phần 5 + T3",
+   "hospital": "T1 phần 5 + T3",
+   "thing": "T1 phần 3 + T6",
+   "first": "T1 phần 2 + T6",
+   "also": "T1 phần 4 + T6",
+   "busy": "T1 phần 3 + T4",
+   "dark": "T1 phần 5 + T4",
+   "part": "T1 phần 4 + T3",
+   "地方": "T1 phần 1 + T3",
+   "电影院": "T1 phần 5 + T3",
+   "街": "T1 phần 1 + T3",
+   "东西": "T1 phần 3 + T6",
+   "上午": "T1 phần 2 + T6"
+  },
+  "de_nghi_doi_nhan": [
+   {
+    "tu": "place / 地方",
+    "de_nghi": "vòng ngoài → lõi",
+    "ly_do": "Tên unit là “Places in town · 地方”; place/地方 là từ chủ đề chính nhưng đang ở vòng ngoài cả hai tiếng."
+   },
+   {
+    "tu": "零",
+    "de_nghi": "xem lại (chuyển vòng ngoài hoặc sang unit số đếm)",
+    "ly_do": "零 (= zero) không thuộc chủ đề nơi chốn; mạng văn bản phải gượng ép vào vè đếm người (“图书馆里有几个人？零！”) và truyện anh em."
+   }
+  ],
+  "ghi_chu": ""
+ },
+ {
+  "unit": "6",
+  "chu_de": "Job · 工作 – Hiểu: hỏi – đáp nghề của một người; tô 生",
+  "khung_cau": {
+   "en": "What is your job? I am a ___.",
+   "zh": "你做什么工作？我是___。",
+   "o": "nghề"
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "Oh dear!",
+    "zh": "哎呀！"
+   },
+   {
+    "en": "Don't worry!",
+    "zh": "别担心！"
+   },
+   {
+    "en": "It's OK.",
+    "zh": "没关系。"
+   },
+   {
+    "en": "I love my job!",
+    "zh": "我爱我的工作！"
+   },
+   {
+    "en": "What is your job?",
+    "zh": "你做什么工作？"
+   }
+  ],
+  "van_ban": [
+   {
+    "id": "T1",
+    "loai": "Truyện khung",
+    "ten_en": "What Is Your Job?",
+    "ten_zh": "你做什么工作？",
+    "khung_en": "I am a ___.",
+    "khung_zh": "我是___。",
+    "phan": [
+     {
+      "phan": 1,
+      "y": "Ngày hội nghề nghiệp, cô Lan hỏi “What is your job?”: mẹ Anna và bố Bông là bác sĩ, Leo là học sinh. (ZH vào: 工作, 医生, 学生, 我妈妈)",
+      "tu_moi_vao": [
+       "job",
+       "doctor",
+       "student"
+      ]
+     },
+     {
+      "phan": 2,
+      "y": "Mẹ Xiaomei là y tá, bố Vũ là nha sĩ, bố Leo là đầu bếp – Leo khoe “My dad is a chef!”. (ZH vào: 护士, 牙医, 厨师, 我爸爸)",
+      "tu_moi_vao": [
+       "nurse",
+       "dentist",
+       "chef"
+      ]
+     },
+     {
+      "phan": 3,
+      "y": "Bố Anna là nông dân, mẹ Bông là nhân viên; một chú lính cứu hỏa cao to bước vào (bản Trung: cao hơn cô Lan). (ZH vào: 员工, 比; vòng ngoài có tranh: firefighter, 农民, 消防员)",
+      "tu_moi_vao": [
+       "farmer",
+       "employee"
+      ]
+     },
+     {
+      "phan": 4,
+      "y": "Bông đau răng “Oh dear!”; bố Vũ (nha sĩ) và mẹ Anna (bác sĩ) trấn an “Don't worry!” – họ làm ở bệnh viện. (ZH vào: 别担心, 没关系, 医院, 都)",
+      "tu_moi_vao": [
+       "oh dear",
+       "don't worry",
+       "work"
+      ]
+     },
+     {
+      "phan": 5,
+      "y": "Anh trai Vũ là tài xế, cô Lan “I love my job!”; câu cuối có chỗ cho tên con: “___ says, ‘I am a student!’”. (ZH vào: 大家; vòng ngoài có tranh: driver, 司机, 我哥哥, 我姐姐)",
+      "tu_moi_vao": [
+       "older",
+       "love"
+      ]
+     }
+    ],
+    "tu_en": [
+     "job",
+     "student",
+     "doctor",
+     "chef",
+     "dentist",
+     "nurse",
+     "farmer",
+     "employee",
+     "work",
+     "don't worry",
+     "oh dear",
+     "love",
+     "dad",
+     "mom",
+     "older",
+     "driver",
+     "firefighter"
+    ],
+    "tu_zh": [
+     "工作",
+     "学生",
+     "医生",
+     "厨师",
+     "牙医",
+     "员工",
+     "护士",
+     "医院",
+     "别担心",
+     "没关系",
+     "比",
+     "大家",
+     "都",
+     "我爸爸",
+     "我妈妈",
+     "司机",
+     "农民",
+     "消防员",
+     "我姐姐",
+     "我哥哥"
+    ]
+   },
+   {
+    "id": "T2",
+    "loai": "Bài hát vận động",
+    "ten_en": "I Am a Doctor",
+    "ten_zh": "我是医生",
+    "kieu": "liệt kê",
+    "giai_dieu": "tự sáng tác – Đô trưởng, 4/4, nhịp 112; 4 câu nhạc × 2 ô nhịp; 6 lượt ≈ 1 phút 45 giây",
+    "khung_en": "I am a ___, a ___, a ___!",
+    "khung_zh": "我是___，______！",
+    "o_thay": [
+     "doctor",
+     "nurse",
+     "dentist",
+     "chef",
+     "farmer",
+     "student"
+    ],
+    "dong_tac": "doctor – áp tai nghe tim bạn; nurse – quấn băng tay; dentist – há miệng “Ah!”; chef – khuấy nồi; farmer – cuốc đất; student – viết lên không",
+    "tu_en": [
+     "job",
+     "student",
+     "doctor",
+     "chef",
+     "dentist",
+     "nurse",
+     "farmer",
+     "love"
+    ],
+    "tu_zh": [
+     "工作",
+     "学生",
+     "医生",
+     "厨师",
+     "牙医",
+     "护士",
+     "农民"
+    ],
+    "ghi_chu_thanh": "Câu 1 và 3: 我 (wǒ, thanh 3) nốt thấp Đô, 是 (shì, thanh 4) nốt Sol xuống Mi, ô nghề hát trên hai nốt Sol – Sol. 医生 yīshēng (1–1): hai nốt Sol bằng – khớp thanh. 牙医 yáyī, 厨师 chúshī (2–1): âm đầu luyến Mi→Sol rồi Sol – khớp thanh 2 đi lên. 学生 xuésheng (2–nhẹ): Mi→Sol rồi Mi ngắn – khớp. 护士 hùshi (4–nhẹ): hát trên Sol bằng sẽ nghe thành hū → lượt này ĐỔI SANG VÈ VỖ TAY (nói theo nhịp, vỗ 2 tiếng ở ô). 农民 nóngmín (2–2): hai nốt bằng làm mất thanh 2 → lượt này ĐỔI SANG VÈ VỖ TAY. Câu 4 我爱我的工作: 爱 (ài) Sol→Mi, 工 (gōng) Sol, 作 (zuò) Sol→Đô kết – khớp thanh 1–4. Câu 2 做 (zuò) hai lần, hạ giọng ở cuối câu; vần 做/作 (-uò) giữa câu 2 và câu 4."
+   },
+   {
+    "id": "T3",
+    "loai": "Big book mẫu câu",
+    "ten_en": "Who Is the Doctor?",
+    "ten_zh": "谁是医生？",
+    "kieu": "hỏi–đáp",
+    "khung_en": "Who is the ___? It's my ___!",
+    "khung_zh": "谁是___？是我___！",
+    "tu_en": [
+     "student",
+     "doctor",
+     "chef",
+     "dentist",
+     "nurse",
+     "farmer",
+     "employee",
+     "don't worry",
+     "oh dear",
+     "dad",
+     "mom",
+     "older",
+     "driver",
+     "firefighter"
+    ],
+    "tu_zh": [
+     "学生",
+     "医生",
+     "厨师",
+     "牙医",
+     "员工",
+     "护士",
+     "别担心",
+     "我爸爸",
+     "我妈妈",
+     "司机",
+     "农民",
+     "消防员",
+     "我姐姐",
+     "我哥哥"
+    ]
+   },
+   {
+    "id": "T4",
+    "loai": "Vè",
+    "ten_en": "How Many Doctors?",
+    "ten_zh": "几个医生？",
+    "kieu": "đếm",
+    "khung_en": "How many ___s? One, two, three!",
+    "khung_zh": "几个___？一二三！",
+    "tu_en": [
+     "job",
+     "doctor",
+     "chef",
+     "dentist",
+     "nurse",
+     "farmer",
+     "employee",
+     "work",
+     "don't worry",
+     "oh dear",
+     "love"
+    ],
+    "tu_zh": [
+     "工作",
+     "医生",
+     "厨师",
+     "牙医",
+     "员工",
+     "护士",
+     "别担心",
+     "大家",
+     "都",
+     "农民"
+    ]
+   },
+   {
+    "id": "T5",
+    "loai": "Bài tiếng Trung riêng",
+    "ten_zh": "谁比谁高？",
+    "kieu": "chuỗi xích (vè vỗ tay)",
+    "khung_zh": "___比___高。",
+    "tu_en": [],
+    "tu_zh": [
+     "学生",
+     "医生",
+     "护士",
+     "医院",
+     "没关系",
+     "比",
+     "大家",
+     "都",
+     "消防员"
+    ]
+   },
+   {
+    "id": "T6",
+    "loai": "Truyện anh em",
+    "ten_en": "Vũ's Toy Hospital",
+    "ten_zh": "Vũ的玩具医院",
+    "khung_en": "I am a ___.",
+    "khung_zh": "我是___。",
+    "y": "Thứ Bảy, Vũ (kể ngôi thứ nhất) và chị gái chơi trò bệnh viện đồ chơi: chị là bác sĩ, Vũ là y tá, chú chó đau răng, chị thành nha sĩ; mẹ là đầu bếp, bố là tài xế – câu cuối con tự nói nghề mình.",
+    "tu_en": [
+     "job",
+     "doctor",
+     "chef",
+     "dentist",
+     "nurse",
+     "work",
+     "don't worry",
+     "oh dear",
+     "love",
+     "dad",
+     "mom",
+     "older",
+     "driver"
+    ],
+    "tu_zh": [
+     "工作",
+     "医生",
+     "厨师",
+     "牙医",
+     "护士",
+     "医院",
+     "别担心",
+     "没关系",
+     "比",
+     "大家",
+     "都",
+     "我爸爸",
+     "我妈妈",
+     "司机",
+     "我姐姐"
+    ]
+   }
+  ],
+  "dem_vong_ngoai": {
+   "driver": "T1 phần 5 + T3 + T6",
+   "firefighter": "T1 phần 3 + T3",
+   "司机": "T1 phần 5 + T3 + T6",
+   "农民": "T1 phần 3 + T2 + T3 + T4",
+   "消防员": "T1 phần 3 + T3 + T5",
+   "我姐姐": "T1 phần 5 + T3 + T6",
+   "我哥哥": "T1 phần 5 + T3"
+  },
+  "de_nghi_doi_nhan": [
+   {
+    "tu": "driver, firefighter / 司机, 农民, 消防员",
+    "de_nghi": "vòng ngoài → lõi (ít nhất driver/司机)",
+    "ly_do": "Unit là hỏi – đáp nghề; tên nghề là từ chủ đề chính. farmer là lõi tiếng Anh nhưng 农民 vòng ngoài – hai tiếng lệch nhau."
+   },
+   {
+    "tu": "dad, mom",
+    "de_nghi": "lõi → từ ôn (Little Seed)",
+    "ly_do": "mom/dad là từ cũ Little Seed; tính là lõi mới làm phình danh sách. Từ mới thật của nhóm này là older (và cụm 我爸爸/我妈妈 ở tiếng Trung)."
+   },
+   {
+    "tu": "哎呀",
+    "de_nghi": "thêm vào danh sách tiếng Trung (mức Nghe làm quen / câu cửa miệng)",
+    "ly_do": "oh dear là lõi tiếng Anh; bản Trung tự nhiên là 哎呀 nhưng 哎呀 không có trong nhãn – hiện đang tính là từ lạ có tranh ở T1, T3, T4, T5, T6."
+   },
+   {
+    "tu": "我姐姐, 我哥哥",
+    "de_nghi": "vòng ngoài → lõi",
+    "ly_do": "older là lõi tiếng Anh (older sister/brother) nhưng hai cụm tương đương tiếng Trung đang ở vòng ngoài."
+   }
+  ],
+  "ghi_chu": "Unit pilot (nguyên tắc 21): văn bản đầy đủ ở mau_canopy_u6.json; tu_en/tu_zh của U6 được đếm từ văn bản thật. Ngày 1–5 nghe từng phần T1, ngày 6–7 cả truyện, ngày 8 T6. Dựa trên bản nháp “What Is Your Job?” (27/10): giữ cảnh Ngày hội nghề nghiệp, cảnh đau răng và truyện anh em bệnh viện đồ chơi; đổi Miss Hoa → cô Lan, Nhan → Vũ."
+ },
+ {
+  "unit": "7",
+  "chu_de": "Transports · 交通工具 – Hiểu: gọi tên phương tiện; hỏi – đáp đi học bằng gì; tô 车",
+  "khung_cau": {
+   "en": "I go by ___.",
+   "zh": "我坐___去。",
+   "o": "phương tiện"
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "And you?",
+    "zh": "你呢？"
+   },
+   {
+    "en": "You're welcome!",
+    "zh": "不客气！"
+   },
+   {
+    "en": "It's easy!",
+    "zh": "很容易！"
+   },
+   {
+    "en": "Let's go!",
+    "zh": "走吧！"
+   }
+  ],
+  "van_ban": [
+   {
+    "id": "T1",
+    "loai": "Truyện khung",
+    "ten_en": "A Trip to Beijing",
+    "ten_zh": "去北京旅行",
+    "khung_en": "I go by ___.",
+    "khung_zh": "我坐___去。",
+    "phan": [
+     {
+      "phan": 1,
+      "y": "Leo và Anna đi học, chơi trò “I see a car! A bus! A train!”, thấy cả xe đạp. (ZH vào: 汽车, 公共汽车, 火车; vòng ngoài có tranh: bicycle, 自行车)",
+      "tu_moi_vao": [
+       "car",
+       "bus",
+       "train"
+      ]
+     },
+     {
+      "phan": 2,
+      "y": "Mẹ Xiaomei đến đón bằng xe máy; trên trời không phải máy bay mà là trực thăng; bà Bông đi taxi. (ZH vào: 飞机; vòng ngoài có tranh: motorbike, helicopter, 摩托车, 出租车, 直升机)",
+      "tu_moi_vao": [
+       "plane",
+       "taxi"
+      ]
+     },
+     {
+      "phan": 3,
+      "y": "Thứ Bảy bố Leo lái xe ra biển, các bạn ngồi trong xe, thấy xe tải to và con tàu lớn. (ZH vào: 船, 坐, 开; vòng ngoài có tranh: lorry, truck, 卡车)",
+      "tu_moi_vao": [
+       "ship",
+       "sit",
+       "drive"
+      ]
+     },
+     {
+      "phan": 4,
+      "y": "Bông hỏi “How do you go to school?” – “By bike! The wheels go round. It's easy!” – “Is this bike yours?” (ZH vào: 怎么, 走路, 走, 上班)",
+      "tu_moi_vao": [
+       "by",
+       "round",
+       "easy",
+       "yours"
+      ]
+     },
+     {
+      "phan": 5,
+      "y": "Xiaomei đi Bắc Kinh, Leo đi Thượng Hải; “Leo is a good boy” – câu cuối: “And you, ___? I go by ___!” (ZH vào: 北京, 上海, 呢, 不客气; vòng ngoài có tranh: trip)",
+      "tu_moi_vao": [
+       "beijing",
+       "shanghai",
+       "boy"
+      ]
+     }
+    ],
+    "tu_en": [
+     "car",
+     "bus",
+     "train",
+     "plane",
+     "taxi",
+     "ship",
+     "sit",
+     "drive",
+     "by",
+     "easy",
+     "round",
+     "yours",
+     "beijing",
+     "shanghai",
+     "boy",
+     "bicycle",
+     "motorbike",
+     "helicopter",
+     "lorry",
+     "truck",
+     "trip"
+    ],
+    "tu_zh": [
+     "汽车",
+     "公共汽车",
+     "火车",
+     "飞机",
+     "船",
+     "坐",
+     "开",
+     "走路",
+     "走",
+     "上班",
+     "北京",
+     "上海",
+     "怎么",
+     "不客气",
+     "呢",
+     "自行车",
+     "摩托车",
+     "出租车",
+     "直升机",
+     "卡车"
+    ]
+   },
+   {
+    "id": "T2",
+    "loai": "Bài hát vận động",
+    "ten_en": "This Is the Way We Go",
+    "ten_zh": "我们坐车去",
+    "kieu": "liệt kê",
+    "giai_dieu": "dân gian hết bản quyền: Here We Go Round the Mulberry Bush (dân ca Anh) – Đô trưởng, nhịp 116",
+    "khung_en": "This is the way we go by ___, go by ___!",
+    "khung_zh": "我们坐___去，坐___去！",
+    "o_thay": [
+     "car",
+     "bus",
+     "train",
+     "plane",
+     "ship",
+     "bicycle"
+    ],
+    "dong_tac": "car – xoay vô lăng; bus – vẫy tay chào; train – tay xình xịch; plane – dang tay; ship – lắc người như sóng; bicycle – đạp chân",
+    "tu_en": [
+     "by",
+     "car",
+     "bus",
+     "train",
+     "plane",
+     "ship",
+     "bicycle",
+     "drive",
+     "sit",
+     "round"
+    ],
+    "tu_zh": [
+     "坐",
+     "汽车",
+     "公共汽车",
+     "火车",
+     "飞机",
+     "船",
+     "开",
+     "自行车"
+    ],
+    "ghi_chu_thanh": "坐 zuò (thanh 4) đặt trên nốt đi xuống mỗi câu – khớp. Ô: 飞机 fēijī (1–1) khớp; 汽车 qìchē (4–1) khớp; 火车 huǒchē (3–1) khớp nếu nốt đầu thấp; 公共汽车 gōnggòng qìchē dài 4 âm – hát 4 nốt móc đơn; 船 chuán (2) nốt đi lên – khớp; lượt xe đạp dùng 骑自行车 (骑 qí: từ lạ có tranh) – 自行车 zìxíngchē (4–2–1) dễ lệch → lượt này ĐỔI SANG VÈ VỖ TAY."
+   },
+   {
+    "id": "T3",
+    "loai": "Big book mẫu câu",
+    "ten_en": "How Do You Go to School?",
+    "ten_zh": "你怎么去上学？",
+    "kieu": "hỏi–đáp",
+    "khung_en": "How do you go to school? By ___! And you?",
+    "khung_zh": "你怎么去上学？我___去。你呢？",
+    "tu_en": [
+     "by",
+     "bus",
+     "car",
+     "taxi",
+     "bicycle",
+     "motorbike",
+     "easy",
+     "yours",
+     "boy"
+    ],
+    "tu_zh": [
+     "怎么",
+     "走路",
+     "走",
+     "坐",
+     "公共汽车",
+     "汽车",
+     "出租车",
+     "摩托车",
+     "呢",
+     "不客气"
+    ]
+   },
+   {
+    "id": "T4",
+    "loai": "Vè",
+    "ten_en": "Up, Down, Big, Small",
+    "ten_zh": "大卡车，小汽车",
+    "kieu": "cặp đối lập",
+    "khung_en": "The ___ is big, the ___ is small!",
+    "khung_zh": "___大，___小！",
+    "tu_en": [
+     "lorry",
+     "truck",
+     "taxi",
+     "helicopter",
+     "plane",
+     "ship",
+     "round",
+     "easy",
+     "drive",
+     "beijing",
+     "shanghai"
+    ],
+    "tu_zh": [
+     "卡车",
+     "出租车",
+     "直升机",
+     "飞机",
+     "船",
+     "开",
+     "走",
+     "上班",
+     "北京",
+     "上海"
+    ]
+   },
+   {
+    "id": "T6",
+    "loai": "Truyện anh em",
+    "ten_en": "Xiaomei in Beijing",
+    "ten_zh": "Xiaomei在北京",
+    "khung_en": "I go by ___.",
+    "khung_zh": "我坐___去。",
+    "y": "Chủ nhật Xiaomei ở Bắc Kinh cùng gia đình, ngồi taxi thấy nhiều xe đạp, xe buýt; bác tài hỏi đi học bằng gì – “I walk. It's easy!”; bác lái taxi đi làm.",
+    "tu_en": [
+     "beijing",
+     "shanghai",
+     "taxi",
+     "bicycle",
+     "bus",
+     "sit",
+     "drive",
+     "by",
+     "easy",
+     "car",
+     "train",
+     "plane",
+     "yours",
+     "boy",
+     "trip"
+    ],
+    "tu_zh": [
+     "北京",
+     "上海",
+     "出租车",
+     "坐",
+     "自行车",
+     "公共汽车",
+     "怎么",
+     "走路",
+     "开",
+     "上班",
+     "呢",
+     "不客气",
+     "火车",
+     "飞机"
+    ]
+   }
+  ],
+  "dem_vong_ngoai": {
+   "bicycle": "T1 phần 1 + T2 + T3 + T6",
+   "motorbike": "T1 phần 2 + T3",
+   "helicopter": "T1 phần 2 + T4",
+   "lorry": "T1 phần 3 + T4",
+   "truck": "T1 phần 3 + T4",
+   "trip": "T1 phần 5 + T6",
+   "自行车": "T1 phần 1 + T2 + T6",
+   "摩托车": "T1 phần 2 + T3",
+   "出租车": "T1 phần 2 + T3 + T4 + T6",
+   "直升机": "T1 phần 2 + T4",
+   "卡车": "T1 phần 3 + T4"
+  },
+  "de_nghi_doi_nhan": [
+   {
+    "tu": "bicycle / 自行车",
+    "de_nghi": "vòng ngoài → lõi",
+    "ly_do": "Unit hỏi – đáp đi học bằng gì; xe đạp là phương tiện chính của câu trả lời (bài hát, big book, truyện anh em) nhưng đang ở vòng ngoài cả hai tiếng."
+   }
+  ],
+  "ghi_chu": "taxi là lõi tiếng Anh nhưng 出租车 là vòng ngoài tiếng Trung – giữ nguyên, mạng vẫn cho 出租车 xuất hiện 4 lần."
+ },
+ {
+  "unit": "8",
+  "chu_de": "At the zoo · 在动物园 – Hiểu: gọi tên con vật sở thú; hỏi đây là con gì; tô 高",
+  "khung_cau": {
+   "en": "What animal is it? It's a ___!",
+   "zh": "这是什么动物？是___！",
+   "o": "con vật"
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "Wow, so tall!",
+    "zh": "哇，好高！"
+   },
+   {
+    "en": "What animal is it?",
+    "zh": "这是什么动物？"
+   },
+   {
+    "en": "Look!",
+    "zh": "看！"
+   },
+   {
+    "en": "It's so long!",
+    "zh": "好长啊！"
+   }
+  ],
+  "van_ban": [
+   {
+    "id": "T1",
+    "loai": "Truyện khung",
+    "ten_en": "At the Zoo",
+    "ten_zh": "在动物园",
+    "khung_en": "What animal is it? It's a ___!",
+    "khung_zh": "这是什么动物？是___！",
+    "phan": [
+     {
+      "phan": 1,
+      "y": "Leo và Xiaomei vào sở thú có rất nhiều con vật; con đầu tiên: “It's an elephant!” (ZH vào: 动物, 大象)",
+      "tu_moi_vao": [
+       "animal",
+       "a lot of",
+       "elephant"
+      ]
+     },
+     {
+      "phan": 2,
+      "y": "Hai bạn đoán hổ, khỉ, rắn; thấy cả sư tử và ngựa vằn. (ZH vào: 老虎, 猴子, 蛇, 尾巴; vòng ngoài có tranh: lion, zebra, 狮子, 斑马)",
+      "tu_moi_vao": [
+       "tiger",
+       "monkey",
+       "snake"
+      ]
+     },
+     {
+      "phan": 3,
+      "y": "Hươu cao cổ rất cao, cổ dài: “It's very tall!” (ZH vào: 长颈鹿, 脖子, 腿)",
+      "tu_moi_vao": [
+       "giraffe",
+       "tall",
+       "neck",
+       "very"
+      ]
+     },
+     {
+      "phan": 4,
+      "y": "Khỉ thấp, đuôi rắn ngắn? “The monkey has got a short tail… so short!” (ZH vào: 矮, 短, 它, 可是)",
+      "tu_moi_vao": [
+       "short",
+       "has got",
+       "so"
+      ]
+     },
+     {
+      "phan": 5,
+      "y": "Gấu trúc trên xích đu – “I have got a panda!”; ở cửa hàng sở thú không có tiền mua gấu – câu cuối: “___'s animal is a panda!” (ZH vào: 熊猫, 没有; vòng ngoài có tranh: bear, swing, 熊, 钱)",
+      "tu_moi_vao": [
+       "panda",
+       "have got"
+      ]
+     }
+    ],
+    "tu_en": [
+     "animal",
+     "elephant",
+     "tiger",
+     "giraffe",
+     "snake",
+     "monkey",
+     "panda",
+     "tall",
+     "short",
+     "very",
+     "so",
+     "neck",
+     "have got",
+     "has got",
+     "a lot of",
+     "bear",
+     "zebra",
+     "lion",
+     "swing"
+    ],
+    "tu_zh": [
+     "动物",
+     "大象",
+     "老虎",
+     "长颈鹿",
+     "蛇",
+     "猴子",
+     "熊猫",
+     "矮",
+     "短",
+     "脖子",
+     "尾巴",
+     "腿",
+     "它",
+     "可是",
+     "没有",
+     "狮子",
+     "斑马",
+     "熊",
+     "钱"
+    ]
+   },
+   {
+    "id": "T2",
+    "loai": "Bài hát vận động",
+    "ten_en": "Tall and Short",
+    "ten_zh": "高高矮矮",
+    "kieu": "cặp đối lập",
+    "giai_dieu": "dân gian hết bản quyền: Pop! Goes the Weasel (dân ca Anh) – Đô trưởng, nhịp 6/8, 108",
+    "khung_en": "The ___ is tall, the ___ is short!",
+    "khung_zh": "___高高，___矮矮！",
+    "o_thay": [
+     "giraffe",
+     "monkey",
+     "elephant",
+     "snake",
+     "tiger",
+     "neck"
+    ],
+    "dong_tac": "lượt cao (giraffe, elephant, tiger) – kiễng chân giơ tay cao; lượt thấp (monkey, snake) – ngồi xổm; lượt neck – vươn cổ dài",
+    "tu_en": [
+     "giraffe",
+     "tall",
+     "monkey",
+     "short",
+     "elephant",
+     "snake",
+     "neck",
+     "very",
+     "so",
+     "tiger"
+    ],
+    "tu_zh": [
+     "长颈鹿",
+     "矮",
+     "猴子",
+     "大象",
+     "蛇",
+     "短",
+     "脖子",
+     "尾巴",
+     "腿"
+    ],
+    "ghi_chu_thanh": "Đôi 高高 gāogāo (1–1) hát trên nốt cao bằng, 矮矮 ǎi'ǎi (3–3, đọc 2–3) trên nốt thấp – đặt đúng chỗ giai điệu đi xuống. Ô 长颈鹿 chángjǐnglù (2–3–4) dài 3 âm – đặt Mi–Rê–Đô xuống: thanh 2 bị lệch nhẹ → nếu con hát thành “cháng” bằng thì câu này ĐỔI SANG VÈ VỖ TAY; 猴子 hóuzi (2–nhẹ) khớp nốt đi lên."
+   },
+   {
+    "id": "T3",
+    "loai": "Big book mẫu câu",
+    "ten_en": "What Animal Is It?",
+    "ten_zh": "这是什么动物？",
+    "kieu": "hỏi–đáp",
+    "khung_en": "It has got a long ___. What animal is it?",
+    "khung_zh": "它有长长的___。这是什么动物？",
+    "tu_en": [
+     "has got",
+     "animal",
+     "neck",
+     "elephant",
+     "snake",
+     "monkey",
+     "tiger",
+     "zebra",
+     "lion",
+     "panda",
+     "bear"
+    ],
+    "tu_zh": [
+     "它",
+     "动物",
+     "脖子",
+     "尾巴",
+     "腿",
+     "长颈鹿",
+     "大象",
+     "猴子",
+     "蛇",
+     "老虎",
+     "斑马",
+     "狮子",
+     "熊猫",
+     "熊",
+     "没有"
+    ]
+   },
+   {
+    "id": "T4",
+    "loai": "Vè",
+    "ten_en": "A Lot of Animals",
+    "ten_zh": "很多动物",
+    "kieu": "đếm",
+    "khung_en": "One ___, two ___s – a lot of animals!",
+    "khung_zh": "一只___，两只___，很多很多动物！",
+    "tu_en": [
+     "a lot of",
+     "animal",
+     "elephant",
+     "tiger",
+     "monkey",
+     "panda",
+     "have got",
+     "swing"
+    ],
+    "tu_zh": [
+     "动物",
+     "大象",
+     "老虎",
+     "猴子",
+     "熊猫",
+     "可是"
+    ]
+   },
+   {
+    "id": "T6",
+    "loai": "Truyện anh em",
+    "ten_en": "Leo's Toy Zoo",
+    "ten_zh": "Leo的玩具动物园",
+    "khung_en": "What animal is it? It's a ___!",
+    "khung_zh": "这是什么动物？是___！",
+    "y": "Leo xếp sở thú đồ chơi cho em: con nào cao, con nào thấp, cổ dài, đuôi ngắn; em không có gấu trúc nhưng Leo có – Leo tặng em.",
+    "tu_en": [
+     "animal",
+     "a lot of",
+     "elephant",
+     "tiger",
+     "giraffe",
+     "snake",
+     "monkey",
+     "panda",
+     "tall",
+     "short",
+     "very",
+     "so",
+     "neck",
+     "have got",
+     "has got"
+    ],
+    "tu_zh": [
+     "动物",
+     "大象",
+     "老虎",
+     "长颈鹿",
+     "蛇",
+     "猴子",
+     "熊猫",
+     "矮",
+     "短",
+     "脖子",
+     "尾巴",
+     "腿",
+     "它",
+     "可是",
+     "没有",
+     "钱"
+    ]
+   }
+  ],
+  "dem_vong_ngoai": {
+   "bear": "T1 phần 5 + T3",
+   "zebra": "T1 phần 2 + T3",
+   "lion": "T1 phần 2 + T3",
+   "swing": "T1 phần 5 + T4",
+   "狮子": "T1 phần 2 + T3",
+   "斑马": "T1 phần 2 + T3",
+   "熊": "T1 phần 5 + T3",
+   "钱": "T1 phần 5 + T6"
+  },
+  "de_nghi_doi_nhan": [],
+  "ghi_chu": "Lượng từ: dùng 只 cho mọi con vật trong vè đếm (không dùng 条 cho rắn) để chuỗi không đổi lượng từ."
+ },
+ {
+  "unit": "9",
+  "chu_de": "At the farm – Ở nông trại · Gọi tên con vật, tiếng kêu hai nước; tô 牛 · Luyện đề Starters Nói phần 1, Nghe phần 2; YCT2 ",
+  "khung_cau": {
+   "en": "On the farm, there is a ___.",
+   "zh": "农场里有___。",
+   "o": "con vật"
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "Sorry!",
+    "zh": "对不起！"
+   },
+   {
+    "en": "It's OK!",
+    "zh": "没关系！"
+   },
+   {
+    "en": "So cute!",
+    "zh": "真可爱！"
+   }
+  ],
+  "van_ban": [
+   {
+    "id": "T1",
+    "loai": "Truyện khung",
+    "ten_en": "The Grey Duckling",
+    "ten_zh": "灰色的小鸭子",
+    "khung_en": "On the farm, there is a ___.",
+    "khung_zh": "农场里有___。",
+    "phan": [
+     {
+      "phan": 1,
+      "y": "Nông trại có lợn, bò, gà, có dê và kho thóc. (ZH vào: 农场, 鸡, 牛; vòng ngoài có tranh: goat, barn, 猪, 山羊, 谷仓)",
+      "tu_moi_vao": [
+       "farm",
+       "pig",
+       "cow",
+       "chicken"
+      ]
+     },
+     {
+      "phan": 2,
+      "y": "Ngựa già ngồi trên tấm thảm cạnh bức tường, cừu đứng cạnh; bác nông dân quét chuồng. (ZH vào: 马, 老, 羊, 墙; vòng ngoài có tranh: mat, 垫子, 打扫)",
+      "tu_moi_vao": [
+       "horse",
+       "old",
+       "sheep"
+      ]
+     },
+     {
+      "phan": 3,
+      "y": "Lợn béo, cừu gầy, gà con còn non. (ZH vào: 胖; vòng ngoài có tranh: 瘦, 年轻, 河马)",
+      "tu_moi_vao": [
+       "fat",
+       "thin",
+       "young"
+      ]
+     },
+     {
+      "phan": 4,
+      "y": "Một chú vịt con màu xám bị chê xấu; nó nói nhỏ “Sorry…”, đi sau cùng. (ZH vào: 第一, 后, 对不起; vòng ngoài có tranh: duckling, cute, 鸭子, 可爱, 丑)",
+      "tu_moi_vao": [
+       "grey",
+       "ugly",
+       "a little"
+      ]
+     },
+     {
+      "phan": 5,
+      "y": "Vịt xám thành thiên nga xinh đẹp, đứng giữa đàn – câu cuối: “On the farm, there is ___!” (ZH vào: 天鹅, 漂亮, 旁边, 中间; vòng ngoài có tranh: middle)",
+      "tu_moi_vao": [
+       "swan",
+       "pretty"
+      ]
+     }
+    ],
+    "tu_en": [
+     "pig",
+     "chicken",
+     "cow",
+     "sheep",
+     "farm",
+     "horse",
+     "fat",
+     "thin",
+     "pretty",
+     "ugly",
+     "young",
+     "old",
+     "a little",
+     "swan",
+     "grey",
+     "goat",
+     "barn",
+     "cute",
+     "mat",
+     "middle",
+     "duckling"
+    ],
+    "tu_zh": [
+     "鸡",
+     "牛",
+     "羊",
+     "农场",
+     "马",
+     "胖",
+     "漂亮",
+     "墙",
+     "老",
+     "对不起",
+     "后",
+     "天鹅",
+     "第一",
+     "旁边",
+     "中间",
+     "猪",
+     "河马",
+     "鸭子",
+     "山羊",
+     "谷仓",
+     "可爱",
+     "瘦",
+     "丑",
+     "打扫",
+     "年轻",
+     "垫子"
+    ]
+   },
+   {
+    "id": "T2",
+    "loai": "Bài hát vận động",
+    "ten_en": "On Our Farm",
+    "ten_zh": "我们的农场",
+    "kieu": "liệt kê",
+    "giai_dieu": "dân gian hết bản quyền: Old MacDonald Had a Farm (dân ca Mỹ/Anh) – Sol trưởng, nhịp 112",
+    "khung_en": "On our farm there is a ___, ___, ___!",
+    "khung_zh": "我们农场有___，___叫！",
+    "o_thay": [
+     "pig",
+     "cow",
+     "sheep",
+     "chicken",
+     "horse",
+     "goat"
+    ],
+    "dong_tac": "mỗi lượt bắt chước dáng và tiếng kêu: oink, moo, baa, cluck, neigh, meh",
+    "tu_en": [
+     "farm",
+     "pig",
+     "cow",
+     "sheep",
+     "chicken",
+     "horse",
+     "goat",
+     "fat"
+    ],
+    "tu_zh": [
+     "农场",
+     "猪",
+     "牛",
+     "羊",
+     "鸡",
+     "马",
+     "山羊",
+     "鸭子"
+    ],
+    "ghi_chu_thanh": "农场 nóngchǎng (2–3) ở đầu câu đặt Mi–Rê – khớp. Ô 1 âm: 猪 zhū, 鸡 jī (thanh 1) trên nốt cao – khớp; 牛 niú, 羊 yáng (thanh 2) trên nốt đi lên – khớp; 马 mǎ (thanh 3) cần nốt thấp – đặt ở nốt Rê cuối câu; 山羊 shānyáng (1–2) khớp. Tiếng kêu Trung (哞哞, 咩咩) là từ “Nghe làm quen”."
+   },
+   {
+    "id": "T3",
+    "loai": "Big book mẫu câu",
+    "ten_en": "Fat and Thin",
+    "ten_zh": "胖胖瘦瘦",
+    "kieu": "cặp đối lập",
+    "khung_en": "The ___ is fat. The ___ is thin.",
+    "khung_zh": "___很胖，___很瘦。",
+    "tu_en": [
+     "fat",
+     "thin",
+     "old",
+     "young",
+     "pretty",
+     "ugly",
+     "a little",
+     "pig",
+     "sheep",
+     "horse",
+     "swan",
+     "duckling",
+     "cute",
+     "grey"
+    ],
+    "tu_zh": [
+     "胖",
+     "瘦",
+     "老",
+     "年轻",
+     "漂亮",
+     "丑",
+     "可爱",
+     "天鹅",
+     "河马",
+     "马",
+     "羊"
+    ]
+   },
+   {
+    "id": "T4",
+    "loai": "Vè",
+    "ten_en": "Number One, the Chicken!",
+    "ten_zh": "第一是小鸡",
+    "kieu": "đếm",
+    "khung_en": "Number ___, the ___!",
+    "khung_zh": "第___是___！",
+    "tu_en": [
+     "chicken",
+     "cow",
+     "pig",
+     "sheep",
+     "horse",
+     "middle",
+     "barn",
+     "mat"
+    ],
+    "tu_zh": [
+     "第一",
+     "鸡",
+     "牛",
+     "猪",
+     "羊",
+     "马",
+     "中间",
+     "旁边",
+     "墙",
+     "谷仓",
+     "垫子"
+    ]
+   },
+   {
+    "id": "T5",
+    "loai": "Bài tiếng Trung riêng",
+    "ten_zh": "排排队",
+    "kieu": "chuỗi xích (vè vỗ tay)",
+    "khung_zh": "___后面是___。",
+    "tu_en": [],
+    "tu_zh": [
+     "第一",
+     "后",
+     "旁边",
+     "中间",
+     "对不起",
+     "鸡",
+     "鸭子"
+    ]
+   },
+   {
+    "id": "T6",
+    "loai": "Truyện anh em",
+    "ten_en": "The Old Horse's Mat",
+    "ten_zh": "老马的垫子",
+    "khung_en": "On the farm, there is a ___.",
+    "khung_zh": "农场里有___。",
+    "y": "Vịt con nhảy lên tấm thảm của ngựa già, nói “Sorry!”; ngựa bảo không sao, cho vịt ngồi giữa; bác nông dân quét chuồng, thiên nga đến chơi.",
+    "tu_en": [
+     "horse",
+     "old",
+     "young",
+     "a little",
+     "grey",
+     "swan",
+     "pretty",
+     "ugly",
+     "farm",
+     "chicken",
+     "cow",
+     "sheep",
+     "pig",
+     "fat",
+     "thin",
+     "mat"
+    ],
+    "tu_zh": [
+     "马",
+     "老",
+     "对不起",
+     "后",
+     "旁边",
+     "中间",
+     "墙",
+     "天鹅",
+     "漂亮",
+     "农场",
+     "鸡",
+     "牛",
+     "羊",
+     "胖",
+     "第一",
+     "打扫",
+     "年轻"
+    ]
+   }
+  ],
+  "dem_vong_ngoai": {
+   "goat": "T1 phần 1 + T2",
+   "barn": "T1 phần 1 + T4",
+   "cute": "T1 phần 4 + T3",
+   "mat": "T1 phần 2 + T4 + T6",
+   "middle": "T1 phần 5 + T4",
+   "duckling": "T1 phần 4 + T3",
+   "猪": "T1 phần 1 + T2 + T4",
+   "河马": "T1 phần 3 + T3",
+   "鸭子": "T1 phần 4 + T2 + T5",
+   "山羊": "T1 phần 1 + T2",
+   "谷仓": "T1 phần 1 + T4",
+   "可爱": "T1 phần 4 + T3",
+   "瘦": "T1 phần 3 + T3",
+   "丑": "T1 phần 4 + T3",
+   "打扫": "T1 phần 2 + T6",
+   "年轻": "T1 phần 3 + T3 + T6",
+   "垫子": "T1 phần 2 + T4"
+  },
+  "de_nghi_doi_nhan": [
+   {
+    "tu": "瘦",
+    "de_nghi": "vòng ngoài → lõi",
+    "ly_do": "胖 là lõi, thin là lõi tiếng Anh; cặp đối lập 胖–瘦 là khung của big book – để 瘦 vòng ngoài thì cặp bị lệch."
+   },
+   {
+    "tu": "猪",
+    "de_nghi": "vòng ngoài → lõi",
+    "ly_do": "pig là lõi tiếng Anh và có mặt ở truyện, bài hát, vè; 猪 là con vật nông trại cơ bản."
+   },
+   {
+    "tu": "河马",
+    "de_nghi": "xem lại",
+    "ly_do": "Hà mã không phải con vật nông trại; chỉ dùng được ở big book như hình so sánh béo."
+   }
+  ],
+  "ghi_chu": ""
+ },
+ {
+  "unit": "10",
+  "chu_de": "Nature 1 – Thiên nhiên · Gọi tên cảnh vật, nói mình thấy gì; tô 山 · Luyện đề Starters Nói phần 2, Nghe phần 2; YCT2 Nghe",
+  "khung_cau": {
+   "en": "I can see a ___.",
+   "zh": "我看见___。",
+   "o": "cảnh vật"
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "Look up!",
+    "zh": "往上看！"
+   },
+   {
+    "en": "What can you see?",
+    "zh": "你看见什么？"
+   },
+   {
+    "en": "Me too!",
+    "zh": "我也是！"
+   },
+   {
+    "en": "Good night, moon!",
+    "zh": "月亮，晚安！"
+   }
+  ],
+  "van_ban": [
+   {
+    "id": "T1",
+    "loai": "Truyện khung",
+    "ten_en": "On the Mountain",
+    "ten_zh": "在山上",
+    "khung_en": "I can see a ___.",
+    "khung_zh": "我看见___。",
+    "phan": [
+     {
+      "phan": 1,
+      "y": "Bông đi chơi thiên nhiên: “I can see a tree. I can see a flower.” – có cỏ và ếch. (ZH vào: 看见, 树, 花; vòng ngoài có tranh: grass, nature, 草, 大自然, 青蛙)",
+      "tu_moi_vao": [
+       "see",
+       "tree",
+       "flower"
+      ]
+     },
+     {
+      "phan": 2,
+      "y": "Lên núi, đi xuyên qua rừng, thấy dòng sông và hòn đá – “I can see a river, too!” (ZH vào: 山, 河, 条, 还; vòng ngoài có tranh: stone, through, 石头, 穿过)",
+      "tu_moi_vao": [
+       "mountain",
+       "river",
+       "too"
+      ]
+     },
+     {
+      "phan": 3,
+      "y": "Xuống bãi biển, thấy biển và con sứa; sứa trôi vào bờ. (ZH vào: 海边, 水母, 可以; vòng ngoài có tranh: sea, into, 大海)",
+      "tu_moi_vao": [
+       "beach",
+       "jellyfish"
+      ]
+     },
+     {
+      "phan": 4,
+      "y": "Ban ngày có mặt trời trên bầu trời, có mây. (ZH vào: 白天, 太阳, 天空; vòng ngoài có tranh: cloud, 白云)",
+      "tu_moi_vao": [
+       "in the day",
+       "sun",
+       "sky"
+      ]
+     },
+     {
+      "phan": 5,
+      "y": "Ban đêm thấy trăng và sao; không hái hoa – câu cuối: “Good night, ___! I can see a star.” (ZH vào: 月亮, 星星; vòng ngoài có tranh: pick, 亮晶晶, 摘)",
+      "tu_moi_vao": [
+       "at night",
+       "night",
+       "moon",
+       "star"
+      ]
+     }
+    ],
+    "tu_en": [
+     "tree",
+     "flower",
+     "river",
+     "mountain",
+     "beach",
+     "too",
+     "jellyfish",
+     "sun",
+     "moon",
+     "star",
+     "sky",
+     "night",
+     "in the day",
+     "at night",
+     "see",
+     "grass",
+     "stone",
+     "sea",
+     "cloud",
+     "through",
+     "into",
+     "nature",
+     "pick"
+    ],
+    "tu_zh": [
+     "树",
+     "花",
+     "看见",
+     "河",
+     "山",
+     "还",
+     "条",
+     "海边",
+     "水母",
+     "太阳",
+     "月亮",
+     "星星",
+     "天空",
+     "白天",
+     "可以",
+     "草",
+     "石头",
+     "青蛙",
+     "大海",
+     "白云",
+     "亮晶晶",
+     "穿过",
+     "大自然",
+     "摘"
+    ]
+   },
+   {
+    "id": "T2",
+    "loai": "Bài hát vận động",
+    "ten_en": "Look Up High",
+    "ten_zh": "往上看",
+    "kieu": "liệt kê",
+    "giai_dieu": "dân gian hết bản quyền: Twinkle, Twinkle, Little Star (giai điệu Ah! vous dirai-je, maman – dân ca Pháp) – Đô trưởng, nhịp 100",
+    "khung_en": "Look up high, what can you see? I can see the ___!",
+    "khung_zh": "往上看，看见___！",
+    "o_thay": [
+     "sun",
+     "sky",
+     "cloud",
+     "moon",
+     "star"
+    ],
+    "dong_tac": "sun – hai tay tròn trên đầu; sky – vẽ vòng rộng; cloud – tay bồng bềnh; moon – tay cong; star – xòe ngón tay lấp lánh; cuối bài “at night” nhắm mắt",
+    "tu_en": [
+     "see",
+     "sun",
+     "sky",
+     "cloud",
+     "moon",
+     "star",
+     "night",
+     "at night",
+     "in the day"
+    ],
+    "tu_zh": [
+     "看见",
+     "太阳",
+     "天空",
+     "白云",
+     "月亮",
+     "星星",
+     "亮晶晶",
+     "白天"
+    ],
+    "ghi_chu_thanh": "Ô: 太阳 tàiyáng (4–2) đặt nốt xuống rồi lên – khớp; 天空 tiānkōng (1–1), 星星 xīngxing (1–nhẹ) trên nốt bằng – khớp; 白云 báiyún (2–2) cần hai nốt đi lên; 月亮 yuèliang (4–nhẹ) rơi vào nốt đi lên của câu 2 → lượt “moon” ĐỔI SANG VÈ VỖ TAY. 亮晶晶 liàngjīngjīng là từ thêm vì vần – mức “Nghe làm quen”."
+   },
+   {
+    "id": "T3",
+    "loai": "Big book mẫu câu",
+    "ten_en": "What Can You See?",
+    "ten_zh": "你看见什么？",
+    "kieu": "hỏi–đáp",
+    "khung_en": "What can you see? I can see a ___.",
+    "khung_zh": "你看见什么？我看见___。",
+    "tu_en": [
+     "see",
+     "tree",
+     "flower",
+     "river",
+     "mountain",
+     "grass",
+     "stone",
+     "too"
+    ],
+    "tu_zh": [
+     "看见",
+     "树",
+     "花",
+     "河",
+     "条",
+     "山",
+     "草",
+     "石头",
+     "青蛙",
+     "还"
+    ]
+   },
+   {
+    "id": "T4",
+    "loai": "Vè",
+    "ten_en": "Day and Night",
+    "ten_zh": "白天和晚上",
+    "kieu": "cặp đối lập",
+    "khung_en": "In the day – ___! At night – ___!",
+    "khung_zh": "白天有___，晚上有___！",
+    "tu_en": [
+     "in the day",
+     "at night",
+     "sun",
+     "moon",
+     "star",
+     "sky",
+     "sea",
+     "beach",
+     "jellyfish",
+     "night"
+    ],
+    "tu_zh": [
+     "白天",
+     "太阳",
+     "月亮",
+     "星星",
+     "天空",
+     "大海",
+     "海边",
+     "水母",
+     "可以"
+    ]
+   },
+   {
+    "id": "T6",
+    "loai": "Truyện anh em",
+    "ten_en": "Bông at the Beach",
+    "ten_zh": "Bông在海边",
+    "khung_en": "I can see a ___.",
+    "khung_zh": "我看见___。",
+    "y": "Bông ra biển: ban ngày thấy mặt trời, biển, sứa trôi vào bờ; đi xuyên qua hàng cây ra núi và sông; tối thấy trăng sao, Bông không hái hoa – “I love nature!”",
+    "tu_en": [
+     "beach",
+     "sea",
+     "jellyfish",
+     "sun",
+     "sky",
+     "see",
+     "too",
+     "river",
+     "mountain",
+     "tree",
+     "flower",
+     "night",
+     "at night",
+     "moon",
+     "star",
+     "pick",
+     "into",
+     "through",
+     "nature"
+    ],
+    "tu_zh": [
+     "海边",
+     "大海",
+     "水母",
+     "太阳",
+     "看见",
+     "还",
+     "可以",
+     "山",
+     "河",
+     "条",
+     "树",
+     "花",
+     "月亮",
+     "星星",
+     "天空",
+     "摘",
+     "穿过",
+     "大自然"
+    ]
+   }
+  ],
+  "dem_vong_ngoai": {
+   "grass": "T1 phần 1 + T3",
+   "stone": "T1 phần 2 + T3",
+   "sea": "T1 phần 3 + T4 + T6",
+   "cloud": "T1 phần 4 + T2",
+   "through": "T1 phần 2 + T6",
+   "into": "T1 phần 3 + T6",
+   "nature": "T1 phần 1 + T6",
+   "pick": "T1 phần 5 + T6",
+   "草": "T1 phần 1 + T3",
+   "石头": "T1 phần 2 + T3",
+   "青蛙": "T1 phần 1 + T3",
+   "大海": "T1 phần 3 + T4 + T6",
+   "白云": "T1 phần 4 + T2",
+   "亮晶晶": "T1 phần 5 + T2",
+   "穿过": "T1 phần 2 + T6",
+   "大自然": "T1 phần 1 + T6",
+   "摘": "T1 phần 5 + T6"
+  },
+  "de_nghi_doi_nhan": [
+   {
+    "tu": "see",
+    "de_nghi": "xem lại",
+    "ly_do": "see đã là lõi ở Unit 5; ở Unit 10 nên tính là từ ôn để nhường chỗ cho một từ cảnh vật (ví dụ sea)."
+   }
+  ],
+  "ghi_chu": "条 dùng cho 河 trong big book (一条河) – giữ lượng từ 条 cố định cho sông, không đổi trong chuỗi."
+ },
+ {
+  "unit": "11",
+  "chu_de": "Nature 2 – Ở đâu? · Nói vị trí bằng 6 từ; tô 上 下 · Luyện đề Starters Nói phần 1, Nghe phần 1; YCT2 Nghe phần 2",
+  "khung_cau": {
+   "en": "The teddy is ___ the box.",
+   "zh": "小熊在盒子___。",
+   "o": "vị trí"
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "Where is it?",
+    "zh": "在哪儿？"
+   },
+   {
+    "en": "Over there!",
+    "zh": "在那儿！"
+   },
+   {
+    "en": "Stop!",
+    "zh": "停！"
+   },
+   {
+    "en": "I'm fine!",
+    "zh": "我很好！"
+   }
+  ],
+  "van_ban": [
+   {
+    "id": "T1",
+    "loai": "Truyện khung",
+    "ten_en": "Where Is Teddy?",
+    "ten_zh": "小熊在哪儿？",
+    "khung_en": "The teddy is ___ the box.",
+    "khung_zh": "小熊在盒子___。",
+    "phan": [
+     {
+      "phan": 1,
+      "y": "Anna đặt gấu bông vào hộp: “I put my teddy in the box.” (ZH vào: 小熊, 盒子, 放, 里面)",
+      "tu_moi_vao": [
+       "teddy",
+       "box",
+       "put"
+      ]
+     },
+     {
+      "phan": 2,
+      "y": "Gấu bông lúc ở trên hộp, lúc trước hộp, lúc sau hộp, lúc rơi xuống sàn. (ZH vào: 上边, 前面, 后面; vòng ngoài có tranh: floor, 地上)",
+      "tu_moi_vao": [
+       "top",
+       "front",
+       "behind"
+      ]
+     },
+     {
+      "phan": 3,
+      "y": "Leo đứng giữa hai hộp, cạnh Anna; “Stop!” – gấu ở giữa. (ZH vào: 站, 停, 忙)",
+      "tu_moi_vao": [
+       "next",
+       "between",
+       "stand",
+       "stop"
+      ]
+     },
+     {
+      "phan": 4,
+      "y": "Gấu biến mất: có ở trong nhà không? Ở đằng kia – trên cây! Con mèo trốn sau cửa. (ZH vào: 家, 有, 树上; vòng ngoài có tranh: over there, hide, behind the door, 那儿, 躲, 门后面, 在……中间, 中间)",
+      "tu_moi_vao": [
+       "house",
+       "there",
+       "in the tree"
+      ]
+     },
+     {
+      "phan": 5,
+      "y": "Cây gần hay xa nhà? Gần! Leo lấy gấu xuống: “I'm fine!” – câu cuối: “The teddy is next to ___!” (ZH vào: 近, 远; vòng ngoài có tranh: fine, 再)",
+      "tu_moi_vao": [
+       "near",
+       "far"
+      ]
+     }
+    ],
+    "tu_en": [
+     "box",
+     "top",
+     "front",
+     "next",
+     "behind",
+     "teddy",
+     "put",
+     "stand",
+     "stop",
+     "house",
+     "there",
+     "near",
+     "far",
+     "in the tree",
+     "between",
+     "floor",
+     "fine",
+     "over there",
+     "hide",
+     "behind the door"
+    ],
+    "tu_zh": [
+     "盒子",
+     "上边",
+     "里面",
+     "前面",
+     "后面",
+     "小熊",
+     "放",
+     "站",
+     "停",
+     "家",
+     "有",
+     "近",
+     "远",
+     "忙",
+     "树上",
+     "再",
+     "地上",
+     "那儿",
+     "在……中间",
+     "门后面",
+     "躲",
+     "中间"
+    ]
+   },
+   {
+    "id": "T2",
+    "loai": "Bài hát vận động",
+    "ten_en": "In Front, Behind",
+    "ten_zh": "前面，后面",
+    "kieu": "liệt kê",
+    "giai_dieu": "dân gian hết bản quyền: Here We Go Looby Loo (dân ca Anh) – Đô trưởng, nhịp 6/8, 104",
+    "khung_en": "I put my teddy ___ the box!",
+    "khung_zh": "小熊放在盒子___！",
+    "o_thay": [
+     "top",
+     "front",
+     "behind",
+     "next",
+     "between"
+    ],
+    "dong_tac": "đặt gấu bông (hoặc nắm tay) đúng vị trí quanh “hộp” là hai tay; lượt cuối “Stand up! Stop!” đứng bật dậy rồi đứng yên",
+    "tu_en": [
+     "put",
+     "teddy",
+     "box",
+     "top",
+     "front",
+     "behind",
+     "next",
+     "between",
+     "stand",
+     "stop"
+    ],
+    "tu_zh": [
+     "放",
+     "小熊",
+     "盒子",
+     "里面",
+     "上边",
+     "前面",
+     "后面",
+     "站",
+     "停"
+    ],
+    "ghi_chu_thanh": "盒子 hézi (2–nhẹ) đặt nốt đi lên rồi nốt ngắn – khớp. Ô: 里面 lǐmiàn (3–4) cần nốt thấp rồi xuống; 上边 shàngbian (4–nhẹ), 后面 hòumiàn (4–4) và 前面 qiánmiàn (2–4) – các ô đều kết bằng thanh 4, đặt nốt cuối câu đi xuống (Sol→Đô) cho cả 6 lượt; 前面 dễ lệch thanh 2 trên nốt bằng → nếu nghe thành “qiān” thì lượt đó ĐỔI SANG VÈ VỖ TAY."
+   },
+   {
+    "id": "T3",
+    "loai": "Big book mẫu câu",
+    "ten_en": "Where Is the Cat?",
+    "ten_zh": "小猫在哪儿？",
+    "kieu": "hỏi–đáp",
+    "khung_en": "Where is the cat? It's ___!",
+    "khung_zh": "小猫在哪儿？在___！",
+    "tu_en": [
+     "box",
+     "top",
+     "behind the door",
+     "in the tree",
+     "over there",
+     "between",
+     "floor",
+     "hide",
+     "house",
+     "there"
+    ],
+    "tu_zh": [
+     "盒子",
+     "里面",
+     "上边",
+     "门后面",
+     "树上",
+     "那儿",
+     "地上",
+     "躲",
+     "在……中间",
+     "中间",
+     "有"
+    ]
+   },
+   {
+    "id": "T4",
+    "loai": "Vè",
+    "ten_en": "Near, Far",
+    "ten_zh": "近近远远",
+    "kieu": "cặp đối lập",
+    "khung_en": "My house is near. The ___ is far!",
+    "khung_zh": "我家很近，___很远！",
+    "tu_en": [
+     "near",
+     "far",
+     "front",
+     "behind",
+     "house",
+     "there",
+     "fine"
+    ],
+    "tu_zh": [
+     "近",
+     "远",
+     "前面",
+     "后面",
+     "家",
+     "有",
+     "忙",
+     "再"
+    ]
+   },
+   {
+    "id": "T6",
+    "loai": "Truyện anh em",
+    "ten_en": "Vũ's Busy Teddy",
+    "ten_zh": "Vũ的小熊很忙",
+    "khung_en": "The teddy is ___ the box.",
+    "khung_zh": "小熊在盒子___。",
+    "y": "Vũ bận dọn phòng, đặt gấu bông lúc trong hộp, lúc trên hộp, giữa hai hộp; gấu “chạy” ra trước nhà, lên cây; nhà gần hay xa – Vũ tìm lại được: “Stop, Teddy! I'm fine.”",
+    "tu_en": [
+     "teddy",
+     "box",
+     "put",
+     "top",
+     "front",
+     "behind",
+     "next",
+     "between",
+     "stand",
+     "stop",
+     "house",
+     "there",
+     "near",
+     "far",
+     "in the tree",
+     "fine"
+    ],
+    "tu_zh": [
+     "小熊",
+     "盒子",
+     "放",
+     "上边",
+     "里面",
+     "前面",
+     "后面",
+     "站",
+     "停",
+     "家",
+     "有",
+     "近",
+     "远",
+     "忙",
+     "树上",
+     "再"
+    ]
+   }
+  ],
+  "dem_vong_ngoai": {
+   "floor": "T1 phần 2 + T3",
+   "fine": "T1 phần 5 + T4 + T6",
+   "over there": "T1 phần 4 + T3",
+   "hide": "T1 phần 4 + T3",
+   "behind the door": "T1 phần 4 + T3",
+   "再": "T1 phần 5 + T4 + T6",
+   "地上": "T1 phần 2 + T3",
+   "那儿": "T1 phần 4 + T3",
+   "在……中间": "T1 phần 4 + T3",
+   "门后面": "T1 phần 4 + T3",
+   "躲": "T1 phần 4 + T3",
+   "中间": "T1 phần 4 + T3"
+  },
+  "de_nghi_doi_nhan": [
+   {
+    "tu": "中间 (= )",
+    "de_nghi": "bỏ dòng trùng hoặc ghi nghĩa",
+    "ly_do": "Dòng vòng ngoài 中间 không có nghĩa, trùng với 在……中间 cùng unit và với 中间 lõi ở Unit 9."
+   },
+   {
+    "tu": "在……中间",
+    "de_nghi": "vòng ngoài → lõi",
+    "ly_do": "between là lõi tiếng Anh và là một trong 6 từ vị trí của unit (bài hát, big book); tiếng Trung tương đương lại ở vòng ngoài."
+   },
+   {
+    "tu": "忙",
+    "de_nghi": "xem lại",
+    "ly_do": "忙 (= busy) không thuộc chủ đề vị trí; mạng chỉ dùng được như tính từ trong truyện anh em và vè."
+   }
+  ],
+  "ghi_chu": ""
+ },
+ {
+  "unit": "12",
+  "chu_de": "Food & restaurant – Ở nhà hàng · Gọi món ăn lịch sự; tô 吃 · Luyện đề Starters Nói phần 2, Nghe phần 4; YCT2 Nghe phần 3",
+  "khung_cau": {
+   "en": "I would like ___, please.",
+   "zh": "我想要___。",
+   "o": "món ăn"
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "Here you are!",
+    "zh": "给你！"
+   },
+   {
+    "en": "Thank you very much!",
+    "zh": "太谢谢你了！"
+   },
+   {
+    "en": "Yummy!",
+    "zh": "好吃！"
+   },
+   {
+    "en": "Please!",
+    "zh": "请！"
+   }
+  ],
+  "van_ban": [
+   {
+    "id": "T1",
+    "loai": "Truyện khung",
+    "ten_en": "At the Restaurant",
+    "ten_zh": "在饭店",
+    "khung_en": "I would like ___, please.",
+    "khung_zh": "我想要___。",
+    "phan": [
+     {
+      "phan": 1,
+      "y": "Leo và Xiaomei vào nhà hàng, người phục vụ đưa thực đơn: “What would you like?” – “…please.” (ZH vào: 服务员, 菜单, 请, 想)",
+      "tu_moi_vao": [
+       "waiter",
+       "menu",
+       "would",
+       "please"
+      ]
+     },
+     {
+      "phan": 2,
+      "y": "Leo muốn sủi cảo, Xiaomei muốn một bát canh và rau. (ZH vào: 饺子, 汤, 茶; vòng ngoài có tranh: bowl, vegetable, 蔬菜)",
+      "tu_moi_vao": [
+       "dumpling",
+       "soup",
+       "want"
+      ]
+     },
+     {
+      "phan": 3,
+      "y": "Leo không biết dùng đũa; Xiaomei bảo “I will help him.” (ZH vào: 筷子, 用, 来; vòng ngoài có tranh: will, 教)",
+      "tu_moi_vao": [
+       "chopsticks",
+       "help",
+       "him"
+      ]
+     },
+     {
+      "phan": 4,
+      "y": "Người phục vụ đưa thịt, thịt viên và khoai tây – “That's too much!” (ZH vào: 肉, 鸡肉, 给; vòng ngoài có tranh: potato, much, 肉丸, 土豆, 太……了)",
+      "tu_moi_vao": [
+       "meat",
+       "meatballs",
+       "give"
+      ]
+     },
+     {
+      "phan": 5,
+      "y": "Leo hỏi xin nước chanh, bánh táo, kẹo: “Here you are!” – câu cuối: “I would like ___, please!” (ZH vào: 问, 果汁; vòng ngoài có tranh: lemonade, pie, sweets, 柠檬水, 苹果派, 得)",
+      "tu_moi_vao": [
+       "ask",
+       "here"
+      ]
+     }
+    ],
+    "tu_en": [
+     "dumpling",
+     "soup",
+     "meat",
+     "menu",
+     "chopsticks",
+     "waiter",
+     "want",
+     "please",
+     "give",
+     "here",
+     "ask",
+     "help",
+     "would",
+     "him",
+     "meatballs",
+     "vegetable",
+     "bowl",
+     "sweets",
+     "will",
+     "much",
+     "potato",
+     "pie",
+     "lemonade"
+    ],
+    "tu_zh": [
+     "饺子",
+     "汤",
+     "肉",
+     "鸡肉",
+     "果汁",
+     "菜单",
+     "筷子",
+     "服务员",
+     "茶",
+     "请",
+     "问",
+     "用",
+     "想",
+     "来",
+     "给",
+     "蔬菜",
+     "教",
+     "太……了",
+     "得",
+     "肉丸",
+     "土豆",
+     "柠檬水",
+     "苹果派"
+    ]
+   },
+   {
+    "id": "T2",
+    "loai": "Bài hát vận động",
+    "ten_en": "What Would You Like?",
+    "ten_zh": "你想吃什么？",
+    "kieu": "hỏi–đáp",
+    "giai_dieu": "dân gian hết bản quyền: Polly Put the Kettle On (dân ca Anh) – Đô trưởng, nhịp 112",
+    "khung_en": "What would you like to eat today? I would like ___, please!",
+    "khung_zh": "你想吃什么？我想吃___！",
+    "o_thay": [
+     "dumpling",
+     "soup",
+     "meatballs",
+     "vegetable",
+     "potato",
+     "pie"
+    ],
+    "dong_tac": "dumplings – gói bánh; soup – thổi thìa; meatballs – vo viên; vegetables – nhai rau; potatoes – bóc vỏ; pie – cắt bánh",
+    "tu_en": [
+     "would",
+     "please",
+     "want",
+     "dumpling",
+     "soup",
+     "meatballs",
+     "vegetable",
+     "potato",
+     "pie"
+    ],
+    "tu_zh": [
+     "想",
+     "请",
+     "饺子",
+     "汤",
+     "肉丸",
+     "蔬菜",
+     "土豆",
+     "苹果派"
+    ],
+    "ghi_chu_thanh": "你想吃什么 nǐ xiǎng chī shénme: 想 (3) đặt nốt thấp, 吃 (1) nốt cao – khớp. Ô: 饺子 jiǎozi (3–nhẹ) trên nốt thấp; 汤 tāng (1) nốt cao – khớp; 肉丸 ròuwán (4–2) xuống rồi lên – khớp; 蔬菜 shūcài (1–4) khớp; 土豆 tǔdòu (3–4) khớp; 苹果派 píngguǒpài (2–3–4) dài 3 âm rơi trên nốt đi lên → lượt cuối ĐỔI SANG VÈ VỖ TAY."
+   },
+   {
+    "id": "T3",
+    "loai": "Big book mẫu câu",
+    "ten_en": "Here You Are!",
+    "ten_zh": "给你！",
+    "kieu": "liệt kê",
+    "khung_en": "Here is your ___!",
+    "khung_zh": "给你___！",
+    "tu_en": [
+     "here",
+     "give",
+     "waiter",
+     "menu",
+     "chopsticks",
+     "soup",
+     "bowl",
+     "dumpling",
+     "meat",
+     "lemonade",
+     "sweets"
+    ],
+    "tu_zh": [
+     "给",
+     "服务员",
+     "菜单",
+     "筷子",
+     "汤",
+     "饺子",
+     "肉",
+     "鸡肉",
+     "果汁",
+     "茶",
+     "柠檬水"
+    ]
+   },
+   {
+    "id": "T4",
+    "loai": "Vè",
+    "ten_en": "One Dumpling, Two Dumplings",
+    "ten_zh": "一个饺子，两个饺子",
+    "kieu": "đếm",
+    "khung_en": "One ___, two ___s – I can help him!",
+    "khung_zh": "一个___，两个___，我来帮他！",
+    "tu_en": [
+     "dumpling",
+     "meatballs",
+     "chopsticks",
+     "help",
+     "him",
+     "ask",
+     "will",
+     "much"
+    ],
+    "tu_zh": [
+     "饺子",
+     "肉丸",
+     "筷子",
+     "用",
+     "来",
+     "问",
+     "太……了",
+     "得"
+    ]
+   },
+   {
+    "id": "T6",
+    "loai": "Truyện anh em",
+    "ten_en": "Xiaomei Helps Grandpa",
+    "ten_zh": "Xiaomei帮爷爷",
+    "khung_en": "I would like ___, please.",
+    "khung_zh": "我想要___。",
+    "y": "Xiaomei đưa ông đi nhà hàng, đọc thực đơn, hỏi người phục vụ; ông muốn canh, sủi cảo, thịt gà, trà; Xiaomei dạy ông cầm đũa – “I will help him.”",
+    "tu_en": [
+     "waiter",
+     "menu",
+     "would",
+     "please",
+     "want",
+     "soup",
+     "dumpling",
+     "meat",
+     "chopsticks",
+     "help",
+     "him",
+     "give",
+     "here",
+     "ask"
+    ],
+    "tu_zh": [
+     "服务员",
+     "菜单",
+     "请",
+     "想",
+     "汤",
+     "饺子",
+     "肉",
+     "鸡肉",
+     "筷子",
+     "用",
+     "来",
+     "给",
+     "问",
+     "茶",
+     "果汁",
+     "教"
+    ]
+   }
+  ],
+  "dem_vong_ngoai": {
+   "vegetable": "T1 phần 2 + T2",
+   "bowl": "T1 phần 2 + T3",
+   "sweets": "T1 phần 5 + T3",
+   "will": "T1 phần 3 + T4",
+   "much": "T1 phần 4 + T4",
+   "potato": "T1 phần 4 + T2",
+   "pie": "T1 phần 5 + T2",
+   "lemonade": "T1 phần 5 + T3",
+   "蔬菜": "T1 phần 2 + T2",
+   "教": "T1 phần 3 + T6",
+   "太……了": "T1 phần 4 + T4",
+   "得": "T1 phần 5 + T4",
+   "肉丸": "T1 phần 4 + T2 + T4",
+   "土豆": "T1 phần 4 + T2",
+   "柠檬水": "T1 phần 5 + T3",
+   "苹果派": "T1 phần 5 + T2"
+  },
+  "de_nghi_doi_nhan": [
+   {
+    "tu": "给 (= )",
+    "de_nghi": "ghi nghĩa",
+    "ly_do": "Dòng lõi 给 không có nghĩa trong file; đề xuất ghi (= give) cho khớp give tiếng Anh."
+   },
+   {
+    "tu": "肉丸",
+    "de_nghi": "vòng ngoài → lõi",
+    "ly_do": "meatballs là lõi tiếng Anh; 肉丸 cùng nghĩa lại ở vòng ngoài – mạng vẫn cho 肉丸 xuất hiện ≥3 lần."
+   }
+  ],
+  "ghi_chu": "Lượng từ 个 dùng cố định cho 饺子 trong vè đếm."
+ }
+]
