@@ -1,0 +1,397 @@
+{
+ "T1": {
+  "loai": "Truyện khung",
+  "ten_en": "A Trip to Beijing",
+  "ten_zh": "去北京旅行",
+  "khung_en": "I go by ___.",
+  "khung_zh": "我坐___去。",
+  "phan_ten": [
+   [
+    "How Do You Go to School?",
+    "你们坐什么去上学？"
+   ],
+   [
+    "It's a Helicopter!",
+    "是直升机！"
+   ],
+   [
+    "We Go by Ship!",
+    "我们坐船去！"
+   ],
+   [
+    "The Wheels Go Round",
+    "轮子转呀转"
+   ],
+   [
+    "Good Trip!",
+    "旅行快乐！"
+   ]
+  ],
+  "en": [
+   "Mrs Lan asks, \"How do you go to school?\" Anna goes by bus. Vũ goes by car. Xiaomei goes by car. \"I go by train! I love trains!\" says Leo.",
+   "Xiaomei goes home by motorbike. Bông goes home by taxi. Anna goes home by bus. \"I go by plane!\" says Leo. \"No, Leo, it's a helicopter! Don't worry!\" says Anna.",
+   "\"Sit in the car, my boy!\" says Leo's dad. Dad drives. \"We go by car!\" says Leo. \"We go by lorry?\" asks Anna. \"No, we go by ship!\" says Dad.",
+   "\"How do you go, Bông?\" \"I walk. It's easy! Dad goes to work by car.\" \"I go by bicycle.\" The wheels go round. \"Is this bicycle yours?\" \"Yes! Let's go!\"",
+   "\"I go to Beijing by plane,\" says Xiaomei. \"And you, Leo?\" \"I go to Shanghai by train!\" \"Good trip!\" \"Thank you!\" \"You're welcome!\" And you, ___? \"I go by ___!\""
+  ],
+  "zh": [
+   "Lan老师问：“你们坐什么去上学？”Anna坐公共汽车去。Vũ坐汽车去。Xiaomei坐汽车去。Leo说：“我坐火车去！我爱火车！”",
+   "Xiaomei骑摩托车回家。Bông坐出租车回家。Anna坐公共汽车回家。Leo说：“我坐飞机去！”Anna说：“不是，Leo，是直升机！没关系！”",
+   "Leo的爸爸说：“坐在车里！”爸爸开车。Leo说：“我们坐汽车去！”Anna问：“我们坐卡车去吗？”爸爸说：“不，我们坐船去！船比卡车大！”",
+   "“Bông，你怎么去上学？”“我走路去。很容易！爸爸开车去上班。”“我骑自行车去。”轮子转呀转。“这是你的自行车吗？”“是！走吧！”",
+   "Xiaomei说：“我坐飞机去北京。Leo，你呢？”“我坐火车去上海！”“旅行快乐！”“谢谢！”“不客气！”___，你呢？“我坐___去！”"
+  ],
+  "pinyin": [
+   "Lan lǎoshī wèn: \"Nǐmen zuò shénme qù shàngxué?\" Anna zuò gōnggòng qìchē qù. Vũ zuò qìchē qù. Xiaomei zuò qìchē qù. Leo shuō: \"Wǒ zuò huǒchē qù! Wǒ ài huǒchē!\"",
+   "Xiaomei qí mótuōchē huí jiā. Bông zuò chūzūchē huí jiā. Anna zuò gōnggòng qìchē huí jiā. Leo shuō: \"Wǒ zuò fēijī qù!\" Anna shuō: \"Bú shì, Leo, shì zhíshēngjī! Méi guānxi!\"",
+   "Leo de bàba shuō: \"Zuò zài chē li!\" Bàba kāichē. Leo shuō: \"Wǒmen zuò qìchē qù!\" Anna wèn: \"Wǒmen zuò kǎchē qù ma?\" Bàba shuō: \"Bù, wǒmen zuò chuán qù! Chuán bǐ kǎchē dà!\"",
+   "\"Bông, nǐ zěnme qù shàngxué?\" \"Wǒ zǒulù qù. Hěn róngyì! Bàba kāichē qù shàngbān.\" \"Wǒ qí zìxíngchē qù.\" Lúnzi zhuàn ya zhuàn. \"Zhè shì nǐ de zìxíngchē ma?\" \"Shì! Zǒu ba!\"",
+   "Xiaomei shuō: \"Wǒ zuò fēijī qù Běijīng. Leo, nǐ ne?\" \"Wǒ zuò huǒchē qù Shànghǎi!\" \"Lǚxíng kuàilè!\" \"Xièxie!\" \"Bú kèqi!\" ___, nǐ ne? \"Wǒ zuò ___ qù!\""
+  ],
+  "tu_moi_theo_phan": [
+   {
+    "en": [
+     "car",
+     "bus",
+     "train",
+     "by"
+    ],
+    "zh": [
+     "汽车",
+     "公共汽车",
+     "火车",
+     "坐"
+    ],
+    "vong_ngoai": []
+   },
+   {
+    "en": [
+     "plane",
+     "taxi"
+    ],
+    "zh": [
+     "飞机"
+    ],
+    "vong_ngoai": [
+     "motorbike",
+     "helicopter",
+     "摩托车",
+     "出租车",
+     "直升机"
+    ]
+   },
+   {
+    "en": [
+     "sit",
+     "drive",
+     "ship",
+     "boy"
+    ],
+    "zh": [
+     "开",
+     "船"
+    ],
+    "vong_ngoai": [
+     "lorry",
+     "卡车"
+    ]
+   },
+   {
+    "en": [
+     "easy",
+     "round",
+     "yours"
+    ],
+    "zh": [
+     "走路",
+     "走",
+     "上班",
+     "怎么"
+    ],
+    "vong_ngoai": [
+     "bicycle",
+     "自行车"
+    ]
+   },
+   {
+    "en": [
+     "beijing",
+     "shanghai"
+    ],
+    "zh": [
+     "北京",
+     "上海",
+     "呢",
+     "不客气"
+    ],
+    "vong_ngoai": [
+     "trip"
+    ]
+   }
+  ],
+  "tu_hay_sai": {
+   "en": [
+    "love (phần 1)",
+    "don't worry (phần 2)"
+   ],
+   "zh": [
+    "没关系 (phần 2)",
+    "比 (phần 3)"
+   ]
+  },
+  "tranh": [
+   "Phần 1: cổng trường sáng thứ Hai; cô Lan hỏi; Anna bước xuống xe buýt, Vũ và Xiaomei xuống ô tô; Leo dang tay làm đoàn tàu, tranh nhỏ đoàn tàu bên cạnh.",
+   "Phần 2: chiều tan học; Xiaomei ngồi sau xe máy của mẹ, Bông lên taxi cùng mẹ, Anna ở bến xe buýt; Leo dang tay giả máy bay, trên trời là trực thăng, Anna chỉ lên.",
+   "Phần 3: thứ Bảy; bố Leo cài dây an toàn cho Leo trên ô tô, Anna ngồi cạnh; ngoài cửa kính một xe tải to; cuối tranh là bến cảng có con tàu lớn, xe tải đứng cạnh nhỏ hơn.",
+   "Phần 4: sáng thứ Hai; Bông đi bộ, bố Bông lái ô tô đi làm phía xa; Vũ đạp xe, bánh xe vẽ vòng quay; Bông chỉ xe đạp hỏi, Vũ gật đầu.",
+   "Phần 5: thứ Sáu ở cổng trường; Xiaomei cầm vé máy bay, bản đồ có Bắc Kinh; Leo cầm vé tàu, bản đồ có Thượng Hải; Bông và Vũ vẫy tay; trang cuối để trống chỗ cho con dán ảnh mình và phương tiện."
+  ],
+  "ghi_chu": "5 phần cho ngày web 1–5 (Canopy 20–30 chữ tiếng Anh, 26–45 chữ Hán mỗi phần – nguyên tắc 27, NL-2), ngày 6–7 nghe cả truyện. ___ ở cuối phần 5 là chỗ chèn tên con và phương tiện của con. Từ lạ có tranh: wheels (EN); 回家 đã quen, 轮子, 转, 旅行, 容易 ở mức Nghe làm quen (ZH). Khung tiếng Trung đổi động từ theo phương tiện: 坐 (ô tô, xe buýt, tàu, máy bay, thuyền, taxi), 骑 (xe đạp, xe máy, đã học ở Canopy U4), 走路 (đi bộ); đây là chỗ cho khoảnh khắc chú ý 坐 / 骑 / 开."
+ },
+ "T2": {
+  "loai": "Bài hát vận động",
+  "ten_en": "This Is the Way We Go",
+  "ten_zh": "我们一起坐车去",
+  "kieu": "liệt kê",
+  "giai_dieu": "dân gian hết bản quyền: Here We Go Round the Mulberry Bush (dân ca Anh) – Đô trưởng, 6/8, nhịp 116; mỗi lượt 4 câu nhạc; 5 lượt hát + 1 lượt vè vỗ tay ≈ 1 phút 50 giây",
+  "khung_en": "This is the way we go by ___, go by ___!",
+  "khung_zh": "我们一起坐___去，坐___去！",
+  "o_thay": [
+   "car",
+   "bus",
+   "train",
+   "plane",
+   "ship",
+   "bicycle"
+  ],
+  "o_thay_zh": [
+   "汽车",
+   "公共汽车",
+   "火车",
+   "飞机",
+   "大船",
+   "自行车"
+  ],
+  "dong_tac": "car – xoay vô lăng; bus – vẫy tay chào qua cửa sổ; train – hai tay quay bánh xe xình xịch; plane – dang hai tay nghiêng người; ship – lắc người như sóng; bicycle – nằm/ngồi đạp chân (lượt vè)",
+  "en": [
+   [
+    "(Nói theo nhịp) Sit down, sit down! Let's go!"
+   ],
+   [
+    "This is the way we go by car,",
+    "go by car, go by car.",
+    "This is the way we go by car,",
+    "round and round and round we go!"
+   ],
+   [
+    "This is the way we go by bus,",
+    "go by bus, go by bus.",
+    "This is the way we go by bus,",
+    "round and round and round we go!"
+   ],
+   [
+    "This is the way we go by train,",
+    "go by train, go by train.",
+    "This is the way we go by train,",
+    "round and round and round we go!"
+   ],
+   [
+    "This is the way we go by plane,",
+    "go by plane, go by plane.",
+    "This is the way we go by plane,",
+    "round and round and round we go!"
+   ],
+   [
+    "This is the way we go by ship,",
+    "go by ship, go by ship.",
+    "This is the way we go by ship,",
+    "round and round and round we go!"
+   ],
+   [
+    "(Vè vỗ tay) Bicycle, bicycle, go by bicycle!",
+    "The wheels go round, the wheels go round!",
+    "Bicycle, bicycle – it's easy!",
+    "Round and round and round we go! Let's go!"
+   ]
+  ],
+  "zh": [
+   [
+    "（说）坐好，坐好！走吧！"
+   ],
+   [
+    "我们一起坐汽车去，",
+    "坐汽车，坐汽车，",
+    "我们一起坐汽车去，",
+    "转呀转呀转呀转！"
+   ],
+   [
+    "我们一起坐公共汽车去，",
+    "坐公共汽车，坐公共汽车，",
+    "我们一起坐公共汽车去，",
+    "转呀转呀转呀转！"
+   ],
+   [
+    "我们一起坐火车去，",
+    "坐火车，坐火车，",
+    "我们一起坐火车去，",
+    "转呀转呀转呀转！"
+   ],
+   [
+    "我们一起坐飞机去，",
+    "坐飞机，坐飞机，",
+    "我们一起坐飞机去，",
+    "转呀转呀转呀转！"
+   ],
+   [
+    "我们一起坐大船去，",
+    "坐大船，坐大船，",
+    "我们一起坐大船去，",
+    "转呀转呀转呀转！"
+   ],
+   [
+    "（拍手）骑骑骑，骑自行车，",
+    "轮子转，轮子转！",
+    "骑骑骑，很容易！",
+    "转呀转呀转呀转！走吧！"
+   ]
+  ],
+  "pinyin": [
+   [
+    "(Shuō) Zuò hǎo, zuò hǎo! Zǒu ba!"
+   ],
+   [
+    "Wǒmen yìqǐ zuò qìchē qù,",
+    "zuò qìchē, zuò qìchē,",
+    "wǒmen yìqǐ zuò qìchē qù,",
+    "zhuàn ya zhuàn ya zhuàn ya zhuàn!"
+   ],
+   [
+    "Wǒmen yìqǐ zuò gōnggòng qìchē qù,",
+    "zuò gōnggòng qìchē, zuò gōnggòng qìchē,",
+    "wǒmen yìqǐ zuò gōnggòng qìchē qù,",
+    "zhuàn ya zhuàn ya zhuàn ya zhuàn!"
+   ],
+   [
+    "Wǒmen yìqǐ zuò huǒchē qù,",
+    "zuò huǒchē, zuò huǒchē,",
+    "wǒmen yìqǐ zuò huǒchē qù,",
+    "zhuàn ya zhuàn ya zhuàn ya zhuàn!"
+   ],
+   [
+    "Wǒmen yìqǐ zuò fēijī qù,",
+    "zuò fēijī, zuò fēijī,",
+    "wǒmen yìqǐ zuò fēijī qù,",
+    "zhuàn ya zhuàn ya zhuàn ya zhuàn!"
+   ],
+   [
+    "Wǒmen yìqǐ zuò dà chuán qù,",
+    "zuò dà chuán, zuò dà chuán,",
+    "wǒmen yìqǐ zuò dà chuán qù,",
+    "zhuàn ya zhuàn ya zhuàn ya zhuàn!"
+   ],
+   [
+    "(Pāishǒu) Qí qí qí, qí zìxíngchē,",
+    "lúnzi zhuàn, lúnzi zhuàn!",
+    "Qí qí qí, hěn róngyì!",
+    "Zhuàn ya zhuàn ya zhuàn ya zhuàn! Zǒu ba!"
+   ]
+  ],
+  "ghi_chu_thanh": "坐 zuò (thanh 4) đặt trên nốt đi xuống – khớp. 飞机 fēijī (1–1) khớp; 汽车 qìchē (4–1) khớp; 火车 huǒchē (3–1) khớp nếu nốt đầu thấp; 公共汽车 4 âm hát 4 nốt móc đơn; 大船 dà chuán (4–2) nốt xuống rồi lên. 转 zhuàn (4) ở câu cuối mỗi lượt cần nốt đi xuống – GV tiếng Trung kiểm. Lượt xe đạp: 自行车 zìxíngchē (4–2–1) dễ lệch giai điệu → ĐỌC THEO NHỊP VỖ TAY (nguyên tắc 31). Chờ GV tiếng Trung duyệt cả bài trước khi thu.",
+  "ghi_chu": "Lượt 0 là câu mở nói theo nhịp (con ngồi xuống sàn rồi đứng dậy), không hát. Câu cuối mỗi lượt thay cho “so early in the morning” (7 âm tiết). Từ 船 hát là 大船 cho đủ 2 âm."
+ },
+ "T3": {
+  "loai": "Big book mẫu câu",
+  "ten_en": "How Do You Go to School?",
+  "ten_zh": "你怎么去上学？",
+  "kieu": "hỏi–đáp",
+  "khung_en": "How do you go to school? By ___! And you?",
+  "khung_zh": "你怎么去上学？我___去。你呢？",
+  "en": [
+   "How do you go to school, Anna? By bus! And you?",
+   "How do you go to school, Vũ? By car! Dad drives. And you?",
+   "How do you go to school, Xiaomei? By motorbike! And you?",
+   "How do you go to school, Leo? By bicycle! And you?",
+   "How do you go to school, Bông? I walk. It's easy! And you?",
+   "How do you go to the store, Mrs Lan? By taxi! And you?",
+   "How do you go to school, Dog? I sit in the bus! Woof!",
+   "Is this bicycle yours, Leo? Yes! Thank you! You're welcome, my boy!",
+   "How do you go to school, ___? By ___!"
+  ],
+  "zh": [
+   "Anna，你怎么去上学？我坐公共汽车去。你呢？",
+   "Vũ，你怎么去上学？我坐汽车去，爸爸开车。你呢？",
+   "Xiaomei，你怎么去上学？我骑摩托车去。你呢？",
+   "Leo，你怎么去上学？我骑自行车去。你呢？",
+   "Bông，你怎么去上学？我走路去。很容易！你呢？",
+   "Lan老师，您怎么去商店？我坐出租车去。你呢？",
+   "小狗，你怎么去上学？我坐公共汽车去！汪汪！",
+   "Leo，这是你的自行车吗？是！谢谢！不客气！",
+   "___，你怎么去上学？我___去！"
+  ],
+  "pinyin": [
+   "Anna, nǐ zěnme qù shàngxué? Wǒ zuò gōnggòng qìchē qù. Nǐ ne?",
+   "Vũ, nǐ zěnme qù shàngxué? Wǒ zuò qìchē qù, bàba kāichē. Nǐ ne?",
+   "Xiaomei, nǐ zěnme qù shàngxué? Wǒ qí mótuōchē qù. Nǐ ne?",
+   "Leo, nǐ zěnme qù shàngxué? Wǒ qí zìxíngchē qù. Nǐ ne?",
+   "Bông, nǐ zěnme qù shàngxué? Wǒ zǒulù qù. Hěn róngyì! Nǐ ne?",
+   "Lan lǎoshī, nín zěnme qù shāngdiàn? Wǒ zuò chūzūchē qù. Nǐ ne?",
+   "Xiǎogǒu, nǐ zěnme qù shàngxué? Wǒ zuò gōnggòng qìchē qù! Wāngwāng!",
+   "Leo, zhè shì nǐ de zìxíngchē ma? Shì! Xièxie! Bú kèqi!",
+   "___, nǐ zěnme qù shàngxué? Wǒ ___ qù!"
+  ],
+  "ghi_chu": "Mỗi trang một câu hỏi + một câu đáp. Trang 6 đưa “store” (từ vòng ngoài U5) quay lại, tiếng Trung dùng 商店 đã học. Trang 7 tranh vui: chó ngồi trên ghế xe buýt. Trang 8: cô Lan nhặt được xe đạp của Leo. Trang 9 để tên con. Tiếng Trung đổi động từ theo xe (坐 / 骑 / 走路) – không dịch sát “By ___!”."
+ },
+ "T4": {
+  "loai": "Vè",
+  "ten_en": "Big and Small",
+  "ten_zh": "大卡车，小汽车",
+  "kieu": "cặp đối lập",
+  "khung_en": "The ___ is big, the ___ is small!",
+  "khung_zh": "___大，___小！",
+  "en": [
+   "The lorry is big, the car is small!",
+   "The truck is big, the taxi is small!",
+   "The ship is big, the boat is small!",
+   "The plane is big, the helicopter is small!",
+   "The bus is big, the bicycle is small!",
+   "The boy is big, the baby is small!",
+   "The wheels go round and round and round!",
+   "Dad drives to work. Let's go, let's go!",
+   "Big and small, to Beijing, to Shanghai!"
+  ],
+  "zh": [
+   "卡车大，汽车小！",
+   "卡车大，出租车小！",
+   "大船大，小船小！",
+   "飞机大，直升机小！",
+   "公共汽车大，自行车小！",
+   "哥哥大，宝宝小！",
+   "轮子转呀转呀转！",
+   "爸爸开车去上班。走吧，走吧！",
+   "大大小小，去北京，去上海！"
+  ],
+  "pinyin": [
+   "Kǎchē dà, qìchē xiǎo!",
+   "Kǎchē dà, chūzūchē xiǎo!",
+   "Dà chuán dà, xiǎo chuán xiǎo!",
+   "Fēijī dà, zhíshēngjī xiǎo!",
+   "Gōnggòng qìchē dà, zìxíngchē xiǎo!",
+   "Gēge dà, bǎobao xiǎo!",
+   "Lúnzi zhuàn ya zhuàn ya zhuàn!",
+   "Bàba kāichē qù shàngbān. Zǒu ba, zǒu ba!",
+   "Dàdà xiǎoxiǎo, qù Běijīng, qù Shànghǎi!"
+  ],
+  "ghi_chu": "Vè vỗ tay: câu “round / 转” cả lớp quay tay tròn; “big / 大” dang rộng hai tay, “small / 小” chụm tay lại. lorry (Anh – Anh) và truck (Anh – Mỹ) cùng một tranh, tiếng Trung đều là 卡车. Câu 6 dùng 哥哥 (đã học U6) vì 男孩 mới ở mức Nghe làm quen."
+ },
+ "T6": {
+  "loai": "Truyện anh em",
+  "ten_en": "Xiaomei in Beijing",
+  "ten_zh": "Xiaomei在北京",
+  "khung_en": "I go by ___.",
+  "khung_zh": "我坐___去。",
+  "en": "On Sunday, Xiaomei and her mom go to Beijing by plane. It's a big trip! They go to the park by taxi. The driver asks, \"How do you go to school?\" \"I walk. It's easy! And you?\" \"I go to work by taxi. My boy goes by bus.\" \"My dad goes to work by truck!\" says Xiaomei. \"Is this bag yours?\" \"Yes! Thank you!\" \"You're welcome!\" On the phone, Leo says, \"I go to Shanghai by train!\" And you, ___? \"I go by ___!\"",
+  "zh": "星期天，Xiaomei和妈妈坐飞机去北京旅行。她们坐出租车去公园。司机问：“你怎么去上学？”“我走路去。很容易！你呢？”“我开出租车去上班。我儿子坐公共汽车去。”Xiaomei说：“我爸爸开卡车去上班！”“这是你的包吗？”“是！谢谢！”“不客气！”Leo打电话说：“我坐火车去上海！”___，你呢？“我坐___去！”",
+  "pinyin": "Xīngqītiān, Xiaomei hé māma zuò fēijī qù Běijīng lǚxíng. Tāmen zuò chūzūchē qù gōngyuán. Sījī wèn: \"Nǐ zěnme qù shàngxué?\" \"Wǒ zǒulù qù. Hěn róngyì! Nǐ ne?\" \"Wǒ kāi chūzūchē qù shàngbān. Wǒ érzi zuò gōnggòng qìchē qù.\" Xiaomei shuō: \"Wǒ bàba kāi kǎchē qù shàngbān!\" \"Zhè shì nǐ de bāo ma?\" \"Shì! Xièxie!\" \"Bú kèqi!\" Leo dǎ diànhuà shuō: \"Wǒ zuò huǒchē qù Shànghǎi!\" ___, nǐ ne? \"Wǒ zuò ___ qù!\"",
+  "ghi_chu": "Truyện anh em ngày 8: cùng nhân vật, cùng bộ từ, tình huống mới (Xiaomei ở Bắc Kinh, nối từ phần 5). Bác tài là vai phụ không tên; bố Xiaomei lái xe tải là chi tiết mới về nhân vật có sẵn. Từ lạ có tranh: 儿子 (ZH, ảnh bé trai bác tài dán trên xe). Khung câu: 7/11 câu (không tính câu cửa miệng)."
+ }
+}
