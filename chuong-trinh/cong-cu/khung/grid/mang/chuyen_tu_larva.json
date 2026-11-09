@@ -379,16 +379,6 @@
  },
  {
   "larva_unit": "5",
-  "en": "panda",
-  "zh": [],
-  "thi": "Movers",
-  "dest": "LP4",
-  "raw_en": "panda",
-  "raw_zh": [],
-  "ngay_moi": 33
- },
- {
-  "larva_unit": "5",
   "en": "dolphin",
   "zh": [
    "海豚"

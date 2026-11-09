@@ -37007,26 +37007,6 @@
      "ex40": "thi bắt viết (Movers)"
     },
     {
-     "w": "panda",
-     "raw": "panda",
-     "first": "ngày 33",
-     "exam": "Movers",
-     "pos": "danh",
-     "reuse": 1,
-     "carry": 4,
-     "score": [
-      0,
-      1,
-      1,
-      4,
-      1,
-      1
-     ],
-     "why": "37b khung câu mang được (danh, 4 ngày); 37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
-     "tier": "Vòng ngoài",
-     "ex40": "thi bắt viết (Movers)"
-    },
-    {
      "w": "throat",
      "raw": "throat",
      "first": "ngày 33",
