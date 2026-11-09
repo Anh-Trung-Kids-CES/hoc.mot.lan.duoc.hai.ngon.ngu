@@ -799,8 +799,32 @@
    }
   ],
   "tu_cu_quay_lai": {
-   "en": [],
+   "en": [
+    "funfair",
+    "town/city centre"
+   ],
    "zh": []
+  },
+  "T1_do_dai": [
+   30,
+   40
+  ],
+  "T1_do_dai_zh": [
+   40,
+   60
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "lucky",
+    "wish"
+   ],
+   "zh": [
+    "中秋节",
+    "红包"
+   ],
+   "nguon": "Larva U12",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "Who is he? He is my ___.",
@@ -2295,6 +2319,7 @@
   ],
   "tu_cu_quay_lai": {
    "en": [
+    "town/city centre",
     "niece",
     "nephew",
     "grandchild"
@@ -2303,6 +2328,27 @@
     "孙女",
     "亲戚"
    ]
+  },
+  "T1_do_dai": [
+   30,
+   40
+  ],
+  "T1_do_dai_zh": [
+   40,
+   60
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "ever",
+    "of course"
+   ],
+   "zh": [
+    "叔叔",
+    "阿姨"
+   ],
+   "nguon": "Pupa U1",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "Let's ___ together!",
@@ -3734,6 +3780,27 @@
     "小学",
     "高中"
    ]
+  },
+  "T1_do_dai": [
+   30,
+   40
+  ],
+  "T1_do_dai_zh": [
+   40,
+   60
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "together",
+    "suddenly"
+   ],
+   "zh": [
+    "参加",
+    "词典"
+   ],
+   "nguon": "Pupa U2",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "There is a ___ in the village.",
@@ -5194,6 +5261,27 @@
     "虫子"
    ]
   },
+  "T1_do_dai": [
+   30,
+   40
+  ],
+  "T1_do_dai_zh": [
+   40,
+   60
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "friendly",
+    "extinct"
+   ],
+   "zh": [
+    "一点儿",
+    "邻居"
+   ],
+   "nguon": "Pupa U3",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
+  },
   "khung_cau": {
    "en": "Excuse me, where is the ___?",
    "zh": "请问，___在哪儿？",
@@ -6468,6 +6556,27 @@
     "健身"
    ]
   },
+  "T1_do_dai": [
+   30,
+   40
+  ],
+  "T1_do_dai_zh": [
+   40,
+   60
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "fire station",
+    "fire fighter"
+   ],
+   "zh": [
+    "附近",
+    "大海"
+   ],
+   "nguon": "Pupa U4",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
+  },
   "khung_cau": {
    "en": "It's made of ___.",
    "zh": "这是___做的。",
@@ -7048,6 +7157,31 @@
     "buoc_chu": true
    },
    {
+    "tu": "future",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (danh, 4 ngày); 37c dùng lại ở 1 unit sau",
+    "ngoai_le_40": "thi bắt viết (Flyers)",
+    "may_khong_chac": false,
+    "thi": "Flyers",
+    "gap_dau": "ngày 49",
+    "goi_lai": [
+     49,
+     50,
+     53,
+     61,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [
+      "Pupa U7",
+      "Cocoon U12"
+     ],
+     "xep_them": []
+    }
+   },
+   {
     "tu": "land",
     "nghia": "",
     "nhan": "Lõi",
@@ -7140,6 +7274,31 @@
     }
    },
    {
+    "tu": "pilot",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ thi",
+    "ngoai_le_40": "thi bắt viết (Flyers)",
+    "may_khong_chac": false,
+    "thi": "Flyers",
+    "gap_dau": "ngày 50",
+    "goi_lai": [
+     50,
+     51,
+     54,
+     62,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [],
+     "xep_them": [
+      "Pupa U7",
+      "Pupa U8"
+     ]
+    }
+   },
+   {
     "tu": "instead",
     "nghia": "",
     "nhan": "Lõi",
@@ -7180,6 +7339,31 @@
      ],
      "xep_them": [
       "Pupa U7"
+     ]
+    }
+   },
+   {
+    "tu": "engineer",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ thi",
+    "ngoai_le_40": "thi bắt viết (Flyers)",
+    "may_khong_chac": false,
+    "thi": "Flyers",
+    "gap_dau": "ngày 51",
+    "goi_lai": [
+     51,
+     52,
+     55,
+     63,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [],
+     "xep_them": [
+      "Pupa U7",
+      "Pupa U8"
      ]
     }
    },
@@ -7260,6 +7444,29 @@
       "Butterfly U2"
      ],
      "xep_them": []
+    }
+   },
+   {
+    "tu": "scientist",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ / ngoài danh sách thi",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 52",
+    "goi_lai": [
+     52,
+     53,
+     56
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [],
+     "xep_them": [
+      "Pupa U7",
+      "Pupa U8"
+     ]
     }
    },
    {
@@ -7475,26 +7682,8 @@
     "nhan": "Lõi",
     "ly_do": "37b khung câu mang được (danh, 5 ngày)",
     "ngoai_le_40": "",
-    "may_khong_chac": true,
-    "thi": "",
-    "gap_dau": "ngày 49",
-    "goi_lai": [
-     49,
-     50,
-     53,
-     61,
-     "khóa ôn / ôn chặng"
-    ],
-    "buoc_chu": true
-   },
-   {
-    "tu": "将来",
-    "nghia": "future",
-    "nhan": "Lõi",
-    "ly_do": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (danh, 5 ngày); 37c dùng lại ở 2 unit sau",
-    "ngoai_le_40": "",
     "may_khong_chac": false,
-    "thi": "YCT4",
+    "thi": "",
     "gap_dau": "ngày 49",
     "goi_lai": [
      49,
@@ -7522,6 +7711,31 @@
      "khóa ôn / ôn chặng"
     ],
     "buoc_chu": true
+   },
+   {
+    "tu": "将来",
+    "nghia": "future",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (danh, 5 ngày); 37c dùng lại ở 2 unit sau; nghĩa Anh là vòng ngoài (ng.t. 42)",
+    "ngoai_le_40": "chữ Hán YCT4",
+    "may_khong_chac": false,
+    "thi": "YCT4",
+    "gap_dau": "ngày 49",
+    "goi_lai": [
+     49,
+     50,
+     53,
+     61,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [
+      "Pupa U7",
+      "Pupa U9"
+     ],
+     "xep_them": []
+    }
    },
    {
     "tu": "宇航员",
@@ -7597,9 +7811,9 @@
     "tu": "降落",
     "nghia": "land",
     "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (động/tính, 4 ngày)",
+    "ly_do": "37b khung câu mang được (động/tính, 4 ngày); nhãn ghi sẵn trong khung",
     "ngoai_le_40": "",
-    "may_khong_chac": true,
+    "may_khong_chac": false,
     "thi": "",
     "gap_dau": "ngày 50",
     "goi_lai": [
@@ -7749,6 +7963,29 @@
     "buoc_chu": true
    },
    {
+    "tu": "科学家",
+    "nghia": "scientist",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ / ngoài danh sách thi; nghĩa Anh là vòng ngoài (ng.t. 42)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 52",
+    "goi_lai": [
+     52,
+     53,
+     56
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [],
+     "xep_them": [
+      "Pupa U7",
+      "Pupa U8"
+     ]
+    }
+   },
+   {
     "tu": "等",
     "nghia": "wait",
     "nhan": "Lõi",
@@ -7796,6 +8033,27 @@
     "戒指",
     "花瓶"
    ]
+  },
+  "T1_do_dai": [
+   30,
+   40
+  ],
+  "T1_do_dai_zh": [
+   40,
+   60
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "over",
+    "plastic"
+   ],
+   "zh": [
+    "啊",
+    "到处"
+   ],
+   "nguon": "Pupa U5",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "In space, we might ___.",
@@ -7902,7 +8160,11 @@
      "telescope",
      "adventure",
      "environment",
-     "piece"
+     "piece",
+     "future",
+     "pilot",
+     "engineer",
+     "scientist"
     ],
     "tu_zh": [
      "太空",
@@ -7924,7 +8186,8 @@
      "宇宙飞船",
      "望远镜",
      "降落",
-     "起飞"
+     "起飞",
+     "科学家"
     ]
    },
    {
@@ -7976,7 +8239,11 @@
      "follow",
      "adventure",
      "environment",
-     "telescope"
+     "telescope",
+     "future",
+     "pilot",
+     "engineer",
+     "scientist"
     ],
     "tu_zh": [
      "降落",
@@ -7986,7 +8253,8 @@
      "行星",
      "关于",
      "旅游",
-     "望远镜"
+     "望远镜",
+     "科学家"
     ]
    },
    {
@@ -8115,7 +8383,12 @@
    "宇宙飞船": "T1 phần 2 + T2",
    "望远镜": "T1 phần 1 + T3",
    "降落": "T1 phần 3 + T3 + T4",
-   "起飞": "T1 phần 2 + T2 + T4"
+   "起飞": "T1 phần 2 + T2 + T4",
+   "future": "T1 + T3 (chuyển từ Larva U3)",
+   "pilot": "T1 + T3 (chuyển từ Larva U3)",
+   "engineer": "T1 + T3 (chuyển từ Larva U3)",
+   "scientist": "T1 + T3 (chuyển từ Larva U3)",
+   "科学家": "T1 + T3 (chuyển từ Larva U3)"
   },
   "de_nghi_doi_nhan": [
    {
@@ -8131,7 +8404,7 @@
     "ly_do": "'land' là lõi tiếng Anh và là khung big book T3; hai tiếng nên cùng nhãn."
    }
   ],
-  "ghi_chu": "Lịch Pupa: ngày 1–5 kể dần T1, ngày 6 nghe cả T1; ngày 7 T6; ngày 8 T7. Câu cửa miệng 'Three, two, one – blast off!' dùng chung với động tác bật nhảy của bài hát.",
+  "ghi_chu": "Lịch Pupa: ngày 1–5 kể dần T1, ngày 6 nghe cả T1; ngày 7 T6; ngày 8 T7. Câu cửa miệng 'Three, two, one – blast off!' dùng chung với động tác bật nhảy của bài hát. NL-1 (09/11): nhận từ Larva: future, pilot, engineer, scientist – viết vào truyện khung và big book khi viết trọn.",
   "van_ban_theo_ngay": [
    [
     "T1 phần 1",
@@ -8247,11 +8520,14 @@
     "planet",
     "earth",
     "rocket",
+    "future",
     "land",
     "astronaut",
     "spaceship",
+    "pilot",
     "instead",
     "adventure",
+    "engineer",
     "anywhere",
     "believe",
     "decide",
@@ -8270,8 +8546,8 @@
     "行星",
     "火箭",
     "火星",
-    "将来",
     "其他",
+    "将来",
     "可能",
     "办法",
     "行",
@@ -8286,22 +8562,22 @@
     "planet",
     "earth",
     "rocket",
+    "future",
     "land",
     "astronaut",
     "spaceship",
     "telescope",
+    "pilot",
     "instead",
     "adventure",
+    "engineer",
     "anywhere",
     "believe",
     "decide",
     "environment",
+    "scientist",
     "follow",
-    "search",
-    "might",
-    "whisper",
-    "across",
-    "other"
+    "search"
    ],
    "poster_cau_cua_mieng": [
     "Three, two, one – blast off! / 三、二、一，起飞！",
@@ -8404,6 +8680,29 @@
      "khóa ôn / ôn chặng"
     ],
     "buoc_chu": true
+   },
+   {
+    "tu": "catch a bus",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ / ngoài danh sách thi",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 57",
+    "goi_lai": [
+     57,
+     58,
+     61
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [],
+     "xep_them": [
+      "Pupa U8",
+      "Pupa U9"
+     ]
+    }
    },
    {
     "tu": "electric",
@@ -8953,7 +9252,10 @@
   "tu_cu_quay_lai": {
    "en": [
     "telescope",
-    "adventure"
+    "pilot",
+    "adventure",
+    "engineer",
+    "scientist"
    ],
    "zh": [
     "黄金",
@@ -8961,8 +9263,30 @@
     "花瓶",
     "望远镜",
     "降落",
-    "起飞"
+    "起飞",
+    "科学家"
    ]
+  },
+  "T1_do_dai": [
+   30,
+   40
+  ],
+  "T1_do_dai_zh": [
+   40,
+   60
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "might",
+    "land"
+   ],
+   "zh": [
+    "行",
+    "等"
+   ],
+   "nguon": "Pupa U6",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "I go to school by ___.",
@@ -9061,7 +9385,8 @@
      "engine",
      "whistle",
      "passenger",
-     "million"
+     "million",
+     "catch a bus"
     ],
     "tu_zh": [
      "堵车",
@@ -9124,7 +9449,8 @@
      "traffic",
      "jam",
      "prefer",
-     "arrive"
+     "arrive",
+     "catch a bus"
     ],
     "tu_zh": [
      "地铁",
@@ -9257,7 +9583,8 @@
   "dem_vong_ngoai": {
    "passenger": "T1 phần 3 + T2",
    "million": "T1 phần 3 + T4",
-   "红绿灯": "T1 phần 2 + T4"
+   "红绿灯": "T1 phần 2 + T4",
+   "catch a bus": "T1 + T3 (chuyển từ Larva U6)"
   },
   "de_nghi_doi_nhan": [
    {
@@ -9267,7 +9594,7 @@
     "ly_do": "'traffic' và 'light' là lõi tiếng Anh; đèn giao thông là tranh chính của truyện khung và vè, tiếng Trung nên cùng nhãn lõi."
    }
   ],
-  "ghi_chu": "Lịch Pupa: ngày 1–5 kể dần T1, ngày 6 nghe cả T1; ngày 7 T6; ngày 8 T7. Không dùng giai điệu The Wheels on the Bus (tác giả thế kỷ 20, chưa chắc hết bản quyền) – thay bằng Mulberry Bush. Lượng từ: chỉ dùng 辆 cho xe (一辆电动汽车).",
+  "ghi_chu": "Lịch Pupa: ngày 1–5 kể dần T1, ngày 6 nghe cả T1; ngày 7 T6; ngày 8 T7. Không dùng giai điệu The Wheels on the Bus (tác giả thế kỷ 20, chưa chắc hết bản quyền) – thay bằng Mulberry Bush. Lượng từ: chỉ dùng 辆 cho xe (一辆电动汽车). NL-1 (09/11): nhận từ Larva: catch a bus – viết vào truyện khung và big book khi viết trọn.",
   "van_ban_theo_ngay": [
    [
     "T1 phần 1",
@@ -9419,6 +9746,7 @@
     "light",
     "jam",
     "underground",
+    "catch a bus",
     "electric",
     "wheel",
     "passenger",
@@ -9554,6 +9882,32 @@
     "buoc_chu": true
    },
    {
+    "tu": "spring",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ thi",
+    "ngoai_le_40": "thi bắt viết (Flyers)",
+    "may_khong_chac": false,
+    "thi": "Flyers",
+    "gap_dau": "ngày 65",
+    "goi_lai": [
+     65,
+     66,
+     69,
+     77,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [
+      "Cocoon U3"
+     ],
+     "xep_them": [
+      "Pupa U9"
+     ]
+    }
+   },
+   {
     "tu": "foggy",
     "nghia": "",
     "nhan": "Lõi",
@@ -9648,6 +10002,31 @@
     }
    },
    {
+    "tu": "summer",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37c dùng lại ở 2 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "thi bắt viết (Flyers)",
+    "may_khong_chac": false,
+    "thi": "Flyers",
+    "gap_dau": "ngày 66",
+    "goi_lai": [
+     66,
+     67,
+     70,
+     78,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [
+      "Pupa U11",
+      "Pupa U12"
+     ],
+     "xep_them": []
+    }
+   },
+   {
     "tu": "early",
     "nghia": "",
     "nhan": "Lõi",
@@ -9720,10 +10099,35 @@
     "buoc_chu": true
    },
    {
+    "tu": "autumn",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ thi",
+    "ngoai_le_40": "thi bắt viết (Flyers)",
+    "may_khong_chac": false,
+    "thi": "Flyers",
+    "gap_dau": "ngày 67",
+    "goi_lai": [
+     67,
+     68,
+     71,
+     79,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [
+      "Cocoon U3",
+      "Butterfly U3"
+     ],
+     "xep_them": []
+    }
+   },
+   {
     "tu": "july",
     "nghia": "",
     "nhan": "Lõi",
-    "ly_do": "danh từ thi",
+    "ly_do": "danh từ thi; nhãn ghi sẵn trong khung",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "Flyers",
@@ -10004,6 +10408,30 @@
     "buoc_chu": true
    },
    {
+    "tu": "春天",
+    "nghia": "spring",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ / ngoài danh sách thi; nghĩa Anh là vòng ngoài (ng.t. 42)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 65",
+    "goi_lai": [
+     65,
+     66,
+     69
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Cocoon U3"
+     ],
+     "xep_them": [
+      "Pupa U9"
+     ]
+    }
+   },
+   {
     "tu": "温度",
     "nghia": "temperature",
     "nhan": "Lõi",
@@ -10022,11 +10450,34 @@
     "buoc_chu": true
    },
    {
+    "tu": "夏天",
+    "nghia": "summer",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37c dùng lại ở 2 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 66",
+    "goi_lai": [
+     66,
+     67,
+     70
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Pupa U11",
+      "Pupa U12"
+     ],
+     "xep_them": []
+    }
+   },
+   {
     "tu": "春季",
     "nghia": "spring",
-    "nhan": "Lõi",
-    "ly_do": "37a từ thi bắt tự nói/viết",
-    "ngoai_le_40": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37a từ thi bắt tự nói/viết; nghĩa Anh là vòng ngoài (ng.t. 42)",
+    "ngoai_le_40": "chữ Hán YCT4",
     "may_khong_chac": false,
     "thi": "YCT4",
     "gap_dau": "ngày 66",
@@ -10037,25 +10488,38 @@
      78,
      "khóa ôn / ôn chặng"
     ],
-    "buoc_chu": true
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [
+      "Cocoon U3"
+     ],
+     "xep_them": [
+      "Pupa U9"
+     ]
+    }
    },
    {
     "tu": "秋季",
     "nghia": "autumn",
-    "nhan": "Lõi",
-    "ly_do": "danh từ / ngoài danh sách thi",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ / ngoài danh sách thi; nghĩa Anh là vòng ngoài (ng.t. 42)",
     "ngoai_le_40": "",
-    "may_khong_chac": true,
+    "may_khong_chac": false,
     "thi": "",
     "gap_dau": "ngày 66",
     "goi_lai": [
      66,
      67,
-     70,
-     78,
-     "khóa ôn / ôn chặng"
+     70
     ],
-    "buoc_chu": true
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [],
+     "xep_them": [
+      "Pupa U9",
+      "Pupa U10"
+     ]
+    }
    },
    {
     "tu": "马上",
@@ -10151,9 +10615,9 @@
     "tu": "冬季",
     "nghia": "winter",
     "nhan": "Vòng ngoài",
-    "ly_do": "danh từ / ngoài danh sách thi",
+    "ly_do": "danh từ / ngoài danh sách thi; nhãn ghi sẵn trong khung",
     "ngoai_le_40": "",
-    "may_khong_chac": true,
+    "may_khong_chac": false,
     "thi": "",
     "gap_dau": "ngày 68",
     "goi_lai": [
@@ -10232,11 +10696,37 @@
   ],
   "tu_cu_quay_lai": {
    "en": [
+    "pilot",
+    "engineer",
+    "scientist",
+    "catch a bus",
     "million"
    ],
    "zh": [
-    "起飞"
+    "起飞",
+    "科学家"
    ]
+  },
+  "T1_do_dai": [
+   30,
+   40
+  ],
+  "T1_do_dai_zh": [
+   40,
+   60
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "light",
+    "arrive"
+   ],
+   "zh": [
+    "带",
+    "停"
+   ],
+   "nguon": "Pupa U7",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "If it's ___, we will go to the coast.",
@@ -10345,7 +10835,10 @@
      "february",
      "august",
      "freeze",
-     "century"
+     "century",
+     "spring",
+     "summer",
+     "autumn"
     ],
     "tu_zh": [
      "海洋",
@@ -10364,7 +10857,9 @@
      "刚才",
      "突然",
      "冬季",
-     "夏季"
+     "夏季",
+     "春天",
+     "夏天"
     ]
    },
    {
@@ -10410,7 +10905,10 @@
      "sunshine",
      "foggy",
      "fog",
-     "freeze"
+     "freeze",
+     "spring",
+     "summer",
+     "autumn"
     ],
     "tu_zh": [
      "沙漠",
@@ -10419,7 +10917,9 @@
      "晴",
      "干燥",
      "温度",
-     "阳光"
+     "阳光",
+     "春天",
+     "夏天"
     ]
    },
    {
@@ -10546,7 +11046,12 @@
    "freeze": "T1 phần 5 + T3",
    "century": "T1 phần 5 + T4",
    "冬季": "T1 phần 5 + T2",
-   "夏季": "T1 phần 1 + T2"
+   "夏季": "T1 phần 1 + T2",
+   "spring": "T1 + T3 (chuyển từ Larva U8)",
+   "春天": "T1 + T3 (chuyển từ Larva U8)",
+   "summer": "T1 + T3 (chuyển từ Larva U8)",
+   "夏天": "T1 + T3 (chuyển từ Larva U8)",
+   "autumn": "T1 + T3 (chuyển từ Larva U8)"
   },
   "de_nghi_doi_nhan": [
    {
@@ -10556,7 +11061,7 @@
     "ly_do": "春季, 秋季 là lõi; bốn mùa là một bộ đi cùng nhau (bài hát T2 dùng cả 4 làm ô thay), nên cùng nhãn."
    }
   ],
-  "ghi_chu": "Lịch Pupa: ngày 1–5 kể dần T1, ngày 6 nghe cả T1; ngày 7 T6; ngày 8 T7. Từ 'july' giữ đúng chữ thường như file vào để script đếm; trong văn bản in hoa 'July'. 'august' xuất hiện 2 lần trong truyện khung (phần 1 và 5).",
+  "ghi_chu": "Lịch Pupa: ngày 1–5 kể dần T1, ngày 6 nghe cả T1; ngày 7 T6; ngày 8 T7. Từ 'july' giữ đúng chữ thường như file vào để script đếm; trong văn bản in hoa 'July'. 'august' xuất hiện 2 lần trong truyện khung (phần 1 và 5). NL-1 (09/11): nhận từ Larva: spring, summer, autumn – viết vào truyện khung và big book khi viết trọn.",
   "van_ban_theo_ngay": [
    [
     "T1 phần 1",
@@ -10673,14 +11178,17 @@
     "desert",
     "sunshine",
     "if",
+    "spring",
     "foggy",
     "april",
     "november",
     "fog",
+    "summer",
     "early",
     "late",
     "hour",
     "midday",
+    "autumn",
     "july",
     "coast",
     "later",
@@ -10698,7 +11206,6 @@
     "干燥",
     "温度",
     "春季",
-    "秋季",
     "马上",
     "来得及",
     "刻",
@@ -10713,21 +11220,21 @@
     "desert",
     "sunshine",
     "if",
+    "spring",
     "foggy",
     "april",
     "november",
     "fog",
+    "summer",
     "early",
     "late",
     "hour",
     "midday",
+    "autumn",
     "july",
     "coast",
     "later",
-    "february",
-    "august",
-    "midnight",
-    "ago"
+    "february"
    ],
    "poster_cau_cua_mieng": [
     "Hurry, we're late! / 快点儿，来不及了！",
@@ -11761,6 +12268,8 @@
   ],
   "tu_cu_quay_lai": {
    "en": [
+    "catch a bus",
+    "spring",
     "april",
     "february",
     "august",
@@ -11768,9 +12277,33 @@
     "century"
    ],
    "zh": [
+    "春天",
+    "春季",
+    "秋季",
     "冬季",
     "夏季"
    ]
+  },
+  "T1_do_dai": [
+   30,
+   40
+  ],
+  "T1_do_dai_zh": [
+   40,
+   60
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "camp",
+    "if"
+   ],
+   "zh": [
+    "马上",
+    "经常"
+   ],
+   "nguon": "Pupa U8",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "It's important to ___.",
@@ -13092,10 +13625,32 @@
     "chemist"
    ],
    "zh": [
+    "秋季",
     "冬季",
     "夏季",
     "喉咙"
    ]
+  },
+  "T1_do_dai": [
+   30,
+   40
+  ],
+  "T1_do_dai_zh": [
+   40,
+   60
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "so",
+    "excellent"
+   ],
+   "zh": [
+    "安全",
+    "虽然"
+   ],
+   "nguon": "Pupa U9",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "Before the storm, we should ___.",
@@ -13683,6 +14238,53 @@
     "buoc_chu": true
    },
    {
+    "tu": "dessert",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ / ngoài danh sách thi",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 93",
+    "goi_lai": [
+     93,
+     94,
+     97
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Butterfly U3"
+     ],
+     "xep_them": [
+      "Pupa U12"
+     ]
+    }
+   },
+   {
+    "tu": "bitter",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ / ngoài danh sách thi",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 93",
+    "goi_lai": [
+     93,
+     94,
+     97
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [],
+     "xep_them": [
+      "Pupa U12",
+      "Cocoon U1"
+     ]
+    }
+   },
+   {
     "tu": "spoon",
     "nghia": "",
     "nhan": "Lõi",
@@ -13755,12 +14357,38 @@
     "buoc_chu": true
    },
    {
+    "tu": "biscuit",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ thi",
+    "ngoai_le_40": "thi bắt viết (Flyers)",
+    "may_khong_chac": false,
+    "thi": "Flyers",
+    "gap_dau": "ngày 94",
+    "goi_lai": [
+     94,
+     95,
+     98,
+     106,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [
+      "Butterfly U6"
+     ],
+     "xep_them": [
+      "Pupa U12"
+     ]
+    }
+   },
+   {
     "tu": "salt",
     "nghia": "",
     "nhan": "Lõi",
-    "ly_do": "danh từ thi",
+    "ly_do": "danh từ thi; nhãn ghi sẵn trong khung",
     "ngoai_le_40": "",
-    "may_khong_chac": true,
+    "may_khong_chac": false,
     "thi": "Flyers",
     "gap_dau": "ngày 95",
     "goi_lai": [
@@ -13814,7 +14442,7 @@
     "nhan": "Vòng ngoài",
     "ly_do": "danh từ thi",
     "ngoai_le_40": "thi bắt viết (Flyers)",
-    "may_khong_chac": true,
+    "may_khong_chac": false,
     "thi": "Flyers",
     "gap_dau": "ngày 95",
     "goi_lai": [
@@ -13831,6 +14459,31 @@
      ],
      "xep_them": [
       "Pupa U12"
+     ]
+    }
+   },
+   {
+    "tu": "cookie",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ thi",
+    "ngoai_le_40": "thi bắt viết (Flyers)",
+    "may_khong_chac": false,
+    "thi": "Flyers",
+    "gap_dau": "ngày 95",
+    "goi_lai": [
+     95,
+     96,
+     99,
+     107,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [],
+     "xep_them": [
+      "Pupa U12",
+      "Cocoon U1"
      ]
     }
    },
@@ -13876,7 +14529,7 @@
     "nhan": "Vòng ngoài",
     "ly_do": "danh từ thi",
     "ngoai_le_40": "thi bắt viết (Flyers)",
-    "may_khong_chac": true,
+    "may_khong_chac": false,
     "thi": "Flyers",
     "gap_dau": "ngày 96",
     "goi_lai": [
@@ -13887,6 +14540,30 @@
      "khóa ôn / ôn chặng"
     ],
     "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [
+      "Butterfly U4"
+     ],
+     "xep_them": [
+      "Pupa U12"
+     ]
+    }
+   },
+   {
+    "tu": "salty",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (động/tính, 4 ngày); nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 96",
+    "goi_lai": [
+     96,
+     97,
+     100
+    ],
+    "buoc_chu": false,
     "quay_lai": {
      "da_co": [
       "Butterfly U4"
@@ -13931,6 +14608,29 @@
      "khóa ôn / ôn chặng"
     ],
     "buoc_chu": true
+   },
+   {
+    "tu": "sour",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ / ngoài danh sách thi",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 97",
+    "goi_lai": [
+     97,
+     98,
+     101
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [],
+     "xep_them": [
+      "Pupa U12",
+      "Cocoon U1"
+     ]
+    }
    }
   ],
   "tu_zh": [
@@ -13938,7 +14638,7 @@
     "tu": "披萨",
     "nghia": "pizza",
     "nhan": "Lõi",
-    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ly_do": "37b khung câu mang được (danh, 3 ngày)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "",
@@ -13956,7 +14656,7 @@
     "tu": "三明治",
     "nghia": "sandwich",
     "nhan": "Lõi",
-    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ly_do": "danh từ / ngoài danh sách thi",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "",
@@ -13974,7 +14674,7 @@
     "tu": "饮料",
     "nghia": "drink",
     "nhan": "Lõi",
-    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ly_do": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 1 ngày)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT4",
@@ -13989,10 +14689,56 @@
     "buoc_chu": true
    },
    {
+    "tu": "甜点",
+    "nghia": "dessert",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ / ngoài danh sách thi; nghĩa Anh là vòng ngoài (ng.t. 42)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 93",
+    "goi_lai": [
+     93,
+     94,
+     97
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [],
+     "xep_them": [
+      "Pupa U12",
+      "Cocoon U1"
+     ]
+    }
+   },
+   {
+    "tu": "苦",
+    "nghia": "bitter",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ / ngoài danh sách thi; nghĩa Anh là vòng ngoài (ng.t. 42)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 93",
+    "goi_lai": [
+     93,
+     94,
+     97
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [],
+     "xep_them": [
+      "Pupa U12",
+      "Cocoon U1"
+     ]
+    }
+   },
+   {
     "tu": "勺子",
     "nghia": "spoon",
     "nhan": "Lõi",
-    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ly_do": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 1 unit sau",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "",
@@ -14010,7 +14756,7 @@
     "tu": "冰激凌",
     "nghia": "ice cream",
     "nhan": "Lõi",
-    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ly_do": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (cụm, 1 ngày)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT4",
@@ -14028,7 +14774,7 @@
     "tu": "葡萄",
     "nghia": "grapes",
     "nhan": "Lõi",
-    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ly_do": "37a từ thi bắt tự nói/viết; 37c dùng lại ở 1 unit sau",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT4",
@@ -14043,10 +14789,35 @@
     "buoc_chu": true
    },
    {
+    "tu": "饼干",
+    "nghia": "biscuit, cookie",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37a từ thi bắt tự nói/viết; nghĩa Anh là vòng ngoài (ng.t. 42)",
+    "ngoai_le_40": "chữ Hán YCT4",
+    "may_khong_chac": false,
+    "thi": "YCT4",
+    "gap_dau": "ngày 94",
+    "goi_lai": [
+     94,
+     95,
+     98,
+     106,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [],
+     "xep_them": [
+      "Pupa U12",
+      "Cocoon U1"
+     ]
+    }
+   },
+   {
     "tu": "尝",
     "nghia": "taste",
     "nhan": "Lõi",
-    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ly_do": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 3 ngày); 37c dùng lại ở 1 unit sau",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT4",
@@ -14064,7 +14835,7 @@
     "tu": "糖",
     "nghia": "sugar",
     "nhan": "Lõi",
-    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ly_do": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (danh, 3 ngày)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT4",
@@ -14082,7 +14853,7 @@
     "tu": "西红柿",
     "nghia": "tomato",
     "nhan": "Lõi",
-    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ly_do": "37a từ thi bắt tự nói/viết",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT4",
@@ -14100,7 +14871,7 @@
     "tu": "烤鸭",
     "nghia": "roast duck",
     "nhan": "Lõi",
-    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ly_do": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (cụm, 1 ngày)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT4",
@@ -14118,7 +14889,7 @@
     "tu": "羊肉",
     "nghia": "lamb",
     "nhan": "Lõi",
-    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ly_do": "37a từ thi bắt tự nói/viết",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT4",
@@ -14133,10 +14904,33 @@
     "buoc_chu": true
    },
    {
+    "tu": "咸",
+    "nghia": "salty",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (động/tính, 4 ngày); nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 96",
+    "goi_lai": [
+     96,
+     97,
+     100
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [],
+     "xep_them": [
+      "Pupa U12",
+      "Cocoon U1"
+     ]
+    }
+   },
+   {
     "tu": "梨",
     "nghia": "pear",
     "nhan": "Lõi",
-    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ly_do": "37a từ thi bắt tự nói/viết; 37c dùng lại ở 1 unit sau",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT4",
@@ -14154,7 +14948,7 @@
     "tu": "桃",
     "nghia": "peach",
     "nhan": "Lõi",
-    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+    "ly_do": "37a từ thi bắt tự nói/viết; 37c dùng lại ở 1 unit sau",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT4",
@@ -14167,6 +14961,29 @@
      "khóa ôn / ôn chặng"
     ],
     "buoc_chu": true
+   },
+   {
+    "tu": "酸",
+    "nghia": "sour",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 1 unit sau; nghĩa Anh là vòng ngoài (ng.t. 42)",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 97",
+    "goi_lai": [
+     97,
+     98,
+     101
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Pupa U12",
+      "Butterfly U4"
+     ],
+     "xep_them": []
+    }
    }
   ],
   "tu_cu_quay_lai": {
@@ -14184,6 +15001,27 @@
     "干旱",
     "火山"
    ]
+  },
+  "T1_do_dai": [
+   30,
+   40
+  ],
+  "T1_do_dai_zh": [
+   40,
+   60
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "after",
+    "should"
+   ],
+   "zh": [
+    "同意",
+    "聊天儿"
+   ],
+   "nguon": "Pupa U10",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "Yesterday, I had ___ for breakfast.",
@@ -14282,7 +15120,13 @@
      "flour",
      "mix",
      "pepper",
-     "olives"
+     "olives",
+     "dessert",
+     "biscuit",
+     "cookie",
+     "salty",
+     "sour",
+     "bitter"
     ],
     "tu_zh": [
      "披萨",
@@ -14297,7 +15141,12 @@
      "烤鸭",
      "羊肉",
      "梨",
-     "桃"
+     "桃",
+     "甜点",
+     "饼干",
+     "咸",
+     "酸",
+     "苦"
     ]
    },
    {
@@ -14347,7 +15196,13 @@
      "spoon",
      "taste",
      "smell",
-     "delicious"
+     "delicious",
+     "dessert",
+     "biscuit",
+     "cookie",
+     "salty",
+     "sour",
+     "bitter"
     ],
     "tu_zh": [
      "勺子",
@@ -14356,7 +15211,12 @@
      "西红柿",
      "梨",
      "桃",
-     "羊肉"
+     "羊肉",
+     "甜点",
+     "饼干",
+     "咸",
+     "酸",
+     "苦"
     ]
    },
    {
@@ -14469,10 +15329,21 @@
   ],
   "dem_vong_ngoai": {
    "pepper": "T1 phần 5 + T4",
-   "olives": "T1 phần 5 + T4"
+   "olives": "T1 phần 5 + T4",
+   "dessert": "T1 + T3 (chuyển từ Larva U7)",
+   "甜点": "T1 + T3 (chuyển từ Larva U7)",
+   "biscuit": "T1 + T3 (chuyển từ Larva U7)",
+   "饼干": "T1 + T3 (chuyển từ Larva U7)",
+   "cookie": "T1 + T3 (chuyển từ Larva U7)",
+   "salty": "T1 + T3 (chuyển từ Larva U7)",
+   "咸": "T1 + T3 (chuyển từ Larva U7)",
+   "sour": "T1 + T3 (chuyển từ Larva U7)",
+   "酸": "T1 + T3 (chuyển từ Larva U7)",
+   "bitter": "T1 + T3 (chuyển từ Larva U7)",
+   "苦": "T1 + T3 (chuyển từ Larva U7)"
   },
   "de_nghi_doi_nhan": [],
-  "ghi_chu": "Lịch Pupa: ngày 1–5 kể dần T1, ngày 6 nghe cả T1; ngày 7 T6; ngày 8 T7. Vè đếm Trung chỉ dùng danh từ đi với 个 (梨, 桃, 西红柿, 三明治); 饮料 dùng 杯 ở dòng cuối – không trộn thêm lượng từ khác. 'noodle', 'olives' giữ đúng dạng như file vào để script đếm.",
+  "ghi_chu": "Lịch Pupa: ngày 1–5 kể dần T1, ngày 6 nghe cả T1; ngày 7 T6; ngày 8 T7. Vè đếm Trung chỉ dùng danh từ đi với 个 (梨, 桃, 西红柿, 三明治); 饮料 dùng 杯 ở dòng cuối – không trộn thêm lượng từ khác. 'noodle', 'olives' giữ đúng dạng như file vào để script đếm. NL-1 (09/11): nhận từ Larva: dessert, biscuit, cookie, salty, sour, bitter – viết vào truyện khung và big book khi viết trọn.",
   "van_ban_theo_ngay": [
    [
     "T1 phần 1",
@@ -14592,10 +15463,12 @@
     "honey",
     "yoghurt",
     "strawberry",
+    "biscuit",
     "salt",
     "sugar",
     "taste",
     "pepper",
+    "cookie",
     "smell",
     "butter",
     "olives",
@@ -14609,6 +15482,7 @@
     "勺子",
     "冰激凌",
     "葡萄",
+    "饼干",
     "尝",
     "糖",
     "西红柿",
@@ -14622,19 +15496,22 @@
     "noodle",
     "snack",
     "cereal",
+    "dessert",
+    "bitter",
     "spoon",
     "honey",
     "yoghurt",
     "strawberry",
+    "biscuit",
     "salt",
     "sugar",
     "taste",
     "pepper",
+    "cookie",
     "smell",
     "butter",
     "olives",
-    "flour",
-    "mix"
+    "salty"
    ],
    "poster_cau_cua_mieng": [
     "Yummy! / 真好吃！",
@@ -14685,6 +15562,52 @@
     "buoc_chu": true
    },
    {
+    "tu": "america",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36); nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 101",
+    "goi_lai": [
+     101,
+     102,
+     105
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Cocoon U10",
+      "Butterfly U5"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "russia",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36); nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 101",
+    "goi_lai": [
+     101,
+     102,
+     105
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Cocoon U10",
+      "Butterfly U5"
+     ],
+     "xep_them": []
+    }
+   },
+   {
     "tu": "sightseeing",
     "nghia": "",
     "nhan": "Lõi",
@@ -14703,6 +15626,79 @@
     "buoc_chu": true
    },
    {
+    "tu": "japan",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36); nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 102",
+    "goi_lai": [
+     102,
+     103,
+     106
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [],
+     "xep_them": [
+      "Cocoon U1",
+      "Cocoon U2"
+     ]
+    }
+   },
+   {
+    "tu": "rucksack",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36); nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "thi bắt viết (Flyers)",
+    "may_khong_chac": false,
+    "thi": "Flyers",
+    "gap_dau": "ngày 102",
+    "goi_lai": [
+     102,
+     103,
+     106,
+     114,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [],
+     "xep_them": [
+      "Cocoon U1",
+      "Cocoon U2"
+     ]
+    }
+   },
+   {
+    "tu": "language",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36); nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "thi bắt viết (Flyers)",
+    "may_khong_chac": false,
+    "thi": "Flyers",
+    "gap_dau": "ngày 103",
+    "goi_lai": [
+     103,
+     104,
+     107,
+     115,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [
+      "Cocoon U4",
+      "Cocoon U10"
+     ],
+     "xep_them": []
+    }
+   },
+   {
     "tu": "resort",
     "nghia": "",
     "nhan": "Lõi",
@@ -14719,6 +15715,53 @@
      "khóa ôn / ôn chặng"
     ],
     "buoc_chu": true
+   },
+   {
+    "tu": "france",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36); nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 104",
+    "goi_lai": [
+     104,
+     105,
+     108
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Cocoon U10"
+     ],
+     "xep_them": [
+      "Cocoon U1"
+     ]
+    }
+   },
+   {
+    "tu": "korea",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36); nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 105",
+    "goi_lai": [
+     105,
+     106,
+     109
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [],
+     "xep_them": [
+      "Cocoon U1",
+      "Cocoon U2"
+     ]
+    }
    }
   ],
   "tu_zh": [
@@ -14759,6 +15802,29 @@
     "buoc_chu": true
    },
    {
+    "tu": "美国",
+    "nghia": "America",
+    "nhan": "Vòng ngoài",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36); nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 101",
+    "goi_lai": [
+     101,
+     102,
+     105
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [],
+     "xep_them": [
+      "Cocoon U1",
+      "Cocoon U2"
+     ]
+    }
+   },
+   {
     "tu": "观光",
     "nghia": "go sightseeing",
     "nhan": "Lõi",
@@ -14795,6 +15861,30 @@
     "buoc_chu": true
    },
    {
+    "tu": "日本",
+    "nghia": "Japan",
+    "nhan": "Vòng ngoài",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36); nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 102",
+    "goi_lai": [
+     102,
+     103,
+     106
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Cocoon U7"
+     ],
+     "xep_them": [
+      "Cocoon U1"
+     ]
+    }
+   },
+   {
     "tu": "度假村",
     "nghia": "resort",
     "nhan": "Lõi",
@@ -14813,6 +15903,30 @@
     "buoc_chu": true
    },
    {
+    "tu": "法国",
+    "nghia": "France",
+    "nhan": "Vòng ngoài",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36); nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 104",
+    "goi_lai": [
+     104,
+     105,
+     108
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Cocoon U10"
+     ],
+     "xep_them": [
+      "Cocoon U1"
+     ]
+    }
+   },
+   {
     "tu": "行程",
     "nghia": "trip plan; 安排行程 = plan a trip",
     "nhan": "Lõi",
@@ -14829,14 +15943,70 @@
      "khóa ôn / ôn chặng"
     ],
     "buoc_chu": true
+   },
+   {
+    "tu": "韩国",
+    "nghia": "Korea",
+    "nhan": "Vòng ngoài",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36); nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 105",
+    "goi_lai": [
+     105,
+     106,
+     109
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Cocoon U7"
+     ],
+     "xep_them": [
+      "Cocoon U1"
+     ]
+    }
    }
   ],
   "tu_cu_quay_lai": {
    "en": [
+    "dessert",
+    "bitter",
+    "biscuit",
     "pepper",
-    "olives"
+    "cookie",
+    "olives",
+    "salty",
+    "sour"
    ],
-   "zh": []
+   "zh": [
+    "甜点",
+    "苦",
+    "饼干",
+    "咸"
+   ]
+  },
+  "T1_do_dai": [
+   30,
+   40
+  ],
+  "T1_do_dai_zh": [
+   40,
+   60
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "delicious",
+    "taste"
+   ],
+   "zh": [
+    "葡萄",
+    "尝"
+   ],
+   "nguon": "Pupa U11",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "Let's go ___!",
@@ -14905,7 +16075,14 @@
     "tu_en": [
      "bake",
      "sightseeing",
-     "resort"
+     "resort",
+     "america",
+     "japan",
+     "language",
+     "france",
+     "korea",
+     "russia",
+     "rucksack"
     ],
     "tu_zh": [
      "野餐",
@@ -14913,7 +16090,11 @@
      "观光",
      "岛",
      "度假村",
-     "行程"
+     "行程",
+     "美国",
+     "日本",
+     "法国",
+     "韩国"
     ]
    },
    {
@@ -14951,7 +16132,14 @@
     "tu_en": [
      "resort",
      "sightseeing",
-     "bake"
+     "bake",
+     "america",
+     "japan",
+     "language",
+     "france",
+     "korea",
+     "russia",
+     "rucksack"
     ],
     "tu_zh": [
      "岛",
@@ -14959,7 +16147,11 @@
      "观光",
      "行程",
      "野餐",
-     "烤"
+     "烤",
+     "美国",
+     "日本",
+     "法国",
+     "韩国"
     ]
    },
    {
@@ -15028,9 +16220,21 @@
     ]
    }
   ],
-  "dem_vong_ngoai": {},
+  "dem_vong_ngoai": {
+   "america": "T1 + T3 (chuyển từ Larva U1)",
+   "美国": "T1 + T3 (chuyển từ Larva U1)",
+   "japan": "T1 + T3 (chuyển từ Larva U1)",
+   "日本": "T1 + T3 (chuyển từ Larva U1)",
+   "language": "T1 + T3 (chuyển từ Larva U1)",
+   "france": "T1 + T3 (chuyển từ Larva U1)",
+   "法国": "T1 + T3 (chuyển từ Larva U1)",
+   "korea": "T1 + T3 (chuyển từ Larva U1)",
+   "韩国": "T1 + T3 (chuyển từ Larva U1)",
+   "russia": "T1 + T3 (chuyển từ Larva U1)",
+   "rucksack": "T1 + T3 (chuyển từ Larva U4)"
+  },
   "de_nghi_doi_nhan": [],
-  "ghi_chu": "Lịch Pupa: ngày 1–5 kể dần T1, ngày 6 nghe cả T1; ngày 7 T6; ngày 8 T7. Unit nhỏ: EN chỉ 3 từ lõi, ZH 6 từ lõi, không có vòng ngoài – các văn bản dựa nhiều vào từ unit trước (camp, beach, holiday…). 'picnic' không có trong danh sách EN dù 野餐 là lõi ZH; nếu 'picnic' chưa học ở unit trước, chị Duyên cân nhắc bổ sung (không tự thêm).",
+  "ghi_chu": "Lịch Pupa: ngày 1–5 kể dần T1, ngày 6 nghe cả T1; ngày 7 T6; ngày 8 T7. Unit nhỏ: EN chỉ 3 từ lõi, ZH 6 từ lõi, không có vòng ngoài – các văn bản dựa nhiều vào từ unit trước (camp, beach, holiday…). 'picnic' không có trong danh sách EN dù 野餐 là lõi ZH; nếu 'picnic' chưa học ở unit trước, chị Duyên cân nhắc bổ sung (không tự thêm). NL-1 (09/11): nhận từ Larva: america, japan, language, france, korea, russia, rucksack – viết vào truyện khung và big book khi viết trọn.",
   "van_ban_theo_ngay": [
    [
     "T1 phần 1",
@@ -15144,6 +16348,8 @@
    "flashcard_en": [
     "bake",
     "sightseeing",
+    "rucksack",
+    "language",
     "resort"
    ],
    "flashcard_zh": [
@@ -15156,8 +16362,15 @@
    ],
    "poster_the_gioi": [
     "bake",
+    "america",
+    "russia",
     "sightseeing",
-    "resort"
+    "japan",
+    "rucksack",
+    "language",
+    "resort",
+    "france",
+    "korea"
    ],
    "poster_cau_cua_mieng": [
     "Let's go! / 走吧！",

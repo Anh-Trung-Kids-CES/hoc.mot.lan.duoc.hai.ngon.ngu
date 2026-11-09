@@ -18,6 +18,9 @@ GROUP = {'preb': 'đầu', 'little-seed': 'đầu', 'seedling': 'đầu', 'canop
          'larva-plus': 'cao', 'pupa': 'cao', 'cocoon': 'cao', 'butterfly': 'cao'}
 TEXT7B = {'preb': 'A', 'little-seed': 'A', 'seedling': 'A', 'canopy': 'B', 'larva': 'B', 'pupa': 'C', 'cocoon': 'C'}
 IRPP = ['Introduce', 'Repeat', 'Practice', 'Produce']
+# NL-2 (chị duyệt 09/11): truyện khung dài dần theo bậc – số chữ tiếng Anh mỗi phần; số chữ Hán là mức em đề xuất, chờ chị duyệt
+T1_LEN_EN = {'preb': (6, 10), 'little-seed': (10, 15), 'seedling': (15, 20), 'canopy': (20, 30), 'larva': (30, 40), 'pupa': (30, 40), 'cocoon': (40, 50)}
+T1_LEN_ZH = {'preb': None, 'little-seed': (13, 22), 'seedling': (20, 30), 'canopy': (26, 45), 'larva': (40, 60), 'pupa': (40, 60), 'cocoon': (52, 75)}   # ≈1,3–1,5 chữ Hán cho mỗi chữ Anh
 COURSE_NAME = {'preb': 'PreB', 'little-seed': 'Little Seed', 'seedling': 'Seedling', 'canopy': 'Canopy', 'larva': 'Larva',
                'larva-plus': 'Larva Plus', 'pupa': 'Pupa', 'cocoon': 'Cocoon', 'butterfly': 'Butterfly'}
 
@@ -93,8 +96,20 @@ def recall_days(n, last, k):
     return out
 
 
+def prev_key(c, u):
+    """Unit liền trước trong lộ trình (bỏ khóa ôn); unit đầu khóa lấy unit cuối của khóa trước."""
+    seq = [(cc, uu) for cc in ORDER if cc not in REVIEW for uu in PREV_UNITS[cc]]
+    i = seq.index((c, u))
+    return seq[i - 1] if i > 0 else None
+
+
+PREV_UNITS = {}
+
+
 def main(relabel=False):
     T2 = json.load(open(G + 'tu2tang.json'))
+    for cc in ORDER:
+        PREV_UNITS[cc] = list(T2[cc])
     allT = collections.OrderedDict()           # (khóa, unit) -> văn bản đầy đủ, theo thứ tự chương trình
     rows_by = {}
     for c in ORDER:
@@ -158,20 +173,42 @@ def main(relabel=False):
                     k = 5 if it['tier'] in ('Lõi',) or it.get('ex40') else 3
                     x = {'tu': it['w'], 'nghia': it.get('gloss', ''), 'nhan': it['tier'], 'ly_do': it.get('why', ''),
                          'ngoai_le_40': it.get('ex40', ''), 'may_khong_chac': bool(it.get('unsure')), 'thi': it['exam'],
-                         'gap_dau': it['first'], 'goi_lai': recall_days(n, last_day, k) if c not in REVIEW else [],
+                         'gap_dau': it['first'], 'goi_lai': recall_days(n, last_day, k) if (c not in REVIEW or it['tier'] in ('Lõi', 'Vòng ngoài')) else [],
                          'buoc_chu': bool(it.get('ex40')) or (it['tier'] == 'Lõi' and (L == 'zh' or GROUP[c] != 'đầu'))}
                     if it['tier'] == 'Vòng ngoài':
                         x['quay_lai'] = returns[(c, u, L, it['w'])]
                     items.append(x)
                 rec['tu_' + L] = items
             rec['tu_cu_quay_lai'] = scheduled.get((c, u), {'en': [], 'zh': []})
+            if c not in REVIEW:
+                rec['T1_do_dai'] = T1_LEN_EN[c]
+                rec['T1_do_dai_zh'] = T1_LEN_ZH[c]
+                # Ng.t. 6: 1–2 từ "hay sai" của unit trước cài vào truyện khung. Khi chưa có dữ liệu lỗi của con,
+                # máy chọn từ lõi unit trước theo thứ tự: từ thi bắt tự nói/viết → động/tính từ, cụm → từ khác.
+                pk = prev_key(c, u)
+                rec['co_unit_truoc'] = bool(pk)
+                if pk:
+                    pu = T2[pk[0]][pk[1]]
+                    hs = {}
+                    for L in ('en', 'zh'):
+                        cur = {x['w'] for x in d[L]}
+                        cand = [x for x in pu[L] if x['tier'] == 'Lõi' and x['w'] not in cur]
+                        cand.sort(key=lambda x: (0 if '37a' in x.get('why', '') else 1 if x['pos'] in ('động/tính', 'cụm') else 2, -x.get('reuse', 0)))
+                        hs[L] = [x['w'] for x in cand[:2]]
+                    rec['tu_hay_sai'] = dict(hs, nguon='%s U%s' % (COURSE_NAME[pk[0]], pk[1]), cach_chon='máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web')
             if c in REVIEW:
                 src = re.findall(r'(Larva|Pupa|Cocoon) U(\d+)', unit_rows[0]['label_buoi'])
                 rec['nghe_lai_mang'] = ['%s U%s' % s for s in src]
                 rec['van_ban'] = [{'id': 'R%d' % (j + 1), 'loai': 'Mạng văn bản cũ', 'nguon': '%s U%s: T1 truyện khung (cài từ hay sai), T2 bài hát, T4 vè' % s}
-                                  for j, s in enumerate(src)] + [{'id': 'N1', 'loai': 'Văn bản mới theo dạng đề', 'nguon': 'nửa thời gian nghe, đọc (ng.t. 7b)'}]
+                                  for j, s in enumerate(src)]
+                mv_en = [x['tu'] for x in rec['tu_en'] if x['nhan'] == 'Vòng ngoài']
+                mv_zh = [x['tu'] for x in rec['tu_zh'] if x['nhan'] == 'Vòng ngoài']
+                rec['van_ban'] += [{'id': 'N1', 'loai': 'Văn bản mới theo dạng đề (Nghe)', 'nguon': 'nửa thời gian nghe, đọc (ng.t. 7b)' + ('; cài từ chuyển từ Larva (NL-1)' if mv_en else ''), 'tu_en': mv_en, 'tu_zh': mv_zh},
+                                   {'id': 'N2', 'loai': 'Văn bản mới theo dạng đề (Đọc – viết)', 'nguon': 'đoạn đọc mới theo dạng đề' + ('; cài từ chuyển từ Larva (NL-1)' if mv_en else ''), 'tu_en': mv_en, 'tu_zh': mv_zh}]
+                if mv_en or mv_zh:
+                    rec['dem_vong_ngoai'] = {w: 'N1 + N2 (+ tranh)' for w in mv_en + mv_zh}
                 nd = len(d['days'])
-                rec['van_ban_theo_ngay'] = [[('R%d' % ((i // 2) % max(1, len(src)) + 1)) if i % 2 == 0 else 'N1 văn bản mới dạng đề'] for i in range(nd)]
+                rec['van_ban_theo_ngay'] = [[('R%d' % ((i // 2) % max(1, len(src)) + 1)) if i % 2 == 0 else ('N1' if (i // 2) % 2 == 0 else 'N2') + ' văn bản mới dạng đề'] for i in range(nd)]
                 rec['nghe_ngam'] = {'bo': ['%s T1, T2, T4' % x for x in rec['nghe_lai_mang']], 'thoi_luong': '6–8 phút', 'bac': GROUP[c]}
             elif plan:
                 for kk in ('khung_cau', 'cau_cua_mieng', 'van_ban', 'dem_vong_ngoai', 'de_nghi_doi_nhan', 'ghi_chu'):

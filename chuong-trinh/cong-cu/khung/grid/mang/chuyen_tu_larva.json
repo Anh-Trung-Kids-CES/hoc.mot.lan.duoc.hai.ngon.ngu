@@ -1,0 +1,936 @@
+[
+ {
+  "larva_unit": "1",
+  "en": "age",
+  "zh": [],
+  "thi": "Movers",
+  "dest": "LP1",
+  "raw_en": "age",
+  "raw_zh": [],
+  "ngay_moi": 5
+ },
+ {
+  "larva_unit": "1",
+  "en": "parent",
+  "zh": [],
+  "thi": "Movers",
+  "dest": "LP1",
+  "raw_en": "parent",
+  "raw_zh": [],
+  "ngay_moi": 6
+ },
+ {
+  "larva_unit": "1",
+  "en": "grandparent",
+  "zh": [],
+  "thi": "Movers",
+  "dest": "LP1",
+  "raw_en": "grandparent",
+  "raw_zh": [],
+  "ngay_moi": 7
+ },
+ {
+  "larva_unit": "1",
+  "en": "america",
+  "zh": [
+   "美国"
+  ],
+  "thi": "",
+  "dest": "P12",
+  "raw_en": "America",
+  "raw_zh": [
+   "美国 Měiguó (= America)"
+  ],
+  "ngay_moi": 101
+ },
+ {
+  "larva_unit": "1",
+  "en": "japan",
+  "zh": [
+   "日本"
+  ],
+  "thi": "",
+  "dest": "P12",
+  "raw_en": "Japan",
+  "raw_zh": [
+   "日本 Rìběn (= Japan)"
+  ],
+  "ngay_moi": 102
+ },
+ {
+  "larva_unit": "1",
+  "en": "language",
+  "zh": [],
+  "thi": "Flyers",
+  "dest": "P12",
+  "raw_en": "language",
+  "raw_zh": [],
+  "ngay_moi": 103
+ },
+ {
+  "larva_unit": "1",
+  "en": "france",
+  "zh": [
+   "法国"
+  ],
+  "thi": "",
+  "dest": "P12",
+  "raw_en": "France",
+  "raw_zh": [
+   "法国 Fǎguó (= France)"
+  ],
+  "ngay_moi": 104
+ },
+ {
+  "larva_unit": "1",
+  "en": "korea",
+  "zh": [
+   "韩国"
+  ],
+  "thi": "",
+  "dest": "P12",
+  "raw_en": "Korea",
+  "raw_zh": [
+   "韩国 Hánguó (= Korea)"
+  ],
+  "ngay_moi": 105
+ },
+ {
+  "larva_unit": "1",
+  "en": "russia",
+  "zh": [],
+  "thi": "",
+  "dest": "P12",
+  "raw_en": "Russia",
+  "raw_zh": [],
+  "ngay_moi": 101
+ },
+ {
+  "larva_unit": "2",
+  "en": "past",
+  "zh": [],
+  "thi": "Flyers",
+  "dest": "LP1",
+  "raw_en": "past",
+  "raw_zh": [],
+  "ngay_moi": 8
+ },
+ {
+  "larva_unit": "2",
+  "en": "half",
+  "zh": [
+   "半"
+  ],
+  "thi": "Flyers",
+  "dest": "LP1",
+  "raw_en": "half",
+  "raw_zh": [
+   "半 bàn (= half)"
+  ],
+  "ngay_moi": 9
+ },
+ {
+  "larva_unit": "2",
+  "en": "quarter",
+  "zh": [],
+  "thi": "Flyers",
+  "dest": "LP1",
+  "raw_en": "quarter",
+  "raw_zh": [],
+  "ngay_moi": 5
+ },
+ {
+  "larva_unit": "2",
+  "en": "minute",
+  "zh": [],
+  "thi": "Flyers",
+  "dest": "LP1",
+  "raw_en": "minute",
+  "raw_zh": [],
+  "ngay_moi": 6
+ },
+ {
+  "larva_unit": "2",
+  "en": "usually",
+  "zh": [],
+  "thi": "Flyers",
+  "dest": "LP1",
+  "raw_en": "usually",
+  "raw_zh": [],
+  "ngay_moi": 7
+ },
+ {
+  "larva_unit": "2",
+  "en": "meal",
+  "zh": [],
+  "thi": "Flyers",
+  "dest": "LP1",
+  "raw_en": "meal",
+  "raw_zh": [],
+  "ngay_moi": 8
+ },
+ {
+  "larva_unit": "2",
+  "en": "how long",
+  "zh": [
+   "多久"
+  ],
+  "thi": "Flyers",
+  "dest": "LP1",
+  "raw_en": "how long",
+  "raw_zh": [
+   "多久 duōjiǔ (= how long)"
+  ],
+  "ngay_moi": 9
+ },
+ {
+  "larva_unit": "2",
+  "en": "hour",
+  "zh": [
+   "小时"
+  ],
+  "thi": "Flyers",
+  "dest": "LP1",
+  "raw_en": "hour",
+  "raw_zh": [
+   "小时 xiǎoshí (= hour)"
+  ],
+  "ngay_moi": 5
+ },
+ {
+  "larva_unit": "2",
+  "en": "last year",
+  "zh": [
+   "去年"
+  ],
+  "thi": "",
+  "dest": "LP1",
+  "raw_en": "last year",
+  "raw_zh": [
+   "去年 qùnián (= last year)"
+  ],
+  "ngay_moi": 6
+ },
+ {
+  "larva_unit": "2",
+  "en": "stair",
+  "zh": [],
+  "thi": "Movers",
+  "dest": "LP1",
+  "raw_en": "stair(s)",
+  "raw_zh": [],
+  "ngay_moi": 7
+ },
+ {
+  "larva_unit": "2",
+  "en": "balcony",
+  "zh": [],
+  "thi": "Movers",
+  "dest": "LP1",
+  "raw_en": "balcony",
+  "raw_zh": [],
+  "ngay_moi": 8
+ },
+ {
+  "larva_unit": "2",
+  "en": "basement",
+  "zh": [],
+  "thi": "Movers",
+  "dest": "LP1",
+  "raw_en": "basement",
+  "raw_zh": [],
+  "ngay_moi": 9
+ },
+ {
+  "larva_unit": "2",
+  "en": "roof",
+  "zh": [],
+  "thi": "Movers",
+  "dest": "LP1",
+  "raw_en": "roof",
+  "raw_zh": [],
+  "ngay_moi": 5
+ },
+ {
+  "larva_unit": "3",
+  "en": "future",
+  "zh": [],
+  "thi": "Flyers",
+  "dest": "P6",
+  "raw_en": "future",
+  "raw_zh": [],
+  "ngay_moi": 49
+ },
+ {
+  "larva_unit": "3",
+  "en": "pilot",
+  "zh": [],
+  "thi": "Flyers",
+  "dest": "P6",
+  "raw_en": "pilot",
+  "raw_zh": [],
+  "ngay_moi": 50
+ },
+ {
+  "larva_unit": "3",
+  "en": "engineer",
+  "zh": [],
+  "thi": "Flyers",
+  "dest": "P6",
+  "raw_en": "engineer",
+  "raw_zh": [],
+  "ngay_moi": 51
+ },
+ {
+  "larva_unit": "3",
+  "en": "scientist",
+  "zh": [
+   "科学家"
+  ],
+  "thi": "",
+  "dest": "P6",
+  "raw_en": "scientist",
+  "raw_zh": [
+   "科学家 kēxuéjiā (= scientist)"
+  ],
+  "ngay_moi": 52
+ },
+ {
+  "larva_unit": "3",
+  "en": "vet",
+  "zh": [],
+  "thi": "",
+  "dest": "LP2",
+  "raw_en": "vet",
+  "raw_zh": [],
+  "ngay_moi": 13
+ },
+ {
+  "larva_unit": "3",
+  "en": "workplace",
+  "zh": [],
+  "thi": "",
+  "dest": "LP2",
+  "raw_en": "workplace",
+  "raw_zh": [],
+  "ngay_moi": 14
+ },
+ {
+  "larva_unit": "4",
+  "en": "rucksack",
+  "zh": [],
+  "thi": "Flyers",
+  "dest": "P12",
+  "raw_en": "rucksack",
+  "raw_zh": [],
+  "ngay_moi": 102
+ },
+ {
+  "larva_unit": "5",
+  "en": "wolf",
+  "zh": [
+   "狼"
+  ],
+  "thi": "",
+  "dest": "LP4",
+  "raw_en": "wolf",
+  "raw_zh": [
+   "狼 láng (= wolf)"
+  ],
+  "ngay_moi": 29
+ },
+ {
+  "larva_unit": "5",
+  "en": "fast",
+  "zh": [
+   "快"
+  ],
+  "thi": "Flyers",
+  "dest": "LP4",
+  "raw_en": "fast",
+  "raw_zh": [
+   "快 kuài (= fast)"
+  ],
+  "ngay_moi": 30
+ },
+ {
+  "larva_unit": "5",
+  "en": "heavy",
+  "zh": [],
+  "thi": "Flyers",
+  "dest": "LP4",
+  "raw_en": "heavy",
+  "raw_zh": [],
+  "ngay_moi": 31
+ },
+ {
+  "larva_unit": "5",
+  "en": "kangaroo",
+  "zh": [
+   "袋鼠"
+  ],
+  "thi": "Movers",
+  "dest": "LP4",
+  "raw_en": "kangaroo",
+  "raw_zh": [
+   "袋鼠 dàishǔ (= kangaroo)"
+  ],
+  "ngay_moi": 32
+ },
+ {
+  "larva_unit": "5",
+  "en": "panda",
+  "zh": [],
+  "thi": "Movers",
+  "dest": "LP4",
+  "raw_en": "panda",
+  "raw_zh": [],
+  "ngay_moi": 33
+ },
+ {
+  "larva_unit": "5",
+  "en": "dolphin",
+  "zh": [
+   "海豚"
+  ],
+  "thi": "Movers",
+  "dest": "LP4",
+  "raw_en": "dolphin",
+  "raw_zh": [
+   "海豚 hǎitún (= dolphin)"
+  ],
+  "ngay_moi": 29
+ },
+ {
+  "larva_unit": "5",
+  "en": "cage",
+  "zh": [],
+  "thi": "Movers",
+  "dest": "LP4",
+  "raw_en": "cage",
+  "raw_zh": [],
+  "ngay_moi": 30
+ },
+ {
+  "larva_unit": "6",
+  "en": "team",
+  "zh": [],
+  "thi": "Flyers",
+  "dest": "LP5",
+  "raw_en": "team",
+  "raw_zh": [],
+  "ngay_moi": 37
+ },
+ {
+  "larva_unit": "6",
+  "en": "volleyball",
+  "zh": [
+   "排球"
+  ],
+  "thi": "Flyers",
+  "dest": "LP5",
+  "raw_en": "volleyball",
+  "raw_zh": [
+   "排球 páiqiú (= volleyball)"
+  ],
+  "ngay_moi": 38
+ },
+ {
+  "larva_unit": "6",
+  "en": "win",
+  "zh": [],
+  "thi": "Flyers",
+  "dest": "LP5",
+  "raw_en": "win",
+  "raw_zh": [],
+  "ngay_moi": 39
+ },
+ {
+  "larva_unit": "6",
+  "en": "match",
+  "zh": [],
+  "thi": "Flyers",
+  "dest": "LP5",
+  "raw_en": "match",
+  "raw_zh": [],
+  "ngay_moi": 40
+ },
+ {
+  "larva_unit": "6",
+  "en": "ice",
+  "zh": [],
+  "thi": "Movers",
+  "dest": "LP5",
+  "raw_en": "ice",
+  "raw_zh": [],
+  "ngay_moi": 41
+ },
+ {
+  "larva_unit": "6",
+  "en": "player",
+  "zh": [],
+  "thi": "Movers",
+  "dest": "LP5",
+  "raw_en": "player",
+  "raw_zh": [],
+  "ngay_moi": 37
+ },
+ {
+  "larva_unit": "6",
+  "en": "goal",
+  "zh": [],
+  "thi": "Movers",
+  "dest": "LP5",
+  "raw_en": "goal",
+  "raw_zh": [],
+  "ngay_moi": 38
+ },
+ {
+  "larva_unit": "6",
+  "en": "funfair",
+  "zh": [],
+  "thi": "Movers",
+  "dest": "LP5",
+  "raw_en": "funfair",
+  "raw_zh": [],
+  "ngay_moi": 39
+ },
+ {
+  "larva_unit": "6",
+  "en": "catch a bus",
+  "zh": [],
+  "thi": "",
+  "dest": "P7",
+  "raw_en": "catch a bus",
+  "raw_zh": [],
+  "ngay_moi": 57
+ },
+ {
+  "larva_unit": "7",
+  "en": "dessert",
+  "zh": [
+   "甜点"
+  ],
+  "thi": "",
+  "dest": "P11",
+  "raw_en": "dessert",
+  "raw_zh": [
+   "甜点 tiándiǎn (= dessert)"
+  ],
+  "ngay_moi": 93
+ },
+ {
+  "larva_unit": "7",
+  "en": "biscuit",
+  "zh": [
+   "饼干"
+  ],
+  "thi": "Flyers",
+  "dest": "P11",
+  "raw_en": "biscuit",
+  "raw_zh": [
+   "饼干 bǐnggān (= biscuit, cookie)"
+  ],
+  "ngay_moi": 94
+ },
+ {
+  "larva_unit": "7",
+  "en": "cookie",
+  "zh": [],
+  "thi": "Flyers",
+  "dest": "P11",
+  "raw_en": "cookie",
+  "raw_zh": [],
+  "ngay_moi": 95
+ },
+ {
+  "larva_unit": "7",
+  "en": "salty",
+  "zh": [
+   "咸"
+  ],
+  "thi": "",
+  "dest": "P11",
+  "raw_en": "salty",
+  "raw_zh": [
+   "咸 xián (= salty)"
+  ],
+  "ngay_moi": 96
+ },
+ {
+  "larva_unit": "7",
+  "en": "sour",
+  "zh": [
+   "酸"
+  ],
+  "thi": "",
+  "dest": "P11",
+  "raw_en": "sour",
+  "raw_zh": [
+   "酸 suān (= sour)"
+  ],
+  "ngay_moi": 97
+ },
+ {
+  "larva_unit": "7",
+  "en": "bitter",
+  "zh": [
+   "苦"
+  ],
+  "thi": "",
+  "dest": "P11",
+  "raw_en": "bitter",
+  "raw_zh": [
+   "苦 kǔ (= bitter)"
+  ],
+  "ngay_moi": 93
+ },
+ {
+  "larva_unit": "8",
+  "en": "spring",
+  "zh": [
+   "春天"
+  ],
+  "thi": "Flyers",
+  "dest": "P8",
+  "raw_en": "spring",
+  "raw_zh": [
+   "春天 chūntiān (= spring)"
+  ],
+  "ngay_moi": 65
+ },
+ {
+  "larva_unit": "8",
+  "en": "summer",
+  "zh": [
+   "夏天"
+  ],
+  "thi": "Flyers",
+  "dest": "P8",
+  "raw_en": "summer",
+  "raw_zh": [
+   "夏天 xiàtiān (= summer)"
+  ],
+  "ngay_moi": 66
+ },
+ {
+  "larva_unit": "8",
+  "en": "autumn",
+  "zh": [],
+  "thi": "Flyers",
+  "dest": "P8",
+  "raw_en": "autumn",
+  "raw_zh": [],
+  "ngay_moi": 67
+ },
+ {
+  "larva_unit": "8",
+  "en": "fever",
+  "zh": [
+   "发烧"
+  ],
+  "thi": "",
+  "dest": "LP4",
+  "raw_en": "fever",
+  "raw_zh": [
+   "发烧 fāshāo (= fever, temperature)"
+  ],
+  "ngay_moi": 31
+ },
+ {
+  "larva_unit": "8",
+  "en": "sore",
+  "zh": [],
+  "thi": "Flyers",
+  "dest": "LP4",
+  "raw_en": "sore",
+  "raw_zh": [],
+  "ngay_moi": 32
+ },
+ {
+  "larva_unit": "8",
+  "en": "throat",
+  "zh": [],
+  "thi": "",
+  "dest": "LP4",
+  "raw_en": "throat",
+  "raw_zh": [],
+  "ngay_moi": 33
+ },
+ {
+  "larva_unit": "8",
+  "en": "stomachache",
+  "zh": [],
+  "thi": "",
+  "dest": "LP4",
+  "raw_en": "stomachache",
+  "raw_zh": [],
+  "ngay_moi": 29
+ },
+ {
+  "larva_unit": "8",
+  "en": "wind",
+  "zh": [],
+  "thi": "Movers",
+  "dest": "LP4",
+  "raw_en": "wind",
+  "raw_zh": [],
+  "ngay_moi": 30
+ },
+ {
+  "larva_unit": "8",
+  "en": "cough",
+  "zh": [],
+  "thi": "Movers",
+  "dest": "LP4",
+  "raw_en": "cough",
+  "raw_zh": [],
+  "ngay_moi": 31
+ },
+ {
+  "larva_unit": "8",
+  "en": "temperature",
+  "zh": [],
+  "thi": "Movers",
+  "dest": "LP4",
+  "raw_en": "temperature",
+  "raw_zh": [],
+  "ngay_moi": 32
+ },
+ {
+  "larva_unit": "9",
+  "en": "office",
+  "zh": [
+   "办公室"
+  ],
+  "thi": "Flyers",
+  "dest": "LP2",
+  "raw_en": "office",
+  "raw_zh": [
+   "办公室 bàngōngshì (= office)"
+  ],
+  "ngay_moi": 15
+ },
+ {
+  "larva_unit": "9",
+  "en": "canteen",
+  "zh": [
+   "食堂"
+  ],
+  "thi": "",
+  "dest": "LP2",
+  "raw_en": "canteen",
+  "raw_zh": [
+   "食堂 shítáng (= canteen)"
+  ],
+  "ngay_moi": 16
+ },
+ {
+  "larva_unit": "9",
+  "en": "left",
+  "zh": [
+   "左"
+  ],
+  "thi": "Flyers",
+  "dest": "LP2",
+  "raw_en": "left",
+  "raw_zh": [
+   "左 zuǒ (= left)"
+  ],
+  "ngay_moi": 17
+ },
+ {
+  "larva_unit": "9",
+  "en": "turn",
+  "zh": [
+   "转"
+  ],
+  "thi": "Flyers",
+  "dest": "LP2",
+  "raw_en": "turn",
+  "raw_zh": [
+   "转 zhuǎn (= turn)"
+  ],
+  "ngay_moi": 13
+ },
+ {
+  "larva_unit": "10",
+  "en": "let",
+  "zh": [
+   "让"
+  ],
+  "thi": "Flyers",
+  "dest": "LP3",
+  "raw_en": "let",
+  "raw_zh": [
+   "让 ràng (= let)"
+  ],
+  "ngay_moi": 21
+ },
+ {
+  "larva_unit": "10",
+  "en": "money",
+  "zh": [],
+  "thi": "Flyers",
+  "dest": "LP3",
+  "raw_en": "money",
+  "raw_zh": [],
+  "ngay_moi": 22
+ },
+ {
+  "larva_unit": "10",
+  "en": "dollar",
+  "zh": [
+   "美元"
+  ],
+  "thi": "",
+  "dest": "LP3",
+  "raw_en": "dollar",
+  "raw_zh": [
+   "美元 měiyuán (= dollar)"
+  ],
+  "ngay_moi": 23
+ },
+ {
+  "larva_unit": "10",
+  "en": "yuan",
+  "zh": [
+   "元"
+  ],
+  "thi": "",
+  "dest": "LP3",
+  "raw_en": "yuan",
+  "raw_zh": [
+   "元 yuán (= yuan)"
+  ],
+  "ngay_moi": 24
+ },
+ {
+  "larva_unit": "10",
+  "en": "sale",
+  "zh": [],
+  "thi": "",
+  "dest": "LP3",
+  "raw_en": "sale",
+  "raw_zh": [],
+  "ngay_moi": 25
+ },
+ {
+  "larva_unit": "10",
+  "en": "size",
+  "zh": [],
+  "thi": "",
+  "dest": "LP3",
+  "raw_en": "size",
+  "raw_zh": [],
+  "ngay_moi": 21
+ },
+ {
+  "larva_unit": "10",
+  "en": "city/town centre",
+  "zh": [],
+  "thi": "",
+  "dest": "LP3",
+  "raw_en": "city/town centre",
+  "raw_zh": [],
+  "ngay_moi": 22
+ },
+ {
+  "larva_unit": "10",
+  "en": "market",
+  "zh": [],
+  "thi": "Movers",
+  "dest": "LP3",
+  "raw_en": "market",
+  "raw_zh": [],
+  "ngay_moi": 23
+ },
+ {
+  "larva_unit": "10",
+  "en": "city",
+  "zh": [],
+  "thi": "Movers",
+  "dest": "LP3",
+  "raw_en": "city",
+  "raw_zh": [],
+  "ngay_moi": 24
+ },
+ {
+  "larva_unit": "10",
+  "en": "building",
+  "zh": [],
+  "thi": "Movers",
+  "dest": "LP3",
+  "raw_en": "building",
+  "raw_zh": [],
+  "ngay_moi": 25
+ },
+ {
+  "larva_unit": "10",
+  "en": "road",
+  "zh": [],
+  "thi": "Movers",
+  "dest": "LP3",
+  "raw_en": "road",
+  "raw_zh": [],
+  "ngay_moi": 21
+ },
+ {
+  "larva_unit": "10",
+  "en": "café",
+  "zh": [
+   "咖啡店"
+  ],
+  "thi": "Movers",
+  "dest": "LP3",
+  "raw_en": "café",
+  "raw_zh": [
+   "咖啡店 kāfēi diàn (= café)"
+  ],
+  "ngay_moi": 22
+ },
+ {
+  "larva_unit": "10",
+  "en": "station",
+  "zh": [],
+  "thi": "Movers",
+  "dest": "LP3",
+  "raw_en": "station",
+  "raw_zh": [],
+  "ngay_moi": 23
+ },
+ {
+  "larva_unit": "11",
+  "en": "town/city centre",
+  "zh": [],
+  "thi": "",
+  "dest": "LP6",
+  "raw_en": "town/city centre",
+  "raw_zh": [],
+  "ngay_moi": 45
+ },
+ {
+  "larva_unit": "11",
+  "en": "world",
+  "zh": [],
+  "thi": "Movers",
+  "dest": "LP6",
+  "raw_en": "world",
+  "raw_zh": [],
+  "ngay_moi": 46
+ },
+ {
+  "larva_unit": "11",
+  "en": "map",
+  "zh": [
+   "地图"
+  ],
+  "thi": "Movers",
+  "dest": "LP6",
+  "raw_en": "map",
+  "raw_zh": [
+   "地图 dìtú (= map)"
+  ],
+  "ngay_moi": 47
+ }
+]

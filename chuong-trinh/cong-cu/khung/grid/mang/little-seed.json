@@ -441,6 +441,24 @@
    "en": [],
    "zh": []
   },
+  "T1_do_dai": [
+   10,
+   15
+  ],
+  "T1_do_dai_zh": [
+   13,
+   22
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "how many",
+    "six"
+   ],
+   "zh": [],
+   "nguon": "PreB U12",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
+  },
   "khung_cau": {
    "en": "Hello, ___!",
    "zh": "___，你好！",
@@ -1334,6 +1352,27 @@
    "en": [],
    "zh": []
   },
+  "T1_do_dai": [
+   10,
+   15
+  ],
+  "T1_do_dai_zh": [
+   13,
+   22
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "mommy",
+    "all"
+   ],
+   "zh": [
+    "妈妈",
+    "爸爸"
+   ],
+   "nguon": "Little Seed U1",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
+  },
   "khung_cau": {
    "en": "My name is ___.",
    "zh": "我叫___。",
@@ -2166,6 +2205,27 @@
   "tu_cu_quay_lai": {
    "en": [],
    "zh": []
+  },
+  "T1_do_dai": [
+   10,
+   15
+  ],
+  "T1_do_dai_zh": [
+   13,
+   22
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "old",
+    "how old"
+   ],
+   "zh": [
+    "叫",
+    "岁"
+   ],
+   "nguon": "Little Seed U2",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "Who is he? – He is my ___.",
@@ -3065,6 +3125,27 @@
    "en": [],
    "zh": []
   },
+  "T1_do_dai": [
+   10,
+   15
+  ],
+  "T1_do_dai_zh": [
+   13,
+   22
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "big brother",
+    "big sister"
+   ],
+   "zh": [
+    "哥哥",
+    "姐姐"
+   ],
+   "nguon": "Little Seed U3",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
+  },
   "khung_cau": {
    "en": "I have ___.",
    "zh": "我有___。",
@@ -3889,6 +3970,27 @@
    "en": [],
    "zh": []
   },
+  "T1_do_dai": [
+   10,
+   15
+  ],
+  "T1_do_dai_zh": [
+   13,
+   22
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "have",
+    "touch"
+   ],
+   "zh": [
+    "有",
+    "摸摸"
+   ],
+   "nguon": "Little Seed U4",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
+  },
   "khung_cau": {
    "en": "I am ___.",
    "zh": "我很___。",
@@ -4688,6 +4790,27 @@
    "en": [],
    "zh": []
   },
+  "T1_do_dai": [
+   10,
+   15
+  ],
+  "T1_do_dai_zh": [
+   13,
+   22
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "happy",
+    "do"
+   ],
+   "zh": [
+    "心",
+    "开心"
+   ],
+   "nguon": "Little Seed U5",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
+  },
   "khung_cau": {
    "en": "What is this? – This is a ___.",
    "zh": "这是什么？– 这是___。",
@@ -5399,6 +5522,27 @@
   "tu_cu_quay_lai": {
    "en": [],
    "zh": []
+  },
+  "T1_do_dai": [
+   10,
+   15
+  ],
+  "T1_do_dai_zh": [
+   13,
+   22
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "look",
+    "new"
+   ],
+   "zh": [
+    "新",
+    "笔袋"
+   ],
+   "nguon": "Little Seed U6",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "Is it on the ___?",
@@ -6238,6 +6382,27 @@
    "en": [],
    "zh": []
   },
+  "T1_do_dai": [
+   10,
+   15
+  ],
+  "T1_do_dai_zh": [
+   13,
+   22
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "not",
+    "thank"
+   ],
+   "zh": [
+    "谢谢",
+    "下"
+   ],
+   "nguon": "Little Seed U7",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
+  },
   "khung_cau": {
    "en": "I can ___!",
    "zh": "我能___！",
@@ -7058,6 +7223,27 @@
   "tu_cu_quay_lai": {
    "en": [],
    "zh": []
+  },
+  "T1_do_dai": [
+   10,
+   15
+  ],
+  "T1_do_dai_zh": [
+   13,
+   22
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "run",
+    "can"
+   ],
+   "zh": [
+    "跑",
+    "跳"
+   ],
+   "nguon": "Little Seed U8",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "I like ___!",
@@ -8057,6 +8243,27 @@
    "en": [],
    "zh": []
   },
+  "T1_do_dai": [
+   10,
+   15
+  ],
+  "T1_do_dai_zh": [
+   13,
+   22
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "eat",
+    "like"
+   ],
+   "zh": [
+    "吃",
+    "喜欢"
+   ],
+   "nguon": "Little Seed U9",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
+  },
   "khung_cau": {
    "en": "It is ___ today.",
    "zh": "今天___。",
@@ -9027,6 +9234,27 @@
    ],
    "zh": []
   },
+  "T1_do_dai": [
+   10,
+   15
+  ],
+  "T1_do_dai_zh": [
+   13,
+   22
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "in",
+    "play"
+   ],
+   "zh": [
+    "今天",
+    "日"
+   ],
+   "nguon": "Little Seed U10",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
+  },
   "khung_cau": {
    "en": "What colour is it? – It's ___.",
    "zh": "这是什么颜色？– 是___。",
@@ -9863,6 +10091,27 @@
     "thẻ chữ sun"
    ],
    "zh": []
+  },
+  "T1_do_dai": [
+   10,
+   15
+  ],
+  "T1_do_dai_zh": [
+   13,
+   22
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "red",
+    "yellow"
+   ],
+   "zh": [
+    "红色",
+    "黄色"
+   ],
+   "nguon": "Little Seed U11",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "How many ___?",

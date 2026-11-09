@@ -873,8 +873,46 @@
    }
   ],
   "tu_cu_quay_lai": {
-   "en": [],
-   "zh": []
+   "en": [
+    "bitter",
+    "cookie",
+    "sour",
+    "japan",
+    "rucksack",
+    "france",
+    "korea"
+   ],
+   "zh": [
+    "甜点",
+    "苦",
+    "饼干",
+    "咸",
+    "美国",
+    "日本",
+    "法国",
+    "韩国"
+   ]
+  },
+  "T1_do_dai": [
+   40,
+   50
+  ],
+  "T1_do_dai_zh": [
+   52,
+   75
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "sightseeing",
+    "bake"
+   ],
+   "zh": [
+    "观光",
+    "度假村"
+   ],
+   "nguon": "Pupa U12",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "Our flat has got a ___.",
@@ -2187,15 +2225,40 @@
   ],
   "tu_cu_quay_lai": {
    "en": [
+    "japan",
+    "rucksack",
+    "korea",
     "conditioner",
     "heater",
     "bin",
     "faucet"
    ],
    "zh": [
+    "美国",
     "暖气",
     "浴缸"
    ]
+  },
+  "T1_do_dai": [
+   40,
+   50
+  ],
+  "T1_do_dai_zh": [
+   52,
+   75
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "tidy",
+    "empty"
+   ],
+   "zh": [
+    "楼",
+    "冰箱"
+   ],
+   "nguon": "Cocoon U1",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "I'm wearing ___.",
@@ -3160,6 +3223,27 @@
     "圆点",
     "旗袍"
    ]
+  },
+  "T1_do_dai": [
+   40,
+   50
+  ],
+  "T1_do_dai_zh": [
+   52,
+   75
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "online",
+    "you're welcome"
+   ],
+   "zh": [
+    "戴",
+    "旧"
+   ],
+   "nguon": "Cocoon U2",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "The forecast says it will be ___.",
@@ -4469,6 +4553,27 @@
    "zh": [
     "圆点"
    ]
+  },
+  "T1_do_dai": [
+   40,
+   50
+  ],
+  "T1_do_dai_zh": [
+   52,
+   75
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "warm",
+    "tonight"
+   ],
+   "zh": [
+    "暖和",
+    "一会儿"
+   ],
+   "nguon": "Cocoon U3",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "My favourite subject is ___.",
@@ -5943,6 +6048,27 @@
     "文学"
    ]
   },
+  "T1_do_dai": [
+   40,
+   50
+  ],
+  "T1_do_dai_zh": [
+   52,
+   75
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "each",
+    "no problem"
+   ],
+   "zh": [
+    "声音",
+    "作业"
+   ],
+   "nguon": "Cocoon U4",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
+  },
   "khung_cau": {
    "en": "I'm watching ___.",
    "zh": "我正在看___。",
@@ -7254,6 +7380,27 @@
    ],
    "zh": []
   },
+  "T1_do_dai": [
+   40,
+   50
+  ],
+  "T1_do_dai_zh": [
+   52,
+   75
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "interesting",
+    "turn on"
+   ],
+   "zh": [
+    "新闻",
+    "有名"
+   ],
+   "nguon": "Cocoon U5",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
+  },
   "khung_cau": {
    "en": "Can I borrow your ___?",
    "zh": "我可以借你的___吗？",
@@ -8447,6 +8594,27 @@
    "zh": [
     "招待"
    ]
+  },
+  "T1_do_dai": [
+   40,
+   50
+  ],
+  "T1_do_dai_zh": [
+   52,
+   75
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "speak",
+    "keep"
+   ],
+   "zh": [
+    "地",
+    "借"
+   ],
+   "nguon": "Cocoon U6",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "Why do you like ___? Because it's fun!",
@@ -9725,6 +9893,27 @@
     "招待"
    ]
   },
+  "T1_do_dai": [
+   40,
+   50
+  ],
+  "T1_do_dai_zh": [
+   52,
+   75
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "score",
+    "race"
+   ],
+   "zh": [
+    "比赛",
+    "提"
+   ],
+   "nguon": "Cocoon U7",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
+  },
   "khung_cau": {
    "en": "You should ___.",
    "zh": "你应该___。",
@@ -10996,6 +11185,27 @@
     "咳嗽",
     "受伤"
    ]
+  },
+  "T1_do_dai": [
+   40,
+   50
+  ],
+  "T1_do_dai_zh": [
+   52,
+   75
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "ready",
+    "lovely"
+   ],
+   "zh": [
+    "小心",
+    "特别"
+   ],
+   "nguon": "Cocoon U8",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "How do you get to the ___?",
@@ -12545,6 +12755,27 @@
    "en": [],
    "zh": []
   },
+  "T1_do_dai": [
+   40,
+   50
+  ],
+  "T1_do_dai_zh": [
+   52,
+   75
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "post office",
+    "straight on"
+   ],
+   "zh": [
+    "一下儿",
+    "地图"
+   ],
+   "nguon": "Cocoon U9",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
+  },
   "khung_cau": {
    "en": "Where are you from? I'm from ___.",
    "zh": "你从哪儿来？我从___来。",
@@ -13932,6 +14163,27 @@
     "俄罗斯"
    ]
   },
+  "T1_do_dai": [
+   40,
+   50
+  ],
+  "T1_do_dai_zh": [
+   52,
+   75
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "hear",
+    "remember"
+   ],
+   "zh": [
+    "照顾",
+    "记得"
+   ],
+   "nguon": "Cocoon U10",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
+  },
   "khung_cau": {
    "en": "Let's ___!",
    "zh": "我们来___吧！",
@@ -15009,6 +15261,27 @@
     "一步一步",
     "用烤箱烤面包"
    ]
+  },
+  "T1_do_dai": [
+   40,
+   50
+  ],
+  "T1_do_dai_zh": [
+   52,
+   75
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "fry",
+    "roast chicken"
+   ],
+   "zh": [
+    "微波炉",
+    "烧"
+   ],
+   "nguon": "Cocoon U11",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "I'm going to ___.",

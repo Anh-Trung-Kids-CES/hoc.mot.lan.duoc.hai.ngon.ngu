@@ -27,7 +27,7 @@ def variants(word):
     word=re.sub(r'\(.*?\)','',word)
     return [re.sub(r'\s+',' ',x).strip() for x in re.split(r'[/,]',word) if x.strip()]
 cov=json.load(open(S+'cov/coverage.json'))
-MIL={'YCT1':'seedling','Starters':'canopy','YCT2':'canopy','Movers':'larva','YCT3':'larva','Flyers':'butterfly','YCT4':'butterfly'}
+MIL={'YCT1':'seedling','Starters':'canopy','YCT2':'canopy','Movers':'larva-plus','YCT3':'larva-plus','Flyers':'butterfly','YCT4':'butterfly'}
 res=[]
 for x in cov:
     lv=x['level']; end=ORDER.index(MIL[lv]); vs=variants(x['word'])

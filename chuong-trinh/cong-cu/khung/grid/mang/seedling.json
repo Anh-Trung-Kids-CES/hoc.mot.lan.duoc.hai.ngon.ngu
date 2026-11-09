@@ -495,6 +495,27 @@
    "en": [],
    "zh": []
   },
+  "T1_do_dai": [
+   15,
+   20
+  ],
+  "T1_do_dai_zh": [
+   20,
+   30
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "two dogs",
+    "how many"
+   ],
+   "zh": [
+    "只",
+    "快乐"
+   ],
+   "nguon": "Little Seed U12",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
+  },
   "khung_cau": {
    "en": "Good morning, ___!",
    "zh": "___，早上好！",
@@ -1368,6 +1389,27 @@
    "en": [],
    "zh": []
   },
+  "T1_do_dai": [
+   15,
+   20
+  ],
+  "T1_do_dai_zh": [
+   20,
+   30
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "good",
+    "wave"
+   ],
+   "zh": [
+    "一起",
+    "见"
+   ],
+   "nguon": "Seedling U1",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
+  },
   "khung_cau": {
    "en": "I'm ___ years old.",
    "zh": "我___岁。",
@@ -2171,6 +2213,27 @@
   "tu_cu_quay_lai": {
    "en": [],
    "zh": []
+  },
+  "T1_do_dai": [
+   15,
+   20
+  ],
+  "T1_do_dai_zh": [
+   20,
+   30
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "again",
+    "nice"
+   ],
+   "zh": [
+    "认识",
+    "高兴"
+   ],
+   "nguon": "Seedling U2",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "He/She is my ___.",
@@ -2982,6 +3045,27 @@
    "en": [],
    "zh": []
   },
+  "T1_do_dai": [
+   15,
+   20
+  ],
+  "T1_do_dai_zh": [
+   20,
+   30
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "learn",
+    "down"
+   ],
+   "zh": [
+    "学",
+    "爱"
+   ],
+   "nguon": "Seedling U3",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
+  },
   "khung_cau": {
    "en": "This is my ___.",
    "zh": "这是我的___。",
@@ -3756,6 +3840,27 @@
   "tu_cu_quay_lai": {
    "en": [],
    "zh": []
+  },
+  "T1_do_dai": [
+   15,
+   20
+  ],
+  "T1_do_dai_zh": [
+   20,
+   30
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "clap",
+    "fun"
+   ],
+   "zh": [
+    "拍拍手",
+    "好玩"
+   ],
+   "nguon": "Seedling U4",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "I'm ___!",
@@ -4553,6 +4658,27 @@
    "en": [],
    "zh": []
   },
+  "T1_do_dai": [
+   15,
+   20
+  ],
+  "T1_do_dai_zh": [
+   20,
+   30
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "hungry",
+    "tell"
+   ],
+   "zh": [
+    "饿",
+    "要"
+   ],
+   "nguon": "Seedling U5",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
+  },
   "khung_cau": {
    "en": "This is my ___.",
    "zh": "这是我的___。",
@@ -5325,6 +5451,27 @@
    "en": [],
    "zh": []
   },
+  "T1_do_dai": [
+   15,
+   20
+  ],
+  "T1_do_dai_zh": [
+   20,
+   30
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "glue",
+    "open"
+   ],
+   "zh": [
+    "读",
+    "胶水"
+   ],
+   "nguon": "Seedling U6",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
+  },
   "khung_cau": {
    "en": "Where is the ___?",
    "zh": "___在哪儿？",
@@ -6061,6 +6208,27 @@
   "tu_cu_quay_lai": {
    "en": [],
    "zh": []
+  },
+  "T1_do_dai": [
+   15,
+   20
+  ],
+  "T1_do_dai_zh": [
+   20,
+   30
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "living room",
+    "dining room"
+   ],
+   "zh": [
+    "客厅",
+    "早上好"
+   ],
+   "nguon": "Seedling U7",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "Can a ___ hop? – Yes, it can! / No, it can't!",
@@ -6907,6 +7075,27 @@
   "tu_cu_quay_lai": {
    "en": [],
    "zh": []
+  },
+  "T1_do_dai": [
+   15,
+   20
+  ],
+  "T1_do_dai_zh": [
+   20,
+   30
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "yes",
+    "hop"
+   ],
+   "zh": [
+    "真",
+    "能"
+   ],
+   "nguon": "Seedling U8",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "Do you like ___? – Yes, I do! / No, I don't!",
@@ -7864,6 +8053,27 @@
    "en": [],
    "zh": []
   },
+  "T1_do_dai": [
+   15,
+   20
+  ],
+  "T1_do_dai_zh": [
+   20,
+   30
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "ice cream",
+    "cross"
+   ],
+   "zh": [
+    "想",
+    "冰淇淋"
+   ],
+   "nguon": "Seedling U9",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
+  },
   "khung_cau": {
    "en": "It's ___ today.",
    "zh": "今天___。",
@@ -8732,6 +8942,27 @@
   "tu_cu_quay_lai": {
    "en": [],
    "zh": []
+  },
+  "T1_do_dai": [
+   15,
+   20
+  ],
+  "T1_do_dai_zh": [
+   20,
+   30
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "today",
+    "come"
+   ],
+   "zh": [
+    "去",
+    "穿"
+   ],
+   "nguon": "Seedling U10",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "What colour is it? – It's ___.",
@@ -9693,6 +9924,27 @@
   "tu_cu_quay_lai": {
    "en": [],
    "zh": []
+  },
+  "T1_do_dai": [
+   15,
+   20
+  ],
+  "T1_do_dai_zh": [
+   20,
+   30
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "brown",
+    "cool"
+   ],
+   "zh": [
+    "棕色",
+    "酷"
+   ],
+   "nguon": "Seedling U11",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "How many ___ are there?",

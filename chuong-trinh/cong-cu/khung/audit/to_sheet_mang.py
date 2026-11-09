@@ -73,7 +73,7 @@ def main():
                          tier('zh', 'Lõi'), tier('zh', 'Vòng ngoài'), ex40,
                          ' | '.join(x for x in (kc.get('en'), kc.get('zh'), ('ô: ' + kc['o']) if kc.get('o') else '') if x) or ('Nghe lại mạng: ' + j(r.get('nghe_lai_mang', []))),
                          j([p.get('en', '') + ' / ' + p.get('zh', '') for p in r.get('cau_cua_mieng') or []], ' · '),
-                         vb_cell(vb.get('T1') or vb.get('R1')), vb_cell(vb.get('T2') or vb.get('R2')), vb_cell(vb.get('T3') or vb.get('R3')),
+                         (vb_cell(vb.get('T1') or vb.get('R1')) + ('\nĐộ dài mỗi phần (NL-2): %d–%d chữ Anh' % tuple(r['T1_do_dai']) if r.get('T1_do_dai') else '') + (', %d–%d chữ Hán' % tuple(r['T1_do_dai_zh']) if r.get('T1_do_dai_zh') else '') + ('\nTừ hay sai cài vào (ng.t. 6, từ %s): %s' % (r['tu_hay_sai']['nguon'], j(r['tu_hay_sai']['en'] + r['tu_hay_sai']['zh'])) if r.get('tu_hay_sai') else '')), vb_cell(vb.get('T2') or vb.get('R2')), vb_cell(vb.get('T3') or vb.get('R3')),
                          vb_cell(vb.get('T4')), '\n\n'.join(vb_cell(vb[k]) for k in ('T5', 'T6', 'T7', 'N1') if k in vb) or '–',
                          ngay, lop or '–', nn_s, kit_s or '–',
                          ('EN: ' + j(back.get('en', [])) if back.get('en') else '') + ('\nZH: ' + j(back.get('zh', [])) if back.get('zh') else '') or '–',

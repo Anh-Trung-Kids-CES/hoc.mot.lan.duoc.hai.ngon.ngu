@@ -301,7 +301,7 @@ def main():
             for L_, items_ in (('en', en_items), ('zh', zh_items)):
                 for it in items_:
                     lab = d[L_][it['w']].get('lab')
-                    if lab and lab != it['tier'] and not review:
+                    if lab and lab != it['tier']:
                         it['tier'] = lab; it['why'] += '; nhãn ghi sẵn trong khung'; it.pop('unsure', None)
             # Ngoại lệ bắt buộc 40: từ vòng ngoài mà đề thi của mốc gần nhất bắt viết / nói
             for it in en_items:

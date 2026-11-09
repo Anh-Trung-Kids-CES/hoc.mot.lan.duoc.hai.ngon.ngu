@@ -26864,44 +26864,6 @@
      "tier": "Lõi"
     },
     {
-     "w": "america",
-     "raw": "America",
-     "first": "ngày 5",
-     "exam": "",
-     "pos": "danh",
-     "reuse": 2,
-     "carry": 2,
-     "score": [
-      0,
-      0,
-      1,
-      2,
-      0,
-      2
-     ],
-     "why": "37c dùng lại ở 2 unit sau",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "japan",
-     "raw": "Japan",
-     "first": "ngày 5",
-     "exam": "",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 2,
-     "score": [
-      0,
-      0,
-      0,
-      2,
-      0,
-      0
-     ],
-     "why": "danh từ / ngoài danh sách thi",
-     "tier": "Vòng ngoài"
-    },
-    {
      "w": "germany",
      "raw": "Germany",
      "first": "ngày 6",
@@ -26919,142 +26881,6 @@
      ],
      "why": "37b khung câu mang được (động/tính, 1 ngày)",
      "tier": "Lõi"
-    },
-    {
-     "w": "language",
-     "raw": "language",
-     "first": "ngày 6",
-     "exam": "Flyers",
-     "pos": "danh",
-     "reuse": 4,
-     "carry": 2,
-     "score": [
-      0,
-      0,
-      1,
-      2,
-      0,
-      3
-     ],
-     "why": "37c dùng lại ở 4 unit sau",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "age",
-     "raw": "age",
-     "first": "ngày 6",
-     "exam": "Movers",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 1,
-     "score": [
-      0,
-      0,
-      0,
-      1,
-      1,
-      0
-     ],
-     "why": "danh từ thi",
-     "tier": "Vòng ngoài",
-     "ex40": "thi bắt viết (Movers)"
-    },
-    {
-     "w": "france",
-     "raw": "France",
-     "first": "ngày 6",
-     "exam": "",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 2,
-     "score": [
-      0,
-      0,
-      0,
-      2,
-      0,
-      0
-     ],
-     "why": "danh từ / ngoài danh sách thi",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "korea",
-     "raw": "Korea",
-     "first": "ngày 6",
-     "exam": "",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 2,
-     "score": [
-      0,
-      0,
-      0,
-      2,
-      0,
-      0
-     ],
-     "why": "danh từ / ngoài danh sách thi",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "russia",
-     "raw": "Russia",
-     "first": "ngày 6",
-     "exam": "",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 1,
-     "score": [
-      0,
-      0,
-      0,
-      1,
-      0,
-      0
-     ],
-     "why": "danh từ / ngoài danh sách thi",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "parent",
-     "raw": "parent",
-     "first": "ngày 7",
-     "exam": "Movers",
-     "pos": "danh",
-     "reuse": 2,
-     "carry": 1,
-     "score": [
-      0,
-      0,
-      1,
-      1,
-      1,
-      2
-     ],
-     "why": "37c dùng lại ở 2 unit sau",
-     "tier": "Vòng ngoài",
-     "ex40": "thi bắt viết (Movers)"
-    },
-    {
-     "w": "grandparent",
-     "raw": "grandparent",
-     "first": "ngày 7",
-     "exam": "Movers",
-     "pos": "danh",
-     "reuse": 3,
-     "carry": 1,
-     "score": [
-      0,
-      0,
-      1,
-      1,
-      1,
-      3
-     ],
-     "why": "37c dùng lại ở 3 unit sau",
-     "tier": "Vòng ngoài",
-     "ex40": "thi bắt viết (Movers)"
     },
     {
      "w": "son",
@@ -27430,7 +27256,7 @@
       0,
       3
      ],
-     "why": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 3 unit sau",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "lõi Anh",
      "tier": "Lõi"
     },
@@ -27454,7 +27280,7 @@
       0,
       3
      ],
-     "why": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 4 unit sau",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "lõi Anh",
      "tier": "Lõi"
     },
@@ -27478,33 +27304,9 @@
       0,
       3
      ],
-     "why": "37b khung câu mang được (danh, 5 ngày); 37c dùng lại ở 3 unit sau",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "lõi Anh",
      "tier": "Lõi"
-    },
-    {
-     "w": "美国",
-     "raw": "美国 Měiguó (= America)",
-     "gloss": "America",
-     "gk": [
-      "america"
-     ],
-     "first": "ngày 5",
-     "exam": "",
-     "pos": "danh",
-     "reuse": 2,
-     "carry": 2,
-     "score": [
-      0,
-      0,
-      1,
-      2,
-      0,
-      2
-     ],
-     "why": "37c dùng lại ở 2 unit sau; nghĩa Anh là vòng ngoài (ng.t. 42)",
-     "en_link": "vòng ngoài Anh",
-     "tier": "Vòng ngoài"
     },
     {
      "w": "德国",
@@ -27526,81 +27328,9 @@
       0,
       0
      ],
-     "why": "37b khung câu mang được (động/tính, 1 ngày)",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "lõi Anh",
      "tier": "Lõi"
-    },
-    {
-     "w": "日本",
-     "raw": "日本 Rìběn (= Japan)",
-     "gloss": "Japan",
-     "gk": [
-      "japan"
-     ],
-     "first": "ngày 6",
-     "exam": "",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 1,
-     "score": [
-      0,
-      0,
-      0,
-      1,
-      0,
-      0
-     ],
-     "why": "danh từ / ngoài danh sách thi; nghĩa Anh là vòng ngoài (ng.t. 42)",
-     "en_link": "vòng ngoài Anh",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "韩国",
-     "raw": "韩国 Hánguó (= Korea)",
-     "gloss": "Korea",
-     "gk": [
-      "korea"
-     ],
-     "first": "ngày 6",
-     "exam": "",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 1,
-     "score": [
-      0,
-      0,
-      0,
-      1,
-      0,
-      0
-     ],
-     "why": "danh từ / ngoài danh sách thi; nghĩa Anh là vòng ngoài (ng.t. 42)",
-     "en_link": "vòng ngoài Anh",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "法国",
-     "raw": "法国 Fǎguó (= France)",
-     "gloss": "France",
-     "gk": [
-      "france"
-     ],
-     "first": "ngày 6",
-     "exam": "",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 2,
-     "score": [
-      0,
-      0,
-      0,
-      2,
-      0,
-      0
-     ],
-     "why": "danh từ / ngoài danh sách thi; nghĩa Anh là vòng ngoài (ng.t. 42)",
-     "en_link": "vòng ngoài Anh",
-     "tier": "Vòng ngoài"
     },
     {
      "w": "男",
@@ -27622,7 +27352,7 @@
       1,
       3
      ],
-     "why": "37c dùng lại ở 4 unit sau",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "không thấy nghĩa Anh",
      "tier": "Lõi"
     },
@@ -27646,7 +27376,7 @@
       1,
       0
      ],
-     "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (chức năng, 2 ngày)",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "không thấy nghĩa Anh",
      "tier": "Lõi"
     },
@@ -27670,7 +27400,7 @@
       1,
       0
      ],
-     "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (chức năng, 1 ngày)",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "không thấy nghĩa Anh",
      "tier": "Lõi"
     },
@@ -27694,7 +27424,7 @@
       1,
       1
      ],
-     "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (cụm, 1 ngày); 37c dùng lại ở 1 unit sau",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "không thấy nghĩa Anh",
      "tier": "Lõi"
     },
@@ -27718,7 +27448,7 @@
       1,
       3
      ],
-     "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (chức năng, 1 ngày); 37c dùng lại ở 7 unit sau",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "Anh đã biết",
      "tier": "Lõi"
     },
@@ -27742,7 +27472,7 @@
       1,
       2
      ],
-     "why": "37c dùng lại ở 2 unit sau",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "không thấy nghĩa Anh",
      "tier": "Lõi"
     },
@@ -27766,7 +27496,7 @@
       1,
       0
      ],
-     "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (cụm, 2 ngày)",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "không thấy nghĩa Anh",
      "tier": "Lõi"
     }
@@ -27802,101 +27532,6 @@
      ],
      "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 6 ngày); 37c dùng lại ở 3 unit sau",
      "tier": "Lõi"
-    },
-    {
-     "w": "past",
-     "raw": "past",
-     "first": "ngày 13",
-     "exam": "Flyers",
-     "pos": "chức năng",
-     "reuse": 4,
-     "carry": 5,
-     "score": [
-      0,
-      1,
-      1,
-      4,
-      0,
-      3
-     ],
-     "why": "37b khung câu mang được (chức năng, 5 ngày); 37c dùng lại ở 4 unit sau",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "half",
-     "raw": "half",
-     "first": "ngày 13",
-     "exam": "Flyers",
-     "pos": "động/tính",
-     "reuse": 4,
-     "carry": 5,
-     "score": [
-      0,
-      1,
-      1,
-      4,
-      0,
-      3
-     ],
-     "why": "37b khung câu mang được (động/tính, 5 ngày); 37c dùng lại ở 4 unit sau",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "quarter",
-     "raw": "quarter",
-     "first": "ngày 13",
-     "exam": "Flyers",
-     "pos": "danh",
-     "reuse": 1,
-     "carry": 3,
-     "score": [
-      0,
-      1,
-      1,
-      3,
-      0,
-      1
-     ],
-     "why": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 1 unit sau",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "minute",
-     "raw": "minute",
-     "first": "ngày 13",
-     "exam": "Flyers",
-     "pos": "danh",
-     "reuse": 2,
-     "carry": 5,
-     "score": [
-      0,
-      1,
-      1,
-      4,
-      0,
-      2
-     ],
-     "why": "37b khung câu mang được (danh, 5 ngày); 37c dùng lại ở 2 unit sau",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "usually",
-     "raw": "usually",
-     "first": "ngày 13",
-     "exam": "Flyers",
-     "pos": "động/tính",
-     "reuse": 1,
-     "carry": 4,
-     "score": [
-      0,
-      1,
-      1,
-      4,
-      0,
-      1
-     ],
-     "why": "37b khung câu mang được (động/tính, 4 ngày); 37c dùng lại ở 1 unit sau",
-     "tier": "Vòng ngoài"
     },
     {
      "w": "shower",
@@ -27994,25 +27629,6 @@
      "tier": "Lõi"
     },
     {
-     "w": "meal",
-     "raw": "meal",
-     "first": "ngày 14",
-     "exam": "Flyers",
-     "pos": "danh",
-     "reuse": 2,
-     "carry": 2,
-     "score": [
-      0,
-      0,
-      1,
-      2,
-      0,
-      2
-     ],
-     "why": "37c dùng lại ở 2 unit sau",
-     "tier": "Vòng ngoài"
-    },
-    {
      "w": "upstairs",
      "raw": "upstairs",
      "first": "ngày 15",
@@ -28049,86 +27665,6 @@
      ],
      "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 1 ngày); 37c dùng lại ở 1 unit sau",
      "tier": "Lõi"
-    },
-    {
-     "w": "stair",
-     "raw": "stair(s)",
-     "first": "ngày 15",
-     "exam": "Movers",
-     "pos": "danh",
-     "reuse": 1,
-     "carry": 2,
-     "score": [
-      0,
-      0,
-      1,
-      2,
-      1,
-      1
-     ],
-     "why": "37c dùng lại ở 1 unit sau",
-     "tier": "Vòng ngoài",
-     "ex40": "thi bắt viết (Movers)"
-    },
-    {
-     "w": "balcony",
-     "raw": "balcony",
-     "first": "ngày 15",
-     "exam": "Movers",
-     "pos": "danh",
-     "reuse": 1,
-     "carry": 2,
-     "score": [
-      0,
-      0,
-      1,
-      2,
-      1,
-      1
-     ],
-     "why": "37c dùng lại ở 1 unit sau",
-     "tier": "Vòng ngoài",
-     "ex40": "thi bắt viết (Movers)"
-    },
-    {
-     "w": "basement",
-     "raw": "basement",
-     "first": "ngày 15",
-     "exam": "Movers",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 2,
-     "score": [
-      0,
-      0,
-      0,
-      2,
-      1,
-      0
-     ],
-     "why": "danh từ thi",
-     "tier": "Vòng ngoài",
-     "ex40": "thi bắt viết (Movers)"
-    },
-    {
-     "w": "roof",
-     "raw": "roof",
-     "first": "ngày 15",
-     "exam": "Movers",
-     "pos": "danh",
-     "reuse": 2,
-     "carry": 1,
-     "score": [
-      0,
-      0,
-      1,
-      1,
-      1,
-      2
-     ],
-     "why": "37c dùng lại ở 2 unit sau",
-     "tier": "Vòng ngoài",
-     "ex40": "thi bắt viết (Movers)"
     },
     {
      "w": "wet",
@@ -28422,91 +27958,9 @@
      "why": "37c dùng lại ở 1 unit sau",
      "tier": "Vòng ngoài",
      "ex40": "thi bắt viết (Movers)"
-    },
-    {
-     "w": "how long",
-     "raw": "how long",
-     "first": "buổi 9",
-     "exam": "Flyers",
-     "pos": "cụm",
-     "reuse": 3,
-     "carry": 3,
-     "score": [
-      0,
-      1,
-      1,
-      3,
-      0,
-      3
-     ],
-     "why": "37b khung câu mang được (cụm, 3 ngày); 37c dùng lại ở 3 unit sau",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "hour",
-     "raw": "hour",
-     "first": "buổi 9",
-     "exam": "Flyers",
-     "pos": "danh",
-     "reuse": 2,
-     "carry": 1,
-     "score": [
-      0,
-      0,
-      1,
-      1,
-      0,
-      2
-     ],
-     "why": "37c dùng lại ở 2 unit sau",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "last year",
-     "raw": "last year",
-     "first": "buổi 9",
-     "exam": "",
-     "pos": "cụm",
-     "reuse": 1,
-     "carry": 1,
-     "score": [
-      0,
-      1,
-      1,
-      1,
-      0,
-      1
-     ],
-     "why": "37b khung câu mang được (cụm, 1 ngày); 37c dùng lại ở 1 unit sau",
-     "tier": "Vòng ngoài"
     }
    ],
    "zh": [
-    {
-     "w": "半",
-     "raw": "半 bàn (= half)",
-     "gloss": "half",
-     "gk": [
-      "half"
-     ],
-     "first": "ngày 13",
-     "exam": "YCT3",
-     "pos": "động/tính",
-     "reuse": 4,
-     "carry": 5,
-     "score": [
-      1,
-      1,
-      1,
-      4,
-      1,
-      3
-     ],
-     "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 5 ngày); 37c dùng lại ở 4 unit sau; nghĩa Anh là vòng ngoài (ng.t. 42)",
-     "en_link": "vòng ngoài Anh",
-     "tier": "Vòng ngoài",
-     "ex40": "cần cho YCT口试 (YCT3)"
-    },
     {
      "w": "洗澡",
      "raw": "洗澡 xǐzǎo (= have a shower; have a bath)",
@@ -28650,79 +28104,6 @@
      "why": "37c dùng lại ở 2 unit sau; nghĩa Anh là vòng ngoài (ng.t. 42)",
      "en_link": "vòng ngoài Anh",
      "tier": "Vòng ngoài"
-    },
-    {
-     "w": "多久",
-     "raw": "多久 duōjiǔ (= how long)",
-     "gloss": "how long",
-     "gk": [
-      "how long"
-     ],
-     "first": "ngày 17",
-     "exam": "",
-     "pos": "cụm",
-     "reuse": 2,
-     "carry": 5,
-     "score": [
-      0,
-      1,
-      1,
-      4,
-      0,
-      2
-     ],
-     "why": "37b khung câu mang được (cụm, 5 ngày); 37c dùng lại ở 2 unit sau; nghĩa Anh là vòng ngoài (ng.t. 42)",
-     "en_link": "vòng ngoài Anh",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "小时",
-     "raw": "小时 xiǎoshí (= hour)",
-     "gloss": "hour",
-     "gk": [
-      "hour"
-     ],
-     "first": "ngày 17",
-     "exam": "YCT3",
-     "pos": "danh",
-     "reuse": 2,
-     "carry": 1,
-     "score": [
-      0,
-      0,
-      1,
-      1,
-      1,
-      2
-     ],
-     "why": "37c dùng lại ở 2 unit sau; nghĩa Anh là vòng ngoài (ng.t. 42)",
-     "en_link": "vòng ngoài Anh",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "去年",
-     "raw": "去年 qùnián (= last year)",
-     "gloss": "last year",
-     "gk": [
-      "last year"
-     ],
-     "first": "ngày 17",
-     "exam": "YCT3",
-     "pos": "cụm",
-     "reuse": 1,
-     "carry": 1,
-     "score": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1
-     ],
-     "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (cụm, 1 ngày); 37c dùng lại ở 1 unit sau; nghĩa Anh là vòng ngoài (ng.t. 42)",
-     "en_link": "vòng ngoài Anh",
-     "tier": "Vòng ngoài",
-     "ex40": "cần cho YCT口试 (YCT3)"
     }
    ]
   },
@@ -28756,101 +28137,6 @@
      ],
      "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 5 ngày); 37c dùng lại ở 1 unit sau",
      "tier": "Lõi"
-    },
-    {
-     "w": "future",
-     "raw": "future",
-     "first": "ngày 21",
-     "exam": "Flyers",
-     "pos": "danh",
-     "reuse": 1,
-     "carry": 2,
-     "score": [
-      0,
-      0,
-      1,
-      2,
-      0,
-      1
-     ],
-     "why": "37c dùng lại ở 1 unit sau",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "pilot",
-     "raw": "pilot",
-     "first": "ngày 21",
-     "exam": "Flyers",
-     "pos": "danh",
-     "reuse": 1,
-     "carry": 4,
-     "score": [
-      0,
-      1,
-      1,
-      4,
-      0,
-      1
-     ],
-     "why": "37b khung câu mang được (danh, 4 ngày); 37c dùng lại ở 1 unit sau",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "engineer",
-     "raw": "engineer",
-     "first": "ngày 21",
-     "exam": "Flyers",
-     "pos": "danh",
-     "reuse": 2,
-     "carry": 2,
-     "score": [
-      0,
-      0,
-      1,
-      2,
-      0,
-      2
-     ],
-     "why": "37c dùng lại ở 2 unit sau",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "scientist",
-     "raw": "scientist",
-     "first": "ngày 21",
-     "exam": "",
-     "pos": "danh",
-     "reuse": 1,
-     "carry": 3,
-     "score": [
-      0,
-      1,
-      1,
-      3,
-      0,
-      1
-     ],
-     "why": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 1 unit sau",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "vet",
-     "raw": "vet",
-     "first": "ngày 21",
-     "exam": "",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 3,
-     "score": [
-      0,
-      1,
-      0,
-      3,
-      0,
-      0
-     ],
-     "why": "37b khung câu mang được (danh, 3 ngày)",
-     "tier": "Vòng ngoài"
     },
     {
      "w": "build",
@@ -28908,25 +28194,6 @@
      ],
      "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 3 ngày); 37c dùng lại ở 1 unit sau",
      "tier": "Lõi"
-    },
-    {
-     "w": "workplace",
-     "raw": "workplace",
-     "first": "ngày 22",
-     "exam": "",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 2,
-     "score": [
-      0,
-      0,
-      0,
-      2,
-      0,
-      0
-     ],
-     "why": "danh từ / ngoài danh sách thi",
-     "tier": "Vòng ngoài"
     },
     {
      "w": "hundred",
@@ -29368,30 +28635,6 @@
      "why": "37b khung câu mang được (cụm, 5 ngày); 37c dùng lại ở 3 unit sau",
      "en_link": "không thấy nghĩa Anh",
      "tier": "Lõi"
-    },
-    {
-     "w": "科学家",
-     "raw": "科学家 kēxuéjiā (= scientist)",
-     "gloss": "scientist",
-     "gk": [
-      "scientist"
-     ],
-     "first": "ngày 21",
-     "exam": "",
-     "pos": "cụm",
-     "reuse": 1,
-     "carry": 2,
-     "score": [
-      0,
-      1,
-      1,
-      2,
-      0,
-      1
-     ],
-     "why": "37b khung câu mang được (cụm, 2 ngày); 37c dùng lại ở 1 unit sau; nghĩa Anh là vòng ngoài (ng.t. 42)",
-     "en_link": "vòng ngoài Anh",
-     "tier": "Vòng ngoài"
     },
     {
      "w": "帮助",
@@ -29998,25 +29241,6 @@
      "ex40": "thi bắt viết (Movers)"
     },
     {
-     "w": "rucksack",
-     "raw": "rucksack",
-     "first": "buổi 16",
-     "exam": "Flyers",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 3,
-     "score": [
-      0,
-      1,
-      0,
-      3,
-      0,
-      0
-     ],
-     "why": "37b khung câu mang được (danh, 3 ngày)",
-     "tier": "Vòng ngoài"
-    },
-    {
      "w": "backpack",
      "raw": "backpack",
      "first": "buổi 16",
@@ -30556,105 +29780,6 @@
      "tier": "Lõi"
     },
     {
-     "w": "kangaroo",
-     "raw": "kangaroo",
-     "first": "ngày 41",
-     "exam": "Movers",
-     "pos": "danh",
-     "reuse": 1,
-     "carry": 2,
-     "score": [
-      0,
-      0,
-      1,
-      2,
-      1,
-      1
-     ],
-     "why": "37c dùng lại ở 1 unit sau",
-     "tier": "Vòng ngoài",
-     "ex40": "thi bắt viết (Movers)"
-    },
-    {
-     "w": "panda",
-     "raw": "panda",
-     "first": "ngày 41",
-     "exam": "Movers",
-     "pos": "danh",
-     "reuse": 3,
-     "carry": 5,
-     "score": [
-      0,
-      1,
-      1,
-      4,
-      1,
-      3
-     ],
-     "why": "37b khung câu mang được (danh, 5 ngày); 37c dùng lại ở 3 unit sau",
-     "tier": "Vòng ngoài",
-     "ex40": "thi bắt viết (Movers)"
-    },
-    {
-     "w": "dolphin",
-     "raw": "dolphin",
-     "first": "ngày 41",
-     "exam": "Movers",
-     "pos": "danh",
-     "reuse": 2,
-     "carry": 4,
-     "score": [
-      0,
-      1,
-      1,
-      4,
-      1,
-      2
-     ],
-     "why": "37b khung câu mang được (danh, 4 ngày); 37c dùng lại ở 2 unit sau",
-     "tier": "Vòng ngoài",
-     "ex40": "thi bắt viết (Movers)"
-    },
-    {
-     "w": "wolf",
-     "raw": "wolf",
-     "first": "ngày 41",
-     "exam": "",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 5,
-     "score": [
-      0,
-      1,
-      0,
-      4,
-      0,
-      0
-     ],
-     "why": "37b khung câu mang được (danh, 5 ngày)",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "cage",
-     "raw": "cage",
-     "first": "ngày 41",
-     "exam": "Movers",
-     "pos": "danh",
-     "reuse": 1,
-     "carry": 5,
-     "score": [
-      0,
-      1,
-      1,
-      4,
-      1,
-      1
-     ],
-     "why": "37b khung câu mang được (danh, 5 ngày); 37c dùng lại ở 1 unit sau",
-     "tier": "Vòng ngoài",
-     "ex40": "thi bắt viết (Movers)"
-    },
-    {
      "w": "slow",
      "raw": "slow",
      "first": "ngày 42",
@@ -30711,44 +29836,6 @@
      ],
      "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (chức năng, 5 ngày); 37c dùng lại ở 1 unit sau",
      "tier": "Lõi"
-    },
-    {
-     "w": "fast",
-     "raw": "fast",
-     "first": "ngày 42",
-     "exam": "Flyers",
-     "pos": "động/tính",
-     "reuse": 2,
-     "carry": 2,
-     "score": [
-      0,
-      1,
-      1,
-      2,
-      0,
-      2
-     ],
-     "why": "37b khung câu mang được (động/tính, 2 ngày); 37c dùng lại ở 2 unit sau",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "heavy",
-     "raw": "heavy",
-     "first": "ngày 42",
-     "exam": "Flyers",
-     "pos": "động/tính",
-     "reuse": 1,
-     "carry": 2,
-     "score": [
-      0,
-      1,
-      1,
-      2,
-      0,
-      1
-     ],
-     "why": "37b khung câu mang được (động/tính, 2 ngày); 37c dùng lại ở 1 unit sau",
-     "tier": "Vòng ngoài"
     },
     {
      "w": "huge",
@@ -31221,78 +30308,6 @@
      "tier": "Lõi"
     },
     {
-     "w": "狼",
-     "raw": "狼 láng (= wolf)",
-     "gloss": "wolf",
-     "gk": [
-      "wolf"
-     ],
-     "first": "ngày 41",
-     "exam": "",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 6,
-     "score": [
-      0,
-      1,
-      0,
-      4,
-      0,
-      0
-     ],
-     "why": "37b khung câu mang được (danh, 6 ngày); nghĩa Anh là vòng ngoài (ng.t. 42)",
-     "en_link": "vòng ngoài Anh",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "袋鼠",
-     "raw": "袋鼠 dàishǔ (= kangaroo)",
-     "gloss": "kangaroo",
-     "gk": [
-      "kangaroo"
-     ],
-     "first": "ngày 41",
-     "exam": "",
-     "pos": "danh",
-     "reuse": 1,
-     "carry": 2,
-     "score": [
-      0,
-      0,
-      1,
-      2,
-      0,
-      1
-     ],
-     "why": "37c dùng lại ở 1 unit sau; nghĩa Anh là vòng ngoài (ng.t. 42)",
-     "en_link": "vòng ngoài Anh",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "海豚",
-     "raw": "海豚 hǎitún (= dolphin)",
-     "gloss": "dolphin",
-     "gk": [
-      "dolphin"
-     ],
-     "first": "ngày 41",
-     "exam": "",
-     "pos": "danh",
-     "reuse": 2,
-     "carry": 4,
-     "score": [
-      0,
-      1,
-      1,
-      4,
-      0,
-      2
-     ],
-     "why": "37b khung câu mang được (danh, 4 ngày); 37c dùng lại ở 2 unit sau; nghĩa Anh là vòng ngoài (ng.t. 42)",
-     "en_link": "vòng ngoài Anh",
-     "tier": "Vòng ngoài"
-    },
-    {
      "w": "慢",
      "raw": "慢 màn (= slow)",
      "gloss": "slow",
@@ -31315,31 +30330,6 @@
      "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 3 ngày); 37c dùng lại ở 2 unit sau",
      "en_link": "lõi Anh",
      "tier": "Lõi"
-    },
-    {
-     "w": "快",
-     "raw": "快 kuài (= fast)",
-     "gloss": "fast",
-     "gk": [
-      "fast"
-     ],
-     "first": "ngày 42",
-     "exam": "YCT3",
-     "pos": "động/tính",
-     "reuse": 7,
-     "carry": 3,
-     "score": [
-      1,
-      1,
-      1,
-      3,
-      1,
-      3
-     ],
-     "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 3 ngày); 37c dùng lại ở 7 unit sau; nghĩa Anh là vòng ngoài (ng.t. 42)",
-     "en_link": "vòng ngoài Anh",
-     "tier": "Vòng ngoài",
-     "ex40": "cần cho YCT口试 (YCT3)"
     },
     {
      "w": "危险",
@@ -31616,26 +30606,6 @@
      "tier": "Lõi"
     },
     {
-     "w": "ice",
-     "raw": "ice",
-     "first": "ngày 49",
-     "exam": "Movers",
-     "pos": "danh",
-     "reuse": 5,
-     "carry": 3,
-     "score": [
-      0,
-      1,
-      1,
-      3,
-      1,
-      3
-     ],
-     "why": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 5 unit sau",
-     "tier": "Vòng ngoài",
-     "ex40": "thi bắt viết (Movers)"
-    },
-    {
      "w": "kick",
      "raw": "kick",
      "first": "ngày 50",
@@ -31672,122 +30642,6 @@
      ],
      "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 3 ngày)",
      "tier": "Lõi"
-    },
-    {
-     "w": "team",
-     "raw": "team",
-     "first": "ngày 50",
-     "exam": "Flyers",
-     "pos": "danh",
-     "reuse": 2,
-     "carry": 3,
-     "score": [
-      0,
-      1,
-      1,
-      3,
-      0,
-      2
-     ],
-     "why": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 2 unit sau",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "volleyball",
-     "raw": "volleyball",
-     "first": "ngày 50",
-     "exam": "Flyers",
-     "pos": "danh",
-     "reuse": 1,
-     "carry": 4,
-     "score": [
-      0,
-      1,
-      1,
-      4,
-      0,
-      1
-     ],
-     "why": "37b khung câu mang được (danh, 4 ngày); 37c dùng lại ở 1 unit sau",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "win",
-     "raw": "win",
-     "first": "ngày 50",
-     "exam": "Flyers",
-     "pos": "danh",
-     "reuse": 2,
-     "carry": 2,
-     "score": [
-      0,
-      0,
-      1,
-      2,
-      0,
-      2
-     ],
-     "why": "37c dùng lại ở 2 unit sau",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "match",
-     "raw": "match",
-     "first": "ngày 50",
-     "exam": "Flyers",
-     "pos": "danh",
-     "reuse": 2,
-     "carry": 2,
-     "score": [
-      0,
-      0,
-      1,
-      2,
-      0,
-      2
-     ],
-     "why": "37c dùng lại ở 2 unit sau",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "player",
-     "raw": "player",
-     "first": "ngày 50",
-     "exam": "Movers",
-     "pos": "danh",
-     "reuse": 1,
-     "carry": 3,
-     "score": [
-      0,
-      1,
-      1,
-      3,
-      1,
-      1
-     ],
-     "why": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 1 unit sau",
-     "tier": "Vòng ngoài",
-     "ex40": "thi bắt viết (Movers)"
-    },
-    {
-     "w": "goal",
-     "raw": "goal",
-     "first": "ngày 50",
-     "exam": "Movers",
-     "pos": "danh",
-     "reuse": 1,
-     "carry": 2,
-     "score": [
-      0,
-      0,
-      1,
-      2,
-      1,
-      1
-     ],
-     "why": "37c dùng lại ở 1 unit sau",
-     "tier": "Vòng ngoài",
-     "ex40": "thi bắt viết (Movers)"
     },
     {
      "w": "fair",
@@ -31845,26 +30699,6 @@
      ],
      "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (cụm, 3 ngày); 37c dùng lại ở 1 unit sau",
      "tier": "Lõi"
-    },
-    {
-     "w": "funfair",
-     "raw": "funfair",
-     "first": "ngày 51",
-     "exam": "Movers",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 1,
-     "score": [
-      0,
-      0,
-      0,
-      1,
-      1,
-      0
-     ],
-     "why": "danh từ thi",
-     "tier": "Vòng ngoài",
-     "ex40": "thi bắt viết (Movers)"
     },
     {
      "w": "circus",
@@ -32100,25 +30934,6 @@
      "why": "danh từ thi",
      "tier": "Vòng ngoài",
      "ex40": "thi bắt viết (Movers)"
-    },
-    {
-     "w": "catch a bus",
-     "raw": "catch a bus",
-     "first": "ngày 53",
-     "exam": "",
-     "pos": "cụm",
-     "reuse": 1,
-     "carry": 0,
-     "score": [
-      0,
-      0,
-      1,
-      0,
-      0,
-      1
-     ],
-     "why": "37c dùng lại ở 1 unit sau",
-     "tier": "Vòng ngoài"
     }
    ],
    "zh": [
@@ -32143,7 +30958,7 @@
       0,
       2
      ],
-     "why": "37b khung câu mang được (động/tính, 3 ngày); 37c dùng lại ở 2 unit sau",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "lõi Anh",
      "tier": "Lõi"
     },
@@ -32167,7 +30982,7 @@
       1,
       0
      ],
-     "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (cụm, 1 ngày)",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "không thấy nghĩa Anh",
      "tier": "Lõi"
     },
@@ -32191,7 +31006,7 @@
       0,
       0
      ],
-     "why": "37b khung câu mang được (cụm, 1 ngày)",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "không thấy nghĩa Anh",
      "tier": "Lõi"
     },
@@ -32215,7 +31030,7 @@
       0,
       0
      ],
-     "why": "danh từ / ngoài danh sách thi",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "Anh đã biết",
      "tier": "Lõi"
     },
@@ -32239,7 +31054,7 @@
       1,
       0
      ],
-     "why": "37a từ thi bắt tự nói/viết",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "không thấy nghĩa Anh",
      "tier": "Lõi"
     },
@@ -32263,7 +31078,7 @@
       0,
       2
      ],
-     "why": "37c dùng lại ở 2 unit sau",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "Anh đã biết",
      "tier": "Lõi"
     },
@@ -32287,33 +31102,9 @@
       1,
       1
      ],
-     "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (cụm, 1 ngày); 37c dùng lại ở 1 unit sau",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "không thấy nghĩa Anh",
      "tier": "Lõi"
-    },
-    {
-     "w": "排球",
-     "raw": "排球 páiqiú (= volleyball)",
-     "gloss": "volleyball",
-     "gk": [
-      "volleyball"
-     ],
-     "first": "ngày 50",
-     "exam": "YCT4",
-     "pos": "danh",
-     "reuse": 1,
-     "carry": 4,
-     "score": [
-      0,
-      1,
-      1,
-      4,
-      0,
-      1
-     ],
-     "why": "37b khung câu mang được (danh, 4 ngày); 37c dùng lại ở 1 unit sau; nghĩa Anh là vòng ngoài (ng.t. 42)",
-     "en_link": "vòng ngoài Anh",
-     "tier": "Vòng ngoài"
     },
     {
      "w": "乒乓球",
@@ -32335,7 +31126,7 @@
       0,
       0
      ],
-     "why": "37b khung câu mang được (cụm, 3 ngày)",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "Anh đã biết",
      "tier": "Lõi"
     },
@@ -32359,7 +31150,7 @@
       0,
       0
      ],
-     "why": "danh từ / ngoài danh sách thi",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "không thấy nghĩa Anh",
      "tier": "Lõi"
     },
@@ -32383,7 +31174,7 @@
       0,
       0
      ],
-     "why": "danh từ / ngoài danh sách thi",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "Anh đã biết",
      "tier": "Lõi"
     },
@@ -32408,7 +31199,7 @@
       1,
       1
      ],
-     "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 3 ngày); 37c dùng lại ở 1 unit sau",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "lõi Anh",
      "tier": "Lõi"
     },
@@ -32432,7 +31223,7 @@
       1,
       1
      ],
-     "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (cụm, 2 ngày); 37c dùng lại ở 1 unit sau",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "không thấy nghĩa Anh",
      "tier": "Lõi"
     },
@@ -32456,7 +31247,7 @@
       1,
       2
      ],
-     "why": "37c dùng lại ở 2 unit sau",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "Anh đã biết",
      "tier": "Lõi"
     },
@@ -32481,7 +31272,7 @@
       1,
       2
      ],
-     "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (cụm, 2 ngày); 37c dùng lại ở 2 unit sau",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "không thấy nghĩa Anh",
      "tier": "Lõi"
     }
@@ -32638,63 +31429,6 @@
      "tier": "Lõi"
     },
     {
-     "w": "dessert",
-     "raw": "dessert",
-     "first": "ngày 58",
-     "exam": "",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 3,
-     "score": [
-      0,
-      1,
-      0,
-      3,
-      0,
-      0
-     ],
-     "why": "37b khung câu mang được (danh, 3 ngày)",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "biscuit",
-     "raw": "biscuit",
-     "first": "ngày 58",
-     "exam": "Flyers",
-     "pos": "danh",
-     "reuse": 1,
-     "carry": 2,
-     "score": [
-      0,
-      0,
-      1,
-      2,
-      0,
-      1
-     ],
-     "why": "37c dùng lại ở 1 unit sau",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "cookie",
-     "raw": "cookie",
-     "first": "ngày 58",
-     "exam": "Flyers",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 2,
-     "score": [
-      0,
-      0,
-      0,
-      2,
-      0,
-      0
-     ],
-     "why": "danh từ / ngoài danh sách thi",
-     "tier": "Vòng ngoài"
-    },
-    {
      "w": "milkshake",
      "raw": "milkshake",
      "first": "ngày 58",
@@ -32790,63 +31524,6 @@
      ],
      "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (chức năng, 2 ngày)",
      "tier": "Lõi"
-    },
-    {
-     "w": "salty",
-     "raw": "salty",
-     "first": "ngày 59",
-     "exam": "",
-     "pos": "động/tính",
-     "reuse": 0,
-     "carry": 3,
-     "score": [
-      0,
-      1,
-      0,
-      3,
-      0,
-      0
-     ],
-     "why": "37b khung câu mang được (động/tính, 3 ngày)",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "sour",
-     "raw": "sour",
-     "first": "ngày 59",
-     "exam": "",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 3,
-     "score": [
-      0,
-      1,
-      0,
-      3,
-      0,
-      0
-     ],
-     "why": "37b khung câu mang được (danh, 3 ngày)",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "bitter",
-     "raw": "bitter",
-     "first": "ngày 59",
-     "exam": "",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 2,
-     "score": [
-      0,
-      0,
-      0,
-      2,
-      0,
-      0
-     ],
-     "why": "danh từ / ngoài danh sách thi",
-     "tier": "Vòng ngoài"
     },
     {
      "w": "excuse me",
@@ -33080,7 +31757,7 @@
       1,
       0
      ],
-     "why": "danh từ thi",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "Anh đã biết",
      "tier": "Lõi"
     },
@@ -33105,7 +31782,7 @@
       1,
       1
      ],
-     "why": "37b khung câu mang được (danh, 6 ngày); 37c dùng lại ở 1 unit sau",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "Anh đã biết",
      "tier": "Lõi"
     },
@@ -33130,7 +31807,7 @@
       1,
       1
      ],
-     "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 1 ngày); 37c dùng lại ở 1 unit sau",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "không thấy nghĩa Anh",
      "tier": "Lõi"
     },
@@ -33154,7 +31831,7 @@
       0,
       1
      ],
-     "why": "37b khung câu mang được (cụm, 4 ngày); 37c dùng lại ở 1 unit sau",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "Anh đã biết",
      "tier": "Lõi"
     },
@@ -33178,58 +31855,9 @@
       0,
       1
      ],
-     "why": "37b khung câu mang được (danh, 5 ngày); 37c dùng lại ở 1 unit sau",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "không thấy nghĩa Anh",
      "tier": "Lõi"
-    },
-    {
-     "w": "甜点",
-     "raw": "甜点 tiándiǎn (= dessert)",
-     "gloss": "dessert",
-     "gk": [
-      "dessert"
-     ],
-     "first": "ngày 58",
-     "exam": "",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 3,
-     "score": [
-      0,
-      1,
-      0,
-      3,
-      0,
-      0
-     ],
-     "why": "37b khung câu mang được (danh, 3 ngày); nghĩa Anh là vòng ngoài (ng.t. 42)",
-     "en_link": "vòng ngoài Anh",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "饼干",
-     "raw": "饼干 bǐnggān (= biscuit, cookie)",
-     "gloss": "biscuit, cookie",
-     "gk": [
-      "biscuit",
-      "cookie"
-     ],
-     "first": "ngày 58",
-     "exam": "YCT4",
-     "pos": "danh",
-     "reuse": 1,
-     "carry": 3,
-     "score": [
-      0,
-      1,
-      1,
-      3,
-      0,
-      1
-     ],
-     "why": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 1 unit sau; nghĩa Anh là vòng ngoài (ng.t. 42)",
-     "en_link": "vòng ngoài Anh",
-     "tier": "Vòng ngoài"
     },
     {
      "w": "甜",
@@ -33251,7 +31879,7 @@
       0,
       2
      ],
-     "why": "37b khung câu mang được (danh, 6 ngày); 37c dùng lại ở 2 unit sau",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "lõi Anh",
      "tier": "Lõi"
     },
@@ -33275,7 +31903,7 @@
       0,
       1
      ],
-     "why": "37b khung câu mang được (động/tính, 3 ngày); 37c dùng lại ở 1 unit sau",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "lõi Anh",
      "tier": "Lõi"
     },
@@ -33300,81 +31928,9 @@
       0,
       1
      ],
-     "why": "37c dùng lại ở 1 unit sau",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "lõi Anh",
      "tier": "Lõi"
-    },
-    {
-     "w": "咸",
-     "raw": "咸 xián (= salty)",
-     "gloss": "salty",
-     "gk": [
-      "salty"
-     ],
-     "first": "ngày 59",
-     "exam": "",
-     "pos": "động/tính",
-     "reuse": 0,
-     "carry": 3,
-     "score": [
-      0,
-      1,
-      0,
-      3,
-      0,
-      0
-     ],
-     "why": "37b khung câu mang được (động/tính, 3 ngày); nghĩa Anh là vòng ngoài (ng.t. 42)",
-     "en_link": "vòng ngoài Anh",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "酸",
-     "raw": "酸 suān (= sour)",
-     "gloss": "sour",
-     "gk": [
-      "sour"
-     ],
-     "first": "ngày 59",
-     "exam": "",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 3,
-     "score": [
-      0,
-      1,
-      0,
-      3,
-      0,
-      0
-     ],
-     "why": "37b khung câu mang được (danh, 3 ngày); nghĩa Anh là vòng ngoài (ng.t. 42)",
-     "en_link": "vòng ngoài Anh",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "苦",
-     "raw": "苦 kǔ (= bitter)",
-     "gloss": "bitter",
-     "gk": [
-      "bitter"
-     ],
-     "first": "ngày 59",
-     "exam": "",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 2,
-     "score": [
-      0,
-      0,
-      0,
-      2,
-      0,
-      0
-     ],
-     "why": "danh từ / ngoài danh sách thi; nghĩa Anh là vòng ngoài (ng.t. 42)",
-     "en_link": "vòng ngoài Anh",
-     "tier": "Vòng ngoài"
     },
     {
      "w": "还是",
@@ -33396,7 +31952,7 @@
       0,
       0
      ],
-     "why": "37b khung câu mang được (chức năng, 3 ngày)",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "Anh đã biết",
      "tier": "Lõi"
     },
@@ -33420,7 +31976,7 @@
       1,
       0
      ],
-     "why": "danh từ thi",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "không thấy nghĩa Anh",
      "tier": "Lõi"
     },
@@ -33444,7 +32000,7 @@
       1,
       2
      ],
-     "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (chức năng, 4 ngày); 37c dùng lại ở 2 unit sau",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "lõi Anh",
      "tier": "Lõi"
     },
@@ -33468,7 +32024,7 @@
       1,
       1
      ],
-     "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (chức năng, 2 ngày); 37c dùng lại ở 1 unit sau",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "không thấy nghĩa Anh",
      "tier": "Lõi"
     }
@@ -33544,83 +32100,6 @@
      "tier": "Lõi"
     },
     {
-     "w": "spring",
-     "raw": "spring",
-     "first": "ngày 65",
-     "exam": "Flyers",
-     "pos": "danh",
-     "reuse": 1,
-     "carry": 3,
-     "score": [
-      0,
-      1,
-      1,
-      3,
-      0,
-      1
-     ],
-     "why": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 1 unit sau",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "summer",
-     "raw": "summer",
-     "first": "ngày 65",
-     "exam": "Flyers",
-     "pos": "danh",
-     "reuse": 2,
-     "carry": 3,
-     "score": [
-      0,
-      1,
-      1,
-      3,
-      0,
-      2
-     ],
-     "why": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 2 unit sau",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "autumn",
-     "raw": "autumn",
-     "first": "ngày 65",
-     "exam": "Flyers",
-     "pos": "danh",
-     "reuse": 2,
-     "carry": 2,
-     "score": [
-      0,
-      0,
-      1,
-      2,
-      0,
-      2
-     ],
-     "why": "37c dùng lại ở 2 unit sau",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "wind",
-     "raw": "wind",
-     "first": "ngày 65",
-     "exam": "Movers",
-     "pos": "danh",
-     "reuse": 1,
-     "carry": 1,
-     "score": [
-      0,
-      0,
-      1,
-      1,
-      1,
-      1
-     ],
-     "why": "37c dùng lại ở 1 unit sau",
-     "tier": "Vòng ngoài",
-     "ex40": "thi bắt viết (Movers)"
-    },
-    {
      "w": "ill",
      "raw": "ill",
      "first": "ngày 66",
@@ -33678,65 +32157,6 @@
      "tier": "Lõi"
     },
     {
-     "w": "cough",
-     "raw": "cough",
-     "first": "ngày 66",
-     "exam": "Movers",
-     "pos": "danh",
-     "reuse": 1,
-     "carry": 3,
-     "score": [
-      0,
-      1,
-      1,
-      3,
-      1,
-      1
-     ],
-     "why": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 1 unit sau",
-     "tier": "Vòng ngoài",
-     "ex40": "thi bắt viết (Movers)"
-    },
-    {
-     "w": "temperature",
-     "raw": "temperature",
-     "first": "ngày 66",
-     "exam": "Movers",
-     "pos": "danh",
-     "reuse": 1,
-     "carry": 1,
-     "score": [
-      0,
-      0,
-      1,
-      1,
-      1,
-      1
-     ],
-     "why": "37c dùng lại ở 1 unit sau",
-     "tier": "Vòng ngoài",
-     "ex40": "thi bắt viết (Movers)"
-    },
-    {
-     "w": "fever",
-     "raw": "fever",
-     "first": "ngày 66",
-     "exam": "",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 1,
-     "score": [
-      0,
-      0,
-      0,
-      1,
-      0,
-      0
-     ],
-     "why": "danh từ / ngoài danh sách thi",
-     "tier": "Vòng ngoài"
-    },
-    {
      "w": "matter",
      "raw": "matter",
      "first": "ngày 66",
@@ -33755,44 +32175,6 @@
      "why": "37b khung câu mang được (danh, 4 ngày)",
      "tier": "Vòng ngoài",
      "ex40": "thi bắt viết (Movers)"
-    },
-    {
-     "w": "sore",
-     "raw": "sore",
-     "first": "ngày 67",
-     "exam": "Flyers",
-     "pos": "động/tính",
-     "reuse": 1,
-     "carry": 3,
-     "score": [
-      0,
-      1,
-      1,
-      3,
-      0,
-      1
-     ],
-     "why": "37b khung câu mang được (động/tính, 3 ngày); 37c dùng lại ở 1 unit sau",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "throat",
-     "raw": "throat",
-     "first": "ngày 67",
-     "exam": "",
-     "pos": "danh",
-     "reuse": 1,
-     "carry": 3,
-     "score": [
-      0,
-      1,
-      1,
-      3,
-      0,
-      1
-     ],
-     "why": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 1 unit sau",
-     "tier": "Vòng ngoài"
     },
     {
      "w": "headache",
@@ -33893,25 +32275,6 @@
      "why": "danh từ thi",
      "tier": "Vòng ngoài",
      "ex40": "thi bắt viết (Movers)"
-    },
-    {
-     "w": "stomachache",
-     "raw": "stomachache",
-     "first": "ngày 67",
-     "exam": "",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 0,
-     "score": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
-     ],
-     "why": "danh từ / ngoài danh sách thi",
-     "tier": "Vòng ngoài"
     },
     {
      "w": "hurt",
@@ -34200,54 +32563,6 @@
      "tier": "Lõi"
     },
     {
-     "w": "春天",
-     "raw": "春天 chūntiān (= spring)",
-     "gloss": "spring",
-     "gk": [
-      "spring"
-     ],
-     "first": "ngày 65",
-     "exam": "",
-     "pos": "danh",
-     "reuse": 1,
-     "carry": 3,
-     "score": [
-      0,
-      1,
-      1,
-      3,
-      0,
-      1
-     ],
-     "why": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 1 unit sau; nghĩa Anh là vòng ngoài (ng.t. 42)",
-     "en_link": "vòng ngoài Anh",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "夏天",
-     "raw": "夏天 xiàtiān (= summer)",
-     "gloss": "summer",
-     "gk": [
-      "summer"
-     ],
-     "first": "ngày 65",
-     "exam": "",
-     "pos": "danh",
-     "reuse": 2,
-     "carry": 3,
-     "score": [
-      0,
-      1,
-      1,
-      3,
-      0,
-      2
-     ],
-     "why": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 2 unit sau; nghĩa Anh là vòng ngoài (ng.t. 42)",
-     "en_link": "vòng ngoài Anh",
-     "tier": "Vòng ngoài"
-    },
-    {
      "w": "身体",
      "raw": "身体 shēntǐ (= body; 你身体好吗 = Are you well?)",
      "gloss": "body; 你身体好吗 = Are you well?",
@@ -34319,31 +32634,6 @@
      "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 2 ngày)",
      "en_link": "Anh đã biết",
      "tier": "Lõi"
-    },
-    {
-     "w": "发烧",
-     "raw": "发烧 fāshāo (= fever, temperature)",
-     "gloss": "fever, temperature",
-     "gk": [
-      "fever",
-      "temperature"
-     ],
-     "first": "ngày 66",
-     "exam": "YCT4",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 1,
-     "score": [
-      0,
-      0,
-      0,
-      1,
-      0,
-      0
-     ],
-     "why": "danh từ / ngoài danh sách thi; nghĩa Anh là vòng ngoài (ng.t. 42)",
-     "en_link": "vòng ngoài Anh",
-     "tier": "Vòng ngoài"
     },
     {
      "w": "疼",
@@ -34619,8 +32909,7 @@
       1
      ],
      "why": "37b khung câu mang được (danh, 5 ngày); 37c dùng lại ở 1 unit sau",
-     "tier": "Lõi",
-     "unsure": true
+     "tier": "Lõi"
     },
     {
      "w": "right",
@@ -34640,65 +32929,6 @@
      ],
      "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (chức năng, 4 ngày); 37c dùng lại ở 2 unit sau",
      "tier": "Lõi"
-    },
-    {
-     "w": "office",
-     "raw": "office",
-     "first": "ngày 77",
-     "exam": "Flyers",
-     "pos": "danh",
-     "reuse": 1,
-     "carry": 5,
-     "score": [
-      0,
-      1,
-      1,
-      4,
-      0,
-      1
-     ],
-     "why": "37b khung câu mang được (danh, 5 ngày); 37c dùng lại ở 1 unit sau",
-     "tier": "Vòng ngoài",
-     "unsure": true
-    },
-    {
-     "w": "canteen",
-     "raw": "canteen",
-     "first": "ngày 77",
-     "exam": "",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 6,
-     "score": [
-      0,
-      1,
-      0,
-      4,
-      0,
-      0
-     ],
-     "why": "37b khung câu mang được (danh, 6 ngày)",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "left",
-     "raw": "left",
-     "first": "ngày 77",
-     "exam": "Flyers",
-     "pos": "động/tính",
-     "reuse": 1,
-     "carry": 4,
-     "score": [
-      0,
-      1,
-      1,
-      4,
-      0,
-      1
-     ],
-     "why": "37b khung câu mang được (động/tính, 4 ngày); 37c dùng lại ở 1 unit sau",
-     "tier": "Vòng ngoài",
-     "unsure": true
     },
     {
      "w": "come on",
@@ -34756,25 +32986,6 @@
      ],
      "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 2 ngày); 37c dùng lại ở 1 unit sau",
      "tier": "Lõi"
-    },
-    {
-     "w": "turn",
-     "raw": "turn",
-     "first": "ngày 78",
-     "exam": "Flyers",
-     "pos": "động/tính",
-     "reuse": 1,
-     "carry": 3,
-     "score": [
-      0,
-      1,
-      1,
-      3,
-      0,
-      1
-     ],
-     "why": "37b khung câu mang được (động/tính, 3 ngày); 37c dùng lại ở 1 unit sau",
-     "tier": "Vòng ngoài"
     },
     {
      "w": "leave",
@@ -35200,79 +33411,6 @@
      "tier": "Lõi"
     },
     {
-     "w": "办公室",
-     "raw": "办公室 bàngōngshì (= office)",
-     "gloss": "office",
-     "gk": [
-      "office"
-     ],
-     "first": "ngày 77",
-     "exam": "",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 5,
-     "score": [
-      0,
-      1,
-      0,
-      4,
-      0,
-      0
-     ],
-     "why": "37b khung câu mang được (danh, 5 ngày); nghĩa Anh là vòng ngoài (ng.t. 42)",
-     "en_link": "vòng ngoài Anh",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "食堂",
-     "raw": "食堂 shítáng (= canteen)",
-     "gloss": "canteen",
-     "gk": [
-      "canteen"
-     ],
-     "first": "ngày 77",
-     "exam": "",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 7,
-     "score": [
-      0,
-      1,
-      0,
-      4,
-      0,
-      0
-     ],
-     "why": "37b khung câu mang được (danh, 7 ngày); nghĩa Anh là vòng ngoài (ng.t. 42)",
-     "en_link": "vòng ngoài Anh",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "左",
-     "raw": "左 zuǒ (= left)",
-     "gloss": "left",
-     "gk": [
-      "left"
-     ],
-     "first": "ngày 77",
-     "exam": "YCT3",
-     "pos": "động/tính",
-     "reuse": 1,
-     "carry": 5,
-     "score": [
-      1,
-      1,
-      1,
-      4,
-      1,
-      1
-     ],
-     "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 5 ngày); 37c dùng lại ở 1 unit sau; nghĩa Anh là vòng ngoài (ng.t. 42)",
-     "en_link": "vòng ngoài Anh",
-     "tier": "Vòng ngoài",
-     "ex40": "cần cho YCT口试 (YCT3)"
-    },
-    {
      "w": "教室",
      "raw": "教室 jiàoshì (= classroom)",
      "gloss": "classroom",
@@ -35390,30 +33528,6 @@
      ],
      "why": "danh từ / ngoài danh sách thi",
      "en_link": "không thấy nghĩa Anh",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "转",
-     "raw": "转 zhuǎn (= turn)",
-     "gloss": "turn",
-     "gk": [
-      "turn"
-     ],
-     "first": "ngày 78",
-     "exam": "",
-     "pos": "động/tính",
-     "reuse": 2,
-     "carry": 3,
-     "score": [
-      0,
-      1,
-      1,
-      3,
-      0,
-      2
-     ],
-     "why": "37b khung câu mang được (động/tính, 3 ngày); 37c dùng lại ở 2 unit sau; nghĩa Anh là vòng ngoài (ng.t. 42)",
-     "en_link": "vòng ngoài Anh",
      "tier": "Vòng ngoài"
     },
     {
@@ -35724,64 +33838,6 @@
      "tier": "Lõi"
     },
     {
-     "w": "let",
-     "raw": "let",
-     "first": "ngày 85",
-     "exam": "Flyers",
-     "pos": "động/tính",
-     "reuse": 0,
-     "carry": 2,
-     "score": [
-      0,
-      1,
-      0,
-      2,
-      0,
-      0
-     ],
-     "why": "37b khung câu mang được (động/tính, 2 ngày)",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "money",
-     "raw": "money",
-     "first": "ngày 85",
-     "exam": "Flyers",
-     "pos": "danh",
-     "reuse": 2,
-     "carry": 3,
-     "score": [
-      0,
-      1,
-      1,
-      3,
-      0,
-      2
-     ],
-     "why": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 2 unit sau",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "market",
-     "raw": "market",
-     "first": "ngày 85",
-     "exam": "Movers",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 2,
-     "score": [
-      0,
-      0,
-      0,
-      2,
-      1,
-      0
-     ],
-     "why": "danh từ thi",
-     "tier": "Vòng ngoài",
-     "ex40": "thi bắt viết (Movers)"
-    },
-    {
      "w": "how much",
      "raw": "how much",
      "first": "ngày 86",
@@ -35839,82 +33895,6 @@
      "tier": "Lõi"
     },
     {
-     "w": "dollar",
-     "raw": "dollar",
-     "first": "ngày 86",
-     "exam": "",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 3,
-     "score": [
-      0,
-      1,
-      0,
-      3,
-      0,
-      0
-     ],
-     "why": "37b khung câu mang được (danh, 3 ngày)",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "yuan",
-     "raw": "yuan",
-     "first": "ngày 86",
-     "exam": "",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 3,
-     "score": [
-      0,
-      1,
-      0,
-      3,
-      0,
-      0
-     ],
-     "why": "37b khung câu mang được (danh, 3 ngày)",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "sale",
-     "raw": "sale",
-     "first": "ngày 86",
-     "exam": "",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 3,
-     "score": [
-      0,
-      1,
-      0,
-      3,
-      0,
-      0
-     ],
-     "why": "37b khung câu mang được (danh, 3 ngày)",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "size",
-     "raw": "size",
-     "first": "ngày 86",
-     "exam": "",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 1,
-     "score": [
-      0,
-      0,
-      0,
-      1,
-      0,
-      0
-     ],
-     "why": "danh từ / ngoài danh sách thi",
-     "tier": "Vòng ngoài"
-    },
-    {
      "w": "centre",
      "raw": "centre",
      "first": "ngày 87",
@@ -35951,105 +33931,6 @@
      ],
      "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (cụm, 3 ngày)",
      "tier": "Lõi"
-    },
-    {
-     "w": "city",
-     "raw": "city",
-     "first": "ngày 87",
-     "exam": "Movers",
-     "pos": "danh",
-     "reuse": 2,
-     "carry": 1,
-     "score": [
-      0,
-      0,
-      1,
-      1,
-      1,
-      2
-     ],
-     "why": "37c dùng lại ở 2 unit sau",
-     "tier": "Vòng ngoài",
-     "ex40": "thi bắt viết (Movers)"
-    },
-    {
-     "w": "city/town centre",
-     "raw": "city/town centre",
-     "first": "ngày 87",
-     "exam": "",
-     "pos": "cụm",
-     "reuse": 0,
-     "carry": 0,
-     "score": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
-     ],
-     "why": "danh từ / ngoài danh sách thi",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "building",
-     "raw": "building",
-     "first": "ngày 87",
-     "exam": "Movers",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 1,
-     "score": [
-      0,
-      0,
-      0,
-      1,
-      1,
-      0
-     ],
-     "why": "danh từ thi",
-     "tier": "Vòng ngoài",
-     "ex40": "thi bắt viết (Movers)"
-    },
-    {
-     "w": "road",
-     "raw": "road",
-     "first": "ngày 87",
-     "exam": "Movers",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 1,
-     "score": [
-      0,
-      0,
-      0,
-      1,
-      1,
-      0
-     ],
-     "why": "danh từ thi",
-     "tier": "Vòng ngoài",
-     "ex40": "thi bắt viết (Movers)"
-    },
-    {
-     "w": "café",
-     "raw": "café",
-     "first": "ngày 87",
-     "exam": "Movers",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 0,
-     "score": [
-      0,
-      0,
-      0,
-      0,
-      1,
-      0
-     ],
-     "why": "danh từ thi",
-     "tier": "Vòng ngoài",
-     "ex40": "thi bắt viết (Movers)"
     },
     {
      "w": "bus station",
@@ -36126,26 +34007,6 @@
      ],
      "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 2 ngày)",
      "tier": "Lõi"
-    },
-    {
-     "w": "station",
-     "raw": "station",
-     "first": "ngày 88",
-     "exam": "Movers",
-     "pos": "danh",
-     "reuse": 1,
-     "carry": 1,
-     "score": [
-      0,
-      0,
-      1,
-      1,
-      1,
-      1
-     ],
-     "why": "37c dùng lại ở 1 unit sau",
-     "tier": "Vòng ngoài",
-     "ex40": "thi bắt viết (Movers)"
     },
     {
      "w": "ground",
@@ -36367,7 +34228,7 @@
       0,
       1
      ],
-     "why": "37b khung câu mang được (danh, 5 ngày); 37c dùng lại ở 1 unit sau",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "lõi Anh",
      "tier": "Lõi"
     },
@@ -36391,7 +34252,7 @@
       1,
       0
      ],
-     "why": "danh từ thi",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "Anh đã biết",
      "tier": "Lõi"
     },
@@ -36415,34 +34276,9 @@
       0,
       1
      ],
-     "why": "37b khung câu mang được (danh, 5 ngày); 37c dùng lại ở 1 unit sau",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "Anh đã biết",
      "tier": "Lõi"
-    },
-    {
-     "w": "让",
-     "raw": "让 ràng (= let)",
-     "gloss": "let",
-     "gk": [
-      "let"
-     ],
-     "first": "ngày 85",
-     "exam": "YCT3",
-     "pos": "động/tính",
-     "reuse": 0,
-     "carry": 2,
-     "score": [
-      1,
-      1,
-      0,
-      2,
-      1,
-      0
-     ],
-     "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 2 ngày); nghĩa Anh là vòng ngoài (ng.t. 42)",
-     "en_link": "vòng ngoài Anh",
-     "tier": "Vòng ngoài",
-     "ex40": "cần cho YCT口试 (YCT3)"
     },
     {
      "w": "贵",
@@ -36464,7 +34300,7 @@
       0,
       1
      ],
-     "why": "37b khung câu mang được (động/tính, 5 ngày); 37c dùng lại ở 1 unit sau",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "lõi Anh",
      "tier": "Lõi"
     },
@@ -36488,7 +34324,7 @@
       0,
       1
      ],
-     "why": "37b khung câu mang được (động/tính, 4 ngày); 37c dùng lại ở 1 unit sau",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "lõi Anh",
      "tier": "Lõi"
     },
@@ -36512,57 +34348,9 @@
       1,
       0
      ],
-     "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 4 ngày)",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "Anh đã biết",
      "tier": "Lõi"
-    },
-    {
-     "w": "元",
-     "raw": "元 yuán (= yuan)",
-     "gloss": "yuan",
-     "gk": [
-      "yuan"
-     ],
-     "first": "ngày 86",
-     "exam": "YCT4",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 4,
-     "score": [
-      0,
-      1,
-      0,
-      4,
-      0,
-      0
-     ],
-     "why": "37b khung câu mang được (danh, 4 ngày); nghĩa Anh là vòng ngoài (ng.t. 42)",
-     "en_link": "vòng ngoài Anh",
-     "tier": "Vòng ngoài"
-    },
-    {
-     "w": "美元",
-     "raw": "美元 měiyuán (= dollar)",
-     "gloss": "dollar",
-     "gk": [
-      "dollar"
-     ],
-     "first": "ngày 86",
-     "exam": "",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 3,
-     "score": [
-      0,
-      1,
-      0,
-      3,
-      0,
-      0
-     ],
-     "why": "37b khung câu mang được (danh, 3 ngày); nghĩa Anh là vòng ngoài (ng.t. 42)",
-     "en_link": "vòng ngoài Anh",
-     "tier": "Vòng ngoài"
     },
     {
      "w": "远",
@@ -36584,7 +34372,7 @@
       1,
       1
      ],
-     "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 1 ngày); 37c dùng lại ở 1 unit sau",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "Anh đã biết",
      "tier": "Lõi"
     },
@@ -36608,33 +34396,9 @@
       1,
       1
      ],
-     "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 4 ngày); 37c dùng lại ở 1 unit sau",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "Anh đã biết",
      "tier": "Lõi"
-    },
-    {
-     "w": "咖啡店",
-     "raw": "咖啡店 kāfēi diàn (= café)",
-     "gloss": "café",
-     "gk": [
-      "café"
-     ],
-     "first": "ngày 87",
-     "exam": "",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 2,
-     "score": [
-      0,
-      0,
-      0,
-      2,
-      0,
-      0
-     ],
-     "why": "danh từ / ngoài danh sách thi; nghĩa Anh là vòng ngoài (ng.t. 42)",
-     "en_link": "vòng ngoài Anh",
-     "tier": "Vòng ngoài"
     },
     {
      "w": "车站",
@@ -36657,7 +34421,7 @@
       1,
       1
      ],
-     "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (cụm, 2 ngày); 37c dùng lại ở 1 unit sau",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "lõi Anh",
      "tier": "Lõi"
     },
@@ -36682,7 +34446,7 @@
       1,
       0
      ],
-     "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 1 ngày)",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "Anh đã biết",
      "tier": "Lõi"
     },
@@ -36707,7 +34471,7 @@
       1,
       1
      ],
-     "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (chức năng, 2 ngày); 37c dùng lại ở 1 unit sau",
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "Anh đã biết",
      "tier": "Lõi"
     }
@@ -36781,46 +34545,6 @@
      ],
      "why": "37b khung câu mang được (danh, 5 ngày); 37c dùng lại ở 1 unit sau",
      "tier": "Lõi"
-    },
-    {
-     "w": "world",
-     "raw": "world",
-     "first": "ngày 93",
-     "exam": "Movers",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 1,
-     "score": [
-      0,
-      0,
-      0,
-      1,
-      1,
-      0
-     ],
-     "why": "danh từ thi",
-     "tier": "Vòng ngoài",
-     "ex40": "thi bắt viết (Movers)"
-    },
-    {
-     "w": "map",
-     "raw": "map",
-     "first": "ngày 93",
-     "exam": "Movers",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 1,
-     "score": [
-      0,
-      0,
-      0,
-      1,
-      1,
-      0
-     ],
-     "why": "danh từ thi",
-     "tier": "Vòng ngoài",
-     "ex40": "thi bắt viết (Movers)"
     },
     {
      "w": "suitcase",
@@ -37114,25 +34838,6 @@
      "ex40": "thi bắt viết (Movers)"
     },
     {
-     "w": "town/city centre",
-     "raw": "town/city centre",
-     "first": "ngày 96",
-     "exam": "",
-     "pos": "cụm",
-     "reuse": 0,
-     "carry": 0,
-     "score": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
-     ],
-     "why": "danh từ / ngoài danh sách thi",
-     "tier": "Vòng ngoài"
-    },
-    {
      "w": "jungle",
      "raw": "jungle",
      "first": "ngày 97",
@@ -37282,30 +34987,6 @@
      "why": "37b khung câu mang được (danh, 5 ngày); 37c dùng lại ở 1 unit sau",
      "en_link": "lõi Anh",
      "tier": "Lõi"
-    },
-    {
-     "w": "地图",
-     "raw": "地图 dìtú (= map)",
-     "gloss": "map",
-     "gk": [
-      "map"
-     ],
-     "first": "ngày 93",
-     "exam": "YCT4",
-     "pos": "danh",
-     "reuse": 0,
-     "carry": 1,
-     "score": [
-      0,
-      0,
-      0,
-      1,
-      0,
-      0
-     ],
-     "why": "danh từ / ngoài danh sách thi; nghĩa Anh là vòng ngoài (ng.t. 42)",
-     "en_link": "vòng ngoài Anh",
-     "tier": "Vòng ngoài"
     },
     {
      "w": "行李箱",
@@ -38084,8 +35765,415 @@
     11,
     12
    ],
-   "en": [],
-   "zh": []
+   "en": [
+    {
+     "w": "age",
+     "raw": "age",
+     "first": "ngày 5",
+     "exam": "Movers",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "why": "danh từ thi; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài",
+     "ex40": "thi bắt viết (Movers)"
+    },
+    {
+     "w": "quarter",
+     "raw": "quarter",
+     "first": "ngày 5",
+     "exam": "Flyers",
+     "pos": "danh",
+     "reuse": 1,
+     "carry": 4,
+     "score": [
+      0,
+      1,
+      1,
+      4,
+      0,
+      1
+     ],
+     "why": "37b khung câu mang được (danh, 4 ngày); 37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "hour",
+     "raw": "hour",
+     "first": "ngày 5",
+     "exam": "Flyers",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "why": "danh từ / ngoài danh sách thi; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "roof",
+     "raw": "roof",
+     "first": "ngày 5",
+     "exam": "Movers",
+     "pos": "danh",
+     "reuse": 1,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      1,
+      0,
+      1,
+      1
+     ],
+     "why": "37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài",
+     "ex40": "thi bắt viết (Movers)"
+    },
+    {
+     "w": "parent",
+     "raw": "parent",
+     "first": "ngày 6",
+     "exam": "Movers",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 2,
+     "score": [
+      0,
+      0,
+      0,
+      2,
+      1,
+      0
+     ],
+     "why": "danh từ thi; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài",
+     "ex40": "thi bắt viết (Movers)"
+    },
+    {
+     "w": "minute",
+     "raw": "minute",
+     "first": "ngày 6",
+     "exam": "Flyers",
+     "pos": "danh",
+     "reuse": 2,
+     "carry": 4,
+     "score": [
+      0,
+      1,
+      1,
+      4,
+      0,
+      2
+     ],
+     "why": "37b khung câu mang được (danh, 4 ngày); 37c dùng lại ở 2 unit sau; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "last year",
+     "raw": "last year",
+     "first": "ngày 6",
+     "exam": "",
+     "pos": "cụm",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "why": "danh từ / ngoài danh sách thi; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "grandparent",
+     "raw": "grandparent",
+     "first": "ngày 7",
+     "exam": "Movers",
+     "pos": "danh",
+     "reuse": 2,
+     "carry": 1,
+     "score": [
+      0,
+      0,
+      1,
+      1,
+      1,
+      2
+     ],
+     "why": "37c dùng lại ở 2 unit sau; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài",
+     "ex40": "thi bắt viết (Movers)"
+    },
+    {
+     "w": "usually",
+     "raw": "usually",
+     "first": "ngày 7",
+     "exam": "Flyers",
+     "pos": "động/tính",
+     "reuse": 2,
+     "carry": 4,
+     "score": [
+      0,
+      1,
+      1,
+      4,
+      0,
+      2
+     ],
+     "why": "37b khung câu mang được (động/tính, 4 ngày); 37c dùng lại ở 2 unit sau; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "stair",
+     "raw": "stair(s)",
+     "first": "ngày 7",
+     "exam": "Movers",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 1,
+     "score": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      0
+     ],
+     "why": "danh từ thi; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài",
+     "ex40": "thi bắt viết (Movers)"
+    },
+    {
+     "w": "past",
+     "raw": "past",
+     "first": "ngày 8",
+     "exam": "Flyers",
+     "pos": "chức năng",
+     "reuse": 2,
+     "carry": 4,
+     "score": [
+      0,
+      1,
+      1,
+      4,
+      0,
+      2
+     ],
+     "why": "37b khung câu mang được (chức năng, 4 ngày); 37c dùng lại ở 2 unit sau; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "meal",
+     "raw": "meal",
+     "first": "ngày 8",
+     "exam": "Flyers",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 3,
+     "score": [
+      0,
+      1,
+      0,
+      3,
+      0,
+      0
+     ],
+     "why": "37b khung câu mang được (danh, 3 ngày); nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "balcony",
+     "raw": "balcony",
+     "first": "ngày 8",
+     "exam": "Movers",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 2,
+     "score": [
+      0,
+      0,
+      0,
+      2,
+      1,
+      0
+     ],
+     "why": "danh từ thi; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài",
+     "ex40": "thi bắt viết (Movers)"
+    },
+    {
+     "w": "half",
+     "raw": "half",
+     "first": "ngày 9",
+     "exam": "Flyers",
+     "pos": "động/tính",
+     "reuse": 3,
+     "carry": 3,
+     "score": [
+      0,
+      1,
+      1,
+      3,
+      0,
+      3
+     ],
+     "why": "37b khung câu mang được (động/tính, 3 ngày); 37c dùng lại ở 3 unit sau; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "how long",
+     "raw": "how long",
+     "first": "ngày 9",
+     "exam": "Flyers",
+     "pos": "cụm",
+     "reuse": 0,
+     "carry": 2,
+     "score": [
+      0,
+      1,
+      0,
+      2,
+      0,
+      0
+     ],
+     "why": "37b khung câu mang được (cụm, 2 ngày); nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "basement",
+     "raw": "basement",
+     "first": "ngày 9",
+     "exam": "Movers",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 1,
+     "score": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      0
+     ],
+     "why": "danh từ thi; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài",
+     "ex40": "thi bắt viết (Movers)"
+    }
+   ],
+   "zh": [
+    {
+     "w": "小时",
+     "raw": "小时 xiǎoshí (= hour)",
+     "gloss": "hour",
+     "gk": [
+      "hour"
+     ],
+     "first": "ngày 5",
+     "exam": "YCT3",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "why": "danh từ thi; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "去年",
+     "raw": "去年 qùnián (= last year)",
+     "gloss": "last year",
+     "gk": [
+      "last year"
+     ],
+     "first": "ngày 6",
+     "exam": "YCT3",
+     "pos": "cụm",
+     "reuse": 1,
+     "carry": 0,
+     "score": [
+      1,
+      0,
+      1,
+      0,
+      1,
+      1
+     ],
+     "why": "37a từ thi bắt tự nói/viết; 37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài",
+     "ex40": "cần cho YCT口试 (YCT3)"
+    },
+    {
+     "w": "半",
+     "raw": "半 bàn (= half)",
+     "gloss": "half",
+     "gk": [
+      "half"
+     ],
+     "first": "ngày 9",
+     "exam": "YCT3",
+     "pos": "động/tính",
+     "reuse": 3,
+     "carry": 4,
+     "score": [
+      1,
+      1,
+      1,
+      4,
+      1,
+      3
+     ],
+     "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 4 ngày); 37c dùng lại ở 3 unit sau; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài",
+     "ex40": "cần cho YCT口试 (YCT3)"
+    },
+    {
+     "w": "多久",
+     "raw": "多久 duōjiǔ (= how long)",
+     "gloss": "how long",
+     "gk": [
+      "how long"
+     ],
+     "first": "ngày 9",
+     "exam": "",
+     "pos": "cụm",
+     "reuse": 1,
+     "carry": 5,
+     "score": [
+      0,
+      1,
+      1,
+      4,
+      0,
+      1
+     ],
+     "why": "37b khung câu mang được (cụm, 5 ngày); 37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    }
+   ]
   },
   "2": {
    "days": [
@@ -38098,8 +36186,217 @@
     19,
     20
    ],
-   "en": [],
-   "zh": []
+   "en": [
+    {
+     "w": "vet",
+     "raw": "vet",
+     "first": "ngày 13",
+     "exam": "",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 3,
+     "score": [
+      0,
+      1,
+      0,
+      3,
+      0,
+      0
+     ],
+     "why": "37b khung câu mang được (danh, 3 ngày); nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "turn",
+     "raw": "turn",
+     "first": "ngày 13",
+     "exam": "Flyers",
+     "pos": "động/tính",
+     "reuse": 2,
+     "carry": 2,
+     "score": [
+      0,
+      1,
+      1,
+      2,
+      0,
+      2
+     ],
+     "why": "37b khung câu mang được (động/tính, 2 ngày); 37c dùng lại ở 2 unit sau; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "workplace",
+     "raw": "workplace",
+     "first": "ngày 14",
+     "exam": "",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "why": "danh từ / ngoài danh sách thi; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "office",
+     "raw": "office",
+     "first": "ngày 15",
+     "exam": "Flyers",
+     "pos": "danh",
+     "reuse": 1,
+     "carry": 4,
+     "score": [
+      0,
+      1,
+      1,
+      4,
+      0,
+      1
+     ],
+     "why": "37b khung câu mang được (danh, 4 ngày); 37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "canteen",
+     "raw": "canteen",
+     "first": "ngày 16",
+     "exam": "",
+     "pos": "danh",
+     "reuse": 1,
+     "carry": 4,
+     "score": [
+      0,
+      1,
+      1,
+      4,
+      0,
+      1
+     ],
+     "why": "37b khung câu mang được (danh, 4 ngày); 37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "left",
+     "raw": "left",
+     "first": "ngày 17",
+     "exam": "Flyers",
+     "pos": "động/tính",
+     "reuse": 1,
+     "carry": 1,
+     "score": [
+      0,
+      1,
+      1,
+      1,
+      0,
+      1
+     ],
+     "why": "37b khung câu mang được (động/tính, 1 ngày); 37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    }
+   ],
+   "zh": [
+    {
+     "w": "转",
+     "raw": "转 zhuǎn (= turn)",
+     "gloss": "turn",
+     "gk": [
+      "turn"
+     ],
+     "first": "ngày 13",
+     "exam": "",
+     "pos": "động/tính",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "why": "danh từ / ngoài danh sách thi; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "办公室",
+     "raw": "办公室 bàngōngshì (= office)",
+     "gloss": "office",
+     "gk": [
+      "office"
+     ],
+     "first": "ngày 15",
+     "exam": "",
+     "pos": "danh",
+     "reuse": 1,
+     "carry": 4,
+     "score": [
+      0,
+      1,
+      1,
+      4,
+      0,
+      1
+     ],
+     "why": "37b khung câu mang được (danh, 4 ngày); 37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "食堂",
+     "raw": "食堂 shítáng (= canteen)",
+     "gloss": "canteen",
+     "gk": [
+      "canteen"
+     ],
+     "first": "ngày 16",
+     "exam": "",
+     "pos": "danh",
+     "reuse": 1,
+     "carry": 4,
+     "score": [
+      0,
+      1,
+      1,
+      4,
+      0,
+      1
+     ],
+     "why": "37b khung câu mang được (danh, 4 ngày); 37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "左",
+     "raw": "左 zuǒ (= left)",
+     "gloss": "left",
+     "gk": [
+      "left"
+     ],
+     "first": "ngày 17",
+     "exam": "YCT3",
+     "pos": "động/tính",
+     "reuse": 1,
+     "carry": 1,
+     "score": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+     ],
+     "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 1 ngày); 37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài",
+     "ex40": "cần cho YCT口试 (YCT3)"
+    }
+   ]
   },
   "3": {
    "days": [
@@ -38112,8 +36409,356 @@
     27,
     28
    ],
-   "en": [],
-   "zh": []
+   "en": [
+    {
+     "w": "let",
+     "raw": "let",
+     "first": "ngày 21",
+     "exam": "Flyers",
+     "pos": "động/tính",
+     "reuse": 0,
+     "carry": 1,
+     "score": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      0
+     ],
+     "why": "37b khung câu mang được (động/tính, 1 ngày); nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "size",
+     "raw": "size",
+     "first": "ngày 21",
+     "exam": "",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 1,
+     "score": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+     ],
+     "why": "danh từ / ngoài danh sách thi; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "road",
+     "raw": "road",
+     "first": "ngày 21",
+     "exam": "Movers",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 1,
+     "score": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      0
+     ],
+     "why": "danh từ thi; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài",
+     "ex40": "thi bắt viết (Movers)"
+    },
+    {
+     "w": "money",
+     "raw": "money",
+     "first": "ngày 22",
+     "exam": "Flyers",
+     "pos": "danh",
+     "reuse": 2,
+     "carry": 2,
+     "score": [
+      0,
+      0,
+      1,
+      2,
+      0,
+      2
+     ],
+     "why": "37c dùng lại ở 2 unit sau; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "city/town centre",
+     "raw": "city/town centre",
+     "first": "ngày 22",
+     "exam": "",
+     "pos": "cụm",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "why": "danh từ / ngoài danh sách thi; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "café",
+     "raw": "café",
+     "first": "ngày 22",
+     "exam": "Movers",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "why": "danh từ thi; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài",
+     "ex40": "thi bắt viết (Movers)"
+    },
+    {
+     "w": "dollar",
+     "raw": "dollar",
+     "first": "ngày 23",
+     "exam": "",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 1,
+     "score": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+     ],
+     "why": "danh từ / ngoài danh sách thi; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "market",
+     "raw": "market",
+     "first": "ngày 23",
+     "exam": "Movers",
+     "pos": "danh",
+     "reuse": 1,
+     "carry": 2,
+     "score": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      1
+     ],
+     "why": "37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài",
+     "ex40": "thi bắt viết (Movers)"
+    },
+    {
+     "w": "station",
+     "raw": "station",
+     "first": "ngày 23",
+     "exam": "Movers",
+     "pos": "danh",
+     "reuse": 1,
+     "carry": 2,
+     "score": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      1
+     ],
+     "why": "37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài",
+     "ex40": "thi bắt viết (Movers)"
+    },
+    {
+     "w": "yuan",
+     "raw": "yuan",
+     "first": "ngày 24",
+     "exam": "",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 1,
+     "score": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+     ],
+     "why": "danh từ / ngoài danh sách thi; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "city",
+     "raw": "city",
+     "first": "ngày 24",
+     "exam": "Movers",
+     "pos": "danh",
+     "reuse": 1,
+     "carry": 2,
+     "score": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      1
+     ],
+     "why": "37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài",
+     "ex40": "thi bắt viết (Movers)"
+    },
+    {
+     "w": "sale",
+     "raw": "sale",
+     "first": "ngày 25",
+     "exam": "",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 2,
+     "score": [
+      0,
+      0,
+      0,
+      2,
+      0,
+      0
+     ],
+     "why": "danh từ / ngoài danh sách thi; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "building",
+     "raw": "building",
+     "first": "ngày 25",
+     "exam": "Movers",
+     "pos": "danh",
+     "reuse": 2,
+     "carry": 3,
+     "score": [
+      0,
+      1,
+      1,
+      3,
+      1,
+      2
+     ],
+     "why": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 2 unit sau; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài",
+     "ex40": "thi bắt viết (Movers)"
+    }
+   ],
+   "zh": [
+    {
+     "w": "让",
+     "raw": "让 ràng (= let)",
+     "gloss": "let",
+     "gk": [
+      "let"
+     ],
+     "first": "ngày 21",
+     "exam": "YCT3",
+     "pos": "động/tính",
+     "reuse": 0,
+     "carry": 1,
+     "score": [
+      1,
+      1,
+      0,
+      1,
+      1,
+      0
+     ],
+     "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 1 ngày); nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài",
+     "ex40": "cần cho YCT口试 (YCT3)"
+    },
+    {
+     "w": "咖啡店",
+     "raw": "咖啡店 kāfēi diàn (= café)",
+     "gloss": "café",
+     "gk": [
+      "café"
+     ],
+     "first": "ngày 22",
+     "exam": "",
+     "pos": "danh",
+     "reuse": 1,
+     "carry": 2,
+     "score": [
+      0,
+      0,
+      1,
+      2,
+      0,
+      1
+     ],
+     "why": "37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "美元",
+     "raw": "美元 měiyuán (= dollar)",
+     "gloss": "dollar",
+     "gk": [
+      "dollar"
+     ],
+     "first": "ngày 23",
+     "exam": "",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 1,
+     "score": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+     ],
+     "why": "danh từ / ngoài danh sách thi; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "元",
+     "raw": "元 yuán (= yuan)",
+     "gloss": "yuan",
+     "gk": [
+      "yuan"
+     ],
+     "first": "ngày 24",
+     "exam": "YCT4",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 2,
+     "score": [
+      0,
+      0,
+      0,
+      2,
+      0,
+      0
+     ],
+     "why": "danh từ / ngoài danh sách thi; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    }
+   ]
   },
   "4": {
    "days": [
@@ -38126,8 +36771,400 @@
     35,
     36
    ],
-   "en": [],
-   "zh": []
+   "en": [
+    {
+     "w": "wolf",
+     "raw": "wolf",
+     "first": "ngày 29",
+     "exam": "",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 3,
+     "score": [
+      0,
+      1,
+      0,
+      3,
+      0,
+      0
+     ],
+     "why": "37b khung câu mang được (danh, 3 ngày); nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "dolphin",
+     "raw": "dolphin",
+     "first": "ngày 29",
+     "exam": "Movers",
+     "pos": "danh",
+     "reuse": 2,
+     "carry": 5,
+     "score": [
+      0,
+      1,
+      1,
+      4,
+      1,
+      2
+     ],
+     "why": "37b khung câu mang được (danh, 5 ngày); 37c dùng lại ở 2 unit sau; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài",
+     "ex40": "thi bắt viết (Movers)"
+    },
+    {
+     "w": "stomachache",
+     "raw": "stomachache",
+     "first": "ngày 29",
+     "exam": "",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 1,
+     "score": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+     ],
+     "why": "danh từ / ngoài danh sách thi; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "fast",
+     "raw": "fast",
+     "first": "ngày 30",
+     "exam": "Flyers",
+     "pos": "động/tính",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "why": "danh từ / ngoài danh sách thi; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "cage",
+     "raw": "cage",
+     "first": "ngày 30",
+     "exam": "Movers",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 3,
+     "score": [
+      0,
+      1,
+      0,
+      3,
+      1,
+      0
+     ],
+     "why": "37b khung câu mang được (danh, 3 ngày); nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài",
+     "ex40": "thi bắt viết (Movers)"
+    },
+    {
+     "w": "wind",
+     "raw": "wind",
+     "first": "ngày 30",
+     "exam": "Movers",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 2,
+     "score": [
+      0,
+      0,
+      0,
+      2,
+      1,
+      0
+     ],
+     "why": "danh từ thi; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài",
+     "ex40": "thi bắt viết (Movers)"
+    },
+    {
+     "w": "heavy",
+     "raw": "heavy",
+     "first": "ngày 31",
+     "exam": "Flyers",
+     "pos": "động/tính",
+     "reuse": 0,
+     "carry": 1,
+     "score": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      0
+     ],
+     "why": "37b khung câu mang được (động/tính, 1 ngày); nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "fever",
+     "raw": "fever",
+     "first": "ngày 31",
+     "exam": "",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 1,
+     "score": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+     ],
+     "why": "danh từ / ngoài danh sách thi; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "cough",
+     "raw": "cough",
+     "first": "ngày 31",
+     "exam": "Movers",
+     "pos": "danh",
+     "reuse": 1,
+     "carry": 2,
+     "score": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      1
+     ],
+     "why": "37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài",
+     "ex40": "thi bắt viết (Movers)"
+    },
+    {
+     "w": "kangaroo",
+     "raw": "kangaroo",
+     "first": "ngày 32",
+     "exam": "Movers",
+     "pos": "danh",
+     "reuse": 2,
+     "carry": 4,
+     "score": [
+      0,
+      1,
+      1,
+      4,
+      1,
+      2
+     ],
+     "why": "37b khung câu mang được (danh, 4 ngày); 37c dùng lại ở 2 unit sau; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài",
+     "ex40": "thi bắt viết (Movers)"
+    },
+    {
+     "w": "sore",
+     "raw": "sore",
+     "first": "ngày 32",
+     "exam": "Flyers",
+     "pos": "động/tính",
+     "reuse": 1,
+     "carry": 2,
+     "score": [
+      0,
+      1,
+      1,
+      2,
+      0,
+      1
+     ],
+     "why": "37b khung câu mang được (động/tính, 2 ngày); 37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "temperature",
+     "raw": "temperature",
+     "first": "ngày 32",
+     "exam": "Movers",
+     "pos": "danh",
+     "reuse": 2,
+     "carry": 2,
+     "score": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      2
+     ],
+     "why": "37c dùng lại ở 2 unit sau; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài",
+     "ex40": "thi bắt viết (Movers)"
+    },
+    {
+     "w": "panda",
+     "raw": "panda",
+     "first": "ngày 33",
+     "exam": "Movers",
+     "pos": "danh",
+     "reuse": 1,
+     "carry": 4,
+     "score": [
+      0,
+      1,
+      1,
+      4,
+      1,
+      1
+     ],
+     "why": "37b khung câu mang được (danh, 4 ngày); 37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài",
+     "ex40": "thi bắt viết (Movers)"
+    },
+    {
+     "w": "throat",
+     "raw": "throat",
+     "first": "ngày 33",
+     "exam": "",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 2,
+     "score": [
+      0,
+      0,
+      0,
+      2,
+      0,
+      0
+     ],
+     "why": "danh từ / ngoài danh sách thi; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    }
+   ],
+   "zh": [
+    {
+     "w": "狼",
+     "raw": "狼 láng (= wolf)",
+     "gloss": "wolf",
+     "gk": [
+      "wolf"
+     ],
+     "first": "ngày 29",
+     "exam": "",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 5,
+     "score": [
+      0,
+      1,
+      0,
+      4,
+      0,
+      0
+     ],
+     "why": "37b khung câu mang được (danh, 5 ngày); nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "海豚",
+     "raw": "海豚 hǎitún (= dolphin)",
+     "gloss": "dolphin",
+     "gk": [
+      "dolphin"
+     ],
+     "first": "ngày 29",
+     "exam": "",
+     "pos": "danh",
+     "reuse": 2,
+     "carry": 5,
+     "score": [
+      0,
+      1,
+      1,
+      4,
+      0,
+      2
+     ],
+     "why": "37b khung câu mang được (danh, 5 ngày); 37c dùng lại ở 2 unit sau; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "快",
+     "raw": "快 kuài (= fast)",
+     "gloss": "fast",
+     "gk": [
+      "fast"
+     ],
+     "first": "ngày 30",
+     "exam": "YCT3",
+     "pos": "động/tính",
+     "reuse": 2,
+     "carry": 2,
+     "score": [
+      1,
+      1,
+      1,
+      2,
+      1,
+      2
+     ],
+     "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 2 ngày); 37c dùng lại ở 2 unit sau; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài",
+     "ex40": "cần cho YCT口试 (YCT3)"
+    },
+    {
+     "w": "发烧",
+     "raw": "发烧 fāshāo (= fever, temperature)",
+     "gloss": "fever, temperature",
+     "gk": [
+      "fever",
+      "temperature"
+     ],
+     "first": "ngày 31",
+     "exam": "YCT4",
+     "pos": "danh",
+     "reuse": 2,
+     "carry": 2,
+     "score": [
+      0,
+      0,
+      1,
+      2,
+      0,
+      2
+     ],
+     "why": "37c dùng lại ở 2 unit sau; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "袋鼠",
+     "raw": "袋鼠 dàishǔ (= kangaroo)",
+     "gloss": "kangaroo",
+     "gk": [
+      "kangaroo"
+     ],
+     "first": "ngày 32",
+     "exam": "",
+     "pos": "danh",
+     "reuse": 2,
+     "carry": 4,
+     "score": [
+      0,
+      1,
+      1,
+      4,
+      0,
+      2
+     ],
+     "why": "37b khung câu mang được (danh, 4 ngày); 37c dùng lại ở 2 unit sau; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    }
+   ]
   },
   "5": {
    "days": [
@@ -38140,8 +37177,189 @@
     43,
     44
    ],
-   "en": [],
-   "zh": []
+   "en": [
+    {
+     "w": "team",
+     "raw": "team",
+     "first": "ngày 37",
+     "exam": "Flyers",
+     "pos": "danh",
+     "reuse": 1,
+     "carry": 3,
+     "score": [
+      0,
+      1,
+      1,
+      3,
+      0,
+      1
+     ],
+     "why": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "player",
+     "raw": "player",
+     "first": "ngày 37",
+     "exam": "Movers",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 1,
+     "score": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      0
+     ],
+     "why": "danh từ thi; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài",
+     "ex40": "thi bắt viết (Movers)"
+    },
+    {
+     "w": "volleyball",
+     "raw": "volleyball",
+     "first": "ngày 38",
+     "exam": "Flyers",
+     "pos": "danh",
+     "reuse": 1,
+     "carry": 3,
+     "score": [
+      0,
+      1,
+      1,
+      3,
+      0,
+      1
+     ],
+     "why": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "goal",
+     "raw": "goal",
+     "first": "ngày 38",
+     "exam": "Movers",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 2,
+     "score": [
+      0,
+      0,
+      0,
+      2,
+      1,
+      0
+     ],
+     "why": "danh từ thi; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài",
+     "ex40": "thi bắt viết (Movers)"
+    },
+    {
+     "w": "win",
+     "raw": "win",
+     "first": "ngày 39",
+     "exam": "Flyers",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 2,
+     "score": [
+      0,
+      0,
+      0,
+      2,
+      0,
+      0
+     ],
+     "why": "danh từ / ngoài danh sách thi; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "funfair",
+     "raw": "funfair",
+     "first": "ngày 39",
+     "exam": "Movers",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 2,
+     "score": [
+      0,
+      0,
+      0,
+      2,
+      1,
+      0
+     ],
+     "why": "danh từ thi; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài",
+     "ex40": "thi bắt viết (Movers)"
+    },
+    {
+     "w": "match",
+     "raw": "match",
+     "first": "ngày 40",
+     "exam": "Flyers",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 5,
+     "score": [
+      0,
+      1,
+      0,
+      4,
+      0,
+      0
+     ],
+     "why": "37b khung câu mang được (danh, 5 ngày); nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "ice",
+     "raw": "ice",
+     "first": "ngày 41",
+     "exam": "Movers",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 3,
+     "score": [
+      0,
+      1,
+      0,
+      3,
+      1,
+      0
+     ],
+     "why": "37b khung câu mang được (danh, 3 ngày); nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài",
+     "ex40": "thi bắt viết (Movers)"
+    }
+   ],
+   "zh": [
+    {
+     "w": "排球",
+     "raw": "排球 páiqiú (= volleyball)",
+     "gloss": "volleyball",
+     "gk": [
+      "volleyball"
+     ],
+     "first": "ngày 38",
+     "exam": "YCT4",
+     "pos": "danh",
+     "reuse": 1,
+     "carry": 3,
+     "score": [
+      0,
+      1,
+      1,
+      3,
+      0,
+      1
+     ],
+     "why": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    }
+   ]
   },
   "6": {
    "days": [
@@ -38154,8 +37372,92 @@
     51,
     52
    ],
-   "en": [],
-   "zh": []
+   "en": [
+    {
+     "w": "town/city centre",
+     "raw": "town/city centre",
+     "first": "ngày 45",
+     "exam": "",
+     "pos": "cụm",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "why": "danh từ / ngoài danh sách thi; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "world",
+     "raw": "world",
+     "first": "ngày 46",
+     "exam": "Movers",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 2,
+     "score": [
+      0,
+      0,
+      0,
+      2,
+      1,
+      0
+     ],
+     "why": "danh từ thi; nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài",
+     "ex40": "thi bắt viết (Movers)"
+    },
+    {
+     "w": "map",
+     "raw": "map",
+     "first": "ngày 47",
+     "exam": "Movers",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 3,
+     "score": [
+      0,
+      1,
+      0,
+      3,
+      1,
+      0
+     ],
+     "why": "37b khung câu mang được (danh, 3 ngày); nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài",
+     "ex40": "thi bắt viết (Movers)"
+    }
+   ],
+   "zh": [
+    {
+     "w": "地图",
+     "raw": "地图 dìtú (= map)",
+     "gloss": "map",
+     "gk": [
+      "map"
+     ],
+     "first": "ngày 47",
+     "exam": "YCT4",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 3,
+     "score": [
+      0,
+      1,
+      0,
+      3,
+      0,
+      0
+     ],
+     "why": "37b khung câu mang được (danh, 3 ngày); nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    }
+   ]
   }
  },
  "pupa": {
@@ -42939,6 +42241,26 @@
      "unsure": true
     },
     {
+     "w": "future",
+     "raw": "future",
+     "first": "ngày 49",
+     "exam": "Flyers",
+     "pos": "danh",
+     "reuse": 1,
+     "carry": 4,
+     "score": [
+      0,
+      1,
+      1,
+      4,
+      1,
+      1
+     ],
+     "why": "37b khung câu mang được (danh, 4 ngày); 37c dùng lại ở 1 unit sau",
+     "tier": "Vòng ngoài",
+     "ex40": "thi bắt viết (Flyers)"
+    },
+    {
      "w": "land",
      "raw": "land",
      "first": "ngày 50",
@@ -43018,6 +42340,26 @@
      "tier": "Vòng ngoài"
     },
     {
+     "w": "pilot",
+     "raw": "pilot",
+     "first": "ngày 50",
+     "exam": "Flyers",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "why": "danh từ thi",
+     "tier": "Vòng ngoài",
+     "ex40": "thi bắt viết (Flyers)"
+    },
+    {
      "w": "instead",
      "raw": "instead",
      "first": "ngày 51",
@@ -43049,6 +42391,26 @@
       0,
       0,
       1,
+      1,
+      0
+     ],
+     "why": "danh từ thi",
+     "tier": "Vòng ngoài",
+     "ex40": "thi bắt viết (Flyers)"
+    },
+    {
+     "w": "engineer",
+     "raw": "engineer",
+     "first": "ngày 51",
+     "exam": "Flyers",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      0,
+      0,
       1,
       0
      ],
@@ -43132,6 +42494,25 @@
      "why": "37c dùng lại ở 1 unit sau",
      "tier": "Vòng ngoài",
      "ex40": "thi bắt viết (Flyers)"
+    },
+    {
+     "w": "scientist",
+     "raw": "scientist",
+     "first": "ngày 52",
+     "exam": "",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "why": "danh từ / ngoài danh sách thi",
+     "tier": "Vòng ngoài"
     },
     {
      "w": "follow",
@@ -43387,31 +42768,6 @@
      ],
      "why": "37b khung câu mang được (danh, 5 ngày)",
      "en_link": "không thấy nghĩa Anh",
-     "tier": "Lõi",
-     "unsure": true
-    },
-    {
-     "w": "将来",
-     "raw": "将来 jiānglái (= future)",
-     "gloss": "future",
-     "gk": [
-      "future"
-     ],
-     "first": "ngày 49",
-     "exam": "YCT4",
-     "pos": "danh",
-     "reuse": 2,
-     "carry": 5,
-     "score": [
-      1,
-      1,
-      1,
-      4,
-      1,
-      2
-     ],
-     "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (danh, 5 ngày); 37c dùng lại ở 2 unit sau",
-     "en_link": "Anh đã biết",
      "tier": "Lõi"
     },
     {
@@ -43437,6 +42793,31 @@
      "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (chức năng, 5 ngày)",
      "en_link": "lõi Anh",
      "tier": "Lõi"
+    },
+    {
+     "w": "将来",
+     "raw": "将来 jiānglái (= future)",
+     "gloss": "future",
+     "gk": [
+      "future"
+     ],
+     "first": "ngày 49",
+     "exam": "YCT4",
+     "pos": "danh",
+     "reuse": 2,
+     "carry": 5,
+     "score": [
+      1,
+      1,
+      1,
+      4,
+      1,
+      2
+     ],
+     "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (danh, 5 ngày); 37c dùng lại ở 2 unit sau; nghĩa Anh là vòng ngoài (ng.t. 42)",
+     "en_link": "vòng ngoài Anh",
+     "tier": "Vòng ngoài",
+     "ex40": "chữ Hán YCT4"
     },
     {
      "w": "宇航员",
@@ -43530,10 +42911,9 @@
       0,
       0
      ],
-     "why": "37b khung câu mang được (động/tính, 4 ngày)",
+     "why": "37b khung câu mang được (động/tính, 4 ngày); nhãn ghi sẵn trong khung",
      "en_link": "lõi Anh",
-     "tier": "Vòng ngoài",
-     "unsure": true
+     "tier": "Vòng ngoài"
     },
     {
      "w": "起飞",
@@ -43705,6 +43085,30 @@
      "tier": "Lõi"
     },
     {
+     "w": "科学家",
+     "raw": "科学家 kēxuéjiā (= scientist)",
+     "gloss": "scientist",
+     "gk": [
+      "scientist"
+     ],
+     "first": "ngày 52",
+     "exam": "",
+     "pos": "cụm",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "why": "danh từ / ngoài danh sách thi; nghĩa Anh là vòng ngoài (ng.t. 42)",
+     "en_link": "vòng ngoài Anh",
+     "tier": "Vòng ngoài"
+    },
+    {
      "w": "等",
      "raw": "等 děng (= wait)",
      "gloss": "wait",
@@ -43841,6 +43245,25 @@
      ],
      "why": "37b khung câu mang được (danh, 5 ngày); 37c dùng lại ở 2 unit sau",
      "tier": "Lõi"
+    },
+    {
+     "w": "catch a bus",
+     "raw": "catch a bus",
+     "first": "ngày 57",
+     "exam": "",
+     "pos": "cụm",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "why": "danh từ / ngoài danh sách thi",
+     "tier": "Vòng ngoài"
     },
     {
      "w": "electric",
@@ -44589,6 +44012,26 @@
      "tier": "Lõi"
     },
     {
+     "w": "spring",
+     "raw": "spring",
+     "first": "ngày 65",
+     "exam": "Flyers",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "why": "danh từ thi",
+     "tier": "Vòng ngoài",
+     "ex40": "thi bắt viết (Flyers)"
+    },
+    {
      "w": "foggy",
      "raw": "foggy",
      "first": "ngày 66",
@@ -44664,6 +44107,26 @@
       0
      ],
      "why": "danh từ thi",
+     "tier": "Vòng ngoài",
+     "ex40": "thi bắt viết (Flyers)"
+    },
+    {
+     "w": "summer",
+     "raw": "summer",
+     "first": "ngày 66",
+     "exam": "Flyers",
+     "pos": "danh",
+     "reuse": 2,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      1,
+      0,
+      1,
+      2
+     ],
+     "why": "37c dùng lại ở 2 unit sau; nhãn ghi sẵn trong khung",
      "tier": "Vòng ngoài",
      "ex40": "thi bắt viết (Flyers)"
     },
@@ -44744,6 +44207,26 @@
      "tier": "Lõi"
     },
     {
+     "w": "autumn",
+     "raw": "autumn",
+     "first": "ngày 67",
+     "exam": "Flyers",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "why": "danh từ thi",
+     "tier": "Vòng ngoài",
+     "ex40": "thi bắt viết (Flyers)"
+    },
+    {
      "w": "july",
      "raw": "July",
      "first": "ngày 68",
@@ -44759,7 +44242,7 @@
       1,
       0
      ],
-     "why": "danh từ thi",
+     "why": "danh từ thi; nhãn ghi sẵn trong khung",
      "tier": "Lõi"
     },
     {
@@ -45040,6 +44523,30 @@
      "tier": "Lõi"
     },
     {
+     "w": "春天",
+     "raw": "春天 chūntiān (= spring)",
+     "gloss": "spring",
+     "gk": [
+      "spring"
+     ],
+     "first": "ngày 65",
+     "exam": "",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "why": "danh từ / ngoài danh sách thi; nghĩa Anh là vòng ngoài (ng.t. 42)",
+     "en_link": "vòng ngoài Anh",
+     "tier": "Vòng ngoài"
+    },
+    {
      "w": "温度",
      "raw": "温度 wēndù (= temperature)",
      "gloss": "temperature",
@@ -45065,6 +44572,30 @@
      "unsure": true
     },
     {
+     "w": "夏天",
+     "raw": "夏天 xiàtiān (= summer)",
+     "gloss": "summer",
+     "gk": [
+      "summer"
+     ],
+     "first": "ngày 66",
+     "exam": "",
+     "pos": "danh",
+     "reuse": 2,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      2
+     ],
+     "why": "37c dùng lại ở 2 unit sau; nhãn ghi sẵn trong khung",
+     "en_link": "lõi Anh",
+     "tier": "Vòng ngoài"
+    },
+    {
      "w": "春季",
      "raw": "春季 chūnjì (= spring)",
      "gloss": "spring",
@@ -45084,9 +44615,10 @@
       1,
       0
      ],
-     "why": "37a từ thi bắt tự nói/viết",
-     "en_link": "Anh đã biết",
-     "tier": "Lõi"
+     "why": "37a từ thi bắt tự nói/viết; nghĩa Anh là vòng ngoài (ng.t. 42)",
+     "en_link": "vòng ngoài Anh",
+     "tier": "Vòng ngoài",
+     "ex40": "chữ Hán YCT4"
     },
     {
      "w": "秋季",
@@ -45108,10 +44640,9 @@
       0,
       0
      ],
-     "why": "danh từ / ngoài danh sách thi",
-     "en_link": "Anh đã biết",
-     "tier": "Lõi",
-     "unsure": true
+     "why": "danh từ / ngoài danh sách thi; nghĩa Anh là vòng ngoài (ng.t. 42)",
+     "en_link": "vòng ngoài Anh",
+     "tier": "Vòng ngoài"
     },
     {
      "w": "马上",
@@ -45254,10 +44785,9 @@
       0,
       0
      ],
-     "why": "danh từ / ngoài danh sách thi",
+     "why": "danh từ / ngoài danh sách thi; nhãn ghi sẵn trong khung",
      "en_link": "Anh đã biết",
-     "tier": "Vòng ngoài",
-     "unsure": true
+     "tier": "Vòng ngoài"
     },
     {
      "w": "夏季",
@@ -45280,7 +44810,7 @@
       0
      ],
      "why": "danh từ / ngoài danh sách thi",
-     "en_link": "Anh đã biết",
+     "en_link": "lõi Anh",
      "tier": "Vòng ngoài",
      "unsure": true
     },
@@ -47316,6 +46846,44 @@
      "tier": "Lõi"
     },
     {
+     "w": "dessert",
+     "raw": "dessert",
+     "first": "ngày 93",
+     "exam": "",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "why": "danh từ / ngoài danh sách thi",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "bitter",
+     "raw": "bitter",
+     "first": "ngày 93",
+     "exam": "",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "why": "danh từ / ngoài danh sách thi",
+     "tier": "Vòng ngoài"
+    },
+    {
      "w": "spoon",
      "raw": "spoon",
      "first": "ngày 94",
@@ -47392,6 +46960,26 @@
      "tier": "Lõi"
     },
     {
+     "w": "biscuit",
+     "raw": "biscuit",
+     "first": "ngày 94",
+     "exam": "Flyers",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "why": "danh từ thi",
+     "tier": "Vòng ngoài",
+     "ex40": "thi bắt viết (Flyers)"
+    },
+    {
      "w": "salt",
      "raw": "salt",
      "first": "ngày 95",
@@ -47407,9 +46995,8 @@
       1,
       0
      ],
-     "why": "danh từ thi",
-     "tier": "Lõi",
-     "unsure": true
+     "why": "danh từ thi; nhãn ghi sẵn trong khung",
+     "tier": "Lõi"
     },
     {
      "w": "sugar",
@@ -47467,7 +47054,26 @@
      ],
      "why": "danh từ thi",
      "tier": "Vòng ngoài",
-     "unsure": true,
+     "ex40": "thi bắt viết (Flyers)"
+    },
+    {
+     "w": "cookie",
+     "raw": "cookie",
+     "first": "ngày 95",
+     "exam": "Flyers",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "why": "danh từ thi",
+     "tier": "Vòng ngoài",
      "ex40": "thi bắt viết (Flyers)"
     },
     {
@@ -47526,8 +47132,26 @@
      ],
      "why": "danh từ thi",
      "tier": "Vòng ngoài",
-     "unsure": true,
      "ex40": "thi bắt viết (Flyers)"
+    },
+    {
+     "w": "salty",
+     "raw": "salty",
+     "first": "ngày 96",
+     "exam": "",
+     "pos": "động/tính",
+     "reuse": 0,
+     "carry": 4,
+     "score": [
+      0,
+      1,
+      0,
+      4,
+      0,
+      0
+     ],
+     "why": "37b khung câu mang được (động/tính, 4 ngày); nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
     },
     {
      "w": "flour",
@@ -47566,6 +47190,25 @@
      ],
      "why": "37a từ thi bắt tự nói/viết",
      "tier": "Lõi"
+    },
+    {
+     "w": "sour",
+     "raw": "sour",
+     "first": "ngày 97",
+     "exam": "",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "why": "danh từ / ngoài danh sách thi",
+     "tier": "Vòng ngoài"
     }
    ],
    "zh": [
@@ -47589,7 +47232,7 @@
       0,
       0
      ],
-     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+     "why": "37b khung câu mang được (danh, 3 ngày)",
      "en_link": "Anh đã biết",
      "tier": "Lõi"
     },
@@ -47613,7 +47256,7 @@
       0,
       0
      ],
-     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+     "why": "danh từ / ngoài danh sách thi",
      "en_link": "Anh đã biết",
      "tier": "Lõi"
     },
@@ -47637,9 +47280,57 @@
       1,
       0
      ],
-     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+     "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 1 ngày)",
      "en_link": "Anh đã biết",
      "tier": "Lõi"
+    },
+    {
+     "w": "甜点",
+     "raw": "甜点 tiándiǎn (= dessert)",
+     "gloss": "dessert",
+     "gk": [
+      "dessert"
+     ],
+     "first": "ngày 93",
+     "exam": "",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "why": "danh từ / ngoài danh sách thi; nghĩa Anh là vòng ngoài (ng.t. 42)",
+     "en_link": "vòng ngoài Anh",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "苦",
+     "raw": "苦 kǔ (= bitter)",
+     "gloss": "bitter",
+     "gk": [
+      "bitter"
+     ],
+     "first": "ngày 93",
+     "exam": "",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "why": "danh từ / ngoài danh sách thi; nghĩa Anh là vòng ngoài (ng.t. 42)",
+     "en_link": "vòng ngoài Anh",
+     "tier": "Vòng ngoài"
     },
     {
      "w": "勺子",
@@ -47661,7 +47352,7 @@
       0,
       1
      ],
-     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+     "why": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 1 unit sau",
      "en_link": "lõi Anh",
      "tier": "Lõi"
     },
@@ -47685,7 +47376,7 @@
       1,
       0
      ],
-     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+     "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (cụm, 1 ngày)",
      "en_link": "Anh đã biết",
      "tier": "Lõi"
     },
@@ -47709,9 +47400,35 @@
       1,
       1
      ],
-     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+     "why": "37a từ thi bắt tự nói/viết; 37c dùng lại ở 1 unit sau",
      "en_link": "không thấy nghĩa Anh",
      "tier": "Lõi"
+    },
+    {
+     "w": "饼干",
+     "raw": "饼干 bǐnggān (= biscuit, cookie)",
+     "gloss": "biscuit, cookie",
+     "gk": [
+      "biscuit",
+      "cookie"
+     ],
+     "first": "ngày 94",
+     "exam": "YCT4",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      1,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "why": "37a từ thi bắt tự nói/viết; nghĩa Anh là vòng ngoài (ng.t. 42)",
+     "en_link": "vòng ngoài Anh",
+     "tier": "Vòng ngoài",
+     "ex40": "chữ Hán YCT4"
     },
     {
      "w": "尝",
@@ -47733,7 +47450,7 @@
       1,
       1
      ],
-     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+     "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 3 ngày); 37c dùng lại ở 1 unit sau",
      "en_link": "lõi Anh",
      "tier": "Lõi"
     },
@@ -47757,7 +47474,7 @@
       1,
       0
      ],
-     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+     "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (danh, 3 ngày)",
      "en_link": "lõi Anh",
      "tier": "Lõi"
     },
@@ -47781,7 +47498,7 @@
       1,
       0
      ],
-     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+     "why": "37a từ thi bắt tự nói/viết",
      "en_link": "không thấy nghĩa Anh",
      "tier": "Lõi"
     },
@@ -47805,7 +47522,7 @@
       1,
       0
      ],
-     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+     "why": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (cụm, 1 ngày)",
      "en_link": "không thấy nghĩa Anh",
      "tier": "Lõi"
     },
@@ -47829,9 +47546,33 @@
       1,
       0
      ],
-     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+     "why": "37a từ thi bắt tự nói/viết",
      "en_link": "không thấy nghĩa Anh",
      "tier": "Lõi"
+    },
+    {
+     "w": "咸",
+     "raw": "咸 xián (= salty)",
+     "gloss": "salty",
+     "gk": [
+      "salty"
+     ],
+     "first": "ngày 96",
+     "exam": "",
+     "pos": "động/tính",
+     "reuse": 0,
+     "carry": 4,
+     "score": [
+      0,
+      1,
+      0,
+      4,
+      0,
+      0
+     ],
+     "why": "37b khung câu mang được (động/tính, 4 ngày); nhãn ghi sẵn trong khung",
+     "en_link": "lõi Anh",
+     "tier": "Vòng ngoài"
     },
     {
      "w": "梨",
@@ -47853,7 +47594,7 @@
       1,
       1
      ],
-     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+     "why": "37a từ thi bắt tự nói/viết; 37c dùng lại ở 1 unit sau",
      "en_link": "không thấy nghĩa Anh",
      "tier": "Lõi"
     },
@@ -47877,9 +47618,33 @@
       1,
       1
      ],
-     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
+     "why": "37a từ thi bắt tự nói/viết; 37c dùng lại ở 1 unit sau",
      "en_link": "không thấy nghĩa Anh",
      "tier": "Lõi"
+    },
+    {
+     "w": "酸",
+     "raw": "酸 suān (= sour)",
+     "gloss": "sour",
+     "gk": [
+      "sour"
+     ],
+     "first": "ngày 97",
+     "exam": "",
+     "pos": "danh",
+     "reuse": 1,
+     "carry": 3,
+     "score": [
+      0,
+      1,
+      1,
+      3,
+      0,
+      1
+     ],
+     "why": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 1 unit sau; nghĩa Anh là vòng ngoài (ng.t. 42)",
+     "en_link": "vòng ngoài Anh",
+     "tier": "Vòng ngoài"
     }
    ]
   },
@@ -47915,6 +47680,44 @@
      "tier": "Lõi"
     },
     {
+     "w": "america",
+     "raw": "America",
+     "first": "ngày 101",
+     "exam": "",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36); nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "russia",
+     "raw": "Russia",
+     "first": "ngày 101",
+     "exam": "",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36); nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
      "w": "sightseeing",
      "raw": "sightseeing",
      "first": "ngày 102",
@@ -47934,6 +47737,65 @@
      "tier": "Lõi"
     },
     {
+     "w": "japan",
+     "raw": "Japan",
+     "first": "ngày 102",
+     "exam": "",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36); nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "rucksack",
+     "raw": "rucksack",
+     "first": "ngày 102",
+     "exam": "Flyers",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36); nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài",
+     "ex40": "thi bắt viết (Flyers)"
+    },
+    {
+     "w": "language",
+     "raw": "language",
+     "first": "ngày 103",
+     "exam": "Flyers",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36); nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài",
+     "ex40": "thi bắt viết (Flyers)"
+    },
+    {
      "w": "resort",
      "raw": "resort",
      "first": "ngày 104",
@@ -47951,6 +47813,44 @@
      ],
      "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "tier": "Lõi"
+    },
+    {
+     "w": "france",
+     "raw": "France",
+     "first": "ngày 104",
+     "exam": "",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36); nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
+    },
+    {
+     "w": "korea",
+     "raw": "Korea",
+     "first": "ngày 105",
+     "exam": "",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36); nhãn ghi sẵn trong khung",
+     "tier": "Vòng ngoài"
     }
    ],
    "zh": [
@@ -48004,6 +47904,30 @@
      "tier": "Lõi"
     },
     {
+     "w": "美国",
+     "raw": "美国 Měiguó (= America)",
+     "gloss": "America",
+     "gk": [
+      "america"
+     ],
+     "first": "ngày 101",
+     "exam": "",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36); nhãn ghi sẵn trong khung",
+     "en_link": "lõi Anh",
+     "tier": "Vòng ngoài"
+    },
+    {
      "w": "观光",
      "raw": "观光 guānguāng (= go sightseeing)",
      "gloss": "go sightseeing",
@@ -48052,6 +47976,30 @@
      "tier": "Lõi"
     },
     {
+     "w": "日本",
+     "raw": "日本 Rìběn (= Japan)",
+     "gloss": "Japan",
+     "gk": [
+      "japan"
+     ],
+     "first": "ngày 102",
+     "exam": "",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36); nhãn ghi sẵn trong khung",
+     "en_link": "lõi Anh",
+     "tier": "Vòng ngoài"
+    },
+    {
      "w": "度假村",
      "raw": "度假村 dùjiàcūn (= resort)",
      "gloss": "resort",
@@ -48076,6 +48024,30 @@
      "tier": "Lõi"
     },
     {
+     "w": "法国",
+     "raw": "法国 Fǎguó (= France)",
+     "gloss": "France",
+     "gk": [
+      "france"
+     ],
+     "first": "ngày 104",
+     "exam": "",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36); nhãn ghi sẵn trong khung",
+     "en_link": "lõi Anh",
+     "tier": "Vòng ngoài"
+    },
+    {
      "w": "行程",
      "raw": "行程 xíngchéng (= trip plan; 安排行程 = plan a trip)",
      "gloss": "trip plan; 安排行程 = plan a trip",
@@ -48098,6 +48070,30 @@
      "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
      "en_link": "không thấy nghĩa Anh",
      "tier": "Lõi"
+    },
+    {
+     "w": "韩国",
+     "raw": "韩国 Hánguó (= Korea)",
+     "gloss": "Korea",
+     "gk": [
+      "korea"
+     ],
+     "first": "ngày 105",
+     "exam": "",
+     "pos": "danh",
+     "reuse": 0,
+     "carry": 0,
+     "score": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "why": "unit ≤15 từ: tất cả là lõi (ng.t. 36); nhãn ghi sẵn trong khung",
+     "en_link": "lõi Anh",
+     "tier": "Vòng ngoài"
     }
    ]
   }

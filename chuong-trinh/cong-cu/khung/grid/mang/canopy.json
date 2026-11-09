@@ -1146,6 +1146,27 @@
    "en": [],
    "zh": []
   },
+  "T1_do_dai": [
+   20,
+   30
+  ],
+  "T1_do_dai_zh": [
+   26,
+   45
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "count",
+    "let's"
+   ],
+   "zh": [
+    "个",
+    "现在"
+   ],
+   "nguon": "Seedling U12",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
+  },
   "khung_cau": {
    "en": "It's ___ now.",
    "zh": "现在是___。",
@@ -2666,6 +2687,27 @@
     "星期日"
    ]
   },
+  "T1_do_dai": [
+   20,
+   30
+  ],
+  "T1_do_dai_zh": [
+   26,
+   45
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "now",
+    "look at"
+   ],
+   "zh": [
+    "对",
+    "几点"
+   ],
+   "nguon": "Canopy U1",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
+  },
   "khung_cau": {
    "en": "My present is a ___.",
    "zh": "我的礼物是___。",
@@ -4135,6 +4177,27 @@
     "八号",
     "蜡烛"
    ]
+  },
+  "T1_do_dai": [
+   20,
+   30
+  ],
+  "T1_do_dai_zh": [
+   26,
+   45
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "say",
+    "long"
+   ],
+   "zh": [
+    "做",
+    "多少"
+   ],
+   "nguon": "Canopy U2",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "Every day, I ___.",
@@ -5688,6 +5751,27 @@
     "八号"
    ]
   },
+  "T1_do_dai": [
+   20,
+   30
+  ],
+  "T1_do_dai_zh": [
+   26,
+   45
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "sleep",
+    "phone"
+   ],
+   "zh": [
+    "说话",
+    "睡觉"
+   ],
+   "nguon": "Canopy U3",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
+  },
   "khung_cau": {
    "en": "I like ___.",
    "zh": "我喜欢___。",
@@ -7112,6 +7196,27 @@
     "放风筝"
    ]
   },
+  "T1_do_dai": [
+   20,
+   30
+  ],
+  "T1_do_dai_zh": [
+   26,
+   45
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "watch",
+    "with"
+   ],
+   "zh": [
+    "画",
+    "觉得"
+   ],
+   "nguon": "Canopy U4",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
+  },
   "khung_cau": {
    "en": "I go to the ___.",
    "zh": "我去___。",
@@ -8337,6 +8442,27 @@
     "store"
    ],
    "zh": []
+  },
+  "T1_do_dai": [
+   20,
+   30
+  ],
+  "T1_do_dai_zh": [
+   26,
+   45
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "then",
+    "english"
+   ],
+   "zh": [
+    "家",
+    "学习"
+   ],
+   "nguon": "Canopy U5",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "What is your job? I am a ___.",
@@ -9685,6 +9811,27 @@
    ],
    "zh": []
   },
+  "T1_do_dai": [
+   20,
+   30
+  ],
+  "T1_do_dai_zh": [
+   26,
+   45
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "love",
+    "don't worry"
+   ],
+   "zh": [
+    "没关系",
+    "比"
+   ],
+   "nguon": "Canopy U6",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
+  },
   "khung_cau": {
    "en": "I go by ___.",
    "zh": "我坐___去。",
@@ -10923,6 +11070,27 @@
     "直升机",
     "卡车"
    ]
+  },
+  "T1_do_dai": [
+   20,
+   30
+  ],
+  "T1_do_dai_zh": [
+   26,
+   45
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "sit",
+    "drive"
+   ],
+   "zh": [
+    "坐",
+    "怎么"
+   ],
+   "nguon": "Canopy U7",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "What animal is it? It's a ___!",
@@ -12354,6 +12522,27 @@
     "swing"
    ],
    "zh": []
+  },
+  "T1_do_dai": [
+   20,
+   30
+  ],
+  "T1_do_dai_zh": [
+   26,
+   45
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "very",
+    "have got"
+   ],
+   "zh": [
+    "没有",
+    "矮"
+   ],
+   "nguon": "Canopy U8",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "On the farm, there is a ___.",
@@ -13852,6 +14041,27 @@
     "瘦"
    ]
   },
+  "T1_do_dai": [
+   20,
+   30
+  ],
+  "T1_do_dai_zh": [
+   26,
+   45
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "old",
+    "ugly"
+   ],
+   "zh": [
+    "漂亮",
+    "对不起"
+   ],
+   "nguon": "Canopy U9",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
+  },
   "khung_cau": {
    "en": "I can see a ___.",
    "zh": "我看见___。",
@@ -15199,6 +15409,27 @@
     "穿过",
     "摘"
    ]
+  },
+  "T1_do_dai": [
+   20,
+   30
+  ],
+  "T1_do_dai_zh": [
+   26,
+   45
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "too",
+    "see"
+   ],
+   "zh": [
+    "可以",
+    "还"
+   ],
+   "nguon": "Canopy U10",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "The teddy is ___ the box.",
@@ -16635,6 +16866,27 @@
     "穿过",
     "躲"
    ]
+  },
+  "T1_do_dai": [
+   20,
+   30
+  ],
+  "T1_do_dai_zh": [
+   26,
+   45
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "put",
+    "stand"
+   ],
+   "zh": [
+    "上边",
+    "有"
+   ],
+   "nguon": "Canopy U11",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "I would like ___, please.",

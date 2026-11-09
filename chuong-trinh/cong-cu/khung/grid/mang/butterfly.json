@@ -51,8 +51,17 @@
    },
    {
     "id": "N1",
-    "loai": "Văn bản mới theo dạng đề",
-    "nguon": "nửa thời gian nghe, đọc (ng.t. 7b)"
+    "loai": "Văn bản mới theo dạng đề (Nghe)",
+    "nguon": "nửa thời gian nghe, đọc (ng.t. 7b)",
+    "tu_en": [],
+    "tu_zh": []
+   },
+   {
+    "id": "N2",
+    "loai": "Văn bản mới theo dạng đề (Đọc – viết)",
+    "nguon": "đoạn đọc mới theo dạng đề",
+    "tu_en": [],
+    "tu_zh": []
    }
   ],
   "van_ban_theo_ngay": [
@@ -66,7 +75,7 @@
     "R2"
    ],
    [
-    "N1 văn bản mới dạng đề"
+    "N2 văn bản mới dạng đề"
    ],
    [
     "R1"
@@ -78,7 +87,7 @@
     "R2"
    ],
    [
-    "N1 văn bản mới dạng đề"
+    "N2 văn bản mới dạng đề"
    ]
   ],
   "nghe_ngam": {
@@ -135,8 +144,17 @@
    },
    {
     "id": "N1",
-    "loai": "Văn bản mới theo dạng đề",
-    "nguon": "nửa thời gian nghe, đọc (ng.t. 7b)"
+    "loai": "Văn bản mới theo dạng đề (Nghe)",
+    "nguon": "nửa thời gian nghe, đọc (ng.t. 7b)",
+    "tu_en": [],
+    "tu_zh": []
+   },
+   {
+    "id": "N2",
+    "loai": "Văn bản mới theo dạng đề (Đọc – viết)",
+    "nguon": "đoạn đọc mới theo dạng đề",
+    "tu_en": [],
+    "tu_zh": []
    }
   ],
   "van_ban_theo_ngay": [
@@ -150,7 +168,7 @@
     "R2"
    ],
    [
-    "N1 văn bản mới dạng đề"
+    "N2 văn bản mới dạng đề"
    ],
    [
     "R1"
@@ -162,7 +180,7 @@
     "R2"
    ],
    [
-    "N1 văn bản mới dạng đề"
+    "N2 văn bản mới dạng đề"
    ]
   ],
   "nghe_ngam": {
@@ -217,8 +235,17 @@
    },
    {
     "id": "N1",
-    "loai": "Văn bản mới theo dạng đề",
-    "nguon": "nửa thời gian nghe, đọc (ng.t. 7b)"
+    "loai": "Văn bản mới theo dạng đề (Nghe)",
+    "nguon": "nửa thời gian nghe, đọc (ng.t. 7b)",
+    "tu_en": [],
+    "tu_zh": []
+   },
+   {
+    "id": "N2",
+    "loai": "Văn bản mới theo dạng đề (Đọc – viết)",
+    "nguon": "đoạn đọc mới theo dạng đề",
+    "tu_en": [],
+    "tu_zh": []
    }
   ],
   "van_ban_theo_ngay": [
@@ -232,7 +259,7 @@
     "R2"
    ],
    [
-    "N1 văn bản mới dạng đề"
+    "N2 văn bản mới dạng đề"
    ],
    [
     "R1"
@@ -244,7 +271,7 @@
     "R2"
    ],
    [
-    "N1 văn bản mới dạng đề"
+    "N2 văn bản mới dạng đề"
    ]
   ],
   "nghe_ngam": {
@@ -293,8 +320,17 @@
    },
    {
     "id": "N1",
-    "loai": "Văn bản mới theo dạng đề",
-    "nguon": "nửa thời gian nghe, đọc (ng.t. 7b)"
+    "loai": "Văn bản mới theo dạng đề (Nghe)",
+    "nguon": "nửa thời gian nghe, đọc (ng.t. 7b)",
+    "tu_en": [],
+    "tu_zh": []
+   },
+   {
+    "id": "N2",
+    "loai": "Văn bản mới theo dạng đề (Đọc – viết)",
+    "nguon": "đoạn đọc mới theo dạng đề",
+    "tu_en": [],
+    "tu_zh": []
    }
   ],
   "van_ban_theo_ngay": [
@@ -308,7 +344,7 @@
     "R1"
    ],
    [
-    "N1 văn bản mới dạng đề"
+    "N2 văn bản mới dạng đề"
    ],
    [
     "R1"
@@ -320,7 +356,7 @@
     "R1"
    ],
    [
-    "N1 văn bản mới dạng đề"
+    "N2 văn bản mới dạng đề"
    ]
   ],
   "nghe_ngam": {
@@ -368,8 +404,17 @@
    },
    {
     "id": "N1",
-    "loai": "Văn bản mới theo dạng đề",
-    "nguon": "nửa thời gian nghe, đọc (ng.t. 7b)"
+    "loai": "Văn bản mới theo dạng đề (Nghe)",
+    "nguon": "nửa thời gian nghe, đọc (ng.t. 7b)",
+    "tu_en": [],
+    "tu_zh": []
+   },
+   {
+    "id": "N2",
+    "loai": "Văn bản mới theo dạng đề (Đọc – viết)",
+    "nguon": "đoạn đọc mới theo dạng đề",
+    "tu_en": [],
+    "tu_zh": []
    }
   ],
   "van_ban_theo_ngay": [
@@ -383,7 +428,7 @@
     "R1"
    ],
    [
-    "N1 văn bản mới dạng đề"
+    "N2 văn bản mới dạng đề"
    ],
    [
     "R1"
@@ -395,7 +440,7 @@
     "R1"
    ],
    [
-    "N1 văn bản mới dạng đề"
+    "N2 văn bản mới dạng đề"
    ]
   ],
   "nghe_ngam": {
@@ -443,8 +488,17 @@
    },
    {
     "id": "N1",
-    "loai": "Văn bản mới theo dạng đề",
-    "nguon": "nửa thời gian nghe, đọc (ng.t. 7b)"
+    "loai": "Văn bản mới theo dạng đề (Nghe)",
+    "nguon": "nửa thời gian nghe, đọc (ng.t. 7b)",
+    "tu_en": [],
+    "tu_zh": []
+   },
+   {
+    "id": "N2",
+    "loai": "Văn bản mới theo dạng đề (Đọc – viết)",
+    "nguon": "đoạn đọc mới theo dạng đề",
+    "tu_en": [],
+    "tu_zh": []
    }
   ],
   "van_ban_theo_ngay": [
@@ -458,7 +512,7 @@
     "R1"
    ],
    [
-    "N1 văn bản mới dạng đề"
+    "N2 văn bản mới dạng đề"
    ],
    [
     "R1"
@@ -470,7 +524,7 @@
     "R1"
    ],
    [
-    "N1 văn bản mới dạng đề"
+    "N2 văn bản mới dạng đề"
    ]
   ],
   "nghe_ngam": {

@@ -13,12 +13,14 @@ G = K + 'grid/'
 sys.path.insert(0, K + 'audit')
 from tu2tang import ORDER, REVIEW, load_rows  # noqa
 
-MIL = {'YCT1': 'seedling', 'Starters': 'canopy', 'YCT2': 'canopy', 'Movers': 'larva', 'YCT3': 'larva', 'Flyers': 'butterfly', 'YCT4': 'butterfly'}
+MIL = {'YCT1': 'seedling', 'Starters': 'canopy', 'YCT2': 'canopy', 'Movers': 'larva-plus', 'YCT3': 'larva-plus',   # NL-1 (09/11): mốc Movers/YCT3 sau Larva Plus
+       'Flyers': 'butterfly', 'YCT4': 'butterfly'}
 CHECKS = {1: 'số từ lõi một tiếng ngoài 12–15 (unit >15 từ)', 2: 'từ lõi có mặt dưới 3 văn bản',
           3: 'từ vòng ngoài dưới 2 lần trong unit hoặc dưới 3 lượt gọi lại',
           4: 'từ thi bắt viết/nói thiếu bước luyện hoặc thiếu 5 lượt gọi lại',
           5: 'từ vòng ngoài không quay lại ở ít nhất 2 unit sau', 6: 'lõi tiếng Trung có từ ngoài lõi tiếng Anh',
-          7: 'từ thi dưới 5 lần gặp trước mốc thi'}
+          7: 'từ thi dưới 5 lần gặp trước mốc thi',
+          8: '(kiểm thêm, NL-2) phần truyện khung ngoài mức độ dài của bậc', 9: '(kiểm thêm, ng.t. 6) truyện khung thiếu 1–2 từ hay sai của unit trước'}
 
 
 def norm_en(t):
@@ -41,7 +43,7 @@ def appearances(where):
     """Đếm số lần trong chuỗi mô tả nơi xuất hiện, ví dụ 'T1 phần 2 + T3' -> 2, 'T1 phần 1, phần 4' -> 2."""
     if not where:
         return 0
-    n = len(re.findall(r'T\d', where))
+    n = len(re.findall(r'[TNR]\d', where))
     n += max(0, len(re.findall(r'phần\s*\d', where)) - len(re.findall(r'T1\s*phần', where)))
     return n
 
@@ -56,8 +58,30 @@ def main(as_json=False):
         for r in json.load(open(f)):
             u = 'U' + r['unit']
             tag = '%s %s' % (r['khoa'], u)
+            mau = None
             if c in REVIEW:
+                # khóa ôn: chỉ kiểm từ chuyển từ Larva (NL-1) – đủ 2 lần, gọi lại, ngoại lệ 40
+                dv = r.get('dem_vong_ngoai') or {}
+                for L in ('en', 'zh'):
+                    for x in r['tu_' + L]:
+                        if x['nhan'] != 'Vòng ngoài':
+                            continue
+                        if appearances(dv.get(x['tu'], '')) < 2 or len(x['goi_lai']) < 3:
+                            red[3].append('%s %s: "%s"' % (tag, L, x['tu']))
+                        if x['ngoai_le_40'] and (not x['buoc_chu'] or len(x['goi_lai']) < 5):
+                            red[4].append('%s %s: "%s"' % (tag, L, x['tu']))
                 continue
+            # kiểm thêm (NL-2, ng.t. 6): độ dài truyện khung theo bậc, 1–2 từ hay sai của unit trước
+            lo_hi = r.get('T1_do_dai')
+            mau_ = G + 'mang/mau_%s_u%s.json' % (c, r['unit'])
+            if lo_hi and os.path.exists(mau_):
+                for i, part in enumerate(json.load(open(mau_))['T1']['en']):
+                    n = len(re.findall(r"[^\W\d_][\w'’-]*|___", part))
+                    if not (lo_hi[0] <= n <= lo_hi[1]):
+                        red[8].append('%s: T1 phần %d có %d chữ, mức %d–%d' % (tag, i + 1, n, lo_hi[0], lo_hi[1]))
+            hs = r.get('tu_hay_sai') or {}
+            if r.get('co_unit_truoc') and not (1 <= len(hs.get('en', [])) <= 2):
+                red[9].append('%s: %d từ hay sai tiếng Anh' % (tag, len(hs.get('en', []))))
             mau = G + 'mang/mau_%s_u%s.json' % (c, r['unit'])
             full = json.load(open(mau)) if os.path.exists(mau) else None
             vb = r.get('van_ban') or []

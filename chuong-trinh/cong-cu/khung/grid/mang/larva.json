@@ -93,53 +93,6 @@
     "buoc_chu": true
    },
    {
-    "tu": "america",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37c dùng lại ở 2 unit sau",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 5",
-    "goi_lai": [
-     5,
-     6,
-     9
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U4",
-      "Larva U7"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "japan",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "danh từ / ngoài danh sách thi",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 5",
-    "goi_lai": [
-     5,
-     6,
-     9
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U1"
-     ],
-     "xep_them": [
-      "Larva U2"
-     ]
-    }
-   },
-   {
     "tu": "germany",
     "nghia": "",
     "nhan": "Lõi",
@@ -156,174 +109,6 @@
      "khóa ôn / ôn chặng"
     ],
     "buoc_chu": true
-   },
-   {
-    "tu": "language",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37c dùng lại ở 4 unit sau",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "Flyers",
-    "gap_dau": "ngày 6",
-    "goi_lai": [
-     6,
-     7,
-     10
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U2",
-      "Larva U7"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "age",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "danh từ thi",
-    "ngoai_le_40": "thi bắt viết (Movers)",
-    "may_khong_chac": false,
-    "thi": "Movers",
-    "gap_dau": "ngày 6",
-    "goi_lai": [
-     6,
-     7,
-     10,
-     18,
-     "khóa ôn / ôn chặng"
-    ],
-    "buoc_chu": true,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U1",
-      "Cocoon U12"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "france",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "danh từ / ngoài danh sách thi",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 6",
-    "goi_lai": [
-     6,
-     7,
-     10
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U1",
-      "Cocoon U10"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "korea",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "danh từ / ngoài danh sách thi",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 6",
-    "goi_lai": [
-     6,
-     7,
-     10
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U1"
-     ],
-     "xep_them": [
-      "Larva U2"
-     ]
-    }
-   },
-   {
-    "tu": "russia",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "danh từ / ngoài danh sách thi",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 6",
-    "goi_lai": [
-     6,
-     7,
-     10
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U1",
-      "Cocoon U10"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "parent",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37c dùng lại ở 2 unit sau",
-    "ngoai_le_40": "thi bắt viết (Movers)",
-    "may_khong_chac": false,
-    "thi": "Movers",
-    "gap_dau": "ngày 7",
-    "goi_lai": [
-     7,
-     8,
-     11,
-     19,
-     "khóa ôn / ôn chặng"
-    ],
-    "buoc_chu": true,
-    "quay_lai": {
-     "da_co": [
-      "Larva U2",
-      "Larva U10"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "grandparent",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37c dùng lại ở 3 unit sau",
-    "ngoai_le_40": "thi bắt viết (Movers)",
-    "may_khong_chac": false,
-    "thi": "Movers",
-    "gap_dau": "ngày 7",
-    "goi_lai": [
-     7,
-     8,
-     11,
-     19,
-     "khóa ôn / ôn chặng"
-    ],
-    "buoc_chu": true,
-    "quay_lai": {
-     "da_co": [
-      "Larva U2",
-      "Larva U11"
-     ],
-     "xep_them": []
-    }
    },
    {
     "tu": "son",
@@ -711,7 +496,7 @@
     "tu": "国家",
     "nghia": "country",
     "nhan": "Lõi",
-    "ly_do": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 3 unit sau",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT4",
@@ -729,7 +514,7 @@
     "tu": "越南",
     "nghia": "Vietnam",
     "nhan": "Lõi",
-    "ly_do": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 4 unit sau",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "",
@@ -747,7 +532,7 @@
     "tu": "英国",
     "nghia": "England",
     "nhan": "Lõi",
-    "ly_do": "37b khung câu mang được (danh, 5 ngày); 37c dùng lại ở 3 unit sau",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "",
@@ -762,33 +547,10 @@
     "buoc_chu": true
    },
    {
-    "tu": "美国",
-    "nghia": "America",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37c dùng lại ở 2 unit sau; nghĩa Anh là vòng ngoài (ng.t. 42)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 5",
-    "goi_lai": [
-     5,
-     6,
-     9
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U4",
-      "Larva U7"
-     ],
-     "xep_them": []
-    }
-   },
-   {
     "tu": "德国",
     "nghia": "Germany",
     "nhan": "Lõi",
-    "ly_do": "37b khung câu mang được (động/tính, 1 ngày)",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "",
@@ -803,79 +565,10 @@
     "buoc_chu": true
    },
    {
-    "tu": "日本",
-    "nghia": "Japan",
-    "nhan": "Vòng ngoài",
-    "ly_do": "danh từ / ngoài danh sách thi; nghĩa Anh là vòng ngoài (ng.t. 42)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 6",
-    "goi_lai": [
-     6,
-     7,
-     10
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U1",
-      "Cocoon U7"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "韩国",
-    "nghia": "Korea",
-    "nhan": "Vòng ngoài",
-    "ly_do": "danh từ / ngoài danh sách thi; nghĩa Anh là vòng ngoài (ng.t. 42)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 6",
-    "goi_lai": [
-     6,
-     7,
-     10
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U1",
-      "Cocoon U7"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "法国",
-    "nghia": "France",
-    "nhan": "Vòng ngoài",
-    "ly_do": "danh từ / ngoài danh sách thi; nghĩa Anh là vòng ngoài (ng.t. 42)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 6",
-    "goi_lai": [
-     6,
-     7,
-     10
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U1",
-      "Cocoon U10"
-     ],
-     "xep_them": []
-    }
-   },
-   {
     "tu": "男",
     "nghia": "man; boy",
     "nhan": "Lõi",
-    "ly_do": "37c dùng lại ở 4 unit sau",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT3",
@@ -893,7 +586,7 @@
     "tu": "先生",
     "nghia": "Mr",
     "nhan": "Lõi",
-    "ly_do": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (chức năng, 2 ngày)",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT3",
@@ -911,7 +604,7 @@
     "tu": "小姐",
     "nghia": "Miss",
     "nhan": "Lõi",
-    "ly_do": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (chức năng, 1 ngày)",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT3",
@@ -929,7 +622,7 @@
     "tu": "自己",
     "nghia": "by myself",
     "nhan": "Lõi",
-    "ly_do": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (cụm, 1 ngày); 37c dùng lại ở 1 unit sau",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT3",
@@ -947,7 +640,7 @@
     "tu": "所以",
     "nghia": "so",
     "nhan": "Lõi",
-    "ly_do": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (chức năng, 1 ngày); 37c dùng lại ở 7 unit sau",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT3",
@@ -965,7 +658,7 @@
     "tu": "丢",
     "nghia": "lost",
     "nhan": "Lõi",
-    "ly_do": "37c dùng lại ở 2 unit sau",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT3",
@@ -983,7 +676,7 @@
     "tu": "玫瑰花",
     "nghia": "rose",
     "nhan": "Lõi",
-    "ly_do": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (cụm, 2 ngày)",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT3",
@@ -1011,6 +704,27 @@
     "柠檬水",
     "苹果派"
    ]
+  },
+  "T1_do_dai": [
+   30,
+   40
+  ],
+  "T1_do_dai_zh": [
+   40,
+   60
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "want",
+    "please"
+   ],
+   "zh": [
+    "请",
+    "来"
+   ],
+   "nguon": "Canopy U12",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "I'm from ___.",
@@ -1106,8 +820,6 @@
      "shout",
      "must",
      "look for",
-     "language",
-     "america",
      "grandson",
      "clown",
      "pirate"
@@ -1123,8 +835,7 @@
      "自己",
      "所以",
      "丢",
-     "玫瑰花",
-     "美国"
+     "玫瑰花"
     ]
    },
    {
@@ -1137,9 +848,7 @@
     "o_thay": [
      "vietnam",
      "england",
-     "germany",
-     "america",
-     "france"
+     "germany"
     ],
     "dong_tac": "mỗi lần một động tác: vẫy cờ (Vietnam) – cúi chào (England) – giậm chân (Germany) – vỗ tay trên đầu (America) – xoay một vòng (France)",
     "tu_en": [
@@ -1147,16 +856,12 @@
      "flag",
      "vietnam",
      "england",
-     "germany",
-     "america",
-     "france"
+     "germany"
     ],
     "tu_zh": [
      "越南",
      "英国",
-     "德国",
-     "美国",
-     "法国"
+     "德国"
     ],
     "ghi_chu_thanh": "越南 yuè nán (4–2), 英国 yīng guó (1–2), 德国 dé guó (2–2), 美国 měi guó (3–2), 法国 fǎ guó (3–2): ô thay đặt ở hai nốt đi lên cuối câu nhạc 2 – hợp chữ 国 thanh 2; 越 (thanh 4) đặt nốt cao rồi xuống. Câu 美国/法国 (3 ở nốt đầu) lo lệch → đổi sang vè vỗ tay cho hai câu này."
    },
@@ -1172,12 +877,6 @@
      "beard",
      "curly",
      "blond",
-     "japan",
-     "korea",
-     "russia",
-     "france",
-     "parent",
-     "grandparent",
      "son",
      "daughter",
      "grandson",
@@ -1188,9 +887,6 @@
      "pirate"
     ],
     "tu_zh": [
-     "日本",
-     "韩国",
-     "法国",
      "先生",
      "小姐",
      "玫瑰花"
@@ -1210,8 +906,7 @@
      "look for",
      "opposite",
      "could",
-     "well",
-     "age"
+     "well"
     ],
     "tu_zh": [
      "男",
@@ -1232,11 +927,7 @@
      "小姐",
      "越南",
      "英国",
-     "德国",
-     "美国",
-     "法国",
-     "日本",
-     "韩国"
+     "德国"
     ]
    },
    {
@@ -1263,14 +954,6 @@
      "shout",
      "must",
      "look for",
-     "japan",
-     "korea",
-     "russia",
-     "france",
-     "language",
-     "age",
-     "parent",
-     "grandparent",
      "son",
      "daughter",
      "granddaughter",
@@ -1288,23 +971,11 @@
      "自己",
      "所以",
      "丢",
-     "玫瑰花",
-     "日本",
-     "韩国",
-     "法国"
+     "玫瑰花"
     ]
    }
   ],
   "dem_vong_ngoai": {
-   "america": "T1 phần 2 + T2",
-   "japan": "T6 + T3",
-   "language": "T1 phần 1 + T6",
-   "age": "T4 + T6",
-   "france": "T6 + T2",
-   "korea": "T6 + T3",
-   "russia": "T6 + T3",
-   "parent": "T6 + T3",
-   "grandparent": "T6 + T3",
    "son": "T6 + T3",
    "daughter": "T6 + T3",
    "grandson": "T1 phần 3 + T3",
@@ -1312,14 +983,10 @@
    "grown-up": "T6 + T3",
    "moustache": "T6 + T3",
    "clown": "T1 phần 4 + T3",
-   "pirate": "T1 phần 5 + T3",
-   "美国": "T1 phần 2 + T2",
-   "日本": "T6 + T3",
-   "韩国": "T6 + T3",
-   "法国": "T6 + T2"
+   "pirate": "T1 phần 5 + T3"
   },
   "de_nghi_doi_nhan": [],
-  "ghi_chu": "Larva: T1 kể phần 1–5 ở ngày 1–5, ngày 6–7 nghe cả truyện; ngày 8 nghe T6. Từ vòng ngoài trong T1 chỉ đi kèm tranh, không tính vào 2–4 từ mới mỗi phần. T3 là sách 'tìm đồ' (look for) nên gom được nhiều từ vòng ngoài khác nhóm; trang cuối: 'Can you look for ___ (tên con)?'.",
+  "ghi_chu": "Larva: T1 kể phần 1–5 ở ngày 1–5, ngày 6–7 nghe cả truyện; ngày 8 nghe T6. Từ vòng ngoài trong T1 chỉ đi kèm tranh, không tính vào 2–4 từ mới mỗi phần. T3 là sách 'tìm đồ' (look for) nên gom được nhiều từ vòng ngoài khác nhóm; trang cuối: 'Can you look for ___ (tên con)?'. NL-1 (09/11): chuyển sang Larva Plus/Pupa: age, america, france, grandparent, japan, korea, language, parent, russia",
   "van_ban_theo_ngay": [
    [
     "T1 phần 1",
@@ -1441,9 +1108,6 @@
     "vietnam",
     "england",
     "germany",
-    "age",
-    "parent",
-    "grandparent",
     "son",
     "daughter",
     "grandson",
@@ -1481,22 +1145,22 @@
     "flag",
     "vietnam",
     "england",
-    "america",
-    "japan",
     "germany",
-    "language",
-    "age",
-    "france",
-    "korea",
-    "russia",
-    "parent",
-    "grandparent",
     "son",
     "daughter",
     "grandson",
     "granddaughter",
     "grown-up",
-    "beard"
+    "beard",
+    "curly",
+    "blond",
+    "well",
+    "opposite",
+    "moustache",
+    "could",
+    "hide",
+    "shout",
+    "must"
    ],
    "poster_cau_cua_mieng": [
     "Nice to meet you! / 很高兴认识你！",
@@ -1545,121 +1209,6 @@
      "khóa ôn / ôn chặng"
     ],
     "buoc_chu": true
-   },
-   {
-    "tu": "past",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (chức năng, 5 ngày); 37c dùng lại ở 4 unit sau",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "Flyers",
-    "gap_dau": "ngày 13",
-    "goi_lai": [
-     13,
-     14,
-     17
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U6",
-      "Larva U7"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "half",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (động/tính, 5 ngày); 37c dùng lại ở 4 unit sau",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "Flyers",
-    "gap_dau": "ngày 13",
-    "goi_lai": [
-     13,
-     14,
-     17
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U3",
-      "Larva U6"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "quarter",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 1 unit sau",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "Flyers",
-    "gap_dau": "ngày 13",
-    "goi_lai": [
-     13,
-     14,
-     17
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U6",
-      "Larva Plus U1"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "minute",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 5 ngày); 37c dùng lại ở 2 unit sau",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "Flyers",
-    "gap_dau": "ngày 13",
-    "goi_lai": [
-     13,
-     14,
-     17
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U3",
-      "Larva U8"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "usually",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (động/tính, 4 ngày); 37c dùng lại ở 1 unit sau",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "Flyers",
-    "gap_dau": "ngày 13",
-    "goi_lai": [
-     13,
-     14,
-     17
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U8",
-      "Larva Plus U1"
-     ],
-     "xep_them": []
-    }
    },
    {
     "tu": "shower",
@@ -1752,29 +1301,6 @@
     "buoc_chu": true
    },
    {
-    "tu": "meal",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37c dùng lại ở 2 unit sau",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "Flyers",
-    "gap_dau": "ngày 14",
-    "goi_lai": [
-     14,
-     15,
-     18
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U6",
-      "Larva U10"
-     ],
-     "xep_them": []
-    }
-   },
-   {
     "tu": "upstairs",
     "nghia": "",
     "nhan": "Lõi",
@@ -1809,107 +1335,6 @@
      "khóa ôn / ôn chặng"
     ],
     "buoc_chu": true
-   },
-   {
-    "tu": "stair",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37c dùng lại ở 1 unit sau",
-    "ngoai_le_40": "thi bắt viết (Movers)",
-    "may_khong_chac": false,
-    "thi": "Movers",
-    "gap_dau": "ngày 15",
-    "goi_lai": [
-     15,
-     16,
-     19,
-     27,
-     "khóa ôn / ôn chặng"
-    ],
-    "buoc_chu": true,
-    "quay_lai": {
-     "da_co": [
-      "Larva U3",
-      "Larva Plus U1"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "balcony",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37c dùng lại ở 1 unit sau",
-    "ngoai_le_40": "thi bắt viết (Movers)",
-    "may_khong_chac": false,
-    "thi": "Movers",
-    "gap_dau": "ngày 15",
-    "goi_lai": [
-     15,
-     16,
-     19,
-     27,
-     "khóa ôn / ôn chặng"
-    ],
-    "buoc_chu": true,
-    "quay_lai": {
-     "da_co": [
-      "Larva U3",
-      "Larva Plus U1"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "basement",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "danh từ thi",
-    "ngoai_le_40": "thi bắt viết (Movers)",
-    "may_khong_chac": false,
-    "thi": "Movers",
-    "gap_dau": "ngày 15",
-    "goi_lai": [
-     15,
-     16,
-     19,
-     27,
-     "khóa ôn / ôn chặng"
-    ],
-    "buoc_chu": true,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U1"
-     ],
-     "xep_them": [
-      "Larva U3"
-     ]
-    }
-   },
-   {
-    "tu": "roof",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37c dùng lại ở 2 unit sau",
-    "ngoai_le_40": "thi bắt viết (Movers)",
-    "may_khong_chac": false,
-    "thi": "Movers",
-    "gap_dau": "ngày 15",
-    "goi_lai": [
-     15,
-     16,
-     19,
-     27,
-     "khóa ôn / ôn chặng"
-    ],
-    "buoc_chu": true,
-    "quay_lai": {
-     "da_co": [
-      "Larva U3",
-      "Larva U6"
-     ],
-     "xep_them": []
-    }
    },
    {
     "tu": "wet",
@@ -2236,103 +1661,9 @@
      ],
      "xep_them": []
     }
-   },
-   {
-    "tu": "how long",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (cụm, 3 ngày); 37c dùng lại ở 3 unit sau",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "Flyers",
-    "gap_dau": "buổi 9",
-    "goi_lai": [
-     17,
-     18,
-     21
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U3",
-      "Larva U8"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "hour",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37c dùng lại ở 2 unit sau",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "Flyers",
-    "gap_dau": "buổi 9",
-    "goi_lai": [
-     17,
-     18,
-     21
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U8",
-      "Larva U11"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "last year",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (cụm, 1 ngày); 37c dùng lại ở 1 unit sau",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "buổi 9",
-    "goi_lai": [
-     17,
-     18,
-     21
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U6",
-      "Pupa U6"
-     ],
-     "xep_them": []
-    }
    }
   ],
   "tu_zh": [
-   {
-    "tu": "半",
-    "nghia": "half",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 5 ngày); 37c dùng lại ở 4 unit sau; nghĩa Anh là vòng ngoài (ng.t. 42)",
-    "ngoai_le_40": "cần cho YCT口试 (YCT3)",
-    "may_khong_chac": false,
-    "thi": "YCT3",
-    "gap_dau": "ngày 13",
-    "goi_lai": [
-     13,
-     14,
-     17,
-     25,
-     "khóa ôn / ôn chặng"
-    ],
-    "buoc_chu": true,
-    "quay_lai": {
-     "da_co": [
-      "Larva U3",
-      "Larva U6"
-     ],
-     "xep_them": []
-    }
-   },
    {
     "tu": "洗澡",
     "nghia": "have a shower; have a bath",
@@ -2445,85 +1776,12 @@
      ],
      "xep_them": []
     }
-   },
-   {
-    "tu": "多久",
-    "nghia": "how long",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (cụm, 5 ngày); 37c dùng lại ở 2 unit sau; nghĩa Anh là vòng ngoài (ng.t. 42)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 17",
-    "goi_lai": [
-     17,
-     18,
-     21
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U3",
-      "Larva U10"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "小时",
-    "nghia": "hour",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37c dùng lại ở 2 unit sau; nghĩa Anh là vòng ngoài (ng.t. 42)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "YCT3",
-    "gap_dau": "ngày 17",
-    "goi_lai": [
-     17,
-     18,
-     21
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U8",
-      "Larva U11"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "去年",
-    "nghia": "last year",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (cụm, 1 ngày); 37c dùng lại ở 1 unit sau; nghĩa Anh là vòng ngoài (ng.t. 42)",
-    "ngoai_le_40": "cần cho YCT口试 (YCT3)",
-    "may_khong_chac": false,
-    "thi": "YCT3",
-    "gap_dau": "ngày 17",
-    "goi_lai": [
-     17,
-     18,
-     21,
-     29,
-     "khóa ôn / ôn chặng"
-    ],
-    "buoc_chu": true,
-    "quay_lai": {
-     "da_co": [
-      "Larva U6",
-      "Larva Plus U6"
-     ],
-     "xep_them": []
-    }
    }
   ],
   "tu_cu_quay_lai": {
    "en": [
     "potato",
     "pie",
-    "japan",
-    "korea",
     "grown-up"
    ],
    "zh": [
@@ -2531,6 +1789,27 @@
     "肉丸",
     "苹果派"
    ]
+  },
+  "T1_do_dai": [
+   30,
+   40
+  ],
+  "T1_do_dai_zh": [
+   40,
+   60
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "well",
+    "look for"
+   ],
+   "zh": [
+    "自己",
+    "德国"
+   ],
+   "nguon": "Larva U1",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "I always ___ after dinner.",
@@ -2626,20 +1905,14 @@
      "third",
      "last",
      "snow",
-     "half",
-     "past",
-     "balcony",
-     "stair",
-     "towel",
-     "minute"
+     "towel"
     ],
     "tu_zh": [
      "洗澡",
      "吃饭",
      "完",
      "每",
-     "电脑",
-     "半"
+     "电脑"
     ]
    },
    {
@@ -2651,7 +1924,6 @@
     "khung_zh": "吃完饭你洗澡吗？——吃完饭我___洗澡！",
     "o_thay": [
      "always",
-     "usually",
      "often",
      "sometimes",
      "never"
@@ -2660,7 +1932,6 @@
     "tu_en": [
      "how often",
      "always",
-     "usually",
      "often",
      "sometimes",
      "never",
@@ -2693,12 +1964,8 @@
      "glass",
      "plate",
      "seat",
-     "balcony",
-     "basement",
-     "roof",
      "lift",
-     "elevator",
-     "meal"
+     "elevator"
     ],
     "tu_zh": [
      "杯子",
@@ -2714,18 +1981,9 @@
     "tu_en": [
      "second",
      "third",
-     "last",
-     "past",
-     "half",
-     "quarter",
-     "how long",
-     "hour",
-     "last year"
+     "last"
     ],
-    "tu_zh": [
-     "去年",
-     "小时"
-    ]
+    "tu_zh": []
    },
    {
     "id": "T5",
@@ -2737,10 +1995,7 @@
      "电脑",
      "每",
      "吃饭",
-     "完",
-     "半",
-     "小时",
-     "多久"
+     "完"
     ]
    },
    {
@@ -2767,23 +2022,13 @@
      "third",
      "last",
      "snow",
-     "quarter",
-     "minute",
-     "usually",
-     "meal",
-     "stair",
-     "basement",
-     "roof",
      "blanket",
      "bottle",
      "glass",
      "plate",
      "lift",
      "elevator",
-     "seat",
-     "how long",
-     "hour",
-     "last year"
+     "seat"
     ],
     "tu_zh": [
      "洗澡",
@@ -2791,24 +2036,11 @@
      "完",
      "每",
      "电脑",
-     "杯子",
-     "多久",
-     "小时",
-     "去年"
+     "杯子"
     ]
    }
   ],
   "dem_vong_ngoai": {
-   "past": "T1 phần 1 + T4",
-   "half": "T1 phần 1 + T4",
-   "quarter": "T6 + T4",
-   "minute": "T1 phần 5 + T6",
-   "usually": "T6 + T2",
-   "meal": "T6 + T3",
-   "stair": "T1 phần 3 + T6",
-   "balcony": "T1 phần 2 + T3",
-   "basement": "T6 + T3",
-   "roof": "T6 + T3",
    "towel": "T1 phần 4 + T3",
    "blanket": "T6 + T3",
    "bottle": "T6 + T3",
@@ -2817,14 +2049,7 @@
    "lift": "T6 + T3",
    "elevator": "T6 + T3",
    "seat": "T6 + T3",
-   "how long": "T6 + T4",
-   "hour": "T6 + T4",
-   "last year": "T6 + T4",
-   "半": "T1 phần 1 + T5",
-   "杯子": "T6 + T3",
-   "多久": "T6 + T5",
-   "小时": "T6 + T4",
-   "去年": "T6 + T4"
+   "杯子": "T6 + T3"
   },
   "de_nghi_doi_nhan": [
    {
@@ -2846,7 +2071,7 @@
     "ly_do": "Không thuộc chủ đề 'Một ngày của con'; phải tạo tình huống tuyết riêng mới đưa vào đủ 3 văn bản."
    }
   ],
-  "ghi_chu": "Larva: T1 phần 1–5 ngày 1–5, ngày 6–7 nghe cả truyện; ngày 8 T6. Từ vòng ngoài trong T1 chỉ đi kèm tranh. T3 dùng cặp upstairs/downstairs (và wet/dry ở trang tuyết); trang cuối: '___ (tên con) is upstairs!'.",
+  "ghi_chu": "Larva: T1 phần 1–5 ngày 1–5, ngày 6–7 nghe cả truyện; ngày 8 T6. Từ vòng ngoài trong T1 chỉ đi kèm tranh. T3 dùng cặp upstairs/downstairs (và wet/dry ở trang tuyết); trang cuối: '___ (tên con) is upstairs!'. NL-1 (09/11): chuyển sang Larva Plus/Pupa: balcony, basement, half, hour, how long, last year, meal, minute, past, quarter, roof, stair, usually",
   "van_ban_theo_ngay": [
    [
     "T1 phần 1",
@@ -2973,10 +2198,6 @@
     "after",
     "upstairs",
     "downstairs",
-    "stair",
-    "balcony",
-    "basement",
-    "roof",
     "wet",
     "dry",
     "towel",
@@ -2994,35 +2215,33 @@
     "seat"
    ],
    "flashcard_zh": [
-    "半",
     "洗澡",
     "吃饭",
     "完",
     "每",
-    "电脑",
-    "去年"
+    "电脑"
    ],
    "poster_the_gioi": [
     "always",
-    "past",
-    "half",
-    "quarter",
-    "minute",
-    "usually",
     "shower",
     "sometimes",
     "often",
     "never",
     "after",
-    "meal",
     "upstairs",
     "downstairs",
-    "stair",
-    "balcony",
-    "basement",
-    "roof",
     "wet",
-    "dry"
+    "dry",
+    "towel",
+    "blanket",
+    "bottle",
+    "glass",
+    "plate",
+    "how often",
+    "lift",
+    "elevator",
+    "second",
+    "third"
    ],
    "poster_cau_cua_mieng": [
     "Hurry up! / 快点儿！",
@@ -3071,122 +2290,6 @@
      "khóa ôn / ôn chặng"
     ],
     "buoc_chu": true
-   },
-   {
-    "tu": "future",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37c dùng lại ở 1 unit sau",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "Flyers",
-    "gap_dau": "ngày 21",
-    "goi_lai": [
-     21,
-     22,
-     25
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U11",
-      "Larva Plus U2"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "pilot",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 4 ngày); 37c dùng lại ở 1 unit sau",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "Flyers",
-    "gap_dau": "ngày 21",
-    "goi_lai": [
-     21,
-     22,
-     25
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U4",
-      "Larva Plus U1"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "engineer",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37c dùng lại ở 2 unit sau",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "Flyers",
-    "gap_dau": "ngày 21",
-    "goi_lai": [
-     21,
-     22,
-     25
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U4",
-      "Larva U10"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "scientist",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 1 unit sau",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 21",
-    "goi_lai": [
-     21,
-     22,
-     25
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U4",
-      "Larva Plus U2"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "vet",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 3 ngày)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 21",
-    "goi_lai": [
-     21,
-     22,
-     25
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U2"
-     ],
-     "xep_them": [
-      "Larva U4"
-     ]
-    }
    },
    {
     "tu": "build",
@@ -3241,30 +2344,6 @@
      "khóa ôn / ôn chặng"
     ],
     "buoc_chu": true
-   },
-   {
-    "tu": "workplace",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "danh từ / ngoài danh sách thi",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 22",
-    "goi_lai": [
-     22,
-     23,
-     26
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U2"
-     ],
-     "xep_them": [
-      "Larva U4"
-     ]
-    }
    },
    {
     "tu": "hundred",
@@ -3714,29 +2793,6 @@
     "buoc_chu": true
    },
    {
-    "tu": "科学家",
-    "nghia": "scientist",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (cụm, 2 ngày); 37c dùng lại ở 1 unit sau; nghĩa Anh là vòng ngoài (ng.t. 42)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 21",
-    "goi_lai": [
-     21,
-     22,
-     25
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U4",
-      "Larva Plus U2"
-     ],
-     "xep_them": []
-    }
-   },
-   {
     "tu": "帮助",
     "nghia": "help",
     "nhan": "Lõi",
@@ -3929,10 +2985,30 @@
   ],
   "tu_cu_quay_lai": {
    "en": [
-    "grown-up",
-    "basement"
+    "grown-up"
    ],
    "zh": []
+  },
+  "T1_do_dai": [
+   30,
+   40
+  ],
+  "T1_do_dai_zh": [
+   40,
+   60
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "after",
+    "often"
+   ],
+   "zh": [
+    "每",
+    "洗澡"
+   ],
+   "nguon": "Larva U2",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "When I grow up, I want to be a ___.",
@@ -4028,7 +3104,6 @@
      "all right",
      "any",
      "be called",
-     "future",
      "police officer",
      "leaf/leaves",
      "lose",
@@ -4058,29 +3133,19 @@
     "khung_en": "What do you want to be in the future? – When I grow up, I want to be a ___! I need a ___!",
     "khung_zh": "你长大以后想当什么？——我长大以后想当___！",
     "o_thay": [
-     "scientist",
-     "police officer",
-     "pilot",
-     "engineer",
-     "vet"
+     "police officer"
     ],
     "dong_tac": "scientist: lắc ống nghiệm – police officer: giơ tay ra hiệu dừng – pilot: dang tay bay – engineer: xây (build) bằng nắm tay – vet: ôm thú cưng",
     "tu_en": [
      "grow",
      "need",
      "build",
-     "future",
-     "pilot",
-     "engineer",
-     "scientist",
-     "vet",
      "police officer"
     ],
     "tu_zh": [
      "长大",
      "以后",
      "当",
-     "科学家",
      "警察"
     ],
     "ghi_chu_thanh": "Ô Trung theo cùng thứ tự: 科学家, 警察, 飞行员, 工程师, 兽医 (ba từ sau ở mức Nghe làm quen, có tranh). 科学家 kē xué jiā (1–2–1) hợp nốt đi lên rồi giữ; 警察 jǐng chá (3–2): 警 đặt nốt thấp. 飞行员/工程师/兽医 lo lệch thanh → ba câu này đổi sang vè vỗ tay."
@@ -4099,7 +3164,6 @@
      "back",
      "lose",
      "everything",
-     "workplace",
      "bottom",
      "along",
      "out of"
@@ -4160,11 +3224,6 @@
      "all right",
      "any",
      "be called",
-     "pilot",
-     "engineer",
-     "scientist",
-     "vet",
-     "workplace",
      "hundred",
      "out of",
      "everything"
@@ -4181,18 +3240,11 @@
      "把",
      "关",
      "次",
-     "科学家",
      "百"
     ]
    }
   ],
   "dem_vong_ngoai": {
-   "future": "T1 phần 1 + T2",
-   "pilot": "T6 + T2",
-   "engineer": "T6 + T2",
-   "scientist": "T6 + T2",
-   "vet": "T6 + T2",
-   "workplace": "T6 + T3",
    "hundred": "T6 + T4",
    "police officer": "T1 phần 1 + T2",
    "leaf/leaves": "T1 phần 2 + T4",
@@ -4201,7 +3253,6 @@
    "along": "T1 phần 5 + T3",
    "out of": "T6 + T3",
    "everything": "T6 + T3",
-   "科学家": "T6 + T2",
    "警察": "T1 phần 1 + T2",
    "百": "T6 + T4"
   },
@@ -4213,7 +3264,7 @@
     "ly_do": "Chủ đề unit là ước mơ nghề nghiệp nhưng mọi tên nghề đều ở vòng ngoài; khung câu chính 'I want to be a ___' cần ít nhất 2–3 nghề lõi để con dùng được."
    }
   ],
-  "ghi_chu": "Larva: T1 phần 1–5 ngày 1–5, ngày 6–7 nghe cả truyện; ngày 8 T6. Phần 5 có 4 từ mới (mức trần). Từ vòng ngoài trong T1 chỉ đi kèm tranh. 'fall' ở unit này nghĩa là 'ngã/rơi' (khác 'fall' = mùa thu ở unit 8).",
+  "ghi_chu": "Larva: T1 phần 1–5 ngày 1–5, ngày 6–7 nghe cả truyện; ngày 8 T6. Phần 5 có 4 từ mới (mức trần). Từ vòng ngoài trong T1 chỉ đi kèm tranh. 'fall' ở unit này nghĩa là 'ngã/rơi' (khác 'fall' = mùa thu ở unit 8). NL-1 (09/11): chuyển sang Larva Plus/Pupa: engineer, future, pilot, scientist, vet, workplace",
   "van_ban_theo_ngay": [
    [
     "T1 phần 1",
@@ -4360,15 +3411,9 @@
    ],
    "poster_the_gioi": [
     "grow",
-    "future",
-    "pilot",
-    "engineer",
-    "scientist",
-    "vet",
     "build",
     "carry",
     "need",
-    "workplace",
     "hundred",
     "police officer",
     "cry",
@@ -4378,7 +3423,13 @@
     "leaf/leaves",
     "lose",
     "back",
-    "above"
+    "above",
+    "below",
+    "around",
+    "bottom",
+    "all right",
+    "any",
+    "along"
    ],
    "poster_cau_cua_mieng": [
     "Don't cry! / 别哭！",
@@ -4782,30 +3833,6 @@
       "Larva U6"
      ],
      "xep_them": []
-    }
-   },
-   {
-    "tu": "rucksack",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 3 ngày)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "Flyers",
-    "gap_dau": "buổi 16",
-    "goi_lai": [
-     31,
-     32,
-     35
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U3"
-     ],
-     "xep_them": [
-      "Larva U5"
-     ]
     }
    },
    {
@@ -5226,12 +4253,31 @@
   ],
   "tu_cu_quay_lai": {
    "en": [
-    "vet",
-    "workplace",
     "leaf/leaves",
     "bottom"
    ],
    "zh": []
+  },
+  "T1_do_dai": [
+   30,
+   40
+  ],
+  "T1_do_dai_zh": [
+   40,
+   60
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "why",
+    "cry"
+   ],
+   "zh": [
+    "把",
+    "拿"
+   ],
+   "nguon": "Larva U3",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "Put on your ___!",
@@ -5331,8 +4377,7 @@
      "most",
      "helmet",
      "pair",
-     "noise",
-     "rucksack"
+     "noise"
     ],
     "tu_zh": [
      "衣服",
@@ -5473,7 +4518,6 @@
      "surprised",
      "get undressed",
      "weak",
-     "rucksack",
      "backpack",
      "helmet"
     ],
@@ -5504,7 +4548,6 @@
    "noise": "T1 phần 4 + T4",
    "weak": "T6 + T4",
    "pair": "T1 phần 3 + T3",
-   "rucksack": "T1 phần 5 + T6",
    "backpack": "T6 + T3",
    "最": "T1 phần 1 + T3",
    "毛衣": "T1 phần 1 + T2"
@@ -5523,7 +4566,7 @@
     "ly_do": "Món quần áo trung tâm của chủ đề mặc vào – cởi ra; là ô thay đầu tiên của bài hát và truyện khung."
    }
   ],
-  "ghi_chu": "Larva: T1 phần 1–5 ngày 1–5, ngày 6–7 nghe cả truyện; ngày 8 T6. Từ vòng ngoài trong T1 chỉ đi kèm tranh. Lượng từ: chuỗi Trung dùng 件 (衣服, 毛衣) và tránh đổi lượng từ trong cùng chuỗi (luật 33).",
+  "ghi_chu": "Larva: T1 phần 1–5 ngày 1–5, ngày 6–7 nghe cả truyện; ngày 8 T6. Từ vòng ngoài trong T1 chỉ đi kèm tranh. Lượng từ: chuỗi Trung dùng 件 (衣服, 毛衣) và tránh đổi lượng từ trong cùng chuỗi (luật 33). NL-1 (09/11): chuyển sang Larva Plus/Pupa: rucksack",
   "van_ban_theo_ngay": [
    [
     "T1 phần 1",
@@ -5703,8 +4746,8 @@
     "strong",
     "weak",
     "pair",
-    "rucksack",
-    "backpack"
+    "backpack",
+    "terrible"
    ],
    "poster_cau_cua_mieng": [
     "Oh no! / 哎呀！",
@@ -5753,129 +4796,6 @@
      "khóa ôn / ôn chặng"
     ],
     "buoc_chu": true
-   },
-   {
-    "tu": "kangaroo",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37c dùng lại ở 1 unit sau",
-    "ngoai_le_40": "thi bắt viết (Movers)",
-    "may_khong_chac": false,
-    "thi": "Movers",
-    "gap_dau": "ngày 41",
-    "goi_lai": [
-     41,
-     42,
-     45,
-     53,
-     "khóa ôn / ôn chặng"
-    ],
-    "buoc_chu": true,
-    "quay_lai": {
-     "da_co": [
-      "Larva U11",
-      "Larva Plus U4"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "panda",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 5 ngày); 37c dùng lại ở 3 unit sau",
-    "ngoai_le_40": "thi bắt viết (Movers)",
-    "may_khong_chac": false,
-    "thi": "Movers",
-    "gap_dau": "ngày 41",
-    "goi_lai": [
-     41,
-     42,
-     45,
-     53,
-     "khóa ôn / ôn chặng"
-    ],
-    "buoc_chu": true,
-    "quay_lai": {
-     "da_co": [
-      "Larva U6",
-      "Larva U10"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "dolphin",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 4 ngày); 37c dùng lại ở 2 unit sau",
-    "ngoai_le_40": "thi bắt viết (Movers)",
-    "may_khong_chac": false,
-    "thi": "Movers",
-    "gap_dau": "ngày 41",
-    "goi_lai": [
-     41,
-     42,
-     45,
-     53,
-     "khóa ôn / ôn chặng"
-    ],
-    "buoc_chu": true,
-    "quay_lai": {
-     "da_co": [
-      "Larva U6",
-      "Larva U11"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "wolf",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 5 ngày)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 41",
-    "goi_lai": [
-     41,
-     42,
-     45
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U4",
-      "Pupa U5"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "cage",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 5 ngày); 37c dùng lại ở 1 unit sau",
-    "ngoai_le_40": "thi bắt viết (Movers)",
-    "may_khong_chac": false,
-    "thi": "Movers",
-    "gap_dau": "ngày 41",
-    "goi_lai": [
-     41,
-     42,
-     45,
-     53,
-     "khóa ôn / ôn chặng"
-    ],
-    "buoc_chu": true,
-    "quay_lai": {
-     "da_co": [
-      "Larva U11",
-      "Larva Plus U4"
-     ],
-     "xep_them": []
-    }
    },
    {
     "tu": "slow",
@@ -5930,52 +4850,6 @@
      "khóa ôn / ôn chặng"
     ],
     "buoc_chu": true
-   },
-   {
-    "tu": "fast",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (động/tính, 2 ngày); 37c dùng lại ở 2 unit sau",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "Flyers",
-    "gap_dau": "ngày 42",
-    "goi_lai": [
-     42,
-     43,
-     46
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U6",
-      "Larva U11"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "heavy",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (động/tính, 2 ngày); 37c dùng lại ở 1 unit sau",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "Flyers",
-    "gap_dau": "ngày 42",
-    "goi_lai": [
-     42,
-     43,
-     46
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U11",
-      "Larva Plus U3"
-     ],
-     "xep_them": []
-    }
    },
    {
     "tu": "huge",
@@ -6451,75 +5325,6 @@
     "buoc_chu": true
    },
    {
-    "tu": "狼",
-    "nghia": "wolf",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 6 ngày); nghĩa Anh là vòng ngoài (ng.t. 42)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 41",
-    "goi_lai": [
-     41,
-     42,
-     45
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U4",
-      "Pupa U5"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "袋鼠",
-    "nghia": "kangaroo",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37c dùng lại ở 1 unit sau; nghĩa Anh là vòng ngoài (ng.t. 42)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 41",
-    "goi_lai": [
-     41,
-     42,
-     45
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U11",
-      "Larva Plus U4"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "海豚",
-    "nghia": "dolphin",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 4 ngày); 37c dùng lại ở 2 unit sau; nghĩa Anh là vòng ngoài (ng.t. 42)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 41",
-    "goi_lai": [
-     41,
-     42,
-     45
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U6",
-      "Larva U11"
-     ],
-     "xep_them": []
-    }
-   },
-   {
     "tu": "慢",
     "nghia": "slow",
     "nhan": "Lõi",
@@ -6536,31 +5341,6 @@
      "khóa ôn / ôn chặng"
     ],
     "buoc_chu": true
-   },
-   {
-    "tu": "快",
-    "nghia": "fast",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 3 ngày); 37c dùng lại ở 7 unit sau; nghĩa Anh là vòng ngoài (ng.t. 42)",
-    "ngoai_le_40": "cần cho YCT口试 (YCT3)",
-    "may_khong_chac": false,
-    "thi": "YCT3",
-    "gap_dau": "ngày 42",
-    "goi_lai": [
-     42,
-     43,
-     46,
-     54,
-     "khóa ôn / ôn chặng"
-    ],
-    "buoc_chu": true,
-    "quay_lai": {
-     "da_co": [
-      "Larva U6",
-      "Larva U7"
-     ],
-     "xep_them": []
-    }
    },
    {
     "tu": "危险",
@@ -6688,10 +5468,30 @@
   "tu_cu_quay_lai": {
    "en": [
     "leaf/leaves",
-    "weak",
-    "rucksack"
+    "weak"
    ],
    "zh": []
+  },
+  "T1_do_dai": [
+   30,
+   40
+  ],
+  "T1_do_dai_zh": [
+   40,
+   60
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "dream",
+    "put on"
+   ],
+   "zh": [
+    "找",
+    "进"
+   ],
+   "nguon": "Larva U4",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "Can I feed the ___?",
@@ -6787,13 +5587,7 @@
      "afraid",
      "asleep",
      "careful",
-     "panda",
-     "cage",
-     "kangaroo",
-     "fast",
-     "wolf",
-     "awake",
-     "dolphin"
+     "awake"
     ],
     "tu_zh": [
      "熊",
@@ -6804,10 +5598,7 @@
      "危险",
      "知道",
      "当然",
-     "担心",
-     "袋鼠",
-     "快",
-     "海豚"
+     "担心"
     ]
    },
    {
@@ -6817,28 +5608,16 @@
     "giai_dieu": "dân gian hết bản quyền: The Farmer in the Dell (Đô trưởng, nhịp 112)",
     "khung_en": "Can I feed the ___? Can I feed the ___? Yes, you can – be careful! Can I feed the ___?",
     "khung_zh": "我可以喂___吗？可以可以，要小心！",
-    "o_thay": [
-     "panda",
-     "kangaroo",
-     "dolphin",
-     "wolf"
-    ],
+    "o_thay": [],
     "dong_tac": "panda: nhai tre – kangaroo: nhảy hai chân – dolphin: tay lượn sóng – wolf: lùi lại xua tay ('No! It's dangerous!')",
     "tu_en": [
      "feed",
      "careful",
-     "dangerous",
-     "panda",
-     "kangaroo",
-     "dolphin",
-     "wolf"
+     "dangerous"
     ],
     "tu_zh": [
      "喂",
      "熊",
-     "袋鼠",
-     "海豚",
-     "狼",
      "危险"
     ],
     "ghi_chu_thanh": "Ô Trung cùng thứ tự: 熊猫, 袋鼠, 海豚, 狼. 喂 wèi (4) đặt nốt cao rồi xuống – hợp. 袋鼠 dài shǔ (4–3), 海豚 hǎi tún (3–2): tránh kéo dài chữ thanh 3 ở nốt cao. Câu trả lời '不行，危险！' ở lần 4 nói theo vè vỗ tay."
@@ -6855,8 +5634,6 @@
      "clever",
      "brave",
      "afraid",
-     "fast",
-     "heavy",
      "huge",
      "kind",
      "naughty",
@@ -6864,7 +5641,6 @@
     ],
     "tu_zh": [
      "慢",
-     "快",
      "熊",
      "狮子",
      "难"
@@ -6890,8 +5666,7 @@
      "frightened"
     ],
     "tu_zh": [
-     "狮子",
-     "快"
+     "狮子"
     ]
    },
    {
@@ -6933,8 +5708,6 @@
      "afraid",
      "asleep",
      "careful",
-     "cage",
-     "heavy",
      "huge",
      "kind",
      "naughty",
@@ -6953,20 +5726,12 @@
      "知道",
      "当然",
      "担心",
-     "狼",
      "难",
      "坏"
     ]
    }
   ],
   "dem_vong_ngoai": {
-   "kangaroo": "T1 phần 2 + T2",
-   "panda": "T1 phần 1 + T2",
-   "dolphin": "T1 phần 5 + T2",
-   "wolf": "T1 phần 3 + T2",
-   "cage": "T1 phần 1 + T6",
-   "fast": "T1 phần 2 + T3",
-   "heavy": "T6 + T3",
    "huge": "T6 + T3",
    "kind": "T6 + T3",
    "naughty": "T6 + T3",
@@ -6975,10 +5740,6 @@
    "difficult": "T6 + T3",
    "frightened": "T6 + T4",
    "awake": "T1 phần 4 + T4",
-   "狼": "T6 + T2",
-   "袋鼠": "T1 phần 2 + T2",
-   "海豚": "T1 phần 5 + T2",
-   "快": "T1 phần 2 + T3",
    "难": "T6 + T3",
    "坏": "T6 + T5"
   },
@@ -6996,7 +5757,7 @@
     "ly_do": "Là cặp đối lập trực tiếp của slow/慢 (lõi), dùng trong khung big book."
    }
   ],
-  "ghi_chu": "Larva: T1 phần 1–5 ngày 1–5, ngày 6–7 nghe cả truyện; ngày 8 T6. Từ vòng ngoài trong T1 chỉ đi kèm tranh. Chuỗi Trung dùng lượng từ 只 cho mọi con vật (luật 33).",
+  "ghi_chu": "Larva: T1 phần 1–5 ngày 1–5, ngày 6–7 nghe cả truyện; ngày 8 T6. Từ vòng ngoài trong T1 chỉ đi kèm tranh. Chuỗi Trung dùng lượng từ 只 cho mọi con vật (luật 33). NL-1 (09/11): chuyển sang Larva Plus/Pupa: cage, dolphin, fast, heavy, kangaroo, panda, wolf",
   "van_ban_theo_ngay": [
    [
     "T1 phần 1",
@@ -7117,10 +5878,6 @@
   "bo_hoc_tai_nha": {
    "flashcard_en": [
     "feed",
-    "kangaroo",
-    "panda",
-    "dolphin",
-    "cage",
     "slow",
     "loud",
     "than",
@@ -7150,7 +5907,6 @@
     "欢迎",
     "喂",
     "慢",
-    "快",
     "危险",
     "知道",
     "当然",
@@ -7160,16 +5916,9 @@
    ],
    "poster_the_gioi": [
     "feed",
-    "kangaroo",
-    "panda",
-    "dolphin",
-    "wolf",
-    "cage",
     "slow",
     "loud",
     "than",
-    "fast",
-    "heavy",
     "huge",
     "dangerous",
     "clever",
@@ -7178,7 +5927,14 @@
     "kind",
     "naughty",
     "best",
-    "boring"
+    "boring",
+    "exciting",
+    "brilliant",
+    "bad",
+    "better",
+    "difficult",
+    "afraid",
+    "asleep"
    ],
    "poster_cau_cua_mieng": [
     "Welcome to the zoo! / 欢迎来动物园！",
@@ -7319,31 +6075,6 @@
     "buoc_chu": true
    },
    {
-    "tu": "ice",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 5 unit sau",
-    "ngoai_le_40": "thi bắt viết (Movers)",
-    "may_khong_chac": false,
-    "thi": "Movers",
-    "gap_dau": "ngày 49",
-    "goi_lai": [
-     49,
-     50,
-     53,
-     61,
-     "khóa ôn / ôn chặng"
-    ],
-    "buoc_chu": true,
-    "quay_lai": {
-     "da_co": [
-      "Larva U7",
-      "Larva U8"
-     ],
-     "xep_them": []
-    }
-   },
-   {
     "tu": "kick",
     "nghia": "",
     "nhan": "Lõi",
@@ -7378,148 +6109,6 @@
      "khóa ôn / ôn chặng"
     ],
     "buoc_chu": true
-   },
-   {
-    "tu": "team",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 2 unit sau",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "Flyers",
-    "gap_dau": "ngày 50",
-    "goi_lai": [
-     50,
-     51,
-     54
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U7",
-      "Larva U12"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "volleyball",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 4 ngày); 37c dùng lại ở 1 unit sau",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "Flyers",
-    "gap_dau": "ngày 50",
-    "goi_lai": [
-     50,
-     51,
-     54
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U12",
-      "Larva Plus U5"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "win",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37c dùng lại ở 2 unit sau",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "Flyers",
-    "gap_dau": "ngày 50",
-    "goi_lai": [
-     50,
-     51,
-     54
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U7",
-      "Larva U12"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "match",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37c dùng lại ở 2 unit sau",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "Flyers",
-    "gap_dau": "ngày 50",
-    "goi_lai": [
-     50,
-     51,
-     54
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U7",
-      "Larva U12"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "player",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 1 unit sau",
-    "ngoai_le_40": "thi bắt viết (Movers)",
-    "may_khong_chac": false,
-    "thi": "Movers",
-    "gap_dau": "ngày 50",
-    "goi_lai": [
-     50,
-     51,
-     54,
-     62,
-     "khóa ôn / ôn chặng"
-    ],
-    "buoc_chu": true,
-    "quay_lai": {
-     "da_co": [
-      "Larva U9",
-      "Larva Plus U5"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "goal",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37c dùng lại ở 1 unit sau",
-    "ngoai_le_40": "thi bắt viết (Movers)",
-    "may_khong_chac": false,
-    "thi": "Movers",
-    "gap_dau": "ngày 50",
-    "goi_lai": [
-     50,
-     51,
-     54,
-     62,
-     "khóa ôn / ôn chặng"
-    ],
-    "buoc_chu": true,
-    "quay_lai": {
-     "da_co": [
-      "Larva U9",
-      "Larva Plus U5"
-     ],
-     "xep_them": []
-    }
    },
    {
     "tu": "fair",
@@ -7574,32 +6163,6 @@
      "khóa ôn / ôn chặng"
     ],
     "buoc_chu": true
-   },
-   {
-    "tu": "funfair",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "danh từ thi",
-    "ngoai_le_40": "thi bắt viết (Movers)",
-    "may_khong_chac": false,
-    "thi": "Movers",
-    "gap_dau": "ngày 51",
-    "goi_lai": [
-     51,
-     52,
-     55,
-     63,
-     "khóa ôn / ôn chặng"
-    ],
-    "buoc_chu": true,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U5"
-     ],
-     "xep_them": [
-      "Larva U7"
-     ]
-    }
    },
    {
     "tu": "circus",
@@ -7873,29 +6436,6 @@
       "Larva U7"
      ]
     }
-   },
-   {
-    "tu": "catch a bus",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37c dùng lại ở 1 unit sau",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 53",
-    "goi_lai": [
-     53,
-     54,
-     57
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U10",
-      "Larva Plus U5"
-     ],
-     "xep_them": []
-    }
    }
   ],
   "tu_zh": [
@@ -7903,7 +6443,7 @@
     "tu": "滑冰",
     "nghia": "skate, ice skating",
     "nhan": "Lõi",
-    "ly_do": "37b khung câu mang được (động/tính, 3 ngày); 37c dùng lại ở 2 unit sau",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "",
@@ -7921,7 +6461,7 @@
     "tu": "跑步",
     "nghia": "go running",
     "nhan": "Lõi",
-    "ly_do": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (cụm, 1 ngày)",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT3",
@@ -7939,7 +6479,7 @@
     "tu": "太极拳",
     "nghia": "tranh: tai chi",
     "nhan": "Lõi",
-    "ly_do": "37b khung câu mang được (cụm, 1 ngày)",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "",
@@ -7957,7 +6497,7 @@
     "tu": "篮球",
     "nghia": "basketball",
     "nhan": "Lõi",
-    "ly_do": "danh từ / ngoài danh sách thi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "",
@@ -7975,7 +6515,7 @@
     "tu": "打篮球",
     "nghia": "play basketball",
     "nhan": "Lõi",
-    "ly_do": "37a từ thi bắt tự nói/viết",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT3",
@@ -7993,7 +6533,7 @@
     "tu": "足球",
     "nghia": "football",
     "nhan": "Lõi",
-    "ly_do": "37c dùng lại ở 2 unit sau",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "",
@@ -8011,7 +6551,7 @@
     "tu": "踢足球",
     "nghia": "play football",
     "nhan": "Lõi",
-    "ly_do": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (cụm, 1 ngày); 37c dùng lại ở 1 unit sau",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT3",
@@ -8026,33 +6566,10 @@
     "buoc_chu": true
    },
    {
-    "tu": "排球",
-    "nghia": "volleyball",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 4 ngày); 37c dùng lại ở 1 unit sau; nghĩa Anh là vòng ngoài (ng.t. 42)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "YCT4",
-    "gap_dau": "ngày 50",
-    "goi_lai": [
-     50,
-     51,
-     54
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U12",
-      "Larva Plus U5"
-     ],
-     "xep_them": []
-    }
-   },
-   {
     "tu": "乒乓球",
     "nghia": "table tennis",
     "nhan": "Lõi",
-    "ly_do": "37b khung câu mang được (cụm, 3 ngày)",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT4",
@@ -8070,7 +6587,7 @@
     "tu": "网球",
     "nghia": "tennis",
     "nhan": "Lõi",
-    "ly_do": "danh từ / ngoài danh sách thi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT4",
@@ -8088,7 +6605,7 @@
     "tu": "羽毛球",
     "nghia": "badminton",
     "nhan": "Lõi",
-    "ly_do": "danh từ / ngoài danh sách thi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "",
@@ -8106,7 +6623,7 @@
     "tu": "电影",
     "nghia": "film, movie",
     "nhan": "Lõi",
-    "ly_do": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 3 ngày); 37c dùng lại ở 1 unit sau",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT3",
@@ -8124,7 +6641,7 @@
     "tu": "上网",
     "nghia": "go online",
     "nhan": "Lõi",
-    "ly_do": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (cụm, 2 ngày); 37c dùng lại ở 1 unit sau",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT3",
@@ -8142,7 +6659,7 @@
     "tu": "礼物",
     "nghia": "present",
     "nhan": "Lõi",
-    "ly_do": "37c dùng lại ở 2 unit sau",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT3",
@@ -8160,7 +6677,7 @@
     "tu": "少",
     "nghia": "not often, few",
     "nhan": "Lõi",
-    "ly_do": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (cụm, 2 ngày); 37c dùng lại ở 2 unit sau",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT3",
@@ -8180,6 +6697,27 @@
     "awake"
    ],
    "zh": []
+  },
+  "T1_do_dai": [
+   30,
+   40
+  ],
+  "T1_do_dai_zh": [
+   40,
+   60
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "brilliant",
+    "best"
+   ],
+   "zh": [
+    "喂",
+    "慢"
+   ],
+   "nguon": "Larva U5",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "Let's go ___!",
@@ -8275,10 +6813,6 @@
      "film star",
      "comic book",
      "sail",
-     "ice",
-     "catch a bus",
-     "team",
-     "goal",
      "band",
      "movie"
     ],
@@ -8310,8 +6844,7 @@
      "ice skating",
      "roller skating",
      "football",
-     "basketball",
-     "volleyball"
+     "basketball"
     ],
     "dong_tac": "ice skating: lướt trên băng (ice) – roller skating: đạp patin – football: sút – basketball: ném rổ – volleyball: đập bóng qua lưới",
     "tu_en": [
@@ -8320,17 +6853,14 @@
      "ice skating",
      "roller skates",
      "roller skating",
-     "practise",
-     "ice",
-     "volleyball"
+     "practise"
     ],
     "tu_zh": [
      "滑冰",
      "足球",
      "踢足球",
      "篮球",
-     "打篮球",
-     "排球"
+     "打篮球"
     ],
     "ghi_chu_thanh": "football, basketball là từ cũ. Ô Trung cùng thứ tự: 滑冰, 轮滑 (Nghe làm quen), 踢足球, 打篮球, 排球. 滑冰 huá bīng (2–1) và 排球 pái qiú (2–2) đặt ở câu nhạc đi lên – hợp; 打 (3) đặt nốt thấp. Câu 轮滑 lo lệch → đổi sang vè vỗ tay."
    },
@@ -8352,8 +6882,7 @@
      "movie",
      "cd",
      "dvd",
-     "circus",
-     "funfair"
+     "circus"
     ],
     "tu_zh": [
      "电影",
@@ -8371,11 +6900,6 @@
      "score",
      "fair",
      "practise",
-     "team",
-     "win",
-     "match",
-     "player",
-     "goal",
      "net",
      "bat"
     ],
@@ -8426,18 +6950,12 @@
      "film star",
      "comic book",
      "sail",
-     "volleyball",
-     "win",
-     "match",
-     "player",
-     "funfair",
      "circus",
      "cd",
      "dvd",
      "net",
      "bat",
-     "model",
-     "catch a bus"
+     "model"
     ],
     "tu_zh": [
      "滑冰",
@@ -8453,20 +6971,11 @@
      "电影",
      "上网",
      "礼物",
-     "少",
-     "排球"
+     "少"
     ]
    }
   ],
   "dem_vong_ngoai": {
-   "ice": "T1 phần 1 + T2",
-   "team": "T1 phần 3 + T4",
-   "volleyball": "T6 + T2",
-   "win": "T6 + T4",
-   "match": "T6 + T4",
-   "player": "T6 + T4",
-   "goal": "T1 phần 3 + T4",
-   "funfair": "T6 + T3",
    "circus": "T6 + T3",
    "band": "T1 phần 4 + T3",
    "movie": "T1 phần 5 + T3",
@@ -8474,12 +6983,10 @@
    "dvd": "T6 + T3",
    "net": "T6 + T4",
    "bat": "T6 + T4",
-   "model": "T6 + T3",
-   "catch a bus": "T1 phần 1 + T6",
-   "排球": "T6 + T2"
+   "model": "T6 + T3"
   },
   "de_nghi_doi_nhan": [],
-  "ghi_chu": "Larva: T1 phần 1–5 ngày 1–5, ngày 6–7 nghe cả truyện; ngày 8 T6. Từ vòng ngoài trong T1 chỉ đi kèm tranh. Chuỗi động từ Trung giữ cặp 打 (篮球/乒乓球/网球/羽毛球) và 踢 (足球) để con nghe được quy luật.",
+  "ghi_chu": "Larva: T1 phần 1–5 ngày 1–5, ngày 6–7 nghe cả truyện; ngày 8 T6. Từ vòng ngoài trong T1 chỉ đi kèm tranh. Chuỗi động từ Trung giữ cặp 打 (篮球/乒乓球/网球/羽毛球) và 踢 (足球) để con nghe được quy luật. NL-1 (09/11): chuyển sang Larva Plus/Pupa: catch a bus, funfair, goal, ice, match, player, team, volleyball, win",
   "van_ban_theo_ngay": [
    [
     "T1 phần 1",
@@ -8605,15 +7112,11 @@
     "roller skates",
     "roller skating",
     "practise",
-    "ice",
     "kick",
     "score",
-    "player",
-    "goal",
     "fair",
     "dress up",
     "pop star",
-    "funfair",
     "circus",
     "band",
     "film",
@@ -8649,20 +7152,20 @@
     "roller skates",
     "roller skating",
     "practise",
-    "ice",
     "kick",
     "score",
-    "team",
-    "volleyball",
-    "win",
-    "match",
-    "player",
-    "goal",
     "fair",
     "dress up",
     "pop star",
-    "funfair",
-    "circus"
+    "circus",
+    "band",
+    "film",
+    "film star",
+    "comic book",
+    "movie",
+    "cd",
+    "dvd",
+    "sail"
    ],
    "poster_cau_cua_mieng": [
     "Let's go! / 走吧！",
@@ -8856,76 +7359,6 @@
     "buoc_chu": true
    },
    {
-    "tu": "dessert",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 3 ngày)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 58",
-    "goi_lai": [
-     58,
-     59,
-     62
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U5",
-      "Larva Plus U6"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "biscuit",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37c dùng lại ở 1 unit sau",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "Flyers",
-    "gap_dau": "ngày 58",
-    "goi_lai": [
-     58,
-     59,
-     62
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U8",
-      "Larva Plus U5"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "cookie",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "danh từ / ngoài danh sách thi",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "Flyers",
-    "gap_dau": "ngày 58",
-    "goi_lai": [
-     58,
-     59,
-     62
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U5"
-     ],
-     "xep_them": [
-      "Larva U8"
-     ]
-    }
-   },
-   {
     "tu": "milkshake",
     "nghia": "",
     "nhan": "Vòng ngoài",
@@ -9028,75 +7461,6 @@
      "khóa ôn / ôn chặng"
     ],
     "buoc_chu": true
-   },
-   {
-    "tu": "salty",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (động/tính, 3 ngày)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 59",
-    "goi_lai": [
-     59,
-     60,
-     63
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U5",
-      "Larva Plus U6"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "sour",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 3 ngày)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 59",
-    "goi_lai": [
-     59,
-     60,
-     63
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U5",
-      "Pupa U11"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "bitter",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "danh từ / ngoài danh sách thi",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 59",
-    "goi_lai": [
-     59,
-     60,
-     63
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U5",
-      "Pupa U11"
-     ],
-     "xep_them": []
-    }
    },
    {
     "tu": "excuse me",
@@ -9309,7 +7673,7 @@
     "tu": "面包",
     "nghia": "bread",
     "nhan": "Lõi",
-    "ly_do": "danh từ thi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT3",
@@ -9327,7 +7691,7 @@
     "tu": "菜",
     "nghia": "dish, food",
     "nhan": "Lõi",
-    "ly_do": "37b khung câu mang được (danh, 6 ngày); 37c dùng lại ở 1 unit sau",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT3",
@@ -9345,7 +7709,7 @@
     "tu": "卖",
     "nghia": "sells, sell",
     "nhan": "Lõi",
-    "ly_do": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 1 ngày); 37c dùng lại ở 1 unit sau",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT3",
@@ -9363,7 +7727,7 @@
     "tu": "冰淇淋",
     "nghia": "ice cream",
     "nhan": "Lõi",
-    "ly_do": "37b khung câu mang được (cụm, 4 ngày); 37c dùng lại ở 1 unit sau",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "",
@@ -9381,7 +7745,7 @@
     "tu": "巧克力",
     "nghia": "chocolate",
     "nhan": "Lõi",
-    "ly_do": "37b khung câu mang được (danh, 5 ngày); 37c dùng lại ở 1 unit sau",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT4",
@@ -9396,56 +7760,10 @@
     "buoc_chu": true
    },
    {
-    "tu": "甜点",
-    "nghia": "dessert",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 3 ngày); nghĩa Anh là vòng ngoài (ng.t. 42)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 58",
-    "goi_lai": [
-     58,
-     59,
-     62
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U5",
-      "Larva Plus U6"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "饼干",
-    "nghia": "biscuit, cookie",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 1 unit sau; nghĩa Anh là vòng ngoài (ng.t. 42)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "YCT4",
-    "gap_dau": "ngày 58",
-    "goi_lai": [
-     58,
-     59,
-     62
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U8",
-      "Larva Plus U5"
-     ],
-     "xep_them": []
-    }
-   },
-   {
     "tu": "甜",
     "nghia": "sweet",
     "nhan": "Lõi",
-    "ly_do": "37b khung câu mang được (danh, 6 ngày); 37c dùng lại ở 2 unit sau",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT4",
@@ -9463,7 +7781,7 @@
     "tu": "辣",
     "nghia": "spicy",
     "nhan": "Lõi",
-    "ly_do": "37b khung câu mang được (động/tính, 3 ngày); 37c dùng lại ở 1 unit sau",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT4",
@@ -9481,7 +7799,7 @@
     "tu": "糖果",
     "nghia": "a sweet, sweets",
     "nhan": "Lõi",
-    "ly_do": "37c dùng lại ở 1 unit sau",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "",
@@ -9496,79 +7814,10 @@
     "buoc_chu": true
    },
    {
-    "tu": "咸",
-    "nghia": "salty",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (động/tính, 3 ngày); nghĩa Anh là vòng ngoài (ng.t. 42)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 59",
-    "goi_lai": [
-     59,
-     60,
-     63
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U5",
-      "Larva Plus U6"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "酸",
-    "nghia": "sour",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 3 ngày); nghĩa Anh là vòng ngoài (ng.t. 42)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 59",
-    "goi_lai": [
-     59,
-     60,
-     63
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U5",
-      "Pupa U11"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "苦",
-    "nghia": "bitter",
-    "nhan": "Vòng ngoài",
-    "ly_do": "danh từ / ngoài danh sách thi; nghĩa Anh là vòng ngoài (ng.t. 42)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 59",
-    "goi_lai": [
-     59,
-     60,
-     63
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U5",
-      "Pupa U11"
-     ],
-     "xep_them": []
-    }
-   },
-   {
     "tu": "还是",
     "nghia": "or",
     "nhan": "Lõi",
-    "ly_do": "37b khung câu mang được (chức năng, 3 ngày)",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT4",
@@ -9586,7 +7835,7 @@
     "tu": "西瓜",
     "nghia": "watermelon",
     "nhan": "Lõi",
-    "ly_do": "danh từ thi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT3",
@@ -9604,7 +7853,7 @@
     "tu": "因为",
     "nghia": "because",
     "nhan": "Lõi",
-    "ly_do": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (chức năng, 4 ngày); 37c dùng lại ở 2 unit sau",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT3",
@@ -9622,7 +7871,7 @@
     "tu": "但是",
     "nghia": "but",
     "nhan": "Lõi",
-    "ly_do": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (chức năng, 2 ngày); 37c dùng lại ở 1 unit sau",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT3",
@@ -9639,12 +7888,32 @@
   ],
   "tu_cu_quay_lai": {
    "en": [
-    "funfair",
     "cd",
     "dvd",
     "model"
    ],
    "zh": []
+  },
+  "T1_do_dai": [
+   30,
+   40
+  ],
+  "T1_do_dai_zh": [
+   40,
+   60
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "skate",
+    "practise"
+   ],
+   "zh": [
+    "滑冰",
+    "少"
+   ],
+   "nguon": "Larva U6",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "I'd like ___, please.",
@@ -9744,8 +8013,7 @@
      "cheese",
      "sauce",
      "pasta",
-     "milkshake",
-     "dessert"
+     "milkshake"
     ],
     "tu_zh": [
      "面包",
@@ -9759,8 +8027,7 @@
      "还是",
      "西瓜",
      "因为",
-     "但是",
-     "甜点"
+     "但是"
     ]
    },
    {
@@ -9813,17 +8080,11 @@
      "spicy",
      "both",
      "coffee",
-     "sauce",
-     "salty",
-     "sour",
-     "bitter"
+     "sauce"
     ],
     "tu_zh": [
      "甜",
      "辣",
-     "咸",
-     "酸",
-     "苦",
      "因为",
      "但是"
     ]
@@ -9835,8 +8096,6 @@
     "khung_en": "One cookie, two biscuits – break, break, break! Something inside? Nothing inside! Count it quickly, count it loudly!",
     "khung_zh": "一块饼干，两块饼干，掰开看看——里面有什么？",
     "tu_en": [
-     "biscuit",
-     "cookie",
      "break",
      "something",
      "nothing",
@@ -9846,9 +8105,7 @@
      "badly",
      "change"
     ],
-    "tu_zh": [
-     "饼干"
-    ]
+    "tu_zh": []
    },
    {
     "id": "T5",
@@ -9859,8 +8116,6 @@
     "tu_zh": [
      "卖",
      "糖果",
-     "甜点",
-     "饼干",
      "巧克力"
     ]
    },
@@ -9889,13 +8144,7 @@
      "loudly",
      "quickly",
      "pancake",
-     "dessert",
-     "biscuit",
-     "cookie",
      "tea",
-     "salty",
-     "sour",
-     "bitter",
      "break"
     ],
     "tu_zh": [
@@ -9910,11 +8159,7 @@
      "还是",
      "西瓜",
      "因为",
-     "但是",
-     "饼干",
-     "咸",
-     "酸",
-     "苦"
+     "但是"
     ]
    }
   ],
@@ -9924,20 +8169,9 @@
    "pasta": "T1 phần 3 + T2",
    "sauce": "T1 phần 2 + T3",
    "pancake": "T6 + T2",
-   "dessert": "T1 phần 5 + T6",
-   "biscuit": "T6 + T4",
-   "cookie": "T6 + T4",
    "milkshake": "T1 phần 4 + T2",
    "tea": "T6 + T2",
-   "salty": "T6 + T3",
-   "sour": "T6 + T3",
-   "bitter": "T6 + T3",
-   "break": "T6 + T4",
-   "甜点": "T1 phần 5 + T5",
-   "饼干": "T6 + T4",
-   "咸": "T6 + T3",
-   "酸": "T6 + T3",
-   "苦": "T6 + T3"
+   "break": "T6 + T4"
   },
   "de_nghi_doi_nhan": [
    {
@@ -9947,7 +8181,7 @@
     "ly_do": "Tên unit là 'Bữa trưa và tráng miệng'; tráng miệng là một nửa chủ đề."
    }
   ],
-  "ghi_chu": "Larva: T1 phần 1–5 ngày 1–5, ngày 6–7 nghe cả truyện; ngày 8 T6. Từ vòng ngoài trong T1 chỉ đi kèm tranh. Chuỗi Trung dùng 块 cho bánh (饼干, 巧克力), 个 cho món khác.",
+  "ghi_chu": "Larva: T1 phần 1–5 ngày 1–5, ngày 6–7 nghe cả truyện; ngày 8 T6. Từ vòng ngoài trong T1 chỉ đi kèm tranh. Chuỗi Trung dùng 块 cho bánh (饼干, 巧克力), 个 cho món khác. NL-1 (09/11): chuyển sang Larva Plus/Pupa: biscuit, bitter, cookie, dessert, salty, sour",
   "van_ban_theo_ngay": [
    [
     "T1 phần 1",
@@ -10113,19 +8347,19 @@
     "sauce",
     "pancake",
     "coffee",
-    "dessert",
-    "biscuit",
-    "cookie",
     "milkshake",
     "tea",
     "sweet",
     "spicy",
     "both",
-    "salty",
-    "sour",
-    "bitter",
     "excuse me",
-    "call"
+    "call",
+    "change",
+    "something",
+    "nothing",
+    "because",
+    "inside",
+    "badly"
    ],
    "poster_cau_cua_mieng": [
     "Excuse me! / 请问！",
@@ -10212,100 +8446,6 @@
     "buoc_chu": true
    },
    {
-    "tu": "spring",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 1 unit sau",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "Flyers",
-    "gap_dau": "ngày 65",
-    "goi_lai": [
-     65,
-     66,
-     69
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U9",
-      "Larva Plus U2"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "summer",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 2 unit sau",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "Flyers",
-    "gap_dau": "ngày 65",
-    "goi_lai": [
-     65,
-     66,
-     69
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U9",
-      "Larva U12"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "autumn",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37c dùng lại ở 2 unit sau",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "Flyers",
-    "gap_dau": "ngày 65",
-    "goi_lai": [
-     65,
-     66,
-     69
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U9",
-      "Larva U12"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "wind",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37c dùng lại ở 1 unit sau",
-    "ngoai_le_40": "thi bắt viết (Movers)",
-    "may_khong_chac": false,
-    "thi": "Movers",
-    "gap_dau": "ngày 65",
-    "goi_lai": [
-     65,
-     66,
-     69,
-     77,
-     "khóa ôn / ôn chặng"
-    ],
-    "buoc_chu": true,
-    "quay_lai": {
-     "da_co": [
-      "Larva U11",
-      "Larva Plus U4"
-     ],
-     "xep_them": []
-    }
-   },
-   {
     "tu": "ill",
     "nghia": "",
     "nhan": "Lõi",
@@ -10360,79 +8500,6 @@
     "buoc_chu": true
    },
    {
-    "tu": "cough",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 1 unit sau",
-    "ngoai_le_40": "thi bắt viết (Movers)",
-    "may_khong_chac": false,
-    "thi": "Movers",
-    "gap_dau": "ngày 66",
-    "goi_lai": [
-     66,
-     67,
-     70,
-     78,
-     "khóa ôn / ôn chặng"
-    ],
-    "buoc_chu": true,
-    "quay_lai": {
-     "da_co": [
-      "Larva U9",
-      "Larva Plus U1"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "temperature",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37c dùng lại ở 1 unit sau",
-    "ngoai_le_40": "thi bắt viết (Movers)",
-    "may_khong_chac": false,
-    "thi": "Movers",
-    "gap_dau": "ngày 66",
-    "goi_lai": [
-     66,
-     67,
-     70,
-     78,
-     "khóa ôn / ôn chặng"
-    ],
-    "buoc_chu": true,
-    "quay_lai": {
-     "da_co": [
-      "Larva U9",
-      "Larva Plus U4"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "fever",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "danh từ / ngoài danh sách thi",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 66",
-    "goi_lai": [
-     66,
-     67,
-     70
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U4",
-      "Pupa U9"
-     ],
-     "xep_them": []
-    }
-   },
-   {
     "tu": "matter",
     "nghia": "",
     "nhan": "Vòng ngoài",
@@ -10453,52 +8520,6 @@
      "da_co": [
       "Larva Plus U4",
       "Pupa U1"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "sore",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (động/tính, 3 ngày); 37c dùng lại ở 1 unit sau",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "Flyers",
-    "gap_dau": "ngày 67",
-    "goi_lai": [
-     67,
-     68,
-     71
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U9",
-      "Larva Plus U4"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "throat",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 1 unit sau",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 67",
-    "goi_lai": [
-     67,
-     68,
-     71
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U9",
-      "Larva Plus U4"
      ],
      "xep_them": []
     }
@@ -10625,30 +8646,6 @@
      "xep_them": [
       "Larva U9",
       "Larva U10"
-     ]
-    }
-   },
-   {
-    "tu": "stomachache",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "danh từ / ngoài danh sách thi",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 67",
-    "goi_lai": [
-     67,
-     68,
-     71
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U4"
-     ],
-     "xep_them": [
-      "Larva U9"
      ]
     }
    },
@@ -10921,52 +8918,6 @@
     "buoc_chu": true
    },
    {
-    "tu": "春天",
-    "nghia": "spring",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 1 unit sau; nghĩa Anh là vòng ngoài (ng.t. 42)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 65",
-    "goi_lai": [
-     65,
-     66,
-     69
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U9",
-      "Larva Plus U2"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "夏天",
-    "nghia": "summer",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 2 unit sau; nghĩa Anh là vòng ngoài (ng.t. 42)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 65",
-    "goi_lai": [
-     65,
-     66,
-     69
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U9",
-      "Larva U12"
-     ],
-     "xep_them": []
-    }
-   },
-   {
     "tu": "身体",
     "nghia": "body; 你身体好吗 = Are you well?",
     "nhan": "Lõi",
@@ -11019,29 +8970,6 @@
      "khóa ôn / ôn chặng"
     ],
     "buoc_chu": true
-   },
-   {
-    "tu": "发烧",
-    "nghia": "fever, temperature",
-    "nhan": "Vòng ngoài",
-    "ly_do": "danh từ / ngoài danh sách thi; nghĩa Anh là vòng ngoài (ng.t. 42)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "YCT4",
-    "gap_dau": "ngày 66",
-    "goi_lai": [
-     66,
-     67,
-     70
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U4",
-      "Larva Plus U5"
-     ],
-     "xep_them": []
-    }
    },
    {
     "tu": "疼",
@@ -11235,10 +9163,29 @@
    }
   ],
   "tu_cu_quay_lai": {
-   "en": [
-    "cookie"
-   ],
+   "en": [],
    "zh": []
+  },
+  "T1_do_dai": [
+   30,
+   40
+  ],
+  "T1_do_dai_zh": [
+   40,
+   60
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "because",
+    "excuse me"
+   ],
+   "zh": [
+    "卖",
+    "冰淇淋"
+   ],
+   "nguon": "Larva U7",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "What's the matter? – I've got a ___.",
@@ -11334,13 +9281,7 @@
      "fix",
      "invite",
      "off",
-     "spring",
-     "summer",
-     "autumn",
-     "wind",
-     "fever",
-     "matter",
-     "cough"
+     "matter"
     ],
     "tu_zh": [
      "季节",
@@ -11356,9 +9297,7 @@
      "饱",
      "药",
      "休息",
-     "事情",
-     "春天",
-     "夏天"
+     "事情"
     ]
    },
    {
@@ -11369,25 +9308,17 @@
     "khung_en": "This is the way we play in ___, play in ___! Four seasons in a year!",
     "khung_zh": "___来了，我们去玩！一年有四个季节！",
     "o_thay": [
-     "spring",
-     "summer",
-     "autumn",
      "fall",
      "winter"
     ],
     "dong_tac": "spring: tay nở hoa – summer: quạt mát – autumn: lá rơi xoay tay – fall: ngồi xuống nhặt lá – winter: run và ôm người",
     "tu_en": [
      "season",
-     "spring",
-     "summer",
-     "autumn",
      "fall",
      "winter"
     ],
     "tu_zh": [
      "季节",
-     "春天",
-     "夏天",
      "秋天",
      "冬天"
     ],
@@ -11404,23 +9335,17 @@
      "sick",
      "hurt",
      "matter",
-     "cough",
-     "temperature",
-     "sore",
-     "throat",
      "headache",
      "earache",
      "toothache",
      "stomach",
-     "stomach-ache",
-     "stomachache"
+     "stomach-ache"
     ],
     "tu_zh": [
      "疼",
      "嗓子疼",
      "牙疼",
      "肚子",
-     "发烧",
      "感冒",
      "身体",
      "舒服",
@@ -11489,17 +9414,11 @@
      "fix",
      "invite",
      "off",
-     "wind",
-     "temperature",
-     "fever",
-     "sore",
-     "throat",
      "headache",
      "earache",
      "toothache",
      "stomach",
      "stomach-ache",
-     "stomachache",
      "toothbrush",
      "toothpaste"
     ],
@@ -11518,34 +9437,20 @@
      "药",
      "休息",
      "事情",
-     "发烧",
      "牙疼",
      "肚子"
     ]
    }
   ],
   "dem_vong_ngoai": {
-   "spring": "T1 phần 1 + T2",
-   "summer": "T1 phần 1 + T2",
-   "autumn": "T1 phần 1 + T2",
-   "wind": "T1 phần 2 + T6",
-   "cough": "T1 phần 4 + T3",
-   "temperature": "T6 + T3",
-   "fever": "T1 phần 3 + T6",
    "matter": "T1 phần 4 + T3",
-   "sore": "T6 + T3",
-   "throat": "T6 + T3",
    "headache": "T6 + T3",
    "earache": "T6 + T3",
    "toothache": "T6 + T3",
    "stomach": "T6 + T3",
    "stomach-ache": "T6 + T3",
-   "stomachache": "T6 + T3",
    "toothbrush": "T6 + T4",
    "toothpaste": "T6 + T4",
-   "春天": "T1 phần 1 + T2",
-   "夏天": "T1 phần 1 + T2",
-   "发烧": "T6 + T3",
    "牙疼": "T6 + T3",
    "肚子": "T6 + T3"
   },
@@ -11563,7 +9468,7 @@
     "ly_do": "Cùng một từ; tranh và tiếng giống hệt, trên sách chỉ nên in một cách viết."
    }
   ],
-  "ghi_chu": "Larva: T1 phần 1–5 ngày 1–5, ngày 6–7 nghe cả truyện; ngày 8 T6. Phần 1 có nhiều từ vòng ngoài (tên mùa) vì luật 26 chỉ giới hạn số từ mới từ phần 2. Từ vòng ngoài trong T1 chỉ đi kèm tranh.",
+  "ghi_chu": "Larva: T1 phần 1–5 ngày 1–5, ngày 6–7 nghe cả truyện; ngày 8 T6. Phần 1 có nhiều từ vòng ngoài (tên mùa) vì luật 26 chỉ giới hạn số từ mới từ phần 2. Từ vòng ngoài trong T1 chỉ đi kèm tranh. NL-1 (09/11): chuyển sang Larva Plus/Pupa: autumn, cough, fever, sore, spring, stomachache, summer, temperature, throat, wind",
   "van_ban_theo_ngay": [
    [
     "T1 phần 1",
@@ -11686,12 +9591,9 @@
     "season",
     "fall",
     "winter",
-    "wind",
     "ill",
     "sick",
     "more",
-    "cough",
-    "temperature",
     "matter",
     "headache",
     "earache",
@@ -11730,23 +9632,23 @@
     "season",
     "fall",
     "winter",
-    "spring",
-    "summer",
-    "autumn",
-    "wind",
     "ill",
     "sick",
     "more",
-    "cough",
-    "temperature",
-    "fever",
     "matter",
-    "sore",
-    "throat",
     "headache",
     "earache",
     "toothache",
-    "stomach"
+    "stomach",
+    "stomach-ache",
+    "hurt",
+    "carefully",
+    "quietly",
+    "think",
+    "toothbrush",
+    "toothpaste",
+    "bring",
+    "climb"
    ],
    "poster_cau_cua_mieng": [
     "What's the matter? / 你怎么了？",
@@ -11784,7 +9686,7 @@
     "nhan": "Lõi",
     "ly_do": "37b khung câu mang được (danh, 5 ngày); 37c dùng lại ở 1 unit sau",
     "ngoai_le_40": "",
-    "may_khong_chac": true,
+    "may_khong_chac": false,
     "thi": "Flyers",
     "gap_dau": "ngày 77",
     "goi_lai": [
@@ -11813,75 +9715,6 @@
      "khóa ôn / ôn chặng"
     ],
     "buoc_chu": true
-   },
-   {
-    "tu": "office",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 5 ngày); 37c dùng lại ở 1 unit sau",
-    "ngoai_le_40": "",
-    "may_khong_chac": true,
-    "thi": "Flyers",
-    "gap_dau": "ngày 77",
-    "goi_lai": [
-     77,
-     78,
-     81
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U10",
-      "Larva Plus U2"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "canteen",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 6 ngày)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 77",
-    "goi_lai": [
-     77,
-     78,
-     81
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U2",
-      "Larva Plus U3"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "left",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (động/tính, 4 ngày); 37c dùng lại ở 1 unit sau",
-    "ngoai_le_40": "",
-    "may_khong_chac": true,
-    "thi": "Flyers",
-    "gap_dau": "ngày 77",
-    "goi_lai": [
-     77,
-     78,
-     81
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U10",
-      "Larva Plus U2"
-     ],
-     "xep_them": []
-    }
    },
    {
     "tu": "come on",
@@ -11936,29 +9769,6 @@
      "khóa ôn / ôn chặng"
     ],
     "buoc_chu": true
-   },
-   {
-    "tu": "turn",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (động/tính, 3 ngày); 37c dùng lại ở 1 unit sau",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "Flyers",
-    "gap_dau": "ngày 78",
-    "goi_lai": [
-     78,
-     79,
-     82
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U10",
-      "Larva Plus U1"
-     ],
-     "xep_them": []
-    }
    },
    {
     "tu": "leave",
@@ -12395,77 +10205,6 @@
     "buoc_chu": true
    },
    {
-    "tu": "办公室",
-    "nghia": "office",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 5 ngày); nghĩa Anh là vòng ngoài (ng.t. 42)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 77",
-    "goi_lai": [
-     77,
-     78,
-     81
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U2",
-      "Larva Plus U3"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "食堂",
-    "nghia": "canteen",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 7 ngày); nghĩa Anh là vòng ngoài (ng.t. 42)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 77",
-    "goi_lai": [
-     77,
-     78,
-     81
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U2",
-      "Larva Plus U3"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "左",
-    "nghia": "left",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 5 ngày); 37c dùng lại ở 1 unit sau; nghĩa Anh là vòng ngoài (ng.t. 42)",
-    "ngoai_le_40": "cần cho YCT口试 (YCT3)",
-    "may_khong_chac": false,
-    "thi": "YCT3",
-    "gap_dau": "ngày 77",
-    "goi_lai": [
-     77,
-     78,
-     81,
-     89,
-     "khóa ôn / ôn chặng"
-    ],
-    "buoc_chu": true,
-    "quay_lai": {
-     "da_co": [
-      "Larva U10",
-      "Larva Plus U2"
-     ],
-     "xep_them": []
-    }
-   },
-   {
     "tu": "教室",
     "nghia": "classroom",
     "nhan": "Lõi",
@@ -12556,29 +10295,6 @@
      "da_co": [
       "Larva Plus U2",
       "Larva Plus U3"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "转",
-    "nghia": "turn",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (động/tính, 3 ngày); 37c dùng lại ở 2 unit sau; nghĩa Anh là vòng ngoài (ng.t. 42)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 78",
-    "goi_lai": [
-     78,
-     79,
-     82
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U10",
-      "Larva U12"
      ],
      "xep_them": []
     }
@@ -12754,10 +10470,30 @@
   ],
   "tu_cu_quay_lai": {
    "en": [
-    "stomach-ache",
-    "stomachache"
+    "stomach-ache"
    ],
    "zh": []
+  },
+  "T1_do_dai": [
+   30,
+   40
+  ],
+  "T1_do_dai_zh": [
+   40,
+   60
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "off",
+    "fall"
+   ],
+   "zh": [
+    "生病",
+    "感冒"
+   ],
+   "nguon": "Larva U8",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "Where's the ___?",
@@ -12853,12 +10589,8 @@
      "shall",
      "square",
      "move",
-     "office",
-     "turn",
-     "left",
      "mistake",
-     "website",
-     "canteen"
+     "website"
     ],
     "tu_zh": [
      "大门",
@@ -12875,9 +10607,7 @@
      "问题",
      "本",
      "迟到",
-     "正方形",
-     "左",
-     "转"
+     "正方形"
     ]
    },
    {
@@ -12888,8 +10618,6 @@
     "khung_en": "Where's the ___? Where's the ___? Turn left, turn right – come on, come on!",
     "khung_zh": "___在哪儿？___在哪儿？向左转，向右转，快来快来！",
     "o_thay": [
-     "office",
-     "canteen",
      "gate",
      "library"
     ],
@@ -12897,22 +10625,14 @@
     "tu_en": [
      "gate",
      "right",
-     "come on",
-     "office",
-     "canteen",
-     "left",
-     "turn"
+     "come on"
     ],
     "tu_zh": [
-     "办公室",
-     "食堂",
      "大门",
      "图书馆",
      "教室",
      "操场",
-     "左",
-     "右",
-     "转"
+     "右"
     ],
     "ghi_chu_thanh": "library là từ cũ. Ô Trung cùng thứ tự: 办公室, 食堂, 大门, 图书馆. 向左转 xiàng zuǒ zhuǎn (4–3–3 → 4–2–3) và 向右转 (4–4–3): giai điệu Looby Loo đi lên ở chữ cuối, ngược thanh 3 của 转 → điệp khúc này đổi sang vè vỗ tay; phần hỏi '___在哪儿？' hát được."
    },
@@ -13018,18 +10738,12 @@
      "本",
      "迟到",
      "正方形",
-     "办公室",
-     "食堂",
      "花园",
      "圆圈"
     ]
    }
   ],
   "dem_vong_ngoai": {
-   "office": "T1 phần 1 + T2",
-   "canteen": "T1 phần 5 + T2",
-   "left": "T1 phần 2 + T2",
-   "turn": "T1 phần 2 + T2",
    "leave": "T6 + T4",
    "practice": "T6 + T4",
    "mistake": "T1 phần 3 + T3",
@@ -13038,11 +10752,7 @@
    "circle": "T6 + T3",
    "shape": "T6 + T3",
    "website": "T1 phần 4 + T6",
-   "办公室": "T6 + T2",
-   "食堂": "T6 + T2",
-   "左": "T1 phần 2 + T2",
    "花园": "T6 + T3",
-   "转": "T1 phần 2 + T2",
    "圆圈": "T6 + T3"
   },
   "de_nghi_doi_nhan": [
@@ -13053,7 +10763,7 @@
     "ly_do": "Tên unit có 'rẽ trái rẽ phải'; right/右 đã là lõi nên cặp trái – phải đang bị tách, và 'turn' là động từ của chính mẫu câu chỉ đường."
    }
   ],
-  "ghi_chu": "Larva: T1 phần 1–5 ngày 1–5, ngày 6–7 nghe cả truyện; ngày 8 T6. Phần 2 có 2 từ vòng ngoài (turn, left) đi cùng một cử chỉ chỉ đường. Lượng từ: chuỗi 本 chỉ dùng cho sách.",
+  "ghi_chu": "Larva: T1 phần 1–5 ngày 1–5, ngày 6–7 nghe cả truyện; ngày 8 T6. Phần 2 có 2 từ vòng ngoài (turn, left) đi cùng một cử chỉ chỉ đường. Lượng từ: chuỗi 本 chỉ dùng cho sách. NL-1 (09/11): chuyển sang Larva Plus/Pupa: canteen, left, office, turn",
   "van_ban_theo_ngay": [
    [
     "T1 phần 1",
@@ -13192,7 +10902,6 @@
     "大门",
     "右",
     "图书馆",
-    "左",
     "教室",
     "操场",
     "中间",
@@ -13209,13 +10918,9 @@
    "poster_the_gioi": [
     "gate",
     "right",
-    "office",
-    "canteen",
-    "left",
     "come on",
     "have to",
     "wait",
-    "turn",
     "leave",
     "teach",
     "text",
@@ -13226,7 +10931,11 @@
     "mean",
     "different",
     "laugh",
-    "shall"
+    "shall",
+    "idea",
+    "difference",
+    "square",
+    "move"
    ],
    "poster_cau_cua_mieng": [
     "Come on! / 快来！",
@@ -13331,77 +11040,6 @@
     "buoc_chu": true
    },
    {
-    "tu": "let",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (động/tính, 2 ngày)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "Flyers",
-    "gap_dau": "ngày 85",
-    "goi_lai": [
-     85,
-     86,
-     89
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U3",
-      "Butterfly U3"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "money",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 2 unit sau",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "Flyers",
-    "gap_dau": "ngày 85",
-    "goi_lai": [
-     85,
-     86,
-     89
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva U11",
-      "Larva U12"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "market",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "danh từ thi",
-    "ngoai_le_40": "thi bắt viết (Movers)",
-    "may_khong_chac": false,
-    "thi": "Movers",
-    "gap_dau": "ngày 85",
-    "goi_lai": [
-     85,
-     86,
-     89,
-     97,
-     "khóa ôn / ôn chặng"
-    ],
-    "buoc_chu": true,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U3",
-      "Larva Plus U5"
-     ],
-     "xep_them": []
-    }
-   },
-   {
     "tu": "how much",
     "nghia": "",
     "nhan": "Lõi",
@@ -13456,100 +11094,6 @@
     "buoc_chu": true
    },
    {
-    "tu": "dollar",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 3 ngày)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 86",
-    "goi_lai": [
-     86,
-     87,
-     90
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U3"
-     ],
-     "xep_them": [
-      "Larva U11"
-     ]
-    }
-   },
-   {
-    "tu": "yuan",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 3 ngày)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 86",
-    "goi_lai": [
-     86,
-     87,
-     90
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U3",
-      "Cocoon U2"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "sale",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 3 ngày)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 86",
-    "goi_lai": [
-     86,
-     87,
-     90
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U3",
-      "Cocoon U2"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "size",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "danh từ / ngoài danh sách thi",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 86",
-    "goi_lai": [
-     86,
-     87,
-     90
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U3"
-     ],
-     "xep_them": [
-      "Larva U11"
-     ]
-    }
-   },
-   {
     "tu": "centre",
     "nghia": "",
     "nhan": "Lõi",
@@ -13584,129 +11128,6 @@
      "khóa ôn / ôn chặng"
     ],
     "buoc_chu": true
-   },
-   {
-    "tu": "city",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37c dùng lại ở 2 unit sau",
-    "ngoai_le_40": "thi bắt viết (Movers)",
-    "may_khong_chac": false,
-    "thi": "Movers",
-    "gap_dau": "ngày 87",
-    "goi_lai": [
-     87,
-     88,
-     91,
-     99,
-     "khóa ôn / ôn chặng"
-    ],
-    "buoc_chu": true,
-    "quay_lai": {
-     "da_co": [
-      "Larva U11",
-      "Larva U12"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "city/town centre",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "danh từ / ngoài danh sách thi",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 87",
-    "goi_lai": [
-     87,
-     88,
-     91
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [],
-     "xep_them": [
-      "Larva U11",
-      "Larva U12"
-     ]
-    }
-   },
-   {
-    "tu": "building",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "danh từ thi",
-    "ngoai_le_40": "thi bắt viết (Movers)",
-    "may_khong_chac": false,
-    "thi": "Movers",
-    "gap_dau": "ngày 87",
-    "goi_lai": [
-     87,
-     88,
-     91,
-     99,
-     "khóa ôn / ôn chặng"
-    ],
-    "buoc_chu": true,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U1",
-      "Larva Plus U2"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "road",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "danh từ thi",
-    "ngoai_le_40": "thi bắt viết (Movers)",
-    "may_khong_chac": false,
-    "thi": "Movers",
-    "gap_dau": "ngày 87",
-    "goi_lai": [
-     87,
-     88,
-     91,
-     99,
-     "khóa ôn / ôn chặng"
-    ],
-    "buoc_chu": true,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U2",
-      "Larva Plus U3"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "café",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "danh từ thi",
-    "ngoai_le_40": "thi bắt viết (Movers)",
-    "may_khong_chac": false,
-    "thi": "Movers",
-    "gap_dau": "ngày 87",
-    "goi_lai": [
-     87,
-     88,
-     91,
-     99,
-     "khóa ôn / ôn chặng"
-    ],
-    "buoc_chu": true,
-    "quay_lai": {
-     "da_co": [],
-     "xep_them": [
-      "Larva U11",
-      "Larva U12"
-     ]
-    }
    },
    {
     "tu": "bus station",
@@ -13779,31 +11200,6 @@
      "khóa ôn / ôn chặng"
     ],
     "buoc_chu": true
-   },
-   {
-    "tu": "station",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37c dùng lại ở 1 unit sau",
-    "ngoai_le_40": "thi bắt viết (Movers)",
-    "may_khong_chac": false,
-    "thi": "Movers",
-    "gap_dau": "ngày 88",
-    "goi_lai": [
-     88,
-     89,
-     92,
-     100,
-     "khóa ôn / ôn chặng"
-    ],
-    "buoc_chu": true,
-    "quay_lai": {
-     "da_co": [
-      "Larva U11",
-      "Larva Plus U2"
-     ],
-     "xep_them": []
-    }
    },
    {
     "tu": "ground",
@@ -14048,7 +11444,7 @@
     "tu": "超市",
     "nghia": "supermarket",
     "nhan": "Lõi",
-    "ly_do": "37b khung câu mang được (danh, 5 ngày); 37c dùng lại ở 1 unit sau",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT4",
@@ -14066,7 +11462,7 @@
     "tu": "水果",
     "nghia": "fruit",
     "nhan": "Lõi",
-    "ly_do": "danh từ thi",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT3",
@@ -14084,7 +11480,7 @@
     "tu": "玩具",
     "nghia": "toy",
     "nhan": "Lõi",
-    "ly_do": "37b khung câu mang được (danh, 5 ngày); 37c dùng lại ở 1 unit sau",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT4",
@@ -14099,35 +11495,10 @@
     "buoc_chu": true
    },
    {
-    "tu": "让",
-    "nghia": "let",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 2 ngày); nghĩa Anh là vòng ngoài (ng.t. 42)",
-    "ngoai_le_40": "cần cho YCT口试 (YCT3)",
-    "may_khong_chac": false,
-    "thi": "YCT3",
-    "gap_dau": "ngày 85",
-    "goi_lai": [
-     85,
-     86,
-     89,
-     97,
-     "khóa ôn / ôn chặng"
-    ],
-    "buoc_chu": true,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U1",
-      "Larva Plus U3"
-     ],
-     "xep_them": []
-    }
-   },
-   {
     "tu": "贵",
     "nghia": "expensive",
     "nhan": "Lõi",
-    "ly_do": "37b khung câu mang được (động/tính, 5 ngày); 37c dùng lại ở 1 unit sau",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT4",
@@ -14145,7 +11516,7 @@
     "tu": "便宜",
     "nghia": "cheap",
     "nhan": "Lõi",
-    "ly_do": "37b khung câu mang được (động/tính, 4 ngày); 37c dùng lại ở 1 unit sau",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT4",
@@ -14163,7 +11534,7 @@
     "tu": "太",
     "nghia": "too",
     "nhan": "Lõi",
-    "ly_do": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 4 ngày)",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT3",
@@ -14178,58 +11549,10 @@
     "buoc_chu": true
    },
    {
-    "tu": "元",
-    "nghia": "yuan",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 4 ngày); nghĩa Anh là vòng ngoài (ng.t. 42)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "YCT4",
-    "gap_dau": "ngày 86",
-    "goi_lai": [
-     86,
-     87,
-     90
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U3"
-     ],
-     "xep_them": [
-      "Larva U11"
-     ]
-    }
-   },
-   {
-    "tu": "美元",
-    "nghia": "dollar",
-    "nhan": "Vòng ngoài",
-    "ly_do": "37b khung câu mang được (danh, 3 ngày); nghĩa Anh là vòng ngoài (ng.t. 42)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 86",
-    "goi_lai": [
-     86,
-     87,
-     90
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U3"
-     ],
-     "xep_them": [
-      "Larva U11"
-     ]
-    }
-   },
-   {
     "tu": "远",
     "nghia": "far",
     "nhan": "Lõi",
-    "ly_do": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 1 ngày); 37c dùng lại ở 1 unit sau",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT3",
@@ -14247,7 +11570,7 @@
     "tu": "近",
     "nghia": "near",
     "nhan": "Lõi",
-    "ly_do": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 4 ngày); 37c dùng lại ở 1 unit sau",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT3",
@@ -14262,33 +11585,10 @@
     "buoc_chu": true
    },
    {
-    "tu": "咖啡店",
-    "nghia": "café",
-    "nhan": "Vòng ngoài",
-    "ly_do": "danh từ / ngoài danh sách thi; nghĩa Anh là vòng ngoài (ng.t. 42)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 87",
-    "goi_lai": [
-     87,
-     88,
-     91
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U3",
-      "Larva Plus U5"
-     ],
-     "xep_them": []
-    }
-   },
-   {
     "tu": "车站",
     "nghia": "bus stop, station",
     "nhan": "Lõi",
-    "ly_do": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (cụm, 2 ngày); 37c dùng lại ở 1 unit sau",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT3",
@@ -14306,7 +11606,7 @@
     "tu": "送",
     "nghia": "give, as a present",
     "nhan": "Lõi",
-    "ly_do": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 1 ngày)",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT3",
@@ -14324,7 +11624,7 @@
     "tu": "喂",
     "nghia": "hello, on the phone",
     "nhan": "Lõi",
-    "ly_do": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (chức năng, 2 ngày); 37c dùng lại ở 1 unit sau",
+    "ly_do": "unit ≤15 từ: tất cả là lõi (ng.t. 36)",
     "ngoai_le_40": "",
     "may_khong_chac": false,
     "thi": "YCT3",
@@ -14346,6 +11646,27 @@
    "zh": [
     "圆圈"
    ]
+  },
+  "T1_do_dai": [
+   30,
+   40
+  ],
+  "T1_do_dai_zh": [
+   40,
+   60
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "right",
+    "come on"
+   ],
+   "zh": [
+    "右",
+    "懂"
+   ],
+   "nguon": "Larva U9",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "How much is the ___?",
@@ -14441,10 +11762,6 @@
      "plant",
      "email",
      "send",
-     "money",
-     "city",
-     "building",
-     "sale",
      "message"
     ],
     "tu_zh": [
@@ -14458,8 +11775,7 @@
      "近",
      "车站",
      "送",
-     "喂",
-     "元"
+     "喂"
     ]
    },
    {
@@ -14483,10 +11799,6 @@
      "cheap",
      "expensive",
      "plant",
-     "money",
-     "dollar",
-     "yuan",
-     "let",
      "laptop"
     ],
     "tu_zh": [
@@ -14494,9 +11806,7 @@
      "水果",
      "贵",
      "便宜",
-     "太",
-     "元",
-     "美元"
+     "太"
     ],
     "ghi_chu_thanh": "toy, fruit là từ cũ. Ô Trung cùng thứ tự: 花 (Nghe làm quen), 电脑 (từ unit 2), 玩具, 水果. 多少钱 duō shǎo qián (1–3–2): giai điệu Hot Cross Buns đi xuống mi–rê–đô, ngược thanh 2 của 钱 → câu hỏi đổi sang vè vỗ tay; câu trả lời '一元两元' hát được (元 thanh 2 đặt nốt đi lên)."
    },
@@ -14514,24 +11824,14 @@
      "bus station",
      "bus stop",
      "car park",
-     "city",
-     "city/town centre",
-     "market",
-     "café",
-     "station",
-     "building",
-     "road",
      "ground",
-     "sale",
-     "size",
      "address"
     ],
     "tu_zh": [
      "超市",
      "车站",
      "远",
-     "近",
-     "咖啡店"
+     "近"
     ]
    },
    {
@@ -14563,7 +11863,6 @@
     "tu_zh": [
      "喂",
      "送",
-     "让",
      "玩具",
      "超市"
     ]
@@ -14592,15 +11891,6 @@
      "plant",
      "email",
      "send",
-     "let",
-     "market",
-     "dollar",
-     "yuan",
-     "size",
-     "city/town centre",
-     "road",
-     "café",
-     "station",
      "ground",
      "address",
      "internet",
@@ -14620,27 +11910,11 @@
      "近",
      "车站",
      "送",
-     "喂",
-     "让",
-     "美元",
-     "咖啡店"
+     "喂"
     ]
    }
   ],
   "dem_vong_ngoai": {
-   "let": "T6 + T2",
-   "money": "T1 phần 1 + T2",
-   "market": "T6 + T3",
-   "dollar": "T6 + T2",
-   "yuan": "T6 + T2",
-   "sale": "T1 phần 4 + T3",
-   "size": "T6 + T3",
-   "city": "T1 phần 2 + T3",
-   "city/town centre": "T6 + T3",
-   "building": "T1 phần 3 + T3",
-   "road": "T6 + T3",
-   "café": "T6 + T3",
-   "station": "T6 + T3",
    "ground": "T6 + T3",
    "address": "T6 + T3",
    "internet": "T6 + T4",
@@ -14648,14 +11922,10 @@
    "laptop": "T6 + T4",
    "machine": "T6 + T4",
    "e-book": "T6 + T4",
-   "message": "T1 phần 5 + T4",
-   "让": "T6 + T5",
-   "元": "T1 phần 4 + T2",
-   "美元": "T6 + T2",
-   "咖啡店": "T6 + T3"
+   "message": "T1 phần 5 + T4"
   },
   "de_nghi_doi_nhan": [],
-  "ghi_chu": "Larva: T1 phần 1–5 ngày 1–5, ngày 6–7 nghe cả truyện; ngày 8 T6. Từ vòng ngoài trong T1 chỉ đi kèm tranh. T6 dài hơn mức thường vì gánh nhiều từ vòng ngoài nhóm công nghệ (internet, app, e-book…); nếu quá dài có thể tách nhóm này sang T4 + một trang thêm trong T3.",
+  "ghi_chu": "Larva: T1 phần 1–5 ngày 1–5, ngày 6–7 nghe cả truyện; ngày 8 T6. Từ vòng ngoài trong T1 chỉ đi kèm tranh. T6 dài hơn mức thường vì gánh nhiều từ vòng ngoài nhóm công nghệ (internet, app, e-book…); nếu quá dài có thể tách nhóm này sang T4 + một trang thêm trong T3. NL-1 (09/11): chuyển sang Larva Plus/Pupa: building, café, city, city/town centre, dollar, let, market, money, road, sale, size, station, yuan",
   "van_ban_theo_ngay": [
    [
     "T1 phần 1",
@@ -14779,21 +12049,15 @@
     "go shopping",
     "supermarket",
     "shopping centre",
-    "market",
     "how much",
     "cheap",
     "expensive",
     "centre",
     "sports centre",
-    "city",
-    "building",
-    "road",
-    "café",
     "bus station",
     "bus stop",
     "car park",
     "plant",
-    "station",
     "ground",
     "address",
     "email",
@@ -14809,7 +12073,6 @@
     "超市",
     "水果",
     "玩具",
-    "让",
     "贵",
     "便宜",
     "太",
@@ -14824,22 +12087,22 @@
     "go shopping",
     "supermarket",
     "shopping centre",
-    "let",
-    "money",
-    "market",
     "how much",
     "cheap",
     "expensive",
-    "dollar",
-    "yuan",
-    "sale",
-    "size",
     "centre",
     "sports centre",
-    "city",
-    "city/town centre",
-    "building",
-    "road"
+    "bus station",
+    "bus stop",
+    "car park",
+    "plant",
+    "ground",
+    "address",
+    "email",
+    "send",
+    "internet",
+    "app",
+    "laptop"
    ],
    "poster_cau_cua_mieng": [
     "Let's go shopping! / 我们去买东西吧！",
@@ -14924,56 +12187,6 @@
      "khóa ôn / ôn chặng"
     ],
     "buoc_chu": true
-   },
-   {
-    "tu": "world",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "danh từ thi",
-    "ngoai_le_40": "thi bắt viết (Movers)",
-    "may_khong_chac": false,
-    "thi": "Movers",
-    "gap_dau": "ngày 93",
-    "goi_lai": [
-     93,
-     94,
-     97,
-     105,
-     "khóa ôn / ôn chặng"
-    ],
-    "buoc_chu": true,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U3",
-      "Larva Plus U4"
-     ],
-     "xep_them": []
-    }
-   },
-   {
-    "tu": "map",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "danh từ thi",
-    "ngoai_le_40": "thi bắt viết (Movers)",
-    "may_khong_chac": false,
-    "thi": "Movers",
-    "gap_dau": "ngày 93",
-    "goi_lai": [
-     93,
-     94,
-     97,
-     105,
-     "khóa ôn / ôn chặng"
-    ],
-    "buoc_chu": true,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U2",
-      "Larva Plus U6"
-     ],
-     "xep_them": []
-    }
    },
    {
     "tu": "suitcase",
@@ -15269,29 +12482,6 @@
     }
    },
    {
-    "tu": "town/city centre",
-    "nghia": "",
-    "nhan": "Vòng ngoài",
-    "ly_do": "danh từ / ngoài danh sách thi",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "",
-    "gap_dau": "ngày 96",
-    "goi_lai": [
-     96,
-     97,
-     100
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [],
-     "xep_them": [
-      "Larva U12",
-      "Larva Plus U1"
-     ]
-    }
-   },
-   {
     "tu": "jungle",
     "nghia": "",
     "nhan": "Vòng ngoài",
@@ -15457,29 +12647,6 @@
      "khóa ôn / ôn chặng"
     ],
     "buoc_chu": true
-   },
-   {
-    "tu": "地图",
-    "nghia": "map",
-    "nhan": "Vòng ngoài",
-    "ly_do": "danh từ / ngoài danh sách thi; nghĩa Anh là vòng ngoài (ng.t. 42)",
-    "ngoai_le_40": "",
-    "may_khong_chac": false,
-    "thi": "YCT4",
-    "gap_dau": "ngày 93",
-    "goi_lai": [
-     93,
-     94,
-     97
-    ],
-    "buoc_chu": false,
-    "quay_lai": {
-     "da_co": [
-      "Larva Plus U2",
-      "Larva Plus U6"
-     ],
-     "xep_them": []
-    }
    },
    {
     "tu": "行李箱",
@@ -15699,17 +12866,31 @@
   ],
   "tu_cu_quay_lai": {
    "en": [
-    "dollar",
-    "size",
-    "city/town centre",
-    "café",
     "app",
     "e-book"
    ],
+   "zh": []
+  },
+  "T1_do_dai": [
+   30,
+   40
+  ],
+  "T1_do_dai_zh": [
+   40,
+   60
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "how much",
+    "bus station"
+   ],
    "zh": [
-    "元",
-    "美元"
-   ]
+    "贵",
+    "便宜"
+   ],
+   "nguon": "Larva U10",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "I want to visit ___.",
@@ -15805,8 +12986,6 @@
      "village",
      "field",
      "snail",
-     "map",
-     "world",
      "ticket",
      "tractor",
      "lake",
@@ -15823,7 +13002,6 @@
      "拍照",
      "蜗牛",
      "参观",
-     "地图",
      "票"
     ]
    },
@@ -15848,8 +13026,7 @@
      "island",
      "countryside",
      "village",
-     "swimming pool",
-     "map"
+     "swimming pool"
     ],
     "tu_zh": [
      "参观",
@@ -15867,7 +13044,6 @@
     "khung_en": "Around the world, I can see a ___.",
     "khung_zh": "我拍照，我看到___。",
     "tu_en": [
-     "world",
      "whale",
      "shark",
      "parrot",
@@ -15876,7 +13052,6 @@
      "waterfall",
      "lake",
      "tractor",
-     "town/city centre",
      "rock",
      "field",
      "snail"
@@ -15905,8 +13080,7 @@
     "tu_zh": [
      "行李箱",
      "酒店",
-     "票",
-     "地图"
+     "票"
     ]
    },
    {
@@ -15934,7 +13108,6 @@
      "field",
      "snail",
      "ticket",
-     "town/city centre",
      "jungle",
      "waterfall",
      "parrot",
@@ -15957,24 +13130,20 @@
    }
   ],
   "dem_vong_ngoai": {
-   "world": "T1 phần 1 + T3",
-   "map": "T1 phần 1 + T2",
    "ticket": "T1 phần 2 + T6",
    "shark": "T1 phần 5 + T3",
    "tractor": "T1 phần 3 + T3",
-   "town/city centre": "T6 + T3",
    "jungle": "T6 + T3",
    "lake": "T1 phần 4 + T3",
    "waterfall": "T6 + T3",
    "parrot": "T6 + T3",
    "penguin": "T6 + T3",
-   "地图": "T1 phần 1 + T4",
    "票": "T1 phần 2 + T4",
    "鲨鱼": "T6 + T3",
    "企鹅": "T6 + T3"
   },
   "de_nghi_doi_nhan": [],
-  "ghi_chu": "Larva: T1 phần 1–5 ngày 1–5, ngày 6–7 nghe cả truyện; ngày 8 T6. Phần 2 có 4 từ mới (mức trần). Từ vòng ngoài trong T1 chỉ đi kèm tranh. Lượng từ: 张 cho 票/地图, 个 cho 行李箱 (vè đếm tách hai chuỗi, không trộn).",
+  "ghi_chu": "Larva: T1 phần 1–5 ngày 1–5, ngày 6–7 nghe cả truyện; ngày 8 T6. Phần 2 có 4 từ mới (mức trần). Từ vòng ngoài trong T1 chỉ đi kèm tranh. Lượng từ: 张 cho 票/地图, 个 cho 行李箱 (vè đếm tách hai chuỗi, không trộn). NL-1 (09/11): chuyển sang Larva Plus/Pupa: map, town/city centre, world",
   "van_ban_theo_ngay": [
    [
     "T1 phần 1",
@@ -16089,8 +13258,6 @@
     "travel",
     "visit",
     "london",
-    "world",
-    "map",
     "suitcase",
     "hotel",
     "get on",
@@ -16128,8 +13295,6 @@
     "travel",
     "visit",
     "london",
-    "world",
-    "map",
     "suitcase",
     "hotel",
     "get on",
@@ -16144,7 +13309,9 @@
     "village",
     "field",
     "snail",
-    "tractor"
+    "tractor",
+    "jungle",
+    "lake"
    ],
    "poster_cau_cua_mieng": [
     "Let's go! / 出发！",
@@ -16595,12 +13762,9 @@
   ],
   "tu_cu_quay_lai": {
    "en": [
-    "city/town centre",
-    "café",
     "e-book",
     "shark",
     "tractor",
-    "town/city centre",
     "jungle",
     "waterfall",
     "parrot",
@@ -16610,6 +13774,27 @@
     "鲨鱼",
     "企鹅"
    ]
+  },
+  "T1_do_dai": [
+   30,
+   40
+  ],
+  "T1_do_dai_zh": [
+   40,
+   60
+  ],
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "travel",
+    "get on"
+   ],
+   "zh": [
+    "旅行",
+    "游泳池"
+   ],
+   "nguon": "Larva U11",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "Look at my ___!",

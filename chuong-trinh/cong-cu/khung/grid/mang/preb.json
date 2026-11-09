@@ -164,6 +164,12 @@
    "en": [],
    "zh": []
   },
+  "T1_do_dai": [
+   6,
+   10
+  ],
+  "T1_do_dai_zh": null,
+  "co_unit_truoc": false,
   "khung_cau": {
    "en": "Hello, ___!",
    "zh": "",
@@ -549,6 +555,21 @@
   "tu_cu_quay_lai": {
    "en": [],
    "zh": []
+  },
+  "T1_do_dai": [
+   6,
+   10
+  ],
+  "T1_do_dai_zh": null,
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "no",
+    "yes"
+   ],
+   "zh": [],
+   "nguon": "PreB U1",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "How old are you? – I'm ___.",
@@ -937,6 +958,21 @@
   "tu_cu_quay_lai": {
    "en": [],
    "zh": []
+  },
+  "T1_do_dai": [
+   6,
+   10
+  ],
+  "T1_do_dai_zh": null,
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "five",
+    "one"
+   ],
+   "zh": [],
+   "nguon": "PreB U2",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "This is my ___.",
@@ -1331,6 +1367,21 @@
    "en": [],
    "zh": []
   },
+  "T1_do_dai": [
+   6,
+   10
+  ],
+  "T1_do_dai_zh": null,
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "mommy",
+    "daddy"
+   ],
+   "zh": [],
+   "nguon": "PreB U3",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
+  },
   "khung_cau": {
    "en": "Touch your ___!",
    "zh": "",
@@ -1707,6 +1758,21 @@
   "tu_cu_quay_lai": {
    "en": [],
    "zh": []
+  },
+  "T1_do_dai": [
+   6,
+   10
+  ],
+  "T1_do_dai_zh": null,
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "touch",
+    "hands"
+   ],
+   "zh": [],
+   "nguon": "PreB U4",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "I'm ___.",
@@ -2097,6 +2163,21 @@
   "tu_cu_quay_lai": {
    "en": [],
    "zh": []
+  },
+  "T1_do_dai": [
+   6,
+   10
+  ],
+  "T1_do_dai_zh": null,
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "happy",
+    "sad"
+   ],
+   "zh": [],
+   "nguon": "PreB U5",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "It's a ___.",
@@ -2489,6 +2570,21 @@
   "tu_cu_quay_lai": {
    "en": [],
    "zh": []
+  },
+  "T1_do_dai": [
+   6,
+   10
+  ],
+  "T1_do_dai_zh": null,
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "sit down",
+    "stand up"
+   ],
+   "zh": [],
+   "nguon": "PreB U6",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "It's on the ___.",
@@ -2885,6 +2981,21 @@
    "en": [],
    "zh": []
   },
+  "T1_do_dai": [
+   6,
+   10
+  ],
+  "T1_do_dai_zh": null,
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "window",
+    "bed"
+   ],
+   "zh": [],
+   "nguon": "PreB U7",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
+  },
   "khung_cau": {
    "en": "It's a ___.",
    "zh": "",
@@ -3278,6 +3389,21 @@
    "en": [],
    "zh": []
   },
+  "T1_do_dai": [
+   6,
+   10
+  ],
+  "T1_do_dai_zh": null,
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "cat",
+    "dog"
+   ],
+   "zh": [],
+   "nguon": "PreB U8",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
+  },
   "khung_cau": {
    "en": "___, please!",
    "zh": "",
@@ -3636,6 +3762,21 @@
   "tu_cu_quay_lai": {
    "en": [],
    "zh": []
+  },
+  "T1_do_dai": [
+   6,
+   10
+  ],
+  "T1_do_dai_zh": null,
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "apple",
+    "juice"
+   ],
+   "zh": [],
+   "nguon": "PreB U9",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "It's ___.",
@@ -4019,6 +4160,21 @@
   "tu_cu_quay_lai": {
    "en": [],
    "zh": []
+  },
+  "T1_do_dai": [
+   6,
+   10
+  ],
+  "T1_do_dai_zh": null,
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "sunny",
+    "rainy"
+   ],
+   "zh": [],
+   "nguon": "PreB U10",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "What colour is it? – It's ___.",
@@ -4412,6 +4568,21 @@
   "tu_cu_quay_lai": {
    "en": [],
    "zh": []
+  },
+  "T1_do_dai": [
+   6,
+   10
+  ],
+  "T1_do_dai_zh": null,
+  "co_unit_truoc": true,
+  "tu_hay_sai": {
+   "en": [
+    "red",
+    "blue"
+   ],
+   "zh": [],
+   "nguon": "PreB U11",
+   "cach_chon": "máy chọn tạm; thay bằng từ con sai nhiều nhất khi có dữ liệu web"
   },
   "khung_cau": {
    "en": "How many balls? – ___!",
