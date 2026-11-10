@@ -80,6 +80,7 @@ select{width:auto;display:inline-block}
 .qi{display:flex;align-items:center;gap:8px;text-align:left;background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 10px;font:inherit;cursor:pointer}
 .qi.on{border-color:var(--red);background:var(--red-soft)}
 .qi .t{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.qi .t .ln.zh{display:flex;flex-direction:row;align-items:baseline;gap:10px;flex-wrap:wrap;white-space:normal}
 .test .ask{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0}
 .sit{font-size:22px;font-weight:700;margin:12px 0}
 .sit.sm{font-size:16px}

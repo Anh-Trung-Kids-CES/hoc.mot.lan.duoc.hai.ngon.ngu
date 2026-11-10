@@ -495,7 +495,7 @@ function statusChip(k) {
   return `<span class="chip ${r.pass ? 'ok' : 'no'}">${r.pass ? 'Đạt' : 'Chưa đạt'} · ${r.best}</span>`;
 }
 function drawQList() {
-  $('#ql').innerHTML = LQ.list.map((k, i) => { const it = itemOf(k); return `<button class="qi${i === LQ.i ? ' on' : ''}" data-qi="${i}"><span class="code">${it.c}</span><span class="lg ${it.lang}">${LANG[it.lang].b}</span><span class="t">${esc(it.text)}</span>${statusChip(k)}</button>`; }).join('');
+  $('#ql').innerHTML = LQ.list.map((k, i) => { const it = itemOf(k); return `<button class="qi${i === LQ.i ? ' on' : ''}" data-qi="${i}"><span class="code">${it.c}</span><span class="lg ${it.lang}">${LANG[it.lang].b}</span><span class="t">${lineHtml(it.c, it.lang)}</span>${statusChip(k)}</button>`; }).join('');
   $$('[data-qi]').forEach(b => b.onclick = () => { LQ.i = +b.dataset.qi; drawQList(); drawPractice(); $('#pc').scrollIntoView({ behavior: 'smooth' }); });
 }
 function scoreBars(r, lang) {
