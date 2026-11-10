@@ -380,7 +380,7 @@ R.meo = (step, body) => {
     if (!Q.length) return finish();
     let qi = 0; const back = new Set();
     const ask = async () => { const my = RUN; if (qi >= Q.length) return finish(); const q = Q[qi];
-      const btns = q.l === 'zh' ? (step.quiz.zh_btn || [['→', '→ đường bằng'], ['↘', '↘ cầu trượt']]) : (step.quiz.en_btn || [['yes', 'a 🐜 có'], ['no', '✖ không']]);
+      const btns = q.l === 'zh' ? (step.quiz.zh_btn || [['→', 'ˉ →'], ['↘', 'ˋ ↘']]) : (step.quiz.en_btn || [['yes', '✔'], ['no', '✖']]);
       body.innerHTML = `<div class="sx-meo"><span class="ls-lab">Nghe và chạm · ${qi + 1}/${Q.length}</span><div class="sx-big">${q.l === 'zh' ? `<b class="zh">${esc(q.hz)}</b><span>${esc(q.py.replace(/[āáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ]/g, m => 'aaaaeeeeiiiioooouuuuüüüü'['āáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ'.indexOf(m)]))}</span>` : `<b>${esc(q.w)}</b>`}</div>
         <div class="sx-opts two">${btns.map(([k, t]) => `<button class="sx-opt" data-k="${k}">${esc(t)}</button>`).join('')}</div></div>`;
       const play = () => { stopAll(); return say(q.u); }; X.replay = play; play();
