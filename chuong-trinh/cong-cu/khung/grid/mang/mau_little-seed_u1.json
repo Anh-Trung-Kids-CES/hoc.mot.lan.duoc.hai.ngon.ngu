@@ -1,0 +1,344 @@
+{
+ "T1": {
+  "loai": "Truyện khung",
+  "ten_en": "Bông's Day",
+  "ten_zh": "Bông的一天",
+  "khung_en": "Hello, ___! / Goodbye, ___!",
+  "khung_zh": "___，你好！/ ___，再见！",
+  "phan_ten": [
+   [
+    "Hello, Day!",
+    "早上好！"
+   ],
+   [
+    "Hello, Teacher!",
+    "老师，你好！"
+   ],
+   [
+    "Hello, Friend!",
+    "朋友，你好！"
+   ],
+   [
+    "See You Tomorrow!",
+    "明天见！"
+   ],
+   [
+    "Hello, Daddy!",
+    "爸爸，你好！"
+   ]
+  ],
+  "en": [
+   "\"Hello, day! Hello, kitten!\" \"Goodbye, mommy! Goodbye, kitten!\" \"Goodbye, Bông!\" \"Let's go!\"",
+   "\"Hello, teacher!\" \"Hello, Bông! Hello, Leo! Hello, Anna! Hello, Xiaomei!\" \"Hello, teacher!\"",
+   "\"Hello, everyone!\" \"Hello, teacher!\" \"How many friends?\" \"Six!\" \"Hello, friend!\" \"Hello, friend!\"",
+   "\"Goodbye, teacher!\" \"Goodbye, all! See you tomorrow!\" \"See you tomorrow, teacher!\" \"Goodbye, friend!\"",
+   "\"Hello, daddy!\" \"Hello, Bông!\" \"Woof!\" \"Hello, puppy!\" \"Hello, mommy!\" \"Hello, ___!\""
+  ],
+  "zh": [
+   "“早上好！小猫，你好！”“妈妈，再见！小猫，再见！”“Bông，再见！”“走吧！”",
+   "“老师，你好！”“Bông，你好！Leo，你好！Anna，你好！Xiaomei，你好！”“老师，你好！”",
+   "“大家好！”“老师，你好！”“朋友，你好！”“朋友，你好！”",
+   "“老师，再见！”“大家再见！明天见！”“老师，明天见！”“朋友，再见！”",
+   "“爸爸，你好！”“Bông，你好！”“汪汪！”“小狗，你好！”“妈妈，你好！”“___，你好！”"
+  ],
+  "pinyin": [
+   "\"Zǎoshang hǎo! Xiǎomāo, nǐ hǎo!\" \"Māma, zàijiàn! Xiǎomāo, zàijiàn!\" \"Bông, zàijiàn!\" \"Zǒu ba!\"",
+   "\"Lǎoshī, nǐ hǎo!\" \"Bông, nǐ hǎo! Leo, nǐ hǎo! Anna, nǐ hǎo! Xiaomei, nǐ hǎo!\" \"Lǎoshī, nǐ hǎo!\"",
+   "\"Dàjiā hǎo!\" \"Lǎoshī, nǐ hǎo!\" \"Péngyou, nǐ hǎo!\" \"Péngyou, nǐ hǎo!\"",
+   "\"Lǎoshī, zàijiàn!\" \"Dàjiā zàijiàn! Míngtiān jiàn!\" \"Lǎoshī, míngtiān jiàn!\" \"Péngyou, zàijiàn!\"",
+   "\"Bàba, nǐ hǎo!\" \"Bông, nǐ hǎo!\" \"Wāngwāng!\" \"Xiǎogǒu, nǐ hǎo!\" \"Māma, nǐ hǎo!\" \"___, nǐ hǎo!\""
+  ],
+  "nguoi_noi": [
+   "Bông (với mặt trời, mèo con) · Bông (ở cửa) · mẹ · Bông",
+   "Bông · cô giáo · Leo, Anna, Xiaomei",
+   "cô giáo · cả lớp · cô giáo · cả lớp · Bông (với Anna) · Anna",
+   "cả lớp · cô giáo · Bông · Leo (với Vũ)",
+   "Bông · bố · cún con · Bông · Bông (về nhà gặp mẹ) · mẹ (nói với con đang nghe)"
+  ],
+  "tu_moi_theo_phan": [
+   {
+    "en": [
+     "day",
+     "goodbye",
+     "mommy",
+     "kitten"
+    ],
+    "zh": [
+     "再见",
+     "妈妈",
+     "小猫"
+    ]
+   },
+   {
+    "en": [
+     "hello",
+     "teacher"
+    ],
+    "zh": [
+     "你好",
+     "老师"
+    ]
+   },
+   {
+    "en": [
+     "everyone",
+     "friend"
+    ],
+    "zh": [
+     "大家",
+     "朋友"
+    ]
+   },
+   {
+    "en": [
+     "see you",
+     "all",
+     "tomorrow"
+    ],
+    "zh": [
+     "明天"
+    ]
+   },
+   {
+    "en": [
+     "daddy",
+     "puppy"
+    ],
+    "zh": [
+     "爸爸",
+     "小狗"
+    ]
+   }
+  ],
+  "tu_hay_sai": {
+   "en": [
+    "how many (phần 3)",
+    "six (phần 3)"
+   ],
+   "zh": []
+  },
+  "tranh": [
+   "Sáng ở nhà Bông: Bông vẫy mặt trời ngoài cửa sổ, mèo con trên giường; ở cửa Bông vẫy mẹ và mèo con, mẹ vẫy lại; Bông kéo tay bố ra cửa (bố chỉ thấy một phần, để phần 5 mới gọi tên).",
+   "Cửa lớp: Bông chào cô giáo; cô cúi chào lần lượt Bông, Leo, Anna, Xiaomei; ba bạn chào cô.",
+   "Trong lớp: cô dang tay chào cả lớp; cả lớp đáp; cô đếm, tranh có đúng 6 bạn (Bông, Leo, Anna, Xiaomei, Vũ và một bạn không tên), số 6 to trên bảng; Bông bắt tay Anna.",
+   "Tan học: cả lớp vẫy cô; cô vẫy cả lớp, sau lưng cô có tranh mặt trời mọc (ngày mai); Bông vẫy cô; Leo vẫy Vũ.",
+   "Cổng trường: bố đón Bông, cún con chạy ra; về nhà mẹ mở cửa; trang cuối mẹ nhìn thẳng ra ngoài tranh, vẫy con đang nghe."
+  ],
+  "ghi_chu": "Little Seed: truyện chỉ là lời thoại, không có lời dẫn (says, 说), người nói hiện trong tranh và giọng đọc khác nhau – vì con 4–5 tuổi, web không hiện chữ. 10–12 chữ Anh, 15–21 chữ Hán mỗi phần (mức Little Seed 10–15 / 13–22). Ngày web 1–5 kể dần, ngày 6–8 nghe cả truyện. ___ cuối phần 5 là chỗ chèn tên con. Từ lạ có tranh: Woof / 汪汪 (tiếng chó); 早上好 và 走吧 ở mức Nghe làm quen (câu cửa miệng)."
+ },
+ "T2": {
+  "loai": "Bài hát vận động",
+  "ten_en": "Hello, Hello!",
+  "ten_zh": "你好，你好！",
+  "kieu": "liệt kê",
+  "giai_dieu": "dân gian hết bản quyền: Mary Had a Little Lamb – Đô trưởng, 4/4, nhịp 104; 5 lượt + lượt kết ≈ 1 phút 30 giây",
+  "khung_en": "Hello, hello, ___! Wave, wave, wave!",
+  "khung_zh": "___，你好！你好，你好！",
+  "o_thay": [
+   "teacher",
+   "friend",
+   "everyone",
+   "kitten",
+   "puppy"
+  ],
+  "o_thay_zh": [
+   "老师",
+   "朋友",
+   "大家",
+   "小猫",
+   "小狗"
+  ],
+  "dong_tac": "teacher – cúi chào; friend – bắt tay bạn bên cạnh; everyone – dang rộng hai tay; kitten – vuốt râu mèo; puppy – vẫy đuôi; wave – vẫy tay (mọi lượt); lượt kết – vẫy tạm biệt rồi chỉ vào con",
+  "en": [
+   [
+    "Hello, hello, teacher!",
+    "Wave, wave, wave!",
+    "Hello, hello, teacher!",
+    "Hello, hello, hello!"
+   ],
+   [
+    "Hello, hello, friend!",
+    "Wave, wave, wave!",
+    "Hello, hello, friend!",
+    "Hello, hello, hello!"
+   ],
+   [
+    "Hello, hello, everyone!",
+    "Wave, wave, wave!",
+    "Hello, hello, everyone!",
+    "Hello, hello, hello!"
+   ],
+   [
+    "Hello, hello, kitten!",
+    "Wave, wave, wave!",
+    "Hello, hello, kitten!",
+    "Hello, hello, hello!"
+   ],
+   [
+    "Hello, hello, puppy!",
+    "Wave, wave, wave!",
+    "Hello, hello, puppy!",
+    "Hello, hello, hello!"
+   ],
+   [
+    "Goodbye, goodbye, all!",
+    "See you tomorrow! Let's go!",
+    "Goodbye, goodbye, all!",
+    "Hello, hello, ___!"
+   ]
+  ],
+  "zh": [
+   [
+    "老师，你好！",
+    "你好，你好！",
+    "老师，你好！",
+    "你好你好你好！"
+   ],
+   [
+    "朋友，你好！",
+    "你好，你好！",
+    "朋友，你好！",
+    "你好你好你好！"
+   ],
+   [
+    "大家，你好！",
+    "你好，你好！",
+    "大家，你好！",
+    "你好你好你好！"
+   ],
+   [
+    "小猫，你好！",
+    "你好，你好！",
+    "小猫，你好！",
+    "你好你好你好！"
+   ],
+   [
+    "小狗，你好！",
+    "你好，你好！",
+    "小狗，你好！",
+    "你好你好你好！"
+   ],
+   [
+    "大家再见！",
+    "明天见！走吧！",
+    "大家再见！",
+    "___，你好！"
+   ]
+  ],
+  "pinyin": [
+   [
+    "lǎoshī, nǐ hǎo!",
+    "Nǐ hǎo, nǐ hǎo!",
+    "lǎoshī, nǐ hǎo!",
+    "Nǐ hǎo nǐ hǎo nǐ hǎo!"
+   ],
+   [
+    "péngyou, nǐ hǎo!",
+    "Nǐ hǎo, nǐ hǎo!",
+    "péngyou, nǐ hǎo!",
+    "Nǐ hǎo nǐ hǎo nǐ hǎo!"
+   ],
+   [
+    "dàjiā, nǐ hǎo!",
+    "Nǐ hǎo, nǐ hǎo!",
+    "dàjiā, nǐ hǎo!",
+    "Nǐ hǎo nǐ hǎo nǐ hǎo!"
+   ],
+   [
+    "xiǎomāo, nǐ hǎo!",
+    "Nǐ hǎo, nǐ hǎo!",
+    "xiǎomāo, nǐ hǎo!",
+    "Nǐ hǎo nǐ hǎo nǐ hǎo!"
+   ],
+   [
+    "xiǎogǒu, nǐ hǎo!",
+    "Nǐ hǎo, nǐ hǎo!",
+    "xiǎogǒu, nǐ hǎo!",
+    "Nǐ hǎo nǐ hǎo nǐ hǎo!"
+   ],
+   [
+    "Dàjiā zàijiàn!",
+    "Míngtiān jiàn! Zǒu ba!",
+    "Dàjiā zàijiàn!",
+    "___, nǐ hǎo!"
+   ]
+  ],
+  "ghi_chu_thanh": "你好 nǐ hǎo đọc biến điệu ní hǎo (2–3): đặt nốt đi lên rồi xuống thấp. 再见 zàijiàn (4–4) đặt cụm nốt đi xuống. 小狗 xiǎogǒu đọc xiáogǒu (2–3), 小猫 xiǎomāo (3–1): nếu rơi nốt cao thì lượt đó đọc theo nhịp vỗ tay (ng.t. 31). GV tiếng Trung duyệt trước khi thu.",
+  "ghi_chu": "Câu 2 “Wave, wave, wave!” là lời kèm động tác (wave là từ Seedling, ở đây chỉ làm động tác). Câu cuối lượt kết thay bằng tên con."
+ },
+ "T3": {
+  "loai": "Big book mẫu câu",
+  "ten_en": "Hello and Goodbye",
+  "ten_zh": "你好，再见",
+  "kieu": "cặp đối lập",
+  "khung_en": "Hello, ___! – Goodbye, ___!",
+  "khung_zh": "___，你好！– ___，再见！",
+  "en": [
+   "Hello, day!",
+   "Hello, mommy! – Goodbye, mommy!",
+   "Hello, daddy! – Goodbye, daddy!",
+   "Hello, kitten! – Goodbye, kitten!",
+   "Hello, puppy! – Goodbye, puppy!",
+   "Hello, teacher! – Goodbye, teacher!",
+   "Hello, friend! – Goodbye, friend!",
+   "Hello, everyone! – Goodbye, everyone!",
+   "Goodbye, all! See you tomorrow!",
+   "Hello, ___!"
+  ],
+  "zh": [
+   "早上好！",
+   "妈妈，你好！– 妈妈，再见！",
+   "爸爸，你好！– 爸爸，再见！",
+   "小猫，你好！– 小猫，再见！",
+   "小狗，你好！– 小狗，再见！",
+   "老师，你好！– 老师，再见！",
+   "朋友，你好！– 朋友，再见！",
+   "大家好！– 大家再见！",
+   "大家再见！明天见！",
+   "___，你好！"
+  ],
+  "pinyin": [
+   "Zǎoshang hǎo!",
+   "māma, nǐ hǎo! – māma, zàijiàn!",
+   "bàba, nǐ hǎo! – bàba, zàijiàn!",
+   "xiǎomāo, nǐ hǎo! – xiǎomāo, zàijiàn!",
+   "xiǎogǒu, nǐ hǎo! – xiǎogǒu, zàijiàn!",
+   "lǎoshī, nǐ hǎo! – lǎoshī, zàijiàn!",
+   "péngyou, nǐ hǎo! – péngyou, zàijiàn!",
+   "Dàjiā hǎo! – Dàjiā zàijiàn!",
+   "Dàjiā zàijiàn! Míngtiān jiàn!",
+   "___, nǐ hǎo!"
+  ],
+  "ghi_chu": "Trang trái buổi sáng (“Hello”), trang phải buổi chiều (“Goodbye”) cho cùng một người, con vật. Trang 1 mặt trời mọc; trang 9 mặt trời lặn; trang 10 có khung dán ảnh con. Little Seed: big book chỉ tranh và tiếng, cô đọc chữ trên lớp."
+ },
+ "T4": {
+  "loai": "Vè",
+  "ten_en": "Goodbye, See You Tomorrow!",
+  "ten_zh": "再见，明天见！",
+  "kieu": "hỏi–đáp",
+  "khung_en": "___, ___, goodbye! – Goodbye, see you tomorrow!",
+  "khung_zh": "___，___，再见！– 再见，明天见！",
+  "en": [
+   "Mommy, mommy, goodbye! – Goodbye, see you tomorrow!",
+   "Daddy, daddy, goodbye! – Goodbye, see you tomorrow!",
+   "Kitten, kitten, goodbye! – Goodbye, see you tomorrow!",
+   "Puppy, puppy, goodbye! – Goodbye, see you tomorrow!",
+   "Goodbye, day! Goodbye, all! – Goodbye, everyone, see you tomorrow!"
+  ],
+  "zh": [
+   "妈妈，妈妈，再见！– 再见，明天见！",
+   "爸爸，爸爸，再见！– 再见，明天见！",
+   "小猫，小猫，再见！– 再见，明天见！",
+   "小狗，小狗，再见！– 再见，明天见！",
+   "大家，大家，再见！– 大家再见，明天见！"
+  ],
+  "pinyin": [
+   "Māma, māma, zàijiàn! – Zàijiàn, míngtiān jiàn!",
+   "Bàba, bàba, zàijiàn! – Zàijiàn, míngtiān jiàn!",
+   "Xiǎomāo, xiǎomāo, zàijiàn! – Zàijiàn, míngtiān jiàn!",
+   "Xiǎogǒu, xiǎogǒu, zàijiàn! – Zàijiàn, míngtiān jiàn!",
+   "Dàjiā, dàjiā, zàijiàn! – Dàjiā zàijiàn, míngtiān jiàn!"
+  ],
+  "ghi_chu": "Vè vỗ tay gọi – đáp: cô (hoặc audio giọng 1) gọi, con đáp. Vỗ 2 tiếng ở tên người, vẫy tay ở “goodbye / 再见”. Dùng trong khung giờ nghe ngấm lúc ra khỏi nhà (ng.t. 49, 59)."
+ }
+}

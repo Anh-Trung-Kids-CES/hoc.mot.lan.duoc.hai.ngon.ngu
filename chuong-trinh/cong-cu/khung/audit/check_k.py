@@ -99,7 +99,10 @@ def main(as_json=False):
                     if full:
                         def has(t):
                             txt = json.dumps(full.get(t, {}).get(L, ''), ensure_ascii=False)
-                            return (norm_en(x['tu']) in norm_en(txt) or (' ' + x['tu'] + 's ') in norm_en(txt)) if L == 'en' else x['tu'] in txt
+                            if L != 'en':
+                                return x['tu'] in txt
+                            vs = [v.strip() for v in x['tu'].split('/') if v.strip()]   # mục dạng a/b (man/men, tooth/teeth)
+                            return any(norm_en(v) in norm_en(txt) or (' ' + v + 's ') in norm_en(txt) for v in vs)
                         n = sum(1 for t in full if t.startswith('T') and has(t))
                     else:
                         n = sum(1 for t in vb if x['tu'] in (t.get('tu_' + L) or []))
