@@ -9,7 +9,7 @@
    Trang của chị: ?ket-qua · Thử không cần máy chủ: ?mock=1 · Thử tự động không cần micro: ?gia-lap=1 */
 
 /* URL /exec của dự án Apps Script "Máy chấm host" (tệp may-cham-host.gs). Để trống thì chấm tạm bằng máy nhận giọng của Chrome. */
-const HOST_API = '';
+const HOST_API = 'https://script.google.com/macros/s/AKfycbwg7fL14m4_FEsnYr3yOfkh3tnl3ohpwjvaqKYKlmHN0STWT0FccqFZGgFaku06jgtzug/exec';
 const ROOM = 'HOSTCK';
 const FB = {
   apiKey: "AIzaSyAYoYO7PFPBCdt9JkRVixXef5cF5Djh5ng",
