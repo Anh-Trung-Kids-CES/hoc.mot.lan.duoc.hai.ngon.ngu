@@ -107,6 +107,7 @@ function codeScreen(msg) {
     /* phòng của khoá khác (Little Seed / Canopy): tải lại trang với đúng nội dung rồi vào tiếp */
     let lop = '';
     try { lop = await DB.get(roomPath(code) + '/state/lop'); } catch (er) { }
+    if (lop === 'chung-ket') { location.replace('../chung-ket/?phong=' + code); return; }   // phòng Chung kết Rung chuông vàng
     if (lop && LZ_LOPS[lop] && lop !== LZ_LOP) { location.replace(lopUrl(lop, { phong: code, tiep: 1 })); return; }
     CODE = code;
     if (ME && ME.kid) confirmScreen(); else profileForm('Thông tin của con', 'Vào lớp', () => join());
