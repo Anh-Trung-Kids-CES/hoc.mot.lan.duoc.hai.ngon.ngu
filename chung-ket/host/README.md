@@ -27,7 +27,7 @@ Làm lại bài kiểm tra luôn là đề mới: ưu tiên tình huống chưa 
 Ngân hàng: 110 câu × 2 tiếng = 220 mục luyện; 113 tình huống, phủ đủ 110 mã câu.
 
 ## Máy chấm AI (làm 1 lần)
-Dự án Apps Script riêng `may-cham-host.gs` (không đụng máy chủ web học). Cách bật ghi ở đầu tệp: dán code, thêm Thuộc tính tập lệnh `GEMINI_KEY` và `MA_HOST`, triển khai Ứng dụng web, gửi URL /exec để gắn vào dòng `HOST_API` trong `host.js`.
+Trang hướng dẫn từng bước, có nút chép code và ô kiểm tra: …/chung-ket/host/cai-may-cham.html. Dự án Apps Script riêng `may-cham-host.gs` (không đụng máy chủ web học). Cách bật cũng ghi ở đầu tệp: dán code, thêm Thuộc tính tập lệnh `GEMINI_KEY` và `MA_HOST`, triển khai Ứng dụng web, gửi URL /exec để gắn vào dòng `HOST_API` trong `host.js`.
 Chưa gắn URL thì trang vẫn chạy, chấm tạm bằng máy nhận giọng của Chrome (chỉ so chữ, không chấm thanh điệu).
 
 ## Giọng mẫu

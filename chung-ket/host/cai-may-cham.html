@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bật máy chấm host</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="host.css?v=1">
+<style>
+.step{display:grid;grid-template-columns:40px 1fr;gap:12px;align-items:start;border-top:1px dashed var(--line);padding:14px 0}
+.step:first-of-type{border-top:0}
+.num{width:36px;height:36px;border-radius:50%;background:var(--red);color:#fff;font-weight:800;display:grid;place-items:center}
+.step.done .num{background:var(--green)}
+code{background:var(--yellow-soft);border-radius:6px;padding:1px 6px;font-size:14px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;margin:8px 0;font-size:15px}
+</style>
+</head>
+<body>
+<header class="top"><div class="brand">🎤 Bật máy chấm AI cho trang Luyện host</div></header>
+<main>
+<section class="card">
+  <p>Làm một lần, khoảng 5 phút, trên máy tính. Nên đăng nhập Google bằng <b>anhtrung.home@gmail.com</b> (tài khoản lưu dữ liệu dự án) trước khi bấm.</p>
+
+  <div class="step" id="s1"><div class="num">1</div><div>
+    <b>Chép code máy chấm</b>
+    <div class="row"><button class="btn" id="chep">Chép code</button><span class="muted" id="chepMsg"></span></div>
+  </div></div>
+
+  <div class="step" id="s2"><div class="num">2</div><div>
+    <b>Mở dự án Apps Script mới và dán code</b>
+    <p>Bấm nút dưới, Google mở một dự án trống. Xóa đoạn code mẫu, dán code vừa chép (Ctrl+V), đặt tên dự án <i>Máy chấm host – Chung kết</i>, bấm biểu tượng Lưu.</p>
+    <div class="row"><a class="btn" href="https://script.new" target="_blank" rel="noopener">Mở dự án mới</a></div>
+  </div></div>
+
+  <div class="step" id="s3"><div class="num">3</div><div>
+    <b>Thêm khóa và mã luyện</b>
+    <p>Bánh răng <i>Cài đặt dự án</i> ở thanh bên trái → kéo xuống <i>Thuộc tính tập lệnh</i> → <i>Thêm thuộc tính tập lệnh</i>, thêm hai dòng:</p>
+    <div class="kv"><code>GEMINI_KEY</code><span>khóa Gemini của dự án (khóa chị vẫn dùng để thu giọng)</span>
+      <code>MA_HOST</code><span>mã luyện chị tự đặt, ví dụ <code>ck2026</code>; host nhập mã này khi vào trang</span></div>
+    <p>Bấm <i>Lưu thuộc tính tập lệnh</i>.</p>
+  </div></div>
+
+  <div class="step" id="s4"><div class="num">4</div><div>
+    <b>Triển khai thành Ứng dụng web</b>
+    <p><i>Triển khai</i> (góc trên bên phải) → <i>Tùy chọn triển khai mới</i> → bánh răng chọn loại <i>Ứng dụng web</i> →
+      Thực thi với tư cách: <b>Tôi</b> · Ai có quyền truy cập: <b>Bất kỳ ai</b> → <i>Triển khai</i>.
+      Google hỏi quyền: chọn tài khoản → <i>Nâng cao</i> → <i>Đi tới … (không an toàn)</i> → <i>Cho phép</i> (đây là script của chính chị).</p>
+    <p>Chép <b>URL ứng dụng web</b> (đuôi <code>/exec</code>).</p>
+  </div></div>
+
+  <div class="step" id="s5"><div class="num">5</div><div>
+    <b>Dán URL vào đây để kiểm tra</b>
+    <label><input id="url" placeholder="https://script.google.com/macros/s/…/exec"></label>
+    <label>Mã luyện vừa đặt<input id="ma" placeholder="ví dụ ck2026"></label>
+    <div class="row"><button class="btn" id="thu">Kiểm tra</button></div>
+    <div id="kq"></div>
+  </div></div>
+</section>
+</main>
+<script>
+const $ = s => document.querySelector(s);
+$('#chep').onclick = async () => {
+  try {
+    const code = await (await fetch('may-cham-host.gs?t=' + Date.now())).text();
+    await navigator.clipboard.writeText(code);
+    $('#chepMsg').textContent = 'Đã chép ' + code.split('\n').length + ' dòng. Sang bước 2.';
+    $('#s1').classList.add('done');
+  } catch (e) { $('#chepMsg').textContent = 'Chưa chép được, chị mở trang này bằng Chrome và thử lại.'; }
+};
+$('#thu').onclick = async () => {
+  const url = $('#url').value.trim(), ma = $('#ma').value.trim(), kq = $('#kq');
+  if (!/^https:\/\/script\.google\.com\/.+\/exec$/.test(url)) { kq.innerHTML = '<p class="msg err">URL phải bắt đầu bằng https://script.google.com/ và kết thúc bằng /exec.</p>'; return; }
+  kq.innerHTML = '<p class="muted">Đang kiểm tra…</p>';
+  try {
+    const p = await (await fetch(url + '?action=ping&t=' + Date.now())).json();
+    const m = ma ? await (await fetch(url + '?action=ma&ma=' + encodeURIComponent(ma))).json() : { ok: false };
+    const dong = [
+      [p.ok, 'Máy chấm đang chạy'],
+      [p.coKhoa, 'Đã có GEMINI_KEY'],
+      [p.coMa, 'Đã có MA_HOST'],
+      [m.ok, 'Mã luyện khớp']
+    ].map(([ok, t]) => `<li>${ok ? '✓' : '✗'} ${t}</li>`).join('');
+    const xong = p.ok && p.coKhoa && p.coMa && m.ok;
+    kq.innerHTML = `<ul>${dong}</ul>` + (xong
+      ? `<p class="msg note"><b>Xong.</b> Chị gửi URL này cho Claude để gắn vào trang luyện host:<br><code>${url.replace(/</g, '')}</code></p>`
+      : '<p class="msg err">Còn dòng ✗: chị xem lại bước 3, rồi ở bước 4 triển khai lại (Quản lý tùy chọn triển khai → bút chì → Phiên bản mới).</p>');
+    if (xong) ['#s2', '#s3', '#s4', '#s5'].forEach(s => $(s).classList.add('done'));
+  } catch (e) { kq.innerHTML = '<p class="msg err">Chưa gọi được URL. Kiểm tra lại bước 4: "Ai có quyền truy cập" phải là Bất kỳ ai.</p>'; }
+};
+</script>
+</body>
+</html>
