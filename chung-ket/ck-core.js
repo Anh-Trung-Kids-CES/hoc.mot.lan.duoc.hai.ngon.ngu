@@ -5,7 +5,7 @@
 
    Luật chấm (doc "Chung kết Rung chuông vàng – Khung nội dung câu hỏi", 10/11/2026):
    - Thi chung Little Seed và Canopy; xếp hạng RIÊNG theo level đăng ký, không xếp lẫn.
-   - Mỗi câu có 3 bậc A/B/C, web tự đưa bậc vừa sức: đúng 2 câu liên tiếp lên một bậc, sai 2 câu liên tiếp xuống một bậc.
+   - Bé làm đề theo level của mình (Phần 2–4: đề Little Seed hoặc đề Canopy, từ nội dung 3 vòng của level đó); mỗi câu có 3 bậc A/B/C, web tự đưa bậc vừa sức: đúng 2 câu liên tiếp lên một bậc, sai 2 câu liên tiếp xuống một bậc.
      Little Seed bắt đầu bậc A, Canopy bắt đầu bậc B. Bậc chỉ để câu hỏi vừa sức, KHÔNG cộng hay trừ điểm.
    - Mỗi câu đúng = 1 điểm. Phần 1 không tính xếp hạng (chỉ tích sao). Phần 2: 30%, Phần 3: 30%, Phần 4: 40%.
    - Phần 2 chia cho 15 câu, Phần 3 (theo giờ) chia cho số câu đúng cao nhất của buổi thi, Phần 4 chia cho 7 điểm.
@@ -24,6 +24,8 @@ const CK_PH = [
   { id: 'trao', n: 'Trao giải', ic: '🏆', m: '6 phút' }
 ];
 const CK_P2_SEC = 10;   // thời gian suy nghĩ mỗi câu Rung chuông vàng
+const CK_P2N = 15;      // Phần 2: 15 câu cho mỗi level (đề Little Seed và đề Canopy chạy song song, cùng số câu)
+const CK_T = { tu: 'Từ', cum: 'Cụm từ', cau: 'Câu' };
 
 /* lời cô Hươu: câu có file giọng thì phát file, câu mới tạm đọc bằng giọng máy để duyệt nội dung (ttsTam),
    duyệt xong sẽ thu bằng Gemini (danh sách trong chung-ket/README.md). */
@@ -65,13 +67,13 @@ function bandWalk(start, oks) {
 }
 function p2Oks(room, seat, upto) {
   const out = [];
-  for (let j = 0; j < Math.min(upto, CK_P2.length); j++) { const a = answerOf(room, seat, 'p2_' + j); if (a) out.push(!!a.ok); }
+  for (let j = 0; j < Math.min(upto, CK_P2N); j++) { const a = answerOf(room, seat, 'p2_' + j); if (a) out.push(!!a.ok); }
   return out;
 }
 /* bậc của câu i Phần 2 cho một bé */
 function p2Band(room, seat, i) { return bandWalk(bandStart(seatLv(room, seat)), p2Oks(room, seat, i)); }
 /* bậc khi hết Phần 2: là bậc khởi đầu của Rồng Lửa và chọn bản Phần 4 */
-function p2Final(room, seat) { return p2Band(room, seat, CK_P2.length); }
+function p2Final(room, seat) { return p2Band(room, seat, CK_P2N); }
 
 /* xáo lựa chọn cố định theo câu và máy (đáp án là lựa chọn số 0 trong dữ liệu) */
 function ckOrder(n, key) {
@@ -87,20 +89,21 @@ function ckCatKeys(cat) {
 }
 function ckRand(a) { return a[Math.floor(Math.random() * a.length)]; }
 function ckOthers(cat, k, n) { return ckCatKeys(cat).filter(x => x !== k).sort(() => Math.random() - .5).slice(0, n); }
-function bossQ(band, last) {
+function bossQ(band, last, lv) {
+  const BS = CK_BOSS[lv] || CK_BOSS.seed;
   for (let guard = 0; guard < 20; guard++) {
     let q;
     if (band === 0) {
-      const cat = ckRand(CK_BOSS.A), k = ckRand(ckCatKeys(cat)), l = Math.random() < .5 ? 'en' : 'zh';
+      const cat = ckRand(BS.A), k = ckRand(ckCatKeys(cat)), l = Math.random() < .5 ? 'en' : 'zh';
       q = { b: 0, k, l, p: { a: [k, l] }, o: [k].concat(ckOthers(cat, k, 2)).map(x => ({ t: 'img', k: x })) };
     } else if (band === 1) {
-      const cat = ckRand(CK_BOSS.B), k = ckRand(ckCatKeys(cat)), l = Math.random() < .5 ? 'en' : 'zh', to = l === 'en' ? 'zh' : 'en';
+      const cat = ckRand(BS.B), k = ckRand(ckCatKeys(cat)), l = Math.random() < .5 ? 'en' : 'zh', to = l === 'en' ? 'zh' : 'en';
       q = { b: 1, k, l, p: { a: [k, l] }, o: [k].concat(ckOthers(cat, k, 2)).map(x => ({ t: 'say', k: x, l: to })) };
-    } else if (Math.random() < .35) {
-      const [chu, k, cat] = ckRand(CK_BOSS.C.chu);
+    } else if (BS.C.chu.length && Math.random() < .35) {
+      const [chu, k, cat] = ckRand(BS.C.chu);
       q = { b: 2, k, l: 'doc', p: { chu }, o: [k].concat(ckOthers(cat, k, 2)).map(x => ({ t: 'img', k: x })) };
     } else {
-      const cat = ckRand(CK_BOSS.C.txt), k = ckRand(ckCatKeys(cat));
+      const cat = ckRand(BS.C.txt), k = ckRand(ckCatKeys(cat));
       q = { b: 2, k, l: 'doc', p: { txt: k }, o: [k].concat(ckOthers(cat, k, 2)).map(x => ({ t: 'img', k: x })) };
     }
     if (q.o.length === 3 && (!last || last.k !== q.k)) return q;
@@ -110,7 +113,7 @@ function bossQ(band, last) {
 
 /* ---------- điểm ---------- */
 function ckStars(room, seat) { let n = 0; CK_P1.forEach((q, i) => { const a = answerOf(room, seat, 'p1_' + i); if (a && a.ok) n++; }); return n; }
-function ckP2(room, seat) { let n = 0, done = 0; CK_P2.forEach((q, i) => { const a = answerOf(room, seat, 'p2_' + i); if (a) { done++; if (a.ok) n++; } }); return { n, done }; }
+function ckP2(room, seat) { let n = 0, done = 0; CK_P2.seed.forEach((q, i) => { const a = answerOf(room, seat, 'p2_' + i); if (a) { done++; if (a.ok) n++; } }); return { n, done }; }
 function ckP3(room, seat) {
   let n = 0, all = 0;
   Object.entries(room.answers || {}).forEach(([q, o]) => { if (q.indexOf('boss_') !== 0) return; seat.ids.forEach(id => { const a = (o || {})[id]; if (a) { all++; if (a.ok) n++; } }); });
@@ -134,7 +137,7 @@ function ckResults(room) {
   });
   const p3max = Math.max(1, ...rows.map(r => r.p3));
   rows.forEach(r => {
-    r.tong = Math.round((30 * r.p2 / CK_P2.length + 30 * r.p3 / p3max + 40 * (r.p4 || 0) / 7) * 10) / 10;
+    r.tong = Math.round((30 * r.p2 / CK_P2N + 30 * r.p3 / p3max + 40 * (r.p4 || 0) / 7) * 10) / 10;
   });
   const out = {};
   Object.keys(CK_LV).forEach(lv => {

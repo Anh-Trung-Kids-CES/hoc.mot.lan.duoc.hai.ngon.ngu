@@ -51,8 +51,8 @@ const ACT = {
   next() {
     const s = ST();
     if (s.ph === 'p1' && (s.i || 0) < CK_P1.length - 1) return setState({ i: (s.i || 0) + 1, step: 'hoi' });
-    if (s.ph === 'p2' && (s.i || 0) < CK_P2.length - 1) return setState({ i: (s.i || 0) + 1, step: 'hoi', t0: DB.now() });
-    if (s.ph === 'p4' && (s.p4 || {}).step === 'rv') { const sc = ((s.p4 || {}).sc || 0) + 1; if (sc < CK_P4.scenes.length) return setState({ 'p4/sc': sc }); }
+    if (s.ph === 'p2' && (s.i || 0) < CK_P2N - 1) return setState({ i: (s.i || 0) + 1, step: 'hoi', t0: DB.now() });
+    if (s.ph === 'p4' && (s.p4 || {}).step === 'rv') { const sc = ((s.p4 || {}).sc || 0) + 1; if (sc < 6) return setState({ 'p4/sc': sc }); }
   },
   prev() {
     const s = ST();
@@ -153,17 +153,18 @@ function drawDk(S) {
       <p>${Object.entries(CK_LV).map(([lv, n]) => `${n}: <b>${ok.filter(x => seatLv(room, x) === lv).length}</b>`).join(' · ')}</p>`;
   } else if (ph === 'p1') {
     const i = s.i || 0, q = CK_P1[i], qid = 'p1_' + i;
-    mid = `<h3>🌱 Phần 1 · Câu ${i + 1}/${CK_P1.length}</h3><p class="small">Cả lớp làm chung, không tính xếp hạng, đúng được sao. Màn chiếu phát tiếng.</p>
-      ${q.k === 'pick' ? `<div class="prev">🔊 <b>${esc(ckTxt(q.w, q.l))}</b> <span class="flag ${q.l}">${q.l === 'zh' ? '中文' : 'EN'}</span> ${q.o.map((k, j) => optPrev({ t: 'img', k }, j === 0)).join('')}</div>`
-        : q.k === 'lang' ? `<div class="prev">🔊 <b>${esc(ckTxt(q.w, q.l))}</b> → đáp án <span class="flag ${q.l}">${q.l === 'zh' ? '中文' : 'English'}</span></div>`
-          : `<div class="prev"><b>${esc(q.t)}</b> ${q.w ? esc(ckTxt(q.w, 'en')) + ' · ' + esc(ckTxt(q.w, 'zh')) : 'Hello! 你好！'} (không chấm)</div>`}
+    mid = `<h3>🌱 Phần 1 · Câu ${i + 1}/${CK_P1.length}</h3><p class="small">Cả lớp làm chung, không tính xếp hạng, đúng được sao. Màn chiếu phát tiếng; cô hiện đáp án thì màn chiếu đọc cả hai tiếng.</p>
+      <p><span class="ck-lvtag ${q.lv}">${CK_LV[q.lv]} · Vòng ${q.r}: ${esc(CK_ROUNDS[q.lv][q.r - 1])}</span> <b>${CK_T[q.t]}</b></p>
+      <div class="prev">🔊 <b>${esc(ckTxt(q.w, q.l))}</b> <span class="flag ${q.l}">${q.l === 'zh' ? '中文' : 'EN'}</span> ${q.o.map((k, j) => optPrev({ t: 'img', k }, j === 0)).join('')}</div>
       ${ctlQ(s)}<p class="count">${countDone(ok, qid)}</p>`;
   } else if (ph === 'p2') {
-    const i = s.i || 0, Q = CK_P2[i], qid = 'p2_' + i;
-    const dist = [0, 1, 2].map(b => ok.filter(x => p2Band(room, x, i) === b).length);
-    mid = `<h3>🔔 Phần 2 · ${Q.chuong ? 'Câu chuông vàng' : `Câu ${i + 1}/${CK_P2.length}`}</h3>
-      <p class="small">Mỗi bé một bậc (A ${dist[0]} · B ${dist[1]} · C ${dist[2]} bé). Đáp án đọc cho cả lớp: <b>${esc(ckTxt(CK_P2_ANS[i], 'en'))} · ${esc(ckTxt(CK_P2_ANS[i], 'zh'))}</b></p>
-      <table class="res"><tr><th>Bậc</th><th>Đề</th><th>Lựa chọn (xanh là đáp án)</th></tr>${CK_BANDS.map(b => `<tr><td><b>${b}</b></td><td>${promptPrev(Q[b].p)}</td><td><div class="prev sm">${Q[b].o.map((o, j) => optPrev(o, j === 0)).join('')}</div></td></tr>`).join('')}</table>
+    const i = s.i || 0, qid = 'p2_' + i;
+    mid = `<h3>🔔 Phần 2 · ${i === CK_P2N - 1 ? 'Câu chuông vàng' : `Câu ${i + 1}/${CK_P2N}`}</h3>
+      ${Object.entries(CK_LV).map(([lv, n]) => {
+        const Q = CK_P2[lv][i], L = ok.filter(x => seatLv(room, x) === lv), dist = [0, 1, 2].map(b => L.filter(x => p2Band(room, x, i) === b).length);
+        return `<p><span class="ck-lvtag ${lv}">${n}</span> A ${dist[0]} · B ${dist[1]} · C ${dist[2]} bé · đáp án đọc cho cả lớp: <b>${esc(ckTxt(Q.ans, 'en'))} · ${esc(ckTxt(Q.ans, 'zh'))}</b></p>
+          <table class="res"><tr><th>Bậc</th><th>Đề</th><th>Lựa chọn (xanh là đáp án)</th></tr>${CK_BANDS.map(b => `<tr><td><b>${b}</b></td><td>${promptPrev(Q[b].p)}</td><td><div class="prev sm">${Q[b].o.map((o, j) => optPrev(o, j === 0)).join('')}</div></td></tr>`).join('')}</table>`;
+      }).join('')}
       ${ctlQ(s)}<div class="timer" id="coT"></div><p class="count">${countDone(ok, qid)}</p>`;
     side = `<h3>Bé chỉ có 1 máy: cô bấm hộ</h3><div class="kids">${ok.filter(x => !x.on || /^t_/.test(x.id)).map(x => {
       const a = answerOf(room, x, qid), b = CK_BANDS[p2Band(room, x, i)];
@@ -180,11 +181,11 @@ function drawDk(S) {
     side = `<h3>Bé 1 máy: con nói đáp án trên Zoom, cô bấm ⚡</h3><div class="kids">${ok.filter(x => !x.on || /^t_/.test(x.id)).map(x => `<div class="kid${x.on ? '' : ' off'}"><img src="${faceOf(x)}" alt=""><div class="nm">${esc(x.kid)}</div><div class="row"><button class="px" data-bx="${x.id}">⚡ +1</button> <span class="small">${ckP3(room, x).n} câu đúng</span></div></div>`).join('') || '<p class="small">Không có bé nào cần bấm hộ.</p>'}</div>`;
   } else if (ph === 'p4') {
     const P = s.p4 || {}, qid = 'p4_' + (P.run || 0);
-    mid = `<h3>🧩 Phần 4 · "${esc(CK_P4.title)}"</h3>
-      <p class="small">Bé bậc A (cuối Phần 2) nghe tiếng Anh, thẻ tranh có lời tiếng Trung (chạm để nghe). Bé bậc B, C nghe tiếng Trung, thẻ có chữ tiếng Anh. Mỗi máy tự phát truyện 2 lần. 7 thẻ: 6 thẻ đúng thứ tự + 1 thẻ thừa; tối đa 7 điểm.</p>
-      <ol class="small">${CK_P4.scenes.map(ks => `<li>${ks.map(k => esc(ckTxt(k, 'en'))).join(' – ')} · <span class="zh">${ks.map(k => esc(ckTxt(k, 'zh'))).join(' ')}</span></li>`).join('')}<li style="list-style:none">Thẻ thừa: ${esc(ckTxt(CK_P4.extra.k[0], 'en'))}</li></ol>
+    mid = `<h3>🧩 Phần 4 · Nghe truyện, xếp tranh chuyển ngữ</h3>
+      <p class="small">Mỗi level một truyện. Bé bậc A (cuối Phần 2) nghe tiếng Anh, thẻ tranh có lời tiếng Trung (chạm để nghe); bé bậc B, C nghe tiếng Trung, thẻ có chữ tiếng Anh. Mỗi máy tự phát truyện 2 lần. 7 thẻ: 6 thẻ đúng thứ tự + 1 thẻ thừa; tối đa 7 điểm. Hiện đáp án: màn chiếu đọc từng cảnh của cả hai truyện.</p>
+      ${Object.entries(CK_LV).map(([lv, n]) => `<p><span class="ck-lvtag ${lv}">${n}</span> <b>"${esc(CK_P4[lv].title)}"</b></p><ol class="small">${CK_P4[lv].scenes.map(ks => `<li>${ks.map(k => esc(ckTxt(k, 'en'))).join(' – ')} · <span class="zh">${ks.map(k => esc(ckTxt(k, 'zh'))).join(' ')}</span></li>`).join('')}<li style="list-style:none">Thẻ thừa: ${esc(ckTxt(CK_P4[lv].extra.k[0], 'en'))}</li></ol>`).join('')}
       <div class="ctl"><button class="btn${P.step === 'nghe' ? ' y' : ''}" data-act="p4:nghe">🎧 1. Phát truyện</button><button class="btn${P.step === 'xep' ? ' y' : ''}" data-act="p4:xep">🧩 2. Các con xếp tranh</button><button class="btn red" data-act="p4:rv">👁 3. Hiện đáp án</button>
-        ${P.step === 'rv' ? `<button class="btn ghost" data-act="prev">← Cảnh trước</button><button class="btn ghost" data-act="next">Cảnh tiếp →</button><span class="small">Cảnh ${(P.sc || 0) + 1}/${CK_P4.scenes.length}</span>` : ''}
+        ${P.step === 'rv' ? `<button class="btn ghost" data-act="prev">← Cảnh trước</button><button class="btn ghost" data-act="next">Cảnh tiếp →</button><span class="small">Cảnh ${(P.sc || 0) + 1}/6</span>` : ''}
         <button class="btn ghost" data-act="p4New">↺ Làm lại lượt mới</button></div>
       <p class="count">${countDone(ok, qid)}</p>`;
     side = `<h3>Bé 1 máy: cô nhập điểm xếp tranh (0–7)</h3><div class="kids">${ok.filter(x => !x.on || /^t_/.test(x.id)).map(x => `<div class="kid${x.on ? '' : ' off'}"><img src="${faceOf(x)}" alt=""><div class="nm">${esc(x.kid)}</div><div class="row"><select data-p4="${x.id}"><option value="">–</option>${[0, 1, 2, 3, 4, 5, 6, 7].map(n => `<option${(((room.marks || {})[x.id] || {}).p4 === n) ? ' selected' : ''}>${n}</option>`).join('')}</select></div></div>`).join('') || '<p class="small">Không có bé nào cần bấm hộ.</p>'}</div>`;
@@ -216,7 +217,7 @@ function drawKq() {
   const res = ckResults(room);
   return `<div class="wrap wide"><div class="ctl"><button class="btn sm" id="csv">⬇ Tải CSV</button><span class="small">Cập nhật trực tiếp. Tổng điểm = Phần 2 (30%, chia 15 câu) + Phần 3 (30%, chia ${res.p3max} là số câu đúng cao nhất buổi thi) + Phần 4 (40%, chia 7). Mỗi câu đúng 1 điểm, bậc nào cũng vậy. Phần 1 chỉ tích sao.</span></div>
     ${Object.entries(CK_LV).map(([lv, n]) => `<div class="panel" style="margin-top:12px"><h3>${n} · ${res.by[lv].length} bé</h3><div class="scroll-x"><table class="res"><tr><th>Hạng</th><th>Tên con</th><th>Ba/mẹ</th><th>⭐ P1</th><th>P2 (/15)</th><th>P3 câu đúng</th><th>P4 (/7)</th><th>Tổng</th><th>Giải</th><th>Bậc cuối P2</th></tr>
-      ${res.by[lv].map(r => `<tr><td><b>${r.hang}</b></td><td>${esc(r.seat.kid)}</td><td>${esc(r.seat.parent)}</td><td>${r.sao}</td><td>${r.p2}${r.p2done < CK_P2.length ? ` <span class="small">(làm ${r.p2done})</span>` : ''}</td><td>${r.p3}</td><td>${r.p4 == null ? '–' : r.p4}</td><td><b>${r.tong}</b></td><td>${CK_CUP[r.giai]} ${esc(r.giai)}</td><td class="small">${r.band}</td></tr>`).join('')}</table></div></div>`).join('')}</div>`;
+      ${res.by[lv].map(r => `<tr><td><b>${r.hang}</b></td><td>${esc(r.seat.kid)}</td><td>${esc(r.seat.parent)}</td><td>${r.sao}</td><td>${r.p2}${r.p2done < CK_P2N ? ` <span class="small">(làm ${r.p2done})</span>` : ''}</td><td>${r.p3}</td><td>${r.p4 == null ? '–' : r.p4}</td><td><b>${r.tong}</b></td><td>${CK_CUP[r.giai]} ${esc(r.giai)}</td><td class="small">${r.band}</td></tr>`).join('')}</table></div></div>`).join('')}</div>`;
 }
 function csv() {
   const res = ckResults(room), rows = [['Level', 'Hạng', 'Tên con', 'Ba/mẹ', 'Sao Phần 1', 'Phần 2 (/15)', 'Phần 3 câu đúng', 'Phần 4 (/7)', 'Tổng', 'Giải', 'Bậc cuối Phần 2']];

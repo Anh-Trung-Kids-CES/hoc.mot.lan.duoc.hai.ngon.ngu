@@ -104,3 +104,23 @@ body.bang{background:var(--cream)}
 .chieu .xep-grid.ck-xg.rv .xep-t img{max-height:21vh}
 .chieu .xep-grid.ck-xg.rv .xep-t span{font-size:21px}.chieu .xep-grid.ck-xg.rv .xep-t small{font-size:16px}
 .co .ck-board{width:100%}
+/* hai level song song trên màn chiếu, thẻ level, bậc thang Từ → Cụm từ → Câu */
+.ck-cols{display:grid;grid-template-columns:1fr 1fr;gap:18px;width:min(96vw,1200px);align-items:start}
+.ck-col{display:flex;flex-direction:column;align-items:center;gap:10px}
+.ck-col .ck-pimg{width:min(36vw,38vh)}
+.ck-lvtag{display:inline-block;border-radius:999px;padding:3px 14px;font-weight:800;font-size:16px;color:#fff;background:var(--green)}
+.ck-lvtag.canopy{background:var(--teal)}
+.chieu .ck-lvtag{font-size:22px;padding:4px 18px}
+.ck-step{display:flex;flex-direction:column;align-items:center;gap:6px}
+.ck-path{display:flex;align-items:center;gap:6px;font-weight:800;font-size:15px}
+.ck-path span{background:#fff;border:2px solid var(--line);border-radius:999px;padding:2px 12px;color:var(--muted)}
+.ck-path span.on{background:var(--yellow);border-color:var(--yellow);color:var(--ink)}
+.ck-path i{font-style:normal;color:var(--muted)}
+.chieu .ck-path{font-size:22px}
+.ck-scene{width:100%;max-width:520px}
+.ck-scene img{max-height:34vh}
+.ck-mini{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.ck-mini img{width:64px;height:48px;object-fit:cover;border-radius:8px;border:3px solid var(--line);opacity:.6}
+.ck-mini img.on{border-color:var(--green);opacity:1}
+.ck-mini.big img{width:min(13vw,150px);height:auto;aspect-ratio:4/3;opacity:1}
+@media (max-width:640px){.ck-cols{grid-template-columns:1fr}}

@@ -224,39 +224,36 @@ function bindOpts(opts, onPick) {
   });
 }
 
-/* --- Phần 1: cả lớp làm chung (một đề cho mọi bé), màn chiếu phát tiếng --- */
-function p1Prompt(q) {
-  if (q.k === 'pick') return { a: [q.w, q.l] };
-  if (q.k === 'lang') return { a: [q.w, q.l] };
-  return {};
+/* --- Phần 1: cả lớp làm chung, xen kẽ một câu Little Seed rồi một câu Canopy; đi Vòng 1 → 3, mỗi vòng Từ → Cụm từ → Câu.
+   Câu nào cũng: nghe (màn chiếu phát) rồi chạm 1 trong 3 tranh. Không tính xếp hạng, đúng được sao. --- */
+function p1Head(q, i) {
+  const lvIc = q.lv === 'canopy' ? '🌳' : '🌱';
+  return `<div class="qno">${lvIc} Phần 1 · Ôn tập · Câu ${i + 1}/${CK_P1.length}</div>
+    <div class="ck-step"><span class="ck-lvtag ${q.lv}">${lvIc} ${CK_LV[q.lv]} · Vòng ${q.r}: ${esc(CK_ROUNDS[q.lv][q.r - 1])}</span>
+    <div class="ck-path">${Object.entries(CK_T).map(([t, n]) => `<span class="${t === q.t ? 'on' : ''}">${n}</span>`).join('<i>→</i>')}</div></div>`;
 }
 function vP1(st) {
   const i = Math.min(CK_P1.length - 1, st.i || 0), q = CK_P1[i], rv = st.step === 'rv', qid = 'p1_' + i;
-  const head = `<div class="qno">🌱 Phần 1 · Ôn tập · Câu ${i + 1}/${CK_P1.length}</div>`;
-  const key = ['p1', i, rv ? 'rv' : 'q'].join('|');
-  if (q.k === 'chao' || q.k === 'noi') {
-    const k = q.k === 'chao' ? null : q.w;
-    const html = `${head}<p class="ask-line">${esc(q.t)}</p>${q.k === 'chao' ? `<img class="huou" src="${q.img}" alt=""><div class="ck-lines"><span class="en">Hello!</span><span class="zh">你好！</span></div>` : `<img class="ck-pimg big" src="${ckImg(k)}" alt=""><div class="ck-lines"><span class="en">${esc(ckTxt(k, 'en'))}</span><span class="zh">${esc(ckTxt(k, 'zh'))}</span></div>`}`;
-    const aud = q.k === 'chao' ? [ckAud('hello', 'en'), 500, ckAud('hello', 'zh')] : [ckAud(k, 'en'), 900, ckAud(k, 'zh')];
-    return { key, akey: key + '|' + (st.rp || 0), html, audio: () => { if (CHIEU) play((i === 0 && !st.rp ? [ckLoi('p1'), 400] : []).concat(aud)); } };
-  }
-  const opts = q.k === 'lang' ? [{ t: 'lang', l: 'en' }, { t: 'lang', l: 'zh' }] : q.o.map(k => ({ t: 'img', k }));
-  const ans = q.k === 'lang' ? (q.l === 'en' ? 0 : 1) : 0;
-  const order = q.k === 'lang' ? [0, 1] : ckOrder(3, 'p1' + i);
-  const my = myAns(qid);
-  const optH = c => q.k === 'lang' ? `<button class="pick ck-lang ${opts[c].l}${CHIEU && rv && c === ans ? ' right' : ''}${my && my.c === c ? ' chosen' : ''}" data-c="${c}">${opts[c].l === 'en' ? 'English' : '中文'}</button>`
-    : optHTML(opts[c], c).replace('class="pick', `class="pick${CHIEU && rv && c === ans ? ' right' : ''}${CHIEU && rv && c !== ans ? ' dim' : ''}${my && my.c === c ? ' chosen' : ''}`);
-  const html = `${head}<p class="ask-line">${q.k === 'lang' ? '🤔 Tiếng Anh hay tiếng Trung?' : '👂 Con nghe rồi chạm tranh đúng nhé!'}</p>${promptHTML(p1Prompt(q))}
-    <div class="pics${q.k === 'lang' ? ' two' : ''}${CHIEU || my || rv ? ' locked' : ''}" id="pics">${order.map(optH).join('')}</div>
-    ${CHIEU ? '<p class="count" id="cnt"></p>' : my ? '<p class="sub">✅ Con chọn rồi! Chờ cô nhé.</p>' : ''}${rv && q.k === 'lang' && CHIEU ? `<div class="ck-lines"><span class="${q.l}">${q.l === 'en' ? 'English' : '中文'}</span></div>` : ''}`;
+  const opts = q.o.map(k => ({ t: 'img', k })), order = ckOrder(3, 'p1' + i), my = myAns(qid);
+  const key = ['p1', i, rv ? 'rv' : 'q', my ? 'x' : ''].join('|');
+  const optH = (c, j) => optHTML(opts[c], c, j).replace('class="pick', `class="pick${CHIEU && rv && c === 0 ? ' right' : ''}${CHIEU && rv && c !== 0 ? ' dim' : ''}${my && my.c === c ? ' chosen' : ''}`);
+  const html = `${p1Head(q, i)}
+    <button class="say ${q.l}" id="pPlay"><span class="ic">🔊</span><span>${q.l === 'zh' ? '中文' : 'English'}</span></button>
+    <div class="pics${CHIEU || my || rv ? ' locked' : ''}" id="pics">${order.map(optH).join('')}</div>
+    ${CHIEU ? (rv ? `<div class="ck-lines"><span class="en">${esc(ckTxt(q.w, 'en'))}</span><span class="zh">${esc(ckTxt(q.w, 'zh'))}</span></div>` : '') + '<p class="count" id="cnt"></p>'
+      : my ? '<p class="sub">✅ Con chọn rồi! Chờ cô nhé.</p>' : '<p class="sub">👂 Con nghe rồi chạm tranh đúng nhé!</p>'}`;
   return {
-    key: key + '|' + (my ? 'x' : ''), akey: key + '|' + (st.rp || 0), html,
-    audio: () => { if (CHIEU) play((i === 1 && !rv && !st.rp ? [hd('Con nghe và chạm vào tranh đúng nhé!'), 300] : []).concat(rv ? [] : [ckAud(q.w, q.l)])); },
+    key, akey: ['p1', i, rv ? 'rv' : 'q', st.rp || 0].join('|'), html,
+    audio: () => {
+      if (!CHIEU) return;   // Phần 1: chỉ màn chiếu phát tiếng (cả lớp nghe chung qua Zoom)
+      if (rv) return play([ckAud(q.w, 'en'), 700, ckAud(q.w, 'zh')]);
+      play((i === 0 && !st.rp ? [ckLoi('p1'), 400, hd('Con nghe và chạm vào tranh đúng nhé!'), 300] : []).concat([ckAud(q.w, q.l)]));
+    },
     bind() {
       const pp = $('#pPlay'); if (pp) pp.onclick = () => play([ckAud(q.w, q.l)]);
       if (CHIEU) return;
       if (rv && my && my.ok) giveStar(qid);
-      if (!my && !rv) bindOpts(opts, c => save(qid, { c, ok: c === ans }));
+      if (!my && !rv) bindOpts(opts, c => save(qid, { c, ok: c === 0 }));
     },
     update() { const c = $('#cnt'); if (c) { const S = seats(); c.textContent = `${S.filter(s => answerOf(room, s, qid)).length}/${S.length} bạn đã chọn`; } }
   };
@@ -268,21 +265,23 @@ function save(qid, rec) {
   stageKey = ''; render();
 }
 
-/* --- Phần 2: Rung chuông vàng, mỗi bé một bậc --- */
+/* --- Phần 2: Rung chuông vàng. Mỗi bé làm đề của level mình (Little Seed / Canopy), mỗi câu ở bậc vừa sức --- */
+function myLv() { return mySeat ? seatLv(room, mySeat) : (ME && ME.lv) || 'seed'; }
 function vP2(st) {
-  const i = Math.min(CK_P2.length - 1, st.i || 0), Q = CK_P2[i], rv = st.step === 'rv', qid = 'p2_' + i;
-  const last = !!Q.chuong;
-  const head = `<div class="qno">🔔 Phần 2 · ${last ? '<b>Câu chuông vàng</b>' : `Câu ${i + 1}/${CK_P2.length}`}</div>`;
+  const i = Math.min(CK_P2N - 1, st.i || 0), rv = st.step === 'rv', qid = 'p2_' + i;
+  const last = i === CK_P2N - 1;
+  const head = `<div class="qno">🔔 Phần 2 · ${last ? '<b>Câu chuông vàng</b>' : `Câu ${i + 1}/${CK_P2N}`}</div>`;
   const timer = `<div class="ck-timer"><i id="tBar"></i></div>`;
-  if (CHIEU) {
-    const A = CK_P2_ANS[i];
-    const html = `${head}${rv ? '' : timer}${promptHTML({ img: Q.img }, true)}
-      ${rv ? `<div class="ck-lines big"><span class="en">${esc(ckTxt(A, 'en'))}</span><span class="zh">${esc(ckTxt(A, 'zh'))}</span></div>${last ? '<div class="ck-bell-n" id="bellN"></div>' : ''}` : '<p class="ask-line">👂 Các con nghe trên máy mình rồi chọn nhé!</p>'}
-      <p class="count" id="cnt"></p>`;
+  if (CHIEU) {   // màn chiếu: hai cột, tranh chung của đề Little Seed và đề Canopy
+    const col = lv => { const Q = CK_P2[lv][i]; return `<div class="ck-col"><span class="ck-lvtag ${lv}">${lv === 'canopy' ? '🌳' : '🌱'} ${CK_LV[lv]}</span>${promptHTML({ img: Q.img })}
+      ${rv ? `<div class="ck-lines"><span class="en">${esc(ckTxt(Q.ans, 'en'))}</span><span class="zh">${esc(ckTxt(Q.ans, 'zh'))}</span></div>` : ''}</div>`; };
+    const html = `${head}${rv ? '' : timer}<div class="ck-cols">${col('seed')}${col('canopy')}</div>
+      ${rv ? (last ? '<div class="ck-bell-n" id="bellN"></div>' : '') : '<p class="ask-line">👂 Các con nghe trên máy mình rồi chọn nhé!</p>'}<p class="count" id="cnt"></p>`;
     const key = ['p2', i, rv ? 'rv' : 'q'].join('|');
+    const A = CK_P2.seed[i].ans, Bc = CK_P2.canopy[i].ans;
     return {
       key, akey: key + '|' + (st.rp || 0), html,
-      audio: () => play(rv ? [ckAud(A, 'en'), 700, ckAud(A, 'zh')] : (i === 0 && !st.rp ? [ckLoi('p2')] : last && !st.rp ? [ckLoi('chuong')] : [])),
+      audio: () => play(rv ? [ckAud(A, 'en'), 600, ckAud(A, 'zh'), 1000, ckAud(Bc, 'en'), 600, ckAud(Bc, 'zh')] : (i === 0 && !st.rp ? [ckLoi('p2')] : last && !st.rp ? [ckLoi('chuong')] : [])),
       bind() { if (rv && last) { SND.beep('win'); confetti(); } },
       update() {
         const S = seats(), n = S.filter(s => answerOf(room, s, qid)).length;
@@ -292,20 +291,20 @@ function vP2(st) {
       tick: rv ? null : () => p2Timer(st)
     };
   }
-  const my = myAns(qid);
+  const lv = myLv(), Q = CK_P2[lv][i], my = myAns(qid);
   const b = my && my.b != null ? CK_BANDS.indexOf(my.b) : p2Band(room, mySeat, i), V = Q[CK_BANDS[b]];
   const order = ckOrder(V.o.length, qid + DB.uid);
-  const key = ['p2', i, CK_BANDS[b], my ? 'x' : '', rv ? 'rv' : ''].join('|');
+  const key = ['p2', lv, i, CK_BANDS[b], my ? 'x' : '', rv ? 'rv' : ''].join('|');
   const html = `${head}${rv ? '' : timer}${promptHTML(V.p)}
     <div class="pics${my || rv ? ' locked' : ''}" id="pics">${order.map((c, j) => optHTML(V.o[c], c, j).replace('class="pick', `class="pick${my && my.c === c ? ' chosen' : ''}`)).join('')}</div>
     ${my ? '<p class="sub">✅ Con chọn rồi! Chờ cô nhé.</p>' : rv ? '<p class="sub">Cô đang đọc đáp án, con nghe nhé!</p>' : ''}`;
   return {
-    key, akey: ['p2', i, CK_BANDS[b]].join('|') + '|' + (st.rp || 0), html,
+    key, akey: ['p2', lv, i, CK_BANDS[b]].join('|') + '|' + (st.rp || 0), html,
     audio: () => { if (!my && !rv) playQ(V.p, order.map(c => V.o[c]), playTok); },
     bind() {
       const pp = $('#pPlay'); if (pp) pp.onclick = () => { playTok++; playQ(V.p, order.map(c => V.o[c]), playTok); };
       if (rv) { if (my && my.ok) last ? ringBell(qid) : giveStar(qid); return; }
-      if (!my) bindOpts(V.o, c => save(qid, { c, ok: c === 0, b: CK_BANDS[b] }));
+      if (!my) bindOpts(V.o, c => save(qid, { c, ok: c === 0, b: CK_BANDS[b], lv }));
     },
     tick: rv ? null : () => p2Timer(st)
   };
@@ -352,7 +351,7 @@ function vP3(st) {
 function bossSaveState() { const s = Object.assign({}, BQX); delete s.it; lsSet('ck-boss-' + CODE + '-' + BQX.run + '-' + DB.uid, s); }
 function bossAskCk() {
   const box = $('#bq'); if (!box) return;
-  const it = BQX.it = bossQ(BQX.b, BQX.it); if (!it) return;
+  const it = BQX.it = bossQ(BQX.b, BQX.it, myLv()); if (!it) return;
   const order = [0, 1, 2].sort(() => Math.random() - .5);
   box.innerHTML = `${promptHTML(it.p)}
     <div class="pics" id="pics">${order.map((c, j) => optHTML(it.o[c], c, j)).join('')}</div>`;
@@ -416,65 +415,79 @@ function bossTickCk() {
   bossHitsSeen = info.H || 0;
 }
 
-/* --- Phần 4: nghe truyện, xếp tranh chuyển ngữ --- */
+/* --- Phần 4: nghe truyện, xếp tranh chuyển ngữ. Mỗi level một truyện: Little Seed "Anna đến nhà Bông", Canopy "Our weekend trip" --- */
 function p4Ver() { return mySeat && p2Final(room, mySeat) >= 1 ? 'B' : 'A'; }   // A: nghe tiếng Anh, thẻ tiếng Trung (chạm nghe); B/C: nghe tiếng Trung, thẻ chữ tiếng Anh
-function p4Lines(j, l) { const ks = j === 6 ? CK_P4.extra.k : CK_P4.scenes[j]; return ks.map(k => ckAud(k, l)); }
-function p4Text(j, l) { const ks = j === 6 ? CK_P4.extra.k : CK_P4.scenes[j]; return ks.map(k => ckTxt(k, l)).join(' – '); }
-function p4Img(j) { return ckImg(j === 6 ? CK_P4.extra.img : CK_P4.img[j]); }
+function p4Ks(lv, j) { const S = CK_P4[lv]; return j === 6 ? S.extra.k : S.scenes[j]; }
+function p4Lines(lv, j, l) { return p4Ks(lv, j).map(k => ckAud(k, l)); }
+function p4Text(lv, j, l) { return p4Ks(lv, j).map(k => ckTxt(k, l)).join(' – '); }
+function p4Img(lv, j) { const S = CK_P4[lv]; return ckImg(j === 6 ? S.extra.img : S.img[j]); }
+const withGaps = L => L.reduce((a, x) => a.concat(a.length ? [400, x] : [x]), []);
 let p4Pick = {};
 function vP4(st) {
   const P = st.p4 || {}, run = P.run || 0, step = P.step || 'cho', qid = 'p4_' + run;
-  const head = `<div class="qno">🧩 Phần 4 · Nghe truyện "${esc(CK_P4.title)}", xếp tranh</div>`;
-  const N = CK_P4.scenes.length;
-  if (step === 'rv') {
-    const sc = Math.min(N - 1, P.sc || 0);
-    return {
-      key: 'p4|rv|' + run + '|' + sc, akey: 'p4|rv|' + run + '|' + sc + '|' + (st.rp || 0),
-      html: `${head}<p class="ask-line">🗣️ Cả lớp cùng nói theo nhé!</p><div class="xep-grid ck-xg rv">${CK_P4.scenes.map((_, j) => `<div class="xep-t${j === sc ? ' cur' : ''}"><b class="xep-n">${j + 1}</b><img src="${p4Img(j)}" alt=""><span class="en">${esc(p4Text(j, 'en'))}</span><small class="zh">${esc(p4Text(j, 'zh'))}</small></div>`).join('')}</div>
-        ${!CHIEU && (myAns(qid) || {}).pts != null ? `<p class="sub">Con xếp đúng <b>${myAns(qid).pts}</b>/7.</p>` : ''}`,
-      audio: () => { if (CHIEU) play(p4Lines(sc, 'en').concat([700], p4Lines(sc, 'zh'))); },
-      bind() { const my = myAns(qid); if (!CHIEU && my && my.pts === 7) giveStar(qid); }
-    };
-  }
+  const N = 6;
+  const lvTag = lv => `<span class="ck-lvtag ${lv}">${lv === 'canopy' ? '🌳' : '🌱'} ${CK_LV[lv]} · "${esc(CK_P4[lv].title)}"</span>`;
   if (CHIEU) {
+    const head = `<div class="qno">🧩 Phần 4 · Nghe truyện, xếp tranh chuyển ngữ</div>`;
+    if (step === 'rv') {   // từng cảnh của hai truyện, đọc cả hai tiếng
+      const sc = Math.min(N - 1, P.sc || 0);
+      const col = lv => `<div class="ck-col">${lvTag(lv)}<div class="xep-t cur ck-scene"><b class="xep-n">${sc + 1}</b><img src="${p4Img(lv, sc)}" alt=""><span class="en">${esc(p4Text(lv, sc, 'en'))}</span><small class="zh">${esc(p4Text(lv, sc, 'zh'))}</small></div>
+        <div class="ck-mini">${[0, 1, 2, 3, 4, 5].map(j => `<img class="${j === sc ? 'on' : ''}" src="${p4Img(lv, j)}" alt="">`).join('')}</div></div>`;
+      return {
+        key: 'p4|rv|' + run + '|' + sc, akey: 'p4|rv|' + run + '|' + sc + '|' + (st.rp || 0),
+        html: `${head}<p class="ask-line">🗣️ Cảnh ${sc + 1}: cả lớp cùng nói theo nhé!</p><div class="ck-cols">${col('seed')}${col('canopy')}</div>`,
+        audio: () => play(withGaps(p4Lines('seed', sc, 'en')).concat([600], withGaps(p4Lines('seed', sc, 'zh')), [1000], withGaps(p4Lines('canopy', sc, 'en')), [600], withGaps(p4Lines('canopy', sc, 'zh'))))
+      };
+    }
     if (step === 'xep') return {
       key: 'p4|xep|' + run, akey: 'p4|xep|' + run, audio: () => play([ckLoi('xep')]),
-      html: `${head}<p class="ask-line">🧩 Các bạn xếp tranh theo thứ tự truyện vừa nghe nhé!</p><div class="xep-grid ck-xg">${ckOrder(7, 'chieu' + run).map(j => `<div class="xep-t"><img src="${p4Img(j)}" alt=""></div>`).join('')}</div><p class="count" id="cnt"></p>`,
+      html: `${head}<p class="ask-line">🧩 Các bạn xếp tranh theo thứ tự truyện vừa nghe nhé!</p><div class="ck-cols">${['seed', 'canopy'].map(lv => `<div class="ck-col">${lvTag(lv)}<div class="ck-mini big">${ckOrder(7, 'chieu' + lv + run).map(j => `<img src="${p4Img(lv, j)}" alt="">`).join('')}</div></div>`).join('')}</div><p class="count" id="cnt"></p>`,
       update() { const S = seats(); $('#cnt').textContent = `${S.filter(s => answerOf(room, s, qid)).length}/${S.length} bạn đã xếp xong`; }
     };
     return {
       key: 'p4|' + step + '|' + run, akey: 'p4|' + step + '|' + run, audio: () => { if (step === 'nghe') play([ckLoi('p4')]); },
-      html: `${head}<img class="huou" src="${HUOU}" alt=""><h1>${step === 'nghe' ? '🎧 Các con đang nghe truyện trên máy của mình' : 'Sắp nghe truyện rồi!'}</h1><p class="sub">Truyện "${esc(CK_P4.title)}" · nghe 2 lần</p>`
+      html: `${head}<img class="huou" src="${HUOU}" alt=""><h1>${step === 'nghe' ? '🎧 Các con đang nghe truyện trên máy của mình' : 'Sắp nghe truyện rồi!'}</h1><div class="ck-cols">${lvTag('seed')}${lvTag('canopy')}</div><p class="sub">Mỗi truyện nghe 2 lần</p>`
+    };
+  }
+  const lv = myLv(), S = CK_P4[lv];
+  const head = `<div class="qno">🧩 Phần 4 · Nghe truyện "${esc(S.title)}", xếp tranh</div>`;
+  if (step === 'rv') {
+    const sc = Math.min(N - 1, P.sc || 0), my = myAns(qid);
+    return {
+      key: 'p4|rv|' + run + '|' + sc + '|' + lv,
+      html: `${head}<p class="ask-line">🗣️ Cả lớp cùng nói theo nhé!</p><div class="xep-grid ck-xg rv">${S.scenes.map((_, j) => `<div class="xep-t${j === sc ? ' cur' : ''}"><b class="xep-n">${j + 1}</b><img src="${p4Img(lv, j)}" alt=""><span class="en">${esc(p4Text(lv, j, 'en'))}</span><small class="zh">${esc(p4Text(lv, j, 'zh'))}</small></div>`).join('')}</div>
+        ${my && my.pts != null ? `<p class="sub">Con xếp đúng <b>${my.pts}</b>/7.</p>` : ''}`,
+      bind() { if (my && my.pts === 7) giveStar(qid); }
     };
   }
   const v = p4Ver(), from = v === 'A' ? 'en' : 'zh', to = v === 'A' ? 'zh' : 'en';
   if (step === 'nghe' || step === 'cho') return {
-    key: 'p4|' + step + '|' + run + '|' + v, akey: 'p4|' + step + '|' + run,
+    key: 'p4|' + step + '|' + run + '|' + v + lv, akey: 'p4|' + step + '|' + run,
     html: `${head}<img class="huou" src="${HUOU}" alt=""><h1 id="p4h">${step === 'nghe' ? '🎧 Con nghe truyện thật kỹ nhé!' : 'Con chờ cô mở truyện nhé!'}</h1>
-      <div class="dots" id="p4dots">${CK_P4.scenes.map(() => '<i></i>').join('')}</div><span class="flag ${from}">${from === 'zh' ? '中文' : 'English'}</span>
+      <div class="dots" id="p4dots">${S.scenes.map(() => '<i></i>').join('')}</div><span class="flag ${from}">${from === 'zh' ? '中文' : 'English'}</span>
       ${step === 'nghe' ? '<p><button class="btn ghost" id="p4Re">🔊 Nghe lại</button></p>' : ''}`,
-    audio: () => { if (step === 'nghe') p4Listen(from, 2); },
-    bind() { const r = $('#p4Re'); if (r) r.onclick = () => p4Listen(from, 1); }
+    audio: () => { if (step === 'nghe') p4Listen(lv, from, 2); },
+    bind() { const r = $('#p4Re'); if (r) r.onclick = () => p4Listen(lv, from, 1); }
   };
   /* xếp tranh: chạm lần lượt 6 tranh theo thứ tự truyện, một thẻ thừa để ra ngoài */
   const order = ckOrder(7, DB.uid + 'p4' + run), my = myAns(qid);
   const picks = p4Pick[qid] || (my && my.order ? my.order.slice() : []);
   const done = picks.length === N;
   return {
-    key: ['p4', 'xep', run, v, picks.join('')].join('|'), akey: 'p4|xep|' + run,
+    key: ['p4', 'xep', run, v, lv, picks.join('')].join('|'), akey: 'p4|xep|' + run,
     audio: () => { if (!picks.length) play([hd('Con chạm lần lượt các tranh theo thứ tự truyện nhé!')]); },
     html: `${head}<p class="ask-line">${done ? '✅ Con xếp xong rồi! Chờ cô nhé.' : `🧩 Con chạm tranh thứ <b>${picks.length + 1}</b> của truyện nhé! <small>(có 1 tranh thừa)</small>`}</p>
-      <div class="xep-grid ck-xg">${order.map(j => { const n = picks.indexOf(j); return `<div class="xep-t kid${n >= 0 ? ' on' : ''}" data-j="${j}">${n >= 0 ? `<b class="xep-n">${n + 1}</b>` : ''}<img src="${p4Img(j)}" alt="">${to === 'zh' ? `<button class="say zh xep-say" data-j="${j}"><span class="ic">🔊</span>中文</button>` : `<span class="en">${esc(p4Text(j, 'en'))}</span>`}</div>`; }).join('')}</div>
+      <div class="xep-grid ck-xg">${order.map(j => { const n = picks.indexOf(j); return `<div class="xep-t kid${n >= 0 ? ' on' : ''}" data-j="${j}">${n >= 0 ? `<b class="xep-n">${n + 1}</b>` : ''}<img src="${p4Img(lv, j)}" alt="">${to === 'zh' ? `<button class="say zh xep-say" data-j="${j}"><span class="ic">🔊</span>中文</button>` : `<span class="en">${esc(p4Text(lv, j, 'en'))}</span>`}</div>`; }).join('')}</div>
       ${picks.length ? '<button class="btn ghost" id="xRe">↺ Xếp lại</button>' : ''}`,
     bind() {
-      $$('.xep-say', $('#stage')).forEach(b => b.onclick = e => { e.stopPropagation(); play(p4Lines(+b.dataset.j, 'zh').reduce((a, x) => a.concat(a.length ? [400, x] : [x]), [])); });
+      $$('.xep-say', $('#stage')).forEach(b => b.onclick = e => { e.stopPropagation(); play(withGaps(p4Lines(lv, +b.dataset.j, 'zh'))); });
       $$('.xep-t.kid', $('#stage')).forEach(t => t.onclick = () => {
         const cur = (p4Pick[qid] || picks).slice(), j = +t.dataset.j;
         if (cur.indexOf(j) >= 0 || cur.length >= N) return;
         cur.push(j); p4Pick[qid] = cur; SND.beep('pop');
         if (cur.length === N) {
           const pts = cur.filter((x, k) => x === k).length + (cur.indexOf(6) < 0 ? 1 : 0);
-          const rec = { order: cur, pts, ok: pts === 7, b: v, ms: Math.round(performance.now() - shownAt), at: DB.now() };
+          const rec = { order: cur, pts, ok: pts === 7, b: v, lv, ms: Math.round(performance.now() - shownAt), at: DB.now() };
           picked[qid] = rec;
           DB.set(roomPath(CODE) + '/answers/' + qid + '/' + DB.uid, rec).catch(er => console.error(er));
           SND.beep('ok');
@@ -485,13 +498,13 @@ function vP4(st) {
     }
   };
 }
-async function p4Listen(l, times) {
+async function p4Listen(lv, l, times) {
   const tok = ++playTok;
   for (let t = 0; t < times; t++) {
-    for (let j = 0; j < CK_P4.scenes.length; j++) {
+    for (let j = 0; j < 6; j++) {
       if (tok !== playTok) return;
       $$('#p4dots i').forEach((d, k) => d.classList.toggle('on', k <= j));
-      await play(p4Lines(j, l).reduce((a, x) => a.concat(a.length ? [400, x] : [x]), []));
+      await play(withGaps(p4Lines(lv, j, l)));
       await sleep(600);
     }
     if (t < times - 1) await sleep(1200);
