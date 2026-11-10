@@ -65,7 +65,9 @@ def tts(key, text):
                 d = json.load(r)
             return base64.b64decode(d["candidates"][0]["content"]["parts"][0]["inlineData"]["data"])
         except urllib.error.HTTPError as e:
-            print("  lỗi", e.code, e.read()[:200]); time.sleep(5 * (attempt + 1))
+            msg = e.read()
+            # 429 = vượt giới hạn số lượt mỗi phút của khoá: đợi hết phút rồi thử lại
+            print("  lỗi", e.code, msg[:120]); time.sleep(65 if e.code == 429 else 5 * (attempt + 1))
         except Exception as e:
             print("  lỗi", e); time.sleep(5 * (attempt + 1))
     return None
@@ -121,5 +123,5 @@ if __name__ == "__main__":
         (RAW / (fname(k)[:-4] + ".pcm")).write_bytes(pcm)
         toc, he = lam_mp3(k, t)
         print(f"  tốc độ gốc {toc:.2f} → hệ số {he:.2f}")
-        time.sleep(1.2)
+        time.sleep(7)   # giữ dưới ~9 lượt/phút để không chạm giới hạn của khoá
     liet_ke()
