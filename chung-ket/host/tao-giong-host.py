@@ -9,6 +9,8 @@ Nhịp cho trẻ nhỏ: không dặn mô hình (nó đọc to lời dặn) mà c
 câu nào nhanh hơn mức đích thì kéo chậm lại (giữ nguyên cao độ, thanh điệu), thêm khoảng nghỉ ở dấu câu đã có sẵn.
 Bản thu gốc giữ ở audio-goc/ (không đưa lên repo) để chỉnh nhịp lại không tốn tiền gọi Gemini:
   python3 tao-giong-host.py --chinh-nhip                  làm lại toàn bộ mp3 từ bản gốc
+  python3 tao-giong-host.py --batch <tệp_chứa_khoá> [mã|en ...]   gửi một lần qua Batch API (rẻ hơn 50%,
+        không bị giới hạn 100 lượt/ngày của cách gọi từng câu) — NÊN DÙNG CÁCH NÀY
 """
 import base64, json, re, subprocess, sys, time, urllib.request, urllib.error
 from pathlib import Path
@@ -18,11 +20,11 @@ OUT = HERE / "audio"
 RAW = HERE / "audio-goc"        # bản thu gốc từ Gemini (PCM 24 kHz), có trong .gitignore
 # Tốc độ đích, đo trên phần có tiếng (đã cắt lặng đầu/cuối): tiếng Anh theo từ/giây, tiếng Trung theo chữ Hán/giây.
 # Người lớn nói với trẻ nhỏ: khoảng 2,2 từ/giây (≈130 từ/phút) và 3 chữ/giây; câu đã chậm hơn thì để nguyên.
-DICH = {"en": 2.2, "zh": 3.0}
-CHAM_NHAT = 0.78                # không kéo chậm quá mức này để giọng không bị méo
+DICH = {"en": 1.9, "zh": 2.6}   # chậm rãi để trẻ dễ nghe, host dễ bắt chước
+CHAM_NHAT = 0.75                # không kéo chậm quá mức này để giọng không bị méo
 sys.path.insert(0, str(HERE.parent.parent / "lop-zoom" / "tao-tai-nguyen"))
 MODEL = "gemini-3.8-flash-tts"   # cùng mô hình đã thu giọng web học
-VOICE = "Puck"                   # giọng người lớn, vui, nhiều năng lượng – hợp người dẫn chương trình
+VOICE = "Laomedeia"              # giọng nữ, tươi vui, hào hứng (10/11: chị chọn giọng nữ; 98 câu đầu thu bằng Puck)
 
 
 def lines():
@@ -101,7 +103,46 @@ def lam_mp3(k, text):
     return toc, he
 
 
+def batch(key, jobs):
+    API = "https://generativelanguage.googleapis.com/v1beta/"
+    def call(path, body=None):
+        req = urllib.request.Request(API + path, data=json.dumps(body).encode() if body is not None else None,
+                                     headers={"Content-Type": "application/json", "x-goog-api-key": key})
+        return json.load(urllib.request.urlopen(req, timeout=300))
+    reqs = [{"request": {"contents": [{"parts": [{"text": t}]}],
+                         "generationConfig": {"responseModalities": ["AUDIO"],
+                                              "speechConfig": {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": VOICE}}}}},
+             "metadata": {"key": k}} for k, t in jobs]
+    op = call(f"models/{MODEL}:batchGenerateContent", {"batch": {"display_name": "host-giong-mau", "input_config": {"requests": {"requests": reqs}}}})
+    name = op.get("name") or op.get("metadata", {}).get("name")
+    print("đã gửi", len(reqs), "câu:", name, flush=True)
+    while True:
+        time.sleep(20)
+        b = call(name); st = (b.get("metadata") or b).get("state", "")
+        print(time.strftime("%H:%M:%S"), st, flush=True)
+        if st.endswith("SUCCEEDED") or b.get("done"): break
+        if st.endswith(("FAILED", "CANCELLED", "EXPIRED")): raise SystemExit("Batch không thành: " + st)
+    resp = (b.get("response") or (b.get("metadata") or {}).get("output") or {})
+    items = resp.get("inlinedResponses", {}).get("inlinedResponses", []) if isinstance(resp.get("inlinedResponses"), dict) else resp.get("inlinedResponses", [])
+    text = dict(jobs); loi = []
+    for it in items:
+        k = (it.get("metadata") or {}).get("key")
+        try:
+            parts = it["response"]["candidates"][0]["content"]["parts"]
+            pcm = next(base64.b64decode(x["inlineData"]["data"]) for x in parts if "inlineData" in x)
+        except Exception:
+            loi.append(k); continue
+        (RAW / (fname(k)[:-4] + ".pcm")).write_bytes(pcm)
+        toc, he = lam_mp3(k, text[k]); print(f"{k:8} tốc độ gốc {toc:.2f} → hệ số {he:.2f}")
+    print("lỗi:", loi)
+
+
 if __name__ == "__main__":
+    if sys.argv[1:2] == ["--batch"]:
+        KEY = Path(sys.argv[2]).read_text().strip(); ONLY = set(sys.argv[3:])
+        OUT.mkdir(exist_ok=True); RAW.mkdir(exist_ok=True)
+        jobs = [(k, t) for k, t in lines() if (k in ONLY) or (not ONLY and not (OUT / fname(k)).exists())]
+        batch(KEY, jobs); liet_ke(); sys.exit()
     if sys.argv[1:2] == ["--liet-ke"]:
         liet_ke(); sys.exit()
     if sys.argv[1:2] == ["--chinh-nhip"]:
