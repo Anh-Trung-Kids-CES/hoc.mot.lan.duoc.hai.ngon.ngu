@@ -1,0 +1,236 @@
+[
+ {
+  "unit": "1",
+  "chu_de": "Greeting – Good Morning, Mrs Lan! (Seedling 48 buổi, v7)",
+  "ngay_web": [
+   1,
+   2,
+   3,
+   8
+  ],
+  "buoi": [
+   1,
+   3
+  ],
+  "T1_do_dai": [
+   15,
+   20
+  ],
+  "T1_do_dai_zh": [
+   20,
+   30
+  ],
+  "tu_en": [
+   {
+    "tu": "good morning",
+    "nhan": "Lõi"
+   },
+   {
+    "tu": "mrs lan",
+    "nhan": "Lõi"
+   },
+   {
+    "tu": "grandpa",
+    "nhan": "Lõi"
+   },
+   {
+    "tu": "class",
+    "nhan": "Lõi"
+   },
+   {
+    "tu": "kids",
+    "nhan": "Lõi"
+   },
+   {
+    "tu": "man/men",
+    "nhan": "Lõi"
+   },
+   {
+    "tu": "write",
+    "nhan": "Lõi"
+   },
+   {
+    "tu": "sorry",
+    "nhan": "Lõi"
+   },
+   {
+    "tu": "wave",
+    "nhan": "Lõi"
+   },
+   {
+    "tu": "see you tomorrow",
+    "nhan": "Lõi"
+   },
+   {
+    "tu": "hello",
+    "nhan": "Nền Little Seed"
+   },
+   {
+    "tu": "goodbye",
+    "nhan": "Nền Little Seed"
+   },
+   {
+    "tu": "mommy",
+    "nhan": "Nền Little Seed"
+   },
+   {
+    "tu": "daddy",
+    "nhan": "Nền Little Seed"
+   },
+   {
+    "tu": "kitten",
+    "nhan": "Nền Little Seed"
+   },
+   {
+    "tu": "teacher",
+    "nhan": "Nền Little Seed"
+   },
+   {
+    "tu": "everyone",
+    "nhan": "Nền Little Seed"
+   },
+   {
+    "tu": "tomorrow",
+    "nhan": "Nền Little Seed"
+   },
+   {
+    "tu": "friend",
+    "nhan": "Nền Little Seed"
+   },
+   {
+    "tu": "puppy",
+    "nhan": "Nền Little Seed"
+   },
+   {
+    "tu": "all",
+    "nhan": "Nền Little Seed"
+   },
+   {
+    "tu": "day",
+    "nhan": "Nền Little Seed"
+   }
+  ],
+  "tu_zh": [
+   {
+    "tu": "早上好",
+    "nhan": "Lõi"
+   },
+   {
+    "tu": "Lan老师",
+    "nhan": "Lõi"
+   },
+   {
+    "tu": "您好",
+    "nhan": "Lõi"
+   },
+   {
+    "tu": "小朋友",
+    "nhan": "Lõi"
+   },
+   {
+    "tu": "你们好",
+    "nhan": "Lõi"
+   },
+   {
+    "tu": "男人",
+    "nhan": "Lõi"
+   },
+   {
+    "tu": "写",
+    "nhan": "Lõi"
+   },
+   {
+    "tu": "对不起",
+    "nhan": "Lõi"
+   },
+   {
+    "tu": "老师再见",
+    "nhan": "Lõi"
+   },
+   {
+    "tu": "明天见",
+    "nhan": "Lõi"
+   },
+   {
+    "tu": "你好",
+    "nhan": "Nền Little Seed"
+   },
+   {
+    "tu": "再见",
+    "nhan": "Nền Little Seed"
+   },
+   {
+    "tu": "妈妈",
+    "nhan": "Nền Little Seed"
+   },
+   {
+    "tu": "爸爸",
+    "nhan": "Nền Little Seed"
+   },
+   {
+    "tu": "小猫",
+    "nhan": "Nền Little Seed"
+   },
+   {
+    "tu": "老师",
+    "nhan": "Nền Little Seed"
+   },
+   {
+    "tu": "大家",
+    "nhan": "Nền Little Seed"
+   },
+   {
+    "tu": "明天",
+    "nhan": "Nền Little Seed"
+   },
+   {
+    "tu": "朋友",
+    "nhan": "Nền Little Seed"
+   },
+   {
+    "tu": "小狗",
+    "nhan": "Nền Little Seed"
+   }
+  ],
+  "nen_khong_day": {
+   "en": [
+    "schoolbag",
+    "thank you",
+    "name",
+    "book",
+    "let's"
+   ],
+   "zh": [
+    "爷爷",
+    "书包",
+    "谢谢",
+    "名字",
+    "我们",
+    "一起",
+    "好朋友",
+    "什么",
+    "去"
+   ]
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "Good morning!",
+    "zh": "早上好！"
+   },
+   {
+    "en": "See you tomorrow!",
+    "zh": "明天见！"
+   },
+   {
+    "en": "Sorry!",
+    "zh": "对不起！"
+   }
+  ],
+  "tu_hay_sai": {
+   "en": [],
+   "zh": [],
+   "nguon": "Unit đầu của khóa độc lập – không có khóa trước"
+  },
+  "nguon": "seedling/seedling-data.js (sinh từ Seedling_KhungChuongTrinh_48buoi_v7.xlsx), ngày 1–3 và 8"
+ }
+]

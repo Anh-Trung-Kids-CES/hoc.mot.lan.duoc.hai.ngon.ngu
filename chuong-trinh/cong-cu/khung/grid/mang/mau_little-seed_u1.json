@@ -30,28 +30,28 @@
   "en": [
    "\"Hello, day! Hello, kitten!\" \"Goodbye, mommy! Goodbye, kitten!\" \"Goodbye, Bông!\" \"Let's go!\"",
    "\"Hello, teacher!\" \"Hello, Bông! Hello, Leo! Hello, Anna! Hello, Xiaomei!\" \"Hello, teacher!\"",
-   "\"Hello, everyone!\" \"Hello, teacher!\" \"How many friends?\" \"Six!\" \"Hello, friend!\" \"Hello, friend!\"",
+   "\"Hello, everyone!\" \"Hello, teacher!\" \"Hello, friend!\" \"Hello, friend!\" \"Hello, Vũ!\" \"Hello, Anna!\"",
    "\"Goodbye, teacher!\" \"Goodbye, all! See you tomorrow!\" \"See you tomorrow, teacher!\" \"Goodbye, friend!\"",
    "\"Hello, daddy!\" \"Hello, Bông!\" \"Woof!\" \"Hello, puppy!\" \"Hello, mommy!\" \"Hello, ___!\""
   ],
   "zh": [
    "“早上好！小猫，你好！”“妈妈，再见！小猫，再见！”“Bông，再见！”“走吧！”",
    "“老师，你好！”“Bông，你好！Leo，你好！Anna，你好！Xiaomei，你好！”“老师，你好！”",
-   "“大家好！”“老师，你好！”“朋友，你好！”“朋友，你好！”",
+   "“大家好！”“老师，你好！”“朋友，你好！”“朋友，你好！”“Vũ，你好！”“Anna，你好！”",
    "“老师，再见！”“大家再见！明天见！”“老师，明天见！”“朋友，再见！”",
    "“爸爸，你好！”“Bông，你好！”“汪汪！”“小狗，你好！”“妈妈，你好！”“___，你好！”"
   ],
   "pinyin": [
    "\"Zǎoshang hǎo! Xiǎomāo, nǐ hǎo!\" \"Māma, zàijiàn! Xiǎomāo, zàijiàn!\" \"Bông, zàijiàn!\" \"Zǒu ba!\"",
    "\"Lǎoshī, nǐ hǎo!\" \"Bông, nǐ hǎo! Leo, nǐ hǎo! Anna, nǐ hǎo! Xiaomei, nǐ hǎo!\" \"Lǎoshī, nǐ hǎo!\"",
-   "\"Dàjiā hǎo!\" \"Lǎoshī, nǐ hǎo!\" \"Péngyou, nǐ hǎo!\" \"Péngyou, nǐ hǎo!\"",
+   "\"Dàjiā hǎo!\" \"Lǎoshī, nǐ hǎo!\" \"Péngyou, nǐ hǎo!\" \"Péngyou, nǐ hǎo!\" \"Vũ, nǐ hǎo!\" \"Anna, nǐ hǎo!\"",
    "\"Lǎoshī, zàijiàn!\" \"Dàjiā zàijiàn! Míngtiān jiàn!\" \"Lǎoshī, míngtiān jiàn!\" \"Péngyou, zàijiàn!\"",
    "\"Bàba, nǐ hǎo!\" \"Bông, nǐ hǎo!\" \"Wāngwāng!\" \"Xiǎogǒu, nǐ hǎo!\" \"Māma, nǐ hǎo!\" \"___, nǐ hǎo!\""
   ],
   "nguoi_noi": [
    "Bông (với mặt trời, mèo con) · Bông (ở cửa) · mẹ · Bông",
    "Bông · cô giáo · Leo, Anna, Xiaomei",
-   "cô giáo · cả lớp · cô giáo · cả lớp · Bông (với Anna) · Anna",
+   "cô giáo · cả lớp · Bông (với Anna) · Anna · Leo (với Vũ) · Xiaomei (với Anna)",
    "cả lớp · cô giáo · Bông · Leo (với Vũ)",
    "Bông · bố · cún con · Bông · Bông (về nhà gặp mẹ) · mẹ (nói với con đang nghe)"
   ],
@@ -111,16 +111,14 @@
    }
   ],
   "tu_hay_sai": {
-   "en": [
-    "how many (phần 3)",
-    "six (phần 3)"
-   ],
-   "zh": []
+   "en": [],
+   "zh": [],
+   "ghi_chu": "Unit đầu của khóa độc lập (lớp chưa học PreB) – không có từ hay sai của khóa trước"
   },
   "tranh": [
    "Sáng ở nhà Bông: Bông vẫy mặt trời ngoài cửa sổ, mèo con trên giường; ở cửa Bông vẫy mẹ và mèo con, mẹ vẫy lại; Bông kéo tay bố ra cửa (bố chỉ thấy một phần, để phần 5 mới gọi tên).",
    "Cửa lớp: Bông chào cô giáo; cô cúi chào lần lượt Bông, Leo, Anna, Xiaomei; ba bạn chào cô.",
-   "Trong lớp: cô dang tay chào cả lớp; cả lớp đáp; cô đếm, tranh có đúng 6 bạn (Bông, Leo, Anna, Xiaomei, Vũ và một bạn không tên), số 6 to trên bảng; Bông bắt tay Anna.",
+   "Trong lớp: cô dang tay chào cả lớp; cả lớp đáp; Bông bắt tay Anna, Anna bắt tay lại; Leo vẫy Vũ; Xiaomei vẫy Anna.",
    "Tan học: cả lớp vẫy cô; cô vẫy cả lớp, sau lưng cô có tranh mặt trời mọc (ngày mai); Bông vẫy cô; Leo vẫy Vũ.",
    "Cổng trường: bố đón Bông, cún con chạy ra; về nhà mẹ mở cửa; trang cuối mẹ nhìn thẳng ra ngoài tranh, vẫy con đang nghe."
   ],

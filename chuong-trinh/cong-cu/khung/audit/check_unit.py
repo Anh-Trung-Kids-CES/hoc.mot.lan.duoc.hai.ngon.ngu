@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Kiểm một file mẫu văn bản trọn grid/mang/mau_<khóa>_u<n>.json (độ dài, từ lõi ≥3 văn bản, vòng ngoài ≥2, câu cửa miệng, từ hay sai, tỉ lệ khung, từ lạ).
-Chạy trong cong-cu/khung/:  python3 audit/check_unit.py grid/ seedling 1 "good morning"   (đối số cuối là regex của khung câu)"""
+Chạy trong cong-cu/khung/:  python3 audit/check_unit.py grid/ seedling 1 "good morning" [doclap]   (regex của khung câu; doclap = lớp chưa học khóa trước)"""
 import json, re, sys
 G, C, U, FR = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
 ORDER = ['preb', 'little-seed', 'seedling', 'canopy']
@@ -8,7 +8,8 @@ mau = json.load(open(G + 'mang/mau_%s_u%s.json' % (C, U)))
 rows = json.load(open(G + 'mang/%s.json' % C))
 u = [r for r in rows if r['unit'] == U][0]
 kn_en, kn_zh = set(), set()
-for c in ORDER[:ORDER.index(C) + 1]:
+DOC_LAP = len(sys.argv) > 5 and sys.argv[5] == 'doclap'   # khóa độc lập: lớp chưa học khóa nào trước
+for c in ([C] if DOC_LAP or C not in ORDER else ORDER[:ORDER.index(C) + 1]):
     for r in json.load(open(G + 'mang/%s.json' % c)):
         if c == C and int(r['unit']) >= int(U): continue
         kn_en |= {x['tu'].lower() for x in r['tu_en']}; kn_zh |= {x['tu'] for x in r['tu_zh']}
@@ -35,7 +36,7 @@ for L in ('en', 'zh'):
             where = [t for t in ts if any(f in norm(txt(t, 'en')) for v in vs for f in (' %s ' % v, ' %ss ' % v))]
         else:
             where = [t for t in ts if w in txt(t, 'zh')]
-        core = x['nhan'] == 'Lõi'
+        core = x['nhan'] == 'Lõi'   # vòng ngoài và từ "Nền Little Seed" dạy lại: ≥2 văn bản
         miss = (len(where) < 3 or 'T1' not in where) if core else len(where) < 2
         bad += miss
         print(' %s %-10s %-4s %s%s' % (L, w, 'lõi' if core else 'ngoài', ','.join(where), '  <-- THIẾU' if miss else ''))
@@ -73,3 +74,4 @@ for t in ts:
         if rest: zl.add((t, rest))
 print('== Chữ Hán ngoài danh sách (kiểm bằng mắt) ==', sorted(zl))
 print('THIẾU / LỆCH:', bad)
+if DOC_LAP or C not in ORDER: print('(khóa độc lập: không tính từ của khóa trước là đã biết)')

@@ -1,0 +1,422 @@
+{
+ "T1": {
+  "loai": "Truyện khung",
+  "ten_en": "Good Morning, Mrs Lan!",
+  "ten_zh": "Lan老师，早上好！",
+  "khung_en": "Good morning, ___! (cặp: Hello / Goodbye, ___!)",
+  "khung_zh": "___，早上好！（___，您好 / 再见！）",
+  "ngay": [
+   1,
+   2,
+   3
+  ],
+  "ca_truyen": 8,
+  "phan_ten": [
+   [
+    "Hello, Grandpa!",
+    "爷爷，您好！"
+   ],
+   [
+    "Hello, Kids!",
+    "小朋友们，你们好！"
+   ],
+   [
+    "See You Tomorrow!",
+    "明天见！"
+   ]
+  ],
+  "phan": [
+   {
+    "scenes": [
+     [
+      "bong",
+      "Good morning, Mrs Lan!",
+      "Lan老师，早上好！",
+      "Lan lǎoshī, zǎoshang hǎo!"
+     ],
+     [
+      "lan",
+      "Good morning, Bông! Hello, Grandpa!",
+      "Bông，早上好！爷爷，您好！",
+      "Bông, zǎoshang hǎo! Yéye, nín hǎo!"
+     ],
+     [
+      "ong",
+      "Good morning, Mrs Lan!",
+      "Lan老师，早上好！",
+      "Lan lǎoshī, zǎoshang hǎo!"
+     ],
+     [
+      "bong",
+      "Goodbye, Grandpa!",
+      "爷爷再见！",
+      "Yéye zàijiàn!"
+     ],
+     [
+      "ong",
+      "Goodbye, Bông!",
+      "Bông，再见！",
+      "Bông, zàijiàn!"
+     ]
+    ],
+    "en": "\"Good morning, Mrs Lan!\" \"Good morning, Bông! Hello, Grandpa!\" \"Good morning, Mrs Lan!\" \"Goodbye, Grandpa!\" \"Goodbye, Bông!\"",
+    "zh": "“Lan老师，早上好！”“Bông，早上好！爷爷，您好！”“Lan老师，早上好！”“爷爷再见！”“Bông，再见！”",
+    "pinyin": "Lan lǎoshī, zǎoshang hǎo! Bông, zǎoshang hǎo! Yéye, nín hǎo! Lan lǎoshī, zǎoshang hǎo! Yéye zàijiàn! Bông, zàijiàn!"
+   },
+   {
+    "scenes": [
+     [
+      "lan",
+      "Good morning, class!",
+      "小朋友们，早上好！",
+      "Xiǎopéngyǒumen, zǎoshang hǎo!"
+     ],
+     [
+      "kids",
+      "Good morning, Mrs Lan!",
+      "Lan老师，早上好！",
+      "Lan lǎoshī, zǎoshang hǎo!"
+     ],
+     [
+      "narr",
+      "One man, two men!",
+      "两个男人！",
+      "Liǎng ge nánrén!"
+     ],
+     [
+      "bo_leo",
+      "Hello, kids!",
+      "小朋友们，你们好！",
+      "Xiǎopéngyǒumen, nǐmen hǎo!"
+     ],
+     [
+      "kids",
+      "Hello!",
+      "您好！",
+      "Nín hǎo!"
+     ],
+     [
+      "leo",
+      "Thank you, daddy!",
+      "谢谢爸爸！",
+      "Xièxie bàba!"
+     ]
+    ],
+    "en": "\"Good morning, class!\" \"Good morning, Mrs Lan!\" One man, two men! \"Hello, kids!\" \"Hello!\" \"Thank you, daddy!\"",
+    "zh": "“小朋友们，早上好！”“Lan老师，早上好！”两个男人！“小朋友们，你们好！”“您好！”“谢谢爸爸！”",
+    "pinyin": "Xiǎopéngyǒumen, zǎoshang hǎo! Lan lǎoshī, zǎoshang hǎo! Liǎng ge nánrén! Xiǎopéngyǒumen, nǐmen hǎo! Nín hǎo! Xièxie bàba!"
+   },
+   {
+    "scenes": [
+     [
+      "lan",
+      "Kids, write your name!",
+      "小朋友们，写名字吧！",
+      "Xiǎopéngyǒumen, xiě míngzi ba!"
+     ],
+     [
+      "bong",
+      "Sorry, Leo!",
+      "对不起，Leo！",
+      "Duìbuqǐ, Leo!"
+     ],
+     [
+      "lan",
+      "Goodbye, everyone! See you tomorrow!",
+      "大家再见！明天见！",
+      "Dàjiā zàijiàn! Míngtiān jiàn!"
+     ],
+     [
+      "kids",
+      "Goodbye, Mrs Lan! Wave, wave!",
+      "Lan老师再见！",
+      "Lan lǎoshī zàijiàn!"
+     ],
+     [
+      "lan",
+      "See you tomorrow, ___!",
+      "___，明天见！",
+      "___, míngtiān jiàn!"
+     ]
+    ],
+    "en": "\"Kids, write your name!\" \"Sorry, Leo!\" \"Goodbye, everyone! See you tomorrow!\" \"Goodbye, Mrs Lan! Wave, wave!\" \"See you tomorrow, ___!\"",
+    "zh": "“小朋友们，写名字吧！”“对不起，Leo！”“大家再见！明天见！”“Lan老师再见！”“___，明天见！”",
+    "pinyin": "Xiǎopéngyǒumen, xiě míngzi ba! Duìbuqǐ, Leo! Dàjiā zàijiàn! Míngtiān jiàn! Lan lǎoshī zàijiàn! ___, míngtiān jiàn!"
+   }
+  ],
+  "en": [
+   "\"Good morning, Mrs Lan!\" \"Good morning, Bông! Hello, Grandpa!\" \"Good morning, Mrs Lan!\" \"Goodbye, Grandpa!\" \"Goodbye, Bông!\"",
+   "\"Good morning, class!\" \"Good morning, Mrs Lan!\" One man, two men! \"Hello, kids!\" \"Hello!\" \"Thank you, daddy!\"",
+   "\"Kids, write your name!\" \"Sorry, Leo!\" \"Goodbye, everyone! See you tomorrow!\" \"Goodbye, Mrs Lan! Wave, wave!\" \"See you tomorrow, ___!\""
+  ],
+  "zh": [
+   "“Lan老师，早上好！”“Bông，早上好！爷爷，您好！”“Lan老师，早上好！”“爷爷再见！”“Bông，再见！”",
+   "“小朋友们，早上好！”“Lan老师，早上好！”两个男人！“小朋友们，你们好！”“您好！”“谢谢爸爸！”",
+   "“小朋友们，写名字吧！”“对不起，Leo！”“大家再见！明天见！”“Lan老师再见！”“___，明天见！”"
+  ],
+  "pinyin": [
+   "Lan lǎoshī, zǎoshang hǎo! Bông, zǎoshang hǎo! Yéye, nín hǎo! Lan lǎoshī, zǎoshang hǎo! Yéye zàijiàn! Bông, zàijiàn!",
+   "Xiǎopéngyǒumen, zǎoshang hǎo! Lan lǎoshī, zǎoshang hǎo! Liǎng ge nánrén! Xiǎopéngyǒumen, nǐmen hǎo! Nín hǎo! Xièxie bàba!",
+   "Xiǎopéngyǒumen, xiě míngzi ba! Duìbuqǐ, Leo! Dàjiā zàijiàn! Míngtiān jiàn! Lan lǎoshī zàijiàn! ___, míngtiān jiàn!"
+  ],
+  "tranh": [
+   "Giữ tranh v7 u1/p1_*: ông đưa Bông tới cửa lớp, cô Lan chào; Bông vẫy ông, ông vẫy lại.",
+   "Giữ tranh v7 u1/p2_*: cô chào cả lớp; bố Anna và bố Leo vào lớp (chữ số 1, 2 to cạnh hai người); bố Leo chào các con; Leo nhận lại cặp sách.",
+   "Giữ tranh v7 u1/p3_*: cô cho các con viết tên; Bông lỡ viết vào sách của Leo, chắp tay xin lỗi; cô vẫy cả lớp; các con vẫy cô; trang cuối cô Lan nhìn ra ngoài tranh vẫy con đang nghe."
+  ],
+  "so_voi_v7": "Giữ cốt truyện, nhân vật và tranh của v7. Bớt lời dẫn (Morning. Grandpa and Bông go to school; Look! …; Oh no! Bông writes her name on Leo's book) vì tranh đã kể; bỏ câu 'He is my daddy!' và đoạn ông đón cuối buổi để phần 1–3 nằm trong 15–20 chữ; thêm câu cuối có tên con. Ngày 8 nghe cả 3 phần."
+ },
+ "T2": {
+  "loai": "Bài hát vận động",
+  "ten_en": "Good Morning Song",
+  "ten_zh": "早上好歌",
+  "kieu": "hỏi–đáp",
+  "giai_dieu": "dân gian hết bản quyền: Frère Jacques (Pháp) – Đô trưởng, 4/4, ♩=108; 6 lượt ≈ 1 phút 40 giây",
+  "khung_en": "Good morning, ___! (Đáp:) Good morning, kids!",
+  "khung_zh": "___，早上好！（答）小朋友们，你们好！",
+  "o_thay": [
+   "Mrs Lan",
+   "Grandpa",
+   "mommy",
+   "daddy",
+   "friend",
+   "___"
+  ],
+  "dong_tac": "Mrs Lan – cúi chào; Grandpa – chống gậy cúi chào; mommy – ôm tim; daddy – khoanh tay chào kiểu bố; friend – bắt tay bạn bên cạnh; ___ – con được gọi tên đứng dậy, cả lớp dang tay; câu 3 vẫy tay (wave), câu 4 vẫy tạm biệt",
+  "en": [
+   [
+    "Good morning, Mrs Lan! Good morning, Mrs Lan!",
+    "(Đáp) Good morning, kids! Good morning, kids!",
+    "Wave, wave, wave! Wave, wave, wave!",
+    "See you tomorrow! See you tomorrow!"
+   ],
+   [
+    "Good morning, Grandpa! Good morning, Grandpa!",
+    "(Đáp) Good morning, kids! Good morning, kids!",
+    "Wave, wave, wave! Wave, wave, wave!",
+    "See you tomorrow! See you tomorrow!"
+   ],
+   [
+    "Good morning, mommy! Good morning, mommy!",
+    "(Đáp) Good morning, kids! Good morning, kids!",
+    "Wave, wave, wave! Wave, wave, wave!",
+    "See you tomorrow! See you tomorrow!"
+   ],
+   [
+    "Good morning, daddy! Good morning, daddy!",
+    "(Đáp) Good morning, kids! Good morning, kids!",
+    "Wave, wave, wave! Wave, wave, wave!",
+    "See you tomorrow! See you tomorrow!"
+   ],
+   [
+    "Good morning, friend! Good morning, friend!",
+    "(Đáp) Good morning, friend! Good morning, friend!",
+    "Wave, wave, wave! Wave, wave, wave!",
+    "See you tomorrow! See you tomorrow!"
+   ],
+   [
+    "Good morning, ___! Good morning, ___!",
+    "(Đáp) Hello, everyone! Hello, everyone!",
+    "Wave, wave, wave! Wave, wave, wave!",
+    "See you tomorrow! See you tomorrow!"
+   ]
+  ],
+  "zh": [
+   [
+    "Lan老师，早上好！Lan老师，早上好！",
+    "（答）小朋友们，你们好！小朋友们，你们好！",
+    "再见，再见！再见，再见！",
+    "明天见！明天见！"
+   ],
+   [
+    "爷爷，您好！爷爷，您好！",
+    "（答）小朋友们，你们好！小朋友们，你们好！",
+    "再见，再见！再见，再见！",
+    "明天见！明天见！"
+   ],
+   [
+    "妈妈，早上好！妈妈，早上好！",
+    "（答）小朋友们，你们好！小朋友们，你们好！",
+    "再见，再见！再见，再见！",
+    "明天见！明天见！"
+   ],
+   [
+    "爸爸，早上好！爸爸，早上好！",
+    "（答）小朋友们，你们好！小朋友们，你们好！",
+    "再见，再见！再见，再见！",
+    "明天见！明天见！"
+   ],
+   [
+    "朋友，早上好！朋友，早上好！",
+    "（答）朋友，你好！朋友，你好！",
+    "再见，再见！再见，再见！",
+    "明天见！明天见！"
+   ],
+   [
+    "___，早上好！___，早上好！",
+    "（答）大家好！大家好！",
+    "再见，再见！再见，再见！",
+    "明天见！明天见！"
+   ]
+  ],
+  "pinyin": [
+   [
+    "Lan lǎoshī, zǎoshang hǎo! Lan lǎoshī, zǎoshang hǎo!",
+    "(Dá) Xiǎopéngyǒumen, nǐmen hǎo! Xiǎopéngyǒumen, nǐmen hǎo!",
+    "Zàijiàn, zàijiàn! Zàijiàn, zàijiàn!",
+    "Míngtiān jiàn! Míngtiān jiàn!"
+   ],
+   [
+    "Yéye, nín hǎo! Yéye, nín hǎo!",
+    "(Dá) Xiǎopéngyǒumen, nǐmen hǎo! Xiǎopéngyǒumen, nǐmen hǎo!",
+    "Zàijiàn, zàijiàn! Zàijiàn, zàijiàn!",
+    "Míngtiān jiàn! Míngtiān jiàn!"
+   ],
+   [
+    "Māma, zǎoshang hǎo! Māma, zǎoshang hǎo!",
+    "(Dá) Xiǎopéngyǒumen, nǐmen hǎo! Xiǎopéngyǒumen, nǐmen hǎo!",
+    "Zàijiàn, zàijiàn! Zàijiàn, zàijiàn!",
+    "Míngtiān jiàn! Míngtiān jiàn!"
+   ],
+   [
+    "Bàba, zǎoshang hǎo! Bàba, zǎoshang hǎo!",
+    "(Dá) Xiǎopéngyǒumen, nǐmen hǎo! Xiǎopéngyǒumen, nǐmen hǎo!",
+    "Zàijiàn, zàijiàn! Zàijiàn, zàijiàn!",
+    "Míngtiān jiàn! Míngtiān jiàn!"
+   ],
+   [
+    "Péngyou, zǎoshang hǎo! Péngyou, zǎoshang hǎo!",
+    "(Dá) Péngyou, nǐ hǎo! Péngyou, nǐ hǎo!",
+    "Zàijiàn, zàijiàn! Zàijiàn, zàijiàn!",
+    "Míngtiān jiàn! Míngtiān jiàn!"
+   ],
+   [
+    "___, zǎoshang hǎo! ___, zǎoshang hǎo!",
+    "(Dá) Dàjiā hǎo! Dàjiā hǎo!",
+    "Zàijiàn, zàijiàn! Zàijiàn, zàijiàn!",
+    "Míngtiān jiàn! Míngtiān jiàn!"
+   ]
+  ],
+  "ghi_chu_thanh": "早上好 zǎoshang hǎo: “hǎo” rơi nốt thấp cuối ô – hợp thanh 3. 您好 nín hǎo (2–3) đặt trên nốt đi lên rồi xuống. 再见 zàijiàn (4–4) ở câu 3 (đoạn “Son-nez les ma-ti-nes”) cần nốt đi xuống – GV tiếng Trung kiểm; nếu lệch thì câu 3 đọc theo nhịp vỗ tay. 明天见 míngtiān jiàn (2–1–4) ở câu 4 (“Din dan don”) – hợp.",
+  "ghi_chu": "Lượt 2 dùng 爷爷，您好！ (người lớn dùng 您). Lượt 6 thay ô bằng tên từng con – dùng được cả trên lớp và trong file nghe ngấm (ghi âm sẵn vài tên)."
+ },
+ "T3": {
+  "loai": "Big book mẫu câu",
+  "ten_en": "Good Morning!",
+  "ten_zh": "早上好！",
+  "kieu": "liệt kê",
+  "khung_en": "Good morning, ___!",
+  "khung_zh": "___，早上好！",
+  "en": [
+   "Good morning, day!",
+   "Good morning, Mrs Lan!",
+   "Good morning, class!",
+   "Hello, Grandpa!",
+   "Hello, kids!",
+   "One man, two men! Good morning!",
+   "Good morning, mommy! Good morning, kitten!",
+   "Good morning, daddy! Good morning, puppy!",
+   "Write, write, write!",
+   "Sorry, friend!",
+   "Goodbye, teacher! Wave, wave!",
+   "Goodbye, all! See you tomorrow!",
+   "Good morning, ___!"
+  ],
+  "zh": [
+   "早上好！",
+   "Lan老师，早上好！",
+   "小朋友们，早上好！",
+   "爷爷，您好！",
+   "小朋友们，你们好！",
+   "两个男人：早上好！",
+   "妈妈，早上好！小猫，早上好！",
+   "爸爸，早上好！小狗，早上好！",
+   "写，写，写！",
+   "对不起，朋友！",
+   "老师再见！",
+   "大家再见！明天见！",
+   "___，早上好！"
+  ],
+  "pinyin": [
+   "Zǎoshang hǎo!",
+   "Lan lǎoshī, zǎoshang hǎo!",
+   "Xiǎopéngyǒumen, zǎoshang hǎo!",
+   "Yéye, nín hǎo!",
+   "Xiǎopéngyǒumen, nǐmen hǎo!",
+   "Liǎng ge nánrén: zǎoshang hǎo!",
+   "Māma, zǎoshang hǎo! Xiǎomāo, zǎoshang hǎo!",
+   "Bàba, zǎoshang hǎo! Xiǎogǒu, zǎoshang hǎo!",
+   "Xiě, xiě, xiě!",
+   "Duìbuqǐ, péngyou!",
+   "Lǎoshī zàijiàn!",
+   "Dàjiā zàijiàn! Míngtiān jiàn!",
+   "___, zǎoshang hǎo!"
+  ],
+  "ghi_chu": "13 trang, mỗi trang một câu. Trang 1 mặt trời mọc; trang 7–8 ở nhà (con chào mẹ, mèo, bố, cún trước khi đi học) – đây là chỗ các từ Little Seed dạy lại được nghe trong khung câu; trang 9–10 bút chì viết tên, Bông xin lỗi bạn; trang 13 khung dán ảnh con."
+ },
+ "T4": {
+  "loai": "Vè",
+  "ten_en": "Lesson Time, Home Time",
+  "ten_zh": "上课了，放学了",
+  "kieu": "cặp đối lập",
+  "khung_en": "Lesson time! Good morning, ___! / Home time! Goodbye, ___!",
+  "khung_zh": "上课了！___，早上好！/ 放学了！___再见！",
+  "en": [
+   "Good morning, day! Lesson time!",
+   "Lesson time! Good morning, Mrs Lan! – Good morning, class!",
+   "One man, two men: Hello, kids!",
+   "Write, write! Write your name!",
+   "Sorry, sorry, friend!",
+   "Home time! Goodbye, teacher! Wave, wave!",
+   "Hello, daddy! Hello, puppy! Hello, kitten!",
+   "Goodbye, all! See you tomorrow, everyone!"
+  ],
+  "zh": [
+   "早上好！上课了！",
+   "上课了！Lan老师，早上好！—— 小朋友们，早上好！",
+   "两个男人：小朋友们，你们好！",
+   "写，写！写名字！",
+   "对不起，对不起，朋友！",
+   "放学了！老师再见！",
+   "爸爸，你好！小狗，你好！小猫，你好！",
+   "大家再见！大家明天见！"
+  ],
+  "pinyin": [
+   "Zǎoshang hǎo! Shàngkè le!",
+   "Shàngkè le! Lan lǎoshī, zǎoshang hǎo! — Xiǎopéngyǒumen, zǎoshang hǎo!",
+   "Liǎng ge nánrén: xiǎopéngyǒumen, nǐmen hǎo!",
+   "Xiě, xiě! Xiě míngzi!",
+   "Duìbuqǐ, duìbuqǐ, péngyou!",
+   "Fàngxué le! Lǎoshī zàijiàn!",
+   "Bàba, nǐ hǎo! Xiǎogǒu, nǐ hǎo! Xiǎomāo, nǐ hǎo!",
+   "Dàjiā zàijiàn! Dàjiā míngtiān jiàn!"
+  ],
+  "ghi_chu": "Vè vỗ tay 2 phách. Nửa đầu (vào lớp) ngồi thẳng vỗ tay; từ “Home time / 放学了” đứng dậy vẫy tay. Nối với lời lớp học cô dạy ở buổi 1 (It's lesson time! / 上课了！). Từ lạ có tranh: 上课, 放学 (đồng hồ giờ vào lớp, giờ về); name / 名字 là từ nền đã có trong v7."
+ },
+ "T5": {
+  "loai": "Bài tiếng Trung riêng",
+  "ten_zh": "您好，你们好！",
+  "kieu": "hỏi–đáp",
+  "khung_zh": "___，您好！—— 小朋友们，你们好！",
+  "en": "",
+  "zh": [
+   "老师，您好！—— 小朋友们，你们好！",
+   "爷爷，您好！—— 小朋友们，你们好！",
+   "妈妈，早上好！—— 早上好，早上好！",
+   "朋友，你好！—— 你好，你好！",
+   "小猫，再见！—— 喵喵，明天见！",
+   "小狗，再见！—— 汪汪，明天见！",
+   "老师再见！—— 小朋友们，明天见！"
+  ],
+  "pinyin": [
+   "Lǎoshī, nín hǎo! — Xiǎopéngyǒumen, nǐmen hǎo!",
+   "Yéye, nín hǎo! — Xiǎopéngyǒumen, nǐmen hǎo!",
+   "Māma, zǎoshang hǎo! — Zǎoshang hǎo, zǎoshang hǎo!",
+   "Péngyou, nǐ hǎo! — Nǐ hǎo, nǐ hǎo!",
+   "Xiǎomāo, zàijiàn! — Miāomiāo, míngtiān jiàn!",
+   "Xiǎogǒu, zàijiàn! — Wāngwāng, míngtiān jiàn!",
+   "Lǎoshī zàijiàn! — Xiǎopéngyǒumen, míngtiān jiàn!"
+  ],
+  "ghi_chu": "Vè gọi – đáp riêng cho 您 / 你 / 你们: người lớn (cô, ông) – 您好; bạn – 你好; người lớn đáp cả nhóm – 你们好. Câu 5–6 vui: mèo, cún “đáp” bằng tiếng kêu."
+ }
+}
