@@ -11,6 +11,7 @@ Nội dung theo doc "Chung kết Rung chuông vàng – Khung nội dung câu h�
 | Màn điều khiển của cô (máy tính) | …/chung-ket/co.html |
 | Màn trình chiếu (cô chia sẻ lên Zoom) | …/chung-ket/chieu.html (tự điền mã phòng cô vừa mở trên máy đó), hoặc nút **🖥 Chia sẻ lên Zoom** trên màn cô |
 | Bảng xếp hạng cho livestream (OBS) | …/chung-ket/?bang=MÃ — top 5 mỗi level, tự cập nhật |
+| Trang luyện host (câu dẫn Anh – Trung, chấm AI, kiểm tra tình huống) | …/chung-ket/host/ · kết quả cho chị: …/chung-ket/host/?ket-qua (xem `host/README.md`) |
 | Thử trên một máy, không cần Firebase | thêm `?mock=1` vào link cô và link bé, mở nhiều tab cùng trình duyệt |
 
 Bé nhập mã phòng ở link Lớp Zoom cũng được: web tự chuyển sang trang chung kết.
