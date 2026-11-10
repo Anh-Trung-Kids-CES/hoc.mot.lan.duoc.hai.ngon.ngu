@@ -237,6 +237,51 @@ if os.path.exists(_m9):
             b['lop']['en']['baihat'] = f'[Bài của unit, cố định cả 4 buổi] T2 {M9["T2"]["khung_en"]} ({M9["T2"]["giai_dieu"]}) + T4 vè {M9["T4"]["khung_en"]} ‖ ' + b['lop']['en']['baihat']
             b['lop']['en']['truyen'] = f'[Truyện khung mới] {T9["ten_en"]} ‖ [Bản cũ] ' + b['lop']['en']['truyen']
 
+# ---------------- v2 (10/11/2026 khuya): nguyên tắc 61–68 ----------------
+# Truyện khung bản mới (chờ duyệt) của U2, U3, U9, U12 thay ô truyện các ngày Phần; vè mới vào buổi.
+_mn = os.path.join(GRID, 'mang', 'mau_ls48_banmoi.json')
+if os.path.exists(_mn):
+    MN = json.load(open(_mn))
+    for us, M in MN.items():
+        if us.startswith('_'): continue
+        u = int(us); D = [d for d in days if d['unit'] == u]
+        for k, d in enumerate(D[:5]):
+            t, z, P = M['phan'][k]
+            d['en']['truyen'] = (f'[Truyện khung bản mới 10/11 – chờ duyệt] {M["ten_en"]} · Phần {k + 1}: {t} — '
+                                 + ' '.join(f'{w}: {e}' for w, e, _ in P))
+            d['zh']['truyen'] = f'[Truyện khung bản mới] {M["ten_zh"]} · {z} — ' + ' '.join(f'{w}：{zz}' for w, _, zz in P)
+        for d in D[5:]:
+            d['en']['truyen'] = f'[Truyện khung bản mới – cả truyện] {M["ten_en"]} (cả 5 phần) ‖ ' + d['en']['truyen']
+        ve = ' / '.join(f'{w}: {e}' for w, e, _ in M['ve']); vez = ' / '.join(z for _, _, z in M['ve'])
+        for b in buoi:
+            if b['unit'] == u:
+                b['lop']['en']['baihat'] = f'[Vè mới theo nguyên tắc 65 – chờ duyệt] {ve} ‖ {vez} ‖ ' + b['lop']['en']['baihat']
+# Chỉ tiêu 4 mặt theo unit (nguyên tắc 62, 63, 65–67) – sinh bởi chi_tieu_48.py
+_ct = os.path.join(GRID, 'mang', 'chi_tieu_48.json')
+CT = {x['unit']: x for x in json.load(open(_ct)) if x['lop'] == 'Little Seed 48'} if os.path.exists(_ct) else {}
+for d in days:
+    c = CT.get(d['unit'])
+    if c and str(d['loai']).startswith('Phần'):
+        d['chi_tieu'] = (f'Truyện khung mỗi phần: EN {c["en_chu_phan"]} chữ, ~{c["en_chu_cau"]} chữ/câu; ZH {c["zh_chu_phan"]} chữ Hán, ~{c["zh_chu_cau"]} chữ/câu; '
+                         f'{c["lien"]}; khung: {c["cau_truc"]}; dùng lại ≥2 mẫu cũ: {c["mau_cu"]}')
+for b in buoi:
+    c = CT.get(b['unit'])
+    if c:
+        b['chi_tieu'] = f'Vè: {c["ve"]}. Big book: {c["big_book"]}. Hiện trạng truyện: {c["hien_trang"]}'
+# Chào đầu buổi / cuối buổi bằng vè (nguyên tắc 66); buổi 1 = khai giảng (nguyên tắc 67)
+VE_CHAO = ('Vè chào đầu buổi: Hello, hello, everyone! / Hello, teacher! Class is fun! / What\'s your name? (×2) / ___, ___, that\'s my name! / '
+           '___, ___, how old are you? / Five! I\'m five! And you? And you?')
+VE_BYE = 'Vè chào cuối buổi: Goodbye, goodbye, everyone! / One, two, three… school is done! / See you tomorrow, ___ and ___! / Goodbye, teacher! Let\'s go!'
+for b in buoi:
+    if b['buoi'] == 1:
+        b['label'] = 'Buổi dạy 1. Khai giảng · ' + b['label'].split('. ', 1)[1]
+        b['chao'] = ('Khai giảng: chỉ hát câu 1–2 vè chào đầu (Hello, hello, everyone! / Hello, teacher! Class is fun!) và câu 1–2 vè chào cuối '
+                     '(Goodbye, goodbye, everyone! / One, two, three… school is done!), con nhại theo cô, có động tác cố định (vẫy, vỗ tay, đeo cặp).')
+    elif b['buoi'] == 2:
+        b['chao'] = 'Sau 3 ngày web (4–6) đã nghe tên, tuổi, see you tomorrow: hát trọn hai vè chào; vòng hỏi tên – tuổi đi quanh lớp. ' + VE_CHAO + ' ‖ ' + VE_BYE
+    else:
+        b['chao'] = 'Đầu buổi: ' + VE_CHAO + ' Cuối buổi: ' + VE_BYE + (' Vai con nâng dần: tự nói tên → giới thiệu bạn → hỏi theo cặp.' if b['buoi'] <= 7 else '')
+
 # ---------------- Tuần 26: ôn cả khóa ----------------
 for j, (src_day, lab) in enumerate([(109, 'Ôn U1–U6: chào hỏi, tên tuổi, gia đình, cơ thể, cảm xúc, trường lớp – Album trang 1–2'),
                                      (112, 'Ôn U7–U12: nhà, con vật, đồ ăn, thời tiết, màu, số – Album trang 3–4')]):
@@ -278,18 +323,18 @@ def plan90(b):
     bb = s[3] if s else 'Album gia đình'
     return '\n'.join([
         f'Vai buổi: {b["vai"]} – {FOCUS[b["vai"]]}. Ngày web trước buổi: {", ".join(map(str, b["ngay_web"]))}.',
-        f'[1] 0–10′ Chào và khởi động · Chào cả lớp hai tiếng; bài hát vận động của unit: {song}; lời lớp học (Look! Listen! Sit down, please. ↔ 看！听！请坐。).',
+        f'[1] 0–10′ Chào và khởi động · {b.get("chao", "Vè chào đầu buổi")}; bài hát vận động của unit: {song}; lời lớp học (Look! Listen! Sit down, please. ↔ 看！听！请坐。).',
         f'[2] 10–25′ Khối tiếng Anh · Flash: {en["flash"]} · Hoạt động (chọn 2–3 trong slide): {en["slide"][:600]}',
         f'[3] 25–33′ Vận động – nghỉ mắt · Vè của unit vỗ tay theo nhịp: {ve}; trò Leo says / Xiaomei says với động tác của bài hát.',
         f'[4] 33–50′ Khối tiếng Trung · Flash: {zh["flash"]} · Hoạt động (cùng tranh với khối tiếng Anh): {zh["slide"][:600]}',
         '[5] 50–60′ Nghỉ và làm tay · uống nước, đi vệ sinh; thủ công nhỏ của unit (tô, dán, gấp) dùng tranh của truyện, vừa làm vừa nói từ.',
         f'[6] 60–80′ Truyện unit và big book · Cô kể truyện khung bằng tranh to (EN rồi ZH); lần 2 con chạm tranh, trả lời; lần 3 con nói câu nhân vật. Big book mẫu câu: {bb} (cô đọc, con điền tên mình, bạn mình). Chuyển ngữ: rối Leo nói 1 câu tiếng Anh, con nói lại cho rối Xiaomei.',
-        '[7] 80–90′ Tổng kết, phụ huynh · Mỗi con nói 1 câu của buổi bằng hai tiếng; trao sao; cô dặn phụ huynh ngày web tiếp theo và phiếu tô – dán ở nhà (1 trang, khoảng 10 phút).',
+        '[7] 80–90′ Tổng kết, phụ huynh · Mỗi con nói 1 câu của buổi bằng hai tiếng; trao sao; vè chào cuối buổi; cô dặn phụ huynh ngày web tiếp theo và phiếu tô – dán ở nhà (1 trang, khoảng 10 phút).',
     ])
 for b in buoi:
     b['ke_hoach_90'] = plan90(b)
 
-out = {'khoa': 'Little Seed offline 48 buổi', 'ban': 'v1 (10/11/2026)',
+out = {'khoa': 'Little Seed offline 48 buổi', 'ban': 'v2 (10/11/2026 khuya – nguyên tắc 61–68)',
        'nhip': 'Tuần 1–3: 3 ngày web rồi buổi Chủ nhật. Từ tuần 4: 2 ngày web → buổi thứ Tư → 2 ngày web → buổi Chủ nhật. Tuần 26: 2 ngày web và buổi 48 (thứ Tư).',
        'preb_day_lai': PREB, 'days': days, 'buoi': buoi}
 dst = os.path.join(GRID, 'mang', 'little-seed48.json')

@@ -1,0 +1,755 @@
+{
+ "2": {
+  "ten_en": "Bông's Birthday",
+  "ten_zh": "Bông的生日",
+  "phan": [
+   [
+    "Hello, Cake!",
+    "蛋糕，你好！",
+    [
+     [
+      "Bông",
+      "Hello, cake!",
+      "蛋糕，你好！"
+     ],
+     [
+      "Mẹ",
+      "Let's count! One, two, three!",
+      "我们数一数！一、二、三！"
+     ],
+     [
+      "Bông",
+      "One, two, three! Yay!",
+      "一、二、三！耶！"
+     ],
+     [
+      "Bông",
+      "Mommy, Daddy, Bông! Three!",
+      "妈妈、爸爸、Bông！三！"
+     ]
+    ]
+   ],
+   [
+    "Six!",
+    "六！",
+    [
+     [
+      "Mẹ",
+      "One, two, three, four, five!",
+      "一、二、三、四、五！"
+     ],
+     [
+      "Bông",
+      "No, Mommy! Six!",
+      "不，妈妈！六！"
+     ],
+     [
+      "Bông",
+      "Four, five, six! I'm six!",
+      "四、五、六！我六岁！"
+     ],
+     [
+      "Bố",
+      "Six! Yay!",
+      "六岁！耶！"
+     ]
+    ]
+   ],
+   [
+    "Happy Birthday!",
+    "生日快乐！",
+    [
+     [
+      "Hai bạn đeo mặt nạ",
+      "Happy birthday!",
+      "生日快乐！"
+     ],
+     [
+      "Bông",
+      "Hello! What's your name?",
+      "你好！你叫什么名字？"
+     ],
+     [
+      "Mặt nạ chó",
+      "My name is Puppy! Woof!",
+      "我叫小狗！汪汪！"
+     ],
+     [
+      "Mặt nạ mèo",
+      "My name is Kitten! Meow!",
+      "我叫小猫！喵喵！"
+     ]
+    ]
+   ],
+   [
+    "My Name Is Leo!",
+    "我叫Leo！",
+    [
+     [
+      "Bông",
+      "No! What's your name?",
+      "不！你叫什么名字？"
+     ],
+     [
+      "Leo",
+      "Leo! My name is Leo!",
+      "Leo！我叫Leo！"
+     ],
+     [
+      "Bông",
+      "What's your name?",
+      "你叫什么名字？"
+     ],
+     [
+      "Anna",
+      "My name is Anna!",
+      "我叫Anna！"
+     ]
+    ]
+   ],
+   [
+    "How Old Are You?",
+    "你几岁？",
+    [
+     [
+      "Anna",
+      "How old are you, Bông?",
+      "Bông，你几岁？"
+     ],
+     [
+      "Bông",
+      "I'm six!",
+      "我六岁！"
+     ],
+     [
+      "Leo",
+      "I'm five!",
+      "我五岁！"
+     ],
+     [
+      "Cả nhà",
+      "Happy birthday, Bông!",
+      "Bông，生日快乐！"
+     ],
+     [
+      "Bông",
+      "How old are you, ___?",
+      "___，你几岁？"
+     ]
+    ]
+   ]
+  ],
+  "ve": [
+   [
+    "Cô",
+    "HAP-py BIRTH-day, HAP-py DAY!",
+    "生日快乐，笑哈哈！"
+   ],
+   [
+    "Lớp",
+    "ONE, two, THREE, four, CAKE! Yay, YAY!",
+    "一二三四，蛋糕啦！"
+   ],
+   [
+    "Lớp",
+    "WHAT'S your NAME? How OLD are YOU?",
+    "你叫什么？你几岁？"
+   ],
+   [
+    "Con",
+    "my NAME'S LE-o. I'm FIVE! And YOU?",
+    "我叫Leo，我五岁！"
+   ]
+  ]
+ },
+ "3": {
+  "ten_en": "Bông's Family",
+  "ten_zh": "Bông的家人",
+  "phan": [
+   [
+    "Who Is He?",
+    "这是谁？",
+    [
+     [
+      "Anna",
+      "Who is he?",
+      "这是谁？"
+     ],
+     [
+      "Bông",
+      "He is my daddy!",
+      "这是我爸爸！"
+     ],
+     [
+      "Anna",
+      "Who is he?",
+      "这是谁？"
+     ],
+     [
+      "Bông",
+      "He is my grandpa!",
+      "这是我爷爷！"
+     ],
+     [
+      "Ông",
+      "Hello! What's your name?",
+      "你好！你叫什么名字？"
+     ]
+    ]
+   ],
+   [
+    "Who Is She?",
+    "这是谁？",
+    [
+     [
+      "Anna",
+      "Hello, Grandpa! My name is Anna!",
+      "爷爷好！我叫Anna！"
+     ],
+     [
+      "Anna",
+      "Who is she?",
+      "这是谁？"
+     ],
+     [
+      "Bông",
+      "She is my grandma!",
+      "这是我奶奶！"
+     ],
+     [
+      "Anna",
+      "Who is she?",
+      "这是谁？"
+     ],
+     [
+      "Bông",
+      "My mommy!",
+      "我妈妈！"
+     ]
+    ]
+   ],
+   [
+    "Anna's Family",
+    "Anna的家人",
+    [
+     [
+      "Bông",
+      "Who is he?",
+      "这是谁？"
+     ],
+     [
+      "Anna",
+      "My big brother!",
+      "我哥哥！"
+     ],
+     [
+      "Bông",
+      "Hello, big brother! Who is she?",
+      "哥哥好！这是谁？"
+     ],
+     [
+      "Anna",
+      "My big sister! She is six!",
+      "我姐姐！六岁！"
+     ]
+    ]
+   ],
+   [
+    "Shh!",
+    "嘘！",
+    [
+     [
+      "Anna",
+      "Who is he?",
+      "这是谁？"
+     ],
+     [
+      "Bông",
+      "My little brother! He is three!",
+      "我弟弟！三岁！"
+     ],
+     [
+      "Anna",
+      "Hello! Wow! Who is she?",
+      "你好！哇！这是谁？"
+     ],
+     [
+      "Bông",
+      "Shh!",
+      "嘘！"
+     ]
+    ]
+   ],
+   [
+    "My Family",
+    "我的家人",
+    [
+     [
+      "Bông",
+      "My little sister! She is young!",
+      "我妹妹！好小呀！"
+     ],
+     [
+      "Em bé",
+      "Waaa!",
+      "哇哇！"
+     ],
+     [
+      "Mẹ",
+      "Hello, baby! I love you!",
+      "宝宝，你好！我爱你！"
+     ],
+     [
+      "Bông",
+      "My family!",
+      "我的家人！"
+     ],
+     [
+      "Bông",
+      "And your family, ___?",
+      "___，你的家人呢？"
+     ]
+    ]
+   ]
+  ],
+  "ve": [
+   [
+    "Cô",
+    "___, ___, WHO is SHE?",
+    "___，___，这是谁？"
+   ],
+   [
+    "Con",
+    "SHE'S my SIS-ter! SHE is THREE!",
+    "我的妹妹，三岁！"
+   ],
+   [
+    "Lớp",
+    "BA-by, BA-by, WHO are YOU?",
+    "宝宝宝宝，你是谁？"
+   ],
+   [
+    "Lớp",
+    "SHH! SHH! BA-by! I love YOU!",
+    "嘘嘘嘘，宝宝睡！"
+   ]
+  ]
+ },
+ "9": {
+  "ten_en": "Picnic Time!",
+  "ten_zh": "去野餐！",
+  "phan": [
+   [
+    "Picnic Time!",
+    "去野餐！",
+    [
+     [
+      "Cô Hươu",
+      "Picnic time! Let's go!",
+      "去野餐！走吧！"
+     ],
+     [
+      "Cô Hươu",
+      "What do you like, Bông?",
+      "Bông，你喜欢什么？"
+     ],
+     [
+      "Bông",
+      "I like apples!",
+      "我喜欢苹果！"
+     ],
+     [
+      "Leo",
+      "I like dogs!",
+      "我喜欢狗！"
+     ],
+     [
+      "Cún (nhảy ra khỏi giỏ)",
+      "Woof! Woof!",
+      "汪汪！汪汪！"
+     ],
+     [
+      "Anna",
+      "A puppy! I like puppies!",
+      "小狗！我喜欢小狗！"
+     ]
+    ]
+   ],
+   [
+    "Lucky Can Run!",
+    "Lucky能跑！",
+    [
+     [
+      "Vũ",
+      "I eat bananas!",
+      "我吃香蕉！"
+     ],
+     [
+      "Anna",
+      "I eat eggs!",
+      "我吃鸡蛋！"
+     ],
+     [
+      "Xiaomei",
+      "I like bananas! Yummy!",
+      "我喜欢香蕉！好吃！"
+     ],
+     [
+      "Bông",
+      "Lucky, what do you eat?",
+      "Lucky，你吃什么？"
+     ],
+     [
+      "Leo",
+      "Look! Lucky can run!",
+      "看！Lucky能跑！"
+     ],
+     [
+      "Bông",
+      "Lucky, no!",
+      "Lucky，不行！"
+     ]
+    ]
+   ],
+   [
+    "Where Is the Pizza?",
+    "比萨在哪儿？",
+    [
+     [
+      "Leo",
+      "Where is the pizza? I like pizza!",
+      "比萨在哪儿？我喜欢比萨！"
+     ],
+     [
+      "Anna",
+      "Under the chair? No!",
+      "在椅子下面？不对！"
+     ],
+     [
+      "Vũ",
+      "On the table? No!",
+      "在桌子上？不对！"
+     ],
+     [
+      "Bông",
+      "Look! Lucky! He likes pizza!",
+      "看！Lucky！Lucky喜欢比萨！"
+     ],
+     [
+      "Cô Hươu",
+      "Lucky! You like pizza!",
+      "Lucky！你喜欢比萨！"
+     ]
+    ]
+   ],
+   [
+    "Drink, Lucky!",
+    "喝水吧！",
+    [
+     [
+      "Leo",
+      "I'm tired!",
+      "我好累！"
+     ],
+     [
+      "Cô Hươu",
+      "Drink, everyone!",
+      "大家喝水吧！"
+     ],
+     [
+      "Bông",
+      "I drink milk!",
+      "我喝牛奶！"
+     ],
+     [
+      "Leo",
+      "I drink juice!",
+      "我喝果汁！"
+     ],
+     [
+      "Anna",
+      "I drink water!",
+      "我喝水！"
+     ],
+     [
+      "Vũ",
+      "Lucky, what do you drink?",
+      "Lucky，你喝什么？"
+     ],
+     [
+      "Cún",
+      "Woof!",
+      "汪！"
+     ],
+     [
+      "Bông",
+      "Water! Lucky likes water!",
+      "水！Lucky喜欢水！"
+     ]
+    ]
+   ],
+   [
+    "I Like Rice!",
+    "我喜欢米饭！",
+    [
+     [
+      "Xiaomei",
+      "Rice! I eat rice!",
+      "米饭！我吃米饭！"
+     ],
+     [
+      "Bông",
+      "I like rice! Thank you, Xiaomei!",
+      "我喜欢米饭！谢谢你，Xiaomei！"
+     ],
+     [
+      "Leo",
+      "I'm sad! No pizza!",
+      "比萨呢？我难过！"
+     ],
+     [
+      "Xiaomei",
+      "Leo, eat rice!",
+      "Leo，吃米饭吧！"
+     ],
+     [
+      "Leo",
+      "I eat rice! I'm happy!",
+      "我吃米饭！我开心！"
+     ],
+     [
+      "Bông",
+      "What do you like, ___?",
+      "___，你喜欢什么？"
+     ]
+    ]
+   ]
+  ],
+  "ve": [
+   [
+    "Cô",
+    "PIC-nic TIME! Let's GO, let's GO!",
+    "去野餐！走走走！"
+   ],
+   [
+    "Lớp",
+    "PIZ-za? LUCK-y? NO, no, NO!",
+    "Lucky，Lucky，坏小狗！"
+   ],
+   [
+    "Lớp",
+    "___, ___, WHAT do you EAT?",
+    "___，___，吃什么？"
+   ],
+   [
+    "Con",
+    "I eat AP-ples! SWEET, sweet, SWEET!",
+    "我吃苹果，甜甜的！"
+   ]
+  ]
+ },
+ "12": {
+  "ten_en": "Leo's Party",
+  "ten_zh": "Leo的生日会",
+  "phan": [
+   [
+    "Tiệc của Leo",
+    "生日会！",
+    [
+     [
+      "Leo",
+      "Hello, everyone! My party!",
+      "大家好！我的生日会！"
+     ],
+     [
+      "Anna",
+      "Happy birthday, Leo!",
+      "Leo，生日快乐！"
+     ],
+     [
+      "Bông",
+      "How many cakes?",
+      "几个蛋糕？"
+     ],
+     [
+      "Leo",
+      "Nine cakes!",
+      "九个蛋糕！"
+     ],
+     [
+      "Vũ",
+      "How many friends?",
+      "几个朋友？"
+     ],
+     [
+      "Xiaomei",
+      "Let's count! One, two, three… ten! Ten friends!",
+      "我们数一数！一、二、三……十！十个朋友！"
+     ],
+     [
+      "Anna",
+      "Ten friends? Nine cakes? Oh no!",
+      "十个朋友？九个蛋糕？哎呀！"
+     ]
+    ]
+   ],
+   [
+    "Một con khỉ",
+    "一只猴子！",
+    [
+     [
+      "Leo",
+      "One, two, three… ten. Ten friends!",
+      "一、二、三……十。十个朋友！"
+     ],
+     [
+      "Bông",
+      "Who is he?",
+      "这是谁？"
+     ],
+     [
+      "Leo",
+      "He is my toy monkey!",
+      "这是我的玩具猴子！"
+     ],
+     [
+      "Anna",
+      "How many monkeys? One!",
+      "几只猴子？一只！"
+     ],
+     [
+      "Vũ",
+      "Nine friends and one monkey!",
+      "九个朋友，一只猴子！"
+     ],
+     [
+      "Leo",
+      "Nine friends! Nine cakes! Yay!",
+      "九个朋友！九个蛋糕！耶！"
+     ]
+    ]
+   ],
+   [
+    "Hai con chó",
+    "两只狗！",
+    [
+     [
+      "Bông",
+      "Look! How many dogs?",
+      "看！几只狗？"
+     ],
+     [
+      "Xiaomei",
+      "Two dogs! Lucky and Max!",
+      "两只狗！Lucky和Max！"
+     ],
+     [
+      "Vũ",
+      "The dogs can jump!",
+      "小狗能跳！"
+     ],
+     [
+      "Anna",
+      "Oh no! The cakes! Where are the cakes?",
+      "哎呀！蛋糕！蛋糕在哪儿？"
+     ],
+     [
+      "Leo",
+      "Under the table! How many cakes?",
+      "在桌子下面！几个蛋糕？"
+     ]
+    ]
+   ],
+   [
+    "Bánh màu đỏ",
+    "红色的蛋糕",
+    [
+     [
+      "Bông",
+      "One, two… eight. Eight cakes!",
+      "一、二……八。八个蛋糕！"
+     ],
+     [
+      "Vũ",
+      "How many red cakes?",
+      "几个红色的蛋糕？"
+     ],
+     [
+      "Anna",
+      "Five red cakes!",
+      "五个红色的！"
+     ],
+     [
+      "Xiaomei",
+      "How many white cakes?",
+      "几个白色的蛋糕？"
+     ],
+     [
+      "Leo",
+      "Three white cakes. Eight cakes, nine friends! I'm sad!",
+      "三个白色的。八个蛋糕，九个朋友！我难过！"
+     ]
+    ]
+   ],
+   [
+    "Cảm ơn mẹ!",
+    "谢谢妈妈！",
+    [
+     [
+      "Mẹ Leo",
+      "Look! One big cake!",
+      "看！一个大蛋糕！"
+     ],
+     [
+      "Vũ",
+      "How many cakes?",
+      "几个蛋糕？"
+     ],
+     [
+      "Anna",
+      "Eight and one… nine! Nine cakes!",
+      "八个加一个……九个！九个蛋糕！"
+     ],
+     [
+      "Leo",
+      "Nine cakes, nine friends! Thank you, Mommy!",
+      "九个蛋糕，九个朋友！谢谢妈妈！"
+     ],
+     [
+      "Cả lớp",
+      "Happy birthday, Leo!",
+      "Leo，生日快乐！"
+     ],
+     [
+      "Leo",
+      "How many cakes, ___? Let's count!",
+      "___，几个蛋糕？我们数一数！"
+     ]
+    ]
+   ]
+  ],
+  "ve": [
+   [
+    "Cô",
+    "ONE, two, THREE, four, FIVE, six, SEV-en",
+    "一二三四五六七"
+   ],
+   [
+    "Lớp",
+    "EIGHT, nine, TEN! Let's COUNT a-GAIN!",
+    "八九十！再来一次！"
+   ],
+   [
+    "Lớp",
+    "___, ___, how MAN-y FRIENDS?",
+    "___，___，几个朋友？"
+   ],
+   [
+    "Con",
+    "TEN! Ten FRIENDS! HAND in HAND!",
+    "十个朋友，手拉手！"
+   ]
+  ]
+ },
+ "_ghi_chu": "Bản viết theo nguyên tắc 61–67, 10/11/2026 – chờ chị duyệt (claude/ThuNghiem_LS_U2U3_NguyenTacMoi.md, TruyenUnit_U9_BanMoi_NguyenTac61.md, TruyenUnit_U12_BanMoi_NguyenTac61.md)"
+}
