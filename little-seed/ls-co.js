@@ -21,7 +21,7 @@ async function viewCo() {
 }
 function coLogin(err) {
   coFrame(`<div class="co-login"><img src="../seedling/tai-nguyen/nhan-vat/huou_huou2_a.webp" alt=""><div><h3>Cô nhập mã PIN của lớp</h3>
-    <p>${API_ON ? 'Mã PIN đặt trong Apps Script (xem hướng dẫn).' : 'Bản xem thử: mã PIN là <b>2468</b>.'}</p>${err ? `<p class="co-err">${esc(err)}</p>` : ''}
+    <p>${API_ON ? 'Mã PIN của lớp nằm ở tab CaiDat trong Sheet quản lý.' : 'Bản xem thử: mã PIN là <b>2468</b>.'}</p>${err ? `<p class="co-err">${esc(err)}</p>` : ''}
     <div class="row"><input id="coPin" class="q-gate-in" type="password" inputmode="numeric" autocomplete="off" aria-label="Mã PIN"><button class="btn g" id="coPinOk" type="button">Vào bảng</button></div></div></div>`);
   const inp = document.getElementById('coPin'), go = () => { CO.pin = inp.value.trim(); try { sessionStorage.setItem('lsd-co-pin', CO.pin); } catch (e) {} viewCo(); };
   document.getElementById('coPinOk').onclick = go; inp.onkeydown = e => { if (e.key === 'Enter') go(); }; setTimeout(() => inp.focus(), 50);
@@ -37,7 +37,7 @@ function coDraw() {
       <span class="co-nm"><b>${esc(k.ten)}</b><small>Mã ${esc(k.id)}</small></span>
       <span class="co-num"><b>⭐ ${st.all}</b><small>cô thưởng ${st.co}</small></span>
       <span class="co-num"><b>${+k.ngay || 0}</b><small>ngày web</small></span>
-      <span class="co-last ${late ? 'late' : ''}">${coAgo(k.cuoi)}</span></label>`; }).join('');
+      <span class="co-last ${late ? 'late' : ''}">${coAgo(k.cuoi)}</span><button class="ls-b co-lk" data-lk="${esc(k.id)}" data-nm="${esc(k.ten)}" type="button" title="Chép link của con để gửi lại cho ba mẹ (khi con đổi máy)">🔗 Link</button></label>`; }).join('');
   const tabs = [['thuong', '⭐ Thưởng sao'], ['qua', `🎁 Quà chờ duyệt${pend.length ? ` (${pend.length})` : ''}`], ['them', '➕ Thêm học sinh']];
   let panel = '';
   if (CO.tab === 'thuong') {
@@ -56,7 +56,7 @@ function coDraw() {
   } else {
     panel = `<h4>Thêm học sinh vào lớp</h4><div class="row"><input id="coNew" class="co-in" placeholder="Tên của con, ví dụ: Minh An" maxlength="40"><button class="btn g" id="coAdd" type="button">Thêm</button></div>
       ${CO.newLink ? `<div class="co-link"><b>Gửi đường link này cho ba mẹ ${esc(CO.newLink.ten)}:</b><input class="co-in" id="coLinkTx" readonly value="${esc(CO.newLink.url)}"><button class="btn y sm" id="coCopy" type="button">Chép link</button><small>Ba mẹ mở link một lần trên máy của con. Hoặc nhập mã <b>${esc(CO.newLink.id)}</b> ở mục Ba mẹ.</small></div>` : ''}
-      <p class="q-hint">Mỗi con có một mã riêng. Web của con dùng mã này để nhận sao cô thưởng và gửi yêu cầu đổi quà.</p>`;
+      <p class="q-hint">Mỗi con có một mã riêng. Web dùng mã này để lưu bài con đã học lên lớp, nhận sao cô thưởng và gửi yêu cầu đổi quà. Con đổi máy thì cô bấm 🔗 Link cạnh tên con để gửi lại cho ba mẹ.</p>`;
   }
   coFrame(`<section class="co-left"><div class="co-lh"><h4>Lớp có ${kids.length} bạn</h4><button class="ls-b" id="coAll" type="button">${CO.sel.size === kids.length && kids.length ? 'Bỏ chọn' : 'Chọn cả lớp'}</button><button class="ls-b" id="coRe" type="button">↻ Tải lại</button></div>
       <div class="co-kids">${rows || '<p class="sx-demo">Lớp chưa có học sinh. Cô thêm ở thẻ "Thêm học sinh".</p>'}</div>
@@ -64,6 +64,9 @@ function coDraw() {
     <section class="co-right"><div class="q-tabs">${tabs.map(([k, n]) => `<button class="${CO.tab === k ? 'on' : ''}" data-t="${k}" type="button">${n}</button>`).join('')}</div><div class="co-panel">${panel}</div></section>`);
   CO.msg = '';
   app.querySelectorAll('.co-kid input').forEach(c => c.onchange = () => { c.checked ? CO.sel.add(c.dataset.id) : CO.sel.delete(c.dataset.id); coDraw(); });
+  app.querySelectorAll('[data-lk]').forEach(b => b.onclick = e => { e.preventDefault(); e.stopPropagation();
+    const url = location.href.split(/[?#]/)[0] + '?con=' + b.dataset.lk, done = () => toast('Đã chép link của ' + b.dataset.nm + '. Cô dán vào Zalo gửi ba mẹ.');
+    try { navigator.clipboard.writeText(url).then(done, () => prompt('Cô chép link này gửi ba mẹ:', url)); } catch (x) { prompt('Cô chép link này gửi ba mẹ:', url); } });
   document.getElementById('coAll').onclick = () => { if (CO.sel.size === kids.length) CO.sel.clear(); else kids.forEach(k => CO.sel.add(k.id)); coDraw(); };
   document.getElementById('coRe').onclick = async () => { await coLoad(); coDraw(); };
   app.querySelectorAll('.q-tabs button').forEach(b => b.onclick = () => { CO.tab = b.dataset.t; coDraw(); });

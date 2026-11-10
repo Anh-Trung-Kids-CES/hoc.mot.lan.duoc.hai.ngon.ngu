@@ -222,12 +222,12 @@ function parentPanel() { const ov = document.createElement('div'); ov.className 
       <li><b>Web không hiện chữ cho con</b><span>Con học bằng tranh và tiếng. Ba mẹ muốn xem chữ thì bấm nút “Ba mẹ xem chữ” ở góc màn bài.</span></li>
       <li><b>Làm sai vẫn đi tiếp</b><span>Câu con chưa đúng gặp lại ở cuối bài và được lưu vào Hộp ôn.</span></li></ol>
     <p><b>3 KHÔNG:</b> không ép nói, không sửa lỗi, không so sánh. Khen con khi con đang làm bài và khi con xong bài.</p>
-    <div class="sx-kidcode"><b>Nối web với lớp</b><span>${kidId() ? `Mã của con: <code>${esc(kidId())}</code>${API_ON ? '' : ' (bản xem thử)'}` : 'Ba mẹ mở đường link cô gửi qua Zalo, hoặc nhập mã cô đưa:'}</span>
+    <div class="sx-kidcode"><b>Nối web với lớp</b><span>${kidId() ? `Mã của con: <code>${esc(kidId())}</code>${API_ON ? '' : ' (bản xem thử)'}<small class="sx-cl">${esc(clStatus())} Con đổi sang máy khác: ba mẹ mở lại link cô gửi, hoặc nhập mã này ở máy mới, web tự lấy lại bài con đã học.</small>` : 'Ba mẹ mở đường link cô gửi qua Zalo, hoặc nhập mã cô đưa:'}</span>
       <div class="row"><input id="kidCodeIn" class="q-gate-in" placeholder="Mã của con" autocomplete="off"><button class="btn g sm" id="kidCodeOk" type="button">Lưu mã</button></div>
       <a class="sx-colink" href="#/co">Dành cho cô giáo: Bảng của cô →</a></div></div>`;
   document.body.appendChild(ov); const close = () => ov.remove(); ov.querySelector('.pp-x').onclick = close; ov.addEventListener('click', e => { if (e.target === ov || e.target.closest('a')) close(); });
   ov.querySelector('#kidCodeOk').onclick = () => { const v = ov.querySelector('#kidCodeIn').value.trim().toUpperCase().replace(/[^A-Z0-9]/g, ''); if (!v) return;
-    P.kidId = v; P.co = { awards: [], seen: {} }; save(); close(); toast('Đã lưu mã của con. Web đang lấy sao cô thưởng…'); coSync(true); }; }
+    clSwitch(v); close(); toast('Đã lưu mã của con. Web đang lấy bài và sao của con…'); clPull().then(() => coSync(true)); }; }
 function route() { if (!/^#\/reader/.test(location.hash)) RDR.auto = ''; stopAll(); if (!/^#\/(ngay|co)/.test(location.hash)) coSync(); document.querySelectorAll('.sx-pop').forEach(x => x.remove());
   if (!/^#\/ngay\/\d+\/b/.test(location.hash) && HEAD.on) HEAD.stop();
   const h = location.hash.replace(/^#\/?/, '').split('/');

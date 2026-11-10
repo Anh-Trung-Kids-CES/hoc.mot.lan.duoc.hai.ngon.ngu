@@ -159,7 +159,7 @@
 .co-left,.co-right{background:#fff;border:4px solid #E8DCC0;border-radius:24px;padding:14px;min-width:0}
 .co-lh{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px}.co-lh h4{margin:0 auto 0 0}
 .co-kids{display:flex;flex-direction:column;gap:8px}
-.co-kid{display:grid;grid-template-columns:28px minmax(0,1fr) 92px 70px 92px;align-items:center;gap:8px;border:3px solid #F0E6D0;border-radius:16px;padding:8px 10px;cursor:pointer}
+.co-kid{display:grid;grid-template-columns:28px minmax(0,1fr) 92px 70px 92px auto;align-items:center;gap:8px;border:3px solid #F0E6D0;border-radius:16px;padding:8px 10px;cursor:pointer}
 .co-kid.on{border-color:#3BB273;background:#F1FBF4}
 .co-kid input{width:22px;height:22px}
 .co-nm,.co-num{display:flex;flex-direction:column;min-width:0}.co-nm b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -186,7 +186,7 @@
 .sx-kidcode{display:flex;flex-direction:column;gap:6px;background:#F3F7FF;border-radius:14px;padding:10px 12px;margin-top:8px}
 .sx-kidcode code{font-weight:800;font-size:16px}.sx-colink{font-size:13px;font-weight:700;color:#2F6FD6}
 .sx-cols{list-style:none;padding:0;margin:6px 0;display:flex;flex-direction:column;gap:4px;font-size:17px}
-@media (max-width:860px){.co-body{grid-template-columns:1fr}.co-kid{grid-template-columns:24px minmax(0,1fr) 80px 70px}.co-last{grid-column:2/-1;font-size:12px}.co-login{flex-direction:column;text-align:center}}
+@media (max-width:860px){.co-body{grid-template-columns:1fr}.co-kid{grid-template-columns:24px minmax(0,1fr) 80px 70px}.co-last{grid-column:2/4;font-size:12px}.co-lk{grid-column:4/5}.co-login{flex-direction:column;text-align:center}}
 .sx-cele .ls-cele-img.sx-coimg{height:170px;width:auto;object-fit:contain;margin:0 auto}
 /* reader */
 .rdscr .q-top{flex-wrap:wrap}
@@ -205,3 +205,5 @@
 .rd-nav{display:flex;gap:10px;flex-wrap:wrap}
 .rd-dots{display:flex;gap:6px;justify-content:center;margin:12px 0}.rd-dots button{width:14px;height:14px;border-radius:50%;border:none;background:#E8DCC0}.rd-dots button.on{background:#1FA5A0}
 @media (max-width:760px){.rd-book{grid-template-columns:1fr}.rd-pic{min-height:200px}.rd-pic img{max-height:34vh}.rd-line{font-size:21px}.rd-line.zh b{font-size:24px}}
+/* lưu tiến độ lên lớp (10/11) */
+.co-lk{padding:4px 8px;font-size:12px;white-space:nowrap}.sx-kidcode .sx-cl{display:block;margin-top:4px;font-size:12px;line-height:1.4;color:#5A6478}

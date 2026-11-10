@@ -18,7 +18,7 @@ Web tự học cho lớp Little Seed offline 48 buổi của Anh – Trung – K
 - Không hiện chữ cho con (con chưa đọc): chỉ tranh và tiếng. Cô thêm `?gv=1` hoặc ba mẹ bấm "Ba mẹ xem chữ" thì thấy chữ (`ls48.js`, `ls48.css`).
 - Mỗi ngày ≤5 bước, mỗi bài 5–10 câu (thứ tự ở mục trên). Ngày cả truyện: Nghe cả truyện → Ai nói? / Nói câu của các bạn / Phiên dịch nhí → Big book và vè → Gọi lại hoặc Vận động. Không có Mẹo âm, Dạng đề.
 - Cô giáo trong truyện là cô Hươu (cô giáo của web 21 ngày Little Seed).
-- Tiến độ lưu riêng (khoá `lsd-…`), không lẫn với Seedling trên cùng máy.
+- Tiến độ lưu riêng (khoá `lsd-…`), không lẫn với Seedling trên cùng máy, và gửi lên Google Sheet quản lý lớp để con đổi máy không mất bài (máy chủ dùng chung với Seedling: `apps-script/lop-offline-48/`, cách bật ở `HUONG-DAN.md`; link /exec dán vào `SDL_API` trong `ls-may-chu.js`).
 - Mã code: `ls-*.js` là bản chép của `seedling-*.js`, đổi đường dẫn tranh/giọng sang `../seedling/tai-nguyen/` và đổi chữ hiển thị.
 
 ## Kiểm tra

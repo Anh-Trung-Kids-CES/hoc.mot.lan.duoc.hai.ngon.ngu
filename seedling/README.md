@@ -57,3 +57,6 @@ Xem `CAN-BO-SUNG.md`: 78 từ chức năng / trừu tượng (yes, what, can, to
 - Truyện khung mới 6 phần "The Picnic · 真好吃！" theo nguyên tắc mục I (khung hỏi – đáp, câu cuối hỏi con), big book "I like ___ / I don't like ___", vè đếm: `chuong-trinh/cong-cu/khung/grid/mang/mau_seedling48_u9.json`.
 - `cong-cu/ap_mang_u9.py` sửa ngày 64–71 ngay trong `seedling-data.js` (chạy SAU build.py): thay truyện, thay bài luyện rời Chạm/Nghe – chạm tranh bằng bước "Big book và vè", dựng lại Nói theo, Phiên dịch nhí, Trả lời câu hỏi; Reader U9. Tranh ghép: `tai-nguyen/canh/u9/`.
 - Câu chưa có giọng thu: `cong-cu/giong_thieu_u9.json` (đang đọc bằng giọng máy).
+
+## Máy chủ lớp (10/11/2026)
+Tiến độ của con, sao cô thưởng và phiếu quà lưu trên Google Sheet quản lý lớp, dùng chung với Little Seed: mã ở `apps-script/lop-offline-48/Code.gs`, cách bật ở `apps-script/lop-offline-48/HUONG-DAN.md`. Link /exec dán vào `SDL_API` trong `seedling-may-chu.js`. Để trống thì web chạy bản xem thử (dữ liệu trên máy, PIN 2468).

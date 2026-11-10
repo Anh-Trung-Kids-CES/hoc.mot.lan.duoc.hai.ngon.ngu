@@ -106,7 +106,7 @@ function afterSpeak(how) { return hd(how === 'rec' ? 'speak' : how === 'quiet' ?
 
 /* ---------- tiến độ (lưu trên máy này) ---------- */
 let P = sget('sdl-progress', { days: {}, stars: 0, hop: {} });
-function save() { sset('sdl-progress', P); updStars(); }
+function save() { P._t = Date.now(); sset('sdl-progress', P); updStars(); if (typeof clSoon === 'function') clSoon(); }
 function dayState(n) { return P.days[n] = P.days[n] || { steps: {}, done: false }; }
 function updStars() { const el = document.getElementById('starCount'); if (el) el.textContent = '⭐ ' + (typeof qEarned === 'function' ? qEarned() : (P.stars || 0)); }
 function hopAdd(u) { if (!u || !u.t) return; const k = u.l + ':' + u.t; const h = P.hop[k] = P.hop[k] || { t: u.t, l: u.l, a: u.a || '', py: u.py || '', n: 0 }; h.n++; save(); }
@@ -431,12 +431,12 @@ function parentPanel() { const ov = document.createElement('div'); ov.className 
       <li><b>Chữ gạch chân là từ con chưa học</b><span>Con chạm để nghe, có pinyin và nghĩa tiếng Anh. Con không cần nói những từ này.</span></li>
       <li><b>Làm sai vẫn đi tiếp</b><span>Câu con chưa đúng sẽ gặp lại ở cuối bài và được lưu vào Hộp ôn.</span></li></ol>
     <p><b>3 KHÔNG:</b> không ép nói, không sửa lỗi, không so sánh. Khen con khi con đang làm bài và khi con xong bài.</p>
-    <div class="sx-kidcode"><b>Nối web với lớp</b><span>${kidId() ? `Mã của con: <code>${esc(kidId())}</code>${API_ON ? '' : ' (bản xem thử)'}` : 'Ba mẹ mở đường link cô gửi qua Zalo, hoặc nhập mã cô đưa:'}</span>
+    <div class="sx-kidcode"><b>Nối web với lớp</b><span>${kidId() ? `Mã của con: <code>${esc(kidId())}</code>${API_ON ? '' : ' (bản xem thử)'}<small class="sx-cl">${esc(clStatus())} Con đổi sang máy khác: ba mẹ mở lại link cô gửi, hoặc nhập mã này ở máy mới, web tự lấy lại bài con đã học.</small>` : 'Ba mẹ mở đường link cô gửi qua Zalo, hoặc nhập mã cô đưa:'}</span>
       <div class="row"><input id="kidCodeIn" class="q-gate-in" placeholder="Mã của con" autocomplete="off"><button class="btn g sm" id="kidCodeOk" type="button">Lưu mã</button></div>
       <a class="sx-colink" href="#/co">Dành cho cô giáo: Bảng của cô →</a></div></div>`;
   document.body.appendChild(ov); const close = () => ov.remove(); ov.querySelector('.pp-x').onclick = close; ov.addEventListener('click', e => { if (e.target === ov || e.target.closest('a')) close(); });
   ov.querySelector('#kidCodeOk').onclick = () => { const v = ov.querySelector('#kidCodeIn').value.trim().toUpperCase().replace(/[^A-Z0-9]/g, ''); if (!v) return;
-    P.kidId = v; P.co = { awards: [], seen: {} }; save(); close(); toast('Đã lưu mã của con. Web đang lấy sao cô thưởng…'); coSync(true); }; }
+    clSwitch(v); close(); toast('Đã lưu mã của con. Web đang lấy bài và sao của con…'); clPull().then(() => coSync(true)); }; }
 const WORLD = { stops: [[20.28, 96.29], [26.93, 94.11], [33.62, 92.39], [52.45, 68.41], [47.38, 60.7], [41.17, 55.95], [42.34, 25.86], [48.8, 22.33], [55.54, 21.54]],
   lop: [[44.5, 85.5], [36.5, 45.5], [64.5, 22.5]], boards: [[15.6, 90.8], [43.8, 63], [46, 10]],
   poly: [[13.81, 98.83], [20.28, 96.29], [26.93, 94.11], [33.62, 92.39], [40.21, 89.7], [46.67, 86.19], [52.18, 79.52], [52.45, 68.41], [47.38, 60.7], [41.17, 55.95], [35.16, 50.54], [32.5, 40.18], [36.28, 30.51], [42.34, 25.86], [48.8, 22.33], [55.54, 21.54], [62.28, 22.23], [68.88, 24.83]] };
