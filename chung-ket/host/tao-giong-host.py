@@ -24,7 +24,7 @@ DICH = {"en": 1.9, "zh": 2.6}   # chậm rãi để trẻ dễ nghe, host dễ b
 CHAM_NHAT = 0.75                # không kéo chậm quá mức này để giọng không bị méo
 sys.path.insert(0, str(HERE.parent.parent / "lop-zoom" / "tao-tai-nguyen"))
 MODEL = "gemini-3.8-flash-tts"   # cùng mô hình đã thu giọng web học
-VOICE = "Laomedeia"              # giọng nữ, tươi vui, hào hứng (10/11: chị chọn giọng nữ; 98 câu đầu thu bằng Puck)
+VOICE = "Laomedeia"              # giọng nữ, tươi vui, hào hứng (10/11: chị chọn giọng nữ, cả 220 câu)
 
 
 def lines():
