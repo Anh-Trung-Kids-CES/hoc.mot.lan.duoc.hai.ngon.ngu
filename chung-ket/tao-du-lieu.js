@@ -29,6 +29,8 @@ function au(t) { if (!AUD[t]) { miss.push('giọng: ' + t); return ''; } return 
 /* tranh của từ: dùng bản _l1 (tranh dạy trong bài, thế giới của Bông, đúng như doc mô tả: nến, album ảnh nhà Bông…);
    he / she dùng bản _l3 (bạn trai, bạn gái) vì bản _l1 trùng với tranh ông, bà trong album */
 const VAR = { he: '_l3', she: '_l3' };
+/* số đếm: bản _l1 là cùng một bánh sinh nhật, số nến khó đếm → dùng bản _l2 (quả táo), đếm rõ */
+['one', 'two', 'three', 'four', 'five', 'six'].forEach(k => VAR[k] = '_l2');
 function pv(p, en) { return VAR[en] ? p.replace(/_l1\.webp$/, VAR[en] + '.webp') : p; }
 
 /* ---------- ngân hàng từ, cụm, câu ---------- */
