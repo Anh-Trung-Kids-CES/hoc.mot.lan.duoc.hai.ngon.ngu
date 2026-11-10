@@ -101,3 +101,14 @@ select{width:auto;display:inline-block}
 .gi.ok{border-color:var(--green)}.gi.no{border-color:var(--red)}
 .gi audio{height:32px}
 @media (max-width:600px){.ln.big{font-size:22px}.sit{font-size:19px}#who{margin-left:0}}
+
+/* lần nào cũng mở, ô chọn câu, lời khen (11/2026) */
+.lan.chon{border:2px solid var(--red)}
+.lan .col{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+.lan .col .btn{width:100%}
+.pick{display:inline-flex;align-items:center;gap:6px;cursor:pointer;font-weight:600}
+.pick input{width:20px;height:20px;accent-color:var(--red);margin:0}
+.weak .lg{font-size:12px}
+.praise{background:var(--green-soft);border-left:4px solid var(--green);border-radius:10px;padding:8px 12px;margin:8px 0}
+.praise b{color:var(--green)}
+.praise p{margin:4px 0 0}

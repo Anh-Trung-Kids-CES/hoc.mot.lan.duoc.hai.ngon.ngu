@@ -32,6 +32,7 @@ const LS_KEY = 'hostck_v2';
 const PASS = { nd: 85, pa: 75, td: 75 };      // luyện từng câu
 const TPASS = { pa: 65, td: 60 };             // kiểm tra tình huống (đúng câu là chính)
 const SLOW = 5;                               // giây: phản xạ chậm
+const KHEN = 80;                              // điểm trên mức này thì khen
 
 /* ======================= tiện ích ======================= */
 const $ = (s, r) => (r || document).querySelector(s);
@@ -312,11 +313,53 @@ async function simCham(p) {
     loi: good ? [] : [{ tu: p.lang === 'zh' ? '准备 zhǔnbèi' : 'ready', van_de: 'Giả lập: âm đầu chưa rõ' }], nhan_xet: good ? 'Giả lập: nói rõ, tự tin.' : 'Giả lập: cần nói rõ hơn.' };
 }
 
+/* ======================= lời khen =======================
+   Nguyên tắc khen người lớn: chỉ khen khi thật sự tốt (trên KHEN điểm); nói cụ thể điều làm tốt và con số;
+   so với chính mình trước đó, không so với người khác; ghi nhận cách luyện (nghe mẫu, nói lại); nói ý nghĩa với
+   buổi dẫn; mức lời khen tương xứng với kết quả, không phóng đại; tách riêng với phần góp ý, không nối bằng "nhưng". */
+const pick1 = a => a[Math.floor(Math.random() * a.length)];
+function strengthOf(r, lang) {
+  if (!r || r.chrome) return r && r.noi_dung >= 85 ? 'Máy nghe đúng đủ các từ trong câu.' : '';
+  const td = lang === 'zh' ? r.thanh_dieu : -1, pa = r.phat_am, nh = r.nhip, nd = r.noi_dung;
+  if (td >= 85) return pick1([`Thanh điệu ${td} điểm: các thanh trong câu bạn giữ đúng và rõ.`, `Thanh điệu đạt ${td} điểm, phần dễ sai nhất của tiếng Trung bạn đã nói chuẩn.`]);
+  if (pa >= 85) return pick1([`Phát âm ${pa} điểm: từng âm trong câu nghe rõ ràng.`, `Phát âm đạt ${pa} điểm, người nghe nhận ra từng từ dễ dàng.`]);
+  if (nh >= 85) return pick1([`Ngữ điệu ${nh} điểm: giọng có năng lượng, hợp không khí chương trình của các bé.`, `Ngữ điệu đạt ${nh} điểm, giọng dẫn tươi và có sức cuốn.`]);
+  if (nd >= 85) return 'Bạn nói đủ và đúng từng từ của câu.';
+  return '';
+}
+function praiseBox(lines) { lines = lines.filter(Boolean); return lines.length ? `<div class="praise"><b>Điểm làm tốt</b>${lines.map(l => `<p>${l}</p>`).join('')}</div>` : ''; }
+function praisePractice(sc, r, it, prev, ok) {
+  if (sc <= KHEN) return '';
+  let tienBo = '';
+  if (!prev.n) tienBo = `Đạt ${sc} điểm ngay lần nói đầu tiên.`;
+  else if (prev.first != null && sc - prev.first >= 10 && prev.n >= 1) tienBo = pick1([`Từ ${prev.first} điểm ở lần đầu lên ${sc} điểm sau ${prev.n + 1} lượt: việc nghe mẫu rồi nói lại đang có tác dụng.`, `Lần đầu ${prev.first} điểm, giờ ${sc} điểm (+${sc - prev.first}) sau ${prev.n + 1} lượt luyện.`]);
+  else if (sc > prev.best) tienBo = `Cao hơn điểm tốt nhất trước đó ${sc - prev.best} điểm (${prev.best} → ${sc}).`;
+  else tienBo = `Bạn giữ được mức trên ${KHEN} điểm ở câu này (cao nhất ${prev.best}).`;
+  const yNghia = ok ? (it.l.star ? 'Câu ★ này đã sẵn sàng để dùng khi dẫn.' : 'Câu này đã đạt chuẩn luyện.') : '';
+  return praiseBox([strengthOf(r, it.lang), tienBo, yNghia]);
+}
+function praiseTestItem(x, r) {
+  if (!x.ok || x.sc <= KHEN) return '';
+  /* trong bài kiểm tra chỉ khen một dòng, để không lặp lại ở mọi câu */
+  const nhanh = x.rt != null && x.rt <= 3 ? `Bạn bắt đầu nói sau ${x.rt} giây: phản xạ đủ nhanh để dẫn trực tiếp.` : '';
+  return praiseBox([nhanh || strengthOf(r, x.lang)]);
+}
+function praiseTest(t) {
+  if (t.pct <= KHEN) return '';
+  const truoc = S.tests.filter(x => x.lan === t.lan && x.id !== t.id).pop();
+  const nhanh = t.n - t.slow;
+  return praiseBox([
+    `Bạn chọn đúng câu cần nói ở ${t.nOk === t.n ? 'mọi' : 'hầu hết các'} tình huống, kể cả khi đề đổi cách hỏi và đổi tiếng.`,
+    truoc && t.pct > truoc.pct ? `Tăng ${t.pct - truoc.pct} điểm phần trăm so với bài trước của lần này (${truoc.pct}% → ${t.pct}%).` : '',
+    nhanh >= Math.ceil(t.n * 0.8) ? `${nhanh}/${t.n} câu bạn bắt đầu nói trong vòng ${SLOW} giây.` : '',
+    t.pass ? `Đủ chuẩn ${t.lan >= HOST_LAN.length ? 'tổng duyệt' : 'qua ' + esc(lanCfg(t.lan).ten)}.` : ''
+  ]);
+}
+
 /* ======================= lộ trình ======================= */
 function lanCfg(L) { return HOST_LAN[L - 1] || HOST_LAN[HOST_LAN.length - 1]; }
 function lastTest() { return S.tests.length ? S.tests[S.tests.length - 1] : null; }
-function ensureNeed() {
-  const L = S.lan; if (S.need[L]) return;
+function needFor(L) {
   let ks;
   if (L === 1) ks = KEYS.filter(k => HOST_LINES[k.split('|')[0]].star);
   else if (L === 2) ks = KEYS.filter(k => { const r = S.it[k]; return !r || !r.pass || r.best < 85; });
@@ -325,9 +368,14 @@ function ensureNeed() {
     if (t) t.items.filter(x => x.ok === false).forEach(x => HOST_SIT[x.si].ok.forEach(c => fail.add(c + '|' + x.lang)));
     ks = KEYS.filter(k => { const r = S.it[k]; return !r || !r.pass || r.best < 85 || fail.has(k); });
   }
-  S.need[L] = ks; save();
+  return ks;
 }
-function needLeft() { const L = S.lan; return (S.need[L] || []).filter(k => !(S.it[k] && S.it[k].lp >= L)); }
+function ensureNeed(L) { L = L || S.lan; if (S.need[L]) return; S.need[L] = needFor(L); save(); }
+/* lần nào cũng mở: host chọn lần muốn tập, lần đó thành "lần đang chọn" */
+function chooseLan(L) { S.lan = L; ensureNeed(L); save(); }
+function needLeft(L) { L = L || S.lan; return (S.need[L] || needFor(L)).filter(k => !(S.it[k] && S.it[k].lp >= L)); }
+/* điểm lần nói đầu tiên của một câu (dữ liệu cũ chưa có thì lấy lượt cũ nhất còn lưu) */
+function firstOf(o) { return !o || !o.n ? null : o.first != null ? o.first : (o.h && o.h.length ? o.h[0].sc : o.best); }
 function practiced(s) { return KEYS.filter(k => s.it[k] && s.it[k].n).sort((a, b) => ((s.it[b].fb || {}).at || 0) - ((s.it[a].fb || {}).at || 0)); }
 function masteredCount() { return KEYS.filter(k => S.it[k] && S.it[k].pass).length; }
 
@@ -377,7 +425,7 @@ function finishTest(t) {
   S.cur = null;
   if (t.pass) {
     if (t.lan >= HOST_LAN.length) S.ready = true;
-    else { S.lan = t.lan + 1; ensureNeed(); }
+    else if (!S.tests.some(x => x.lan === t.lan + 1 && x.pass)) { S.lan = t.lan + 1; ensureNeed(); }
   }
   save();
 }
@@ -436,38 +484,60 @@ function viewLogin(msg) {
 /* ---------- lộ trình ---------- */
 function viewHome() {
   nav('lo-trinh'); ensureNeed();
-  const L = S.lan, left = needLeft(), need = S.need[L] || [];
+  const L = S.lan;
   const cards = HOST_LAN.map(c => {
     const ts = S.tests.filter(t => t.lan === c.lan);
     const passT = ts.find(t => t.pass);
-    const st = passT ? 'xong' : c.lan === L && !S.ready ? 'dang' : c.lan < L || S.ready ? 'xong' : 'khoa';
+    const chon = c.lan === L;
+    const st = passT ? 'xong' : chon ? 'dang' : '';
     const hist = ts.map(t => `<span class="chip ${t.pass ? 'ok' : 'no'}">${t.pct}%</span>`).join(' ');
-    let body = `<p>${esc(c.mo)}</p>`;
-    if (st === 'dang') {
-      const pct = need.length ? Math.round(100 * (need.length - left.length) / need.length) : 100;
-      body += `<div class="bar"><i style="width:${pct}%"></i></div>
-        <p class="muted">Câu cần luyện đạt: <b>${need.length - left.length}/${need.length}</b>${left.length ? '' : ' · đã đủ, làm bài kiểm tra được rồi'}</p>
-        <div class="row">${left.length ? `<button class="btn" data-go="luyen">Luyện tiếp (${left.length} câu)</button>` : ''}
-        <button class="btn ${left.length ? 'ghost' : ''}" id="lamBai" ${left.length ? 'disabled title="Luyện đạt các câu cần luyện trước"' : ''}>${S.cur ? 'Làm tiếp bài kiểm tra' : ts.length ? 'Làm lại bài kiểm tra (đề mới)' : 'Làm bài kiểm tra'}</button></div>`;
-    }
-    return `<article class="lan ${st}"><header><h3>${esc(c.ten)}</h3><span class="tag">${st === 'xong' ? 'Đã qua' : st === 'dang' ? 'Đang luyện' : 'Chưa mở'}</span></header>
-      ${body}${hist ? `<p class="muted">Các lần làm bài (cần ${c.pass}%): ${hist}</p>` : ''}</article>`;
+    const need = S.need[c.lan] || needFor(c.lan), left = needLeft(c.lan);
+    const pct = need.length ? Math.round(100 * (need.length - left.length) / need.length) : 100;
+    const dangLam = S.cur && S.cur.lan === c.lan;
+    return `<article class="lan ${st}${chon ? ' chon' : ''}"><header><h3>${esc(c.ten)}</h3><span class="tag">${passT ? 'Đã qua' : chon ? 'Đang chọn' : ts.length ? 'Đã làm' : 'Mở'}</span></header>
+      <p>${esc(c.mo)}</p>
+      <div class="bar"><i style="width:${pct}%"></i></div>
+      <p class="muted">Câu của lần này đã luyện đạt: <b>${need.length - left.length}/${need.length}</b></p>
+      <div class="col">
+        <button class="btn${left.length ? '' : ' ghost'}" data-lan-luyen="${c.lan}">${left.length ? `Luyện câu (${left.length} câu chưa đạt)` : 'Ôn lại câu của lần này'}</button>
+        <button class="btn ghost" data-lan-test="${c.lan}">${dangLam ? 'Làm tiếp bài kiểm tra' : ts.length ? 'Làm bài kiểm tra (đề mới)' : 'Làm bài kiểm tra'} · ${c.n} tình huống</button>
+      </div>
+      ${hist ? `<p class="muted">Các lần làm bài (cần ${c.pass}%): ${hist}</p>` : ''}</article>`;
   }).join('');
-  const weak = KEYS.filter(k => S.it[k] && S.it[k].n).sort((a, b) => S.it[a].best - S.it[b].best).slice(0, 8);
+  /* câu điểm thấp: chỉ câu đã luyện mà chưa vững, thấp nhất lên đầu */
+  const weak = KEYS.filter(k => S.it[k] && S.it[k].n && (!S.it[k].pass || S.it[k].best < 85)).sort((a, b) => S.it[a].best - S.it[b].best).slice(0, 15);
+  /* tiến bộ: câu đã tăng từ 10 điểm so với lần nói đầu */
+  const up = KEYS.filter(k => S.it[k] && S.it[k].n > 1 && S.it[k].best - firstOf(S.it[k]) >= 10).sort((a, b) => (S.it[b].best - firstOf(S.it[b])) - (S.it[a].best - firstOf(S.it[a])));
+  const progChip = k => { const o = S.it[k], f = firstOf(o), d = o.best - f; return o.n > 1 && d > 0 ? `<span class="chip ok">lần đầu ${f} → ${o.best} (+${d})</span>` : `<span class="chip">${o.n} lượt</span>`; };
   app().innerHTML = `
-    ${S.ready ? `<section class="card ready"><h2>Sẵn sàng lên sóng</h2><p>Bạn đã qua cả 4 lần luyện. Trước giờ diễn, nghe lại các câu ★ một lượt và ôn các câu bên dưới.</p></section>` : ''}
+    ${S.ready ? `<section class="card ready"><h2>Sẵn sàng lên sóng</h2><p>Bạn đã qua Lần 4 · Tổng duyệt. Trước giờ diễn, nghe lại các câu ★ một lượt và ôn các câu bên dưới.</p></section>` : ''}
     <section class="card"><h2>Chào ${esc(S.ten)}</h2>
-      <p class="muted">Đã luyện đạt <b>${masteredCount()}/${KEYS.length}</b> câu (mỗi câu tính riêng tiếng Anh và tiếng Trung). Mỗi lần làm bài kiểm tra là một đề mới: tình huống, cách hỏi và tiếng được đổi so với lần trước.</p>
+      <p class="muted">Đã luyện đạt <b>${masteredCount()}/${KEYS.length}</b> câu (mỗi câu tính riêng tiếng Anh và tiếng Trung). Cả 4 lần đều mở: bạn chọn lần muốn tập, luyện câu hoặc làm bài kiểm tra theo thứ tự nào cũng được. Mỗi lần làm bài kiểm tra là một đề mới.</p>
       ${!HOST_API && !MOCK ? `<p class="msg note">Máy chấm AI chưa bật: điểm hiện tại là chấm tạm bằng máy nhận giọng của Chrome.</p>` : ''}</section>
     <div class="lans">${cards}</div>
-    ${weak.length ? `<section class="card"><h3>Câu điểm thấp nhất của bạn</h3><ul class="weak">${weak.map(k => { const it = itemOf(k); return `<li><span class="code">${it.c}</span> ${lineHtml(it.c, it.lang)} <span class="chip">${S.it[k].best}</span> <button class="btn ghost sm" data-luyen="${k}">Luyện</button></li>`; }).join('')}</ul></section>` : ''}`;
-  const lb = $('#lamBai'); if (lb) lb.onclick = () => go('kiem-tra');
+    ${weak.length ? `<section class="card"><div class="row between"><h3>Câu điểm thấp của bạn</h3>
+        <label class="pick"><input type="checkbox" id="chonHet"> Chọn tất cả</label></div>
+      <p class="muted sm">Đánh dấu những câu muốn luyện lại, rồi bấm nút bên dưới. Điểm mới cao hơn sẽ được ghi nhận ngay.</p>
+      <ul class="weak">${weak.map(k => { const it = itemOf(k); return `<li><label class="pick"><input type="checkbox" data-chon="${k}"></label><span class="code">${it.c}</span> <span class="lg ${it.lang}">${LANG[it.lang].b}</span> ${lineHtml(it.c, it.lang)} <span class="chip no">cao nhất ${S.it[k].best}</span> ${progChip(k)} <button class="btn ghost sm" data-luyen="${k}">Luyện</button></li>`; }).join('')}</ul>
+      <div class="row"><button class="btn" id="luyenChon" disabled>Luyện lại các câu đã chọn (0)</button></div></section>`
+      : practiced(S).length ? `<section class="card"><h3>Câu điểm thấp của bạn</h3><p class="muted">Các câu bạn đã luyện đều đạt từ 85 điểm.</p></section>` : ''}
+    ${up.length ? `<section class="card"><h3>Tiến bộ đã ghi nhận</h3>
+      <p class="muted"><b>${up.length}</b> câu đã tăng từ 10 điểm trở lên so với lần nói đầu tiên.</p>
+      <ul class="weak">${up.slice(0, 10).map(k => { const it = itemOf(k), o = S.it[k], f = firstOf(o); return `<li><span class="code">${it.c}</span> <span class="lg ${it.lang}">${LANG[it.lang].b}</span> ${lineHtml(it.c, it.lang)} <span class="chip ok">${f} → ${o.best} (+${o.best - f})</span> <span class="muted sm">sau ${o.n} lượt</span></li>`; }).join('')}</ul></section>` : ''}`;
+  $$('[data-lan-luyen]').forEach(b => b.onclick = () => { chooseLan(+b.dataset.lanLuyen); LQ = { list: [], i: 0, filter: 'need' }; go('luyen', 'reset'); });
+  $$('[data-lan-test]').forEach(b => b.onclick = () => { chooseLan(+b.dataset.lanTest); go('kiem-tra'); });
   $$('[data-luyen]').forEach(b => b.onclick = () => go('luyen', { only: [b.dataset.luyen] }));
+  const boxes = $$('[data-chon]'), lc = $('#luyenChon'), all = $('#chonHet');
+  const upd = () => { const n = boxes.filter(b => b.checked).length; if (lc) { lc.disabled = !n; lc.textContent = `Luyện lại các câu đã chọn (${n})`; } if (all) all.checked = n && n === boxes.length; };
+  boxes.forEach(b => b.onchange = upd);
+  if (all) all.onchange = () => { boxes.forEach(b => b.checked = all.checked); upd(); };
+  if (lc) lc.onclick = () => go('luyen', { chon: boxes.filter(b => b.checked).map(b => b.dataset.chon) });
 }
 
 /* ---------- luyện từng câu ---------- */
 let LQ = { list: [], i: 0, filter: 'need' };
 function practiceList(filter) {
+  if (filter === 'chon') return (LQ.chon || []).slice();
   if (filter === 'need') { const l = needLeft(); return l.length ? l : KEYS.slice(); }
   if (filter === 'yeu') return KEYS.filter(k => !S.it[k] || !S.it[k].pass || S.it[k].best < 85);
   if (filter === 'all') return KEYS.slice();
@@ -475,17 +545,18 @@ function practiceList(filter) {
 }
 function viewLuyen(arg) {
   nav('luyen'); ensureNeed();
-  if (arg && arg.only) { LQ = { list: arg.only.concat(practiceList('need').filter(k => !arg.only.includes(k))), i: 0, filter: 'need' }; }
+  if (arg && arg.chon) { LQ = { list: arg.chon.slice(), i: 0, filter: 'chon', chon: arg.chon.slice(), base: Object.fromEntries(arg.chon.map(k => [k, S.it[k] ? S.it[k].best : 0])) }; }
+  else if (arg && arg.only) { LQ = { list: arg.only.concat(practiceList('need').filter(k => !arg.only.includes(k))), i: 0, filter: 'need', chon: LQ.chon, base: LQ.base }; }
   else if (!LQ.list.length || arg === 'reset') LQ = { list: practiceList(LQ.filter), i: 0, filter: LQ.filter };
   const left = needLeft();
-  const opts = [['need', `Câu cần luyện lần ${S.lan} (${left.length})`], ['yeu', 'Câu chưa vững'], ['all', 'Tất cả câu']].concat(HOST_SEC.map(s => [s.id, s.n]));
+  const opts = (LQ.chon && LQ.chon.length ? [['chon', `Câu bạn đã chọn (${LQ.chon.length})`]] : []).concat([['need', `Câu chưa đạt của ${lanCfg(S.lan).ten} (${left.length})`], ['yeu', 'Câu chưa vững'], ['all', 'Tất cả câu']]).concat(HOST_SEC.map(s => [s.id, s.n]));
   app().innerHTML = `<section class="card">
       <div class="row between"><h2>Luyện từng câu</h2>
       <select id="loc">${opts.map(([v, n]) => `<option value="${v}"${LQ.filter === v ? ' selected' : ''}>${esc(n)}</option>`).join('')}</select></div>
       <p class="muted">Bấm <b>Nghe mẫu</b>, rồi bấm <b>Nói</b> (hoặc phím cách) và nói câu. Máy tự dừng khi bạn ngừng nói. Đạt khi: đúng câu, phát âm từ ${PASS.pa}${''} và thanh điệu tiếng Trung từ ${PASS.td} điểm.</p>
     </section>
     <section class="card practice" id="pc"></section>
-    <section class="card"><h3>Danh sách (${LQ.list.length} câu)</h3><div class="qlist" id="ql"></div></section>`;
+    <section class="card"><h3>Danh sách (${LQ.list.length} câu)</h3><p class="muted" id="qprog"></p><div class="qlist" id="ql"></div></section>`;
   $('#loc').onchange = e => { LQ.filter = e.target.value; LQ.list = practiceList(LQ.filter); LQ.i = 0; viewLuyen(); };
   drawQList(); drawPractice();
 }
@@ -495,6 +566,13 @@ function statusChip(k) {
   return `<span class="chip ${r.pass ? 'ok' : 'no'}">${r.pass ? 'Đạt' : 'Chưa đạt'} · ${r.best}</span>`;
 }
 function drawQList() {
+  const qp = $('#qprog');
+  if (qp) {
+    if (LQ.filter === 'chon' && LQ.base) {
+      const ks = LQ.chon.filter(k => S.it[k] && S.it[k].best > (LQ.base[k] || 0));
+      qp.innerHTML = ks.length ? `Đã nâng điểm <b>${ks.length}/${LQ.chon.length}</b> câu so với lúc chọn: ${ks.map(k => `<span class="chip ok">${itemOf(k).c} ${LANG[itemOf(k).lang].b}: ${LQ.base[k]} → ${S.it[k].best}</span>`).join(' ')}` : `Bạn đang luyện lại ${LQ.chon.length} câu đã chọn. Điểm cao hơn lúc chọn sẽ hiện ở đây.`;
+    } else qp.innerHTML = '';
+  }
   $('#ql').innerHTML = LQ.list.map((k, i) => { const it = itemOf(k); return `<button class="qi${i === LQ.i ? ' on' : ''}" data-qi="${i}"><span class="code">${it.c}</span><span class="lg ${it.lang}">${LANG[it.lang].b}</span><span class="t">${lineHtml(it.c, it.lang)}</span>${statusChip(k)}</button>`; }).join('');
   $$('[data-qi]').forEach(b => b.onclick = () => { LQ.i = +b.dataset.qi; drawQList(); drawPractice(); $('#pc').scrollIntoView({ behavior: 'smooth' }); });
 }
@@ -550,12 +628,14 @@ async function practiceSay(k) {
   const r = await chamBanGhi(rec, { lang: it.lang, codes: [it.c], mode: 'luyen' });
   const sc = composite(r, it.lang), ok = practicePass(r, it.lang);
   const o = S.it[k] || { best: 0, last: 0, n: 0, lp: 0, pass: false };
+  const prev = { n: o.n, best: o.best, first: firstOf(o) };
+  if (o.first == null) o.first = o.n ? prev.first : sc;
   o.n++; o.last = sc; o.best = Math.max(o.best, sc); o.fb = Object.assign({}, r, { at: Date.now() });
   o.h = (o.h || []).concat([{ sc, ok, at: Date.now() }]).slice(-5);
   if (ok) { o.pass = true; o.lp = Math.max(o.lp || 0, S.lan); }
   S.it[k] = o; save();
   if (!$('#res')) return;
-  $('#res').innerHTML = `<p class="verdict ${ok ? 'ok' : 'no'}">${ok ? '✓ Đạt' : '✗ Chưa đạt – nghe mẫu và nói lại'} · <b>${sc}</b> điểm</p>${feedbackHtml(r, it.lang)}`;
+  $('#res').innerHTML = `<p class="verdict ${ok ? 'ok' : 'no'}">${ok ? '✓ Đạt' : '✗ Chưa đạt – nghe mẫu và nói lại'} · <b>${sc}</b> điểm</p>${praisePractice(sc, r, it, prev, ok)}${feedbackHtml(r, it.lang)}`;
   drawQList();
   if (ok) $('#next').classList.add('pulse');
 }
@@ -565,14 +645,10 @@ let TV = null;   // bài đang làm (có cả bản ghi chưa lưu)
 function viewTest() {
   nav('kiem-tra'); ensureNeed();
   const left = needLeft(), cfg = lanCfg(S.lan);
-  if (S.ready && !S.cur) {
-    app().innerHTML = `<section class="card ready"><h2>Bạn đã qua cả 4 lần</h2><p>Bạn vẫn có thể làm thêm một đề mới để giữ phản xạ.</p><button class="btn" id="them">Làm thêm một đề</button></section>`;
-    $('#them').onclick = () => { S.cur = makeTest(); S.cur.lan = HOST_LAN.length; S.cur.them = true; save(); TV = S.cur; testIntro(); };
-    return;
-  }
-  if (left.length && !S.cur) {
-    app().innerHTML = `<section class="card"><h2>${esc(cfg.ten)}</h2><p>Bạn cần luyện đạt thêm <b>${left.length}</b> câu trước khi làm bài kiểm tra của lần này.</p><button class="btn" data-go="luyen">Đi luyện</button></section>`;
-    return;
+  if (S.cur && S.cur.lan !== S.lan) {
+    if (confirm(`Bạn đang làm dở bài kiểm tra ${lanCfg(S.cur.lan).ten}. Bỏ bài đó để làm ${cfg.ten}?\n(Bấm Hủy để làm tiếp bài đang dở.)`)) S.cur = null;
+    else S.lan = S.cur.lan;
+    save();
   }
   if (!S.cur) { S.cur = makeTest(); save(); }
   TV = S.cur; testIntro();
@@ -587,6 +663,7 @@ function testIntro() {
       <li>Thời gian từ lúc hiện tình huống đến lúc bạn bắt đầu nói là <b>phản xạ</b>; quá ${SLOW} giây tính là chậm.</li>
       <li>Có tình huống phải nói liền 2–3 câu theo đúng thứ tự.</li>
       <li>Cần đúng từ <b>${cfg.pass}%</b> để qua lần này. Làm lại sẽ là một đề mới.</li></ol>
+    ${needLeft().length ? `<p class="muted sm">Lần này còn ${needLeft().length} câu bạn chưa luyện đạt. Bạn vẫn làm bài được; luyện trước thì bài thường tốt hơn.</p>` : ''}
     <button class="btn" id="bd">Bắt đầu</button></section>`;
   $('#bd').onclick = async () => { if (!(await micInit())) { alert('Bạn cho phép trình duyệt dùng micro rồi thử lại.'); return; } testQ(); };
 }
@@ -628,7 +705,7 @@ function showAnswer(x, s, r) {
   const ans = s.ok.map(c => `<div class="ans"><span class="code">${c}</span> ${lineHtml(c, x.lang)} ${sampleBtn(c, x.lang, 'Mẫu')}</div>`).join('');
   $('#res').innerHTML = `
     <p class="verdict ${x.ok ? 'ok' : 'no'}">${x.ok ? '✓ Đúng' : '✗ Chưa đạt'}${x.rt != null ? ` · phản xạ <b class="${x.rt > SLOW ? 'slow' : ''}">${x.rt} giây</b>` : ''}</p>
-    ${r.skip ? '' : feedbackHtml(r, x.lang)}
+    ${r.skip ? '' : praiseTestItem(x, r) + feedbackHtml(r, x.lang)}
     <p class="muted">${s.all ? 'Cần nói đủ, đúng thứ tự:' : s.ok.length > 1 ? 'Nói một trong các câu sau là đúng:' : 'Câu cần nói:'}</p>${ans}
     <div class="row">${x.tries < 2 ? '<button class="btn ghost" id="again">⟲ Nói lại (còn 1 lần)</button>' : ''}<button class="btn" id="nx">${TV.i + 1 < TV.n ? 'Câu tiếp →' : 'Xem kết quả'}</button></div>`;
   $$('#stop,#skip').forEach(b => b.remove());
@@ -644,8 +721,9 @@ async function testEnd() {
   app().innerHTML = `<section class="card ${done.pass ? 'ready' : ''}">
     <h2>${done.pass ? 'Qua ' + esc(cfg.ten) : 'Chưa qua lần này'} · ${done.pct}%</h2>
     <p>Đúng <b>${done.nOk}/${done.n}</b> tình huống (cần ${cfg.pass}%). Phản xạ chậm (quá ${SLOW} giây): <b>${done.slow}</b> câu.</p>
+    ${praiseTest(done)}
     <p class="muted" id="luu">Đang lưu bản ghi để chị Duyên nghe lại…</p>
-    ${done.pass ? (S.ready ? '<p><b>Bạn đã sẵn sàng lên sóng.</b></p>' : `<p>Lần ${S.lan} đã mở. Các câu bạn nói chưa đạt được đưa vào danh sách cần luyện.</p>`) : '<p>Luyện lại các câu dưới đây rồi làm đề mới (đề sẽ khác lần này).</p>'}
+    ${done.pass ? (done.lan >= HOST_LAN.length ? '<p><b>Bạn đã sẵn sàng lên sóng.</b></p>' : `<p>Trang đã chọn sẵn ${esc(lanCfg(S.lan).ten)} cho bạn; ở Lộ trình bạn vẫn chọn được lần khác.</p>`) : '<p>Bạn có thể luyện các câu dưới đây rồi làm đề mới (đề sẽ khác lần này), hoặc chọn lần khác ở Lộ trình.</p>'}
     ${wrong.length ? `<h3>Câu chưa đạt</h3>${wrong.map(x => `<div class="wr"><p class="sit sm">${esc(x.txt)} <span class="lg ${x.lang}">${LANG[x.lang].b}</span></p>${HOST_SIT[x.si].ok.map(c => `<div class="ans">${lineHtml(c, x.lang)} ${sampleBtn(c, x.lang, 'Mẫu')}</div>`).join('')}${x.heard ? `<p class="heard"><span class="muted">Bạn nói:</span> ${esc(x.heard)}</p>` : ''}</div>`).join('')}` : ''}
     <div class="row"><button class="btn" data-go="lo-trinh">Về lộ trình</button>${wrong.length ? '<button class="btn ghost" id="luyenSai">Luyện các câu chưa đạt</button>' : ''}</div></section>`;
   const ls = $('#luyenSai');
