@@ -158,17 +158,21 @@ function drawDk(S) {
       <div class="prev">🔊 <b>${esc(ckTxt(q.w, q.l))}</b> <span class="flag ${q.l}">${q.l === 'zh' ? '中文' : 'EN'}</span> ${q.o.map((k, j) => optPrev({ t: 'img', k }, j === 0)).join('')}</div>
       ${ctlQ(s)}<p class="count">${countDone(ok, qid)}</p>`;
   } else if (ph === 'p2') {
-    const i = s.i || 0, qid = 'p2_' + i;
-    mid = `<h3>🔔 Phần 2 · ${i === CK_P2N - 1 ? 'Câu chuông vàng' : `Câu ${i + 1}/${CK_P2N}`}</h3>
+    const i = s.i || 0, qid = 'p2_' + i, last = i === CK_P2N - 1;
+    mid = `<h3>🔔 Phần 2 · ${last ? 'Câu chuông vàng' : `Câu ${i + 1}/${CK_P2N}`} · ${p2Days(i)}</h3>
+      <p class="small">${last ? 'Câu chuông vàng soạn tay, mỗi level một câu, 3 bậc.' : 'Mỗi bé nhận một mục ngẫu nhiên của ngày học này (từ, cụm từ hoặc câu), không lặp mục; cả lớp phủ hết nội dung của 18 ngày. Cô hiện đáp án thì máy mỗi bé sáng thẻ đúng và đọc hai tiếng.'}</p>
       ${Object.entries(CK_LV).map(([lv, n]) => {
-        const Q = CK_P2[lv][i], L = ok.filter(x => seatLv(room, x) === lv), dist = [0, 1, 2].map(b => L.filter(x => p2Band(room, x, i) === b).length);
-        return `<p><span class="ck-lvtag ${lv}">${n}</span> A ${dist[0]} · B ${dist[1]} · C ${dist[2]} bé · đáp án đọc cho cả lớp: <b>${esc(ckTxt(Q.ans, 'en'))} · ${esc(ckTxt(Q.ans, 'zh'))}</b></p>
-          <table class="res"><tr><th>Bậc</th><th>Đề</th><th>Lựa chọn (xanh là đáp án)</th></tr>${CK_BANDS.map(b => `<tr><td><b>${b}</b></td><td>${promptPrev(Q[b].p)}</td><td><div class="prev sm">${Q[b].o.map((o, j) => optPrev(o, j === 0)).join('')}</div></td></tr>`).join('')}</table>`;
+        const L = ok.filter(x => seatLv(room, x) === lv), dist = [0, 1, 2].map(b => L.filter(x => p2Band(room, x, i) === b).length);
+        const dayItems = last ? [] : CK_SLOTS[i].map(d => CK_DAYS[lv][d - 1]).flat().map(x => x[0]).filter((x, j, A) => A.indexOf(x) === j);
+        return `<p><span class="ck-lvtag ${lv}">${n}</span> A ${dist[0]} · B ${dist[1]} · C ${dist[2]} bé</p>
+          ${last ? `<table class="res"><tr><th>Bậc</th><th>Đề</th><th>Lựa chọn (xanh là đáp án)</th></tr>${CK_BANDS.map(b => `<tr><td><b>${b}</b></td><td>${promptPrev(CK_CHUONG[lv][b].p)}</td><td><div class="prev sm">${CK_CHUONG[lv][b].o.map((o, j) => optPrev(o, j === 0)).join('')}</div></td></tr>`).join('')}</table>`
+            : `<p class="small">Nội dung ngày này: ${dayItems.map(k => esc(ckTxt(k, 'en'))).join(' · ')}</p>`}`;
       }).join('')}
       ${ctlQ(s)}<div class="timer" id="coT"></div><p class="count">${countDone(ok, qid)}</p>`;
     side = `<h3>Bé chỉ có 1 máy: cô bấm hộ</h3><div class="kids">${ok.filter(x => !x.on || /^t_/.test(x.id)).map(x => {
-      const a = answerOf(room, x, qid), b = CK_BANDS[p2Band(room, x, i)];
+      const a = answerOf(room, x, qid), bi = p2Band(room, x, i), b = CK_BANDS[bi], V = p2Q(seatLv(room, x), x.id, i, bi);
       return `<div class="kid${x.on ? '' : ' off'}"><img src="${faceOf(x)}" alt=""><div class="nm"><span class="dot"></span>${esc(x.kid)} <span class="tag">bậc ${b}</span></div><div class="meta">${a ? (a.ok ? '<span class="st ok">Đúng</span>' : '<span class="st no">Chưa đúng</span>') : '<span class="st none">Chưa chọn</span>'}</div>
+        <div class="row small">Đề: ${promptPrev(V.p)} · đáp án <b>${esc(ckTxt(V.ans, 'en'))}</b></div>
         <div class="row"><button class="px" data-px="${x.id}|${qid}|1|${b}">✓ Đúng</button><button class="px" data-px="${x.id}|${qid}|0|${b}">✗ Chưa</button></div></div>`;
     }).join('') || '<p class="small">Không có bé nào cần bấm hộ.</p>'}</div>`;
   } else if (ph === 'p3') {

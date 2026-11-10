@@ -82,7 +82,47 @@ function ckOrder(n, key) {
   return o;
 }
 
-/* ---------- câu Rồng Lửa theo bậc (máy bé tự sinh) ---------- */
+/* ---------- Phần 2: đề rút theo 18 ngày học ----------
+   14 câu đầu chia đều 18 ngày của level: mỗi vòng [ngày 1] [2] [3] [4] [5–6]; câu 15 là câu chuông vàng soạn tay.
+   Mỗi bé nhận một mục ngẫu nhiên (cố định theo chỗ ngồi) trong ngày đó, không lặp mục, nên cả lớp phủ hết từ, cụm từ, câu của 18 ngày.
+   Bậc A: nghe – chạm tranh; B: nghe một tiếng – chọn lời cùng nghĩa ở tiếng kia; C: nhìn tranh – chọn chữ tiếng Anh. */
+const CK_SLOTS = [[1], [2], [3], [4], [5, 6], [7], [8], [9], [10], [11, 12], [13], [14], [15], [16, 17, 18]];
+function ckRnd(seed) { let x = 0; String(seed).split('').forEach(c => x = (x * 31 + c.charCodeAt(0)) >>> 0); return () => { x = (x * 1103515245 + 12345) >>> 0; return x / 4294967296; }; }
+const ckDayCache = {};
+function ckLvKeys(lv) { return ckDayCache[lv] || (ckDayCache[lv] = CK_DAYS[lv].flat().map(x => x[0]).filter((x, i, A) => A.indexOf(x) === i)); }
+/* 2 lựa chọn sai: ưu tiên cùng vòng, cùng loại (từ / cụm từ / câu), tranh và chữ khác đáp án */
+function ckDistract(lv, k, n, R) {
+  const a = ckB(k), all = ckLvKeys(lv).filter(x => x !== k && ckB(x).img && ckB(x).img !== a.img && ckB(x).en !== a.en);
+  const tiers = [all.filter(x => ckB(x).r === a.r && ckB(x).t === a.t), all.filter(x => ckB(x).r === a.r), all];
+  const out = [];
+  tiers.forEach(T => T.slice().sort(() => R() - .5).forEach(x => { if (out.length < n && out.indexOf(x) < 0 && !out.some(y => ckB(y).img === ckB(x).img)) out.push(x); }));
+  return out;
+}
+const ckItemCache = {};
+function p2Items(lv, seatId) {
+  const key = lv + '|' + seatId; if (ckItemCache[key]) return ckItemCache[key];
+  const R = ckRnd('p2' + key), used = [];
+  CK_SLOTS.forEach(days => {
+    const pool = days.map(d => CK_DAYS[lv][d - 1]).flat().map(x => x[0]).filter(k => used.indexOf(k) < 0);
+    const all = pool.length ? pool : days.map(d => CK_DAYS[lv][d - 1]).flat().map(x => x[0]);
+    used.push(all[Math.floor(R() * all.length)]);
+  });
+  return (ckItemCache[key] = used);
+}
+/* đề câu i (0–14) ở bậc b (0–2) cho một bé: { img, ans, p, o } – đáp án luôn là lựa chọn số 0 */
+function p2Q(lv, seatId, i, b) {
+  if (i >= CK_P2N - 1) { const Q = CK_CHUONG[lv]; return Object.assign({ img: Q.img, ans: Q.ans, chuong: true }, Q[CK_BANDS[b]]); }
+  const k = p2Items(lv, seatId)[i], R = ckRnd('p2q' + lv + seatId + i), L = i % 2 ? 'zh' : 'en', L2 = L === 'en' ? 'zh' : 'en';
+  const keys = [k].concat(ckDistract(lv, k, 2, R));
+  if (b === 0) return { img: k, ans: k, p: { a: [k, L] }, o: keys.map(x => ({ t: 'img', k: x })) };
+  if (b === 1) return { img: k, ans: k, p: { a: [k, L] }, o: keys.map(x => ({ t: 'say', k: x, l: L2 })) };
+  return { img: k, ans: k, p: { img: k }, o: keys.map(x => ({ t: 'txt', k: x })) };
+}
+/* số ngày như trên web học 21 ngày (ngày 7, 14, 21 là buổi Zoom): ngày học thứ 1–6 → ngày 1–6, 7–12 → 8–13, 13–18 → 15–20 */
+function ckWebDay(d) { return d + Math.floor((d - 1) / 6); }
+function p2Days(i) { return i >= CK_P2N - 1 ? 'Câu chuông vàng' : 'Ngày ' + CK_SLOTS[i].map(ckWebDay).join(', '); }
+
+/* ---------- câu Rồng Lửa theo bậc (máy bé tự sinh), rút từ toàn bộ 18 ngày của level ---------- */
 function ckCatKeys(cat) {
   if (CK_CAT_EXTRA[cat]) return CK_CAT_EXTRA[cat];
   return Object.keys(CK_BANK).filter(k => CK_BANK[k].cat === cat && CK_BOSS_SKIP.indexOf(k) < 0);
@@ -90,21 +130,18 @@ function ckCatKeys(cat) {
 function ckRand(a) { return a[Math.floor(Math.random() * a.length)]; }
 function ckOthers(cat, k, n) { return ckCatKeys(cat).filter(x => x !== k).sort(() => Math.random() - .5).slice(0, n); }
 function bossQ(band, last, lv) {
-  const BS = CK_BOSS[lv] || CK_BOSS.seed;
+  const BS = CK_BOSS[lv] || CK_BOSS.seed, keys = ckLvKeys(lv).filter(k => ckB(k).img), R = Math.random;
   for (let guard = 0; guard < 20; guard++) {
     let q;
-    if (band === 0) {
-      const cat = ckRand(BS.A), k = ckRand(ckCatKeys(cat)), l = Math.random() < .5 ? 'en' : 'zh';
-      q = { b: 0, k, l, p: { a: [k, l] }, o: [k].concat(ckOthers(cat, k, 2)).map(x => ({ t: 'img', k: x })) };
-    } else if (band === 1) {
-      const cat = ckRand(BS.B), k = ckRand(ckCatKeys(cat)), l = Math.random() < .5 ? 'en' : 'zh', to = l === 'en' ? 'zh' : 'en';
-      q = { b: 1, k, l, p: { a: [k, l] }, o: [k].concat(ckOthers(cat, k, 2)).map(x => ({ t: 'say', k: x, l: to })) };
-    } else if (BS.C.chu.length && Math.random() < .35) {
+    if (band === 2 && BS.C.chu.length && Math.random() < .3) {   // Little Seed: nhìn chữ đã làm quen (一 二 三 大 他 她) → chạm tranh
       const [chu, k, cat] = ckRand(BS.C.chu);
       q = { b: 2, k, l: 'doc', p: { chu }, o: [k].concat(ckOthers(cat, k, 2)).map(x => ({ t: 'img', k: x })) };
     } else {
-      const cat = ckRand(BS.C.txt), k = ckRand(ckCatKeys(cat));
-      q = { b: 2, k, l: 'doc', p: { txt: k }, o: [k].concat(ckOthers(cat, k, 2)).map(x => ({ t: 'img', k: x })) };
+      const pool = band === 1 ? keys.filter(k => ckB(k).t !== 's') : keys;   // bậc B nghe 4 lời liên tiếp: dùng từ và cụm từ cho gọn
+      const k = ckRand(pool), l = Math.random() < .5 ? 'en' : 'zh', to = l === 'en' ? 'zh' : 'en', ks = [k].concat(ckDistract(lv, k, 2, R));
+      if (band === 0) q = { b: 0, k, l, p: { a: [k, l] }, o: ks.map(x => ({ t: 'img', k: x })) };
+      else if (band === 1) q = { b: 1, k, l, p: { a: [k, l] }, o: ks.map(x => ({ t: 'say', k: x, l: to })) };
+      else q = { b: 2, k, l: 'doc', p: { txt: k }, o: ks.map(x => ({ t: 'img', k: x })) };
     }
     if (q.o.length === 3 && (!last || last.k !== q.k)) return q;
   }
@@ -113,7 +150,7 @@ function bossQ(band, last, lv) {
 
 /* ---------- điểm ---------- */
 function ckStars(room, seat) { let n = 0; CK_P1.forEach((q, i) => { const a = answerOf(room, seat, 'p1_' + i); if (a && a.ok) n++; }); return n; }
-function ckP2(room, seat) { let n = 0, done = 0; CK_P2.seed.forEach((q, i) => { const a = answerOf(room, seat, 'p2_' + i); if (a) { done++; if (a.ok) n++; } }); return { n, done }; }
+function ckP2(room, seat) { let n = 0, done = 0; for (let i = 0; i < CK_P2N; i++) { const a = answerOf(room, seat, 'p2_' + i); if (a) { done++; if (a.ok) n++; } } return { n, done }; }
 function ckP3(room, seat) {
   let n = 0, all = 0;
   Object.entries(room.answers || {}).forEach(([q, o]) => { if (q.indexOf('boss_') !== 0) return; seat.ids.forEach(id => { const a = (o || {})[id]; if (a) { all++; if (a.ok) n++; } }); });

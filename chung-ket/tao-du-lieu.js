@@ -28,7 +28,7 @@ function file(p) { if (!p) return ''; if (!fs.existsSync(path.join(ROOT, 'xem-tr
 function au(t) { if (!AUD[t]) { miss.push('giọng: ' + t); return ''; } return file(AUD[t]); }
 /* tranh của từ: dùng bản _l1 (tranh dạy trong bài, thế giới của Bông, đúng như doc mô tả: nến, album ảnh nhà Bông…);
    he / she dùng bản _l3 (bạn trai, bạn gái) vì bản _l1 trùng với tranh ông, bà trong album */
-const VAR = { he: '_l3', she: '_l3' };
+const VAR = { he: '_l3', she: '_l3', hello: '_l2', goodbye: '_l2' };   // hello / goodbye: bản _l1 gần như giống nhau (Bông ở cửa với mẹ), bản _l2 khác hẳn
 /* số đếm: bản _l1 là cùng một bánh sinh nhật, số nến khó đếm → dùng bản _l2 (quả táo), đếm rõ */
 ['one', 'two', 'three', 'four', 'five', 'six'].forEach(k => VAR[k] = '_l2');
 function pv(p, en) { return VAR[en] ? p.replace(/_l1\.webp$/, VAR[en] + '.webp') : p; }
@@ -41,6 +41,7 @@ const B = {};
   ['hello', 'hello', '你好', 'v1g'], ['goodbye', 'goodbye', '再见', 'v1g'],
   ['mommy', 'mommy', '妈妈', 'v1'], ['daddy', 'daddy', '爸爸', 'v1'],
   ['kitten', 'kitten', '小猫', 'v1'], ['teacher', 'teacher', '老师', 'v1'], ['everyone', 'everyone', '大家', 'v1'], ['friend', 'friend', '朋友', 'v1'], ['puppy', 'puppy', '小狗', 'v1'],
+  ['name', 'name', '名字', 'v2'], ['you', 'you', '你', 'v2'],
   ['one', 'one', '一', 'so'], ['two', 'two', '二', 'so'], ['three', 'three', '三', 'so'], ['four', 'four', '四', 'so'], ['five', 'five', '五', 'so'], ['six', 'six', '六', 'so'],
   ['grandpa', 'grandpa', '爷爷', 'nha'], ['grandma', 'grandma', '奶奶', 'nha'], ['bro', 'big brother', '哥哥', 'nha'], ['lsis', 'little sister', '妹妹', 'nha'],
   ['bsis', 'big sister', '姐姐', 'nha'], ['lbro', 'little brother', '弟弟', 'nha'], ['he', 'he', '他', 'ta'], ['she', 'she', '她', 'ta']
@@ -70,10 +71,13 @@ eval(fs.readFileSync(path.join(ROOT, 'xem-truoc/tai-nguyen/canopy-audio-map.js')
 const cxK = t => String(t || '').replace(/’/g, "'").replace(/[\s，。！？、,.!?：:;；“”"…()（）\-–—]/g, '').toLowerCase();
 function cxA(t, l, who) { const c = CN_AUDIO[l + '|' + cxK(t)]; if (!c || !c.length) return ''; const f = w => (c.find(e => e[0] === w) || [])[1]; return file((who && f(who)) || f('co_huou') || c[0][1]); }
 const CKEY = {}, CIMG = {};
-CANOPY.rounds.forEach(r => r.days.forEach(d => d.ex.forEach(e => {
+const CDAYS = [...Array(18)].map(() => []);   // 18 ngày học Canopy (3 vòng × 6 ngày): [mã, loại]
+CANOPY.rounds.forEach(r => r.days.forEach((d, di) => d.ex.forEach(e => {
   const items = e.type === 'cards' ? e.items : e.type === 'story' ? e.sents : [];
+  const day = CDAYS[(r.r - 1) * 6 + di];
   items.forEach(it => {
-    if (!it.en || !it.zh || !it.img || !it.img.src || CKEY[it.en]) return;
+    if (it.en && CKEY[it.en.trim()] && !day.some(x => x[0] === CKEY[it.en.trim()])) { const k0 = CKEY[it.en.trim()]; day.push([k0, B[k0].t]); return; }
+    if (!it.en || !it.zh || !it.img || !it.img.src || CKEY[it.en.trim()]) return;
     const src = it.img.src, en = it.en.trim();
     const t = /[.?!]$/.test(en) ? 's' : /_w_/.test(src) ? 'w' : /_p_/.test(src) ? 'p' : (en.split(/\s+/).length > 1 ? 'p' : 'w');
     const ea = cxA(it.en, 'en', e.narrator), za = cxA(it.zh, 'zh', e.narrator);
@@ -82,42 +86,76 @@ CANOPY.rounds.forEach(r => r.days.forEach(d => d.ex.forEach(e => {
     /* cùng nhóm mà trùng tranh (câu dùng lại tranh của cụm) thì để riêng, không làm lựa chọn ngẫu nhiên của Rồng Lửa */
     if (CIMG[cat + src]) cat += 'd'; CIMG[cat + src] = 1;
     const k = 'c_' + cxK(it.en).replace(/[^a-z0-9]/g, '').slice(0, 48);
-    CKEY[it.en] = k;
-    B[k] = { en: it.en, zh: it.zh, ea, za, img: file(src), cat };
+    CKEY[en] = k;
+    B[k] = { en: it.en, zh: it.zh, ea, za, img: file(src), cat, lv: 'canopy', r: r.r, t };
+    day.push([k, t]);
   });
 })));
-function C(en) { if (!CKEY[en]) { miss.push('Canopy: ' + en); return 'x'; } return CKEY[en]; }
+function C(en) { en = en.trim(); if (!CKEY[en]) { miss.push('Canopy: ' + en); return 'x'; } return CKEY[en]; }
 const ROUNDS = { seed: LS.rounds.map(r => r.topic), canopy: CANOPY.rounds.map(r => r.name + ' – ' + r.vi) };
+/* ---------- Little Seed: gom từ, cụm từ, câu theo 18 ngày học (bỏ ngày Zoom 7, 14, 21) ---------- */
+const clean = t => String(t || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+const LKEY = {};
+Object.keys(B).forEach(k => { if (B[k].en && !/^c_/.test(k)) LKEY[clean(B[k].en)] = LKEY[clean(B[k].en)] || k; });
+/* câu của truyện dùng tranh cảnh truyện (rõ, khác nhau), nên mã cảnh truyện được ưu tiên cho câu trùng chữ */
+Object.keys(SCN).forEach(k => { LKEY[clean(B[k].en)] = k; });
+const LDAYS = [...Array(18)].map(() => []);
+function lAdd(di, en, zh, ea, za, pic, t, r) {
+  if (!en || !zh) return;
+  let k = LKEY[clean(en)];
+  if (!k) { k = 'l_' + clean(en).replace(/ /g, '_').slice(0, 40); LKEY[clean(en)] = k; B[k] = { en, zh, ea: file(ea), za: file(za), img: file(pic), cat: 'l' + r + t }; }
+  B[k].lv = 'seed'; B[k].r = B[k].r || r; B[k].t = B[k].t || t;
+  if (!LDAYS[di].some(x => x[0] === k)) LDAYS[di].push([k, t]);
+}
+const lWord = new Set();
+LS.days.forEach && 0;
+Object.values(LS.days).forEach((d, di) => {
+  const r = d.r;
+  d.steps.forEach(st => {
+    if (st.type === 'cham' && st.mode === 'tu') st.demo.forEach(x => { const k = LKEY[clean(x.en)]; if (k) { lWord.add(clean(x.en)); B[k].lv = 'seed'; B[k].r = r; B[k].t = 'w'; if (!LDAYS[di].some(y => y[0] === k)) LDAYS[di].push([k, 'w']); } else miss.push('LS từ: ' + x.en); });
+    if (st.type === 'noi' && !st.role) {   // cụm từ: gom lời tiếng Anh và tiếng Trung theo cùng một tranh
+      const cum = {};
+      st.turns.forEach(t => { const b = t.pic.replace(/_l\d\.webp$/, ''); const c = cum[b] = cum[b] || { pic: b + '_l1.webp' }; t.say.forEach(x => { if (!c[x.l]) { c[x.l] = x.t; c[x.l + 'a'] = x.a; } }); });
+      Object.values(cum).forEach(c => lAdd(di, c.en, c.zh, c.ena, c.zha, c.pic, 'p', r));
+    }
+    if (st.type === 'cham' && st.mode === 'cau') st.demo.forEach(x => {   // câu: ghép câu tiếng Anh thứ n với câu tiếng Trung thứ n
+      const E = x.seq.filter(q => q.l === 'en'), Z = x.seq.filter(q => q.l === 'zh');
+      E.forEach((e, j) => { if (Z[j] && !lWord.has(clean(e.t)) && clean(e.t) !== 'hello' && clean(e.t) !== 'goodbye') lAdd(di, e.t, Z[j].t, e.a, Z[j].a, x.pic, 's', r); });
+    });
+  });
+});
+/* ngày truyện (ngày 5, 6 của mỗi vòng): cảnh 1–4 vào ngày 5, cảnh 5–8 vào ngày 6 */
+[1, 2, 3].forEach(r => [1, 2, 3, 4, 5, 6, 7, 8].forEach(c => { const k = 's' + r + '_' + c; const di = (r - 1) * 6 + (c <= 4 ? 4 : 5); B[k].lv = 'seed'; B[k].r = r; B[k].t = B[k].t || 's'; if (!LDAYS[di].some(x => x[0] === k)) LDAYS[di].push([k, 's']); }));
+/* câu "Nice to meet you!" chỉ học ở mức nghe, đếm dài: không ra đề */
+const LSKIP = ['s2_5', 's2_1'];
+LDAYS.forEach((L, i) => LDAYS[i] = L.filter(x => LSKIP.indexOf(x[0]) < 0 && B[x[0]].img));
+const DAYS = { seed: LDAYS, canopy: CDAYS };
+
 /* nhân vật */
 const NV = k => file('tai-nguyen/nhan-vat/' + k + '.webp');
 B.anna = { en: 'Anna', zh: 'Anna', ea: file('tai-nguyen/little-seed/audio/ls_co_huou_en_anna.mp3'), za: '', img: NV('kids_anna_a'), cat: 'nv' };
 B.bong = { en: 'Bông', zh: 'Bông', ea: '', za: '', img: NV('kids_bong_a'), cat: 'nv' };
 B.tho = { en: 'Thỏ con', zh: '', ea: '', za: '', img: NV('huou_tho_a'), cat: 'nv' };
 
-/* ---------- Phần 1 · Ôn tập: cả lớp làm chung, không tính xếp hạng (chỉ tích sao) ----------
-   Đi lần lượt Vòng 1 → 2 → 3; mỗi vòng theo thứ tự Từ → Cụm từ → Câu, xen kẽ một câu Little Seed rồi một câu Canopy.
-   Câu nào cũng một kiểu: nghe (màn chiếu phát) rồi chạm 1 trong 3 tranh. Lựa chọn sai cùng vòng, cùng loại. */
-const P = (lv, r, t, w, l, o) => ({ lv, r, t, w, l, o });
-const P1 = [
-  P('seed', 1, 'tu', 'kitten', 'en', ['kitten', 'puppy', 'teacher']),
-  P('canopy', 1, 'tu', C('park'), 'zh', [C('park'), C('zoo'), C('school')]),
-  P('seed', 1, 'cum', 's1_7', 'zh', ['s1_7', 's1_2', 's1_8']),
-  P('canopy', 1, 'cum', C('go to the zoo'), 'en', [C('go to the zoo'), C('go home'), C('go to school')]),
-  P('seed', 1, 'cau', 's1_3', 'en', ['s1_3', 's1_6', 's1_4']),
-  P('canopy', 1, 'cau', C('I go to the shop to buy things.'), 'zh', [C('I go to the shop to buy things.'), C('I go to the zoo to see animals.'), C('On Monday morning, I go to school to study.')]),
-  P('seed', 2, 'tu', 'five', 'zh', ['five', 'three', 'six']),
-  P('canopy', 2, 'tu', C('doctor'), 'en', [C('doctor'), C('chef'), C('dentist')]),
-  P('seed', 2, 'cum', 'i6', 'en', ['i6', 'i5', 'n123']),
-  P('canopy', 2, 'cum', C('work at a hospital'), 'zh', [C('work at a hospital'), C('work at a restaurant'), C('work at a shop')]),
-  P('seed', 2, 'cau', 's2_6', 'zh', ['s2_6', 's2_3', 's2_4']),
-  P('canopy', 2, 'cau', C('My mom is a doctor.'), 'en', [C('My mom is a doctor.'), C('My dad is a chef. He works at a restaurant.'), C('He is a teacher.')]),
-  P('seed', 3, 'tu', 'grandma', 'en', ['grandma', 'grandpa', 'lsis']),
-  P('canopy', 3, 'tu', C('train'), 'zh', [C('train'), C('plane'), C('bus')]),
-  P('seed', 3, 'cum', 'm_bro', 'zh', ['m_bro', 'm_lsis', 'm_gpa']),
-  P('canopy', 3, 'cum', C('ride a bike'), 'en', [C('ride a bike'), C('take a bus'), C('drive a car')]),
-  P('seed', 3, 'cau', 's3_6', 'en', ['s3_6', 's3_5', 's3_4']),
-  P('canopy', 3, 'cau', C('I take a bus to school.'), 'zh', [C('I take a bus to school.'), C('I go to school by bike.'), C('I drive to work.')])
-];
+/* ---------- Phần 1 · Ôn tập: 18 câu = 18 ngày học, cả lớp làm chung, xen kẽ Little Seed / Canopy ----------
+   Câu i ứng ngày i (Vòng 1: câu 1–6, Vòng 2: 7–12, Vòng 3: 13–18). Câu lẻ lấy nội dung Little Seed, câu chẵn lấy Canopy của đúng ngày đó.
+   Mỗi vòng đi Từ → Cụm từ → Câu (theo thứ tự ngày); kiểu câu duy nhất: nghe (màn chiếu phát) rồi chạm 1 trong 3 tranh. */
+function rnd(seed) { let x = 0; String(seed).split('').forEach(c => x = (x * 31 + c.charCodeAt(0)) >>> 0); return () => { x = (x * 1103515245 + 12345) >>> 0; return x / 4294967296; }; }
+function distract(lv, k, n, R) {
+  const a = B[k], all = DAYS[lv].flat().map(x => x[0]).filter((x, i, A) => A.indexOf(x) === i && x !== k && B[x].img && B[x].img !== a.img && B[x].en !== a.en);
+  const tiers = [all.filter(x => B[x].r === a.r && B[x].t === a.t), all.filter(x => B[x].r === a.r), all];
+  const out = [];
+  tiers.forEach(T => T.slice().sort(() => R() - .5).forEach(x => { if (out.length < n && out.indexOf(x) < 0 && !out.some(y => B[y].img === B[x].img)) out.push(x); }));
+  return out;
+}
+const TYPE_BY_POS = ['w', 'p', 's', 'w', 's', 's'];
+const P1 = [...Array(18)].map((_, i) => {
+  const lv = i % 2 ? 'canopy' : 'seed', di = i, R = rnd('p1' + i), L = DAYS[lv][di];
+  const want = TYPE_BY_POS[di % 6] === 'w' && i % 6 >= 3 ? 'p' : TYPE_BY_POS[di % 6];
+  const pool = L.filter(x => x[1] === want).length ? L.filter(x => x[1] === want) : L;
+  const [k, t] = pool[Math.floor(R() * pool.length)];
+  return { lv, r: Math.floor(di / 6) + 1, d: di + 1, t: { w: 'tu', p: 'cum', s: 'cau' }[t], w: k, l: i % 4 < 2 ? 'en' : 'zh', o: [k].concat(distract(lv, k, 2, R)) };
+});
 
 /* ---------- Phần 2 · Rung chuông vàng: 15 câu × 3 bậc, cả 3 bậc chung một tranh trên màn chiếu ----------
    Mỗi bậc: p (đề) = { a: [mã, tiếng] (nghe), chu (nhìn chữ), img (tranh đề) }, o: các lựa chọn, đáp án luôn là lựa chọn đầu (web tự xáo).
@@ -203,7 +241,8 @@ const P2_CANOPY = [
   CQ('I take a bus to school.', 'zh', ['I take a bus to school.', 'I go to school by bike.', 'I drive to work.'], ['I take a bus to school.', 'I go to school by bike.', 'I drive to work.'], ['I take a bus to school.', 'I go to school by bike.', 'I drive to work.']),
   Object.assign(CQ('He takes a bus to work.', 'en', ['He takes a bus to work.', 'I go to school by bike.', 'I drive to work.'], ['He takes a bus to work.', 'I take a bus to school.', 'I drive to work.'], ['He takes a bus to work.', 'I take a bus to school.', 'I drive to work.'], ['How does he go to work?', 'en']), { chuong: true })
 ];
-const P2 = { seed: P2_SEED, canopy: P2_CANOPY };
+/* Câu 1–14 web tự rút theo ngày học (ck-core.js); chỉ câu 15 (chuông vàng) soạn tay. */
+const CHUONG = { seed: Object.assign(P2_SEED[14], { ans: 's3_4' }), canopy: P2_CANOPY[14] };
 B.ongba = { en: 'grandpa · grandma', zh: '他 · 她', img: '', cat: 'nv', pair: ['grandpa', 'grandma'] };
 
 /* ---------- Phần 3 · Rồng Lửa: câu ngẫu nhiên theo bậc, rút từ mọi nhóm của 3 vòng ---------- */
@@ -236,7 +275,8 @@ if (miss.length) { console.error('THIẾU:\n' + [...new Set(miss)].join('\n')); 
 const out = `/* Chung kết Rung chuông vàng – TỆP SINH TỰ ĐỘNG từ chung-ket/tao-du-lieu.js (sửa nội dung ở tệp đó rồi chạy lại). */
 const CK_BANK = ${JSON.stringify(B)};
 const CK_P1 = ${JSON.stringify(P1)};
-const CK_P2 = ${JSON.stringify(P2)};
+const CK_CHUONG = ${JSON.stringify(CHUONG)};
+const CK_DAYS = ${JSON.stringify(DAYS)};
 const CK_ROUNDS = ${JSON.stringify(ROUNDS)};
 const CK_BOSS = ${JSON.stringify(BOSS)};
 const CK_CAT_EXTRA = ${JSON.stringify(CAT_EXTRA)};
@@ -244,4 +284,4 @@ const CK_BOSS_SKIP = ${JSON.stringify(BOSS_SKIP)};
 const CK_P4 = ${JSON.stringify(P4)};
 `;
 fs.writeFileSync(path.join(__dirname, 'ck-data.js'), out);
-console.log('Đã ghi ck-data.js:', Object.keys(B).length, 'mục,', P1.length, 'câu ôn tập,', P2.seed.length + '+' + P2.canopy.length, 'câu rung chuông vàng');
+console.log('Đã ghi ck-data.js:', Object.keys(B).length, 'mục,', P1.length, 'câu ôn tập,', DAYS.seed.map(d => d.length).join('/'), 'mục mỗi ngày Little Seed;', DAYS.canopy.map(d => d.length).join('/'), 'mục mỗi ngày Canopy');
