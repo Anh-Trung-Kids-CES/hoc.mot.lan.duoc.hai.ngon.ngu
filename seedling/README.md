@@ -52,3 +52,8 @@ Xem `CAN-BO-SUNG.md`: 78 từ chức năng / trừu tượng (yes, what, can, to
 - **Hộp ôn** (`seedling-on.js`): 5 lượt gọi lại (trong ngày web, ngày web kế tiếp, ~1 tuần, ~3 tuần, cuối unit/khoá ôn); lượt sau khó hơn (nghe Anh → nghe Trung → nói Anh → nói Trung → chọn chữ Hán); mỗi câu một thứ tiếng; từ chỉ có tiếng Anh nay cũng vào hộp (khi có tranh); sai thì gặp lại cuối lượt ở dạng dễ hơn.
 - **Nghỉ mắt** (`seedling-nghi.js`): phút 25 nghỉ mắt 20 giây; đủ 30 phút thì không mở bước mới, nghỉ 10 phút. Tắt khi chạy thử tự động hoặc `?nghi=0`.
 - **Chưa sửa được trong lần này** (cần viết lại mạng văn bản U2–U12 theo mẫu U1 và tạo giọng, tranh bằng Gemini): truyện dài hơn mức Seedling 15–20 chữ mỗi phần; cảnh U2–U12 và Body dùng tranh nền chung; web chưa có bài hát, big book mẫu câu, vè; 5 unit hơn 15 từ chưa chia lõi / vòng ngoài; 16 ngày có cảnh Anh và Trung lệch nhau. Mẹo âm đang luyện thanh điệu, trái mục "Giữ nguyên" (không luyện thanh ở Seedling): chờ chị quyết.
+
+## Mạng văn bản Unit 9 (bản mẫu 10/11, chờ chị duyệt)
+- Truyện khung mới 6 phần "The Picnic · 真好吃！" theo nguyên tắc mục I (khung hỏi – đáp, câu cuối hỏi con), big book "I like ___ / I don't like ___", vè đếm: `chuong-trinh/cong-cu/khung/grid/mang/mau_seedling48_u9.json`.
+- `cong-cu/ap_mang_u9.py` sửa ngày 64–71 ngay trong `seedling-data.js` (chạy SAU build.py): thay truyện, thay bài luyện rời Chạm/Nghe – chạm tranh bằng bước "Big book và vè", dựng lại Nói theo, Phiên dịch nhí, Trả lời câu hỏi; Reader U9. Tranh ghép: `tai-nguyen/canh/u9/`.
+- Câu chưa có giọng thu: `cong-cu/giong_thieu_u9.json` (đang đọc bằng giọng máy).

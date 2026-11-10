@@ -159,7 +159,7 @@ function pop(el) { if (!el) return; el.classList.remove('pop'); void el.offsetWi
 function alive(my) { return my === RUN && document.getElementById('lsBox'); }
 
 function frame(box, step) {
-  const M = T[step.type];
+  const M = Object.assign({}, T[step.type], step.lab ? { n: step.lab, sub: step.sub || T[step.type].sub } : {});   // bước có tên riêng (big book, vè…)
   box.innerHTML = `<div class="ls-stage">
     <div class="ls-top"><div><b>${esc(M.n)}</b><small>${esc(M.sub)}</small></div><div class="ls-dots" id="lsDots"></div><div class="ls-stars">${SVG.star}<span id="lsStars">0</span></div></div>
     <div class="ls-body" id="lsBody"></div>

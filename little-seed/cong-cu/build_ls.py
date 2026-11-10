@@ -84,7 +84,7 @@ PARTS = [
         ('cun', X21 + 'v1_n4_tu_puppy_l1.webp', 'Woof!', '汪汪！', 'Wāngwāng!'),
         ('bong', X21 + 'tr1_c7.webp', 'Hello, puppy!', '小狗，你好！', 'Xiǎogǒu, nǐ hǎo!'),
         ('bong', X21 + 'v1_n1_cum_hello_mommy_l1.webp', 'Hello, mommy!', '妈妈，你好！', 'Māma, nǐ hǎo!'),
-        ('me', LS + 'me_vay.webp', 'Hello!', '你好！', 'Nǐ hǎo!')]),
+        ('me', LS + 'me_vay.webp', 'Hello, ___!', '___，你好！', '___, nǐ hǎo!')]),
 ]
 def scenes(k):
     return [{'who': w, 'img': img, 'en': e, 'zh': z, 'py': p, 'a_en': au('en', e, VOICE.get(w, '')), 'a_zh': au('zh', z, VOICE.get(w, ''))}
@@ -256,6 +256,104 @@ for n in (6, 7, 8, 9):
                     'before': BUOI_OF[n], 't': ["Bông's Day – cả truyện", 'Chào hay tạm biệt?', 'Phiên dịch nhí', 'Hello and Goodbye – hát và big book'][n - 6],
                     'hero': [X21 + 'tr1_c4.webp', X21 + 'tr1_c1.webp', LS + 'xiaomei_anna.webp', X21 + 'tr1_c8.webp'][n - 6], 'goal': GOAL[n - 1], 'bg': [], 'video': [], 'kind': 'ca'})
 
+
+# ---------- câu có tên con (ng.t. 25): ___ thay bằng tên con lúc chạy (ls48.js), giọng = câu thu sẵn + tên đọc bằng giọng máy ----------
+def ten_au(l, t, who=''):
+    base = t.replace(', ___', '').replace('___，', '').replace('___, ', '')
+    f = AIDX.get(f'{l}:{norm(base)}')
+    a = au(l, base, who) if f else ''
+    if not f: MISS.append((l, base))
+    if not a: return ''
+    return (a + '|@ten') if l == 'en' else ('@ten|' + a)
+def fix_ten(obj):
+    if isinstance(obj, dict):
+        for l in ('en', 'zh'):
+            if isinstance(obj.get(l), str) and '___' in obj[l] and ('a_' + l) in obj: obj['a_' + l] = ten_au(l, obj[l], VOICE.get(obj.get('who', ''), ''))
+        for v in obj.values(): fix_ten(v)
+    elif isinstance(obj, list):
+        for v in obj: fix_ten(v)
+
+# ---------- big book + vè (ng.t. 23, 27): mỗi ngày nghe vài trang, thay bài luyện rời ----------
+def bb_step(pages, title, title_zh):
+    return {'type': 'truyen', 'lab': 'Big book và vè', 'sub': 'Nghe lại mẫu câu của unit', 'title': title, 'title_zh': title_zh,
+            'scenes': [{'who': 'narr', 'img': img, 'en': e, 'zh': z, 'py': p, 'a_en': au_multi('en', e, 'co_huou'), 'a_zh': au_multi('zh', z, 'co_huou')} for img, e, z, p in pages]}
+BB1 = [(bb_img(k), e, z, p) for k, e, z, p in BB] + [(LS + 'me_vay.webp', 'Hello, ___!', '___，你好！', '___, nǐ hǎo!')]
+VE1 = [(W[k][2], e, z, '') for k, e, z in VE]
+for n in range(1, 9):
+    pg = [BB1[(2 * (n - 1) + j) % len(BB1)] for j in range(3)] + [VE1[(n - 1 + j) % len(VE1)] for j in range(2)]
+    st = bb_step(pg, 'Big book · Hello and Goodbye + vè', 'Big book · 你好，再见 + 儿歌')
+    if n <= 5: days[n]['steps'][2] = st          # thay bài Nghe – chạm tranh (luyện rời)
+    else: days[n]['steps'].insert(len(days[n]['steps']) - 1, st)
+days[9]['steps'][0]['scenes'].append({'who': 'me', 'img': LS + 'me_vay.webp', 'en': 'Hello, ___!', 'zh': '___，你好！', 'py': '___, nǐ hǎo!', 'a_en': '', 'a_zh': ''})
+
+# ---------- Unit 9 · Food (mạng văn bản mau_little-seed_u9.json) ----------
+M9 = json.load(open('chuong-trinh/cong-cu/khung/grid/mang/mau_little-seed_u9.json'))
+T9 = M9['T1']; L9 = 'tai-nguyen-ls/canh/u9/'
+TR = S + 'tranh/'
+W9 = {'picnic': ('野餐', 'yěcān', TR + 'picnic.webp'), 'picnic time': ('去野餐', 'qù yěcān', TR + 'picnic.webp'), 'like': ('喜欢', 'xǐhuan', TR + 'love.webp'),
+      'eat': ('吃', 'chī', TR + 'eat.webp'), 'apple': ('苹果', 'píngguǒ', TR + 'apple.webp'), 'banana': ('香蕉', 'xiāngjiāo', TR + 'banana.webp'),
+      'pizza': ('比萨', 'bǐsà', TR + 'pizza.webp'), 'rice': ('米饭', 'mǐfàn', TR + 'rice.webp'), 'drink': ('喝', 'hē', TR + 'drink.webp'),
+      'milk': ('牛奶', 'niúnǎi', TR + 'milk.webp'), 'water': ('水', 'shuǐ', TR + 'water.webp'), 'juice': ('果汁', 'guǒzhī', TR + 'juice.webp'), 'egg': ('鸡蛋', 'jīdàn', TR + 'egg.webp')}
+def c9(w, on=False, nen=False):
+    z, p, img = W9[w]; c = {'en': w if w != 'picnic time' else 'Picnic time!', 'zh': z, 'py': p, 'img': img, 'a_en': au('en', w if w != 'picnic time' else 'Picnic time!', 'co_huou'), 'a_zh': au('zh', z, 'co_huou')}
+    if on: c['on'] = True
+    if nen: c['nen'] = 'PreB'
+    return c
+def sc9(k):
+    return [{'who': w, 'img': L9 + f'p{k + 1}_{i + 1}.webp', 'en': e, 'zh': z, 'py': p, 'a_en': au('en', e, VOICE.get(w, '')), 'a_zh': au('zh', z, VOICE.get(w, ''))}
+            for i, (w, e, z, p) in enumerate(T9['phan'][k])]
+def g9(words, n_opt=3):
+    words = pad(words, 5, 6); qs = []
+    for i, w in enumerate(words):
+        l = 'en' if i % 2 == 0 else 'zh'; t = w if l == 'en' else W9[w][0]
+        others = random.sample([x for x in W9 if x != w and W9[x][2] != W9[w][2] and x not in ('juice', 'egg')], n_opt - 1)
+        opts = others + [w]; random.shuffle(opts)
+        qs.append({'m': 'pic', 'say': {'t': t, 'l': l, 'a': au(l, t, 'co_huou')}, 'opts': [{'en': o, 'zh': W9[o][0], 'img': W9[o][2]} for o in opts], 'ans': opts.index(w)})
+    return qs
+def noi9(k):
+    T = []
+    for s in sc9(k):
+        if s['who'] == 'me': continue
+        T.append({'img': s['img'], 'say': [{'t': s['en'], 'l': 'en', 'w': s['who'], 'a': s['a_en']}]})
+        T.append({'img': s['img'], 'say': [{'t': s['zh'], 'l': 'zh', 'w': s['who'], 'a': s['a_zh']}]})
+    return T[:6]
+BB9 = [(W9[k][2] if k in W9 else TR + k + '.webp', e, z, p) for k, e, z, p in M9['T3']['trang']]
+VE9 = [(W9[k][2] if k in W9 else TR + k + '.webp', e, z, p) for k, e, z, p in M9['T4']['dong']]
+def bb9(n):
+    pg = [BB9[(2 * n + j) % len(BB9)] for j in range(3)] + [VE9[(n + j) % len(VE9)] for j in range(2)]
+    return bb_step(pg, 'Big book · Do You Like…? + vè', 'Big book · 你喜欢…吗？+ 儿歌')
+NEW9 = [['picnic', 'picnic time'], ['like', 'apple', 'eat'], ['banana', 'pizza'], ['rice'], ['drink', 'milk', 'water']]
+D9 = sorted(d['ngay'] for d in GRID['days'] if d['unit'] == 9)
+GOAL9 = ['Đi dã ngoại: Picnic time!', 'Con thích táo: I like apples!', 'Chuối và pizza', 'Cơm của Anna: I like rice!', 'Uống sữa, uống nước; con thích gì?',
+         'Nghe cả truyện, chạm đúng bạn đang nói', 'Nói câu của các bạn', 'Phiên dịch nhí: nói cho Xiaomei con thích gì']
+for k in range(5):
+    n = D9[k]; old = [w for j in range(k) for w in NEW9[j]]
+    cards = [c9(w) for w in NEW9[k]] + [c9(w, True) for w in old[-max(0, 5 - len(NEW9[k])):]]
+    if k == 0: cards += [c9('juice', nen=True), c9('egg', nen=True)]
+    days[n] = {'steps': [{'type': 'the', 'cards': cards[:8]},
+                         {'type': 'truyen', 'title': f'Picnic Time! · {T9["phan_ten"][k][0]}', 'title_zh': f'去野餐！· {T9["phan_ten"][k][1]}', 'scenes': sc9(k)},
+                         bb9(k), {'type': 'noi', 'turns': noi9(k) if len(noi9(k)) >= 5 else noi9(k) + noi9(max(0, k - 1))[:5 - len(noi9(k))]},
+                         {'type': 'game', 'qs': g9(NEW9[k] + old, 3)}],
+               'part': f'Phần {k + 1}', 't': f'{T9["phan_ten"][k][0]} – {T9["phan_ten"][k][1]}', 'hero': L9 + f'p{k + 1}_1.webp', 'kind': 'phan'}
+ALL9 = [s for k in range(5) for s in sc9(k)]
+whole9 = {'type': 'truyen', 'title': 'Picnic Time!', 'title_zh': '去野餐！', 'scenes': ALL9}
+ALLW9 = [w for p in NEW9 for w in p if w != 'picnic time']
+cham9 = {'type': 'cham', 'opts': ['bong', 'leo', 'anna', 'xiaomei'],
+         'qs': [{'say': {'t': s[l], 'l': l, 'w': s['who'], 'a': s['a_' + l]}, 'ans': s['who']} for i, s in enumerate(ALL9) for l in (('en', 'zh')[i % 2],) if s['who'] in ('bong', 'leo', 'anna', 'xiaomei')][:8]}
+kid9 = [s for s in ALL9 if s['who'] in ('bong', 'leo', 'anna', 'xiaomei', 'vu')]
+PDN9 = [('I like apples!', '我喜欢苹果！', 'Wǒ xǐhuan píngguǒ!'), ('I like bananas!', '我喜欢香蕉！', 'Wǒ xǐhuan xiāngjiāo!'), ('I eat rice!', '我吃米饭！', 'Wǒ chī mǐfàn!'),
+        ('I drink milk!', '我喝牛奶！', 'Wǒ hē niúnǎi!'), ('I like pizza!', '我喜欢比萨！', 'Wǒ xǐhuan bǐsà!')]
+days[D9[5]] = {'steps': [whole9, cham9, bb9(5), {'type': 'goi', 'from': 'Unit 9', 'cards': [c9(w) for w in ['apple', 'banana', 'rice', 'milk', 'water']]}, {'type': 'game', 'qs': g9(ALLW9[:6])}]}
+days[D9[6]] = {'steps': [whole9, {'type': 'noi', 'turns': [{'img': s['img'], 'say': [{'t': s['en'] if i % 2 == 0 else s['zh'], 'l': 'en' if i % 2 == 0 else 'zh', 'w': s['who'], 'a': s['a_en'] if i % 2 == 0 else s['a_zh']}]} for i, s in enumerate(kid9[::2])][:8]},
+                         bb9(6), {'type': 'game', 'qs': g9(['pizza', 'drink', 'like', 'water', 'eat', 'picnic'])}]}
+days[D9[7]] = {'steps': [whole9, {'type': 'pdn', 'model_first': False, 'items': [{'en': e, 'zh': z, 'py': p, 'a_en': au('en', e, 'leo'), 'a_zh': au('zh', z, 'xiaomei')} for e, z, p in PDN9]},
+                         bb9(7), {'type': 'goi', 'from': 'Unit 9', 'cards': [c9(w) for w in ['eat', 'drink', 'pizza', 'like', 'picnic']]}, {'type': 'game', 'qs': g9(['milk', 'apple', 'rice', 'banana', 'water', 'eat'])}]}
+for k, n in enumerate(D9):
+    d = days[n]
+    d.update({'n': n, 'unit': 9, 'unitname': 'Food', 'week': G[n]['tuan'], 'before': BUOI_OF[n], 'goal': GOAL9[k], 'bg': [], 'video': []})
+    if k >= 5: d.update({'part': 'Cả truyện', 't': ['Picnic Time! – cả truyện', 'Các bạn thích gì?', 'Phiên dịch nhí'][k - 5], 'hero': L9 + ['p1_2.webp', 'p3_3.webp', 'p5_3.webp'][k - 5], 'kind': 'ca'})
+fix_ten(days)
+
 # ---------- bản đồ: 26 tuần ----------
 U = {}
 for d in GRID['days']: U.setdefault(str(d['unit']), []).append(d['ngay'])
@@ -284,7 +382,9 @@ for b in GRID['buoi']:
                       'days': b['ngay_web'], 'wb': ['Phiếu tô – dán 1 trang (khoảng 10 phút): tô tranh truyện, dán ảnh người thân, nối tranh – tranh'],
                       'kh': b['ke_hoach_90']}
 units_q = [{'u': u, 'n': f'Unit {u} · {TOPIC[u].split(" · ")[0]}', 'days': ds, 'img': S + 'trang/' + IMG[int(u) - 1] + '.webp'} for u, ds in U.items() if u != 'Ôn']
-reader = {'1': {'t': "Bông's Day", 'zh': 'Bông的一天', 'pages': [dict(s, part=k + 1) for k in range(5) for s in scenes(k)]}}
+reader = {'1': {'t': "Bông's Day", 'zh': 'Bông的一天', 'pages': [dict(s, part=k + 1) for k in range(5) for s in scenes(k)]},
+          '9': {'t': 'Picnic Time!', 'zh': '去野餐！', 'pages': [dict(s, part=k + 1) for k in range(5) for s in sc9(k)]}}
+fix_ten(reader)
 
 out = {'who': who, 'days': {str(k): v for k, v in sorted(days.items())}, 'lop': {str(k): v for k, v in lop.items()}, 'map': mp,
        'soon': {str(k): v for k, v in soon.items()}, 'vi': SD0['vi'], 'vi_a': deep(SD0['vi_a']), 'vi_t': SD0.get('vi_t', {}), 'bg': {},

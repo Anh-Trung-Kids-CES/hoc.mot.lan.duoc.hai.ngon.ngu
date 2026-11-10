@@ -209,6 +209,34 @@ for u in range(2, 13):
                      'label': lab, 'ngay_web': dd, 'lop': lop, 'nguon': f'khung 9 khóa buổi {ob}'})
         b_n += 1
 
+
+# ---------------- Unit 9 theo mạng văn bản (mau_little-seed_u9.json) – thay ô từ, cụm, truyện của 8 ngày ----------------
+_m9 = os.path.join(GRID, 'mang', 'mau_little-seed_u9.json')
+if os.path.exists(_m9):
+    M9 = json.load(open(_m9)); T9 = M9['T1']; D9 = [d for d in days if d['unit'] == 9]
+    seen_en, seen_zh = [], []
+    for k, d in enumerate(D9):
+        if k < 5:
+            t = T9['tu_moi_theo_phan'][k]; P = T9['phan'][k]
+            nen = ' | Nền PreB (dạy lại: tranh + tiếng, chưa bắt nói): juice, egg' if k == 0 else ''
+            d['en']['tu'] = f'Mới · lõi: {", ".join(t["en"])} | Ôn: {", ".join(seen_en) or "từ U1–U8 trong khung câu"}{nen}'
+            d['zh']['tu'] = f'Mới · lõi: {", ".join(t["zh"])} | Ôn: {", ".join(seen_zh) or "–"}'
+            d['en']['cum'] = ' / '.join(dict.fromkeys(s[1] for s in P))
+            d['zh']['cum'] = ' / '.join(dict.fromkeys(s[2] for s in P))
+            d['en']['truyen'] = f'[Mạng unit – văn bản của ngày: T1 phần {k + 1} · T3 · T4] {T9["ten_en"]} · Phần {k + 1}: ' + ' '.join(f'{s[0]}: {s[1]}' for s in P)
+            d['zh']['truyen'] = f'[Mạng unit: T1 phần {k + 1}] {T9["ten_zh"]} · ' + ' '.join(f'{s[0]}：{s[2]}' for s in P) + ' (' + ' '.join(s[3] for s in P) + ')'
+            d['label'] = f'Ngày {d["ngay"]}. Unit 9 · Food · {T9["phan_ten"][k][0]} · {T9["phan_ten"][k][1]}'
+            seen_en += t['en']; seen_zh += t['zh']
+        else:
+            d['en']['truyen'] = f'[Mạng unit: T1 cả truyện · T3 · T4] {T9["ten_en"]} (cả 5 phần)'
+            d['zh']['truyen'] = f'[Mạng unit: T1 cả truyện] {T9["ten_zh"]}'
+            d['label'] = f'Ngày {d["ngay"]}. Unit 9 · Food · ' + ['Nghe cả truyện, chạm đúng bạn đang nói', 'Nói câu của các bạn', 'Phiên dịch nhí: con thích gì'][k - 5]
+        d['nguon'] = 'mạng văn bản U9 (10/11)'
+    for b in buoi:
+        if b['unit'] == 9:
+            b['lop']['en']['baihat'] = f'[Bài của unit, cố định cả 4 buổi] T2 {M9["T2"]["khung_en"]} ({M9["T2"]["giai_dieu"]}) + T4 vè {M9["T4"]["khung_en"]} ‖ ' + b['lop']['en']['baihat']
+            b['lop']['en']['truyen'] = f'[Truyện khung mới] {T9["ten_en"]} ‖ [Bản cũ] ' + b['lop']['en']['truyen']
+
 # ---------------- Tuần 26: ôn cả khóa ----------------
 for j, (src_day, lab) in enumerate([(109, 'Ôn U1–U6: chào hỏi, tên tuổi, gia đình, cơ thể, cảm xúc, trường lớp – Album trang 1–2'),
                                      (112, 'Ôn U7–U12: nhà, con vật, đồ ăn, thời tiết, màu, số – Album trang 3–4')]):

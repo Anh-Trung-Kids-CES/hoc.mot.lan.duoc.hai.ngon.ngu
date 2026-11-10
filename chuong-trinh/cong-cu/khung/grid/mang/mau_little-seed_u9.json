@@ -1,0 +1,399 @@
+{
+ "khoa": "Little Seed 48 buổi",
+ "unit": 9,
+ "chu_de": "Food – Món con thích ăn",
+ "cau_cua_mieng": [
+  [
+   "Yummy!",
+   "好吃！"
+  ],
+  [
+   "Let's go!",
+   "走吧！"
+  ],
+  [
+   "Picnic time!",
+   "去野餐！"
+  ]
+ ],
+ "nen_preb": [
+  "juice",
+  "egg"
+ ],
+ "T1": {
+  "loai": "Truyện khung",
+  "ten_en": "Picnic Time!",
+  "ten_zh": "去野餐！",
+  "khung_en": "I like ___! (biến thể chuỗi: I eat / I drink ___!)",
+  "khung_zh": "我喜欢___！（我吃 / 我喝___！）",
+  "phan_ten": [
+   [
+    "Picnic Time!",
+    "去野餐！"
+   ],
+   [
+    "I Like Apples!",
+    "我喜欢苹果！"
+   ],
+   [
+    "Bananas and Pizza",
+    "香蕉和比萨"
+   ],
+   [
+    "Look! Rice!",
+    "看！米饭！"
+   ],
+   [
+    "Milk and Water",
+    "牛奶和水"
+   ]
+  ],
+  "phan": [
+   [
+    [
+     "me",
+     "Picnic time!",
+     "去野餐！",
+     "Qù yěcān!"
+    ],
+    [
+     "bong",
+     "Picnic time! Let's go!",
+     "去野餐！走吧！",
+     "Qù yěcān! Zǒu ba!"
+    ],
+    [
+     "leo",
+     "Picnic time! Hello, friends!",
+     "去野餐！朋友们好！",
+     "Qù yěcān! Péngyoumen hǎo!"
+    ],
+    [
+     "anna",
+     "Hello! Picnic time!",
+     "你好！去野餐！",
+     "Nǐ hǎo! Qù yěcān!"
+    ]
+   ],
+   [
+    [
+     "bong",
+     "Picnic time! I like apples!",
+     "去野餐！我喜欢苹果！",
+     "Qù yěcān! Wǒ xǐhuan píngguǒ!"
+    ],
+    [
+     "leo",
+     "I like apples!",
+     "我喜欢苹果！",
+     "Wǒ xǐhuan píngguǒ!"
+    ],
+    [
+     "anna",
+     "I like apples!",
+     "我喜欢苹果！",
+     "Wǒ xǐhuan píngguǒ!"
+    ],
+    [
+     "vu",
+     "I eat an apple!",
+     "我吃苹果！",
+     "Wǒ chī píngguǒ!"
+    ]
+   ],
+   [
+    [
+     "leo",
+     "I like bananas!",
+     "我喜欢香蕉！",
+     "Wǒ xǐhuan xiāngjiāo!"
+    ],
+    [
+     "xiaomei",
+     "I like bananas!",
+     "我喜欢香蕉！",
+     "Wǒ xǐhuan xiāngjiāo!"
+    ],
+    [
+     "anna",
+     "I like pizza!",
+     "我喜欢比萨！",
+     "Wǒ xǐhuan bǐsà!"
+    ],
+    [
+     "vu",
+     "I eat pizza! I like pizza!",
+     "我吃比萨！好吃！",
+     "Wǒ chī bǐsà! Hǎochī!"
+    ]
+   ],
+   [
+    [
+     "anna",
+     "Look! Rice!",
+     "看！米饭！",
+     "Kàn! Mǐfàn!"
+    ],
+    [
+     "anna",
+     "I like rice!",
+     "我喜欢米饭！",
+     "Wǒ xǐhuan mǐfàn!"
+    ],
+    [
+     "bong",
+     "I like rice!",
+     "我喜欢米饭！",
+     "Wǒ xǐhuan mǐfàn!"
+    ],
+    [
+     "xiaomei",
+     "I eat rice! Yummy!",
+     "我吃米饭！好吃！",
+     "Wǒ chī mǐfàn! Hǎochī!"
+    ]
+   ],
+   [
+    [
+     "leo",
+     "I drink milk!",
+     "我喝牛奶！",
+     "Wǒ hē niúnǎi!"
+    ],
+    [
+     "xiaomei",
+     "I like milk!",
+     "我喜欢牛奶！",
+     "Wǒ xǐhuan niúnǎi!"
+    ],
+    [
+     "bong",
+     "I drink water! Yummy!",
+     "我喝水！好喝！",
+     "Wǒ hē shuǐ! Hǎohē!"
+    ],
+    [
+     "me",
+     "What do you like, ___?",
+     "___，你喜欢什么？",
+     "___, nǐ xǐhuan shénme?"
+    ]
+   ]
+  ],
+  "tu_moi_theo_phan": [
+   {
+    "en": [
+     "picnic",
+     "time"
+    ],
+    "zh": [
+     "野餐"
+    ]
+   },
+   {
+    "en": [
+     "like",
+     "apple",
+     "eat"
+    ],
+    "zh": [
+     "喜欢",
+     "苹果",
+     "吃"
+    ]
+   },
+   {
+    "en": [
+     "banana",
+     "pizza"
+    ],
+    "zh": [
+     "香蕉",
+     "比萨"
+    ]
+   },
+   {
+    "en": [
+     "rice"
+    ],
+    "zh": [
+     "米饭"
+    ]
+   },
+   {
+    "en": [
+     "drink",
+     "milk",
+     "water"
+    ],
+    "zh": [
+     "喝",
+     "牛奶",
+     "水"
+    ]
+   }
+  ],
+  "nghe_lam_quen": [
+   "去 (去野餐)",
+   "朋友们",
+   "好喝",
+   "什么 (câu cuối)"
+  ]
+ },
+ "T2": {
+  "loai": "Bài hát vận động",
+  "giai_dieu": "Hot Cross Buns (dân gian hết bản quyền) · Đô trưởng · ♩=104 · khoảng 1 phút 20",
+  "khung_en": "I like ___, yummy, yum!",
+  "khung_zh": "我喜欢___，好吃！",
+  "luot": [
+   [
+    "apples",
+    "I like apples, yummy, yum! / I like apples, yummy, yum! / Apples, apples, apples, apples – / I like apples, yummy, yum!",
+    "苹果苹果，我喜欢！（vè vỗ tay – giai điệu ngược thanh 苹果）"
+   ],
+   [
+    "bananas",
+    "I like bananas, yummy, yum! / I like bananas, yummy, yum! / Bananas, bananas, bananas, bananas – / I like bananas, yummy, yum!",
+    "我喜欢香蕉，好吃！我喜欢香蕉，好吃！香蕉香蕉香蕉香蕉，我喜欢香蕉，好吃！"
+   ],
+   [
+    "pizza",
+    "I like pizza, yummy, yum! / I like pizza, yummy, yum! / Pizza, pizza, pizza, pizza – / I like pizza, yummy, yum!",
+    "我喜欢比萨，好吃！我喜欢比萨，好吃！比萨比萨比萨比萨，我喜欢比萨，好吃！"
+   ],
+   [
+    "rice",
+    "I like rice, yummy, yum! / I like rice, yummy, yum! / Rice, rice, rice, rice – / I like rice, yummy, yum!",
+    "我喜欢米饭，好吃！我喜欢米饭，好吃！米饭米饭米饭米饭，我喜欢米饭，好吃！"
+   ],
+   [
+    "milk",
+    "I like milk, yummy, yum! / I like milk, yummy, yum! / Milk, milk, milk, milk – / I like milk, yummy, yum!",
+    "牛奶牛奶，我喜欢！（vè vỗ tay – giai điệu ngược thanh 牛奶）"
+   ],
+   [
+    "water",
+    "I like water, yummy, yum! / I like water, yummy, yum! / Water, water, water, water – / I like water, yummy, yum!",
+    "我喜欢喝水，好喝！我喜欢喝水，好喝！喝水喝水喝水喝水，我喜欢喝水，好喝！"
+   ],
+   [
+    "kết",
+    "Yummy, yum! Yummy, yum! / Apples, bananas, rice and pizza – / Yummy, yum, ___!",
+    "好吃好吃，好吃好吃！苹果香蕉，米饭比萨，___，好吃！"
+   ]
+  ],
+  "dong_tac": "apple – cắn táo; banana – bóc chuối; pizza – cầm miếng bánh; rice – và cơm; milk, water – ngửa cốc uống; câu kết xoa bụng rồi chỉ vào con."
+ },
+ "T3": {
+  "loai": "Big book mẫu câu",
+  "khung_en": "Do you like ___? – Yes!",
+  "khung_zh": "你喜欢___吗？– 喜欢！",
+  "trang": [
+   [
+    "picnic",
+    "Picnic time!",
+    "去野餐！",
+    "Qù yěcān!"
+   ],
+   [
+    "apple",
+    "Do you like apples? – Yes! I eat apples!",
+    "你喜欢苹果吗？– 喜欢！我吃苹果！",
+    "Nǐ xǐhuan píngguǒ ma? – Xǐhuan!"
+   ],
+   [
+    "banana",
+    "Do you like bananas? – Yes! I eat bananas!",
+    "你喜欢香蕉吗？– 喜欢！我吃香蕉！",
+    "Nǐ xǐhuan xiāngjiāo ma? – Xǐhuan!"
+   ],
+   [
+    "pizza",
+    "Do you like pizza? – Yes! I eat pizza!",
+    "你喜欢比萨吗？– 喜欢！我吃比萨！",
+    "Nǐ xǐhuan bǐsà ma? – Xǐhuan!"
+   ],
+   [
+    "rice",
+    "Do you like rice? – Yes! I eat rice!",
+    "你喜欢米饭吗？– 喜欢！我吃米饭！",
+    "Nǐ xǐhuan mǐfàn ma? – Xǐhuan!"
+   ],
+   [
+    "milk",
+    "Do you like milk? – Yes! I drink milk!",
+    "你喜欢牛奶吗？– 喜欢！我喝牛奶！",
+    "Nǐ xǐhuan niúnǎi ma? – Xǐhuan!"
+   ],
+   [
+    "water",
+    "Do you like water? – Yes! I drink water!",
+    "你喜欢水吗？– 喜欢！我喝水！",
+    "Nǐ xǐhuan shuǐ ma? – Xǐhuan!"
+   ],
+   [
+    "juice",
+    "Do you like juice? – Yes!",
+    "你喜欢果汁吗？– 喜欢！",
+    "Nǐ xǐhuan guǒzhī ma? – Xǐhuan!"
+   ],
+   [
+    "egg",
+    "Do you like eggs? – Yes!",
+    "你喜欢鸡蛋吗？– 喜欢！",
+    "Nǐ xǐhuan jīdàn ma? – Xǐhuan!"
+   ],
+   [
+    "eat",
+    "Do you like picnics, ___? – Yes!",
+    "___，你喜欢野餐吗？– 喜欢！",
+    "___, nǐ xǐhuan yěcān ma? – Xǐhuan!"
+   ]
+  ],
+  "ghi_chu": "Trang 8–9 là từ Nền PreB (juice, egg); 果汁, 鸡蛋 ở mức nghe làm quen. Trang 10 có khung dán ảnh con."
+ },
+ "T4": {
+  "loai": "Vè",
+  "kieu": "đếm",
+  "khung_en": "One, two – I eat ___!",
+  "khung_zh": "一二，吃___！",
+  "dong": [
+   [
+    "apple",
+    "One, two – I eat apples!",
+    "一二，吃苹果！",
+    "Yī èr, chī píngguǒ!"
+   ],
+   [
+    "banana",
+    "Three, four – I eat bananas!",
+    "三四，吃香蕉！",
+    "Sān sì, chī xiāngjiāo!"
+   ],
+   [
+    "pizza",
+    "Five, six – I eat pizza!",
+    "五六，吃比萨！",
+    "Wǔ liù, chī bǐsà!"
+   ],
+   [
+    "milk",
+    "One, two – I drink milk!",
+    "一二，喝牛奶！",
+    "Yī èr, hē niúnǎi!"
+   ],
+   [
+    "water",
+    "Three, four – I drink water!",
+    "三四，喝水！",
+    "Sān sì, hē shuǐ!"
+   ],
+   [
+    "picnic",
+    "Picnic time – yummy, yum!",
+    "去野餐，好吃！",
+    "Qù yěcān, hǎochī!"
+   ]
+  ]
+ }
+}

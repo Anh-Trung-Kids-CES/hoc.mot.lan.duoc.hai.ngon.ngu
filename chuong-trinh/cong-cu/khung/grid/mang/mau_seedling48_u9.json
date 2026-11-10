@@ -1,0 +1,512 @@
+{
+ "khoa": "Seedling 48 buổi",
+ "unit": 9,
+ "chu_de": "Food – Món con thích, món con không thích (bộ từ Excel v7, ngày web 64–71)",
+ "cau_cua_mieng": [
+  [
+   "It looks nice!",
+   "看起来很好吃！"
+  ],
+  [
+   "No, thank you!",
+   "不要，谢谢！"
+  ],
+  [
+   "Yes, I do!",
+   "喜欢！"
+  ]
+ ],
+ "nen_little_seed": [
+  "apple",
+  "like",
+  "banana",
+  "pizza",
+  "water",
+  "picnic",
+  "rice",
+  "drink",
+  "milk",
+  "eat",
+  "time"
+ ],
+ "T1": {
+  "loai": "Truyện khung",
+  "ten_en": "The Picnic",
+  "ten_zh": "真好吃！",
+  "khung_en": "Do you like ___? – Yes, I do! / No, I don't! (phần 5: Do you want ___? – I want ___!)",
+  "khung_zh": "你喜欢___吗？– 喜欢！/ 不喜欢！（第五部分：你想吃___吗？– 想！）",
+  "phan_ten": [
+   [
+    "Look! Food!",
+    "看！食物！"
+   ],
+   [
+    "Bread and Juice",
+    "面包和果汁"
+   ],
+   [
+    "Noodles or Ice Cream?",
+    "面条还是冰淇淋？"
+   ],
+   [
+    "It Looks Nice!",
+    "看起来很好吃！"
+   ],
+   [
+    "No, Thank You!",
+    "不要，谢谢！"
+   ],
+   [
+    "A Cross!",
+    "打叉！"
+   ]
+  ],
+  "phan": [
+   [
+    [
+     "me_bong",
+     "Look! Food! Do you like fruit?",
+     "看！食物！你喜欢水果吗？",
+     "Kàn! Shíwù! Nǐ xǐhuan shuǐguǒ ma?"
+    ],
+    [
+     "nhan",
+     "Yes, I do!",
+     "喜欢！",
+     "Xǐhuan!"
+    ],
+    [
+     "me_bong",
+     "Do you like apples?",
+     "你喜欢苹果吗？",
+     "Nǐ xǐhuan píngguǒ ma?"
+    ],
+    [
+     "bong",
+     "Yes, I do!",
+     "喜欢！",
+     "Xǐhuan!"
+    ],
+    [
+     "nhan",
+     "I like fruit!",
+     "我喜欢水果！",
+     "Wǒ xǐhuan shuǐguǒ!"
+    ]
+   ],
+   [
+    [
+     "me_bong",
+     "Do you like bread?",
+     "你喜欢面包吗？",
+     "Nǐ xǐhuan miànbāo ma?"
+    ],
+    [
+     "nhan",
+     "Yes, I do!",
+     "喜欢！",
+     "Xǐhuan!"
+    ],
+    [
+     "me_bong",
+     "Do you like juice?",
+     "你喜欢果汁吗？",
+     "Nǐ xǐhuan guǒzhī ma?"
+    ],
+    [
+     "bong",
+     "Yes, I do! Apple juice!",
+     "喜欢！苹果汁！",
+     "Xǐhuan! Píngguǒzhī!"
+    ],
+    [
+     "nhan",
+     "I like apple juice!",
+     "我喜欢苹果汁！",
+     "Wǒ xǐhuan píngguǒzhī!"
+    ]
+   ],
+   [
+    [
+     "leo",
+     "Do you like noodles?",
+     "你喜欢面条吗？",
+     "Nǐ xǐhuan miàntiáo ma?"
+    ],
+    [
+     "bong",
+     "No, I don't.",
+     "不喜欢。",
+     "Bù xǐhuan."
+    ],
+    [
+     "leo",
+     "Do you like ice cream?",
+     "你喜欢冰淇淋吗？",
+     "Nǐ xǐhuan bīngqílín ma?"
+    ],
+    [
+     "bong",
+     "Yes, I do! Ice cream is nice!",
+     "喜欢！冰淇淋真好吃！",
+     "Xǐhuan! Bīngqílín zhēn hǎochī!"
+    ],
+    [
+     "anna",
+     "Nice!",
+     "好吃！",
+     "Hǎochī!"
+    ]
+   ],
+   [
+    [
+     "nhan",
+     "Look! Chips!",
+     "看！薯条！",
+     "Kàn! Shǔtiáo!"
+    ],
+    [
+     "anna",
+     "It looks nice!",
+     "看起来很好吃！",
+     "Kàn qǐlái hěn hǎochī!"
+    ],
+    [
+     "nhan",
+     "Do you like chips?",
+     "你喜欢薯条吗？",
+     "Nǐ xǐhuan shǔtiáo ma?"
+    ],
+    [
+     "leo",
+     "Yes, I do!",
+     "喜欢！",
+     "Xǐhuan!"
+    ],
+    [
+     "anna",
+     "Do you like burgers?",
+     "你喜欢汉堡吗？",
+     "Nǐ xǐhuan hànbǎo ma?"
+    ],
+    [
+     "leo",
+     "Yes, I do!",
+     "喜欢！",
+     "Xǐhuan!"
+    ]
+   ],
+   [
+    [
+     "anna",
+     "Do you want candy, Bông?",
+     "Bông，你想吃糖果吗？",
+     "Bông, nǐ xiǎng chī tángguǒ ma?"
+    ],
+    [
+     "bong",
+     "No, thank you!",
+     "不要，谢谢！",
+     "Bú yào, xièxie!"
+    ],
+    [
+     "me_bong",
+     "Do you want fruit?",
+     "你想吃水果吗？",
+     "Nǐ xiǎng chī shuǐguǒ ma?"
+    ],
+    [
+     "bong",
+     "Yes! I want fruit!",
+     "想！我想吃水果！",
+     "Xiǎng! Wǒ xiǎng chī shuǐguǒ!"
+    ],
+    [
+     "nhan",
+     "I want fruit, too!",
+     "我也想！",
+     "Wǒ yě xiǎng!"
+    ]
+   ],
+   [
+    [
+     "me_bong",
+     "Do you like candy?",
+     "你喜欢糖果吗？",
+     "Nǐ xǐhuan tángguǒ ma?"
+    ],
+    [
+     "bong",
+     "No, I don't! A cross!",
+     "不喜欢！打叉！",
+     "Bù xǐhuan! Dǎ chā!"
+    ],
+    [
+     "me_bong",
+     "Do you like fruit?",
+     "你喜欢水果吗？",
+     "Nǐ xǐhuan shuǐguǒ ma?"
+    ],
+    [
+     "bong",
+     "Yes, I do!",
+     "喜欢！",
+     "Xǐhuan!"
+    ],
+    [
+     "me_bong",
+     "And you, ___?",
+     "___，你呢？",
+     "___, nǐ ne?"
+    ]
+   ]
+  ],
+  "tu_moi_theo_phan": [
+   {
+    "en": [
+     "food",
+     "fruit"
+    ],
+    "zh": [
+     "食物",
+     "水果"
+    ]
+   },
+   {
+    "en": [
+     "bread",
+     "juice"
+    ],
+    "zh": [
+     "面包",
+     "果汁"
+    ]
+   },
+   {
+    "en": [
+     "noodles",
+     "ice cream",
+     "nice"
+    ],
+    "zh": [
+     "面条",
+     "冰淇淋",
+     "好吃"
+    ]
+   },
+   {
+    "en": [
+     "burger",
+     "chips",
+     "it looks nice"
+    ],
+    "zh": [
+     "汉堡",
+     "薯条",
+     "看起来"
+    ]
+   },
+   {
+    "en": [
+     "candy",
+     "want"
+    ],
+    "zh": [
+     "糖果",
+     "想"
+    ]
+   },
+   {
+    "en": [
+     "cross"
+    ],
+    "zh": []
+   }
+  ],
+  "nghe_lam_quen": [
+   "苹果汁",
+   "打叉 (= put a cross)",
+   "你呢",
+   "too / 也"
+  ],
+  "so_voi_v7": "Giữ cốt truyện, nhân vật và bộ từ từng ngày của v7. Bỏ lời dẫn và từ ngoài danh sách (kiwi, coconut, lemon, duck, chocolate, fries, sweets, tick, draw); mỗi phần dựng quanh một khung hỏi – đáp; câu cuối hỏi con."
+ },
+ "T2": {
+  "loai": "Bài hát vận động",
+  "kieu": "hỏi–đáp",
+  "giai_dieu": "Here We Go Round the Mulberry Bush (dân gian hết bản quyền) · Sol trưởng · ♩=112 · khoảng 1 phút 20",
+  "khung_en": "Do you like the ___, the ___, the ___? Do you like the ___? Yes, I do! / No, I don't – cross!",
+  "khung_zh": "你喜欢___吗？___吗？___吗？你喜欢___吗？喜欢！/ 不喜欢！",
+  "luot": [
+   [
+    "bread",
+    "Do you like the bread, the bread, the bread? / Do you like the bread? Yes, I do!",
+    "你喜欢面包吗？面包吗？面包吗？你喜欢面包吗？喜欢！"
+   ],
+   [
+    "noodles",
+    "Do you like the noodles, the noodles, the noodles? / Do you like the noodles? Yes, I do!",
+    "你喜欢面条吗？面条吗？面条吗？你喜欢面条吗？喜欢！"
+   ],
+   [
+    "ice cream",
+    "Do you like the ice cream, the ice cream, the ice cream? / Do you like the ice cream? Yes, I do!",
+    "冰淇淋，冰淇淋，我喜欢冰淇淋！（vè vỗ tay – 冰淇淋 ngược giai điệu）"
+   ],
+   [
+    "candy",
+    "Do you like the candy, the candy, the candy? / Do you like the candy? No, I don't – cross!",
+    "你喜欢糖果吗？糖果吗？糖果吗？你喜欢糖果吗？不喜欢！"
+   ],
+   [
+    "kết",
+    "Do you like the food, the food, the food? / Do you want some food, ___? Yes, I do!",
+    "你喜欢食物吗？食物吗？食物吗？___，你想吃吗？想！"
+   ]
+  ],
+  "dong_tac": "bread – cắn bánh; noodles – gắp mì; ice cream – liếm kem; candy – khoanh tay chữ X (cross) và lắc đầu; lần kết ôm bạn bên cạnh."
+ },
+ "T3": {
+  "loai": "Big book mẫu câu",
+  "kieu": "cặp đối lập",
+  "khung_en": "I like ___. ✓ / I don't like ___. ✗",
+  "khung_zh": "我喜欢___。✓ / 我不喜欢___。✗",
+  "trang": [
+   [
+    "food",
+    "Look! Food!",
+    "看！食物！",
+    "Kàn! Shíwù!"
+   ],
+   [
+    "fruit",
+    "I like fruit. ✓",
+    "我喜欢水果。✓",
+    "Wǒ xǐhuan shuǐguǒ."
+   ],
+   [
+    "bread",
+    "I like bread. ✓",
+    "我喜欢面包。✓",
+    "Wǒ xǐhuan miànbāo."
+   ],
+   [
+    "juice",
+    "I like juice. ✓",
+    "我喜欢果汁。✓",
+    "Wǒ xǐhuan guǒzhī."
+   ],
+   [
+    "noodles",
+    "I don't like noodles. ✗",
+    "我不喜欢面条。✗",
+    "Wǒ bù xǐhuan miàntiáo."
+   ],
+   [
+    "ice_cream",
+    "I like ice cream. It's nice! ✓",
+    "我喜欢冰淇淋。真好吃！✓",
+    "Wǒ xǐhuan bīngqílín. Zhēn hǎochī!"
+   ],
+   [
+    "chips",
+    "I like chips. ✓",
+    "我喜欢薯条。✓",
+    "Wǒ xǐhuan shǔtiáo."
+   ],
+   [
+    "burger",
+    "I like burgers. ✓",
+    "我喜欢汉堡。✓",
+    "Wǒ xǐhuan hànbǎo."
+   ],
+   [
+    "candy",
+    "I don't like candy. ✗ A cross!",
+    "我不喜欢糖果。✗ 打叉！",
+    "Wǒ bù xǐhuan tángguǒ. Dǎ chā!"
+   ],
+   [
+    "picnic",
+    "I like ___. ✓",
+    "我喜欢___。✓",
+    "Wǒ xǐhuan ___."
+   ]
+  ]
+ },
+ "T4": {
+  "loai": "Vè",
+  "kieu": "đếm",
+  "khung_en": "One, two, three – ___!",
+  "khung_zh": "一二三，___！",
+  "dong": [
+   [
+    "chips",
+    "One, two, three – chips!",
+    "一二三，薯条！",
+    "Yī èr sān, shǔtiáo!"
+   ],
+   [
+    "juice",
+    "Four, five, six – juice!",
+    "四五六，果汁！",
+    "Sì wǔ liù, guǒzhī!"
+   ],
+   [
+    "burger",
+    "Seven, eight – burgers and fruit!",
+    "七八，汉堡和水果！",
+    "Qī bā, hànbǎo hé shuǐguǒ!"
+   ],
+   [
+    "ice_cream",
+    "Nine, ten – ice cream! Nice!",
+    "九十，冰淇淋！好吃！",
+    "Jiǔ shí, bīngqílín! Hǎochī!"
+   ],
+   [
+    "candy",
+    "Candy? I don't want candy – a cross!",
+    "糖果？不想吃，打叉！",
+    "Tángguǒ? Bù xiǎng chī, dǎ chā!"
+   ]
+  ]
+ },
+ "T5": {
+  "loai": "Bài tiếng Trung riêng",
+  "kieu": "hỏi–đáp",
+  "khung_zh": "你想吃什么？– 我想吃___。",
+  "dong": [
+   [
+    "bread",
+    "你想吃什么？— 我想吃面包。",
+    "Nǐ xiǎng chī shénme? — Wǒ xiǎng chī miànbāo."
+   ],
+   [
+    "noodles",
+    "你想吃什么？— 我想吃面条。",
+    "Nǐ xiǎng chī shénme? — Wǒ xiǎng chī miàntiáo."
+   ],
+   [
+    "burger",
+    "你想吃什么？— 我想吃汉堡。",
+    "Nǐ xiǎng chī shénme? — Wǒ xiǎng chī hànbǎo."
+   ],
+   [
+    "juice",
+    "你想喝什么？— 我想喝果汁。",
+    "Nǐ xiǎng hē shénme? — Wǒ xiǎng hē guǒzhī."
+   ],
+   [
+    "ice_cream",
+    "看起来真好吃！",
+    "Kàn qǐlái zhēn hǎochī!"
+   ],
+   [
+    "candy",
+    "你想吃糖果吗？— 不要，谢谢！",
+    "Nǐ xiǎng chī tángguǒ ma? — Bú yào, xièxie!"
+   ]
+  ]
+ }
+}

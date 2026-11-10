@@ -35,7 +35,7 @@ function tts(text, lang) {
   return new Promise(res => { let done = false; const fin = () => { if (!done) { done = true; res(); } };
     try { if (!('speechSynthesis' in window)) return setTimeout(fin, 700);
       const t = String(text || '').replace(/[·…_]+/g, ' ').replace(/\s+/g, ' ').trim(); if (!t) return fin();
-      const L = { en: 'en-US', zh: 'zh-CN' }[lang] || 'en-US'; const u = new SpeechSynthesisUtterance(t); u.lang = L; u.rate = .82;
+      const L = { en: 'en-US', zh: 'zh-CN', vi: 'vi-VN' }[lang] || 'en-US'; const u = new SpeechSynthesisUtterance(t); u.lang = L; u.rate = .82;
       const v = voices.find(v => v.lang.replace('_', '-').toLowerCase() === L.toLowerCase()) || voices.find(v => v.lang.toLowerCase().startsWith(L.slice(0, 2))); if (v) u.voice = v;
       u.onend = fin; u.onerror = fin; speechSynthesis.cancel(); speechSynthesis.speak(u); setTimeout(fin, 1800 + t.length * 180); } catch (e) { setTimeout(fin, 600); } });
 }
@@ -159,7 +159,7 @@ function pop(el) { if (!el) return; el.classList.remove('pop'); void el.offsetWi
 function alive(my) { return my === RUN && document.getElementById('lsBox'); }
 
 function frame(box, step) {
-  const M = T[step.type];
+  const M = Object.assign({}, T[step.type], step.lab ? { n: step.lab, sub: step.sub || T[step.type].sub } : {});   // bước có tên riêng (big book, vè…)
   box.innerHTML = `<div class="ls-stage">
     <div class="ls-top"><div><b>${esc(M.n)}</b><small>${esc(M.sub)}</small></div><div class="ls-dots" id="lsDots"></div><div class="ls-stars">${SVG.star}<span id="lsStars">0</span></div></div>
     <div class="ls-body" id="lsBody"></div>

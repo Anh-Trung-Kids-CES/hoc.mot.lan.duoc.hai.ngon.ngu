@@ -5,6 +5,50 @@
 ],
 [
 "en",
+"Do you like apples? – Yes!"
+],
+[
+"en",
+"Do you like bananas? – Yes!"
+],
+[
+"en",
+"Do you like eggs? – Yes!"
+],
+[
+"en",
+"Do you like juice? – Yes!"
+],
+[
+"en",
+"Do you like milk? – Yes!"
+],
+[
+"en",
+"Do you like picnics, ___? – Yes!"
+],
+[
+"en",
+"Do you like picnics? – Yes!"
+],
+[
+"en",
+"Do you like pizza? – Yes!"
+],
+[
+"en",
+"Do you like rice? – Yes!"
+],
+[
+"en",
+"Do you like water? – Yes!"
+],
+[
+"en",
+"Five, six – I eat pizza!"
+],
+[
+"en",
 "Goodbye, Bông!"
 ],
 [
@@ -37,6 +81,10 @@
 ],
 [
 "en",
+"Hello! Picnic time!"
+],
+[
+"en",
 "Hello, Anna!"
 ],
 [
@@ -57,11 +105,75 @@
 ],
 [
 "en",
+"Hello, ___!"
+],
+[
+"en",
 "Hello, day!"
 ],
 [
 "en",
 "Hello, kitten!"
+],
+[
+"en",
+"I drink milk!"
+],
+[
+"en",
+"I drink water!"
+],
+[
+"en",
+"I drink water! Yummy!"
+],
+[
+"en",
+"I eat an apple!"
+],
+[
+"en",
+"I eat apples!"
+],
+[
+"en",
+"I eat bananas!"
+],
+[
+"en",
+"I eat pizza!"
+],
+[
+"en",
+"I eat pizza! I like pizza!"
+],
+[
+"en",
+"I eat rice!"
+],
+[
+"en",
+"I eat rice! Yummy!"
+],
+[
+"en",
+"I like apples!"
+],
+[
+"en",
+"I like bananas!"
+],
+[
+"en",
+"I like milk!"
+],
+[
+"en",
+"I like pizza!"
+],
+[
+"en",
+"I like rice!"
 ],
 [
 "en",
@@ -73,7 +185,39 @@
 ],
 [
 "en",
+"Look! Rice!"
+],
+[
+"en",
 "Mommy, mommy, goodbye!"
+],
+[
+"en",
+"One, two – I drink milk!"
+],
+[
+"en",
+"One, two – I eat apples!"
+],
+[
+"en",
+"Picnic time – yummy, yum!"
+],
+[
+"en",
+"Picnic time!"
+],
+[
+"en",
+"Picnic time! Hello, friends!"
+],
+[
+"en",
+"Picnic time! I like apples!"
+],
+[
+"en",
+"Picnic time! Let's go!"
 ],
 [
 "en",
@@ -82,6 +226,22 @@
 [
 "en",
 "See you tomorrow, teacher!"
+],
+[
+"en",
+"Three, four – I drink water!"
+],
+[
+"en",
+"Three, four – I eat bananas!"
+],
+[
+"en",
+"What do you like, ___?"
+],
+[
+"en",
+"What do you like?"
 ],
 [
 "en",
@@ -94,6 +254,10 @@
 [
 "en",
 "boy"
+],
+[
+"en",
+"picnic time"
 ],
 [
 "en",
@@ -125,7 +289,111 @@
 ],
 [
 "zh",
+"___，你喜欢什么？"
+],
+[
+"zh",
+"___，你喜欢野餐吗？– 喜欢！"
+],
+[
+"zh",
+"___，你好！"
+],
+[
+"zh",
+"一二，吃苹果！"
+],
+[
+"zh",
+"一二，喝牛奶！"
+],
+[
+"zh",
+"三四，吃香蕉！"
+],
+[
+"zh",
+"三四，喝水！"
+],
+[
+"zh",
 "不对"
+],
+[
+"zh",
+"五六，吃比萨！"
+],
+[
+"zh",
+"你喜欢什么？"
+],
+[
+"zh",
+"你喜欢果汁吗？– 喜欢！"
+],
+[
+"zh",
+"你喜欢比萨吗？– 喜欢！"
+],
+[
+"zh",
+"你喜欢水吗？– 喜欢！"
+],
+[
+"zh",
+"你喜欢牛奶吗？– 喜欢！"
+],
+[
+"zh",
+"你喜欢米饭吗？– 喜欢！"
+],
+[
+"zh",
+"你喜欢苹果吗？– 喜欢！"
+],
+[
+"zh",
+"你喜欢野餐吗？– 喜欢！"
+],
+[
+"zh",
+"你喜欢香蕉吗？– 喜欢！"
+],
+[
+"zh",
+"你喜欢鸡蛋吗？– 喜欢！"
+],
+[
+"zh",
+"你好！去野餐！"
+],
+[
+"zh",
+"再见，明天见！"
+],
+[
+"zh",
+"去野餐"
+],
+[
+"zh",
+"去野餐！"
+],
+[
+"zh",
+"去野餐！我喜欢苹果！"
+],
+[
+"zh",
+"去野餐！朋友们好！"
+],
+[
+"zh",
+"去野餐！走吧！"
+],
+[
+"zh",
+"去野餐，好吃！"
 ],
 [
 "zh",
@@ -145,11 +413,67 @@
 ],
 [
 "zh",
+"小狗，小狗，再见！"
+],
+[
+"zh",
 "小猫，你好！"
 ],
 [
 "zh",
 "小猫，小猫，再见！"
+],
+[
+"zh",
+"我吃比萨！"
+],
+[
+"zh",
+"我吃比萨！好吃！"
+],
+[
+"zh",
+"我吃米饭！"
+],
+[
+"zh",
+"我吃米饭！好吃！"
+],
+[
+"zh",
+"我吃苹果！"
+],
+[
+"zh",
+"我吃香蕉！"
+],
+[
+"zh",
+"我喜欢比萨！"
+],
+[
+"zh",
+"我喜欢牛奶！"
+],
+[
+"zh",
+"我喜欢米饭！"
+],
+[
+"zh",
+"我喜欢香蕉！"
+],
+[
+"zh",
+"我喝水！"
+],
+[
+"zh",
+"我喝水！好喝！"
+],
+[
+"zh",
+"我喝牛奶！"
 ],
 [
 "zh",
@@ -169,6 +493,10 @@
 ],
 [
 "zh",
+"看！米饭！"
+],
+[
+"zh",
 "老师，你好！"
 ],
 [
@@ -177,10 +505,18 @@
 ],
 [
 "zh",
+"苹果"
+],
+[
+"zh",
 "走吧"
 ],
 [
 "zh",
 "走吧！"
+],
+[
+"zh",
+"香蕉"
 ]
 ]
