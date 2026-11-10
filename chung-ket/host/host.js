@@ -318,6 +318,7 @@ function ensureNeed() {
   S.need[L] = ks; save();
 }
 function needLeft() { const L = S.lan; return (S.need[L] || []).filter(k => !(S.it[k] && S.it[k].lp >= L)); }
+function practiced(s) { return KEYS.filter(k => s.it[k] && s.it[k].n).sort((a, b) => ((s.it[b].fb || {}).at || 0) - ((s.it[a].fb || {}).at || 0)); }
 function masteredCount() { return KEYS.filter(k => S.it[k] && S.it[k].pass).length; }
 
 /* ra đề kiểm tra: ưu tiên tình huống chưa gặp, tình huống làm sai lần trước; đổi cách hỏi và đổi tiếng so với lần trước */
@@ -533,6 +534,7 @@ async function practiceSay(k) {
   const sc = composite(r, it.lang), ok = practicePass(r, it.lang);
   const o = S.it[k] || { best: 0, last: 0, n: 0, lp: 0, pass: false };
   o.n++; o.last = sc; o.best = Math.max(o.best, sc); o.fb = Object.assign({}, r, { at: Date.now() });
+  o.h = (o.h || []).concat([{ sc, ok, at: Date.now() }]).slice(-5);
   if (ok) { o.pass = true; o.lp = Math.max(o.lp || 0, S.lan); }
   S.it[k] = o; save();
   if (!$('#res')) return;
@@ -681,9 +683,27 @@ async function viewResults() {
         <h4>Các bài kiểm tra</h4>
         ${s.tests.length ? `<table class="tb"><thead><tr><th>Lần</th><th>Ngày</th><th>Đúng</th><th>Phản xạ chậm</th><th>Kết quả</th><th></th></tr></thead><tbody>${s.tests.slice().reverse().map(t => `<tr><td>${t.lan}</td><td>${fmtTime(t.at)}</td><td>${t.nOk}/${t.n} (${t.pct}%)</td><td>${t.slow}</td><td>${t.pass ? '<span class="chip ok">Qua</span>' : '<span class="chip no">Chưa qua</span>'}</td><td><button class="btn ghost sm" data-ghi="${t.id}" data-uid="${h.id}">Nghe lại</button></td></tr><tr class="det" id="d_${t.id}"><td colspan="6"></td></tr>`).join('')}</tbody></table>` : '<p class="muted">Chưa làm bài kiểm tra.</p>'}
         ${weak.length ? `<h4>10 câu điểm thấp nhất</h4><ul class="weak">${weak.map(k => { const it = itemOf(k), f = s.it[k].fb; return `<li><span class="code">${it.c}</span> ${lineHtml(it.c, it.lang)} <span class="chip ${s.it[k].pass ? 'ok' : 'no'}">${s.it[k].best}</span>${f && f.loi && f.loi.length ? `<span class="muted sm"> ${f.loi.map(e => esc(e.tu) + ': ' + esc(e.van_de)).join('; ')}</span>` : ''}</li>`; }).join('')}</ul>` : ''}
-        ${notYet.length && notYet.length < star.length ? `<p class="muted">Câu ★ chưa đạt: ${notYet.map(k => k.replace('|', ' ')).join(', ')}</p>` : ''}
+        ${notYet.length ? `<p class="muted">Còn <b>${notYet.length}</b> câu ★ chưa đạt${notYet.length <= 20 ? ': ' + notYet.map(k => k.replace('|', ' ')).join(', ') : ''}.</p>` : ''}
+        ${practiced(s).length ? `<div class="row"><button class="btn ghost sm" data-pfb="${h.id}">Xem phản hồi AI khi luyện (${practiced(s).length} câu)</button></div><div id="pfb_${h.id}"></div>` : ''}
       </section>`;
     }).join('');
+  /* phản hồi AI của lần luyện gần nhất từng câu, câu mới luyện lên đầu */
+  $$('[data-pfb]').forEach(b => b.onclick = () => {
+    const box = $('#pfb_' + b.dataset.pfb); if (box.innerHTML) { box.innerHTML = ''; return; }
+    const s = Object.values(hosts).find(h => h.id === b.dataset.pfb).s;
+    box.innerHTML = practiced(s).map(k => {
+      const it = itemOf(k), o = s.it[k], f = o.fb || {};
+      const sub = f.chrome ? `Khớp chữ ${f.noi_dung}` : [['Nội dung', f.noi_dung], ['Phát âm', f.phat_am], ['Thanh điệu', it.lang === 'zh' ? f.thanh_dieu : -1], ['Ngữ điệu', f.nhip]].filter(x => x[1] >= 0).map(x => x[0] + ' ' + x[1]).join(' · ');
+      const hist = (o.h || []).map(x => `<span class="chip ${x.ok ? 'ok' : 'no'}">${x.sc}</span>`).join(' ');
+      return `<div class="gi ${o.pass ? 'ok' : 'no'}">
+        <p><span class="code">${it.c}</span> <span class="lg ${it.lang}">${LANG[it.lang].b}</span> ${lineHtml(it.c, it.lang)}</p>
+        <p class="sm">${o.pass ? '✓ Đạt' : '✗ Chưa đạt'} · ${o.n} lần nói · cao nhất <b>${o.best}</b> · lần cuối <b>${o.last}</b>${f.at ? ' · ' + fmtTime(f.at) : ''}${hist ? ' · các lần gần nhất: ' + hist : ''}</p>
+        <p class="sm muted">${esc(sub)}</p>
+        ${f.nghe_duoc ? `<p class="sm"><span class="muted">Máy nghe được:</span> ${esc(f.nghe_duoc)}</p>` : ''}
+        ${f.loi && f.loi.length ? `<ul class="errs sm">${f.loi.map(e => `<li><b>${esc(e.tu)}</b> – ${esc(e.van_de)}</li>`).join('')}</ul>` : ''}
+        ${f.nhan_xet ? `<p class="sm fb">${esc(f.nhan_xet)}</p>` : ''}</div>`;
+    }).join('');
+  });
   $$('[data-ghi]').forEach(b => b.onclick = async () => {
     const row = $('#d_' + b.dataset.ghi + ' td'); if (row.innerHTML) { row.innerHTML = ''; return; }
     row.innerHTML = '<p class="muted">Đang tải bản ghi…</p>';
