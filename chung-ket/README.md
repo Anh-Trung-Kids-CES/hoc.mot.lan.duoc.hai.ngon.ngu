@@ -8,8 +8,8 @@ Nội dung theo doc "Chung kết Rung chuông vàng – Khung nội dung câu h�
 | Ai dùng | Link |
 |---|---|
 | Ba mẹ / bé | https://anh-trung-kids-ces.github.io/hoc.mot.lan.duoc.hai.ngon.ngu/chung-ket/ |
-| Cô (máy tính) | …/chung-ket/co.html |
-| Màn chiếu (cô chia sẻ lên Zoom) | nút **🖥 Chia sẻ lên Zoom** trên màn cô, hoặc …/chung-ket/?chieu=MÃ |
+| Màn điều khiển của cô (máy tính) | …/chung-ket/co.html |
+| Màn trình chiếu (cô chia sẻ lên Zoom) | …/chung-ket/chieu.html (tự điền mã phòng cô vừa mở trên máy đó), hoặc nút **🖥 Chia sẻ lên Zoom** trên màn cô |
 | Bảng xếp hạng cho livestream (OBS) | …/chung-ket/?bang=MÃ — top 5 mỗi level, tự cập nhật |
 | Thử trên một máy, không cần Firebase | thêm `?mock=1` vào link cô và link bé, mở nhiều tab cùng trình duyệt |
 

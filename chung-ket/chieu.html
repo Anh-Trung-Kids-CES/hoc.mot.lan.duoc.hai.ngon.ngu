@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Màn trình chiếu – Chung kết Rung chuông vàng</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../lop-zoom/lz.css?v=20261110b">
+</head>
+<body>
+<header class="lz-top"><span class="lz-badge">🔔</span><b>Màn trình chiếu · Chung kết Rung chuông vàng</b></header>
+<main class="wrap"><form class="card" id="f" style="text-align:center">
+  <h2>Mở màn trình chiếu</h2>
+  <p class="vn small" id="hint">Nhập mã phòng 4 số hiện trên màn điều khiển của cô.</p>
+  <div class="code-in" id="ci"></div>
+  <button class="btn wide red">📺 Mở màn trình chiếu</button>
+  <p class="vn small" style="margin-top:14px">Mở xong, cô bấm nút đỏ "Bật tiếng và bắt đầu", rồi chia sẻ cửa sổ này trên Zoom và tích "Chia sẻ âm thanh".</p>
+</form></main>
+<script>
+/* Link cố định cho màn trình chiếu: tự điền mã phòng cô vừa mở trên máy này (màn điều khiển lưu ở ck-co-room), cô sửa được nếu cần. */
+(function () {
+  const qs = new URLSearchParams(location.search);
+  let pre = (qs.get('phong') || '').replace(/\D/g, '').slice(0, 4);
+  if (!pre) { try { const r = JSON.parse(localStorage.getItem('ck-co-room') || 'null'); if (r && r.code) { pre = r.code; document.getElementById('hint').textContent = 'Phòng cô mở gần nhất trên máy này đã được điền sẵn. Cô kiểm tra lại mã trên màn điều khiển nhé.'; } } catch (e) { } }
+  const ci = document.getElementById('ci');
+  ci.innerHTML = [0, 1, 2, 3].map(i => `<input inputmode="numeric" maxlength="1" aria-label="Số ${i + 1}" value="${pre[i] || ''}">`).join('');
+  const ins = [...ci.querySelectorAll('input')];
+  ins.forEach((el, i) => {
+    el.oninput = () => { el.value = el.value.replace(/\D/g, '').slice(-1); if (el.value && ins[i + 1]) ins[i + 1].focus(); };
+    el.onkeydown = e => { if (e.key === 'Backspace' && !el.value && ins[i - 1]) ins[i - 1].focus(); };
+    el.onpaste = e => { const t = (e.clipboardData.getData('text') || '').replace(/\D/g, ''); if (t.length >= 4) { e.preventDefault(); ins.forEach((x, j) => x.value = t[j] || ''); } };
+  });
+  document.getElementById('f').onsubmit = e => {
+    e.preventDefault();
+    const code = ins.map(x => x.value).join('');
+    if (!/^\d{4}$/.test(code)) return alert('Mã phòng có 4 số.');
+    location.href = './?chieu=' + code + (qs.has('mock') ? '&mock=1' : '');
+  };
+})();
+</script>
+</body>
+</html>
