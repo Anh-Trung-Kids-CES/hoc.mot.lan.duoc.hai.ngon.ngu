@@ -1,0 +1,10 @@
+/* Little Seed: con chưa đọc chữ – ẩn chữ, giữ tranh và tiếng */
+.khong-chu .ls-bub b, .khong-chu .ls-bub .sx-pyl, .khong-chu .ls-bub i { display: none !important; }
+.khong-chu .ls-bub::after { content: '🔊'; font-size: 28px; line-height: 1; }
+.khong-chu .ls-bub { min-width: 56px; text-align: center; }
+.khong-chu .sx-fen, .khong-chu .sx-fzh, .khong-chu .sx-mini, .khong-chu .sx-nm, .khong-chu .sx-en, .khong-chu .sx-zh { display: none !important; }
+.khong-chu .ls-cap { visibility: hidden; }
+.ls-chubtn { position: fixed; right: 12px; bottom: 12px; z-index: 50; border: 0; border-radius: 999px; padding: 8px 14px;
+  background: #fff; color: #2E7D32; font: 600 13px 'Be Vietnam Pro', sans-serif; box-shadow: 0 2px 8px rgba(0,0,0,.18); cursor: pointer; }
+body.hub .ls-chubtn { display: none; }
+@media (max-width: 700px) { .ls-chubtn { bottom: 76px; } }

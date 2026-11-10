@@ -1,0 +1,152 @@
+"""Xuất khung Little Seed 48 buổi ra Excel + CSV dạng tab của Sheet "Khung chương trình mỗi khoá".
+Chạy: python3 -I make_xlsx.py <thư mục ra>
+"""
+import json, os, sys, csv
+from openpyxl import Workbook
+from openpyxl.styles import Alignment, Font, PatternFill
+from openpyxl.utils import get_column_letter
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+GRID = os.path.join(HERE, '..', 'grid')
+OUT = sys.argv[1] if len(sys.argv) > 1 else HERE
+d = json.load(open(os.path.join(GRID, 'mang', 'little-seed48.json')))
+plan = json.load(open(os.path.join(GRID, 'mang', 'plan_little-seed.json')))
+days, buoi = d['days'], d['buoi']
+dmap = {x['ngay']: x for x in days}
+
+wb = Workbook()
+HEAD = Font(bold=True, color='FFFFFF')
+FILL = PatternFill('solid', fgColor='2E7D32')
+UFILL = [PatternFill('solid', fgColor=c) for c in ('F1F8E9', 'FFFFFF')]
+WRAP = Alignment(wrap_text=True, vertical='top')
+
+def sheet(title, header, data, widths):
+    ws = wb.create_sheet(title)
+    ws.append(header)
+    for c in ws[1]:
+        c.font, c.fill, c.alignment = HEAD, FILL, WRAP
+    for r in data:
+        ws.append(r)
+    for i, w in enumerate(widths, 1):
+        ws.column_dimensions[get_column_letter(i)].width = w
+    for row in ws.iter_rows(min_row=2):
+        for c in row:
+            c.alignment = WRAP
+    ws.freeze_panes = 'B2'
+    return ws
+
+# 1. Tổng quan
+ws = wb.active
+ws.title = 'Tổng quan'
+info = [
+    ['Little Seed · khung chương trình offline 48 buổi · v1 (10/11/2026)'],
+    [''],
+    ['Lớp', 'Lớp Little Seed offline, con 4–5 tuổi, chưa học PreB. Thiết kế độc lập với lớp Seedling 48 buổi; không đổi khung 9 khóa.'],
+    ['Nhịp', d['nhip']],
+    ['Số lượng', '48 buổi × 90′ trên lớp, 99 ngày web, 26 tuần. Web luôn đi trước buổi lớp; buổi lớp dạy kỹ, sửa và mở rộng các ngày web vừa làm.'],
+    ['Bố cục', 'Tuần 1–3: Unit 1 (ngày 1–9, buổi 1–3) theo mạng văn bản mới. Tuần 4–25: Unit 2–12, mỗi unit 8 ngày web (5 ngày Phần + 3 ngày Cả truyện) và 4 buổi (Introduce → Repeat + Introduce → Practice + Introduce → Produce). Tuần 26: ôn cả khóa, Album gia đình, buổi 48 mời phụ huynh.'],
+    ['Lấy từ đâu', 'Unit 2–12 và buổi cuối dùng nguyên ô của khung 9 khóa (tab Little Seed, buổi 7–56) đánh số lại. Unit 1 dùng mạng văn bản trọn U1 (Bông\'s Day, 5 phần). Ô truyện có nhãn [Bản cũ] được thay khi viết truyện khung từng unit.'],
+    ['Bỏ so với khung 9 khóa', '2 buổi mở khóa ôn PreB (buổi 1–2), 2 tuần ôn chặng (buổi 19–20, 37–38), 2 tuần lễ hội (buổi 57–60). Ôn chặng thay bằng 15′ trò chơi quét lại ở buổi Produce của Unit 4, 8, 12 (buổi 15, 31, 47) và Hộp ôn trên web. Lễ hội có thể chèn theo lịch thật, không tính vào 48 buổi.'],
+    ['Từ PreB', 'Lớp chưa học PreB: từ PreB không có trong Little Seed được dạy lại ở unit cùng chủ đề, mức Nền (tranh + tiếng, nghe – chạm, chưa bắt nói). Xem tab "Từ PreB dạy lại". "Ôn (PreB)" của khung 9 khóa đổi thành "Nền PreB (dạy lại)".'],
+    ['Sửa dữ liệu', 'Unit 5: "tyre" → bỏ (đã có tired), theo hướng sửa an toàn của tab Duyệt.'],
+    ['Web cho con 4–5 tuổi', 'Web không hiện chữ cho con (chỉ tranh, tiếng, lời dặn tiếng Việt); cô bật ?gv=1 thì thấy chữ. Mỗi ngày ≤5 bước, mỗi bài 5–10 câu, sai không chặn. Xem tab "Bước ngày web".'],
+    [''],
+    ['Em tự chọn, chờ chị duyệt'],
+    ['1', 'Unit 1 chiếm trọn tuần 1–3 (9 ngày, 3 buổi) thay vì nén Greeting + Body như Seedling, vì con chưa biết tiếng Anh và cần làm quen lớp, lời lớp học.'],
+    ['2', 'Không có tuần ôn chặng riêng (48 buổi chỉ đủ cho 12 unit × 4 buổi). Ôn chặng 15′ nằm trong buổi 15, 31, 47.'],
+    ['3', 'Cô giáo trong truyện Little Seed là cô Hươu – cô giáo của web 21 ngày Little Seed, đã có sẵn nhiều tranh chào, tạm biệt cùng nét vẽ; Mrs Lan dạng người giữ cho Seedling. Cảnh còn thiếu được ghép từ nhân vật và nền có sẵn.'],
+    ['4', 'Đếm 7–10 (PreB) nghe làm quen ở Unit 2 để Unit 12 "Đếm đến 10" là ôn; home ở Unit 7.'],
+    ['5', 'Kế hoạch 90′ chia 7 khối, có 10′ nghỉ và làm tay ở giữa (con 4–5 tuổi); không khối nào quá 20′.'],
+]
+for r in info:
+    ws.append(r)
+ws['A1'].font = Font(bold=True, size=14)
+ws['A13'].font = Font(bold=True)
+ws.column_dimensions['A'].width = 24
+ws.column_dimensions['B'].width = 140
+for row in ws.iter_rows():
+    for c in row:
+        c.alignment = WRAP
+
+# 2. Khung 48 buổi
+data = []
+for b in buoi:
+    u = b['unit']
+    data.append([b['buoi'], b['tuan'], b['thu'], f'U{u}' if isinstance(u, int) else u, b['vai'],
+                 ', '.join(map(str, b['ngay_web'])), b['label'],
+                 b['lop']['en']['flash'], b['lop']['zh']['flash'], b['lop']['en']['baihat'][:1500], b['nguon']])
+sheet('Khung 48 buổi', ['Buổi', 'Tuần', 'Thứ', 'Unit', 'Vai I-R-P-P', 'Ngày web trước buổi', 'Nội dung buổi',
+                        'Flash EN', 'Flash ZH', 'Bài hát / vè', 'Nguồn'], data, [6, 6, 9, 6, 18, 12, 50, 35, 35, 60, 22])
+
+# 3. Mạch từ theo ngày
+data = []
+for x in days:
+    b = next(bb['buoi'] for bb in buoi if x['ngay'] in bb['ngay_web'])
+    data.append([x['ngay'], x['tuan'], f'U{x["unit"]}' if isinstance(x['unit'], int) else x['unit'], x['loai'], b, x['label'],
+                 x['en']['tu'], x['zh']['tu'], x['en']['cum'], x['zh']['cum'], x['en']['truyen'], x['zh']['truyen'], x['nguon']])
+sheet('Mạch từ theo ngày', ['Ngày', 'Tuần', 'Unit', 'Loại ngày', 'Trước buổi', 'Tên ngày', 'Từ EN', 'Từ ZH', 'Cụm EN', 'Cụm ZH',
+                            'Truyện EN', 'Truyện ZH', 'Nguồn'], data, [6, 6, 6, 10, 8, 40, 45, 45, 30, 30, 60, 60, 18])
+
+# 4. Kế hoạch 90 phút
+sheet('Kế hoạch 90 phút', ['Buổi', 'Unit', 'Vai', 'Kế hoạch 7 khối'],
+      [[b['buoi'], b['unit'], b['vai'], b['ke_hoach_90']] for b in buoi], [6, 6, 18, 160])
+
+# 5. Truyện khung theo unit
+data = []
+for u in plan:
+    t1 = [v for v in u['van_ban'] if v['id'] == 'T1'][0]
+    first = [x['ngay'] for x in days if x['unit'] == int(u['unit'])]
+    for ph in t1['phan']:
+        data.append([u['unit'], u['chu_de'], f'{t1["ten_en"]} · {t1["ten_zh"]}', ph['phan'],
+                     first[ph['phan'] - 1] if ph['phan'] - 1 < len(first) else '', ph['y'], ', '.join(ph['tu_moi_vao']),
+                     t1.get('khung_en', ''), t1.get('khung_zh', '')])
+sheet('Truyện khung theo unit', ['Unit', 'Chủ đề', 'Truyện khung', 'Phần', 'Ngày web', 'Ý của phần', 'Từ mới vào', 'Khung EN', 'Khung ZH'],
+      data, [6, 40, 36, 6, 9, 70, 30, 30, 30])
+
+# 6. Từ PreB dạy lại
+data = []
+for u, ws_ in d['preb_day_lai'].items():
+    n = next(x['ngay'] for x in days if str(x['unit']) == str(u))
+    data.append([f'U{u}', ', '.join(ws_), n, 'Nền: tranh + tiếng, nghe – chạm, chưa bắt nói; gặp lại trong ô Ôn các ngày sau'])
+data.append(['Buổi 1', 'sit down, stand up (+ yes, no)', '–', 'Lời lớp học cô dạy ở buổi 1: Sit down, please. / Stand up! ↔ 请坐。/ 起立！'])
+sheet('Từ PreB dạy lại', ['Unit', 'Từ PreB', 'Ngày web đầu', 'Cách dạy'], data, [8, 40, 12, 80])
+
+# 7. Bước ngày web
+steps = [
+    ['Ngày Phần (1–5 mỗi unit)', 'Thẻ từ (tranh + tiếng Anh + tiếng Trung, 5–8 thẻ, có thẻ ôn và thẻ Nền PreB) → Nghe truyện (phần của ngày, nghe lại phần trước, không hiện chữ) → Nghe – chạm tranh (5–8 câu) → Nói theo (câu nhân vật, 5 câu, micro) → Vận động (nghe từ, quay đầu chọn tranh)'],
+    ['Ngày Cả truyện', 'Nghe cả truyện → Trả lời câu hỏi bằng chạm tranh → Nói theo / Phiên dịch nhí (Leo nói, con nói cho Xiaomei) → Gọi lại từ trong Hộp ôn → Vận động'],
+    ['Ngày ôn unit / cả khóa', 'Nghe big book / bài hát → Nghe – chạm tranh trộn unit → Gọi lại (Hộp ôn) → Vận động'],
+    ['Luật chung', 'Mỗi ngày ≤5 bước, khoảng 10–12 phút; mỗi bài 5–10 câu; sai không chặn, gặp lại ở dạng khác hoặc cuối bài; lời dặn và khen bằng giọng tiếng Việt; không hiện chữ cho con (cô thêm ?gv=1 để thấy chữ).'],
+]
+sheet('Bước ngày web', ['Loại ngày', 'Thứ tự bước'], steps, [24, 150])
+
+# 8. Dạng tab Sheet 9 khóa (một dòng mỗi ngày web, cột lớp ở dòng ngày cuối trước buổi)
+SHEET_HDR = [['', 'Nội dung đẩy lên web'] + [''] * 10 + ['Nội dung dạy trên lớp'] + [''] * 7 + ['Kế hoạch 90 phút'],
+             ['', 'Tiếng Anh', '', '', '', '', 'Tiếng Trung', '', '', '', '', '', 'Tiếng Anh', '', '', '', 'Tiếng Trung', '', '', '', ''],
+             ['', 'Từ', 'Cụm từ', 'Câu', 'Truyện', 'Video', 'Từ', 'Cụm từ', 'Câu', 'Truyện', 'Video', '',
+              'Flash card', 'Slide có bài tập tương tác', 'Truyện', 'Bài hát', 'Flash card', 'Slide có bài tập tương tác', 'Truyện', 'Bài hát', '7 khối']]
+grid_rows = []
+for b in buoi:
+    for n in b['ngay_web']:
+        x = dmap[n]
+        r = [x['label']] + [x['en'][k] for k in ('tu', 'cum', 'cau', 'truyen', 'video')] + [x['zh'][k] for k in ('tu', 'cum', 'cau', 'truyen', 'video')]
+        if n == b['ngay_web'][-1]:
+            r += [b['label']] + [b['lop']['en'][k] for k in ('flash', 'slide', 'truyen', 'baihat')] + [b['lop']['zh'][k] for k in ('flash', 'slide', 'truyen', 'baihat')] + [b['ke_hoach_90']]
+        grid_rows.append(r)
+ws = wb.create_sheet('Dạng tab Sheet')
+for r in SHEET_HDR + grid_rows:
+    ws.append(r)
+for i in range(1, 22):
+    ws.column_dimensions[get_column_letter(i)].width = 40
+for row in ws.iter_rows():
+    for c in row:
+        c.alignment = WRAP
+ws.freeze_panes = 'B4'
+
+xlsx = os.path.join(OUT, 'LittleSeed_KhungChuongTrinh_48buoi_v1.xlsx')
+wb.save(xlsx)
+with open(os.path.join(OUT, 'little-seed48-sheet.csv'), 'w', newline='') as f:
+    w = csv.writer(f)
+    for r in SHEET_HDR + grid_rows:
+        w.writerow([str(c)[:49000] for c in r])
+print(xlsx)
