@@ -3,9 +3,11 @@
    Lộ trình 4 lần (HOST_LAN trong host-data.js). Mỗi lần làm bài kiểm tra ra đề mới: đổi tình huống, đổi cách hỏi,
    đổi tiếng so với lần trước, xáo thứ tự.
    Lưu: máy của host (localStorage) + Firebase anh-trung-kids-zoom, phòng rooms/HOSTCK (luật bảo mật bản 1, không cần sửa):
-     players/<máy>        {ten, lan, ready, at}
-     answers/tien/<máy>   toàn bộ tiến độ (JSON)
-     answers/ghi_<bài>/<máy>  bài kiểm tra kèm bản ghi âm từng câu, để chị nghe lại
+     Host đăng nhập bằng tài khoản chị cấp (tab "Tài khoản host" trong Sheet của máy chấm); tiến độ lưu theo tài khoản,
+     nên host luyện ở máy nào cũng nối tiếp được.
+     players/<máy>              {tk, ten, lan, ready, at}   (danh sách tài khoản cho trang kết quả)
+     answers/acc_<tk>/<máy>     toàn bộ tiến độ của tài khoản (JSON); khi mở trang lấy bản mới nhất trong mọi máy
+     answers/ghi_<bài>/<máy>    bài kiểm tra kèm bản ghi âm từng câu, để chị nghe lại
    Trang của chị: ?ket-qua · Thử không cần máy chủ: ?mock=1 · Thử tự động không cần micro: ?gia-lap=1 */
 
 /* URL /exec của dự án Apps Script "Máy chấm host" (tệp may-cham-host.gs). Để trống thì chấm tạm bằng máy nhận giọng của Chrome. */
@@ -24,7 +26,7 @@ const QS = new URLSearchParams(location.search);
 const SIM = QS.has('gia-lap');
 const MOCK = SIM || QS.has('mock');
 const KQ = QS.has('ket-qua');
-const LS_KEY = 'hostck_v1';
+const LS_KEY = 'hostck_v2';
 
 /* ngưỡng đạt */
 const PASS = { nd: 85, pa: 75, td: 75 };      // luyện từng câu
@@ -60,7 +62,7 @@ function lineHtml(c, lang, big) {
 }
 
 /* ======================= trạng thái của host ======================= */
-let ST = lsGet(LS_KEY, null);   // { ten, ma, S }
+let ST = lsGet(LS_KEY, null);   // { tk, mk, ten, S }
 let S = ST && ST.S;
 function blank(ten) { return { v: 1, ten, lan: 1, it: {}, need: {}, tests: [], seen: {}, cur: null, ready: false, at: Date.now() }; }
 function save() {
@@ -88,20 +90,28 @@ async function pushRemote() {
   if (!db || !S) return;
   try {
     const slim = Object.assign({}, S, { cur: S.cur ? { id: S.cur.id } : null });
-    await R('answers/tien/' + uid).set({ ten: S.ten, at: S.at, s: JSON.stringify(slim) });
-    await R('players/' + uid).set({ ten: S.ten, lan: S.lan, ready: !!S.ready, at: S.at });
+    await R('answers/acc_' + ST.tk + '/' + uid).set({ tk: ST.tk, ten: S.ten, at: S.at, s: JSON.stringify(slim) });
+    await R('players/' + uid).set({ tk: ST.tk, ten: S.ten, lan: S.lan, ready: !!S.ready, at: S.at });
     setSync('Đã lưu lên máy chủ');
   } catch (e) { setSync('Chưa lưu được lên máy chủ, tiến độ vẫn giữ trên máy này'); }
 }
-/* host đổi máy: tìm tiến độ cùng tên trên máy chủ */
-async function findRemote(ten) {
+/* tiến độ mới nhất của một tài khoản, trong mọi máy host đã dùng */
+function tkKey(tk) { return String(tk || '').trim().toLowerCase().replace(/[.#$\[\]\/\s]+/g, '_'); }
+async function findRemote(tk) {
   if (!db) return null;
   try {
-    const all = (await R('answers/tien').get()).val() || {};
+    const all = (await R('answers/acc_' + tkKey(tk)).get()).val() || {};
     let best = null;
-    Object.entries(all).forEach(([id, v]) => { if (normName(v.ten) === normName(ten) && (!best || v.at > best.at)) best = { id, ...v }; });
-    return best ? JSON.parse(best.s) : null;
+    Object.values(all).forEach(v => { if (!best || v.at > best.at) best = v; });
+    return best ? Object.assign(JSON.parse(best.s), { at: best.at }) : null;
   } catch (e) { return null; }
+}
+/* host vừa luyện ở máy khác: lấy bản mới hơn về máy này */
+async function syncFromRemote() {
+  if (!db || !ST || REC.busy || (TV && S.cur)) return false;
+  const r = await findRemote(ST.tk);
+  if (r && r.at > (S.at || 0) + 1000) { r.cur = null; S = ST.S = r; lsSet(LS_KEY, ST); return true; }
+  return false;
 }
 function setSync(t) { const el = $('#sync'); if (el) el.textContent = t; }
 
@@ -226,12 +236,12 @@ function wavBase64(x, rate) {
 function blobToB64(b) { return new Promise(r => { if (!(b instanceof Blob)) return r(''); const f = new FileReader(); f.onload = () => r(String(f.result)); f.onerror = () => r(''); f.readAsDataURL(b); }); }
 
 /* ======================= chấm ======================= */
-let MA = ST ? ST.ma : '';
+
 async function aiCham(p) {
   if (SIM) return simCham(p);
   if (!HOST_API || MOCK) return null;
   try {
-    const r = await fetch(HOST_API, { method: 'POST', body: JSON.stringify(Object.assign({ action: 'cham', ma: MA }, p)) });
+    const r = await fetch(HOST_API, { method: 'POST', body: JSON.stringify(Object.assign({ action: 'cham', tk: ST.tk, mk: ST.mk }, p)) });
     const j = await r.json();
     return j && j.ok ? j : { err: (j && j.loi) || 'loi' };
   } catch (e) { return { err: 'mang' }; }
@@ -282,7 +292,7 @@ async function chamBanGhi(rec, p) {
     targets: p.codes.map(c => ({ code: c, text: p.lang === 'zh' ? HOST_LINES[c].zh : HOST_LINES[c].en, py: p.lang === 'zh' ? HOST_LINES[c].py : '' })) });
   if (ai && !ai.err) return ai;
   const r = chromeCham(rec.heard, p.lang, p.codes, p.all);
-  if (ai && ai.err) r.nhan_xet = (ai.err === 'sai_ma' ? 'Mã luyện không đúng nên máy chấm AI chưa nhận. ' : 'Máy chấm AI đang lỗi (' + ai.err + '). ') + r.nhan_xet;
+  if (ai && ai.err) r.nhan_xet = (ai.err === 'sai_tai_khoan' ? 'Tài khoản đã bị khóa hoặc đổi mật khẩu, bạn đăng nhập lại nhé. ' : 'Máy chấm AI đang lỗi (' + ai.err + '). ') + r.nhan_xet;
   return r;
 }
 
@@ -377,8 +387,8 @@ const app = () => $('#app');
 function nav(active) {
   const tabs = [['lo-trinh', 'Lộ trình 4 lần'], ['luyen', 'Luyện từng câu'], ['kiem-tra', 'Kiểm tra tình huống'], ['thu-vien', 'Thư viện câu']];
   $('#nav').innerHTML = S ? tabs.map(([id, n]) => `<button class="tab${active === id ? ' on' : ''}" data-go="${id}">${n}</button>`).join('') : '';
-  $('#who').innerHTML = S ? `<span>${esc(S.ten)}</span> · <span id="sync"></span> <button class="lnk" id="doi">Đổi người</button>` : '';
-  const d = $('#doi'); if (d) d.onclick = () => { if (confirm('Đăng xuất khỏi máy này? Tiến độ đã lưu trên máy chủ, đăng nhập lại cùng tên sẽ lấy về.')) { localStorage.removeItem(LS_KEY); location.reload(); } };
+  $('#who').innerHTML = S ? `<span>${esc(S.ten)} (${esc(ST.tk)})</span> · <span id="sync"></span> <button class="lnk" id="doi">Đăng xuất</button>` : '';
+  const d = $('#doi'); if (d) d.onclick = () => { if (confirm('Đăng xuất khỏi máy này? Tiến độ đã lưu theo tài khoản, đăng nhập lại sẽ lấy về.')) { localStorage.removeItem(LS_KEY); location.reload(); } };
 }
 document.addEventListener('click', e => { const b = e.target.closest('[data-go]'); if (b) go(b.dataset.go); });
 function go(v, arg) {
@@ -388,30 +398,37 @@ function go(v, arg) {
   window.scrollTo(0, 0);
 }
 
-/* ---------- đăng nhập ---------- */
+/* ---------- đăng nhập (tài khoản chị cấp) ---------- */
 function viewLogin(msg) {
   nav();
   app().innerHTML = `<section class="card narrow">
     <h1>Luyện host · Chung kết Rung chuông vàng</h1>
     <p class="muted">Trang luyện câu dẫn tiếng Anh và tiếng Trung cho chương trình Little Language Explorers. Mở bằng <b>Chrome</b> trên máy tính có micro, đeo tai nghe để luyện chính xác nhất.</p>
-    <label>Tên của bạn<input id="ten" autocomplete="name" placeholder="Ví dụ: Phương Thảo"></label>
-    ${HOST_API && !MOCK ? `<label>Mã luyện (chị Duyên gửi)<input id="ma" autocomplete="off"></label>` : ''}
+    <label>Tài khoản<input id="tk" autocomplete="username" autocapitalize="off" placeholder="chị Duyên cấp, ví dụ host01"></label>
+    <label>Mật khẩu<input id="mk" type="password" autocomplete="current-password"></label>
     ${msg ? `<p class="msg err">${esc(msg)}</p>` : ''}
-    <button class="btn" id="vao">Vào luyện</button>
-    ${!HOST_API && !MOCK ? `<p class="msg note">Máy chấm AI chưa bật: trang đang chấm tạm bằng máy nhận giọng của Chrome (chưa chấm thanh điệu).</p>` : ''}
+    <button class="btn" id="vao">Đăng nhập</button>
+    <p class="muted sm">Tiến độ lưu theo tài khoản: đăng nhập ở máy khác vẫn luyện tiếp được.</p>
   </section>`;
+  $('#mk').onkeydown = e => { if (e.key === 'Enter') $('#vao').click(); };
   $('#vao').onclick = async () => {
-    const ten = $('#ten').value.trim(); if (ten.length < 2) return viewLogin('Bạn nhập tên nhé.');
-    const ma = $('#ma') ? $('#ma').value.trim() : '';
+    const tk = $('#tk').value.trim(), mk = $('#mk').value.trim();
+    if (!tk || !mk) return viewLogin('Bạn nhập tài khoản và mật khẩu nhé.');
+    $('#vao').disabled = true; $('#vao').textContent = 'Đang đăng nhập…';
+    let ten = tk;
     if (HOST_API && !MOCK) {
-      try { const j = await (await fetch(HOST_API + '?action=ma&ma=' + encodeURIComponent(ma))).json(); if (!j.ok) return viewLogin('Mã luyện chưa đúng.'); }
-      catch (e) { return viewLogin('Chưa kết nối được máy chấm, bạn thử lại nhé.'); }
+      try {
+        const j = await (await fetch(HOST_API, { method: 'POST', body: JSON.stringify({ action: 'dangnhap', tk, mk }) })).json();
+        if (!j.ok) return viewLogin(j.loi === 'sai_tai_khoan' ? 'Tài khoản hoặc mật khẩu chưa đúng.' : 'Máy chủ đang lỗi, bạn báo chị Duyên nhé.');
+        ten = j.ten || tk;
+      } catch (e) { return viewLogin('Chưa kết nối được máy chủ, bạn thử lại nhé.'); }
     }
-    $('#vao').disabled = true; $('#vao').textContent = 'Đang tìm tiến độ cũ…';
+    $('#vao').textContent = 'Đang lấy tiến độ…';
+    ST = { tk: tkKey(tk), mk, ten, S: null };
     await fbInit();
-    const old = await findRemote(ten);
-    S = old || blank(ten); S.ten = ten; S.cur = old && old.cur && old.cur.items ? old.cur : null;
-    MA = ma; ST = { ten, ma, S }; ensureNeed(); save();
+    const old = await findRemote(ST.tk);
+    S = old || blank(ten); S.ten = ten; S.cur = null;
+    ST.S = S; ensureNeed(); save();
     go('lo-trinh');
   };
 }
@@ -638,7 +655,7 @@ async function testEnd() {
     try {
       const items = [];
       for (let i = 0; i < done.items.length; i++) { const x = done.items[i]; items.push({ si: x.si, txt: x.txt, lang: x.lang, ok: !!x.ok, rt: x.rt, heard: x.heard || '', khop: x.khop || '', fb: x.fb || '', sc: x.sc || 0, loi: x.loi || [], rec: await blobToB64(recs[i]) }); }
-      await R('answers/ghi_' + done.id + '/' + uid).set({ ten: S.ten, lan: done.lan, at: done.at, pct: done.pct, pass: done.pass, items });
+      await R('answers/ghi_' + done.id + '/' + uid).set({ tk: ST.tk, ten: S.ten, lan: done.lan, at: done.at, pct: done.pct, pass: done.pass, items });
       await pushRemote();
       const el = $('#luu'); if (el) el.textContent = 'Đã lưu bài và bản ghi lên máy chủ.';
     } catch (e) { const el = $('#luu'); if (el) el.textContent = 'Chưa lưu được bản ghi lên máy chủ (kết quả vẫn giữ trên máy này).'; }
@@ -663,9 +680,13 @@ async function viewResults() {
   $('#nav').innerHTML = ''; $('#who').innerHTML = '';
   app().innerHTML = '<section class="card"><h2>Kết quả luyện của host</h2><p class="muted">Đang tải…</p></section>';
   if (!(await fbInit())) { app().innerHTML = '<section class="card"><p class="msg err">Chưa kết nối được máy chủ dữ liệu.</p></section>'; return; }
-  const all = (await R('answers/tien').get()).val() || {};
+  const pl = (await R('players').get()).val() || {};
+  const tks = [...new Set(Object.values(pl).map(p => p.tk).filter(Boolean))];
   const hosts = {};
-  Object.entries(all).forEach(([id, v]) => { const k = normName(v.ten); let s = null; try { s = JSON.parse(v.s); } catch (e) { } if (s && (!hosts[k] || v.at > hosts[k].at)) hosts[k] = { id, at: v.at, s }; });
+  for (const tk of tks) {
+    const all = (await R('answers/acc_' + tk).get()).val() || {};
+    Object.values(all).forEach(v => { let s = null; try { s = JSON.parse(v.s); } catch (e) { } if (s && (!hosts[tk] || v.at > hosts[tk].at)) hosts[tk] = { id: tk, tk, at: v.at, s }; });
+  }
   const list = Object.values(hosts).sort((a, b) => b.at - a.at);
   if (!list.length) { app().innerHTML = '<section class="card"><h2>Kết quả luyện của host</h2><p>Chưa có host nào luyện.</p></section>'; return; }
   app().innerHTML = `<section class="card"><h2>Kết quả luyện của host</h2><p class="muted">Cập nhật ${fmtTime(Date.now())}. Bấm vào một bài kiểm tra để nghe lại từng câu host nói.</p></section>` +
@@ -676,7 +697,7 @@ async function viewResults() {
       const weak = KEYS.filter(k => s.it[k] && s.it[k].n).sort((a, b) => s.it[a].best - s.it[b].best).slice(0, 10);
       const notYet = star.filter(k => !s.it[k] || !s.it[k].pass);
       return `<section class="card host">
-        <div class="row between"><h3>${esc(s.ten)}</h3><span class="tag ${s.ready ? 'okt' : ''}">${s.ready ? 'Sẵn sàng lên sóng' : 'Đang ở ' + esc(lanCfg(s.lan).ten)}</span></div>
+        <div class="row between"><h3>${esc(s.ten)} <span class="muted sm">· tài khoản ${esc(h.tk)}</span></h3><span class="tag ${s.ready ? 'okt' : ''}">${s.ready ? 'Sẵn sàng lên sóng' : 'Đang ở ' + esc(lanCfg(s.lan).ten)}</span></div>
         <p class="muted">Hoạt động gần nhất ${fmtTime(h.at)}</p>
         <div class="stats"><div><b>${ok}/${KEYS.length}</b><span>câu đã luyện đạt</span></div><div><b>${okStar}/${star.length}</b><span>câu ★ đạt</span></div>
           <div><b>${avg('en')}</b><span>điểm TB tiếng Anh</span></div><div><b>${avg('zh')}</b><span>điểm TB tiếng Trung</span></div></div>
@@ -708,7 +729,7 @@ async function viewResults() {
     const row = $('#d_' + b.dataset.ghi + ' td'); if (row.innerHTML) { row.innerHTML = ''; return; }
     row.innerHTML = '<p class="muted">Đang tải bản ghi…</p>';
     const g = (await R('answers/ghi_' + b.dataset.ghi).get()).val() || {};
-    const v = g[b.dataset.uid] || Object.values(g)[0];
+    const v = Object.values(g).find(x => x.tk === b.dataset.uid) || Object.values(g)[0];
     if (!v) { row.innerHTML = '<p class="muted">Không có bản ghi (bài làm trên máy chưa kết nối máy chủ).</p>'; return; }
     row.innerHTML = v.items.map((x, i) => `<div class="gi ${x.ok ? 'ok' : 'no'}"><p><b>${i + 1}.</b> ${esc(x.txt)} <span class="lg ${x.lang}">${LANG[x.lang].b}</span> ${x.ok ? '✓' : '✗'}${x.rt != null ? ` · ${x.rt} giây` : ''}</p>
       <div class="row">${x.rec ? `<audio controls preload="none" src="${x.rec}"></audio>` : '<span class="muted">không có bản ghi</span>'}</div>
@@ -728,10 +749,14 @@ document.addEventListener('keydown', e => {
 /* ======================= khởi động ======================= */
 (async function start() {
   if (KQ) return viewResults();
-  if (!S) return viewLogin();
-  MA = ST.ma || '';
-  fbInit().then(() => pushRemote());
+  if (!S || !ST.tk) return viewLogin();
   ensureNeed();
   const h = location.hash.replace('#', '');
-  go(['lo-trinh', 'luyen', 'kiem-tra', 'thu-vien'].includes(h) ? h : 'lo-trinh');
+  const view = ['lo-trinh', 'luyen', 'kiem-tra', 'thu-vien'].includes(h) ? h : 'lo-trinh';
+  go(view);
+  /* lấy bản mới hơn nếu host vừa luyện ở máy khác; quay lại tab cũng kiểm tra lại */
+  fbInit().then(async () => { if (await syncFromRemote()) { ensureNeed(); go(view); setSync('Đã lấy tiến độ mới nhất từ máy khác'); } else pushRemote(); });
+  document.addEventListener('visibilitychange', async () => {
+    if (document.visibilityState === 'visible' && await syncFromRemote()) { ensureNeed(); LQ.list = []; go('lo-trinh'); setSync('Đã lấy tiến độ mới nhất từ máy khác'); }
+  });
 })();

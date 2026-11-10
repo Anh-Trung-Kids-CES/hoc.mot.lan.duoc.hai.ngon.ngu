@@ -1,36 +1,65 @@
 /**
- * Máy chấm host – Chung kết Rung chuông vàng
- * Dự án Apps Script RIÊNG (không dán vào máy chủ web học), chỉ làm một việc: nhận bản ghi âm của host,
- * nhờ Gemini nghe và chấm (đúng câu, phát âm, thanh điệu tiếng Trung), trả lời ngắn bằng tiếng Việt.
+ * Máy chấm host – Chung kết Rung chuông vàng (bản 2: tài khoản host)
+ * Hai việc:
+ *   1) Đăng nhập host bằng tài khoản chị cấp trong Google Sheet, tab "Tài khoản host"
+ *      (cột: Tài khoản | Mật khẩu | Tên host | Đang dùng | Ghi chú). Muốn khóa ai thì ghi "không" ở cột Đang dùng.
+ *   2) Nhận bản ghi âm của host, nhờ Gemini nghe và chấm (đúng câu, phát âm, thanh điệu), trả lời ngắn bằng tiếng Việt.
  * Khóa Gemini nằm trong Thuộc tính tập lệnh, không nằm trong code hay trên GitHub.
  *
- * CÁCH BẬT (làm 1 lần, khoảng 5 phút, tài khoản anhtrung.home@gmail.com):
- *   1. script.google.com → Dự án mới → đặt tên "Máy chấm host – Chung kết".
- *   2. Xóa code mẫu, dán toàn bộ tệp này, bấm Lưu.
- *   3. Cài đặt dự án (bánh răng) → Thuộc tính tập lệnh → Thêm:
- *        GEMINI_KEY   = khóa Gemini của dự án
- *        MA_HOST      = mã luyện chị đặt (ví dụ ck2026), host nhập mã này khi vào trang luyện
- *        GEMINI_MODEL = (không bắt buộc) tên mô hình; để trống thì dùng gemini-flash-latest
- *   4. Triển khai → Tùy chọn triển khai mới → Ứng dụng web; Thực thi với tư cách: Tôi; Ai có quyền truy cập: Bất kỳ ai.
- *   5. Chép URL /exec gửi cho Claude để gắn vào chung-ket/host/host.js (dòng HOST_API).
- *   Kiểm tra: mở URL/exec?action=ping → {"ok":true,"coKhoa":true,...}
+ * Thuộc tính tập lệnh (Cài đặt dự án → Thuộc tính tập lệnh):
+ *   GEMINI_KEY   = khóa Gemini (bắt buộc)
+ *   SHEET_ID     = (không bắt buộc) mã Sheet chứa tab "Tài khoản host" khi script không gắn vào Sheet đó
+ *   GEMINI_MODEL = (không bắt buộc) tên mô hình; để trống thì dùng gemini-flash-latest
+ * CẬP NHẬT CODE: dán đè → Lưu → Triển khai → Quản lý tùy chọn triển khai → bút chì → Phiên bản mới → Triển khai (link /exec giữ nguyên).
+ * Kiểm tra: URL/exec?action=ping → {"ok":true,"v":2,"coKhoa":true,"soTaiKhoan":…}
  */
 
-const V = 1;
+const V = 2;
+const SHEET_MAC_DINH = '1-Bl-tWBxyhrmfo4usGP0mCkEOxbqZQ9CLFurJMyskhk';   // Sheet "Máy chấm host – Chung kết"
+const TAB_TK = 'Tài khoản host';
 function prop_(k) { return PropertiesService.getScriptProperties().getProperty(k) || ''; }
 function out_(o) { return ContentService.createTextOutput(JSON.stringify(o)).setMimeType(ContentService.MimeType.JSON); }
+function chuan_(s) { return String(s || '').trim().toLowerCase(); }
+
+/* danh sách tài khoản từ Sheet (giữ 60 giây cho nhanh) */
+function taiKhoan_() {
+  const c = CacheService.getScriptCache(), k = 'tk_v2', cached = c.get(k);
+  if (cached) return JSON.parse(cached);
+  let ss = null;
+  try { ss = SpreadsheetApp.getActiveSpreadsheet(); } catch (e) { }
+  if (!ss) ss = SpreadsheetApp.openById(prop_('SHEET_ID') || SHEET_MAC_DINH);
+  let sh = ss.getSheetByName(TAB_TK);
+  if (!sh) { sh = ss.insertSheet(TAB_TK); sh.appendRow(['Tài khoản', 'Mật khẩu', 'Tên host', 'Đang dùng', 'Ghi chú']); sh.setFrozenRows(1); }
+  const n = sh.getLastRow(), ds = {};
+  if (n > 1) sh.getRange(2, 1, n - 1, 4).getDisplayValues().forEach(r => {
+    const tk = chuan_(r[0]); if (!tk || chuan_(r[3]) === 'không' || chuan_(r[3]) === 'khong') return;
+    ds[tk] = { mk: String(r[1]).trim(), ten: String(r[2]).trim() || r[0] };
+  });
+  c.put(k, JSON.stringify(ds), 60);
+  return ds;
+}
+function kiemTra_(tk, mk) {
+  const a = taiKhoan_()[chuan_(tk)];
+  return a && a.mk && a.mk === String(mk || '').trim() ? { tk: chuan_(tk), ten: a.ten } : null;
+}
 
 function doGet(e) {
   const p = (e && e.parameter) || {};
-  if (p.action === 'ping') return out_({ ok: true, v: V, coKhoa: !!prop_('GEMINI_KEY'), coMa: !!prop_('MA_HOST'), model: prop_('GEMINI_MODEL') || 'gemini-flash-latest' });
-  if (p.action === 'ma') return out_({ ok: !!prop_('MA_HOST') && p.ma === prop_('MA_HOST') });
+  if (p.action === 'ping') {
+    let so = -1, loiSheet = '';
+    try { so = Object.keys(taiKhoan_()).length; } catch (err) { loiSheet = String(err).slice(0, 200); }
+    return out_({ ok: true, v: V, coKhoa: !!prop_('GEMINI_KEY'), soTaiKhoan: so, loiSheet, model: prop_('GEMINI_MODEL') || 'gemini-flash-latest' });
+  }
   return out_({ ok: false });
 }
 
 function doPost(e) {
   let d = {};
   try { d = JSON.parse(e.postData.contents || '{}'); } catch (err) { return out_({ ok: false, loi: 'du_lieu' }); }
-  if (!prop_('MA_HOST') || d.ma !== prop_('MA_HOST')) return out_({ ok: false, loi: 'sai_ma' });
+  let ai;
+  try { ai = kiemTra_(d.tk, d.mk); } catch (err) { return out_({ ok: false, loi: 'sheet', chiTiet: String(err).slice(0, 200) }); }
+  if (!ai) return out_({ ok: false, loi: 'sai_tai_khoan' });
+  if (d.action === 'dangnhap') return out_({ ok: true, tk: ai.tk, ten: ai.ten });
   if (d.action !== 'cham') return out_({ ok: false, loi: 'action' });
   if (!d.audio || d.audio.length > 1500000) return out_({ ok: false, loi: 'am_thanh' });
   try { return out_(cham_(d)); } catch (err) { return out_({ ok: false, loi: String(err).slice(0, 300) }); }

@@ -33,11 +33,11 @@ code{background:var(--yellow-soft);border-radius:6px;padding:1px 6px;font-size:1
   </div></div>
 
   <div class="step" id="s3"><div class="num">3</div><div>
-    <b>Thêm khóa và mã luyện</b>
-    <p>Bánh răng <i>Cài đặt dự án</i> ở thanh bên trái → kéo xuống <i>Thuộc tính tập lệnh</i> → <i>Thêm thuộc tính tập lệnh</i>, thêm hai dòng:</p>
-    <div class="kv"><code>GEMINI_KEY</code><span>khóa Gemini của dự án (khóa chị vẫn dùng để thu giọng)</span>
-      <code>MA_HOST</code><span>mã luyện chị tự đặt, ví dụ <code>ck2026</code>; host nhập mã này khi vào trang</span></div>
-    <p>Bấm <i>Lưu thuộc tính tập lệnh</i>.</p>
+    <b>Thêm khóa Gemini và cấp tài khoản host</b>
+    <p>Bánh răng <i>Cài đặt dự án</i> (Project Settings) → <i>Thuộc tính tập lệnh</i> (Script Properties) → thêm <code>GEMINI_KEY</code> = khóa Gemini → Lưu.</p>
+    <p>Tài khoản host nằm trong Sheet <a href="https://docs.google.com/spreadsheets/d/1-Bl-tWBxyhrmfo4usGP0mCkEOxbqZQ9CLFurJMyskhk/edit" target="_blank" rel="noopener">Máy chấm host – Chung kết</a>, tab <b>Tài khoản host</b>:
+      mỗi dòng một host (Tài khoản · Mật khẩu · Tên host · Đang dùng). Thêm host thì thêm dòng; khóa host thì ghi <i>không</i> ở cột Đang dùng. Không cần triển khai lại khi sửa tài khoản (tối đa 1 phút là có hiệu lực).
+      Script nằm ở tài khoản Google khác thì thêm thuộc tính <code>SHEET_ID</code> = mã của Sheet đó và chia sẻ Sheet cho tài khoản chạy script.</p>
   </div></div>
 
   <div class="step" id="s4"><div class="num">4</div><div>
@@ -51,7 +51,8 @@ code{background:var(--yellow-soft);border-radius:6px;padding:1px 6px;font-size:1
   <div class="step" id="s5"><div class="num">5</div><div>
     <b>Dán URL vào đây để kiểm tra</b>
     <label><input id="url" placeholder="https://script.google.com/macros/s/…/exec"></label>
-    <label>Mã luyện vừa đặt<input id="ma" placeholder="ví dụ ck2026"></label>
+    <label>Một tài khoản host để thử<input id="tk" placeholder="ví dụ host01"></label>
+    <label>Mật khẩu của tài khoản đó<input id="mk"></label>
     <div class="row"><button class="btn" id="thu">Kiểm tra</button></div>
     <div id="kq"></div>
   </div></div>
@@ -68,21 +69,21 @@ $('#chep').onclick = async () => {
   } catch (e) { $('#chepMsg').textContent = 'Chưa chép được, chị mở trang này bằng Chrome và thử lại.'; }
 };
 $('#thu').onclick = async () => {
-  const url = $('#url').value.trim(), ma = $('#ma').value.trim(), kq = $('#kq');
+  const url = $('#url').value.trim(), tk = $('#tk').value.trim(), mk = $('#mk').value.trim(), kq = $('#kq');
   if (!/^https:\/\/script\.google\.com\/.+\/exec$/.test(url)) { kq.innerHTML = '<p class="msg err">URL phải bắt đầu bằng https://script.google.com/ và kết thúc bằng /exec.</p>'; return; }
   kq.innerHTML = '<p class="muted">Đang kiểm tra…</p>';
   try {
     const p = await (await fetch(url + '?action=ping&t=' + Date.now())).json();
-    const m = ma ? await (await fetch(url + '?action=ma&ma=' + encodeURIComponent(ma))).json() : { ok: false };
+    const m = tk && mk ? await (await fetch(url, { method: 'POST', body: JSON.stringify({ action: 'dangnhap', tk, mk }) })).json() : { ok: false };
     const dong = [
-      [p.ok, 'Máy chấm đang chạy'],
+      [p.ok && p.v >= 2, 'Máy chấm đang chạy bản 2 (tài khoản host)' + (p.v < 2 ? ' – chị dán code mới và triển khai Phiên bản mới' : '')],
       [p.coKhoa, 'Đã có GEMINI_KEY'],
-      [p.coMa, 'Đã có MA_HOST'],
-      [m.ok, 'Mã luyện khớp']
-    ].map(([ok, t]) => `<li>${ok ? '✓' : '✗'} ${t}</li>`).join('');
-    const xong = p.ok && p.coKhoa && p.coMa && m.ok;
+      [p.soTaiKhoan > 0, p.soTaiKhoan >= 0 ? 'Đọc được tab Tài khoản host: ' + p.soTaiKhoan + ' tài khoản đang dùng' : 'Chưa đọc được Sheet tài khoản: ' + (p.loiSheet || '')],
+      [m.ok, m.ok ? 'Đăng nhập thử được: ' + m.ten : 'Đăng nhập thử chưa được']
+    ].map(([ok, t]) => `<li>${ok ? '✓' : '✗'} ${String(t).replace(/</g, '')}</li>`).join('');
+    const xong = p.ok && p.v >= 2 && p.coKhoa && p.soTaiKhoan > 0 && m.ok;
     kq.innerHTML = `<ul>${dong}</ul>` + (xong
-      ? `<p class="msg note"><b>Xong.</b> Chị gửi URL này cho Claude để gắn vào trang luyện host:<br><code>${url.replace(/</g, '')}</code></p>`
+      ? `<p class="msg note"><b>Xong.</b> Host đăng nhập trang luyện bằng tài khoản trong Sheet được rồi.</p>`
       : '<p class="msg err">Còn dòng ✗: chị xem lại bước 3, rồi ở bước 4 triển khai lại (Quản lý tùy chọn triển khai → bút chì → Phiên bản mới).</p>');
     if (xong) ['#s2', '#s3', '#s4', '#s5'].forEach(s => $(s).classList.add('done'));
   } catch (e) { kq.innerHTML = '<p class="msg err">Chưa gọi được URL. Kiểm tra lại bước 4: "Ai có quyền truy cập" phải là Bất kỳ ai.</p>'; }

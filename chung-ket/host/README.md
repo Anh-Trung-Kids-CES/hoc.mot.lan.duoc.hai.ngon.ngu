@@ -27,15 +27,18 @@ Làm lại bài kiểm tra luôn là đề mới: ưu tiên tình huống chưa 
 Ngân hàng: 110 câu × 2 tiếng = 220 mục luyện; 113 tình huống, phủ đủ 110 mã câu.
 
 ## Máy chấm AI (làm 1 lần)
-Trang hướng dẫn từng bước, có nút chép code và ô kiểm tra: …/chung-ket/host/cai-may-cham.html. Dự án Apps Script riêng `may-cham-host.gs` (không đụng máy chủ web học). Cách bật cũng ghi ở đầu tệp: dán code, thêm Thuộc tính tập lệnh `GEMINI_KEY` và `MA_HOST`, triển khai Ứng dụng web, gửi URL /exec để gắn vào dòng `HOST_API` trong `host.js`.
+Trang hướng dẫn từng bước, có nút chép code và ô kiểm tra: …/chung-ket/host/cai-may-cham.html. Dự án Apps Script riêng `may-cham-host.gs` (không đụng máy chủ web học). Cách bật cũng ghi ở đầu tệp: dán code, thêm Thuộc tính tập lệnh `GEMINI_KEY`, triển khai Ứng dụng web, gửi URL /exec để gắn vào dòng `HOST_API` trong `host.js`.
 Chưa gắn URL thì trang vẫn chạy, chấm tạm bằng máy nhận giọng của Chrome (chỉ so chữ, không chấm thanh điệu).
 
 ## Giọng mẫu
 `tao-giong-host.py <tệp khoá>` thu 220 câu bằng Gemini TTS (giọng Puck), lưu vào `audio/` và tự cập nhật `host-audio.js`. Câu nghe lỗi thu lại riêng: `tao-giong-host.py <tệp khoá> MM1|en K3|zh`. Câu chưa có tệp tạm đọc bằng giọng trình duyệt (ghi "giọng tạm").
 
+## Tài khoản host
+Chị cấp tài khoản trong Sheet [Máy chấm host – Chung kết](https://docs.google.com/spreadsheets/d/1-Bl-tWBxyhrmfo4usGP0mCkEOxbqZQ9CLFurJMyskhk/edit), tab **Tài khoản host** (Tài khoản · Mật khẩu · Tên host · Đang dùng · Ghi chú). Thêm host = thêm dòng; khóa = ghi "không" ở cột Đang dùng; có hiệu lực sau tối đa 1 phút, không cần triển khai lại. Máy chủ kiểm tra tài khoản ở mỗi lần đăng nhập và mỗi lần chấm.
+
 ## Dữ liệu (Firebase `anh-trung-kids-zoom`, phòng `rooms/HOSTCK`, luật bảo mật bản 1 không cần sửa)
-- `players/<máy>`: tên, lần đang luyện, đã sẵn sàng chưa.
-- `answers/tien/<máy>`: toàn bộ tiến độ. Host đổi máy chỉ cần đăng nhập đúng tên, web tự lấy tiến độ cũ.
+- `players/<máy>`: tài khoản, tên, lần đang luyện, đã sẵn sàng chưa (trang kết quả lấy danh sách tài khoản từ đây).
+- `answers/acc_<tài khoản>/<máy>`: toàn bộ tiến độ và phản hồi AI. Mở trang (hoặc quay lại tab) web tự lấy bản mới nhất trong mọi máy của tài khoản đó.
 - `answers/ghi_<bài>/<máy>`: bài kiểm tra kèm bản ghi âm từng câu để chị nghe ở `?ket-qua`.
 
 ## Tệp
