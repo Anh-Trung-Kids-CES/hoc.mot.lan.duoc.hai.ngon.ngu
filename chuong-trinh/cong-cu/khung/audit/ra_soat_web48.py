@@ -84,8 +84,7 @@ for W, (dirn, SDX) in WEB.items():
                 if vi(f): flag(W, 'GN', f'ngày {n} {t}: {f[:50]}')
             for f in re.findall(r'"(?:img|hero)":\s*"([^"]*)"', blob):
                 if f and not os.path.exists(os.path.normpath(os.path.join(dirn, f))): flag(W, 'ANH-mat', f'ngày {n} {t}: {f}')
-                if '/the/' in f and W == 'LS': flag(W, 'LS-chu', f'ngày {n} {t}: thẻ chữ {os.path.basename(f)}')
-                elif '/the/' in f: flag(W, 'the-chu', f'ngày {n} {t}: {os.path.basename(f)}')
+                if '/the/' in f: flag(W, 'the-chu', f'ngày {n} {t}: {os.path.basename(f)}')   # LS 48 được hiện chữ (NL-4, 11/11): thẻ chữ chỉ là chỗ chưa có tranh
             for m in re.finditer(r'\{[^{}]*"e":\s*"([^"]+)"[^{}]*\}', blob):
                 if EMO.search(m.group(1)) and not re.search(r'"img":\s*"[^"]+"', m.group(0)):
                     flag(W, 'emoji', f'ngày {n} {t}: {m.group(1)} thay tranh cho "{(re.search(r'"en":\s*"([^"]*)"', m.group(0)) or re.search(r'"t":\s*"([^"]*)"', m.group(0)) or [None, "?"])[1]}"')

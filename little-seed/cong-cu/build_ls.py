@@ -484,6 +484,49 @@ for n, ws in EXTRA.items():
         if not img:
             slug = re.sub(r'[^a-z0-9]+', '_', en.lower()).strip('_'); GH.the_chu(en, zh, f'little-seed/tai-nguyen-ls/the/{slug}.webp'); img = f'tai-nguyen-ls/the/{slug}.webp'
         st['cards'].append({'en': en, 'zh': zh, 'py': PY(zh), 'img': img, 'a_en': au('en', en, 'co_huou'), 'a_zh': au('zh', zh, 'co_huou')})
+# Luyện thanh điệu (chị quyết 11/11, NL-3: lớp offline Little Seed 48 có luyện thanh). Bước "Mẹo âm" trước trò chơi cuối ngày, từng chút một:
+# U1–U2 thanh 1 và 4, U3–U4 thêm thanh 2, từ U5 thêm thanh 3. Chỉ dùng từ con đã gặp ở bước Thẻ (tính thanh của âm tiết đầu),
+# bỏ từ có biến thanh (一, 不, hai thanh 3 liền nhau). Mỗi bước: 1 thẻ bắt chước (3 từ) + 5–6 câu nghe – chạm kí hiệu thanh.
+from pypinyin import lazy_pinyin as _lp, Style as _St
+TSYM = {'1': 'ˉ →', '2': 'ˊ ↗', '3': 'ˇ ↘↗', '4': 'ˋ ↘'}
+def tone_of(hz):
+    h = re.findall(r'[一-鿿]', hz)
+    if not h or h[0] in '一不': return ''
+    t = [re.sub(r'\D', '', x) or '5' for x in _lp(''.join(h[:2]), style=_St.TONE3)]
+    if t[0] == '3' and len(t) > 1 and t[1] == '3': return ''
+    return t[0] if t[0] in '1234' else ''
+POOL = {}   # hz -> (py, tone, ngày gặp)
+for n in sorted(k for k in days if isinstance(k, int)):
+    d = days[n]
+    try: un = int(d.get('unit'))
+    except (TypeError, ValueError): continue
+    for st in d['steps']:
+        if st['type'] == 'the':
+            for c in st['cards']:
+                hz = re.sub(r'[！？。，、…!?.]', '', c.get('zh') or '')
+                if hz and hz not in POOL and len(re.findall(r'[一-鿿]', hz)) <= 3 and tone_of(hz):
+                    py = c.get('py') or PY(hz); hh = re.findall(r'[一-鿿]', hz)
+                    if len(hh) == 2 and hh[0] == hh[1]:   # từ lặp (妈妈, 爷爷): âm tiết sau thanh nhẹ
+                        s1 = _lp(hh[0], style=_St.TONE)[0]; py = s1 + _lp(hh[0], style=_St.NORMAL)[0]
+                    POOL[hz] = (py, tone_of(hz), n)
+    allow = '14' if un <= 2 else ('124' if un <= 4 else '1234')
+    pool = [(hz, py, t, m) for hz, (py, t, m) in POOL.items() if t in allow]
+    if len(pool) < 5 or len({t for _, _, t, _ in pool}) < 2: continue
+    pool.sort(key=lambda x: -x[3])                       # từ mới gặp trước
+    pairs = [p for p in ('14', '12', '24', '13', '34', '23') if set(p) <= set(allow)]
+    foc = pairs[n % len(pairs)]
+    ex = []
+    for t in foc + foc:
+        w = next((x for x in pool if x[2] == t and x not in ex), None)
+        if w and len(ex) < 3: ex.append(w)
+    rest = [x for x in pool if x not in ex]
+    k = n % max(1, len(rest)); rest = rest[k:] + rest[:k]
+    qz = (ex + rest)[:6 if len(pool) >= 6 else 5]
+    step = {'type': 'meo', 'cards': [{'l': 'zh', 'sym': ' · '.join(TSYM[t] for t in foc), 'name': '', 'ex': [[py, hz] for hz, py, _, _ in ex]}],
+            'quiz': {'zh': [[py, hz, t] for hz, py, t, _ in qz], 'zh_btn': [[t, TSYM[t]] for t in allow], 'en': [], 'en_btn': []}}
+    i = max(j for j, s in enumerate(d['steps']) if s['type'] == 'game') if any(s['type'] == 'game' for s in d['steps']) else len(d['steps'])
+    d['steps'] = [s for s in d['steps'] if s['type'] != 'meo']
+    d['steps'].insert(min(i, len(d['steps'])), step)
 fix_ten(days)
 
 # ---------- bản đồ: 26 tuần ----------
