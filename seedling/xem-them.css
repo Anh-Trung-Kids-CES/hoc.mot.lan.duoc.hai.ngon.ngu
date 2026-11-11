@@ -74,7 +74,7 @@ body.khong-chu .xt-th{height:110px}
 /* chắn logo (dòng 1), nút Quay lại (dòng 2, chừa nút 🌐 chọn giọng đọc) và thanh dưới của trang sách */
 .xt-blk{position:absolute;z-index:2;background:transparent}
 .xt-blk.b1{left:0;right:0;top:0;height:48px}
-.xt-blk.b2{left:168px;right:0;top:48px;height:52px}
+.xt-blk.b2{left:168px;right:0;top:48px;height:60px}
 .xt-blk.b3{left:0;right:0;bottom:0;height:44px}
 
 @media (orientation:portrait) and (max-width:820px){
