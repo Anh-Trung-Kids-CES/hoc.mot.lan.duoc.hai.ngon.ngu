@@ -16,6 +16,7 @@ body.xt-on .vd-fab{bottom:calc(var(--nav,64px) + var(--xth) + 12px)}
 
 .xt-hd{flex:none;display:flex;align-items:center;gap:10px;height:40px;padding:0 14px;border:0;background:transparent;font:inherit;cursor:pointer;text-align:left;color:#0E4C75}
 .xt-hd b{font-size:17px;white-space:nowrap}
+.xt-sao{flex:none;font-style:normal;font-weight:800;font-size:13px;color:#7A5B00;background:#FFF4CC;border:2px solid #FFD84D;border-radius:999px;padding:1px 9px;white-space:nowrap}
 .xt-hd span{flex:1;min-width:0;font-family:'Be Vietnam Pro',system-ui,sans-serif;font-size:12.5px;color:#2E6A92;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .xt-hd i{font-style:normal;font-size:18px;font-weight:800}
 .xt-row{flex:1;display:flex;gap:10px;overflow-x:auto;overflow-y:hidden;padding:2px 14px 10px;scroll-snap-type:x proximity;overscroll-behavior-x:contain}
@@ -34,6 +35,8 @@ body.xt-on .vd-fab{bottom:calc(var(--nav,64px) + var(--xth) + 12px)}
 .xt-card.k-phonics .xt-tag,.xt-card.k-pinyin .xt-tag{background:#E9A900}
 .xt-card.l-zh.k-song .xt-tag{background:#D7263D}
 .xt-ok{position:absolute;right:5px;top:5px;width:22px;height:22px;border-radius:50%;background:#3BB273;color:#fff;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.xt-ok.star{background:#FFD84D;font-size:12px}
+.xt-star{flex:none;font-family:'Be Vietnam Pro',system-ui,sans-serif;font-weight:700;font-size:12.5px;color:#7A5B00;background:#FFF4CC;border:2px solid #FFD84D;border-radius:999px;padding:3px 10px;white-space:nowrap}
 .xt-cap{display:block;padding:4px 8px 6px;line-height:1.2}
 .xt-cap b{display:block;font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .xt-cap small{display:block;font-family:'Be Vietnam Pro',system-ui,sans-serif;font-size:11px;color:#777;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
