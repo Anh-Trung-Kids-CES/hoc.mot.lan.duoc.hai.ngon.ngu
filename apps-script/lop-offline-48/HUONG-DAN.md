@@ -30,6 +30,15 @@ Sửa mã sau này: dán mã mới → Lưu → **Triển khai → Quản lý tr
 - Anh chị em dùng chung một máy: mỗi con mở link của mình, web cất riêng bài của từng con.
 - Bảng của cô có nút 🔗 Link cạnh tên mỗi con để chép lại link gửi ba mẹ.
 
+## Góc vinh danh (video các bạn làm bài tốt)
+- Mỗi lớp một thư mục Drive (trong "Dữ liệu web Anh - Trung"): **Video vinh danh – Little Seed 48 buổi**, **Video vinh danh – Seedling 48 buổi**. ID thư mục ghi ở tab CaiDat, cột `video_folder`.
+- Cô chọn video con làm tốt, đặt tên `Tên con – tên bài.mp4` rồi thả vào thư mục. Web tự hiện video mới chậm nhất khoảng 5 phút sau (máy chủ nhớ danh sách 5 phút). Muốn chia thư mục con theo tuần cũng được (đọc một tầng thư mục con).
+- Thêm mã con trong ngoặc vuông để con và ba mẹ thấy huy hiệu "Video của con": `Bông [ZTK2A7] – đọc truyện Unit 2.mp4`.
+- Điền ngày khai giảng ở cột `khai_giang` (ví dụ 16/11/2026) để web đánh số Tuần 1, Tuần 2…; để trống thì web chỉ ghi khoảng ngày.
+- Thứ tự theo ngày video được tải lên Drive. Ai mở web cũng xem được (thư mục để "Bất kỳ ai có đường liên kết đều xem được" thì video mới phát được). Xoá video khỏi thư mục là web bỏ video đó.
+- Bố cục: màn rộng (≥1180px) có cột trái cạnh thanh nút; trong lúc làm bài và trên máy tính bảng là dải hẹp "🌟 Vinh danh", chạm để mở; điện thoại dọc có nút 🌟 nổi. Mã web: `little-seed/ls-vinh-danh.js`, `seedling/seedling-vinh-danh.js` (giống nhau), `vinh-danh.css`.
+- Cập nhật máy chủ lên bản có Góc vinh danh: dán Code.gs mới → Lưu → chạy hàm **thuVideo** (Google hỏi thêm quyền đọc Drive: Cho phép) → **Triển khai → Quản lý triển khai → bút chì → Phiên bản mới → Triển khai**. Link /exec giữ nguyên. Mở link /exec thấy `"v":3` là xong.
+
 ## Giới hạn
 - Ai có mã của con thì mở được tiến độ của con đó (mã 6 ký tự ngẫu nhiên). Không ghi họ tên đầy đủ hay thông tin khác của con vào web.
 - Mỗi con lưu được khoảng 270.000 ký tự tiến độ (đủ cho 99 ngày web và Hộp ôn).

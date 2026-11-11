@@ -14,12 +14,13 @@
  *
  * Lệnh của web con (không cần PIN, chỉ cần mã con):
  *   GET  kid, hello, redeem, tai (lấy tiến độ)      POST luu (gửi tiến độ, có kiểm phiên bản)
+ *   GET  video (Góc vinh danh: danh sách video trong thư mục Drive của lớp, ai cũng xem được)
  * Lệnh của Bảng của cô (cần PIN của lớp):
  *   GET  cls, award, unaward, order, addkid
  */
 
 const TAB = {
-  CaiDat:  ['lop', 'ten_lop', 'pin', 'ghi_chu'],
+  CaiDat:  ['lop', 'ten_lop', 'pin', 'ghi_chu', 'video_folder', 'khai_giang'],
   HocSinh: ['lop', 'id', 'ten', 'tao', 'web', 'vi', 'ngay', 'cuoi', 'luu_cuoi'],
   TienDo:  ['lop', 'id', 'v', 't', 'capnhat', 'do_dai', 'd1', 'd2', 'd3', 'd4', 'd5', 'd6'],
   Thuong:  ['id', 'lop', 'kid', 'n', 'why', 'at', 'huy'],
@@ -27,7 +28,8 @@ const TAB = {
 };
 const LOP_MAC_DINH = [['ls', 'Little Seed offline 48 buổi'], ['sd', 'Seedling offline 48 buổi']];
 const TEXT_COLS = { HocSinh: ['lop', 'id', 'ten', 'cuoi'], TienDo: ['lop', 'id', 'd1', 'd2', 'd3', 'd4', 'd5', 'd6'], Thuong: ['id', 'lop', 'kid'],
-  DoiQua: ['code', 'lop', 'kid'], CaiDat: ['lop', 'pin'] };
+  DoiQua: ['code', 'lop', 'kid'], CaiDat: ['lop', 'pin', 'video_folder', 'khai_giang'] };
+const VIDEO_CACHE_GIAY = 300;   // danh sách video nhớ 5 phút: video mới thả vào Drive hiện trên web chậm nhất ~5 phút
 const CHUNK = 45000;           // một ô Google Sheet chứa tối đa 50.000 ký tự
 const MAX_DATA = CHUNK * 6;    // ~270.000 ký tự tiến độ mỗi con
 
@@ -54,7 +56,17 @@ function handle_(q) {
   const needPin = () => (pinOk() ? null : { ok: false, err: lop ? 'Sai mã PIN' : 'Thiếu mã lớp' });
 
   switch (q.action) {
-    case 'ping': return { ok: true, v: 2 };
+    case 'ping': return { ok: true, v: 3 };
+
+    /* ---------- Góc vinh danh (công khai) ---------- */
+    case 'video': {
+      const cfg = rows_('CaiDat').find(x => x.lop === lop); if (!cfg) return { ok: false, err: 'Thiếu mã lớp' };
+      const cache = CacheService.getScriptCache(), ck = 'vd_' + lop + '_' + String(cfg.video_folder || '');
+      if (q.moi !== '1') { const c = cache.get(ck); if (c) return JSON.parse(c); }
+      const out = { ok: true, start: ngay_(cfg.khai_giang), items: cfg.video_folder ? videos_(String(cfg.video_folder).trim()) : [] };
+      try { cache.put(ck, JSON.stringify(out), VIDEO_CACHE_GIAY); } catch (x) {}
+      return out;
+    }
 
     /* ---------- web của con ---------- */
     case 'kid': {
@@ -136,6 +148,45 @@ function caiDat() {
   Logger.log('Xong. PIN hiện tại: ' + rows_('CaiDat').map(r => r.ten_lop + ' = ' + r.pin).join(' · '));
 }
 
+/* ===================== Góc vinh danh ===================== */
+/* Đọc video trong thư mục của lớp (và một tầng thư mục con, nếu cô muốn chia theo tuần).
+   Tên tệp: "Bông – đọc truyện Unit 2.mp4"; có thể thêm mã con trong ngoặc vuông: "Bông [ZTK2A7] – đọc truyện.mp4". */
+function videos_(folderId) {
+  const out = [], seen = {};
+  const scan = (f, depth) => {
+    const it = f.getFiles();
+    while (it.hasNext() && out.length < 600) {
+      const x = it.next(), mt = String(x.getMimeType() || '');
+      if (!/^video\//.test(mt) || seen[x.getId()] || x.isTrashed()) continue; seen[x.getId()] = 1;
+      const raw = String(x.getName() || '').replace(/\.[A-Za-z0-9]{2,4}$/, '');
+      const m = raw.match(/\[([A-Za-z0-9]{4,8})\]/), kid = m ? m[1].toUpperCase() : '';
+      const clean = raw.replace(/\s*\[[A-Za-z0-9]{4,8}\]\s*/, ' ').replace(/\s+/g, ' ').trim();
+      const parts = clean.split(/\s+[–—-]\s+|_/);
+      out.push({ id: x.getId(), ten: (parts[0] || '').trim(), bai: parts.slice(1).join(' – ').trim(), kid, t: x.getDateCreated().getTime() });
+    }
+    if (depth < 1) { const sub = f.getFolders(); while (sub.hasNext()) scan(sub.next(), depth + 1); }
+  };
+  scan(DriveApp.getFolderById(folderId), 0);
+  return out.sort((a, b) => b.t - a.t);
+}
+/* ngày khai giảng → "yyyy-mm-dd" (web tự tính tuần theo giờ trên máy con). Nhận ô ngày, "2026-11-16" hoặc "16/11/2026" */
+function ngay_(v) {
+  if (v === '' || v == null) return '';
+  if (typeof v === 'number') return Utilities.formatDate(new Date(v), 'Asia/Ho_Chi_Minh', 'yyyy-MM-dd');
+  const s = String(v).trim(), p2 = n => ('0' + n).slice(-2); let m;
+  if ((m = s.match(/^(\d{4})-(\d{1,2})-(\d{1,2})/))) return m[1] + '-' + p2(m[2]) + '-' + p2(m[3]);
+  if ((m = s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})/))) return m[3] + '-' + p2(m[2]) + '-' + p2(m[1]);
+  return '';
+}
+/* Chị chạy hàm này một lần trong trình soạn Apps Script để cấp quyền đọc Drive và xem máy chủ thấy bao nhiêu video */
+function thuVideo() {
+  rows_('CaiDat').forEach(r => {
+    if (!r.video_folder) return Logger.log(r.ten_lop + ': chưa có thư mục video');
+    const v = videos_(String(r.video_folder).trim());
+    Logger.log(r.ten_lop + ': ' + v.length + ' video' + (v[0] ? ' · mới nhất: ' + v[0].ten + ' – ' + v[0].bai : ''));
+  });
+}
+
 /* ===================== tiện ích Sheet ===================== */
 const SH_ = {};   // nhớ tab đã kiểm trong một lượt gọi
 function sh_(name) {
@@ -178,7 +229,7 @@ function set_(name, row, o) {
 }
 function norm_(k, x) {
   if (x instanceof Date) return x.getTime();
-  if (['id', 'kid', 'lop', 'code', 'pin', 'ten', 'cuoi'].includes(k)) return String(x);
+  if (['id', 'kid', 'lop', 'code', 'pin', 'ten', 'cuoi', 'video_folder'].includes(k)) return String(x);
   return x;
 }
 function pinOf_(lop) { const r = rows_('CaiDat').find(x => x.lop === lop); return r ? String(r.pin).trim() : ''; }
