@@ -153,14 +153,14 @@ for L, C in LEVELS.items():
                 bbs.append({'title': M['bb'][0], 'title_zh': M['bb'][1], 'pages': [{'en': e, 'zh': z, 'py': PY(z), 'img': webbb.get(e, '')} for _, e, z in M['bb'][2]]})
             if M and M.get('ve'):
                 ves.append({'lines': [{'en': e, 'zh': z, 'py': PY(z), 'van': v} for _, e, z, v in M['ve']]})
-        if not bbs:   # Little Seed U1: lấy từ web (big book chào + vè chào)
+        if not bbs:   # Little Seed U1: lấy từ web (big book "Goodbye, Puppy!" + vè chào)
             pg = [{'en': e, 'zh': '', 'py': '', 'img': i} for e, i in webbb.items() if 'song' not in i]
             zh = {x['en']: (x['zh'], PY(x['zh'])) for n in days for s in D[str(n)]['steps'] if s.get('lab') for x in s['scenes']}
             for p in pg: p['zh'], p['py'] = zh.get(p['en'], ('', ''))
-            bbs.append({'title': 'Hello and Goodbye', 'title_zh': '你好，再见', 'pages': pg})
+            bbs.append({'title': 'Goodbye, Puppy!', 'title_zh': '小狗，再见！', 'pages': pg})
             ves.append({'lines': [{'en': e, 'zh': zh.get(e, ('', ''))[0], 'py': zh.get(e, ('', ''))[1], 'van': ''} for e, i in webbb.items() if 'song' in i]})
         for b in bbs:
-            for p in b['pages']: p['line'] = LA(p['img'])
+            for p in b['pages']: p['line'] = '' if '/bigbook/' in p['img'] else LA(p['img'])   # tranh big book vẽ Canva: nhiều chi tiết, không làm nét tô (trang in không dùng)
         who = []
         for p in parts:
             for x in p['scenes']:

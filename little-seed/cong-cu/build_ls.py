@@ -226,17 +226,18 @@ days[8] = {'steps': [whole, {'type': 'pdn', 'model_first': True,
                               'items': [{'en': e, 'zh': z, 'py': p, 'a_en': au('en', e, 'leo'), 'a_zh': au('zh', z, 'xiaomei')} for e, z, p in PDN]},
                      {'type': 'goi', 'from': 'Unit 1', 'cards': [card(w) for w in ['hello', 'kitten', 'everyone', 'tomorrow', 'goodbye']]},
                      {'type': 'game', 'qs': game_qs(['puppy', 'teacher', 'hello', 'kitten', 'friend', 'daddy'], 3)}]}
-# ngày 9: big book Hello and Goodbye → chọn tranh trộn → nói theo big book → vận động
-BB = [('good morning', 'Good morning!', '早上好！', 'Zǎoshang hǎo!'), ('mommy', 'Hello, mommy! Goodbye, mommy!', '妈妈，你好！妈妈，再见！', 'Māma, nǐ hǎo! Māma, zàijiàn!'),
-      ('daddy', 'Hello, daddy! Goodbye, daddy!', '爸爸，你好！爸爸，再见！', 'Bàba, nǐ hǎo! Bàba, zàijiàn!'),
-      ('kitten', 'Hello, kitten! Goodbye, kitten!', '小猫，你好！小猫，再见！', 'Xiǎomāo, nǐ hǎo! Xiǎomāo, zàijiàn!'),
-      ('puppy', 'Hello, puppy! Goodbye, puppy!', '小狗，你好！小狗，再见！', 'Xiǎogǒu, nǐ hǎo! Xiǎogǒu, zàijiàn!'),
-      ('teacher', 'Hello, teacher! Goodbye, teacher!', '老师，你好！老师，再见！', 'Lǎoshī, nǐ hǎo! Lǎoshī, zàijiàn!'),
-      ('friend', 'Hello, friend! Goodbye, friend!', '朋友，你好！朋友，再见！', 'Péngyou, nǐ hǎo! Péngyou, zàijiàn!'),
-      ('everyone', 'Hello, everyone! Goodbye, everyone!', '大家好！大家再见！', 'Dàjiā hǎo! Dàjiā zàijiàn!'),
-      ('all', 'Goodbye, all! See you tomorrow!', '大家再见！明天见！', 'Dàjiā zàijiàn! Míngtiān jiàn!'),
-      ('good night', 'Good night, puppy!', '小狗，晚安！', 'Xiǎogǒu, wǎn\'ān!')]
-def bb_img(k): return W[k][2] if k in W else S + 'tranh/sunny.webp'
+# ngày 9: big book "Goodbye, Puppy!" (chị duyệt kịch bản 11/11, tranh vẽ Canva DAHanaV9zZg trang 15–27, claude/KichBan_BigBook_LS_U1.md)
+# → chọn tranh trộn → nói theo big book → vận động. Tranh: little-seed/tai-nguyen-ls/bigbook/u1/
+BBD = 'tai-nguyen-ls/bigbook/u1/'
+BB_BIA = (BBD + 'bia.webp', 'Goodbye, Puppy!', '小狗，再见！', 'Xiǎogǒu, zàijiàn!')
+BB = [(BBD + 'p1.webp', 'Good morning!', '早上好！', 'Zǎoshang hǎo!'), (BBD + 'p2.webp', 'Good morning, mommy!', '妈妈，早上好！', 'Māma, zǎoshang hǎo!'),
+      (BBD + 'p3.webp', 'Hello, daddy!', '爸爸，你好！', 'Bàba, nǐ hǎo!'), (BBD + 'p4.webp', 'Goodbye, puppy!', '小狗，再见！', 'Xiǎogǒu, zàijiàn!'),
+      (BBD + 'p5.webp', 'Hello, teacher!', '老师，你好！', 'Lǎoshī, nǐ hǎo!'), (BBD + 'p6.webp', 'Hello, friend!', '朋友，你好！', 'Péngyou, nǐ hǎo!'),
+      (BBD + 'p7.webp', 'Hello, everyone!', '大家好！', 'Dàjiā hǎo!'), (BBD + 'p8.webp', 'Hello, puppy!', '小狗，你好！', 'Xiǎogǒu, nǐ hǎo!'),
+      (BBD + 'p9.webp', 'Goodbye, all! See you tomorrow!', '大家再见！明天见！', 'Dàjiā zàijiàn! Míngtiān jiàn!'),
+      (BBD + 'p10.webp', 'Hello, kitten!', '小猫，你好！', 'Xiǎomāo, nǐ hǎo!'), (BBD + 'p11.webp', 'Good night, puppy!', '小狗，晚安！', 'Xiǎogǒu, wǎn\'ān!')]
+BB_TEN = (BBD + 'p12.webp', 'Good night, ___!', '___，晚安！', '___, wǎn\'ān!')   # trang 12: khung dán ảnh con
+def bb_img(k): return k if k.endswith('.webp') else (W[k][2] if k in W else S + 'tranh/sunny.webp')
 def au_multi(l, t, who=''):
     a = au(l, t, who)
     if a: return a
@@ -244,8 +245,9 @@ def au_multi(l, t, who=''):
     parts = re.findall(r'[^!！]+[!！]', t)
     fs = [au(l, x.strip(), who) for x in parts]
     return '|'.join(fs) if all(fs) else ''
-big = {'type': 'truyen', 'title': 'Big book · Hello and Goodbye', 'title_zh': 'Big book · 你好，再见',
-       'scenes': [{'who': 'narr', 'img': bb_img(k), 'en': e, 'zh': z, 'py': p, 'a_en': au_multi('en', e, 'co_huou'), 'a_zh': au_multi('zh', z, 'co_huou')} for k, e, z, p in BB]}
+big = {'type': 'truyen', 'title': 'Big book · Goodbye, Puppy!', 'title_zh': 'Big book · 小狗，再见！',
+       'scenes': [{'who': 'narr', 'img': bb_img(k), 'en': e, 'zh': z, 'py': p, 'a_en': au_multi('en', e, 'co_huou'), 'a_zh': au_multi('zh', z, 'co_huou')}
+                  for k, e, z, p in [BB_BIA] + BB + [BB_TEN]]}
 VE = [('mommy', 'Mommy, mommy, goodbye!', '妈妈，妈妈，再见！'), ('daddy', 'Daddy, daddy, goodbye!', '爸爸，爸爸，再见！'),
       ('kitten', 'Kitten, kitten, goodbye!', '小猫，小猫，再见！'), ('puppy', 'Puppy, puppy, goodbye!', '小狗，小狗，再见！'),
       ('all', 'Goodbye, see you tomorrow!', '再见，明天见！')]
@@ -255,7 +257,7 @@ days[9] = {'steps': [big, {'type': 'chon', 'qs': chon_qs(['good morning', 'see y
                      {'type': 'game', 'qs': game_qs(ALLW[:6], 3)}]}
 for n in (6, 7, 8, 9):
     days[n].update({'n': n, 'unit': 1, 'unitname': 'Greeting', 'part': 'Ôn unit' if n == 9 else 'Cả truyện', 'week': G[n]['tuan'],
-                    'before': BUOI_OF[n], 't': ["Bông's Day – cả truyện", 'Chào hay tạm biệt?', 'Phiên dịch nhí', 'Hello and Goodbye – hát và big book'][n - 6],
+                    'before': BUOI_OF[n], 't': ["Bông's Day – cả truyện", 'Chào hay tạm biệt?', 'Phiên dịch nhí', 'Goodbye, Puppy! – hát và big book'][n - 6],
                     'hero': [X21 + 'tr1_c4.webp', X21 + 'tr1_c1.webp', LS + 'xiaomei_anna.webp', X21 + 'tr1_c8.webp'][n - 6], 'goal': GOAL[n - 1], 'bg': [], 'video': [], 'kind': 'ca'})
 
 
@@ -279,11 +281,11 @@ def fix_ten(obj):
 def bb_step(pages, title, title_zh):
     return {'type': 'truyen', 'lab': 'Big book và vè', 'sub': 'Nghe lại mẫu câu của unit', 'title': title, 'title_zh': title_zh,
             'scenes': [{'who': 'narr', 'img': img, 'en': e, 'zh': z, 'py': p, 'a_en': au_multi('en', e, 'co_huou'), 'a_zh': au_multi('zh', z, 'co_huou')} for img, e, z, p in pages]}
-BB1 = [(bb_img(k), e, z, p) for k, e, z, p in BB] + [(LS + 'me_vay.webp', 'Hello, ___!', '___，你好！', '___, nǐ hǎo!')]
+BB1 = [(bb_img(k), e, z, p) for k, e, z, p in BB + [BB_TEN]]
 VE1 = [(W[k][2], e, z, '') for k, e, z in VE]
 for n in range(1, 9):
     pg = [BB1[(2 * (n - 1) + j) % len(BB1)] for j in range(3)] + [VE1[(n - 1 + j) % len(VE1)] for j in range(2)]
-    st = bb_step(pg, 'Big book · Hello and Goodbye + vè', 'Big book · 你好，再见 + 儿歌')
+    st = bb_step(pg, 'Big book · Goodbye, Puppy! + vè', 'Big book · 小狗，再见！+ 儿歌')
     if n <= 5: days[n]['steps'][2] = st          # thay bài Nghe – chạm tranh (luyện rời)
     else: days[n]['steps'].insert(len(days[n]['steps']) - 1, st)
 days[9]['steps'][0]['scenes'].append({'who': 'me', 'img': LS + 'me_vay.webp', 'en': 'Hello, ___!', 'zh': '___，你好！', 'py': '___, nǐ hǎo!', 'a_en': '', 'a_zh': ''})
@@ -414,7 +416,7 @@ for un, MU in sorted(MANG.U.items()):
             T.append({'img': s['img'], 'say': [{'t': s['en'] if len(T) % 2 == 0 else s['zh'], 'l': 'en' if len(T) % 2 == 0 else 'zh', 'w': s['who'],
                                                  'a': s['a_en'] if len(T) % 2 == 0 else s['a_zh']}]})
         return T[:6] if len(T) >= 5 else (T + [{'img': s['img'], 'say': [{'t': s['en'], 'l': 'en', 'w': s['who'], 'a': s['a_en']}]} for s in SC[k]])[:6]
-    BBU = [(IMG(i) or IMG(i.replace('_a', '')) or ('../' + GH.NV + i + '_a.webp' if os.path.exists(GH.NV + i + '_a.webp') else ('../' + GH.NV + i + '.webp' if os.path.exists(GH.NV + i + '.webp') else '')), e, z, PY(z)) for i, e, z in MU['bb'][2]]
+    BBU = [(i if i.endswith('.webp') else IMG(i) or IMG(i.replace('_a', '')) or ('../' + GH.NV + i + '_a.webp' if os.path.exists(GH.NV + i + '_a.webp') else ('../' + GH.NV + i + '.webp' if os.path.exists(GH.NV + i + '.webp') else '')), e, z, PY(z)) for i, e, z in MU['bb'][2]]
     VEU = [(IMG({'co': 'song', 'lop': 'song'}.get(w, 'song')), e.replace('-', '').title() if False else re.sub(r'(?<=\w)-(?=\w)', '', e), z, PY(z)) for w, e, z, v in MU['ve']]
     def bbu(n):
         pg = [BBU[(2 * n + j) % len(BBU)] for j in range(3)] + [VEU[(n + j) % len(VEU)] for j in range(2)]
@@ -471,7 +473,7 @@ for n in range(1, 10):
     if st:
         add = [VE_CHAO[(n - 1) * 2 % 6], VE_CHAO[((n - 1) * 2 + 1) % 6]]
         st['scenes'] = st['scenes'][:3] + [{'who': 'narr', 'img': i, 'en': e, 'zh': z, 'py': PY(z), 'a_en': au_multi('en', e, 'co_huou'), 'a_zh': au_multi('zh', z, 'co_huou')} for i, e, z in add]
-        st['title'] = 'Big book · Hello and Goodbye + vè chào'
+        st['title'] = 'Big book · Goodbye, Puppy! + vè chào'; st['title_zh'] = 'Big book · 小狗，再见！+ 儿歌'
 # Từ "Mới · lõi" của khung 48 buổi chưa có trong thẻ ngày (đối chiếu 11/11): thêm thẻ vào bước Thẻ từ của đúng ngày
 EXTRA = {30: [('mouth', '口', 'mouth')], 46: [('these', '这些', '')], 91: [('Happy birthday!', '生日快乐！', 'happy'), ('two dogs', '两只狗', 'dog')],
          94: [('egg', '鸡蛋', 'egg'), ('an eraser', '一块橡皮', 'eraser'), ('a table', '一张桌子', 'table')], 19: [('little sister', '妹妹', 'fam_bong_em_gai')]}
