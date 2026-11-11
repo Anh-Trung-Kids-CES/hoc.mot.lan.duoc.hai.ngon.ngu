@@ -19,6 +19,8 @@ body.xt-on .vd-fab{bottom:calc(var(--nav,64px) + var(--xth) + 12px)}
 .xt-sao{flex:none;font-style:normal;font-weight:800;font-size:13px;color:#7A5B00;background:#FFF4CC;border:2px solid #FFD84D;border-radius:999px;padding:1px 9px;white-space:nowrap}
 .xt-hd span{flex:1;min-width:0;font-family:'Be Vietnam Pro',system-ui,sans-serif;font-size:12.5px;color:#2E6A92;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .xt-hd i{font-style:normal;font-size:18px;font-weight:800}
+.xt-sao .xt-l1{display:inline;flex:none;font-size:inherit;color:inherit;font-family:inherit}
+.xt-hd .xt-l2{display:none}
 .xt-row{flex:1;display:flex;gap:10px;overflow-x:auto;overflow-y:hidden;padding:2px 14px 10px;scroll-snap-type:x proximity;overscroll-behavior-x:contain}
 .xt-card{flex:none;width:176px;display:flex;flex-direction:column;padding:0;border:3px solid #fff;border-radius:14px;background:#fff;box-shadow:0 3px 0 rgba(0,0,0,.1);
   cursor:pointer;font:inherit;text-align:left;overflow:hidden;scroll-snap-align:start;color:var(--ink,#333)}
@@ -85,6 +87,7 @@ body.khong-chu .xt-th{height:110px}
   body.xt-on #app{padding-bottom:calc(var(--nav,64px) + var(--xth))}
   :root{--xth-mo:160px}
   .xt-card{width:150px}.xt-th{height:72px}
+  .xt-hd{gap:6px;padding:0 10px}.xt-hd b{font-size:15px}.xt-hd .xt-l1{display:none}.xt-hd .xt-l2{display:block;font-size:11.5px}
   .xt-box{width:100%;padding:8px}
 }
 @media (max-height:500px){ :root{--xth-mo:140px} .xt-th{height:58px} .xt-hd{height:34px} }

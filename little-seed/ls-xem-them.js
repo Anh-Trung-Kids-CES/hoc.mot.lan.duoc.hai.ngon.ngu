@@ -64,7 +64,7 @@
     if (!list.length) { bar.innerHTML = ''; return; }
     const open = isOpen(); document.body.classList.toggle('xt-mo', open);
     const w = watched(), x = xtDay();
-    bar.innerHTML = `<button type="button" class="xt-hd" aria-expanded="${open}"><b>📺 Xem thêm</b><em class="xt-sao" title="Mỗi bài xem, đọc được 1 sao, tối đa ${STAR_MAX} sao mỗi ngày">⭐ ${x.n}/${STAR_MAX} hôm nay</em><span>Ngày ${curDay} · Xem hoặc đọc mỗi bài được +1 ⭐, tối đa ${STAR_MAX} ⭐ mỗi ngày</span><i>${open ? '▾' : '▴'}</i></button>
+    bar.innerHTML = `<button type="button" class="xt-hd" aria-expanded="${open}"><b>📺 Xem thêm</b><em class="xt-sao" title="Mỗi bài xem, đọc được 1 sao, tối đa ${STAR_MAX} sao mỗi ngày">⭐ ${x.n}/${STAR_MAX}<span class="xt-l1"> hôm nay</span></em><span class="xt-l1">Ngày ${curDay} · Xem hoặc đọc mỗi bài được +1 ⭐, tối đa ${STAR_MAX} ⭐ mỗi ngày</span><span class="xt-l2">+1 ⭐ mỗi bài, tối đa ${STAR_MAX}/ngày</span><i>${open ? '▾' : '▴'}</i></button>
       ${open ? `<div class="xt-row">${list.map((it, i) => { const [ic, lb] = BADGE[it.k] || ['▶', ''];
         const lang = it.l === 'zh' ? '中文' : 'English', tag = it.k === 'song' ? lang : lb + (it.k === 'book' ? '' : '');
         return `<button type="button" class="xt-card k-${it.k} l-${it.l}${w.includes(it.id) ? ' seen' : ''}" data-i="${i}">
