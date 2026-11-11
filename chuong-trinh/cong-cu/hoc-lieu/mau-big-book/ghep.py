@@ -51,42 +51,52 @@ def part(im, box):
     a = Image.composite(im.split()[3], Image.new('L', im.size, 0), m); out = im.copy(); out.putalpha(a); return out
 
 BONG = lambda h=470, flip=False: nv('kids_bong_a', h, flip)
-# Bìa: Bông vẫy chào, mèo và Puppy ló ra ở hai mép
+def bong(base, im, cx, by, h, skew=0.18, alpha=150, blur=1.6):
+    """Bóng người in lên tường: lấy dáng nhân vật, tô sẫm, mờ nhẹ, xô nghiêng như có đèn chiếu từ phía cửa."""
+    m = im.split()[3].point(lambda v: 255 if v > 40 else 0)
+    w = int(im.width * h / im.height); m = m.resize((w, h))
+    m = m.transform((w + int(h * abs(skew)), h), Image.AFFINE, (1, skew, -h * skew if skew > 0 else 0, 0, 1, 0), Image.BICUBIC)
+    m = m.filter(ImageFilter.GaussianBlur(blur)).point(lambda v: v * alpha // 255)
+    sh = Image.new('RGBA', m.size, (55, 50, 70, 0)); sh.putalpha(m)
+    base.alpha_composite(sh, (int(cx - sh.width / 2), int(by - h)))
+
+BONG = lambda h=470, flip=False: nv('kids_bong_a', h, flip)
+WALL = 545   # chân tường phòng khách ls_home (chỗ tường gặp sàn)
+# Bìa: Bông vẫy chào, mèo và Puppy ngồi hai bên
 b = nen('ls_home'); put(b, BONG(520), 450, 860)
-put(b, nv('pets_meo_ngoi_a', 300, True), 20, 870, sh=False); put(b, nv('pets_cun_ngoi_a', 320), 880, 870, sh=False)
+put(b, nv('pets_meo_ngoi_a', 260, True), 210, 870); put(b, nv('pets_cun_ngoi_a', 280), 700, 870)
 save(b, 'bia')
 
-# 1 – đoán: mẹ bước vào từ mép phải, chỉ thấy mái tóc dài và một bên váy
-b = nen('ls_home'); put(b, BONG(), 300, 860); put(b, nv('fam_bong_me_a', 640), 925, 860, sh=False); save(b, 'p1_doan')
-b = nen('ls_home'); put(b, BONG(), 300, 860); put(b, nv('fam_bong_me_a', 640), 640, 860); save(b, 'p1_chao')
+# Trang đoán: không cắt người, không nấp – BÓNG in trên tường; Bông quay nhìn cái bóng
+# 1 – bóng tóc dài, váy → mommy
+me = nv('fam_bong_me_a', 640)
+b = nen('ls_home'); bong(b, me, 600, WALL + 10, 470); put(b, BONG(470, True), 260, 860); save(b, 'p1_doan')
+b = nen('ls_home'); put(b, BONG(), 300, 860); put(b, me, 640, 860); save(b, 'p1_chao')
 
-# 2 – đoán: bố trốn sau ghế sofa, chỉ thấy tóc và cặp kính
-b = nen('ls_home'); d = nv('fam_bong_bo_a', 660); top = 860 - int(SOFA.height * 620 / SOFA.width)
-b.alpha_composite(part(d, (0, 0, 1, .4)), (470 - d.width // 2, top - 105)); sofa(b); save(b, 'p2_doan')
-b = nen('ls_home'); sofa(b, cx=600); put(b, d, 250, 870); save(b, 'p2_chao')
+# 2 – bóng tóc ngắn, đeo kính, áo sơ mi → daddy
+bo = nv('fam_bong_bo_a', 660)
+b = nen('ls_home'); bong(b, bo, 610, WALL + 10, 480); put(b, BONG(470, True), 260, 860); save(b, 'p2_doan')
+b = nen('ls_home'); put(b, BONG(), 300, 860); put(b, bo, 640, 860); save(b, 'p2_chao')
 
-# 3 – đoán: cái đuôi vằn cam thò lên sau lưng ghế
+# 3 – bóng tai nhọn, đuôi dựng → kitten
 meo = nv('pets_meo_dung_a', 330)
-b = nen('ls_home'); b.alpha_composite(part(meo, (.76, 0, 1, .55)), (560 - meo.width // 2, top - 160)); sofa(b); save(b, 'p3_doan')
-b = nen('ls_home'); sofa(b); put(b, nv('pets_meo_dung_a', 300), 470, top + 150, sh=False); save(b, 'p3_chao')
+b = nen('ls_home'); bong(b, meo, 600, WALL + 10, 300, skew=.12); put(b, BONG(470, True), 260, 860); save(b, 'p3_doan')
+b = nen('ls_home'); put(b, BONG(), 300, 860); put(b, meo, 640, 860); save(b, 'p3_chao')
 
-# 4 – đoán: lại một cái đuôi (màu nâu, không có vằn) – cô đọc "Hello, kitten?", con tinh ý nói "No!"
+# 4 – lại một cái bóng bốn chân… tai cụp, đuôi ngắn. Cô đọc "Hello, kitten?" – con phát hiện: No!
 cun = nv('pets_cun_dung_a', 330)
-cg = nv('pets_cun_dung_a', 460); b = nen('ls_home'); b.alpha_composite(part(cg, (0, .34, .155, .62)), (520 - cg.width // 2, top - 245)); sofa(b); save(b, 'p4_doan')
-b = nen('ls_home'); sofa(b); put(b, cun, 300, 860); put(b, nv('pets_meo_dung_a', 280, True), 560, top + 150, sh=False); save(b, 'p4_chao')
+b = nen('ls_home'); bong(b, cun, 600, WALL + 10, 310, skew=.12); put(b, BONG(470, True), 260, 860); put(b, nv('pets_meo_ngoi_a', 200, True), 430, 870); save(b, 'p4_doan')
+b = nen('ls_home'); put(b, BONG(), 260, 860); put(b, cun, 560, 860); put(b, nv('pets_meo_ngoi_a', 200, True), 780, 870); save(b, 'p4_chao')
 
-# 5 – lớp học: cô giơ quyển sách che mặt, chỉ thấy váy xanh ngọc và tay
+# 5 – lớp học: bóng cô (tóc ngang vai, ôm sách) in lên bảng xanh và tường
 lan = nv('nv_lan_a', 640)
-b = nen('ls_class'); put(b, BONG(420, True), 230, 880); put(b, lan, 640, 900)
-book = Image.new('RGBA', (240, 180), (0, 0, 0, 0)); dr = ImageDraw.Draw(book)
-dr.rounded_rectangle([0, 0, 239, 179], 16, fill=(200, 55, 45, 255), outline=(60, 30, 20, 255), width=6); dr.line([120, 4, 120, 175], fill=(60, 30, 20, 255), width=5)
-for cx in (60, 180): dr.ellipse([cx - 32, 60, cx + 32, 124], fill=(242, 193, 78, 255), outline=(60, 30, 20, 255), width=4)
-b.alpha_composite(book, (640 - 120, 900 - 640 + 5)); save(b, 'p5_doan')
+b = nen('ls_class'); bong(b, lan, 560, 470, 400, skew=.1, alpha=150); put(b, BONG(420), 230, 880); save(b, 'p5_doan')
 b = nen('ls_class'); put(b, BONG(420, True), 230, 880); put(b, lan, 640, 900); save(b, 'p5_chao')
 
-# 6 – bàn tay vẫy ló ra từ mép trái → bạn Leo
+# 6 – cặp sách xanh của bạn trên ghế + bóng bạn tóc xoăn vẫy tay
 leo = nv('kids_leo_a', 470)
-b = nen('ls_class'); put(b, BONG(420, True), 600, 880); b.alpha_composite(leo, (-int(leo.width * .5), 880 - leo.height)); save(b, 'p6_doan')
+bag = key_white(PIC + 'schoolbag.webp', 30); bag = bag.resize((150, int(bag.height * 150 / bag.width)), Image.LANCZOS)
+b = nen('ls_class'); bong(b, leo, 330, 470, 330, skew=-.1, alpha=150); put(b, bag, 470, 720); put(b, BONG(420, True), 680, 880); save(b, 'p6_doan')
 b = nen('ls_class'); put(b, BONG(420, True), 620, 880); put(b, leo, 280, 880); save(b, 'p6_chao')
 
 # 7 – cả lớp

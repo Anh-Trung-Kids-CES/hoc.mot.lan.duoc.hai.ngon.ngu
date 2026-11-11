@@ -5,18 +5,18 @@ def PY(z): return ' '.join(x[0] for x in pinyin(z, style=Style.TONE)).replace(' 
 SLOT = '<span class="slot">…</span>'
 # (tranh, EN, ZH, từ trong ô (tô màu), loại trang, ghi chú cho cô)
 P = [
- ('bia', 'Hello, …?', '……，你好？', '', 'bia', 'Bìa: chỉ mèo, Puppy ló ở hai mép. Hỏi "Hello, …?" – con đoán ai sẽ xuất hiện.'),
- ('p1_doan', 'Hello, …?', '……，你好？', '', 'doan', 'Trang đoán: chỉ mái tóc dài, vạt váy. Dừng 3 giây, để con đoán rồi mới lật.'),
+ ('bia', 'Hello, …?', '……，你好？', '', 'bia', 'Bìa: Bông, mèo và Puppy. Hỏi "Hello, …?" – hôm nay Bông sẽ chào ai?'),
+ ('p1_doan', 'Hello, …?', '……，你好？', '', 'doan', 'Trang đoán: cái bóng trên tường – tóc dài, mặc váy. Dừng 3 giây, để con đoán rồi mới lật.'),
  ('p1_chao', 'Hello, mommy!', '妈妈，你好！', 'mommy|妈妈', 'chao', 'Cả lớp vẫy tay chào.'),
- ('p2_doan', 'Hello, …?', '……，你好？', '', 'doan', 'Chỉ cặp kính sau ghế. Con nói "daddy!" trước khi cô lật.'),
+ ('p2_doan', 'Hello, …?', '……，你好？', '', 'doan', 'Bóng tóc ngắn, mặc áo sơ mi. Con nói "daddy!" trước khi cô lật.'),
  ('p2_chao', 'Hello, daddy!', '爸爸，你好！', 'daddy|爸爸', 'chao', ''),
- ('p3_doan', 'Hello, …?', '……，你好？', '', 'doan', 'Cái đuôi vằn cam. Làm tiếng "meo" nếu con chưa đoán ra.'),
+ ('p3_doan', 'Hello, …?', '……，你好？', '', 'doan', 'Bóng tai nhọn, đuôi dựng. Làm tiếng "meo" nếu con chưa đoán ra.'),
  ('p3_chao', 'Hello, kitten!', '小猫，你好！', 'kitten|小猫', 'chao', ''),
- ('p4_doan', 'Hello, kitten?', '小猫，你好？', 'kitten|小猫', 'doan', 'Cô cố ý đoán sai: "Hello, kitten?" Đuôi nâu, không vằn. Chờ con phản đối "No!".'),
+ ('p4_doan', 'Hello, kitten?', '小猫，你好？', 'kitten|小猫', 'doan', 'Cô cố ý đoán sai: "Hello, kitten?" – nhưng mèo đang ngồi cạnh Bông, và cái bóng tai cụp! Chờ con phản đối "No!".'),
  ('p4_chao', 'No! Hello, puppy!', '不对！小狗，你好！', 'puppy|小狗', 'chao', 'Chỗ cười: cô làm mặt ngạc nhiên. Cả lớp nói "No!" thật to.'),
- ('p5_doan', 'Hello, …?', '……，你好？', '', 'doan', 'Ở lớp: ai che mặt bằng quyển sách đỏ? Chỉ váy xanh ngọc.'),
+ ('p5_doan', 'Hello, …?', '……，你好？', '', 'doan', 'Ở lớp: bóng ai in lên bảng? Tóc ngang vai, ôm quyển sách.'),
  ('p5_chao', 'Hello, teacher!', '老师，你好！', 'teacher|老师', 'chao', 'Con chào cô thật, ngay trên lớp.'),
- ('p6_doan', 'Hello, …?', '……，你好？', '', 'doan', 'Bàn tay vẫy và mái tóc xoăn ló ở mép trang.'),
+ ('p6_doan', 'Hello, …?', '……，你好？', '', 'doan', 'Cặp sách xanh của bạn trên sàn, và bóng một bạn tóc xoăn đang vẫy tay.'),
  ('p6_chao', 'Hello, friend!', '朋友，你好！', 'friend|朋友', 'chao', 'Con quay sang chào bạn bên cạnh.'),
  ('p7', 'Hello, everyone!', '大家好！', 'everyone|大家', 'chao', ''),
  ('p8', 'Goodbye, all! See you tomorrow!', '大家再见！明天见！', 'Goodbye|再见', 'chao', 'Nắng chiều: hết giờ học.'),
@@ -55,7 +55,7 @@ H = f'''<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="v
 table.ss td{{font-size:14px}}
 </style></head><body>
 <div class="top noprint"><b>Big book mẫu · Little Seed U1 · "Hello, …?"</b><span class="sp"></span><a class="btn" href="../">← Học liệu in</a><button class="btn p" onclick="print()">In / Lưu PDF</button></div>
-<div class="wrap noprint"><div class="note"><b>Mẫu theo bộ quy tắc thiết kế big book mới (chờ chị duyệt).</b> Cặp trang <b>đoán → lật → chào</b>: trang đoán chỉ hé một đặc điểm (tóc, kính, cái đuôi, bàn tay), con đoán và nói to trước khi cô lật. Có cảnh nền đúng nơi xảy ra (nhà Bông, lớp, sân trường). Chỗ cười: trang 7–8 cô cố ý đoán sai ("kitten?" → "No! puppy!"); trang 15 chữ nói "Goodbye" nhưng tranh cho thấy Puppy đã chui lên giường. Khung câu 100% "Hello, ___!", chỉ dùng từ Unit 1. In A4 dọc, phóng A3 khi in big book thật. Tranh ghép từ tranh có sẵn; bản chính thức nên vẽ riêng (xem bộ quy tắc).</div>
+<div class="wrap noprint"><div class="note"><b>Mẫu theo bộ quy tắc thiết kế big book mới (chờ chị duyệt).</b> Cặp trang <b>đoán → lật → chào</b>: trang đoán cho con thấy <b>cái bóng</b> hoặc <b>đồ của nhân vật</b> (không cắt đôi người, không nấp gượng), con đoán và nói to trước khi cô lật. Có cảnh nền đúng nơi xảy ra (nhà Bông, lớp, sân trường). Chỗ cười: trang 7–8 cô cố ý đoán sai ("kitten?" → "No! puppy!"); trang 15 chữ nói "Goodbye" nhưng tranh cho thấy Puppy đã chui lên giường. Khung câu 100% "Hello, ___!", chỉ dùng từ Unit 1. In A4 dọc, phóng A3 khi in big book thật. Đây là <b>phương án 1</b> (ghép từ tranh có sẵn). Phương án 2 (vẽ trọn cảnh bằng AI) có 4 trang thử, xem trong Canva.</div>
 <table class="ss"><tr><th>Trang</th><th>Câu</th><th>Cô làm gì</th></tr>{''.join(notes)}</table></div>
 <div class="pw">{''.join(pages)}</div></body></html>'''
 open('little-seed/day/mau-big-book/index.html', 'w').write(H); print(len(P), 'trang')
