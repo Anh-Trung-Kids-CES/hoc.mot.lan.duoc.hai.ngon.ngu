@@ -5,1344 +5,1344 @@
    "unit": "1",
    "en_khung": [
     6,
-    10
+    8
    ],
    "en_thang": 6,
    "zh_khung": [
-    null,
-    null
+    3,
+    6
    ],
    "zh_thang": 3,
-   "en_lech": -4,
-   "zh_lech": null
+   "en_lech": -2,
+   "zh_lech": -3
   },
   {
    "khoa": "PreB",
    "unit": "2",
    "en_khung": [
     6,
-    10
+    8
    ],
    "en_thang": 6,
    "zh_khung": [
-    null,
-    null
+    3,
+    6
    ],
    "zh_thang": 3,
-   "en_lech": -4,
-   "zh_lech": null
+   "en_lech": -2,
+   "zh_lech": -3
   },
   {
    "khoa": "PreB",
    "unit": "3",
    "en_khung": [
-    6,
-    10
+    7,
+    9
    ],
    "en_thang": 7,
    "zh_khung": [
-    null,
-    null
+    4,
+    7
    ],
    "zh_thang": 4,
-   "en_lech": -3,
-   "zh_lech": null
+   "en_lech": -2,
+   "zh_lech": -3
   },
   {
    "khoa": "PreB",
    "unit": "4",
    "en_khung": [
-    6,
-    10
+    7,
+    9
    ],
    "en_thang": 7,
    "zh_khung": [
-    null,
-    null
+    4,
+    7
    ],
    "zh_thang": 4,
-   "en_lech": -3,
-   "zh_lech": null
+   "en_lech": -2,
+   "zh_lech": -3
   },
   {
    "khoa": "PreB",
    "unit": "5",
    "en_khung": [
-    6,
-    10
+    7,
+    9
    ],
    "en_thang": 7,
    "zh_khung": [
-    null,
-    null
+    5,
+    8
    ],
    "zh_thang": 5,
-   "en_lech": -3,
-   "zh_lech": null
+   "en_lech": -2,
+   "zh_lech": -3
   },
   {
    "khoa": "PreB",
    "unit": "6",
    "en_khung": [
-    6,
+    8,
     10
    ],
    "en_thang": 8,
    "zh_khung": [
-    null,
-    null
+    5,
+    8
    ],
    "zh_thang": 5,
    "en_lech": -2,
-   "zh_lech": null
+   "zh_lech": -3
   },
   {
    "khoa": "PreB",
    "unit": "7",
    "en_khung": [
-    6,
+    8,
     10
    ],
    "en_thang": 8,
    "zh_khung": [
-    null,
-    null
+    6,
+    9
    ],
    "zh_thang": 6,
    "en_lech": -2,
-   "zh_lech": null
+   "zh_lech": -3
   },
   {
    "khoa": "PreB",
    "unit": "8",
    "en_khung": [
-    6,
-    10
+    9,
+    11
    ],
    "en_thang": 9,
    "zh_khung": [
-    null,
-    null
+    6,
+    9
    ],
    "zh_thang": 6,
-   "en_lech": -1,
-   "zh_lech": null
+   "en_lech": -2,
+   "zh_lech": -3
   },
   {
    "khoa": "PreB",
    "unit": "9",
    "en_khung": [
-    6,
-    10
+    9,
+    11
    ],
    "en_thang": 9,
    "zh_khung": [
-    null,
-    null
+    7,
+    10
    ],
    "zh_thang": 7,
-   "en_lech": -1,
-   "zh_lech": null
+   "en_lech": -2,
+   "zh_lech": -3
   },
   {
    "khoa": "PreB",
    "unit": "10",
    "en_khung": [
-    6,
-    10
+    9,
+    11
    ],
    "en_thang": 9,
    "zh_khung": [
-    null,
-    null
+    7,
+    10
    ],
    "zh_thang": 7,
-   "en_lech": -1,
-   "zh_lech": null
+   "en_lech": -2,
+   "zh_lech": -3
   },
   {
    "khoa": "PreB",
    "unit": "11",
    "en_khung": [
-    6,
-    10
+    10,
+    12
    ],
    "en_thang": 10,
    "zh_khung": [
-    null,
-    null
+    8,
+    11
    ],
    "zh_thang": 8,
-   "en_lech": 0,
-   "zh_lech": null
+   "en_lech": -2,
+   "zh_lech": -3
   },
   {
    "khoa": "PreB",
    "unit": "12",
    "en_khung": [
-    6,
-    10
+    10,
+    12
    ],
    "en_thang": 10,
    "zh_khung": [
-    null,
-    null
+    8,
+    11
    ],
    "zh_thang": 8,
-   "en_lech": 0,
-   "zh_lech": null
+   "en_lech": -2,
+   "zh_lech": -3
   },
   {
    "khoa": "Little Seed",
    "unit": "1",
    "en_khung": [
     10,
-    15
+    12
    ],
    "en_thang": 10,
    "zh_khung": [
     13,
-    22
+    16
    ],
    "zh_thang": 13,
-   "en_lech": -5,
-   "zh_lech": -9
+   "en_lech": -2,
+   "zh_lech": -3
   },
   {
    "khoa": "Little Seed",
    "unit": "2",
    "en_khung": [
-    10,
-    15
+    12,
+    14
    ],
    "en_thang": 12,
    "zh_khung": [
-    13,
-    22
+    15,
+    18
    ],
    "zh_thang": 15,
-   "en_lech": -3,
-   "zh_lech": -7
+   "en_lech": -2,
+   "zh_lech": -3
   },
   {
    "khoa": "Little Seed",
    "unit": "3",
    "en_khung": [
-    10,
+    13,
     15
    ],
    "en_thang": 13,
    "zh_khung": [
-    13,
-    22
+    18,
+    21
    ],
    "zh_thang": 18,
+   "en_lech": -2,
+   "zh_lech": -3
+  },
+  {
+   "khoa": "Little Seed",
+   "unit": "4",
+   "en_khung": [
+    15,
+    17
+   ],
+   "en_thang": 15,
+   "zh_khung": [
+    20,
+    23
+   ],
+   "zh_thang": 20,
+   "en_lech": -2,
+   "zh_lech": -3
+  },
+  {
+   "khoa": "Little Seed",
+   "unit": "5",
+   "en_khung": [
+    17,
+    19
+   ],
+   "en_thang": 17,
+   "zh_khung": [
+    23,
+    26
+   ],
+   "zh_thang": 23,
+   "en_lech": -2,
+   "zh_lech": -3
+  },
+  {
+   "khoa": "Little Seed",
+   "unit": "6",
+   "en_khung": [
+    18,
+    20
+   ],
+   "en_thang": 18,
+   "zh_khung": [
+    25,
+    28
+   ],
+   "zh_thang": 25,
+   "en_lech": -2,
+   "zh_lech": -3
+  },
+  {
+   "khoa": "Little Seed",
+   "unit": "7",
+   "en_khung": [
+    20,
+    22
+   ],
+   "en_thang": 20,
+   "zh_khung": [
+    28,
+    31
+   ],
+   "zh_thang": 28,
+   "en_lech": -2,
+   "zh_lech": -3
+  },
+  {
+   "khoa": "Little Seed",
+   "unit": "8",
+   "en_khung": [
+    21,
+    23
+   ],
+   "en_thang": 21,
+   "zh_khung": [
+    30,
+    33
+   ],
+   "zh_thang": 30,
+   "en_lech": -2,
+   "zh_lech": -3
+  },
+  {
+   "khoa": "Little Seed",
+   "unit": "9",
+   "en_khung": [
+    23,
+    25
+   ],
+   "en_thang": 23,
+   "zh_khung": [
+    33,
+    37
+   ],
+   "zh_thang": 33,
    "en_lech": -2,
    "zh_lech": -4
   },
   {
    "khoa": "Little Seed",
-   "unit": "4",
-   "en_khung": [
-    10,
-    15
-   ],
-   "en_thang": 15,
-   "zh_khung": [
-    13,
-    22
-   ],
-   "zh_thang": 20,
-   "en_lech": 0,
-   "zh_lech": -2
-  },
-  {
-   "khoa": "Little Seed",
-   "unit": "5",
-   "en_khung": [
-    10,
-    15
-   ],
-   "en_thang": 17,
-   "zh_khung": [
-    13,
-    22
-   ],
-   "zh_thang": 23,
-   "en_lech": 2,
-   "zh_lech": 1
-  },
-  {
-   "khoa": "Little Seed",
-   "unit": "6",
-   "en_khung": [
-    10,
-    15
-   ],
-   "en_thang": 18,
-   "zh_khung": [
-    13,
-    22
-   ],
-   "zh_thang": 25,
-   "en_lech": 3,
-   "zh_lech": 3
-  },
-  {
-   "khoa": "Little Seed",
-   "unit": "7",
-   "en_khung": [
-    10,
-    15
-   ],
-   "en_thang": 20,
-   "zh_khung": [
-    13,
-    22
-   ],
-   "zh_thang": 28,
-   "en_lech": 5,
-   "zh_lech": 6
-  },
-  {
-   "khoa": "Little Seed",
-   "unit": "8",
-   "en_khung": [
-    10,
-    15
-   ],
-   "en_thang": 21,
-   "zh_khung": [
-    13,
-    22
-   ],
-   "zh_thang": 30,
-   "en_lech": 6,
-   "zh_lech": 8
-  },
-  {
-   "khoa": "Little Seed",
-   "unit": "9",
-   "en_khung": [
-    10,
-    15
-   ],
-   "en_thang": 23,
-   "zh_khung": [
-    13,
-    22
-   ],
-   "zh_thang": 33,
-   "en_lech": 8,
-   "zh_lech": 11
-  },
-  {
-   "khoa": "Little Seed",
    "unit": "10",
    "en_khung": [
-    10,
-    15
+    25,
+    28
    ],
    "en_thang": 25,
    "zh_khung": [
-    13,
-    22
+    35,
+    39
    ],
    "zh_thang": 35,
-   "en_lech": 10,
-   "zh_lech": 13
+   "en_lech": -3,
+   "zh_lech": -4
   },
   {
    "khoa": "Little Seed",
    "unit": "11",
    "en_khung": [
-    10,
-    15
+    26,
+    29
    ],
    "en_thang": 26,
    "zh_khung": [
-    13,
-    22
+    38,
+    42
    ],
    "zh_thang": 38,
-   "en_lech": 11,
-   "zh_lech": 16
+   "en_lech": -3,
+   "zh_lech": -4
   },
   {
    "khoa": "Little Seed",
    "unit": "12",
    "en_khung": [
-    10,
-    15
+    28,
+    31
    ],
    "en_thang": 28,
    "zh_khung": [
-    13,
-    22
+    40,
+    45
    ],
    "zh_thang": 40,
-   "en_lech": 13,
-   "zh_lech": 18
+   "en_lech": -3,
+   "zh_lech": -5
   },
   {
    "khoa": "Seedling",
    "unit": "1",
    "en_khung": [
-    15,
-    20
+    35,
+    39
    ],
    "en_thang": 35,
    "zh_khung": [
-    20,
-    30
+    40,
+    45
    ],
    "zh_thang": 40,
-   "en_lech": 15,
-   "zh_lech": 10
+   "en_lech": -4,
+   "zh_lech": -5
   },
   {
    "khoa": "Seedling",
    "unit": "2",
    "en_khung": [
-    15,
-    20
+    37,
+    41
    ],
    "en_thang": 37,
    "zh_khung": [
-    20,
-    30
+    42,
+    47
    ],
    "zh_thang": 42,
-   "en_lech": 17,
-   "zh_lech": 12
+   "en_lech": -4,
+   "zh_lech": -5
   },
   {
    "khoa": "Seedling",
    "unit": "3",
    "en_khung": [
-    15,
-    20
+    39,
+    43
    ],
    "en_thang": 39,
    "zh_khung": [
-    20,
-    30
+    44,
+    49
    ],
    "zh_thang": 44,
-   "en_lech": 19,
-   "zh_lech": 14
+   "en_lech": -4,
+   "zh_lech": -5
   },
   {
    "khoa": "Seedling",
    "unit": "4",
    "en_khung": [
-    15,
-    20
+    40,
+    45
    ],
    "en_thang": 40,
    "zh_khung": [
-    20,
-    30
+    45,
+    50
    ],
    "zh_thang": 45,
-   "en_lech": 20,
-   "zh_lech": 15
+   "en_lech": -5,
+   "zh_lech": -5
   },
   {
    "khoa": "Seedling",
    "unit": "5",
    "en_khung": [
-    15,
-    20
+    42,
+    47
    ],
    "en_thang": 42,
    "zh_khung": [
-    20,
-    30
+    47,
+    52
    ],
    "zh_thang": 47,
-   "en_lech": 22,
-   "zh_lech": 17
+   "en_lech": -5,
+   "zh_lech": -5
   },
   {
    "khoa": "Seedling",
    "unit": "6",
    "en_khung": [
-    15,
-    20
+    44,
+    49
    ],
    "en_thang": 44,
    "zh_khung": [
-    20,
-    30
+    49,
+    55
    ],
    "zh_thang": 49,
-   "en_lech": 24,
-   "zh_lech": 19
+   "en_lech": -5,
+   "zh_lech": -6
   },
   {
    "khoa": "Seedling",
    "unit": "7",
    "en_khung": [
-    15,
-    20
+    46,
+    51
    ],
    "en_thang": 46,
    "zh_khung": [
-    20,
-    30
+    51,
+    57
    ],
    "zh_thang": 51,
-   "en_lech": 26,
-   "zh_lech": 21
+   "en_lech": -5,
+   "zh_lech": -6
   },
   {
    "khoa": "Seedling",
    "unit": "8",
    "en_khung": [
-    15,
-    20
+    48,
+    54
    ],
    "en_thang": 48,
    "zh_khung": [
-    20,
-    30
+    53,
+    59
    ],
    "zh_thang": 53,
-   "en_lech": 28,
-   "zh_lech": 23
+   "en_lech": -6,
+   "zh_lech": -6
   },
   {
    "khoa": "Seedling",
    "unit": "9",
    "en_khung": [
-    15,
-    20
+    50,
+    56
    ],
    "en_thang": 50,
    "zh_khung": [
-    20,
-    30
+    55,
+    61
    ],
    "zh_thang": 55,
-   "en_lech": 30,
-   "zh_lech": 25
+   "en_lech": -6,
+   "zh_lech": -6
   },
   {
    "khoa": "Seedling",
    "unit": "10",
    "en_khung": [
-    15,
-    20
+    51,
+    57
    ],
    "en_thang": 51,
    "zh_khung": [
-    20,
-    30
+    56,
+    63
    ],
    "zh_thang": 56,
-   "en_lech": 31,
-   "zh_lech": 26
+   "en_lech": -6,
+   "zh_lech": -7
   },
   {
    "khoa": "Seedling",
    "unit": "11",
    "en_khung": [
-    15,
-    20
+    53,
+    59
    ],
    "en_thang": 53,
    "zh_khung": [
-    20,
-    30
+    58,
+    65
    ],
    "zh_thang": 58,
-   "en_lech": 33,
-   "zh_lech": 28
+   "en_lech": -6,
+   "zh_lech": -7
   },
   {
    "khoa": "Seedling",
    "unit": "12",
    "en_khung": [
-    15,
-    20
+    55,
+    61
    ],
    "en_thang": 55,
    "zh_khung": [
-    20,
-    30
+    60,
+    67
    ],
    "zh_thang": 60,
-   "en_lech": 35,
-   "zh_lech": 30
+   "en_lech": -6,
+   "zh_lech": -7
   },
   {
    "khoa": "Canopy",
    "unit": "1",
    "en_khung": [
-    20,
-    30
+    55,
+    61
    ],
    "en_thang": 55,
    "zh_khung": [
-    26,
-    45
+    60,
+    67
    ],
    "zh_thang": 60,
-   "en_lech": 25,
-   "zh_lech": 15
+   "en_lech": -6,
+   "zh_lech": -7
   },
   {
    "khoa": "Canopy",
    "unit": "2",
    "en_khung": [
-    20,
-    30
+    57,
+    64
    ],
    "en_thang": 57,
    "zh_khung": [
-    26,
-    45
+    61,
+    68
    ],
    "zh_thang": 61,
-   "en_lech": 27,
-   "zh_lech": 16
+   "en_lech": -7,
+   "zh_lech": -7
   },
   {
    "khoa": "Canopy",
    "unit": "3",
    "en_khung": [
-    20,
-    30
+    59,
+    66
    ],
    "en_thang": 59,
    "zh_khung": [
-    26,
-    45
+    63,
+    70
    ],
    "zh_thang": 63,
-   "en_lech": 29,
-   "zh_lech": 18
+   "en_lech": -7,
+   "zh_lech": -7
   },
   {
    "khoa": "Canopy",
    "unit": "4",
    "en_khung": [
-    20,
-    30
+    60,
+    67
    ],
    "en_thang": 60,
    "zh_khung": [
-    26,
-    45
+    64,
+    72
    ],
    "zh_thang": 64,
-   "en_lech": 30,
-   "zh_lech": 19
+   "en_lech": -7,
+   "zh_lech": -8
   },
   {
    "khoa": "Canopy",
    "unit": "5",
    "en_khung": [
-    20,
-    30
+    62,
+    69
    ],
    "en_thang": 62,
    "zh_khung": [
-    26,
-    45
+    65,
+    73
    ],
    "zh_thang": 65,
-   "en_lech": 32,
-   "zh_lech": 20
+   "en_lech": -7,
+   "zh_lech": -8
   },
   {
    "khoa": "Canopy",
    "unit": "6",
    "en_khung": [
-    20,
-    30
+    64,
+    72
    ],
    "en_thang": 64,
    "zh_khung": [
-    26,
-    45
+    67,
+    75
    ],
    "zh_thang": 67,
-   "en_lech": 34,
-   "zh_lech": 22
+   "en_lech": -8,
+   "zh_lech": -8
   },
   {
    "khoa": "Canopy",
    "unit": "7",
    "en_khung": [
-    20,
-    30
+    66,
+    74
    ],
    "en_thang": 66,
    "zh_khung": [
-    26,
-    45
+    68,
+    76
    ],
    "zh_thang": 68,
-   "en_lech": 36,
-   "zh_lech": 23
+   "en_lech": -8,
+   "zh_lech": -8
   },
   {
    "khoa": "Canopy",
    "unit": "8",
    "en_khung": [
-    20,
-    30
+    68,
+    76
    ],
    "en_thang": 68,
    "zh_khung": [
-    26,
-    45
+    70,
+    78
    ],
    "zh_thang": 70,
-   "en_lech": 38,
-   "zh_lech": 25
+   "en_lech": -8,
+   "zh_lech": -8
   },
   {
    "khoa": "Canopy",
    "unit": "9",
    "en_khung": [
-    20,
-    30
+    70,
+    78
    ],
    "en_thang": 70,
    "zh_khung": [
-    26,
-    45
+    71,
+    79
    ],
    "zh_thang": 71,
-   "en_lech": 40,
-   "zh_lech": 26
+   "en_lech": -8,
+   "zh_lech": -8
   },
   {
    "khoa": "Canopy",
    "unit": "10",
    "en_khung": [
-    20,
-    30
+    71,
+    79
    ],
    "en_thang": 71,
    "zh_khung": [
-    26,
-    45
+    72,
+    81
    ],
    "zh_thang": 72,
-   "en_lech": 41,
-   "zh_lech": 27
+   "en_lech": -8,
+   "zh_lech": -9
   },
   {
    "khoa": "Canopy",
    "unit": "11",
    "en_khung": [
-    20,
-    30
+    73,
+    82
    ],
    "en_thang": 73,
    "zh_khung": [
-    26,
-    45
+    74,
+    83
    ],
    "zh_thang": 74,
-   "en_lech": 43,
-   "zh_lech": 29
+   "en_lech": -9,
+   "zh_lech": -9
   },
   {
    "khoa": "Canopy",
    "unit": "12",
    "en_khung": [
-    20,
-    30
+    75,
+    84
    ],
    "en_thang": 75,
    "zh_khung": [
-    26,
-    45
+    75,
+    84
    ],
    "zh_thang": 75,
-   "en_lech": 45,
-   "zh_lech": 30
+   "en_lech": -9,
+   "zh_lech": -9
   },
   {
    "khoa": "Larva",
    "unit": "1",
    "en_khung": [
-    30,
-    40
+    75,
+    84
    ],
    "en_thang": 75,
    "zh_khung": [
-    40,
-    60
+    75,
+    84
    ],
    "zh_thang": 75,
-   "en_lech": 35,
-   "zh_lech": 15
+   "en_lech": -9,
+   "zh_lech": -9
   },
   {
    "khoa": "Larva",
    "unit": "2",
    "en_khung": [
-    30,
-    40
+    78,
+    87
    ],
    "en_thang": 78,
    "zh_khung": [
-    40,
-    60
+    76,
+    85
    ],
    "zh_thang": 76,
-   "en_lech": 38,
-   "zh_lech": 16
+   "en_lech": -9,
+   "zh_lech": -9
   },
   {
    "khoa": "Larva",
    "unit": "3",
    "en_khung": [
-    30,
-    40
+    81,
+    91
    ],
    "en_thang": 81,
    "zh_khung": [
-    40,
-    60
+    78,
+    87
    ],
    "zh_thang": 78,
-   "en_lech": 41,
-   "zh_lech": 18
+   "en_lech": -10,
+   "zh_lech": -9
   },
   {
    "khoa": "Larva",
    "unit": "4",
    "en_khung": [
-    30,
-    40
+    85,
+    95
    ],
    "en_thang": 85,
    "zh_khung": [
-    40,
-    60
+    79,
+    88
    ],
    "zh_thang": 79,
-   "en_lech": 45,
-   "zh_lech": 19
+   "en_lech": -10,
+   "zh_lech": -9
   },
   {
    "khoa": "Larva",
    "unit": "5",
    "en_khung": [
-    30,
-    40
+    88,
+    99
    ],
    "en_thang": 88,
    "zh_khung": [
-    40,
-    60
+    80,
+    90
    ],
    "zh_thang": 80,
-   "en_lech": 48,
-   "zh_lech": 20
+   "en_lech": -11,
+   "zh_lech": -10
   },
   {
    "khoa": "Larva",
    "unit": "6",
    "en_khung": [
-    30,
-    40
+    91,
+    102
    ],
    "en_thang": 91,
    "zh_khung": [
-    40,
-    60
+    82,
+    92
    ],
    "zh_thang": 82,
-   "en_lech": 51,
-   "zh_lech": 22
+   "en_lech": -11,
+   "zh_lech": -10
   },
   {
    "khoa": "Larva",
    "unit": "7",
    "en_khung": [
-    30,
-    40
+    94,
+    105
    ],
    "en_thang": 94,
    "zh_khung": [
-    40,
-    60
+    83,
+    93
    ],
    "zh_thang": 83,
-   "en_lech": 54,
-   "zh_lech": 23
+   "en_lech": -11,
+   "zh_lech": -10
   },
   {
    "khoa": "Larva",
    "unit": "8",
    "en_khung": [
-    30,
-    40
+    97,
+    109
    ],
    "en_thang": 97,
    "zh_khung": [
-    40,
-    60
+    85,
+    95
    ],
    "zh_thang": 85,
-   "en_lech": 57,
-   "zh_lech": 25
+   "en_lech": -12,
+   "zh_lech": -10
   },
   {
    "khoa": "Larva",
    "unit": "9",
    "en_khung": [
-    30,
-    40
+    100,
+    112
    ],
    "en_thang": 100,
    "zh_khung": [
-    40,
-    60
+    86,
+    96
    ],
    "zh_thang": 86,
-   "en_lech": 60,
-   "zh_lech": 26
+   "en_lech": -12,
+   "zh_lech": -10
   },
   {
    "khoa": "Larva",
    "unit": "10",
    "en_khung": [
-    30,
-    40
+    104,
+    117
    ],
    "en_thang": 104,
    "zh_khung": [
-    40,
-    60
+    87,
+    97
    ],
    "zh_thang": 87,
-   "en_lech": 64,
-   "zh_lech": 27
+   "en_lech": -13,
+   "zh_lech": -10
   },
   {
    "khoa": "Larva",
    "unit": "11",
    "en_khung": [
-    30,
-    40
+    107,
+    120
    ],
    "en_thang": 107,
    "zh_khung": [
-    40,
-    60
+    89,
+    100
    ],
    "zh_thang": 89,
-   "en_lech": 67,
-   "zh_lech": 29
+   "en_lech": -13,
+   "zh_lech": -11
   },
   {
    "khoa": "Larva",
    "unit": "12",
    "en_khung": [
-    30,
-    40
+    110,
+    123
    ],
    "en_thang": 110,
    "zh_khung": [
-    40,
-    60
+    90,
+    101
    ],
    "zh_thang": 90,
-   "en_lech": 70,
-   "zh_lech": 30
+   "en_lech": -13,
+   "zh_lech": -11
   },
   {
    "khoa": "Pupa",
    "unit": "1",
    "en_khung": [
-    30,
-    40
+    120,
+    135
    ],
    "en_thang": 120,
    "zh_khung": [
-    40,
-    60
+    100,
+    112
    ],
    "zh_thang": 100,
-   "en_lech": 80,
-   "zh_lech": 40
+   "en_lech": -15,
+   "zh_lech": -12
   },
   {
    "khoa": "Pupa",
    "unit": "2",
    "en_khung": [
-    30,
-    40
+    124,
+    139
    ],
    "en_thang": 124,
    "zh_khung": [
-    40,
-    60
+    101,
+    113
    ],
    "zh_thang": 101,
-   "en_lech": 84,
-   "zh_lech": 41
+   "en_lech": -15,
+   "zh_lech": -12
   },
   {
    "khoa": "Pupa",
    "unit": "3",
    "en_khung": [
-    30,
-    40
+    127,
+    142
    ],
    "en_thang": 127,
    "zh_khung": [
-    40,
-    60
+    103,
+    115
    ],
    "zh_thang": 103,
-   "en_lech": 87,
-   "zh_lech": 43
+   "en_lech": -15,
+   "zh_lech": -12
   },
   {
    "khoa": "Pupa",
    "unit": "4",
    "en_khung": [
-    30,
-    40
+    131,
+    147
    ],
    "en_thang": 131,
    "zh_khung": [
-    40,
-    60
+    104,
+    117
    ],
    "zh_thang": 104,
-   "en_lech": 91,
-   "zh_lech": 44
+   "en_lech": -16,
+   "zh_lech": -13
   },
   {
    "khoa": "Pupa",
    "unit": "5",
    "en_khung": [
-    30,
-    40
+    135,
+    151
    ],
    "en_thang": 135,
    "zh_khung": [
-    40,
-    60
+    105,
+    118
    ],
    "zh_thang": 105,
-   "en_lech": 95,
-   "zh_lech": 45
+   "en_lech": -16,
+   "zh_lech": -13
   },
   {
    "khoa": "Pupa",
    "unit": "6",
    "en_khung": [
-    30,
-    40
+    138,
+    155
    ],
    "en_thang": 138,
    "zh_khung": [
-    40,
-    60
+    107,
+    120
    ],
    "zh_thang": 107,
-   "en_lech": 98,
-   "zh_lech": 47
+   "en_lech": -17,
+   "zh_lech": -13
   },
   {
    "khoa": "Pupa",
    "unit": "7",
    "en_khung": [
-    30,
-    40
+    142,
+    159
    ],
    "en_thang": 142,
    "zh_khung": [
-    40,
-    60
+    108,
+    121
    ],
    "zh_thang": 108,
-   "en_lech": 102,
-   "zh_lech": 48
+   "en_lech": -17,
+   "zh_lech": -13
   },
   {
    "khoa": "Pupa",
    "unit": "8",
    "en_khung": [
-    30,
-    40
+    145,
+    163
    ],
    "en_thang": 145,
    "zh_khung": [
-    40,
-    60
+    110,
+    123
    ],
    "zh_thang": 110,
-   "en_lech": 105,
-   "zh_lech": 50
+   "en_lech": -18,
+   "zh_lech": -13
   },
   {
    "khoa": "Pupa",
    "unit": "9",
    "en_khung": [
-    30,
-    40
+    149,
+    167
    ],
    "en_thang": 149,
    "zh_khung": [
-    40,
-    60
+    111,
+    124
    ],
    "zh_thang": 111,
-   "en_lech": 109,
-   "zh_lech": 51
+   "en_lech": -18,
+   "zh_lech": -13
   },
   {
    "khoa": "Pupa",
    "unit": "10",
    "en_khung": [
-    30,
-    40
+    153,
+    172
    ],
    "en_thang": 153,
    "zh_khung": [
-    40,
-    60
+    112,
+    126
    ],
    "zh_thang": 112,
-   "en_lech": 113,
-   "zh_lech": 52
+   "en_lech": -19,
+   "zh_lech": -14
   },
   {
    "khoa": "Pupa",
    "unit": "11",
    "en_khung": [
-    30,
-    40
+    156,
+    175
    ],
    "en_thang": 156,
    "zh_khung": [
-    40,
-    60
+    114,
+    128
    ],
    "zh_thang": 114,
-   "en_lech": 116,
-   "zh_lech": 54
+   "en_lech": -19,
+   "zh_lech": -14
   },
   {
    "khoa": "Pupa",
    "unit": "12",
    "en_khung": [
-    30,
-    40
+    160,
+    180
    ],
    "en_thang": 160,
    "zh_khung": [
-    40,
-    60
+    115,
+    129
    ],
    "zh_thang": 115,
-   "en_lech": 120,
-   "zh_lech": 55
+   "en_lech": -20,
+   "zh_lech": -14
   },
   {
    "khoa": "Cocoon",
    "unit": "1",
    "en_khung": [
-    40,
-    50
+    160,
+    180
    ],
    "en_thang": 160,
    "zh_khung": [
-    52,
-    75
+    115,
+    129
    ],
    "zh_thang": 115,
-   "en_lech": 110,
-   "zh_lech": 40
+   "en_lech": -20,
+   "zh_lech": -14
   },
   {
    "khoa": "Cocoon",
    "unit": "2",
    "en_khung": [
-    40,
-    50
+    165,
+    185
    ],
    "en_thang": 165,
    "zh_khung": [
-    52,
-    75
+    116,
+    130
    ],
    "zh_thang": 116,
-   "en_lech": 115,
-   "zh_lech": 41
+   "en_lech": -20,
+   "zh_lech": -14
   },
   {
    "khoa": "Cocoon",
    "unit": "3",
    "en_khung": [
-    40,
-    50
+    171,
+    192
    ],
    "en_thang": 171,
    "zh_khung": [
-    52,
-    75
+    118,
+    132
    ],
    "zh_thang": 118,
-   "en_lech": 121,
-   "zh_lech": 43
+   "en_lech": -21,
+   "zh_lech": -14
   },
   {
    "khoa": "Cocoon",
    "unit": "4",
    "en_khung": [
-    40,
-    50
+    176,
+    198
    ],
    "en_thang": 176,
    "zh_khung": [
-    52,
-    75
+    119,
+    133
    ],
    "zh_thang": 119,
-   "en_lech": 126,
-   "zh_lech": 44
+   "en_lech": -22,
+   "zh_lech": -14
   },
   {
    "khoa": "Cocoon",
    "unit": "5",
    "en_khung": [
-    40,
-    50
+    182,
+    204
    ],
    "en_thang": 182,
    "zh_khung": [
-    52,
-    75
+    120,
+    135
    ],
    "zh_thang": 120,
-   "en_lech": 132,
-   "zh_lech": 45
+   "en_lech": -22,
+   "zh_lech": -15
   },
   {
    "khoa": "Cocoon",
    "unit": "6",
    "en_khung": [
-    40,
-    50
+    187,
+    210
    ],
    "en_thang": 187,
    "zh_khung": [
-    52,
-    75
+    122,
+    137
    ],
    "zh_thang": 122,
-   "en_lech": 137,
-   "zh_lech": 47
+   "en_lech": -23,
+   "zh_lech": -15
   },
   {
    "khoa": "Cocoon",
    "unit": "7",
    "en_khung": [
-    40,
-    50
+    193,
+    217
    ],
    "en_thang": 193,
    "zh_khung": [
-    52,
-    75
+    123,
+    138
    ],
    "zh_thang": 123,
-   "en_lech": 143,
-   "zh_lech": 48
+   "en_lech": -24,
+   "zh_lech": -15
   },
   {
    "khoa": "Cocoon",
    "unit": "8",
    "en_khung": [
-    40,
-    50
+    198,
+    222
    ],
    "en_thang": 198,
    "zh_khung": [
-    52,
-    75
+    125,
+    140
    ],
    "zh_thang": 125,
-   "en_lech": 148,
-   "zh_lech": 50
+   "en_lech": -24,
+   "zh_lech": -15
   },
   {
    "khoa": "Cocoon",
    "unit": "9",
    "en_khung": [
-    40,
-    50
+    204,
+    229
    ],
    "en_thang": 204,
    "zh_khung": [
-    52,
-    75
+    126,
+    141
    ],
    "zh_thang": 126,
-   "en_lech": 154,
-   "zh_lech": 51
+   "en_lech": -25,
+   "zh_lech": -15
   },
   {
    "khoa": "Cocoon",
    "unit": "10",
    "en_khung": [
-    40,
-    50
+    209,
+    235
    ],
    "en_thang": 209,
    "zh_khung": [
-    52,
-    75
+    127,
+    142
    ],
    "zh_thang": 127,
-   "en_lech": 159,
-   "zh_lech": 52
+   "en_lech": -26,
+   "zh_lech": -15
   },
   {
    "khoa": "Cocoon",
    "unit": "11",
    "en_khung": [
-    40,
-    50
+    215,
+    241
    ],
    "en_thang": 215,
    "zh_khung": [
-    52,
-    75
+    129,
+    145
    ],
    "zh_thang": 129,
-   "en_lech": 165,
-   "zh_lech": 54
+   "en_lech": -26,
+   "zh_lech": -16
   },
   {
    "khoa": "Cocoon",
    "unit": "12",
    "en_khung": [
-    40,
-    50
+    220,
+    247
    ],
    "en_thang": 220,
    "zh_khung": [
-    52,
-    75
+    130,
+    146
    ],
    "zh_thang": 130,
-   "en_lech": 170,
-   "zh_lech": 55
+   "en_lech": -27,
+   "zh_lech": -16
   }
  ],
  "cau_truc": [
@@ -2723,19 +2723,9 @@
  ],
  "chao": [
   {
-   "khoa": "PreB",
-   "unit": "1",
-   "khung": "Hello, ___!"
-  },
-  {
-   "khoa": "Little Seed",
-   "unit": "1",
-   "khung": "Hello, ___! – Goodbye, ___!"
-  },
-  {
    "khoa": "Seedling",
    "unit": "1",
-   "khung": "Good morning, ___!"
+   "khung": "Good morning, Mrs Lan! My name is ___. (mỗi trang một bạn tự giới thiệu; trang cuối tên con)"
   }
  ],
  "khoa_on": [
@@ -2747,7 +2737,7 @@
     "N1",
     "N2"
    ],
-   "co_do_dai_de": false
+   "co_do_dai_de": true
   },
   {
    "khoa": "Larva Plus",
@@ -2757,7 +2747,7 @@
     "N1",
     "N2"
    ],
-   "co_do_dai_de": false
+   "co_do_dai_de": true
   },
   {
    "khoa": "Larva Plus",
@@ -2767,7 +2757,7 @@
     "N1",
     "N2"
    ],
-   "co_do_dai_de": false
+   "co_do_dai_de": true
   },
   {
    "khoa": "Larva Plus",
@@ -2777,7 +2767,7 @@
     "N1",
     "N2"
    ],
-   "co_do_dai_de": false
+   "co_do_dai_de": true
   },
   {
    "khoa": "Larva Plus",
@@ -2787,7 +2777,7 @@
     "N1",
     "N2"
    ],
-   "co_do_dai_de": false
+   "co_do_dai_de": true
   },
   {
    "khoa": "Larva Plus",
@@ -2797,7 +2787,7 @@
     "N1",
     "N2"
    ],
-   "co_do_dai_de": false
+   "co_do_dai_de": true
   },
   {
    "khoa": "Butterfly",
@@ -2808,7 +2798,7 @@
     "N1",
     "N2"
    ],
-   "co_do_dai_de": false
+   "co_do_dai_de": true
   },
   {
    "khoa": "Butterfly",
@@ -2819,7 +2809,7 @@
     "N1",
     "N2"
    ],
-   "co_do_dai_de": false
+   "co_do_dai_de": true
   },
   {
    "khoa": "Butterfly",
@@ -2830,7 +2820,7 @@
     "N1",
     "N2"
    ],
-   "co_do_dai_de": false
+   "co_do_dai_de": true
   },
   {
    "khoa": "Butterfly",
@@ -2840,7 +2830,7 @@
     "N1",
     "N2"
    ],
-   "co_do_dai_de": false
+   "co_do_dai_de": true
   },
   {
    "khoa": "Butterfly",
@@ -2850,7 +2840,7 @@
     "N1",
     "N2"
    ],
-   "co_do_dai_de": false
+   "co_do_dai_de": true
   },
   {
    "khoa": "Butterfly",
@@ -2860,93 +2850,8 @@
     "N1",
     "N2"
    ],
-   "co_do_dai_de": false
+   "co_do_dai_de": true
   }
  ],
- "thieu_chi_tieu": [
-  "PreB U1",
-  "PreB U2",
-  "PreB U3",
-  "PreB U4",
-  "PreB U5",
-  "PreB U6",
-  "PreB U7",
-  "PreB U8",
-  "PreB U9",
-  "PreB U10",
-  "PreB U11",
-  "PreB U12",
-  "Little Seed U1",
-  "Little Seed U2",
-  "Little Seed U3",
-  "Little Seed U4",
-  "Little Seed U5",
-  "Little Seed U6",
-  "Little Seed U7",
-  "Little Seed U8",
-  "Little Seed U9",
-  "Little Seed U10",
-  "Little Seed U11",
-  "Little Seed U12",
-  "Seedling U1",
-  "Seedling U2",
-  "Seedling U3",
-  "Seedling U4",
-  "Seedling U5",
-  "Seedling U6",
-  "Seedling U7",
-  "Seedling U8",
-  "Seedling U9",
-  "Seedling U10",
-  "Seedling U11",
-  "Seedling U12",
-  "Canopy U1",
-  "Canopy U2",
-  "Canopy U3",
-  "Canopy U4",
-  "Canopy U5",
-  "Canopy U6",
-  "Canopy U7",
-  "Canopy U8",
-  "Canopy U9",
-  "Canopy U10",
-  "Canopy U11",
-  "Canopy U12",
-  "Larva U1",
-  "Larva U2",
-  "Larva U3",
-  "Larva U4",
-  "Larva U5",
-  "Larva U6",
-  "Larva U7",
-  "Larva U8",
-  "Larva U9",
-  "Larva U10",
-  "Larva U11",
-  "Larva U12",
-  "Pupa U1",
-  "Pupa U2",
-  "Pupa U3",
-  "Pupa U4",
-  "Pupa U5",
-  "Pupa U6",
-  "Pupa U7",
-  "Pupa U8",
-  "Pupa U9",
-  "Pupa U10",
-  "Pupa U11",
-  "Pupa U12",
-  "Cocoon U1",
-  "Cocoon U2",
-  "Cocoon U3",
-  "Cocoon U4",
-  "Cocoon U5",
-  "Cocoon U6",
-  "Cocoon U7",
-  "Cocoon U8",
-  "Cocoon U9",
-  "Cocoon U10",
-  "Cocoon U11",
-  "Cocoon U12"
- ]
+ "thieu_chi_tieu": []
 }

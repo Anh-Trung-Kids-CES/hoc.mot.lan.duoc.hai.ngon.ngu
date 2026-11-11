@@ -274,13 +274,27 @@ VE_CHAO = ('Vè chào đầu buổi: Hello, hello, everyone! / Hello, teacher! C
 VE_BYE = 'Vè chào cuối buổi: Goodbye, goodbye, everyone! / One, two, three… school is done! / See you tomorrow, ___ and ___! / Goodbye, teacher! Let\'s go!'
 for b in buoi:
     if b['buoi'] == 1:
-        b['label'] = 'Buổi dạy 1. Khai giảng · ' + b['label'].split('. ', 1)[1]
-        b['chao'] = ('Khai giảng: chỉ hát câu 1–2 vè chào đầu (Hello, hello, everyone! / Hello, teacher! Class is fun!) và câu 1–2 vè chào cuối '
-                     '(Goodbye, goodbye, everyone! / One, two, three… school is done!), con nhại theo cô, có động tác cố định (vẫy, vỗ tay, đeo cặp).')
-    elif b['buoi'] == 2:
-        b['chao'] = 'Sau 3 ngày web (4–6) đã nghe tên, tuổi, see you tomorrow: hát trọn hai vè chào; vòng hỏi tên – tuổi đi quanh lớp. ' + VE_CHAO + ' ‖ ' + VE_BYE
+        b['chao'] = ('Sau buổi 0 (khai giảng) và 3 ngày web (1–3, đã nghe tên, chào, tạm biệt): hát trọn hai vè chào; vòng hỏi tên – tuổi đi quanh lớp, con mới nhại – đáp. '
+                     + VE_CHAO + ' ‖ ' + VE_BYE)
     else:
         b['chao'] = 'Đầu buổi: ' + VE_CHAO + ' Cuối buổi: ' + VE_BYE + (' Vai con nâng dần: tự nói tên → giới thiệu bạn → hỏi theo cặp.' if b['buoi'] <= 7 else '')
+# Buổi 0 – khai giảng (chị quyết 11/11: thêm buổi 0, không tính vào 48 buổi)
+B0 = {'buoi': 0, 'tuan': 0, 'thu': 'trước ngày web 1', 'unit': 1, 'vai': 'Khai giảng', 'ngay_web': [],
+      'label': 'Buổi 0. Khai giảng · làm quen cô, bạn, lớp; hát phần đơn giản của hai vè chào; hướng dẫn ba mẹ mở web',
+      'chao': ('Khai giảng: chỉ hát câu 1–2 vè chào đầu (Hello, hello, everyone! / Hello, teacher! Class is fun!) và câu 1–2 vè chào cuối '
+               '(Goodbye, goodbye, everyone! / One, two, three… school is done!), con nhại theo cô, động tác cố định: vẫy tay, vỗ tay, đeo cặp. '
+               "Cô dùng thẻ tên từng con (chuẩn bị cho “What's your name?” ở web ngày 1–3)."),
+      'lop': {'en': {'flash': 'hello, goodbye, teacher, everyone (chỉ nghe, chưa dạy từ)', 'slide': 'Trò làm quen: nhận thẻ tên, tìm bạn cùng màu; xem tranh lớp học của Bông', 'truyen': 'Cô kể bằng tranh: Bông đến lớp mới (giới thiệu nhân vật)', 'baihat': 'Hai vè chào – câu 1–2'},
+              'zh': {'flash': '你好, 再见, 老师, 大家 (chỉ nghe)', 'slide': 'Cô nói lại các câu chào bằng tiếng Trung, con vẫy tay theo', 'truyen': '–', 'baihat': '大家好 / 大家再见 (câu 1–2)'}},
+      'nguon': 'nguyên tắc 66–67, chị quyết 11/11',
+      'ke_hoach_90': '\n'.join(['Vai buổi: Khai giảng – làm quen, chưa dạy từ; ba mẹ dự 15′ cuối.',
+                                '[1] 0–15′ Đón con, thẻ tên, làm quen cô và bạn (trò tìm bạn cùng màu thẻ).',
+                                '[2] 15–30′ Vè chào đầu câu 1–2: cô hát mẫu 3 lần với động tác vẫy, vỗ tay; con nhại theo; đổi to – nhỏ.',
+                                '[3] 30–45′ Vận động: Leo says / Xiaomei says với các động tác của vè.',
+                                '[4] 45–60′ Cô giới thiệu nhân vật bằng tranh (Bông, Leo, Anna, Xiaomei, cô Hươu); con chạm tranh khi cô gọi tên.',
+                                '[5] 60–75′ Vè chào cuối câu 1–2, động tác đeo cặp; chụp ảnh lớp.',
+                                '[6] 75–90′ Ba mẹ: hướng dẫn mở web ngày 1, mã con, nhóm Zalo, lịch 26 tuần.'])}
+buoi.insert(0, B0)
 
 # ---------------- Tuần 26: ôn cả khóa ----------------
 for j, (src_day, lab) in enumerate([(109, 'Ôn U1–U6: chào hỏi, tên tuổi, gia đình, cơ thể, cảm xúc, trường lớp – Album trang 1–2'),
@@ -297,7 +311,7 @@ buoi.append({'buoi': 48, 'tuan': 26, 'thu': 'thứ Tư', 'unit': 'Ôn', 'vai': '
              'ngay_web': [98, 99], 'lop': lop, 'nguon': 'khung 9 khóa buổi 55, 56'})
 
 assert len(days) == 99 and [d['ngay'] for d in days] == list(range(1, 100)), len(days)
-assert len(buoi) == 48 and [b['buoi'] for b in buoi] == list(range(1, 49)), len(buoi)
+assert len(buoi) == 49 and [b['buoi'] for b in buoi] == list(range(0, 49)), len(buoi)
 
 # ---------------- Kế hoạch 90 phút (7 khối, không khối nào quá 20′) ----------------
 SONG = {}
@@ -332,9 +346,10 @@ def plan90(b):
         '[7] 80–90′ Tổng kết, phụ huynh · Mỗi con nói 1 câu của buổi bằng hai tiếng; trao sao; vè chào cuối buổi; cô dặn phụ huynh ngày web tiếp theo và phiếu tô – dán ở nhà (1 trang, khoảng 10 phút).',
     ])
 for b in buoi:
+    if b['buoi'] == 0: continue
     b['ke_hoach_90'] = plan90(b)
 
-out = {'khoa': 'Little Seed offline 48 buổi', 'ban': 'v2 (10/11/2026 khuya – nguyên tắc 61–68)',
+out = {'khoa': 'Little Seed offline 48 buổi', 'ban': 'v2.1 (11/11/2026 – nguyên tắc 61–68, thêm buổi 0 khai giảng)',
        'nhip': 'Tuần 1–3: 3 ngày web rồi buổi Chủ nhật. Từ tuần 4: 2 ngày web → buổi thứ Tư → 2 ngày web → buổi Chủ nhật. Tuần 26: 2 ngày web và buổi 48 (thứ Tư).',
        'preb_day_lai': PREB, 'days': days, 'buoi': buoi}
 dst = os.path.join(GRID, 'mang', 'little-seed48.json')

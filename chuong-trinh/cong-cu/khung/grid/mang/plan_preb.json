@@ -2,24 +2,131 @@
  {
   "unit": "1",
   "chu_de": "Greeting – Chào cô, chào bạn",
-  "khung_cau": {"en": "Hello, ___!", "zh": "", "o": "người được chào (teacher, friend, tên bạn)"},
-  "cau_cua_mieng": [{"en": "Let's learn!", "zh": ""}, {"en": "Listen!", "zh": ""}, {"en": "Good job!", "zh": ""}],
+  "khung_cau": {
+   "en": "Hello, ___!",
+   "zh": "",
+   "o": "người được chào (teacher, friend, tên bạn)"
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "Let's learn!",
+    "zh": ""
+   },
+   {
+    "en": "Listen!",
+    "zh": ""
+   },
+   {
+    "en": "Good job!",
+    "zh": ""
+   }
+  ],
   "van_ban": [
-   {"id": "T1", "loai": "Truyện khung", "ten_en": "Hello, Friend!", "ten_zh": "", "khung_en": "Hello, ___!", "khung_zh": "",
+   {
+    "id": "T1",
+    "loai": "Truyện khung",
+    "ten_en": "Hello, Friend!",
+    "ten_zh": "",
+    "khung_en": "Hello, ___!",
+    "khung_zh": "",
     "phan": [
-     {"phan": 1, "y": "Bông đến lớp, chào cô Lan và các bạn: \"Hello, teacher! Hello, friend!\" – cô đáp \"Hello, Bông!\"", "tu_moi_vao": ["hello", "teacher", "friend"]},
-     {"phan": 2, "y": "Leo hỏi Bông \"Are you a boy?\" – Bông lắc đầu \"No! I'm a girl.\" – Leo: \"I'm a boy.\"", "tu_moi_vao": ["boy", "girl", "no"]},
-     {"phan": 3, "y": "Leo hỏi \"Are you my friend?\" – Bông gật \"Yes!\"; chuông ding dong, cả lớp chào \"Goodbye, teacher!\"; câu cuối: \"Goodbye, ___ (tên con)!\"", "tu_moi_vao": ["yes", "goodbye"]}
+     {
+      "phan": 1,
+      "y": "Bông đến lớp, chào cô Lan và các bạn: \"Hello, teacher! Hello, friend!\" – cô đáp \"Hello, Bông!\"",
+      "tu_moi_vao": [
+       "hello",
+       "teacher",
+       "friend"
+      ]
+     },
+     {
+      "phan": 2,
+      "y": "Leo hỏi Bông \"Are you a boy?\" – Bông lắc đầu \"No! I'm a girl.\" – Leo: \"I'm a boy.\"",
+      "tu_moi_vao": [
+       "boy",
+       "girl",
+       "no"
+      ]
+     },
+     {
+      "phan": 3,
+      "y": "Leo hỏi \"Are you my friend?\" – Bông gật \"Yes!\"; chuông ding dong, cả lớp chào \"Goodbye, teacher!\"; câu cuối: \"Goodbye, ___ (tên con)!\"",
+      "tu_moi_vao": [
+       "yes",
+       "goodbye"
+      ]
+     }
     ],
-    "tu_en": ["hello", "goodbye", "teacher", "friend", "boy", "girl", "yes", "no"], "tu_zh": []},
-   {"id": "T2", "loai": "Bài hát vận động", "kieu": "hỏi–đáp", "giai_dieu": "dân gian hết bản quyền: Frère Jacques",
-    "khung_en": "Are you a ___? – Yes, yes, yes! / No, no, no!", "khung_zh": "", "o_thay": ["boy", "girl", "friend", "teacher"],
+    "tu_en": [
+     "hello",
+     "goodbye",
+     "teacher",
+     "friend",
+     "boy",
+     "girl",
+     "yes",
+     "no"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T2",
+    "loai": "Bài hát vận động",
+    "kieu": "hỏi–đáp",
+    "giai_dieu": "dân gian hết bản quyền: Frère Jacques",
+    "khung_en": "Are you a ___? – Yes, yes, yes! / No, no, no!",
+    "khung_zh": "",
+    "o_thay": [
+     "boy",
+     "girl",
+     "friend",
+     "teacher"
+    ],
     "dong_tac": "boy: khoe cơ tay; girl: vuốt tóc; friend: khoác vai bạn; teacher: giơ ngón tay như cô giảng; 'yes' gật đầu, 'no' lắc đầu. Lần cuối: \"Are you ___ (tên con)? – Yes!\"",
-    "tu_en": ["boy", "girl", "friend", "teacher", "yes", "no"], "tu_zh": [], "ghi_chu_thanh": ""},
-   {"id": "T3", "loai": "Big book mẫu câu", "kieu": "liệt kê", "khung_en": "Hello, ___!", "khung_zh": "",
-    "tu_en": ["hello", "goodbye", "teacher", "friend", "boy", "girl"], "tu_zh": []},
-   {"id": "T4", "loai": "Vè", "kieu": "cặp đối lập", "khung_en": "___, ___ – clap, clap!", "khung_zh": "",
-    "tu_en": ["hello", "goodbye", "yes", "no", "boy", "girl"], "tu_zh": []}
+    "tu_en": [
+     "boy",
+     "girl",
+     "friend",
+     "teacher",
+     "yes",
+     "no"
+    ],
+    "tu_zh": [],
+    "ghi_chu_thanh": ""
+   },
+   {
+    "id": "T3",
+    "loai": "Big book mẫu câu",
+    "kieu": "giới thiệu bản thân",
+    "khung_en": "I'm a ___! (boy/girl) – trang cuối: I'm ___ (tên con)!",
+    "khung_zh": "",
+    "tu_en": [
+     "hello",
+     "goodbye",
+     "teacher",
+     "friend",
+     "boy",
+     "girl"
+    ],
+    "tu_zh": [],
+    "khung_cu_en": "Hello, ___!"
+   },
+   {
+    "id": "T4",
+    "loai": "Vè",
+    "kieu": "cặp đối lập",
+    "khung_en": "___, ___ – clap, clap!",
+    "khung_zh": "",
+    "tu_en": [
+     "hello",
+     "goodbye",
+     "yes",
+     "no",
+     "boy",
+     "girl"
+    ],
+    "tu_zh": []
+   }
   ],
   "dem_vong_ngoai": {},
   "de_nghi_doi_nhan": [],
@@ -28,24 +135,130 @@
  {
   "unit": "2",
   "chu_de": "Name and age – Tên con là gì? Con mấy tuổi?",
-  "khung_cau": {"en": "How old are you? – I'm ___.", "zh": "", "o": "số tuổi"},
-  "cau_cua_mieng": [{"en": "Happy birthday!", "zh": ""}, {"en": "Look!", "zh": ""}, {"en": "Clap, clap!", "zh": ""}],
+  "khung_cau": {
+   "en": "How old are you? – I'm ___.",
+   "zh": "",
+   "o": "số tuổi"
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "Happy birthday!",
+    "zh": ""
+   },
+   {
+    "en": "Look!",
+    "zh": ""
+   },
+   {
+    "en": "Clap, clap!",
+    "zh": ""
+   }
+  ],
   "van_ban": [
-   {"id": "T1", "loai": "Truyện khung", "ten_en": "Leo's Birthday Cake", "ten_zh": "", "khung_en": "I'm ___.", "khung_zh": "",
+   {
+    "id": "T1",
+    "loai": "Truyện khung",
+    "ten_en": "Leo's Birthday Cake",
+    "ten_zh": "",
+    "khung_en": "I'm ___.",
+    "khung_zh": "",
     "phan": [
-     {"phan": 1, "y": "Anna gặp Leo: \"What's your name?\" – \"My name is Leo.\" Hai bạn vỗ tay \"One, two – clap, clap!\"", "tu_moi_vao": ["name", "one", "two"]},
-     {"phan": 2, "y": "Cô Lan hỏi tuổi: Vũ \"I'm three.\", Bông \"I'm four.\", Leo đếm ngón tay \"…four, five. I'm five!\"", "tu_moi_vao": ["three", "four", "five"]},
-     {"phan": 3, "y": "Sinh nhật Leo: \"Look! A birthday cake!\" – cả lớp hát chúc; câu cuối: \"Happy birthday, ___ (tên con)!\"", "tu_moi_vao": ["birthday", "cake"]}
+     {
+      "phan": 1,
+      "y": "Anna gặp Leo: \"What's your name?\" – \"My name is Leo.\" Hai bạn vỗ tay \"One, two – clap, clap!\"",
+      "tu_moi_vao": [
+       "name",
+       "one",
+       "two"
+      ]
+     },
+     {
+      "phan": 2,
+      "y": "Cô Lan hỏi tuổi: Vũ \"I'm three.\", Bông \"I'm four.\", Leo đếm ngón tay \"…four, five. I'm five!\"",
+      "tu_moi_vao": [
+       "three",
+       "four",
+       "five"
+      ]
+     },
+     {
+      "phan": 3,
+      "y": "Sinh nhật Leo: \"Look! A birthday cake!\" – cả lớp hát chúc; câu cuối: \"Happy birthday, ___ (tên con)!\"",
+      "tu_moi_vao": [
+       "birthday",
+       "cake"
+      ]
+     }
     ],
-    "tu_en": ["name", "one", "two", "three", "four", "five", "birthday", "cake"], "tu_zh": []},
-   {"id": "T2", "loai": "Bài hát vận động", "kieu": "đếm", "giai_dieu": "dân gian hết bản quyền: Twinkle, Twinkle, Little Star",
-    "khung_en": "It's my birthday – I'm ___!", "khung_zh": "", "o_thay": ["three", "four", "five"],
+    "tu_en": [
+     "name",
+     "one",
+     "two",
+     "three",
+     "four",
+     "five",
+     "birthday",
+     "cake"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T2",
+    "loai": "Bài hát vận động",
+    "kieu": "đếm",
+    "giai_dieu": "dân gian hết bản quyền: Twinkle, Twinkle, Little Star",
+    "khung_en": "It's my birthday – I'm ___!",
+    "khung_zh": "",
+    "o_thay": [
+     "three",
+     "four",
+     "five"
+    ],
     "dong_tac": "Mỗi lần đổi số: đếm \"one, two…\" rồi nhảy tại chỗ đúng số lần và giơ đúng số ngón tay (3 → nhảy 3 lần, 4 → vỗ 4 lần, 5 → dậm chân 5 lần). Lần cuối con hát tuổi của mình: \"I'm ___ (tên con), I'm ___!\"",
-    "tu_en": ["one", "two", "three", "four", "five", "birthday"], "tu_zh": [], "ghi_chu_thanh": ""},
-   {"id": "T3", "loai": "Big book mẫu câu", "kieu": "hỏi–đáp", "khung_en": "How old are you? – I'm ___.", "khung_zh": "",
-    "tu_en": ["name", "one", "two", "three", "four", "five", "birthday", "cake"], "tu_zh": []},
-   {"id": "T4", "loai": "Vè", "kieu": "liệt kê", "khung_en": "A birthday cake for ___!", "khung_zh": "",
-    "tu_en": ["name", "one", "two", "birthday", "cake"], "tu_zh": []}
+    "tu_en": [
+     "one",
+     "two",
+     "three",
+     "four",
+     "five",
+     "birthday"
+    ],
+    "tu_zh": [],
+    "ghi_chu_thanh": ""
+   },
+   {
+    "id": "T3",
+    "loai": "Big book mẫu câu",
+    "kieu": "hỏi–đáp",
+    "khung_en": "How old are you? – I'm ___.",
+    "khung_zh": "",
+    "tu_en": [
+     "name",
+     "one",
+     "two",
+     "three",
+     "four",
+     "five",
+     "birthday",
+     "cake"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T4",
+    "loai": "Vè",
+    "kieu": "liệt kê",
+    "khung_en": "A birthday cake for ___!",
+    "khung_zh": "",
+    "tu_en": [
+     "name",
+     "one",
+     "two",
+     "birthday",
+     "cake"
+    ],
+    "tu_zh": []
+   }
   ],
   "dem_vong_ngoai": {},
   "de_nghi_doi_nhan": [],
@@ -54,24 +267,134 @@
  {
   "unit": "3",
   "chu_de": "Family – Mẹ, bố, em bé và anh chị em",
-  "khung_cau": {"en": "This is my ___.", "zh": "", "o": "người thân"},
-  "cau_cua_mieng": [{"en": "Look!", "zh": ""}, {"en": "I love you!", "zh": ""}, {"en": "Shh!", "zh": ""}],
+  "khung_cau": {
+   "en": "This is my ___.",
+   "zh": "",
+   "o": "người thân"
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "Look!",
+    "zh": ""
+   },
+   {
+    "en": "I love you!",
+    "zh": ""
+   },
+   {
+    "en": "Shh!",
+    "zh": ""
+   }
+  ],
   "van_ban": [
-   {"id": "T1", "loai": "Truyện khung", "ten_en": "Bông's Family", "ten_zh": "", "khung_en": "This is my ___.", "khung_zh": "",
+   {
+    "id": "T1",
+    "loai": "Truyện khung",
+    "ten_en": "Bông's Family",
+    "ten_zh": "",
+    "khung_en": "This is my ___.",
+    "khung_zh": "",
     "phan": [
-     {"phan": 1, "y": "Bông khoe ảnh: \"This is my mommy. This is my daddy.\" Em bé khóc oe oe: \"Hello, baby! Shh!\"", "tu_moi_vao": ["mommy", "daddy", "baby"]},
-     {"phan": 2, "y": "Bông chỉ anh trai: \"This is my brother.\" Leo chỉ Xiaomei: \"This is my sister.\"", "tu_moi_vao": ["brother", "sister"]},
-     {"phan": 3, "y": "Ông bà đến chơi: \"This is my grandma. This is my grandpa. This is my family!\"; câu cuối: \"I love my family, ___ (tên con)!\"", "tu_moi_vao": ["grandma", "grandpa", "family"]}
+     {
+      "phan": 1,
+      "y": "Bông khoe ảnh: \"This is my mommy. This is my daddy.\" Em bé khóc oe oe: \"Hello, baby! Shh!\"",
+      "tu_moi_vao": [
+       "mommy",
+       "daddy",
+       "baby"
+      ]
+     },
+     {
+      "phan": 2,
+      "y": "Bông chỉ anh trai: \"This is my brother.\" Leo chỉ Xiaomei: \"This is my sister.\"",
+      "tu_moi_vao": [
+       "brother",
+       "sister"
+      ]
+     },
+     {
+      "phan": 3,
+      "y": "Ông bà đến chơi: \"This is my grandma. This is my grandpa. This is my family!\"; câu cuối: \"I love my family, ___ (tên con)!\"",
+      "tu_moi_vao": [
+       "grandma",
+       "grandpa",
+       "family"
+      ]
+     }
     ],
-    "tu_en": ["mommy", "daddy", "baby", "brother", "sister", "grandma", "grandpa", "family"], "tu_zh": []},
-   {"id": "T2", "loai": "Bài hát vận động", "kieu": "liệt kê", "giai_dieu": "dân gian hết bản quyền: Here We Go Round the Mulberry Bush",
-    "khung_en": "This is my ___, my ___, my ___.", "khung_zh": "", "o_thay": ["mommy", "daddy", "brother", "sister", "grandma", "grandpa"],
+    "tu_en": [
+     "mommy",
+     "daddy",
+     "baby",
+     "brother",
+     "sister",
+     "grandma",
+     "grandpa",
+     "family"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T2",
+    "loai": "Bài hát vận động",
+    "kieu": "liệt kê",
+    "giai_dieu": "dân gian hết bản quyền: Here We Go Round the Mulberry Bush",
+    "khung_en": "This is my ___, my ___, my ___.",
+    "khung_zh": "",
+    "o_thay": [
+     "mommy",
+     "daddy",
+     "brother",
+     "sister",
+     "grandma",
+     "grandpa"
+    ],
     "dong_tac": "mommy: hôn gió; daddy: khoe cơ tay; brother: đá bóng; sister: nhảy dây; grandma: đấm lưng; grandpa: vuốt râu. Câu kết: \"This is ___'s (tên con) family!\"",
-    "tu_en": ["mommy", "daddy", "brother", "sister", "grandma", "grandpa"], "tu_zh": [], "ghi_chu_thanh": ""},
-   {"id": "T3", "loai": "Big book mẫu câu", "kieu": "hỏi–đáp", "khung_en": "Is this your ___? – Yes! / No!", "khung_zh": "",
-    "tu_en": ["mommy", "daddy", "baby", "brother", "sister", "grandma", "grandpa", "family"], "tu_zh": []},
-   {"id": "T4", "loai": "Vè", "kieu": "đếm", "khung_en": "___ – one! ___ – two!", "khung_zh": "",
-    "tu_en": ["mommy", "daddy", "baby", "brother", "sister", "family"], "tu_zh": []}
+    "tu_en": [
+     "mommy",
+     "daddy",
+     "brother",
+     "sister",
+     "grandma",
+     "grandpa"
+    ],
+    "tu_zh": [],
+    "ghi_chu_thanh": ""
+   },
+   {
+    "id": "T3",
+    "loai": "Big book mẫu câu",
+    "kieu": "hỏi–đáp",
+    "khung_en": "Is this your ___? – Yes! / No!",
+    "khung_zh": "",
+    "tu_en": [
+     "mommy",
+     "daddy",
+     "baby",
+     "brother",
+     "sister",
+     "grandma",
+     "grandpa",
+     "family"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T4",
+    "loai": "Vè",
+    "kieu": "đếm",
+    "khung_en": "___ – one! ___ – two!",
+    "khung_zh": "",
+    "tu_en": [
+     "mommy",
+     "daddy",
+     "baby",
+     "brother",
+     "sister",
+     "family"
+    ],
+    "tu_zh": []
+   }
   ],
   "dem_vong_ngoai": {},
   "de_nghi_doi_nhan": [],
@@ -80,24 +403,136 @@
  {
   "unit": "4",
   "chu_de": "Body – Đầu, mắt, tai, mũi, miệng",
-  "khung_cau": {"en": "Touch your ___!", "zh": "", "o": "bộ phận cơ thể"},
-  "cau_cua_mieng": [{"en": "Ha ha!", "zh": ""}, {"en": "Look at me!", "zh": ""}, {"en": "Well done!", "zh": ""}],
+  "khung_cau": {
+   "en": "Touch your ___!",
+   "zh": "",
+   "o": "bộ phận cơ thể"
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "Ha ha!",
+    "zh": ""
+   },
+   {
+    "en": "Look at me!",
+    "zh": ""
+   },
+   {
+    "en": "Well done!",
+    "zh": ""
+   }
+  ],
   "van_ban": [
-   {"id": "T1", "loai": "Truyện khung", "ten_en": "Funny Face", "ten_zh": "", "khung_en": "This is my ___.", "khung_zh": "",
+   {
+    "id": "T1",
+    "loai": "Truyện khung",
+    "ten_en": "Funny Face",
+    "ten_zh": "",
+    "khung_en": "This is my ___.",
+    "khung_zh": "",
     "phan": [
-     {"phan": 1, "y": "Mẹ chỉ cho em bé: \"Look, baby! This is my head. These are my eyes. These are my ears.\"", "tu_moi_vao": ["head", "eyes", "ears"]},
-     {"phan": 2, "y": "Leo làm mặt hề: \"This is my nose. This is my mouth.\" Bông cười \"Ha ha!\"", "tu_moi_vao": ["nose", "mouth"]},
-     {"phan": 3, "y": "Cô Lan chơi trò: \"Touch your nose! Clap your hands! Look at my feet!\"; câu cuối: \"Touch your nose, ___ (tên con)!\"", "tu_moi_vao": ["touch", "hands", "feet"]}
+     {
+      "phan": 1,
+      "y": "Mẹ chỉ cho em bé: \"Look, baby! This is my head. These are my eyes. These are my ears.\"",
+      "tu_moi_vao": [
+       "head",
+       "eyes",
+       "ears"
+      ]
+     },
+     {
+      "phan": 2,
+      "y": "Leo làm mặt hề: \"This is my nose. This is my mouth.\" Bông cười \"Ha ha!\"",
+      "tu_moi_vao": [
+       "nose",
+       "mouth"
+      ]
+     },
+     {
+      "phan": 3,
+      "y": "Cô Lan chơi trò: \"Touch your nose! Clap your hands! Look at my feet!\"; câu cuối: \"Touch your nose, ___ (tên con)!\"",
+      "tu_moi_vao": [
+       "touch",
+       "hands",
+       "feet"
+      ]
+     }
     ],
-    "tu_en": ["head", "eyes", "ears", "nose", "mouth", "hands", "feet", "touch"], "tu_zh": []},
-   {"id": "T2", "loai": "Bài hát vận động", "kieu": "liệt kê", "giai_dieu": "dân gian hết bản quyền: There Is a Tavern in the Town (giai điệu Head, Shoulders, Knees and Toes)",
-    "khung_en": "Touch your ___, touch, touch, touch!", "khung_zh": "", "o_thay": ["head", "eyes", "ears", "nose", "mouth", "feet"],
+    "tu_en": [
+     "head",
+     "eyes",
+     "ears",
+     "nose",
+     "mouth",
+     "hands",
+     "feet",
+     "touch"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T2",
+    "loai": "Bài hát vận động",
+    "kieu": "liệt kê",
+    "giai_dieu": "dân gian hết bản quyền: There Is a Tavern in the Town (giai điệu Head, Shoulders, Knees and Toes)",
+    "khung_en": "Touch your ___, touch, touch, touch!",
+    "khung_zh": "",
+    "o_thay": [
+     "head",
+     "eyes",
+     "ears",
+     "nose",
+     "mouth",
+     "feet"
+    ],
     "dong_tac": "Mỗi lần chạm đúng bộ phận vừa hát; lần sau nhanh hơn. Câu kết: \"Clap your hands, ___ (tên con)!\" – vỗ tay.",
-    "tu_en": ["touch", "head", "eyes", "ears", "nose", "mouth", "feet", "hands"], "tu_zh": [], "ghi_chu_thanh": ""},
-   {"id": "T3", "loai": "Big book mẫu câu", "kieu": "đếm", "khung_en": "Look! Two ___!", "khung_zh": "",
-    "tu_en": ["head", "eyes", "ears", "nose", "mouth", "hands", "feet", "touch"], "tu_zh": []},
-   {"id": "T4", "loai": "Vè", "kieu": "hỏi–đáp", "khung_en": "Where's your ___? – Here! Touch, touch!", "khung_zh": "",
-    "tu_en": ["nose", "mouth", "head", "hands", "feet", "touch"], "tu_zh": []}
+    "tu_en": [
+     "touch",
+     "head",
+     "eyes",
+     "ears",
+     "nose",
+     "mouth",
+     "feet",
+     "hands"
+    ],
+    "tu_zh": [],
+    "ghi_chu_thanh": ""
+   },
+   {
+    "id": "T3",
+    "loai": "Big book mẫu câu",
+    "kieu": "đếm",
+    "khung_en": "Look! Two ___!",
+    "khung_zh": "",
+    "tu_en": [
+     "head",
+     "eyes",
+     "ears",
+     "nose",
+     "mouth",
+     "hands",
+     "feet",
+     "touch"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T4",
+    "loai": "Vè",
+    "kieu": "hỏi–đáp",
+    "khung_en": "Where's your ___? – Here! Touch, touch!",
+    "khung_zh": "",
+    "tu_en": [
+     "nose",
+     "mouth",
+     "head",
+     "hands",
+     "feet",
+     "touch"
+    ],
+    "tu_zh": []
+   }
   ],
   "dem_vong_ngoai": {},
   "de_nghi_doi_nhan": [],
@@ -106,24 +541,133 @@
  {
   "unit": "5",
   "chu_de": "Feelings – Vui, buồn, giận, mệt",
-  "khung_cau": {"en": "I'm ___.", "zh": "", "o": "cảm xúc"},
-  "cau_cua_mieng": [{"en": "How are you?", "zh": ""}, {"en": "Oh no!", "zh": ""}, {"en": "Yum, yum!", "zh": ""}],
+  "khung_cau": {
+   "en": "I'm ___.",
+   "zh": "",
+   "o": "cảm xúc"
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "How are you?",
+    "zh": ""
+   },
+   {
+    "en": "Oh no!",
+    "zh": ""
+   },
+   {
+    "en": "Yum, yum!",
+    "zh": ""
+   }
+  ],
   "van_ban": [
-   {"id": "T1", "loai": "Truyện khung", "ten_en": "Vũ's Day", "ten_zh": "", "khung_en": "I'm ___.", "khung_zh": "",
+   {
+    "id": "T1",
+    "loai": "Truyện khung",
+    "ten_en": "Vũ's Day",
+    "ten_zh": "",
+    "khung_en": "I'm ___.",
+    "khung_zh": "",
     "phan": [
-     {"phan": 1, "y": "Vũ làm rơi bóng: \"Oh no! I'm sad.\" Bông: \"Smile, Vũ!\" Vũ cười: \"I'm happy!\"", "tu_moi_vao": ["sad", "smile", "happy"]},
-     {"phan": 2, "y": "Leo giậm chân. Anna hỏi \"Are you angry?\" – Leo: \"No, I'm tired.\"", "tu_moi_vao": ["angry", "tired"]},
-     {"phan": 3, "y": "Bụng Vũ kêu: \"I'm hungry!\" Ăn bánh \"Yum, yum!\" rồi ngáp \"I'm sleepy.\"; câu cuối: \"Good night, ___ (tên con)!\"", "tu_moi_vao": ["hungry", "sleepy"]}
+     {
+      "phan": 1,
+      "y": "Vũ làm rơi bóng: \"Oh no! I'm sad.\" Bông: \"Smile, Vũ!\" Vũ cười: \"I'm happy!\"",
+      "tu_moi_vao": [
+       "sad",
+       "smile",
+       "happy"
+      ]
+     },
+     {
+      "phan": 2,
+      "y": "Leo giậm chân. Anna hỏi \"Are you angry?\" – Leo: \"No, I'm tired.\"",
+      "tu_moi_vao": [
+       "angry",
+       "tired"
+      ]
+     },
+     {
+      "phan": 3,
+      "y": "Bụng Vũ kêu: \"I'm hungry!\" Ăn bánh \"Yum, yum!\" rồi ngáp \"I'm sleepy.\"; câu cuối: \"Good night, ___ (tên con)!\"",
+      "tu_moi_vao": [
+       "hungry",
+       "sleepy"
+      ]
+     }
     ],
-    "tu_en": ["happy", "sad", "smile", "angry", "tired", "sleepy", "hungry"], "tu_zh": []},
-   {"id": "T2", "loai": "Bài hát vận động", "kieu": "hỏi–đáp", "giai_dieu": "dân gian hết bản quyền: Frère Jacques",
-    "khung_en": "Are you ___? Are you ___? Yes, I am!", "khung_zh": "", "o_thay": ["happy", "sad", "angry", "tired", "sleepy", "hungry"],
+    "tu_en": [
+     "happy",
+     "sad",
+     "smile",
+     "angry",
+     "tired",
+     "sleepy",
+     "hungry"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T2",
+    "loai": "Bài hát vận động",
+    "kieu": "hỏi–đáp",
+    "giai_dieu": "dân gian hết bản quyền: Frère Jacques",
+    "khung_en": "Are you ___? Are you ___? Yes, I am!",
+    "khung_zh": "",
+    "o_thay": [
+     "happy",
+     "sad",
+     "angry",
+     "tired",
+     "sleepy",
+     "hungry"
+    ],
     "dong_tac": "happy: nhảy lên; sad: dụi mắt; angry: khoanh tay giậm chân; tired: gục vai; sleepy: áp má lên tay; hungry: xoa bụng. Câu kết: \"Smile, ___ (tên con)!\" – cười thật tươi.",
-    "tu_en": ["happy", "sad", "angry", "tired", "sleepy", "hungry", "smile"], "tu_zh": [], "ghi_chu_thanh": ""},
-   {"id": "T3", "loai": "Big book mẫu câu", "kieu": "cặp đối lập", "khung_en": "I'm ___.", "khung_zh": "",
-    "tu_en": ["happy", "sad", "smile", "angry", "tired", "sleepy", "hungry"], "tu_zh": []},
-   {"id": "T4", "loai": "Vè", "kieu": "đếm", "khung_en": "One, two – I'm ___!", "khung_zh": "",
-    "tu_en": ["happy", "sad", "angry", "tired", "hungry", "sleepy", "smile"], "tu_zh": []}
+    "tu_en": [
+     "happy",
+     "sad",
+     "angry",
+     "tired",
+     "sleepy",
+     "hungry",
+     "smile"
+    ],
+    "tu_zh": [],
+    "ghi_chu_thanh": ""
+   },
+   {
+    "id": "T3",
+    "loai": "Big book mẫu câu",
+    "kieu": "cặp đối lập",
+    "khung_en": "I'm ___.",
+    "khung_zh": "",
+    "tu_en": [
+     "happy",
+     "sad",
+     "smile",
+     "angry",
+     "tired",
+     "sleepy",
+     "hungry"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T4",
+    "loai": "Vè",
+    "kieu": "đếm",
+    "khung_en": "One, two – I'm ___!",
+    "khung_zh": "",
+    "tu_en": [
+     "happy",
+     "sad",
+     "angry",
+     "tired",
+     "hungry",
+     "sleepy",
+     "smile"
+    ],
+    "tu_zh": []
+   }
   ],
   "dem_vong_ngoai": {},
   "de_nghi_doi_nhan": [],
@@ -132,24 +676,133 @@
  {
   "unit": "6",
   "chu_de": "School – Cặp, sách, bút mực, bút chì, thước",
-  "khung_cau": {"en": "It's a ___.", "zh": "", "o": "đồ dùng học tập"},
-  "cau_cua_mieng": [{"en": "What's this?", "zh": ""}, {"en": "Great!", "zh": ""}, {"en": "Oh no!", "zh": ""}],
+  "khung_cau": {
+   "en": "It's a ___.",
+   "zh": "",
+   "o": "đồ dùng học tập"
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "What's this?",
+    "zh": ""
+   },
+   {
+    "en": "Great!",
+    "zh": ""
+   },
+   {
+    "en": "Oh no!",
+    "zh": ""
+   }
+  ],
   "van_ban": [
-   {"id": "T1", "loai": "Truyện khung", "ten_en": "Where's My Bag?", "ten_zh": "", "khung_en": "It's a ___.", "khung_zh": "",
+   {
+    "id": "T1",
+    "loai": "Truyện khung",
+    "ten_en": "Where's My Bag?",
+    "ten_zh": "",
+    "khung_en": "It's a ___.",
+    "khung_zh": "",
     "phan": [
-     {"phan": 1, "y": "Bông khoe: \"This is my bag.\" Leo hỏi \"What's this?\" – \"It's a book. It's a pen.\"", "tu_moi_vao": ["bag", "book", "pen"]},
-     {"phan": 2, "y": "Cô Lan: \"Stand up, please! Sit down, please!\" rồi hỏi \"Is it a pen?\" – Leo: \"No! It's a pencil.\"", "tu_moi_vao": ["stand up", "sit down", "pencil"]},
-     {"phan": 3, "y": "Leo mất cặp: \"Oh no!\" Anna chỉ: \"Look! On the desk!\" Trong cặp có \"a ruler\"; câu cuối: \"Good job, ___ (tên con)!\"", "tu_moi_vao": ["desk", "ruler"]}
+     {
+      "phan": 1,
+      "y": "Bông khoe: \"This is my bag.\" Leo hỏi \"What's this?\" – \"It's a book. It's a pen.\"",
+      "tu_moi_vao": [
+       "bag",
+       "book",
+       "pen"
+      ]
+     },
+     {
+      "phan": 2,
+      "y": "Cô Lan: \"Stand up, please! Sit down, please!\" rồi hỏi \"Is it a pen?\" – Leo: \"No! It's a pencil.\"",
+      "tu_moi_vao": [
+       "stand up",
+       "sit down",
+       "pencil"
+      ]
+     },
+     {
+      "phan": 3,
+      "y": "Leo mất cặp: \"Oh no!\" Anna chỉ: \"Look! On the desk!\" Trong cặp có \"a ruler\"; câu cuối: \"Good job, ___ (tên con)!\"",
+      "tu_moi_vao": [
+       "desk",
+       "ruler"
+      ]
+     }
     ],
-    "tu_en": ["bag", "book", "pen", "pencil", "ruler", "desk", "sit down", "stand up"], "tu_zh": []},
-   {"id": "T2", "loai": "Bài hát vận động", "kieu": "cặp đối lập", "giai_dieu": "dân gian hết bản quyền: London Bridge Is Falling Down",
-    "khung_en": "Stand up, sit down, show your ___!", "khung_zh": "", "o_thay": ["bag", "book", "pen", "pencil", "ruler"],
+    "tu_en": [
+     "bag",
+     "book",
+     "pen",
+     "pencil",
+     "ruler",
+     "desk",
+     "sit down",
+     "stand up"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T2",
+    "loai": "Bài hát vận động",
+    "kieu": "cặp đối lập",
+    "giai_dieu": "dân gian hết bản quyền: London Bridge Is Falling Down",
+    "khung_en": "Stand up, sit down, show your ___!",
+    "khung_zh": "",
+    "o_thay": [
+     "bag",
+     "book",
+     "pen",
+     "pencil",
+     "ruler"
+    ],
     "dong_tac": "Đứng lên – ngồi xuống theo lời, rồi giơ cao đồ vật vừa hát. Câu kết: \"Stand up, sit down, ___ (tên con)!\"",
-    "tu_en": ["stand up", "sit down", "bag", "book", "pen", "pencil", "ruler"], "tu_zh": [], "ghi_chu_thanh": ""},
-   {"id": "T3", "loai": "Big book mẫu câu", "kieu": "hỏi–đáp", "khung_en": "What's this? – It's a ___.", "khung_zh": "",
-    "tu_en": ["bag", "book", "pen", "pencil", "ruler", "desk"], "tu_zh": []},
-   {"id": "T4", "loai": "Vè", "kieu": "đếm", "khung_en": "One ___, two ___ – on the desk!", "khung_zh": "",
-    "tu_en": ["pen", "pencil", "book", "ruler", "desk", "stand up", "sit down"], "tu_zh": []}
+    "tu_en": [
+     "stand up",
+     "sit down",
+     "bag",
+     "book",
+     "pen",
+     "pencil",
+     "ruler"
+    ],
+    "tu_zh": [],
+    "ghi_chu_thanh": ""
+   },
+   {
+    "id": "T3",
+    "loai": "Big book mẫu câu",
+    "kieu": "hỏi–đáp",
+    "khung_en": "What's this? – It's a ___.",
+    "khung_zh": "",
+    "tu_en": [
+     "bag",
+     "book",
+     "pen",
+     "pencil",
+     "ruler",
+     "desk"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T4",
+    "loai": "Vè",
+    "kieu": "đếm",
+    "khung_en": "One ___, two ___ – on the desk!",
+    "khung_zh": "",
+    "tu_en": [
+     "pen",
+     "pencil",
+     "book",
+     "ruler",
+     "desk",
+     "stand up",
+     "sit down"
+    ],
+    "tu_zh": []
+   }
   ],
   "dem_vong_ngoai": {},
   "de_nghi_doi_nhan": [],
@@ -158,24 +811,136 @@
  {
   "unit": "7",
   "chu_de": "House – Giường, ghế, bàn, sofa, cửa",
-  "khung_cau": {"en": "It's on the ___.", "zh": "", "o": "đồ trong nhà"},
-  "cau_cua_mieng": [{"en": "Knock, knock!", "zh": ""}, {"en": "Come in!", "zh": ""}, {"en": "Splash, splash!", "zh": ""}],
+  "khung_cau": {
+   "en": "It's on the ___.",
+   "zh": "",
+   "o": "đồ trong nhà"
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "Knock, knock!",
+    "zh": ""
+   },
+   {
+    "en": "Come in!",
+    "zh": ""
+   },
+   {
+    "en": "Splash, splash!",
+    "zh": ""
+   }
+  ],
   "van_ban": [
-   {"id": "T1", "loai": "Truyện khung", "ten_en": "Knock, Knock!", "ten_zh": "", "khung_en": "It's on the ___.", "khung_zh": "",
+   {
+    "id": "T1",
+    "loai": "Truyện khung",
+    "ten_en": "Knock, Knock!",
+    "ten_zh": "",
+    "khung_en": "It's on the ___.",
+    "khung_zh": "",
     "phan": [
-     {"phan": 1, "y": "Knock, knock! Bông mở cửa cho Vũ: \"Come in! This is my home.\" Vũ ngồi lên sofa.", "tu_moi_vao": ["door", "home", "sofa"]},
-     {"phan": 2, "y": "Bông tìm sách: \"It's on the bed? No! It's on the chair? No! It's on the table!\"", "tu_moi_vao": ["bed", "chair", "table"]},
-     {"phan": 3, "y": "Nhìn qua window thấy trời tối; em bé \"Bath time! Splash, splash!\"; câu cuối: \"Good night, ___ (tên con)!\"", "tu_moi_vao": ["window", "bath"]}
+     {
+      "phan": 1,
+      "y": "Knock, knock! Bông mở cửa cho Vũ: \"Come in! This is my home.\" Vũ ngồi lên sofa.",
+      "tu_moi_vao": [
+       "door",
+       "home",
+       "sofa"
+      ]
+     },
+     {
+      "phan": 2,
+      "y": "Bông tìm sách: \"It's on the bed? No! It's on the chair? No! It's on the table!\"",
+      "tu_moi_vao": [
+       "bed",
+       "chair",
+       "table"
+      ]
+     },
+     {
+      "phan": 3,
+      "y": "Nhìn qua window thấy trời tối; em bé \"Bath time! Splash, splash!\"; câu cuối: \"Good night, ___ (tên con)!\"",
+      "tu_moi_vao": [
+       "window",
+       "bath"
+      ]
+     }
     ],
-    "tu_en": ["bed", "chair", "table", "sofa", "door", "window", "bath", "home"], "tu_zh": []},
-   {"id": "T2", "loai": "Bài hát vận động", "kieu": "liệt kê", "giai_dieu": "dân gian hết bản quyền: Here We Go Round the Mulberry Bush",
-    "khung_en": "This is my ___, my ___, my ___.", "khung_zh": "", "o_thay": ["bed", "chair", "table", "sofa", "door", "window"],
+    "tu_en": [
+     "bed",
+     "chair",
+     "table",
+     "sofa",
+     "door",
+     "window",
+     "bath",
+     "home"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T2",
+    "loai": "Bài hát vận động",
+    "kieu": "liệt kê",
+    "giai_dieu": "dân gian hết bản quyền: Here We Go Round the Mulberry Bush",
+    "khung_en": "This is my ___, my ___, my ___.",
+    "khung_zh": "",
+    "o_thay": [
+     "bed",
+     "chair",
+     "table",
+     "sofa",
+     "door",
+     "window"
+    ],
     "dong_tac": "bed: nằm ngủ; chair: ngồi xổm; table: gõ bàn; sofa: nhún nhảy; door: gõ cửa knock knock; window: hai tay làm khung nhìn ra. Câu kết: \"This is my home, ___ (tên con)!\"",
-    "tu_en": ["bed", "chair", "table", "sofa", "door", "window", "home"], "tu_zh": [], "ghi_chu_thanh": ""},
-   {"id": "T3", "loai": "Big book mẫu câu", "kieu": "hỏi–đáp", "khung_en": "Is Bông on the ___? – No! / Yes!", "khung_zh": "",
-    "tu_en": ["bed", "chair", "table", "sofa", "door", "window", "bath", "home"], "tu_zh": []},
-   {"id": "T4", "loai": "Vè", "kieu": "đếm", "khung_en": "One, two – ___, ___!", "khung_zh": "",
-    "tu_en": ["door", "window", "bath", "bed", "home", "chair", "table"], "tu_zh": []}
+    "tu_en": [
+     "bed",
+     "chair",
+     "table",
+     "sofa",
+     "door",
+     "window",
+     "home"
+    ],
+    "tu_zh": [],
+    "ghi_chu_thanh": ""
+   },
+   {
+    "id": "T3",
+    "loai": "Big book mẫu câu",
+    "kieu": "hỏi–đáp",
+    "khung_en": "Is Bông on the ___? – No! / Yes!",
+    "khung_zh": "",
+    "tu_en": [
+     "bed",
+     "chair",
+     "table",
+     "sofa",
+     "door",
+     "window",
+     "bath",
+     "home"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T4",
+    "loai": "Vè",
+    "kieu": "đếm",
+    "khung_en": "One, two – ___, ___!",
+    "khung_zh": "",
+    "tu_en": [
+     "door",
+     "window",
+     "bath",
+     "bed",
+     "home",
+     "chair",
+     "table"
+    ],
+    "tu_zh": []
+   }
   ],
   "dem_vong_ngoai": {},
   "de_nghi_doi_nhan": [],
@@ -184,24 +949,134 @@
  {
   "unit": "8",
   "chu_de": "Animals – Mèo, chó, chim, cá, thỏ, vịt",
-  "khung_cau": {"en": "It's a ___.", "zh": "", "o": "con vật"},
-  "cau_cua_mieng": [{"en": "Look!", "zh": ""}, {"en": "Ha ha!", "zh": ""}, {"en": "Let's go!", "zh": ""}],
+  "khung_cau": {
+   "en": "It's a ___.",
+   "zh": "",
+   "o": "con vật"
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "Look!",
+    "zh": ""
+   },
+   {
+    "en": "Ha ha!",
+    "zh": ""
+   },
+   {
+    "en": "Let's go!",
+    "zh": ""
+   }
+  ],
   "van_ban": [
-   {"id": "T1", "loai": "Truyện khung", "ten_en": "Grandpa's Farm", "ten_zh": "", "khung_en": "It's a ___.", "khung_zh": "",
+   {
+    "id": "T1",
+    "loai": "Truyện khung",
+    "ten_en": "Grandpa's Farm",
+    "ten_zh": "",
+    "khung_en": "It's a ___.",
+    "khung_zh": "",
     "phan": [
-     {"phan": 1, "y": "Bông và Leo về trang trại ông: meow – \"It's a cat.\" woof – \"It's a dog.\" tweet – \"It's a bird!\"", "tu_moi_vao": ["cat", "dog", "bird"]},
-     {"phan": 2, "y": "Ở ao: \"Is it a fish? No! It's a duck. Quack!\" – \"It's a frog. Ribbit!\"", "tu_moi_vao": ["fish", "duck", "frog"]},
-     {"phan": 3, "y": "Neigh! \"It's a horse!\" Hop, hop! \"It's a rabbit!\"; câu cuối: \"Goodbye, animals! Goodbye, ___ (tên con)!\"", "tu_moi_vao": ["horse", "rabbit"]}
+     {
+      "phan": 1,
+      "y": "Bông và Leo về trang trại ông: meow – \"It's a cat.\" woof – \"It's a dog.\" tweet – \"It's a bird!\"",
+      "tu_moi_vao": [
+       "cat",
+       "dog",
+       "bird"
+      ]
+     },
+     {
+      "phan": 2,
+      "y": "Ở ao: \"Is it a fish? No! It's a duck. Quack!\" – \"It's a frog. Ribbit!\"",
+      "tu_moi_vao": [
+       "fish",
+       "duck",
+       "frog"
+      ]
+     },
+     {
+      "phan": 3,
+      "y": "Neigh! \"It's a horse!\" Hop, hop! \"It's a rabbit!\"; câu cuối: \"Goodbye, animals! Goodbye, ___ (tên con)!\"",
+      "tu_moi_vao": [
+       "horse",
+       "rabbit"
+      ]
+     }
     ],
-    "tu_en": ["cat", "dog", "bird", "fish", "rabbit", "duck", "horse", "frog"], "tu_zh": []},
-   {"id": "T2", "loai": "Bài hát vận động", "kieu": "liệt kê", "giai_dieu": "dân gian hết bản quyền: Old MacDonald Had a Farm",
-    "khung_en": "Grandpa has a ___, E-I-E-I-O!", "khung_zh": "", "o_thay": ["dog", "cat", "duck", "horse", "frog", "rabbit"],
+    "tu_en": [
+     "cat",
+     "dog",
+     "bird",
+     "fish",
+     "rabbit",
+     "duck",
+     "horse",
+     "frog"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T2",
+    "loai": "Bài hát vận động",
+    "kieu": "liệt kê",
+    "giai_dieu": "dân gian hết bản quyền: Old MacDonald Had a Farm",
+    "khung_en": "Grandpa has a ___, E-I-E-I-O!",
+    "khung_zh": "",
+    "o_thay": [
+     "dog",
+     "cat",
+     "duck",
+     "horse",
+     "frog",
+     "rabbit"
+    ],
     "dong_tac": "Mỗi lần một con vật: kêu tiếng của nó và làm động tác (chó vẫy đuôi, mèo vuốt râu, vịt lạch bạch, ngựa phi, ếch nhảy cóc, thỏ dựng tai). Câu kết: \"Grandpa has ___ (tên con), E-I-E-I-O!\"",
-    "tu_en": ["dog", "cat", "duck", "horse", "frog", "rabbit"], "tu_zh": [], "ghi_chu_thanh": ""},
-   {"id": "T3", "loai": "Big book mẫu câu", "kieu": "hỏi–đáp", "khung_en": "Is it a ___? – No! It's a ___.", "khung_zh": "",
-    "tu_en": ["cat", "dog", "bird", "fish", "rabbit", "duck", "horse", "frog"], "tu_zh": []},
-   {"id": "T4", "loai": "Vè", "kieu": "đếm", "khung_en": "One ___, two ___!", "khung_zh": "",
-    "tu_en": ["fish", "bird", "cat", "dog", "duck", "frog"], "tu_zh": []}
+    "tu_en": [
+     "dog",
+     "cat",
+     "duck",
+     "horse",
+     "frog",
+     "rabbit"
+    ],
+    "tu_zh": [],
+    "ghi_chu_thanh": ""
+   },
+   {
+    "id": "T3",
+    "loai": "Big book mẫu câu",
+    "kieu": "hỏi–đáp",
+    "khung_en": "Is it a ___? – No! It's a ___.",
+    "khung_zh": "",
+    "tu_en": [
+     "cat",
+     "dog",
+     "bird",
+     "fish",
+     "rabbit",
+     "duck",
+     "horse",
+     "frog"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T4",
+    "loai": "Vè",
+    "kieu": "đếm",
+    "khung_en": "One ___, two ___!",
+    "khung_zh": "",
+    "tu_en": [
+     "fish",
+     "bird",
+     "cat",
+     "dog",
+     "duck",
+     "frog"
+    ],
+    "tu_zh": []
+   }
   ],
   "dem_vong_ngoai": {},
   "de_nghi_doi_nhan": [],
@@ -210,24 +1085,135 @@
  {
   "unit": "9",
   "chu_de": "Food – Táo, chuối, sữa, nước, nước ép",
-  "khung_cau": {"en": "___, please!", "zh": "", "o": "đồ ăn, đồ uống"},
-  "cau_cua_mieng": [{"en": "I'm hungry!", "zh": ""}, {"en": "Here you are.", "zh": ""}, {"en": "Thank you!", "zh": ""}, {"en": "Yum, yum!", "zh": ""}],
+  "khung_cau": {
+   "en": "___, please!",
+   "zh": "",
+   "o": "đồ ăn, đồ uống"
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "I'm hungry!",
+    "zh": ""
+   },
+   {
+    "en": "Here you are.",
+    "zh": ""
+   },
+   {
+    "en": "Thank you!",
+    "zh": ""
+   },
+   {
+    "en": "Yum, yum!",
+    "zh": ""
+   }
+  ],
   "van_ban": [
-   {"id": "T1", "loai": "Truyện khung", "ten_en": "Hungry Leo", "ten_zh": "", "khung_en": "___, please!", "khung_zh": "",
+   {
+    "id": "T1",
+    "loai": "Truyện khung",
+    "ten_en": "Hungry Leo",
+    "ten_zh": "",
+    "khung_en": "___, please!",
+    "khung_zh": "",
     "phan": [
-     {"phan": 1, "y": "Leo: \"Mommy, I'm hungry!\" Mẹ: \"An apple? A banana?\" – \"Apple, please! Milk, please!\"", "tu_moi_vao": ["apple", "banana", "milk"]},
-     {"phan": 2, "y": "Anna mệt; cô Lan: \"Water or juice?\" – \"Juice, please.\" – \"Here you are.\" – \"Thank you!\"", "tu_moi_vao": ["water", "juice"]},
-     {"phan": 3, "y": "Bà dọn cơm: \"Rice and egg?\" – \"Yes, please! Yum, yum!\" Rồi \"Cake!\"; câu cuối: \"Cake for ___ (tên con)!\"", "tu_moi_vao": ["rice", "egg", "cake"]}
+     {
+      "phan": 1,
+      "y": "Leo: \"Mommy, I'm hungry!\" Mẹ: \"An apple? A banana?\" – \"Apple, please! Milk, please!\"",
+      "tu_moi_vao": [
+       "apple",
+       "banana",
+       "milk"
+      ]
+     },
+     {
+      "phan": 2,
+      "y": "Anna mệt; cô Lan: \"Water or juice?\" – \"Juice, please.\" – \"Here you are.\" – \"Thank you!\"",
+      "tu_moi_vao": [
+       "water",
+       "juice"
+      ]
+     },
+     {
+      "phan": 3,
+      "y": "Bà dọn cơm: \"Rice and egg?\" – \"Yes, please! Yum, yum!\" Rồi \"Cake!\"; câu cuối: \"Cake for ___ (tên con)!\"",
+      "tu_moi_vao": [
+       "rice",
+       "egg",
+       "cake"
+      ]
+     }
     ],
-    "tu_en": ["apple", "banana", "milk", "water", "juice", "rice", "egg", "cake"], "tu_zh": []},
-   {"id": "T2", "loai": "Bài hát vận động", "kieu": "hỏi–đáp", "giai_dieu": "dân gian hết bản quyền: Row, Row, Row Your Boat",
-    "khung_en": "Do you like ___? Yes, yes, yes!", "khung_zh": "", "o_thay": ["apple", "banana", "rice", "egg", "cake"],
+    "tu_en": [
+     "apple",
+     "banana",
+     "milk",
+     "water",
+     "juice",
+     "rice",
+     "egg",
+     "cake"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T2",
+    "loai": "Bài hát vận động",
+    "kieu": "hỏi–đáp",
+    "giai_dieu": "dân gian hết bản quyền: Row, Row, Row Your Boat",
+    "khung_en": "Do you like ___? Yes, yes, yes!",
+    "khung_zh": "",
+    "o_thay": [
+     "apple",
+     "banana",
+     "rice",
+     "egg",
+     "cake"
+    ],
     "dong_tac": "apple: cắn táo; banana: bóc chuối; rice: và cơm; egg: đập trứng; cake: thổi nến. Câu kết: \"Yum, yum, ___ (tên con)!\" – xoa bụng.",
-    "tu_en": ["apple", "banana", "rice", "egg", "cake"], "tu_zh": [], "ghi_chu_thanh": ""},
-   {"id": "T3", "loai": "Big book mẫu câu", "kieu": "liệt kê", "khung_en": "___, please!", "khung_zh": "",
-    "tu_en": ["apple", "banana", "milk", "water", "juice", "rice", "egg", "cake"], "tu_zh": []},
-   {"id": "T4", "loai": "Vè", "kieu": "đếm", "khung_en": "One, two – ___ for you!", "khung_zh": "",
-    "tu_en": ["milk", "water", "juice", "egg", "rice"], "tu_zh": []}
+    "tu_en": [
+     "apple",
+     "banana",
+     "rice",
+     "egg",
+     "cake"
+    ],
+    "tu_zh": [],
+    "ghi_chu_thanh": ""
+   },
+   {
+    "id": "T3",
+    "loai": "Big book mẫu câu",
+    "kieu": "liệt kê",
+    "khung_en": "___, please!",
+    "khung_zh": "",
+    "tu_en": [
+     "apple",
+     "banana",
+     "milk",
+     "water",
+     "juice",
+     "rice",
+     "egg",
+     "cake"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T4",
+    "loai": "Vè",
+    "kieu": "đếm",
+    "khung_en": "One, two – ___ for you!",
+    "khung_zh": "",
+    "tu_en": [
+     "milk",
+     "water",
+     "juice",
+     "egg",
+     "rice"
+    ],
+    "tu_zh": []
+   }
   ],
   "dem_vong_ngoai": {},
   "de_nghi_doi_nhan": [],
@@ -236,24 +1222,128 @@
  {
   "unit": "10",
   "chu_de": "Weather – Nắng, nóng, mưa, nhiều mây",
-  "khung_cau": {"en": "It's ___.", "zh": "", "o": "thời tiết"},
-  "cau_cua_mieng": [{"en": "Oh no!", "zh": ""}, {"en": "Whoosh!", "zh": ""}, {"en": "Brr!", "zh": ""}],
+  "khung_cau": {
+   "en": "It's ___.",
+   "zh": "",
+   "o": "thời tiết"
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "Oh no!",
+    "zh": ""
+   },
+   {
+    "en": "Whoosh!",
+    "zh": ""
+   },
+   {
+    "en": "Brr!",
+    "zh": ""
+   }
+  ],
   "van_ban": [
-   {"id": "T1", "loai": "Truyện khung", "ten_en": "Bông's Window", "ten_zh": "", "khung_en": "It's ___.", "khung_zh": "",
+   {
+    "id": "T1",
+    "loai": "Truyện khung",
+    "ten_en": "Bông's Window",
+    "ten_zh": "",
+    "khung_en": "It's ___.",
+    "khung_zh": "",
     "phan": [
-     {"phan": 1, "y": "Bông nhìn ra cửa sổ: \"Look! It's sunny. It's hot! Water, please!\"", "tu_moi_vao": ["sunny", "hot"]},
-     {"phan": 2, "y": "\"Is it sunny?\" Mẹ: \"No, it's cloudy.\" Lộp độp: \"It's rainy! Oh no!\"", "tu_moi_vao": ["cloudy", "rainy"]},
-     {"phan": 3, "y": "Whoosh! \"It's windy.\" Bông run: \"Brr! It's cold!\" Mẹ pha sữa nóng; câu cuối: \"Hot milk for ___ (tên con)!\"", "tu_moi_vao": ["windy", "cold"]}
+     {
+      "phan": 1,
+      "y": "Bông nhìn ra cửa sổ: \"Look! It's sunny. It's hot! Water, please!\"",
+      "tu_moi_vao": [
+       "sunny",
+       "hot"
+      ]
+     },
+     {
+      "phan": 2,
+      "y": "\"Is it sunny?\" Mẹ: \"No, it's cloudy.\" Lộp độp: \"It's rainy! Oh no!\"",
+      "tu_moi_vao": [
+       "cloudy",
+       "rainy"
+      ]
+     },
+     {
+      "phan": 3,
+      "y": "Whoosh! \"It's windy.\" Bông run: \"Brr! It's cold!\" Mẹ pha sữa nóng; câu cuối: \"Hot milk for ___ (tên con)!\"",
+      "tu_moi_vao": [
+       "windy",
+       "cold"
+      ]
+     }
     ],
-    "tu_en": ["sunny", "hot", "rainy", "cloudy", "windy", "cold"], "tu_zh": []},
-   {"id": "T2", "loai": "Bài hát vận động", "kieu": "hỏi–đáp", "giai_dieu": "dân gian hết bản quyền: Frère Jacques",
-    "khung_en": "Is it ___? Is it ___? Yes, it is!", "khung_zh": "", "o_thay": ["sunny", "rainy", "cloudy", "windy", "hot", "cold"],
+    "tu_en": [
+     "sunny",
+     "hot",
+     "rainy",
+     "cloudy",
+     "windy",
+     "cold"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T2",
+    "loai": "Bài hát vận động",
+    "kieu": "hỏi–đáp",
+    "giai_dieu": "dân gian hết bản quyền: Frère Jacques",
+    "khung_en": "Is it ___? Is it ___? Yes, it is!",
+    "khung_zh": "",
+    "o_thay": [
+     "sunny",
+     "rainy",
+     "cloudy",
+     "windy",
+     "hot",
+     "cold"
+    ],
     "dong_tac": "sunny: hai tay vẽ mặt trời; rainy: ngón tay rơi như mưa; cloudy: hai tay ôm đám mây; windy: lắc lư như cây; hot: quạt tay; cold: co ro. Câu kết: \"Look out, ___ (tên con)!\" – nhìn qua khung tay.",
-    "tu_en": ["sunny", "rainy", "cloudy", "windy", "hot", "cold"], "tu_zh": [], "ghi_chu_thanh": ""},
-   {"id": "T3", "loai": "Big book mẫu câu", "kieu": "cặp đối lập", "khung_en": "It's ___.", "khung_zh": "",
-    "tu_en": ["sunny", "hot", "rainy", "cloudy", "windy", "cold"], "tu_zh": []},
-   {"id": "T4", "loai": "Vè", "kieu": "đếm", "khung_en": "One, two, three – it's ___!", "khung_zh": "",
-    "tu_en": ["sunny", "hot", "rainy", "cloudy", "windy", "cold"], "tu_zh": []}
+    "tu_en": [
+     "sunny",
+     "rainy",
+     "cloudy",
+     "windy",
+     "hot",
+     "cold"
+    ],
+    "tu_zh": [],
+    "ghi_chu_thanh": ""
+   },
+   {
+    "id": "T3",
+    "loai": "Big book mẫu câu",
+    "kieu": "cặp đối lập",
+    "khung_en": "It's ___.",
+    "khung_zh": "",
+    "tu_en": [
+     "sunny",
+     "hot",
+     "rainy",
+     "cloudy",
+     "windy",
+     "cold"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T4",
+    "loai": "Vè",
+    "kieu": "đếm",
+    "khung_en": "One, two, three – it's ___!",
+    "khung_zh": "",
+    "tu_en": [
+     "sunny",
+     "hot",
+     "rainy",
+     "cloudy",
+     "windy",
+     "cold"
+    ],
+    "tu_zh": []
+   }
   ],
   "dem_vong_ngoai": {},
   "de_nghi_doi_nhan": [],
@@ -262,24 +1352,134 @@
  {
   "unit": "11",
   "chu_de": "Colors – Đỏ, xanh dương, vàng, xanh lá, hồng, cam",
-  "khung_cau": {"en": "What colour is it? – It's ___.", "zh": "", "o": "màu"},
-  "cau_cua_mieng": [{"en": "Wow!", "zh": ""}, {"en": "Look!", "zh": ""}, {"en": "I like it!", "zh": ""}],
+  "khung_cau": {
+   "en": "What colour is it? – It's ___.",
+   "zh": "",
+   "o": "màu"
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "Wow!",
+    "zh": ""
+   },
+   {
+    "en": "Look!",
+    "zh": ""
+   },
+   {
+    "en": "I like it!",
+    "zh": ""
+   }
+  ],
   "van_ban": [
-   {"id": "T1", "loai": "Truyện khung", "ten_en": "Rainbow After Rain", "ten_zh": "", "khung_en": "It's ___.", "khung_zh": "",
+   {
+    "id": "T1",
+    "loai": "Truyện khung",
+    "ten_en": "Rainbow After Rain",
+    "ten_zh": "",
+    "khung_en": "It's ___.",
+    "khung_zh": "",
     "phan": [
-     {"phan": 1, "y": "Leo hỏi \"What colour is it?\" – Bông: \"It's red. A red apple! It's yellow. A yellow banana!\" Leo: \"I like blue.\"", "tu_moi_vao": ["red", "yellow", "blue"]},
-     {"phan": 2, "y": "Tiệc của Anna: \"A pink cake!\" \"Orange juice, please!\" Ribbit – \"A green frog!\"", "tu_moi_vao": ["pink", "orange", "green"]},
-     {"phan": 3, "y": "\"A black cat! A white rabbit!\" Mưa tạnh, cầu vồng hiện ra; câu cuối: \"What colour, ___ (tên con)?\"", "tu_moi_vao": ["black", "white"]}
+     {
+      "phan": 1,
+      "y": "Leo hỏi \"What colour is it?\" – Bông: \"It's red. A red apple! It's yellow. A yellow banana!\" Leo: \"I like blue.\"",
+      "tu_moi_vao": [
+       "red",
+       "yellow",
+       "blue"
+      ]
+     },
+     {
+      "phan": 2,
+      "y": "Tiệc của Anna: \"A pink cake!\" \"Orange juice, please!\" Ribbit – \"A green frog!\"",
+      "tu_moi_vao": [
+       "pink",
+       "orange",
+       "green"
+      ]
+     },
+     {
+      "phan": 3,
+      "y": "\"A black cat! A white rabbit!\" Mưa tạnh, cầu vồng hiện ra; câu cuối: \"What colour, ___ (tên con)?\"",
+      "tu_moi_vao": [
+       "black",
+       "white"
+      ]
+     }
     ],
-    "tu_en": ["red", "blue", "yellow", "green", "pink", "orange", "black", "white"], "tu_zh": []},
-   {"id": "T2", "loai": "Bài hát vận động", "kieu": "hỏi–đáp", "giai_dieu": "dân gian hết bản quyền: Mary Had a Little Lamb",
-    "khung_en": "Is it ___? Yes, it's ___!", "khung_zh": "", "o_thay": ["red", "yellow", "blue", "green", "pink", "orange"],
+    "tu_en": [
+     "red",
+     "blue",
+     "yellow",
+     "green",
+     "pink",
+     "orange",
+     "black",
+     "white"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T2",
+    "loai": "Bài hát vận động",
+    "kieu": "hỏi–đáp",
+    "giai_dieu": "dân gian hết bản quyền: Mary Had a Little Lamb",
+    "khung_en": "Is it ___? Yes, it's ___!",
+    "khung_zh": "",
+    "o_thay": [
+     "red",
+     "yellow",
+     "blue",
+     "green",
+     "pink",
+     "orange"
+    ],
     "dong_tac": "Cô giơ thẻ màu, con chạy chạm đồ vật có màu đó trong lớp rồi giơ tay \"Yes!\". Câu kết: \"___ (tên con) likes blue!\" – con tự chọn màu.",
-    "tu_en": ["red", "yellow", "blue", "green", "pink", "orange"], "tu_zh": [], "ghi_chu_thanh": ""},
-   {"id": "T3", "loai": "Big book mẫu câu", "kieu": "liệt kê", "khung_en": "It's ___!", "khung_zh": "",
-    "tu_en": ["red", "blue", "yellow", "green", "pink", "orange", "black", "white"], "tu_zh": []},
-   {"id": "T4", "loai": "Vè", "kieu": "cặp đối lập", "khung_en": "___ cat, ___ cat!", "khung_zh": "",
-    "tu_en": ["black", "white", "red", "green", "pink", "blue"], "tu_zh": []}
+    "tu_en": [
+     "red",
+     "yellow",
+     "blue",
+     "green",
+     "pink",
+     "orange"
+    ],
+    "tu_zh": [],
+    "ghi_chu_thanh": ""
+   },
+   {
+    "id": "T3",
+    "loai": "Big book mẫu câu",
+    "kieu": "liệt kê",
+    "khung_en": "It's ___!",
+    "khung_zh": "",
+    "tu_en": [
+     "red",
+     "blue",
+     "yellow",
+     "green",
+     "pink",
+     "orange",
+     "black",
+     "white"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T4",
+    "loai": "Vè",
+    "kieu": "cặp đối lập",
+    "khung_en": "___ cat, ___ cat!",
+    "khung_zh": "",
+    "tu_en": [
+     "black",
+     "white",
+     "red",
+     "green",
+     "pink",
+     "blue"
+    ],
+    "tu_zh": []
+   }
   ],
   "dem_vong_ngoai": {},
   "de_nghi_doi_nhan": [],
@@ -288,24 +1488,135 @@
  {
   "unit": "12",
   "chu_de": "Numbers and counting – Đếm 6 đến 9, bóng và đồ chơi",
-  "khung_cau": {"en": "How many balls? – ___!", "zh": "", "o": "số (six – ten)"},
-  "cau_cua_mieng": [{"en": "Let's count!", "zh": ""}, {"en": "Wow!", "zh": ""}, {"en": "Good job!", "zh": ""}],
+  "khung_cau": {
+   "en": "How many balls? – ___!",
+   "zh": "",
+   "o": "số (six – ten)"
+  },
+  "cau_cua_mieng": [
+   {
+    "en": "Let's count!",
+    "zh": ""
+   },
+   {
+    "en": "Wow!",
+    "zh": ""
+   },
+   {
+    "en": "Good job!",
+    "zh": ""
+   }
+  ],
   "van_ban": [
-   {"id": "T1", "loai": "Truyện khung", "ten_en": "Vũ's Toy Box", "ten_zh": "", "khung_en": "___ balls!", "khung_zh": "",
+   {
+    "id": "T1",
+    "loai": "Truyện khung",
+    "ten_en": "Vũ's Toy Box",
+    "ten_zh": "",
+    "khung_en": "___ balls!",
+    "khung_zh": "",
     "phan": [
-     {"phan": 1, "y": "Leo lấy bóng: \"A red ball. A blue ball.\" Bông đếm \"…five, six! Six balls!\" Anna thêm: \"Seven balls!\"", "tu_moi_vao": ["ball", "six", "seven"]},
-     {"phan": 2, "y": "Vũ mở hộp: \"Look! My toys!\" đếm \"…eight toys! Nine toys!\"", "tu_moi_vao": ["toy", "eight", "nine"]},
-     {"phan": 3, "y": "Cô Lan: \"How many balls?\" – cả lớp \"Ten!\"; câu cuối: \"Ten toys for ___ (tên con)!\"", "tu_moi_vao": ["how many", "ten"]}
+     {
+      "phan": 1,
+      "y": "Leo lấy bóng: \"A red ball. A blue ball.\" Bông đếm \"…five, six! Six balls!\" Anna thêm: \"Seven balls!\"",
+      "tu_moi_vao": [
+       "ball",
+       "six",
+       "seven"
+      ]
+     },
+     {
+      "phan": 2,
+      "y": "Vũ mở hộp: \"Look! My toys!\" đếm \"…eight toys! Nine toys!\"",
+      "tu_moi_vao": [
+       "toy",
+       "eight",
+       "nine"
+      ]
+     },
+     {
+      "phan": 3,
+      "y": "Cô Lan: \"How many balls?\" – cả lớp \"Ten!\"; câu cuối: \"Ten toys for ___ (tên con)!\"",
+      "tu_moi_vao": [
+       "how many",
+       "ten"
+      ]
+     }
     ],
-    "tu_en": ["six", "seven", "ball", "eight", "nine", "toy", "ten", "how many"], "tu_zh": []},
-   {"id": "T2", "loai": "Bài hát vận động", "kieu": "đếm", "giai_dieu": "dân gian hết bản quyền: This Old Man",
-    "khung_en": "How many balls? ___ balls! Let's count them all!", "khung_zh": "", "o_thay": ["six", "seven", "eight", "nine", "ten"],
+    "tu_en": [
+     "six",
+     "seven",
+     "ball",
+     "eight",
+     "nine",
+     "toy",
+     "ten",
+     "how many"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T2",
+    "loai": "Bài hát vận động",
+    "kieu": "đếm",
+    "giai_dieu": "dân gian hết bản quyền: This Old Man",
+    "khung_en": "How many balls? ___ balls! Let's count them all!",
+    "khung_zh": "",
+    "o_thay": [
+     "six",
+     "seven",
+     "eight",
+     "nine",
+     "ten"
+    ],
     "dong_tac": "Mỗi lần thêm một quả bóng: tung bóng tưởng tượng đúng số lần, giơ ngón tay đúng số. Câu kết: \"Ten balls for ___ (tên con)!\"",
-    "tu_en": ["how many", "ball", "six", "seven", "eight", "nine", "ten"], "tu_zh": [], "ghi_chu_thanh": ""},
-   {"id": "T3", "loai": "Big book mẫu câu", "kieu": "hỏi–đáp", "khung_en": "How many ___? – ___!", "khung_zh": "",
-    "tu_en": ["six", "seven", "ball", "eight", "nine", "toy", "ten", "how many"], "tu_zh": []},
-   {"id": "T4", "loai": "Vè", "kieu": "liệt kê", "khung_en": "A ___ in my toy box!", "khung_zh": "",
-    "tu_en": ["ball", "toy", "six", "seven", "eight", "nine", "ten"], "tu_zh": []}
+    "tu_en": [
+     "how many",
+     "ball",
+     "six",
+     "seven",
+     "eight",
+     "nine",
+     "ten"
+    ],
+    "tu_zh": [],
+    "ghi_chu_thanh": ""
+   },
+   {
+    "id": "T3",
+    "loai": "Big book mẫu câu",
+    "kieu": "hỏi–đáp",
+    "khung_en": "How many ___? – ___!",
+    "khung_zh": "",
+    "tu_en": [
+     "six",
+     "seven",
+     "ball",
+     "eight",
+     "nine",
+     "toy",
+     "ten",
+     "how many"
+    ],
+    "tu_zh": []
+   },
+   {
+    "id": "T4",
+    "loai": "Vè",
+    "kieu": "liệt kê",
+    "khung_en": "A ___ in my toy box!",
+    "khung_zh": "",
+    "tu_en": [
+     "ball",
+     "toy",
+     "six",
+     "seven",
+     "eight",
+     "nine",
+     "ten"
+    ],
+    "tu_zh": []
+   }
   ],
   "dem_vong_ngoai": {},
   "de_nghi_doi_nhan": [],

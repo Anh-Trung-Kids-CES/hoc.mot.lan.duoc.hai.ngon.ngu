@@ -84,12 +84,12 @@ for f in KHOA:
             de, dz = muc(*THANG_EN[f], i, n), muc(*THANG_ZH[f], i, n)
             KQ['do_dai'].append({'khoa': TEN[f], 'unit': un, 'en_khung': cu, 'en_thang': de, 'zh_khung': cz, 'zh_thang': dz,
                                  'en_lech': de - max(cu), 'zh_lech': (dz - max(cz)) if cz[1] else None})
-            if not any(k in u for k in ('T1_cau', 'T1_lien')):
+            if not all(k in u for k in ('T1_cau', 'T1_lien')):
                 KQ['thieu_chi_tieu'].append(f'{TEN[f]} U{un}')
         else:
             ids = [v['id'] for v in u['van_ban']]
             KQ['khoa_on'].append({'khoa': TEN[f], 'unit': un, 'van_ban': ids,
-                                  'co_do_dai_de': any('do_dai' in v for v in u['van_ban'])})
+                                  'co_do_dai_de': any('Độ dài theo đề' in v.get('yeu_cau', '') for v in u['van_ban'])})
         # 63: phần truyện dùng lại khung câu unit trước
         if i and 'T1_do_dai' in u:
             cu_frames = []
@@ -144,7 +144,15 @@ print('\n== 62 mặt 4: cấu trúc của đề, lần đầu có trong khung ==
 for moc in dict.fromkeys(x['moc'] for x in KQ['cau_truc']):
     r = [x for x in KQ['cau_truc'] if x['moc'] == moc]
     thieu = [x['cau_truc'] for x in r if not x['lan_dau']]
-    print(f"{moc}: có {len(r) - len(thieu)}/{len(r)}; thiếu: {', '.join(thieu) or '—'}")
+    print(f"{moc}: có trong câu mẫu {len(r) - len(thieu)}/{len(r)}; chưa có: {', '.join(thieu) or '—'}")
+PHAN = []
+for f in KHOA:
+    for u in json.load(open(MANG + f + '.json')):
+        for L in ('en', 'zh'):
+            for x in (u.get('cau_truc_de') or {}).get(L, []):
+                PHAN.append(f'{TEN[f]} U{u["unit"]}: {x}')
+KQ['cau_truc_da_phan'] = PHAN
+print(f'Cấu trúc đề đã phân vào khung câu các unit (chờ viết truyện): {len(PHAN)} mục')
 print('\n== 63: phần truyện có câu mẫu dùng lại khung unit trước (chỉ báo) ==')
 for f in KHOA:
     r = [x for x in KQ['dung_lai'] if x['khoa'] == TEN[f]]
@@ -152,5 +160,7 @@ for f in KHOA:
         print(f"{TEN[f]:12} {sum(x['phan_co_mau_cu'] for x in r)}/{sum(x['so_phan'] for x in r)} phần")
 print('\n== 65: vè ==')
 r = KQ['ve']
+VB = [v for f in KHOA for u in json.load(open(MANG + f + '.json')) for v in u.get('van_ban', []) if v['id'] == 'T4']
+print('Vè đã gắn yêu cầu 65:', sum(1 for v in VB if 'yeu_cau' in v), '/', len(VB), '; đánh dấu cần viết lại:', sum(1 for v in VB if 'Cần viết lại' in v.get('yeu_cau', '')))
 print(f"{len(r)} vè; dưới 4 dòng: {sum(1 for x in r if x['so_dong'] < 4)}; có dòng đếm 'one, two…': {sum(1 for x in r if x['dem_dem'])}")
 print('\n== 66: big book Unit 1 là câu chào ==', [x['khoa'] for x in KQ['chao']])

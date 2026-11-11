@@ -43,13 +43,13 @@ info = [
     [''],
     ['Lớp', 'Lớp Little Seed offline, con 4–5 tuổi, chưa học PreB. Thiết kế độc lập với lớp Seedling 48 buổi; không đổi khung 9 khóa.'],
     ['Nhịp', d['nhip']],
-    ['Số lượng', '48 buổi × 90′ trên lớp, 99 ngày web, 26 tuần. Web luôn đi trước buổi lớp; buổi lớp dạy kỹ, sửa và mở rộng các ngày web vừa làm.'],
+    ['Số lượng', 'Buổi 0 khai giảng + 48 buổi × 90′ trên lớp, 99 ngày web, 26 tuần. Web luôn đi trước buổi lớp; buổi lớp dạy kỹ, sửa và mở rộng các ngày web vừa làm.'],
     ['Bố cục', 'Tuần 1–3: Unit 1 (ngày 1–9, buổi 1–3) theo mạng văn bản mới. Tuần 4–25: Unit 2–12, mỗi unit 8 ngày web (5 ngày Phần + 3 ngày Cả truyện) và 4 buổi (Introduce → Repeat + Introduce → Practice + Introduce → Produce). Tuần 26: ôn cả khóa, Album gia đình, buổi 48 mời phụ huynh.'],
     ['Lấy từ đâu', 'Unit 2–12 và buổi cuối dùng nguyên ô của khung 9 khóa (tab Little Seed, buổi 7–56) đánh số lại. Unit 1 dùng mạng văn bản trọn U1 (Bông\'s Day, 5 phần). Ô truyện có nhãn [Bản cũ] được thay khi viết truyện khung từng unit.'],
     ['Bỏ so với khung 9 khóa', '2 buổi mở khóa ôn PreB (buổi 1–2), 2 tuần ôn chặng (buổi 19–20, 37–38), 2 tuần lễ hội (buổi 57–60). Ôn chặng thay bằng 15′ trò chơi quét lại ở buổi Produce của Unit 4, 8, 12 (buổi 15, 31, 47) và Hộp ôn trên web. Lễ hội có thể chèn theo lịch thật, không tính vào 48 buổi.'],
     ['Từ PreB', 'Lớp chưa học PreB: từ PreB không có trong Little Seed được dạy lại ở unit cùng chủ đề, mức Nền (tranh + tiếng, nghe – chạm, chưa bắt nói). Xem tab "Từ PreB dạy lại". "Ôn (PreB)" của khung 9 khóa đổi thành "Nền PreB (dạy lại)".'],
     ['Sửa dữ liệu', 'Unit 5: "tyre" → bỏ (đã có tired), theo hướng sửa an toàn của tab Duyệt.'],
-    ['Sửa v2 (10/11 khuya)', 'Theo nguyên tắc 61–68: mỗi unit có chỉ tiêu 4 mặt cho truyện khung (tab "Chỉ tiêu 4 mặt", cột "Chỉ tiêu truyện" ở tab Mạch từ); truyện bản mới U2, U3, U9, U12 (chờ duyệt) thay ô truyện; vè mới U2, U3, U9, U12; chào đầu và cuối buổi bằng hai vè chào (buổi 1 = khai giảng, hát câu 1–2; buổi 2 hát trọn); U1 không có big book câu chào.'],
+    ['Sửa v2 (10/11 khuya)', 'Theo nguyên tắc 61–68: mỗi unit có chỉ tiêu 4 mặt cho truyện khung (tab "Chỉ tiêu 4 mặt", cột "Chỉ tiêu truyện" ở tab Mạch từ); truyện bản mới U2, U3, U9, U12 (chờ duyệt) thay ô truyện; vè mới U2, U3, U9, U12; chào đầu và cuối buổi bằng hai vè chào (buổi 0 = khai giảng (thêm, ngoài 48 buổi), hát câu 1–2; buổi 1 hát trọn); U1 không có big book câu chào.'],
     ['Web cho con 4–5 tuổi', 'Web không hiện chữ cho con (chỉ tranh, tiếng, lời dặn tiếng Việt); cô bật ?gv=1 thì thấy chữ. Mỗi ngày ≤5 bước, mỗi bài 5–10 câu, sai không chặn. Xem tab "Bước ngày web".'],
     [''],
     ['Em tự chọn, chờ chị duyệt'],
@@ -137,6 +137,8 @@ SHEET_HDR = [['', 'Nội dung đẩy lên web'] + [''] * 10 + ['Nội dung dạy
               'Flash card', 'Slide có bài tập tương tác', 'Truyện', 'Bài hát', 'Flash card', 'Slide có bài tập tương tác', 'Truyện', 'Bài hát', '7 khối']]
 grid_rows = []
 for b in buoi:
+    if not b['ngay_web']:
+        grid_rows.append([b['label']] + [''] * 11 + [b['label']] + [b['lop']['en'][k] for k in ('flash', 'slide', 'truyen', 'baihat')] + [b['lop']['zh'][k] for k in ('flash', 'slide', 'truyen', 'baihat')] + [b['ke_hoach_90']])
     for n in b['ngay_web']:
         x = dmap[n]
         r = [x['label']] + [x['en'][k] for k in ('tu', 'cum', 'cau', 'truyen', 'video')] + [x['zh'][k] for k in ('tu', 'cum', 'cau', 'truyen', 'video')]

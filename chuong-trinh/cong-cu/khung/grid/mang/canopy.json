@@ -1147,12 +1147,12 @@
    "zh": []
   },
   "T1_do_dai": [
-   20,
-   30
+   55,
+   61
   ],
   "T1_do_dai_zh": [
-   26,
-   45
+   60,
+   67
   ],
   "co_unit_truoc": true,
   "tu_hay_sai": {
@@ -1303,7 +1303,8 @@
      "十二月",
      "一点",
      "两点"
-    ]
+    ],
+    "yeu_cau": "Mỗi phần 55–61 chữ Anh, ~6,0 chữ/câu; 60–67 chữ Hán, ~5,0 chữ/câu; độ liền mạch: 4–5 lượt nói liền. Cấu trúc đề đưa vào khung: behind/between/in front of, 了. Mỗi phần có vấn đề → giải quyết, dừng ở chỗ muốn nghe tiếp; dùng lại ≥2 mẫu câu cũ; không câu nào lặp y hệt quá 2 lần (ng.t. 61b, 62–64)"
    },
    {
     "id": "T2",
@@ -1409,7 +1410,8 @@
      "日历",
      "对",
      "不对"
-    ]
+    ],
+    "yeu_cau": "Theo ng.t. 65: 4 dòng × 4 phách, dòng đều (~7 âm tiết), vần AABB vào từ có nghĩa (tiếng Trung cùng vận mẫu), không dòng đệm số đếm, có mở → trao đổi → đóng, gọi – đáp vòng lớp có ô tên con; từ trong vè dạy trước (ng.t. 67). Cần viết lại: mới có 1 dòng công thức"
    },
    {
     "id": "T6",
@@ -1665,7 +1667,19 @@
     "Oh no! / 哎呀！"
    ],
    "mo_khoa": "mở khi con học tới unit này; đồ unit cũ giữ nguyên (ng.t. 56)"
-  }
+  },
+  "T1_cau": 6.0,
+  "T1_cau_zh": 5.0,
+  "T1_lien": "4–5 lượt nói liền",
+  "cau_truc_de": {
+   "en": [
+    "behind/between/in front of"
+   ],
+   "zh": [
+    "了"
+   ]
+  },
+  "chi_tieu_4mat": "Mỗi phần 55–61 chữ Anh, ~6,0 chữ/câu; 60–67 chữ Hán, ~5,0 chữ/câu; độ liền mạch: 4–5 lượt nói liền"
  },
  {
   "unit": "2",
@@ -2688,12 +2702,12 @@
    ]
   },
   "T1_do_dai": [
-   20,
-   30
+   57,
+   64
   ],
   "T1_do_dai_zh": [
-   26,
-   45
+   61,
+   68
   ],
   "co_unit_truoc": true,
   "tu_hay_sai": {
@@ -2838,7 +2852,8 @@
      "吉他",
      "滑板",
      "运动"
-    ]
+    ],
+    "yeu_cau": "Mỗi phần 57–64 chữ Anh, ~6,1 chữ/câu; 61–68 chữ Hán, ~5,2 chữ/câu; độ liền mạch: 4–5 lượt nói liền. Cấu trúc đề đưa vào khung: like + V-ing, 会. Mỗi phần có vấn đề → giải quyết, dừng ở chỗ muốn nghe tiếp; dùng lại ≥2 mẫu câu cũ (gợi ý: It's ___ now.); không câu nào lặp y hệt quá 2 lần (ng.t. 61b, 62–64)"
    },
    {
     "id": "T2",
@@ -2937,7 +2952,8 @@
      "踢",
      "运动",
      "多少"
-    ]
+    ],
+    "yeu_cau": "Theo ng.t. 65: 4 dòng × 4 phách, dòng đều (~7 âm tiết), vần AABB vào từ có nghĩa (tiếng Trung cùng vận mẫu), không dòng đệm số đếm, có mở → trao đổi → đóng, gọi – đáp vòng lớp có ô tên con; từ trong vè dạy trước (ng.t. 67)"
    },
    {
     "id": "T5",
@@ -3218,7 +3234,19 @@
     "Wow! / 哇！"
    ],
    "mo_khoa": "mở khi con học tới unit này; đồ unit cũ giữ nguyên (ng.t. 56)"
-  }
+  },
+  "T1_cau": 6.1,
+  "T1_cau_zh": 5.2,
+  "T1_lien": "4–5 lượt nói liền",
+  "cau_truc_de": {
+   "en": [
+    "like + V-ing"
+   ],
+   "zh": [
+    "会"
+   ]
+  },
+  "chi_tieu_4mat": "Mỗi phần 57–64 chữ Anh, ~6,1 chữ/câu; 61–68 chữ Hán, ~5,2 chữ/câu; độ liền mạch: 4–5 lượt nói liền"
  },
  {
   "unit": "3",
@@ -4179,12 +4207,12 @@
    ]
   },
   "T1_do_dai": [
-   20,
-   30
+   59,
+   66
   ],
   "T1_do_dai_zh": [
-   26,
-   45
+   63,
+   70
   ],
   "co_unit_truoc": true,
   "tu_hay_sai": {
@@ -4326,7 +4354,8 @@
      "铅笔",
      "作业",
      "汉语"
-    ]
+    ],
+    "yeu_cau": "Mỗi phần 59–66 chữ Anh, ~6,2 chữ/câu; 63–70 chữ Hán, ~5,4 chữ/câu; độ liền mạch: 4–5 lượt nói liền. Cấu trúc đề đưa vào khung: Whose/Which…?, 比. Mỗi phần có vấn đề → giải quyết, dừng ở chỗ muốn nghe tiếp; dùng lại ≥2 mẫu câu cũ (gợi ý: It's ___ now. · My present is a ___.); không câu nào lặp y hệt quá 2 lần (ng.t. 61b, 62–64)"
    },
    {
     "id": "T2",
@@ -4430,7 +4459,8 @@
      "刷牙",
      "说话",
      "每天"
-    ]
+    ],
+    "yeu_cau": "Theo ng.t. 65: 4 dòng × 4 phách, dòng đều (~7 âm tiết), vần AABB vào từ có nghĩa (tiếng Trung cùng vận mẫu), không dòng đệm số đếm, có mở → trao đổi → đóng, gọi – đáp vòng lớp có ô tên con; từ trong vè dạy trước (ng.t. 67). Cần viết lại: mới có 1 dòng công thức"
    },
    {
     "id": "T6",
@@ -4687,7 +4717,19 @@
     "Me too! / 我也是！"
    ],
    "mo_khoa": "mở khi con học tới unit này; đồ unit cũ giữ nguyên (ng.t. 56)"
-  }
+  },
+  "T1_cau": 6.2,
+  "T1_cau_zh": 5.4,
+  "T1_lien": "4–5 lượt nói liền",
+  "cau_truc_de": {
+   "en": [
+    "Whose/Which…?"
+   ],
+   "zh": [
+    "比"
+   ]
+  },
+  "chi_tieu_4mat": "Mỗi phần 59–66 chữ Anh, ~6,2 chữ/câu; 63–70 chữ Hán, ~5,4 chữ/câu; độ liền mạch: 4–5 lượt nói liền"
  },
  {
   "unit": "4",
@@ -5752,12 +5794,12 @@
    ]
   },
   "T1_do_dai": [
-   20,
-   30
+   60,
+   67
   ],
   "T1_do_dai_zh": [
-   26,
-   45
+   64,
+   72
   ],
   "co_unit_truoc": true,
   "tu_hay_sai": {
@@ -5903,7 +5945,8 @@
      "电脑",
      "羽毛球",
      "放风筝"
-    ]
+    ],
+    "yeu_cau": "Mỗi phần 60–67 chữ Anh, ~6,3 chữ/câu; 64–72 chữ Hán, ~5,5 chữ/câu; độ liền mạch: 4–5 lượt nói liền. Cấu trúc đề đưa vào khung: đánh vần tên (Listening P2), 没(有). Mỗi phần có vấn đề → giải quyết, dừng ở chỗ muốn nghe tiếp; dùng lại ≥2 mẫu câu cũ (gợi ý: It's ___ now. · My present is a ___. · Every day, I ___.); không câu nào lặp y hệt quá 2 lần (ng.t. 61b, 62–64)"
    },
    {
     "id": "T2",
@@ -6007,7 +6050,8 @@
      "游戏",
      "觉得",
      "才艺"
-    ]
+    ],
+    "yeu_cau": "Theo ng.t. 65: 4 dòng × 4 phách, dòng đều (~7 âm tiết), vần AABB vào từ có nghĩa (tiếng Trung cùng vận mẫu), không dòng đệm số đếm, có mở → trao đổi → đóng, gọi – đáp vòng lớp có ô tên con; từ trong vè dạy trước (ng.t. 67). Cần viết lại: mới có 1 dòng công thức, có dòng đếm làm đệm"
    },
    {
     "id": "T6",
@@ -6268,7 +6312,19 @@
     "Me too! / 我也是！"
    ],
    "mo_khoa": "mở khi con học tới unit này; đồ unit cũ giữ nguyên (ng.t. 56)"
-  }
+  },
+  "T1_cau": 6.3,
+  "T1_cau_zh": 5.5,
+  "T1_lien": "4–5 lượt nói liền",
+  "cau_truc_de": {
+   "en": [
+    "đánh vần tên (Listening P2)"
+   ],
+   "zh": [
+    "没(有)"
+   ]
+  },
+  "chi_tieu_4mat": "Mỗi phần 60–67 chữ Anh, ~6,3 chữ/câu; 64–72 chữ Hán, ~5,5 chữ/câu; độ liền mạch: 4–5 lượt nói liền"
  },
  {
   "unit": "5",
@@ -7197,12 +7253,12 @@
    ]
   },
   "T1_do_dai": [
-   20,
-   30
+   62,
+   69
   ],
   "T1_do_dai_zh": [
-   26,
-   45
+   65,
+   73
   ],
   "co_unit_truoc": true,
   "tu_hay_sai": {
@@ -7343,7 +7399,8 @@
      "街",
      "东西",
      "上午"
-    ]
+    ],
+    "yeu_cau": "Mỗi phần 62–69 chữ Anh, ~6,4 chữ/câu; 65–73 chữ Hán, ~5,7 chữ/câu; độ liền mạch: 4–5 lượt nói liền. Cấu trúc đề đưa vào khung: and/but trong câu dài, 可以. Mỗi phần có vấn đề → giải quyết, dừng ở chỗ muốn nghe tiếp; dùng lại ≥2 mẫu câu cũ (gợi ý: My present is a ___. · Every day, I ___. · I like ___.); không câu nào lặp y hệt quá 2 lần (ng.t. 61b, 62–64)"
    },
    {
     "id": "T2",
@@ -7455,7 +7512,8 @@
      "零",
      "家人",
      "下午"
-    ]
+    ],
+    "yeu_cau": "Theo ng.t. 65: 4 dòng × 4 phách, dòng đều (~7 âm tiết), vần AABB vào từ có nghĩa (tiếng Trung cùng vận mẫu), không dòng đệm số đếm, có mở → trao đổi → đóng, gọi – đáp vòng lớp có ô tên con; từ trong vè dạy trước (ng.t. 67). Cần viết lại: mới có 1 dòng công thức"
    },
    {
     "id": "T6",
@@ -7710,7 +7768,19 @@
     "See you! / 再见！"
    ],
    "mo_khoa": "mở khi con học tới unit này; đồ unit cũ giữ nguyên (ng.t. 56)"
-  }
+  },
+  "T1_cau": 6.4,
+  "T1_cau_zh": 5.7,
+  "T1_lien": "4–5 lượt nói liền",
+  "cau_truc_de": {
+   "en": [
+    "and/but trong câu dài"
+   ],
+   "zh": [
+    "可以"
+   ]
+  },
+  "chi_tieu_4mat": "Mỗi phần 62–69 chữ Anh, ~6,4 chữ/câu; 65–73 chữ Hán, ~5,7 chữ/câu; độ liền mạch: 4–5 lượt nói liền"
  },
  {
   "unit": "6",
@@ -8444,12 +8514,12 @@
    "zh": []
   },
   "T1_do_dai": [
-   20,
-   30
+   64,
+   72
   ],
   "T1_do_dai_zh": [
-   26,
-   45
+   67,
+   75
   ],
   "co_unit_truoc": true,
   "tu_hay_sai": {
@@ -8584,7 +8654,8 @@
      "消防员",
      "我姐姐",
      "我哥哥"
-    ]
+    ],
+    "yeu_cau": "Mỗi phần 64–72 chữ Anh, ~6,5 chữ/câu; 67–75 chữ Hán, ~5,9 chữ/câu; độ liền mạch: 4–5 lượt nói liền. Cấu trúc đề đưa vào khung: hiện tại đơn ngôi 3 (does/doesn't), 也. Mỗi phần có vấn đề → giải quyết, dừng ở chỗ muốn nghe tiếp; dùng lại ≥2 mẫu câu cũ (gợi ý: Every day, I ___. · I like ___. · I go to the ___.); không câu nào lặp y hệt quá 2 lần (ng.t. 61b, 62–64)"
    },
    {
     "id": "T2",
@@ -8698,7 +8769,8 @@
      "大家",
      "都",
      "农民"
-    ]
+    ],
+    "yeu_cau": "Theo ng.t. 65: 4 dòng × 4 phách, dòng đều (~7 âm tiết), vần AABB vào từ có nghĩa (tiếng Trung cùng vận mẫu), không dòng đệm số đếm, có mở → trao đổi → đóng, gọi – đáp vòng lớp có ô tên con; từ trong vè dạy trước (ng.t. 67). Cần viết lại: mới có 1 dòng công thức, có dòng đếm làm đệm"
    },
    {
     "id": "T5",
@@ -8972,7 +9044,19 @@
     "What is your job? / 你做什么工作？"
    ],
    "mo_khoa": "mở khi con học tới unit này; đồ unit cũ giữ nguyên (ng.t. 56)"
-  }
+  },
+  "T1_cau": 6.5,
+  "T1_cau_zh": 5.9,
+  "T1_lien": "4–5 lượt nói liền",
+  "cau_truc_de": {
+   "en": [
+    "hiện tại đơn ngôi 3 (does/doesn't)"
+   ],
+   "zh": [
+    "也"
+   ]
+  },
+  "chi_tieu_4mat": "Mỗi phần 64–72 chữ Anh, ~6,5 chữ/câu; 67–75 chữ Hán, ~5,9 chữ/câu; độ liền mạch: 4–5 lượt nói liền"
  },
  {
   "unit": "7",
@@ -9812,12 +9896,12 @@
    "zh": []
   },
   "T1_do_dai": [
-   20,
-   30
+   66,
+   74
   ],
   "T1_do_dai_zh": [
-   26,
-   45
+   68,
+   76
   ],
   "co_unit_truoc": true,
   "tu_hay_sai": {
@@ -9954,7 +10038,8 @@
      "出租车",
      "直升机",
      "卡车"
-    ]
+    ],
+    "yeu_cau": "Mỗi phần 66–74 chữ Anh, ~6,5 chữ/câu; 68–76 chữ Hán, ~6,1 chữ/câu; độ liền mạch: 4–5 lượt nói liền. Cấu trúc đề đưa vào khung: can/can't hỏi – đáp, 呢. Mỗi phần có vấn đề → giải quyết, dừng ở chỗ muốn nghe tiếp; dùng lại ≥2 mẫu câu cũ (gợi ý: I like ___. · I go to the ___. · What is your job? I am a ___.); không câu nào lặp y hệt quá 2 lần (ng.t. 61b, 62–64)"
    },
    {
     "id": "T2",
@@ -10062,7 +10147,8 @@
      "上班",
      "北京",
      "上海"
-    ]
+    ],
+    "yeu_cau": "Theo ng.t. 65: 4 dòng × 4 phách, dòng đều (~7 âm tiết), vần AABB vào từ có nghĩa (tiếng Trung cùng vận mẫu), không dòng đệm số đếm, có mở → trao đổi → đóng, gọi – đáp vòng lớp có ô tên con; từ trong vè dạy trước (ng.t. 67). Cần viết lại: mới có 1 dòng công thức"
    },
    {
     "id": "T6",
@@ -10305,7 +10391,19 @@
     "Let's go! / 走吧！"
    ],
    "mo_khoa": "mở khi con học tới unit này; đồ unit cũ giữ nguyên (ng.t. 56)"
-  }
+  },
+  "T1_cau": 6.5,
+  "T1_cau_zh": 6.1,
+  "T1_lien": "4–5 lượt nói liền",
+  "cau_truc_de": {
+   "en": [
+    "can/can't hỏi – đáp"
+   ],
+   "zh": [
+    "呢"
+   ]
+  },
+  "chi_tieu_4mat": "Mỗi phần 66–74 chữ Anh, ~6,5 chữ/câu; 68–76 chữ Hán, ~6,1 chữ/câu; độ liền mạch: 4–5 lượt nói liền"
  },
  {
   "unit": "8",
@@ -11072,12 +11170,12 @@
    ]
   },
   "T1_do_dai": [
-   20,
-   30
+   68,
+   76
   ],
   "T1_do_dai_zh": [
-   26,
-   45
+   70,
+   78
   ],
   "co_unit_truoc": true,
   "tu_hay_sai": {
@@ -11211,7 +11309,8 @@
      "斑马",
      "熊",
      "钱"
-    ]
+    ],
+    "yeu_cau": "Mỗi phần 68–76 chữ Anh, ~6,6 chữ/câu; 70–78 chữ Hán, ~6,3 chữ/câu; độ liền mạch: 4–5 lượt nói liền. Cấu trúc đề đưa vào khung: there is/are + số nhiều, 怎么样. Mỗi phần có vấn đề → giải quyết, dừng ở chỗ muốn nghe tiếp; dùng lại ≥2 mẫu câu cũ (gợi ý: I go to the ___. · What is your job? I am a ___. · I go by ___.); không câu nào lặp y hệt quá 2 lần (ng.t. 61b, 62–64)"
    },
    {
     "id": "T2",
@@ -11320,7 +11419,8 @@
      "猴子",
      "熊猫",
      "可是"
-    ]
+    ],
+    "yeu_cau": "Theo ng.t. 65: 4 dòng × 4 phách, dòng đều (~7 âm tiết), vần AABB vào từ có nghĩa (tiếng Trung cùng vận mẫu), không dòng đệm số đếm, có mở → trao đổi → đóng, gọi – đáp vòng lớp có ô tên con; từ trong vè dạy trước (ng.t. 67). Cần viết lại: mới có 1 dòng công thức, có dòng đếm làm đệm"
    },
    {
     "id": "T6",
@@ -11553,7 +11653,19 @@
     "It's so long! / 好长啊！"
    ],
    "mo_khoa": "mở khi con học tới unit này; đồ unit cũ giữ nguyên (ng.t. 56)"
-  }
+  },
+  "T1_cau": 6.6,
+  "T1_cau_zh": 6.3,
+  "T1_lien": "4–5 lượt nói liền",
+  "cau_truc_de": {
+   "en": [
+    "there is/are + số nhiều"
+   ],
+   "zh": [
+    "怎么样"
+   ]
+  },
+  "chi_tieu_4mat": "Mỗi phần 68–76 chữ Anh, ~6,6 chữ/câu; 70–78 chữ Hán, ~6,3 chữ/câu; độ liền mạch: 4–5 lượt nói liền"
  },
  {
   "unit": "9",
@@ -12524,12 +12636,12 @@
    "zh": []
   },
   "T1_do_dai": [
-   20,
-   30
+   70,
+   78
   ],
   "T1_do_dai_zh": [
-   26,
-   45
+   71,
+   79
   ],
   "co_unit_truoc": true,
   "tu_hay_sai": {
@@ -12668,7 +12780,8 @@
      "打扫",
      "年轻",
      "垫子"
-    ]
+    ],
+    "yeu_cau": "Mỗi phần 70–78 chữ Anh, ~6,7 chữ/câu; 71–79 chữ Hán, ~6,5 chữ/câu; độ liền mạch: 4–5 lượt nói liền. Cấu trúc đề đưa vào khung: and/but trong câu dài, 多少. Mỗi phần có vấn đề → giải quyết, dừng ở chỗ muốn nghe tiếp; dùng lại ≥2 mẫu câu cũ (gợi ý: What is your job? I am a ___. · I go by ___. · What animal is it? It's a ___!); không câu nào lặp y hệt quá 2 lần (ng.t. 61b, 62–64)"
    },
    {
     "id": "T2",
@@ -12778,7 +12891,8 @@
      "墙",
      "谷仓",
      "垫子"
-    ]
+    ],
+    "yeu_cau": "Theo ng.t. 65: 4 dòng × 4 phách, dòng đều (~7 âm tiết), vần AABB vào từ có nghĩa (tiếng Trung cùng vận mẫu), không dòng đệm số đếm, có mở → trao đổi → đóng, gọi – đáp vòng lớp có ô tên con; từ trong vè dạy trước (ng.t. 67). Cần viết lại: mới có 1 dòng công thức"
    },
    {
     "id": "T5",
@@ -13063,7 +13177,19 @@
     "So cute! / 真可爱！"
    ],
    "mo_khoa": "mở khi con học tới unit này; đồ unit cũ giữ nguyên (ng.t. 56)"
-  }
+  },
+  "T1_cau": 6.7,
+  "T1_cau_zh": 6.5,
+  "T1_lien": "4–5 lượt nói liền",
+  "cau_truc_de": {
+   "en": [
+    "and/but trong câu dài"
+   ],
+   "zh": [
+    "多少"
+   ]
+  },
+  "chi_tieu_4mat": "Mỗi phần 70–78 chữ Anh, ~6,7 chữ/câu; 71–79 chữ Hán, ~6,5 chữ/câu; độ liền mạch: 4–5 lượt nói liền"
  },
  {
   "unit": "10",
@@ -14042,12 +14168,12 @@
    ]
   },
   "T1_do_dai": [
-   20,
-   30
+   71,
+   79
   ],
   "T1_do_dai_zh": [
-   26,
-   45
+   72,
+   81
   ],
   "co_unit_truoc": true,
   "tu_hay_sai": {
@@ -14190,7 +14316,8 @@
      "穿过",
      "大自然",
      "摘"
-    ]
+    ],
+    "yeu_cau": "Mỗi phần 71–79 chữ Anh, ~6,8 chữ/câu; 72–81 chữ Hán, ~6,6 chữ/câu; độ liền mạch: 4–5 lượt nói liền. Cấu trúc đề đưa vào khung: hiện tại đơn ngôi 3 (does/doesn't), 了. Mỗi phần có vấn đề → giải quyết, dừng ở chỗ muốn nghe tiếp; dùng lại ≥2 mẫu câu cũ (gợi ý: I go by ___. · What animal is it? It's a ___! · On the farm, there is a ___.); không câu nào lặp y hệt quá 2 lần (ng.t. 61b, 62–64)"
    },
    {
     "id": "T2",
@@ -14293,7 +14420,8 @@
      "海边",
      "水母",
      "可以"
-    ]
+    ],
+    "yeu_cau": "Theo ng.t. 65: 4 dòng × 4 phách, dòng đều (~7 âm tiết), vần AABB vào từ có nghĩa (tiếng Trung cùng vận mẫu), không dòng đệm số đếm, có mở → trao đổi → đóng, gọi – đáp vòng lớp có ô tên con; từ trong vè dạy trước (ng.t. 67). Cần viết lại: mới có 1 dòng công thức"
    },
    {
     "id": "T6",
@@ -14547,7 +14675,19 @@
     "Good night, moon! / 月亮，晚安！"
    ],
    "mo_khoa": "mở khi con học tới unit này; đồ unit cũ giữ nguyên (ng.t. 56)"
-  }
+  },
+  "T1_cau": 6.8,
+  "T1_cau_zh": 6.6,
+  "T1_lien": "4–5 lượt nói liền",
+  "cau_truc_de": {
+   "en": [
+    "hiện tại đơn ngôi 3 (does/doesn't)"
+   ],
+   "zh": [
+    "了"
+   ]
+  },
+  "chi_tieu_4mat": "Mỗi phần 71–79 chữ Anh, ~6,8 chữ/câu; 72–81 chữ Hán, ~6,6 chữ/câu; độ liền mạch: 4–5 lượt nói liền"
  },
  {
   "unit": "11",
@@ -15411,12 +15551,12 @@
    ]
   },
   "T1_do_dai": [
-   20,
-   30
+   73,
+   82
   ],
   "T1_do_dai_zh": [
-   26,
-   45
+   74,
+   83
   ],
   "co_unit_truoc": true,
   "tu_hay_sai": {
@@ -15554,7 +15694,8 @@
      "门后面",
      "躲",
      "中间"
-    ]
+    ],
+    "yeu_cau": "Mỗi phần 73–82 chữ Anh, ~6,9 chữ/câu; 74–83 chữ Hán, ~6,8 chữ/câu; độ liền mạch: 4–5 lượt nói liền. Cấu trúc đề đưa vào khung: can/can't hỏi – đáp, 会. Mỗi phần có vấn đề → giải quyết, dừng ở chỗ muốn nghe tiếp; dùng lại ≥2 mẫu câu cũ (gợi ý: What animal is it? It's a ___! · On the farm, there is a ___. · I can see a ___.); không câu nào lặp y hệt quá 2 lần (ng.t. 61b, 62–64)"
    },
    {
     "id": "T2",
@@ -15658,7 +15799,8 @@
      "有",
      "忙",
      "再"
-    ]
+    ],
+    "yeu_cau": "Theo ng.t. 65: 4 dòng × 4 phách, dòng đều (~7 âm tiết), vần AABB vào từ có nghĩa (tiếng Trung cùng vận mẫu), không dòng đệm số đếm, có mở → trao đổi → đóng, gọi – đáp vòng lớp có ô tên con; từ trong vè dạy trước (ng.t. 67). Cần viết lại: mới có 1 dòng công thức"
    },
    {
     "id": "T6",
@@ -15912,7 +16054,19 @@
     "I'm fine! / 我很好！"
    ],
    "mo_khoa": "mở khi con học tới unit này; đồ unit cũ giữ nguyên (ng.t. 56)"
-  }
+  },
+  "T1_cau": 6.9,
+  "T1_cau_zh": 6.8,
+  "T1_lien": "4–5 lượt nói liền",
+  "cau_truc_de": {
+   "en": [
+    "can/can't hỏi – đáp"
+   ],
+   "zh": [
+    "会"
+   ]
+  },
+  "chi_tieu_4mat": "Mỗi phần 73–82 chữ Anh, ~6,9 chữ/câu; 74–83 chữ Hán, ~6,8 chữ/câu; độ liền mạch: 4–5 lượt nói liền"
  },
  {
   "unit": "12",
@@ -16868,12 +17022,12 @@
    ]
   },
   "T1_do_dai": [
-   20,
-   30
+   75,
+   84
   ],
   "T1_do_dai_zh": [
-   26,
-   45
+   75,
+   84
   ],
   "co_unit_truoc": true,
   "tu_hay_sai": {
@@ -17015,7 +17169,8 @@
      "土豆",
      "柠檬水",
      "苹果派"
-    ]
+    ],
+    "yeu_cau": "Mỗi phần 75–84 chữ Anh, ~7,0 chữ/câu; 75–84 chữ Hán, ~7,0 chữ/câu; độ liền mạch: 4–5 lượt nói liền. Cấu trúc đề đưa vào khung: there is/are + số nhiều, 比. Mỗi phần có vấn đề → giải quyết, dừng ở chỗ muốn nghe tiếp; dùng lại ≥2 mẫu câu cũ (gợi ý: On the farm, there is a ___. · I can see a ___. · The teddy is ___ the box.); không câu nào lặp y hệt quá 2 lần (ng.t. 61b, 62–64)"
    },
    {
     "id": "T2",
@@ -17120,7 +17275,8 @@
      "问",
      "太……了",
      "得"
-    ]
+    ],
+    "yeu_cau": "Theo ng.t. 65: 4 dòng × 4 phách, dòng đều (~7 âm tiết), vần AABB vào từ có nghĩa (tiếng Trung cùng vận mẫu), không dòng đệm số đếm, có mở → trao đổi → đóng, gọi – đáp vòng lớp có ô tên con; từ trong vè dạy trước (ng.t. 67). Cần viết lại: mới có 1 dòng công thức, có dòng đếm làm đệm"
    },
    {
     "id": "T6",
@@ -17374,6 +17530,18 @@
     "Please! / 请！"
    ],
    "mo_khoa": "mở khi con học tới unit này; đồ unit cũ giữ nguyên (ng.t. 56)"
-  }
+  },
+  "T1_cau": 7.0,
+  "T1_cau_zh": 7.0,
+  "T1_lien": "4–5 lượt nói liền",
+  "cau_truc_de": {
+   "en": [
+    "there is/are + số nhiều"
+   ],
+   "zh": [
+    "比"
+   ]
+  },
+  "chi_tieu_4mat": "Mỗi phần 75–84 chữ Anh, ~7,0 chữ/câu; 75–84 chữ Hán, ~7,0 chữ/câu; độ liền mạch: 4–5 lượt nói liền"
  }
 ]

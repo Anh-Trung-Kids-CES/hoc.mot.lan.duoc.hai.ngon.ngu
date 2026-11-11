@@ -547,7 +547,8 @@
      "去年",
      "半",
      "多久"
-    ]
+    ],
+    "yeu_cau": "Độ dài theo đề (ng.t. 62c): mỗi câu nghe 20–60 chữ, 3–6 lượt (Movers); hội thoại YCT3 15–30 chữ Hán"
    },
    {
     "id": "N2",
@@ -576,7 +577,8 @@
      "去年",
      "半",
      "多久"
-    ]
+    ],
+    "yeu_cau": "Độ dài theo đề (ng.t. 62c): truyện/đoạn đọc 190–230 chữ, 9–10 chữ/câu (Movers); đoạn YCT3 ~25 chữ Hán"
    }
   ],
   "dem_vong_ngoai": {
@@ -930,7 +932,8 @@
      "办公室",
      "食堂",
      "左"
-    ]
+    ],
+    "yeu_cau": "Độ dài theo đề (ng.t. 62c): mỗi câu nghe 20–60 chữ, 3–6 lượt (Movers); hội thoại YCT3 15–30 chữ Hán"
    },
    {
     "id": "N2",
@@ -949,7 +952,8 @@
      "办公室",
      "食堂",
      "左"
-    ]
+    ],
+    "yeu_cau": "Độ dài theo đề (ng.t. 62c): truyện/đoạn đọc 190–230 chữ, 9–10 chữ/câu (Movers); đoạn YCT3 ~25 chữ Hán"
    }
   ],
   "dem_vong_ngoai": {
@@ -1473,7 +1477,8 @@
      "咖啡店",
      "美元",
      "元"
-    ]
+    ],
+    "yeu_cau": "Độ dài theo đề (ng.t. 62c): mỗi câu nghe 20–60 chữ, 3–6 lượt (Movers); hội thoại YCT3 15–30 chữ Hán"
    },
    {
     "id": "N2",
@@ -1499,7 +1504,8 @@
      "咖啡店",
      "美元",
      "元"
-    ]
+    ],
+    "yeu_cau": "Độ dài theo đề (ng.t. 62c): truyện/đoạn đọc 190–230 chữ, 9–10 chữ/câu (Movers); đoạn YCT3 ~25 chữ Hán"
    }
   ],
   "dem_vong_ngoai": {
@@ -2062,7 +2068,8 @@
      "快",
      "发烧",
      "袋鼠"
-    ]
+    ],
+    "yeu_cau": "Độ dài theo đề (ng.t. 62c): mỗi câu nghe 20–60 chữ, 3–6 lượt (Movers); hội thoại YCT3 15–30 chữ Hán"
    },
    {
     "id": "N2",
@@ -2089,7 +2096,8 @@
      "快",
      "发烧",
      "袋鼠"
-    ]
+    ],
+    "yeu_cau": "Độ dài theo đề (ng.t. 62c): truyện/đoạn đọc 190–230 chữ, 9–10 chữ/câu (Movers); đoạn YCT3 ~25 chữ Hán"
    }
   ],
   "dem_vong_ngoai": {
@@ -2426,7 +2434,8 @@
     ],
     "tu_zh": [
      "排球"
-    ]
+    ],
+    "yeu_cau": "Độ dài theo đề (ng.t. 62c): mỗi câu nghe 20–60 chữ, 3–6 lượt (Movers); hội thoại YCT3 15–30 chữ Hán"
    },
    {
     "id": "N2",
@@ -2444,7 +2453,8 @@
     ],
     "tu_zh": [
      "排球"
-    ]
+    ],
+    "yeu_cau": "Độ dài theo đề (ng.t. 62c): truyện/đoạn đọc 190–230 chữ, 9–10 chữ/câu (Movers); đoạn YCT3 ~25 chữ Hán"
    }
   ],
   "dem_vong_ngoai": {
@@ -2640,7 +2650,8 @@
     ],
     "tu_zh": [
      "地图"
-    ]
+    ],
+    "yeu_cau": "Độ dài theo đề (ng.t. 62c): mỗi câu nghe 20–60 chữ, 3–6 lượt (Movers); hội thoại YCT3 15–30 chữ Hán"
    },
    {
     "id": "N2",
@@ -2653,7 +2664,8 @@
     ],
     "tu_zh": [
      "地图"
-    ]
+    ],
+    "yeu_cau": "Độ dài theo đề (ng.t. 62c): truyện/đoạn đọc 190–230 chữ, 9–10 chữ/câu (Movers); đoạn YCT3 ~25 chữ Hán"
    }
   ],
   "dem_vong_ngoai": {

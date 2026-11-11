@@ -75,7 +75,9 @@ def main(as_json=False):
             lo_hi = r.get('T1_do_dai')
             mau_ = G + 'mang/mau_%s_u%s.json' % (c, r['unit'])
             if lo_hi and os.path.exists(mau_):
-                for i, part in enumerate(json.load(open(mau_))['T1']['en']):
+                _t1 = json.load(open(mau_))['T1']
+                _parts = _t1['en'] if 'en' in _t1 else [' '.join(s[1] for s in ph) for ph in _t1.get('phan', [])]
+                for i, part in enumerate(_parts):
                     n = len(re.findall(r"[^\W\d_][\w'’-]*|___", part))
                     if not (lo_hi[0] <= n <= lo_hi[1]):
                         red[8].append('%s: T1 phần %d có %d chữ, mức %d–%d' % (tag, i + 1, n, lo_hi[0], lo_hi[1]))

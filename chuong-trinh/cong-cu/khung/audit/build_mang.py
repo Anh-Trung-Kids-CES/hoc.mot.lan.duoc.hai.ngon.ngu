@@ -24,6 +24,77 @@ T1_LEN_ZH = {'preb': None, 'little-seed': (13, 22), 'seedling': (20, 30), 'canop
 COURSE_NAME = {'preb': 'PreB', 'little-seed': 'Little Seed', 'seedling': 'Seedling', 'canopy': 'Canopy', 'larva': 'Larva',
                'larva-plus': 'Larva Plus', 'pupa': 'Pupa', 'cocoon': 'Cocoon', 'butterfly': 'Butterfly'}
 
+# (10/11/2026, nguyên tắc 62 – chị duyệt) Thang 4 mặt thay NL-2: (đầu khóa, cuối khóa), nội suy theo unit.
+THANG = {  # khóa: (EN chữ/phần, EN chữ/câu, ZH chữ Hán/phần, ZH chữ Hán/câu, độ liền mạch)
+    'preb': ((6, 10), (1, 2), (3, 8), (1, 3), '1 câu – 1 tranh'),
+    'little-seed': ((10, 28), (2, 3), (13, 40), (3, 4), '1 hỏi – 1 đáp'),
+    'seedling': ((35, 55), (4, 5.5), (40, 60), (4, 5), '3 → 4 lượt nói liền quanh một chuyện'),
+    'canopy': ((55, 75), (6, 7), (60, 75), (5, 7), '4–5 lượt nói liền'),
+    'larva': ((75, 110), (7, 8), (75, 90), (7, 8), '2–3 sự việc nối nhau (then, because, so)'),
+    'larva-plus': ((110, 130), (8, 9), (90, 100), (8, 9), '3–4 sự việc'),
+    'pupa': ((120, 160), (9, 10), (100, 115), (9, 10), 'đoạn kể 4–5 sự việc'),
+    'cocoon': ((160, 220), (10, 12), (115, 130), (10, 11), '2 đoạn liền'),
+    'butterfly': ((200, 230), (12, 15), (130, 140), (10, 12), 'nhiều đoạn'),
+}
+# Mặt 4: cấu trúc của đề phải có trong khung câu trước mốc thi – phân cho từng khóa, máy xếp lần lượt vào các unit (sửa khi viết truyện)
+CAU_TRUC_KHOA = {
+    'seedling': (['there is/are', 'has got', 'hiện tại tiếp diễn (V-ing)', 'can/can\'t', 'giới từ in/on/under/next to', 'and/but', 'how many', 'what colour', 'sở hữu \'s', 'câu mệnh lệnh (Look at/Colour…)', 'like + V-ing', 'lời kể ngôi thứ ba'],
+                 ['是…吗', '有', '在 (nơi chốn)', '喜欢', '的', '很', '和', '谁/哪儿/什么/几']),
+    'canopy': (['behind/between/in front of', 'like + V-ing', 'Whose/Which…?', 'đánh vần tên (Listening P2)', 'and/but trong câu dài', 'hiện tại đơn ngôi 3 (does/doesn\'t)', 'can/can\'t hỏi – đáp', 'there is/are + số nhiều'],
+               ['了', '会', '比', '没(有)', '可以', '也', '呢', '怎么样', '多少']),
+    'larva': (['quá khứ đơn (was/were, V-ed, went…)', 'so sánh hơn (-er than)', 'so sánh nhất (the -est/most)', 'must/have to', 'would like to', 'mệnh đề who/which/that', 'because', 'so (liên từ)', 'Let\'s/How about…?', 'trạng từ (quickly, well)'],
+              ['在…呢 (đang)', '能', '得 (bổ ngữ)', '过 (kinh nghiệm)']),
+    'larva-plus': (['ôn đủ ngữ pháp Movers trong văn bản dạng đề'], ['把', '因为…所以', '是…的', '吧']),
+    'pupa': (['quá khứ tiếp diễn (was/were V-ing)', 'going to', 'will', 'could/should', 'shall (gợi ý)', 'What else/next?'],
+             ['要…了', '一边…一边', '比…更/还']),
+    'cocoon': (['hiện tại hoàn thành (have/has + V3, ever/never, yet/already)', 'if (điều kiện loại 0)', 'when/before/after/until + mệnh đề', 'might/may', 'câu hỏi đuôi', 'be made of', 'mệnh đề where', 'make + O + tính từ'],
+               ['越来越', '如果', '虽然…但是']),
+    'butterfly': (['ôn đủ ngữ pháp Flyers trong văn bản dạng đề'], ['ôn đủ cấu trúc YCT4 trong đoạn dạng đề']),
+}
+DE_KHOA_ON = {'larva-plus': {'N1': 'mỗi câu nghe 20–60 chữ, 3–6 lượt (Movers); hội thoại YCT3 15–30 chữ Hán', 'N2': 'truyện/đoạn đọc 190–230 chữ, 9–10 chữ/câu (Movers); đoạn YCT3 ~25 chữ Hán'},
+              'butterfly': {'N1': 'mỗi câu nghe 25–70 chữ, 3–6 lượt (Flyers); độc thoại YCT4 20–36 chữ Hán', 'N2': 'văn bản 190–270 chữ, 10–16 chữ/câu (Flyers); đoạn YCT4 30–50 chữ Hán'}}
+YC_VE = ('Theo ng.t. 65: 4 dòng × 4 phách, dòng đều (~7 âm tiết), vần AABB vào từ có nghĩa (tiếng Trung cùng vận mẫu), '
+         'không dòng đệm số đếm, có mở → trao đổi → đóng, gọi – đáp vòng lớp có ô tên con; từ trong vè dạy trước (ng.t. 67)')
+
+
+def _noi(lohi, i, n, dec=0):
+    v = lohi[0] + (lohi[1] - lohi[0]) * (i / max(1, n - 1))
+    return round(v, dec) if dec else int(v + 0.5)
+
+
+def ap_6268(c, res):
+    """Nguyên tắc 61–68 vào bản ghi unit: chỉ tiêu 4 mặt, cấu trúc đề, yêu cầu truyện/vè/big book, độ dài văn bản dạng đề."""
+    th = THANG[c]; units = [r for r in res if 'T1_do_dai' in r]
+    ds_en, ds_zh = CAU_TRUC_KHOA.get(c, ([], []))
+    n = len(units)
+    for i, r in enumerate(units):
+        e = _noi(th[0], i, n); z = _noi(th[2], i, n)
+        r['T1_do_dai'] = [e, e + max(5, e // 8)]
+        r['T1_do_dai_zh'] = [z, z + max(6, z // 8)]
+        r['T1_cau'] = _noi(th[1], i, n, 1); r['T1_cau_zh'] = _noi(th[3], i, n, 1); r['T1_lien'] = th[4]
+        r['cau_truc_de'] = {'en': [ds_en[k] for k in range(len(ds_en)) if k % n == i] + ([ds_en[(i + n) % len(ds_en)]] if ds_en and len(ds_en) < n and i >= len(ds_en) else []),
+                            'zh': [ds_zh[k] for k in range(len(ds_zh)) if k % n == i] + ([ds_zh[i % len(ds_zh)]] if ds_zh and len(ds_zh) < n and i >= len(ds_zh) else [])}
+        cu = [x.get('khung_cau', {}).get('en', '') for x in units[max(0, i - 3):i] if x.get('khung_cau')]
+        r['chi_tieu_4mat'] = ('Mỗi phần %d–%d chữ Anh, ~%s chữ/câu; %d–%d chữ Hán, ~%s chữ/câu; độ liền mạch: %s'
+                              % (r['T1_do_dai'][0], r['T1_do_dai'][1], str(r['T1_cau']).replace('.', ','), r['T1_do_dai_zh'][0], r['T1_do_dai_zh'][1], str(r['T1_cau_zh']).replace('.', ','), th[4]))
+        for t in r.get('van_ban') or []:
+            if t['id'] == 'T1':
+                t['yeu_cau'] = ('%s. Cấu trúc đề đưa vào khung: %s. Mỗi phần có vấn đề → giải quyết, dừng ở chỗ muốn nghe tiếp; dùng lại ≥2 mẫu câu cũ%s; không câu nào lặp y hệt quá 2 lần (ng.t. 61b, 62–64)'
+                                % (r['chi_tieu_4mat'], ', '.join(r['cau_truc_de']['en'] + r['cau_truc_de']['zh']) or '–', (' (gợi ý: ' + ' · '.join(cu) + ')') if cu else ''))
+                if c in ('larva', 'pupa', 'cocoon'):
+                    t['yeu_cau'] += '. Bản tiếng Trung kể gọn cùng cốt truyện, 0,5–0,8 độ dài bản Anh (ng.t. 68)'
+            if t['id'] == 'T4':
+                one = len([x for x in re.split(r'(?<=[!?.])\s+|\s*/\s*', t.get('khung_en', '')) if x.strip()]) < 4
+                dem = bool(re.search(r'\b(?:one|two|three)\b.*\b(?:two|three|four)\b', t.get('khung_en', ''), re.I))
+                t['yeu_cau'] = YC_VE + ('. Cần viết lại: ' + ', '.join(x for x, y in (('mới có 1 dòng công thức', one), ('có dòng đếm làm đệm', dem)) if y) if (one or dem) else '')
+            if t['id'] == 'T3' and str(r['unit']) == '1' and re.search(r'\b(?:hello|good morning|hi)\b', t.get('khung_en', ''), re.I):
+                t['yeu_cau'] = 'Theo ng.t. 66: không làm big book liệt kê câu chào; đổi thành big book tên – tuổi các bạn (My name is ___. I\'m ___.), câu chào để vè chào đầu/cuối buổi gánh'
+    if c in DE_KHOA_ON:
+        for r in res:
+            for t in r.get('van_ban') or []:
+                if t['id'] in DE_KHOA_ON[c]:
+                    t['yeu_cau'] = 'Độ dài theo đề (ng.t. 62c): ' + DE_KHOA_ON[c][t['id']]
+
 
 def tid(plan, kind):
     for t in plan.get('van_ban', []):
@@ -243,6 +314,7 @@ def main(relabel=False):
                     'mo_khoa': 'mở khi con học tới unit này; đồ unit cũ giữ nguyên (ng.t. 56)'}
             prev_units.append(u)
             res.append(rec)
+        ap_6268(c, res)
         json.dump(res, open(G + 'mang/%s.json' % c, 'w'), ensure_ascii=False, indent=1)
         print(c, 'units', len(res), 'có kế hoạch mạng', sum(1 for r in res if r.get('van_ban')))
     if relabel:
