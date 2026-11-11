@@ -7,8 +7,8 @@ body.xt-on.xt-mo{--xth:var(--xth-mo)}
 .xt{display:none}
 body.xt-on .xt{display:flex;flex-direction:column;position:fixed;right:0;bottom:0;left:var(--side);z-index:34;height:var(--xth);
   background:linear-gradient(180deg,#E9F6FF,#D4ECFB);border-top:3px solid #8CC8EE;box-shadow:0 -3px 10px rgba(0,0,0,.08)}
-body.vd-wide .xt{left:calc(var(--side) + var(--vdw))}
-body.vd-mini .xt{left:calc(var(--side) + var(--vdr))}
+body.vd-wide .xt{right:var(--vdw)}
+body.vd-mini .xt{right:var(--vdr)}
 body.xt-on #app{padding-bottom:var(--xth)}
 body.hub.xt-on #app{height:calc(100% - var(--xth));padding-bottom:0}
 body.xt-on #mascot{bottom:calc(var(--xth) + 10px)}

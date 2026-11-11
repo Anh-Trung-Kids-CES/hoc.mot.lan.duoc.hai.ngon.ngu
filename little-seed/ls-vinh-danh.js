@@ -4,7 +4,7 @@
      nhớ danh sách 5 phút → video mới hiện trên web chậm nhất khoảng 5 phút. Ai mở web cũng xem được.
    - Tên tệp: "Bông – đọc truyện Unit 2.mp4". Thêm mã con trong ngoặc vuông để con thấy huy hiệu
      "Video của con": "Bông [ZTK2A7] – đọc truyện Unit 2.mp4".
-   - Bố cục: màn rộng (≥1180px, ngoài bài học) → cột trái cạnh thanh nút; màn vừa và trong lúc làm bài →
+   - Bố cục: màn rộng (≥1180px, ngoài bài học) → cột ở lề phải; màn vừa và trong lúc làm bài →
      dải hẹp, chạm để mở; điện thoại dọc → nút 🌟 nổi, mở toàn màn hình. Video phát bằng trình phát của Drive.
    ===================================================================== */
 (function () {
@@ -76,7 +76,7 @@
     fab.innerHTML = `🌟${badge}`;
     const g = groups(VD.items);
     col.innerHTML = `<div class="vd-hd"><div><b>🌟 Góc vinh danh</b><span>Video các bạn làm bài tốt</span></div>
-        <button type="button" class="vd-gon" aria-label="${wideOk() ? 'Thu gọn' : 'Đóng'}">${wideOk() ? '«' : '✕'}</button></div>
+        <button type="button" class="vd-gon" aria-label="${wideOk() ? 'Thu gọn' : 'Đóng'}">${wideOk() ? '»' : '✕'}</button></div>
       <div class="vd-list">${VD.items.length ? g.map(w => `<h4 class="vd-wk">${h(w.label)} <small>${w.range}</small></h4>${w.list.map(i => card(i)).join('')}`).join('')
         : '<p class="vd-empty">Cô sẽ đăng video các bạn làm bài tốt ở đây mỗi tuần. Con chăm làm bài để được lên Góc vinh danh nhé!</p>'}</div>
       ${VD.items.length ? `<button type="button" class="vd-allbtn">📼 Album cả khoá · ${VD.items.length} video</button>` : ''}`;

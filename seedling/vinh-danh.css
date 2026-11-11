@@ -1,36 +1,39 @@
 /* =====================================================================
-   GÓC VINH DANH · cột video bên trái (dùng chung Little Seed và Seedling)
+   GÓC VINH DANH · cột video bên phải (dùng chung Little Seed và Seedling; chị chuyển từ trái sang phải 11/11/2026)
    ===================================================================== */
 :root{--vdw:248px;--vdr:58px}
 .vd,.vd-rail,.vd-fab,.vd-back{display:none}
 
-/* màn rộng: cột cố định cạnh thanh nút, đẩy nội dung sang phải */
-body.vd-wide .vd{display:flex;position:fixed;top:0;bottom:0;left:var(--side);width:var(--vdw);z-index:35}
-body.vd-wide #app{margin-left:calc(var(--side) + var(--vdw))}
-body.vd-wide #mascot{left:calc(var(--side) + var(--vdw) + 12px)}
-body.vd-wide .toast{margin-left:calc((var(--side) + var(--vdw))/2)}
+/* màn rộng: cột cố định ở lề phải, nội dung chừa chỗ bên phải */
+body.vd-wide .vd{display:flex;position:fixed;top:0;bottom:0;right:0;width:var(--vdw);z-index:35}
+body.vd-wide #app{margin-right:var(--vdw)}
+body.vd-wide .toast{margin-left:calc((var(--side) - var(--vdw))/2)}
+body.vd-wide .ls-chubtn,body.vd-wide .hd-cam{right:calc(var(--vdw) + 12px)}
 
 /* màn vừa, hoặc đang làm bài: dải hẹp, chạm để mở ngăn kéo */
 body.vd-mini .vd-rail{display:flex}
-body.vd-mini #app{margin-left:calc(var(--side) + var(--vdr))}
-body.vd-mini #mascot{left:calc(var(--side) + var(--vdr) + 12px)}
-.vd-rail{position:fixed;top:0;bottom:0;left:var(--side);width:var(--vdr);z-index:35;flex-direction:column;align-items:center;justify-content:flex-start;gap:8px;
-  padding:14px 4px;border:0;border-right:3px solid #F2D27A;background:linear-gradient(180deg,#FFF6D6,#FFE9A8);cursor:pointer;font:inherit;color:var(--red-dark,#B3261E)}
+body.vd-mini #app{margin-right:var(--vdr)}
+body.vd-mini .toast{margin-left:calc((var(--side) - var(--vdr))/2)}
+body.vd-mini .ls-chubtn,body.vd-mini .hd-cam{right:calc(var(--vdr) + 12px)}
+.vd-rail{position:fixed;top:0;bottom:0;right:0;width:var(--vdr);z-index:35;flex-direction:column;align-items:center;justify-content:flex-start;gap:8px;
+  padding:14px 4px;border:0;border-left:3px solid #F2D27A;background:linear-gradient(180deg,#FFF6D6,#FFE9A8);cursor:pointer;font:inherit;color:var(--red-dark,#B3261E)}
 .vd-rail .vd-star{font-size:26px;line-height:1}
 .vd-rail .vd-rt{writing-mode:vertical-rl;transform:rotate(180deg);font-weight:800;font-size:16px;letter-spacing:.5px}
 .vd-rail:hover,.vd-rail:focus-visible{background:linear-gradient(180deg,#FFF1C2,#FFDF85)}
 
 /* điện thoại dọc: nút nổi */
 body.vd-phone .vd-fab{display:flex}
-.vd-fab{position:fixed;left:12px;bottom:calc(var(--nav,64px) + 12px);z-index:45;width:58px;height:58px;border-radius:50%;border:3px solid #E9A900;
+.vd-fab{position:fixed;right:12px;bottom:calc(var(--nav,64px) + 12px);z-index:45;width:58px;height:58px;border-radius:50%;border:3px solid #E9A900;
   background:#FFD84D;font-size:28px;align-items:center;justify-content:center;box-shadow:0 4px 0 rgba(0,0,0,.18);cursor:pointer}
 
-/* ngăn kéo (màn vừa, điện thoại) */
-.vd.drawer.open{display:flex;position:fixed;top:0;bottom:0;left:0;width:min(360px,92vw);z-index:70;box-shadow:6px 0 24px rgba(0,0,0,.25)}
+body.vd-phone .ls-chubtn{bottom:calc(var(--nav,64px) + 82px)}
+
+/* ngăn kéo (màn vừa, điện thoại) – mở từ lề phải */
+.vd.drawer.open{display:flex;position:fixed;top:0;bottom:0;right:0;left:auto;width:min(360px,92vw);z-index:70;box-shadow:-6px 0 24px rgba(0,0,0,.25)}
 body.vd-phone .vd.drawer.open{width:100vw;bottom:0}
 .vd-back.on{display:block;position:fixed;inset:0;background:rgba(40,30,0,.35);z-index:65}
 
-.vd{flex-direction:column;background:linear-gradient(180deg,#FFF9E6,#FFF1C9);border-right:3px solid #F2D27A;overflow:hidden}
+.vd{flex-direction:column;background:linear-gradient(180deg,#FFF9E6,#FFF1C9);border-left:3px solid #F2D27A;overflow:hidden}
 .vd-hd{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;padding:12px 12px 8px;border-bottom:2px dashed #F2D27A}
 .vd-hd b{display:block;font-size:19px;color:var(--red-dark,#B3261E);line-height:1.15}
 .vd-hd span{display:block;font-family:'Be Vietnam Pro',system-ui,sans-serif;font-size:12.5px;color:#7A5B00;margin-top:2px}
