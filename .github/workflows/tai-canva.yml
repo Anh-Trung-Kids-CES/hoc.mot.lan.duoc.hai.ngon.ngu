@@ -1,0 +1,29 @@
+name: Tai tranh xuat tu Canva (nhanh tam)
+on:
+  push:
+    branches: [tai-canva]
+    paths: ['canva-tai/urls.txt']
+permissions:
+  contents: write
+jobs:
+  tai:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: tai-canva
+      - name: Tai file
+        run: |
+          mkdir -p canva-tai/png
+          while read -r so url; do
+            [ -z "$so" ] && continue
+            curl -fsSL --retry 3 -o "canva-tai/png/trang_${so}.png" "$url" && echo "ok $so" || echo "LOI $so"
+          done < canva-tai/urls.txt
+          ls -la canva-tai/png
+      - name: Luu vao nhanh
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898+github-actions[bot]@users.noreply.github.com"
+          git add canva-tai/png
+          git commit -m "Tranh big book xuat tu Canva (tai tu dong)" || echo "khong co gi moi"
+          git push origin HEAD:tai-canva
