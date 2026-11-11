@@ -2,8 +2,7 @@
 
 Một Google Sheet và một link Apps Script dùng chung cho hai web:
 - `little-seed/` (mã lớp `ls`), `seedling/` (mã lớp `sd`)
-- Sheet: **Lớp offline 48 buổi – Quản lý học sinh và tiến độ (Little Seed, Seedling)**, thư mục Drive "Dữ liệu web Anh - Trung"
-  https://docs.google.com/spreadsheets/d/1EGnDH2qqT_qbgCobRp7PJbPxo4PkrWFKvZbzLS41gAw/edit
+- Sheet: **Lớp offline 48 buổi – Quản lý học sinh và tiến độ (Little Seed, Seedling)**, thư mục Drive "Dữ liệu web Anh - Trung" (link Sheet không ghi ở repo công khai vì Sheet chứa PIN và dữ liệu của con; chỉ chia sẻ Sheet cho người cụ thể, không bật "Bất kỳ ai có đường liên kết").
 
 ## Bật máy chủ (làm một lần, khoảng 10 phút)
 1. Mở Sheet → **Tiện ích mở rộng → Apps Script**. Đặt tên dự án "Máy chủ lớp offline 48 buổi".
