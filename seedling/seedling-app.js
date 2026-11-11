@@ -466,7 +466,7 @@ function viewDay(n, sub) { const day = SD.days[n]; if (!day) { toast('Ngày này
   if (k >= 0 && day.steps[k]) return playStep(n, k);
   document.body.classList.add('hub'); setActive('map'); stopAll();
   const s = dayState(n), doneN = day.steps.filter((_, j) => j in s.steps).length, nextJ = day.steps.findIndex((_, j) => !(j in s.steps));
-  const vids = (day.video || []).map(v => `<a href="${esc(v.url)}" target="_blank" rel="noopener">▶ ${esc(v.label)}</a>`).join('');
+  const vids = '';   // link ngoài cũ đã thay bằng dải Xem thêm xem ngay trong web (xem-them.js)
   app.innerHTML = `<div class="screen dayscr"><section class="dy-card"><div class="dy-img" style="background-image:url('${esc(day.hero)}')"></div><div class="dy-in">
       <span class="ls-kick">Tuần ${day.week} · Unit ${day.unit} Greeting · ${esc(day.part)} · Ngày web ${n}</span><h2>${esc(day.t)}</h2>
       <button class="ls-goal" id="goal">${SVG.spk}<span><small>Sau hôm nay con có thể</small>${esc(day.goal)}</span></button>

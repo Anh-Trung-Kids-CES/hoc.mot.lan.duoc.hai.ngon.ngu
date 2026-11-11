@@ -185,7 +185,7 @@ function viewDay(n, sub) { const day = SD.days[n]; if (!day) { location.hash = '
   if (k >= 0 && day.steps[k]) return playStep(n, k);
   document.body.classList.add('hub'); setActive('map'); stopAll();
   const s = dayState(n), doneN = day.steps.filter((_, j) => j in s.steps).length, nextJ = day.steps.findIndex((_, j) => !(j in s.steps));
-  const vids = (day.video || []).filter(v => v.url).map(v => `<a href="${esc(v.url)}" target="_blank" rel="noopener">▶ ${esc(v.label)}</a>`).join('');
+  const vids = '';   // link ngoài cũ đã thay bằng dải Xem thêm xem ngay trong web (xem-them.js)
   const B = blockOf(n);
   app.innerHTML = `<div class="screen dayscr"><section class="dy-card"><div class="dy-img" style="background-image:url('${esc(day.hero)}')"></div><div class="dy-in">
       <span class="ls-kick">Tuần ${day.week} · ${esc(unitLabel(day))} · ${esc(day.part)} · Ngày web ${n}/${TOTAL_DAYS}</span><h2>${esc(day.t)}</h2>
