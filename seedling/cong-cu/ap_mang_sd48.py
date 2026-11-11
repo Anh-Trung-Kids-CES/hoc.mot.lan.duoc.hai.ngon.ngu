@@ -42,7 +42,14 @@ KEYS = sorted([f[:-5] for f in os.listdir(PIC) if f.endswith('.webp') and not f.
 FONT = next(f for f in ('/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc', '/usr/share/fonts/truetype/noto/NotoSansCJK-Bold.ttc',
                         '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf') if os.path.exists(f))
 def card_img(im, size):
-    im = im.resize((size, size), Image.LANCZOS); pad = 10
+    if abs(im.width - im.height) > 4:   # tranh nhân vật dọc: lấy nửa người trên, đặt vừa ô, giữ tỉ lệ (không bóp méo)
+        if im.getbbox(): im = im.crop(im.getbbox())
+        if im.height > 1.3 * im.width: im = im.crop((0, 0, im.width, int(im.width * 1.25)))
+        h = size - 8; w = max(1, int(im.width * h / im.height))
+        if w > size - 8: w = size - 8; h = max(1, int(im.height * w / im.width))
+        sq = Image.new('RGBA', (size, size), (0, 0, 0, 0)); sq.alpha_composite(im.resize((w, h), Image.LANCZOS), ((size - w) // 2, size - h - 4)); im = sq
+    else: im = im.resize((size, size), Image.LANCZOS)
+    pad = 10
     c = Image.new('RGBA', (size + 2 * pad, size + 2 * pad), (0, 0, 0, 0))
     ImageDraw.Draw(c).rounded_rectangle([0, 0, size + 2 * pad - 1, size + 2 * pad - 1], 26, fill=(255, 255, 255, 255), outline=(240, 200, 80, 255), width=6)
     mk = Image.new('L', (size, size), 0); ImageDraw.Draw(mk).rounded_rectangle([0, 0, size - 1, size - 1], 20, fill=255)
