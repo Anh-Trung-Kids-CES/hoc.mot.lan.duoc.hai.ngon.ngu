@@ -184,13 +184,13 @@
   let root = null;
   function open() {
     if (root) return;
-    S = fresh(); hist = []; G = { active: '', awake: { en: false, zh: false }, meter: { en: 0, zh: 0 }, done: {}, miss: 0, streak: [], doubles: 0, said: 0, end: false };
+    S = fresh(); hist = []; G = { active: '', awake: { en: false, zh: false }, meter: { en: 0, zh: 0 }, done: {}, miss: 0, streak: [], doubles: 0, said: 0, end: false, log: {}, n: 0, bonus: null, bonusDone: false, abort: false };
     root = document.createElement('div'); root.className = 'pt'; root.innerHTML = `
       <div class="pt-scene" id="ptScene"><img class="pt-bg" id="ptBg" alt=""><div class="pt-sky" id="ptSky"><span class="pt-sun"></span><span class="pt-moon"></span></div>
         <div class="pt-stage" id="ptStage"></div><div class="pt-fx" id="ptFx"></div><div class="pt-spells" id="ptSpells" hidden></div>
         ${['en', 'zh'].map(l => `<button type="button" class="pt-wiz w-${l} pt-ngu" data-w="${l}" aria-label="${W[l].name}">
           <span class="pt-meter">${Array.from({ length: GOAL }, () => `<i>${l === 'en' ? '⭐' : '🏮'}</i>`).join('')}</span>
-          <img src="${NV(W[l].img)}" alt=""><span class="pt-wand"></span><span class="pt-zz">z z</span><span class="pt-name">${W[l].name}</span><span class="pt-bub" hidden></span></button>`).join('')}
+          <img src="${NV(W[l].img)}" alt=""><span class="pt-wand"></span><span class="pt-zz">z z</span><span class="pt-ear">👂</span><span class="pt-name">${W[l].name}</span><span class="pt-bub" hidden></span></button>`).join('')}
       </div>
       <div class="pt-bar"><button type="button" class="pt-x" aria-label="Đóng">✕</button>
         <div class="pt-said" id="ptSaid">Chạm Leo hoặc Xiaomei để bắt đầu.</div>
@@ -202,7 +202,7 @@
     try { if (typeof stopAll === 'function') stopAll(); } catch (e) {}
     root.querySelector('.pt-x').onclick = close;
     root.querySelectorAll('[data-w]').forEach(b => b.onclick = () => pick(b.dataset.w));
-    $('ptMic').onclick = turn; $('ptHint').onclick = () => showCards(G.active || 'en', true);
+    $('ptMic').onclick = () => turn(false); $('ptHint').onclick = () => showCards(G.active || 'en', true);
     render(true);
     if (!canListen()) say('', 'Máy này chưa nghe được giọng nói (cần Chrome hoặc Safari). Con chạm 💡 để chọn tranh làm phép nhé.');
     warmup();
@@ -255,6 +255,12 @@
   function drawSpells() {
     const box = $('ptSpells'); if (!box) return;
     const l = G.active;
+    if (G.bonus && !G.end) {   // Phép thưởng cuối: hàng quà, mỗi quà là tranh phép cần nói lại
+      const B = G.bonus; box.className = 'pt-spells pt-qua'; box.hidden = false;
+      box.innerHTML = `<span class="pt-sbook" aria-hidden="true">🎁</span>` + B.list.map((it, i) => { const sp = SP.find(x => x.k === it.k);
+        return `<span class="pt-sp ${it.l}${i < B.i ? ' xong' : ''}${i === B.i ? ' nghe' : ''}"><span class="pt-pin">${i <= B.i ? picHtml(sp.pic) : '<span class="pt-pe">🎁</span>'}</span>${i < B.i ? '<i class="pt-sok">✓</i>' : ''}</span>`; }).join('');
+      return;
+    }
     if (!l || !G.awake[l] || G.end) { box.hidden = true; return; }
     const o = l === 'en' ? 'zh' : 'en', list = spellsFor(l); G.list = list;
     box.className = 'pt-spells ' + l; box.hidden = false;
@@ -271,20 +277,39 @@
     clearTimeout(b._t); b._t = setTimeout(() => b.hidden = true, ms || 4500);
   }
   /* chạm bong bóng (hoặc phù thuỷ tự rủ): phù thuỷ nói câu mẫu, rồi nút micro nháy "đến lượt con" – chạm tranh không tự làm phép */
-  function model(sp, l, el, auto) {
-    if (!root) return; poke(!auto);
+  function model(sp, l, el, auto, listenNow) {
+    if (!root) return; poke(!auto); stopRec();
+    if (listenNow === undefined) listenNow = !auto;   // con tự chạm tranh → micro tự mở; phù thuỷ rủ khi con ngồi im → chỉ nháy nút
     const t = spText(sp, l); if (!t) return;
     root.querySelectorAll('.pt-sp.nghe').forEach(x => x.classList.remove('nghe')); if (el) el.classList.add('nghe');
     bubbleSp(l, sp, t); sparkle(l); if (auto) waveWiz(l);
-    say(l, `👂 ${W[l].name} nói: <b>${h(t)}</b> &nbsp;→&nbsp; 🗣️ Đến lượt con! Chạm 🎤 rồi nói.`);
-    speak(t, l).then(luot);
+    say(l, `👂 ${W[l].name} nói: <b>${h(t)}</b> &nbsp;→&nbsp; 🗣️ Đến lượt con!${listenNow && canAuto() ? '' : ' Chạm 🎤 rồi nói.'}`);
+    speak(t, l).then(() => afterModel(l, listenNow));
+  }
+  /* micro tự mở sau câu mẫu (nhịp "phù thuỷ nói – con nói"): chờ giọng mẫu dứt ~0,5 giây để máy không nghe nhầm giọng mẫu.
+     Máy không cho tự mở (iPad/iPhone…) → nút micro nháy chờ con bấm. Con vẫn bấm micro được bất cứ lúc nào. */
+  const canAuto = () => !!SR && !(window.PT_TEST && !window.PT_TEST.auto) || !!(window.PT_TEST && window.PT_TEST.auto);
+  function afterModel(l, listenNow) {
+    if (!listenNow || !canAuto()) return luot();
+    setTimeout(() => {
+      if (!root || busy || G.end || G.active !== l || !$('ptPanel').hidden || !$('ptCards').hidden) return luot();
+      ting(); setTimeout(() => turn(true), 250);
+    }, 500);
+  }
+  function stopRec() { if (rec) { G.abort = true; try { rec.abort(); } catch (e) {} } }
+  let AC = null;
+  function ting() {
+    try { AC = AC || new (window.AudioContext || window.webkitAudioContext)(); const t = AC.currentTime, o = AC.createOscillator(), g = AC.createGain();
+      o.type = 'sine'; o.frequency.setValueAtTime(1320, t); o.frequency.exponentialRampToValueAtTime(1760, t + .12);
+      g.gain.setValueAtTime(.0001, t); g.gain.exponentialRampToValueAtTime(.18, t + .02); g.gain.exponentialRampToValueAtTime(.0001, t + .35);
+      o.connect(g); g.connect(AC.destination); o.start(t); o.stop(t + .4); } catch (e) {}
   }
   function luot() { const m = $('ptMic'); if (!m || G.end || m.disabled) return; m.classList.remove('pt-luot'); void m.offsetWidth; m.classList.add('pt-luot'); clearTimeout(m._t); m._t = setTimeout(() => m.classList.remove('pt-luot'), 7000); }
   /* con ngồi im ~9 giây: phù thuỷ tự rủ một phép (tối đa 3 lần liền, con chạm / nói là đếm lại) */
   let idleT = 0, nudges = 0;
   function poke(reset) { clearTimeout(idleT); if (reset !== false) nudges = 0; idleT = setTimeout(nudge, 9000); }
   function nudge() {
-    if (!root || G.end) return;
+    if (!root || G.end || G.bonus) return;
     if (busy || !$('ptPanel').hidden || !$('ptCards').hidden) { idleT = setTimeout(nudge, 4000); return; }
     if (nudges >= 3) return;
     nudges++;
@@ -293,35 +318,46 @@
       ['en', 'zh'].forEach((x, i) => setTimeout(() => { if (root) { bubble(x, '👋 ' + W[x].wake, 3600); waveWiz(x); } }, i * 900));
       say('', '👆 Chạm <b>Leo</b> (tiếng Anh) hoặc <b>Xiaomei</b> (tiếng Trung) rồi gọi bạn dậy nhé!'); poke(false); return;
     }
-    if (!G.awake[l]) { wakeHint(l); poke(false); return; }
-    drawSpells(); const list = G.list || [], i = list.findIndex(x => x.k !== 'undo');
-    if (i >= 0) model(list[i], l, $('ptSpells').querySelector(`[data-sp="${i}"]`), true);
+    if (!G.awake[l]) { wakeHint(l, false); poke(false); return; }
+    suggest(l, false);
   }
-  function wakeHint(l) { bubble(l, '👋 ' + W[l].wake, 4000); waveWiz(l); say(l, `👂 Nghe rồi 🗣️ con gọi: <b>${h(W[l].wake)}</b> · Chạm 🎤 rồi nói.`); speak(W[l].wake, l).then(luot); }
+  function suggest(l, listenNow) {
+    drawSpells(); const list = G.list || [], i = list.findIndex(x => x.k !== 'undo');
+    if (i >= 0) model(list[i], l, $('ptSpells').querySelector(`[data-sp="${i}"]`), true, listenNow);
+  }
+  function wakeHint(l, listenNow) {
+    bubble(l, '👋 ' + W[l].wake, 4000); waveWiz(l);
+    say(l, `👂 Nghe rồi 🗣️ con gọi: <b>${h(W[l].wake)}</b>${listenNow && canAuto() ? '' : ' · Chạm 🎤 rồi nói.'}`);
+    speak(W[l].wake, l).then(() => afterModel(l, listenNow));
+  }
 
   /* ---------- chọn phù thuỷ ---------- */
   function pick(l, quiet) {
-    if (G.end) return;
+    if (G.end || (G.bonus && !quiet)) return;
     G.active = l; root.querySelectorAll('.pt-wiz').forEach(b => b.classList.toggle('pt-chon', b.dataset.w === l));
     const mic = $('ptMic'); mic.disabled = false; mic.classList.toggle('zh', l === 'zh');
     $('ptMicT').textContent = G.awake[l] ? (l === 'en' ? 'Nói với Leo' : '说给 Xiaomei 听') : (l === 'en' ? 'Gọi: Hi, Leo!' : '叫：你好，Xiaomei！');
     say(l, G.awake[l] ? `Con ra lệnh bằng <b>${l === 'en' ? 'tiếng Anh' : 'tiếng Trung'}</b>. Chạm một tranh 🪄 để nghe câu, rồi chạm 🎤 và nói.` : `Chạm 🎤 rồi gọi: <b>${W[l].wake}</b>`);
     $('ptCards').hidden = true; drawSpells(); poke();
-    if (!G.awake[l] && !quiet) wakeHint(l);
+    if (!G.awake[l] && !quiet) wakeHint(l, true);
   }
 
   /* ---------- một lượt nói ---------- */
   let busy = false;
-  async function turn() {
-    if (busy || !G.active || G.end) return; const l = G.active; busy = true; poke();
+  async function turn(auto) {
+    auto = auto === true;
+    if (busy || !G.active || G.end) return; const l = G.active; busy = true; poke(); G.abort = false;
     $('ptMic').classList.remove('pt-luot');
-    const mic = $('ptMic'); mic.classList.add('on'); say(l, '🎧 Đang nghe…');
-    if (!canListen()) { busy = false; mic.classList.remove('on'); showCards(l, true); return; }
+    const mic = $('ptMic'), wz = root.querySelector('.w-' + l); mic.classList.add('on'); wz.classList.add('pt-tai'); say(l, '🎧 Đang nghe…');
+    if (!canListen()) { busy = false; mic.classList.remove('on'); wz.classList.remove('pt-tai'); if (!G.bonus) showCards(l, true); return; }
     const r = await listen(l, t => say(l, '🎧 ' + h(t)));
-    mic.classList.remove('on'); busy = false; if (!root) return; poke();
+    mic.classList.remove('on'); busy = false; if (!root) return; wz.classList.remove('pt-tai'); poke();
+    if (G.abort || r.err === 'aborted') { G.abort = false; return; }   // con chạm tranh khác giữa chừng
     const alts = (r.alts || []).filter(Boolean);
-    if (r.err === 'not-allowed' || r.err === 'service-not-allowed') { say(l, 'Con cần cho phép dùng micro (ba mẹ bấm "Cho phép"). Tạm thời con chạm tranh nhé.'); showCards(l, true); return; }
-    if (!alts.length) return miss(l, '');
+    if (r.err === 'not-allowed' || r.err === 'service-not-allowed') { say(l, 'Con cần cho phép dùng micro (ba mẹ bấm "Cho phép"). Tạm thời con chạm tranh nhé.'); if (G.bonus) bonusResult(l, []); else showCards(l, true); return; }
+    if (auto && !alts.length && r.err && r.err !== 'no-speech') { luot(); say(l, '🎤 Con chạm micro rồi nói nhé!'); return; }   // máy không cho tự mở micro
+    if (G.bonus) return bonusResult(l, alts);
+    if (!alts.length) { if (auto) { luot(); say(l, '🎤 Con sẵn sàng thì chạm micro rồi nói nhé!'); return; } return miss(l, ''); }
     say(l, 'Con nói: <b>' + h(alts[0]) + '</b>');
     handle(l, alts);
   }
@@ -342,10 +378,14 @@
     G.awake[l] = true; G.miss = 0; root.querySelector('.w-' + l).classList.remove('pt-ngu'); sparkle(l);
     bubble(l, l === 'en' ? 'Hi! I can do magic!' : '你好！我会魔法！'); speak(l === 'en' ? 'Hi! I can do magic!' : '你好！我会魔法！', l);
     pick(l, true); if (typeof sfx === 'object' && sfx.ok) try { sfx.ok(); } catch (e) {}
-    setTimeout(() => { if (root && G.active === l && !busy) { nudges = 0; nudge(); } }, 2600);   // phù thuỷ rủ ngay phép đầu tiên
+    setTimeout(() => { if (root && G.active === l && !busy && !G.end) { nudges = 0; suggest(l, true); } }, 2600);   // phù thuỷ rủ ngay phép đầu tiên
   }
   function cast(l, c, full, tap) {
     G.miss = 0; hist.push(clone(S)); if (hist.length > 20) hist.shift();
+    if (!G.bonus) {   // nhớ câu nào con mới chạm tranh / mới nói một từ → Phép thưởng cuối
+      const id = c.k + '|' + l, st = tap ? 0 : full ? 2 : 1, old = G.log[id];
+      if (!old) G.log[id] = { k: c.k, l, st, o: G.n++ }; else if (st > old.st) old.st = st;
+    }
     const a = c.act;
     if (a.show) { if (!S.shown.includes(a.show)) S.shown = [...S.shown, a.show].slice(-5); }
     if (a.showAll) S.shown = [...new Set([...S.shown, ...a.showAll])].slice(-5);
@@ -376,14 +416,14 @@
     const o = l === 'en' ? 'zh' : 'en';
     if (G.streak.length === 3 && G.streak.every(x => x === l) && G.meter[o] < GOAL) setTimeout(() => { bubble(o, W[o].other, 3200); waveWiz(o); }, 1600);
     persist(); render(); drawSpells();
-    if (G.meter.en >= GOAL && G.meter.zh >= GOAL) setTimeout(finish, 2200);
+    if (G.meter.en >= GOAL && G.meter.zh >= GOAL) endRound();
   }
   function undo(l, tap) {
     if (!hist.length) { bubble(l, l === 'en' ? 'Nothing to undo!' : '还没有魔法！'); return; }
     S = hist.pop(); render(); sparkle(l); bubble(l, W[l].undo); speak(W[l].undo, l);
     if (!tap) { G.said++; G.meter[l] = Math.min(GOAL, G.meter[l] + 1); } render(); drawSpells();
     say(l, `↩️ Đã rút lại lệnh. Con nói lệnh mới nhé!`);
-    if (G.meter.en >= GOAL && G.meter.zh >= GOAL) setTimeout(finish, 2000);
+    if (G.meter.en >= GOAL && G.meter.zh >= GOAL) endRound();
   }
   function miss(l, want) {
     G.miss++;
@@ -393,7 +433,7 @@
   }
   /* ---------- tranh gợi ý / chạm thay ---------- */
   function showCards(l, hintOnly) {
-    const box = $('ptCards'); if (!box) return; poke();
+    const box = $('ptCards'); if (!box || G.bonus || G.end) return; poke();
     const items = !G.awake[l] ? [{ wake: 1 }] : spellsFor(l);
     box.innerHTML = `<div class="pt-ct">${W[l].name} · ${!G.awake[l] ? 'chạm để gọi bạn dậy' : 'chạm một tranh để làm phép, rồi con nói theo nhé'}</div>` +
       items.map((it, i) => `<button type="button" class="pt-card ${l}" data-t="${i}"><span class="pt-cpic">${it.wake ? `<img src="${NV(W[l].img)}" alt="">` : picHtml(it.pic)}</span>
@@ -442,14 +482,63 @@
     step();
   }
   /* ---------- xong lượt ---------- */
+  /* ---------- Phép thưởng cuối: tối đa 3 câu con mới chạm tranh / mới nói một từ, xen hai thứ tiếng ----------
+     Không gọi là "câu sai" (máy nghe giọng trẻ còn kém). Mỗi câu thử một lần; nói chưa được phép vẫn chạy + "Good try!" → luôn kết thúc vui. */
+  function bonusList() {
+    const spK = new Set(SP.map(x => x.k));
+    const L = Object.values(G.log).filter(x => x.st < 2 && spK.has(x.k) && C.cmds.some(c => c.k === x.k && c.l === x.l)).sort((a, b) => a.st - b.st || a.o - b.o);
+    const q = { en: L.filter(x => x.l === 'en'), zh: L.filter(x => x.l === 'zh') }, out = [];
+    let want = L.length ? L[0].l : 'en';
+    while (out.length < 3 && (q.en.length || q.zh.length)) { const from = q[want].length ? want : (want === 'en' ? 'zh' : 'en'); out.push(q[from].shift()); want = from === 'en' ? 'zh' : 'en'; }
+    return out;
+  }
+  function endRound() {
+    if (G.end || G.bonus || G.bonusDone) return; G.bonusDone = true;
+    const list = canListen() ? bonusList() : [];
+    if (!list.length) return setTimeout(finish, 2200);
+    G.bonus = { list, i: 0, ok: 0 }; clearTimeout(idleT);
+    setTimeout(() => { if (!root) return; say('', '🎁 <b>Phép thưởng cuối!</b> Leo và Xiaomei rủ con làm thêm vài phép nữa.'); fx('🎁'); bubble('en', 'Bonus magic!', 2400); bubble('zh', '奖励魔法！', 2400); drawSpells(); }, 2200);
+    setTimeout(bonusStep, 4600);
+  }
+  /* dựng cảnh để phép nhìn thấy được (bạn đang có mặt thì cho về trước rồi mới gọi ra…) */
+  function prep(c) {
+    const a = c.act;
+    if (a.show) S.shown = S.shown.filter(x => x !== a.show);
+    if (a.showAll) S.shown = S.shown.filter(x => !a.showAll.includes(x));
+    if (a.hide && !S.shown.includes(a.hide)) S.shown = [...S.shown, a.hide].slice(-5);
+    if (a.time) S.time = a.time === 'day' ? 'night' : 'day';
+    if (a.tall) S.tall = false;
+    if (a.anim && !S.shown.length) S.shown = ['bong', 'anna'];
+    render();
+  }
+  function bonusStep() {
+    if (!root || G.end || !G.bonus) return;
+    const B = G.bonus;
+    if (B.i >= B.list.length) { G.bonusList = B; G.bonus = null; drawSpells(); return setTimeout(finish, 1500); }
+    const it = B.list[B.i], l = it.l, c = C.cmds.find(x => x.k === it.k && x.l === l), sp = SP.find(x => x.k === it.k);
+    const cur = B.cur = { c, sp, l };
+    prep(c); pick(l, true); drawSpells();
+    model(sp, l, null, true, true);
+    clearTimeout(B.t); B.t = setTimeout(() => { if (G.bonus && G.bonus.cur === cur && !busy) bonusResult(l, []); }, 16000);   // con không bấm micro → vẫn đi tiếp
+  }
+  function bonusResult(l, alts) {
+    const B = G.bonus, cur = B && B.cur; if (!cur || l !== cur.l) return;
+    B.cur = null; clearTimeout(B.t);
+    const N = alts.map(a => norm(a, l)), full = N.some(n => cur.c.full.test(n)), key = !full && !!cur.c.key && N.some(n => cur.c.key.test(n));
+    cast(l, cur.c, full, true);
+    if (full) { B.ok++; say(l, `🎁 ✨ Giỏi quá! <b>${h(cur.c.say)}</b>`); }
+    else { bubble(l, (l === 'en' ? 'Good try! ' : '很好！') + cur.c.say, 3200); speak(l === 'en' ? 'Good try!' : '很好！', l);
+      say(l, key ? '🎁 Tốt lắm! Lần sau con nói cả câu nhé.' : '🎁 Con cố gắng lắm! Mình làm phép tiếp nhé.'); }
+    B.i++; drawSpells(); setTimeout(bonusStep, 2800);
+  }
   function finish() {
-    if (!root || G.end) return; G.end = true;
+    if (!root || G.end) return; G.end = true; clearTimeout(idleT); drawSpells(); $('ptMic').disabled = true;
     const s = store(); let star = '';
     if (s.d !== today() && typeof addStars === 'function') { s.d = today(); addStars(STAR_ROUND); star = `<p class="pt-star">+${STAR_ROUND} ⭐ vào ví của con</p>`; }
     persist();
     const cards = Object.keys(s.cards).length;
     const p = $('ptPanel'); p.innerHTML = `<div class="pt-wbox pt-end"><div class="pt-big">🎉🪄🌈</div><h3>Con là phù thuỷ lời nói!</h3>
-      <p>Con đã nói <b>${G.said}</b> câu phép thuật · Phép đôi hôm nay: <b>${G.doubles}</b></p><p>Album thẻ phép đôi của con: <b>${cards}</b> thẻ</p>${star}
+      <p>Con đã nói <b>${G.said}</b> câu phép thuật · Phép đôi hôm nay: <b>${G.doubles}</b></p><p>Album thẻ phép đôi của con: <b>${cards}</b> thẻ</p>${G.bonusList ? `<p>🎁 Phép thưởng cuối: <b>${G.bonusList.ok}/${G.bonusList.list.length}</b></p>` : ''}${star}
       <div class="pt-wbtn"><button type="button" class="ls-b" id="ptAgain">↺ Chơi lại</button><button type="button" class="ls-b" id="ptDone">Xong</button></div></div>`;
     p.hidden = false; fx('🌈', 'rainbow'); try { if (typeof confetti === 'function') confetti(60); } catch (e) {}
     $('ptAgain').onclick = () => { close(); open(); }; $('ptDone').onclick = close;

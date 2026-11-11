@@ -147,6 +147,16 @@ body.pt-on .pt-open{display:none}
 .pt-card em{font-style:normal;font-size:15px}
 .pt-card.x{align-self:center;min-width:0}
 
+/* đang nghe con nói: phù thuỷ "khum tai" */
+.pt-ear{display:none;position:absolute;top:18%;font-size:5.4vmin;line-height:1;animation:ptEar .9s ease-in-out infinite;filter:drop-shadow(0 2px 4px rgba(0,0,0,.35))}
+.w-en .pt-ear{left:-12%}.w-zh .pt-ear{right:-12%}
+.pt-wiz.pt-tai .pt-ear{display:block}
+@keyframes ptEar{50%{transform:scale(1.2)}}
+/* Phép thưởng cuối: hàng quà */
+.pt-qua{background:rgba(120,60,10,.55)}
+.pt-qua .pt-sp{cursor:default}
+.pt-qua .pt-sp.zh{background:radial-gradient(circle at 50% 30%,#fff,#FFDCDC)}
+
 @media (orientation:portrait) and (max-width:820px){
   .pt-open{right:auto;left:12px;bottom:calc(var(--nav,64px) + var(--xth,0px) + 12px)}   /* nút Góc vinh danh ở góc phải */
   .pt-open b{display:none}
@@ -158,4 +168,4 @@ body.pt-on .pt-open{display:none}
   .pt-bub{max-width:48vmin}
   .pt-spells{top:1.5%;gap:2vmin;padding:1.6vmin 2.4vmin}.pt-sp{width:16vmin;height:16vmin}.pt-sp.rut{width:12vmin;height:12vmin}.pt-sbook{display:none}
 }
-@media (prefers-reduced-motion:reduce){.pt-open,.pt-wand,.pt-zz,.pt-sp,.pt-sp.doi,.pt-mic.pt-luot{animation:none}}
+@media (prefers-reduced-motion:reduce){.pt-open,.pt-wand,.pt-zz,.pt-sp,.pt-sp.doi,.pt-mic.pt-luot,.pt-ear{animation:none}}
