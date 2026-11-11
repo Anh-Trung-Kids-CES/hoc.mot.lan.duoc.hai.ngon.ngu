@@ -179,7 +179,7 @@ def cham_qs(k_list, n=6):
 
 days = {}
 G = {d['ngay']: d for d in GRID['days']}
-BUOI_OF = {n: b['buoi'] for b in GRID['buoi'] for n in b['ngay_web']}
+BUOI_OF = {n: b['buoi'] for b in GRID['buoi'] for n in b['ngay_web'] if b['buoi']}
 GOAL = ['Chào buổi sáng, chào mèo con; tạm biệt mẹ bằng hai tiếng',
         'Chào cô giáo và các bạn khi đến lớp',
         'Chào cả lớp, chào bạn mới',
@@ -354,6 +354,124 @@ for k, n in enumerate(D9):
     if k >= 5: d.update({'part': 'Cả truyện', 't': ['Picnic Time! – cả truyện', 'Các bạn thích gì?', 'Phiên dịch nhí'][k - 5], 'hero': L9 + ['p1_2.webp', 'p3_3.webp', 'p5_3.webp'][k - 5], 'kind': 'ca'})
 fix_ten(days)
 
+
+# ---------- Unit 2–12 + tuần ôn (mạng văn bản ls48_mang.py, nguyên tắc 61–67; tranh ghép ghep_units.py) – 11/11/2026 ----------
+import importlib.util as _iu
+from pypinyin import pinyin as _pinyin, Style as _Style
+_sp = _iu.spec_from_file_location('ls48_mang', 'chuong-trinh/cong-cu/khung/grid/mang/ls48_mang.py'); MANG = _iu.module_from_spec(_sp); _sp.loader.exec_module(MANG)
+_gs = _iu.spec_from_file_location('ghep_units', 'little-seed/cong-cu/ghep_units.py'); GH = _iu.module_from_spec(_gs); _gs.loader.exec_module(GH)
+def PY(z):
+    out = []
+    for seg in re.split(r'([一-鿿]+)', z):
+        if re.match(r'[一-鿿]', seg or ''): out.append(' '.join(x[0] for x in _pinyin(seg, style=_Style.TONE)))
+        else: out.append(seg)
+    return re.sub(r'\s+', ' ', ''.join(out).replace('，', ', ').replace('！', '! ').replace('？', '? ').replace('。', '. ').replace('、', ', ').replace('……', '… ')).strip()
+def IMG(key, en=''):
+    p = GH.tranh(key)
+    if p: return '../' + p
+    slug = re.sub(r'[^a-z0-9]+', '_', en.lower()).strip('_')
+    return 'tai-nguyen-ls/the/' + slug + '.webp' if os.path.exists('little-seed/tai-nguyen-ls/the/' + slug + '.webp') else ''
+GOALS = {2: 'Đếm nến, nói tên, hỏi tuổi', 3: 'Xem album: ông, bà, anh, chị, em', 4: 'Đầu, mắt, mũi, tay, chân: I have…', 5: 'Vui, buồn, buồn ngủ, sợ, giận, mệt',
+         6: 'Đồ dùng học tập: What is this?', 7: 'Tìm sách: on, under', 8: 'Con vật làm được gì: I can…', 9: 'Đi dã ngoại: I like / I eat / I drink',
+         10: 'Thời tiết hôm nay', 11: 'Màu sắc và cầu vồng', 12: 'Tiệc của Leo: đếm bánh, đếm bạn'}
+DU = {}
+for d in GRID['days']: DU.setdefault(d['unit'], []).append(d['ngay'])
+READER = {}
+for un, MU in sorted(MANG.U.items()):
+    WU = {}
+    for part in MU['the']:
+        for w in part: WU[w[0]] = (w[1], PY(w[1]), IMG(w[2] if len(w) > 2 else '', w[0]), (w[3] if len(w) > 3 else ''))
+    def cu(w, on=False):
+        z, p, img, nen = WU[w]
+        c = {'en': w, 'zh': z, 'py': p, 'img': img, 'a_en': au('en', w, 'co_huou'), 'a_zh': au('zh', z, 'co_huou')}
+        if on: c['on'] = True
+        if nen: c['nen'] = nen
+        return c
+    L = f'tai-nguyen-ls/canh/u{un}/'
+    def scu(k):
+        return [{'who': GH.code(w) if GH.code(w) in who else ('narr' if GH.code(w) in GH.ANIMAL else GH.code(w)), 'img': L + f'p{k + 1}_{i + 1}.webp', 'en': e, 'zh': z, 'py': PY(z),
+                 'a_en': au('en', e, VOICE.get(GH.code(w), '')), 'a_zh': au('zh', z, VOICE.get(GH.code(w), ''))} for i, (w, e, z) in enumerate(MU['phan'][k][2])]
+    SC = [scu(k) for k in range(5)]
+    for k in range(5):
+        for s in SC[k]:
+            if s['who'] not in who: s['who'] = 'narr'
+    PIC_W = [w for w in WU if WU[w][2]]
+    def gq(words, n_opt=3):
+        words = [w for w in words if WU[w][2]] or PIC_W
+        words = pad(words, 5, 6); qs = []
+        for i, w in enumerate(words):
+            l = 'en' if i % 2 == 0 else 'zh'; t = w if l == 'en' else WU[w][0]
+            pool = [x for x in PIC_W if x != w and WU[x][2] != WU[w][2]]
+            others = random.sample(pool, min(n_opt - 1, len(pool))); opts = others + [w]; random.shuffle(opts)
+            qs.append({'m': 'pic', 'say': {'t': t, 'l': l, 'a': au(l, t, 'co_huou')}, 'opts': [{'en': o, 'zh': WU[o][0], 'img': WU[o][2]} for o in opts], 'ans': opts.index(w)})
+        return qs
+    def nu(k):
+        T = []
+        for s in SC[k] + (SC[k - 1] if k else SC[k + 1]):
+            if s['who'] in ('narr', 'me', 'bo', 'co', 'cun', 'meo', 'em'): continue
+            T.append({'img': s['img'], 'say': [{'t': s['en'] if len(T) % 2 == 0 else s['zh'], 'l': 'en' if len(T) % 2 == 0 else 'zh', 'w': s['who'],
+                                                 'a': s['a_en'] if len(T) % 2 == 0 else s['a_zh']}]})
+        return T[:6] if len(T) >= 5 else (T + [{'img': s['img'], 'say': [{'t': s['en'], 'l': 'en', 'w': s['who'], 'a': s['a_en']}]} for s in SC[k]])[:6]
+    BBU = [(IMG(i) or IMG(i.replace('_a', '')) or ('../' + GH.NV + i + '_a.webp' if os.path.exists(GH.NV + i + '_a.webp') else ('../' + GH.NV + i + '.webp' if os.path.exists(GH.NV + i + '.webp') else '')), e, z, PY(z)) for i, e, z in MU['bb'][2]]
+    VEU = [(IMG({'co': 'song', 'lop': 'song'}.get(w, 'song')), e.replace('-', '').title() if False else re.sub(r'(?<=\w)-(?=\w)', '', e), z, PY(z)) for w, e, z, v in MU['ve']]
+    def bbu(n):
+        pg = [BBU[(2 * n + j) % len(BBU)] for j in range(3)] + [VEU[(n + j) % len(VEU)] for j in range(2)]
+        return bb_step(pg, f'Big book · {MU["bb"][0]} + vè', f'Big book · {MU["bb"][1]} + 儿歌')
+    D = sorted(DU[un]); NEW = [[w[0] for w in part] for part in MU['the']]
+    for k in range(5):
+        n = D[k]; old = [w for j in range(k) for w in NEW[j]]
+        cards = [cu(w) for w in NEW[k]] + [cu(w, True) for w in old[-max(0, 5 - len(NEW[k])):]]
+        days[n] = {'steps': [{'type': 'the', 'cards': cards[:8]},
+                             {'type': 'truyen', 'title': f'{MU["ten_en"]} · {MU["phan"][k][0]}', 'title_zh': f'{MU["ten_zh"]} · {MU["phan"][k][1]}', 'scenes': SC[k]},
+                             bbu(k), {'type': 'noi', 'turns': nu(k)}, {'type': 'game', 'qs': gq(NEW[k] + old, 3)}],
+                   'part': f'Phần {k + 1}', 't': f'{MU["phan"][k][0]} – {MU["phan"][k][1]}', 'hero': L + f'p{k + 1}_1.webp', 'kind': 'phan'}
+    ALLU = [s for k in range(5) for s in SC[k]]
+    whole = {'type': 'truyen', 'title': MU['ten_en'], 'title_zh': MU['ten_zh'], 'scenes': ALLU}
+    kids = [x for x in ('bong', 'leo', 'anna', 'xiaomei', 'vu', 'me', 'bo') if any(s['who'] == x for s in ALLU)][:4]
+    chamu = {'type': 'cham', 'opts': kids, 'qs': [{'say': {'t': s[l], 'l': l, 'w': s['who'], 'a': s['a_' + l]}, 'ans': s['who']}
+                                                for i, s in enumerate(ALLU) for l in (('en', 'zh')[i % 2],) if s['who'] in kids][:8]}
+    kidl = [s for s in ALLU if s['who'] in ('bong', 'leo', 'anna', 'xiaomei', 'vu')]
+    pdn = []
+    for s in kidl:
+        if '___' in s['en'] or len(s['en'].split()) < 3 or any(p['en'] == s['en'] for p in pdn): continue
+        pdn.append({'en': s['en'], 'zh': s['zh'], 'py': s['py'], 'a_en': s['a_en'], 'a_zh': s['a_zh']})
+    ALLW = [w for p in NEW for w in p]
+    if len(D) >= 8:
+        days[D[5]] = {'steps': [whole, chamu, bbu(5), {'type': 'goi', 'from': f'Unit {un}', 'cards': [cu(w) for w in ALLW[::2][:5]]}, {'type': 'game', 'qs': gq(ALLW[:6])}]}
+        days[D[6]] = {'steps': [whole, {'type': 'noi', 'turns': [{'img': s['img'], 'say': [{'t': s['en'] if i % 2 == 0 else s['zh'], 'l': 'en' if i % 2 == 0 else 'zh', 'w': s['who'],
+                                                                                           'a': s['a_en'] if i % 2 == 0 else s['a_zh']}]} for i, s in enumerate(kidl[::2])][:8]},
+                                bbu(6), {'type': 'game', 'qs': gq(ALLW[3:9] or ALLW)}]}
+        days[D[7]] = {'steps': [whole, {'type': 'pdn', 'model_first': False, 'items': pdn[:5] if len(pdn) >= 5 else (pdn + pdn)[:5]},
+                                bbu(7), {'type': 'goi', 'from': f'Unit {un}', 'cards': [cu(w) for w in ALLW[1::2][:5]]}, {'type': 'game', 'qs': gq(ALLW[-6:])}]}
+    for k, n in enumerate(D):
+        if n not in days: continue
+        d = days[n]
+        d.update({'n': n, 'unit': un, 'unitname': GRID['days'][n - 1]['label'].split('·')[1].strip(), 'week': G[n]['tuan'], 'before': BUOI_OF.get(n), 'goal': GOALS[un] if k < 5 else
+                  ['Nghe cả truyện, chạm đúng bạn đang nói', 'Nói câu của các bạn', 'Phiên dịch nhí'][k - 5], 'bg': [], 'video': []})
+        if k >= 5: d.update({'part': 'Cả truyện', 't': [f'{MU["ten_en"]} – cả truyện', 'Các bạn nói gì?', 'Phiên dịch nhí'][k - 5], 'hero': L + ['p1_2.webp', 'p3_2.webp', 'p5_2.webp'][k - 5], 'kind': 'ca'})
+    READER[str(un)] = {'t': MU['ten_en'], 'zh': MU['ten_zh'], 'pages': [dict(s, part=k + 1) for k in range(5) for s in SC[k]]}
+    globals()['BBU_%d' % un] = BBU
+# Tuần ôn (ngày 98–99): big book các unit + trò chơi trộn câu của ngày Phần 5 các unit
+for n, us in ((98, (2, 3, 4, 5, 6)), (99, (7, 8, 10, 11, 12))):
+    pg = [globals()['BBU_%d' % u][0] for u in us] + [globals()['BBU_%d' % u][1] for u in us[:3]]
+    qs = []
+    for u in us:
+        qs += next(st for st in days[sorted(DU[u])[4]]['steps'] if st['type'] == 'game')['qs'][:2]
+    days[n] = {'n': n, 'unit': 'Ôn', 'unitname': 'Ôn cả khóa', 'part': 'Ôn cả khóa', 'week': G[n]['tuan'], 'before': BUOI_OF.get(n), 'kind': 'ca',
+               't': 'Ôn cả khóa – big book các unit' + (' (1)' if n == 98 else ' (2)'), 'hero': pg[0][0], 'goal': 'Nghe lại mẫu câu của cả khóa, chuẩn bị Album gia đình',
+               'bg': [], 'video': [], 'steps': [bb_step(pg, 'Big book cả khóa', '全年大书'), {'type': 'game', 'qs': qs[:8]}]}
+# Unit 1: vè chào (hello, goodbye) đưa vào bước Big book và vè – ng.t. 66–67 (web trước buổi mang câu của vè)
+VE_CHAO = [(S + 'tranh/song.webp', 'Hello, hello, everyone!', '你好你好，大家好！'), (S + 'tranh/song.webp', 'Hello, teacher! Class is fun!', '老师老师，早上好！'),
+           (S + 'tranh/song.webp', "What's your name? What's your name?", '你叫什么名字呀？'), (S + 'tranh/song.webp', "Leo, Leo, that's my name!", '我叫Leo，Leo呀！'),
+           (S + 'tranh/song.webp', 'Goodbye, goodbye, everyone!', '大家再见，再见啦！'), (S + 'tranh/song.webp', 'One, two, three… school is done!', '一二三，放学啦！')]
+for n in range(1, 10):
+    st = next((x for x in days[n]['steps'] if x.get('lab') == 'Big book và vè'), None)
+    if st:
+        add = [VE_CHAO[(n - 1) * 2 % 6], VE_CHAO[((n - 1) * 2 + 1) % 6]]
+        st['scenes'] = st['scenes'][:3] + [{'who': 'narr', 'img': i, 'en': e, 'zh': z, 'py': PY(z), 'a_en': au_multi('en', e, 'co_huou'), 'a_zh': au_multi('zh', z, 'co_huou')} for i, e, z in add]
+        st['title'] = 'Big book · Hello and Goodbye + vè chào'
+fix_ten(days)
+
 # ---------- bản đồ: 26 tuần ----------
 U = {}
 for d in GRID['days']: U.setdefault(str(d['unit']), []).append(d['ngay'])
@@ -366,6 +484,7 @@ mp, soon = [], {}
 for u, ds in U.items():
     items = []
     for b in GRID['buoi']:
+        if b['buoi'] == 0: continue
         if str(b['unit']) == u:
             items += [['day', n] for n in b['ngay_web']] + [['lop', b['buoi']]]
     ui = int(u) if u != 'Ôn' else 13
@@ -376,14 +495,15 @@ for u, ds in U.items():
         if n not in days: soon[n] = G[n]['label'].split('. ', 1)[-1]
 lop = {}
 for b in GRID['buoi']:
+    if b['buoi'] == 0: continue
     lop[b['buoi']] = {'t': f"Buổi {b['buoi']} trên lớp · {('U' + str(b['unit'])) if b['unit'] != 'Ôn' else 'Ôn'}: {b['vai']}",
                       'img': S + 'trang/ls_class.webp', 'about': b['label'].split('. ', 1)[-1],
                       'prep': [x.strip() for x in re.split(r',', re.sub(r'\([^)]*\)', '', b['lop']['en']['flash']))][:8],
                       'days': b['ngay_web'], 'wb': ['Phiếu tô – dán 1 trang (khoảng 10 phút): tô tranh truyện, dán ảnh người thân, nối tranh – tranh'],
                       'kh': b['ke_hoach_90']}
 units_q = [{'u': u, 'n': f'Unit {u} · {TOPIC[u].split(" · ")[0]}', 'days': ds, 'img': S + 'trang/' + IMG[int(u) - 1] + '.webp'} for u, ds in U.items() if u != 'Ôn']
-reader = {'1': {'t': "Bông's Day", 'zh': 'Bông的一天', 'pages': [dict(s, part=k + 1) for k in range(5) for s in scenes(k)]},
-          '9': {'t': 'Picnic Time!', 'zh': '去野餐！', 'pages': [dict(s, part=k + 1) for k in range(5) for s in sc9(k)]}}
+reader = {'1': {'t': "Bông's Day", 'zh': 'Bông的一天', 'pages': [dict(s, part=k + 1) for k in range(5) for s in scenes(k)]}}
+reader.update(READER)
 fix_ten(reader)
 
 out = {'who': who, 'days': {str(k): v for k, v in sorted(days.items())}, 'lop': {str(k): v for k, v in lop.items()}, 'map': mp,
