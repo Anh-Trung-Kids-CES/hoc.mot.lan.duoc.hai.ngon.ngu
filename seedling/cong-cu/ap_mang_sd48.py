@@ -220,6 +220,31 @@ if '4' in SD['reader']:
     for p in SD['reader']['4']['pages']:
         if p.get('en') in IMG4: p['img'] = IMG4[p['en']]
 
+# ---------- "Ba mẹ ôn trước buổi" (SD.lop[*].prep) lấy câu của truyện mới, khớp các ngày web trước buổi (rà 11/11 chiều) ----------
+NEWU = {str(n) for n, M in MG.U.items() if not M.get('giu_truyen')}
+for k, L in SD['lop'].items():
+    ds = [str(x) for x in L.get('days', [])]
+    if not any(str(DAYS[d].get('unit')) in NEWU for d in ds if d in DAYS): continue
+    out, seen = [], set()
+    for d in ds:
+        st = DAYS[d]['steps']
+        for s in st:
+            if s['type'] != 'truyen' or s.get('lab'): continue
+            for x in s.get('scenes', []):
+                e = x['en'].strip()
+                if x['who'] in ('narr',) or '___' in e or len(e.split()) < 3 or e in seen: continue
+                seen.add(e); out.append(x)
+    pick = out[::max(1, len(out) // 4)][:4] if len(out) > 4 else out
+    L['prep'] = [f"{x['en']} · {x['zh']}" for x in pick]
+# Sót từ v7: lời dặn "(nghe làm quen)" trong câu Trung của Phiên dịch nhí ngày 4, 5 (màn bài không có chữ tiếng Việt)
+for d in DAYS.values():
+    for s in d['steps']:
+        for it in s.get('items', []):
+            if isinstance(it, dict) and '(nghe' in (it.get('zh') or ''):
+                it['zh'] = re.sub(r'^\(nghe\s*làm\s*quen\)\s*', '', it['zh'].replace('（', '(').replace('）', ')'))
+                it['py'] = re.sub(r'^Nghe\s*l[àa]m\s*quen\s*', '', it.get('py', ''), flags=re.I); it['py'] = it['py'][:1].upper() + it['py'][1:]
+                it['a_zh'] = au('zh', it['zh'])
+
 open(DATA, 'w').write(head + '\nwindow.SD=' + json.dumps(SD, ensure_ascii=False) + ';\n')
 json.dump(sorted(MISS), open('seedling/cong-cu/giong_thieu_sd48.json', 'w'), ensure_ascii=False, indent=0)
 for n, (ph, ca, ns) in report.items(): print(f'U{n}: ngày phần {ph[0]}–{ph[-1]}, cả truyện {ca}, {ns} cảnh')
