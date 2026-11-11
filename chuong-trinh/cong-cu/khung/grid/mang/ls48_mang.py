@@ -20,7 +20,7 @@ U[2] = dict(ten_en="Bông's Birthday", ten_zh='Bông的生日', bg='ls_home', ph
                                     ('lop', 'Happy birthday, Bông!', 'Bông，生日快乐！'), ('bong', 'How old are you, ___?', '___，你几岁？')])],
     bb=('My Name Is…', '我叫…', [('kids_bong', 'Hello! My name is Bông.', '你好！我叫Bông。'), ('kids_leo', "My name is Leo. I'm five.", '我叫Leo。我五岁。'),
                                 ('kids_anna', "My name is Anna. I'm four.", '我叫Anna。我四岁。'), ('nv_vu', "My name is Vũ. I'm six.", '我叫Vũ。我六岁。'),
-                                ('pets_cun_dung', "My name is Lucky. I'm three. Woof!", '我叫Lucky。我三岁。汪汪！'), ('cake', 'My name is ___. Happy birthday!', '我叫___。生日快乐！')]),
+                                ('pets_cun_dung', "My name is Puppy. I'm three. Woof!", '我是小狗。我三岁。汪汪！'), ('cake', 'My name is ___. Happy birthday!', '我叫___。生日快乐！')]),
     ve=[('co', 'HAP-py BIRTH-day, HAP-py DAY!', '生日快乐，笑哈哈！', '-ay / a'), ('lop', 'ONE, two, THREE, four, CAKE! Yay, YAY!', '一二三四，蛋糕啦！', '-ay / a'),
         ('lop', "WHAT'S your NAME? How OLD are YOU?", '你叫什么？你几岁？', '-oo / ui'), ('bong', "my NAME'S LE-o. I'm FIVE! And YOU?", '我叫Leo，我五岁！', '-oo / ui')],
     the=[[('name', '名字', 'name'), ('my', '我的', ''), ('cake', '蛋糕', 'cake', 'PreB'), ('seven', '七', 'seven', 'PreB'), ('eight', '八', 'eight', 'PreB')],

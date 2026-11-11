@@ -27,7 +27,7 @@ def words(s): return WORD.findall(s or '')
 def sents(s): return [x for x in re.split(r'(?<=[.!?…])\s+|(?<=[.!?])(?=[A-Z])', s or '') if WORD.search(x)]
 HAN = re.compile(r'[一-鿿]')
 VI = re.compile(r'[ăâđêôơưạảấầẩẫậắằẳẵặẹẻẽếềểễệỉịọỏốồổỗộớờởỡợụủứừửữựỳỵỷỹàáèéìíòóùúýõãĩũ]', re.I)
-NAMES = {'Bông', 'Vũ', 'Leo', 'Anna', 'Xiaomei', 'Lan', 'Lucky'}
+NAMES = {'Bông', 'Vũ', 'Leo', 'Anna', 'Xiaomei', 'Lan', 'Puppy'}
 def vi(s):
     for k in NAMES: s = (s or '').replace(k, '')
     return bool(VI.search(s))

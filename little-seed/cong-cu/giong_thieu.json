@@ -817,14 +817,6 @@
 ],
 [
 "en",
-"Look! Lucky can run!"
-],
-[
-"en",
-"Look! Lucky! He likes pizza!"
-],
-[
-"en",
 "Look! My kitten! What colour is it?"
 ],
 [
@@ -834,6 +826,14 @@
 [
 "en",
 "Look! One big cake!"
+],
+[
+"en",
+"Look! Puppy can run!"
+],
+[
+"en",
+"Look! Puppy! He likes pizza!"
 ],
 [
 "en",
@@ -850,22 +850,6 @@
 [
 "en",
 "Look! Under the table! The puppy!"
-],
-[
-"en",
-"Lucky! You like pizza!"
-],
-[
-"en",
-"Lucky, no!"
-],
-[
-"en",
-"Lucky, what do you drink?"
-],
-[
-"en",
-"Lucky, what do you eat?"
 ],
 [
 "en",
@@ -901,11 +885,11 @@
 ],
 [
 "en",
-"My name is Lucky. I'm three. Woof!"
+"My name is Puppy! Woof!"
 ],
 [
 "en",
-"My name is Puppy! Woof!"
+"My name is Puppy. I'm three. Woof!"
 ],
 [
 "en",
@@ -1061,7 +1045,7 @@
 ],
 [
 "en",
-"PIZza? LUCKy? NO, no, NO!"
+"PIZza? PUPpy? NO, no, NO!"
 ],
 [
 "en",
@@ -1085,11 +1069,27 @@
 ],
 [
 "en",
+"Puppy! You like pizza!"
+],
+[
+"en",
+"Puppy, no!"
+],
+[
+"en",
 "Puppy, puppy, goodbye!"
 ],
 [
 "en",
 "Puppy, touch your feet!"
+],
+[
+"en",
+"Puppy, what do you drink?"
+],
+[
+"en",
+"Puppy, what do you eat?"
 ],
 [
 "en",
@@ -1281,7 +1281,7 @@
 ],
 [
 "en",
-"Two dogs! Lucky and Max!"
+"Two dogs! Puppy and a big dog!"
 ],
 [
 "en",
@@ -1321,7 +1321,7 @@
 ],
 [
 "en",
-"Water! Lucky likes water!"
+"Water! Puppy likes water!"
 ],
 [
 "en",
@@ -1581,26 +1581,6 @@
 ],
 [
 "zh",
-"Lucky！你喜欢比萨！"
-],
-[
-"zh",
-"Lucky，Lucky，坏小狗！"
-],
-[
-"zh",
-"Lucky，不行！"
-],
-[
-"zh",
-"Lucky，你吃什么？"
-],
-[
-"zh",
-"Lucky，你喝什么？"
-],
-[
-"zh",
 "Vũ，你好！"
 ],
 [
@@ -1785,7 +1765,7 @@
 ],
 [
 "zh",
-"两只狗！Lucky和Max！"
+"两只狗！小狗和一只大狗！"
 ],
 [
 "zh",
@@ -2265,7 +2245,23 @@
 ],
 [
 "zh",
+"小狗！你喜欢比萨！"
+],
+[
+"zh",
 "小狗！我喜欢小狗！"
+],
+[
+"zh",
+"小狗，不行！"
+],
+[
+"zh",
+"小狗，你吃什么？"
+],
+[
+"zh",
+"小狗，你喝什么？"
 ],
 [
 "zh",
@@ -2282,6 +2278,10 @@
 [
 "zh",
 "小狗，小狗，再见！"
+],
+[
+"zh",
+"小狗，小狗，坏小狗！"
 ],
 [
 "zh",
@@ -2362,10 +2362,6 @@
 [
 "zh",
 "我叫Leo，我五岁！"
-],
-[
-"zh",
-"我叫Lucky。我三岁。汪汪！"
 ],
 [
 "zh",
@@ -2545,6 +2541,10 @@
 ],
 [
 "zh",
+"我是小狗。我三岁。汪汪！"
+],
+[
+"zh",
 "我有两只手！"
 ],
 [
@@ -2709,7 +2709,7 @@
 ],
 [
 "zh",
-"水！Lucky喜欢水！"
+"水！小狗喜欢水！"
 ],
 [
 "zh",
@@ -2781,14 +2781,6 @@
 ],
 [
 "zh",
-"看！Lucky能跑！"
-],
-[
-"zh",
-"看！Lucky！Lucky喜欢比萨！"
-],
-[
-"zh",
 "看！一个大蛋糕！"
 ],
 [
@@ -2798,6 +2790,14 @@
 [
 "zh",
 "看！几只狗？"
+],
+[
+"zh",
+"看！小狗能跑！"
+],
+[
+"zh",
+"看！小狗！小狗喜欢比萨！"
 ],
 [
 "zh",
