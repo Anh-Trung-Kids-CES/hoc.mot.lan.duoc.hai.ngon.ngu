@@ -470,6 +470,20 @@ for n in range(1, 10):
         add = [VE_CHAO[(n - 1) * 2 % 6], VE_CHAO[((n - 1) * 2 + 1) % 6]]
         st['scenes'] = st['scenes'][:3] + [{'who': 'narr', 'img': i, 'en': e, 'zh': z, 'py': PY(z), 'a_en': au_multi('en', e, 'co_huou'), 'a_zh': au_multi('zh', z, 'co_huou')} for i, e, z in add]
         st['title'] = 'Big book · Hello and Goodbye + vè chào'
+# Từ "Mới · lõi" của khung 48 buổi chưa có trong thẻ ngày (đối chiếu 11/11): thêm thẻ vào bước Thẻ từ của đúng ngày
+EXTRA = {30: [('mouth', '口', 'mouth')], 46: [('these', '这些', '')], 91: [('Happy birthday!', '生日快乐！', 'happy'), ('two dogs', '两只狗', 'dog')],
+         94: [('egg', '鸡蛋', 'egg'), ('an eraser', '一块橡皮', 'eraser'), ('a table', '一张桌子', 'table')], 19: [('little sister', '妹妹', 'fam_bong_em_gai')]}
+for n, ws in EXTRA.items():
+    st = next((x for x in days[n]['steps'] if x['type'] == 'the'), None)
+    if st is None:
+        st = {'type': 'the', 'cards': []}; days[n]['steps'].insert(0, st)
+    have = {c['en'].lower() for c in st['cards']}
+    for en, zh, key in ws:
+        if en.lower() in have: continue
+        img = IMG(key, en)
+        if not img:
+            slug = re.sub(r'[^a-z0-9]+', '_', en.lower()).strip('_'); GH.the_chu(en, zh, f'little-seed/tai-nguyen-ls/the/{slug}.webp'); img = f'tai-nguyen-ls/the/{slug}.webp'
+        st['cards'].append({'en': en, 'zh': zh, 'py': PY(zh), 'img': img, 'a_en': au('en', en, 'co_huou'), 'a_zh': au('zh', zh, 'co_huou')})
 fix_ten(days)
 
 # ---------- bản đồ: 26 tuần ----------

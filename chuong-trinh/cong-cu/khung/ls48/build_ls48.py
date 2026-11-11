@@ -256,6 +256,28 @@ if os.path.exists(_mn):
         for b in buoi:
             if b['unit'] == u:
                 b['lop']['en']['baihat'] = f'[Vè mới theo nguyên tắc 65 – chờ duyệt] {ve} ‖ {vez} ‖ ' + b['lop']['en']['baihat']
+# v2.2 (11/11/2026): truyện, big book, vè U2–U12 đã viết đủ theo chỉ tiêu và đã lên web 99 ngày (grid/mang/ls48_mang.py) – thay các ô ở trên
+import importlib.util as _iu, re as _re
+_sp = _iu.spec_from_file_location('ls48_mang', os.path.join(GRID, 'mang', 'ls48_mang.py')); _LM = _iu.module_from_spec(_sp); _sp.loader.exec_module(_LM)
+DO_LS = {}
+for u, M in sorted(_LM.U.items()):
+    D = [d for d in days if d['unit'] == u]
+    nw = []
+    for k, d in enumerate(D[:5]):
+        t, z, P = M['phan'][k]
+        nw.append(len(_re.findall(r"[^\W\d_][\w']*", ' '.join(e for _, e, _ in P))))
+        d['en']['truyen'] = f'[Truyện unit 11/11 – đã lên web] {M["ten_en"]} · Phần {k + 1}: {t} — ' + ' '.join(f'{w}: {e}' for w, e, _ in P)
+        d['zh']['truyen'] = f'[Truyện unit] {M["ten_zh"]} · {z} — ' + ' '.join(f'{w}：{zz}' for w, _, zz in P)
+    for d in D[5:]:
+        d['en']['truyen'] = f'[Truyện unit – cả truyện] {M["ten_en"]} (cả 5 phần) + big book {M["bb"][0]} + vè'
+        d['zh']['truyen'] = f'[Truyện unit – cả truyện] {M["ten_zh"]}'
+    DO_LS[u] = f'Đã viết lại 11/11, đã lên web: EN {min(nw)}–{max(nw)} chữ/phần'
+    ve = ' / '.join(e for _, e, _, _ in M['ve']); vez = ' / '.join(z for _, _, z, _ in M['ve'])
+    bb = ' / '.join(e for _, e, _ in M['bb'][2])
+    for b in buoi:
+        if b['unit'] == u:
+            b['lop']['en']['baihat'] = f'[Vè unit 11/11, có trên web] {ve} ‖ {vez}'
+            b['lop']['en']['truyen'] = f'[Truyện unit 11/11] {M["ten_en"]} · {M["ten_zh"]} ‖ Big book {M["bb"][0]}: {bb}'
 # Chỉ tiêu 4 mặt theo unit (nguyên tắc 62, 63, 65–67) – sinh bởi chi_tieu_48.py
 _ct = os.path.join(GRID, 'mang', 'chi_tieu_48.json')
 CT = {x['unit']: x for x in json.load(open(_ct)) if x['lop'] == 'Little Seed 48'} if os.path.exists(_ct) else {}
@@ -267,7 +289,7 @@ for d in days:
 for b in buoi:
     c = CT.get(b['unit'])
     if c:
-        b['chi_tieu'] = f'Vè: {c["ve"]}. Big book: {c["big_book"]}. Hiện trạng truyện: {c["hien_trang"]}'
+        b['chi_tieu'] = f'Vè: {c["ve"]}. Big book: {c["big_book"]}. Hiện trạng truyện: {DO_LS.get(b["unit"], c["hien_trang"])}'
 # Chào đầu buổi / cuối buổi bằng vè (nguyên tắc 66); buổi 1 = khai giảng (nguyên tắc 67)
 VE_CHAO = ('Vè chào đầu buổi: Hello, hello, everyone! / Hello, teacher! Class is fun! / What\'s your name? (×2) / ___, ___, that\'s my name! / '
            '___, ___, how old are you? / Five! I\'m five! And you? And you?')
@@ -349,7 +371,7 @@ for b in buoi:
     if b['buoi'] == 0: continue
     b['ke_hoach_90'] = plan90(b)
 
-out = {'khoa': 'Little Seed offline 48 buổi', 'ban': 'v2.1 (11/11/2026 – nguyên tắc 61–68, thêm buổi 0 khai giảng)',
+out = {'khoa': 'Little Seed offline 48 buổi', 'ban': 'v2.2 (11/11/2026 – nguyên tắc 61–68, thêm buổi 0 khai giảng; truyện, big book, vè U2–U12 đã lên web 99 ngày)',
        'nhip': 'Tuần 1–3: 3 ngày web rồi buổi Chủ nhật. Từ tuần 4: 2 ngày web → buổi thứ Tư → 2 ngày web → buổi Chủ nhật. Tuần 26: 2 ngày web và buổi 48 (thứ Tư).',
        'preb_day_lai': PREB, 'days': days, 'buoi': buoi}
 dst = os.path.join(GRID, 'mang', 'little-seed48.json')

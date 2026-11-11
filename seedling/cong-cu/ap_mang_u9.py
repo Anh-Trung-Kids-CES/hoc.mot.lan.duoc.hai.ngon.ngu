@@ -1,4 +1,5 @@
-"""Đưa mạng văn bản Unit 9 mới (chuong-trinh/cong-cu/khung/grid/mang/mau_seedling48_u9.json) lên web Seedling 99 ngày – bản mẫu chờ chị duyệt.
+"""[ĐÃ THAY bằng ap_mang_sd48.py (11/11/2026) – không chạy nữa, sẽ ghi đè U9 mới bằng bản mẫu cũ.]
+Đưa mạng văn bản Unit 9 mới (chuong-trinh/cong-cu/khung/grid/mang/mau_seedling48_u9.json) lên web Seedling 99 ngày – bản mẫu chờ chị duyệt.
 Sửa ngày web 64–71 ngay trong seedling-data.js (build.py cần Excel v7 không có trong repo, nên chạy script này SAU build.py):
 - Nghe truyện: truyện khung 6 phần mới, mỗi câu một tranh ghép (tai-nguyen/canh/u9/).
 - Bài luyện rời "Chạm đúng tranh / Nghe – chạm tranh" thay bằng bước "Big book và vè" (nguyên tắc 23, 27: văn bản mới thay chỗ luyện rời, không thêm phút).
@@ -6,6 +7,7 @@ Sửa ngày web 64–71 ngay trong seedling-data.js (build.py cần Excel v7 kh�
 - Reader Unit 9 thay bằng truyện mới.
 Chạy ở thư mục gốc repo: python3 -I seedling/cong-cu/ap_mang_u9.py
 """
+import sys; sys.exit("ap_mang_u9.py đã được thay bằng ap_mang_sd48.py")
 import json, os, re, subprocess
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 DATA = os.path.join(ROOT, 'seedling', 'seedling-data.js')

@@ -18,6 +18,8 @@ CTU = {}
 for x in CT:
     for u in x['unit'].split('+'):
         CTU[u] = x
+import importlib.util as _iu
+_sp = _iu.spec_from_file_location('sd48', MANG + 'sd48_mang.py'); MG = _iu.module_from_spec(_sp); _sp.loader.exec_module(MG)
 WHO = {k: v[0] for k, v in SD.get('who', {}).items()} if isinstance(SD.get('who'), dict) else {}
 
 def scenes_text(sc, l):
@@ -45,14 +47,16 @@ for k in sorted(SD['lop'], key=int):
     c = CTU.get(u.group(1)) if u else None
     chao = ('Sau buổi 0 và ngày web 1–3: hát trọn hai vè chào. ' if k == '1' else 'Đầu và cuối buổi: ') + VE_CHAO
     buoi.append([int(k), L['t'].split('·', 1)[-1].strip(), ', '.join(map(str, L.get('days', []))), L.get('about', ''), ' · '.join(L.get('prep', [])),
-                 ' | '.join(L.get('wb', [])), chao, (f"Vè unit: {c['ve']}. Big book: {c['big_book']}" if c else '')])
+                 ' | '.join(L.get('wb', [])), chao, (f"Vè unit (trên web): {' / '.join(e for _, e, _, _ in MG.U[int(u.group(1))]['ve'])}. Big book {MG.U[int(u.group(1))]['bb'][0]}: {' / '.join(e for _, e, _ in MG.U[int(u.group(1))]['bb'][2])}"
+                  if u and int(u.group(1)) in MG.U else (f"Vè unit: {c['ve']}. Big book: {c['big_book']}" if c else ''))])
 
 wb = Workbook(); ws = wb.active; ws.title = 'Tổng quan'
-for r in [['Seedling · khung chương trình offline 48 buổi · v8 (11/11/2026)'], [''],
+for r in [['Seedling · khung chương trình offline 48 buổi · v8.1 (11/11/2026 – nội dung đã lên web 99 ngày)'], [''],
           ['Lớp', 'Lớp Seedling offline, con 5–7 tuổi, đã có chút tiếng Anh, chưa học Little Seed. Không đổi khung 9 khóa.'],
           ['Nguồn', 'v8 = nội dung v7 (bộ từ, thứ tự unit, truyện, buổi – lấy từ dữ liệu web 99 ngày seedling-data.js, sinh từ Excel v7) + nguyên tắc 61–68 chị duyệt 10–11/11. File Excel v7 gốc nằm trong chat "Web bài tập cho trẻ 5-8 tuổi" (06/11).'],
-          ['Sửa v8', 'Thêm buổi 0 khai giảng (ngoài 48 buổi). Chào đầu/cuối buổi bằng hai vè chào. Chỉ tiêu 4 mặt cho truyện mỗi unit (tab "Chỉ tiêu 4 mặt"): bậc cầu tuần 1–3 (Greeting + Body) 25 chữ/3 chữ câu, U2 28/3,5, U3 31/3,5, U5→U12 35→55, 4→5,5 (nguyên tắc 62d, chị duyệt 11/11). Truyện hiện có trên web còn ngắn hơn chỉ tiêu – cột "Việc cần làm".'],
-          ['Còn phải làm', 'Viết lại truyện U2–U12 theo chỉ tiêu (dài hơn, câu dài hơn, nối hội thoại, dùng lại mẫu câu cũ, có cốt truyện); viết vè mới theo công thức 65; đổi big book U1 sang chào + tự giới thiệu tên; dựng lại web.']]:
+          ['Sửa v8', 'Thêm buổi 0 khai giảng (ngoài 48 buổi). Chào đầu/cuối buổi bằng hai vè chào. Chỉ tiêu 4 mặt cho truyện mỗi unit (tab "Chỉ tiêu 4 mặt"): bậc cầu tuần 1–3 (Greeting + Body) 25 chữ/3 chữ câu, U2 28/3,5, U3 31/3,5, U5→U12 35→55, 4→5,5 (nguyên tắc 62d, chị duyệt 11/11). '],
+          ['Sửa v8.1 (11/11)', 'Truyện U2, U3, U5–U12 viết lại theo chỉ tiêu 4 mặt (giữ cốt truyện, nhân vật, bộ từ từng ngày của v7), U1 và U4 giữ truyện v7 (đã đạt bậc cầu); mỗi unit có big book + vè; tuần 1–3 có vè chào trên web; câu hỏi nghe hiểu ngày cả truyện viết lại – tất cả đã lên web Seedling 99 ngày (tab "Big book và vè"). Buổi 0 không có trên web.'],
+          ['Còn phải làm', 'Thu giọng các câu mới (hiện đọc bằng giọng trình duyệt); ngày ôn 26, 27, 60, 61 còn kể gọn theo truyện v7 (cốt truyện không đổi). Chữ Hán U10–U12 vượt chỉ tiêu do dịch sát câu Anh (rút gọn tiếng Trung chỉ áp từ Larva, ng.t. 68).']]:
     ws.append(r)
 ws['A1'].font = Font(bold=True, size=14); ws.column_dimensions['A'].width = 18; ws.column_dimensions['B'].width = 140
 for row in ws.iter_rows():
@@ -69,8 +73,22 @@ def sheet(t, h, rows, w):
 
 HB = ['Buổi', 'Unit · vai', 'Ngày web trước buổi', 'Nội dung buổi', 'Ba mẹ ôn trước buổi', 'Sách bài tập', 'Chào đầu / cuối buổi', 'Vè, big book (ng.t. 65–66)']
 sheet('Khung 48 buổi + buổi 0', HB, buoi, [6, 26, 12, 60, 40, 30, 40, 50])
-HD = ['Ngày', 'Tuần', 'Unit', 'Loại', 'Phần', 'Tên ngày', 'Mục tiêu', 'Từ EN', 'Từ ZH', 'Truyện', 'Truyện EN (web hiện tại)', 'Truyện ZH (web hiện tại)', 'Bước', 'Chỉ tiêu truyện (ng.t. 62)']
+HD = ['Ngày', 'Tuần', 'Unit', 'Loại', 'Phần', 'Tên ngày', 'Mục tiêu', 'Từ EN', 'Từ ZH', 'Truyện', 'Truyện EN (trên web)', 'Truyện ZH (trên web)', 'Bước', 'Chỉ tiêu truyện (ng.t. 62)']
 sheet('Mạch từ theo ngày', HD, days, [6, 6, 6, 9, 8, 36, 36, 30, 30, 22, 60, 60, 36, 50])
+for x in CT:
+    us = [int(u) for u in x['unit'].split('+')]; M = [MG.U[u] for u in us if u in MG.U and not MG.U[u].get('giu_truyen')]
+    if M:
+        nw = [len(re.findall(r"[^\W\d_][\w']*", ' '.join(e for _, e, _ in P))) for _, _, P in M[0]['phan']]
+        nz = [len(re.findall(r'[一-鿿]', ''.join(z for _, _, z in P))) for _, _, P in M[0]['phan']]
+        x['hien_trang'] = f'Đã viết lại 11/11, đã lên web: EN {min(nw)}–{max(nw)} chữ/phần, ZH {min(nz)}–{max(nz)} chữ Hán/phần'
+        x['viec'] = 'Thu giọng câu mới'
+    else:
+        x['hien_trang'] = 'Giữ truyện v7 (đạt bậc cầu); big book + vè chào, vè cơ thể đã lên web'; x['viec'] = '–'
+BBV = []
+for u, M in sorted(MG.U.items()):
+    for i, (k, e, z) in enumerate(M['bb'][2]): BBV.append([u, 'Big book · ' + M['bb'][0], i + 1, e, z])
+    for i, (w, e, z, v) in enumerate(M['ve']): BBV.append([u, 'Vè chào' if u == 1 else 'Vè unit', i + 1, e, z + ('  (' + v + ')' if v else '')])
+sheet('Big book và vè', ['Unit', 'Văn bản', 'Trang/dòng', 'Tiếng Anh', 'Tiếng Trung'], BBV, [6, 30, 10, 60, 50])
 KEYS = ['unit', 'chu_de', 'truyen', 'ngay_web', 'buoi', 'en_chu_phan', 'en_chu_cau', 'lien', 'cau_truc', 'zh_chu_phan', 'zh_chu_cau', 'mau_cu', 've', 'big_book', 'hien_trang', 'viec']
 sheet('Chỉ tiêu 4 mặt', ['Unit', 'Chủ đề', 'Truyện', 'Ngày web', 'Buổi', 'EN chữ/phần', 'EN chữ/câu', 'Lượt nói', 'Cấu trúc', 'ZH chữ Hán/phần', 'ZH chữ/câu',
                          'Mẫu câu cũ', 'Vè', 'Big book', 'Hiện trạng', 'Việc cần làm'], [[x.get(k, '') for k in KEYS] for x in CT],

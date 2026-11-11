@@ -1,6 +1,6 @@
 """Chơi tự động TOÀN BỘ 99 ngày, mọi bước, đến màn 'làm xong bước'. Ghi: bước bị kẹt, câu phải dùng giọng máy,
 file giọng lỗi, lời dặn tiếng Việt thiếu file, số câu mỗi bài, sao ở bước nói khi không có micro."""
-import asyncio, json, sys, random, functools, threading, http.server, time
+import os, asyncio, json, sys, random, functools, threading, http.server, time
 from playwright.async_api import async_playwright
 ROOT = '/home/claude/hoc.mot.lan.duoc.hai.ngon.ngu'
 NW = int(sys.argv[1]) if len(sys.argv) > 1 else 6
@@ -78,7 +78,7 @@ async def main():
         await asyncio.gather(*[worker(b, c, out, base) for c in chunks if c])
         await b.close()
     srv.shutdown()
-    json.dump(sorted(out, key=lambda r: (r['n'], r['k'])), open('/home/claude/work/test/playall.json', 'w'), ensure_ascii=False, indent=0)
+    json.dump(sorted(out, key=lambda r: (r['n'], r['k'])), open(os.environ.get('OUT', '/home/claude/work/test/playall.json'), 'w'), ensure_ascii=False, indent=0)
     bad = [r for r in out if not r['ok']]; tts = sum(len(r['tts']) for r in out); fail = sum(len(r['fail']) for r in out); vi = sum(len(r['vi']) for r in out); er = sum(len(r['err']) for r in out)
     print('steps', len(out), 'stuck/timeout', len(bad), 'tts lines', tts, 'audio 404', fail, 'vi no audio', vi, 'js errors', er)
 if __name__ == "__main__": asyncio.run(main())
