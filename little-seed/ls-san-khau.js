@@ -22,15 +22,18 @@
   /* ---------- lựa chọn của con (chạm tranh) ----------
      Tuổi: 4–10 cho cả hai khoá (lớp có bé từ 4 đến 10 tuổi). Little Seed mới học số 1–6, số 7–10 là nền PreB: đây là tuổi của chính con
      nên vẫn cho chọn, con nghe mẫu rồi nói. */
+  const AVA = ['bong', 'anna', 'vu'].map(a => ({ k: a, a }));
   const TUOI = [4, 5, 6, 7, 8, 9, 10].map(n => ({ k: n, e: String(n), en: ['', '', '', '', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'][n], zh: ['', '', '', '', '四', '五', '六', '七', '八', '九', '十'][n] }));
   const PICK = {
     ls: {
+      ava: AVA,
       tuoi: TUOI,
       cx: [['happy', '开心', '😄'], ['sad', '难过', '😢'], ['sleepy', '困', '😴'], ['scared', '害怕', '😨'], ['angry', '生气', '😠'], ['tired', '累', '😩']].map(([en, zh, e]) => ({ k: en, en, zh, e })),
       nguoi: [['grandpa', 'He is my grandpa.', '他是我爷爷。'], ['grandma', 'She is my grandma.', '她是我奶奶。'], ['bro', 'He is my big brother.', '他是我哥哥。'], ['sis', 'She is my little sister.', '她是我妹妹。']]
         .map(([k, en, zh]) => ({ k, a: k, en, zh })),
     },
     sd: {
+      ava: AVA,
       tuoi: TUOI,
       cx: [['excited', '兴奋', '🤩'], ['happy', '高兴', '😄'], ['sleepy', '困', '😴']].map(([en, zh, e]) => ({ k: en, en, zh, e })),
       nguoi: [['mommy', 'She is my mother.', '她是我妈妈。'], ['daddy', 'He is my father.', '他是我爸爸。'], ['bro', 'He is my older brother.', '他是我哥哥。'], ['sis', 'She is my younger sister.', '她是我妹妹。']]
@@ -38,7 +41,7 @@
       toy: [['🐶', 'chó bông'], ['🧸', 'gấu bông'], ['⚽', 'quả bóng'], ['🚗', 'ô tô']].map(([e, vi]) => ({ k: e, e, vi })),
     },
   }[COURSE];
-  const TITLE = { tuoi: 'Con mấy tuổi? (ba mẹ giúp con chạm đúng số)', cx: 'Hôm nay con thấy thế nào?', nguoi: 'Con giới thiệu ai trong nhà?', toy: 'Đồ chơi con thích nhất?' };
+  const TITLE = { ava: 'Trên sân khấu, con là bạn nào?', tuoi: 'Con mấy tuổi? (ba mẹ giúp con chạm đúng số)', cx: 'Hôm nay con thấy thế nào?', nguoi: 'Con giới thiệu ai trong nhà?', toy: 'Đồ chơi con thích nhất?' };
 
   /* ---------- nội dung: câu (L) ----------
      pic: a = nhân vật (một hoặc nhiều), e = biểu tượng; aud = khán giả làm gì khi con nói xong;
@@ -188,24 +191,50 @@
   /* ---------- khung trang ---------- */
   let root = null, S = null;
   const $ = id => document.getElementById(id);
-  function drawAud() {
-    const list = C.units[S.unit].aud;
-    $('skAud').innerHTML = list.map(a => `<span class="sk-p" data-p="${a}"><b class="sk-fx"></b><span class="sk-pb" hidden></span><img src="${NV(IMG[a])}" alt=""><small>${h(WHO[a])}</small></span>`).join('');
+  /* Nhà hát vẽ bằng Canva theo nét tranh của khoá (nhìn từ cuối khán phòng): nền + lớp khán giả phía trước (tách lớp).
+     Toạ độ tính theo % khung tranh 16:9. Khán giả nhìn từ sau lưng → người hỏi / người được chào hiện trong ô "camera cận cảnh". */
+  const BG = A + 'trang/sk_nha_hat.webp', FRONT = A + 'trang/sk_khan_gia.webp';
+  const HEADS = [[3, 58], [12, 64], [23, 67], [34, 68], [5, 74], [21, 75], [66, 68], [79, 67], [92, 64], [98, 58], [96, 75], [77, 80]];
+  const HAND = { l: [30, 63], r: [73, 63] };
+  function drawAud() { drawCon(); }
+  function fit() {
+    const st = $('skStage'), sc = $('skScene'); if (!st || !sc) return;
+    const W = st.clientWidth, H = st.clientHeight; let w = Math.min(W, H * 16 / 9);
+    if (W / H < 1.15) w = Math.min(H * 16 / 9, W * 1.9);   // điện thoại dọc: phóng to, giữ sân khấu ở giữa
+    sc.style.width = w + 'px'; sc.style.height = (w * 9 / 16) + 'px';
+    root.classList.toggle('doc', W / H < 1.15);
   }
-  function audSay(a, t, ms) { const p = root && root.querySelector(`.sk-p[data-p="${a}"] .sk-pb`); if (!p) return; p.textContent = t; p.hidden = false; clearTimeout(p._t); p._t = setTimeout(() => p.hidden = true, ms || 2600); }
+  function drawCon() {
+    const ch = store().ch[COURSE] || {}, ava = (PICK.ava.find(x => x.k === ch.ava) || PICK.ava[0]).a;
+    const c = $('skCon'); if (!c) return; c.querySelector('img').src = NV(IMG[ava]); $('skConTen').textContent = '⭐ ' + (ch.ten || 'Con');
+  }
+  /* ô camera cận cảnh: mặt người hỏi / người được chào + bóng nói; ✋ và vòng sáng ở chỗ bạn giơ tay trong hàng ghế */
+  function audSay(ids, t, ms, ask) {
+    const cam = $('skCam'); if (!cam) return; ids = [].concat(ids).filter(a => IMG[a]); if (!ids.length) return;
+    const side = ask ? 'l' : (ids.length > 1 ? 'r' : 'l');
+    cam.className = 'sk-cam ' + side + (ask ? ' hoi' : '');
+    cam.innerHTML = `<span class="sk-camlb">${ask ? '✋ ' : '📷 '}${h(ids.map(a => WHO[a]).join(', '))}</span><span class="sk-camf">${ids.map(a => `<img src="${NV(IMG[a])}" alt="">`).join('')}</span><span class="sk-camb">${h(t)}</span>`;
+    const ring = $('skRing'), p = HAND[side]; ring.style.left = p[0] + '%'; ring.style.top = p[1] + '%'; ring.className = 'sk-ring on' + (ask ? ' hoi' : '');
+    cam.hidden = false; clearTimeout(cam._t); cam._t = setTimeout(() => { cam.hidden = true; ring.className = 'sk-ring'; }, ms || 2600);
+  }
+  function camOff() { const c = $('skCam'), r = $('skRing'); if (c) c.hidden = true; if (r) r.className = 'sk-ring'; }
   function open(unit) {
     if (root) return;
     unit = UNITS.includes(+unit) ? +unit : curUnit() || UNITS[0];
     S = { unit, lv: 0, show: [], wheel: [], i: 0, lang: 'en', ok: 0, said: {}, busy: false, tries: 0, end: false, abort: false };
     root = document.createElement('div'); root.className = 'sk'; root.innerHTML = `
       <div class="sk-stage" id="skStage">
-        <div class="sk-curtain l"></div><div class="sk-curtain r"></div><div class="sk-spot"></div>
-        <div class="sk-strip" id="skStrip"></div>
-        <div class="sk-screen" id="skScreen"></div>
-        <div class="sk-host" id="skHost"><img alt=""><span class="sk-bub" id="skBub" hidden></span><span class="sk-ear">👂</span></div>
-        <div class="sk-clap" id="skClap"><i></i></div>
-        <div class="sk-aud" id="skAud"></div>
-        <div class="sk-pops" id="skPops"></div>
+        <div class="sk-scene" id="skScene">
+          <img class="sk-bg" src="${BG}" alt="">
+          <div class="sk-screen" id="skScreen"></div>
+          <div class="sk-con" id="skCon"><img alt=""><b id="skConTen">⭐ Con</b></div>
+          <div class="sk-host" id="skHost"><img alt=""><span class="sk-bub" id="skBub" hidden></span><span class="sk-ear">👂</span></div>
+          <img class="sk-front" id="skFront" src="${FRONT}" alt="">
+          <span class="sk-ring" id="skRing"></span>
+          <div class="sk-cam" id="skCam" hidden></div>
+          <div class="sk-pops" id="skPops"></div>
+        </div>
+        <div class="sk-top"><div class="sk-strip" id="skStrip"></div><div class="sk-clap" id="skClap"><i></i></div></div>
       </div>
       <div class="sk-bar"><button type="button" class="sk-x" aria-label="Đóng">✕</button><div class="sk-said" id="skSaid"></div>
         <button type="button" class="sk-skip" id="skSkip" hidden>Bỏ qua câu ⏭</button>
@@ -214,11 +243,12 @@
     document.body.appendChild(root); document.body.classList.add('sk-on');
     try { if (typeof stopAll === 'function') stopAll(); } catch (e) {}
     root.querySelector('.sk-x').onclick = close;
+    fit(); addEventListener('resize', fit);
     $('skMic').onclick = () => turn(false);
     $('skSkip').onclick = () => { stopRec(); S.abort = true; next(false); };
     menu();
   }
-  function close() { stopRec(); stopCam(); try { speechSynthesis.cancel(); } catch (e) {} if (root) root.remove(); root = null; document.body.classList.remove('sk-on'); }
+  function close() { removeEventListener('resize', fit); stopRec(); stopCam(); try { speechSynthesis.cancel(); } catch (e) {} if (root) root.remove(); root = null; document.body.classList.remove('sk-on'); }
   function say(t) { const e = $('skSaid'); if (e) e.innerHTML = t; }
 
   /* ---------- màn chọn bậc ---------- */
@@ -264,7 +294,7 @@
     }, window.SK_TEST ? 50 : 1800);
   }
   function choices() {
-    const need = [...new Set(S.show.map(l => l.need).filter(Boolean))], s = store(), ch = s.ch[COURSE] = s.ch[COURSE] || {};
+    const need = ['ava', ...new Set(S.show.map(l => l.need).filter(Boolean))], s = store(), ch = s.ch[COURSE] = s.ch[COURSE] || {};
     const p = $('skPanel');
     const step = i => {
       if (!root) return;
@@ -274,7 +304,7 @@
         <div class="sk-opts">${opts.map((o, j) => `<button type="button" class="sk-opt${ch[k] === o.k ? ' on' : ''}" data-o="${j}">${o.a ? `<img src="${NV(IMG[o.a])}" alt="">` : `<span>${o.e}</span>`}</button>`).join('')}</div>
         ${i === 0 ? `<label class="sk-name">Tên con (ba mẹ gõ giúp, để hiện trên slide): <input id="skTen" maxlength="20" value="${h(ch.ten || '')}"></label>` : ''}</div>`;
       p.hidden = false;
-      p.querySelectorAll('[data-o]').forEach(b => b.onclick = () => { const t = $('skTen'); if (t) ch.ten = t.value.trim(); ch[k] = opts[+b.dataset.o].k; persist(); step(i + 1); });
+      p.querySelectorAll('[data-o]').forEach(b => b.onclick = () => { const t = $('skTen'); if (t) ch.ten = t.value.trim(); ch[k] = opts[+b.dataset.o].k; persist(); drawCon(); step(i + 1); });
       say('Con chạm một tranh nhé!');
     };
     if (!need.length) { const t = S.show.some(l => l.free); if (!t) return brief(); }
@@ -363,10 +393,10 @@
     const mode = S.lv === 1 ? 'mau' : S.lv === 2 ? 'tranh' : 'mo';
     screen(l, lang, mode);
     if (l.ask) {   // khán giả hỏi trước: người hỏi giơ tay, bước lên, bóng nói riêng; người dẫn giới thiệu
-      const who = root.querySelector(`.sk-p[data-p="${l.ask.a}"]`), q = askText(l, lang);
+      const q = askText(l, lang);
       bubble(lang, lang === 'en' ? 'Question time!' : '提问时间！', 1800);
       await speak(lang === 'en' ? 'Question time!' : '提问时间！', lang); if (!root) return;
-      if (who) who.classList.add('len'); audSay(l.ask.a, q, 6000);
+      audSay(l.ask.a, q, 9000, true);
       say(`❓ <b>${h(WHO[l.ask.a])}</b> hỏi con: <b>${h(q)}</b> → ${S.lv === 1 ? `con trả lời: <b>${h(t)}</b>` : 'con trả lời nhé!'}`);
       await speak(q, lang); if (!root) return;
     }
@@ -386,10 +416,10 @@
   async function turn(auto) {
     if (!root || S.busy || S.end) return; const cur = S.q[S.i]; if (!cur) return;
     const { lang, l } = cur; S.busy = true; S.abort = false;
-    const m = $('skMic'), hEl = $('skHost'); m.classList.remove('luot'); m.classList.add('on'); hEl.classList.add('tai'); say('🎧 Đang nghe…');
+    const m = $('skMic'), hEl = $('skHost'); m.classList.remove('luot'); m.classList.add('on'); hEl.classList.add('tai'); $('skCon').classList.add('noi'); say('🎧 Đang nghe…');
     if (!canListen()) { S.busy = false; m.classList.remove('on'); hEl.classList.remove('tai'); return next(true); }   // máy không nghe được: con nói rồi chạm 🎤 để đi tiếp
     const r = await listen(lang, x => say('🎧 ' + h(x)));
-    S.busy = false; if (!root) return; m.classList.remove('on'); hEl.classList.remove('tai');
+    S.busy = false; if (!root) return; m.classList.remove('on'); hEl.classList.remove('tai'); $('skCon').classList.remove('noi');
     if (S.abort || r.err === 'aborted') return;
     const alts = (r.alts || []).filter(Boolean);
     if (auto && !alts.length && r.err && r.err !== 'no-speech') { pulse(); say('🎤 Con chạm micro rồi nói nhé!'); return; }
@@ -405,10 +435,10 @@
     $('skSkip').hidden = true; $('skMic').disabled = true; $('skMic').classList.remove('luot');
     S.res.push({ i: cur.i, lang: cur.lang, ok }); if (ok) S.ok++;
     const s = $('skScreen'); s.classList.remove('mo'); s.classList.add(ok ? 'dung' : 'tranh');
-    root.querySelectorAll('.sk-p.len').forEach(p => p.classList.remove('len'));
-    if (cur.l.to) {   // người được chào vẫy tay, đáp lại (cả khi con chưa nói tròn câu)
-      const ids = cur.l.to === 'all' ? C.units[S.unit].aud : cur.l.to;
-      ids.forEach((a, k) => setTimeout(() => { if (!root) return; audSay(a, cur.l.rep[cur.lang], 2200); const p = root.querySelector(`.sk-p[data-p="${a}"]`); if (p) { const fx = p.querySelector('.sk-fx'); fx.textContent = '👋'; fx.classList.add('on'); setTimeout(() => fx.classList.remove('on'), 1800); } }, 250 + k * 120));
+    camOff();
+    if (cur.l.to) {   // người được chào đáp lại (cả khi con chưa nói tròn câu): cả khán giả vẫy tay, hoặc ô cận cảnh người được chào
+      if (cur.l.to === 'all') setTimeout(() => root && heads('👋', 1800), 250);
+      else setTimeout(() => root && audSay(cur.l.to, cur.l.rep[cur.lang], 2400), 250);
       setTimeout(() => speak(cur.l.rep[cur.lang], cur.lang), 300);
     }
     if (ok) { react(cur.l.to ? 'clap' : (cur.l.aud || 'clap'), cur.lang); meter(); bubble(cur.lang, cur.lang === 'en' ? ['Great!', 'Super!', 'Wow!'][S.ok % 3] : ['真棒！', '太好了！', '很好！'][S.ok % 3], 1800); }
@@ -417,15 +447,19 @@
     setTimeout(line, ok ? 1900 : 2300);
   }
   function meter() { const n = S.q.length, f = $('skClap').querySelector('i'); f.style.width = Math.round(100 * S.ok / n) + '%'; }
+  function heads(t, ms) {
+    const box = $('skPops'); if (!box) return;
+    HEADS.forEach(([x, y], i) => { const e = document.createElement('span'); e.className = 'sk-hfx'; e.style.left = x + '%'; e.style.top = y + '%'; e.style.animationDelay = (i * .05) + 's';
+      e.textContent = typeof t === 'function' ? t() : t; box.appendChild(e); setTimeout(() => e.remove(), ms || 1800); });
+  }
   function react(kind, lang) {
     tone('clap');
-    const ps = [...root.querySelectorAll('.sk-p')], pop = (t) => { const e = document.createElement('span'); e.className = 'sk-pop'; e.textContent = t; e.style.left = (15 + Math.random() * 70) + '%'; $('skPops').appendChild(e); setTimeout(() => e.remove(), 1500); };
-    ps.forEach((p, i) => { p.classList.remove('nhun'); void p.offsetWidth; p.style.animationDelay = (i * .07) + 's'; p.classList.add('nhun'); });
-    if (kind === 'faces') ps.forEach(p => { const fx = p.querySelector('.sk-fx'); fx.textContent = PICK.cx[Math.floor(Math.random() * PICK.cx.length)].e; fx.classList.add('on'); setTimeout(() => fx.classList.remove('on'), 2200); });
-    if (kind === 'nose') ps.forEach(p => { const fx = p.querySelector('.sk-fx'); fx.textContent = '👃'; fx.classList.add('on'); setTimeout(() => fx.classList.remove('on'), 1800); });
-    if (kind === 'stamp') ps.forEach(p => { const fx = p.querySelector('.sk-fx'); fx.textContent = '👏🦶'; fx.classList.add('on'); setTimeout(() => fx.classList.remove('on'), 1800); });
-    if (kind === 'wave') ps.forEach(p => { const fx = p.querySelector('.sk-fx'); fx.textContent = '👋'; fx.classList.add('on'); setTimeout(() => fx.classList.remove('on'), 1600); });
-    for (let i = 0; i < 4; i++) setTimeout(() => root && pop('👏'), i * 120);
+    const fr = $('skFront'); if (fr) { fr.classList.remove('nhun'); void fr.offsetWidth; fr.classList.add('nhun'); }
+    if (kind === 'faces') heads(() => PICK.cx[Math.floor(Math.random() * PICK.cx.length)].e, 2400);
+    else if (kind === 'nose') heads('👃', 1800);
+    else if (kind === 'stamp') heads('🦶', 1800);
+    else if (kind === 'wave') heads('👋', 1800);
+    else heads('👏', 1500);
   }
 
   /* ---------- xong bậc ---------- */
@@ -454,7 +488,7 @@
     try { cam = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'user', width: 640, height: 480 }, audio: true }); } catch (e) { cam = null; }
     if (!root) return stopCam();
     if (!cam || !window.MediaRecorder) { p.innerHTML = `<div class="sk-box"><div class="sk-t">🎬 Chưa mở được camera</div><p class="sk-mo">Ba mẹ cho phép dùng camera và micro, hoặc mở bằng Chrome / Safari, rồi thử lại nhé.</p><div class="sk-btns"><button type="button" class="ls-b" id="skBack">‹ Quay lại</button></div></div>`; p.hidden = false; $('skBack').onclick = menu; return; }
-    const v = document.createElement('video'); v.className = 'sk-cam'; v.muted = true; v.playsInline = true; v.autoplay = true; v.srcObject = cam; $('skStage').appendChild(v);
+    const v = document.createElement('video'); v.className = 'sk-video'; v.muted = true; v.playsInline = true; v.autoplay = true; v.srcObject = cam; $('skCon').appendChild(v); $('skCon').classList.add('cam');
     chunks = []; try { mrec = new MediaRecorder(cam); } catch (e) { mrec = null; }
     if (mrec) { mrec.ondataavailable = e => e.data && e.data.size && chunks.push(e.data); mrec.start(); }
     $('skMic').innerHTML = '▶<b>Tiếp</b>'; $('skMic').disabled = false; $('skMic').classList.add('film');
@@ -463,14 +497,13 @@
   }
   function filmLine() {
     const cur = S.q[S.i]; host(cur.lang, true); strip(); screen(cur.l, cur.lang, 'tranh');
-    root.querySelectorAll('.sk-p.len').forEach(p => p.classList.remove('len'));
-    if (cur.l.ask) { const w = root.querySelector(`.sk-p[data-p="${cur.l.ask.a}"]`); if (w) w.classList.add('len'); audSay(cur.l.ask.a, askText(cur.l, cur.lang), 5000); }
+    camOff(); if (cur.l.ask) audSay(cur.l.ask.a, askText(cur.l, cur.lang), 6000, true);
     say(`🎬 ${S.i + 1}/${S.q.length} · Con nói: <b>${h(text(cur.l, cur.lang))}</b> rồi chạm <b>Tiếp</b>`);
   }
   function endFilm(v) {
     $('skMic').disabled = true;
     const done = () => {
-      stopCam(); v.remove();
+      stopCam(); v.remove(); $('skCon').classList.remove('cam');
       const blob = new Blob(chunks, { type: (mrec && mrec.mimeType) || 'video/webm' }), url = URL.createObjectURL(blob);
       const s = store(), ch = s.ch[COURSE] || {}, kid = (typeof P === 'object' && P && P.kidId) || '';
       const ext = /mp4/.test(blob.type) ? 'mp4' : 'webm';
