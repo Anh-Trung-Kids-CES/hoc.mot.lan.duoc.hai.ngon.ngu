@@ -52,8 +52,8 @@ VOICE = {'bong': 'bong', 'me': 'me', 'bo': 'bo', 'co': 'co_huou', 'leo': 'leo', 
 
 # ---------- truyện Bông's Day: một cảnh mỗi câu ----------
 PARTS = [
-    ('Hello, Day!', '早上好！', [
-        ('bong', X21 + 'v1_n1_tu_hello_l1.webp', 'Hello, day!', '早上好！', 'Zǎoshang hǎo!'),
+    ('Good Morning!', '早上好！', [
+        ('bong', X21 + 'v1_n1_cum_hello_mommy_l1.webp', 'Good morning, mommy!', '妈妈，早上好！', 'Māma, zǎoshang hǎo!'),
         ('bong', X21 + 'v1_n2_cum_goodbye_kitten_l1.webp', 'Hello, kitten!', '小猫，你好！', 'Xiǎomāo, nǐ hǎo!'),
         ('bong', X21 + 'v1_n1_cau_goodbye_mommy_l1.webp', 'Goodbye, mommy!', '妈妈，再见！', 'Māma, zàijiàn!'),
         ('bong', X21 + 'tr1_c2.webp', 'Goodbye, kitten!', '小猫，再见！', 'Xiǎomāo, zàijiàn!'),
@@ -84,7 +84,8 @@ PARTS = [
         ('cun', X21 + 'v1_n4_tu_puppy_l1.webp', 'Woof!', '汪汪！', 'Wāngwāng!'),
         ('bong', X21 + 'tr1_c7.webp', 'Hello, puppy!', '小狗，你好！', 'Xiǎogǒu, nǐ hǎo!'),
         ('bong', X21 + 'v1_n1_cum_hello_mommy_l1.webp', 'Hello, mommy!', '妈妈，你好！', 'Māma, nǐ hǎo!'),
-        ('me', LS + 'me_vay.webp', 'Hello, ___!', '___，你好！', '___, nǐ hǎo!')]),
+        ('bong', S + 'tranh/go_to_bed.webp', 'Good night, puppy!', '小狗，晚安！', 'Xiǎogǒu, wǎn\'ān!'),
+        ('me', LS + 'me_vay.webp', 'Good night, ___!', '___，晚安！', '___, wǎn\'ān!')]),
 ]
 def scenes(k):
     return [{'who': w, 'img': img, 'en': e, 'zh': z, 'py': p, 'a_en': au('en', e, VOICE.get(w, '')), 'a_zh': au('zh', z, VOICE.get(w, ''))}
@@ -92,7 +93,8 @@ def scenes(k):
 
 # ---------- thẻ từ ----------
 W = {  # en: (zh, py, img)
-    'day': ('早上好', 'zǎoshang hǎo', S + 'tranh/sunny.webp'),
+    'good morning': ('早上好', 'zǎoshang hǎo', S + 'tranh/sunny.webp'),
+    'good night': ('晚安', 'wǎn\'ān', S + 'tranh/go_to_bed.webp'),
     'goodbye': ('再见', 'zàijiàn', X21 + 'v1_n1_tu_goodbye_l1.webp'),
     'mommy': ('妈妈', 'māma', X21 + 'v1_n1_tu_mommy_l1.webp'),
     'kitten': ('小猫', 'xiǎomāo', X21 + 'v1_n2_tu_kitten_l1.webp'),
@@ -111,7 +113,6 @@ PREB = {'boy': ('', '', NV + 'kids_leo_a.webp', '👦'), 'girl': ('', '', NV + '
 def card(w, on=False):
     z, p, img = W[w]
     c = {'en': w, 'zh': z, 'py': p, 'img': img, 'a_en': au('en', w, 'co_huou'), 'a_zh': au('zh', z, 'co_huou')}
-    if w == 'day': c['en'] = 'Hello, day!'; c['a_en'] = au('en', 'Hello, day!', 'bong'); c['note'] = ['day', '早上']
     if on: c['on'] = True
     return c
 def pcard(w):
@@ -119,7 +120,7 @@ def pcard(w):
     c = {'en': w, 'zh': z, 'py': p, 'img': img, 'e': e, 'a_en': au('en', w), 'a_zh': au('zh', z) if z else '', 'nen': 'PreB'}
     return c
 
-PART_NEW = [['day', 'goodbye', 'mommy', 'kitten'], ['hello', 'teacher'], ['everyone', 'friend'], ['see you', 'all', 'tomorrow'], ['daddy', 'puppy']]
+PART_NEW = [['good morning', 'goodbye', 'mommy', 'kitten'], ['hello', 'teacher'], ['everyone', 'friend'], ['see you', 'all', 'tomorrow'], ['daddy', 'puppy', 'good night']]
 LEARNED = lambda k: [w for j in range(k) for w in PART_NEW[j]]
 
 def pad(words, lo=5, hi=8):
@@ -217,7 +218,7 @@ days[6] = {'steps': [whole, cham_qs(range(5), 8), {'type': 'goi', 'from': 'Unit 
 BONG = [{'img': s['img'], 'say': [{'t': s['en'], 'l': 'en', 'w': 'bong', 'a': s['a_en']}]} for s in ALL if s['who'] == 'bong'][:4] + \
        [{'img': s['img'], 'say': [{'t': s['zh'], 'l': 'zh', 'w': 'bong', 'a': s['a_zh']}]} for s in ALL if s['who'] == 'bong'][4:8]
 days[7] = {'steps': [whole, {'type': 'noi', 'turns': BONG}, {'type': 'chon', 'qs': chon_qs(ALLW, 3)[:8]},
-                     {'type': 'game', 'qs': game_qs(['daddy', 'friend', 'all', 'mommy', 'teacher', 'day'], 3)}]}
+                     {'type': 'game', 'qs': game_qs(['daddy', 'friend', 'all', 'mommy', 'teacher', 'good morning'], 3)}]}
 # ngày 8: nghe cả truyện → phiên dịch nhí (cô làm mẫu trước) → hộp ôn → vận động
 PDN = [('Hello, teacher!', '老师，你好！', 'Lǎoshī, nǐ hǎo!'), ('Hello, everyone!', '大家好！', 'Dàjiā hǎo!'), ('Hello, friend!', '朋友，你好！', 'Péngyou, nǐ hǎo!'),
        ('Goodbye, mommy!', '妈妈，再见！', 'Māma, zàijiàn!'), ('Hello, daddy!', '爸爸，你好！', 'Bàba, nǐ hǎo!')]
@@ -226,14 +227,15 @@ days[8] = {'steps': [whole, {'type': 'pdn', 'model_first': True,
                      {'type': 'goi', 'from': 'Unit 1', 'cards': [card(w) for w in ['hello', 'kitten', 'everyone', 'tomorrow', 'goodbye']]},
                      {'type': 'game', 'qs': game_qs(['puppy', 'teacher', 'hello', 'kitten', 'friend', 'daddy'], 3)}]}
 # ngày 9: big book Hello and Goodbye → chọn tranh trộn → nói theo big book → vận động
-BB = [('sunny', 'Hello, day!', '早上好！', 'Zǎoshang hǎo!'), ('mommy', 'Hello, mommy! Goodbye, mommy!', '妈妈，你好！妈妈，再见！', 'Māma, nǐ hǎo! Māma, zàijiàn!'),
+BB = [('good morning', 'Good morning!', '早上好！', 'Zǎoshang hǎo!'), ('mommy', 'Hello, mommy! Goodbye, mommy!', '妈妈，你好！妈妈，再见！', 'Māma, nǐ hǎo! Māma, zàijiàn!'),
       ('daddy', 'Hello, daddy! Goodbye, daddy!', '爸爸，你好！爸爸，再见！', 'Bàba, nǐ hǎo! Bàba, zàijiàn!'),
       ('kitten', 'Hello, kitten! Goodbye, kitten!', '小猫，你好！小猫，再见！', 'Xiǎomāo, nǐ hǎo! Xiǎomāo, zàijiàn!'),
       ('puppy', 'Hello, puppy! Goodbye, puppy!', '小狗，你好！小狗，再见！', 'Xiǎogǒu, nǐ hǎo! Xiǎogǒu, zàijiàn!'),
       ('teacher', 'Hello, teacher! Goodbye, teacher!', '老师，你好！老师，再见！', 'Lǎoshī, nǐ hǎo! Lǎoshī, zàijiàn!'),
       ('friend', 'Hello, friend! Goodbye, friend!', '朋友，你好！朋友，再见！', 'Péngyou, nǐ hǎo! Péngyou, zàijiàn!'),
       ('everyone', 'Hello, everyone! Goodbye, everyone!', '大家好！大家再见！', 'Dàjiā hǎo! Dàjiā zàijiàn!'),
-      ('all', 'Goodbye, all! See you tomorrow!', '大家再见！明天见！', 'Dàjiā zàijiàn! Míngtiān jiàn!')]
+      ('all', 'Goodbye, all! See you tomorrow!', '大家再见！明天见！', 'Dàjiā zàijiàn! Míngtiān jiàn!'),
+      ('good night', 'Good night, puppy!', '小狗，晚安！', 'Xiǎogǒu, wǎn\'ān!')]
 def bb_img(k): return W[k][2] if k in W else S + 'tranh/sunny.webp'
 def au_multi(l, t, who=''):
     a = au(l, t, who)
@@ -247,7 +249,7 @@ big = {'type': 'truyen', 'title': 'Big book · Hello and Goodbye', 'title_zh': '
 VE = [('mommy', 'Mommy, mommy, goodbye!', '妈妈，妈妈，再见！'), ('daddy', 'Daddy, daddy, goodbye!', '爸爸，爸爸，再见！'),
       ('kitten', 'Kitten, kitten, goodbye!', '小猫，小猫，再见！'), ('puppy', 'Puppy, puppy, goodbye!', '小狗，小狗，再见！'),
       ('all', 'Goodbye, see you tomorrow!', '再见，明天见！')]
-days[9] = {'steps': [big, {'type': 'chon', 'qs': chon_qs(['day', 'see you', 'everyone', 'kitten', 'daddy', 'teacher', 'friend', 'puppy'], 3)[:8]},
+days[9] = {'steps': [big, {'type': 'chon', 'qs': chon_qs(['good morning', 'see you', 'everyone', 'kitten', 'daddy', 'teacher', 'friend', 'puppy'], 3)[:8]},
                      {'type': 'noi', 'turns': [{'img': W[k][2], 'say': [{'t': e, 'l': 'en', 'w': 'narr', 'a': au('en', e)}]} for k, e, z in VE] +
                                               [{'img': W[k][2], 'say': [{'t': z, 'l': 'zh', 'w': 'narr', 'a': au('zh', z)}]} for k, e, z in VE[:3]]},
                      {'type': 'game', 'qs': game_qs(ALLW[:6], 3)}]}

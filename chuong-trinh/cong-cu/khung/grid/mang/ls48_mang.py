@@ -69,7 +69,7 @@ U[4] = dict(ten_en='Touch, Touch!', ten_zh='摸摸！', bg='ls_home', phan=[
          [('eye', '眼', 'eye'), ('ear', '耳', 'ear'), ('hand', '手', 'hand'), ('foot', '脚', 'foot')]])
 
 U[5] = dict(ten_en="Bông's Big Day", ten_zh='Bông的一天', bg='ls_park', phan=[
-    ('I Am Happy!', '我很开心！', [('bong', 'Hello, day! I am happy!', '早上好！我很开心！'), ('anna', "I am happy! Let's go!", '我很开心！走吧！'),
+    ('I Am Happy!', '我很开心！', [('bong', 'Good morning! I am happy!', '早上好！我很开心！'), ('anna', "I am happy! Let's go!", '我很开心！走吧！'),
                                  ('bong', 'Oh no! I am hungry!', '哎呀！我饿了！'), ('me', 'Bông! Smile! I have cake!', 'Bông，笑一笑！我有蛋糕！')]),
     ('Sleepy and Scared', '困了，怕了', [('bong', 'I am sleepy.', '我好困。'), ('cun', 'Woof! Woof!', '汪汪！汪汪！'), ('anna', 'A big puppy!', '大狗！'),
                                      ('bong', 'I am scared!', '我好害怕！'), ('leo', 'Hello, puppy! I am happy!', '小狗，你好！我很开心！')]),

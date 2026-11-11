@@ -91,7 +91,7 @@ for k in range(5):
     on_zh = ', '.join(seen_zh) or '–'
     nen = ''
     if k == 0:
-        nen = ' | Nghe làm quen (câu cửa miệng): Let\'s go! / 早上好, 走吧'
+        nen = ' | Nghe làm quen (câu cửa miệng): Let\'s go! / 走吧'
     if k == 2:
         nen = ' | Nền PreB (dạy lại: tranh + tiếng, chưa bắt nói): boy, girl'
     if k == 3:
@@ -371,7 +371,7 @@ for b in buoi:
     if b['buoi'] == 0: continue
     b['ke_hoach_90'] = plan90(b)
 
-out = {'khoa': 'Little Seed offline 48 buổi', 'ban': 'v2.2 (11/11/2026 – nguyên tắc 61–68, thêm buổi 0 khai giảng; truyện, big book, vè U2–U12 đã lên web 99 ngày)',
+out = {'khoa': 'Little Seed offline 48 buổi', 'ban': 'v2.4 (11/11/2026 – nguyên tắc 61–68, thêm buổi 0 khai giảng; truyện, big book, vè U2–U12 đã lên web 99 ngày)',
        'nhip': 'Tuần 1–3: 3 ngày web rồi buổi Chủ nhật. Từ tuần 4: 2 ngày web → buổi thứ Tư → 2 ngày web → buổi Chủ nhật. Tuần 26: 2 ngày web và buổi 48 (thứ Tư).',
        'preb_day_lai': PREB, 'days': days, 'buoi': buoi}
 dst = os.path.join(GRID, 'mang', 'little-seed48.json')

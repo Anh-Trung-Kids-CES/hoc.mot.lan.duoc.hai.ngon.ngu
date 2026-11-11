@@ -39,7 +39,7 @@ def sheet(title, header, data, widths):
 ws = wb.active
 ws.title = 'Tổng quan'
 info = [
-    ['Little Seed · khung chương trình offline 48 buổi · v2.2 (11/11/2026 – nguyên tắc 61–68, nội dung đã lên web 99 ngày)'],
+    ['Little Seed · khung chương trình offline 48 buổi · v2.4 (11/11/2026 – nguyên tắc 61–68, nội dung đã lên web 99 ngày)'],
     [''],
     ['Lớp', 'Lớp Little Seed offline, con 4–5 tuổi, chưa học PreB. Thiết kế độc lập với lớp Seedling 48 buổi; không đổi khung 9 khóa.'],
     ['Nhịp', d['nhip']],
@@ -49,6 +49,7 @@ info = [
     ['Bỏ so với khung 9 khóa', '2 buổi mở khóa ôn PreB (buổi 1–2), 2 tuần ôn chặng (buổi 19–20, 37–38), 2 tuần lễ hội (buổi 57–60). Ôn chặng thay bằng 15′ trò chơi quét lại ở buổi Produce của Unit 4, 8, 12 (buổi 15, 31, 47) và Hộp ôn trên web. Lễ hội có thể chèn theo lịch thật, không tính vào 48 buổi.'],
     ['Từ PreB', 'Lớp chưa học PreB: từ PreB không có trong Little Seed được dạy lại ở unit cùng chủ đề, mức Nền (tranh + tiếng, nghe – chạm, chưa bắt nói). Xem tab "Từ PreB dạy lại". "Ôn (PreB)" của khung 9 khóa đổi thành "Nền PreB (dạy lại)".'],
     ['Sửa dữ liệu', 'Unit 5: "tyre" → bỏ (đã có tired), theo hướng sửa an toàn của tab Duyệt.'],
+    ['Sửa v2.4 (11/11 tối)', 'Chị quyết: bỏ "Hello, day!" (không tự nhiên). Unit 1 dạy Good morning · 早上好 (ngày 1, thay từ day) và Good night · 晚安 (ngày 5, cuối truyện: "Good night, puppy!", "Good night, ___!"), cả hai tiếng, cạnh hello/goodbye. Big book U1 thêm trang Good night; vè tạm biệt dòng 5 "Good night! Goodbye, all!"; truyện U5 "Good morning! I am happy!".'],
     ['Sửa v2.3 (11/11 trưa)', 'Chị quyết: lớp offline Little Seed 48 có hiện chữ trên web (chữ Anh, chữ Hán, pinyin hiện sẵn, bấm "Aa Ẩn chữ" để ẩn) và có luyện thanh điệu: bước Mẹo âm ở 94 ngày web (U1–U2 thanh 1, 4; U3–U4 thêm thanh 2; từ U5 đủ 4 thanh; chỉ dùng từ con đã gặp). Chó của Bông gọi là Puppy · 小狗.'],
     ['Sửa v2.2 (11/11)', 'Truyện unit U2–U12 viết đủ theo chỉ tiêu 4 mặt (U4–U8, U10, U11 viết mới; U2, U3, U9, U12 theo bản 10/11), big book + vè mỗi unit, vè chào tuần 1–3 – tất cả đã lên web Little Seed 99 ngày (ô truyện, vè, big book ở tab Mạch từ và Khung buổi lấy từ bản trên web). Buổi 0 không có trên web.'],
     ['Sửa v2 (10/11 khuya)', 'Theo nguyên tắc 61–68: mỗi unit có chỉ tiêu 4 mặt cho truyện khung (tab "Chỉ tiêu 4 mặt", cột "Chỉ tiêu truyện" ở tab Mạch từ); truyện bản mới U2, U3, U9, U12 (chờ duyệt) thay ô truyện; vè mới U2, U3, U9, U12; chào đầu và cuối buổi bằng hai vè chào (buổi 0 = khai giảng (thêm, ngoài 48 buổi), hát câu 1–2; buổi 1 hát trọn); U1 không có big book câu chào.'],
