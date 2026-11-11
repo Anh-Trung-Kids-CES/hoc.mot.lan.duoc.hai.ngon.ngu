@@ -1,0 +1,53 @@
+/* Học liệu in – web dạy lớp offline 48 buổi (dùng chung Little Seed, Seedling). Màn hình: danh sách; in: trang A4 / A5. */
+:root{--ink:#2F463C;--red:#C8372D;--gold:#F2C14E;--cream:#FFF8E6;--line:#E3D3A8;--teal:#2E8B80;--muted:#6B6B6B}
+*{box-sizing:border-box}
+html,body{margin:0;background:#F4EFE3;color:var(--ink);font-family:'Be Vietnam Pro',system-ui,sans-serif}
+.zh,.han{font-family:'Noto Sans SC','Noto Sans CJK SC',sans-serif}
+a{color:var(--teal)}
+.top{position:sticky;top:0;z-index:5;display:flex;gap:10px;align-items:center;padding:10px 16px;background:#fff;border-bottom:2px solid var(--line)}
+.top b{font-size:17px}.top .sp{flex:1}
+.btn{display:inline-block;border:2px solid var(--teal);background:#fff;color:var(--teal);border-radius:999px;padding:7px 14px;font:inherit;font-weight:700;cursor:pointer;text-decoration:none}
+.btn.p{background:var(--teal);color:#fff}
+.wrap{max-width:1100px;margin:0 auto;padding:16px}
+.muted{color:var(--muted);font-size:14px}
+.ucard{background:#fff;border:2px solid var(--line);border-radius:18px;padding:14px 16px;margin:14px 0}
+.ucard h2{margin:0 0 4px;font-size:22px;color:var(--red)}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.links a{display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border-radius:12px;background:var(--cream);border:1.5px solid var(--line);text-decoration:none;color:var(--ink);font-weight:600;font-size:14px}
+.links a:hover{border-color:var(--gold)}
+table.ss{width:100%;border-collapse:collapse;font-size:14px;margin-top:8px}
+table.ss td,table.ss th{border-bottom:1px solid #eee;padding:7px 6px;text-align:left;vertical-align:top}
+.note{background:#FFF3D1;border-left:4px solid var(--gold);padding:8px 12px;border-radius:8px;font-size:14px;margin:8px 0}
+
+/* trang in */
+.pw{padding:14px 0}
+.pg{width:210mm;height:297mm;margin:0 auto 10mm;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.15);overflow:hidden;position:relative;padding:11mm 12mm;page-break-after:always;break-after:page}
+.pg.l{width:297mm;height:210mm}
+@page{size:A4;margin:0}
+@page land{size:A4 landscape;margin:0}
+.pg.l{page:land}
+@media print{html,body{background:#fff}.noprint{display:none!important}.pw{padding:0}.pg{margin:0;box-shadow:none}}
+.ph{font-size:9pt;color:#999;margin-bottom:3mm;display:flex;justify-content:space-between}
+.hd{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:.6mm solid var(--gold);padding-bottom:2mm;margin-bottom:4mm}
+.hd .t{font-size:15pt;font-weight:800;color:var(--red)}
+.hd .nm{font-size:12pt}
+.sec{border:.5mm solid var(--line);border-radius:5mm;padding:3mm 4mm;margin-bottom:4mm;position:relative}
+.sec .lab{display:flex;align-items:center;gap:2mm;font-weight:800;font-size:12pt;margin-bottom:2mm}
+.ico{width:9mm;height:9mm;flex:none}
+.cut{border:.4mm dashed #888}
+.grid{display:grid;gap:0}
+.cell{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2mm;overflow:hidden}
+.cell img{max-width:100%;max-height:100%;object-fit:contain}
+.en{font-weight:800}
+.py{color:var(--teal);font-size:.8em}
+.trace{font-family:'Be Vietnam Pro',sans-serif;color:#C9C9C9;font-weight:500;letter-spacing:1.5mm;font-size:30pt;line-height:16mm;height:16mm;
+  background:linear-gradient(#9ec7e0,#9ec7e0) 0 3mm/100% .3mm no-repeat,linear-gradient(#e7b7b7,#e7b7b7) 0 7.8mm/100% .25mm no-repeat,linear-gradient(#e7b7b7,#e7b7b7) 0 11.4mm/100% .25mm no-repeat,linear-gradient(#9ec7e0,#9ec7e0) 0 15mm/100% .3mm no-repeat;padding-left:2mm;white-space:nowrap;overflow:hidden}
+.box{width:7mm;height:7mm;border:.5mm solid #555;border-radius:1.2mm;display:inline-block;vertical-align:middle;text-align:center;line-height:6mm;font-size:12pt}
+.dot{width:3.4mm;height:3.4mm;border-radius:50%;background:#333;display:inline-block}
+.tzg{width:20mm;height:20mm;border:.4mm solid #c55;position:relative;display:inline-block;margin-right:1.5mm;vertical-align:top}
+.tzg:before,.tzg:after{content:"";position:absolute;inset:0;background:linear-gradient(#e8b4b4,#e8b4b4) 50% 0/0.2mm 100% no-repeat,linear-gradient(#e8b4b4,#e8b4b4) 0 50%/100% .2mm no-repeat}
+.tzg svg{position:absolute;inset:1mm;width:18mm;height:18mm;z-index:1}
+.so{display:inline-block;width:10mm;height:10mm;border:.3mm solid #ddd;margin-right:.8mm;vertical-align:middle}
+.so svg{width:100%;height:100%}
+.a5{width:148.5mm;height:210mm;padding:9mm;display:flex;flex-direction:column;border-right:.3mm dashed #ccc}
+.a5:last-child{border-right:0}

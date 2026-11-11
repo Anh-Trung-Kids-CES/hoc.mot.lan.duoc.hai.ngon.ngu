@@ -56,7 +56,7 @@ function renderHome() {
   const chang = {};
   D.map.forEach(m => (chang[m.chang] = chang[m.chang] || []).push(m));
   app.innerHTML = `<div class="top"><a href="#/">🌱 Seedling · Web dạy 48 buổi</a><span class="sp"></span>
-    <a class="btn s" href="#/lop">👥 Danh sách lớp (${Roster.get().length})</a><a class="btn s" href="../index.html?gv=1">Web học của con</a></div>
+    <a class="btn s" href="hoc-lieu/">🖨 Học liệu in mới · U1–U3</a><a class="btn s" href="#/lop">👥 Danh sách lớp (${Roster.get().length})</a><a class="btn s" href="../index.html?gv=1">Web học của con</a></div>
   <div class="wrap">
     <p class="muted">Mỗi buổi có: giáo án 7 khối · trình chiếu có tranh và tiếng · Big Book · reader in · chant và động tác · thủ công · đồ dùng in · ghi nhận từng bé và báo cáo. Màn chiếu chỉ dẫn khoảng 30 trên 90 phút; phần còn lại các con luyện bằng thẻ, rối, thủ công và cả người.</p>
     ${Object.keys(chang).map(c => `<div class="chang"><h2>Chặng ${c}</h2><div class="units">${chang[c].map(m => `
@@ -163,7 +163,8 @@ function tabDownload(s, el) {
   const L = [['flash', 'Flashcard lớn gấp đôi (A4 ngang): mặt tranh cho con, mặt chữ cho cô'], ['mini', 'Thẻ mini tranh, chữ Anh, chữ Trung (Memory, Go fish, Đập thẻ)'], ['bingo', 'Bingo 3 × 3 (4 bảng khác nhau)'],
     ['strips', 'Dải câu đôi bạn Anh – Trung'], ['answer', 'Thẻ trả lời mỗi bé (1–4, ✓ ✗, English, 中文)'], ['puppets', 'Rối que nhân vật của truyện'], ['reader', 'Reader A5'], ['record', 'Phiếu ghi giấy (khi mất điện)']];
   if (s.kind === 'thi') L.push(['sheet', 'Phiếu trả lời bài thi (tô ô A B C)']);
-  el.innerHTML = `<p>Mở bản in rồi bấm In (hoặc Lưu PDF) trên trình duyệt. Tranh lấy từ web học nên con gặp đúng hình đã thấy ở ngày web. Đồ dùng của con không in chữ tiếng Việt.</p>
+  const moi = s.n <= 11 ? `<div class="box" style="border:2px solid #F2C14E;background:#FFF8E6;margin-bottom:12px"><b>🖨 Học liệu in mới (11/11/2026, theo truyện, big book, vè đang có trên web học):</b> <a href="hoc-lieu/#/b/${s.n}">sách bài tập buổi ${s.n}</a> · <a href="hoc-lieu/">bộ đồ dùng in, thủ công, reader của unit</a>. Các bản in cũ bên dưới theo truyện v7.</div>` : '';
+  el.innerHTML = moi + `<p>Mở bản in rồi bấm In (hoặc Lưu PDF) trên trình duyệt. Tranh lấy từ web học nên con gặp đúng hình đã thấy ở ngày web. Đồ dùng của con không in chữ tiếng Việt.</p>
     <div class="grid2">${L.map(([k, v]) => `<a class="box" style="text-decoration:none" href="#/in/${s.n}/${k}"><h3>🖨 ${esc(v.split(':')[0].split('(')[0])}</h3><div class="muted">${esc(v)}</div></a>`).join('')}</div>`;
 }
 
