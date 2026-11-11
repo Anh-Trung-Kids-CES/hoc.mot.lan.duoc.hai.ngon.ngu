@@ -14,76 +14,88 @@
   const A = (location.pathname.includes('/little-seed/') ? '../seedling/' : '') + 'tai-nguyen/';
   const NV = n => A + 'nhan-vat/' + n + '.webp';
   const h = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const WHO = { teacher: COURSE === 'ls' ? 'Cô Hươu' : 'Cô Lan', mommy: 'Mẹ', daddy: 'Bố', anna: 'Anna', bong: 'Bông', vu: 'Vũ', kitten: 'Mèo con', puppy: 'Cún con', grandpa: 'Ông', grandma: 'Bà', leo: 'Leo', xiaomei: 'Xiaomei' };
   const IMG = { teacher: COURSE === 'ls' ? 'huou_huou1_a' : 'nv_lan_a', mommy: 'fam_bong_me_a', daddy: 'fam_bong_bo_a', bong: 'kids_bong_a', anna: 'kids_anna_a',
     vu: 'nv_vu_a', leo: 'kids_leo_a', xiaomei: 'kids_xiaomei_a', puppy: 'pets_cun_dung_a', kitten: 'pets_meo_dung_a', grandpa: 'fam_bong_ong_a', grandma: 'fam_bong_ba_a',
     bro: 'fam_bong_anh_trai_a', sis: 'fam_bong_em_gai_a' };
 
-  /* ---------- lựa chọn của con (chạm tranh) ---------- */
+  /* ---------- lựa chọn của con (chạm tranh) ----------
+     Tuổi: 4–10 cho cả hai khoá (lớp có bé từ 4 đến 10 tuổi). Little Seed mới học số 1–6, số 7–10 là nền PreB: đây là tuổi của chính con
+     nên vẫn cho chọn, con nghe mẫu rồi nói. */
+  const AVA = ['bong', 'anna', 'vu'].map(a => ({ k: a, a }));
+  const TUOI = [4, 5, 6, 7, 8, 9, 10].map(n => ({ k: n, e: String(n), en: ['', '', '', '', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'][n], zh: ['', '', '', '', '四', '五', '六', '七', '八', '九', '十'][n] }));
   const PICK = {
     ls: {
-      tuoi: [4, 5, 6].map(n => ({ k: n, e: String(n), en: ['', '', '', '', 'four', 'five', 'six'][n], zh: ['', '', '', '', '四', '五', '六'][n] })),
+      ava: AVA,
+      tuoi: TUOI,
       cx: [['happy', '开心', '😄'], ['sad', '难过', '😢'], ['sleepy', '困', '😴'], ['scared', '害怕', '😨'], ['angry', '生气', '😠'], ['tired', '累', '😩']].map(([en, zh, e]) => ({ k: en, en, zh, e })),
       nguoi: [['grandpa', 'He is my grandpa.', '他是我爷爷。'], ['grandma', 'She is my grandma.', '她是我奶奶。'], ['bro', 'He is my big brother.', '他是我哥哥。'], ['sis', 'She is my little sister.', '她是我妹妹。']]
         .map(([k, en, zh]) => ({ k, a: k, en, zh })),
     },
     sd: {
-      tuoi: [5, 6, 7, 8, 9].map(n => ({ k: n, e: String(n), en: ['', '', '', '', '', 'five', 'six', 'seven', 'eight', 'nine'][n], zh: ['', '', '', '', '', '五', '六', '七', '八', '九'][n] })),
+      ava: AVA,
+      tuoi: TUOI,
       cx: [['excited', '兴奋', '🤩'], ['happy', '高兴', '😄'], ['sleepy', '困', '😴']].map(([en, zh, e]) => ({ k: en, en, zh, e })),
       nguoi: [['mommy', 'She is my mother.', '她是我妈妈。'], ['daddy', 'He is my father.', '他是我爸爸。'], ['bro', 'He is my older brother.', '他是我哥哥。'], ['sis', 'She is my younger sister.', '她是我妹妹。']]
         .map(([k, en, zh]) => ({ k, a: k, en, zh })),
       toy: [['🐶', 'chó bông'], ['🧸', 'gấu bông'], ['⚽', 'quả bóng'], ['🚗', 'ô tô']].map(([e, vi]) => ({ k: e, e, vi })),
     },
   }[COURSE];
-  const TITLE = { tuoi: 'Con mấy tuổi?', cx: 'Hôm nay con thấy thế nào?', nguoi: 'Con giới thiệu ai trong nhà?', toy: 'Đồ chơi con thích nhất?' };
+  const TITLE = { ava: 'Trên sân khấu, con là bạn nào?', tuoi: 'Con mấy tuổi? (ba mẹ giúp con chạm đúng số)', cx: 'Hôm nay con thấy thế nào?', nguoi: 'Con giới thiệu ai trong nhà?', toy: 'Đồ chơi con thích nhất?' };
 
   /* ---------- nội dung: câu (L) ----------
      pic: a = nhân vật (một hoặc nhiều), e = biểu tượng; aud = khán giả làm gì khi con nói xong;
      need = cần lựa chọn nào; free = chỗ trống của con (nói gì cũng tính); ask = khán giả hỏi trước, con đáp. */
   const L = (u, pic, en, zh, more) => Object.assign({ u, pic, en, zh }, more || {});
+  /* to = con nói với ai trong khán giả (người đó vẫy tay và đáp lại bằng rep); ask.a = khán giả hỏi (giơ tay, bước lên, có bóng nói riêng). */
+  const HI = { en: 'Hello!', zh: '你好！' }, BYE = { en: 'Goodbye!', zh: '再见！' };
   const C = {
     ls: {
       units: {
-        1: { ten: 'Unit 1 · Chào hỏi', mo: [],
-          khuc: [L(1, { a: ['bong', 'anna', 'vu'] }, 'Hello, everyone!', '大家好！', { aud: 'wave' }),
-                 L(1, { a: ['teacher'] }, 'Hello, teacher!', '老师，你好！', { aud: 'wave' }),
-                 L(1, { a: ['mommy', 'daddy'] }, 'Hello, mommy! Hello, daddy!', '妈妈，你好！爸爸，你好！', { aud: 'wave' }),
-                 L(1, { a: ['anna'] }, 'Hello, friend!', '朋友，你好！', { aud: 'wave' })],
-          hoi: L(1, { a: ['puppy'] }, 'Hello, puppy!', '小狗，你好！', { ask: { a: 'puppy', en: 'Woof! Woof!', zh: '汪汪！汪汪！' } }),
-          ket: L(1, { e: '👋' }, 'Goodbye, all! See you tomorrow!', '大家再见！明天见！', { aud: 'clap' }) },
-        5: { ten: 'Unit 5 · Cảm xúc',
-          mo: [L(1, { a: ['bong', 'anna', 'vu'] }, 'Hello, everyone!', '大家好！', { aud: 'wave' }),
+        1: { ten: 'Unit 1 · Chào hỏi', aud: ['teacher', 'mommy', 'daddy', 'anna', 'kitten'], mo: [],
+          y: 'Con lên sân khấu chào từng người trong khán giả. Cuối bài cô chào con, con chào lại cô.',
+          khuc: [L(1, { a: ['anna', 'mommy', 'teacher'] }, 'Hello, everyone!', '大家好！', { to: 'all', rep: HI }),
+                 L(1, { a: ['mommy', 'daddy'] }, 'Hello, mommy! Hello, daddy!', '妈妈，你好！爸爸，你好！', { to: ['mommy', 'daddy'], rep: HI }),
+                 L(1, { a: ['anna'] }, 'Hello, friend!', '朋友，你好！', { to: ['anna'], rep: HI }),
+                 L(1, { a: ['kitten'] }, 'Hello, kitten!', '小猫，你好！', { to: ['kitten'], rep: { en: 'Meow!', zh: '喵！' } })],
+          hoi: L(1, { a: ['teacher'] }, 'Hello, teacher!', '老师，你好！', { ask: { a: 'teacher', en: 'Hello, {ten}!', zh: '{ten}，你好！' } }),
+          ket: L(1, { e: '👋' }, 'Goodbye, all! See you tomorrow!', '大家再见！明天见！', { to: 'all', rep: BYE, aud: 'clap' }) },
+        5: { ten: 'Unit 5 · Cảm xúc', aud: ['teacher', 'bong', 'anna', 'vu', 'puppy'],
+          y: 'Con chào, nói tên, nói hôm nay con thấy thế nào, hỏi cảm xúc của khán giả, nói 2 câu ôn bất ngờ, rồi trả lời câu cô hỏi.',
+          mo: [L(1, { a: ['anna', 'bong', 'vu'] }, 'Hello, everyone!', '大家好！', { to: 'all', rep: HI }),
                L(2, { me: 1 }, 'My name is ___.', '我叫___。', { free: 1, aud: 'clap' })],
           khuc: [L(5, { cx: 1 }, 'I am {cx}!', '我很{cx}！', { need: 'cx', aud: 'clap' }),
                  L(5, { e: '❓' }, 'How do you feel?', '你心情怎么样？', { aud: 'faces' })],
-          hoi: L(2, { tuoi: 1 }, "I'm {tuoi}.", '我{tuoi}岁。', { need: 'tuoi', ask: { a: 'host', en: 'How old are you?', zh: '你几岁？' } }),
-          ket: L(1, { e: '👋' }, 'Goodbye, all! See you tomorrow!', '大家再见！明天见！', { aud: 'clap' }) },
+          hoi: L(2, { tuoi: 1 }, "I'm {tuoi}.", '我{tuoi}岁。', { need: 'tuoi', ask: { a: 'teacher', en: 'How old are you?', zh: '你几岁？' } }),
+          ket: L(1, { e: '👋' }, 'Goodbye, all! See you tomorrow!', '大家再见！明天见！', { to: 'all', rep: BYE, aud: 'clap' }) },
       },
       /* kho ôn bất ngờ: mỗi unit cũ 2 câu, vòng quay rút 2 câu ở 2 unit khác nhau */
-      kho: { 1: [L(1, { a: ['teacher'] }, 'Hello, teacher!', '老师，你好！', { aud: 'wave' }), L(1, { a: ['puppy'] }, 'Hello, puppy!', '小狗，你好！', { aud: 'wave' })],
-             2: [L(2, { e: '🎂' }, 'Happy birthday!', '生日快乐！', { aud: 'clap' }), L(2, { e: '1️⃣2️⃣3️⃣' }, 'One, two, three! Hello, friends!', '一、二、三！大家好！', { aud: 'wave' })],
+      kho: { 1: [L(1, { a: ['teacher'] }, 'Hello, teacher!', '老师，你好！', { to: ['teacher'], rep: HI }), L(1, { a: ['puppy'] }, 'Hello, puppy!', '小狗，你好！', { to: ['puppy'], rep: { en: 'Woof!', zh: '汪汪！' } })],
+             2: [L(2, { e: '🎂' }, 'Happy birthday!', '生日快乐！', { aud: 'clap' }), L(2, { e: '1️⃣2️⃣3️⃣' }, 'One, two, three! Hello, friends!', '一、二、三！大家好！', { to: 'all', rep: HI })],
              3: [L(3, { a: ['grandpa', 'grandma', 'mommy', 'daddy'] }, 'This is my family!', '这是我的家人！', { aud: 'clap' }), L(3, { nguoi: 1 }, '{nguoi}', '{nguoi}', { need: 'nguoi', aud: 'clap' })],
              4: [L(4, { e: '👀' }, 'I have big eyes.', '我有大大的眼睛。', { aud: 'clap' }), L(4, { e: '👃' }, 'Touch your nose!', '摸摸鼻子！', { aud: 'nose' })] },
     },
     sd: {
       units: {
-        1: { ten: 'Unit 1 · Good morning!', mo: [],
-          khuc: [L(1, { a: ['teacher'] }, 'Good morning, Mrs Lan!', 'Lan老师，早上好！', { aud: 'wave' }),
-                 L(1, { a: ['grandpa'] }, 'Hello, Grandpa!', '爷爷，您好！', { aud: 'wave' }),
-                 L(1, { a: ['bong', 'anna', 'vu'] }, 'Hello, kids!', '小朋友们，你们好！', { aud: 'wave' })],
-          hoi: L(1, { a: ['leo'] }, 'Sorry, Leo!', 'Xiaomei，对不起！', { ask: { a: 'host', en: 'Oh no! My book!', zh: '哎呀！我的书！' } }),
-          ket: L(1, { e: '👋' }, 'Goodbye, Mrs Lan! See you tomorrow!', '老师再见！明天见！', { aud: 'clap' }) },
-        5: { ten: "Unit 5 · Leo's Birthday",
-          mo: [L(1, { a: ['bong', 'anna', 'vu'] }, 'Hello, everyone!', '大家好！', { aud: 'wave' }),
+        1: { ten: 'Unit 1 · Good morning!', aud: ['teacher', 'grandpa', 'bong', 'anna', 'vu'], mo: [],
+          y: 'Con lên sân khấu chào các bạn và ông. Cuối bài cô Lan chào cả lớp, con chào lại cô.',
+          khuc: [L(1, { a: ['bong', 'anna', 'vu'] }, 'Hello, kids!', '小朋友们，你们好！', { to: ['bong', 'anna', 'vu'], rep: HI }),
+                 L(1, { a: ['grandpa'] }, 'Hello, Grandpa!', '爷爷，您好！', { to: ['grandpa'], rep: HI })],
+          hoi: L(1, { a: ['teacher'] }, 'Good morning, Mrs Lan!', 'Lan老师，早上好！', { ask: { a: 'teacher', en: 'Good morning, class!', zh: '小朋友们，早上好！' } }),
+          ket: L(1, { e: '👋' }, 'Goodbye, Mrs Lan! See you tomorrow!', '老师再见！明天见！', { to: ['teacher'], rep: { en: 'See you tomorrow!', zh: '明天见！' }, aud: 'clap' }) },
+        5: { ten: "Unit 5 · Leo's Birthday", aud: ['teacher', 'bong', 'anna', 'vu', 'grandpa'],
+          y: 'Con chào, nói tên, nói cảm xúc, khoe đồ chơi, hỏi cảm xúc khán giả, nói 2 câu ôn bất ngờ, rồi trả lời câu cô Lan hỏi.',
+          mo: [L(1, { a: ['anna', 'bong', 'vu'] }, 'Hello, everyone!', '大家好！', { to: 'all', rep: HI }),
                L(2, { me: 1 }, 'My name is ___.', '我叫___。', { free: 1, aud: 'clap' })],
           khuc: [L(5, { cx: 1 }, 'I feel {cx}!', '我很{cx}！', { need: 'cx', aud: 'clap' }),
                  L(5, { toy: 1 }, 'This is my favourite toy.', '这是我最喜欢的玩具。', { need: 'toy', aud: 'clap' }),
                  L(5, { e: '❓' }, 'How do you feel?', '你感觉怎么样？', { aud: 'faces' })],
-          hoi: L(2, { tuoi: 1 }, "I'm {tuoi} years old.", '我{tuoi}岁。', { need: 'tuoi', ask: { a: 'host', en: 'How old are you?', zh: '你几岁？' } }),
-          ket: L(2, { e: '👋' }, 'Thank you! See you tomorrow!', '谢谢！明天见！', { aud: 'clap' }) },
+          hoi: L(2, { tuoi: 1 }, "I'm {tuoi} years old.", '我{tuoi}岁。', { need: 'tuoi', ask: { a: 'teacher', en: 'How old are you?', zh: '你几岁？' } }),
+          ket: L(2, { e: '👋' }, 'Thank you! See you tomorrow!', '谢谢！明天见！', { to: 'all', rep: BYE, aud: 'clap' }) },
       },
-      kho: { 1: [L(1, { a: ['teacher'] }, 'Good morning, Mrs Lan!', 'Lan老师，早上好！', { aud: 'wave' }), L(1, { a: ['grandpa'] }, 'Hello, Grandpa!', '爷爷，您好！', { aud: 'wave' })],
+      kho: { 1: [L(1, { a: ['teacher'] }, 'Good morning, Mrs Lan!', 'Lan老师，早上好！', { to: ['teacher'], rep: { en: 'Good morning!', zh: '早上好！' } }), L(1, { a: ['grandpa'] }, 'Hello, Grandpa!', '爷爷，您好！', { to: ['grandpa'], rep: HI })],
              4: [L(4, { e: '👏🦶' }, 'Clap your hands! Stamp your feet!', '拍拍手！跺跺脚！', { aud: 'stamp' }), L(4, { e: '🖐️' }, 'Look! Five fingers!', '看！五个手指！', { aud: 'clap' })],
-             2: [L(2, { a: ['vu'] }, 'Nice to meet you!', '很高兴认识你！', { aud: 'wave' }), L(2, { e: '🎂' }, 'Happy birthday!', '生日快乐！', { aud: 'clap' })],
+             2: [L(2, { a: ['vu'] }, 'Nice to meet you!', '很高兴认识你！', { to: ['vu'], rep: { en: 'Nice to meet you, too!', zh: '我也很高兴！' } }), L(2, { e: '🎂' }, 'Happy birthday!', '生日快乐！', { aud: 'clap' })],
              3: [L(3, { a: ['grandpa', 'mommy', 'daddy'] }, 'This is my family. I love my family!', '这是我的家。我爱我的家人！', { aud: 'clap' }), L(3, { nguoi: 1 }, '{nguoi}', '{nguoi}', { need: 'nguoi', aud: 'clap' })] },
     },
   }[COURSE];
@@ -179,19 +191,33 @@
   /* ---------- khung trang ---------- */
   let root = null, S = null;
   const $ = id => document.getElementById(id);
-  const AUD = { ls: ['bong', 'anna', 'vu', 'kitten', 'puppy'], sd: ['bong', 'anna', 'vu', 'grandpa', 'teacher'] }[COURSE];
+  function drawAud() {
+    const list = C.units[S.unit].aud;
+    const one = a => `<span class="sk-p" data-p="${a}"><b class="sk-fx"></b><span class="sk-pb" hidden></span><img src="${NV(IMG[a])}" alt=""><small>${h(WHO[a])}</small></span>`;
+    const half = Math.ceil(list.length / 2);
+    $('skLoL').innerHTML = list.slice(0, half).map(one).join('') + '<span class="sk-rail"></span>';
+    $('skLoR').innerHTML = list.slice(half).map(one).join('') + '<span class="sk-rail"></span>';
+    drawCon();
+  }
+  function drawCon() {
+    const ch = store().ch[COURSE] || {}, ava = (PICK.ava.find(x => x.k === ch.ava) || PICK.ava[0]).a;
+    const c = $('skCon'); if (!c) return; c.querySelector('img').src = NV(IMG[ava]); $('skConTen').textContent = '⭐ ' + (ch.ten || 'Con');
+  }
+  function audSay(a, t, ms) { const p = root && root.querySelector(`.sk-p[data-p="${a}"] .sk-pb`); if (!p) return; p.textContent = t; p.hidden = false; clearTimeout(p._t); p._t = setTimeout(() => p.hidden = true, ms || 2600); }
   function open(unit) {
     if (root) return;
     unit = UNITS.includes(+unit) ? +unit : curUnit() || UNITS[0];
     S = { unit, lv: 0, show: [], wheel: [], i: 0, lang: 'en', ok: 0, said: {}, busy: false, tries: 0, end: false, abort: false };
     root = document.createElement('div'); root.className = 'sk'; root.innerHTML = `
       <div class="sk-stage" id="skStage">
-        <div class="sk-curtain l"></div><div class="sk-curtain r"></div><div class="sk-spot"></div>
-        <div class="sk-strip" id="skStrip"></div>
-        <div class="sk-screen" id="skScreen"></div>
-        <div class="sk-host" id="skHost"><img alt=""><span class="sk-bub" id="skBub" hidden></span><span class="sk-ear">👂</span></div>
-        <div class="sk-clap" id="skClap"><i></i></div>
-        <div class="sk-aud" id="skAud">${AUD.map(a => `<span class="sk-p" data-p="${a}"><b class="sk-fx"></b><img src="${NV(IMG[a])}" alt=""></span>`).join('')}</div>
+        <div class="sk-wall"></div><div class="sk-floor"></div><div class="sk-apron"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="sk-curtain l"></div><div class="sk-curtain r"></div><div class="sk-valance"></div>
+        <div class="sk-tv"><div class="sk-screen" id="skScreen"></div><div class="sk-tvbar"><div class="sk-strip" id="skStrip"></div><div class="sk-clap" id="skClap"><i></i></div></div><span class="sk-tvlb">Màn hình trợ giúp</span></div>
+        <div class="sk-beam"></div>
+        <div class="sk-con" id="skCon"><img alt=""><span class="sk-stand"></span><b id="skConTen">⭐ Con</b></div>
+        <div class="sk-host" id="skHost"><img alt=""><span class="sk-podium"></span><span class="sk-bub" id="skBub" hidden></span><span class="sk-ear">👂</span></div>
+        <div class="sk-lo l" id="skLoL"></div><div class="sk-lo r" id="skLoR"></div>
+        <div class="sk-seats">${[0, 1].map(r => `<div class="sk-row${r}">${Array.from({ length: r ? 9 : 8 }, (_, i) => `<span class="sk-seat"><i class="sk-head" style="--hc:${['#3B2A20', '#1F1A17', '#5A3A22', '#2B2B2B'][(i + r) % 4]}"></i></span>`).join('')}</div>`).join('')}</div>
         <div class="sk-pops" id="skPops"></div>
       </div>
       <div class="sk-bar"><button type="button" class="sk-x" aria-label="Đóng">✕</button><div class="sk-said" id="skSaid"></div>
@@ -214,12 +240,12 @@
               { k: 3, m: '🥇', ten: 'Tự nói', mo: 'Slide mờ, con nói xong slide mới hiện' },
               { k: 4, m: '🎬', ten: 'Quay show', mo: 'Quay video bài nói, tải về gửi cô' }];
   function menu() {
-    S.end = false; host('en', false); clearScreen();
+    S.end = false; host('en', false); clearScreen(); drawAud();
     const s = store(), done = s.lv[COURSE + S.unit] || 0, p = $('skPanel');
     const U = C.units[S.unit], hasWheel = Object.keys(C.kho).some(u => +u < S.unit);
     p.innerHTML = `<div class="sk-box"><div class="sk-t">🎤 Sân khấu của con · ${h(U.ten)}</div>
       ${TEACHER || UNITS.length > 1 ? `<div class="sk-tabs">${UNITS.map(u => `<button type="button" class="sk-tab${u === S.unit ? ' on' : ''}" data-u="${u}">${h(C.units[u].ten)}</button>`).join('')}</div>` : ''}
-      <p class="sk-mo">Con nói một bài giới thiệu bằng <b>tiếng Anh</b> (Leo dẫn) rồi <b>tiếng Trung</b> (Xiaomei dẫn).${hasWheel ? ' Có 🎡 <b>2 câu ôn bất ngờ</b> từ các unit trước và ❓ <b>câu hỏi của khán giả</b>.' : ' Cuối bài có ❓ <b>khán giả gọi, con đáp</b>.'}</p>
+      <p class="sk-mo">${h(U.y)}<br>Con nói cả bài bằng <b>tiếng Anh</b> (Leo dẫn) rồi <b>tiếng Trung</b> (Xiaomei dẫn).${hasWheel ? '' : ''}</p>
       <div class="sk-lvs">${LV.map(l => { const open = TEACHER || l.k <= done + 1;
         return `<button type="button" class="sk-lv${open ? '' : ' khoa'}${l.k <= done ? ' xong' : ''}" data-lv="${l.k}" ${open ? '' : 'disabled'}>
           <span class="sk-m">${open ? l.m : '🔒'}</span><b>${l.ten}</b><small>${h(l.mo)}</small>${l.k <= done ? '<i>✓</i>' : ''}</button>`; }).join('')}</div>
@@ -251,26 +277,46 @@
     }, window.SK_TEST ? 50 : 1800);
   }
   function choices() {
-    const need = [...new Set(S.show.map(l => l.need).filter(Boolean))], s = store(), ch = s.ch[COURSE] = s.ch[COURSE] || {};
+    const need = ['ava', ...new Set(S.show.map(l => l.need).filter(Boolean))], s = store(), ch = s.ch[COURSE] = s.ch[COURSE] || {};
     const p = $('skPanel');
     const step = i => {
       if (!root) return;
-      if (i >= need.length) return start();
+      if (i >= need.length) return brief();
       const k = need[i], opts = PICK[k];
       p.innerHTML = `<div class="sk-box"><div class="sk-t">${h(TITLE[k])}</div>
         <div class="sk-opts">${opts.map((o, j) => `<button type="button" class="sk-opt${ch[k] === o.k ? ' on' : ''}" data-o="${j}">${o.a ? `<img src="${NV(IMG[o.a])}" alt="">` : `<span>${o.e}</span>`}</button>`).join('')}</div>
         ${i === 0 ? `<label class="sk-name">Tên con (ba mẹ gõ giúp, để hiện trên slide): <input id="skTen" maxlength="20" value="${h(ch.ten || '')}"></label>` : ''}</div>`;
       p.hidden = false;
-      p.querySelectorAll('[data-o]').forEach(b => b.onclick = () => { const t = $('skTen'); if (t) ch.ten = t.value.trim(); ch[k] = opts[+b.dataset.o].k; persist(); step(i + 1); });
+      p.querySelectorAll('[data-o]').forEach(b => b.onclick = () => { const t = $('skTen'); if (t) ch.ten = t.value.trim(); ch[k] = opts[+b.dataset.o].k; persist(); drawCon(); step(i + 1); });
       say('Con chạm một tranh nhé!');
     };
-    if (!need.length) { const t = S.show.some(l => l.free); if (!t) return start(); }
+    if (!need.length) { const t = S.show.some(l => l.free); if (!t) return brief(); }
     if (!need.length) {   // chỉ cần tên
       p.innerHTML = `<div class="sk-box"><div class="sk-t">Sẵn sàng lên sân khấu!</div><label class="sk-name">Tên con (ba mẹ gõ giúp, để hiện trên slide): <input id="skTen" maxlength="20" value="${h(ch.ten || '')}"></label>
         <button type="button" class="ls-b sk-go" id="skGo">Bắt đầu ›</button></div>`;
-      $('skGo').onclick = () => { ch.ten = $('skTen').value.trim(); persist(); start(); }; return;
+      $('skGo').onclick = () => { ch.ten = $('skTen').value.trim(); persist(); brief(); }; return;
     }
     step(0);
+  }
+
+  /* ---------- kịch bản của con: xem trước cả bài (ai nói, con nói gì), nghe thử ---------- */
+  function brief() {
+    if (S.lv === 4) return start();
+    const p = $('skPanel'), rows = S.show.map(l => {
+      const ask = l.ask ? `<div class="sk-row hoi"><img class="sk-who" src="${NV(IMG[l.ask.a])}" alt=""><span><small>${h(WHO[l.ask.a])} hỏi</small>${h(askText(l, 'en'))}<em>${h(askText(l, 'zh'))}</em></span></div>` : '';
+      const toWho = l.to ? (l.to === 'all' ? ' → cả khán giả' : ' → ' + l.to.map(a => WHO[a]).join(', ')) : '';
+      return ask + `<div class="sk-row${l.quay ? ' quay' : ''}"><span class="sk-rpic">${pic(l)}</span><span><small>${l.ask ? 'Con trả lời' : 'Con nói'}${h(toWho)}${l.quay ? ' · 🎡 ôn Unit ' + l.u : ''}</small>${h(text(l, 'en'))}<em>${h(text(l, 'zh'))}</em></span></div>`;
+    }).join('');
+    p.innerHTML = `<div class="sk-box"><div class="sk-t">📜 Kịch bản của con</div>
+      <p class="sk-mo">Con nói hết bài bằng tiếng Anh (Leo dẫn), rồi nói lại bằng tiếng Trung (Xiaomei dẫn). Dòng có ❓ là lúc khán giả hỏi, con trả lời.</p>
+      <div class="sk-rows">${rows}</div>
+      <div class="sk-btns"><button type="button" class="ls-b" id="skNghe">🔊 Nghe cả bài</button><button type="button" class="ls-b sk-go" id="skLen">Lên sân khấu ›</button></div></div>`;
+    p.hidden = false; say('📜 Ba mẹ cùng con xem kịch bản, chạm 🔊 để nghe cả bài tiếng Anh.');
+    let playing = false;
+    $('skNghe').onclick = async () => { if (playing) return; playing = true;
+      for (const l of S.show) { if (!root || p.hidden) break; if (l.ask) await speak(askText(l, 'en'), 'en'); await speak(text(l, 'en'), 'en'); }
+      playing = false; };
+    $('skLen').onclick = () => { try { speechSynthesis.cancel(); } catch (e) {} start(); };
   }
 
   /* ---------- tranh ---------- */
@@ -287,6 +333,7 @@
     if (pc.me) return `<span class="sk-e sk-me">⭐<b>${h(ch.ten || 'Con')}</b></span>`;
     return '';
   }
+  const askText = (l, lang) => { const ten = (store().ch[COURSE] || {}).ten; return String(l.ask[lang]).replace('{ten}', ten || (lang === 'en' ? 'friend' : '朋友')); };
   const text = (l, lang) => fill(l[lang], lang, store().ch[COURSE] || {}).replace('___', (store().ch[COURSE] || {}).ten || '___');
 
   /* ---------- chạy bài nói ---------- */
@@ -315,6 +362,7 @@
     const s = $('skScreen');
     s.className = 'sk-screen ' + mode + (l.quay ? ' quay' : '') + (l.hoi ? ' hoi' : '');
     s.innerHTML = `${l.quay ? `<span class="sk-tag">🎡 Ôn bất ngờ · Unit ${l.u}</span>` : ''}${l.hoi ? '<span class="sk-tag">❓ Khán giả hỏi</span>' : ''}
+      ${l.ask ? `<div class="sk-q"><img src="${NV(IMG[l.ask.a])}" alt=""><span><small>${h(WHO[l.ask.a])} hỏi:</small><b>${h(askText(l, lang))}</b></span></div><div class="sk-a">🗣️ Con trả lời:</div>` : ''}
       <div class="sk-spic">${pic(l)}</div><div class="sk-stext ${lang}">${h(text(l, lang))}</div>`;
   }
   async function line() {
@@ -327,14 +375,16 @@
     S.tries = 0; strip();
     const mode = S.lv === 1 ? 'mau' : S.lv === 2 ? 'tranh' : 'mo';
     screen(l, lang, mode);
-    if (l.ask) {   // khán giả hỏi trước
-      const who = l.ask.a === 'host' ? null : root.querySelector(`.sk-p[data-p="${l.ask.a}"]`);
-      if (who) { who.classList.add('hoi'); setTimeout(() => who.classList.remove('hoi'), 2600); }
-      bubble(lang, l.ask[lang], 3200); say(`❓ ${l.ask.a === 'host' ? (lang === 'en' ? 'Leo' : 'Xiaomei') : 'Khán giả'} hỏi: <b>${h(l.ask[lang])}</b> · Con trả lời nhé!`);
-      await speak(l.ask[lang], lang); if (!root) return;
+    if (l.ask) {   // khán giả hỏi trước: người hỏi giơ tay, bước lên, bóng nói riêng; người dẫn giới thiệu
+      const who = root.querySelector(`.sk-p[data-p="${l.ask.a}"]`), q = askText(l, lang);
+      bubble(lang, lang === 'en' ? 'Question time!' : '提问时间！', 1800);
+      await speak(lang === 'en' ? 'Question time!' : '提问时间！', lang); if (!root) return;
+      if (who) who.classList.add('len'); audSay(l.ask.a, q, 6000);
+      say(`❓ <b>${h(WHO[l.ask.a])}</b> hỏi con: <b>${h(q)}</b> → ${S.lv === 1 ? `con trả lời: <b>${h(t)}</b>` : 'con trả lời nhé!'}`);
+      await speak(q, lang); if (!root) return;
     }
-    if (S.lv === 1) { await model(t, lang); }
-    else say(l.ask ? `❓ <b>${h(l.ask[lang])}</b> → 🗣️ Con trả lời!` : '🗣️ Đến lượt con!' + (S.lv === 3 ? ' Con nói xong slide mới hiện.' : ' Nhìn tranh rồi nói.'));
+    if (S.lv === 1) { await model(t, lang); if (l.ask) say(`❓ ${h(WHO[l.ask.a])}: <b>${h(askText(l, lang))}</b> → 🗣️ Con trả lời: <b>${h(t)}</b>`); }
+    else if (!l.ask) say('🗣️ Đến lượt con!' + (S.lv === 3 ? ' Con nói xong slide mới hiện.' : ' Nhìn tranh rồi nói.'));
     listenNow();
   }
   async function model(t, lang) { bubble(lang, t, 3600); say(`👂 Nghe: <b>${h(t)}</b> → 🗣️ Con nói theo!`); await speak(t, lang); }
@@ -349,10 +399,10 @@
   async function turn(auto) {
     if (!root || S.busy || S.end) return; const cur = S.q[S.i]; if (!cur) return;
     const { lang, l } = cur; S.busy = true; S.abort = false;
-    const m = $('skMic'), hEl = $('skHost'); m.classList.remove('luot'); m.classList.add('on'); hEl.classList.add('tai'); say('🎧 Đang nghe…');
+    const m = $('skMic'), hEl = $('skHost'); m.classList.remove('luot'); m.classList.add('on'); hEl.classList.add('tai'); $('skCon').classList.add('noi'); say('🎧 Đang nghe…');
     if (!canListen()) { S.busy = false; m.classList.remove('on'); hEl.classList.remove('tai'); return next(true); }   // máy không nghe được: con nói rồi chạm 🎤 để đi tiếp
     const r = await listen(lang, x => say('🎧 ' + h(x)));
-    S.busy = false; if (!root) return; m.classList.remove('on'); hEl.classList.remove('tai');
+    S.busy = false; if (!root) return; m.classList.remove('on'); hEl.classList.remove('tai'); $('skCon').classList.remove('noi');
     if (S.abort || r.err === 'aborted') return;
     const alts = (r.alts || []).filter(Boolean);
     if (auto && !alts.length && r.err && r.err !== 'no-speech') { pulse(); say('🎤 Con chạm micro rồi nói nhé!'); return; }
@@ -368,7 +418,13 @@
     $('skSkip').hidden = true; $('skMic').disabled = true; $('skMic').classList.remove('luot');
     S.res.push({ i: cur.i, lang: cur.lang, ok }); if (ok) S.ok++;
     const s = $('skScreen'); s.classList.remove('mo'); s.classList.add(ok ? 'dung' : 'tranh');
-    if (ok) { react(cur.l.aud || 'clap', cur.lang); meter(); bubble(cur.lang, cur.lang === 'en' ? ['Great!', 'Super!', 'Wow!'][S.ok % 3] : ['真棒！', '太好了！', '很好！'][S.ok % 3], 1800); }
+    root.querySelectorAll('.sk-p.len').forEach(p => p.classList.remove('len'));
+    if (cur.l.to) {   // người được chào vẫy tay, đáp lại (cả khi con chưa nói tròn câu)
+      const ids = cur.l.to === 'all' ? C.units[S.unit].aud : cur.l.to;
+      ids.forEach((a, k) => setTimeout(() => { if (!root) return; audSay(a, cur.l.rep[cur.lang], 2200); const p = root.querySelector(`.sk-p[data-p="${a}"]`); if (p) { const fx = p.querySelector('.sk-fx'); fx.textContent = '👋'; fx.classList.add('on'); setTimeout(() => fx.classList.remove('on'), 1800); } }, 250 + k * 120));
+      setTimeout(() => speak(cur.l.rep[cur.lang], cur.lang), 300);
+    }
+    if (ok) { react(cur.l.to ? 'clap' : (cur.l.aud || 'clap'), cur.lang); meter(); bubble(cur.lang, cur.lang === 'en' ? ['Great!', 'Super!', 'Wow!'][S.ok % 3] : ['真棒！', '太好了！', '很好！'][S.ok % 3], 1800); }
     else { bubble(cur.lang, cur.lang === 'en' ? 'Good try!' : '很好！', 1800); say(`Mình nói tiếp nhé! Câu này là: <b>${h(text(cur.l, cur.lang))}</b>`); }
     S.i++; strip();
     setTimeout(line, ok ? 1900 : 2300);
@@ -411,7 +467,7 @@
     try { cam = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'user', width: 640, height: 480 }, audio: true }); } catch (e) { cam = null; }
     if (!root) return stopCam();
     if (!cam || !window.MediaRecorder) { p.innerHTML = `<div class="sk-box"><div class="sk-t">🎬 Chưa mở được camera</div><p class="sk-mo">Ba mẹ cho phép dùng camera và micro, hoặc mở bằng Chrome / Safari, rồi thử lại nhé.</p><div class="sk-btns"><button type="button" class="ls-b" id="skBack">‹ Quay lại</button></div></div>`; p.hidden = false; $('skBack').onclick = menu; return; }
-    const v = document.createElement('video'); v.className = 'sk-cam'; v.muted = true; v.playsInline = true; v.autoplay = true; v.srcObject = cam; $('skStage').appendChild(v);
+    const v = document.createElement('video'); v.className = 'sk-cam'; v.muted = true; v.playsInline = true; v.autoplay = true; v.srcObject = cam; $('skCon').appendChild(v); $('skCon').classList.add('cam');
     chunks = []; try { mrec = new MediaRecorder(cam); } catch (e) { mrec = null; }
     if (mrec) { mrec.ondataavailable = e => e.data && e.data.size && chunks.push(e.data); mrec.start(); }
     $('skMic').innerHTML = '▶<b>Tiếp</b>'; $('skMic').disabled = false; $('skMic').classList.add('film');
@@ -420,13 +476,14 @@
   }
   function filmLine() {
     const cur = S.q[S.i]; host(cur.lang, true); strip(); screen(cur.l, cur.lang, 'tranh');
-    if (cur.l.ask) bubble(cur.lang, cur.l.ask[cur.lang], 3000);
+    root.querySelectorAll('.sk-p.len').forEach(p => p.classList.remove('len'));
+    if (cur.l.ask) { const w = root.querySelector(`.sk-p[data-p="${cur.l.ask.a}"]`); if (w) w.classList.add('len'); audSay(cur.l.ask.a, askText(cur.l, cur.lang), 5000); }
     say(`🎬 ${S.i + 1}/${S.q.length} · Con nói: <b>${h(text(cur.l, cur.lang))}</b> rồi chạm <b>Tiếp</b>`);
   }
   function endFilm(v) {
     $('skMic').disabled = true;
     const done = () => {
-      stopCam(); v.remove();
+      stopCam(); v.remove(); $('skCon').classList.remove('cam');
       const blob = new Blob(chunks, { type: (mrec && mrec.mimeType) || 'video/webm' }), url = URL.createObjectURL(blob);
       const s = store(), ch = s.ch[COURSE] || {}, kid = (typeof P === 'object' && P && P.kidId) || '';
       const ext = /mp4/.test(blob.type) ? 'mp4' : 'webm';
