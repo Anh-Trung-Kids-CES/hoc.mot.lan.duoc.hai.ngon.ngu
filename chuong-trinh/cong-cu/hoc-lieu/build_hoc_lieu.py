@@ -22,7 +22,10 @@ def mod(name, p):
     sp = importlib.util.spec_from_file_location(name, p); m = importlib.util.module_from_spec(sp); sp.loader.exec_module(m); return m
 FONT = next(f for f in ('/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc', '/usr/share/fonts/truetype/noto/NotoSansCJK-Bold.ttc') if os.path.exists(f))
 HAN = re.compile(r'[一-鿿]')
+import sys as _sy, os as _os; _sy.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from pinyin_chuan import py as _PYC   # (12/11) pinyin chuẩn theo từ điển CC-CEDICT + luật chữ đa âm
 def PY(z):
+    return _PYC(z, noi=True)
     out = []
     for seg in re.split(r'([一-鿿]+)', z):
         out.append(' '.join(x[0] for x in _py(seg, style=Style.TONE)) if HAN.match(seg or '') else seg)

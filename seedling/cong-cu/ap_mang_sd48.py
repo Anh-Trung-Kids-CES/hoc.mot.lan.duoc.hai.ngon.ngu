@@ -22,7 +22,10 @@ def au(l, t):
     a = au1(l, t)
     if a: return a
     MISS.add((l, t)); return ''   # web Seedling không nối nhiều file giọng: câu chưa thu đọc bằng giọng trình duyệt
+import sys as _sy, os as _os; _sy.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '../../chuong-trinh/cong-cu'))
+from pinyin_chuan import py as _PYC   # (12/11) pinyin chuẩn theo từ điển CC-CEDICT + luật chữ đa âm
 def PY(z):
+    return _PYC(z, noi=True)
     out = []
     for seg in re.split(r'([一-鿿]+)', z):
         out.append(' '.join(x[0] for x in _pinyin(seg, style=_Style.TONE)) if re.match(r'[一-鿿]', seg or '') else seg)

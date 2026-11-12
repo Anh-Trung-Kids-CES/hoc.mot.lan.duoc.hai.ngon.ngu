@@ -376,7 +376,10 @@ def _py_seg(seg):   # thanh nhẹ (轻声) cho từ lặp, từ thường gặp;
         if not part: continue
         out.append(PY_NHE[part] if part in PY_NHE else ' '.join(x[0] for x in _pinyin(part, style=_Style.TONE)))
     return ' '.join(out)
+import sys as _sy, os as _os; _sy.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '../../chuong-trinh/cong-cu'))
+from pinyin_chuan import py as _PYC   # (12/11) pinyin chuẩn theo từ điển CC-CEDICT + luật chữ đa âm
 def PY(z):
+    return _PYC(z, noi=True)
     out = []
     for seg in re.split(r'([一-鿿]+)', z):
         if re.match(r'[一-鿿]', seg or ''): out.append(' ' + _py_seg(seg) + ' ')   # (12/11) có cách với tên Latin: "wǒ jiào Leo"
