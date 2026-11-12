@@ -1,5 +1,75 @@
 [
 {
+"l": "zh",
+"t": "小",
+"nguon": [
+"chuong-trinh/giong_thieu_thu_lai_zh.json"
+]
+},
+{
+"l": "zh",
+"t": "下",
+"nguon": [
+"chuong-trinh/giong_thieu_thu_lai_zh.json"
+]
+},
+{
+"l": "zh",
+"t": "出",
+"nguon": [
+"chuong-trinh/giong_thieu_thu_lai_zh.json"
+]
+},
+{
+"l": "zh",
+"t": "这",
+"nguon": [
+"chuong-trinh/giong_thieu_thu_lai_zh.json"
+]
+},
+{
+"l": "zh",
+"t": "您好！",
+"nguon": [
+"chuong-trinh/giong_thieu_thu_lai_zh.json"
+]
+},
+{
+"l": "zh",
+"t": "胳膊",
+"nguon": [
+"chuong-trinh/giong_thieu_thu_lai_zh.json"
+]
+},
+{
+"l": "zh",
+"t": "我很饿！",
+"nguon": [
+"chuong-trinh/giong_thieu_thu_lai_zh.json"
+]
+},
+{
+"l": "zh",
+"t": "吃",
+"nguon": [
+"chuong-trinh/giong_thieu_thu_lai_zh.json"
+]
+},
+{
+"l": "zh",
+"t": "尺子",
+"nguon": [
+"chuong-trinh/giong_thieu_thu_lai_zh.json"
+]
+},
+{
+"l": "zh",
+"t": "翅膀",
+"nguon": [
+"chuong-trinh/giong_thieu_thu_lai_zh.json"
+]
+},
+{
 "l": "en",
 "t": "A big puppy!",
 "nguon": [
@@ -503,6 +573,13 @@
 {
 "l": "en",
 "t": "Hello! I can jump! Jump, jump!",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "en",
+"t": "Hello! My name is",
 "nguon": [
 "little-seed/giong_thieu.json"
 ]
@@ -1155,6 +1232,13 @@
 },
 {
 "l": "en",
+"t": "I'm",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "en",
 "t": "I'm sad! No pizza!",
 "nguon": [
 "little-seed/giong_thieu.json"
@@ -1593,6 +1677,13 @@
 {
 "l": "en",
 "t": "My mommy!",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "en",
+"t": "My name is",
 "nguon": [
 "little-seed/giong_thieu.json"
 ]
@@ -3408,6 +3499,13 @@
 },
 {
 "l": "zh",
+"t": "你好！我叫",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "zh",
 "t": "你好！我能跳！跳，跳！",
 "nguon": [
 "little-seed/giong_thieu.json"
@@ -4322,6 +4420,13 @@
 },
 {
 "l": "zh",
+"t": "我叫",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "zh",
 "t": "我叫Leo，Leo呀！",
 "nguon": [
 "little-seed/giong_thieu.json",
@@ -4633,6 +4738,13 @@
 {
 "l": "zh",
 "t": "我很难过。我好累。",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "zh",
+"t": "我是",
 "nguon": [
 "little-seed/giong_thieu.json"
 ]
