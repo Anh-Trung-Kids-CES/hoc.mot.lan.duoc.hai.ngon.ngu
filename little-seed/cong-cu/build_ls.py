@@ -613,13 +613,15 @@ for un, MU in sorted(MANG.U.items()):
         out = []
         for q, (l, g) in enumerate([('en', 'he'), ('zh', 'he'), ('en', 'she'), ('zh', 'she'), ('en', 'he')]):
             qt = ('Who is %s?' % g) if l == 'en' else '这是谁？'; ht = ('%s is my…' % g.capitalize()) if l == 'en' else '这是我…'
-            out.append({'l': l, 'q': qt, 'a_q': au_multi(l, qt, 'co_huou'), 'half': ht, 'a_half': au(l, ht.rstrip('…'), 'co_huou')})
+            vp = pages[APG.get('bo' if g == 'he' else 'me', off)] if APG else None   # câu ví dụ cho gợi ý: "He is my daddy!" / "She is my mommy!"
+            vd = (vp['zh'] if l == 'zh' else vp['en']) if vp else ''
+            out.append({'l': l, 'q': qt, 'a_q': au_multi(l, qt, 'co_huou'), 'half': ht, 'a_half': au(l, ht.rstrip('…'), 'co_huou'), 'vd': vd, 'a_vd': au_multi(l, vd, 'co_huou') if vd else ''})
         return out
     VE2 = {1: (VEL[0:2], ['en']), 2: (VEL[2:4], ['en']), 3: (VEL[0:2], ['en', 'zh']), 4: (VEL[2:4], ['en', 'zh'])}
     BB_SUB = {1: 'Lần 1 · Nghe cả quyển, chạm đúng người', 2: 'Lần 2 · Đoán trang sau là ai', 3: 'Lần 3 · Đọc đuổi, điền chỗ trống', 4: 'Lần 4 · Con kể, rồi nói về gia đình con'}
     BB_RULES = {1: ['Khởi động: con nghe 2 dòng vè và nghe tên các bạn trong truyện.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con nghe câu hỏi và chạm đúng người. Cần thì bấm 💡 để xem gợi ý.'],
                 2: ['Khởi động: con nghe 2 dòng vè và nghe lại 3 trang đầu.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con đoán: trang sau là ai? Con chạm vào tranh trang sau.'],
-                3: ['Khởi động: con nghe 2 dòng vè và 2 trang đầu.', 'Đọc đuổi: cô đọc, cô và con cùng đọc, rồi con đọc một mình.', 'Rồi con chọn tranh điền vào chỗ trống.'],
+                3: ['Khởi động: con nghe 2 dòng vè và 2 trang đầu.', 'Đọc đuổi tiếng Anh rồi tiếng Trung: cô đọc, cô và con cùng đọc, rồi con đọc một mình.', 'Rồi con chọn tranh điền vào chỗ trống.'],
                 4: ['Khởi động: con nghe 2 dòng vè và nghe nhanh cả quyển.', 'Con kể: cô nói nửa câu, con nói tiếp.', 'Rồi con nói về gia đình con: "He is my…", "She is my…".']}
     VE_SUB = {1: 'Lần 1 · Nghe mẫu, hát tiếng Anh', 2: 'Lần 2 · Hát tiếng Trung', 3: 'Lần 3 · Hát hai tiếng, giọng cô nhỏ dần', 4: 'Lần 4 · Lồng tiếng, lưu video gửi cô'}
     VE_RULES = {1: ['Khởi động: con nghe lại 3 trang big book.', 'Con nghe cô đọc mẫu vè tiếng Anh từng dòng.', 'Rồi con hát karaoke cùng nhạc: chữ sáng đến đâu, con hát đến đó.'],

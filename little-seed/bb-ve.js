@@ -121,15 +121,34 @@ R.bb = (step, body) => {
       who = '👩‍🏫 Cô đọc'; await line(); if (me !== RUN) return; await wait(300);
       if (pass === 1 && !ans) return;   // lượt Trung: trang hỏi chỉ nghe
       who = '👩‍🏫🧒 Cô và con cùng đọc'; drawBook(true); cap('Cùng đọc nào!'); await wait(250); await say(BV.u(l, pgTxt(p, l), pgAu(p, l))); if (me !== RUN) return; await wait(400);
-      if (pass === 1 || !ans) return;   // lượt Anh, trang trả lời: con đọc một mình
+      if (!ans) return;   // trang trả lời (cả lượt Anh và lượt Trung): con đọc một mình
       who = '🧒 Con đọc một mình'; drawBook(true); await hd('turn'); if (me !== RUN) return;
-      const how = await micTurn(mic(), me); if (me !== RUN || how === 'gone') return; if (how === 'rec') star(); await wait(300); return; }
+      await conNoi(me, mic, async () => { who = '💡 Cô đọc lại, con đọc theo nhé'; drawBook(true); await BV.vi('Con nghe cô đọc lại rồi đọc nhé.');
+        if (me !== RUN) return; await say(BV.u(l, pgTxt(p, l), pgAu(p, l))); who = '🧒 Con đọc một mình'; drawBook(true); }); await wait(300); return; }
     // lần 4: con kể – trang hỏi cô đọc; trang trả lời cô nói nửa câu đầu, con nói tiếp, rồi cô đọc cả câu
     if (!ans) { who = '👩‍🏫 Cô đọc'; await line(); return; }
     const half = l === 'zh' ? p.half_zh : p.half_en;
     who = '👩‍🏫 ' + esc(half); drawBook(); cap((l === 'zh' ? '中文: ' : 'EN: ') + half); await say(BV.u(l, half.replace(/…$/, ''), l === 'zh' ? p.a_half_zh : p.a_half_en)); if (me !== RUN) return;
-    who = '🧒 Con nói tiếp…'; drawBook(); const how = await micTurn(mic(), me); if (me !== RUN || how === 'gone') return; if (how === 'rec') star();
+    who = '🧒 Con nói tiếp…'; drawBook();
+    const nmo = (step.names || []).find(o => o.k === p.nm);
+    const how = await conNoi(me, mic, async () => { if (!nmo) return; who = '💡 ' + esc(l === 'zh' ? nmo.zh : nmo.en) + ' …'; drawBook();
+      await BV.vi('Gợi ý nè.'); if (me !== RUN) return; await say(BV.u(l, l === 'zh' ? nmo.zh : nmo.en, l === 'zh' ? nmo.a_zh : nmo.a_en)); if (me !== RUN) return;
+      await say(BV.u(l, half.replace(/…$/, ''), l === 'zh' ? p.a_half_zh : p.a_half_en)); who = '🧒 Con nói tiếp…'; drawBook(); }); if (how === 'gone') return;
     who = '👩‍🏫 Cô đọc cả câu'; await line(); }
+  async function micOnce(mic, my) {   // một lượt thu (micTurn của ls-app.js thử 2 lần; ở đây gợi ý xen giữa 2 lần)
+    if (!mic) return 'gone'; const lbl = mic.querySelector('b'), lv = mic.querySelector('.ls-lv');
+    mic.className = 'ls-mic rec'; cap('🔴 Đang thu… con nói đi!'); if (lbl) lbl.textContent = '';
+    const r = await recTake({ maxMs: 5000, onLevel: v => { if (lv) lv.style.setProperty('--lv', (.25 + v * .9).toFixed(2)); } });
+    if (my !== RUN) return 'gone';
+    if (!r) { mic.className = 'ls-mic on'; cap('Con nói nhé!'); for (let k = 3; k >= 1; k--) { if (my !== RUN) return 'gone'; if (lbl) lbl.textContent = k; await wait(1000); } return 'count'; }
+    if (!r.spoke) { mic.className = 'ls-mic on'; if (lbl) lbl.textContent = ''; cap('Cô chưa nghe thấy con nói'); return 'quiet'; }
+    mic.className = 'ls-mic ok'; if (lbl) lbl.textContent = '✓'; sfx.ok(); cap('🎧 Con nghe lại giọng của con nhé'); await wait(250);
+    if (my !== RUN) return 'gone'; if (typeof jRec === 'function') jRec(); await playFile(r.url); return 'rec'; }
+  async function conNoi(me, getMic, hintFn) {   // con im lặng: gợi ý (quy tắc d) rồi thử lại; lần 2 vẫn im thì đi tiếp, không chặn
+    let how = await micOnce(getMic(), me); if (me !== RUN || how === 'gone') return 'gone';
+    if (how === 'quiet') { await hintFn(); if (me !== RUN) return 'gone'; how = await micOnce(getMic(), me); if (me !== RUN || how === 'gone') return 'gone';
+      if (how === 'quiet') { await hd('quiet2'); if (me !== RUN) return 'gone'; } }
+    if (how === 'rec') star(); return how; }
   async function auto() { stopAll(); const me = RUN; autoId = me;
     VK_STOP.add(() => setTimeout(() => { if (body.isConnected && B.isConnected) { autoId = -1; drawBook(); } }, 0));   // bấm Dừng: hiện lại nút Đọc tiếp
     if (c === 0 && pass === 0) { await (lan === 3 ? BV.vi('Mình đọc đuổi nhé: cô đọc, cô và con cùng đọc, rồi con đọc một mình.') : lan === 4 ? BV.vi('Con kể chuyện nhé! Cô nói nửa câu, con nói tiếp.') : hd('listen')); if (me !== RUN) return; }
@@ -151,7 +170,7 @@ R.bb = (step, body) => {
     if (lan === 4) {
       QP.innerHTML = head + `<div class="bb2-mine"><button class="bb2-ask" id="qSay" type="button"><span class="${L === 'zh' ? 'zh' : ''}">🔊 ${esc(q.q)}</span></button>
         <div class="bb2-half ${L}">${esc(q.half)} <i>___</i></div><div class="ls-mic idle" id="qMic"><span class="ls-lv"></span>${SVG.mic}<b></b></div>
-        <div class="row"><button class="ls-b" id="qSkip">Bỏ qua ▶</button></div></div>`;
+        <div class="bb2-ans" id="qAns"></div><div class="row"><button class="ls-b" id="qSkip">Bỏ qua ▶</button></div></div>`;
       QP.querySelector('#qSay').onclick = () => { stopAll(); say(BV.u(q.l, q.q, q.a_q)); };
       QP.querySelector('#qSkip').onclick = () => { stopAll(); qi++; qi >= Q.length ? (drawQ(), finish()) : ask(); }; return; }
     const askTx = lan === 3 ? `${esc(q.fr).replace('___', '<i class="bb2-blank" id="qBlank">___</i>')}` : esc(q.q);
@@ -185,7 +204,10 @@ R.bb = (step, body) => {
     drawQ(); X.replay = () => { stopAll(); askAudio(q); };
     if (lan === 4) { await say(BV.u(q.l, q.q, q.a_q)); if (me !== RUN) return; await wait(250);
       await say(BV.u(q.l, q.half.replace(/…$/, ''), q.a_half)); if (me !== RUN) return;
-      const how = await micTurn(QP.querySelector('#qMic'), me); if (me !== RUN || how === 'gone') return; if (how === 'rec') star();
+      const how = await conNoi(me, () => QP.querySelector('#qMic'), async () => { const a = QP.querySelector('#qAns');
+        if (a) a.innerHTML = `<span class="${q.l === 'zh' ? 'zh' : ''}">💡 ${esc(q.vd || '')}</span>`;
+        await BV.vi('Con nghe ví dụ nhé.'); if (me !== RUN) return; if (q.vd) await say(BV.u(q.l, q.vd, q.a_vd)); if (me !== RUN) return;
+        await say(BV.u(q.l, q.half.replace(/…$/, ''), q.a_half)); }); if (how === 'gone') return;
       await wait(500); if (me !== RUN) return; qi++; if (qi >= Q.length) { drawQ(); await wait(300); return finish(); } return ask(); }
     if (lan === 1 && !q.again) { cap('Con nghe tên các bạn nhé.'); await sweep(QP, q.opts, q.l, me); if (me !== RUN) return; await wait(200); }
     cap((q.l === 'zh' ? '中文: ' : 'EN: ') + (lan === 3 ? q.fr : q.q)); await askAudio(q); if (me !== RUN) return;
