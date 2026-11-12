@@ -23,10 +23,10 @@ Mỗi màn có lời cô, câu cô đọc theo (kèm pinyin), phím cách làm v
 Thứ tự trang dùng: giọng cô tự thu → file giọng có sẵn → giọng máy của trình duyệt.
 1. **Dùng lại giọng có sẵn** của web Little Seed và Seedling (không tạo mới): 57 lượt nguyên câu.
 2. **Ghép mảnh có sẵn** khi chưa có nguyên câu (ví dụ "Goodbye" + "everyone", "One" + "two" + "three"): 22 lượt.
-3. **16 câu còn thiếu** (`cong-cu/giong-thieu.json` trước 12/11 trưa): dòng 2 vè chào đầu, 2 câu vè chào cuối, "Leo says…", "Xiaomei说……", 跳一跳 và các câu chào gọi tên. Đã tạo bằng Kokoro (mô hình đọc miễn phí chạy ngay trên máy, giọng af_heart và zf_xiaobei, tốc độ 0,85), file ở `giong/`, map ở `cong-cu/giong-map.json`. Tên Việt đọc gần đúng (Bông → "Bong", Vũ → "Voo"); Xiaomei, Anna trong câu tiếng Trung đọc là 小美, 安娜.
-   - Muốn giọng thật: cô thu đè ngay trên trang (🎙 Giọng đọc → ● Thu; "Tải về" rồi "Nạp file" để chuyển sang máy lớp).
-   - Hoặc tạo lại bằng Gemini TTS cho cùng giọng với web học: xoá dòng tương ứng trong `giong-map.json`, chạy
-     `GEMINI_API_KEY=... python3 seedling/cong-cu/gemini/gen_audio.py <danh sách> khai-giang/giong khai-giang/cong-cu/giong-map.json` rồi `node khai-giang/cong-cu/build_buoi0.js`.
+3. **16 câu không có trong kho** (dòng 2 vè chào đầu, 2 câu vè chào cuối, "Leo says…", "Xiaomei说……", 跳一跳 và các câu chào gọi tên): tạo ngày 12/11 bằng Gemini Flash TTS gói miễn phí, cùng giọng và cách đọc với web học (`seedling/cong-cu/gemini/gen_audio.py`). File ở `giong/`, map ở `cong-cu/giong-map.json`.
+   - Cô vẫn có thể thu đè giọng mình trên trang (🎙 Giọng đọc → ● Thu; "Tải về" rồi "Nạp file" để chuyển sang máy lớp).
+   - Thêm câu mới: sửa `noi-dung.js`, chạy build để có `cong-cu/giong-thieu.json`, rồi
+     `GEMINI_API_KEY=... python3 seedling/cong-cu/gemini/gen_audio.py khai-giang/cong-cu/giong-thieu.json khai-giang/giong khai-giang/cong-cu/giong-map.json` và chạy lại build.
 
 ## Bài hát khởi động
 Lấy từ kho "Xem thêm" của web (kênh có trên YouTube Kids, chọn 11/11/2026), nhúng youtube-nocookie, không tải về:

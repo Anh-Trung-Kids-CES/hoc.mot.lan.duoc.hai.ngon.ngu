@@ -34,7 +34,9 @@ const MAP = path.join(__dirname, 'giong-map.json');
 const own = fs.existsSync(MAP) ? JSON.parse(fs.readFileSync(MAP, 'utf8')) : {};
 for (const [k, f] of Object.entries(own)) { const i = k.indexOf(':'); add(k.slice(0, i), k.slice(i + 1), 'giong/' + f, 'khai-giang'); }
 
-const rel = p => path.relative('khai-giang', p).split(path.sep).join('/');
+// file giọng riêng của buổi 0 thêm ?h=<mã nội dung> để trình duyệt không giữ bản cũ khi tạo lại
+const rel = p => path.relative('khai-giang', p).split(path.sep).join('/') +
+  (p.startsWith(path.join('khai-giang', 'giong')) ? '?h=' + require('crypto').createHash('md5').update(fs.readFileSync(path.join(ROOT, p))).digest('hex').slice(0, 6) : '');
 const miss = new Map(), stat = { file: 0, ghep: 0, may: 0 };
 function resolve(l, t, parts) {
   if (!t) return null;
