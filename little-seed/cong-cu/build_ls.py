@@ -719,6 +719,12 @@ bbve_unit(1, {'pages': U1P, 'kind': 'seq', 'names': U1N, 'items': U1I, 'vel': VE
               'title': 'Goodbye, Puppy!', 'title_zh': '小狗，再见！', 've_title': 'Hello and Goodbye!', 've_title_zh': '你好，再见！',
               'frame': {'left': 52, 'top': 15.5, 'width': 39.3, 'height': 45.4},
               'day_fix': {8: {'t': 'Vè chào – lồng tiếng', 'goal': 'Hát trọn hai vè chào, lồng tiếng gửi cô'}}})
+# Không để bước rỗng (chị chốt 12/11): bước không có bài tập bên trong thì bỏ, in ra để sửa nguồn
+_K = ('cards', 'scenes', 'lines', 'turns', 'qs', 'items', 'pages', 'opts', 'quiz')
+for n, d in days.items():
+    keep = [st for st in d['steps'] if not [k for k in _K if isinstance(st.get(k), list)] or any(st.get(k) for k in _K if isinstance(st.get(k), list))]
+    if len(keep) != len(d['steps']): print('  !! ngày', n, 'bỏ bước rỗng:', [st['type'] for st in d['steps'] if st not in keep])
+    d['steps'] = keep
 out = {'who': who, 'days': {str(k): v for k, v in sorted(days.items())}, 'lop': {str(k): v for k, v in lop.items()}, 'map': mp,
        'soon': {str(k): v for k, v in soon.items()}, 'vi': SD0['vi'], 'vi_a': deep(SD0['vi_a']), 'vi_t': SD0.get('vi_t', {}), 'bg': {},
        'reader': reader, 'units_q': units_q, 'aumap': {}, 'vi_tx': deep(SD0['vi_tx'])}

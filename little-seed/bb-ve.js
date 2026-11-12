@@ -23,7 +23,7 @@ rulesCard = (function (orig) { return function (body, step, run) {
 const BV = {
   u: (l, t, a) => l === 'zh' ? zh(t, a) : en(t, a),
   // lời tiếng Việt: có file giọng thì phát; chưa có thì máy đọc tạm (danh sách câu cần thu giọng: little-seed/cong-cu/giong_vi_bbve.json)
-  vi(t) { const a = ((window.SD && SD.vi_tx) || {})[t]; cap(t); return a ? say({ t, l: 'vi', a }) : tts(t, 'vi'); },
+  vi(t) { const a = ((window.SD && SD.vi_tx) || {})[t]; cap(t); return a ? say({ t, l: 'vi', a }) : wait(Math.min(2200, 500 + t.length * 30)); },
   // phát một lời với âm lượng v (0–1); v = 0 thì im
   async sayV(u, v) { if (!u || !u.t || v <= 0) return; if (v >= 1) { VOICE.volume = 1; return say(u); }
     const a = u.a || auOf(u.l, u.t), my = RUN; VOICE.volume = v;
@@ -44,14 +44,18 @@ const BV = {
   async veLines(host, lines, langs, bpm, my) {
     for (const l of langs) for (const x of lines) { if (my !== RUN) return;
       const t = l === 'zh' ? x.zh : x.en;
-      host.innerHTML = `<div class="bvw-ve ${l}" style="--beat:${(60 / (bpm || 92)).toFixed(3)}s">${x.img ? `<img src="${esc(x.img)}" alt="">` : ''}
-        <div class="bvw-line"><span class="bvw-clap" aria-hidden="true">👏</span><b class="${l === 'zh' ? 'zh' : ''}">${esc(t)}</b>${l === 'zh' && x.py ? `<small>${esc(x.py)}</small>` : ''}</div></div>`;
+      host.innerHTML = BV.veHTML(x, l, bpm);
       cap((l === 'zh' ? '中文: ' : 'EN: ') + t); await say(BV.u(l, t, l === 'zh' ? x.a_zh : x.a_en)); if (my !== RUN) return; await wait(450); } },
   async pages(host, P, idxs, langs, my, opt) { opt = opt || {};
     for (const l of langs) for (const i of idxs) { if (my !== RUN) return; const p = P[i]; if (!p) continue; const t = l === 'zh' ? p.zh : p.en;
-      host.innerHTML = `<div class="bvw-pg ${l}"><img src="${esc(p.img)}" alt=""><div class="bvw-tx"><b class="${l === 'zh' ? 'zh' : ''}">${esc(t)}</b>${l === 'zh' && p.py ? `<small>${esc(p.py)}</small>` : ''}</div></div>`;
+      host.innerHTML = BV.pgHTML(p, l);
       cap((l === 'zh' ? '中文: ' : 'EN: ') + t); if (opt.rate) VOICE.playbackRate = opt.rate;
       await say(BV.u(l, t, l === 'zh' ? p.a_zh : p.a_en)); VOICE.playbackRate = 1; if (my !== RUN) return; await wait(opt.gap ?? 450); } },
+  veHTML(x, l, bpm) { const t = l === 'zh' ? x.zh : x.en;
+    return `<div class="bvw-ve ${l}" style="--beat:${(60 / (bpm || 92)).toFixed(3)}s">${x.img ? `<img src="${esc(x.img)}" alt="">` : ''}
+      <div class="bvw-line"><span class="bvw-clap" aria-hidden="true">👏</span><b class="${l === 'zh' ? 'zh' : ''}">${esc(t)}</b>${l === 'zh' && x.py ? `<small>${esc(x.py)}</small>` : ''}</div></div>`; },
+  pgHTML(p, l) { const t = l === 'zh' ? p.zh : p.en;
+    return `<div class="bvw-pg ${l}"><img src="${esc(p.img)}" alt=""><div class="bvw-tx"><b class="${l === 'zh' ? 'zh' : ''}">${esc(t)}</b>${l === 'zh' && p.py ? `<small>${esc(p.py)}</small>` : ''}</div></div>`; },
   warmBox(body, title) {
     body.innerHTML = `<div class="bvw"><div class="bvw-h"><span class="bvw-tag">☀️ Khởi động</span><b>${esc(title)}</b><button class="ls-b" id="bvSkip">Bỏ qua ▶</button></div><div class="bvw-host" id="bvHost"></div></div>`;
     return body.querySelector('#bvHost'); }
@@ -76,6 +80,7 @@ R.bb = (step, body) => {
     const host = BV.warmBox(body, ['', 'Vè và tên các bạn', 'Vè và 3 trang đầu', 'Vè và 2 trang đầu', 'Vè và cả quyển thật nhanh'][lan]);
     body.querySelector('#bvSkip').onclick = () => { sfx.pop(); stopAll(); main(); };
     X.replay = () => warm();
+    if ((W.ve || [])[0]) host.innerHTML = BV.veHTML(W.ve[0], (W.ve_l || ['en'])[0], 92);   // màn khởi động luôn có tranh, chữ ngay từ đầu
     await BV.vi('Mình khởi động nhé! Con nghe vè và vỗ tay theo.'); if (me !== RUN) return;
     await BV.veLines(host, W.ve || [], W.ve_l || ['en'], 92, me); if (me !== RUN) return;
     if (W.names) { await BV.vi('Đây là các bạn trong truyện. Con nghe tên nhé!'); if (me !== RUN) return;
@@ -328,6 +333,7 @@ R.vek = (step, body) => {
     const host = BV.warmBox(body, 'Nghe lại 3 trang big book');
     body.querySelector('#bvSkip').onclick = () => { sfx.pop(); stopAll(); afterWarm(true); };
     X.replay = () => warm();
+    const p0 = (step.pages || [])[(step.warm || [])[0]]; if (p0) host.innerHTML = BV.pgHTML(p0, 'en');
     await BV.vi('Mình khởi động nhé! Con nghe lại big book.'); if (me !== RUN) return;
     await BV.pages(host, step.pages || [], step.warm || [], ['en', 'zh'], me); if (me !== RUN) return;
     afterWarm(false); }

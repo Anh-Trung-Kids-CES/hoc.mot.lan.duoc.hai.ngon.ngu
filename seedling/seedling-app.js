@@ -493,7 +493,11 @@ function viewMap() { document.body.classList.add('hub'); setActive('map');
   app.querySelectorAll('.wzoom.lock').forEach(a => a.onclick = e => { e.preventDefault(); sfx.no(); toast('Buổi trên lớp này thuộc Body – sắp có 🔒'); });
   document.getElementById('mapHelp').onclick = () => hd('map');
 }
-function viewDay(n, sub) { const day = SD.days[n]; if (!day) { toast('Ngày này sắp có 🔒'); location.hash = '#/ban-do'; return; }
+/* Bước không có bài tập bên trong thì không hiện thẻ, con không vào được (chị chốt 12/11/2026) */
+const STEP_KEYS = ['cards', 'scenes', 'scenes_en', 'scenes_zh', 'lines', 'turns', 'qs', 'items', 'pages', 'rounds', 'cmds', 'opts', 'quiz', 'bridge'];
+function stepHas(st) { if (!st || !st.type) return false; const ks = STEP_KEYS.filter(k => Array.isArray(st[k])); return !ks.length || ks.some(k => st[k].length > 0); }
+function cleanDay(day) { if (day && Array.isArray(day.steps) && day.steps.some(st => !stepHas(st))) day.steps = day.steps.filter(stepHas); return day; }
+function viewDay(n, sub) { const day = cleanDay(SD.days[n]); if (!day) { toast('Ngày này sắp có 🔒'); location.hash = '#/ban-do'; return; }
   const k = sub && /^b\d+$/.test(sub) ? +sub.slice(1) - 1 : -1;
   if (k >= 0 && day.steps[k]) return playStep(n, k);
   document.body.classList.add('hub'); setActive('map'); stopAll();
@@ -514,7 +518,7 @@ function viewDay(n, sub) { const day = SD.days[n]; if (!day) { toast('Ngày này
   app.querySelectorAll('.ht.step').forEach(b => b.onclick = () => { sfx.pop(); location.hash = `#/ngay/${n}/b${+b.dataset.j + 1}`; });
   window.scrollTo({ top: 0 });
 }
-function playStep(n, k) { const day = SD.days[n]; document.body.classList.remove('hub'); setActive('map');
+function playStep(n, k) { const day = cleanDay(SD.days[n]); document.body.classList.remove('hub'); setActive('map');
   app.innerHTML = `<div class="wrap ls-wrap"><div class="dayhead"><div class="crumb">🌱 Seedling · Unit 1 · Ngày web ${n} · Bước ${k + 1}/${day.steps.length}</div><h2>${esc(day.t)}</h2></div><div id="lsBox"></div>
     <div class="row"><a class="btn y" href="#/ngay/${n}">← Các bước của ngày ${n}</a></div></div>`;
   X = { n, k, day, step: day.steps[k], stars: 0 }; startStep(); window.scrollTo({ top: 0 }); }
