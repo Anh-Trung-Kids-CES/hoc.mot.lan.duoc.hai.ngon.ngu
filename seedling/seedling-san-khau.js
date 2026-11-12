@@ -197,12 +197,26 @@
   const HEADS = [[3, 58], [12, 64], [23, 67], [34, 68], [5, 74], [21, 75], [66, 68], [79, 67], [92, 64], [98, 58], [96, 75], [77, 80]];
   const HAND = { l: [30, 63], r: [73, 63] };
   function drawAud() { drawCon(); }
+  /* Màn ngang: cả bức tranh, bóng nói nằm trong tranh.
+     Điện thoại dọc: phóng tranh vừa phải, cắt bớt hàng ghế phía dưới (chỉ còn đầu các bạn khán giả) và dành phần dưới
+     cho khu bóng nói lớn (.sk-talk): lời người dẫn / người hỏi ở trên, câu gợi ý cho con to nhất ở dưới. */
+  const ZOOM = 1.55, KEEP = .76;
   function fit() {
-    const st = $('skStage'), sc = $('skScene'); if (!st || !sc) return;
-    const W = st.clientWidth, H = st.clientHeight; let w = Math.min(W, H * 16 / 9);
-    if (W / H < 1.15) w = Math.min(H * 16 / 9, W * 1.9);   // điện thoại dọc: phóng to, giữ sân khấu ở giữa
-    sc.style.width = w + 'px'; sc.style.height = (w * 9 / 16) + 'px';
-    root.classList.toggle('doc', W / H < 1.15);
+    const st = $('skStage'), sc = $('skScene'), vw = $('skView'); if (!st || !sc || !vw) return;
+    const doc = st.clientWidth / st.clientHeight < 1.15; root.classList.toggle('doc', doc);
+    const W = st.clientWidth, H = st.clientHeight;
+    let w = Math.min(W, H * 16 / 9), vh = w * 9 / 16, left = 0;
+    if (doc) { w = W * ZOOM; vh = w * 9 / 16 * KEEP; left = -(w - W) / 2; }
+    sc.style.width = w + 'px'; sc.style.height = (w * 9 / 16) + 'px'; sc.style.left = left + 'px';
+    vw.style.width = (doc ? W : w) + 'px'; vw.style.height = vh + 'px';
+  }
+  /* khu bóng nói cho điện thoại dọc */
+  function talk(which, img, who, t, ms, cls) {
+    const el = $(which === 'k' ? 'skTk' : 'skTo'); if (!el) return;
+    el.className = 'sk-tl ' + (which === 'k' ? 'k' : 'o') + (cls ? ' ' + cls : '');
+    el.innerHTML = which === 'k' ? `<span class="sk-tb">${who ? `<small>${h(who)}</small>` : ''}${h(t)}</span><img src="${img}" alt="">`
+      : `<img src="${img}" alt=""><span class="sk-tb"><small>${h(who)}</small>${h(t)}</span>`;
+    el.hidden = false; clearTimeout(el._t); el._t = setTimeout(() => el.hidden = true, ms || 2600);
   }
   function drawCon() {
     const ch = store().ch[COURSE] || {}, ava = (PICK.ava.find(x => x.k === ch.ava) || PICK.ava[0]).a;
@@ -215,6 +229,7 @@
     cam.className = 'sk-cam ' + side + (ask ? ' hoi' : '');
     cam.innerHTML = `<span class="sk-camlb">${ask ? '✋ ' : '📷 '}${h(ids.map(a => WHO[a]).join(', '))}</span><span class="sk-camf">${ids.map(a => `<img src="${NV(IMG[a])}" alt="">`).join('')}</span><span class="sk-camb">${h(t)}</span>`;
     const ring = $('skRing'), p = HAND[side]; ring.style.left = p[0] + '%'; ring.style.top = p[1] + '%'; ring.className = 'sk-ring on' + (ask ? ' hoi' : '');
+    talk('o', NV(IMG[ids[0]]), (ask ? '✋ ' : '') + ids.map(a => WHO[a]).join(', ') + (ask ? ' hỏi:' : ''), t, ms || 2600, ask ? 'hoi' : '');
     cam.hidden = false; clearTimeout(cam._t); cam._t = setTimeout(() => { cam.hidden = true; ring.className = 'sk-ring'; }, ms || 2600);
   }
   function camOff() { const c = $('skCam'), r = $('skRing'); if (c) c.hidden = true; if (r) r.className = 'sk-ring'; }
@@ -224,7 +239,7 @@
     S = { unit, lv: 0, show: [], wheel: [], i: 0, lang: 'en', ok: 0, said: {}, busy: false, tries: 0, end: false, abort: false };
     root = document.createElement('div'); root.className = 'sk'; root.innerHTML = `
       <div class="sk-stage" id="skStage">
-        <div class="sk-scene" id="skScene">
+        <div class="sk-view" id="skView"><div class="sk-scene" id="skScene">
           <img class="sk-bg" src="${BG}" alt="">
           <div class="sk-screen" id="skScreen"></div>
           <div class="sk-con" id="skCon"><img alt=""><b id="skConTen">⭐ Con</b><span class="sk-bub sk-kb" id="skKb" hidden></span></div>
@@ -233,7 +248,8 @@
           <span class="sk-ring" id="skRing"></span>
           <div class="sk-cam" id="skCam" hidden></div>
           <div class="sk-pops" id="skPops"></div>
-        </div>
+        </div></div>
+        <div class="sk-talk" id="skTalk"><div class="sk-tl o" id="skTo" hidden></div><div class="sk-tl k" id="skTk" hidden></div></div>
         <div class="sk-top"><div class="sk-strip" id="skStrip"></div><div class="sk-clap" id="skClap"><i></i></div></div>
       </div>
       <div class="sk-bar"><button type="button" class="sk-x" aria-label="Đóng">✕</button><div class="sk-said" id="skSaid"></div>
@@ -379,8 +395,10 @@
     const b = $('skKb'); if (!b) return;
     b.className = 'sk-bub sk-kb' + (goiY ? ' goiy' : '');
     b.innerHTML = (goiY ? '<small>🗣️ Con nói:</small>' : '') + h(t); b.hidden = false; clearTimeout(b._t); b._t = setTimeout(() => b.hidden = true, ms || 2600);
-  }
-  function bubble(lang, t, ms) { const b = $('skBub'); if (!b) return; b.textContent = t; b.hidden = false; clearTimeout(b._t); b._t = setTimeout(() => b.hidden = true, ms || 3000); }
+    talk('k', kidImg(), goiY ? '🗣️ Con nói:' : '⭐ ' + ((store().ch[COURSE] || {}).ten || 'Con'), t, ms, goiY ? 'goiy' : '');
+  }  const kidImg = () => { const ch = store().ch[COURSE] || {}; return NV(IMG[(PICK.ava.find(x => x.k === ch.ava) || PICK.ava[0]).a]); };
+
+  function bubble(lang, t, ms) { talk('o', NV(lang === 'en' ? 'kids_leo_a' : 'kids_xiaomei_a'), lang === 'en' ? 'Leo' : 'Xiaomei', t, ms || 3000); const b = $('skBub'); if (!b) return; b.textContent = t; b.hidden = false; clearTimeout(b._t); b._t = setTimeout(() => b.hidden = true, ms || 3000); }
   function clearScreen() { const s = $('skScreen'); if (s) { s.innerHTML = ''; s.className = 'sk-screen'; } const st = $('skStrip'); if (st) st.innerHTML = ''; }
   function screen(l, lang, mode) {
     const s = $('skScreen');
