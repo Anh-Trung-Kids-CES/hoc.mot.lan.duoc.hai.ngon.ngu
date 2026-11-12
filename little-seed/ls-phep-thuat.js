@@ -552,17 +552,22 @@
     $('ptAgain').onclick = () => { close(); open(); }; $('ptDone').onclick = close;
   }
 
-  /* ---------- nút mở game: trang chủ và trang ngày của Unit 1 ---------- */
+  /* ---------- ô bài tập trong lưới các bước của ngày (cùng kiểu với các ô khác; trò thêm, không tính vào bước) ---------- */
   const DAYS = { ls: [1, 9], sd: [1, 9] }[COURSE];
-  const btn = document.createElement('button'); btn.type = 'button'; btn.className = 'pt-open'; btn.innerHTML = '🪄<b>Phép thuật lời nói</b>';
-  btn.onclick = open; document.body.appendChild(btn);
-  function curDay() {
-    const m = (location.hash || '').match(/^#\/ngay\/(\d+)(\/b\d+)?/); if (m) return m[2] ? 0 : +m[1];
-    if (/^#?\/?$/.test(location.hash || '')) { const PD = (typeof P === 'object' && P && P.days) || {}; for (let n = 1; n <= 99; n++) if (!(PD[n] || {}).done) return n; }
-    return 0;
+  function regrid(box) { const n = box.querySelectorAll('.ht').length; box.classList.toggle('n8', n > 6 && n <= 8); box.classList.toggle('n10', n > 8); }
+  function tile() {
+    const box = document.querySelector('.dy-tiles'); if (!box || box.querySelector('.ht-pt')) return;
+    const m = (location.hash || '').match(/^#\/ngay\/(\d+)$/); if (!m) return; const d = +m[1];
+    if (!(d >= DAYS[0] && d <= DAYS[1])) return;
+    const s = (typeof P === 'object' && P && P.pt) || {}, doneToday = typeof today === 'function' && s.d === today();
+    box.insertAdjacentHTML('beforeend', `<button type="button" class="ht ht-game ht-pt${doneToday ? ' done' : ''}" style="--tc:#8E44C9">
+      <span class="ht-img" style="background-image:url('${A}trang/ls_park.webp')"><img class="htg-a" src="${NV('kids_leo_a')}" alt=""><img class="htg-b" src="${NV('kids_xiaomei_a')}" alt=""><i class="htg-ic">🪄</i></span>
+      ${doneToday ? `<span class="ht-badge ok">✓ +${STAR_ROUND}★</span>` : ''}<span class="ht-lb"><small>Trò chơi nói · thêm</small><b>Phép thuật lời nói</b></span></button>`);
+    box.querySelector('.ht-pt').onclick = () => { try { sfx.pop(); } catch (e) {} open(); };
+    regrid(box);
   }
-  function showBtn() { const d = curDay(); btn.hidden = !(d >= DAYS[0] && d <= DAYS[1]); }
-  addEventListener('hashchange', () => setTimeout(showBtn, 0)); showBtn();
+  const appEl = document.getElementById('app'); if (appEl) new MutationObserver(tile).observe(appEl, { childList: true });
+  addEventListener('hashchange', () => setTimeout(tile, 0)); tile();
   if (/[?&]phep=1/.test(location.search)) setTimeout(open, 600);
   window.PT_GAME = { open, close, handle: (l, t) => handle(l, [].concat(t)), state: () => ({ S, G }) };
 })();

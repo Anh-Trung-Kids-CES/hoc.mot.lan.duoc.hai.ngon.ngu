@@ -552,10 +552,20 @@
     return 0;
   }
   function curUnit() { const d = curDay(); for (const u of Object.keys(DAYS)) if (d >= DAYS[u][0] && d <= DAYS[u][1]) return +u; return 0; }
-  const btn = document.createElement('button'); btn.type = 'button'; btn.className = 'sk-open'; btn.innerHTML = '🎤<b>Sân khấu của con</b>';
-  btn.onclick = () => open(curUnit()); document.body.appendChild(btn);
-  function showBtn() { btn.hidden = !(curUnit() || (TEACHER && !/^#\/(ngay\/\d+\/b|co)/.test(location.hash || ''))); }
-  addEventListener('hashchange', () => setTimeout(showBtn, 0)); showBtn();
+  /* ô bài tập trong lưới các bước của ngày (các ngày của Unit 1, Unit 5); huy hiệu = các bậc con đã xong */
+  function regrid(box) { const n = box.querySelectorAll('.ht').length; box.classList.toggle('n8', n > 6 && n <= 8); box.classList.toggle('n10', n > 8); }
+  function tile() {
+    const box = document.querySelector('.dy-tiles'); if (!box || box.querySelector('.ht-sk')) return;
+    if (!/^#\/ngay\/\d+$/.test(location.hash || '')) return; const u = curUnit(); if (!u) return;
+    const lv = store().lv[COURSE + u] || 0, med = ['', '🥉', '🥉🥈', '🥉🥈🥇', '🥉🥈🥇🎬'][lv];
+    box.insertAdjacentHTML('beforeend', `<button type="button" class="ht ht-game ht-sk${lv >= 3 ? ' done' : ''}" style="--tc:#E5484D">
+      <span class="ht-img" style="background-image:url('${BG}')"><img class="htg-c" src="${NV(IMG[(PICK.ava.find(x => x.k === (store().ch[COURSE] || {}).ava) || PICK.ava[0]).a])}" alt=""><i class="htg-ic">🎤</i></span>
+      ${lv ? `<span class="ht-badge${lv >= 3 ? ' ok' : ''}">${med}</span>` : ''}<span class="ht-lb"><small>Thuyết trình · thêm</small><b>Sân khấu của con</b></span></button>`);
+    box.querySelector('.ht-sk').onclick = () => { try { sfx.pop(); } catch (e) {} open(u); };
+    regrid(box);
+  }
+  const appEl = document.getElementById('app'); if (appEl) new MutationObserver(tile).observe(appEl, { childList: true });
+  addEventListener('hashchange', () => setTimeout(tile, 0)); tile();
   const q = location.search.match(/[?&]sankhau=(\d+)/); if (q) setTimeout(() => open(+q[1] || 0), 600);
   window.SK_GAME = { open, close, state: () => S, turn };
 })();
