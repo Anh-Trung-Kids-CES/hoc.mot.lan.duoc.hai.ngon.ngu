@@ -652,6 +652,8 @@ for un, MU in sorted(MANG.U.items()):
             else:
                 out.append(s)
         days[n]['steps'] = out
+        if bbday and lan == 4:   # (12/11) ngày này không còn Nói theo: tên theo big book lần 4 (chị duyệt)
+            days[n].update({'t': 'Con kể chuyện', 'goal': 'Kể lại big book và nói câu của con'})
     print('mẫu thiết kế mới: unit', un, 'ngày', D_U)
 out = {'who': who, 'days': {str(k): v for k, v in sorted(days.items())}, 'lop': {str(k): v for k, v in lop.items()}, 'map': mp,
        'soon': {str(k): v for k, v in soon.items()}, 'vi': SD0['vi'], 'vi_a': deep(SD0['vi_a']), 'vi_t': SD0.get('vi_t', {}), 'bg': {},
