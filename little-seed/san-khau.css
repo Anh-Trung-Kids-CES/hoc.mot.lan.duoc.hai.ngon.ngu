@@ -22,7 +22,7 @@ body.sk-on .sk-open,body.pt-on .sk-open,body.sk-on .pt-open{display:none}
 @keyframes skNhun{50%{transform:translateY(-1.2%)}}
 /* màn hình trợ giúp = màn chiếu của nhà hát */
 .sk-screen{position:absolute;left:32.8%;top:11.9%;width:33.9%;height:25.7%;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;
-  padding:.5cqw .8cqw;background:#FFFDF4;border-radius:.5cqw;transition:box-shadow .3s}
+  padding:.5cqw .8cqw 6.5cqh;background:#FFFDF4;border-radius:.5cqw;transition:box-shadow .3s}
 .sk-spic{flex:1;min-height:0;width:100%;display:flex;align-items:flex-end;justify-content:center;transition:filter .5s,opacity .5s}
 .sk-spic img{height:100%;width:auto}.sk-spic img+img{margin-left:-6%}
 .sk-spic .sk-e{font-size:8cqw;line-height:1;margin:auto}
@@ -43,7 +43,9 @@ body.sk-on .sk-open,body.pt-on .sk-open,body.sk-on .pt-open{display:none}
 .sk-q b{font-size:1.5cqw;color:#B3261E}
 .sk-a{flex:none;align-self:flex-start;margin-top:.2cqw;font-family:'Be Vietnam Pro',system-ui,sans-serif;font-weight:700;font-size:.95cqw;color:#2E7D32}
 /* con đứng giữa sân khấu, dưới đèn */
-.sk-con{position:absolute;left:50%;bottom:33%;height:31%;z-index:4;transform:translateX(-50%)}
+/* đứng trên mặt sàn sân khấu (mép sau ≈ 49%, mép trước ≈ 61% chiều cao tranh), đúng vòng đèn giữa sân khấu */
+.sk-con{position:absolute;left:50%;bottom:43.5%;height:25%;z-index:4;transform:translateX(-50%)}
+.sk-con:before,.sk-host:before{content:"";position:absolute;left:50%;bottom:-1.2%;width:120%;height:9%;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side,rgba(60,30,10,.45),rgba(60,30,10,0));z-index:-1}
 .sk-con img{height:100%;width:auto;display:block;filter:drop-shadow(0 0 1.2cqw rgba(255,240,170,.85))}
 .sk-con b{position:absolute;top:100%;left:50%;transform:translateX(-50%);margin-top:.2cqw;padding:0 .9cqw;border-radius:999px;background:#FFE066;color:#5A3A00;font-size:1.3cqw;white-space:nowrap;box-shadow:0 .2cqw .4cqw rgba(0,0,0,.3)}
 .sk-con.noi img{animation:skNoi .6s ease-in-out infinite}
@@ -59,9 +61,9 @@ body.sk-on .sk-open,body.pt-on .sk-open,body.sk-on .pt-open{display:none}
 .sk.doc .sk-con .sk-kb{max-width:17cqw}
 .sk-kb small{display:block;font-family:'Be Vietnam Pro',system-ui,sans-serif;font-size:.95cqw;font-weight:700;color:#B06A00}
 /* người dẫn: Leo (tiếng Anh) bên trái, Xiaomei (tiếng Trung) bên phải */
-.sk-host{position:absolute;bottom:37.5%;height:38%;z-index:3;transform:translateX(-50%);opacity:0;transition:opacity .4s}
+.sk-host{position:absolute;bottom:45.5%;height:25.5%;z-index:3;transform:translateX(-50%);opacity:0;transition:opacity .4s}
 .sk-host.on{opacity:1}
-.sk-host.en{left:24%}.sk-host.zh{left:76%}
+.sk-host.en{left:27%}.sk-host.zh{left:73%}
 .sk-host img{height:100%;width:auto;display:block;filter:drop-shadow(0 .4cqw .6cqw rgba(0,0,0,.25))}
 .sk-bub{position:absolute;bottom:100%;left:50%;transform:translateX(-50%);width:max-content;min-width:9cqw;max-width:19cqw;padding:.4cqw .9cqw;border-radius:1.2cqw;background:#fff;color:#2A1A5E;
   font-weight:800;font-size:1.5cqw;line-height:1.15;text-align:center;box-shadow:0 .3cqw 1cqw rgba(0,0,0,.3);z-index:2}
@@ -172,9 +174,11 @@ body.sk-on .sk-open,body.pt-on .sk-open,body.sk-on .pt-open{display:none}
 .sk-who{flex:none;width:54px;height:54px;object-fit:contain;object-position:50% 0;border-radius:12px;background:#fff}
 
 /* điện thoại dọc: khung tranh phóng to, chỉ thấy phần giữa (màn chiếu, con, người dẫn) */
-.sk.doc .sk-host{height:34%}.sk.doc .sk-host.en{left:31%}.sk.doc .sk-host.zh{left:69%}
+.sk.doc .sk-host.en{left:31%}.sk.doc .sk-host.zh{left:69%}
 .sk.doc .sk-cam{top:auto;bottom:3%;max-width:22%}.sk.doc .sk-cam.l{left:25%}.sk.doc .sk-cam.r{right:25%}
 .sk.doc .sk-bub{max-width:15cqw}
+.sk.doc .sk-host.en .sk-bub{left:15%;transform:none}.sk.doc .sk-host.zh .sk-bub{left:auto;right:15%;transform:none}
+.sk.doc .sk-host.en .sk-bub:after{left:2cqw}.sk.doc .sk-host.zh .sk-bub:after{left:auto;right:2cqw}
 
 @media (orientation:portrait) and (max-width:820px){
   .sk-open{right:auto;left:12px;bottom:calc(var(--nav,64px) + var(--xth,0px) + 80px)}
