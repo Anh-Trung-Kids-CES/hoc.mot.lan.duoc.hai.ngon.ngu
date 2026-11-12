@@ -228,7 +228,7 @@
     ve(m, st) {
       const a = st.loud === 'lion' ? `<div class="animal lion"><div><div class="e">🦁</div>Hát thật to!<br>Giơ tay cao!</div></div>`
         : st.loud === 'mouse' ? `<div class="animal mouse"><div><div class="e">🐭</div>Hát thì thầm…<br>Ngồi thấp xuống</div></div>`
-          : `<div class="animal none"><div><div class="e" style="opacity:.35">🦁🐭</div>Sư tử – Chú chuột</div></div>`;
+          : `<div class="animal pic"><img src="${esc(pick(m.img))}" alt=""><span>${esc(m.cap || '')}</span></div>`;
       return head(m) + `<div class="lines">${m.lines.map((x, i) => sent(x, i === st.cur ? 'cur' : '', `<div class="mv">${x.mv}<span class="mvt">${esc(x.mvt)}</span></div>`)).join('')}</div>` +
         `<div class="beat">${[1, 2, 3, 4, 1, 2, 3, 4].map(n => `<i>${n}</i>`).join('')}</div>` + a;
     },
@@ -366,7 +366,7 @@
         x = b('play', '▶ Phát') + b('pause', '⏸ Dừng', 'alt') + (m.freeze ? b('freeze', m.id === 'tau' ? '🚉 Đỗ ga' : '🧊 Đứng hình') : ''); break;
       case 'mau': x = st.on ? b('stop', '✋ Dừng – ra màu') : b('go', '▶ Nhạc đi'); break;
       case 've': x = b('beat', beatT ? '🥁 Tắt nhịp' : '🥁 Nhịp', beatT ? 'on' : 'alt') + b('sing-en', '▶ Đọc mẫu EN') + b('sing-zh', '▶ 中文') +
-        b('lion', '🦁', st.loud === 'lion' ? 'on' : 'alt') + b('mouse', '🐭', st.loud === 'mouse' ? 'on' : 'alt'); break;
+        b('lion', '🦁 Hát to', st.loud === 'lion' ? 'on' : 'alt') + b('mouse', '🐭 Hát nhỏ', st.loud === 'mouse' ? 'on' : 'alt'); break;
       case 'says': x = b('new', '🎲 Lệnh mới') + b('again', '🔁 Nghe lại', 'alt') + b('reveal', '👀 Lộ', 'alt') +
         b('lua', st.lua ? '😜 Có lệnh lừa' : '🙂 Chưa lừa', st.lua ? 'on' : 'alt') +
         b('mode', { xen: '🔀 Leo ↔ Xiaomei', leo: '🇬🇧 Chỉ Leo', xiaomei: '🇨🇳 Chỉ Xiaomei' }[st.mode], 'alt'); break;
