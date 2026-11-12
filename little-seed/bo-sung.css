@@ -393,3 +393,14 @@ body.is-demo:not(.in-step) .toast{bottom:calc(max(10px,env(safe-area-inset-botto
 .bb2-half i{font-style:normal;color:#F2994A}
 .bb2-mine .ls-mic{margin-bottom:22px}
 @media (prefers-reduced-motion:reduce){.bvw-clap,.bb2-pg.glow,.bb2-opts .ls-opt.model{animation:none}}
+
+/* câu hỏi big book: cô Hươu ra lệnh, nút 💡 gọn, tranh trang không thừa khoảng trắng (12/11 tối) */
+.bb2-co{display:flex;align-items:center;gap:10px;margin:2px 0 8px}
+.bb2-co img{width:52px;height:52px;object-fit:contain;flex:none}
+.bb2-co-tx{flex:1;background:#FFF3D6;border-radius:16px 16px 16px 4px;padding:8px 12px;display:flex;flex-direction:column;gap:2px}
+.bb2-co-tx b{font-size:20px;color:var(--ls-en)}.bb2-co-tx b.zh{color:var(--ls-zh);font-size:22px}
+.bb2-co-tx small{font-size:15px;color:#6b5a45}
+.bb2-co .bb2-bulb{flex:none;width:52px;height:52px;border-radius:50%;padding:0;font-size:26px;display:grid;place-items:center}
+.bb2-opts.pg .ls-opt{aspect-ratio:auto;max-height:none}
+.bb2-nav.q{margin-top:8px}
+.bb2-q .bb2-ans{min-height:28px;margin-top:6px}

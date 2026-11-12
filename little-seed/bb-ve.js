@@ -98,15 +98,18 @@ R.bb = (step, body) => {
     B.className = 'bb2-book ' + l;
     B.innerHTML = `<div class="bb2-h"><span class="ls-tag ${l}">${read ? 'Big book' : 'Lượt ' + (pass + 1)} · ${l === 'zh' ? 'tiếng Trung' : 'tiếng Anh'}</span><b>${esc(l === 'zh' ? step.title_zh : step.title)}</b><span>${c + 1}/${P.length}</span></div>
       <div class="bb2-pg ${p.cover ? 'cover' : ''} ${glow}"><img src="${esc(p.img)}" alt="">${p.cover ? photoHTML() + `<div class="bb2-ttl"><b class="${l === 'zh' ? 'zh' : ''}">${esc(pgTxt(p, l))}</b></div>` : ''}${glow === 'peek' ? '<span class="bb2-peek">💡</span>' : ''}</div>
-      ${p.cover ? '' : hideTx ? `<div class="bb2-tx ke"><span class="bb2-who">${who || '🧒 Con kể nhé'}</span></div>` : `<div class="bb2-tx ${hl ? 'on' : ''}">${l === 'zh' ? `<b class="zh">${esc(p.zh)}</b><span class="sx-pyl on">${esc(p.py)}</span>` : `<span class="en">${esc(p.en)}</span>`}${who ? `<span class="bb2-who">${who}</span>` : ''}</div>`}
+      ${p.cover ? '' : glow === 'peek' ? '<div class="bb2-tx"><span class="bb2-who">💡 Trang sau…</span></div>' : hideTx ? `<div class="bb2-tx ke"><span class="bb2-who">${who || '🧒 Con kể nhé'}</span></div>` : `<div class="bb2-tx ${hl ? 'on' : ''}">${l === 'zh' ? `<b class="zh">${esc(p.zh)}</b><span class="sx-pyl on">${esc(p.py)}</span>` : `<span class="en">${esc(p.en)}</span>`}${who ? `<span class="bb2-who">${who}</span>` : ''}</div>`}
       ${lan >= 3 && !read ? `<div class="bb2-microw"><div class="ls-mic idle" id="bMic"><span class="ls-lv"></span>${SVG.mic}<b></b></div></div>` : ''}
       ${p.cover && (lan === 4 || BV.photo()) ? `<div class="row bb2-phrow"><button class="ls-b" id="bPhoto">📷 ${BV.photo() ? 'Đổi ảnh gia đình' : 'Ba mẹ chọn ảnh gia đình'}</button></div>` : ''}
-      <div class="bb2-nav"><button class="ls-b" id="bPrev" ${c || pass ? '' : 'disabled'} aria-label="Trang trước">◀</button>
-        ${playing() ? `<span class="bb2-auto">${lan >= 3 && !read ? '📖 Đang đọc…' : '🔊 Cô đang đọc…'}</span>` : `<button class="ls-b dark" id="bPlay">▶ ${read ? 'Đọc lại' : 'Đọc tiếp'}</button>`}
-        <button class="ls-b" id="bNext" aria-label="Trang sau">▶</button></div>`;
-    B.querySelector('#bPrev').onclick = () => { stopAll(); glow = ''; who = ''; if (c > 0) c--; else if (pass > 0) { pass--; c = P.length - 1; } drawBook(); line(); };
-    B.querySelector('#bNext').onclick = () => { stopAll(); glow = ''; who = ''; turnPage(); };
-    const pl = B.querySelector('#bPlay'); if (pl) pl.onclick = () => { sfx.pop(); glow = ''; read ? (pass = 0, c = 0, listenAgain()) : auto(); };
+      ${read ? (glow === 'peek' ? '' : `<div class="bb2-nav q"><button class="ls-b" id="bPage">🔊 Nghe trang này</button></div>`)
+        : `<div class="bb2-nav"><button class="ls-b" id="bPrev" ${c || pass ? '' : 'disabled'} aria-label="Trang trước">◀</button>
+        ${playing() ? `<span class="bb2-auto">${lan >= 3 ? '📖 Đang đọc…' : '🔊 Cô đang đọc…'}</span>` : `<button class="ls-b dark" id="bPlay">▶ Đọc tiếp</button>`}
+        <button class="ls-b" id="bNext" aria-label="Trang sau">▶</button></div>`}`;
+    const on = (id, f) => { const e = B.querySelector(id); if (e) e.onclick = f; };   // đang trả lời câu hỏi: không lật sách để khỏi lạc khỏi câu hỏi
+    on('#bPrev', () => { stopAll(); glow = ''; who = ''; if (c > 0) c--; else if (pass > 0) { pass--; c = P.length - 1; } drawBook(); line(); });
+    on('#bNext', () => { stopAll(); glow = ''; who = ''; turnPage(); });
+    on('#bPlay', () => { sfx.pop(); glow = ''; auto(); });
+    on('#bPage', () => { sfx.pop(); line(); });
     const ph = B.querySelector('#bPhoto'); if (ph) ph.onclick = () => BV.pickPhoto(() => drawBook()); }
   function turnPage() {   // sang trang sau; hết lượt Anh thì sang lượt Trung; hết lượt Trung thì mở câu hỏi
     if (c < P.length - 1) { c++; drawBook(); line(); return; }
@@ -181,15 +184,23 @@ R.bb = (step, body) => {
     const askTx = lan === 3 ? `${esc(q.fr).replace('___', '<i class="bb2-blank" id="qBlank">___</i>')}` : esc(q.qd || q.q);
     const opt = (o, k) => lan === 2 ? `<button class="ls-opt bb2-pgopt" data-k="${k}"><img src="${esc(P[o.pg].img)}" alt="" draggable="false"></button>`
       : `<button class="ls-opt" data-k="${k}">${pic(o.img, '', '')}<span class="sx-nm ${L === 'zh' ? 'zh' : ''}">${esc(L === 'zh' ? o.zh : o.en)}</span></button>`;
-    QP.innerHTML = head + `<button class="bb2-ask" id="qSay" type="button"><img src="${esc(q.img || P[q.pg].img)}" alt="">${lan === 2 ? '<span class="bb2-arrow" aria-hidden="true">➜ ?</span>' : ''}<span class="${L === 'zh' ? 'zh' : ''}">🔊 ${askTx}${q.py && lan !== 3 ? `<small>${esc(q.py)}</small>` : ''}</span></button>
+    const cm = (step.cmd || {})[q.l];
+    const coRow = `<div class="bb2-co">${step.co_img ? `<img src="${esc(step.co_img)}" alt="">` : ''}<div class="bb2-co-tx">${cm ? `<b class="${L === 'zh' ? 'zh' : ''}">${esc(cm.t)}</b>${q._tr ? `<small>${esc(cm.tr)}</small>` : ''}` : ''}</div>
+      <button class="bb2-bulb" id="qHint" type="button" aria-label="Gợi ý">💡</button></div>`;
+    QP.innerHTML = head + coRow + `<button class="bb2-ask" id="qSay" type="button"><img src="${esc(q.img || P[q.pg].img)}" alt="">${lan === 2 ? '<span class="bb2-arrow" aria-hidden="true">➜ ?</span>' : ''}<span class="${L === 'zh' ? 'zh' : ''}">🔊 ${askTx}${q.py && lan !== 3 ? `<small>${esc(q.py)}</small>` : ''}</span></button>
       <div class="ls-opts bb2-opts ${lan === 2 ? 'pg' : ''}" style="--n:${q.opts.length}">${q.opts.map(opt).join('')}</div>
-      <div class="bb2-hrow"><button class="ls-b bb2-bulb" id="qHint" type="button">💡 Gợi ý</button><div class="bb2-ans" id="qAns"></div></div>`;
+      <div class="bb2-ans" id="qAns"></div>`;
     QP.querySelector('#qSay').onclick = () => { stopAll(); askAudio(q); };
     QP.querySelector('#qHint').onclick = () => { sfx.pop(); hint(); };
     QP.querySelectorAll('.ls-opt').forEach(b => b.onclick = () => pick(b)); }
-  const askAudio = async q => { const me = RUN; if (lan === 3) { const p = P[q.ap], half = q.l === 'zh' ? p.half_zh : p.half_en;
+  async function cmdAudio(q, me) { const cm = (step.cmd || {})[q.l]; if (!cm) return;
+    cap((q.l === 'zh' ? '中文: ' : 'EN: ') + cm.t); await say(BV.u(q.l, cm.t, cm.a)); if (me !== RUN || !q._tr) return; await wait(250);
+    if (cm.tl === 'vi') await BV.vi(cm.tr); else { cap('EN: ' + cm.tr); await say(en(cm.tr, cm.a_tr)); } }
+  const askAudio = async q => { const me = RUN;
+    if (lan === 3) { const p = P[q.ap]; await cmdAudio(q, me); if (me !== RUN) return; await wait(250);
       if (q.q) { await say(BV.u(q.l, q.q, q.a_q)); if (me !== RUN) return; await wait(300); } return say(BV.u(q.l, p['cue_' + q.l], p['a_cue_' + q.l])); }
-    return say(BV.u(q.l, q.q, q.a_q)); };
+    if (lan === 2) { await say(BV.u(q.l, q.q, q.a_q)); if (me !== RUN) return; await wait(350); return cmdAudio(q, me); }
+    await cmdAudio(q, me); if (me !== RUN) return; await wait(250); return say(BV.u(q.l, q.q, q.a_q)); };
   async function sweep(host, opts, l, me) {   // nhắc tên trước khi hỏi: thẻ sáng lên, cô đọc tên
     for (let k = 0; k < opts.length; k++) { if (me !== RUN) return; const el = host.querySelectorAll('.ls-opt, .bvw-nm')[k]; el && el.classList.add('lit');
       await say(BV.u(l, l === 'zh' ? opts[k].zh : opts[k].en, l === 'zh' ? opts[k].a_zh : opts[k].a_en)); if (me !== RUN) return; await wait(250); el && el.classList.remove('lit'); } }
@@ -199,12 +210,10 @@ R.bb = (step, body) => {
       await BV.vi('Con nghe lại tên các bạn nhé.'); if (me !== RUN) return;
       for (let k = 0; k < step.names.length; k++) { if (me !== RUN) return; const el = QP.querySelector(`[data-k="${k}"]`), o = step.names[k]; el.classList.add('lit');
         await say(en(o.en, o.a_en)); if (me !== RUN) return; await wait(200); await say(zh(o.zh, o.a_zh)); if (me !== RUN) return; await wait(250); el.classList.remove('lit'); el.classList.add('seen'); }
-      await BV.vi('Trang sau là ai? Con chạm vào tranh trang sau nhé!'); if (me !== RUN) return; }
-    else if (lan === 1) { await hd('touch'); if (me !== RUN) return; }
-    else if (lan === 3) { await BV.vi('Con chọn tranh điền vào chỗ trống nhé!'); if (me !== RUN) return; }
-    else { c = 0; pass = 0; drawBook(); await BV.vi('Giờ con nói về gia đình con nhé! Con nhìn ảnh rồi nói.'); if (me !== RUN) return; }
+    }
+    else if (lan === 4) { c = 0; pass = 0; drawBook(); await BV.vi('Giờ con nói về gia đình con nhé! Con nhìn ảnh rồi nói.'); if (me !== RUN) return; }
     ask(); }
-  async function ask() { const q = Q[qi]; if (!q) return; const me = ++RUN; tries = 0; clearIdle(); glow = '';
+  async function ask() { const q = Q[qi]; if (!q) return; const me = ++RUN; tries = 0; clearIdle(); glow = ''; q._tr = qi < 2 && !q.again;
     if (lan !== 4) { c = q.pg != null ? q.pg : 0; pass = q.l === 'zh' ? 1 : 0; who = ''; drawBook(); }
     drawQ(); X.replay = () => { stopAll(); askAudio(q); };
     if (lan === 4) { if (q.q) { await say(BV.u(q.l, q.q, q.a_q)); if (me !== RUN) return; await wait(250); }

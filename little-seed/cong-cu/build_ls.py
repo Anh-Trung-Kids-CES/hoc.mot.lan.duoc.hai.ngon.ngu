@@ -364,10 +364,22 @@ import importlib.util as _iu
 from pypinyin import pinyin as _pinyin, Style as _Style
 _sp = _iu.spec_from_file_location('ls48_mang', 'chuong-trinh/cong-cu/khung/grid/mang/ls48_mang.py'); MANG = _iu.module_from_spec(_sp); _sp.loader.exec_module(MANG)
 _gs = _iu.spec_from_file_location('ghep_units', 'little-seed/cong-cu/ghep_units.py'); GH = _iu.module_from_spec(_gs); _gs.loader.exec_module(GH)
+PY_NHE = {'爸爸': 'bà ba', '妈妈': 'mā ma', '哥哥': 'gē ge', '姐姐': 'jiě jie', '弟弟': 'dì di', '妹妹': 'mèi mei', '奶奶': 'nǎi nai', '爷爷': 'yé ye',
+          '宝宝': 'bǎo bao', '朋友': 'péng you', '谢谢': 'xiè xie', '名字': 'míng zi', '什么': 'shén me', '我们': 'wǒ men', '你们': 'nǐ men', '他们': 'tā men', '妈妈的': 'mā ma de',
+          '早上': 'zǎo shang', '晚上': 'wǎn shang', '喜欢': 'xǐ huan', '衣服': 'yī fu', '漂亮': 'piào liang', '时候': 'shí hou', '东西': 'dōng xi', '舒服': 'shū fu',
+          '休息': 'xiū xi', '认识': 'rèn shi', '学生': 'xué sheng', '眼睛': 'yǎn jing', '耳朵': 'ěr duo', '头发': 'tóu fa', '鼻子': 'bí zi', '肚子': 'dù zi',
+          '桌子': 'zhuō zi', '椅子': 'yǐ zi', '杯子': 'bēi zi', '孩子': 'hái zi', '鞋子': 'xié zi', '帽子': 'mào zi', '裙子': 'qún zi', '裤子': 'kù zi',
+          '饺子': 'jiǎo zi', '包子': 'bāo zi', '橘子': 'jú zi', '叔叔': 'shū shu', '意思': 'yì si', '知道': 'zhī dao', '客气': 'kè qi', '个子': 'gè zi'}
+def _py_seg(seg):   # thanh nhẹ (轻声) cho từ lặp, từ thường gặp; phần còn lại theo pypinyin
+    out = []; pat = '(' + '|'.join(sorted(map(re.escape, PY_NHE), key=len, reverse=True)) + ')'
+    for part in re.split(pat, seg):
+        if not part: continue
+        out.append(PY_NHE[part] if part in PY_NHE else ' '.join(x[0] for x in _pinyin(part, style=_Style.TONE)))
+    return ' '.join(out)
 def PY(z):
     out = []
     for seg in re.split(r'([一-鿿]+)', z):
-        if re.match(r'[一-鿿]', seg or ''): out.append(' '.join(x[0] for x in _pinyin(seg, style=_Style.TONE)))
+        if re.match(r'[一-鿿]', seg or ''): out.append(_py_seg(seg))
         else: out.append(seg)
     return re.sub(r'\s+', ' ', ''.join(out).replace('，', ', ').replace('！', '! ').replace('？', '? ').replace('。', '. ').replace('、', ', ').replace('……', '… ')).strip()
 def IMG(key, en=''):
@@ -602,6 +614,13 @@ BB_TXT = {
                       2: ['Khởi động: con nghe 2 dòng vè và nghe lại 3 trang đầu.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con đoán: trang sau Bông gặp ai? Con chạm vào tranh trang sau.'],
                       3: ['Khởi động: con nghe 2 dòng vè và 2 trang đầu.', 'Đọc đuổi tiếng Anh rồi tiếng Trung: cô đọc, cô và con cùng đọc, rồi con đọc một mình.', 'Rồi con chọn tranh điền vào chỗ trống.'],
                       4: ['Khởi động: con nghe 2 dòng vè và nghe nhanh cả quyển.', 'Con kể: cô nói nửa câu, con nói tiếp.', 'Rồi con chúc ngủ ngon người thân: "Good night, …!"']}}}
+BB_CMD = {1: {'en': ('Listen and touch.', 'vi', 'Con nghe rồi chạm vào đúng người nhé.'), 'zh': ('听一听，点一点。', 'en', 'Listen and touch.')},
+          2: {'en': ('Who is on the next page?', 'vi', 'Trang sau là ai? Con chạm vào tranh trang sau nhé.'), 'zh': ('下一页是谁？', 'en', 'Who is on the next page?')},
+          3: {'en': ('Which one? Touch it.', 'vi', 'Chọn tranh điền vào chỗ trống nhé.'), 'zh': ('是哪一个？点一点。', 'en', 'Which one? Touch it.')}}
+def bb_cmd(lan):
+    if lan not in BB_CMD: return None
+    return {l: {'t': t, 'a': au(l, t.rstrip('.。'), 'co_huou') or au(l, t, 'co_huou'), 'tl': tl, 'tr': tr, 'a_tr': au('en', tr.rstrip('.'), 'co_huou') if tl == 'en' else ''}
+            for l, (t, tl, tr) in BB_CMD[lan].items()}
 VE_SUB = {1: 'Lần 1 · Nghe mẫu, hát tiếng Anh', 2: 'Lần 2 · Hát tiếng Trung', 3: 'Lần 3 · Hát hai tiếng, giọng cô nhỏ dần', 4: 'Lần 4 · Lồng tiếng, lưu video gửi cô'}
 VE_RULES = {1: ['Khởi động: con nghe lại 3 trang big book.', 'Con nghe cô đọc mẫu vè tiếng Anh từng dòng.', 'Rồi con hát karaoke cùng nhạc: chữ sáng đến đâu, con hát đến đó.'],
             2: ['Khởi động: con nghe 3 trang big book và hát lại vè tiếng Anh cùng cô.', 'Con nghe cô đọc mẫu vè tiếng Trung từng dòng.', 'Rồi con hát karaoke tiếng Trung.'],
@@ -664,6 +683,7 @@ def bbve_unit(un, S_):
                     o = {'type': 'bb', 'lan': lan, 'lab': 'Big book', 'sub': BB_TXT[kind]['sub'][lan], 'rules': BB_TXT[kind]['rules'][lan], 'title': S_['title'], 'title_zh': S_['title_zh'],
                          'pages': pages, 'names': NAMES, 'warm': warm, 'qs': cau_con() if lan == 4 else cau_hoi(lan)}
                     if S_.get('frame'): o['frame'] = S_['frame']
+                    if bb_cmd(lan): o['cmd'] = bb_cmd(lan); o['co_img'] = NV + 'huou_huou1_a.webp'
                     out.append(o)
                 else:
                     wp = [off + (3 * jv + t) % NP for t in range(3)]; jv += 1
