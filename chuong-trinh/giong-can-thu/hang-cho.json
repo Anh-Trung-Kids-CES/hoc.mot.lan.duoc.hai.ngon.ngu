@@ -274,6 +274,13 @@
 },
 {
 "l": "en",
+"t": "Good night",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "en",
 "t": "Good night!",
 "nguon": [
 "little-seed/giong_thieu.json"
@@ -285,6 +292,20 @@
 "nguon": [
 "little-seed/giong_thieu.json",
 "buoi/giong-thieu.json"
+]
+},
+{
+"l": "en",
+"t": "Good night, daddy!",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "en",
+"t": "Good night, mommy!",
+"nguon": [
+"little-seed/giong_thieu.json"
 ]
 },
 {
@@ -2020,6 +2041,13 @@
 },
 {
 "l": "en",
+"t": "See you tomorrow, Leo and Anna!",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "en",
 "t": "See you tomorrow, teacher!",
 "nguon": [
 "little-seed/giong_thieu.json"
@@ -2796,6 +2824,13 @@
 },
 {
 "l": "zh",
+"t": "Leo，Anna，明天见！",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "zh",
 "t": "Leo，你好！",
 "nguon": [
 "little-seed/giong_thieu.json"
@@ -3198,6 +3233,13 @@
 {
 "l": "zh",
 "t": "五六，吃比萨！",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "zh",
+"t": "五岁五岁，我五岁！",
 "nguon": [
 "little-seed/giong_thieu.json"
 ]
@@ -3979,6 +4021,13 @@
 {
 "l": "zh",
 "t": "妈妈，早上好！",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "zh",
+"t": "妈妈，晚安！",
 "nguon": [
 "little-seed/giong_thieu.json"
 ]
@@ -4921,6 +4970,13 @@
 },
 {
 "l": "zh",
+"t": "爸爸，晚安！",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "zh",
 "t": "爸爸，爸爸，再见！",
 "nguon": [
 "little-seed/giong_thieu.json"
@@ -5098,6 +5154,13 @@
 {
 "l": "zh",
 "t": "红、黄、蓝、绿、粉！耶！",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "zh",
+"t": "老师老师，再见！",
 "nguon": [
 "little-seed/giong_thieu.json"
 ]
@@ -12836,27 +12899,6 @@
 },
 {
 "l": "vi",
-"t": "Khởi động: con nghe 2 dòng vè và nghe tên các bạn trong truyện.",
-"nguon": [
-"little-seed/giong_vi_bbve.json"
-]
-},
-{
-"l": "vi",
-"t": "Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.",
-"nguon": [
-"little-seed/giong_vi_bbve.json"
-]
-},
-{
-"l": "vi",
-"t": "Rồi con nghe câu hỏi và chạm đúng người. Cần thì bấm 💡 để xem gợi ý.",
-"nguon": [
-"little-seed/giong_vi_bbve.json"
-]
-},
-{
-"l": "vi",
 "t": "Khởi động: con nghe lại 3 trang big book.",
 "nguon": [
 "little-seed/giong_vi_bbve.json"
@@ -12878,14 +12920,21 @@
 },
 {
 "l": "vi",
-"t": "Khởi động: con nghe 2 dòng vè và nghe lại 3 trang đầu.",
+"t": "Khởi động: con nghe 2 dòng vè và nghe tên các bạn trong truyện.",
 "nguon": [
 "little-seed/giong_vi_bbve.json"
 ]
 },
 {
 "l": "vi",
-"t": "Rồi con đoán: trang sau là ai? Con chạm vào tranh trang sau.",
+"t": "Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.",
+"nguon": [
+"little-seed/giong_vi_bbve.json"
+]
+},
+{
+"l": "vi",
+"t": "Rồi con nghe câu Bông nói và chạm đúng người Bông chào. Cần thì bấm 💡.",
 "nguon": [
 "little-seed/giong_vi_bbve.json"
 ]
@@ -12913,21 +12962,14 @@
 },
 {
 "l": "vi",
-"t": "Khởi động: con nghe 2 dòng vè và 2 trang đầu.",
+"t": "Khởi động: con nghe 2 dòng vè và nghe lại 3 trang đầu.",
 "nguon": [
 "little-seed/giong_vi_bbve.json"
 ]
 },
 {
 "l": "vi",
-"t": "Đọc đuổi tiếng Anh rồi tiếng Trung: cô đọc, cô và con cùng đọc, rồi con đọc một mình.",
-"nguon": [
-"little-seed/giong_vi_bbve.json"
-]
-},
-{
-"l": "vi",
-"t": "Rồi con chọn tranh điền vào chỗ trống.",
+"t": "Rồi con đoán: trang sau Bông gặp ai? Con chạm vào tranh trang sau.",
 "nguon": [
 "little-seed/giong_vi_bbve.json"
 ]
@@ -12955,6 +12997,27 @@
 },
 {
 "l": "vi",
+"t": "Khởi động: con nghe 2 dòng vè và 2 trang đầu.",
+"nguon": [
+"little-seed/giong_vi_bbve.json"
+]
+},
+{
+"l": "vi",
+"t": "Đọc đuổi tiếng Anh rồi tiếng Trung: cô đọc, cô và con cùng đọc, rồi con đọc một mình.",
+"nguon": [
+"little-seed/giong_vi_bbve.json"
+]
+},
+{
+"l": "vi",
+"t": "Rồi con chọn tranh điền vào chỗ trống.",
+"nguon": [
+"little-seed/giong_vi_bbve.json"
+]
+},
+{
+"l": "vi",
 "t": "Khởi động: con nghe 2 dòng vè và nghe nhanh cả quyển.",
 "nguon": [
 "little-seed/giong_vi_bbve.json"
@@ -12969,7 +13032,7 @@
 },
 {
 "l": "vi",
-"t": "Rồi con nói về gia đình con: \"He is my…\", \"She is my…\".",
+"t": "Rồi con chúc ngủ ngon người thân: \"Good night, …!\"",
 "nguon": [
 "little-seed/giong_vi_bbve.json"
 ]
@@ -12991,6 +13054,27 @@
 {
 "l": "vi",
 "t": "Ba mẹ lưu video và gửi cô qua Zalo (mỗi unit một lần).",
+"nguon": [
+"little-seed/giong_vi_bbve.json"
+]
+},
+{
+"l": "vi",
+"t": "Rồi con nghe câu hỏi và chạm đúng người. Cần thì bấm 💡 để xem gợi ý.",
+"nguon": [
+"little-seed/giong_vi_bbve.json"
+]
+},
+{
+"l": "vi",
+"t": "Rồi con đoán: trang sau là ai? Con chạm vào tranh trang sau.",
+"nguon": [
+"little-seed/giong_vi_bbve.json"
+]
+},
+{
+"l": "vi",
+"t": "Rồi con nói về gia đình con: \"He is my…\", \"She is my…\".",
 "nguon": [
 "little-seed/giong_vi_bbve.json"
 ]

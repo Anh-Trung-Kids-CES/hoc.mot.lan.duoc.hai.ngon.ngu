@@ -575,86 +575,150 @@ import sys as _s; _s.path.insert(0, 'chuong-trinh/cong-cu'); from tach_bb_ve imp
 FAM = {k: '../seedling/tai-nguyen/nhan-vat/fam_bong_%s_a.webp' % v for k, v in
        {'me': 'me', 'bo': 'bo', 'ba': 'ba', 'ong': 'ong', 'anh_trai': 'anh_trai', 'em_gai': 'em_gai'}.items()}
 FAM_TEN = {'me': ('mommy', '妈妈'), 'bo': ('daddy', '爸爸'), 'ba': ('grandma', '奶奶'), 'ong': ('grandpa', '爷爷'), 'anh_trai': ('big brother', '哥哥'), 'em_gai': ('little sister', '妹妹')}
-for un, MU in sorted(MANG.U.items()):
-    if not MU.get('bb_hoi'): continue
+
+# =====================================================================
+# (12/11, mục N) BIG BOOK + VÈ 4 LẦN – dùng chung cho mọi unit (claude/QuyTac_BigBook_Ve_Web.md)
+#   kind 'guess': big book kiểu trang đoán + trang lật (U3 "Who Is She?")
+#   kind 'seq'  : big book kể theo trình tự, mỗi trang chào / gọi tên một người, vật (U1 "Goodbye, Puppy!")
+# =====================================================================
+def pg_dict(img, e, z, cover=False):
+    d = {'img': img, 'en': e, 'zh': z, 'py': PY(z), 'a_en': au_multi('en', e, 'co_huou'), 'a_zh': au_multi('zh', z, 'co_huou')}
+    if cover: d['cover'] = True
+    return d
+def ve_dict(e, z, img=''):
+    en_ = re.sub(r'(?<=\w)-(?=\w)', '', e)
+    return {'raw': e, 'en': en_, 'zh': z, 'py': PY(z), 'img': img, 'a_en': au_multi('en', en_, 'co_huou'), 'a_zh': au_multi('zh', z, 'co_huou')}
+def _cat(t, nm):   # tách câu quanh tên: (trước, sau)
+    i = t.lower().find(nm.lower())
+    return (t[:i], t[i + len(nm):]) if i >= 0 else (t, '')
+BB_TXT = {
+    'guess': {'sub': {1: 'Lần 1 · Nghe cả quyển, chạm đúng người', 2: 'Lần 2 · Đoán trang sau là ai', 3: 'Lần 3 · Đọc đuổi, điền chỗ trống', 4: 'Lần 4 · Con kể, rồi nói về gia đình con'},
+              'rules': {1: ['Khởi động: con nghe 2 dòng vè và nghe tên các bạn trong truyện.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con nghe câu hỏi và chạm đúng người. Cần thì bấm 💡 để xem gợi ý.'],
+                        2: ['Khởi động: con nghe 2 dòng vè và nghe lại 3 trang đầu.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con đoán: trang sau là ai? Con chạm vào tranh trang sau.'],
+                        3: ['Khởi động: con nghe 2 dòng vè và 2 trang đầu.', 'Đọc đuổi tiếng Anh rồi tiếng Trung: cô đọc, cô và con cùng đọc, rồi con đọc một mình.', 'Rồi con chọn tranh điền vào chỗ trống.'],
+                        4: ['Khởi động: con nghe 2 dòng vè và nghe nhanh cả quyển.', 'Con kể: cô nói nửa câu, con nói tiếp.', 'Rồi con nói về gia đình con: "He is my…", "She is my…".']}},
+    'seq': {'sub': {1: 'Lần 1 · Nghe cả quyển, chạm đúng người', 2: 'Lần 2 · Đoán trang sau Bông gặp ai', 3: 'Lần 3 · Đọc đuổi, điền chỗ trống', 4: 'Lần 4 · Con kể, rồi chúc ngủ ngon người thân'},
+            'rules': {1: ['Khởi động: con nghe 2 dòng vè và nghe tên các bạn trong truyện.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con nghe câu Bông nói và chạm đúng người Bông chào. Cần thì bấm 💡.'],
+                      2: ['Khởi động: con nghe 2 dòng vè và nghe lại 3 trang đầu.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con đoán: trang sau Bông gặp ai? Con chạm vào tranh trang sau.'],
+                      3: ['Khởi động: con nghe 2 dòng vè và 2 trang đầu.', 'Đọc đuổi tiếng Anh rồi tiếng Trung: cô đọc, cô và con cùng đọc, rồi con đọc một mình.', 'Rồi con chọn tranh điền vào chỗ trống.'],
+                      4: ['Khởi động: con nghe 2 dòng vè và nghe nhanh cả quyển.', 'Con kể: cô nói nửa câu, con nói tiếp.', 'Rồi con chúc ngủ ngon người thân: "Good night, …!"']}}}
+VE_SUB = {1: 'Lần 1 · Nghe mẫu, hát tiếng Anh', 2: 'Lần 2 · Hát tiếng Trung', 3: 'Lần 3 · Hát hai tiếng, giọng cô nhỏ dần', 4: 'Lần 4 · Lồng tiếng, lưu video gửi cô'}
+VE_RULES = {1: ['Khởi động: con nghe lại 3 trang big book.', 'Con nghe cô đọc mẫu vè tiếng Anh từng dòng.', 'Rồi con hát karaoke cùng nhạc: chữ sáng đến đâu, con hát đến đó.'],
+            2: ['Khởi động: con nghe 3 trang big book và hát lại vè tiếng Anh cùng cô.', 'Con nghe cô đọc mẫu vè tiếng Trung từng dòng.', 'Rồi con hát karaoke tiếng Trung.'],
+            3: ['Khởi động: con nghe 3 trang big book và nghe nhanh vè hai tiếng.', 'Con hát karaoke 3 lượt mỗi tiếng: giọng cô to, rồi nhỏ, rồi tắt.', 'Lượt cuối con hát một mình nhé!'],
+            4: ['Khởi động: con nghe 3 trang big book và hát vè một lượt.', 'Lồng tiếng: video chạy, con hát, máy thu giọng con.', 'Ba mẹ lưu video và gửi cô qua Zalo (mỗi unit một lần).']}
+
+def bbve_unit(un, S_):
+    """S_: pages, names {k:(en,zh,img)}, items [{'k','ap','qpg'?,'opts'}], kind, vel, ve2 {lan:(lines,langs)}, mine [..5], plan [(bb|ve, lan)] theo ngày,
+    title, title_zh, ve_title, ve_title_zh, frame?, qimg?"""
     D_U = sorted(n for n, d in days.items() if str(d.get('unit')) == str(un))
-    BBP = MU['bb'][2]; bdir = BBP[0][0].rsplit('/', 1)[0]
-    pages = ([{'img': bdir + '/bia_khung.webp', 'en': MU['bb'][0], 'zh': MU['bb'][1], 'py': PY(MU['bb'][1]), 'cover': True,
-               'a_en': au_multi('en', MU['bb'][0], 'co_huou'), 'a_zh': au_multi('zh', MU['bb'][1], 'co_huou')}] if os.path.exists('little-seed/' + bdir + '/bia_khung.webp') else []) + \
-            [{'img': i, 'en': e, 'zh': z, 'py': PY(z), 'a_en': au_multi('en', e, 'co_huou'), 'a_zh': au_multi('zh', z, 'co_huou')} for i, e, z in BBP]
-    VEL = [dict(w=None, raw=e, en=re.sub(r'(?<=\w)-(?=\w)', '', e), zh=z, py=PY(z), img=(MU.get('ve_img') or [''] * 9)[k],
-                a_en=au_multi('en', re.sub(r'(?<=\w)-(?=\w)', '', e), 'co_huou'), a_zh=au_multi('zh', z, 'co_huou')) for k, (w, e, z, v) in enumerate(MU['ve'])]
-    # (12/11, mục N) mỗi unit: ngày đầu big book, ngày sau vè, mỗi thứ gặp 4 lần, việc khó dần (claude/QuyTac_BigBook_Ve_Web.md)
-    off = 1 if pages and pages[0].get('cover') else 0
-    def ten(k): e, z = FAM_TEN[k]; return {'k': k, 'img': FAM[k], 'en': e, 'zh': z, 'a_en': au_multi('en', e, 'co_huou'), 'a_zh': au_multi('zh', z, 'co_huou')}
-    def nua(t, nm):   # "Wow! He is my big brother!" -> "Wow! He is my…"; "哇！这是我哥哥！" -> "哇！这是我…"
-        i = t.find(nm); return (t[:i].rstrip() + '…') if i > 0 else t
-    def khung(t, nm): return t.replace(nm, '___', 1)
-    APG = {}   # người -> trang trả lời (chỉ số trong pages)
-    for pno, g, ans, opts in MU['bb_hoi']:
-        ap = off + pno; APG[ans] = ap; e, z = FAM_TEN[ans]; P_ = pages[ap]
-        P_.update({'nm': ans, 'half_en': nua(P_['en'], e), 'half_zh': nua(P_['zh'], z)})
-        P_.update({'a_half_en': au('en', P_['half_en'].rstrip('…'), 'co_huou'), 'a_half_zh': au('zh', P_['half_zh'].rstrip('…'), 'co_huou')})   # nửa câu: chỉ dùng file đúng nguyên câu
-    POOL = []
-    for pno, g, ans, opts in MU['bb_hoi']:
-        qp, ap = off + pno - 1, off + pno; e, z = FAM_TEN[ans]
-        POOL.append({'pg': qp, 'ap': ap, 'q': {'en': pages[qp]['en'], 'zh': pages[qp]['zh']}, 'say': {'en': pages[ap]['en'], 'zh': pages[ap]['zh']},
-                     'fr': {'en': khung(pages[ap]['en'], e), 'zh': khung(pages[ap]['zh'], z)}, 'opts': opts, 'ans': opts.index(ans)})
+    pages, kind = S_['pages'], S_['kind']; off = 1 if pages and pages[0].get('cover') else 0
+    def ten(k): e, z, im = S_['names'][k]; return {'k': k, 'img': im, 'en': e, 'zh': z, 'a_en': au_multi('en', e, 'co_huou'), 'a_zh': au_multi('zh', z, 'co_huou')}
+    APG = {}
+    for it in S_['items']:   # trang trả lời: tên người được che để làm khung câu, nửa câu cô nói, câu gợi ý
+        ap, k = it['ap'], it['k']; APG[k] = ap; P_ = pages[ap]; P_['nm'] = k
+        for l, nm in (('en', S_['names'][k][0]), ('zh', S_['names'][k][1])):
+            pre, post = _cat(P_[l], nm)
+            P_['half_' + l] = (pre + '…' + post).strip()
+            cue = pre.rstrip(' ,，') or post.lstrip(' ,，')
+            P_['cue_' + l] = cue; P_['a_cue_' + l] = au(l, cue.rstrip('!！。.?？'), 'co_huou') if cue else ''   # chỉ dùng file đúng nguyên câu
+            P_['fr_' + l] = (pre + '___' + post).strip()
     NAMES = [ten(k) for k in sorted(APG, key=APG.get)]
     def cau_hoi(lan):
-        qs = []
+        qs = []; IT = S_['items']
         for q in range(5):
-            it = POOL[(lan - 1 + q) % len(POOL)]; l = ('en', 'zh')[(q + lan - 1) % 2]
-            qs.append({'l': l, 'pg': it['pg'], 'ap': it['ap'], 'q': it['q'][l], 'py': PY(it['q']['zh']) if l == 'zh' else '', 'a_q': au_multi(l, it['q'][l], 'co_huou'),
-                       'say': it['say'][l], 'a_say': au_multi(l, it['say'][l], 'co_huou'), 'fr': it['fr'][l],
-                       'opts': [dict(ten(o), pg=APG.get(o, it['ap'])) for o in it['opts']], 'ans': it['ans']})
+            it = IT[(lan - 1 + q) % len(IT)]; l = ('en', 'zh')[(q + lan - 1) % 2]; ap = it['ap']
+            qpg = it.get('qpg', ap - 1)
+            if kind == 'seq':   # lần 1: nghe câu Bông nói, chạm người (không lộ tranh); lần 2: nghe trang trước, đoán trang sau; lần 3: nhìn trang, điền khung
+                pg = None if lan == 1 else (qpg if lan == 2 else ap)
+                qt = pages[ap][l] if lan == 1 else (pages[qpg][l] if lan == 2 else '')
+            else:
+                pg = qpg; qt = pages[qpg][l]
+            d = {'l': l, 'pg': pg, 'ap': ap, 'q': qt, 'py': PY(qt) if l == 'zh' and qt else '', 'a_q': au_multi(l, qt, 'co_huou') if qt else '',
+                 'say': pages[ap][l], 'a_say': au_multi(l, pages[ap][l], 'co_huou'), 'fr': pages[ap]['fr_' + l],
+                 'opts': [dict(ten(o), pg=APG.get(o, ap)) for o in it['opts']], 'ans': it['opts'].index(it['k'])}
+            if kind == 'seq' and lan == 1: d.update({'qd': pages[ap]['half_' + l], 'img': S_.get('qimg', '')})
+            qs.append(d)
         return qs
-    def cau_con():   # big book lần 4: "Who is he? He is my ___" với gia đình con, bìa khung ảnh
-        out = []
-        for q, (l, g) in enumerate([('en', 'he'), ('zh', 'he'), ('en', 'she'), ('zh', 'she'), ('en', 'he')]):
-            qt = ('Who is %s?' % g) if l == 'en' else '这是谁？'; ht = ('%s is my…' % g.capitalize()) if l == 'en' else '这是我…'
-            vp = pages[APG.get('bo' if g == 'he' else 'me', off)] if APG else None   # câu ví dụ cho gợi ý: "He is my daddy!" / "She is my mommy!"
-            vd = (vp['zh'] if l == 'zh' else vp['en']) if vp else ''
-            out.append({'l': l, 'q': qt, 'a_q': au_multi(l, qt, 'co_huou'), 'half': ht, 'a_half': au(l, ht.rstrip('…'), 'co_huou'), 'vd': vd, 'a_vd': au_multi(l, vd, 'co_huou') if vd else ''})
-        return out
-    VE2 = {1: (VEL[0:2], ['en']), 2: (VEL[2:4], ['en']), 3: (VEL[0:2], ['en', 'zh']), 4: (VEL[2:4], ['en', 'zh'])}
-    BB_SUB = {1: 'Lần 1 · Nghe cả quyển, chạm đúng người', 2: 'Lần 2 · Đoán trang sau là ai', 3: 'Lần 3 · Đọc đuổi, điền chỗ trống', 4: 'Lần 4 · Con kể, rồi nói về gia đình con'}
-    BB_RULES = {1: ['Khởi động: con nghe 2 dòng vè và nghe tên các bạn trong truyện.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con nghe câu hỏi và chạm đúng người. Cần thì bấm 💡 để xem gợi ý.'],
-                2: ['Khởi động: con nghe 2 dòng vè và nghe lại 3 trang đầu.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con đoán: trang sau là ai? Con chạm vào tranh trang sau.'],
-                3: ['Khởi động: con nghe 2 dòng vè và 2 trang đầu.', 'Đọc đuổi tiếng Anh rồi tiếng Trung: cô đọc, cô và con cùng đọc, rồi con đọc một mình.', 'Rồi con chọn tranh điền vào chỗ trống.'],
-                4: ['Khởi động: con nghe 2 dòng vè và nghe nhanh cả quyển.', 'Con kể: cô nói nửa câu, con nói tiếp.', 'Rồi con nói về gia đình con: "He is my…", "She is my…".']}
-    VE_SUB = {1: 'Lần 1 · Nghe mẫu, hát tiếng Anh', 2: 'Lần 2 · Hát tiếng Trung', 3: 'Lần 3 · Hát hai tiếng, giọng cô nhỏ dần', 4: 'Lần 4 · Lồng tiếng, lưu video gửi cô'}
-    VE_RULES = {1: ['Khởi động: con nghe lại 3 trang big book.', 'Con nghe cô đọc mẫu vè tiếng Anh từng dòng.', 'Rồi con hát karaoke cùng nhạc: chữ sáng đến đâu, con hát đến đó.'],
-                2: ['Khởi động: con nghe 3 trang big book và hát lại vè tiếng Anh cùng cô.', 'Con nghe cô đọc mẫu vè tiếng Trung từng dòng.', 'Rồi con hát karaoke tiếng Trung.'],
-                3: ['Khởi động: con nghe 3 trang big book và nghe nhanh vè hai tiếng.', 'Con hát karaoke 3 lượt mỗi tiếng: giọng cô to, rồi nhỏ, rồi tắt.', 'Lượt cuối con hát một mình nhé!'],
-                4: ['Khởi động: con nghe 3 trang big book và hát vè một lượt.', 'Lồng tiếng: video chạy, con hát, máy thu giọng con.', 'Ba mẹ lưu video và gửi cô qua Zalo (mỗi unit một lần).']}
-    WP = [p for p in pages if not p.get('cover')]
+    def cau_con():
+        return [dict(m, a_q=au_multi(m['l'], m['q'], 'co_huou') if m.get('q') else '', a_cue=au(m['l'], m['cue'].rstrip('!！。.?？'), 'co_huou'),
+                     a_vd=au_multi(m['l'], m['vd'], 'co_huou')) for m in S_['mine']]
+    NP = len(pages) - off; jv = 0
+    strip = lambda x: {k: v for k, v in x.items() if k != 'w'}
     for di, n in enumerate(D_U):
-        lan, bbday = di // 2 + 1, di % 2 == 0; st = days[n]['steps']; out = []
+        typ, lan = S_['plan'][di]; st = days[n]['steps']; out = []; placed = False
+        is_bb = lambda s: s.get('lab') == 'Big book' or (s['type'] == 'truyen' and str(s.get('title', '')).startswith('Big book'))
+        is_ve = lambda s: s['type'] in ('ve', 'vek')
+        has_main = any((is_bb(s) if typ == 'bb' else is_ve(s)) for s in st)
         for s in st:
-            if s.get('lab') == 'Big book':
-                if not bbday: continue
-                v2, vl = VE2[lan]
-                warm = {'ve': [{k: v for k, v in x.items() if k != 'w'} for x in v2], 've_l': vl}
-                if lan == 1: warm['names'] = NAMES
-                if lan == 2: warm['pages'] = [off, off + 1, off + 2]
-                if lan == 3: warm['pages'] = [off, off + 1]
-                if lan == 4: warm['fast'] = True
-                out.append({'type': 'bb', 'lan': lan, 'lab': 'Big book', 'sub': BB_SUB[lan], 'rules': BB_RULES[lan], 'title': MU['bb'][0], 'title_zh': MU['bb'][1],
-                            'pages': pages, 'names': NAMES, 'warm': warm, 'qs': cau_con() if lan == 4 else cau_hoi(lan)})
-            elif s['type'] in ('ve', 'vek'):
-                if bbday: continue
-                k0 = off + 3 * (lan - 1)
-                out.append({'type': 'vek', 'lan': lan, 'lab': 'Vè', 'sub': VE_SUB[lan], 'rules': VE_RULES[lan], 'title': MU['ten_en'], 'title_zh': MU['ten_zh'],
-                            'bpm': 92, 'lines': [{k: v for k, v in x.items() if k != 'w'} for x in VEL], 'pages': pages, 'warm': [k0, k0 + 1, k0 + 2]})
-            elif s['type'] == 'noi' and bbday:
+            if is_bb(s) or is_ve(s):
+                mine = is_bb(s) if typ == 'bb' else is_ve(s)
+                if placed or (has_main and not mine): continue
+                placed = True
+                if typ == 'bb':
+                    v2, vl = S_['ve2'][lan]; warm = {'ve': [strip(x) for x in v2], 've_l': vl}
+                    if lan == 1: warm['names'] = NAMES
+                    if lan == 2: warm['pages'] = [off, off + 1, off + 2]
+                    if lan == 3: warm['pages'] = [off, off + 1]
+                    if lan == 4: warm['fast'] = True
+                    o = {'type': 'bb', 'lan': lan, 'lab': 'Big book', 'sub': BB_TXT[kind]['sub'][lan], 'rules': BB_TXT[kind]['rules'][lan], 'title': S_['title'], 'title_zh': S_['title_zh'],
+                         'pages': pages, 'names': NAMES, 'warm': warm, 'qs': cau_con() if lan == 4 else cau_hoi(lan)}
+                    if S_.get('frame'): o['frame'] = S_['frame']
+                    out.append(o)
+                else:
+                    wp = [off + (3 * jv + t) % NP for t in range(3)]; jv += 1
+                    out.append({'type': 'vek', 'lan': lan, 'lab': 'Vè', 'sub': VE_SUB[lan], 'rules': VE_RULES[lan], 'title': S_['ve_title'], 'title_zh': S_['ve_title_zh'],
+                                'bpm': S_.get('bpm', 92), 'lines': [strip(x) for x in S_['vel']], 'pages': pages, 'warm': wp})
+            elif s['type'] == 'noi' and typ == 'bb':
                 continue   # nguyên tắc 27 (phương án a): ngày có big book bỏ bước Nói theo riêng
             else:
                 out.append(s)
         days[n]['steps'] = out
-        if bbday and lan == 4:   # (12/11) ngày này không còn Nói theo: tên theo big book lần 4 (chị duyệt)
+        if typ == 'bb' and lan == 4 and days[n].get('t') == 'Các bạn nói gì?':   # (12/11) ngày không còn Nói theo: tên theo big book lần 4 (chị duyệt)
             days[n].update({'t': 'Con kể chuyện', 'goal': 'Kể lại big book và nói câu của con'})
-    print('mẫu thiết kế mới: unit', un, 'ngày', D_U)
+        for k, v in (S_.get('day_fix') or {}).get(di, {}).items(): days[n][k] = v
+    print('big book + vè 4 lần: unit', un, 'ngày', D_U, [f'{t}{l}' for t, l in S_['plan']])
+
+# ---------- U3 · "Who Is She?" (trang đoán) ----------
+for un, MU in sorted(MANG.U.items()):
+    if not MU.get('bb_hoi'): continue
+    BBP = MU['bb'][2]; bdir = BBP[0][0].rsplit('/', 1)[0]
+    pages = ([pg_dict(bdir + '/bia_khung.webp', MU['bb'][0], MU['bb'][1], True)] if os.path.exists('little-seed/' + bdir + '/bia_khung.webp') else []) + [pg_dict(i, e, z) for i, e, z in BBP]
+    off = 1 if pages[0].get('cover') else 0
+    VEL = [ve_dict(e, z, (MU.get('ve_img') or [''] * 9)[k]) for k, (w, e, z, v) in enumerate(MU['ve'])]
+    items = [{'k': ans, 'ap': off + pno, 'qpg': off + pno - 1, 'opts': opts} for pno, g, ans, opts in MU['bb_hoi']]
+    mine = []
+    for l, g in [('en', 'he'), ('zh', 'he'), ('en', 'she'), ('zh', 'she'), ('en', 'he')]:   # "Who is he? He is my ___" với gia đình con
+        k = 'bo' if g == 'he' else 'me'; vp = next((pages[it['ap']] for it in items if it['k'] == k), None)
+        mine.append({'l': l, 'q': ('Who is %s?' % g) if l == 'en' else '这是谁？', 'half': ('%s is my…' % g.capitalize()) if l == 'en' else '这是我…',
+                     'cue': ('%s is my' % g.capitalize()) if l == 'en' else '这是我', 'vd': vp[l] if vp else ''})
+    bbve_unit(un, {'pages': pages, 'kind': 'guess', 'names': {k: (FAM_TEN[k][0], FAM_TEN[k][1], FAM[k]) for k in FAM}, 'items': items, 'vel': VEL,
+                   've2': {1: (VEL[0:2], ['en']), 2: (VEL[2:4], ['en']), 3: (VEL[0:2], ['en', 'zh']), 4: (VEL[2:4], ['en', 'zh'])}, 'mine': mine,
+                   'plan': [('bb', 1), ('ve', 1), ('bb', 2), ('ve', 2), ('bb', 3), ('ve', 3), ('bb', 4), ('ve', 4)],
+                   'title': MU['bb'][0], 'title_zh': MU['bb'][1], 've_title': MU['ten_en'], 've_title_zh': MU['ten_zh']})
+
+# ---------- U1 · "Goodbye, Puppy!" (kể theo trình tự) + vè chào (ngoại lệ U1: 9 ngày, vè chào 5 ngày, big book 4 ngày) ----------
+U1P = [pg_dict(bb_img(BB_BIA[0]), BB_BIA[1], BB_BIA[2], True)] + [pg_dict(bb_img(k), e, z) for k, e, z, p in BB]
+U1N = {k: (k, W[k][0], W[k][2]) for k in ('mommy', 'daddy', 'teacher', 'friend', 'puppy', 'kitten')}
+U1I = [{'k': 'mommy', 'ap': 2, 'opts': ['mommy', 'teacher', 'kitten']}, {'k': 'daddy', 'ap': 3, 'opts': ['puppy', 'daddy', 'friend']},
+       {'k': 'teacher', 'ap': 5, 'opts': ['mommy', 'friend', 'teacher']}, {'k': 'friend', 'ap': 6, 'opts': ['friend', 'daddy', 'kitten']},
+       {'k': 'puppy', 'ap': 8, 'opts': ['teacher', 'puppy', 'mommy']}, {'k': 'kitten', 'ap': 10, 'opts': ['daddy', 'friend', 'kitten']}]
+# Vè chào đủ hai bài theo khung (build_ls48.py VE_CHAO, VE_BYE). Lời Trung câu 5–6 bài đầu và 3–4 bài cuối: bản nháp mới, chờ chị duyệt.
+BBU1 = 'tai-nguyen-ls/bigbook/u1/'
+VE_U1 = [ve_dict('Hello, hello, everyone!', '你好你好，大家好！', BBU1 + 'p7.webp'), ve_dict('Hello, teacher! Class is fun!', '老师老师，早上好！', BBU1 + 'p5.webp'),
+         ve_dict("What's your name? What's your name?", '你叫什么名字呀？', BBU1 + 'p6.webp'), ve_dict("Leo, Leo, that's my name!", '我叫Leo，Leo呀！', BBU1 + 'p6.webp'),
+         ve_dict('Leo, Leo, how old are you?', 'Leo，Leo，你几岁？', BBU1 + 'p6.webp'), ve_dict("Five! I'm five! And you? And you?", '五岁五岁，我五岁！', BBU1 + 'p6.webp'),
+         ve_dict('Goodbye, goodbye, everyone!', '大家再见，再见啦！', BBU1 + 'p9.webp'), ve_dict('One, two, three… school is done!', '一二三，放学啦！', BBU1 + 'p9.webp'),
+         ve_dict('See you tomorrow, Leo and Anna!', 'Leo，Anna，明天见！', BBU1 + 'p9.webp'), ve_dict("Goodbye, teacher! Let's go!", '老师老师，再见！', BBU1 + 'p9.webp')]
+U1M = [{'l': l, 'q': '', 'half': 'Good night, …!' if l == 'en' else '…，晚安！', 'cue': 'Good night' if l == 'en' else '晚安', 'vd': vd}
+       for l, vd in [('en', 'Good night, mommy!'), ('zh', '妈妈，晚安！'), ('en', 'Good night, daddy!'), ('zh', '爸爸，晚安！'), ('en', 'Good night, puppy!')]]
+bbve_unit(1, {'pages': U1P, 'kind': 'seq', 'names': U1N, 'items': U1I, 'vel': VE_U1, 'qimg': NV + 'kids_bong_a.webp',
+              've2': {1: (VE_U1[0:2], ['en']), 2: (VE_U1[6:8], ['en']), 3: (VE_U1[0:2], ['en', 'zh']), 4: (VE_U1[6:8], ['en', 'zh'])}, 'mine': U1M,
+              # ngày 1–9: vè, big book xen kẽ; ngày sát buổi 1 và buổi 3 là ngày vè (con hát trọn hai vè chào ở buổi 1)
+              'plan': [('ve', 1), ('bb', 1), ('ve', 2), ('bb', 2), ('ve', 3), ('bb', 3), ('ve', 3), ('bb', 4), ('ve', 4)],
+              'title': 'Goodbye, Puppy!', 'title_zh': '小狗，再见！', 've_title': 'Hello and Goodbye!', 've_title_zh': '你好，再见！',
+              'frame': {'left': 52, 'top': 15.5, 'width': 39.3, 'height': 45.4},
+              'day_fix': {8: {'t': 'Vè chào – lồng tiếng', 'goal': 'Hát trọn hai vè chào, lồng tiếng gửi cô'}}})
 out = {'who': who, 'days': {str(k): v for k, v in sorted(days.items())}, 'lop': {str(k): v for k, v in lop.items()}, 'map': mp,
        'soon': {str(k): v for k, v in soon.items()}, 'vi': SD0['vi'], 'vi_a': deep(SD0['vi_a']), 'vi_t': SD0.get('vi_t', {}), 'bg': {},
        'reader': reader, 'units_q': units_q, 'aumap': {}, 'vi_tx': deep(SD0['vi_tx'])}

@@ -127,13 +127,13 @@ R.bb = (step, body) => {
         if (me !== RUN) return; await say(BV.u(l, pgTxt(p, l), pgAu(p, l))); who = '🧒 Con đọc một mình'; drawBook(true); }); await wait(300); return; }
     // lần 4: con kể – trang hỏi cô đọc; trang trả lời cô nói nửa câu đầu, con nói tiếp, rồi cô đọc cả câu
     if (!ans) { who = '👩‍🏫 Cô đọc'; await line(); return; }
-    const half = l === 'zh' ? p.half_zh : p.half_en;
-    who = '👩‍🏫 ' + esc(half); drawBook(); cap((l === 'zh' ? '中文: ' : 'EN: ') + half); await say(BV.u(l, half.replace(/…$/, ''), l === 'zh' ? p.a_half_zh : p.a_half_en)); if (me !== RUN) return;
+    const half = l === 'zh' ? p.half_zh : p.half_en, cueU = () => BV.u(l, p['cue_' + l], p['a_cue_' + l]);
+    who = '👩‍🏫 ' + esc(half); drawBook(); cap((l === 'zh' ? '中文: ' : 'EN: ') + half); await say(cueU()); if (me !== RUN) return;
     who = '🧒 Con nói tiếp…'; drawBook();
     const nmo = (step.names || []).find(o => o.k === p.nm);
     const how = await conNoi(me, mic, async () => { if (!nmo) return; who = '💡 ' + esc(l === 'zh' ? nmo.zh : nmo.en) + ' …'; drawBook();
       await BV.vi('Gợi ý nè.'); if (me !== RUN) return; await say(BV.u(l, l === 'zh' ? nmo.zh : nmo.en, l === 'zh' ? nmo.a_zh : nmo.a_en)); if (me !== RUN) return;
-      await say(BV.u(l, half.replace(/…$/, ''), l === 'zh' ? p.a_half_zh : p.a_half_en)); who = '🧒 Con nói tiếp…'; drawBook(); }); if (how === 'gone') return;
+      await say(cueU()); who = '🧒 Con nói tiếp…'; drawBook(); }); if (how === 'gone') return;
     who = '👩‍🏫 Cô đọc cả câu'; await line(); }
   async function micOnce(mic, my) {   // một lượt thu (micTurn của ls-app.js thử 2 lần; ở đây gợi ý xen giữa 2 lần)
     if (!mic) return 'gone'; const lbl = mic.querySelector('b'), lv = mic.querySelector('.ls-lv');
@@ -163,27 +163,27 @@ R.bb = (step, body) => {
   const ansU = q => BV.u(q.l, q.say, q.a_say);
   function drawLock() { prog(); QP.className = 'bb2-q lock';
     QP.innerHTML = `<div class="bb2-qh"><b>${['', 'Ai đây?', 'Trang sau là ai?', 'Điền chỗ trống', 'Gia đình con'][lan]}</b><small>${NQ} câu</small></div><div class="bb2-lock"><span>🔒</span><p>${lan >= 3 ? 'Con đọc hết big book cùng cô' : 'Con nghe hết big book (tiếng Anh rồi tiếng Trung)'} thì câu hỏi mở ra ở đây.</p></div>
-      <ol class="bb2-list">${step.qs.map((q, k) => `<li><img src="${esc(q.pg != null ? P[q.pg].img : P[0].img)}" alt=""><span>Câu ${k + 1}</span></li>`).join('')}</ol>`; }
+      <ol class="bb2-list">${step.qs.map((q, k) => `<li><img src="${esc(q.img || (q.pg != null ? P[q.pg].img : P[0].img))}" alt=""><span>Câu ${k + 1}</span></li>`).join('')}</ol>`; }
   function drawQ() { prog(); const q = Q[qi]; QP.className = 'bb2-q open';
     if (!q) { QP.innerHTML = `<div class="ls-done"><b>Con trả lời hết rồi!</b></div>`; return; }
     const L = qL(q), head = `<div class="bb2-qh"><b>Câu ${Math.min(qi + 1, Q.length)}/${Q.length}${q.again ? ' · gặp lại' : ''}</b><small>${L === 'zh' ? 'tiếng Trung' : 'tiếng Anh'}</small></div>`;
     if (lan === 4) {
-      QP.innerHTML = head + `<div class="bb2-mine"><button class="bb2-ask" id="qSay" type="button"><span class="${L === 'zh' ? 'zh' : ''}">🔊 ${esc(q.q)}</span></button>
-        <div class="bb2-half ${L}">${esc(q.half)} <i>___</i></div><div class="ls-mic idle" id="qMic"><span class="ls-lv"></span>${SVG.mic}<b></b></div>
+      QP.innerHTML = head + `<div class="bb2-mine"><button class="bb2-ask" id="qSay" type="button"><span class="${L === 'zh' ? 'zh' : ''}">🔊 ${esc(q.q || q.half)}</span></button>
+        <div class="bb2-half ${L}">${esc(q.half).replace('…', '<i>___</i>')}</div><div class="ls-mic idle" id="qMic"><span class="ls-lv"></span>${SVG.mic}<b></b></div>
         <div class="bb2-ans" id="qAns"></div><div class="row"><button class="ls-b" id="qSkip">Bỏ qua ▶</button></div></div>`;
-      QP.querySelector('#qSay').onclick = () => { stopAll(); say(BV.u(q.l, q.q, q.a_q)); };
+      QP.querySelector('#qSay').onclick = () => { stopAll(); q.q ? say(BV.u(q.l, q.q, q.a_q)) : say(BV.u(q.l, q.cue, q.a_cue)); };
       QP.querySelector('#qSkip').onclick = () => { stopAll(); qi++; qi >= Q.length ? (drawQ(), finish()) : ask(); }; return; }
-    const askTx = lan === 3 ? `${esc(q.fr).replace('___', '<i class="bb2-blank" id="qBlank">___</i>')}` : esc(q.q);
+    const askTx = lan === 3 ? `${esc(q.fr).replace('___', '<i class="bb2-blank" id="qBlank">___</i>')}` : esc(q.qd || q.q);
     const opt = (o, k) => lan === 2 ? `<button class="ls-opt bb2-pgopt" data-k="${k}"><img src="${esc(P[o.pg].img)}" alt="" draggable="false"></button>`
       : `<button class="ls-opt" data-k="${k}">${pic(o.img, '', '')}<span class="sx-nm ${L === 'zh' ? 'zh' : ''}">${esc(L === 'zh' ? o.zh : o.en)}</span></button>`;
-    QP.innerHTML = head + `<button class="bb2-ask" id="qSay" type="button"><img src="${esc(P[q.pg].img)}" alt="">${lan === 2 ? '<span class="bb2-arrow" aria-hidden="true">➜ ?</span>' : ''}<span class="${L === 'zh' ? 'zh' : ''}">🔊 ${askTx}${q.py && lan !== 3 ? `<small>${esc(q.py)}</small>` : ''}</span></button>
+    QP.innerHTML = head + `<button class="bb2-ask" id="qSay" type="button"><img src="${esc(q.img || P[q.pg].img)}" alt="">${lan === 2 ? '<span class="bb2-arrow" aria-hidden="true">➜ ?</span>' : ''}<span class="${L === 'zh' ? 'zh' : ''}">🔊 ${askTx}${q.py && lan !== 3 ? `<small>${esc(q.py)}</small>` : ''}</span></button>
       <div class="ls-opts bb2-opts ${lan === 2 ? 'pg' : ''}" style="--n:${q.opts.length}">${q.opts.map(opt).join('')}</div>
       <div class="bb2-hrow"><button class="ls-b bb2-bulb" id="qHint" type="button">💡 Gợi ý</button><div class="bb2-ans" id="qAns"></div></div>`;
     QP.querySelector('#qSay').onclick = () => { stopAll(); askAudio(q); };
     QP.querySelector('#qHint').onclick = () => { sfx.pop(); hint(); };
     QP.querySelectorAll('.ls-opt').forEach(b => b.onclick = () => pick(b)); }
   const askAudio = async q => { const me = RUN; if (lan === 3) { const p = P[q.ap], half = q.l === 'zh' ? p.half_zh : p.half_en;
-      await say(BV.u(q.l, q.q, q.a_q)); if (me !== RUN) return; await wait(300); return say(BV.u(q.l, half.replace(/…$/, ''), q.l === 'zh' ? p.a_half_zh : p.a_half_en)); }
+      if (q.q) { await say(BV.u(q.l, q.q, q.a_q)); if (me !== RUN) return; await wait(300); } return say(BV.u(q.l, p['cue_' + q.l], p['a_cue_' + q.l])); }
     return say(BV.u(q.l, q.q, q.a_q)); };
   async function sweep(host, opts, l, me) {   // nhắc tên trước khi hỏi: thẻ sáng lên, cô đọc tên
     for (let k = 0; k < opts.length; k++) { if (me !== RUN) return; const el = host.querySelectorAll('.ls-opt, .bvw-nm')[k]; el && el.classList.add('lit');
@@ -200,14 +200,14 @@ R.bb = (step, body) => {
     else { c = 0; pass = 0; drawBook(); await BV.vi('Giờ con nói về gia đình con nhé! Con nhìn ảnh rồi nói.'); if (me !== RUN) return; }
     ask(); }
   async function ask() { const q = Q[qi]; if (!q) return; const me = ++RUN; tries = 0; clearIdle(); glow = '';
-    if (lan !== 4) { c = q.pg; pass = q.l === 'zh' ? 1 : 0; who = ''; drawBook(); }
+    if (lan !== 4) { c = q.pg != null ? q.pg : 0; pass = q.l === 'zh' ? 1 : 0; who = ''; drawBook(); }
     drawQ(); X.replay = () => { stopAll(); askAudio(q); };
-    if (lan === 4) { await say(BV.u(q.l, q.q, q.a_q)); if (me !== RUN) return; await wait(250);
-      await say(BV.u(q.l, q.half.replace(/…$/, ''), q.a_half)); if (me !== RUN) return;
+    if (lan === 4) { if (q.q) { await say(BV.u(q.l, q.q, q.a_q)); if (me !== RUN) return; await wait(250); }
+      await say(BV.u(q.l, q.cue, q.a_cue)); if (me !== RUN) return;
       const how = await conNoi(me, () => QP.querySelector('#qMic'), async () => { const a = QP.querySelector('#qAns');
         if (a) a.innerHTML = `<span class="${q.l === 'zh' ? 'zh' : ''}">💡 ${esc(q.vd || '')}</span>`;
         await BV.vi('Con nghe ví dụ nhé.'); if (me !== RUN) return; if (q.vd) await say(BV.u(q.l, q.vd, q.a_vd)); if (me !== RUN) return;
-        await say(BV.u(q.l, q.half.replace(/…$/, ''), q.a_half)); }); if (how === 'gone') return;
+        await say(BV.u(q.l, q.cue, q.a_cue)); }); if (how === 'gone') return;
       await wait(500); if (me !== RUN) return; qi++; if (qi >= Q.length) { drawQ(); await wait(300); return finish(); } return ask(); }
     if (lan === 1 && !q.again) { cap('Con nghe tên các bạn nhé.'); await sweep(QP, q.opts, q.l, me); if (me !== RUN) return; await wait(200); }
     cap((q.l === 'zh' ? '中文: ' : 'EN: ') + (lan === 3 ? q.fr : q.q)); await askAudio(q); if (me !== RUN) return;
