@@ -32,12 +32,12 @@ const BV = {
       const vv = voices.find(x => x.lang.toLowerCase().startsWith(s.lang.slice(0, 2))); if (vv) s.voice = vv; s.onend = res; s.onerror = res; speechSynthesis.speak(s); setTimeout(res, 1800 + u.t.length * 180); } catch (e) { res(); } }); },
   // ảnh gia đình con dán vào bìa khung (chỉ lưu trên máy này)
   PHOTO: 'lsd-anh-gia-dinh',
-  photo() { return sget(BV.PHOTO, ''); },
-  pickPhoto(cb) { const inp = document.createElement('input'); inp.type = 'file'; inp.accept = 'image/*';
+  photo(k) { return sget(k || BV.PHOTO, ''); },
+  pickPhoto(cb, k) { const inp = document.createElement('input'); inp.type = 'file'; inp.accept = 'image/*';
     inp.onchange = () => { const f = inp.files && inp.files[0]; if (!f) return; const r = new FileReader();
       r.onload = () => { const im = new Image(); im.onload = () => { const k = Math.min(1, 720 / Math.max(im.width, im.height)), cv = document.createElement('canvas');
         cv.width = Math.round(im.width * k); cv.height = Math.round(im.height * k); cv.getContext('2d').drawImage(im, 0, 0, cv.width, cv.height);
-        const d = cv.toDataURL('image/jpeg', .82); try { localStorage.setItem(BV.PHOTO, JSON.stringify(d)); } catch (e) { toast('Ảnh lớn quá, máy chưa lưu được.'); } cb(d); }; im.src = r.result; };
+        const d = cv.toDataURL('image/jpeg', .82); try { localStorage.setItem(k || BV.PHOTO, JSON.stringify(d)); } catch (e) { toast('Ảnh lớn quá, máy chưa lưu được.'); } cb(d); }; im.src = r.result; };
       r.readAsDataURL(f); }; inp.click(); },
   FRAME: { left: 59.8, top: 14.5, width: 33.2, height: 37.8 },   // ô ảnh trên bìa khung (đo từ bia_khung.webp U3)
   // vè 2 dòng có bàn tay vỗ theo nhịp; trang big book nghe lại – hai khởi động nối ngày
@@ -51,7 +51,7 @@ const BV = {
       host.innerHTML = BV.pgHTML(p, l);
       cap((l === 'zh' ? '中文: ' : 'EN: ') + t); if (opt.rate) VOICE.playbackRate = opt.rate;
       await say(BV.u(l, t, l === 'zh' ? p.a_zh : p.a_en)); VOICE.playbackRate = 1; if (my !== RUN) return; await wait(opt.gap ?? 450); } },
-  veHTML(x, l, bpm) { const t = l === 'zh' ? x.zh : x.en;
+  veHTML(x, l, bpm) { const t = l === 'zh' ? x.zh : vkTok(x.raw || x.en).map(w => w.t).join(' ');   // chữ hoa đánh dấu phách chỉ dùng khi hát; trên màn hình viết thường
     return `<div class="bvw-ve ${l}" style="--beat:${(60 / (bpm || 92)).toFixed(3)}s">${x.img ? `<img src="${esc(x.img)}" alt="">` : ''}
       <div class="bvw-line"><span class="bvw-clap" aria-hidden="true">👏</span><b class="${l === 'zh' ? 'zh' : ''}">${esc(t)}</b>${l === 'zh' && x.py ? `<small>${esc(x.py)}</small>` : ''}</div></div>`; },
   pgHTML(p, l) { const t = l === 'zh' ? p.zh : p.en;
@@ -66,7 +66,7 @@ const BV = {
    ===================================================================== */
 R.bb = (step, body) => {
   const lan = step.lan || 1, P = step.pages, W = step.warm || {}, LANG = ['en', 'zh'], NQ = step.qs.length;
-  const FR = step.frame || BV.FRAME;
+  const FR = step.frame || BV.FRAME, PK = step.photo_k || BV.PHOTO, PT = step.photo_t || 'ảnh gia đình';
   let pass = 0, c = 0, autoId = -1, read = false, busy = false, who = '', glow = '', idleT = 0, tries = 0, warmed = false;
   let Q = step.qs.map(q => Object.assign({}, q)), qi = 0;
   const playing = () => autoId === RUN;
@@ -92,7 +92,7 @@ R.bb = (step, body) => {
     main(); }
 
   /* ---- trang sách bên trái ---- */
-  const photoHTML = () => { const ph = BV.photo(); return ph ? `<img class="bb2-photo" src="${ph}" alt="" style="left:${FR.left}%;top:${FR.top}%;width:${FR.width}%;height:${FR.height}%">` : ''; };
+  const photoHTML = () => { const ph = BV.photo(PK); return ph ? `<img class="bb2-photo" src="${ph}" alt="" style="left:${FR.left}%;top:${FR.top}%;width:${FR.width}%;height:${FR.height}%">` : ''; };
   function drawBook(hl) { const p = P[c], l = LANG[pass]; prog();
     const hideTx = lan === 4 && !p.cover;   // lần 4: con kể, chỉ có tranh
     B.className = 'bb2-book ' + l;
@@ -100,7 +100,7 @@ R.bb = (step, body) => {
       <div class="bb2-pg ${p.cover ? 'cover' : ''} ${glow}"><img src="${esc(p.img)}" alt="">${p.cover ? photoHTML() + `<div class="bb2-ttl"><b class="${l === 'zh' ? 'zh' : ''}">${esc(pgTxt(p, l))}</b></div>` : ''}${glow === 'peek' ? '<span class="bb2-peek">💡</span>' : ''}</div>
       ${p.cover ? '' : glow === 'peek' ? '<div class="bb2-tx"><span class="bb2-who">💡 Trang sau…</span></div>' : hideTx ? `<div class="bb2-tx ke"><span class="bb2-who">${who || '🧒 Con kể nhé'}</span></div>` : `<div class="bb2-tx ${hl ? 'on' : ''}">${l === 'zh' ? `<b class="zh">${esc(p.zh)}</b><span class="sx-pyl on">${esc(p.py)}</span>` : `<span class="en">${esc(p.en)}</span>`}${who ? `<span class="bb2-who">${who}</span>` : ''}</div>`}
       ${lan >= 3 && !read ? `<div class="bb2-microw"><div class="ls-mic idle" id="bMic"><span class="ls-lv"></span>${SVG.mic}<b></b></div></div>` : ''}
-      ${p.cover && (lan === 4 || BV.photo()) ? `<div class="row bb2-phrow"><button class="ls-b" id="bPhoto">📷 ${BV.photo() ? 'Đổi ảnh gia đình' : 'Ba mẹ chọn ảnh gia đình'}</button></div>` : ''}
+      ${p.cover && (lan === 4 || BV.photo(PK)) ? `<div class="row bb2-phrow"><button class="ls-b" id="bPhoto">📷 ${BV.photo(PK) ? 'Đổi ' + PT : 'Ba mẹ chọn ' + PT}</button></div>` : ''}
       ${read ? (glow === 'peek' ? '' : `<div class="bb2-nav q"><button class="ls-b" id="bPage">🔊 Nghe trang này</button></div>`)
         : `<div class="bb2-nav"><button class="ls-b" id="bPrev" ${c || pass ? '' : 'disabled'} aria-label="Trang trước">◀</button>
         ${playing() ? `<span class="bb2-auto">${lan >= 3 ? '📖 Đang đọc…' : '🔊 Cô đang đọc…'}</span>` : `<button class="ls-b dark" id="bPlay">▶ Đọc tiếp</button>`}
@@ -110,7 +110,7 @@ R.bb = (step, body) => {
     on('#bNext', () => { stopAll(); glow = ''; who = ''; turnPage(); });
     on('#bPlay', () => { sfx.pop(); glow = ''; auto(); });
     on('#bPage', () => { sfx.pop(); line(); });
-    const ph = B.querySelector('#bPhoto'); if (ph) ph.onclick = () => BV.pickPhoto(() => drawBook()); }
+    const ph = B.querySelector('#bPhoto'); if (ph) ph.onclick = () => BV.pickPhoto(() => drawBook(), PK); }
   function turnPage() {   // sang trang sau; hết lượt Anh thì sang lượt Trung; hết lượt Trung thì mở câu hỏi
     if (c < P.length - 1) { c++; drawBook(); line(); return; }
     if (pass === 0) { pass = 1; c = 0; sfx.ok(); if (!read) star(); drawBook(); line(); return; }
@@ -170,7 +170,7 @@ R.bb = (step, body) => {
   const qL = q => q.l === 'zh' ? 'zh' : 'en';
   const ansU = q => BV.u(q.l, q.say, q.a_say);
   function drawLock() { prog(); QP.className = 'bb2-q lock';
-    QP.innerHTML = `<div class="bb2-qh"><b>${['', 'Ai đây?', 'Trang sau là ai?', 'Điền chỗ trống', 'Gia đình con'][lan]}</b><small>${NQ} câu</small></div><div class="bb2-lock"><span>🔒</span><p>${lan >= 3 ? 'Con đọc hết big book cùng cô' : 'Con nghe hết big book (tiếng Anh rồi tiếng Trung)'} thì câu hỏi mở ra ở đây.</p></div>
+    QP.innerHTML = `<div class="bb2-qh"><b>${['', 'Ai đây?', 'Trang sau là ai?', 'Điền chỗ trống', step.mine_h || 'Gia đình con'][lan]}</b><small>${NQ} câu</small></div><div class="bb2-lock"><span>🔒</span><p>${lan >= 3 ? 'Con đọc hết big book cùng cô' : 'Con nghe hết big book (tiếng Anh rồi tiếng Trung)'} thì câu hỏi mở ra ở đây.</p></div>
       <ol class="bb2-list">${step.qs.map((q, k) => `<li><img src="${esc(q.img || (q.pg != null ? P[q.pg].img : P[0].img))}" alt=""><span>Câu ${k + 1}</span></li>`).join('')}</ol>`; }
   function drawQ() { prog(); const q = Q[qi]; QP.className = 'bb2-q open';
     if (!q) { QP.innerHTML = `<div class="ls-done"><b>Con trả lời hết rồi!</b></div>`; return; }
@@ -211,7 +211,7 @@ R.bb = (step, body) => {
       for (let k = 0; k < step.names.length; k++) { if (me !== RUN) return; const el = QP.querySelector(`[data-k="${k}"]`), o = step.names[k]; el.classList.add('lit');
         await say(en(o.en, o.a_en)); if (me !== RUN) return; await wait(200); await say(zh(o.zh, o.a_zh)); if (me !== RUN) return; await wait(250); el.classList.remove('lit'); el.classList.add('seen'); }
     }
-    else if (lan === 4) { c = 0; pass = 0; drawBook(); await BV.vi('Giờ con nói về gia đình con nhé! Con nhìn ảnh rồi nói.'); if (me !== RUN) return; }
+    else if (lan === 4) { c = 0; pass = 0; drawBook(); await BV.vi(step.mine_vi || 'Giờ con nói về gia đình con nhé! Con nhìn ảnh rồi nói.'); if (me !== RUN) return; }
     ask(); }
   async function ask() { const q = Q[qi]; if (!q) return; const me = ++RUN; tries = 0; clearIdle(); glow = ''; q._tr = qi < 2 && !q.again;
     if (lan !== 4) { c = q.pg != null ? q.pg : 0; pass = q.l === 'zh' ? 1 : 0; who = ''; drawBook(); }
@@ -262,13 +262,15 @@ R.bb = (step, body) => {
 /* =====================================================================
    VÈ karaoke – mỗi tiếng một video (Anh trước, Trung sau), trong video không có chữ tiếng Việt
    ===================================================================== */
+const VK_NAMES = new Set(['leo', 'anna', 'bông', 'vũ', 'xiaomei', 'puppy', 'kitty']);
 function vkTok(raw) {   // chữ hoa trong nguồn = phách mạnh; trên màn hình viết thường như câu bình thường
   const nm = (typeof P !== 'undefined' && P.name) ? P.name : '';
   let s = (raw || '').replace(/(\w)-(\w)/g, '$1$2'); s = nm ? s.replace(/___/g, nm) : s.replace(/,? ?___,? ?/g, ' ').trim();
   const out = []; let first = true;
   for (const tok of s.split(/\s+/)) { if (!tok) continue;
     const core = tok.replace(/[^\p{L}']/gu, ''), up = [...core].filter(ch => ch !== ch.toLowerCase()).length, strong = up >= 2;
-    let t = tok; if (strong) { t = tok.toLowerCase(); if (first || core.toLowerCase() === 'i') t = t.replace(/\p{L}/u, m => m.toUpperCase()); }
+    let t = strong ? tok.toLowerCase() : tok; const lc = core.toLowerCase();   // đầu câu và tên riêng viết hoa ("My name's Leo")
+    if (first || lc === 'i' || VK_NAMES.has(lc.replace(/'s$/, ''))) t = t.replace(/\p{L}/u, m => m.toUpperCase());
     out.push({ t, s: strong }); first = /[.!?]["”’)]?$/.test(tok); }
   const st = out.map((w, i) => w.s ? i : -1).filter(i => i >= 0);   // thời điểm từng từ (tính theo phách trong ô nhịp 4 phách)
   if (st.length === 4) { st.forEach((i, b) => out[i].b = b);

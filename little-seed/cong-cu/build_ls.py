@@ -379,9 +379,10 @@ def _py_seg(seg):   # thanh nhẹ (轻声) cho từ lặp, từ thường gặp;
 def PY(z):
     out = []
     for seg in re.split(r'([一-鿿]+)', z):
-        if re.match(r'[一-鿿]', seg or ''): out.append(_py_seg(seg))
+        if re.match(r'[一-鿿]', seg or ''): out.append(' ' + _py_seg(seg) + ' ')   # (12/11) có cách với tên Latin: "wǒ jiào Leo"
         else: out.append(seg)
-    return re.sub(r'\s+', ' ', ''.join(out).replace('，', ', ').replace('！', '! ').replace('？', '? ').replace('。', '. ').replace('、', ', ').replace('……', '… ')).strip()
+    s = ''.join(out).replace('，', ', ').replace('！', '! ').replace('？', '? ').replace('。', '. ').replace('、', ', ').replace('……', '… ')
+    return re.sub(r'\s+([,.!?…])', r'\1', re.sub(r'\s+', ' ', s)).strip()
 def IMG(key, en=''):
     p = GH.tranh(key)
     if p: return '../' + p
@@ -632,13 +633,15 @@ def bbve_unit(un, S_):
     title, title_zh, ve_title, ve_title_zh, frame?, qimg?"""
     D_U = sorted(n for n, d in days.items() if str(d.get('unit')) == str(un))
     pages, kind = S_['pages'], S_['kind']; off = 1 if pages and pages[0].get('cover') else 0
-    def ten(k): e, z, im = S_['names'][k]; return {'k': k, 'img': im, 'en': e, 'zh': z, 'a_en': au_multi('en', e, 'co_huou'), 'a_zh': au_multi('zh', z, 'co_huou')}
+    def ten(k):   # tên Latin (Bông, Vũ) chưa có giọng Trung: phát đúng file giọng tên đó, không để máy đọc tiếng Trung
+        e, z, im = S_['names'][k]; ae = au_multi('en', e, 'co_huou')
+        return {'k': k, 'img': im, 'en': e, 'zh': z, 'a_en': ae, 'a_zh': au_multi('zh', z, 'co_huou') or (ae if z == e else '')}
     APG = {}
     for it in S_['items']:   # trang trả lời: tên người được che để làm khung câu, nửa câu cô nói, câu gợi ý
         ap, k = it['ap'], it['k']; APG[k] = ap; P_ = pages[ap]; P_['nm'] = k
         for l, nm in (('en', S_['names'][k][0]), ('zh', S_['names'][k][1])):
             pre, post = _cat(P_[l], nm)
-            P_['half_' + l] = (pre + '…' + post).strip()
+            P_['half_' + l] = re.sub(r' ?…\.', '…', (pre + '…' + post).strip())   # "My name is…  I'm five.", không "…."
             cue = pre.rstrip(' ,，') or post.lstrip(' ,，')
             P_['cue_' + l] = cue; P_['a_cue_' + l] = au(l, cue.rstrip('!！。.?？'), 'co_huou') if cue else ''   # chỉ dùng file đúng nguyên câu
             P_['fr_' + l] = (pre + '___' + post).strip()
@@ -680,9 +683,11 @@ def bbve_unit(un, S_):
                     if lan == 2: warm['pages'] = [off, off + 1, off + 2]
                     if lan == 3: warm['pages'] = [off, off + 1]
                     if lan == 4: warm['fast'] = True
-                    o = {'type': 'bb', 'lan': lan, 'lab': 'Big book', 'sub': BB_TXT[kind]['sub'][lan], 'rules': BB_TXT[kind]['rules'][lan], 'title': S_['title'], 'title_zh': S_['title_zh'],
+                    TX = S_.get('txt') or BB_TXT[kind]
+                    o = {'type': 'bb', 'lan': lan, 'lab': 'Big book', 'sub': TX['sub'][lan], 'rules': TX['rules'][lan], 'title': S_['title'], 'title_zh': S_['title_zh'],
                          'pages': pages, 'names': NAMES, 'warm': warm, 'qs': cau_con() if lan == 4 else cau_hoi(lan)}
-                    if S_.get('frame'): o['frame'] = S_['frame']
+                    for k_ in ('frame', 'mine_h', 'mine_vi', 'photo_t', 'photo_k'):   # khung ảnh bìa, lời phần "câu của con" riêng từng unit
+                        if S_.get(k_): o[k_] = S_[k_]
                     if bb_cmd(lan): o['cmd'] = bb_cmd(lan); o['co_img'] = NV + 'huou_huou1_a.webp'
                     out.append(o)
                 else:
@@ -739,6 +744,34 @@ bbve_unit(1, {'pages': U1P, 'kind': 'seq', 'names': U1N, 'items': U1I, 'vel': VE
               'title': 'Goodbye, Puppy!', 'title_zh': '小狗，再见！', 've_title': 'Hello and Goodbye!', 've_title_zh': '你好，再见！',
               'frame': {'left': 52, 'top': 15.5, 'width': 39.3, 'height': 45.4},
               'day_fix': {8: {'t': 'Vè chào – lồng tiếng', 'goal': 'Hát trọn hai vè chào, lồng tiếng gửi cô'}}})
+
+# ---------- U2 · "My Name Is…" (kể theo trình tự: mỗi trang một bạn tự giới thiệu) ----------
+# Chưa vẽ Canva: tranh ghép tạm (cong-cu/ghep_bigbook_u2.py), thay khi vẽ xong. Trang "My name is ___. Happy birthday!" ở cuối sách
+# lên làm bìa khung ảnh (quy tắc bìa 12/11): lần 4 con dán ảnh của con, nói tên và tuổi của con.
+MU2 = MANG.U[2]; BBU2 = 'tai-nguyen-ls/bigbook/u2/'
+U2P = [pg_dict(BBU2 + 'bia_khung.webp', MU2['bb'][0], MU2['bb'][1], True)] + [pg_dict(BBU2 + f'p{k + 1}.webp', e, z) for k, (i, e, z) in enumerate(MU2['bb'][2][:5])]
+U2N = {'bong': ('Bông', 'Bông', NV + 'kids_bong_a.webp'), 'leo': ('Leo', 'Leo', NV + 'kids_leo_a.webp'), 'anna': ('Anna', 'Anna', NV + 'kids_anna_a.webp'),
+       'vu': ('Vũ', 'Vũ', NV + 'nv_vu_a.webp'), 'puppy': ('Puppy', '小狗', NV + 'pets_cun_dung_a.webp')}
+U2I = [{'k': 'bong', 'ap': 1, 'opts': ['bong', 'anna', 'leo']}, {'k': 'leo', 'ap': 2, 'opts': ['vu', 'leo', 'puppy']}, {'k': 'anna', 'ap': 3, 'opts': ['anna', 'bong', 'vu']},
+       {'k': 'vu', 'ap': 4, 'opts': ['leo', 'puppy', 'vu']}, {'k': 'puppy', 'ap': 5, 'opts': ['puppy', 'anna', 'bong']}]
+VE_U2 = [ve_dict(e, z, BBU2 + im) for (w, e, z, v), im in zip(MU2['ve'], ['p1.webp', 'p1.webp', 'p3.webp', 'p2.webp'])]
+U2M = [{'l': 'en', 'q': "What's your name?", 'half': 'My name is…', 'cue': 'My name is', 'vd': 'My name is Bông.'},
+       {'l': 'zh', 'q': '你叫什么名字？', 'half': '我叫…', 'cue': '我叫', 'vd': '我叫Bông。'},
+       {'l': 'en', 'q': 'How old are you?', 'half': "I'm…", 'cue': "I'm", 'vd': "I'm five."},
+       {'l': 'zh', 'q': '你几岁？', 'half': '我…岁。', 'cue': '我', 'vd': '我五岁。'},
+       {'l': 'en', 'q': "Hello! What's your name?", 'half': 'Hello! My name is…', 'cue': 'Hello! My name is', 'vd': 'Hello! My name is Leo.'}]
+TX_U2 = {'sub': {1: 'Lần 1 · Nghe cả quyển, chạm đúng bạn', 2: 'Lần 2 · Đoán trang sau là bạn nào', 3: 'Lần 3 · Đọc đuổi, điền tên bạn', 4: 'Lần 4 · Con kể, rồi giới thiệu về con'},
+         'rules': {1: ['Khởi động: con nghe 2 dòng vè và nghe tên các bạn trong truyện.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con nghe bạn giới thiệu và chạm đúng bạn đó. Cần thì bấm 💡.'],
+                   2: ['Khởi động: con nghe 2 dòng vè và nghe lại 3 trang đầu.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con đoán: trang sau là bạn nào? Con chạm vào tranh trang sau.'],
+                   3: ['Khởi động: con nghe 2 dòng vè và 2 trang đầu.', 'Đọc đuổi tiếng Anh rồi tiếng Trung: cô đọc, cô và con cùng đọc, rồi con đọc một mình.', 'Rồi con chọn đúng bạn điền vào chỗ trống.'],
+                   4: ['Khởi động: con nghe 2 dòng vè và nghe nhanh cả quyển.', 'Con kể: cô nói nửa câu, con nói tên bạn.', 'Rồi con giới thiệu về con: "My name is…", "I\'m…".']}}
+bbve_unit(2, {'pages': U2P, 'kind': 'seq', 'names': U2N, 'items': U2I, 'vel': VE_U2, 'qimg': BBU2 + 'bia_khung.webp', 'txt': TX_U2,
+              've2': {1: (VE_U2[0:2], ['en']), 2: (VE_U2[2:4], ['en']), 3: (VE_U2[0:2], ['en', 'zh']), 4: (VE_U2[2:4], ['en', 'zh'])}, 'mine': U2M,
+              'plan': [('bb', 1), ('ve', 1), ('bb', 2), ('ve', 2), ('bb', 3), ('ve', 3), ('bb', 4), ('ve', 4)],
+              'title': MU2['bb'][0], 'title_zh': MU2['bb'][1], 've_title': MU2['ten_en'], 've_title_zh': MU2['ten_zh'],
+              'frame': {'left': 55.8, 'top': 15.2, 'width': 37.1, 'height': 45.5},   # ô ảnh trên bìa ghép tạm (ghep_bigbook_u2.py in ra)
+              'mine_h': 'Con giới thiệu', 'mine_vi': 'Giờ con giới thiệu về con nhé! Con nhìn ảnh rồi nói tên, nói tuổi của con.',
+              'photo_t': 'ảnh của con', 'photo_k': 'lsd-anh-cua-con'})
 # Không để bước rỗng (chị chốt 12/11): bước không có bài tập bên trong thì bỏ, in ra để sửa nguồn
 _K = ('cards', 'scenes', 'lines', 'turns', 'qs', 'items', 'pages', 'opts', 'quiz')
 for n, d in days.items():
