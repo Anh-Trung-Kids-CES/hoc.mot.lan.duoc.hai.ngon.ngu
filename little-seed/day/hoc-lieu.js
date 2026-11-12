@@ -48,7 +48,7 @@ const KIND = {
   chant: ['Lời vè (treo lớp)', 'Chữ hoa là phách mạnh · vỗ tay theo phách'],
   craft: ['Thủ công của unit', 'Hướng dẫn cho cô + mẫu cắt, tô cho con'],
   check: ['Phiếu cuối unit', 'Con nghe – khoanh tranh · kèm lời cô đọc và đáp án'],
-  reader: ['Reader A5', 'Truyện unit in A5 (2 trang mỗi tờ A4 ngang), bìa có mã QR mở reader trên web'],
+  reader: ['Reader A5', 'Truyện in A5 (2 trang mỗi tờ A4 ngang) để con đọc ở nhà'],
   sbt: [LS ? 'Phiếu tô – dán cả unit' : 'Sách bài tập cả unit', LS ? '1 trang mỗi buổi' : '2 trang mỗi buổi: trang Anh, trang Trung'],
   key: ['Đáp án sách bài tập', 'Cho cô chấm'],
 };
@@ -142,7 +142,7 @@ function craft(u) {
 function reader(r, u) {
   const half = inner => `<div class="a5">${inner}</div>`;
   const ps = [half(`<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center"><div class="en" style="font-size:30pt;color:#C8372D">${esc(r.t)}</div><div class="zh" style="font-size:28pt;font-weight:700">${esc(r.zh)}</div>
-    ${img(r.pages[0] && r.pages[0].img, 'max-height:85mm;margin:6mm 0;border-radius:4mm')}<div style="display:flex;align-items:center;gap:4mm"><div style="width:28mm;height:28mm">${r.qr.replace('<svg', '<svg style="width:28mm;height:28mm"')}</div><div style="font-size:10pt;text-align:left">Listen · 听<br>${tag('Reader')}</div></div></div>`)];
+    ${img(r.pages[0] && r.pages[0].img, 'max-height:85mm;margin:6mm 0;border-radius:4mm')}<div style="font-size:10pt">${tag('Reader')}</div></div>`)];
   r.pages.forEach((p, i) => ps.push(half(`<div style="flex:1;display:flex;align-items:center;justify-content:center">${img(p.img, 'max-width:128mm;max-height:112mm;border-radius:4mm')}</div>
     <div class="en" style="font-size:${p.en.length > 50 ? 13 : 16}pt;margin-top:3mm">${esc(p.en)}</div><div class="zh" style="font-size:${p.zh.length > 20 ? 14 : 17}pt;font-weight:700">${esc(p.zh)}</div><div class="py" style="font-size:10pt">${esc(p.py)}</div>
     <div style="text-align:right;color:#aaa;font-size:9pt">${i + 1}</div>`)));

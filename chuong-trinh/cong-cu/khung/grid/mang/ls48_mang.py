@@ -52,8 +52,8 @@ U[3] = dict(ten_en="Bông's Family", ten_zh='Bông的家人', bg='ls_home', phan
         ('tai-nguyen-ls/bigbook/u3/p10.webp', 'Wow! He is my big brother!', '哇！这是我哥哥！'),
         ('tai-nguyen-ls/bigbook/u3/p11.webp', 'Who is she?', '这是谁？'),
         ('tai-nguyen-ls/bigbook/u3/p12.webp', 'Shh! She is my little sister.', '嘘！这是我妹妹。'),
-        ('tai-nguyen-ls/bigbook/u3/p13.webp', 'This is my family. I love you!', '这是我的家人。我爱你！'),
-        ('tai-nguyen-ls/bigbook/u3/p14.webp', 'Who is he? Who is she?', '这是谁？')]),
+        ('tai-nguyen-ls/bigbook/u3/p13.webp', 'This is my family. I love you!', '这是我的家人。我爱你！')]),
+    # (12/11) trang khung ảnh (Who is he? Who is she?) lên làm bìa, bỏ khỏi cuối sách
     # (12/11) web: đọc hết big book bên trái, rồi câu hỏi đọc hiểu bên phải. (trang đoán, he/she, đáp án, 3 lựa chọn); đáp án nghe lại = câu trang lật
     bb_hoi=[(1, 'she', 'me', ['me', 'ba', 'em_gai']), (3, 'he', 'bo', ['ong', 'bo', 'anh_trai']), (5, 'she', 'ba', ['me', 'em_gai', 'ba']),
             (7, 'he', 'ong', ['ong', 'anh_trai', 'bo']), (9, 'he', 'anh_trai', ['bo', 'ong', 'anh_trai']), (11, 'she', 'em_gai', ['ba', 'em_gai', 'me'])],

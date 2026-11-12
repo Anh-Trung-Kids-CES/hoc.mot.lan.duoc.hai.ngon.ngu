@@ -447,7 +447,6 @@ function viewHome() { document.body.classList.add('hub'); setActive('home');
       ${tile({ cls: 'big', href: '#/ban-do', img: 'tai-nguyen/trang/the_gioi_seed.webp', c: '#1FA5A0', t: '🌱 Seedling · Bản đồ học', sub: `Unit 1 Greeting · đã học ${done}/4 ngày web` })}
       ${tile({ cls: 'big', href: '#/ngay/1', img: 'tai-nguyen/trang/ls_class.webp', c: '#E3262E', t: '▶ Học ngày 1', sub: 'Good morning, Mrs Lan! – Lan老师，早上好！' })}
       ${tile({ href: '#/hop-on', img: 'tai-nguyen/trang/ls_album.webp', c: '#7B5CD6', t: 'Hộp ôn', sub: (() => { const b = onBank(); const d = onDue(b).length; return d ? `${d} thẻ đến hẹn ôn hôm nay` : `${b.length} thẻ trong hộp`; })() })}
-      ${tile({ href: '#/reader/1/1', img: 'tai-nguyen/canopy/img/v1_d1_p_go_to_school.webp', size: 'cover', bg: '#DDEBFF', c: '#2F6FD6', t: 'Reader · đọc truyện', sub: 'Good Morning, Mrs Lan!' })}
       ${tile({ href: '#/qua', img: 'tai-nguyen/qua/gift_rubik.webp', size: 'auto 62%', pos: '50% 55%', bg: '#FFE4EC', c: '#E3487A', t: 'Phòng đổi quà', sub: `⭐ ${qWallet()} sao trong ví` })}
       ${tile({ href: '#/hanh-trinh', img: 'tai-nguyen/trang/ls_stickers.webp', size: 'auto 92%', bg: '#FFF8E1', c: '#C9A227', t: 'Hành trình của con', sub: 'Huy hiệu · ngày học · lần nói' })}
     </div><p class="sx-demo">Bản demo để duyệt: Unit 1 (ngày web 1, 2, 3, 8). Giọng từ web 21 ngày; câu chưa thu tạm đọc bằng giọng máy. Tiến độ lưu trên máy này.</p></div>`;

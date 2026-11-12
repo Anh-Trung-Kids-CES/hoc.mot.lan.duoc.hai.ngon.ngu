@@ -229,14 +229,14 @@ days[8] = {'steps': [whole, {'type': 'pdn', 'model_first': True,
 # ngày 9: big book "Goodbye, Puppy!" (chị duyệt kịch bản 11/11, tranh vẽ Canva DAHanaV9zZg trang 15–27, claude/KichBan_BigBook_LS_U1.md)
 # → chọn tranh trộn → nói theo big book → vận động. Tranh: little-seed/tai-nguyen-ls/bigbook/u1/
 BBD = 'tai-nguyen-ls/bigbook/u1/'
-BB_BIA = (BBD + 'bia_nen.webp', 'Goodbye, Puppy!', '小狗，再见！', 'Xiǎogǒu, zàijiàn!')
+BB_BIA = (BBD + 'bia_khung.webp', 'Goodbye, Puppy!', '小狗，再见！', 'Xiǎogǒu, zàijiàn!')
 BB = [(BBD + 'p1.webp', 'Good morning!', '早上好！', 'Zǎoshang hǎo!'), (BBD + 'p2.webp', 'Good morning, mommy!', '妈妈，早上好！', 'Māma, zǎoshang hǎo!'),
       (BBD + 'p3.webp', 'Hello, daddy!', '爸爸，你好！', 'Bàba, nǐ hǎo!'), (BBD + 'p4.webp', 'Goodbye, puppy!', '小狗，再见！', 'Xiǎogǒu, zàijiàn!'),
       (BBD + 'p5.webp', 'Hello, teacher!', '老师，你好！', 'Lǎoshī, nǐ hǎo!'), (BBD + 'p6.webp', 'Hello, friend!', '朋友，你好！', 'Péngyou, nǐ hǎo!'),
       (BBD + 'p7.webp', 'Hello, everyone!', '大家好！', 'Dàjiā hǎo!'), (BBD + 'p8.webp', 'Hello, puppy!', '小狗，你好！', 'Xiǎogǒu, nǐ hǎo!'),
       (BBD + 'p9.webp', 'Goodbye, all! See you tomorrow!', '大家再见！明天见！', 'Dàjiā zàijiàn! Míngtiān jiàn!'),
       (BBD + 'p10.webp', 'Hello, kitten!', '小猫，你好！', 'Xiǎomāo, nǐ hǎo!'), (BBD + 'p11.webp', 'Good night, puppy!', '小狗，晚安！', 'Xiǎogǒu, wǎn\'ān!')]
-BB_TEN = (BBD + 'p12.webp', 'Good night, ___!', '___，晚安！', '___, wǎn\'ān!')   # trang 12: khung dán ảnh con
+# (12/11) trang khung dán ảnh con ("Good night, ___!") lên làm bìa, không để ở cuối sách nữa
 def bb_img(k): return k if k.endswith('.webp') else (W[k][2] if k in W else S + 'tranh/sunny.webp')
 def au_multi(l, t, who=''):
     a = au(l, t, who)
@@ -247,7 +247,7 @@ def au_multi(l, t, who=''):
     return '|'.join(fs) if all(fs) else ''
 big = {'type': 'truyen', 'title': 'Big book · Goodbye, Puppy!', 'title_zh': 'Big book · 小狗，再见！',
        'scenes': [{'who': 'narr', 'img': bb_img(k), 'en': e, 'zh': z, 'py': p, 'a_en': au_multi('en', e, 'co_huou'), 'a_zh': au_multi('zh', z, 'co_huou')}
-                  for k, e, z, p in [BB_BIA] + BB + [BB_TEN]]}
+                  for k, e, z, p in [BB_BIA] + BB]}
 VE = [('mommy', 'Mommy, mommy, goodbye!', '妈妈，妈妈，再见！'), ('daddy', 'Daddy, daddy, goodbye!', '爸爸，爸爸，再见！'),
       ('kitten', 'Kitten, kitten, goodbye!', '小猫，小猫，再见！'), ('puppy', 'Puppy, puppy, goodbye!', '小狗，小狗，再见！'),
       ('all', 'Goodbye, see you tomorrow!', '再见，明天见！')]
@@ -281,14 +281,14 @@ def fix_ten(obj):
 def bb_step(pages, title, title_zh):
     return {'type': 'truyen', 'lab': 'Big book và vè', 'sub': 'Nghe lại mẫu câu của unit', 'title': title, 'title_zh': title_zh,
             'scenes': [{'who': 'narr', 'img': img, 'en': e, 'zh': z, 'py': p, 'a_en': au_multi('en', e, 'co_huou'), 'a_zh': au_multi('zh', z, 'co_huou')} for img, e, z, p in pages]}
-BB1 = [(bb_img(k), e, z, p) for k, e, z, p in BB + [BB_TEN]]
+BB1 = [(bb_img(k), e, z, p) for k, e, z, p in BB]
 VE1 = [(W[k][2], e, z, '') for k, e, z in VE]
 for n in range(1, 9):
     pg = [BB1[(2 * (n - 1) + j) % len(BB1)] for j in range(3)] + [VE1[(n - 1 + j) % len(VE1)] for j in range(2)]
     st = bb_step(pg, 'Big book · Goodbye, Puppy! + vè', 'Big book · 小狗，再见！+ 儿歌')
     if n <= 5: days[n]['steps'][2] = st          # thay bài Nghe – chạm tranh (luyện rời)
     else: days[n]['steps'].insert(len(days[n]['steps']) - 1, st)
-days[9]['steps'][0]['scenes'].append({'who': 'me', 'img': LS + 'me_vay.webp', 'en': 'Hello, ___!', 'zh': '___，你好！', 'py': '___, nǐ hǎo!', 'a_en': '', 'a_zh': ''})
+# (12/11) bỏ trang cuối "Hello, ___!" khỏi big book ngày 9: trang có tên con giờ là bìa (khung dán ảnh)
 
 # ---------- Unit 9 · Food (mạng văn bản mau_little-seed_u9.json) ----------
 M9 = json.load(open('chuong-trinh/cong-cu/khung/grid/mang/mau_little-seed_u9.json'))
@@ -579,8 +579,8 @@ for un, MU in sorted(MANG.U.items()):
     if not MU.get('bb_hoi'): continue
     D_U = sorted(n for n, d in days.items() if str(d.get('unit')) == str(un))
     BBP = MU['bb'][2]; bdir = BBP[0][0].rsplit('/', 1)[0]
-    pages = ([{'img': bdir + '/bia_nen.webp', 'en': MU['bb'][0], 'zh': MU['bb'][1], 'py': PY(MU['bb'][1]), 'cover': True,
-               'a_en': au_multi('en', MU['bb'][0], 'co_huou'), 'a_zh': au_multi('zh', MU['bb'][1], 'co_huou')}] if os.path.exists('little-seed/' + bdir + '/bia_nen.webp') else []) + \
+    pages = ([{'img': bdir + '/bia_khung.webp', 'en': MU['bb'][0], 'zh': MU['bb'][1], 'py': PY(MU['bb'][1]), 'cover': True,
+               'a_en': au_multi('en', MU['bb'][0], 'co_huou'), 'a_zh': au_multi('zh', MU['bb'][1], 'co_huou')}] if os.path.exists('little-seed/' + bdir + '/bia_khung.webp') else []) + \
             [{'img': i, 'en': e, 'zh': z, 'py': PY(z), 'a_en': au_multi('en', e, 'co_huou'), 'a_zh': au_multi('zh', z, 'co_huou')} for i, e, z in BBP]
     POOL = []
     for pno, g, ans, opts in MU['bb_hoi']:
@@ -600,7 +600,7 @@ for un, MU in sorted(MANG.U.items()):
                                'opts': it['opts'], 'ans': it['ans'], 'say': it['a'][l], 'a_say': au_multi(l, it['a'][l], 'co_huou')})
                 st[j] = {'type': 'bb', 'lab': 'Big book', 'sub': 'Nghe cả quyển rồi trả lời câu hỏi', 'title': MU['bb'][0], 'title_zh': MU['bb'][1], 'pages': pages, 'qs': qs}
             elif s['type'] == 've':
-                st[j] = {'type': 'vek', 'lab': 'Vè', 'sub': 'Hát karaoke rồi lồng tiếng', 'title': 'Vè · ' + MU['ten_en'], 'title_zh': '儿歌 · ' + MU['ten_zh'],
+                st[j] = {'type': 'vek', 'lab': 'Vè', 'sub': 'Nghe mẫu, hát karaoke rồi lồng tiếng', 'title': MU['ten_en'], 'title_zh': MU['ten_zh'],
                          'bpm': 92, 'lines': [{k: v for k, v in x.items() if k != 'w'} for x in VEL]}
     print('mẫu thiết kế mới: unit', un, 'ngày', D_U)
 out = {'who': who, 'days': {str(k): v for k, v in sorted(days.items())}, 'lop': {str(k): v for k, v in lop.items()}, 'map': mp,

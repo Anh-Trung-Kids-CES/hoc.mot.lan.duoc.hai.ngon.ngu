@@ -133,7 +133,6 @@ function viewHome() { document.body.classList.add('hub'); setActive('home');
       ${tile({ cls: 'big', href: B ? '#/ban-do/' + B.key : '#/ban-do', img: '../seedling/tai-nguyen/trang/the_gioi_seed.webp', c: '#1FA5A0', t: '🌱 Bản đồ học', sub: `Đã học ${done}/${TOTAL_DAYS} ngày web · ${B ? B.name : ''}` })}
       ${tile({ cls: 'big', href: '#/ngay/' + n, img: d.hero, c: '#E3262E', t: `▶ ${isDone(n) ? 'Ôn lại' : 'Học'} ngày ${n}`, sub: `${unitLabel(d)} · ${d.t}` })}
       ${tile({ href: '#/hop-on', img: '../seedling/tai-nguyen/trang/ls_album.webp', c: '#7B5CD6', t: 'Hộp ôn', sub: (() => { const b = onBank(); const k = onDue(b).length; return k ? `${k} thẻ đến hẹn ôn hôm nay` : `${b.length} thẻ trong hộp`; })() })}
-      ${tile({ href: '#/reader/' + readerUnitFor(n) + '/1', img: SD.reader[readerUnitFor(n)].pages[0].img, size: 'cover', bg: '#DDEBFF', c: '#2F6FD6', t: 'Reader · đọc truyện', sub: SD.reader[readerUnitFor(n)].t })}
       ${tile({ href: '#/qua', img: '../seedling/tai-nguyen/qua/gift_rubik.webp', size: 'auto 62%', pos: '50% 55%', bg: '#FFE4EC', c: '#E3487A', t: 'Phòng đổi quà', sub: `⭐ ${qWallet()} sao trong ví` })}
       ${tile({ href: '#/hanh-trinh', img: '../seedling/tai-nguyen/trang/ls_stickers.webp', size: 'auto 92%', bg: '#FFF8E1', c: '#C9A227', t: 'Hành trình của con', sub: 'Huy hiệu · ngày học · lần nói' })}
     </div>${GV ? '<p class="sx-demo">Chế độ giáo viên: mở tất cả các ngày. Thêm <code>?gv=0</code> vào link để tắt.</p>' : ''}</div>`;
@@ -233,6 +232,6 @@ function route() { if (!/^#\/reader/.test(location.hash)) RDR.auto = ''; stopAll
   const h = location.hash.replace(/^#\/?/, '').split('/');
   if (h[0] === 'ban-do') return h[1] ? viewMap(h[1]) : viewWorld(); if (h[0] === 'ngay') return viewDay(+h[1], h[2]); if (h[0] === 'lop') return viewLop(+h[1]);
   if (h[0] === 'hop-on') return h[1] === 'choi' ? viewOnPlay() : viewHop(); if (h[0] === 'qua') return viewQua(h[1]); if (h[0] === 'hanh-trinh') return viewJourney(); if (h[0] === 'co') return viewCo();
-  if (h[0] === 'reader') return viewReader(h[1] || readerUnitFor(nextDay()), (+h[2] || 1) - 1);
+  if (h[0] === 'reader') { location.hash = '#/'; return; }   // Reader gỡ khỏi web (12/11)
   viewHome(); }
 sdBoot();

@@ -330,3 +330,16 @@ body.is-demo:not(.in-step) .toast{bottom:calc(max(10px,env(safe-area-inset-botto
 .vk-tip{color:#7a6652}
 .vk-out{width:min(100%,760px);display:flex;flex-direction:column;gap:8px;align-items:center;background:#F1FAF3;border-radius:18px;padding:10px}
 .vk-out video{width:100%;border-radius:14px;background:#000}.vk-out small{color:#3d6b4a}
+/* Vè: mỗi tiếng một video (12/11) · big book: nút gọn */
+.vk-tabs{display:flex;gap:8px;justify-content:center}
+.vk-tab{border:3px solid #E6DCCB;background:#fff;border-radius:999px;padding:6px 18px;font-weight:800;font-size:16px;cursor:pointer;color:#6b5a45}
+.vk-tab.en.on{border-color:var(--ls-en);background:var(--ls-en);color:#fff}.vk-tab.zh.on{border-color:var(--ls-zh);background:var(--ls-zh);color:#fff}
+.vk-tab[disabled]{opacity:.45;cursor:default}
+.vk-stage.zh{border-color:var(--ls-zh)}.vk-stage.en{border-color:var(--ls-en)}
+.bb2-book.zh{border-color:var(--ls-zh)}
+.bb2-tx{min-height:64px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.bb2-tx .en,.bb2-tx b.zh{opacity:.6;transition:opacity .2s}.bb2-tx.on .en,.bb2-tx.on b.zh{opacity:1}
+.bb2-tx .en{color:var(--ls-en)}.bb2-tx b.zh{font-size:clamp(22px,2.8vw,32px);color:var(--ls-zh)}
+.bb2-nav{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:6px}
+.bb2-nav .ls-b{min-width:56px}.bb2-auto{font-weight:700;color:#5a4a3a;min-width:150px;text-align:center}
+.bb2-tx .sx-pyl{font-size:17px!important;color:#2d7a74;margin-top:2px}

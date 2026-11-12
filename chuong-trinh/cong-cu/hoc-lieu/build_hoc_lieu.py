@@ -145,7 +145,7 @@ for L, C in LEVELS.items():
         for n in days:
             for s in D[str(n)]['steps']:
                 if s.get('lab') in ('Big book và vè', 'Big book'):
-                    for x in s['scenes']: webbb.setdefault(x['en'], R(x['img']))
+                    for x in s.get('scenes') or [p for p in s.get('pages', []) if not p.get('cover')]: webbb.setdefault(x['en'], R(x['img']))
                 if s['type'] == 've':   # vè tách thành bước riêng (12/11): giữ chữ hoa đánh dấu phách mạnh cho tờ vè in
                     for x in s['lines']: webve.setdefault(x.get('raw') or x['en'], (x['zh'], x.get('py', '')))
         bbs, ves = [], []
@@ -157,13 +157,13 @@ for L, C in LEVELS.items():
                 ves.append({'lines': [{'en': e, 'zh': z, 'py': PY(z), 'van': v} for _, e, z, v in M['ve']]})
         if not bbs:   # Little Seed U1: lấy từ web (big book "Goodbye, Puppy!" + vè chào)
             pg = [{'en': e, 'zh': '', 'py': '', 'img': i} for e, i in webbb.items() if 'song' not in i]
-            zh = {x['en']: (x['zh'], PY(x['zh'])) for n in days for s in D[str(n)]['steps'] if s.get('lab') and 'scenes' in s for x in s['scenes']}
+            zh = {x['en']: (x['zh'], PY(x['zh'])) for n in days for s in D[str(n)]['steps'] if s.get('lab') for x in (s.get('scenes') or s.get('pages') or [])}
             for p in pg: p['zh'], p['py'] = zh.get(p['en'], ('', ''))
             bbs.append({'title': 'Goodbye, Puppy!', 'title_zh': '小狗，再见！', 'pages': pg})
             ves.append({'lines': [{'en': e, 'zh': z, 'py': PY(z), 'van': ''} for e, (z, p) in webve.items()]})
-        for b in bbs:   # bìa: chỉ cảnh nền (không nhân vật) + tên truyện (chị chốt 12/11): bia_nen.webp cạnh tranh các trang
+        for b in bbs:   # bìa: trang khung dán ảnh con + tên truyện (chị chốt 12/11, thay bìa chỉ cảnh nền): bia_nen.webp cạnh tranh các trang
             p1 = next((p['img'] for p in b['pages'] if '/bigbook/' in p['img']), '')
-            if p1 and os.path.exists(p1.rsplit('/', 1)[0] + '/bia_nen.webp'): b['cover'] = p1.rsplit('/', 1)[0] + '/bia_nen.webp'
+            if p1 and os.path.exists(p1.rsplit('/', 1)[0] + '/bia_khung.webp'): b['cover'] = p1.rsplit('/', 1)[0] + '/bia_khung.webp'
             for p in b['pages']: p['line'] = '' if '/bigbook/' in p['img'] else LA(p['img'])   # tranh big book vẽ Canva: nhiều chi tiết, không làm nét tô (trang in không dùng)
         who = []
         for p in parts:
