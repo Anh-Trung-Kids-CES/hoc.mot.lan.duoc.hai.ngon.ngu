@@ -56,7 +56,7 @@ function renderHome() {
   const chang = {};
   D.map.forEach(m => (chang[m.chang] = chang[m.chang] || []).push(m));
   app.innerHTML = `<div class="top"><a href="#/">🌱 Seedling · Web dạy 48 buổi</a><span class="sp"></span>
-    <a class="btn s" href="hoc-lieu/">🖨 Học liệu in mới · U1–U3</a><a class="btn s" href="#/lop">👥 Danh sách lớp (${Roster.get().length})</a><a class="btn s" href="../index.html?gv=1">Web học của con</a></div>
+    <a class="btn s" href="../../khai-giang/?lop=sd">🎉 Buổi 0 · Khai giảng</a><a class="btn s" href="hoc-lieu/">🖨 Học liệu in mới · U1–U3</a><a class="btn s" href="#/lop">👥 Danh sách lớp (${Roster.get().length})</a><a class="btn s" href="../index.html?gv=1">Web học của con</a></div>
   <div class="wrap">
     <p class="muted">Mỗi buổi có: giáo án 7 khối · trình chiếu có tranh và tiếng · Big Book · reader in · chant và động tác · thủ công · đồ dùng in · ghi nhận từng bé và báo cáo. Màn chiếu chỉ dẫn khoảng 30 trên 90 phút; phần còn lại các con luyện bằng thẻ, rối, thủ công và cả người.</p>
     ${Object.keys(chang).map(c => `<div class="chang"><h2>Chặng ${c}</h2><div class="units">${chang[c].map(m => `
