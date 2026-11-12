@@ -50,12 +50,20 @@ body.sk-on .sk-open,body.pt-on .sk-open,body.sk-on .pt-open{display:none}
 @keyframes skNoi{50%{transform:translateY(-2%)}}
 .sk-con .sk-video{position:absolute;bottom:0;left:50%;transform:translateX(-50%) scaleX(-1);height:85%;aspect-ratio:3/4;object-fit:cover;border-radius:1cqw;border:.35cqw solid #fff;box-shadow:0 0 1.5cqw rgba(255,240,170,.9)}
 .sk-con.cam img{opacity:0}
+/* bóng nói của con: gợi ý (viền đứt, chữ "Con nói:") và lời con vừa nói (viền vàng) */
+/* đặt bên phải đầu con (dưới màn chiếu) để không che chữ trên màn hình trợ giúp */
+.sk-con .sk-kb{bottom:52%;left:calc(100% + 1.2cqw);transform:none;min-width:10cqw;max-width:22cqw;border:.25cqw solid #FFE066;z-index:5}
+.sk-con .sk-kb:after{top:auto;bottom:1.2cqw;left:auto;right:100%;margin:0;border:.7cqw solid transparent;border-right-color:#FFE066}
+.sk-con .sk-kb.goiy{background:#FFFBE8;border:.25cqw dashed #FF9F1C;color:#7A3E00}
+.sk-con .sk-kb.goiy:after{border-right-color:#FF9F1C}
+.sk.doc .sk-con .sk-kb{max-width:17cqw}
+.sk-kb small{display:block;font-family:'Be Vietnam Pro',system-ui,sans-serif;font-size:.95cqw;font-weight:700;color:#B06A00}
 /* người dẫn: Leo (tiếng Anh) bên trái, Xiaomei (tiếng Trung) bên phải */
 .sk-host{position:absolute;bottom:37.5%;height:38%;z-index:3;transform:translateX(-50%);opacity:0;transition:opacity .4s}
 .sk-host.on{opacity:1}
 .sk-host.en{left:24%}.sk-host.zh{left:76%}
 .sk-host img{height:100%;width:auto;display:block;filter:drop-shadow(0 .4cqw .6cqw rgba(0,0,0,.25))}
-.sk-bub{position:absolute;bottom:100%;left:50%;transform:translateX(-50%);min-width:9cqw;max-width:19cqw;padding:.4cqw .9cqw;border-radius:1.2cqw;background:#fff;color:#2A1A5E;
+.sk-bub{position:absolute;bottom:100%;left:50%;transform:translateX(-50%);width:max-content;min-width:9cqw;max-width:19cqw;padding:.4cqw .9cqw;border-radius:1.2cqw;background:#fff;color:#2A1A5E;
   font-weight:800;font-size:1.5cqw;line-height:1.15;text-align:center;box-shadow:0 .3cqw 1cqw rgba(0,0,0,.3);z-index:2}
 .sk-bub:after{content:"";position:absolute;top:100%;left:50%;margin-left:-.7cqw;border:.7cqw solid transparent;border-top-color:#fff}
 .sk-bub[hidden]{display:none}

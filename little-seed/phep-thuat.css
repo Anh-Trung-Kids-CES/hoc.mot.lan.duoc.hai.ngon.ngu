@@ -157,6 +157,16 @@ body.pt-on .pt-open{display:none}
 .pt-qua .pt-sp{cursor:default}
 .pt-qua .pt-sp.zh{background:radial-gradient(circle at 50% 30%,#fff,#FFDCDC)}
 
+/* con (người ra lệnh): huy hiệu giữa phía dưới + bóng nói gợi ý câu con cần nói */
+.pt-kid{position:absolute;left:50%;bottom:1.5%;transform:translateX(-50%);z-index:6;display:flex;flex-direction:column;align-items:center;pointer-events:none}
+.pt-kid b{padding:2px 12px;border-radius:999px;background:#FFE066;color:#5A3A00;font-size:15px;box-shadow:0 2px 4px rgba(0,0,0,.3)}
+.pt-kbub{position:relative;margin-bottom:10px;max-width:min(60vw,420px);padding:6px 14px;border-radius:16px;background:#FFFBE8;border:3px dashed #FF9F1C;color:#7A3E00;
+  font-weight:800;font-size:clamp(16px,2.6vmin,24px);line-height:1.2;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.3);animation:ptSpIn .35s both}
+.pt-kbub:after{content:"";position:absolute;top:100%;left:50%;margin-left:-9px;border:9px solid transparent;border-top-color:#FF9F1C}
+.pt-kbub[hidden]{display:none}
+.pt-kbub small{display:block;font-family:'Be Vietnam Pro',system-ui,sans-serif;font-size:12px;font-weight:700;color:#B06A00}
+.pt-kbub .pt-bpic{height:9vmin;min-height:40px}
+
 @media (orientation:portrait) and (max-width:820px){
   .pt-open{right:auto;left:12px;bottom:calc(var(--nav,64px) + var(--xth,0px) + 12px)}   /* nút Góc vinh danh ở góc phải */
   .pt-open b{display:none}

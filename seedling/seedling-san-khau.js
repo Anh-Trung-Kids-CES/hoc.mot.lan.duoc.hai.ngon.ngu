@@ -227,7 +227,7 @@
         <div class="sk-scene" id="skScene">
           <img class="sk-bg" src="${BG}" alt="">
           <div class="sk-screen" id="skScreen"></div>
-          <div class="sk-con" id="skCon"><img alt=""><b id="skConTen">⭐ Con</b></div>
+          <div class="sk-con" id="skCon"><img alt=""><b id="skConTen">⭐ Con</b><span class="sk-bub sk-kb" id="skKb" hidden></span></div>
           <div class="sk-host" id="skHost"><img alt=""><span class="sk-bub" id="skBub" hidden></span><span class="sk-ear">👂</span></div>
           <img class="sk-front" id="skFront" src="${FRONT}" alt="">
           <span class="sk-ring" id="skRing"></span>
@@ -373,6 +373,13 @@
     const hEl = $('skHost'); if (!hEl) return;
     hEl.className = 'sk-host ' + lang + (show ? ' on' : ''); hEl.querySelector('img').src = NV(lang === 'en' ? 'kids_leo_a' : 'kids_xiaomei_a');
   }
+  /* Phân vai: lời của người dẫn hiện trên đầu Leo / Xiaomei; câu gợi ý cho con và lời con nói hiện trên đầu nhân vật đại diện cho con;
+     lời khán giả hiện ở ô cận cảnh / trên đầu khán giả. */
+  function kid(t, ms, goiY) {
+    const b = $('skKb'); if (!b) return;
+    b.className = 'sk-bub sk-kb' + (goiY ? ' goiy' : '');
+    b.innerHTML = (goiY ? '<small>🗣️ Con nói:</small>' : '') + h(t); b.hidden = false; clearTimeout(b._t); b._t = setTimeout(() => b.hidden = true, ms || 2600);
+  }
   function bubble(lang, t, ms) { const b = $('skBub'); if (!b) return; b.textContent = t; b.hidden = false; clearTimeout(b._t); b._t = setTimeout(() => b.hidden = true, ms || 3000); }
   function clearScreen() { const s = $('skScreen'); if (s) { s.innerHTML = ''; s.className = 'sk-screen'; } const st = $('skStrip'); if (st) st.innerHTML = ''; }
   function screen(l, lang, mode) {
@@ -404,7 +411,7 @@
     else if (!l.ask) say('🗣️ Đến lượt con!' + (S.lv === 3 ? ' Con nói xong slide mới hiện.' : ' Nhìn tranh rồi nói.'));
     listenNow();
   }
-  async function model(t, lang) { bubble(lang, t, 3600); say(`👂 Nghe: <b>${h(t)}</b> → 🗣️ Con nói theo!`); await speak(t, lang); }
+  async function model(t, lang) { kid(t, 4200, true); say(`👂 Nghe: <b>${h(t)}</b> → 🗣️ Con nói theo!`); await speak(t, lang); }
   function listenNow() {
     if (!root || S.end) return;
     $('skSkip').hidden = false; $('skMic').disabled = false;
@@ -441,8 +448,8 @@
       else setTimeout(() => root && audSay(cur.l.to, cur.l.rep[cur.lang], 2400), 250);
       setTimeout(() => speak(cur.l.rep[cur.lang], cur.lang), 300);
     }
-    if (ok) { react(cur.l.to ? 'clap' : (cur.l.aud || 'clap'), cur.lang); meter(); bubble(cur.lang, cur.lang === 'en' ? ['Great!', 'Super!', 'Wow!'][S.ok % 3] : ['真棒！', '太好了！', '很好！'][S.ok % 3], 1800); }
-    else { bubble(cur.lang, cur.lang === 'en' ? 'Good try!' : '很好！', 1800); say(`Mình nói tiếp nhé! Câu này là: <b>${h(text(cur.l, cur.lang))}</b>`); }
+    if (ok) { kid(text(cur.l, cur.lang), 1800); react(cur.l.to ? 'clap' : (cur.l.aud || 'clap'), cur.lang); meter(); bubble(cur.lang, cur.lang === 'en' ? ['Great!', 'Super!', 'Wow!'][S.ok % 3] : ['真棒！', '太好了！', '很好！'][S.ok % 3], 1800); }
+    else { kid(text(cur.l, cur.lang), 2200, true); bubble(cur.lang, cur.lang === 'en' ? 'Good try!' : '很好！', 1800); say(`Mình nói tiếp nhé! Câu này là: <b>${h(text(cur.l, cur.lang))}</b>`); }
     S.i++; strip();
     setTimeout(line, ok ? 1900 : 2300);
   }
@@ -498,6 +505,7 @@
   function filmLine() {
     const cur = S.q[S.i]; host(cur.lang, true); strip(); screen(cur.l, cur.lang, 'tranh');
     camOff(); if (cur.l.ask) audSay(cur.l.ask.a, askText(cur.l, cur.lang), 6000, true);
+    kid(text(cur.l, cur.lang), 60000, true);
     say(`🎬 ${S.i + 1}/${S.q.length} · Con nói: <b>${h(text(cur.l, cur.lang))}</b> rồi chạm <b>Tiếp</b>`);
   }
   function endFilm(v) {

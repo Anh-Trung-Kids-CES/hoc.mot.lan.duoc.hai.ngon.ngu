@@ -188,6 +188,7 @@
     root = document.createElement('div'); root.className = 'pt'; root.innerHTML = `
       <div class="pt-scene" id="ptScene"><img class="pt-bg" id="ptBg" alt=""><div class="pt-sky" id="ptSky"><span class="pt-sun"></span><span class="pt-moon"></span></div>
         <div class="pt-stage" id="ptStage"></div><div class="pt-fx" id="ptFx"></div><div class="pt-spells" id="ptSpells" hidden></div>
+        <div class="pt-kid" id="ptKid"><span class="pt-kbub" id="ptKb" hidden></span><b>⭐ Con</b></div>
         ${['en', 'zh'].map(l => `<button type="button" class="pt-wiz w-${l} pt-ngu" data-w="${l}" aria-label="${W[l].name}">
           <span class="pt-meter">${Array.from({ length: GOAL }, () => `<i>${l === 'en' ? '⭐' : '🏮'}</i>`).join('')}</span>
           <img src="${NV(W[l].img)}" alt=""><span class="pt-wand"></span><span class="pt-zz">z z</span><span class="pt-ear">👂</span><span class="pt-name">${W[l].name}</span><span class="pt-bub" hidden></span></button>`).join('')}
@@ -271,6 +272,12 @@
     }).join('');
     box.querySelectorAll('[data-sp]').forEach(b => b.onclick = () => model(list[+b.dataset.sp], l, b));
   }
+  /* Phân vai: lời riêng của phù thuỷ hiện trên đầu phù thuỷ; câu con cần nói hiện ở bóng nói của con (giữa, phía dưới) */
+  function kidHint(t, sp, ms) {
+    const b = $('ptKb'); if (!b) return;
+    b.innerHTML = `${sp ? `<span class="pt-bpic">${picHtml(sp.pic)}</span>` : ''}<small>🗣️ Con nói:</small>${h(t)}`; b.hidden = false;
+    clearTimeout(b._t); b._t = setTimeout(() => b.hidden = true, ms || 4500);
+  }
   function bubbleSp(l, sp, t, ms) {
     const b = root && root.querySelector(`.w-${l} .pt-bub`); if (!b) return;
     b.innerHTML = `<span class="pt-bpic">${picHtml(sp.pic)}</span><span>${h(t)}</span>`; b.hidden = false;
@@ -282,8 +289,8 @@
     if (listenNow === undefined) listenNow = !auto;   // con tự chạm tranh → micro tự mở; phù thuỷ rủ khi con ngồi im → chỉ nháy nút
     const t = spText(sp, l); if (!t) return;
     root.querySelectorAll('.pt-sp.nghe').forEach(x => x.classList.remove('nghe')); if (el) el.classList.add('nghe');
-    bubbleSp(l, sp, t); sparkle(l); if (auto) waveWiz(l);
-    say(l, `👂 ${W[l].name} nói: <b>${h(t)}</b> &nbsp;→&nbsp; 🗣️ Đến lượt con!${listenNow && canAuto() ? '' : ' Chạm 🎤 rồi nói.'}`);
+    kidHint(t, sp); sparkle(l); if (auto) waveWiz(l);
+    say(l, `👂 Nghe: <b>${h(t)}</b> &nbsp;→&nbsp; 🗣️ Đến lượt con nói với ${W[l].name}!${listenNow && canAuto() ? '' : ' Chạm 🎤 rồi nói.'}`);
     speak(t, l).then(() => afterModel(l, listenNow));
   }
   /* micro tự mở sau câu mẫu (nhịp "phù thuỷ nói – con nói"): chờ giọng mẫu dứt ~0,5 giây để máy không nghe nhầm giọng mẫu.
@@ -315,7 +322,8 @@
     nudges++;
     const l = G.active;
     if (!l) {
-      ['en', 'zh'].forEach((x, i) => setTimeout(() => { if (root) { bubble(x, '👋 ' + W[x].wake, 3600); waveWiz(x); } }, i * 900));
+      ['en', 'zh'].forEach((x, i) => setTimeout(() => { if (root) waveWiz(x); }, i * 900));
+      kidHint(W.en.wake + '  /  ' + W.zh.wake, null, 4200);
       say('', '👆 Chạm <b>Leo</b> (tiếng Anh) hoặc <b>Xiaomei</b> (tiếng Trung) rồi gọi bạn dậy nhé!'); poke(false); return;
     }
     if (!G.awake[l]) { wakeHint(l, false); poke(false); return; }
@@ -326,7 +334,7 @@
     if (i >= 0) model(list[i], l, $('ptSpells').querySelector(`[data-sp="${i}"]`), true, listenNow);
   }
   function wakeHint(l, listenNow) {
-    bubble(l, '👋 ' + W[l].wake, 4000); waveWiz(l);
+    kidHint(W[l].wake, null, 4200); waveWiz(l);
     say(l, `👂 Nghe rồi 🗣️ con gọi: <b>${h(W[l].wake)}</b>${listenNow && canAuto() ? '' : ' · Chạm 🎤 rồi nói.'}`);
     speak(W[l].wake, l).then(() => afterModel(l, listenNow));
   }
@@ -400,7 +408,7 @@
     const w = store(); (a.show ? [a.show] : a.showAll || []).forEach(x => { if (!w.world.includes(x)) w.world.push(x); });
     if (!tap) { G.meter[l] = Math.min(GOAL, G.meter[l] + 1); G.said++; }
     const praise = W[l].ok[G.said % W[l].ok.length];
-    bubble(l, full ? praise + (l === 'en' ? ' Nice sentence!' : ' 说得真好！') : c.say);
+    if (full) bubble(l, praise + (l === 'en' ? ' Nice sentence!' : ' 说得真好！')); else kidHint(c.say, SP.find(x => x.k === c.k), 4200);
     if (full) speak(praise, l); else speak(c.say, l);
     if (!full) say(l, `Hình đổi rồi! Con thử nói cả câu: <b>${h(c.say)}</b>`);
     else say(l, `✨ <b>${h(c.say)}</b>`);
@@ -527,7 +535,7 @@
     const N = alts.map(a => norm(a, l)), full = N.some(n => cur.c.full.test(n)), key = !full && !!cur.c.key && N.some(n => cur.c.key.test(n));
     cast(l, cur.c, full, true);
     if (full) { B.ok++; say(l, `🎁 ✨ Giỏi quá! <b>${h(cur.c.say)}</b>`); }
-    else { bubble(l, (l === 'en' ? 'Good try! ' : '很好！') + cur.c.say, 3200); speak(l === 'en' ? 'Good try!' : '很好！', l);
+    else { bubble(l, l === 'en' ? 'Good try!' : '很好！', 3200); kidHint(cur.c.say, SP.find(x => x.k === cur.c.k), 3200); speak(l === 'en' ? 'Good try!' : '很好！', l);
       say(l, key ? '🎁 Tốt lắm! Lần sau con nói cả câu nhé.' : '🎁 Con cố gắng lắm! Mình làm phép tiếp nhé.'); }
     B.i++; drawSpells(); setTimeout(bonusStep, 2800);
   }
