@@ -55,7 +55,7 @@ const KIND = {
 
 /* ---------------- trang chủ ---------------- */
 function home() {
-  app.innerHTML = `<div class="top"><b>🖨 ${esc(H.title)} · Web dạy · Học liệu in</b><span class="sp"></span><a class="btn" href="${H.root}khai-giang/?lop=${LS ? 'ls' : 'sd'}">🎉 Buổi 0 · Khai giảng</a><a class="btn" href="${H.root}${H.web}/?gv=1">Web học của con</a>${LS ? '' : '<a class="btn" href="../">Web dạy 48 buổi</a>'}</div>
+  app.innerHTML = `<div class="top"><b>🖨 ${esc(H.title)} · Web dạy · Học liệu in</b><span class="sp"></span><a class="btn" href="${H.root}khai-giang/?lop=${LS ? 'ls' : 'sd'}">🎉 Buổi 0 · Khai giảng</a><a class="btn" href="${H.root}buoi/?lop=${LS ? 'ls' : 'sd'}&b=1">🧑‍🏫 Web dạy buổi 1–3</a><a class="btn" href="${H.root}${H.web}/?gv=1">Web học của con</a>${LS ? '' : '<a class="btn" href="../">Web dạy 48 buổi</a>'}</div>
   <div class="wrap">
     <div class="note"><b>Mẫu Unit 1–3 (buổi 1–11) chờ chị duyệt.</b> Mở từng mục rồi bấm <b>In / Lưu PDF</b> (chọn khổ A4, lề "Không", bật "Đồ họa nền"). Tranh, từ, câu, big book, vè lấy đúng từ web học con đã gặp. Đồ của con không in chữ tiếng Việt.
     ${LS ? 'Little Seed lớp offline có hiện chữ (NL-4).' : 'Sách bài tập Seedling: trang tiếng Anh khó hơn trang tiếng Trung (lớp đã có tiếng Anh Pre A1).'}</div>

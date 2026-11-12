@@ -289,6 +289,7 @@
       <div class="brand">Buổi 0 · Khai giảng<small>Anh – Trung – Kids · web trình chiếu của cô</small></div>
       <div class="seg" role="group" aria-label="Chọn lớp"><button type="button" data-lv="ls">🌱 Little Seed</button><button type="button" data-lv="sd">🌿 Seedling</button></div>
       <div class="sp"></div>
+      <a class="tbtn" id="bNext" href="../buoi/?b=1" style="text-decoration:none">Buổi 1 ›</a>
       <div class="clock" id="clock"></div>
       <button type="button" class="tbtn" id="bRec">🎙 Giọng đọc</button>
       <button type="button" class="tbtn" id="bWin">📺 Cửa sổ chiếu</button>
@@ -341,6 +342,7 @@
   /* ---------------- thanh trên, khối, đồng hồ ---------------- */
   function renderTop() {
     $$('.seg [data-lv]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lv === S.lv)));
+    const nx = $('#bNext'); if (nx) nx.href = '../buoi/?lop=' + S.lv + '&b=1';
     const m = cur(), el = mins();
     $('#blocks').innerHTML = KHOI.map(k => {
       const ids = MAN.map((x, i) => [x, i]).filter(([x]) => x.k === k.n);
