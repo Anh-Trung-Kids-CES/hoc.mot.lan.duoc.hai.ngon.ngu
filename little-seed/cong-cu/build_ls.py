@@ -582,26 +582,74 @@ for un, MU in sorted(MANG.U.items()):
     pages = ([{'img': bdir + '/bia_khung.webp', 'en': MU['bb'][0], 'zh': MU['bb'][1], 'py': PY(MU['bb'][1]), 'cover': True,
                'a_en': au_multi('en', MU['bb'][0], 'co_huou'), 'a_zh': au_multi('zh', MU['bb'][1], 'co_huou')}] if os.path.exists('little-seed/' + bdir + '/bia_khung.webp') else []) + \
             [{'img': i, 'en': e, 'zh': z, 'py': PY(z), 'a_en': au_multi('en', e, 'co_huou'), 'a_zh': au_multi('zh', z, 'co_huou')} for i, e, z in BBP]
-    POOL = []
-    for pno, g, ans, opts in MU['bb_hoi']:
-        q_en = 'Who is %s?' % g; ae, az = BBP[pno][1], BBP[pno][2]   # câu trang lật (pno là số trang đoán, tính từ 1)
-        POOL.append({'img': BBP[pno - 1][0], 'q': {'en': q_en, 'zh': '这是谁？'}, 'opts': [{'k': o, 'img': FAM[o], 'en': FAM_TEN[o][0], 'zh': FAM_TEN[o][1]} for o in opts],
-                     'ans': opts.index(ans), 'a': {'en': ae, 'zh': az}})
     VEL = [dict(w=None, raw=e, en=re.sub(r'(?<=\w)-(?=\w)', '', e), zh=z, py=PY(z), img=(MU.get('ve_img') or [''] * 9)[k],
                 a_en=au_multi('en', re.sub(r'(?<=\w)-(?=\w)', '', e), 'co_huou'), a_zh=au_multi('zh', z, 'co_huou')) for k, (w, e, z, v) in enumerate(MU['ve'])]
+    # (12/11, mục N) mỗi unit: ngày đầu big book, ngày sau vè, mỗi thứ gặp 4 lần, việc khó dần (claude/QuyTac_BigBook_Ve_Web.md)
+    off = 1 if pages and pages[0].get('cover') else 0
+    def ten(k): e, z = FAM_TEN[k]; return {'k': k, 'img': FAM[k], 'en': e, 'zh': z, 'a_en': au_multi('en', e, 'co_huou'), 'a_zh': au_multi('zh', z, 'co_huou')}
+    def nua(t, nm):   # "Wow! He is my big brother!" -> "Wow! He is my…"; "哇！这是我哥哥！" -> "哇！这是我…"
+        i = t.find(nm); return (t[:i].rstrip() + '…') if i > 0 else t
+    def khung(t, nm): return t.replace(nm, '___', 1)
+    APG = {}   # người -> trang trả lời (chỉ số trong pages)
+    for pno, g, ans, opts in MU['bb_hoi']:
+        ap = off + pno; APG[ans] = ap; e, z = FAM_TEN[ans]; P_ = pages[ap]
+        P_.update({'nm': ans, 'half_en': nua(P_['en'], e), 'half_zh': nua(P_['zh'], z)})
+        P_.update({'a_half_en': au('en', P_['half_en'].rstrip('…'), 'co_huou'), 'a_half_zh': au('zh', P_['half_zh'].rstrip('…'), 'co_huou')})   # nửa câu: chỉ dùng file đúng nguyên câu
+    POOL = []
+    for pno, g, ans, opts in MU['bb_hoi']:
+        qp, ap = off + pno - 1, off + pno; e, z = FAM_TEN[ans]
+        POOL.append({'pg': qp, 'ap': ap, 'q': {'en': pages[qp]['en'], 'zh': pages[qp]['zh']}, 'say': {'en': pages[ap]['en'], 'zh': pages[ap]['zh']},
+                     'fr': {'en': khung(pages[ap]['en'], e), 'zh': khung(pages[ap]['zh'], z)}, 'opts': opts, 'ans': opts.index(ans)})
+    NAMES = [ten(k) for k in sorted(APG, key=APG.get)]
+    def cau_hoi(lan):
+        qs = []
+        for q in range(5):
+            it = POOL[(lan - 1 + q) % len(POOL)]; l = ('en', 'zh')[(q + lan - 1) % 2]
+            qs.append({'l': l, 'pg': it['pg'], 'ap': it['ap'], 'q': it['q'][l], 'py': PY(it['q']['zh']) if l == 'zh' else '', 'a_q': au_multi(l, it['q'][l], 'co_huou'),
+                       'say': it['say'][l], 'a_say': au_multi(l, it['say'][l], 'co_huou'), 'fr': it['fr'][l],
+                       'opts': [dict(ten(o), pg=APG.get(o, it['ap'])) for o in it['opts']], 'ans': it['ans']})
+        return qs
+    def cau_con():   # big book lần 4: "Who is he? He is my ___" với gia đình con, bìa khung ảnh
+        out = []
+        for q, (l, g) in enumerate([('en', 'he'), ('zh', 'he'), ('en', 'she'), ('zh', 'she'), ('en', 'he')]):
+            qt = ('Who is %s?' % g) if l == 'en' else '这是谁？'; ht = ('%s is my…' % g.capitalize()) if l == 'en' else '这是我…'
+            out.append({'l': l, 'q': qt, 'a_q': au_multi(l, qt, 'co_huou'), 'half': ht, 'a_half': au(l, ht.rstrip('…'), 'co_huou')})
+        return out
+    VE2 = {1: (VEL[0:2], ['en']), 2: (VEL[2:4], ['en']), 3: (VEL[0:2], ['en', 'zh']), 4: (VEL[2:4], ['en', 'zh'])}
+    BB_SUB = {1: 'Lần 1 · Nghe cả quyển, chạm đúng người', 2: 'Lần 2 · Đoán trang sau là ai', 3: 'Lần 3 · Đọc đuổi, điền chỗ trống', 4: 'Lần 4 · Con kể, rồi nói về gia đình con'}
+    BB_RULES = {1: ['Khởi động: con nghe 2 dòng vè và nghe tên các bạn trong truyện.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con nghe câu hỏi và chạm đúng người. Cần thì bấm 💡 để xem gợi ý.'],
+                2: ['Khởi động: con nghe 2 dòng vè và nghe lại 3 trang đầu.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con đoán: trang sau là ai? Con chạm vào tranh trang sau.'],
+                3: ['Khởi động: con nghe 2 dòng vè và 2 trang đầu.', 'Đọc đuổi: cô đọc, cô và con cùng đọc, rồi con đọc một mình.', 'Rồi con chọn tranh điền vào chỗ trống.'],
+                4: ['Khởi động: con nghe 2 dòng vè và nghe nhanh cả quyển.', 'Con kể: cô nói nửa câu, con nói tiếp.', 'Rồi con nói về gia đình con: "He is my…", "She is my…".']}
+    VE_SUB = {1: 'Lần 1 · Nghe mẫu, hát tiếng Anh', 2: 'Lần 2 · Hát tiếng Trung', 3: 'Lần 3 · Hát hai tiếng, giọng cô nhỏ dần', 4: 'Lần 4 · Lồng tiếng, lưu video gửi cô'}
+    VE_RULES = {1: ['Khởi động: con nghe lại 3 trang big book.', 'Con nghe cô đọc mẫu vè tiếng Anh từng dòng.', 'Rồi con hát karaoke cùng nhạc: chữ sáng đến đâu, con hát đến đó.'],
+                2: ['Khởi động: con nghe 3 trang big book và hát lại vè tiếng Anh cùng cô.', 'Con nghe cô đọc mẫu vè tiếng Trung từng dòng.', 'Rồi con hát karaoke tiếng Trung.'],
+                3: ['Khởi động: con nghe 3 trang big book và nghe nhanh vè hai tiếng.', 'Con hát karaoke 3 lượt mỗi tiếng: giọng cô to, rồi nhỏ, rồi tắt.', 'Lượt cuối con hát một mình nhé!'],
+                4: ['Khởi động: con nghe 3 trang big book và hát vè một lượt.', 'Lồng tiếng: video chạy, con hát, máy thu giọng con.', 'Ba mẹ lưu video và gửi cô qua Zalo (mỗi unit một lần).']}
+    WP = [p for p in pages if not p.get('cover')]
     for di, n in enumerate(D_U):
-        st = days[n]['steps']
-        for j, s in enumerate(st):
+        lan, bbday = di // 2 + 1, di % 2 == 0; st = days[n]['steps']; out = []
+        for s in st:
             if s.get('lab') == 'Big book':
-                qs = []
-                for q in range(4):
-                    it = POOL[(di + q) % len(POOL)]; l = 'en' if q % 2 == 0 else 'zh'
-                    qs.append({'l': l, 'img': it['img'], 'q': it['q'][l], 'py': PY(it['q']['zh']) if l == 'zh' else '', 'a_q': au_multi(l, it['q'][l], 'co_huou'),
-                               'opts': it['opts'], 'ans': it['ans'], 'say': it['a'][l], 'a_say': au_multi(l, it['a'][l], 'co_huou')})
-                st[j] = {'type': 'bb', 'lab': 'Big book', 'sub': 'Nghe cả quyển rồi trả lời câu hỏi', 'title': MU['bb'][0], 'title_zh': MU['bb'][1], 'pages': pages, 'qs': qs}
-            elif s['type'] == 've':
-                st[j] = {'type': 'vek', 'lab': 'Vè', 'sub': 'Nghe mẫu, hát karaoke rồi lồng tiếng', 'title': MU['ten_en'], 'title_zh': MU['ten_zh'],
-                         'bpm': 92, 'lines': [{k: v for k, v in x.items() if k != 'w'} for x in VEL]}
+                if not bbday: continue
+                v2, vl = VE2[lan]
+                warm = {'ve': [{k: v for k, v in x.items() if k != 'w'} for x in v2], 've_l': vl}
+                if lan == 1: warm['names'] = NAMES
+                if lan == 2: warm['pages'] = [off, off + 1, off + 2]
+                if lan == 3: warm['pages'] = [off, off + 1]
+                if lan == 4: warm['fast'] = True
+                out.append({'type': 'bb', 'lan': lan, 'lab': 'Big book', 'sub': BB_SUB[lan], 'rules': BB_RULES[lan], 'title': MU['bb'][0], 'title_zh': MU['bb'][1],
+                            'pages': pages, 'names': NAMES, 'warm': warm, 'qs': cau_con() if lan == 4 else cau_hoi(lan)})
+            elif s['type'] in ('ve', 'vek'):
+                if bbday: continue
+                k0 = off + 3 * (lan - 1)
+                out.append({'type': 'vek', 'lan': lan, 'lab': 'Vè', 'sub': VE_SUB[lan], 'rules': VE_RULES[lan], 'title': MU['ten_en'], 'title_zh': MU['ten_zh'],
+                            'bpm': 92, 'lines': [{k: v for k, v in x.items() if k != 'w'} for x in VEL], 'pages': pages, 'warm': [k0, k0 + 1, k0 + 2]})
+            elif s['type'] == 'noi' and bbday:
+                continue   # nguyên tắc 27 (phương án a): ngày có big book bỏ bước Nói theo riêng
+            else:
+                out.append(s)
+        days[n]['steps'] = out
     print('mẫu thiết kế mới: unit', un, 'ngày', D_U)
 out = {'who': who, 'days': {str(k): v for k, v in sorted(days.items())}, 'lop': {str(k): v for k, v in lop.items()}, 'map': mp,
        'soon': {str(k): v for k, v in soon.items()}, 'vi': SD0['vi'], 'vi_a': deep(SD0['vi_a']), 'vi_t': SD0.get('vi_t', {}), 'bg': {},

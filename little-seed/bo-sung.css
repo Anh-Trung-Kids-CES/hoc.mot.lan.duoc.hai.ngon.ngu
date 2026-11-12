@@ -343,3 +343,53 @@ body.is-demo:not(.in-step) .toast{bottom:calc(max(10px,env(safe-area-inset-botto
 .bb2-nav{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:6px}
 .bb2-nav .ls-b{min-width:56px}.bb2-auto{font-weight:700;color:#5a4a3a;min-width:150px;text-align:center}
 .bb2-tx .sx-pyl{font-size:17px!important;color:#2d7a74;margin-top:2px}
+
+/* ===== Big book + vè 4 lần (12/11): khởi động, gợi ý 💡, đọc đuổi, con kể, bìa khung ảnh ===== */
+.bvw{width:100%;display:flex;flex-direction:column;gap:12px;align-items:center}
+.bvw-h{width:min(100%,820px);display:flex;align-items:center;gap:10px}
+.bvw-h b{flex:1;font-size:18px;color:#5a4a3a}
+.bvw-tag{background:#FFE7A3;color:#7a5200;border-radius:999px;padding:4px 14px;font-weight:800}
+.bvw-host{width:min(100%,820px);min-height:300px;display:grid;place-items:center}
+.bvw-ve,.bvw-pg{width:100%;background:#fff;border-radius:22px;padding:12px;border:5px solid var(--ls-en);display:flex;flex-direction:column;gap:10px;align-items:center}
+.bvw-ve.zh,.bvw-pg.zh{border-color:var(--ls-zh)}
+.bvw-ve img,.bvw-pg img{width:min(100%,calc(42vh * 4 / 3));aspect-ratio:4/3;object-fit:cover;border-radius:16px}
+.bvw-line,.bvw-tx{display:flex;flex-direction:column;align-items:center;text-align:center}
+.bvw-line b,.bvw-tx b{font-size:clamp(22px,3vw,34px);font-weight:800;color:var(--ls-en)}
+.bvw-line b.zh,.bvw-tx b.zh{color:var(--ls-zh)}
+.bvw-line small,.bvw-tx small{font-size:17px;color:#2d7a74}
+.bvw-clap{font-size:46px;display:inline-block;animation:bvclap var(--beat,.65s) ease-in-out infinite}
+@keyframes bvclap{0%,100%{transform:scale(1)}40%{transform:scale(1.28) rotate(-8deg)}}
+.bvw-names{width:100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px}
+.bvw-names.sm{grid-template-columns:repeat(3,1fr);gap:6px}
+.bvw-nm{background:#fff;border-radius:18px;padding:8px;display:flex;flex-direction:column;align-items:center;border:4px solid #EFE6D6;transition:transform .2s,border-color .2s,opacity .2s;opacity:.7}
+.bvw-nm .ls-pic{width:100%;aspect-ratio:1;object-fit:contain}
+.bvw-nm b{font-size:17px;color:var(--ls-en)}.bvw-nm b.zh{color:var(--ls-zh);font-size:19px}
+.bvw-nm.seen{opacity:1}
+.bvw-nm.lit,.bb2-opts .ls-opt.lit{opacity:1;border-color:#F2C94C;box-shadow:0 0 0 6px #FFE7A3;transform:scale(1.06)}
+.bb2-who{display:inline-block;margin-top:6px;background:#FFF3D6;color:#7a5200;border-radius:999px;padding:3px 12px;font-weight:800;font-size:16px}
+.bb2-tx.ke{min-height:52px}
+.bb2-microw{display:flex;justify-content:center;margin:6px 0 22px}
+.bb2-microw .ls-mic{width:84px;height:84px}
+.bb2-pg.glow{box-shadow:0 0 0 6px #F2C94C,0 0 28px 6px rgba(242,201,76,.8);animation:bvglow 1.2s ease-in-out 2}
+@keyframes bvglow{50%{box-shadow:0 0 0 10px #F2C94C,0 0 40px 12px rgba(242,201,76,.9)}}
+.bb2-pg.peek img{filter:blur(10px) saturate(.9)}
+.bb2-peek{position:absolute;right:10px;top:10px;font-size:34px}
+.bb2-photo{position:absolute;object-fit:cover;border-radius:4px}
+.bb2-phrow{justify-content:center;margin-top:6px}
+.bb2-hrow{display:flex;align-items:center;gap:10px}
+.bb2-hrow .bb2-ans{flex:1}
+.bb2-bulb{background:#FFF3D6;border:3px solid #F2C94C;color:#7a5200;font-weight:800;font-size:17px}
+.bb2-bulb.on{background:#F2C94C;color:#3b2a1f}
+.bb2-opts .ls-opt{border:4px solid transparent;transition:transform .2s}
+.bb2-opts .ls-opt.off{opacity:.35}
+.bb2-opts .ls-opt.model{box-shadow:0 0 0 6px #F2C94C;animation:bvglow 1.2s ease-in-out 2}
+.bb2-opts.pg .bb2-pgopt{padding:4px}.bb2-opts.pg .bb2-pgopt img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;display:block}
+.bb2-arrow{font-size:28px;font-weight:900;color:#F2994A;white-space:nowrap}
+.bb2-blank{font-style:normal;display:inline-block;min-width:3.5em;border-bottom:4px dashed #F2994A;text-align:center;color:#F2994A}
+.bb2-blank.fill{border-bottom-style:solid;color:var(--ls-ok)}
+.bb2-mine{display:flex;flex-direction:column;align-items:center;gap:14px;padding-top:6px}
+.bb2-mine .bb2-ask{width:100%;justify-content:center}
+.bb2-half{font-size:clamp(24px,3vw,34px);font-weight:800;color:var(--ls-en)}.bb2-half.zh{color:var(--ls-zh)}
+.bb2-half i{font-style:normal;color:#F2994A}
+.bb2-mine .ls-mic{margin-bottom:22px}
+@media (prefers-reduced-motion:reduce){.bvw-clap,.bb2-pg.glow,.bb2-opts .ls-opt.model{animation:none}}

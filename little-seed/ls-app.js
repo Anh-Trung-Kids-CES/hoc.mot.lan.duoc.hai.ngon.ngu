@@ -508,7 +508,7 @@ function viewDay(n, sub) { const day = SD.days[n]; if (!day) { toast('Ngày này
       ${vids ? `<div class="sx-vids"><b>Xem thêm (không bắt buộc):</b>${vids}</div>` : ''}</div></section>
     <section class="dy-tiles">${day.steps.map((st, j) => { const done = j in s.steps, now = j === nextJ;
       return `<button class="ht step ${done ? 'done' : 'open'} ${now ? 'now' : ''}" data-j="${j}" type="button" style="--tc:#3BB273"><span class="ht-img" style="background-image:url('${ICON(T[st.type].ic)}')"></span>
-        ${done ? `<span class="ht-badge ok">✓ ${s.steps[j]}★</span>` : ''}${now ? '<span class="ht-now">▶ Bắt đầu</span>' : ''}<span class="ht-lb"><small>Bước ${j + 1} · ${esc(T[st.type].sub)}</small><b>${esc(T[st.type].n)}</b></span></button>`; }).join('')}</section></div>`;
+        ${done ? `<span class="ht-badge ok">✓ ${s.steps[j]}★</span>` : ''}${now ? '<span class="ht-now">▶ Bắt đầu</span>' : ''}<span class="ht-lb"><small>Bước ${j + 1} · ${esc(st.sub || T[st.type].sub)}</small><b>${esc(st.lab || T[st.type].n)}</b></span></button>`; }).join('')}</section></div>`;
   document.getElementById('goal').onclick = () => { stopAll(); say({ t: 'Hôm nay con học: ' + day.goal, l: 'vi' }); };
   const go = document.getElementById('go'); if (go) go.onclick = () => { sfx.pop(); location.hash = `#/ngay/${n}/b${nextJ + 1}`; };
   app.querySelectorAll('.ht.step').forEach(b => b.onclick = () => { sfx.pop(); location.hash = `#/ngay/${n}/b${+b.dataset.j + 1}`; });
