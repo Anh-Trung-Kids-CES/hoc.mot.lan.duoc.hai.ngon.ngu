@@ -147,6 +147,7 @@ const T = {
   hoi: { n: 'Trả lời câu hỏi', ic: 'cx_o_quiz', sub: 'Câu hỏi về cả truyện · YCT 听后回答', rules: ['Con nghe câu hỏi về truyện.', 'Con chạm vào câu trả lời đúng, rồi nói câu trả lời.'] },
   loi: { n: 'Lời lớp học', ic: 'ls_o_xem', sub: 'Câu cô nói mỗi buổi', rules: ['Đây là những câu cô Lan nói trên lớp.', 'Con chạm vào từng thẻ để nghe tiếng Anh và tiếng Trung.'] },
   meo: { n: 'Mẹo âm', ic: 'ls_o_anh_trung', sub: 'Thanh điệu và âm', rules: ['Con nghe và bắt chước âm 3 lần.', 'Rồi con nghe và chạm đúng kí hiệu.'] },
+  ve: { n: 'Vè', ic: 'cx_o_video', sub: 'Vỗ tay theo nhịp', rules: ['Con nghe vè 2 lần: tiếng Anh rồi tiếng Trung. Bàn tay sáng lên theo nhịp.', 'Rồi đến lượt con: vừa vỗ tay vừa nói vè.'] },
   goi: { n: 'Gọi lại', ic: 'cx_o_speak', sub: 'Hộp ôn', rules: ['Con nhìn tranh và tự nói từ đó.', 'Rồi con nghe đáp án và nói lại.'] }
 };
 const ICON = k => `tai-nguyen/trang/${k}.webp`;
@@ -171,7 +172,7 @@ function frame(box, step) {
   return box.querySelector('#lsBody');
 }
 function rulesCard(body, step, run) {
-  const M = T[step.type]; let started = false; const my = RUN;
+  const M = Object.assign({}, T[step.type], step.lab ? { n: step.lab } : {}); let started = false; const my = RUN;
   body.innerHTML = `<div class="ls-rule"><img src="${ICON(M.ic)}" alt=""><div class="ls-rtx"><span class="ls-lab">Luật chơi</span><h3>${esc(M.n)}</h3>
     <ol>${M.rules.map(l => `<li>${esc(l)}</li>`).join('')}</ol><div class="row ls-rrow"><button class="btn g" id="go">▶ Bắt đầu</button></div></div></div>`;
   const start = () => { if (started) return; started = true; stopAll(); run(); };
@@ -191,8 +192,8 @@ function finish() {
   const body = document.getElementById('lsBody'), nx = k + 1 < day.steps.length;
   if (day.steps.every((_, j) => j in s.steps) && !s.done) { s.done = true; save(); return dayDone(n); }
   body.innerHTML = `<div class="ls-done"><div class="ls-bigstar">${SVG.star}</div><b>Con đã làm xong bước này!</b><span>Con được ${stars} sao.</span>
-    ${nx ? `<div class="ls-next"><img src="${ICON(T[day.steps[k + 1].type].ic)}" alt=""><div><small>Bước tiếp theo</small><b>Bước ${k + 2}: ${esc(T[day.steps[k + 1].type].n)}</b><span>${esc(T[day.steps[k + 1].type].rules[0])}</span></div></div>` : ''}
-    <div class="row">${nx ? `<a class="btn g" href="#/ngay/${n}/b${k + 2}">Bước ${k + 2}: ${esc(T[day.steps[k + 1].type].n)} →</a>` : `<a class="btn g" href="#/ngay/${n}">⭐ Xong các bước!</a>`}<button class="btn y" id="again">Chơi lại</button></div></div>`;
+    ${nx ? `<div class="ls-next"><img src="${ICON(T[day.steps[k + 1].type].ic)}" alt=""><div><small>Bước tiếp theo</small><b>Bước ${k + 2}: ${esc(day.steps[k + 1].lab || T[day.steps[k + 1].type].n)}</b><span>${esc(T[day.steps[k + 1].type].rules[0])}</span></div></div>` : ''}
+    <div class="row">${nx ? `<a class="btn g" href="#/ngay/${n}/b${k + 2}">Bước ${k + 2}: ${esc(day.steps[k + 1].lab || T[day.steps[k + 1].type].n)} →</a>` : `<a class="btn g" href="#/ngay/${n}">⭐ Xong các bước!</a>`}<button class="btn y" id="again">Chơi lại</button></div></div>`;
   body.querySelector('#again').onclick = () => startStep(true); X.replay = null; cap(''); sfx.win(); confetti(16); hd('stepdone');
 }
 function dayDone(n) {
@@ -262,6 +263,38 @@ R.truyen = (step, body, day) => {
   async function auto() { const me = ++RUN; if (c === 0 && pass === 0) { await hd('listen'); if (me !== RUN) return; }
     while (me === RUN && c < Sc.length) { draw(); cap((pass ? '中文: ' + Sc[c].zh : 'EN: ' + Sc[c].en)); await line(); if (me !== RUN) return; await wait(900); if (me !== RUN) return; if (c === Sc.length - 1) return end(); c++; } }
   X.replay = () => { stopAll(); line(); }; draw(); auto();
+};
+/* 3b. VÈ – bước riêng, tách khỏi big book (chị chốt 12/11): nghe tiếng Anh, nghe tiếng Trung (bàn tay sáng theo nhịp),
+   rồi con vừa vỗ tay vừa nói. Chữ thường như câu bình thường; từ in đậm là phách mạnh. */
+function clapSnd() { if (MUTE) return; try { actx = actx || new (window.AudioContext || window.webkitAudioContext)(); const n = Math.floor(actx.sampleRate * .09), b = actx.createBuffer(1, n, actx.sampleRate), d = b.getChannelData(0);
+  for (let i = 0; i < n; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / n, 3);
+  const s = actx.createBufferSource(), f = actx.createBiquadFilter(), g = actx.createGain(); f.type = 'bandpass'; f.frequency.value = 1400; g.gain.value = .6;
+  s.buffer = b; s.connect(f); f.connect(g); g.connect(actx.destination); s.start(); } catch (e) {} }
+R.ve = (step, body) => {
+  const L = step.lines, BEAT = 560, LAB = ['Nghe vè · tiếng Anh', 'Nghe vè · tiếng Trung', 'Vỗ tay và nói theo'];
+  let pass = 0, i = 0, lang = 'en', beat = -1, timer = null;
+  const txt = ln => lang === 'zh' ? `<b class="zh">${esc(ln.zh)}</b>${ln.py ? `<span class="sx-pyl" data-later>${esc(ln.py)}</span>` : ''}`
+    : (ln.w || [[ln.en, false]]).map(([t, s]) => s ? `<b>${esc(t)}</b>` : `<span>${esc(t)}</span>`).join(' ');
+  const draw = (turn) => { dots(pass, 3);
+    body.innerHTML = `<div class="ve-wrap ${lang}"><div class="ls-xh"><span class="ls-tag ${lang}">${LAB[pass]}</span><span>“${esc(lang === 'zh' ? step.title_zh : step.title)}”</span></div>
+      <div class="ve-card">${L.map((ln, k) => `<div class="ve-line ${k === i ? 'on' : ''}">${ln.img ? `<img src="${esc(ln.img)}" alt="">` : '<span class="ve-note">♪</span>'}<div class="ve-tx">${txt(ln)}</div></div>`).join('')}
+        <div class="ve-claps ${turn ? 'turn' : ''}">${[0, 1, 2, 3].map(b => `<span class="${b === beat ? 'hit' : ''}">👏</span>`).join('')}</div>
+        <div class="ve-say">${turn ? 'Đến lượt con! Vừa vỗ tay vừa nói.' : 'Con nghe và nhìn bàn tay sáng theo nhịp.'}</div></div></div>`;
+    revealPy(body, 900); };
+  const light = b => { beat = b; body.querySelectorAll('.ve-claps span').forEach((e, k) => e.classList.toggle('hit', k === b)); };
+  const pulse = on => { clearInterval(timer); timer = null; light(-1); if (!on) return; let b = 0; light(0); timer = setInterval(() => { b = (b + 1) % 4; light(b); }, BEAT); };
+  const line = async () => { const ln = L[i]; cap((lang === 'zh' ? '中文: ' + ln.zh : 'EN: ' + ln.en)); pulse(true); await say(lang === 'zh' ? zh(ln.zh, ln.a_zh) : en(ln.raw || ln.en, ln.a_en)); pulse(false); };
+  const kidTurn = async me => { draw(true); for (let b = 0; b < 4; b++) { if (me !== RUN) return; light(b); clapSnd(); await wait(BEAT); } light(-1); };
+  const end = () => { clearInterval(timer); stopAll(); const nx = ['Nghe bằng tiếng Trung →', 'Vỗ tay và nói theo →'][pass];
+    body.innerHTML = `<div class="ls-done"><b>${pass === 0 ? 'Hết vè!' : 'Giỏi lắm!'}</b><span>${pass === 0 ? 'Mình nghe lại bằng tiếng Trung nhé.' : 'Giờ con vừa vỗ tay vừa nói vè nhé.'}</span><div class="row"><button class="btn g" id="nx">${nx}</button></div></div>`;
+    body.querySelector('#nx').onclick = () => { sfx.ok(); star(); pass++; run(); }; };
+  async function run() { const me = ++RUN; i = 0;
+    if (pass < 2) { lang = pass ? 'zh' : 'en';
+      for (i = 0; i < L.length; i++) { draw(false); await line(); if (me !== RUN) return; await wait(500); if (me !== RUN) return; }
+      return end(); }
+    for (i = 0; i < L.length; i++) for (const l of ['en', 'zh']) { lang = l; draw(false); await line(); if (me !== RUN) return; await wait(250); await kidTurn(me); if (me !== RUN) return; await wait(300); }
+    clearInterval(timer); star(); finish(); }
+  X.replay = () => { stopAll(); line(); }; run();
 };
 /* 4. CHẠM ĐÚNG TRANH – ai nói câu này? Sai vẫn đi tiếp, câu sai gặp lại ở cuối bài */
 R.cham = (step, body) => {

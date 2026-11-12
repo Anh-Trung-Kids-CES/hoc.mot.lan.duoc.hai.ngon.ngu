@@ -567,6 +567,8 @@ reader = {'1': {'t': "Bông's Day", 'zh': 'Bông的一天', 'pages': [dict(s, pa
 reader.update(READER)
 fix_ten(reader)
 
+# Tách bước "Big book và vè" thành bước Big book + bước Vè riêng (chị chốt 12/11)
+import sys as _s; _s.path.insert(0, 'chuong-trinh/cong-cu'); from tach_bb_ve import tach as _tach; print('tách big book / vè', _tach(days, 'LS'))
 out = {'who': who, 'days': {str(k): v for k, v in sorted(days.items())}, 'lop': {str(k): v for k, v in lop.items()}, 'map': mp,
        'soon': {str(k): v for k, v in soon.items()}, 'vi': SD0['vi'], 'vi_a': deep(SD0['vi_a']), 'vi_t': SD0.get('vi_t', {}), 'bg': {},
        'reader': reader, 'units_q': units_q, 'aumap': {}, 'vi_tx': deep(SD0['vi_tx'])}

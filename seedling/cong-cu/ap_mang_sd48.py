@@ -158,13 +158,14 @@ DAYS = SD['days']
 def unit_days(n, kind):
     return sorted((int(k) for k, d in DAYS.items() if str(d.get('unit')) == str(n) and d.get('kind') == kind))
 def put_bb(st, step):
-    i = next((i for i, s in enumerate(st) if s.get('lab') == 'Big book và vè'), None)
+    i = next((i for i, s in enumerate(st) if s.get('lab') in ('Big book và vè', 'Big book')), None)
+    if i is not None and i + 1 < len(st) and st[i + 1]['type'] == 've': del st[i + 1]
     if i is None: i = next((i for i, s in enumerate(st) if s['type'] in ('cham', 'chon')), None)
     if i is not None: st[i] = step
     else:
         j = next(i for i, s in enumerate(st) if s['type'] == 'truyen'); st.insert(j + 1, step)
 def set_truyen(st, step):
-    i = next(i for i, s in enumerate(st) if s['type'] == 'truyen' and s.get('lab') != 'Big book và vè'); st[i] = step
+    i = next(i for i, s in enumerate(st) if s['type'] == 'truyen' and not s.get('lab')); st[i] = step
 
 report = {}
 for n, M in sorted(MG.U.items()):
@@ -209,7 +210,7 @@ U4 = MG.U[4]; ph4 = unit_days(4, 'Phần'); SC4 = []
 d0 = S + 'tai-nguyen/canh/u4'
 if os.path.isdir(d0): shutil.rmtree(d0)
 for k, dn in enumerate(ph4):
-    st = DAYS[str(dn)]['steps']; tr = next(s for s in st if s['type'] == 'truyen' and s.get('lab') != 'Big book và vè')
+    st = DAYS[str(dn)]['steps']; tr = next(s for s in st if s['type'] == 'truyen' and not s.get('lab'))
     P = [(s['who'], s['en'], s['zh']) for s in tr['scenes']]
     sc = compose(4, k, P, U4['bg'], {'Grandpa': 'ong'}, ['body', 'hair', 'arm', 'leg', 'finger', 'toe', 'shoulder', 'knee', 'mouth', 'town', 'clap_your_hands', 'stamp_your_feet'])
     for a, b in zip(tr['scenes'], sc):
@@ -252,6 +253,8 @@ for d in DAYS.values():
                 it['py'] = re.sub(r'^Nghe\s*l[àa]m\s*quen\s*', '', it.get('py', ''), flags=re.I); it['py'] = it['py'][:1].upper() + it['py'][1:]
                 it['a_zh'] = au('zh', it['zh'])
 
+# Tách bước "Big book và vè" thành bước Big book + bước Vè riêng (chị chốt 12/11)
+import sys; sys.path.insert(0, 'chuong-trinh/cong-cu'); from tach_bb_ve import tach as _tach; print('tách big book / vè', _tach(DAYS, 'SD'))
 open(DATA, 'w').write(head + '\nwindow.SD=' + json.dumps(SD, ensure_ascii=False) + ';\n')
 json.dump(sorted(MISS), open('seedling/cong-cu/giong_thieu_sd48.json', 'w'), ensure_ascii=False, indent=0)
 for n, (ph, ca, ns) in report.items(): print(f'U{n}: ngày phần {ph[0]}–{ph[-1]}, cả truyện {ca}, {ns} cảnh')
