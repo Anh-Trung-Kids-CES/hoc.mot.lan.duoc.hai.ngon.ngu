@@ -54,6 +54,11 @@ U[3] = dict(ten_en="Bông's Family", ten_zh='Bông的家人', bg='ls_home', phan
         ('tai-nguyen-ls/bigbook/u3/p12.webp', 'Shh! She is my little sister.', '嘘！这是我妹妹。'),
         ('tai-nguyen-ls/bigbook/u3/p13.webp', 'This is my family. I love you!', '这是我的家人。我爱你！'),
         ('tai-nguyen-ls/bigbook/u3/p14.webp', 'Who is he? Who is she?', '这是谁？')]),
+    # (12/11) web: đọc hết big book bên trái, rồi câu hỏi đọc hiểu bên phải. (trang đoán, he/she, đáp án, 3 lựa chọn); đáp án nghe lại = câu trang lật
+    bb_hoi=[(1, 'she', 'me', ['me', 'ba', 'em_gai']), (3, 'he', 'bo', ['ong', 'bo', 'anh_trai']), (5, 'she', 'ba', ['me', 'em_gai', 'ba']),
+            (7, 'he', 'ong', ['ong', 'anh_trai', 'bo']), (9, 'he', 'anh_trai', ['bo', 'ong', 'anh_trai']), (11, 'she', 'em_gai', ['ba', 'em_gai', 'me'])],
+    # (12/11) vè dạng video karaoke: tranh từng dòng (trang big book)
+    ve_img=['tai-nguyen-ls/bigbook/u3/p11.webp', 'tai-nguyen-ls/bigbook/u3/p12.webp', 'tai-nguyen-ls/bigbook/u3/p11.webp', 'tai-nguyen-ls/bigbook/u3/p12.webp'],
     ve=[('co', '___, ___, WHO is SHE?', '___，___，这是谁？', '-ee / ui'), ('bong', "SHE'S my SIS-ter! SHE is THREE!", '我的妹妹，三岁！', '-ee / ui'),
         ('lop', 'BA-by, BA-by, WHO are YOU?', '宝宝宝宝，你是谁？', '-oo / ui'), ('lop', 'SHH! SHH! BA-by! I love YOU!', '嘘嘘嘘，宝宝睡！', '-oo / ui')],
     the=[[('grandpa', '爷爷', 'fam_bong_ong'), ('who', '谁', ''), ('he', '这', '')], [('grandma', '奶奶', 'fam_bong_ba'), ('she', '这', '')],

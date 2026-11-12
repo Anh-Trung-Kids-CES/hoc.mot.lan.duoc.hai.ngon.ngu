@@ -569,6 +569,40 @@ fix_ten(reader)
 
 # Tách bước "Big book và vè" thành bước Big book + bước Vè riêng (chị chốt 12/11)
 import sys as _s; _s.path.insert(0, 'chuong-trinh/cong-cu'); from tach_bb_ve import tach as _tach; print('tách big book / vè', _tach(days, 'LS'))
+# Thiết kế mới (chị chốt 12/11) – mẫu U3 trước khi làm các unit khác:
+#   bước "bb": trái đọc cả quyển big book (Anh rồi Trung từng trang), phải 4 câu hỏi đọc hiểu, trả lời sau khi nghe hết;
+#   bước "vek": vè dạng video karaoke (tranh + lời sáng theo nhịp + nhạc máy), hát nhiều lần, rồi lồng tiếng, lưu video về máy.
+FAM = {k: '../seedling/tai-nguyen/nhan-vat/fam_bong_%s_a.webp' % v for k, v in
+       {'me': 'me', 'bo': 'bo', 'ba': 'ba', 'ong': 'ong', 'anh_trai': 'anh_trai', 'em_gai': 'em_gai'}.items()}
+FAM_TEN = {'me': ('mommy', '妈妈'), 'bo': ('daddy', '爸爸'), 'ba': ('grandma', '奶奶'), 'ong': ('grandpa', '爷爷'), 'anh_trai': ('big brother', '哥哥'), 'em_gai': ('little sister', '妹妹')}
+for un, MU in sorted(MANG.U.items()):
+    if not MU.get('bb_hoi'): continue
+    D_U = sorted(n for n, d in days.items() if str(d.get('unit')) == str(un))
+    BBP = MU['bb'][2]; bdir = BBP[0][0].rsplit('/', 1)[0]
+    pages = ([{'img': bdir + '/bia_nen.webp', 'en': MU['bb'][0], 'zh': MU['bb'][1], 'py': PY(MU['bb'][1]), 'cover': True,
+               'a_en': au_multi('en', MU['bb'][0], 'co_huou'), 'a_zh': au_multi('zh', MU['bb'][1], 'co_huou')}] if os.path.exists('little-seed/' + bdir + '/bia_nen.webp') else []) + \
+            [{'img': i, 'en': e, 'zh': z, 'py': PY(z), 'a_en': au_multi('en', e, 'co_huou'), 'a_zh': au_multi('zh', z, 'co_huou')} for i, e, z in BBP]
+    POOL = []
+    for pno, g, ans, opts in MU['bb_hoi']:
+        q_en = 'Who is %s?' % g; ae, az = BBP[pno][1], BBP[pno][2]   # câu trang lật (pno là số trang đoán, tính từ 1)
+        POOL.append({'img': BBP[pno - 1][0], 'q': {'en': q_en, 'zh': '这是谁？'}, 'opts': [{'k': o, 'img': FAM[o], 'en': FAM_TEN[o][0], 'zh': FAM_TEN[o][1]} for o in opts],
+                     'ans': opts.index(ans), 'a': {'en': ae, 'zh': az}})
+    VEL = [dict(w=None, raw=e, en=re.sub(r'(?<=\w)-(?=\w)', '', e), zh=z, py=PY(z), img=(MU.get('ve_img') or [''] * 9)[k],
+                a_en=au_multi('en', re.sub(r'(?<=\w)-(?=\w)', '', e), 'co_huou'), a_zh=au_multi('zh', z, 'co_huou')) for k, (w, e, z, v) in enumerate(MU['ve'])]
+    for di, n in enumerate(D_U):
+        st = days[n]['steps']
+        for j, s in enumerate(st):
+            if s.get('lab') == 'Big book':
+                qs = []
+                for q in range(4):
+                    it = POOL[(di + q) % len(POOL)]; l = 'en' if q % 2 == 0 else 'zh'
+                    qs.append({'l': l, 'img': it['img'], 'q': it['q'][l], 'py': PY(it['q']['zh']) if l == 'zh' else '', 'a_q': au_multi(l, it['q'][l], 'co_huou'),
+                               'opts': it['opts'], 'ans': it['ans'], 'say': it['a'][l], 'a_say': au_multi(l, it['a'][l], 'co_huou')})
+                st[j] = {'type': 'bb', 'lab': 'Big book', 'sub': 'Nghe cả quyển rồi trả lời câu hỏi', 'title': MU['bb'][0], 'title_zh': MU['bb'][1], 'pages': pages, 'qs': qs}
+            elif s['type'] == 've':
+                st[j] = {'type': 'vek', 'lab': 'Vè', 'sub': 'Hát karaoke rồi lồng tiếng', 'title': 'Vè · ' + MU['ten_en'], 'title_zh': '儿歌 · ' + MU['ten_zh'],
+                         'bpm': 92, 'lines': [{k: v for k, v in x.items() if k != 'w'} for x in VEL]}
+    print('mẫu thiết kế mới: unit', un, 'ngày', D_U)
 out = {'who': who, 'days': {str(k): v for k, v in sorted(days.items())}, 'lop': {str(k): v for k, v in lop.items()}, 'map': mp,
        'soon': {str(k): v for k, v in soon.items()}, 'vi': SD0['vi'], 'vi_a': deep(SD0['vi_a']), 'vi_t': SD0.get('vi_t', {}), 'bg': {},
        'reader': reader, 'units_q': units_q, 'aumap': {}, 'vi_tx': deep(SD0['vi_tx'])}
