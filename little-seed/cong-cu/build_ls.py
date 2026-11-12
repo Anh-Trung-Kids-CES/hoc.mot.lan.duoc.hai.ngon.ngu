@@ -229,7 +229,7 @@ days[8] = {'steps': [whole, {'type': 'pdn', 'model_first': True,
 # ngày 9: big book "Goodbye, Puppy!" (chị duyệt kịch bản 11/11, tranh vẽ Canva DAHanaV9zZg trang 15–27, claude/KichBan_BigBook_LS_U1.md)
 # → chọn tranh trộn → nói theo big book → vận động. Tranh: little-seed/tai-nguyen-ls/bigbook/u1/
 BBD = 'tai-nguyen-ls/bigbook/u1/'
-BB_BIA = (BBD + 'bia.webp', 'Goodbye, Puppy!', '小狗，再见！', 'Xiǎogǒu, zàijiàn!')
+BB_BIA = (BBD + 'bia_nen.webp', 'Goodbye, Puppy!', '小狗，再见！', 'Xiǎogǒu, zàijiàn!')
 BB = [(BBD + 'p1.webp', 'Good morning!', '早上好！', 'Zǎoshang hǎo!'), (BBD + 'p2.webp', 'Good morning, mommy!', '妈妈，早上好！', 'Māma, zǎoshang hǎo!'),
       (BBD + 'p3.webp', 'Hello, daddy!', '爸爸，你好！', 'Bàba, nǐ hǎo!'), (BBD + 'p4.webp', 'Goodbye, puppy!', '小狗，再见！', 'Xiǎogǒu, zàijiàn!'),
       (BBD + 'p5.webp', 'Hello, teacher!', '老师，你好！', 'Lǎoshī, nǐ hǎo!'), (BBD + 'p6.webp', 'Hello, friend!', '朋友，你好！', 'Péngyou, nǐ hǎo!'),

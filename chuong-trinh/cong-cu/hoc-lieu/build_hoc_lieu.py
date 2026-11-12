@@ -159,7 +159,9 @@ for L, C in LEVELS.items():
             for p in pg: p['zh'], p['py'] = zh.get(p['en'], ('', ''))
             bbs.append({'title': 'Goodbye, Puppy!', 'title_zh': '小狗，再见！', 'pages': pg})
             ves.append({'lines': [{'en': e, 'zh': zh.get(e, ('', ''))[0], 'py': zh.get(e, ('', ''))[1], 'van': ''} for e, i in webbb.items() if 'song' in i]})
-        for b in bbs:
+        for b in bbs:   # bìa: chỉ cảnh nền (không nhân vật) + tên truyện (chị chốt 12/11): bia_nen.webp cạnh tranh các trang
+            p1 = next((p['img'] for p in b['pages'] if '/bigbook/' in p['img']), '')
+            if p1 and os.path.exists(p1.rsplit('/', 1)[0] + '/bia_nen.webp'): b['cover'] = p1.rsplit('/', 1)[0] + '/bia_nen.webp'
             for p in b['pages']: p['line'] = '' if '/bigbook/' in p['img'] else LA(p['img'])   # tranh big book vẽ Canva: nhiều chi tiết, không làm nét tô (trang in không dùng)
         who = []
         for p in parts:
@@ -259,13 +261,14 @@ for L, C in LEVELS.items():
     open(f'{out}/hoc-lieu-data.js', 'w').write('window.HL=' + json.dumps(data, ensure_ascii=False) + ';\n')
     here = os.path.dirname(os.path.abspath(__file__))
     for fn in ('hoc-lieu.js', 'hoc-lieu.css'): open(f'{out}/{fn}', 'w').write(open(os.path.join(here, fn)).read())
+    VER = hashlib.md5(b''.join(open(f'{out}/{fn}', 'rb').read() for fn in ('hoc-lieu-data.js', 'hoc-lieu.js', 'hoc-lieu.css'))).hexdigest()[:8]
     open(f'{out}/index.html', 'w').write(f'''<!doctype html>
 <html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{C['title'].split(' · ')[0]} · Web dạy · Học liệu in</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="hoc-lieu.css?v=1"></head>
-<body><div id="app"></div><script src="hoc-lieu-data.js?v=1"></script><script src="hoc-lieu.js?v=1"></script></body></html>
+<link rel="stylesheet" href="hoc-lieu.css?v={VER}"></head>
+<body><div id="app"></div><script src="hoc-lieu-data.js?v={VER}"></script><script src="hoc-lieu.js?v={VER}"></script></body></html>
 ''')
     print(L, 'unit', [(u['key'], len(u['words']), len(u['parts']), len(u['strips'])) for u in units], 'buổi', len(sessions),
           'tranh tô màu', len(os.listdir(out + '/to-mau')), 'chữ Hán', list(HZD), 'thiếu nét', [c for c, v in HZD.items() if not v])
