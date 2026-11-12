@@ -428,3 +428,12 @@ body.chieu .stage{aspect-ratio:auto;height:100vh}
 .fc b{font-size:21px;text-align:center;white-space:normal}
 .flash .cards.c5 .fc b{font-size:19px}
 .book .bk-h .lt{color:#fff;font-weight:800}
+/* tắt chiếu, con làm chủ (13/11) */
+.off-band{position:absolute;left:0;right:0;bottom:0;height:40px;background:rgba(43,33,24,.88);color:#fff;font-weight:800;font-size:20px;display:flex;align-items:center;justify-content:center;z-index:5}
+.slide.toi{background:#2B2118}
+.toi-in{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:#FFF3D1;text-align:center}
+.toi-in .e{font-size:180px;line-height:1}.toi-in b{font-family:var(--f-d);font-size:90px}.toi-in .zh{font-family:var(--f-zh);font-size:70px;font-weight:700}
+.toi-in small{font-size:28px;opacity:.75;margin-top:20px}
+.sess .kpi{background:#EAF7F6;border-radius:999px;padding:2px 10px;color:var(--teal-d);font-weight:800}
+.dots i.off{outline:2px solid #2B2118;outline-offset:1px}.dots i.lead{background:var(--yellow)}
+.note .chips .lead{background:var(--yellow)}.note .chips .v-mau{background:#FFE4D6}.note .chips .v-giup{background:#E2F0FF}.note .chips .v-nghe{background:#E3F6E8}

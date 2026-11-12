@@ -329,6 +329,9 @@
       return head(m) + `<div class="kt-n">Câu ${st.j + 1}/${m.items.length}</div><div class="kt-o">${it.opts.map((o, i) => `<div class="ko${st.show && i === it.ans ? ' hit' : ''}"><i>${'ABC'[i]}</i><img src="${esc(o)}" alt=""></div>`).join('')}</div>` +
         `<div class="kt-say">${st.show ? `<span class="${it.say.l}">${esc(it.say.t)}</span>` : '🔊 Nghe và khoanh vào phiếu'}</div>`;
     },
+    toi(m) {
+      return `<div class="toi-in"><div class="e">👀</div><b>Look at me!</b><span class="zh">看老师！</span><small>${esc(m.cue || 'Cầm thẻ, rối của con nào!')}</small></div>`;
+    },
     chu(m) {
       return head(m) + `<div class="chu">${m.cols.map(c => `<div class="cu"><h4>${esc(c.h)}</h4>${c.big ? `<div class="bg ${c.zh ? 'zh' : ''}">${esc(c.big)}</div>` : ''}${c.img ? `<img src="${esc(c.img)}" alt="">` : ''}${c.small ? `<p>${esc(c.small)}</p>` : ''}${(c.words || []).map(w => `<span class="w ${c.zh ? 'zh' : ''}">${esc(w)}</span>`).join('')}</div>`).join('')}</div>`;
     },
@@ -376,7 +379,8 @@
     } else {
       if (m.type !== 'song' || songKey !== lastSong) destroyVideo();
       slide.className = 'slide ' + m.type + (S.py ? '' : ' hide-py') + (m.type === 've' && st.loud ? (st.loud === 'to' ? ' loud' : ' quiet') : '');
-      slide.innerHTML = R[m.type](m, st);
+      slide.innerHTML = CHIEU && m.off ? R.toi(m) : R[m.type](m, st) + (m.off ? `<div class="off-band">📴 Màn chiếu đang tắt · chỉ máy cô thấy màn này</div>` : '');
+      if (CHIEU && m.off) slide.className = 'slide toi';
       if (m.type === 'song' && $('#vid')) mountVideo($('#vid'), (m.songs[st.v] || m.songs[0]).id);
       lastSong = songKey;
     }
@@ -399,12 +403,12 @@
     $('#bseg').innerHTML = `<a class="b0" href="../khai-giang/?lop=${LV}">🎉 Buổi 0</a>` + buoiList(LV).map(n => `<button type="button" data-b="${n}" aria-pressed="${n === B}">Buổi ${n}</button>`).join('') +
       (L.sau ? `<span class="sau" title="${esc(L.sau)}">${esc(L.sau)}</span>` : '');
     const v = VAI[BU.vai] || VAI.mau;
-    $('#sess').innerHTML = `<b>${esc(BU.t)}</b><span>${esc(BU.about)}</span><span class="vai">${v[0]} ${v[1]}</span><span class="dw">💻 Ngày web trước buổi: ${BU.days.join(', ')}</span>`;
+    $('#sess').innerHTML = `<b>${esc(BU.t)}</b><span>${esc(BU.about)}</span><span class="vai">Vai chính: ${v[0]} ${v[1]}</span><span class="kpi">🙋 Con làm chủ ${BU.lead || 0}′ · 📴 Tắt chiếu ${BU.offm || 0}′</span><span class="dw">💻 Ngày web trước buổi: ${BU.days.join(', ')}</span>`;
     const m = cur(), el = mins();
     $('#blocks').innerHTML = KHOI.map(k => {
       const ids = MAN.map((x, i) => [x, i]).filter(([x]) => x.k === k.n);
       const now = el != null && el >= k.tu && el < k.den;
-      return `<button type="button" class="blk${m.k === k.n ? ' on' : ''}${now ? ' now' : ''}" data-k="${k.n}"><b>${k.tu}–${k.den}′ · Khối ${k.n}</b>${esc(k.t)}<span class="dots">${ids.map(([x, i]) => `<i class="${i === S.i ? 'cur' : ''}${x.du ? ' du' : ''}${S.chua[x.id] ? ' chua' : ''}"></i>`).join('')}</span></button>`;
+      return `<button type="button" class="blk${m.k === k.n ? ' on' : ''}${now ? ' now' : ''}" data-k="${k.n}"><b>${k.tu}–${k.den}′ · Khối ${k.n}</b>${esc(k.t)}<span class="dots">${ids.map(([x, i]) => `<i class="${i === S.i ? 'cur' : ''}${x.du ? ' du' : ''}${x.off ? ' off' : ''}${x.lead ? ' lead' : ''}${S.chua[x.id] ? ' chua' : ''}"></i>`).join('')}</span></button>`;
     }).join('');
     renderClock();
   }
@@ -463,7 +467,7 @@
   function renderNote() {
     const m = cur(), k = KHOI.find(x => x.n === m.k), v = VAI[m.vai || BU.vai] || VAI.mau;
     let h = `<div class="t">Khối ${k.n} · ${k.tu}–${k.den}′ · ${esc(k.t)}</div><h3>${esc(m.t)}</h3>` +
-      `<div class="chips">${m.p ? `<span>⏱ ${m.p}′</span>` : ''}<span>${v[0]} ${v[1]}</span>${m.off ? '<span class="off">📴 Tắt chiếu</span>' : ''}${m.du ? '<span class="du">⏳ Dự phòng</span>' : ''}</div>`;
+      `<div class="chips">${m.p ? `<span>⏱ ${m.p}′</span>` : ''}<span class="v-${m.vai || BU.vai}">${v[0]} ${v[1]}</span>${m.lead ? '<span class="lead">🙋 Con làm chủ</span>' : ''}${m.off ? '<span class="off">📴 Tắt chiếu</span>' : ''}${m.du ? '<span class="du">⏳ Dự phòng</span>' : ''}</div>`;
     if (m.con) h += `<h4>Việc của con</h4><p class="con">${esc(m.con)}</p>`;
     h += `<h4>Lời cô</h4><ul>${(m.note || []).map(x => `<li>${esc(x)}</li>`).join('')}<li class="vai-li">${v[0]} ${esc(v[2])}</li></ul>`;
     if (m.hoi) h += `<h4>Hỏi con</h4><ul>${m.hoi.map(x => `<li>${esc(x)}</li>`).join('')}</ul>`;

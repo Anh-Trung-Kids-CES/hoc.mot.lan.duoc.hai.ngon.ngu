@@ -12,6 +12,14 @@ giữ 7 khối của khung; trong khối là màn ngắn ≤ 5–6′ (số phú
 từ (thẻ tranh) chỉ đi kèm văn bản dạy ngay sau; vai cô theo buổi: buổi Introduce làm mẫu → Repeat/Practice giúp con đáp
 → Produce nghe con; truyện, big book đọc cả lượt tiếng Anh rồi cả lượt tiếng Trung; mở – đóng bằng vè chào; mỗi buổi có màn dự phòng.
 
+**Chị duyệt 12/11 tối (lớp offline là các con lớp 1–5 học chung):**
+- mỗi màn ghi `vai` cô (`mau` làm mẫu · `giup` giúp con đáp · `nghe` nghe con dẫn); nội dung mới luôn `mau`;
+- `lead: true` = con làm chủ (đôi bạn, nhóm, bạn làm "cô", con nói một mình); tăng dần buổi 1 → 3 (≈15′ → 30–40′ → ≥ 60′);
+- `off: true` = tắt chiếu (thẻ in, rối, người giấy): cửa sổ chiếu hiện "Look at me! 看老师！"; ≥ 30′ mỗi buổi;
+- mỗi buổi có màn **Nghe – chỉ sách** (đôi bạn cầm big book in, máy đọc, con chỉ ngón tay theo; như giờ nghe – chỉ sách của Budding Bean);
+- 2–3 câu hỏi về chính con mỗi unit; đôi bạn lớn – bạn nhỏ cố định cả unit, bạn lớn dẫn và kèm bạn nhỏ;
+- build tự tính "con làm chủ" và "tắt chiếu" từng buổi (hiện trên thanh buổi) và báo lỗi nếu màn chưa ghi `vai`.
+
 ## Loại màn (buoi.js)
 chao · song (YouTube) · ve (vè, nhịp, hát to – nhỏ, đổi tiếng) · hoi (hỏi – đáp mẫu) · flash (thẻ tranh, "Cô trước" / "Con trước")
 · book (truyện, big book; che chữ; câu hỏi theo trang) · cua (Cửa lớp thần kỳ / chào đúng người) · chon (chỉ tranh; `xep` = xếp tranh theo thứ tự)

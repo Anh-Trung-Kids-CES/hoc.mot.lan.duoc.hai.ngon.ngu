@@ -81,6 +81,9 @@ for (const f of files) {
       if (!m.du) mins += m.p || 0;
     }
     B.phut = mins;
+    const live = B.MAN.filter(m => !m.du), sum = f => live.filter(f).reduce((a, m) => a + (m.p || 0), 0);
+    B.lead = sum(m => m.lead); B.offm = sum(m => m.off || m.type === 'nghi');
+    if (live.some(m => !m.vai)) errs.push(`${lv} b${b}: màn chưa ghi vai cô: ` + live.filter(m => !m.vai).map(m => m.id).join(', '));
     for (const k of B.KHOI) { const s = B.MAN.filter(m => m.k === k.n && !m.du).reduce((a, m) => a + (m.p || 0), 0); if (s > k.den - k.tu) errs.push(`${lv} b${b}: khối ${k.n} có ${s}′ > ${k.den - k.tu}′`); }
   }
   const thieu = new Set();
@@ -91,7 +94,7 @@ for (const f of files) {
   const js = `/* Tự sinh bởi buoi/cong-cu/build.js từ ${f} – không sửa tay. */\n(function(){var D=${JSON.stringify(data)};var B=window.BU=window.BU||{NOI:D.NOI,lv:{}};` +
     `for(var lv in D.lv){var L=B.lv[lv]=B.lv[lv]||{ten:D.lv[lv].ten,buoi:{}};L.sau=D.lv[lv].sau;for(var b in D.lv[lv].buoi)L.buoi[b]=D.lv[lv].buoi[b];}})();\n`;
   fs.writeFileSync(path.join(OUT, `data-u${u}.js`), js);
-  for (const [lv, L] of Object.entries(data.lv)) console.log(`Unit ${u} · ${lv}: ` + Object.entries(L.buoi).map(([b, B]) => `buổi ${b} ${B.MAN.length} màn, ${B.phut}′`).join(' · '));
+  for (const [lv, L] of Object.entries(data.lv)) console.log(`Unit ${u} · ${lv}: ` + Object.entries(L.buoi).map(([b, B]) => `buổi ${b}: ${B.MAN.length} màn, ${B.phut}′, con làm chủ ${B.lead}′, tắt chiếu ${B.offm}′`).join(' | '));
 }
 const list = [...miss.values()].sort((a, b) => a[0].localeCompare(b[0]));
 fs.writeFileSync(path.join(__dirname, 'giong-thieu.json'), JSON.stringify(list, null, 1) + '\n');
