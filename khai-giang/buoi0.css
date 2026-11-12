@@ -145,7 +145,15 @@ button{font:inherit;cursor:pointer;color:inherit}
 .ve .animal .e{font-size:170px;line-height:1}
 .ve .animal.pic{display:flex;flex-direction:column;gap:10px;background:#fff;padding:12px;box-shadow:0 6px 0 rgba(58,42,26,.1);font-size:24px;color:var(--teal-d)}
 .ve .animal.pic img{width:100%;flex:1;min-height:0;object-fit:cover;border-radius:20px}
-.ve .animal.lion{background:#FFE9B8}.ve .animal.mouse{background:#E5E9F2}.ve .animal.none{background:var(--soft);color:var(--muted);font-size:22px}
+.ve .animal.to,.ve .animal.nho{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px}
+.ve .animal.to{background:#FFE9B8}.ve .animal.nho{background:#E8EEF5}
+.ve .animal .spk-ic{font-size:96px;line-height:1}
+.ve .animal b{font-size:44px;color:var(--ink)}.ve .animal.nho b{font-size:30px;color:var(--muted)}
+.vol{display:flex;align-items:flex-end;gap:12px;height:170px}
+.vol i{width:44px;border-radius:12px;background:rgba(58,42,26,.12)}
+.ve .animal.to .vol i.on{background:var(--orange);animation:pulse .6s ease-in-out infinite alternate}
+.ve .animal.nho .vol i.on{background:var(--blue)}
+@keyframes pulse{to{transform:scaleY(.82);transform-origin:bottom}}
 .ve.loud .sent .tx .en{font-size:48px}.ve.loud .sent .tx .zh{font-size:40px}
 .ve.quiet .sent{opacity:.65}.ve.quiet .sent .tx .en{font-size:36px}.ve.quiet .sent .tx .zh{font-size:30px}
 

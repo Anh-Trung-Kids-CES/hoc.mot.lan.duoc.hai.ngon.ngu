@@ -226,8 +226,9 @@
       return head(m) + rules(m) + blob + (c && !st.on ? sent(m.line, 'sm') : '') + teams();
     },
     ve(m, st) {
-      const a = st.loud === 'lion' ? `<div class="animal lion"><div><div class="e">🦁</div>Hát thật to!<br>Giơ tay cao!</div></div>`
-        : st.loud === 'mouse' ? `<div class="animal mouse"><div><div class="e">🐭</div>Hát thì thầm…<br>Ngồi thấp xuống</div></div>`
+      const bars = n => `<div class="vol">${[1, 2, 3, 4, 5].map(i => `<i class="${i <= n ? 'on' : ''}" style="height:${30 + i * 26}px"></i>`).join('')}</div>`;
+      const a = st.loud === 'to' ? `<div class="animal to"><div class="spk-ic">🔊</div>${bars(5)}<b>Hát to!</b></div>`
+        : st.loud === 'nho' ? `<div class="animal nho"><div class="spk-ic">🔈</div>${bars(1)}<b>Hát nhỏ…</b></div>`
           : `<div class="animal pic"><img src="${esc(pick(m.img))}" alt=""><span>${esc(m.cap || '')}</span></div>`;
       return head(m) + `<div class="lines">${m.lines.map((x, i) => sent(x, i === st.cur ? 'cur' : '', `<div class="mv">${x.mv}<span class="mvt">${esc(x.mvt)}</span></div>`)).join('')}</div>` +
         `<div class="beat">${[1, 2, 3, 4, 1, 2, 3, 4].map(n => `<i>${n}</i>`).join('')}</div>` + a;
@@ -315,7 +316,7 @@
       $$('.song .tab').forEach((b, i) => b.classList.toggle('on', i === st.v)); updTeams();
     } else {
       if (m.type !== 'song' || songKey !== lastSong) destroyVideo();
-      slide.className = 'slide ' + m.type + (S.py ? '' : ' hide-py') + (m.type === 've' && st.loud ? (st.loud === 'lion' ? ' loud' : ' quiet') : '');
+      slide.className = 'slide ' + m.type + (S.py ? '' : ' hide-py') + (m.type === 've' && st.loud ? (st.loud === 'to' ? ' loud' : ' quiet') : '');
       slide.innerHTML = R[m.type](m, st);
       if (m.type === 'song' && $('#vid')) mountVideo($('#vid'), (m.songs[st.v] || m.songs[0]).id);
       lastSong = songKey;
@@ -366,7 +367,7 @@
         x = b('play', '▶ Phát') + b('pause', '⏸ Dừng', 'alt') + (m.freeze ? b('freeze', m.id === 'tau' ? '🚉 Đỗ ga' : '🧊 Đứng hình') : ''); break;
       case 'mau': x = st.on ? b('stop', '✋ Dừng – ra màu') : b('go', '▶ Nhạc đi'); break;
       case 've': x = b('beat', beatT ? '🥁 Tắt nhịp' : '🥁 Nhịp', beatT ? 'on' : 'alt') + b('sing-en', '▶ Đọc mẫu EN') + b('sing-zh', '▶ 中文') +
-        b('lion', '🦁 Hát to', st.loud === 'lion' ? 'on' : 'alt') + b('mouse', '🐭 Hát nhỏ', st.loud === 'mouse' ? 'on' : 'alt'); break;
+        b('to', '🔊 Hát to', st.loud === 'to' ? 'on' : 'alt') + b('nho', '🔈 Hát nhỏ', st.loud === 'nho' ? 'on' : 'alt'); break;
       case 'says': x = b('new', '🎲 Lệnh mới') + b('again', '🔁 Nghe lại', 'alt') + b('reveal', '👀 Lộ', 'alt') +
         b('lua', st.lua ? '😜 Có lệnh lừa' : '🙂 Chưa lừa', st.lua ? 'on' : 'alt') +
         b('mode', { xen: '🔀 Leo ↔ Xiaomei', leo: '🇬🇧 Chỉ Leo', xiaomei: '🇨🇳 Chỉ Xiaomei' }[st.mode], 'alt'); break;
@@ -411,7 +412,7 @@
       case 'stop': NHAC.pause(); chime(); change(s => { s.on = false; s.mau = Object.keys(MAU)[rnd(4, Object.keys(MAU).indexOf(s.mau))]; s.n++; });
         await sleep(700); say(m.line, st.n % 2 ? 'en' : 'zh'); return;
       case 'beat': beat(!beatT); renderCtrl(); return;
-      case 'lion': case 'mouse': change(s => { s.loud = s.loud === a ? '' : a; }); a === 'lion' ? blip(220, .3, 'sawtooth', .15) : blip(1800, .08, 'sine', .2); return;
+      case 'to': case 'nho': change(s => { s.loud = s.loud === a ? '' : a; }); a === 'to' ? blip(220, .3, 'sawtooth', .15) : blip(1800, .08, 'sine', .2); return;
       case 'sing-en': case 'sing-zh': case 'all-en': case 'all-zh': {
         const l = a.slice(-2), run = ++seq;
         for (let i = 0; i < m.lines.length; i++) { change(s => { s.cur = i; }); if (!(await say(m.lines[i], l)) || seq !== run) break; await sleep(250); if (seq !== run) break; }
