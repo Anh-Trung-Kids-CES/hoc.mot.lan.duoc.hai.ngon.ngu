@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nghe Reader · Seedling</title>
+<style>
+:root{--bg:#fff9ed;--ink:#3a3128;--muted:#786a5a;--line:#e8dcc6;--acc:#2f7d4a;--card:#fff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,"Segoe UI",Roboto,sans-serif}
+.w{max-width:640px;margin:0 auto;padding:20px 16px 48px}
+h1{font-size:1.35rem;margin:0 0 4px}.sub{color:var(--muted);margin:0 0 18px;font-size:.92rem}
+.now{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin-bottom:18px;text-align:center}
+.now h2{margin:4px 0 2px;font-size:1.25rem}.now .zh{font-size:1.15rem;color:#b5452f}
+.big{margin:14px auto 8px;width:88px;height:88px;border-radius:50%;border:0;background:var(--acc);color:#fff;font-size:34px;cursor:pointer}
+audio{width:100%;margin-top:6px}
+.list{display:grid;gap:6px}.it{display:flex;gap:10px;align-items:center;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--card);text-decoration:none;color:inherit}
+.it b{color:var(--acc);font-variant-numeric:tabular-nums;min-width:2em}.it .t{flex:1;min-width:0}.it small{color:var(--muted)}
+.it.on{border-color:var(--acc);box-shadow:0 0 0 2px #2f7d4a22}
+</style></head><body><div class="w">
+<h1>Nghe Reader · Seedling</h1><p class="sub">Mỗi truyện đọc hết bằng tiếng Anh, rồi đọc lại bằng tiếng Trung. Con cầm sách, nghe và lật trang theo tiếng "tinh".</p>
+<div class="now" id="now" hidden><div class="sub" id="nTuan"></div><h2 id="nT"></h2><div class="zh" id="nZ"></div>
+<button class="big" id="play" type="button" aria-label="Phát">▶</button><audio id="au" controls preload="none"></audio></div>
+<div class="list" id="list"></div></div>
+<script>
+const au=document.getElementById('au'),btn=document.getElementById('play');let T=[];
+function show(){const n=(location.hash||'').replace('#','');const t=T.find(x=>String(x.track).padStart(2,'0')===n);
+ document.querySelectorAll('.it').forEach(a=>a.classList.toggle('on',a.dataset.n===n));
+ if(!t){document.getElementById('now').hidden=true;return}
+ document.getElementById('now').hidden=false;document.getElementById('nTuan').textContent='Track '+n+' · Tuần '+t.tuan;
+ document.getElementById('nT').textContent=t.reader;document.getElementById('nZ').textContent=t.zh;
+ if(!au.src.endsWith(t.file)){au.src=t.file;btn.textContent='▶'}window.scrollTo(0,0)}
+btn.onclick=()=>{if(au.paused){au.play();}else au.pause()};
+au.onplay=()=>btn.textContent='❚❚';au.onpause=au.onended=()=>btn.textContent='▶';
+fetch('tai-nguyen/reader-tuan/danh-sach-track.json').then(r=>r.json()).then(d=>{T=d.map(x=>({...x,file:x.file}));
+ document.getElementById('list').innerHTML=T.map(t=>{const n=String(t.track).padStart(2,'0');return `<a class="it" href="#${n}" data-n="${n}"><b>${n}</b><span class="t">${t.reader}<br><small>${t.zh} · ${t.dur}</small></span></a>`}).join('');show()});
+addEventListener('hashchange',show);
+</script></body></html>

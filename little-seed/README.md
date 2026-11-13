@@ -27,3 +27,7 @@ Web tự học cho lớp Little Seed offline 48 buổi của Anh – Trung – K
 ## Còn thiếu
 - Khoảng 130 câu tiếng Anh, tiếng Trung (U1 + U9, gồm big book và vè) chưa có giọng thu sẵn (danh sách `cong-cu/giong_thieu.json`) – web đang đọc bằng giọng máy. Tạo bằng `../seedling/cong-cu/gemini/gen_audio.py` khi có khoá `GEMINI_API_KEY`.
 - Các ngày ngoài U1, U9 hiện khoá "sắp có" (theo khung 48 buổi); dựng sau khi chị duyệt hình thức Unit 1.
+
+## Nghe reader tuần (13/11/2026)
+- `nghe-reader.html`: trang nghe cho mã QR in trên reader (`nghe-reader.html#05` mở track 05). Không gắn vào ngày web (reader chỉ là bản in).
+- `tai-nguyen-ls/reader-tuan/`: 26 track mp3 (Anh hết truyện rồi Trung hết truyện, giọng nhân vật cố định), `danh-sach-track.json`, `DANH-SACH-TRACK.md`. Tạo bằng Gemini TTS; mã ở Project Claude `claude/MaNghe_Reader_Lo.md`.

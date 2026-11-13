@@ -60,3 +60,7 @@ Xem `CAN-BO-SUNG.md`: 78 từ chức năng / trừu tượng (yes, what, can, to
 
 ## Máy chủ lớp (10/11/2026)
 Tiến độ của con, sao cô thưởng và phiếu quà lưu trên Google Sheet quản lý lớp, dùng chung với Little Seed: mã ở `apps-script/lop-offline-48/Code.gs`, cách bật ở `apps-script/lop-offline-48/HUONG-DAN.md`. Link /exec dán vào `SDL_API` trong `seedling-may-chu.js`. Để trống thì web chạy bản xem thử (dữ liệu trên máy, PIN 2468).
+
+## Nghe reader tuần (13/11/2026)
+- `nghe-reader.html`: trang nghe cho mã QR in trên reader (`nghe-reader.html#05` mở track 05). Không gắn vào ngày web (reader chỉ là bản in).
+- `tai-nguyen/reader-tuan/`: 26 track mp3 (Anh hết truyện rồi Trung hết truyện, giọng nhân vật cố định), `danh-sach-track.json`, `DANH-SACH-TRACK.md`. Tạo bằng Gemini TTS; mã ở Project Claude `claude/MaNghe_Reader_Lo.md`.
