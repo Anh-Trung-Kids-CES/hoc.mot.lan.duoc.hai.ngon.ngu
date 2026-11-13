@@ -609,15 +609,15 @@ def _cat(t, nm):   # tách câu quanh tên: (trước, sau)
     return (t[:i], t[i + len(nm):]) if i >= 0 else (t, '')
 BB_TXT = {
     'guess': {'sub': {1: 'Lần 1 · Nghe cả quyển, chạm đúng người', 2: 'Lần 2 · Đoán trang sau là ai', 3: 'Lần 3 · Đọc đuổi, điền chỗ trống', 4: 'Lần 4 · Con kể, rồi nói về gia đình con'},
-              'rules': {1: ['Khởi động: con nghe bài vè và nghe tên các bạn trong truyện.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con nghe câu hỏi và chạm đúng người. Cần thì bấm 💡 để xem gợi ý.'],
-                        2: ['Khởi động: con nghe bài vè và nghe lại 3 trang đầu.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con đoán: trang sau là ai? Con chạm vào tranh trang sau.'],
-                        3: ['Khởi động: con nghe bài vè và 2 trang đầu.', 'Đọc đuổi tiếng Anh rồi tiếng Trung: cô đọc, cô và con cùng đọc, rồi con đọc một mình.', 'Rồi con chọn tranh điền vào chỗ trống.'],
-                        4: ['Khởi động: con nghe bài vè và nghe nhanh cả quyển.', 'Con kể: cô nói nửa câu, con nói tiếp.', 'Rồi con nói về gia đình con: "He is my…", "She is my…".']}},
+              'rules': {1: ['Khởi động: con nghe tên các bạn trong truyện.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con nghe câu hỏi và chạm đúng người. Cần thì bấm 💡 để xem gợi ý.'],
+                        2: ['Khởi động: con nghe lại 3 trang đầu.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con đoán: trang sau là ai? Con chạm vào tranh trang sau.'],
+                        3: ['Khởi động: con nghe lại 2 trang đầu.', 'Đọc đuổi tiếng Anh rồi tiếng Trung: cô đọc, cô và con cùng đọc, rồi con đọc một mình.', 'Rồi con chọn tranh điền vào chỗ trống.'],
+                        4: ['Khởi động: con nghe nhanh cả quyển.', 'Con kể: cô nói nửa câu, con nói tiếp.', 'Rồi con nói về gia đình con: "He is my…", "She is my…".']}},
     'seq': {'sub': {1: 'Lần 1 · Nghe cả quyển, chạm đúng người', 2: 'Lần 2 · Đoán trang sau Bông gặp ai', 3: 'Lần 3 · Đọc đuổi, điền chỗ trống', 4: 'Lần 4 · Con kể, rồi chúc ngủ ngon người thân'},
-            'rules': {1: ['Khởi động: con nghe bài vè và nghe tên các bạn trong truyện.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con nghe câu Bông nói và chạm đúng người Bông chào. Cần thì bấm 💡.'],
-                      2: ['Khởi động: con nghe bài vè và nghe lại 3 trang đầu.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con đoán: trang sau Bông gặp ai? Con chạm vào tranh trang sau.'],
-                      3: ['Khởi động: con nghe bài vè và 2 trang đầu.', 'Đọc đuổi tiếng Anh rồi tiếng Trung: cô đọc, cô và con cùng đọc, rồi con đọc một mình.', 'Rồi con chọn tranh điền vào chỗ trống.'],
-                      4: ['Khởi động: con nghe bài vè và nghe nhanh cả quyển.', 'Con kể: cô nói nửa câu, con nói tiếp.', 'Rồi con chúc ngủ ngon người thân: "Good night, …!"']}}}
+            'rules': {1: ['Khởi động: con nghe tên các bạn trong truyện.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con nghe câu Bông nói và chạm đúng người Bông chào. Cần thì bấm 💡.'],
+                      2: ['Khởi động: con nghe lại 3 trang đầu.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con đoán: trang sau Bông gặp ai? Con chạm vào tranh trang sau.'],
+                      3: ['Khởi động: con nghe lại 2 trang đầu.', 'Đọc đuổi tiếng Anh rồi tiếng Trung: cô đọc, cô và con cùng đọc, rồi con đọc một mình.', 'Rồi con chọn tranh điền vào chỗ trống.'],
+                      4: ['Khởi động: con nghe nhanh cả quyển.', 'Con kể: cô nói nửa câu, con nói tiếp.', 'Rồi con chúc ngủ ngon người thân: "Good night, …!"']}}}
 BB_CMD = {1: {'en': ('Listen and touch.', 'vi', 'Con nghe rồi chạm vào đúng người nhé.'), 'zh': ('听一听，点一点。', 'en', 'Listen and touch.')},
           2: {'en': ('Who is on the next page?', 'vi', 'Trang sau là ai? Con chạm vào tranh trang sau nhé.'), 'zh': ('下一页是谁？', 'en', 'Who is on the next page?')},
           3: {'en': ('Which one? Touch it.', 'vi', 'Chọn tranh điền vào chỗ trống nhé.'), 'zh': ('是哪一个？点一点。', 'en', 'Which one? Touch it.')}}
@@ -631,9 +631,6 @@ VE_RULES = {1: ['Khởi động: con nghe lại 3 trang big book.', 'Con nghe c�
             3: ['Khởi động: con nghe 3 trang big book và nghe nhanh vè hai tiếng.', 'Con hát karaoke 3 lượt mỗi tiếng: giọng cô to, rồi nhỏ, rồi tắt.', 'Lượt cuối con hát một mình nhé!'],
             4: ['Khởi động: con nghe 3 trang big book và hát vè một lượt.', 'Lồng tiếng: video chạy, con hát, máy thu giọng con.', 'Ba mẹ lưu video và gửi cô qua Zalo (mỗi unit một lần).']}
 
-# (13/11) khởi động big book: vè của chính unit, cả bài, một tiếng mỗi lần; trỏ theo mã unit, không chép lời – kế hoạch chung LS/SD
-_spk = _iu.spec_from_file_location('kh_bb48', 'chuong-trinh/cong-cu/khung/grid/mang/ke_hoach_bigbook_48.py'); KH = _iu.module_from_spec(_spk); _spk.loader.exec_module(KH)
-VE_U = {}   # lời vè hiện hành của từng unit (web đọc ở SD.ve_u khi khởi động trỏ tới)
 def bbve_unit(un, S_):
     """S_: pages, names {k:(en,zh,img)}, items [{'k','ap','qpg'?,'opts'}], kind, vel, ve2 {lan:(lines,langs)}, mine [..5], plan [(bb|ve, lan)] theo ngày,
     title, title_zh, ve_title, ve_title_zh, frame?, qimg?"""
@@ -673,7 +670,6 @@ def bbve_unit(un, S_):
                      a_vd=au_multi(m['l'], m['vd'], 'co_huou')) for m in S_['mine']]
     NP = len(pages) - off; jv = 0
     strip = lambda x: {k: v for k, v in x.items() if k != 'w'}
-    VE_U[un] = [strip(x) for x in S_['vel']]
     for di, n in enumerate(D_U):
         typ, lan = S_['plan'][di]; st = days[n]['steps']; out = []; placed = False
         is_bb = lambda s: s.get('lab') == 'Big book' or (s['type'] == 'truyen' and str(s.get('title', '')).startswith('Big book'))
@@ -685,10 +681,7 @@ def bbve_unit(un, S_):
                 if placed or (has_main and not mine): continue
                 placed = True
                 if typ == 'bb':
-                    if (S_.get('ve2') or {}).get(lan):   # khai báo riêng (U1: vè chào là vè của chính unit)
-                        v2, vl = S_['ve2'][lan]; warm = {'ve': [strip(x) for x in v2], 've_l': vl}
-                    else:   # kế hoạch chung: vè của chính unit, cả bài, Anh ở lần 1–2, Trung ở lần 3–4
-                        vu, vi_, vl = KH.khoi_dong('LS', un)[lan]; warm = {'ve_ref': {'u': vu, 'i': vi_}, 've_l': vl}
+                    warm = {}   # (13/11, chị chốt 10:00) big book không khởi động bằng vè: chỉ tên, trang của chính quyển
                     if lan == 1: warm['names'] = NAMES
                     if lan == 2: warm['pages'] = [off, off + 1, off + 2]
                     if lan == 3: warm['pages'] = [off, off + 1]
@@ -748,8 +741,7 @@ VE_U1 = [ve_dict('Hello, hello, everyone!', '你好你好，大家好！', BBU1 
 U1M = [{'l': l, 'q': '', 'half': 'Good night, …!' if l == 'en' else '…，晚安！', 'cue': 'Good night' if l == 'en' else '晚安', 'vd': vd}
        for l, vd in [('en', 'Good night, mommy!'), ('zh', '妈妈，晚安！'), ('en', 'Good night, daddy!'), ('zh', '爸爸，晚安！'), ('en', 'Good night, puppy!')]]
 bbve_unit(1, {'pages': U1P, 'kind': 'seq', 'names': U1N, 'items': U1I, 'vel': VE_U1, 'qimg': NV + 'kids_bong_a.webp',
-              # (13/11) khởi động hát cả bài, một tiếng mỗi lần: chào đầu (dòng 1–6) Anh · chào cuối (7–10) Anh · chào đầu Trung · chào cuối Trung
-              've2': {1: (VE_U1[0:6], ['en']), 2: (VE_U1[6:10], ['en']), 3: (VE_U1[0:6], ['zh']), 4: (VE_U1[6:10], ['zh'])}, 'mine': U1M,
+              'mine': U1M,
               # ngày 1–9: vè, big book xen kẽ; ngày sát buổi 1 và buổi 3 là ngày vè (con hát trọn hai vè chào ở buổi 1)
               'plan': [('ve', 1), ('bb', 1), ('ve', 2), ('bb', 2), ('ve', 3), ('bb', 3), ('ve', 3), ('bb', 4), ('ve', 4)],
               'title': 'Goodbye, Puppy!', 'title_zh': '小狗，再见！', 've_title': 'Hello and Goodbye!', 've_title_zh': '你好，再见！',
@@ -774,21 +766,16 @@ U2M = [{'l': 'en', 'q': "What's your name?", 'half': 'My name is…', 'cue': 'My
        {'l': 'zh', 'q': '你几岁？', 'half': '我…岁。', 'cue': '我', 'vd': '我六岁。'},
        {'l': 'en', 'q': "Hello! What's your name?", 'half': 'Hello! My name is…', 'cue': 'Hello! My name is', 'vd': 'Hello! My name is Leo.'}]
 TX_U2 = {'sub': {1: 'Lần 1 · Nghe cả quyển, chạm đúng bạn', 2: 'Lần 2 · Đoán trang sau là ai', 3: 'Lần 3 · Đọc đuổi, điền tên', 4: 'Lần 4 · Con kể, rồi giới thiệu về con'},
-         'rules': {1: ['Khởi động: con nghe bài vè và nghe tên các bạn trong truyện.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con nghe câu nói và chạm đúng bạn đó. Cần thì bấm 💡.'],
-                   2: ['Khởi động: con nghe bài vè và nghe lại 3 trang đầu.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con đoán: trang sau là ai? Con chạm vào tranh trang sau.'],
-                   3: ['Khởi động: con nghe bài vè và 2 trang đầu.', 'Đọc đuổi tiếng Anh rồi tiếng Trung: cô đọc, cô và con cùng đọc, rồi con đọc một mình.', 'Rồi con chọn đúng bạn điền vào chỗ trống.'],
-                   4: ['Khởi động: con nghe bài vè và nghe nhanh cả quyển.', 'Con kể: cô nói nửa câu, con nói tên.', 'Rồi con giới thiệu về con: "My name is…", "I\'m…".']}}
+         'rules': {1: ['Khởi động: con nghe tên các bạn trong truyện.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con nghe câu nói và chạm đúng bạn đó. Cần thì bấm 💡.'],
+                   2: ['Khởi động: con nghe lại 3 trang đầu.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con đoán: trang sau là ai? Con chạm vào tranh trang sau.'],
+                   3: ['Khởi động: con nghe lại 2 trang đầu.', 'Đọc đuổi tiếng Anh rồi tiếng Trung: cô đọc, cô và con cùng đọc, rồi con đọc một mình.', 'Rồi con chọn đúng bạn điền vào chỗ trống.'],
+                   4: ['Khởi động: con nghe nhanh cả quyển.', 'Con kể: cô nói nửa câu, con nói tên.', 'Rồi con giới thiệu về con: "My name is…", "I\'m…".']}}
 bbve_unit(2, {'pages': U2P, 'kind': 'seq', 'names': U2N, 'items': U2I, 'vel': VE_U2, 'qimg': BBU2 + 'bia_khung.webp', 'txt': TX_U2, 'mine': U2M,
               'plan': [('bb', 1), ('ve', 1), ('bb', 2), ('ve', 2), ('bb', 3), ('ve', 3), ('bb', 4), ('ve', 4)],
               'title': MU2['bb'][0], 'title_zh': MU2['bb'][1], 've_title': MU2['ten_en'], 've_title_zh': MU2['ten_zh'],
               'frame': {'left': 63.2, 'top': 24.1, 'width': 29.4, 'height': 56.1},   # ô ảnh trên bia_khung.webp (đo 13/11: 1005–1486 × 283–962 / 1600×1196)
               'mine_h': 'Con giới thiệu', 'mine_vi': 'Giờ con giới thiệu về con nhé! Con nhìn ảnh rồi nói tên, nói tuổi của con.',
               'photo_t': 'ảnh của con', 'photo_k': 'lsd-anh-cua-con'})
-# Unit chưa dựng big book + vè 4 lần: vẫn đưa lời vè vào kho để khởi động unit sau trỏ tới được
-for _u, _M in sorted(MANG.U.items()):
-    if _u not in VE_U:
-        _im = [i for i, e, z in _M['bb'][2] if str(i).endswith('.webp')]
-        VE_U[_u] = [{k: v for k, v in ve_dict(e, z, (_im[k % len(_im)] if _im else '')).items()} for k, (w, e, z, v) in enumerate(_M['ve'])]
 # Không để bước rỗng (chị chốt 12/11): bước không có bài tập bên trong thì bỏ, in ra để sửa nguồn
 _K = ('cards', 'scenes', 'lines', 'turns', 'qs', 'items', 'pages', 'opts', 'quiz')
 for n, d in days.items():
@@ -797,7 +784,7 @@ for n, d in days.items():
     d['steps'] = keep
 out = {'who': who, 'days': {str(k): v for k, v in sorted(days.items())}, 'lop': {str(k): v for k, v in lop.items()}, 'map': mp,
        'soon': {str(k): v for k, v in soon.items()}, 'vi': SD0['vi'], 'vi_a': deep(SD0['vi_a']), 'vi_t': SD0.get('vi_t', {}), 'bg': {},
-       'reader': reader, 'units_q': units_q, 'aumap': {}, 'vi_tx': deep(SD0['vi_tx']), 've_u': {str(k): v for k, v in sorted(VE_U.items())}}
+       'reader': reader, 'units_q': units_q, 'aumap': {}, 'vi_tx': deep(SD0['vi_tx'])}
 open('little-seed/little-seed-data.js', 'w').write('/* Dữ liệu web Little Seed 48 buổi – sinh từ little-seed48.json và mạng văn bản U1 (cong-cu/build_ls.py). Đừng sửa tay. */\nwindow.SD=' + json.dumps(out, ensure_ascii=False) + ';\n')
 miss = sorted(set(MISS))
 json.dump(miss, open('little-seed/cong-cu/giong_thieu.json', 'w'), ensure_ascii=False, indent=0)

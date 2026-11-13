@@ -13077,6 +13077,13 @@
 },
 {
 "l": "vi",
+"t": "Mình nghe lại big book nhé!",
+"nguon": [
+"little-seed/giong_vi_bbve.json"
+]
+},
+{
+"l": "vi",
 "t": "Mình khởi động nhé! Con nghe vè và vỗ tay theo.",
 "nguon": [
 "little-seed/giong_vi_bbve.json"

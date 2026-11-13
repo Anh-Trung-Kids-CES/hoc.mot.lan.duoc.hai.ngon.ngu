@@ -4,7 +4,7 @@
    Năm quy tắc "gợi trước – hỏi sau":
      a. khởi động 20–45 giây (chỉ nghe, nhìn, không hỏi);  b. mẫu trước, con sau (cô → cô và con → con);
      c. nhắc tên trước khi hỏi;  d. 💡 luôn sẵn, tự hiện khi con im 6 giây, sai lần 1 có gợi ý, sai lần 2 cô làm mẫu và câu đó gặp lại cuối bài;
-     e. ôn nối ngày: ngày big book mở bằng cả bài vè của unit (một tiếng mỗi lần), ngày vè mở bằng 3 trang big book. Vè cũ ôn ở buổi offline, không ôn trên web.
+     e. (13/11) vè tách khỏi big book: khởi động big book chỉ nghe lại tên, trang của chính quyển; vè cũ ôn ở buổi offline (claude/NguyenTac_Ve_OnVong_1311.md).
    step.type "bb"  (lan 1–4): 1 ai, cái gì – chạm tranh · 2 trang sau là ai · 3 đọc đuổi + điền khung câu · 4 con kể + câu của con (bìa khung ảnh)
    step.type "vek" (lan 1–4): 1 nghe mẫu + karaoke Anh · 2 karaoke Trung · 3 karaoke hai tiếng, giọng mẫu nhỏ dần · 4 lồng tiếng, lưu gửi cô
    Cần các hàm chung của ls-app.js (R, T, say, en, zh, tts, playFile, VOICE, finish, star, dots, cap, stopAll, micTurn, RUN…).
@@ -40,11 +40,7 @@ const BV = {
         const d = cv.toDataURL('image/jpeg', .82); try { localStorage.setItem(k || BV.PHOTO, JSON.stringify(d)); } catch (e) { toast('Ảnh lớn quá, máy chưa lưu được.'); } cb(d); }; im.src = r.result; };
       r.readAsDataURL(f); }; inp.click(); },
   FRAME: { left: 59.8, top: 14.5, width: 33.2, height: 37.8 },   // ô ảnh trên bìa khung (đo từ bia_khung.webp U3)
-  // (13/11, vè ôn vòng) khởi động trỏ tới vè theo mã unit: warm.ve_ref = {u, i: 'all' | [dòng]} – hát cả bài, một tiếng mỗi lần; lời lấy từ SD.ve_u lúc chạy,
-  // nên khi lời vè viết lại thì khởi động tự đổi theo. ve_u trả về số unit để màn khởi động ghi "Vè cũ (Unit …)".
-  warmOf(w) { w = Object.assign({}, w || {}); const r = w.ve_ref, V = ((window.SD && SD.ve_u) || {})[r && r.u];
-    if (r && V && V.length) { w.ve = r.i === 'all' ? V.slice() : r.i.map(i => V[i % V.length]); w.ve_u = r.cu ? r.u : 0; }
-    return w; },
+  warmOf(w) { return Object.assign({}, w || {}); },   // (13/11, chị chốt 10:00) khởi động big book không còn vè; vè cũ ôn ở buổi offline
   // vè 2 dòng có bàn tay vỗ theo nhịp; trang big book nghe lại – hai khởi động nối ngày
   async veLines(host, lines, langs, bpm, my) {
     for (const l of langs) for (const x of lines) { if (my !== RUN) return;
@@ -82,12 +78,13 @@ R.bb = (step, body) => {
 
   /* ---- khởi động ---- */
   async function warm() { const me = ++RUN; warmed = false; prog();
-    const host = BV.warmBox(body, ['', 'Vè và tên các bạn', 'Vè và 3 trang đầu', 'Vè và 2 trang đầu', 'Vè và cả quyển thật nhanh'][lan]);
+    // (13/11, chị chốt 10:00) big book không khởi động bằng vè nữa: lần 1 nghe tên các bạn, lần 2 nghe 3 trang đầu, lần 3 nghe 2 trang đầu, lần 4 nghe nhanh cả quyển
+    const host = BV.warmBox(body, ['', 'Tên các bạn trong truyện', 'Nghe lại 3 trang đầu', 'Nghe lại 2 trang đầu', 'Nghe nhanh cả quyển'][lan]);
     body.querySelector('#bvSkip').onclick = () => { sfx.pop(); stopAll(); main(); };
     X.replay = () => warm();
-    if ((W.ve || [])[0]) host.innerHTML = BV.veHTML(W.ve[0], (W.ve_l || ['en'])[0], 92);   // màn khởi động luôn có tranh, chữ ngay từ đầu
-    await BV.vi('Mình khởi động nhé! Con nghe vè và vỗ tay theo.'); if (me !== RUN) return;
-    await BV.veLines(host, W.ve || [], W.ve_l || ['en'], 92, me); if (me !== RUN) return;
+    if (P[0]) host.innerHTML = BV.pgHTML(P[0], 'en');   // màn khởi động luôn có tranh ngay từ đầu
+    if ((W.ve || []).length) { await BV.veLines(host, W.ve, W.ve_l || ['en'], 92, me); if (me !== RUN) return; }
+    if (!W.names) { await BV.vi('Mình nghe lại big book nhé!'); if (me !== RUN) return; }
     if (W.names) { await BV.vi('Đây là các bạn trong truyện. Con nghe tên nhé!'); if (me !== RUN) return;
       host.innerHTML = `<div class="bvw-names">${W.names.map((o, k) => `<div class="bvw-nm" data-k="${k}">${pic(o.img, '', '')}<b>${esc(o.en)}</b><b class="zh">${esc(o.zh)}</b></div>`).join('')}</div>`;
       for (let k = 0; k < W.names.length; k++) { if (me !== RUN) return; const o = W.names[k], el = host.querySelector(`[data-k="${k}"]`); el.classList.add('lit');
