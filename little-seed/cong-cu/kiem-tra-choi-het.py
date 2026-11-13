@@ -31,6 +31,8 @@ async def run_step(pg, n, j, t):
           const vis = e => e && e.offsetParent !== null && !e.disabled;
           const nx = b.querySelector('#nx'); if (vis(nx) && !/Bỏ qua/.test(nx.innerText)) { nx.click(); return 'nx'; }
           for (const id of ['#go', '#did']) { const e = b.querySelector(id); if (vis(e)) { e.click(); return id; } }
+          const tp = b.querySelector('#bPg.tap');   // big book "tìm trong tranh": chạm một điểm ngẫu nhiên trên tranh
+          if (vis(tp)) { const r = tp.getBoundingClientRect(); tp.dispatchEvent(new MouseEvent('click', {bubbles: true, clientX: r.left + Math.random() * r.width, clientY: r.top + Math.random() * r.height})); return 'tap'; }
           const opts = [...b.querySelectorAll('.hd-pick,.ls-opt,.sx-opt')].filter(vis).filter(e => !e.classList.contains('right'));
           if (opts.length && !b.querySelector('.hd-pick.right,.ls-opt.right,.sx-opt.right,.hint')) { opts[Math.floor(Math.random() * opts.length)].click(); return 'opt'; }
           const cards = [...b.querySelectorAll('.sx-card,.ls-card')].filter(vis).filter(e => !e.classList.contains('seen') && !e.classList.contains('done') && !e.classList.contains('got'));

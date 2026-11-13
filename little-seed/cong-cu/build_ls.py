@@ -631,6 +631,15 @@ VE_RULES = {1: ['Khởi động: con nghe lại 3 trang big book.', 'Con nghe c�
             3: ['Khởi động: con nghe 3 trang big book và nghe nhanh vè hai tiếng.', 'Con hát karaoke 3 lượt mỗi tiếng: giọng cô to, rồi nhỏ, rồi tắt.', 'Lượt cuối con hát một mình nhé!'],
             4: ['Khởi động: con nghe 3 trang big book và hát vè một lượt.', 'Lồng tiếng: video chạy, con hát, máy thu giọng con.', 'Ba mẹ lưu video và gửi cô qua Zalo (mỗi unit một lần).']}
 
+_spb = _iu.spec_from_file_location('bigbook_baitap', 'chuong-trinh/cong-cu/khung/grid/mang/bigbook_baitap.py'); BBT = _iu.module_from_spec(_spb); _spb.loader.exec_module(BBT)
+BB_RULES2 = {   # luật chơi (thẻ đầu bước) – bigbook.js
+    'an': ['Lần này con nghe cô đọc cả quyển: tiếng Anh, rồi tiếng Trung.', 'Nghe xong, cô nói một từ, con tìm và chạm vào đúng chỗ trong tranh.', 'Không thấy thì bấm 💡: cô đưa con về trang đó để nghe lại.'],
+    'sai': ['Cô đọc một trang. Đúng thì con bấm Yes, sai thì bấm No rồi chọn từ đúng.', 'Big book ở bên trái: con nghe lại khi nào cũng được.', 'Cần thì bấm 💡 nhé.'],
+    'dien': ['Con nghe câu, rồi chọn từ đúng điền vào chỗ trống.', 'Big book ở bên trái: con nghe lại khi nào cũng được.', 'Cần thì bấm 💡 nhé.'],
+    'vai': ['Con chọn một bạn trong truyện để đóng vai.', 'Đến lời của bạn ấy, con nói thay bạn ấy. Máy thu giọng con.', 'Cuối bài con nói về con với ảnh trên bìa, rồi nghe lại truyện có giọng con.'],
+    'dich': ['Con nghe một câu, rồi nghe các câu ở tiếng kia.', 'Con chọn câu cùng nghĩa.', 'Big book ở bên trái: con nghe lại khi nào cũng được.'],
+    'xep': ['Con nghe câu.', 'Rồi chạm các thẻ theo đúng thứ tự để xếp lại câu. Chạm thẻ là nghe được thẻ đó.', 'Big book ở bên trái: con nghe lại khi nào cũng được.']}
+
 def bbve_unit(un, S_):
     """S_: pages, names {k:(en,zh,img)}, items [{'k','ap','qpg'?,'opts'}], kind, vel, ve2 {lan:(lines,langs)}, mine [..5], plan [(bb|ve, lan)] theo ngày,
     title, title_zh, ve_title, ve_title_zh, frame?, qimg?"""
@@ -668,6 +677,63 @@ def bbve_unit(un, S_):
     def cau_con():
         return [dict(m, a_q=au_multi(m['l'], m['q'], 'co_huou') if m.get('q') else '', a_cue=au(m['l'], m['cue'].rstrip('!！。.?？'), 'co_huou'),
                      a_vd=au_multi(m['l'], m['vd'], 'co_huou')) for m in S_['mine']]
+    # ---- (13/11 chiều) bài tập big book mới: 6 dạng, đổi theo unit chẵn / lẻ (bigbook_baitap.py, little-seed/bigbook.js) ----
+    BTU = BBT.BT['LS'].get(un)
+    def _w(l, w):   # từ / lựa chọn: mã tên (có ảnh, giọng) hoặc chữ trơn
+        if isinstance(w, str) and w in S_['names']: return ten(w)
+        if isinstance(w, str):   # chữ trùng tên một nhân vật (Leo, 小狗…): dùng thẻ có ảnh, giọng của nhân vật đó
+            kk = next((k for k, (e, z, _) in S_['names'].items() if w.lower() in (e.lower(), z.lower())), None)
+            if kk: return ten(kk)
+        if isinstance(w, (tuple, list)): o = {'en': w[0], 'zh': w[1]}
+        else: o = {'en': w, 'zh': w}
+        o.update({'a_en': au('en', o['en'].rstrip('!.?,'), 'co_huou'), 'a_zh': au('zh', o['zh'].rstrip('！。？，'), 'co_huou')}); o['py'] = PY(o['zh']) if re.search(r'[一-鿿]', o['zh']) else ''
+        return o
+    def _pg(pg, l): t = pages[pg][l]; return {'say': t, 'a_say': au_multi(l, t, 'co_huou'), 'pg': pg, 'l': l}
+    def bb_moi(lan):
+        k = BBT.kieu(un, lan); D = BTU; qs = []; extra = {}
+        if k == 'an':
+            for pg, l, w, box in D['an']:
+                o = _w(l, w); t = o[l]
+                qs.append(dict(_pg(pg, l), w=t, a_w=o['a_' + l] or au(l, t, 'co_huou'), py=PY(t) if l == 'zh' else '', box=box))
+        elif k == 'sai':
+            for i, (pg, l, rd, op) in enumerate(D['sai']):
+                d = dict(_pg(pg, l), wrong=bool(rd), read=rd or pages[pg][l]); d['a_read'] = au_multi(l, d['read'], 'co_huou')
+                if op:
+                    os_ = [_w(l, x) for x in op]; a = i % 2; os_ = os_ if a == 0 else [os_[1], os_[0]]
+                    d.update({'opts': os_, 'ans': a})
+                qs.append(d)
+        elif k == 'dien':
+            for i, (pg, l, bl, op) in enumerate(D['dien']):
+                t = pages[pg][l]; d = dict(_pg(pg, l), fr=t.replace(bl, '___', 1), opts=[_w(l, x) for x in op], ans=op.index(bl))
+                qs.append(d)
+        elif k == 'xep':
+            for it in D['xep']:
+                pg, l, tl = it[:3]; src = it[3] if len(it) > 3 else l
+                d = dict(_pg(pg, l), tiles=[{'t': x, 'a': au(l, re.sub(r'[!！。.?？,，]+$', '', x), 'co_huou'), 'py': PY(x) if l == 'zh' else ''} for x in tl])
+                if src != l: d.update({'src': src, 'src_t': pages[pg][src], 'src_a': au_multi(src, pages[pg][src], 'co_huou')})
+                qs.append(d)
+        elif k == 'dich':
+            for i, (pg, src, nh) in enumerate(D['dich']):
+                l = 'zh' if src == 'en' else 'en'; ops = [pg] + list(nh); a = i % len(ops); ops = ops[1:a + 1] + [pg] + ops[a + 1:]
+                d = dict(_pg(pg, l), src=src, s=pages[pg][src], a_s=au_multi(src, pages[pg][src], 'co_huou'), s_py=pages[pg].get('py', '') if src == 'zh' else '',
+                         opts=[{'t': pages[x][l], 'a': au_multi(l, pages[x][l], 'co_huou'), 'py': pages[x].get('py', '') if l == 'zh' else ''} for x in ops], ans=a)
+                qs.append(d)
+        elif k == 'vai':
+            roles = []
+            for rk, (lab, img, turns) in D['vai'].items():
+                mine_pg = {pg for pg, _ in turns}; ts = []
+                for pg, l in turns:
+                    ctx = pg - 1 if pg - 1 >= off and (pg - 1) not in mine_pg else None
+                    ts.append(dict(_pg(pg, l), t=pages[pg][l], py=pages[pg].get('py', '') if l == 'zh' else '', ctx=ctx))
+                roles.append({'k': rk, 'label': lab, 'img': img, 'turns': ts})
+            extra = {'roles': roles, 'mine': cau_con()[:2]}
+        cmd = {l: {'t': t, 'a': au(l, t.rstrip('.。'), 'co_huou') or au(l, t, 'co_huou'), 'tl': 'vi', 'tr': tr} for l, (t, tr) in BBT.LENH[k].items()}
+        o = {'type': 'bb', 'v': 2, 'kind': k, 'lan': lan, 'lab': 'Big book', 'sub': f'Lần {lan} · {BBT.TEN_NGAY[k]}', 'rules': BB_RULES2[k],
+             'title': S_['title'], 'title_zh': S_['title_zh'], 'pages': pages, 'qs': qs, 'cmd': cmd, 'co_img': NV + 'huou_huou1_a.webp'}
+        o.update(extra)
+        for k_ in ('frame', 'mine_h', 'mine_vi', 'photo_t', 'photo_k'):
+            if S_.get(k_): o[k_] = S_[k_]
+        return o
     NP = len(pages) - off; jv = 0
     strip = lambda x: {k: v for k, v in x.items() if k != 'w'}
     for di, n in enumerate(D_U):
@@ -680,7 +746,9 @@ def bbve_unit(un, S_):
                 mine = is_bb(s) if typ == 'bb' else is_ve(s)
                 if placed or (has_main and not mine): continue
                 placed = True
-                if typ == 'bb':
+                if typ == 'bb' and BTU:
+                    out.append(bb_moi(lan))
+                elif typ == 'bb':
                     warm = {}   # (13/11, chị chốt 10:00) big book không khởi động bằng vè: chỉ tên, trang của chính quyển
                     if lan == 1: warm['names'] = NAMES
                     if lan == 2: warm['pages'] = [off, off + 1, off + 2]
@@ -702,8 +770,9 @@ def bbve_unit(un, S_):
             else:
                 out.append(s)
         days[n]['steps'] = out
-        if typ == 'bb' and lan == 4 and days[n].get('t') == 'Các bạn nói gì?':   # (12/11) ngày không còn Nói theo: tên theo big book lần 4 (chị duyệt)
-            days[n].update({'t': 'Con kể chuyện', 'goal': 'Kể lại big book và nói câu của con'})
+        if typ == 'bb' and lan == 4 and days[n].get('t') in ('Các bạn nói gì?', 'Con kể chuyện'):   # ngày big book lần 4: tên theo dạng bài
+            if BTU: days[n].update({'t': {'dich': 'Con phiên dịch', 'xep': 'Con xếp câu'}[BBT.kieu(un, 4)], 'goal': 'Dùng big book: ' + BBT.TEN_NGAY[BBT.kieu(un, 4)].lower()})
+            else: days[n].update({'t': 'Con kể chuyện', 'goal': 'Kể lại big book và nói câu của con'})
         for k, v in (S_.get('day_fix') or {}).get(di, {}).items(): days[n][k] = v
     print('big book + vè 4 lần: unit', un, 'ngày', D_U, [f'{t}{l}' for t, l in S_['plan']])
 
