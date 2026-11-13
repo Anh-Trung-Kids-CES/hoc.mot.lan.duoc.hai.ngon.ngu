@@ -1,0 +1,4623 @@
+{
+ "LS": {
+  "1": {
+   "chi_doi": true,
+   "ten": [
+    "Hello and Goodbye!",
+    "你好，再见！"
+   ],
+   "van": [],
+   "va": [],
+   "dong": [
+    {
+     "w": "lop",
+     "raw": "Leo, Leo, HOW old are YOU?",
+     "en_o": "Leo, Leo, HOW old are YOU?",
+     "zh": "Leo，Leo，你几岁？",
+     "zh_o": "Leo，Leo，你几岁？",
+     "py": "Leo, Leo, nǐ jǐ suì?",
+     "img": "LS/u1/p6",
+     "o_en": [],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "HOW",
+      "YOU?"
+     ]
+    },
+    {
+     "w": "con",
+     "raw": "FIVE! I'm FIVE! And YOU? And YOU?",
+     "en_o": "{#FIVE}! I'm {#FIVE}! And YOU? And YOU?",
+     "zh": "五岁五岁，我五岁！",
+     "zh_o": "{#五}岁{#五}岁，我{#五}岁！",
+     "py": "wǔ suì wǔ suì, wǒ wǔ suì!",
+     "img": "LS/u1/p6",
+     "o_en": [
+      "FIVE"
+     ],
+     "o_zh": [
+      "五"
+     ],
+     "tuoi": true,
+     "cu": [],
+     "phach": [
+      "FIVE!",
+      "FIVE!",
+      "YOU?",
+      "YOU?"
+     ]
+    }
+   ]
+  },
+  "2": {
+   "ten": [
+    "How Old Are You?",
+    "你几岁？"
+   ],
+   "van": [
+    [
+     "you / two",
+     "ui"
+    ],
+    [
+     "name",
+     "e – o"
+    ],
+    [
+     "you",
+     "ui"
+    ]
+   ],
+   "va": [],
+   "dong": [
+    {
+     "w": "lop",
+     "raw": "PUP-py, PUP-py, HOW old are YOU?",
+     "en_o": "{PUP-py}, {PUP-py}, HOW old are YOU?",
+     "zh": "小狗小狗，你几岁？",
+     "zh_o": "{小狗}{小狗}，你几岁？",
+     "py": "xiǎo gǒu xiǎo gǒu, nǐ jǐ suì?",
+     "img": "LS/u1/p8",
+     "o_en": [
+      "PUP-py"
+     ],
+     "o_zh": [
+      "小狗"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "puppy",
+       "U1"
+      ]
+     ],
+     "phach": [
+      "PUPpy,",
+      "PUPpy,",
+      "HOW",
+      "YOU?"
+     ]
+    },
+    {
+     "w": "con",
+     "raw": "WOOF, WOOF! I'm TWO! I'm TWO!",
+     "en_o": "WOOF, WOOF! I'm {TWO}! I'm {TWO}!",
+     "zh": "汪汪汪，我两岁！",
+     "zh_o": "汪汪汪，我{两}岁！",
+     "py": "wāng wāng wāng, wǒ liǎng suì!",
+     "img": "LS/u2/p12",
+     "o_en": [
+      "TWO"
+     ],
+     "o_zh": [
+      "两"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "WOOF,",
+      "WOOF!",
+      "TWO!",
+      "TWO!"
+     ]
+    },
+    {
+     "w": "lop",
+     "raw": "KIT-ten, KIT-ten, WHAT'S your NAME?",
+     "en_o": "{KIT-ten}, {KIT-ten}, WHAT'S your NAME?",
+     "zh": "小猫小猫，你叫什么？",
+     "zh_o": "{小猫}{小猫}，你叫什么？",
+     "py": "xiǎo māo xiǎo māo, nǐ jiào shén me?",
+     "img": "LS/u1/p10",
+     "o_en": [
+      "KIT-ten"
+     ],
+     "o_zh": [
+      "小猫"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "kitten",
+       "U1"
+      ]
+     ],
+     "phach": [
+      "KITten,",
+      "KITten,",
+      "WHAT'S",
+      "NAME?"
+     ]
+    },
+    {
+     "w": "con",
+     "raw": "MEOW! I'm KIT-ten! THAT'S my NAME!",
+     "en_o": "MEOW! I'm {KIT-ten}! THAT'S my NAME!",
+     "zh": "喵喵！小猫就是我！",
+     "zh_o": "喵喵！{小猫}就是我！",
+     "py": "miāo miāo! xiǎo māo jiù shì wǒ!",
+     "img": "LS/u2/p6",
+     "o_en": [
+      "KIT-ten"
+     ],
+     "o_zh": [
+      "小猫"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "kitten",
+       "U1"
+      ]
+     ],
+     "phach": [
+      "MEOW!",
+      "KITten!",
+      "THAT'S",
+      "NAME!"
+     ]
+    },
+    {
+     "w": "lop",
+     "raw": "___, ___, HOW old are YOU?",
+     "en_o": "___, ___, HOW old are YOU?",
+     "zh": "___，___，你几岁？",
+     "zh_o": "___，___，你几岁？",
+     "py": ",, nǐ jǐ suì?",
+     "img": "LS/u2/p9",
+     "o_en": [],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "HOW",
+      "YOU?"
+     ]
+    },
+    {
+     "w": "con",
+     "raw": "SIX! I'm SIX! And YOU? And YOU?",
+     "en_o": "{#SIX}! I'm {#SIX}! And YOU? And YOU?",
+     "zh": "六岁六岁，我六岁！",
+     "zh_o": "{#六}岁{#六}岁，我{#六}岁！",
+     "py": "liù suì liù suì, wǒ liù suì!",
+     "img": "LS/u2/p10",
+     "o_en": [
+      "SIX"
+     ],
+     "o_zh": [
+      "六"
+     ],
+     "tuoi": true,
+     "cu": [],
+     "phach": [
+      "SIX!",
+      "SIX!",
+      "YOU?",
+      "YOU?"
+     ]
+    }
+   ]
+  },
+  "3": {
+   "ten": [
+    "Who Is She?",
+    "她是谁？"
+   ],
+   "van": [
+    [
+     "she / me",
+     "ui"
+    ],
+    [
+     "he / me",
+     "ui"
+    ],
+    [
+     "she / me",
+     "ui"
+    ]
+   ],
+   "va": [
+    "he/she · 他/她 (gỡ lỗi he/she ↔ 这)",
+    "me",
+    "with"
+   ],
+   "dong": [
+    {
+     "w": "lop",
+     "raw": "WHO is SHE? WHO is SHE?",
+     "en_o": "WHO is SHE? WHO is SHE?",
+     "zh": "她是谁？她是谁？",
+     "zh_o": "她是谁？她是谁？",
+     "py": "tā shì shéi? tā shì shéi?",
+     "img": "LS/u3/p5",
+     "o_en": [],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "WHO",
+      "SHE?",
+      "WHO",
+      "SHE?"
+     ]
+    },
+    {
+     "w": "con",
+     "raw": "SHE'S my GRAND-ma! SHE loves ME!",
+     "en_o": "SHE'S my {GRAND-ma}! SHE loves ME!",
+     "zh": "她是我奶奶！对，对，对！",
+     "zh_o": "她是我{奶奶}！对，对，对！",
+     "py": "tā shì wǒ nǎi nai! duì, duì, duì!",
+     "img": "LS/u3/p6",
+     "o_en": [
+      "GRAND-ma"
+     ],
+     "o_zh": [
+      "奶奶"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "SHE'S",
+      "GRANDma!",
+      "SHE",
+      "ME!"
+     ]
+    },
+    {
+     "w": "lop",
+     "raw": "WHO is HE? WHO is HE?",
+     "en_o": "WHO is HE? WHO is HE?",
+     "zh": "他是谁？他是谁？",
+     "zh_o": "他是谁？他是谁？",
+     "py": "tā shì shéi? tā shì shéi?",
+     "img": "LS/u3/p3",
+     "o_en": [],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "WHO",
+      "HE?",
+      "WHO",
+      "HE?"
+     ]
+    },
+    {
+     "w": "con",
+     "raw": "HE'S my DAD-dy! HE loves ME!",
+     "en_o": "HE'S my {DAD-dy}! HE loves ME!",
+     "zh": "他是我爸爸！对，对，对！",
+     "zh_o": "他是我{爸爸}！对，对，对！",
+     "py": "tā shì wǒ bà ba! duì, duì, duì!",
+     "img": "LS/u1/p3",
+     "o_en": [
+      "DAD-dy"
+     ],
+     "o_zh": [
+      "爸爸"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "daddy",
+       "U1"
+      ]
+     ],
+     "phach": [
+      "HE'S",
+      "DADdy!",
+      "HE",
+      "ME!"
+     ]
+    },
+    {
+     "w": "lop",
+     "raw": "___, ___, WHO is SHE?",
+     "en_o": "___, ___, WHO is SHE?",
+     "zh": "___，___，她是谁？",
+     "zh_o": "___，___，她是谁？",
+     "py": ",, tā shì shéi?",
+     "img": "LS/u3/p11",
+     "o_en": [],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "WHO",
+      "SHE?"
+     ]
+    },
+    {
+     "w": "con",
+     "raw": "SHE'S my FRIEND! She PLAYS with ME!",
+     "en_o": "SHE'S my {FRIEND}! She PLAYS with ME!",
+     "zh": "她是我朋友！对，对，对！",
+     "zh_o": "她是我{朋友}！对，对，对！",
+     "py": "tā shì wǒ péng you! duì, duì, duì!",
+     "img": "LS/u1/p6",
+     "o_en": [
+      "FRIEND"
+     ],
+     "o_zh": [
+      "朋友"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "friend",
+       "U1"
+      ]
+     ],
+     "phach": [
+      "SHE'S",
+      "FRIEND!",
+      "PLAYS",
+      "ME!"
+     ]
+    }
+   ]
+  },
+  "4": {
+   "ten": [
+    "Touch, Touch!",
+    "摸一摸！"
+   ],
+   "van": [
+    [
+     "ears / here",
+     "o (朵 – 摸)"
+    ],
+    [
+     "nose / noses",
+     "子 – 子"
+    ],
+    [
+     "feet / beat",
+     "iao (脚 – 跳)"
+    ]
+   ],
+   "va": [
+    "they"
+   ],
+   "dong": [
+    {
+     "w": "lop",
+     "raw": "GRAND-ma, GRAND-ma, TOUCH your EARS!",
+     "en_o": "{GRAND-ma}, {GRAND-ma}, TOUCH your {EARS}!",
+     "zh": "奶奶奶奶，摸耳朵！",
+     "zh_o": "{奶奶}{奶奶}，摸{耳朵}！",
+     "py": "nǎi nai nǎi nai, mō ěr duo!",
+     "img": "LS/u3/p6",
+     "o_en": [
+      "GRAND-ma",
+      "EARS"
+     ],
+     "o_zh": [
+      "奶奶",
+      "耳朵"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "grandma",
+       "U3"
+      ]
+     ],
+     "phach": [
+      "GRANDma,",
+      "GRANDma,",
+      "TOUCH",
+      "EARS!"
+     ]
+    },
+    {
+     "w": "con",
+     "raw": "I HAVE two EARS! THEY are HERE!",
+     "en_o": "I HAVE two {EARS}! THEY are HERE!",
+     "zh": "我有耳朵，摸一摸！",
+     "zh_o": "我有{耳朵}，摸一摸！",
+     "py": "wǒ yǒu ěr duo, mō yi mō!",
+     "img": "LS/u4/p5",
+     "o_en": [
+      "EARS"
+     ],
+     "o_zh": [
+      "耳朵"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "HAVE",
+      "EARS!",
+      "THEY",
+      "HERE!"
+     ]
+    },
+    {
+     "w": "lop",
+     "raw": "PUP-py, PUP-py, TOUCH your NOSE!",
+     "en_o": "{PUP-py}, {PUP-py}, TOUCH your {NOSE}!",
+     "zh": "小狗小狗，摸鼻子！",
+     "zh_o": "{小狗}{小狗}，摸{鼻子}！",
+     "py": "xiǎo gǒu xiǎo gǒu, mō bí zi!",
+     "img": "LS/u4/p9",
+     "o_en": [
+      "PUP-py",
+      "NOSE"
+     ],
+     "o_zh": [
+      "小狗",
+      "鼻子"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "puppy",
+       "U1"
+      ]
+     ],
+     "phach": [
+      "PUPpy,",
+      "PUPpy,",
+      "TOUCH",
+      "NOSE!"
+     ]
+    },
+    {
+     "w": "con",
+     "raw": "HA, ha! I have TWO RED NOS-es!",
+     "en_o": "HA, ha! I have TWO RED {NOS-es}!",
+     "zh": "哈哈！两个红鼻子！",
+     "zh_o": "哈哈！两个红{鼻子}！",
+     "py": "hā hā! liǎng ge hóng bí zi!",
+     "img": "LS/u4/p10",
+     "o_en": [
+      "NOS-es"
+     ],
+     "o_zh": [
+      "鼻子"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "HA,",
+      "TWO",
+      "RED",
+      "NOSes!"
+     ]
+    },
+    {
+     "w": "lop",
+     "raw": "___, ___, TOUCH your FEET!",
+     "en_o": "___, ___, TOUCH your {FEET}!",
+     "zh": "___，___，摸摸脚！",
+     "zh_o": "___，___，摸摸{脚}！",
+     "py": ",, mō mō jiǎo!",
+     "img": "LS/u4/p11",
+     "o_en": [
+      "FEET"
+     ],
+     "o_zh": [
+      "脚"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "TOUCH",
+      "FEET!"
+     ]
+    },
+    {
+     "w": "con",
+     "raw": "I HAVE two FEET! JUMP to the BEAT!",
+     "en_o": "I HAVE two {FEET}! JUMP to the BEAT!",
+     "zh": "我有两只脚，跳一跳！",
+     "zh_o": "我有两只{脚}，跳一跳！",
+     "py": "wǒ yǒu liǎng zhī jiǎo, tiào yi tiào!",
+     "img": "LS/u4/p7",
+     "o_en": [
+      "FEET"
+     ],
+     "o_zh": [
+      "脚"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "HAVE",
+      "FEET!",
+      "JUMP",
+      "BEAT!"
+     ]
+    }
+   ]
+  },
+  "5": {
+   "ten": [
+    "How Do You Feel?",
+    "你感觉怎么样？"
+   ],
+   "van": [
+    [
+     "grandpa / ah",
+     "—"
+    ],
+    [
+     "grandma / ha",
+     "ang (样 – 洋)"
+    ],
+    [
+     "okay / hooray",
+     "a (吗 – 啦)"
+    ]
+   ],
+   "va": [],
+   "dong": [
+    {
+     "w": "lop",
+     "raw": "HOW do you FEEL, GRAND-pa, GRAND-pa?",
+     "en_o": "HOW do you FEEL, {GRAND-pa}, {GRAND-pa}?",
+     "zh": "爷爷爷爷，您感觉怎么样？",
+     "zh_o": "{爷爷}{爷爷}，您感觉怎么样？",
+     "py": "yé ye yé ye, nín gǎn jué zěn me yàng?",
+     "img": "LS/u3/p8",
+     "o_en": [
+      "GRAND-pa"
+     ],
+     "o_zh": [
+      "爷爷"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "grandpa",
+       "U3"
+      ]
+     ],
+     "phach": [
+      "HOW",
+      "FEEL,",
+      "GRANDpa,",
+      "GRANDpa?"
+     ]
+    },
+    {
+     "w": "con",
+     "raw": "I am SLEEP-y! AH… AH… AH!",
+     "en_o": "I am {SLEEP-y}! AH… AH… AH!",
+     "zh": "我很困，想睡觉！",
+     "zh_o": "我很{困}，想睡觉！",
+     "py": "wǒ hěn kùn, xiǎng shuì jiào!",
+     "img": "LS/u5/p8",
+     "o_en": [
+      "SLEEP-y"
+     ],
+     "o_zh": [
+      "困"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "SLEEPy!",
+      "AH…",
+      "AH…",
+      "AH!"
+     ]
+    },
+    {
+     "w": "lop",
+     "raw": "HOW do you FEEL, GRAND-ma, GRAND-ma?",
+     "en_o": "HOW do you FEEL, {GRAND-ma}, {GRAND-ma}?",
+     "zh": "奶奶奶奶，您感觉怎么样？",
+     "zh_o": "{奶奶}{奶奶}，您感觉怎么样？",
+     "py": "nǎi nai nǎi nai, nín gǎn jué zěn me yàng?",
+     "img": "LS/u3/p6",
+     "o_en": [
+      "GRAND-ma"
+     ],
+     "o_zh": [
+      "奶奶"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "grandma",
+       "U3"
+      ]
+     ],
+     "phach": [
+      "HOW",
+      "FEEL,",
+      "GRANDma,",
+      "GRANDma?"
+     ]
+    },
+    {
+     "w": "con",
+     "raw": "I AM HAP-py! HA, ha, HA!",
+     "en_o": "I AM {HAP-py}! HA, ha, HA!",
+     "zh": "我很开心，喜洋洋！",
+     "zh_o": "我很{开心}，喜洋洋！",
+     "py": "wǒ hěn kāi xīn, xǐ yáng yáng!",
+     "img": "LS/u5/p14",
+     "o_en": [
+      "HAP-py"
+     ],
+     "o_zh": [
+      "开心"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "AM",
+      "HAPpy!",
+      "HA,",
+      "HA!"
+     ]
+    },
+    {
+     "w": "lop",
+     "raw": "___, ___, ARE you O-KAY?",
+     "en_o": "___, ___, ARE you O-KAY?",
+     "zh": "___，___，你好吗？",
+     "zh_o": "___，___，你好吗？",
+     "py": ",, nǐ hǎo ma?",
+     "img": "LS/u5/p11",
+     "o_en": [],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "ARE",
+      "OKAY?"
+     ]
+    },
+    {
+     "w": "con",
+     "raw": "I AM HUN-gry! RICE, hoo-RAY!",
+     "en_o": "I AM {HUN-gry}! RICE, hoo-RAY!",
+     "zh": "我很饿，吃饭啦！",
+     "zh_o": "我很{饿}，吃饭啦！",
+     "py": "wǒ hěn è, chī fàn la!",
+     "img": "LS/u5/p12",
+     "o_en": [
+      "HUN-gry"
+     ],
+     "o_zh": [
+      "饿"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "AM",
+      "HUNgry!",
+      "RICE,",
+      "hooRAY!"
+     ]
+    }
+   ]
+  },
+  "6": {
+   "ten": [
+    "What Is This?",
+    "这是什么？"
+   ],
+   "van": [
+    [
+     "look / book",
+     "an (看 – 看)"
+    ],
+    [
+     "that / bag",
+     "ao (瞧 – 包)"
+    ],
+    [
+     "this / please",
+     "o (么 – 握)"
+    ]
+   ],
+   "va": [
+    "please"
+   ],
+   "dong": [
+    {
+     "w": "lop",
+     "raw": "WHAT is THIS? LOOK, look, LOOK!",
+     "en_o": "WHAT is THIS? LOOK, look, LOOK!",
+     "zh": "这是什么？看一看！",
+     "zh_o": "这是什么？看一看！",
+     "py": "zhè shì shén me? kàn yi kàn!",
+     "img": "LS/u6/p2",
+     "o_en": [],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "WHAT",
+      "THIS?",
+      "LOOK,",
+      "LOOK!"
+     ]
+    },
+    {
+     "w": "con",
+     "raw": "THIS is a NEW, NEW BOOK!",
+     "en_o": "THIS is a NEW, NEW {BOOK}!",
+     "zh": "这是新书，我爱看！",
+     "zh_o": "这是新{书}，我爱看！",
+     "py": "zhè shì xīn shū, wǒ ài kàn!",
+     "img": "LS/u6/p3",
+     "o_en": [
+      "BOOK"
+     ],
+     "o_zh": [
+      "书"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "THIS",
+      "NEW,",
+      "NEW",
+      "BOOK!"
+     ]
+    },
+    {
+     "w": "lop",
+     "raw": "WHAT is THAT? WHAT is THAT?",
+     "en_o": "WHAT is THAT? WHAT is THAT?",
+     "zh": "那是什么？瞧一瞧！",
+     "zh_o": "那是什么？瞧一瞧！",
+     "py": "nà shì shén me? qiáo yi qiáo!",
+     "img": "LS/u6/p12",
+     "o_en": [],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "WHAT",
+      "THAT?",
+      "WHAT",
+      "THAT?"
+     ]
+    },
+    {
+     "w": "con",
+     "raw": "THAT is my SCHOOL-bag! a BIG, big BAG!",
+     "en_o": "THAT is my {SCHOOL-bag}! a BIG, big BAG!",
+     "zh": "那是我的大书包！",
+     "zh_o": "那是我的大{书包}！",
+     "py": "nà shì wǒ de dà shū bāo!",
+     "img": "LS/u6/p1",
+     "o_en": [
+      "SCHOOL-bag"
+     ],
+     "o_zh": [
+      "书包"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "THAT",
+      "SCHOOLbag!",
+      "BIG,",
+      "BAG!"
+     ]
+    },
+    {
+     "w": "lop",
+     "raw": "___, ___, WHAT is THIS?",
+     "en_o": "___, ___, WHAT is THIS?",
+     "zh": "___，___，这是什么？",
+     "zh_o": "___，___，这是什么？",
+     "py": ",, zhè shì shén me?",
+     "img": "LS/u6/p10",
+     "o_en": [],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "WHAT",
+      "THIS?"
+     ]
+    },
+    {
+     "w": "con",
+     "raw": "THIS is my HAND! SHAKE it, PLEASE!",
+     "en_o": "THIS is my {HAND}! SHAKE it, PLEASE!",
+     "zh": "这是小手，握一握！",
+     "zh_o": "这是{小手}，握一握！",
+     "py": "zhè shì xiǎo shǒu, wò yi wò!",
+     "img": "LS/u4/p6",
+     "o_en": [
+      "HAND"
+     ],
+     "o_zh": [
+      "小手"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "hand",
+       "U4"
+      ]
+     ],
+     "phach": [
+      "THIS",
+      "HAND!",
+      "SHAKE",
+      "PLEASE!"
+     ]
+    }
+   ]
+  },
+  "7": {
+   "ten": [
+    "Where Is It?",
+    "在哪儿？"
+   ],
+   "van": [
+    [
+     "bed / head",
+     "ang (上 – 上)"
+    ],
+    [
+     "chair / there",
+     "er (哪儿 – 那儿)"
+    ],
+    [
+     "book / look",
+     "er (哪儿 – 这儿)"
+    ]
+   ],
+   "va": [
+    "哪儿"
+   ],
+   "dong": [
+    {
+     "w": "lop",
+     "raw": "WHERE is my RUL-er? ON the BED?",
+     "en_o": "WHERE is my {RUL-er}? ON the {BED}?",
+     "zh": "我的尺子在床上？",
+     "zh_o": "我的{尺子}在{床}上？",
+     "py": "wǒ de chǐ zi zài chuáng shàng?",
+     "img": "LS/u6/p9",
+     "o_en": [
+      "RUL-er",
+      "BED"
+     ],
+     "o_zh": [
+      "尺子",
+      "床"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "ruler",
+       "U6"
+      ]
+     ],
+     "phach": [
+      "WHERE",
+      "RULer?",
+      "ON",
+      "BED?"
+     ]
+    },
+    {
+     "w": "con",
+     "raw": "NOT on the BED! It's ON my HEAD!",
+     "en_o": "NOT on the {BED}! It's ON my HEAD!",
+     "zh": "不在床上，在头上！",
+     "zh_o": "不在{床}上，在头上！",
+     "py": "bú zài chuáng shàng, zài tóu shàng!",
+     "img": "LS/u7/p3",
+     "o_en": [
+      "BED"
+     ],
+     "o_zh": [
+      "床"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "head",
+       "U4"
+      ]
+     ],
+     "phach": [
+      "NOT",
+      "BED!",
+      "ON",
+      "HEAD!"
+     ]
+    },
+    {
+     "w": "lop",
+     "raw": "WHERE is my PEN? UN-der the CHAIR?",
+     "en_o": "WHERE is my {PEN}? UN-der the {CHAIR}?",
+     "zh": "我的笔在哪儿？椅子下？",
+     "zh_o": "我的{笔}在哪儿？{椅子}下？",
+     "py": "wǒ de bǐ zài nǎr? yǐ zi xià?",
+     "img": "LS/u6/p5",
+     "o_en": [
+      "PEN",
+      "CHAIR"
+     ],
+     "o_zh": [
+      "笔",
+      "椅子"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "pen",
+       "U6"
+      ]
+     ],
+     "phach": [
+      "WHERE",
+      "PEN?",
+      "UNder",
+      "CHAIR?"
+     ]
+    },
+    {
+     "w": "con",
+     "raw": "NOT under the CHAIR! LOOK! It's THERE!",
+     "en_o": "NOT under the {CHAIR}! LOOK! It's THERE!",
+     "zh": "不在椅子下，在那儿！",
+     "zh_o": "不在{椅子}下，在那儿！",
+     "py": "bú zài yǐ zi xià, zài nàr!",
+     "img": "LS/u7/p10",
+     "o_en": [
+      "CHAIR"
+     ],
+     "o_zh": [
+      "椅子"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "NOT",
+      "CHAIR!",
+      "LOOK!",
+      "THERE!"
+     ]
+    },
+    {
+     "w": "lop",
+     "raw": "___, ___, WHERE is your BOOK?",
+     "en_o": "___, ___, WHERE is your {BOOK}?",
+     "zh": "___，你的书在哪儿？",
+     "zh_o": "___，你的{书}在哪儿？",
+     "py": ", nǐ de shū zài nǎr?",
+     "img": "LS/u6/p3",
+     "o_en": [
+      "BOOK"
+     ],
+     "o_zh": [
+      "书"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "book",
+       "U6"
+      ]
+     ],
+     "phach": [
+      "WHERE",
+      "BOOK?"
+     ]
+    },
+    {
+     "w": "con",
+     "raw": "ON the SO-fa! COME and LOOK!",
+     "en_o": "ON the {SO-fa}! COME and LOOK!",
+     "zh": "在沙发上！在这儿！",
+     "zh_o": "在{沙发}上！在这儿！",
+     "py": "zài shā fā shàng! zài zhèr!",
+     "img": "LS/u7/p5",
+     "o_en": [
+      "SO-fa"
+     ],
+     "o_zh": [
+      "沙发"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "ON",
+      "SOfa!",
+      "COME",
+      "LOOK!"
+     ]
+    }
+   ]
+  },
+  "8": {
+   "ten": [
+    "I Can…",
+    "我会……"
+   ],
+   "van": [
+    [
+     "jump / bump",
+     "iao (跳 – 跳)"
+    ],
+    [
+     "swim / in",
+     "ong (泳 – 通)"
+    ],
+    [
+     "fly / try",
+     "a (吗 – 吧)"
+    ]
+   ],
+   "va": [
+    "we",
+    "they"
+   ],
+   "dong": [
+    {
+     "w": "lop",
+     "raw": "LOOK! I'm a RAB-bit! I CAN JUMP!",
+     "en_o": "LOOK! I'm a {RAB-bit}! I CAN {JUMP}!",
+     "zh": "我是兔子，我会跳！",
+     "zh_o": "我是{兔子}，我会{跳}！",
+     "py": "wǒ shì tù zi, wǒ huì tiào!",
+     "img": "LS/u8/p4",
+     "o_en": [
+      "RAB-bit",
+      "JUMP"
+     ],
+     "o_zh": [
+      "兔子",
+      "跳"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "LOOK!",
+      "RABbit!",
+      "CAN",
+      "JUMP!"
+     ]
+    },
+    {
+     "w": "con",
+     "raw": "WE jump on the BED! BUMP, bump, BUMP!",
+     "en_o": "WE jump on the {BED}! BUMP, bump, BUMP!",
+     "zh": "我们在床上跳呀跳！",
+     "zh_o": "我们在{床}上跳呀跳！",
+     "py": "wǒ men zài chuáng shàng tiào ya tiào!",
+     "img": "LS/u7/p3",
+     "o_en": [
+      "BED"
+     ],
+     "o_zh": [
+      "床"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "bed",
+       "U7"
+      ]
+     ],
+     "phach": [
+      "WE",
+      "BED!",
+      "BUMP,",
+      "BUMP!"
+     ]
+    },
+    {
+     "w": "lop",
+     "raw": "LOOK! I'm a FISH! I CAN SWIM!",
+     "en_o": "LOOK! I'm a {FISH}! I CAN {SWIM}!",
+     "zh": "我是鱼，我会游泳！",
+     "zh_o": "我是{鱼}，我会{游泳}！",
+     "py": "wǒ shì yú, wǒ huì yóu yǒng!",
+     "img": "LS/u8/p3",
+     "o_en": [
+      "FISH",
+      "SWIM"
+     ],
+     "o_zh": [
+      "鱼",
+      "游泳"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "LOOK!",
+      "FISH!",
+      "CAN",
+      "SWIM!"
+     ]
+    },
+    {
+     "w": "con",
+     "raw": "THEY swim in the POND! LET'S jump IN!",
+     "en_o": "THEY swim in the {POND}! LET'S jump IN!",
+     "zh": "它们在池塘里，扑通！扑通！",
+     "zh_o": "它们在{池塘}里，扑通！扑通！",
+     "py": "tā men zài chí táng lǐ, pū tōng! pū tōng!",
+     "img": "LS/u8/p3",
+     "o_en": [
+      "POND"
+     ],
+     "o_zh": [
+      "池塘"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "THEY",
+      "POND!",
+      "LET'S",
+      "IN!"
+     ]
+    },
+    {
+     "w": "lop",
+     "raw": "___, ___, CAN you FLY?",
+     "en_o": "___, ___, CAN you {FLY}?",
+     "zh": "___，___，你会飞吗？",
+     "zh_o": "___，___，你会{飞}吗？",
+     "py": ",, nǐ huì fēi ma?",
+     "img": "LS/u8/p6",
+     "o_en": [
+      "FLY"
+     ],
+     "o_zh": [
+      "飞"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "CAN",
+      "FLY?"
+     ]
+    },
+    {
+     "w": "con",
+     "raw": "I CAN'T FLY! But I CAN TRY!",
+     "en_o": "I CAN'T {FLY}! But I CAN TRY!",
+     "zh": "我不会飞，试试吧！",
+     "zh_o": "我不会{飞}，试试吧！",
+     "py": "wǒ bú huì fēi, shì shì ba!",
+     "img": "LS/u8/p8",
+     "o_en": [
+      "FLY"
+     ],
+     "o_zh": [
+      "飞"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "CAN'T",
+      "FLY!",
+      "CAN",
+      "TRY!"
+     ]
+    }
+   ]
+  },
+  "9": {
+   "ten": [
+    "What Do You Like?",
+    "你喜欢什么？"
+   ],
+   "van": [
+    [
+     "like / nice",
+     "o (么 – 多)"
+    ],
+    [
+     "drink / drink",
+     "e (么 – 喝)"
+    ],
+    [
+     "like / bite",
+     "e (么 – 个)"
+    ]
+   ],
+   "va": [],
+   "dong": [
+    {
+     "w": "lop",
+     "raw": "MOUSE, MOUSE, WHAT do you LIKE?",
+     "en_o": "{MOUSE}, {MOUSE}, WHAT do you LIKE?",
+     "zh": "老鼠老鼠，喜欢什么？",
+     "zh_o": "{老鼠}{老鼠}，喜欢什么？",
+     "py": "lǎo shǔ lǎo shǔ, xǐ huan shén me?",
+     "img": "LS/u8/p10",
+     "o_en": [
+      "MOUSE"
+     ],
+     "o_zh": [
+      "老鼠"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "mouse",
+       "U8"
+      ]
+     ],
+     "phach": [
+      "MOUSE,",
+      "MOUSE,",
+      "WHAT",
+      "LIKE?"
+     ]
+    },
+    {
+     "w": "con",
+     "raw": "I LIKE RICE! RICE is NICE!",
+     "en_o": "I LIKE {RICE}! RICE is NICE!",
+     "zh": "我爱吃米饭，吃好多！",
+     "zh_o": "我爱吃{米饭}，吃好多！",
+     "py": "wǒ ài chī mǐ fàn, chī hǎo duō!",
+     "img": "LS/u9/p12",
+     "o_en": [
+      "RICE"
+     ],
+     "o_zh": [
+      "米饭"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "LIKE",
+      "RICE!",
+      "RICE",
+      "NICE!"
+     ]
+    },
+    {
+     "w": "lop",
+     "raw": "BIRD, BIRD, WHAT do you DRINK?",
+     "en_o": "{BIRD}, {BIRD}, WHAT do you DRINK?",
+     "zh": "小鸟小鸟，喝什么？",
+     "zh_o": "小{鸟}小{鸟}，喝什么？",
+     "py": "xiǎo niǎo xiǎo niǎo, hē shén me?",
+     "img": "LS/u8/p2",
+     "o_en": [
+      "BIRD"
+     ],
+     "o_zh": [
+      "鸟"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "bird",
+       "U8"
+      ]
+     ],
+     "phach": [
+      "BIRD,",
+      "BIRD,",
+      "WHAT",
+      "DRINK?"
+     ]
+    },
+    {
+     "w": "con",
+     "raw": "I DRINK WA-ter! DRINK, drink, DRINK!",
+     "en_o": "I DRINK {WA-ter}! DRINK, drink, DRINK!",
+     "zh": "我喝水，喝呀喝！",
+     "zh_o": "我喝{水}，喝呀喝！",
+     "py": "wǒ hē shuǐ, hē ya hē!",
+     "img": "tranh/water",
+     "o_en": [
+      "WA-ter"
+     ],
+     "o_zh": [
+      "水"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "DRINK",
+      "WAter!",
+      "DRINK,",
+      "DRINK!"
+     ]
+    },
+    {
+     "w": "lop",
+     "raw": "___, ___, WHAT do you LIKE?",
+     "en_o": "___, ___, WHAT do you LIKE?",
+     "zh": "___，___，你喜欢什么？",
+     "zh_o": "___，___，你喜欢什么？",
+     "py": ",, nǐ xǐ huan shén me?",
+     "img": "LS/u9/p11",
+     "o_en": [],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "WHAT",
+      "LIKE?"
+     ]
+    },
+    {
+     "w": "con",
+     "raw": "I LIKE AP-ples! TAKE a BITE!",
+     "en_o": "I LIKE {AP-ples}! TAKE a BITE!",
+     "zh": "我喜欢苹果，来一个！",
+     "zh_o": "我喜欢{苹果}，来一个！",
+     "py": "wǒ xǐ huan píng guǒ, lái yí ge!",
+     "img": "LS/u9/p4",
+     "o_en": [
+      "AP-ples"
+     ],
+     "o_zh": [
+      "苹果"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "LIKE",
+      "APples!",
+      "TAKE",
+      "BITE!"
+     ]
+    }
+   ]
+  },
+  "10": {
+   "ten": [
+    "What Is the Weather?",
+    "天气怎么样？"
+   ],
+   "van": [
+    [
+     "today / play",
+     "a (啦 – 吧)"
+    ],
+    [
+     "sad / dad",
+     "—"
+    ],
+    [
+     "weather / together",
+     "a (吗 – 吧)"
+    ]
+   ],
+   "va": [
+    "please",
+    "let's"
+   ],
+   "dong": [
+    {
+     "w": "lop",
+     "raw": "WEATH-er, WEATH-er, WHAT is it to-DAY?",
+     "en_o": "WEATH-er, WEATH-er, WHAT is it to-DAY?",
+     "zh": "天气天气，怎么啦？",
+     "zh_o": "天气天气，怎么啦？",
+     "py": "tiān qì tiān qì, zěn me la?",
+     "img": "LS/u10/p1",
+     "o_en": [],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "WEATHer,",
+      "WEATHer,",
+      "WHAT",
+      "toDAY?"
+     ]
+    },
+    {
+     "w": "con",
+     "raw": "It IS SUN-ny! LET'S go and PLAY!",
+     "en_o": "It IS {SUN-ny}! LET'S go and PLAY!",
+     "zh": "今天晴天，去玩吧！",
+     "zh_o": "今天{晴天}，去玩吧！",
+     "py": "jīn tiān qíng tiān, qù wán ba!",
+     "img": "LS/u10/p2",
+     "o_en": [
+      "SUN-ny"
+     ],
+     "o_zh": [
+      "晴天"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "IS",
+      "SUNny!",
+      "LET'S",
+      "PLAY!"
+     ]
+    },
+    {
+     "w": "lop",
+     "raw": "It IS RAIN-y! I am SO SAD.",
+     "en_o": "It IS {RAIN-y}! I am SO {SAD}.",
+     "zh": "今天下雨，我难过。",
+     "zh_o": "今天{下雨}，我{难过}。",
+     "py": "jīn tiān xià yǔ, wǒ nán guò.",
+     "img": "LS/u10/p6",
+     "o_en": [
+      "RAIN-y",
+      "SAD"
+     ],
+     "o_zh": [
+      "下雨",
+      "难过"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "sad",
+       "U5"
+      ]
+     ],
+     "phach": [
+      "IS",
+      "RAINy!",
+      "SO",
+      "SAD."
+     ]
+    },
+    {
+     "w": "con",
+     "raw": "MILK, PLEASE! THANK you, DAD!",
+     "en_o": "{MILK}, PLEASE! THANK you, DAD!",
+     "zh": "请给我牛奶！谢谢爸爸！",
+     "zh_o": "请给我{牛奶}！谢谢爸爸！",
+     "py": "qǐng gěi wǒ niú nǎi! xiè xie bà ba!",
+     "img": "LS/u9/p10",
+     "o_en": [
+      "MILK"
+     ],
+     "o_zh": [
+      "牛奶"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "milk",
+       "U9"
+      ],
+      [
+       "thank you",
+       "U7"
+      ],
+      [
+       "daddy",
+       "U1"
+      ]
+     ],
+     "phach": [
+      "MILK,",
+      "PLEASE!",
+      "THANK",
+      "DAD!"
+     ]
+    },
+    {
+     "w": "lop",
+     "raw": "___, ___, WHAT is the WEATH-er?",
+     "en_o": "___, ___, WHAT is the WEATH-er?",
+     "zh": "___，___，天气好吗？",
+     "zh_o": "___，___，天气好吗？",
+     "py": ",, tiān qì hǎo ma?",
+     "img": "LS/u10/p8",
+     "o_en": [],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "WHAT",
+      "WEATHer?"
+     ]
+    },
+    {
+     "w": "con",
+     "raw": "It is WIND-y! LET'S PLAY to-GETH-er!",
+     "en_o": "It is {WIND-y}! LET'S PLAY to-GETH-er!",
+     "zh": "今天刮风，一起玩吧！",
+     "zh_o": "今天{刮风}，一起玩吧！",
+     "py": "jīn tiān guā fēng, yì qǐ wán ba!",
+     "img": "LS/u10/p4",
+     "o_en": [
+      "WIND-y"
+     ],
+     "o_zh": [
+      "刮风"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "WINDy!",
+      "LET'S",
+      "PLAY",
+      "toGETHer!"
+     ]
+    }
+   ]
+  },
+  "11": {
+   "ten": [
+    "What Colour Is It?",
+    "什么颜色？"
+   ],
+   "van": [
+    [
+     "bed / red",
+     "e (色 – 的)"
+    ],
+    [
+     "bird / hello",
+     "e (色 – 的)"
+    ],
+    [
+     "think / drink",
+     "e (色 – 喝)"
+    ]
+   ],
+   "va": [],
+   "dong": [
+    {
+     "w": "lop",
+     "raw": "WHAT col-our IS it? LOOK at my BED!",
+     "en_o": "WHAT col-our IS it? LOOK at my {BED}!",
+     "zh": "什么颜色？我的床！",
+     "zh_o": "什么颜色？我的{床}！",
+     "py": "shén me yán sè? wǒ de chuáng!",
+     "img": "LS/u7/p2",
+     "o_en": [
+      "BED"
+     ],
+     "o_zh": [
+      "床"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "bed",
+       "U7"
+      ]
+     ],
+     "phach": [
+      "WHAT",
+      "IS",
+      "LOOK",
+      "BED!"
+     ]
+    },
+    {
+     "w": "con",
+     "raw": "IT'S RED! My BED is RED!",
+     "en_o": "IT'S {RED}! My BED is {RED}!",
+     "zh": "我的床是红色的！",
+     "zh_o": "我的床是{红色}的！",
+     "py": "wǒ de chuáng shì hóng sè de!",
+     "img": "LS/u11/p4",
+     "o_en": [
+      "RED"
+     ],
+     "o_zh": [
+      "红色"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "bed",
+       "U7"
+      ]
+     ],
+     "phach": [
+      "IT'S",
+      "RED!",
+      "BED",
+      "RED!"
+     ]
+    },
+    {
+     "w": "lop",
+     "raw": "WHAT col-our ARE you, BIRD, BIRD?",
+     "en_o": "WHAT col-our ARE you, {BIRD}, {BIRD}?",
+     "zh": "小鸟小鸟，什么颜色？",
+     "zh_o": "小{鸟}小{鸟}，什么颜色？",
+     "py": "xiǎo niǎo xiǎo niǎo, shén me yán sè?",
+     "img": "LS/u8/p2",
+     "o_en": [
+      "BIRD"
+     ],
+     "o_zh": [
+      "鸟"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "bird",
+       "U8"
+      ]
+     ],
+     "phach": [
+      "WHAT",
+      "ARE",
+      "BIRD,",
+      "BIRD?"
+     ]
+    },
+    {
+     "w": "con",
+     "raw": "I AM YEL-low! HEL-lo, HEL-lo!",
+     "en_o": "I AM {YEL-low}! HEL-lo, HEL-lo!",
+     "zh": "我是黄色的！黄黄的！",
+     "zh_o": "我是{黄色}的！黄黄的！",
+     "py": "wǒ shì huáng sè de! huáng huáng de!",
+     "img": "LS/u11/p6",
+     "o_en": [
+      "YEL-low"
+     ],
+     "o_zh": [
+      "黄色"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "AM",
+      "YELlow!",
+      "HELlo,",
+      "HELlo!"
+     ]
+    },
+    {
+     "w": "lop",
+     "raw": "___, ___, WHAT COL-our do you THINK?",
+     "en_o": "___, ___, WHAT COL-our do you THINK?",
+     "zh": "___，___，什么颜色？",
+     "zh_o": "___，___，什么颜色？",
+     "py": ",, shén me yán sè?",
+     "img": "LS/u11/p11",
+     "o_en": [],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "WHAT",
+      "COLour",
+      "THINK?"
+     ]
+    },
+    {
+     "w": "con",
+     "raw": "PINK! PINK MILK to DRINK!",
+     "en_o": "{PINK}! PINK {MILK} to DRINK!",
+     "zh": "粉色牛奶，喝一喝！",
+     "zh_o": "{粉色}{牛奶}，喝一喝！",
+     "py": "fěn sè niú nǎi, hē yi hē!",
+     "img": "LS/u9/p10",
+     "o_en": [
+      "PINK",
+      "MILK"
+     ],
+     "o_zh": [
+      "粉色",
+      "牛奶"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "milk",
+       "U9"
+      ]
+     ],
+     "phach": [
+      "PINK!",
+      "PINK",
+      "MILK",
+      "DRINK!"
+     ]
+    }
+   ]
+  },
+  "12": {
+   "ten": [
+    "How Many?",
+    "几个？"
+   ],
+   "van": [
+    [
+     "me / see",
+     "—"
+    ],
+    [
+     "yellow / hello",
+     "iao (鸟 – 好)"
+    ],
+    [
+     "friends / hand",
+     "ou (友 – 手)"
+    ]
+   ],
+   "va": [
+    "boy",
+    "with",
+    "me"
+   ],
+   "dong": [
+    {
+     "w": "lop",
+     "raw": "HOW many BOYS? COUNT with ME!",
+     "en_o": "HOW many {BOYS}? COUNT with ME!",
+     "zh": "几个男孩？数一数！",
+     "zh_o": "几个{男孩}？数一数！",
+     "py": "jǐ ge nán hái? shǔ yi shǔ!",
+     "img": "LS/u12/p3",
+     "o_en": [
+      "BOYS"
+     ],
+     "o_zh": [
+      "男孩"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "HOW",
+      "BOYS?",
+      "COUNT",
+      "ME!"
+     ]
+    },
+    {
+     "w": "con",
+     "raw": "ONE, two, three! THREE BOYS I SEE!",
+     "en_o": "ONE, two, three! {THREE} {BOYS} I SEE!",
+     "zh": "一二三，三个男孩！",
+     "zh_o": "一二三，{三}个{男孩}！",
+     "py": "yī èr sān, sān ge nán hái!",
+     "img": "LS/u12/p4",
+     "o_en": [
+      "THREE",
+      "BOYS"
+     ],
+     "o_zh": [
+      "三",
+      "男孩"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "ONE,",
+      "THREE",
+      "BOYS",
+      "SEE!"
+     ]
+    },
+    {
+     "w": "lop",
+     "raw": "HOW MAN-y BIRDS are YEL-low?",
+     "en_o": "HOW MAN-y {BIRDS} are {YEL-low}?",
+     "zh": "几只黄色的鸟？",
+     "zh_o": "几只{黄色}的{鸟}？",
+     "py": "jǐ zhī huáng sè de niǎo?",
+     "img": "LS/u8/p2",
+     "o_en": [
+      "BIRDS",
+      "YEL-low"
+     ],
+     "o_zh": [
+      "黄色",
+      "鸟"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "bird",
+       "U8"
+      ],
+      [
+       "yellow",
+       "U11"
+      ]
+     ],
+     "phach": [
+      "HOW",
+      "MANy",
+      "BIRDS",
+      "YELlow?"
+     ]
+    },
+    {
+     "w": "con",
+     "raw": "FOUR BIRDS say HEL-lo, HEL-lo!",
+     "en_o": "{FOUR} {BIRDS} say HEL-lo, HEL-lo!",
+     "zh": "四只鸟，你好你好！",
+     "zh_o": "{四}只{鸟}，你好你好！",
+     "py": "sì zhī niǎo, nǐ hǎo nǐ hǎo!",
+     "img": "LS/u11/p6",
+     "o_en": [
+      "FOUR",
+      "BIRDS"
+     ],
+     "o_zh": [
+      "四",
+      "鸟"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "bird",
+       "U8"
+      ]
+     ],
+     "phach": [
+      "FOUR",
+      "BIRDS",
+      "HELlo,",
+      "HELlo!"
+     ]
+    },
+    {
+     "w": "lop",
+     "raw": "___, ___, HOW many FRIENDS?",
+     "en_o": "___, ___, HOW many {FRIENDS}?",
+     "zh": "___，___，几个朋友？",
+     "zh_o": "___，___，几个{朋友}？",
+     "py": ",, jǐ ge péng you?",
+     "img": "LS/u12/p3",
+     "o_en": [
+      "FRIENDS"
+     ],
+     "o_zh": [
+      "朋友"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "friend",
+       "U1"
+      ]
+     ],
+     "phach": [
+      "HOW",
+      "FRIENDS?"
+     ]
+    },
+    {
+     "w": "con",
+     "raw": "TEN FRIENDS! HAND in HAND!",
+     "en_o": "{TEN} {FRIENDS}! HAND in HAND!",
+     "zh": "十个朋友，手拉手！",
+     "zh_o": "{十}个{朋友}，手拉手！",
+     "py": "shí ge péng you, shǒu lā shǒu!",
+     "img": "LS/u12/p12",
+     "o_en": [
+      "TEN",
+      "FRIENDS"
+     ],
+     "o_zh": [
+      "十",
+      "朋友"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "friend",
+       "U1"
+      ]
+     ],
+     "phach": [
+      "TEN",
+      "FRIENDS!",
+      "HAND",
+      "HAND!"
+     ]
+    }
+   ]
+  }
+ },
+ "SD": {
+  "1": {
+   "giu": true,
+   "ten": [
+    "Hello and Goodbye!",
+    "你好，再见！"
+   ],
+   "van": [],
+   "va": [],
+   "dong": []
+  },
+  "4": {
+   "ten": [
+    "Touch Your…",
+    "摸摸……"
+   ],
+   "van": [
+    [
+     "knees / please",
+     "ai (盖 – 盖)"
+    ],
+    [
+     "ah / ha",
+     "a (啊 – 哈)"
+    ],
+    [
+     "feet / beat",
+     "iao (脚 – 笑)"
+    ],
+    [
+     "toes / nose",
+     "i (趾 – 子)"
+    ]
+   ],
+   "va": [
+    "cơ thể U4 (vá cho nhóm cơ thể)"
+   ],
+   "dong": [
+    {
+     "w": "lan",
+     "raw": "GRAND-pa, GRAND-pa, TOUCH your KNEES!",
+     "en_o": "{GRAND-pa}, {GRAND-pa}, TOUCH your {KNEES}!",
+     "zh": "爷爷爷爷，摸膝盖！",
+     "zh_o": "{爷爷}{爷爷}，摸{膝盖}！",
+     "py": "yé ye yé ye, mō xī gài!",
+     "img": "SD/u1/p9",
+     "o_en": [
+      "GRAND-pa",
+      "KNEES"
+     ],
+     "o_zh": [
+      "爷爷",
+      "膝盖"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "grandpa",
+       "U1"
+      ]
+     ],
+     "phach": [
+      "GRANDpa,",
+      "GRANDpa,",
+      "TOUCH",
+      "KNEES!"
+     ]
+    },
+    {
+     "w": "ong",
+     "raw": "OH, my KNEES! HELP me, PLEASE!",
+     "en_o": "OH, my {KNEES}! HELP me, PLEASE!",
+     "zh": "哎哟哎哟，我的膝盖！",
+     "zh_o": "哎哟哎哟，我的{膝盖}！",
+     "py": "āi yō āi yō, wǒ de xī gài!",
+     "img": "SD/u4/p5",
+     "o_en": [
+      "KNEES"
+     ],
+     "o_zh": [
+      "膝盖"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "OH,",
+      "KNEES!",
+      "HELP",
+      "PLEASE!"
+     ]
+    },
+    {
+     "w": "lan",
+     "raw": "PUP-py, PUP-py, open your MOUTH, say AH!",
+     "en_o": "{PUP-py}, {PUP-py}, open your {MOUTH}, say AH!",
+     "zh": "小狗小狗，张大嘴，啊！",
+     "zh_o": "{小狗}{小狗}，张大{嘴}，啊！",
+     "py": "xiǎo gǒu xiǎo gǒu, zhāng dà zuǐ, a!",
+     "img": "SD/u4/p6",
+     "o_en": [
+      "PUP-py",
+      "MOUTH"
+     ],
+     "o_zh": [
+      "小狗",
+      "嘴"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "puppy",
+       "Nền LS"
+      ]
+     ],
+     "phach": [
+      "PUPpy,",
+      "PUPpy,",
+      "MOUTH,",
+      "AH!"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "AH! I've GOT a big MOUTH! HA, ha!",
+     "en_o": "AH! I've GOT a big {MOUTH}! HA, ha!",
+     "zh": "啊！我有大嘴巴，哈哈！",
+     "zh_o": "啊！我有大{嘴巴}，哈哈！",
+     "py": "a! wǒ yǒu dà zuǐ ba, hā hā!",
+     "img": "SD/u4/p6",
+     "o_en": [
+      "MOUTH"
+     ],
+     "o_zh": [
+      "嘴巴"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "AH!",
+      "GOT",
+      "MOUTH!",
+      "HA,"
+     ]
+    },
+    {
+     "w": "lan",
+     "raw": "KIDS, KIDS, STAMP your FEET!",
+     "en_o": "{KIDS}, {KIDS}, STAMP your {FEET}!",
+     "zh": "小朋友，跺跺脚！",
+     "zh_o": "{小朋友}，跺跺{脚}！",
+     "py": "xiǎo péng you, duò duò jiǎo!",
+     "img": "SD/u4/p10",
+     "o_en": [
+      "KIDS",
+      "FEET"
+     ],
+     "o_zh": [
+      "小朋友",
+      "脚"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "kids",
+       "U1"
+      ]
+     ],
+     "phach": [
+      "KIDS,",
+      "KIDS,",
+      "STAMP",
+      "FEET!"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "STAMP, STAMP, STAMP to the BEAT!",
+     "en_o": "STAMP, STAMP, STAMP to the BEAT!",
+     "zh": "跺跺跺，真好笑！",
+     "zh_o": "跺跺跺，真好笑！",
+     "py": "duò duò duò, zhēn hǎo xiào!",
+     "img": "SD/u4/p10",
+     "o_en": [],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "STAMP,",
+      "STAMP,",
+      "STAMP",
+      "BEAT!"
+     ]
+    },
+    {
+     "w": "lan",
+     "raw": "___, ___, TOUCH your TOES!",
+     "en_o": "___, ___, TOUCH your {TOES}!",
+     "zh": "___，___，摸脚趾！",
+     "zh_o": "___，___，摸{脚趾}！",
+     "py": ",, mō jiǎo zhǐ!",
+     "img": "SD/u4/p12",
+     "o_en": [
+      "TOES"
+     ],
+     "o_zh": [
+      "脚趾"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "TOUCH",
+      "TOES!"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "I've GOT ten TOES and ONE small NOSE!",
+     "en_o": "I've GOT ten {TOES} and ONE small {NOSE}!",
+     "zh": "十个脚趾，一个鼻子！",
+     "zh_o": "十个{脚趾}，一个{鼻子}！",
+     "py": "shí ge jiǎo zhǐ, yí ge bí zi!",
+     "img": "SD/u4/p8",
+     "o_en": [
+      "TOES",
+      "NOSE"
+     ],
+     "o_zh": [
+      "脚趾",
+      "鼻子"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "GOT",
+      "TOES",
+      "ONE",
+      "NOSE!"
+     ]
+    }
+   ]
+  },
+  "2": {
+   "ten": [
+    "How Old Are You?",
+    "你几岁？"
+   ],
+   "van": [
+    [
+     "you / true",
+     "e (了 – 乐)"
+    ],
+    [
+     "bigger / bigger",
+     "a (大 – 大)"
+    ],
+    [
+     "please / these",
+     "i (指 – 里)"
+    ],
+    [
+     "you / you",
+     "ui (岁 – 岁)"
+    ]
+   ],
+   "va": [
+    "ngón tay U4"
+   ],
+   "dong": [
+    {
+     "w": "lan",
+     "raw": "GRAND-pa, GRAND-pa, HOW old are YOU?",
+     "en_o": "{GRAND-pa}, {GRAND-pa}, HOW old are YOU?",
+     "zh": "爷爷，您多大年纪了？",
+     "zh_o": "{爷爷}，您多大年纪了？",
+     "py": "yé ye, nín duō dà nián jì le?",
+     "img": "SD/u2/p10",
+     "o_en": [
+      "GRAND-pa"
+     ],
+     "o_zh": [
+      "爷爷"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "grandpa",
+       "U1"
+      ]
+     ],
+     "phach": [
+      "GRANDpa,",
+      "GRANDpa,",
+      "HOW",
+      "YOU?"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "I'm SEV-en! HA, ha… NOT TRUE!",
+     "en_o": "I'm {SEV-en}! HA, ha… NOT TRUE!",
+     "zh": "我七岁！哈哈，逗你乐！",
+     "zh_o": "我{七}岁！哈哈，逗你乐！",
+     "py": "wǒ qī suì! hā hā, dòu nǐ lè!",
+     "img": "SD/u2/p11",
+     "o_en": [
+      "SEV-en"
+     ],
+     "o_zh": [
+      "七"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "SEVen!",
+      "HA,",
+      "NOT",
+      "TRUE!"
+     ]
+    },
+    {
+     "w": "lan",
+     "raw": "SEV-en, EIGHT! WHICH is BIG-ger?",
+     "en_o": "{SEV-en}, {EIGHT}! WHICH is BIG-ger?",
+     "zh": "七和八，哪个大？",
+     "zh_o": "{七}和{八}，哪个大？",
+     "py": "qī hé bā, nǎ ge dà?",
+     "img": "SD/u2/p9",
+     "o_en": [
+      "SEV-en",
+      "EIGHT"
+     ],
+     "o_zh": [
+      "七",
+      "八"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "SEVen,",
+      "EIGHT!",
+      "WHICH",
+      "BIGger?"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "EIGHT is BIG-ger, BIG-ger, BIG-ger!",
+     "en_o": "{EIGHT} is BIG-ger, BIG-ger, BIG-ger!",
+     "zh": "八比七大，大大大！",
+     "zh_o": "{八}比七大，大大大！",
+     "py": "bā bǐ qī dà, dà dà dà!",
+     "img": "SD/u2/p9",
+     "o_en": [
+      "EIGHT"
+     ],
+     "o_zh": [
+      "八"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "EIGHT",
+      "BIGger,",
+      "BIGger,",
+      "BIGger!"
+     ]
+    },
+    {
+     "w": "lan",
+     "raw": "SHOW me SEV-en FIN-gers, PLEASE!",
+     "en_o": "SHOW me {SEV-en} {FIN-gers}, PLEASE!",
+     "zh": "伸出七个手指！",
+     "zh_o": "伸出{七}个{手指}！",
+     "py": "shēn chū qī ge shǒu zhǐ!",
+     "img": "tranh/finger",
+     "o_en": [
+      "SEV-en",
+      "FIN-gers"
+     ],
+     "o_zh": [
+      "七",
+      "手指"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "finger",
+       "U4"
+      ]
+     ],
+     "phach": [
+      "SHOW",
+      "SEVen",
+      "FINgers,",
+      "PLEASE!"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "SEV-en FIN-gers! LOOK at THESE!",
+     "en_o": "{SEV-en} {FIN-gers}! LOOK at THESE!",
+     "zh": "七个手指，看这里！",
+     "zh_o": "{七}个{手指}，看这里！",
+     "py": "qī ge shǒu zhǐ, kàn zhè lǐ!",
+     "img": "tranh/finger",
+     "o_en": [
+      "SEV-en",
+      "FIN-gers"
+     ],
+     "o_zh": [
+      "七",
+      "手指"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "finger",
+       "U4"
+      ]
+     ],
+     "phach": [
+      "SEVen",
+      "FINgers!",
+      "LOOK",
+      "THESE!"
+     ]
+    },
+    {
+     "w": "lan",
+     "raw": "___, ___, HOW old are YOU?",
+     "en_o": "___, ___, HOW old are YOU?",
+     "zh": "___，___，你几岁？",
+     "zh_o": "___，___，你几岁？",
+     "py": ",, nǐ jǐ suì?",
+     "img": "SD/u2/p5",
+     "o_en": [],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "HOW",
+      "YOU?"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "I'm NINE! I'm NINE! WHAT a-bout YOU?",
+     "en_o": "I'm {#NINE}! I'm {#NINE}! WHAT a-bout YOU?",
+     "zh": "我九岁！你呢？几岁？",
+     "zh_o": "我{#九}岁！你呢？几岁？",
+     "py": "wǒ jiǔ suì! nǐ ne? jǐ suì?",
+     "img": "SD/u2/p6",
+     "o_en": [
+      "NINE"
+     ],
+     "o_zh": [
+      "九"
+     ],
+     "tuoi": true,
+     "cu": [],
+     "phach": [
+      "NINE!",
+      "NINE!",
+      "WHAT",
+      "YOU?"
+     ]
+    }
+   ]
+  },
+  "3": {
+   "ten": [
+    "Who Is She?",
+    "她是谁？"
+   ],
+   "van": [
+    [
+     "she / me",
+     "—"
+    ],
+    [
+     "eight / great",
+     "—"
+    ],
+    [
+     "three / see",
+     "ui (岁 – 妹)"
+    ],
+    [
+     "he / me",
+     "—"
+    ]
+   ],
+   "va": [],
+   "dong": [
+    {
+     "w": "kids",
+     "raw": "LOOK at my PHO-to! WHO is SHE?",
+     "en_o": "LOOK at my PHO-to! WHO is SHE?",
+     "zh": "看我的照片！她是谁？",
+     "zh_o": "看我的照片！她是谁？",
+     "py": "kàn wǒ de zhào piàn! tā shì shéi?",
+     "img": "SD/u3/p1",
+     "o_en": [],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "LOOK",
+      "PHOto!",
+      "WHO",
+      "SHE?"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "SHE'S my MOTH-er! SHE loves ME!",
+     "en_o": "SHE'S my {MOTH-er}! SHE loves ME!",
+     "zh": "她是我妈妈，她爱我！",
+     "zh_o": "她是我{妈妈}，她爱我！",
+     "py": "tā shì wǒ mā ma, tā ài wǒ!",
+     "img": "SD/u3/p3",
+     "o_en": [
+      "MOTH-er"
+     ],
+     "o_zh": [
+      "妈妈"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "SHE'S",
+      "MOTHer!",
+      "SHE",
+      "ME!"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "WHO is HE? HE is EIGHT.",
+     "en_o": "WHO is HE? HE is {EIGHT}.",
+     "zh": "他是谁？他八岁。",
+     "zh_o": "他是谁？他{八}岁。",
+     "py": "tā shì shéi? tā bā suì.",
+     "img": "SD/u2/p8",
+     "o_en": [
+      "EIGHT"
+     ],
+     "o_zh": [
+      "八"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "eight",
+       "U2"
+      ]
+     ],
+     "phach": [
+      "WHO",
+      "HE?",
+      "HE",
+      "EIGHT."
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "HE'S my OLD-er BRO-ther! GREAT!",
+     "en_o": "HE'S my {OLD-er BRO-ther}! GREAT!",
+     "zh": "他是我哥哥，真棒！",
+     "zh_o": "他是我{哥哥}，真棒！",
+     "py": "tā shì wǒ gē ge, zhēn bàng!",
+     "img": "SD/u3/p5",
+     "o_en": [
+      "OLD-er BRO-ther"
+     ],
+     "o_zh": [
+      "哥哥"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "HE'S",
+      "OLDer",
+      "BROther!",
+      "GREAT!"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "WHO is SHE? SHE is THREE.",
+     "en_o": "WHO is SHE? SHE is {THREE}.",
+     "zh": "她是谁？她三岁。",
+     "zh_o": "她是谁？她{三}岁。",
+     "py": "tā shì shéi? tā sān suì.",
+     "img": "SD/u3/p6",
+     "o_en": [
+      "THREE"
+     ],
+     "o_zh": [
+      "三"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "three",
+       "U2"
+      ]
+     ],
+     "phach": [
+      "WHO",
+      "SHE?",
+      "SHE",
+      "THREE."
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "SHE'S my YOUNG-er SIS-ter, you SEE!",
+     "en_o": "SHE'S my {YOUNG-er SIS-ter}, you SEE!",
+     "zh": "她是我的小妹妹！",
+     "zh_o": "她是我的小{妹妹}！",
+     "py": "tā shì wǒ de xiǎo mèi mei!",
+     "img": "SD/u3/p7",
+     "o_en": [
+      "YOUNG-er SIS-ter"
+     ],
+     "o_zh": [
+      "妹妹"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "SHE'S",
+      "YOUNGer",
+      "SISter,",
+      "SEE!"
+     ]
+    },
+    {
+     "w": "lan",
+     "raw": "___, ___, WHO is HE?",
+     "en_o": "___, ___, WHO is HE?",
+     "zh": "___，___，他是谁？",
+     "zh_o": "___，___，他是谁？",
+     "py": ",, tā shì shéi?",
+     "img": "SD/u3/p8",
+     "o_en": [],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "WHO",
+      "HE?"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "HE'S my GRAND-pa! He LOVES ME!",
+     "en_o": "HE'S my {GRAND-pa}! He LOVES ME!",
+     "zh": "他是我爷爷，他爱我！",
+     "zh_o": "他是我{爷爷}，他爱我！",
+     "py": "tā shì wǒ yé ye, tā ài wǒ!",
+     "img": "SD/u1/p9",
+     "o_en": [
+      "GRAND-pa"
+     ],
+     "o_zh": [
+      "爷爷"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "grandpa",
+       "U1"
+      ]
+     ],
+     "phach": [
+      "HE'S",
+      "GRANDpa!",
+      "LOVES",
+      "ME!"
+     ]
+    }
+   ]
+  },
+  "5": {
+   "ten": [
+    "How Do You Feel?",
+    "你感觉怎么样？"
+   ],
+   "van": [
+    [
+     "feel / meal",
+     "ang (样 – 香)"
+    ],
+    [
+     "hot / lot",
+     "a (吗 – 呀)"
+    ],
+    [
+     "please / knees",
+     "—"
+    ],
+    [
+     "okay / hooray",
+     "a (吗 – 哈)"
+    ]
+   ],
+   "va": [
+    "đầu gối U4"
+   ],
+   "dong": [
+    {
+     "w": "lan",
+     "raw": "UN-cle, UN-cle, HOW do you FEEL?",
+     "en_o": "{UN-cle}, {UN-cle}, HOW do you FEEL?",
+     "zh": "叔叔叔叔，感觉怎么样？",
+     "zh_o": "{叔叔}{叔叔}，感觉怎么样？",
+     "py": "shū shu shū shu, gǎn jué zěn me yàng?",
+     "img": "SD/u3/p9",
+     "o_en": [
+      "UN-cle"
+     ],
+     "o_zh": [
+      "叔叔"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "uncle",
+       "U3"
+      ]
+     ],
+     "phach": [
+      "UNcle,",
+      "UNcle,",
+      "HOW",
+      "FEEL?"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "I FEEL HUN-gry! I WANT a MEAL!",
+     "en_o": "I FEEL {HUN-gry}! I WANT a MEAL!",
+     "zh": "我饿了，饭菜香！",
+     "zh_o": "我{饿}了，饭菜香！",
+     "py": "wǒ è le, fàn cài xiāng!",
+     "img": "SD/u5/p8",
+     "o_en": [
+      "HUN-gry"
+     ],
+     "o_zh": [
+      "饿"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "FEEL",
+      "HUNgry!",
+      "WANT",
+      "MEAL!"
+     ]
+    },
+    {
+     "w": "lan",
+     "raw": "BRO-ther, BRO-ther, ARE you HOT?",
+     "en_o": "{BRO-ther}, {BRO-ther}, ARE you HOT?",
+     "zh": "哥哥哥哥，你热吗？",
+     "zh_o": "{哥哥}{哥哥}，你热吗？",
+     "py": "gē ge gē ge, nǐ rè ma?",
+     "img": "SD/u3/p5",
+     "o_en": [
+      "BRO-ther"
+     ],
+     "o_zh": [
+      "哥哥"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "older brother",
+       "U3"
+      ]
+     ],
+     "phach": [
+      "BROther,",
+      "BROther,",
+      "ARE",
+      "HOT?"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "I'm THIRS-ty! I WANT WA-ter, a LOT!",
+     "en_o": "I'm {THIRS-ty}! I WANT {WA-ter}, a LOT!",
+     "zh": "我渴了！要喝很多水呀！",
+     "zh_o": "我{渴}了！要喝很多{水}呀！",
+     "py": "wǒ kě le! yào hē hěn duō shuǐ ya!",
+     "img": "SD/u5/p10",
+     "o_en": [
+      "THIRS-ty",
+      "WA-ter"
+     ],
+     "o_zh": [
+      "渴",
+      "水"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "THIRSty!",
+      "WANT",
+      "WAter,",
+      "LOT!"
+     ]
+    },
+    {
+     "w": "lan",
+     "raw": "HOW do you FEEL, GRAND-pa? tell me, PLEASE!",
+     "en_o": "HOW do you FEEL, {GRAND-pa}? tell me, PLEASE!",
+     "zh": "爷爷，您感觉怎么样？",
+     "zh_o": "{爷爷}，您感觉怎么样？",
+     "py": "yé ye, nín gǎn jué zěn me yàng?",
+     "img": "SD/u5/p9",
+     "o_en": [
+      "GRAND-pa"
+     ],
+     "o_zh": [
+      "爷爷"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "grandpa",
+       "U1"
+      ]
+     ],
+     "phach": [
+      "HOW",
+      "FEEL,",
+      "GRANDpa?",
+      "PLEASE!"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "I FEEL TIRED! OH, my KNEES!",
+     "en_o": "I FEEL {TIRED}! OH, my {KNEES}!",
+     "zh": "我很累！哎哟，膝盖！",
+     "zh_o": "我很{累}！哎哟，{膝盖}！",
+     "py": "wǒ hěn lèi! āi yō, xī gài!",
+     "img": "SD/u4/p5",
+     "o_en": [
+      "TIRED",
+      "KNEES"
+     ],
+     "o_zh": [
+      "累",
+      "膝盖"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "knees",
+       "U4"
+      ]
+     ],
+     "phach": [
+      "FEEL",
+      "TIRED!",
+      "OH,",
+      "KNEES!"
+     ]
+    },
+    {
+     "w": "lan",
+     "raw": "___, ___, ARE you O-KAY?",
+     "en_o": "___, ___, ARE you O-KAY?",
+     "zh": "___，___，你好吗？",
+     "zh_o": "___，___，你好吗？",
+     "py": ",, nǐ hǎo ma?",
+     "img": "SD/u5/p3",
+     "o_en": [],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "ARE",
+      "OKAY?"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "I FEEL ex-CIT-ed! HIP, hip, hoo-RAY!",
+     "en_o": "I FEEL {ex-CIT-ed}! HIP, hip, hoo-RAY!",
+     "zh": "我很兴奋，哈哈哈！",
+     "zh_o": "我很{兴奋}，哈哈哈！",
+     "py": "wǒ hěn xīng fèn, hā hā hā!",
+     "img": "SD/u5/p4",
+     "o_en": [
+      "ex-CIT-ed"
+     ],
+     "o_zh": [
+      "兴奋"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "FEEL",
+      "exCITed!",
+      "HIP,",
+      "hooRAY!"
+     ]
+    }
+   ]
+  },
+  "6": {
+   "ten": [
+    "What Is This?",
+    "这是什么？"
+   ],
+   "van": [
+    [
+     "this / kiss",
+     "e (么 – 个)"
+    ],
+    [
+     "these / please",
+     "—"
+    ],
+    [
+     "O / no",
+     "—"
+    ],
+    [
+     "see / me",
+     "o (么 – 我)"
+    ]
+   ],
+   "va": [],
+   "dong": [
+    {
+     "w": "lan",
+     "raw": "CLOSE your EYES! WHAT is THIS?",
+     "en_o": "CLOSE your {EYES}! WHAT is THIS?",
+     "zh": "闭上眼睛！这是什么？",
+     "zh_o": "{闭上}眼睛！这是什么？",
+     "py": "bì shang yǎn jing! zhè shì shén me?",
+     "img": "SD/u5/p5",
+     "o_en": [
+      "EYES"
+     ],
+     "o_zh": [
+      "闭上"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "close your eyes",
+       "U5"
+      ]
+     ],
+     "phach": [
+      "CLOSE",
+      "EYES!",
+      "WHAT",
+      "THIS?"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "It's my TOY DOG! GIVE it a KISS!",
+     "en_o": "It's my {TOY DOG}! GIVE it a KISS!",
+     "zh": "是我的玩具狗！亲一个！",
+     "zh_o": "是我的{玩具狗}！亲一个！",
+     "py": "shì wǒ de wán jù gǒu! qīn yí ge!",
+     "img": "SD/u5/p6",
+     "o_en": [
+      "TOY DOG"
+     ],
+     "o_zh": [
+      "玩具狗"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "toy",
+       "U5"
+      ]
+     ],
+     "phach": [
+      "TOY",
+      "DOG!",
+      "GIVE",
+      "KISS!"
+     ]
+    },
+    {
+     "w": "lan",
+     "raw": "CLOSE your EYES! WHAT are THESE?",
+     "en_o": "CLOSE your {EYES}! WHAT are THESE?",
+     "zh": "闭上眼睛！这些是什么？",
+     "zh_o": "{闭上}眼睛！这些是什么？",
+     "py": "bì shang yǎn jing! zhè xiē shì shén me?",
+     "img": "SD/u6/p5",
+     "o_en": [
+      "EYES"
+     ],
+     "o_zh": [
+      "闭上"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "close your eyes",
+       "U5"
+      ]
+     ],
+     "phach": [
+      "CLOSE",
+      "EYES!",
+      "WHAT",
+      "THESE?"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "SCIS-sors! CARE-ful! CARE-ful, PLEASE!",
+     "en_o": "{SCIS-sors}! CARE-ful! CARE-ful, PLEASE!",
+     "zh": "是剪刀！小心！小心！",
+     "zh_o": "是{剪刀}！小心！小心！",
+     "py": "shì jiǎn dāo! xiǎo xīn! xiǎo xīn!",
+     "img": "SD/u6/p6",
+     "o_en": [
+      "SCIS-sors"
+     ],
+     "o_zh": [
+      "剪刀"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "SCISsors!",
+      "CAREful!",
+      "CAREful,",
+      "PLEASE!"
+     ]
+    },
+    {
+     "w": "lan",
+     "raw": "WHAT are THESE? L! E! O!",
+     "en_o": "WHAT are THESE? L! E! O!",
+     "zh": "这些是什么？L、E、O！",
+     "zh_o": "这些是什么？L、E、O！",
+     "py": "zhè xiē shì shén me? L, E, O!",
+     "img": "SD/u6/p9",
+     "o_en": [],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "WHAT",
+      "THESE?"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "LET-ters! STICK-y letters! OH, NO!",
+     "en_o": "{LET-ters}! STICK-y letters! OH, NO!",
+     "zh": "是字母！粘住了！",
+     "zh_o": "是{字母}！粘住了！",
+     "py": "shì zì mǔ! zhān zhù le!",
+     "img": "SD/u6/p10",
+     "o_en": [
+      "LET-ters"
+     ],
+     "o_zh": [
+      "字母"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "LETters!",
+      "STICKy",
+      "OH,",
+      "NO!"
+     ]
+    },
+    {
+     "w": "lan",
+     "raw": "___, ___, WHAT do you SEE?",
+     "en_o": "___, ___, WHAT do you SEE?",
+     "zh": "___，___，看见什么？",
+     "zh_o": "___，___，看见什么？",
+     "py": ",, kàn jiàn shén me?",
+     "img": "SD/u6/p11",
+     "o_en": [],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "WHAT",
+      "SEE?"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "IT'S my PHO-to! LOOK, that's ME!",
+     "en_o": "IT'S my {PHO-to}! LOOK, that's ME!",
+     "zh": "是我的照片，你看我！",
+     "zh_o": "是我的{照片}，你看我！",
+     "py": "shì wǒ de zhào piàn, nǐ kàn wǒ!",
+     "img": "SD/u3/p1",
+     "o_en": [
+      "PHO-to"
+     ],
+     "o_zh": [
+      "照片"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "photo",
+       "U3"
+      ]
+     ],
+     "phach": [
+      "IT'S",
+      "PHOto!",
+      "LOOK,",
+      "ME!"
+     ]
+    }
+   ]
+  },
+  "7": {
+   "ten": [
+    "Where Is It?",
+    "在哪儿？"
+   ],
+   "van": [
+    [
+     "where / chair",
+     "er (哪儿 – 那儿)"
+    ],
+    [
+     "bed / head",
+     "ang (上 – 上)"
+    ],
+    [
+     "ball / all",
+     "er (哪儿 – 那儿)"
+    ],
+    [
+     "you / boo",
+     "er (哪儿 – 这儿)"
+    ]
+   ],
+   "va": [
+    "哪儿"
+   ],
+   "dong": [
+    {
+     "w": "lan",
+     "raw": "WHERE is my CRAY-on? WHERE, oh WHERE?",
+     "en_o": "WHERE is my {CRAY-on}? WHERE, oh WHERE?",
+     "zh": "我的蜡笔在哪儿？",
+     "zh_o": "我的{蜡笔}在哪儿？",
+     "py": "wǒ de là bǐ zài nǎr?",
+     "img": "SD/u6/p4",
+     "o_en": [
+      "CRAY-on"
+     ],
+     "o_zh": [
+      "蜡笔"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "crayon",
+       "U6"
+      ]
+     ],
+     "phach": [
+      "WHERE",
+      "CRAYon?",
+      "WHERE,",
+      "WHERE?"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "LOOK! It's RIGHT UN-der the CHAIR!",
+     "en_o": "LOOK! It's RIGHT UN-der the {CHAIR}!",
+     "zh": "椅子下面，在那儿！",
+     "zh_o": "{椅子}下面，在那儿！",
+     "py": "yǐ zi xià miàn, zài nàr!",
+     "img": "SD/u7/p10",
+     "o_en": [
+      "CHAIR"
+     ],
+     "o_zh": [
+      "椅子"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "LOOK!",
+      "RIGHT",
+      "UNder",
+      "CHAIR!"
+     ]
+    },
+    {
+     "w": "lan",
+     "raw": "WHERE is my GLUE? ON the BED?",
+     "en_o": "WHERE is my {GLUE}? ON the {BED}?",
+     "zh": "我的胶水在床上？",
+     "zh_o": "我的{胶水}在{床}上？",
+     "py": "wǒ de jiāo shuǐ zài chuáng shàng?",
+     "img": "SD/u6/p8",
+     "o_en": [
+      "GLUE",
+      "BED"
+     ],
+     "o_zh": [
+      "胶水",
+      "床"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "glue",
+       "U6"
+      ]
+     ],
+     "phach": [
+      "WHERE",
+      "GLUE?",
+      "ON",
+      "BED?"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "NO, NO! It's ON your HEAD!",
+     "en_o": "NO, NO! It's ON your {HEAD}!",
+     "zh": "不在！在你头上！",
+     "zh_o": "不在！在你头上！",
+     "py": "bú zài! zài nǐ tóu shàng!",
+     "img": "SD/u7/p7",
+     "o_en": [
+      "HEAD"
+     ],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [
+      [
+       "head",
+       "U4"
+      ]
+     ],
+     "phach": [
+      "NO,",
+      "NO!",
+      "ON",
+      "HEAD!"
+     ]
+    },
+    {
+     "w": "lan",
+     "raw": "WHERE is my BALL? WHERE is my BALL?",
+     "en_o": "WHERE is my {BALL}? WHERE is my {BALL}?",
+     "zh": "球在哪儿？球在哪儿？",
+     "zh_o": "{球}在哪儿？{球}在哪儿？",
+     "py": "qiú zài nǎr? qiú zài nǎr?",
+     "img": "SD/u7/p10",
+     "o_en": [
+      "BALL"
+     ],
+     "o_zh": [
+      "球"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "WHERE",
+      "BALL?",
+      "WHERE",
+      "BALL?"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "by the DOOR? NO, NOT at ALL!",
+     "en_o": "by the {DOOR}? NO, NOT at ALL!",
+     "zh": "在门边？不在那儿！",
+     "zh_o": "在{门}边？不在那儿！",
+     "py": "zài mén biān? bú zài nàr!",
+     "img": "SD/u7/p1",
+     "o_en": [
+      "DOOR"
+     ],
+     "o_zh": [
+      "门"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "DOOR?",
+      "NO,",
+      "NOT",
+      "ALL!"
+     ]
+    },
+    {
+     "w": "lan",
+     "raw": "___, ___, WHERE are YOU?",
+     "en_o": "___, ___, WHERE are YOU?",
+     "zh": "___，___，你在哪儿？",
+     "zh_o": "___，___，你在哪儿？",
+     "py": ",, nǐ zài nǎr?",
+     "img": "SD/u7/p11",
+     "o_en": [],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "WHERE",
+      "YOU?"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "HERE in the BED-room! PEEK, PEEK-a-BOO!",
+     "en_o": "HERE in the {BED-room}! PEEK, PEEK-a-BOO!",
+     "zh": "我在卧室！在这儿！",
+     "zh_o": "我在{卧室}！在这儿！",
+     "py": "wǒ zài wò shì! zài zhèr!",
+     "img": "SD/u7/p7",
+     "o_en": [
+      "BED-room"
+     ],
+     "o_zh": [
+      "卧室"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "HERE",
+      "BEDroom!",
+      "PEEK,",
+      "PEEKa-BOO!"
+     ]
+    }
+   ]
+  },
+  "8": {
+   "ten": [
+    "Can It Fly?",
+    "它会飞吗？"
+   ],
+   "van": [
+    [
+     "fly / high",
+     "a (吗 – 啦)"
+    ],
+    [
+     "can't / legs",
+     "ui (会 – 腿)"
+    ],
+    [
+     "can it / at it",
+     "a (吗 – 它)"
+    ],
+    [
+     "hop / stop",
+     "a (吗 – 啦)"
+    ]
+   ],
+   "va": [
+    "chân U4 (vá nhóm cơ thể)"
+   ],
+   "dong": [
+    {
+     "w": "lan",
+     "raw": "can the DUCK FLY? can the DUCK FLY?",
+     "en_o": "can the {DUCK} FLY? can the {DUCK} FLY?",
+     "zh": "鸭子鸭子，会飞吗？",
+     "zh_o": "{鸭子}{鸭子}，会飞吗？",
+     "py": "yā zi yā zi, huì fēi ma?",
+     "img": "SD/u8/p3",
+     "o_en": [
+      "DUCK"
+     ],
+     "o_zh": [
+      "鸭子"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "DUCK",
+      "FLY?",
+      "DUCK",
+      "FLY?"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "YES! It CAN! It FLIES so HIGH!",
+     "en_o": "YES! It CAN! It FLIES so HIGH!",
+     "zh": "会！它会飞，飞高啦！",
+     "zh_o": "会！它会飞，飞高啦！",
+     "py": "huì! tā huì fēi, fēi gāo la!",
+     "img": "SD/u8/p4",
+     "o_en": [],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "YES!",
+      "CAN!",
+      "FLIES",
+      "HIGH!"
+     ]
+    },
+    {
+     "w": "lan",
+     "raw": "can the FROG FLY? NO, it CAN'T!",
+     "en_o": "can the {FROG} FLY? NO, it CAN'T!",
+     "zh": "青蛙会飞吗？不会！",
+     "zh_o": "{青蛙}会飞吗？不会！",
+     "py": "qīng wā huì fēi ma? bú huì!",
+     "img": "SD/u8/p5",
+     "o_en": [
+      "FROG"
+     ],
+     "o_zh": [
+      "青蛙"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "FROG",
+      "FLY?",
+      "NO,",
+      "CAN'T!"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "It can HOP on its LONG, LONG LEGS!",
+     "en_o": "It can {HOP} on its LONG, LONG {LEGS}!",
+     "zh": "它会跳，长长腿！",
+     "zh_o": "它会{跳}，长长{腿}！",
+     "py": "tā huì tiào, cháng cháng tuǐ!",
+     "img": "SD/u8/p6",
+     "o_en": [
+      "HOP",
+      "LEGS"
+     ],
+     "o_zh": [
+      "跳",
+      "腿"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "legs",
+       "U4"
+      ]
+     ],
+     "phach": [
+      "HOP",
+      "LONG,",
+      "LONG",
+      "LEGS!"
+     ]
+    },
+    {
+     "w": "lan",
+     "raw": "can the PO-lar BEAR SWIM? can it? CAN it?",
+     "en_o": "can the {PO-lar BEAR} SWIM? can it? CAN it?",
+     "zh": "北极熊会游泳吗？会吗？",
+     "zh_o": "{北极熊}会游泳吗？会吗？",
+     "py": "běi jí xióng huì yóu yǒng ma? huì ma?",
+     "img": "SD/u8/p9",
+     "o_en": [
+      "PO-lar BEAR"
+     ],
+     "o_zh": [
+      "北极熊"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "POlar",
+      "BEAR",
+      "SWIM?",
+      "CAN"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "YES, it CAN! SPLASH! LOOK at it!",
+     "en_o": "YES, it CAN! SPLASH! LOOK at it!",
+     "zh": "会！扑通！快看它！",
+     "zh_o": "会！扑通！快看它！",
+     "py": "huì! pū tōng! kuài kàn tā!",
+     "img": "SD/u8/p10",
+     "o_en": [],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "YES,",
+      "CAN!",
+      "SPLASH!",
+      "LOOK"
+     ]
+    },
+    {
+     "w": "lan",
+     "raw": "___, ___, CAN you HOP?",
+     "en_o": "___, ___, CAN you {HOP}?",
+     "zh": "___，___，你会跳吗？",
+     "zh_o": "___，___，你会{跳}吗？",
+     "py": ",, nǐ huì tiào ma?",
+     "img": "SD/u8/p6",
+     "o_en": [
+      "HOP"
+     ],
+     "o_zh": [
+      "跳"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "CAN",
+      "HOP?"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "YES, I CAN! HOP, hop, and STOP!",
+     "en_o": "YES, I CAN! {HOP}, hop, and STOP!",
+     "zh": "我会跳！跳！停下啦！",
+     "zh_o": "我会{跳}！跳！停下啦！",
+     "py": "wǒ huì tiào! tiào! tíng xià la!",
+     "img": "SD/u8/p6",
+     "o_en": [
+      "HOP"
+     ],
+     "o_zh": [
+      "跳"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "YES,",
+      "CAN!",
+      "HOP,",
+      "STOP!"
+     ]
+    }
+   ]
+  },
+  "9": {
+   "ten": [
+    "Do You Like…?",
+    "你喜欢……吗？"
+   ],
+   "van": [
+    [
+     "chips / lips",
+     "a (吗 – 把)"
+    ],
+    [
+     "cream / dream",
+     "a (吗 – 它)"
+    ],
+    [
+     "no / know",
+     "iao (条 – 条)"
+    ],
+    [
+     "juice / goose",
+     "a (吗 – 吧)"
+    ]
+   ],
+   "va": [],
+   "dong": [
+    {
+     "w": "lan",
+     "raw": "FROG, FROG, do you LIKE CHIPS?",
+     "en_o": "{FROG}, {FROG}, do you LIKE {CHIPS}?",
+     "zh": "青蛙青蛙，喜欢薯条吗？",
+     "zh_o": "{青蛙}{青蛙}，喜欢{薯条}吗？",
+     "py": "qīng wā qīng wā, xǐ huan shǔ tiáo ma?",
+     "img": "SD/u8/p5",
+     "o_en": [
+      "FROG",
+      "CHIPS"
+     ],
+     "o_zh": [
+      "青蛙",
+      "薯条"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "frog",
+       "U8"
+      ]
+     ],
+     "phach": [
+      "FROG,",
+      "FROG,",
+      "LIKE",
+      "CHIPS?"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "YES, I DO! I LICK my LIPS!",
+     "en_o": "YES, I DO! I LICK my LIPS!",
+     "zh": "喜欢呀！我要一大把！",
+     "zh_o": "喜欢呀！我要一大把！",
+     "py": "xǐ huan ya! wǒ yào yí dà bǎ!",
+     "img": "SD/u9/p12",
+     "o_en": [],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "YES,",
+      "DO!",
+      "LICK",
+      "LIPS!"
+     ]
+    },
+    {
+     "w": "lan",
+     "raw": "PO-lar BEAR, do you like ICE CREAM?",
+     "en_o": "{PO-lar BEAR}, do you like {ICE CREAM}?",
+     "zh": "北极熊，喜欢冰淇淋吗？",
+     "zh_o": "{北极熊}，喜欢{冰淇淋}吗？",
+     "py": "běi jí xióng, xǐ huan bīng qí lín ma?",
+     "img": "SD/u8/p9",
+     "o_en": [
+      "PO-lar BEAR",
+      "ICE CREAM"
+     ],
+     "o_zh": [
+      "北极熊",
+      "冰淇淋"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "polar bear",
+       "U8"
+      ]
+     ],
+     "phach": [
+      "POlar",
+      "BEAR,",
+      "ICE",
+      "CREAM?"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "YES, I DO! It's MY DREAM!",
+     "en_o": "YES, I DO! It's MY DREAM!",
+     "zh": "喜欢！喜欢！最爱它！",
+     "zh_o": "喜欢！喜欢！最爱它！",
+     "py": "xǐ huan! xǐ huan! zuì ài tā!",
+     "img": "tranh/ice_cream",
+     "o_en": [],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "YES,",
+      "DO!",
+      "MY",
+      "DREAM!"
+     ]
+    },
+    {
+     "w": "lan",
+     "raw": "DUCK, do you LIKE NOO-dles? NO?",
+     "en_o": "{DUCK}, do you LIKE {NOO-dles}? NO?",
+     "zh": "鸭子，不喜欢面条？",
+     "zh_o": "{鸭子}，不喜欢{面条}？",
+     "py": "yā zi, bù xǐ huan miàn tiáo?",
+     "img": "SD/u8/p3",
+     "o_en": [
+      "DUCK",
+      "NOO-dles"
+     ],
+     "o_zh": [
+      "鸭子",
+      "面条"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "duck",
+       "U8"
+      ]
+     ],
+     "phach": [
+      "DUCK,",
+      "LIKE",
+      "NOOdles?",
+      "NO?"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "MMM! I LIKE NOO-dles, now I KNOW!",
+     "en_o": "MMM! I LIKE {NOO-dles}, now I KNOW!",
+     "zh": "嗯！我喜欢面条！",
+     "zh_o": "嗯！我喜欢{面条}！",
+     "py": "ǹg! wǒ xǐ huan miàn tiáo!",
+     "img": "SD/u9/p8",
+     "o_en": [
+      "NOO-dles"
+     ],
+     "o_zh": [
+      "面条"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "MMM!",
+      "LIKE",
+      "NOOdles,",
+      "KNOW!"
+     ]
+    },
+    {
+     "w": "lan",
+     "raw": "___, ___, do you LIKE JUICE?",
+     "en_o": "___, ___, do you LIKE {JUICE}?",
+     "zh": "___，___，喜欢果汁吗？",
+     "zh_o": "___，___，喜欢{果汁}吗？",
+     "py": ",, xǐ huan guǒ zhī ma?",
+     "img": "SD/u9/p3",
+     "o_en": [
+      "JUICE"
+     ],
+     "o_zh": [
+      "果汁"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "LIKE",
+      "JUICE?"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "YES, I DO! like a THIRS-ty GOOSE!",
+     "en_o": "YES, I DO! like a THIRS-ty GOOSE!",
+     "zh": "喜欢！我渴了，喝吧！",
+     "zh_o": "喜欢！我{渴}了，喝吧！",
+     "py": "xǐ huan! wǒ kě le, hē ba!",
+     "img": "SD/u9/p4",
+     "o_en": [],
+     "o_zh": [
+      "渴"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "thirsty",
+       "U5"
+      ]
+     ],
+     "phach": [
+      "YES,",
+      "DO!",
+      "THIRSty",
+      "GOOSE!"
+     ]
+    }
+   ]
+  },
+  "10": {
+   "ten": [
+    "What's the Weather Like?",
+    "今天天气怎么样？"
+   ],
+   "van": [
+    [
+     "today / hooray",
+     "ang (样 – 棒)"
+    ],
+    [
+     "coat / boat",
+     "ao (套 – 好)"
+    ],
+    [
+     "hat / that",
+     "—"
+    ],
+    [
+     "snowing / outing",
+     "a (吗 – 吧)"
+    ]
+   ],
+   "va": [],
+   "dong": [
+    {
+     "w": "lan",
+     "raw": "WHAT'S the WEATH-er LIKE to-DAY?",
+     "en_o": "WHAT'S the WEATH-er LIKE to-DAY?",
+     "zh": "今天天气怎么样？",
+     "zh_o": "今天天气怎么样？",
+     "py": "jīn tiān tiān qì zěn me yàng?",
+     "img": "SD/u10/p1",
+     "o_en": [],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "WHAT'S",
+      "WEATHer",
+      "LIKE",
+      "toDAY?"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "It's SUN-ny! ICE CREAM, hoo-RAY!",
+     "en_o": "It's {SUN-ny}! {ICE CREAM}, hoo-RAY!",
+     "zh": "晴天！吃冰淇淋，真棒！",
+     "zh_o": "{晴天}！吃{冰淇淋}，真棒！",
+     "py": "qíng tiān! chī bīng qí lín, zhēn bàng!",
+     "img": "SD/u10/p2",
+     "o_en": [
+      "SUN-ny",
+      "ICE CREAM"
+     ],
+     "o_zh": [
+      "晴天",
+      "冰淇淋"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "ice cream",
+       "U9"
+      ]
+     ],
+     "phach": [
+      "SUNny!",
+      "ICE",
+      "CREAM,",
+      "hooRAY!"
+     ]
+    },
+    {
+     "w": "lan",
+     "raw": "It's RAIN-y! RAIN-y! WEAR your COAT!",
+     "en_o": "It's {RAIN-y}! RAIN-y! WEAR your {COAT}!",
+     "zh": "下雨了！穿上外套！",
+     "zh_o": "{下雨}了！穿上{外套}！",
+     "py": "xià yǔ le! chuān shàng wài tào!",
+     "img": "SD/u10/p5",
+     "o_en": [
+      "RAIN-y",
+      "COAT"
+     ],
+     "o_zh": [
+      "下雨",
+      "外套"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "RAINy!",
+      "RAINy!",
+      "WEAR",
+      "COAT!"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "LOOK! The DUCK HAS a BOAT!",
+     "en_o": "LOOK! The {DUCK} HAS a {BOAT}!",
+     "zh": "看！鸭子坐船，真好！",
+     "zh_o": "看！{鸭子}坐{船}，真好！",
+     "py": "kàn! yā zi zuò chuán, zhēn hǎo!",
+     "img": "SD/u8/p3",
+     "o_en": [
+      "DUCK",
+      "BOAT"
+     ],
+     "o_zh": [
+      "鸭子",
+      "船"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "duck",
+       "U8"
+      ],
+      [
+       "boat",
+       "U8"
+      ]
+     ],
+     "phach": [
+      "LOOK!",
+      "DUCK",
+      "HAS",
+      "BOAT!"
+     ]
+    },
+    {
+     "w": "lan",
+     "raw": "It's COLD and WIN-dy! WEAR your HAT!",
+     "en_o": "It's COLD and WIN-dy! WEAR your {HAT}!",
+     "zh": "又冷又刮风，戴帽子！",
+     "zh_o": "又冷又刮风，戴{帽子}！",
+     "py": "yòu lěng yòu guā fēng, dài mào zi!",
+     "img": "SD/u10/p8",
+     "o_en": [
+      "HAT"
+     ],
+     "o_zh": [
+      "帽子"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "COLD",
+      "WINdy!",
+      "WEAR",
+      "HAT!"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "OH, no! My HAT! LOOK at THAT!",
+     "en_o": "OH, no! My {HAT}! LOOK at THAT!",
+     "zh": "哎呀！帽子飞走了！",
+     "zh_o": "哎呀！{帽子}飞走了！",
+     "py": "āi yā! mào zi fēi zǒu le!",
+     "img": "SD/u10/p8",
+     "o_en": [
+      "HAT"
+     ],
+     "o_zh": [
+      "帽子"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "OH,",
+      "HAT!",
+      "LOOK",
+      "THAT!"
+     ]
+    },
+    {
+     "w": "lan",
+     "raw": "___, ___, IS it SNOW-ing?",
+     "en_o": "___, ___, IS it {SNOW-ing}?",
+     "zh": "___，___，下雪了吗？",
+     "zh_o": "___，___，{下雪}了吗？",
+     "py": ",, xià xuě le ma?",
+     "img": "SD/u10/p10",
+     "o_en": [
+      "SNOW-ing"
+     ],
+     "o_zh": [
+      "下雪"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "IS",
+      "SNOWing?"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "YES! a SNOW-man! LET'S go OUT-ing!",
+     "en_o": "YES! a {SNOW-man}! LET'S go OUT-ing!",
+     "zh": "下了！出去堆雪人吧！",
+     "zh_o": "下了！出去堆{雪人}吧！",
+     "py": "xià le! chū qù duī xuě rén ba!",
+     "img": "SD/u10/p11",
+     "o_en": [
+      "SNOW-man"
+     ],
+     "o_zh": [
+      "雪人"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "YES!",
+      "SNOWman!",
+      "LET'S",
+      "OUTing!"
+     ]
+    }
+   ]
+  },
+  "11": {
+   "ten": [
+    "What Colour Is It?",
+    "什么颜色？"
+   ],
+   "van": [
+    [
+     "scarf / town",
+     "e (色 – 的)"
+    ],
+    [
+     "socks / box",
+     "e (色 – 色)"
+    ],
+    [
+     "hat / that",
+     "e (色 – 的)"
+    ],
+    [
+     "like / nice",
+     "e (色 – 的)"
+    ]
+   ],
+   "va": [],
+   "dong": [
+    {
+     "w": "lan",
+     "raw": "WHAT col-OUR is your SCARF, your SCARF?",
+     "en_o": "WHAT col-OUR is your {SCARF}, your {SCARF}?",
+     "zh": "你的围巾什么颜色？",
+     "zh_o": "你的{围巾}什么颜色？",
+     "py": "nǐ de wéi jīn shén me yán sè?",
+     "img": "tranh/scarf",
+     "o_en": [
+      "SCARF"
+     ],
+     "o_zh": [
+      "围巾"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "scarf",
+       "U10"
+      ]
+     ],
+     "phach": [
+      "WHAT",
+      "colOUR",
+      "SCARF,",
+      "SCARF?"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "IT'S BROWN! The COOL-est in TOWN!",
+     "en_o": "IT'S {BROWN}! The COOL-est in {TOWN}!",
+     "zh": "是棕色的！城里最酷的！",
+     "zh_o": "是{棕色}的！{城里}最酷的！",
+     "py": "shì zōng sè de! chéng lǐ zuì kù de!",
+     "img": "SD/u11/p3",
+     "o_en": [
+      "BROWN",
+      "TOWN"
+     ],
+     "o_zh": [
+      "棕色",
+      "城里"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "town",
+       "U4"
+      ]
+     ],
+     "phach": [
+      "IT'S",
+      "BROWN!",
+      "COOLest",
+      "TOWN!"
+     ]
+    },
+    {
+     "w": "lan",
+     "raw": "WHAT col-our ARE they? the SOCKS, the SOCKS!",
+     "en_o": "WHAT col-our ARE they? the {SOCKS}, the {SOCKS}!",
+     "zh": "袜子袜子，什么颜色？",
+     "zh_o": "{袜子}{袜子}，什么颜色？",
+     "py": "wà zi wà zi, shén me yán sè?",
+     "img": "SD/u11/p8",
+     "o_en": [
+      "SOCKS"
+     ],
+     "o_zh": [
+      "袜子"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "WHAT",
+      "ARE",
+      "SOCKS,",
+      "SOCKS!"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "RED and GREEN! in a BOX, a BOX!",
+     "en_o": "{RED} and {GREEN}! in a BOX, a BOX!",
+     "zh": "红的绿的，两种颜色！",
+     "zh_o": "红的绿的，两种颜色！",
+     "py": "hóng de lǜ de, liǎng zhǒng yán sè!",
+     "img": "SD/u11/p9",
+     "o_en": [
+      "RED",
+      "GREEN"
+     ],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "RED",
+      "GREEN!",
+      "BOX,",
+      "BOX!"
+     ]
+    },
+    {
+     "w": "lan",
+     "raw": "WHAT col-OUR is your HAT, your HAT?",
+     "en_o": "WHAT col-OUR is your {HAT}, your {HAT}?",
+     "zh": "你的帽子什么颜色？",
+     "zh_o": "你的{帽子}什么颜色？",
+     "py": "nǐ de mào zi shén me yán sè?",
+     "img": "tranh/hat",
+     "o_en": [
+      "HAT"
+     ],
+     "o_zh": [
+      "帽子"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "hat",
+       "U10"
+      ]
+     ],
+     "phach": [
+      "WHAT",
+      "colOUR",
+      "HAT,",
+      "HAT?"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "It's GOLD! A gold HAT! LOOK at THAT!",
+     "en_o": "It's {GOLD}! A gold HAT! LOOK at THAT!",
+     "zh": "是金色的！金色的！",
+     "zh_o": "是{金色}的！金色的！",
+     "py": "shì jīn sè de! jīn sè de!",
+     "img": "SD/u11/p5",
+     "o_en": [
+      "GOLD"
+     ],
+     "o_zh": [
+      "金色"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "GOLD!",
+      "HAT!",
+      "LOOK",
+      "THAT!"
+     ]
+    },
+    {
+     "w": "lan",
+     "raw": "___, ___, WHAT col-our do you LIKE?",
+     "en_o": "___, ___, WHAT col-our do you LIKE?",
+     "zh": "___，___，你喜欢什么颜色？",
+     "zh_o": "___，___，你喜欢什么颜色？",
+     "py": ",, nǐ xǐ huan shén me yán sè?",
+     "img": "SD/u11/p12",
+     "o_en": [],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "WHAT",
+      "LIKE?"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "I LIKE SIL-ver! It's SHI-ny and NICE!",
+     "en_o": "I LIKE {SIL-ver}! It's SHI-ny and NICE!",
+     "zh": "我喜欢银色，亮亮的！",
+     "zh_o": "我喜欢{银色}，亮亮的！",
+     "py": "wǒ xǐ huan yín sè, liàng liàng de!",
+     "img": "SD/u11/p11",
+     "o_en": [
+      "SIL-ver"
+     ],
+     "o_zh": [
+      "银色"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "LIKE",
+      "SILver!",
+      "SHIny",
+      "NICE!"
+     ]
+    }
+   ]
+  },
+  "12": {
+   "ten": [
+    "How Many Are There?",
+    "有几个？"
+   ],
+   "van": [
+    [
+     "me / see",
+     "u (数 – 楚)"
+    ],
+    [
+     "hats / cats",
+     "ao (帽 – 帽)"
+    ],
+    [
+     "again / ten",
+     "—"
+    ],
+    [
+     "family / me",
+     "—"
+    ]
+   ],
+   "va": [
+    "ngón chân U4 (vá nhóm cơ thể)"
+   ],
+   "dong": [
+    {
+     "w": "lan",
+     "raw": "HOW many TOES are there? COUNT with ME!",
+     "en_o": "HOW many {TOES} are there? COUNT with ME!",
+     "zh": "有几个脚趾？数一数！",
+     "zh_o": "有几个{脚趾}？数一数！",
+     "py": "yǒu jǐ ge jiǎo zhǐ? shǔ yi shǔ!",
+     "img": "tranh/toe",
+     "o_en": [
+      "TOES"
+     ],
+     "o_zh": [
+      "脚趾"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "toes",
+       "U4"
+      ]
+     ],
+     "phach": [
+      "HOW",
+      "TOES",
+      "COUNT",
+      "ME!"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "There are TEN! TEN TOES, you SEE!",
+     "en_o": "There are {TEN}! {TEN} {TOES}, you SEE!",
+     "zh": "有十个脚趾！数清楚！",
+     "zh_o": "有{十}个{脚趾}！数清楚！",
+     "py": "yǒu shí ge jiǎo zhǐ! shǔ qīng chu!",
+     "img": "SD/u4/p8",
+     "o_en": [
+      "TEN",
+      "TOES"
+     ],
+     "o_zh": [
+      "十",
+      "脚趾"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "toes",
+       "U4"
+      ]
+     ],
+     "phach": [
+      "TEN!",
+      "TEN",
+      "TOES,",
+      "SEE!"
+     ]
+    },
+    {
+     "w": "lan",
+     "raw": "HOW many HATS? HOW many HATS?",
+     "en_o": "HOW many {HATS}? HOW many {HATS}?",
+     "zh": "有几顶帽？几顶帽？",
+     "zh_o": "有几顶{帽}？几顶{帽}？",
+     "py": "yǒu jǐ dǐng mào? jǐ dǐng mào?",
+     "img": "tranh/hat",
+     "o_en": [
+      "HATS"
+     ],
+     "o_zh": [
+      "帽"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "hat",
+       "U10"
+      ]
+     ],
+     "phach": [
+      "HOW",
+      "HATS?",
+      "HOW",
+      "HATS?"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "FOUR HATS on FOUR CATS!",
+     "en_o": "{FOUR} {HATS} on {FOUR} {CATS}!",
+     "zh": "四只猫戴四顶帽！",
+     "zh_o": "{四}只{猫}戴{四}顶{帽}！",
+     "py": "sì zhī māo dài sì dǐng mào!",
+     "img": "tranh/hat",
+     "o_en": [
+      "FOUR",
+      "HATS",
+      "CATS"
+     ],
+     "o_zh": [
+      "四",
+      "猫",
+      "帽"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "hat",
+       "U10"
+      ]
+     ],
+     "phach": [
+      "FOUR",
+      "HATS",
+      "FOUR",
+      "CATS!"
+     ]
+    },
+    {
+     "w": "lan",
+     "raw": "HOW many PEO-ple? LET'S count a-GAIN!",
+     "en_o": "HOW many {PEO-ple}? LET'S count a-GAIN!",
+     "zh": "有几个人？再数一遍！",
+     "zh_o": "有几个{人}？再数一遍！",
+     "py": "yǒu jǐ ge rén? zài shǔ yí biàn!",
+     "img": "SD/u12/p10",
+     "o_en": [
+      "PEO-ple"
+     ],
+     "o_zh": [
+      "人"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "HOW",
+      "PEOple?",
+      "LET'S",
+      "aGAIN!"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "NINE PEO-ple… and PUP-py, TEN!",
+     "en_o": "{NINE} {PEO-ple}… and {PUP-py}, TEN!",
+     "zh": "九个人，加小狗，十个！",
+     "zh_o": "{九}个{人}，加{小狗}，十个！",
+     "py": "jiǔ ge rén, jiā xiǎo gǒu, shí ge!",
+     "img": "SD/u12/p11",
+     "o_en": [
+      "NINE",
+      "PEO-ple",
+      "PUP-py"
+     ],
+     "o_zh": [
+      "九",
+      "人",
+      "小狗"
+     ],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "NINE",
+      "PEOple…",
+      "PUPpy,",
+      "TEN!"
+     ]
+    },
+    {
+     "w": "lan",
+     "raw": "___, ___, HOW many in your FAM-i-ly?",
+     "en_o": "___, ___, HOW many in your {FAM-i-ly}?",
+     "zh": "___，你家有几个人？",
+     "zh_o": "___，你家有几个人？",
+     "py": ", nǐ jiā yǒu jǐ ge rén?",
+     "img": "SD/u3/p12",
+     "o_en": [
+      "FAM-i-ly"
+     ],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [
+      [
+       "family",
+       "U3"
+      ]
+     ],
+     "phach": [
+      "HOW",
+      "FAMi-ly?"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "There are FOUR, and ONE of THEM is ME!",
+     "en_o": "There are {FOUR}, and ONE of THEM is ME!",
+     "zh": "有四个人，一个是我！",
+     "zh_o": "有{四}个人，一个是我！",
+     "py": "yǒu sì ge rén, yí ge shì wǒ!",
+     "img": "SD/u3/p12",
+     "o_en": [
+      "FOUR"
+     ],
+     "o_zh": [
+      "四"
+     ],
+     "tuoi": false,
+     "cu": [
+      [
+       "them",
+       "U3"
+      ]
+     ],
+     "phach": [
+      "FOUR,",
+      "ONE",
+      "THEM",
+      "ME!"
+     ]
+    }
+   ]
+  },
+  "de": {
+   "ten": [
+    "Ready, Steady!",
+    "准备好了吗？"
+   ],
+   "van": [
+    [
+     "ears / here",
+     "—"
+    ],
+    [
+     "tick / quick",
+     "ou (勾 – 油)"
+    ],
+    [
+     "well / tell",
+     "u (楚 – 楚)"
+    ],
+    [
+     "ready / steady",
+     "a (吗 – 吧)"
+    ]
+   ],
+   "va": [
+    "listen",
+    "look",
+    "point",
+    "tick",
+    "draw",
+    "colour",
+    "question",
+    "answer",
+    "page"
+   ],
+   "dong": [
+    {
+     "w": "lan",
+     "raw": "LIS-ten, LIS-ten! OPEN your EARS!",
+     "en_o": "LIS-ten, LIS-ten! OPEN your EARS!",
+     "zh": "听一听，听一听！",
+     "zh_o": "听一听，听一听！",
+     "py": "tīng yi tīng, tīng yi tīng!",
+     "img": "SD/u1/p1",
+     "o_en": [],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "LISten,",
+      "LISten!",
+      "OPEN",
+      "EARS!"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "LOOK at the PAGE! The PIC-ture is HERE!",
+     "en_o": "LOOK at the PAGE! The PIC-ture is HERE!",
+     "zh": "看一看，这一页！",
+     "zh_o": "看一看，这一页！",
+     "py": "kàn yi kàn, zhè yí yè!",
+     "img": "SD/u3/p1",
+     "o_en": [],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "LOOK",
+      "PAGE!",
+      "PICture",
+      "HERE!"
+     ]
+    },
+    {
+     "w": "lan",
+     "raw": "POINT to the PIC-ture! TICK, tick, TICK!",
+     "en_o": "POINT to the PIC-ture! TICK, tick, TICK!",
+     "zh": "指一指，打个勾！",
+     "zh_o": "指一指，打个勾！",
+     "py": "zhǐ yi zhǐ, dǎ ge gōu!",
+     "img": "SD/u9/p13",
+     "o_en": [],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "POINT",
+      "PICture!",
+      "TICK,",
+      "TICK!"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "DRAW and COL-our! QUICK, quick, QUICK!",
+     "en_o": "DRAW and COL-our! QUICK, quick, QUICK!",
+     "zh": "画一画，涂一涂，加油！",
+     "zh_o": "画一画，涂一涂，加油！",
+     "py": "huà yi huà, tú yi tú, jiā yóu!",
+     "img": "SD/u6/p11",
+     "o_en": [],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "DRAW",
+      "COLour!",
+      "QUICK,",
+      "QUICK!"
+     ]
+    },
+    {
+     "w": "lan",
+     "raw": "HERE'S a QUES-tion! LIS-ten WELL!",
+     "en_o": "HERE'S a QUES-tion! LIS-ten WELL!",
+     "zh": "听问题，听清楚！",
+     "zh_o": "听问题，听清楚！",
+     "py": "tīng wèn tí, tīng qīng chu!",
+     "img": "SD/u12/p2",
+     "o_en": [],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "HERE'S",
+      "QUEStion!",
+      "LISten",
+      "WELL!"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "AN-swer, AN-swer! TELL, tell, TELL!",
+     "en_o": "AN-swer, AN-swer! TELL, tell, TELL!",
+     "zh": "回答问题，说清楚！",
+     "zh_o": "回答问题，说清楚！",
+     "py": "huí dá wèn tí, shuō qīng chu!",
+     "img": "SD/u3/p11",
+     "o_en": [],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "ANswer,",
+      "ANswer!",
+      "TELL,",
+      "TELL!"
+     ]
+    },
+    {
+     "w": "lan",
+     "raw": "___, ___, ARE you READ-y?",
+     "en_o": "___, ___, ARE you READ-y?",
+     "zh": "___，___，准备好了吗？",
+     "zh_o": "___，___，准备好了吗？",
+     "py": ",, zhǔn bèi hǎo le ma?",
+     "img": "SD/u1/p11",
+     "o_en": [],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "ARE",
+      "READy?"
+     ]
+    },
+    {
+     "w": "kids",
+     "raw": "YES, I'm READ-y! STEA-dy, STEA-dy!",
+     "en_o": "YES, I'm READ-y! STEA-dy, STEA-dy!",
+     "zh": "好了！好了！开始吧！",
+     "zh_o": "好了！好了！开始吧！",
+     "py": "hǎo le! hǎo le! kāi shǐ ba!",
+     "img": "SD/u1/p11",
+     "o_en": [],
+     "o_zh": [],
+     "tuoi": false,
+     "cu": [],
+     "phach": [
+      "YES,",
+      "READy!",
+      "STEAdy,",
+      "STEAdy!"
+     ]
+    }
+   ]
+  }
+ }
+}
