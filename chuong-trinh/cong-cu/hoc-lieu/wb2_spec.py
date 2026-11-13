@@ -1,5 +1,5 @@
 """Nội dung sách bài tập bản 2 (13/11/2026) – Unit 1 và Unit 3, Little Seed và Seedling.
-Quy tắc (chị duyệt trong đoạn chat 13/11):
+Quy tắc (chị duyệt trong đoạn chat 13/11; chốt 13/11 23:07: Little Seed 1 phiếu mỗi buổi, chữ Trung chỉ nhận mặt chữ, không tô):
   - Mỗi buổi 2 trang: trang Anh (3 khối cố định: 1 nhìn – chép · 2 đọc – chọn · 3 về mình) và trang Trung (1 tô chữ theo nét · 2 đọc – chọn · 3 nối Anh ↔ Trung).
   - Từ thêm vào lấy từ DanhSach_TuThem_Workbook_1311 (tối đa 2 từ Anh + 2 chữ Trung mỗi buổi); từ ôn lại của unit trước ghi 'rec'.
   - Dạng đề web ít luyện: xếp chữ cái (Starters P3), chọn rồi chép từ (Starters P4), đọc thầm chữ + pinyin không có tiếng (YCT1 阅读), chọn từ điền chỗ trống (YCT1 阅读 P3), đáp án không luôn ở vị trí A, viết tay theo thứ tự nét.

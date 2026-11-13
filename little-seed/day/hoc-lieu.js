@@ -49,7 +49,7 @@ const KIND = {
   craft: ['Thủ công của unit', 'Hướng dẫn cho cô + mẫu cắt, tô cho con'],
   check: ['Phiếu cuối unit', 'Con nghe – khoanh tranh · kèm lời cô đọc và đáp án'],
   reader: ['Reader A5', 'Truyện in A5 (2 trang mỗi tờ A4 ngang) để con đọc ở nhà'],
-  sbt: [LS ? 'Phiếu tô – dán cả unit' : 'Sách bài tập cả unit', LS ? '1 trang mỗi buổi' : '2 trang mỗi buổi: trang Anh, trang Trung'],
+  sbt: [LS ? 'Phiếu cả unit' : 'Sách bài tập cả unit', LS ? '1 phiếu mỗi buổi: chép · khoanh · nối chữ Trung · nối câu · về mình' : '2 trang mỗi buổi: trang Anh, trang Trung'],
   key: ['Đáp án sách bài tập', 'Cho cô chấm'],
 };
 
@@ -205,11 +205,11 @@ const foot2 = lang => `<div style="position:absolute;left:12mm;right:12mm;bottom
 const hd2 = (s, lang) => {
   const w = s.wb2, u = U(s.unit);
   return `<div style="display:flex;align-items:stretch;border-radius:4mm;overflow:hidden;margin-bottom:3mm;border:.5mm solid ${lang === 'zh' ? '#C8372D' : '#2E8B80'}">
-  <div style="background:${lang === 'zh' ? '#C8372D' : '#2E8B80'};color:#fff;padding:2mm 4mm;font-weight:800;font-size:13pt;display:flex;align-items:center;min-width:46mm">${lang === 'zh' ? '中文 · Chinese' : 'English'} · ${s.n}</div>
+  <div style="background:${lang === 'zh' ? '#C8372D' : '#2E8B80'};color:#fff;padding:2mm 4mm;font-weight:800;font-size:13pt;display:flex;align-items:center;min-width:46mm">${lang === 'both' ? 'English · 中文' : lang === 'zh' ? '中文 · Chinese' : 'English'} · ${s.n}</div>
   <div style="flex:1;padding:1.5mm 4mm;display:flex;flex-direction:column;justify-content:center"><div style="font-weight:800;font-size:12pt;color:var(--red)">Unit ${esc(u.key)} · ${esc(w.band)}</div><div style="font-size:9pt;color:#777">${tag('Session ' + s.n)}</div></div>
   <div style="padding:2mm 4mm;display:flex;align-items:center;font-size:11pt">Name · <span class="zh">名字</span>: ____________</div></div>`;
 };
-const COL = { 1: '#F2C14E', 2: '#2E8B80', 3: '#C8372D', 4: '#7A5BA6' };
+const COL = { 1: '#F2C14E', 2: '#2E8B80', 3: '#C8372D', 4: '#7A5BA6', 5: '#D9548C' };
 const blk = (n, title, zh, inner, extra) => `<div style="border:.5mm solid ${COL[n]};border-radius:4mm;padding:2mm 3mm 2mm;margin-bottom:2.5mm;position:relative;${extra || ''}">
   <div style="display:flex;align-items:center;gap:2mm;font-weight:800;font-size:11.5pt;margin-bottom:1.5mm"><span style="width:6.5mm;height:6.5mm;border-radius:50%;background:${COL[n]};color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:10pt">${n}</span>${title}${zh ? ` <span class="zh" style="font-weight:700">${zh}</span>` : ''}</div>${inner}</div>`;
 const pic2 = (p, h, col) => p ? img(col ? p.img : p.line || p.img, `max-height:${h}mm;max-width:${h + 6}mm`) : '';
@@ -226,9 +226,9 @@ function charBlock(ch, py, o) {   // một chữ: thông tin + nét + ô điền
   return `<div style="display:flex;align-items:center;gap:3mm;margin-bottom:${o.gap || 1.5}mm"><div style="width:${o.iw}mm;flex:none"><span class="zh" style="font-size:24pt;font-weight:700">${esc(ch)}</span> <span class="py" style="font-size:12pt">${esc(py)}</span><div style="font-size:9pt;color:#888">${n} 笔</div></div>
     <div>${o.inline ? `<div style="display:flex;align-items:center;gap:2mm"><span style="white-space:nowrap">${cells}</span><span style="white-space:nowrap">${strokes}</span></div>` : `<div style="margin-bottom:1mm">${strokes}</div><div style="white-space:nowrap">${cells}</div>`}</div></div>`;
 }
-function medBlock(w) {   // nối Anh ↔ Trung, đảo vị trí theo medperm
+function medBlock(w, rh) {   // nối Anh ↔ Trung, đảo vị trí theo medperm
   const m = w.med, n = m.length, right = Array(n); m.forEach((x, i) => right[w.medperm[i]] = x);
-  return `<div style="display:grid;grid-template-columns:1fr 30mm 1fr;align-items:center">${m.map((x, i) => `<div style="height:11mm;display:flex;align-items:center;justify-content:flex-end;gap:2mm" class="en"><span style="font-size:12pt;text-align:right">${esc(x.en)}</span><span class="dot"></span></div><div></div>
+  return `<div style="display:grid;grid-template-columns:1fr 30mm 1fr;align-items:center">${m.map((x, i) => `<div style="height:${rh || 11}mm;display:flex;align-items:center;justify-content:flex-end;gap:2mm" class="en"><span style="font-size:12pt;text-align:right">${esc(x.en)}</span><span class="dot"></span></div><div></div>
     <div style="display:flex;align-items:center;gap:2mm"><span class="dot"></span><div><div class="py" style="font-size:9pt;line-height:1.1">${esc(right[i].py)}</div><div class="zh" style="font-size:14pt;font-weight:700;line-height:1.1">${esc(right[i].zh)}</div></div></div>`).join('')}</div>`;
 }
 const answerBoxes = n => Array.from({ length: n }, () => `<span style="display:inline-block;width:9mm;height:9mm;border:.5mm solid #555;margin-right:1mm;border-radius:1.2mm"></span>`).join('');
@@ -263,23 +263,20 @@ function wb2(s) {
   ${blk(3, 'Match.', '连一连', medBlock(w))}
   ${foot2('zh')}`);
 }
-function wb2LS(s) {
-  const w = s.wb2, zp = w.zpy;
-  pg(`${hd2(s, 'en')}
-  ${blk(1, 'Look and copy.', '', w.copy.map((c, i) => `<div style="display:grid;grid-template-columns:28mm 1fr;gap:2mm;align-items:center;margin-bottom:1mm"><div class="cell" style="height:22mm;padding:0">${c.p ? img(c.p.img, 'max-height:21mm') : ''}</div>
-     <div>${gl(c.w, i === 0 ? '#444' : '#BDBDBD', 16, i === 0)}${gl('', '', 16)}</div></div>`).join(''))}
-  ${blk(2, 'Look and circle.', '', w.circ.map(c => `<div style="display:grid;grid-template-columns:36mm repeat(3,1fr);align-items:center;gap:3mm;margin-bottom:1mm"><div class="en" style="font-size:15pt">${esc(c.w)}</div>
-      ${c.ps.map(p => `<div class="cell" style="height:28mm;border:.3mm solid #ddd;border-radius:3mm;padding:1mm">${img(p.img, 'max-height:26mm')}</div>`).join('')}</div>`).join(''))}
-  ${blk(3, 'About me.', '', `<div style="display:flex;align-items:center;gap:4mm"><span class="en" style="font-size:15pt;white-space:nowrap">${esc(w.me.frame)}</span>${w.me.opts.map(o => `<span style="border:.5mm solid #555;border-radius:999px;padding:1mm 4mm;font-size:14pt;white-space:nowrap" class="en">${esc(o)}</span>`).join('<span class="en"> / </span>')}<span class="en" style="font-size:16pt">.</span><span style="flex:1"></span><div style="border:.5mm dashed #bbb;border-radius:4mm;height:26mm;width:44mm;flex:none"></div></div>
-    ${w.rec ? `<div style="margin-top:2mm;display:flex;align-items:center;gap:3mm;border-top:.3mm dashed #ccc;padding-top:1.5mm"><span style="color:#C8372D;font-size:14pt">♻</span><span class="en" style="font-size:13pt">${esc(w.rec[0])}</span>${w.rec[1] === 'num' ? Array.from({ length: 10 }, (_, i) => `<span style="width:8mm;height:8mm;border:.4mm solid #888;border-radius:50%;text-align:center;line-height:7.4mm;font-size:12pt" class="en">${i + 1}</span>`).join('') : '<span style="display:inline-block;border-bottom:.6mm solid #333;width:60mm;height:8mm"></span>'}</div>` : ''}`)}
+function wb2LS(s) {   // chị chốt 13/11: Little Seed 1 phiếu mỗi buổi, chữ Trung chỉ nhận mặt chữ (không tô)
+  const w = s.wb2, zp = w.zpy, ord = w.zmatch.map((_, i) => (i + 1) % w.zmatch.length);
+  pg(`${hd2(s, 'both')}
+  ${blk(1, 'Look and copy.', '', w.copy.map((c, i) => `<div style="display:grid;grid-template-columns:20mm 1fr;gap:2mm;align-items:center;margin-bottom:.5mm"><div class="cell" style="height:14mm;padding:0">${c.p ? img(c.p.img, 'max-height:13mm') : ''}</div>
+     <div>${gl(c.w, i === 0 ? '#444' : '#BDBDBD', 12.5, i === 0)}</div></div>`).join(''))}
+  ${blk(2, 'Look and circle.', '', w.circ.slice(0, 2).map(c => `<div style="display:grid;grid-template-columns:34mm repeat(3,1fr);align-items:center;gap:3mm;margin-bottom:.8mm"><div class="en" style="font-size:14pt">${esc(c.w)}</div>
+      ${c.ps.map(p => `<div class="cell" style="height:19mm;border:.3mm solid #ddd;border-radius:3mm;padding:.6mm">${img(p.img, 'max-height:17.5mm')}</div>`).join('')}</div>`).join(''))}
+  ${blk(3, 'Look and match.', '连一连', `<div style="display:flex;gap:4mm;align-items:center;margin-bottom:1mm;font-size:9pt;color:#888"><span>Today · 今天</span>${w.zc.map(c => `<span class="zh" style="font-size:17pt;font-weight:700;color:#C8372D">${esc(c)}</span><span class="py" style="font-size:10pt">${esc(zp[c])}</span>`).join('')}</div>
+    <div style="display:grid;grid-template-columns:1fr 26mm 1fr;align-items:center">${w.zmatch.map((x, i) => `<div style="height:15mm;display:flex;align-items:center;justify-content:flex-end;gap:3mm"><div><div class="py" style="font-size:9pt;text-align:right;line-height:1.1">${esc(x.py)}</div><div class="zh" style="font-size:18pt;font-weight:700;text-align:right;line-height:1.1">${esc(x.zh)}</div></div><span class="dot"></span></div><div></div>
+      <div style="display:flex;align-items:center;gap:3mm"><span class="dot"></span>${img(w.zmatch[ord[i]].p.img, 'max-height:14mm;max-width:26mm')}</div>`).join('')}</div>`)}
+  ${blk(4, 'Match.', '连一连', medBlock(w, 8.5))}
+  ${blk(5, 'About me.', '', `<div style="display:flex;align-items:center;gap:3mm"><span class="en" style="font-size:14pt;white-space:nowrap">${esc(w.me.frame)}</span>${w.me.opts.map(o => `<span style="border:.5mm solid #555;border-radius:999px;padding:.8mm 3mm;font-size:12pt;white-space:nowrap" class="en">${esc(o)}</span>`).join('<span class="en"> / </span>')}<span class="en">.</span><span style="flex:1"></span><div style="border:.5mm dashed #bbb;border-radius:4mm;height:18mm;width:38mm;flex:none"></div></div>
+    ${w.rec ? `<div style="margin-top:1mm;display:flex;align-items:center;gap:2mm;border-top:.3mm dashed #ccc;padding-top:1mm"><span style="color:#C8372D;font-size:12pt">♻</span><span class="en" style="font-size:11pt;white-space:nowrap">${esc(w.rec[0])}</span>${w.rec[1] === 'num' ? Array.from({ length: 10 }, (_, i) => `<span style="width:6.5mm;height:6.5mm;border:.4mm solid #888;border-radius:50%;text-align:center;line-height:6mm;font-size:10pt;flex:none" class="en">${i + 1}</span>`).join('') : '<span style="display:inline-block;border-bottom:.6mm solid #333;width:40mm;height:6mm"></span>'}</div>` : ''}`)}
   ${foot2('en')}`);
-  const three = w.zc.length > 2, cb = ch => charBlock(ch, zp[ch], three ? { sz: 16, nd: 1, nb: 3, iw: 34, sw: 52, inline: true, gap: 1 } : { sz: 19, nd: 1, nb: 4, iw: 38, sw: 120, gap: 3 });
-  pg(`${hd2(s, 'zh')}
-  ${blk(1, 'Trace and write.', '描一描，写一写', w.zc.map(cb).join('') + (w.zrec.length ? `<div class="zh" style="font-size:9pt;color:#888;margin-top:1mm">♻ ${w.zrec.map(c => `<span style="font-size:16pt;font-weight:700;color:#333">${esc(c)}</span>`).join(' ')}</div>` + w.zrec.map(ch => `<div style="white-space:nowrap">${cellz(ch, 'dark', 14)}${cellz(ch, 'grey', 14)}${cellz(ch, null, 14)}</div>`).join('') : ''))}
-  ${blk(2, 'Look and match.', '连一连', `<div style="display:grid;grid-template-columns:1fr 30mm 1fr;align-items:center">${(() => { const m = w.zmatch, ord = m.map((_, i) => (i + 1) % m.length); return m.map((x, i) => `<div style="height:30mm;display:flex;align-items:center;justify-content:flex-end;gap:3mm"><div><div class="py" style="font-size:12pt;text-align:right">${esc(x.py)}</div><div class="zh" style="font-size:24pt;font-weight:700;text-align:right">${esc(x.zh)}</div></div><span class="dot"></span></div><div></div>
-      <div style="display:flex;align-items:center;gap:3mm"><span class="dot"></span>${img(m[ord[i]].p.img, 'max-height:27mm;max-width:40mm')}</div>`).join(''); })()}</div>`)}
-  ${blk(3, 'Match.', '连一连', medBlock(w))}
-  ${foot2('zh')}`);
 }
 function myPage(u) {
   const P = (H.wb2 || { pages: {} }).pages[u.key]; if (!P) return;
@@ -302,9 +299,9 @@ function key2(u) {
   const ss = H.sessions.filter(s => s.unit === u.key && s.wb2), LET = 'ABC';
   if (!ss.length) return;
   pg(`<div class="hd"><div class="t">Đáp án sách bài tập bản 2 · ${esc(u.name)}</div></div>
-  <table class="ss" style="font-size:10.5pt"><tr><th>Buổi</th>${LS ? '<th>Khoanh (đáp án = ô thứ)</th>' : '<th>Xếp chữ · điền từ</th><th>Đọc ✓✗ · điền</th>'}<th>Nối Anh ↔ Trung (câu Anh → vị trí bên phải)</th></tr>
+  <table class="ss" style="font-size:10.5pt"><tr><th>Buổi</th>${LS ? '<th>Khoanh (đáp án = ô thứ)</th>' : '<th>Xếp chữ · điền từ</th><th>Đọc ✓✗ · điền</th>'}<th>Nối câu Anh → vị trí bên phải</th></tr>
   ${ss.map(s => { const w = s.wb2, med = w.med.map((x, i) => `${i + 1}→${w.medperm[i] + 1}`).join(' · ');
-    if (LS) return `<tr><td>${s.n}</td><td>${w.circ.map(c => `${esc(c.w)}: ${c.ans + 1}`).join(' · ')}<br><span class="zh">${w.zmatch.map((x, i) => `${esc(x.zh)} → ${(i + 1) % w.zmatch.length + 1}`).join(' · ')}</span> (trang Trung: hàng → tranh thứ)</td><td>${med}</td></tr>`;
+    if (LS) return `<tr><td>${s.n}</td><td>${w.circ.map(c => `${esc(c.w)}: ${c.ans + 1}`).join(' · ')}<br><span class="zh">${w.zmatch.map((x, i) => `${esc(x.zh)} → ${(i + 1) % w.zmatch.length + 1}`).join(' · ')}</span> (nối chữ Trung: hàng → tranh thứ)</td><td>${med}</td></tr>`;
     return `<tr><td>${s.n}</td><td>${w.unscr.map(x => esc(x.w)).join(', ')}<br>${w.cloze.map(c => esc(c.ans)).join(', ')}</td><td class="zh">${w.zread.map((r, i) => `${i + 1}${r.ok ? '✓' : '✗'}`).join(' ')} · ${esc(w.zfill.ans)}</td><td>${med}</td></tr>`; }).join('')}</table>
   ${LS ? '' : (() => { const C = (H.wb2.check || {})[u.key]; return C ? `<p style="font-size:10.5pt"><b>Check-up:</b> yes/no: ${C.yes.map(y => y.ok ? 'yes' : 'no').join(', ')} · chữ: ${C.unscr.map(x => esc(x.w)).join(', ')} · đọc – khoanh: ${C.zread.map(r => 'ABC'[r.ans]).join(', ')} · điền: <span class="zh">${C.zfill.map(f => esc(f.ans)).join(', ')}</span></p>` : ''; })()}
   <p style="font-size:10.5pt;color:#555">Câu có ♻ ôn lại từ unit trước. Câu đúng/sai trang Trung xếp lẫn lộn (không phải lúc nào cũng ✓). Cô chấm nhanh bằng bảng này; con tự khoanh mặt cười ở cuối trang.</p>`);
