@@ -1239,6 +1239,13 @@
 },
 {
 "l": "en",
+"t": "I'm four!",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "en",
 "t": "I'm sad! No pizza!",
 "nguon": [
 "little-seed/giong_thieu.json"
@@ -1634,6 +1641,13 @@
 },
 {
 "l": "en",
+"t": "Meow!",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "en",
 "t": "Mommy, Daddy, Bông! Three!",
 "nguon": [
 "little-seed/giong_thieu.json"
@@ -1690,6 +1704,13 @@
 },
 {
 "l": "en",
+"t": "My name is Kitten!",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "en",
 "t": "My name is Kitten! Meow!",
 "nguon": [
 "little-seed/giong_thieu.json"
@@ -1697,21 +1718,14 @@
 },
 {
 "l": "en",
+"t": "My name is Puppy!",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "en",
 "t": "My name is Puppy! Woof!",
-"nguon": [
-"little-seed/giong_thieu.json"
-]
-},
-{
-"l": "en",
-"t": "My name is Puppy. I'm three. Woof!",
-"nguon": [
-"little-seed/giong_thieu.json"
-]
-},
-{
-"l": "en",
-"t": "My name is ___. Happy birthday!",
 "nguon": [
 "little-seed/giong_thieu.json"
 ]
@@ -2610,6 +2624,13 @@
 },
 {
 "l": "en",
+"t": "Woof! My name is",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "en",
 "t": "Woof! Woof!",
 "nguon": [
 "little-seed/giong_thieu.json"
@@ -2923,8 +2944,7 @@
 "l": "zh",
 "t": "Bông，再见！",
 "nguon": [
-"little-seed/giong_thieu.json",
-"buoi/giong-thieu.json"
+"little-seed/giong_thieu.json"
 ]
 },
 {
@@ -3281,6 +3301,13 @@
 },
 {
 "l": "zh",
+"t": "不对！",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "zh",
 "t": "不对，Leo！我很生气！",
 "nguon": [
 "little-seed/giong_thieu.json"
@@ -3493,13 +3520,6 @@
 {
 "l": "zh",
 "t": "你好！哇！这是谁？",
-"nguon": [
-"little-seed/giong_thieu.json"
-]
-},
-{
-"l": "zh",
-"t": "你好！我叫",
 "nguon": [
 "little-seed/giong_thieu.json"
 ]
@@ -3975,6 +3995,13 @@
 },
 {
 "l": "zh",
+"t": "喵喵！",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "zh",
 "t": "嘎嘎！嘎嘎！我能跑！",
 "nguon": [
 "little-seed/giong_thieu.json"
@@ -4443,7 +4470,7 @@
 },
 {
 "l": "zh",
-"t": "我叫___。生日快乐！",
+"t": "我叫小狗！",
 "nguon": [
 "little-seed/giong_thieu.json"
 ]
@@ -4451,6 +4478,13 @@
 {
 "l": "zh",
 "t": "我叫小狗！汪汪！",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "zh",
+"t": "我叫小猫！",
 "nguon": [
 "little-seed/giong_thieu.json"
 ]
@@ -4639,6 +4673,13 @@
 },
 {
 "l": "zh",
+"t": "我四岁！",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "zh",
 "t": "我好困……",
 "nguon": [
 "little-seed/giong_thieu.json"
@@ -4744,21 +4785,7 @@
 },
 {
 "l": "zh",
-"t": "我是",
-"nguon": [
-"little-seed/giong_thieu.json"
-]
-},
-{
-"l": "zh",
 "t": "我是___。我能跳！",
-"nguon": [
-"little-seed/giong_thieu.json"
-]
-},
-{
-"l": "zh",
-"t": "我是小狗。我三岁。汪汪！",
 "nguon": [
 "little-seed/giong_thieu.json"
 ]
@@ -5092,6 +5119,13 @@
 "nguon": [
 "little-seed/giong_thieu.json",
 "buoi/giong-thieu.json"
+]
+},
+{
+"l": "zh",
+"t": "汪汪！我叫",
+"nguon": [
+"little-seed/giong_thieu.json"
 ]
 },
 {
@@ -7295,7 +7329,8 @@
 "l": "en",
 "t": "Look at your feet. Five toes!",
 "nguon": [
-"seedling/giong_thieu_sd48.json"
+"seedling/giong_thieu_sd48.json",
+"buoi/giong-thieu.json"
 ]
 },
 {
@@ -8130,7 +8165,8 @@
 "l": "en",
 "t": "This is my head.",
 "nguon": [
-"seedling/giong_thieu_sd48.json"
+"seedling/giong_thieu_sd48.json",
+"buoi/giong-thieu.json"
 ]
 },
 {
@@ -8179,21 +8215,24 @@
 "l": "en",
 "t": "Touch your arms.",
 "nguon": [
-"seedling/giong_thieu_sd48.json"
+"seedling/giong_thieu_sd48.json",
+"buoi/giong-thieu.json"
 ]
 },
 {
 "l": "en",
 "t": "Touch your head, ___!",
 "nguon": [
-"seedling/giong_thieu_sd48.json"
+"seedling/giong_thieu_sd48.json",
+"buoi/giong-thieu.json"
 ]
 },
 {
 "l": "en",
 "t": "Touch your knees.",
 "nguon": [
-"seedling/giong_thieu_sd48.json"
+"seedling/giong_thieu_sd48.json",
+"buoi/giong-thieu.json"
 ]
 },
 {
@@ -9620,7 +9659,8 @@
 "l": "zh",
 "t": "___，摸摸你的头！",
 "nguon": [
-"seedling/giong_thieu_sd48.json"
+"seedling/giong_thieu_sd48.json",
+"buoi/giong-thieu.json"
 ]
 },
 {
@@ -11020,7 +11060,8 @@
 "l": "zh",
 "t": "我有长长的黑头发。",
 "nguon": [
-"seedling/giong_thieu_sd48.json"
+"seedling/giong_thieu_sd48.json",
+"buoi/giong-thieu.json"
 ]
 },
 {
@@ -11133,14 +11174,16 @@
 "l": "zh",
 "t": "摸摸你的胳膊。",
 "nguon": [
-"seedling/giong_thieu_sd48.json"
+"seedling/giong_thieu_sd48.json",
+"buoi/giong-thieu.json"
 ]
 },
 {
 "l": "zh",
 "t": "摸摸你的膝盖。",
 "nguon": [
-"seedling/giong_thieu_sd48.json"
+"seedling/giong_thieu_sd48.json",
+"buoi/giong-thieu.json"
 ]
 },
 {
@@ -11500,7 +11543,8 @@
 "l": "zh",
 "t": "看你的脚。五个脚趾！",
 "nguon": [
-"seedling/giong_thieu_sd48.json"
+"seedling/giong_thieu_sd48.json",
+"buoi/giong-thieu.json"
 ]
 },
 {
@@ -12012,7 +12056,8 @@
 "l": "zh",
 "t": "这是我的头。",
 "nguon": [
-"seedling/giong_thieu_sd48.json"
+"seedling/giong_thieu_sd48.json",
+"buoi/giong-thieu.json"
 ]
 },
 {
@@ -12780,7 +12825,35 @@
 },
 {
 "l": "en",
+"t": "Who do you say good morning to?",
+"nguon": [
+"buoi/giong-thieu.json"
+]
+},
+{
+"l": "en",
+"t": "Who do you say good night to?",
+"nguon": [
+"buoi/giong-thieu.json"
+]
+},
+{
+"l": "en",
 "t": "Hello, friends!",
+"nguon": [
+"buoi/giong-thieu.json"
+]
+},
+{
+"l": "en",
+"t": "Hello! I'm An.",
+"nguon": [
+"buoi/giong-thieu.json"
+]
+},
+{
+"l": "en",
+"t": "Who do you say good morning to at school?",
 "nguon": [
 "buoi/giong-thieu.json"
 ]
@@ -12795,6 +12868,13 @@
 {
 "l": "en",
 "t": "Touch your head!",
+"nguon": [
+"buoi/giong-thieu.json"
+]
+},
+{
+"l": "en",
+"t": "Is your hair long?",
 "nguon": [
 "buoi/giong-thieu.json"
 ]
@@ -12885,6 +12965,20 @@
 },
 {
 "l": "zh",
+"t": "你跟谁说早上好？",
+"nguon": [
+"buoi/giong-thieu.json"
+]
+},
+{
+"l": "zh",
+"t": "你跟谁说晚安？",
+"nguon": [
+"buoi/giong-thieu.json"
+]
+},
+{
+"l": "zh",
 "t": "朋友们，你们好！",
 "nguon": [
 "buoi/giong-thieu.json"
@@ -12899,6 +12993,20 @@
 },
 {
 "l": "zh",
+"t": "你好！我是An。",
+"nguon": [
+"buoi/giong-thieu.json"
+]
+},
+{
+"l": "zh",
+"t": "在学校你跟谁说早上好？",
+"nguon": [
+"buoi/giong-thieu.json"
+]
+},
+{
+"l": "zh",
 "t": "找朋友！",
 "nguon": [
 "buoi/giong-thieu.json"
@@ -12907,6 +13015,13 @@
 {
 "l": "zh",
 "t": "摸摸头！",
+"nguon": [
+"buoi/giong-thieu.json"
+]
+},
+{
+"l": "zh",
+"t": "你的头发长吗？",
 "nguon": [
 "buoi/giong-thieu.json"
 ]
@@ -12935,6 +13050,13 @@
 {
 "l": "zh",
 "t": "五个手指！",
+"nguon": [
+"buoi/giong-thieu.json"
+]
+},
+{
+"l": "zh",
+"t": "几个手指？",
 "nguon": [
 "buoi/giong-thieu.json"
 ]
