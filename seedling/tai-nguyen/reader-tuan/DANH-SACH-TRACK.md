@@ -29,4 +29,4 @@ Mỗi track đọc hết truyện bằng tiếng Anh rồi hết truyện bằng
 | 23 | 23 | Unit 12. Count Again! | 再数一数！ | 1:52 | `23-unit-12-count-again.mp3` | https://anh-trung-kids-ces.github.io/hoc.mot.lan.duoc.hai.ngon.ngu/seedling/nghe-reader.html#23 |
 | 24 | 24 | Unit 12. I Can't Get It! | 我拿不到！ | 1:58 | `24-unit-12-i-can-t-get-it.mp3` | https://anh-trung-kids-ces.github.io/hoc.mot.lan.duoc.hai.ngon.ngu/seedling/nghe-reader.html#24 |
 | 25 | 25 | Unit 12. Look at My Photos! | 看我的照片！ | 2:05 | `25-unit-12-look-at-my-photos.mp3` | https://anh-trung-kids-ces.github.io/hoc.mot.lan.duoc.hai.ngon.ngu/seedling/nghe-reader.html#25 |
-| 26 | 26 | Ôn cả khoá. A Book for You! | 给你们一本书！ | 1:60 | `26-on-ca-khoa-a-book-for-you.mp3` | https://anh-trung-kids-ces.github.io/hoc.mot.lan.duoc.hai.ngon.ngu/seedling/nghe-reader.html#26 |
+| 26 | 26 | Ôn cả khoá. A Book for You! | 给你们一本书！ | 2:00 | `26-on-ca-khoa-a-book-for-you.mp3` | https://anh-trung-kids-ces.github.io/hoc.mot.lan.duoc.hai.ngon.ngu/seedling/nghe-reader.html#26 |
