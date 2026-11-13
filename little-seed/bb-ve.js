@@ -40,6 +40,11 @@ const BV = {
         const d = cv.toDataURL('image/jpeg', .82); try { localStorage.setItem(k || BV.PHOTO, JSON.stringify(d)); } catch (e) { toast('Ảnh lớn quá, máy chưa lưu được.'); } cb(d); }; im.src = r.result; };
       r.readAsDataURL(f); }; inp.click(); },
   FRAME: { left: 59.8, top: 14.5, width: 33.2, height: 37.8 },   // ô ảnh trên bìa khung (đo từ bia_khung.webp U3)
+  // (13/11, vè ôn vòng) khởi động lần 2, 4 chỉ trỏ tới vè của unit cũ theo mã: warm.ve_ref = {u, i: [dòng]}; lời lấy từ SD.ve_u lúc chạy,
+  // nên khi lời vè viết lại thì khởi động tự đổi theo. ve_u trả về số unit để màn khởi động ghi "Vè cũ (Unit …)".
+  warmOf(w) { w = Object.assign({}, w || {}); const r = w.ve_ref, V = ((window.SD && SD.ve_u) || {})[r && r.u];
+    if (r && V && V.length) { w.ve = r.i.map(i => V[i % V.length]); w.ve_u = r.cu ? r.u : 0; }
+    return w; },
   // vè 2 dòng có bàn tay vỗ theo nhịp; trang big book nghe lại – hai khởi động nối ngày
   async veLines(host, lines, langs, bpm, my) {
     for (const l of langs) for (const x of lines) { if (my !== RUN) return;
@@ -65,7 +70,7 @@ const BV = {
    BIG BOOK – trái đọc theo trang, phải câu hỏi
    ===================================================================== */
 R.bb = (step, body) => {
-  const lan = step.lan || 1, P = step.pages, W = step.warm || {}, LANG = ['en', 'zh'], NQ = step.qs.length;
+  const lan = step.lan || 1, P = step.pages, W = BV.warmOf(step.warm), LANG = ['en', 'zh'], NQ = step.qs.length;
   const FR = step.frame || BV.FRAME, PK = step.photo_k || BV.PHOTO, PT = step.photo_t || 'ảnh gia đình';
   let pass = 0, c = 0, autoId = -1, read = false, busy = false, who = '', glow = '', idleT = 0, tries = 0, warmed = false;
   let Q = step.qs.map(q => Object.assign({}, q)), qi = 0;
@@ -77,7 +82,8 @@ R.bb = (step, body) => {
 
   /* ---- khởi động ---- */
   async function warm() { const me = ++RUN; warmed = false; prog();
-    const host = BV.warmBox(body, ['', 'Vè và tên các bạn', 'Vè và 3 trang đầu', 'Vè và 2 trang đầu', 'Vè và cả quyển thật nhanh'][lan]);
+    const host = BV.warmBox(body, (W.ve_u ? `Vè cũ (${W.ve_u === 1 ? 'vè chào' : 'Unit ' + W.ve_u}) và ` : 'Vè và ') +
+      ['', 'tên các bạn', '3 trang đầu', '2 trang đầu', 'cả quyển thật nhanh'][lan]);
     body.querySelector('#bvSkip').onclick = () => { sfx.pop(); stopAll(); main(); };
     X.replay = () => warm();
     if ((W.ve || [])[0]) host.innerHTML = BV.veHTML(W.ve[0], (W.ve_l || ['en'])[0], 92);   // màn khởi động luôn có tranh, chữ ngay từ đầu
