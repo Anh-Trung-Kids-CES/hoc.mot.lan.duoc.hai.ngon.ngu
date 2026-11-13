@@ -1,0 +1,18 @@
+/* Vè 48 buổi (chuong-trinh/ve48/ve48.js): dùng chung cho web Little Seed và Seedling */
+.vk{width:100%;display:flex;flex-direction:column;align-items:center;gap:10px}
+.vk-stage{position:relative;width:min(100%,760px);border-radius:22px;overflow:hidden;border:5px solid #F2C94C;background:#FFF7EA}
+.vk-stage canvas{width:100%;height:auto;display:block}
+.vk-cover{position:absolute;inset:0;display:grid;place-items:center;cursor:pointer;background:rgba(0,0,0,.05)}
+.vk-cover b{width:86px;height:86px;border-radius:50%;background:#F2994A;color:#fff;display:grid;place-items:center;font-size:40px;box-shadow:0 6px 0 rgba(0,0,0,.15)}
+.vk-st{font-weight:700;color:#5a4a3a}
+.vk-ctl{justify-content:center;gap:10px;flex-wrap:wrap}.vk-ctl .btn[disabled]{opacity:.45;pointer-events:none}
+.vk-tip{color:#7a6652}
+.vk-out{width:min(100%,760px);display:flex;flex-direction:column;gap:8px;align-items:center;background:#F1FAF3;border-radius:18px;padding:10px}
+.vk-out video{width:100%;border-radius:14px;background:#000}.vk-out small{color:#3d6b4a}
+/* Vè: mỗi tiếng một video (12/11) · big book: nút gọn */
+.vk-tabs{display:flex;gap:8px;justify-content:center}
+.vk-tab{border:3px solid #E6DCCB;background:#fff;border-radius:999px;padding:6px 18px;font-weight:800;font-size:16px;cursor:pointer;color:#6b5a45}
+.vk-tab[disabled]{opacity:.45;cursor:default}
+.vk-stage.zh{border-color:var(--ls-zh)}.vk-stage.en{border-color:var(--ls-en)}
+.vk-tab.on{border-color:#F2994A;background:#F2994A;color:#fff}
+.vk-stage.zh{border-color:#D93A3A}.vk-stage.en{border-color:#2F6FD6}
