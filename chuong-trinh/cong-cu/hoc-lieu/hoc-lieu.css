@@ -46,7 +46,7 @@ table.ss td,table.ss th{border-bottom:1px solid #eee;padding:7px 6px;text-align:
 .dot{width:3.4mm;height:3.4mm;border-radius:50%;background:#333;display:inline-block}
 .tzg{width:20mm;height:20mm;border:.4mm solid #c55;position:relative;display:inline-block;margin-right:1.5mm;vertical-align:top}
 .tzg:before,.tzg:after{content:"";position:absolute;inset:0;background:linear-gradient(#e8b4b4,#e8b4b4) 50% 0/0.2mm 100% no-repeat,linear-gradient(#e8b4b4,#e8b4b4) 0 50%/100% .2mm no-repeat}
-.tzg svg{position:absolute;inset:1mm;width:18mm;height:18mm;z-index:1}
+.tzg svg{position:absolute;inset:1mm;width:calc(100% - 2mm);height:calc(100% - 2mm);z-index:1}
 .so{display:inline-block;width:10mm;height:10mm;border:.3mm solid #ddd;margin-right:.8mm;vertical-align:middle}
 .so svg{width:100%;height:100%}
 .a5{width:148.5mm;height:210mm;padding:9mm;display:flex;flex-direction:column;border-right:.3mm dashed #ccc}

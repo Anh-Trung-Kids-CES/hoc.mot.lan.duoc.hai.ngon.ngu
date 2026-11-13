@@ -261,7 +261,11 @@ for L, C in LEVELS.items():
             zm = [w for w in pics if w['zh'] and len(HAN.findall(w['zh'])) <= 4][:3]
             S['wb'] = {'en': {'words': ewords, 'tick': tick}, 'zh': {'chars': zc[:2], 'match': [{'img': w['img'], 'zh': w['zh'], 'py': w['py']} for w in zm], 'order': [(i + 1) % len(zm) for i in range(len(zm))] if len(zm) > 1 else [0]}}
         sessions.append(S)
-    data = {'level': L, 'title': C['title'], 'web': web, 'units': units, 'sessions': sessions, 'hz': HZD,
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import wb2 as _wb2   # (13/11) sách bài tập bản 2: Unit 1, 3
+    W2 = _wb2.build(L, units, sessions, LA, PY, hz_data)
+    HZD.update({c: v for c, v in W2['hz'].items()})
+    data = {'level': L, 'title': C['title'], 'web': web, 'units': units, 'sessions': sessions, 'hz': HZD, 'wb2': {'pages': W2['unit_pages'], 'check': W2['check']},
             'root': '../../' if L == 'LS' else '../../../'}
     open(f'{out}/hoc-lieu-data.js', 'w').write('window.HL=' + json.dumps(data, ensure_ascii=False) + ';\n')
     here = os.path.dirname(os.path.abspath(__file__))
