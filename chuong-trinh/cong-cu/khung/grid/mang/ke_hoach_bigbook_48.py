@@ -2,10 +2,12 @@
 claude/NguyenTac_Ve_OnVong_1311.md mục 2; sửa quy tắc A5 trong claude/QuyTac_BigBook_Ve_Web.md).
 
 Một nguồn duy nhất cho ba việc:
-  1. Khởi động big book trên web: lần 1, 3 = 2 dòng vè của unit đang học; lần 2, 4 = 2 dòng vè của unit cách 2–3 unit trước.
-     Chỉ ghi MÃ UNIT + số dòng, không chép lời: build đọc lời vè hiện hành của unit đó (ai viết lại vè thì khởi động tự đổi theo).
+  1. Khởi động big book trên web: hát CẢ BÀI vè, mỗi lần một tiếng (chị chốt 13/11: bỏ "2 dòng").
+     Lần 1 vè unit đang học (Anh) · lần 2 vè unit cách 2 (Trung) · lần 3 vè unit đang học (Trung) · lần 4 vè unit cách 3 (Anh).
+     Mỗi vè cũ được ôn hai lần ở hai unit sau: một lần tiếng Trung (khi là "cách 2"), một lần tiếng Anh (khi là "cách 3").
+     Chỉ ghi MÃ UNIT (+ đoạn dòng nếu là vè chào U1), không chép lời: build đọc lời vè hiện hành của unit đó.
   2. Mở buổi lớp: 2–3 phút một bài vè cũ (2–4 unit trước) + 3 phút flashcard cùng unit đó, ưu tiên từ không quay lại sau unit.
-  3. Ngày ôn 98–99: mỗi big book đọc lại một lượt (một tiếng) + 1 câu hỏi, khởi động bằng 2 dòng vè của chính unit đó.
+  3. Ngày ôn 98–99: mỗi big book: cả bài vè của chính unit đó → đọc lại một lượt → 1 câu hỏi, cả ba cùng một tiếng.
 
 Chạy thẳng file này: in bảng kế hoạch (dùng để chép vào tài liệu Project, kịch bản buổi lớp).
 """
@@ -14,8 +16,10 @@ Chạy thẳng file này: in bảng kế hoạch (dùng để chép vào tài li
 ORDER = {'LS': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
          'SD': [1, 4, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12]}
 
-# Vè chào U1 (Little Seed): dòng 0–1 chào đầu buổi, 6–7 chào cuối buổi (build_ls.py VE_U1)
-CHAO = {'LS': {'dau': [0, 1], 'cuoi': [6, 7]}, 'SD': {'dau': [0, 1], 'cuoi': [2, 3]}}
+# Vè chào U1 Little Seed là hai bài trong một: dòng 0–5 chào đầu buổi, 6–9 chào cuối buổi (build_ls.py VE_U1).
+# Seedling U1 là vè unit bình thường: cả bài.
+CHAO = {'LS': {'dau': list(range(0, 6)), 'cuoi': list(range(6, 10))}, 'SD': {'dau': 'all', 'cuoi': 'all'}}
+TIENG = {1: 'en', 2: 'zh', 3: 'zh', 4: 'en'}   # tiếng hát vè khởi động theo lần
 
 
 def _truoc(kh, un, buoc):
@@ -27,15 +31,15 @@ def _truoc(kh, un, buoc):
 
 
 def khoi_dong(kh, un):
-    """{lần: (unit vè, [dòng], [tiếng])}. Lần 1, 3: vè unit hiện tại; lần 2: unit cách 2; lần 4: unit cách 3.
-    Unit đầu khoá chưa có thì dùng vè chào U1 (lần 2 chào đầu, lần 4 chào cuối)."""
+    """{lần: (unit vè, 'all' hoặc [dòng], [tiếng])}. Cả bài vè, một tiếng mỗi lần (TIENG).
+    Lần 1, 3: vè unit hiện tại; lần 2: unit cách 2; lần 4: unit cách 3. Unit đầu khoá: vè chào U1 (lần 2 chào đầu, lần 4 chào cuối)."""
     def cu(buoc, phan):
         u = _truoc(kh, un, buoc)
         if u is None or u == 1:
             return (1, CHAO[kh][phan])
-        return (u, [0, 1] if phan == 'dau' else [2, 3])
+        return (u, 'all')
     u2, d2 = cu(2, 'dau'); u4, d4 = cu(3, 'cuoi')
-    return {1: (un, [0, 1], ['en']), 2: (u2, d2, ['en']), 3: (un, [2, 3], ['en', 'zh']), 4: (u4, d4, ['en', 'zh'])}
+    return {1: (un, 'all', [TIENG[1]]), 2: (u2, d2, [TIENG[2]]), 3: (un, 'all', [TIENG[3]]), 4: (u4, d4, [TIENG[4]])}
 
 
 def mo_buoi(kh, un, k):
@@ -83,6 +87,7 @@ ON_CUOI = {'LS': {98: [1, 2, 3, 4, 5, 6], 99: [7, 8, 9, 10, 11, 12]},
 
 
 def on_cuoi(kh, ngay):
+    """[(unit, tiếng)]: tiếng dùng cho cả ba việc của quyển đó (vè cả bài, đọc lại, câu hỏi)."""
     us = ON_CUOI[kh][ngay]; lech = 0 if ngay == 98 else 1
     return [(u, ('en', 'zh')[(i + lech) % 2]) for i, u in enumerate(us)]
 
@@ -92,7 +97,7 @@ if __name__ == '__main__':
         print(f'\n== {kh} – khởi động big book (unit vè, dòng, tiếng) ==')
         for un in ORDER[kh]:
             k = khoi_dong(kh, un)
-            print(f'U{un}:', ' · '.join(f'lần {l}: U{u} d{"–".join(str(x + 1) for x in d)} {"+".join(t)}' for l, (u, d, t) in k.items()))
+            print(f'U{un}:', ' · '.join(f'lần {l}: U{u} {"cả bài" if d == "all" else "d" + str(d[0] + 1) + "–" + str(d[-1] + 1)} {"+".join(t)}' for l, (u, d, t) in k.items()))
         print(f'\n== {kh} – mở buổi lớp (vè cũ + flashcard cùng unit) ==')
         for un in ORDER[kh]:
             print(f'U{un}:', ', '.join(f'b{k}→U{mo_buoi(kh, un, k)}' for k in range(1, 5)))

@@ -607,17 +607,18 @@ def ve_dict(e, z, img=''):
 def _cat(t, nm):   # tách câu quanh tên: (trước, sau)
     i = t.lower().find(nm.lower())
     return (t[:i], t[i + len(nm):]) if i >= 0 else (t, '')
+# 'guess' dùng cho U3 trở đi (lần 2, 4 khởi động bằng vè cũ); 'seq' mặc định là của U1 (khởi động bằng vè chào của chính U1)
 BB_TXT = {
     'guess': {'sub': {1: 'Lần 1 · Nghe cả quyển, chạm đúng người', 2: 'Lần 2 · Đoán trang sau là ai', 3: 'Lần 3 · Đọc đuổi, điền chỗ trống', 4: 'Lần 4 · Con kể, rồi nói về gia đình con'},
-              'rules': {1: ['Khởi động: con nghe 2 dòng vè và nghe tên các bạn trong truyện.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con nghe câu hỏi và chạm đúng người. Cần thì bấm 💡 để xem gợi ý.'],
-                        2: ['Khởi động: con nghe 2 dòng vè và nghe lại 3 trang đầu.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con đoán: trang sau là ai? Con chạm vào tranh trang sau.'],
-                        3: ['Khởi động: con nghe 2 dòng vè và 2 trang đầu.', 'Đọc đuổi tiếng Anh rồi tiếng Trung: cô đọc, cô và con cùng đọc, rồi con đọc một mình.', 'Rồi con chọn tranh điền vào chỗ trống.'],
-                        4: ['Khởi động: con nghe 2 dòng vè và nghe nhanh cả quyển.', 'Con kể: cô nói nửa câu, con nói tiếp.', 'Rồi con nói về gia đình con: "He is my…", "She is my…".']}},
+              'rules': {1: ['Khởi động: con nghe bài vè và nghe tên các bạn trong truyện.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con nghe câu hỏi và chạm đúng người. Cần thì bấm 💡 để xem gợi ý.'],
+                        2: ['Khởi động: con hát lại một bài vè cũ và nghe lại 3 trang đầu.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con đoán: trang sau là ai? Con chạm vào tranh trang sau.'],
+                        3: ['Khởi động: con nghe bài vè và 2 trang đầu.', 'Đọc đuổi tiếng Anh rồi tiếng Trung: cô đọc, cô và con cùng đọc, rồi con đọc một mình.', 'Rồi con chọn tranh điền vào chỗ trống.'],
+                        4: ['Khởi động: con hát lại một bài vè cũ và nghe nhanh cả quyển.', 'Con kể: cô nói nửa câu, con nói tiếp.', 'Rồi con nói về gia đình con: "He is my…", "She is my…".']}},
     'seq': {'sub': {1: 'Lần 1 · Nghe cả quyển, chạm đúng người', 2: 'Lần 2 · Đoán trang sau Bông gặp ai', 3: 'Lần 3 · Đọc đuổi, điền chỗ trống', 4: 'Lần 4 · Con kể, rồi chúc ngủ ngon người thân'},
-            'rules': {1: ['Khởi động: con nghe 2 dòng vè và nghe tên các bạn trong truyện.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con nghe câu Bông nói và chạm đúng người Bông chào. Cần thì bấm 💡.'],
-                      2: ['Khởi động: con nghe 2 dòng vè và nghe lại 3 trang đầu.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con đoán: trang sau Bông gặp ai? Con chạm vào tranh trang sau.'],
-                      3: ['Khởi động: con nghe 2 dòng vè và 2 trang đầu.', 'Đọc đuổi tiếng Anh rồi tiếng Trung: cô đọc, cô và con cùng đọc, rồi con đọc một mình.', 'Rồi con chọn tranh điền vào chỗ trống.'],
-                      4: ['Khởi động: con nghe 2 dòng vè và nghe nhanh cả quyển.', 'Con kể: cô nói nửa câu, con nói tiếp.', 'Rồi con chúc ngủ ngon người thân: "Good night, …!"']}}}
+            'rules': {1: ['Khởi động: con nghe bài vè và nghe tên các bạn trong truyện.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con nghe câu Bông nói và chạm đúng người Bông chào. Cần thì bấm 💡.'],
+                      2: ['Khởi động: con nghe bài vè và nghe lại 3 trang đầu.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con đoán: trang sau Bông gặp ai? Con chạm vào tranh trang sau.'],
+                      3: ['Khởi động: con nghe bài vè và 2 trang đầu.', 'Đọc đuổi tiếng Anh rồi tiếng Trung: cô đọc, cô và con cùng đọc, rồi con đọc một mình.', 'Rồi con chọn tranh điền vào chỗ trống.'],
+                      4: ['Khởi động: con nghe bài vè và nghe nhanh cả quyển.', 'Con kể: cô nói nửa câu, con nói tiếp.', 'Rồi con chúc ngủ ngon người thân: "Good night, …!"']}}}
 BB_CMD = {1: {'en': ('Listen and touch.', 'vi', 'Con nghe rồi chạm vào đúng người nhé.'), 'zh': ('听一听，点一点。', 'en', 'Listen and touch.')},
           2: {'en': ('Who is on the next page?', 'vi', 'Trang sau là ai? Con chạm vào tranh trang sau nhé.'), 'zh': ('下一页是谁？', 'en', 'Who is on the next page?')},
           3: {'en': ('Which one? Touch it.', 'vi', 'Chọn tranh điền vào chỗ trống nhé.'), 'zh': ('是哪一个？点一点。', 'en', 'Which one? Touch it.')}}
@@ -748,7 +749,8 @@ VE_U1 = [ve_dict('Hello, hello, everyone!', '你好你好，大家好！', BBU1 
 U1M = [{'l': l, 'q': '', 'half': 'Good night, …!' if l == 'en' else '…，晚安！', 'cue': 'Good night' if l == 'en' else '晚安', 'vd': vd}
        for l, vd in [('en', 'Good night, mommy!'), ('zh', '妈妈，晚安！'), ('en', 'Good night, daddy!'), ('zh', '爸爸，晚安！'), ('en', 'Good night, puppy!')]]
 bbve_unit(1, {'pages': U1P, 'kind': 'seq', 'names': U1N, 'items': U1I, 'vel': VE_U1, 'qimg': NV + 'kids_bong_a.webp',
-              've2': {1: (VE_U1[0:2], ['en']), 2: (VE_U1[6:8], ['en']), 3: (VE_U1[0:2], ['en', 'zh']), 4: (VE_U1[6:8], ['en', 'zh'])}, 'mine': U1M,
+              # (13/11) khởi động hát cả bài, mỗi lần một tiếng: chào đầu (dòng 1–6) Anh · chào cuối (7–10) Trung · chào đầu Trung · chào cuối Anh
+              've2': {1: (VE_U1[0:6], ['en']), 2: (VE_U1[6:10], ['zh']), 3: (VE_U1[0:6], ['zh']), 4: (VE_U1[6:10], ['en'])}, 'mine': U1M,
               # ngày 1–9: vè, big book xen kẽ; ngày sát buổi 1 và buổi 3 là ngày vè (con hát trọn hai vè chào ở buổi 1)
               'plan': [('ve', 1), ('bb', 1), ('ve', 2), ('bb', 2), ('ve', 3), ('bb', 3), ('ve', 3), ('bb', 4), ('ve', 4)],
               'title': 'Goodbye, Puppy!', 'title_zh': '小狗，再见！', 've_title': 'Hello and Goodbye!', 've_title_zh': '你好，再见！',
@@ -773,10 +775,10 @@ U2M = [{'l': 'en', 'q': "What's your name?", 'half': 'My name is…', 'cue': 'My
        {'l': 'zh', 'q': '你几岁？', 'half': '我…岁。', 'cue': '我', 'vd': '我六岁。'},
        {'l': 'en', 'q': "Hello! What's your name?", 'half': 'Hello! My name is…', 'cue': 'Hello! My name is', 'vd': 'Hello! My name is Leo.'}]
 TX_U2 = {'sub': {1: 'Lần 1 · Nghe cả quyển, chạm đúng bạn', 2: 'Lần 2 · Đoán trang sau là ai', 3: 'Lần 3 · Đọc đuổi, điền tên', 4: 'Lần 4 · Con kể, rồi giới thiệu về con'},
-         'rules': {1: ['Khởi động: con nghe 2 dòng vè và nghe tên các bạn trong truyện.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con nghe câu nói và chạm đúng bạn đó. Cần thì bấm 💡.'],
-                   2: ['Khởi động: con nghe 2 dòng vè cũ và nghe lại 3 trang đầu.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con đoán: trang sau là ai? Con chạm vào tranh trang sau.'],
-                   3: ['Khởi động: con nghe 2 dòng vè và 2 trang đầu.', 'Đọc đuổi tiếng Anh rồi tiếng Trung: cô đọc, cô và con cùng đọc, rồi con đọc một mình.', 'Rồi con chọn đúng bạn điền vào chỗ trống.'],
-                   4: ['Khởi động: con nghe 2 dòng vè cũ và nghe nhanh cả quyển.', 'Con kể: cô nói nửa câu, con nói tên.', 'Rồi con giới thiệu về con: "My name is…", "I\'m…".']}}
+         'rules': {1: ['Khởi động: con nghe bài vè và nghe tên các bạn trong truyện.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con nghe câu nói và chạm đúng bạn đó. Cần thì bấm 💡.'],
+                   2: ['Khởi động: con hát lại một bài vè cũ và nghe lại 3 trang đầu.', 'Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.', 'Rồi con đoán: trang sau là ai? Con chạm vào tranh trang sau.'],
+                   3: ['Khởi động: con nghe bài vè và 2 trang đầu.', 'Đọc đuổi tiếng Anh rồi tiếng Trung: cô đọc, cô và con cùng đọc, rồi con đọc một mình.', 'Rồi con chọn đúng bạn điền vào chỗ trống.'],
+                   4: ['Khởi động: con hát lại một bài vè cũ và nghe nhanh cả quyển.', 'Con kể: cô nói nửa câu, con nói tên.', 'Rồi con giới thiệu về con: "My name is…", "I\'m…".']}}
 bbve_unit(2, {'pages': U2P, 'kind': 'seq', 'names': U2N, 'items': U2I, 'vel': VE_U2, 'qimg': BBU2 + 'bia_khung.webp', 'txt': TX_U2, 'mine': U2M,
               'plan': [('bb', 1), ('ve', 1), ('bb', 2), ('ve', 2), ('bb', 3), ('ve', 3), ('bb', 4), ('ve', 4)],
               'title': MU2['bb'][0], 'title_zh': MU2['bb'][1], 've_title': MU2['ten_en'], 've_title_zh': MU2['ten_zh'],

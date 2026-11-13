@@ -13084,6 +13084,13 @@
 },
 {
 "l": "vi",
+"t": "Mình khởi động bằng một bài vè cũ nhé! Con hát và vỗ tay theo.",
+"nguon": [
+"little-seed/giong_vi_bbve.json"
+]
+},
+{
+"l": "vi",
 "t": "Đây là các bạn trong truyện. Con nghe tên nhé!",
 "nguon": [
 "little-seed/giong_vi_bbve.json"
