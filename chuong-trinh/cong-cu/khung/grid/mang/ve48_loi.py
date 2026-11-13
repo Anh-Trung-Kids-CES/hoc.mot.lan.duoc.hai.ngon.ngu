@@ -136,8 +136,8 @@ L[9] = {
  'A': ('Animal Moves', '动物动一动', [
     ('co', '{RAB-bit}, {RAB-bit}, JUMP, jump, JUMP!', '{兔子}{兔子}，跳跳跳！'),
     ('lop', '{MOUSE}, {MOUSE}, RUN… and BUMP!', '{老鼠}{老鼠}，快快跑！'),
-    ('co', '{FISH}, {FISH}, SWIM, swim, SWIM!', '小{鱼}小{鱼}，游游游！'),
-    ('lop', '{BIRD}, {BIRD}, FLAP your WING!', '小{鸟}小{鸟}，飞飞飞！'),
+    ('co', '{HORSE}, {HORSE}, RUN, run, RUN!', '小{马}小{马}，跑得快！'),
+    ('lop', '{FISH}, {FISH}, SWIM in the SUN!', '小{鱼}小{鱼}，游游游！'),
     ('co', '___, ___, can you {SWIM}?', '___，___，你会{游泳}吗？'),
     ('con', "YES, I CAN! LET'S jump IN!", '会！我会！跳下去吧！')]),
  'B': ('Good Night, Animals', '动物晚安', [

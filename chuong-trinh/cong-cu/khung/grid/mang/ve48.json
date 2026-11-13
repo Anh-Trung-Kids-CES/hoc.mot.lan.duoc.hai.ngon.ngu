@@ -1427,8 +1427,25 @@
      },
      {
       "w": "co",
-      "raw": "FISH, FISH, SWIM, swim, SWIM!",
-      "en_o": "{FISH}, {FISH}, SWIM, swim, SWIM!",
+      "raw": "HORSE, HORSE, RUN, run, RUN!",
+      "en_o": "{HORSE}, {HORSE}, RUN, run, RUN!",
+      "zh": "小马小马，跑得快！",
+      "zh_o": "小{马}小{马}，跑得快！",
+      "py": "xiǎo mǎ xiǎo mǎ, pǎo de kuài!",
+      "o_en": [
+       "HORSE",
+       "HORSE"
+      ],
+      "o_zh": [
+       "马",
+       "马"
+      ],
+      "tuoi": false
+     },
+     {
+      "w": "lop",
+      "raw": "FISH, FISH, SWIM in the SUN!",
+      "en_o": "{FISH}, {FISH}, SWIM in the SUN!",
       "zh": "小鱼小鱼，游游游！",
       "zh_o": "小{鱼}小{鱼}，游游游！",
       "py": "xiǎo yú xiǎo yú, yóu yóu yóu!",
@@ -1439,23 +1456,6 @@
       "o_zh": [
        "鱼",
        "鱼"
-      ],
-      "tuoi": false
-     },
-     {
-      "w": "lop",
-      "raw": "BIRD, BIRD, FLAP your WING!",
-      "en_o": "{BIRD}, {BIRD}, FLAP your WING!",
-      "zh": "小鸟小鸟，飞飞飞！",
-      "zh_o": "小{鸟}小{鸟}，飞飞飞！",
-      "py": "xiǎo niǎo xiǎo niǎo, fēi fēi fēi!",
-      "o_en": [
-       "BIRD",
-       "BIRD"
-      ],
-      "o_zh": [
-       "鸟",
-       "鸟"
       ],
       "tuoi": false
      },
@@ -5192,7 +5192,9 @@
     "tieng": "en",
     "unit": 8,
     "tu": "horse",
-    "ve": []
+    "ve": [
+     "U9A"
+    ]
    },
    {
     "tieng": "en",
@@ -5589,7 +5591,6 @@
     "unit": 8,
     "tu": "鸟",
     "ve": [
-     "U9A",
      "U9B",
      "U10A"
     ]
@@ -5894,7 +5895,9 @@
     "tieng": "vá",
     "unit": "-",
     "tu": "horse",
-    "ve": []
+    "ve": [
+     "U9A"
+    ]
    },
    {
     "tieng": "vá",
