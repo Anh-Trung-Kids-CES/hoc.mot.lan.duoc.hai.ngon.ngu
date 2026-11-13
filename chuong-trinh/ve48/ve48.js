@@ -144,7 +144,7 @@ R.vk48 = (step, body) => {
   function stopAudio() { try { master && master.disconnect(); } catch (e) {} master = null; if (micS) { micS.getTracks().forEach(t => t.stop()); micS = null; } }
   function stop() { cancelAnimationFrame(raf); stopAudio(); if (rec && rec.state !== 'inactive') { rec.onstop = null; try { rec.stop(); } catch (e) {} } rec = null; mode = ''; }
   function VK_HOOK() { (window.VK48_STOP = window.VK48_STOP || new Set()).add(() => { const was = mode; stop(); if (was && body.isConnected) ui(); }); }
-  if (typeof X !== 'undefined') X.replay = () => play();
+  if (typeof X !== 'undefined' && X) X.replay = () => play();
   ui();
 };
 /* dừng vè khi rời bước */

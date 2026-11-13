@@ -1,0 +1,27 @@
+"""Mỗi bài vè một tranh có sẵn (đường dẫn tính từ gốc repo). Chị chốt 13/11 14:43: không vẽ mới."""
+LB = 'little-seed/tai-nguyen-ls/bigbook/'; SB = 'seedling/tai-nguyen/bigbook/'; LC = 'little-seed/tai-nguyen-ls/canh/'
+TRANH = {
+ 'ls01a': LC + 'u1/ba_ban_chao_co.webp', 'ls01b': LC + 'u1/co_tam_biet.webp',
+ 'ls02a': LB + 'u2/p1.webp', 'ls02b': SB + 'u1/p12.webp',
+ 'ls03a': LB + 'u2/p10.webp', 'ls03b': LB + 'u2/p12.webp',
+ 'ls04a': SB + 'u3/p1.webp', 'ls04b': LB + 'u6/p13.webp',
+ 'ls05a': LB + 'u5/p13.webp', 'ls05b': LB + 'u4/p11.webp',
+ 'ls06a': SB + 'u4/p9.webp', 'ls06b': LB + 'u5/p12.webp',
+ 'ls07a': LB + 'u5/p14.webp', 'ls07b': LB + 'u6/p1.webp',
+ 'ls08a': LB + 'u6/p9.webp', 'ls08b': LB + 'u7/p11.webp',
+ 'ls09a': LB + 'u8/p4.webp', 'ls09b': LB + 'u8/p12.webp',
+ 'ls10a': LB + 'u9/p13.webp', 'ls10b': LB + 'u9/p12.webp',
+ 'ls11a': LB + 'u10/p4.webp', 'ls11b': LB + 'u3/p12.webp',
+ 'ls12a': LB + 'u11/p12.webp', 'ls12b': LB + 'u12/p4.webp',
+ 'sd01a': SB + 'u1/p1.webp', 'sd01b': SB + 'u1/p12.webp',
+ 'sd02a': SB + 'u4/p8.webp', 'sd02b': SB + 'u12/p12.webp',
+ 'sd03a': SB + 'u4/p2.webp', 'sd03b': SB + 'u2/p9.webp',
+ 'sd05a': SB + 'u3/p9.webp', 'sd05b': SB + 'u6/p12.webp',
+ 'sd06a': SB + 'u6/p1.webp', 'sd06b': SB + 'u5/p12.webp',
+ 'sd07a': SB + 'u6/p11.webp', 'sd07b': SB + 'u6/p8.webp',
+ 'sd08a': SB + 'u8/p4.webp', 'sd08b': SB + 'u7/p1.webp',
+ 'sd09a': SB + 'u8/p1.webp', 'sd09b': SB + 'u8/p6.webp',
+ 'sd10a': SB + 'u9/p11.webp', 'sd10b': SB + 'u9/p8.webp',
+ 'sd11a': SB + 'u10/p3.webp', 'sd11b': SB + 'u10/p5.webp',
+ 'sd12a': SB + 'u10/p12.webp', 'sd12b': SB + 'u11/p13.webp',
+ 'sddea': SB + 'u9/p13.webp'}

@@ -5,7 +5,7 @@ import json, re, hashlib, sys
 SRC = '/home/claude/hoc.mot.lan.duoc.hai.ngon.ngu/chuong-trinh/cong-cu/khung/grid/mang/ve48.json'
 D = json.load(open(SRC))
 MODEL = 'gemini-3.1-flash-tts-preview'
-BPM = {'A': 92, 'B': 84}
+BPM = {'A': 96, 'B': 88}   # mỗi dòng 2 ô nhịp (8 phách nhạc, 4 phách mạnh của lời rơi vào phách lẻ)
 # vai -> danh sách (giọng, nâng tông); K = cả lớp đồng thanh (Bông + Leo + Anna)
 K = [('leda', 1.0), ('fenrir', 1.0), ('laomedeia', 1.15)]
 VOICE = {'LS': {'co': [('sulafat', 1.0)], 'lop': K, 'con': [('leda', 1.0)], 'leo': [('fenrir', 1.0)]},

@@ -1,0 +1,44 @@
+<title>Nghe thử audio vè</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&family=Noto+Sans+SC:wght@400;600&display=swap">
+<style>
+/* Layout: one column; each vè a section with three main players, line-by-line table folded below */
+:root{--bg:#f6f8f4;--card:#fff;--fg:#1f2a24;--mute:#5d6b63;--line:#dbe3dc;--leaf:#2f7d4f;--warn:#b8325a;
+--sans:"Be Vietnam Pro",system-ui,sans-serif;--zh:"Noto Sans SC","PingFang SC",sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141a16;--card:#1c241f;--fg:#e6eee8;--mute:#9aaba0;--line:#2e3a33;--leaf:#6cc48f;--warn:#f08aa8;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#141a16;--card:#1c241f;--fg:#e6eee8;--mute:#9aaba0;--line:#2e3a33;--leaf:#6cc48f;--warn:#f08aa8;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:15px;line-height:1.55}
+.wrap{max-width:1000px;margin:0 auto;padding-block:24px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:28px}
+h1{font-size:clamp(24px,4vw,32px);font-weight:800;margin:0;text-wrap:balance}
+h2{font-size:19px;margin:0;color:var(--leaf);text-wrap:balance}
+.zh{font-family:var(--zh)}
+.intro{display:grid;gap:10px;max-width:72ch}.intro p,.intro ol{margin:0}.intro ol{padding-left:20px;display:grid;gap:6px}
+section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;display:grid;gap:12px;min-width:0}
+.meta{margin:0;color:var(--mute);font-size:14px}
+.big{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px}
+.big label{display:grid;gap:6px;font-weight:600;font-size:14px}
+audio{width:100%;height:36px}
+summary{cursor:pointer;font-weight:600}
+.tw{overflow-x:auto;margin-top:8px}
+table{border-collapse:collapse;width:100%;min-width:640px}
+th{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);text-align:left;padding:4px 6px;border-bottom:1px solid var(--line)}
+td{padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+td.n{color:var(--mute);width:1.5em}td.w{color:var(--mute);font-size:13px;width:5em}
+td.fl{font-size:12px;color:var(--warn);width:11em}
+td audio{height:30px;margin-top:4px}
+</style>
+<div class="wrap">
+<header class="intro">
+<h1>Nghe thử audio vè</h1>
+<p>Hai bài chạy thử: Little Seed U2A và Seedling U2A. Mỗi bài có file mẫu tiếng Anh, file mẫu tiếng Trung và file nhạc vỗ tay không lời. Bấm "Nghe từng dòng" để nghe riêng từng câu (bản dùng trên web).</p>
+<p>Chị nghe và chốt giúp em 5 điểm:</p>
+<ol>
+<li>Giọng: cô Hươu (LS), Mrs Lan (SD), cả lớp đồng thanh (Bông + Leo + Anna), Bông.</li>
+<li>Nhịp: nhạc vè mở buổi 96 nhịp/phút, mỗi câu kéo dài 2 ô nhịp, nên giọng đọc vừa sức con (giọng máy đọc vè thường dài gấp rưỡi một ô nhịp; ép vào một ô sẽ nhanh quá, con khó theo). Nhanh quá, chậm quá hay vừa?</li>
+<li>Giọng có khớp phách vỗ tay không, nghe có ra "vè" không?</li>
+<li>Tiếng nhạc vỗ tay: to hay nhỏ so với giọng, có cần đổi không?</li>
+<li>Câu nào đọc sai, nuốt chữ hay sai thanh tiếng Trung.</li>
+</ol>
+</header>
+%%BODY%%
+</div>
