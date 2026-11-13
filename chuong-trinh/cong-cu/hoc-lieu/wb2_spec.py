@@ -55,7 +55,7 @@ SPEC = {
            ('He is my ___.', ['uncle', 'aunt', 'baby'], 'uncle', 'w:uncle', 0),
            ("What's your ___?", ['name', 'year', 'nine'], 'name', None, 1)],
     me=('My name is ___. I am Vietnamese.', 'Draw yourself.'),
-    zc=['学', '越'],
+    zc=['学', '南'],
     zread=[("s:I'm Vietnamese!", '我是越南人。', 1), ('w:uncle', '他是我阿姨。', 0), ('w:aunt', '她是我阿姨。', 1)],
     zfill=('我是___人。', ['明天', '越南', '好'], '越南'),
     med=[("I'm Vietnamese.", '我是越南人。'), ("Xiaomei's mother is Chinese.", 'Xiaomei的妈妈是中国人。'), ('Who is he?', '他是谁？')], medperm=[1, 2, 0]),

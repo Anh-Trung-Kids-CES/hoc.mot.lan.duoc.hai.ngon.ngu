@@ -36,9 +36,9 @@ def PY(z):
 
 LEVELS = {
     'LS': dict(web='little-seed', data='little-seed/little-seed-data.js', out='little-seed/day', mang='chuong-trinh/cong-cu/khung/grid/mang/ls48_mang.py',
-               title='Little Seed · Hạt giống nhỏ', units={'1': [1], '2': [2], '3': [3]}),
+               title='Little Seed · Hạt giống nhỏ', units={str(i): [i] for i in range(1, 13)}),
     'SD': dict(web='seedling', data='seedling/seedling-data.js', out='seedling/day/hoc-lieu', mang='chuong-trinh/cong-cu/khung/grid/mang/sd48_mang.py',
-               title='Seedling · Hạt mầm vươn cao', units={'1': [1, 4], '2': [2], '3': [3]}),
+               title='Seedling · Hạt mầm vươn cao', units={'1': [1, 4], **{str(i): [i] for i in (2, 3, 5, 6, 7, 8, 9, 10, 11, 12)}}),
 }
 UNIT_NAME = {'LS': {'1': ('Unit 1 · Greeting', '问好'), '2': ('Unit 2 · Name and age', '名字和年龄'), '3': ('Unit 3 · Family', '家人')},
              'SD': {'1': ('Unit 1 + Body · Greeting and Body', '问好 + 身体'), '2': ('Unit 2 · Name and age', '名字和年龄'), '3': ('Unit 3 · Family', '家人')}}
@@ -194,7 +194,7 @@ for L, C in LEVELS.items():
             url = PAGES + web + f'/#/reader/{u}/1'
             readers.append({'u': u, 't': rd['t'], 'zh': rd['zh'], 'url': url, 'qr': qr_svg(url),
                             'pages': [{'img': R(x['img']), 'en': x['en'], 'zh': x.get('zh', ''), 'py': PY(x.get('zh', '')), 'part': x.get('part')} for x in rd['pages']]})
-        cr = dict(CRAFT[L][uk])
+        cr = dict(CRAFT[L].get(uk) or dict(kind='none', name='(chưa làm)', mat='', steps=[]))
         if cr['kind'] == 'necklace': cr['kids'] = [{'img': c['img'], 'line': c['line'], 'name': c['name']} for c in
                                                      [{'img': R(SD['who'][k][1]), 'line': LA(R(SD['who'][k][1])), 'name': SD['who'][k][0]} for k in ('bong', 'leo', 'anna', 'xiaomei')]]
         if cr['kind'] == 'cake': cr['cake'] = LA('seedling/tai-nguyen/tranh/cake.webp')
@@ -203,12 +203,16 @@ for L, C in LEVELS.items():
             cr['slots'] = [{'en': e, 'zh': z, 'line': LA(f'seedling/tai-nguyen/nhan-vat/{k}_a.webp')} for k, e, z in fam]
         if cr['kind'] == 'puppet': cr['face'] = LA('seedling/tai-nguyen/nhan-vat/kids_bong_a.webp')
         if cr['kind'] == 'crown': cr['nums'] = [{'n': n, 'en': e, 'zh': z} for n, e, z in [(4, 'four', '四'), (5, 'five', '五'), (6, 'six', '六'), (7, 'seven', '七'), (8, 'eight', '八'), (9, 'nine', '九')]]
-        un = UNIT_NAME[L][uk]
+        UQ = {str(q['u']): q['n'] for q in SD.get('units_q', [])}
+        un = UNIT_NAME[L].get(uk) or (UQ.get(uk, 'Unit ' + uk), '')
         units.append({'key': uk, 'name': un[0], 'name_zh': un[1], 'days': days, 'words': words, 'pics': [w['img'] for w in uniq(words)], 'chars': chars, 'bb': bbs, 've': ves, 'parts': parts,
-                      'strips': strips[:12], 'check': check, 'readers': readers, 'craft': cr, 'photo': PHOTO[L][uk]})
+                      'strips': strips[:12], 'check': check, 'readers': readers, 'craft': cr, 'photo': PHOTO[L].get(uk, ('', ''))})
     UK = {u['key']: u for u in units}
-    for k in range(1, 12):
-        Lp = SD['lop'][str(k)]; ds = Lp['days']; uk = unit_of(ds[0]); U = UK[uk]
+    for k in range(1, len(SD['lop']) + 1):
+        Lp = SD['lop'][str(k)]; ds = Lp['days']; uk = unit_of(ds[0])
+        if uk is None:   # buổi Ôn / thi: không có unit riêng
+            sessions.append({'n': k, 't': Lp['t'], 'about': Lp.get('about', ''), 'days': ds, 'unit': 'Ôn', 'words': [], 'wb': None}); continue
+        U = UK[uk]
         sw, seen = [], set()
         for n in ds:
             for s in D[str(n)]['steps']:
@@ -263,7 +267,7 @@ for L, C in LEVELS.items():
         sessions.append(S)
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
     import wb2 as _wb2   # (13/11) sách bài tập bản 2: Unit 1, 3
-    W2 = _wb2.build(L, units, sessions, LA, PY, hz_data)
+    W2 = _wb2.build(L, units, sessions, LA, PY, hz_data, SD['lop'])
     HZD.update({c: v for c, v in W2['hz'].items()})
     data = {'level': L, 'title': C['title'], 'web': web, 'units': units, 'sessions': sessions, 'hz': HZD, 'wb2': {'pages': W2['unit_pages'], 'check': W2['check']},
             'root': '../../' if L == 'LS' else '../../../'}

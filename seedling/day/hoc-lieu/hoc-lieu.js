@@ -11,7 +11,7 @@ const H = window.HL, app = document.getElementById('app');
 const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const src = p => !p ? '' : (p.startsWith('to-mau/') ? p : H.root + p);
 const img = (p, st) => p ? `<img src="${esc(src(p))}" style="${st || ''}" alt="">` : '';
-const U = k => H.units.find(u => u.key === k);
+const U = k => H.units.find(u => u.key === k) || { key: k, name: 'Review · 复习', words: [] };
 const chunk = (a, n) => a.reduce((r, x, i) => (i % n ? r[r.length - 1].push(x) : r.push([x]), r), []);
 const LS = H.level === 'LS';
 const ICON = {
@@ -36,6 +36,8 @@ function show(title, back, note) {
   app.innerHTML = `<div class="top noprint"><a class="btn" href="${back}">◀ Danh sách</a><b>${esc(title)}</b><span class="sp"></span><button class="btn p" onclick="window.print()">🖨 In / Lưu PDF</button></div>
   ${note ? `<div class="wrap noprint"><div class="note">${note}</div></div>` : ''}<div class="pw">${pages.join('') || '<div class="wrap">Chưa có nội dung.</div>'}</div>`;
   pages.length = 0; window.scrollTo(0, 0);
+  document.querySelectorAll('.pg .fit').forEach(f => { const pgEl = f.closest('.pg'), mm = pgEl.getBoundingClientRect().height / 297, lim = 283 * mm; let k = 1;
+    for (let i = 0; i < 8; i++) { const h = f.getBoundingClientRect().bottom - pgEl.getBoundingClientRect().top; if (h <= lim) break; k *= lim / h * .995; f.style.zoom = k; } });
 }
 const KIND = {
   flash: ['Flashcard lớn (A4 ngang)', 'Mặt tranh cho con, mặt chữ cho cô · gấp đôi dán lưng'],
@@ -55,7 +57,7 @@ const KIND = {
 
 /* ---------------- trang chủ ---------------- */
 function home() {
-  app.innerHTML = `<div class="top"><b>🖨 ${esc(H.title)} · Web dạy · Học liệu in</b><span class="sp"></span><a class="btn" href="${H.root}khai-giang/?lop=${LS ? 'ls' : 'sd'}">🎉 Buổi 0 · Khai giảng</a><a class="btn" href="${H.root}${H.web}/?gv=1">Web học của con</a>${LS ? '' : '<a class="btn" href="../">Web dạy 48 buổi</a>'}</div>
+  app.innerHTML = `<div class="top"><b>🖨 ${esc(H.title)} · Web dạy · Học liệu in</b><span class="sp"></span><a class="btn" href="#/book">📘 Cả cuốn sách bài tập</a><a class="btn" href="#/bookkey">✅ Đáp án cả cuốn</a><a class="btn" href="${H.root}khai-giang/?lop=${LS ? 'ls' : 'sd'}">🎉 Buổi 0 · Khai giảng</a><a class="btn" href="${H.root}${H.web}/?gv=1">Web học của con</a>${LS ? '' : '<a class="btn" href="../">Web dạy 48 buổi</a>'}</div>
   <div class="wrap">
     <div class="note"><b>Mẫu Unit 1–3 (buổi 1–11) chờ chị duyệt.</b> Mở từng mục rồi bấm <b>In / Lưu PDF</b> (chọn khổ A4, lề "Không", bật "Đồ họa nền"). Tranh, từ, câu, big book, vè lấy đúng từ web học con đã gặp. Đồ của con không in chữ tiếng Việt.
     ${LS ? 'Little Seed lớp offline có hiện chữ (NL-4).' : 'Sách bài tập Seedling: trang tiếng Anh khó hơn trang tiếng Trung (lớp đã có tiếng Anh Pre A1).'}</div>
@@ -202,12 +204,14 @@ const SMILE = (k) => `<svg viewBox="0 0 40 40" style="width:9mm;height:9mm"><cir
 const foot2 = lang => `<div style="position:absolute;left:12mm;right:12mm;bottom:8mm;display:flex;align-items:center;gap:4mm;border-top:.5mm solid var(--line);padding-top:2mm">
   <span class="en" style="font-size:12pt">${lang === 'zh' ? 'I can read it!' : 'I can say it!'}</span><span class="zh" style="font-size:12pt">${lang === 'zh' ? '我会读！' : '我会说！'}</span>
   <span class="sp" style="flex:1"></span>${[0, 1, 2].map(k => `<span style="display:inline-flex;align-items:center;gap:1mm">${SMILE(k)}<span class="box"></span></span>`).join('')}</div>`;
+const qrBox = id => H.qr && H.qr[id] ? `<div style="display:flex;align-items:center;gap:1.5mm;padding:1mm 2.5mm;border-left:.4mm dashed #ccc;font-size:7.5pt;line-height:1.15;text-align:center"><div style="width:12.5mm;height:12.5mm">${H.qr[id]}</div><div><b>▶ Listen</b><br><span class="zh">听一听</span></div></div>` : '';
 const hd2 = (s, lang) => {
   const w = s.wb2, u = U(s.unit);
   return `<div style="display:flex;align-items:stretch;border-radius:4mm;overflow:hidden;margin-bottom:3mm;border:.5mm solid ${lang === 'zh' ? '#C8372D' : '#2E8B80'}">
   <div style="background:${lang === 'zh' ? '#C8372D' : '#2E8B80'};color:#fff;padding:2mm 4mm;font-weight:800;font-size:13pt;display:flex;align-items:center;min-width:46mm">${lang === 'both' ? 'English · 中文' : lang === 'zh' ? '中文 · Chinese' : 'English'} · ${s.n}</div>
-  <div style="flex:1;padding:1.5mm 4mm;display:flex;flex-direction:column;justify-content:center"><div style="font-weight:800;font-size:12pt;color:var(--red)">Unit ${esc(u.key)} · ${esc(w.band)}</div><div style="font-size:9pt;color:#777">${tag('Session ' + s.n)}</div></div>
-  <div style="padding:2mm 4mm;display:flex;align-items:center;font-size:11pt">Name · <span class="zh">名字</span>: ____________</div></div>`;
+  <div style="flex:1;padding:1.5mm 4mm;display:flex;flex-direction:column;justify-content:center"><div style="font-weight:800;font-size:12pt;color:var(--red)">${/^\d+$/.test(u.key) ? 'Unit ' + esc(u.key) : 'Review'} · ${esc(w.band)}</div><div style="font-size:9pt;color:#777">${tag('Session ' + s.n)}</div></div>
+  ${qrBox(lang === 'both' ? 'ls-s' + s.n : 'sd-s' + s.n + '-' + (lang === 'zh' ? 'zh' : 'en'))}
+  <div style="padding:2mm 3mm;display:flex;align-items:center;font-size:10.5pt">Name · <span class="zh">名字</span>: ________</div></div>`;
 };
 const COL = { 1: '#F2C14E', 2: '#2E8B80', 3: '#C8372D', 4: '#7A5BA6', 5: '#D9548C' };
 const blk = (n, title, zh, inner, extra) => `<div style="border:.5mm solid ${COL[n]};border-radius:4mm;padding:2mm 3mm 2mm;margin-bottom:2.5mm;position:relative;${extra || ''}">
@@ -288,12 +292,12 @@ function myPage(u) {
 function checkup(u) {
   const C = (H.wb2 || { check: {} }).check[u.key]; if (!C) return;
   const LET = 'ABC';
-  pg(`<div class="hd"><div><div class="t">Check-up · ${esc(u.name)}</div><div style="font-size:9pt;color:#888">Cambridge Starters · YCT 1 style · ${LS ? '' : 'about 10 minutes'}</div></div><div class="nm">Name · <span class="zh">名字</span>: ____________</div></div>
+  pg(`<div class="fit"><div class="hd"><div><div class="t">Check-up · ${esc(u.name)}</div><div style="font-size:9pt;color:#888">Cambridge Starters · YCT 1 style · ${LS ? '' : 'about 10 minutes'}</div></div><div class="nm">Name · <span class="zh">名字</span>: ____________</div></div>
   ${blk(1, 'Look and read. Yes or no?', '', C.yes.map((y, i) => `<div style="display:grid;grid-template-columns:24mm 1fr 30mm;gap:3mm;align-items:center"><div class="cell" style="height:14mm;padding:0">${y.p ? img(y.p.img, 'max-height:13mm') : ''}</div><div class="en" style="font-size:14pt">${i + 1}. ${esc(y.en)}</div><div class="en" style="font-size:12pt">yes <span class="box"></span> no <span class="box"></span></div></div>`).join(''))}
   ${blk(2, 'Look at the letters. Write the word.', '', C.unscr.map(u => `<div style="display:grid;grid-template-columns:24mm 1fr;gap:3mm;align-items:center;margin-bottom:1mm"><div class="cell" style="height:12mm;padding:0">${u.p ? img(u.p.img, 'max-height:11mm') : ''}</div><div>${letterBoxes(u.l)}<span style="display:inline-block;width:5mm"></span>→ ${answerBoxes(u.w.length)}</div></div>`).join(''))}
   ${blk(3, 'Read and circle.', '读一读，圈一圈', C.zread.map((r, i) => `<div style="display:grid;grid-template-columns:24mm 1fr;gap:3mm;align-items:center;margin-bottom:1mm"><div class="cell" style="height:15mm;padding:0">${r.p ? img(r.p.img, 'max-height:14mm') : ''}</div><div style="display:flex;gap:4mm">${r.opts.map((o, k) => `<div style="border:.4mm solid #888;border-radius:2mm;padding:.5mm 2.5mm;flex:1"><span class="en" style="font-size:10pt">${LET[k]}</span><div class="py" style="font-size:8.5pt">${esc(o.py)}</div><div class="zh" style="font-size:13pt;font-weight:700">${esc(o.zh)}</div></div>`).join('')}</div></div>`).join(''))}
   ${blk(4, 'Choose a word. Write it.', '选一选，填一填', C.zfill.map(f => `<div style="display:flex;align-items:center;gap:5mm;margin-bottom:.5mm"><div style="width:62mm"><div class="py" style="font-size:9pt">${esc(f.py)}</div><div class="zh" style="font-size:15pt;font-weight:700">${esc(f.zh).replace('___', '<span style="display:inline-block;border-bottom:.6mm solid #333;width:14mm"></span>')}</div></div>${f.bank.map(b => `<span style="border:.4mm solid #888;border-radius:2mm;padding:.4mm 3mm;text-align:center"><div class="py" style="font-size:8.5pt">${esc(b.py)}</div><div class="zh" style="font-size:14pt;font-weight:700">${esc(b.zh)}</div></span>`).join('')}</div>`).join(''))}
-  ${foot2('en')}`);
+  </div>${foot2('en')}`);
 }
 function key2(u) {
   const ss = H.sessions.filter(s => s.unit === u.key && s.wb2), LET = 'ABC';
@@ -307,9 +311,59 @@ function key2(u) {
   <p style="font-size:10.5pt;color:#555">Câu có ♻ ôn lại từ unit trước. Câu đúng/sai trang Trung xếp lẫn lộn (không phải lúc nào cũng ✓). Cô chấm nhanh bằng bảng này; con tự khoanh mặt cười ở cuối trang.</p>`);
 }
 
+/* ---------------- cả cuốn sách bài tập ---------------- */
+const CH = n => 'seedling/tai-nguyen/nhan-vat/' + n + '_a.webp';
+function cover() {
+  const bg = LS ? 'seedling/tai-nguyen/trang/ls_park.webp' : 'seedling/tai-nguyen/trang/ls_class.webp';
+  const kids = LS ? ['kids_bong', 'kids_xiaomei'] : ['kids_bong', 'kids_anna', 'huou_huou1', 'kids_leo', 'kids_xiaomei'];
+  const col = LS ? '#2E8B80' : '#C8372D';
+  pg(`<div style="position:absolute;inset:0;background:${col}"></div>
+  <div style="position:absolute;left:0;right:0;top:0;height:92mm;background:linear-gradient(${col},${col}) ;color:#fff;text-align:center;padding-top:16mm">
+    <div style="font-size:15pt;letter-spacing:1.5mm;font-weight:700;color:#F2C14E">ANH – TRUNG – KIDS</div>
+    <div style="font-size:44pt;font-weight:800;line-height:1.05;margin-top:4mm">${LS ? 'Little Seed' : 'Seedling'}</div>
+    <div style="font-size:30pt;font-weight:800;line-height:1.1;margin-top:2mm">Workbook</div>
+    <div class="zh" style="font-size:22pt;font-weight:700;margin-top:3mm">${LS ? '小种子 · 练习册' : '小树苗 · 练习册'}</div></div>
+  <div style="position:absolute;left:10mm;right:10mm;top:92mm;bottom:12mm;border-radius:8mm;overflow:hidden;border:2mm solid #F2C14E;background:#fff">
+    <img src="${esc(src(bg))}" style="width:100%;height:100%;object-fit:cover;object-position:50% 70%">
+    <div style="position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:center;align-items:flex-end;gap:${LS ? 14 : 2}mm;padding-bottom:3mm">${kids.map(k => img(CH(k), `height:${LS ? 104 : 88}mm`)).join('')}</div>
+  </div>
+  <div style="position:absolute;left:0;right:0;bottom:3.2mm;text-align:center;font-size:9pt;color:#fff">CES Việt Nam · 48 sessions · ${LS ? '1 page' : '2 pages'} / session · ▶ scan the QR code to listen</div>`);
+  pg(`<div class="hd"><div class="t">${LS ? 'Little Seed' : 'Seedling'} Workbook</div><div class="nm">Name · <span class="zh">名字</span>: ______________</div></div>
+  <div class="sec"><div class="lab">How to use this book · <span class="zh">怎么用这本书</span></div>
+  <div style="font-size:12.5pt;line-height:1.7"><p>1. After each class, do <b>${LS ? '1 page' : '2 pages (English + 中文)'}</b> of the same session number.</p><p>2. Find the <b>QR code</b> at the top right of the page. Scan it, press ▶ and listen. The voice tells you what to do.</p><p>3. Do the exercises. Pause when you need more time.</p><p>4. At the end, the voice says <b>“Now, check your answers.”</b> Check with a pencil in another colour.</p><p>5. Colour the faces: <span style="display:inline-flex;vertical-align:middle">${SMILE(0)}</span> I can! &nbsp; <span style="display:inline-flex;vertical-align:middle">${SMILE(1)}</span> Almost. &nbsp; <span style="display:inline-flex;vertical-align:middle">${SMILE(2)}</span> Help me, please.</p></div></div>
+  <div class="sec"><div class="lab">Tips for parents · <span class="zh">给家长</span></div><div style="font-size:11.5pt;line-height:1.6"><p>Sit next to your child for the first session. Let them listen and do it alone from the next one.</p><p>Do not correct handwriting too much. Praise effort: “Wow, you finished!”.</p><p>Chinese strokes: follow the numbered strokes, from the top to the bottom, from left to right.</p></div></div>
+  <div style="text-align:center;margin-top:6mm">${img(CH('kids_bong'), 'height:70mm')}${img(CH('kids_xiaomei'), 'height:70mm')}</div>`);
+}
+function divider(u) {
+  const ws = (u.words || []).filter(w => w.img).slice(0, 6);
+  const kid = ['kids_bong', 'kids_leo', 'kids_anna', 'kids_xiaomei'][(+u.key - 1) % 4];
+  const col = LS ? '#2E8B80' : '#C8372D';
+  pg(`<div style="position:absolute;inset:0;background:${col}"></div>
+  <div style="position:absolute;left:10mm;right:10mm;top:14mm;bottom:14mm;background:#FFF8E6;border-radius:8mm;border:2mm solid #F2C14E;padding:14mm;text-align:center">
+    <div style="font-size:70pt;font-weight:800;color:${col};line-height:1">Unit ${esc(u.key)}</div>
+    <div style="font-size:24pt;font-weight:800;margin-top:4mm">${esc(u.name.replace(/^[+\s]*(Unit\s*\d+\s*[·:.-]?\s*)?/, '').replace(/^[^·]*·\s*/, ''))}</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:4mm;margin-top:12mm">${ws.map(w => `<div class="cell" style="height:46mm;background:#fff;border-radius:5mm;border:.4mm solid #E3D3A8">${img(w.img, 'max-height:40mm')}</div>`).join('')}</div>
+    <div style="position:absolute;left:0;right:0;bottom:6mm">${img(CH(kid), 'height:78mm')}</div></div>`);
+}
+function book() {
+  cover();
+  const done = new Set();
+  const order = H.sessions.filter(s => s.wb2);
+  order.forEach((s, i) => {
+    const u = /^\d+$/.test(s.unit) ? U(s.unit) : null;
+    if (u && !done.has(u.key)) { done.add(u.key); divider(u); }
+    wb(s);
+    const nxt = order[i + 1];
+    if (u && (!nxt || nxt.unit !== s.unit)) { myPage(u); checkup(u); }
+  });
+}
+function bookKey() { H.units.forEach(key2); }
+
 function route() {
   const h = location.hash.replace(/^#\/?/, '').split('/');
   if (h[0] === 'u' && U(h[1])) { const u = U(h[1]); kit(u, h[2] || 'flash'); return show(`${u.name} · ${(KIND[h[2]] || KIND.flash)[0]}`, '#/', esc((KIND[h[2]] || KIND.flash)[1])); }
+  if (h[0] === 'book') { book(); return show(`Sách bài tập đầy đủ · ${LS ? 'Little Seed' : 'Seedling'}`, '#/', 'Cả cuốn: bìa – hướng dẫn – 12 unit – My page – Check-up'); }
+  if (h[0] === 'bookkey') { bookKey(); return show('Đáp án cả cuốn', '#/', ''); }
   if (h[0] === 'b') { const s = H.sessions.find(x => x.n === +h[1]); if (s) { wb(s); return show(`Buổi ${s.n} · ${LS ? 'phiếu tô – dán' : 'sách bài tập'}`, '#/', esc(s.t)); } }
   home();
 }

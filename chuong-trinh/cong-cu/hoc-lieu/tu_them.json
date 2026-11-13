@@ -1,0 +1,363 @@
+{
+ "LS": {
+  "1": {
+   "en": [
+    "good morning",
+    "boy",
+    "girl"
+   ],
+   "zh": [
+    "早上好"
+   ]
+  },
+  "2": {
+   "en": [
+    "name",
+    "seven",
+    "eight",
+    "nine"
+   ],
+   "zh": [
+    "叫",
+    "名字"
+   ]
+  },
+  "3": {
+   "en": [
+    "young",
+    "big sister",
+    "little brother",
+    "family",
+    "little sister"
+   ],
+   "zh": [
+    "姐姐",
+    "弟弟",
+    "妹妹",
+    "家人"
+   ]
+  },
+  "4": {
+   "en": [
+    "foot",
+    "have"
+   ],
+   "zh": [
+    "口",
+    "耳",
+    "小小的"
+   ]
+  },
+  "5": {
+   "en": [],
+   "zh": [
+    "心",
+    "心情"
+   ]
+  },
+  "6": {
+   "en": [
+    "desk",
+    "bag",
+    "eraser",
+    "new",
+    "notebook"
+   ],
+   "zh": [
+    "包",
+    "这些",
+    "本子",
+    "笔袋"
+   ]
+  },
+  "7": {
+   "en": [
+    "bath",
+    "thank",
+    "window",
+    "chair"
+   ],
+   "zh": [
+    "谢谢",
+    "椅子"
+   ]
+  },
+  "8": {
+   "en": [
+    "animal",
+    "game",
+    "frog",
+    "horse",
+    "cat"
+   ],
+   "zh": [
+    "运动会"
+   ]
+  },
+  "9": {
+   "en": [
+    "eat",
+    "water"
+   ],
+   "zh": [
+    "吃"
+   ]
+  },
+  "10": {
+   "en": [
+    "park",
+    "cloudy",
+    "cold",
+    "play",
+    "rain",
+    "weather"
+   ],
+   "zh": [
+    "日",
+    "公园",
+    "雨",
+    "冷",
+    "多云",
+    "天气",
+    "玩"
+   ]
+  },
+  "11": {
+   "en": [
+    "black",
+    "pink",
+    "white",
+    "grey",
+    "make",
+    "purple",
+    "tree"
+   ],
+   "zh": [
+    "木",
+    "火",
+    "白色",
+    "粉色",
+    "黑色",
+    "灰色",
+    "紫色"
+   ]
+  },
+  "12": {
+   "en": [
+    "party",
+    "toy",
+    "monkey"
+   ],
+   "zh": [
+    "猴子",
+    "快乐",
+    "蛋糕"
+   ]
+  }
+ },
+ "SD": {
+  "1": {
+   "en": [
+    "one man",
+    "two men",
+    "see you tomorrow",
+    "wave"
+   ],
+   "zh": [
+    "一个男人",
+    "两个男人",
+    "明天见"
+   ]
+  },
+  "2": {
+   "en": [
+    "is smaller than",
+    "year",
+    "number",
+    "is bigger than",
+    "meet",
+    "what's your name"
+   ],
+   "zh": [
+    "大于",
+    "小于",
+    "数字",
+    "你叫什么名字",
+    "认识",
+    "高兴"
+   ]
+  },
+  "3": {
+   "en": [
+    "down",
+    "learn",
+    "vietnamese",
+    "aunt",
+    "uncle",
+    "younger"
+   ],
+   "zh": [
+    "学",
+    "越南人",
+    "他们",
+    "女孩",
+    "爱",
+    "阿姨"
+   ]
+  },
+  "4": {
+   "en": [
+    "town",
+    "body",
+    "finger",
+    "fun",
+    "it's fun",
+    "mouth",
+    "open your mouth"
+   ],
+   "zh": [
+    "口",
+    "城里",
+    "好玩",
+    "张大口",
+    "手指",
+    "真好玩",
+    "身体"
+   ]
+  },
+  "5": {
+   "en": [
+    "a pair",
+    "tell a story",
+    "go to bed"
+   ],
+   "zh": [
+    "双",
+    "右",
+    "讲故事"
+   ]
+  },
+  "6": {
+   "en": [
+    "make a line",
+    "shop",
+    "board",
+    "keyboard"
+   ],
+   "zh": [
+    "排队",
+    "商店",
+    "键盘",
+    "黑板",
+    "鼠标"
+   ]
+  },
+  "7": {
+   "en": [
+    "flat",
+    "lamp",
+    "window",
+    "dining room",
+    "door"
+   ],
+   "zh": [
+    "公寓",
+    "窗户",
+    "灯",
+    "门",
+    "餐厅"
+   ]
+  },
+  "8": {
+   "en": [
+    "forest",
+    "tail",
+    "wing"
+   ],
+   "zh": [
+    "不能",
+    "尾巴",
+    "森林",
+    "翅膀",
+    "能"
+   ]
+  },
+  "9": {
+   "en": [
+    "burger",
+    "food",
+    "candy",
+    "chips",
+    "cross",
+    "fruit",
+    "ice cream"
+   ],
+   "zh": [
+    "冰淇淋",
+    "水果",
+    "汉堡",
+    "食物",
+    "想",
+    "糖果",
+    "薯条"
+   ]
+  },
+  "10": {
+   "en": [
+    "cloudy",
+    "come",
+    "drop",
+    "a lot",
+    "go away",
+    "smile",
+    "stay at home"
+   ],
+   "zh": [
+    "多云",
+    "很多",
+    "走开",
+    "在家",
+    "掉"
+   ]
+  },
+  "11": {
+   "en": [
+    "bounce the ball",
+    "clothes",
+    "dress",
+    "glasses",
+    "jeans",
+    "skirt",
+    "trousers"
+   ],
+   "zh": [
+    "拍球",
+    "眼镜",
+    "衣服",
+    "裤子"
+   ]
+  },
+  "12": {
+   "en": [
+    "person",
+    "pick up",
+    "sunday",
+    "table tennis",
+    "take a picture",
+    "ten people",
+    "use",
+    "word"
+   ],
+   "zh": [
+    "乒乓球",
+    "十个人",
+    "拿起来",
+    "用",
+    "星期",
+    "现在",
+    "拍照",
+    "鞋"
+   ]
+  }
+ }
+}
