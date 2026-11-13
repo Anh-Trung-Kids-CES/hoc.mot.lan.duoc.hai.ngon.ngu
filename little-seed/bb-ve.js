@@ -4,7 +4,7 @@
    Năm quy tắc "gợi trước – hỏi sau":
      a. khởi động 20–45 giây (chỉ nghe, nhìn, không hỏi);  b. mẫu trước, con sau (cô → cô và con → con);
      c. nhắc tên trước khi hỏi;  d. 💡 luôn sẵn, tự hiện khi con im 6 giây, sai lần 1 có gợi ý, sai lần 2 cô làm mẫu và câu đó gặp lại cuối bài;
-     e. ôn nối ngày: ngày big book mở bằng cả bài vè (một tiếng mỗi lần, lần 2, 4 là vè cũ), ngày vè mở bằng 3 trang big book.
+     e. ôn nối ngày: ngày big book mở bằng cả bài vè của unit (một tiếng mỗi lần), ngày vè mở bằng 3 trang big book. Vè cũ ôn ở buổi offline, không ôn trên web.
    step.type "bb"  (lan 1–4): 1 ai, cái gì – chạm tranh · 2 trang sau là ai · 3 đọc đuổi + điền khung câu · 4 con kể + câu của con (bìa khung ảnh)
    step.type "vek" (lan 1–4): 1 nghe mẫu + karaoke Anh · 2 karaoke Trung · 3 karaoke hai tiếng, giọng mẫu nhỏ dần · 4 lồng tiếng, lưu gửi cô
    Cần các hàm chung của ls-app.js (R, T, say, en, zh, tts, playFile, VOICE, finish, star, dots, cap, stopAll, micTurn, RUN…).
@@ -82,12 +82,11 @@ R.bb = (step, body) => {
 
   /* ---- khởi động ---- */
   async function warm() { const me = ++RUN; warmed = false; prog();
-    const host = BV.warmBox(body, (W.ve_u ? `Vè cũ (${W.ve_u === 1 ? 'vè chào' : 'Unit ' + W.ve_u}) và ` : 'Vè và ') +
-      ['', 'tên các bạn', '3 trang đầu', '2 trang đầu', 'cả quyển thật nhanh'][lan]);
+    const host = BV.warmBox(body, ['', 'Vè và tên các bạn', 'Vè và 3 trang đầu', 'Vè và 2 trang đầu', 'Vè và cả quyển thật nhanh'][lan]);
     body.querySelector('#bvSkip').onclick = () => { sfx.pop(); stopAll(); main(); };
     X.replay = () => warm();
     if ((W.ve || [])[0]) host.innerHTML = BV.veHTML(W.ve[0], (W.ve_l || ['en'])[0], 92);   // màn khởi động luôn có tranh, chữ ngay từ đầu
-    await BV.vi(W.ve_u ? 'Mình khởi động bằng một bài vè cũ nhé! Con hát và vỗ tay theo.' : 'Mình khởi động nhé! Con nghe vè và vỗ tay theo.'); if (me !== RUN) return;
+    await BV.vi('Mình khởi động nhé! Con nghe vè và vỗ tay theo.'); if (me !== RUN) return;
     await BV.veLines(host, W.ve || [], W.ve_l || ['en'], 92, me); if (me !== RUN) return;
     if (W.names) { await BV.vi('Đây là các bạn trong truyện. Con nghe tên nhé!'); if (me !== RUN) return;
       host.innerHTML = `<div class="bvw-names">${W.names.map((o, k) => `<div class="bvw-nm" data-k="${k}">${pic(o.img, '', '')}<b>${esc(o.en)}</b><b class="zh">${esc(o.zh)}</b></div>`).join('')}</div>`;

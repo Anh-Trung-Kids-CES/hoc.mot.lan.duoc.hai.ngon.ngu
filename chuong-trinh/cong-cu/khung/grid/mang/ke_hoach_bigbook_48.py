@@ -2,11 +2,11 @@
 claude/NguyenTac_Ve_OnVong_1311.md mục 2; sửa quy tắc A5 trong claude/QuyTac_BigBook_Ve_Web.md).
 
 Một nguồn duy nhất cho ba việc:
-  1. Khởi động big book trên web: hát CẢ BÀI vè, mỗi lần một tiếng (chị chốt 13/11: bỏ "2 dòng").
-     Lần 1 vè unit đang học (Anh) · lần 2 vè unit cách 2 (Trung) · lần 3 vè unit đang học (Trung) · lần 4 vè unit cách 3 (Anh).
-     Mỗi vè cũ được ôn hai lần ở hai unit sau: một lần tiếng Trung (khi là "cách 2"), một lần tiếng Anh (khi là "cách 3").
-     Chỉ ghi MÃ UNIT (+ đoạn dòng nếu là vè chào U1), không chép lời: build đọc lời vè hiện hành của unit đó.
-  2. Mở buổi lớp: 2–3 phút một bài vè cũ (2–4 unit trước) + 3 phút flashcard cùng unit đó, ưu tiên từ không quay lại sau unit.
+  1. Khởi động big book trên web: CHỈ vè của chính unit đang học, hát cả bài, mỗi lần một tiếng (chị chốt 13/11 10:50:
+     web không ôn vè của unit khác; bỏ "2 dòng"). Tiếng theo thứ tự con học vè: lần 1, 2 tiếng Anh (vè lần 1 dạy tiếng Anh),
+     lần 3, 4 tiếng Trung (sau ngày vè lần 2 dạy tiếng Trung). Chỉ ghi MÃ UNIT, không chép lời: build đọc lời vè hiện hành.
+  2. Ôn vè cũ nằm ở buổi offline: warm-up và farewell hát được nhiều vè, bài hát con thích, miễn là thuộc nhóm con đã học.
+     Bảng mo_buoi chỉ là gợi ý xoay vòng để không vè nào bị bỏ quên; flashcard 3 phút đi cùng.
   3. Ngày ôn 98–99: mỗi big book: cả bài vè của chính unit đó → đọc lại một lượt → 1 câu hỏi, cả ba cùng một tiếng.
 
 Chạy thẳng file này: in bảng kế hoạch (dùng để chép vào tài liệu Project, kịch bản buổi lớp).
@@ -19,7 +19,7 @@ ORDER = {'LS': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
 # Vè chào U1 Little Seed là hai bài trong một: dòng 0–5 chào đầu buổi, 6–9 chào cuối buổi (build_ls.py VE_U1).
 # Seedling U1 là vè unit bình thường: cả bài.
 CHAO = {'LS': {'dau': list(range(0, 6)), 'cuoi': list(range(6, 10))}, 'SD': {'dau': 'all', 'cuoi': 'all'}}
-TIENG = {1: 'en', 2: 'zh', 3: 'zh', 4: 'en'}   # tiếng hát vè khởi động theo lần
+TIENG = {1: 'en', 2: 'en', 3: 'zh', 4: 'zh'}   # tiếng hát vè khởi động theo lần (theo thứ tự con học vè: Anh trước, Trung sau)
 
 
 def _truoc(kh, un, buoc):
@@ -31,19 +31,17 @@ def _truoc(kh, un, buoc):
 
 
 def khoi_dong(kh, un):
-    """{lần: (unit vè, 'all' hoặc [dòng], [tiếng])}. Cả bài vè, một tiếng mỗi lần (TIENG).
-    Lần 1, 3: vè unit hiện tại; lần 2: unit cách 2; lần 4: unit cách 3. Unit đầu khoá: vè chào U1 (lần 2 chào đầu, lần 4 chào cuối)."""
-    def cu(buoc, phan):
-        u = _truoc(kh, un, buoc)
-        if u is None or u == 1:
-            return (1, CHAO[kh][phan])
-        return (u, 'all')
-    u2, d2 = cu(2, 'dau'); u4, d4 = cu(3, 'cuoi')
-    return {1: (un, 'all', [TIENG[1]]), 2: (u2, d2, [TIENG[2]]), 3: (un, 'all', [TIENG[3]]), 4: (u4, d4, [TIENG[4]])}
+    """{lần: (unit vè, 'all', [tiếng])}. Web chỉ dùng vè của chính unit (chị chốt 13/11 10:50), cả bài, một tiếng mỗi lần (TIENG)."""
+    return {l: (un, 'all', [TIENG[l]]) for l in (1, 2, 3, 4)}
+
+
+def kho_da_hoc(kh, un):
+    """Nhóm vè con đã học trước unit un (cô chọn bài con thích để warm-up, farewell; hát được nhiều bài)."""
+    o = ORDER[kh]; return o[:o.index(un)]
 
 
 def mo_buoi(kh, un, k):
-    """Buổi thứ k (1–4) của unit: vè cũ + flashcard cùng unit đó. Lùi 2, 3, 4, 2 unit theo buổi."""
+    """GỢI Ý xoay vòng cho buổi thứ k (1–4): một vè cũ chắc chắn có mặt + flashcard unit đó; lùi 2, 3, 4, 2 unit."""
     lui = [2, 3, 4, 2][(k - 1) % 4]
     u = _truoc(kh, un, lui)
     if u is None:
