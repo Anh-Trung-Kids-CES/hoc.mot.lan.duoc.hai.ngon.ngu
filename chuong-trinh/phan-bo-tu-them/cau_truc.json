@@ -1,0 +1,465 @@
+{
+ "_ghichu": "Câu Vận động (nghe–chọn tranh) cho cấu trúc, khoá SD. ngay = ngày web; đủ 2 câu (Anh, Trung) mỗi ngày.",
+ "qs": [
+  {
+   "ngay": 47,
+   "l": "en",
+   "t": "Where is the ball? It is behind the box.",
+   "opts": [
+    {
+     "en": "behind",
+     "zh": "后面",
+     "img": "tai-nguyen/tranh/prep_behind.webp"
+    },
+    {
+     "en": "in front of",
+     "zh": "前面",
+     "img": "tai-nguyen/tranh/prep_in_front.webp"
+    },
+    {
+     "en": "next to",
+     "zh": "旁边",
+     "img": "tai-nguyen/tranh/prep_next_to.webp"
+    }
+   ],
+   "ans": 0
+  },
+  {
+   "ngay": 47,
+   "l": "zh",
+   "t": "球在哪儿？在盒子前面。",
+   "opts": [
+    {
+     "en": "next to",
+     "zh": "旁边",
+     "img": "tai-nguyen/tranh/prep_next_to.webp"
+    },
+    {
+     "en": "in front of",
+     "zh": "前面",
+     "img": "tai-nguyen/tranh/prep_in_front.webp"
+    },
+    {
+     "en": "between",
+     "zh": "中间",
+     "img": "tai-nguyen/tranh/prep_between.webp"
+    }
+   ],
+   "ans": 1
+  },
+  {
+   "ngay": 51,
+   "l": "en",
+   "t": "Where is the ball? It is between the boxes.",
+   "opts": [
+    {
+     "en": "next to",
+     "zh": "旁边",
+     "img": "tai-nguyen/tranh/prep_next_to.webp"
+    },
+    {
+     "en": "between",
+     "zh": "中间",
+     "img": "tai-nguyen/tranh/prep_between.webp"
+    },
+    {
+     "en": "behind",
+     "zh": "后面",
+     "img": "tai-nguyen/tranh/prep_behind.webp"
+    }
+   ],
+   "ans": 1
+  },
+  {
+   "ngay": 51,
+   "l": "zh",
+   "t": "球在哪儿？在盒子旁边。",
+   "opts": [
+    {
+     "en": "next to",
+     "zh": "旁边",
+     "img": "tai-nguyen/tranh/prep_next_to.webp"
+    },
+    {
+     "en": "behind",
+     "zh": "后面",
+     "img": "tai-nguyen/tranh/prep_behind.webp"
+    },
+    {
+     "en": "in front of",
+     "zh": "前面",
+     "img": "tai-nguyen/tranh/prep_in_front.webp"
+    }
+   ],
+   "ans": 0
+  },
+  {
+   "ngay": 55,
+   "l": "en",
+   "t": "What is he doing? He is running.",
+   "opts": [
+    {
+     "en": "swimming",
+     "zh": "游泳",
+     "img": "tai-nguyen/tranh/swim.webp"
+    },
+    {
+     "en": "running",
+     "zh": "跑步",
+     "img": "tai-nguyen/tranh/run.webp"
+    },
+    {
+     "en": "eating",
+     "zh": "吃饭",
+     "img": "tai-nguyen/tranh/eat.webp"
+    }
+   ],
+   "ans": 1
+  },
+  {
+   "ngay": 55,
+   "l": "zh",
+   "t": "他在做什么？他在吃饭。",
+   "opts": [
+    {
+     "en": "running",
+     "zh": "跑步",
+     "img": "tai-nguyen/tranh/run.webp"
+    },
+    {
+     "en": "eating",
+     "zh": "吃饭",
+     "img": "tai-nguyen/tranh/eat.webp"
+    },
+    {
+     "en": "swimming",
+     "zh": "游泳",
+     "img": "tai-nguyen/tranh/swim.webp"
+    }
+   ],
+   "ans": 1
+  },
+  {
+   "ngay": 59,
+   "l": "en",
+   "t": "What are they doing? They are eating.",
+   "opts": [
+    {
+     "en": "running",
+     "zh": "跑步",
+     "img": "tai-nguyen/tranh/ing_they_run.webp"
+    },
+    {
+     "en": "eating",
+     "zh": "吃饭",
+     "img": "tai-nguyen/tranh/ing_they_eat.webp"
+    },
+    {
+     "en": "swimming",
+     "zh": "游泳",
+     "img": "tai-nguyen/tranh/ing_they_swim.webp"
+    }
+   ],
+   "ans": 1
+  },
+  {
+   "ngay": 59,
+   "l": "zh",
+   "t": "他们在做什么？他们在跑步。",
+   "opts": [
+    {
+     "en": "eating",
+     "zh": "吃饭",
+     "img": "tai-nguyen/tranh/ing_they_eat.webp"
+    },
+    {
+     "en": "swimming",
+     "zh": "游泳",
+     "img": "tai-nguyen/tranh/ing_they_swim.webp"
+    },
+    {
+     "en": "running",
+     "zh": "跑步",
+     "img": "tai-nguyen/tranh/ing_they_run.webp"
+    }
+   ],
+   "ans": 2
+  },
+  {
+   "ngay": 67,
+   "l": "en",
+   "t": "What are they doing? They are swimming.",
+   "opts": [
+    {
+     "en": "eating",
+     "zh": "吃饭",
+     "img": "tai-nguyen/tranh/ing_they_eat.webp"
+    },
+    {
+     "en": "running",
+     "zh": "跑步",
+     "img": "tai-nguyen/tranh/ing_they_run.webp"
+    },
+    {
+     "en": "swimming",
+     "zh": "游泳",
+     "img": "tai-nguyen/tranh/ing_they_swim.webp"
+    }
+   ],
+   "ans": 2
+  },
+  {
+   "ngay": 67,
+   "l": "zh",
+   "t": "你喜欢游泳吗？喜欢。",
+   "opts": [
+    {
+     "en": "running",
+     "zh": "跑步",
+     "img": "tai-nguyen/tranh/run.webp"
+    },
+    {
+     "en": "eating",
+     "zh": "吃饭",
+     "img": "tai-nguyen/tranh/eat.webp"
+    },
+    {
+     "en": "swimming",
+     "zh": "游泳",
+     "img": "tai-nguyen/tranh/swim.webp"
+    }
+   ],
+   "ans": 2
+  },
+  {
+   "ngay": 71,
+   "l": "en",
+   "t": "Do you like swimming? Yes, I do.",
+   "opts": [
+    {
+     "en": "swimming",
+     "zh": "游泳",
+     "img": "tai-nguyen/tranh/swim.webp"
+    },
+    {
+     "en": "eating",
+     "zh": "吃饭",
+     "img": "tai-nguyen/tranh/eat.webp"
+    },
+    {
+     "en": "running",
+     "zh": "跑步",
+     "img": "tai-nguyen/tranh/run.webp"
+    }
+   ],
+   "ans": 0
+  },
+  {
+   "ngay": 71,
+   "l": "zh",
+   "t": "他们在做什么？他们在吃饭。",
+   "opts": [
+    {
+     "en": "swimming",
+     "zh": "游泳",
+     "img": "tai-nguyen/tranh/ing_they_swim.webp"
+    },
+    {
+     "en": "running",
+     "zh": "跑步",
+     "img": "tai-nguyen/tranh/ing_they_run.webp"
+    },
+    {
+     "en": "eating",
+     "zh": "吃饭",
+     "img": "tai-nguyen/tranh/ing_they_eat.webp"
+    }
+   ],
+   "ans": 2
+  },
+  {
+   "ngay": 83,
+   "l": "en",
+   "t": "Colour the dress pink!",
+   "opts": [
+    {
+     "en": "blue",
+     "zh": "蓝色",
+     "img": "tai-nguyen/tranh/dress_blue.webp"
+    },
+    {
+     "en": "pink",
+     "zh": "粉色",
+     "img": "tai-nguyen/tranh/dress_pink.webp"
+    },
+    {
+     "en": "yellow",
+     "zh": "黄色",
+     "img": "tai-nguyen/tranh/dress_yellow.webp"
+    }
+   ],
+   "ans": 1
+  },
+  {
+   "ngay": 83,
+   "l": "zh",
+   "t": "裙子涂蓝色！",
+   "opts": [
+    {
+     "en": "pink",
+     "zh": "粉色",
+     "img": "tai-nguyen/tranh/dress_pink.webp"
+    },
+    {
+     "en": "yellow",
+     "zh": "黄色",
+     "img": "tai-nguyen/tranh/dress_yellow.webp"
+    },
+    {
+     "en": "blue",
+     "zh": "蓝色",
+     "img": "tai-nguyen/tranh/dress_blue.webp"
+    }
+   ],
+   "ans": 2
+  },
+  {
+   "ngay": 87,
+   "l": "en",
+   "t": "Colour the dress blue!",
+   "opts": [
+    {
+     "en": "yellow",
+     "zh": "黄色",
+     "img": "tai-nguyen/tranh/dress_yellow.webp"
+    },
+    {
+     "en": "blue",
+     "zh": "蓝色",
+     "img": "tai-nguyen/tranh/dress_blue.webp"
+    },
+    {
+     "en": "pink",
+     "zh": "粉色",
+     "img": "tai-nguyen/tranh/dress_pink.webp"
+    }
+   ],
+   "ans": 1
+  },
+  {
+   "ngay": 87,
+   "l": "zh",
+   "t": "裙子涂粉色！",
+   "opts": [
+    {
+     "en": "pink",
+     "zh": "粉色",
+     "img": "tai-nguyen/tranh/dress_pink.webp"
+    },
+    {
+     "en": "blue",
+     "zh": "蓝色",
+     "img": "tai-nguyen/tranh/dress_blue.webp"
+    },
+    {
+     "en": "yellow",
+     "zh": "黄色",
+     "img": "tai-nguyen/tranh/dress_yellow.webp"
+    }
+   ],
+   "ans": 0
+  },
+  {
+   "ngay": 91,
+   "l": "en",
+   "t": "How many? Fifteen!",
+   "opts": [
+    {
+     "en": "twelve",
+     "zh": "十二",
+     "img": "tai-nguyen/tranh/num_12.webp"
+    },
+    {
+     "en": "fifteen",
+     "zh": "十五",
+     "img": "tai-nguyen/tranh/num_15.webp"
+    },
+    {
+     "en": "eighteen",
+     "zh": "十八",
+     "img": "tai-nguyen/tranh/num_18.webp"
+    }
+   ],
+   "ans": 1
+  },
+  {
+   "ngay": 91,
+   "l": "zh",
+   "t": "多少个？十八个！",
+   "opts": [
+    {
+     "en": "thirteen",
+     "zh": "十三",
+     "img": "tai-nguyen/tranh/num_13.webp"
+    },
+    {
+     "en": "eighteen",
+     "zh": "十八",
+     "img": "tai-nguyen/tranh/num_18.webp"
+    },
+    {
+     "en": "twenty",
+     "zh": "二十",
+     "img": "tai-nguyen/tranh/num_20.webp"
+    }
+   ],
+   "ans": 1
+  },
+  {
+   "ngay": 95,
+   "l": "en",
+   "t": "How many? Twelve!",
+   "opts": [
+    {
+     "en": "twelve",
+     "zh": "十二",
+     "img": "tai-nguyen/tranh/num_12.webp"
+    },
+    {
+     "en": "fourteen",
+     "zh": "十四",
+     "img": "tai-nguyen/tranh/num_14.webp"
+    },
+    {
+     "en": "nineteen",
+     "zh": "十九",
+     "img": "tai-nguyen/tranh/num_19.webp"
+    }
+   ],
+   "ans": 0
+  },
+  {
+   "ngay": 95,
+   "l": "zh",
+   "t": "多少个？十六个！",
+   "opts": [
+    {
+     "en": "eleven",
+     "zh": "十一",
+     "img": "tai-nguyen/tranh/num_11.webp"
+    },
+    {
+     "en": "sixteen",
+     "zh": "十六",
+     "img": "tai-nguyen/tranh/num_16.webp"
+    },
+    {
+     "en": "twenty",
+     "zh": "二十",
+     "img": "tai-nguyen/tranh/num_20.webp"
+    }
+   ],
+   "ans": 1
+  }
+ ]
+}

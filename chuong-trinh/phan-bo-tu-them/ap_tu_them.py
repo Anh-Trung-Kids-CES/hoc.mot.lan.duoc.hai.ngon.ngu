@@ -23,6 +23,11 @@ def load(rel):
 
 DATA = {lv: load(rel) for lv, (_, rel) in COURSE.items()}
 AUMAP = DATA['SD'][1]['aumap']
+THEM = {k.lower(): v for k, v in json.load(open(os.path.join(HERE, 'the_them.json'), encoding='utf-8')).items() if not k.startswith('_')}
+GIONG = json.load(open(os.path.join(HERE, 'giong_them.json'), encoding='utf-8'))
+CAUTRUC = json.load(open(os.path.join(HERE, 'cau_truc.json'), encoding='utf-8'))['qs']
+BADA = {'tai-nguyen/giong/en_8e7a6156b4.mp3'}   # file giọng cũ đọc sai ("year" nghe ra "yeah"), thay bằng bản thu mới
+def conv(p, lv): return '' if not p else (p if lv == 'SD' else '../seedling/' + p)
 rows = [r for r in json.load(open(os.path.join(HERE, 'phanbo.json'), encoding='utf-8')) if not r['web'].startswith('Dư')]
 
 def fixp(p, src, dst):
@@ -56,6 +61,16 @@ def best(key, lv):
     return max(cs, key=sc)
 
 def make(key, lv):
+    t = THEM.get(key.lower())
+    if t and 'fromcard' in t:
+        hit = best(t['fromcard'], lv)
+        if hit:
+            src, c = hit; dst = COURSE[lv][0]
+            return {'en': c['en'], 'zh': c['zh'], 'py': c.get('py', ''), 'plus': True, 'img': fixp(c.get('img', ''), src, dst),
+                    'a_en': fixp(c.get('a_en', ''), src, dst), 'a_zh': fixp(c.get('a_zh', ''), src, dst)}
+    if t:
+        return {'en': t['en'], 'zh': t['zh'], 'py': t['py'], 'plus': True, 'img': conv(t['img'], lv),
+                'a_en': conv(GIONG.get('en:' + t['en'], ''), lv), 'a_zh': conv(GIONG.get('zh:' + t['zh'], ''), lv)}
     hit = best(key, lv)
     if not hit: return None
     src, c = hit; dst = COURSE[lv][0]
@@ -82,10 +97,18 @@ def goi_step(day):
 pend = collections.defaultdict(list)
 queue, done = [], collections.Counter(); perday = collections.Counter(); perrec = collections.Counter(); gq = 0
 for r in rows:
-    lv = r['lv']; sd = DATA[lv][1]; card = make(r['muc'], lv)
+    lv = r['lv']; sd = DATA[lv][1]
+    if r['loai'] == 'Cấu trúc': continue            # câu Vận động cấu trúc: thêm ở cuối từ cau_truc.json
+    card = make(r['muc'], lv)
     if not card:
         queue.append(r); continue
     d = sd['days'][str(r['web_ngay'])]; st = card_step(d)
+    for s0 in d['steps']:                           # thẻ chỉ có chữ Anh sẵn trong ngày -> nâng thành thẻ song ngữ tại chỗ
+        for c0 in s0.get('cards') or []:
+            if isinstance(c0, dict) and not c0.get('plus') and c0.get('en', '').lower() == card['en'].lower() and not c0.get('zh') and card['zh']:
+                c0['zh'] = card['zh']; c0['py'] = card['py']; c0['a_zh'] = card['a_zh']
+                if not c0.get('img') and card['img']: c0['img'] = card['img']
+                if not c0.get('a_en') or c0['a_en'].replace('../seedling/', '') in BADA: c0['a_en'] = card['a_en']
     if not any(c['en'] == card['en'] and not c.get('plus') for c in st['cards']) and not any(c['en'] == card['en'] for c in st['cards']):
         st['cards'].append(card); done['thẻ'] += 1; perday[(lv, r['web_ngay'])] += 1
     if r['rec'] and r['rec'] != r['web_ngay']:
@@ -100,6 +123,12 @@ for r in rows:
             g['qs'].append({'m': 'pic', 'say': {'t': card['en'], 'l': 'en', 'a': card['a_en']}, 'opts': opts,
                             'ans': opts.index(next(x for x in opts if x['en'] == card['en'])), 'plus': True}); gq += 1
 
+cq = 0
+for q in CAUTRUC:
+    d = DATA['SD'][1]['days'].get(str(q['ngay'])); g = next((s0 for s0 in (d or {}).get('steps', []) if s0['type'] == 'game'), None)
+    if not g: print('ngày', q['ngay'], 'không có Vận động, bỏ 1 câu cấu trúc'); continue
+    g['qs'].append({'m': 'pic', 'say': {'t': q['t'], 'l': q['l'], 'a': GIONG[q['l'] + ':' + q['t']]}, 'opts': q['opts'], 'ans': q['ans'], 'plus': True}); cq += 1
+print('câu Vận động cấu trúc', cq)
 # gọi lại: mỗi bài 5–10 câu (nguyên tắc 17) -> chỉ tạo bước Gọi lại mới khi gom đủ 5; ít hơn thì để Hộp ôn tự động lo
 skipped = 0
 for (lv, day), cs in pend.items():
@@ -132,7 +161,7 @@ if DRY: sys.exit()
 for lv, (_, rel) in COURSE.items():
     head, sd, tail = DATA[lv]
     open(os.path.join(ROOT, rel), 'w', encoding='utf-8').write(head + 'window.SD=' + json.dumps(sd, ensure_ascii=False) + tail + '\n')
-L = ['# Cần bổ sung cho các mục thêm (13/11/2026)', '', 'Mục chưa có thẻ nào trong kho hiện tại (chưa có tranh/giọng) – làm ở đợt Gemini sau, rồi thêm vào ngày đã phân bổ.', '',
+L = ['# Cần bổ sung cho các mục thêm (13/11/2026)', '', 'Mục chưa có thẻ nào trong kho. Đợt 14/11/2026 đã làm hết 24 mục từ/cụm (the_them.json) và 5 cấu trúc (cau_truc.json); bảng dưới trống = không còn mục chờ.', '',
      '| Khoá | Unit | Loại | Mục | Ngày web | Gọi lại | Buổi lớp |', '|---|---|---|---|---|---|---|']
 for r in queue:
     L.append(f"| {r['lv']} | {r['u']} | {r['loai']} | {r['muc']} | {r['web_ngay']} | {r['rec']} | B{r['buoi']} |")
