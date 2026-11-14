@@ -273,15 +273,16 @@ for L, C in LEVELS.items():
             'root': '../../' if L == 'LS' else '../../../'}
     open(f'{out}/hoc-lieu-data.js', 'w').write('window.HL=' + json.dumps(data, ensure_ascii=False) + ';\n')
     here = os.path.dirname(os.path.abspath(__file__))
-    for fn in ('hoc-lieu.js', 'hoc-lieu.css'): open(f'{out}/{fn}', 'w').write(open(os.path.join(here, fn)).read())
-    VER = hashlib.md5(b''.join(open(f'{out}/{fn}', 'rb').read() for fn in ('hoc-lieu-data.js', 'hoc-lieu.js', 'hoc-lieu.css'))).hexdigest()[:8]
+    for fn in ('hoc-lieu.js', 'hoc-lieu.css', 've-loi.js'): open(f'{out}/{fn}', 'w').write(open(os.path.join(here, fn)).read())
+    open(f'{out}/robot48.js', 'w').write(open(os.path.join(here, '..', '..', 've48', 'robot48.js')).read())   # Robo Bi (nhân vật hát vè)
+    VER = hashlib.md5(b''.join(open(f'{out}/{fn}', 'rb').read() for fn in ('hoc-lieu-data.js', 'hoc-lieu.js', 'hoc-lieu.css', 've-loi.js', 'robot48.js'))).hexdigest()[:8]
     open(f'{out}/index.html', 'w').write(f'''<!doctype html>
 <html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{C['title'].split(' · ')[0]} · Web dạy · Học liệu in</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="hoc-lieu.css?v={VER}"></head>
-<body><div id="app"></div><script src="hoc-lieu-data.js?v={VER}"></script><script src="hoc-lieu.js?v={VER}"></script></body></html>
+<body><div id="app"></div><script src="hoc-lieu-data.js?v={VER}"></script><script src="ve-loi.js?v={VER}"></script><script src="robot48.js?v={VER}"></script><script src="hoc-lieu.js?v={VER}"></script></body></html>
 ''')
     print(L, 'unit', [(u['key'], len(u['words']), len(u['parts']), len(u['strips'])) for u in units], 'buổi', len(sessions),
           'tranh tô màu', len(os.listdir(out + '/to-mau')), 'chữ Hán', list(HZD), 'thiếu nét', [c for c, v in HZD.items() if not v])

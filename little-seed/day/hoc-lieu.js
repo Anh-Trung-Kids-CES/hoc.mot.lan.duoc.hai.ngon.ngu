@@ -103,7 +103,7 @@ function kit(u, kind) {
     pg(`<div class="hd"><div class="t">Phiếu cuối unit · lời cô đọc và đáp án</div></div><p style="font-size:12pt">Cô đọc mỗi câu 2 lần, con khoanh tranh đúng. Câu 1–3 tiếng Anh, câu 4–6 tiếng Trung. Mỗi câu đúng 1 điểm; 5–6: vững · 3–4: đang học · 0–2: cô ôn lại ở buổi sau. Ghi điểm vào Bảng của cô.</p>
       <table class="ss" style="font-size:13pt"><tr><th>Câu</th><th>Cô đọc</th><th>Đáp án (tranh thứ)</th></tr>${u.check.map((q, i) => `<tr><td>${i + 1}</td><td class="${q.l === 'zh' ? 'zh' : ''}">${esc(q.say)}</td><td>${q.ans + 1}</td></tr>`).join('')}</table>`); }
   if (kind === 'reader') u.readers.forEach(r => reader(r, u));
-  if (kind === 'sbt') { H.sessions.filter(s => s.unit === u.key).forEach(s => wb(s)); myPage(u); if (!LS) checkup(u); }
+  if (kind === 'sbt') { vePage(u); H.sessions.filter(s => s.unit === u.key).forEach(s => wb(s)); myPage(u); if (!LS) checkup(u); }
   if (kind === 'key') { key(u); key2(u); }
 }
 
@@ -282,6 +282,29 @@ function wb2LS(s) {   // chị chốt 13/11: Little Seed 1 phiếu mỗi buổi,
     ${w.rec ? `<div style="margin-top:1mm;display:flex;align-items:center;gap:2mm;border-top:.3mm dashed #ccc;padding-top:1mm"><span style="color:#C8372D;font-size:12pt">♻</span><span class="en" style="font-size:11pt;white-space:nowrap">${esc(w.rec[0])}</span>${w.rec[1] === 'num' ? Array.from({ length: 10 }, (_, i) => `<span style="width:6.5mm;height:6.5mm;border:.4mm solid #888;border-radius:50%;text-align:center;line-height:6mm;font-size:10pt;flex:none" class="en">${i + 1}</span>`).join('') : '<span style="display:inline-block;border-bottom:.6mm solid #333;width:40mm;height:6mm"></span>'}</div>` : ''}`)}
   ${foot2('en')}`);
 }
+/* ---------------- lời vè của unit (Robo Bi hát) ---------------- */
+function vePage(u) {
+  const V = window.VELOI; if (!V) return;
+  const k = String(u.key).padStart(2, '0'), id = (LS ? 'ls' : 'sd') + (!LS && u.key === '4' ? '01' : k);
+  const items = [V[id + 'a'], V[id + 'b']].filter(Boolean); if (items.length < 2) return;
+  veSheet(`Sing with Robo Bi · ${esc(u.name)}`, items, '#' + (LS ? '2E8B80' : 'C8372D'));
+}
+function veSheet(title, items, col) {
+  const R = window.ROBOT48, bot = (e, o, w) => R ? R.svg(e, o).replace(/width="\d+" height="\d+"/, `style="width:${w}mm;height:auto"`) : '';
+  const tot = items[0].dong.length + items[1].dong.length;
+  const half = (b, i) => `<div style="border:.8mm solid #F2C14E;border-radius:6mm;padding:${tot > 12 ? 2 : 3}mm 4mm;margin-bottom:${i ? 0 : 3}mm;background:#FFFCF3">
+    <div style="display:flex;gap:4mm;align-items:center;margin-bottom:2mm">
+      <div style="width:${tot > 12 ? 34 : 48}mm;height:${tot > 12 ? 22 : 32}mm;border-radius:4mm;border:.6mm solid #F2C14E;background:url('${esc(src(b.img))}') center/cover;flex:none"></div>
+      <div style="flex:1"><div style="display:inline-block;background:${col};color:#fff;font-weight:800;font-size:9pt;padding:.4mm 3mm;border-radius:99px">♪ ${i ? 'Chant B' : 'Chant A'} · ${b.bpm}</div>
+        <div class="en" style="font-size:17pt;font-weight:800;line-height:1.1;margin-top:1mm">${esc(b.ten)}</div><div class="zh" style="font-size:12.5pt;color:${col};font-weight:700">${esc(b.zh)}</div></div>
+      <div style="flex:none">${bot(i ? 'cheer' : 'sing', { notes: true }, tot > 12 ? 20 : 27)}</div></div>
+    ${b.dong.map((d, j) => `<div style="display:flex;align-items:center;gap:3mm;border-top:.3mm dashed #E9DDBF;padding:${tot > 12 ? .5 : tot > 10 ? 1.8 : 2.6}mm 0">
+      <span style="flex:none;width:5.5mm;height:5.5mm;border-radius:50%;background:${col};color:#fff;font-weight:800;font-size:8.5pt;display:grid;place-items:center">${j + 1}</span>
+      <div class="en" style="flex:1.1;font-size:13pt;font-weight:700;line-height:1.15">${esc(d.en)}</div>
+      <div style="flex:1"><div class="zh" style="font-size:14.5pt;font-weight:700;color:#C8372D;line-height:1.1">${esc(d.zh)}</div><div class="py" style="font-size:7.5pt;color:#2d7a74">${esc(d.py)}</div></div></div>`).join('')}</div>`;
+  pg(`<div class="fit"><div class="hd"><div><div class="t">${title}</div><div class="zh" style="font-size:11pt;color:#888">和 Robo Bi 一起唱！</div></div><div class="nm">Name · <span class="zh">名字</span>: ____________</div></div>
+  ${items.map(half).join('')}</div>`);
+}
 function myPage(u) {
   const P = (H.wb2 || { pages: {} }).pages[u.key]; if (!P) return;
   pg(`<div class="hd"><div><div class="t">My page · ${esc(u.name)}</div><div class="zh" style="font-size:11pt;color:#888">我的页面</div></div><div class="nm">Name · <span class="zh">名字</span>: ____________</div></div>
@@ -351,7 +374,7 @@ function book() {
   const order = H.sessions.filter(s => s.wb2);
   order.forEach((s, i) => {
     const u = /^\d+$/.test(s.unit) ? U(s.unit) : null;
-    if (u && !done.has(u.key)) { done.add(u.key); divider(u); }
+    if (u && !done.has(u.key)) { done.add(u.key); divider(u); vePage(u); }
     wb(s);
     const nxt = order[i + 1];
     if (u && (!nxt || nxt.unit !== s.unit)) { myPage(u); checkup(u); }
@@ -362,7 +385,7 @@ function bookKey() { H.units.forEach(key2); }
 function route() {
   const h = location.hash.replace(/^#\/?/, '').split('/');
   if (h[0] === 'u' && U(h[1])) { const u = U(h[1]); kit(u, h[2] || 'flash'); return show(`${u.name} · ${(KIND[h[2]] || KIND.flash)[0]}`, '#/', esc((KIND[h[2]] || KIND.flash)[1])); }
-  if (h[0] === 'book') { book(); return show(`Sách bài tập đầy đủ · ${LS ? 'Little Seed' : 'Seedling'}`, '#/', 'Cả cuốn: bìa – hướng dẫn – 12 unit – My page – Check-up'); }
+  if (h[0] === 'book') { book(); return show(`Sách bài tập đầy đủ · ${LS ? 'Little Seed' : 'Seedling'}`, '#/', 'Cả cuốn: bìa – hướng dẫn – 12 unit (mở unit – lời vè – phiếu từng buổi) – My page – Check-up'); }
   if (h[0] === 'bookkey') { bookKey(); return show('Đáp án cả cuốn', '#/', ''); }
   if (h[0] === 'b') { const s = H.sessions.find(x => x.n === +h[1]); if (s) { wb(s); return show(`Buổi ${s.n} · ${LS ? 'phiếu tô – dán' : 'sách bài tập'}`, '#/', esc(s.t)); } }
   home();
