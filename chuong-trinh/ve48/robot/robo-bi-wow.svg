@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 242" width="200" height="242">
+      
+      <rect x="76" y="212" width="18" height="16" rx="6" fill="#F2994A" stroke="#3b2a1f" stroke-width="4"/><rect x="106" y="212" width="18" height="16" rx="6" fill="#F2994A" stroke="#3b2a1f" stroke-width="4"/>
+      <ellipse cx="85" cy="232" rx="15" ry="7" fill="#3b2a1f"/><ellipse cx="115" cy="232" rx="15" ry="7" fill="#3b2a1f"/>
+      <path d="M64,156 Q38,160 30,176" fill="none" stroke="#3b2a1f" stroke-width="15" stroke-linecap="round"/><path d="M64,156 Q38,160 30,176" fill="none" stroke="#F2994A" stroke-width="8" stroke-linecap="round"/><circle cx="30" cy="176" r="9" fill="#fff" stroke="#3b2a1f" stroke-width="4"/><path d="M136,156 Q162,160 170,176" fill="none" stroke="#3b2a1f" stroke-width="15" stroke-linecap="round"/><path d="M136,156 Q162,160 170,176" fill="none" stroke="#F2994A" stroke-width="8" stroke-linecap="round"/><circle cx="170" cy="176" r="9" fill="#fff" stroke="#3b2a1f" stroke-width="4"/>
+      <rect x="62" y="142" width="76" height="72" rx="24" fill="#2F9E94" stroke="#3b2a1f" stroke-width="5"/>
+      <path d="M100,196 C84,184 82,170 91,166 C96,164 100,168 100,168 C100,168 104,164 109,166 C118,170 116,184 100,196Z" fill="#FFE27A" stroke="#3b2a1f" stroke-width="3.5" stroke-linejoin="round"/>
+      <g>
+        <line x1="100" y1="22" x2="100" y2="44" stroke="#3b2a1f" stroke-width="5" stroke-linecap="round"/><circle cx="100" cy="16" r="9" fill="#F2994A" stroke="#3b2a1f" stroke-width="4.5"/><circle cx="97" cy="13" r="3" fill="#fff"/>
+        <rect x="24" y="72" width="20" height="36" rx="10" fill="#F2994A" stroke="#3b2a1f" stroke-width="4.5"/><rect x="156" y="72" width="20" height="36" rx="10" fill="#F2994A" stroke="#3b2a1f" stroke-width="4.5"/>
+        <rect x="38" y="40" width="124" height="100" rx="38" fill="#FFD166" stroke="#3b2a1f" stroke-width="5.5"/>
+        <rect x="52" y="54" width="96" height="68" rx="26" fill="#2B3A55"/>
+        <path d="M62,64 Q70,59 82,60" fill="none" stroke="#ffffff55" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="80" cy="82" r="11" fill="#7FE8D8"/><circle cx="76.15" cy="77.6" r="3.52" fill="#fff"/><circle cx="120" cy="82" r="11" fill="#7FE8D8"/><circle cx="116.15" cy="77.6" r="3.52" fill="#fff"/><circle cx="100" cy="109" r="7" fill="#FF6B81" stroke="#7FE8D8" stroke-width="3"/>
+        <circle cx="64" cy="108" r="6.5" fill="#FF8FA3" opacity=".85"/><circle cx="136" cy="108" r="6.5" fill="#FF8FA3" opacity=".85"/>
+      </g></svg>
