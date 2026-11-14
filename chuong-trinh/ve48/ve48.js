@@ -52,7 +52,7 @@ R.vk48 = (step, body) => {
     body.innerHTML = `<div class="vk">
       <div class="vk-tabs">${tab(1)}${tab(2)}${tab(3)}</div>
       <div class="vk-stage ${l}"><canvas id="v4Cv" width="${W}" height="${H}"></canvas>${mode || (lan === 3 && url) ? '' : '<div class="vk-cover" id="v4Go"><b>▶</b></div>'}</div>
-      <div class="vk-st">${msg}</div>
+      <div class="vk-st">${window.ROBOT48 ? `<img class="vk-bothead" alt="Robo Bi" src="data:image/svg+xml;charset=utf-8,${encodeURIComponent(ROBOT48.svg('happy', { head: true, notes: false }))}">` : ''}${msg}</div>
       ${url ? `<div class="vk-out"><video src="${url}" controls playsinline></video><div class="row"><a class="btn g" href="${url}" download="ve-${L ? 'tieng-trung' : 'tieng-anh'}-${(nm || 'cua-con').replace(/\s+/g, '-')}.${ext}">💾 Lưu video về máy</a><button class="ls-b" id="v4Re">🎬 Quay lại</button></div>
         <small>${step.luot === 4 ? '⭐ Hôm nay là lượt vè cuối của unit: ba mẹ lưu video rồi gửi vào nhóm Zalo của lớp cho cô nhé!' : 'Ba mẹ lưu video, gửi vào nhóm Zalo của lớp cho cô nếu con muốn nhé.'}</small></div>` : ''}
       <div class="row vk-ctl">
@@ -75,11 +75,15 @@ R.vk48 = (step, body) => {
       g.save(); g.beginPath(); g.rect(0, 0, W, 390); g.clip(); g.drawImage(im, (W - w) / 2, (390 - h) / 2, w, h); g.restore(); }
     g.fillStyle = '#ffffff'; g.fillRect(0, 390, W, 150); g.fillStyle = '#F2C94C'; g.fillRect(0, 386, W, 6); g.textBaseline = 'middle';
     const font = s => `${L ? 700 : 800} ${s}px ${L ? '"Noto Sans SC", system-ui' : '"Be Vietnam Pro", system-ui'}, sans-serif`;
-    const banner = (s, big) => { g.fillStyle = 'rgba(255,247,234,.85)'; g.fillRect(0, 0, W, 390); g.textAlign = 'center'; g.fillStyle = '#3b2a1f'; g.font = font(big ? 150 : 60); g.fillText(s, W / 2, 200); };
-    if (t < 0) return banner(L ? B.ten_zh : B.ten);
-    const pos = t - BAR; if (pos < 0) return banner(String(Math.min(4, Math.floor(t / BEAT) + 1)), true);
-    const i = Math.floor(pos / (per() * BAR)); if (i >= N) return banner(L ? '👏 真棒！' : '👏 Yeah!');
+    // Robo Bi (robot48.js): robot hát vè, đứng góc phải khung tranh, nhún theo nhịp
+    const bot = (ex, bob) => { const R = window.ROBOT48; if (!R) return; const ri = R.img(ex); if (!ri.complete) { ri.onload = () => draw(t); return; }
+      const hh = 215, ww = hh * 200 / 242, by = bob ? Math.abs(Math.sin(t / BEAT * Math.PI)) * 9 : 0; g.drawImage(ri, W - ww - 14, 396 - hh - by, ww, hh); };
+    const banner = (s, big, ex, bob) => { g.fillStyle = 'rgba(255,247,234,.85)'; g.fillRect(0, 0, W, 390); g.textAlign = 'center'; g.fillStyle = '#3b2a1f'; g.font = font(big ? 150 : 60); g.fillText(s, W / 2 - 60, 200); bot(ex, bob); };
+    if (t < 0) return banner(L ? B.ten_zh : B.ten, false, 'hello');
+    const pos = t - BAR; if (pos < 0) return banner(String(Math.min(4, Math.floor(t / BEAT) + 1)), true, 'wow', true);
+    const i = Math.floor(pos / (per() * BAR)); if (i >= N) return banner(L ? '👏 真棒！' : '👏 Yeah!', false, 'cheer', true);
     const inSlot = pos - i * per() * BAR, ln = LINES[i], kid = lan === 2 && inSlot >= 2 * BAR, tt = kid ? inSlot - 2 * BAR : inSlot;
+    bot(kid ? 'wink' : (Math.floor(t / BEAT) % 2 ? 'happy' : 'sing'), true);
     for (let b = 0; b < 4; b++) { const hit = b === Math.floor((t / BEAT) % 4); g.beginPath(); g.arc(W - 120 + b * 28, 38, hit ? 11 : 8, 0, 7); g.fillStyle = hit ? '#F2994A' : 'rgba(0,0,0,.18)'; g.fill(); }
     if (lan === 2) { g.textAlign = 'left'; g.font = '800 30px "Be Vietnam Pro", system-ui, sans-serif'; g.fillStyle = kid ? '#2d7a74' : '#C8372D';
       g.fillRect(24, 22, kid ? 210 : 150, 50); g.fillStyle = '#fff'; g.fillText(kid ? '🎤 Con nói!' : '👩‍🏫 Cô đọc', 38, 48); }

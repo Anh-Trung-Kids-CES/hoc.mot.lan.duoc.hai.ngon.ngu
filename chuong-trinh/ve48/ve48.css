@@ -16,3 +16,6 @@
 .vk-stage.zh{border-color:var(--ls-zh)}.vk-stage.en{border-color:var(--ls-en)}
 .vk-tab.on{border-color:#F2994A;background:#F2994A;color:#fff}
 .vk-stage.zh{border-color:#D93A3A}.vk-stage.en{border-color:#2F6FD6}
+
+/* Robo Bi: robot hát vè */
+.vk-st{display:flex;align-items:center;gap:8px;justify-content:center}.vk-bothead{width:46px;height:auto;flex:none}
