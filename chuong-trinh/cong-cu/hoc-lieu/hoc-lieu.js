@@ -289,6 +289,28 @@ function myPage(u) {
   <div class="sec"><div class="lab">${ICON.ear} I can…</div>${P.can.map(c => `<div style="display:flex;align-items:center;gap:4mm;border-bottom:.3mm solid #eee;padding:2mm 0"><div style="flex:1"><div class="en" style="font-size:13pt">${esc(c.en)}</div><div class="py" style="font-size:9pt">${esc(c.py)}</div><div class="zh" style="font-size:13pt;font-weight:700">${esc(c.zh)}</div></div>${[0, 1, 2].map(k => `<span style="display:inline-flex;align-items:center;gap:1mm">${SMILE(k)}<span class="box"></span></span>`).join('')}</div>`).join('')}</div>
   <div class="sec" style="height:70mm"><div class="lab">${ICON.glue} <span class="en">${esc(P.photo[0])}</span> · <span class="zh">${esc(P.photo[1])}</span></div><div style="border:.5mm dashed #bbb;border-radius:4mm;height:52mm;width:90mm;margin:0 auto"></div></div>`);
 }
+/* Trang đôi bạn (Seedling): chính tả đôi bạn – bạn đọc, bạn viết, đổi vai, bạn chấm ✓ (theo màn "Chữ và âm · đôi bạn ôn và viết") */
+function partnerWords(u) {
+  const ss = H.sessions.filter(s => s.unit === u.key && s.wb2);
+  const en = [...new Set(ss.flatMap(s => [...s.wb2.copy.map(c => c.w), ...s.wb2.unscr.map(x => x.w)]).filter(w => /^[A-Za-z]{3,9}$/.test(w) && !['wow', 'hooray', 'sorry', 'yes', 'the', 'and'].includes(w.toLowerCase())).map(w => w.toLowerCase()))].slice(0, 5);
+  const zp = Object.assign({}, ...ss.map(s => s.wb2.zpy || {}));
+  const zh = [...new Set(ss.flatMap(s => s.wb2.zc || []))].filter(c => !'们个于识板标叉条乓户厅阿'.includes(c)).slice(0, 5);
+  return { en, zh, zp };
+}
+function partnerPage(u) {
+  if (LS) return;
+  const { en, zh, zp } = partnerWords(u); if (en.length < 3 || zh.length < 3) return;
+  const tick = '<span style="display:inline-flex;align-items:center;gap:1.5mm;font-size:8.5pt;color:#888">friend ✓ <span class="box"></span></span>';
+  pg(`<div class="hd"><div><div class="t">Friends' page · ${esc(u.name)}</div><div class="zh" style="font-size:11pt;color:#888">我们一起练</div></div><div class="nm">Name · <span class="zh">名字</span>: ________ &nbsp; Friend: ________</div></div>
+  <div class="sec" style="padding:2.5mm 4mm"><div class="en" style="font-size:11pt;line-height:1.5"><b>1.</b> Sit with your friend. <b>2.</b> Round 1: I <b>read</b> my words, my friend <b>writes</b>. <b>3.</b> I check and tick ✓ in my friend's book. <b>4.</b> Round 2: swap!</div></div>
+  ${blk(1, 'Round 1 · English', '', `<div style="display:flex;gap:6mm"><div style="width:62mm;flex:none;border:.4mm dashed #aaa;border-radius:3mm;padding:2mm 4mm;background:#FAFAFA"><div style="font-size:8.5pt;color:#888">I read to my friend · 👀 only me!</div>${en.map((w, i) => `<div class="en" style="font-size:15pt;line-height:1.55">${i + 1}. ${esc(w)}</div>`).join('')}</div>
+    <div style="flex:1"><div style="font-size:8.5pt;color:#888;margin-bottom:1mm">I write what my friend reads.</div>${en.map((w, i) => `<div style="display:flex;align-items:flex-end;gap:2mm;margin-bottom:2.2mm"><span class="en" style="font-size:12pt">${i + 1}.</span><span style="flex:1;border-bottom:.5mm solid #444;height:8mm"></span>${tick}</div>`).join('')}</div></div>`)}
+  ${blk(2, 'Round 2 · 中文', '换一换', `<div style="border:.4mm dashed #aaa;border-radius:3mm;padding:2mm 4mm;background:#FAFAFA;margin-bottom:3mm"><div style="font-size:8.5pt;color:#888">I read to my friend · 👀 only me!</div><div style="display:flex;gap:6mm;flex-wrap:wrap">${zh.map((c, i) => `<div style="text-align:center"><div class="py" style="font-size:9pt">${i + 1}. ${esc(zp[c] || '')}</div><div class="zh" style="font-size:24pt;font-weight:700;line-height:1.1">${esc(c)}</div></div>`).join('')}</div></div>
+    <div style="font-size:8.5pt;color:#888;margin-bottom:1mm">I write what my friend reads.</div><div style="display:flex;gap:3mm;flex-wrap:wrap">${zh.map((c, i) => `<div style="text-align:center"><div style="font-size:9pt">${i + 1}.</div><span class="tzg" style="margin:0"></span><div style="margin-top:1mm">${tick}</div></div>`).join('')}</div>`)}
+  <div class="sec" style="padding:2.5mm 4mm;display:flex;align-items:center;gap:6mm;font-size:11pt"><span class="en"><b>Score</b> · English <b>___ / ${en.length}</b> &nbsp; 中文 <b>___ / ${zh.length}</b></span><span style="flex:1"></span><span class="en">Teacher: ${[0, 1, 2].map(k => `<span style="display:inline-flex;align-items:center;gap:1mm;margin-left:3mm"><span class="box" style="border-radius:50%"></span>${k}</span>`).join('')}</span></div>
+  ${foot2('en')}`);
+}
+
 function checkup(u) {
   const C = (H.wb2 || { check: {} }).check[u.key]; if (!C) return;
   const LET = 'ABC';
@@ -297,6 +319,9 @@ function checkup(u) {
   ${blk(2, 'Look at the letters. Write the word.', '', C.unscr.map(u => `<div style="display:grid;grid-template-columns:24mm 1fr;gap:3mm;align-items:center;margin-bottom:1mm"><div class="cell" style="height:12mm;padding:0">${u.p ? img(u.p.img, 'max-height:11mm') : ''}</div><div>${letterBoxes(u.l)}<span style="display:inline-block;width:5mm"></span>→ ${answerBoxes(u.w.length)}</div></div>`).join(''))}
   ${blk(3, 'Read and circle.', '读一读，圈一圈', C.zread.map((r, i) => `<div style="display:grid;grid-template-columns:24mm 1fr;gap:3mm;align-items:center;margin-bottom:1mm"><div class="cell" style="height:15mm;padding:0">${r.p ? img(r.p.img, 'max-height:14mm') : ''}</div><div style="display:flex;gap:4mm">${r.opts.map((o, k) => `<div style="border:.4mm solid #888;border-radius:2mm;padding:.5mm 2.5mm;flex:1"><span class="en" style="font-size:10pt">${LET[k]}</span><div class="py" style="font-size:8.5pt">${esc(o.py)}</div><div class="zh" style="font-size:13pt;font-weight:700">${esc(o.zh)}</div></div>`).join('')}</div></div>`).join(''))}
   ${blk(4, 'Choose a word. Write it.', '选一选，填一填', C.zfill.map(f => `<div style="display:flex;align-items:center;gap:5mm;margin-bottom:.5mm"><div style="width:62mm"><div class="py" style="font-size:9pt">${esc(f.py)}</div><div class="zh" style="font-size:15pt;font-weight:700">${esc(f.zh).replace('___', '<span style="display:inline-block;border-bottom:.6mm solid #333;width:14mm"></span>')}</div></div>${f.bank.map(b => `<span style="border:.4mm solid #888;border-radius:2mm;padding:.4mm 3mm;text-align:center"><div class="py" style="font-size:8.5pt">${esc(b.py)}</div><div class="zh" style="font-size:14pt;font-weight:700">${esc(b.zh)}</div></span>`).join('')}</div>`).join(''))}
+  <div class="sec" style="padding:2mm 4mm;margin:2mm 0 0;border-color:#C8372D"><div class="en" style="font-size:9.5pt;line-height:1.5"><b>Swap books with your friend.</b> Your friend checks with the answers on the screen: ✓ ✗ next to each number.</div>
+  <div style="display:flex;align-items:center;gap:5mm;font-size:10.5pt;margin-top:1mm" class="en"><span>1: ___/${C.yes.length}</span><span>2: ___/${C.unscr.length}</span><span>3: ___/${C.zread.length}</span><span>4: ___/${C.zfill.length}</span><span><b>Total ___ / ${C.yes.length + C.unscr.length + C.zread.length + C.zfill.length}</b></span><span style="flex:1"></span><span>Teacher: ${[0, 1, 2].map(k => `<span style="display:inline-flex;align-items:center;gap:1mm;margin-left:2mm"><span class="box" style="border-radius:50%"></span>${k}</span>`).join('')}</span></div>
+  <div style="font-size:8pt;color:#888;margin-top:.5mm">${Math.ceil((C.yes.length + C.unscr.length + C.zread.length + C.zfill.length) * .8)}–${(C.yes.length + C.unscr.length + C.zread.length + C.zfill.length)} = 2 · ${Math.ceil((C.yes.length + C.unscr.length + C.zread.length + C.zfill.length) * .5)}–${Math.ceil((C.yes.length + C.unscr.length + C.zread.length + C.zfill.length) * .8) - 1} = 1 · less = 0</div></div>
   </div>${foot2('en')}`);
 }
 function key2(u) {
@@ -308,6 +333,7 @@ function key2(u) {
     if (LS) return `<tr><td>${s.n}</td><td>${w.circ.map(c => `${esc(c.w)}: ${c.ans + 1}`).join(' · ')}<br><span class="zh">${w.zmatch.map((x, i) => `${esc(x.zh)} → ${(i + 1) % w.zmatch.length + 1}`).join(' · ')}</span> (nối chữ Trung: hàng → tranh thứ)</td><td>${med}</td></tr>`;
     return `<tr><td>${s.n}</td><td>${w.unscr.map(x => esc(x.w)).join(', ')}<br>${w.cloze.map(c => esc(c.ans)).join(', ')}</td><td class="zh">${w.zread.map((r, i) => `${i + 1}${r.ok ? '✓' : '✗'}`).join(' ')} · ${esc(w.zfill.ans)}</td><td>${med}</td></tr>`; }).join('')}</table>
   ${LS ? '' : (() => { const C = (H.wb2.check || {})[u.key]; return C ? `<p style="font-size:10.5pt"><b>Check-up:</b> yes/no: ${C.yes.map(y => y.ok ? 'yes' : 'no').join(', ')} · chữ: ${C.unscr.map(x => esc(x.w)).join(', ')} · đọc – khoanh: ${C.zread.map(r => 'ABC'[r.ans]).join(', ')} · điền: <span class="zh">${C.zfill.map(f => esc(f.ans)).join(', ')}</span></p>` : ''; })()}
+  ${LS ? '' : (() => { const p = partnerWords(u); return `<p style="font-size:10.5pt"><b>Trang đôi bạn (chính tả):</b> vòng 1 (Anh): ${p.en.join(', ')} · vòng 2 (Trung): <span class="zh">${p.zh.join(' ')}</span>. Cô chỉ xem số ✓ và điểm 0–2 ở cuối trang.</p>`; })()}
   <p style="font-size:10.5pt;color:#555">Câu có ♻ ôn lại từ unit trước. Câu đúng/sai trang Trung xếp lẫn lộn (không phải lúc nào cũng ✓). Cô chấm nhanh bằng bảng này; con tự khoanh mặt cười ở cuối trang.</p>`);
 }
 
@@ -354,7 +380,7 @@ function book() {
     if (u && !done.has(u.key)) { done.add(u.key); divider(u); }
     wb(s);
     const nxt = order[i + 1];
-    if (u && (!nxt || nxt.unit !== s.unit)) { myPage(u); checkup(u); }
+    if (u && (!nxt || nxt.unit !== s.unit)) { myPage(u); partnerPage(u); checkup(u); }
   });
 }
 function bookKey() { H.units.forEach(key2); }
