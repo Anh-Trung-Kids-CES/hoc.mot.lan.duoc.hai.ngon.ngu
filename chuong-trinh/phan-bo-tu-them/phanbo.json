@@ -293,11 +293,12 @@
   "tang": "A",
   "web_ngay": 21,
   "web_part": "Phần 4",
-  "web": "Vận động: 1 lượt nghe–chọn tranh với \"Here you are. – Thank you! – You're welcome!\"; thêm cảnh/lệnh \"Thank you!\" vào game Phép thuật lời nói",
+  "web": "Dư – chỉ dạy ở lớp offline (chị chốt 14/11): B8 giới thiệu bằng đồ vật (trao đồ – nói Thank you / You're welcome), B9 dùng trong trò chơi, B10 Tạo sản phẩm; web không thêm",
   "rec": 25,
   "rec_txt": "Gọi lại: ngày 25 (Cả truyện) + 1 lượt nghe–chọn trong ngày ôn",
   "buoi": 8,
-  "cls": "B8 · Giới thiệu bằng đồ thật/vận động · B10 · Luyện: trò chơi · B11 · Tạo sản phẩm: Thói quen lớp: trao nhận thẻ và đồ dùng"
+  "cls": "B8 · Giới thiệu bằng đồ thật/vận động · B10 · Luyện: trò chơi · B11 · Tạo sản phẩm: Thói quen lớp: trao nhận thẻ và đồ dùng",
+  "du": true
  },
  {
   "lv": "LS",

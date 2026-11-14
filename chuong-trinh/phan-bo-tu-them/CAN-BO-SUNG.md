@@ -6,7 +6,6 @@ Mục chưa có thẻ nào trong kho hiện tại (chưa có tranh/giọng) – 
 |---|---|---|---|---|---|---|
 | LS | 1 | Từ | boy | 2 | 8 | B1 |
 | LS | 2 | Từ Trung | 叫 | 14 | 16 | B6 |
-| LS | 3 | Cấu trúc | Thank you / You're welcome (cần đối chiếu khung) | 21 | 25 | B8 |
 | LS | 7 | Từ | bath | 50 | 55 | B24 |
 | LS | 7 | Từ | thank | 51 | 56 | B24 |
 | LS | 8 | Từ | horse | 61 | 63 | B29 |
