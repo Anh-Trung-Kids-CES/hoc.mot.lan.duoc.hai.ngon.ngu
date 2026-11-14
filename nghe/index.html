@@ -17,10 +17,10 @@ audio{width:100%;margin-top:22px}.hint{font-size:14px;color:#6b6b6b;margin-top:1
 </main>
 <script>
 const id=(new URLSearchParams(location.search).get('t')||'').replace(/[^a-z0-9-]/g,'');
-const m=id.match(/^(sd|ls)-s(\d+)(?:-(en|zh))?$/),a=document.getElementById('a'),b=document.getElementById('play');
+const v=id.match(/^ve-(sd|ls)-(\d+)([ab])$/),m=v||id.match(/^(sd|ls)-s(\d+)(?:-(en|zh))?$/),a=document.getElementById('a'),b=document.getElementById('play');
 if(!m){document.getElementById('err').textContent='Scan the QR code on your workbook page.'}else{
  const lvl=m[1]==='sd'?'Seedling':'Little Seed';
- document.getElementById('t').textContent=lvl+' · Session '+m[2]+(m[3]==='zh'?' · 中文':m[3]==='en'?' · English':'');
+ const lv2=v?(v[1]==='sd'?'Seedling':'Little Seed'):lvl;document.getElementById('t').textContent=v?lv2+' · Chant '+(+v[2])+v[3].toUpperCase()+' · 童谣':lvl+' · Session '+m[2]+(m[3]==='zh'?' · 中文':m[3]==='en'?' · English':'');
  a.src='audio/'+id+'.mp3';
  b.onclick=()=>{a.paused?a.play():a.pause()};a.onplay=()=>b.textContent='❚❚';a.onpause=()=>b.textContent='▶';a.onended=()=>b.textContent='▶';
  a.onerror=()=>{document.getElementById('err').textContent='Audio is not ready yet.'};

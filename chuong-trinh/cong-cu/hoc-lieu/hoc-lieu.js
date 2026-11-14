@@ -103,7 +103,7 @@ function kit(u, kind) {
     pg(`<div class="hd"><div class="t">Phiếu cuối unit · lời cô đọc và đáp án</div></div><p style="font-size:12pt">Cô đọc mỗi câu 2 lần, con khoanh tranh đúng. Câu 1–3 tiếng Anh, câu 4–6 tiếng Trung. Mỗi câu đúng 1 điểm; 5–6: vững · 3–4: đang học · 0–2: cô ôn lại ở buổi sau. Ghi điểm vào Bảng của cô.</p>
       <table class="ss" style="font-size:13pt"><tr><th>Câu</th><th>Cô đọc</th><th>Đáp án (tranh thứ)</th></tr>${u.check.map((q, i) => `<tr><td>${i + 1}</td><td class="${q.l === 'zh' ? 'zh' : ''}">${esc(q.say)}</td><td>${q.ans + 1}</td></tr>`).join('')}</table>`); }
   if (kind === 'reader') u.readers.forEach(r => reader(r, u));
-  if (kind === 'sbt') { H.sessions.filter(s => s.unit === u.key).forEach(s => wb(s)); myPage(u); if (!LS) checkup(u); }
+  if (kind === 'sbt') { H.sessions.filter(s => s.unit === u.key).forEach(s => wb(s)); chantPage(u); myPage(u); if (!LS) checkup(u); }
   if (kind === 'key') { key(u); key2(u); }
 }
 
@@ -282,6 +282,14 @@ function wb2LS(s) {   // chị chốt 13/11: Little Seed 1 phiếu mỗi buổi,
     ${w.rec ? `<div style="margin-top:1mm;display:flex;align-items:center;gap:2mm;border-top:.3mm dashed #ccc;padding-top:1mm"><span style="color:#C8372D;font-size:12pt">♻</span><span class="en" style="font-size:11pt;white-space:nowrap">${esc(w.rec[0])}</span>${w.rec[1] === 'num' ? Array.from({ length: 10 }, (_, i) => `<span style="width:6.5mm;height:6.5mm;border:.4mm solid #888;border-radius:50%;text-align:center;line-height:6mm;font-size:10pt;flex:none" class="en">${i + 1}</span>`).join('') : '<span style="display:inline-block;border-bottom:.6mm solid #333;width:40mm;height:6mm"></span>'}</div>` : ''}`)}
   ${foot2('en')}`);
 }
+/* Trang vè (chant) của unit: lời EN + pinyin + 中文, QR nghe bài vè, ô đánh dấu "hát cùng bạn" */
+function chantPage(u) {
+  const V = (H.ve || {})[u.key]; if (!V || !V.length) return;
+  const one = v => `<div class="sec" style="margin-bottom:3mm"><div style="display:flex;align-items:center;justify-content:space-between;gap:3mm;border-bottom:.5mm solid #333;padding-bottom:1mm"><div><span class="en" style="font-size:16pt;font-weight:800">${esc(v.ab)}. ${esc(v.ten)}</span> <span class="zh" style="font-size:14pt;font-weight:700">${esc(v.ten_zh)}</span></div>${qrBox(v.id)}</div>
+    ${v.en.map((e, i) => `<div style="display:flex;gap:4mm;align-items:baseline;border-bottom:.3mm solid #f0f0f0;padding:.8mm 0"><span class="en" style="flex:1;font-size:12.5pt">${esc(e)}</span><span style="flex:1.1;text-align:right"><span class="py" style="font-size:8.5pt;display:block">${esc(v.py[i])}</span><span class="zh" style="font-size:12.5pt;font-weight:700">${esc(v.zh[i])}</span></span></div>`).join('')}
+    <div style="display:flex;gap:5mm;margin-top:1.5mm;font-size:9pt;align-items:center"><span class="en">♪ Sing with a friend</span><span class="zh">和朋友一起唱</span><span class="box"></span><span class="en">👏 Clap the beat</span><span class="box"></span></div></div>`;
+  pg(`<div class="fit"><div class="hd"><div><div class="t">Chant · ${esc(u.name)}</div><div class="zh" style="font-size:11pt;color:#888">童谣 · 边拍手边唱</div></div><div class="nm">Name · <span class="zh">名字</span>: ____________</div></div>${V.map(one).join('')}</div>`);
+}
 function myPage(u) {
   const P = (H.wb2 || { pages: {} }).pages[u.key]; if (!P) return;
   pg(`<div class="hd"><div><div class="t">My page · ${esc(u.name)}</div><div class="zh" style="font-size:11pt;color:#888">我的页面</div></div><div class="nm">Name · <span class="zh">名字</span>: ____________</div></div>
@@ -340,20 +348,26 @@ function key2(u) {
 /* ---------------- cả cuốn sách bài tập ---------------- */
 const CH = n => 'seedling/tai-nguyen/nhan-vat/' + n + '_a.webp';
 function cover() {
-  const bg = LS ? 'seedling/tai-nguyen/trang/ls_park.webp' : 'seedling/tai-nguyen/trang/ls_class.webp';
-  const kids = LS ? ['kids_bong', 'kids_xiaomei'] : ['kids_bong', 'kids_anna', 'huou_huou1', 'kids_leo', 'kids_xiaomei'];
-  const col = LS ? '#2E8B80' : '#C8372D';
-  pg(`<div style="position:absolute;inset:0;background:${col}"></div>
-  <div style="position:absolute;left:0;right:0;top:0;height:92mm;background:linear-gradient(${col},${col}) ;color:#fff;text-align:center;padding-top:16mm">
-    <div style="font-size:15pt;letter-spacing:1.5mm;font-weight:700;color:#F2C14E">ANH – TRUNG – KIDS</div>
-    <div style="font-size:44pt;font-weight:800;line-height:1.05;margin-top:4mm">${LS ? 'Little Seed' : 'Seedling'}</div>
-    <div style="font-size:30pt;font-weight:800;line-height:1.1;margin-top:2mm">Workbook</div>
-    <div class="zh" style="font-size:22pt;font-weight:700;margin-top:3mm">${LS ? '小种子 · 练习册' : '小树苗 · 练习册'}</div></div>
-  <div style="position:absolute;left:10mm;right:10mm;top:92mm;bottom:12mm;border-radius:8mm;overflow:hidden;border:2mm solid #F2C14E;background:#fff">
-    <img src="${esc(src(bg))}" style="width:100%;height:100%;object-fit:cover;object-position:50% 70%">
-    <div style="position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:center;align-items:flex-end;gap:${LS ? 14 : 2}mm;padding-bottom:3mm">${kids.map(k => img(CH(k), `height:${LS ? 104 : 88}mm`)).join('')}</div>
-  </div>
-  <div style="position:absolute;left:0;right:0;bottom:3.2mm;text-align:center;font-size:9pt;color:#fff">CES Việt Nam · 48 sessions · ${LS ? '1 page' : '2 pages'} / session · ▶ scan the QR code to listen</div>`);
+  const bg = LS ? 'seedling/tai-nguyen/trang/ls_park.webp' : 'seedling/tai-nguyen/trang/ls_school.webp';
+  const sky = LS ? '#BFE6F7' : '#A9DDF5';
+  const col = LS ? '#2E8B80' : '#C8372D', col2 = LS ? '#1F6E65' : '#9E2A22';
+  const kids = LS ? [['huou_huou1', 112], ['kids_bong', 118], ['kids_xiaomei', 108]] : [['kids_leo', 112], ['kids_bong', 120], ['huou_huou2', 112], ['kids_anna', 112], ['kids_xiaomei', 106]];
+  const star = (x, y, r, c = '#F2C14E') => `<svg viewBox="0 0 24 24" style="position:absolute;left:${x}mm;top:${y}mm;width:${r}mm;height:${r}mm;transform:rotate(${(x * 7) % 30 - 15}deg)"><path d="M12 1.5l3 7 7.5.6-5.7 4.9 1.8 7.4L12 17.4 5.4 21.4l1.8-7.4L1.5 9.1 9 8.5z" fill="${c}" stroke="#fff" stroke-width="1.2"/></svg>`;
+  pg(`<div style="position:absolute;inset:0;background:${sky}"></div>
+  <img src="${esc(src(bg))}" style="position:absolute;left:0;right:0;bottom:0;width:210mm;height:210mm;object-fit:cover;object-position:50% 100%">
+  <div style="position:absolute;left:0;right:0;bottom:178mm;height:34mm;background:linear-gradient(${sky} 20%, rgba(255,255,255,0))"></div>
+  ${star(14, 14, 9)}${star(186, 10, 11)}${star(176, 52, 7, '#fff')}${star(24, 60, 6, '#fff')}${star(196, 98, 8)}${star(8, 104, 7)}
+  <div style="position:absolute;left:14mm;right:14mm;top:15mm;text-align:center">
+    <div style="display:inline-block;background:${col};color:#fff;border-radius:999px;padding:1.6mm 7mm;font-size:12.5pt;font-weight:800;letter-spacing:1.4mm;border:.8mm solid #fff;box-shadow:0 1mm 0 ${col2}">ANH · TRUNG · KIDS</div>
+    <div style="margin-top:6mm;background:#fff;border:1.6mm solid #F2C14E;border-radius:10mm;padding:6mm 6mm 5mm;box-shadow:0 2mm 0 rgba(0,0,0,.12)">
+      <div style="font-size:50pt;font-weight:800;line-height:1;color:${col}">${LS ? 'Little Seed' : 'Seedling'}</div>
+      <div style="display:inline-block;margin-top:3mm;background:#F2C14E;color:#2F463C;border-radius:4mm;padding:1mm 9mm;font-size:30pt;font-weight:800;line-height:1.15">Workbook</div>
+      <div class="zh" style="font-size:21pt;font-weight:800;margin-top:3mm;color:#2F463C">${LS ? '小种子' : '小树苗'} · 练习册</div></div></div>
+  <div style="position:absolute;left:0;right:0;bottom:30mm;display:flex;justify-content:center;align-items:flex-end;gap:${LS ? 12 : 0}mm">${kids.map(([k, h]) => img(CH(k), `height:${h * (LS ? 1.1 : .86)}mm;filter:drop-shadow(0 1.2mm 1.2mm rgba(0,0,0,.25));margin:0 ${LS ? 0 : -3}mm`)).join('')}</div>
+  <div style="position:absolute;left:22mm;right:22mm;bottom:12mm;background:#fff;border:1.2mm solid ${col};border-radius:6mm;padding:3mm 6mm;display:flex;align-items:center;gap:4mm;box-shadow:0 1.4mm 0 ${col2}">
+    <div style="font-size:15pt;font-weight:800;color:${col};white-space:nowrap">My name · <span class="zh">我的名字</span></div>
+    <div style="flex:1;border-bottom:.7mm solid #444;height:9mm"></div></div>
+  <div style="position:absolute;left:0;right:0;bottom:3.4mm;text-align:center;font-size:8.5pt;color:#2F463C;font-weight:600">CES Việt Nam · 12 units · 48 sessions · ▶ scan the QR code to listen · 扫码听一听</div>`);
   pg(`<div class="hd"><div class="t">${LS ? 'Little Seed' : 'Seedling'} Workbook</div><div class="nm">Name · <span class="zh">名字</span>: ______________</div></div>
   <div class="sec"><div class="lab">How to use this book · <span class="zh">怎么用这本书</span></div>
   <div style="font-size:12.5pt;line-height:1.7"><p>1. After each class, do <b>${LS ? '1 page' : '2 pages (English + 中文)'}</b> of the same session number.</p><p>2. Find the <b>QR code</b> at the top right of the page. Scan it, press ▶ and listen. The voice tells you what to do.</p><p>3. Do the exercises. Pause when you need more time.</p><p>4. At the end, the voice says <b>“Now, check your answers.”</b> Check with a pencil in another colour.</p><p>5. Colour the faces: <span style="display:inline-flex;vertical-align:middle">${SMILE(0)}</span> I can! &nbsp; <span style="display:inline-flex;vertical-align:middle">${SMILE(1)}</span> Almost. &nbsp; <span style="display:inline-flex;vertical-align:middle">${SMILE(2)}</span> Help me, please.</p></div></div>
@@ -380,7 +394,7 @@ function book() {
     if (u && !done.has(u.key)) { done.add(u.key); divider(u); }
     wb(s);
     const nxt = order[i + 1];
-    if (u && (!nxt || nxt.unit !== s.unit)) { myPage(u); partnerPage(u); checkup(u); }
+    if (u && (!nxt || nxt.unit !== s.unit)) { chantPage(u); myPage(u); partnerPage(u); checkup(u); }
   });
 }
 function bookKey() { H.units.forEach(key2); }

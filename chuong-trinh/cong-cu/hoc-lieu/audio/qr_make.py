@@ -6,6 +6,7 @@ f, L = sys.argv[1], sys.argv[2]
 txt = open(f, encoding='utf8').read()
 txt = re.sub(r'\n/\*QR\*/.*$', '', txt, flags=re.S)
 ids = [f'ls-s{n}' for n in range(1, 49)] if L == 'LS' else [f'sd-s{n}-{l}' for n in range(1, 49) for l in ('en', 'zh')]
+ids += re.findall(r'"id": "(ve-[a-z0-9-]+)"', txt)
 def svg(url):
     q = qrcode.QRCode(error_correction=qrcode.constants.ERROR_CORRECT_M, border=0, box_size=1); q.add_data(url); q.make(fit=True)
     m = q.get_matrix(); n = len(m); d = ''.join(f'M{x} {y}h1v1h-1z' for y, r in enumerate(m) for x, v in enumerate(r) if v)
