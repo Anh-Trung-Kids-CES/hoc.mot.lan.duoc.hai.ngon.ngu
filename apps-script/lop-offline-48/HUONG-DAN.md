@@ -22,6 +22,10 @@ Sửa mã sau này: dán mã mới → Lưu → **Triển khai → Quản lý tr
 | TienDo | Bản lưu đầy đủ tiến độ của con (ngày, bước, sao, Hộp ôn, quà, huy hiệu). Không sửa tay. |
 | Thuong | Từng lượt cô thưởng sao. Cột `huy` = x là đã huỷ. |
 | DoiQua | Yêu cầu đổi quà thật: `cho` chờ duyệt, `da_trao` đã trao, `tu_choi` không duyệt. |
+| BuoiHS | (bản 4) Mỗi bạn mỗi buổi một dòng: có mặt, tham gia, nói EN, nói ZH, bài tập, ghi chú. Trang quản trị ghi vào đây. |
+| BuoiLop | (bản 4) Mỗi buổi một dòng: ngày dạy, đã dạy chưa, ghi chú buổi. |
+| GhiChu | (bản 4) Nhật ký từng bạn (tiến bộ, cần hỗ trợ, phụ huynh, nề nếp). Cột `xoa` = x là đã xoá. |
+| TaiNguyen | (bản 4) Link tài liệu riêng của lớp (Drive, Sheet, Zalo…), chỉ hiện sau khi nhập PIN. Cô sửa ngay trong Sheet hoặc ở mục Tài nguyên của trang quản trị. |
 
 ## Tiến độ không mất khi đổi máy
 - Mỗi lần con làm xong một việc, web lưu trên máy và gửi bản đầy đủ lên tab TienDo (gom 5 giây/lần; khi con tắt tab cũng gửi nốt).
@@ -38,6 +42,15 @@ Sửa mã sau này: dán mã mới → Lưu → **Triển khai → Quản lý tr
 - Thứ tự theo ngày video được tải lên Drive. Ai mở web cũng xem được (thư mục để "Bất kỳ ai có đường liên kết đều xem được" thì video mới phát được). Xoá video khỏi thư mục là web bỏ video đó.
 - Bố cục: màn rộng (≥1180px) có cột trái cạnh thanh nút; trong lúc làm bài và trên máy tính bảng là dải hẹp "🌟 Vinh danh", chạm để mở; điện thoại dọc có nút 🌟 nổi. Mã web: `little-seed/ls-vinh-danh.js`, `seedling/seedling-vinh-danh.js` (giống nhau), `vinh-danh.css`.
 - Cập nhật máy chủ lên bản có Góc vinh danh: dán Code.gs mới → Lưu → chạy hàm **thuVideo** (Google hỏi thêm quyền đọc Drive: Cho phép) → **Triển khai → Quản lý triển khai → bút chì → Phiên bản mới → Triển khai**. Link /exec giữ nguyên. Mở link /exec thấy `"v":3` là xong.
+
+## Trang quản trị giáo viên (bản 4)
+Trang: https://anh-trung-kids-ces.github.io/hoc.mot.lan.duoc.hai.ngon.ngu/quan-tri-lop/ (mô tả ở `quan-tri-lop/README.md`). Thử trước: thêm `?demo=1`.
+Nâng cấp máy chủ lên bản 4 (link /exec giữ nguyên):
+1. Mở Apps Script của Sheet, dán toàn bộ `Code.gs` mới (Ctrl+A rồi dán) → **Lưu**.
+2. Chọn hàm **caiDatQuanTri** → **Chạy**. Hàm tạo bốn tab mới và nạp sẵn link Sheet quản lý, thư mục video vinh danh vào tab TaiNguyen (link nằm trong Sheet, không nằm trên GitHub). Lần này Google không hỏi thêm quyền.
+3. **Triển khai → Quản lý triển khai → bút chì → Phiên bản: Phiên bản mới → Triển khai.**
+4. Mở link /exec thấy `"v":4` là xong. Cột `trang_thai` tự thêm vào tab HocSinh khi có người dùng trang quản trị.
+Các lệnh cũ của web con và Bảng của cô không đổi, nên hai web học vẫn chạy bình thường trong lúc nâng cấp.
 
 ## Giới hạn
 - Ai có mã của con thì mở được tiến độ của con đó (mã 6 ký tự ngẫu nhiên). Không ghi họ tên đầy đủ hay thông tin khác của con vào web.
