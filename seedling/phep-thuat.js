@@ -79,7 +79,7 @@
         const tts = () => {
           try {
             if (!window.speechSynthesis || !text) return res();
-            const u = new SpeechSynthesisUtterance(String(text).replace(/Bông/g, 'Bong').replace(/Vũ/g, 'Vu')); u.lang = lang === 'zh' ? 'zh-CN' : 'en-US'; u.rate = .85;
+            const u = new SpeechSynthesisUtterance(String(text).replace(/Bông/g, 'Bong').replace(/Vũ/g, 'Vu')); u.lang = lang === 'zh' ? 'zh-CN' : lang === 'vi' ? 'vi-VN' : 'en-US'; u.rate = lang === 'vi' ? .95 : .85;
             const v = speechSynthesis.getVoices().find(x => x.lang.replace('_', '-').startsWith(u.lang)); if (v) u.voice = v;
             u.onend = u.onerror = () => res(); speechSynthesis.speak(u); setTimeout(res, 7000);
           } catch (e) { res(); }
@@ -93,6 +93,7 @@
       } catch (e) { res(); }
     });
   }
+  const sayV = k => speak(CM(k, 'vi'), 'vi', 'common.' + k + '.vi');   // lời cô Hươu (tiếng Việt)
   const sayC = (k, l) => speak(CM(k, l), l, 'common.' + k + '.' + l);
 
   /* ---------- nghe ---------- */
@@ -186,7 +187,7 @@
       <div class="pt-panel" id="ptPanel" hidden></div>`;
     document.body.appendChild(root); document.body.classList.add('pt-on');
     try { if (typeof stopAll === 'function') stopAll(); } catch (e) {}
-    root.querySelector('.pt-x').onclick = close;
+    root.querySelector('.pt-x').onclick = close; $('ptKb').onclick = () => { $('ptKb').hidden = true; delete $('ptKb').dataset.more; };
     root.querySelectorAll('[data-w]').forEach(b => b.onclick = () => pick(b.dataset.w));
     $('ptMic').onclick = () => turn(false); $('ptHint').onclick = () => showCards(G.active || 'en', true);
     render(true);
@@ -474,15 +475,16 @@
     const id = sp.id + '|' + l, st = tap ? 0 : full ? 2 : 1, old = G.log[id];
     if (!old) G.log[id] = { id: sp.id, l, st, o: G.n++ }; else if (st > old.st) old.st = st;
   }
+  function clearMore() { const b = $('ptKb'); if (b && b.dataset.more) { b.hidden = true; delete b.dataset.more; } }
   function cast(l, sp, full, tap, alts) {
-    G.miss = 0; hist.push(clone(S)); if (hist.length > 20) hist.shift();
+    G.miss = 0; clearMore(); hist.push(clone(S)); if (hist.length > 20) hist.shift();
     note(sp, l, full, tap);
     const post = []; apply(sp, l, parOf(sp, l, alts), post);
     sparkle(l); render(); setTimeout(() => post.forEach(f => f()), 300);
     if (sp.reply) { const rt = sp.reply[l]; setTimeout(() => { repBubble(rt); speak(rt, l, sp.id + '.reply.' + l); }, 1700); }
     if (!tap) { G.meter[l] = Math.min(GOAL, G.meter[l] + 1); G.said++; const s = store(); s.seen[sp.id] = (s.seen[sp.id] || 0) + 1; }
     const ok = W[l].ok[G.said % W[l].ok.length];
-    if (full) { bubble(l, CM(ok, l) + ' ' + CM('sent', l)); if (!sp.reply) sayC(ok, l); } else { kidHint(sp[l].say, sp, 4200); if (!sp.reply) speak(sp[l].say, l, sid(sp, l)); }
+    if (full) { bubble(l, CM(ok, l) + ' ' + CM('sent', l)); if (!sp.reply) sayC(ok, l); } else { kidHint(sp[l].say, sp, 4200); if (!sp.reply) speak(sp[l].say, l, sid(sp, l)).then(() => { if (root && !G.end && !G.bonus && (G.viTry = (G.viTry || 0) + 1) <= 2) sayV('try'); }); }
     if (!full) say(l, `Hình đổi rồi! Con thử nói cả câu: <b>${h(sp[l].say)}</b>`); else say(l, `✨ <b>${h(sp[l].say)}</b>`);
     if (!tap) { G.done[sp.id] = G.done[sp.id] || {}; G.done[sp.id][l] = true; }
     doubleCheck(sp, l);
@@ -498,7 +500,7 @@
   }
   /* phép nối / câu dài: chạy liền các hiệu ứng, Phép vàng + thẻ vàng (tối đa 1 thẻ mỗi phút) */
   function castCombo(l, sps, alts, isLong) {
-    G.miss = 0; hist.push(clone(S)); if (hist.length > 20) hist.shift();
+    G.miss = 0; clearMore(); hist.push(clone(S)); if (hist.length > 20) hist.shift();
     const post = [];
     sps.forEach((sp, i) => { setTimeout(() => { if (!root) return; const p2 = []; apply(sp, l, parOf(sp, l, alts), p2); render(); setTimeout(() => p2.forEach(f => f()), 200); }, i * 900); });
     sps.forEach(sp => { note(sp, l, true, false); G.done[sp.id] = G.done[sp.id] || {}; G.done[sp.id][l] = true; const s = store(); s.seen[sp.id] = (s.seen[sp.id] || 0) + 1; });
@@ -506,7 +508,7 @@
     sparkle(l); render();
     const now = Date.now(); let gold = '';
     if (now - G.lastGold > 60000 || window.PT_TEST) { G.lastGold = now; G.golds++; const s = store(); s.gold[POOL.uid] = (s.gold[POOL.uid] || 0) + 1; gold = ' Con được 1 thẻ vàng!'; }
-    setTimeout(() => { fx('🌟', 'rainbow'); burst('✨', 10); burst('🎉', 6); bubble(l, CM('gold', l) + ' ' + CM('sent', l), 3200); sayC('gold', l);
+    setTimeout(() => { fx('🌟', 'rainbow'); burst('✨', 10); burst('🎉', 6); bubble(l, CM('gold', l) + ' ' + CM('sent', l), 3200); sayC('gold', l).then(() => { if (root && !G.end && G.golds <= 2) sayV('gold'); });
       say(l, `🌟 <b>Phép vàng!</b> Con nói ${isLong ? 'một câu dài' : 'hai phép liền một hơi'}.${gold}`); try { if (typeof confetti === 'function') confetti(50); } catch (e) {} }, sps.length * 900 - 200);
     sps.forEach(sp => doubleCheck(sp, l));
     persist(); drawSpells();
@@ -523,9 +525,12 @@
       const co = (D.units[POOL.uid].combo || []).map(p => p.map(k => POOL.list.find(sp => sp.k === k && sp.uid === POOL.uid) || SP[POOL.uid + '.' + k]).filter(Boolean)).filter(a => a.length === 2);
       if (!co.length) return; G.sinceMore = 0; G.run = 0;
       const pair = co[G.said % co.length], txt = pair.map(sp => sp[l].say).join(' ');
-      setTimeout(() => { if (!root || busy || G.end || G.active !== l) return; bubble(l, CM('more', l), 3000); sayC('more', l);
-        const b = $('ptKb'); if (b) { b.innerHTML = `<span class="pt-bpic">${picHtml(pair[0].pic)}<b>+</b>${picHtml(pair[1].pic)}</span><small>🗣️ Con nói liền một hơi:</small>${h(txt)}`; b.hidden = false; clearTimeout(b._t); b._t = setTimeout(() => b.hidden = true, 6000); }
-        say(l, `🌟 Thử <b>nói liền hai phép</b> nhé: <b>${h(txt)}</b>`); }, 1800);
+      setTimeout(async () => { if (!root || busy || G.end || G.active !== l) return; bubble(l, CM('more', l), 3000);
+        const b = $('ptKb'); if (b) { b.innerHTML = `<span class="pt-bpic">${picHtml(pair[0].pic)}<b>+</b>${picHtml(pair[1].pic)}</span><small>🗣️ Con nói liền một hơi (chạm để tắt):</small>${h(txt)}`; b.hidden = false; clearTimeout(b._t); b.dataset.more = '1'; }
+        say(l, `🌟 Thử <b>nói liền hai phép</b> nhé: <b>${h(txt)}</b>`);
+        await sayC('more', l); if (!root || G.end) return; await sayV('two'); if (!root || G.end) return;
+        await speak(pair[0][l].say, l, sid(pair[0], l)); if (!root || G.end) return; await speak(pair[1][l].say, l, sid(pair[1], l));   // đọc mẫu hai phép liền nhau
+        afterModel(l, true); }, 1800);
     }
   }
   function undo(l, tap) {
@@ -563,9 +568,22 @@
     const rot = (dayNum() || 1) % Math.max(1, POOL.list.length);
     const four = [0, 1, 2, 3].map(i => POOL.list[(rot + i * 2) % POOL.list.length]);
     const W8 = [['en', four[0]], ['zh', four[1]], ['en', four[2]], ['zh', four[3]], ['en', 'undo'], ['zh', 'undo']];
-    let i = 0;
+    let i = -1;
+    const intro = () => {   // màn giới thiệu 3 bậc thang, có lời cô Hươu
+      const L = POOL.list, a = L[0], m = L[1] || a, b = L[2] || a, c = L[3] || m;   // bậc 1 và 2 dùng hai hình khác nhau cho dễ thấy
+      p.innerHTML = `<div class="pt-wbox"><div class="pt-wt">🪜 Ba bậc thang phép thuật</div>
+        <div class="pt-stairs"><div class="pt-st s3"><span class="pt-sn">3</span><span class="pt-spic">${picHtml(b.pic)}<b>+</b>${picHtml(c.pic)}</span><em>Nói liền hai phép một hơi → <b>Phép vàng 🌟</b></em></div>
+          <div class="pt-st s2"><span class="pt-sn">2</span><span class="pt-spic">${picHtml(m.pic)}</span><em>Nói cả câu</em></div>
+          <div class="pt-st s1"><span class="pt-sn">1</span><span class="pt-spic">${picHtml(a.pic)}</span><em>Nói một từ</em></div></div>
+        <div class="pt-wbtn"><button type="button" class="ls-b" id="ptI1">🔊 Nghe cô Hươu</button><button type="button" class="ls-b" id="ptI2">Tiếp ›</button></div>
+        <button type="button" class="pt-wskip" id="ptW4">Bỏ qua phần ôn, vào chơi</button></div>`;
+      p.hidden = false; let tok = 0;
+      const play = async () => { const my = ++tok; for (const k of ['i1', 'i2', 'i3']) { if (!root || my !== tok) return; $('ptI1') && p.querySelectorAll('.pt-st').forEach(x => x.classList.toggle('on', x.classList.contains('s' + k[1]))); await sayV(k); } p.querySelectorAll('.pt-st').forEach(x => x.classList.remove('on')); };
+      play(); $('ptI1').onclick = play; $('ptI2').onclick = () => { tok++; i = 0; step(); }; $('ptW4').onclick = () => { tok++; i = W8.length; step(); };
+    };
     const step = () => {
       if (!root) return;
+      if (i < 0) return intro();
       if (i >= W8.length) { p.hidden = true; say('', 'Chạm <b>Leo</b> (tiếng Anh) hoặc <b>Xiaomei</b> (tiếng Trung) để bắt đầu làm phép!'); nudges = 0; setTimeout(nudge, 700); return; }
       const [l, spx] = W8[i], undoStep = spx === 'undo', t = undoStep ? CM('no', l) : spx[l].say;
       p.innerHTML = `<div class="pt-wbox"><div class="pt-wt">🪄 Ôn mẫu câu trước khi chơi · ${i + 1}/${W8.length}</div>

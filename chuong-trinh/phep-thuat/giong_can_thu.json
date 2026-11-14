@@ -3367,5 +3367,41 @@
   "l": "zh",
   "text": "不，不！",
   "same": []
+ },
+ {
+  "id": "common.try.vi",
+  "l": "vi",
+  "text": "Con thử nói cả câu nhé!",
+  "same": []
+ },
+ {
+  "id": "common.two.vi",
+  "l": "vi",
+  "text": "Bây giờ con nói liền hai phép nhé!",
+  "same": []
+ },
+ {
+  "id": "common.gold.vi",
+  "l": "vi",
+  "text": "Phép vàng! Con giỏi quá!",
+  "same": []
+ },
+ {
+  "id": "common.i1.vi",
+  "l": "vi",
+  "text": "Có ba bậc thang. Bậc một: con nói một từ.",
+  "same": []
+ },
+ {
+  "id": "common.i2.vi",
+  "l": "vi",
+  "text": "Bậc hai: con nói cả câu.",
+  "same": []
+ },
+ {
+  "id": "common.i3.vi",
+  "l": "vi",
+  "text": "Bậc ba: con nói liền hai phép một hơi, con sẽ được phép vàng!",
+  "same": []
  }
 ]

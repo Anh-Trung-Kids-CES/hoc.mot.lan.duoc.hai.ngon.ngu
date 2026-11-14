@@ -178,6 +178,8 @@ COMMON = {
         'double': 'Double magic!', 'bonus': 'Bonus magic!', 'try': 'Good try!', 'more': 'Say more!', 'gold': 'Golden magic!', 'again': 'Your turn!', 'no': 'No, no!'},
  'zh': {'wake': '你好，Xiaomei！', 'ok1': '真棒！', 'ok2': '太好了！', 'ok3': '很好！', 'sent': '说得真好！', 'hello': '你好！我会魔法！', 'undo': '好的！', 'other': '我也会魔法！', 'nothing': '还没有魔法！',
         'double': '双重魔法！', 'bonus': '奖励魔法！', 'try': '很好！', 'more': '再说一句！', 'gold': '金色魔法！', 'again': '轮到你啦！', 'no': '不，不！'}}
+COMMON['vi'] = {'try': 'Con thử nói cả câu nhé!', 'two': 'Bây giờ con nói liền hai phép nhé!', 'gold': 'Phép vàng! Con giỏi quá!',
+                'i1': 'Có ba bậc thang. Bậc một: con nói một từ.', 'i2': 'Bậc hai: con nói cả câu.', 'i3': 'Bậc ba: con nói liền hai phép một hơi, con sẽ được phép vàng!'}
 for l, dd in COMMON.items():
     for k, t in dd.items(): clip('common.%s.%s' % (k, l), l, t)
 out['common'] = COMMON

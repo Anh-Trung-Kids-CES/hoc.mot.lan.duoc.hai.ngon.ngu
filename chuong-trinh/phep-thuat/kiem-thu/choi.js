@@ -81,6 +81,28 @@ function trap(w) { w.addEventListener('error', e => errors.push(String(e.message
     ok(w.P.pt.d && Object.keys(w.P.pt.seen).length >= 4, `${course}${day}: ghi nhớ phép đã nói (${Object.keys(w.P.pt.seen).length})`);
     G.close(); w.close();
   }
+  // ---- D2. bậc thang: giới thiệu, đọc mẫu hai phép liền, giữ hình ----
+  {
+    const w = boot('LS', 10); const spoken = []; w.speechSynthesis.speak = u => { spoken.push(u.text + '|' + u.lang); setTimeout(() => u.onend && u.onend(), 0); };
+    trap(w); const doc = w.document, G = w.PT_GAME; G.open(); await tick(50);
+    ok(!!doc.querySelector('.pt-stairs'), 'phần ôn mở bằng màn 3 bậc thang');
+    ok(spoken.some(x => x.endsWith('|vi-VN') && /ba bậc/.test(x)), 'cô Hươu giới thiệu bậc thang (tiếng Việt)');
+    doc.getElementById('ptI2').click(); await tick(); ok(!!doc.querySelector('.pt-wsay'), 'sau giới thiệu vào ôn mẫu câu');
+    doc.getElementById('ptW4').click(); await tick();
+    const st = G.state(); st.G.awake = { en: true, zh: true }; doc.getElementById('ptPanel').hidden = true; st.G.active = 'en';
+    const U = D.units.LS2.spells; spoken.length = 0;
+    G.handle('en', U.find(s => s.k === 'hbd').en.say); await tick(30); G.handle('en', U.find(s => s.k === 'name').en.say); await tick(30);
+    st.G.sinceMore = 5;   // đủ điều kiện rủ
+    G.handle('en', U.find(s => s.k === 'ask_name').en.say); await tick(2400);
+    const kb = doc.getElementById('ptKb'); ok(kb && !kb.hidden && kb.dataset.more === '1' && kb.querySelector('.pt-bpic b'), 'hình hai phép nối "+" hiện và được giữ');
+    await tick(1500);
+    const txt = spoken.join(' / '); const pair = D.units.LS2.combo[0]; const a = U.find(s => s.k === pair[0]), b = U.find(s => s.k === pair[1]);
+    ok(spoken.some(x => /Bây giờ con nói liền/.test(x)), 'cô Hươu rủ nói liền hai phép');
+    ok(/Say more/.test(txt), 'Leo nói Say more'); 
+    ok(txt.indexOf(a.en.say) >= 0 && txt.indexOf(b.en.say) > txt.indexOf(a.en.say), 'đọc mẫu cả hai phép theo thứ tự: ' + txt.slice(-160));
+    kb.click(); ok(kb.hidden, 'chạm hình thì tắt');
+    G.close(); w.close();
+  }
   // ---- E. ô trò chơi hiện ở mọi ngày ----
   for (const course of ['LS', 'SD']) { const w = boot(course, 70); w.document.getElementById('app').innerHTML = '<div class="dy-tiles"></div>'; await tick(20); ok(!!w.document.querySelector('.ht-pt'), course + ' ngày 70 có ô Phép thuật'); w.close(); }
   ok(errors.length === 0, 'lỗi chạy: ' + errors.slice(0, 5).join(' | '));
