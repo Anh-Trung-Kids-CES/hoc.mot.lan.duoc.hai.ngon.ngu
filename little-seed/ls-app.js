@@ -401,7 +401,7 @@ R.meo = (step, body) => {
     const exU = c.ex.map(([py, hz]) => c.l === 'zh' ? zh(hz || py) : en(py));
     body.innerHTML = `<div class="sx-meo"><div class="sx-sym ${c.l}"><b>${esc(c.sym)}</b>${c.name ? `<small>${esc(c.name)}</small>` : ''}</div>
       <div class="sx-exs">${c.ex.map(([py, hz]) => `<button class="sx-ex">${c.l === 'zh' ? `<span>${esc(py)}</span><b class="zh">${esc(hz)}</b>` : `<b>${esc(py)}</b>`}</button>`).join('')}</div>
-      <span class="ls-lab" id="lap">Lượt 1/3 · con nghe rồi nói theo</span><div class="row"><button class="btn g" id="nx" hidden>Tiếp →</button></div></div>`;
+      <span class="ls-lab" id="lap">Lượt 1/3 · con nghe rồi nói theo</span><div class="row"><button class="btn g" id="nx">Tiếp →</button></div></div>`;
     body.querySelectorAll('.sx-ex').forEach((b, k) => b.onclick = () => { stopAll(); say(exU[k]); });
     body.querySelector('#nx').onclick = () => { stopAll(); ci++; cardStep(); };
     X.replay = () => { stopAll(); seq(exU, 500); };

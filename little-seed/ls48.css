@@ -7,4 +7,4 @@
 .ls-chubtn { position: fixed; right: 12px; bottom: 12px; z-index: 50; border: 0; border-radius: 999px; padding: 8px 14px;
   background: #fff; color: #2E7D32; font: 600 13px 'Be Vietnam Pro', sans-serif; box-shadow: 0 2px 8px rgba(0,0,0,.18); cursor: pointer; }
 body.hub .ls-chubtn { display: none; }
-@media (max-width: 700px) { .ls-chubtn { bottom: 76px; } }
+@media (max-width: 700px) { .ls-chubtn { bottom: calc(var(--nav, 64px) + 86px); right: 8px; padding: 6px 12px; font-size: 13px; } body:not(.hub) #lsBody { padding-bottom: 110px; } }
