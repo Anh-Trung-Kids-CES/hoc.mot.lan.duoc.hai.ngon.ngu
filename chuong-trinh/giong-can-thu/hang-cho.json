@@ -13662,5 +13662,21 @@
 "nguon": [
 "little-seed/giong_vi_bbve.json"
 ]
+},
+{
+"l": "zh",
+"t": "他",
+"nguon": [
+"seedling/seedling-data.js",
+"little-seed/little-seed-data.js"
+]
+},
+{
+"l": "zh",
+"t": "她",
+"nguon": [
+"seedling/seedling-data.js",
+"little-seed/little-seed-data.js"
+]
 }
 ]

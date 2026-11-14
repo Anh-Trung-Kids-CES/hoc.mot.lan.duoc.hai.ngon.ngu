@@ -811,9 +811,8 @@ def nen_cards(d):
         if zt:
             used.add(zt)
         cs.append(card(w, zt, py))
-    if zs and len(zs) == len(cs) and all(not c['zh'] for c in cs):
-        cs = [card(c['en'], z['zh'], z['py']) for c, z in zip(cs, zs)]
-        used = {z['zh'] for z in zs}
+    # (đã bỏ) ghép chữ Hán với từ tiếng Anh theo thứ tự vị trí: gây lệch nghĩa (ví dụ monkey=快乐).
+    # Thẻ nào không khớp được thì để trống chữ Hán, KHÔNG ghép theo vị trí.
     for z in zs:
         if z['zh'] not in used:
             g = gloss(z)
