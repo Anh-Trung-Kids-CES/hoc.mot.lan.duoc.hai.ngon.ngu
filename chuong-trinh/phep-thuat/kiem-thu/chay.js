@@ -14,6 +14,7 @@ function boot(course, day, opts = {}) {
   const data = course === 'LS' ? 'little-seed/little-seed-data.js' : 'seedling/seedling-data.js';
   w.eval(fs.readFileSync(path.join(ROOT, data), 'utf8'));
   w.eval(fs.readFileSync(path.join(ROOT, 'seedling/phep-thuat-du-lieu.js'), 'utf8'));
+  if (!opts.audio) w.PT_DATA.audio = [];   // mặc định thử đường giọng máy (nghe được chữ); opts.audio=true thử đường file thu
   w.eval(fs.readFileSync(path.join(ROOT, 'seedling/phep-thuat.js'), 'utf8'));
   return w;
 }

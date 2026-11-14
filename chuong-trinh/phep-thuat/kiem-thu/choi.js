@@ -105,6 +105,15 @@ function trap(w) { w.addEventListener('error', e => errors.push(String(e.message
   }
   // ---- E. ô trò chơi hiện ở mọi ngày ----
   for (const course of ['LS', 'SD']) { const w = boot(course, 70); w.document.getElementById('app').innerHTML = '<div class="dy-tiles"></div>'; await tick(20); ok(!!w.document.querySelector('.ht-pt'), course + ' ngày 70 có ô Phép thuật'); w.close(); }
+  // ---- F. file giọng thu ----
+  { const fs = require('fs'), path = require('path'); const wA = boot('LS', 10, { audio: true }); const A = wA.PT_DATA.audio, S = wA.PT_DATA.same || {};
+    const dir = path.join(__dirname, '../../../seedling/tai-nguyen/giong/phep-thuat');
+    ok(A.length >= 537, 'danh sách audio đủ 537 clip: ' + A.length);
+    ok(A.every(id => fs.existsSync(path.join(dir, id + '.mp3'))), 'mọi id trong audio có file mp3');
+    ok(Object.values(S).every(b => A.includes(b)), 'id trùng đều trỏ về clip đã thu');
+    const played = []; wA.Audio = function (u) { played.push(u); this.play = () => { setTimeout(() => this.onended && this.onended(), 0); return Promise.resolve(); }; this.pause = () => {}; };
+    wA.PT_GAME.open(); await tick(); const si = wA.PT_DATA.units.LS1.spells[0]; wA.PT_GAME.state(); await tick(10);
+    ok(played.length === 0 || played.every(u => /giong\/phep-thuat\/.+\.mp3$/.test(u)), 'đường file thu dùng đúng thư mục: ' + played.slice(0, 2)); wA.close(); }
   ok(errors.length === 0, 'lỗi chạy: ' + errors.slice(0, 5).join(' | '));
   process.exit(report() ? 1 : 0);
 })();

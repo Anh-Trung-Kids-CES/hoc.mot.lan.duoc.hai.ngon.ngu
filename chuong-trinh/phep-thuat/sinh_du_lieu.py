@@ -188,6 +188,7 @@ byText = {}
 for c in clips:
     byText.setdefault((c['l'], c['text']), []).append(c['id'])
 uniq = [dict(id=v[0], l=k[0], text=k[1], same=v[1:]) for k, v in byText.items()]
+out['audio'] = [c['id'] for c in uniq if os.path.exists(os.path.join(ROOT, 'seedling', 'tai-nguyen', 'giong', 'phep-thuat', c['id'] + '.mp3'))]   # id đã có file thu
 out['same'] = {i: v[0] for k, v in byText.items() for i in v[1:]}   # id trùng → id gốc dùng chung file thu
 
 js = '/* Dữ liệu Phép thuật lời nói (24 unit, 146 phép) – SINH TỰ ĐỘNG từ chuong-trinh/phep-thuat/*.py, đừng sửa tay. */\nwindow.PT_DATA=' + json.dumps(out, ensure_ascii=False, separators=(',', ':')) + ';\n'
