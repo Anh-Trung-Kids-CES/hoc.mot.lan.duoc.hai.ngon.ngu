@@ -275,6 +275,7 @@
     if (kind === 'clap') fx('👏'); if (kind === 'stamp') fx('💥'); if (kind === 'mouth') fx('Aaa!');
   }
   function fx(t, cls) { const f = $('ptFx'); if (!f) return; const s = document.createElement('span'); s.className = 'pt-pop ' + (cls || ''); s.textContent = t; f.appendChild(s); setTimeout(() => s.remove(), 1600); }
+  function goldCard() { const f = $('ptFx'); if (!f) return; const c = document.createElement('div'); c.className = 'pt-gcard'; c.innerHTML = '<b>🌟</b><i>✨</i>'; f.appendChild(c); ting(); setTimeout(ting, 220); setTimeout(() => c.remove(), 2600); }
   function burst(sym, n, cls) { const f = $('ptFx'); if (!f) return; for (let i = 0; i < n; i++) { const s = document.createElement('span'); s.className = 'pt-bit ' + (cls || ''); s.textContent = sym; s.style.left = (8 + Math.random() * 84) + '%'; s.style.animationDelay = (Math.random() * .6) + 's'; f.appendChild(s); setTimeout(() => s.remove(), 2600); } }
   function repBubble(t) {   // lời đáp của bạn trên cảnh (hiện trên đầu bạn đầu tiên)
     const st = $('ptStage'), ex = $('ptFx'); if (!st || !ex) return; const a = st.querySelector('.pt-act:not(.pt-out)'); const d = document.createElement('div'); d.className = 'pt-rep';
@@ -508,7 +509,7 @@
     sparkle(l); render();
     const now = Date.now(); let gold = '';
     if (now - G.lastGold > 60000 || window.PT_TEST) { G.lastGold = now; G.golds++; const s = store(); s.gold[POOL.uid] = (s.gold[POOL.uid] || 0) + 1; gold = ' Con được 1 thẻ vàng!'; }
-    setTimeout(() => { fx('🌟', 'rainbow'); burst('✨', 10); burst('🎉', 6); bubble(l, CM('gold', l) + ' ' + CM('sent', l), 3200); sayC('gold', l).then(() => { if (root && !G.end && G.golds <= 2) sayV('gold'); });
+    setTimeout(() => { goldCard(); fx('🌟', 'rainbow'); burst('✨', 10); burst('🎉', 6); bubble(l, CM('gold', l) + ' ' + CM('sent', l), 3200); sayC('gold', l).then(() => { if (root && !G.end && G.golds <= 2) sayV('gold'); });
       say(l, `🌟 <b>Phép vàng!</b> Con nói ${isLong ? 'một câu dài' : 'hai phép liền một hơi'}.${gold}`); try { if (typeof confetti === 'function') confetti(50); } catch (e) {} }, sps.length * 900 - 200);
     sps.forEach(sp => doubleCheck(sp, l));
     persist(); drawSpells();
