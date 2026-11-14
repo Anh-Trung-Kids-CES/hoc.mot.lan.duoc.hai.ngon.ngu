@@ -1,0 +1,3371 @@
+[
+ {
+  "id": "LS1.hi_kitten.en",
+  "l": "en",
+  "text": "Hello, kitten!",
+  "same": []
+ },
+ {
+  "id": "LS1.hi_kitten.zh",
+  "l": "zh",
+  "text": "小猫，你好！",
+  "same": []
+ },
+ {
+  "id": "LS1.hi_teacher.en",
+  "l": "en",
+  "text": "Hello, teacher!",
+  "same": []
+ },
+ {
+  "id": "LS1.hi_teacher.zh",
+  "l": "zh",
+  "text": "老师，你好！",
+  "same": []
+ },
+ {
+  "id": "LS1.hi_mommy.en",
+  "l": "en",
+  "text": "Hello, mommy!",
+  "same": []
+ },
+ {
+  "id": "LS1.hi_mommy.zh",
+  "l": "zh",
+  "text": "妈妈，你好！",
+  "same": []
+ },
+ {
+  "id": "LS1.hi_all.en",
+  "l": "en",
+  "text": "Hello, everyone!",
+  "same": []
+ },
+ {
+  "id": "LS1.hi_all.zh",
+  "l": "zh",
+  "text": "大家好！",
+  "same": []
+ },
+ {
+  "id": "LS1.day.en",
+  "l": "en",
+  "text": "Good morning!",
+  "same": []
+ },
+ {
+  "id": "LS1.day.zh",
+  "l": "zh",
+  "text": "早上好！",
+  "same": []
+ },
+ {
+  "id": "LS1.night.en",
+  "l": "en",
+  "text": "Good night!",
+  "same": []
+ },
+ {
+  "id": "LS1.night.zh",
+  "l": "zh",
+  "text": "晚安！",
+  "same": []
+ },
+ {
+  "id": "LS1.go.en",
+  "l": "en",
+  "text": "Let's go!",
+  "same": [
+   "SD1.go.en"
+  ]
+ },
+ {
+  "id": "LS1.go.zh",
+  "l": "zh",
+  "text": "走吧！",
+  "same": []
+ },
+ {
+  "id": "LS1.bye_puppy.en",
+  "l": "en",
+  "text": "Goodbye, puppy!",
+  "same": []
+ },
+ {
+  "id": "LS1.bye_puppy.zh",
+  "l": "zh",
+  "text": "小狗，再见！",
+  "same": []
+ },
+ {
+  "id": "LS1.long1.en",
+  "l": "en",
+  "text": "Hello, kitten! Hello, puppy!",
+  "same": []
+ },
+ {
+  "id": "LS1.long1.zh",
+  "l": "zh",
+  "text": "小猫，你好！小狗，你好！",
+  "same": []
+ },
+ {
+  "id": "LS1.long2.en",
+  "l": "en",
+  "text": "Good morning, Mommy! Goodbye, Daddy!",
+  "same": []
+ },
+ {
+  "id": "LS1.long2.zh",
+  "l": "zh",
+  "text": "妈妈，早上好！爸爸，再见！",
+  "same": []
+ },
+ {
+  "id": "LS1.dia.en1.q",
+  "l": "en",
+  "text": "Hello!",
+  "same": []
+ },
+ {
+  "id": "LS1.dia.en1.a",
+  "l": "en",
+  "text": "Hello, Leo!",
+  "same": []
+ },
+ {
+  "id": "LS1.dia.en2.q",
+  "l": "en",
+  "text": "Goodbye!",
+  "same": []
+ },
+ {
+  "id": "LS1.dia.en2.a",
+  "l": "en",
+  "text": "Goodbye, Leo!",
+  "same": []
+ },
+ {
+  "id": "LS1.dia.zh1.q",
+  "l": "zh",
+  "text": "你好！",
+  "same": []
+ },
+ {
+  "id": "LS1.dia.zh1.a",
+  "l": "zh",
+  "text": "你好，Xiaomei！",
+  "same": [
+   "common.wake.zh"
+  ]
+ },
+ {
+  "id": "LS1.dia.zh2.q",
+  "l": "zh",
+  "text": "再见！",
+  "same": []
+ },
+ {
+  "id": "LS1.dia.zh2.a",
+  "l": "zh",
+  "text": "再见，Xiaomei！",
+  "same": []
+ },
+ {
+  "id": "LS2.hello_cake.en",
+  "l": "en",
+  "text": "Hello, cake!",
+  "same": []
+ },
+ {
+  "id": "LS2.hello_cake.zh",
+  "l": "zh",
+  "text": "蛋糕，你好！",
+  "same": []
+ },
+ {
+  "id": "LS2.num.en",
+  "l": "en",
+  "text": "Six!",
+  "same": []
+ },
+ {
+  "id": "LS2.num.zh",
+  "l": "zh",
+  "text": "六！",
+  "same": []
+ },
+ {
+  "id": "LS2.hbd.en",
+  "l": "en",
+  "text": "Happy birthday!",
+  "same": []
+ },
+ {
+  "id": "LS2.hbd.zh",
+  "l": "zh",
+  "text": "生日快乐！",
+  "same": []
+ },
+ {
+  "id": "LS2.name.en",
+  "l": "en",
+  "text": "My name is Leo!",
+  "same": []
+ },
+ {
+  "id": "LS2.name.zh",
+  "l": "zh",
+  "text": "我叫Leo！",
+  "same": []
+ },
+ {
+  "id": "LS2.ask_name.en",
+  "l": "en",
+  "text": "What's your name?",
+  "same": [
+   "LS2.dia.en1.q",
+   "SD2.ask_name.en",
+   "SD2.dia.en1.q"
+  ]
+ },
+ {
+  "id": "LS2.ask_name.zh",
+  "l": "zh",
+  "text": "你叫什么名字？",
+  "same": [
+   "LS2.dia.zh1.q",
+   "SD2.ask_name.zh",
+   "SD2.dia.zh1.q"
+  ]
+ },
+ {
+  "id": "LS2.ask_name.reply.en",
+  "l": "en",
+  "text": "My name is Bông.",
+  "same": [
+   "SD2.ask_name.reply.en"
+  ]
+ },
+ {
+  "id": "LS2.ask_name.reply.zh",
+  "l": "zh",
+  "text": "我叫Bông。",
+  "same": [
+   "SD2.ask_name.reply.zh"
+  ]
+ },
+ {
+  "id": "LS2.ask_age.en",
+  "l": "en",
+  "text": "How old are you?",
+  "same": [
+   "LS2.dia.en2.q",
+   "SD2.ask_age.en",
+   "SD2.dia.en2.q"
+  ]
+ },
+ {
+  "id": "LS2.ask_age.zh",
+  "l": "zh",
+  "text": "你几岁？",
+  "same": [
+   "LS2.dia.zh2.q",
+   "SD2.ask_age.zh",
+   "SD2.dia.zh2.q"
+  ]
+ },
+ {
+  "id": "LS2.ask_age.reply.en",
+  "l": "en",
+  "text": "I'm six!",
+  "same": []
+ },
+ {
+  "id": "LS2.ask_age.reply.zh",
+  "l": "zh",
+  "text": "我六岁！",
+  "same": []
+ },
+ {
+  "id": "LS2.long1.en",
+  "l": "en",
+  "text": "My name is Leo. I'm six!",
+  "same": []
+ },
+ {
+  "id": "LS2.long1.zh",
+  "l": "zh",
+  "text": "我叫Leo。我六岁！",
+  "same": []
+ },
+ {
+  "id": "LS2.long2.en",
+  "l": "en",
+  "text": "Hello, cake! One, two, three!",
+  "same": []
+ },
+ {
+  "id": "LS2.long2.zh",
+  "l": "zh",
+  "text": "蛋糕，你好！一、二、三！",
+  "same": []
+ },
+ {
+  "id": "LS2.dia.en1.a",
+  "l": "en",
+  "text": "My name is Leo.",
+  "same": [
+   "SD2.dia.en1.a"
+  ]
+ },
+ {
+  "id": "LS2.dia.en2.a",
+  "l": "en",
+  "text": "I'm six.",
+  "same": []
+ },
+ {
+  "id": "LS2.dia.zh1.a",
+  "l": "zh",
+  "text": "我叫Leo。",
+  "same": [
+   "SD2.dia.zh1.a"
+  ]
+ },
+ {
+  "id": "LS2.dia.zh2.a",
+  "l": "zh",
+  "text": "我六岁。",
+  "same": [
+   "SD2.age.zh",
+   "SD2.dia.zh2.a"
+  ]
+ },
+ {
+  "id": "LS3.hi_grandpa.en",
+  "l": "en",
+  "text": "Hello, Grandpa!",
+  "same": [
+   "SD1.hi_grandpa.en"
+  ]
+ },
+ {
+  "id": "LS3.hi_grandpa.zh",
+  "l": "zh",
+  "text": "爷爷好！",
+  "same": []
+ },
+ {
+  "id": "LS3.hi_grandma.en",
+  "l": "en",
+  "text": "Hello, Grandma!",
+  "same": []
+ },
+ {
+  "id": "LS3.hi_grandma.zh",
+  "l": "zh",
+  "text": "奶奶好！",
+  "same": []
+ },
+ {
+  "id": "LS3.hi_bigbro.en",
+  "l": "en",
+  "text": "Hello, big brother!",
+  "same": []
+ },
+ {
+  "id": "LS3.hi_bigbro.zh",
+  "l": "zh",
+  "text": "哥哥好！",
+  "same": []
+ },
+ {
+  "id": "LS3.hi_lilsis.en",
+  "l": "en",
+  "text": "Hello, little sister!",
+  "same": []
+ },
+ {
+  "id": "LS3.hi_lilsis.zh",
+  "l": "zh",
+  "text": "妹妹好！",
+  "same": []
+ },
+ {
+  "id": "LS3.baby.en",
+  "l": "en",
+  "text": "Wow! A baby!",
+  "same": []
+ },
+ {
+  "id": "LS3.baby.zh",
+  "l": "zh",
+  "text": "哇！宝宝！",
+  "same": []
+ },
+ {
+  "id": "LS3.family.en",
+  "l": "en",
+  "text": "My family!",
+  "same": []
+ },
+ {
+  "id": "LS3.family.zh",
+  "l": "zh",
+  "text": "我的家人！",
+  "same": []
+ },
+ {
+  "id": "LS3.long1.en",
+  "l": "en",
+  "text": "Hello, Grandpa! Hello, Grandma!",
+  "same": []
+ },
+ {
+  "id": "LS3.long1.zh",
+  "l": "zh",
+  "text": "爷爷好！奶奶好！",
+  "same": []
+ },
+ {
+  "id": "LS3.long2.en",
+  "l": "en",
+  "text": "He is my daddy! She is my mommy!",
+  "same": []
+ },
+ {
+  "id": "LS3.long2.zh",
+  "l": "zh",
+  "text": "这是我爸爸！这是我妈妈！",
+  "same": []
+ },
+ {
+  "id": "LS3.dia.en1.q",
+  "l": "en",
+  "text": "Who is he?",
+  "same": []
+ },
+ {
+  "id": "LS3.dia.en1.a",
+  "l": "en",
+  "text": "He is my grandpa!",
+  "same": []
+ },
+ {
+  "id": "LS3.dia.en2.q",
+  "l": "en",
+  "text": "Who is she?",
+  "same": [
+   "SD3.dia.en1.q"
+  ]
+ },
+ {
+  "id": "LS3.dia.en2.a",
+  "l": "en",
+  "text": "She is my grandma!",
+  "same": []
+ },
+ {
+  "id": "LS3.dia.zh1.q",
+  "l": "zh",
+  "text": "这是谁？",
+  "same": [
+   "LS3.dia.zh2.q"
+  ]
+ },
+ {
+  "id": "LS3.dia.zh1.a",
+  "l": "zh",
+  "text": "这是我爷爷！",
+  "same": []
+ },
+ {
+  "id": "LS3.dia.zh2.a",
+  "l": "zh",
+  "text": "这是我奶奶！",
+  "same": []
+ },
+ {
+  "id": "LS4.hi_robo.en",
+  "l": "en",
+  "text": "Hello, Robo!",
+  "same": []
+ },
+ {
+  "id": "LS4.hi_robo.zh",
+  "l": "zh",
+  "text": "Robo，你好！",
+  "same": []
+ },
+ {
+  "id": "LS4.head.en",
+  "l": "en",
+  "text": "I have a head!",
+  "same": []
+ },
+ {
+  "id": "LS4.head.zh",
+  "l": "zh",
+  "text": "我有一个头！",
+  "same": []
+ },
+ {
+  "id": "LS4.eyes.en",
+  "l": "en",
+  "text": "I have eyes!",
+  "same": []
+ },
+ {
+  "id": "LS4.eyes.zh",
+  "l": "zh",
+  "text": "我有眼睛！",
+  "same": []
+ },
+ {
+  "id": "LS4.ears.en",
+  "l": "en",
+  "text": "I have ears!",
+  "same": [
+   "LS4.dia.en2.a"
+  ]
+ },
+ {
+  "id": "LS4.ears.zh",
+  "l": "zh",
+  "text": "我有耳朵！",
+  "same": [
+   "LS4.dia.zh2.a"
+  ]
+ },
+ {
+  "id": "LS4.nose.en",
+  "l": "en",
+  "text": "Touch your nose!",
+  "same": [
+   "LS4.dia.en1.q"
+  ]
+ },
+ {
+  "id": "LS4.nose.zh",
+  "l": "zh",
+  "text": "摸摸鼻子！",
+  "same": [
+   "LS4.dia.zh1.q"
+  ]
+ },
+ {
+  "id": "LS4.mouth.en",
+  "l": "en",
+  "text": "I have a small mouth!",
+  "same": []
+ },
+ {
+  "id": "LS4.mouth.zh",
+  "l": "zh",
+  "text": "我有小小的嘴巴！",
+  "same": []
+ },
+ {
+  "id": "LS4.long1.en",
+  "l": "en",
+  "text": "I have eyes! I have a nose!",
+  "same": []
+ },
+ {
+  "id": "LS4.long1.zh",
+  "l": "zh",
+  "text": "我有眼睛！我有鼻子！",
+  "same": []
+ },
+ {
+  "id": "LS4.long2.en",
+  "l": "en",
+  "text": "I have a head! I have two hands!",
+  "same": []
+ },
+ {
+  "id": "LS4.long2.zh",
+  "l": "zh",
+  "text": "我有一个头！我有两只手！",
+  "same": []
+ },
+ {
+  "id": "LS4.dia.en1.a",
+  "l": "en",
+  "text": "I have a nose!",
+  "same": []
+ },
+ {
+  "id": "LS4.dia.en2.q",
+  "l": "en",
+  "text": "Touch your ears!",
+  "same": []
+ },
+ {
+  "id": "LS4.dia.zh1.a",
+  "l": "zh",
+  "text": "我有鼻子！",
+  "same": []
+ },
+ {
+  "id": "LS4.dia.zh2.q",
+  "l": "zh",
+  "text": "摸摸耳朵！",
+  "same": []
+ },
+ {
+  "id": "LS5.happy.en",
+  "l": "en",
+  "text": "I am happy!",
+  "same": [
+   "LS5.dia.en1.a"
+  ]
+ },
+ {
+  "id": "LS5.happy.zh",
+  "l": "zh",
+  "text": "我很开心！",
+  "same": [
+   "LS5.dia.zh1.a"
+  ]
+ },
+ {
+  "id": "LS5.sad.en",
+  "l": "en",
+  "text": "I am sad.",
+  "same": []
+ },
+ {
+  "id": "LS5.sad.zh",
+  "l": "zh",
+  "text": "我很难过。",
+  "same": []
+ },
+ {
+  "id": "LS5.hungry.en",
+  "l": "en",
+  "text": "I am hungry!",
+  "same": []
+ },
+ {
+  "id": "LS5.hungry.zh",
+  "l": "zh",
+  "text": "我饿了！",
+  "same": [
+   "SD5.hungry.zh"
+  ]
+ },
+ {
+  "id": "LS5.sleepy.en",
+  "l": "en",
+  "text": "I am sleepy.",
+  "same": [
+   "LS5.dia.en2.a"
+  ]
+ },
+ {
+  "id": "LS5.sleepy.zh",
+  "l": "zh",
+  "text": "我好困。",
+  "same": [
+   "LS5.dia.zh2.a"
+  ]
+ },
+ {
+  "id": "LS5.scared.en",
+  "l": "en",
+  "text": "I am scared!",
+  "same": []
+ },
+ {
+  "id": "LS5.scared.zh",
+  "l": "zh",
+  "text": "我很害怕！",
+  "same": []
+ },
+ {
+  "id": "LS5.angry.en",
+  "l": "en",
+  "text": "I am angry!",
+  "same": []
+ },
+ {
+  "id": "LS5.angry.zh",
+  "l": "zh",
+  "text": "我很生气！",
+  "same": []
+ },
+ {
+  "id": "LS5.long1.en",
+  "l": "en",
+  "text": "I am happy! Let's go!",
+  "same": []
+ },
+ {
+  "id": "LS5.long1.zh",
+  "l": "zh",
+  "text": "我很开心！走吧！",
+  "same": []
+ },
+ {
+  "id": "LS5.long2.en",
+  "l": "en",
+  "text": "I am hungry. I am sleepy.",
+  "same": []
+ },
+ {
+  "id": "LS5.long2.zh",
+  "l": "zh",
+  "text": "我饿了。我好困。",
+  "same": []
+ },
+ {
+  "id": "LS5.dia.en1.q",
+  "l": "en",
+  "text": "How do you feel?",
+  "same": [
+   "LS5.dia.en2.q",
+   "SD5.dia.en1.q"
+  ]
+ },
+ {
+  "id": "LS5.dia.zh1.q",
+  "l": "zh",
+  "text": "你心情怎么样？",
+  "same": [
+   "LS5.dia.zh2.q"
+  ]
+ },
+ {
+  "id": "LS6.book.en",
+  "l": "en",
+  "text": "This is a book!",
+  "same": [
+   "LS6.dia.en1.a"
+  ]
+ },
+ {
+  "id": "LS6.book.zh",
+  "l": "zh",
+  "text": "这是书！",
+  "same": [
+   "LS6.dia.zh1.a"
+  ]
+ },
+ {
+  "id": "LS6.pen.en",
+  "l": "en",
+  "text": "This is a pen!",
+  "same": []
+ },
+ {
+  "id": "LS6.pen.zh",
+  "l": "zh",
+  "text": "这是笔！",
+  "same": []
+ },
+ {
+  "id": "LS6.pencil.en",
+  "l": "en",
+  "text": "This is a pencil!",
+  "same": [
+   "LS6.dia.en2.a"
+  ]
+ },
+ {
+  "id": "LS6.pencil.zh",
+  "l": "zh",
+  "text": "这是铅笔！",
+  "same": [
+   "LS6.dia.zh2.a"
+  ]
+ },
+ {
+  "id": "LS6.ruler.en",
+  "l": "en",
+  "text": "This is a ruler!",
+  "same": []
+ },
+ {
+  "id": "LS6.ruler.zh",
+  "l": "zh",
+  "text": "这是尺子！",
+  "same": []
+ },
+ {
+  "id": "LS6.eraser.en",
+  "l": "en",
+  "text": "This is an eraser!",
+  "same": []
+ },
+ {
+  "id": "LS6.eraser.zh",
+  "l": "zh",
+  "text": "这是橡皮！",
+  "same": []
+ },
+ {
+  "id": "LS6.bag.en",
+  "l": "en",
+  "text": "A new schoolbag!",
+  "same": []
+ },
+ {
+  "id": "LS6.bag.zh",
+  "l": "zh",
+  "text": "新书包！",
+  "same": []
+ },
+ {
+  "id": "LS6.long1.en",
+  "l": "en",
+  "text": "This is a book! This is a pen!",
+  "same": []
+ },
+ {
+  "id": "LS6.long1.zh",
+  "l": "zh",
+  "text": "这是书！这是笔！",
+  "same": []
+ },
+ {
+  "id": "LS6.long2.en",
+  "l": "en",
+  "text": "This is a new schoolbag! I am happy!",
+  "same": []
+ },
+ {
+  "id": "LS6.long2.zh",
+  "l": "zh",
+  "text": "这是新书包！我很开心！",
+  "same": []
+ },
+ {
+  "id": "LS6.dia.en1.q",
+  "l": "en",
+  "text": "What is this?",
+  "same": [
+   "LS6.dia.en2.q",
+   "SD6.dia.en1.q"
+  ]
+ },
+ {
+  "id": "LS6.dia.zh1.q",
+  "l": "zh",
+  "text": "这是什么？",
+  "same": [
+   "LS6.dia.zh2.q",
+   "SD6.dia.zh1.q"
+  ]
+ },
+ {
+  "id": "LS7.where.en",
+  "l": "en",
+  "text": "Where is my book?",
+  "same": []
+ },
+ {
+  "id": "LS7.where.zh",
+  "l": "zh",
+  "text": "我的书在哪儿？",
+  "same": []
+ },
+ {
+  "id": "LS7.on_table.en",
+  "l": "en",
+  "text": "On the table!",
+  "same": [
+   "LS7.dia.en1.a"
+  ]
+ },
+ {
+  "id": "LS7.on_table.zh",
+  "l": "zh",
+  "text": "在桌子上！",
+  "same": [
+   "LS7.dia.zh1.a"
+  ]
+ },
+ {
+  "id": "LS7.under_bed.en",
+  "l": "en",
+  "text": "Under the bed!",
+  "same": [
+   "LS7.dia.en2.a"
+  ]
+ },
+ {
+  "id": "LS7.under_bed.zh",
+  "l": "zh",
+  "text": "在床下面！",
+  "same": [
+   "LS7.dia.zh2.a"
+  ]
+ },
+ {
+  "id": "LS7.on_sofa.en",
+  "l": "en",
+  "text": "On the sofa!",
+  "same": []
+ },
+ {
+  "id": "LS7.on_sofa.zh",
+  "l": "zh",
+  "text": "在沙发上！",
+  "same": [
+   "SD7.on_sofa.zh"
+  ]
+ },
+ {
+  "id": "LS7.under_chair.en",
+  "l": "en",
+  "text": "Under the chair!",
+  "same": []
+ },
+ {
+  "id": "LS7.under_chair.zh",
+  "l": "zh",
+  "text": "在椅子下面！",
+  "same": []
+ },
+ {
+  "id": "LS7.here.en",
+  "l": "en",
+  "text": "Here it is! Thank you!",
+  "same": []
+ },
+ {
+  "id": "LS7.here.zh",
+  "l": "zh",
+  "text": "在这儿！谢谢！",
+  "same": []
+ },
+ {
+  "id": "LS7.long1.en",
+  "l": "en",
+  "text": "Where is my book? On the table!",
+  "same": []
+ },
+ {
+  "id": "LS7.long1.zh",
+  "l": "zh",
+  "text": "我的书在哪儿？在桌子上！",
+  "same": []
+ },
+ {
+  "id": "LS7.long2.en",
+  "l": "en",
+  "text": "Under the chair! Here it is!",
+  "same": []
+ },
+ {
+  "id": "LS7.long2.zh",
+  "l": "zh",
+  "text": "在椅子下面！在这儿！",
+  "same": []
+ },
+ {
+  "id": "LS7.dia.en1.q",
+  "l": "en",
+  "text": "Where is the book?",
+  "same": [
+   "LS7.dia.en2.q"
+  ]
+ },
+ {
+  "id": "LS7.dia.zh1.q",
+  "l": "zh",
+  "text": "书在哪儿？",
+  "same": [
+   "LS7.dia.zh2.q"
+  ]
+ },
+ {
+  "id": "LS8.dog_run.en",
+  "l": "en",
+  "text": "The dog can run!",
+  "same": [
+   "LS8.dia.en1.a"
+  ]
+ },
+ {
+  "id": "LS8.dog_run.zh",
+  "l": "zh",
+  "text": "小狗能跑！",
+  "same": [
+   "LS8.dia.zh1.a"
+  ]
+ },
+ {
+  "id": "LS8.bird_fly.en",
+  "l": "en",
+  "text": "The bird can fly!",
+  "same": [
+   "LS8.dia.en2.a"
+  ]
+ },
+ {
+  "id": "LS8.bird_fly.zh",
+  "l": "zh",
+  "text": "小鸟能飞！",
+  "same": [
+   "LS8.dia.zh2.a"
+  ]
+ },
+ {
+  "id": "LS8.fish_swim.en",
+  "l": "en",
+  "text": "The fish can swim!",
+  "same": []
+ },
+ {
+  "id": "LS8.fish_swim.zh",
+  "l": "zh",
+  "text": "小鱼能游泳！",
+  "same": []
+ },
+ {
+  "id": "LS8.rabbit_jump.en",
+  "l": "en",
+  "text": "The rabbit can jump!",
+  "same": []
+ },
+ {
+  "id": "LS8.rabbit_jump.zh",
+  "l": "zh",
+  "text": "兔子能跳！",
+  "same": []
+ },
+ {
+  "id": "LS8.hi_duck.en",
+  "l": "en",
+  "text": "Hello, duck!",
+  "same": []
+ },
+ {
+  "id": "LS8.hi_duck.zh",
+  "l": "zh",
+  "text": "小鸭子，你好！",
+  "same": []
+ },
+ {
+  "id": "LS8.ready_go.en",
+  "l": "en",
+  "text": "Ready, go!",
+  "same": []
+ },
+ {
+  "id": "LS8.ready_go.zh",
+  "l": "zh",
+  "text": "预备，跑！",
+  "same": []
+ },
+ {
+  "id": "LS8.long1.en",
+  "l": "en",
+  "text": "The dog can run! The bird can fly!",
+  "same": []
+ },
+ {
+  "id": "LS8.long1.zh",
+  "l": "zh",
+  "text": "小狗能跑！小鸟能飞！",
+  "same": []
+ },
+ {
+  "id": "LS8.long2.en",
+  "l": "en",
+  "text": "The fish can swim! The rabbit can jump!",
+  "same": []
+ },
+ {
+  "id": "LS8.long2.zh",
+  "l": "zh",
+  "text": "小鱼能游泳！兔子能跳！",
+  "same": []
+ },
+ {
+  "id": "LS8.dia.en1.q",
+  "l": "en",
+  "text": "Hello, dog! Ready, go!",
+  "same": []
+ },
+ {
+  "id": "LS8.dia.en2.q",
+  "l": "en",
+  "text": "Hello, bird! Ready, go!",
+  "same": []
+ },
+ {
+  "id": "LS8.dia.zh1.q",
+  "l": "zh",
+  "text": "小狗，你好！预备，跑！",
+  "same": []
+ },
+ {
+  "id": "LS8.dia.zh2.q",
+  "l": "zh",
+  "text": "小鸟，你好！预备，飞！",
+  "same": []
+ },
+ {
+  "id": "LS9.eat_apple.en",
+  "l": "en",
+  "text": "I eat an apple!",
+  "same": []
+ },
+ {
+  "id": "LS9.eat_apple.zh",
+  "l": "zh",
+  "text": "我吃苹果！",
+  "same": []
+ },
+ {
+  "id": "LS9.eat_banana.en",
+  "l": "en",
+  "text": "I eat bananas!",
+  "same": []
+ },
+ {
+  "id": "LS9.eat_banana.zh",
+  "l": "zh",
+  "text": "我吃香蕉！",
+  "same": []
+ },
+ {
+  "id": "LS9.eat_rice.en",
+  "l": "en",
+  "text": "I eat rice!",
+  "same": []
+ },
+ {
+  "id": "LS9.eat_rice.zh",
+  "l": "zh",
+  "text": "我吃米饭！",
+  "same": []
+ },
+ {
+  "id": "LS9.drink_juice.en",
+  "l": "en",
+  "text": "I drink juice!",
+  "same": []
+ },
+ {
+  "id": "LS9.drink_juice.zh",
+  "l": "zh",
+  "text": "我喝果汁！",
+  "same": []
+ },
+ {
+  "id": "LS9.drink_milk.en",
+  "l": "en",
+  "text": "I drink milk!",
+  "same": []
+ },
+ {
+  "id": "LS9.drink_milk.zh",
+  "l": "zh",
+  "text": "我喝牛奶！",
+  "same": []
+ },
+ {
+  "id": "LS9.like_pizza.en",
+  "l": "en",
+  "text": "I like pizza!",
+  "same": [
+   "LS9.dia.en2.a"
+  ]
+ },
+ {
+  "id": "LS9.like_pizza.zh",
+  "l": "zh",
+  "text": "我喜欢比萨！",
+  "same": [
+   "LS9.dia.zh2.a"
+  ]
+ },
+ {
+  "id": "LS9.long1.en",
+  "l": "en",
+  "text": "I eat an apple! I drink milk!",
+  "same": []
+ },
+ {
+  "id": "LS9.long1.zh",
+  "l": "zh",
+  "text": "我吃苹果！我喝牛奶！",
+  "same": []
+ },
+ {
+  "id": "LS9.long2.en",
+  "l": "en",
+  "text": "I like pizza! I like bananas!",
+  "same": []
+ },
+ {
+  "id": "LS9.long2.zh",
+  "l": "zh",
+  "text": "我喜欢比萨！我喜欢香蕉！",
+  "same": []
+ },
+ {
+  "id": "LS9.dia.en1.q",
+  "l": "en",
+  "text": "What do you like?",
+  "same": [
+   "LS9.dia.en2.q"
+  ]
+ },
+ {
+  "id": "LS9.dia.en1.a",
+  "l": "en",
+  "text": "I like apples!",
+  "same": [
+   "SD9.like_apple.en"
+  ]
+ },
+ {
+  "id": "LS9.dia.zh1.q",
+  "l": "zh",
+  "text": "你喜欢什么？",
+  "same": [
+   "LS9.dia.zh2.q"
+  ]
+ },
+ {
+  "id": "LS9.dia.zh1.a",
+  "l": "zh",
+  "text": "我喜欢苹果！",
+  "same": [
+   "SD9.like_apple.zh"
+  ]
+ },
+ {
+  "id": "LS10.sunny.en",
+  "l": "en",
+  "text": "It is sunny!",
+  "same": [
+   "LS10.dia.en1.a"
+  ]
+ },
+ {
+  "id": "LS10.sunny.zh",
+  "l": "zh",
+  "text": "今天晴天！",
+  "same": [
+   "LS10.dia.zh1.a"
+  ]
+ },
+ {
+  "id": "LS10.cloudy.en",
+  "l": "en",
+  "text": "It is cloudy.",
+  "same": []
+ },
+ {
+  "id": "LS10.cloudy.zh",
+  "l": "zh",
+  "text": "今天多云。",
+  "same": []
+ },
+ {
+  "id": "LS10.windy.en",
+  "l": "en",
+  "text": "It is windy!",
+  "same": []
+ },
+ {
+  "id": "LS10.windy.zh",
+  "l": "zh",
+  "text": "今天刮风！",
+  "same": [
+   "SD10.windy.zh"
+  ]
+ },
+ {
+  "id": "LS10.rainy.en",
+  "l": "en",
+  "text": "It is rainy!",
+  "same": []
+ },
+ {
+  "id": "LS10.rainy.zh",
+  "l": "zh",
+  "text": "今天下雨！",
+  "same": []
+ },
+ {
+  "id": "LS10.snowy.en",
+  "l": "en",
+  "text": "It is snowy!",
+  "same": []
+ },
+ {
+  "id": "LS10.snowy.zh",
+  "l": "zh",
+  "text": "今天下雪！",
+  "same": []
+ },
+ {
+  "id": "LS10.cold.en",
+  "l": "en",
+  "text": "It is cold!",
+  "same": []
+ },
+ {
+  "id": "LS10.cold.zh",
+  "l": "zh",
+  "text": "今天很冷！",
+  "same": []
+ },
+ {
+  "id": "LS10.long1.en",
+  "l": "en",
+  "text": "It is sunny! I am happy!",
+  "same": []
+ },
+ {
+  "id": "LS10.long1.zh",
+  "l": "zh",
+  "text": "今天晴天！我很开心！",
+  "same": []
+ },
+ {
+  "id": "LS10.long2.en",
+  "l": "en",
+  "text": "It is rainy. It is cold.",
+  "same": []
+ },
+ {
+  "id": "LS10.long2.zh",
+  "l": "zh",
+  "text": "今天下雨。今天很冷。",
+  "same": []
+ },
+ {
+  "id": "LS10.dia.en1.q",
+  "l": "en",
+  "text": "What is the weather today?",
+  "same": [
+   "LS10.dia.en2.q"
+  ]
+ },
+ {
+  "id": "LS10.dia.en2.a",
+  "l": "en",
+  "text": "It is rainy.",
+  "same": []
+ },
+ {
+  "id": "LS10.dia.zh1.q",
+  "l": "zh",
+  "text": "今天天气怎么样？",
+  "same": [
+   "LS10.dia.zh2.q",
+   "SD10.dia.zh1.q"
+  ]
+ },
+ {
+  "id": "LS10.dia.zh2.a",
+  "l": "zh",
+  "text": "今天下雨。",
+  "same": []
+ },
+ {
+  "id": "LS11.red.en",
+  "l": "en",
+  "text": "Red!",
+  "same": []
+ },
+ {
+  "id": "LS11.red.zh",
+  "l": "zh",
+  "text": "红色！",
+  "same": []
+ },
+ {
+  "id": "LS11.yellow.en",
+  "l": "en",
+  "text": "Yellow!",
+  "same": []
+ },
+ {
+  "id": "LS11.yellow.zh",
+  "l": "zh",
+  "text": "黄色！",
+  "same": []
+ },
+ {
+  "id": "LS11.blue.en",
+  "l": "en",
+  "text": "Blue!",
+  "same": []
+ },
+ {
+  "id": "LS11.blue.zh",
+  "l": "zh",
+  "text": "蓝色！",
+  "same": []
+ },
+ {
+  "id": "LS11.green.en",
+  "l": "en",
+  "text": "Green!",
+  "same": []
+ },
+ {
+  "id": "LS11.green.zh",
+  "l": "zh",
+  "text": "绿色！",
+  "same": []
+ },
+ {
+  "id": "LS11.pink.en",
+  "l": "en",
+  "text": "Pink!",
+  "same": []
+ },
+ {
+  "id": "LS11.pink.zh",
+  "l": "zh",
+  "text": "粉色！",
+  "same": []
+ },
+ {
+  "id": "LS11.rainbow.en",
+  "l": "en",
+  "text": "A rainbow!",
+  "same": []
+ },
+ {
+  "id": "LS11.rainbow.zh",
+  "l": "zh",
+  "text": "彩虹！",
+  "same": []
+ },
+ {
+  "id": "LS11.long1.en",
+  "l": "en",
+  "text": "Red! Yellow! Blue!",
+  "same": []
+ },
+ {
+  "id": "LS11.long1.zh",
+  "l": "zh",
+  "text": "红色！黄色！蓝色！",
+  "same": []
+ },
+ {
+  "id": "LS11.long2.en",
+  "l": "en",
+  "text": "Look! A rainbow! Pink! Green!",
+  "same": []
+ },
+ {
+  "id": "LS11.long2.zh",
+  "l": "zh",
+  "text": "看！彩虹！粉色！绿色！",
+  "same": []
+ },
+ {
+  "id": "LS11.dia.en1.q",
+  "l": "en",
+  "text": "What colour is it?",
+  "same": [
+   "LS11.dia.en2.q"
+  ]
+ },
+ {
+  "id": "LS11.dia.en1.a",
+  "l": "en",
+  "text": "It's red!",
+  "same": []
+ },
+ {
+  "id": "LS11.dia.en2.a",
+  "l": "en",
+  "text": "It's blue!",
+  "same": []
+ },
+ {
+  "id": "LS11.dia.zh1.q",
+  "l": "zh",
+  "text": "这是什么颜色？",
+  "same": [
+   "LS11.dia.zh2.q"
+  ]
+ },
+ {
+  "id": "LS11.dia.zh1.a",
+  "l": "zh",
+  "text": "是红色！",
+  "same": []
+ },
+ {
+  "id": "LS11.dia.zh2.a",
+  "l": "zh",
+  "text": "是蓝色！",
+  "same": []
+ },
+ {
+  "id": "LS12.two_dogs.en",
+  "l": "en",
+  "text": "Two dogs!",
+  "same": [
+   "LS12.dia.en2.a"
+  ]
+ },
+ {
+  "id": "LS12.two_dogs.zh",
+  "l": "zh",
+  "text": "两只狗！",
+  "same": [
+   "LS12.dia.zh2.a"
+  ]
+ },
+ {
+  "id": "LS12.three_cakes.en",
+  "l": "en",
+  "text": "Three cakes!",
+  "same": []
+ },
+ {
+  "id": "LS12.three_cakes.zh",
+  "l": "zh",
+  "text": "三个蛋糕！",
+  "same": []
+ },
+ {
+  "id": "LS12.five_monkeys.en",
+  "l": "en",
+  "text": "Five monkeys!",
+  "same": []
+ },
+ {
+  "id": "LS12.five_monkeys.zh",
+  "l": "zh",
+  "text": "五只猴子！",
+  "same": []
+ },
+ {
+  "id": "LS12.ten_eggs.en",
+  "l": "en",
+  "text": "Ten eggs!",
+  "same": []
+ },
+ {
+  "id": "LS12.ten_eggs.zh",
+  "l": "zh",
+  "text": "十个鸡蛋！",
+  "same": []
+ },
+ {
+  "id": "LS12.how_many.en",
+  "l": "en",
+  "text": "How many cakes? Four!",
+  "same": []
+ },
+ {
+  "id": "LS12.how_many.zh",
+  "l": "zh",
+  "text": "几个蛋糕？四个！",
+  "same": []
+ },
+ {
+  "id": "LS12.how_many.reply.en",
+  "l": "en",
+  "text": "Four!",
+  "same": []
+ },
+ {
+  "id": "LS12.how_many.reply.zh",
+  "l": "zh",
+  "text": "四个！",
+  "same": []
+ },
+ {
+  "id": "LS12.hbd_leo.en",
+  "l": "en",
+  "text": "Happy birthday, Leo!",
+  "same": [
+   "SD5.hbd_leo.en"
+  ]
+ },
+ {
+  "id": "LS12.hbd_leo.zh",
+  "l": "zh",
+  "text": "Leo，生日快乐！",
+  "same": [
+   "SD5.hbd_leo.zh"
+  ]
+ },
+ {
+  "id": "LS12.long1.en",
+  "l": "en",
+  "text": "Two dogs! Three cakes!",
+  "same": []
+ },
+ {
+  "id": "LS12.long1.zh",
+  "l": "zh",
+  "text": "两只狗！三个蛋糕！",
+  "same": []
+ },
+ {
+  "id": "LS12.long2.en",
+  "l": "en",
+  "text": "Hello, everyone! Happy birthday, Leo!",
+  "same": []
+ },
+ {
+  "id": "LS12.long2.zh",
+  "l": "zh",
+  "text": "大家好！Leo，生日快乐！",
+  "same": []
+ },
+ {
+  "id": "LS12.dia.en1.q",
+  "l": "en",
+  "text": "How many cakes?",
+  "same": []
+ },
+ {
+  "id": "LS12.dia.en1.a",
+  "l": "en",
+  "text": "Four cakes!",
+  "same": []
+ },
+ {
+  "id": "LS12.dia.en2.q",
+  "l": "en",
+  "text": "How many dogs?",
+  "same": []
+ },
+ {
+  "id": "LS12.dia.zh1.q",
+  "l": "zh",
+  "text": "几个蛋糕？",
+  "same": []
+ },
+ {
+  "id": "LS12.dia.zh1.a",
+  "l": "zh",
+  "text": "四个蛋糕！",
+  "same": []
+ },
+ {
+  "id": "LS12.dia.zh2.q",
+  "l": "zh",
+  "text": "几只狗？",
+  "same": []
+ },
+ {
+  "id": "SD1.hi_teacher.en",
+  "l": "en",
+  "text": "Good morning, Mrs Lan!",
+  "same": [
+   "SD1.dia.en1.a"
+  ]
+ },
+ {
+  "id": "SD1.hi_teacher.zh",
+  "l": "zh",
+  "text": "Lan老师，早上好！",
+  "same": [
+   "SD1.dia.zh1.a"
+  ]
+ },
+ {
+  "id": "SD1.hi_grandpa.zh",
+  "l": "zh",
+  "text": "爷爷，您好！",
+  "same": []
+ },
+ {
+  "id": "SD1.hi_kids.en",
+  "l": "en",
+  "text": "Hello, kids!",
+  "same": []
+ },
+ {
+  "id": "SD1.hi_kids.zh",
+  "l": "zh",
+  "text": "小朋友们，你们好！",
+  "same": []
+ },
+ {
+  "id": "SD1.night.en",
+  "l": "en",
+  "text": "See you tomorrow!",
+  "same": []
+ },
+ {
+  "id": "SD1.night.zh",
+  "l": "zh",
+  "text": "明天见！",
+  "same": []
+ },
+ {
+  "id": "SD1.go.zh",
+  "l": "zh",
+  "text": "我们去公园！",
+  "same": []
+ },
+ {
+  "id": "SD1.tall.en",
+  "l": "en",
+  "text": "The man is very tall.",
+  "same": []
+ },
+ {
+  "id": "SD1.tall.zh",
+  "l": "zh",
+  "text": "表演的人个子很高。",
+  "same": []
+ },
+ {
+  "id": "SD1.long1.en",
+  "l": "en",
+  "text": "Good morning, Mrs Lan! Hello, Grandpa!",
+  "same": []
+ },
+ {
+  "id": "SD1.long1.zh",
+  "l": "zh",
+  "text": "Lan老师，早上好！爷爷，您好！",
+  "same": []
+ },
+ {
+  "id": "SD1.long2.en",
+  "l": "en",
+  "text": "Goodbye, Mrs Lan! See you tomorrow!",
+  "same": []
+ },
+ {
+  "id": "SD1.long2.zh",
+  "l": "zh",
+  "text": "Lan老师再见！明天见！",
+  "same": []
+ },
+ {
+  "id": "SD1.dia.en1.q",
+  "l": "en",
+  "text": "Good morning, class!",
+  "same": []
+ },
+ {
+  "id": "SD1.dia.en2.q",
+  "l": "en",
+  "text": "Goodbye, class!",
+  "same": []
+ },
+ {
+  "id": "SD1.dia.en2.a",
+  "l": "en",
+  "text": "Goodbye, Mrs Lan!",
+  "same": []
+ },
+ {
+  "id": "SD1.dia.zh1.q",
+  "l": "zh",
+  "text": "小朋友们，早上好！",
+  "same": []
+ },
+ {
+  "id": "SD1.dia.zh2.q",
+  "l": "zh",
+  "text": "小朋友们，再见！",
+  "same": []
+ },
+ {
+  "id": "SD1.dia.zh2.a",
+  "l": "zh",
+  "text": "Lan老师再见！",
+  "same": []
+ },
+ {
+  "id": "SD2.hbd_vu.en",
+  "l": "en",
+  "text": "Happy birthday, Vũ!",
+  "same": []
+ },
+ {
+  "id": "SD2.hbd_vu.zh",
+  "l": "zh",
+  "text": "Vũ，生日快乐！",
+  "same": []
+ },
+ {
+  "id": "SD2.name.en",
+  "l": "en",
+  "text": "My name is Xiaomei.",
+  "same": []
+ },
+ {
+  "id": "SD2.name.zh",
+  "l": "zh",
+  "text": "我叫Xiaomei。",
+  "same": []
+ },
+ {
+  "id": "SD2.age.en",
+  "l": "en",
+  "text": "I'm six years old.",
+  "same": [
+   "SD2.dia.en2.a"
+  ]
+ },
+ {
+  "id": "SD2.ask_age.reply.en",
+  "l": "en",
+  "text": "I'm seven years old.",
+  "same": []
+ },
+ {
+  "id": "SD2.ask_age.reply.zh",
+  "l": "zh",
+  "text": "我七岁。",
+  "same": []
+ },
+ {
+  "id": "SD2.meet.en",
+  "l": "en",
+  "text": "Nice to meet you!",
+  "same": []
+ },
+ {
+  "id": "SD2.meet.zh",
+  "l": "zh",
+  "text": "很高兴认识你！",
+  "same": []
+ },
+ {
+  "id": "SD2.long1.en",
+  "l": "en",
+  "text": "My name is Xiaomei. I'm six years old.",
+  "same": []
+ },
+ {
+  "id": "SD2.long1.zh",
+  "l": "zh",
+  "text": "我叫Xiaomei。我六岁。",
+  "same": []
+ },
+ {
+  "id": "SD2.long2.en",
+  "l": "en",
+  "text": "Happy birthday, Vũ! Nice to meet you!",
+  "same": []
+ },
+ {
+  "id": "SD2.long2.zh",
+  "l": "zh",
+  "text": "Vũ，生日快乐！很高兴认识你！",
+  "same": []
+ },
+ {
+  "id": "SD3.mother.en",
+  "l": "en",
+  "text": "She is my mother.",
+  "same": [
+   "SD3.dia.en1.a"
+  ]
+ },
+ {
+  "id": "SD3.mother.zh",
+  "l": "zh",
+  "text": "她是我妈妈。",
+  "same": [
+   "SD3.dia.zh1.a"
+  ]
+ },
+ {
+  "id": "SD3.father.en",
+  "l": "en",
+  "text": "He is my father.",
+  "same": []
+ },
+ {
+  "id": "SD3.father.zh",
+  "l": "zh",
+  "text": "他是我爸爸。",
+  "same": []
+ },
+ {
+  "id": "SD3.older_bro.en",
+  "l": "en",
+  "text": "He is my older brother.",
+  "same": []
+ },
+ {
+  "id": "SD3.older_bro.zh",
+  "l": "zh",
+  "text": "他是我哥哥。",
+  "same": []
+ },
+ {
+  "id": "SD3.younger_sis.en",
+  "l": "en",
+  "text": "She is my younger sister.",
+  "same": []
+ },
+ {
+  "id": "SD3.younger_sis.zh",
+  "l": "zh",
+  "text": "她是我妹妹。",
+  "same": []
+ },
+ {
+  "id": "SD3.photo.en",
+  "l": "en",
+  "text": "Look at my family photo!",
+  "same": []
+ },
+ {
+  "id": "SD3.photo.zh",
+  "l": "zh",
+  "text": "看我的家庭照片！",
+  "same": []
+ },
+ {
+  "id": "SD3.baby.en",
+  "l": "en",
+  "text": "Look! A baby!",
+  "same": []
+ },
+ {
+  "id": "SD3.baby.zh",
+  "l": "zh",
+  "text": "看！一个宝宝！",
+  "same": []
+ },
+ {
+  "id": "SD3.long1.en",
+  "l": "en",
+  "text": "She is my mother. He is my father.",
+  "same": []
+ },
+ {
+  "id": "SD3.long1.zh",
+  "l": "zh",
+  "text": "她是我妈妈。他是我爸爸。",
+  "same": []
+ },
+ {
+  "id": "SD3.long2.en",
+  "l": "en",
+  "text": "Look at my family photo! He is my older brother.",
+  "same": []
+ },
+ {
+  "id": "SD3.long2.zh",
+  "l": "zh",
+  "text": "看我的家庭照片！他是我哥哥。",
+  "same": []
+ },
+ {
+  "id": "SD3.dia.en2.q",
+  "l": "en",
+  "text": "Who is he? Is he your father?",
+  "same": []
+ },
+ {
+  "id": "SD3.dia.en2.a",
+  "l": "en",
+  "text": "No! He is my older brother.",
+  "same": []
+ },
+ {
+  "id": "SD3.dia.zh1.q",
+  "l": "zh",
+  "text": "她是谁？",
+  "same": []
+ },
+ {
+  "id": "SD3.dia.zh2.q",
+  "l": "zh",
+  "text": "他是谁？是你爸爸吗？",
+  "same": []
+ },
+ {
+  "id": "SD3.dia.zh2.a",
+  "l": "zh",
+  "text": "不是！他是我哥哥。",
+  "same": []
+ },
+ {
+  "id": "SD4.clap.en",
+  "l": "en",
+  "text": "Clap your hands!",
+  "same": [
+   "SD4.dia.en1.q"
+  ]
+ },
+ {
+  "id": "SD4.clap.zh",
+  "l": "zh",
+  "text": "拍拍手！",
+  "same": [
+   "SD4.dia.zh1.q"
+  ]
+ },
+ {
+  "id": "SD4.stamp.en",
+  "l": "en",
+  "text": "Stamp your feet!",
+  "same": [
+   "SD4.dia.en2.q"
+  ]
+ },
+ {
+  "id": "SD4.stamp.zh",
+  "l": "zh",
+  "text": "跺跺脚！",
+  "same": [
+   "SD4.dia.zh2.q"
+  ]
+ },
+ {
+  "id": "SD4.mouth.en",
+  "l": "en",
+  "text": "Open your mouth!",
+  "same": []
+ },
+ {
+  "id": "SD4.mouth.zh",
+  "l": "zh",
+  "text": "张大口！",
+  "same": []
+ },
+ {
+  "id": "SD4.hands.en",
+  "l": "en",
+  "text": "Two hands!",
+  "same": []
+ },
+ {
+  "id": "SD4.hands.zh",
+  "l": "zh",
+  "text": "两只手！",
+  "same": []
+ },
+ {
+  "id": "SD4.arms.en",
+  "l": "en",
+  "text": "Long arms, long legs!",
+  "same": []
+ },
+ {
+  "id": "SD4.arms.zh",
+  "l": "zh",
+  "text": "胳膊很长，腿也很长！",
+  "same": []
+ },
+ {
+  "id": "SD4.body.en",
+  "l": "en",
+  "text": "This is my body.",
+  "same": []
+ },
+ {
+  "id": "SD4.body.zh",
+  "l": "zh",
+  "text": "这是我的身体。",
+  "same": []
+ },
+ {
+  "id": "SD4.long1.en",
+  "l": "en",
+  "text": "Clap your hands! Stamp your feet!",
+  "same": []
+ },
+ {
+  "id": "SD4.long1.zh",
+  "l": "zh",
+  "text": "拍拍手！跺跺脚！",
+  "same": []
+ },
+ {
+  "id": "SD4.long2.en",
+  "l": "en",
+  "text": "Look, Grandpa! Long arms, long legs!",
+  "same": []
+ },
+ {
+  "id": "SD4.long2.zh",
+  "l": "zh",
+  "text": "爷爷，看！胳膊很长，腿也很长！",
+  "same": []
+ },
+ {
+  "id": "SD4.dia.en1.a",
+  "l": "en",
+  "text": "Clap your hands! It's fun!",
+  "same": []
+ },
+ {
+  "id": "SD4.dia.en2.a",
+  "l": "en",
+  "text": "Stamp your feet! It's fun!",
+  "same": []
+ },
+ {
+  "id": "SD4.dia.zh1.a",
+  "l": "zh",
+  "text": "拍拍手！真好玩！",
+  "same": []
+ },
+ {
+  "id": "SD4.dia.zh2.a",
+  "l": "zh",
+  "text": "跺跺脚！真好玩！",
+  "same": []
+ },
+ {
+  "id": "SD5.sleepy.en",
+  "l": "en",
+  "text": "I feel sleepy.",
+  "same": []
+ },
+ {
+  "id": "SD5.sleepy.zh",
+  "l": "zh",
+  "text": "我很困。",
+  "same": []
+ },
+ {
+  "id": "SD5.excited.en",
+  "l": "en",
+  "text": "I feel excited!",
+  "same": [
+   "SD5.dia.en1.a"
+  ]
+ },
+ {
+  "id": "SD5.excited.zh",
+  "l": "zh",
+  "text": "我很兴奋！",
+  "same": [
+   "SD5.dia.zh1.a"
+  ]
+ },
+ {
+  "id": "SD5.hungry.en",
+  "l": "en",
+  "text": "I'm hungry!",
+  "same": []
+ },
+ {
+  "id": "SD5.thirsty.en",
+  "l": "en",
+  "text": "I'm thirsty!",
+  "same": []
+ },
+ {
+  "id": "SD5.thirsty.zh",
+  "l": "zh",
+  "text": "我渴了！",
+  "same": []
+ },
+ {
+  "id": "SD5.night.en",
+  "l": "en",
+  "text": "Go to bed. Good night!",
+  "same": []
+ },
+ {
+  "id": "SD5.night.zh",
+  "l": "zh",
+  "text": "去睡觉吧。晚安！",
+  "same": []
+ },
+ {
+  "id": "SD5.long1.en",
+  "l": "en",
+  "text": "I feel sleepy. I'm hungry.",
+  "same": []
+ },
+ {
+  "id": "SD5.long1.zh",
+  "l": "zh",
+  "text": "我很困。我饿了。",
+  "same": []
+ },
+ {
+  "id": "SD5.long2.en",
+  "l": "en",
+  "text": "Happy birthday, Leo! I feel excited!",
+  "same": []
+ },
+ {
+  "id": "SD5.long2.zh",
+  "l": "zh",
+  "text": "Leo，生日快乐！我很兴奋！",
+  "same": []
+ },
+ {
+  "id": "SD5.dia.en2.q",
+  "l": "en",
+  "text": "Are you hungry?",
+  "same": []
+ },
+ {
+  "id": "SD5.dia.en2.a",
+  "l": "en",
+  "text": "Yes, I'm hungry!",
+  "same": []
+ },
+ {
+  "id": "SD5.dia.zh1.q",
+  "l": "zh",
+  "text": "你感觉怎么样？",
+  "same": []
+ },
+ {
+  "id": "SD5.dia.zh2.q",
+  "l": "zh",
+  "text": "你饿了吗？",
+  "same": []
+ },
+ {
+  "id": "SD5.dia.zh2.a",
+  "l": "zh",
+  "text": "我饿了。",
+  "same": []
+ },
+ {
+  "id": "SD6.crayon.en",
+  "l": "en",
+  "text": "I want a red crayon, please!",
+  "same": []
+ },
+ {
+  "id": "SD6.crayon.zh",
+  "l": "zh",
+  "text": "我要一支红色的蜡笔！",
+  "same": []
+ },
+ {
+  "id": "SD6.scissors.en",
+  "l": "en",
+  "text": "Look! Scissors!",
+  "same": []
+ },
+ {
+  "id": "SD6.scissors.zh",
+  "l": "zh",
+  "text": "看！剪刀！",
+  "same": []
+ },
+ {
+  "id": "SD6.glue.en",
+  "l": "en",
+  "text": "This is glue.",
+  "same": [
+   "SD6.dia.en1.a"
+  ]
+ },
+ {
+  "id": "SD6.glue.zh",
+  "l": "zh",
+  "text": "这是胶水。",
+  "same": [
+   "SD6.dia.zh1.a"
+  ]
+ },
+ {
+  "id": "SD6.bag.en",
+  "l": "en",
+  "text": "My new schoolbag!",
+  "same": []
+ },
+ {
+  "id": "SD6.bag.zh",
+  "l": "zh",
+  "text": "我的新书包！",
+  "same": []
+ },
+ {
+  "id": "SD6.line.en",
+  "l": "en",
+  "text": "Make a line, please.",
+  "same": []
+ },
+ {
+  "id": "SD6.line.zh",
+  "l": "zh",
+  "text": "请排队。",
+  "same": []
+ },
+ {
+  "id": "SD6.letters.en",
+  "l": "en",
+  "text": "These and those are letters!",
+  "same": []
+ },
+ {
+  "id": "SD6.letters.zh",
+  "l": "zh",
+  "text": "这些和那些都是字母！",
+  "same": []
+ },
+ {
+  "id": "SD6.long1.en",
+  "l": "en",
+  "text": "Look! Scissors! This is glue.",
+  "same": []
+ },
+ {
+  "id": "SD6.long1.zh",
+  "l": "zh",
+  "text": "看！剪刀！这是胶水。",
+  "same": []
+ },
+ {
+  "id": "SD6.long2.en",
+  "l": "en",
+  "text": "I want a red crayon, please! Thank you!",
+  "same": []
+ },
+ {
+  "id": "SD6.long2.zh",
+  "l": "zh",
+  "text": "我要一支红色的蜡笔！谢谢！",
+  "same": []
+ },
+ {
+  "id": "SD6.dia.en2.q",
+  "l": "en",
+  "text": "Is that a new schoolbag?",
+  "same": []
+ },
+ {
+  "id": "SD6.dia.en2.a",
+  "l": "en",
+  "text": "Yes, it's my new schoolbag!",
+  "same": []
+ },
+ {
+  "id": "SD6.dia.zh2.q",
+  "l": "zh",
+  "text": "那是新书包吗？",
+  "same": []
+ },
+ {
+  "id": "SD6.dia.zh2.a",
+  "l": "zh",
+  "text": "对，这是我的新书包！",
+  "same": []
+ },
+ {
+  "id": "SD7.where.en",
+  "l": "en",
+  "text": "Where is my ball?",
+  "same": []
+ },
+ {
+  "id": "SD7.where.zh",
+  "l": "zh",
+  "text": "我的球在哪儿？",
+  "same": []
+ },
+ {
+  "id": "SD7.under_bed.en",
+  "l": "en",
+  "text": "It's under the bed!",
+  "same": [
+   "SD7.dia.en1.a"
+  ]
+ },
+ {
+  "id": "SD7.under_bed.zh",
+  "l": "zh",
+  "text": "就在床下面！",
+  "same": [
+   "SD7.dia.zh1.a"
+  ]
+ },
+ {
+  "id": "SD7.on_sofa.en",
+  "l": "en",
+  "text": "It's on the sofa!",
+  "same": []
+ },
+ {
+  "id": "SD7.dining.en",
+  "l": "en",
+  "text": "Is it in the dining room?",
+  "same": [
+   "SD7.dia.en2.q"
+  ]
+ },
+ {
+  "id": "SD7.dining.zh",
+  "l": "zh",
+  "text": "在餐厅吗？",
+  "same": [
+   "SD7.dia.zh2.q"
+  ]
+ },
+ {
+  "id": "SD7.dining.reply.en",
+  "l": "en",
+  "text": "No, it is not.",
+  "same": []
+ },
+ {
+  "id": "SD7.dining.reply.zh",
+  "l": "zh",
+  "text": "不在。",
+  "same": []
+ },
+ {
+  "id": "SD7.living.en",
+  "l": "en",
+  "text": "This is the living room.",
+  "same": []
+ },
+ {
+  "id": "SD7.living.zh",
+  "l": "zh",
+  "text": "这是客厅。",
+  "same": []
+ },
+ {
+  "id": "SD7.found.en",
+  "l": "en",
+  "text": "Right here! Well done!",
+  "same": []
+ },
+ {
+  "id": "SD7.found.zh",
+  "l": "zh",
+  "text": "就在这里！真棒！",
+  "same": []
+ },
+ {
+  "id": "SD7.long1.en",
+  "l": "en",
+  "text": "Where is my ball? It's under the bed!",
+  "same": []
+ },
+ {
+  "id": "SD7.long1.zh",
+  "l": "zh",
+  "text": "我的球在哪儿？就在床下面！",
+  "same": []
+ },
+ {
+  "id": "SD7.long2.en",
+  "l": "en",
+  "text": "It's on the sofa! Right here! Well done!",
+  "same": []
+ },
+ {
+  "id": "SD7.long2.zh",
+  "l": "zh",
+  "text": "在沙发上！就在这里！真棒！",
+  "same": []
+ },
+ {
+  "id": "SD7.dia.en1.q",
+  "l": "en",
+  "text": "Where is the ball?",
+  "same": []
+ },
+ {
+  "id": "SD7.dia.en2.a",
+  "l": "en",
+  "text": "No, it's not. It's on the sofa!",
+  "same": []
+ },
+ {
+  "id": "SD7.dia.zh1.q",
+  "l": "zh",
+  "text": "球在哪儿？",
+  "same": []
+ },
+ {
+  "id": "SD7.dia.zh2.a",
+  "l": "zh",
+  "text": "不在。在沙发上！",
+  "same": []
+ },
+ {
+  "id": "SD8.bird_fly.en",
+  "l": "en",
+  "text": "The bird can fly.",
+  "same": []
+ },
+ {
+  "id": "SD8.bird_fly.zh",
+  "l": "zh",
+  "text": "鸟能飞。",
+  "same": []
+ },
+ {
+  "id": "SD8.fish_swim.en",
+  "l": "en",
+  "text": "The fish can swim.",
+  "same": []
+ },
+ {
+  "id": "SD8.fish_swim.zh",
+  "l": "zh",
+  "text": "鱼能游泳。",
+  "same": []
+ },
+ {
+  "id": "SD8.dog_run.en",
+  "l": "en",
+  "text": "The dog can run.",
+  "same": []
+ },
+ {
+  "id": "SD8.dog_run.zh",
+  "l": "zh",
+  "text": "狗能跑。",
+  "same": []
+ },
+ {
+  "id": "SD8.rabbit_jump.en",
+  "l": "en",
+  "text": "The rabbit can jump.",
+  "same": []
+ },
+ {
+  "id": "SD8.rabbit_jump.zh",
+  "l": "zh",
+  "text": "兔子能跳。",
+  "same": []
+ },
+ {
+  "id": "SD8.frog_cant.en",
+  "l": "en",
+  "text": "The frog can't fly.",
+  "same": []
+ },
+ {
+  "id": "SD8.frog_cant.zh",
+  "l": "zh",
+  "text": "青蛙不能飞。",
+  "same": []
+ },
+ {
+  "id": "SD8.bear_swim.en",
+  "l": "en",
+  "text": "The polar bear can swim.",
+  "same": []
+ },
+ {
+  "id": "SD8.bear_swim.zh",
+  "l": "zh",
+  "text": "北极熊能游泳。",
+  "same": []
+ },
+ {
+  "id": "SD8.long1.en",
+  "l": "en",
+  "text": "The bird can fly. The fish can swim.",
+  "same": []
+ },
+ {
+  "id": "SD8.long1.zh",
+  "l": "zh",
+  "text": "鸟能飞。鱼能游泳。",
+  "same": []
+ },
+ {
+  "id": "SD8.long2.en",
+  "l": "en",
+  "text": "The dog can run. The frog can't fly.",
+  "same": []
+ },
+ {
+  "id": "SD8.long2.zh",
+  "l": "zh",
+  "text": "狗能跑。青蛙不能飞。",
+  "same": []
+ },
+ {
+  "id": "SD8.dia.en1.q",
+  "l": "en",
+  "text": "Can the duck fly?",
+  "same": []
+ },
+ {
+  "id": "SD8.dia.en1.a",
+  "l": "en",
+  "text": "Yes, it can!",
+  "same": []
+ },
+ {
+  "id": "SD8.dia.en2.q",
+  "l": "en",
+  "text": "Can the frog fly?",
+  "same": []
+ },
+ {
+  "id": "SD8.dia.en2.a",
+  "l": "en",
+  "text": "No, it can't!",
+  "same": []
+ },
+ {
+  "id": "SD8.dia.zh1.q",
+  "l": "zh",
+  "text": "鸭子能飞吗？",
+  "same": []
+ },
+ {
+  "id": "SD8.dia.zh1.a",
+  "l": "zh",
+  "text": "能！",
+  "same": []
+ },
+ {
+  "id": "SD8.dia.zh2.q",
+  "l": "zh",
+  "text": "青蛙能飞吗？",
+  "same": []
+ },
+ {
+  "id": "SD8.dia.zh2.a",
+  "l": "zh",
+  "text": "不能！",
+  "same": []
+ },
+ {
+  "id": "SD9.like_ice.en",
+  "l": "en",
+  "text": "I like ice cream!",
+  "same": []
+ },
+ {
+  "id": "SD9.like_ice.zh",
+  "l": "zh",
+  "text": "我喜欢冰淇淋！",
+  "same": []
+ },
+ {
+  "id": "SD9.dont_fruit.en",
+  "l": "en",
+  "text": "I don't like fruit.",
+  "same": []
+ },
+ {
+  "id": "SD9.dont_fruit.zh",
+  "l": "zh",
+  "text": "我不喜欢水果。",
+  "same": []
+ },
+ {
+  "id": "SD9.or.en",
+  "l": "en",
+  "text": "Noodles or ice cream?",
+  "same": []
+ },
+ {
+  "id": "SD9.or.zh",
+  "l": "zh",
+  "text": "面条还是冰淇淋？",
+  "same": []
+ },
+ {
+  "id": "SD9.no_thanks.en",
+  "l": "en",
+  "text": "No, thank you!",
+  "same": [
+   "SD9.dia.en2.a"
+  ]
+ },
+ {
+  "id": "SD9.no_thanks.zh",
+  "l": "zh",
+  "text": "不要，谢谢！",
+  "same": [
+   "SD9.dia.zh2.a"
+  ]
+ },
+ {
+  "id": "SD9.burger.en",
+  "l": "en",
+  "text": "Do you like burgers?",
+  "same": []
+ },
+ {
+  "id": "SD9.burger.zh",
+  "l": "zh",
+  "text": "你喜欢汉堡吗？",
+  "same": []
+ },
+ {
+  "id": "SD9.burger.reply.en",
+  "l": "en",
+  "text": "Yes, I do!",
+  "same": []
+ },
+ {
+  "id": "SD9.burger.reply.zh",
+  "l": "zh",
+  "text": "喜欢！",
+  "same": []
+ },
+ {
+  "id": "SD9.long1.en",
+  "l": "en",
+  "text": "I like ice cream! I don't like noodles.",
+  "same": []
+ },
+ {
+  "id": "SD9.long1.zh",
+  "l": "zh",
+  "text": "我喜欢冰淇淋！我不喜欢面条。",
+  "same": []
+ },
+ {
+  "id": "SD9.long2.en",
+  "l": "en",
+  "text": "Do you like burgers? Yes, I do! I like chips!",
+  "same": []
+ },
+ {
+  "id": "SD9.long2.zh",
+  "l": "zh",
+  "text": "你喜欢汉堡吗？喜欢！我喜欢薯条！",
+  "same": []
+ },
+ {
+  "id": "SD9.dia.en1.q",
+  "l": "en",
+  "text": "Do you like noodles?",
+  "same": []
+ },
+ {
+  "id": "SD9.dia.en1.a",
+  "l": "en",
+  "text": "Yes, I do! Noodles are nice!",
+  "same": []
+ },
+ {
+  "id": "SD9.dia.en2.q",
+  "l": "en",
+  "text": "Do you want candy?",
+  "same": []
+ },
+ {
+  "id": "SD9.dia.zh1.q",
+  "l": "zh",
+  "text": "你喜欢面条吗？",
+  "same": []
+ },
+ {
+  "id": "SD9.dia.zh1.a",
+  "l": "zh",
+  "text": "喜欢！面条好吃！",
+  "same": []
+ },
+ {
+  "id": "SD9.dia.zh2.q",
+  "l": "zh",
+  "text": "你想吃糖果吗？",
+  "same": []
+ },
+ {
+  "id": "SD10.sunny.en",
+  "l": "en",
+  "text": "It's sunny today.",
+  "same": []
+ },
+ {
+  "id": "SD10.sunny.zh",
+  "l": "zh",
+  "text": "今天晴天。",
+  "same": []
+ },
+ {
+  "id": "SD10.windy.en",
+  "l": "en",
+  "text": "It's windy!",
+  "same": []
+ },
+ {
+  "id": "SD10.rainy.en",
+  "l": "en",
+  "text": "Oh no! It's raining!",
+  "same": []
+ },
+ {
+  "id": "SD10.rainy.zh",
+  "l": "zh",
+  "text": "哎呀！下雨了！",
+  "same": []
+ },
+ {
+  "id": "SD10.snowy.en",
+  "l": "en",
+  "text": "It's snowy! A snowman!",
+  "same": []
+ },
+ {
+  "id": "SD10.snowy.zh",
+  "l": "zh",
+  "text": "下雪了！雪人！",
+  "same": []
+ },
+ {
+  "id": "SD10.coat.en",
+  "l": "en",
+  "text": "Wear a coat!",
+  "same": []
+ },
+ {
+  "id": "SD10.coat.zh",
+  "l": "zh",
+  "text": "穿外套！",
+  "same": []
+ },
+ {
+  "id": "SD10.hat.en",
+  "l": "en",
+  "text": "Wear a hat!",
+  "same": []
+ },
+ {
+  "id": "SD10.hat.zh",
+  "l": "zh",
+  "text": "戴帽子！",
+  "same": []
+ },
+ {
+  "id": "SD10.long1.en",
+  "l": "en",
+  "text": "It's rainy! Wear a coat!",
+  "same": []
+ },
+ {
+  "id": "SD10.long1.zh",
+  "l": "zh",
+  "text": "下雨了！穿外套！",
+  "same": []
+ },
+ {
+  "id": "SD10.long2.en",
+  "l": "en",
+  "text": "It's cold. Wear a hat and a scarf!",
+  "same": []
+ },
+ {
+  "id": "SD10.long2.zh",
+  "l": "zh",
+  "text": "很冷。戴帽子和围巾！",
+  "same": []
+ },
+ {
+  "id": "SD10.dia.en1.q",
+  "l": "en",
+  "text": "What's the weather today?",
+  "same": []
+ },
+ {
+  "id": "SD10.dia.en1.a",
+  "l": "en",
+  "text": "It's rainy!",
+  "same": []
+ },
+ {
+  "id": "SD10.dia.en2.q",
+  "l": "en",
+  "text": "Where can we play?",
+  "same": []
+ },
+ {
+  "id": "SD10.dia.en2.a",
+  "l": "en",
+  "text": "In the park! It is sunny today.",
+  "same": []
+ },
+ {
+  "id": "SD10.dia.zh1.a",
+  "l": "zh",
+  "text": "下雨了！",
+  "same": []
+ },
+ {
+  "id": "SD10.dia.zh2.q",
+  "l": "zh",
+  "text": "我们能在哪儿玩？",
+  "same": []
+ },
+ {
+  "id": "SD10.dia.zh2.a",
+  "l": "zh",
+  "text": "在公园！今天晴天。",
+  "same": []
+ },
+ {
+  "id": "SD11.pink_dress.en",
+  "l": "en",
+  "text": "A pink dress!",
+  "same": []
+ },
+ {
+  "id": "SD11.pink_dress.zh",
+  "l": "zh",
+  "text": "粉色的裙子！",
+  "same": []
+ },
+ {
+  "id": "SD11.blue_shorts.en",
+  "l": "en",
+  "text": "Blue shorts!",
+  "same": []
+ },
+ {
+  "id": "SD11.blue_shorts.zh",
+  "l": "zh",
+  "text": "蓝色的短裤！",
+  "same": []
+ },
+ {
+  "id": "SD11.red_socks.en",
+  "l": "en",
+  "text": "Red socks!",
+  "same": []
+ },
+ {
+  "id": "SD11.red_socks.zh",
+  "l": "zh",
+  "text": "红色的袜子！",
+  "same": []
+ },
+ {
+  "id": "SD11.gold.en",
+  "l": "en",
+  "text": "Gold!",
+  "same": []
+ },
+ {
+  "id": "SD11.gold.zh",
+  "l": "zh",
+  "text": "金色！",
+  "same": []
+ },
+ {
+  "id": "SD11.colour_dress.en",
+  "l": "en",
+  "text": "Colour the dress pink!",
+  "same": []
+ },
+ {
+  "id": "SD11.colour_dress.zh",
+  "l": "zh",
+  "text": "把裙子涂成粉色！",
+  "same": []
+ },
+ {
+  "id": "SD11.fav.en",
+  "l": "en",
+  "text": "What colour do you like?",
+  "same": [
+   "SD11.dia.en1.q"
+  ]
+ },
+ {
+  "id": "SD11.fav.zh",
+  "l": "zh",
+  "text": "你喜欢什么颜色？",
+  "same": [
+   "SD11.dia.zh1.q"
+  ]
+ },
+ {
+  "id": "SD11.fav.reply.en",
+  "l": "en",
+  "text": "I like gold!",
+  "same": [
+   "SD11.dia.en1.a"
+  ]
+ },
+ {
+  "id": "SD11.fav.reply.zh",
+  "l": "zh",
+  "text": "我喜欢金色！",
+  "same": [
+   "SD11.dia.zh1.a"
+  ]
+ },
+ {
+  "id": "SD11.long1.en",
+  "l": "en",
+  "text": "A pink dress! Blue shorts!",
+  "same": []
+ },
+ {
+  "id": "SD11.long1.zh",
+  "l": "zh",
+  "text": "粉色的裙子！蓝色的短裤！",
+  "same": []
+ },
+ {
+  "id": "SD11.long2.en",
+  "l": "en",
+  "text": "What colour do you like? I like gold!",
+  "same": []
+ },
+ {
+  "id": "SD11.long2.zh",
+  "l": "zh",
+  "text": "你喜欢什么颜色？我喜欢金色！",
+  "same": []
+ },
+ {
+  "id": "SD11.dia.en2.q",
+  "l": "en",
+  "text": "What colour is the dress?",
+  "same": []
+ },
+ {
+  "id": "SD11.dia.en2.a",
+  "l": "en",
+  "text": "It's pink!",
+  "same": []
+ },
+ {
+  "id": "SD11.dia.zh2.q",
+  "l": "zh",
+  "text": "裙子是什么颜色？",
+  "same": []
+ },
+ {
+  "id": "SD11.dia.zh2.a",
+  "l": "zh",
+  "text": "是粉色！",
+  "same": []
+ },
+ {
+  "id": "SD12.count.en",
+  "l": "en",
+  "text": "Let's count the people!",
+  "same": []
+ },
+ {
+  "id": "SD12.count.zh",
+  "l": "zh",
+  "text": "我们数一数人吧！",
+  "same": []
+ },
+ {
+  "id": "SD12.ten.en",
+  "l": "en",
+  "text": "Ten people.",
+  "same": [
+   "SD12.dia.en1.a"
+  ]
+ },
+ {
+  "id": "SD12.ten.zh",
+  "l": "zh",
+  "text": "十个人。",
+  "same": [
+   "SD12.dia.zh1.a"
+  ]
+ },
+ {
+  "id": "SD12.time.en",
+  "l": "en",
+  "text": "What time is it? It's eight o'clock.",
+  "same": []
+ },
+ {
+  "id": "SD12.time.zh",
+  "l": "zh",
+  "text": "现在几点？现在八点。",
+  "same": []
+ },
+ {
+  "id": "SD12.photo.en",
+  "l": "en",
+  "text": "Take a photo!",
+  "same": []
+ },
+ {
+  "id": "SD12.photo.zh",
+  "l": "zh",
+  "text": "拍张照片！",
+  "same": []
+ },
+ {
+  "id": "SD12.hooray.en",
+  "l": "en",
+  "text": "Hooray!",
+  "same": []
+ },
+ {
+  "id": "SD12.hooray.zh",
+  "l": "zh",
+  "text": "耶！",
+  "same": []
+ },
+ {
+  "id": "SD12.cake.en",
+  "l": "en",
+  "text": "Mrs Lan, this cake is for you!",
+  "same": []
+ },
+ {
+  "id": "SD12.cake.zh",
+  "l": "zh",
+  "text": "Lan老师，这个蛋糕是给您的！",
+  "same": []
+ },
+ {
+  "id": "SD12.long1.en",
+  "l": "en",
+  "text": "Ten people. Take a photo!",
+  "same": []
+ },
+ {
+  "id": "SD12.long1.zh",
+  "l": "zh",
+  "text": "十个人。拍张照片！",
+  "same": []
+ },
+ {
+  "id": "SD12.long2.en",
+  "l": "en",
+  "text": "It's eight o'clock. Hooray!",
+  "same": []
+ },
+ {
+  "id": "SD12.long2.zh",
+  "l": "zh",
+  "text": "现在八点。耶！",
+  "same": []
+ },
+ {
+  "id": "SD12.dia.en1.q",
+  "l": "en",
+  "text": "How many people?",
+  "same": []
+ },
+ {
+  "id": "SD12.dia.en2.q",
+  "l": "en",
+  "text": "What time is it now?",
+  "same": []
+ },
+ {
+  "id": "SD12.dia.en2.a",
+  "l": "en",
+  "text": "It's eight o'clock.",
+  "same": []
+ },
+ {
+  "id": "SD12.dia.zh1.q",
+  "l": "zh",
+  "text": "几个人？",
+  "same": []
+ },
+ {
+  "id": "SD12.dia.zh2.q",
+  "l": "zh",
+  "text": "现在几点？",
+  "same": []
+ },
+ {
+  "id": "SD12.dia.zh2.a",
+  "l": "zh",
+  "text": "现在八点。",
+  "same": []
+ },
+ {
+  "id": "common.wake.en",
+  "l": "en",
+  "text": "Hi, Leo!",
+  "same": []
+ },
+ {
+  "id": "common.ok1.en",
+  "l": "en",
+  "text": "Great!",
+  "same": []
+ },
+ {
+  "id": "common.ok2.en",
+  "l": "en",
+  "text": "Super!",
+  "same": []
+ },
+ {
+  "id": "common.ok3.en",
+  "l": "en",
+  "text": "Wow!",
+  "same": []
+ },
+ {
+  "id": "common.ok4.en",
+  "l": "en",
+  "text": "Good job!",
+  "same": []
+ },
+ {
+  "id": "common.sent.en",
+  "l": "en",
+  "text": "Nice sentence!",
+  "same": []
+ },
+ {
+  "id": "common.hello.en",
+  "l": "en",
+  "text": "Hi! I can do magic!",
+  "same": []
+ },
+ {
+  "id": "common.undo.en",
+  "l": "en",
+  "text": "OK!",
+  "same": []
+ },
+ {
+  "id": "common.other.en",
+  "l": "en",
+  "text": "I can do magic too!",
+  "same": []
+ },
+ {
+  "id": "common.nothing.en",
+  "l": "en",
+  "text": "Nothing to undo!",
+  "same": []
+ },
+ {
+  "id": "common.double.en",
+  "l": "en",
+  "text": "Double magic!",
+  "same": []
+ },
+ {
+  "id": "common.bonus.en",
+  "l": "en",
+  "text": "Bonus magic!",
+  "same": []
+ },
+ {
+  "id": "common.try.en",
+  "l": "en",
+  "text": "Good try!",
+  "same": []
+ },
+ {
+  "id": "common.more.en",
+  "l": "en",
+  "text": "Say more!",
+  "same": []
+ },
+ {
+  "id": "common.gold.en",
+  "l": "en",
+  "text": "Golden magic!",
+  "same": []
+ },
+ {
+  "id": "common.again.en",
+  "l": "en",
+  "text": "Your turn!",
+  "same": []
+ },
+ {
+  "id": "common.no.en",
+  "l": "en",
+  "text": "No, no!",
+  "same": []
+ },
+ {
+  "id": "common.ok1.zh",
+  "l": "zh",
+  "text": "真棒！",
+  "same": []
+ },
+ {
+  "id": "common.ok2.zh",
+  "l": "zh",
+  "text": "太好了！",
+  "same": []
+ },
+ {
+  "id": "common.ok3.zh",
+  "l": "zh",
+  "text": "很好！",
+  "same": [
+   "common.try.zh"
+  ]
+ },
+ {
+  "id": "common.sent.zh",
+  "l": "zh",
+  "text": "说得真好！",
+  "same": []
+ },
+ {
+  "id": "common.hello.zh",
+  "l": "zh",
+  "text": "你好！我会魔法！",
+  "same": []
+ },
+ {
+  "id": "common.undo.zh",
+  "l": "zh",
+  "text": "好的！",
+  "same": []
+ },
+ {
+  "id": "common.other.zh",
+  "l": "zh",
+  "text": "我也会魔法！",
+  "same": []
+ },
+ {
+  "id": "common.nothing.zh",
+  "l": "zh",
+  "text": "还没有魔法！",
+  "same": []
+ },
+ {
+  "id": "common.double.zh",
+  "l": "zh",
+  "text": "双重魔法！",
+  "same": []
+ },
+ {
+  "id": "common.bonus.zh",
+  "l": "zh",
+  "text": "奖励魔法！",
+  "same": []
+ },
+ {
+  "id": "common.more.zh",
+  "l": "zh",
+  "text": "再说一句！",
+  "same": []
+ },
+ {
+  "id": "common.gold.zh",
+  "l": "zh",
+  "text": "金色魔法！",
+  "same": []
+ },
+ {
+  "id": "common.again.zh",
+  "l": "zh",
+  "text": "轮到你啦！",
+  "same": []
+ },
+ {
+  "id": "common.no.zh",
+  "l": "zh",
+  "text": "不，不！",
+  "same": []
+ }
+]

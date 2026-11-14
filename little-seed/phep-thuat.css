@@ -21,8 +21,8 @@ body.pt-on .pt-open{display:none}
 .pt-sky.t-night .pt-sun{opacity:0;transform:translateY(40vh)}
 .pt-sky.t-night .pt-moon{opacity:1;transform:none}
 .pt-sky.t-night:after{content:"✦  ✧   ✦    ✧  ✦   ✧";position:absolute;top:12%;left:8%;right:40%;color:#FFF6C8;font-size:3vmin;letter-spacing:2vmin;opacity:.9}
-.pt-stage{position:absolute;inset:0}
-.pt-act{position:absolute;bottom:5%;width:auto;height:auto;max-width:22%;transform:translateX(-50%);transform-origin:50% 100%;filter:drop-shadow(0 6px 6px rgba(0,0,0,.25));transition:left .6s,height .4s}
+.pt-stage{position:absolute;inset:0;container-type:size}
+.pt-act{position:absolute;bottom:calc(var(--b,5%) + var(--bs,0%));width:auto;height:auto;max-width:22%;object-fit:contain;transform:translateX(-50%);transform-origin:50% 100%;filter:drop-shadow(0 6px 6px rgba(0,0,0,.25));transition:left .6s,height .4s}
 .pt-act.pt-in{animation:ptIn .7s cubic-bezier(.3,1.5,.5,1)}
 .pt-act.pt-out{animation:ptOut .7s forwards}
 .pt-act.pt-cao{transform:translateX(-50%) scaleY(1.35)}
@@ -171,7 +171,8 @@ body.pt-on .pt-open{display:none}
   .pt-open{right:auto;left:12px;bottom:calc(var(--nav,64px) + var(--xth,0px) + 12px)}   /* nút Góc vinh danh ở góc phải */
   .pt-open b{display:none}
   .pt-wiz{height:40%}
-  .pt-act{bottom:42%;max-width:30%}   /* điện thoại dọc: các bạn đứng giữa màn, phù thuỷ ở hai góc dưới */
+  .pt{--bs:37%}
+  .pt-act{max-width:30%}   /* điện thoại dọc: các bạn đứng giữa màn, phù thuỷ ở hai góc dưới */
   .pt-bar{flex-wrap:wrap;gap:8px}.pt-said{order:-1;flex-basis:100%;font-size:14px}
   .pt-mic{flex:1;justify-content:center}
   .pt-wrow{flex-wrap:wrap}.pt-wwiz{height:110px}.pt-wpic{height:90px}
@@ -192,3 +193,88 @@ body.pt-on .pt-open{display:none}
 @media (orientation:portrait) and (min-width:821px){ .dy-tiles.n10{grid-template-columns:repeat(4,1fr);grid-template-rows:none;grid-auto-rows:1fr} }
 /* điện thoại dọc: chừa chỗ dưới trang ngày để hàng ô cuối không bị dải Xem thêm + thanh menu che */
 @media (orientation:portrait) and (max-width:820px){ body.hub .dayscr{padding-bottom:calc(var(--nav,64px) + var(--xth,0px) + 14px)} }
+
+/* ===== bản cả khoá (24 unit): vật dán, hiệu ứng mới ===== */
+.pt-act.pt-emo{display:flex;align-items:flex-end;justify-content:center;font-size:20cqh;line-height:1;width:auto;filter:drop-shadow(0 6px 6px rgba(0,0,0,.25))}
+.pt-act{translate:0 0;rotate:0deg;scale:1}
+/* các chuyển động dùng thuộc tính translate/rotate/scale riêng để không đè transform căn giữa */
+.pt-act.a-pop{animation:ptPop2 .7s cubic-bezier(.3,1.6,.5,1)}
+.pt-act.a-jump{animation:ptJump .5s ease-in-out 4}
+.pt-act.a-run{animation:ptRun 2.6s ease-in-out}
+.pt-act.a-fly{animation:ptFly 3s ease-in-out}
+.pt-act.a-swim{animation:ptSwim 3s ease-in-out}
+.pt-act.a-shake{animation:ptShake .35s ease-in-out 6}
+.pt-act.a-shiver{animation:ptShake .18s ease-in-out 12}
+.pt-act.a-sag{animation:ptSag 1.6s ease-in-out forwards}
+.pt-act.a-sleep{animation:ptSleep 2.4s ease-in-out 2}
+.pt-act.a-tall{animation:ptTall 1.6s ease-in-out forwards}
+.pt-act.a-grow{animation:ptGrow 1.4s ease-in-out}
+.pt-act.a-spin{animation:ptSpin 2s ease-in-out}
+.pt-act.a-look{animation:ptLook 1.2s ease-in-out 3}
+.pt-act.a-talk{animation:ptTalk .35s ease-in-out 6}
+.pt-act.a-eat{animation:ptEat .45s ease-in-out 4}
+.pt-act.a-pulse{animation:ptPulse .6s ease-in-out 4}
+.pt-act.a-hop_fall{animation:ptHopFall 2.2s ease-in}
+.pt-act.a-nod{animation:ptNod .5s ease-in-out 4}
+.pt-act.a-blink{animation:ptBlink .35s ease-in-out 5}
+.pt-act.a-wiggle{animation:ptWave .25s ease-in-out 8}
+.pt-act.a-touch{animation:ptTalk .4s ease-in-out 4}
+.pt-act.a-smile{animation:ptPulse .5s ease-in-out 4}
+.pt-act.a-shake_hands{animation:ptShakeH .5s ease-in-out 4}
+.pt-act.a-line{animation:ptWave .6s ease-in-out 2}
+.pt-act.a-shine{animation:ptShine 1.5s ease-in-out}
+.pt-act.a-push{animation:ptPush 1s ease-in forwards}
+@keyframes ptPop2{0%{scale:.2;opacity:0}60%{scale:1.18;opacity:1}100%{scale:1}}
+@keyframes ptJump{50%{translate:0 -22%}}
+@keyframes ptRun{0%{translate:-60% 0}100%{translate:60% 0}}
+@keyframes ptFly{0%{translate:-60% 0}50%{translate:0 -180%}100%{translate:60% -60%}}
+@keyframes ptSwim{0%{translate:-50% 0;rotate:-4deg}50%{translate:0 8%;rotate:4deg}100%{translate:50% 0;rotate:-4deg}}
+@keyframes ptShake{25%{translate:-4% 0}75%{translate:4% 0}}
+@keyframes ptSag{to{scale:.9 .85;translate:0 4%;filter:saturate(.7)}}
+@keyframes ptSleep{50%{rotate:6deg;translate:0 3%}}
+@keyframes ptTall{0%{scale:1}100%{scale:1 1.45}}
+@keyframes ptGrow{50%{scale:1.3 1.5}}
+@keyframes ptSpin{to{rotate:360deg}}
+@keyframes ptLook{25%{translate:-12% 0}75%{translate:12% 0}}
+@keyframes ptTalk{50%{translate:0 -6%;scale:1.05}}
+@keyframes ptEat{50%{scale:1.12 .92}}
+@keyframes ptPulse{50%{scale:1.15}}
+@keyframes ptHopFall{20%{translate:0 -60%}45%{translate:20% -20%}60%{translate:30% 0;rotate:30deg}100%{translate:30% 0;rotate:90deg}}
+@keyframes ptNod{50%{rotate:5deg;translate:0 3%}}
+@keyframes ptBlink{50%{scale:1 .8}}
+@keyframes ptShakeH{25%{rotate:-4deg}75%{rotate:4deg}}
+@keyframes ptShine{50%{filter:brightness(1.35) drop-shadow(0 0 18px #ffe066)}}
+@keyframes ptPush{to{translate:140% 0;opacity:0;rotate:12deg}}
+/* trời: hoàng hôn, thời tiết */
+.pt-sky.t-dusk{background:linear-gradient(180deg,rgba(255,140,90,.35),rgba(80,40,120,.45))}
+.pt-sky.wx-cloudy{background:rgba(120,130,150,.3)}.pt-sky.wx-rainy{background:rgba(70,90,130,.42)}.pt-sky.wx-snowy{background:rgba(220,235,255,.25)}.pt-sky.wx-windy{background:rgba(190,220,200,.18)}.pt-sky.wx-cold{background:rgba(100,170,255,.32)}
+.pt-sky[class*="wx-"] .pt-sun{opacity:.25}
+.pt-wxp{position:absolute;inset:0;overflow:hidden}
+.pt-wxp span{position:absolute;top:-8%;font-size:4.4vmin;animation:ptFall 3.4s linear infinite}
+.pt-sky.wx-windy .pt-wxp span{top:30%;animation-name:ptBlow}
+.pt-sky.wx-cloudy .pt-wxp span{font-size:13vmin;animation-name:ptDrift;opacity:.85}
+.pt-sky.wx-cold .pt-wxp span{font-size:9vmin;top:12%;animation:ptShake .3s ease-in-out infinite}
+@keyframes ptFall{to{transform:translateY(112vh) rotate(40deg)}}
+@keyframes ptBlow{0%{transform:translateX(-10vw) rotate(0)}100%{transform:translateX(110vw) rotate(540deg)}}
+@keyframes ptDrift{0%,100%{transform:translateX(-4vw)}50%{transform:translateX(5vw)}}
+/* lớp phụ: nến, thẻ tên, khung ảnh, đồng hồ, lời đáp */
+.pt-ex{position:absolute;inset:0;pointer-events:none}
+.pt-candles{position:absolute;transform:translateX(-50%);display:flex;gap:.2vmin;max-width:24%;flex-wrap:wrap;justify-content:center;font-size:3.6vmin;line-height:1}
+.pt-candles i{font-style:normal;animation:ptFlame .6s ease-in-out infinite alternate}
+.pt-candles[data-n="7"],.pt-candles[data-n="8"],.pt-candles[data-n="9"],.pt-candles[data-n="10"]{font-size:2.6vmin}
+@keyframes ptFlame{to{transform:translateY(-6%) scale(1.06)}}
+.pt-tag{position:absolute;transform:translateX(-50%);background:#fff;color:#4a2c8a;border:.5vmin solid #8E44C9;border-radius:2vmin;padding:.4vmin 2vmin;font-size:4vmin;font-weight:800;animation:ptPop2 .7s both}
+.pt-frame{position:absolute;inset:8% 10%;border:2vmin solid #c58b4a;border-radius:2vmin;box-shadow:0 0 0 1vmin #8a5a2b,inset 0 0 20px rgba(0,0,0,.25);animation:ptPop2 .6s both}
+.pt-clock{position:absolute;left:50%;top:14%;width:20vmin;height:20vmin;transform:translateX(-50%);border-radius:50%;background:#fff;border:1.2vmin solid #8E44C9;box-shadow:0 4px 14px rgba(0,0,0,.3);animation:ptPop2 .7s both}
+.pt-clock i{position:absolute;left:50%;bottom:50%;transform-origin:50% 100%;background:#333;border-radius:2px;margin-left:-.5vmin}
+.pt-clock .hh{width:1vmin;height:6vmin}.pt-clock .mm{width:.7vmin;height:8.5vmin}
+.pt-clock b{position:absolute;left:0;right:0;bottom:-5.2vmin;text-align:center;color:#fff;font-size:3.4vmin;text-shadow:0 2px 6px rgba(0,0,0,.6)}
+.pt-rep{position:absolute;top:22%;transform:translateX(-50%);background:#fff;color:#2b1a5e;border-radius:2.4vmin;padding:1vmin 2.2vmin;font-size:3.6vmin;font-weight:800;max-width:40%;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.3);animation:ptPop2 .5s both}
+.pt-bit{position:absolute;top:-8%;font-size:5vmin;animation:ptFall 2.2s ease-in forwards}
+.pt-bit.up{top:auto;bottom:30%;animation:ptUp 2s ease-out forwards}
+@keyframes ptUp{to{transform:translateY(-34vmin);opacity:0}}
+.pt-flash{position:absolute;inset:0;background:#fff;animation:ptFlash .8s ease-out forwards}
+@keyframes ptFlash{0%{opacity:.95}100%{opacity:0}}
+.pt-pop.big{font-size:30vmin;top:45%;color:#e53935}
+.pt-sp.on:after{content:"↻";position:absolute;left:-2px;top:-2px;font-size:2.6vmin;background:#fff;color:#6a3fc0;border-radius:50%;width:3.4vmin;height:3.4vmin;display:flex;align-items:center;justify-content:center;line-height:1}
+.pt-bpic b{font-size:5vmin;margin:0 1vmin;color:#c58b00}
