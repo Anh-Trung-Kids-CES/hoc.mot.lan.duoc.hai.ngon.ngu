@@ -2,7 +2,7 @@
 
 Quy tắc (chị chốt 12/11/2026): ghi lại mọi câu cần thu giọng, **chưa gửi thu**; khi đủ kế hoạch 12 unit thì gửi thu một lần theo batch.
 
-Tổng: **1942 câu** · tiếng Anh 919 · lời cô tiếng Việt 64 · tiếng Trung 959
+Tổng: **1907 câu** · tiếng Anh 902 · lời cô tiếng Việt 64 · tiếng Trung 941
 
 | Nguồn | Tiếng | Số câu |
 |---|---|---|
@@ -16,3 +16,5 @@ Tổng: **1942 câu** · tiếng Anh 919 · lời cô tiếng Việt 64 · tiế
 | seedling/giong_thieu_sd48.json | zh | 484 |
 | seedling/giong_thieu_u9.json | en | 46 |
 | seedling/giong_thieu_u9.json | zh | 41 |
+
+_15/11/2026: đã gạch 37 câu đã có file giọng riêng (vè 48 và big book từng trang). Thêm 他, 她 (chưa có giọng). Bảng theo nguồn ở trên là số trước khi gạch._
