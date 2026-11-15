@@ -1,317 +1,32 @@
 [
 [
 "vi",
-"Chọn tranh điền vào chỗ trống nhé.",
-2.4
+"Con chọn một bạn trong truyện để đóng vai.",
+3.2
 ],
 [
 "vi",
-"Ba mẹ lưu video và gửi cô qua Zalo.",
-3.8
+"Con nghe câu, rồi chọn từ đúng điền vào chỗ trống.",
+4.1
 ],
 [
 "vi",
-"Con chọn một bạn để đóng vai nhé!",
-3.3
+"Con nghe câu.",
+1.2
 ],
 [
 "vi",
-"Con hát lại vè tiếng Anh cùng cô nhé!",
-2.9
-],
-[
-"vi",
-"Con chọn một bạn để đóng vai. Đến lời của bạn ấy, con nói thay bạn ấy nhé.",
-6.6
-],
-[
-"vi",
-"Con hát một lượt cùng cô cho nhớ nhé.",
-2.8
-],
-[
-"vi",
-"Con kể chuyện nhé! Cô nói nửa câu, con nói tiếp.",
-5.0
-],
-[
-"vi",
-"Con nghe câu, rồi chọn từ đúng điền vào chỗ trống nhé.",
+"Con nghe một câu, rồi nghe các câu ở tiếng kia.",
 4.4
 ],
 [
 "vi",
-"Con nghe câu, rồi chạm các thẻ theo đúng thứ tự để xếp lại câu nhé.",
-5.7
-],
-[
-"vi",
-"Con nghe cô nói rồi chạm vào đúng người hoặc đồ vật trong tranh bên trái nhé.",
-6.8
-],
-[
-"vi",
-"Con nghe câu, rồi nghe các câu ở tiếng kia. Con chọn câu cùng nghĩa nhé.",
-6.0
-],
-[
-"vi",
-"Con nghe cô đọc lại rồi đọc nhé.",
-2.6
-],
-[
-"vi",
-"Con nghe cô đọc mẫu vè tiếng Anh từng dòng.",
-3.0
-],
-[
-"vi",
-"Con nghe cô đọc mẫu rồi nói nhé.",
-2.9
-],
-[
-"vi",
-"Con nghe cô đọc mẫu vè tiếng Trung từng dòng.",
-4.4
-],
-[
-"vi",
-"Con nghe lại truyện có giọng của con nhé!",
-2.8
-],
-[
-"vi",
-"Con nghe lại trang này rồi thử lại nhé!",
-2.9
-],
-[
-"vi",
-"Con nghe hết big book, tiếng Anh rồi tiếng Trung, thì câu hỏi mở ra nhé.",
-6.8
-],
-[
-"vi",
-"Con nghe lại tên các bạn nhé.",
-2.2
-],
-[
-"vi",
-"Con nghe nhanh vè hai tiếng nhé.",
-3.4
-],
-[
-"vi",
-"Con nghe rồi chạm vào đúng người nhé.",
-3.5
-],
-[
-"vi",
-"Con nghe ví dụ nhé.",
-1.7
-],
-[
-"vi",
-"Con nghe rồi chọn nhé.",
-2.0
-],
-[
-"vi",
-"Con nhìn rồi chạm nhé.",
-2.3
-],
-[
-"vi",
-"Con xếp lại câu nhé.",
-1.8
-],
-[
-"vi",
-"Con xem gợi ý nhé.",
-1.6
-],
-[
-"vi",
-"Cô đọc đúng không?",
-1.5
-],
-[
-"vi",
-"Cô đọc cả quyển bằng tiếng Anh, rồi bằng tiếng Trung.",
-4.4
-],
-[
-"vi",
-"Giờ con hát 3 lượt. Giọng cô nhỏ dần, con hát to lên nhé!",
-5.7
-],
-[
-"vi",
-"Giờ con nói về gia đình con nhé! Con nhìn ảnh rồi nói.",
-4.9
-],
-[
-"vi",
-"Cô đọc một trang. Cô đọc đúng thì con bấm Yes. Cô đọc sai thì con bấm No, rồi chọn từ đúng nhé.",
-8.7
-],
-[
-"vi",
-"Hôm nay con lồng tiếng cho video vè. Con bấm Lồng tiếng nhé!",
-5.1
-],
-[
-"vi",
-"Khởi động: con nghe 2 dòng vè và nghe nhanh cả quyển.",
-4.9
-],
-[
-"vi",
-"Khởi động: con nghe 2 dòng vè và nghe lại 3 trang đầu.",
-5.3
-],
-[
-"vi",
-"Khởi động: con nghe 2 dòng vè và nghe tên các bạn trong truyện.",
-6.3
-],
-[
-"vi",
-"Khởi động: con nghe 3 trang big book và hát lại vè tiếng Anh cùng cô.",
-5.6
-],
-[
-"vi",
-"Khởi động: con nghe 3 trang big book và hát vè một lượt.",
-4.8
-],
-[
-"vi",
-"Khởi động: con nghe 3 trang big book và nghe nhanh vè hai tiếng.",
-5.8
-],
-[
-"vi",
-"Khởi động: con nghe lại 3 trang big book.",
-4.2
-],
-[
-"vi",
-"Lượt cuối con hát một mình nhé!",
-2.6
-],
-[
-"vi",
-"Lồng tiếng: video chạy, con hát, máy thu giọng con.",
-5.4
-],
-[
-"vi",
-"Mình khởi động nhé! Con nghe lại big book.",
-4.3
-],
-[
-"vi",
-"Mình khởi động nhé! Con nghe vè và vỗ tay theo.",
-4.5
-],
-[
-"vi",
-"Mình nghe lại big book nhé!",
-2.2
-],
-[
-"vi",
-"Rồi con chúc ngủ ngon người thân: Good night, …!",
-3.9
-],
-[
-"vi",
-"Rồi con chọn tranh điền vào chỗ trống.",
-3.5
-],
-[
-"vi",
-"Mình đọc đuổi nhé: cô đọc, cô và con cùng đọc, rồi con đọc một mình.",
+"Cô đọc một trang. Đúng thì con bấm Yes, sai thì bấm No rồi chọn từ đúng.",
 6.7
 ],
 [
 "vi",
-"Rồi con hát karaoke tiếng Trung.",
-3.0
-],
-[
-"vi",
-"Rồi con hát karaoke cùng nhạc: chữ sáng đến đâu, con hát đến đó.",
-7.0
-],
-[
-"vi",
-"Rồi con nghe câu Bông nói và chạm đúng người Bông chào. Cần thì bấm 💡.",
-7.1
-],
-[
-"vi",
-"Rồi con nghe câu hỏi và chạm đúng người. Cần thì bấm 💡 để xem gợi ý.",
-6.8
-],
-[
-"vi",
-"Rồi con đoán: trang sau Bông gặp ai? Con chạm vào tranh trang sau.",
-5.0
-],
-[
-"vi",
-"Rồi con đoán: trang sau là ai? Con chạm vào tranh trang sau.",
-5.4
-],
-[
-"vi",
-"Trang sau là ai? Con chạm vào tranh trang sau nhé.",
-4.0
-],
-[
-"vi",
-"Đây là các bạn trong truyện. Con nghe tên nhé!",
-3.5
-],
-[
-"vi",
-"Đọc đuổi tiếng Anh rồi tiếng Trung: cô đọc, cô và con cùng đọc, rồi con đọc một mình.",
-7.1
-],
-[
-"zh",
-"___，___，找一找！",
-0.9
-],
-[
-"zh",
-"一、二、三、四、五！",
-5.4
-],
-[
-"zh",
-"一、二、三、四、五、六、七、八、九、十！",
-10.8
-],
-[
-"zh",
-"三、二、一！",
-2.7
-],
-[
-"zh",
-"八九十！",
-3.0
-],
-[
-"zh",
-"我好累。",
-2.8
-],
-[
-"zh",
-"红、黄、蓝、绿、粉！耶！",
-6.1
+"Lần này con nghe cô đọc cả quyển: tiếng Anh, rồi tiếng Trung.",
+4.9
 ]
 ]

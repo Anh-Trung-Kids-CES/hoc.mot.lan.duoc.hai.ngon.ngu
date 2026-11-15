@@ -32,7 +32,7 @@ for p in [x for x in sp if x]:
     for r in json.load(open(p, encoding='utf-8')):
         for s in r.get('tts', []):
             l, t = s.split(':', 1)
-            if l in ('en', 'zh') and t.strip(): jobs.setdefault((l, t.strip()), 'chay-thu')
+            if l in ('en', 'zh', 'vi') and t.strip(): jobs.setdefault((l, t.strip()), 'chay-thu')
 # 2. bỏ phần đã có
 _, SD = load('seedling/seedling-data.js'); AM = SD['aumap']; VT = SD.get('vi_tx', {})
 prev = json.load(open(OUTMAP, encoding='utf-8')) if os.path.exists(OUTMAP) else {}
