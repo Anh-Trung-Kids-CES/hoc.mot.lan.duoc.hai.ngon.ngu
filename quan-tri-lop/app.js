@@ -27,6 +27,8 @@ const store = { get: k => { try { return sessionStorage.getItem(k) || ''; } catc
 
 /* ---------- trạng thái ---------- */
 const S = { lop: store.get('qtl-lop') || 'ls', pin: '', d: null, tab: 'tq', kid: '', q: '', filt: '', dd: null, sel: new Set(), n: 3, why: WHY[0], tnEdit: null, v3: false, v5: false, err: '', tkSel: new Set(), tkNew: '', tkCards: null };
+const KICHBAN = 'https://claude.ai/artifact/3eh3RRL7K6HfMbzub28miF';   // trang xem kịch bản 96 buổi offline (LS 48 + SD 48), có khung góp ý
+const dayUrl = n => (S.lop === 'sd' ? '../seedling/day/#/b/' : '../little-seed/day/#/b/') + n;   // sách bài tập, giáo án, học liệu in của buổi n
 const KH = () => (window.KHUNG && KHUNG[S.lop]) || [];
 const weekOf = n => n <= 3 ? n : 4 + Math.floor((n - 4) / 2);   // tuần 1–3: 1 buổi/tuần; từ tuần 4: 2 buổi/tuần (khung 48 buổi)
 
@@ -172,8 +174,8 @@ function teachLinks(n) {
   if (n === 0) l.push({ t: 'Mở web khai giảng', href: `../khai-giang/?lop=${S.lop}` });
   else {
     if (n <= 3) l.push({ t: `Web dạy buổi ${n}`, href: `../buoi/?lop=${S.lop}&b=${n}` });
-    if (sd) l.push({ t: `Giáo án & trình chiếu buổi ${n}`, href: `../seedling/day/#/b/${n}` });
-    if (!l.length) l.push({ t: 'Web dạy buổi này chưa dựng', href: '#', dead: 1 });
+    l.push({ t: `Kịch bản buổi ${n} (từng màn, từng phút)`, href: KICHBAN });
+    l.push({ t: sd ? `Giáo án & trình chiếu buổi ${n}` : `Học liệu & phiếu in buổi ${n}`, href: dayUrl(n) });
   }
   return l.filter(x => !x.dead);
 }
@@ -276,12 +278,15 @@ function vSq() {
 function builtIn() {
   const L = S.lop, w = LOPS[L].web, g = [];
   const A = (nhom, ten, href, gc) => g.push({ nhom, ten, url: href, ghi_chu: gc || '' });
+  A('Dạy trên lớp', 'Kịch bản 48 buổi offline (cả Little Seed và Seedling)', KICHBAN, 'Từng buổi 12–18 màn, đồ dùng, thang gợi ý, việc ở nhà. Chọn lớp và buổi ở thanh đầu trang. Có khung góp ý.');
   A('Dạy trên lớp', 'Buổi 0 · Khai giảng (web trình chiếu)', `../khai-giang/?lop=${L}`, '18 màn, 90 phút, có đồng hồ buổi');
   [1, 2, 3].forEach(n => A('Dạy trên lớp', `Web dạy buổi ${n} (Unit 1)`, `../buoi/?lop=${L}&b=${n}`, 'Mỗi unit dựng xong sẽ thêm buổi mới vào đây'));
   if (L === 'sd') { A('Dạy trên lớp', 'Giáo án, trình chiếu, big book, reader, đồ dùng in (48 buổi)', '../seedling/day/', 'Lớp & báo cáo từng buổi'); }
   else { A('Dạy trên lớp', 'Học liệu in và phiếu tô – dán', '../little-seed/day/', 'Phiếu theo buổi, flashcard, thủ công'); }
-  A('Web của con', `Web học ${LOPS[L].ten} (con học ở nhà)`, w, 'Gửi ba mẹ kèm ?con=MÃ ở hồ sơ từng bạn');
-  if (L === 'ls') A('Web của con', 'Web học Little Seed có hiện chữ (dành cho cô, ba mẹ)', w + '?gv=1');
+  A('Web của con', `Web học ${LOPS[L].ten} (link vào học của học viên)`, w, 'Gửi ba mẹ kèm ?con=MÃ: lấy link riêng từng bạn ở tab Tài khoản con hoặc Học sinh');
+  A('Web của con', `Bản xem trước cho giáo viên (${LOPS[L].ten}, hiện đủ chữ)`, w + '?gv=1', 'Giáo viên vào kiểm tra nội dung các bài. Đừng thêm ?con=MÃ để khỏi lẫn vào tiến độ của bạn');
+  A('Web của con', 'Bản đồ 99 ngày học web (xem trước)', w + '?gv=1#/ban-do', 'Chọn unit, chọn ngày để xem từng bài');
+  A('Web của con', 'Hộp ôn, Phòng đổi quà, Hành trình của con (xem trước)', w + '?gv=1#/hop-on', 'Kiểm tra phần ôn và đổi quà');
   A('Web của con', 'Bảng của cô (thưởng sao, duyệt quà, cách cũ)', w + '#/co', 'Cũng dùng PIN lớp');
   return g;
 }
@@ -301,6 +306,7 @@ function vTn() {
   return `<div class="card"><div class="row"><h2 class="grow">Tài nguyên của lớp ${esc(LOPS[S.lop].ten)}</h2>${S.v3 ? '' : '<button class="btn" type="button" id="tnew">+ Thêm link</button>'}</div>
     <p class="muted sm" style="margin:0 0 12px">Các web của chương trình hiện sẵn. Link riêng (thư mục Drive, Sheet, nhóm Zalo, sách bài tập…) cô thêm ở đây; chúng lưu trong Google Sheet của cô, chỉ hiện sau khi nhập PIN.</p>
     ${gs.map(g => `<div class="rgrp"><h3>${esc(g.n)}</h3><div class="rlist">${g.l.map(r => `<div class="res"><a href="${esc(r.url)}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit"><b>${esc(r.ten)}</b>${r.ghi_chu ? `<br><small>${esc(r.ghi_chu)}</small>` : ''}</a>${r.own ? `<div class="acts"><button class="ghost" type="button" data-tedit="${esc(r.id)}">Sửa</button><button class="ghost danger" type="button" data-tdel="${esc(r.id)}">Xoá</button></div>` : ''}</div>`).join('')}</div></div>`).join('')}
+    <div class="rgrp"><h3>Học liệu từng buổi (48 buổi) và xem trước từng ngày web (99 ngày)</h3><p class="muted sm">Bấm số buổi để mở sách bài tập, giáo án hoặc học liệu in của buổi đó. Kịch bản từng màn: <a href="${KICHBAN}" target="_blank" rel="noopener">mở trang kịch bản</a> rồi chọn đúng lớp và buổi.</p><div class="chips"><b class="muted sm" style="align-self:center">Buổi:</b>${Array.from({ length: 48 }, (_, i) => `<a class="ghost sm" style="padding:6px 10px;text-decoration:none" href="${dayUrl(i + 1)}" target="_blank" rel="noopener">${i + 1}</a>`).join('')}</div><div class="chips" style="margin-top:8px"><b class="muted sm" style="align-self:center">Ngày web:</b>${Array.from({ length: 99 }, (_, i) => `<a class="ghost sm" style="padding:6px 10px;text-decoration:none" href="${LOPS[S.lop].web}?gv=1#/ngay/${i + 1}" target="_blank" rel="noopener">${i + 1}</a>`).join('')}</div></div>
     ${!own.length && !S.v3 ? '<div class="empty" style="margin-top:14px">Chưa có link riêng nào. Bấm “+ Thêm link” để thêm thư mục Drive của khoá học, Google Sheet, nhóm Zalo…</div>' : ''}</div>${form}`;
 }
 
