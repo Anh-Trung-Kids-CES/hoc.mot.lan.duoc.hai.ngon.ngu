@@ -85,6 +85,89 @@ BT['LS'][3] = {
             (13, 'en', ['I', 'love', 'you!'])],
 }
 
+# ======================================================================================================
+# SEEDLING 48 · U1–U3 (15/11/2026, chờ chị duyệt). Lời từng trang: bigbook_loi_sd48.txt. Vùng chạm đo trên tranh seedling/tai-nguyen/bigbook/uN/pK.webp (% rộng, % cao).
+# Khóa thêm của Seedling: mine (hai câu "của con" ở trang ảnh), frame (ô ảnh trên bia_khung.webp), photo_t.
+# ======================================================================================================
+NVS = 'tai-nguyen/nhan-vat/'   # đường dẫn tính từ seedling/
+NAMES_SD = {   # mã tên → (en, zh, ảnh)
+    'leo': ('Leo', 'Leo', NVS + 'kids_leo_a.webp'), 'anna': ('Anna', 'Anna', NVS + 'kids_anna_a.webp'),
+    'xiaomei': ('Xiaomei', 'Xiaomei', NVS + 'kids_xiaomei_a.webp'), 'bong': ('Bông', 'Bông', NVS + 'kids_bong_a.webp'),
+    'vu': ('Vũ', 'Vũ', NVS + 'nv_vu_a.webp'), 'lan': ('Mrs Lan', 'Lan老师', NVS + 'nv_lan_a.webp'),
+    'ong': ('grandpa', '爷爷', NVS + 'fam_bong_ong_a.webp'), 'me': ('mother', '妈妈', NVS + 'fam_bong_me_a.webp'),
+    'bo': ('father', '爸爸', NVS + 'fam_bong_bo_a.webp'), 'anh_trai': ('older brother', '哥哥', NVS + 'fam_bong_anh_trai_a.webp'),
+    'em_gai': ('younger sister', '妹妹', NVS + 'fam_bong_em_gai_a.webp'),
+}
+PHOTO_SD = 'sdl-anh-gia-dinh'   # khóa lưu ảnh con trên máy (tiền tố sdl- như tiến độ Seedling)
+
+# ---------- Seedling U1 · "Hello! I'm…" (lẻ: an, sai, vai, xep) ----------
+BT['SD'][1] = {
+    'an': [(2, 'en', 'Leo', [22, 26, 25, 70]),          # áo mưa vàng, quay lưng, ba lô xanh
+           (4, 'zh', 'Anna', [22, 27, 25, 64]),         # mũ hồng có hoa đỏ, quay lưng
+           (6, 'en', 'Xiaomei', [22, 31, 24, 66]),      # hai búi tóc, áo đỏ, quay lưng
+           (8, 'en', 'Bông', [49, 21, 19, 76]),         # Bông nấp dưới áo mưa của ông (quần bò, giày đỏ)
+           (12, 'zh', 'Lan老师', [14, 30, 19, 62])],     # cô Lan ở cổng trường
+    'sai': [(3, 'en', "Good morning, Mrs Lan! I'm Anna.", ['leo', 'anna']),
+            (5, 'zh', 'Lan老师，早上好！我是Leo。', ['anna', 'leo']),
+            (7, 'en', None, []),
+            (9, 'zh', '早上好！我是……Bông的奶奶！', ['爷爷', '奶奶']),
+            (12, 'en', 'Good morning, class! See you tomorrow!', [('Goodbye', '再见'), ('Good morning', '早上好')])],
+    'vai': {'lan': ('Mrs Lan (hỏi tên)', NVS + 'nv_lan_a.webp', [(2, 'en'), (4, 'zh'), (6, 'en'), (8, 'zh'), (12, 'en')]),
+            'ban': ('Các bạn và ông (nói tên)', NVS + 'kids_leo_a.webp', [(3, 'en'), (5, 'zh'), (7, 'en'), (9, 'zh'), (10, 'en')])},
+    'xep': [(2, 'en', ['Good', 'morning!', "What's", 'your', 'name?']),
+            (5, 'zh', ['Lan老师，', '早上好！', '我是', 'Anna。'], 'en'),    # nghe tiếng Anh, xếp tiếng Trung
+            (7, 'en', ['Good', 'morning,', 'Mrs', 'Lan!', "I'm", 'Xiaomei.']),
+            (10, 'zh', ['Lan老师，', '早上好！', '我是', 'Bông！']),
+            (12, 'en', ['Goodbye,', 'class!', 'See', 'you', 'tomorrow!'])],
+    'mine': [{'l': 'en', 'q': "What's your name?", 'half': "I'm…", 'cue': "I'm", 'vd': "I'm Bông!"},
+             {'l': 'zh', 'q': '你叫什么名字？', 'half': '我是……', 'cue': '我是', 'vd': '我是Bông！'}],
+    'frame': {'left': 55.4, 'top': 18.6, 'width': 35.8, 'height': 70.6}, 'photo_t': 'ảnh của con',
+}
+
+# ---------- Seedling U2 · "How Old Are You?" (chẵn: an, dien, vai, dich) ----------
+BT['SD'][2] = {
+    'an': [(1, 'en', 'cake', [38, 58, 22, 30]),          # bánh sinh nhật
+           (3, 'zh', '七', [46, 58, 9, 20]),            # cây nến số 7 trên bánh
+           (5, 'en', 'Xiaomei', [9, 11, 37, 88]),       # bạn bên trái, hai búi tóc, áo đỏ (Anna đứng bên phải)
+           (8, 'zh', '哥哥', [52, 3, 35, 93]),          # anh trai áo xanh
+           (11, 'en', 'grandpa', [34, 11, 36, 88])],    # ông ở giữa
+    'dien': [(2, 'en', 'nine', ['nine', 'six', 'seven']),
+             (4, 'zh', '七', ['六', '七', '八']),
+             (6, 'en', 'six', ['seven', 'six', 'eight']),
+             (8, 'zh', '哥哥', ['妈妈', '哥哥', '爷爷']),
+             (13, 'en', 'birthday', ['birthday', 'morning', 'goodbye'])],
+    'vai': {'hoi': ('Bạn hỏi tuổi', NVS + 'kids_leo_a.webp', [(1, 'en'), (3, 'zh'), (5, 'en'), (10, 'zh'), (12, 'en')]),
+            'tra': ('Bạn nói tuổi', NVS + 'nv_vu_a.webp', [(2, 'en'), (4, 'zh'), (6, 'en'), (7, 'zh'), (11, 'en')])},
+    'dich': [(4, 'en', [8, 9]), (8, 'zh', [4, 6]), (9, 'en', [1, 10]), (6, 'zh', [2, 8]), (13, 'en', [10, 14])],
+    'mine': [{'l': 'en', 'q': 'How old are you?', 'half': "I'm…", 'cue': "I'm", 'vd': "I'm six!"},
+             {'l': 'zh', 'q': '你几岁？', 'half': '我……', 'cue': '我', 'vd': '我六岁！'}],
+    'frame': {'left': 62.0, 'top': 29.2, 'width': 31.4, 'height': 59.2}, 'photo_t': 'ảnh của con',
+}
+
+# ---------- Seedling U3 · "Who Is She?" (lẻ: an, sai, vai, xep) ----------
+BT['SD'][3] = {
+    'an': [(2, 'en', 'mother', [55, 28, 20, 50]),        # người phụ nữ áo dài hồng trong ảnh Leo cầm
+           (4, 'zh', '哥哥', [49, 42, 12, 41]),          # cậu bé áo xanh trong ảnh
+           (6, 'en', 'baby', [48, 50, 17, 33]),          # em bé áo vàng trong ảnh
+           (8, 'zh', '叔叔', [52, 20, 24, 56]),          # chú áo cam cầm đèn lồng trong ảnh
+           (12, 'en', 'family', [42, 30, 19, 17])],      # ảnh cả nhà trong hình trái tim
+    'sai': [(3, 'en', 'She is my younger sister.', ['me', 'em_gai']),
+            (5, 'zh', '他是我爸爸。', ['anh_trai', 'bo']),
+            (7, 'en', None, []),
+            (9, 'zh', '他是我爷爷。他是中国人。', ['叔叔', 'ong']),
+            (11, 'en', "It's… you!", [('me', '我'), ('you', '你')])],
+    'vai': {'ban': ('Bạn hỏi', NVS + 'kids_leo_a.webp', [(2, 'en'), (4, 'zh'), (6, 'en'), (8, 'zh'), (10, 'en')]),
+            'bong': ('Bông (trả lời)', NVS + 'kids_bong_a.webp', [(3, 'en'), (5, 'zh'), (7, 'en'), (9, 'zh'), (11, 'en')])},
+    'xep': [(3, 'en', ['She', 'is', 'my', 'mother.']),
+            (5, 'zh', ['他', '是', '我', '哥哥。'], 'en'),
+            (7, 'en', ['She', 'is', 'my', 'younger', 'sister.']),
+            (9, 'zh', ['他', '是', '我', '叔叔。']),
+            (12, 'en', ['I', 'love', 'my', 'family!'])],
+    'mine': [{'l': 'en', 'q': 'Who is she?', 'half': 'She is my…', 'cue': 'She is my', 'vd': 'She is my mother.'},
+             {'l': 'zh', 'q': '他是谁？', 'half': '他是我……', 'cue': '他是我', 'vd': '他是我爸爸。'}],
+    'frame': {'left': 62.0, 'top': 40.6, 'width': 28.0, 'height': 46.8}, 'photo_t': 'ảnh gia đình',
+}
+
 # Lệnh ngắn bằng tiếng đích (2 câu đầu kèm lời dịch tiếng Việt), theo dạng bài
 LENH = {
     'an': {'en': ('Look and touch.', 'Con nhìn rồi chạm nhé.'), 'zh': ('看一看，摸一摸。', 'Con nhìn rồi chạm nhé.')},

@@ -409,6 +409,13 @@
 },
 {
 "l": "en",
+"t": "Goodbye, Puppy!",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "en",
 "t": "Goodbye, all!",
 "nguon": [
 "little-seed/giong_thieu.json"
@@ -438,7 +445,22 @@
 },
 {
 "l": "en",
+"t": "Goodbye, goodbye, everyone!",
+"nguon": [
+"little-seed/giong_thieu.json",
+"seedling/giong_thieu_sd48.json"
+]
+},
+{
+"l": "en",
 "t": "Goodbye, park! See you tomorrow!",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "en",
+"t": "Goodbye, puppy!",
 "nguon": [
 "little-seed/giong_thieu.json"
 ]
@@ -714,6 +736,14 @@
 "t": "Hello, fish!",
 "nguon": [
 "little-seed/giong_thieu.json"
+]
+},
+{
+"l": "en",
+"t": "Hello, hello, everyone!",
+"nguon": [
+"little-seed/giong_thieu.json",
+"seedling/giong_thieu_sd48.json"
 ]
 },
 {
@@ -1188,6 +1218,13 @@
 },
 {
 "l": "en",
+"t": "I like rice!",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "en",
 "t": "I like rice! Thank you, Xiaomei!",
 "nguon": [
 "little-seed/giong_thieu.json"
@@ -1211,7 +1248,8 @@
 "l": "en",
 "t": "I'm",
 "nguon": [
-"little-seed/giong_thieu.json"
+"little-seed/giong_thieu.json",
+"seedling/giong_thieu_sd48_bb.json"
 ]
 },
 {
@@ -1274,7 +1312,8 @@
 "l": "en",
 "t": "Is it right?",
 "nguon": [
-"little-seed/giong_thieu.json"
+"little-seed/giong_thieu.json",
+"seedling/giong_thieu_sd48_bb.json"
 ]
 },
 {
@@ -1407,7 +1446,8 @@
 "l": "en",
 "t": "Leo",
 "nguon": [
-"little-seed/giong_thieu.json"
+"little-seed/giong_thieu.json",
+"seedling/giong_thieu_sd48_bb.json"
 ]
 },
 {
@@ -1415,6 +1455,15 @@
 "t": "Leo! My name is Leo!",
 "nguon": [
 "little-seed/giong_thieu.json"
+]
+},
+{
+"l": "en",
+"t": "Leo, Leo, that's my name!",
+"nguon": [
+"little-seed/giong_thieu.json",
+"seedling/giong_thieu_sd48.json",
+"buoi/giong-thieu.json"
 ]
 },
 {
@@ -1520,7 +1569,8 @@
 "l": "en",
 "t": "Listen and choose.",
 "nguon": [
-"little-seed/giong_thieu.json"
+"little-seed/giong_thieu.json",
+"seedling/giong_thieu_sd48_bb.json"
 ]
 },
 {
@@ -1534,7 +1584,8 @@
 "l": "en",
 "t": "Look and touch.",
 "nguon": [
-"little-seed/giong_thieu.json"
+"little-seed/giong_thieu.json",
+"seedling/giong_thieu_sd48_bb.json"
 ]
 },
 {
@@ -1952,6 +2003,14 @@
 },
 {
 "l": "en",
+"t": "One, two, three… school is done!",
+"nguon": [
+"little-seed/giong_thieu.json",
+"seedling/giong_thieu_sd48.json"
+]
+},
+{
+"l": "en",
 "t": "One, two, three… ten. Ten friends!",
 "nguon": [
 "little-seed/giong_thieu.json"
@@ -2073,7 +2132,8 @@
 "l": "en",
 "t": "Put the words in order.",
 "nguon": [
-"little-seed/giong_thieu.json"
+"little-seed/giong_thieu.json",
+"seedling/giong_thieu_sd48_bb.json"
 ]
 },
 {
@@ -2162,6 +2222,13 @@
 },
 {
 "l": "en",
+"t": "See you tomorrow, Leo and Anna!",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "en",
 "t": "See you tomorrow, teacher!",
 "nguon": [
 "little-seed/giong_thieu.json"
@@ -2171,7 +2238,8 @@
 "l": "en",
 "t": "She is my",
 "nguon": [
-"little-seed/giong_thieu.json"
+"little-seed/giong_thieu.json",
+"seedling/giong_thieu_sd48_bb.json"
 ]
 },
 {
@@ -2365,6 +2433,13 @@
 },
 {
 "l": "en",
+"t": "This is my family. I love you!",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "en",
 "t": "Three white cakes. Eight cakes, nine friends! I'm sad!",
 "nguon": [
 "little-seed/giong_thieu.json"
@@ -2540,6 +2615,13 @@
 },
 {
 "l": "en",
+"t": "What do you like?",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "en",
 "t": "What is that?",
 "nguon": [
 "little-seed/giong_thieu.json",
@@ -2571,7 +2653,8 @@
 "l": "en",
 "t": "Which one is the same?",
 "nguon": [
-"little-seed/giong_thieu.json"
+"little-seed/giong_thieu.json",
+"seedling/giong_thieu_sd48_bb.json"
 ]
 },
 {
@@ -2684,7 +2767,8 @@
 "l": "en",
 "t": "Your turn!",
 "nguon": [
-"little-seed/giong_thieu.json"
+"little-seed/giong_thieu.json",
+"seedling/giong_thieu_sd48_bb.json"
 ]
 },
 {
@@ -2813,7 +2897,8 @@
 "l": "en",
 "t": "sister",
 "nguon": [
-"little-seed/giong_thieu.json"
+"little-seed/giong_thieu.json",
+"seedling/giong_thieu_sd48_bb.json"
 ]
 },
 {
@@ -2980,6 +3065,13 @@
 {
 "l": "zh",
 "t": "Leo！我叫Leo！",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "zh",
+"t": "Leo，Anna，明天见！",
 "nguon": [
 "little-seed/giong_thieu.json"
 ]
@@ -3186,6 +3278,14 @@
 "t": "一二三四，蛋糕啦！",
 "nguon": [
 "little-seed/giong_thieu.json"
+]
+},
+{
+"l": "zh",
+"t": "一二三，放学啦！",
+"nguon": [
+"little-seed/giong_thieu.json",
+"seedling/giong_thieu_sd48.json"
 ]
 },
 {
@@ -3414,6 +3514,13 @@
 },
 {
 "l": "zh",
+"t": "五岁五岁，我五岁！",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "zh",
 "t": "什么",
 "nguon": [
 "little-seed/giong_thieu.json"
@@ -3429,6 +3536,13 @@
 {
 "l": "zh",
 "t": "今天晴天！我很开心！",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "zh",
+"t": "你喜欢什么？",
 "nguon": [
 "little-seed/giong_thieu.json"
 ]
@@ -3494,6 +3608,14 @@
 "t": "你喜欢鸡蛋吗？– 喜欢！",
 "nguon": [
 "little-seed/giong_thieu.json"
+]
+},
+{
+"l": "zh",
+"t": "你好你好，大家好！",
+"nguon": [
+"little-seed/giong_thieu.json",
+"seedling/giong_thieu_sd48.json"
 ]
 },
 {
@@ -3780,7 +3902,8 @@
 "l": "zh",
 "t": "听一听，选一选。",
 "nguon": [
-"little-seed/giong_thieu.json"
+"little-seed/giong_thieu.json",
+"seedling/giong_thieu_sd48_bb.json"
 ]
 },
 {
@@ -3983,7 +4106,8 @@
 "l": "zh",
 "t": "哪个一样？",
 "nguon": [
-"little-seed/giong_thieu.json"
+"little-seed/giong_thieu.json",
+"seedling/giong_thieu_sd48_bb.json"
 ]
 },
 {
@@ -4130,6 +4254,14 @@
 },
 {
 "l": "zh",
+"t": "大家再见，再见啦！",
+"nguon": [
+"little-seed/giong_thieu.json",
+"seedling/giong_thieu_sd48.json"
+]
+},
+{
+"l": "zh",
 "t": "大家喝水吧！",
 "nguon": [
 "little-seed/giong_thieu.json"
@@ -4223,7 +4355,8 @@
 "l": "zh",
 "t": "对不对？",
 "nguon": [
-"little-seed/giong_thieu.json"
+"little-seed/giong_thieu.json",
+"seedling/giong_thieu_sd48_bb.json"
 ]
 },
 {
@@ -4285,6 +4418,13 @@
 {
 "l": "zh",
 "t": "小狗，你好！预备，跑！",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "zh",
+"t": "小狗，再见！",
 "nguon": [
 "little-seed/giong_thieu.json"
 ]
@@ -4446,6 +4586,22 @@
 },
 {
 "l": "zh",
+"t": "我叫Leo，Leo呀！",
+"nguon": [
+"little-seed/giong_thieu.json",
+"seedling/giong_thieu_sd48.json",
+"buoi/giong-thieu.json"
+]
+},
+{
+"l": "zh",
+"t": "我叫Leo，我五岁！",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "zh",
 "t": "我叫小狗！",
 "nguon": [
 "little-seed/giong_thieu.json"
@@ -4559,6 +4715,13 @@
 {
 "l": "zh",
 "t": "我喜欢狗！",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "zh",
+"t": "我喜欢米饭！",
 "nguon": [
 "little-seed/giong_thieu.json"
 ]
@@ -4889,7 +5052,8 @@
 "l": "zh",
 "t": "排一排。",
 "nguon": [
-"little-seed/giong_thieu.json"
+"little-seed/giong_thieu.json",
+"seedling/giong_thieu_sd48_bb.json"
 ]
 },
 {
@@ -5213,7 +5377,8 @@
 "l": "zh",
 "t": "看一看，摸一摸。",
 "nguon": [
-"little-seed/giong_thieu.json"
+"little-seed/giong_thieu.json",
+"seedling/giong_thieu_sd48_bb.json"
 ]
 },
 {
@@ -5359,6 +5524,21 @@
 },
 {
 "l": "zh",
+"t": "老师老师，再见！",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "zh",
+"t": "老师老师，早上好！",
+"nguon": [
+"little-seed/giong_thieu.json",
+"seedling/giong_thieu_sd48.json"
+]
+},
+{
+"l": "zh",
 "t": "老师，你好！",
 "nguon": [
 "little-seed/giong_thieu.json"
@@ -5410,7 +5590,8 @@
 "l": "zh",
 "t": "该你了！",
 "nguon": [
-"little-seed/giong_thieu.json"
+"little-seed/giong_thieu.json",
+"seedling/giong_thieu_sd48_bb.json"
 ]
 },
 {
@@ -5564,6 +5745,13 @@
 {
 "l": "zh",
 "t": "这是我爸爸！",
+"nguon": [
+"little-seed/giong_thieu.json"
+]
+},
+{
+"l": "zh",
+"t": "这是我的家人。我爱你！",
 "nguon": [
 "little-seed/giong_thieu.json"
 ]
@@ -6389,6 +6577,13 @@
 },
 {
 "l": "en",
+"t": "HOW do you FEEL? HOW do you FEEL?",
+"nguon": [
+"seedling/giong_thieu_sd48.json"
+]
+},
+{
+"l": "en",
 "t": "HOW many PEOPLE CAN you SEE?",
 "nguon": [
 "seedling/giong_thieu_sd48.json"
@@ -6547,6 +6742,13 @@
 {
 "l": "en",
 "t": "Hello, frog! Can the frog fly, Daddy?",
+"nguon": [
+"seedling/giong_thieu_sd48.json"
+]
+},
+{
+"l": "en",
+"t": "Hello, teacher! Class is fun!",
 "nguon": [
 "seedling/giong_thieu_sd48.json"
 ]
@@ -8430,6 +8632,13 @@
 },
 {
 "l": "en",
+"t": "What's your name? What's your name?",
+"nguon": [
+"seedling/giong_thieu_sd48.json"
+]
+},
+{
+"l": "en",
 "t": "Where are Leo and Bông? I can't see them.",
 "nguon": [
 "seedling/giong_thieu_sd48.json"
@@ -9949,6 +10158,14 @@
 },
 {
 "l": "zh",
+"t": "你叫什么名字呀？",
+"nguon": [
+"seedling/giong_thieu_sd48.json",
+"buoi/giong-thieu.json"
+]
+},
+{
+"l": "zh",
 "t": "你叫什么名字？___，你几岁？",
 "nguon": [
 "seedling/giong_thieu_sd48.json"
@@ -10046,6 +10263,13 @@
 {
 "l": "zh",
 "t": "你想吃糖果吗？不要，谢谢！",
+"nguon": [
+"seedling/giong_thieu_sd48.json"
+]
+},
+{
+"l": "zh",
+"t": "你感觉怎么样？怎么样？",
 "nguon": [
 "seedling/giong_thieu_sd48.json"
 ]
@@ -10410,6 +10634,13 @@
 {
 "l": "zh",
 "t": "在衣服下面吗？不在！",
+"nguon": [
+"seedling/giong_thieu_sd48.json"
+]
+},
+{
+"l": "zh",
+"t": "天气怎么样？",
 "nguon": [
 "seedling/giong_thieu_sd48.json"
 ]
@@ -12197,6 +12428,111 @@
 },
 {
 "l": "en",
+"t": "Good morning, class! See you tomorrow!",
+"nguon": [
+"seedling/giong_thieu_sd48_bb.json"
+]
+},
+{
+"l": "en",
+"t": "I'm Bông!",
+"nguon": [
+"seedling/giong_thieu_sd48_bb.json"
+]
+},
+{
+"l": "en",
+"t": "It's… you!",
+"nguon": [
+"seedling/giong_thieu_sd48_bb.json"
+]
+},
+{
+"l": "en",
+"t": "Mrs",
+"nguon": [
+"seedling/giong_thieu_sd48_bb.json"
+]
+},
+{
+"l": "en",
+"t": "She is my younger sister.",
+"nguon": [
+"seedling/giong_thieu_sd48_bb.json"
+]
+},
+{
+"l": "en",
+"t": "What's",
+"nguon": [
+"seedling/giong_thieu_sd48_bb.json"
+]
+},
+{
+"l": "en",
+"t": "Xiaomei",
+"nguon": [
+"seedling/giong_thieu_sd48_bb.json"
+]
+},
+{
+"l": "en",
+"t": "me",
+"nguon": [
+"seedling/giong_thieu_sd48_bb.json"
+]
+},
+{
+"l": "en",
+"t": "younger sister",
+"nguon": [
+"seedling/giong_thieu_sd48_bb.json"
+]
+},
+{
+"l": "zh",
+"t": "Bông",
+"nguon": [
+"seedling/giong_thieu_sd48_bb.json"
+]
+},
+{
+"l": "zh",
+"t": "他是我",
+"nguon": [
+"seedling/giong_thieu_sd48_bb.json"
+]
+},
+{
+"l": "zh",
+"t": "他是我爷爷。他是中国人。",
+"nguon": [
+"seedling/giong_thieu_sd48_bb.json"
+]
+},
+{
+"l": "zh",
+"t": "我是",
+"nguon": [
+"seedling/giong_thieu_sd48_bb.json"
+]
+},
+{
+"l": "zh",
+"t": "我是Bông！",
+"nguon": [
+"seedling/giong_thieu_sd48_bb.json"
+]
+},
+{
+"l": "zh",
+"t": "早上好！我是……Bông的奶奶！",
+"nguon": [
+"seedling/giong_thieu_sd48_bb.json"
+]
+},
+{
+"l": "en",
 "t": "And you, ___?",
 "nguon": [
 "seedling/giong_thieu_u9.json"
@@ -12226,6 +12562,20 @@
 {
 "l": "en",
 "t": "Do you like burgers?",
+"nguon": [
+"seedling/giong_thieu_u9.json"
+]
+},
+{
+"l": "en",
+"t": "Do you like candy?",
+"nguon": [
+"seedling/giong_thieu_u9.json"
+]
+},
+{
+"l": "en",
+"t": "Do you like chips?",
 "nguon": [
 "seedling/giong_thieu_u9.json"
 ]
@@ -12442,6 +12792,13 @@
 },
 {
 "l": "en",
+"t": "Yes, I do!",
+"nguon": [
+"seedling/giong_thieu_u9.json"
+]
+},
+{
+"l": "en",
 "t": "Yes, I do! Apple juice!",
 "nguon": [
 "seedling/giong_thieu_u9.json"
@@ -12533,7 +12890,21 @@
 },
 {
 "l": "zh",
+"t": "你喜欢糖果吗？",
+"nguon": [
+"seedling/giong_thieu_u9.json"
+]
+},
+{
+"l": "zh",
 "t": "你喜欢苹果吗？",
+"nguon": [
+"seedling/giong_thieu_u9.json"
+]
+},
+{
+"l": "zh",
+"t": "你喜欢薯条吗？",
 "nguon": [
 "seedling/giong_thieu_u9.json"
 ]
@@ -12771,6 +13142,13 @@
 },
 {
 "l": "en",
+"t": "Touch your shoulders!",
+"nguon": [
+"buoi/giong-thieu.json"
+]
+},
+{
+"l": "en",
 "t": "Touch your knees!",
 "nguon": [
 "buoi/giong-thieu.json"
@@ -12905,6 +13283,20 @@
 {
 "l": "zh",
 "t": "你的头发长吗？",
+"nguon": [
+"buoi/giong-thieu.json"
+]
+},
+{
+"l": "zh",
+"t": "摸摸肩膀！",
+"nguon": [
+"buoi/giong-thieu.json"
+]
+},
+{
+"l": "zh",
+"t": "摸摸膝盖！",
 "nguon": [
 "buoi/giong-thieu.json"
 ]
@@ -13390,22 +13782,6 @@
 "t": "Đến lượt con!",
 "nguon": [
 "little-seed/giong_vi_bbve.json"
-]
-},
-{
-"l": "zh",
-"t": "他",
-"nguon": [
-"seedling/seedling-data.js",
-"little-seed/little-seed-data.js"
-]
-},
-{
-"l": "zh",
-"t": "她",
-"nguon": [
-"seedling/seedling-data.js",
-"little-seed/little-seed-data.js"
 ]
 }
 ]

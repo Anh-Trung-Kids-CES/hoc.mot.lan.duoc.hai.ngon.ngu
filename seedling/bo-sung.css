@@ -285,3 +285,121 @@ body.is-demo:not(.in-step) .toast{bottom:calc(max(10px,env(safe-area-inset-botto
 .ve-claps span.hit{filter:none;opacity:1;transform:scale(1.35)}
 .ve-say{text-align:center;color:#6b5a45;font-size:16px}
 .ve-claps.turn+.ve-say{color:#1f7a3a;font-weight:700}
+
+
+/* ---------- Big book hai cột: trái đọc, phải câu hỏi (12/11) ---------- */
+.bb2{width:100%;display:grid;grid-template-columns:minmax(0,1.45fr) minmax(260px,1fr);gap:16px;align-items:start}
+.bb2-book,.bb2-q{background:#fff;border-radius:22px;padding:14px;box-shadow:0 2px 0 rgba(0,0,0,.06)}
+.bb2-book{border:5px solid var(--ls-en)}
+.bb2-h{display:flex;align-items:center;gap:10px;justify-content:space-between;font-size:15px;color:#5a4a3a;margin-bottom:8px}
+.bb2-h b{flex:1;font-size:17px}
+.bb2-pg{position:relative;border-radius:16px;overflow:hidden;background:#FAF5EC;aspect-ratio:4/3;width:min(100%,calc(44vh * 4 / 3));margin:0 auto}
+.bb2-pg img{width:100%;height:100%;object-fit:cover;display:block}
+.bb2-ttl{position:absolute;left:0;right:0;bottom:0;padding:14px;background:rgba(255,248,236,.9);text-align:center;display:flex;flex-direction:column}
+.bb2-ttl b{font-size:clamp(24px,3vw,38px);color:#C8372D}.bb2-ttl b.zh{color:#3b2a1f}
+.bb2-tx{padding:10px 6px 4px;text-align:center}
+.bb2-tx .en{font-size:clamp(18px,2.2vw,28px);font-weight:800;color:#2b2b2b;opacity:.55;transition:opacity .2s}
+.bb2-tx .zhl{margin-top:4px;opacity:.55;transition:opacity .2s}
+.bb2-tx .zhl b{font-size:clamp(22px,2.8vw,32px)}.bb2-tx .zhl .sx-pyl{display:block;font-size:15px;color:#2d7a74}
+.bb2-tx .on{opacity:1}.bb2-tx .en.on{color:var(--ls-en)}.bb2-tx .zhl.on b{color:var(--ls-zh)}
+.bb2-q{border:5px solid #E6DCCB;min-height:320px;display:flex;flex-direction:column;gap:10px}
+.bb2-q.open{border-color:var(--ls-ok)}
+.bb2-qh{display:flex;justify-content:space-between;align-items:baseline}.bb2-qh b{font-size:18px}.bb2-qh small{color:#7a6652}
+.bb2-lock{display:flex;gap:10px;align-items:center;background:#FFF7EA;border-radius:14px;padding:10px;color:#6b5a45}.bb2-lock span{font-size:28px}.bb2-lock p{margin:0}
+.bb2-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.bb2-list li{position:relative;border-radius:12px;overflow:hidden;filter:grayscale(1);opacity:.45}
+.bb2-list img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.bb2-list span{position:absolute;left:6px;top:6px;background:#fff;border-radius:10px;padding:1px 8px;font-size:13px;font-weight:700}
+.bb2-ask{display:flex;gap:10px;align-items:center;border:0;background:#EEF4FF;border-radius:16px;padding:8px;cursor:pointer;text-align:left}
+.bb2-ask img{width:42%;aspect-ratio:4/3;object-fit:cover;border-radius:12px}
+.bb2-ask span{font-size:24px;font-weight:800;color:#24427a}.bb2-ask small{display:block;font-size:14px;color:#2d7a74;font-weight:500}
+.bb2-opts{display:grid;grid-template-columns:repeat(var(--n),1fr);gap:8px}
+.bb2-opts .ls-opt{padding:6px;min-width:0;width:auto;max-width:none;height:auto}.bb2-opts .ls-pic{width:100%;aspect-ratio:1;object-fit:contain}
+.bb2-ans{min-height:30px;text-align:center;font-size:20px;font-weight:800;color:var(--ls-ok)}.bb2-ans .no{color:#9a6a1a;font-size:15px;font-weight:600}
+@media (max-width:820px){.bb2{grid-template-columns:1fr}}
+
+/* ---------- Vè karaoke + lồng tiếng (12/11) ---------- */
+.vk{width:100%;display:flex;flex-direction:column;align-items:center;gap:10px}
+.vk-stage{position:relative;width:min(100%,760px);border-radius:22px;overflow:hidden;border:5px solid #F2C94C;background:#FFF7EA}
+.vk-stage canvas{width:100%;height:auto;display:block}
+.vk-cover{position:absolute;inset:0;display:grid;place-items:center;cursor:pointer;background:rgba(0,0,0,.05)}
+.vk-cover b{width:86px;height:86px;border-radius:50%;background:#F2994A;color:#fff;display:grid;place-items:center;font-size:40px;box-shadow:0 6px 0 rgba(0,0,0,.15)}
+.vk-st{font-weight:700;color:#5a4a3a}
+.vk-ctl{justify-content:center;gap:10px;flex-wrap:wrap}.vk-ctl .btn[disabled]{opacity:.45;pointer-events:none}
+.vk-tip{color:#7a6652}
+.vk-out{width:min(100%,760px);display:flex;flex-direction:column;gap:8px;align-items:center;background:#F1FAF3;border-radius:18px;padding:10px}
+.vk-out video{width:100%;border-radius:14px;background:#000}.vk-out small{color:#3d6b4a}
+/* Vè: mỗi tiếng một video (12/11) · big book: nút gọn */
+.vk-tabs{display:flex;gap:8px;justify-content:center}
+.vk-tab{border:3px solid #E6DCCB;background:#fff;border-radius:999px;padding:6px 18px;font-weight:800;font-size:16px;cursor:pointer;color:#6b5a45}
+.vk-tab.en.on{border-color:var(--ls-en);background:var(--ls-en);color:#fff}.vk-tab.zh.on{border-color:var(--ls-zh);background:var(--ls-zh);color:#fff}
+.vk-tab[disabled]{opacity:.45;cursor:default}
+.vk-stage.zh{border-color:var(--ls-zh)}.vk-stage.en{border-color:var(--ls-en)}
+.bb2-book.zh{border-color:var(--ls-zh)}
+.bb2-tx{min-height:64px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.bb2-tx .en,.bb2-tx b.zh{opacity:.6;transition:opacity .2s}.bb2-tx.on .en,.bb2-tx.on b.zh{opacity:1}
+.bb2-tx .en{color:var(--ls-en)}.bb2-tx b.zh{font-size:clamp(22px,2.8vw,32px);color:var(--ls-zh)}
+.bb2-nav{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:6px}
+.bb2-nav .ls-b{min-width:56px}.bb2-auto{font-weight:700;color:#5a4a3a;min-width:150px;text-align:center}
+.bb2-tx .sx-pyl{font-size:17px!important;color:#2d7a74;margin-top:2px}
+
+/* ===== Big book + vè 4 lần (12/11): khởi động, gợi ý 💡, đọc đuổi, con kể, bìa khung ảnh ===== */
+.bvw{width:100%;display:flex;flex-direction:column;gap:12px;align-items:center}
+.bvw-h{width:min(100%,820px);display:flex;align-items:center;gap:10px}
+.bvw-h b{flex:1;font-size:18px;color:#5a4a3a}
+.bvw-tag{background:#FFE7A3;color:#7a5200;border-radius:999px;padding:4px 14px;font-weight:800}
+.bvw-host{width:min(100%,820px);min-height:300px;display:grid;place-items:center}
+.bvw-ve,.bvw-pg{width:100%;background:#fff;border-radius:22px;padding:12px;border:5px solid var(--ls-en);display:flex;flex-direction:column;gap:10px;align-items:center}
+.bvw-ve.zh,.bvw-pg.zh{border-color:var(--ls-zh)}
+.bvw-ve img,.bvw-pg img{width:min(100%,calc(42vh * 4 / 3));aspect-ratio:4/3;object-fit:cover;border-radius:16px}
+.bvw-line,.bvw-tx{display:flex;flex-direction:column;align-items:center;text-align:center}
+.bvw-line b,.bvw-tx b{font-size:clamp(22px,3vw,34px);font-weight:800;color:var(--ls-en)}
+.bvw-line b.zh,.bvw-tx b.zh{color:var(--ls-zh)}
+.bvw-line small,.bvw-tx small{font-size:17px;color:#2d7a74}
+.bvw-clap{font-size:46px;display:inline-block;animation:bvclap var(--beat,.65s) ease-in-out infinite}
+@keyframes bvclap{0%,100%{transform:scale(1)}40%{transform:scale(1.28) rotate(-8deg)}}
+.bvw-names{width:100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px}
+.bvw-names.sm{grid-template-columns:repeat(3,1fr);gap:6px}
+.bvw-nm{background:#fff;border-radius:18px;padding:8px;display:flex;flex-direction:column;align-items:center;border:4px solid #EFE6D6;transition:transform .2s,border-color .2s,opacity .2s;opacity:.7}
+.bvw-nm .ls-pic{width:100%;aspect-ratio:1;object-fit:contain}
+.bvw-nm b{font-size:17px;color:var(--ls-en)}.bvw-nm b.zh{color:var(--ls-zh);font-size:19px}
+.bvw-nm.seen{opacity:1}
+.bvw-nm.lit,.bb2-opts .ls-opt.lit{opacity:1;border-color:#F2C94C;box-shadow:0 0 0 6px #FFE7A3;transform:scale(1.06)}
+.bb2-who{display:inline-block;margin-top:6px;background:#FFF3D6;color:#7a5200;border-radius:999px;padding:3px 12px;font-weight:800;font-size:16px}
+.bb2-tx.ke{min-height:52px}
+.bb2-microw{display:flex;justify-content:center;margin:6px 0 22px}
+.bb2-microw .ls-mic{width:84px;height:84px}
+.bb2-pg.glow{box-shadow:0 0 0 6px #F2C94C,0 0 28px 6px rgba(242,201,76,.8);animation:bvglow 1.2s ease-in-out 2}
+@keyframes bvglow{50%{box-shadow:0 0 0 10px #F2C94C,0 0 40px 12px rgba(242,201,76,.9)}}
+.bb2-pg.peek img{filter:blur(10px) saturate(.9)}
+.bb2-peek{position:absolute;right:10px;top:10px;font-size:34px}
+.bb2-photo{position:absolute;object-fit:cover;border-radius:4px}
+.bb2-phrow{justify-content:center;margin-top:6px}
+.bb2-hrow{display:flex;align-items:center;gap:10px}
+.bb2-hrow .bb2-ans{flex:1}
+.bb2-bulb{background:#FFF3D6;border:3px solid #F2C94C;color:#7a5200;font-weight:800;font-size:17px}
+.bb2-bulb.on{background:#F2C94C;color:#3b2a1f}
+.bb2-opts .ls-opt{border:4px solid transparent;transition:transform .2s}
+.bb2-opts .ls-opt.off{opacity:.35}
+.bb2-opts .ls-opt.model{box-shadow:0 0 0 6px #F2C94C;animation:bvglow 1.2s ease-in-out 2}
+.bb2-opts.pg .bb2-pgopt{padding:4px}.bb2-opts.pg .bb2-pgopt img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;display:block}
+.bb2-arrow{font-size:28px;font-weight:900;color:#F2994A;white-space:nowrap}
+.bb2-blank{font-style:normal;display:inline-block;min-width:3.5em;border-bottom:4px dashed #F2994A;text-align:center;color:#F2994A}
+.bb2-blank.fill{border-bottom-style:solid;color:var(--ls-ok)}
+.bb2-mine{display:flex;flex-direction:column;align-items:center;gap:14px;padding-top:6px}
+.bb2-mine .bb2-ask{width:100%;justify-content:center}
+.bb2-half{font-size:clamp(24px,3vw,34px);font-weight:800;color:var(--ls-en)}.bb2-half.zh{color:var(--ls-zh)}
+.bb2-half i{font-style:normal;color:#F2994A}
+.bb2-mine .ls-mic{margin-bottom:22px}
+@media (prefers-reduced-motion:reduce){.bvw-clap,.bb2-pg.glow,.bb2-opts .ls-opt.model{animation:none}}
+
+/* câu hỏi big book: cô Hươu ra lệnh, nút 💡 gọn, tranh trang không thừa khoảng trắng (12/11 tối) */
+.bb2-co{display:flex;align-items:center;gap:10px;margin:2px 0 8px}
+.bb2-co img{width:52px;height:52px;object-fit:contain;flex:none}
+.bb2-co-tx{flex:1;background:#FFF3D6;border-radius:16px 16px 16px 4px;padding:8px 12px;display:flex;flex-direction:column;gap:2px}
+.bb2-co-tx b{font-size:20px;color:var(--ls-en)}.bb2-co-tx b.zh{color:var(--ls-zh);font-size:22px}
+.bb2-co-tx small{font-size:15px;color:#6b5a45}
+.bb2-co .bb2-bulb{flex:none;width:52px;height:52px;border-radius:50%;padding:0;font-size:26px;display:grid;place-items:center}
+.bb2-opts.pg .ls-opt{aspect-ratio:auto;max-height:none}
+.bb2-nav.q{margin-top:8px}
+.bb2-q .bb2-ans{min-height:28px;margin-top:6px}

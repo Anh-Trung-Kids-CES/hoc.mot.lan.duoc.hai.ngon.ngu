@@ -1,0 +1,163 @@
+# SD U1 | Hello! I'm… | 你好！我是……
+Good morning, class! | 小朋友们，早上好！
+Good morning! What's your name? | 早上好！你叫什么名字？
+Good morning, Mrs Lan! I'm Leo. | Lan老师，早上好！我是Leo。
+Good morning! What's your name? | 早上好！你叫什么名字？
+Good morning, Mrs Lan! I'm Anna. | Lan老师，早上好！我是Anna。
+Good morning! What's your name? | 早上好！你叫什么名字？
+Good morning, Mrs Lan! I'm Xiaomei. | Lan老师，早上好！我是Xiaomei。
+Good morning! What's your name? | 早上好！你叫什么名字？
+Good morning! I'm… Bông's grandpa! | 早上好！我是……Bông的爷爷！
+Good morning, Mrs Lan! I'm Bông! | Lan老师，早上好！我是Bông！
+Kids, write your name, please. | 小朋友们，请写你们的名字。
+Goodbye, class! See you tomorrow! | 小朋友们，再见！明天见！
+# SD U2 | How Old Are You? | 你几岁？
+It's Vũ's birthday! How old are you, Vũ? | 今天是Vũ的生日！Vũ，你几岁？
+I'm nine! | 我九岁！
+Really? Look at the number! | 真的吗？看看蛋糕上的数字！
+Ha ha! I'm seven! | 哈哈！我七岁！
+How old are you, Anna? | Anna，你几岁？
+I'm six. What about you, Xiaomei? | 我六岁。Xiaomei，你呢？
+Me too! I'm six! | 我也是！我六岁！
+This is my brother. He is eight. | 这是我哥哥。他八岁。
+Eight is bigger than seven! | 八比七大！
+How old are you, Grandpa? | 爷爷，您多大年纪了？
+I'm seven! | 我七岁！
+Really? Ha ha! Try again, Grandpa! | 真的吗？哈哈！爷爷，再说一次！
+Happy birthday, Vũ! | Vũ，生日快乐！
+Nice to meet you! | 很高兴认识你！
+# SD U3 | Who Is She? | 她是谁？
+Look at my family photo! | 看我的家庭照片！
+Who is she? | 她是谁？
+She is my mother. | 她是我妈妈。
+Who is he? | 他是谁？
+He is my older brother. | 他是我哥哥。
+Who is she? | 她是谁？
+She is my younger sister. She is a baby! | 她是我妹妹。她还是个小宝宝！
+Who is he? | 他是谁？
+He is my uncle. He is Chinese. | 他是我叔叔。他是中国人。
+Who is she? | 她是谁？
+It's… me! | 是……我！
+I love my family! | 我爱我的家人！
+# SD U4 | Touch Your… | 摸摸……
+Look! The man is very tall! | 看！那个叔叔好高！
+Hello, kids! Touch your head! | 小朋友们好！摸摸头！
+Touch your shoulders! | 摸摸肩膀！
+Touch your knees! | 摸摸膝盖！
+Oh, my knees! | 哎哟，我的膝盖！
+Open your mouth! | 张大嘴巴！
+Look at your feet. | 看看你的脚。
+I've got ten toes! | 我有十个脚趾！
+Clap your hands! | 拍拍手！
+Stamp your feet! | 跺跺脚！
+Sorry, Grandpa! | 对不起，爷爷！
+Touch your toes! | 摸摸脚趾！
+Ha ha! Long legs! It's fun! | 哈哈！长长的腿！真好玩！
+# SD U5 | How Do You Feel? | 你感觉怎么样？
+How do you feel, Leo? | Leo，你感觉怎么样？
+I feel sleepy. | 我感觉很困。
+Happy birthday! How do you feel? | 生日快乐！你感觉怎么样？
+I feel excited! | 我感觉很兴奋！
+Close your eyes, please. | 请闭上眼睛。
+Wow! A toy dog! My favourite toy! | 哇！玩具狗！我最喜欢的玩具！
+How do you feel? | 你感觉怎么样？
+I'm hungry. I want cake! | 我饿了。我要蛋糕！
+How do you feel? | 你感觉怎么样？
+I'm thirsty. I want water! | 我渴了。我要水！
+How do you feel? | 你感觉怎么样？
+I'm tired. Tell me a story, please! | 我累了。请给我讲个故事吧！
+# SD U6 | What Is This? | 这是什么？
+Close your eyes, Bông. What is this? | Bông，闭上眼睛。这是什么？
+It's a pencil! | 是铅笔！
+Close your eyes, Anna. What is this? | Anna，闭上眼睛。这是什么？
+It's a crayon! | 是蜡笔！
+Close your eyes, Vũ. What is this? | Vũ，闭上眼睛。这是什么？
+These are scissors! | 这是剪刀！
+Close your eyes, Leo. What is this? | Leo，闭上眼睛。这是什么？
+It's… glue! Oh no! | 是……胶水！哎呀！
+What are these? | 这些是什么？
+These are letters! L, E, O! | 这些是字母！L、E、O！
+Look at the board. Write your name! | 看黑板。写你的名字！
+Those are our names! | 那些是我们的名字！
+# SD U7 | Where Is Anna? | Anna在哪儿？
+This is our new flat! | 这是我们的新家！
+Let's play! Where is Anna? | 我们玩吧！Anna在哪儿？
+Is she in the living room? | 她在客厅吗？
+No! It's Puppy! | 不是！是小狗！
+Is she in the dining room? | 她在餐厅吗？
+No! It's Kitten! | 不是！是小猫！
+Is she in the bedroom? | 她在卧室吗？
+No! It's Mummy! | 不是！是妈妈！
+Is she under the bed? | 她在床下面吗？
+No! It's… my ball! It's right under the bed! | 不是她！是……我的球！就在床下面！
+Where is Anna? Is she in the bathroom or in the kitchen? | Anna在哪儿？她在卫生间还是在厨房？
+I'm here, Leo! Ha ha! | Leo，我在这儿！哈哈！
+# SD U8 | Can It Fly? | 它会飞吗？
+Can we go on the boat? | 我们能坐船吗？
+Yes, you can! | 能！
+Can the duck fly? | 鸭子会飞吗？
+Yes, it can! Look at its wings! | 会！看它的翅膀！
+Can the frog fly? | 青蛙会飞吗？
+No, it can't. It can hop! | 不会。它会跳！
+Can the mouse fly? | 老鼠会飞吗？
+No, it can't. It can run! | 不会。它会跑！
+Can the polar bear swim? | 北极熊会游泳吗？
+Yes, it can! Really! | 会！真的！
+Can your daddy swim, Leo? | Leo，你爸爸会游泳吗？
+Oh no! Splash! | 哎呀！扑通！
+Yes, he can! Ha ha! | 会！哈哈！
+# SD U9 | Do You Like…? | 你喜欢……吗？
+Do you like bread, Vũ? | Vũ，你喜欢面包吗？
+Yes, I do! It looks nice! | 喜欢！看起来很好吃！
+Do you like juice? | 你喜欢果汁吗？
+Yes, I do! | 喜欢！
+Do you like noodles? | 你喜欢面条吗？
+No, I don't. | 不喜欢。
+Look! It looks nice! | 看！看起来很好吃！
+Mmm! I like noodles! | 嗯！我喜欢面条！
+Do you like candy? | 你喜欢糖果吗？
+No, thank you! I don't like candy. | 不，谢谢！我不喜欢糖果。
+Do you like chips? | 你喜欢薯条吗？
+Yes, I do! | 喜欢！
+Candy? Put a cross! | 糖果？画个叉！
+# SD U10 | What's the Weather Like? | 今天天气怎么样？
+What's the weather like today? | 今天天气怎么样？
+It's sunny and hot! Wear your hat! | 今天是晴天，很热！戴上帽子！
+Ha ha! No coat, Leo! | 哈哈！Leo，不要穿外套！
+What's the weather like today? | 今天天气怎么样？
+It's raining a lot. Here is your umbrella! | 下大雨了！给你雨伞！
+Stay at home, please. | 今天在家里玩吧。
+What's the weather like today? | 今天天气怎么样？
+It's cold and windy. Wear your coat! | 很冷，风很大！穿上外套！
+What's the weather like today? | 今天天气怎么样？
+It's snowing! | 下雪了！
+Let's go out and make a snowman! | 我们出去堆雪人吧！
+Smile, snowman! | 雪人，笑一笑！
+Go away, sun! | 太阳，走开！
+# SD U11 | What Colour Is It? | 它是什么颜色的？
+Look at the clothes! | 看这些衣服！
+What colour is it? | 它是什么颜色的？
+It's brown. It's a brown jacket. Cool! | 它是棕色的！是一件棕色的夹克。真酷！
+What colour is it? | 它是什么颜色的？
+It's gold! A gold dress! | 它是金色的！一条金色的裙子！
+What colour are they? | 它是什么颜色的？
+They're white shorts! | 是白色的短裤！
+What colour are they? | 它们是什么颜色的？
+They're red and green socks! Ha ha! | 是红色和绿色的袜子！哈哈！
+What colour is it? | 它是什么颜色的？
+It's silver! It's Mrs Lan's bag! | 银色的！是Lan老师的包！
+What colour do you like? | 你喜欢什么颜色？
+I like gold! | 我喜欢金色！
+# SD U12 | How Many Are There? | 有几个……？
+It's the first of June! Let's have a party! | 今天是六月一日！我们开派对吧！
+How many people are there? | 有几个人？
+There are nine people. | 有九个人。
+How many pairs of shoes are there? | 有几双鞋？
+There are nine pairs of shoes! | 有九双鞋！
+How many rackets are there? | 有几个球拍？
+There are two rackets… and one tennis racket! Ha ha! | 有两个球拍……还有一个网球拍！哈哈！
+How many cakes are there? | 有几个蛋糕？
+There are ten cakes! | 有十个蛋糕！
+Let's take a photo! How many people are there? | 我们拍照吧！有几个人？
+Nine people… and one Puppy! Ha ha! | 九个人……还有一只小狗！哈哈！
+Happy Children's Day! | 六一儿童节快乐！
