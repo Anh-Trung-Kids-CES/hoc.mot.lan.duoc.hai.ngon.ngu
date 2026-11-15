@@ -173,7 +173,7 @@ function teachLinks(n) {
   const l = [], sd = S.lop === 'sd';
   if (n === 0) l.push({ t: 'Mở web khai giảng', href: `../khai-giang/?lop=${S.lop}` });
   else {
-    if (n <= 3) l.push({ t: `Web dạy buổi ${n}`, href: `../buoi/?lop=${S.lop}&b=${n}` });
+    if (n <= 7) l.push({ t: `Web dạy buổi ${n}`, href: `../buoi/?lop=${S.lop}&b=${n}` });
     l.push({ t: `Kịch bản buổi ${n} (từng màn, từng phút)`, href: KICHBAN });
     l.push({ t: sd ? `Giáo án & trình chiếu buổi ${n}` : `Học liệu & phiếu in buổi ${n}`, href: dayUrl(n) });
   }
@@ -280,7 +280,7 @@ function builtIn() {
   const A = (nhom, ten, href, gc) => g.push({ nhom, ten, url: href, ghi_chu: gc || '' });
   A('Dạy trên lớp', 'Kịch bản 48 buổi offline (cả Little Seed và Seedling)', KICHBAN, 'Từng buổi 12–18 màn, đồ dùng, thang gợi ý, việc ở nhà. Chọn lớp và buổi ở thanh đầu trang. Có khung góp ý.');
   A('Dạy trên lớp', 'Buổi 0 · Khai giảng (web trình chiếu)', `../khai-giang/?lop=${L}`, '18 màn, 90 phút, có đồng hồ buổi');
-  [1, 2, 3].forEach(n => A('Dạy trên lớp', `Web dạy buổi ${n} (Unit 1)`, `../buoi/?lop=${L}&b=${n}`, 'Mỗi unit dựng xong sẽ thêm buổi mới vào đây'));
+  [1, 2, 3, 4, 5, 6, 7].forEach(n => A('Dạy trên lớp', `Web dạy buổi ${n} (Unit ${n <= 3 ? 1 : 2})`, `../buoi/?lop=${L}&b=${n}`, 'Mỗi unit dựng xong sẽ thêm buổi mới vào đây'));
   if (L === 'sd') { A('Dạy trên lớp', 'Giáo án, trình chiếu, big book, reader, đồ dùng in (48 buổi)', '../seedling/day/', 'Lớp & báo cáo từng buổi'); }
   else { A('Dạy trên lớp', 'Học liệu in và phiếu tô – dán', '../little-seed/day/', 'Phiếu theo buổi, flashcard, thủ công'); }
   A('Web của con', `Web học ${LOPS[L].ten} (link vào học của học viên)`, w, 'Gửi ba mẹ kèm ?con=MÃ: lấy link riêng từng bạn ở tab Tài khoản con hoặc Học sinh');

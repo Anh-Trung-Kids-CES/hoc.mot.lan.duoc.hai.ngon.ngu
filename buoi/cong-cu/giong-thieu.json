@@ -41,15 +41,7 @@
  ],
  [
   "en",
-  "Goodbye, all! See you tomorrow!"
- ],
- [
-  "en",
   "Woof!"
- ],
- [
-  "en",
-  "Good night, puppy!"
  ],
  [
   "en",
@@ -160,6 +152,234 @@
   "Well done!"
  ],
  [
+  "en",
+  "Hello, teacher! I'm ___."
+ ],
+ [
+  "en",
+  "One, two, three! Yay!"
+ ],
+ [
+  "en",
+  "Six! Yay!"
+ ],
+ [
+  "en",
+  "Happy birthday!"
+ ],
+ [
+  "en",
+  "HAP-py BIRTH-day, HAP-py DAY!"
+ ],
+ [
+  "en",
+  "ONE, two, THREE, four, CAKE! Yay, YAY!"
+ ],
+ [
+  "en",
+  "How old are you? – I'm seven!"
+ ],
+ [
+  "en",
+  "Hello! My name is Bông."
+ ],
+ [
+  "en",
+  "My name is Leo. I'm five."
+ ],
+ [
+  "en",
+  "My name is Anna. I'm four."
+ ],
+ [
+  "en",
+  "My name is Vũ. I'm six."
+ ],
+ [
+  "en",
+  "My name is Puppy. I'm three. Woof!"
+ ],
+ [
+  "en",
+  "My name is ___. Happy birthday!"
+ ],
+ [
+  "en",
+  "My name is Puppy!"
+ ],
+ [
+  "en",
+  "Leo! My name is Leo!"
+ ],
+ [
+  "en",
+  "my NAME'S LE-o. I'm FIVE! And YOU?"
+ ],
+ [
+  "en",
+  "What's your name? – My name is Leo."
+ ],
+ [
+  "en",
+  "My name is Bông."
+ ],
+ [
+  "en",
+  "Who are you?"
+ ],
+ [
+  "en",
+  "Your turn!"
+ ],
+ [
+  "en",
+  "My name is ___. I'm ___."
+ ],
+ [
+  "en",
+  "Happy birthday, Bông!"
+ ],
+ [
+  "en",
+  "How old are you, ___?"
+ ],
+ [
+  "en",
+  "Say more!"
+ ],
+ [
+  "en",
+  "Hello, everyone! My name is ___. I'm ___. Let's count! One, two, three!"
+ ],
+ [
+  "en",
+  "Good morning, Mrs Lan! I'm ___."
+ ],
+ [
+  "en",
+  "Me too! I'm happy!"
+ ],
+ [
+  "en",
+  "Anna comes to the park."
+ ],
+ [
+  "en",
+  "And Vũ? How old are you?"
+ ],
+ [
+  "en",
+  "I'm seven. What about you?"
+ ],
+ [
+  "en",
+  "SIX or SEV-en? EIGHT or TWO?"
+ ],
+ [
+  "en",
+  "I'm ten."
+ ],
+ [
+  "en",
+  "It's my birthday!"
+ ],
+ [
+  "en",
+  "What number is it? It's seven."
+ ],
+ [
+  "en",
+  "How old are you? I'm seven."
+ ],
+ [
+  "en",
+  "He is eight. Eight is bigger than seven."
+ ],
+ [
+  "en",
+  "What's your name? How old are you, ___?"
+ ],
+ [
+  "en",
+  "Vũ's mother has got a big cake."
+ ],
+ [
+  "en",
+  "Wow! Really? You are nine?"
+ ],
+ [
+  "en",
+  "Are you six?"
+ ],
+ [
+  "en",
+  "No! Look at the number on my cake!"
+ ],
+ [
+  "en",
+  "There is a number on the cake. It's seven!"
+ ],
+ [
+  "en",
+  "Number seven! You are seven years old!"
+ ],
+ [
+  "en",
+  "No. Try again!"
+ ],
+ [
+  "en",
+  "Are you seven?"
+ ],
+ [
+  "en",
+  "Yes! I'm seven."
+ ],
+ [
+  "en",
+  "Are you six? – No. Try again!"
+ ],
+ [
+  "en",
+  "A tall boy comes to the table."
+ ],
+ [
+  "en",
+  "This is my brother. He is eight years old."
+ ],
+ [
+  "en",
+  "Hello! I'm eight."
+ ],
+ [
+  "en",
+  "Let's hold hands, friends!"
+ ],
+ [
+  "en",
+  "Ten friends! Ten happy friends!"
+ ],
+ [
+  "en",
+  "Goodbye, Vũ! See you again!"
+ ],
+ [
+  "en",
+  "Goodbye! How old are you, ___?"
+ ],
+ [
+  "en",
+  "Hello, everyone! My name is ___. I'm ___."
+ ],
+ [
+  "en",
+  "Hello, everyone! My name is ___. I'm ___ years old. Nice to meet you!"
+ ],
+ [
+  "en",
+  "My name is ___. I'm ___ years old."
+ ],
+ [
   "zh",
   "大家早上好！"
  ],
@@ -174,6 +394,10 @@
  [
   "zh",
   "我叫An，An呀！"
+ ],
+ [
+  "zh",
+  "Bông，再见！"
  ],
  [
   "zh",
@@ -209,15 +433,7 @@
  ],
  [
   "zh",
-  "大家再见！明天见！"
- ],
- [
-  "zh",
   "汪汪！"
- ],
- [
-  "zh",
-  "小狗，晚安！"
  ],
  [
   "zh",
@@ -230,6 +446,10 @@
  [
   "zh",
   "朋友们，你们好！"
+ ],
+ [
+  "zh",
+  "走吧"
  ],
  [
   "zh",
@@ -342,5 +562,305 @@
  [
   "zh",
   "看我！"
+ ],
+ [
+  "zh",
+  "老师好！我叫___。"
+ ],
+ [
+  "zh",
+  "我们数一数！一、二、三！"
+ ],
+ [
+  "zh",
+  "一、二、三！耶！"
+ ],
+ [
+  "zh",
+  "妈妈、爸爸、Bông！三！"
+ ],
+ [
+  "zh",
+  "一、二、三、四、五！"
+ ],
+ [
+  "zh",
+  "四、五、六！我六岁！"
+ ],
+ [
+  "zh",
+  "六岁！耶！"
+ ],
+ [
+  "zh",
+  "我们数一数！一、二、三！六！"
+ ],
+ [
+  "zh",
+  "十！"
+ ],
+ [
+  "zh",
+  "生日快乐！"
+ ],
+ [
+  "zh",
+  "生日快乐，笑哈哈！"
+ ],
+ [
+  "zh",
+  "一二三四，蛋糕啦！"
+ ],
+ [
+  "zh",
+  "你几岁？– 我七岁！"
+ ],
+ [
+  "zh",
+  "你好！我叫Bông。"
+ ],
+ [
+  "zh",
+  "我叫Leo。我五岁。"
+ ],
+ [
+  "zh",
+  "我叫Anna。我四岁。"
+ ],
+ [
+  "zh",
+  "我叫Vũ。我六岁。"
+ ],
+ [
+  "zh",
+  "我是小狗。我三岁。汪汪！"
+ ],
+ [
+  "zh",
+  "我叫___。生日快乐！"
+ ],
+ [
+  "zh",
+  "我叫小狗！"
+ ],
+ [
+  "zh",
+  "生日"
+ ],
+ [
+  "zh",
+  "十"
+ ],
+ [
+  "zh",
+  "Leo！我叫Leo！"
+ ],
+ [
+  "zh",
+  "你叫什么？你几岁？"
+ ],
+ [
+  "zh",
+  "我叫Leo，我五岁！"
+ ],
+ [
+  "zh",
+  "你叫什么名字？– 我叫Leo。"
+ ],
+ [
+  "zh",
+  "我叫Bông。"
+ ],
+ [
+  "zh",
+  "你是谁？"
+ ],
+ [
+  "zh",
+  "我叫小狗。我三岁。汪汪！"
+ ],
+ [
+  "zh",
+  "轮到你了！"
+ ],
+ [
+  "zh",
+  "我叫___。我___岁。"
+ ],
+ [
+  "zh",
+  "Bông，生日快乐！"
+ ],
+ [
+  "zh",
+  "再多说一点！"
+ ],
+ [
+  "zh",
+  "大家好！我叫___。我___岁。我们数一数！一、二、三！"
+ ],
+ [
+  "zh",
+  "Lan老师，早上好！我是___。"
+ ],
+ [
+  "zh",
+  "Vũ，生日快乐！"
+ ],
+ [
+  "zh",
+  "谢谢你，Bông！你叫什么名字？"
+ ],
+ [
+  "zh",
+  "我也是！我很高兴！"
+ ],
+ [
+  "zh",
+  "Anna来公园了。"
+ ],
+ [
+  "zh",
+  "你好，Xiaomei！你几岁？"
+ ],
+ [
+  "zh",
+  "我也是！我也六岁。"
+ ],
+ [
+  "zh",
+  "Vũ呢？你几岁？"
+ ],
+ [
+  "zh",
+  "你几岁了？"
+ ],
+ [
+  "zh",
+  "你几岁呀？你几岁呀？"
+ ],
+ [
+  "zh",
+  "六岁七岁？还是八岁呀？"
+ ],
+ [
+  "zh",
+  "你多大了？"
+ ],
+ [
+  "zh",
+  "我十岁。"
+ ],
+ [
+  "zh",
+  "今天是我的生日！"
+ ],
+ [
+  "zh",
+  "看！一个大蛋糕！"
+ ],
+ [
+  "zh",
+  "这是什么数字？是七。"
+ ],
+ [
+  "zh",
+  "他八岁。八大于七。"
+ ],
+ [
+  "zh",
+  "十个朋友！很高兴认识你！"
+ ],
+ [
+  "zh",
+  "你叫什么名字？___，你几岁？"
+ ],
+ [
+  "zh",
+  "八比七大！"
+ ],
+ [
+  "zh",
+  "Vũ的妈妈有一个大蛋糕。"
+ ],
+ [
+  "zh",
+  "哇！真的吗？你九岁？"
+ ],
+ [
+  "zh",
+  "哈哈！不是。再猜一次！"
+ ],
+ [
+  "zh",
+  "你六岁吗？"
+ ],
+ [
+  "zh",
+  "不是！看我蛋糕上的数字！"
+ ],
+ [
+  "zh",
+  "蛋糕上有一个数字。是七！"
+ ],
+ [
+  "zh",
+  "数字七！你七岁！"
+ ],
+ [
+  "zh",
+  "不对！再猜猜！"
+ ],
+ [
+  "zh",
+  "你七岁吗？"
+ ],
+ [
+  "zh",
+  "你六岁吗？– 不对！再猜猜！"
+ ],
+ [
+  "zh",
+  "一个高高的男孩来到桌子旁。"
+ ],
+ [
+  "zh",
+  "这是我哥哥。他八岁。"
+ ],
+ [
+  "zh",
+  "你们好！我八岁。"
+ ],
+ [
+  "zh",
+  "朋友们，我们拉拉手！"
+ ],
+ [
+  "zh",
+  "一、二、三、四、五、六、七、八、九、十！"
+ ],
+ [
+  "zh",
+  "十个朋友！十个快乐的朋友！"
+ ],
+ [
+  "zh",
+  "Vũ，再见！下次见！"
+ ],
+ [
+  "zh",
+  "再见！___，你几岁？"
+ ],
+ [
+  "zh",
+  "哇！八比七大！"
+ ],
+ [
+  "zh",
+  "大家好！我叫___。我___岁。"
+ ],
+ [
+  "zh",
+  "大家好！我叫___。我___岁。很高兴认识你们！"
  ]
 ]

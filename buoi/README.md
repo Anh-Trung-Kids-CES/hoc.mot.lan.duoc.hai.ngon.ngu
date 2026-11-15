@@ -31,7 +31,7 @@ Lời cô bên phải: Việc của con, vai cô, câu trên màn, ô "Chưa d�
 
 ## Sửa nội dung
 Sửa `cong-cu/noi-dung-u1.js` (ngữ liệu lấy thẳng từ `little-seed/day/hoc-lieu-data.js` và `seedling/day/hoc-lieu/hoc-lieu-data.js`)
-rồi chạy `node buoi/cong-cu/build.js` ở gốc repo: sinh `data-u1.js`, ghép giọng có sẵn (nguyên câu, rồi tự tách câu theo dấu phẩy để ghép mảnh),
+rồi chạy `node buoi/cong-cu/build.js` ở gốc repo: sinh `data-u1.js`, `data-u2.js`, ghép giọng có sẵn (nguyên câu, rồi tự tách câu theo dấu phẩy để ghép mảnh),
 kiểm tra id màn, tổng phút từng khối không vượt khung, tranh có thật; ghi `cong-cu/giong-thieu.json` (câu chưa có giọng).
 Unit sau: thêm `noi-dung-u2.js` (cùng cấu trúc), thêm `<script src="data-u2.js">` vào `index.html`. Đổi `?v=` sau mỗi lần sửa.
 

@@ -299,7 +299,7 @@ function littleSeed() {
         con: 'Đôi bạn đọc big book in cho nhau.', note: ['Tắt chiếu. Cô nghe từng đôi, sửa phát âm.'] },
 
       ngheChi('nghe-chi', 6, 5, bbPages(bb, 0, 11, cover), 'nghe', 'Cả lớp đọc to theo giọng máy, chỉ ngón tay theo chữ.', ['Lượt tiếng Trung: bạn lớn chỉ chữ 大 小 khi gặp.']),
-      { k: 6, id: 'kt', type: 'kt', t: 'Phiếu cuối unit · nghe và khoanh', p: 6, vai: 'nghe', off: true, items: u.check.map(c => ({ say: c, opts: c.opts.map(r), ans: c.ans })), cue: 'Nghe và khoanh vào phiếu!',
+      { k: 6, id: 'kt', type: 'kt', t: 'Phiếu cuối unit · nghe và khoanh', p: 6, vai: 'nghe', off: true, items: u.check.map(c => ({ say: { t: c.say, l: c.l }, opts: c.opts.map(r), ans: c.ans })), cue: 'Nghe và khoanh vào phiếu!',
         con: 'Nghe, khoanh tranh đúng trên phiếu.', note: ['Tắt chiếu. Bấm 🔊 Đọc câu 2 lần, con khoanh A, B hoặc C. Thu phiếu, chấm sau.'],
         print: [pr('ls', '#/u/1/check', 'Phiếu cuối Unit 1')] },
       { k: 6, id: 'pdn', type: 'cau', t: 'Phiên dịch nhí · từng con', p: 5, vai: 'nghe', lead: true, off: true, pdn: true, game: true, cue: 'Leo nói gì? Nói cho Xiaomei!',
@@ -520,7 +520,7 @@ function seedling() {
       { k: 6, id: 'body-show', type: 'chao', t: 'Body Show nhỏ với người giấy', p: 5, vai: 'nghe', lead: true, img: W.body.img, lines: [L('This is my body.', '这是我的身体。', 'Zhè shì wǒ de shēntǐ.'), L('Touch your knees!', '摸摸膝盖！', 'Mōmō xīgài!')],
         con: 'Từng con cầm người giấy giới thiệu "This is my body", ra một lệnh cho lớp; bạn lớn nói thêm 1 câu về tóc.', note: ['Mỗi con 30 giây, khán giả làm theo lệnh của bạn.'] },
       ngheChi('nghe-chi', 6, 3, bbU4, bbPages(bbU4, 0, 7), 'nghe', 'Cả lớp đọc to theo giọng máy, chỉ ngón tay theo chữ.', []),
-      { k: 6, id: 'kt', type: 'kt', t: 'Phiếu cuối unit · nghe và khoanh', p: 4, vai: 'nghe', off: true, items: u.check.map(c => ({ say: c, opts: c.opts.map(r), ans: c.ans })), cue: 'Nghe và khoanh vào phiếu!',
+      { k: 6, id: 'kt', type: 'kt', t: 'Phiếu cuối unit · nghe và khoanh', p: 4, vai: 'nghe', off: true, items: u.check.map(c => ({ say: { t: c.say, l: c.l }, opts: c.opts.map(r), ans: c.ans })), cue: 'Nghe và khoanh vào phiếu!',
         con: 'Nghe, khoanh tranh đúng.', note: ['Tắt chiếu. Phát phiếu in, đọc mỗi câu 2 lần. Thu phiếu.'], print: [pr('sd', '#/u/1/check', 'Phiếu cuối Unit 1')] },
 
       tong(3, [L('Sorry, Grandpa!', '对不起，爷爷！', 'Duìbuqǐ, yéye!'), L('It\'s fun!', '真好玩！', 'Zhēn hǎowán!'), L('See you tomorrow!', '明天见！', 'Míngtiān jiàn!')], [10, 11], 'fun, clap, stamp · 手, 好', 'nghe'),
