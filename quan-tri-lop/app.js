@@ -10,7 +10,7 @@ const LOPS = { ls: { ten: 'Little Seed', web: '../little-seed/', tong: 99 }, sd:
 const LOAI = { tien_bo: '🌱 Tiến bộ', ho_tro: '🤝 Cần hỗ trợ', phu_huynh: '👪 Phụ huynh', hanh_vi: '🧭 Nề nếp', khac: '📝 Khác' };
 const CM = [['c', '✓', 'Có mặt'], ['t', 'T', 'Đến muộn'], ['p', 'P', 'Vắng có phép'], ['v', '✗', 'Vắng']];
 const WHY = ['Phát biểu hăng hái', 'Giúp đỡ bạn', 'Nói được cả câu', 'Hoàn thành bài ở nhà', 'Tiến bộ rõ'];
-const TABS = [['tq', 'Tổng quan'], ['hs', 'Học sinh'], ['dd', 'Điểm danh & buổi học'], ['sq', 'Sao & quà'], ['tn', 'Tài nguyên']];
+const TABS = [['tq', 'Tổng quan'], ['hs', 'Học sinh'], ['dd', 'Điểm danh & buổi học'], ['tk', 'Tài khoản con'], ['sq', 'Sao & quà'], ['tn', 'Tài nguyên']];
 
 /* ---------- tiện ích ---------- */
 const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
@@ -26,7 +26,7 @@ function toast(t) { const el = $('#toast'); el.textContent = t; el.classList.add
 const store = { get: k => { try { return sessionStorage.getItem(k) || ''; } catch (e) { return ''; } }, set: (k, v) => { try { v ? sessionStorage.setItem(k, v) : sessionStorage.removeItem(k); } catch (e) {} } };
 
 /* ---------- trạng thái ---------- */
-const S = { lop: store.get('qtl-lop') || 'ls', pin: '', d: null, tab: 'tq', kid: '', q: '', filt: '', dd: null, sel: new Set(), n: 3, why: WHY[0], tnEdit: null, v3: false, err: '' };
+const S = { lop: store.get('qtl-lop') || 'ls', pin: '', d: null, tab: 'tq', kid: '', q: '', filt: '', dd: null, sel: new Set(), n: 3, why: WHY[0], tnEdit: null, v3: false, v5: false, err: '', tkSel: new Set(), tkNew: '', tkCards: null };
 const KH = () => (window.KHUNG && KHUNG[S.lop]) || [];
 const weekOf = n => n <= 3 ? n : 4 + Math.floor((n - 4) / 2);   // tuần 1–3: 1 buổi/tuần; từ tuần 4: 2 buổi/tuần (khung 48 buổi)
 
@@ -45,7 +45,7 @@ async function load() {
     r = { ok: true, v: 3, cfg: {}, kids: c.kids, awards: c.awards, orders: c.orders, hs: [], bl: [], gc: [], tn: [] };
   }
   if (!r.ok) return r;
-  S.d = r; S.v3 = r.v < 4; return r;
+  S.d = r; S.v3 = r.v < 4; S.v5 = r.v >= 5; return r;
 }
 async function refresh(keepScroll) { const y = scrollY; const r = await load(); if (!r.ok) { toast(r.err || 'Chưa tải được'); return; } draw(); if (keepScroll) scrollTo(0, y); }
 
@@ -84,6 +84,7 @@ function flags(D) {
     if (i.lastCm.length === 2 && i.lastCm.every(x => x === 'v' || x === 'p')) f.push(['r', 'Vắng 2 buổi dạy gần nhất']);
     if (i.lowTg >= 2) f.push(['a', 'Tham gia thấp ở ≥2 trong 3 buổi gần nhất']);
     if (ord.some(o => o.kid === k.id)) f.push(['b', 'Có phiếu đổi quà chờ duyệt']);
+    if ((k.cho || []).length) f.push(['b', 'Có máy mới chờ cô duyệt (tab Tài khoản con)']);
     f.forEach(x => out.push({ kid: k.id, ten: k.ten, c: x[0], t: x[1] }));
   });
   return out;
@@ -94,16 +95,18 @@ function shell() {
   $('#top').hidden = false;
   $('#lopsw').innerHTML = Object.keys(LOPS).map(l => `<button class="pill" role="tab" aria-selected="${l === S.lop}" data-lop="${l}" type="button">${LOPS[l].ten}</button>`).join('');
   const ord = S.d ? S.d.orders.filter(o => o.st === 'cho').length : 0;
-  $('#nav').innerHTML = TABS.map(([k, t]) => `<button type="button" data-tab="${k}" ${S.tab === k ? 'aria-current="page"' : ''}>${t}${k === 'sq' && ord ? `<span class="dot">${ord}</span>` : ''}</button>`).join('');
+  const chm = S.d && S.v5 ? S.d.kids.filter(k => !k.tt && (k.cho || []).length).length : 0;
+  $('#nav').innerHTML = TABS.map(([k, t]) => `<button type="button" data-tab="${k}" ${S.tab === k ? 'aria-current="page"' : ''}>${t}${k === 'sq' && ord ? `<span class="dot">${ord}</span>` : ''}${k === 'tk' && chm ? `<span class="dot">${chm}</span>` : ''}</button>`).join('');
   const b = $('#banner');
   if (DEMO) { b.hidden = false; b.textContent = 'Chế độ xem thử: dữ liệu giả, lưu trên máy này. Đừng nhập thông tin thật.'; }
   else if (S.v3) { b.hidden = false; b.textContent = 'Máy chủ lớp đang là bản 3: xem được dashboard, sao và quà. Muốn điểm danh, ghi chú từng con và kho tài nguyên, dán Code.gs bản 4 (xem apps-script/lop-offline-48/HUONG-DAN.md).'; }
+  else if (!S.v5) { b.hidden = false; b.textContent = 'Muốn cấp PIN và giới hạn máy cho các con, và cho con/ba mẹ xem Bảng của con: dán Code.gs bản 5 (xem apps-script/lop-offline-48/HUONG-DAN.md).'; }
   else b.hidden = true;
 }
 function draw() {
   if (!S.d) return login();
   shell();
-  const m = $('#main'); const f = { tq: vTq, hs: vHs, dd: vDd, sq: vSq, tn: vTn }[S.tab] || vTq;
+  const m = $('#main'); const f = { tq: vTq, hs: vHs, dd: vDd, tk: vTk, sq: vSq, tn: vTn }[S.tab] || vTq;
   m.innerHTML = f();
   document.title = (LOPS[S.lop].ten) + ' · Quản trị lớp offline';
   bind();
@@ -199,14 +202,15 @@ function kidDetail(D) {
     <div class="facts"><div><b>${k.ngay || 0}/${tong}</b><span>ngày web đã học</span></div><div><b>${k.cuoi ? dm(k.cuoi) : '–'}</b><span>học web lần cuối</span></div>
       <div><b>${i.att == null ? '–' : Math.round(i.att * 100) + '%'}</b><span>chuyên cần (${i.nAtt} buổi)</span></div><div><b>${f(i.tg)}</b><span>tham gia (1–3)</span></div>
       <div><b>${f(i.en)} · ${f(i.zh)}</b><span>nói EN · ZH (1–3)</span></div><div><b>${i.stars}</b><span>tổng sao (web + cô)</span></div></div>
-    <div class="row"><button class="ghost" type="button" data-copy="${esc(link)}">🔗 Chép link gửi ba mẹ</button>
+    <div class="row"><button class="ghost" type="button" data-copy="${esc(link)}">🔗 Chép link (kèm PIN ở tab Tài khoản con)</button>
     ${canW ? `<button class="ghost" type="button" data-ren="${esc(k.id)}">✏️ Đổi tên</button><button class="ghost" type="button" data-tt="${esc(k.id)}" data-v="${k.tt ? '' : 'nghi'}">${k.tt ? 'Cho học lại' : 'Đánh dấu nghỉ học'}</button>` : ''}</div></div>
   <div class="card"><h3>Nhật ký từng buổi</h3>${recs.length ? `<div class="att-scroll"><table class="tbl"><thead><tr><th>Buổi</th><th>Có mặt</th><th>Tham gia</th><th>Nói EN</th><th>Nói ZH</th><th>Bài tập</th><th>Ghi chú</th></tr></thead><tbody>${recs.map(r => `<tr><td><a href="#" data-go-dd="${r.buoi}">${r.buoi}</a></td><td>${esc((CM.find(x => x[0] === r.cm) || [0, '·'])[1])}</td><td>${lvs(r.tg)}</td><td>${lvs(r.en)}</td><td>${lvs(r.zh)}</td><td>${lvs(r.bt)}</td><td>${esc(r.note)}</td></tr>`).join('')}</tbody></table></div>` : '<div class="empty">Chưa có buổi nào được ghi cho bạn này.</div>'}
     <div class="legend">Mức 1 = cần hỗ trợ · 2 = ổn · 3 = nổi bật. Bài tập: 1 chưa làm · 2 một phần · 3 đủ.</div></div>
   <div class="card"><h3>Ghi chú về ${esc(k.ten)}</h3>
     ${canW ? `<div class="row"><select id="nl" aria-label="Loại ghi chú" style="width:auto">${Object.entries(LOAI).map(([a, b]) => `<option value="${a}">${b}</option>`).join('')}</select><input type="number" id="nb" min="0" max="48" placeholder="Buổi (tuỳ chọn)" style="width:150px"></div>
+    ${S.v5 ? '<label class="share"><input type="checkbox" id="ncs" checked> Chia sẻ với con và ba mẹ (hiện trong Bảng của con). Bỏ chọn nếu là ghi chú riêng của cô.</label>' : ''}
     <textarea id="nt" placeholder="Ví dụ: hôm nay dám nói cả câu; ba mẹ hỏi về bài ở nhà…" aria-label="Nội dung ghi chú" style="margin-top:8px"></textarea><div style="margin-top:8px"><button class="btn" type="button" data-addnote="${esc(k.id)}">Lưu ghi chú</button></div>` : '<p class="muted">Cần máy chủ bản 4 để ghi chú.</p>'}
-    <div class="timeline">${notes.map(g => `<div class="note ${g.loai}"><div class="meta"><span>${LOAI[g.loai] || LOAI.khac}${g.buoi !== '' ? ' · buổi ' + g.buoi : ''} · ${dmt(g.at)}</span><button class="ghost sm" type="button" data-delnote="${esc(g.id)}" aria-label="Xoá ghi chú">Xoá</button></div><p>${esc(g.nd)}</p></div>`).join('') || '<div class="empty">Chưa có ghi chú.</div>'}</div></div>
+    <div class="timeline">${notes.map(g => `<div class="note ${g.loai}"><div class="meta"><span>${LOAI[g.loai] || LOAI.khac}${g.buoi !== '' ? ' · buổi ' + g.buoi : ''} · ${dmt(g.at)} ${g.cs ? '<span class="chip g">con và ba mẹ thấy</span>' : '<span class="chip">riêng của cô</span>'}</span><span>${S.v5 ? `<button class="ghost sm" type="button" data-share="${esc(g.id)}" data-v="${g.cs ? '0' : '1'}">${g.cs ? 'Ẩn với con' : 'Chia sẻ'}</button> ` : ''}<button class="ghost sm" type="button" data-delnote="${esc(g.id)}" aria-label="Xoá ghi chú">Xoá</button></span></div><p>${esc(g.nd)}</p></div>`).join('') || '<div class="empty">Chưa có ghi chú.</div>'}</div></div>
   <div class="card"><h3>Sao cô đã thưởng</h3>${awards.length ? `<p class="muted sm">${awards.slice(0, 12).map(a => `+${a.n}⭐ ${esc(a.why || '')} (${dmt(a.at)})`).join(' · ')}</p>` : '<div class="empty">Chưa thưởng sao.</div>'}</div>`;
 }
 
@@ -314,9 +318,10 @@ function bind() {
   $$('[data-ren]', root).forEach(b => b.onclick = async () => { const k = S.d.kids.find(x => x.id === b.dataset.ren), t = prompt('Tên gọi ở lớp:', k.ten); if (!t || !t.trim()) return; const r = await call('qt_hs', { id: k.id, ten: t.trim() }); if (!r.ok) return toast(r.err || 'Chưa đổi được'); toast('Đã đổi tên'); refresh(true); });
   $$('[data-tt]', root).forEach(b => b.onclick = async () => { const r = await call('qt_hs', { id: b.dataset.tt, tt: b.dataset.v }); if (!r.ok) return toast(r.err || 'Chưa lưu được'); toast(b.dataset.v ? 'Đã đánh dấu nghỉ học (không tính vào sĩ số và cảnh báo)' : 'Đã cho học lại'); refresh(true); });
   $$('[data-addnote]', root).forEach(b => b.onclick = async () => { const nd = $('#nt').value.trim(); if (!nd) return toast('Chưa có nội dung ghi chú'); b.disabled = true;
-    const r = await call('qt_gc_them', { kid: b.dataset.addnote, loai: $('#nl').value, buoi: $('#nb').value, noi_dung: nd }); b.disabled = false; if (!r.ok) return toast(r.err || 'Chưa lưu được'); toast('Đã lưu ghi chú'); refresh(true); });
+    const r = await call('qt_gc_them', { kid: b.dataset.addnote, loai: $('#nl').value, buoi: $('#nb').value, noi_dung: nd, chia_se: $('#ncs') && $('#ncs').checked ? '1' : '' }); b.disabled = false; if (!r.ok) return toast(r.err || 'Chưa lưu được'); toast('Đã lưu ghi chú'); refresh(true); });
   $$('[data-delnote]', root).forEach(b => b.onclick = async () => { if (!confirm('Xoá ghi chú này?')) return; await call('qt_gc_xoa', { id: b.dataset.delnote }); toast('Đã xoá'); refresh(true); });
-  bindDd(root); bindSq(root); bindTn(root);
+  $$('[data-share]', root).forEach(b => b.onclick = async () => { const r = await call('qt_gc_chia', { id: b.dataset.share, v: b.dataset.v }); if (!r.ok) return toast(r.err || 'Chưa lưu được'); toast(b.dataset.v === '1' ? 'Con và ba mẹ sẽ thấy nhận xét này' : 'Đã ẩn khỏi Bảng của con'); refresh(true); });
+  bindDd(root); bindSq(root); bindTn(root); bindTk(root);
 }
 function bindDd(root) {
   const dd = S.dd; if (!dd || S.tab !== 'dd') return;
@@ -367,14 +372,75 @@ $('#logout').onclick = () => { store.set('qtl-pin-' + S.lop, ''); S.pin = ''; S.
 /* =====================================================================
    MÁY CHỦ GIẢ cho ?demo=1 (localStorage)
    ===================================================================== */
+/* =====================================================================
+   TÀI KHOẢN CÁC CON: PIN 4 số, máy đã nhớ, in thẻ (có QR)
+   ===================================================================== */
+const kidLink = id => location.origin + location.pathname.replace(/quan-tri-lop\/.*$/, '') + (S.lop === 'ls' ? 'little-seed/' : 'seedling/') + '?con=' + id;
+const uaShort = m => (m && m.ua) || 'máy';
+const tAgo = t => { if (!t) return ''; const n = Math.round((Date.now() - t) / 864e5); return n <= 0 ? 'hôm nay' : n + ' ngày trước'; };
+function vTk() {
+  if (!S.v5) return '<div class="card"><h2>Tài khoản các con</h2><p class="muted">Cần máy chủ bản 5. Dán Code.gs bản 5 theo HUONG-DAN.md rồi quay lại đây.</p></div>';
+  const kids = S.d.kids.filter(k => !k.tt), noPin = kids.filter(k => !k.pin), mm = S.d.max_may || 2;
+  const sel = kids.filter(k => S.tkSel.has(k.id));
+  const rows = kids.map(k => { const cho = k.cho || [], may = k.may || [];
+    return `<tr class="${cho.length ? 'wait' : ''}"><td><input type="checkbox" data-tksel="${esc(k.id)}" ${S.tkSel.has(k.id) ? 'checked' : ''} aria-label="Chọn ${esc(k.ten)}"></td>
+      <td><b>${esc(k.ten)}</b><br><span class="muted sm">${esc(k.id)}</span></td>
+      <td>${k.pin ? `<code class="pin">${esc(k.pin)}</code>` : '<span class="chip a">chưa có PIN</span>'}</td>
+      <td>${k.pin ? `${may.length}/${mm} máy${may.map(m => `<div class="muted sm">${esc(uaShort(m))} · ${tAgo(m.at)} <button class="ghost sm" type="button" data-maygo="${esc(k.id)}|${esc(m.d)}" aria-label="Gỡ máy">Gỡ</button></div>`).join('')}` : '<span class="muted sm">học như cũ</span>'}
+        ${cho.map(m => `<div class="chip b wrapchip">⏳ ${esc(uaShort(m))} xin vào <button class="ghost sm" type="button" data-mayok="${esc(k.id)}|${esc(m.d)}">Duyệt</button> <button class="ghost sm" type="button" data-mayno="${esc(k.id)}|${esc(m.d)}">Từ chối</button></div>`).join('')}</td>
+      <td>${k.pin ? `<button class="ghost sm" type="button" data-pinnew="${esc(k.id)}">PIN mới</button>` : `<button class="ghost sm" type="button" data-pinnew="${esc(k.id)}">Cấp PIN</button>`}</td></tr>`; }).join('');
+  return `<div class="card"><h2>Tài khoản các con · ${LOPS[S.lop].ten}</h2>
+    <p class="muted">Mỗi con có <b>mã riêng</b> (trong link) và <b>PIN 4 số</b>. Mỗi con dùng được tối đa <b>${mm} máy</b> (ví dụ điện thoại ba/mẹ và máy tính bảng). Máy thứ ${mm + 1} sẽ hiện ở đây để cô duyệt. Nhập sai PIN 5 lần thì khoá 10 phút. Con chưa có PIN vẫn học như cũ.</p>
+    <div class="row"><textarea id="tkNew" rows="3" placeholder="Dán danh sách tên, mỗi dòng một bạn (chỉ tên gọi ở lớp)" style="flex:1;min-width:200px">${esc(S.tkNew)}</textarea><button class="btn" type="button" id="tkAdd">➕ Tạo tài khoản</button></div>
+    <p class="muted sm">Lưu ý: chỉ nhập tên gọi ở lớp. Cô nên xin ba mẹ đồng ý cho con dùng web và lưu tiến độ học (có thể ghi sẵn vào phiếu đăng ký).</p></div>
+  <div class="card"><div class="row"><h3 class="grow">Danh sách (${kids.length})</h3>
+    <button class="ghost" type="button" id="tkAll">${sel.length === kids.length && kids.length ? 'Bỏ chọn hết' : 'Chọn hết'}</button>
+    ${noPin.length ? `<button class="ghost" type="button" id="tkPinAll">Cấp PIN cho ${noPin.length} bạn chưa có</button>` : ''}
+    <button class="btn" type="button" id="tkPrint" ${sel.length ? '' : 'disabled'}>🖨️ In thẻ (${sel.length})</button></div>
+    ${kids.length ? `<div class="att-scroll"><table class="tbl tk"><thead><tr><th></th><th>Con</th><th>PIN</th><th>Máy</th><th></th></tr></thead><tbody>${rows}</tbody></table></div>` : '<div class="empty">Chưa có bạn nào.</div>'}
+    <p class="muted sm">PIN chỉ hiện trên trang này (cô đã đăng nhập). Đổi PIN sẽ xoá các máy đã nhớ, con nhập PIN mới ở lần mở sau. In thẻ rồi giao cho ba mẹ qua Zalo hoặc phát tại lớp, đừng đăng PIN lên nhóm chung.</p></div>`;
+}
+function bindTk(root) {
+  if (!S.v5) return;
+  const tk = $('#tkNew', root); if (tk) tk.oninput = () => { S.tkNew = tk.value; };
+  const add = $('#tkAdd', root); if (add) add.onclick = async () => { const names = S.tkNew.split('\n').map(x => x.trim()).filter(Boolean); if (!names.length) return toast('Chưa có tên nào');
+    add.disabled = true; const r = await call('qt_kids_them', { ten: names }); add.disabled = false; if (!r.ok) return toast(r.err || 'Chưa tạo được');
+    S.tkNew = ''; (r.kids || []).forEach(k => S.tkSel.add(k.id)); toast(`Đã tạo ${r.kids.length} tài khoản. Các bạn mới đã được chọn sẵn để in thẻ.`); refresh(true); };
+  $$('[data-tksel]', root).forEach(c => c.onchange = () => { c.checked ? S.tkSel.add(c.dataset.tksel) : S.tkSel.delete(c.dataset.tksel); draw(); });
+  const all = $('#tkAll', root); if (all) all.onclick = () => { const ks = S.d.kids.filter(k => !k.tt); if (ks.every(k => S.tkSel.has(k.id))) S.tkSel.clear(); else ks.forEach(k => S.tkSel.add(k.id)); draw(); };
+  const pa = $('#tkPinAll', root); if (pa) pa.onclick = async () => { const r = await call('qt_pin', { mode: 'moi', tat_ca: '1' }); if (!r.ok) return toast(r.err || 'Chưa cấp được'); (r.kids || []).forEach(k => S.tkSel.add(k.id)); toast(`Đã cấp PIN cho ${r.kids.length} bạn`); refresh(true); };
+  $$('[data-pinnew]', root).forEach(b => b.onclick = async () => { const k = S.d.kids.find(x => x.id === b.dataset.pinnew); if (k.pin && !confirm(`Đổi PIN của ${k.ten}? Các máy đã nhớ sẽ bị xoá, con phải nhập PIN mới.`)) return;
+    const r = await call('qt_pin', { mode: 'moi', ids: k.id }); if (!r.ok) return toast(r.err || 'Chưa đổi được'); S.tkSel.add(k.id); toast(`PIN mới của ${k.ten}: ${r.kids[0].pin}`); refresh(true); });
+  const dev = (sel, act, msg) => $$(sel, root).forEach(b => b.onclick = async () => { const [id, d] = b.dataset[Object.keys(b.dataset).find(x => /^may/.test(x))].split('|'); const r = await call('qt_may', { id, dev: d, act }); if (!r.ok) return toast(r.err || 'Chưa lưu được'); toast(msg); refresh(true); });
+  dev('[data-mayok]', 'duyet', 'Đã duyệt máy'); dev('[data-mayno]', 'tu_choi', 'Đã từ chối'); dev('[data-maygo]', 'go', 'Đã gỡ máy');
+  const pr = $('#tkPrint', root); if (pr) pr.onclick = () => printCards([...S.tkSel].map(id => S.d.kids.find(k => k.id === id)).filter(Boolean));
+}
+function qrSvg(text) {
+  if (typeof qrcode !== 'function') return '';
+  const q = qrcode(0, 'M'); q.addData(text); q.make(); const n = q.getModuleCount(), c = 4; let d = '';
+  for (let y = 0; y < n; y++) for (let x = 0; x < n; x++) if (q.isDark(y, x)) d += `M${x + c},${y + c}h1v1h-1z`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${n + 2 * c} ${n + 2 * c}" shape-rendering="crispEdges" role="img" aria-label="Mã QR mở web của con"><rect width="100%" height="100%" fill="#fff"/><path d="${d}" fill="#000"/></svg>`;
+}
+function printCards(kids) {
+  if (!kids.length) return;
+  const miss = kids.filter(k => !k.pin); if (miss.length && !confirm(`${miss.length} bạn chưa có PIN (thẻ sẽ không có PIN). Vẫn in?`)) return;
+  let box = $('#printarea'); if (!box) { box = document.createElement('div'); box.id = 'printarea'; document.body.appendChild(box); }
+  const mm = S.d.max_may || 2;
+  box.innerHTML = kids.map(k => `<div class="pcard"><div class="pc-h"><b>${esc(LOPS[S.lop].ten)} · Anh – Trung</b><span>Thẻ học web của ${esc(k.ten)}</span></div>
+    <div class="pc-b"><div class="pc-qr">${qrSvg(kidLink(k.id))}</div><div class="pc-t"><div>Mã: <b>${esc(k.id)}</b></div>${k.pin ? `<div>PIN: <b class="pc-pin">${esc(k.pin)}</b></div>` : ''}<small>Quét mã QR hoặc mở link cô gửi, nhập PIN lần đầu ở mỗi máy.</small></div></div>
+    <p>Dùng được trên ${mm} máy. Xin ba mẹ giữ PIN riêng cho con, đừng chia sẻ link hay PIN cho bạn khác. Bảng của con (sao, đi học, nhận xét của cô) ở nút ❓ → Bảng của con.</p></div>`).join('');
+  document.body.classList.add('printing'); setTimeout(() => { window.print(); }, 80);
+}
+window.addEventListener('afterprint', () => { document.body.classList.remove('printing'); const b = $('#printarea'); if (b) b.innerHTML = ''; });
+
 function mockDb() {
   const key = 'qtl-demo-' + S.lop; let d; try { d = JSON.parse(localStorage.getItem(key)); } catch (e) {}
   if (d) return d;
   let seed = S.lop === 'ls' ? 7 : 19; const rnd = () => (seed = (seed * 9301 + 49297) % 233280) / 233280;
   const names = S.lop === 'ls' ? ['Minh An', 'Gia Khôi', 'Bảo Linh', 'Tuệ Lâm', 'Hà My', 'Đức Anh', 'Khánh Vy', 'Nhật Minh', 'Bảo Châu', 'Quang Huy'] : ['Phương Anh', 'Hải Đăng', 'Ngọc Mai', 'Tùng Lâm', 'Gia Hân', 'Bảo Nam', 'Diệp Chi', 'Anh Khoa'];
-  const now = Date.now(); d = { kids: [], awards: [], orders: [], hs: [], bl: [], gc: [], tn: [], cfg: { ten_lop: LOPS[S.lop].ten, khai_giang: ymd(new Date(now - 17 * 864e5)) }, seq: 1 };
+  const now = Date.now(); d = { max_may: 2, kids: [], awards: [], orders: [], hs: [], bl: [], gc: [], tn: [], cfg: { ten_lop: LOPS[S.lop].ten, khai_giang: ymd(new Date(now - 17 * 864e5)) }, seq: 1 };
   names.forEach((n, i) => { const ngay = Math.max(0, Math.round(5 + rnd() * 8 - (i === 2 ? 5 : 0))); const dsc = i === 2 ? 7 : Math.floor(rnd() * 4);
-    d.kids.push({ id: 'DM' + S.lop.toUpperCase() + (i + 1), lop: S.lop, ten: n + ' (ví dụ)', tao: now, web: Math.round(ngay * 14 + rnd() * 20), vi: 0, ngay, cuoi: ymd(new Date(now - dsc * 864e5)), luu: now, tt: '' }); });
+    d.kids.push({ id: 'DM' + S.lop.toUpperCase() + (i + 1), lop: S.lop, ten: n + ' (ví dụ)', tao: now, web: Math.round(ngay * 14 + rnd() * 20), vi: 0, ngay, cuoi: ymd(new Date(now - dsc * 864e5)), luu: now, tt: '', pin: i < 7 ? String(1000 + Math.floor(rnd() * 8999)) : '', may: i < 7 ? [{ d: 'demo' + i, at: now - 3 * 864e5, ua: 'Android' }] : [], cho: i === 1 ? [{ d: 'demoX', at: now - 3600e3, ua: 'iPhone/iPad' }] : [] }); });
   [0, 1, 2, 3, 4].forEach(b => { d.bl.push({ buoi: b, ngay: ymd(new Date(now - (17 - b * 3.5) * 864e5)), da_day: true, ghi_chu: b === 2 ? 'Chưa kịp trò Bingo' : '' });
     d.kids.forEach((k, i) => { const vang = (i === 2 && b >= 3) || (i === 5 && b === 1); const l = () => 1 + Math.floor(rnd() * 3);
       d.hs.push({ buoi: b, kid: k.id, cm: vang ? (i === 5 ? 'p' : 'v') : (rnd() < .1 ? 't' : 'c'), tg: vang ? '' : (i === 4 ? 1 : l()), en: vang ? '' : l(), zh: vang ? '' : l(), bt: vang ? '' : l(), note: '' }); }); });
@@ -389,10 +455,15 @@ function mock(q) {
   if (q.pin !== '2468') return { ok: false, err: 'Sai mã PIN' };
   const id = p => p + Math.random().toString(36).slice(2, 8).toUpperCase();
   switch (q.action) {
-    case 'qt_tai': return Object.assign({ ok: true, v: 4 }, JSON.parse(JSON.stringify(d)));
+    case 'qt_tai': return Object.assign({ ok: true, v: 5 }, JSON.parse(JSON.stringify(d)));
     case 'qt_buoi': { const i = d.bl.findIndex(x => x.buoi === +q.buoi), o = { buoi: +q.buoi, ngay: q.ngay, da_day: !!q.da_day, ghi_chu: q.ghi_chu || '' }; i < 0 ? d.bl.push(o) : d.bl[i] = o;
       (q.rows || []).forEach(r => { const j = d.hs.findIndex(x => x.buoi === +q.buoi && x.kid === r.kid), o2 = { buoi: +q.buoi, kid: r.kid, cm: r.cm || '', tg: r.tg, en: r.en, zh: r.zh, bt: r.bt, note: r.note || '' }; j < 0 ? d.hs.push(o2) : d.hs[j] = o2; }); save(); return { ok: true, n: (q.rows || []).length }; }
-    case 'qt_gc_them': { const o = { id: id('N'), kid: q.kid, buoi: q.buoi === '' ? '' : +q.buoi, loai: q.loai, nd: q.noi_dung, at: Date.now() }; d.gc.unshift(o); save(); return { ok: true, note: o }; }
+    case 'qt_gc_them': { const o = { id: id('N'), kid: q.kid, buoi: q.buoi === '' ? '' : +q.buoi, loai: q.loai, nd: q.noi_dung, at: Date.now(), cs: !!q.chia_se }; d.gc.unshift(o); save(); return { ok: true, note: o }; }
+    case 'qt_gc_chia': { const g = d.gc.find(x => x.id === q.id); if (g) g.cs = q.v === '1'; save(); return { ok: true }; }
+    case 'qt_kids_them': { const out = (q.ten || []).map(t => String(t).trim()).filter(Boolean).map(t => { const k = id(''), pin = String(1000 + Math.floor(Math.random() * 8999)); d.kids.push({ id: k, lop: S.lop, ten: t, tao: Date.now(), web: 0, vi: 0, ngay: 0, cuoi: '', luu: 0, tt: '', pin, may: [], cho: [] }); return { id: k, ten: t, pin }; }); save(); return { ok: true, kids: out }; }
+    case 'qt_pin': { const ids = q.tat_ca ? d.kids.filter(k => !k.pin).map(k => k.id) : String(q.ids || '').split(',').filter(Boolean), out = []; ids.forEach(i => { const k = d.kids.find(x => x.id === i); if (k) { k.pin = String(1000 + Math.floor(Math.random() * 8999)); k.may = []; k.cho = []; out.push({ id: i, ten: k.ten, pin: k.pin }); } }); save(); return { ok: true, kids: out }; }
+    case 'qt_may': { const k = d.kids.find(x => x.id === q.id); if (!k) return { ok: false, err: 'Không có con này' }; const m = (k.cho || []).find(x => x.d === q.dev);
+      if (q.act === 'duyet' && m) k.may.push(m); k.cho = (k.cho || []).filter(x => x.d !== q.dev); if (q.act === 'go') k.may = k.may.filter(x => x.d !== q.dev); save(); return { ok: true }; }
     case 'qt_gc_xoa': d.gc = d.gc.filter(x => x.id !== q.id); save(); return { ok: true };
     case 'qt_hs': { const k = d.kids.find(x => x.id === q.id); if (k) { if (q.ten) k.ten = q.ten; if (q.tt != null) k.tt = q.tt; } save(); return { ok: true }; }
     case 'qt_lop': d.cfg.khai_giang = q.khai_giang; save(); return { ok: true };

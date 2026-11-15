@@ -55,3 +55,18 @@ Các lệnh cũ của web con và Bảng của cô không đổi, nên hai web h
 ## Giới hạn
 - Ai có mã của con thì mở được tiến độ của con đó (mã 6 ký tự ngẫu nhiên). Không ghi họ tên đầy đủ hay thông tin khác của con vào web.
 - Mỗi con lưu được khoảng 270.000 ký tự tiến độ (đủ cho 99 ngày web và Hộp ôn).
+
+## Tài khoản cho các con (bản 5)
+
+Mỗi con có **mã** (trong link `?con=MÃ`) và **PIN 4 số**. Mỗi con nhớ tối đa **2 máy** (đổi ở tab `CaiDat`, cột `max_may`, từ 1 đến 6). Máy thứ 3 hiện ở tab "Tài khoản con" của trang quản trị để cô duyệt hoặc từ chối. Nhập sai PIN 5 lần thì khoá con đó 10 phút. Con chưa có PIN vẫn học như cũ.
+
+**Nâng lên bản 5** (không cần chạy lại `caiDatQuanTri`; các cột mới tự thêm vào tab):
+1. Mở Apps Script, xoá nội dung `Code.gs` cũ, dán `Code.gs` mới, bấm Lưu.
+2. Triển khai → Quản lý các lần triển khai → ✏️ → Phiên bản mới → Triển khai (link `/exec` giữ nguyên).
+3. Kiểm tra: mở `…/exec?action=ping`, phải thấy `"v":5`.
+
+**Dùng hằng ngày**
+- Trang quản trị → tab **Tài khoản con** → dán danh sách tên (mỗi dòng một bạn) → Tạo tài khoản → chọn các bạn → **In thẻ** (có QR và PIN). Giao thẻ cho ba mẹ qua Zalo riêng hoặc phát ở lớp, đừng đăng lên nhóm chung.
+- Con quên PIN: bấm "PIN mới" (các máy cũ bị xoá, con nhập PIN mới ở lần mở sau).
+- **Bảng của con** (nút ❓ → Bảng của con, hoặc `#/bang`): con và ba mẹ cùng xem sao, chuyên cần, mức tham gia từng buổi và các **nhận xét cô chọn chia sẻ**. Không có dữ liệu bạn khác, không xếp hạng. Khi cô thêm ghi chú, ô "Chia sẻ với con và ba mẹ" bật sẵn; bỏ chọn nếu là ghi chú riêng của cô.
+- Xin ba mẹ đồng ý cho con dùng web và lưu tiến độ học (nên ghi sẵn vào phiếu đăng ký).

@@ -163,3 +163,15 @@ table.att input[type=text]{min-width:150px;padding:6px 8px}
   .nav button{white-space:nowrap}
   main{padding:12px}
 }
+
+/* bản 5: tài khoản con, thẻ in */
+.share{display:block;margin-top:8px;font-size:14px}.chip.g{background:#DFF3DC;color:#256029}
+.tbl.tk td{vertical-align:top}.tbl.tk tr.wait{background:#FFF8E6}.pin{font-size:17px;font-weight:800;letter-spacing:3px}.wrapchip{display:block;margin-top:4px;white-space:normal}
+#printarea{display:none}
+@media print{
+  body.printing>*:not(#printarea){display:none!important}
+  body.printing #printarea{display:grid!important;grid-template-columns:1fr 1fr;gap:8mm;padding:6mm;background:#fff}
+  .pcard{border:2px dashed #888;border-radius:10px;padding:5mm;break-inside:avoid;font-family:'Be Vietnam Pro',sans-serif;color:#000}
+  .pc-h b{display:block;font-size:14pt}.pc-h span{font-size:11pt}.pc-b{display:flex;gap:5mm;align-items:center;margin:4mm 0}.pc-qr{width:34mm;height:34mm;flex:none}.pc-qr svg{width:100%;height:100%}
+  .pc-t{font-size:12pt;line-height:1.6}.pc-pin{font-size:22pt;letter-spacing:4px}.pc-t small{display:block;font-size:9pt;line-height:1.3}.pcard p{font-size:9pt;line-height:1.4;margin:0}
+}

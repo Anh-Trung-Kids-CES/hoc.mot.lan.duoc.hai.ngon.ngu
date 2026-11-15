@@ -227,11 +227,11 @@ function parentPanel() { const ov = document.createElement('div'); ov.className 
   document.body.appendChild(ov); const close = () => ov.remove(); ov.querySelector('.pp-x').onclick = close; ov.addEventListener('click', e => { if (e.target === ov || e.target.closest('a')) close(); });
   ov.querySelector('#kidCodeOk').onclick = () => { const v = ov.querySelector('#kidCodeIn').value.trim().toUpperCase().replace(/[^A-Z0-9]/g, ''); if (!v) return;
     clSwitch(v); close(); toast('Đã lưu mã của con. Web đang lấy bài và sao của con…'); clPull().then(() => coSync(true)); }; }
-function route() { if (!/^#\/reader/.test(location.hash)) RDR.auto = ''; stopAll(); if (!/^#\/(ngay|co)/.test(location.hash)) coSync(); document.querySelectorAll('.sx-pop').forEach(x => x.remove());
+function route() { if (!/^#\/reader/.test(location.hash)) RDR.auto = ''; stopAll(); if (!/^#\/(ngay|co|bang)/.test(location.hash)) coSync(); document.querySelectorAll('.sx-pop').forEach(x => x.remove());
   if (!/^#\/ngay\/\d+\/b/.test(location.hash) && HEAD.on) HEAD.stop();
   const h = location.hash.replace(/^#\/?/, '').split('/');
   if (h[0] === 'ban-do') return h[1] ? viewMap(h[1]) : viewWorld(); if (h[0] === 'ngay') return viewDay(+h[1], h[2]); if (h[0] === 'lop') return viewLop(+h[1]);
-  if (h[0] === 'hop-on') return h[1] === 'choi' ? viewOnPlay() : viewHop(); if (h[0] === 'qua') return viewQua(h[1]); if (h[0] === 'hanh-trinh') return viewJourney(); if (h[0] === 'co') return viewCo();
+  if (h[0] === 'hop-on') return h[1] === 'choi' ? viewOnPlay() : viewHop(); if (h[0] === 'qua') return viewQua(h[1]); if (h[0] === 'hanh-trinh') return viewJourney(); if (h[0] === 'co') return viewCo(); if (h[0] === 'bang') return viewBang();
   if (h[0] === 'reader') { location.hash = '#/'; return; }   // Reader gỡ khỏi web (12/11)
   viewHome(); }
 sdBoot();

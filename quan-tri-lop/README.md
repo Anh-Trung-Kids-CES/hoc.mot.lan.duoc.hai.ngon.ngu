@@ -25,3 +25,6 @@ Trang gọi bằng POST nên PIN không nằm trên đường link. Không ghi h
 ## Cập nhật danh sách buổi
 `khung.js` sinh từ khung 48 buổi: `node quan-tri-lop/cong-cu/build_khung.js` ở gốc repo (đọc `chuong-trinh/cong-cu/khung/grid/mang/little-seed48.json` và `seedling/day/day-data.js`). Đổi `?v=` trong `index.html` sau mỗi lần sửa.
 Thêm link web dạy của unit mới: sửa hàm `teachLinks` và `builtIn` trong `app.js`.
+
+## Bản 5: tab "Tài khoản con"
+Tạo hàng loạt tài khoản từ danh sách tên, cấp/đổi PIN 4 số, xem và duyệt máy của từng con (tối đa 2 máy), in thẻ có QR. Ghi chú có nút chia sẻ để hiện trong "Bảng của con" của con và ba mẹ. Cần Code.gs bản 5 (xem apps-script/lop-offline-48/HUONG-DAN.md). Thư viện QR: `qrcode.js` (qrcode-generator, MIT). Web của con: `chung/tai-khoan-con.js`.

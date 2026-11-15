@@ -3,6 +3,7 @@
    - SDL_API: dán link /exec của Apps Script (mã ở apps-script/lop-offline-48/Code.gs, cách bật ở HUONG-DAN.md).
      Để trống = bản xem thử: "máy chủ giả" lưu trên chính máy này (PIN 2468, 3 bạn ví dụ).
    - LOP: mã lớp trên máy chủ ('ls' = Little Seed, 'sd' = Seedling). PIN của từng lớp nằm ở tab CaiDat của Sheet.
+   - Bản 5: lệnh của con có thêm "dev" (mã máy) – xem ../chung/tai-khoan-con.js (PIN 4 số, giới hạn máy, Bảng của con).
    - Lệnh: kid, hello, redeem, tai, luu (web của con); cls, award, unaward, order, addkid (Bảng của cô, cần PIN).
    - TIẾN ĐỘ KHÔNG MẤT KHI ĐỔI MÁY: mỗi lần lưu, web gửi bản tiến độ đầy đủ của con lên máy chủ (gom 5 giây/lần).
      Máy mới mở link ?con=MÃ (hoặc ba mẹ nhập mã) → web lấy bản trên máy chủ về, gộp với bản trên máy (không bỏ ngày nào
@@ -43,6 +44,10 @@ function fakeCall(q) {
     case 'luu': { if (!d.kids[q.id]) return { ok: false, err: 'Không có mã con này' }; const t = d.td[q.id], cur = t ? t.v : 0;
       if ((+q.base || 0) !== cur) return { ok: false, xung: true, v: cur, t: t.t, data: t.data };
       d.td[q.id] = { v: cur + 1, t: +q.t || Date.now(), data: q.data }; d.kids[q.id].luu = Date.now(); fakeSave(d); return { ok: true, v: cur + 1 }; }
+    case 'bang': { const k = d.kids[q.id]; if (!k) return { ok: false, err: 'Không có mã con này' };   // bản xem thử: số liệu ví dụ
+      return { ok: true, ten: k.ten, lop: LOP, web: k.web, ngay: k.ngay, cuoi: k.cuoi, khai_giang: '', sao_co: d.awards.filter(a => a.kid === k.id && !a.huy).reduce((t, a) => t + a.n, 0), da_day: [1, 2, 3],
+        buoi: [{ buoi: 1, cm: 'c', tg: 3, en: 2, zh: 2, bt: 3, ngay: '' }, { buoi: 2, cm: 't', tg: 2, en: 2, zh: 1, bt: 2, ngay: '' }, { buoi: 3, cm: 'c', tg: 3, en: 3, zh: 2, bt: 3, ngay: '' }],
+        gc: [{ id: 'N1', kid: k.id, buoi: 3, loai: 'tien_bo', nd: 'Hôm nay con dám nói cả câu một mình. (Ví dụ của bản xem thử)', at: Date.now(), cs: true }] }; }
     case 'cls': if (!pinOk) return { ok: false, err: 'Sai mã PIN' };
       return { ok: true, kids: Object.values(d.kids), awards: d.awards.slice(0, 200), orders: d.orders };
     case 'award': { if (!pinOk) return { ok: false, err: 'Sai mã PIN' }; const ids = String(q.ids || '').split(',').filter(x => d.kids[x]);
@@ -55,7 +60,8 @@ function fakeCall(q) {
   return { ok: false, err: 'Lệnh không rõ' };
 }
 /* ---------- gọi máy chủ: lệnh nhỏ đi GET, tiến độ (dài) đi POST ---------- */
-async function api(q) {
+async function api(q) { return (typeof KidAuth !== 'undefined') ? KidAuth.call(apiRaw, q) : apiRaw(q); }
+async function apiRaw(q) {
   q = Object.assign({ lop: LOP }, q);
   if (!API_ON) return fakeCall(q);
   try {
