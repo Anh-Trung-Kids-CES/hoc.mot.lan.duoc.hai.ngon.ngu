@@ -14,6 +14,6 @@ for rel, pre in (('seedling/seedling-data.js', ''), ('little-seed/little-seed-da
         l, t = k.split(':', 1)
         if not os.path.exists(os.path.join(R, 'seedling', p)): continue
         d = vt if l == 'vi' else am; key = t if l == 'vi' else k
-        if key not in d: d[key] = pre + p; n += 1
+        if d.get(key) != pre + p: d[key] = pre + p; n += 1
     open(os.path.join(R, rel), 'w', encoding='utf-8').write(head + 'window.SD=' + json.dumps(j, ensure_ascii=False) + ';\n')
     print(rel, 'thêm', n)

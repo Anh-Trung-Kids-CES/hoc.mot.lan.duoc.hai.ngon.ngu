@@ -40,6 +40,7 @@ def ok(rel): return rel and os.path.exists(os.path.join(R, 'seedling', rel))
 need = {}; have = 0; dup = 0
 for (l, t), src in sorted(jobs.items()):
     k = f'{l}:{t}'
+    if os.environ.get('LAI_VU') and l == 'zh' and 'Vũ' in t: prev.pop(k, None); AM.pop(k, None)
     if ok(prev.get(k)) or ok(AM.get(k)) or (l == 'vi' and ok(VT.get(t))): have += 1; continue
     st = speak_text(t, l); key = (l, st)
     if key in need: dup += 1; need[key].append(t); continue
@@ -51,9 +52,9 @@ import ia
 todo = sorted(need)[:LIM] if LIM else sorted(need)
 lock = threading.Lock(); errs = []; done = [0]; toks = [0]; odd = []
 def work(key):
-    l, st = key; f = fname(l, st)
+    l, st = key; vu = l == 'zh' and 'Vũ' in st; f = fname(l, st + '#vu' if vu else st)
     try:
-        d = ia.tts(st, STYLE[l], VOICE[l]); wav = ia.audio(d)
+        d = ia.tts(st.replace('Vũ', 'Vu') if vu else st, STYLE[l] + ('；名字“Vu”是越南人名，读作英语的 "voo"，不要读成中文的“乌”或“武”，保持清晰的 v 开头' if vu else ''), VOICE[l]); wav = ia.audio(d)
         p = subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', 'pipe:0', '-af',
             'silenceremove=start_periods=1:start_threshold=-50dB:start_silence=0.05,areverse,silenceremove=start_periods=1:start_threshold=-50dB:start_silence=0.15,areverse',
             '-ac', '1', '-ar', '24000', '-b:a', '48k', os.path.join(GIONG, f)], input=wav, capture_output=True)
