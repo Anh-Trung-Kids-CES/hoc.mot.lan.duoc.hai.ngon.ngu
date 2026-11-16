@@ -20,7 +20,7 @@ const KidAuth = (() => {
 .ka-box h3{margin:0 0 6px;font-size:20px}.ka-box p{margin:6px 0;font-size:14px;line-height:1.45}
 .ka-in{font-size:30px;letter-spacing:12px;text-align:center;width:9ch;border:3px solid #ccc;border-radius:14px;padding:8px 6px 8px 18px;margin:10px 0}
 .ka-btn{display:block;width:100%;margin-top:8px;border:0;border-radius:14px;padding:12px;font-size:16px;font-weight:800;background:#F28C00;color:#fff;cursor:pointer}
-.ka-btn.o{background:#fff;color:#555;border:2px solid #ddd;font-weight:600}.ka-err{color:#C0392B;font-weight:700;min-height:1.3em}
+.ka-btn.o{background:#fff;color:#555;border:2px solid #ddd;font-weight:600}.ka-hot{margin-top:12px!important;font-size:13px!important;color:#555}.ka-hot a{color:#E3262E;text-decoration:none}.ka-err{color:#C0392B;font-weight:700;min-height:1.3em}
 .bg-wrap{max-width:760px;margin:0 auto;padding:12px}.bg-wrap h2{margin:4px 0}.bg-sub{color:#666;font-size:14px;margin:0 0 10px}
 .bg-tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:10px 0}
 .bg-tile{background:#FFF8E6;border:2px solid #F5D58A;border-radius:16px;padding:10px;text-align:center}.bg-tile b{display:block;font-size:26px}.bg-tile span{font-size:13px;color:#555}
@@ -39,7 +39,8 @@ const KidAuth = (() => {
     return new Promise(res => {
       const o = show(`<h3>🔐 Mã của ${esc2(ten || 'con')}</h3><p>Nhập <b>PIN 4 số</b> của con (cô đã đưa trên thẻ) để mở bài học ở máy này.</p>
         <input class="ka-in" id="kaPin" type="password" inputmode="numeric" maxlength="4" autocomplete="off" aria-label="PIN 4 số"><div class="ka-err" id="kaErr">${esc2(msg || '')}</div>
-        <button class="ka-btn" id="kaOk" type="button">Vào học</button><button class="ka-btn o" id="kaLater" type="button">Để sau</button>`);
+        <button class="ka-btn" id="kaOk" type="button">Vào học</button><button class="ka-btn o" id="kaLater" type="button">Để sau</button>
+        <p class="ka-hot">Quên PIN hoặc chưa có thẻ? Ba mẹ liên hệ CES:<br><a href="tel:0974840845"><b>📞 Hotline 0974.840.845</b></a></p>`);
       const inp = o.querySelector('#kaPin'), err = o.querySelector('#kaErr'); setTimeout(() => inp.focus(), 60);
       const go = async () => { const pin = inp.value.replace(/\D/g, ''); if (pin.length !== 4) { err.textContent = 'PIN gồm đúng 4 số nhé.'; return; }
         o.querySelector('#kaOk').disabled = true; err.textContent = '';
@@ -53,7 +54,7 @@ const KidAuth = (() => {
   }
   function waitApprove(raw, id, ten) {
     return new Promise(res => {
-      const o = show(`<h3>⏳ Chờ cô duyệt máy này</h3><p>Bé ${esc2(ten || '')} đã dùng đủ số máy cho phép. Cô sẽ duyệt máy này trong Bảng quản trị. Ba mẹ nhắn cô giúp con nhé!</p>
+      const o = show(`<h3>⏳ Chờ cô duyệt máy này</h3><p>Bé ${esc2(ten || '')} đã dùng đủ số máy cho phép. Cô sẽ duyệt máy này trong Bảng quản trị. Ba mẹ nhắn cô giúp con nhé!</p><p class="ka-hot">Cần hỗ trợ: <a href="tel:0974840845"><b>Hotline CES 0974.840.845</b></a></p>
         <div class="ka-err" id="kaErr"></div><button class="ka-btn" id="kaChk" type="button">Kiểm tra lại</button><button class="ka-btn o" id="kaLater" type="button">Đóng</button>`);
       let stop = false, tm; const chk = async (quiet) => { const r = await raw({ action: 'kid', id, dev: dev() }); if (stop) return;
         if (r && r.ok) { stop = true; clearInterval(tm); hide(); return res({ ok: true }); } if (!quiet) o.querySelector('#kaErr').textContent = 'Cô chưa duyệt. Chờ thêm chút nhé.'; };
