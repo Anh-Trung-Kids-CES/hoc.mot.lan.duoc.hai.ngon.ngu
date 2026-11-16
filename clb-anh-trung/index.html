@@ -958,10 +958,6 @@ function pageSit(){
   });
   return h;
 }
-/* ===== CẤU HÌNH nhận kết quả kiểm tra (xem apps-script/clb-anh-trung/HUONG-DAN.md) ===== */
-const CLB_API="";   // dán URL Apps Script /exec
-const CLB_TOKEN=""; // phải giống TOKEN trong Code.gs
-/* ===== hết cấu hình ===== */
 var QZ={st:0,name:"",n:2,qs:[],t0:0,ans:{}};
 function shuf(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
 function mkQ(cat,q,right,wrong,why){return {cat:cat,q:q,opts:shuf([right].concat(wrong)),right:right,why:why};}
@@ -992,7 +988,7 @@ function buildQuiz(n){
 function pageQuiz(){
   var h='<div class="pagehead"><h1>Kiểm tra cô mới</h1><p class="lead">17 câu trắc nghiệm, khoảng 10–15 phút. Làm sau khi đã đọc kịch bản buổi mình sẽ dạy và các tình huống. Kết quả được gửi cho cô quản lý và HR để biết ai đã sẵn sàng, ai cần kèm thêm; đây không phải bài thi điểm.</p></div>';
   if(QZ.st===0){
-    h+='<div class="box"><h3>Thông tin</h3><label>Họ tên<br><input id="qzName" type="text" style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--fg)" value="'+esc(QZ.name)+'"></label><label>Email<br><input id="qzEmail" type="email" style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--fg)" value="'+esc(QZ.email||'')+'"></label><label>Buổi dự kiến dạy<br><select id="qzSes" style="padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--fg)">'+S.slice(2).map(function(x){return '<option value="'+x.n+'"'+(x.n===QZ.n?' selected':'')+'>Buổi '+x.n+' · '+esc(x.title)+'</option>';}).join("")+'</select></label><button class="btn pri" id="qzGo">Bắt đầu</button></div>';
+    h+='<div class="box"><h3>Thông tin</h3>'+(gateOn()&&AUTH.role?'<p>Cô đang làm bài với tài khoản <b>'+esc(AUTH.name||AUTH.id)+'</b> ('+esc(AUTH.id)+'). Kết quả tự lưu cho HR.</p>':'<label>Họ tên<br><input id="qzName" type="text" style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--fg)" value="'+esc(QZ.name)+'"></label><label>Email<br><input id="qzEmail" type="email" style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--fg)" value="'+esc(QZ.email||'')+'"></label>')+'<label>Buổi dự kiến dạy<br><select id="qzSes" style="padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--fg)">'+S.slice(2).map(function(x){return '<option value="'+x.n+'"'+(x.n===QZ.n?' selected':'')+'>Buổi '+x.n+' · '+esc(x.title)+'</option>';}).join("")+'</select></label><button class="btn pri" id="qzGo">Bắt đầu</button></div>';
     return h;
   }
   if(QZ.st===1){
@@ -1014,42 +1010,110 @@ function pageQuiz(){
   return h;
 }
 function quizBind(){
-  var go=$("#qzGo");if(go)go.onclick=function(){QZ.name=($("#qzName").value||"").trim();QZ.email=($("#qzEmail").value||"").trim();QZ.n=parseInt($("#qzSes").value,10);QZ.qs=buildQuiz(QZ.n);QZ.ans={};QZ.t0=Date.now();QZ.st=1;QZ.saved=false;render();};
+  var go=$("#qzGo");if(go)go.onclick=function(){if(gateOn()&&AUTH.role){QZ.name=AUTH.name||AUTH.id;QZ.email=AUTH.email||"";}else{QZ.name=($("#qzName").value||"").trim();QZ.email=($("#qzEmail").value||"").trim();}QZ.n=parseInt($("#qzSes").value,10);QZ.qs=buildQuiz(QZ.n);QZ.ans={};QZ.t0=Date.now();QZ.st=1;QZ.saved=false;render();};
   var sub=$("#qzSubmit");if(sub)sub.onclick=function(){var miss=0;QZ.qs.forEach(function(q,i){var r=document.querySelector('input[name="q'+i+'"]:checked');if(r)QZ.ans[i]=parseInt(r.value,10);else miss++;});if(miss&&!confirm("Còn "+miss+" câu chưa chọn. Vẫn nộp bài?"))return;QZ.st=2;render();};
   var cp=$("#qzCopy");if(cp)cp.onclick=function(){var t=$("#qzTxt");t.select();var ok=false;try{ok=document.execCommand("copy");}catch(e){}cp.textContent=ok?"Đã sao chép":"Bôi đen và sao chép thủ công";};
   if(QZ.st===2&&!QZ.saved){QZ.saved=true;saveResult();}
   var ag=$("#qzAgain");if(ag)ag.onclick=function(){QZ.st=0;QZ.saved=false;render();};
 }
 
+/* ===== CẤU HÌNH (xem apps-script/clb-anh-trung/HUONG-DAN.md) ===== */
+const CLB_API="";   // dán URL Apps Script /exec. Để trống thì trang chạy không cần đăng nhập (xem thử).
+const CLB_SHEET_URL="https://docs.google.com/spreadsheets/d/188_wgtkS2BQq1xlcG2XX9HUtyI8rfdMS41GmBKgY0x8/edit";
+/* ===== hết cấu hình ===== */
+var AUTH={tok:"",id:"",role:"",name:"",email:"",ok:false};
+try{var _a=JSON.parse(localStorage.getItem("clb_auth")||"null");if(_a&&_a.tok){AUTH=_a;AUTH.ok=false;}}catch(e){}
+function gateOn(){return !!CLB_API;}
+function authSave(){try{localStorage.setItem("clb_auth",JSON.stringify({tok:AUTH.tok,id:AUTH.id,role:AUTH.role,name:AUTH.name,email:AUTH.email}));}catch(e){}}
+function authClear(){AUTH={tok:"",id:"",role:"",name:"",email:"",ok:false};try{localStorage.removeItem("clb_auth");}catch(e){}}
+async function api(action,data,keep){
+  var r=await fetch(CLB_API,{method:"POST",keepalive:!!keep,headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(Object.assign({action:action,token:AUTH.tok},data||{}))});
+  return await r.json();
+}
+var ERRMSG={sai:"ID hoặc mật khẩu chưa đúng.",locked:"Tài khoản đang bị khoá. Liên hệ HR.","thu-lai-sau":"Nhập sai nhiều lần. Thử lại sau 10 phút.","chua-dat-mat-khau-admin":"Quản trị chưa đặt mật khẩu (xem HUONG-DAN.md).",thieu:"Cần nhập cả ID và mật khẩu.",auth:"Phiên đăng nhập đã hết, hãy đăng nhập lại."};
+function pageLogin(msg){
+  return '<div class="pagehead"><div class="mascots">'+charImg("m_huou",96)+'</div><h1>Sổ tay CLB Anh – Trung</h1><p class="lead">Đăng nhập bằng ID và mật khẩu HR đã cấp cho cô. Chưa có tài khoản thì liên hệ HR.</p></div>'+
+  '<div class="box" style="max-width:420px"><label>ID<br><input id="lgId" autocomplete="username" style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--fg)"></label><label>Mật khẩu<br><input id="lgPw" type="password" autocomplete="current-password" style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--fg)"></label><button class="btn pri" id="lgGo">Đăng nhập</button><div class="note" id="lgMsg"'+(msg?'':' hidden')+'>'+esc(msg||"")+'</div></div>';
+}
+function gateView(msg){
+  $("#view").innerHTML=pageLogin(msg);$("#tabs").innerHTML="";var c=$("#chips");if(c)c.hidden=true;
+  var go=function(){
+    var id=($("#lgId").value||"").trim(),pw=$("#lgPw").value||"",m=$("#lgMsg"),b=$("#lgGo");
+    b.disabled=true;b.textContent="Đang đăng nhập…";
+    fetch(CLB_API,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({action:"login",id:id,pass:pw})}).then(function(r){return r.json();}).then(function(r){
+      if(r.ok){AUTH={tok:r.token,id:r.id,role:r.role,name:r.name||"",email:r.email||"",ok:true};authSave();render();}
+      else{m.hidden=false;m.textContent=ERRMSG[r.error]||("Chưa đăng nhập được ("+r.error+").");b.disabled=false;b.textContent="Đăng nhập";}
+    }).catch(function(){m.hidden=false;m.textContent="Không kết nối được máy chủ. Kiểm tra mạng rồi thử lại.";b.disabled=false;b.textContent="Đăng nhập";});
+  };
+  $("#lgGo").onclick=go;$("#lgPw").onkeydown=function(e){if(e.key==="Enter")go();};
+}
+function checkAuth(){
+  $("#view").innerHTML='<div class="box">Đang kiểm tra đăng nhập…</div>';
+  api("me").then(function(r){if(r.ok){AUTH.ok=true;AUTH.role=r.role;AUTH.name=r.name||AUTH.name;AUTH.email=r.email||AUTH.email;authSave();render();}else{authClear();render();}}).catch(function(){$("#view").innerHTML='<div class="box">Không kết nối được máy chủ. Kiểm tra mạng rồi tải lại trang.</div>';});
+}
+/* ---- theo dõi việc đọc ---- */
+var TRK={k:"",t:0,buf:[]};
+function trkFlush(keep){if(!TRK.buf.length)return;var ev=TRK.buf.splice(0);api("track",{events:ev},keep).catch(function(){});}
+function trkClose(){if(!TRK.k)return;var now=Date.now();TRK.buf.push({k:TRK.k,n:0,s:Math.min(Math.round((now-TRK.t)/1000),600)});TRK.t=now;}
+function trkTo(k){
+  if(!gateOn()||AUTH.role!=="teacher"||!AUTH.ok)return;
+  if(k===TRK.k)return;
+  trkClose();TRK.k=k;TRK.t=Date.now();if(k)TRK.buf.push({k:k,n:1,s:0});trkFlush(false);
+}
+document.addEventListener("visibilitychange",function(){
+  if(!gateOn()||AUTH.role!=="teacher"||!TRK.k)return;
+  if(document.visibilityState==="hidden"){trkClose();trkFlush(true);}else{TRK.t=Date.now();}
+});
+window.addEventListener("pagehide",function(){if(gateOn()&&AUTH.role==="teacher"&&TRK.k){trkClose();trkFlush(true);}});
+function trkKey(r){if(r.page==="quan-tri"||r.page==="kiem-tra")return "";return r.page+(["kich-ban","trinh-chieu","ngu-lieu","in-an","hoc-mau"].indexOf(r.page)>=0?"-"+cur:"");}
+/* ---- lưu kết quả kiểm tra ---- */
 async function saveResult(){
   function say(t){var e=$("#qzSave");if(e)e.textContent=t;}
-  if(!CLB_API){say("Chưa bật nhận kết quả tự động. Cô bấm “Sao chép kết quả gửi HR” và gửi bằng tay.");return;}
+  if(!gateOn()){say("Bản xem thử chưa bật lưu kết quả. Cô bấm “Sao chép kết quả gửi HR”.");return;}
+  if(AUTH.role!=="teacher"){say("Tài khoản quản trị làm thử nên không lưu kết quả.");return;}
   try{
     var r=QZ.res;
-    await fetch(CLB_API,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({token:CLB_TOKEN,name:r.name,email:r.email,session:r.session,score:r.score,total:r.total,spirit:r.spirit,situation:r.situation,sessionScore:r.session_score,minutes:r.minutes,verdict:r.verdict,wrong:r.wrong})});
-    say("Đã gửi kết quả cho HR. Trình duyệt không xác nhận được việc nhận, nên nếu HR chưa thấy sau vài phút, cô bấm “Sao chép kết quả gửi HR”.");
+    var x=await api("quiz",{session:r.session,score:r.score,total:r.total,spirit:r.spirit,situation:r.situation,sessionScore:r.session_score,minutes:r.minutes,verdict:r.verdict,wrong:r.wrong});
+    say(x.ok?"Đã lưu kết quả cho HR.":"Chưa lưu được ("+(ERRMSG[x.error]||x.error)+"). Cô bấm “Sao chép kết quả gửi HR” và gửi bằng tay.");
   }catch(e){say("Chưa gửi được (kiểm tra mạng). Cô bấm “Sao chép kết quả gửi HR” và gửi bằng tay.");}
 }
-function pageHR(){return '<div class="pagehead"><h1>HR xem kết quả</h1><p class="lead">Bảng tổng hợp kết quả “Kiểm tra cô mới”. Chỉ người có quyền Editor hoặc Owner của trang này mới xem được toàn bộ; cô mới chỉ thấy kết quả của chính mình.</p></div><div class="box" id="hrBox">Đang tải…</div>';}
-var HRU=null;
-async function hrBind(){
-  var box=$("#hrBox");if(!box)return;if(HRU){try{HRU();}catch(e){}HRU=null;}
-  try{
-    var db=await claude.use("db");if(!db){box.textContent="Cần đăng nhập và được mời vào trang để xem kết quả.";return;}
-    var timer=setTimeout(function(){if(box.textContent==="Đang tải…")box.textContent="Chưa tải được dữ liệu. Kiểm tra bạn có quyền Editor hoặc Owner của trang.";},10000);
-    HRU=db.collection("results").onSnapshot(function(snap){clearTimeout(timer);hrDraw(box,snap.docs.map(function(d){return Object.assign({id:d.id},d.data());}));},function(e){clearTimeout(timer);box.textContent="Bạn chưa có quyền xem toàn bộ kết quả ("+((e&&e.code)||"lỗi")+"). Cần quyền Editor hoặc Owner.";});
-  }catch(e){box.textContent="Chưa mở được dữ liệu.";}
+/* ---- trang quản trị ---- */
+function pageAdmin(){
+  return '<div class="pagehead"><h1>Quản trị</h1><p class="lead">Cấp ID và mật khẩu cho cô mới, xem các cô đã đọc kịch bản, chương trình và kết quả kiểm tra. Mật khẩu chỉ hiện một lần khi tạo hoặc đặt lại.</p><div class="row"><a class="btn" href="'+esc(CLB_SHEET_URL)+'" target="_blank" rel="noopener">Mở Google Sheet</a></div></div>'+
+  '<div class="box"><h3>Tạo tài khoản cho cô mới</h3><label>Họ tên<br><input id="adName" style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--fg)"></label><label>Email (để HR liên hệ)<br><input id="adEmail" type="email" style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--fg)"></label><button class="btn pri" id="adCreate">Tạo ID và mật khẩu</button></div>'+
+  '<div id="adNew"></div><div class="box" id="adList">Đang tải…</div>';
 }
-function hrDraw(box,rows){
-  rows.sort(function(a,b){return (b.at||0)-(a.at||0);});
-  if(!rows.length){box.innerHTML="Chưa có ai nộp bài. Khi cô mới làm xong bài kiểm tra, kết quả sẽ hiện ở đây.";return;}
-  var tag=function(v){return v.indexOf("Sẵn sàng")===0?"ok":"warn";};
-  box.innerHTML='<div class="row"><b>'+rows.length+' cô đã nộp bài</b><button class="btn" id="hrCsv">Tải bảng CSV</button></div><div class="scroll"><table><thead><tr><th>Họ tên</th><th>Buổi</th><th>Điểm</th><th>Tinh thần</th><th>Tình huống</th><th>Buổi dạy</th><th>Phút</th><th>Lần</th><th>Nhận định</th><th>Câu sai</th><th>Nộp lúc</th></tr></thead><tbody>'+rows.map(function(r){return '<tr><td>'+esc(r.name||"")+'</td><td>'+esc(String(r.session||""))+'</td><td>'+r.score+'/'+r.total+'</td><td>'+r.spirit+'/'+r.spiritTotal+'</td><td>'+r.situation+'/6</td><td>'+r.session_score+'/5</td><td>'+(r.minutes||0)+'</td><td>'+(r.attempts||1)+'</td><td><span class="tag '+tag(r.verdict||"")+'">'+esc(r.verdict||"")+'</span></td><td>'+esc((r.wrong||[]).join(", "))+'</td><td>'+(r.at?new Date(r.at).toLocaleString("vi-VN"):"")+'</td></tr>';}).join("")+'</tbody></table></div>';
-  var b=$("#hrCsv");if(b)b.onclick=async function(){
-    var q=function(v){return '"'+String(v==null?"":v).replace(/"/g,'""')+'"';};
-    var csv="\ufeffHọ tên,Buổi dự kiến,Điểm,Tổng,Tinh thần,Tình huống,Buổi dạy,Phút,Lần làm,Nhận định,Câu sai,Nộp lúc\n"+rows.map(function(r){return [r.name,r.session,r.score,r.total,r.spirit,r.situation,r.session_score,r.minutes,r.attempts||1,r.verdict,(r.wrong||[]).join(" "),r.at?new Date(r.at).toISOString():""].map(q).join(",");}).join("\n");
-    try{var dl=await claude.use("downloads");if(!dl){b.textContent="Không tải được ở màn hình này";return;}await dl.save({filename:"ket-qua-kiem-tra-co-moi.csv",data:csv});}catch(e){b.textContent="Chưa tải được";}
+function adShowCred(id,pass,name){
+  var t="Chào "+(name||"cô")+", tài khoản học cách chạy CLB Anh–Trung của cô:\nID: "+id+"\nMật khẩu: "+pass+"\nCô vào trang sổ tay, đăng nhập rồi đọc kịch bản buổi mình sẽ dạy, luyện câu lớp, xem tình huống và làm bài kiểm tra.";
+  $("#adNew").innerHTML='<div class="box"><h3>Tài khoản mới (chỉ hiện một lần)</h3><p><b>ID:</b> '+esc(id)+' · <b>Mật khẩu:</b> '+esc(pass)+'</p><textarea id="adTxt" readonly rows="5" style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--fg)">'+esc(t)+'</textarea><button class="btn" id="adCopy">Sao chép tin nhắn gửi cô</button></div>';
+  $("#adCopy").onclick=function(){var x=$("#adTxt");x.select();var ok=false;try{ok=document.execCommand("copy");}catch(e){}this.textContent=ok?"Đã sao chép":"Bôi đen và sao chép thủ công";};
+}
+function adDraw(box,list){
+  if(!list.length){box.innerHTML="Chưa có tài khoản nào. Tạo tài khoản đầu tiên ở trên.";return;}
+  var ago=function(ms){if(!ms)return "chưa vào";var m=Math.round((Date.now()-ms)/60000);return m<60?m+" phút trước":m<1440?Math.round(m/60)+" giờ trước":Math.round(m/1440)+" ngày trước";};
+  box.innerHTML='<div class="row"><b>'+list.length+' tài khoản</b></div><div class="scroll"><table><thead><tr><th>ID</th><th>Họ tên</th><th>Kịch bản (/9 buổi)</th><th>Trình chiếu (/9)</th><th>Ngữ liệu (/9)</th><th>Luyện lớp (phút)</th><th>Tình huống (phút)</th><th>Tổng phút</th><th>Lần cuối</th><th>Kiểm tra</th><th>Thao tác</th></tr></thead><tbody>'+list.map(function(t){
+    return '<tr><td>'+esc(t.id)+'<br><span class="tag '+(t.status==="hoat-dong"?"ok":"warn")+'">'+(t.status==="hoat-dong"?"đang dùng":"khoá")+'</span></td><td>'+esc(t.name)+'<br><span class="meta" style="color:var(--muted)">'+esc(t.email||"")+'</span></td><td>'+t.kichBan+'</td><td>'+t.trinhChieu+'</td><td>'+t.nguLieu+'</td><td>'+t.luyenLop+'</td><td>'+t.tinhHuong+'</td><td>'+t.phut+'</td><td>'+ago(t.lastSeen)+'</td><td>'+(t.tries?esc(t.best)+' · '+t.tries+' lần<br><span class="tag '+(String(t.verdict).indexOf("Sẵn sàng")===0?"ok":"warn")+'">'+esc(t.verdict)+'</span><br><span class="meta" style="color:var(--muted)">buổi '+esc(String(t.session))+'</span>':'chưa làm')+'</td><td><button class="btn" data-ad="reset" data-id="'+esc(t.id)+'">Đặt lại mật khẩu</button> <button class="btn" data-ad="'+(t.status==="hoat-dong"?"khoa":"mo")+'" data-id="'+esc(t.id)+'">'+(t.status==="hoat-dong"?"Khoá":"Mở lại")+'</button></td></tr>';}).join("")+'</tbody></table></div><p class="meta" style="color:var(--muted)">Kịch bản và trình chiếu tính khi cô đã xem trang buổi đó từ 1 phút (kịch bản) hoặc 30 giây (trình chiếu, ngữ liệu). Điểm trắc nghiệm chỉ là một phần, HR vẫn nên cho dạy thử 5 phút.</p>';
+  box.querySelectorAll("[data-ad]").forEach(function(b){b.onclick=async function(){
+    var id=b.getAttribute("data-id"),a=b.getAttribute("data-ad");b.disabled=true;
+    try{
+      if(a==="reset"){if(!confirm("Đặt lại mật khẩu cho "+id+"? Mật khẩu cũ sẽ không dùng được."))return;var r=await api("reset",{id:id});if(r.ok){var nm=(list.filter(function(x){return x.id===id;})[0]||{}).name;adShowCred(r.id,r.pass,nm);}else alert("Chưa đặt lại được: "+r.error);}
+      else{await api("status",{id:id,status:a==="khoa"?"khoa":"hoat-dong"});}
+      adLoad();
+    }catch(e){alert("Chưa kết nối được máy chủ.");}finally{b.disabled=false;}
+  };});
+}
+async function adLoad(){var box=$("#adList");if(!box)return;try{var r=await api("list");if(r.ok)adDraw(box,r.teachers);else box.textContent="Chưa tải được ("+(ERRMSG[r.error]||r.error)+").";}catch(e){box.textContent="Chưa kết nối được máy chủ.";}}
+function adminBind(){
+  var c=$("#adCreate");if(c)c.onclick=async function(){
+    var n=($("#adName").value||"").trim(),em=($("#adEmail").value||"").trim();if(!n){alert("Nhập họ tên cô mới.");return;}
+    c.disabled=true;try{var r=await api("create",{name:n,email:em});if(r.ok){adShowCred(r.id,r.pass,r.name);$("#adName").value="";$("#adEmail").value="";adLoad();}else alert("Chưa tạo được: "+r.error);}catch(e){alert("Chưa kết nối được máy chủ.");}finally{c.disabled=false;}
   };
+  adLoad();
+}
+function tabsNow(){return TABS.concat(gateOn()&&AUTH.role==="admin"?[["quan-tri","Quản trị"]]:[]);}
+function userChip(){
+  if(!gateOn()||!AUTH.tok)return "";
+  return '<span class="tag ok" style="margin-left:8px">'+esc(AUTH.id==="admin"?"Quản trị":(AUTH.name||AUTH.id))+'</span><a href="#tong-quan" id="logoutBtn">Đăng xuất</a>';
 }
 
 var TABS=[["tong-quan","Tổng quan"],["kich-ban","Kịch bản"],["trinh-chieu","Trình chiếu"],["ngu-lieu","Ngữ liệu"],["in-an","In ấn"],["luyen-lop","Luyện lớp học"],["tinh-huong","Tình huống"],["kiem-tra","Kiểm tra cô mới"],["hoc-mau","Học theo mẫu"]];
@@ -1060,13 +1124,15 @@ function parse(){
   if(h==="luyen-lop")return {page:"luyen-lop",n:cur};
   if(h==="tinh-huong")return {page:"tinh-huong",n:cur};
   if(h==="kiem-tra")return {page:"kiem-tra",n:cur};
-  if(h==="hr")return {page:"hr",n:cur};
+  if(h==="quan-tri")return {page:"quan-tri",n:cur};
   if(/^seg-/.test(h))return null;
   return {page:"tong-quan",n:cur};
 }
 function render(){
   try{var bi=document.querySelector(".brand i");if(bi&&IMG.m_huou)bi.innerHTML=charImg("m_huou",30);}catch(e){}
   var r=parse();if(!r)return;
+  if(gateOn()){if(!AUTH.tok){gateView();return;}if(!AUTH.ok){checkAuth();return;}}
+  if(r.page==="quan-tri"&&AUTH.role!=="admin"&&gateOn())r={page:"tong-quan",n:cur};
   if(r.n!==undefined&&r.page!=="tong-quan")cur=r.n;
   var s=S[cur],view=$("#view"),html="";
   if(r.page==="tong-quan")html=pageOverview();
@@ -1078,19 +1144,21 @@ function render(){
   else if(r.page==="hoc-mau")html=pageShadow(s);
   else if(r.page==="tinh-huong")html=pageSit();
   else if(r.page==="kiem-tra")html=pageQuiz();
-  else if(r.page==="hr")html=pageHR();
+  else if(r.page==="quan-tri"&&AUTH.role==="admin")html=pageAdmin();
   view.innerHTML=html;
-  $("#tabs").innerHTML=TABS.map(function(t){
-    var href=["tong-quan","luyen-lop","tinh-huong","kiem-tra","hr"].indexOf(t[0])>=0?t[0]:t[0]+"-"+cur;
-    return '<a href="#'+href+'"'+(t[0]===r.page?' aria-current="page"':"")+'>'+t[1]+'</a>';}).join("");
+  $("#tabs").innerHTML=tabsNow().map(function(t){
+    var href=["tong-quan","luyen-lop","tinh-huong","kiem-tra","quan-tri"].indexOf(t[0])>=0?t[0]:t[0]+"-"+cur;
+    return '<a href="#'+href+'"'+(t[0]===r.page?' aria-current="page"':"")+'>'+t[1]+'</a>';}).join("")+userChip();
   var chips=$("#chips"),withS=["kich-ban","trinh-chieu","ngu-lieu","in-an","hoc-mau"].indexOf(r.page)>=0;
   chips.hidden=!withS;
   if(withS)chips.innerHTML=S.slice(2).map(function(x){return '<a href="#'+r.page+'-'+x.n+'" title="'+esc(x.title)+'"'+(x.n===cur?' aria-current="true"':"")+'>'+(x.n===0?"0 Khai giảng":x.n)+'</a>';}).join("");
   document.title="Sổ tay CLB Anh Trung";
+  var lo=$("#logoutBtn");if(lo)lo.onclick=function(){trkClose();trkFlush(true);TRK.k="";authClear();};
+  trkTo(trkKey(r));
   if(r.page==="luyen-lop"){trBind();hostBind();}
   if(r.page==="hoc-mau")shBind();
   if(r.page==="kiem-tra")quizBind();
-  if(r.page==="hr")hrBind();
+  if(r.page==="quan-tri"&&AUTH.role==="admin")adminBind();
   if(r.page==="trinh-chieu"){
     $("#startDeck").onclick=function(){deckOpen(s,0);};
     $$("[data-start]").forEach(function(b){b.onclick=function(){deckOpen(s,parseInt(b.getAttribute("data-start"),10));};});
