@@ -209,6 +209,33 @@ th{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--mu
 .dk-bar button,.dk-top button{border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:10px;padding:8px 14px;font-weight:600}
 .dk-bar button:disabled{opacity:.4}
 @media (prefers-reduced-motion:reduce){.rv{transition:none}}
+.xg{display:flex;flex-direction:column;gap:1.2vmin;align-items:center;width:100%}
+.xg-out{min-height:2.4em;min-width:min(70%,700px);display:flex;flex-wrap:wrap;gap:1vmin;justify-content:center;align-items:center;border-bottom:4px dashed var(--line);padding:.6vmin 2vmin}
+.xg.col .xg-out,.xg.col .xg-in{flex-direction:column;align-items:stretch;width:min(900px,92%)}
+.xg.done .xg-out{border-color:var(--brand)} .xg.done .xg-out::after{content:"🎉";font-size:1.4em}
+.xg-in{display:flex;flex-wrap:wrap;gap:1.2vmin;justify-content:center}
+.tile{font-family:var(--f-head);font-weight:700;font-size:clamp(1.1rem,4.6vmin,2.8rem);border:3px solid var(--en);background:var(--en-bg);color:var(--slide-fg);border-radius:14px;padding:.2em .6em;line-height:1.2}
+.tile.zh{border-color:var(--zh);background:var(--zh-bg);font-family:var(--f-zh)}
+.tile small{display:block;font-family:var(--f-body);font-weight:500;font-size:.45em;color:var(--muted);font-style:italic}
+.tile.strip{font-size:clamp(1rem,3.4vmin,2rem);padding:.3em .8em}
+.tile.in{cursor:default;opacity:1} .tile:disabled{color:var(--slide-fg)}
+.tile.bad{animation:shk .35s}
+@keyframes shk{25%{transform:translateX(-10px)}75%{transform:translateX(10px)}}
+.xsl{position:relative}.xhint{position:absolute;top:28%;left:50%;transform:translateX(-50%);z-index:5;width:max-content;max-width:96%;background:var(--warn-bg);border:3px solid var(--warn);border-radius:18px;padding:1.5vmin 4vmin;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+#nP .pimg,#gA .pimg{max-height:34vh}.sl .gans .emo{font-size:clamp(4rem,20vmin,10rem)}.lyr{display:grid;grid-template-columns:1fr 1fr;gap:.4vmin 4vmin;text-align:left;width:min(1100px,96%);align-items:start}
+.gbtns{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.gbig{font-size:clamp(4rem,24vmin,13rem);line-height:1}
+.gans{text-align:center}
+
+.lnS{font-family:var(--f-head);font-weight:700;font-size:clamp(1rem,3.6vmin,2.1rem);line-height:1.3;margin:.6vmin 0}
+.lnS.zh{font-family:var(--f-zh);color:var(--zh)} .pyS{color:var(--muted);font-style:italic;font-size:clamp(.8rem,2.4vmin,1.3rem)}
+.wcards{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm}
+.wcard{border:2px dashed #999;border-radius:8px;padding:7mm 3mm;text-align:center;font-family:var(--f-head);font-weight:700;font-size:2rem;break-inside:avoid}
+.wcard.zh{font-family:var(--f-zh);color:#c52d28} .wcard small{display:block;font-family:var(--f-body);font-size:.95rem;color:#555;font-weight:500}
+.bstrip{border:2px dashed #999;border-radius:8px;padding:5mm;margin-bottom:4mm;font-family:var(--f-head);font-weight:700;font-size:1.8rem;text-align:center;break-inside:avoid}
+.bstrip.zh{font-family:var(--f-zh);color:#c52d28} .bstrip small{display:block;font-family:var(--f-body);font-size:1rem;color:#555;font-weight:500}
+@media (max-width:640px){.lyr{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.tile.bad{animation:none;outline:3px solid var(--zh)}}
 /* print */
 @media print{
   @page{size:A4;margin:12mm}
@@ -290,20 +317,25 @@ var S=[
  materials:["cô Hươu và túi vải","Thẻ tên tròn cắt sẵn, tên bé viết mờ (xem mục In ấn)","Dây đeo cổ, sticker mặt cười, bút màu, hồ dán","Nhạc nền chuyền cô Hươu","Điện thoại chụp ảnh bé với thẻ tên"],
  aNote:"Dạy lại bài chào nếu cần; từ buổi 2 trở đi bé đã thuộc.",listen:[]},
 {n:2,emoji:"🐶",short:"Trang trại",title:"BINGO – chú chó của bác nông dân",theme:"Bài hát BINGO: nông dân, chú chó, tên của chú chó",
- main:{vid:"pV737wEqbbs",name:"BINGO (LINGOCUB)",dur:"1:32",ans:{emoji:"🐶",en:"It’s a dog! His name is Bingo.",vi:"Bài hát nói về chú chó tên Bingo."},poses:[{emoji:"🐶",en:"Freeze like a dog!",vi:"Hai tay làm tai chó, đứng im",zh:"狗",py:"gǒu"},{emoji:"👨‍🌾",en:"Freeze like a farmer!",vi:"Đội mũ nông dân, hai tay cầm cuốc, đứng im",zh:"农民",py:"nóngmín"},{emoji:"👏",en:"Freeze and clap!",vi:"Hai tay vỗ lên cao, đứng im",zh:"拍手",py:"pāi shǒu"},{emoji:"📛",en:"Freeze! Point to your name!",vi:"Chỉ vào ngực (tên của con), đứng im",zh:"名字",py:"míngzi"}],
-  warn:"Cô lưu ý: phụ đề tiếng Trung trong video này có chỗ chưa đúng (ví dụ lượng từ “一小条狗 (yī xiǎo tiáo gǒu)” và vài cụm như “眼泪一下”, “跳够” không có nghĩa trong bài). Cô chỉ dùng video để bé nghe giai điệu và xem hình. Phần tiếng Trung cô dẫn theo slide và kịch bản này (农民养了一只小狗，名字叫宾果). Nếu bé hỏi phụ đề, cô nói: “Cô hát cách này nhé!”."},
- vocab:[v("dog","狗","gǒu","con chó","🐶"),v("farmer","农民","nóngmín","bác nông dân","👨‍🌾"),v("name","名字","míngzi","tên","📛"),v("clap","拍手","pāi shǒu","vỗ tay","👏")],
+ main:{vid:"pV737wEqbbs",name:"BINGO (LINGOCUB)",dur:"1:32",ans:{emoji:"🐶",en:"It’s a dog! His name is Bingo.",vi:"Bài hát nói về chú chó tên Bingo."},poses:[{emoji:"🐶",en:"Freeze like a dog!",vi:"Hai tay làm tai chó, đứng im",zh:"狗",py:"gǒu"},{emoji:"👨‍🌾",en:"Freeze like a farmer!",vi:"Đội mũ nông dân, hai tay cầm cuốc, đứng im",zh:"农民",py:"nóngmín"},{emoji:"👏",en:"Freeze and clap!",vi:"Hai tay vỗ lên cao, đứng im",zh:"拍拍手",py:"pāi pai shǒu"},{emoji:"📛",en:"Freeze! Point to your name!",vi:"Chỉ vào ngực (tên của con), đứng im",zh:"名字",py:"míngzi"}],
+  warn:"Cô lưu ý: phụ đề tiếng Trung trong video này có chỗ chưa đúng (ví dụ lượng từ “一小条狗 (yī xiǎo tiáo gǒu)” và vài cụm như “眼泪一下”, “跳够” không có nghĩa trong bài). Cô chỉ dùng video để bé nghe giai điệu và xem hình. Phần tiếng Trung cô dẫn theo slide và kịch bản này (农民养了一只小狗，名字叫宾果). Nếu bé hỏi phụ đề, cô nói: “Cô hát cách này nhé!”.",
+  sent:[{en:["There was","a farmer","had","a dog,"],zh:[["农民","nóngmín"],["养了","yǎng le"],["一只","yì zhī"],["小狗，","xiǎo gǒu,"]],enL:"There was a farmer had a dog,",zhL:"农民养了一只小狗，",py:"nóngmín yǎng le yì zhī xiǎo gǒu,",move:"Hai tay làm tai chó",bg:"A"},
+   {en:["and","Bingo","was","his","name-o!"],zh:[["名字","míngzi"],["叫","jiào"],["宾果！","Bīnguǒ!"]],enL:"and Bingo was his name-o!",zhL:"名字叫宾果！",py:"míngzi jiào Bīnguǒ!",move:"Chỉ vào ngực, lắc người",bg:"B"},
+   {en:["B","I","N","G","O"],zh:null,enL:"B-I-N-G-O, B-I-N-G-O, B-I-N-G-O,",zhL:"宾果，宾果，宾果，",py:"Bīnguǒ, Bīnguǒ, Bīnguǒ,",move:"Vỗ tay theo từng chữ cái",bg:"C"}],
+  order:[0,1,2,1],
+  whole:[{who:"cả lớp",lang:"vi",t:"Hát lại cả bài, mỗi lượt thay một chữ cái bằng một cái vỗ tay.",vi:"Lượt 1: B-I-N-G-O. Lượt 2: (vỗ tay)-I-N-G-O… Lượt cuối chỉ còn năm cái vỗ tay. Bé lớn thử cả lượt tiếng Trung.",nospeak:true}]},
+ vocab:[v("dog","狗","gǒu","con chó","🐶",{au:{en:"seedling/tai-nguyen/giong/en_f5b447fe5d.mp3",zh:"seedling/tai-nguyen/giong/zh_dc8d4efac9_v2.mp3"}}),v("farmer","农民","nóngmín","bác nông dân","👨‍🌾"),v("name","名字","míngzi","tên","📛",{au:{en:"seedling/tai-nguyen/little-seed/audio/ls_co_huou_en_name.mp3",zh:"seedling/tai-nguyen/little-seed/audio/ls_co_huou_zh_020.mp3"}}),v("clap","拍拍手","pāi pai shǒu","vỗ tay","👏",{au:{en:"seedling/tai-nguyen/giong/en_d86c0d6ab3.mp3",zh:"seedling/tai-nguyen/giong/zh_ec38a33fcb_v2.mp3"}})],
  song:{name:"BINGO",melody:"BINGO (giai điệu bài gốc trong video)",src:"video",srcNote:"Video LINGOCUB “BINGO” (1:32). Lời tiếng Anh theo video; lời tiếng Trung do cô hát theo slide.",frame:"There was a farmer had a dog… | 农民养了一只小狗…",
   lines:[L("There was a farmer had a dog,","","Hai tay làm tai chó"),L("and Bingo was his name-o!","","Chỉ vào ngực: “name”, lắc người"),L("B-I-N-G-O, B-I-N-G-O, B-I-N-G-O,","","Vỗ tay theo từng chữ cái"),L("and Bingo was his name-o!","","Như câu 2"),
    L("农民养了一只小狗，","nóngmín yǎng le yì zhī xiǎo gǒu,","Hai tay làm tai chó"),L("名字叫宾果！","míngzi jiào Bīnguǒ!","Chỉ vào ngực, lắc người"),L("宾果，宾果，宾果，","Bīnguǒ, Bīnguǒ, Bīnguǒ,","Vỗ tay ba lần"),L("名字叫宾果！","míngzi jiào Bīnguǒ!","Như câu 6")]},
  hook:{vi:"Cô Hươu đeo mũ nông dân, ôm rối chó Bingo, chỉ nói tiếng Trung và chỉ vào chú chó.",zh:"这是我的狗。他叫宾果！",py:"zhè shì wǒ de gǒu. tā jiào Bīnguǒ!",en:"This is my dog. His name is Bingo!"},
- game:{name:"Bingo nói",vi:"Chơi “Bingo nói” rồi trò ghép chữ B-I-N-G-O."},
- make:{name:"Rối ngón tay chó Bingo",kind:"Thủ công và nhập vai",vi:"Bé tô màu chú chó Bingo giấy cắt sẵn, dán băng giấy quanh ngón tay, rồi cầm rối hát bài BINGO cho bạn xem.",
+ game:{name:"Đập thẻ trên tường",vi:"Nghe từ tiếng Anh hoặc tiếng Trung, chạy tới đập đúng thẻ hình dán trên tường."},
+ make:{name:"Rối ngón tay chó Bingo",kind:"Đạo cụ hát, mang về",vi:"Cô cắt dán sẵn rối ngón tay chú chó Bingo. Bé đeo rối khi hát cả bài và mang rối về hát cho bố mẹ.",
   zh:[Z("拿一只小狗。","ná yì zhī xiǎo gǒu.","Take a little dog."),Z("涂一涂。","tú yi tú.","Colour it."),Z("贴一贴。","tiē yi tiē.","Stick it."),Z("戴上。","dài shàng.","Put it on.")]},
  talk:[T("There was a farmer had a dog.",""),T("Bingo was his name-o!",""),T("我的狗叫宾果。","wǒ de gǒu jiào Bīnguǒ.")],
- tiers:["Hát câu 1–2 (There was a farmer had a dog…) và nói được từ 狗.","Hát cả bài, vỗ tay thay chữ cái, nói 3 câu.","Hát cả bài tiếng Anh và tiếng Trung, đặt tên khác cho chú chó của mình (“Lucky”, “宾果”) và nói 3 câu."],
+ tiers:["Hát câu 1–2 (There was a farmer had a dog…), gật lắc đúng với từ 狗.","Hát cả bài tiếng Anh, xếp đúng 4 câu tiếng Anh, nói đúng 3/4 từ ở trò gật hay lắc.","Hát cả bài Anh và Trung, tự ghép câu tiếng Trung không cần gợi ý, nói được từ bằng cả hai thứ tiếng."],
  parent:"Hôm nay con học bài hát BINGO bằng tiếng Anh và tiếng Trung. Con hát được “There was a farmer had a dog… 农民养了一只小狗!”. Ở nhà, hãy cùng con hát và vỗ tay thay chữ cái B-I-N-G-O.",
- materials:["Rối chó Bingo và mũ nông dân cho cô Hươu","5 thẻ chữ lớn B, I, N, G, O (cầm tay)","Thẻ hình dog, farmer, name, clap","Rối ngón tay chó Bingo cắt sẵn, bút màu, băng dính giấy","Màn hình để bật video BINGO (1:32)"],
+ materials:["Rối chó Bingo và mũ nông dân cho cô Hươu","Thẻ hình lớn dog, farmer, name, clap (dán tường cho trò đập thẻ)","Thẻ từ ghép câu và băng câu Anh, Trung in sẵn (mục In ấn), nam châm hoặc băng dính hai mặt","Bảng từ (bảng trắng có nam châm)","Rối ngón tay chó Bingo cô làm sẵn, mỗi bé một con","Màn hình và loa để bật slide có tiếng và video BINGO (1:32)"],
  aNote:"",listen:[]},
 {n:3,emoji:"👪",short:"Gia đình",title:"Gia đình mình",theme:"Gọi bố mẹ, ông bà",
  vocab:[v("mom","妈妈","māma","mẹ","👩"),v("dad","爸爸","bàba","bố","👨"),v("grandma","奶奶","nǎinai","bà","👵",{chant:true}),v("grandpa","爷爷","yéye","ông","👴",{chant:true})],
@@ -439,15 +471,13 @@ var P=[
 
 /* ---------- tạo các đoạn của một buổi ---------- */
 var PLUS={
-2:{mech:"Bingo nói + ghép chữ B-I-N-G-O",mat:["5 thẻ chữ lớn B, I, N, G, O","Mũ nông dân và rối chó Bingo (của cô Hươu)"],
- team:"Cả lớp chơi cùng nhau. Không loại bé nào; bé làm sai chỉ cần cười rồi chơi tiếp.",
- rules:[{who:"cô",lang:"en",t:"Bingo says: dog!",vi:"Chơi “Bingo nói”: chỉ làm khi nghe “Bingo says”. Dog: bò như chó và nói 狗."},
-  {who:"cô",lang:"en",t:"Bingo says: farmer!",vi:"Farmer: đội mũ tưởng tượng, nói 农民."},
-  {who:"cô",lang:"en",t:"Bingo says: clap!",vi:"Clap: vỗ tay và nói 拍手."},
-  {who:"cô",lang:"en",t:"Farmer! (không có “Bingo says”)",vi:"Bé nào làm theo thì cười và dừng lại; không ai bị loại.",nospeak:true},
-  {who:"cô",lang:"en",t:"B, I, N, G, O – stand in a line, please!",vi:"Phát 5 thẻ chữ cho 5 bé; cả lớp giúp xếp đúng thứ tự B-I-N-G-O, mỗi bé giơ chữ, cả lớp đọc chữ cái."},
-  {who:"cả lớp",lang:"en",t:"B-I-N-G-O!",vi:"Đọc chữ cái theo nhịp, rồi hát lại bằng giai điệu để chuẩn bị học bài."}],
- hard:"Bé 9–10 làm “Bingo nói” bằng tiếng Trung: cô nói 狗, 农民, 拍手 mà không dịch; bé làm đúng động tác."},
+2:{mech:"Đập thẻ trên tường",mat:[],
+ team:"Chia 2 đội xếp hàng. Mỗi lượt 1 bé mỗi đội chạy lên; bé đập trúng trước và nói lại từ bằng tiếng còn lại thì đội được 1 sao. Hết trò chơi cả hai đội đều nhận sao.",
+ rules:[{who:"cô",lang:"en",t:"Listen and run! Slap the card!",vi:"Slide “Trò chơi: đập thẻ”, bấm 🔊 Từ tiếp theo: máy đọc một từ tiếng Anh hoặc tiếng Trung."},
+  {who:"bé",lang:"en",t:"Dog!",vi:"Bé chạy tới đập đúng thẻ trên tường và nói từ tiếng Anh."},
+  {who:"cả lớp",lang:"zh",t:"狗！",py:"gǒu!",vi:"Cả lớp nói từ tiếng Trung, làm động tác. Bấm “Hiện thẻ” để kiểm tra."},
+  {who:"cô",lang:"en",t:"Next two, please!",vi:"Đổi hai bé khác, chơi đến khi mỗi bé được chạy ít nhất 1 lần."}],
+ hard:"Bé 9–10: nghe từ tiếng Trung, đập thẻ rồi nói luôn câu trong bài: “农民养了一只小狗”."},
 3:{mech:"Ai ở trong túi? (đoán thẻ bí mật)",mat:["Túi vải và 4 thẻ gia đình (mom, dad, grandma, grandpa)"],
  team:"Cả lớp thi với cô Hươu: đoán đúng 4/4 thì cô Hươu tặng 1 sao cho cả lớp.",
  rules:[{who:"cô",lang:"en",t:"Who is in the bag?",vi:"Giấu 1 thẻ vào túi, cho 1 bé sờ nhưng không nhìn."},
@@ -521,7 +551,167 @@ var CHECK={A:"Hơn nửa lớp đáp 你好 mà không cần nhắc.",B:"Bé nh�
 var HOSTHINT={A:"Mở màn và khởi động",B:"Lời dẫn chuyển phần",C:"Khen ngợi và động viên",D:"Khen ngợi và động viên",E:"Tương tác và xử lý sự cố",F:"Khen ngợi và động viên",G:"Tổng kết và kết thúc"};
 var TROUBLE=[["Bé không chịu nói","Cho bé nói thầm với cô Hươu, hoặc nói cùng bạn. Chỉ vào thẻ cũng được tính là tham gia."],["Lớp ồn, khó dừng","Giơ tay và nói “Freeze! 停！”. Cả lớp dừng và đưa ngón tay lên môi."],["Bé nói tiếng Việt","Nhắc lại ý của bé bằng một câu tiếng Anh hoặc tiếng Trung ngắn, đừng sửa lỗi."],["Bé nói sai thanh điệu","Nói lại đúng một lần với giọng vui, không dừng cả lớp để sửa."],["Bé xong sớm","Giao nhiệm vụ “dạy cô Hươu”: chỉ bạn bên cạnh làm hoặc trang trí thêm."],["Bé khóc hoặc không muốn tham gia","Cho ngồi cạnh cô, giao việc nhẹ: giữ thẻ, bấm nhạc, phát sao."],["Chậm giờ","Dùng mục ✂ “Nếu chậm giờ” ở từng đoạn, giữ nguyên bài hát và phần tạm biệt."],["Lớp có cả bé 5 tuổi và 10 tuổi","Ghép cặp bé lớn với bé nhỏ; bé lớn làm “người ra lệnh” hoặc “người kiểm tra”."]];
 S.forEach(function(s){var p=PLUS[s.n];if(p&&p.mat)s.materials=s.materials.concat(p.mat);});
+
+/* ---------- khuôn bài hát (buổi có main.sent): từ vựng → ghép câu và hát từng câu → nghe xếp câu Anh → nghe xếp câu Trung → hát cả bài → gật hay lắc ---------- */
+var ROOT="https://anh-trung-kids-ces.github.io/hoc.mot.lan.duoc.hai.ngon.ngu/";
+var TRIM2={A:"Freeze chỉ 2 lượt.",B:"Nghe nhạc khoảng 30 giây là hiện đáp án, bỏ phần xem video.",C:"Mỗi từ bấm tiếng 1 lần; đập thẻ chơi 3 lượt.",D:"Không cho bé xếp thẻ từ giấy, chỉ chơi trên màn hình; gợi ý tối đa 1 lần.",E:"Không phát băng câu, cả lớp chạm trên màn hình.",F:"Cô hát 1 lượt, cả lớp chạm xếp trên màn hình, hỏi nghĩa 1 câu.",G:"Hát 1 lượt Anh, 1 lượt Trung, bỏ lượt vỗ tay thay chữ.",H:"Mỗi bé 1 lượt thay vì 2.",I:"Không cắt: giữ phần dán sao và mảnh bản đồ để bé nhớ buổi sau."};
+var CHECK2={A:"Hơn nửa lớp đáp 你好 mà không cần nhắc, đứng im đúng tư thế khi cô hô Freeze.",B:"Bé đoán được bài hát nói về gì và nhắc lại câu tiếng Anh của cô Hươu.",C:"Bé đập đúng thẻ khi nghe từ tiếng Trung, không cần nhìn bạn.",D:"Cả lớp hát được từng câu tiếng Anh và câu tiếng Trung song song ngay sau khi ghép xong.",E:"4 bé tự đứng đúng thứ tự câu khi nghe bài tiếng Anh.",F:"Bé xếp đúng câu tiếng Trung và nói được câu tiếng Anh tương ứng.",G:"Cả lớp hát trọn bài tiếng Anh và tiếng Trung, không cần nhìn bảng.",H:"Mỗi bé gật hoặc lắc đúng ít nhất 1 lượt và nói lại được từ.",I:"Bé tự nói 再见 khi được gọi tên."};
+var HOST2={A:"Mở màn và khởi động",B:"Lời dẫn chuyển phần",C:"Tương tác và xử lý sự cố",D:"Khen ngợi và động viên",E:"Lời dẫn chuyển phần",F:"Lời dẫn chuyển phần",G:"Khen ngợi và động viên",H:"Khen ngợi và động viên",I:"Tổng kết và kết thúc"};
+function isFlow(s){return !!(s&&s.main&&s.main.sent);}
+function segTotal(segs){return segs.reduce(function(a,g){return a+g.dur;},0);}
+function segmentsSong(s){
+  var M=s.main,out=[],vw=s.vocab.filter(function(w){return w.zh;}),P=PLUS[s.n],TE=TEASE[s.n],p0=M.poses[0];
+  out.push({id:"A",dur:4,title:"Chào và khởi động Freeze",mode:"en2zh",goal:"Ghi nhớ 你好; vào lớp bằng vận động.",note:s.aNote||"",
+    steps:[{who:"cô",lang:"en",t:"Hello, everyone! Sit down, please.",vi:"Chào cả lớp, mời ngồi."},
+      {who:"cô + bé",lang:"en",t:"Hello, ___, hello, ___ – wave, wave, wave!",vi:"Hát, vẫy tay, gọi tên một bé."},
+      {who:"bé",lang:"zh",t:"___，你好！",py:"___, nǐ hǎo!",vi:"Bé và cả lớp đáp bằng 你好."},
+      {who:"cô",lang:"en",t:"Let's dance! Music on!",vi:"Mở slide “Khởi động: Freeze!”, bấm “Bật nhạc”. Cả lớp nhảy tự do trong lúc cô quay lưng."},
+      {who:"cô",lang:"en",t:"Freeze!",vi:"Cô quay lại thật nhanh, bấm “Freeze!”. Bé đứng im đúng tư thế trên màn hình. Chơi 3–4 lượt."},
+      {who:"cô",lang:"zh",t:p0.zh+"！",py:p0.py+"!",vi:"Mỗi lượt bấm hiện từ tiếng Trung (phím R), cả lớp nhắc lại."}]});
+  out.push({id:"B",dur:4,title:"Nghe nhạc đoán bài, cô Hươu giới thiệu",mode:"zh2en",goal:"Bé tò mò về bài hát; nghe cô Hươu nói tiếng Trung, gọi lại bằng tiếng Anh.",note:M.warn||"",
+    steps:[{who:"cô",lang:"en",t:"Listen! What is the song about?",vi:"Mở slide “Nghe nhạc, đoán bài hát”, bấm “Bật nhạc (không hình)”. Bé nhắm mắt nghe."},
+      {who:"cô",lang:"en",t:"A dog? A cat? What is it?",vi:"Cho bé đoán thoải mái, đoán sai không sao."},
+      {who:"cô",lang:"en",t:M.ans.en,vi:"Bấm “Hiện đáp án”, rồi “Xem video” khoảng 30 giây để bé thấy hình."},
+      {who:"cô (cô Hươu)",lang:"zh",t:s.hook.zh,py:s.hook.py,vi:"Sang slide cô Hươu. Nói chậm, kèm đạo cụ."},
+      {who:"cô",lang:"en",t:s.hook.en,vi:"Hỗ trợ nghĩa bằng một câu Anh gọn."},
+      {who:"cô",lang:"en",t:"What did cô Hươu say?",vi:"Bé gọi lại bằng tiếng Anh (vài từ cũng được)."}]});
+  var cs=[];
+  vw.forEach(function(w){
+    var a=w.au||{};
+    cs.push({who:"cô",lang:"en",t:w.en+"!",vi:"Slide “Từ: "+w.en+"”. "+(a.en?"Bấm 🔊 EN":"Cô tự đọc (chưa có file tiếng)")+", giơ thẻ hình "+w.vi+"."});
+    cs.push({who:"bé",lang:"zh",t:w.zh,py:w.py,vi:(a.zh?"Bấm 🔊 中. ":"Cô đọc mẫu tiếng Trung. ")+"Cả lớp nhắc lại 2 lần, làm động tác."});
+  });
+  cs.push({who:"cô",lang:"vi",t:"Dán "+vw.length+" thẻ hình lên tường, cách xa nhau, ngang tầm tay bé.",vi:"Chuẩn bị cho trò đập thẻ.",nospeak:true});
+  if(P){cs.push({who:"cô",lang:"vi",t:"Luật chơi: "+P.mech,vi:P.team,nospeak:true});P.rules.forEach(function(r){cs.push(r);});cs.push({who:"cô",lang:"vi",t:"🌳 Thử thách 9–10 tuổi: "+P.hard,vi:"Chỉ giao cho bé đã vững.",nospeak:true});}
+  out.push({id:"C",dur:6,title:"Từ vựng: thẻ có tiếng, rồi đập thẻ trên tường",mode:"en2zh",goal:"Nghe và nhận ra từ của bài hát bằng cả tiếng Anh và tiếng Trung.",note:P?P.team:"",steps:cs});
+  var ds=[];
+  M.sent.forEach(function(x,i){
+    ds.push({who:"cô",lang:"vi",t:"Câu "+(i+1)+": mở slide “Ghép câu "+(i+1)+"”. Bấm 💡 Gợi ý: câu tiếng Anh và tiếng Trung hiện 3 giây rồi ẩn (tối đa 3 lần).",vi:"Bé nhìn nhanh, nhớ thứ tự từ.",nospeak:true});
+    ds.push({who:"bé",lang:"en",t:x.enL,vi:"Mời từng bé lên chạm thẻ từ tiếng Anh trên màn hình theo đúng thứ tự. Bé quên thì cô bấm gợi ý; hết lượt gợi ý thì cô cho cả lớp xếp thẻ từ giấy trên bàn."});
+    if(x.zh)ds.push({who:"bé",lang:"zh",t:x.zhL,py:x.py,vi:"Ghép tiếp câu tiếng Trung như trên. Bé chạm thẻ nào, cô đọc to thẻ đó."});
+    ds.push({who:"cô",lang:"vi",t:"Gắn băng câu bằng nam châm lên bảng: câu tiếng Anh ở trên, câu tiếng Trung ngay dưới.",vi:"Bảng dần thành lời bài hát hai thứ tiếng.",nospeak:true});
+    ds.push({who:"cô + bé",lang:"en",t:x.enL,vi:"Dạy hát ngay câu vừa ghép: cô hát, bé hát theo. Động tác: "+x.move+"."});
+    ds.push({who:"cô + bé",lang:"zh",t:x.zhL,py:x.py,vi:"Hát tiếp câu tiếng Trung, cùng giai điệu, cùng động tác."});
+  });
+  if(M.order.length>M.sent.length)ds.push({who:"cả lớp",lang:"vi",t:"Câu cuối của bài lặp lại một câu đã ghép: chỉ vào băng câu đó trên bảng, hát nối cả bài tiếng Anh, rồi cả bài tiếng Trung.",vi:"Slide “Hát nối cả bài”.",nospeak:true});
+  out.push({id:"D",dur:12,title:"Ghép câu và hát từng câu (Anh – Trung song song)",mode:"en2zh",goal:"Từ vựng thành câu, câu thành lời hát; câu Anh và câu Trung đi cặp với nhau.",note:"Ghép xong câu nào, dạy hát câu đó luôn. Bé nhỏ chỉ cần chạm thẻ cùng bạn; bé lớn tự ghép không cần gợi ý.",steps:ds,song:true});
+  out.push({id:"E",dur:3,title:"Nghe tiếng Anh, xếp câu thành bài",mode:"en2zh",goal:"Nghe bài tiếng Anh, nhận ra thứ tự các câu.",note:"Dùng băng câu tiếng Anh in sẵn (mục In ấn).",
+    steps:[{who:"cô",lang:"vi",t:"Phát "+M.order.length+" băng câu tiếng Anh cho "+M.order.length+" bé; các bé khác làm trọng tài.",vi:"Gỡ băng câu trên bảng xuống, xáo lên.",nospeak:true},
+      {who:"cô",lang:"en",t:"Listen! Stand in order.",vi:"Slide “Nghe và xếp: tiếng Anh”, bấm 🎧 Bật nhạc. Bé cầm băng câu đứng thành hàng đúng thứ tự."},
+      {who:"cả lớp",lang:"en",t:"Is it right?",vi:"Trọng tài lên chạm băng câu trên màn hình theo thứ tự để kiểm tra; đúng thì cả lớp hát lại phần tiếng Anh."}]});
+  out.push({id:"F",dur:3,title:"Nghe tiếng Trung, xếp câu thành bài (có pinyin)",mode:"zh2en",goal:"Nghe phần tiếng Trung, xếp câu; gọi lại nghĩa bằng câu tiếng Anh song song.",note:"Cô hát phần tiếng Trung theo kịch bản này, không dùng tiếng Trung trong video.",
+    steps:[{who:"cô",lang:"zh",t:"听！",py:"tīng!",vi:"Phát băng câu tiếng Trung có pinyin cho "+M.order.length+" bé khác. Cô hát chậm phần tiếng Trung."},
+      {who:"cô",lang:"en",t:"Listen and stand in order.",vi:"Hỗ trợ nghĩa bằng câu Anh gọn. Bé đứng thành hàng đúng thứ tự."},
+      {who:"cô",lang:"zh",t:"这是什么意思？",py:"zhè shì shénme yìsi?",vi:"Chỉ vào một băng câu tiếng Trung, hỏi nghĩa."},
+      {who:"bé",lang:"en",t:M.sent[0].enL,vi:"Bé nói câu tiếng Anh song song (nhìn bảng nếu cần). Kiểm tra thứ tự trên slide."}]});
+  var gs=[{who:"cô",lang:"vi",t:"Phát "+s.make.name.toLowerCase()+" (cô làm sẵn). Bé đeo vào và cầm khi hát.",vi:s.make.vi,nospeak:true},
+    {who:"cả lớp",lang:"en",t:"Let's sing together!",vi:"Slide “Hát cả bài”: bấm 🎬 Xem video hoặc cô hát. Hát cả bài tiếng Anh, rồi cả bài tiếng Trung."}].concat(M.whole||[]);
+  out.push({id:"G",dur:3,title:"Hát cả bài",mode:"en2zh",goal:"Bé hát trọn bài hai thứ tiếng: đây là sản phẩm mang về.",note:"",steps:gs});
+  out.push({id:"H",dur:6,title:"Gật hay lắc? Gọi từng bé kiểm tra từ vựng",mode:"en2zh",goal:"Kiểm tra nhanh từng bé nhận ra từ khi nghe tiếng Anh và tiếng Trung.",note:"Bé còn lại làm giám khảo: cùng gật hoặc lắc theo. Không loại bé nào; bé sai thì cô nói lại từ đúng cho bé nhắc. Ghi kết quả vào phiếu quan sát.",
+    steps:[{who:"cô",lang:"en",t:"Come here, ___! Yes or no?",vi:"Gọi từng bé lên. Slide “Gật hay lắc?”, bấm ▶ Lượt mới: màn hình hiện một hình, máy đọc một từ (Anh hoặc Trung)."},
+      {who:"bé",lang:"vi",t:"Đúng thì gật đầu, sai thì lắc đầu.",vi:"Bé lắc đầu thì nói từ đúng của hình.",nospeak:true},
+      {who:"bé",lang:"en",t:"No! It's a dog! 狗！",vi:"Ví dụ: hình chú chó mà máy đọc “clap”."},
+      {who:"cô",lang:"en",t:"Great! 真棒！",vi:"Bấm Hiện đáp án. Mỗi bé 2 lượt, khoảng 30 giây."}]});
+  out.push({id:"I",dur:3,title:"Tạm biệt, mảnh bản đồ và gài buổi sau",mode:"en2zh",goal:"Nhớ 再见 và muốn quay lại buổi sau.",note:"Phát thẻ phụ huynh (có mã QR web Little Seed). Bé mang rối về.",
+    steps:[{who:"cô + bé",lang:"en",t:"Goodbye, all, see you next time!",vi:"Hát, vẫy tay."}].concat(TE?[
+      {who:"cô",lang:"vi",t:"Dán sao vào hộ chiếu, cô Hươu đưa mảnh bản đồ số "+(s.n-1)+".",vi:"Gọi từng bé lên dán sao.",nospeak:true},
+      {who:"cô (cô Hươu)",lang:"vi",t:TE.vi,vi:"Giọng bí ẩn, thì thầm. Đưa túi bí ẩn: "+TE.clue+". Không mở túi.",nospeak:true}]:[]).concat([
+      {who:"cô + bé",lang:"zh",t:"再见！",py:"zàijiàn!",vi:"Gọi tên từng bé, bé đáp 再见."}])});
+  var t=0;out.forEach(function(g){g.min=t+"–"+(t+g.dur);t+=g.dur;g.trim=TRIM2[g.id];g.check=CHECK2[g.id];g.host=HOST2[g.id];});
+  return out;
+}
+function auBtn(u,l){return u?'<button class="btn" type="button" data-g="au" data-u="'+esc(u)+'">🔊 '+l+'</button>':'';}
+function xgame(items,kind){
+  var idx=items.map(function(_,i){return i;}),sh=idx;
+  if(items.length>1){for(var k=0;k<8;k++){sh=shuf(idx);if(sh.join()!==idx.join())break;}}
+  var zh=kind!=="en";
+  return '<div class="xg'+(kind==="strip"||kind==="stripzh"?" col":"")+'" data-g="nop" data-ans="'+esc(JSON.stringify(items.map(function(x){return x.t;})))+'" data-i="0"><div class="xg-out"></div><div class="xg-in">'+
+    sh.map(function(i){var x=items[i];return '<button type="button" class="tile'+(kind==="zh"||kind==="stripzh"?" zh":"")+(kind==="strip"||kind==="stripzh"?" strip":"")+'" data-g="tile" data-w="'+esc(x.t)+'">'+esc(x.t)+(x.py?'<small>'+esc(x.py)+'</small>':'')+'</button>';}).join("")+'</div></div>';
+}
+function slidesSong(s){
+  var M=s.main,base=slidesClassic(s),byName=function(n){for(var i=0;i<base.length;i++)if(base[i].name===n)return base[i];return null;},A=[],vw=s.vocab.filter(function(w){return w.zh;});
+  ["Tên buổi","Bài chào","Khởi động: Freeze!","Nghe nhạc, đoán bài hát","Móc câu: cô Hươu nói"].forEach(function(n){var x=byName(n);if(x)A.push(x);});
+  vw.forEach(function(w){var a=w.au||{};
+    A.push({name:"Từ: "+w.en,mode:"en2zh",html:'<div class="sl"><div class="emo">'+pic(w)+'</div><div class="wd">'+esc(w.en)+'</div><div class="wz rv">'+esc(w.zh)+'</div><div class="wp rv">'+esc(w.py)+'</div><div class="gbtns" data-g="nop">'+auBtn(a.en,"EN")+auBtn(a.zh,"中")+'</div>'+(a.en&&a.zh?'':'<div class="hint">Từ này còn thiếu file tiếng, cô đọc mẫu.</div>')+'<div class="hint">Bấm 🔊 nghe, bấm nền để hiện tiếng Trung, cả lớp nhắc lại.</div></div>'});
+  });
+  A.push({name:"Trò chơi: đập thẻ",mode:"en2zh",html:'<div class="sl"><h2>👋 Nghe rồi chạy đập thẻ!</h2><div class="sub">Listen and run! Slap the card!</div><div class="gbig" id="gQ">❓</div><div id="gA" class="gans" hidden></div><div class="gbtns" data-g="nop"><button class="btn pri" type="button" data-g="slap">🔊 Từ tiếp theo</button><button class="btn" type="button" data-g="again">🔁 Nghe lại</button><button class="btn" type="button" data-g="show">Hiện thẻ</button></div><div class="hint" id="gT"></div></div>'});
+  M.sent.forEach(function(x,i){
+    var hintH='<div class="xhint" hidden><div class="ln">'+esc(x.enL)+'</div>'+(x.zhL?'<div class="ln">'+hl(x.zhL)+'</div><div class="wp">'+esc(x.py)+'</div>':'')+'</div>';
+    A.push({name:"Ghép câu "+(i+1),mode:"en2zh",html:'<div class="sl xsl"><h2>🧩 Ghép câu '+(i+1)+'</h2><div class="gbtns" data-g="nop"><button class="btn pri" type="button" data-g="hint" data-left="3">💡 Gợi ý (còn 3)</button><button class="btn" type="button" data-g="xreset">↺ Xáo lại</button></div>'+hintH+xgame(x.en.map(function(t){return {t:t};}),"en")+(x.zh?xgame(x.zh.map(function(z){return {t:z[0],py:z[1]};}),"zh"):'')+'<div class="hint">Bé lên chạm thẻ theo đúng thứ tự. Xong thì gắn băng câu lên bảng và hát.</div></div>'});
+    A.push({name:"Hát câu "+(i+1),mode:"en2zh",html:'<div class="sl"><div class="vfr"><img src="'+BG2[x.bg]+'" alt=""><div class="vcap"><div class="ln">'+esc(x.enL)+'</div><div class="ln">'+hl(x.zhL)+'</div><div class="wp">'+esc(x.py)+'</div></div></div><div class="sub">🎵 '+esc(x.move)+'</div></div>'});
+  });
+  var lyr='<div class="lyr">'+M.order.map(function(k){return '<div class="lnS">'+esc(M.sent[k].enL)+'</div><div><div class="lnS zh">'+esc(M.sent[k].zhL)+'</div><div class="pyS">'+esc(M.sent[k].py)+'</div></div>';}).join("")+'</div>';
+  A.push({name:"Hát nối cả bài",mode:"en2zh",html:'<div class="sl"><h2>🎵 Hát nối cả bài</h2>'+lyr+'</div>'});
+  A.push({name:"Nghe và xếp: tiếng Anh",mode:"en2zh",html:'<div class="sl"><h2>🎧 Listen! Put the sentences in order.</h2><div class="lstage" style="width:min(300px,50%)"><div class="lcover"><div class="eq"><i></i><i></i><i></i><i></i><i></i></div></div></div><div class="gbtns" data-g="nop"><button class="btn pri" type="button" data-clb="audio" data-vid="'+M.vid+'">🎧 Bật nhạc (không hình)</button><button class="btn" type="button" data-clb="stop">⏹ Dừng</button><button class="btn" type="button" data-g="xreset">↺ Xáo lại</button></div>'+xgame(M.order.map(function(k){return {t:M.sent[k].enL};}),"strip")+'</div>'});
+  A.push({name:"Nghe và xếp: tiếng Trung",mode:"zh2en",html:'<div class="sl"><h2>🎧 听！Xếp câu tiếng Trung</h2><div class="sub">Cô hát phần tiếng Trung. Bé xếp câu, rồi nói câu tiếng Anh song song.</div><div class="gbtns" data-g="nop"><button class="btn" type="button" data-g="xreset">↺ Xáo lại</button></div>'+xgame(M.order.map(function(k){return {t:M.sent[k].zhL,py:M.sent[k].py};}),"stripzh")+'</div>'});
+  A.push({name:"Hát cả bài",mode:"en2zh",html:'<div class="sl"><h2>🎤 Hát cả bài · '+esc(s.song.name)+'</h2><div class="lstage" style="width:min(420px,60%)"><div class="lcover"><div>🎬</div></div></div><div class="gbtns" data-g="nop"><button class="btn pri" type="button" data-clb="video" data-vid="'+M.vid+'">🎬 Xem video</button><button class="btn" type="button" data-clb="stop">⏹ Dừng</button></div>'+lyr+'</div>'});
+  A.push({name:"Gật hay lắc?",mode:"en2zh",html:'<div class="sl"><h2>🙆 Gật hay 🙅 lắc?</h2><div class="sub">Đúng thì gật đầu, sai thì lắc đầu và nói từ đúng. <b id="nC"></b></div><div class="gbig" id="nP">🙂</div><div id="nA" class="gans" hidden></div><div class="gbtns" data-g="nop"><button class="btn pri" type="button" data-g="nod">▶ Lượt mới</button><button class="btn" type="button" data-g="nagain">🔁 Nghe lại</button><button class="btn" type="button" data-g="nshow">Hiện đáp án</button></div><div class="hint" id="nT"></div></div>'});
+  var bye=byName("Tạm biệt");if(bye)A.push(bye);
+  return A;
+}
+var GS={last:-1,w:null,l:"",nw:null,nv:null,nl:"",n:0};
+function playU(u,btn){
+  var fb=function(){if(btn){var o=btn.textContent;btn.textContent="⚠ chưa tải được";setTimeout(function(){btn.textContent=o;},1600);}};
+  try{if(window._ha)window._ha.pause();var a=new Audio(ROOT+u);window._ha=a;a.onerror=fb;var p=a.play();if(p&&p.catch)p.catch(fb);}catch(e){fb();}
+}
+function sayWord(w,l,btn,tip){
+  var u=w.au&&w.au[l],t=document.getElementById(tip);
+  if(u){playU(u,btn);if(t)t.textContent="";}
+  else if(t)t.textContent="Chưa có file tiếng: cô đọc “"+(l==="zh"?w.zh+" ("+w.py+")":w.en)+"”";
+}
+function pickLang(w){var ls=["en","zh"].filter(function(l){return w.au&&w.au[l];});if(!ls.length)ls=["en","zh"];return ls[Math.floor(Math.random()*ls.length)];}
+function cardHtml(w){return '<div class="emo">'+pic(w)+'</div><div class="ln">'+esc(w.en)+' · <span class="zh">'+esc(w.zh)+'</span></div><div class="wp">'+esc(w.py)+'</div>';}
+function gAct(b){
+  var g=b.getAttribute("data-g"),sl=b.closest(".sl"),vw=(deck.s?deck.s.vocab:[]).filter(function(w){return w.zh;});
+  if(g==="nop")return;
+  if(g==="au"){playU(b.getAttribute("data-u"),b);if(sl&&/中/.test(b.textContent))sl.classList.add("show");return;}
+  if(g==="tile"){
+    var xg=b.closest(".xg");if(!xg||b.disabled)return;var ans=JSON.parse(xg.getAttribute("data-ans")),i=+xg.getAttribute("data-i");
+    if(b.getAttribute("data-w")===ans[i]){b.disabled=true;b.classList.add("in");xg.querySelector(".xg-out").appendChild(b);i++;xg.setAttribute("data-i",i);if(i>=ans.length)xg.classList.add("done");}
+    else{b.classList.remove("bad");void b.offsetWidth;b.classList.add("bad");}
+    return;
+  }
+  if(g==="xreset"){deckRender();return;}
+  if(g==="hint"){
+    var left=+b.getAttribute("data-left"),h=sl&&sl.querySelector(".xhint");if(!h||left<=0||!h.hidden)return;
+    left--;b.setAttribute("data-left",left);h.hidden=false;b.textContent=left?"💡 Gợi ý (còn "+left+")":"Hết lượt gợi ý";
+    setTimeout(function(){h.hidden=true;if(left<=0)b.disabled=true;},3000);return;
+  }
+  if(g==="slap"){
+    if(!vw.length)return;var k;do{k=Math.floor(Math.random()*vw.length);}while(vw.length>1&&k===GS.last);GS.last=k;GS.w=vw[k];GS.l=pickLang(GS.w);
+    $("#gQ").hidden=false;$("#gQ").textContent=GS.l==="zh"?"🔊 中":"🔊 EN";$("#gA").hidden=true;sayWord(GS.w,GS.l,b,"gT");return;
+  }
+  if(g==="again"){if(GS.w)sayWord(GS.w,GS.l,b,"gT");return;}
+  if(g==="show"){if(!GS.w)return;$("#gA").innerHTML=cardHtml(GS.w);$("#gA").hidden=false;$("#gQ").hidden=true;return;}
+  if(g==="nod"){
+    if(!vw.length)return;var a=Math.floor(Math.random()*vw.length),v=a;
+    if(vw.length>1&&Math.random()<0.5){do{v=Math.floor(Math.random()*vw.length);}while(v===a);}
+    GS.nw=vw[a];GS.nv=vw[v];GS.nl=pickLang(GS.nv);GS.n++;
+    $("#nC").textContent="· Lượt "+GS.n;$("#nP").innerHTML=pic(GS.nw);$("#nA").hidden=true;sayWord(GS.nv,GS.nl,b,"nT");return;
+  }
+  if(g==="nagain"){if(GS.nv)sayWord(GS.nv,GS.nl,b,"nT");return;}
+  if(g==="nshow"){
+    if(!GS.nw)return;var ok=GS.nw===GS.nv,said=GS.nl==="zh"?GS.nv.zh:GS.nv.en;
+    $("#nA").innerHTML=(ok?'<div class="ln" style="color:var(--brand)">✔ Đúng rồi! Gật đầu!</div>':'<div class="ln" style="color:var(--zh)">✘ Không phải “'+esc(said)+'”. Lắc đầu!</div>')+'<div class="sub">Đây là:</div><div class="ln">'+esc(GS.nw.en)+' · <span class="zh">'+esc(GS.nw.zh)+'</span> <i class="wp" style="font-size:.6em">'+esc(GS.nw.py)+'</i></div>';
+    $("#nA").hidden=false;return;
+  }
+}
+document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest("[data-g]");if(!b||!b.closest("#deck"))return;e.stopPropagation();e.preventDefault();gAct(b);},true);
+function wordCardsSheet(s){
+  var M=s.main,h='<div class="sheet"><h3>Thẻ từ ghép câu · Buổi '+s.n+' (cắt rời, mỗi câu một màu giấy)</h3>';
+  M.sent.forEach(function(x,i){
+    h+='<p style="margin:4mm 0 2mm"><b>Câu '+(i+1)+'</b></p><div class="wcards">'+x.en.map(function(t){return '<div class="wcard">'+esc(t)+'</div>';}).join("")+'</div>';
+    if(x.zh)h+='<div class="wcards" style="margin-top:3mm">'+x.zh.map(function(z){return '<div class="wcard zh">'+esc(z[0])+'<small>'+esc(z[1])+'</small></div>';}).join("")+'</div>';
+  });
+  return h+'</div>';
+}
+function stripSheet(s){
+  var M=s.main;
+  return '<div class="sheet"><h3>Băng câu · Buổi '+s.n+' (dán nam châm mặt sau, dùng để gắn bảng và xếp câu)</h3><p><b>Tiếng Anh</b></p><div class="strips">'+M.order.map(function(k){return '<div class="bstrip">'+esc(M.sent[k].enL)+'</div>';}).join("")+'</div><p><b>Tiếng Trung (có pinyin)</b></p><div class="strips">'+M.order.map(function(k){return '<div class="bstrip zh">'+esc(M.sent[k].zhL)+'<small>'+esc(M.sent[k].py)+'</small></div>';}).join("")+'</div></div>';
+}
+
 function segments(s){
+  if(isFlow(s))return segmentsSong(s);
   var out=[],vw=s.vocab.filter(function(w){return w.zh;});
   out.push({id:"A",min:"0–4",dur:4,title:"Chào và khởi động",mode:"en2zh",goal:"Ghi nhớ 你好 và 再见 qua bài chào.",note:s.aNote||"",
     steps:[{who:"cô",lang:"en",t:"Hello, everyone! Sit down, please.",vi:"Chào cả lớp, mời ngồi."},
@@ -600,7 +790,7 @@ function segCard(g,s,opts){
 }
 function timeBar(segs,link){
   var m=modeMinutes(segs);
-  return '<div class="tbar" role="img" aria-label="Thanh thời gian 40 phút">'+segs.map(function(g){
+  return '<div class="tbar" role="img" aria-label="Thanh thời gian '+segTotal(segs)+' phút">'+segs.map(function(g){
     return '<a class="'+g.mode+'" style="flex:'+g.dur+' 1 0" href="'+(link||"#seg-"+g.id)+'" data-seg="'+g.id+'" title="'+esc(g.title)+'"><span>'+g.id+'</span><span>'+g.dur+"'</span></a>";
   }).join("")+'</div><div class="tsum"><span>'+modeChip("en2zh")+' '+m.en2zh+' phút</span><span>'+modeChip("zh2en")+' '+m.zh2en+' phút</span></div>';
 }
@@ -626,10 +816,10 @@ function charImg(k,h){return IMG[k]?'<img class="pimg" style="height:'+(h||96)+'
 var cur=2;
 function pageOverview(){
   var segs=segments(S[2]);
-  var h='<div class="pagehead"><div class="mascots">'+["m_huou","m_bong","m_anna","m_leo","m_xm"].map(function(k){return charImg(k,96);}).join("")+'</div><h1>Sổ tay CLB Anh – Trung</h1><p class="lead">Chín buổi sinh hoạt (buổi 2–10; buổi khai giảng và buổi chào hỏi các con đã học nên không đưa vào), mỗi buổi 40 phút, cho trẻ 5–10 tuổi. Cùng một nhịp 7 đoạn, nhưng mỗi buổi đổi chủ đề, bài hát, trò chơi và kiểu làm sản phẩm. Mỗi đoạn được gắn rõ là Anh dẫn hay Trung dẫn.</p></div>';
+  var h='<div class="pagehead"><div class="mascots">'+["m_huou","m_bong","m_anna","m_leo","m_xm"].map(function(k){return charImg(k,96);}).join("")+'</div><h1>Sổ tay CLB Anh – Trung</h1><p class="lead">Chín buổi sinh hoạt (buổi 2–10; buổi khai giảng và buổi chào hỏi các con đã học nên không đưa vào), mỗi buổi 40–45 phút, cho trẻ 5–10 tuổi. Mỗi buổi xoay quanh một bài hát của kênh LINGOCUB: bé học từ bằng thẻ có tiếng, ghép từ thành câu, hát từng câu song song Anh – Trung, nghe và xếp câu thành bài, hát cả bài, rồi từng bé chơi gật hay lắc. Mỗi đoạn được gắn rõ là Anh dẫn hay Trung dẫn.</p></div>';
   h+='<div class="box"><h3>Cô Hươu đi tìm đường về nhà</h3><p>Mỗi buổi bé dán 1 sao vào hộ chiếu và nhận 1 mảnh bản đồ. Cuối buổi cô Hươu đưa một túi bí ẩn và thì thầm bằng tiếng Trung về buổi sau. Chín mảnh ghép thành đường về nhà ở buổi 10. Với bé 9–10 tuổi, cô Hươu là “đối thủ hay sai” để cả lớp bắt lỗi, không phải đồ chơi cho em bé. Mỗi buổi một kiểu trò chơi: tiếp sức, đoán thẻ bí mật, bé làm Simon, chợ theo cặp, săn màu, diễn đoán, bingo, truyền mặt nạ, bảo tàng.</p></div>';
   h+='<div class="sec"><h2>Hai cách dẫn lớp</h2>'+legend()+'</div>';
-  h+='<div class="sec"><h2>Nhịp 40 phút (A đến G)</h2>'+timeBar(segs,"#kich-ban-2")+'<p class="lead">Mỗi buổi có 25 phút Anh dẫn và 15 phút Trung dẫn: móc câu (B) và làm sản phẩm (E) do tiếng Trung dẫn; chào, trò chơi, bài hát, mini show và tạm biệt do tiếng Anh dẫn.</p></div>';
+  var mm=modeMinutes(segs);h+='<div class="sec"><h2>Nhịp một buổi (khuôn buổi 2, '+segTotal(segs)+' phút)</h2>'+timeBar(segs,"#kich-ban-2")+'<p class="lead">'+mm.en2zh+' phút Anh dẫn và '+mm.zh2en+' phút Trung dẫn: nghe nhạc gặp cô Hươu (B) và nghe xếp câu tiếng Trung (F) do tiếng Trung dẫn; các đoạn còn lại do tiếng Anh dẫn. Buổi 3–10 sẽ chuyển dần sang khuôn này.</p></div>';
   h+='<div class="sec"><h2>Dùng sổ tay</h2><div class="grid">'+
    [["📖","Kịch bản","Từng phút, câu cô nói, câu bé đáp","kich-ban-"],["🖥","Trình chiếu","Màn hình chiếu cho lớp, có đáp án bấm để hiện","trinh-chieu-"],["🎵","Ngữ liệu","Từ, lời bài hát, pinyin, nguồn gốc","ngu-lieu-"],["🖨","In ấn","Thẻ từ, thẻ tên, phiếu, thẻ phụ huynh","in-an-"],["🗣","Luyện lớp học","Cô luyện câu dùng trong lớp theo hai chế độ","luyen-lop"],["🎯","Học theo mẫu","Nghe, che chữ, nhại lại từng câu của cô","hoc-mau-"]].map(function(x){
      return '<a class="card" style="text-decoration:none;color:inherit" href="#'+x[3]+(x[3].slice(-1)==="-"?cur:"")+'"><span class="em">'+x[0]+'</span><h3>'+x[1]+'</h3><span class="meta">'+x[2]+'</span></a>';}).join("")+'</div></div>';
@@ -641,9 +831,9 @@ function pageScript(s){
   var segs=segments(s);
   var h='<div class="pagehead"><div class="hdr-s"><span class="big">'+sp(s)+'</span><div><h1>Buổi '+s.n+' · '+esc(s.title)+'</h1><p class="lead">'+esc(s.theme)+'</p></div></div>'+
    '<div class="row"><a class="btn pri" href="#trinh-chieu-'+s.n+'">🖥 Trình chiếu</a><a class="btn" href="#ngu-lieu-'+s.n+'">🎵 Ngữ liệu</a><a class="btn" href="#in-an-'+s.n+'">🖨 In ấn</a><a class="btn" href="#hoc-mau-'+s.n+'">🎯 Học theo mẫu</a></div></div>';
-  h+='<div class="sec"><h2>Nhịp 40 phút</h2>'+timeBar(segs)+'</div>';
+  h+='<div class="sec"><h2>Nhịp '+segTotal(segs)+' phút</h2>'+timeBar(segs)+'</div>';
   h+='<div class="box"><h3>Ba mức cho từng bé trong cùng một bài hát</h3><div class="tiers"><div class="tier"><b>🌱 5–6 tuổi</b>'+esc(s.tiers[0])+'</div><div class="tier"><b>🌿 7–8 tuổi</b>'+esc(s.tiers[1])+'</div><div class="tier"><b>🌳 9–10 tuổi</b>'+esc(s.tiers[2])+'</div></div></div>';
-  h+='<div class="box"><h3>Trước giờ học 15 phút (dành cho cô mới)</h3><ul class="checks"><li>Đọc to các câu tiếng Trung của buổi này 3 lần theo pinyin, tập ở mục <a href="#luyen-lop">Luyện câu lớp</a>.</li><li>Dán thẻ hình lên tường, bày sẵn đồ thủ công theo từng nhóm.</li><li>Cho cô Hươu vào túi, chuẩn bị hộ chiếu, bản đồ lớn và sao dán.</li><li>Mở trình chiếu, thử loa và nhạc.</li><li>Xem trước mục ✂ “Nếu chậm giờ” của từng đoạn.</li></ul></div>';
+  h+='<div class="box"><h3>Trước giờ học 15 phút (dành cho cô mới)</h3><ul class="checks"><li>Đọc to các câu tiếng Trung của buổi này 3 lần theo pinyin, tập ở mục <a href="#luyen-lop">Luyện câu lớp</a>.</li><li>Dán thẻ hình lên tường, bày sẵn đồ thủ công theo từng nhóm.</li>'+(isFlow(s)?'<li>In và cắt thẻ từ ghép câu, băng câu Anh và Trung; dán nam châm mặt sau.</li><li>Dán thẻ hình lớn lên tường, cách xa nhau, ngang tầm tay bé.</li><li>Mở slide “Từ” và “Đập thẻ”, bấm 🔊 thử tiếng. Tập hát phần tiếng Trung theo lời trong kịch bản.</li>':'')+'<li>Cho cô Hươu vào túi, chuẩn bị hộ chiếu, bản đồ lớn và sao dán.</li><li>Mở trình chiếu, thử loa và nhạc.</li><li>Xem trước mục ✂ “Nếu chậm giờ” của từng đoạn.</li></ul></div>';
   h+='<div class="sec"><h2>Từng đoạn</h2>'+segs.map(function(g){return segCard(g,s);}).join("")+'</div>';
   h+='<div class="box"><h3>Nếu… thì… (tình huống hay gặp)</h3><div class="scroll"><table><tbody>'+TROUBLE.map(function(t){return '<tr><td><b>'+esc(t[0])+'</b></td><td>'+esc(t[1])+'</td></tr>';}).join("")+'</tbody></table></div></div>';
   h+='<div class="two"><div class="box"><h3>Chuẩn bị</h3><ul class="checks">'+s.materials.map(function(m,i){return '<li><input type="checkbox" id="mat'+i+'"><label for="mat'+i+'">'+esc(m)+'</label></li>';}).join("")+'</ul></div>'+
@@ -716,11 +906,11 @@ function parentSheet(s){
   return '<div class="sheet"><h3>Thẻ phụ huynh · Buổi '+s.n+' (cắt theo nét đứt)</h3><div class="pcards">'+c+c+'</div></div>';
 }
 function checkSheet(s){
-  return '<div class="sheet"><h3>Phiếu chuẩn bị · Buổi '+s.n+' · '+esc(s.title)+'</h3><ul class="checks" style="font-size:1.05rem">'+s.materials.map(function(m){return '<li>☐ '+esc(m)+'</li>';}).join("")+'</ul><h3>Nhịp 40 phút</h3><table>'+segments(s).map(function(g){return '<tr><td><b>'+g.id+'</b></td><td>'+g.min+'</td><td>'+esc(g.title)+'</td><td>'+MODE[g.mode].tag+'</td></tr>';}).join("")+'</table></div>';
+  return '<div class="sheet"><h3>Phiếu chuẩn bị · Buổi '+s.n+' · '+esc(s.title)+'</h3><ul class="checks" style="font-size:1.05rem">'+s.materials.map(function(m){return '<li>☐ '+esc(m)+'</li>';}).join("")+'</ul><h3>Nhịp '+segTotal(segments(s))+' phút</h3><table>'+segments(s).map(function(g){return '<tr><td><b>'+g.id+'</b></td><td>'+g.min+'</td><td>'+esc(g.title)+'</td><td>'+MODE[g.mode].tag+'</td></tr>';}).join("")+'</table></div>';
 }
 function obsSheet(s){
   var rows="";for(var i=0;i<12;i++)rows+="<tr><td></td><td></td><td></td><td></td><td></td></tr>";
-  return '<div class="sheet"><h3>Phiếu quan sát · Buổi '+s.n+'</h3><table class="obs"><thead><tr><th style="width:30%">Tên bé</th><th>Hát câu 1</th><th>Hát cả bài</th><th>Nói 3 câu</th><th>Ghi chú</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
+  return '<div class="sheet"><h3>Phiếu quan sát · Buổi '+s.n+'</h3><table class="obs"><thead><tr><th style="width:30%">Tên bé</th>'+(isFlow(s)?'<th>Hát câu 1–2</th><th>Hát cả bài</th><th>Gật hay lắc: từ đúng</th>':'<th>Hát câu 1</th><th>Hát cả bài</th><th>Nói 3 câu</th>')+'<th>Ghi chú</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
 }
 function specialSheets(s){
   var h="";
@@ -734,7 +924,7 @@ function specialSheets(s){
 function pagePrint(s){
   var h='<div class="pagehead noprint"><div class="hdr-s"><span class="big">'+sp(s)+'</span><div><h1>In ấn · Buổi '+s.n+'</h1><p class="lead">Tài liệu giáo viên in ra và chuẩn bị. Bố cục khổ A4; dùng chức năng in của trình duyệt (Ctrl hoặc Cmd + P).</p></div></div></div>';
   h+='<div class="note noprint">Tôi chưa kiểm tra được việc in từ trong khung xem này. Nếu hộp thoại in không hiện, mở trang ở cửa sổ riêng rồi in.</div>';
-  h+=checkSheet(s)+specialSheets(s)+flashSheet(s)+lyricSheet(s)+parentSheet(s)+obsSheet(s);
+  h+=checkSheet(s)+specialSheets(s)+flashSheet(s)+(isFlow(s)?wordCardsSheet(s)+stripSheet(s):'')+lyricSheet(s)+parentSheet(s)+obsSheet(s);
   return h;
 }
 function pageDeckList(s){
@@ -800,7 +990,8 @@ function songSlide(s,a,b,title){
   var ls=s.song.lines.slice(a,b);
   return '<div class="sl"><h2>'+esc(title||s.song.name)+'</h2>'+ls.map(function(l){return '<div class="ln">'+hl(l.t)+'</div>'+(l.py?'<div class="wp rv">'+esc(l.py)+'</div>':'');}).join("")+'<div class="sub">Giai điệu '+esc(s.song.melody)+'</div></div>';
 }
-function slides(s){
+function slides(s){return isFlow(s)?slidesSong(s):slidesClassic(s);}
+function slidesClassic(s){
   var A=[],vw=s.vocab.filter(function(w){return w.zh;});
   A.push({name:"Tên buổi",mode:null,html:'<div class="sl"><div class="emo">'+sp(s)+'</div><div>'+charImg("m_huou",150)+charImg("m_bong",150)+'</div><h1>Buổi '+s.n+'</h1><h2>'+esc(s.title)+'</h2></div>'});
   if(s.parentSlides){
@@ -995,7 +1186,7 @@ function buildQuiz(n){
   var s=S[n],P=PLUS[n],qs=[];
   qs.push(mkQ("Tinh thần","Mục tiêu chính của một buổi CLB 40 phút là gì?","Bé thấy vui, bị cuốn vào hoạt động, nói được vài câu đơn giản và có sản phẩm mang về.",["Bé học thuộc 20 từ mới và viết được.","Bé phân biệt được ngữ pháp tiếng Anh và tiếng Trung.","Bé làm bài kiểm tra cuối buổi đạt điểm cao."],"CLB không theo trình độ, không thi cử. Tiêu chí là vui, cuốn hút và có sản phẩm hát hoặc nói đơn giản."));
   qs.push(mkQ("Tinh thần","“A → 中” trong kịch bản nghĩa là gì?","Cô dẫn bằng tiếng Anh, bé nghe hiểu và nhớ từ tiếng Trung.",["Cô dẫn bằng tiếng Trung, bé gọi lại bằng tiếng Anh.","Cô dịch từng câu từ tiếng Anh sang tiếng Việt.","Bé dịch từ tiếng Trung sang tiếng Anh."],"Hai cách dẫn: A → 中 (Anh dẫn, bé nhớ từ Trung) và 中 → A (Trung dẫn, bé gọi lại tiếng Anh)."));
-  qs.push(mkQ("Tinh thần","Hai đoạn nào trong buổi học là “Trung dẫn” (中 → A)?","Móc câu và Làm sản phẩm.",["Chào và Tạm biệt.","Trò chơi và Học bài hát.","Mini show và Tạm biệt."],"Ở móc câu cô Hươu chỉ nói tiếng Trung, ở làm sản phẩm cô hướng dẫn chủ yếu bằng tiếng Trung và có câu Anh hỗ trợ."));
+  qs.push(mkQ("Tinh thần","Hai đoạn nào trong buổi học là “Trung dẫn” (中 → A)?",isFlow(s)?"Nghe nhạc gặp cô Hươu và Nghe tiếng Trung xếp câu.":"Móc câu và Làm sản phẩm.",isFlow(s)?["Chào và Tạm biệt.","Đập thẻ và Ghép câu.","Hát cả bài và Gật hay lắc."]:["Chào và Tạm biệt.","Trò chơi và Học bài hát.","Mini show và Tạm biệt."],isFlow(s)?"Cô Hươu chỉ nói tiếng Trung khi giới thiệu bài; ở đoạn nghe xếp câu tiếng Trung, cô hỏi bằng tiếng Trung và bé gọi lại bằng câu tiếng Anh song song.":"Ở móc câu cô Hươu chỉ nói tiếng Trung, ở làm sản phẩm cô hướng dẫn chủ yếu bằng tiếng Trung và có câu Anh hỗ trợ."));
   qs.push(mkQ("Tinh thần","Cô Hươu có vai trò gì trong chương trình?","Nhân vật dẫn chuyện chỉ nói tiếng Trung, tạo lý do để bé nghe, đoán và muốn quay lại.",["Con rối dùng để doạ bé khi bé nghịch.","Trợ giảng chuyên dịch tiếng Việt cho cô.","Đồ chơi để bé tự chơi trong giờ nghỉ."],"Cô Hươu là nhân vật xuyên suốt: nói tiếng Trung, đưa mảnh bản đồ, gài buổi sau. Với bé 9–10 có thể là “đối thủ hay sai”."));
   qs.push(mkQ("Tinh thần","Lớp có bé 5 tuổi và bé 10 tuổi cùng học. Cách nào đúng tinh thần chương trình?","Cùng một hoạt động, mỗi bé một mức (3 mức), ghép cặp bé lớn với bé nhỏ.",["Tách lớp thành hai nhóm học hai bài khác nhau.","Dạy theo bé nhỏ nhất, bé lớn ngồi chờ.","Chỉ dạy bé từ 8 tuổi trở lên."],"CLB không chia theo trình độ. Ba mức cho mỗi bài hát và “Thử thách 9–10” giúp mọi bé cùng tham gia."));
   qs.push(mkQ("Tinh thần","Mini show nên làm thế nào cho bé đỡ ngại?","Cả lớp nói theo cặp trước, bé xung phong mới lên, bé ngại có thể nói cùng cô Hươu hoặc bạn.",["Gọi lần lượt từng bé đứng một mình trước lớp.","Chỉ mời bé nói giỏi nhất lên.","Bỏ qua phần mini show để tiết kiệm giờ."],"Trẻ 8–10 tuổi rất ngại đứng nói một mình. Nói theo cặp trước giúp mỗi bé đều nói được ít nhất một câu."));
