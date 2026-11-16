@@ -1113,8 +1113,10 @@ function adminBind(){
 function tabsNow(){return TABS.concat(gateOn()&&AUTH.role==="admin"?[["quan-tri","Quản trị"]]:[]);}
 function userChip(){
   if(!gateOn()||!AUTH.tok)return "";
-  return '<span class="tag ok" style="margin-left:8px">'+esc(AUTH.id==="admin"?"Quản trị":(AUTH.name||AUTH.id))+'</span><a href="#tong-quan" id="logoutBtn">Đăng xuất</a>';
+  var who=AUTH.id==="admin"?"Đăng nhập: admin":"Đăng nhập: "+(AUTH.name||AUTH.id);
+  return '<span class="tag ok" style="margin-left:8px;white-space:nowrap">'+esc(who)+'</span><a href="#tong-quan" id="logoutBtn" style="white-space:nowrap">Đăng xuất</a>';
 }
+
 
 var TABS=[["tong-quan","Tổng quan"],["kich-ban","Kịch bản"],["trinh-chieu","Trình chiếu"],["ngu-lieu","Ngữ liệu"],["in-an","In ấn"],["luyen-lop","Luyện lớp học"],["tinh-huong","Tình huống"],["kiem-tra","Kiểm tra cô mới"],["hoc-mau","Học theo mẫu"]];
 function parse(){
