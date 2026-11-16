@@ -70,3 +70,17 @@ Mỗi con có **mã** (trong link `?con=MÃ`) và **PIN 4 số**. Mỗi con nh�
 - Con quên PIN: bấm "PIN mới" (các máy cũ bị xoá, con nhập PIN mới ở lần mở sau).
 - **Bảng của con** (nút ❓ → Bảng của con, hoặc `#/bang`): con và ba mẹ cùng xem sao, chuyên cần, mức tham gia từng buổi và các **nhận xét cô chọn chia sẻ**. Không có dữ liệu bạn khác, không xếp hạng. Khi cô thêm ghi chú, ô "Chia sẻ với con và ba mẹ" bật sẵn; bỏ chọn nếu là ghi chú riêng của cô.
 - Xin ba mẹ đồng ý cho con dùng web và lưu tiến độ học (nên ghi sẵn vào phiếu đăng ký).
+
+## Đăng nhập bằng họ tên · mở Unit 1 (bản 6, 16/11/2026)
+
+- Vào web là hiện cửa sổ đăng nhập: **Con có mã PIN** (thẻ CES) hoặc **Con chưa có PIN** (nhập họ và tên). Có nút "Học thử" cho bạn chưa muốn đăng nhập.
+- Đăng nhập bằng tên: web tìm tên trong lớp (không phân biệt hoa thường, gõ không dấu vẫn tìm ra), hỏi lại "Có phải con là … không?". Chưa có thì tạo dòng mới trong tab `HocSinh`, cột `nguon` = `tu_nhap` (trang quản trị hiện nhãn **tự nhập**). Đổi máy, nhập lại đúng họ tên là lấy lại bài và sao.
+- Tên trùng một bạn đã có PIN → web đòi PIN. Hai bạn trùng họ tên → web nhờ con thêm tên ở nhà (ví dụ "Nguyễn Minh An Bin").
+- **Unit 1 (tuần 1–3) mở cho mọi bạn.** Từ Unit 2, con phải đăng nhập bằng **mã + PIN** do CES cấp; đăng nhập bằng tên chỉ học được Unit 1. Thông báo có hotline CES 0974.840.845.
+- Bạn tự nhập tên mà cô muốn cho học tiếp: trong trang quản trị, tab **Tài khoản con**, cấp PIN cho bạn đó rồi gửi thẻ. Con nhập mã + PIN, bài đã học bằng tên đi theo con.
+- Cô mở web bằng link có `?gv=1` thì không bị hỏi đăng nhập và thấy hết các ngày.
+
+**Nâng lên bản 6** (cột `nguon` tự thêm vào tab `HocSinh`):
+1. Mở Apps Script, xoá nội dung `Code.gs` cũ, dán `Code.gs` mới, bấm Lưu.
+2. Triển khai → Quản lý các lần triển khai → ✏️ → Phiên bản mới → Triển khai (link `/exec` giữ nguyên).
+3. Kiểm tra: mở `…/exec?action=ping`, phải thấy `"v":6`. Chưa nâng thì nút "Con chưa có PIN" báo chưa tìm được tên.

@@ -189,7 +189,7 @@ function vHs() {
   const left = `<div class="card klistcard"><h2>Học sinh (${D.kids.length})</h2>
     <input type="text" id="kq" placeholder="Tìm theo tên…" value="${esc(S.q)}" aria-label="Tìm học sinh">
     <div class="chips" style="margin-top:8px"><button type="button" data-filt="" aria-pressed="${S.filt === ''}">Tất cả</button><button type="button" data-filt="attn" aria-pressed="${S.filt === 'attn'}">Cần chú ý</button><button type="button" data-filt="nghi" aria-pressed="${S.filt === 'nghi'}">Nghỉ học</button></div>
-    <div class="klist">${list.map(k => { const i = D.info[k.id]; return `<button type="button" class="kitem ${k.tt ? 'off' : ''}" data-kid="${esc(k.id)}" aria-current="${S.kid === k.id}"><span><b>${esc(k.ten)}</b><br><span class="muted sm">${k.ngay || 0}/${LOPS[S.lop].tong} ngày web</span></span>${fl.has(k.id) ? '<span class="chip a">!</span>' : ''}${k.tt ? '<span class="chip">nghỉ</span>' : ''}</button>`; }).join('') || '<div class="empty">Không có bạn nào.</div>'}</div></div>`;
+    <div class="klist">${list.map(k => { const i = D.info[k.id]; return `<button type="button" class="kitem ${k.tt ? 'off' : ''}" data-kid="${esc(k.id)}" aria-current="${S.kid === k.id}"><span><b>${esc(k.ten)}</b><br><span class="muted sm">${k.ngay || 0}/${LOPS[S.lop].tong} ngày web</span></span>${fl.has(k.id) ? '<span class="chip a">!</span>' : ''}${k.tt ? '<span class="chip">nghỉ</span>' : ''}${k.nguon === 'tu_nhap' ? '<span class="chip" title="Con tự nhập tên trên web, chưa có PIN">tự nhập</span>' : ''}</button>`; }).join('') || '<div class="empty">Không có bạn nào.</div>'}</div></div>`;
   return `<div class="split ${S.kid ? 'has-kid' : ''}">${left}<div class="kdetail">${S.kid && D.kids.some(k => k.id === S.kid) ? kidDetail(D) : '<div class="card"><div class="empty">Chọn một bạn ở danh sách để xem hồ sơ, điểm danh từng buổi và ghi chú.</div></div>'}</div></div>`;
 }
 function kidDetail(D) {
@@ -200,7 +200,7 @@ function kidDetail(D) {
   const lvs = v => v === '' || v == null ? '·' : v;
   const canW = !S.v3;
   return `<div class="card"><button class="ghost back" type="button" data-back>‹ Danh sách</button>
-    <div class="row"><h2 class="grow">${esc(k.ten)} <span class="chip">${esc(k.id)}</span> ${k.tt ? '<span class="chip">nghỉ học</span>' : ''}</h2></div>
+    <div class="row"><h2 class="grow">${esc(k.ten)} <span class="chip">${esc(k.id)}</span> ${k.tt ? '<span class="chip">nghỉ học</span>' : ''}${k.nguon === 'tu_nhap' ? '<span class="chip" title="Con tự nhập tên trên web; cấp PIN để con học từ Unit 2">tự nhập tên</span>' : ''}</h2></div>
     <div class="facts"><div><b>${k.ngay || 0}/${tong}</b><span>ngày web đã học</span></div><div><b>${k.cuoi ? dm(k.cuoi) : '–'}</b><span>học web lần cuối</span></div>
       <div><b>${i.att == null ? '–' : Math.round(i.att * 100) + '%'}</b><span>chuyên cần (${i.nAtt} buổi)</span></div><div><b>${f(i.tg)}</b><span>tham gia (1–3)</span></div>
       <div><b>${f(i.en)} · ${f(i.zh)}</b><span>nói EN · ZH (1–3)</span></div><div><b>${i.stars}</b><span>tổng sao (web + cô)</span></div></div>

@@ -23,11 +23,14 @@
  * Bản 5 (tài khoản các con): PIN 4 số mỗi con (cột pin_con), nhớ tối đa max_may máy (mặc định 2), máy mới chờ cô duyệt.
  *   Phía con: dangnhap, bang (báo cáo chung con + ba mẹ). Phía cô: qt_kids_them, qt_pin, qt_may, qt_gc_chia.
  *   Con chưa có PIN: mọi thứ chạy như cũ.
+ * Bản 6 (16/11/2026): con chưa có PIN đăng nhập bằng HỌ TÊN (lệnh ten). Web tìm tên trong lớp; chưa có thì tạo dòng mới
+ *   (cột nguon = tu_nhap) để lưu kết quả luyện tập, đổi máy nhập lại đúng họ tên là lấy lại bài. Đăng nhập bằng tên chỉ mở Unit 1;
+ *   từ Unit 2 web vẫn đòi mã + PIN do CES cấp. Con đã có PIN mà nhập tên → web hỏi PIN.
  */
 
 const TAB = {
   CaiDat:  ['lop', 'ten_lop', 'pin', 'ghi_chu', 'video_folder', 'khai_giang', 'max_may'],
-  HocSinh: ['lop', 'id', 'ten', 'tao', 'web', 'vi', 'ngay', 'cuoi', 'luu_cuoi', 'trang_thai', 'pin_con', 'may', 'cho_may'],
+  HocSinh: ['lop', 'id', 'ten', 'tao', 'web', 'vi', 'ngay', 'cuoi', 'luu_cuoi', 'trang_thai', 'pin_con', 'may', 'cho_may', 'nguon'],
   TienDo:  ['lop', 'id', 'v', 't', 'capnhat', 'do_dai', 'd1', 'd2', 'd3', 'd4', 'd5', 'd6'],
   Thuong:  ['id', 'lop', 'kid', 'n', 'why', 'at', 'huy'],
   DoiQua:  ['code', 'lop', 'kid', 'ten', 'qua', 'ten_qua', 'sao', 'at', 'st', 'note'],
@@ -39,7 +42,7 @@ const TAB = {
 };
 const LOAI_GHI = ['tien_bo', 'ho_tro', 'phu_huynh', 'hanh_vi', 'khac'];
 const LOP_MAC_DINH = [['ls', 'Little Seed offline 48 buổi'], ['sd', 'Seedling offline 48 buổi']];
-const TEXT_COLS = { HocSinh: ['lop', 'id', 'ten', 'cuoi', 'pin_con', 'may', 'cho_may'], TienDo: ['lop', 'id', 'd1', 'd2', 'd3', 'd4', 'd5', 'd6'], Thuong: ['id', 'lop', 'kid'],
+const TEXT_COLS = { HocSinh: ['lop', 'id', 'ten', 'cuoi', 'pin_con', 'may', 'cho_may', 'nguon'], TienDo: ['lop', 'id', 'd1', 'd2', 'd3', 'd4', 'd5', 'd6'], Thuong: ['id', 'lop', 'kid'],
   DoiQua: ['code', 'lop', 'kid'], CaiDat: ['lop', 'pin', 'video_folder', 'khai_giang'],
   BuoiHS: ['k', 'lop', 'kid'], BuoiLop: ['k', 'lop', 'ngay'], GhiChu: ['id', 'lop', 'kid'], TaiNguyen: ['id', 'lop'] };
 const VIDEO_CACHE_GIAY = 300;   // danh sách video nhớ 5 phút: video mới thả vào Drive hiện trên web chậm nhất ~5 phút
@@ -69,7 +72,7 @@ function handle_(q) {
   const needPin = () => (pinOk() ? null : { ok: false, err: lop ? 'Sai mã PIN' : 'Thiếu mã lớp' });
 
   switch (q.action) {
-    case 'ping': return { ok: true, v: 5 };
+    case 'ping': return { ok: true, v: 6 };
 
     /* ---------- Góc vinh danh (công khai) ---------- */
     case 'video': {
@@ -99,6 +102,18 @@ function handle_(q) {
       if (may.length < maxMay_(k.obj.lop)) { may.push(m); set_('HocSinh', k.row, { may: JSON.stringify(may), cho_may: JSON.stringify(parseJ_(k.obj.cho_may).filter(x => x.d !== dev)) }); return { ok: true, moi: true }; }
       const cho = parseJ_(k.obj.cho_may); if (!cho.some(x => x.d === dev)) { cho.push(m); set_('HocSinh', k.row, { cho_may: JSON.stringify(cho.slice(-6)) }); }
       return { ok: false, need: 'duyet', ten: k.obj.ten };
+    }
+    case 'ten': {   // bản 6: con chưa có PIN đăng nhập bằng họ tên (web chỉ mở Unit 1 cho kiểu đăng nhập này)
+      if (!LOP_MAC_DINH.some(x => x[0] === lop)) return { ok: false, err: 'Thiếu mã lớp' };
+      const ten = tenSach_(q.ten); if (ten.length < 3 || ten.split(' ').length < 2) return { ok: false, err: 'Con nhập cả họ và tên nhé, ví dụ: Nguyễn Minh An.' };
+      const a = tenSo_(ten), b = boDau_(a), all = rows_('HocSinh').filter(k => k.lop === lop && k.trang_thai !== 'nghi');
+      const exact = all.filter(k => tenSo_(k.ten) === a), gan = exact.length ? [] : all.filter(k => boDau_(tenSo_(k.ten)) === b);
+      const tim = (exact.length ? exact : gan).slice(0, 5).map(k => ({ id: String(k.id), ten: String(k.ten), pin: !!String(k.pin_con || '').trim() }));
+      if (q.tao !== '1' || exact.length || (gan.length && q.ep !== '1')) return { ok: true, tim, dung: exact.length > 0 };
+      if (all.filter(k => k.nguon === 'tu_nhap').length >= 80) return { ok: false, err: 'Lớp đã có nhiều tên tự nhập. Ba mẹ liên hệ CES giúp con nhé.' };
+      let id; do { id = newId_(''); } while (find_('HocSinh', 'id', id));
+      add_('HocSinh', { lop, id, ten, tao: new Date(), web: 0, vi: 0, ngay: 0, cuoi: '', luu_cuoi: '', nguon: 'tu_nhap' });
+      return { ok: true, moi: true, id, ten };
     }
     case 'bang': {   // báo cáo chung cho con và ba mẹ: chỉ số liệu của chính con + nhận xét cô chọn chia sẻ
       const k = find_('HocSinh', 'id', q.id); if (!k) return { ok: false, err: 'Không có mã con này' };
@@ -432,8 +447,12 @@ function norm_(k, x) {
 }
 function pinOf_(lop) { const r = rows_('CaiDat').find(x => x.lop === lop); return r ? String(r.pin).trim() : ''; }
 function readData_(o) { let s = ''; for (let i = 1; i <= 6; i++) s += String(o['d' + i] || ''); return s; }
-function kidOut_(k) { return { id: k.id, lop: k.lop, ten: k.ten, tao: k.tao, web: +k.web || 0, vi: +k.vi || 0, ngay: +k.ngay || 0, cuoi: String(k.cuoi || ''), luu: k.luu_cuoi || '', tt: k.trang_thai || '' }; }
+function kidOut_(k) { return { id: k.id, lop: k.lop, ten: k.ten, tao: k.tao, web: +k.web || 0, vi: +k.vi || 0, ngay: +k.ngay || 0, cuoi: String(k.cuoi || ''), luu: k.luu_cuoi || '', tt: k.trang_thai || '', nguon: k.nguon || '', pin: !!String(k.pin_con || '').trim() }; }
 function awardOut_(a) { return { id: String(a.id), kid: a.kid, n: +a.n || 0, why: a.why || '', at: +a.at || 0, huy: truthy_(a.huy) }; }
 function orderOut_(o) { return { code: o.code, kid: o.kid, ten: o.ten, qua: o.qua, ten_qua: o.ten_qua, sao: +o.sao || 0, at: +o.at || 0, st: o.st, note: o.note || '' }; }
+/* họ tên: bỏ khoảng trắng thừa, viết hoa chữ đầu mỗi tiếng; so khớp không phân biệt hoa thường, có lần so thêm khi bỏ dấu */
+function tenSach_(t) { return String(t || '').normalize('NFC').replace(/[^\p{L}\p{M} '\-()]/gu, ' ').replace(/\s+/g, ' ').trim().slice(0, 40).split(' ').map(w => w.toLowerCase().replace(/^(\(?)(\p{L})/u, (m, a, b) => a + b.toUpperCase())).join(' '); }
+function tenSo_(t) { return String(t || '').normalize('NFC').toLowerCase().replace(/\s+/g, ' ').trim(); }
+function boDau_(t) { return String(t || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').replace(/Đ/g, 'd'); }
 function newId_(p) { const A = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; let s = p || ''; for (let i = 0; i < 6; i++) s += A[Math.floor(Math.random() * A.length)]; return s; }
 function truthy_(x) { return x !== '' && x !== false && x !== 0 && x != null; }
