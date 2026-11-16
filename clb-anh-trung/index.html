@@ -251,6 +251,23 @@ th{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--mu
 .fzst{position:relative;width:min(760px,90%);aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#1d2a24;margin:0 auto}.fzst iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .fzc{position:absolute;inset:0;display:grid;place-items:center;color:#cfe;font-size:4rem}.fzbig{position:absolute;inset:auto 0 8% 0;text-align:center;font-family:var(--f-head);font-weight:800;font-size:clamp(2rem,9vmin,5rem);color:#fff;text-shadow:0 3px 12px #0369,0 0 2px #036}
 #gA{display:flex;gap:4vmin;justify-content:center;flex-wrap:wrap}
+.ctile{border-color:var(--c)!important;background:color-mix(in srgb,var(--c) 16%,var(--slide-bg))!important;box-shadow:inset 0 -5px 0 var(--c)}
+.scr{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:3vmin;align-items:center;width:min(1200px,98%)}
+.scrimg{width:100%;border-radius:16px;max-height:58vh;object-fit:cover}
+.scrr{display:flex;flex-direction:column;gap:1.6vmin;align-items:center}
+.scrr .xg-out{min-width:90%}
+.cwl{font-family:var(--f-head);font-weight:800;font-size:clamp(1.6rem,6.5vmin,4rem);line-height:1.5;text-align:center}
+.cwl.zh{font-family:var(--f-zh)}
+.cw{color:var(--c);border-bottom:5px solid var(--c);padding:0 .12em;margin:0 .05em}
+.cwl.zh rt{font-family:var(--f-body);font-weight:500;font-size:.32em;color:var(--muted)}
+@media (max-width:700px){.scr{grid-template-columns:1fr}}
+.a5{page:a5}
+.a5h{font-size:.75rem;color:#777;margin-bottom:3mm}
+.a5g{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm}
+.a5c{border:2px dashed var(--c);border-top:9px solid var(--c);border-radius:8px;min-height:52mm;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--f-head);font-weight:800;font-size:30pt;color:#111;text-align:center;padding:2mm;break-inside:avoid}
+.a5c.zh{font-family:var(--f-zh);font-size:44pt;line-height:1.1}
+.a5c small{display:block;font-family:var(--f-body);font-weight:600;font-size:17pt;color:#333;margin-top:2mm}
+@page a5{size:A5 landscape;margin:8mm}
 /* print */
 @media print{
   @page{size:A4;margin:12mm}
@@ -336,9 +353,9 @@ var S=[
   freeze:{vid:"rbcxl1UOnkI",name:"If you are happy, clap your hands (LINGOCUB)"},
   poses:[{emoji:"🐶",en:"Freeze!",vi:"Đứng im",zh:"停",py:"tíng"}],
   warn:"Cô lưu ý: chữ trên video là phụ đề bị cắt nhỏ theo nhạc, không khớp trọn câu. Trên slide, mỗi tranh đi với một câu hoàn chỉnh. Lời tiếng Trung cô gửi viết chữ phồn thể (這是我的小狗…); slide và thẻ in dùng chữ giản thể (这是我的小狗…), đọc giống hệt nhau.",
-  sent:[{en:["This is","my","little","puppy."],zh:[["这是","zhè shì"],["我的","wǒ de"],["小狗。","xiǎo gǒu."]],enL:"This is my little puppy.",zhL:"这是我的小狗。",py:"zhè shì wǒ de xiǎo gǒu.",move:"Hai tay làm tai cún, chỉ vào mình ở “my”",img:"clb-anh-trung/bai-hat-2/c1.webp"},
+  sent:[{en:["This is","my","little","puppy."],zh:[["这是","zhè shì"],["我的","wǒ de"],["小狗。","xiǎo gǒu."]],ch:[["This","这","zhè"],["is","是","shì"],["my","我的","wǒ de"],["little puppy","小狗","xiǎo gǒu"]],eo:[0,1,2,3],zo:[0,1,2,3],enL:"This is my little puppy.",zhL:"这是我的小狗。",py:"zhè shì wǒ de xiǎo gǒu.",move:"Hai tay làm tai cún, chỉ vào mình ở “my”",img:"clb-anh-trung/bai-hat-2/c1.webp"},
    {en:["He","can","run."],zh:[["它","tā"],["会","huì"],["跑，","pǎo,"]],enL:"He can run.",zhL:"它会跑，",py:"tā huì pǎo,",move:"Hai tay đánh, chạy tại chỗ",img:"clb-anh-trung/bai-hat-2/c2.webp"},
-   {en:["He","can","run","like this."],zh:[["它","tā"],["能","néng"],["这样","zhèyàng"],["跑。","pǎo."]],enL:"He can run like this.",zhL:"它能这样跑。",py:"tā néng zhèyàng pǎo.",move:"Chạy tại chỗ thật nhanh, “like this” thì dừng, chìa hai tay ra",img:"clb-anh-trung/bai-hat-2/c3.webp"},
+   {en:["He","can","run","like this."],zh:[["它","tā"],["能","néng"],["这样","zhèyàng"],["跑。","pǎo."]],ch:[["He","它","tā"],["can","能","néng"],["run","跑","pǎo"],["like this","这样","zhèyàng"]],eo:[0,1,2,3],zo:[0,1,3,2],enL:"He can run like this.",zhL:"它能这样跑。",py:"tā néng zhèyàng pǎo.",move:"Chạy tại chỗ thật nhanh, “like this” thì dừng, chìa hai tay ra",img:"clb-anh-trung/bai-hat-2/c3.webp"},
    {en:["This is","my","little","dog."],zh:null,enL:"This is my little dog.",zhL:"这是我的小狗。",py:"zhè shì wǒ de xiǎo gǒu.",move:"Như câu 1, ôm chú cún tưởng tượng",img:"clb-anh-trung/bai-hat-2/c4.webp"},
    {en:["He","can","jump."],zh:[["它","tā"],["会","huì"],["跳，","tiào,"]],enL:"He can jump.",zhL:"它会跳，",py:"tā huì tiào,",move:"Bật nhảy tại chỗ",img:"clb-anh-trung/bai-hat-2/c5.webp"},
    {en:["He","can","jump","like this."],zh:[["它","tā"],["能","néng"],["这样","zhèyàng"],["跳。","tiào."]],enL:"He can jump like this.",zhL:"它能这样跳。",py:"tā néng zhèyàng tiào.",move:"Bật nhảy thật cao, “like this” thì dừng, chìa hai tay ra",img:"clb-anh-trung/bai-hat-2/c6.webp"}],
@@ -348,6 +365,8 @@ var S=[
    bridge:{zh:"小狗会跑！青蛙会跳吗？",py:"xiǎo gǒu huì pǎo! qīngwā huì tiào ma?",en:"The puppy can run! Can the frog hop? Let's listen!"},
    can:["jump","run","fly"],extra:{tall:{en:"tall",zh:"高",py:"gāo",emoji:"🦒",src:"seedling/tai-nguyen/tranh/tall.webp"}},
    pages:[{img:"clb-anh-trung/truyen-u8/t00.webp",en:"Can You Hop, Frog?",zh:"青蛙，你会跳吗？",py:"qīngwā, nǐ huì tiào ma?",act:"Cô giơ sách, hỏi cả lớp đoán: ếch làm được gì?",say:""},{img:"clb-anh-trung/truyen-u8/t01.webp",en:"Can you fly, frog?",zh:"青蛙，你会飞吗？",py:"qīngwā, nǐ huì fēi ma?",act:"Vỗ hai tay như cánh chim",say:"Bé đoán: 🙆 hay 🙅?"},{img:"clb-anh-trung/truyen-u8/t02.webp",en:"No, I can't.",zh:"不会。",py:"bú huì.",act:"Lắc đầu, khoanh hai tay chéo",say:""},{img:"clb-anh-trung/truyen-u8/t03.webp",en:"Can you run, frog?",zh:"青蛙，你会跑吗？",py:"qīngwā, nǐ huì pǎo ma?",act:"Chạy tại chỗ",say:"Bé đoán: 🙆 hay 🙅?"},{img:"clb-anh-trung/truyen-u8/t04.webp",en:"No, I can't.",zh:"不会。",py:"bú huì.",act:"Lắc đầu, khoanh hai tay chéo",say:""},{img:"clb-anh-trung/truyen-u8/t05.webp",en:"Are you tall, frog?",zh:"青蛙，你个子高吗？",py:"qīngwā, nǐ gèzi gāo ma?",act:"Kiễng chân, giơ tay thật cao",say:"Bé đoán: 🙆 hay 🙅?"},{img:"clb-anh-trung/truyen-u8/t06.webp",en:"No! Ha ha!",zh:"不高！哈哈！",py:"bù gāo! hāha!",act:"Ngồi thụp xuống, cười “ha ha”",say:""},{img:"clb-anh-trung/truyen-u8/t07.webp",en:"Can you hop, frog?",zh:"青蛙，你会跳吗？",py:"qīngwā, nǐ huì tiào ma?",act:"Ngồi xổm, chuẩn bị nhảy",say:"Bé đoán: 🙆 hay 🙅?"},{img:"clb-anh-trung/truyen-u8/t08.webp",en:"Yes, I can!",zh:"会！",py:"huì!",act:"Gật đầu thật mạnh",say:""},{img:"clb-anh-trung/truyen-u8/t09.webp",en:"Hop, hop, hop!",zh:"跳，跳，跳！",py:"tiào, tiào, tiào!",act:"Nhảy ếch 3 cái",say:""},{img:"clb-anh-trung/truyen-u8/t10.webp",en:"Wow! On its head!",zh:"哇！在它的头上！",py:"wā! zài tā de tóu shang!",act:"Đặt tay lên đầu, há miệng ngạc nhiên",say:""},{img:"clb-anh-trung/truyen-u8/t11.webp",en:"I can hop, too!",zh:"我也会跳！",py:"wǒ yě huì tiào!",act:"Cả lớp nhảy, chỉ vào mình",say:""}],
+   scr:[{img:"clb-anh-trung/truyen-u8/t07.webp",enL:"Can you hop, frog?",zhL:"青蛙，你会跳吗？",py:"qīngwā, nǐ huì tiào ma?",ch:[["Can","会","huì"],["you","你","nǐ"],["hop","跳","tiào"],["frog","青蛙","qīngwā"],["?","吗","ma"]],eo:[0,1,2,3,4],zo:[3,1,0,2,4],move:"Ngồi xổm, hỏi to như cô bé trong truyện"},
+    {img:"clb-anh-trung/truyen-u8/t11.webp",enL:"I can hop, too!",zhL:"我也会跳！",py:"wǒ yě huì tiào!",ch:[["I","我","wǒ"],["can","会","huì"],["hop","跳","tiào"],["too","也","yě"]],eo:[0,1,2,3],zo:[0,3,1,2],move:"Nhảy ếch, chỉ vào mình"}],
    qs:[{who:"frog",act:"fly",en:"Can you fly, frog?",zh:"青蛙，你会飞吗？",py:"qīngwā, nǐ huì fēi ma?",yes:false,aEn:"No, I can't!",aZh:"不会！",aPy:"bú huì!"},{who:"frog",act:"run",en:"Can you run, frog?",zh:"青蛙，你会跑吗？",py:"qīngwā, nǐ huì pǎo ma?",yes:false,aEn:"No, I can't!",aZh:"不会！",aPy:"bú huì!"},{who:"frog",act:"tall",en:"Are you tall, frog?",zh:"青蛙，你个子高吗？",py:"qīngwā, nǐ gèzi gāo ma?",yes:false,aEn:"No! Ha ha!",aZh:"不高！哈哈！",aPy:"bù gāo! hāha!"},{who:"frog",act:"hop",en:"Can you hop, frog?",zh:"青蛙，你会跳吗？",py:"qīngwā, nǐ huì tiào ma?",yes:true,aEn:"Yes, I can!",aZh:"会！",aPy:"huì!"},{who:"puppy",act:"run",en:"Can you run, puppy?",zh:"小狗，你会跑吗？",py:"xiǎo gǒu, nǐ huì pǎo ma?",yes:true,aEn:"Yes, I can!",aZh:"会！",aPy:"huì!"},{who:"puppy",act:"jump",en:"Can you jump, puppy?",zh:"小狗，你会跳吗？",py:"xiǎo gǒu, nǐ huì tiào ma?",yes:true,aEn:"Yes, I can!",aZh:"会！",aPy:"huì!"},{who:"puppy",act:"fly",en:"Can you fly, puppy?",zh:"小狗，你会飞吗？",py:"xiǎo gǒu, nǐ huì fēi ma?",yes:false,aEn:"No, I can't!",aZh:"不会！",aPy:"bú huì!"}]},
   whole:[{who:"cả lớp",lang:"vi",t:"Hát lại cả bài, bé 🌳 thay hành động mới: “He can hop like this! 它能这样跳！”, “He can clap like this!”.",vi:"Cả lớp làm theo động tác bạn vừa nghĩ ra.",nospeak:true}],
   lv:{listen:["Đoán con vật, nói tiếng Việt cũng được.","Đoán bằng một từ tiếng Anh: “Puppy!”, “Dog!”.","Nói cả câu “It's a little puppy! He can run.” và nhắc lại câu tiếng Trung của cô Hươu."],
@@ -609,7 +628,7 @@ function isFlow(s){return !!(s&&s.main&&s.main.sent);}
 function segTotal(segs){return segs.reduce(function(a,g){return a+g.dur;},0);}
 function segmentsSong(s){
   var M=s.main,ST=M.story,out=[],vw=s.vocab.filter(function(w){return w.zh;}),P=PLUS[s.n],TE=TEASE[s.n],p0=M.poses[0];
-  var D=ST?{warm:4,listen:3,vocab:7,sent:10,ordEn:3,ordZh:3,whole:2,story:5,nod:5,bye:3}:{warm:4,listen:4,vocab:6,sent:12,ordEn:3,ordZh:3,whole:3,nod:6,bye:3};
+  var D=ST?{warm:4,listen:3,vocab:7,sent:8,ordEn:3,ordZh:3,whole:2,story:7,nod:5,bye:3}:{warm:4,listen:4,vocab:6,sent:12,ordEn:3,ordZh:3,whole:3,nod:6,bye:3};
   var add=function(k,o){o.k=k;o.dur=D[k];out.push(o);};
   add("warm",{title:"Chào và khởi động Freeze",mode:"en2zh",goal:"Ghi nhớ 你好; vào lớp bằng vận động, làm quen trước các từ của buổi.",note:s.aNote||"",
     steps:[{who:"cô",lang:"en",t:"Hello, everyone! Sit down, please.",vi:"Chào cả lớp, mời ngồi."},
@@ -640,15 +659,17 @@ function segmentsSong(s){
   add("vocab",{title:"Từ vựng: thẻ có tiếng, rồi đập thẻ trên tường",mode:"en2zh",goal:"Nghe và nhận ra từ của bài hát và truyện bằng cả tiếng Anh và tiếng Trung.",note:(P?P.team+" ":"")+"Mỗi lượt cô gọi hai bé cùng tầm, chọn mức 🌱 🌿 🌳 trên slide rồi mới bấm 🔊.",steps:cs});
   var ds=[];
   M.sent.forEach(function(x,i){
-    ds.push({who:"cô",lang:"vi",t:"Câu "+(i+1)+": mở slide “Ghép câu "+(i+1)+"”. Bấm 💡 Gợi ý: câu tiếng Anh và tiếng Trung hiện 3 giây rồi ẩn (tối đa 3 lần).",vi:"Bé nhìn nhanh, nhớ thứ tự từ.",nospeak:true});
-    ds.push({who:"bé",lang:"en",t:x.enL,vi:"Mời bé lên chạm thẻ từ tiếng Anh trên màn hình theo đúng thứ tự. Bé quên thì cô bấm gợi ý; hết lượt gợi ý thì cả lớp xếp thẻ từ giấy trên bàn."});
-    if(x.zh)ds.push({who:"bé",lang:"zh",t:x.zhL,py:x.py,vi:"Ghép tiếp câu tiếng Trung (dành cho bé 🌳). Bé chạm thẻ nào, cô đọc to thẻ đó."});
-    ds.push({who:"cô",lang:"vi",t:"Gắn băng câu bằng nam châm lên bảng: câu tiếng Anh ở trên, câu tiếng Trung ngay dưới.",vi:"Bảng dần thành lời bài hát hai thứ tiếng.",nospeak:true});
-    ds.push({who:"cô + bé",lang:"en",t:x.enL,vi:"Dạy hát ngay câu vừa ghép: cô hát, bé hát theo. Động tác: "+x.move+"."});
+    if(x.ch){
+      ds.push({who:"cô",lang:"vi",t:"Câu "+(i+1)+" (câu chính): mở slide “Ghép câu: câu "+(i+1)+" bài hát”. Bé nhìn tranh, đoán câu. Bấm 💡 Gợi ý nếu cần: câu Anh và Trung hiện 3 giây rồi ẩn (tối đa 3 lần).",vi:"Mỗi cụm từ một màu; tiếng Anh và tiếng Trung cùng nghĩa thì cùng màu.",nospeak:true});
+      ds.push({who:"bé",lang:"en",t:x.enL,vi:"Mời bé lên chạm thẻ tiếng Anh theo đúng thứ tự trên màn hình, hoặc xếp thẻ chữ in A5 trên bảng (lật mặt tiếng Anh)."});
+      ds.push({who:"bé",lang:"zh",t:x.zhL,py:x.py,vi:"Lật thẻ sang mặt tiếng Trung, xếp lại. Bé thấy thứ tự tiếng Trung khác tiếng Anh (nhìn màu)."});
+      ds.push({who:"cô",lang:"vi",t:"Sang slide “Câu hoàn chỉnh”, gắn thẻ đúng thứ tự bằng nam châm lên bảng.",vi:"Câu tiếng Anh ở trên, câu tiếng Trung ngay dưới, cùng màu.",nospeak:true});
+    }
+    ds.push({who:"cô + bé",lang:"en",t:x.enL,vi:(x.ch?"Dạy hát ngay câu vừa ghép":"Câu "+(i+1)+": chỉ hát, không ghép")+". Động tác: "+x.move+"."});
     ds.push({who:"cô + bé",lang:"zh",t:x.zhL,py:x.py,vi:"Hát tiếp câu tiếng Trung, cùng giai điệu, cùng động tác."});
   });
   if(M.order.length>M.sent.length)ds.push({who:"cả lớp",lang:"vi",t:"Câu cuối của bài lặp lại một câu đã ghép: chỉ vào băng câu đó trên bảng, hát nối cả bài tiếng Anh, rồi cả bài tiếng Trung.",vi:"Slide “Hát nối cả bài”.",nospeak:true});
-  add("sent",{title:"Ghép câu và hát từng câu (Anh – Trung song song)",mode:"en2zh",goal:"Từ vựng thành câu, câu thành lời hát; câu Anh và câu Trung đi cặp với nhau.",note:(M.sent.length>4?"Bài có "+M.sent.length+" câu: nửa sau chỉ đổi một từ so với nửa đầu (puppy → dog, run → jump), nên các câu sau ghép rất nhanh, chủ yếu để hát. ":"")+"Ghép xong câu nào, dạy hát câu đó luôn. Gọi bé 🌱 lên cùng một bạn lớn; bé 🌳 lên sau cùng, ghép câu tiếng Trung.",steps:ds,song:true});
+  add("sent",{title:"Ghép câu chính và hát từng câu (Anh – Trung song song)",mode:"en2zh",goal:"Từ vựng thành câu, câu thành lời hát; câu Anh và câu Trung đi cặp với nhau.",note:"Chỉ ghép "+M.sent.filter(function(x){return x.ch;}).length+" câu chính của bài (không lặp); các câu còn lại chỉ đổi một từ nên hát luôn theo tranh. Ghép xong câu nào, dạy hát câu đó luôn. Gọi bé 🌱 lên cùng một bạn lớn; bé 🌳 lên sau cùng, ghép câu tiếng Trung.",steps:ds,song:true});
   add("ordEn",{title:"Nghe tiếng Anh, xếp câu thành bài",mode:"en2zh",goal:"Nghe bài tiếng Anh, nhận ra thứ tự các câu.",note:"Dùng băng câu tiếng Anh in sẵn (mục In ấn).",
     steps:[{who:"cô",lang:"vi",t:"Phát "+M.order.length+" băng câu tiếng Anh cho "+M.order.length+" bé; các bé khác làm trọng tài.",vi:"Gỡ băng câu trên bảng xuống, xáo lên.",nospeak:true},
       {who:"cô",lang:"en",t:"Listen! Stand in order.",vi:"Slide “Nghe và xếp: tiếng Anh”, bấm 🎧 Bật nhạc. Bé cầm băng câu đứng thành hàng đúng thứ tự."},
@@ -667,6 +688,7 @@ function segmentsSong(s){
       {who:"cả lớp",lang:"vi",t:"Cô lật trang trên slide theo tiếng đọc. Đến mỗi câu hỏi, bấm ⏸, cả lớp làm động tác ghi trên trang rồi trả lời.",vi:"Câu hỏi nào ếch cũng lắc đầu, chỉ có “hop” là gật đầu: bé thấy vui vì đoán trước được.",nospeak:true},
       {who:"cô",lang:"zh",t:"青蛙，你会飞吗？",py:"qīngwā, nǐ huì fēi ma?",vi:"Hỏi lại bằng tiếng Trung, chỉ vào tranh."},
       {who:"bé",lang:"en",t:"No, I can't!",vi:"🌱 lắc đầu, “No!”; 🌿 cả câu tiếng Anh; 🌳 thêm “不会！”."},
+      {who:"cô",lang:"vi",t:"Ghép 2 câu chính của truyện: “Can you hop, frog?” và “I can hop, too!”.",vi:"Slide “Ghép câu: truyện 1, 2”, cách làm như ghép câu bài hát, dùng thẻ chữ A5 hai mặt. Sang slide “Câu hoàn chỉnh”, cả lớp đọc to.",nospeak:true},
       {who:"cô",lang:"en",t:"Can you hop?",vi:"Hết truyện: slide “Can you hop?”, chỉ từng hình hỏi cả lớp (hop, run, fly)."},
       {who:"cả lớp",lang:"zh",t:"我也会跳！",py:"wǒ yě huì tiào!",vi:"Cả lớp nhảy ếch 3 cái và hô “I can hop, too! 我也会跳！”."}]});
   add("nod",{title:"Gật hay lắc? Gọi từng bé kiểm tra",mode:"en2zh",goal:"Kiểm tra nhanh từng bé ở đúng mức của mình.",note:"Trước khi bé lên, cô chọn mức trên slide: 🌱 từ tiếng Anh, 🌿 từ Anh hoặc Trung, 🌳 câu hỏi trong truyện. Bé còn lại làm giám khảo: cùng gật hoặc lắc. Không loại bé nào. Ghi mức và kết quả vào phiếu quan sát.",
@@ -690,7 +712,15 @@ function xgame(items,kind){
   var idx=items.map(function(_,i){return i;}),sh=idx;
   if(items.length>1){for(var k=0;k<8;k++){sh=shuf(idx);if(sh.join()!==idx.join())break;}}
   return '<div class="xg'+(kind==="strip"||kind==="stripzh"?" col":"")+'" data-g="nop" data-ans="'+esc(JSON.stringify(items.map(function(x){return x.t;})))+'" data-i="0"><div class="xg-out"></div><div class="xg-in">'+
-    sh.map(function(i){var x=items[i];return '<button type="button" class="tile'+(kind==="zh"||kind==="stripzh"?" zh":"")+(kind==="strip"||kind==="stripzh"?" strip":"")+'" data-g="tile" data-w="'+esc(x.t)+'">'+esc(x.t)+(x.py?'<small>'+esc(x.py)+'</small>':'')+'</button>';}).join("")+'</div></div>';
+    sh.map(function(i){var x=items[i];return '<button type="button" class="tile'+(kind==="zh"||kind==="stripzh"?" zh":"")+(kind==="strip"||kind==="stripzh"?" strip":"")+(x.col?" ctile":"")+'"'+(x.col?' style="--c:'+x.col+'"':'')+' data-g="tile" data-w="'+esc(x.t)+'">'+esc(x.t)+(x.py?'<small>'+esc(x.py)+'</small>':'')+'</button>';}).join("")+'</div></div>';
+}
+var PAL=["#e4572e","#2e86ab","#2f9e5b","#e0a100","#8e5ccf","#d6457f"];
+function chItems(x,lang){var o=lang==="en"?x.eo:x.zo;return o.map(function(k){var c=x.ch[k];return {t:lang==="en"?c[0]:c[1],py:lang==="en"?"":c[2],col:PAL[k%PAL.length]};});}
+function colorLine(x,lang){return chItems(x,lang).map(function(it){return '<span class="cw" style="--c:'+it.col+'">'+(lang==="zh"?'<ruby>'+esc(it.t)+'<rt>'+esc(it.py)+'</rt></ruby>':esc(it.t))+'</span>';}).join(lang==="zh"?"":" ");}
+function scrSlides(x,img,label,move){
+  var hint='<div class="xhint" hidden><div class="ln">'+esc(x.enL)+'</div><div class="ln">'+hl(x.zhL)+'</div><div class="wp">'+esc(x.py)+'</div></div>';
+  return [{name:"Ghép câu: "+label,mode:"en2zh",html:'<div class="sl xsl"><div class="scr"><img class="scrimg" src="'+img+'" alt=""><div class="scrr"><div class="gbtns" data-g="nop"><button class="btn pri" type="button" data-g="hint" data-left="3">💡 Gợi ý (còn 3)</button><button class="btn" type="button" data-g="xreset">↺ Xáo lại</button></div>'+xgame(chItems(x,"en"),"en")+xgame(chItems(x,"zh"),"zh")+'</div></div>'+hint+'<div class="hint">Màu giống nhau = cùng nghĩa. 🌱 chạm cùng bạn lớn · 🌿 tự ghép câu Anh · 🌳 ghép câu Trung khi hết gợi ý</div></div>'},
+   {name:"Câu hoàn chỉnh: "+label,mode:"en2zh",html:'<div class="sl"><div class="scr"><img class="scrimg" src="'+img+'" alt=""><div class="scrr full"><div class="cwl">'+colorLine(x,"en")+'</div><div class="cwl zh">'+colorLine(x,"zh")+'</div>'+(move?'<div class="sub">🎵 '+esc(move)+'</div>':'')+'</div></div></div>'}];
 }
 function slidesSong(s){
   var M=s.main,ST=M.story,base=slidesClassic(s),byName=function(n){for(var i=0;i<base.length;i++)if(base[i].name===n)return base[i];return null;},A=[],vw=s.vocab.filter(function(w){return w.zh;});
@@ -700,9 +730,8 @@ function slidesSong(s){
   });
   A.push({name:"Trò chơi: đập thẻ",mode:"en2zh",html:'<div class="sl"><h2>👋 Nghe rồi chạy đập thẻ!</h2>'+lvBar(["Nghe tiếng Anh","Anh hoặc Trung","Chỉ tiếng Trung"])+'<div class="gbig" id="gQ">❓</div><div id="gA" class="gans" hidden></div><div class="gbtns" data-g="nop"><button class="btn pri" type="button" data-g="slap">🔊 Từ tiếp theo</button><button class="btn" type="button" data-g="again">🔁 Nghe lại</button><button class="btn" type="button" data-g="show">Hiện thẻ</button></div><div class="hint" id="gT">Listen and run! Slap the card! Gọi hai bé cùng tầm, chọn mức rồi bấm 🔊.</div></div>'});
   M.sent.forEach(function(x,i){
-    var hintH='<div class="xhint" hidden><div class="ln">'+esc(x.enL)+'</div>'+(x.zhL?'<div class="ln">'+hl(x.zhL)+'</div><div class="wp">'+esc(x.py)+'</div>':'')+'</div>';
-    A.push({name:"Ghép câu "+(i+1),mode:"en2zh",html:'<div class="sl xsl"><h2>🧩 Ghép câu '+(i+1)+'</h2><div class="gbtns" data-g="nop"><button class="btn pri" type="button" data-g="hint" data-left="3">💡 Gợi ý (còn 3)</button><button class="btn" type="button" data-g="xreset">↺ Xáo lại</button></div>'+hintH+xgame(x.en.map(function(t){return {t:t};}),"en")+(x.zh?xgame(x.zh.map(function(z){return {t:z[0],py:z[1]};}),"zh"):'')+'<div class="hint">🌱 chạm cùng bạn lớn · 🌿 tự ghép câu Anh · 🌳 ghép câu Trung khi hết gợi ý</div></div>'});
-    A.push({name:"Hát câu "+(i+1),mode:"en2zh",html:'<div class="sl"><div class="vfr"><img src="'+(x.img?ROOT+x.img:BG2[x.bg])+'" alt=""><div class="vcap"><div class="ln">'+esc(x.enL)+'</div><div class="ln">'+hl(x.zhL)+'</div><div class="wp">'+esc(x.py)+'</div></div></div><div class="sub">🎵 '+esc(x.move)+'</div></div>'});
+    if(x.ch)scrSlides(x,ROOT+x.img,"câu "+(i+1)+" bài hát",x.move).forEach(function(z){A.push(z);});
+    else A.push({name:"Hát câu "+(i+1),mode:"en2zh",html:'<div class="sl"><div class="vfr"><img src="'+(x.img?ROOT+x.img:BG2[x.bg])+'" alt=""><div class="vcap"><div class="ln">'+esc(x.enL)+'</div><div class="ln">'+hl(x.zhL)+'</div><div class="wp">'+esc(x.py)+'</div></div></div><div class="sub">🎵 '+esc(x.move)+'</div></div>'});
   });
   var lyr='<div class="lyr">'+M.order.map(function(k){return '<div class="lnS">'+esc(M.sent[k].enL)+'</div><div><div class="lnS zh">'+esc(M.sent[k].zhL)+'</div><div class="pyS">'+esc(M.sent[k].py)+'</div></div>';}).join("")+'</div>';
   A.push({name:"Hát nối cả bài",mode:"en2zh",html:'<div class="sl"><h2>🎵 Hát nối cả bài</h2>'+lyr+'</div>'});
@@ -711,6 +740,7 @@ function slidesSong(s){
   A.push({name:"Hát cả bài",mode:"en2zh",html:'<div class="sl"><h2>🎤 Hát cả bài · '+esc(s.song.name)+'</h2><div class="lstage" style="width:min(420px,60%)"><div class="lcover"><div>🎬</div></div></div><div class="gbtns" data-g="nop"><button class="btn pri" type="button" data-clb="video" data-vid="'+M.vid+'">🎬 Xem video</button><button class="btn" type="button" data-clb="stop">⏹ Dừng</button></div>'+lyr+'</div>'});
   if(ST){
     A.push({name:"Truyện: "+ST.title,mode:"zh2en",html:'<div class="sl story" data-pg="0"><div class="gbtns" data-g="nop"><button class="btn pri" type="button" data-g="trk">▶ Nghe cả truyện ('+ST.dur+')</button><button class="btn" type="button" data-g="pgprev">← Trang trước</button><span class="pgn" id="pgN"></span><button class="btn" type="button" data-g="pgnext">Trang sau →</button></div><div id="pgBody"></div></div>'});
+    (ST.scr||[]).forEach(function(x,i){scrSlides(x,ROOT+x.img,"truyện "+(i+1),x.move).forEach(function(z){A.push(z);});});
     A.push({name:"Can you hop?",mode:"en2zh",html:'<div class="sl"><h2>Can you…? 你会…吗？</h2><div class="cyh">'+ST.can.map(function(k){var w=vByEn(s,k)||{en:k};return '<div class="cyc"><div class="emo">'+pic(w)+'</div><div class="ln">Can you '+esc(w.en)+'?</div><div class="lnS zh">你会'+esc(w.zh)+'吗？</div></div>';}).join("")+'</div><div class="ln rv">I can hop, too! <span class="zh">我也会跳！</span></div><div class="hint">Cô chỉ từng hình hỏi. 🌱 làm động tác, gật hoặc lắc · 🌿 “Yes, I can! / No, I can\'t!” · 🌳 “会！/ 不会！” rồi hỏi lại bạn.</div></div>'});
   }
   A.push({name:"Gật hay lắc?",mode:"en2zh",html:'<div class="sl"><h2>🙆 Gật hay 🙅 lắc?</h2>'+lvBar(ST?["Từ tiếng Anh","Từ Anh hoặc Trung","Câu hỏi trong truyện"]:["Từ tiếng Anh","Từ Anh hoặc Trung","Chỉ tiếng Trung"])+'<div class="sub">Đúng thì gật đầu, sai thì lắc đầu và nói từ đúng. <b id="nC"></b></div><div class="gbig" id="nP">🙂</div><div id="nA" class="gans" hidden></div><div class="gbtns" data-g="nop"><button class="btn pri" type="button" data-g="nod">▶ Lượt mới</button><button class="btn" type="button" data-g="nagain">🔁 Nghe lại</button><button class="btn" type="button" data-g="nshow">Hiện đáp án</button></div><div class="hint" id="nT"></div></div>'});
@@ -799,12 +829,13 @@ function gAct(b){
 }
 document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest("[data-g]");if(!b||!b.closest("#deck"))return;e.stopPropagation();e.preventDefault();gAct(b);},true);
 function wordCardsSheet(s){
-  var M=s.main,h='<div class="sheet"><h3>Thẻ từ ghép câu · Buổi '+s.n+' (cắt rời, mỗi câu một màu giấy)</h3>';
-  M.sent.forEach(function(x,i){
-    h+='<p style="margin:4mm 0 2mm"><b>Câu '+(i+1)+'</b></p><div class="wcards">'+x.en.map(function(t){return '<div class="wcard">'+esc(t)+'</div>';}).join("")+'</div>';
-    if(x.zh)h+='<div class="wcards" style="margin-top:3mm">'+x.zh.map(function(z){return '<div class="wcard zh">'+esc(z[0])+'<small>'+esc(z[1])+'</small></div>';}).join("")+'</div>';
+  var M=s.main,list=M.sent.filter(function(x){return x.ch;}).concat((M.story&&M.story.scr)||[]),h="";
+  list.forEach(function(x,n){
+    var face=function(lang){return x.ch.map(function(c,k){var r=Math.floor(k/3)+1,col=lang==="zh"?k%3+1:3-k%3;return '<div class="a5c'+(lang==="zh"?" zh":"")+'" style="--c:'+PAL[k%PAL.length]+';grid-row:'+r+';grid-column:'+col+'">'+(lang==="zh"?esc(c[1])+'<small>'+esc(c[2])+'</small>':esc(c[0]))+'</div>';}).join("");};
+    h+='<div class="sheet a5"><div class="a5h">Thẻ chữ ghép câu '+(n+1)+' · mặt trước (Trung + pinyin) · '+esc(x.zhL)+'</div><div class="a5g">'+face("zh")+'</div></div>';
+    h+='<div class="sheet a5"><div class="a5h">Thẻ chữ ghép câu '+(n+1)+' · mặt sau (Anh) · '+esc(x.enL)+'</div><div class="a5g">'+face("en")+'</div></div>';
   });
-  return h+'</div>';
+  return '<div class="note noprint"><b>Thẻ chữ A5 hai mặt:</b> in hai mặt trên giấy A5 nằm ngang, chọn “lật theo cạnh ngắn” (flip on short edge). Mặt trước là chữ Trung kèm pinyin, mặt sau là tiếng Anh cùng màu. Cắt theo nét đứt; dán nam châm ở mép trên để vẫn lật được.</div>'+h;
 }
 function stripSheet(s){
   var M=s.main;
