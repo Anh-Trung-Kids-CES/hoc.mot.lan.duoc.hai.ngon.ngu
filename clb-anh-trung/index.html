@@ -283,6 +283,14 @@ th{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--mu
 @media (max-width:700px){.kara{grid-template-columns:1fr}}
 .lsv video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#000}.lsv .lcover{z-index:2}
 .mini .lstage{width:min(300px,50%)}
+.slapg{display:grid;grid-template-columns:repeat(3,1fr);gap:2vmin;width:min(1100px,96%)}
+.slc{border:4px solid var(--line);background:var(--surface);border-radius:20px;padding:1vmin;display:flex;flex-direction:column;align-items:center;gap:.6vmin;cursor:pointer}
+.slp{font-size:clamp(3rem,13vmin,7rem);line-height:1}.slp .pimg{max-height:20vh;max-width:100%}
+.sll{visibility:hidden;font-family:var(--f-head);font-weight:700;font-size:clamp(1rem,3vmin,1.6rem)}
+.slc.sh .sll{visibility:visible}.slc.ok{border-color:var(--brand);background:var(--brand-soft);transform:scale(1.04)}
+.slc.no{animation:shk .35s;border-color:var(--zh)}
+.slq,.slsc{align-self:center;font-weight:800;font-size:1.3rem}.slsc{color:var(--warn)}
+@media (prefers-reduced-motion:reduce){.slc.no{animation:none}}
 /* print */
 @media print{
   @page{size:A4;margin:12mm}
@@ -541,9 +549,9 @@ var P=[
 var PLUS={
 2:{mech:"Đập thẻ trên tường",mat:[],
  team:"Chia 2 đội xếp hàng. Mỗi lượt 1 bé mỗi đội chạy lên; bé đập trúng trước và nói lại từ bằng tiếng còn lại thì đội được 1 sao. Hết trò chơi cả hai đội đều nhận sao.",
- rules:[{who:"cô",lang:"en",t:"Listen and run! Slap the card!",vi:"Slide “Trò chơi: đập thẻ”, bấm 🔊 Từ tiếp theo: máy đọc một từ tiếng Anh hoặc tiếng Trung."},
+ rules:[{who:"cô",lang:"en",t:"Listen and run! Slap the card!",vi:"Slide “Trò chơi: đập thẻ” hiện đủ các hình. Bấm 🔊 Từ tiếp theo: máy đọc một từ tiếng Anh hoặc tiếng Trung; bé chạy lên đập hình trên màn hình (hoặc thẻ dán tường), cô bấm vào hình bé đập để chấm."},
   {who:"bé",lang:"en",t:"Puppy!",vi:"Bé chạy tới đập đúng thẻ trên tường và nói từ tiếng Anh."},
-  {who:"cả lớp",lang:"zh",t:"小狗！",py:"xiǎo gǒu!",vi:"Cả lớp nói từ tiếng Trung, làm động tác. Bấm “Hiện thẻ” để kiểm tra. Nghe 跳 thì đập thẻ jump hay hop đều đúng."},
+  {who:"cả lớp",lang:"zh",t:"小狗！",py:"xiǎo gǒu!",vi:"Cả lớp nói từ tiếng Trung, làm động tác. Đúng thì hình sáng xanh, sai thì hình rung; bấm “Hiện đáp án” nếu không bé nào đập đúng. Nghe 跳 thì đập thẻ jump hay hop đều đúng."},
   {who:"cô",lang:"en",t:"Next two, please!",vi:"Đổi hai bé khác, chơi đến khi mỗi bé được chạy ít nhất 1 lần."}],
  hard:"Bé 9–10: nghe từ tiếng Trung, đập thẻ rồi nói luôn câu trong bài: “它会跳！”."},
 3:{mech:"Ai ở trong túi? (đoán thẻ bí mật)",mat:["Túi vải và 4 thẻ gia đình (mom, dad, grandma, grandpa)"],
@@ -752,7 +760,7 @@ function slidesSong(s){
   vw.forEach(function(w){var a=w.au||{};
     A.push({name:"Từ: "+w.en,mode:"en2zh",html:'<div class="sl">'+(w.story?'<div class="hint">📖 Từ trong truyện “'+esc(ST?ST.title:"")+'”</div>':'')+'<div class="emo">'+pic(w)+'</div><div class="wd">'+esc(w.en)+'</div><div class="wz rv">'+esc(w.zh)+'</div><div class="wp rv">'+esc(w.py)+'</div><div class="gbtns" data-g="nop">'+auBtn(a.en,"EN")+auBtn(a.zh,"中")+'</div>'+(a.en&&a.zh?'':'<div class="hint">Từ này còn thiếu file tiếng, cô đọc mẫu.</div>')+'<div class="hint">Bấm 🔊 nghe, bấm nền để hiện tiếng Trung, cả lớp nhắc lại.</div></div>'});
   });
-  A.push({name:"Trò chơi: đập thẻ",mode:"en2zh",html:'<div class="sl"><h2>👋 Nghe rồi chạy đập thẻ!</h2>'+lvBar(["Nghe tiếng Anh","Anh hoặc Trung","Chỉ tiếng Trung"])+'<div class="gbig" id="gQ">❓</div><div id="gA" class="gans" hidden></div><div class="gbtns" data-g="nop"><button class="btn pri" type="button" data-g="slap">🔊 Từ tiếp theo</button><button class="btn" type="button" data-g="again">🔁 Nghe lại</button><button class="btn" type="button" data-g="show">Hiện thẻ</button></div><div class="hint" id="gT">Listen and run! Slap the card! Gọi hai bé cùng tầm, chọn mức rồi bấm 🔊.</div></div>'});
+  A.push({name:"Trò chơi: đập thẻ",mode:"en2zh",html:'<div class="sl"><h2>👋 Nghe rồi chạy đập thẻ!</h2>'+lvBar(["Nghe tiếng Anh","Anh hoặc Trung","Chỉ tiếng Trung"])+'<div class="slapg">'+vw.map(function(w,i){return '<button type="button" class="slc" data-g="slapc" data-i="'+i+'"><span class="slp">'+pic(w)+'</span><span class="sll">'+esc(w.en)+' · <span class="zh">'+esc(w.zh)+'</span></span></button>';}).join("")+'</div><div class="gbtns" data-g="nop"><button class="btn pri" type="button" data-g="slap">🔊 Từ tiếp theo</button><button class="btn" type="button" data-g="again">🔁 Nghe lại</button><button class="btn" type="button" data-g="show">Hiện đáp án</button><span class="slq" id="gQ"></span><span class="slsc" id="gS"></span></div><div class="hint" id="gT">Listen and run! Slap the card! Bé chạy lên đập hình trên màn hình (hoặc thẻ dán tường); cô bấm vào hình bé đập để chấm.</div></div>'});
   M.sent.forEach(function(x,i){
     if(x.ch)scrSlides(x,ROOT+x.img,"câu "+(M.sent.filter(function(y,j){return y.ch&&j<=i;}).length)+" bài hát",x.move).forEach(function(z){A.push(z);});
     else if(!M.sent.some(function(y){return y.ch;}))A.push({name:"Hát câu "+(i+1),mode:"en2zh",html:'<div class="sl"><div class="vfr"><img src="'+(x.img?ROOT+x.img:BG2[x.bg])+'" alt=""><div class="vcap"><div class="ln">'+esc(x.enL)+'</div><div class="ln">'+hl(x.zhL)+'</div><div class="wp">'+esc(x.py)+'</div></div></div><div class="sub">🎵 '+esc(x.move)+'</div></div>'});
@@ -841,10 +849,15 @@ function gAct(b){
   }
   if(g==="slap"){
     if(!vw.length)return;var k;do{k=Math.floor(Math.random()*vw.length);}while(vw.length>1&&k===GS.last);GS.last=k;GS.w=vw[k];GS.l=pickLang(GS.w);
-    $("#gQ").hidden=false;$("#gQ").textContent=GS.l==="zh"?"🔊 中":"🔊 EN";$("#gA").hidden=true;sayWord(GS.w,GS.l,b,"gT");return;
+    $$(".slc",sl).forEach(function(c){c.classList.remove("ok","no","sh");});GS.done=false;
+    $("#gQ").textContent=GS.l==="zh"?"🔊 中文":"🔊 English";sayWord(GS.w,GS.l,b,"gT");return;
   }
   if(g==="again"){if(GS.w)sayWord(GS.w,GS.l,b,"gT");return;}
-  if(g==="show"){if(!GS.w)return;$("#gA").innerHTML=(GS.l==="zh"?vw.filter(function(w){return w.zh===GS.w.zh;}):[GS.w]).map(cardHtml).join("");$("#gA").hidden=false;$("#gQ").hidden=true;return;}
+  if(g==="show"||g==="slapc"){
+    if(!GS.w)return;var okf=function(w){return w===GS.w||(GS.l==="zh"&&w.zh===GS.w.zh);};
+    if(g==="slapc"){var w0=vw[+b.getAttribute("data-i")];if(okf(w0)){b.classList.add("ok","sh");if(!GS.done){GS.done=true;GS.sc=(GS.sc||0)+1;$("#gS").textContent="⭐ "+GS.sc;}}else{b.classList.remove("no");void b.offsetWidth;b.classList.add("no");}return;}
+    $$(".slc",sl).forEach(function(c){if(okf(vw[+c.getAttribute("data-i")]))c.classList.add("ok","sh");});return;
+  }
   if(g==="nod"){
     if(!vw.length)return;GS.n++;$("#nC").textContent="· Lượt "+GS.n;$("#nA").hidden=true;$("#nT").textContent="";
     var ST=s.main&&s.main.story;
