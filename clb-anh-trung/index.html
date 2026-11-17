@@ -1039,7 +1039,8 @@ function gAct(b){
     setTimeout(function(){h.hidden=true;if(left<=0)b.disabled=true;},3000);return;
   }
   if(g==="slap"){
-    if(!vw.length)return;var k;do{k=Math.floor(Math.random()*vw.length);}while(vw.length>1&&k===GS.last);GS.last=k;GS.w=vw[k];GS.l=pickLang(GS.w);
+    if(!vw.length)return;if(!GS.bag||!GS.bag.length){GS.bag=vw.map(function(_,i){return i;});for(var q=GS.bag.length-1;q>0;q--){var r=Math.floor(Math.random()*(q+1)),t=GS.bag[q];GS.bag[q]=GS.bag[r];GS.bag[r]=t;}if(GS.bag.length>1&&GS.bag[0]===GS.last)GS.bag.push(GS.bag.shift());GS.zhU={};}
+    var k=GS.bag.shift();GS.last=k;GS.w=vw[k];GS.l=pickLang(GS.w);if(GS.l==="zh"&&GS.zhU[GS.w.zh]&&GS.lv!==3&&GS.w.au&&GS.w.au.en)GS.l="en";if(GS.l==="zh")GS.zhU[GS.w.zh]=1;
     $$(".slc",sl).forEach(function(c){c.classList.remove("ok","no","sh");});GS.done=false;
     $("#gQ").textContent=GS.l==="zh"?"🔊 中文":"🔊 English";sayWord(GS.w,GS.l,b,"gT");return;
   }
@@ -1470,7 +1471,7 @@ function deckRender(){
   var fc0=$("#dkStage .fc");if(fc0&&fc0.getAttribute("data-en")){var u0=fc0.getAttribute("data-en");setTimeout(function(){if($("#dkStage .fc")===fc0)playU(u0);},350);}
   if(document.getElementById("dbC")){DB.pg=0;dbDraw();var dn=document.getElementById("dbN");if(dn)dn.addEventListener("input",dbDraw);}else if(DB.on)dbStop();
 }
-function deckOpen(s,i){deck.s=s;deck.list=slides(s);deck.i=i||0;$("#deck").hidden=false;deckRender();$("#dkNext").focus();}
+function deckOpen(s,i){GS.bag=null;deck.s=s;deck.list=slides(s);deck.i=i||0;$("#deck").hidden=false;deckRender();$("#dkNext").focus();}
 function deckClose(){$("#deck").hidden=true;try{camStop();kStop();dbStop();if(window._rda)window._rda.pause();}catch(e){}try{if(document.fullscreenElement)document.exitFullscreen();}catch(e){}}
 function deckReveal(){var sl=$("#dkStage .sl");if(!sl)return false;if($(".rv",sl)&&!sl.classList.contains("show")){sl.classList.add("show");var fc=$(".fc",sl);if(fc&&fc.getAttribute("data-zh"))playU(fc.getAttribute("data-zh"));return true;}return false;}
 function deckNext(){if(deck.i<deck.list.length-1){deck.i++;deckRender();}}
