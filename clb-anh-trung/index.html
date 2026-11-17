@@ -680,18 +680,20 @@ function segmentsSong(s){
   if(P){cs.push({who:"cô",lang:"vi",t:"Luật chơi: "+P.mech,vi:P.team,nospeak:true});P.rules.forEach(function(r){cs.push(r);});}
   add("vocab",{title:"Từ vựng: thẻ có tiếng, rồi đập thẻ trên tường",mode:"en2zh",goal:"Nghe và nhận ra từ của bài hát và truyện bằng cả tiếng Anh và tiếng Trung.",note:(P?P.team+" ":"")+"Mỗi lượt cô gọi hai bé cùng tầm, chọn mức 🌱 🌿 🌳 trên slide rồi mới bấm 🔊.",steps:cs});
   var ds=[];
+  var anyCh=M.sent.some(function(y){return y.ch;});
   M.sent.forEach(function(x,i){
+    if(anyCh&&!x.ch)return;
     if(x.ch){
-      ds.push({who:"cô",lang:"vi",t:"Câu "+(i+1)+" (câu chính): mở slide “Ghép câu: câu "+(i+1)+" bài hát”. Bé nhìn tranh, đoán câu. Bấm 💡 Gợi ý nếu cần: câu Anh và Trung hiện 3 giây rồi ẩn (tối đa 3 lần).",vi:"Mỗi cụm từ một màu; tiếng Anh và tiếng Trung cùng nghĩa thì cùng màu.",nospeak:true});
+      var cn=M.sent.filter(function(y,j){return y.ch&&j<=i;}).length;ds.push({who:"cô",lang:"vi",t:"Câu chính "+cn+": mở slide “Ghép câu: câu "+cn+" bài hát”. Bé nhìn tranh, đoán câu. Bấm 💡 Gợi ý nếu cần: câu Anh và Trung hiện 3 giây rồi ẩn (tối đa 3 lần).",vi:"Mỗi cụm từ một màu; tiếng Anh và tiếng Trung cùng nghĩa thì cùng màu.",nospeak:true});
       ds.push({who:"bé",lang:"en",t:x.enL,vi:"Mời bé lên chạm thẻ tiếng Anh theo đúng thứ tự trên màn hình, hoặc xếp thẻ chữ in A5 trên bảng (lật mặt tiếng Anh)."});
       ds.push({who:"bé",lang:"zh",t:x.zhL,py:x.py,vi:"Lật thẻ sang mặt tiếng Trung, xếp lại. Bé thấy thứ tự tiếng Trung khác tiếng Anh (nhìn màu)."});
       ds.push({who:"cô",lang:"vi",t:"Sang slide “Câu hoàn chỉnh”, gắn thẻ đúng thứ tự bằng nam châm lên bảng.",vi:"Câu tiếng Anh ở trên, câu tiếng Trung ngay dưới, cùng màu.",nospeak:true});
     }
-    ds.push({who:"cô + bé",lang:"en",t:x.enL,vi:(x.ch?"Dạy hát ngay câu vừa ghép":"Câu "+(i+1)+": chỉ hát, không ghép")+". Động tác: "+x.move+"."});
+    ds.push({who:"cô + bé",lang:"en",t:x.enL,vi:(x.ch?"Dạy hát ngay câu vừa ghép":"Câu "+(i+1))+". Động tác: "+x.move+"."});
     ds.push({who:"cô + bé",lang:"zh",t:x.zhL,py:x.py,vi:"Hát tiếp câu tiếng Trung, cùng giai điệu, cùng động tác."});
   });
   if(M.order.length>M.sent.length)ds.push({who:"cả lớp",lang:"vi",t:"Câu cuối của bài lặp lại một câu đã ghép: chỉ vào băng câu đó trên bảng, hát nối cả bài tiếng Anh, rồi cả bài tiếng Trung.",vi:"Slide “Hát nối cả bài”.",nospeak:true});
-  add("sent",{title:"Ghép câu chính và hát từng câu (Anh – Trung song song)",mode:"en2zh",goal:"Từ vựng thành câu, câu thành lời hát; câu Anh và câu Trung đi cặp với nhau.",note:"Chỉ ghép "+M.sent.filter(function(x){return x.ch;}).length+" câu chính của bài (không lặp); các câu còn lại chỉ đổi một từ nên hát luôn theo tranh. Ghép xong câu nào, dạy hát câu đó luôn. Gọi bé 🌱 lên cùng một bạn lớn; bé 🌳 lên sau cùng, ghép câu tiếng Trung.",steps:ds,song:true});
+  add("sent",{title:"Ghép câu chính và hát từng câu (Anh – Trung song song)",mode:"en2zh",goal:"Từ vựng thành câu, câu thành lời hát; câu Anh và câu Trung đi cặp với nhau.",note:"Chỉ ghép "+M.sent.filter(function(x){return x.ch;}).length+" câu chính của bài (không lặp). Các câu còn lại chỉ đổi một từ (run → jump), bé hát luôn ở phần hát cả bài. Ghép xong câu nào, dạy hát câu đó luôn. Gọi bé 🌱 lên cùng một bạn lớn; bé 🌳 lên sau cùng, ghép câu tiếng Trung.",steps:ds,song:true});
   add("ordEn",{title:"Nghe tiếng Anh, xếp câu thành bài",mode:"en2zh",goal:"Nghe bài tiếng Anh, nhận ra thứ tự các câu.",note:"Dùng băng câu tiếng Anh in sẵn (mục In ấn).",
     steps:[{who:"cô",lang:"vi",t:"Phát "+vsr(M).length+" băng câu tiếng Anh (mỗi băng là một đoạn đúng như bài hát) cho "+vsr(M).length+" bé; các bé khác làm trọng tài.",vi:"Gỡ băng câu trên bảng xuống, xáo lên.",nospeak:true},
       {who:"cô",lang:"en",t:"Listen! Stand in order.",vi:"Slide “Nghe và xếp: tiếng Anh”, bấm 🎧 Nghe phần tiếng Anh. Bé cầm băng câu đứng thành hàng đúng thứ tự."},
@@ -752,8 +754,8 @@ function slidesSong(s){
   });
   A.push({name:"Trò chơi: đập thẻ",mode:"en2zh",html:'<div class="sl"><h2>👋 Nghe rồi chạy đập thẻ!</h2>'+lvBar(["Nghe tiếng Anh","Anh hoặc Trung","Chỉ tiếng Trung"])+'<div class="gbig" id="gQ">❓</div><div id="gA" class="gans" hidden></div><div class="gbtns" data-g="nop"><button class="btn pri" type="button" data-g="slap">🔊 Từ tiếp theo</button><button class="btn" type="button" data-g="again">🔁 Nghe lại</button><button class="btn" type="button" data-g="show">Hiện thẻ</button></div><div class="hint" id="gT">Listen and run! Slap the card! Gọi hai bé cùng tầm, chọn mức rồi bấm 🔊.</div></div>'});
   M.sent.forEach(function(x,i){
-    if(x.ch)scrSlides(x,ROOT+x.img,"câu "+(i+1)+" bài hát",x.move).forEach(function(z){A.push(z);});
-    else A.push({name:"Hát câu "+(i+1),mode:"en2zh",html:'<div class="sl"><div class="vfr"><img src="'+(x.img?ROOT+x.img:BG2[x.bg])+'" alt=""><div class="vcap"><div class="ln">'+esc(x.enL)+'</div><div class="ln">'+hl(x.zhL)+'</div><div class="wp">'+esc(x.py)+'</div></div></div><div class="sub">🎵 '+esc(x.move)+'</div></div>'});
+    if(x.ch)scrSlides(x,ROOT+x.img,"câu "+(M.sent.filter(function(y,j){return y.ch&&j<=i;}).length)+" bài hát",x.move).forEach(function(z){A.push(z);});
+    else if(!M.sent.some(function(y){return y.ch;}))A.push({name:"Hát câu "+(i+1),mode:"en2zh",html:'<div class="sl"><div class="vfr"><img src="'+(x.img?ROOT+x.img:BG2[x.bg])+'" alt=""><div class="vcap"><div class="ln">'+esc(x.enL)+'</div><div class="ln">'+hl(x.zhL)+'</div><div class="wp">'+esc(x.py)+'</div></div></div><div class="sub">🎵 '+esc(x.move)+'</div></div>'});
   });
   var lyr='<div class="lyr">'+M.order.map(function(k){return '<div class="lnS">'+esc(M.sent[k].enL)+'</div><div><div class="lnS zh">'+esc(M.sent[k].zhL)+'</div><div class="pyS">'+esc(M.sent[k].py)+'</div></div>';}).join("")+'</div>';
   A.push({name:"Nghe và xếp: tiếng Anh",mode:"en2zh",html:'<div class="sl"><h2>🎧 Listen! Put the sentences in order.</h2>'+(M.songVideo?'<div class="mini">'+lsv(M.songVideo)+'</div><div class="gbtns" data-g="nop">'+lsvBtn("a","🎧 Nghe phần tiếng Anh",0,M.zhStart,1)+lsvBtn("s","⏹ Dừng")+'<button class="btn" type="button" data-g="xreset">↺ Xáo lại</button></div>':'<div class="lstage" style="width:min(300px,50%)"><div class="lcover"><div class="eq"><i></i><i></i><i></i><i></i><i></i></div></div></div><div class="gbtns" data-g="nop"><button class="btn pri" type="button" data-clb="audio" data-vid="'+M.vid+'">🎧 Bật nhạc (không hình)</button><button class="btn" type="button" data-clb="stop">⏹ Dừng</button><button class="btn" type="button" data-g="xreset">↺ Xáo lại</button></div>')+xgame(vsr(M).map(function(x){return {t:x.en};}),"strip")+'</div>'});
