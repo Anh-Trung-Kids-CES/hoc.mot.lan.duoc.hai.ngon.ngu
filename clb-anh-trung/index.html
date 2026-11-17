@@ -1678,10 +1678,12 @@ try{var _a=JSON.parse(localStorage.getItem("clb_auth")||"null");if(_a&&_a.tok){A
 function gateOn(){return !!CLB_API;}
 function authSave(){try{localStorage.setItem("clb_auth",JSON.stringify({tok:AUTH.tok,id:AUTH.id,role:AUTH.role,name:AUTH.name,email:AUTH.email}));}catch(e){}}
 function authClear(){AUTH={tok:"",id:"",role:"",name:"",email:"",ok:false};try{localStorage.removeItem("clb_auth");}catch(e){}}
-async function api(action,data,keep){
-  var r=await fetch(CLB_API,{method:"POST",keepalive:!!keep,headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(Object.assign({action:action,token:AUTH.tok},data||{}))});
-  return await r.json();
+async function api(action,data,keep,ms){
+  var ctl=window.AbortController?new AbortController():null,to=ctl?setTimeout(function(){ctl.abort();},ms||20000):0;
+  try{var r=await fetch(CLB_API,{method:"POST",keepalive:!!keep,signal:ctl?ctl.signal:undefined,headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(Object.assign({action:action,token:AUTH.tok},data||{}))});
+  return await r.json();}finally{clearTimeout(to);}
 }
+async function apiRetry(action,data,ms){try{return await api(action,data,false,ms);}catch(e){return await api(action,data,false,ms);}}
 var ERRMSG={sai:"ID hoặc mật khẩu chưa đúng.",locked:"Tài khoản đang bị khoá. Liên hệ HR.","thu-lai-sau":"Nhập sai nhiều lần. Thử lại sau 10 phút.","chua-dat-mat-khau-admin":"Quản trị chưa đặt mật khẩu (xem HUONG-DAN.md).",thieu:"Cần nhập cả ID và mật khẩu.",auth:"Phiên đăng nhập đã hết, hãy đăng nhập lại."};
 function pageLogin(msg){
   return '<div class="pagehead"><div class="mascots">'+charImg("m_huou",96)+'</div><h1>Sổ tay CLB Anh – Trung</h1><p class="lead">Đăng nhập bằng ID và mật khẩu HR đã cấp cho cô. Chưa có tài khoản thì liên hệ HR.</p></div>'+
@@ -1692,16 +1694,18 @@ function gateView(msg){
   var go=function(){
     var id=($("#lgId").value||"").trim(),pw=$("#lgPw").value||"",m=$("#lgMsg"),b=$("#lgGo");
     b.disabled=true;b.textContent="Đang đăng nhập…";
-    fetch(CLB_API,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({action:"login",id:id,pass:pw})}).then(function(r){return r.json();}).then(function(r){
+    apiRetry("login",{id:id,pass:pw,token:undefined},12000).then(function(r){
       if(r.ok){AUTH={tok:r.token,id:r.id,role:r.role,name:r.name||"",email:r.email||"",ok:true};authSave();render();}
       else{m.hidden=false;m.textContent=ERRMSG[r.error]||("Chưa đăng nhập được ("+r.error+").");b.disabled=false;b.textContent="Đăng nhập";}
-    }).catch(function(){m.hidden=false;m.textContent="Không kết nối được máy chủ. Kiểm tra mạng rồi thử lại.";b.disabled=false;b.textContent="Đăng nhập";});
+    }).catch(function(){m.hidden=false;m.textContent="Máy chủ đăng nhập đang chậm hoặc mất mạng. Cô bấm Đăng nhập lại.";b.disabled=false;b.textContent="Đăng nhập";});
   };
   $("#lgGo").onclick=go;$("#lgPw").onkeydown=function(e){if(e.key==="Enter")go();};
 }
 function checkAuth(){
+  var bg=function(){apiRetry("me",null,15000).then(function(r){if(r.ok){AUTH.role=r.role||AUTH.role;AUTH.name=r.name||AUTH.name;AUTH.email=r.email||AUTH.email;authSave();}else if(r.error==="auth"||r.error==="locked"){authClear();render();}}).catch(function(){});};
+  if(AUTH.role){AUTH.ok=true;render();bg();return;}
   $("#view").innerHTML='<div class="box">Đang kiểm tra đăng nhập…</div>';
-  api("me").then(function(r){if(r.ok){AUTH.ok=true;AUTH.role=r.role;AUTH.name=r.name||AUTH.name;AUTH.email=r.email||AUTH.email;authSave();render();}else{authClear();render();}}).catch(function(){$("#view").innerHTML='<div class="box">Không kết nối được máy chủ. Kiểm tra mạng rồi tải lại trang.</div>';});
+  apiRetry("me",null,15000).then(function(r){if(r.ok){AUTH.ok=true;AUTH.role=r.role;AUTH.name=r.name||AUTH.name;AUTH.email=r.email||AUTH.email;authSave();render();}else{authClear();render();}}).catch(function(){$("#view").innerHTML='<div class="box">Máy chủ đăng nhập đang chậm. <button class="btn pri" type="button" onclick="location.reload()">Thử lại</button></div>';});
 }
 /* ---- theo dõi việc đọc ---- */
 var TRK={k:"",t:0,buf:[]};
