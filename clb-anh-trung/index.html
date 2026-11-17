@@ -202,6 +202,21 @@ th{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--mu
 .sl ul{text-align:left;margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:1.4vmin}
 .rv{opacity:0;transform:translateY(8px);transition:opacity .25s,transform .25s}
 .sl.show .rv{opacity:1;transform:none}
+.fcsl{gap:.3em}.fcn{display:flex;gap:.6em;align-items:center;justify-content:center;font-size:1.05rem}.fct{background:#e8f1fb;color:#1d4f86;border-radius:99px;padding:.2em .8em;font-weight:700}.fct.s{background:#eaf6e7;color:#2f6b25}.fct.k{background:#fff1d6;color:#8a5a00}.fcc{color:#888;font-weight:600}
+.fcw{perspective:1600px;display:flex;justify-content:center}
+.fc{position:relative;width:min(60vmin,560px);height:min(56vh,600px);border:0;background:none;padding:0;cursor:pointer;font:inherit;transform-style:preserve-3d;transition:transform .6s}
+.sl.show .fc{transform:rotateY(180deg)}
+.fcf{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:28px;background:#fff;border:6px solid #2b6cb0;box-shadow:0 12px 30px rgba(0,0,0,.16);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.2em;padding:5%;overflow:hidden}
+.fcb{transform:rotateY(180deg);border-color:#c52d28;background:#fff8f3}
+.fcl{position:absolute;top:10px;left:16px;font-size:.95rem;font-weight:700;color:#2b6cb0}.fcb .fcl{color:#c52d28}
+.fci{flex:1 1 auto;min-height:0;display:flex;align-items:center;justify-content:center;font-size:clamp(4rem,18vmin,10rem);line-height:1}
+.fci .pimg{max-height:100%;max-width:100%;border-radius:18px}
+.fce{font-size:clamp(2.4rem,8vmin,5rem);font-weight:800;color:#1f2328;line-height:1.1}
+.fcz{font-size:clamp(2.8rem,10vmin,6rem);font-weight:800;color:#c52d28;line-height:1.1;font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif}
+.fcp{font-size:clamp(1.6rem,5vmin,3rem);font-weight:700;color:#333}
+.fcv{font-size:1rem;color:#777}
+@media (prefers-reduced-motion:reduce){.fc{transition:none}}
+
 .hint{font-size:.7em;color:var(--muted)}
 .dk-bar{display:flex;gap:10px;align-items:center;justify-content:center;padding:10px 16px;flex-wrap:wrap}
 .dots{display:flex;gap:5px;flex-wrap:wrap;justify-content:center;max-width:50vw}
@@ -423,8 +438,8 @@ var S=[
   lv:{listen:["Đoán con vật, nói tiếng Việt cũng được.","Đoán bằng một từ tiếng Anh: “Puppy!”, “Dog!”.","Nói cả câu “It's a little puppy! He can run.” và nhắc lại câu tiếng Trung của cô Hươu."],
    whole:["Hát phần tiếng Anh kèm động tác.","Hát tiếng Anh và các câu tiếng Trung ngắn: 它会跑，它会跳。","Hát cả hai thứ tiếng, lĩnh xướng, nghĩ ra hành động mới để cả lớp hát theo."],
    warm:["Đứng im khi nhạc dừng.","Đứng im đúng như một bạn trong video.","Làm cô giáo: hô “Freeze! 停！” và chọn bạn đứng giống nhất."]}},
- vocab:[v("puppy","小狗","xiǎo gǒu","chú cún","🐶",{img:"dog",au:{en:"seedling/tai-nguyen/little-seed/audio/ls_co_huou_en_puppy.mp3",zh:"seedling/tai-nguyen/little-seed/audio/ls_co_huou_zh_016.mp3"}}),v("run","跑","pǎo","chạy","🏃",{au:{en:"seedling/tai-nguyen/giong/en_aa75db27df.mp3"}}),v("jump","跳","tiào","nhảy","🤸",{au:{en:"seedling/tai-nguyen/giong/en_d9ae744447.mp3"}}),
-  v("frog","青蛙","qīngwā","con ếch","🐸",{story:true,src:"seedling/tai-nguyen/tranh/frog.webp",au:{en:"seedling/tai-nguyen/giong/en_21fcad1695.mp3",zh:"seedling/tai-nguyen/giong/zh_c8a62dc4c3_v2.mp3"}}),v("hop","跳","tiào","nhảy ếch","🐸",{story:true,src:"seedling/tai-nguyen/tranh/hop.webp",au:{en:"seedling/tai-nguyen/giong/en_a32e6e8f59.mp3"}}),v("fly","飞","fēi","bay","🐦",{story:true,src:"seedling/tai-nguyen/tranh/fly.webp",au:{en:"seedling/tai-nguyen/giong/en_3e671bb014.mp3",zh:"seedling/tai-nguyen/giong/zh_4e967f9ae8_v2.mp3"}})],
+ vocab:[v("puppy","小狗","xiǎo gǒu","chú cún","🐶",{img:"dog",au:{en:"seedling/tai-nguyen/little-seed/audio/ls_co_huou_en_puppy.mp3",zh:"seedling/tai-nguyen/little-seed/audio/ls_co_huou_zh_016.mp3"}}),v("run","跑","pǎo","chạy","🏃",{src:"seedling/tai-nguyen/tranh/run.webp",au:{en:"seedling/tai-nguyen/giong/en_aa75db27df.mp3",zh:"clb-anh-trung/am-2/zh_pao.mp3"}}),v("jump","跳","tiào","nhảy","🤸",{src:"seedling/tai-nguyen/tranh/jump.webp",au:{en:"seedling/tai-nguyen/giong/en_d9ae744447.mp3",zh:"clb-anh-trung/am-2/zh_tiao.mp3"}}),v("can","会","huì","biết, làm được","👍",{key:true,src:"clb-anh-trung/truyen-u8/t08.webp",au:{en:"seedling/tai-nguyen/giong/en_2f888b65ec.mp3",zh:"clb-anh-trung/am-2/zh_hui.mp3"}}),
+  v("frog","青蛙","qīngwā","con ếch","🐸",{story:true,src:"seedling/tai-nguyen/tranh/frog.webp",au:{en:"seedling/tai-nguyen/giong/en_21fcad1695.mp3",zh:"seedling/tai-nguyen/giong/zh_c8a62dc4c3_v2.mp3"}}),v("hop","跳","tiào","nhảy ếch","🐸",{story:true,src:"seedling/tai-nguyen/tranh/hop.webp",au:{en:"seedling/tai-nguyen/giong/en_a32e6e8f59.mp3",zh:"clb-anh-trung/am-2/zh_tiao.mp3"}}),v("fly","飞","fēi","bay","🐦",{story:true,src:"seedling/tai-nguyen/tranh/fly.webp",au:{en:"seedling/tai-nguyen/giong/en_3e671bb014.mp3",zh:"seedling/tai-nguyen/giong/zh_4e967f9ae8_v2.mp3"}}),v("can't","不会","bú huì","không biết, không làm được","🙅",{key:true,story:true,src:"clb-anh-trung/truyen-u8/t02.webp",au:{en:"seedling/tai-nguyen/giong/en_2c24d8b2ce.mp3",zh:"clb-anh-trung/am-2/zh_buhui.mp3"}}),v("tall","高","gāo","cao","🦒",{key:true,story:true,src:"seedling/tai-nguyen/tranh/tall.webp",au:{en:"seedling/tai-nguyen/giong/en_043853a0b5.mp3",zh:"seedling/tai-nguyen/giong/zh_4de777aba6_v2.mp3"}})],
  song:{name:"This is my little puppy",melody:"giai điệu bài gốc trong video (I can jump)",src:"video",srcNote:"Video LINGOCUB “I can jump” (0:45): phần tiếng Anh trước, tiếng Trung sau. Lời trên slide theo lời cô gửi; mỗi tranh cắt từ video đi với một câu hoàn chỉnh.",frame:"This is my little puppy. He can run… | 这是我的小狗。它会跑…",
   lines:[L("This is my little puppy.","","Hai tay làm tai cún"),L("He can run.","","Chạy tại chỗ"),L("He can run like this.","","Chạy nhanh, chìa tay"),L("This is my little dog.","","Ôm chú cún tưởng tượng"),L("He can jump.","","Bật nhảy"),L("He can jump like this.","","Nhảy cao, chìa tay"),L("这是我的小狗。","zhè shì wǒ de xiǎo gǒu.","Hai tay làm tai cún"),L("它会跑，","tā huì pǎo,","Chạy tại chỗ"),L("它能这样跑。","tā néng zhèyàng pǎo.","Chạy nhanh, chìa tay"),L("这是我的小狗。","zhè shì wǒ de xiǎo gǒu.","Ôm chú cún tưởng tượng"),L("它会跳，","tā huì tiào,","Bật nhảy"),L("它能这样跳。","tā néng zhèyàng tiào.","Nhảy cao, chìa tay")]},
  hook:{vi:"Cô Hươu ôm rối chú cún, chỉ nói tiếng Trung, cho rối chạy rồi nhảy trên bàn.",zh:"这是我的小狗！它会跑！",py:"zhè shì wǒ de xiǎo gǒu! tā huì pǎo!",en:"This is my little puppy! He can run!"},
@@ -706,11 +721,11 @@ function segmentsSong(s){
       {who:"cô",lang:"en",t:"What did cô Hươu say?",vi:"Bé gọi lại bằng tiếng Anh."}]});
   var cs=[],song=vw.filter(function(w){return !w.story;}),stw=vw.filter(function(w){return w.story;});
   var wsteps=function(w){var a=w.au||{};
-    cs.push({who:"cô",lang:"en",t:w.en+"!",vi:"Slide “Từ: "+w.en+"”. "+(a.en?"Bấm 🔊 EN":"Cô tự đọc (chưa có file tiếng)")+", giơ thẻ hình "+w.vi+"."});
-    cs.push({who:"bé",lang:"zh",t:w.zh,py:w.py,vi:(a.zh?"Bấm 🔊 中. ":"Cô đọc mẫu tiếng Trung (chưa có file tiếng). ")+"Cả lớp nhắc lại 2 lần, làm động tác."});};
+    cs.push({who:"cô",lang:"en",t:w.en+"!",vi:"Slide “Từ: "+w.en+"”"+(w.key?" (🔑 từ quan trọng, không có trong trò đập thẻ)":"")+". "+(a.en?"Thẻ tự đọc tiếng Anh":"Cô tự đọc (chưa có file tiếng)")+", cô giơ thẻ hình "+w.vi+"."});
+    cs.push({who:"bé",lang:"zh",t:w.zh,py:w.py,vi:(a.zh?"Chạm thẻ để lật, thẻ tự đọc tiếng Trung. ":"Lật thẻ, cô đọc mẫu tiếng Trung (chưa có file tiếng). ")+"Cả lớp nhắc lại 2 lần, làm động tác."});};
   song.forEach(wsteps);
   if(stw.length){cs.push({who:"cô",lang:"vi",t:"Sang "+stw.length+" từ của truyện (con ếch và các hành động).",vi:"Mỗi hành động cả lớp làm thật: nhảy ếch, chạy tại chỗ, vỗ cánh.",nospeak:true});stw.forEach(wsteps);}
-  cs.push({who:"cô",lang:"vi",t:"Dán "+vw.length+" thẻ hình lên tường, cách xa nhau, ngang tầm tay bé.",vi:"Chuẩn bị cho trò đập thẻ.",nospeak:true});
+  cs.push({who:"cô",lang:"vi",t:"Dán "+vw.filter(function(w){return !w.key;}).length+" thẻ hình lên tường, cách xa nhau, ngang tầm tay bé.",vi:"Chuẩn bị cho trò đập thẻ.",nospeak:true});
   if(P){cs.push({who:"cô",lang:"vi",t:"Luật chơi: "+P.mech,vi:P.team,nospeak:true});P.rules.forEach(function(r){cs.push(r);});}
   add("vocab",{title:"Từ vựng: thẻ có tiếng, rồi đập thẻ trên tường",mode:"en2zh",goal:"Nghe và nhận ra từ của bài hát và truyện bằng cả tiếng Anh và tiếng Trung.",note:(P?P.team+" ":"")+"Mỗi lượt cô gọi hai bé cùng tầm, chọn mức 🌱 🌿 🌳 trên slide rồi mới bấm 🔊.",steps:cs});
   var ds=[];
@@ -761,12 +776,11 @@ function segmentsSong(s){
       {who:"bé",lang:"en",t:"No! It's a frog! 青蛙！",vi:"Ví dụ mức 🌿: hình con ếch mà máy đọc “run”."},
       {who:"bé",lang:"zh",t:"不会！",py:"bú huì!",vi:"Ví dụ mức 🌳: “Can you fly, frog?”, bé đóng vai ếch lắc đầu: “No, I can't! 不会！”."},
       {who:"cô",lang:"en",t:"Great! 真棒！",vi:"Mỗi bé 2 lượt (slide tự đếm “Bé 3 · lượt 1/2”, hết 2 lượt tự sang bé mới). Bật 📷 camera thì máy tự nhận ra bé gật hay lắc và chấm ⭐; không dùng camera thì cô bấm “Hiện đáp án” và “⭐ Bé đúng”."}]});
-  add("bye",{title:"Tạm biệt, mảnh bản đồ và gài buổi sau",mode:"en2zh",goal:"Nhớ 再见 và muốn quay lại buổi sau.",note:"Phát thẻ phụ huynh (mã QR web Little Seed"+(ST?" và mã QR nghe lại truyện":"")+"). Bé mang rối về."+(ST?" Trong lúc chờ phụ huynh đón, từng bé lên máy cô lồng tiếng truyện (khoảng 1–2 phút mỗi bé).":""),
-    steps:[{who:"cô + bé",lang:"en",t:"Goodbye, all, see you next time!",vi:"Hát, vẫy tay."}].concat(TE?[
+  add("bye",{title:ST?"Lồng tiếng, rồi tạm biệt":"Tạm biệt, mảnh bản đồ và gài buổi sau",mode:"en2zh",goal:"Nhớ 再见 và muốn quay lại buổi sau.",note:"Phát thẻ phụ huynh (mã QR web Little Seed"+(ST?" và mã QR nghe lại truyện":"")+"). Bé mang rối về."+(ST?" Lồng tiếng trước (khoảng 1–2 phút mỗi bé, có thể làm lúc chờ phụ huynh đón); slide “Tạm biệt” là slide cuối cùng.":""),
+    steps:(ST?[{who:"bé",lang:"vi",t:"Lồng tiếng: từng bé lên máy cô, mở slide “Lồng tiếng truyện”. Các bạn khác dán sao, xem lại truyện.",vi:"Nhập tên bé, chọn tiếng (Anh, Trung hoặc cả hai), bấm 🎙 Bắt đầu. Mỗi trang đếm ngược 3‑2‑1 có tiếng bíp, rồi chữ sáng vàng dần theo tốc độ đọc, bé đọc theo chữ vàng; trang tự lật, hết truyện tự dừng. Bé đọc chậm thì tắt “Tự lật trang” hoặc bấm 🔁 Đọc lại trang. Xong, xem lại video và tải về gửi phụ huynh.",nospeak:true}]:[]).concat([{who:"cô + bé",lang:"en",t:"Goodbye, all, see you next time!",vi:ST?"Slide cuối “Tạm biệt”: cả lớp hát, vẫy tay.":"Hát, vẫy tay."}]).concat(TE?[
       {who:"cô",lang:"vi",t:"Dán sao vào hộ chiếu, cô Hươu đưa mảnh bản đồ số "+(s.n-1)+".",vi:"Gọi từng bé lên dán sao.",nospeak:true},
       {who:"cô (cô Hươu)",lang:"vi",t:TE.vi,vi:"Giọng bí ẩn, thì thầm. Đưa túi bí ẩn: "+TE.clue+". Không mở túi.",nospeak:true}]:[]).concat([
-      {who:"cô + bé",lang:"zh",t:"再见！",py:"zàijiàn!",vi:"Gọi tên từng bé, bé đáp 再见."}]).concat(ST?[
-      {who:"bé",lang:"vi",t:"Lồng tiếng rồi về: từng bé lên máy cô, mở slide “Lồng tiếng truyện”.",vi:"Nhập tên bé, chọn tiếng (Anh, Trung hoặc cả hai), bấm 🎙 Bắt đầu. Bé đọc từng trang, cô bấm “Trang sau”. Xong bấm ⏹, cả hai xem lại video bé lồng tiếng, tải về gửi phụ huynh, rồi bé về.",nospeak:true}]:[])});
+      {who:"cô + bé",lang:"zh",t:"再见！",py:"zàijiàn!",vi:"Gọi tên từng bé, bé đáp 再见."}])});
   var t=0;out.forEach(function(g,i){g.id=String.fromCharCode(65+i);g.min=t+"–"+(t+g.dur);t+=g.dur;var f=FK[g.k];g.trim=f.t;g.check=f.c;g.host=f.h;var ov=s.main.lv&&s.main.lv[g.k];if(ov||f.lv)g.lv=ov||f.lv;});
   return out;
 }
@@ -788,10 +802,10 @@ function scrSlides(x,img,label,move){
    {name:"Câu hoàn chỉnh: "+label,mode:"en2zh",html:'<div class="sl"><div class="scr"><img class="scrimg" src="'+img+'" alt=""><div class="scrr full"><div class="cwl">'+colorLine(x,"en")+'</div><div class="cwl zh">'+colorLine(x,"zh")+'</div>'+(move?'<div class="sub">🎵 '+esc(move)+'</div>':'')+'</div></div></div>'}];
 }
 function slidesSong(s){
-  var M=s.main,ST=M.story,base=slidesClassic(s),byName=function(n){for(var i=0;i<base.length;i++)if(base[i].name===n)return base[i];return null;},A=[],vw=s.vocab.filter(function(w){return w.zh;});
+  var M=s.main,ST=M.story,base=slidesClassic(s),byName=function(n){for(var i=0;i<base.length;i++)if(base[i].name===n)return base[i];return null;},A=[],vf=s.vocab.filter(function(w){return w.zh;}),vw=vf.filter(function(w){return !w.key;});
   ["Tên buổi","Khởi động: Freeze!","Nghe nhạc, đoán bài hát"].forEach(function(n){var x=byName(n);if(n==="Nghe nhạc, đoán bài hát")x={name:n,mode:"en2zh",html:'<div class="sl"><h2>🎧 Nghe nhạc, đoán bài hát</h2><div class="ln">Listen! What is the song about?</div>'+(M.songVideo?lsv(M.songVideo)+'<div class="gbtns" data-g="nop">'+lsvBtn("a","🎧 Bật nhạc (không hình)",0,M.zhStart,1)+lsvBtn("v","🎬 Xem video",0)+lsvBtn("s","⏹ Dừng")+'</div>':'<div class="lstage"><div class="lcover"><div class="eq"><i></i><i></i><i></i><i></i><i></i></div><div>🎶 ?</div></div></div><div class="row" style="justify-content:center"><button class="btn pri" type="button" data-clb="audio" data-vid="'+M.vid+'">🎧 Bật nhạc (không hình)</button><button class="btn" type="button" data-clb="video" data-vid="'+M.vid+'">🎬 Xem video</button><button class="btn" type="button" data-clb="stop">⏹ Dừng</button></div>')+'<div class="rv ans hookans"><div><b>'+esc(M.ans.emoji+" "+M.ans.en)+'</b></div><div class="hk">'+charImg("m_huou",90)+'<div><div class="hkz">'+esc(s.hook.zh)+'</div><div class="pyS">'+esc(s.hook.py)+'</div></div></div></div></div>'};if(n==="Khởi động: Freeze!"&&M.freeze)x={name:n,mode:"en2zh",html:'<div class="sl"><h2>❄ Freeze! 停！</h2><div class="sub">Nhảy theo các bạn trong video. Nhạc dừng thì đứng im giống một bạn trong hình!</div><div class="fzst" data-g="nop"><div class="fzc" id="fzC">▶</div><div class="fzbig" id="fzB" hidden>❄ FREEZE! 停！</div></div><div class="gbtns" data-g="nop"><button class="btn pri" type="button" data-g="fzplay" data-vid="'+M.freeze.vid+'">▶ Bật nhạc</button><button class="btn" type="button" data-g="fzstop">❄ Freeze!</button></div></div>'};if(x)A.push(x);});
-  vw.forEach(function(w){var a=w.au||{};
-    A.push({name:"Từ: "+w.en,mode:"en2zh",html:'<div class="sl">'+(w.story?'<div class="hint">📖 Từ trong truyện “'+esc(ST?ST.title:"")+'”</div>':'')+'<div class="emo">'+pic(w)+'</div><div class="wd">'+esc(w.en)+'</div><div class="wz rv">'+esc(w.zh)+'</div><div class="wp rv">'+esc(w.py)+'</div><div class="gbtns" data-g="nop">'+auBtn(a.en,"EN")+auBtn(a.zh,"中")+'</div>'+(a.en&&a.zh?'':'<div class="hint">Từ này còn thiếu file tiếng, cô đọc mẫu.</div>')+'<div class="hint">Bấm 🔊 nghe, bấm nền để hiện tiếng Trung, cả lớp nhắc lại.</div></div>'});
+  vf.forEach(function(w,k){var a=w.au||{},tag=w.key?'<span class="fct k">🔑 Từ quan trọng của bài</span>':w.story?'<span class="fct s">📖 Từ trong truyện</span>':'<span class="fct">🎵 Từ trong bài hát</span>';
+    A.push({name:"Từ: "+w.en,mode:"en2zh",html:'<div class="sl fcsl"><i class="rv" hidden></i><div class="fcn">'+tag+' <span class="fcc">'+(k+1)+'/'+vf.length+'</span></div><div class="fcw"><button type="button" class="fc" data-g="flip" data-en="'+esc(a.en||"")+'" data-zh="'+esc(a.zh||"")+'" aria-label="Lật thẻ '+esc(w.en)+'"><span class="fcf"><span class="fcl">English</span><span class="fci">'+pic(w)+'</span><span class="fce">'+esc(w.en)+'</span></span><span class="fcf fcb"><span class="fcl">中文</span><span class="fci">'+pic(w)+'</span><span class="fcz">'+esc(w.zh)+'</span><span class="fcp">'+esc(w.py)+'</span><span class="fcv">'+esc(w.en)+' · '+esc(w.vi)+'</span></span></button></div><div class="gbtns" data-g="nop">'+auBtn(a.en,"EN")+auBtn(a.zh,"中")+'<button class="btn" type="button" data-g="flip2">🔄 Lật thẻ</button></div>'+(a.en&&a.zh?'':'<div class="hint">Từ này còn thiếu file tiếng '+(a.en?"Trung":"Anh")+', cô đọc mẫu.</div>')+'<div class="hint">Thẻ tự đọc tiếng Anh. Chạm thẻ để lật sang tiếng Trung (tự đọc mẫu). Cả lớp nhắc lại 2 lần và làm động tác.</div></div>'});
   });
   A.push({name:"Trò chơi: đập thẻ",mode:"en2zh",html:'<div class="sl"><h2>👋 Nghe rồi chạy đập thẻ!</h2>'+lvBar(["Nghe tiếng Anh","Anh hoặc Trung","Chỉ tiếng Trung"])+'<div class="slapg">'+vw.map(function(w,i){return '<button type="button" class="slc" data-g="slapc" data-i="'+i+'"><span class="slp">'+pic(w)+'</span><span class="sll">'+esc(w.en)+' · <span class="zh">'+esc(w.zh)+'</span></span></button>';}).join("")+'</div><div class="gbtns" data-g="nop"><button class="btn pri" type="button" data-g="slap">🔊 Từ tiếp theo</button><button class="btn" type="button" data-g="again">🔁 Nghe lại</button><button class="btn" type="button" data-g="show">Hiện đáp án</button><span class="slq" id="gQ"></span><span class="slsc" id="gS"></span></div><div class="hint" id="gT">Listen and run! Slap the card! Bé chạy lên đập hình trên màn hình (hoặc thẻ dán tường); cô bấm vào hình bé đập để chấm.</div></div>'});
   M.sent.forEach(function(x,i){
@@ -811,8 +825,8 @@ function slidesSong(s){
     A.push({name:"Đọc truyện: hai phe",mode:"zh2en",html:'<div class="sl rd" data-rd="team"><div class="rdh"><b id="rdH"></b><span class="gbtns" data-g="nop"><button class="btn" type="button" data-g="rdau" data-l="en">🔊 Mẫu Anh</button><button class="btn" type="button" data-g="rdau" data-l="zh">🔊 Mẫu Trung</button></span></div><div id="rdB"></div><div class="gbtns" data-g="nop"><button class="btn" type="button" data-g="rdprev">← Trang trước</button><button class="btn pri" type="button" data-g="rdnext">Trang sau →</button><button class="btn" type="button" data-g="rdswap">🔄 Đổi phe 换！</button></div></div>'});
   }
   A.push({name:"Gật hay lắc?",mode:"en2zh",html:'<div class="sl"><h2>🙆 Gật hay 🙅 lắc?</h2>'+lvBar(ST?["Từ tiếng Anh","Từ Anh hoặc Trung","Câu hỏi trong truyện"]:["Từ tiếng Anh","Từ Anh hoặc Trung","Chỉ tiếng Trung"])+'<div class="sub">Đúng thì gật đầu, sai thì lắc đầu và nói từ đúng. <b id="nC">· Mỗi bé '+GS.per+' lượt</b></div><div class="nodw"><div class="gbig" id="nP">🙂</div><div class="ncw"><div class="ncam" id="nCam" hidden></div><div class="nmt" id="nMt" hidden data-g="nop"><div class="nmr"><span>↕ gật</span><b><i id="nMy"></i></b></div><div class="nmr"><span>↔ lắc</span><b><i id="nMx"></i></b></div><div class="nml" id="nMl"></div><div class="nms">Độ nhạy '+[["Thấp",1.4],["Vừa",1],["Cao",0.7]].map(function(x){return '<button type="button" class="lvb'+((GS.sens||1)===x[1]?" on":"")+'" data-g="nsens" data-v="'+x[1]+'">'+x[0]+'</button>';}).join("")+'</div></div></div></div><div id="nCR" class="ncr" hidden></div><div id="nA" class="gans" hidden></div><div class="gbtns" data-g="nop"><button class="btn pri" type="button" data-g="nod">▶ Lượt mới</button><button class="btn" type="button" data-g="nkid">👤 Bé tiếp theo</button><button class="btn" type="button" data-g="nagain">🔁 Nghe lại</button><button class="btn" type="button" data-g="nshow">Hiện đáp án</button><button class="btn" type="button" data-g="nstar">⭐ Bé đúng</button><button class="btn" type="button" data-g="ncam">📷 Bật camera</button></div><div class="hint" id="nT"></div><div class="hint" id="nCM">📷 Camera tự nhận ra bé gật hay lắc đầu. Hình chỉ xử lý trên máy này, không ghi lại, không gửi đi.</div></div>'});
+  if(ST)A.push({name:"Lồng tiếng truyện",mode:"zh2en",html:'<div class="sl dub"><div class="dubtop" data-g="nop"><label>Tên bé <input id="dbN" type="text" maxlength="30" placeholder="ví dụ: Minh An" autocomplete="off"></label><span class="lvbar">'+[["en","🔵 Tiếng Anh"],["zh","🔴 Tiếng Trung"],["both","Cả hai"]].map(function(x){return '<button type="button" class="lvb'+(x[0]==="en"?" on":"")+'" data-g="dblang" data-l="'+x[0]+'">'+x[1]+'</button>';}).join("")+'</span></div><div class="dubst" data-g="nop"><canvas id="dbC" width="1280" height="720"></canvas><video id="dbV" controls playsinline hidden></video></div><div class="gbtns" data-g="nop"><button class="btn pri" type="button" data-g="dbgo">🎙 Bắt đầu lồng tiếng</button><button class="btn" type="button" data-g="dbagain" disabled>🔁 Đọc lại trang</button><button class="btn" type="button" data-g="dbnext" disabled>Trang sau →</button><button class="lvb on" type="button" data-g="dbauto">✓ Tự lật trang</button><button class="btn" type="button" data-g="dbstop" disabled>⏹ Xong</button><a class="btn" id="dbD" hidden download>💾 Tải video về</a><button class="btn" type="button" data-g="dbnew">👤 Bé tiếp theo</button></div><div class="hint" id="dbT">Mỗi trang đếm ngược 3‑2‑1 rồi chữ sáng vàng dần theo tốc độ đọc; bé đọc theo chữ vàng. Trang tự lật (tắt “Tự lật trang” nếu bé cần thêm thời gian). Hình bé hiện ở góc video. Video chỉ lưu trên máy này.</div></div>'});
   var bye=byName("Tạm biệt");if(bye)A.push(bye);
-  if(ST)A.push({name:"Lồng tiếng truyện",mode:"zh2en",html:'<div class="sl dub"><div class="dubtop" data-g="nop"><label>Tên bé <input id="dbN" type="text" maxlength="30" placeholder="ví dụ: Minh An" autocomplete="off"></label><span class="lvbar">'+[["en","🔵 Tiếng Anh"],["zh","🔴 Tiếng Trung"],["both","Cả hai"]].map(function(x){return '<button type="button" class="lvb'+(x[0]==="en"?" on":"")+'" data-g="dblang" data-l="'+x[0]+'">'+x[1]+'</button>';}).join("")+'</span></div><div class="dubst" data-g="nop"><canvas id="dbC" width="1280" height="720"></canvas><video id="dbV" controls playsinline hidden></video></div><div class="gbtns" data-g="nop"><button class="btn pri" type="button" data-g="dbgo">🎙 Bắt đầu lồng tiếng</button><button class="btn" type="button" data-g="dbnext" disabled>Trang sau →</button><button class="btn" type="button" data-g="dbstop" disabled>⏹ Xong</button><a class="btn" id="dbD" hidden download>💾 Tải video về</a><button class="btn" type="button" data-g="dbnew">👤 Bé tiếp theo</button></div><div class="hint" id="dbT">Bé ngồi trước camera, đọc từng trang vào micro; hình bé hiện ở góc video. Cô bấm “Trang sau” khi bé đọc xong. Video chỉ lưu trên máy này, cô tải về để gửi phụ huynh.</div></div>'});
   return A;
 }
 function vByEn(s,k){for(var i=0;i<s.vocab.length;i++)if(s.vocab[i].en===k)return s.vocab[i];return (s.main&&s.main.story&&s.main.story.extra&&s.main.story.extra[k])||null;}
@@ -923,42 +937,80 @@ function rdRender(){
   else{var sw=GS.rswap;document.getElementById("rdH").textContent=(sw?"Lượt 2 · đã đổi phe":"Lượt 1")+" · "+(GS.rp===0?"Bìa":"Trang "+GS.rp+"/"+(n-1));en=sw?"🔴 Phe Đỏ":"🔵 Phe Xanh";zh=sw?"🔵 Phe Xanh":"🔴 Phe Đỏ";}
   B.innerHTML='<div class="rdp"><img src="'+ROOT+p.img+'" alt=""><div class="rdt"><div class="rdl"><span class="rdb '+(en.indexOf("🔵")===0?"bl":"rd2")+'">'+en+' · English</span><div class="ln">'+esc(p.en)+'</div></div><div class="rdl"><span class="rdb '+(zh.indexOf("🔵")===0?"bl":"rd2")+'">'+zh+' · 中文</span><div class="rdz">'+esc(p.zh)+'</div><div class="rdpy">'+esc(p.py)+'</div></div>'+(GS.rp===n-1?'<div class="stact">'+(mode==="pair"?"🎉 Hết truyện! Cặp tiếp theo đọc lại từ bìa.":(GS.rswap?"🎉 Hết truyện! Cả lớp vỗ tay.":"🎉 Hết truyện! Bấm 🔄 Đổi phe rồi đọc lại."))+'</div>':'')+'</div></div>';
 }
-var DB={rec:null,stream:null,chunks:[],pg:0,on:false,tm:0,imgs:{},lang:"en",t0:0,url:null};
+var DB={rec:null,stream:null,chunks:[],pg:0,on:false,tm:0,imgs:{},lang:"en",t0:0,url:null,auto:true,pt0:0,beep:-1,ac:null,end:0};
 function dbImg(src){if(!DB.imgs[src]){var im=new Image();im.src=ROOT+src;im.onload=function(){dbDraw();};DB.imgs[src]=im;}return DB.imgs[src];}
-function dbWrap(g,txt,x,y,maxw,lh){var words=txt.split(/(\s+)/),line="",ys=y;for(var i=0;i<words.length;i++){var t=line+words[i];if(g.measureText(t).width>maxw&&line){g.fillText(line.trim(),x,ys);ys+=lh;line=words[i].trim()+" ";}else line=t;}g.fillText(line.trim(),x,ys);return ys;}
+function dbRR(g,x,y,w,h,r){g.beginPath();if(g.roundRect)g.roundRect(x,y,w,h,r);else g.rect(x,y,w,h);}
+function dbZh(t){var o=[];for(var i=0;i<t.length;i++){var ch=t[i];if(/[，。？！、：；,.?!]/.test(ch)&&o.length)o[o.length-1]+=ch;else o.push(ch);}return o;}
+function dbSegs(pg){
+  var ST=deck.s.main.story,p=ST.pages[pg],ls=DB.lang==="both"?["en","zh"]:[DB.lang];
+  return ls.map(function(l){
+    var c=l==="zh"?ST.cueZh:ST.cueEn,raw=(c[pg+1]!=null?c[pg+1]:c[pg]+3)-c[pg]-1.3,d=Math.max(1.4,Math.min(4.2,raw))*1.5;
+    var tk=l==="zh"?dbZh(p.zh):p.en.split(/\s+/),w=tk.map(function(x){return l==="zh"?1+(/[，。？！,.?!]$/.test(x)?0.6:0):Math.max(2,x.replace(/[^A-Za-z']/g,"").length)+(/[,.?!]$/.test(x)?2:0);}),tot=w.reduce(function(a,b){return a+b;},0);
+    return {l:l,tk:tk,w:w,tot:tot,d:d};
+  });
+}
+function dbTone(f,ms){try{if(!DB.ac){var AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;DB.ac=new AC();}var a=DB.ac,o=a.createOscillator(),g=a.createGain();o.frequency.value=f;g.gain.setValueAtTime(0.0001,a.currentTime);g.gain.exponentialRampToValueAtTime(0.25,a.currentTime+0.02);g.gain.exponentialRampToValueAtTime(0.0001,a.currentTime+ms/1000);o.connect(g);g.connect(a.destination);o.start();o.stop(a.currentTime+ms/1000+0.05);}catch(e){}}
+function dbState(){
+  if(!DB.on)return {ph:"idle"};var t=(performance.now()-DB.pt0)/1000;
+  if(t<3)return {ph:"count",n:3-Math.floor(t)};
+  var segs=dbSegs(DB.pg),u=t-3;
+  for(var i=0;i<segs.length;i++){var S=segs[i];if(u<S.d){var x=u/S.d*S.tot,acc=0,k=0;for(;k<S.w.length;k++){acc+=S.w[k];if(x<acc)break;}return {ph:"read",seg:i,l:S.l,k:Math.min(k,S.tk.length-1),segs:segs};}u-=S.d+0.4;}
+  return {ph:"wait",u:u,segs:segs};
+}
+function dbTokens(g,tk,cx,y,maxw,lh,sep,mode,k,cols){
+  var lines=[[]],lw=[0];tk.forEach(function(t,i){var w=g.measureText(t).width,add=(lines[lines.length-1].length?g.measureText(sep).width:0)+w;if(lw[lw.length-1]+add>maxw&&lines[lines.length-1].length){lines.push([]);lw.push(0);add=w;}lines[lines.length-1].push(i);lw[lw.length-1]+=add;});
+  var yy=y;lines.forEach(function(L,li){var x=cx-lw[li]/2;L.forEach(function(i,j){var t=tk[i],w=g.measureText(t).width;if(j)x+=g.measureText(sep).width;
+    var st=mode==="done"?"done":mode==="todo"?"todo":(i<k?"done":i===k?"now":"next");
+    if(st==="now"){g.fillStyle="#ffd84d";dbRR(g,x-8,yy-lh*0.78,w+16,lh*0.98,12);g.fill();}
+    g.fillStyle=cols[st];g.textAlign="left";g.fillText(t,x,yy);x+=w;});yy+=lh;});
+  g.textAlign="center";return yy-lh;
+}
 function dbDraw(){
-  var c=document.getElementById("dbC"),ST=deck.s&&deck.s.main&&deck.s.main.story;if(!c||!ST)return;var g=c.getContext("2d"),p=ST.pages[Math.min(DB.pg,ST.pages.length-1)],im=dbImg(p.img);
-  g.fillStyle="#fdf8ee";g.fillRect(0,0,1280,720);if(im.complete&&im.naturalWidth){g.save();g.beginPath();if(g.roundRect)g.roundRect(40,50,620,620,36);else g.rect(40,50,620,620);g.clip();g.drawImage(im,40,50,620,620);g.restore();}
-  g.textAlign="center";var cx=980,L=DB.lang;
-  g.font="700 54px system-ui, sans-serif";g.fillStyle=L==="zh"?"#c8bfb2":"#1f2328";var y=dbWrap(g,p.en,cx,210,540,64);
-  g.font="700 64px 'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif";g.fillStyle=L==="en"?"#e8c9c5":"#c52d28";g.fillText(p.zh,cx,y+120);
-  g.font="500 32px system-ui, sans-serif";g.fillStyle=L==="en"?"#c8bfb2":"#555";g.fillText(p.py,cx,y+175);
+  var c=document.getElementById("dbC"),ST=deck.s&&deck.s.main&&deck.s.main.story;if(!c||!ST)return;var g=c.getContext("2d"),p=ST.pages[Math.min(DB.pg,ST.pages.length-1)],im=dbImg(p.img),S=dbState(),L=DB.lang;
+  g.fillStyle="#fdf8ee";g.fillRect(0,0,1280,720);if(im.complete&&im.naturalWidth){g.save();dbRR(g,40,50,620,620,36);g.clip();g.drawImage(im,40,50,620,620);g.restore();}
+  g.textAlign="center";var cx=980,act=S.ph==="read"?S.l:null,doneAll=S.ph==="wait";
+  var modeFor=function(l){if(L!=="both"&&L!==l)return "faint";if(S.ph==="idle"||S.ph==="count")return "next";if(doneAll)return "done";if(act===l)return "active";var segs=S.segs||[];var li=segs.map(function(x){return x.l;}).indexOf(l);return li<S.seg?"done":"next";};
+  var enC={done:"#1f2328",now:"#1f2328",next:"#8d877e",todo:"#8d877e"},zhC={done:"#c52d28",now:"#9b1c18",next:"#d9a19c",todo:"#d9a19c"},fa={done:"#d6cfc4",now:"#d6cfc4",next:"#d6cfc4",todo:"#d6cfc4"},faz={done:"#ecd3cf",now:"#ecd3cf",next:"#ecd3cf",todo:"#ecd3cf"};
+  var me=modeFor("en"),mz=modeFor("zh");
+  g.font="700 54px system-ui, sans-serif";var y=dbTokens(g,p.en.split(/\s+/),cx,200,540,66," ",me==="active"?"active":(me==="faint"?"todo":(me==="done"?"done":"todo")),S.k,me==="faint"?fa:enC);
+  g.font="700 64px 'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif";y=dbTokens(g,dbZh(p.zh),cx,y+115,540,76,"",mz==="active"?"active":(mz==="faint"?"todo":(mz==="done"?"done":"todo")),S.k,mz==="faint"?faz:zhC);
+  g.font="500 32px system-ui, sans-serif";g.fillStyle=mz==="faint"?"#d6cfc4":(mz==="active"||mz==="done"?"#444":"#9a948b");g.fillText(p.py,cx,y+55);
   var nm=(document.getElementById("dbN")||{}).value||"",cv=DB.cv;
   if(cv&&cv.readyState>=2&&cv.videoWidth){var w=250,h=188,x=1280-w-28,yy=720-h-70,vw=cv.videoWidth,vh=cv.videoHeight,sc=Math.max(w/vw,h/vh),sw=w/sc,sh=h/sc;
-    g.save();g.beginPath();if(g.roundRect)g.roundRect(x,yy,w,h,22);else g.rect(x,yy,w,h);g.clip();g.translate(x+w,yy);g.scale(-1,1);g.drawImage(cv,(vw-sw)/2,(vh-sh)/2,sw,sh,0,0,w,h);g.restore();
-    g.lineWidth=6;g.strokeStyle="#c52d28";g.beginPath();if(g.roundRect)g.roundRect(x,yy,w,h,22);else g.rect(x,yy,w,h);g.stroke();
-    g.fillStyle="#c52d28";g.beginPath();if(g.roundRect)g.roundRect(x+12,yy+h-40,w-24,30,15);else g.rect(x+12,yy+h-40,w-24,30);g.fill();g.fillStyle="#fff";g.font="700 18px system-ui, sans-serif";g.fillText("🎙 "+(nm||"Bé")+" đang lồng tiếng",x+w/2,yy+h-19);}
-  g.font="600 24px system-ui, sans-serif";g.fillStyle="#6b6b6b";g.fillText((nm?"🎙 "+nm+" · ":"")+deck.s.main.story.title,cv&&cv.videoWidth?560:cx,700);
+    g.save();dbRR(g,x,yy,w,h,22);g.clip();g.translate(x+w,yy);g.scale(-1,1);g.drawImage(cv,(vw-sw)/2,(vh-sh)/2,sw,sh,0,0,w,h);g.restore();
+    g.lineWidth=6;g.strokeStyle="#c52d28";dbRR(g,x,yy,w,h,22);g.stroke();
+    g.fillStyle="#c52d28";dbRR(g,x+12,yy+h-40,w-24,30,15);g.fill();g.fillStyle="#fff";g.font="700 18px system-ui, sans-serif";g.fillText("🎙 "+(nm||"Bé")+" đang lồng tiếng",x+w/2,yy+h-19);}
+  g.font="600 24px system-ui, sans-serif";g.fillStyle="#6b6b6b";g.fillText((nm?"🎙 "+nm+" · ":"")+ST.title,cv&&cv.videoWidth?560:cx,700);
+  if(S.ph==="count"){g.fillStyle="rgba(253,248,238,.55)";g.fillRect(680,60,580,440);g.fillStyle="#fff";g.beginPath();g.arc(cx,300,120,0,7);g.fill();g.lineWidth=10;g.strokeStyle="#c52d28";g.stroke();g.fillStyle="#c52d28";g.font="800 150px system-ui, sans-serif";g.textBaseline="middle";g.fillText(String(S.n),cx,308);g.textBaseline="alphabetic";g.font="700 34px system-ui, sans-serif";g.fillStyle="#1f2328";g.fillText("Chuẩn bị đọc… Get ready!",cx,480);}
+  if(S.ph==="wait"&&DB.pg===ST.pages.length-1){g.fillStyle="rgba(253,248,238,.85)";g.fillRect(680,120,580,300);g.fillStyle="#2f7d4f";g.font="800 64px system-ui, sans-serif";g.fillText("🎉 The End!",cx,260);g.font="700 40px 'Noto Sans SC',sans-serif";g.fillStyle="#c52d28";g.fillText("故事讲完了！",cx,330);}
   if(DB.on){g.fillStyle=(Math.floor(performance.now()/500)%2)?"#e02424":"#f3a3a3";g.beginPath();g.arc(1230,50,14,0,7);g.fill();}
 }
-function dbLoop(){dbDraw();if(DB.on)DB.tm=setTimeout(dbLoop,100);}
-function dbBtns(rec){var sl=document.querySelector("#dkStage .dub");if(!sl)return;var go=sl.querySelector('[data-g="dbgo"]');go.disabled=rec;go.textContent=rec?"🔴 Đang ghi…":"🎙 Bắt đầu lồng tiếng";sl.querySelector('[data-g="dbnext"]').disabled=!rec;sl.querySelector('[data-g="dbstop"]').disabled=!rec;}
+function dbTick(){
+  if(!DB.on)return;var S=dbState(),ST=deck.s.main.story;
+  if(S.ph==="count"&&DB.beep!==S.n){DB.beep=S.n;dbTone(660,140);}
+  if(S.ph==="read"&&DB.beep!==0){DB.beep=0;dbTone(990,260);}
+  if(S.ph==="wait"){if(DB.pg===ST.pages.length-1){if(S.u>2.2){dbStop();return;}}else if(DB.auto&&S.u>1.2){dbNext();}}
+  var T=document.getElementById("dbT");if(T){var tx=S.ph==="count"?"⏳ "+S.n+"… chuẩn bị đọc":S.ph==="read"?"🔴 Đọc theo chữ vàng!":(DB.auto?"🔴 Sang trang…":"🔴 Đọc xong, cô bấm “Trang sau”.");T.textContent=tx+" · "+(DB.pg===0?"Bìa":"Trang "+DB.pg+"/"+(ST.pages.length-1));}
+}
+function dbLoop(){dbDraw();dbTick();if(DB.on)DB.tm=setTimeout(dbLoop,50);else dbDraw();}
+function dbBtns(rec){var sl=document.querySelector("#dkStage .dub");if(!sl)return;var go=sl.querySelector('[data-g="dbgo"]');go.disabled=rec;go.textContent=rec?"🔴 Đang ghi…":"🎙 Bắt đầu lồng tiếng";["dbnext","dbagain","dbstop"].forEach(function(k){var e=sl.querySelector('[data-g="'+k+'"]');if(e)e.disabled=!rec;});}
+function dbPage(n){DB.pg=n;DB.pt0=performance.now();DB.beep=-1;}
 function dbStart(){
   var c=document.getElementById("dbC"),T=document.getElementById("dbT");if(!c)return;
   if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia||!window.MediaRecorder||!c.captureStream){T.textContent="Trình duyệt này chưa ghi được video lồng tiếng. Cô thử Chrome hoặc Edge trên máy tính.";return;}
-  T.textContent="Đang mở micro…";
+  T.textContent="Đang mở micro và camera…";dbTone(1,10);
   var AU={echoCancellation:true,noiseSuppression:true};
   navigator.mediaDevices.getUserMedia({audio:AU,video:{facingMode:"user",width:{ideal:640},height:{ideal:480}}}).catch(function(e){if(e&&e.name==="NotAllowedError")throw e;return navigator.mediaDevices.getUserMedia({audio:AU,video:false});}).then(function(mic){
-    DB.stream=mic;if(mic.getVideoTracks().length){var cv=document.createElement("video");cv.muted=true;cv.setAttribute("playsinline","");cv.srcObject=new MediaStream(mic.getVideoTracks());var cp=cv.play();if(cp&&cp.catch)cp.catch(function(){});DB.cv=cv;}else DB.cv=null;var vs=c.captureStream(15),tr=vs.getVideoTracks().concat(mic.getAudioTracks()),ms=new MediaStream(tr);
+    DB.stream=mic;if(mic.getVideoTracks().length){var cv=document.createElement("video");cv.muted=true;cv.setAttribute("playsinline","");cv.srcObject=new MediaStream(mic.getVideoTracks());var cp=cv.play();if(cp&&cp.catch)cp.catch(function(){});DB.cv=cv;}else DB.cv=null;var vs=c.captureStream(20),tr=vs.getVideoTracks().concat(mic.getAudioTracks()),ms=new MediaStream(tr);
     var types=["video/mp4;codecs=avc1.42E01E,mp4a.40.2","video/mp4;codecs=avc1,mp4a","video/mp4","video/webm;codecs=vp8,opus","video/webm"],mt="";for(var i=0;i<types.length;i++)if(MediaRecorder.isTypeSupported&&MediaRecorder.isTypeSupported(types[i])){mt=types[i];break;}
     DB.rec=new MediaRecorder(ms,mt?{mimeType:mt}:undefined);DB.chunks=[];DB.mime=DB.rec.mimeType||mt||"video/webm";
     DB.rec.ondataavailable=function(e){if(e.data&&e.data.size)DB.chunks.push(e.data);};DB.rec.onstop=dbDone;
-    DB.pg=0;DB.on=true;DB.t0=Date.now();DB.rec.start(500);dbLoop();dbBtns(true);
+    dbPage(0);DB.on=true;DB.t0=Date.now();DB.rec.start(500);dbLoop();dbBtns(true);
     var v=document.getElementById("dbV"),d=document.getElementById("dbD");v.hidden=true;c.hidden=false;d.hidden=true;
-    T.textContent="🔴 Đang ghi. Bé đọc trang bìa, xong cô bấm “Trang sau”.";
   }).catch(function(e){T.textContent="Chưa mở được micro và camera: "+(e&&e.name==="NotAllowedError"?"cô bấm “Cho phép” micro và camera trên trình duyệt rồi thử lại.":(e&&e.message)||e);});
 }
-function dbNext(){var ST=deck.s.main.story;if(!DB.on)return;if(DB.pg<ST.pages.length-1){DB.pg++;dbDraw();var T=document.getElementById("dbT");if(T)T.textContent="🔴 Đang ghi · "+(DB.pg===ST.pages.length-1?"trang cuối, bé đọc xong thì bấm ⏹ Xong.":"trang "+DB.pg+"/"+(ST.pages.length-1)+".");}}
+function dbNext(){var ST=deck.s.main.story;if(!DB.on)return;if(DB.pg<ST.pages.length-1)dbPage(DB.pg+1);else dbStop();}
+function dbAgain(){if(DB.on)dbPage(DB.pg);}
 function dbStop(){if(DB.rec&&DB.rec.state!=="inactive")DB.rec.stop();DB.on=false;clearTimeout(DB.tm);if(DB.cv){DB.cv.pause();DB.cv.srcObject=null;DB.cv=null;}if(DB.stream){DB.stream.getTracks().forEach(function(t){t.stop();});DB.stream=null;}dbBtns(false);}
 function dbDone(){
   var c=document.getElementById("dbC"),v=document.getElementById("dbV"),d=document.getElementById("dbD"),T=document.getElementById("dbT");if(!v)return;
@@ -969,8 +1021,9 @@ function dbDone(){
 }
 function dbReset(){dbStop();DB.pg=0;var c=document.getElementById("dbC"),v=document.getElementById("dbV"),d=document.getElementById("dbD"),n=document.getElementById("dbN"),T=document.getElementById("dbT");if(v){v.pause();v.removeAttribute("src");v.hidden=true;}if(c)c.hidden=false;if(d)d.hidden=true;if(n){n.value="";n.focus();}if(T)T.textContent="Nhập tên bé, chọn tiếng, rồi bấm 🎙 Bắt đầu lồng tiếng.";dbDraw();}
 function gAct(b){
-  var g=b.getAttribute("data-g"),sl=b.closest(".sl"),s=deck.s,vw=(s?s.vocab:[]).filter(function(w){return w.zh;});
+  var g=b.getAttribute("data-g"),sl=b.closest(".sl"),s=deck.s,vw=(s?s.vocab:[]).filter(function(w){return w.zh&&!w.key;});
   if(g==="nop")return;
+  if(g==="flip"||g==="flip2"){var fc=sl&&sl.querySelector(".fc");if(fc){var on=sl.classList.toggle("show"),u=fc.getAttribute(on?"data-zh":"data-en");if(u)playU(u);}return;}
   if(g==="au"){playU(b.getAttribute("data-u"),b);if(sl&&/中/.test(b.textContent))sl.classList.add("show");return;}
   if(g==="lv"){GS.lv=+b.getAttribute("data-v");$$(".lvb",sl).forEach(function(x){x.classList.toggle("on",x===b);});return;}
   if(g==="tile"){
@@ -1044,6 +1097,8 @@ function gAct(b){
   if(g==="dblang"){DB.lang=b.getAttribute("data-l");$$(".lvb",sl).forEach(function(x){x.classList.toggle("on",x===b);});dbDraw();return;}
   if(g==="dbgo"){dbStart();return;}
   if(g==="dbnext"){dbNext();return;}
+  if(g==="dbagain"){dbAgain();return;}
+  if(g==="dbauto"){DB.auto=!DB.auto;b.classList.toggle("on",DB.auto);b.textContent=(DB.auto?"✓ ":"")+"Tự lật trang";return;}
   if(g==="dbstop"){dbStop();return;}
   if(g==="dbnew"){dbReset();return;}
   if(g==="kplay"){kPlay(b.getAttribute("data-vid"));return;}
@@ -1412,11 +1467,12 @@ function deckRender(){
   if(!document.getElementById("kFr"))kStop();
   if(!document.getElementById("nCam")&&CAM.on)camStop();
   if(document.getElementById("rdB")){GS.rp=0;GS.rpair=1;GS.rswap=false;rdRender();}else if(window._rda)window._rda.pause();
+  var fc0=$("#dkStage .fc");if(fc0&&fc0.getAttribute("data-en")){var u0=fc0.getAttribute("data-en");setTimeout(function(){if($("#dkStage .fc")===fc0)playU(u0);},350);}
   if(document.getElementById("dbC")){DB.pg=0;dbDraw();var dn=document.getElementById("dbN");if(dn)dn.addEventListener("input",dbDraw);}else if(DB.on)dbStop();
 }
 function deckOpen(s,i){deck.s=s;deck.list=slides(s);deck.i=i||0;$("#deck").hidden=false;deckRender();$("#dkNext").focus();}
 function deckClose(){$("#deck").hidden=true;try{camStop();kStop();dbStop();if(window._rda)window._rda.pause();}catch(e){}try{if(document.fullscreenElement)document.exitFullscreen();}catch(e){}}
-function deckReveal(){var sl=$("#dkStage .sl");if(!sl)return false;if($(".rv",sl)&&!sl.classList.contains("show")){sl.classList.add("show");return true;}return false;}
+function deckReveal(){var sl=$("#dkStage .sl");if(!sl)return false;if($(".rv",sl)&&!sl.classList.contains("show")){sl.classList.add("show");var fc=$(".fc",sl);if(fc&&fc.getAttribute("data-zh"))playU(fc.getAttribute("data-zh"));return true;}return false;}
 function deckNext(){if(deck.i<deck.list.length-1){deck.i++;deckRender();}}
 function deckPrev(){if(deck.i>0){deck.i--;deckRender();}}
 $("#dkClose").onclick=deckClose;$("#dkNext").onclick=deckNext;$("#dkPrev").onclick=deckPrev;
