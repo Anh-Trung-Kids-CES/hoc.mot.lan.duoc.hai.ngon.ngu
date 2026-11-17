@@ -298,6 +298,19 @@ th{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--mu
 .ncam.face{border-color:var(--brand)}.ncam.face i{background:#2fbf6b}
 .ncr{font-weight:800;font-size:clamp(1.1rem,3.6vmin,2rem);padding:.3em .8em;border-radius:14px;background:var(--surface)}
 .ncr.ok{color:var(--brand);background:var(--brand-soft)}.ncr.no{color:var(--zh);background:var(--zh-bg)}.ncr.wait{color:var(--muted)}
+.rdh{display:flex;justify-content:space-between;align-items:center;gap:2vmin;width:min(1150px,96%);font-size:clamp(1.1rem,3.4vmin,1.8rem);flex-wrap:wrap}
+.rdp{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:3vmin;align-items:center;width:min(1150px,96%)}
+.rdp img{width:100%;border-radius:18px;max-height:56vh;object-fit:contain}
+.rdt{display:flex;flex-direction:column;gap:2.4vmin;text-align:left}
+.rdl .ln{font-size:clamp(1.6rem,6vmin,3.4rem)}
+.rdb{display:inline-block;border-radius:999px;padding:.15em .8em;font-weight:800;color:#fff;font-size:clamp(.9rem,2.4vmin,1.3rem);margin-bottom:.6vmin}
+.rdb.bl{background:#2457c5}.rdb.rd2{background:#c52d28}
+.rdz{font-family:var(--f-zh);font-weight:800;color:var(--zh);font-size:clamp(1.8rem,6.5vmin,3.8rem);line-height:1.25}.rdpy{color:#4a5550;font-weight:600;font-size:clamp(1.1rem,3.6vmin,2rem)}
+.dubtop{display:flex;gap:2vmin;align-items:center;flex-wrap:wrap;justify-content:center;font-weight:700}
+.dubtop input{font:inherit;padding:.3em .6em;border:2px solid var(--line);border-radius:10px;width:12em}
+.dubst{width:min(860px,92%,calc(54vh*16/9))}.dubst canvas,.dubst video{width:100%;aspect-ratio:16/9;border-radius:16px;background:#fdf8ee;display:block;border:2px solid var(--line)}
+a.btn{text-decoration:none;display:inline-flex;align-items:center}
+@media (max-width:700px){.rdp{grid-template-columns:1fr}}
 /* print */
 @media print{
   @page{size:A4;margin:12mm}
@@ -652,8 +665,10 @@ var FK={
    lv:["Làm động tác theo từng câu cô hát.","Cầm băng câu có pinyin, xếp thành hàng.","Trả lời 这是什么意思？ bằng câu tiếng Anh song song."]},
  whole:{t:"Hát 1 lượt Anh, 1 lượt Trung, bỏ lượt vỗ tay thay chữ.",c:"Cả lớp hát trọn bài tiếng Anh và tiếng Trung, không cần nhìn bảng.",h:"Khen ngợi và động viên",
    lv:["Hát phần tiếng Anh kèm động tác.","Hát tiếng Anh và vài câu tiếng Trung ngắn.","Hát cả hai thứ tiếng, đứng lên lĩnh xướng."]},
- story:{t:"Chỉ nghe đến trang “Yes, I can!”, bỏ slide “Can you hop?”, cả lớp hô câu cuối.",c:"Cả lớp lắc đầu, gật đầu đúng chỗ và hô được “I can hop, too! 我也会跳！”.",h:"Tương tác và xử lý sự cố",
+ story:{t:"Chỉ nghe phần tiếng Anh của video truyện; ghép 1 câu truyện thay vì 2.",c:"Cả lớp lắc đầu, gật đầu đúng chỗ và hô được “I can hop, too! 我也会跳！”.",h:"Tương tác và xử lý sự cố",
    lv:["Làm động tác, gật hoặc lắc đầu, hô “Yes!” / “No!”.","Hô cả câu “Yes, I can!” / “No, I can't!”.","Hô 会！/ 不会！, rồi hỏi lại cô Hươu một câu tiếng Trung, ví dụ “青蛙，你会飞吗？”."]},
+ read:{t:"Đọc cặp chỉ đến trang “Yes, I can!”; đọc hai phe một lượt, không đổi phe.",c:"Mỗi bé đọc to được ít nhất một câu; hai phe đọc đồng thanh trọn truyện, đổi phe vẫn đọc được.",h:"Tương tác và xử lý sự cố",
+   lv:["Bấm 🔊 nghe mẫu trước rồi đọc theo; đọc phần tiếng Anh.","Tự đọc câu tiếng Anh hoặc câu tiếng Trung nhìn pinyin.","Đọc tiếng Trung không cần nghe mẫu; làm trưởng phe, đếm “1, 2, 3” cho phe đọc."]},
  nod:{t:"Mỗi bé 1 lượt thay vì 2.",c:"Mỗi bé gật hoặc lắc đúng ít nhất 1 lượt ở mức của mình và nói lại được từ.",h:"Khen ngợi và động viên",
    lv:["Mức 🌱 trên slide: nghe từ tiếng Anh, gật hoặc lắc.","Mức 🌿: nghe từ tiếng Anh hoặc tiếng Trung; lắc đầu thì nói từ đúng.","Mức 🌳: câu hỏi trong truyện, bé đóng vai con vật, trả lời “会！/ 不会！” và câu tiếng Anh."]},
  bye:{t:"Không cắt: giữ phần dán sao và mảnh bản đồ để bé nhớ buổi sau.",c:"Bé tự nói 再见 khi được gọi tên.",h:"Tổng kết và kết thúc"}
@@ -665,7 +680,7 @@ function isFlow(s){return !!(s&&s.main&&s.main.sent);}
 function segTotal(segs){return segs.reduce(function(a,g){return a+g.dur;},0);}
 function segmentsSong(s){
   var M=s.main,ST=M.story,out=[],vw=s.vocab.filter(function(w){return w.zh;}),P=PLUS[s.n],TE=TEASE[s.n],p0=M.poses[0];
-  var D=ST?{warm:4,listen:3,vocab:7,sent:8,ordEn:3,ordZh:3,whole:2,story:7,nod:5,bye:3}:{warm:4,listen:4,vocab:6,sent:12,ordEn:3,ordZh:3,whole:3,nod:6,bye:3};
+  var D=ST?{warm:4,listen:3,vocab:6,sent:7,ordEn:2,ordZh:2,whole:2,story:5,read:6,nod:5,bye:3}:{warm:4,listen:4,vocab:6,sent:12,ordEn:3,ordZh:3,whole:3,nod:6,bye:3};
   var add=function(k,o){o.k=k;o.dur=D[k];out.push(o);};
   add("warm",{title:"Chào và khởi động Freeze",mode:"en2zh",goal:"Ghi nhớ 你好; vào lớp bằng vận động, làm quen trước các từ của buổi.",note:s.aNote||"",
     steps:[{who:"cô",lang:"en",t:"Hello, everyone! Sit down, please.",vi:"Chào cả lớp, mời ngồi."},
@@ -728,19 +743,26 @@ function segmentsSong(s){
       {who:"cô",lang:"zh",t:"青蛙，你会飞吗？",py:"qīngwā, nǐ huì fēi ma?",vi:"Hỏi lại bằng tiếng Trung, chỉ vào tranh."},
       {who:"bé",lang:"en",t:"No, I can't!",vi:"🌱 lắc đầu, “No!”; 🌿 cả câu tiếng Anh; 🌳 thêm “不会！”."},
       {who:"cô",lang:"vi",t:"Ghép 2 câu chính của truyện: “Can you hop, frog?” và “I can hop, too!”.",vi:"Slide “Ghép câu: truyện 1, 2”, cách làm như ghép câu bài hát, dùng thẻ chữ A5 hai mặt. Sang slide “Câu hoàn chỉnh”, cả lớp đọc to.",nospeak:true},
-      {who:"cô",lang:"en",t:"Can you hop?",vi:"Hết truyện: slide “Can you hop?”, chỉ từng hình hỏi cả lớp (hop, run, fly)."},
       {who:"cả lớp",lang:"zh",t:"我也会跳！",py:"wǒ yě huì tiào!",vi:"Cả lớp nhảy ếch 3 cái và hô “I can hop, too! 我也会跳！”."}]});
+  if(ST)add("read",{title:"Đọc truyện: từng cặp, rồi hai phe",mode:"zh2en",goal:"Bé tự đọc to truyện bằng hai thứ tiếng: mỗi bé đọc ít nhất một câu, rồi cả lớp đọc đồng thanh.",note:"Xếp bé thành từng cặp, bé nhỏ đi với bé lớn. Mỗi cặp đọc một trang: một bạn đọc câu tiếng Anh, bạn kia đọc câu tiếng Trung. Trang sau là cặp tiếp theo, cứ thế đến khi cả lớp đều đã đọc.",
+    steps:[{who:"cô",lang:"en",t:"Let's read the story! Pair 1, come here!",vi:"Slide “Đọc truyện: từng cặp”. Gọi cặp 1 đứng cạnh màn hình."},
+      {who:"bé",lang:"en",t:"Can you fly, frog?",vi:"🔵 Bạn thứ nhất đọc câu tiếng Anh. Bé quên thì cô bấm 🔊 Mẫu Anh."},
+      {who:"bé",lang:"zh",t:"青蛙，你会飞吗？",py:"qīngwā, nǐ huì fēi ma?",vi:"🔴 Bạn thứ hai đọc câu tiếng Trung (nhìn pinyin). Cần thì bấm 🔊 Mẫu Trung. Cả lớp vỗ tay, bấm “Cặp tiếp theo →”."},
+      {who:"cô",lang:"vi",t:"Hết lượt cặp: chia lớp làm hai phe. Slide “Đọc truyện: hai phe”.",vi:"🔵 Phe Xanh đọc đồng thanh tiếng Anh, 🔴 Phe Đỏ đọc đồng thanh tiếng Trung, lần lượt từng trang đến hết truyện.",nospeak:true},
+      {who:"cô",lang:"en",t:"Blue team, English! Red team, Chinese! 1, 2, 3!",vi:"Cô chỉ tay vào phe đến lượt."},
+      {who:"cô",lang:"zh",t:"换！",py:"huàn!",vi:"Hết truyện, bấm 🔄 Đổi phe: Phe Xanh đọc tiếng Trung, Phe Đỏ đọc tiếng Anh. Đọc lại từ đầu đến hết."}]});
   add("nod",{title:"Gật hay lắc? Gọi từng bé kiểm tra",mode:"en2zh",goal:"Kiểm tra nhanh từng bé ở đúng mức của mình.",note:"Trước khi bé lên, cô chọn mức trên slide: 🌱 từ tiếng Anh, 🌿 từ Anh hoặc Trung, 🌳 câu hỏi trong truyện. Bé còn lại làm giám khảo: cùng gật hoặc lắc. Không loại bé nào. Ghi mức và kết quả vào phiếu quan sát.",
     steps:[{who:"cô",lang:"en",t:"Come here, ___! Yes or no?",vi:"Gọi từng bé lên. Slide “Gật hay lắc?”, chọn mức, bấm ▶ Lượt mới."},
       {who:"bé",lang:"vi",t:"Đúng thì gật đầu, sai thì lắc đầu.",vi:"Bé lắc đầu thì nói từ đúng của hình.",nospeak:true},
       {who:"bé",lang:"en",t:"No! It's a frog! 青蛙！",vi:"Ví dụ mức 🌿: hình con ếch mà máy đọc “run”."},
       {who:"bé",lang:"zh",t:"不会！",py:"bú huì!",vi:"Ví dụ mức 🌳: “Can you fly, frog?”, bé đóng vai ếch lắc đầu: “No, I can't! 不会！”."},
       {who:"cô",lang:"en",t:"Great! 真棒！",vi:"Mỗi bé 2 lượt (slide tự đếm “Bé 3 · lượt 1/2”, hết 2 lượt tự sang bé mới). Bật 📷 camera thì máy tự nhận ra bé gật hay lắc và chấm ⭐; không dùng camera thì cô bấm “Hiện đáp án” và “⭐ Bé đúng”."}]});
-  add("bye",{title:"Tạm biệt, mảnh bản đồ và gài buổi sau",mode:"en2zh",goal:"Nhớ 再见 và muốn quay lại buổi sau.",note:"Phát thẻ phụ huynh (mã QR web Little Seed"+(ST?" và mã QR nghe lại truyện":"")+"). Bé mang rối về.",
+  add("bye",{title:"Tạm biệt, mảnh bản đồ và gài buổi sau",mode:"en2zh",goal:"Nhớ 再见 và muốn quay lại buổi sau.",note:"Phát thẻ phụ huynh (mã QR web Little Seed"+(ST?" và mã QR nghe lại truyện":"")+"). Bé mang rối về."+(ST?" Trong lúc chờ phụ huynh đón, từng bé lên máy cô lồng tiếng truyện (khoảng 1–2 phút mỗi bé).":""),
     steps:[{who:"cô + bé",lang:"en",t:"Goodbye, all, see you next time!",vi:"Hát, vẫy tay."}].concat(TE?[
       {who:"cô",lang:"vi",t:"Dán sao vào hộ chiếu, cô Hươu đưa mảnh bản đồ số "+(s.n-1)+".",vi:"Gọi từng bé lên dán sao.",nospeak:true},
       {who:"cô (cô Hươu)",lang:"vi",t:TE.vi,vi:"Giọng bí ẩn, thì thầm. Đưa túi bí ẩn: "+TE.clue+". Không mở túi.",nospeak:true}]:[]).concat([
-      {who:"cô + bé",lang:"zh",t:"再见！",py:"zàijiàn!",vi:"Gọi tên từng bé, bé đáp 再见."}])});
+      {who:"cô + bé",lang:"zh",t:"再见！",py:"zàijiàn!",vi:"Gọi tên từng bé, bé đáp 再见."}]).concat(ST?[
+      {who:"bé",lang:"vi",t:"Lồng tiếng rồi về: từng bé lên máy cô, mở slide “Lồng tiếng truyện”.",vi:"Nhập tên bé, chọn tiếng (Anh, Trung hoặc cả hai), bấm 🎙 Bắt đầu. Bé đọc từng trang, cô bấm “Trang sau”. Xong bấm ⏹, cả hai xem lại video bé lồng tiếng, tải về gửi phụ huynh, rồi bé về.",nospeak:true}]:[])});
   var t=0;out.forEach(function(g,i){g.id=String.fromCharCode(65+i);g.min=t+"–"+(t+g.dur);t+=g.dur;var f=FK[g.k];g.trim=f.t;g.check=f.c;g.host=f.h;var ov=s.main.lv&&s.main.lv[g.k];if(ov||f.lv)g.lv=ov||f.lv;});
   return out;
 }
@@ -781,14 +803,16 @@ function slidesSong(s){
   if(ST){
     A.push({name:"Truyện: "+ST.title,mode:"zh2en",html:'<div class="sl story"><div class="stv" data-g="nop"><video id="stV" src="'+ROOT+ST.video+'" controls playsinline preload="metadata"></video></div><div class="stact" id="stAct">▶ Bấm phát: tranh tự lật theo tiếng đọc. Gặp câu hỏi, cô bấm ⏸ cho bé làm động tác.</div><div class="gbtns" data-g="nop"><button class="btn" type="button" data-g="sten">▶ Phần tiếng Anh</button><button class="btn" type="button" data-g="stzh">▶ Phần tiếng Trung</button></div></div>'});
     (ST.scr||[]).forEach(function(x,i){scrSlides(x,ROOT+x.img,"truyện "+(i+1),x.move).forEach(function(z){A.push(z);});});
-    A.push({name:"Can you hop?",mode:"en2zh",html:'<div class="sl"><h2>Can you…? 你会…吗？</h2><div class="cyh">'+ST.can.map(function(k){var w=vByEn(s,k)||{en:k};return '<div class="cyc"><div class="emo">'+pic(w)+'</div><div class="ln">Can you '+esc(w.en)+'?</div><div class="lnS zh">你会'+esc(w.zh)+'吗？</div></div>';}).join("")+'</div><div class="ln rv">I can hop, too! <span class="zh">我也会跳！</span></div><div class="hint">Cô chỉ từng hình hỏi. 🌱 làm động tác, gật hoặc lắc · 🌿 “Yes, I can! / No, I can\'t!” · 🌳 “会！/ 不会！” rồi hỏi lại bạn.</div></div>'});
+    A.push({name:"Đọc truyện: từng cặp",mode:"zh2en",html:'<div class="sl rd" data-rd="pair"><div class="rdh"><b id="rdH"></b><span class="gbtns" data-g="nop"><button class="btn" type="button" data-g="rdau" data-l="en">🔊 Mẫu Anh</button><button class="btn" type="button" data-g="rdau" data-l="zh">🔊 Mẫu Trung</button></span></div><div id="rdB"></div><div class="gbtns" data-g="nop"><button class="btn" type="button" data-g="rdprev">← Trang trước</button><button class="btn pri" type="button" data-g="rdnext">Cặp tiếp theo →</button></div></div>'});
+    A.push({name:"Đọc truyện: hai phe",mode:"zh2en",html:'<div class="sl rd" data-rd="team"><div class="rdh"><b id="rdH"></b><span class="gbtns" data-g="nop"><button class="btn" type="button" data-g="rdau" data-l="en">🔊 Mẫu Anh</button><button class="btn" type="button" data-g="rdau" data-l="zh">🔊 Mẫu Trung</button></span></div><div id="rdB"></div><div class="gbtns" data-g="nop"><button class="btn" type="button" data-g="rdprev">← Trang trước</button><button class="btn pri" type="button" data-g="rdnext">Trang sau →</button><button class="btn" type="button" data-g="rdswap">🔄 Đổi phe 换！</button></div></div>'});
   }
   A.push({name:"Gật hay lắc?",mode:"en2zh",html:'<div class="sl"><h2>🙆 Gật hay 🙅 lắc?</h2>'+lvBar(ST?["Từ tiếng Anh","Từ Anh hoặc Trung","Câu hỏi trong truyện"]:["Từ tiếng Anh","Từ Anh hoặc Trung","Chỉ tiếng Trung"])+'<div class="sub">Đúng thì gật đầu, sai thì lắc đầu và nói từ đúng. <b id="nC">· Mỗi bé '+GS.per+' lượt</b></div><div class="nodw"><div class="gbig" id="nP">🙂</div><div class="ncam" id="nCam" hidden></div></div><div id="nCR" class="ncr" hidden></div><div id="nA" class="gans" hidden></div><div class="gbtns" data-g="nop"><button class="btn pri" type="button" data-g="nod">▶ Lượt mới</button><button class="btn" type="button" data-g="nkid">👤 Bé tiếp theo</button><button class="btn" type="button" data-g="nagain">🔁 Nghe lại</button><button class="btn" type="button" data-g="nshow">Hiện đáp án</button><button class="btn" type="button" data-g="nstar">⭐ Bé đúng</button><button class="btn" type="button" data-g="ncam">📷 Bật camera</button></div><div class="hint" id="nT"></div><div class="hint" id="nCM">📷 Camera tự nhận ra bé gật hay lắc đầu. Hình chỉ xử lý trên máy này, không ghi lại, không gửi đi.</div></div>'});
   var bye=byName("Tạm biệt");if(bye)A.push(bye);
+  if(ST)A.push({name:"Lồng tiếng truyện",mode:"zh2en",html:'<div class="sl dub"><div class="dubtop" data-g="nop"><label>Tên bé <input id="dbN" type="text" maxlength="30" placeholder="ví dụ: Minh An" autocomplete="off"></label><span class="lvbar">'+[["en","🔵 Tiếng Anh"],["zh","🔴 Tiếng Trung"],["both","Cả hai"]].map(function(x){return '<button type="button" class="lvb'+(x[0]==="en"?" on":"")+'" data-g="dblang" data-l="'+x[0]+'">'+x[1]+'</button>';}).join("")+'</span></div><div class="dubst" data-g="nop"><canvas id="dbC" width="1280" height="720"></canvas><video id="dbV" controls playsinline hidden></video></div><div class="gbtns" data-g="nop"><button class="btn pri" type="button" data-g="dbgo">🎙 Bắt đầu lồng tiếng</button><button class="btn" type="button" data-g="dbnext" disabled>Trang sau →</button><button class="btn" type="button" data-g="dbstop" disabled>⏹ Xong</button><a class="btn" id="dbD" hidden download>💾 Tải video về</a><button class="btn" type="button" data-g="dbnew">👤 Bé tiếp theo</button></div><div class="hint" id="dbT">Bé đọc từng trang vào micro; cô bấm “Trang sau” khi bé đọc xong. Video chỉ lưu trên máy này, cô tải về để gửi phụ huynh.</div></div>'});
   return A;
 }
 function vByEn(s,k){for(var i=0;i<s.vocab.length;i++)if(s.vocab[i].en===k)return s.vocab[i];return (s.main&&s.main.story&&s.main.story.extra&&s.main.story.extra[k])||null;}
-var GS={last:-1,w:null,l:"",nw:null,nv:null,nl:"",nq:null,n:0,lv:2,pg:0,per:2,kid:0,k:0,st:0,watch:null};
+var GS={rp:0,rpair:1,rswap:false,last:-1,w:null,l:"",nw:null,nv:null,nl:"",nq:null,n:0,lv:2,pg:0,per:2,kid:0,k:0,st:0,watch:null};
 function playU(u,btn){
   var fb=function(){if(btn){var o=btn.textContent;btn.textContent="⚠ chưa tải được";setTimeout(function(){btn.textContent=o;},1600);}};
   try{if(window._ha)window._ha.pause();var a=new Audio(ROOT+u);window._ha=a;a.onerror=fb;var p=a.play();if(p&&p.catch)p.catch(fb);}catch(e){fb();}
@@ -877,6 +901,53 @@ function nodJudge(d,want){
   if(c){c.hidden=false;c.className="ncr "+(ok?"ok":"no");c.textContent="📷 Bé "+(d==="nod"?"gật đầu 🙆":"lắc đầu 🙅")+(ok?" → ✔ Đúng rồi! ⭐":" → ✘ Chưa đúng, thử lại nhé!");}
   if(ok){var sb=document.querySelector('#dkStage [data-g="nshow"]');if(sb)gAct(sb);}
 }
+function rdCue(l,i){var ST=deck.s.main.story,c=l==="zh"?ST.cueZh:ST.cueEn;return [c[i],i+1<c.length?c[i+1]:(l==="en"?ST.cueZh[0]-0.3:999)];}
+function rdRender(){
+  var ST=deck.s&&deck.s.main&&deck.s.main.story,sl=document.querySelector("#dkStage .rd"),B=document.getElementById("rdB");if(!ST||!sl||!B)return;
+  var mode=sl.getAttribute("data-rd"),n=ST.pages.length,p=ST.pages[GS.rp],en,zh;
+  if(mode==="pair"){document.getElementById("rdH").textContent="👥 Cặp "+GS.rpair+" · "+(GS.rp===0?"Bìa":"Trang "+GS.rp+"/"+(n-1));en="🔵 Bạn thứ nhất";zh="🔴 Bạn thứ hai";}
+  else{var sw=GS.rswap;document.getElementById("rdH").textContent=(sw?"Lượt 2 · đã đổi phe":"Lượt 1")+" · "+(GS.rp===0?"Bìa":"Trang "+GS.rp+"/"+(n-1));en=sw?"🔴 Phe Đỏ":"🔵 Phe Xanh";zh=sw?"🔵 Phe Xanh":"🔴 Phe Đỏ";}
+  B.innerHTML='<div class="rdp"><img src="'+ROOT+p.img+'" alt=""><div class="rdt"><div class="rdl"><span class="rdb '+(en.indexOf("🔵")===0?"bl":"rd2")+'">'+en+' · English</span><div class="ln">'+esc(p.en)+'</div></div><div class="rdl"><span class="rdb '+(zh.indexOf("🔵")===0?"bl":"rd2")+'">'+zh+' · 中文</span><div class="rdz">'+esc(p.zh)+'</div><div class="rdpy">'+esc(p.py)+'</div></div>'+(GS.rp===n-1?'<div class="stact">'+(mode==="pair"?"🎉 Hết truyện! Cặp tiếp theo đọc lại từ bìa.":(GS.rswap?"🎉 Hết truyện! Cả lớp vỗ tay.":"🎉 Hết truyện! Bấm 🔄 Đổi phe rồi đọc lại."))+'</div>':'')+'</div></div>';
+}
+var DB={rec:null,stream:null,chunks:[],pg:0,on:false,tm:0,imgs:{},lang:"en",t0:0,url:null};
+function dbImg(src){if(!DB.imgs[src]){var im=new Image();im.src=ROOT+src;im.onload=function(){dbDraw();};DB.imgs[src]=im;}return DB.imgs[src];}
+function dbWrap(g,txt,x,y,maxw,lh){var words=txt.split(/(\s+)/),line="",ys=y;for(var i=0;i<words.length;i++){var t=line+words[i];if(g.measureText(t).width>maxw&&line){g.fillText(line.trim(),x,ys);ys+=lh;line=words[i].trim()+" ";}else line=t;}g.fillText(line.trim(),x,ys);return ys;}
+function dbDraw(){
+  var c=document.getElementById("dbC"),ST=deck.s&&deck.s.main&&deck.s.main.story;if(!c||!ST)return;var g=c.getContext("2d"),p=ST.pages[Math.min(DB.pg,ST.pages.length-1)],im=dbImg(p.img);
+  g.fillStyle="#fdf8ee";g.fillRect(0,0,1280,720);if(im.complete&&im.naturalWidth){g.save();g.beginPath();if(g.roundRect)g.roundRect(40,50,620,620,36);else g.rect(40,50,620,620);g.clip();g.drawImage(im,40,50,620,620);g.restore();}
+  g.textAlign="center";var cx=980,L=DB.lang;
+  g.font="700 54px system-ui, sans-serif";g.fillStyle=L==="zh"?"#c8bfb2":"#1f2328";var y=dbWrap(g,p.en,cx,210,540,64);
+  g.font="700 64px 'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif";g.fillStyle=L==="en"?"#e8c9c5":"#c52d28";g.fillText(p.zh,cx,y+120);
+  g.font="500 32px system-ui, sans-serif";g.fillStyle=L==="en"?"#c8bfb2":"#555";g.fillText(p.py,cx,y+175);
+  var nm=(document.getElementById("dbN")||{}).value||"";g.font="600 26px system-ui, sans-serif";g.fillStyle="#6b6b6b";g.fillText((nm?"🎙 "+nm+" · ":"")+deck.s.main.story.title,cx,660);
+  if(DB.on){g.fillStyle=(Math.floor(performance.now()/500)%2)?"#e02424":"#f3a3a3";g.beginPath();g.arc(1230,50,14,0,7);g.fill();}
+}
+function dbLoop(){dbDraw();if(DB.on)DB.tm=setTimeout(dbLoop,100);}
+function dbBtns(rec){var sl=document.querySelector("#dkStage .dub");if(!sl)return;var go=sl.querySelector('[data-g="dbgo"]');go.disabled=rec;go.textContent=rec?"🔴 Đang ghi…":"🎙 Bắt đầu lồng tiếng";sl.querySelector('[data-g="dbnext"]').disabled=!rec;sl.querySelector('[data-g="dbstop"]').disabled=!rec;}
+function dbStart(){
+  var c=document.getElementById("dbC"),T=document.getElementById("dbT");if(!c)return;
+  if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia||!window.MediaRecorder||!c.captureStream){T.textContent="Trình duyệt này chưa ghi được video lồng tiếng. Cô thử Chrome hoặc Edge trên máy tính.";return;}
+  T.textContent="Đang mở micro…";
+  navigator.mediaDevices.getUserMedia({audio:{echoCancellation:true,noiseSuppression:true},video:false}).then(function(mic){
+    DB.stream=mic;var vs=c.captureStream(15),tr=vs.getVideoTracks().concat(mic.getAudioTracks()),ms=new MediaStream(tr);
+    var types=["video/webm;codecs=vp8,opus","video/webm","video/mp4"],mt="";for(var i=0;i<types.length;i++)if(MediaRecorder.isTypeSupported&&MediaRecorder.isTypeSupported(types[i])){mt=types[i];break;}
+    DB.rec=new MediaRecorder(ms,mt?{mimeType:mt}:undefined);DB.chunks=[];DB.mime=DB.rec.mimeType||mt||"video/webm";
+    DB.rec.ondataavailable=function(e){if(e.data&&e.data.size)DB.chunks.push(e.data);};DB.rec.onstop=dbDone;
+    DB.pg=0;DB.on=true;DB.t0=Date.now();DB.rec.start(500);dbLoop();dbBtns(true);
+    var v=document.getElementById("dbV"),d=document.getElementById("dbD");v.hidden=true;c.hidden=false;d.hidden=true;
+    T.textContent="🔴 Đang ghi. Bé đọc trang bìa, xong cô bấm “Trang sau”.";
+  }).catch(function(e){T.textContent="Chưa mở được micro: "+(e&&e.name==="NotAllowedError"?"cô bấm “Cho phép” micro trên trình duyệt rồi thử lại.":(e&&e.message)||e);});
+}
+function dbNext(){var ST=deck.s.main.story;if(!DB.on)return;if(DB.pg<ST.pages.length-1){DB.pg++;dbDraw();var T=document.getElementById("dbT");if(T)T.textContent="🔴 Đang ghi · "+(DB.pg===ST.pages.length-1?"trang cuối, bé đọc xong thì bấm ⏹ Xong.":"trang "+DB.pg+"/"+(ST.pages.length-1)+".");}}
+function dbStop(){if(DB.rec&&DB.rec.state!=="inactive")DB.rec.stop();DB.on=false;clearTimeout(DB.tm);if(DB.stream){DB.stream.getTracks().forEach(function(t){t.stop();});DB.stream=null;}dbBtns(false);}
+function dbDone(){
+  var c=document.getElementById("dbC"),v=document.getElementById("dbV"),d=document.getElementById("dbD"),T=document.getElementById("dbT");if(!v)return;
+  if(DB.url)URL.revokeObjectURL(DB.url);var blob=new Blob(DB.chunks,{type:DB.mime});DB.url=URL.createObjectURL(blob);
+  v.src=DB.url;v.hidden=false;c.hidden=true;var nm=((document.getElementById("dbN")||{}).value||"be").trim().replace(/[^\p{L}\p{N}]+/gu,"-")||"be";
+  d.href=DB.url;d.download="Can-You-Hop-Frog_"+nm+(DB.mime.indexOf("mp4")>=0?".mp4":".webm");d.hidden=false;
+  if(T)T.textContent="🎉 Xong! Bấm ▶ để xem lại. Bấm 💾 để tải video về gửi phụ huynh. Bấm 👤 cho bé tiếp theo.";
+}
+function dbReset(){dbStop();DB.pg=0;var c=document.getElementById("dbC"),v=document.getElementById("dbV"),d=document.getElementById("dbD"),n=document.getElementById("dbN"),T=document.getElementById("dbT");if(v){v.pause();v.removeAttribute("src");v.hidden=true;}if(c)c.hidden=false;if(d)d.hidden=true;if(n){n.value="";n.focus();}if(T)T.textContent="Nhập tên bé, chọn tiếng, rồi bấm 🎙 Bắt đầu lồng tiếng.";dbDraw();}
 function gAct(b){
   var g=b.getAttribute("data-g"),sl=b.closest(".sl"),s=deck.s,vw=(s?s.vocab:[]).filter(function(w){return w.zh;});
   if(g==="nop")return;
@@ -946,6 +1017,14 @@ function gAct(b){
     try{vv.currentTime=f0;var pr=vv.play();if(pr&&pr.catch)pr.catch(function(){});}catch(e){}
     return;
   }
+  if(g==="rdnext"||g==="rdprev"){var n2=s.main.story.pages.length,md=sl.getAttribute("data-rd");if(g==="rdnext"){if(md==="pair"){GS.rpair++;GS.rp=(GS.rp+1)%n2;}else if(GS.rp<n2-1)GS.rp++;}else if(GS.rp>0)GS.rp--;rdRender();return;}
+  if(g==="rdswap"){GS.rswap=!GS.rswap;GS.rp=0;rdRender();return;}
+  if(g==="rdau"){var l=b.getAttribute("data-l"),cu=rdCue(l,GS.rp),ST5=s.main.story;try{if(!window._rda){window._rda=new Audio(ROOT+ST5.track);window._rda.addEventListener("timeupdate",function(){var A=window._rda;if(A._to&&A.currentTime>=A._to)A.pause();});}var A=window._rda,go=function(){A._to=cu[1]-0.1;A.currentTime=Math.max(0,cu[0]-0.2);var pr=A.play();if(pr&&pr.catch)pr.catch(function(){});};if(A.readyState>=1)go();else{A.addEventListener("loadedmetadata",go,{once:true});A.load();}}catch(e){}return;}
+  if(g==="dblang"){DB.lang=b.getAttribute("data-l");$$(".lvb",sl).forEach(function(x){x.classList.toggle("on",x===b);});dbDraw();return;}
+  if(g==="dbgo"){dbStart();return;}
+  if(g==="dbnext"){dbNext();return;}
+  if(g==="dbstop"){dbStop();return;}
+  if(g==="dbnew"){dbReset();return;}
   if(g==="kplay"){kPlay(b.getAttribute("data-vid"));return;}
   if(g==="kstop"){kStop();return;}
   if(g==="pgprev"||g==="pgnext"){var ST2=s.main.story;GS.pg=Math.max(0,Math.min(ST2.pages.length-1,GS.pg+(g==="pgnext"?1:-1)));stRender();return;}
@@ -1311,9 +1390,11 @@ function deckRender(){
   var sv=document.getElementById("stV");if(sv){sv.addEventListener("timeupdate",stCue);sv.addEventListener("seeked",stCue);}
   if(!document.getElementById("kFr"))kStop();
   if(!document.getElementById("nCam")&&CAM.on)camStop();
+  if(document.getElementById("rdB")){GS.rp=0;GS.rpair=1;GS.rswap=false;rdRender();}else if(window._rda)window._rda.pause();
+  if(document.getElementById("dbC")){DB.pg=0;dbDraw();var dn=document.getElementById("dbN");if(dn)dn.addEventListener("input",dbDraw);}else if(DB.on)dbStop();
 }
 function deckOpen(s,i){deck.s=s;deck.list=slides(s);deck.i=i||0;$("#deck").hidden=false;deckRender();$("#dkNext").focus();}
-function deckClose(){$("#deck").hidden=true;try{camStop();kStop();}catch(e){}try{if(document.fullscreenElement)document.exitFullscreen();}catch(e){}}
+function deckClose(){$("#deck").hidden=true;try{camStop();kStop();dbStop();if(window._rda)window._rda.pause();}catch(e){}try{if(document.fullscreenElement)document.exitFullscreen();}catch(e){}}
 function deckReveal(){var sl=$("#dkStage .sl");if(!sl)return false;if($(".rv",sl)&&!sl.classList.contains("show")){sl.classList.add("show");return true;}return false;}
 function deckNext(){if(deck.i<deck.list.length-1){deck.i++;deckRender();}}
 function deckPrev(){if(deck.i>0){deck.i--;deckRender();}}
@@ -1323,7 +1404,7 @@ $("#dkStage").onclick=function(e){if(e&&e.target&&e.target.closest&&e.target.clo
 $("#dkFs").onclick=function(){try{var d=$("#deck");if(document.fullscreenElement)document.exitFullscreen();else if(d.requestFullscreen)d.requestFullscreen().catch(function(){});}catch(e){}};
 document.addEventListener("keydown",function(e){
   if($("#deck").hidden)return;
-  var k=e.key;
+  var k=e.key,tg=e.target&&e.target.tagName;if((tg==="INPUT"||tg==="TEXTAREA")&&k!=="Escape")return;
   if(k==="Escape"){deckClose();}
   else if(k==="ArrowRight"||k==="PageDown"){e.preventDefault();if(!deckReveal())deckNext();}
   else if(k===" "){e.preventDefault();if(!deckReveal())deckNext();}
