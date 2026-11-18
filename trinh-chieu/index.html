@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cùng trả lời · Buổi chia sẻ CES</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="tc.css?v=1">
+<style>
+  body { min-height: 100vh; }
+  .app { max-width: 560px; margin: 0 auto; padding: max(16px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) 32px max(16px, env(safe-area-inset-left)); display: flex; flex-direction: column; gap: 16px; }
+  header { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  header .t { font-weight: 800; font-size: 15px; }
+  header .t span { color: var(--red); }
+  .dot { font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 6px; }
+  .dot::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #C9C1B3; }
+  .dot.on::before { background: var(--ok); }
+  .card { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 18px; }
+  h1 { font-size: 22px; line-height: 1.3; margin: 0 0 8px; text-wrap: balance; }
+  p { margin: 0; line-height: 1.55; color: var(--muted); }
+  label { display: block; font-size: 13px; font-weight: 600; margin: 14px 0 6px; color: var(--ink); }
+  input { width: 100%; font: inherit; font-size: 16px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 10px; background: #fff; color: var(--ink); }
+  .btn { width: 100%; border: 0; border-radius: 12px; padding: 14px; font-weight: 700; font-size: 16px; background: var(--red); color: #fff; margin-top: 16px; }
+  .link { background: none; border: 0; color: var(--muted); text-decoration: underline; font-size: 14px; padding: 8px 0 0; width: 100%; }
+  .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--red); margin: 0 0 8px; }
+  .q { font-size: 21px; line-height: 1.35; font-weight: 800; margin: 0 0 16px; text-wrap: balance; }
+  .opts { display: flex; flex-direction: column; gap: 10px; }
+  .opt { position: relative; text-align: left; width: 100%; background: #fff; border: 2px solid var(--line); border-radius: 12px; padding: 14px 14px 14px 52px; font-size: 16px; font-weight: 600; line-height: 1.35; color: var(--ink); overflow: hidden; }
+  .opt .k { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); width: 28px; height: 28px; border-radius: 50%; background: var(--ink); color: #fff; display: grid; place-items: center; font-size: 13px; font-weight: 800; z-index: 1; }
+  .opt.me { border-color: var(--red); background: var(--red-soft); }
+  .opt.me .k { background: var(--red); }
+  .opt:disabled { cursor: default; }
+  .opt .fill { position: absolute; inset: 0 auto 0 0; background: var(--bar-track); width: 0; transition: width .6s; }
+  .opt .lab { position: relative; display: flex; justify-content: space-between; gap: 10px; }
+  .opt .lab b { font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .opt.ok { border-color: var(--ok); background: var(--ok-soft); }
+  .opt.ok .k { background: var(--ok); }
+  .opt.ok .fill { background: #BFE5CD; }
+  .note { font-size: 14px; color: var(--muted); text-align: center; }
+  .note b { color: var(--ink); }
+  .giai { background: var(--gold-soft); border-radius: 12px; padding: 14px; font-size: 15px; line-height: 1.5; color: var(--ink); }
+  .giai b { color: var(--ok); }
+  .slide img { width: 100%; border-radius: 10px; display: block; border: 1px solid var(--line); background: #fff; }
+  .wait { display: flex; align-items: center; gap: 12px; }
+  .wait .pulse { width: 12px; height: 12px; border-radius: 50%; background: var(--gold); animation: p 1.4s infinite; flex: none; }
+  @keyframes p { 50% { opacity: .25; } }
+</style>
+</head>
+<body>
+<div class="app">
+  <header><div class="t"><span>CES</span> · Buổi chia sẻ tối 18/11</div><div class="dot" id="dot">Đang kết nối</div></header>
+  <main id="main"></main>
+</div>
+
+<script src="../lop-zoom/vendor/firebase-app-compat.js?v=20261109a"></script>
+<script src="../lop-zoom/vendor/firebase-auth-compat.js?v=20261109a"></script>
+<script src="../lop-zoom/vendor/firebase-database-compat.js?v=20261109a"></script>
+<script src="tc.js?v=1"></script>
+<script>
+(async function () {
+  const $ = s => document.querySelector(s);
+  const main = $('#main');
+  const ROOM = tcRoom();
+  let F = null, R = null, state = null, answers = {}, me = tcLsGet('tc_me_' + ROOM, null);
+  let lastKey = '';
+
+  function joinForm() {
+    main.innerHTML = '<div class="card"><h1>Chào bố mẹ! Cùng trả lời câu hỏi trong buổi chia sẻ nhé</h1>' +
+      '<p>Trước mỗi phần quan trọng, cô sẽ hỏi một câu. Bố mẹ chạm chọn đáp án, kết quả cả lớp hiện ngay trên màn chiếu.</p>' +
+      '<form id="f"><label for="nm">Tên bố/mẹ (không bắt buộc)</label><input id="nm" autocomplete="name" placeholder="Ví dụ: Hương">' +
+      '<label for="ch">Tên con (không bắt buộc)</label><input id="ch" placeholder="Ví dụ: Bắp">' +
+      '<button class="btn" type="submit">Vào phòng</button></form>' +
+      '<button class="link" id="anon">Vào không cần tên</button></div>';
+    $('#f').onsubmit = e => { e.preventDefault(); enter($('#nm').value.trim().slice(0, 40), $('#ch').value.trim().slice(0, 40)); };
+    $('#anon').onclick = () => enter('', '');
+  }
+  async function enter(name, child) {
+    me = { name, child }; tcLsSet('tc_me_' + ROOM, me);
+    if (R) { try { await R.child('players/' + F.uid).set({ name, child, on: true, t: F.now() }); R.child('players/' + F.uid + '/on').onDisconnect().set(false); } catch (e) { } }
+    lastKey = ''; render();
+  }
+
+  async function vote(pid, k) {
+    if (!R) return;
+    try { await R.child('answers/' + pid + '/' + F.uid).set({ o: k, t: F.now() }); }
+    catch (e) { main.querySelector('.note') && (main.querySelector('.note').textContent = 'Chưa gửi được, bố mẹ chạm lại giúp cô nhé.'); }
+  }
+
+  function render() {
+    if (!me) { if (lastKey !== 'join') { lastKey = 'join'; joinForm(); } return; }
+    if (!state) {
+      if (lastKey !== 'wait0') { lastKey = 'wait0'; main.innerHTML = '<div class="card wait"><span class="pulse"></span><p>Đang chờ cô bắt đầu buổi chia sẻ…</p></div>'; }
+      return;
+    }
+    if (state.kind !== 'poll') {
+      const key = 'slide' + (state.slide || 0);
+      if (lastKey === key) return;
+      lastKey = key;
+      main.innerHTML = '<div class="card wait"><span class="pulse"></span><p>Cô đang trình bày. Câu hỏi tiếp theo sẽ hiện ở đây.</p></div>' +
+        (state.slide ? '<div class="slide"><img alt="Slide đang chiếu" src="' + tcImg(state.slide) + '"></div>' : '');
+      return;
+    }
+    const p = tcPoll(state.poll); if (!p) return;
+    const mine = (answers[p.id] || {})[F && F.uid];
+    const myO = mine ? mine.o : -1;
+    const showRes = state.reveal || !state.open;
+    const key = ['poll', p.id, state.open, state.reveal].join('|');
+    if (lastKey !== key) {
+      lastKey = key;
+      main.innerHTML = '<div class="card"><p class="eyebrow">' + tcEsc(p.nhan) + '</p><h2 class="q">' + tcEsc(p.hoi) + '</h2><div class="opts">' +
+        p.chon.map((t, k) => '<button class="opt" data-k="' + k + '"' + (state.open ? '' : ' disabled') + '><span class="fill"></span><span class="k">' + 'ABCD'[k] + '</span><span class="lab"><span>' + tcEsc(t) + '</span><b></b></span></button>').join('') +
+        '</div></div><p class="note" id="note"></p><div id="giai"></div>';
+      main.querySelectorAll('.opt').forEach(b => b.onclick = () => { if (state.open) { const k = +b.dataset.k; markMine(k); vote(p.id, k); } });
+    }
+    markMine(myO);
+    const { c, n } = tcCount(p, answers[p.id]);
+    const max = Math.max(1, ...c);
+    main.querySelectorAll('.opt').forEach(b => {
+      const k = +b.dataset.k;
+      b.querySelector('.fill').style.width = showRes ? (c[k] / max * 100) + '%' : '0';
+      b.querySelector('b').textContent = showRes && n ? Math.round(c[k] * 100 / n) + '%' : '';
+      b.classList.toggle('ok', !!state.reveal && k === p.dung);
+    });
+    $('#note').innerHTML = state.open
+      ? (myO >= 0 ? '<b>Đã gửi.</b> Bố mẹ có thể chạm đáp án khác để đổi.' : 'Chạm vào một đáp án để gửi.')
+      : (state.reveal ? '' : 'Cô đã khoá bình chọn. ' + n + ' phiếu.');
+    $('#giai').innerHTML = (state.reveal && p.giai) ? '<div class="giai"><b>Đáp án: ' + tcEsc(p.chon[p.dung]) + '.</b> ' + tcEsc(p.giai) + '</div>' : '';
+  }
+  function markMine(k) { main.querySelectorAll('.opt').forEach(b => b.classList.toggle('me', +b.dataset.k === k)); }
+
+  render();
+  try {
+    F = await tcInit();
+    R = F.db.ref('rooms/' + ROOM);
+    F.db.ref('.info/connected').on('value', s => { const on = !!s.val(); $('#dot').classList.toggle('on', on); $('#dot').textContent = on ? 'Đã kết nối' : 'Mất kết nối'; });
+    if (me) { try { await R.child('players/' + F.uid).update({ name: me.name || '', child: me.child || '', on: true, t: F.now() }); R.child('players/' + F.uid + '/on').onDisconnect().set(false); } catch (e) { } }
+    R.child('state').on('value', s => { state = s.val(); render(); });
+    R.child('answers').on('value', s => { answers = s.val() || {}; render(); });
+  } catch (e) {
+    $('#dot').textContent = 'Chưa kết nối được';
+    main.insertAdjacentHTML('afterbegin', '<div class="card"><p>Chưa kết nối được máy chủ. Bố mẹ tải lại trang giúp cô nhé.</p></div>');
+  }
+})();
+</script>
+</body>
+</html>

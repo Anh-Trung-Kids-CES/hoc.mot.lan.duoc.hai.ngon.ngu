@@ -1,0 +1,13 @@
+/* Trình chiếu tương tác · màu theo bộ slide CES */
+:root {
+  --bg: #F7F2EA; --paper: #FFFDF8; --ink: #1E2433; --muted: #5B6273; --line: #E4DACB;
+  --red: #B42318; --red-soft: #FBEDE9; --gold: #C98A12; --gold-soft: #FFF3D6;
+  --ok: #2E8B57; --ok-soft: #E3F4EA; --bar: #1E2433; --bar-track: #EDE5D8;
+  --f: "Be Vietnam Pro", "Segoe UI", system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { font-family: var(--f); color: var(--ink); background: var(--bg); -webkit-font-smoothing: antialiased; }
+button { font: inherit; cursor: pointer; }
+button:focus-visible, input:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
