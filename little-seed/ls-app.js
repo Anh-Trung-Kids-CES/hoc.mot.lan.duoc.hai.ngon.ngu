@@ -357,8 +357,12 @@ R.pdn = (step, body) => {
       how = await micTurn(body.querySelector('#mic'), my); if (how === 'gone' || my !== RUN) return;
       hint.textContent = SD.vi.ans; await hd('ans'); if (my !== RUN) return; showAns(); await say(zh(it.zh, it.a_zh)); if (my !== RUN) return;
     }
-    stepOn(3); body.querySelector('#px').classList.add('happy'); body.querySelector('#ans').querySelector('div').className = '';
-    if (how === 'rec') { star(); hint.textContent = 'Xiaomei hiểu rồi! Cảm ơn con!'; await hd('pdn_ok'); } else await afterSpeak(how);
+    body.querySelector('#ans').querySelector('div').className = '';
+    // (18/11) con đã nói (máy nghe thấy) hoặc máy không có micro (đếm 3-2-1): Xiaomei hiểu rồi → luôn được 1 sao, có hiệu ứng.
+    // Chỉ khi có micro mà không nghe thấy tiếng con thì không bật bước ③ và không cộng sao.
+    if (how === 'rec' || how === 'count') { stepOn(3); body.querySelector('#px').classList.add('happy'); star(); pop(document.querySelector('.ls-stars')); sfx.coin();
+      hint.textContent = 'Xiaomei hiểu rồi! Con được 1 ngôi sao ⭐'; await hd('pdn_ok'); }
+    else { hint.textContent = 'Cô chưa nghe thấy con nói. Lần sau con nói to hơn nhé!'; await afterSpeak(how); }
     await wait(500); if (my === RUN) next(); }
   (async () => { await hd('pdn'); step.bridge ? bridge() : next(); })();
 };

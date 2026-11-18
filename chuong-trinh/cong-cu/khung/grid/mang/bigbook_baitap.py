@@ -97,6 +97,8 @@ NAMES_SD = {   # mã tên → (en, zh, ảnh)
     'ong': ('grandpa', '爷爷', NVS + 'fam_bong_ong_a.webp'), 'me': ('mother', '妈妈', NVS + 'fam_bong_me_a.webp'),
     'bo': ('father', '爸爸', NVS + 'fam_bong_bo_a.webp'), 'anh_trai': ('older brother', '哥哥', NVS + 'fam_bong_anh_trai_a.webp'),
     'em_gai': ('younger sister', '妹妹', NVS + 'fam_bong_em_gai_a.webp'),
+    # (18/11) lựa chọn big book phải có tranh như các lựa chọn bên cạnh: 奶奶 (U1 lần 2), 叔叔 (U3 lần 2, tranh cắt từ ảnh trang 8)
+    'ba': ('grandma', '奶奶', NVS + 'fam_bong_ba_a.webp'), 'chu': ('uncle', '叔叔', NVS + 'bb_sd3_chu_anh.webp'),
 }
 PHOTO_SD = 'sdl-anh-gia-dinh'   # khóa lưu ảnh con trên máy (tiền tố sdl- như tiến độ Seedling)
 
