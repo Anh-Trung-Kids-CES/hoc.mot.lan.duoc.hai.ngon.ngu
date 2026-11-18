@@ -13,9 +13,9 @@ const TC_FIREBASE = {
 };
 
 const TC_ROOM_DEFAULT = 'chiase1811';
-const TC_SLIDES = 47;
+const TC_SLIDES = 46;
 
-/* Câu hỏi đặt TRƯỚC slide số `truoc` (theo bộ slide 47 trang).
+/* Câu hỏi đặt TRƯỚC slide số `truoc` (theo bộ slide 46 trang).
    dung: chỉ số đáp án đúng (null = câu khảo sát, không có đáp án). */
 const TC_POLLS = [
   { id: 'q0', truoc: 3, nhan: 'Làm quen', hoi: 'Bố mẹ đang cho con học ngoại ngữ thế nào?',
@@ -45,9 +45,7 @@ const TC_POLLS = [
     giai: 'Bố mẹ không cần dạy. Giữ giờ học đều, ngồi cạnh, khen con cụ thể là đủ; giọng chuẩn đã có trên web và cô.' },
   { id: 'q9', truoc: 40, nhan: 'Đoán trước khi xem', hoi: 'Theo bố mẹ, mỗi ngày con nên học trên web bao lâu?',
     chon: ['5 phút', '12–15 phút', '45–60 phút'], dung: 1,
-    giai: 'Khoá mới thiết kế 12–15 phút mỗi ngày: đủ để nghe truyện, hát và tự nhớ lại, mà vẫn dưới mốc nhắc nghỉ mắt 25 phút.' },
-  { id: 'q10', truoc: 43, nhan: 'Mùa tiếp theo', hoi: 'Bố mẹ có muốn cho con tham gia Sân chơi 7 chặng?',
-    chon: ['Có, nhắn cô để giữ chỗ cho con', 'Cần tìm hiểu thêm', 'Chưa phù hợp lúc này'], dung: null }
+    giai: 'Khoá mới thiết kế 12–15 phút mỗi ngày: đủ để nghe truyện, hát và tự nhớ lại, mà vẫn dưới mốc nhắc nghỉ mắt 25 phút.' }
 ];
 
 /* Trình tự trình chiếu: màn mời tham gia → slide + câu hỏi xen vào */
@@ -60,7 +58,7 @@ function tcSequence() {
   return seq;
 }
 function tcPoll(id) { return TC_POLLS.find(p => p.id === id); }
-function tcImg(n) { return 'anh/s' + String(n).padStart(2, '0') + '.jpg?v=3'; }
+function tcImg(n) { return 'anh/s' + String(n).padStart(2, '0') + '.jpg?v=4'; }
 function tcRoom() {
   const q = new URLSearchParams(location.search).get('phong');
   return (q || TC_ROOM_DEFAULT).toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 20) || TC_ROOM_DEFAULT;

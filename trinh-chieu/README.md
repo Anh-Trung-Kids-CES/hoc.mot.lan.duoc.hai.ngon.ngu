@@ -16,4 +16,4 @@
 ## Sửa câu hỏi
 Trong `tc.js`, mảng `TC_POLLS`: `truoc` là số slide mà câu hỏi đứng trước, `dung` là chỉ số đáp án đúng (null là câu khảo sát), `giai` là lời giải hiện khi bấm R.
 
-Ảnh slide ở `anh/s01.jpg … s47.jpg` (xuất từ bộ pptx 47 trang).
+Ảnh slide ở `anh/s01.jpg … s46.jpg` (xuất từ bộ pptx 46 trang).
