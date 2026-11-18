@@ -60,7 +60,7 @@ function tcSequence() {
   return seq;
 }
 function tcPoll(id) { return TC_POLLS.find(p => p.id === id); }
-function tcImg(n) { return 'anh/s' + String(n).padStart(2, '0') + '.jpg'; }
+function tcImg(n) { return 'anh/s' + String(n).padStart(2, '0') + '.jpg?v=2'; }
 function tcRoom() {
   const q = new URLSearchParams(location.search).get('phong');
   return (q || TC_ROOM_DEFAULT).toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 20) || TC_ROOM_DEFAULT;
