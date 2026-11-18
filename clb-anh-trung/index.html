@@ -835,6 +835,9 @@ function playU(u,btn){
   var fb=function(){if(btn){var o=btn.textContent;btn.textContent="⚠ chưa tải được";setTimeout(function(){btn.textContent=o;},1600);}};
   try{if(window._ha)window._ha.pause();var a=new Audio(ROOT+u);window._ha=a;a.onerror=fb;var p=a.play();if(p&&p.catch)p.catch(fb);}catch(e){fb();}
 }
+function playSeq(us,btn){us=us.filter(Boolean);var i=0,tk=window._seqTk=(window._seqTk||0)+1,nx=function(){if(tk!==window._seqTk||i>=us.length)return;playU(us[i++],btn);var a=window._ha;if(a)a.addEventListener("ended",function(){setTimeout(nx,350);});};nx();}
+function qAu(q,l,ans){var A="clb-anh-trung/am-2/";return ans?A+"a_"+l+"_"+(q.yes?"yes":q.act==="tall"?"haha":"no")+".mp3":A+"q_"+l+"_"+q.act+(q.who==="frog"?"":"_"+q.who)+".mp3";}
+function qSay(q,ans,btn){var ls=GS.lv===1?["en"]:["en","zh"];playSeq(ls.map(function(l){return qAu(q,l,ans);}),btn);}
 function sayWord(w,l,btn,tip){
   var u=w.au&&w.au[l],t=document.getElementById(tip);
   if(u){playU(u,btn);if(t)t.textContent="";}
@@ -1054,10 +1057,10 @@ function gAct(b){
     if(!vw.length)return;if(!GS.kid||GS.k>=GS.per){GS.kid++;GS.k=0;GS.st=0;}GS.k++;GS.n++;nodHead();$("#nA").hidden=true;$("#nCR").hidden=true;$("#nT").textContent="";
     var ST=s.main&&s.main.story;
     if(GS.lv===3&&ST){
-      var q;do{q=ST.qs[Math.floor(Math.random()*ST.qs.length)];}while(ST.qs.length>1&&q===GS.nq);GS.nq=q;GS.nw=null;
+      if(!GS.qbag||!GS.qbag.length){GS.qbag=ST.qs.slice();for(var z=GS.qbag.length-1;z>0;z--){var r=Math.floor(Math.random()*(z+1)),t=GS.qbag[z];GS.qbag[z]=GS.qbag[r];GS.qbag[r]=t;}if(GS.qbag.length>1&&GS.qbag[0]===GS.nq)GS.qbag.push(GS.qbag.shift());}var q=GS.qbag.shift();GS.nq=q;GS.nw=null;
       var who=vByEn(s,q.who)||{en:q.who},act=vByEn(s,q.act)||{en:q.act};
       $("#nP").innerHTML='<div class="qrow"><span>'+pic(who)+'</span><span class="qm">?</span><span>'+pic(act)+'</span></div><div class="ln" style="font-size:.24em">'+esc(q.en)+'</div><div class="lnS zh" style="font-size:.18em">'+esc(q.zh)+' <i class="pyS">'+esc(q.py)+'</i></div>';
-      $("#nT").textContent="Cô đọc câu hỏi; bé đóng vai con vật, gật hoặc lắc rồi trả lời.";nodWatch(q.yes?"nod":"shake",0);return;
+      $("#nT").textContent="Máy đọc câu hỏi (Anh rồi Trung); bé đóng vai con vật, gật hoặc lắc rồi trả lời.";qSay(q,false,b);nodWatch(q.yes?"nod":"shake",1500);return;
     }
     GS.nq=null;var a=Math.floor(Math.random()*vw.length),v=a;
     if(vw.length>1&&Math.random()<0.5){do{v=Math.floor(Math.random()*vw.length);}while(v===a);}
@@ -1068,9 +1071,9 @@ function gAct(b){
   if(g==="nsens"){GS.sens=+b.getAttribute("data-v");$$('[data-g="nsens"]',sl).forEach(function(x){x.classList.toggle("on",x===b);});try{localStorage.setItem("clbSens",GS.sens);}catch(e){}return;}
   if(g==="nstar"){if(!GS.kid)return;GS.st++;nodHead();return;}
   if(g==="ncam"){if(CAM.on){camStop();b.textContent="📷 Bật camera";}else camStart(b);return;}
-  if(g==="nagain"){if(GS.nw&&GS.nv)sayWord(GS.nv,GS.nl,b,"nT");return;}
+  if(g==="nagain"){if(GS.nq){qSay(GS.nq,false,b);return;}if(GS.nw&&GS.nv)sayWord(GS.nv,GS.nl,b,"nT");return;}
   if(g==="nshow"){
-    if(GS.nq){var q2=GS.nq;$("#nA").innerHTML='<div class="ln" style="color:'+(q2.yes?"var(--brand)":"var(--zh)")+'">'+(q2.yes?"✔ Gật đầu! ":"✘ Lắc đầu! ")+esc(q2.aEn)+' <span class="zh">'+esc(q2.aZh)+'</span></div><div class="wp">'+esc(q2.aPy)+'</div>';$("#nA").hidden=false;return;}
+    if(GS.nq){var q2=GS.nq;$("#nA").innerHTML='<div class="ln" style="color:'+(q2.yes?"var(--brand)":"var(--zh)")+'">'+(q2.yes?"✔ Gật đầu! ":"✘ Lắc đầu! ")+esc(q2.aEn)+' <span class="zh">'+esc(q2.aZh)+'</span></div><div class="wp">'+esc(q2.aPy)+'</div>';$("#nA").hidden=false;qSay(q2,true,b);return;}
     if(!GS.nw)return;var ok=GS.nw===GS.nv||(GS.nl==="zh"&&GS.nw.zh===GS.nv.zh),said=GS.nl==="zh"?GS.nv.zh:GS.nv.en;
     $("#nA").innerHTML=(ok?'<div class="ln" style="color:var(--brand)">✔ Đúng rồi! Gật đầu!</div>':'<div class="ln" style="color:var(--zh)">✘ Không phải “'+esc(said)+'”. Lắc đầu!</div>')+'<div class="sub">Đây là:</div><div class="ln">'+esc(GS.nw.en)+' · <span class="zh">'+esc(GS.nw.zh)+'</span> <i class="wp" style="font-size:.6em">'+esc(GS.nw.py)+'</i></div>';
     $("#nA").hidden=false;return;
@@ -1471,7 +1474,7 @@ function deckRender(){
   var fc0=$("#dkStage .fc");if(fc0&&fc0.getAttribute("data-en")){var u0=fc0.getAttribute("data-en");setTimeout(function(){if($("#dkStage .fc")===fc0)playU(u0);},350);}
   if(document.getElementById("dbC")){DB.pg=0;dbDraw();var dn=document.getElementById("dbN");if(dn)dn.addEventListener("input",dbDraw);}else if(DB.on)dbStop();
 }
-function deckOpen(s,i){GS.bag=null;deck.s=s;deck.list=slides(s);deck.i=i||0;$("#deck").hidden=false;deckRender();$("#dkNext").focus();}
+function deckOpen(s,i){GS.bag=null;GS.qbag=null;deck.s=s;deck.list=slides(s);deck.i=i||0;$("#deck").hidden=false;deckRender();$("#dkNext").focus();}
 function deckClose(){$("#deck").hidden=true;try{camStop();kStop();dbStop();if(window._rda)window._rda.pause();}catch(e){}try{if(document.fullscreenElement)document.exitFullscreen();}catch(e){}}
 function deckReveal(){var sl=$("#dkStage .sl");if(!sl)return false;if($(".rv",sl)&&!sl.classList.contains("show")){sl.classList.add("show");var fc=$(".fc",sl);if(fc&&fc.getAttribute("data-zh"))playU(fc.getAttribute("data-zh"));return true;}return false;}
 function deckNext(){if(deck.i<deck.list.length-1){deck.i++;deckRender();}}
