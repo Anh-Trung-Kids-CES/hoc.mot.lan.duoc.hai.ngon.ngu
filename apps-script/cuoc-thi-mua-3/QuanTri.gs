@@ -45,16 +45,16 @@ const QT_TZ = 'Asia/Ho_Chi_Minh';
 const QT_PHIEN_GIAY = 6 * 3600;           // phiên đăng nhập 6 giờ (tự gia hạn khi đang dùng)
 
 const QT_CAI_DAT_MAC_DINH = [
-  ['Hạn đăng ký', '2026-10-25T23:59:00+07:00', 'Giờ Việt Nam, giữ nguyên dạng năm-tháng-ngàyTgiờ:phút:giây+07:00'],
-  ['Khai mạc', 'thứ Hai 26/10/2026', 'Ghi đúng như muốn hiện trong tin nhắn'],
+  ['Hạn đăng ký', '', 'Mùa 3 không có hạn đăng ký: để trống. Nếu cần hạn thì ghi dạng 2026-11-29T23:59:00+07:00'],
+  ['Khai mạc', 'thứ Hai 30/11/2026', 'Ghi đúng như muốn hiện trong tin nhắn'],
   ['Link trang ưu đãi', 'https://ceseducation.github.io/little-language-explorers/', ''],
-  ['Phí', '79.000đ', ''],
+  ['Phí', '159.000đ', ''],
   ['Link học', 'https://anh-trung-kids-ces.github.io/hoc.mot.lan.duoc.hai.ngon.ngu/cuoc-thi-mua-3/', 'Một link cho ba mẹ từ đầu đến cuối (web Cuộc thi mùa 3)'],
   ['Ngưỡng nóng', '60', 'Từ điểm này: gọi trong 1 giờ'],
   ['Ngưỡng ấm', '35', 'Từ điểm này: nhắn Zalo mẫu kèm link đăng ký'],
   ['Giờ làm việc', '8-21', 'Ngoài giờ này, việc "gọi trong 1 giờ" dời sang 9:00 sáng hôm sau'],
   ['Mã thiết lập tài khoản', '', 'Nhập mã này trên trang quản trị để tạo tài khoản Quản lý đầu tiên hoặc đặt lại mật khẩu. Mã tự đổi sau mỗi lần dùng.'],
-  ['Ngày bắt đầu 21 ngày', '2026-10-26', 'Năm-tháng-ngày. Dùng để tự sinh việc theo tuần (Bạn · Bàn · Bán · Bám)'],
+  ['Ngày bắt đầu 21 ngày', '2026-11-30', 'Năm-tháng-ngày. Dùng để tự sinh việc theo tuần (Bạn · Bàn · Bán · Bám)'],
   ['Ngày chung kết', '', 'Năm-tháng-ngày. Để trống thì tính là ngày thứ 22 sau ngày bắt đầu'],
 ];
 const QT_TIN_MAU_MAC_DINH = [
@@ -65,7 +65,7 @@ const QT_TIN_MAU_MAC_DINH = [
   ['moi_am', 'Mời đăng ký (gia đình ấm – nhắn Zalo)',
     'Dạ em chào {phu_huynh} ạ. Em thấy bé {ten_con} đã bắt đầu làm quen cả tiếng Anh và tiếng Trung trên web rồi. Đợt 21 ngày bắt đầu {khai_mac}, mỗi ngày chỉ khoảng 15 phút, có 3 buổi Zoom cùng cô. Nếu ba mẹ muốn con đi tiếp cả hành trình, ba mẹ đăng ký ở đây trước {han}: {link_dang_ky}. Ba mẹ cần em hỗ trợ gì cứ nhắn em nhé ạ.'],
   ['nhac_phi', 'Nhắc đóng phí',
-    'Dạ em chào {phu_huynh} ạ. Chỗ của bé {ten_con} trong nhóm {khoa} em đang giữ đến {han}. Ba mẹ chuyển khoản {phi} (nội dung: LLE – {ten_con} – {khoa} – {so_zalo}) giúp em để con kịp vào nhóm trước khai mạc {khai_mac} nhé ạ. Ba mẹ còn băn khoăn gì em hỗ trợ ngay ạ.'],
+    'Dạ em chào {phu_huynh} ạ. Em đang giữ chỗ cho bé {ten_con} trong nhóm {khoa}. Ba mẹ chuyển khoản {phi} (nội dung: LLE – {ten_con} – {khoa} – {so_zalo}) giúp em để con kịp vào nhóm trước khai mạc {khai_mac} nhé ạ. Ba mẹ còn băn khoăn gì em hỗ trợ ngay ạ.'],
   ['link_hoc', 'Đã đóng phí: gửi link học chính',
     'Dạ em đã nhận được phí và mở hành trình 21 ngày cho bé {ten_con} rồi ạ, em cảm ơn {phu_huynh}! Con học tiếp ngay trên link cũ: {link_hoc} . Nếu web chưa tự mở đủ 21 ngày, ba mẹ bấm "Ba mẹ đã đóng phí? Đăng nhập", nhập tên con và số {so_zalo}. Mỗi ngày con học một buổi khoảng 15 phút; lịch Zoom và nhóm Zalo của khoá {khoa} em gửi ngay sau đây ạ.'],
   ['goi_lai', 'Gọi lại theo hẹn',

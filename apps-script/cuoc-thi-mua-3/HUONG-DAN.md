@@ -8,16 +8,15 @@ Hai tệp trong thư mục này là bản sao `apps-script/Code.gs` và `apps-sc
 - "Link học" mặc định là link web mùa 3.
 
 ## 1. Tạo Sheet trống
-1. Đăng nhập **anhtrung.home@gmail.com**, mở Google Sheets → **Trống**. Đặt tên: `Cuộc thi mùa 3 – Dữ liệu`.
-2. Chép mã Sheet trên thanh địa chỉ: đoạn nằm giữa `/d/` và `/edit`.
+1. Đã có: https://docs.google.com/spreadsheets/d/1Icr3Kq4J77v4VMmu-CEbCFWQtSxnufAvZ5FEQGsjXH8/edit
+2. Tài khoản chạy máy chủ (anhtrung.home) phải có quyền **Chỉnh sửa** Sheet này.
 3. Chỉ chia sẻ Sheet cho đội (không để "Bất kỳ ai có đường liên kết"), vì Sheet sẽ có tên ba mẹ và số Zalo.
 
 Không cần tạo tab nào: máy chủ tự tạo các tab (TienDo, Diem, Gia đình, Đội, Cài đặt quản trị…) ở lần chạy đầu.
 
 ## 2. Tạo dự án Apps Script
 1. Vẫn tài khoản anhtrung.home, mở `script.google.com` → **Dự án mới**. Đặt tên: `Cuộc thi mùa 3 – Máy chủ`.
-2. Tệp `Code.gs`: xoá code mẫu, dán toàn bộ `apps-script/cuoc-thi-mua-3/Code.gs`.
-   Tìm dòng `const DATA_ID = 'DAN_MA_SHEET_MUA_3_VAO_DAY';` và thay `DAN_MA_SHEET_MUA_3_VAO_DAY` bằng mã Sheet ở bước 1.
+2. Tệp `Code.gs`: xoá code mẫu, dán toàn bộ `apps-script/cuoc-thi-mua-3/Code.gs` (mã Sheet mùa 3 `1Icr3Kq4J77v4VMmu-CEbCFWQtSxnufAvZ5FEQGsjXH8` đã điền sẵn ở `DATA_ID`).
 3. Bấm **＋ → Tập lệnh**, đặt tên `QuanTri`, dán toàn bộ `apps-script/cuoc-thi-mua-3/QuanTri.gs`. Bấm **Lưu**.
 4. **Triển khai → Tùy chọn triển khai mới** → loại **Ứng dụng web**. Thực thi với tư cách: **Tôi**. Ai có quyền truy cập: **Bất kỳ ai**.
 5. Bấm **Triển khai**, cho phép quyền (Sheets, Drive), chép **URL ứng dụng web** (đuôi `/exec`).
@@ -33,10 +32,10 @@ Gửi link `/exec` cho Claude để dán và đẩy lên GitHub, hoặc tự s�
 2. Mở Sheet mùa 3, tab **Cài đặt quản trị**, dòng **Mã thiết lập tài khoản**, chép mã, nhập trên trang để tạo tài khoản Quản lý.
 3. Tài khoản đội (Sale, CTV, Cố vấn) tạo ở mục **Tài khoản** trên trang. Tài khoản mùa 2 không dùng được ở mùa 3.
 
-## 5. Sửa ngày và phí cho mùa 3
-- Sheet mùa 3, tab **Cài đặt quản trị**: Hạn đăng ký, Khai mạc, Phí, Ngày bắt đầu 21 ngày, Ngày chung kết (đang là số liệu mùa 2).
-- `cuoc-thi-mua-3/index.html`: `DEMO_FEE`, `DEMO_HAN`, `DEMO_KHAI_MAC`.
-- `cuoc-thi-mua-3/xep-hang.js`: `XH_START` = thứ Hai khai mạc mùa 3 (Xếp hạng tính tuần từ ngày này).
+## 5. Ngày và phí mùa 3 (đã điền 20/11/2026)
+- Bắt đầu thứ Hai 30/11/2026, **không có hạn đăng ký**, phí **159.000đ**.
+- Tab **Cài đặt quản trị** của Sheet mùa 3 tự tạo với các giá trị này ở lần chạy đầu; muốn đổi thì sửa ngay trong tab.
+- Web: `DEMO_FEE`, `DEMO_KHAI_MAC` (`cuoc-thi-mua-3/index.html`), `XH_START` (`cuoc-thi-mua-3/xep-hang.js`).
 
 ## Cập nhật máy chủ sau này
 Sửa `Code.gs`/`QuanTri.gs` trong thư mục này → dán vào dự án "Cuộc thi mùa 3 – Máy chủ" (nhớ giữ `DATA_ID` của mùa 3) → **Triển khai → Quản lý các bản triển khai** → bút chì → **Phiên bản mới** → Triển khai. Link `/exec` giữ nguyên.

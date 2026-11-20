@@ -8,7 +8,7 @@
      Máy chủ cũ chỉ trả Top 10: web vẫn hiện được, avatar các bạn khác là nhân vật mặc định.
    - Dòng của chính bé luôn lấy điểm mới nhất trên máy, không chờ máy chủ.
    ===================================================================== */
-const XH_START = '2026-10-26';   // MÙA 3: sửa thành thứ Hai khai mạc mùa 3   // thứ Hai khai mạc (giờ Việt Nam)
+const XH_START = '2026-11-30';   // MÙA 3: thứ Hai khai mạc 30/11/2026   // thứ Hai khai mạc (giờ Việt Nam)
 const XH_TOP = 5;                // số bạn được vinh danh mỗi tuần
 const XH_MAX = 50;               // số dòng hiện tối đa
 const XH_CHARS = ['bong','anna','leo','xiaomei'];

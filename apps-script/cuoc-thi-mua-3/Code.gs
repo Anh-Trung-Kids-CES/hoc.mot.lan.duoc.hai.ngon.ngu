@@ -33,7 +33,7 @@
  */
 
 /* Sheet dữ liệu của dự án (Drive anhtrung.home@gmail.com). Script này là dự án riêng, không gắn vào Sheet. */
-const DATA_ID = 'DAN_MA_SHEET_MUA_3_VAO_DAY';   // CUỘC THI MÙA 3: mã Sheet mới (đoạn giữa /d/ và /edit trong link Sheet). KHÔNG dùng Sheet của trang chính.
+const DATA_ID = '1Icr3Kq4J77v4VMmu-CEbCFWQtSxnufAvZ5FEQGsjXH8';   // CUỘC THI MÙA 3: Sheet riêng của mùa 3. KHÔNG dùng Sheet của trang chính.
 function ss_() { return SpreadsheetApp.openById(DATA_ID); }
 function sheet_(name, head) {
   const ss = ss_();

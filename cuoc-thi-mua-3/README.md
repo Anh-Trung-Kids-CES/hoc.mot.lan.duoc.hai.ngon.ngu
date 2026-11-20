@@ -21,5 +21,5 @@ Vì tranh, giọng dùng chung: **đừng xoá hay đổi tên** file trong `xem
 
 ## Việc còn lại trước khi mở mùa 3
 1. Bật máy chủ mùa 3 và dán link `/exec` vào `SCORE_API` (`index.html`) và `API` (`quan-tri/index.html`). Khi còn trống: web học vẫn chạy nhưng chỉ lưu trên máy, chưa mở khoá 21 ngày, chưa có Xếp hạng; trang quản trị báo "chưa nối máy chủ".
-2. Sửa ngày và phí mùa 3: `DEMO_FEE`, `DEMO_HAN`, `DEMO_KHAI_MAC` (`index.html`), `XH_START` (`xep-hang.js`), tab "Cài đặt quản trị" của Sheet mùa 3.
+2. Ngày và phí mùa 3 đã điền (20/11/2026): bắt đầu thứ Hai 30/11/2026, không có hạn đăng ký, phí 159.000đ. Sheet mùa 3: https://docs.google.com/spreadsheets/d/1Icr3Kq4J77v4VMmu-CEbCFWQtSxnufAvZ5FEQGsjXH8/edit
 3. `DANG_KY_LINK` (`index.html`) vẫn trỏ trang ưu đãi hiện tại; đổi nếu mùa 3 có trang đăng ký riêng.

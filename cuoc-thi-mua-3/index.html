@@ -917,13 +917,13 @@ function demoTrack(ev, g, x){
     new Image().src=SCORE_API+'?'+q.toString(); }catch(e){}
 }
 /* Sang trang ưu đãi mang theo mã CTV và mã gia đình (nếu ba mẹ đã để lại Zalo), tên con và khoá,
-   để đơn 79.000đ khớp đúng với bé đã học thử. */
+   để đơn đăng ký khớp đúng với bé đã học thử. */
 function dangKyLink(){ const q=new URLSearchParams(), r=demoRef(), f=demoFam();
   if(r) q.set('ref',r); if(f&&f.code) q.set('fam',f.code);
   if(KID&&KID.name) q.set('ten',KID.name); if(KID&&KID.group) q.set('khoa',KID.group);
   const qs=q.toString(); return DANG_KY_LINK+(qs?(DANG_KY_LINK.includes('?')?'&':'?')+qs:''); }
 function demoFam(){ return lsGet('lle3-fam',null); }
-const DEMO_FEE = "79.000đ", DEMO_HAN = "hết ngày 25/10/2026", DEMO_KHAI_MAC = "thứ Hai 26/10/2026";   // MÙA 3: sửa phí, hạn đăng ký, ngày khai mạc
+const DEMO_FEE = "159.000đ", DEMO_HAN = "", DEMO_KHAI_MAC = "thứ Hai 30/11/2026";   // MÙA 3: phí 159k, không có hạn đăng ký, khai mạc 30/11/2026
 /* Kích hoạt 21 ngày: hiện khi bé học xong buổi 2 của bản học thử. Ba mẹ quét QR đóng phí học liệu rồi nhắn Zalo đội hỗ trợ;
    đội tick "Mở khóa 21 ngày" trên trang quản trị, lần mở web sau máy tự mở đủ 21 ngày theo số điện thoại đã để lại. */
 const KH_SAU_BUOI = 2, KH_ZALO = "https://zalo.me/0974840845", KH_QR = "../xem-truoc/tai-nguyen/trang/qr-chuyen-khoan.webp";
