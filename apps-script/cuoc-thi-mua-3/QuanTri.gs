@@ -564,8 +564,8 @@ function qtBc3_(f, T, cd, now) {
       const g = m[1], n = +m[2] + 1, v = p[k] || {}; groups[g] = 1;
       if (v.clipSent) clips++;
       if (v.done) (g === 'seed' ? seed : can)[n] = 1;
-      else if (Object.keys(v.ls || v.ex || {}).length) dang.push((g === 'seed' ? 'Seed' : 'Canopy') + ' ngày ' + n);
-      if (g === 'seed' && v.done) {
+      else if (Object.keys(v.ol || v.ls || v.ex || {}).length) dang.push((g === 'seed' ? 'Seed' : 'Canopy') + ' ngày ' + n);
+      if (g === 'seed' && v.done && v.ls) {   // MÙA 3: bài lớp offline ghi ở v.ol (không có 5 bước cũ)
         const ls = v.ls || {}; for (let i = 0; i < 5; i++) steps[i] += +ls[i] || 0; stepn++;
         if (+ls[2] <= 1) low.push('Seed ngày ' + n + ': bước Cụm từ chỉ ' + ls[2] + ' lượt');
         if (+ls[1] <= 1) low.push('Seed ngày ' + n + ': bước Học từ chỉ ' + ls[1] + ' lượt');

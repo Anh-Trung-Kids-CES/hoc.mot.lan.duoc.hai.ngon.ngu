@@ -1,0 +1,40 @@
+/* Big book – bài tập mới (bigbook.js, 13/11/2026). Dùng chung khung .bb2 của bo-sung.css */
+.bbm-nav{flex-wrap:wrap;gap:8px}
+.bbm-lang{display:inline-flex;gap:4px;margin-left:auto}
+.bbm-lang .ls-b{min-width:52px;padding:6px 10px;opacity:.6}
+.bbm-lang .ls-b.on{opacity:1;outline:3px solid var(--ls-ok,#3BA55C)}
+.ls-b.pulse{animation:bbmPulse 1s ease-in-out infinite}
+@keyframes bbmPulse{0%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(255,183,3,.7)}50%{transform:scale(1.08);box-shadow:0 0 0 10px rgba(255,183,3,0)}}
+.bb2-pg.glow{outline:6px solid #FFB703;outline-offset:-6px}
+.bb2-pg.tap{cursor:pointer}
+.bb2-pg.tap::after{content:'👆 Chạm vào tranh';position:absolute;right:10px;top:10px;background:rgba(255,255,255,.9);border-radius:999px;padding:4px 10px;font-weight:700;font-size:14px}
+.bbm-mark{position:absolute;transform:translate(-50%,-50%);font-size:34px;font-weight:900;color:#E63946;text-shadow:0 0 4px #fff;pointer-events:none}
+.bbm-ring{position:absolute;border:5px solid var(--ls-ok,#3BA55C);border-radius:18px;box-shadow:0 0 0 4px rgba(255,255,255,.8);pointer-events:none;animation:bbmPop .4s ease-out}
+.bbm-ring.model{border-color:#FFB703}
+@keyframes bbmPop{from{transform:scale(.6);opacity:0}to{transform:scale(1);opacity:1}}
+.bbm-tip{margin:4px 0;font-weight:700;color:#5b4a3a;text-align:center}
+.bbm-yn{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.bbm-yn .ls-opt{font-size:clamp(22px,2.6vw,30px);font-weight:900;padding:18px 8px;justify-content:center}
+.bbm-yn .yes{color:#2a7d46}.bbm-yn .no{color:#C8372D}
+.bbm-sent{display:flex;flex-direction:column;gap:10px}
+.bbm-sent .ls-opt{justify-content:flex-start;text-align:left;padding:12px 14px;font-size:clamp(17px,1.9vw,22px);font-weight:700;flex-direction:column;align-items:flex-start}
+.bbm-sent .ls-opt small{font-weight:500;opacity:.75}
+.bbm-sent .ls-opt.lit,.bbm-tile.lit{outline:4px solid #FFB703}
+.bbm-slots{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;min-height:56px;padding:8px;background:#FFF7EA;border-radius:14px}
+.bbm-slot{min-width:64px;min-height:44px;border-bottom:4px dashed #C9B79C;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:clamp(18px,2vw,24px);padding:0 6px}
+.bbm-slot.fill{border-bottom-style:solid;border-color:var(--ls-ok,#3BA55C);color:#2b2b2b}
+.bbm-tiles{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.bbm-tile{flex:0 0 auto;min-width:72px;padding:10px 14px;font-size:clamp(18px,2vw,24px);font-weight:800;flex-direction:column}
+.bbm-tile small{font-size:13px;font-weight:500;opacity:.75}
+.bbm-tile.used{visibility:hidden}
+.bbm-role{flex-direction:column}
+.bb2-half small{display:block;font-size:14px;font-weight:500;opacity:.75}
+@media (max-width:760px){.bbm-lang{margin-left:0}}
+.bb2-opts .ls-opt.bbm-txt{min-height:84px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.bb2-opts .ls-opt.bbm-txt .sx-nm{font-size:clamp(22px,2.6vw,32px)}
+/* .ls-opt gốc là ô vuông chứa tranh: các nút chữ, câu, thẻ của big book cần cao theo nội dung */
+.bbm-yn .ls-opt,.bbm-sent .ls-opt,.bbm-tiles .ls-opt,.bb2-opts .ls-opt.bbm-txt{aspect-ratio:auto;max-height:none;height:auto;width:100%;background:#fff;border:4px solid #E6DCCB;display:flex}
+.bbm-tiles .ls-opt{width:auto}
+.bbm-sent .ls-opt.right,.bbm-tiles .ls-opt.right,.bbm-yn .ls-opt.right,.bb2-opts .ls-opt.bbm-txt.right{border-color:var(--ls-ok,#3BA55C)}
+.bbm-sent .ls-opt.model,.bb2-opts .ls-opt.bbm-txt.model{border-color:#FFB703}
+.bbm-sent .ls-opt.off,.bbm-yn .ls-opt.off,.bbm-tiles .ls-opt.off{opacity:.4}

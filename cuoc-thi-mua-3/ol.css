@@ -1,0 +1,22 @@
+/* Cuộc thi mùa 3 · màn học bài lớp offline (ol.js): thanh tiêu đề gọn + khung bài chiếm hết phần còn lại */
+.ol-wrap{display:flex;flex-direction:column;gap:8px;height:100vh;height:100dvh;padding:8px 12px 10px;box-sizing:border-box}
+.ol-bar{display:flex;align-items:center;gap:10px;min-height:48px}
+.ol-back{flex:none;padding:8px 14px;min-height:44px;display:inline-flex;align-items:center}
+.ol-tt{flex:1;min-width:0;line-height:1.2}
+.ol-tt small{display:block;color:#7A6A58;font-weight:700;font-size:13px}
+.ol-tt b{display:block;font-size:19px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ol-pts{flex:none;background:#FFF4CC;border:2px solid #FFC72C;border-radius:999px;padding:4px 12px;font-weight:800}
+.ol-x{flex:none;min-height:44px}
+.ol-x[hidden]{display:none}
+.ol-frame{flex:1;width:100%;min-height:0;border:0;border-radius:18px;background:#FFF7EA;box-shadow:0 2px 0 rgba(0,0,0,.06),0 6px 22px rgba(58,42,26,.10)}
+@media (orientation:portrait) and (max-width:820px){
+  .ol-wrap{height:calc(100dvh - var(--nav,0px));padding:6px 8px 8px}
+  body.in-step .ol-wrap{height:100dvh}
+  .ol-tt b{font-size:16px}
+  .ol-x{padding:6px 10px}
+}
+@media (max-height:500px) and (orientation:landscape){
+  .ol-wrap{padding:4px 8px 6px;gap:4px}
+  .ol-bar{min-height:40px}
+  .ol-tt small{display:none}
+}

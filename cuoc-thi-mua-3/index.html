@@ -27,6 +27,7 @@
 <link rel="stylesheet" href="cong-zalo.css">
 <link rel="stylesheet" href="huong-dan-clip.css">
 <link rel="stylesheet" href="xep-hang.css">
+<link rel="stylesheet" href="ol.css?v=20261120a">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+SC:wght@500;700&display=swap" rel="stylesheet">
 <style>
 :root{color-scheme:light;
@@ -469,6 +470,8 @@ a.gtab{text-decoration:none}
 <script src="khen.js"></script>
 <script src="huong-dan-clip.js"></script>
 <script src="xep-hang.js"></script>
+<script src="bai-offline.js?v=20261120a"></script>
+<script src="ol.js?v=20261120a"></script>
 <script>
 /* =====================================================================
    PHẦN DỮ LIỆU — SỬA NỘI DUNG Ở ĐÂY
@@ -868,9 +871,9 @@ const SEEDLING_DAYS = [
 const CANOPY_DAYS = canopyDays();
 
 const GROUPS = {
-  seed:   {name:"Little Seed", icon:"🌱", color:"#3BB273", age:"Bé 5–10 tuổi mới bắt đầu",   level:"Bé chưa biết tiếng Anh, tiếng Trung, hoặc cả hai", days:lsDays([SEED_DAYS[6],SEED_DAYS[13],SEED_DAYS[20]]),
+  seed:   {name:"Little Seed", icon:"🌱", color:"#3BB273", age:"Bé 5–10 tuổi mới bắt đầu",   level:"Bé chưa biết tiếng Anh, tiếng Trung, hoặc cả hai", days:olDays('seed'),   /* MÙA 3: 18 bài đầu web Little Seed lớp offline + 3 buổi Zoom (ol.js) */
           img:"../xem-truoc/tai-nguyen/trang/ls_o_truyen_v1.webp", banners:["../xem-truoc/tai-nguyen/trang/ls_banner_v1.webp","../xem-truoc/tai-nguyen/trang/ls_banner_v2.webp","../xem-truoc/tai-nguyen/trang/ls_banner_v3.webp"]},
-  canopy: {name:"Canopy",      icon:"🌳", color:"#E3262E", age:"Bé đã có nền tảng", level:"Bé có tiếng Anh A1 và tiếng Trung YCT 1",       days:CANOPY_DAYS,
+  canopy: {name:"Canopy",      icon:"🌳", color:"#E3262E", age:"Bé đã có nền tảng", level:"Bé có tiếng Anh A1 và tiếng Trung YCT 1",       days:olDays('canopy'),   /* MÙA 3: 18 bài đầu web Seedling 48 buổi + 3 buổi Zoom (ol.js) */
           img:"../xem-truoc/tai-nguyen/trang/canopy_ban_do.webp", banners:["../xem-truoc/tai-nguyen/trang/cn_banner_v1.webp","../xem-truoc/tai-nguyen/trang/cn_banner_v2.webp","../xem-truoc/tai-nguyen/trang/cn_banner_v3.webp"]}
 };
 /* Seedling đang tạm ẩn. Muốn hiện lại, thêm dòng này vào GROUPS ở trên:
@@ -962,7 +965,7 @@ function mergeProg(a,b){
   for(const k in (b||{})){ const x=out[k], y=b[k];
     if(!x){ out[k]=y; continue; }
     if(k==='_shop'||k==='_j'){ out[k]=((y&&y.t)||0)>((x&&x.t)||0)?y:x; continue; }
-    const sc=s=>(s.done?1000:0)+Object.keys(s.ls||{}).length*10+Object.keys(s.ex||{}).length*10+(s.clipSent?5:0);
+    const sc=s=>(s.done?1000:0)+Object.keys(s.ol||{}).length*10+Object.keys(s.ls||{}).length*10+Object.keys(s.ex||{}).length*10+(s.clipSent?5:0);
     if(sc(y)>sc(x)) out[k]=y; }
   return out;
 }
@@ -989,6 +992,7 @@ function dayPoints(g,i){ const s=P[g+'-'+i]; return dayPoints0(g,i) + (s && s.cl
 function dayPoints0(g,i){
   const s=P[g+'-'+i], d=GROUPS[g].days[i]; if(!s) return 0;
   if(d.zoom) return s.done?PTS.zoom:0;
+  if(d.ol) return olDayPoints(s,d);
   if(d.cx) return cxDayPoints(s,d);
   if(d.ls) return lsDayPoints(s,d);
   return (s.learn?PTS.learn:0)+(s.parent?PTS.parent:0)+gamePts(s)+(s.done?PTS.done:0)+(s.done&&d.clip?PTS.clip:0);
@@ -1448,6 +1452,8 @@ const STAGE_INFO = {
     {topic:'Jobs · Ghé thăm nơi làm việc', desc:'Con nói về nghề của người thân và nơi họ làm việc.'},
     {topic:'Transports · Lên đường!', desc:'Con nói mình đi bằng gì: xe đạp, xe buýt, tàu hỏa, máy bay…'}]
 };
+if(typeof OL_STAGE!=='undefined'){ STAGE_INFO.seed=OL_STAGE.seed; STAGE_INFO.canopy=OL_STAGE.canopy; }   // MÙA 3: chủ đề chặng theo bài lớp offline
+
 /* Bản đồ thế giới: MỘT tranh ngang vừa khít màn hình (kiểu sảnh trò chơi), 3 khu = 3 chặng,
    con đường đi qua 18 biển số (6 buổi mỗi chặng), biển Zoom cuối mỗi chặng, sân khấu Chung kết ở đỉnh đồi.
    Toạ độ (% ngang, % dọc) dò từ dải đất trống trong tranh. */
@@ -1569,6 +1575,7 @@ function viewDay(g,i,step){
   if(!isUnlocked(g,i)){ if(DEMO) setTimeout(()=>demoGate(),200); else toast('Buổi này chưa mở khóa 🔒'); location.hash='#/g/'+g; return; }
   cur={g,i,day};
   if(day.zoom) return viewZoom(g,i);
+  if(day.ol) return viewOlDay(g,i,step);
   if(day.cx) return viewCanopyDay(g,i,step);
   if(day.ls) return viewSeedDay(g,i,step);
   const s=st(g,i);
@@ -1820,7 +1827,7 @@ const MI_OK=()=>`<span class="mi-ok">✓ Đã gửi clip · +${PTS.clip} điểm
 function missionHTML(g,i){
   if(TEACHER && !KID) return '';
   const s=st(g,i), sent=!!s.clipSent, cg=clipGuide(g,i);
-  const say=cg&&cg.say&&cg.say[0];
+  const say=(cg&&cg.say&&cg.say[0]) || (typeof olSay==='function'?olSay(g,i):null);   // MÙA 3: câu từ tên bài
   return `<div class="mission ${sent?'sent':''}">
     <div class="mi-h"><span class="mi-ic">🎥</span><div><b>Nhiệm vụ chia sẻ (+${PTS.clip} điểm)</b>
       <small>Ba mẹ quay một clip ngắn (15–30 giây) con nói câu hôm nay bằng tiếng Anh và tiếng Trung, rồi gửi vào nhóm Zalo của thử thách.${cg?' Đã có sẵn 2 cách quay và lời thoại cho ba mẹ.':''}</small></div></div>
