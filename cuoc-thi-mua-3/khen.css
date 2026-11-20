@@ -1,0 +1,78 @@
+/* ===================== KHEN THƯỞNG ===================== */
+/* sai lần 2: đáp án đúng nhấp nháy viền vàng để con chạm */
+.ls-opt.hint,.ls-box.hint{outline:6px solid #FFC72C;outline-offset:3px;animation:khint 1s ease-in-out infinite;position:relative;z-index:2}
+@keyframes khint{50%{outline-color:#FF9F1C;transform:scale(1.04)}}
+
+/* cuối bài Canopy */
+.cx-endstars{display:flex;align-items:center;justify-content:center;gap:6px}
+.cx-endpts{font-size:28px;color:#C99A00}
+.cx-khen{font-weight:800;font-size:clamp(17px,2.8vh,22px);color:#1E7A4B;text-align:center;margin:4px 0}
+
+/* quà bất ngờ, huy hiệu mới, xong chặng, lời nhắn ba mẹ (trong màn hoàn thành buổi) */
+.rw-gift{display:flex;gap:10px;align-items:flex-end;background:#FFF8E1;border:3px dashed #FFC72C;border-radius:18px;padding:10px;margin:8px 0;text-align:left}
+.rw-huou{width:64px;height:92px;object-fit:contain;flex:none;animation:qbob2 2s ease-in-out infinite}
+@keyframes qbob2{50%{transform:translateY(-5px)}}
+.rw-letter{display:flex;flex-direction:column;gap:4px;min-width:0}
+.rw-letter small{font-weight:800;color:#C2410C}
+.rw-letter b{font-size:15px;line-height:1.3}
+.rw-item{display:flex;align-items:center;gap:10px}
+.rw-item img{height:64px;max-width:96px;object-fit:contain}
+.rw-item img.bg{width:96px;height:54px;object-fit:cover;border-radius:10px}
+.rw-item em{font-style:normal;font-weight:800;color:#7B5CD6}
+.rw-go{font-weight:800;font-size:13px;color:#2F6FD6}
+.rw-badges{background:#F3ECFF;border-radius:18px;padding:10px;margin:8px 0}
+.rw-badges>small{font-weight:800;color:#5A3FB0}
+.rw-badges>div{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:6px 0}
+.rw-badges .hj-badge{width:120px}
+.rw-stage{background:#E6F7EE;border-radius:14px;padding:8px 12px;margin:8px 0;font-weight:700;font-size:14px;text-align:left}
+.rw-stage a{font-weight:800;color:#1E7A4B;white-space:nowrap}
+.rw-parent{background:#FFF4CC;border-radius:14px;padding:8px 12px;margin:8px 0;font-size:13.5px;line-height:1.4;text-align:left;color:#5B4A2E}
+.rw-parent i{font-style:normal;font-weight:800;color:#3A2A1A}
+
+/* huy hiệu */
+.hj-badge{position:relative;z-index:0;display:flex;flex-direction:column;align-items:center;gap:3px;text-align:center;min-width:0}
+.hj-medal{position:relative;display:block;margin-bottom:12px;width:clamp(58px,11vh,92px);height:clamp(58px,11vh,92px);border-radius:50%;padding:5px;
+  background:conic-gradient(#FFD84D,#E9A900,#FFD84D,#E9A900,#FFD84D);box-shadow:0 4px 0 rgba(0,0,0,.18)}
+.hj-medal::before,.hj-medal::after{content:'';position:absolute;bottom:-10px;width:16px;height:22px;background:#E3262E;z-index:-1}
+.hj-medal::before{left:22%;transform:skewX(12deg)}.hj-medal::after{right:22%;transform:skewX(-12deg);background:#2F6FD6}
+.hj-medal i{display:block;width:100%;height:100%;border-radius:50%;background:#FFF8E7 center/82% no-repeat;border:3px solid #fff}
+.hj-badge.scene .hj-medal i{background-size:cover}
+.hj-medal em{position:absolute;top:-6px;right:-10px;background:#E3262E;color:#fff;font-style:normal;font-weight:800;font-size:11px;border-radius:999px;padding:1px 7px;animation:khint 1s infinite}
+.hj-badge b{font-size:clamp(12px,1.9vh,14px);line-height:1.15}
+.hj-badge small{font-size:11px;color:var(--muted);line-height:1.2}
+.hj-badge:not(.on) .hj-medal{background:#D8D2C6;filter:grayscale(1);opacity:.55}
+.hj-badge:not(.on) b{color:var(--muted)}
+
+/* trang Hành trình của con */
+.hjscr{background-color:#E4F3FF}
+.hj-team{margin-left:auto;background:#fff;border-radius:999px;padding:5px 14px;font-weight:700;font-size:clamp(12px,2vh,15px);box-shadow:0 3px 0 rgba(0,0,0,.12)}
+.hj-team b{color:#E3262E}
+.hj-left{flex:1.1;min-width:0;display:flex;flex-direction:column;gap:var(--gap);min-height:0}
+.hj-me{display:flex;align-items:center;gap:14px;background:#fff;border-radius:24px;padding:10px 14px;box-shadow:0 6px 0 rgba(58,42,26,.15)}
+.hj-me .ava-mini.big{width:clamp(56px,11vh,84px);height:clamp(56px,11vh,84px);flex:none}
+.hj-me>div{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.hj-me b{font-size:clamp(18px,3.2vh,26px)}
+.hj-me small{font-weight:700;color:var(--muted)}
+.hj-road{position:relative;height:22px;border-radius:999px;background:#F0E2C0;overflow:hidden;margin-top:4px}
+.hj-road i{position:absolute;inset:0 auto 0 0;background:linear-gradient(90deg,#3BB273,#9BE15D)}
+.hj-road span{position:relative;display:grid;place-items:center;height:100%;font-weight:800;font-size:13px}
+.hj-stats{flex:1;min-height:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:var(--gap)}
+.hj-stat{display:flex;flex-direction:column;align-items:center;justify-content:center;background:#fff;border-radius:22px;padding:8px;text-align:center;box-shadow:0 6px 0 rgba(58,42,26,.15);min-height:0}
+.hj-ic{font-size:clamp(24px,5vh,40px);line-height:1}
+.hj-stat b{font-size:clamp(28px,6vh,52px);line-height:1.05;color:#2F6FD6}
+.hj-stat>span:not(.hj-ic){font-weight:800;font-size:clamp(13px,2vh,16px)}
+.hj-stat small{font-size:12px;color:var(--muted);font-weight:700}
+.hj-stat small a{color:#E3487A;font-weight:800}
+.hj-go{align-self:stretch;text-align:center}
+.hj-side h4 small{font-weight:700;color:var(--muted);font-size:13px}
+.hj-badges{flex:1;min-height:0;overflow:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:14px 8px;align-content:start;padding:6px 2px 12px}
+@media (max-height:500px){
+  .hj-team{font-size:11px;padding:3px 8px}
+  .hj-stat small{display:none}
+  .hj-me{padding:6px 10px}
+  .hj-badges{grid-template-columns:repeat(4,1fr);gap:10px 4px}
+  .hj-badge small{display:none}
+}
+@media (orientation:portrait) and (min-width:821px){
+  .hjscr .q-body{flex-direction:column}
+}
