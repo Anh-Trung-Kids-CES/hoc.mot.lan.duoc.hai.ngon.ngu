@@ -2,7 +2,7 @@
 
 Web mùa 3 (`cuoc-thi-mua-3/`) và trang quản trị mùa 3 (`cuoc-thi-mua-3/quan-tri/`) dùng **máy chủ và Sheet riêng**, không đụng vào máy chủ, Sheet "Anh-Trung-Kids – Dữ liệu dự án" của trang chính.
 Hai tệp trong thư mục này là bản sao `apps-script/Code.gs` và `apps-script/QuanTri.gs` (bản 20/11/2026), chỉ khác:
-- `DATA_ID` trỏ tới Sheet mùa 3 (chị dán mã vào).
+- `DATA_ID` trỏ tới Sheet mùa 3 (đã điền sẵn).
 - `OLD_DATA_ID` để trống: không đọc đơn đăng ký, danh sách đóng tiền của Sheet cũ.
 - Thư mục ảnh Zoom có đuôi "– Mùa 3".
 - "Link học" mặc định là link web mùa 3.
