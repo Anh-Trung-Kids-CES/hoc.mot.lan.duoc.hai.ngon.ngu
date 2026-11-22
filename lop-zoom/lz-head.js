@@ -8,7 +8,16 @@ const HEAD_MODEL = 'https://storage.googleapis.com/mediapipe-models/face_landmar
 const HEAD = (() => {
   const SIM = QS.has('headsim'), HOLD = 650, TH_Y = 0.17, TH_P = 0.10;
   let on = false, starting = false, video = null, stream = null, lm = null, raf = 0, last = 0;
-  let base = { yaw: 0, pitch: 0, n: 0 }, sign = +lsGet('lz-head-sign', 0) || 0;
+  let base = { yaw: 0, pitch: 0, n: 0 }, bufP = [], neutralAt = 0, sign = 1;
+  /* 22/11/2026: chiều trái/phải CỐ ĐỊNH theo hình học (yaw > 0 = con quay sang tay trái của con = bên trái màn hình).
+     Bản cũ học chiều ở bước làm quen và lưu mãi trên máy: lỡ quay nhầm (hoặc đang nhìn ô xin quyền camera) là quay đúng vẫn bị chấm sai.
+     Mốc "nhìn thẳng" chỉ lấy khi đầu đứng yên; kẹt một hướng quá 3,5 giây thì lấy lại mốc. */
+  function baseFrom(p) {
+    bufP.push(p); if (bufP.length > 8) bufP.shift(); if (bufP.length < 8) return false;
+    const ys = bufP.map(x => x.yaw), ps = bufP.map(x => x.pitch);
+    if (Math.max(...ys) - Math.min(...ys) > 0.06 || Math.max(...ps) - Math.min(...ps) > 0.05) return false;
+    base = { yaw: ys.reduce((a, b) => a + b, 0) / 8, pitch: ps.reduce((a, b) => a + b, 0) / 8, n: 8 }; bufP = []; return true;
+  }
   let holdDir = '', holdT = 0, needNeutral = false, calib = null, simPose = { yaw: 0, pitch: 0 }, faceSeen = false;
 
   /* ---------- tư thế đầu từ các điểm trên mặt ---------- */
@@ -42,7 +51,7 @@ const HEAD = (() => {
     else if (lm && video && video.readyState >= 2) { try { const r = lm.detectForVideo(video, t); if (r.faceLandmarks && r.faceLandmarks[0]) p = pose(r.faceLandmarks[0]); } catch (e) { } }
     faceSeen = !!p; const box = $('#hdCam'); box && box.classList.toggle('noface', !p);
     if (!p) { setAim(-1, 0); holdDir = ''; return; }
-    if (base.n < 8) { base.yaw = (base.yaw * base.n + p.yaw) / (base.n + 1); base.pitch = (base.pitch * base.n + p.pitch) / (base.n + 1); base.n++; return; }
+    if (base.n < 8) { if (!baseFrom(p)) { if (calib && !calib.shown) { calib.shown = 1; calibShow(); } return; } }
     const dy = p.yaw - base.yaw, dp = p.pitch - base.pitch;
     let dir = '';
     if (Math.abs(dy) > TH_Y) dir = dy * (sign || 1) > 0 ? 'L' : 'R';
@@ -69,7 +78,7 @@ const HEAD = (() => {
   function handle(dir, t) {
     decorate();
     const a = picks();
-    if (needNeutral) { if (!dir) needNeutral = false; setAim(-1, 0); return; }
+    if (needNeutral) { if (!dir) { needNeutral = false; neutralAt = 0; } else { neutralAt = neutralAt || t; if (t - neutralAt > 3500) { base.n = 0; bufP = []; neutralAt = 0; } } setAim(-1, 0); return; }
     if (!a.length || !dir) { holdDir = ''; setAim(-1, 0); return; }
     if (dir !== holdDir) { holdDir = dir; holdT = t; }
     const f = (t - holdT) / HOLD, i = IDX[dir];
@@ -79,30 +88,33 @@ const HEAD = (() => {
 
   /* ---------- tập quay đầu lần đầu (cũng để biết hướng trái/phải của camera máy này) ---------- */
   const STEPS = [
-    { k: 'L', t: 'Con quay đầu sang bên TRÁI nhé!', ic: '⬅️' },
+    { k: 'C', t: 'Con nhìn thẳng vào màn hình nhé!', ic: '🙂' }, { k: 'L', t: 'Con quay đầu sang bên TRÁI nhé!', ic: '⬅️' },
     { k: 'R', t: 'Giờ con quay đầu sang bên PHẢI!', ic: '➡️' },
     { k: 'U', t: 'Con ngửa đầu nhìn lên trời nào!', ic: '⬆️' }
   ];
   function calibShow() {
     const s = STEPS[calib.i], ov = $('#hdCal'); if (!ov) return;
     ov.innerHTML = `<div class="hd-card"><div class="hd-ic">${s.ic}</div><h2>${s.t}</h2>
-      <div class="hd-prog"><i id="hdProg"></i></div><p class="small vn">${faceSeen || SIM ? 'Con giữ yên một chút…' : 'Con nhìn thẳng vào máy để máy thấy mặt con nhé.'}</p>
+      <div class="hd-prog"><i id="hdProg"></i></div>${calib.note ? `<p style="color:#C0392B;font-weight:800">${calib.note === 'L' ? 'Đó là bên phải rồi. Con quay về phía mũi tên ⬅️, phía tay trái của con nhé!' : 'Đó là bên trái rồi. Con quay về phía mũi tên ➡️, phía tay phải của con nhé!'}</p>` : ''}<p class="small vn">${faceSeen || SIM ? 'Con giữ yên một chút…' : 'Con nhìn thẳng vào máy để máy thấy mặt con nhé.'}</p>
       <button class="btn ghost" id="hdSkip" style="font-size:15px">Bỏ qua, chơi bằng chạm</button></div>`;
     $('#hdSkip').onclick = () => { stop(); ov.remove(); };
   }
   function calibStep(dir, dy, t) {
     const s = STEPS[calib.i];
     let hit = false;
-    if (s.k === 'L' && Math.abs(dy) > TH_Y) hit = true;
-    if (s.k === 'R' && Math.abs(dy) > TH_Y && Math.sign(dy) === -calib.sign) hit = true;
+    if (calib.wait) { if (!dir) calib.wait = false; return; }   // vừa xong một bước: chờ con quay về thẳng rồi mới tính bước sau
+    if (s.k === 'C' && !dir) hit = true;
+    if (s.k === 'L' && dy > TH_Y) hit = true;
+    if (s.k === 'R' && dy < -TH_Y) hit = true;
+    const nguoc = (s.k === 'L' && dy < -TH_Y) || (s.k === 'R' && dy > TH_Y);
+    if (nguoc && calib.note !== s.k) { calib.note = s.k; calibShow(); }
     if (s.k === 'U' && dir === 'U') hit = true;
     if (!hit) { calib.t0 = 0; const pr = $('#hdProg'); pr && (pr.style.width = '0%'); if (!calib.shown) { calib.shown = 1; calibShow(); } return; }
     if (!calib.t0) calib.t0 = t;
     const f = (t - calib.t0) / 500, pr = $('#hdProg'); pr && (pr.style.width = Math.min(100, f * 100) + '%');
     if (f < 1) return;
-    if (s.k === 'L') { calib.sign = Math.sign(dy); sign = calib.sign; lsSet('lz-head-sign', sign); }
-    SND.beep('ok'); calib.i++; calib.t0 = 0; calib.shown = 0; needNeutral = true;
-    if (calib.i >= STEPS.length) { calib = null; const ov = $('#hdCal'); ov && ov.remove(); lsSet('lz-head', true); toastHead('🙆 Xong rồi! Con quay đầu để chọn tranh nhé. Giữ một chút cho vòng sáng đầy là chọn.'); return; }
+    SND.beep('ok'); calib.i++; calib.t0 = 0; calib.shown = 0; calib.note = ''; calib.wait = s.k !== 'C'; needNeutral = s.k !== 'C';
+    if (calib.i >= STEPS.length) { calib = null; const ov = $('#hdCal'); ov && ov.remove(); lsSet('lz-head-v2', true); lsSet('lz-head', true); toastHead('🙆 Xong rồi! Con quay đầu để chọn tranh nhé. Giữ một chút cho vòng sáng đầy là chọn.'); return; }
     calibShow();
   }
   function toastHead(t) { let el = $('#hdToast'); if (!el) { el = document.createElement('div'); el.id = 'hdToast'; el.className = 'msg hd-toast'; document.body.appendChild(el); } el.textContent = t; el.style.display = 'block'; clearTimeout(el._t); el._t = setTimeout(() => el.style.display = 'none', 4500); }
@@ -116,8 +128,8 @@ const HEAD = (() => {
     try {
       await startCam();
       if (!SIM) await loadModel();
-      on = true; base = { yaw: 0, pitch: 0, n: 0 }; needNeutral = true;
-      if (withCalib || !sign) { calib = { i: 0, sign: 0, t0: 0 }; if (!$('#hdCal')) { const ov = document.createElement('div'); ov.id = 'hdCal'; ov.className = 'hd-cal'; document.body.appendChild(ov); } calibShow(); }
+      on = true; base = { yaw: 0, pitch: 0, n: 0 }; bufP = []; neutralAt = 0; needNeutral = true;
+      if (withCalib || !lsGet('lz-head-v2', false)) { calib = { i: 0, t0: 0, note: '' }; if (!$('#hdCal')) { const ov = document.createElement('div'); ov.id = 'hdCal'; ov.className = 'hd-cal'; document.body.appendChild(ov); } calibShow(); }
       tick(); btn();
     } catch (e) {
       console.error(e); stop();
