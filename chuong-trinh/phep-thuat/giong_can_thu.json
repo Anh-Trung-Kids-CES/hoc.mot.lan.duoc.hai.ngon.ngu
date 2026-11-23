@@ -3326,9 +3326,7 @@
   "id": "common.ok3.zh",
   "l": "zh",
   "text": "很好！",
-  "same": [
-   "common.try.zh"
-  ]
+  "same": []
  },
  {
   "id": "common.sent.zh",
@@ -3370,6 +3368,12 @@
   "id": "common.bonus.zh",
   "l": "zh",
   "text": "奖励魔法！",
+  "same": []
+ },
+ {
+  "id": "common.try.zh",
+  "l": "zh",
+  "text": "加油！",
   "same": []
  },
  {

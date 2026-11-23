@@ -177,7 +177,7 @@ COMMON = {
  'en': {'wake': 'Hi, Leo!', 'ok1': 'Great!', 'ok2': 'Super!', 'ok3': 'Wow!', 'ok4': 'Good job!', 'sent': 'Nice sentence!', 'hello': 'Hi! I can do magic!', 'undo': 'OK!', 'other': 'I can do magic too!', 'nothing': 'Nothing to undo!',
         'double': 'Double magic!', 'bonus': 'Bonus magic!', 'try': 'Good try!', 'more': 'Say more!', 'gold': 'Golden magic!', 'again': 'Your turn!', 'no': 'No, no!'},
  'zh': {'wake': '你好，Xiaomei！', 'ok1': '真棒！', 'ok2': '太好了！', 'ok3': '很好！', 'sent': '说得真好！', 'hello': '你好！我会魔法！', 'undo': '好的！', 'other': '我也会魔法！', 'nothing': '还没有魔法！',
-        'double': '双重魔法！', 'bonus': '奖励魔法！', 'try': '很好！', 'more': '再说一句！', 'gold': '金色魔法！', 'again': '轮到你啦！', 'no': '不，不！'}}
+        'double': '双重魔法！', 'bonus': '奖励魔法！', 'try': '加油！', 'more': '再说一句！', 'gold': '金色魔法！', 'again': '轮到你啦！', 'no': '不，不！'}}
 COMMON['vi'] = {'try': 'Con thử nói cả câu nhé!', 'two': 'Bây giờ con nói liền hai phép nhé!', 'gold': 'Con giỏi quá!',
                 'i1': 'Có ba bậc thang. Bậc một: con nói một từ.', 'i2': 'Bậc hai: con nói cả câu.', 'i3': 'Bậc ba: con nói liền hai phép một hơi!'}
 # luật hỏi – đáp (23/11/2026): câu chung mới, câu hỏi mẫu, nhóm câu hỏi từng unit, từ khoá cho gợi ý bậc 1

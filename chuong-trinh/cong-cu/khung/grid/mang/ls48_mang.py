@@ -175,7 +175,7 @@ U[8] = dict(ten_en='The Animal Games', ten_zh='动物运动会', bg='ls_park', p
          [('animal', '动物', 'animal'), ('game', '运动会', 'game'), ('mouse', '老鼠', 'mouse')]])
 
 U[10] = dict(ten_en='Rain, Rain!', ten_zh='下雨啦！', bg='ls_park', phan=[
-    ('It Is Sunny!', '今天晴天！', [('bong', 'It is sunny today! I am happy!', '今天晴天！我很开心！'), ('me', 'It is hot!', '好热！'), ('bong', "Let's go! The park! Yay!", '走吧！去公园！耶！'),
+    ('It Is Sunny!', '今天是晴天！', [('bong', 'It is sunny today! I am happy!', '今天是晴天！我很开心！'), ('me', 'It is hot!', '好热！'), ('bong', "Let's go! The park! Yay!", '走吧！去公园！耶！'),
                                    ('leo', 'Hello, Bông! I am in the park!', 'Bông，你好！我在公园！')]),
     ('It Is Windy!', '刮风了！', [('leo', "Let's play!", '我们玩吧！'), ('anna', 'I like the park! I can run!', '我喜欢公园！我能跑！'), ('bong', 'Oh! It is cloudy today.', '哦！今天多云。'),
                                  ('leo', 'Whoosh, whoosh! It is windy!', '呼呼！刮风了！'), ('anna', 'Oh no! My bag!', '哎呀！我的包！')]),
@@ -183,9 +183,9 @@ U[10] = dict(ten_en='Rain, Rain!', ten_zh='下雨啦！', bg='ls_park', phan=[
                                 ('leo', 'It is rainy. No park!', '下雨了。不去公园！'), ('me', "Let's eat! Let's drink milk!", '我们吃饭吧！喝牛奶吧！'), ('lop', 'Yay!', '耶！')]),
     ('It Is Snowy!', '下雪了！', [('bong', 'I am sleepy…', '我好困……'), ('bong', 'Wow! It is snowy today!', '哇！今天下雪了！'), ('leo', 'It is cold! I am cold!', '好冷！我好冷！'),
                                 ('anna', 'I like it! Ha ha!', '我喜欢！哈哈！'), ('bong', 'Brr! It is cold!', '好冷呀！')]),
-    ("Let's Go Home!", '回家吧！', [('me', 'Bông! It is sunny today!', 'Bông！今天晴天！'), ('bong', 'Oh! No snow?', '哦！没有雪？'), ('me', "Let's go home!", '回家吧！'),
-                                   ('bong', 'Goodbye, park! See you tomorrow!', '公园，再见！明天见！'), ('bong', "It is sunny! Let's go home, ___!", '___，今天晴天！回家吧！')])],
-    bb=('It Is … Today', '今天…', [('sunny', 'It is sunny today.', '今天晴天。'), ('cloudy', 'It is cloudy today.', '今天多云。'), ('windy', 'It is windy today.', '今天刮风。'),
+    ("Let's Go Home!", '回家吧！', [('me', 'Bông! It is sunny today!', 'Bông！今天是晴天！'), ('bong', 'Oh! No snow?', '哦！没有雪？'), ('me', "Let's go home!", '回家吧！'),
+                                   ('bong', 'Goodbye, park! See you tomorrow!', '公园，再见！明天见！'), ('bong', "It is sunny! Let's go home, ___!", '___，今天是晴天！回家吧！')])],
+    bb=('It Is … Today', '今天…', [('sunny', 'It is sunny today.', '今天是晴天。'), ('cloudy', 'It is cloudy today.', '今天多云。'), ('windy', 'It is windy today.', '今天刮风。'),
                                   ('rainy', 'It is rainy today.', '今天下雨。'), ('snowy', 'It is snowy today.', '今天下雪。'), ('cold', 'It is cold today.', '今天很冷。'),
                                   ('go_out', "Let's go home, ___!", '___，回家吧！')]),
     ve=[('co', "SUN-ny, SUN-ny, LET'S go PLAY!", '晴天晴天，去玩吧！', '-ay / a'), ('lop', 'RAIN-y, RAIN-y, GO a-WAY!', '下雨下雨，快走吧！', '-ay / a'),

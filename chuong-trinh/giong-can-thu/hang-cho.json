@@ -2966,7 +2966,7 @@
 },
 {
 "l": "zh",
-"t": "Bông！今天晴天！",
+"t": "Bông！今天是晴天！",
 "nguon": [
 "little-seed/giong_thieu.json"
 ]
@@ -3134,7 +3134,7 @@
 },
 {
 "l": "zh",
-"t": "___，今天晴天！回家吧！",
+"t": "___，今天是晴天！回家吧！",
 "nguon": [
 "little-seed/giong_thieu.json"
 ]
@@ -3528,14 +3528,14 @@
 },
 {
 "l": "zh",
-"t": "今天晴天！回家吧！",
+"t": "今天是晴天！回家吧！",
 "nguon": [
 "little-seed/giong_thieu.json"
 ]
 },
 {
 "l": "zh",
-"t": "今天晴天！我很开心！",
+"t": "今天是晴天！我很开心！",
 "nguon": [
 "little-seed/giong_thieu.json"
 ]
@@ -10053,7 +10053,7 @@
 },
 {
 "l": "zh",
-"t": "今天晴天。很热。",
+"t": "今天是晴天。很热。",
 "nguon": [
 "seedling/giong_thieu_sd48.json"
 ]
@@ -12140,7 +12140,7 @@
 },
 {
 "l": "zh",
-"t": "这些和那些都是字母！",
+"t": "这些都是字母！",
 "nguon": [
 "seedling/giong_thieu_sd48.json"
 ]
@@ -13782,6 +13782,13 @@
 "t": "Đến lượt con!",
 "nguon": [
 "little-seed/giong_vi_bbve.json"
+]
+},
+{
+"l": "zh",
+"t": "今天是晴天。",
+"nguon": [
+"doi_cau_2311 (chị duyệt 今天是晴天, 这些都是字母)"
 ]
 }
 ]

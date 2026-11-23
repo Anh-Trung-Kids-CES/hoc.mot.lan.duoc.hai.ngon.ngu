@@ -227,7 +227,7 @@ lan|Great job, Bông!|写得真棒，Bông！""")),
 lan|Let's read, kids! These are letters: A, B, C.|小朋友们，我们来读吧！这些是字母：A、B、C。
 leo|What are those, Mrs Lan?|Lan老师，那些是什么？
 lan|Those are letters, too: D, E, F.|那些也是字母：D、E、F。
-anna|These and those are letters!|这些和那些都是字母！
+anna|These and those are letters!|这些都是字母！
 narr|The kids read: A, B, C, D, E, F!|小朋友们读字母：A、B、C、D、E、F！
 bong|B is the letter in my name!|B是我名字里的字母！""")),
                  ("The Keyboard", '键盘', L("""
@@ -467,7 +467,7 @@ leo|Oh no! Look, the snowmen are not happy!|哎呀！看，雪人不开心了！
 anna|Go away, Sun! Please go away!|太阳，走开！请走开！
 leo|Stay, snowmen, stay! Don't go away!|雪人，留下来！不要走！
 anna|What's the weather like today, ___? Is it sunny or snowy?|___，今天天气怎么样？是晴天还是下雪？"""))],
-         'bb': ("What's the Weather Like?", '天气怎么样？', [('sunny', "It's sunny today. It's hot.", '今天晴天。很热。'), ('windy', "It's windy today. Wear your coat.", '今天有风。穿上外套。'),
+         'bb': ("What's the Weather Like?", '天气怎么样？', [('sunny', "It's sunny today. It's hot.", '今天是晴天。很热。'), ('windy', "It's windy today. Wear your coat.", '今天有风。穿上外套。'),
                 ('cloudy', "It's cloudy today.", '今天多云。'), ('rainy', "It's raining a lot. Stay at home.", '雨下得很大。待在家里。'),
                 ('umbrella', 'Here is your umbrella.', '给你雨伞。'), ('snowman', "It's snowing. Let's go out and make a snowman!", '下雪了。我们出去堆雪人吧！'),
                 ('weather', "What's the weather like today, ___?", '___，今天天气怎么样？')]),
