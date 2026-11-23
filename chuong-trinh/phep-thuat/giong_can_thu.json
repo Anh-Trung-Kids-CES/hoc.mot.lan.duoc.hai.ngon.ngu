@@ -226,7 +226,8 @@
   "same": [
    "LS2.dia.en1.q",
    "SD2.ask_name.en",
-   "SD2.dia.en1.q"
+   "SD2.dia.en1.q",
+   "qa.name.en"
   ]
  },
  {
@@ -236,7 +237,8 @@
   "same": [
    "LS2.dia.zh1.q",
    "SD2.ask_name.zh",
-   "SD2.dia.zh1.q"
+   "SD2.dia.zh1.q",
+   "qa.name.zh"
   ]
  },
  {
@@ -262,7 +264,8 @@
   "same": [
    "LS2.dia.en2.q",
    "SD2.ask_age.en",
-   "SD2.dia.en2.q"
+   "SD2.dia.en2.q",
+   "qa.age.en"
   ]
  },
  {
@@ -272,7 +275,8 @@
   "same": [
    "LS2.dia.zh2.q",
    "SD2.ask_age.zh",
-   "SD2.dia.zh2.q"
+   "SD2.dia.zh2.q",
+   "qa.age.zh"
   ]
  },
  {
@@ -444,7 +448,9 @@
   "id": "LS3.dia.en1.q",
   "l": "en",
   "text": "Who is he?",
-  "same": []
+  "same": [
+   "qa.who_he.en"
+  ]
  },
  {
   "id": "LS3.dia.en1.a",
@@ -457,7 +463,8 @@
   "l": "en",
   "text": "Who is she?",
   "same": [
-   "SD3.dia.en1.q"
+   "SD3.dia.en1.q",
+   "qa.who_she.en"
   ]
  },
  {
@@ -726,7 +733,8 @@
   "text": "How do you feel?",
   "same": [
    "LS5.dia.en2.q",
-   "SD5.dia.en1.q"
+   "SD5.dia.en1.q",
+   "qa.feel.en"
   ]
  },
  {
@@ -856,7 +864,8 @@
   "text": "这是什么？",
   "same": [
    "LS6.dia.zh2.q",
-   "SD6.dia.zh1.q"
+   "SD6.dia.zh1.q",
+   "qa.this.zh"
   ]
  },
  {
@@ -992,7 +1001,7 @@
  {
   "id": "LS8.dog_run.zh",
   "l": "zh",
-  "text": "小狗能跑！",
+  "text": "小狗会跑！",
   "same": [
    "LS8.dia.zh1.a"
   ]
@@ -1008,7 +1017,7 @@
  {
   "id": "LS8.bird_fly.zh",
   "l": "zh",
-  "text": "小鸟能飞！",
+  "text": "小鸟会飞！",
   "same": [
    "LS8.dia.zh2.a"
   ]
@@ -1022,7 +1031,7 @@
  {
   "id": "LS8.fish_swim.zh",
   "l": "zh",
-  "text": "小鱼能游泳！",
+  "text": "小鱼会游泳！",
   "same": []
  },
  {
@@ -1034,7 +1043,7 @@
  {
   "id": "LS8.rabbit_jump.zh",
   "l": "zh",
-  "text": "兔子能跳！",
+  "text": "兔子会跳！",
   "same": []
  },
  {
@@ -1070,7 +1079,7 @@
  {
   "id": "LS8.long1.zh",
   "l": "zh",
-  "text": "小狗能跑！小鸟能飞！",
+  "text": "小狗会跑！小鸟会飞！",
   "same": []
  },
  {
@@ -1082,7 +1091,7 @@
  {
   "id": "LS8.long2.zh",
   "l": "zh",
-  "text": "小鱼能游泳！兔子能跳！",
+  "text": "小鱼会游泳！兔子会跳！",
   "same": []
  },
  {
@@ -1214,7 +1223,8 @@
   "l": "en",
   "text": "What do you like?",
   "same": [
-   "LS9.dia.en2.q"
+   "LS9.dia.en2.q",
+   "qa.like.en"
   ]
  },
  {
@@ -1230,7 +1240,8 @@
   "l": "zh",
   "text": "你喜欢什么？",
   "same": [
-   "LS9.dia.zh2.q"
+   "LS9.dia.zh2.q",
+   "qa.like.zh"
   ]
  },
  {
@@ -1363,7 +1374,8 @@
   "text": "今天天气怎么样？",
   "same": [
    "LS10.dia.zh2.q",
-   "SD10.dia.zh1.q"
+   "SD10.dia.zh1.q",
+   "qa.weather.zh"
   ]
  },
  {
@@ -1980,7 +1992,9 @@
   "id": "SD3.dia.zh1.q",
   "l": "zh",
   "text": "她是谁？",
-  "same": []
+  "same": [
+   "qa.who_she.zh"
+  ]
  },
  {
   "id": "SD3.dia.zh2.q",
@@ -2220,7 +2234,9 @@
   "id": "SD5.dia.zh1.q",
   "l": "zh",
   "text": "你感觉怎么样？",
-  "same": []
+  "same": [
+   "qa.feel.zh"
+  ]
  },
  {
   "id": "SD5.dia.zh2.q",
@@ -2501,7 +2517,7 @@
  {
   "id": "SD8.bird_fly.zh",
   "l": "zh",
-  "text": "鸟能飞。",
+  "text": "鸟会飞。",
   "same": []
  },
  {
@@ -2513,7 +2529,7 @@
  {
   "id": "SD8.fish_swim.zh",
   "l": "zh",
-  "text": "鱼能游泳。",
+  "text": "鱼会游泳。",
   "same": []
  },
  {
@@ -2525,7 +2541,7 @@
  {
   "id": "SD8.dog_run.zh",
   "l": "zh",
-  "text": "狗能跑。",
+  "text": "狗会跑。",
   "same": []
  },
  {
@@ -2537,7 +2553,7 @@
  {
   "id": "SD8.rabbit_jump.zh",
   "l": "zh",
-  "text": "兔子能跳。",
+  "text": "兔子会跳。",
   "same": []
  },
  {
@@ -2549,7 +2565,7 @@
  {
   "id": "SD8.frog_cant.zh",
   "l": "zh",
-  "text": "青蛙不能飞。",
+  "text": "青蛙不会飞。",
   "same": []
  },
  {
@@ -2561,7 +2577,7 @@
  {
   "id": "SD8.bear_swim.zh",
   "l": "zh",
-  "text": "北极熊能游泳。",
+  "text": "北极熊会游泳。",
   "same": []
  },
  {
@@ -2573,7 +2589,7 @@
  {
   "id": "SD8.long1.zh",
   "l": "zh",
-  "text": "鸟能飞。鱼能游泳。",
+  "text": "鸟会飞。鱼会游泳。",
   "same": []
  },
  {
@@ -2585,7 +2601,7 @@
  {
   "id": "SD8.long2.zh",
   "l": "zh",
-  "text": "狗能跑。青蛙不能飞。",
+  "text": "狗会跑。青蛙不会飞。",
   "same": []
  },
  {
@@ -2615,25 +2631,25 @@
  {
   "id": "SD8.dia.zh1.q",
   "l": "zh",
-  "text": "鸭子能飞吗？",
+  "text": "鸭子会飞吗？",
   "same": []
  },
  {
   "id": "SD8.dia.zh1.a",
   "l": "zh",
-  "text": "能！",
+  "text": "会！",
   "same": []
  },
  {
   "id": "SD8.dia.zh2.q",
   "l": "zh",
-  "text": "青蛙能飞吗？",
+  "text": "青蛙会飞吗？",
   "same": []
  },
  {
   "id": "SD8.dia.zh2.a",
   "l": "zh",
-  "text": "不能！",
+  "text": "不会！",
   "same": []
  },
  {
@@ -3283,6 +3299,18 @@
   "same": []
  },
  {
+  "id": "common.bye.en",
+  "l": "en",
+  "text": "Bye-bye! Your turn, Xiaomei!",
+  "same": []
+ },
+ {
+  "id": "common.langx.en",
+  "l": "en",
+  "text": "That's Chinese! In English, we say:",
+  "same": []
+ },
+ {
   "id": "common.ok1.zh",
   "l": "zh",
   "text": "真棒！",
@@ -3369,6 +3397,18 @@
   "same": []
  },
  {
+  "id": "common.come.zh",
+  "l": "zh",
+  "text": "你好！我是小美！",
+  "same": []
+ },
+ {
+  "id": "common.langx.zh",
+  "l": "zh",
+  "text": "这是英语哦！中文这样说：",
+  "same": []
+ },
+ {
   "id": "common.try.vi",
   "l": "vi",
   "text": "Con thử nói cả câu nhé!",
@@ -3402,6 +3442,1709 @@
   "id": "common.i3.vi",
   "l": "vi",
   "text": "Bậc ba: con nói liền hai phép một hơi!",
+  "same": []
+ },
+ {
+  "id": "common.qa1.vi",
+  "l": "vi",
+  "text": "Leo hỏi, con trả lời. Con nói gì, tranh sẽ hiện ra đúng cái đó!",
+  "same": []
+ },
+ {
+  "id": "common.qa2.vi",
+  "l": "vi",
+  "text": "Con chưa nghĩ ra thì chạm bóng đèn để được gợi ý nhé!",
+  "same": []
+ },
+ {
+  "id": "common.qa3.vi",
+  "l": "vi",
+  "text": "Bây giờ mình nói tiếng Trung nhé!",
+  "same": []
+ },
+ {
+  "id": "qa.hi.en",
+  "l": "en",
+  "text": "Who's here? Say hello!",
+  "same": []
+ },
+ {
+  "id": "qa.hi.zh",
+  "l": "zh",
+  "text": "谁来啦？打个招呼吧！",
+  "same": []
+ },
+ {
+  "id": "qa.who_he.zh",
+  "l": "zh",
+  "text": "他是谁？",
+  "same": []
+ },
+ {
+  "id": "qa.this.en",
+  "l": "en",
+  "text": "What's this?",
+  "same": []
+ },
+ {
+  "id": "qa.have.en",
+  "l": "en",
+  "text": "What do you have?",
+  "same": []
+ },
+ {
+  "id": "qa.have.zh",
+  "l": "zh",
+  "text": "你有什么？",
+  "same": []
+ },
+ {
+  "id": "qa.where.en",
+  "l": "en",
+  "text": "Where is it?",
+  "same": []
+ },
+ {
+  "id": "qa.where.zh",
+  "l": "zh",
+  "text": "它在哪儿？",
+  "same": []
+ },
+ {
+  "id": "qa.can.en",
+  "l": "en",
+  "text": "What can they do?",
+  "same": []
+ },
+ {
+  "id": "qa.can.zh",
+  "l": "zh",
+  "text": "它们会什么？",
+  "same": []
+ },
+ {
+  "id": "qa.eat.en",
+  "l": "en",
+  "text": "What do you eat?",
+  "same": []
+ },
+ {
+  "id": "qa.eat.zh",
+  "l": "zh",
+  "text": "你吃什么？",
+  "same": []
+ },
+ {
+  "id": "qa.drink.en",
+  "l": "en",
+  "text": "What do you drink?",
+  "same": []
+ },
+ {
+  "id": "qa.drink.zh",
+  "l": "zh",
+  "text": "你喝什么？",
+  "same": []
+ },
+ {
+  "id": "qa.weather.en",
+  "l": "en",
+  "text": "What's the weather like today?",
+  "same": []
+ },
+ {
+  "id": "qa.colour.en",
+  "l": "en",
+  "text": "What colour do you want?",
+  "same": []
+ },
+ {
+  "id": "qa.colour.zh",
+  "l": "zh",
+  "text": "你想要什么颜色？",
+  "same": []
+ },
+ {
+  "id": "qa.count.en",
+  "l": "en",
+  "text": "Let's count! How many?",
+  "same": []
+ },
+ {
+  "id": "qa.count.zh",
+  "l": "zh",
+  "text": "数一数，有几个？",
+  "same": []
+ },
+ {
+  "id": "qa.do.en",
+  "l": "en",
+  "text": "What shall we do?",
+  "same": []
+ },
+ {
+  "id": "qa.do.zh",
+  "l": "zh",
+  "text": "我们一起做什么？",
+  "same": []
+ },
+ {
+  "id": "qa.wear.en",
+  "l": "en",
+  "text": "What do we wear?",
+  "same": []
+ },
+ {
+  "id": "qa.wear.zh",
+  "l": "zh",
+  "text": "我们要穿什么？戴什么？",
+  "same": []
+ },
+ {
+  "id": "qa.say.en",
+  "l": "en",
+  "text": "Look! What do you say?",
+  "same": []
+ },
+ {
+  "id": "qa.say.zh",
+  "l": "zh",
+  "text": "看！这时候要说什么？",
+  "same": []
+ },
+ {
+  "id": "kw.LS1.hi_kitten.en",
+  "l": "en",
+  "text": "kitten",
+  "same": []
+ },
+ {
+  "id": "kw.LS1.hi_kitten.zh",
+  "l": "zh",
+  "text": "小猫",
+  "same": []
+ },
+ {
+  "id": "kw.LS1.hi_teacher.en",
+  "l": "en",
+  "text": "teacher",
+  "same": []
+ },
+ {
+  "id": "kw.LS1.hi_teacher.zh",
+  "l": "zh",
+  "text": "老师",
+  "same": []
+ },
+ {
+  "id": "kw.LS1.hi_mommy.en",
+  "l": "en",
+  "text": "mommy",
+  "same": []
+ },
+ {
+  "id": "kw.LS1.hi_mommy.zh",
+  "l": "zh",
+  "text": "妈妈",
+  "same": [
+   "kw.SD3.mother.zh"
+  ]
+ },
+ {
+  "id": "kw.LS1.hi_all.en",
+  "l": "en",
+  "text": "everyone",
+  "same": []
+ },
+ {
+  "id": "kw.LS1.hi_all.zh",
+  "l": "zh",
+  "text": "大家",
+  "same": []
+ },
+ {
+  "id": "kw.LS1.day.en",
+  "l": "en",
+  "text": "morning",
+  "same": []
+ },
+ {
+  "id": "kw.LS1.day.zh",
+  "l": "zh",
+  "text": "早上",
+  "same": []
+ },
+ {
+  "id": "kw.LS1.night.en",
+  "l": "en",
+  "text": "night",
+  "same": [
+   "kw.SD5.night.en"
+  ]
+ },
+ {
+  "id": "kw.LS1.night.zh",
+  "l": "zh",
+  "text": "晚",
+  "same": []
+ },
+ {
+  "id": "kw.LS1.go.en",
+  "l": "en",
+  "text": "go",
+  "same": [
+   "kw.LS8.ready_go.en",
+   "kw.SD1.go.en"
+  ]
+ },
+ {
+  "id": "kw.LS1.go.zh",
+  "l": "zh",
+  "text": "走",
+  "same": []
+ },
+ {
+  "id": "kw.LS1.bye_puppy.en",
+  "l": "en",
+  "text": "puppy",
+  "same": []
+ },
+ {
+  "id": "kw.LS1.bye_puppy.zh",
+  "l": "zh",
+  "text": "小狗",
+  "same": [
+   "kw.LS8.dog_run.zh"
+  ]
+ },
+ {
+  "id": "kw.LS2.hello_cake.en",
+  "l": "en",
+  "text": "cake",
+  "same": [
+   "kw.SD12.cake.en"
+  ]
+ },
+ {
+  "id": "kw.LS2.hello_cake.zh",
+  "l": "zh",
+  "text": "蛋糕",
+  "same": [
+   "kw.LS12.three_cakes.zh",
+   "kw.SD12.cake.zh"
+  ]
+ },
+ {
+  "id": "kw.LS2.num.en",
+  "l": "en",
+  "text": "six",
+  "same": [
+   "kw.SD2.age.en"
+  ]
+ },
+ {
+  "id": "kw.LS2.num.zh",
+  "l": "zh",
+  "text": "六",
+  "same": []
+ },
+ {
+  "id": "kw.LS2.hbd.en",
+  "l": "en",
+  "text": "birthday",
+  "same": [
+   "kw.LS12.hbd_leo.en",
+   "kw.SD5.hbd_leo.en"
+  ]
+ },
+ {
+  "id": "kw.LS2.hbd.zh",
+  "l": "zh",
+  "text": "生日",
+  "same": [
+   "kw.LS12.hbd_leo.zh",
+   "kw.SD5.hbd_leo.zh"
+  ]
+ },
+ {
+  "id": "kw.LS2.name.en",
+  "l": "en",
+  "text": "Leo",
+  "same": []
+ },
+ {
+  "id": "kw.LS2.name.zh",
+  "l": "zh",
+  "text": "Leo",
+  "same": []
+ },
+ {
+  "id": "kw.LS2.ask_name.en",
+  "l": "en",
+  "text": "name",
+  "same": [
+   "kw.SD2.name.en",
+   "kw.SD2.ask_name.en"
+  ]
+ },
+ {
+  "id": "kw.LS2.ask_name.zh",
+  "l": "zh",
+  "text": "名字",
+  "same": [
+   "kw.SD2.name.zh"
+  ]
+ },
+ {
+  "id": "kw.LS2.ask_age.en",
+  "l": "en",
+  "text": "old",
+  "same": [
+   "kw.SD2.ask_age.en"
+  ]
+ },
+ {
+  "id": "kw.LS2.ask_age.zh",
+  "l": "zh",
+  "text": "几岁",
+  "same": [
+   "kw.SD2.ask_age.zh"
+  ]
+ },
+ {
+  "id": "kw.LS3.hi_grandpa.en",
+  "l": "en",
+  "text": "grandpa",
+  "same": []
+ },
+ {
+  "id": "kw.LS3.hi_grandpa.zh",
+  "l": "zh",
+  "text": "爷爷",
+  "same": [
+   "kw.SD1.hi_grandpa.zh"
+  ]
+ },
+ {
+  "id": "kw.LS3.hi_grandma.en",
+  "l": "en",
+  "text": "grandma",
+  "same": []
+ },
+ {
+  "id": "kw.LS3.hi_grandma.zh",
+  "l": "zh",
+  "text": "奶奶",
+  "same": []
+ },
+ {
+  "id": "kw.LS3.hi_bigbro.en",
+  "l": "en",
+  "text": "brother",
+  "same": [
+   "kw.SD3.older_bro.en"
+  ]
+ },
+ {
+  "id": "kw.LS3.hi_bigbro.zh",
+  "l": "zh",
+  "text": "哥哥",
+  "same": [
+   "kw.SD3.older_bro.zh"
+  ]
+ },
+ {
+  "id": "kw.LS3.hi_lilsis.en",
+  "l": "en",
+  "text": "sister",
+  "same": [
+   "kw.SD3.younger_sis.en"
+  ]
+ },
+ {
+  "id": "kw.LS3.hi_lilsis.zh",
+  "l": "zh",
+  "text": "妹妹",
+  "same": [
+   "kw.SD3.younger_sis.zh"
+  ]
+ },
+ {
+  "id": "kw.LS3.baby.en",
+  "l": "en",
+  "text": "baby",
+  "same": [
+   "kw.SD3.baby.en"
+  ]
+ },
+ {
+  "id": "kw.LS3.baby.zh",
+  "l": "zh",
+  "text": "宝宝",
+  "same": [
+   "kw.SD3.baby.zh"
+  ]
+ },
+ {
+  "id": "kw.LS3.family.en",
+  "l": "en",
+  "text": "family",
+  "same": []
+ },
+ {
+  "id": "kw.LS3.family.zh",
+  "l": "zh",
+  "text": "家人",
+  "same": []
+ },
+ {
+  "id": "kw.LS4.hi_robo.en",
+  "l": "en",
+  "text": "Robo",
+  "same": []
+ },
+ {
+  "id": "kw.LS4.hi_robo.zh",
+  "l": "zh",
+  "text": "Robo",
+  "same": []
+ },
+ {
+  "id": "kw.LS4.head.en",
+  "l": "en",
+  "text": "head",
+  "same": []
+ },
+ {
+  "id": "kw.LS4.head.zh",
+  "l": "zh",
+  "text": "头",
+  "same": []
+ },
+ {
+  "id": "kw.LS4.eyes.en",
+  "l": "en",
+  "text": "eyes",
+  "same": []
+ },
+ {
+  "id": "kw.LS4.eyes.zh",
+  "l": "zh",
+  "text": "眼睛",
+  "same": []
+ },
+ {
+  "id": "kw.LS4.ears.en",
+  "l": "en",
+  "text": "ears",
+  "same": []
+ },
+ {
+  "id": "kw.LS4.ears.zh",
+  "l": "zh",
+  "text": "耳朵",
+  "same": []
+ },
+ {
+  "id": "kw.LS4.nose.en",
+  "l": "en",
+  "text": "nose",
+  "same": []
+ },
+ {
+  "id": "kw.LS4.nose.zh",
+  "l": "zh",
+  "text": "鼻子",
+  "same": []
+ },
+ {
+  "id": "kw.LS4.mouth.en",
+  "l": "en",
+  "text": "mouth",
+  "same": [
+   "kw.SD4.mouth.en"
+  ]
+ },
+ {
+  "id": "kw.LS4.mouth.zh",
+  "l": "zh",
+  "text": "嘴巴",
+  "same": []
+ },
+ {
+  "id": "kw.LS5.happy.en",
+  "l": "en",
+  "text": "happy",
+  "same": []
+ },
+ {
+  "id": "kw.LS5.happy.zh",
+  "l": "zh",
+  "text": "开心",
+  "same": []
+ },
+ {
+  "id": "kw.LS5.sad.en",
+  "l": "en",
+  "text": "sad",
+  "same": []
+ },
+ {
+  "id": "kw.LS5.sad.zh",
+  "l": "zh",
+  "text": "难过",
+  "same": []
+ },
+ {
+  "id": "kw.LS5.hungry.en",
+  "l": "en",
+  "text": "hungry",
+  "same": [
+   "kw.SD5.hungry.en"
+  ]
+ },
+ {
+  "id": "kw.LS5.hungry.zh",
+  "l": "zh",
+  "text": "饿",
+  "same": [
+   "kw.SD5.hungry.zh"
+  ]
+ },
+ {
+  "id": "kw.LS5.sleepy.en",
+  "l": "en",
+  "text": "sleepy",
+  "same": [
+   "kw.SD5.sleepy.en"
+  ]
+ },
+ {
+  "id": "kw.LS5.sleepy.zh",
+  "l": "zh",
+  "text": "困",
+  "same": [
+   "kw.SD5.sleepy.zh"
+  ]
+ },
+ {
+  "id": "kw.LS5.scared.en",
+  "l": "en",
+  "text": "scared",
+  "same": []
+ },
+ {
+  "id": "kw.LS5.scared.zh",
+  "l": "zh",
+  "text": "害怕",
+  "same": []
+ },
+ {
+  "id": "kw.LS5.angry.en",
+  "l": "en",
+  "text": "angry",
+  "same": []
+ },
+ {
+  "id": "kw.LS5.angry.zh",
+  "l": "zh",
+  "text": "生气",
+  "same": []
+ },
+ {
+  "id": "kw.LS6.book.en",
+  "l": "en",
+  "text": "book",
+  "same": []
+ },
+ {
+  "id": "kw.LS6.book.zh",
+  "l": "zh",
+  "text": "书",
+  "same": []
+ },
+ {
+  "id": "kw.LS6.pen.en",
+  "l": "en",
+  "text": "pen",
+  "same": []
+ },
+ {
+  "id": "kw.LS6.pen.zh",
+  "l": "zh",
+  "text": "笔",
+  "same": []
+ },
+ {
+  "id": "kw.LS6.pencil.en",
+  "l": "en",
+  "text": "pencil",
+  "same": []
+ },
+ {
+  "id": "kw.LS6.pencil.zh",
+  "l": "zh",
+  "text": "铅笔",
+  "same": []
+ },
+ {
+  "id": "kw.LS6.ruler.en",
+  "l": "en",
+  "text": "ruler",
+  "same": []
+ },
+ {
+  "id": "kw.LS6.ruler.zh",
+  "l": "zh",
+  "text": "尺子",
+  "same": []
+ },
+ {
+  "id": "kw.LS6.eraser.en",
+  "l": "en",
+  "text": "eraser",
+  "same": []
+ },
+ {
+  "id": "kw.LS6.eraser.zh",
+  "l": "zh",
+  "text": "橡皮",
+  "same": []
+ },
+ {
+  "id": "kw.LS6.bag.en",
+  "l": "en",
+  "text": "schoolbag",
+  "same": [
+   "kw.SD6.bag.en"
+  ]
+ },
+ {
+  "id": "kw.LS6.bag.zh",
+  "l": "zh",
+  "text": "书包",
+  "same": [
+   "kw.SD6.bag.zh"
+  ]
+ },
+ {
+  "id": "kw.LS7.where.en",
+  "l": "en",
+  "text": "where",
+  "same": []
+ },
+ {
+  "id": "kw.LS7.where.zh",
+  "l": "zh",
+  "text": "哪儿",
+  "same": []
+ },
+ {
+  "id": "kw.LS7.on_table.en",
+  "l": "en",
+  "text": "table",
+  "same": []
+ },
+ {
+  "id": "kw.LS7.on_table.zh",
+  "l": "zh",
+  "text": "桌子",
+  "same": []
+ },
+ {
+  "id": "kw.LS7.under_bed.en",
+  "l": "en",
+  "text": "bed",
+  "same": [
+   "kw.SD7.under_bed.en"
+  ]
+ },
+ {
+  "id": "kw.LS7.under_bed.zh",
+  "l": "zh",
+  "text": "床",
+  "same": [
+   "kw.SD7.under_bed.zh"
+  ]
+ },
+ {
+  "id": "kw.LS7.on_sofa.en",
+  "l": "en",
+  "text": "sofa",
+  "same": [
+   "kw.SD7.on_sofa.en"
+  ]
+ },
+ {
+  "id": "kw.LS7.on_sofa.zh",
+  "l": "zh",
+  "text": "沙发",
+  "same": [
+   "kw.SD7.on_sofa.zh"
+  ]
+ },
+ {
+  "id": "kw.LS7.under_chair.en",
+  "l": "en",
+  "text": "chair",
+  "same": []
+ },
+ {
+  "id": "kw.LS7.under_chair.zh",
+  "l": "zh",
+  "text": "椅子",
+  "same": []
+ },
+ {
+  "id": "kw.LS7.here.en",
+  "l": "en",
+  "text": "here",
+  "same": [
+   "kw.SD7.found.en"
+  ]
+ },
+ {
+  "id": "kw.LS7.here.zh",
+  "l": "zh",
+  "text": "这儿",
+  "same": []
+ },
+ {
+  "id": "kw.LS8.dog_run.en",
+  "l": "en",
+  "text": "dog",
+  "same": [
+   "kw.SD8.dog_run.en"
+  ]
+ },
+ {
+  "id": "kw.LS8.bird_fly.en",
+  "l": "en",
+  "text": "bird",
+  "same": [
+   "kw.SD8.bird_fly.en"
+  ]
+ },
+ {
+  "id": "kw.LS8.bird_fly.zh",
+  "l": "zh",
+  "text": "小鸟",
+  "same": []
+ },
+ {
+  "id": "kw.LS8.fish_swim.en",
+  "l": "en",
+  "text": "fish",
+  "same": [
+   "kw.SD8.fish_swim.en"
+  ]
+ },
+ {
+  "id": "kw.LS8.fish_swim.zh",
+  "l": "zh",
+  "text": "小鱼",
+  "same": []
+ },
+ {
+  "id": "kw.LS8.rabbit_jump.en",
+  "l": "en",
+  "text": "rabbit",
+  "same": [
+   "kw.SD8.rabbit_jump.en"
+  ]
+ },
+ {
+  "id": "kw.LS8.rabbit_jump.zh",
+  "l": "zh",
+  "text": "兔子",
+  "same": [
+   "kw.SD8.rabbit_jump.zh"
+  ]
+ },
+ {
+  "id": "kw.LS8.hi_duck.en",
+  "l": "en",
+  "text": "duck",
+  "same": []
+ },
+ {
+  "id": "kw.LS8.hi_duck.zh",
+  "l": "zh",
+  "text": "小鸭子",
+  "same": []
+ },
+ {
+  "id": "kw.LS8.ready_go.zh",
+  "l": "zh",
+  "text": "预备",
+  "same": []
+ },
+ {
+  "id": "kw.LS9.eat_apple.en",
+  "l": "en",
+  "text": "apple",
+  "same": []
+ },
+ {
+  "id": "kw.LS9.eat_apple.zh",
+  "l": "zh",
+  "text": "苹果",
+  "same": [
+   "kw.SD9.like_apple.zh"
+  ]
+ },
+ {
+  "id": "kw.LS9.eat_banana.en",
+  "l": "en",
+  "text": "banana",
+  "same": []
+ },
+ {
+  "id": "kw.LS9.eat_banana.zh",
+  "l": "zh",
+  "text": "香蕉",
+  "same": []
+ },
+ {
+  "id": "kw.LS9.eat_rice.en",
+  "l": "en",
+  "text": "rice",
+  "same": []
+ },
+ {
+  "id": "kw.LS9.eat_rice.zh",
+  "l": "zh",
+  "text": "米饭",
+  "same": []
+ },
+ {
+  "id": "kw.LS9.drink_juice.en",
+  "l": "en",
+  "text": "juice",
+  "same": []
+ },
+ {
+  "id": "kw.LS9.drink_juice.zh",
+  "l": "zh",
+  "text": "果汁",
+  "same": []
+ },
+ {
+  "id": "kw.LS9.drink_milk.en",
+  "l": "en",
+  "text": "milk",
+  "same": []
+ },
+ {
+  "id": "kw.LS9.drink_milk.zh",
+  "l": "zh",
+  "text": "牛奶",
+  "same": []
+ },
+ {
+  "id": "kw.LS9.like_pizza.en",
+  "l": "en",
+  "text": "pizza",
+  "same": []
+ },
+ {
+  "id": "kw.LS9.like_pizza.zh",
+  "l": "zh",
+  "text": "比萨",
+  "same": []
+ },
+ {
+  "id": "kw.LS10.sunny.en",
+  "l": "en",
+  "text": "sunny",
+  "same": [
+   "kw.SD10.sunny.en"
+  ]
+ },
+ {
+  "id": "kw.LS10.sunny.zh",
+  "l": "zh",
+  "text": "晴天",
+  "same": [
+   "kw.SD10.sunny.zh"
+  ]
+ },
+ {
+  "id": "kw.LS10.cloudy.en",
+  "l": "en",
+  "text": "cloudy",
+  "same": []
+ },
+ {
+  "id": "kw.LS10.cloudy.zh",
+  "l": "zh",
+  "text": "多云",
+  "same": []
+ },
+ {
+  "id": "kw.LS10.windy.en",
+  "l": "en",
+  "text": "windy",
+  "same": [
+   "kw.SD10.windy.en"
+  ]
+ },
+ {
+  "id": "kw.LS10.windy.zh",
+  "l": "zh",
+  "text": "刮风",
+  "same": [
+   "kw.SD10.windy.zh"
+  ]
+ },
+ {
+  "id": "kw.LS10.rainy.en",
+  "l": "en",
+  "text": "rainy",
+  "same": [
+   "kw.SD10.rainy.en"
+  ]
+ },
+ {
+  "id": "kw.LS10.rainy.zh",
+  "l": "zh",
+  "text": "下雨",
+  "same": [
+   "kw.SD10.rainy.zh"
+  ]
+ },
+ {
+  "id": "kw.LS10.snowy.en",
+  "l": "en",
+  "text": "snowy",
+  "same": []
+ },
+ {
+  "id": "kw.LS10.snowy.zh",
+  "l": "zh",
+  "text": "下雪",
+  "same": []
+ },
+ {
+  "id": "kw.LS10.cold.en",
+  "l": "en",
+  "text": "cold",
+  "same": []
+ },
+ {
+  "id": "kw.LS10.cold.zh",
+  "l": "zh",
+  "text": "冷",
+  "same": []
+ },
+ {
+  "id": "kw.LS11.red.en",
+  "l": "en",
+  "text": "red",
+  "same": []
+ },
+ {
+  "id": "kw.LS11.red.zh",
+  "l": "zh",
+  "text": "红色",
+  "same": []
+ },
+ {
+  "id": "kw.LS11.yellow.en",
+  "l": "en",
+  "text": "yellow",
+  "same": []
+ },
+ {
+  "id": "kw.LS11.yellow.zh",
+  "l": "zh",
+  "text": "黄色",
+  "same": []
+ },
+ {
+  "id": "kw.LS11.blue.en",
+  "l": "en",
+  "text": "blue",
+  "same": []
+ },
+ {
+  "id": "kw.LS11.blue.zh",
+  "l": "zh",
+  "text": "蓝色",
+  "same": []
+ },
+ {
+  "id": "kw.LS11.green.en",
+  "l": "en",
+  "text": "green",
+  "same": []
+ },
+ {
+  "id": "kw.LS11.green.zh",
+  "l": "zh",
+  "text": "绿色",
+  "same": []
+ },
+ {
+  "id": "kw.LS11.pink.en",
+  "l": "en",
+  "text": "pink",
+  "same": []
+ },
+ {
+  "id": "kw.LS11.pink.zh",
+  "l": "zh",
+  "text": "粉色",
+  "same": []
+ },
+ {
+  "id": "kw.LS11.rainbow.en",
+  "l": "en",
+  "text": "rainbow",
+  "same": []
+ },
+ {
+  "id": "kw.LS11.rainbow.zh",
+  "l": "zh",
+  "text": "彩虹",
+  "same": []
+ },
+ {
+  "id": "kw.LS12.two_dogs.en",
+  "l": "en",
+  "text": "dogs",
+  "same": []
+ },
+ {
+  "id": "kw.LS12.two_dogs.zh",
+  "l": "zh",
+  "text": "狗",
+  "same": [
+   "kw.SD8.dog_run.zh"
+  ]
+ },
+ {
+  "id": "kw.LS12.three_cakes.en",
+  "l": "en",
+  "text": "cakes",
+  "same": []
+ },
+ {
+  "id": "kw.LS12.five_monkeys.en",
+  "l": "en",
+  "text": "monkeys",
+  "same": []
+ },
+ {
+  "id": "kw.LS12.five_monkeys.zh",
+  "l": "zh",
+  "text": "猴子",
+  "same": []
+ },
+ {
+  "id": "kw.LS12.ten_eggs.en",
+  "l": "en",
+  "text": "eggs",
+  "same": []
+ },
+ {
+  "id": "kw.LS12.ten_eggs.zh",
+  "l": "zh",
+  "text": "鸡蛋",
+  "same": []
+ },
+ {
+  "id": "kw.LS12.how_many.en",
+  "l": "en",
+  "text": "how many",
+  "same": []
+ },
+ {
+  "id": "kw.LS12.how_many.zh",
+  "l": "zh",
+  "text": "几个",
+  "same": []
+ },
+ {
+  "id": "kw.SD1.hi_teacher.en",
+  "l": "en",
+  "text": "Mrs Lan",
+  "same": []
+ },
+ {
+  "id": "kw.SD1.hi_teacher.zh",
+  "l": "zh",
+  "text": "Lan老师",
+  "same": []
+ },
+ {
+  "id": "kw.SD1.hi_grandpa.en",
+  "l": "en",
+  "text": "Grandpa",
+  "same": []
+ },
+ {
+  "id": "kw.SD1.hi_kids.en",
+  "l": "en",
+  "text": "kids",
+  "same": []
+ },
+ {
+  "id": "kw.SD1.hi_kids.zh",
+  "l": "zh",
+  "text": "小朋友",
+  "same": []
+ },
+ {
+  "id": "kw.SD1.night.en",
+  "l": "en",
+  "text": "tomorrow",
+  "same": []
+ },
+ {
+  "id": "kw.SD1.night.zh",
+  "l": "zh",
+  "text": "明天",
+  "same": []
+ },
+ {
+  "id": "kw.SD1.go.zh",
+  "l": "zh",
+  "text": "去",
+  "same": []
+ },
+ {
+  "id": "kw.SD1.tall.en",
+  "l": "en",
+  "text": "tall",
+  "same": []
+ },
+ {
+  "id": "kw.SD1.tall.zh",
+  "l": "zh",
+  "text": "高",
+  "same": []
+ },
+ {
+  "id": "kw.SD2.hbd_vu.en",
+  "l": "en",
+  "text": "Vũ",
+  "same": []
+ },
+ {
+  "id": "kw.SD2.hbd_vu.zh",
+  "l": "zh",
+  "text": "Vũ",
+  "same": []
+ },
+ {
+  "id": "kw.SD2.ask_name.zh",
+  "l": "zh",
+  "text": "叫",
+  "same": []
+ },
+ {
+  "id": "kw.SD2.age.zh",
+  "l": "zh",
+  "text": "六岁",
+  "same": []
+ },
+ {
+  "id": "kw.SD2.meet.en",
+  "l": "en",
+  "text": "meet",
+  "same": []
+ },
+ {
+  "id": "kw.SD2.meet.zh",
+  "l": "zh",
+  "text": "认识",
+  "same": []
+ },
+ {
+  "id": "kw.SD3.mother.en",
+  "l": "en",
+  "text": "mother",
+  "same": []
+ },
+ {
+  "id": "kw.SD3.father.en",
+  "l": "en",
+  "text": "father",
+  "same": []
+ },
+ {
+  "id": "kw.SD3.father.zh",
+  "l": "zh",
+  "text": "爸爸",
+  "same": []
+ },
+ {
+  "id": "kw.SD3.photo.en",
+  "l": "en",
+  "text": "photo",
+  "same": [
+   "kw.SD12.photo.en"
+  ]
+ },
+ {
+  "id": "kw.SD3.photo.zh",
+  "l": "zh",
+  "text": "照片",
+  "same": [
+   "kw.SD12.photo.zh"
+  ]
+ },
+ {
+  "id": "kw.SD4.clap.en",
+  "l": "en",
+  "text": "clap",
+  "same": []
+ },
+ {
+  "id": "kw.SD4.clap.zh",
+  "l": "zh",
+  "text": "拍",
+  "same": []
+ },
+ {
+  "id": "kw.SD4.stamp.en",
+  "l": "en",
+  "text": "stamp",
+  "same": []
+ },
+ {
+  "id": "kw.SD4.stamp.zh",
+  "l": "zh",
+  "text": "跺",
+  "same": []
+ },
+ {
+  "id": "kw.SD4.mouth.zh",
+  "l": "zh",
+  "text": "口",
+  "same": []
+ },
+ {
+  "id": "kw.SD4.hands.en",
+  "l": "en",
+  "text": "hands",
+  "same": []
+ },
+ {
+  "id": "kw.SD4.hands.zh",
+  "l": "zh",
+  "text": "手",
+  "same": []
+ },
+ {
+  "id": "kw.SD4.arms.en",
+  "l": "en",
+  "text": "arms",
+  "same": []
+ },
+ {
+  "id": "kw.SD4.arms.zh",
+  "l": "zh",
+  "text": "胳膊",
+  "same": []
+ },
+ {
+  "id": "kw.SD4.body.en",
+  "l": "en",
+  "text": "body",
+  "same": []
+ },
+ {
+  "id": "kw.SD4.body.zh",
+  "l": "zh",
+  "text": "身体",
+  "same": []
+ },
+ {
+  "id": "kw.SD5.excited.en",
+  "l": "en",
+  "text": "excited",
+  "same": []
+ },
+ {
+  "id": "kw.SD5.excited.zh",
+  "l": "zh",
+  "text": "兴奋",
+  "same": []
+ },
+ {
+  "id": "kw.SD5.thirsty.en",
+  "l": "en",
+  "text": "thirsty",
+  "same": []
+ },
+ {
+  "id": "kw.SD5.thirsty.zh",
+  "l": "zh",
+  "text": "渴",
+  "same": []
+ },
+ {
+  "id": "kw.SD5.night.zh",
+  "l": "zh",
+  "text": "晚安",
+  "same": []
+ },
+ {
+  "id": "kw.SD6.crayon.en",
+  "l": "en",
+  "text": "crayon",
+  "same": []
+ },
+ {
+  "id": "kw.SD6.crayon.zh",
+  "l": "zh",
+  "text": "蜡笔",
+  "same": []
+ },
+ {
+  "id": "kw.SD6.scissors.en",
+  "l": "en",
+  "text": "scissors",
+  "same": []
+ },
+ {
+  "id": "kw.SD6.scissors.zh",
+  "l": "zh",
+  "text": "剪刀",
+  "same": []
+ },
+ {
+  "id": "kw.SD6.glue.en",
+  "l": "en",
+  "text": "glue",
+  "same": []
+ },
+ {
+  "id": "kw.SD6.glue.zh",
+  "l": "zh",
+  "text": "胶水",
+  "same": []
+ },
+ {
+  "id": "kw.SD6.line.en",
+  "l": "en",
+  "text": "line",
+  "same": []
+ },
+ {
+  "id": "kw.SD6.line.zh",
+  "l": "zh",
+  "text": "排队",
+  "same": []
+ },
+ {
+  "id": "kw.SD6.letters.en",
+  "l": "en",
+  "text": "letters",
+  "same": []
+ },
+ {
+  "id": "kw.SD6.letters.zh",
+  "l": "zh",
+  "text": "字母",
+  "same": []
+ },
+ {
+  "id": "kw.SD7.where.en",
+  "l": "en",
+  "text": "ball",
+  "same": []
+ },
+ {
+  "id": "kw.SD7.where.zh",
+  "l": "zh",
+  "text": "球",
+  "same": []
+ },
+ {
+  "id": "kw.SD7.dining.en",
+  "l": "en",
+  "text": "dining room",
+  "same": []
+ },
+ {
+  "id": "kw.SD7.dining.zh",
+  "l": "zh",
+  "text": "餐厅",
+  "same": []
+ },
+ {
+  "id": "kw.SD7.living.en",
+  "l": "en",
+  "text": "living room",
+  "same": []
+ },
+ {
+  "id": "kw.SD7.living.zh",
+  "l": "zh",
+  "text": "客厅",
+  "same": []
+ },
+ {
+  "id": "kw.SD7.found.zh",
+  "l": "zh",
+  "text": "这里",
+  "same": []
+ },
+ {
+  "id": "kw.SD8.bird_fly.zh",
+  "l": "zh",
+  "text": "鸟",
+  "same": []
+ },
+ {
+  "id": "kw.SD8.fish_swim.zh",
+  "l": "zh",
+  "text": "鱼",
+  "same": []
+ },
+ {
+  "id": "kw.SD8.frog_cant.en",
+  "l": "en",
+  "text": "frog",
+  "same": []
+ },
+ {
+  "id": "kw.SD8.frog_cant.zh",
+  "l": "zh",
+  "text": "青蛙",
+  "same": []
+ },
+ {
+  "id": "kw.SD8.bear_swim.en",
+  "l": "en",
+  "text": "polar bear",
+  "same": []
+ },
+ {
+  "id": "kw.SD8.bear_swim.zh",
+  "l": "zh",
+  "text": "北极熊",
+  "same": []
+ },
+ {
+  "id": "kw.SD9.like_apple.en",
+  "l": "en",
+  "text": "apples",
+  "same": []
+ },
+ {
+  "id": "kw.SD9.like_ice.en",
+  "l": "en",
+  "text": "ice cream",
+  "same": []
+ },
+ {
+  "id": "kw.SD9.like_ice.zh",
+  "l": "zh",
+  "text": "冰淇淋",
+  "same": []
+ },
+ {
+  "id": "kw.SD9.dont_fruit.en",
+  "l": "en",
+  "text": "fruit",
+  "same": []
+ },
+ {
+  "id": "kw.SD9.dont_fruit.zh",
+  "l": "zh",
+  "text": "水果",
+  "same": []
+ },
+ {
+  "id": "kw.SD9.or.en",
+  "l": "en",
+  "text": "noodles",
+  "same": []
+ },
+ {
+  "id": "kw.SD9.or.zh",
+  "l": "zh",
+  "text": "面条",
+  "same": []
+ },
+ {
+  "id": "kw.SD9.no_thanks.en",
+  "l": "en",
+  "text": "thank you",
+  "same": []
+ },
+ {
+  "id": "kw.SD9.no_thanks.zh",
+  "l": "zh",
+  "text": "谢谢",
+  "same": []
+ },
+ {
+  "id": "kw.SD9.burger.en",
+  "l": "en",
+  "text": "burgers",
+  "same": []
+ },
+ {
+  "id": "kw.SD9.burger.zh",
+  "l": "zh",
+  "text": "汉堡",
+  "same": []
+ },
+ {
+  "id": "kw.SD10.snowy.en",
+  "l": "en",
+  "text": "snowman",
+  "same": []
+ },
+ {
+  "id": "kw.SD10.snowy.zh",
+  "l": "zh",
+  "text": "雪人",
+  "same": []
+ },
+ {
+  "id": "kw.SD10.coat.en",
+  "l": "en",
+  "text": "coat",
+  "same": []
+ },
+ {
+  "id": "kw.SD10.coat.zh",
+  "l": "zh",
+  "text": "外套",
+  "same": []
+ },
+ {
+  "id": "kw.SD10.hat.en",
+  "l": "en",
+  "text": "hat",
+  "same": []
+ },
+ {
+  "id": "kw.SD10.hat.zh",
+  "l": "zh",
+  "text": "帽子",
+  "same": []
+ },
+ {
+  "id": "kw.SD11.pink_dress.en",
+  "l": "en",
+  "text": "dress",
+  "same": []
+ },
+ {
+  "id": "kw.SD11.pink_dress.zh",
+  "l": "zh",
+  "text": "裙子",
+  "same": []
+ },
+ {
+  "id": "kw.SD11.blue_shorts.en",
+  "l": "en",
+  "text": "shorts",
+  "same": []
+ },
+ {
+  "id": "kw.SD11.blue_shorts.zh",
+  "l": "zh",
+  "text": "短裤",
+  "same": []
+ },
+ {
+  "id": "kw.SD11.red_socks.en",
+  "l": "en",
+  "text": "socks",
+  "same": []
+ },
+ {
+  "id": "kw.SD11.red_socks.zh",
+  "l": "zh",
+  "text": "袜子",
+  "same": []
+ },
+ {
+  "id": "kw.SD11.gold.en",
+  "l": "en",
+  "text": "gold",
+  "same": []
+ },
+ {
+  "id": "kw.SD11.gold.zh",
+  "l": "zh",
+  "text": "金色",
+  "same": []
+ },
+ {
+  "id": "kw.SD11.colour_dress.en",
+  "l": "en",
+  "text": "colour",
+  "same": [
+   "kw.SD11.fav.en"
+  ]
+ },
+ {
+  "id": "kw.SD11.colour_dress.zh",
+  "l": "zh",
+  "text": "涂",
+  "same": []
+ },
+ {
+  "id": "kw.SD11.fav.zh",
+  "l": "zh",
+  "text": "颜色",
+  "same": []
+ },
+ {
+  "id": "kw.SD12.count.en",
+  "l": "en",
+  "text": "people",
+  "same": []
+ },
+ {
+  "id": "kw.SD12.count.zh",
+  "l": "zh",
+  "text": "人",
+  "same": []
+ },
+ {
+  "id": "kw.SD12.ten.en",
+  "l": "en",
+  "text": "ten",
+  "same": []
+ },
+ {
+  "id": "kw.SD12.ten.zh",
+  "l": "zh",
+  "text": "十个",
+  "same": []
+ },
+ {
+  "id": "kw.SD12.time.en",
+  "l": "en",
+  "text": "time",
+  "same": []
+ },
+ {
+  "id": "kw.SD12.time.zh",
+  "l": "zh",
+  "text": "几点",
+  "same": []
+ },
+ {
+  "id": "kw.SD12.hooray.en",
+  "l": "en",
+  "text": "hooray",
+  "same": []
+ },
+ {
+  "id": "kw.SD12.hooray.zh",
+  "l": "zh",
+  "text": "耶",
   "same": []
  }
 ]

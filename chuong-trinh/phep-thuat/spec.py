@@ -51,10 +51,10 @@ U[('LS','7')]=dict(name='House',kind='Ở đâu nhỉ',bg='ls_home',spells=[
  S('here','Here it is! Thank you!','在这儿！谢谢！','bạn cầm lại sách, cảm ơn',['t:book']),
 ])
 U[('LS','8')]=dict(name='Animals',kind='Ra lệnh cho bạn',bg='ls_park',spells=[
- S('dog_run','The dog can run!','小狗能跑！','chó con chạy',['n:pets_cun_dung_a']),
- S('bird_fly','The bird can fly!','小鸟能飞！','chim bay',['t:bird']),
- S('fish_swim','The fish can swim!','小鱼能游泳！','cá bơi',['t:fish']),
- S('rabbit_jump','The rabbit can jump!','兔子能跳！','thỏ nhảy',['t:rabbit']),
+ S('dog_run','The dog can run!','小狗会跑！','chó con chạy',['n:pets_cun_dung_a']),
+ S('bird_fly','The bird can fly!','小鸟会飞！','chim bay',['t:bird']),
+ S('fish_swim','The fish can swim!','小鱼会游泳！','cá bơi',['t:fish']),
+ S('rabbit_jump','The rabbit can jump!','兔子会跳！','thỏ nhảy',['t:rabbit']),
  S('hi_duck','Hello, duck!','小鸭子，你好！','vịt hiện ra, vẫy cánh',['t:duck']),
  S('ready_go','Ready, go!','预备，跑！','các bạn đua chạy',['n:pets_cun_dung_a','n:pets_meo_dung_a','t:duck']),
 ])
@@ -132,12 +132,12 @@ U[('SD','7')]=dict(name='Home',kind='Ở đâu nhỉ',bg='ls_home',spells=[
  S('found','Right here! Well done!','就在这里！真棒！','bóng hiện, pháo giấy',['t:ball','code:confetti']),
 ])
 U[('SD','8')]=dict(name='Animals',kind='Ra lệnh cho bạn (có / không thể)',bg='ls_park',spells=[
- S('bird_fly','The bird can fly.','鸟能飞。','chim bay',['t:bird']),
- S('fish_swim','The fish can swim.','鱼能游泳。','cá bơi',['t:fish']),
- S('dog_run','The dog can run.','狗能跑。','chó chạy',['n:pets_cun_dung_a']),
- S('rabbit_jump','The rabbit can jump.','兔子能跳。','thỏ nhảy',['t:rabbit']),
- S('frog_cant',"The frog can't fly.",'青蛙不能飞。','ếch nhảy lên rồi rơi (vui)',['t:frog']),
- S('bear_swim','The polar bear can swim.','北极熊能游泳。','gấu bắc cực bơi',['t:polar_bear']),
+ S('bird_fly','The bird can fly.','鸟会飞。','chim bay',['t:bird']),
+ S('fish_swim','The fish can swim.','鱼会游泳。','cá bơi',['t:fish']),
+ S('dog_run','The dog can run.','狗会跑。','chó chạy',['n:pets_cun_dung_a']),
+ S('rabbit_jump','The rabbit can jump.','兔子会跳。','thỏ nhảy',['t:rabbit']),
+ S('frog_cant',"The frog can't fly.",'青蛙不会飞。','ếch nhảy lên rồi rơi (vui)',['t:frog']),
+ S('bear_swim','The polar bear can swim.','北极熊会游泳。','gấu bắc cực bơi',['t:polar_bear']),
 ])
 U[('SD','9')]=dict(name='Food',kind='Thích / không thích',bg='ls_park',spells=[
  S('like_apple','I like apples!','我喜欢苹果！','táo hiện, tim bay lên',['t:apple']),

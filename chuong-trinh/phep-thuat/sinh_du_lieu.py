@@ -180,9 +180,27 @@ COMMON = {
         'double': '双重魔法！', 'bonus': '奖励魔法！', 'try': '很好！', 'more': '再说一句！', 'gold': '金色魔法！', 'again': '轮到你啦！', 'no': '不，不！'}}
 COMMON['vi'] = {'try': 'Con thử nói cả câu nhé!', 'two': 'Bây giờ con nói liền hai phép nhé!', 'gold': 'Con giỏi quá!',
                 'i1': 'Có ba bậc thang. Bậc một: con nói một từ.', 'i2': 'Bậc hai: con nói cả câu.', 'i3': 'Bậc ba: con nói liền hai phép một hơi!'}
+# luật hỏi – đáp (23/11/2026): câu chung mới, câu hỏi mẫu, nhóm câu hỏi từng unit, từ khoá cho gợi ý bậc 1
+from hoi_dap import QT, QA, COMMON_QA
+for l, dd in COMMON_QA.items():
+    for k, (t, doc) in dd.items(): COMMON[l][k] = t
 for l, dd in COMMON.items():
-    for k, t in dd.items(): clip('common.%s.%s' % (k, l), l, t)
+    for k, t in dd.items():
+        doc = COMMON_QA.get(l, {}).get(k, (None, None))[1]
+        clip('common.%s.%s' % (k, l), l, doc or t)
 out['common'] = COMMON
+out['qt'] = {k: dict(en=e, zh=z) for k, (e, z) in QT.items()}
+for k, (e, z) in QT.items(): clip('qa.%s.en' % k, 'en', e); clip('qa.%s.zh' % k, 'zh', z)
+for (course, unit), groups in QA.items():
+    uid = course + unit; ks = {sp['k'] for sp in out['units'][uid]['spells']}
+    for q, opts in groups:
+        assert q in QT, (uid, q); bad = [o for o in opts if o not in ks]; assert not bad, (uid, bad)
+    out['units'][uid]['qa'] = [dict(q=q, o=opts) for q, opts in groups]
+assert set(QA) == set(U), 'thiếu nhóm câu hỏi cho unit'
+for uid, u in out['units'].items():
+    for sp in u['spells']:
+        for l in ('en', 'zh'):
+            if sp['kw'].get(l): clip('kw.%s.%s' % (sp['id'], l), l, sp['kw'][l])
 # trùng id/text → bỏ trùng lời thu (cùng chữ cùng tiếng dùng lại một file)
 byText = {}
 for c in clips:
@@ -190,6 +208,41 @@ for c in clips:
 uniq = [dict(id=v[0], l=k[0], text=k[1], same=v[1:]) for k, v in byText.items()]
 out['audio'] = [c['id'] for c in uniq if os.path.exists(os.path.join(ROOT, 'seedling', 'tai-nguyen', 'giong', 'phep-thuat', c['id'] + '.mp3'))]   # id đã có file thu
 out['same'] = {i: v[0] for k, v in byText.items() for i in v[1:]}   # id trùng → id gốc dùng chung file thu
+
+# gợi ý bậc 2 (nửa đầu câu): điểm cắt = chỗ ngắt hơi cuối cùng trong file câu mẫu (ffmpeg silencedetect); không có chỗ ngắt thì bỏ bậc 2
+import subprocess
+def cut_of(path):
+    try:
+        dur = float(subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', path], capture_output=True, text=True).stdout.strip())
+        err = subprocess.run(['ffmpeg', '-hide_banner', '-nostats', '-i', path, '-af', 'silencedetect=noise=-32dB:d=0.11', '-f', 'null', '-'], capture_output=True, text=True).stderr
+    except Exception: return None
+    st = [float(x) for x in re.findall(r'silence_start: ([\d.]+)', err)]
+    en = [float(x) for x in re.findall(r'silence_end: ([\d.]+)', err)]
+    best = None
+    for a_, b_ in zip(st, en):
+        if a_ > 0.3 and b_ < dur * 0.85 and a_ < dur - 0.35: best = round((a_ + b_) / 2, 2)
+    return best
+GDIR = os.path.join(ROOT, 'seedling', 'tai-nguyen', 'giong', 'phep-thuat')
+ncut = 0
+for uid, u in out['units'].items():
+    for sp in u['spells']:
+        for l in ('en', 'zh'):
+            i = sp['id'] + '.' + l; f = os.path.join(GDIR, out['same'].get(i, i) + '.mp3')
+            c = cut_of(f) if os.path.exists(f) else None
+            if c: sp.setdefault('cut', {})[l] = c; ncut += 1
+print('điểm cắt bậc 2:', ncut)
+# so khớp tiếng Trung theo pinyin bỏ dấu (máy nghe nhầm chữ đồng âm: 页页 → 爷爷): 3755 chữ thông dụng (GB2312 cấp 1)
+from pypinyin import lazy_pinyin
+pyg = {}
+for hi in range(0xB0, 0xD8):
+    for lo in range(0xA1, 0xFF):
+        try: ch = bytes([hi, lo]).decode('gb2312')
+        except Exception: continue
+        if len(ch) == 1: pyg.setdefault(lazy_pinyin(ch)[0], []).append(ch)
+for uid, u in out['units'].items():   # thêm mọi chữ có trong dữ liệu (kể cả ngoài GB2312 cấp 1)
+    for ch in set(json.dumps(u, ensure_ascii=False)):
+        if '\u4e00' <= ch <= '\u9fff' and not any(ch in v for v in pyg.values()): pyg.setdefault(lazy_pinyin(ch)[0], []).append(ch)
+out['py'] = {k: ''.join(v) for k, v in sorted(pyg.items())}
 
 js = '/* Dữ liệu Phép thuật lời nói (24 unit, 146 phép) – SINH TỰ ĐỘNG từ chuong-trinh/phep-thuat/*.py, đừng sửa tay. */\nwindow.PT_DATA=' + json.dumps(out, ensure_ascii=False, separators=(',', ':')) + ';\n'
 open(os.path.join(ROOT, 'seedling', 'phep-thuat-du-lieu.js'), 'w', encoding='utf8').write(js)
