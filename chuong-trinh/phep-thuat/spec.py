@@ -67,7 +67,7 @@ U[('LS','9')]=dict(name='Food',kind='Cho bạn ăn',bg='ls_park',spells=[
  S('like_pizza','I like pizza!','我喜欢比萨！','bánh pizza, trái tim bay lên',['t:pizza']),
 ])
 U[('LS','10')]=dict(name='Weather',kind='Bầu trời biết nghe',bg='ls_park',spells=[
- S('sunny','It is sunny!','今天晴天！','mặt trời mọc, trời sáng',['code:weather']),
+ S('sunny','It is sunny!','今天是晴天！','mặt trời mọc, trời sáng',['code:weather']),
  S('cloudy','It is cloudy.','今天多云。','mây kéo đến',['code:weather']),
  S('windy','It is windy!','今天刮风！','gió thổi, cây lá nghiêng',['code:weather']),
  S('rainy','It is rainy!','今天下雨！','mưa rơi',['code:weather']),
@@ -121,7 +121,7 @@ U[('SD','6')]=dict(name='School things',kind='Đồ vật + xếp hàng',bg='ls_
  S('glue','This is glue.','这是胶水。','keo hiện ra',['t:glue']),
  S('bag','My new schoolbag!','我的新书包！','cặp mới hiện, lấp lánh',['t:schoolbag']),
  S('line','Make a line, please.','请排队。','các bạn xếp thành hàng',['n:kids_bong_a','n:kids_anna_a','n:nv_vu_a']),
- S('letters','These and those are letters!','这些和那些都是字母！','chữ cái bay quanh',['t:letter']),
+ S('letters','These and those are letters!','这些都是字母！','chữ cái bay quanh',['t:letter']),
 ])
 U[('SD','7')]=dict(name='Home',kind='Ở đâu nhỉ',bg='ls_home',spells=[
  S('where','Where is my ball?','我的球在哪儿？','bóng biến mất, bạn đi tìm',['t:ball']),
@@ -148,7 +148,7 @@ U[('SD','9')]=dict(name='Food',kind='Thích / không thích',bg='ls_park',spells
  S('burger','Do you like burgers?','你喜欢汉堡吗？','bánh mì kẹp hiện, bạn đáp',['t:burger'],reply=('Yes, I do!','喜欢！')),
 ])
 U[('SD','10')]=dict(name='Weather',kind='Bầu trời + mặc đồ',bg='ls_park',spells=[
- S('sunny',"It's sunny today.",'今天晴天。','mặt trời mọc',['code:weather']),
+ S('sunny',"It's sunny today.",'今天是晴天。','mặt trời mọc',['code:weather']),
  S('windy',"It's windy!",'今天刮风！','gió thổi',['code:weather']),
  S('rainy',"Oh no! It's raining!",'哎呀！下雨了！','mưa rơi, ô hiện ra',['code:weather','t:umbrella']),
  S('snowy',"It's snowy! A snowman!",'下雪了！雪人！','tuyết rơi, người tuyết hiện',['code:weather','t:snowman']),
