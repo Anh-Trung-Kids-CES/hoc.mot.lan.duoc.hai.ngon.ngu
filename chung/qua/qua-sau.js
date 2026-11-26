@@ -51,7 +51,7 @@ window.qOrder = function (kind, item) {
   const o = { code: qCode(kind === 'hb' ? 'HB' : 'QUA'), kind, id: item.id, n: item.n, p: item.p, at: Date.now(), st: 'cho' };
   s.orders.unshift(o); qSave();
   api({ action: 'redeem', id: kidId(), code: o.code, qua: kind === 'hb' ? 'hocbong' : item.id, ten_qua: item.n + (item.vnd ? ' (' + item.vnd + ')' : ''), sao: item.p });
-  route(); sfx.win(); confetti(24); hdSay('Cảm ơn ba mẹ. Cô đã nhận phiếu, cô sẽ kiểm tra rồi báo ba mẹ nhé.');
+  route(); sfx.win(); confetti(24); hdSay('Cảm ơn ba mẹ. Cô đã nhận phiếu, cô sẽ kiểm tra và báo ba mẹ qua Zalo nhé.');
   const ov = document.createElement('div'); ov.className = 'overlay pp';
   ov.innerHTML = `<div class="modal pp-box q-done" role="dialog"><button class="pp-x" aria-label="Đóng">✕</button>
     <img src="${kind === 'hb' ? Q_IMG + 'hocbong.webp' : Q_IMG + 'gift_' + item.id + '.webp'}" alt="">
@@ -119,7 +119,9 @@ window.viewMons = (function (f) { return function () { window.__qcChangGiu = 0; 
     'Con nghe rồi chạm đúng tranh để quái vật tung chiêu nhé!': 'hd_107.mp3',
     'Hoan hô! Con đã hạ Rồng trùm!': 'hd_111.mp3',
     'Rồng trùm khoẻ quá! Con nghe lại các từ rồi đánh lại nhé.': 'hd_113.mp3',
-    'Rồng trùm khoẻ quá! Con ôn bài rồi mai đánh lại nhé.': 'hd_112.mp3'
+    'Rồng trùm khoẻ quá! Con ôn bài rồi mai đánh lại nhé.': 'hd_112.mp3',
+    'Con chọn một quả trứng quái vật. Con học xong ba buổi thì trứng sẽ nở!': 'hd_105.mp3',
+    'Cảm ơn ba mẹ. Cô đã nhận phiếu, cô sẽ kiểm tra và báo ba mẹ qua Zalo nhé.': 'hd_109.mp3'
   };
   if (!window.SD) return;
   SD.vi_t = SD.vi_t || {};

@@ -398,7 +398,7 @@ function viewMons() {
     s.mons.push({ sp, g: qGroup(), base: qLessons(), c: 0, d: '', n: 0 }); s.monSel = s.mons.length - 1; qSave(); confetti(12);
     toast(`Con đã nhận trứng ${MON_SP[sp].n}! 🥚`); viewMons(); hdSay('Mỗi ngày con học xong, trứng lại nứt thêm một chút.');
   });
-  if (!m) { qSay('mon', 'Con chọn một quả trứng quái vật. Con học xong ba ngày thì trứng sẽ nở!'); return; }
+  if (!m) { qSay('mon', 'Con chọn một quả trứng quái vật. Con học xong ba buổi thì trứng sẽ nở!'); return; }   // giữ chữ "buổi" để dùng file giọng đã thu (chị Duyên chốt 26/11)
   const st = monStage(m), stage2 = document.getElementById('pcStage'), box = document.getElementById('pcPet');
   if (st > 0 && !m.seen) { qcHatch(m); return; }
   box.onclick = () => {
