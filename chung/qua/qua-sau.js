@@ -102,3 +102,26 @@ window.viewQua = (function (f) {
 /* ---------- trận Rồng trùm: giữ cố định Unit đang đánh (thắng xong, màn chúc mừng vẫn ghi đúng Unit vừa hạ) ---------- */
 window.qcBoss = (function (f) { return function (m) { window.__qcChangGiu = qcChangNow(); return f.call(this, m); }; })(qcBoss);
 window.viewMons = (function (f) { return function () { window.__qcChangGiu = 0; return f.apply(this, arguments); }; })(viewMons);
+
+/* ---------- lời cô Hươu đã thu ở web cuộc thi: dùng lại nguyên file (giọng Sulafat, cùng chữ từng câu) ----------
+   File chép từ kho cuộc thi cuoc-thi-mua-3/tai-nguyen-chung/huong-dan/ sang seedling/tai-nguyen/huong-dan-qua/.
+   hdSay của web tra câu trong SD.vi_t, nên chỉ cần thêm câu → file vào đó. Câu chưa có file thì web hiện chữ, không đọc. */
+(function () {
+  const D = '../seedling/tai-nguyen/huong-dan-qua/';
+  const M = {
+    'Con chưa đủ sao. Con học thêm để kiếm sao nhé!': 'hd_091.mp3',
+    'Chào mừng con đến Phòng đổi quà! Con dùng sao kiếm được khi học để nuôi thú cưng, nuôi quái vật, chọn trang phục, hoặc đổi quà thật.': 'hd_092.mp3',
+    'Con chọn nhân vật, trang phục, nền và khung cho ảnh đại diện của con nhé.': 'hd_101.mp3',
+    'Quà thật cần ba mẹ xác nhận. Con gọi ba mẹ cùng chọn nhé!': 'hd_102.mp3',
+    'Học bổng dành cho bạn chăm học. Con gọi ba mẹ cùng xem nhé!': 'hd_110.mp3',
+    'Con chạm vào bạn ấy, cho bạn ấy ăn hoặc chơi cùng bạn ấy nhé.': 'hd_094.mp3',
+    'Con chạm vào chỗ muốn ném bóng nhé!': 'hd_096.mp3',
+    'Con nghe rồi chạm đúng tranh để quái vật tung chiêu nhé!': 'hd_107.mp3',
+    'Hoan hô! Con đã hạ Rồng trùm!': 'hd_111.mp3',
+    'Rồng trùm khoẻ quá! Con nghe lại các từ rồi đánh lại nhé.': 'hd_113.mp3',
+    'Rồng trùm khoẻ quá! Con ôn bài rồi mai đánh lại nhé.': 'hd_112.mp3'
+  };
+  if (!window.SD) return;
+  SD.vi_t = SD.vi_t || {};
+  Object.keys(M).forEach(t => { if (!SD.vi_t[t]) SD.vi_t[t] = D + M[t]; });
+})();
