@@ -1,32 +1,34 @@
 """Thu lời cô Hươu (tiếng Việt) còn thiếu cho Phòng đổi quà – web lớp offline (26/11/2026).
-Cấu hình như skill game-doi-thuong-hoc-sao: Gemini gemini-2.5-pro-preview-tts, giọng Sulafat, thêm "Đọc đúng từng chữ".
-Xuất mp3 mono 24 kHz 64 kbps, cắt khoảng lặng, vào seedling/tai-nguyen/huong-dan-qua/. Soát: cho gemini-2.5-flash
+Chị Duyên chọn (26/11) thu bằng Flash TTS có gói miễn phí (gemini-3.8-flash-tts), giọng Sulafat như 13 câu cũ (bản Pro).
+Flash đọc to cả lời dặn, nên chỉ gửi đúng câu cần đọc. Muốn dùng Pro (trả phí): thêm tham số --pro.
+Xuất mp3 mono 24 kHz 64 kbps, cắt khoảng lặng, vào seedling/tai-nguyen/huong-dan-qua/. Soát: cho gemini-3.8-flash
 nghe chép lại lời, so với câu gốc.
-Dùng (ở thư mục gốc kho):  python3 chung/qua/thu_giong_qua.py <tệp_chứa_khoá_ngoài_kho>
-Khoá chỉ đọc từ tệp truyền vào, không bao giờ ghi vào kho. Câu nào đã có tệp thì bỏ qua (không tốn tiền gọi lại).
+Dùng (ở thư mục gốc kho):  python3 chung/qua/thu_giong_qua.py <tệp_chứa_khoá_ngoài_kho> [--pro]
+Khoá chỉ đọc từ tệp truyền vào, không bao giờ ghi vào kho. Câu nào đã có tệp thì không thu lại, chỉ soát.
 Thu xong nhớ thêm câu → tệp vào bảng ở cuối chung/qua/qua-sau.js."""
 import base64, json, subprocess, sys, tempfile, unicodedata, re, urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "seedling" / "tai-nguyen" / "huong-dan-qua"
-MODEL = "gemini-2.5-pro-preview-tts"
+PRO = "--pro" in sys.argv
+MODEL = "gemini-2.5-pro-preview-tts" if PRO else "gemini-3.8-flash-tts"
 VOICE = "Sulafat"
 CAU = {
     "qua_hd_01.mp3": "Con chạm vào quái vật, luyện chiêu mỗi ngày, học xong mỗi Unit thì đánh Rồng trùm nhé!",
     "qua_hd_02.mp3": "Mỗi ngày con học xong, trứng lại nứt thêm một chút.",
 }
-API = "https://generativelanguage.googleapis.com/v1beta/models/{}:generateContent?key={}"
+API = "https://generativelanguage.googleapis.com/v1beta/models/{}:generateContent"
 
 
 def goi(model, key, body):
-    req = urllib.request.Request(API.format(model, key), data=json.dumps(body).encode(), headers={"Content-Type": "application/json"})
+    req = urllib.request.Request(API.format(model), data=json.dumps(body).encode(), headers={"Content-Type": "application/json", "x-goog-api-key": key})
     with urllib.request.urlopen(req, timeout=180) as r:
         return json.loads(r.read())
 
 
 def thu(key, text):
-    body = {"contents": [{"parts": [{"text": "Đọc đúng từng chữ: " + text}]}],
+    body = {"contents": [{"parts": [{"text": ("Đọc đúng từng chữ: " + text) if PRO else text}]}],
             "generationConfig": {"responseModalities": ["AUDIO"],
                                  "speechConfig": {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": VOICE}}}}}
     d = goi(MODEL, key, body)
@@ -46,7 +48,7 @@ def chep_lai(key, mp3):
     body = {"contents": [{"parts": [
         {"inlineData": {"mimeType": "audio/mp3", "data": base64.b64encode(mp3.read_bytes()).decode()}},
         {"text": "Chép lại chính xác lời tiếng Việt trong đoạn ghi âm. Chỉ trả về lời, không thêm gì."}]}]}
-    d = goi("gemini-2.5-flash", key, body)
+    d = goi("gemini-3.8-flash", key, body)
     return d["candidates"][0]["content"]["parts"][0]["text"].strip()
 
 
@@ -56,13 +58,12 @@ def chuan(s):
 
 
 def main():
-    key = Path(sys.argv[1]).read_text().strip()
+    key = Path([a for a in sys.argv[1:] if not a.startswith("--")][0]).read_text().strip()
     OUT.mkdir(parents=True, exist_ok=True)
     for ten, text in CAU.items():
         dst = OUT / ten
-        if dst.exists():
-            print("đã có", ten); continue
-        ra_mp3(thu(key, text), dst)
+        if not dst.exists():
+            ra_mp3(thu(key, text), dst)   # đã có tệp thì không gọi thu lại, chỉ soát
         nghe = chep_lai(key, dst)
         khop = chuan(nghe) == chuan(text)
         print(("KHỚP " if khop else "LỆCH ") + ten + " | gốc: " + text + " | nghe: " + nghe)

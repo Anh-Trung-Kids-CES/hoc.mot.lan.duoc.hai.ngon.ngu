@@ -121,7 +121,10 @@ window.viewMons = (function (f) { return function () { window.__qcChangGiu = 0; 
     'Rồng trùm khoẻ quá! Con nghe lại các từ rồi đánh lại nhé.': 'hd_113.mp3',
     'Rồng trùm khoẻ quá! Con ôn bài rồi mai đánh lại nhé.': 'hd_112.mp3',
     'Con chọn một quả trứng quái vật. Con học xong ba buổi thì trứng sẽ nở!': 'hd_105.mp3',
-    'Cảm ơn ba mẹ. Cô đã nhận phiếu, cô sẽ kiểm tra và báo ba mẹ qua Zalo nhé.': 'hd_109.mp3'
+    'Cảm ơn ba mẹ. Cô đã nhận phiếu, cô sẽ kiểm tra và báo ba mẹ qua Zalo nhé.': 'hd_109.mp3',
+    // 2 câu thu mới 26/11 (Flash TTS gói miễn phí, giọng Sulafat) bằng chung/qua/thu_giong_qua.py
+    'Con chạm vào quái vật, luyện chiêu mỗi ngày, học xong mỗi Unit thì đánh Rồng trùm nhé!': 'qua_hd_01.mp3',
+    'Mỗi ngày con học xong, trứng lại nứt thêm một chút.': 'qua_hd_02.mp3'
   };
   if (!window.SD) return;
   SD.vi_t = SD.vi_t || {};
