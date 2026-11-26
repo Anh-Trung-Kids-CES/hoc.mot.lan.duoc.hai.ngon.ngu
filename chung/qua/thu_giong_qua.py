@@ -35,7 +35,22 @@ def thu(key, text):
     return base64.b64decode(d["candidates"][0]["content"]["parts"][0]["inlineData"]["data"])   # PCM 16-bit 24 kHz mono
 
 
+def cat_tap_am(pcm):
+    """Flash TTS đôi khi thêm một đoạn rẹt rất to, vỡ tiếng ở cuối, sau khoảng lặng (gặp ở cả 2 câu ngày 26/11).
+    Tìm khoảng lặng cuối cùng dài từ 0,15 giây mà sau nó có mẫu vỡ tiếng, rồi cắt từ giữa khoảng lặng đó."""
+    import array
+    a = array.array("h"); a.frombytes(pcm[: len(pcm) // 2 * 2])
+    w = 1200   # 0,05 giây ở 24 kHz
+    khung = [max((abs(v) for v in a[i:i + w]), default=0) for i in range(0, len(a), w)]
+    lang = [p < 330 for p in khung]   # dưới khoảng -40 dB
+    for i in range(len(khung) - 1, 2, -1):
+        if lang[i] and lang[i - 1] and lang[i - 2] and any(p >= 32000 for p in khung[i + 1:]):
+            return a[: (i - 1) * w].tobytes()
+    return pcm
+
+
 def ra_mp3(pcm, dst):
+    pcm = cat_tap_am(pcm)
     with tempfile.NamedTemporaryFile(suffix=".pcm") as f:
         f.write(pcm); f.flush()
         af = ("silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.05,"
