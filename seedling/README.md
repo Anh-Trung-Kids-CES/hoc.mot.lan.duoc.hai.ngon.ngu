@@ -64,3 +64,12 @@ Tiến độ của con, sao cô thưởng và phiếu quà lưu trên Google She
 ## Nghe reader tuần (13/11/2026)
 - `nghe-reader.html`: trang nghe cho mã QR in trên reader (`nghe-reader.html#05` mở track 05). Không gắn vào ngày web (reader chỉ là bản in).
 - `tai-nguyen/reader-tuan/`: 26 track mp3 (Anh hết truyện rồi Trung hết truyện, giọng nhân vật cố định), `danh-sach-track.json`, `DANH-SACH-TRACK.md`. Tạo bằng Gemini TTS; mã ở Project Claude `claude/MaNghe_Reader_Lo.md`.
+
+## Phòng đổi quà mới (26/11/2026)
+- Dùng chung cho Little Seed và Seedling, nằm ở `../chung/qua/`: ví sao, thú cưng (chạm, cho ăn kéo thả, 3 trò chơi, album ảnh, tâm trạng), trang trí vườn, quái vật (trứng nở sau 3 ngày học, đặt tên, luyện chiêu bằng micro), Rồng trùm, avatar, quà thật, học bổng.
+- Mã chép từ web cuộc thi (kho `ces-training/anh-trung-kids-cuoc-thi-7-chang`, `cuoc-thi-mua-3/qua.js`, `qua-choi.js`), giá sao giữ như web cuộc thi. Lớp nối với web: `qua-noi.js` (nạp trước) và `qua-sau.js` (nạp sau cùng).
+- **Mỗi Unit là một chặng của Rồng trùm**: học xong mọi ngày của Unit thì Rồng trùm Unit đó mở; 12 huy hiệu. Câu đố lấy từ chính các ngày của Unit.
+- **Quà thật** tối đa 2 món cả khoá, cần học xong 6 ngày web. **Học bổng** Đồng/Bạc/Vàng 350/500/650 sao, cần 12/15/18 ngày web, không đòi buổi Zoom. Phiếu gửi cô qua lệnh `redeem` của máy chủ lớp (không cần nâng cấp máy chủ).
+- Phần riêng của web vẫn ở `*-thuong.js`: cách tính sao, Hành trình, huy hiệu, quà bất ngờ, sao cô thưởng. Quái vật, thú cưng, phiếu của bản cũ được giữ nguyên.
+- Kho từ cho trò đố: `../chung/qua/qua-tu.js`, sinh lại bằng `node chung/qua/tao_tu_qua.js` (chạy ở gốc kho) mỗi khi bài thay đổi.
+- Tranh quà: `seedling/tai-nguyen/qua/`; tiếng thú cưng: `seedling/tai-nguyen/thu-cung/`.
